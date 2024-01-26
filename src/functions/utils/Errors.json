@@ -1,0 +1,16 @@
+{
+    "Error": "An error has occured.",
+
+    "ErrorCode_Uncaught": 1,
+    "ErrorCode_Fatal": 5,
+    "ErrorCode_InvalidArgument": 9,
+
+    "Console_UnknowType": "Unknow console type was going to be used.",
+    "Console_UnknowColor": "Unknow color used for %where%. Color must be a key of colorsChoices, but you are using %what%.",
+    "Console_EmptyText": "textOptions.text connot be empty.",
+    "ConsoleProgress_InvalidArgument": "Invalid progress bar parameters. current & total must be defined as numbers.",
+
+    "Data_InvalidURL": "Invalid url argument. Must be an http protocol url, but your are using %what%.",
+    "Data_UnknowURL": "Unknow url argument. Must be a key of urlChoices, but you are using %what%.",
+    "Data_InvalidArgument": "Invalid argument: %what%. %details%"
+}

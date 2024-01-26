@@ -1,0 +1,48 @@
+{
+    "name": "deh-datamining",
+    "version": "1.0.0",
+    "description": "A repository to get latest Discord's updates.",
+    "license": "CC-BY-NC-SA-4.0",
+    "scripts": {
+        "start": "node src/index.js",
+        "test": "node src/test.js"
+    },
+    "bugs": {
+        "email": "volcano0france@gmail.com",
+        "url": "https://discord.com/users/589383722759880705"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/volcanofr/hypixel-wrapper"
+    },
+    "engines": {
+        "npm": "^9.8.1",
+        "node": "^18.12.1"
+    },
+    "dependencies": {
+        "node": "^21.6.1"
+    },
+    "author": {
+        "email": "volcano0france@gmail.com",
+        "name": "volcanofr",
+        "url": "https://github.com/volcanofr"
+    },
+    "publisher": "discordexperimenthub",
+    "maintainers": [
+        {
+            "name": "volcanofr",
+            "url": "https://github.com/volcanofr"
+        },
+        {
+            "name": "Tolgchu",
+            "url": "https://github.com/Tolga1452"
+        }
+    ],
+    "contributors": [],
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://www.patreon.com/volcanofr"
+        }
+    ]
+}

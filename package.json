@@ -9,12 +9,11 @@
     },
     "main": "src/index.js",
     "bugs": {
-        "email": "volcano0france@gmail.com",
-        "url": "https://discord.com/users/589383722759880705"
+        "url": "https://discord.gg/discord-experiment-hub-1089540433010491392"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/volcanofr/hypixel-wrapper"
+        "url": "https://github.com/discordexperimenthub/datamining"
     },
     "engines": {
         "npm": "^9.8.1",

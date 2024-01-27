@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node src/index.js",
         "test": "node src/test.js",
-        "canary": "node src/canary.js",
+        "canary": "node src/canary.js"
     },
     "main": "src/index.js",
     "bugs": {

@@ -10,6 +10,7 @@ const urlChoices = {
     discordClientCanary: baseChoices.discordCanary +"/channels/@me",
 };
 
+const { readdirSync, unlinkSync } = require("fs");
 const { $Console, $Console_Prefix, $Console_Progress } = require("../utils/$Console");
 
 const Errors = require("../utils/Errors.json");
@@ -51,19 +52,26 @@ function _getDiscordClientData(url) {
              * @param {Array} scripts List of all scripts.
              */
             const scripts = []
+            let oldScripts = readdirSync("./save/scripts");
             const matchScript = html.match(/<script[^>]*src=["'](.*?)["']/g);
             if (matchScript) {
                 $Console({type: "log"}, $Console_Prefix.Data, {text: "Starting getting scripts...", colors: ["TxtGreen"]});
                 $Console_Progress(0, matchScript.length, {done: ["TxtGreen"]});
                 let i = 0;
-                matchScript.forEach(script => {
+                for (const script of matchScript) {
                     const matchSrc = script.match(/src=["'](.*?)["']/);
                     const src = Url.protocol + "//" + Url.hostname + matchSrc[1];
                     scripts.push(src);
                     i++;
-                    downloadDiscordFile({folder: "scripts", fileName: discordDataName(matchSrc[1])}, src)
+                    const fileName = discordDataName(matchSrc[1]);
+                    if (oldScripts.includes(fileName)) oldScripts = oldScripts.filter(e => e !== fileName);
+                    downloadDiscordFile({folder: "scripts", fileName}, src)
                     .then($Console_Progress(i, matchScript.length, {done: ["TxtGreen"]}));
-                });
+                };
+                for (const script of oldScripts) {
+                    $Console({type: "log"}, $Console_Prefix.Data, {text: `Removing old script ${script}...`, colors: ["TxtYellow"]});
+                    unlinkSync(`./save/scripts/${script}`);
+                };
             } else {
                 $Console({type: "warn"}, $Console_Prefix.Data, {text: "No scripts were found!"});
             };
@@ -75,20 +83,27 @@ function _getDiscordClientData(url) {
              * @param {Array} styles List of all styles.
              */
             const styles = [];
+            let oldStyles = readdirSync("./save/styles");
 
             const matchStyle = html.match(/<link\s+[^>]*rel=["']stylesheet["']/g);
             if (matchStyle) {
                 $Console({type: "log"}, $Console_Prefix.Data, {text: "Starting getting styles...", colors: ["TxtGreen"]});
                 $Console_Progress(0, matchStyle.length, {done: ["TxtGreen"]});
                 let i = 0;
-                matchStyle.forEach(style => {
+                for (const style of matchStyle) {
                     const matchHref = style.match(/href=["'](.*?)["']/);
                     const href = Url.protocol + "//" + Url.hostname + matchHref[1];
                     styles.push(href);
                     i++;
-                    downloadDiscordFile({folder: "styles", fileName: discordDataName(matchHref[1])}, href)
+                    const fileName = discordDataName(matchHref[1]);
+                    if (oldStyles.includes(fileName)) oldStyles = oldStyles.filter(e => e !== fileName);
+                    downloadDiscordFile({folder: "styles", fileName}, href)
                     .then($Console_Progress(i, matchStyle.length, {done: ["TxtGreen"]}));
-                });
+                };
+                for (const style of oldStyles) {
+                    $Console({type: "log"}, $Console_Prefix.Data, {text: `Removing old style ${style}...`, colors: ["TxtYellow"]});
+                    unlinkSync(`./save/styles/${style}`);
+                };
             } else {
                 $Console({type: "warn"}, $Console_Prefix.Data, {text: "No styles were found!"});
             };

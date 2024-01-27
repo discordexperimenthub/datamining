@@ -46,6 +46,10 @@ function _getDiscordClientData(url) {
             build.release = GlobalEnv ? GlobalEnv.RELEASE_CHANNEL : null;
             build.id = GlobalEnv ? GlobalEnv.SENTRY_TAGS.buildId : null;
 
+            if (GlobalEnv.HTML_TIMESTAMP) GlobalEnv.HTML_TIMESTAMP = 'return Date.now();';
+
+            writeFileSync("./save/globalEnv.json", JSON.stringify(GlobalEnv, null, 4));
+
             /* ------------------------- */
         
             /**
@@ -144,6 +148,11 @@ function _getDiscordClientData(url) {
             };
 
             /* ------------------------- */
+
+            try {
+                unlinkSync(`./save/${urlChoices[url].split("/")[2]}~channels~@me.html`);
+            } catch (error) {
+            };
 
             return [build, scripts, styles];
         });

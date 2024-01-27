@@ -44,5 +44,8 @@
             "type": "patreon",
             "url": "https://www.patreon.com/volcanofr"
         }
-    ]
+    ],
+    "devDependencies": {
+        "prettier": "^3.2.4"
+    }
 }

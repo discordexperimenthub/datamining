@@ -10,7 +10,8 @@ const urlChoices = {
     discordClientCanary: baseChoices.discordCanary +"/channels/@me",
 };
 
-const { readdirSync, unlinkSync } = require("fs");
+const { readdirSync, unlinkSync, readFileSync, writeFileSync } = require("fs");
+const prettier = require("prettier");
 const { $Console, $Console_Prefix, $Console_Progress } = require("../utils/$Console");
 
 const Errors = require("../utils/Errors.json");
@@ -66,6 +67,23 @@ function _getDiscordClientData(url) {
                     const fileName = discordDataName(matchSrc[1]);
                     if (oldScripts.includes(fileName)) oldScripts = oldScripts.filter(e => e !== fileName);
                     downloadDiscordFile({folder: "scripts", fileName}, src)
+                    .then(async () => {
+                        const content = readFileSync(`./save/scripts/${fileName}`).toString();
+                        const formatted = await prettier.format(content, {
+                            printWidth: 80, // The line length where Prettier will try wrap
+                            tabWidth: 2, // Number of spaces per indentation level
+                            useTabs: false, // Whether to use tabs for indentation
+                            semi: true, // Whether to add a semicolon at the end of every line
+                            singleQuote: false, // If true, replaces double quotes with single quotes
+                            trailingComma: 'es5', // Adds a trailing comma where possible. Other options: 'none', 'all'
+                            bracketSpacing: true, // Whether to add spaces between brackets and object literals
+                            jsxBracketSameLine: false, // If true, puts the closing bracket of a JSX element at the end of the last line instead of being alone on the next line
+                            arrowParens: 'avoid', // If 'always', include parentheses around a sole arrow function parameter. 'avoid' does not include parentheses
+                            parser: 'babel' // Specifies the parser to be used
+                          });
+
+                        writeFileSync(`./save/scripts/${fileName}`, formatted);
+                    })
                     .then($Console_Progress(i, matchScript.length, {done: ["TxtGreen"]}));
                 };
                 for (const script of oldScripts) {
@@ -98,6 +116,23 @@ function _getDiscordClientData(url) {
                     const fileName = discordDataName(matchHref[1]);
                     if (oldStyles.includes(fileName)) oldStyles = oldStyles.filter(e => e !== fileName);
                     downloadDiscordFile({folder: "styles", fileName}, href)
+                    .then(async () => {
+                        const content = readFileSync(`./save/styles/${fileName}`).toString();
+                        const formatted = await prettier.format(content, {
+                            printWidth: 80, // The line length where Prettier will try wrap
+                            tabWidth: 2, // Number of spaces per indentation level
+                            useTabs: false, // Whether to use tabs for indentation
+                            semi: true, // Whether to add a semicolon at the end of every line
+                            singleQuote: false, // If true, replaces double quotes with single quotes
+                            trailingComma: 'es5', // Adds a trailing comma where possible. Other options: 'none', 'all'
+                            bracketSpacing: true, // Whether to add spaces between brackets and object literals
+                            jsxBracketSameLine: false, // If true, puts the closing bracket of a JSX element at the end of the last line instead of being alone on the next line
+                            arrowParens: 'avoid', // If 'always', include parentheses around a sole arrow function parameter. 'avoid' does not include parentheses
+                            parser: 'css' // Specifies the parser to be used
+                          });
+
+                        writeFileSync(`./save/styles/${fileName}`, formatted);
+                    })
                     .then($Console_Progress(i, matchStyle.length, {done: ["TxtGreen"]}));
                 };
                 for (const style of oldStyles) {

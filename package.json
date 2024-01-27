@@ -5,7 +5,8 @@
     "license": "CC-BY-NC-SA-4.0",
     "scripts": {
         "start": "node src/index.js",
-        "test": "node src/test.js"
+        "test": "node src/test.js",
+        "canary": "node src/canary.js",
     },
     "main": "src/index.js",
     "bugs": {

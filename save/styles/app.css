@@ -10416,6 +10416,11 @@
 .wrapper__89bfc.noChat_a99ce5 {
   height: 100%;
 }
+.activityPanelContainer_cb5c84 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 .header__263c7 {
   display: flex;
   flex-direction: row;
@@ -10425,9 +10430,8 @@
 .footer__4f337 {
   display: flex;
   flex-direction: row;
-  padding: 8px;
+  padding: 0 24px 24px;
   align-items: center;
-  justify-content: center;
 }
 .minimizeContainer_d5ce9e {
   flex: 0;
@@ -10454,7 +10458,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 24px;
 }
 .leaveActivityIcon__38dcc {
   height: 20px;
@@ -10463,6 +10467,18 @@
 .leaveActivityButton__5535d {
   width: 40px;
   height: 40px;
+}
+.userAvatars__2881a {
+  flex: 1;
+}
+.footerButtons__5375a {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex__630b2 {
+  flex: 1;
 }
 .regionSelectPopout__0127b {
   direction: rtl;
@@ -23057,8 +23073,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -108297,4 +108313,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.405672e4887ba18d7316.css.map*/
+/*# sourceMappingURL=app.8b8fa362c6d0c09b9a5f.css.map*/

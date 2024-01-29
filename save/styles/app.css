@@ -60129,6 +60129,12 @@ input::-webkit-inner-spin-button {
   padding: 6px 8px;
   min-height: 20px;
 }
+.expiringStatusMenuItem__58d9c {
+  padding: 0;
+}
+.expiringStatusIcon__4f193 {
+  margin-right: -6px;
+}
 .status__8c19b {
   grid-area: status span 2;
   display: flex;
@@ -60158,6 +60164,10 @@ input::-webkit-inner-spin-button {
   display: flex;
   align-items: flex-end;
   flex-direction: row-reverse;
+}
+.quietModeIcon__3b61a {
+  width: 18px;
+  height: 18px;
 }
 .profileThemesArt__60b1b {
   background-image: url(/assets/0e1dac3ff58e6cd29e54.gif);
@@ -108409,4 +108419,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.5531d2e0e4206e0d16da.css.map*/
+/*# sourceMappingURL=app.5f8daf95aebf460094ad.css.map*/

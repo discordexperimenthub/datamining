@@ -5243,6 +5243,17 @@
             };
           }
         );
+      (0, l.defineProtoSetting)(
+        "appearance",
+        "searchResultExactCountEnabled",
+        e => {
+          var t;
+          return (
+            null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
+          );
+        },
+        e => o.BoolValue.create({ value: e })
+      );
     },
     186709: function (e, t, n) {
       "use strict";
@@ -6704,7 +6715,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "262007"), "262007"), 10);
+          let o = parseInt(((n = "262008"), "262008"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7002,4 +7013,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.5e140d52008c95eff974.js.map
+//# sourceMappingURL=87475.9c7ce435eb2c323fa4ea.js.map

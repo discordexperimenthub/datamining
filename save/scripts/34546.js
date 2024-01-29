@@ -170,6 +170,7 @@
         DEAFEN: "Deafen",
         UNDEAFEN: "Undeafen",
         SEARCH: "Search",
+        SEARCH_EXPERIMENTAL: "Search (Experimental)",
         AUTOCOMPLETE_NO_RESULTS_HEADER: "Nope!",
         AUTOCOMPLETE_NO_RESULTS_BODY: "Did you make a typo?",
         AUTOCOMPLETE_STICKERS_QUERY_MATCH: "Similar to: !!{queryMatch}!!",
@@ -4801,6 +4802,10 @@
         USER_SETTINGS_APPEARANCE_CHANNEL_LIST_PREVIEWS_UNREADS:
           "Unread DMs only",
         USER_SETTINGS_APPEARANCE_CHANNEL_LIST_PREVIEWS_NONE: "None",
+        USER_SETTINGS_EXACT_SEARCH_RESULT_COUNT:
+          "Show exact search result counts",
+        USER_SETTINGS_EXACT_SEARCH_RESULT_COUNT_DESCRIPTION:
+          "When enabled, may increase the time it takes to show search results.",
         USER_SETTINGS_SHOW_LIBRARY: "Show Game Library",
         USER_SETTINGS_SHOW_LIBRARY_NOTE:
           "Turn this off to hide your Game Library so you can focus on your conversations.",
@@ -25800,8 +25805,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262007", ", Version Hash: ")
-          .concat("b9da27f8f59249863453c624b0d43926b46108d0")
+          .concat("262008", ", Version Hash: ")
+          .concat("5f191e69899b4659ca288069dd4fdad131c0df98")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28775,12 +28780,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262007"), "262007"));
+        let _ = parseInt(((e = "262008"), "262008"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262007"
+                "262008"
               )
             ),
             (_ = 0)),
@@ -46976,6 +46981,15 @@
                   o.messagePreviews
                 );
                 break;
+              case 8:
+                o.searchResultExactCountEnabled =
+                  h.BoolValue.internalBinaryRead(
+                    e,
+                    e.uint32(),
+                    E,
+                    o.searchResultExactCountEnabled
+                  );
+                break;
               default:
                 let n = E.readUnknownField;
                 if ("throw" === n)
@@ -47023,6 +47037,12 @@
                 e.messagePreviews,
                 _.tag(7, M.WireType.LengthDelimited).fork(),
                 E
+              ).join(),
+            e.searchResultExactCountEnabled &&
+              h.BoolValue.internalBinaryWrite(
+                e.searchResultExactCountEnabled,
+                _.tag(8, M.WireType.LengthDelimited).fork(),
+                E
               ).join();
           let t = E.writeUnknownFields;
           return (
@@ -47062,6 +47082,12 @@
               name: "message_previews",
               kind: "message",
               T: () => h.StringValue,
+            },
+            {
+              no: 8,
+              name: "search_result_exact_count_enabled",
+              kind: "message",
+              T: () => h.BoolValue,
             },
           ]);
         }
@@ -49899,4 +49925,4 @@
     },
   },
 ]);
-//# sourceMappingURL=34546.156167f85e9157713224.js.map
+//# sourceMappingURL=34546.becef120161451a3cc14.js.map

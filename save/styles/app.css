@@ -21831,6 +21831,37 @@ html .progress__4ef76 {
 .accessoryText__987e3 {
   color: var(--interactive-normal);
 }
+.header_ae0242 {
+  margin: var(--spacing-16) 0 var(--spacing-16);
+}
+.subheader__3f4ed {
+  margin-top: var(--spacing-16);
+}
+.closeButton__716bd {
+  position: absolute;
+  top: var(--spacing-12);
+  right: 0;
+}
+.button_a2f96f:not(:first-child) {
+  margin-right: var(--spacing-16);
+}
+.image__551b1 {
+  width: 100%;
+  border-radius: var(--radius-xs);
+}
+.video__288e9 {
+  width: 100%;
+}
+.media__7cd19 {
+  border-radius: var(--radius-xs);
+}
+.mediaContainer__668dd {
+  border-radius: var(--radius-xs);
+  padding: var(--spacing-16);
+  background-color: var(--background-secondary);
+  margin-top: var(--spacing-12);
+  margin-bottom: var(--spacing-16);
+}
 .ephemeral_c26b64 {
   position: relative;
   background-color: var(--brand-experiment-05a);
@@ -23073,8 +23104,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -29320,37 +29351,6 @@ html .progress__4ef76 {
   display: block;
   -o-object-fit: contain;
   object-fit: contain;
-}
-.header__1ee19 {
-  margin: var(--spacing-16) 0 var(--spacing-16);
-}
-.subheader_d7b23c {
-  margin-top: var(--spacing-16);
-}
-.closeButton__5556f {
-  position: absolute;
-  top: var(--spacing-12);
-  right: 0;
-}
-.button_c9b13f:not(:first-child) {
-  margin-right: var(--spacing-16);
-}
-.image__09635 {
-  width: 100%;
-  border-radius: var(--radius-xs);
-}
-.video__2f467 {
-  width: 100%;
-}
-.media__3394a {
-  border-radius: var(--radius-xs);
-}
-.mediaContainer_dcdb76 {
-  border-radius: var(--radius-xs);
-  padding: var(--spacing-16);
-  background-color: var(--background-secondary);
-  margin-top: var(--spacing-12);
-  margin-bottom: var(--spacing-16);
 }
 .container__9d616 {
   position: absolute;
@@ -51562,6 +51562,22 @@ html .progress__4ef76 {
   margin: 0 24px 16px;
   text-align: center;
 }
+.sectionHeader_f39b8d {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sectionHeaderSeeAll_d4277d {
+  text-align: center;
+  flex-grow: 1;
+}
+.container__5980c {
+  display: flex;
+}
+.sectionHeader_f39b8d .heading__41621 {
+  text-align: left;
+  flex-grow: 1;
+}
 .subtitle_c3170a {
   max-width: 544px;
   margin: 0 24px 24px;
@@ -51606,10 +51622,8 @@ html .progress__4ef76 {
   align-items: start;
 }
 .showAllPerksButton__15f8d {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translatey(-50%);
+  margin-left: auto;
+  z-index: 999;
 }
 .wrapper__765a2 {
   display: flex;
@@ -51681,7 +51695,6 @@ html .progress__4ef76 {
   justify-content: center;
   text-align: center;
   width: 100%;
-  min-width: 800px;
   max-height: 600px;
 }
 .containerInner__10f58 {
@@ -51698,11 +51711,9 @@ html .progress__4ef76 {
 .content_ff6bc3 {
   position: relative;
   min-width: 500px;
-  margin-right: 90px;
   flex: 1;
 }
 .backButton__5b790 {
-  margin-left: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51719,6 +51730,12 @@ html .progress__4ef76 {
 .backButton__5b790:hover {
   background-color: var(--background-secondary);
 }
+.backButtonContainer_ca0298 {
+  position: absolute;
+  margin-right: 20px;
+  top: 30px;
+  left: 10px;
+}
 .headerArt_b78f22 {
   margin-top: -48px;
   min-height: 400px;
@@ -51732,6 +51749,12 @@ html .progress__4ef76 {
 }
 .theme-light .backButton__5b790:hover {
   background-color: hsl(var(--white-500-hsl) / 0.3);
+}
+@media (max-width: 1190px) {
+  .backButtonContainer_ca0298 {
+    top: -40px;
+    left: 10px;
+  }
 }
 .cardContainer__15848 {
   position: relative;
@@ -51852,6 +51875,12 @@ html .progress__4ef76 {
   margin-top: 64px;
 }
 .seeAllPerksButton_c90d04 {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 14px;
+  background: var(--background-floating);
+  box-shadow: 0 12px 36px 0 hsl(var(--black-500-hsl) / 0.15);
+  color: var(--text-normal);
   border-radius: 20px;
   padding: 8px 8px 8px 16px;
 }
@@ -108313,4 +108342,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.8b8fa362c6d0c09b9a5f.css.map*/
+/*# sourceMappingURL=app.54cbf97c1c4df37d8b02.css.map*/

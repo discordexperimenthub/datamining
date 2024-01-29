@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["65225"],
+  ["59646"],
   {
     53708: function (e, t, n) {
       "use strict";
@@ -162,10 +162,10 @@
       n.r(t),
         n.d(t, {
           accountDetailsInit: function () {
-            return I;
+            return p;
           },
           accountDetailsClose: function () {
-            return p;
+            return I;
           },
           disableAccount: function () {
             return h;
@@ -222,10 +222,10 @@
         f = n("49111"),
         E = n("191349"),
         _ = n("782340");
-      function I() {
+      function p() {
         o.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
       }
-      function p() {
+      function I() {
         o.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLOSE" });
       }
       function h(e, t) {
@@ -275,8 +275,8 @@
           emailToken: r,
           password: s,
           avatar: d,
-          avatarDecoration: I,
-          newPassword: p,
+          avatarDecoration: p,
+          newPassword: I,
           globalName: h,
         } = e;
         return (
@@ -291,13 +291,13 @@
                 avatar: d,
                 discriminator: n,
                 global_name: h,
-                new_password: p,
+                new_password: I,
                 ...e,
               };
-              null === I && (o.avatar_decoration_id = null),
-                null != I &&
-                  ((o.avatar_decoration_id = I.id),
-                  (o.avatar_decoration_sku_id = I.skuId));
+              null === p && (o.avatar_decoration_id = null),
+                null != p &&
+                  ((o.avatar_decoration_id = p.id),
+                  (o.avatar_decoration_sku_id = p.skuId));
               let u = l.default.get(f.DEVICE_TOKEN),
                 a = (0, E.getDevicePushProvider)();
               null != a &&
@@ -1228,10 +1228,10 @@
             removeClickListener: E,
           } = e,
           _ = (0, r.useConfettiCannon)(n, u),
-          I = (0, o.default)([s.default], () => s.default.useReducedMotion),
-          p = l.useMemo(
+          p = (0, o.default)([s.default], () => s.default.useReducedMotion),
+          I = l.useMemo(
             () =>
-              I
+              p
                 ? a
                 : {
                     confettiCanvas: n,
@@ -1274,9 +1274,9 @@
                     addClickListener: f,
                     removeClickListener: E,
                   },
-            [f, d, _, n, I, E]
+            [f, d, _, n, p, E]
           );
-        return (0, i.jsx)(c.Provider, { value: p, children: t });
+        return (0, i.jsx)(c.Provider, { value: I, children: t });
       }
     },
     390236: function (e, t, n) {
@@ -1320,10 +1320,10 @@
             return _;
           },
           setPendingPronouns: function () {
-            return I;
+            return p;
           },
           setPendingNickname: function () {
-            return p;
+            return I;
           },
           setPendingThemeColors: function () {
             return h;
@@ -1420,13 +1420,13 @@
           bio: e,
         });
       }
-      function I(e) {
+      function p(e) {
         l.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
           pronouns: e,
         });
       }
-      function p(e) {
+      function I(e) {
         l.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
           nickname: e,
@@ -1475,14 +1475,14 @@
       var f = n("446674"),
         E = n("913144"),
         _ = n("49111");
-      let I = _.FormStates.CLOSED,
-        p = {},
+      let p = _.FormStates.CLOSED,
+        I = {},
         h = !1;
       function C() {
-        (I = _.FormStates.CLOSED), (p = {}), (a = null), (c = void 0), (d = []);
+        (p = _.FormStates.CLOSED), (I = {}), (a = null), (c = void 0), (d = []);
       }
       function T() {
-        S(), N(), (p = {}), (I = _.FormStates.OPEN);
+        S(), N(), (I = {}), (p = _.FormStates.OPEN);
       }
       function S() {
         (i = void 0), (s = void 0);
@@ -1492,10 +1492,10 @@
       }
       class v extends f.default.Store {
         getFormState() {
-          return I;
+          return p;
         }
         getErrors() {
-          return p;
+          return I;
         }
         showNotice() {
           return (
@@ -1555,8 +1555,8 @@
       var g = new v(E.default, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
           (a = e.guild),
-            (I = _.FormStates.OPEN),
-            (p = {}),
+            (p = _.FormStates.OPEN),
+            (I = {}),
             (c = e.source),
             (d = e.analyticsLocations);
         },
@@ -1565,19 +1565,19 @@
           T(), C();
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
-          (a = e.guild), (p = {});
+          (a = e.guild), (I = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT: function () {
-          (I = _.FormStates.SUBMITTING), (p = {});
+          (p = _.FormStates.SUBMITTING), (I = {});
         },
         GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function (e) {
           var t;
-          if (I !== _.FormStates.SUBMITTING) return !1;
-          (I = _.FormStates.OPEN),
-            (p = null !== (t = e.errors) && void 0 !== t ? t : {});
+          if (p !== _.FormStates.SUBMITTING) return !1;
+          (p = _.FormStates.OPEN),
+            (I = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_PROFILE_UPDATE_FAILURE: function (e) {
-          (I = _.FormStates.OPEN), (p = e.errors);
+          (p = _.FormStates.OPEN), (I = e.errors);
         },
         GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function (e) {
           let { avatar: t } = e;
@@ -1608,7 +1608,7 @@
         GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: T,
         GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: T,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {
-          p = {};
+          I = {};
         },
         GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT: function (e) {
           let { disable: t } = e;
@@ -1962,10 +1962,10 @@
             return _;
           },
           PaymentPortalBody: function () {
-            return I;
+            return p;
           },
           PaymentPortalFooter: function () {
-            return p;
+            return I;
           },
         });
       var i = n("37983"),
@@ -1983,8 +1983,8 @@
         var t, n, r, s, a, c;
         let {
             header: _,
-            isLargeModal: I,
-            stepProps: p,
+            isLargeModal: p,
+            stepProps: I,
           } = (function (e) {
             let { header: t, isLargeModal: n, ...i } = e;
             return { header: t, isLargeModal: n, stepProps: i };
@@ -2019,7 +2019,7 @@
                 ? void 0
                 : n.bodyClassName,
           L =
-            void 0 !== I && I
+            void 0 !== p && p
               ? E.sliderBodyLarge
               : null == g
                 ? void 0
@@ -2039,7 +2039,7 @@
             c
               ? _
               : null,
-            g.renderStep(p),
+            g.renderStep(I),
             null == h || m
               ? null
               : (0, i.jsxs)(i.Fragment, {
@@ -2073,12 +2073,12 @@
           ],
         });
       }
-      function I(e) {
+      function p(e) {
         let { children: t } = e,
           { bodyNode: n } = (0, f.usePaymentContext)();
         return null == n ? null : c.createPortal(t, n);
       }
-      function p(e) {
+      function I(e) {
         let { children: t } = e,
           { footerNode: n } = (0, f.usePaymentContext)();
         return null == n ? null : c.createPortal(t, n);
@@ -2089,7 +2089,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return p;
           },
         });
       var i = n("37983");
@@ -2105,11 +2105,11 @@
         f = n("719923"),
         E = n("49111"),
         _ = n("646718");
-      function I(e) {
+      function p(e) {
         let {
             initialPlanId: t,
-            followupSKUInfo: I,
-            onClose: p,
+            followupSKUInfo: p,
+            onClose: I,
             onComplete: h,
             onSubscriptionConfirmation: C,
             analyticsLocations: T,
@@ -2124,8 +2124,8 @@
             openInvoiceId: U,
             applicationId: y,
             referralTrialOfferId: P,
-            giftRecipient: D,
-            returnRef: b,
+            giftRecipient: b,
+            returnRef: D,
             subscription: O,
           } = null != e ? e : {},
           w = !1,
@@ -2144,12 +2144,12 @@
                 skuId: A,
                 isGift: g,
                 giftMessage: m,
-                giftRecipient: D,
+                giftRecipient: b,
                 initialPlanId: t,
-                followupSKUInfo: I,
+                followupSKUInfo: p,
                 onClose: (e, t) => {
                   l(),
-                    null == p || p(e),
+                    null == I || I(e),
                     e &&
                       (null == C || C(),
                       !g &&
@@ -2176,7 +2176,7 @@
                 openInvoiceId: U,
                 applicationId: y,
                 referralTrialOfferId: P,
-                returnRef: b,
+                returnRef: D,
                 subscription: O,
               });
             };
@@ -2201,7 +2201,7 @@
                 }),
                 (0, o.clearError)(),
                 (0, s.clearPurchaseTokenAuthState)(),
-                null == p || p(w),
+                null == I || I(w),
                 w && (null == C || C());
             },
           }
@@ -2232,7 +2232,7 @@
             return _;
           },
           maybeFetchPremiumLikelihood: function () {
-            return p;
+            return I;
           },
           useMaybeFetchPremiumLikelihood: function () {
             return h;
@@ -2250,7 +2250,7 @@
         f = n("646718"),
         E = n("49111");
       let _ = "nonSubscriber";
-      async function I() {
+      async function p() {
         try {
           o.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
           let { body: e } = await r.default.get({
@@ -2278,7 +2278,7 @@
               });
         }
       }
-      function p(e) {
+      function I(e) {
         let { enabled: t, useExpectedValue: n } = e.getCurrentConfig(
             { location: "443cca_1" },
             { autoTrackExposure: !1 }
@@ -2304,7 +2304,7 @@
         null != e &&
           !(0, c.isPremium)(e) &&
           n &&
-          (t && I(),
+          (t && p(),
           i &&
             (!a.default.isLoadedForSKU(f.PremiumSubscriptionSKUs.TIER_0) &&
               !a.default.isFetchingForSKU(f.PremiumSubscriptionSKUs.TIER_0) &&
@@ -2413,7 +2413,7 @@
             return _;
           },
           showRemoveBanner: function () {
-            return I;
+            return p;
           },
         }),
         n("424973");
@@ -2468,7 +2468,7 @@
       function _(e, t) {
         return void 0 === e ? null != t : null != e;
       }
-      function I(e, t) {
+      function p(e, t) {
         return void 0 === e ? null != t : null != e;
       }
     },
@@ -2630,10 +2630,10 @@
         _ = () => {
           c.default.isLoaded && E.compute();
         },
-        I = () => {
+        p = () => {
           _();
         };
-      function p() {
+      function I() {
         var e;
         let t =
           null ===
@@ -2654,8 +2654,8 @@
         initialize(e) {
           this.waitFor(c.default),
             null != e && (f = e),
-            this.syncWith([c.default], I),
-            this.syncWith([u.default], p);
+            this.syncWith([c.default], p),
+            this.syncWith([u.default], I);
         }
         getState() {
           return f;
@@ -2701,10 +2701,10 @@
             return _;
           },
           resetPendingProfileChanges: function () {
-            return I;
+            return p;
           },
           setPendingBanner: function () {
-            return p;
+            return I;
           },
           setPendingBio: function () {
             return h;
@@ -2798,12 +2798,12 @@
           type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED",
         });
       }
-      function I() {
+      function p() {
         l.default.dispatch({
           type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES",
         });
       }
-      function p(e) {
+      function I(e) {
         l.default.dispatch({
           type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
           banner: e,
@@ -2948,7 +2948,7 @@
               },
               [n, a]
             ),
-            I = (0, i.jsx)("a", {
+            p = (0, i.jsx)("a", {
               ref: t,
               href: n,
               onClick: _,
@@ -2956,7 +2956,7 @@
               ...f,
               children: u,
             });
-          return (0, i.jsx)(r.FocusRing, { ...d, children: I });
+          return (0, i.jsx)(r.FocusRing, { ...d, children: p });
         });
     },
     181114: function (e, t, n) {
@@ -2967,7 +2967,7 @@
             return l;
           },
           Shine: function () {
-            return p;
+            return I;
           },
           default: function () {
             return C;
@@ -2986,8 +2986,8 @@
         E = n("396792");
       ((i = l || (l = {})).DEFAULT = "default"), (i.SMALL = "small");
       let _ = { default: E.shineDefault, small: E.shineSmall },
-        I = { default: E.shineInnerDefault, small: E.shineInnerSmall };
-      class p extends o.PureComponent {
+        p = { default: E.shineInnerDefault, small: E.shineInnerSmall };
+      class I extends o.PureComponent {
         render() {
           let { className: e, shineSize: t, shinePaused: n, ...i } = this.props;
           return (0, r.jsx)(a.default.div, {
@@ -2997,12 +2997,12 @@
               align: f.default.Align.CENTER,
               justify: f.default.Justify.CENTER,
               className: _[t],
-              children: (0, r.jsx)("div", { className: I[t] }),
+              children: (0, r.jsx)("div", { className: p[t] }),
             }),
           });
         }
       }
-      p.defaultProps = { shineSize: "default" };
+      I.defaultProps = { shineSize: "default" };
       let h = e => {
         let {
             children: t,
@@ -3013,12 +3013,12 @@
             shineSize: a = "default",
             shinePaused: f,
             buttonShineClassName: _,
-            onlyShineOnHover: I,
+            onlyShineOnHover: p,
             ...h
           } = e,
           C = o.createRef(),
           T = (0, d.default)(C),
-          S = !i && !l && !0 !== s && (!I || T);
+          S = !i && !l && !0 !== s && (!p || T);
         return (0, r.jsxs)(c.Button, {
           buttonRef: C,
           ...h,
@@ -3028,11 +3028,11 @@
           children: [
             t,
             S
-              ? (0, r.jsx)(p, {
+              ? (0, r.jsx)(I, {
                   shinePaused: f,
                   className: u(
                     E.buttonShine,
-                    I ? E.onlyShineOnHover : void 0,
+                    p ? E.onlyShineOnHover : void 0,
                     _
                   ),
                   shineSize: a,
@@ -3069,42 +3069,12 @@
       }
       n("884691");
     },
-    476765: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          uid: function () {
-            return o;
-          },
-          useUID: function () {
-            return s;
-          },
-          UID: function () {
-            return u;
-          },
-        });
-      var i = n("995008"),
-        l = n.n(i),
-        r = n("775560");
-      let o = function () {
-          let e =
-            arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : "uid_";
-          return l(e);
-        },
-        s = () => (0, r.useLazyValue)(() => o()),
-        u = e => {
-          let { children: t } = e;
-          return t(s());
-        };
-    },
     461380: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return p;
           },
         });
       var i = n("37983");
@@ -3130,8 +3100,8 @@
               width: n = 24,
               height: l = 24,
               color: _ = "currentColor",
-              transition: I = f.transition,
-              className: p,
+              transition: p = f.transition,
+              className: I,
               foreground: h,
               expanded: C,
               ...T
@@ -3147,7 +3117,7 @@
             }[N];
             return (0, i.jsx)(e, {
               ...T,
-              className: p,
+              className: I,
               width: n,
               height: l,
               color: _,
@@ -3155,7 +3125,7 @@
             });
           }
           return (0, i.jsx)("svg", {
-            className: r(p, I, N),
+            className: r(I, p, N),
             width: n,
             height: l,
             viewBox: "0 0 24 24",
@@ -3173,7 +3143,7 @@
           });
         };
       _.Directions = E;
-      var I = _;
+      var p = _;
     },
     109264: function (e, t, n) {
       "use strict";
@@ -3831,8 +3801,8 @@
         f = n("77078"),
         E = n("485328"),
         _ = n("159885"),
-        I = n("983782"),
-        p = n("275495");
+        p = n("983782"),
+        I = n("275495");
       let h = (0, _.cssValueToNumber)(
         d.default.FULL_SCREEN_LAYER_ANIMATION_DURATION
       );
@@ -3877,10 +3847,10 @@
           ),
           (0, r.jsx)(t.LayerComponent, {
             children: (0, r.jsxs)("div", {
-              className: p.root,
+              className: I.root,
               ref: n,
               children: [
-                (0, r.jsx)("div", { className: p.drag }),
+                (0, r.jsx)("div", { className: I.drag }),
                 t.render({
                   transitionState: null != t ? t.transitionState : 3,
                   closeLayer: () => m(t.key),
@@ -3891,20 +3861,20 @@
         );
       }
       let S = {
-          enter: p.enter,
-          enterActive: p.enterActive,
-          enterDone: p.enterDone,
-          exit: p.exit,
-          exitActive: p.exitActive,
-          exitDone: p.exitDone,
+          enter: I.enter,
+          enterActive: I.enterActive,
+          enterDone: I.enterDone,
+          exit: I.exit,
+          exitActive: I.exitActive,
+          exitDone: I.exitDone,
         },
         N = {
-          enter: p.enterReducedMotion,
-          enterActive: p.enterActiveReducedMotion,
-          enterDone: p.enterDoneReducedMotion,
-          exit: p.exitReducedMotion,
-          exitActive: p.exitActiveReducedMotion,
-          exitDone: p.exitDoneReducedMotion,
+          enter: I.enterReducedMotion,
+          enterActive: I.enterActiveReducedMotion,
+          enterDone: I.enterDoneReducedMotion,
+          exit: I.exitReducedMotion,
+          exitActive: I.exitActiveReducedMotion,
+          exitDone: I.exitDoneReducedMotion,
         };
       function v() {
         let { reducedMotion: e } = o.useContext(
@@ -3949,7 +3919,7 @@
               {
                 key: l,
                 transitionState: 1,
-                LayerComponent: null != i ? i : I.default,
+                LayerComponent: null != i ? i : p.default,
                 render: e,
               },
             ],
@@ -4147,4 +4117,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65225.de79c418bd5f0874cf53.js.map
+//# sourceMappingURL=59646.1b0b4f5e014fe34cc9df.js.map

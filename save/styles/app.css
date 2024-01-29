@@ -23104,8 +23104,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -34568,6 +34568,11 @@ html .progress__4ef76 {
 .statusIcon__3e5cd {
   height: 40px;
   width: 40px;
+}
+.statusText__80462 {
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .avatarWrapper__9a9a0 {
   position: relative;
@@ -108342,4 +108347,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.54cbf97c1c4df37d8b02.css.map*/
+/*# sourceMappingURL=app.861b5d044c35f807d646.css.map*/

@@ -4753,6 +4753,7 @@
             return U;
           },
         }),
+        n("781738"),
         n("424973"),
         n("222007");
       var i,
@@ -4814,8 +4815,9 @@
               e.id,
               !0
             ),
-            n = (0, M.default)(t.split("\n")[0], !0),
-            i = [];
+            n = (0, M.default)(t.split("\n")[0], !0);
+          n = n.replace(/^[ #-]+/, "");
+          let i = [];
           for (;;) {
             let e = n.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
             if (null == e || null == e.index) {
@@ -5078,4 +5080,4 @@
     },
   },
 ]);
-//# sourceMappingURL=94816.637e7c0b320aab380f7b.js.map
+//# sourceMappingURL=94816.c28aad3805f00de540f8.js.map

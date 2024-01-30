@@ -16,6 +16,7 @@
         (i.BADGE = "badge"),
         (i.USER_SETTINGS = "user settings"),
         (i.USER_SETTINGS_MENU = "user settings menu"),
+        (i.USER_SETTINGS_GIFT_INVENTORY = "user settings gift inventory"),
         (i.ACCOUNT = "account"),
         (i.TEXT_AND_IMAGES = "text and images"),
         (i.GUILD_SETTINGS = "guild settings"),
@@ -320,4 +321,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.b09a0d9ca9c39e7c8a0a.js.map
+//# sourceMappingURL=14875.ba44eb6f1396bf220735.js.map

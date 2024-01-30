@@ -16,10 +16,10 @@
       _.r(a),
         _.d(a, {
           BadgeShapes: function () {
-            return o;
+            return T;
           },
           getBadgeWidthForValue: function () {
-            return T;
+            return o;
           },
           getBadgeCountString: function () {
             return O;
@@ -48,13 +48,13 @@
       var R = _("20606");
       _("782340");
       var n = _("444036");
-      let o = {
+      let T = {
         ROUND: n.baseShapeRound,
         ROUND_LEFT: n.baseShapeRoundLeft,
         ROUND_RIGHT: n.baseShapeRoundRight,
         SQUARE: "",
       };
-      function T(r) {
+      function o(r) {
         return r < 10 ? 16 : r < 100 ? 22 : 30;
       }
       function O(r) {
@@ -67,7 +67,7 @@
             count: a,
             color: _ = R.default.STATUS_DANGER,
             disableColor: E = !1,
-            shape: N = o.ROUND,
+            shape: N = T.ROUND,
             className: A,
             style: d,
             ...i
@@ -76,7 +76,7 @@
             className: t(A, n.numberBadge, N),
             style: {
               backgroundColor: E ? void 0 : _,
-              width: T(a),
+              width: o(a),
               paddingRight: (function (r) {
                 switch (r) {
                   case 1:
@@ -98,13 +98,13 @@
             text: a,
             className: _,
             color: E = R.default.STATUS_DANGER,
-            shape: T = o.ROUND,
+            shape: o = T.ROUND,
             disableColor: O = !1,
             style: N,
             ...A
           } = r;
           return (0, e.jsx)("div", {
-            className: t(_, n.textBadge, T),
+            className: t(_, n.textBadge, o),
             style: { backgroundColor: O ? void 0 : E, ...N },
             ...A,
             children: a,
@@ -123,12 +123,12 @@
             icon: a,
             className: _,
             color: E = R.default.STATUS_DANGER,
-            shape: T = o.ROUND,
+            shape: o = T.ROUND,
             disableColor: O = !1,
             style: N,
           } = r;
           return (0, e.jsx)("div", {
-            className: t(_, n.iconBadge, T),
+            className: t(_, n.iconBadge, o),
             style: { backgroundColor: O ? void 0 : E, ...N },
             children: (0, e.jsx)(a, { className: n.icon }),
           });
@@ -137,14 +137,14 @@
           let {
             className: a,
             color: _ = R.default.INTERACTIVE_ACTIVE,
-            shape: E = o.ROUND,
-            disableColor: T = !1,
+            shape: E = T.ROUND,
+            disableColor: o = !1,
             style: O,
             ...N
           } = r;
           return (0, e.jsx)("div", {
             className: t(a, n.circleBadge, E),
-            style: { backgroundColor: T ? void 0 : _, ...O },
+            style: { backgroundColor: o ? void 0 : _, ...O },
             ...N,
           });
         };
@@ -535,6 +535,12 @@
           "var(--redesign-button-secondary-pressed-border)"),
         (e.REDESIGN_BUTTON_SECONDARY_TEXT =
           "var(--redesign-button-secondary-text)"),
+        (e.REDESIGN_BUTTON_SELECTED_BACKGROUND =
+          "var(--redesign-button-selected-background)"),
+        (e.REDESIGN_BUTTON_SELECTED_PRESSED_BACKGROUND =
+          "var(--redesign-button-selected-pressed-background)"),
+        (e.REDESIGN_BUTTON_SELECTED_TEXT =
+          "var(--redesign-button-selected-text)"),
         (e.REDESIGN_CHANNEL_CATEGORY_NAME_TEXT =
           "var(--redesign-channel-category-name-text)"),
         (e.REDESIGN_CHANNEL_MESSAGE_PREVIEW_TEXT =
@@ -613,4 +619,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.5ab298ea9f592efc277b.js.map
+//# sourceMappingURL=21251.b9123e8e72b94b26f3d9.js.map

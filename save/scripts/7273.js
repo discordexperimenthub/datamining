@@ -2843,10 +2843,10 @@
             "/channels/".concat(_, "/messages/").concat(E, "/expire"),
           PREMIUM_MARKETING: "/premium-marketing",
           QUESTS_CURRENT_QUESTS: "/quests/@me",
-          QUESTS_HEARTBEAT: _ => "/quests/".concat(_, "/heartbeat"),
-          ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls",
-          QUESTS_REWARD_CODE: _ => "/quests/".concat(_, "/reward-code"),
           QUESTS_ENROLL: _ => "/quests/".concat(_, "/enroll"),
+          QUESTS_HEARTBEAT: _ => "/quests/".concat(_, "/heartbeat"),
+          QUESTS_REWARD_CODE: _ => "/quests/".concat(_, "/reward-code"),
+          ATTACHMENTS_REFRESH_URLS: "/attachments/refresh-urls",
           GAME_INVITE: _ => "/game-invite/@me/".concat(_),
           GAME_INVITES: "/game-invite/@me",
         }),
@@ -7067,7 +7067,8 @@
         (j.SHARE = "share"),
         (j.CREATE_VOICE_INVITE = "create_voice_invite"),
         (j.SEND_VOICE_HANGOUT_WAVE = "send_voice_hangout_wave"),
-        (j.ACCOUNT_STANDING = "account-standing");
+        (j.ACCOUNT_STANDING = "account-standing"),
+        (j.MOBILE_NATIVE_UPDATE = "mobile-native-update");
       let _t = "CacheStoreLazy",
         _A = "CacheStoreChannelsLazy",
         _T = "CacheStore";
@@ -17107,4 +17108,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.25a9d6aa679e8bcf9a50.js.map
+//# sourceMappingURL=7273.8c81ee06b18c7f2e5c2e.js.map

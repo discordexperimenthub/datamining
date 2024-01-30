@@ -12,10 +12,10 @@
             return f;
           },
           default: function () {
-            return p;
+            return _;
           },
           useAvatarColors: function () {
-            return _;
+            return p;
           },
         }),
         l("222007");
@@ -46,13 +46,13 @@
           }
         }
       }
-      function p(e, i) {
+      function _(e, i) {
         let l =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-          [t] = _(e, i, l);
+          [t] = p(e, i, l);
         return t;
       }
-      function _(e, i) {
+      function p(e, i) {
         let l =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
           n = c(i => (null == e ? void 0 : i.palette[e])),
@@ -287,7 +287,7 @@
       l.r(i),
         l.d(i, {
           default: function () {
-            return D;
+            return H;
           },
         }),
         l("222007"),
@@ -303,26 +303,34 @@
         c = l("455079"),
         f = l("677099");
       let m = new Set(),
-        p = new Set(),
-        _ = {},
+        _ = new Set(),
+        p = {},
         g = {},
         h = {},
         v = {},
         b = {},
-        P = !1;
+        P = !1,
+        E = !1;
       function S() {
-        m.clear(), p.clear(), (_ = {}), (g = {}), (h = {}), (v = {}), (b = {});
-      }
-      function E(e) {
-        let { userId: i } = e;
-        p.add(i);
-      }
-      function C(e) {
-        let { userId: i } = e;
-        p.delete(i);
+        m.clear(),
+          _.clear(),
+          (p = {}),
+          (g = {}),
+          (h = {}),
+          (v = {}),
+          (b = {}),
+          (P = !1);
       }
       function I(e) {
-        p.delete(e.userId),
+        let { userId: i } = e;
+        _.add(i);
+      }
+      function U(e) {
+        let { userId: i } = e;
+        _.delete(i);
+      }
+      function C(e) {
+        _.delete(e.userId),
           (h[e.userId] = n(e.mutualFriends)
             .map(e => ({
               key: e.id,
@@ -336,16 +344,16 @@
             .value()),
           (v[e.userId] = e.mutualFriends.length);
       }
-      function U() {
+      function T() {
         if (0 === Object.keys(b).length) return !1;
         b = {};
       }
-      function T(e) {
+      function F(e) {
         if (null == b[e.user.id]) return !1;
         delete b[e.user.id];
       }
-      function F(e) {
-        var i, l, t, n, u, o, d, a, c, p, h, P, S, E, C, I, U;
+      function y(e) {
+        var i, l, t, n, u, o, d, a, c, _, h, P, E, S, I, U, C;
         if ((m.delete(e.user.id), null != e.mutual_guilds)) {
           let i = {};
           e.mutual_guilds.forEach(e => {
@@ -365,7 +373,7 @@
         let T = null !== (c = e.premium_since) && void 0 !== c ? c : null,
           F = e.application;
         if (
-          ((_[e.user.id] = {
+          ((p[e.user.id] = {
             userId: e.user.id,
             banner:
               null === (i = e.user_profile) || void 0 === i ? void 0 : i.banner,
@@ -383,11 +391,11 @@
                 : n.popout_animation_particle_type,
             bio:
               null !==
-                (p =
+                (_ =
                   null === (u = e.user_profile) || void 0 === u
                     ? void 0
-                    : u.bio) && void 0 !== p
-                ? p
+                    : u.bio) && void 0 !== _
+                ? _
                 : "",
             profileEffectId:
               null === (d = e.user_profile) || void 0 === d
@@ -411,8 +419,8 @@
                 ? P
                 : [],
             applicationRoleConnections:
-              null !== (S = e.application_role_connections) && void 0 !== S
-                ? S
+              null !== (E = e.application_role_connections) && void 0 !== E
+                ? E
                 : [],
             premiumSince: null != T ? new Date(T) : null,
             premiumType: e.premium_type,
@@ -445,19 +453,19 @@
             banner: e.guild_member_profile.banner,
             accentColor: e.guild_member_profile.accent_color,
             themeColors:
-              null === (E = e.guild_member_profile) || void 0 === E
+              null === (S = e.guild_member_profile) || void 0 === S
                 ? void 0
-                : E.theme_colors,
+                : S.theme_colors,
             popoutAnimationParticleType:
+              null === (I = e.guild_member_profile) || void 0 === I
+                ? void 0
+                : I.popout_animation_particle_type,
+            profileEffectId:
               null === (C = e.guild_member_profile) || void 0 === C
                 ? void 0
-                : C.popout_animation_particle_type,
-            profileEffectId:
-              null === (U = e.guild_member_profile) || void 0 === U
-                ? void 0
-                : null === (I = U.profile_effect) || void 0 === I
+                : null === (U = C.profile_effect) || void 0 === U
                   ? void 0
-                  : I.id,
+                  : U.id,
             bio: e.guild_member_profile.bio,
             pronouns: e.guild_member_profile.pronouns,
             badges: e.guild_badges,
@@ -467,15 +475,15 @@
             : (g[e.user.id] = { [e.guild_member_profile.guild_id]: i });
         }
       }
-      function y(e) {
+      function A(e) {
         let { userId: i } = e;
         m.add(i);
       }
-      function A(e) {
+      function R(e) {
         var i;
         let { userId: l } = e;
-        (_[l] =
-          null !== (i = _[l]) && void 0 !== i
+        (p[l] =
+          null !== (i = p[l]) && void 0 !== i
             ? i
             : {
                 connectedAccounts: [],
@@ -495,78 +503,88 @@
           m.delete(l);
       }
       function M(e) {
-        return null != e.guild_id
-          ? (function (e) {
-              let {
-                userId: i,
-                guild_id: l,
-                accent_color: t,
-                banner: n,
-                bio: r,
-                pronouns: u,
-                popout_animation_particle_type: o,
-                theme_colors: d,
-                profileEffectId: s,
-              } = e;
-              if (null == l || null == g[i]) return !1;
-              let a = g[i][l];
-              if (null == a) return !1;
-              g[i][l] = {
-                ...a,
-                accentColor: t,
-                banner: n,
-                bio: r,
-                pronouns: u,
-                popoutAnimationParticleType: o,
-                themeColors: d,
-                profileEffectId: s,
-              };
-            })(e)
-          : (function (e) {
-              let {
-                  userId: i,
-                  accent_color: l,
-                  banner: t,
-                  bio: n,
-                  pronouns: r,
-                  popout_animation_particle_type: u,
-                  theme_colors: o,
-                  profileEffectId: d,
-                } = e,
-                s = _[i];
-              if (null == s) return !1;
-              _[i] = {
-                ...s,
-                accentColor: l,
-                banner: t,
-                bio: n,
-                pronouns: r,
-                popoutAnimationParticleType: u,
-                themeColors: o,
-                profileEffectId: d,
-              };
-            })(e);
-      }
-      function R(e) {
         P = !0;
       }
       function L(e) {
+        (P = !1),
+          null != e.guild_id
+            ? !(function (e) {
+                let {
+                  userId: i,
+                  guild_id: l,
+                  accent_color: t,
+                  banner: n,
+                  bio: r,
+                  pronouns: u,
+                  popout_animation_particle_type: o,
+                  theme_colors: d,
+                  profileEffectId: s,
+                } = e;
+                if (null == l || null == g[i]) return !1;
+                let a = g[i][l];
+                if (null == a) return !1;
+                g[i][l] = {
+                  ...a,
+                  accentColor: t,
+                  banner: n,
+                  bio: r,
+                  pronouns: u,
+                  popoutAnimationParticleType: o,
+                  themeColors: d,
+                  profileEffectId: s,
+                };
+              })(e)
+            : !(function (e) {
+                let {
+                    userId: i,
+                    accent_color: l,
+                    banner: t,
+                    bio: n,
+                    pronouns: r,
+                    popout_animation_particle_type: u,
+                    theme_colors: o,
+                    profileEffectId: d,
+                  } = e,
+                  s = p[i];
+                if (null == s) return !1;
+                p[i] = {
+                  ...s,
+                  accentColor: l,
+                  banner: t,
+                  bio: n,
+                  pronouns: r,
+                  popoutAnimationParticleType: u,
+                  themeColors: o,
+                  profileEffectId: d,
+                };
+              })(e);
+      }
+      function D(e) {
+        P = !1;
+      }
+      function G(e) {
+        E = !0;
+      }
+      function w(e) {
         let { user: i } = e;
-        if (m.has(i.id) || null == _[i.id]) return !1;
-        _[i.id].lastFetched = 0;
+        if (m.has(i.id) || null == p[i.id]) return !1;
+        p[i.id].lastFetched = 0;
       }
-      function G() {
-        m.clear(), (_ = {}), (g = {});
+      function O() {
+        m.clear(), (p = {}), (g = {});
       }
-      class w extends c.default {
+      class B extends c.default {
         isFetchingProfile(e) {
           return m.has(e);
         }
         isFetchingFriends(e) {
-          return p.has(e);
+          return _.has(e);
+        }
+        get isSubmitting() {
+          return P;
         }
         getUserProfile(e) {
-          return _[e];
+          return p[e];
         }
         getGuildMemberProfile(e, i) {
           var l;
@@ -586,49 +604,51 @@
           return b[e];
         }
         getIsAccessibilityTooltipViewed() {
-          return P;
+          return E;
         }
         takeSnapshot() {
           let e = d.default.getId();
           return {
-            version: w.LATEST_SNAPSHOT_VERSION,
-            data: [{ userId: e, profile: _[e] }],
+            version: B.LATEST_SNAPSHOT_VERSION,
+            data: [{ userId: e, profile: p[e] }],
           };
         }
         constructor() {
           super(),
             (this.loadCache = () => {
-              let e = this.readSnapshot(w.LATEST_SNAPSHOT_VERSION);
+              let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
               null != e &&
                 e.forEach(e => {
                   let { userId: i, profile: l } = e;
-                  _[i] = l;
+                  p[i] = l;
                 });
             }),
             this.registerActionHandlers({
               CACHE_LOADED_LAZY: this.loadCache,
-              USER_PROFILE_FETCH_START: y,
-              USER_PROFILE_FETCH_FAILURE: A,
-              USER_PROFILE_FETCH_SUCCESS: F,
-              USER_PROFILE_UPDATE_SUCCESS: M,
-              USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: R,
-              MUTUAL_FRIENDS_FETCH_START: E,
-              MUTUAL_FRIENDS_FETCH_SUCCESS: I,
-              MUTUAL_FRIENDS_FETCH_FAILURE: C,
-              GUILD_JOIN: U,
-              GUILD_DELETE: U,
-              GUILD_MEMBER_ADD: T,
-              GUILD_MEMBER_REMOVE: T,
-              GUILD_MEMBER_UPDATE: L,
-              USER_UPDATE: L,
+              USER_PROFILE_FETCH_START: A,
+              USER_PROFILE_FETCH_FAILURE: R,
+              USER_PROFILE_FETCH_SUCCESS: y,
+              USER_PROFILE_UPDATE_START: M,
+              USER_PROFILE_UPDATE_SUCCESS: L,
+              USER_PROFILE_UPDATE_FAILURE: D,
+              USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: G,
+              MUTUAL_FRIENDS_FETCH_START: I,
+              MUTUAL_FRIENDS_FETCH_SUCCESS: C,
+              MUTUAL_FRIENDS_FETCH_FAILURE: U,
+              GUILD_JOIN: T,
+              GUILD_DELETE: T,
+              GUILD_MEMBER_ADD: F,
+              GUILD_MEMBER_REMOVE: F,
+              GUILD_MEMBER_UPDATE: w,
+              USER_UPDATE: w,
               LOGOUT: S,
             }),
             this.waitFor(f.default),
-            this.syncWith([u.default], G);
+            this.syncWith([u.default], O);
         }
       }
-      (w.displayName = "UserProfileStore"), (w.LATEST_SNAPSHOT_VERSION = 1);
-      var D = new w();
+      (B.displayName = "UserProfileStore"), (B.LATEST_SNAPSHOT_VERSION = 1);
+      var H = new B();
     },
     506885: function (e, i, l) {
       "use strict";
@@ -650,8 +670,8 @@
         var l, c, f;
         let m,
           {
-            withMutualGuilds: p = !1,
-            withMutualFriendsCount: _ = !1,
+            withMutualGuilds: _ = !1,
+            withMutualFriendsCount: p = !1,
             friendToken: g,
             preloadUserBanner: h = !0,
             dispatchWait: v = !1,
@@ -662,7 +682,7 @@
             : {};
         if ("" === e) return;
         null != i && (0, r.maybeFetchColors)(i),
-          null != b && !p && (p = !0),
+          null != b && !_ && (_ = !0),
           null != b &&
             (m =
               null !==
@@ -676,13 +696,13 @@
                     : l.id) && void 0 !== c
                 ? c
                 : void 0);
-        let S = s.default.getUserProfile(e),
-          E = s.default.getMutualGuilds(e),
-          C = s.default.getMutualFriendsCount(e),
-          I = s.default.isFetchingProfile(e),
-          U =
-            (null == S ? void 0 : S.profileFetchFailed) ||
-            (!I && ((!Array.isArray(E) && p) || (null == C && _))),
+        let E = s.default.getUserProfile(e),
+          S = s.default.getMutualGuilds(e),
+          I = s.default.getMutualFriendsCount(e),
+          U = s.default.isFetchingProfile(e),
+          C =
+            (null == E ? void 0 : E.profileFetchFailed) ||
+            (!U && ((!Array.isArray(S) && _) || (null == I && p))),
           T = h ? a.default : void 0,
           F = !1;
         if (null != b) {
@@ -690,11 +710,11 @@
           F = null == i;
         }
         !(
-          !U &&
+          !C &&
           !F &&
-          (I ||
+          (U ||
             Date.now() -
-              (null !== (f = null == S ? void 0 : S.lastFetched) && void 0 !== f
+              (null !== (f = null == E ? void 0 : E.lastFetched) && void 0 !== f
                 ? f
                 : 0) <
               6e4)
@@ -704,8 +724,8 @@
                 (0, n.fetchProfile)(
                   e,
                   {
-                    withMutualGuilds: p,
-                    withMutualFriendsCount: _,
+                    withMutualGuilds: _,
+                    withMutualFriendsCount: p,
                     friendToken: g,
                     guildId: b,
                     connectionsRoleId: m,
@@ -716,8 +736,8 @@
             : await (0, n.fetchProfile)(
                 e,
                 {
-                  withMutualGuilds: p,
-                  withMutualFriendsCount: _,
+                  withMutualGuilds: _,
+                  withMutualFriendsCount: p,
                   friendToken: g,
                   guildId: b,
                   connectionsRoleId: m,
@@ -783,4 +803,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49191.4c47aae235ac3c0cdcd4.js.map
+//# sourceMappingURL=49191.5b151c54082714d18094.js.map

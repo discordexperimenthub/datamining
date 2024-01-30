@@ -21644,6 +21644,8 @@
         COLLECTIBLES_BANNER_TITLE_2024: "Give your profile a fresh look",
         COLLECTIBLES_BANNER_DESCRIPTION_2024:
           "Check out the latest avatar decorations and profile effects and collect your favorite styles.",
+        COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT:
+          "Explore Lunar New Year styles",
         INVENTORY_ADD_PACK: "Add Pack",
         INVENTORY_VIEW_PACK: "View Pack",
         INVENTORY_REMOVE_PACK: "Remove Pack",
@@ -25858,8 +25860,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262336", ", Version Hash: ")
-          .concat("f3c5add838ddc616ee1e9b5c3e18d86c0ad97f30")
+          .concat("262353", ", Version Hash: ")
+          .concat("8aa74242fe683e1a24022104a1b96e561d4d9ac5")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28833,12 +28835,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262336"), "262336"));
+        let _ = parseInt(((e = "262353"), "262353"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262336"
+                "262353"
               )
             ),
             (_ = 0)),
@@ -50096,4 +50098,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.697e45c83b2a3ded62a3.js.map
+//# sourceMappingURL=90486.52749e58824f5f6c8f40.js.map

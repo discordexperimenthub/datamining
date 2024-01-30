@@ -308,7 +308,7 @@
             T.default.track(U.AnalyticEvents.ACTIVITY_SESSION_JOINED, {
               channel_id: l.id,
               guild_id: l.getGuildId(),
-              media_session_id: e.mediaSessionId,
+              media_session_id: null == e ? void 0 : e.mediaSessionId,
               activity_session_id: e.activitySessionId,
               application_id: i,
               location_stack: n,
@@ -400,13 +400,17 @@
           return;
         let c = E.default.getMediaSessionId(),
           { application_id: I } = l,
-          A = (0, O.default)(l);
+          A = (0, O.default)(l),
+          T = null == c && (null == s ? void 0 : s.isVocal()) === !0;
         null != I &&
           null != A &&
-          null != c &&
+          !T &&
           (null === (t = F[I]) ||
             void 0 === t ||
-            t.call(F, { mediaSessionId: c, activitySessionId: A }),
+            t.call(F, {
+              mediaSessionId: null != c ? c : null,
+              activitySessionId: A,
+            }),
           delete F[I]);
       }
       function H(e) {
@@ -2510,4 +2514,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47146.b01c43ba0861b74dc42b.js.map
+//# sourceMappingURL=47146.4dbf723f3a92ecba2ab7.js.map

@@ -5182,6 +5182,8 @@
           "user_settings_merch_link_confirmed"),
         (es.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION =
           "user_settings_report_incorrect_game_detection"),
+        (es.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE =
+          "user_settings_swipe_to_reply_toggle"),
         (es.THREAD_BROWSER_TAB_CHANGED = "thread_browser_tab_changed"),
         (es.THREAD_NOTIFICATION_SETTINGS_UPDATED =
           "thread_notification_settings_updated"),
@@ -17109,4 +17111,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.5c7339128694b079be1d.js.map
+//# sourceMappingURL=7273.106d3369c1cafe58e9b3.js.map

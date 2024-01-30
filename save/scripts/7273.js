@@ -4681,6 +4681,7 @@
         (es.DM_LIST_VIEWED = "dm_list_viewed"),
         (es.DM_EMPTY_ACTION = "dm_empty_action"),
         (es.DM_SAFETY = "dm_safety"),
+        (es.NITRO_HOME_NAVIGATION = "nitro_home_navigation"),
         (es.SUMMARIES_SIDEBAR_VIEWED = "summaries_sidebar_viewed"),
         (es.SUMMARIES_SIDEBAR_TOGGLED = "summaries_sidebar_toggled"),
         (es.SUMMARIES_TOPIC_CLICKED = "summaries_topic_clicked"),
@@ -17111,4 +17112,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.106d3369c1cafe58e9b3.js.map
+//# sourceMappingURL=7273.24e16604031dda5680e7.js.map

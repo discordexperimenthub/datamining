@@ -312,6 +312,7 @@
         (i.ACTIVITY_IN_TEXT_ACTIONBAR = "activity in text actionbar"),
         (i.GUILD_EVENT_CARD = "guild event card"),
         (i.EVENT_SETTINGS = "event settings"),
+        (i.GUILD_EVENT_RSVP_BUTTON = "guild event rsvp button"),
         (i.GIFT_CODE_MODAL = "gift code modal");
       var i,
         I,
@@ -319,4 +320,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.31e886d6d1db8a56b5df.js.map
+//# sourceMappingURL=14875.b09a0d9ca9c39e7c8a0a.js.map

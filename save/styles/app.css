@@ -2674,7 +2674,7 @@
   margin-left: 8px;
 }
 .title__746ed {
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .developerResources_fdd04d:hover {
   cursor: pointer;
@@ -2699,8 +2699,8 @@
   color: var(--interactive-normal);
 }
 .backHeader__18afe {
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
   color: var(--interactive-normal);
 }
 .theme-light .directoryContainer_d3edd9 {
@@ -108523,4 +108523,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.0a5c45fd37836fc273f1.css.map*/
+/*# sourceMappingURL=app.47b9947cf6c398a74773.css.map*/

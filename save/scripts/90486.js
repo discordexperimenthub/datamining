@@ -878,6 +878,7 @@
         EMBEDDED_ACTIVITIES_LEAVE: "Leave",
         EMBEDDED_ACTIVITIES_JOIN_ACTIVITY: "Join Activity",
         EMBEDDED_ACTIVITIES_IN_ACTIVITY: "In Activity",
+        EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL: "Start Activity",
         EMBEDDED_ACTIVITIES_START_AN_ACTIVITY: "Start an Activity",
         EMBEDDED_ACTIVITIES_INVITE_TO_ACTIVITY: "Invite To Activity",
         EMBEDDED_ACTIVITIES_INVITE_FRIENDS_TO_ACTIVITY_NAME:
@@ -25862,8 +25863,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262535", ", Version Hash: ")
-          .concat("63ac4e7bc319148db3e38c5b299fcb6fe652a71f")
+          .concat("262542", ", Version Hash: ")
+          .concat("c4bf55d2682a80f809e56dd3be9b2aa5c394866c")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28837,12 +28838,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262535"), "262535"));
+        let _ = parseInt(((e = "262542"), "262542"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262535"
+                "262542"
               )
             ),
             (_ = 0)),
@@ -50108,4 +50109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.4640c0f45b1807ba638b.js.map
+//# sourceMappingURL=90486.104c20a6c736ffcecea8.js.map

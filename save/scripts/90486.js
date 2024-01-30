@@ -25860,8 +25860,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262353", ", Version Hash: ")
-          .concat("8aa74242fe683e1a24022104a1b96e561d4d9ac5")
+          .concat("262365", ", Version Hash: ")
+          .concat("c9a71bbc9bf69e49351808b39a28a180ce72669d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28835,12 +28835,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262353"), "262353"));
+        let _ = parseInt(((e = "262365"), "262365"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262353"
+                "262365"
               )
             ),
             (_ = 0)),
@@ -29572,13 +29572,21 @@
           if (!(0, T.default)(r.default)) return;
           let _ = (0, i.areClipsEnabled)(),
             E = s.default.getSettings(),
-            t = (E.clipsEnabled || E.decoupledClipsEnabled) && _;
-          r.default
-            .getMediaEngine()
-            .setClipBufferLength(t ? E.clipsLength / 1e3 : 0),
-            ((null == e ? void 0 : e.settings.decoupledClipsEnabled) ||
-              (null == e ? void 0 : e.settings.clipsQuality) != null) &&
-              this.fireClipsInitEvent();
+            t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
+            o = r.default.getMediaEngine();
+          if (
+            (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0),
+            null == e ? void 0 : e.settings.decoupledClipsEnabled)
+          )
+            this.fireClipsInitEvent();
+          else if ((null == e ? void 0 : e.settings.clipsQuality) != null) {
+            let { frameRate: e, resolution: _ } = E.clipsQuality;
+            !o.setClipsQualitySettings(
+              _ <= 480 ? (_ / 3) * 4 : (_ / 9) * 16,
+              _,
+              e
+            ) && this.fireClipsInitEvent();
+          }
         }
         handleClipsInitOnToggleDetection(e) {
           let _ = a.default.getVisibleGame();
@@ -50098,4 +50106,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.52749e58824f5f6c8f40.js.map
+//# sourceMappingURL=90486.34144eb1ccc8f4e30325.js.map

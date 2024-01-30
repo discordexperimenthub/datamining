@@ -6211,6 +6211,7 @@
         (o.USER_ADD_PHONE = "impression_user_add_phone"),
         (o.USER_AGE_GATE = "impression_user_age_gate"),
         (o.USER_AGE_GATE_UNDERAGE = "impression_user_age_gate_underage"),
+        (o.USER_AGREEMENTS = "impression_user_agreements"),
         (o.USER_CLYDE_AI_CONSENT_MODAL =
           "impression_user_clyde_ai_consent_modal"),
         (o.USER_LOGIN = "impression_user_login"),
@@ -6738,7 +6739,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "262497"), "262497"), 10);
+          let o = parseInt(((n = "262513"), "262513"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7036,4 +7037,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.8c3cc739b1b345880258.js.map
+//# sourceMappingURL=87475.6e0389b4ae3cca59c891.js.map

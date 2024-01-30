@@ -3617,6 +3617,10 @@
         icon: "icon__9090f",
       };
     },
+    843963: function (e, t, n) {
+      "use strict";
+      e.exports = { tabs: "tabs__88df8", wrapper: "wrapper__2f460" };
+    },
     501701: function (e, t, n) {
       "use strict";
       e.exports = { modalCloseButton: "modalCloseButton_b4dfd7" };

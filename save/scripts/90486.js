@@ -23978,6 +23978,11 @@
           "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}",
         STOREFRONT: "App Store",
         STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT_APP_SUBSCRIPTIONS: "App Subscriptions",
+        STOREFRONT_APP_SUBSCRIPTIONS_BODY:
+          "Purchase subscriptions from {appName}",
+        STOREFRONT_APP_PRODUCTS: "App Products",
+        STOREFRONT_APP_PRODUCTS_BODY: "Purchase products from {appName}",
         QUIET_MODE_DISABLED: "Focus Mode Disabled",
         QUIET_MODE_ENABLED: "Focus Mode Enabled",
         QUIET_MODE_DND: "Focus Mode (DND) Enabled",
@@ -25875,8 +25880,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262657", ", Version Hash: ")
-          .concat("11dac0c9e4a0187e5e7960634517a96c51120a98")
+          .concat("262661", ", Version Hash: ")
+          .concat("47eb2d9d6720a80c73ddead781eb39962b16fc76")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28850,12 +28855,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262657"), "262657"));
+        let _ = parseInt(((e = "262661"), "262661"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262657"
+                "262661"
               )
             ),
             (_ = 0)),
@@ -50131,4 +50136,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.f7b805a37711879f3b6d.js.map
+//# sourceMappingURL=90486.81cf43b5cb1f24fe427d.js.map

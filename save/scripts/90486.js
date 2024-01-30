@@ -7028,10 +7028,6 @@
           "You streamed for {streamLengthRequirement, plural, one {1 minute} other {{streamLengthRequirement} minutes}} and unlocked the {rewardName}.",
         FORTNITE_GIFT_INVENTORY_INFO:
           "Get your gear to match your {guardOutfitName}!\n\nStarting May 4, unlock the {rewardName} Discord Drop by doing one of two things:\n\nStream live and Screen Share Fortnite on Discord for 15+ or more minutes to at least one Discord friend.\n\nAfter 15 minutes of screen sharing to a friend, you’ll receive a link as a gift in your Settings > Gift Inventory.\n\nClick the link to log into your Epic Games account and the Wrap will be added to your Fortnite Locker!\n\nCan’t stream? You can also accept the Discord Bot Quest! Start by joining the [official Fortnite Discord server](http://discord.gg/fortnite).\n\nIn the server, you’ll see a bot you can interact with to join the Discord Quest.\n\nUpon interacting with the bot, you’ll be taken to a page where you can link your Epic and Discord accounts.\n\nWith your accounts linked, participate in the Quest by completing a task inside Discord and a task inside Fortnite.\n\nAfter both of these tasks are complete, the Wrap will be added to your Fortnite Locker!\n\nLearn more on our blog post!\n",
-        QUESTS_SPONSORED: "Sponsored",
-        QUESTS_LEARN_MORE: "Learn\n\nmore",
-        QUESTS_ACCEPT_QUEST: "Accept Quest",
-        QUESTS_ACCEPT_TO_WIN: "Accept to win {questReward}",
         ACTIVITY_RESTRICTION_DEFAULT:
           "Share your activity status by default when joining large servers",
         ACTIVITY_RESTRICTION_DEFAULT_NOTE:
@@ -23930,6 +23926,7 @@
         QUESTS_AVAILABLE_THROUGH: "Available through {date}",
         QUESTS_SHOW_CODE: "Show code",
         QUESTS_CLAIM_REWARD: "Claim reward",
+        QUESTS_CLAIM_YOUR_REWARD: "Claim your reward",
         QUESTS_ACCEPT: "Accept Quest",
         QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23955,6 +23952,19 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_SWITCH: "Switch",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
+        QUESTS_SPONSORED: "Sponsored",
+        QUESTS_LEARN_MORE_STACKED: "Learn\n\nmore",
+        QUESTS_ACCEPT_QUEST: "Accept Quest",
+        QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
+          "Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
+        QUESTS_BAR_PROGRESS_EXPANDED_HEADING_INCOMPLETE:
+          "Ready when you are...",
+        QUESTS_BAR_PROGRESS_EXPANDED_HEADING_COMPLETE: "You did it!",
+        QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_INCOMPLETE:
+          "Available until {expirationDate}.",
+        QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE:
+          "Claim by {expirationDate}.",
+        QUESTS_TITLE: "{questName} Quest",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -25865,8 +25875,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262638", ", Version Hash: ")
-          .concat("4a54161099836ef55f378bae681f843c3b6ad8e5")
+          .concat("262657", ", Version Hash: ")
+          .concat("11dac0c9e4a0187e5e7960634517a96c51120a98")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28840,12 +28850,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262638"), "262638"));
+        let _ = parseInt(((e = "262657"), "262657"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262638"
+                "262657"
               )
             ),
             (_ = 0)),
@@ -35791,6 +35801,9 @@
           getPlatformString: function () {
             return L;
           },
+          calculatePercentComplete: function () {
+            return u;
+          },
         }),
         E("222007");
       var t = E("2973"),
@@ -35889,6 +35902,13 @@
             return "";
         }
       };
+      function u(e) {
+        if (null == e.userStatus) return 0;
+        let { streamProgressSeconds: _, completedAt: E } = e.userStatus;
+        if (null != E) return 1;
+        let { streamDurationRequirementMinutes: t } = e.config;
+        return Math.min(_ / 60 / t, 1);
+      }
     },
     319405: function (e, _, E) {
       "use strict";
@@ -50111,4 +50131,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.b53eae413322a49f9f87.js.map
+//# sourceMappingURL=90486.f7b805a37711879f3b6d.js.map

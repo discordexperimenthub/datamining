@@ -11374,6 +11374,7 @@
         (m[(m.EPS = 15)] = "EPS"),
         (m[(m.IDEAL = 16)] = "IDEAL"),
         (m[(m.CASH_APP = 17)] = "CASH_APP"),
+        (m[(m.APPLE = 18)] = "APPLE"),
         (m[(m.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST");
       let _l = new Map([
           [7, "paysafecard"],
@@ -17108,4 +17109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.8c81ee06b18c7f2e5c2e.js.map
+//# sourceMappingURL=7273.5c7339128694b079be1d.js.map

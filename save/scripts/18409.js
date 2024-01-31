@@ -149,13 +149,13 @@
             return h;
           },
           getBlindIds: function () {
-            return E;
+            return b;
           },
           uploadCallscopeLogs: function () {
-            return L;
+            return E;
           },
           uploadCallscopeLogFiles: function () {
-            return b;
+            return L;
           },
         }),
         n("222007");
@@ -184,13 +184,13 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function E(t, e, n) {
+      async function b(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
         return { blindChannelId: l, blindUserId: r };
       }
-      async function L(t, e, n, o) {
+      async function E(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
           if (
@@ -212,7 +212,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await E(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await b(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -224,7 +224,7 @@
                 .concat(i)
             );
             let c = await l.default.fileManager.getCallscopeLogFiles(a);
-            await b(r, c);
+            await L(r, c);
           } catch (t) {
             f.error(
               "uploadCallscopeLogs: Error uploading logs ".concat(
@@ -235,7 +235,7 @@
           }
         }
       }
-      async function b(t, e) {
+      async function L(t, e) {
         try {
           if (0 === e.length) {
             f.error("uploadCallscopeLogFiles: No files found.");
@@ -371,8 +371,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "262863",
-          versionHash: "d15f24b8759d647ef2fd1ed5c832466caf9b1de9",
+          buildNumber: "262870",
+          versionHash: "bef2ec04712ab9aad782bf91379b61b12f9b417f",
         };
       }
       n.r(e),
@@ -562,4 +562,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.953c3a1734453af67522.js.map
+//# sourceMappingURL=18409.5332e2fb3572a49d4f3a.js.map

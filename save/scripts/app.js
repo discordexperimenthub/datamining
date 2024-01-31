@@ -24052,6 +24052,7 @@
         infoBox: "infoBox__7e1d9",
         permission: "permission_b5be39",
         permissionCheckmark: "permissionCheckmark__27f79",
+        searchContainer: "searchContainer_d3c151",
         twoWayWarning: "twoWayWarning_d1f465",
         twoWayWarningIcon: "twoWayWarningIcon_de3272",
       };

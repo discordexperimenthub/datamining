@@ -80175,7 +80175,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-normal__9b1db {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -80184,7 +80184,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-medium__355e8 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -80193,7 +80193,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-semibold__08189 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -80202,7 +80202,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-bold__446d6 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -80211,7 +80211,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-extrabold__5ff4c {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 800;
 }
@@ -80220,7 +80220,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-normal__036fa {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -80229,7 +80229,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-medium__3338e {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -80238,7 +80238,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-semibold__9c374 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -80247,7 +80247,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-bold_efd342 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -80256,7 +80256,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-extrabold_a70068 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -80265,7 +80265,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-normal_b930ac {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -80274,7 +80274,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-medium_bf0a72 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -80283,7 +80283,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-semibold__1fec5 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -80292,7 +80292,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-bold__66d59 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -80301,7 +80301,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-extrabold__86b3e {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
 }
@@ -80310,7 +80310,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-normal_fabe0d {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -80319,7 +80319,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-medium_c8f0ca {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -80328,7 +80328,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-semibold_b64217 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -80337,7 +80337,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-bold_c15ef9 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -80346,7 +80346,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-extrabold__79468 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -80355,7 +80355,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-normal__5ffb4 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -80364,7 +80364,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-medium__02550 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -80373,7 +80373,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-semibold_b19593 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -80382,7 +80382,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-bold_dc6db6 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -80391,7 +80391,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-extrabold_de10b3 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -80400,7 +80400,7 @@ html .invoiceCancelRow_a8669b {
 }
 .eyebrow__35262 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
   text-transform: uppercase;
@@ -80411,7 +80411,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-normal__1b733 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -80420,7 +80420,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-medium_b65871 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -80429,7 +80429,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-semibold__3649b {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -80438,7 +80438,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-bold__44d4f {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -80447,7 +80447,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-extrabold__0fce1 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 800;
 }
@@ -80456,7 +80456,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-heading-18-bold__9bf5a {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -80465,7 +80465,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-normal__21171 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -80474,7 +80474,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-medium__2fc94 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -80483,7 +80483,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-semibold__13ba2 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -80492,7 +80492,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-bold_eb75b7 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -80501,7 +80501,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-normal_f794d5 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -80510,7 +80510,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-medium__50c45 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -80519,7 +80519,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-semibold__8738b {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -80528,7 +80528,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-bold_d2c0b4 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -80537,7 +80537,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-normal__6a717 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -80546,7 +80546,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-medium_fe03a8 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -80555,7 +80555,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-semibold_ed5a82 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -80564,7 +80564,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-bold_b1870d {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -80573,7 +80573,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-normal__28eba {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -80582,7 +80582,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-medium_c27ef7 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -80591,7 +80591,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-semibold__3a68d {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -80600,7 +80600,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-bold_f3042a {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -80609,7 +80609,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-normal__4f137 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -80618,7 +80618,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-medium_f31295 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -80627,7 +80627,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-semibold__40310 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -80636,7 +80636,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-bold_dc7e0a {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -80645,7 +80645,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-normal__1aa6d {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -80654,7 +80654,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-medium__1b66e {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -80663,7 +80663,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-semibold__9f0d9 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -80672,7 +80672,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-bold__0ccea {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -80681,7 +80681,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-normal_bd5628 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 400;
 }
@@ -80690,7 +80690,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-medium__460c3 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 500;
 }
@@ -80699,7 +80699,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-semibold__49f41 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 600;
 }
@@ -80708,7 +80708,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-bold_c9d07b {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 700;
 }
@@ -80717,7 +80717,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-sm_fa627c {
   font-family: var(--font-headline);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1;
   font-weight: 800;
 }
@@ -80726,7 +80726,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-md_b9aaaf {
   font-family: var(--font-headline);
-  font-size: 2.125rem;
+  font-size: 34px;
   line-height: 1.0588235294117647;
   font-weight: 800;
 }
@@ -80735,7 +80735,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-lg__4f537 {
   font-family: var(--font-headline);
-  font-size: 2.75rem;
+  font-size: 44px;
   line-height: 0.9545454545454546;
   font-weight: 800;
 }
@@ -80744,7 +80744,7 @@ html .invoiceCancelRow_a8669b {
 }
 .code__342bf {
   font-family: var(--font-code);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -81061,7 +81061,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-normal_a92653 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -81070,7 +81070,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-medium__85fee {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -81079,7 +81079,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-semibold_e79e59 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -81088,7 +81088,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-bold__2074d {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -81097,7 +81097,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-extrabold__9ba48 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 800;
 }
@@ -81106,7 +81106,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-normal__304ef {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -81115,7 +81115,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-medium_a9067b {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -81124,7 +81124,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-semibold_d9226c {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -81133,7 +81133,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-bold__1b0dc {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -81142,7 +81142,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-extrabold__52c6e {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -81151,7 +81151,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-normal__24fe8 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -81160,7 +81160,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-medium__2359e {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -81169,7 +81169,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-semibold__16a9b {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -81178,7 +81178,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-bold_a594fe {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -81187,7 +81187,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-extrabold_bbb890 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
 }
@@ -81196,7 +81196,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-normal__173d3 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -81205,7 +81205,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-medium__1c326 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -81214,7 +81214,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-semibold_a3bd64 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -81223,7 +81223,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-bold__42c49 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -81232,7 +81232,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-extrabold__2cbea {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -81241,7 +81241,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-normal_f2a4da {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -81250,7 +81250,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-medium_d0a14d {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -81259,7 +81259,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-semibold__6acd8 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -81268,7 +81268,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-bold__28983 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -81277,7 +81277,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-extrabold_abebf4 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -81286,7 +81286,7 @@ html .invoiceCancelRow_a8669b {
 }
 .eyebrow__41622 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
   text-transform: uppercase;
@@ -81297,7 +81297,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-normal__66041 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -81306,7 +81306,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-medium_fbc93e {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -81315,7 +81315,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-semibold__3358d {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -81324,7 +81324,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-bold_fc78fa {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -81333,7 +81333,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-extrabold__567fe {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 800;
 }
@@ -81342,7 +81342,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-heading-18-bold__44b80 {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -81351,7 +81351,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-normal__22e78 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -81360,7 +81360,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-medium_c92c6e {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -81369,7 +81369,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-semibold__4a151 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -81378,7 +81378,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-bold__72458 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -81387,7 +81387,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-normal__8d59c {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -81396,7 +81396,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-medium_ae2485 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -81405,7 +81405,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-semibold__1d208 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -81414,7 +81414,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-bold__4a415 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -81423,7 +81423,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-normal_f9c4b1 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -81432,7 +81432,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-medium__4718b {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -81441,7 +81441,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-semibold__524ff {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -81450,7 +81450,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-bold__81a3c {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -81459,7 +81459,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-normal__4f8d3 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -81468,7 +81468,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-medium_bc3d09 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -81477,7 +81477,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-semibold_c8f6f6 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -81486,7 +81486,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-bold_c2300c {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -81495,7 +81495,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-normal_e5535a {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -81504,7 +81504,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-medium__84eb4 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -81513,7 +81513,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-semibold__920b3 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -81522,7 +81522,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-bold__300cc {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -81531,7 +81531,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-normal_a66e32 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -81540,7 +81540,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-medium__14867 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -81549,7 +81549,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-semibold__88b7a {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -81558,7 +81558,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-bold__07617 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -81567,7 +81567,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-normal__8167c {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 400;
 }
@@ -81576,7 +81576,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-medium__0a415 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 500;
 }
@@ -81585,7 +81585,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-semibold__4cd4c {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 600;
 }
@@ -81594,7 +81594,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-bold_d7dad6 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 700;
 }
@@ -81603,7 +81603,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-sm_e7cbfd {
   font-family: var(--font-headline);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1;
   font-weight: 800;
 }
@@ -81612,7 +81612,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-md_ea7064 {
   font-family: var(--font-headline);
-  font-size: 2.125rem;
+  font-size: 34px;
   line-height: 1.0588235294117647;
   font-weight: 800;
 }
@@ -81621,7 +81621,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-lg__495ee {
   font-family: var(--font-headline);
-  font-size: 2.75rem;
+  font-size: 44px;
   line-height: 0.9545454545454546;
   font-weight: 800;
 }
@@ -81630,7 +81630,7 @@ html .invoiceCancelRow_a8669b {
 }
 .code__0172d {
   font-family: var(--font-code);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -94461,7 +94461,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-normal__365c7 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -94470,7 +94470,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-medium__0f2dc {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -94479,7 +94479,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-semibold__8e7b6 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -94488,7 +94488,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-bold_dce943 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -94497,7 +94497,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-sm-extrabold__04180 {
   font-family: var(--font-display);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 800;
 }
@@ -94506,7 +94506,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-normal__9162c {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -94515,7 +94515,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-medium_f178da {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -94524,7 +94524,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-semibold__72d25 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -94533,7 +94533,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-bold__78d05 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -94542,7 +94542,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-md-extrabold__92332 {
   font-family: var(--font-display);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -94551,7 +94551,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-normal__09f25 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -94560,7 +94560,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-medium__5a98c {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -94569,7 +94569,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-semibold__2c1cb {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -94578,7 +94578,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-bold__6fd01 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -94587,7 +94587,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-lg-extrabold__27cd9 {
   font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 800;
 }
@@ -94596,7 +94596,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-normal__3effd {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -94605,7 +94605,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-medium_a9c981 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -94614,7 +94614,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-semibold_b742b9 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -94623,7 +94623,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-bold_e21320 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -94632,7 +94632,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xl-extrabold__94615 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 24px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -94641,7 +94641,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-normal_a443cd {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -94650,7 +94650,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-medium__01184 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -94659,7 +94659,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-semibold_b56e63 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -94668,7 +94668,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-bold__9edd5 {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -94677,7 +94677,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-xxl-extrabold_f8931b {
   font-family: var(--font-display);
-  font-size: 2rem;
+  font-size: 32px;
   line-height: 1.25;
   font-weight: 800;
 }
@@ -94686,7 +94686,7 @@ html .invoiceCancelRow_a8669b {
 }
 .eyebrow__7b0c0 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
   text-transform: uppercase;
@@ -94697,7 +94697,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-normal__7674d {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -94706,7 +94706,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-medium__8525d {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -94715,7 +94715,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-semibold__96d0d {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -94724,7 +94724,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-bold__7f985 {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -94733,7 +94733,7 @@ html .invoiceCancelRow_a8669b {
 }
 .heading-deprecated-12-extrabold_a3a0cc {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 800;
 }
@@ -94742,7 +94742,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-heading-18-bold__2a199 {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 18px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -94751,7 +94751,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-normal__26d06 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -94760,7 +94760,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-medium__546ce {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -94769,7 +94769,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-semibold__380e2 {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -94778,7 +94778,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xxs-bold_b549aa {
   font-family: var(--font-primary);
-  font-size: 0.625rem;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -94787,7 +94787,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-normal__648ba {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -94796,7 +94796,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-medium__8e8d6 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -94805,7 +94805,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-semibold_d24fce {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -94814,7 +94814,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-xs-bold__8ffa6 {
   font-family: var(--font-primary);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -94823,7 +94823,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-normal__82b64 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 400;
 }
@@ -94832,7 +94832,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-medium__586c3 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 500;
 }
@@ -94841,7 +94841,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-semibold__57623 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 600;
 }
@@ -94850,7 +94850,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-sm-bold__231c1 {
   font-family: var(--font-primary);
-  font-size: 0.875rem;
+  font-size: 14px;
   line-height: 1.2857142857142858;
   font-weight: 700;
 }
@@ -94859,7 +94859,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-normal__4b8fc {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
 }
@@ -94868,7 +94868,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-medium__000e1 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 500;
 }
@@ -94877,7 +94877,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-semibold_adf116 {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 600;
 }
@@ -94886,7 +94886,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-md-bold_cab25a {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.25;
   font-weight: 700;
 }
@@ -94895,7 +94895,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-normal__9b36e {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 400;
 }
@@ -94904,7 +94904,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-medium__7a4a7 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
 }
@@ -94913,7 +94913,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-semibold_ff9608 {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -94922,7 +94922,7 @@ html .invoiceCancelRow_a8669b {
 }
 .text-lg-bold__22c7d {
   font-family: var(--font-primary);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1.2;
   font-weight: 700;
 }
@@ -94931,7 +94931,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-normal__6a460 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 400;
 }
@@ -94940,7 +94940,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-medium_df3584 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 500;
 }
@@ -94949,7 +94949,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-semibold__14f34 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 600;
 }
@@ -94958,7 +94958,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-message-preview-bold_adce52 {
   font-family: var(--font-primary);
-  font-size: 0.9375rem;
+  font-size: 15px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -94967,7 +94967,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-normal_eff76f {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 400;
 }
@@ -94976,7 +94976,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-medium__95e1a {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 500;
 }
@@ -94985,7 +94985,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-semibold__7937b {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 600;
 }
@@ -94994,7 +94994,7 @@ html .invoiceCancelRow_a8669b {
 }
 .redesign-channel-title-bold__378fc {
   font-family: var(--font-primary);
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.375;
   font-weight: 700;
 }
@@ -95003,7 +95003,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-sm_a5f72d {
   font-family: var(--font-headline);
-  font-size: 1.25rem;
+  font-size: 20px;
   line-height: 1;
   font-weight: 800;
 }
@@ -95012,7 +95012,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-md__6d9a5 {
   font-family: var(--font-headline);
-  font-size: 2.125rem;
+  font-size: 34px;
   line-height: 1.0588235294117647;
   font-weight: 800;
 }
@@ -95021,7 +95021,7 @@ html .invoiceCancelRow_a8669b {
 }
 .display-lg_cf0061 {
   font-family: var(--font-headline);
-  font-size: 2.75rem;
+  font-size: 44px;
   line-height: 0.9545454545454546;
   font-weight: 800;
 }
@@ -95030,7 +95030,7 @@ html .invoiceCancelRow_a8669b {
 }
 .code__0f1b1 {
   font-family: var(--font-code);
-  font-size: 0.75rem;
+  font-size: 12px;
   line-height: 1.3333333333333333;
   font-weight: 700;
 }
@@ -108689,4 +108689,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.8f9ac4a593cd330dc120.css.map*/
+/*# sourceMappingURL=app.a8ab2318e1bfbbd69f9a.css.map*/

@@ -993,8 +993,8 @@
         A = l("18494"),
         U = l("162771"),
         I = l("282109"),
-        N = l("25292"),
-        S = l("449008"),
+        S = l("25292"),
+        N = l("449008"),
         v = l("49111"),
         L = l("782340");
       let D = "seenQSTutorial",
@@ -1072,32 +1072,32 @@
                   switch (k) {
                     case o.AutocompleterResultTypes.USER: {
                       let e = f.default.getId();
-                      return N.default.getRecentlyTalked(s, 100).filter(t => {
+                      return S.default.getRecentlyTalked(s, 100).filter(t => {
                         let { record: l } = t;
                         return l.id !== e;
                       });
                     }
                     case o.AutocompleterResultTypes.APPLICATION:
-                      return N.default.queryApplications({
+                      return S.default.queryApplications({
                         query: "",
                         limit: 100,
                         fuzzy: !0,
                       });
                     case o.AutocompleterResultTypes.GUILD:
-                      return N.default.queryGuilds({
+                      return S.default.queryGuilds({
                         query: "",
                         limit: 100,
                         fuzzy: !0,
                       });
                     case o.AutocompleterResultTypes.TEXT_CHANNEL:
-                      return N.default.queryChannels({
+                      return S.default.queryChannels({
                         query: "",
                         guildId: U.default.getGuildId(),
                         limit: 100,
                         fuzzy: !0,
                       });
                     case o.AutocompleterResultTypes.VOICE_CHANNEL:
-                      return N.default.queryChannels({
+                      return S.default.queryChannels({
                         query: "",
                         guildId: U.default.getGuildId(),
                         limit: 100,
@@ -1148,7 +1148,7 @@
                     .getMentionChannelIds()
                     .filter(e => e !== s && !w.includes(e))
                     .map(e => W(e))
-                    .filter(S.isNotNullish)
+                    .filter(N.isNotNullish)
                     .reverse();
                   if (
                     (a.length > 0 &&
@@ -1396,7 +1396,7 @@
       function n(e) {
         return (
           s.default.hasUnread(e.id) &&
-          u.default.getChannelUnreadMode(e) === i.UnreadMode.IMPORTANT
+          u.default.resolveUnreadSetting(e) === i.UnreadSetting.ALL_MESSAGES
         );
       }
     },
@@ -1573,4 +1573,4 @@
     },
   },
 ]);
-//# sourceMappingURL=74970.b670b049ca0476560bfb.js.map
+//# sourceMappingURL=74970.29386fa1a51d34935ac6.js.map

@@ -25882,8 +25882,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262855", ", Version Hash: ")
-          .concat("e9e8bc23067b8dc81ad7ff7db1592668412546cd")
+          .concat("262863", ", Version Hash: ")
+          .concat("d15f24b8759d647ef2fd1ed5c832466caf9b1de9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28857,12 +28857,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262855"), "262855"));
+        let _ = parseInt(((e = "262863"), "262863"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262855"
+                "262863"
               )
             ),
             (_ = 0)),
@@ -33863,7 +33863,7 @@
         N = E("162771"),
         O = E("101125"),
         A = E("800762"),
-        R = E("785814"),
+        R = E("774539"),
         l = E("49111");
       function L(e) {
         return e
@@ -33879,30 +33879,25 @@
         await r.default.fetchApplications(e, !1);
       }
       async function C(e) {
-        var _;
         if (null == e) return;
-        let E = I.default.getChannel(e);
+        let _ = I.default.getChannel(e);
         if (
-          null == E ||
-          !(0, R.isVoiceChannelGameActivityEnabled)(
-            null !== (_ = E.guild_id) && void 0 !== _ ? _ : "",
-            "running_games_change",
-            !1
-          )
+          null == _ ||
+          !(0, R.isVoiceUserGameActivityEnabled)("running_games_change", !1)
         )
           return;
-        let t = O.default.getActivities();
-        if (0 === t.length) return;
-        let o = L([...t]);
-        await u([...o]);
-        let r = a.default.getApplication(o[0]);
-        null != r &&
+        let E = O.default.getActivities();
+        if (0 === E.length) return;
+        let t = L([...E]);
+        await u([...t]);
+        let o = a.default.getApplication(t[0]);
+        null != o &&
           n.default.trackWithMetadata(
             l.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET,
             {
               channel_id: e,
-              guild_id: E.guild_id,
-              game_name: r.name,
+              guild_id: _.guild_id,
+              game_name: o.name,
               user_id: i.default.getId(),
             }
           );
@@ -33916,27 +33911,15 @@
           let { updates: _ } = e,
             E = new Set();
           _.forEach(e => {
-            var _, t;
-            let { user: o, activities: n } = e,
-              r = A.default.getVoiceStateForUser(o.id);
+            let { user: _, activities: t } = e,
+              o = A.default.getVoiceStateForUser(_.id);
             if (
-              null == r ||
-              !(0, R.isVoiceChannelGameActivityEnabled)(
-                null !==
-                  (t =
-                    null === (_ = I.default.getChannel(r.channelId)) ||
-                    void 0 === _
-                      ? void 0
-                      : _.guild_id) && void 0 !== t
-                  ? t
-                  : "",
-                "presence_update",
-                !1
-              )
+              null == o ||
+              !(0, R.isVoiceUserGameActivityEnabled)("presence_update", !1)
             )
               return;
-            let a = L([...n]);
-            E = new Set([...E, ...a]);
+            let n = L([...t]);
+            E = new Set([...E, ...n]);
           }),
             u([...E]);
         }
@@ -33946,11 +33929,7 @@
           _.forEach(e => {
             let { userId: _, guildId: t } = e;
             if (
-              !(0, R.isVoiceChannelGameActivityEnabled)(
-                null != t ? t : "",
-                "voice_state_update",
-                !1
-              )
+              !(0, R.isVoiceUserGameActivityEnabled)("voice_state_update", !1)
             )
               return;
             let o = T.default.getActivities(_, t),
@@ -50149,4 +50128,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.094fd5e40ff14f70c85c.js.map
+//# sourceMappingURL=90486.47f2eaa79f4cfdb5fb53.js.map

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["92764"],
+  ["98346"],
   {
     203472: function (e, t, n) {
       "use strict";
@@ -2333,7 +2333,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-e9e8bc23067b8dc81ad7ff7db1592668412546cd",
+          release: "discord_web-d15f24b8759d647ef2fd1ed5c832466caf9b1de9",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2403,8 +2403,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "262855"), "262855")),
-          a.setTag("builtAt", String("1706732213748"));
+          a.setTag("buildNumber", ((e = "262863"), "262863")),
+          a.setTag("builtAt", String("1706732538748"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -2562,14 +2562,14 @@
           r.stopStream(d, t);
       }
     },
-    785814: function (e, t, n) {
+    774539: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          useIsVoiceChannelGameActivityEnabled: function () {
+          useIsVoiceUserGameActivityEnabled: function () {
             return s;
           },
-          isVoiceChannelGameActivityEnabled: function () {
+          isVoiceUserGameActivityEnabled: function () {
             return i;
           },
           default: function () {
@@ -2578,9 +2578,9 @@
         });
       var a = n("862205");
       let r = (0, a.createExperiment)({
-        kind: "guild",
-        id: "2024-01_voice_channel_game_activity",
-        label: "Voice Channel Game Activity",
+        kind: "user",
+        id: "2024-01_voice_user_game_activity",
+        label: "Voice User Game Activity",
         defaultConfig: { showGameIcon: !1 },
         treatments: [
           {
@@ -2590,19 +2590,19 @@
           },
         ],
       });
-      function s(e, t, n) {
-        let { showGameIcon: a } = r.useExperiment(
-          { guildId: e, location: t },
-          { autoTrackExposure: n }
+      function s(e, t) {
+        let { showGameIcon: n } = r.useExperiment(
+          { location: e },
+          { autoTrackExposure: t }
         );
-        return a;
+        return n;
       }
-      function i(e, t, n) {
-        let { showGameIcon: a } = r.getCurrentConfig(
-          { guildId: e, location: t },
-          { autoTrackExposure: n }
+      function i(e, t) {
+        let { showGameIcon: n } = r.getCurrentConfig(
+          { location: e },
+          { autoTrackExposure: t }
         );
-        return a;
+        return n;
       }
       var l = r;
     },
@@ -5263,4 +5263,4 @@
     },
   },
 ]);
-//# sourceMappingURL=92764.5bffa34c832c88fb62a4.js.map
+//# sourceMappingURL=98346.f8ee7bd8a7a752c19037.js.map

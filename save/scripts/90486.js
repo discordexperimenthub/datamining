@@ -5802,6 +5802,7 @@
         SELECT: "Select",
         SELECT_ALL: "Select All",
         START: "Start",
+        LAUNCH: "Launch",
         ADD: "Add",
         ADDED: "Added",
         REMAINING_PARTICIPANTS: "Add Members (!!{current}!!/!!{max}!!)",
@@ -25882,8 +25883,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262972", ", Version Hash: ")
-          .concat("7a73633cbbc12fcfec679eb6386aba439f355467")
+          .concat("262977", ", Version Hash: ")
+          .concat("73e8bd5aae9d5b4adee27f127e31a36cfb50a1fc")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28857,12 +28858,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262972"), "262972"));
+        let _ = parseInt(((e = "262977"), "262977"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262972"
+                "262977"
               )
             ),
             (_ = 0)),
@@ -50131,4 +50132,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.e090d6172cb9a9aa79b6.js.map
+//# sourceMappingURL=90486.44dd7f4e3fa1c5dc1c41.js.map

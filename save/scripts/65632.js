@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["44903"],
+  ["65632"],
   {
     839347: function (e, t, n) {
       "use strict";
@@ -57399,7 +57399,7 @@
           }
         })("undefined" == typeof self ? (void 0 === n.g ? this : n.g) : self);
     },
-    74892: function (e, t, n) {
+    404828: function (e, t, n) {
       var r, a;
       (e = n.nmd(e)),
         n("854508"),
@@ -57737,8 +57737,12 @@
                 n
               );
             },
-            U = 0,
-            K = {
+            U = !1;
+          try {
+            RegExp("(?<=a)"), RegExp("(?<!a)"), (U = !0);
+          } catch (e) {}
+          var K = 0,
+            V = {
               Array: {
                 react: function (e, t, n) {
                   for (
@@ -57775,7 +57779,7 @@
                 },
               },
               heading: {
-                order: U++,
+                order: K++,
                 match: h(/^ *(#{1,6})([^\n]+?)#* *(?:\n *)+\n/),
                 parse: function (e, t, n) {
                   return { level: e[1].length, content: S(t, e[2].trim(), n) };
@@ -57788,14 +57792,14 @@
                 },
               },
               nptable: {
-                order: U++,
+                order: K++,
                 match: h(A.NPTABLE_REGEX),
                 parse: A.parseNpTable,
                 react: null,
                 html: null,
               },
               lheading: {
-                order: U++,
+                order: K++,
                 match: h(/^([^\n]+)\n *(=|-){3,} *(?:\n *)+\n/),
                 parse: function (e, t, n) {
                   return {
@@ -57808,7 +57812,7 @@
                 html: null,
               },
               hr: {
-                order: U++,
+                order: K++,
                 match: h(/^( *[-*_]){3,} *(?:\n *)+\n/),
                 parse: x,
                 react: function (e, t, n) {
@@ -57819,7 +57823,7 @@
                 },
               },
               codeBlock: {
-                order: U++,
+                order: K++,
                 match: h(/^(?:    [^\n]+\n*)+(?:\n *)+\n/),
                 parse: function (e, t, n) {
                   return {
@@ -57843,7 +57847,7 @@
                 },
               },
               fence: {
-                order: U++,
+                order: K++,
                 match: h(
                   /^ *(`{3,}|~{3,}) *(?:(\S+) *)?\n([\s\S]+?)\n?\1 *(?:\n *)+\n/
                 ),
@@ -57858,7 +57862,7 @@
                 html: null,
               },
               blockQuote: {
-                order: U++,
+                order: K++,
                 match: h(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
                 parse: function (e, t, n) {
                   return { content: t(e[0].replace(/^ *> ?/gm, ""), n) };
@@ -57871,7 +57875,7 @@
                 },
               },
               list: {
-                order: U++,
+                order: K++,
                 match: function (e, t) {
                   var n = null == t.prevCapture ? "" : t.prevCapture[0],
                     r = I.exec(n),
@@ -57923,7 +57927,7 @@
                 },
               },
               def: {
-                order: U++,
+                order: K++,
                 match: h(
                   /^ *\[([^\]]+)\]: *<?([^\s>]*)>?(?: +["(]([^\n]+)[")])? *\n(?: *\n)*/
                 ),
@@ -57950,7 +57954,7 @@
                 },
               },
               table: {
-                order: U++,
+                order: K++,
                 match: h(A.TABLE_REGEX),
                 parse: A.parseTable,
                 react: function (e, t, n) {
@@ -58012,7 +58016,7 @@
                 },
               },
               newline: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["\n"],
                 match: h(/^(?:\n *)*\n/),
                 parse: x,
@@ -58024,7 +58028,7 @@
                 },
               },
               paragraph: {
-                order: U++,
+                order: K++,
                 match: h(/^((?:[^\n]|\n(?! *\n))+)(?:\n *)+\n/),
                 parse: Y,
                 react: function (e, t, n) {
@@ -58038,7 +58042,7 @@
                 },
               },
               escape: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["\\"],
                 match: m(/^\\([^0-9A-Za-z\s])/),
                 parse: function (e, t, n) {
@@ -58048,7 +58052,7 @@
                 html: null,
               },
               tableSeparator: {
-                order: U++,
+                order: K++,
                 match: function (e, t) {
                   return t.inTable ? /^ *\| */.exec(e) : null;
                 },
@@ -58063,7 +58067,7 @@
                 },
               },
               autolink: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["<"],
                 match: m(/^<([^: >]+:\/[^ >]+)>/),
                 parse: function (e, t, n) {
@@ -58077,7 +58081,7 @@
                 html: null,
               },
               mailto: {
-                order: U++,
+                order: K++,
                 match: m(/^<([^ >]+@[^ >]+)>/),
                 parse: function (e, t, n) {
                   var r = e[1],
@@ -58095,7 +58099,7 @@
                 html: null,
               },
               url: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["h"],
                 match: m(/^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/),
                 parse: function (e, t, n) {
@@ -58110,7 +58114,7 @@
                 html: null,
               },
               link: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["["],
                 match: m(RegExp("^\\[(" + R + ")\\]\\(" + z + "\\)")),
                 parse: function (e, t, n) {
@@ -58129,7 +58133,7 @@
                 },
               },
               image: {
-                order: U++,
+                order: K++,
                 match: m(RegExp("^!\\[(" + R + ")\\]\\(" + z + "\\)")),
                 parse: function (e, t, n) {
                   return { alt: e[1], target: T(e[2]), title: e[3] };
@@ -58151,7 +58155,7 @@
                 },
               },
               reflink: {
-                order: U++,
+                order: K++,
                 match: m(RegExp("^\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                   return B(e, n, { type: "link", content: t(e[1], n) });
@@ -58160,7 +58164,7 @@
                 html: null,
               },
               refimage: {
-                order: U++,
+                order: K++,
                 match: m(RegExp("^!\\[(" + R + ")\\]\\s*\\[([^\\]]*)\\]")),
                 parse: function (e, t, n) {
                   return B(e, n, { type: "image", alt: e[1] });
@@ -58169,10 +58173,13 @@
                 html: null,
               },
               em: {
-                order: U,
+                order: K,
                 match: m(
                   RegExp(
-                    "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)"
+                    (U
+                      ? "^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b"
+                      : "^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b") +
+                      "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)"
                   )
                 ),
                 quality: function (e) {
@@ -58189,7 +58196,7 @@
                 },
               },
               strong: {
-                order: U,
+                order: K,
                 requiredFirstCharacters: ["*"],
                 match: m(/^\*\*((?:\\[\s\S]|[^\\])+?)\*\*(?!\*)/),
                 quality: function (e) {
@@ -58204,7 +58211,7 @@
                 },
               },
               u: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["_"],
                 match: m(/^__((?:\\[\s\S]|[^\\])+?)__(?!_)/),
                 quality: function (e) {
@@ -58219,7 +58226,7 @@
                 },
               },
               del: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["~"],
                 match: m(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~]|\s(?!~~))+?)~~/),
                 parse: Y,
@@ -58231,7 +58238,7 @@
                 },
               },
               inlineCode: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: ["`"],
                 match: m(/^(`+)([\s\S]*?[^`])\1(?!`)/),
                 parse: function (e, t, n) {
@@ -58245,7 +58252,7 @@
                 },
               },
               br: {
-                order: U++,
+                order: K++,
                 requiredFirstCharacters: [" "],
                 match: _(/^ {2,}\n/),
                 parse: x,
@@ -58257,7 +58264,7 @@
                 },
               },
               text: {
-                order: U++,
+                order: K++,
                 match: _(
                   /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|$)/
                 ),
@@ -58272,13 +58279,13 @@
                 },
               },
             },
-            V = function (e, t, n) {
+            J = function (e, t, n) {
               if (!t)
                 throw Error(
                   "simple-markdown: outputFor: `property` must be defined. if you just upgraded, you probably need to replace `outputFor` with `reactFor`"
                 );
               var r,
-                a = (e.Array || K.Array)[t];
+                a = (e.Array || V.Array)[t];
               if (!a)
                 throw Error(
                   "simple-markdown: outputFor: to join nodes of type `" +
@@ -58294,23 +58301,23 @@
                 return o(e, (r = f(t, n)));
               };
             },
-            J = p(K),
-            G = function (e, t) {
-              return ((t = t || {}).inline = !1), J(e, t);
-            },
+            G = p(V),
             q = function (e, t) {
-              var n = C.test(e);
-              return ((t = t || {}).inline = !n), J(e, t);
+              return ((t = t || {}).inline = !1), G(e, t);
             },
-            $ = V(K, "react"),
-            Q = V(K, "html"),
-            X = function (e, t) {
-              return $(G(e, t), t);
+            $ = function (e, t) {
+              var n = C.test(e);
+              return ((t = t || {}).inline = !n), G(e, t);
+            },
+            Q = J(V, "react"),
+            X = J(V, "html"),
+            Z = function (e, t) {
+              return Q(q(e, t), t);
             };
           return {
-            defaultRules: K,
+            defaultRules: V,
             parserFor: p,
-            outputFor: V,
+            outputFor: J,
             inlineRegex: m,
             blockRegex: h,
             anyScopeRegex: _,
@@ -58321,9 +58328,9 @@
               var a = e(t + "\n\n", n);
               return (n.inline = r), a;
             },
-            markdownToReact: X,
+            markdownToReact: Z,
             markdownToHtml: function (e, t) {
-              return Q(G(e, t), t);
+              return X(q(e, t), t);
             },
             ReactMarkdown: function (e) {
               var t = {};
@@ -58331,22 +58338,22 @@
                 "source" !== n &&
                   Object.prototype.hasOwnProperty.call(e, n) &&
                   (t[n] = e[n]);
-              return (t.children = X(e.source)), g("div", null, t);
+              return (t.children = Z(e.source)), g("div", null, t);
             },
-            defaultBlockParse: G,
+            defaultBlockParse: q,
             defaultInlineParse: function (e, t) {
-              return ((t = t || {}).inline = !0), J(e, t);
+              return ((t = t || {}).inline = !0), G(e, t);
             },
-            defaultImplicitParse: q,
-            defaultReactOutput: $,
-            defaultHtmlOutput: Q,
+            defaultImplicitParse: $,
+            defaultReactOutput: Q,
+            defaultHtmlOutput: X,
             preprocess: d,
             sanitizeText: L,
             sanitizeUrl: M,
             unescapeUrl: T,
             htmlTag: v,
             reactElement: g,
-            defaultRawParse: J,
+            defaultRawParse: G,
             ruleOutput: function (e, t) {
               return (
                 !t &&
@@ -58395,7 +58402,7 @@
                   console.warn(
                     "defaultParse is deprecated, please use `defaultImplicitParse`"
                   ),
-                q.apply(null, arguments)
+                $.apply(null, arguments)
               );
             },
             defaultOutput: function () {
@@ -58404,7 +58411,7 @@
                   console.warn(
                     "defaultOutput is deprecated, please use `defaultReactOutput`"
                   ),
-                $.apply(null, arguments)
+                Q.apply(null, arguments)
               );
             },
           };
@@ -61199,4 +61206,4 @@
     },
   },
 ]);
-//# sourceMappingURL=44903.68ffe69e6f95c9b58b08.js.map
+//# sourceMappingURL=65632.943fa92709b9910cd5e8.js.map

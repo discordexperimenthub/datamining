@@ -764,11 +764,8 @@
           SpoilerRenderSetting: function () {
             return Em;
           },
-          NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING: function () {
-            return Ru;
-          },
           OFF_PLATFORM_PREMIUM_PERKS: function () {
-            return Rp;
+            return Ru;
           },
           PopoutWindowKeys: function () {
             return EK;
@@ -795,7 +792,7 @@
             return EX;
           },
           DISCODO_STORAGE_KEY: function () {
-            return RB;
+            return Rp;
           },
           SpringTransitionPhases: function () {
             return EQ;
@@ -807,13 +804,13 @@
             return Ej;
           },
           MAX_MEMBERS_NOTIFY_ALL_MESSAGES: function () {
-            return Rg;
+            return RB;
           },
           UNREACHABLE_REQUEST_ANIMATION_FRAME_ID: function () {
-            return RH;
+            return Rg;
           },
           WELCOME_OLD_GUILD_AGE_THRESHOLD: function () {
-            return Rf;
+            return RH;
           },
           AllowedMentionTypes: function () {
             return Ez;
@@ -825,16 +822,16 @@
             return E$;
           },
           DEFAULT_NUM_REACTION_USERS: function () {
-            return Rh;
+            return Rf;
           },
           TOKEN_REGEX: function () {
-            return Ry;
+            return Rh;
           },
           HighlightSettings: function () {
             return E0;
           },
           SERVER_MONETIZATION_OWNERSHIP_TRANSFER_URL: function () {
-            return RY;
+            return Ry;
           },
           VoiceFlags: function () {
             return E1;
@@ -6793,8 +6790,7 @@
       ((aO = Em || (Em = {})).ALWAYS = "ALWAYS"),
         (aO.ON_CLICK = "ON_CLICK"),
         (aO.IF_MODERATOR = "IF_MODERATOR");
-      let Ru = 4,
-        Rp = [];
+      let Ru = [];
       ((an = EK || (EK = {})).CHANNEL_CALL_POPOUT =
         "DISCORD_CHANNEL_CALL_POPOUT"),
         (an.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
@@ -6830,7 +6826,7 @@
         (aP.THREE_G = "3g"),
         (aP.FOUR_G = "4g"),
         (aP.FIVE_G = "5g");
-      let RB = "discodoEasterEgg";
+      let Rp = "discodoEasterEgg";
       ((aM = EQ || (EQ = {})).INITIAL = "initial"),
         (aM.ENTER = "enter"),
         (aM.UPDATE = "update"),
@@ -6846,9 +6842,9 @@
         (ad[(ad.TWITCH = 3)] = "TWITCH"),
         (ad[(ad.YOUTUBE = 4)] = "YOUTUBE"),
         (ad[(ad.WEBHOOKS = 5)] = "WEBHOOKS");
-      let Rg = 2500,
-        RH = 0,
-        Rf = 2592e6;
+      let RB = 2500,
+        Rg = 0,
+        RH = 2592e6;
       ((au = Ez || (Ez = {})).USERS = "users"),
         (au.ROLES = "roles"),
         (au.EVERYONE = "everyone"),
@@ -6858,14 +6854,14 @@
         (aB[(aB.ENABLING = 1)] = "ENABLING"),
         (aB[(aB.ENABLED = 2)] = "ENABLED"),
         (aB[(aB.FAILED_TO_ENABLE = 3)] = "FAILED_TO_ENABLE");
-      let Rh = 100,
-        Ry =
+      let Rf = 100,
+        Rh =
           /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
       aw.default,
         ((ag = E0 || (E0 = {}))[(ag.NULL = 0)] = "NULL"),
         (ag[(ag.DISABLED = 1)] = "DISABLED"),
         (ag[(ag.ENABLED = 2)] = "ENABLED");
-      let RY =
+      let Ry =
         "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
       ((aH = E1 || (E1 = {}))[(aH.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
         (aH[(aH.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
@@ -17159,4 +17155,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.accd9c3e446ae1ccfa00.js.map
+//# sourceMappingURL=7273.26beb58d8371c7244421.js.map

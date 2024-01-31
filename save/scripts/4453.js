@@ -6374,6 +6374,7 @@
         u = l("646718"),
         d = l("257920");
       let c = {
+          XXSMALL: d.xxsmall,
           XSMALL: d.xsmall,
           SMALL: d.small,
           MEDIUM: d.medium,
@@ -6414,6 +6415,8 @@
               (t = a.getIconURL(
                 (function (e) {
                   switch (e) {
+                    case c.XXSMALL:
+                      return 16;
                     case c.XSMALL:
                       return 24;
                     case c.SMALL:
@@ -7921,4 +7924,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4453.8c99e29c34f5d747263f.js.map
+//# sourceMappingURL=4453.18dc8323c4641f026135.js.map

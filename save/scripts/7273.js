@@ -4943,6 +4943,7 @@
         (es.SEARCH_V2_FILTERS_OPENED = "search_v2_filters_opened"),
         (es.SEARCH_V2_FILTERS_APPLIED = "search_v2_filters_applied"),
         (es.SEARCH_V2_TAB_SELECTED = "search_v2_tab_selected"),
+        (es.SEARCH_V2_JUMP_TO_MESSAGE = "search_v2_jump_to_message"),
         (es.UPSELL_VIEWED = "upsell_viewed"),
         (es.UPSELL_CLICKED = "upsell_clicked"),
         (es.PREMIUM_UPSELL_VIEWED = "premium_upsell_viewed"),
@@ -17158,4 +17159,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.7e6a65c9e27b3b21b233.js.map
+//# sourceMappingURL=7273.accd9c3e446ae1ccfa00.js.map

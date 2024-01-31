@@ -25880,8 +25880,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262661", ", Version Hash: ")
-          .concat("47eb2d9d6720a80c73ddead781eb39962b16fc76")
+          .concat("262671", ", Version Hash: ")
+          .concat("a8fd2df3f117f24970196fdb14a9cdbafd4cc459")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28855,12 +28855,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262661"), "262661"));
+        let _ = parseInt(((e = "262671"), "262671"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262661"
+                "262671"
               )
             ),
             (_ = 0)),
@@ -49701,6 +49701,15 @@
                 t[r - 1] = arguments[r];
               (0, o.checkLogForPII)(e, ...t), n(_.name, "log", e, ...t);
             }),
+            (this.verboseDangerously = function (e) {
+              for (
+                var E = arguments.length, t = Array(E > 1 ? E - 1 : 0), o = 1;
+                o < E;
+                o++
+              )
+                t[o - 1] = arguments[o];
+              n(_.name, "debug", e, ...t);
+            }),
             (this.verbose = function (e) {
               for (
                 var E = arguments.length, t = Array(E > 1 ? E - 1 : 0), r = 1;
@@ -50136,4 +50145,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.81cf43b5cb1f24fe427d.js.map
+//# sourceMappingURL=90486.dea4a9b070f93dec1fd1.js.map

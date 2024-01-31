@@ -25882,8 +25882,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262953", ", Version Hash: ")
-          .concat("5b12ebbb1f8b2416f2133dbd701d42512280d3b6")
+          .concat("262967", ", Version Hash: ")
+          .concat("f39b07d73a64b7b7f60957de6a36886ea93d1a46")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28857,12 +28857,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262953"), "262953"));
+        let _ = parseInt(((e = "262967"), "262967"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262953"
+                "262967"
               )
             ),
             (_ = 0)),
@@ -29719,7 +29719,10 @@
             else if (_ === a.CodedLinkType.TEMPLATE)
               null == r.default.getGuildTemplate(E) &&
                 n.default.resolveGuildTemplate(E);
-            else if (_ === a.CodedLinkType.BUILD_OVERRIDE);
+            else if (
+              _ === a.CodedLinkType.BUILD_OVERRIDE ||
+              _ === a.CodedLinkType.MANUAL_BUILD_OVERRIDE
+            );
             else if (_ === a.CodedLinkType.EVENT);
             else if (_ === a.CodedLinkType.CHANNEL_LINK);
             else if (_ === a.CodedLinkType.APP_DIRECTORY_PROFILE);
@@ -50128,4 +50131,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.ce679d07dfb45c288c20.js.map
+//# sourceMappingURL=90486.bc86ac4c405d2d044fc0.js.map

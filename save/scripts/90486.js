@@ -25880,8 +25880,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262724", ", Version Hash: ")
-          .concat("585b337c7f45d8872a18421a8171640d85df16f3")
+          .concat("262726", ", Version Hash: ")
+          .concat("72fe4c8c8158d662cb9a19be93f529bea4987b71")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28855,12 +28855,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262724"), "262724"));
+        let _ = parseInt(((e = "262726"), "262726"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262724"
+                "262726"
               )
             ),
             (_ = 0)),
@@ -43814,6 +43814,8 @@
           "COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK"),
         (L[(L.CHANNEL_LIST_V2_BROWSE_CHANNELS_NUX = 343)] =
           "CHANNEL_LIST_V2_BROWSE_CHANNELS_NUX"),
+        (L[(L.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE = 344)] =
+          "COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE"),
         ((u = i || (i = {}))[(u.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (u[(u.SHOW = 1)] = "SHOW"),
@@ -50145,4 +50147,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.8dc5fdf26fb9776c873e.js.map
+//# sourceMappingURL=90486.0929585eb034335bdf86.js.map

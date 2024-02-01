@@ -23957,6 +23957,8 @@
         QUESTS_REWARD_CODE_DONE: "Done",
         QUESTS_REWARD_CODE_GET_CODE: "Get code",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Try again",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim this",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "You claimed this",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_SWITCH: "Switch",
@@ -25896,8 +25898,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263272", ", Version Hash: ")
-          .concat("c54a3ac83c2540912c73a6f41babd980556d4911")
+          .concat("263284", ", Version Hash: ")
+          .concat("2d4ebf61a1ccc70ff5ea46aa33679b2d0e8958c2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28871,12 +28873,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263272"), "263272"));
+        let _ = parseInt(((e = "263284"), "263284"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263272"
+                "263284"
               )
             ),
             (_ = 0)),
@@ -39565,7 +39567,12 @@
           return new Promise((_, E) => {
             this._waitQueue.push(() => {
               try {
-                this._dispatchWithDevtools(e), _();
+                null == this.functionCache[e.type] &&
+                  ((this.functionCache[e.type] = e =>
+                    this._dispatchWithDevtools(e)),
+                  R(this.functionCache[e.type], "dispatch_" + e.type)),
+                  this.functionCache[e.type](e),
+                  _();
               } catch (e) {
                 E(e);
               }
@@ -39683,6 +39690,7 @@
             (this._currentDispatchActionType = null),
             (this._actionHandlers = new A()),
             (this._sentryUtils = void 0),
+            (this.functionCache = {}),
             (this._defaultBand = e),
             (this._sentryUtils = E),
             null != _
@@ -39708,15 +39716,21 @@
             arguments.length > 4 && void 0 !== arguments[4]
               ? arguments[4]
               : this.createToken();
+          n(
+            t >= 0 && Number.isInteger(t),
+            "band must be a non-negative integer."
+          );
+          let r = {};
+          for (let E in _) {
+            let t = _[E],
+              o = e => t(e);
+            R(o, "".concat(e, "_").concat(E)), (r[E] = o);
+          }
           return (
-            n(
-              t >= 0 && Number.isInteger(t),
-              "band must be a non-negative integer."
-            ),
             this._dependencyGraph.addNode(o, {
               name: e,
               band: t,
-              actionHandler: _,
+              actionHandler: r,
               storeDidChange: E,
             }),
             this._addToBand(o, t),
@@ -39798,6 +39812,9 @@
             (this._lastID = 1),
             (this._dependencyGraph = new t.DepGraph());
         }
+      }
+      function R(e, _) {
+        Object.defineProperty(e, "name", { value: _ });
       }
     },
     805833: function (e, _, E) {
@@ -50163,4 +50180,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.f43de4dc320df4de55ff.js.map
+//# sourceMappingURL=90486.3b5022a8e5dccea0bb7a.js.map

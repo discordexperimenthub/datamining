@@ -3259,6 +3259,7 @@
         (IZ.INSTANT_INVITE = "INSTANT_INVITE"),
         (IZ.EMOJI = "EMOJI"),
         (IZ.EMOJI_REACTION = "EMOJI_REACTION"),
+        (IZ.EMOJI_AUTO_SUGGESTION = "EMOJI_AUTO_SUGGESTION"),
         (IZ.DMS = "DMS"),
         (IZ.THREAD = "THREAD"),
         ((Ij = _A || (_A = {})).NEWEST = "newest"),
@@ -17159,4 +17160,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.d47cf60d47a655e29339.js.map
+//# sourceMappingURL=7273.80e2e398f24f0888f52c.js.map

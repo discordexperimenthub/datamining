@@ -22,7 +22,7 @@
     "PROJECT_ENV": "production",
     "REMOTE_AUTH_ENDPOINT": "//remote-auth-gateway.discord.gg",
     "SENTRY_TAGS": {
-        "buildId": "41ca92d1bca2f328539a185eb1e3bdf96c7f5ea7",
+        "buildId": "a7d45c5000e174ad38c9e7b71b85608c721b65e8",
         "buildType": "normal"
     },
     "MIGRATION_SOURCE_ORIGIN": "https://canary.discordapp.com",

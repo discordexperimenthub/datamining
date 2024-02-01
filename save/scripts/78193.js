@@ -48,10 +48,10 @@
             return I;
           },
           validateCollectiblesRecipient: function () {
-            return T;
+            return _;
           },
           setCollectiblesCategoryItemsViewed: function () {
-            return _;
+            return T;
           },
         });
       var u = r("872717"),
@@ -165,7 +165,7 @@
             );
           }
         },
-        T = async (e, t) => {
+        _ = async (e, t) => {
           try {
             let r = await u.default.get({
               url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -176,7 +176,7 @@
             throw new i.APIError(e);
           }
         },
-        _ = e => {
+        T = e => {
           s.default.dispatch({
             type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
             ...e,
@@ -593,8 +593,9 @@
         (s.FALL = "1157406994873991284"),
         (s.WINTER = "1174459301239197856"),
         (s.MONSTERS = "1179493515038818325"),
-        (s.CYBERPUNK = "1197342727608746044");
+        (s.CYBERPUNK = "1197342727608746044"),
+        (s.LUNAR_NEW_YEAR = "1202069709281828935");
     },
   },
 ]);
-//# sourceMappingURL=78193.772653a63109bfb61db9.js.map
+//# sourceMappingURL=78193.59c58329071f325c3275.js.map

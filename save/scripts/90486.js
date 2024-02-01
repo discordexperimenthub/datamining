@@ -25922,8 +25922,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263336", ", Version Hash: ")
-          .concat("6c55c6fb7481c13234e9f54d5abd8363f2080e3d")
+          .concat("263343", ", Version Hash: ")
+          .concat("41ca92d1bca2f328539a185eb1e3bdf96c7f5ea7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28897,12 +28897,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263336"), "263336"));
+        let _ = parseInt(((e = "263343"), "263343"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263336"
+                "263343"
               )
             ),
             (_ = 0)),
@@ -29638,16 +29638,18 @@
             o = r.default.getMediaEngine();
           if (
             (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0),
-            null == e ? void 0 : e.settings.decoupledClipsEnabled)
-          )
-            this.fireClipsInitEvent();
-          else if ((null == e ? void 0 : e.settings.clipsQuality) != null) {
-            let { frameRate: e, resolution: _ } = E.clipsQuality;
+            (null == e ? void 0 : e.settings.decoupledClipsEnabled) === !0 &&
+              this.fireClipsInitEvent(),
+            null == e || (null == e ? void 0 : e.settings.clipsQuality) != null)
+          ) {
+            let { frameRate: _, resolution: t } = E.clipsQuality;
             !o.setClipsQualitySettings(
-              _ <= 480 ? (_ / 3) * 4 : (_ / 9) * 16,
-              _,
-              e
-            ) && this.fireClipsInitEvent();
+              t <= 480 ? (t / 3) * 4 : (t / 9) * 16,
+              t,
+              _
+            ) &&
+              null != e &&
+              this.fireClipsInitEvent();
           }
         }
         handleClipsInitOnToggleDetection(e) {
@@ -50233,4 +50235,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.2788357a139722661d23.js.map
+//# sourceMappingURL=90486.bda2ddb6bb924b1c5772.js.map

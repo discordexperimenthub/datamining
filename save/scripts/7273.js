@@ -1489,6 +1489,8 @@
         (IN.VOICE_CONNECTED_LAST_SESSION = "VOICE_CONNECTED_LAST_SESSION"),
         (IN.ESLATAM_LANGUAGE_LAUNCH = "ESLATAM_LANGUAGE_LAUNCH"),
         (IN.HABITUAL_DND = "HABITUAL_DND"),
+        (IN.WIN7_8_DEPRECATED_MESSAGE = "WIN7_8_DEPRECATED_MESSAGE"),
+        (IN.MACOS_17_18_DEPRECATED_MESSAGE = "MACOS_17_18_DEPRECATED_MESSAGE"),
         ((Ii = M || (M = {})).RESOLVING = "RESOLVING"),
         (Ii.RESOLVED = "RESOLVED"),
         (Ii.EXPIRED = "EXPIRED"),
@@ -6235,7 +6237,9 @@
         (eV.INVENTORY_PACKS = "16761257977623"),
         (eV.NVIDIA_DRIVER_ISSUES = "18621944634391"),
         (eV.ROLE_SUBSCRIPTION_CANCEL =
-          "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY");
+          "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
+        (eV.WIN7_8_DEPRECATE = "20470973046295"),
+        (eV.MACOS_17_18_DEPRECATE = "20900540446231");
       let Rc = _ => "https://www.youtube.com/embed/".concat(_),
         RO = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
         Rn = "https://discordapp.com/mweb-handoff";
@@ -17155,4 +17159,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.26beb58d8371c7244421.js.map
+//# sourceMappingURL=7273.d47cf60d47a655e29339.js.map

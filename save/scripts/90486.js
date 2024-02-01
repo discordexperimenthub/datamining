@@ -25883,8 +25883,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("262981", ", Version Hash: ")
-          .concat("e8dfccdf8ef930ba6e22eec3e92410f5d382663a")
+          .concat("263023", ", Version Hash: ")
+          .concat("31455f3aa47f80744d30077eae001474ca017ed3")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28858,12 +28858,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "262981"), "262981"));
+        let _ = parseInt(((e = "263023"), "263023"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "262981"
+                "263023"
               )
             ),
             (_ = 0)),
@@ -46274,6 +46274,15 @@
                   o.hideLegacyUsername
                 );
                 break;
+              case 23:
+                o.inappropriateConversationWarnings =
+                  h.BoolValue.internalBinaryRead(
+                    e,
+                    e.uint32(),
+                    E,
+                    o.inappropriateConversationWarnings
+                  );
+                break;
               default:
                 let n = E.readUnknownField;
                 if ("throw" === n)
@@ -46412,6 +46421,12 @@
                 e.hideLegacyUsername,
                 _.tag(22, M.WireType.LengthDelimited).fork(),
                 E
+              ).join(),
+            e.inappropriateConversationWarnings &&
+              h.BoolValue.internalBinaryWrite(
+                e.inappropriateConversationWarnings,
+                _.tag(23, M.WireType.LengthDelimited).fork(),
+                E
               ).join();
           let t = E.writeUnknownFields;
           return (
@@ -46545,6 +46560,12 @@
             {
               no: 22,
               name: "hide_legacy_username",
+              kind: "message",
+              T: () => h.BoolValue,
+            },
+            {
+              no: 23,
+              name: "inappropriate_conversation_warnings",
               kind: "message",
               T: () => h.BoolValue,
             },
@@ -50132,4 +50153,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.c8e118e8a461ac96153e.js.map
+//# sourceMappingURL=90486.cebbd1794a62dd69dead.js.map

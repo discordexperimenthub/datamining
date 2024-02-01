@@ -1129,7 +1129,7 @@
           let n = await (0, s.fetchUserEntitlementsForApplication)(e),
             i = n
               .filter(
-                e => null == e.ends_at || new Date(e.ends_at) < new Date()
+                e => null == e.ends_at || new Date(e.ends_at) > new Date()
               )
               .find(e => e.sku_id === t);
           l(null == i, "User already has an active subscription to this SKU");
@@ -2442,4 +2442,4 @@
     },
   },
 ]);
-//# sourceMappingURL=62768.0e1163b1034583fe27ec.js.map
+//# sourceMappingURL=62768.6bd5173b2497c40223e0.js.map

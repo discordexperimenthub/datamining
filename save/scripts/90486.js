@@ -23705,6 +23705,30 @@
         STRANGER_DANGER_FEEDBACK_CONFIRM: "Thanks for your feedback!",
         STRANGER_DANGER_CONTEXT_MENU_CLEAR:
           "Reset Safety Warnings (Experimental)",
+        INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER:
+          "This conversation may not be safe",
+        INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION:
+          "It looks like {username} is saying things that could put your safety at risk. Take action to protect yourself.",
+        INAPPROPRIATE_CONVERSATION_TAKE_ACTION: "Take action",
+        INAPPROPRIATE_CONVERSATION_READ_SAFETY_TIPS: "Read safety tips",
+        INAPPROPRIATE_CONVERSATION_TAKE_ACTION_HEADER: "Take action",
+        INAPPROPRIATE_CONVERSATION_TAKE_ACTION_DESCRIPTION:
+          "We got you. Here's what you can do.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_HEADER: "Safety tips",
+        INAPPROPRIATE_CONVERSATION_TIPS_DESCRIPTION:
+          "Remember, you're always in control",
+        INAPPROPRIATE_CONVERSATION_TIPS_1:
+          "Trust your gut. If something feels off, you can always take a break.",
+        INAPPROPRIATE_CONVERSATION_TIPS_2:
+          "Be careful with private details like your full name, school, or how to find you off Discord.",
+        INAPPROPRIATE_CONVERSATION_TIPS_3:
+          "You're not alone. If you need help, talk to a trusted adult. You can also report messages to us anytime.",
+        INAPPROPRIATE_CONVERSATION_WUMPUS_EXCLAMATION_ALT:
+          "Wumpus looking worried at a computer screen with an exclamation warning symbol above.",
+        INAPPROPRIATE_CONVERSATION_WUMPUS_LIGHTBULB_ALT:
+          "Wumpus looking delighted at a computer screen with a light bulb above.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_ALT:
+          "An open book with a warning icon and color blocks.",
         URF_LANDING_PAGE_TITLE: "Report Illegal Content",
         URF_LANDING_PAGE_SUBTITLE:
           "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement please [go here]({supportURL}).",
@@ -25898,8 +25922,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263318", ", Version Hash: ")
-          .concat("2e033634404ecbf274198caa6ee7ddd2a487b4b2")
+          .concat("263330", ", Version Hash: ")
+          .concat("13d8d5b7634b02bb157d3a1ad6344e7bc372c609")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28873,12 +28897,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263318"), "263318"));
+        let _ = parseInt(((e = "263330"), "263330"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263318"
+                "263330"
               )
             ),
             (_ = 0)),
@@ -36195,65 +36219,74 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return s;
+            return S;
           },
         }),
         E("222007");
       var t = E("689988"),
-        o = E("18494"),
-        n = E("821240"),
-        r = E("761771");
-      function a(e) {
+        o = E("42203"),
+        n = E("18494"),
+        r = E("821240"),
+        a = E("761771"),
+        i = E("537597");
+      function I(e) {
         let { channelId: _ } = e;
+        if (
+          null == _ ||
+          !(0, a.isEligibleForInappropriateConversationWarning)({
+            location: "channel_select",
+          })
+        )
+          return !1;
+        let E = o.default.getChannel(_);
+        if (null == E || !E.isDM()) return !1;
+        let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
         return (
-          !!(
-            null != _ &&
-            (0, r.isEligibleForInappropriateConversationWarning)({
-              location: "channel_select",
-            })
-          ) &&
-          (!!(0, n.shouldShowInappropriateConversationTakeoverForChannel)(_) ||
-            !1)
+          null != t &&
+          ((0, i.showTakeoverModal)({
+            warningId: t.id,
+            senderId: E.getRecipientId(),
+          }),
+          !0)
         );
       }
-      function i(e) {
+      function s(e) {
         let { channels: _ } = e;
         if (
-          !(0, r.isEligibleForInappropriateConversationWarning)({
+          !(0, a.isEligibleForInappropriateConversationWarning)({
             location: "channel_updates",
           })
         )
           return !1;
-        let E = o.default.getCurrentlySelectedChannelId();
+        let E = n.default.getCurrentlySelectedChannelId();
         if (null == E) return !1;
         let t = _.find(e => e.id === E);
+        if (null == t) return !1;
+        let o = (0, r.getInappropriateConversationTakeoverForChannel)(t.id);
         return (
-          null != t &&
-          (!!(0, n.shouldShowInappropriateConversationTakeoverForChannelRecord)(
-            t
-          ) ||
-            !1)
+          !!(null != o && t.isDM()) &&
+          ((0, i.showTakeoverModal)({
+            warningId: o.id,
+            senderId: t.getRecipientId(),
+          }),
+          !0)
         );
       }
-      class I extends t.default {
+      class T extends t.default {
         constructor(...e) {
           super(...e),
-            (this.actions = { CHANNEL_SELECT: a, CHANNEL_UPDATES: i });
+            (this.actions = { CHANNEL_SELECT: I, CHANNEL_UPDATES: s });
         }
       }
-      var s = new I();
+      var S = new T();
     },
     821240: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
-          shouldShowInappropriateConversationTakeoverForChannel: function () {
+          getInappropriateConversationTakeoverForChannel: function () {
             return o;
           },
-          shouldShowInappropriateConversationTakeoverForChannelRecord:
-            function () {
-              return n;
-            },
         });
       var t = E("764828");
       function o(e) {
@@ -36269,16 +36302,17 @@
           })(e),
           E = _.filter(
             e =>
-              e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+              e.type ===
+                t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 &&
+              null != e.dismiss_timestamp
           );
-        return E.length > 0 && E.every(e => null == e.dismiss_timestamp);
-      }
-      function n(e) {
-        if (null == e.safetyWarnings) return !1;
-        let _ = e.safetyWarnings.filter(
-          e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+        if (E.length > 0) return null;
+        let o = _.filter(
+          e =>
+            e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 &&
+            null == e.dismiss_timestamp
         );
-        return _.length > 0 && _.every(e => null == e.dismiss_timestamp);
+        return 1 === o.length ? o[0] : null;
       }
     },
     761771: function (e, _, E) {
@@ -36310,6 +36344,25 @@
             { autoTrackExposure: E }
           );
         return t;
+      }
+    },
+    537597: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          showTakeoverModal: function () {
+            return o;
+          },
+        });
+      var t = E("761771");
+      function o(e) {
+        let {} = e;
+        if (
+          !(0, t.isEligibleForInappropriateConversationWarning)({
+            location: "takeover-modal",
+          })
+        )
+          return;
       }
     },
     303167: function (e, _, E) {
@@ -50180,4 +50233,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.fc2e26b5cc087e487588.js.map
+//# sourceMappingURL=90486.6d2e255a1b22be104175.js.map

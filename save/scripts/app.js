@@ -3621,7 +3621,11 @@
     },
     843963: function (e, t, n) {
       "use strict";
-      e.exports = { tabs: "tabs__88df8", wrapper: "wrapper__2f460" };
+      e.exports = {
+        productList: "productList_bce430",
+        tabs: "tabs__88df8",
+        wrapper: "wrapper__2f460",
+      };
     },
     501701: function (e, t, n) {
       "use strict";

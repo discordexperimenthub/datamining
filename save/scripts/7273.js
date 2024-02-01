@@ -5581,6 +5581,7 @@
           "premium_trial_offer_action_sheet_dismissed"),
         (es.SHARE_NITRO_FLOW_STEPS = "share_nitro_flow_steps"),
         (es.CACHE_STORE_CACHE_SKIPPED = "cache_store_cache_skipped"),
+        (es.GATEWAY_SOCKET_RESET = "gateway_socket_reset"),
         (es.CLYDE_NUX_NOTICE_MANAGE_SETTINGS_CTA_CLICKED =
           "clyde_nux_notice_manage_settings_cta_clicked"),
         (es.CLYDE_AI_MESSAGE_RATED = "clyde_ai_message_rated"),
@@ -17160,4 +17161,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.80e2e398f24f0888f52c.js.map
+//# sourceMappingURL=7273.8f1a35d88b40feb18909.js.map

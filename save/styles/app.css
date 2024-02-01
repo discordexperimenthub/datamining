@@ -69109,6 +69109,13 @@ html .tabBadge__002b3 {
   flex-direction: row;
   gap: 16px;
 }
+.productList_bce430 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  gap: 16px;
+  padding: 16px 0;
+}
 .modalCloseButton_b4dfd7 {
   margin-left: auto;
 }
@@ -108447,4 +108454,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.a34ea8fa3f58b6f305be.css.map*/
+/*# sourceMappingURL=app.5cfb073e0407b5c0e88b.css.map*/

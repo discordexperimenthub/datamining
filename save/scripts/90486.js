@@ -6410,6 +6410,7 @@
         BOT_PROFILE_SLASH_COMMANDS: "Try my commands",
         BOT_PROFILE_UPGRADE_CTA: "Upgrade",
         BOT_PROFILE_BENEFITS_HEADING: "Unlocked Premium Features",
+        BOT_PROFILE_VIEW_ALL_COMMANDS_CTA: "View All Commands",
         LOADING: "Loading",
         OAUTH2_CONNECT_TO_DISCORD: "Connect to Discord",
         OAUTH2_TITLE: "Authorize access to your account",
@@ -25882,8 +25883,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263131", ", Version Hash: ")
-          .concat("de807c3bc49f9b8373d72ccaf7bd0cee813460fb")
+          .concat("263133", ", Version Hash: ")
+          .concat("f896e00dcb90e65dbc32691b3ce8505cb0158ebe")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28857,12 +28858,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263131"), "263131"));
+        let _ = parseInt(((e = "263133"), "263133"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263131"
+                "263133"
               )
             ),
             (_ = 0)),
@@ -50153,4 +50154,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.c2ae65110dd7277f6bc6.js.map
+//# sourceMappingURL=90486.224181a9de4e2ec5adc8.js.map

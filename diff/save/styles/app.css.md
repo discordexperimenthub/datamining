@@ -4,10 +4,10 @@
   }
   .message__13e98 {
     font-weight: 500;
--   font-size: 1rem;
--   line-height: 1.25rem;
-+   font-size: 16px;
-+   line-height: 20px;
+-   font-size: 16px;
+-   line-height: 20px;
++   font-size: 1rem;
++   line-height: 1.25rem;
     text-overflow: ellipsis;
     overflow: hidden;
   }
@@ -21,7 +21,7 @@
       --font-weight-semibold-1x-light-theme: 600;
     }
   }
-- /*# sourceMappingURL=app.a68d7c656e4098188466.css.map*/
-+ /*# sourceMappingURL=app.ac76b8f6da16350be9fb.css.map*/
+- /*# sourceMappingURL=app.ac76b8f6da16350be9fb.css.map*/
++ /*# sourceMappingURL=app.a68d7c656e4098188466.css.map*/
 
 ```

@@ -170,7 +170,6 @@
         DEAFEN: "Deafen",
         UNDEAFEN: "Undeafen",
         SEARCH: "Search",
-        SEARCH_EXPERIMENTAL: "Search (Experimental)",
         AUTOCOMPLETE_NO_RESULTS_HEADER: "Nope!",
         AUTOCOMPLETE_NO_RESULTS_BODY: "Did you make a typo?",
         AUTOCOMPLETE_STICKERS_QUERY_MATCH: "Similar to: !!{queryMatch}!!",
@@ -25883,8 +25882,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263106", ", Version Hash: ")
-          .concat("4a07a82066076611151ef503b4c45e17324d4e56")
+          .concat("263108", ", Version Hash: ")
+          .concat("fc4977daf862d93b4059bf403bdd934e124456f4")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28858,12 +28857,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263106"), "263106"));
+        let _ = parseInt(((e = "263108"), "263108"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263106"
+                "263108"
               )
             ),
             (_ = 0)),
@@ -50153,4 +50152,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.5e211fc65ad9a44e2e07.js.map
+//# sourceMappingURL=90486.448eb571116235f50f91.js.map

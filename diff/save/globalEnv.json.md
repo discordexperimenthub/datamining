@@ -5,7 +5,7 @@
       "REMOTE_AUTH_ENDPOINT": "//remote-auth-gateway.discord.gg",
       "SENTRY_TAGS": {
 - 
-+         "buildId": "cd898ae1447e7c7622414879ae9686c9b2f98702",
++         "buildId": "c10ce3a6d35c670d6ff0f578ddf091b088085ec9",
           "buildType": "normal"
       },
       "MIGRATION_SOURCE_ORIGIN": "https://canary.discordapp.com",

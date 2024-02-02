@@ -21864,6 +21864,9 @@ html .progress__4ef76 {
   margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-16);
 }
+.toast__49c25 {
+  gap: var(--spacing-8);
+}
 .ephemeral_c26b64 {
   position: relative;
   background-color: var(--brand-experiment-05a);
@@ -108610,4 +108613,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.0f290a20d436983876a9.css.map*/
+/*# sourceMappingURL=app.936ae72980954bbdf974.css.map*/

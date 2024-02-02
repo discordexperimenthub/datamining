@@ -23416,11 +23416,6 @@
         CLIPS_GO_LIVE_EA_UPSELL_BODY:
           "Unlock **HD streaming** and get **early access** to clips.",
         CLIPS_GO_LIVE_EA_UPSELL_CTA: "Get Nitro",
-        CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_TITLE: "Clips Have Arrived!",
-        CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_BODY:
-          "Take clips right in Discord and share them with friends. Early access now available with Nitro.",
-        CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_SUBS: "Got it",
-        CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_NON_SUBS: "Get Nitro",
         CLIPS_ADD_A_TITLE: "Add a title",
         CLIPS_UNTITLED: "Untitled",
         CLIPS_UNKNOWN_SOURCE: "Unknown",
@@ -23445,6 +23440,16 @@
         CLIPS_CROP_END: "Crop End",
         CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoiler Clip",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Remove Clip",
+        CLIPS_USER_EDUCATION_ENABLED_BODY:
+          "You can now take clips directly in game with $[!!{keybind}!!](keybindHook) or set a custom keybind.",
+        CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND:
+          "You can now take clips directly in game. Set a clip keybind in your Clips settings!",
+        CLIPS_USER_EDUCATION_DISABLED_BODY:
+          "Enable Clips now to capture moments directly in game.",
+        CLIPS_USER_EDUCATION_ERROR_BODY:
+          "Oh no! We are currently unable to take clips.",
+        CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "Manage Clips Settings",
+        CLIPS_USER_EDUCATION_LEARN_MORE: "Learn More",
         SOUND_INCOMING_RING_HALLOWEEN: "Halloween Incoming Ring",
         SOUND_INCOMING_RING_EOY_2023: "Seasonal Incoming Ring",
         CUSTOM_SOUNDS: "Custom Sounds",
@@ -25926,8 +25931,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263636", ", Version Hash: ")
-          .concat("c10ce3a6d35c670d6ff0f578ddf091b088085ec9")
+          .concat("263647", ", Version Hash: ")
+          .concat("60309e89cd15fbe985902a341d25f9c1828f91c9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28901,12 +28906,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263636"), "263636"));
+        let _ = parseInt(((e = "263647"), "263647"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263636"
+                "263647"
               )
             ),
             (_ = 0)),
@@ -43872,8 +43877,6 @@
           "WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE"),
         (L[(L.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE = 310)] =
           "WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE"),
-        (L[(L.CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK = 311)] =
-          "CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK"),
         (L[(L.CLYDE_AI_PERSONALITIES_NUX_MODAL = 312)] =
           "CLYDE_AI_PERSONALITIES_NUX_MODAL"),
         (L[(L.NUX_GUILD_CHANNEL_EXPLAINER = 313)] =
@@ -50264,4 +50267,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.83d81f0d254c69de2537.js.map
+//# sourceMappingURL=90486.18828aecd1f41be84223.js.map

@@ -392,7 +392,6 @@
 -             for (let t in e) r.setTag(t, e[t]);
 - 
 +                 ? e
-+ 
 +             r.setTag("builtAt", String("1706906823109"));
             return r;
           }
@@ -443,7 +442,6 @@
 -       return Object.prototype.hasOwnProperty.call(t, e);
 - 
 +         e
-+ 
 +     (r.o = function (e, t) {
       }),
 ```
@@ -558,7 +556,6 @@
 - 
 +                 e.id
 +         e
-+ 
         );
       }),
       !(function () {
@@ -607,6 +604,5 @@
 - 
 +       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
 + //# sourceMappingURL=sentry.a4cc543bee09e61d199d.js.map
-+ 
 
 ```

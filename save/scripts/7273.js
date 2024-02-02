@@ -4756,6 +4756,8 @@
         (es.ACTIVITY_SHARE_MOMENT_SEND = "activity_share_moment_send"),
         (es.ACTIVITY_SHARE_MOMENT_COPY = "activity_share_moment_copy"),
         (es.ACTIVITY_SHELF_CLOSE = "activity_shelf_close"),
+        (es.ACTIVITY_IFRAME_MOUNT = "activity_iframe_mount"),
+        (es.ACTIVITY_IFRAME_UNMOUNT = "activity_iframe_unmount"),
         (es.BROWSER_HANDOFF_SUCCEEDED = "browser_handoff_succeeded"),
         (es.SHOW_TUTORIAL = "show_tutorial"),
         (es.CLOSE_TUTORIAL = "close_tutorial"),
@@ -17171,4 +17173,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.b6a83856638e2cad1ef1.js.map
+//# sourceMappingURL=7273.cbcd30e66dce8a83659b.js.map

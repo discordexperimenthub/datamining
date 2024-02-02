@@ -1,12 +1,10 @@
 ```diff
-    padding-left: 0;
     padding-right: 0;
   }
   .message__13e98 {
     font-weight: 500;
--   font-size: 16px;
+    font-size: 16px;
 -   line-height: 20px;
-+   font-size: 1rem;
 +   line-height: 1.25rem;
     text-overflow: ellipsis;
     overflow: hidden;

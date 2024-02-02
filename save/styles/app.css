@@ -103508,7 +103508,7 @@ div.nagbar_c731ff {
   display: inline;
   border-bottom: 2px solid transparent;
   height: 39px;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .enable-forced-colors .tabBarItem_b56b35 {
   margin-right: 32px;
@@ -108610,4 +108610,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.0f290a20d436983876a9.css.map*/
+/*# sourceMappingURL=app.9c2922204481c510cf1a.css.map*/

@@ -4,8 +4,8 @@
       "PROJECT_ENV": "production",
       "REMOTE_AUTH_ENDPOINT": "//remote-auth-gateway.discord.gg",
       "SENTRY_TAGS": {
--         "buildId": "a7d45c5000e174ad38c9e7b71b85608c721b65e8",
-+         "buildId": "41d8520a837ebfd9f26d711a8f1a85b43cd497fb",
+-         "buildId": "41d8520a837ebfd9f26d711a8f1a85b43cd497fb",
++         "buildId": "60ada3d2ed0b9b025d79248aa90aba80e7af2d6e",
       },
       "MIGRATION_SOURCE_ORIGIN": "https://canary.discordapp.com",
       "MIGRATION_DESTINATION_ORIGIN": "https://canary.discord.com",

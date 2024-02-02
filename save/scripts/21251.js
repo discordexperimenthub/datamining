@@ -198,6 +198,7 @@
         (e.BG_BASE_PRIMARY = "var(--bg-base-primary)"),
         (e.BG_BASE_SECONDARY = "var(--bg-base-secondary)"),
         (e.BG_BASE_TERTIARY = "var(--bg-base-tertiary)"),
+        (e.BG_BRAND = "var(--bg-brand)"),
         (e.BG_MOD_FAINT = "var(--bg-mod-faint)"),
         (e.BG_MOD_STRONG = "var(--bg-mod-strong)"),
         (e.BG_MOD_SUBTLE = "var(--bg-mod-subtle)"),
@@ -210,7 +211,6 @@
         (e.BORDER_FAINT = "var(--border-faint)"),
         (e.BORDER_STRONG = "var(--border-strong)"),
         (e.BORDER_SUBTLE = "var(--border-subtle)"),
-        (e.BRAND = "var(--brand)"),
         (e.BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND =
           "var(--bug-reporter-modal-submitting-background)"),
         (e.BUTTON_CREATOR_REVENUE_BACKGROUND =
@@ -619,4 +619,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.b9123e8e72b94b26f3d9.js.map
+//# sourceMappingURL=21251.53ab0c5528227dd7fe1e.js.map

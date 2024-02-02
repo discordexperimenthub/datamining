@@ -2468,7 +2468,7 @@
             u = f.default.getMessage(t, n);
           return null == u
             ? null
-            : a && (0, o.isPendingScan)(i)
+            : a && !u.author.bot && (0, o.isPendingScan)(i)
               ? "potential_explicit_content"
               : a &&
                   ((0, h.hasFlag)(
@@ -12764,4 +12764,4 @@
     },
   },
 ]);
-//# sourceMappingURL=56145.4a5f58f909ccf32a27ec.js.map
+//# sourceMappingURL=56145.258cb168d37b45cde821.js.map

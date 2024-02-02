@@ -7678,6 +7678,13 @@
               dark: { color: "BLACK_500", opacity: 0.7 },
             },
           },
+          BG_BRAND: {
+            category: "background",
+            [a.DARK]: { raw: "BRAND_500", opacity: 1 },
+            [a.LIGHT]: { raw: "BRAND_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
+            [a.DARKER]: { raw: "BRAND_500", opacity: 1 },
+          },
           BG_MOD_FAINT: {
             category: "background",
             [a.DARK]: { raw: "PRIMARY_500", opacity: 0.3 },
@@ -7785,13 +7792,6 @@
             [a.LIGHT]: { raw: "BLACK_500", opacity: 0.08 },
             [a.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.12 },
             [a.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
-          },
-          BRAND: {
-            category: "generic",
-            [a.DARK]: { raw: "BRAND_500", opacity: 1 },
-            [a.LIGHT]: { raw: "BRAND_500", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
-            [a.DARKER]: { raw: "BRAND_500", opacity: 1 },
           },
           BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND: {
             category: "generic",
@@ -13632,6 +13632,7 @@
         (e.BG_BASE_PRIMARY = "bg-base-primary"),
         (e.BG_BASE_SECONDARY = "bg-base-secondary"),
         (e.BG_BASE_TERTIARY = "bg-base-tertiary"),
+        (e.BG_BRAND = "bg-brand"),
         (e.BG_MOD_FAINT = "bg-mod-faint"),
         (e.BG_MOD_STRONG = "bg-mod-strong"),
         (e.BG_MOD_SUBTLE = "bg-mod-subtle"),
@@ -13644,7 +13645,6 @@
         (e.BORDER_FAINT = "border-faint"),
         (e.BORDER_STRONG = "border-strong"),
         (e.BORDER_SUBTLE = "border-subtle"),
-        (e.BRAND = "brand"),
         (e.BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND =
           "bug-reporter-modal-submitting-background"),
         (e.BUTTON_CREATOR_REVENUE_BACKGROUND =
@@ -14212,6 +14212,12 @@
           o.Color.BLACK_500,
           o.Color.PLUM_23,
         ],
+        "bg-brand": [
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+        ],
         "bg-mod-faint": [
           o.Color.PRIMARY_500,
           o.Color.PRIMARY_400,
@@ -14283,12 +14289,6 @@
           o.Color.BLACK_500,
           o.Color.PLUM_11,
           o.Color.PLUM_11,
-        ],
-        brand: [
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
         ],
         "bug-reporter-modal-submitting-background": [
           o.Color.PRIMARY_800,
@@ -17171,4 +17171,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.3c2a56f001bda14f0f32.js.map
+//# sourceMappingURL=7273.b6a83856638e2cad1ef1.js.map

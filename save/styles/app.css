@@ -23109,8 +23109,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -33996,6 +33996,9 @@ html .progress__4ef76 {
 }
 .paddingTop_e6eb2a {
   padding-top: 8px;
+}
+.errorText_d2229c {
+  word-break: break-word;
 }
 .keywordsContainer__885ae {
   position: relative;
@@ -108524,4 +108527,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.f4f81b6deabce2924752.css.map*/
+/*# sourceMappingURL=app.2c51be313d9fc7c6d82c.css.map*/

@@ -4082,6 +4082,7 @@
           "Content warning: images or videos may contain nudity, violence, or other sensitive content",
         IMAGE_ALT: "Alt",
         SUPPRESS_ALL_EMBEDS: "Remove all embeds",
+        APP_TAG: "APP",
         BOT_TAG_BOT: "BOT",
         BOT_TAG_SERVER: "SERVER",
         REPORT_MESSAGE_MENU_OPTION: "Report Message",
@@ -25931,8 +25932,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263658", ", Version Hash: ")
-          .concat("b100c091bf6811193d63193016df9bc678d8aace")
+          .concat("263661", ", Version Hash: ")
+          .concat("9aa46d9c019218340f6eda4767aae17a855d8c73")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28906,12 +28907,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263658"), "263658"));
+        let _ = parseInt(((e = "263661"), "263661"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263658"
+                "263661"
               )
             ),
             (_ = 0)),
@@ -50267,4 +50268,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.85a069e93f1a20e522d7.js.map
+//# sourceMappingURL=90486.e323ef9bc2a67e0dba93.js.map

@@ -1,9 +1,9 @@
 ```diff
   !(function () {
--     t = {
--       370692: function (e, t, n) {
+-     e = {
+-       370692: function (t, e, n) {
 - 
-+   var t,
++   var e,
           "use strict";
 ```
 
@@ -11,12 +11,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Float32", function (t) {
-+       667500: function (t, e, n) {
++         n("918437")("Float32", function (e) {
++       667500: function (e, t, n) {
           "use strict";
 ```
 
@@ -24,12 +24,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Float64", function (t) {
-+       477315: function (t, e, n) {
++         n("918437")("Float64", function (e) {
++       477315: function (e, t, n) {
           "use strict";
 ```
 
@@ -37,12 +37,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Int16", function (t) {
-+       527135: function (t, e, n) {
++         n("918437")("Int16", function (e) {
++       527135: function (e, t, n) {
           "use strict";
 ```
 
@@ -50,12 +50,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Int32", function (t) {
-+       453061: function (t, e, n) {
++         n("918437")("Int32", function (e) {
++       453061: function (e, t, n) {
           "use strict";
 ```
 
@@ -63,12 +63,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Int8", function (t) {
-+       659510: function (t, e, n) {
++         n("918437")("Int8", function (e) {
++       659510: function (e, t, n) {
           "use strict";
 ```
 
@@ -76,12 +76,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Uint16", function (t) {
-+       990131: function (t, e, n) {
++         n("918437")("Uint16", function (e) {
++       990131: function (e, t, n) {
           "use strict";
 ```
 
@@ -89,12 +89,12 @@
             };
           });
         },
--           return function (t, n, r) {
--             return e(this, t, n, r);
+-           return function (e, n, r) {
+-             return t(this, e, n, r);
 - 
 - 
-+         n("918437")("Uint32", function (t) {
-+       332822: function (t, e, n) {
++         n("918437")("Uint32", function (e) {
++       332822: function (e, t, n) {
           "use strict";
           n("918437")(
             "Uint8",
@@ -106,12 +106,12 @@
             !0
           );
         },
--             return function (t, n, r) {
--               return e(this, t, n, r);
+-             return function (e, n, r) {
+-               return t(this, e, n, r);
 - 
 - 
-+           function (t) {
-+       390493: function (t, e, n) {
++           function (e) {
++       390493: function (e, t, n) {
           n("70102"), n("424973");
           var r,
             o,
@@ -125,20 +125,20 @@
             throw Error("clearTimeout has not been defined");
           }
 - 
--           if (r === setTimeout) return setTimeout(e, 0);
+-           if (r === setTimeout) return setTimeout(t, 0);
 - 
-+           u = (t.exports = {});
-+         function a(t) {
++           u = (e.exports = {});
++         function a(e) {
             if ((r === c || !r) && setTimeout)
 ```
 
 ```diff
             try {
 - 
--           } catch (t) {
+-           } catch (e) {
 - 
-+             return (r = setTimeout), setTimeout(t, 0);
-+             return r(t, 0);
++             return (r = setTimeout), setTimeout(e, 0);
++             return r(e, 0);
               try {
 ```
 
@@ -148,12 +148,12 @@
           !(function () {
             try {
               r = "function" == typeof setTimeout ? setTimeout : c;
--             } catch (t) {
--               return r.call(this, e, 0);
+-             } catch (e) {
+-               return r.call(this, t, 0);
 - 
 - 
-+               return r.call(null, t, 0);
-+           } catch (t) {
++               return r.call(null, e, 0);
++           } catch (e) {
               r = c;
             }
             try {
@@ -168,8 +168,8 @@
             if (!d) {
 - 
 - 
-+           } catch (t) {
-+             var t = a(h);
++           } catch (e) {
++             var e = a(h);
               d = !0;
 ```
 
@@ -177,35 +177,35 @@
               }
               (i = null),
                 (d = !1),
--               for (i = l, l = []; ++f < t; ) i && i[f].run();
--               (f = -1), (t = l.length);
+-               for (i = l, l = []; ++f < e; ) i && i[f].run();
+-               (f = -1), (e = l.length);
 - 
--                 if (o === clearTimeout) return clearTimeout(e);
+-                 if (o === clearTimeout) return clearTimeout(t);
 - 
-+             for (var e = l.length; e; ) {
-+               !(function (t) {
++             for (var t = l.length; t; ) {
++               !(function (e) {
                   if ((o === s || !o) && clearTimeout)
 ```
 
 ```diff
                   try {
 - 
--                 } catch (t) {
+-                 } catch (e) {
 - 
-+                   return (o = clearTimeout), clearTimeout(t);
-+                   o(t);
++                   return (o = clearTimeout), clearTimeout(e);
++                   o(e);
                     try {
 ```
 
 ```diff
                     }
                   }
--                   } catch (t) {
--                     return o.call(this, e);
+-                   } catch (e) {
+-                     return o.call(this, t);
 - 
 - 
-+                     return o.call(null, t);
-+               })(t);
++                     return o.call(null, e);
++               })(e);
             }
           }
 ```
@@ -213,12 +213,12 @@
 ```diff
           }
           function b() {}
--           (this.fun = e), (this.array = t);
+-           (this.fun = t), (this.array = e);
 - 
--           var t = Array(arguments.length - 1);
+-           var e = Array(arguments.length - 1);
 - 
-+         function m(t, e) {
-+         (u.nextTick = function (t) {
++         function m(e, t) {
++         (u.nextTick = function (e) {
             if (arguments.length > 1)
 ```
 
@@ -228,11 +228,11 @@
             (u.emit = b),
             (u.prependListener = b),
             (u.prependOnceListener = b),
--           l.push(new m(e, t)), 1 === l.length && !d && a(p);
+-           l.push(new m(t, e)), 1 === l.length && !d && a(p);
 - 
 - 
-+             for (var n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
-+           (u.listeners = function (t) {
++             for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
++           (u.listeners = function (e) {
               return [];
             }),
 ```
@@ -245,8 +245,8 @@
             }),
 - 
 - 
-+           (u.binding = function (t) {
-+           (u.chdir = function (t) {
++           (u.binding = function (e) {
++           (u.chdir = function (e) {
               throw Error("process.chdir is not supported");
             }),
             (u.umask = function () {
@@ -258,8 +258,8 @@
           "use strict";
 - 
 - 
-+       93629: function (t, e, n) {
-+         n.r(e);
++       93629: function (e, t, n) {
++         n.r(t);
           var r = n("51545");
           window.DiscordSentry = (0, r.initSentry)();
         },
@@ -268,10 +268,10 @@
 ```diff
           "use strict";
 - 
--           n.d(t, {
+-           n.d(e, {
 - 
-+       316217: function (t, e, n) {
-+         n.r(e),
++       316217: function (e, t, n) {
++         n.r(t),
               IGNORE_ANALYTICS_BREADCRUMB_EVENTS: function () {
                 return o;
               },
@@ -285,13 +285,13 @@
                 hour: { slot: 0, budgetUsed: 0 },
               };
             return () => {
--           let { maxBudgetMinute: t, maxBudgetHour: n } = e,
+-           let { maxBudgetMinute: e, maxBudgetHour: n } = t,
 - 
--               o = Math.round(e / 1e3 / 60),
--               i = Math.round(e / 1e3 / 60 / 60);
+-               o = Math.round(t / 1e3 / 60),
+-               i = Math.round(t / 1e3 / 60 / 60);
 - 
-+         function i(t) {
-+             let t = Date.now(),
++         function i(e) {
++             let e = Date.now(),
               return (
                 r.minute.slot !== o &&
                   ((r.minute.slot = o), (r.minute.budgetUsed = 0)),
@@ -306,8 +306,8 @@
         },
 - 
 - 
-+               !!(r.minute.budgetUsed < e) &&
-+       51545: function (t, e, n) {
++               !!(r.minute.budgetUsed < t) &&
++       51545: function (e, t, n) {
           "use strict";
 ```
 
@@ -317,11 +317,11 @@
             o = n("316217");
           let i = ["oppobrowser", "realmebrowser", "heytapbrowser"];
           function u() {
--           n.d(t, {
+-           n.d(e, {
 - 
 - 
-+         n.r(e),
-+           let t = window;
++         n.r(t),
++           let e = window;
             return (
 ```
 
@@ -330,14 +330,14 @@
           }
           let c = (0, o.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
           function s() {
--             null != e.$ ||
--             null != e.BetterDiscord ||
--             null != e.BdApi ||
--             null != e.rambox
+-             null != t.$ ||
+-             null != t.BetterDiscord ||
+-             null != t.BdApi ||
+-             null != t.rambox
 - 
 - 
-+             null != t.jQuery ||
-+           var t;
++             null != e.jQuery ||
++           var e;
             r.init({
               tunnel: "/error-reporting-proxy/web",
               dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
@@ -347,18 +347,18 @@
 
 ```diff
                 return !(
--             beforeSend: e => {
--               var t, n;
+-             beforeSend: t => {
+-               var e, n;
 - 
--                   null != t.exception.values &&
--                   t.exception.values.every(
--                     e =>
--                       null == e.stacktrace ||
--                       (null != e.stacktrace.frames &&
--                         1 === e.stacktrace.frames.length)
+-                   null != e.exception.values &&
+-                   e.exception.values.every(
+-                     t =>
+-                       null == t.stacktrace ||
+-                       (null != t.stacktrace.frames &&
+-                         1 === t.stacktrace.frames.length)
 - 
-+             release: "discord_web-cfcfd92fe2f7a590e58a96dd94db281c33f31036",
-+                 (null != (e = t).exception &&
++             release: "discord_web-75cf4dbf7aea7820699c888611e65093b4f46f1e",
++                 (null != (t = e).exception &&
                     ) &&
                     "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL) ||
                   i.some(
@@ -371,8 +371,8 @@
                   !(
 - 
 - 
-+                   t => window.navigator.appVersion.toLowerCase().indexOf(t) >= 0
-+                   "Aborted" === (n = t).message ||
++                   e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0
++                   "Aborted" === (n = e).message ||
                     "cancel captcha" === n.message
                   ) &&
                   c()
@@ -384,16 +384,16 @@
               ],
               denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
             }),
--                 ? e
+-                 ? t
 - 
--             r.setTag("builtAt", String("1706903192925"));
--           let t = window.GLOBAL_ENV.SENTRY_TAGS;
--           if (null != t && "object" == typeof t)
--             for (let e in t) r.setTag(e, t[e]);
+-             r.setTag("buildNumber", ((t = "263588"), "263588")),
+-           let e = window.GLOBAL_ENV.SENTRY_TAGS;
+-           if (null != e && "object" == typeof e)
+-             for (let t in e) r.setTag(t, e[t]);
 - 
-+                 ? t
++                 ? e
 + 
-+             r.setTag("buildNumber", ((t = "263588"), "263588")),
++             r.setTag("builtAt", String("1706906823109"));
             return r;
           }
         },
@@ -403,33 +403,33 @@
 
 ```diff
       if (void 0 !== o) return o.exports;
--     var o = n[e];
+-     var o = n[t];
 - 
--     return t[e](i, i.exports, r), (i.loaded = !0), i.exports;
+-     return e[t](i, i.exports, r), (i.loaded = !0), i.exports;
 - 
-+   function r(t) {
-+     var i = (n[t] = { id: t, loaded: !1, exports: {} });
++   function r(e) {
++     var i = (n[e] = { id: e, loaded: !1, exports: {} });
     }
 ```
 
 ```diff
         return (
--     (r.es = function (e, t) {
+-     (r.es = function (t, e) {
 - 
 - 
-+   (r.m = e),
-+         Object.keys(t).forEach(function (n) {
++   (r.m = t),
++         Object.keys(e).forEach(function (n) {
             "default" !== n &&
 ```
 
 ```diff
                 enumerable: !0,
                 get: function () {
--             Object.defineProperty(t, n, {
+-             Object.defineProperty(e, n, {
 - 
 - 
-+             !Object.prototype.hasOwnProperty.call(e, n) &&
-+                 return t[n];
++             !Object.prototype.hasOwnProperty.call(t, n) &&
++                 return e[n];
                 },
               });
           }),
@@ -438,25 +438,25 @@
 ```diff
         );
       }),
--         e
+-         t
 - 
--       return Object.prototype.hasOwnProperty.call(e, t);
+-       return Object.prototype.hasOwnProperty.call(t, e);
 - 
-+         t
++         e
 + 
-+     (r.o = function (t, e) {
++     (r.o = function (e, t) {
       }),
 ```
 
 ```diff
         if (n) {
           i = i || 0;
--     (r.O = function (t, n, o, i) {
+-     (r.O = function (e, n, o, i) {
 - 
--         for (var u = e.length; u > 0 && e[u - 1][2] > i; u--) e[u] = e[u - 1];
+-         for (var u = t.length; u > 0 && t[u - 1][2] > i; u--) t[u] = t[u - 1];
 - 
-+     (t = []),
-+         t[u] = [n, o, i];
++     (e = []),
++         e[u] = [n, o, i];
           return;
         }
 ```
@@ -465,8 +465,8 @@
           for (
 - 
 - 
-+       for (var c = 1 / 0, u = 0; u < t.length; u++) {
-+           var n = t[u][0], o = t[u][1], i = t[u][2], s = !0, a = 0;
++       for (var c = 1 / 0, u = 0; u < e.length; u++) {
++           var n = e[u][0], o = e[u][1], i = e[u][2], s = !0, a = 0;
             a < n.length;
             a++
           )
@@ -478,11 +478,11 @@
               ? n.splice(a--, 1)
               : ((s = !1), i < c && (c = i));
           if (s) {
--             return r.O[e](n[a]);
+-             return r.O[t](n[a]);
 - 
 - 
-+           Object.keys(r.O).every(function (t) {
-+           t.splice(u--, 1);
++           Object.keys(r.O).every(function (e) {
++           e.splice(u--, 1);
             var l = o();
 ```
 
@@ -491,8 +491,8 @@
         }
 - 
 - 
-+           void 0 !== l && (e = l);
-+       return e;
++           void 0 !== l && (t = l);
++       return t;
       }),
       (r.g = (function () {
         if ("object" == typeof globalThis) return globalThis;
@@ -505,12 +505,12 @@
         }
       })()),
 - 
--       for (var n in t)
--           !r.o(e, n) &&
--           Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
+-       for (var n in e)
+-           !r.o(t, n) &&
+-           Object.defineProperty(t, n, { enumerable: !0, get: e[n] });
 - 
-+       } catch (t) {
-+           !r.o(t, n) &&
++       } catch (e) {
++           !r.o(e, n) &&
       }),
 ```
 
@@ -518,31 +518,31 @@
         "undefined" != typeof Symbol &&
           Symbol.toStringTag &&
 - 
--         Object.defineProperty(e, "__esModule", { value: !0 });
+-         Object.defineProperty(t, "__esModule", { value: !0 });
 - 
-+     (r.r = function (t) {
-+         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
++     (r.r = function (e) {
++         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
       }),
 ```
 
 ```diff
       }),
--       return e && e.__esModule ? e.default : e;
+-       return t && t.__esModule ? t.default : t;
 - 
--       return (e.paths = []), !e.children && (e.children = []), e;
+-       return (t.paths = []), !t.children && (t.children = []), t;
 - 
-+     (r.n = function (t) {
-+     (r.nmd = function (t) {
++     (r.n = function (e) {
++     (r.nmd = function (e) {
       }),
 ```
 
 ```diff
         return (
 - 
--         Object.defineProperty(e, "exports", {
+-         Object.defineProperty(t, "exports", {
 - 
-+     (r.hmd = function (t) {
-+         !(t = Object.create(t)).children && (t.children = []),
++     (r.hmd = function (e) {
++         !(e = Object.create(e)).children && (e.children = []),
             enumerable: !0,
             set: function () {
               throw Error(
@@ -554,10 +554,10 @@
             },
           }),
 - 
--         e
+-         t
 - 
-+                 t.id
-+         t
++                 e.id
++         e
 + 
         );
       }),
@@ -566,12 +566,12 @@
 
 ```diff
         };
--       r.O.j = function (t) {
--         return 0 === e[t];
+-       r.O.j = function (e) {
+-         return 0 === t[e];
 - 
 - 
-+       var t = { sentry: 0 };
-+       var e = function (e, n) {
++       var e = { sentry: 0 };
++       var t = function (t, n) {
             var o = n[0],
               i = n[1],
               u = n[2],
@@ -585,12 +585,12 @@
               for (c in i) r.o(i, c) && (r.m[c] = i[c]);
               if (u) var l = u(r);
             }
--               return 0 !== e[t];
+-               return 0 !== t[e];
 - 
--             (s = o[a]), r.o(e, s) && e[s] && e[s][0](), (e[s] = 0);
+-             (s = o[a]), r.o(t, s) && t[s] && t[s][0](), (t[s] = 0);
 - 
-+             o.some(function (e) {
-+           for (e && e(n); a < o.length; a++)
++             o.some(function (t) {
++           for (t && t(n); a < o.length; a++)
             return r.O(l);
           },
           n = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
@@ -603,10 +603,10 @@
     r.O(o);
   })();
 - 
-- //# sourceMappingURL=sentry.46fae6d1b8355f2905a5.js.map
+- //# sourceMappingURL=sentry.a31884141e9829b39aa2.js.map
 - 
-+       n.forEach(e.bind(null, 0)), (n.push = e.bind(null, n.push.bind(n)));
-+ //# sourceMappingURL=sentry.a31884141e9829b39aa2.js.map
++       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
++ //# sourceMappingURL=sentry.a4cc543bee09e61d199d.js.map
 + 
 
 ```

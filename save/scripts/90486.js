@@ -1653,12 +1653,6 @@
         ENABLE_COMMUNITY_BUTTON_TEXT: "Finish Setup",
         TOOLTIP_COMMUNITY_FEATURE_DISABLED:
           "This option is not available for Community Servers.",
-        GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_HEADER:
-          "Unlock permanent invite links!",
-        GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_DESCRIPTION:
-          "Convert to a Community Server to unlock permanent invite links and other powerful tools to help you grow.",
-        GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_ALT_TEXT:
-          "Three friends on a floating island in the sky greet each other.",
         GUILD_SETTINGS_LABEL_AUDIT_LOG: "Audit Log",
         GUILD_SETTINGS_AUDIT_LOG_LOAD_MORE: "Load More",
         GUILD_SETTINGS_LABEL_AUDIT_LOG_EMPTY_TITLE: "No Logs Yet",
@@ -25932,8 +25926,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263573", ", Version Hash: ")
-          .concat("151fa6237600526de49764b8331d807ab07a7d8a")
+          .concat("263582", ", Version Hash: ")
+          .concat("53bdc3964ebcc5e956ed20bd109eee0af6a8b2a4")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28907,12 +28901,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263573"), "263573"));
+        let _ = parseInt(((e = "263582"), "263582"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263573"
+                "263582"
               )
             ),
             (_ = 0)),
@@ -50270,4 +50264,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.231c67d5963779d477d4.js.map
+//# sourceMappingURL=90486.0adcfba4918aaeb5f46a.js.map

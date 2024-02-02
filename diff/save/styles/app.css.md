@@ -1,16 +1,16 @@
 ```diff
-    padding-right: 0;
   }
-  .message__13e98 {
-    font-weight: 500;
-    font-size: 1rem;
--   line-height: 1.25rem;
-+   line-height: 20px;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  .tabBarItem_b56b35 {
+    display: inline;
+    border-bottom: 2px solid transparent;
+    height: 39px;
+-   font-size: 14px;
++   font-size: 0.875rem;
+  .enable-forced-colors .tabBarItem_b56b35 {
+    margin-right: 32px;
   }
-  .theme-light .notice__88b94 {
-    background-color: hsl(var(--primary-100-hsl) / 0.95);
+  @media (max-width: 485px) {
+    .root_ba16f0 {
 ```
 
 ```diff
@@ -19,7 +19,7 @@
       --font-weight-semibold-1x-light-theme: 600;
     }
   }
-- /*# sourceMappingURL=app.b128c20b0e47f1140286.css.map*/
-+ /*# sourceMappingURL=app.0f290a20d436983876a9.css.map*/
+- /*# sourceMappingURL=app.0f290a20d436983876a9.css.map*/
++ /*# sourceMappingURL=app.9c2922204481c510cf1a.css.map*/
 
 ```

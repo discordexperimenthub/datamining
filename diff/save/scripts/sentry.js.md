@@ -1,7 +1,22 @@
 ```diff
+                "could not play audio",
+                "notosans-400-normalitalic",
+              ],
+              denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
             }),
-              r.setTag("buildNumber", ((t = "263482"), "263482")),
-              r.setTag("builtAt", String("1706886140021"));
+-             r.setTag("buildNumber", ((t = "263508"), "263508")),
++             r.setTag("buildNumber", ((e = "263510"), "263510")),
+            let e = window.GLOBAL_ENV.SENTRY_TAGS;
+            if (null != e && "object" == typeof e)
+              for (let t in e) r.setTag(t, e[t]);
+            return r;
+          }
+```
+
+```diff
+            }),
+              r.setTag("buildNumber", ((t = "263508"), "263508")),
+              r.setTag("builtAt", String("1706894906009"));
             let e = window.GLOBAL_ENV.SENTRY_TAGS;
             if (null != e && "object" == typeof e)
 -             for (let t in e) r.setTag(t, e[t]);
@@ -79,7 +94,7 @@
     );
     r.O(o);
   })();
-- //# sourceMappingURL=sentry.4bf61805ff0bcbbb5598.js.map
-+ //# sourceMappingURL=sentry.882cc6e99ebd90475039.js.map
+- //# sourceMappingURL=sentry.89723d63e0665cb4d2b4.js.map
++ //# sourceMappingURL=sentry.75ac7bf517acfdad56e1.js.map
 
 ```

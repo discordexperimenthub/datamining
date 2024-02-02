@@ -1249,8 +1249,9 @@
           "Activity has started.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "You cannot launch this activity in a server with more than 25 members",
-        EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED: "Activity has ended",
-        EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activity has started",
+        EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
+          "Activity ended. Start a new one?",
+        EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activity started",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION:
           "You do not have permissions to join this Voice Channel.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
@@ -23674,6 +23675,7 @@
           "Unable to Mark as Not Sensitive",
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
+        SAFETY_WARNING_BANNER_CLOSE_A11Y: "Close",
         STRANGER_DANGER_BANNER_HEADER: "Unwanted message?",
         STRANGER_DANGER_BANNER_DESCRIPTION:
           "If you don't want to chat with this person, you can block or mute them.",
@@ -23729,6 +23731,14 @@
           "Wumpus looking delighted at a computer screen with a light bulb above.",
         INAPPROPRIATE_CONVERSATION_SAFETY_TIPS_ALT:
           "An open book with a warning icon and color blocks.",
+        INAPPROPRIATE_CONVERSATION_BANNER_HEADER:
+          "It looks like this conversation may not be safe",
+        INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION:
+          "Take action to protect yourself.",
+        INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON:
+          "Open safety tools",
+        INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON: "Block",
+        INAPPROPRIATE_CONVERSATION_BLOCK_CONFIRM: "User Blocked",
         URF_LANDING_PAGE_TITLE: "Report Illegal Content",
         URF_LANDING_PAGE_SUBTITLE:
           "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement please [go here]({supportURL}).",
@@ -25922,8 +25932,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263547", ", Version Hash: ")
-          .concat("212a863a1c5386c4c4820c6bb445e9a92619d832")
+          .concat("263550", ", Version Hash: ")
+          .concat("3205d5d199b8ef0e5e663a0053837c6e73dd9503")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28897,12 +28907,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263547"), "263547"));
+        let _ = parseInt(((e = "263550"), "263550"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263547"
+                "263550"
               )
             ),
             (_ = 0)),
@@ -50271,4 +50281,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.2e83a5d293d1362e9f09.js.map
+//# sourceMappingURL=90486.f75d38dc7529f7a3025c.js.map

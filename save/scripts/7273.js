@@ -2484,7 +2484,6 @@
           STAGE_INSTANCES_EXTRA: "/stage-instances/extra",
           STAGE_INSTANCE: _ => "/stage-instances/".concat(_),
           USER_SURVEY: "/users/@me/survey",
-          USER_SURVEY_SEEN: _ => "/users/@me/survey/".concat(_, "/seen"),
           GUILD_EVENTS: "/guild-events",
           GUILD_EVENT: (_, E) =>
             "/guilds/".concat(_, "/scheduled-events/").concat(E),
@@ -17174,4 +17173,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.dde6b1f1b476e0f29083.js.map
+//# sourceMappingURL=7273.cbcd30e66dce8a83659b.js.map

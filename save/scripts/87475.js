@@ -6296,7 +6296,6 @@
         (s.USER_RESET_PASSWORD = "network_action_user_reset_password"),
         (s.USER_SETTINGS_UPDATE = "network_action_user_settings_update"),
         (s.USER_SURVEY_FETCH = "network_action_user_survey_fetch"),
-        (s.USER_SURVEY_SEEN = "network_action_user_survey_fetch"),
         (s.USER_UNREGISTER_DEVICE_TOKEN =
           "network_action_user_unregister_device_token"),
         (s.USER_VERIFY = "network_action_user_verify"),
@@ -6740,7 +6739,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "263796"), "263796"), 10);
+          let o = parseInt(((n = "263807"), "263807"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7038,4 +7037,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.151452774d41b5ee059c.js.map
+//# sourceMappingURL=87475.39db49cdac90ee29f1cc.js.map

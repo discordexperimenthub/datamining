@@ -9433,6 +9433,8 @@
           "Pay just **{discountedPrice}** a month for **3 months!** Then pay {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION:
           "Your !!{percent, number}!!% discount will end 3 months after purchase. After that you'll be charged {regularPrice}.",
+        PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
+          "Your first **3 months** are **{discountedPrice}**. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
         PREMIUM_TUTORIAL_GOT_IT: "Got it!",
         PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW:
@@ -25933,8 +25935,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263826", ", Version Hash: ")
-          .concat("7ae62e6970dfe48d66b826ed06618b3d092dfd48")
+          .concat("263843", ", Version Hash: ")
+          .concat("489890a4580044a537feb44d284cbaa2f35cc3f2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28908,12 +28910,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263826"), "263826"));
+        let _ = parseInt(((e = "263843"), "263843"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263826"
+                "263843"
               )
             ),
             (_ = 0)),
@@ -50269,4 +50271,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.d10984699e9a2bad3f8d.js.map
+//# sourceMappingURL=90486.c2b2b0e9ac036d5d3a3c.js.map

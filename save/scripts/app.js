@@ -21297,6 +21297,9 @@
         heading: "heading_cd6769",
         modalBody: "modalBody_bbc84d",
         modalContent: "modalContent_e57193",
+        platformSelectionOptionIcon: "platformSelectionOptionIcon__6a873",
+        platformSelectionOptionLabelContainer:
+          "platformSelectionOptionLabelContainer__251bb",
         reward: "reward__29972",
         rewardHeading: "rewardHeading_e27832",
         rewardSubheading: "rewardSubheading__44e84",

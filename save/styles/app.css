@@ -22830,8 +22830,8 @@ html .progress__4ef76 {
   background-image: linear-gradient(270deg, #e82427 0%, #c81031 100%);
 }
 .planInfo_cd8cba {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 8px;
 }
 .buttons_c518ae {
@@ -23118,8 +23118,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -98713,6 +98713,14 @@ html .invoiceCancelRow_c1bfe7 {
 .rewardSubheadingIcon__51701 {
   margin-right: 2px;
 }
+.platformSelectionOptionLabelContainer__251bb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.platformSelectionOptionIcon__6a873 {
+  margin-right: 8px;
+}
 .modalContent_d4e781 {
   padding-top: var(--spacing-16);
 }
@@ -108469,4 +108477,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3bb7afba140409a69a70.css.map*/
+/*# sourceMappingURL=app.61eaa7cdc04b26277123.css.map*/

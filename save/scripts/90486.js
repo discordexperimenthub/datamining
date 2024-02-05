@@ -5197,6 +5197,8 @@
         SWIPE_TO_REPLY: "Swipe to Reply",
         SWIPE_TO_REPLY_HINT:
           "Currently, swiping right-to-left opens Member List. Toggle to enable swiping to reply to a message.",
+        SWIPE_TO_REPLY_COACHMARK:
+          "If you prefer to swipe to reply to a message, you can change the default behavior in [Settings](onClick).",
         CONNECTED_ACCOUNTS: "Connected Accounts",
         CONNECTED_ACCOUNTS_NONE_TITLE: "No Connections",
         CONNECTED_ACCOUNTS_NONE:
@@ -25935,8 +25937,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263880", ", Version Hash: ")
-          .concat("db49dc0a66282960af73c3980580e82fd92a90ef")
+          .concat("263882", ", Version Hash: ")
+          .concat("a60936f821d82002dbbc389946c8f74f6f5697f4")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28910,12 +28912,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263880"), "263880"));
+        let _ = parseInt(((e = "263882"), "263882"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263880"
+                "263882"
               )
             ),
             (_ = 0)),
@@ -50271,4 +50273,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.55258d962964a96eee01.js.map
+//# sourceMappingURL=90486.e0cd03477c950d3ce8d6.js.map

@@ -310,7 +310,6 @@
           "premium trial offer action sheet"),
         (i.PREMIUM_SUBSCRIBER_NITRO_HOME = "premium subscriber nitro home"),
         (i.CLYDE_PROFILE_SHARE_MODAL = "clyde profile share modal"),
-        (i.ACTIVITY_IN_TEXT_ACTIONBAR = "activity in text actionbar"),
         (i.GUILD_EVENT_CARD = "guild event card"),
         (i.EVENT_SETTINGS = "event settings"),
         (i.GUILD_EVENT_RSVP_BUTTON = "guild event rsvp button"),
@@ -321,4 +320,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.ba44eb6f1396bf220735.js.map
+//# sourceMappingURL=14875.ba1d985a930439480dd1.js.map

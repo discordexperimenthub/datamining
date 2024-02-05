@@ -7094,6 +7094,8 @@
           "Join this server on Discord !!{link}!!",
         INVITE_TAP_TO_INVITE: "Tap to Invite",
         INVITE_YOUR_CONTACTS: "Your Contacts",
+        INVITE_YOUR_CONTACTS_HEADER: "Invite Your Contacts",
+        SHOW_ALL_WITH_COUNT: "Show all ({count})",
         INVITE_CONTACTS_HEADER: "Contacts You Should Invite — {count}",
         INVITE_CONTACTS_EMPTY_TITLE: "Find your friends",
         INVITE_CONTACTS_EMPTY_BODY:
@@ -25941,8 +25943,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("263964", ", Version Hash: ")
-          .concat("fb4779ba01bb584703d2c86467b9de025304c8bb")
+          .concat("263989", ", Version Hash: ")
+          .concat("c55e03c2cfafaf0736a3c9115ca9b0669d0a801e")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28916,12 +28918,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "263964"), "263964"));
+        let _ = parseInt(((e = "263989"), "263989"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "263964"
+                "263989"
               )
             ),
             (_ = 0)),
@@ -50309,4 +50311,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.6ada1e406d74f48decb6.js.map
+//# sourceMappingURL=90486.70fe9f1e143ad933e2aa.js.map

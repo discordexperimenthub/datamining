@@ -155,8 +155,8 @@
         E = n("686470"),
         I = n("535974"),
         p = n("568734"),
-        A = n("269180"),
-        f = n("773336"),
+        f = n("269180"),
+        A = n("773336"),
         _ = n("260365"),
         T = n("438931"),
         C = n("215082"),
@@ -173,10 +173,10 @@
           analyticsLocations: u = [],
         } = t;
         S(e, null, a, r, u)
-          .then(() => A.default.waitConnected(e))
+          .then(() => f.default.waitConnected(e))
           .then(() =>
             Promise.race([
-              A.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN),
+              f.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN),
             ])
           )
           .then(() => {
@@ -210,19 +210,19 @@
           e = null != n ? n.branchId : t;
         }
         if (I.default.isLaunchable(t, e)) {
-          var f;
+          var A;
           let n = I.default.getState(t, e),
             l = E.default.getActiveLaunchOptionId(t, e);
           if (null == n) throw Error("Missing dispatch game when launching");
           let r = E.default.getLibraryApplication(t, e);
           if (null == r)
             throw Error("Missing library application when launching");
-          p = ((f = t),
+          p = ((A = t),
           i.default
             .post({
               url: y.Endpoints.OAUTH2_AUTHORIZE,
               query: {
-                client_id: f,
+                client_id: A,
                 response_type: "token",
                 scope: [y.OAuth2Scopes.IDENTIFY].join(" "),
               },
@@ -254,7 +254,7 @@
                 throw t;
               }
             )).then(t =>
-            A.default.launchDispatchApplication(
+            f.default.launchDispatchApplication(
               n,
               t,
               o.default.locale,
@@ -264,7 +264,7 @@
           );
         } else {
           let e = u.default.getApplication(t);
-          p = null != e ? A.default.launch(e) : A.default.launchGame(t);
+          p = null != e ? f.default.launch(e) : f.default.launchGame(t);
         }
         let _ = Error("game not found");
         return null != p
@@ -427,7 +427,7 @@
                 url: y.Endpoints.UNVERIFIED_APPLICATIONS,
                 body: {
                   name: e,
-                  os: (0, f.getPlatformName)(),
+                  os: (0, A.getPlatformName)(),
                   icon: n,
                   distributor_application:
                     ((s = r),
@@ -634,8 +634,8 @@
         E = n("191145"),
         I = n("752598"),
         p = n("653047"),
-        A = n("271938"),
-        f = n("42203"),
+        f = n("271938"),
+        A = n("42203"),
         _ = n("18494"),
         T = n("697218"),
         C = n("449008"),
@@ -647,23 +647,32 @@
         m = n("49111"),
         g = n("91366");
       function v(t, e, n) {
-        let a = N.default.getSelfEmbeddedActivityForChannel(t);
-        null != a && O({ channelId: t, applicationId: a.applicationId }),
+        let a = f.default.getId(),
+          i = N.default.getSelfEmbeddedActivityForChannel(t),
+          r = N.default.getEmbeddedActivitiesForChannel(t),
+          d = r.find(t => t.applicationId === e && t.userIds.has(a));
+        null != i
+          ? O({
+              channelId: t,
+              applicationId: i.applicationId,
+              showFeedback: !1,
+            })
+          : null != d && F(t, e),
           l.default.dispatch({
             type: "EMBEDDED_ACTIVITY_OPEN",
             channelId: t,
             applicationId: e,
             analyticsLocations: n,
           });
-        let i = (0, S.default)(t);
-        i
+        let o = (0, S.default)(t);
+        o
           ? (u.default.selectParticipant(t, e),
             u.default.updateLayout(t, m.ChannelLayouts.NO_CHAT))
           : (0, D.default)(t);
       }
       async function L(t) {
         var e, n;
-        let i = f.default.getChannel(t),
+        let i = A.default.getChannel(t),
           r =
             null !== (e = null == i ? void 0 : i.getGuildId()) && void 0 !== e
               ? e
@@ -679,14 +688,14 @@
           return;
         let u = N.default.getSelfEmbeddedActivityForChannel(t);
         if (null === u) return;
-        let d = A.default.getSessionId();
+        let d = f.default.getSessionId();
         try {
           l.default.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
             embeddedActivity: u,
           }),
             (function (t, e) {
-              let n = f.default.getChannel(t),
+              let n = A.default.getChannel(t),
                 a = N.default
                   .getEmbeddedActivitiesForChannel(t)
                   .some(t => t.applicationId === e);
@@ -918,7 +927,7 @@
             },
             i
           );
-        null != f.default.getChannel(n) &&
+        null != A.default.getChannel(n) &&
           o.default.sendInvite(n, l.code, i, null);
       }
       async function G(t) {
@@ -932,7 +941,7 @@
             i
           );
         r.default.ensurePrivateChannel(a).then(t => {
-          null != f.default.getChannel(t) &&
+          null != A.default.getChannel(t) &&
             o.default.sendInvite(t, l.code, i, null);
         });
       }
@@ -1126,7 +1135,7 @@
       n.r(e),
         n.d(e, {
           default: function () {
-            return A;
+            return f;
           },
         }),
         n("222007");
@@ -1174,7 +1183,7 @@
         }
       }
       p.displayName = "InteractionStore";
-      var A = new p(r.default, {
+      var f = new p(r.default, {
         LOGOUT: function () {
           (c = {}), (s = {}), (E = {});
         },
@@ -1313,8 +1322,8 @@
         E = n("274800"),
         I = n("809810"),
         p = n("3765"),
-        A = n("606981"),
-        f = n("49111");
+        f = n("606981"),
+        A = n("49111");
       function _(t) {
         return null == t || "" === t || Number.isNaN(t)
           ? Date.now()
@@ -1329,7 +1338,7 @@
               indices: u,
               applicationId: d,
               channelId: p,
-              guildId: A,
+              guildId: f,
               localState: _,
             } = t,
             T = l.default.fromTimestamp(Date.now());
@@ -1348,7 +1357,7 @@
           let C = {
             type: o.InteractionTypes.MESSAGE_COMPONENT,
             nonce: T,
-            guild_id: A,
+            guild_id: f,
             channel_id: p,
             message_flags: a,
             message_id: n,
@@ -1370,9 +1379,9 @@
             },
           };
           await r.default.post(
-            { url: f.Endpoints.INTERACTIONS, body: C, timeout: 3e3 },
+            { url: A.Endpoints.INTERACTIONS, body: C, timeout: 3e3 },
             t => {
-              h(T, p, A, t);
+              h(T, p, f, t);
             }
           );
         },
@@ -1389,7 +1398,7 @@
               data: { type: o.ApplicationCommandType.PRIMARY_ENTRY_POINT },
             };
           await r.default.post(
-            { url: f.Endpoints.INTERACTIONS, body: u, timeout: 3e3 },
+            { url: A.Endpoints.INTERACTIONS, body: u, timeout: 3e3 },
             t => {
               h(i, n, null != a ? a : null, t);
             }
@@ -1404,10 +1413,10 @@
               var i;
               if (a.status >= 400 && a.status < 500 && a.body) {
                 if (
-                  a.body.code === f.AbortCodes.INVALID_FORM_BODY &&
+                  a.body.code === A.AbortCodes.INVALID_FORM_BODY &&
                   a.body.errors
                 ) {
-                  let i = (0, A.getFirstSkemaError)(a.body.errors);
+                  let i = (0, f.getFirstSkemaError)(a.body.errors);
                   null != i &&
                     ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" ===
                       i.code ||
@@ -1439,9 +1448,9 @@
       let N = (t, e) => {
         var n;
         let a = null == e ? void 0 : e.state,
-          i = t.state === f.MessageStates.SENT && _(t.id) < Date.now();
+          i = t.state === A.MessageStates.SENT && _(t.id) < Date.now();
         let r =
-            t.state === f.MessageStates.SEND_FAILED &&
+            t.state === A.MessageStates.SEND_FAILED &&
             (null == (n = t.id) || "" === n || Number.isNaN(n)
               ? Date.now()
               : l.default.extractTimestamp(n) + 3e3) < Date.now(),
@@ -1451,23 +1460,23 @@
           d = t.isCommandType();
         if (
           (u && a === p.InteractionState.QUEUED) ||
-          (d && t.state === f.MessageStates.SENDING && null != e)
+          (d && t.state === A.MessageStates.SENDING && null != e)
         )
           return 0;
         if (
           (u && a === p.InteractionState.CREATED) ||
-          (t.hasFlag(f.MessageFlags.LOADING) && !i)
+          (t.hasFlag(A.MessageFlags.LOADING) && !i)
         )
           return 1;
-        if (null != t.interaction && t.hasFlag(f.MessageFlags.LOADING) && i)
+        if (null != t.interaction && t.hasFlag(A.MessageFlags.LOADING) && i)
           return 3;
         else if (
           null != t.interaction &&
-          !t.hasFlag(f.MessageFlags.LOADING) &&
+          !t.hasFlag(A.MessageFlags.LOADING) &&
           r
         )
           return 3;
-        else if (d && t.state === f.MessageStates.SEND_FAILED) return 2;
+        else if (d && t.state === A.MessageStates.SEND_FAILED) return 2;
       };
       function D(t) {
         let e = t.options;
@@ -1507,4 +1516,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37580.f4011cf1c76f3c28f15f.js.map
+//# sourceMappingURL=37580.68f1d3f24f163bdbcbbb.js.map

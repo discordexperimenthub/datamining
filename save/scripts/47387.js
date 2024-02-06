@@ -374,7 +374,7 @@
         E = {},
         T = {},
         I = {};
-      function P() {
+      function p() {
         (i = void 0),
           (r = void 0),
           (l = void 0),
@@ -382,7 +382,7 @@
           (a = void 0),
           (f = null);
       }
-      class p extends u.default.Store {
+      class P extends u.default.Store {
         getSettings(e) {
           if (null != e) return T[e];
         }
@@ -446,8 +446,8 @@
           return m;
         }
       }
-      p.displayName = "ClydeStore";
-      var S = new p(d.default, {
+      P.displayName = "ClydeStore";
+      var S = new P(d.default, {
         CLYDE_GUILD_SETTINGS_FETCH_START: function (e) {
           let { guildId: t } = e,
             n = I[t];
@@ -494,12 +494,12 @@
         },
         CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function (e) {
           let { settings: t } = e;
-          (c = !1), (T[t.guild_id] = t), P();
+          (c = !1), (T[t.guild_id] = t), p();
         },
         CLYDE_GUILD_SETTINGS_SAVE_FAIL: function (e) {
           (c = !1), (f = e.errors);
         },
-        CLYDE_RESET_PENDING_CHANGES: P,
+        CLYDE_RESET_PENDING_CHANGES: p,
         CLYDE_PROFILE_FETCH_START: function (e) {
           let { clydeProfileId: t } = e,
             n = E[t];
@@ -888,8 +888,8 @@
         (0, a.useMaybeFetchPremiumLikelihood)(n);
         let {
             enabled: I,
-            useExpectedValue: P,
-            useLikelihood: p,
+            useExpectedValue: p,
+            useLikelihood: P,
           } = n.useExperiment(
             { location: null != m ? m : "1" },
             { autoTrackExposure: !T && !E && t }
@@ -908,7 +908,7 @@
               c.PremiumSubscriptionSKUs.TIER_2,
             ])
           ),
-          O = !T && I && !E && (P ? !R || !C : !R),
+          O = !T && I && !E && (p ? !R || !C : !R),
           M = c.PremiumTypes.TIER_2;
         if (E) {
           let e = _.subscription_trial;
@@ -917,7 +917,7 @@
             : (null == e ? void 0 : e.sku_id) ===
                 c.PremiumSubscriptionSKUs.TIER_2 && (M = c.PremiumTypes.TIER_2);
         } else if (!T && !O && I) {
-          if (P) {
+          if (p) {
             let { amount: e } = (0, s.getPrice)(
                 c.SubscriptionPlans.PREMIUM_MONTH_TIER_0
               ),
@@ -925,7 +925,7 @@
                 c.SubscriptionPlans.PREMIUM_MONTH_TIER_2
               );
             M = (0, u.getHigherExpectedValue)(S, e, t);
-          } else p && (M = (0, u.getHighestLikelihood)(S));
+          } else P && (M = (0, u.getHighestLikelihood)(S));
         }
         return { isLoading: O, suggestedPremiumType: M };
       }
@@ -969,10 +969,10 @@
             return I;
           },
           getOutboundPromotionRedemptionUrl: function () {
-            return P;
+            return p;
           },
           shouldShowOutboundPromotionNotice: function () {
-            return p;
+            return P;
           },
           shouldShowOutboundPromotionOnPlatform: function () {
             return S;
@@ -1018,6 +1018,7 @@
           id: e.id,
           startDate: e.start_date,
           endDate: e.end_date,
+          outboundRedemptionEndDate: e.outbound_redemption_end_date,
           outboundTitle: e.outbound_title,
           outboundRedemptionModalBody: e.outbound_redemption_modal_body,
           outboundRedemptionPageLink: e.outbound_redemption_page_link,
@@ -1053,7 +1054,7 @@
           n = t.body;
         return E(n);
       }
-      function P(e, t) {
+      function p(e, t) {
         return null != t.outboundRedemptionUrlFormat
           ? t.outboundRedemptionUrlFormat.replace(
               "{code}",
@@ -1061,7 +1062,7 @@
             )
           : t.outboundRedemptionPageLink;
       }
-      function p() {
+      function P() {
         let e = d.default.lastSeenOutboundPromotionStartDate,
           t = d.default.outboundPromotions,
           n = d.default.consumedInboundPromotionId,
@@ -1269,13 +1270,13 @@
           ),
           _ = (0, o.useHasActiveTrial)(),
           [E, T] = i.useState(!1),
-          [I, P] = i.useState([]);
+          [I, p] = i.useState([]);
         i.useEffect(() => {
           null != e &&
             l.default.wait(() => d.default.markOutboundPromotionsSeen());
         }, [e]);
-        let p = i.useCallback(e => {
-            P(t =>
+        let P = i.useCallback(e => {
+            p(t =>
               t.some(t => {
                 let { promotion: n } = t;
                 return n.id === e.promotion.id;
@@ -1294,10 +1295,10 @@
             l.default.wait(() => {
               (0, u.fetchClaimedOutboundPromotionCodes)()
                 .then(e => {
-                  P(e), T(!0);
+                  p(e), T(!0);
                 })
                 .catch(() => {
-                  P([]), T(!0);
+                  p([]), T(!0);
                 });
             });
           }, []);
@@ -1325,7 +1326,7 @@
             (0, u.shouldShowOutboundPromotionOnPlatform)(e.promotion)
           ),
           claimedOutboundPromotionCodeMap: R,
-          addClaimedOutboundPromotionCode: p,
+          addClaimedOutboundPromotionCode: P,
         };
       }
       function E() {
@@ -1525,14 +1526,14 @@
             isGift: !1,
           }),
           T = (0, u.usePremiumDiscountOffer)(),
-          [I, P] = (0, o.useSubscriptionInvoicePreview)({
+          [I, p] = (0, o.useSubscriptionInvoicePreview)({
             items: [{ planId: e, quantity: 1 }],
             renewal: !0,
             preventFetch: !(null != T),
             paymentSourceId: f,
             currency: E.currency,
           }),
-          p =
+          P =
             null == I
               ? void 0
               : null === (m = I.invoiceItems) || void 0 === m
@@ -1551,7 +1552,7 @@
                       ? void 0
                       : t.amount,
           S = (0, s.getPrice)(e, !1, !1, E);
-        return (0, a.formatPrice)(S.amount - (null != p ? p : 0), S.currency);
+        return (0, a.formatPrice)(S.amount - (null != P ? P : 0), S.currency);
       };
     },
     641078: function (e, t, n) {
@@ -1586,8 +1587,8 @@
         E = n("719923"),
         T = n("982457"),
         I = n("433947"),
-        P = n("705337"),
-        p = n("935566"),
+        p = n("705337"),
+        P = n("935566"),
         S = n("917247"),
         R = n("538620"),
         C = n("694540"),
@@ -1643,7 +1644,7 @@
             { autoTrackExposure: !1 }
           ),
           { promotion: n } = (0, C.useBogoPromotion)(),
-          { enabled: i } = (0, p.default)(),
+          { enabled: i } = (0, P.default)(),
           { mostRecentSubscription: r, premiumSubscription: s } = (0,
           l.useStateFromStoresObject)([f.default], () => ({
             mostRecentSubscription:
@@ -1664,7 +1665,7 @@
           }),
           m = c && null == a && null != n && !t,
           _ = Date.now(),
-          { enabled: E } = P.default.useExperiment(
+          { enabled: E } = p.default.useExperiment(
             { location: "153d31_2" },
             { autoTrackExposure: m, disable: !m }
           );
@@ -1678,8 +1679,8 @@
             { location: "153d31_3" },
             { autoTrackExposure: !1 }
           ),
-          { enabled: r } = (0, p.isBogoPromotionExperimentEnabled)(),
-          { enabled: l } = P.default.getCurrentConfig(
+          { enabled: r } = (0, P.isBogoPromotionExperimentEnabled)(),
+          { enabled: l } = p.default.getCurrentConfig(
             { location: "153d31_4" },
             { autoTrackExposure: !1 }
           ),
@@ -1729,7 +1730,7 @@
             s.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL
           ),
           i = await h(),
-          { enabled: r } = p.BogoPromotionExperiment.getCurrentConfig(
+          { enabled: r } = P.BogoPromotionExperiment.getCurrentConfig(
             { location: "153d31_6" },
             { autoTrackExposure: !1 }
           ),
@@ -1795,8 +1796,8 @@
         E = n("841098"),
         T = n("206230"),
         I = n("32531"),
-        P = n("393414"),
-        p = n("945330"),
+        p = n("393414"),
+        P = n("945330"),
         S = n("41250"),
         R = n("379863"),
         C = n("216422"),
@@ -2087,7 +2088,7 @@
                 (0, i.jsx)(_.Clickable, {
                   className: A.upsellClose,
                   onClick: a,
-                  children: (0, i.jsx)(p.default, {}),
+                  children: (0, i.jsx)(P.default, {}),
                 }),
                 (0, i.jsxs)("div", {
                   className: A.contentContainer,
@@ -2112,7 +2113,7 @@
                           {
                             planName: (0, O.getDisplayNameFromSku)(d),
                             onClick: () =>
-                              (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                              (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                           }
                         ),
                     }),
@@ -2159,7 +2160,7 @@
                             {
                               planName: (0, O.getDisplayNameFromSku)(d),
                               onClick: () =>
-                                (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                                (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                             }
                           ),
                       }),
@@ -2206,7 +2207,7 @@
                           {
                             planName: (0, O.getDisplayNameFromSku)(d),
                             onClick: () =>
-                              (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                              (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                           }
                         ),
                     }),
@@ -2242,7 +2243,7 @@
                           : x.default.Messages
                               .FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
                       onClick: () => {
-                        (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                        (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == a || a();
                       },
                     }
@@ -2254,7 +2255,7 @@
                     {
                       planName: (0, O.getDisplayNameFromSku)(d),
                       onClick: () => {
-                        (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                        (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == a || a();
                       },
                     }
@@ -2264,7 +2265,7 @@
                 U = x.default.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format(
                   {
                     onClick: () => {
-                      (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                      (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                         null == a || a(),
                         (0, m.closeAllModals)();
                     },
@@ -2277,7 +2278,7 @@
                     {
                       premiumMaxMessageLength: N.MAX_MESSAGE_LENGTH_PREMIUM,
                       onClick: () => {
-                        (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                        (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == a || a();
                       },
                     }
@@ -2325,7 +2326,7 @@
                       {
                         planName: (0, O.getDisplayNameFromSku)(d),
                         onClick: () =>
-                          (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                          (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                       }
                     ),
                 }),
@@ -2348,7 +2349,7 @@
                 children: x.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format(
                   {
                     onClick: () => {
-                      (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                      (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                         (0, I.closeEditor)();
                     },
                   }
@@ -2385,7 +2386,7 @@
                       {
                         premiumMaxMessageLength: N.MAX_MESSAGE_LENGTH_PREMIUM,
                         onClick: () => {
-                          (0, P.transitionTo)(N.Routes.APPLICATION_STORE),
+                          (0, p.transitionTo)(N.Routes.APPLICATION_STORE),
                             null == a || a();
                         },
                       }
@@ -2476,8 +2477,8 @@
         E = n("669491"),
         T = n("819855"),
         I = n("77078"),
-        P = n("841098"),
-        p = n("812204"),
+        p = n("841098"),
+        P = n("812204"),
         S = n("685665"),
         R = n("441413"),
         C = n("915639"),
@@ -2572,7 +2573,7 @@
       }
       function en(e) {
         let { tier: t = W.PremiumTypes.TIER_2 } = e,
-          n = (0, P.default)(),
+          n = (0, p.default)(),
           i = (0, T.isThemeLight)(n);
         return (0, u.jsxs)(u.Fragment, {
           children: [
@@ -2799,7 +2800,7 @@
           });
         }
         if (!t && i) {
-          var T, P, p, S;
+          var T, p, P, S;
           let e = j.default.formatPriceString(
             j.default.getDefaultPrice(
               n === W.PremiumTypes.TIER_0
@@ -2818,21 +2819,21 @@
                     {
                       planName: (0, j.getTierDisplayName)(
                         null !==
-                          (P =
+                          (p =
                             W.PREMIUM_SKU_TO_MONTHLY_PLAN[
                               null !== (T = null == E ? void 0 : E.sku_id) &&
                               void 0 !== T
                                 ? T
                                 : W.PremiumSubscriptionSKUs.NONE
-                            ]) && void 0 !== P
-                          ? P
+                            ]) && void 0 !== p
+                          ? p
                           : W.SubscriptionPlans.PREMIUM_MONTH_TIER_2
                       ),
                       duration: (0, j.formatIntervalDuration)({
                         intervalType:
-                          null !== (p = null == E ? void 0 : E.interval) &&
-                          void 0 !== p
-                            ? p
+                          null !== (P = null == E ? void 0 : E.interval) &&
+                          void 0 !== P
+                            ? P
                             : W.SubscriptionIntervalTypes.DAY,
                         intervalCount:
                           null !==
@@ -3129,29 +3130,29 @@
                 ? void 0
                 : m.premiumType
               : null,
-          P = (0, G.useIsInPremiumOfferExperience)(),
-          p = (0, H.usePremiumDiscountOffer)(),
+          p = (0, G.useIsInPremiumOfferExperience)(),
+          P = (0, H.usePremiumDiscountOffer)(),
           S = (0, G.useHasDiscountApplied)(),
-          R = null != E || null != T ? 0 : null != p || S ? 1 : null,
+          R = null != E || null != T ? 0 : null != P || S ? 1 : null,
           C = (0, V.useIsEligibleForBogoPromotion)(),
           L = (0, V.getBOGOPillCopy)();
         return (0, u.jsxs)("div", {
           className: c(J.tier2, J.card, s, {
-            [J.withTier2Rim]: !a && P,
-            [J.withCardHover]: !a && P,
+            [J.withTier2Rim]: !a && p,
+            [J.withCardHover]: !a && p,
           }),
           children: [
             !a &&
-            null != p &&
-            (0, H.discountOfferHasTier)(p, W.PremiumSubscriptionSKUs.TIER_2) &&
-            void 0 !== p.discount.amount
+            null != P &&
+            (0, H.discountOfferHasTier)(P, W.PremiumSubscriptionSKUs.TIER_2) &&
+            void 0 !== P.discount.amount
               ? (0, u.jsxs)(u.Fragment, {
                   children: [
                     (0, u.jsx)(er, {
                       text: S
                         ? X.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED
                         : X.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format(
-                            { percent: p.discount.amount }
+                            { percent: P.discount.amount }
                           ),
                       className: J.topRimPill,
                       colorOptions: 2,
@@ -3227,7 +3228,7 @@
                   offerTierMatchesCard:
                     E === W.PremiumSubscriptionSKUs.TIER_2 ||
                     (0, H.discountOfferHasTier)(
-                      p,
+                      P,
                       W.PremiumSubscriptionSKUs.TIER_2
                     ),
                   showYearlyPrice: r,
@@ -3236,7 +3237,7 @@
               ],
             }),
             i,
-            a || (E !== W.PremiumSubscriptionSKUs.TIER_2 && null == p)
+            a || (E !== W.PremiumSubscriptionSKUs.TIER_2 && null == P)
               ? null
               : (0, u.jsx)(en, { tier: W.PremiumTypes.TIER_2 }),
           ],
@@ -3251,7 +3252,7 @@
             className: l,
           } = e,
           { AnalyticsLocationProvider: s } = (0, S.default)(
-            p.default.PREMIUM_MARKETING_TIER_CARD
+            P.default.PREMIUM_MARKETING_TIER_CARD
           );
         return (0, u.jsx)(s, {
           children: (0, u.jsxs)("div", {
@@ -3414,8 +3415,8 @@
         E = n("789946"),
         T = n("646718"),
         I = n("49111"),
-        P = n("527382"),
-        p = n("782340"),
+        p = n("527382"),
+        P = n("782340"),
         S = n("74230");
       function R(e) {
         let t,
@@ -3430,35 +3431,35 @@
           L = (0, a.useStateFromStores)([d.default], () =>
             d.default.getCurrentUser()
           ),
-          v = (0, i.jsx)(u.default, { icons: P.DEFAULT_FILE_UPLOAD_ICONS });
+          v = (0, i.jsx)(u.default, { icons: p.DEFAULT_FILE_UPLOAD_ICONS });
         t = g
-          ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format(
+          ? P.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format(
               {
                 premiumPlan: (0, m.getPremiumTypeDisplayName)(
                   T.PremiumTypes.TIER_0
                 ),
                 premiumMaxSize:
-                  p.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED,
+                  P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED,
               }
             )
-          : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
+          : P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
         let U = r.useMemo(() => {
             let e = m.default.getUserMaxFileSize(L),
               t = (0, c.formatSize)(e / 1024, { useKibibytes: !0 }),
               n =
-                p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format(
+                P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format(
                   { maxSize: t }
                 );
             switch (null == L ? void 0 : L.premiumType) {
               case T.PremiumTypes.TIER_0:
                 n =
-                  p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format(
+                  P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format(
                     { maxSize: t }
                   );
                 break;
               case T.PremiumTypes.TIER_1:
                 n =
-                  p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format(
+                  P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format(
                     { maxSize: t }
                   );
             }
@@ -3476,11 +3477,11 @@
           artContainerClassName: s(S.artContainer),
           enableArtBoxShadow: !1,
           type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-          title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+          title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
           body: h,
           context:
-            p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-              maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD,
+            P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+              maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD,
             }),
           glowUp: t,
           analyticsLocation: {
@@ -3518,8 +3519,8 @@
         E = n("956597"),
         T = n("635956"),
         I = n("646718"),
-        P = n("49111"),
-        p = n("782340"),
+        p = n("49111"),
+        P = n("782340"),
         S = n("857513"),
         R = n("393828");
       function C(e) {
@@ -3567,14 +3568,14 @@
         r.useEffect(() => {
           !k &&
             (z
-              ? c.default.track(P.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+              ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                   type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
                   guild_id: M.guild.id,
                   channel_id: M.channelId,
                   location: L,
                   location_stack: J,
                 })
-              : c.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+              : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                   type: O,
                   source: g,
                   location_stack: J,
@@ -3700,7 +3701,7 @@
                           } else
                             null != Z &&
                               (e =
-                                p.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                                P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                                   percent: Z.discount.amount,
                                 }));
                         }
@@ -3724,7 +3725,7 @@
                       size: a.Button.Sizes.SMALL,
                       color: a.Button.Colors.PRIMARY,
                       look: a.Button.Looks.LINK,
-                      children: null != V ? V : p.default.Messages.BACK,
+                      children: null != V ? V : P.default.Messages.BACK,
                     }),
                 ],
               }),
@@ -3787,10 +3788,10 @@
             return I;
           },
           getPreviewDisplayName: function () {
-            return P;
+            return p;
           },
           isColorDark: function () {
-            return p;
+            return P;
           },
         });
       var i = n("37983");
@@ -3854,10 +3855,10 @@
       function I(e, t) {
         return "" === e ? null : null != e ? e : t;
       }
-      function P(e, t) {
+      function p(e, t) {
         return "" === e ? null : null != e ? e : t;
       }
-      function p(e) {
+      function P(e) {
         let t = null != e ? (0, r.getDarkness)(e) : 1;
         return t > 0.25;
       }
@@ -3900,8 +3901,8 @@
           }),
           {
             avatarPlaceholderSrc: I,
-            avatarDecorationSrc: P,
-            eventHandlers: p,
+            avatarDecorationSrc: p,
+            eventHandlers: P,
           } = (0, s.default)({
             user: t,
             size: (0, l.getDecorationSizeForAvatarSize)(o),
@@ -3911,14 +3912,14 @@
             showTryItOut: d,
           }),
           S = i.useCallback(() => {
-            T.onMouseEnter(), p.onMouseEnter();
-          }, [T, p]),
+            T.onMouseEnter(), P.onMouseEnter();
+          }, [T, P]),
           R = i.useCallback(() => {
-            T.onMouseLeave(), p.onMouseLeave();
-          }, [T, p]);
+            T.onMouseLeave(), P.onMouseLeave();
+          }, [T, P]);
         return {
           avatarPlaceholderSrc: I,
-          avatarDecorationSrc: P,
+          avatarDecorationSrc: p,
           avatarSrc: _,
           isAnimating: E,
           eventHandlers: { onMouseEnter: S, onMouseLeave: R },
@@ -3958,8 +3959,8 @@
           I = (0, r.useStateFromStores)([o.default], () =>
             o.default.isFocused()
           ),
-          P = I && (_ || (!T && !m)),
-          { pendingAvatar: p } = (0, u.default)({}),
+          p = I && (_ || (!T && !m)),
+          { pendingAvatar: P } = (0, u.default)({}),
           S = (0, r.useStateFromStores)([a.default], () =>
             null != n && null != t ? a.default.getMember(n, t.id) : null
           ),
@@ -3967,19 +3968,19 @@
             () =>
               null != t
                 ? (0, s.getPreviewAvatar)(
-                    c ? (null != f ? f : p) : void 0,
+                    c ? (null != f ? f : P) : void 0,
                     S,
                     t,
-                    { canAnimate: P, size: d }
+                    { canAnimate: p, size: d }
                   )
                 : void 0,
-            [c, p, S, t, P, d, f]
+            [c, P, S, t, p, d, f]
           ),
           C = i.useCallback(() => E(!0), []),
           O = i.useCallback(() => E(!1), []);
         return {
           avatarSrc: R,
-          isAvatarAnimating: P,
+          isAvatarAnimating: p,
           eventHandlers: { onMouseEnter: C, onMouseLeave: O },
         };
       }
@@ -4171,4 +4172,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47387.f6d0d8fc264b899f157d.js.map
+//# sourceMappingURL=47387.84a9ff73032e16dd3e5a.js.map

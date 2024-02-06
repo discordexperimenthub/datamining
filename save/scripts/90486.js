@@ -25951,8 +25951,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("264079", ", Version Hash: ")
-          .concat("6b955c8b6a95cb363cbdb7faf67db485096f30bd")
+          .concat("264109", ", Version Hash: ")
+          .concat("2fa377325656e6d251ffe2617e17c7995accab69")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28070,7 +28070,6 @@
         VoiceChannelGameActivityManager: {
           actions: [
             "PRESENCE_UPDATES",
-            "POST_CONNECTION_OPEN",
             "VOICE_STATE_UPDATES",
             "RUNNING_GAMES_CHANGE",
             "VOICE_CHANNEL_SELECT",
@@ -28926,12 +28925,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264079"), "264079"));
+        let _ = parseInt(((e = "264109"), "264109"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264079"
+                "264109"
               )
             ),
             (_ = 0)),
@@ -33920,82 +33919,70 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return c;
+            return u;
           },
         }),
         E("222007");
-      var t = E("823411"),
-        o = E("689988"),
-        n = E("716241"),
-        r = E("651057"),
-        a = E("299285"),
-        i = E("271938"),
-        I = E("42203"),
-        s = E("546463"),
-        T = E("824563"),
-        S = E("18494"),
-        N = E("162771"),
-        O = E("101125"),
-        A = E("800762"),
-        R = E("774539"),
-        l = E("49111");
-      function L(e) {
+      var t = E("689988"),
+        o = E("716241"),
+        n = E("651057"),
+        r = E("299285"),
+        a = E("271938"),
+        i = E("42203"),
+        I = E("824563"),
+        s = E("18494"),
+        T = E("101125"),
+        S = E("800762"),
+        N = E("774539"),
+        O = E("49111");
+      function A(e) {
         return e
-          .filter(
-            e =>
-              e.type === l.ActivityTypes.PLAYING &&
-              null != e.application_id &&
-              null != s.default.getDetectableGame(e.application_id)
-          )
+          .filter(e => e.type === O.ActivityTypes.PLAYING && e.application_id)
           .map(e => e.application_id);
       }
-      async function u(e) {
-        await r.default.fetchApplications(e, !1);
+      async function R(e) {
+        await n.default.fetchApplications(e, !1);
       }
-      async function C(e) {
+      async function l(e) {
         if (null == e) return;
-        let _ = I.default.getChannel(e);
+        let _ = i.default.getChannel(e);
         if (
           null == _ ||
-          !(0, R.isVoiceUserGameActivityEnabled)("running_games_change", !1)
+          !(0, N.isVoiceUserGameActivityEnabled)("running_games_change", !1)
         )
           return;
-        let E = O.default.getActivities();
+        let E = T.default.getActivities();
         if (0 === E.length) return;
-        let t = L([...E]);
-        await u([...t]);
-        let o = a.default.getApplication(t[0]);
-        null != o &&
-          n.default.trackWithMetadata(
-            l.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET,
+        let t = A([...E]);
+        await R([...t]);
+        let n = r.default.getApplication(t[0]);
+        null != n &&
+          o.default.trackWithMetadata(
+            O.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET,
             {
               channel_id: e,
               guild_id: _.guild_id,
-              game_name: o.name,
-              user_id: i.default.getId(),
+              game_name: n.name,
+              user_id: a.default.getId(),
             }
           );
       }
-      class D extends o.default {
-        handleConnectionOpen() {
-          let e = N.default.getGuildId();
-          null != e && t.default.getDetectableGames();
-        }
+      class L extends t.default {
         handlePresenceUpdates(e) {
           let { updates: _ } = e,
             E = new Set();
           _.forEach(e => {
             let { user: _, activities: t } = e,
-              o = A.default.getVoiceStateForUser(_.id);
+              o = S.default.getVoiceStateForUser(_.id);
             if (
               null == o ||
-              !(0, R.isVoiceUserGameActivityEnabled)("presence_update", !1)
+              !(0, N.isVoiceUserGameActivityEnabled)("presence_update", !1)
             )
               return;
-            let n = L([...t]);
+            let n = A([...t]);
             E = new Set([...E, ...n]);
           }),
-            u([...E]);
+            R([...E]);
         }
         handleVoiceStateUpdates(e) {
           let { voiceStates: _ } = e,
@@ -34003,27 +33990,26 @@
           _.forEach(e => {
             let { userId: _, guildId: t } = e;
             if (
-              !(0, R.isVoiceUserGameActivityEnabled)("voice_state_update", !1)
+              !(0, N.isVoiceUserGameActivityEnabled)("voice_state_update", !1)
             )
               return;
-            let o = T.default.getActivities(_, t),
-              n = L([...o]);
+            let o = I.default.getActivities(_, t),
+              n = A([...o]);
             E = new Set([...E, ...n]);
           }),
-            u([...E]);
+            R([...E]);
         }
         handleRunningGamesChange() {
-          let e = S.default.getVoiceChannelId();
-          C(e);
+          let e = s.default.getVoiceChannelId();
+          l(e);
         }
         handleVoiceChannelSelect(e) {
           let { channelId: _ } = e;
-          C(_);
+          l(_);
         }
         constructor(...e) {
           super(...e),
             (this.actions = {
-              POST_CONNECTION_OPEN: this.handleConnectionOpen,
               PRESENCE_UPDATES: this.handlePresenceUpdates,
               VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
               RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
@@ -34031,7 +34017,7 @@
             });
         }
       }
-      var c = new D();
+      var u = new L();
     },
     589636: function (e, _, E) {
       "use strict";
@@ -50317,4 +50303,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.6852758240781b633ee3.js.map
+//# sourceMappingURL=90486.bb22883b9888f5003a48.js.map

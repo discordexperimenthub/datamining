@@ -95449,6 +95449,9 @@ html .invoiceCancelRow_a8669b {
   margin: 0;
   background: var(--background-secondary-alt);
 }
+.checkbox__0fb8e {
+  align-self: center;
+}
 .postButton_bf09d5 {
   min-height: var(--custom-button-button-lg-height);
   background-color: var(--redesign-button-primary-background);
@@ -108267,4 +108270,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.e4525f2d7e2ca34a256c.css.map*/
+/*# sourceMappingURL=app.d44dd7b1cc19b090cf4f.css.map*/

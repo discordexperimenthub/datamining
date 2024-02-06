@@ -1408,7 +1408,7 @@
           P = r.useCallback(() => {
             L.current.delay();
           }, []),
-          D = r.useCallback(
+          b = r.useCallback(
             (e, t) => {
               y(),
                 (0, f.openContextMenuLazy)(
@@ -1434,7 +1434,7 @@
             className: C,
             participantType: l.type,
           });
-        let b = u(O)
+        let D = u(O)
           .take(T)
           .map(e =>
             (0, a.jsx)(
@@ -1451,7 +1451,7 @@
           .value();
         return (
           O.length > T &&
-            (b[b.length - 1] = (0, a.jsxs)(
+            (D[D.length - 1] = (0, a.jsxs)(
               "div",
               { className: I.overflow, children: ["+", O.length - T + 1] },
               "overflow"
@@ -1465,7 +1465,7 @@
                 renderPopout: () =>
                   (0, a.jsx)(M, {
                     participantType: l.type,
-                    handleUserContextMenu: D,
+                    handleUserContextMenu: b,
                     guildId: s,
                     channelId: t,
                     users: O,
@@ -1476,7 +1476,7 @@
                 children: () =>
                   (0, a.jsx)("div", {
                     className: i(I.viewers, C),
-                    children: b,
+                    children: D,
                   }),
               }),
             }),
@@ -2275,7 +2275,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-23699373847488fcc85a6ea49340daf962a173d2",
+          release: "discord_web-5d73bfafeee5f53b54b838050a0ea3aefc04f7af",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2345,8 +2345,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "264265"), "264265")),
-          a.setTag("builtAt", String("1707247742699"));
+          a.setTag("buildNumber", ((e = "264272"), "264272")),
+          a.setTag("builtAt", String("1707248101487"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -5317,4 +5317,4 @@
     },
   },
 ]);
-//# sourceMappingURL=807.747ec76c5c5bb2b61d6a.js.map
+//# sourceMappingURL=807.373298b58e075906bf6a.js.map

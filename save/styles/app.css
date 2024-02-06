@@ -22827,8 +22827,8 @@ html .progress__4ef76 {
   background-image: linear-gradient(270deg, #e82427 0%, #c81031 100%);
 }
 .planInfo_cd8cba {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 8px;
 }
 .buttons_c518ae {
@@ -38231,8 +38231,8 @@ html .progress__4ef76 {
   margin-left: 38px;
 }
 .name__8d1ec {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
   flex: 1 1 auto;
 }
@@ -108259,4 +108259,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3c923e96f77cc6f030bb.css.map*/
+/*# sourceMappingURL=app.4afc0839c14a83c4c558.css.map*/

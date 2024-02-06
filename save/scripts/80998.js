@@ -221,6 +221,8 @@
           "var(--display-banner-overflow-background)"),
         (e.DIVIDER_STRONG = "var(--divider-strong)"),
         (e.DIVIDER_SUBTLE = "var(--divider-subtle)"),
+        (e.EMBED_BACKGROUND = "var(--embed-background)"),
+        (e.EMBED_BACKGROUND_ALTERNATE = "var(--embed-background-alternate)"),
         (e.EMBED_TITLE = "var(--embed-title)"),
         (e.EXPRESSION_PICKER_BG = "var(--expression-picker-bg)"),
         (e.FOCUS_PRIMARY = "var(--focus-primary)"),
@@ -481,4 +483,4 @@
     },
   },
 ]);
-//# sourceMappingURL=80998.c4c8b329cee3991b7a3a.js.map
+//# sourceMappingURL=80998.a0d0e898128eae84c54f.js.map

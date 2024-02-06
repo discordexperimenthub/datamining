@@ -8420,6 +8420,20 @@
             [a.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.12 },
             [a.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
           },
+          EMBED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PRIMARY_630", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_130", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_23", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_18", opacity: 1 },
+          },
+          EMBED_BACKGROUND_ALTERNATE: {
+            category: "generic",
+            [a.DARK]: { raw: "PRIMARY_600", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_200", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PRIMARY_600", opacity: 1 },
+            [a.DARKER]: { raw: "PRIMARY_600", opacity: 1 },
+          },
           EMBED_TITLE: {
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_130", opacity: 1 },
@@ -13775,6 +13789,8 @@
           "display-banner-overflow-background"),
         (e.DIVIDER_STRONG = "divider-strong"),
         (e.DIVIDER_SUBTLE = "divider-subtle"),
+        (e.EMBED_BACKGROUND = "embed-background"),
+        (e.EMBED_BACKGROUND_ALTERNATE = "embed-background-alternate"),
         (e.EMBED_TITLE = "embed-title"),
         (e.EXPRESSION_PICKER_BG = "expression-picker-bg"),
         (e.FOCUS_PRIMARY = "focus-primary"),
@@ -14809,6 +14825,18 @@
           o.Color.BLACK_500,
           o.Color.PLUM_11,
           o.Color.PLUM_11,
+        ],
+        "embed-background": [
+          o.Color.PRIMARY_630,
+          o.Color.PRIMARY_130,
+          o.Color.PLUM_23,
+          o.Color.PLUM_18,
+        ],
+        "embed-background-alternate": [
+          o.Color.PRIMARY_600,
+          o.Color.PRIMARY_200,
+          o.Color.PRIMARY_600,
+          o.Color.PRIMARY_600,
         ],
         "embed-title": [
           o.Color.PRIMARY_130,
@@ -17169,4 +17197,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.b825e0e61a8ea60b1ae0.js.map
+//# sourceMappingURL=7273.4061da3ef2fb21b79b7f.js.map

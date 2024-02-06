@@ -25821,38 +25821,9 @@
     },
     2662: function (e, _, E) {
       "use strict";
-      E.r(_),
-        E.d(_, {
-          RefreshIcon: function () {
-            return r;
-          },
-        });
-      var t = E("37983");
-      E("884691");
-      var o = E("669491"),
-        n = E("75196");
-      let r = e => {
-        let {
-          width: _ = 24,
-          height: E = 24,
-          color: r = o.default.colors.INTERACTIVE_NORMAL,
-          colorClass: a = "",
-          ...i
-        } = e;
-        return (0, t.jsx)("svg", {
-          ...(0, n.default)(i),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: _,
-          height: E,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: (0, t.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M21 2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 1 1 0-2h3.93A8 8 0 0 0 6.97 5.78a1 1 0 0 1-1.26-1.56A9.98 9.98 0 0 1 20 6V3a1 1 0 0 1 1-1ZM3 22a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H5.07a8 8 0 0 0 11.96 2.22 1 1 0 1 1 1.26 1.56A9.99 9.99 0 0 1 4 18v3a1 1 0 0 1-1 1Z",
-            className: a,
-          }),
-        });
-      };
+      E.r(_);
+      var t = E("129611");
+      E.es(t, _);
     },
     320777: function (e, _, E) {
       "use strict";
@@ -25892,8 +25863,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("264235", ", Version Hash: ")
-          .concat("50507e149ada389174d3409363af97c7d113333f")
+          .concat("264239", ", Version Hash: ")
+          .concat("454b68c6c8de1362bb6fd96046a7c26e45178197")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28862,12 +28833,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264235"), "264235"));
+        let _ = parseInt(((e = "264239"), "264239"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264235"
+                "264239"
               )
             ),
             (_ = 0)),
@@ -39406,6 +39377,41 @@
               (this._current = e);
           }
         });
+    },
+    129611: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          RefreshIcon: function () {
+            return r;
+          },
+        });
+      var t = E("37983");
+      E("884691");
+      var o = E("669491"),
+        n = E("82169");
+      let r = e => {
+        let {
+          width: _ = 24,
+          height: E = 24,
+          color: r = o.default.colors.INTERACTIVE_NORMAL,
+          colorClass: a = "",
+          ...i
+        } = e;
+        return (0, t.jsx)("svg", {
+          ...(0, n.default)(i),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: _,
+          height: E,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, t.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
+            d: "M21 2a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-6a1 1 0 1 1 0-2h3.93A8 8 0 0 0 6.97 5.78a1 1 0 0 1-1.26-1.56A9.98 9.98 0 0 1 20 6V3a1 1 0 0 1 1-1ZM3 22a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H5.07a8 8 0 0 0 11.96 2.22 1 1 0 1 1 1.26 1.56A9.99 9.99 0 0 1 4 18v3a1 1 0 0 1-1 1Z",
+            className: a,
+          }),
+        });
+      };
     },
     995113: function (e, _, E) {
       "use strict";
@@ -50200,4 +50206,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.a6075f7bf5b11797ce3c.js.map
+//# sourceMappingURL=90486.5f690111bca03b089158.js.map

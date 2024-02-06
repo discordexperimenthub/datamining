@@ -263,15 +263,15 @@
             properties: C,
           });
         let _ = (0, d.useWindowDispatch)(),
-          T = r.useCallback(() => {
+          v = r.useCallback(() => {
             _.dispatch(m.ComponentActions.POPOUT_SHOW);
           }, [_]),
-          v = r.useCallback(() => {
+          T = r.useCallback(() => {
             _.dispatch(m.ComponentActions.POPOUT_HIDE);
           }, [_]);
         return (0, a.jsx)(p.AppReferencePositionLayer, {
-          onMount: T,
-          onUnmount: v,
+          onMount: v,
+          onUnmount: T,
           reference: () => o,
           position: null != f ? f : "right",
           align: null != h ? h : "top",
@@ -403,73 +403,15 @@
     },
     739086: function (e, t, n) {
       "use strict";
-      n.r(t),
-        n.d(t, {
-          PhoneHangUpIcon: function () {
-            return i;
-          },
-        });
-      var a = n("37983");
-      n("884691");
-      var r = n("669491"),
-        s = n("75196");
-      let i = e => {
-        let {
-          width: t = 24,
-          height: n = 24,
-          color: i = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...u
-        } = e;
-        return (0, a.jsx)("svg", {
-          ...(0, s.default)(u),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: t,
-          height: n,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: (0, a.jsx)("path", {
-            fill: "string" == typeof i ? i : i.css,
-            d: "m21.5 16.6-.13.14a.88.88 0 0 1-.97.2l-4.09-1.7a.99.99 0 0 1-.57-1.18l.73-2.7c-2.24-3-6.7-3-8.94 0l.7 2.1a.99.99 0 0 1-.48 1.19l-4.13 2.2a.87.87 0 0 1-1.03-.15l-.1-.1a5.18 5.18 0 0 1-.32-6.92 12.67 12.67 0 0 1 19.66 0 5.18 5.18 0 0 1-.32 6.92Z",
-            className: l,
-          }),
-        });
-      };
+      n.r(t);
+      var a = n("264792");
+      n.es(a, t);
     },
     157697: function (e, t, n) {
       "use strict";
-      n.r(t),
-        n.d(t, {
-          VideoSlashIcon: function () {
-            return i;
-          },
-        });
-      var a = n("37983");
-      n("884691");
-      var r = n("669491"),
-        s = n("75196");
-      let i = e => {
-        let {
-          width: t = 24,
-          height: n = 24,
-          color: i = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...u
-        } = e;
-        return (0, a.jsx)("svg", {
-          ...(0, s.default)(u),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: t,
-          height: n,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: (0, a.jsx)("path", {
-            fill: "string" == typeof i ? i : i.css,
-            d: "M22.7 2.7a1 1 0 0 0-1.4-1.4l-20 20a1 1 0 1 0 1.4 1.4l20-20ZM9.2 20a.5.5 0 0 1-.35-.85l12.1-12.1a.5.5 0 0 1 .12-.09l.48-.24a1 1 0 0 1 1.45.9v8.76a1 1 0 0 1-1.45.9l-3-1.5a1 1 0 0 1-.55-.9V17a3 3 0 0 1-3 3H9.2ZM15.28 4.72c.27-.27.15-.71-.23-.72H4a3 3 0 0 0-3 3v10a3 3 0 0 0 .17.99c.1.3.49.35.72.12l13.4-13.4Z",
-            className: l,
-          }),
-        });
-      };
+      n.r(t);
+      var a = n("722522");
+      n.es(a, t);
     },
     368598: function (e, t, n) {
       "use strict";
@@ -864,7 +806,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return T;
           },
         }),
         n("222007");
@@ -922,7 +864,7 @@
           ? { type: f.BroadcastSourceType.GUILD, guildId: e }
           : { type: f.BroadcastSourceType.GLOBAL };
       }
-      class T extends i.default.Store {
+      class v extends i.default.Store {
         getBroadcasts() {
           return S.values(m.BROADCASTS_BY_VALIDITY(2));
         }
@@ -939,8 +881,8 @@
           return C;
         }
       }
-      T.displayName = "BroadcastingStore";
-      var v = new T(u.default, {
+      v.displayName = "BroadcastingStore";
+      var T = new v(u.default, {
         PRESENCE_UPDATES: function (e) {
           let { updates: t } = e;
           return t.forEach(e => {
@@ -1336,17 +1278,17 @@
         S = n("449008"),
         g = n("387111"),
         _ = n("99795"),
-        T = n("49111"),
-        v = n("782340"),
+        v = n("49111"),
+        T = n("782340"),
         I = n("2081");
       function A(e, t) {
         switch (e) {
           case _.ParticipantTypes.ACTIVITY:
-            return v.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format(
+            return T.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format(
               { numUsers: t }
             );
           case _.ParticipantTypes.STREAM:
-            return v.default.Messages.SPECTATORS.format({ numViewers: t });
+            return T.default.Messages.SPECTATORS.format({ numViewers: t });
           default:
             throw Error("Unknown participant type.");
         }
@@ -1437,7 +1379,7 @@
             className: C,
             compact: m = !1,
             disableInteraction: g = !1,
-            maxVisibleUsers: v = 3,
+            maxVisibleUsers: T = 3,
           } = e,
           [A, N] = r.useState(!1),
           L = r.useRef(new d.DelayedCall(150, () => N(!1))),
@@ -1466,7 +1408,7 @@
           P = r.useCallback(() => {
             L.current.delay();
           }, []),
-          D = r.useCallback(
+          b = r.useCallback(
             (e, t) => {
               y(),
                 (0, f.openContextMenuLazy)(
@@ -1485,15 +1427,15 @@
         if (0 === O.length) return null;
         if (m)
           return (0, a.jsx)(x, {
-            maxVisibleUsers: v,
+            maxVisibleUsers: T,
             users: O,
             guildId: s,
             channelId: t,
             className: C,
             participantType: l.type,
           });
-        let b = u(O)
-          .take(v)
+        let D = u(O)
+          .take(T)
           .map(e =>
             (0, a.jsx)(
               c.Avatar,
@@ -1508,14 +1450,14 @@
           )
           .value();
         return (
-          O.length > v &&
-            (b[b.length - 1] = (0, a.jsxs)(
+          O.length > T &&
+            (D[D.length - 1] = (0, a.jsxs)(
               "div",
-              { className: I.overflow, children: ["+", O.length - v + 1] },
+              { className: I.overflow, children: ["+", O.length - T + 1] },
               "overflow"
             )),
           (0, a.jsx)(h.default, {
-            section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
+            section: v.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
               onMouseEnter: y,
               onMouseLeave: P,
@@ -1523,7 +1465,7 @@
                 renderPopout: () =>
                   (0, a.jsx)(M, {
                     participantType: l.type,
-                    handleUserContextMenu: D,
+                    handleUserContextMenu: b,
                     guildId: s,
                     channelId: t,
                     users: O,
@@ -1534,7 +1476,7 @@
                 children: () =>
                   (0, a.jsx)("div", {
                     className: i(I.viewers, C),
-                    children: b,
+                    children: D,
                   }),
               }),
             }),
@@ -1637,10 +1579,10 @@
           } = (0, s.useStateFromStoresObject)([d.default], () =>
             d.default.getState()
           ),
-          T = (0, s.useStateFromStores)([f.default], () =>
+          v = (0, s.useStateFromStores)([f.default], () =>
             f.default.getGoLiveSource()
           ),
-          v = (0, s.useStateFromStores)([h.default], () =>
+          T = (0, s.useStateFromStores)([h.default], () =>
             h.default.getCurrentUser()
           ),
           I = (0, s.useStateFromStores)([c.default], () => {
@@ -1655,7 +1597,7 @@
           M = r.useCallback(
             (e, r, s, u) => {
               if (e) {
-                if (null != T) {
+                if (null != v) {
                   let e = {
                     qualityOptions: {
                       preset: E.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -1664,15 +1606,15 @@
                     },
                     context: C.MediaEngineContextTypes.STREAM,
                   };
-                  null != T.desktopSource
+                  null != v.desktopSource
                     ? (e.desktopSettings = {
-                        sourceId: T.desktopSource.id,
+                        sourceId: v.desktopSource.id,
                         sound: !0,
                       })
-                    : null != T.cameraSource &&
+                    : null != v.cameraSource &&
                       (e.cameraSettings = {
-                        videoDeviceGuid: T.cameraSource.videoDeviceGuid,
-                        audioDeviceGuid: T.cameraSource.audioDeviceGuid,
+                        videoDeviceGuid: v.cameraSource.videoDeviceGuid,
+                        audioDeviceGuid: v.cameraSource.audioDeviceGuid,
                       }),
                     l.default.setGoLiveSource(e);
                 }
@@ -1700,7 +1642,7 @@
                   );
               }
             },
-            [t, A, T]
+            [t, A, v]
           );
         if (null == e) return null;
         let x =
@@ -1713,7 +1655,7 @@
                 E.ApplicationStreamPresets.PRESET_CUSTOM,
                 g,
                 t,
-                v,
+                T,
                 I
               );
             return (0, a.jsx)(
@@ -1734,7 +1676,7 @@
                 E.ApplicationStreamPresets.PRESET_CUSTOM,
                 t,
                 x,
-                v,
+                T,
                 I
               );
             return (0, a.jsx)(
@@ -1851,8 +1793,8 @@
         S = n("90404"),
         g = n("599110"),
         _ = n("286235"),
-        T = n("50885"),
-        v = n("49111"),
+        v = n("50885"),
+        T = n("49111"),
         I = n("782340"),
         A = n("143941");
       function M() {
@@ -1908,7 +1850,7 @@
           let n = (0, m.getHistory)().location;
           this.setState({ error: e, info: t });
           let a = _.default.captureCrash(e, { extra: t });
-          g.default.track(v.AnalyticEvents.APP_CRASHED, {
+          g.default.track(T.AnalyticEvents.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -1917,7 +1859,7 @@
             uses_client_mods: (0, E.usesClientMods)(),
           }),
             x(),
-            T.default.cleanupDisplaySleep();
+            v.default.cleanupDisplaySleep();
         }
         _handleSubmitReport() {
           location.reload(!0);
@@ -2003,15 +1945,15 @@
         S = n("238500"),
         g = n("773336"),
         _ = n("439932"),
-        T = n("50885"),
-        v = n("782340"),
+        v = n("50885"),
+        T = n("782340"),
         I = n("793804");
-      let A = e => T.default.close(e),
-        M = e => T.default.minimize(e),
+      let A = e => v.default.close(e),
+        M = e => v.default.minimize(e),
         x = (e, t) => {
           (0, g.isMac)() && !t.altKey
-            ? T.default.fullscreen(e)
-            : T.default.maximize(e);
+            ? v.default.fullscreen(e)
+            : v.default.maximize(e);
         },
         R = e => {
           let { windowKey: t, themeOverride: n, hasOpenLayer: r } = e;
@@ -2027,21 +1969,21 @@
               (0, a.jsx)(l.Clickable, {
                 className: I.winButtonClose,
                 onClick: () => A(t),
-                "aria-label": v.default.Messages.TITLE_BAR_CLOSE_WINDOW,
+                "aria-label": T.default.Messages.TITLE_BAR_CLOSE_WINDOW,
                 tabIndex: -1,
                 children: (0, a.jsx)(h.default, {}),
               }),
               (0, a.jsx)(l.Clickable, {
                 className: I.winButtonMinMax,
                 onClick: e => x(t, e),
-                "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
+                "aria-label": T.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, a.jsx)(E.default, {}),
               }),
               (0, a.jsx)(l.Clickable, {
                 className: I.winButtonMinMax,
                 onClick: () => M(t),
-                "aria-label": v.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                "aria-label": T.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, a.jsx)(m.default, {}),
               }),
@@ -2063,7 +2005,7 @@
               (0, _.getThemeClass)(i),
               { [I.withBackgroundOverride]: !u }
             ),
-            onDoubleClick: () => T.default.maximize(n),
+            onDoubleClick: () => v.default.maximize(n),
             tabIndex: -1,
             children: [
               o.default.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS
@@ -2074,7 +2016,7 @@
                       (0, a.jsx)(l.Clickable, {
                         className: I.macButtonClose,
                         onClick: () => A(n),
-                        "aria-label": v.default.Messages.TITLE_BAR_CLOSE_WINDOW,
+                        "aria-label": T.default.Messages.TITLE_BAR_CLOSE_WINDOW,
                         tabIndex: -1,
                         children: (0, a.jsx)(p.default, { color: "#4c0000" }),
                       }),
@@ -2082,7 +2024,7 @@
                         className: I.macButtonMinimize,
                         onClick: () => M(n),
                         "aria-label":
-                          v.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                          T.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                         tabIndex: -1,
                         children: (0, a.jsx)(S.default, { color: "#975500" }),
                       }),
@@ -2090,7 +2032,7 @@
                         className: I.macButtonMaximize,
                         onClick: e => x(n, e),
                         "aria-label":
-                          v.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                          T.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                         tabIndex: -1,
                         children: (0, a.jsx)(C.default, { color: "#006500" }),
                       }),
@@ -2333,7 +2275,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-50507e149ada389174d3409363af97c7d113333f",
+          release: "discord_web-454b68c6c8de1362bb6fd96046a7c26e45178197",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2403,8 +2345,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "264235"), "264235")),
-          a.setTag("builtAt", String("1707244263439"));
+          a.setTag("buildNumber", ((e = "264239"), "264239")),
+          a.setTag("builtAt", String("1707244607127"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -2943,7 +2885,7 @@
             return _;
           },
           default: function () {
-            return v;
+            return T;
           },
         }),
         n("222007");
@@ -3031,7 +2973,7 @@
           r = h.default.getStageInstanceByChannel(e);
         return t && null == r && !a;
       }
-      class T extends r.default {
+      class v extends r.default {
         handleVoiceChannelSelect(e) {
           let { channelId: t } = e;
           if (null != t) {
@@ -3075,7 +3017,7 @@
             });
         }
       }
-      var v = new T();
+      var T = new v();
     },
     274438: function (e, t, n) {
       "use strict";
@@ -3436,7 +3378,7 @@
       n.r(t),
         n.d(t, {
           useOtherStreams: function () {
-            return v;
+            return T;
           },
           default: function () {
             return I;
@@ -3461,8 +3403,8 @@
         S = n("773336"),
         g = n("49111"),
         _ = n("353927"),
-        T = n("782340");
-      function v(e, t, n) {
+        v = n("782340");
+      function T(e, t, n) {
         let a = (0, r.useStateFromStores)([l.default], () =>
             l.default.getSelectedParticipantId(e.id)
           ),
@@ -3513,14 +3455,14 @@
             void 0 !== t
               ? t
               : null,
-          N = v(n, r, l),
+          N = T(n, r, l),
           L = (0, o.default)(R, M),
           O = (0, u.default)(R, M, g.NOOP_NULL),
           y =
             null == R
               ? (0, a.jsx)(s.MenuItem, {
                   id: "share-your-screen",
-                  label: T.default.Messages.SHARE_YOUR_SCREEN,
+                  label: v.default.Messages.SHARE_YOUR_SCREEN,
                   icon: p.default,
                   action: m,
                 })
@@ -3529,7 +3471,7 @@
                     S.isPlatformEmbedded
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "stream-settings",
-                          label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
+                          label: v.default.Messages.SCREENSHARE_STREAM_QUALITY,
                           children: L,
                         })
                       : null,
@@ -3537,14 +3479,14 @@
                     x
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "change-windows",
-                          label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
+                          label: v.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
                           icon: p.default,
                           action: m,
                         })
                       : null,
                     (0, a.jsx)(s.MenuItem, {
                       id: "stop-streaming",
-                      label: T.default.Messages.STOP_STREAMING,
+                      label: v.default.Messages.STOP_STREAMING,
                       icon: E.default,
                       action: () => (0, d.default)(R),
                     }),
@@ -3558,8 +3500,8 @@
             onClose: I,
             "aria-label":
               null != R
-                ? T.default.Messages.STOP_STREAMING
-                : T.default.Messages.SHARE_YOUR_SCREEN,
+                ? v.default.Messages.STOP_STREAMING
+                : v.default.Messages.SHARE_YOUR_SCREEN,
             children: [
               (0, a.jsx)(s.MenuGroup, {
                 children: N.map(e => {
@@ -3568,7 +3510,7 @@
                     s.MenuItem,
                     {
                       id: t.ownerId,
-                      label: T.default.Messages.STOP_WATCHING_USER.format({
+                      label: v.default.Messages.STOP_WATCHING_USER.format({
                         username: n,
                       }),
                       icon: C.default,
@@ -4735,22 +4677,22 @@
             } = e,
             g = null != p ? p : n,
             _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css),
-            T = (0, u.useCallBannerBackgroundExperiment)(
+            v = (0, u.useCallBannerBackgroundExperiment)(
               !0,
               "VideoBackground-web"
             ).enabled,
-            v = (0, c.default)(null != E ? E : ""),
+            T = (0, c.default)(null != E ? E : ""),
             I =
-              null == v
+              null == T
                 ? void 0
-                : v.getBannerURL({
+                : T.getBannerURL({
                     size: 1024,
                     canAnimate: f.GifAutoPlay.getSetting(),
                   });
           if (
             (r.useEffect(() => {
-              null != E && T && (0, d.default)(E, void 0, { dispatchWait: !0 });
-            }, [T, E]),
+              null != E && v && (0, d.default)(E, void 0, { dispatchWait: !0 });
+            }, [v, E]),
             null == n)
           )
             return null;
@@ -4763,7 +4705,7 @@
           return (
             null != I &&
               m &&
-              T &&
+              v &&
               ((M.backgroundImage = "url(".concat(I, ")")),
               (M.backgroundSize = "cover")),
             (0, a.jsx)("div", {
@@ -5272,6 +5214,76 @@
           (0, a.init)(e);
       }
     },
+    264792: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          PhoneHangUpIcon: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var r = n("669491"),
+        s = n("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: i = r.default.colors.INTERACTIVE_NORMAL,
+          colorClass: l = "",
+          ...u
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            d: "m21.5 16.6-.13.14a.88.88 0 0 1-.97.2l-4.09-1.7a.99.99 0 0 1-.57-1.18l.73-2.7c-2.24-3-6.7-3-8.94 0l.7 2.1a.99.99 0 0 1-.48 1.19l-4.13 2.2a.87.87 0 0 1-1.03-.15l-.1-.1a5.18 5.18 0 0 1-.32-6.92 12.67 12.67 0 0 1 19.66 0 5.18 5.18 0 0 1-.32 6.92Z",
+            className: l,
+          }),
+        });
+      };
+    },
+    722522: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          VideoSlashIcon: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var r = n("669491"),
+        s = n("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: i = r.default.colors.INTERACTIVE_NORMAL,
+          colorClass: l = "",
+          ...u
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            d: "M22.7 2.7a1 1 0 0 0-1.4-1.4l-20 20a1 1 0 1 0 1.4 1.4l20-20ZM9.2 20a.5.5 0 0 1-.35-.85l12.1-12.1a.5.5 0 0 1 .12-.09l.48-.24a1 1 0 0 1 1.45.9v8.76a1 1 0 0 1-1.45.9l-3-1.5a1 1 0 0 1-.55-.9V17a3 3 0 0 1-3 3H9.2ZM15.28 4.72c.27-.27.15-.71-.23-.72H4a3 3 0 0 0-3 3v10a3 3 0 0 0 .17.99c.1.3.49.35.72.12l13.4-13.4Z",
+            className: l,
+          }),
+        });
+      };
+    },
     88807: function (e, t, n) {
       "use strict";
       var a, r;
@@ -5305,4 +5317,4 @@
     },
   },
 ]);
-//# sourceMappingURL=807.8bd36d5a5ca50fa09d87.js.map
+//# sourceMappingURL=807.f502b2c3ab69e3aa60fb.js.map

@@ -31,6 +31,8 @@
         NOTIFICATION_FRIEND_SUGGESTION_TITLE:
           "!!{contact}!! just joined Discord!",
         NOTIFICATION_FRIEND_SUGGESTION_BODY: "Send them a friend request",
+        NOTIFICATION_MESSAGE_ACTIVITY_INSTANCE:
+          "!!{user}!! started an activity",
         IOS_NOTIFICATION_SEE_FULL: "Tap to see full message.",
         ERRORS_UNEXPECTED_CRASH:
           "Looks like Discord has crashed unexpectedly....",
@@ -25865,8 +25867,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("264335", ", Version Hash: ")
-          .concat("13c24885fbf085ab915bfd3612a083598b9b574a")
+          .concat("264337", ", Version Hash: ")
+          .concat("fdf2a6197ff34786484fc85e240ccc38678d009f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28835,12 +28837,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264335"), "264335"));
+        let _ = parseInt(((e = "264337"), "264337"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264335"
+                "264337"
               )
             ),
             (_ = 0)),
@@ -50215,4 +50217,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.79835341da3185de0db0.js.map
+//# sourceMappingURL=90486.9ebb068a8f55a7cec159.js.map

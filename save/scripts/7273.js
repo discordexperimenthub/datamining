@@ -2803,15 +2803,8 @@
             "/user-offers/".concat(E, "/").concat(_, "/unack"),
           USER_OFFERS: "/user-offers",
           USER_OFFER_IDS: "/user-offer-ids",
-          INVENTORY_ADD_PACK: "/users/@me/inventory/packs/add",
-          INVENTORY_REMOVE_PACK: "/users/@me/inventory/packs/remove",
-          INVENTORY_UPDATE_SETTINGS: _ =>
-            "/guilds/".concat(_, "/inventory/settings"),
-          INVENTORY_PACK_METADATA: _ =>
-            "/inventory/packs/".concat(_, "/metadata"),
           GUILD_MEMBERS_UNUSUAL_DM_ACTIVITY: _ =>
             "/guilds/".concat(_, "/members/unusual-dm-activity"),
-          INVENTORY_GET: "/users/@me/inventory",
           EMOJI_CAPTIONS_GET: "/users/@me/emoji-captions",
           SAFETY_HUB: "/safety-hub/@me",
           SAFETY_HUB_REQUEST_REVIEW: _ =>
@@ -5640,9 +5633,6 @@
         (es.DCF_CAP_EXCEEDED = "dcf_cap_exceeded"),
         (es.ACK_COMMUNITY_MESSAGES = "ack_community_messages"),
         (es.VOICE_PANEL_TAB_OPENED = "voice_panel_tab_opened"),
-        (es.INVENTORY_GUILD_SETTINGS = "inventory_guild_settings"),
-        (es.INVENTORY_PACK_ACTION_COMPLETED =
-          "inventory_pack_action_completed"),
         (es.ANNOUNCEMENT_MESSAGE_LINK_CLICKED =
           "announcement_message_link_clicked"),
         (es.ANNOUNCEMENT_MESSAGE_VIEWED = "announcement_message_viewed"),
@@ -6246,7 +6236,6 @@
         (eV.PROFILE_BADGES = "360035962891"),
         (eV.EXPLICIT_MEDIA_REDACTION = "18210995019671"),
         (eV.COPYRIGHT_AND_IP_POLICY = "4410339349655"),
-        (eV.INVENTORY_PACKS = "16761257977623"),
         (eV.NVIDIA_DRIVER_ISSUES = "18621944634391"),
         (eV.ROLE_SUBSCRIPTION_CANCEL =
           "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
@@ -17180,4 +17169,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.d46a8a3636d2a43d0a9d.js.map
+//# sourceMappingURL=7273.b825e0e61a8ea60b1ae0.js.map

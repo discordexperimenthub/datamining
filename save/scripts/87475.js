@@ -1167,15 +1167,16 @@
             Layer: s,
             onCloseRequest: l,
             onCloseCallback: a,
+            backdropStyle: u,
           } = t,
-          u = null != i ? i : r();
+          c = null != i ? i : r();
         return (
           f.setState(t => {
             let i = t[n];
             return void 0 !== i &&
               i.some(e => {
                 let { key: t } = e;
-                return t === u;
+                return t === c;
               })
               ? t
               : {
@@ -1183,17 +1184,18 @@
                   [n]: [
                     ...i,
                     {
-                      key: u,
+                      key: c,
                       Layer: s,
                       render: e,
-                      onCloseRequest: null != l ? l : () => g(u, n),
+                      onCloseRequest: null != l ? l : () => g(c, n),
                       onCloseCallback: a,
                       instant: o,
+                      backdropStyle: u,
                     },
                   ],
                 };
           }),
-          u
+          c
         );
       }
       function g(e) {
@@ -6733,7 +6735,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "264403"), "264403"), 10);
+          let o = parseInt(((n = "264406"), "264406"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7050,4 +7052,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.571bd8322f522d3d8994.js.map
+//# sourceMappingURL=87475.d42f604a8238b8592695.js.map

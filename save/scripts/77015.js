@@ -473,8 +473,8 @@
         g = {},
         P = {},
         G = 0,
-        m = !0,
-        b = {},
+        b = !0,
+        m = {},
         U = !1,
         M = [
           D.GlobalKeybindActions.PUSH_TO_TALK,
@@ -489,7 +489,7 @@
             P,
             e => v.action === e.action && e.enabled && e.shortcut.length > 0
           );
-        null == t && !__OVERLAY__ && !U && m && e && (K(v), (U = !0));
+        null == t && !__OVERLAY__ && !U && b && e && (K(v), (U = !0));
       }
       function w() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -506,7 +506,7 @@
           let t = g[e];
           if (t) {
             let t = P[e],
-              n = b[t.action];
+              n = m[t.action];
             (null == n ? void 0 : n.isPressed) === !0 &&
               h.nextTick(() => n.onTrigger(!1, t)),
               g[e].reset(),
@@ -515,7 +515,7 @@
         }
       }
       function K(e) {
-        if (!m || __OVERLAY__) return;
+        if (!b || __OVERLAY__) return;
         let { shortcut: t, action: n, enabled: a } = e;
         if (
           "" === t ||
@@ -524,7 +524,7 @@
           !a
         )
           return;
-        if (null == b[n]) {
+        if (null == m[n]) {
           R.error(
             "[kb store] KeybindStore: Looking for callback action ".concat(
               n,
@@ -534,7 +534,7 @@
           return;
         }
         let l = e.id,
-          i = b[n].keyEvents;
+          i = m[n].keyEvents;
         e.action === D.GlobalKeybindActions.TOGGLE_MUTE && w(),
           !(function (e, t, n, a) {
             if (f.isPlatformEmbedded)
@@ -553,7 +553,7 @@
             e =>
               (function (e, t) {
                 let n = e === v.id ? v : P[e];
-                null != n && b[n.action].onTrigger(t, n);
+                null != n && m[n.action].onTrigger(t, n);
               })(l, e),
             { focused: !0, blurred: !0, keydown: !1, keyup: !1, ...i }
           ),
@@ -866,14 +866,14 @@
         KEYBINDS_SET_KEYBIND: F,
         KEYBINDS_ENABLE_ALL_KEYBINDS: function (e) {
           let { enable: t } = e;
-          (m = t),
+          (b = t),
             t
               ? (O.default.enable(), s.forEach(P, K), Y())
               : (O.default.disable(), s.forEach(P, e => V(e.id)), w());
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function (e) {
           let { keybinds: t } = e;
-          (b = t), (g = {}), (G = 0);
+          (m = t), (g = {}), (G = 0);
           let n = Object.values(P).filter(
             e => M.includes(e.action) && e.managed
           );
@@ -886,7 +886,7 @@
                 R.error("Failed to register keybind", e, t);
               }
             }),
-            (m = !0),
+            (b = !0),
             null == a &&
               (a = T.default.subscribe({ location: "KeybindsStore" }, H));
         },
@@ -949,8 +949,8 @@
         g = n("658530"),
         P = n("50885"),
         G = n("819068"),
-        m = n("49111"),
-        b = n("6791");
+        b = n("49111"),
+        m = n("6791");
       ((i = o || (o = {})).ATTACHING = "ATTACHING"),
         (i.CONNECTING = "CONNECTING"),
         (i.CONNECTED = "CONNECTED"),
@@ -1116,7 +1116,7 @@
           onTimeout: (e, t) => {
             let n = "overlayLock: lastMutexCall ".concat(Z, "}");
             Q.error(n),
-              R.default.track(m.AnalyticEvents.OVERLAY_HOOK_RESULT, {
+              R.default.track(b.AnalyticEvents.OVERLAY_HOOK_RESULT, {
                 success: !1,
                 error_description: n,
               });
@@ -1163,7 +1163,7 @@
                       null != d.processName
                         ? D.default.getGameByExecutable(d.processName)
                         : null;
-                    R.default.track(m.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
+                    R.default.track(b.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
                       process_name: null == d ? void 0 : d.processName,
                       game_name:
                         null !== (t = null == e ? void 0 : e.name) &&
@@ -1210,7 +1210,7 @@
         }
       }
       async function $(e) {
-        if (P.default.supportsFeature(m.NativeFeatures.CREATE_HOST_ON_ATTACH)) {
+        if (P.default.supportsFeature(b.NativeFeatures.CREATE_HOST_ON_ATTACH)) {
           if (M.size > 0) {
             Z = "reconcile.getOverlayURL";
             let t = await el();
@@ -1326,7 +1326,7 @@
                 ),
               t.overlayMethod)
             ) {
-              case b.OverlayMethod.OutOfProcess:
+              case m.OverlayMethod.OutOfProcess:
                 let a = await eE();
                 await a.trackGame(n.pid),
                   (U[n.pid] = {
@@ -1337,7 +1337,7 @@
                     },
                   });
                 break;
-              case b.OverlayMethod.Hook:
+              case m.OverlayMethod.Hook:
                 !M.has(n.pid) && (await ee(n.pid)),
                   (U[n.pid] = {
                     method: t.overlayMethod,
@@ -1346,7 +1346,7 @@
                     },
                   });
                 break;
-              case b.OverlayMethod.Disabled:
+              case m.OverlayMethod.Disabled:
                 Q.verbose("updateIntendedOverlayPIDs: disabled", n);
                 break;
               default:
@@ -1372,7 +1372,7 @@
       let eo = (() => {
         let e = null;
         async function t() {
-          if (!b.OVERLAY_SUPPORTED)
+          if (!m.OVERLAY_SUPPORTED)
             throw (
               (Q.error("Attempted to load overlay on an unsupported platform."),
               Error("Overlay is not supported on this platform."))
@@ -1468,7 +1468,7 @@
       let eE = (() => {
         let e = null;
         async function t() {
-          if (!b.OVERLAY_SUPPORTED || !(0, G.supportsOutOfProcess)())
+          if (!m.OVERLAY_SUPPORTED || !(0, G.supportsOutOfProcess)())
             throw (
               (Q.error(
                 "Attempted to load out of process overlay on an unsupported platform."
@@ -1497,7 +1497,7 @@
         return ea({ added: p.default.getRunningGames(), removed: [] });
       }
       let es = q("setOverlayEnabled", async e => {
-        if (!b.OVERLAY_SUPPORTED || V === e) return;
+        if (!m.OVERLAY_SUPPORTED || V === e) return;
         (V = e),
           f.OverlayStoredSettings.update({ enabled: e }),
           ep.emitChange();
@@ -1516,8 +1516,8 @@
                   ? void 0
                   : t.method) && void 0 !== n
               ? n
-              : b.OverlayMethod.Disabled;
-          if (e === b.OverlayMethod.OutOfProcess) return;
+              : m.OverlayMethod.Disabled;
+          if (e === m.OverlayMethod.OutOfProcess) return;
         }
         c.default.setFocusedPID(0 === e ? null : e);
       }
@@ -1539,7 +1539,7 @@
           y.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID),
           { width: n.graphics_width, height: n.graphics_height }
         ),
-          R.default.track(m.AnalyticEvents.OVERLAY_HOOK_RESULT, i),
+          R.default.track(b.AnalyticEvents.OVERLAY_HOOK_RESULT, i),
           Q.info(
             "Overlay connection to "
               .concat(e, " ")
@@ -1555,7 +1555,7 @@
           t = C.default.getId();
         null != e &&
           I.send({
-            type: m.OverlayEventTypes.DISPATCH,
+            type: b.OverlayEventTypes.DISPATCH,
             pid: null,
             token: null,
             payloads: [{ type: "UPDATE_TOKEN", token: e, userId: t }],
@@ -1578,7 +1578,7 @@
           let t = p.default.getVisibleGame(),
             n = null == t ? null : p.default.getGameOverlayStatus(t);
           (null == n ? void 0 : n.overlayMethod) ===
-          b.OverlayMethod.OutOfProcess
+          m.OverlayMethod.OutOfProcess
             ? eA(e)
             : setTimeout(() => eA(e), 200);
         } else eA(e);
@@ -1629,7 +1629,7 @@
         }
         w.size > 0 &&
           (I.send({
-            type: m.OverlayEventTypes.DISPATCH,
+            type: b.OverlayEventTypes.DISPATCH,
             pid: null,
             token: null,
             payloads: Array.from(w),
@@ -1641,7 +1641,7 @@
       }
       function eD(e) {
         switch ((0, e.type)) {
-          case m.OverlayEventTypes.CONNECT:
+          case b.OverlayEventTypes.CONNECT:
             let t = C.default.getToken();
             if (null == t) break;
             (0, _.createLayout)(
@@ -1655,13 +1655,13 @@
                 let [n, a] = t,
                   { pid: l, token: o } = e;
                 I.send({
-                  type: m.OverlayEventTypes.STORAGE_SYNC,
+                  type: b.OverlayEventTypes.STORAGE_SYNC,
                   pid: l,
                   token: o,
                   states: a,
                 }),
                   I.send({
-                    type: m.OverlayEventTypes.DISPATCH,
+                    type: b.OverlayEventTypes.DISPATCH,
                     pid: l,
                     token: o,
                     payloads: [n],
@@ -1670,7 +1670,7 @@
                   c.default.overlayReady(l);
               });
             break;
-          case m.OverlayEventTypes.DISPATCH:
+          case b.OverlayEventTypes.DISPATCH:
             if (null != e.payloads) {
               var n;
               (n = e.payloads),
@@ -1679,14 +1679,14 @@
                 (B = !1);
             }
             break;
-          case m.OverlayEventTypes.LOG_MESSAGES:
+          case b.OverlayEventTypes.LOG_MESSAGES:
             Q.info("[overlay data received]", e.payload);
         }
       }
       class ey extends d.default.Store {
         initialize() {
-          !(!b.OVERLAY_SUPPORTED || __OVERLAY__) &&
-            (H.add(b.OverlayMethod.Hook),
+          !(!m.OVERLAY_SUPPORTED || __OVERLAY__) &&
+            (H.add(m.OverlayMethod.Hook),
             this.waitFor(p.default, C.default),
             I.setReceiveCommandHandler(eD, eC),
             C.default.addChangeListener(eO),
@@ -1697,10 +1697,10 @@
           return !x.has(e);
         }
         isSupported() {
-          return b.OVERLAY_SUPPORTED;
+          return m.OVERLAY_SUPPORTED;
         }
         isMethodSupported(e) {
-          return b.OVERLAY_SUPPORTED && H.has(e);
+          return m.OVERLAY_SUPPORTED && H.has(e);
         }
         get enabled() {
           return V;
@@ -1800,7 +1800,7 @@
                 let l = new URLSearchParams();
                 l.append(
                   "build_id",
-                  "c67ec47dd339abc499ddcdbeb00ea63221daa34b"
+                  "df65b3ecc0b090bc420fbcbb91420969d302b39f"
                 ),
                   l.append("rpc", String(t)),
                   l.append("rpc_auth_token", F),
@@ -1868,8 +1868,8 @@
                         ? void 0
                         : t.method) && void 0 !== n
                     ? n
-                    : b.OverlayMethod.Disabled;
-                if (a !== b.OverlayMethod.OutOfProcess) return;
+                    : m.OverlayMethod.Disabled;
+                if (a !== m.OverlayMethod.OutOfProcess) return;
                 let l = M.get(e.previousAssociatedGamePID);
                 null != l &&
                   (M.delete(e.previousAssociatedGamePID),
@@ -1968,4 +1968,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77015.dfefe7227df790ae4689.js.map
+//# sourceMappingURL=77015.d3ab85b1fda59e14b02b.js.map

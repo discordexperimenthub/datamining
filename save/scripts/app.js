@@ -24970,6 +24970,14 @@
         rightTrayIcon: "rightTrayIcon__451d5",
       };
     },
+    725864: function (e, t, n) {
+      "use strict";
+      e.exports = {
+        hidden: "hidden__755ca",
+        movingImage: "movingImage__4b850",
+        whiteFlash: "whiteFlash__2cde4",
+      };
+    },
     996810: function (e, t, n) {
       "use strict";
       e.exports = {

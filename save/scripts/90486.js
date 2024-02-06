@@ -681,6 +681,9 @@
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "You don't have permission to use any apps in this channel",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Open Command",
+        APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "No permissions",
+        APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY:
+          "You do not have permissions to run this command",
         READY: "Ready",
         CONNECTING: "Connecting…",
         CONNECTING_PROBLEMS_CTA: "Connection problems? Let us know!",
@@ -25889,8 +25892,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("264211", ", Version Hash: ")
-          .concat("dd1d546988e51a4c51b8df486b839d9ab2f7a5d5")
+          .concat("264221", ", Version Hash: ")
+          .concat("753e5023dd72f58ba8d8fb56df0b64bf24b3cf84")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28859,12 +28862,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264211"), "264211"));
+        let _ = parseInt(((e = "264221"), "264221"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264211"
+                "264221"
               )
             ),
             (_ = 0)),
@@ -50197,4 +50200,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.389baba741df0f1d5455.js.map
+//# sourceMappingURL=90486.6ae266709a3385bb3fa3.js.map

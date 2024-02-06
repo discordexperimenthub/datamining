@@ -25863,8 +25863,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("264302", ", Version Hash: ")
-          .concat("048420924994caf2745e5298febbf01157daff18")
+          .concat("264305", ", Version Hash: ")
+          .concat("7230699926e5f16520c3a88282cb95c4e9090d3f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28833,12 +28833,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264302"), "264302"));
+        let _ = parseInt(((e = "264305"), "264305"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264302"
+                "264305"
               )
             ),
             (_ = 0)),
@@ -43856,6 +43856,10 @@
           "COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE"),
         (L[(L.UU_MIGRATION_NOTICE = 345)] = "UU_MIGRATION_NOTICE"),
         (L[(L.HANG_STATUS_NEW_BADGE = 346)] = "HANG_STATUS_NEW_BADGE"),
+        (L[(L.VOICE_CALL_BG_PICKER_TOOLTIP = 347)] =
+          "VOICE_CALL_BG_PICKER_TOOLTIP"),
+        (L[(L.VOICE_CALL_BG_PICKER_NEW_BADGE = 348)] =
+          "VOICE_CALL_BG_PICKER_NEW_BADGE"),
         ((u = i || (i = {}))[(u.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (u[(u.SHOW = 1)] = "SHOW"),
@@ -50209,4 +50213,4 @@
     },
   },
 ]);
-//# sourceMappingURL=90486.b118b1ad279eeefed437.js.map
+//# sourceMappingURL=90486.308672b824a023fb15c1.js.map

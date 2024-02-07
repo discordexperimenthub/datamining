@@ -16535,9 +16535,6 @@
         img: "img__4deec",
         imgBroken: "imgBroken__954ba",
         imgWrapper: "imgWrapper_b60dfd",
-        mediumLayout: "mediumLayout_e2c0a5",
-        outerContainer: "outerContainer_ee638d",
-        smallLayout: "smallLayout__37dca",
       };
     },
     50435: function (e, t, n) {

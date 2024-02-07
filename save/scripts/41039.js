@@ -21136,12 +21136,7 @@
               duration_video_effect: f(
                 this.videoEffectDuration.totalDuration() / 1e3
               ),
-              cryptor_passthrough_count: e.passthroughCount,
-              cryptor_success_count: e.cryptorSuccessCount,
-              cryptor_failure_count: e.cryptorFailedCount,
-              cryptor_duration: e.cryptorDuration,
-              cryptor_attempts: e.cryptorAttempts,
-              cryptor_max_attempts: e.maxCryptorAttempts,
+              cryptor_max_attempts: e.cryptorMaxAttempts,
             },
             {
               bytes: E,
@@ -21160,6 +21155,11 @@
               totalFreezesDuration: N,
               totalFramesDuration: O,
               keyframes: D,
+              passthroughCount: y,
+              cryptorSuccessCount: P,
+              cryptorFailureCount: L,
+              cryptorDuration: b,
+              cryptorAttempts: M,
             } = e.aggregatedProperties;
           return {
             ...d,
@@ -21181,6 +21181,11 @@
             receiver_total_freezes_duration: N,
             receiver_total_frames_duration: O,
             num_keyframes: D,
+            cryptor_passthrough_count: y,
+            cryptor_success_count: P,
+            cryptor_failure_count: L,
+            cryptor_duration: b,
+            cryptor_attempts: M,
           };
         }
         receivedStats(e, t, n) {
@@ -21402,6 +21407,11 @@
           "totalPausesDuration",
           "totalFramesDuration",
           "keyframes",
+          "passthroughCount",
+          "cryptorSuccessCount",
+          "cryptorFailureCount",
+          "cryptorDuration",
+          "cryptorAttempts",
         ];
       ((o = i || (i = {})).H264 = "H264"),
         (o.H265 = "H265"),
@@ -21508,7 +21518,7 @@
                 null !== (r = e.passthroughCount) && void 0 !== r ? r : 0),
               (u.cryptorSuccessCount =
                 null !== (s = e.decryptSuccessCount) && void 0 !== s ? s : 0),
-              (u.cryptorFailedCount =
+              (u.cryptorFailureCount =
                 null !== (a = e.decryptFailureCount) && void 0 !== a ? a : 0),
               (u.cryptorDuration =
                 null !== (o = e.decryptDuration) && void 0 !== o ? o : 0),
@@ -21580,13 +21590,13 @@
                   null !== (d = e.passthroughCount) && void 0 !== d ? d : 0,
                 cryptorSuccessCount:
                   null !== (f = e.encryptSuccessCount) && void 0 !== f ? f : 0,
-                cryptorFailedCount:
+                cryptorFailureCount:
                   null !== (E = e.encryptFailureCount) && void 0 !== E ? E : 0,
                 cryptorDuration:
                   null !== (p = e.encryptDuration) && void 0 !== p ? p : 0,
                 cryptorAttempts:
                   null !== (h = e.encryptAttempts) && void 0 !== h ? h : 0,
-                maxCryptorAttempts:
+                cryptorMaxAttempts:
                   null !== (_ = e.encryptMaxAttempts) && void 0 !== _ ? _ : 0,
               };
         }
@@ -21622,10 +21632,10 @@
             (this.framesDroppedCongestionWindow = null),
             (this.passthroughCount = 0),
             (this.cryptorSuccessCount = 0),
-            (this.cryptorFailedCount = 0),
+            (this.cryptorFailureCount = 0),
             (this.cryptorDuration = 0),
             (this.cryptorAttempts = 0),
-            (this.maxCryptorAttempts = 0);
+            (this.cryptorMaxAttempts = 0);
         }
       }
       class v {
@@ -21680,6 +21690,10 @@
             (this.resolutionTotal += a * E),
             (this.minorResolutionTotal += o * E),
             (this.majorResolutionTotal += l * E),
+            (this.cryptorMaxAttempts = Math.max(
+              this.cryptorMaxAttempts,
+              t.cryptorMaxAttempts
+            )),
             null != u &&
               null != d &&
               "encoderBuckets" in this &&
@@ -21790,6 +21804,11 @@
               totalPausesDuration: 0,
               totalFramesDuration: 0,
               keyframes: 0,
+              passthroughCount: 0,
+              cryptorSuccessCount: 0,
+              cryptorFailureCount: 0,
+              cryptorDuration: 0,
+              cryptorAttempts: 0,
             }),
             (this.aggregationDuration = 0),
             (this.bitrateBuckets = {}),
@@ -21799,12 +21818,7 @@
             (this.minorResolutionTotal = 0),
             (this.majorResolutionTotal = 0),
             (this.intervalTotal = 0),
-            (this.passthroughCount = 0),
-            (this.cryptorSuccessCount = 0),
-            (this.cryptorFailedCount = 0),
-            (this.cryptorDuration = 0),
-            (this.cryptorAttempts = 0),
-            (this.maxCryptorAttempts = 0),
+            (this.cryptorMaxAttempts = 0),
             (this.videoStoppedReason = 0),
             (this.startTime = e.now()),
             (this.videoStoppedWatch = new d.StopWatch(e)),
@@ -59887,7 +59901,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "264530",
+                  build_number: "264532",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78496,4 +78510,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.e76879269403e5585741.js.map
+//# sourceMappingURL=41039.0a58d91e633d792f1610.js.map

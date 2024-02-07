@@ -23942,6 +23942,9 @@
             (this.userSettings = u(
               e => new r.EntityDao("user_settings", r.TableId.KvCache, e)
             )),
+            (this.readStates = u(
+              e => new r.Dao("read_states", r.TableId.KvCache, e)
+            )),
             (this.channelsTransaction = e =>
               this.channels(e.database).upgradeTransaction(e)),
             (this.channelsTempTransaction = e =>
@@ -23965,7 +23968,9 @@
             (this.nonGuildVersionsTransaction = e =>
               this.nonGuildVersions(e.database).upgradeTransaction(e)),
             (this.userSettingsTransaction = e =>
-              this.userSettings(e.database).upgradeTransaction(e));
+              this.userSettings(e.database).upgradeTransaction(e)),
+            (this.readStatesTransaction = e =>
+              this.readStates(e.database).upgradeTransaction(e));
         }
       }
       function u(e) {
@@ -59943,7 +59948,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "264616",
+                  build_number: "264627",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78552,4 +78557,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.622d96959f50e951e8a0.js.map
+//# sourceMappingURL=41039.58fe2e382c3aa5bccc50.js.map

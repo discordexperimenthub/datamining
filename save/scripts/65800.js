@@ -26,8 +26,8 @@
         v = n("457112"),
         I = n("449008"),
         P = n("49111"),
-        S = n("272505");
-      let C = {
+        C = n("272505");
+      let S = {
         [P.PictureInPictureComponents.VIDEO]: p.default,
         [P.PictureInPictureComponents.EMBED_IFRAME]: d.default,
       };
@@ -44,7 +44,7 @@
             roundCorners: s,
           } = this.props;
           return (0, a.jsx)(v.default, {
-            pictureInPictureComponents: C,
+            pictureInPictureComponents: S,
             selectedPIPWindow: e,
             pipWindows: t,
             maxX: n,
@@ -72,9 +72,9 @@
             { showInPopoutWindow: o = !1, disallowTextActivity: d = !1 } = e,
             p = u.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
             v = r.default.getCurrentEmbeddedActivity(),
-            C = null != v && !(0, s.default)(v.channelId, f.default),
+            S = null != v && !(0, s.default)(v.channelId, f.default),
             g = r.default.getActivityPanelMode(),
-            y = null != v && C && g === S.ActivityPanelModes.PANEL,
+            y = null != v && S && g === C.ActivityPanelModes.PANEL,
             E = h.default.windowSize();
           if (p && ((d && y) || !y)) {
             let e = u.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
@@ -82,10 +82,10 @@
           }
           !d && y ? (l = P.AppContext.APP) : o && (l = P.AppContext.POPOUT),
             (i =
-              d && C
+              d && S
                 ? null
-                : C || !p || o
-                  ? null != v && g === S.ActivityPanelModes.PANEL && C
+                : S || !p || o
+                  ? null != v && g === C.ActivityPanelModes.PANEL && S
                     ? null !== (t = m.default.pipActivityWindow) && void 0 !== t
                       ? t
                       : m.default.pipVideoWindow
@@ -333,7 +333,7 @@
       n.r(t),
         n.d(t, {
           EmbedIFrameWithLoadingBackground: function () {
-            return C;
+            return S;
           },
         }),
         n("222007"),
@@ -357,15 +357,15 @@
         v = n("954016"),
         I = n("49111"),
         P = n("165544");
-      function S(e) {
+      function C(e) {
         let {
             url: t,
             className: n,
             style: i,
             onLoad: o,
             shouldRefocus: P,
-            queryParams: S,
-            allowPopups: C = !1,
+            queryParams: C,
+            allowPopups: S = !1,
             referrerPolicy: g = "origin",
           } = e,
           y = (0, d.useStateFromStores)([u.default], () =>
@@ -374,7 +374,7 @@
           E = (0, r.useMemoOne)(() => (0, s.v4)(), [t]),
           T = l.useRef(null),
           A = (0, m.default)(T, P, null == y ? window : y),
-          x = { ...S, frame_id: E, platform: v.ActivityPlatform.DESKTOP },
+          x = { ...C, frame_id: E, platform: v.ActivityPlatform.DESKTOP },
           [N, M] = l.useState(!1),
           j = p.default.theme,
           _ = { ...i };
@@ -418,14 +418,14 @@
                       void 0 === n ||
                       n.postMessage([c.default.HELLO, x], null != t ? t : "");
                 },
-                sandbox: (0, h.default)({ allowPopups: C }),
+                sandbox: (0, h.default)({ allowPopups: S }),
                 className: n,
                 src: "".concat(t, "?").concat(new URLSearchParams(x)),
               })
             : null
         );
       }
-      function C(e) {
+      function S(e) {
         let { onLoad: t } = e,
           [n, i] = l.useState(!1),
           r = l.useCallback(
@@ -443,7 +443,7 @@
               }),
             (0, a.jsx)("div", {
               className: o(P.fillParent, n ? void 0 : P.hiddenIframeContainer),
-              children: (0, a.jsx)(S, { ...e, onLoad: r }),
+              children: (0, a.jsx)(C, { ...e, onLoad: r }),
             }),
           ],
         });
@@ -474,8 +474,8 @@
         v = n("784981"),
         I = n("908583"),
         P = n("449501"),
-        S = n("18494"),
-        C = n("697218"),
+        C = n("18494"),
+        S = n("697218"),
         g = n("550766"),
         y = n("191225"),
         E = n("420444"),
@@ -499,8 +499,8 @@
           ),
           D = null == b ? void 0 : b.instanceId,
           R = (0, r.useStateFromStores)(
-            [S.default],
-            () => S.default.getChannelId() === t.id
+            [C.default],
+            () => C.default.getChannelId() === t.id
           ),
           { dockedRect: F, isHidden: W } = (0, r.useStateFromStoresObject)(
             [P.default],
@@ -565,7 +565,7 @@
         if (null == b || null == D || (null == k && (0, E.default)(t.id)))
           return null;
         let q = Array.from(b.userIds)
-            .map(e => C.default.getUser(e))
+            .map(e => S.default.getUser(e))
             .filter(e => null != e),
           Q = { instance_id: D, channel_id: t.id };
         return (
@@ -740,8 +740,8 @@
         v = n("598873"),
         I = n("981913"),
         P = n("576242"),
-        S = n("336971"),
-        C = n("109489"),
+        C = n("336971"),
+        S = n("109489"),
         g = n("116439"),
         y = n("42887"),
         E = n("145131"),
@@ -772,7 +772,7 @@
             applicationId: i,
             onMouseDown: r,
             onMouseMove: I,
-            onMouseLeave: C,
+            onMouseLeave: S,
             onJumpToChannel: T,
             idle: A,
             selectedParticipant: x,
@@ -798,7 +798,7 @@
           className: w.videoControls,
           onMouseMove: I,
           onMouseDown: r,
-          onMouseLeave: C,
+          onMouseLeave: S,
           children: [
             (0, a.jsx)("div", {
               className: w.topControls,
@@ -851,7 +851,7 @@
                   children: [
                     b
                       ? null
-                      : (0, a.jsx)(S.default, {
+                      : (0, a.jsx)(C.default, {
                           className: L.rightPipIcon,
                           popoutOpen: !1,
                           onOpenPopout: () => {
@@ -931,7 +931,7 @@
           showToggleParticipants: l,
         } = e;
         return l
-          ? (0, a.jsx)(C.default, {
+          ? (0, a.jsx)(S.default, {
               channelId: t,
               isParticipantsOpen: n,
               className: L.participantsButton,
@@ -1042,7 +1042,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return v;
           },
         });
       var a = n("37983");
@@ -1054,76 +1054,68 @@
         s = n("713726"),
         d = n("503417"),
         u = n("162236"),
-        c = n("546463"),
-        p = n("101125"),
-        f = n("953109"),
-        m = n("474571"),
-        h = n("782340"),
-        v = n("124705");
-      function I() {
-        let e = (0, l.useStateFromStores)([p.default], () =>
-            p.default.getBroadcast()
+        c = n("101125"),
+        p = n("953109"),
+        f = n("474571"),
+        m = n("782340"),
+        h = n("124705");
+      function v() {
+        let e = (0, l.useStateFromStores)([c.default], () =>
+            c.default.getBroadcast()
           ),
-          t = (0, l.useStateFromStores)([c.default], () => {
-            var t;
-            return null != e
-              ? null === (t = c.default.getDetectableGame(e.applicationId)) ||
-                void 0 === t
-                ? void 0
-                : t.id
-              : null;
-          }),
-          n = (0, r.useGetOrFetchApplication)(t);
+          t = (0, r.useGetOrFetchApplication)(
+            null == e ? void 0 : e.applicationId
+          );
         if (null == e) return null;
-        let I = () => {
+        let n = () => {
             (0, u.openBroadcastingPrivacySettingsModal)();
           },
-          P = () => {
+          v = () => {
             (0, s.stopBroadcast)(), o.default.disconnect();
           };
         return (0, a.jsxs)("div", {
-          className: v.container,
+          className: h.container,
           children: [
-            null != n &&
-              (0, a.jsx)(f.default, { game: n, size: f.default.Sizes.LARGE }),
+            null != t &&
+              (0, a.jsx)(p.default, { game: t, size: p.default.Sizes.LARGE }),
             (0, a.jsxs)("div", {
-              className: v.content,
+              className: h.content,
               children: [
                 (0, a.jsx)(i.Text, {
                   variant: "text-md/semibold",
                   color: "header-primary",
-                  children: h.default.Messages.BROADCASTING_CAPTURE_PAUSED,
+                  children: m.default.Messages.BROADCASTING_CAPTURE_PAUSED,
                 }),
                 (0, a.jsx)(i.Text, {
                   variant: "text-sm/medium",
                   color: "header-secondary",
                   children:
-                    h.default.Messages.BROADCASTING_CAPTURE_PAUSED_DETAILS,
+                    m.default.Messages.BROADCASTING_CAPTURE_PAUSED_DETAILS,
                 }),
                 (0, a.jsxs)("div", {
-                  className: v.actions,
+                  className: h.actions,
                   children: [
                     (0, a.jsx)(i.Tooltip, {
-                      text: h.default.Messages.BROADCASTING_SETTINGS,
+                      text: m.default.Messages.BROADCASTING_SETTINGS,
                       children: e =>
                         (0, a.jsx)(i.Clickable, {
                           ...e,
-                          onClick: I,
-                          children: (0, a.jsx)(m.default, {
-                            className: v.button,
+                          onClick: n,
+                          children: (0, a.jsx)(f.default, {
+                            className: h.button,
                             width: 20,
                             height: 20,
                           }),
                         }),
                     }),
                     (0, a.jsx)(i.Tooltip, {
-                      text: h.default.Messages.STOP_BROADCASTING,
+                      text: m.default.Messages.STOP_BROADCASTING,
                       children: e =>
                         (0, a.jsx)(i.Clickable, {
                           ...e,
-                          onClick: P,
+                          onClick: v,
                           children: (0, a.jsx)(d.default, {
-                            className: v.button,
+                            className: h.button,
                             width: 20,
                             height: 20,
                           }),
@@ -1245,8 +1237,8 @@
         v = n("858944"),
         I = n("191145"),
         P = n("161306"),
-        S = n("836087"),
-        C = n("679653"),
+        C = n("836087"),
+        S = n("679653"),
         g = n("374014"),
         y = n("479788"),
         E = n("430951"),
@@ -1409,7 +1401,7 @@
               participantOnScreen: n,
               isVideoEnabled: l,
             } = this.props,
-            i = (0, C.computeChannelName)(e, W.default, F.default),
+            i = (0, S.computeChannelName)(e, W.default, F.default),
             o = this.isEmptyBroadcast(),
             r = (null == n ? void 0 : n.id) === D.default.getId() && l,
             s = this.renderStreamState(),
@@ -1555,7 +1547,7 @@
                   )
                 ),
                 (0, a.jsx)(M.default, {
-                  children: (0, a.jsx)(S.default, {
+                  children: (0, a.jsx)(C.default, {
                     channelId: t.id,
                     guildId: t.getGuildId(),
                     className: en.rightTrayIcon,
@@ -1641,10 +1633,10 @@
       n.r(t),
         n.d(t, {
           PictureInPictureHeader: function () {
-            return S;
+            return C;
           },
           default: function () {
-            return C;
+            return S;
           },
         });
       var a = n("37983");
@@ -1664,7 +1656,7 @@
         v = n("600123"),
         I = n("782340"),
         P = n("374142");
-      function S(e) {
+      function C(e) {
         let {
             title: t,
             onJumpToChannel: n,
@@ -1703,7 +1695,7 @@
           ],
         });
       }
-      function C(e) {
+      function S(e) {
         let {
           children: t,
           idle: n,
@@ -1716,7 +1708,7 @@
           screenMessage: m,
           hideControls: h = !1,
           className: I,
-          innerClassName: C,
+          innerClassName: S,
           ...g
         } = e;
         return (0, a.jsxs)("div", {
@@ -1729,7 +1721,7 @@
             (0, a.jsx)(s.default, {
               children: (0, a.jsx)(
                 p.BackgroundTransition,
-                { className: C, children: t },
+                { className: S, children: t },
                 o
               ),
             }),
@@ -1740,7 +1732,7 @@
                 children: [
                   (0, a.jsx)("div", {
                     className: P.topControls,
-                    children: (0, a.jsx)(S, {
+                    children: (0, a.jsx)(C, {
                       idle: n,
                       onJumpToChannel: l,
                       ...g,
@@ -1800,8 +1792,8 @@
         v = n("49111"),
         I = n("99795"),
         P = n("782340"),
-        S = n("374142");
-      function C(e) {
+        C = n("374142");
+      function S(e) {
         let {
           closePopout: t,
           idle: n,
@@ -1810,10 +1802,10 @@
           onSelect: h,
         } = e;
         n && t();
-        let S = (0, l.useStateFromStores)([d.default], () =>
+        let C = (0, l.useStateFromStores)([d.default], () =>
             d.default.getSelfEmbeddedActivityForChannel(m)
           ),
-          C = (0, l.useStateFromStores)([f.default], () => f.default.pipWindow),
+          S = (0, l.useStateFromStores)([f.default], () => f.default.pipWindow),
           g = (0, l.useStateFromStores)([c.default], () =>
             c.default.getSelectedParticipant(m)
           ),
@@ -1835,7 +1827,7 @@
               n = [];
             return (
               null != e &&
-                (null == C ? void 0 : C.id) !== e.id &&
+                (null == S ? void 0 : S.id) !== e.id &&
                 n.push({ pipWindow: e }),
               null != t &&
                 y.forEach(e => {
@@ -1844,7 +1836,7 @@
                     ),
                     l =
                       e.id === (null == g ? void 0 : g.id) &&
-                      (null == C ? void 0 : C.id) === t.id;
+                      (null == S ? void 0 : S.id) === t.id;
                   null != a &&
                     !l &&
                     n.push({ pipWindow: t, participant: e, stream: a });
@@ -1859,11 +1851,11 @@
                 if (
                   e.pipWindow.component ===
                     v.PictureInPictureComponents.EMBED_IFRAME &&
-                  null != S
+                  null != C
                 ) {
                   var t;
                   let e =
-                    null === (t = u.default.getApplication(S.applicationId)) ||
+                    null === (t = u.default.getApplication(C.applicationId)) ||
                     void 0 === t
                       ? void 0
                       : t.name;
@@ -1888,7 +1880,7 @@
                 label: i,
                 action: () =>
                   (function (e) {
-                    (null == C ? void 0 : C.id) !== e.pipWindow.id &&
+                    (null == S ? void 0 : S.id) !== e.pipWindow.id &&
                       (0, s.switchPIPFocus)(e.pipWindow.id);
                     let t = e.participant;
                     null != t &&
@@ -1930,7 +1922,7 @@
           : (0, a.jsx)(o.Popout, {
               position: "bottom",
               renderPopout: e =>
-                (0, a.jsx)(C, {
+                (0, a.jsx)(S, {
                   voiceChannelId: t,
                   pipWindows: s,
                   idle: n,
@@ -1938,7 +1930,7 @@
                 }),
               children: e =>
                 (0, a.jsx)(o.Clickable, {
-                  className: S.menuIcon,
+                  className: C.menuIcon,
                   ...e,
                   children: (0, a.jsx)(h.default, {
                     color: i.default.unsafe_rawColors.WHITE_500.css,
@@ -1971,8 +1963,8 @@
         v = n("719923"),
         I = n("550410"),
         P = n("981913"),
-        S = n("49111"),
-        C = n("646718"),
+        C = n("49111"),
+        S = n("646718"),
         g = n("782340"),
         y = n("978461");
       function E(e) {
@@ -1997,7 +1989,7 @@
           m = (0, i.useStateFromStores)([p.default], () =>
             v.default.isPremium(
               p.default.getCurrentUser(),
-              C.PremiumTypes.TIER_1
+              S.PremiumTypes.TIER_1
             )
           ),
           h = (0, i.useStateFromStores)([c.default], () =>
@@ -2010,7 +2002,7 @@
               (0, u.default)(
                 h.getGuildId(),
                 h.id,
-                S.AnalyticsSections.STREAM_SETTINGS
+                C.AnalyticsSections.STREAM_SETTINGS
               );
           }, [h]);
         if (null == n || null == h) return null;
@@ -2132,13 +2124,13 @@
                       : s.id);
           }
         }
-        l !== e && ((l = e), t && C.emitChange());
+        l !== e && ((l = e), t && S.emitChange());
       }
       let I = o.debounce(v, 300);
       function P() {
         return I(), !1;
       }
-      class S extends r.default.Store {
+      class C extends r.default.Store {
         initialize() {
           this.waitFor(d.default, p.default, m.default, c.default, f.default),
             this.syncWith([d.default, c.default], P);
@@ -2147,9 +2139,9 @@
           return a !== e && ((a = e), v(!1)), null != l ? l : p.default.getId();
         }
       }
-      S.displayName = "VideoSpeakerStore";
-      let C = new S(s.default, { AUDIO_SET_LOCAL_VIDEO_DISABLED: P });
-      var g = C;
+      C.displayName = "VideoSpeakerStore";
+      let S = new C(s.default, { AUDIO_SET_LOCAL_VIDEO_DISABLED: P });
+      var g = S;
     },
     276999: function (e, t, n) {
       "use strict";
@@ -2337,4 +2329,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65800.d803fbd4c225782b31d6.js.map
+//# sourceMappingURL=65800.3061a650582d0001c16a.js.map

@@ -25899,8 +25899,8 @@
       new (0, O.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264705", ", Version Hash: ")
-          .concat("2621f2d67137f7152f9c8247352adab63147850f")
+          .concat("264715", ", Version Hash: ")
+          .concat("11358dc864577e1b1a31ca7d5d968328a5025f24")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28921,12 +28921,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264705"), "264705"));
+        let _ = parseInt(((e = "264715"), "264715"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264705"
+                "264715"
               )
             ),
             (_ = 0)),
@@ -38747,8 +38747,11 @@
           dataUrlToFile: function () {
             return C;
           },
-          isPNGAnimated: function () {
+          dataUrlToBlob: function () {
             return D;
+          },
+          isPNGAnimated: function () {
+            return c;
           },
         }),
         E("424973"),
@@ -38865,21 +38868,22 @@
         );
       }
       async function C(e, _, E) {
-        let t = (function (e) {
-            let _;
-            _ =
-              e.split(",")[0].indexOf("base64") >= 0
-                ? atob(e.split(",")[1])
-                : btoa(e.split(",")[1]);
-            let E = e.split(",")[0].split(":")[1].split(";")[0],
-              t = new Uint8Array(_.length);
-            for (var o = 0; o < _.length; o++) t[o] = _.charCodeAt(o);
-            return new Blob([t], { type: E });
-          })(e),
+        let t = D(e),
           o = await t.arrayBuffer();
         return new File([o], _, { type: E });
       }
-      async function D(e) {
+      function D(e) {
+        let _;
+        _ =
+          e.split(",")[0].indexOf("base64") >= 0
+            ? atob(e.split(",")[1])
+            : btoa(e.split(",")[1]);
+        let E = e.split(",")[0].split(":")[1].split(";")[0],
+          t = new Uint8Array(_.length);
+        for (var o = 0; o < _.length; o++) t[o] = _.charCodeAt(o);
+        return new Blob([t], { type: E });
+      }
+      async function c(e) {
         var _;
         let E =
           null === (_ = e.type) || void 0 === _ ? void 0 : _.split(";")[0];
@@ -51056,4 +51060,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.6aa94e50518ddef6fcaa.js.map
+//# sourceMappingURL=73222.5c97e19f01c1261b28f2.js.map

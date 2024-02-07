@@ -25899,8 +25899,8 @@
       new (0, O.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264634", ", Version Hash: ")
-          .concat("56d5581c5a65a711bf2adabf29d5ca3ff7d38cf1")
+          .concat("264643", ", Version Hash: ")
+          .concat("a6c45a098282d2eeaebb09553dd8000ebe45a04f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28921,12 +28921,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264634"), "264634"));
+        let _ = parseInt(((e = "264643"), "264643"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264634"
+                "264643"
               )
             ),
             (_ = 0)),
@@ -38337,6 +38337,7 @@
               isElementFullscreen: !1,
               focused: !1,
               windowSize: { width: 0, height: 0 },
+              visible: !1,
             })
           : _;
       }
@@ -38347,6 +38348,13 @@
               ? arguments[0]
               : (0, a.getMainWindowId)();
           return I(e).focused;
+        }
+        isVisible() {
+          let e =
+            arguments.length > 0 && void 0 !== arguments[0]
+              ? arguments[0]
+              : (0, a.getMainWindowId)();
+          return I(e).visible;
         }
         getFocusedWindowId() {
           let e = null;
@@ -38376,12 +38384,19 @@
       let T = new s(r.default, {
         WINDOW_INIT: function (e) {
           o(!i.has(e.windowId), "Window initialized multiple times");
-          let { width: _, height: E, isElementFullscreen: t, focused: n } = e;
+          let {
+            width: _,
+            height: E,
+            isElementFullscreen: t,
+            focused: n,
+            visible: r,
+          } = e;
           return (
             i.set(e.windowId, {
               windowSize: { width: _, height: E },
               isElementFullscreen: t,
               focused: n,
+              visible: r,
             }),
             !0
           );
@@ -38418,6 +38433,13 @@
         },
         WINDOW_UNLOAD: function (e) {
           return i.delete(e.windowId), !0;
+        },
+        WINDOW_VISIBILITY_CHANGE: function (e) {
+          let _ = I(e.windowId);
+          return (
+            _.visible !== e.visible &&
+            (i.set(e.windowId, { ..._, visible: e.visible }), !0)
+          );
         },
       });
       E.el("599110")
@@ -51034,4 +51056,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.51701ec5cb2346ad8b7a.js.map
+//# sourceMappingURL=73222.7454a915dc7663742eca.js.map

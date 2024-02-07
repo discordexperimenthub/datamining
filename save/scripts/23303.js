@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["23356"],
+  ["23303"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -31339,11 +31339,14 @@
           fullscreenChange: function () {
             return f;
           },
-          init: function () {
+          visibilityChange: function () {
             return _;
           },
-          unload: function () {
+          init: function () {
             return c;
+          },
+          unload: function () {
+            return g;
           },
         });
       var s = n("917351"),
@@ -31387,6 +31390,14 @@
         });
       }
       function _(e) {
+        let t = (0, a.getWindowId)(e);
+        i.default.dispatch({
+          type: "WINDOW_VISIBILITY_CHANGE",
+          windowId: t,
+          visible: "visible" === e.document.visibilityState,
+        });
+      }
+      function c(e) {
         let t = (0, a.getWindowId)(e),
           n = e.document;
         i.default.dispatch({
@@ -31396,9 +31407,10 @@
           focused: n.hasFocus(),
           width: e.innerWidth,
           height: e.innerHeight,
+          visible: "visible" === n.visibilityState,
         });
       }
-      function c(e) {
+      function g(e) {
         i.default.dispatch({
           type: "WINDOW_UNLOAD",
           windowId: (0, a.getWindowId)(e),
@@ -54941,6 +54953,17 @@
             n
           );
         }
+        getWindowVisible(e) {
+          var t;
+          let n = v[e];
+          return (
+            (null == n
+              ? void 0
+              : null === (t = n.document) || void 0 === t
+                ? void 0
+                : t.visibilityState) === "visible"
+          );
+        }
         getState() {
           return m;
         }
@@ -76546,4 +76569,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.1f876af32c413e17bc02.js.map
+//# sourceMappingURL=23303.5e9e50e2205b1c49ad8c.js.map

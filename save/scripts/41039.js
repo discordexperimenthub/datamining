@@ -27176,7 +27176,6 @@
       var i = n("446674"),
         r = n("913144");
       let s = {
-          always_on_tab_bar: "Always on bottom tabs navigation bar",
           enable_swipe_shortcuts:
             "Gestures shortcuts - swipe from right to left.",
           disable_alpha_voice_panel:
@@ -59948,7 +59947,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "264726",
+                  build_number: "264732",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78557,4 +78556,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.e32a1c7fdfeb958acc40.js.map
+//# sourceMappingURL=41039.0a0397d33e2efbaa7463.js.map

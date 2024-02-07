@@ -19172,10 +19172,6 @@ input[type="checked"]:focus-visible + .label__8e2ef {
 .videoWrapper__73cb7 {
   z-index: 1;
 }
-.videoSizer_f7ce64 {
-  width: 100%;
-  position: relative;
-}
 .actionRow__4cf66 {
   display: flex;
   z-index: 10;
@@ -37870,8 +37866,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -61654,14 +61650,17 @@ input::-webkit-inner-spin-button {
   margin-top: 12px;
   cursor: pointer;
   border-radius: 4px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
 }
 .applicationStreamingPreviewWrapper__97a95:hover
   .applicationStreamingHoverWrapper__93775 {
   opacity: 1;
 }
 .applicationStreamingPreviewSize__5b81b {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .applicationStreamingHoverWrapper__93775 {
   transition: opacity.2s ease-in-out;
@@ -61842,8 +61841,7 @@ input::-webkit-inner-spin-button {
   flex: 0 0 auto;
 }
 .embeddedActivityPlayerContainer__85c5a {
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 16/9;
   background: var(--black-500);
   border-radius: 12px;
   display: flex;
@@ -62118,6 +62116,7 @@ input::-webkit-inner-spin-button {
   background-color: var(--background-primary);
   border-radius: 5px;
   overflow: hidden;
+  aspect-ratio: 16/9;
 }
 .video__37503 {
   display: block;
@@ -69676,6 +69675,7 @@ html .tabBadge__002b3 {
 }
 .clipThumbContainer_f469a2 {
   position: relative;
+  aspect-ratio: 16/9;
 }
 .clipFooter_cc57f5 {
   padding: 8px;
@@ -108337,4 +108337,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3279ec64f3ebdc014fab.css.map*/
+/*# sourceMappingURL=app.1f21ba55b84d74165141.css.map*/

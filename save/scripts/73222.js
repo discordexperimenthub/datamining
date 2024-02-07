@@ -882,6 +882,7 @@
           "Your version of Windows is out of date. Update it to continue receiving Discord updates and technical support. [Learn more about system requirements]({helpCenterLink})",
         MACOS_DEPRECATED_WARNING:
           "Your version of macOS is out of date. Update it to continue receiving Discord updates and technical support. [Learn more about system requirements]({helpCenterLink})",
+        EMBEDDED_ACTIVITIES_ACTIVITY: "activity",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY: "Leave Activity",
         EMBEDDED_ACTIVITIES_LEAVE: "Leave",
         EMBEDDED_ACTIVITIES_JOIN_ACTIVITY: "Join Activity",
@@ -1261,8 +1262,10 @@
           "You do not have permissions to join this Voice Channel.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "You cannot join Activities in this channel.",
-        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
+        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) started an activity",
+        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
+          "$[](userHook) started an **$[activity](activityHook)**",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_MOBILE:
           "[!!{username}!!](usernameOnClick) started an activity",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
@@ -23635,6 +23638,24 @@
           "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Close",
         SAFETY_TOOLS_BUTTON_LABEL: "Open Safety Tools",
+        SAFETY_TOOLS_ACTION_SHEET_HEADER: "Safety tools",
+        SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE: "Block",
+        SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE:
+          "Stop them from messaging you",
+        SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE: "Report",
+        SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE:
+          "Help make Discord safer for everyone.",
+        SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE:
+          "Contact Crisis Text Line",
+        SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE:
+          "Get live support.",
+        SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE: "Visit NoFiltr",
+        SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE:
+          "NoFiltr is a community that empowers young people to safely navigate online.",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Take a break",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE: "Relax with Wumpus.",
+        SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Safety tips",
+        SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
         STRANGER_DANGER_BANNER_HEADER: "Unwanted message?",
         STRANGER_DANGER_BANNER_DESCRIPTION:
           "If you don't want to chat with this person, you can block or mute them.",
@@ -25878,8 +25899,8 @@
       new (0, O.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264604", ", Version Hash: ")
-          .concat("b30003d8b42969a949964a7bd7fa724601cac246")
+          .concat("264612", ", Version Hash: ")
+          .concat("9fd8a321b31952f7693558feea4a4aefba808cc8")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28900,12 +28921,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264604"), "264604"));
+        let _ = parseInt(((e = "264612"), "264612"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264604"
+                "264612"
               )
             ),
             (_ = 0)),
@@ -51013,4 +51034,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.a4b2f7ab32110a4041db.js.map
+//# sourceMappingURL=73222.769e372bb3c0aa58a1e7.js.map

@@ -4114,6 +4114,7 @@
         (I5.REMIXING_ACTION_SHEET_UPSELL = "REMIXING_ACTION_SHEET_UPSELL"),
         (I5.MESSAGE_REMIX_BUTTON = "MESSAGE_REMIX_BUTTON"),
         (I5.CUSTOM_STATUS_MANAGER = "CUSTOM_STATUS_MANAGER"),
+        (I5.APP_COMMAND = "APP_COMMAND"),
         ((I2 = _L || (_L = {})).GIFT = "gift"),
         (I2.BUY = "buy"),
         (I2.BOX_ART = "box_art"),
@@ -17197,4 +17198,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.4061da3ef2fb21b79b7f.js.map
+//# sourceMappingURL=7273.da98fe4d7e9d50c847cb.js.map

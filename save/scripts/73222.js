@@ -24015,6 +24015,7 @@
         QUIET_MODE_DISABLED_BY: "This is disabled by Focus Mode",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "You've been on Do Not Disturb for a while. Would you like to enable Focus Mode instead?",
+        QUICK_REPLY_CLOSE_ARIA_LABEL: "Close reply popout",
       });
     },
     444051: function (e, _, E) {
@@ -25877,8 +25878,8 @@
       new (0, O.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264544", ", Version Hash: ")
-          .concat("83071742f5cb48ebfb7fd8c7939e5e5585c99f04")
+          .concat("264552", ", Version Hash: ")
+          .concat("698b97549e65baddda7f6858eb894eaa70db0d94")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28899,12 +28900,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264544"), "264544"));
+        let _ = parseInt(((e = "264552"), "264552"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264544"
+                "264552"
               )
             ),
             (_ = 0)),
@@ -51012,4 +51013,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.3d23918041e09a3cd38c.js.map
+//# sourceMappingURL=73222.eac1bd0060449dc95b1c.js.map

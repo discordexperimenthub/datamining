@@ -18543,6 +18543,8 @@
           "If message is suspected of being spam...",
         GUILD_AUTOMOD_ACTIONS_HEADER: "Choose a response",
         GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND: "Message Send",
+        GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE:
+          "Member join or update",
         GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME: "Block Mention Spam",
         GUILD_AUTOMOD_MENTION_SPAM_FILTER_DESCRIPTION:
           "Block messages with an excessive # of role and user mentions",
@@ -18561,6 +18563,8 @@
         GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_DESCRIPTION_SPAM_LINK:
           "Block messages with suspicious links from being posted.",
         GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME: "Send alert",
+        GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED: "Timeout user",
+        GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER: "Quarantine user",
         GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DESCRIPTION:
           "Sends an alert containing the flagged message to a chosen channel.",
         GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_ERROR_NO_CHANNEL:
@@ -25873,8 +25877,8 @@
       new (0, O.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264532", ", Version Hash: ")
-          .concat("ff07e7912cbb59eca00937deeda6c36b9c84cdff")
+          .concat("264544", ", Version Hash: ")
+          .concat("83071742f5cb48ebfb7fd8c7939e5e5585c99f04")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28895,12 +28899,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264532"), "264532"));
+        let _ = parseInt(((e = "264544"), "264544"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264532"
+                "264544"
               )
             ),
             (_ = 0)),
@@ -51008,4 +51012,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.2811946a2a048f70d037.js.map
+//# sourceMappingURL=73222.3d23918041e09a3cd38c.js.map

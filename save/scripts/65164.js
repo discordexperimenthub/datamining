@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["26257"],
+  ["65164"],
   {
     110126: function (e, t, n) {
       var l = {
@@ -6806,6 +6806,7 @@
                     ],
                   }),
                   (0, l.jsx)(s.Clickable, {
+                    className: C.closeIcon,
                     "aria-label":
                       S.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
                     onClick: a,
@@ -45974,4 +45975,4 @@
     },
   },
 ]);
-//# sourceMappingURL=26257.bd41cb9ad188a0b07b63.js.map
+//# sourceMappingURL=65164.d09d2379a78c07026bdc.js.map

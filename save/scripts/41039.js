@@ -59939,7 +59939,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "264771",
+                  build_number: "264779",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -60242,6 +60242,9 @@
           parseInteger: function () {
             return s;
           },
+          formatPercent: function () {
+            return a;
+          },
         });
       var i = n("782340");
       function r(e) {
@@ -60260,6 +60263,15 @@
         if (null == e) return t;
         let n = parseInt(e);
         return Number.isNaN(n) ? t : n;
+      }
+      function a(e, t) {
+        let n =
+          arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return Intl.NumberFormat(e, {
+          style: "percent",
+          minimumFractionDigits: 0,
+          ...n,
+        }).format(t);
       }
     },
     991170: function (e, t, n) {
@@ -62464,9 +62476,6 @@
           formatRate: function () {
             return l;
           },
-          formatPercent: function () {
-            return u;
-          },
         }),
         n("70102");
       var i = n("988025"),
@@ -62498,12 +62507,6 @@
             .concat(t, ", and interval count: ")
             .concat(n)
         );
-      }
-      function u(e, t) {
-        return Intl.NumberFormat(e, {
-          style: "percent",
-          minimumFractionDigits: 0,
-        }).format(t);
       }
     },
     197881: function (e, t, n) {
@@ -78548,4 +78551,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.96c9fd67b40b9e83eb1e.js.map
+//# sourceMappingURL=41039.8ad454cfb8501a1d30db.js.map

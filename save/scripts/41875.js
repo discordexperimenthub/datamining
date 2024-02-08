@@ -1947,9 +1947,9 @@
         n("222007");
       var i = n("37983");
       n("884691");
-      var a = n("95410"),
-        s = n("77078"),
-        l = n("872717"),
+      var a = n("872717"),
+        s = n("95410"),
+        l = n("77078"),
         r = n("689988"),
         o = n("350522"),
         u = n("282109"),
@@ -1959,7 +1959,7 @@
       class m extends r.default {
         async handlePostConnectionOpen() {
           if (
-            a.default.get("turnedOffNewNotifications") ||
+            s.default.get("turnedOffNewNotifications") ||
             !o.default.hasConsented(f.Consents.PERSONALIZATION) ||
             !d.NotificationsExperiment.getCurrentConfig(
               { location: "NotificationMigrationManager" },
@@ -1976,16 +1976,16 @@
           if (!e) return;
           let {
               body: { guild_noise: r, usage: m },
-            } = await l.default.get("/users/@me/notification-migration-data2"),
+            } = await a.default.get("/users/@me/notification-migration-data2"),
             h = (0, c.transformUsageData)(m),
             { default: g } = await n.el("923660").then(n.bind(n, "923660"));
-          if (!(0, s.hasAnyModalOpen)())
+          if (!(0, l.hasAnyModalOpen)())
             d.UnreadsEntryPointExperiment.trackExposure({
               location: "NotificationMigrationManager",
             }),
               t &&
                 ((0, c.hasGoodCandidateServers)(r, h)
-                  ? (0, s.openModal)(
+                  ? (0, l.openModal)(
                       e =>
                         (0, i.jsx)(g, {
                           ...e,
@@ -2006,10 +2006,10 @@
       }
       async function h(e) {
         let {
-            body: { guild_noise: t, usage: a },
-          } = await l.default.get("/users/@me/notification-migration-data2"),
-          r = (0, c.transformUsageData)(a);
-        (0, s.openModalLazy)(async () => {
+            body: { guild_noise: t, usage: s },
+          } = await a.default.get("/users/@me/notification-migration-data2"),
+          r = (0, c.transformUsageData)(s);
+        (0, l.openModalLazy)(async () => {
           let { default: a } = await n.el("923660").then(n.bind(n, "923660"));
           return n =>
             (0, i.jsx)(a, { ...n, dismissable: e, guildPain: t, myUsage: r });
@@ -2085,4 +2085,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41875.3ac96d4d4706ab2eecb2.js.map
+//# sourceMappingURL=41875.e635605caa1faab92ca8.js.map

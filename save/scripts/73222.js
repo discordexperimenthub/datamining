@@ -25894,8 +25894,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264861", ", Version Hash: ")
-          .concat("684cc6619b206e31aa17aded3d89b3981fc7a707")
+          .concat("264869", ", Version Hash: ")
+          .concat("9b516b88c0b090cb97230186d0fd6c8b924498de")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28257,8 +28257,8 @@
           },
         }),
         E("70102");
-      var t = E("872717"),
-        o = E("102053"),
+      var t = E("102053"),
+        o = E("872717"),
         n = E("913144"),
         r = E("605250"),
         a = E("618421"),
@@ -28267,7 +28267,7 @@
         s = "https:".concat(I, "/bad-hash-delta"),
         T = new r.default("FetchBlockedDomain");
       function S() {
-        return o.default.timeAsync("\uD83D\uDCBE", "fetchBlockedDomainList", N);
+        return t.default.timeAsync("\uD83D\uDCBE", "fetchBlockedDomainList", N);
       }
       async function N() {
         T.verbose("Fetching blocked domain list");
@@ -28275,7 +28275,7 @@
           let e;
           let _ = parseInt(
               (
-                await t.default.get(
+                await o.default.get(
                   "https://cdn.discordapp.com/bad-domains/current_revision.txt"
                 )
               ).text
@@ -28300,7 +28300,7 @@
                     " behind the server revision number"
                   )
                 );
-              let n = (await t.default.get({ url: s, query: { revision: E } }))
+              let n = (await o.default.get({ url: s, query: { revision: E } }))
                 .body;
               if (0 === n.ADDED.length && 0 === n.REMOVED.length) {
                 T.verbose("No changes to blocked domains list.");
@@ -28311,7 +28311,7 @@
                   .concat(n.ADDED.length, ", domains removed: ")
                   .concat(n.REMOVED.length)
               );
-              let r = await o.default.timeAsync(
+              let r = await t.default.timeAsync(
                 "\uD83D\uDCBE",
                 "getBlockedDomainList",
                 () => i.default.getBlockedDomainList()
@@ -28352,7 +28352,7 @@
               }
               T.verbose("Downloading the full bad domains file"),
                 (e = (
-                  await t.default.get({
+                  await o.default.get({
                     url: "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
                   })
                 ).body);
@@ -28360,7 +28360,7 @@
             T.verbose(
               "Blocked domains list length: ".concat(e.length, " after update")
             ),
-              o.default.time("\uD83D\uDCBE", "Save Blocked Domain List", () =>
+              t.default.time("\uD83D\uDCBE", "Save Blocked Domain List", () =>
                 n.default.dispatch({
                   type: "BLOCKED_DOMAIN_LIST_FETCHED",
                   list: e,
@@ -28906,12 +28906,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264861"), "264861"));
+        let _ = parseInt(((e = "264869"), "264869"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264861"
+                "264869"
               )
             ),
             (_ = 0)),
@@ -50969,4 +50969,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.d2e57c7f3f11d4c549d6.js.map
+//# sourceMappingURL=73222.34f0957ad475e77f7af7.js.map

@@ -332,17 +332,17 @@
             onMouseEnter: P,
             onMouseLeave: M,
             onKeyDown: U,
-            children: w,
-            rel: b,
+            children: b,
+            rel: w,
             buttonRef: G,
             focusProps: F,
             "aria-label": k,
             submittingStartedLabel: B,
             submittingFinishedLabel: x,
-            ...H
+            ...V
           } = e,
-          V = I || T,
-          W = V && (null != P || null != M),
+          H = I || T,
+          W = H && (null != P || null != M),
           Y = (function (e, t) {
             var n, i, r, o;
             let s = null == e ? void 0 : e.offset;
@@ -373,12 +373,12 @@
           ...F,
           offset: Y,
           children: (0, i.jsxs)("button", {
-            ...(V ? null : H),
+            ...(H ? null : V),
             "aria-label": k,
             "aria-busy": !!T || void 0,
             ref: G,
-            onClick: V ? e => e.preventDefault() : O,
-            onDoubleClick: V ? e => e.preventDefault() : L,
+            onClick: H ? e => e.preventDefault() : O,
+            onDoubleClick: H ? e => e.preventDefault() : L,
             onMouseUp: I ? void 0 : y,
             onMouseDown: I ? void 0 : D,
             onMouseEnter: P,
@@ -387,7 +387,7 @@
             type: v,
             disabled: I,
             style: A,
-            rel: b,
+            rel: w,
             className: s(
               C,
               m({
@@ -411,7 +411,7 @@
                     itemClassName: _.spinnerItem,
                   })
                 : null,
-              (0, i.jsx)("div", { className: s(_.contents, R), children: w }),
+              (0, i.jsx)("div", { className: s(_.contents, R), children: b }),
             ],
           }),
         });
@@ -799,15 +799,15 @@
               wrapSection: P,
               getAnchorId: M,
               paddingTop: U,
-              paddingBottom: w,
-              fade: b = !1,
+              paddingBottom: b,
+              fade: w = !1,
               customTheme: G = !1,
               chunkSize: F,
               style: k,
               innerId: B,
               innerRole: x,
-              innerAriaLabel: H,
-              innerAriaMultiselectable: V,
+              innerAriaLabel: V,
+              innerAriaMultiselectable: H,
               innerAriaOrientation: W,
               innerClassName: Y,
               innerTag: z = "div",
@@ -844,7 +844,7 @@
               sidebarHeight: N,
               listHeaderHeight: C,
               paddingTop: U,
-              paddingBottom: w,
+              paddingBottom: b,
               chunkSize: F,
               getScrollerState: $,
               getAnchorId: M,
@@ -952,7 +952,7 @@
             (0, i.jsxs)("div", {
               ref: J,
               onScroll: eE,
-              className: s(S, { [e]: !0, [t]: b, [n]: G, [d.scrolling]: X }),
+              className: s(S, { [e]: !0, [t]: w, [n]: G, [d.scrolling]: X }),
               style: (0, c.getMergedOrientationStyles)(k),
               ...j,
               children: [
@@ -961,8 +961,8 @@
                     (0, i.jsx)(z, {
                       id: B,
                       role: x,
-                      "aria-label": H,
-                      "aria-multiselectable": V,
+                      "aria-label": V,
+                      "aria-multiselectable": H,
                       "aria-orientation": W,
                       style: { height: et },
                       className: s(d.content, Y),
@@ -1036,7 +1036,7 @@
                         }),
                       }),
                     }),
-                  [B, x, H, V, W, Y, z, et, en, R, O, L, y, P, ee]
+                  [B, x, V, H, W, Y, z, et, en, R, O, L, y, P, ee]
                 ),
                 r.useMemo(
                   () =>
@@ -3457,6 +3457,7 @@
           roleStyle: "username",
           submitButtonEnabled: !1,
           syncProfileThemeWithUserTheme: !1,
+          disableVoiceBackgrounds: !1,
         },
         f = _,
         E = {
@@ -3596,6 +3597,9 @@
         get roleStyle() {
           return f.roleStyle;
         }
+        get disableVoiceBackgrounds() {
+          return f.disableVoiceBackgrounds;
+        }
         getUserAgnosticState() {
           return f;
         }
@@ -3660,6 +3664,7 @@
             alwaysShowLinkDecorations:
               e.saturation <= o.LOW_SATURATION_THRESHOLD,
           }),
+          e => ({ ...e, disableVoiceBackgrounds: !1 }),
         ]);
       let g = new S(s.default, {
         ACCESSIBILITY_SET_FONT_SIZE: function (e) {
@@ -3779,6 +3784,9 @@
         ACCESSIBILITY_SET_CONTRAST: function (e) {
           let { contrast: t } = e;
           f = { ...f, contrast: t };
+        },
+        ACCESSIBILITY_TOGGLE_DISABLE_VOICE_BACKGROUNDS: function () {
+          (f = { ...f }).disableVoiceBackgrounds = !f.disableVoiceBackgrounds;
         },
       });
       var h = g;
@@ -4268,10 +4276,10 @@
             return M;
           },
           MessageRequestRestrictedGuildIds: function () {
-            return w;
+            return b;
           },
           MessageRequestRestrictedDefault: function () {
-            return b;
+            return w;
           },
           NonSpamRetrainingOptIn: function () {
             return G;
@@ -4289,10 +4297,10 @@
             return x;
           },
           ConvertEmoticons: function () {
-            return H;
+            return V;
           },
           MessageDisplayCompact: function () {
-            return V;
+            return H;
           },
           SoundboardSettings: function () {
             return W;
@@ -4622,13 +4630,13 @@
           e => o.BoolValue.create({ value: e })
         ),
         U = [],
-        w = (0, l.defineProtoSetting)(
+        b = (0, l.defineProtoSetting)(
           "privacy",
           "messageRequestRestrictedGuildIds",
           e => (null != e ? e : U),
           e => e
         ),
-        b = (0, l.defineProtoSetting)(
+        w = (0, l.defineProtoSetting)(
           "privacy",
           "defaultMessageRequestRestricted",
           e => {
@@ -4701,7 +4709,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        H = (0, l.defineProtoSetting)(
+        V = (0, l.defineProtoSetting)(
           "textAndImages",
           "convertEmoticons",
           e => {
@@ -4712,7 +4720,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        V = (0, l.defineProtoSetting)(
+        H = (0, l.defineProtoSetting)(
           "textAndImages",
           "messageDisplayCompact",
           e => {
@@ -6717,7 +6725,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "265029"), "265029"), 10);
+          let o = parseInt(((n = "265039"), "265039"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7034,4 +7042,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48059.2a0c6c7888dcfe319a74.js.map
+//# sourceMappingURL=48059.b407e3777bf592d7c5c8.js.map

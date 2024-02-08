@@ -5309,6 +5309,10 @@
         FORM_LABEL_OUTPUT: "Output",
         FORM_LABEL_VIDEO_DEVICE: "Camera",
         FORM_LABEL_VIDEO_PREVIEW: "Preview",
+        FORM_SECTION_VOICE_BACKGROUNDS: "Voice Backgrounds",
+        FORM_LABEL_DISABLE_CALL_BACKGROUNDS: "Disable Call Backgrounds",
+        FORM_LABEL_DISABLE_CALL_BACKGROUNDS_SUB_LABEL:
+          "You will automatically see the neutral background in all voice channels.",
         TEST_VIDEO: "Test Video",
         FORM_WARNING_VIDEO_PREVIEW:
           "\nYou must grant Discord [access to your camera](onEnableClick) in order to be able to preview.\n  ",
@@ -14494,6 +14498,8 @@
         VOICE_PANEL_CHANGE_BACKGROUND_SUBTITLE: "Set background for everyone",
         VOICE_PANEL_CHANGE_BACKGROUND_FOOTER:
           "This background will be shown to everyone after saving.",
+        VOICE_PANEL_CHANGE_BACKGROUND_SUBTITLE_DISABLED:
+          "Voice backgrounds are currently disabled in your settings.",
         VOICE_PANEL_LOAD_MORE: "Load more",
         VOICE_PANEL_NO_JOIN_PERMISSIONS_ALERT_TITLE:
           "You don’t have permission to join this Voice Channel.",
@@ -25894,8 +25900,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265029", ", Version Hash: ")
-          .concat("638e6fdadc119487c7adb3e0fb870faccf900cd4")
+          .concat("265039", ", Version Hash: ")
+          .concat("6e3ae9878d8232a0c8d4fd86dd429e79bb9d62fe")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28906,12 +28912,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265029"), "265029"));
+        let _ = parseInt(((e = "265039"), "265039"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265029"
+                "265039"
               )
             ),
             (_ = 0)),
@@ -50965,4 +50971,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.aeea3871484eca27e894.js.map
+//# sourceMappingURL=73222.82d741c08885a7d8f03a.js.map

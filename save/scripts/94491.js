@@ -41,7 +41,7 @@
             return h;
           },
           default: function () {
-            return O;
+            return x;
           },
         }),
         a("222007");
@@ -57,19 +57,19 @@
         f = a("867805"),
         T = a("699209"),
         E = a("32346"),
-        A = a("342845"),
-        _ = a("845579"),
-        S = a("271938"),
-        m = a("42203"),
-        C = a("957255"),
-        g = a("824563"),
-        N = a("800762"),
+        m = a("342845"),
+        S = a("845579"),
+        A = a("271938"),
+        g = a("42203"),
+        _ = a("957255"),
+        C = a("824563"),
+        p = a("800762"),
         v = a("137783"),
-        p = a("49111"),
+        N = a("49111"),
         I = a("205341");
       function h(e) {
         let { emoji: t, className: a, animate: l = !0, hideTooltip: s } = e,
-          r = _.AnimateEmoji.useSetting(),
+          r = S.AnimateEmoji.useSetting(),
           c =
             null != t.id
               ? ":".concat(t.name, ":")
@@ -126,7 +126,7 @@
           })
         );
       };
-      var O = e => {
+      var x = e => {
         var t;
         let {
             activities: a,
@@ -136,29 +136,29 @@
             emojiClassName: u,
             animate: o = !0,
             hideTooltip: f = !1,
-            hideEmoji: _ = !1,
-            user: O,
+            hideEmoji: S = !1,
+            user: x,
           } = e,
-          U =
+          O =
             null != a
-              ? a.find(e => e.type === p.ActivityTypes.CUSTOM_STATUS)
+              ? a.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS)
               : null,
-          x = (0, r.useStateFromStores)(
-            [S.default],
-            () => S.default.getId() === (null == O ? void 0 : O.id)
+          y = (0, r.useStateFromStores)(
+            [A.default],
+            () => A.default.getId() === (null == x ? void 0 : x.id)
           ),
           R = (0, r.useStateFromStores)([E.default], () =>
-            x
+            y
               ? E.default.getHangStatusActivity()
               : null != a
-                ? a.find(e => e.type === p.ActivityTypes.HANG_STATUS)
+                ? a.find(e => e.type === N.ActivityTypes.HANG_STATUS)
                 : null
           ),
-          y = (0, r.useStateFromStores)([N.default, m.default], () => {
+          U = (0, r.useStateFromStores)([p.default, g.default], () => {
             var e;
-            return null != R && null != O
-              ? m.default.getChannel(
-                  null === (e = N.default.getVoiceStateForUser(O.id)) ||
+            return null != R && null != x
+              ? g.default.getChannel(
+                  null === (e = p.default.getVoiceStateForUser(x.id)) ||
                     void 0 === e
                     ? void 0
                     : e.channelId
@@ -166,28 +166,28 @@
               : null;
           }),
           { enableHangStatus: j } = T.HangStatusExperiment.useExperiment({
-            guildId: null == y ? void 0 : y.guild_id,
+            guildId: null == U ? void 0 : U.guild_id,
             location: "ActivityStatus",
           }),
           P = null,
-          H = j && null != R && C.default.can(p.Permissions.CONNECT, y);
+          H = j && null != R && _.default.can(N.Permissions.CONNECT, U);
         H
-          ? (P = (0, n.jsx)(A.default, { className: u, hangStatusActivity: R }))
-          : null != U &&
-            null != U.emoji &&
-            !_ &&
+          ? (P = (0, n.jsx)(m.default, { className: u, hangStatusActivity: R }))
+          : null != O &&
+            null != O.emoji &&
+            !S &&
             (P = (0, n.jsx)(h, {
-              emoji: U.emoji,
+              emoji: O.emoji,
               animate: o,
               hideTooltip: f,
               className: u,
             }));
-        let L = (0, r.useStateFromStores)([g.default], () =>
-            null != O ? g.default.getStatus(O.id) : null
+        let L = (0, r.useStateFromStores)([C.default], () =>
+            null != x ? C.default.getStatus(x.id) : null
           ),
           D =
             null !== L &&
-            [p.StatusTypes.OFFLINE, p.StatusTypes.INVISIBLE].includes(L),
+            [N.StatusTypes.OFFLINE, N.StatusTypes.INVISIBLE].includes(L),
           G =
             null === (t = (0, d.default)(a, l, void 0, H)) || void 0 === t
               ? void 0
@@ -392,25 +392,25 @@
           children: E,
         } = e;
         if (null == t) return null;
-        let { emoji: A } = t,
-          _ = null != t.state && "" !== t.state ? t.state : o;
+        let { emoji: m } = t,
+          S = null != t.state && "" !== t.state ? t.state : o;
         return (0, n.jsxs)("div", {
           className: s(r.container, a),
           children: [
-            T || null == A
+            T || null == m
               ? null
               : (0, n.jsx)(i.ActivityEmoji, {
-                  emoji: A,
+                  emoji: m,
                   className: s(
                     r.emoji,
                     l,
-                    null != c ? { [c]: null == _ || "" === _ } : null
+                    null != c ? { [c]: null == S || "" === S } : null
                   ),
                   animate: d,
                   hideTooltip: f,
                 }),
-            null != _ && _.length > 0
-              ? (0, n.jsx)("span", { className: u, children: _ })
+            null != S && S.length > 0
+              ? (0, n.jsx)("span", { className: u, children: S })
               : null,
             E,
           ],
@@ -613,31 +613,31 @@
             return E;
           },
           HOME_HEADER_MAX_WIDTH: function () {
-            return A;
-          },
-          HOME_HEADER_MAX_HEIGHT: function () {
-            return _;
-          },
-          BANNER_ASPECT_RATIO: function () {
-            return S;
-          },
-          GUILD_BANNER_ASPECT_RATIO: function () {
             return m;
           },
-          SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function () {
-            return C;
+          HOME_HEADER_MAX_HEIGHT: function () {
+            return S;
           },
-          HOME_HEADER_ASPECT_RATIO: function () {
+          BANNER_ASPECT_RATIO: function () {
+            return A;
+          },
+          GUILD_BANNER_ASPECT_RATIO: function () {
             return g;
           },
+          SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function () {
+            return _;
+          },
+          HOME_HEADER_ASPECT_RATIO: function () {
+            return C;
+          },
           MAX_BANNER_OVERLAY_HEIGHT: function () {
-            return N;
+            return p;
           },
           MAX_GUILD_BANNER_OVERLAY_HEIGHT: function () {
             return v;
           },
           MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function () {
-            return p;
+            return N;
           },
           MAX_HOME_HEADER_OVERLAY_HEIGHT: function () {
             return I;
@@ -671,16 +671,16 @@
         f = 1350,
         T = 2400,
         E = 960,
-        A = 2400,
-        _ = 600,
-        S = 17 / 6,
-        m = 16 / 9,
-        C = 2.5,
-        g = 4,
-        N = u / S,
-        v = u / m,
-        p = u / C,
-        I = u / g,
+        m = 2400,
+        S = 600,
+        A = 17 / 6,
+        g = 16 / 9,
+        _ = 2.5,
+        C = 4,
+        p = u / A,
+        v = u / g,
+        N = u / _,
+        I = u / C,
         h =
           r.BACKGROUND_REPLACEMENT_SIZE.width /
           r.BACKGROUND_REPLACEMENT_SIZE.height,
@@ -688,129 +688,6 @@
       ((l = i || (i = {}))[(l.CROP_GIF_START = 0)] = "CROP_GIF_START"),
         (l[(l.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
         (l[(l.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR");
-    },
-    123377: function (e, t, a) {
-      "use strict";
-      let n, l;
-      a.r(t),
-        a.d(t, {
-          CopiableField: function () {
-            return S;
-          },
-        }),
-        a("222007");
-      var s = a("37983"),
-        i = a("884691"),
-        r = a("414456"),
-        u = a.n(r),
-        o = a("862337"),
-        c = a("77078"),
-        d = a("413709"),
-        f = a("599110"),
-        T = a("306160"),
-        E = a("49111"),
-        A = a("782340"),
-        _ = a("491701");
-      function S(e) {
-        var t;
-        let {
-            className: a,
-            copyValue: r,
-            copyMetaData: S,
-            children: m,
-            disableCopy: C,
-            showCopyIcon: g,
-          } = e,
-          [N, v] = i.useState(0),
-          [p, I] = i.useState(!1),
-          [h, M] = i.useState(!1);
-        if (
-          (i.useEffect(
-            () => (
-              (n = new o.Timeout()),
-              (l = new o.Timeout()),
-              function () {
-                n.stop(), l.stop();
-              }
-            ),
-            []
-          ),
-          !T.SUPPORTS_COPY || C)
-        )
-          return (0, s.jsx)(s.Fragment, { children: m });
-        let O = [
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10,
-            A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11,
-          ],
-          U = Math.min(Math.max(N - 1, 0), O.length - 1),
-          x = null !== (t = O[U]) && void 0 !== t ? t : O[0],
-          R = N >= O.length - 1,
-          y = R ? c.TooltipColors.RED : c.TooltipColors.GREEN,
-          j = p ? y : c.TooltipColors.PRIMARY,
-          P = () => {
-            n.stop(), M(!1);
-          },
-          H = e => {
-            (0, T.copy)(r),
-              f.default.track(E.AnalyticEvents.TEXT_COPIED, { type: S }),
-              "function" == typeof e && e(),
-              !h && v(N + 1),
-              M(!0),
-              I(!0),
-              n.start(1e3, () => M(!1)),
-              l.start(2e3, () => v(0));
-          };
-        return (0, s.jsx)(c.Tooltip, {
-          delay: 500,
-          color: j,
-          forceOpen: h,
-          text: p
-            ? (0, s.jsx)(c.Shaker, { isShaking: R, children: x })
-            : A.default.Messages.ACCOUNT_CLICK_TO_COPY,
-          onAnimationRest: (e, t) => {
-            !h && p && t.phase === E.SpringTransitionPhases.LEAVE && I(!1);
-          },
-          "aria-label": A.default.Messages.ACCOUNT_CLICK_TO_COPY,
-          children: e => {
-            let { onClick: t, onMouseEnter: n, ...l } = e;
-            return (0, s.jsx)(c.Clickable, {
-              ...l,
-              className: _.clickTarget,
-              onMouseEnter: () => {
-                p ? P() : "function" == typeof n && n();
-              },
-              onClick: () => {
-                H(t);
-              },
-              children: (0, s.jsxs)("div", {
-                className: u(a, _.copiableWrapper),
-                children: [
-                  (0, s.jsx)("div", { className: _.childWrapper, children: m }),
-                  g
-                    ? (0, s.jsx)("div", {
-                        className: _.copyIconWrapper,
-                        children: (0, s.jsx)(d.default, {
-                          width: 18,
-                          height: 18,
-                          className: _.copyIcon,
-                        }),
-                      })
-                    : null,
-                ],
-              }),
-            });
-          },
-        });
-      }
     },
     824794: function (e, t, a) {
       "use strict";
@@ -883,7 +760,7 @@
             return n;
           },
           default: function () {
-            return C;
+            return _;
           },
         }),
         a("424973");
@@ -900,47 +777,47 @@
         f = a("643121"),
         T = a("217513"),
         E = a("590456"),
-        A = a("49111"),
-        _ = a("782340"),
-        S = a("730684"),
-        m = a("696246");
-      function C(e) {
+        m = a("49111"),
+        S = a("782340"),
+        A = a("730684"),
+        g = a("696246");
+      function _(e) {
         let {
             user: t,
             guildId: a,
             className: n,
             shrinkAtCount: l,
             shrinkToSize: i,
-            isTryItOutFlow: C,
-            size: g = 0,
+            isTryItOutFlow: _,
+            size: C = 0,
           } = e,
-          N = (0, T.default)(t.id, a),
-          v = (0, f.default)(N).map(e => ({
+          p = (0, T.default)(t.id, a),
+          v = (0, f.default)(p).map(e => ({
             ...e,
             src: (0, E.getBadgeAsset)(e.icon),
           })),
-          p = (0, c.useWindowDispatch)();
+          N = (0, c.useWindowDispatch)();
         if (t.isClyde())
           return (0, s.jsx)("div", {
-            className: r(n, S.container, S.clydeBadgeList),
-            "aria-label": _.default.Messages.PROFILE_USER_BADGES,
+            className: r(n, A.container, A.clydeBadgeList),
+            "aria-label": S.default.Messages.PROFILE_USER_BADGES,
             role: "group",
             children: (0, s.jsx)(d.default, {}),
           });
-        C &&
+        _ &&
           null == v.find(e => "premium" === e.id) &&
           v.push({
             id: "premium",
-            icon: m,
-            src: m,
-            description: _.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+            icon: g,
+            src: g,
+            description: S.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
               date: new Date(),
             }),
           });
-        let I = null != l && null != i && v.length > l ? i : g;
+        let I = null != l && null != i && v.length > l ? i : C;
         return (0, s.jsx)("div", {
-          className: r(n, v.length > 0 ? S.containerWithContent : S.container),
-          "aria-label": _.default.Messages.PROFILE_USER_BADGES,
+          className: r(n, v.length > 0 ? A.containerWithContent : A.container),
+          "aria-label": S.default.Messages.PROFILE_USER_BADGES,
           role: "group",
           children: v.map(e =>
             (0, s.jsx)(
@@ -958,7 +835,7 @@
                       let l = null != e.link ? (0, o.default)(e.link) : null;
                       if (null != l)
                         return (
-                          p.dispatch(A.ComponentActions.POPOUT_CLOSE), l(a)
+                          N.dispatch(m.ComponentActions.POPOUT_CLOSE), l(a)
                         );
                     },
                     href: e.link,
@@ -967,9 +844,9 @@
                       "aria-hidden": !0,
                       src: e.src,
                       className: r({
-                        [S.profileBadge24]: 0 === I,
-                        [S.profileBadge22]: 1 === I,
-                        [S.profileBadge18]: 2 === I,
+                        [A.profileBadge24]: 0 === I,
+                        [A.profileBadge22]: 1 === I,
+                        [A.profileBadge18]: 2 === I,
                       }),
                     }),
                   }),
@@ -1008,23 +885,23 @@
             headingClassName: a,
             textClassName: T,
             guild: E,
-            guildMember: A,
+            guildMember: m,
           } = e,
-          _ = (0, l.default)([r.default], () => r.default.locale),
-          S = null != E && null != A;
+          S = (0, l.default)([r.default], () => r.default.locale),
+          A = null != E && null != m;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(s.Heading, {
               variant: "eyebrow",
               className: a,
-              children: S
+              children: A
                 ? d.default.Messages.USER_PROFILE_MEMBER_SINCE
                 : d.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE,
             }),
             (0, n.jsxs)("div", {
               className: f.memberSinceContainer,
               children: [
-                S &&
+                A &&
                   (0, n.jsx)(s.Tooltip, {
                     text: d.default.Messages.DISCORD_NAME,
                     children: e =>
@@ -1035,11 +912,11 @@
                   variant: "text-sm/normal",
                   children: (0, i.getCreatedAtDate)(
                     c.default.extractTimestamp(t),
-                    _
+                    S
                   ),
                 }),
                 null != E &&
-                  null != A &&
+                  null != m &&
                   (0, n.jsxs)(n.Fragment, {
                     children: [
                       (0, n.jsx)("div", { className: f.divider }),
@@ -1055,7 +932,7 @@
                       (0, n.jsx)(s.Text, {
                         className: T,
                         variant: "text-sm/normal",
-                        children: (0, i.getCreatedAtDate)(A.joinedAt, _),
+                        children: (0, i.getCreatedAtDate)(m.joinedAt, S),
                       }),
                     ],
                   }),
@@ -1110,23 +987,23 @@
         f = a("980215"),
         T = a("824794"),
         E = a("635471"),
-        A = a("305961"),
-        _ = a("423487"),
-        S = a("587974"),
-        m = a("599110"),
-        C = a("719923"),
-        g = a("50885"),
-        N = a("713135"),
+        m = a("305961"),
+        S = a("423487"),
+        A = a("587974"),
+        g = a("599110"),
+        _ = a("719923"),
+        C = a("50885"),
+        p = a("713135"),
         v = a("106435"),
-        p = a("289918"),
+        N = a("289918"),
         I = a("878569"),
         h = a("590006"),
         M = a("430312"),
-        O = a("401642"),
-        U = a("590456"),
-        x = a("49111"),
+        x = a("401642"),
+        O = a("590456"),
+        y = a("49111"),
         R = a("646718"),
-        y = a("782340"),
+        U = a("782340"),
         j = a("524466");
       let P = c.AvatarSizes.SIZE_80,
         H = (0, d.getDecorationSizeForAvatarSize)(P);
@@ -1138,13 +1015,13 @@
             forProfileEffectModal: s,
           } = e,
           i = (0, u.useStateFromStores)(
-            [N.default],
-            () => N.default.getUserProfile(t.id),
+            [p.default],
+            () => p.default.getUserProfile(t.id),
             [t]
           ),
           r = (0, u.useStateFromStores)(
-            [A.default],
-            () => A.default.getGuild(a),
+            [m.default],
+            () => m.default.getGuild(a),
             [a]
           ),
           d = (0, f.useClydeProfilesEnabled)(r);
@@ -1153,10 +1030,10 @@
             (null == i ? void 0 : i.profileFetchFailed) &&
               (!t.isClyde() || d) &&
               (0, n.jsx)(c.Tooltip, {
-                text: y.default.Messages.USER_PROFILE_LOAD_ERROR,
+                text: U.default.Messages.USER_PROFILE_LOAD_ERROR,
                 spacing: 16,
                 children: e =>
-                  (0, n.jsx)(_.default, {
+                  (0, n.jsx)(S.default, {
                     ...e,
                     className: j.warningCircleIcon,
                     color: o.default.unsafe_rawColors.YELLOW_300.css,
@@ -1172,7 +1049,7 @@
           ],
         });
       }
-      let D = g.default.getEnableHardwareAcceleration()
+      let D = C.default.getEnableHardwareAcceleration()
         ? c.AnimatedAvatar
         : c.Avatar;
       function G(e) {
@@ -1185,16 +1062,16 @@
             isMobile: d,
             guildId: f,
             channelId: E,
-            onClose: A,
-            disableUserProfileLink: _,
-            profileType: g,
-            animateOnHover: N,
-            hasProfileEffect: p,
+            onClose: m,
+            disableUserProfileLink: S,
+            profileType: C,
+            animateOnHover: p,
+            hasProfileEffect: N,
           } = e,
           { profileTheme: h } = l.useContext(M.UserProfileContext),
-          L = l.useContext(m.AnalyticsContext),
+          L = l.useContext(g.AnalyticsContext),
           G = t.isNonUserBot() && !t.isClyde(),
-          b = C.default.isPremiumAtLeast(
+          b = _.default.isPremiumAtLeast(
             null == a ? void 0 : a.premiumType,
             R.PremiumTypes.TIER_2
           ),
@@ -1202,7 +1079,7 @@
             () => (0, T.shouldDisableUserPresenceInChannel)(t, E),
             [t, E]
           ),
-          F = _ || t.isClyde(),
+          F = S || t.isClyde(),
           {
             avatarDecorationSrc: w,
             avatarSrc: k,
@@ -1211,7 +1088,7 @@
             user: t,
             guildId: f,
             size: P,
-            animateOnHover: N,
+            animateOnHover: p,
           }),
           W = (0, n.jsx)("div", {
             className: j.avatarHoverTarget,
@@ -1221,7 +1098,7 @@
               avatarDecoration: w,
               size: P,
               "aria-label": t.username,
-              status: B ? x.StatusTypes.UNKNOWN : o,
+              status: B ? y.StatusTypes.UNKNOWN : o,
               statusBackdropColor:
                 null != h && b && !B
                   ? (0, c.getStatusBackdropColor)(h)
@@ -1230,8 +1107,8 @@
               statusTooltip: !0,
             }),
           }),
-          Y = (0, r.match)(g)
-            .with(U.UserProfileTypes.POPOUT, () => {
+          Y = (0, r.match)(C)
+            .with(O.UserProfileTypes.POPOUT, () => {
               let e = (0, I.buildGetPremiumUserBannerStyles)({
                 premiumUserWithBanner: j.avatarPositionPremiumBanner,
                 premiumUserWithoutBanner: j.avatarPositionPremiumNoBanner,
@@ -1240,14 +1117,14 @@
               return e({
                 isPremium: b && !G,
                 hasBanner: u,
-                hasProfileEffect: p,
+                hasProfileEffect: N,
               });
             })
             .with(
-              U.UserProfileTypes.POMELO_POPOUT,
+              O.UserProfileTypes.POMELO_POPOUT,
               () => j.avatarPositionPomelo
             )
-            .with(U.UserProfileTypes.PANEL, () => j.avatarPositionPanel)
+            .with(O.UserProfileTypes.PANEL, () => j.avatarPositionPanel)
             .exhaustive();
         return (0, n.jsx)(n.Fragment, {
           children: (0, n.jsxs)(c.Clickable, {
@@ -1263,13 +1140,13 @@
               G || F
                 ? void 0
                 : function () {
-                    (0, O.openUserProfileModal)({
+                    (0, x.openUserProfileModal)({
                       userId: t.id,
                       guildId: null != f ? f : void 0,
                       channelId: null != E ? E : void 0,
                       analyticsLocation: L.location,
                     }),
-                      null == A || A();
+                      null == m || m();
                   },
             children: [
               W,
@@ -1277,30 +1154,30 @@
                 (function () {
                   let e = null != w,
                     t = e ? H : (0, c.getAvatarSize)(P);
-                  return (0, n.jsx)(S.default, {
+                  return (0, n.jsx)(A.default, {
                     mask:
-                      null == o || o === x.StatusTypes.UNKNOWN || B
-                        ? S.default.Masks.AVATAR_DEFAULT
+                      null == o || o === y.StatusTypes.UNKNOWN || B
+                        ? A.default.Masks.AVATAR_DEFAULT
                         : (0, r.match)([e, d])
                             .with(
                               [!0, !0],
                               () =>
-                                S.default.Masks
+                                A.default.Masks
                                   .AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80
                             )
                             .with(
                               [!0, !1],
                               () =>
-                                S.default.Masks
+                                A.default.Masks
                                   .AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80
                             )
                             .with(
                               [!1, !0],
-                              () => S.default.Masks.AVATAR_STATUS_MOBILE_80
+                              () => A.default.Masks.AVATAR_STATUS_MOBILE_80
                             )
                             .with(
                               [!1, !1],
-                              () => S.default.Masks.AVATAR_STATUS_ROUND_80
+                              () => A.default.Masks.AVATAR_STATUS_ROUND_80
                             )
                             .exhaustive(),
                     className: e ? j.avatarDecorationHint : j.avatarHint,
@@ -1309,7 +1186,7 @@
                     height: t,
                     children: (0, n.jsx)("div", {
                       className: j.avatarHintInner,
-                      children: y.default.Messages.VIEW_PROFILE,
+                      children: U.default.Messages.VIEW_PROFILE,
                     }),
                   });
                 })(),
@@ -1335,12 +1212,12 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             T,
-            (0, n.jsx)(p.default, {
+            (0, n.jsx)(N.default, {
               user: t,
               displayProfile: a,
               onClose: i,
               guildId: l,
-              profileType: U.UserProfileTypes.POPOUT,
+              profileType: O.UserProfileTypes.POPOUT,
               showPremiumBadgeUpsell: f,
               isHovering: d,
               hasProfileEffect:
@@ -1355,7 +1232,7 @@
             (0, n.jsx)(G, {
               user: t,
               displayProfile: a,
-              status: u ? x.StatusTypes.STREAMING : o,
+              status: u ? y.StatusTypes.STREAMING : o,
               isMobile: r,
               guildId: l,
               channelId: s,
@@ -1364,7 +1241,7 @@
               hasBanner: (null == a ? void 0 : a.banner) != null,
               hasProfileEffect:
                 (null == a ? void 0 : a.profileEffectId) != null,
-              profileType: U.UserProfileTypes.POPOUT,
+              profileType: O.UserProfileTypes.POPOUT,
             }),
             (0, n.jsx)(L, { user: t, guildId: l }),
           ],
@@ -1421,7 +1298,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return g;
+            return C;
           },
         });
       var n = a("37983");
@@ -1437,60 +1314,60 @@
         f = a("719923"),
         T = a("485422"),
         E = a("777003"),
-        A = a("49111"),
-        _ = a("782340"),
-        S = a("125234"),
-        m = a("814076");
-      function C(e) {
+        m = a("49111"),
+        S = a("782340"),
+        A = a("125234"),
+        g = a("814076");
+      function _(e) {
         let { guildName: t } = e;
         return (0, n.jsxs)("div", {
-          className: S.guildMemberProfileTooltip,
+          className: A.guildMemberProfileTooltip,
           children: [
             (0, n.jsx)(d.default, {
-              className: S.guildMemberProfileTooltipNitroWheel,
+              className: A.guildMemberProfileTooltipNitroWheel,
             }),
-            _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+            S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
               guildName: t,
             }),
           ],
         });
       }
-      function g(e) {
+      function C(e) {
         let {
             guild: t,
             bio: l,
             hidePersonalInformation: d,
-            isUsingGuildBio: g,
-            lastSection: N = !1,
+            isUsingGuildBio: C,
+            lastSection: p = !1,
             animateOnHover: v = !1,
-            isHovering: p = !1,
+            isHovering: N = !1,
             lineClamp: I,
           } = e,
           { location: h } = (0, u.useAnalyticsContext)(),
           M = (0, i.useStateFromStores)([o.default], () =>
             o.default.getCurrentUser()
           ),
-          O = f.default.canUsePremiumGuildMemberProfile(M);
+          x = f.default.canUsePremiumGuildMemberProfile(M);
         return d || null == l || "" === l
           ? null
           : (0, n.jsxs)(E.default, {
-              lastSection: N,
+              lastSection: p,
               children: [
                 (0, n.jsxs)(r.Heading, {
                   variant: "eyebrow",
-                  className: m.title,
+                  className: g.title,
                   children: [
-                    _.default.Messages.USER_POPOUT_ABOUT_ME,
+                    S.default.Messages.USER_POPOUT_ABOUT_ME,
                     null != t &&
-                      g &&
+                      C &&
                       (0, n.jsx)(r.Tooltip, {
                         color: r.Tooltip.Colors.CUSTOM,
-                        tooltipClassName: S.aboutMeGuildIconTooltip,
+                        tooltipClassName: A.aboutMeGuildIconTooltip,
                         "aria-label":
-                          _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+                          S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                             guildName: t.name,
                           }),
-                        text: (0, n.jsx)(C, { guildName: t.name }),
+                        text: (0, n.jsx)(_, { guildName: t.name }),
                         children: e =>
                           (0, n.jsx)(c.default, {
                             ...e,
@@ -1498,7 +1375,7 @@
                               var t;
                               null == (t = e.onClick) || t(),
                                 null != M &&
-                                  !O &&
+                                  !x &&
                                   (0, r.openModalLazy)(async () => {
                                     let { default: e } = await a
                                       .el("414242")
@@ -1508,15 +1385,15 @@
                                         ...t,
                                         source: {
                                           ...h,
-                                          object: A.AnalyticsObjects.GUILD_ICON,
+                                          object: m.AnalyticsObjects.GUILD_ICON,
                                         },
                                       });
                                   });
                             },
                             guild: t,
                             size: c.default.Sizes.SMOL,
-                            className: s(S.aboutMeGuildIcon, {
-                              [S.nonPremiumHoverState]: !O,
+                            className: s(A.aboutMeGuildIcon, {
+                              [A.nonPremiumHoverState]: !x,
                             }),
                           }),
                       }),
@@ -1525,7 +1402,7 @@
                 (0, n.jsx)(T.default, {
                   userBio: l,
                   animateOnHover: v,
-                  isHovering: p,
+                  isHovering: N,
                   lineClamp: I,
                 }),
               ],
@@ -1602,7 +1479,7 @@
         s = a.n(l),
         i = a("77078"),
         r = a("145079"),
-        u = a("123377"),
+        u = a("618927"),
         o = a("158998"),
         c = a("777003"),
         d = a("782340"),
@@ -1614,20 +1491,21 @@
           nickname: l,
           pronouns: T,
           usernameIcon: E,
-          identityCTA: A,
-          className: _,
-          isTryItOut: S = !1,
-          lastSection: m,
+          identityCTA: m,
+          className: S,
+          isTryItOut: A = !1,
+          lastSection: g,
         } = e;
         return (0, n.jsx)(c.default, {
-          className: s(f.container, _),
-          lastSection: m,
+          className: s(f.container, S),
+          lastSection: g,
           children: (0, n.jsxs)("div", {
             className: a ? f.copiableNameTag : void 0,
             children: [
               (0, n.jsx)(u.CopiableField, {
                 className: f.copiableField,
                 copyMetaData: "User Tag",
+                copyTooltip: d.default.Messages.ACCOUNT_CLICK_TO_COPY,
                 copyValue: o.default.getUserTag(t, {
                   decoration: "never",
                   identifiable: "always",
@@ -1648,7 +1526,7 @@
                       usernameIcon: E,
                       user: t,
                       forceUsername: !0,
-                      forcePomelo: S,
+                      forcePomelo: A,
                       className:
                         null == l ? f.userTagNoNickname : f.userTagWithNickname,
                       usernameClass:
@@ -1662,7 +1540,7 @@
                       botClass:
                         null == l ? f.headerBotTag : f.headerBotTagWithNickname,
                     }),
-                    A,
+                    m,
                   ],
                 }),
               }),
@@ -1680,6 +1558,128 @@
                 }),
             ],
           }),
+        });
+      }
+    },
+    618927: function (e, t, a) {
+      "use strict";
+      let n, l;
+      a.r(t),
+        a.d(t, {
+          CopiableField: function () {
+            return A;
+          },
+        }),
+        a("222007");
+      var s = a("37983"),
+        i = a("884691"),
+        r = a("414456"),
+        u = a.n(r),
+        o = a("862337"),
+        c = a("77078"),
+        d = a("599110"),
+        f = a("306160"),
+        T = a("413709"),
+        E = a("49111"),
+        m = a("782340"),
+        S = a("72797");
+      function A(e) {
+        var t;
+        let {
+            className: a,
+            copyValue: r,
+            copyMetaData: A,
+            copyTooltip: g,
+            children: _,
+            disableCopy: C,
+            showCopyIcon: p,
+          } = e,
+          [v, N] = i.useState(0),
+          [I, h] = i.useState(!1),
+          [M, x] = i.useState(!1);
+        if (
+          (i.useEffect(
+            () => (
+              (n = new o.Timeout()),
+              (l = new o.Timeout()),
+              function () {
+                n.stop(), l.stop();
+              }
+            ),
+            []
+          ),
+          !f.SUPPORTS_COPY || C)
+        )
+          return (0, s.jsx)(s.Fragment, { children: _ });
+        let O = [
+            m.default.Messages.COPY_SUCCESS_1,
+            m.default.Messages.COPY_SUCCESS_2,
+            m.default.Messages.COPY_SUCCESS_3,
+            m.default.Messages.COPY_SUCCESS_4,
+            m.default.Messages.COPY_SUCCESS_5,
+            m.default.Messages.COPY_SUCCESS_6,
+            m.default.Messages.COPY_SUCCESS_7,
+            m.default.Messages.COPY_SUCCESS_8,
+            m.default.Messages.COPY_SUCCESS_9,
+            m.default.Messages.COPY_SUCCESS_10,
+            m.default.Messages.COPY_SUCCESS_11,
+          ],
+          y = Math.min(Math.max(v - 1, 0), O.length - 1),
+          R = null !== (t = O[y]) && void 0 !== t ? t : O[0],
+          U = v >= O.length - 1,
+          j = U ? c.TooltipColors.RED : c.TooltipColors.GREEN,
+          P = I ? j : c.TooltipColors.PRIMARY,
+          H = () => {
+            n.stop(), x(!1);
+          },
+          L = e => {
+            (0, f.copy)(r),
+              d.default.track(E.AnalyticEvents.TEXT_COPIED, { type: A }),
+              "function" == typeof e && e(),
+              !M && N(v + 1),
+              x(!0),
+              h(!0),
+              n.start(1e3, () => x(!1)),
+              l.start(2e3, () => N(0));
+          };
+        return (0, s.jsx)(c.Tooltip, {
+          delay: 500,
+          color: P,
+          forceOpen: M,
+          text: I ? (0, s.jsx)(c.Shaker, { isShaking: U, children: R }) : g,
+          onAnimationRest: (e, t) => {
+            !M && I && t.phase === E.SpringTransitionPhases.LEAVE && h(!1);
+          },
+          "aria-label": g,
+          children: e => {
+            let { onClick: t, onMouseEnter: n, ...l } = e;
+            return (0, s.jsx)(c.Clickable, {
+              ...l,
+              className: S.clickTarget,
+              onMouseEnter: () => {
+                I ? H() : "function" == typeof n && n();
+              },
+              onClick: () => {
+                L(t);
+              },
+              children: (0, s.jsxs)("div", {
+                className: u(a, S.copiableWrapper),
+                children: [
+                  (0, s.jsx)("div", { className: S.childWrapper, children: _ }),
+                  p
+                    ? (0, s.jsx)("div", {
+                        className: S.copyIconWrapper,
+                        children: (0, s.jsx)(T.default, {
+                          width: 18,
+                          height: 18,
+                          className: S.copyIcon,
+                        }),
+                      })
+                    : null,
+                ],
+              }),
+            });
+          },
         });
       }
     },
@@ -1792,4 +1792,4 @@
     },
   },
 ]);
-//# sourceMappingURL=94491.c11727d785ade7ea0cf8.js.map
+//# sourceMappingURL=94491.fbe6710ff7ca04288dd7.js.map

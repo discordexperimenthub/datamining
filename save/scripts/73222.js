@@ -5637,17 +5637,17 @@
           "Games, music, TV shows, movies - what are you into? Tell people what you’re all about!",
         ACCOUNT_CLICK_TO_COPY: "Click to copy username",
         ACCOUNT_SPEAKING_WHILE_MUTED: "You are currently muted!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_1: "Copied!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_2: "Double Copy!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_3: "Triple Copy!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_4: "Dominating!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_5: "Rampage!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_6: "Mega Copy!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_7: "Unstoppable!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_8: "Wicked Sick!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_9: "Monster Copy!!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_10: "GODLIKE!!!",
-        ACCOUNT_USERNAME_COPY_SUCCESS_11: "BEYOND GODLIKE!!!!",
+        COPY_SUCCESS_1: "Copied!",
+        COPY_SUCCESS_2: "Double Copy!",
+        COPY_SUCCESS_3: "Triple Copy!",
+        COPY_SUCCESS_4: "Dominating!!",
+        COPY_SUCCESS_5: "Rampage!!",
+        COPY_SUCCESS_6: "Mega Copy!!",
+        COPY_SUCCESS_7: "Unstoppable!!",
+        COPY_SUCCESS_8: "Wicked Sick!!",
+        COPY_SUCCESS_9: "Monster Copy!!!",
+        COPY_SUCCESS_10: "GODLIKE!!!",
+        COPY_SUCCESS_11: "BEYOND GODLIKE!!!!",
         SET_STATUS: "Set Status",
         ONLINE_STATUS: "Online Status",
         CHANGE_ONLINE_STATUS: "Change Online Status",
@@ -6244,6 +6244,7 @@
         COPY_EVENT_LINK: "Copy Event Link",
         MUTE_SOUNDBOARD: "Mute Soundboard",
         UNMUTE_SOUNDBOARD: "Unmute Soundboard",
+        COPY_VERSION: "Click to copy version",
         GENERIC_ACTIONS_MENU_LABEL: "Actions",
         APPLICATION_ACTIONS_MENU_LABEL: "Application Actions",
         CHANNEL_ACTIONS_MENU_LABEL: "Channel Actions",
@@ -25899,8 +25900,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264754", ", Version Hash: ")
-          .concat("0060c0baac7f4e19f20b182d327e4f357dd42c29")
+          .concat("264771", ", Version Hash: ")
+          .concat("687c055e8b54bda911a9daedc6a0e4275d1aa0f2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28916,12 +28917,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264754"), "264754"));
+        let _ = parseInt(((e = "264771"), "264771"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264754"
+                "264771"
               )
             ),
             (_ = 0)),
@@ -51017,4 +51018,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.0060da1c5c79081558a3.js.map
+//# sourceMappingURL=73222.cc134ffe466b58e2ef3a.js.map

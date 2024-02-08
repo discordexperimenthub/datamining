@@ -1,34 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["68236"],
+  ["23360"],
   {
-    789394: function (e, n, t) {
-      "use strict";
-      t.r(n),
-        t.d(n, {
-          ChannelEmojisExperiment: function () {
-            return i;
-          },
-        });
-      var l = t("862205");
-      let i = (0, l.createExperiment)({
-        kind: "user",
-        id: "2023-03_channel_name_emojis",
-        label: "Channel Emojis",
-        defaultConfig: { enabled: !1, left: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Enable channel name emojis",
-            config: { enabled: !0, left: !1 },
-          },
-          {
-            id: 2,
-            label: "Emojis to left of channel icon",
-            config: { enabled: !0, left: !0 },
-          },
-        ],
-      });
-    },
     578899: function (e, n, t) {
       "use strict";
       t.r(n),
@@ -62,7 +34,7 @@
       t.r(n),
         t.d(n, {
           fetchGuildHomeSettings: function () {
-            return h;
+            return m;
           },
           fetchNewMemberActions: function () {
             return C;
@@ -74,10 +46,10 @@
             return T;
           },
           completeNewMemberAction: function () {
-            return g;
+            return N;
           },
           getBlockForChannelDeletion: function () {
-            return N;
+            return g;
           },
         }),
         t("808653");
@@ -93,15 +65,15 @@
         E = t("129092"),
         _ = t("675305"),
         f = t("290886"),
-        m = t("49111");
-      let h = async e => {
+        h = t("49111");
+      let m = async e => {
           i.default.dispatch({
             type: "GUILD_HOME_SETTINGS_FETCH_START",
             guildId: e,
           });
           try {
             let n = await l.default.get({
-                url: m.Endpoints.GUILD_HOME_SETTINGS(e),
+                url: h.Endpoints.GUILD_HOME_SETTINGS(e),
                 oldFormErrors: !0,
               }),
               t = (0, E.settingsFromServer)(n.body);
@@ -128,7 +100,7 @@
             });
             try {
               let n = await l.default.get({
-                  url: m.Endpoints.GUILD_MEMBER_ACTIONS(e),
+                  url: h.Endpoints.GUILD_MEMBER_ACTIONS(e),
                   oldFormErrors: !0,
                 }),
                 t = (0, E.actionsFromServer)(n.body);
@@ -166,7 +138,7 @@
             !u.default.isFullServerPreview(e) &&
             null != l &&
             null != E &&
-            c.default.track(m.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+            c.default.track(h.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
               channel_id: l.id,
               server_guide_channel_type: "resource",
@@ -192,7 +164,7 @@
             !u.default.isFullServerPreview(e) &&
             null != t &&
             null != l &&
-            c.default.track(m.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+            c.default.track(h.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
               channel_id: t.id,
               server_guide_channel_type: "member action",
@@ -200,7 +172,7 @@
             }),
             (0, a.transitionToChannel)(n);
         },
-        g = (e, n) => {
+        N = (e, n) => {
           if (
             (i.default.dispatch({
               type: "COMPLETE_NEW_MEMBER_ACTION",
@@ -223,7 +195,7 @@
                 null !== (a = s.default.getNewMemberActions(e)) && void 0 !== a
                   ? a
                   : [];
-            c.default.track(m.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
+            c.default.track(h.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
               guild_id: t.guild_id,
               channel_id: t.id,
               channel_action_type: r.actionType,
@@ -233,15 +205,15 @@
               ),
             });
           }
-          l.default.post({ url: m.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, n) });
+          l.default.post({ url: h.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, n) });
         };
-      async function N(e, n) {
+      async function g(e, n) {
         if (null == e) return !1;
         let t = (0, f.canSeeOnboardingHome)(e);
         if (!t) return !1;
         let l = s.default.getSettings(e);
         return (
-          l === s.NO_SETTINGS && (await h(e), (l = s.default.getSettings(e))),
+          l === s.NO_SETTINGS && (await m(e), (l = s.default.getSettings(e))),
           l !== s.NO_SETTINGS &&
             null != l &&
             (null != l.newMemberActions &&
@@ -276,10 +248,10 @@
             return f;
           },
           RESOURCE_CHANNEL_TITLE_MAX_LENGTH: function () {
-            return m;
+            return h;
           },
           RESOURCE_CHANNEL_DESCRIPTION_MAX_LENGTH: function () {
-            return h;
+            return m;
           },
           RESOURCE_CHANNEL_MAX: function () {
             return C;
@@ -294,10 +266,10 @@
             return T;
           },
           settingsFromServer: function () {
-            return g;
+            return N;
           },
           settingsToServer: function () {
-            return N;
+            return g;
           },
           actionsFromServer: function () {
             return v;
@@ -330,8 +302,8 @@
         E = 60,
         _ = 5,
         f = 1,
-        m = 30,
-        h = 200,
+        h = 30,
+        m = 200,
         C = 7;
       function p(e) {
         var n;
@@ -368,7 +340,7 @@
           icon: null !== (t = e.icon) && void 0 !== t ? t : null,
         };
       }
-      function g(e) {
+      function N(e) {
         if (null == e) return null;
         let {
             welcome_message: n,
@@ -394,7 +366,7 @@
           enabled: i,
         };
       }
-      function N(e, n) {
+      function g(e, n) {
         var t, l;
         if (null == n) return null;
         let {
@@ -698,4 +670,4 @@
     },
   },
 ]);
-//# sourceMappingURL=68236.13baa29c5d54b14331be.js.map
+//# sourceMappingURL=23360.7f895565ed045cd5e80e.js.map

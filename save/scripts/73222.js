@@ -333,8 +333,6 @@
         MATURE_LISTING_DECLINE: "Nope",
         FORM_LABEL_CHANNEL_NAME: "Channel Name",
         FORM_LABEL_CHANNEL_TOPIC: "Channel Topic",
-        A11Y_LABEL_CHANNEL_EMOJI_BUTTON:
-          "!!{emojiName}!!, Change channel emoji",
         OPEN_CHANNEL_TOPIC: "Open Channel Topic",
         CHANNEL_TOPIC_EMPTY: "Let everyone know how to use this channel!",
         DELETE_CHANNEL: "Delete Channel",
@@ -6024,10 +6022,6 @@
         INVITE_NO_THANKS: "No Thanks",
         PINS: "Pins",
         PINS_UNREAD_A11Y_LABEL: "Pins, unread",
-        CHANNEL_EMOJI_CUSTOMIZE: "Customize",
-        CHANNEL_EMOJI_REQUIRES_BOOST: "Requires Level 1+ Server Boost",
-        CHANNEL_EMOJI_MYSELF_TAB: "Myself",
-        CHANNEL_EMOJI_NO_PERMISSION: "No Permission",
         QUARANTINE_MODE: "Quarantine Mode",
         YOUR_ACCOUNT_IS_QUARANTINED: "Your account is quarantined",
         QUARANTINE_MODE_INFO_MODAL_DESCRIPTION:
@@ -25900,8 +25894,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("264838", ", Version Hash: ")
-          .concat("747bd27a10bd8b4920cf93dc98d632b5fa61e37f")
+          .concat("264843", ", Version Hash: ")
+          .concat("61faa6cd03caa62e3e11fa9d8eeb99506eebf12a")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -27985,11 +27979,6 @@
           ],
           inlineRequire: () => E("352690").default,
         },
-        ChannelEmojisManager: {
-          actions: ["CHANNEL_SELECT"],
-          inlineRequire: () => E("915633").default,
-          neverLoadBeforeConnectionOpen: !0,
-        },
         GuestManager: {
           actions: ["POST_CONNECTION_OPEN"],
           inlineRequire: () => E("129040").default,
@@ -28917,12 +28906,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "264838"), "264838"));
+        let _ = parseInt(((e = "264843"), "264843"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "264838"
+                "264843"
               )
             ),
             (_ = 0)),
@@ -34376,64 +34365,6 @@
           });
         }
       }
-    },
-    702917: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          populateChannelEmojis: function () {
-            return a;
-          },
-        });
-      var t = E("872717"),
-        o = E("605250"),
-        n = E("49111");
-      let r = new o.default("ChannelEmojisActionCreators");
-      async function a(e) {
-        try {
-          await t.default.post({ url: n.Endpoints.POPULATE_CHANNEL_EMOJIS(e) });
-        } catch (e) {
-          r.log("error populating channel emojis", e);
-        }
-      }
-    },
-    915633: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          default: function () {
-            return I;
-          },
-        }),
-        E("222007");
-      var t = E("789394"),
-        o = E("689988"),
-        n = E("305961"),
-        r = E("702917"),
-        a = E("49111");
-      class i extends o.default {
-        handleChannelSelect(e) {
-          let { guildId: _, channelId: E } = e;
-          if (null != _ && null != E) {
-            if (
-              !t.ChannelEmojisExperiment.getCurrentConfig(
-                { location: "8ce619_1" },
-                { autoTrackExposure: !1 }
-              ).enabled
-            )
-              return;
-            let e = n.default.getGuild(_);
-            null != e &&
-              !e.hasFeature(a.GuildFeatures.CHANNEL_ICON_EMOJIS_GENERATED) &&
-              (0, r.populateChannelEmojis)(_);
-          }
-        }
-        constructor(...e) {
-          super(...e),
-            (this.actions = { CHANNEL_SELECT: this.handleChannelSelect });
-        }
-      }
-      var I = new i();
     },
     104545: function (e, _, E) {
       "use strict";
@@ -51018,4 +50949,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.1646aba37903c3cb0fce.js.map
+//# sourceMappingURL=73222.027cb4239b4a38d3f12f.js.map

@@ -59998,7 +59998,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265048",
+                  build_number: "265054",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -60883,6 +60883,9 @@
           },
           getPremiumPlanItem: function () {
             return w;
+          },
+          getDefaultPrice: function () {
+            return k;
           },
           getPrice: function () {
             return x;
@@ -62535,6 +62538,9 @@
           formatRate: function () {
             return l;
           },
+          formatPercent: function () {
+            return u;
+          },
         }),
         n("70102");
       var i = n("988025"),
@@ -62566,6 +62572,12 @@
             .concat(t, ", and interval count: ")
             .concat(n)
         );
+      }
+      function u(e, t) {
+        return Intl.NumberFormat(e, {
+          style: "percent",
+          minimumFractionDigits: 0,
+        }).format(t);
       }
     },
     197881: function (e, t, n) {
@@ -78615,4 +78627,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.23b9bb0dd45c9f977ce2.js.map
+//# sourceMappingURL=41039.a4a5d3548c5db385f955.js.map

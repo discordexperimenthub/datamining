@@ -9710,6 +9710,13 @@
             [a.MIDNIGHT]: { raw: "PLUM_20", opacity: 0.5 },
             [a.DARKER]: { raw: "PLUM_20", opacity: 0.5 },
           },
+          VOICE_VIDEO_VIDEO_TILE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.LIGHT]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.MIDNIGHT]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.DARKER]: { raw: "PLUM_17", opacity: 0.4 },
+          },
           VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK: {
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_700", opacity: 0.48 },
@@ -14025,6 +14032,8 @@
         (e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND =
           "user-profile-header-overflow-background"),
         (e.VOICE_VIDEO_TILE_BLUR_FALLBACK = "voice-video-tile-blur-fallback"),
+        (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND =
+          "voice-video-video-tile-background"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
           "voice-video-video-tile-blur-fallback"),
         (e.WHITE = "white");
@@ -15877,6 +15886,12 @@
           o.Color.PLUM_20,
           o.Color.PLUM_20,
         ],
+        "voice-video-video-tile-background": [
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+        ],
         "voice-video-video-tile-blur-fallback": [
           o.Color.PRIMARY_700,
           o.Color.PRIMARY_700,
@@ -17198,4 +17213,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.34dd1491791a1f77ae8e.js.map
+//# sourceMappingURL=7273.318c54abc26a8f664b87.js.map

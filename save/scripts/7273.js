@@ -2832,6 +2832,8 @@
             "/channels/".concat(_, "/polls/").concat(E, "/answers/@me"),
           POLL_EXPIRE: (_, E) =>
             "/channels/".concat(_, "/messages/").concat(E, "/expire"),
+          POLL_ANSWER_VOTERS: (_, E, I) =>
+            "/channels/".concat(_, "/polls/").concat(E, "/answers/").concat(I),
           PREMIUM_MARKETING: "/premium-marketing",
           QUESTS_CURRENT_QUESTS: "/quests/@me",
           QUESTS_ENROLL: _ => "/quests/".concat(_, "/enroll"),
@@ -17196,4 +17198,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.5e5c4a69d8974bebf7c7.js.map
+//# sourceMappingURL=7273.34dd1491791a1f77ae8e.js.map

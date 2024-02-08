@@ -5145,6 +5145,8 @@
           "premium_application_subscription_manage_cta_clicked"),
         (es.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED =
           "channel_attach_menu_use_apps_clicked"),
+        (es.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED =
+          "channel_attach_menu_start_activity_clicked"),
         (es.APP_LAUNCHER_SEARCH_QUERY_TYPED =
           "app_launcher_search_query_typed"),
         (es.COMMANDS_MIGRATION_TOOLTIP_DISMISSED =
@@ -17213,4 +17215,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.318c54abc26a8f664b87.js.map
+//# sourceMappingURL=7273.d38d8f63d043ada28fde.js.map

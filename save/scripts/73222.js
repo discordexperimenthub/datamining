@@ -25894,8 +25894,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265016", ", Version Hash: ")
-          .concat("29687f584c3157ac0758a888472283f8ec6fa2c0")
+          .concat("265025", ", Version Hash: ")
+          .concat("a1615ff18048fa6d41fd58b8c401dde4ccf38c34")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28906,12 +28906,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265016"), "265016"));
+        let _ = parseInt(((e = "265025"), "265025"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265016"
+                "265025"
               )
             ),
             (_ = 0)),
@@ -30961,51 +30961,6 @@
       }
       var a = new r();
     },
-    236266: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          getEmojiCaptionsExperimentConfig: function () {
-            return n;
-          },
-        });
-      var t = E("862205");
-      let o = (0, t.createExperiment)({
-        kind: "user",
-        id: "2023-10_emoji_captions",
-        label: "Emoji Captions Experiment",
-        defaultConfig: { isEnabledOnDesktop: !1, isAutosuggestEnabled: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Enabled",
-            config: { isEnabledOnDesktop: !0, isAutosuggestEnabled: !1 },
-          },
-          {
-            id: 2,
-            label: "Enabled with more captions from post-processing",
-            config: { isEnabledOnDesktop: !0, isAutosuggestEnabled: !1 },
-          },
-          {
-            id: 3,
-            label: "Enabled with mobile autosuggest",
-            config: { isEnabledOnDesktop: !0, isAutosuggestEnabled: !0 },
-          },
-        ],
-      });
-      function n(e) {
-        let {
-            location: _,
-            trackExposureOptions: E = {},
-            autoTrackExposure: t = !0,
-          } = e,
-          n = o.getCurrentConfig(
-            { location: _ },
-            { autoTrackExposure: t, trackExposureOptions: E }
-          );
-        return n;
-      }
-    },
     765969: function (e, _, E) {
       "use strict";
       E.r(_),
@@ -31016,8 +30971,8 @@
         });
       var t = E("697218"),
         o = E("558986"),
-        n = E("236266"),
-        r = E("802461");
+        n = E("802461"),
+        r = E("269579");
       async function a() {
         let e =
             arguments.length > 0 && void 0 !== arguments[0]
@@ -31025,16 +30980,56 @@
               : "unknown",
           _ = t.default.getCurrentUser();
         if (null == _) return;
-        let E = (0, n.getEmojiCaptionsExperimentConfig)({ location: e });
-        if (!E.isEnabledOnDesktop) {
-          r.default.hasPersistedState() && r.default.clear();
+        let { isEmojiCaptionsEnabled: E } = r.default.getCurrentConfig({
+          location: e,
+        });
+        if (!E) {
+          n.default.hasPersistedState() && n.default.clear();
           return;
         }
-        if (r.default.getIsFetching()) return;
-        let a = r.default.getEmojiCaptionsTTL();
+        if (n.default.getIsFetching()) return;
+        let a = n.default.getEmojiCaptionsTTL();
         !(null != a && Date.now() < a) &&
           (await (0, o.getEmojiCaptionsForUser)());
       }
+    },
+    269579: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          default: function () {
+            return n;
+          },
+        });
+      var t = E("862205");
+      let o = (0, t.createExperiment)({
+        kind: "user",
+        id: "2024-02_emoji_suggestions",
+        label: "Emoji Suggestions Experiment",
+        defaultConfig: {
+          isEmojiSuggestionsEnabled: !1,
+          isEmojiCaptionsEnabled: !1,
+        },
+        treatments: [
+          {
+            id: 1,
+            label: "Enables Emoji Suggestions without Captions",
+            config: {
+              isEmojiSuggestionsEnabled: !0,
+              isEmojiCaptionsEnabled: !1,
+            },
+          },
+          {
+            id: 2,
+            label: "Enables Emoji Suggestions with Captions",
+            config: {
+              isEmojiSuggestionsEnabled: !0,
+              isEmojiCaptionsEnabled: !0,
+            },
+          },
+        ],
+      });
+      var n = o;
     },
     120273: function (e, _, E) {
       "use strict";
@@ -50970,4 +50965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.bef05bcdd4b53e04e24c.js.map
+//# sourceMappingURL=73222.49d1ab418217dd342f72.js.map

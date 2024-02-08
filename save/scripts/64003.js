@@ -3605,14 +3605,14 @@
             Y = (0, C.default)(n),
             z = (0, p.isStageActivity)(n),
             J = K ? g.default.Align.END : g.default.Align.STRETCH,
-            q =
+            Z =
               Y || W
                 ? g.default.Direction.HORIZONTAL
                 : g.default.Direction.VERTICAL,
-            Z = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
+            q = (null == n ? void 0 : n.type) === P.ActivityTypes.HANG_STATUS,
             X = (0, u.useStateFromStores)([E.default, m.default], () => {
               var e;
-              return Z
+              return q
                 ? m.default.getChannel(
                     null === (e = E.default.getVoiceStateForUser(i.id)) ||
                       void 0 === e
@@ -3706,7 +3706,7 @@
               "watch-button"
             );
             t = [e];
-          } else if (Z && null != X) {
+          } else if (q && null != X) {
             let e = (0, l.jsx)(
               A.default,
               { color: k, look: w, hangStatusChannel: X },
@@ -3746,11 +3746,11 @@
             if (null == a && null == s && null == e && null == r) return null;
             t = [a, s, e, r];
           }
-          let Q = q === g.default.Direction.VERTICAL;
+          let Q = Z === g.default.Direction.VERTICAL;
           return (0, l.jsx)(g.default, {
             grow: 0,
             align: J,
-            direction: q,
+            direction: Z,
             wrap: Q ? g.default.Wrap.WRAP : g.default.Wrap.NO_WRAP,
             className: a(c, b.buttonsWrapper, Q ? b.vertical : b.horizontal),
             onClick: function (e) {
@@ -3932,8 +3932,8 @@
           } = e,
           { analyticsLocations: Y } = (0, c.default)(),
           [z, J] = i.useState(!1),
-          q = (0, L.default)({ channelId: K, userId: V.id, activity: t }),
-          Z = (0, a.useStateFromStores)([I.default], () =>
+          Z = (0, L.default)({ channelId: K, userId: V.id, activity: t }),
+          q = (0, a.useStateFromStores)([I.default], () =>
             I.default.getCurrentUser()
           ),
           X = (0, a.useStateFromStores)(
@@ -3953,7 +3953,7 @@
             Array.from(O.default.getSelfEmbeddedActivities().values()).some(
               e => {
                 let { applicationId: n, channelId: l } = e;
-                return n === (null == t ? void 0 : t.application_id) && l === q;
+                return n === (null == t ? void 0 : t.application_id) && l === Z;
               }
             )
           ),
@@ -3987,8 +3987,8 @@
                 user: V,
                 activity: t,
                 application: ee,
-                channelId: q,
-                currentUser: Z,
+                channelId: Z,
+                currentUser: q,
                 isEmbedded: W,
                 ChannelStore: m.default,
                 GuildStore: g.default,
@@ -4037,11 +4037,11 @@
           eo = async () => {
             let e = !1;
             if (W) {
-              if (!et || null == q || null == t.application_id) return;
+              if (!et || null == Z || null == t.application_id) return;
               e = await (0, R.default)({
                 applicationId: t.application_id,
                 currentEmbeddedApplication: n,
-                activityChannelId: q,
+                activityChannelId: Z,
                 locationObject: en.location,
                 embeddedActivitiesManager: j.default,
                 analyticsLocations: Y,
@@ -5808,7 +5808,7 @@
             commands: Y,
             filteredSectionId: z,
             scrollDown: J,
-            filterSection: q,
+            filterSection: Z,
           } = T.useDiscovery(
             n,
             {
@@ -5824,7 +5824,7 @@
               includeFrecency: !0,
             }
           ),
-          Z = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+          q = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
             activeCategoryIndex: B,
             isScrolling: r,
             listRef: w,
@@ -5844,7 +5844,7 @@
             let t = V.length,
               n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
               l = 48 * t + n * P - 512;
-            W && e + 420 > l && J(), Z(e), j(), (o.current = e);
+            W && e + 420 > l && J(), q(e), j(), (o.current = e);
           };
         i.useEffect(() => {
           X(o.current);
@@ -5872,13 +5872,13 @@
             e => {
               if (e.id === z || e.id === x.BuiltInSectionId.FRECENCY) {
                 var t;
-                q(null),
+                Z(null),
                   null === (t = w.current) ||
                     void 0 === t ||
                     t.scrollToSectionTop(0);
-              } else q(e.id);
+              } else Z(e.id);
             },
-            [q, z]
+            [Z, z]
           ),
           et = i.useCallback(
             (e, t, l) => {
@@ -7053,15 +7053,24 @@
                   { w: o.activitySize, h: o.activitySize },
                   8
                 )
-              : (null === (i = a.assetMap) || void 0 === i
-                  ? void 0
-                  : i.has(o.AssetTypes.ApplicationImage)) &&
-                a.drawRoundedImage(
-                  "ApplicationImage",
-                  { x: 0, y: 8 },
-                  { w: o.activitySize, h: o.activitySize },
-                  8
-                ),
+              : (
+                    null === (i = a.assetMap) || void 0 === i
+                      ? void 0
+                      : i.has(o.AssetTypes.ApplicationImage)
+                  )
+                ? a.drawRoundedImage(
+                    "ApplicationImage",
+                    { x: 0, y: 8 },
+                    { w: o.activitySize, h: o.activitySize },
+                    8
+                  )
+                : (a.setColor("white"),
+                  a.drawPath(
+                    o.ACTIVITY_IMAGE_FALLBACK_PATH,
+                    { x: 0, y: 8 },
+                    !0,
+                    2
+                  )),
             a.setColor("dark" === r ? "white" : "rgb(6, 6, 7)"),
             a.setFont({ size: 16, family: "sans-serif" }),
             a.drawText(
@@ -7280,6 +7289,9 @@
           activitySize: function () {
             return f;
           },
+          ACTIVITY_IMAGE_FALLBACK_PATH: function () {
+            return p;
+          },
         });
       let a = 308,
         s = 88;
@@ -7292,7 +7304,9 @@
         u = 16,
         d = 18,
         c = 24,
-        f = 64;
+        f = 64,
+        p =
+          "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm6.81 7c-.54 0-1 .26-1.23.61A1 1 0 0 1 8.92 8.5 3.49 3.49 0 0 1 11.82 7c1.81 0 3.43 1.38 3.43 3.25 0 1.45-.98 2.61-2.27 3.06a1 1 0 0 1-1.96.37l-.19-1a1 1 0 0 1 .98-1.18c.87 0 1.44-.63 1.44-1.25S12.68 9 11.81 9ZM13 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7-10.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM18.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM7 18.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z";
     },
     658567: function (e, t, n) {
       "use strict";
@@ -7914,6 +7928,26 @@
             { x: u, y: d, w: c, h: f } = n;
           return (
             this.context.drawImage(l, i, a, r, o, u, d, c, f),
+            s.DrawResultStatus.Success
+          );
+        }
+        drawPath(e, t) {
+          let n =
+              !(arguments.length > 2) ||
+              void 0 === arguments[2] ||
+              arguments[2],
+            l =
+              arguments.length > 3 && void 0 !== arguments[3]
+                ? arguments[3]
+                : 1;
+          if (null == this.context) return s.DrawResultStatus.Failure;
+          this.setContextProperties(), this.context.save();
+          let i = new Path2D(e);
+          return (
+            this.context.translate(t.x, t.y),
+            this.context.scale(l, l),
+            n ? this.context.fill(i, "evenodd") : this.context.stroke(i),
+            this.context.restore(),
             s.DrawResultStatus.Success
           );
         }
@@ -13162,11 +13196,11 @@
             { location: "dc120b_4" },
             { autoTrackExposure: !1 }
           ),
-          q = S.default.getCurrentUser(),
-          Z =
+          Z = S.default.getCurrentUser(),
+          q =
             null !==
               (p = (0, s.useStateFromStores)([f.default], () =>
-                J && C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2)
+                J && C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2)
                   ? f.default.getReferralsRemaining()
                   : 0
               )) && void 0 !== p
@@ -13199,7 +13233,7 @@
               if (null == n) return e;
               let l = n.bot;
               if (l) return e;
-              let i = X || Z > 0,
+              let i = X || q > 0,
                 a = f.default.getRecipientEligibility(t);
               return [J && i && a, a];
             }
@@ -13214,7 +13248,7 @@
               (null === (_ = U.gifts) || void 0 === _ ? void 0 : _.button) !=
                 null &&
               null == K &&
-              (C.default.isPremiumExactly(q, R.PremiumTypes.TIER_2) &&
+              (C.default.isPremiumExactly(Z, R.PremiumTypes.TIER_2) &&
                 $ &&
                 h.default.trackExposure({ location: "dc120b_5" }),
               Q &&
@@ -13223,7 +13257,7 @@
                     y.default,
                     {
                       disabled: D,
-                      referralsRemaining: Z,
+                      referralsRemaining: q,
                       channel: k,
                       isResending: X,
                     },
@@ -13344,8 +13378,8 @@
         Y = n("991170"),
         z = n("773336"),
         J = n("545054"),
-        q = n("850391"),
-        Z = n("743825"),
+        Z = n("850391"),
+        q = n("743825"),
         X = n("231868"),
         Q = n("834725"),
         $ = n("537566"),
@@ -13390,8 +13424,8 @@
               canMentionRoles: eY,
               canMentionChannels: ez,
               maxCharacterCount: eJ,
-              showRemainingCharsAfterCount: eq,
-              allowNewLines: eZ = !0,
+              showRemainingCharsAfterCount: eZ,
+              allowNewLines: eq = !0,
               characterCountClassName: eX,
               "aria-describedby": eQ,
               "aria-labelledby": e$,
@@ -13517,7 +13551,7 @@
                   );
                 return { isLurking: a, isPendingMember: s, ...r };
               })(eL, eP, tn, eO),
-              td = eP.toolbarType === q.SlateToolbarTypes.STATIC,
+              td = eP.toolbarType === Z.SlateToolbarTypes.STATIC,
               tc =
                 !w.UseLegacyChatInput.useSetting() &&
                 !(0, z.isAndroidWeb)() &&
@@ -13722,7 +13756,7 @@
               i.useCallback(
                 e => {
                   var t, n;
-                  eg === q.ChatInputTypes.CREATE_FORUM_POST
+                  eg === Z.ChatInputTypes.CREATE_FORUM_POST
                     ? null === (n = eS.current) ||
                       void 0 === n ||
                       n.insertGIF(e)
@@ -13956,8 +13990,8 @@
                 );
               })(eL, eP, eI, tI),
               tJ = (0, y.useShouldShowPTONotice)(eL),
-              tq = null != tn || null != ek || tJ,
-              tZ =
+              tZ = null != tn || null != ek || tJ,
+              tq =
                 !!(null === (eu = eP.emojis) || void 0 === eu
                   ? void 0
                   : eu.button) && tM <= 44;
@@ -14002,7 +14036,7 @@
                           [eo.scrollableContainer]: !0,
                           [eo.themedBackground]: !e4,
                           [eo.webkit]: "Blink" === platform.layout,
-                          [eo.hasConnectedBar]: tq,
+                          [eo.hasConnectedBar]: tZ,
                         }),
                         children: [
                           (0, l.jsx)(X.default, {
@@ -14020,12 +14054,12 @@
                             className: s(eo.inner, {
                               [eo.innerDisabled]: tH,
                               [eo.sansAttachButton]:
-                                eP !== q.ChatInputTypes.EDIT &&
+                                eP !== Z.ChatInputTypes.EDIT &&
                                 (null != tV || (tH && null == tV) || ti),
                               [eo.sansAttachButtonCreateThread]:
-                                eP === q.ChatInputTypes.THREAD_CREATION,
+                                eP === Z.ChatInputTypes.THREAD_CREATION,
                               [eo.sansAttachButtonCreatePost]:
-                                eP === q.ChatInputTypes.CREATE_FORUM_POST,
+                                eP === Z.ChatInputTypes.CREATE_FORUM_POST,
                             }),
                             children: [
                               tV,
@@ -14033,7 +14067,7 @@
                               (0, l.jsx)(m.FocusRing, {
                                 ringTarget: e6,
                                 ringClassName: eo.focusRing,
-                                children: (0, l.jsx)(Z.default, {
+                                children: (0, l.jsx)(q.default, {
                                   ref: e5,
                                   id: eN,
                                   focused: eb,
@@ -14051,7 +14085,7 @@
                                   uploadPromptCharacterCount:
                                     ea.MAX_MESSAGE_LENGTH_PREMIUM,
                                   maxCharacterCount: null != eJ ? eJ : tp,
-                                  allowNewLines: eZ,
+                                  allowNewLines: eq,
                                   "aria-describedby": eQ,
                                   onChange: ew,
                                   onResize: tL,
@@ -14072,10 +14106,10 @@
                                   className: s(
                                     {
                                       [eo.textAreaThreadCreation]:
-                                        eP === q.ChatInputTypes.THREAD_CREATION,
+                                        eP === Z.ChatInputTypes.THREAD_CREATION,
                                       [eo.profileBioInput]:
                                         eP ===
-                                        q.ChatInputTypes.PROFILE_BIO_INPUT,
+                                        Z.ChatInputTypes.PROFILE_BIO_INPUT,
                                     },
                                     eA
                                   ),
@@ -14132,9 +14166,9 @@
                         ? (0, l.jsx)(en.default, {
                             type: eP,
                             textValue: ev,
-                            className: s(eX, { [eo.indentCharacterCount]: tZ }),
+                            className: s(eX, { [eo.indentCharacterCount]: tq }),
                             maxCharacterCount: eJ,
-                            showRemainingCharsAfterCount: eq,
+                            showRemainingCharsAfterCount: eZ,
                           })
                         : null,
                       tz
@@ -14871,8 +14905,8 @@
               onTab: Y,
               onEnter: z,
               onSubmit: J,
-              maybeShowAutocomplete: q,
-              hideAutocomplete: Z,
+              maybeShowAutocomplete: Z,
+              hideAutocomplete: q,
               moveSelection: X,
               spellcheckEnabled: Q,
               canUseCommands: $,
@@ -15049,7 +15083,7 @@
               onEnter: z,
               allowNewLines: el,
               submit: e_,
-              hideAutocomplete: Z,
+              hideAutocomplete: q,
               moveSelection: X,
             }),
             { handlePaste: eN, handleGlobalPaste: ex } = (0, _.default)(
@@ -15059,9 +15093,9 @@
             ),
             eO = i.useCallback(
               e => {
-                null == q || q();
+                null == Z || Z();
               },
-              [q]
+              [Z]
             ),
             eR = i.useCallback(
               e => {
@@ -15069,9 +15103,9 @@
                   ? eE.current &&
                     (null == F ||
                       F(null, (0, E.toTextValue)(e, { mode: "raw" }), e))
-                  : eE.current && q();
+                  : eE.current && Z();
               },
-              [q, F]
+              [Z, F]
             );
           i.useLayoutEffect(() => {
             eh.current && ((em.current = n), eS(ev, "parent", { value: n }));
@@ -23871,8 +23905,8 @@
         Y = n("640076"),
         z = n("851111"),
         J = n("282566"),
-        q = n("115279"),
-        Z = n("49111"),
+        Z = n("115279"),
+        q = n("49111"),
         X = n("994428"),
         Q = n("958706"),
         $ = n("431364");
@@ -23911,7 +23945,7 @@
                 switch (e.type) {
                   case K.EmojiGridItemTypes.CREATE_EMOJI:
                     a(void 0, !0),
-                      O.default.open(e.guildId, Z.GuildSettingsSections.EMOJI);
+                      O.default.open(e.guildId, q.GuildSettingsSections.EMOJI);
                     return;
                   case K.EmojiGridItemTypes.EMOJI: {
                     if (null != e.emoji && l.altKey) {
@@ -23921,7 +23955,7 @@
                             emoji: e.emoji,
                             location: {
                               ...t,
-                              object: Z.AnalyticsObjects.EMOJI,
+                              object: q.AnalyticsObjects.EMOJI,
                             },
                           }),
                           (0, m.favoriteEmoji)(e.emoji));
@@ -23930,19 +23964,19 @@
                     let i = {
                       page:
                         null != o
-                          ? Z.AnalyticsPages.GUILD_CHANNEL
-                          : Z.AnalyticsPages.DM_CHANNEL,
-                      section: Z.AnalyticsSections.EMOJI_PICKER_POPOUT,
-                      object: Z.AnalyticsObjects.EMOJI,
+                          ? q.AnalyticsPages.GUILD_CHANNEL
+                          : q.AnalyticsPages.DM_CHANNEL,
+                      section: q.AnalyticsSections.EMOJI_PICKER_POPOUT,
+                      object: q.AnalyticsObjects.EMOJI,
                     };
                     c &&
                       (i = {
                         page:
                           null != o
-                            ? Z.AnalyticsPages.GUILD_CHANNEL
-                            : Z.AnalyticsPages.DM_CHANNEL,
-                        section: Z.AnalyticsSections.EMOJI_PICKER_POPOUT,
-                        object: Z.AnalyticsObjects.EMOJI,
+                            ? q.AnalyticsPages.GUILD_CHANNEL
+                            : q.AnalyticsPages.DM_CHANNEL,
+                        section: q.AnalyticsSections.EMOJI_PICKER_POPOUT,
+                        object: q.AnalyticsObjects.EMOJI,
                       }),
                       (0, w.trackEmojiSelect)({
                         emoji: e.emoji,
@@ -23952,7 +23986,7 @@
                         subCategory: e.subCategory,
                         newlyAddedHighlight:
                           e.subCategory ===
-                            q.EmojiSubCategory.NEWLY_ADDED_EMOJI &&
+                            Z.EmojiSubCategory.NEWLY_ADDED_EMOJI &&
                           v.default.isNewerThanLastSeen(o, e.emoji.id),
                       }),
                       a(e.emoji, !l.shiftKey, c);
@@ -23970,7 +24004,7 @@
               isUsingKeyboardNavigation: I,
             } = (0, N.useExpressionPickerGridKeyboardNavigation)({
               columnCounts: l,
-              gridNavigatorId: q.GRID_NAVIGATOR_ID,
+              gridNavigatorId: Z.GRID_NAVIGATOR_ID,
               itemGrid: s,
               itemList: r,
               onGridNavigatorItemSelect: p,
@@ -24039,7 +24073,7 @@
               channel: u,
               guildId: f,
               closePopout: m,
-              emojiSize: A = q.EmojiSize.MEDIUM,
+              emojiSize: A = Z.EmojiSize.MEDIUM,
               hasTabWrapper: O = !1,
               includeCreateEmojiButton: k,
               onSelectEmoji: el,
@@ -24093,7 +24127,7 @@
               () => ({
                 ...eF,
                 section:
-                  null != eB ? eB : Z.AnalyticsSections.EMOJI_PICKER_POPOUT,
+                  null != eB ? eB : q.AnalyticsSections.EMOJI_PICKER_POPOUT,
               }),
               [eF, eB]
             ),
@@ -24106,8 +24140,8 @@
             ),
             ez = (0, w.useEmojiSearchResults)(eM, u, o),
             eJ = null == ez ? 0 : ez.locked.length + ez.unlocked.length,
-            eq = P.EmojiPickerCollapsedSections.useSetting(),
-            eZ = i.useMemo(() => new Set(eq), [eq]),
+            eZ = P.EmojiPickerCollapsedSections.useSetting(),
+            eq = i.useMemo(() => new Set(eZ), [eZ]),
             eX = i.useCallback(e => {
               P.EmojiPickerCollapsedSections.updateSetting(Array.from(e));
             }, []),
@@ -24128,7 +24162,7 @@
               includeCreateEmojiButton: k,
               pickerIntention: o,
               emojiSearchResults: ez,
-              collapsedSections: eZ,
+              collapsedSections: eq,
               emojiPaddingHorizontal: ee,
               emojiSpriteSize: A,
             }),
@@ -24153,7 +24187,7 @@
                 "" !== eM
                   ? (0, w.trackEmojiSearchSelect)(
                       e.emoji,
-                      { ...eK, object: Z.AnalyticsObjects.EMOJI },
+                      { ...eK, object: q.AnalyticsObjects.EMOJI },
                       eM,
                       o
                     )
@@ -24161,7 +24195,7 @@
                       emoji: e.emoji,
                       location: {
                         ...eK,
-                        object: null != eH ? eH : Z.AnalyticsObjects.EMOJI,
+                        object: null != eH ? eH : q.AnalyticsObjects.EMOJI,
                         ...(null != eG && { page: eG }),
                       },
                       pickerIntention: o,
@@ -24170,7 +24204,7 @@
                       position: e.columnIndex + 1,
                       newlyAddedHighlight:
                         e.subCategory ===
-                          q.EmojiSubCategory.NEWLY_ADDED_EMOJI &&
+                          Z.EmojiSubCategory.NEWLY_ADDED_EMOJI &&
                         v.default.isNewerThanLastSeen(ej, e.emoji.id),
                       isBurstReaction: eU,
                     });
@@ -24178,7 +24212,7 @@
               trackEmojiFavorited: e => {
                 (0, w.trackEmojiFavorited)({
                   emoji: e.emoji,
-                  location: { ...eK, object: Z.AnalyticsObjects.EMOJI },
+                  location: { ...eK, object: q.AnalyticsObjects.EMOJI },
                 });
               },
             }),
@@ -24208,7 +24242,7 @@
             }, [ef]),
             i.useEffect(
               () => (
-                U.default.track(Z.AnalyticEvents.OPEN_POPOUT, {
+                U.default.track(q.AnalyticEvents.OPEN_POPOUT, {
                   type: null != eV ? eV : "Emoji Picker",
                   guild_id: ej,
                 }),
@@ -24298,8 +24332,8 @@
           let tr = (0, l.jsx)(h.default, {
             ...eK,
             children: (0, l.jsxs)(tl, {
-              id: q.EMOJI_PICKER_TAB_PANEL_ID,
-              "aria-labelledby": O ? q.EMOJI_PICKER_TAB_ID : void 0,
+              id: Z.EMOJI_PICKER_TAB_PANEL_ID,
+              "aria-labelledby": O ? Z.EMOJI_PICKER_TAB_ID : void 0,
               role: O ? "tabpanel" : void 0,
               className: s($.wrapper, {
                 [$.emojiPickerHasTabWrapper]: O,
@@ -24336,11 +24370,11 @@
                           ? null
                           : (0, l.jsx)("div", {
                               className: $.emojiPickerListWrapper,
-                              id: q.GRID_NAVIGATOR_ID,
+                              id: Z.GRID_NAVIGATOR_ID,
                               ...te,
                               children: ti
                                 ? (0, l.jsx)(Y.default, {
-                                    collapsedSections: eZ,
+                                    collapsedSections: eq,
                                     diversitySurrogate: eY,
                                     emojiGrid: e1,
                                     emojiListRef: eP,
@@ -24807,11 +24841,11 @@
               rowCountBySection: i,
             };
           }, [v]),
-          [J, q] = i.useState(!0);
+          [J, Z] = i.useState(!0);
         i.useLayoutEffect(() => {
-          q(K >= 7);
+          Z(K >= 7);
         }, [K]);
-        let Z = i.useCallback(
+        let q = i.useCallback(
             e => {
               var t;
               let n =
@@ -24820,7 +24854,7 @@
                   : t.getListDimensions();
               if (null == n) return;
               let l = e + n.height;
-              l - k >= Y ? q(!1) : q(!0);
+              l - k >= Y ? Z(!1) : Z(!0);
             },
             [Y]
           ),
@@ -24866,7 +24900,7 @@
           store: h.EmojiPickerStore,
           categories: v,
           listPadding: L,
-          onScroll: Z,
+          onScroll: q,
           renderCategoryListItem: O,
           renderSection: $,
           rowCount: v.length,
@@ -26011,8 +26045,8 @@
               listHeaderClassName: z,
             } = e,
             J = (0, p.useAnalyticsContext)(),
-            q = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID),
-            Z = i.useMemo(
+            Z = i.useRef(L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID),
+            q = i.useMemo(
               () => ("" !== n ? d.default.convert.toCodePoint(n) : ""),
               [n]
             ),
@@ -26046,16 +26080,16 @@
                   e.type === x.EmojiGridItemTypes.EMOJI
                     ? e.emoji.allNamesString
                     : e.name;
-              q.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID &&
-                window.cancelAnimationFrame(q.current),
-                (q.current = window.requestAnimationFrame(() => {
+              Z.current !== L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID &&
+                window.cancelAnimationFrame(Z.current),
+                (Z.current = window.requestAnimationFrame(() => {
                   m.EmojiPickerStore.setInspectedExpressionPosition(
                     t,
                     n,
                     E.InspectedExpressionChangeSource.MOUSE_EVENT
                   ),
                     m.EmojiPickerStore.setSearchPlaceholder(l),
-                    (q.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID);
+                    (Z.current = L.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID);
                 }));
             }, []),
             $ = (0, u.useStateFromStores)(
@@ -26076,7 +26110,7 @@
                     {
                       emojiDescriptors: n,
                       emojiSize: r,
-                      surrogateCodePoint: Z,
+                      surrogateCodePoint: q,
                       onInspect: Q,
                       onSelect: c,
                       getEmojiItemProps: T,
@@ -26095,7 +26129,7 @@
                     e
                   );
                 }),
-              [a, h, r, Z, Q, c, T, v, _, b, V, $, K, W, Y]
+              [a, h, r, q, Q, c, T, v, _, b, V, $, K, W, Y]
             );
           i.useEffect(
             () => () => {
@@ -26717,7 +26751,7 @@
               return t => (0, l.jsx)(e, { ...t });
             });
           },
-          q = function () {
+          Z = function () {
             var e;
             let { onMouseEnter: t, onMouseLeave: n } =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -26788,11 +26822,11 @@
                 }),
                 position: "top",
                 delay: 200,
-                children: e => q(e),
+                children: e => Z(e),
               },
               a
             )
-          : q();
+          : Z();
       }
     },
     215550: function (e, t, n) {
@@ -27069,15 +27103,15 @@
             }),
             z = (0, f.useExpressionPickerStore)(e => e.searchQuery),
             { analyticsLocations: J } = (0, c.default)(d.default.EMOJI_PICKER),
-            q =
+            Z =
               null == H
                 ? void 0
                 : null === (t = H.subscription_trial) || void 0 === t
                   ? void 0
                   : t.sku_id,
-            Z =
-              null != q
-                ? q === x.PremiumSubscriptionSKUs.TIER_0
+            q =
+              null != Z
+                ? Z === x.PremiumSubscriptionSKUs.TIER_0
                 : Y === x.PremiumTypes.TIER_0;
           return (
             i.useEffect(() => {
@@ -27138,7 +27172,7 @@
                               onClose: P,
                               trialOffer: H,
                               discountOffer: V,
-                              children: Z
+                              children: q
                                 ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format(
                                     {
                                       planName: (0, I.getTierDisplayName)(
@@ -27166,7 +27200,7 @@
                                 }),
                                 (0, l.jsx)("div", {
                                   className: R.premiumPromoDescription,
-                                  children: Z
+                                  children: q
                                     ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format(
                                         {
                                           planName: (0, I.getTierDisplayName)(
@@ -27184,7 +27218,7 @@
                             }),
                         !K &&
                           (0, l.jsx)(C.default, {
-                            subscriptionTier: Z
+                            subscriptionTier: q
                               ? x.PremiumSubscriptionSKUs.TIER_0
                               : x.PremiumSubscriptionSKUs.TIER_2,
                             submitting: w,
@@ -27202,12 +27236,12 @@
                             },
                             buttonText: (() => {
                               if (K)
-                                return Z
+                                return q
                                   ? O.default.Messages
                                       .PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT
                                   : O.default.Messages
                                       .PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
-                              return Z
+                              return q
                                 ? O.default.Messages.PREMIUM_SETTINGS_GET_TIER_0
                                 : O.default.Messages.PREMIUM_REQUIRED_GET_NITRO;
                             })(),
@@ -27722,8 +27756,8 @@
             channel: Y,
             type: z,
             position: J,
-            align: q,
-            positionLayerClassName: Z,
+            align: Z,
+            positionLayerClassName: q,
             closeOnModalOuterClick: X = !1,
             parentModalKey: Q,
             customUploadFilters: $,
@@ -27733,7 +27767,7 @@
           en = i.useRef(),
           el = i.useRef(null),
           ei =
-            "left" === q
+            "left" === Z
               ? E.ResizeOrientation.HORIZONTAL_RIGHT
               : E.ResizeOrientation.HORIZONTAL_LEFT,
           { drawerWidth: ea, handleDrawerResizeHandleMouseDown: es } = B({
@@ -27871,11 +27905,11 @@
               ? void 0
               : a.onlyEmojis) &&
             (eg || eS),
-          eT = "left" === q ? "right" : "left",
+          eT = "left" === Z ? "right" : "left",
           ev =
-            null != Z
-              ? Z
-              : "left" === q
+            null != q
+              ? q
+              : "left" === Z
                 ? w.positionLayerDefaultAlignLeft
                 : w.positionLayerDefaultAlignRight;
         return (0, l.jsx)(h.default, {
@@ -27884,7 +27918,7 @@
             className: s(w.positionLayer, ev),
             reference: r,
             position: J,
-            align: q,
+            align: Z,
             spacing: 8,
             autoInvert: !0,
             children: e => {
@@ -27899,7 +27933,7 @@
                 children: t
                   ? (0, l.jsxs)("div", {
                       className: w.drawerSizingWrapper,
-                      style: { width: null == ea ? void 0 : ea, [q]: 0 },
+                      style: { width: null == ea ? void 0 : ea, [Z]: 0 },
                       ref: el,
                       children: [
                         (0, l.jsx)("div", {
@@ -28265,8 +28299,8 @@
           }),
           {
             getItemProps: J,
-            getRowProps: q,
-            gridContainerProps: Z,
+            getRowProps: Z,
+            gridContainerProps: q,
             handleGridContainerKeyDown: X,
             isUsingKeyboardNavigation: Q,
           } = (0, s.useKeyboardNavigation)({
@@ -28282,7 +28316,7 @@
               let t = V[e];
               return S(
                 t,
-                q(e),
+                Z(e),
                 {
                   isUsingKeyboardNavigation: Q.current,
                   gutterWidth: z,
@@ -28292,7 +28326,7 @@
                 t => c.setInspectedExpressionPosition(t, e)
               );
             },
-            [V, J, q, z, Q, S, c]
+            [V, J, Z, z, Q, S, c]
           ),
           ee = i.useCallback(e => (null == C ? void 0 : C(t[e])), [t, C]),
           et = i.useCallback(e => (null == T ? void 0 : T(t[e], e)), [t, T]),
@@ -28354,7 +28388,7 @@
                       ref: D,
                       className: u.listWrapper,
                       id: b,
-                      ...Z,
+                      ...q,
                       children:
                         null != H
                           ? (0, l.jsx)(r.default, {
@@ -29427,7 +29461,7 @@
           [V, K] = s.useState(""),
           [W, Y] = s.useState(""),
           [z, J] = s.useState(!1),
-          [q, Z] = s.useState(!1),
+          [Z, q] = s.useState(!1),
           X = (0, R.useStickerSuggestionResults)(V, j, l),
           { analyticsLocations: Q, AnalyticsLocationProvider: $ } = (0,
           h.default)(m.default.EXPRESSION_SUGGESTIONS),
@@ -29435,7 +29469,7 @@
           R.useTextChangeHandler)({
             setTextInputValue: K,
             setHasDismissed: U,
-            setHasSelection: Z,
+            setHasSelection: q,
             setFocusedSuggestionType: x,
           });
         s.useEffect(() => {
@@ -29444,7 +29478,7 @@
             },
             t = e => {
               let t = "" !== e && null != e;
-              if ((Z(t), t)) {
+              if ((q(t), t)) {
                 var l;
                 x(null), null === (l = n.current) || void 0 === l || l.focus();
               }
@@ -29478,7 +29512,7 @@
           });
         }, [i]);
         let ei = X.length > 0,
-          ea = en && !B && !z && !j && !q && ei,
+          ea = en && !B && !z && !j && !Z && ei,
           { stickersNavigator: es } = (function (e) {
             let {
                 editorRef: t,
@@ -30166,7 +30200,7 @@
             })
           : (0, l.jsx)(S.default, { muteConfig: t, className: n });
       }
-      function q(e) {
+      function Z(e) {
         var t, n, a;
         let { guild: r } = e,
           d = r.id,
@@ -30264,12 +30298,12 @@
                 .flatMap(e => Array.from(e.userIds)),
             [d]
           ),
-          q = (0, u.useStateFromStoresArray)(
+          Z = (0, u.useStateFromStoresArray)(
             [O.default],
             () => Y.map(e => O.default.getUser(e)),
             [Y]
           ),
-          Z = (0, u.useStateFromStoresArray)(
+          q = (0, u.useStateFromStoresArray)(
             [O.default],
             () => L.map(e => O.default.getUser(e)),
             [L]
@@ -30308,10 +30342,10 @@
                 })),
           $ = z(
             k.default,
-            Z.filter(e => null != e && !Y.includes(e.id)),
+            q.filter(e => null != e && !Y.includes(e.id)),
             d
           ),
-          ee = z(j.default, q, d),
+          ee = z(j.default, Z, d),
           { isMuted: et, muteConfig: en } = (0, u.useStateFromStoresObject)(
             [x.default],
             () => ({
@@ -30341,7 +30375,7 @@
           })
         );
       }
-      function Z(e) {
+      function q(e) {
         let { guildJoinRequestStatus: t } = e;
         return (0, l.jsx)(c.Text, {
           className: V.viewAsRolesWarning,
@@ -30369,8 +30403,8 @@
         let { guild: t, includeActivity: n = !0 } = e,
           i = (0, p.default)(t),
           a = (0, h.useCurrentUserGuildBadgeStatus)(t.id),
-          r = null != a ? (0, l.jsx)(Z, { guildJoinRequestStatus: a }) : null,
-          o = n ? (0, l.jsx)(q, { guild: t }) : null,
+          r = null != a ? (0, l.jsx)(q, { guildJoinRequestStatus: a }) : null,
+          o = n ? (0, l.jsx)(Z, { guild: t }) : null,
           d = (0, u.useStateFromStores)([g.default], () =>
             g.default.isViewingRoles(t.id)
           ),
@@ -32584,10 +32618,10 @@
             ...K
           } = e,
           { soundId: W, name: Y, emojiId: z, emojiName: J } = P,
-          q = (0, o.useStateFromStores)([h.default], () =>
+          Z = (0, o.useStateFromStores)([h.default], () =>
             h.default.getCurrentUser()
           ),
-          Z = (0, N.useSoundButtonContextMenu)(
+          q = (0, N.useSoundButtonContextMenu)(
             P,
             null == b ? void 0 : b.guild_id
           ),
@@ -32626,7 +32660,7 @@
           eo = "sound-".concat(P.soundId),
           eu = (0, r.useListItem)(eo),
           ed = null != z || null != J,
-          ec = !(0, y.canUseSoundboardSound)(q, P, b),
+          ec = !(0, y.canUseSoundboardSound)(Z, P, b),
           ef = D || (w && !ec);
         function ep(e) {
           e.stopPropagation(),
@@ -32717,7 +32751,7 @@
                   }
                   F || X(H);
                 },
-                onContextMenu: w && !ec ? Z : void 0,
+                onContextMenu: w && !ec ? q : void 0,
                 children: [
                   (0, l.jsxs)("div", {
                     className: R.soundInfo,
@@ -33407,15 +33441,15 @@
               null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : ""
             );
           }),
-          q =
+          Z =
             (null == J ? void 0 : J.selfDeaf) ||
             (null == J ? void 0 : J.mute) ||
             (null == J ? void 0 : J.suppress),
-          Z = (0, h.useExpressionPickerStore)(e => e.searchQuery),
+          q = (0, h.useExpressionPickerStore)(e => e.searchQuery),
           X = (0, T.useUID)(),
           { categories: Q } = (0, L.default)(a, void 0, P),
           [$, ee] = i.useState([]),
-          et = (0, L.useSearchCategories)(Q, $, Z),
+          et = (0, L.useSearchCategories)(Q, $, q),
           en = g.SoundboardPickerCollapsedSections.useSetting(),
           el = i.useMemo(() => new Set(en), [en]),
           ei = null == a,
@@ -33474,7 +33508,7 @@
                   onSelectItem: eo,
                   soundButtonProps: {
                     channel: a,
-                    interactive: ei ? ea : !q,
+                    interactive: ei ? ea : !Z,
                     forceSecondaryActions: ei,
                     analyticsLocations: b,
                   },
@@ -33482,7 +33516,7 @@
                 },
                 "row-".concat(t["aria-rowindex"])
               ),
-            [eo, a, q, p, b, ei, ea, _]
+            [eo, a, Z, p, b, ei, ea, _]
           ),
           ed = i.useCallback(
             (e, t) => {
@@ -34408,8 +34442,8 @@
         J = (0, y.cssValueToNumber)(
           u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING
         ),
-        q = Y + 2 * J,
-        Z = z + 2 * J,
+        Z = Y + 2 * J,
+        q = z + 2 * J,
         X = s(x.trackStickerSearchEmpty, 200),
         Q = s(x.trackStickerSearchResultsViewed, 200),
         $ = i.forwardRef(function (e, t) {
@@ -34492,7 +34526,7 @@
               listWidth: eu,
               listPaddingRight: V,
               stickerNodeMargin: ev ? K : W,
-              stickerNodeWidth: ev ? q : Z,
+              stickerNodeWidth: ev ? Z : q,
             }),
             ex = i.useCallback(
               (e, t) => {
@@ -35402,10 +35436,10 @@
         J = (0, N.cssValueToNumber)(
           r.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT
         ),
-        q = (0, N.cssValueToNumber)(
+        Z = (0, N.cssValueToNumber)(
           r.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT
         ),
-        Z = (0, N.cssValueToNumber)(
+        q = (0, N.cssValueToNumber)(
           r.default
             .EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT
         ),
@@ -35721,10 +35755,10 @@
                 if (null != I) {
                   let { sendable: t, sendableWithPremium: n } = I;
                   if (0 === e && t.length > 0) return 0;
-                  let l = t.length > 0 && n.length > 0 ? q : 0;
-                  return Z + l;
+                  let l = t.length > 0 && n.length > 0 ? Z : 0;
+                  return q + l;
                 }
-                return Z;
+                return q;
               },
               [I]
             ),
@@ -37578,10 +37612,10 @@
           { AnalyticsLocationProvider: J } = (0, E.default)(
             h.default.PROFILE_POPOUT
           ),
-          q = (0, r.useStateFromStores)([v.default], () =>
+          Z = (0, r.useStateFromStores)([v.default], () =>
             null != n ? v.default.getGuild(n) : null
           ),
-          Z = (0, r.useStateFromStores)([T.default], () =>
+          q = (0, r.useStateFromStores)([T.default], () =>
             null != n ? T.default.getMember(n, t.id) : null
           ),
           X = t.isNonUserBot(),
@@ -37631,7 +37665,7 @@
             if (!el)
               ((null == Q ? void 0 : Q.application_id) == null || null != ed) &&
                 (null == n ||
-                  (null == Z ? void 0 : Z.fullProfileLoadedTimestamp) !=
+                  (null == q ? void 0 : q.fullProfileLoadedTimestamp) !=
                     null) &&
                 ((function () {
                   var e;
@@ -37649,12 +37683,12 @@
                       ? k.AnalyticsUserStatusTypes.ONLINE_MOBILE
                       : k.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
                   let o =
-                      null != Z
+                      null != q
                         ? {
-                            has_nickname: !!(null == Z ? void 0 : Z.nick),
-                            has_guild_member_avatar: !!(null == Z
+                            has_nickname: !!(null == q ? void 0 : q.nick),
+                            has_guild_member_avatar: !!(null == q
                               ? void 0
-                              : Z.avatar),
+                              : q.avatar),
                             has_guild_member_banner: !!(null == W
                               ? void 0
                               : W.isUsingGuildMemberBanner()),
@@ -37712,7 +37746,7 @@
                   });
                 })(),
                 ei(!0));
-          }, [Z, null == Q ? void 0 : Q.application_id, ed, el, n]),
+          }, [q, null == Q ? void 0 : Q.application_id, ed, el, n]),
           (0, l.jsx)(J, {
             children: (0, l.jsx)(u.default, {
               section: k.AnalyticsSections.PROFILE_POPOUT,
@@ -37760,8 +37794,8 @@
                           customStatusActivity: $,
                           displayProfile: W,
                           user: t,
-                          guild: q,
-                          guildMember: Z,
+                          guild: Z,
+                          guildMember: q,
                           channelId: a,
                           onClose: y,
                           setNote: s,
@@ -37795,7 +37829,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return q;
+            return Z;
           },
         }),
         n("222007");
@@ -37845,11 +37879,11 @@
         Y = n("956330"),
         z = n("477691"),
         J = n("398664");
-      function q(e) {
+      function Z(e) {
         var t, n, a;
         let {
-            activity: q,
-            customStatusActivity: Z,
+            activity: Z,
+            customStatusActivity: q,
             user: X,
             displayProfile: Q,
             guild: $,
@@ -37956,7 +37990,7 @@
               children: [
                 (0, l.jsx)(U.default, {
                   className: Y.customStatusSection,
-                  customStatusActivity: Z,
+                  customStatusActivity: q,
                 }),
                 (0, l.jsx)(x.default, { className: Y.divider }),
                 X.isClyde() && ey && null != $
@@ -38064,7 +38098,7 @@
                                 color: z.buttonColor,
                               }),
                             (0, l.jsx)(R.default, {
-                              activity: q,
+                              activity: Z,
                               user: X,
                               guild: $,
                               channelId: et,
@@ -46066,4 +46100,4 @@
     },
   },
 ]);
-//# sourceMappingURL=64003.7ef73223f281497e3d0f.js.map
+//# sourceMappingURL=64003.fe0d877b2bbec374b453.js.map

@@ -4984,6 +4984,8 @@
           "experiment_guild_triggered_fallback"),
         (es.EXPERIMENT_DM_TRIGGERED = "experiment_dm_triggered"),
         (es.EXPERIMENT_CUSTOM_EVENT = "experiment_custom_event"),
+        (es.EXPERIMENT_SAVE_EXPOSURE_FAILED =
+          "experiment_save_exposure_failed"),
         (es.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED =
           "guild_insights_settings_cta_clicked"),
         (es.GUILD_SETTINGS_DISCOVERY_VIEWED =
@@ -11904,6 +11906,7 @@
       ((z = P || (P = {})).EXPERIMENT_USER_TRIGGERED =
         "experiment_user_triggered"),
         (z.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
+        (z.EXPERIMENT_SAVE_EXPOSURE_FAILED = "experiment_save_exposure_failed"),
         (z.MKTG_PAGE_VIEWED = "mktg_page_viewed"),
         (z.CLICK_LANDING_CTA = "click_landing_cta"),
         (z.DOWNLOAD_APP = "download_app"),
@@ -17216,4 +17219,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.42105912bc02e2f8d037.js.map
+//# sourceMappingURL=7273.80a68fd3a6eeee2122f0.js.map

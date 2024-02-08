@@ -7031,11 +7031,19 @@
           a.setSize({ w: o.canvasWidth, h: o.canvasHeight });
           let { color: s, theme: r } = (0, u.getProfileInfo)(n, "black");
           a.setColor(s),
-            a.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth }, !0),
+            a.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             a.setColor(
               "dark" === r ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"
             ),
-            a.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth }, !0),
+            a.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             (null === (l = t.assets) || void 0 === l
               ? void 0
               : l.large_image) != null
@@ -7083,11 +7091,19 @@
           i.setSize({ w: o.canvasWidth, h: o.canvasHeight });
           let { color: a, theme: s } = (0, u.getProfileInfo)(n, "black");
           i.setColor(a),
-            i.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth }, !0),
+            i.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             i.setColor(
               "dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"
             ),
-            i.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth }, !0),
+            i.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             (null === (l = i.assetMap) || void 0 === l
               ? void 0
               : l.has(o.AssetTypes.AssetImage)) &&
@@ -7126,11 +7142,19 @@
             ),
             { color: d, theme: c } = (0, u.getProfileInfo)(n, "black");
           l.setColor(d),
-            l.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: 320 }, !0),
+            l.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             l.setColor(
               "dark" === c ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"
             ),
-            l.drawRect({ x: 0, y: 0, h: o.canvasHeight, w: 320 }, !0),
+            l.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
             null != s &&
               l.drawImage(
                 o.AssetTypes.AssetImage,
@@ -7158,26 +7182,35 @@
         },
         m = (e, t, n) => {
           var l;
-          e.canvas.setSize({ w: 450, h: 300 });
-          let { color: i, theme: a } = (0, u.getProfileInfo)(n, "black");
-          e.canvas.setColor(i),
-            e.canvas.drawRect({ x: 0, y: 0, h: 300, w: 450 }, !0),
-            e.canvas.setColor(
-              "dark" === a ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"
+          let { canvas: i } = e;
+          i.setSize({ w: 450, h: 300 });
+          let { color: a, theme: s } = (0, u.getProfileInfo)(n, "black");
+          i.setColor(a),
+            i.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
             ),
-            e.canvas.drawRect({ x: 0, y: 0, h: 300, w: 450 }, !0),
-            (null === (l = e.canvas.assetMap) || void 0 === l
+            i.setColor(
+              "dark" === s ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.7)"
+            ),
+            i.drawRoundedRect(
+              { x: 0, y: 0, h: o.canvasHeight, w: o.canvasWidth },
+              8,
+              !0
+            ),
+            (null === (l = i.assetMap) || void 0 === l
               ? void 0
               : l.has(o.AssetTypes.StreamPreview)) &&
-              e.canvas.drawImage(
+              i.drawImage(
                 o.AssetTypes.StreamPreview,
                 { x: 8, y: 54 },
                 { w: 240, h: 180 }
               ),
-            e.canvas.setColor("dark" === a ? "white" : "rgb(6, 6, 7)"),
-            e.canvas.setFont({ size: 16 }),
-            e.canvas.drawText("".concat(n.username), { x: 8, y: 22 }, !0),
-            e.canvas.drawText("".concat(t.name), { x: 8, y: 38 }, !0);
+            i.setColor("dark" === s ? "white" : "rgb(6, 6, 7)"),
+            i.setFont({ size: 16 }),
+            i.drawText("".concat(n.username), { x: 8, y: 22 }, !0),
+            i.drawText("".concat(t.name), { x: 8, y: 38 }, !0);
         };
       var h = e => {
         var t;
@@ -7807,6 +7840,22 @@
             t
               ? this.context.fillRect(n, l, i, a)
               : this.context.strokeRect(n, l, i, a);
+        }
+        drawRoundedRect(e) {
+          let t =
+              arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : 0,
+            n =
+              !(arguments.length > 2) ||
+              void 0 === arguments[2] ||
+              arguments[2];
+          if (null == this.context) return;
+          let { x: l, y: i, w: a, h: s } = e;
+          this.setContextProperties(),
+            this.context.beginPath(),
+            this.context.roundRect(l, i, a, s, t),
+            n ? this.context.fill() : this.context.stroke();
         }
         drawText(e, t, n) {
           null != this.context &&
@@ -45975,4 +46024,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31415.f963a58cf09f8c74acbc.js.map
+//# sourceMappingURL=31415.2bd93a2bb8c55a6f395f.js.map

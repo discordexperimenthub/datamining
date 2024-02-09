@@ -38111,8 +38111,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -60048,6 +60048,10 @@ input::-webkit-inner-spin-button {
 }
 .theme-light .panel_bd8c76 {
   background: var(--bg-overlay-3, var(--background-secondary-alt));
+}
+.channel_fa3b45:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 .userList_a7e652 {
   position: relative;
@@ -107963,4 +107967,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.52ef3ad09a2099de9d50.css.map*/
+/*# sourceMappingURL=app.adcc9f308a4bc716ffc4.css.map*/

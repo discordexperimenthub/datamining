@@ -49262,6 +49262,9 @@
           getOverlayGameStatus: function () {
             return en;
           },
+          isDetectionEnabled: function () {
+            return ei;
+          },
           transformForGameSettings: function () {
             return es;
           },
@@ -49891,7 +49894,12 @@
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
           let { game: t } = e,
             n = ei(t);
-          (j.enableDetection[ee(t)] = !n), er();
+          (j.enableDetection[ee(t)] = !n),
+            er(),
+            T.default.track(
+              y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE,
+              { enabled: !n }
+            );
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
           let t = ee(e.game),
@@ -60009,7 +60017,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265153",
+                  build_number: "265157",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78638,4 +78646,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.03aba39bb8ad59f0dee6.js.map
+//# sourceMappingURL=41039.fcc350ea0e5219e7d7cf.js.map

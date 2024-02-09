@@ -34376,6 +34376,7 @@
             instanceId: l,
           })),
           null != A &&
+            i === A.channelId &&
             !f.some(e => e === I) &&
             Array.from(A.userIds).some(e => e === I) &&
             (S.get(i) === a ? S.delete(i) : y.delete(a));
@@ -76667,4 +76668,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.11fd142a04f3af3f58b9.js.map
+//# sourceMappingURL=23356.ce4fb05891051d5853af.js.map

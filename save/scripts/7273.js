@@ -2832,6 +2832,8 @@
             "/channels/".concat(_, "/polls/").concat(E, "/answers/@me"),
           POLL_EXPIRE: (_, E) =>
             "/channels/".concat(_, "/messages/").concat(E, "/expire"),
+          POLL_ANSWER_VOTERS: (_, E, I) =>
+            "/channels/".concat(_, "/polls/").concat(E, "/answers/").concat(I),
           PREMIUM_MARKETING: "/premium-marketing",
           QUESTS_CURRENT_QUESTS: "/quests/@me",
           QUESTS_ENROLL: _ => "/quests/".concat(_, "/enroll"),
@@ -4389,6 +4391,7 @@
         (ea.VOICE_PANEL_CLOSE = "VOICE_PANEL_CLOSE"),
         (ea.VOICE_PANEL_TIV_CLOSE = "VOICE_PANEL_TIV_CLOSE"),
         (ea.VOICE_PANEL_PIP_CONTENT_READY = "VOICE_PANEL_PIP_CONTENT_READY"),
+        (ea.VOICE_PANEL_OPEN_BG_PICKER = "VOICE_PANEL_OPEN_BG_PICKER"),
         (ea.MANUAL_IFRAME_RESIZING = "MANUAL_IFRAME_RESIZING"),
         (ea.NAVIGATOR_READY = "NAVIGATOR_READY"),
         ((eo = _u || (_u = {})).TOGGLE_REACTION_POPOUT =
@@ -4981,6 +4984,8 @@
           "experiment_guild_triggered_fallback"),
         (es.EXPERIMENT_DM_TRIGGERED = "experiment_dm_triggered"),
         (es.EXPERIMENT_CUSTOM_EVENT = "experiment_custom_event"),
+        (es.EXPERIMENT_SAVE_EXPOSURE_FAILED =
+          "experiment_save_exposure_failed"),
         (es.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED =
           "guild_insights_settings_cta_clicked"),
         (es.GUILD_SETTINGS_DISCOVERY_VIEWED =
@@ -5143,6 +5148,8 @@
           "premium_application_subscription_manage_cta_clicked"),
         (es.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED =
           "channel_attach_menu_use_apps_clicked"),
+        (es.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED =
+          "channel_attach_menu_start_activity_clicked"),
         (es.APP_LAUNCHER_SEARCH_QUERY_TYPED =
           "app_launcher_search_query_typed"),
         (es.COMMANDS_MIGRATION_TOOLTIP_DISMISSED =
@@ -9708,6 +9715,13 @@
             [a.MIDNIGHT]: { raw: "PLUM_20", opacity: 0.5 },
             [a.DARKER]: { raw: "PLUM_20", opacity: 0.5 },
           },
+          VOICE_VIDEO_VIDEO_TILE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.LIGHT]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.MIDNIGHT]: { raw: "PLUM_17", opacity: 0.4 },
+            [a.DARKER]: { raw: "PLUM_17", opacity: 0.4 },
+          },
           VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK: {
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_700", opacity: 0.48 },
@@ -11892,6 +11906,7 @@
       ((z = P || (P = {})).EXPERIMENT_USER_TRIGGERED =
         "experiment_user_triggered"),
         (z.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
+        (z.EXPERIMENT_SAVE_EXPOSURE_FAILED = "experiment_save_exposure_failed"),
         (z.MKTG_PAGE_VIEWED = "mktg_page_viewed"),
         (z.CLICK_LANDING_CTA = "click_landing_cta"),
         (z.DOWNLOAD_APP = "download_app"),
@@ -14023,6 +14038,8 @@
         (e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND =
           "user-profile-header-overflow-background"),
         (e.VOICE_VIDEO_TILE_BLUR_FALLBACK = "voice-video-tile-blur-fallback"),
+        (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND =
+          "voice-video-video-tile-background"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
           "voice-video-video-tile-blur-fallback"),
         (e.WHITE = "white");
@@ -15875,6 +15892,12 @@
           o.Color.PLUM_20,
           o.Color.PLUM_20,
         ],
+        "voice-video-video-tile-background": [
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+          o.Color.PLUM_17,
+        ],
         "voice-video-video-tile-blur-fallback": [
           o.Color.PRIMARY_700,
           o.Color.PRIMARY_700,
@@ -17196,4 +17219,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.5e5c4a69d8974bebf7c7.js.map
+//# sourceMappingURL=7273.80a68fd3a6eeee2122f0.js.map

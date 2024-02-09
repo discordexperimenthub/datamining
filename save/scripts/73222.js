@@ -1264,8 +1264,10 @@
           "$[](userHook) started an activity",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
           "$[](userHook) started an **$[activity](activityHook)**",
-        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_MOBILE:
+        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_MOBILE_CANNOT_LAUNCH:
           "[!!{username}!!](usernameOnClick) started an activity",
+        APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_MOBILE:
+          "[!!{username}!!](usernameOnClick) started an [activity](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} started an activity",
         KRUNKER_STRIKE_COACHMARK_TITLE: "Updated! Krunker Strike FRVR",
@@ -23966,6 +23968,10 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} to a friend for {minutes} minutes",
+        QUEST_REWARD_VERIFICATION_TITLE:
+          "Verify your account to claim the reward",
+        QUEST_REWARD_VERIFICATION_ERROR:
+          "Uh oh! We failed to send you a new verification email: {message}",
         QUEST_REWARD: "Win {reward}",
         QUESTS_REWARD_CODE_HEADER: "Your reward code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
@@ -25900,8 +25906,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265082", ", Version Hash: ")
-          .concat("7d5386206aa6b6010bde3e25c63c9d685722c1d4")
+          .concat("265106", ", Version Hash: ")
+          .concat("7eea020d08acd26688688d58075e480a17eb0b3d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28912,12 +28918,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265082"), "265082"));
+        let _ = parseInt(((e = "265106"), "265106"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265082"
+                "265106"
               )
             ),
             (_ = 0)),
@@ -50971,4 +50977,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.1b5ca8d7bb00832a948b.js.map
+//# sourceMappingURL=73222.393dcb78cc9a2367b90f.js.map

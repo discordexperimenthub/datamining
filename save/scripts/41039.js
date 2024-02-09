@@ -23720,6 +23720,7 @@
             [R.EmbeddedActivitySupportedPlatforms.ANDROID]: ei,
           },
           has_csp_exception: !1,
+          displays_advertisements: !1,
         },
         es = [
           N.ChannelTypes.GUILD_TEXT,
@@ -60017,7 +60018,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265187",
+                  build_number: "265195",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78646,4 +78647,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.5b48f456f8d4f3b203d0.js.map
+//# sourceMappingURL=41039.349d24d83f8507f06e4e.js.map

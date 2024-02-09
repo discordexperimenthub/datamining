@@ -6435,8 +6435,6 @@
           "This will allow the developer of !!{application}!! to:",
         OAUTH2_SCOPES_LABEL_TRUSTED_NAME:
           "This will allow !!{application}!! to:",
-        OAUTH2_SCOPES_IP_LOCATION_SCOPE:
-          "Developer may see your IP address while you use this application.",
         OAUTH2_REQUESTS_ACCOUNT_ACCESS: "wants to access your Discord account",
         OAUTH2_SIGNED_IN_AS: "Signed in as $[](userHook)",
         OAUTH2_THIRD_PARTY_APPLICATION: "An external application",
@@ -6538,6 +6536,10 @@
           "This OAuth2 scope is not supported within the app yet.\nGood news though, it does work on your mobile web browser! So please open it there.",
         OAUTH2_GO_TO_SERVER_NAME_CTA: "Go to **!!{guildName}!!**",
         OAUTH2_GO_TO_SERVER_DEFAULT_CTA: "Go to Server",
+        OAUTH2_IP_LOCATION_DISCLOSURE:
+          "Developer may see your IP address while you use this application.",
+        OAUTH2_ADVERTISEMENTS_DISCLOSURE:
+          "Developer may show ads while you use this application.",
         SETTINGS_TWO_FA: "Multi-Factor Authentication",
         TWO_FA: "Authenticator App",
         TWO_FA_DESCRIPTION:
@@ -25907,8 +25909,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265187", ", Version Hash: ")
-          .concat("5d2214be647128b973f373dbe17750efa8e44bee")
+          .concat("265195", ", Version Hash: ")
+          .concat("7ee7e529963451ae5de7ec1f97a1a654280cd481")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28919,12 +28921,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265187"), "265187"));
+        let _ = parseInt(((e = "265195"), "265195"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265187"
+                "265195"
               )
             ),
             (_ = 0)),
@@ -50978,4 +50980,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.fb77445fb0410615dba5.js.map
+//# sourceMappingURL=73222.0a8fe5899ccbff964ad3.js.map

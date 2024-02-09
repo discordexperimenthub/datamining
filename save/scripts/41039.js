@@ -28376,6 +28376,7 @@
         "EMOJI_BUTTON_MOUSE_ENTERED"),
         (c.EmojiButtonFocused = "EMOJI_BUTTON_FOCUSED"),
         (c.ChatInputExpressionPressed = "CHAT_INPUT_EXPRESSION_PRESSED"),
+        (c.ChatInputSuggestionsShown = "CHAT_INPUT_SUGGESTIONS_SHOWN"),
         (c.SearchEmojiKeybindPressed = "SEARCH_EMOJI_KEYBIND_PRESSED"),
         (c.AutocompleteTyped = "AUTOCOMPLETE_TYPED"),
         (c.AutocompleteWrapperShown = "AUTOCOMPLETE_WRAPPER_SHOWN"),
@@ -60010,7 +60011,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265285",
+                  build_number: "265292",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78639,4 +78640,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.bbb5d3b08f229b1af996.js.map
+//# sourceMappingURL=41039.1a00f6388eafbcfcfff5.js.map

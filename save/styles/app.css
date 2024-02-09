@@ -18589,6 +18589,8 @@ input[type="checked"]:focus-visible + .label__8e2ef {
   align-items: center;
   justify-content: center;
   margin-top: -12px;
+  overflow: hidden;
+  pointer-events: all;
 }
 .hangStatusIcon__8597e {
   width: 32px;
@@ -107961,4 +107963,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.d82a3d02ca7708dde1e0.css.map*/
+/*# sourceMappingURL=app.f9c7ddd7fb0b2ace25d7.css.map*/

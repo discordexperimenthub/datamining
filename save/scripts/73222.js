@@ -11762,6 +11762,8 @@
           "{hours, plural, =-1 {} other {{hours}:}}{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}} left",
         USER_ACTIVITY_TIMESTAMP_START:
           "{hours, plural, =-1 {} other {{hours}:}}{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}} elapsed",
+        USER_ACTIVITY_USER_PLAYING_FOR_SECONDS:
+          "for {time, number} {time, plural, =1 {second} other {seconds}}",
         USER_ACTIVITY_USER_PLAYING_FOR_MINUTES:
           "for {time, number} {time, plural, =1 {minute} other {minutes}}",
         USER_ACTIVITY_USER_PLAYING_FOR_HOURS:
@@ -16191,6 +16193,7 @@
         TIMEOUT_USER: "Timeout",
         GUILD_COMMUNICATION_DISABLED_ON_MEMBER: "Timed Out",
         GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER: "Timed Out",
+        GUILD_COMMUNICATION_DISABLED_REMOVED: "Removed",
         GUILD_COMMUNICATION_DISABLED_DURATION: "DURATION",
         GUILD_COMMUNICATION_DISABLED_REASON: "REASON",
         GUILD_COMMUNICATION_DISABLED_REASON_HINT_ANDROID: "Enter a reason.",
@@ -18530,6 +18533,11 @@
           "AutoMod timed out $[**!!{target}!!**](targetHook) for a message posted in $[**!!{channel}!!**](channelHook)",
         GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE:
           "AutoMod Block Message",
+        GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_FLAG_TO_CHANNEL:
+          "AutoMod Flagged",
+        GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_TIMEOUT: "AutoMod Timeout",
+        GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_QUARANTINE:
+          "AutoMod Quarantine",
         GUILD_AUTOMOD_POST_TO_CHANNEL_RULE_NAME: "Rule: {ruleName}",
         GUILD_AUTOMOD_POST_TO_CHANNEL_KEYWORD: "Keyword: {keyword}",
         GUILD_AUTOMOD_POST_TO_CHANNEL_TIMEOUT_DURATION: "Timeout: {duration}",
@@ -18904,6 +18912,16 @@
         GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE: "Discord Join Date",
         GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE: "Server Join Date",
         GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE: "Server Activity",
+        GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_CONTEXT: "Roles Added",
+        GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED_CONTEXT: "Roles Removed",
+        GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED_CONTEXT: "Roles Modified",
+        GUILD_MEMBER_MOD_VIEW_ROLES_ADDED: "(Added) {roleNames}",
+        GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED: "(Removed) {roleNames}",
+        GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED:
+          "(Added) {roleNamesAdded}\n(Removed) {roleNamesRemoved}",
+        GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG: "Moderator Action Log",
+        GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
+          "Member who initiated this action.",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE:
           "Show Members In Channel List",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION:
@@ -25794,8 +25812,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265257", ", Version Hash: ")
-          .concat("5280ad5967c5a88cc4e19caaab9bb3ebb919b263")
+          .concat("265261", ", Version Hash: ")
+          .concat("f50c3f94ba1653d3eb3ae1941a3b292b352f0586")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28802,12 +28820,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265257"), "265257"));
+        let _ = parseInt(((e = "265261"), "265261"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265257"
+                "265261"
               )
             ),
             (_ = 0)),
@@ -50830,4 +50848,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.a4179d2be49eb83c1335.js.map
+//# sourceMappingURL=73222.d716333c668bce90a964.js.map

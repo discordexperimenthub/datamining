@@ -1756,7 +1756,6 @@
               .concat(I, "/", 1),
           USER_ACTIVITY_STATISTICS:
             "/users/@me/activities/statistics/applications",
-          USER_CLYDE_CONSENT: "/users/@me/clyde-consent",
           APPLICATION_ACTIVITY_STATISTICS: _ =>
             "/activities/statistics/applications/".concat(_),
           ACTIVITIES: "/activities",
@@ -1787,8 +1786,6 @@
               .concat(E, "/avatars/")
               .concat(I, ".")
               .concat(e),
-          CLYDE_PROFILES_AVATAR: (_, E, I) =>
-            "/clyde-profiles/".concat(_, "/avatars/").concat(E, ".").concat(I),
           SET_GUILD_MEMBER: _ => "/guilds/".concat(_, "/members/@me"),
           GUILD_JOIN: _ => "/guilds/".concat(_, "/members/@me"),
           GUILD_LEAVE: _ => "/users/@me/guilds/".concat(_),
@@ -1969,16 +1966,6 @@
               .concat(E, "/banners/")
               .concat(I, ".")
               .concat(e);
-          },
-          CLYDE_PROFILES_BANNER: function (_, E) {
-            let I =
-              arguments.length > 2 && void 0 !== arguments[2]
-                ? arguments[2]
-                : "png";
-            return "/clyde-profiles/"
-              .concat(_, "/banners/")
-              .concat(E, ".")
-              .concat(I);
           },
           MESSAGES: _ => "/channels/".concat(_, "/messages"),
           MESSAGES_GREET: _ => "/channels/".concat(_, "/greet"),
@@ -2593,8 +2580,6 @@
               .concat(E, "/trial"),
           GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES: _ =>
             "/guilds/".concat(_, "/role-subscriptions/templates"),
-          GUILD_CLYDE_SETTINGS: _ => "/guilds/".concat(_, "/clyde-settings"),
-          GUILD_CLYDE_ADD_MEMBER: _ => "/guilds/".concat(_, "/members/clyde"),
           CREATOR_MONETIZATION_ENABLE_REQUESTS: _ =>
             "/guilds/".concat(_, "/creator-monetization/enable-requests"),
           CREATOR_MONETIZATION_ELIGIBILITY: _ =>
@@ -2824,10 +2809,6 @@
             "/channels/".concat(_, "/explicit-media"),
           EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES:
             "/messages/explicit-media",
-          CLYDE_PROFILES: _ => "/clyde-profiles/".concat(_),
-          CLYDE_PROFILES_CREATE: _ => "/guilds/".concat(_, "/clyde-profiles"),
-          CLYDE_PROFILES_GENERATE_PERSONALITY:
-            "/clyde-profiles/generate-personality",
           POLL_ANSWERS: (_, E) =>
             "/channels/".concat(_, "/polls/").concat(E, "/answers/@me"),
           POLL_EXPIRE: (_, E) =>
@@ -3468,9 +3449,6 @@
         ] = "CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED"),
         (Iz[(Iz.HARMFUL_LINK_MESSAGE_BLOCKED = 24e4)] =
           "HARMFUL_LINK_MESSAGE_BLOCKED"),
-        (Iz[(Iz.CLYDE_CONSENT_REQUIRED = 31e4)] = "CLYDE_CONSENT_REQUIRED"),
-        (Iz[(Iz.CLYDE_UNSAFE_PERSONALITY = 310003)] =
-          "CLYDE_UNSAFE_PERSONALITY"),
         (Iz[(Iz.USER_LIMITED_ACCESS_DEFAULT = 34e4)] =
           "USER_LIMITED_ACCESS_DEFAULT"),
         (Iz[(Iz.USER_FRIEND_REQUEST_LIMITED_ACCESS = 340007)] =
@@ -4284,8 +4262,6 @@
         (I9.GUILD_ONBOARDING_UPSELL_NOTICE = "Guild Onboarding Upsell Notice"),
         (I9.CLIPS_EDUCATION = "Clips Education Channel Notice"),
         (I9.LINKED_ROLES_ADMIN_NUX = "Linked Roles Admin Nux Channel Notice"),
-        (I9.CLYDE_ADMIN_NUX_NOTICE = "Clyde Admin Nux Notice"),
-        (I9.CLYDE_USER_NUX_NOTICE = "Clyde User Nux Notice"),
         (I9.SUMMARIES_NOTICE = "Summaries Channel Notice"),
         (I9.SUMMARIES_ENABLED_NOTICE = "Summaries Enabled Notice"),
         ((e_ = _P || (_P = {})).APPLICATION = "Application"),
@@ -5593,21 +5569,6 @@
         (es.SHARE_NITRO_FLOW_STEPS = "share_nitro_flow_steps"),
         (es.CACHE_STORE_CACHE_SKIPPED = "cache_store_cache_skipped"),
         (es.GATEWAY_SOCKET_RESET = "gateway_socket_reset"),
-        (es.CLYDE_NUX_NOTICE_MANAGE_SETTINGS_CTA_CLICKED =
-          "clyde_nux_notice_manage_settings_cta_clicked"),
-        (es.CLYDE_AI_MESSAGE_RATED = "clyde_ai_message_rated"),
-        (es.CLYDE_AI_THOUGHTS_VIEWED = "clyde_ai_thoughts_viewed"),
-        (es.CLYDE_AI_PRESET_PERSONALITY_SELECTED =
-          "clyde_ai_preset_personality_selected"),
-        (es.CLYDE_AI_PROFILE_UPDATE_FAILED = "clyde_ai_profile_update_failed"),
-        (es.CLYDE_AI_PROFILE_MODAL_RESET_BUTTON_CLICKED =
-          "clyde_ai_profile_modal_reset_button_clicked"),
-        (es.CLYDE_AI_SHARE_LINK_COPIED = "clyde_ai_share_link_copied"),
-        (es.CLYDE_AI_SHARE_LINK_SENT = "clyde_ai_share_link_sent"),
-        (es.CLYDE_AI_SHARED_PROFILE_APPLIED =
-          "clyde_ai_shared_profile_applied"),
-        (es.CLYDE_AI_GENERATE_PERSONALITY_CLICKED =
-          "clyde_ai_generate_personality_clicked"),
         (es.APPLE_PARTNER_IAP_REQUEST_SENT = "apple_partner_iap_request_sent"),
         (es.POMELO_ERRORS = "pomelo_errors"),
         (es.POMELO_EDIT_STEP_VIEWED = "pomelo_edit_step_viewed"),
@@ -5741,11 +5702,8 @@
         (eU.GUILD_ONBOARDING_UPSELL = "GUILD_ONBOARDING_UPSELL"),
         (eU.CLIPS_EDUCATION = "CLIPS_EDUCATION"),
         (eU.LINKED_ROLES_ADMIN = "LINKED_ROLES_ADMIN"),
-        (eU.CLYDE_ADMIN_NUX = "CLYDE_ADMIN_NUX"),
-        (eU.CLYDE_USER_NUX = "CLYDE_USER_NUX"),
         (eU.SUMMARIES = "SUMMARIES"),
-        (eU.SUMMARIES_ENABLED = "SUMMARIES_ENABLED"),
-        (eU.CLYDE_PERSONALITIES_NUX = "CLYDE_PERSONALITIES_NUX");
+        (eU.SUMMARIES_ENABLED = "SUMMARIES_ENABLED");
       let RR = Object.freeze({
           STORAGE_MANIFEST: (_, E) =>
             "".concat(_, "/storage/").concat(E, "/MANIFEST"),
@@ -5892,7 +5850,6 @@
         (ef.GUILD_SOUNDBOARD = "GUILD_SOUNDBOARD"),
         (ef.HOME_SETTINGS = "HOME_SETTINGS"),
         (ef.VOICE_CHANNEL_STATUS = "VOICE_CHANNEL_STATUS"),
-        (ef.CLYDE_AI = "CLYDE_AI"),
         ((eh = _1 || (_1 = {})).NAME = "name"),
         (eh.DESCRIPTION = "description"),
         (eh.ICON_HASH = "icon_hash"),
@@ -17221,4 +17178,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.9c51ad29530bdefc97e7.js.map
+//# sourceMappingURL=7273.4911754bdac63930073c.js.map

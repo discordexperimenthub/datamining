@@ -26139,28 +26139,6 @@
         return a.default.isPremiumAtLeast(e.premiumType, l.PremiumTypes.TIER_2);
       }
     },
-    965068: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return i;
-          },
-        });
-      var i = (0, n("862205").createExperiment)({
-        kind: "user",
-        id: "2024-02_clips_quality_decoupling",
-        label: "Clips quality decoupling",
-        defaultConfig: { allowQualityDecoupling: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Enable Clips quality decoupling",
-            config: { allowQualityDecoupling: !0 },
-          },
-        ],
-      });
-    },
     386045: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -28569,10 +28547,10 @@
       n.r(t),
         n.d(t, {
           registerExperiment: function () {
-            return ei;
+            return ee;
           },
           default: function () {
-            return el;
+            return es;
           },
         }),
         n("702976"),
@@ -28587,64 +28565,62 @@
         l = n.n(o),
         u = n("95410"),
         c = n("355025"),
-        d = n("605250"),
-        f = n("271938"),
-        E = n("455079"),
-        p = n("599110"),
-        h = n("316805"),
-        _ = n("565034"),
-        S = n("49111");
-      let m = "scientist:triggered",
-        T = "exerimentOverrides",
-        g = "userExperimentOverrides",
-        I = "guildExperimentOverrides",
-        C = new d.default("ExperimentStore"),
-        v = !1,
-        A = {},
-        R = {},
-        N = [],
-        O = [],
+        d = n("271938"),
+        f = n("455079"),
+        E = n("599110"),
+        p = n("316805"),
+        h = n("565034"),
+        _ = n("49111");
+      let S = "scientist:triggered",
+        m = "exerimentOverrides",
+        T = "userExperimentOverrides",
+        g = "guildExperimentOverrides",
+        I = !1,
+        C = {},
+        v = {},
+        A = [],
+        R = [],
+        N = {},
+        O = {},
         D = {},
         y = {},
         P = {},
-        L = {},
-        b = {},
-        M = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL,
-        U = {};
-      function G(e) {
-        let t = U[e];
+        L = "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL,
+        b = {};
+      function M(e) {
+        let t = b[e];
         if (void 0 !== t) return t;
         {
           let t = l.v3(e);
-          return (U[e] = t), t;
+          return (b[e] = t), t;
         }
       }
-      let w = _.TriggerDebuggingAAExperiments.map(e => G(e)),
-        k = {
+      let U = h.TriggerDebuggingAAExperiments.map(e => M(e)),
+        G = {
           title: "Unnamed Experiment",
           description: "No description provided",
         };
-      function x(e, t) {
-        return e || w.includes(t);
+      function w(e, t) {
+        return e || U.includes(t);
       }
-      function F(e) {
+      function k(e) {
         var t;
         return (
           ((null !== (t = e.flags) && void 0 !== t ? t : 0) &
-            S.UserFlags.STAFF) ===
-            S.UserFlags.STAFF ||
+            _.UserFlags.STAFF) ===
+            _.UserFlags.STAFF ||
           null != e.personal_connection_id ||
           !1
         );
       }
-      function V(e, t, n, i) {
+      function x(e, t, n, i) {
         let r = "".concat(t.type, "|").concat(e),
           s = t.triggerDebuggingEnabled && void 0 !== n && n.length > 0;
-        if (t.type === _.ExperimentTypes.USER)
+        if (t.type === h.ExperimentTypes.USER)
           return (
             s && ((r += "|".concat(n)), i && (r += "|triggerDebugging")), r
           );
-        if (t.type === _.ExperimentTypes.GUILD)
+        if (t.type === h.ExperimentTypes.GUILD)
           return (
             (r += "|".concat(t.guildId)),
             s && ((r += "|".concat(n)), i && (r += "|triggerDebugging")),
@@ -28652,23 +28628,23 @@
           );
         throw Error();
       }
-      function B(e) {
-        if (e.type === _.ExperimentTypes.USER)
-          return G("".concat(e.bucket, "|").concat(e.revision));
-        if (e.type === _.ExperimentTypes.GUILD)
-          return G(
+      function F(e) {
+        if (e.type === h.ExperimentTypes.USER)
+          return M("".concat(e.bucket, "|").concat(e.revision));
+        if (e.type === h.ExperimentTypes.GUILD)
+          return M(
             "".concat(e.bucket, "|").concat(e.revision, "|").concat(e.guildId)
           );
         throw Error();
       }
-      let H = Date.now();
-      function j(e, t, n, i) {
-        let r = A[V(e, t, n, i)];
+      let V = Date.now();
+      function B(e, t, n, i) {
+        let r = C[x(e, t, n, i)];
         if (null == r) return !1;
         let s = Date.now() - r.time > 6048e5;
-        return !s && r.hash === B(t);
+        return !s && r.hash === F(t);
       }
-      function Y(e) {
+      function H(e) {
         let {
           experimentId: t,
           descriptor: n,
@@ -28681,10 +28657,10 @@
         } = e;
         if (n.override) return !1;
         let u =
-            l === _.ExposureTypes.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
-          c = j(t, n, i, u);
+            l === h.ExposureTypes.AUTO_FALLBACK && !!n.triggerDebuggingEnabled,
+          c = B(t, n, i, u);
         if (c) return !1;
-        if (n.type === _.ExperimentTypes.USER) {
+        if (n.type === h.ExperimentTypes.USER) {
           let e = {
             name: t,
             revision: n.revision,
@@ -28698,14 +28674,14 @@
           };
           null != s && (e.context_guild_id = s.guildId);
           let c = u
-            ? S.AnalyticEvents.EXPERIMENT_USER_TRIGGERED_FALLBACK
-            : S.AnalyticEvents.EXPERIMENT_USER_TRIGGERED;
-          p.default.track(c, e, { flush: !0, fingerprint: a });
-        } else if (n.type === _.ExperimentTypes.GUILD) {
+            ? _.AnalyticEvents.EXPERIMENT_USER_TRIGGERED_FALLBACK
+            : _.AnalyticEvents.EXPERIMENT_USER_TRIGGERED;
+          E.default.track(c, e, { flush: !0, fingerprint: a });
+        } else if (n.type === h.ExperimentTypes.GUILD) {
           let e = u
-            ? S.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED_FALLBACK
-            : S.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED;
-          p.default.track(
+            ? _.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED_FALLBACK
+            : _.AnalyticEvents.EXPERIMENT_GUILD_TRIGGERED;
+          E.default.track(
             e,
             {
               name: t,
@@ -28721,13 +28697,13 @@
             { flush: !0, fingerprint: a }
           );
         }
-        (A[V(t, n, i, u)] = { time: Date.now(), hash: B(n) }), en(A);
+        (C[x(t, n, i, u)] = { time: Date.now(), hash: F(n) }), $(C);
       }
-      function W(e) {
+      function j(e) {
         let [t, n] = e;
-        return null != h.GUILD_FILTERS[t] ? (0, h.GUILD_FILTERS)[t](n) : null;
+        return null != p.GUILD_FILTERS[t] ? (0, p.GUILD_FILTERS)[t](n) : null;
       }
-      function K(e) {
+      function Y(e) {
         let [t, n] = e;
         return {
           buckets: t.map(e => {
@@ -28740,28 +28716,28 @@
               }),
             };
           }),
-          filters: n.map(W),
+          filters: n.map(j),
           rawFilterData: n,
         };
       }
-      function z(e) {
-        !M && "CONNECTION_OPEN" === e.type && F(e.user) && (M = !0),
-          (D = {}),
-          (y = {}),
-          (P = {});
+      function W(e) {
+        !L && "CONNECTION_OPEN" === e.type && k(e.user) && (L = !0),
+          (N = {}),
+          (O = {}),
+          (D = {});
         let t =
             "CONNECTION_OPEN" === e.type ||
             null == e.fingerprint ||
-            e.fingerprint === f.default.getFingerprint(),
+            e.fingerprint === d.default.getFingerprint(),
           { experiments: n, guildExperiments: i } = e;
-        t && q(n, i), (v = !0);
+        t && K(n, i), (I = !0);
       }
-      function q(e, t) {
-        (N = e),
-          (O = null != t ? t : []),
+      function K(e, t) {
+        (A = e),
+          (R = null != t ? t : []),
           e.forEach(e => {
             let [t, n, i, r, s, a, o, l] = e;
-            D[t] = {
+            N[t] = {
               type: "user",
               revision: n,
               population: s,
@@ -28769,31 +28745,31 @@
               override: 0 === r,
               hashResult: null != a ? a : -1,
               aaMode: 1 === o,
-              triggerDebuggingEnabled: x(1 === l, t),
+              triggerDebuggingEnabled: w(1 === l, t),
             };
           }),
           null != t &&
             t.forEach(e => {
               let [t, n, i, r, s, a, o, l, u, c] = e;
-              y[t] = {
+              O[t] = {
                 hashKey: n,
                 revision: i,
-                populations: r.map(K),
+                populations: r.map(Y),
                 overrides: (function (e) {
                   let t = {};
                   if (null == e) return t;
                   for (let { b: n, k: i } of e) for (let e of i) t[e] = n;
                   return t;
                 })(s),
-                overridesFormatted: (null != a ? a : []).map(e => e.map(K)),
+                overridesFormatted: (null != a ? a : []).map(e => e.map(Y)),
                 holdoutName: null != o ? o : null,
                 holdoutBucket: null != l ? l : null,
                 aaMode: 1 === u,
-                triggerDebuggingEnabled: x(1 === c, t),
+                triggerDebuggingEnabled: w(1 === c, t),
               };
             });
       }
-      function X(e, t, n) {
+      function z(e, t, n) {
         let i = null;
         for (let { buckets: s, filters: a } of t) {
           var r = !0;
@@ -28813,100 +28789,63 @@
             });
           });
           if (
-            (i = null != t ? t.bucket : _.ExperimentBuckets.CONTROL) ===
-            _.ExperimentBuckets.NOT_ELIGIBLE
+            (i = null != t ? t.bucket : h.ExperimentBuckets.CONTROL) ===
+            h.ExperimentBuckets.NOT_ELIGIBLE
           )
             break;
           return i;
         }
         return null;
       }
-      function Q(e) {
+      function q(e) {
         let t = {};
         for (let i in e) {
           var n;
           let r = e[i];
           for (let e of ((t[i] = { ...r }), t[i].populations))
-            e.filters = e.rawFilterData.map(W);
+            e.filters = e.rawFilterData.map(j);
           for (let e of null !== (n = t[i].overridesFormatted) && void 0 !== n
             ? n
             : [])
-            for (let t of e) t.filters = t.rawFilterData.map(W);
+            for (let t of e) t.filters = t.rawFilterData.map(j);
         }
         return t;
       }
-      function Z(e) {
+      function X(e) {
         let { serializedExperimentStore: t, user: n } = e;
-        !M && F(n) && (M = !0),
-          (v = t.hasLoadedExperiments),
-          (A = t.trackedExposureExperiments),
-          (D = t.loadedUserExperiments),
-          (L = t.userExperimentOverrides),
-          (b = t.guildExperimentOverrides),
-          (y = Q(t.loadedGuildExperiments)),
-          (P = {});
+        !L && k(n) && (L = !0),
+          (I = t.hasLoadedExperiments),
+          (C = t.trackedExposureExperiments),
+          (N = t.loadedUserExperiments),
+          (y = t.userExperimentOverrides),
+          (P = t.guildExperimentOverrides),
+          (O = q(t.loadedGuildExperiments)),
+          (D = {});
+      }
+      function Q() {
+        I = !0;
+      }
+      function Z(e) {
+        let { isSwitchingAccount: t } = e;
+        u.default.remove(S),
+          !t &&
+            (u.default.remove(m),
+            u.default.remove(T),
+            u.default.remove(g),
+            (y = {}),
+            (P = {})),
+          (N = {}),
+          (A = []),
+          (C = {}),
+          (I = !1);
       }
       function J() {
-        v = !0;
+        (I = !1), (C = {}), u.default.remove(S);
       }
       function $(e) {
-        let { isSwitchingAccount: t } = e;
-        u.default.remove(m),
-          !t &&
-            (u.default.remove(T),
-            u.default.remove(g),
-            u.default.remove(I),
-            (L = {}),
-            (b = {})),
-          (D = {}),
-          (N = []),
-          (A = {}),
-          (v = !1);
+        u.default.set(S, { v: 1, e: e });
       }
-      function ee() {
-        (v = !1), (A = {}), u.default.remove(m);
-      }
-      function et() {
-        try {
-          u.default.set(g, L);
-        } catch (e) {
-          C.error(
-            "Error saving user experiment overrides, unsaved data will be lost",
-            e
-          ),
-            p.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
-              module: "discord_app",
-              call: "ExperimentStore.saveExperimentOverrides",
-            });
-        }
-        try {
-          u.default.set(I, b);
-        } catch (e) {
-          C.error(
-            "Error saving guild experiment overrides, unsaved data will be lost",
-            e
-          ),
-            p.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
-              module: "discord_app",
-              call: "ExperimentStore.saveExperimentOverrides",
-            });
-        }
-      }
-      function en(e) {
-        try {
-          u.default.set(m, { v: 1, e: e });
-        } catch (e) {
-          C.error(
-            "Error saving tracked exposure experiments, unsaved data will be lost",
-            e
-          ),
-            p.default.track(S.AnalyticEvents.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
-              module: "discord_app",
-              call: "ExperimentStore.saveTrackedExposureExperiments",
-            });
-        }
-      }
-      function ei(e) {
+      function ee(e) {
         let {
           experimentId: t,
           experimentType: n,
@@ -28914,9 +28853,9 @@
           description: r,
           buckets: s,
         } = e;
-        R = { ...R, [t]: { type: n, title: i, description: r, buckets: s } };
+        v = { ...v, [t]: { type: n, title: i, description: r, buckets: s } };
       }
-      function er(e) {
+      function et(e) {
         let t,
           n,
           { store: i, renderFunctions: s } = e,
@@ -28926,30 +28865,30 @@
           throw Error(
             "Experiment Store must have a static getExperimentId method defined"
           );
-        let o = "function" == typeof i.getMetaData ? i.getMetaData() : k;
+        let o = "function" == typeof i.getMetaData ? i.getMetaData() : G;
         Object.keys(s).forEach(e => {
-          if (e === _.ExperimentTypes.NONE_LEGACY) return;
+          if (e === h.ExperimentTypes.NONE_LEGACY) return;
           r(null != s[e], "Unexpected missing renderFunctions"), (t = e);
           let i = Object.keys(s[e]).map(e => parseInt(e));
           n = i;
         }),
-          ei({
+          ee({
             experimentId: a,
-            experimentType: null != t ? t : _.ExperimentTypes.USER,
+            experimentType: null != t ? t : h.ExperimentTypes.USER,
             title: o.title,
             description: o.description,
             buckets: null != n ? n : [],
           });
       }
-      function es(e) {
+      function en(e) {
         let { experimentId: t, experimentBucket: n } = e,
-          i = R[t];
+          i = v[t];
         if (null == i) return !1;
         for (let e of (null == n
-          ? ((L = { ...L }), delete L[t], (b = { ...b }), delete b[t])
+          ? ((y = { ...y }), delete y[t], (P = { ...P }), delete P[t])
           : "user" === i.type
-            ? (L = {
-                ...L,
+            ? (y = {
+                ...y,
                 [t]: {
                   type: i.type,
                   revision: 1,
@@ -28958,115 +28897,115 @@
                   override: !0,
                 },
               })
-            : (b = {
-                ...b,
+            : (P = {
+                ...P,
                 [t]: { type: i.type, revision: 1, bucket: n, override: !0 },
               }),
-        [L, b]))
-          for (let t in e) null == R[t] && delete L[t];
-        et();
+        [y, P]))
+          for (let t in e) null == v[t] && delete y[t];
+        u.default.set(T, y), u.default.set(g, P);
       }
-      function ea(e) {
+      function ei(e) {
         let { guild: t } = e;
-        for (let e in P) {
+        for (let e in D) {
           let [n] = e.split(":");
-          t.id === n && delete P[e];
+          t.id === n && delete D[e];
         }
       }
-      class eo extends E.default {
+      class er extends f.default {
         initialize() {
-          (A = (function () {
-            let e = u.default.get(m);
+          (C = (function () {
+            let e = u.default.get(S);
             if (null == e || 1 !== e.v) return {};
             let t = e.e,
               n = Date.now(),
               i = !1;
             for (let e in t) n - t[e].time > 6048e5 && (delete t[e], (i = !0));
-            return i && en(t), t;
+            return i && $(t), t;
           })()),
             !(function () {
               var e, t, n;
               let i = [
-                null !== (e = u.default.get(T)) && void 0 !== e ? e : {},
-                null !== (t = u.default.get(g)) && void 0 !== t ? t : {},
-                null !== (n = u.default.get(I)) && void 0 !== n ? n : {},
+                null !== (e = u.default.get(m)) && void 0 !== e ? e : {},
+                null !== (t = u.default.get(T)) && void 0 !== t ? t : {},
+                null !== (n = u.default.get(g)) && void 0 !== n ? n : {},
               ];
-              (L = {}), (b = {});
+              (y = {}), (P = {});
               let r = !a.isEmpty(i[0]);
               for (let e of i)
                 for (let t in e) {
                   let n = e[t];
                   null == n ||
-                  (n.type !== _.ExperimentTypes.USER &&
-                    n.type !== _.ExperimentTypes.GUILD) ||
+                  (n.type !== h.ExperimentTypes.USER &&
+                    n.type !== h.ExperimentTypes.GUILD) ||
                   null == n.bucket ||
                   !0 !== n.override ||
                   n.fromCookie
                     ? (delete e[t], (r = !0))
-                    : n.type === _.ExperimentTypes.USER
-                      ? (L[t] = n)
-                      : (b[t] = n);
+                    : n.type === h.ExperimentTypes.USER
+                      ? (y[t] = n)
+                      : (P[t] = n);
                 }
               let s = (0, c.getBuildOverrideExperiments)();
               for (let e in s)
-                (L[e] = {
-                  type: _.ExperimentTypes.USER,
+                (y[e] = {
+                  type: h.ExperimentTypes.USER,
                   revision: 1,
                   population: 0,
                   override: !0,
                   fromCookie: !0,
                   bucket: s[e],
                 }),
-                  (b[e] = {
-                    type: _.ExperimentTypes.GUILD,
+                  (P[e] = {
+                    type: h.ExperimentTypes.GUILD,
                     revision: 1,
                     override: !0,
                     fromCookie: !0,
                     bucket: s[e],
                   }),
                   (r = !0);
-              r && et();
+              r && (u.default.set(T, y), u.default.set(g, P));
             })();
         }
         takeSnapshot() {
           return {
-            version: eo.LATEST_SNAPSHOT_VERSION,
-            data: { rawUserExperiments: N, rawGuildExperiments: O },
+            version: er.LATEST_SNAPSHOT_VERSION,
+            data: { rawUserExperiments: A, rawGuildExperiments: R },
           };
         }
         get hasLoadedExperiments() {
-          return v;
+          return I;
         }
         hasRegisteredExperiment(e) {
-          return null != R[e];
+          return null != v[e];
         }
         getUserExperimentDescriptor(e) {
-          if (M) {
-            let t = L[e];
+          if (L) {
+            let t = y[e];
             if (null != t) return t;
           }
-          let t = G(e);
-          return D["".concat(t)];
+          let t = M(e);
+          return N["".concat(t)];
         }
         getGuildExperimentDescriptor(e, t) {
           let n = null != t ? t : "",
-            i = b[e];
-          if (M && null != i) return i;
+            i = P[e];
+          if (L && null != i) return i;
           let r = "".concat(n, ":").concat(e);
-          if (r in P) return P[r];
+          if (r in D) return D[r];
           let s = (function e(t, n) {
             var i, r;
-            let s = G(n),
-              a = y["".concat(s)];
+            let s = M(n),
+              a = O["".concat(s)];
             if (null == a) return null;
             let { revision: o, aaMode: l } = a,
               u = a.overrides[t],
               c = a.triggerDebuggingEnabled;
             if (null != u)
-              return u === _.ExperimentBuckets.NOT_ELIGIBLE
+              return u === h.ExperimentBuckets.NOT_ELIGIBLE
                 ? null
                 : {
-                    type: _.ExperimentTypes.GUILD,
+                    type: h.ExperimentTypes.GUILD,
                     guildId: t,
                     revision: o,
                     bucket: u,
@@ -29077,14 +29016,14 @@
             let d = ""
                 .concat(null !== (i = a.hashKey) && void 0 !== i ? i : n, ":")
                 .concat(t),
-              f = G(d),
+              f = M(d),
               E = f % 1e4,
               p = null,
-              h = null !== (r = a.overridesFormatted) && void 0 !== r ? r : [];
-            for (let e of h)
-              if (null !== (p = X(t, e, E)))
+              _ = null !== (r = a.overridesFormatted) && void 0 !== r ? r : [];
+            for (let e of _)
+              if (null !== (p = z(t, e, E)))
                 return {
-                  type: _.ExperimentTypes.GUILD,
+                  type: h.ExperimentTypes.GUILD,
                   guildId: t,
                   revision: a.revision,
                   bucket: p,
@@ -29092,7 +29031,7 @@
                   hashResult: E,
                   triggerDebuggingEnabled: c,
                 };
-            if (null == (p = X(t, a.populations, E))) return null;
+            if (null == (p = z(t, a.populations, E))) return null;
             if (
               null != a.holdoutName &&
               null != a.holdoutBucket &&
@@ -29102,13 +29041,13 @@
               if (
                 (null == n ? void 0 : n.bucket) != null &&
                 (!0 !== n.override &&
-                  Y({ experimentId: a.holdoutName, descriptor: n }),
+                  H({ experimentId: a.holdoutName, descriptor: n }),
                 (null == n ? void 0 : n.bucket) === a.holdoutBucket)
               )
                 return null;
             }
             return {
-              type: _.ExperimentTypes.GUILD,
+              type: h.ExperimentTypes.GUILD,
               guildId: t,
               revision: a.revision,
               bucket: p,
@@ -29117,31 +29056,31 @@
               triggerDebuggingEnabled: c,
             };
           })(n, e);
-          return (P[r] = s), s;
+          return (D[r] = s), s;
         }
         getUserExperimentBucket(e) {
           let t = this.getUserExperimentDescriptor(e);
-          return null != t ? t.bucket : _.ExperimentBuckets.NOT_ELIGIBLE;
+          return null != t ? t.bucket : h.ExperimentBuckets.NOT_ELIGIBLE;
         }
         getGuildExperimentBucket(e, t) {
           let n = this.getGuildExperimentDescriptor(e, t);
-          return null != n ? n.bucket : _.ExperimentBuckets.NOT_ELIGIBLE;
+          return null != n ? n.bucket : h.ExperimentBuckets.NOT_ELIGIBLE;
         }
         getAllUserExperimentDescriptors() {
-          return D;
+          return N;
         }
         getGuildExperiments() {
-          return y;
+          return O;
         }
         getLoadedUserExperiment(e) {
-          return D[G(e)];
+          return N[M(e)];
         }
         getLoadedGuildExperiment(e) {
-          return y[G(e)];
+          return O[M(e)];
         }
         getRecentExposures(e, t) {
           let n = "".concat(e, "|").concat(t, "|");
-          return Object.entries(A)
+          return Object.entries(C)
             .filter(e => {
               let [t] = e;
               return t.startsWith(n);
@@ -29152,77 +29091,77 @@
             });
         }
         getRegisteredExperiments() {
-          return R;
+          return v;
         }
         getAllExperimentOverrideDescriptors() {
-          return M ? { ...L, ...b } : {};
+          return L ? { ...y, ...P } : {};
         }
         getExperimentOverrideDescriptor(e) {
           var t;
-          return M ? (null !== (t = L[e]) && void 0 !== t ? t : b[e]) : null;
+          return L ? (null !== (t = y[e]) && void 0 !== t ? t : P[e]) : null;
         }
         getAllExperimentAssignments() {
           let e = {},
             t = {};
-          for (let n in (Object.keys(R).forEach(e => {
-            t[G("".concat(e))] = e;
+          for (let n in (Object.keys(v).forEach(e => {
+            t[M("".concat(e))] = e;
           }),
-          D)) {
+          N)) {
             let i = t[n];
-            null != i && (e[i] = D[n].bucket);
+            null != i && (e[i] = N[n].bucket);
           }
-          for (let t in P) {
-            let n = P[t];
+          for (let t in D) {
+            let n = D[t];
             null != n && (e[t] = n.bucket);
           }
           return e;
         }
         getSerializedState() {
           let e = {};
-          for (let t in y)
-            for (let n of ((e[t] = JSON.parse(JSON.stringify(y[t]))),
+          for (let t in O)
+            for (let n of ((e[t] = JSON.parse(JSON.stringify(O[t]))),
             e[t].populations))
               n.filters = [];
           return {
-            hasLoadedExperiments: v,
-            trackedExposureExperiments: A,
-            loadedUserExperiments: D,
+            hasLoadedExperiments: I,
+            trackedExposureExperiments: C,
+            loadedUserExperiments: N,
             loadedGuildExperiments: e,
-            userExperimentOverrides: L,
-            guildExperimentOverrides: b,
+            userExperimentOverrides: y,
+            guildExperimentOverrides: P,
           };
         }
         hasExperimentTrackedExposure(e, t, n, i) {
-          return j(e, t, n, i);
+          return B(e, t, n, i);
         }
         constructor() {
           super(),
-            (this.trackExposure = Y),
+            (this.trackExposure = H),
             (this.loadCache = () => {
-              let e = this.readSnapshot(eo.LATEST_SNAPSHOT_VERSION);
+              let e = this.readSnapshot(er.LATEST_SNAPSHOT_VERSION);
               null != e &&
                 ("loadedUserExperiments" in e
-                  ? ((D = e.loadedUserExperiments),
-                    (y = Q(e.loadedGuildExperiments)))
-                  : q(e.rawUserExperiments, e.rawGuildExperiments));
+                  ? ((N = e.loadedUserExperiments),
+                    (O = q(e.loadedGuildExperiments)))
+                  : K(e.rawUserExperiments, e.rawGuildExperiments));
             }),
             this.registerActionHandlers({
-              LOGOUT: $,
-              LOGIN_SUCCESS: ee,
-              CONNECTION_OPEN: z,
-              EXPERIMENTS_FETCH_SUCCESS: z,
-              OVERLAY_INITIALIZE: Z,
+              LOGOUT: Z,
+              LOGIN_SUCCESS: J,
+              CONNECTION_OPEN: W,
+              EXPERIMENTS_FETCH_SUCCESS: W,
+              OVERLAY_INITIALIZE: X,
               CACHE_LOADED: this.loadCache,
-              EXPERIMENTS_FETCH_FAILURE: J,
-              EXPERIMENT_REGISTER_LEGACY: er,
-              EXPERIMENT_OVERRIDE_BUCKET: es,
-              GUILD_CREATE: ea,
-              GUILD_UPDATE: ea,
+              EXPERIMENTS_FETCH_FAILURE: Q,
+              EXPERIMENT_REGISTER_LEGACY: et,
+              EXPERIMENT_OVERRIDE_BUCKET: en,
+              GUILD_CREATE: ei,
+              GUILD_UPDATE: ei,
             });
         }
       }
-      (eo.displayName = "ExperimentStore"), (eo.LATEST_SNAPSHOT_VERSION = 1);
-      var el = new eo();
+      (er.displayName = "ExperimentStore"), (er.LATEST_SNAPSHOT_VERSION = 1);
+      var es = new er();
     },
     316805: function (e, t, n) {
       "use strict";
@@ -34062,6 +34001,28 @@
         ],
       });
     },
+    636243: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return i;
+          },
+        });
+      var i = (0, n("862205").createExperiment)({
+        kind: "user",
+        id: "2024-01_h265_desktop_decode",
+        label: "H.265 Desktop Decode",
+        defaultConfig: { signalH265DesktopDecode: !1 },
+        treatments: [
+          {
+            id: 1,
+            label: "Desktop H.265 Decode",
+            config: { signalH265DesktopDecode: !0 },
+          },
+        ],
+      });
+    },
     705500: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -34373,25 +34334,6 @@
                 canSupportMls: !0,
               },
             },
-            {
-              id: 6,
-              label: "Can support secure frames above protocol version 10",
-              config: {
-                protocolVersionFloor: 10,
-                canSupportSecureFrames: !0,
-                canSupportMls: !1,
-              },
-            },
-            {
-              id: 7,
-              label:
-                "Can support secure frames above protocol version 110 (MLS)",
-              config: {
-                protocolVersionFloor: 10,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
-              },
-            },
           ],
         }),
         s = (0, i.createExperiment)({
@@ -34448,25 +34390,6 @@
                 "Can support secure frames above protocol version 109 (MLS)",
               config: {
                 protocolVersionFloor: 9,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
-              },
-            },
-            {
-              id: 6,
-              label: "Can support secure frames above protocol version 10",
-              config: {
-                protocolVersionFloor: 10,
-                canSupportSecureFrames: !0,
-                canSupportMls: !1,
-              },
-            },
-            {
-              id: 7,
-              label:
-                "Can support secure frames above protocol version 110 (MLS)",
-              config: {
-                protocolVersionFloor: 10,
                 canSupportSecureFrames: !0,
                 canSupportMls: !0,
               },
@@ -45841,15 +45764,15 @@
         I = n("913144"),
         C = n("49671"),
         v = n("6193"),
-        A = n("965068"),
-        R = n("386045"),
-        N = n("18346"),
-        O = n("605250"),
-        D = n("808122"),
-        y = n("733589"),
-        P = n("933034"),
-        L = n("746800"),
-        b = n("584687"),
+        A = n("386045"),
+        R = n("18346"),
+        N = n("605250"),
+        O = n("808122"),
+        D = n("733589"),
+        y = n("933034"),
+        P = n("746800"),
+        L = n("584687"),
+        b = n("636243"),
         M = n("705500"),
         U = n("238847"),
         G = n("981699"),
@@ -45890,7 +45813,7 @@
         e_ = n("397336"),
         eS = n("353927"),
         em = n("782340");
-      let eT = new O.default("MediaEngineStore");
+      let eT = new N.default("MediaEngineStore");
       ((u = o || (o = {}))[(u.DETACHED = 0)] = "DETACHED"),
         (u[(u.WAITING = 1)] = "WAITING"),
         (u[(u.ATTACHED = 2)] = "ATTACHED"),
@@ -46000,7 +45923,7 @@
         e1 = {},
         e2 = {},
         e4 = 5 * $.default.Millis.SECOND;
-      function e6() {
+      function e3() {
         let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
@@ -46008,8 +45931,8 @@
           t = eA[e];
         return null == t && ((t = eC()), (eA[e] = t)), t;
       }
-      function e3(e) {
-        let t = e6(e.context);
+      function e6(e) {
+        let t = e3(e.context);
         e.setInputMode(t.mode, {
           vadThreshold: t.modeOptions.threshold,
           vadAutoThreshold: t.modeOptions.autoThreshold,
@@ -46031,7 +45954,7 @@
         return p.clamp(e, 0, t);
       }
       function e7(e) {
-        let t = e6(e.context),
+        let t = e3(e.context),
           n = !eN || t.mute || t.deaf;
         e.context === eS.MediaEngineContextTypes.DEFAULT &&
           (n =
@@ -46078,7 +46001,7 @@
             ev.setGoLiveSource(null, eD),
           (ew || r) &&
             ((ek = (ew = r)
-              ? tl(eL, e6().videoDeviceId)
+              ? tl(eL, e3().videoDeviceId)
               : eS.DISABLED_DEVICE_ID),
             ev.setVideoInputDevice(ek)),
           (s = a),
@@ -46097,7 +46020,7 @@
                 { location: "f627ab_2" },
                 { autoTrackExposure: !1 }
               ),
-              r = e6().videoHook,
+              r = e3().videoHook,
               s = ev.supports(eS.Features.CAPTURE_TIMEOUT_EXPERIMENTS),
               { videoHookStaleFrameTimeoutMs: o } = H.default.getConfig(
                 s && r,
@@ -46156,11 +46079,11 @@
               soundshare_failure_code: t,
               soundshare_failure_reason: n,
               soundshare_failure_will_retry: i,
-              ...(0, P.default)(e),
+              ...(0, y.default)(e),
             });
       }
       function te(e) {
-        let t = e6(),
+        let t = e3(),
           n = t.inputDeviceId;
         if (
           (e.setEchoCancellation(
@@ -46227,7 +46150,7 @@
             }));
         }
         update() {
-          let e = e6();
+          let e = e3();
           !eH &&
           ec.default.getState() === eE.RTCConnectionStates.RTC_CONNECTED &&
           e.mode === eE.InputModes.VOICE_ACTIVITY &&
@@ -46268,7 +46191,7 @@
               : eS.MediaEngineContextTypes.DEFAULT,
           n =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-          i = e6(t);
+          i = e3(t);
         return (
           Object.assign(i, e), !__OVERLAY__ && n && T.default.set(eg, eA), i
         );
@@ -46321,7 +46244,7 @@
                 ? eS.DEFAULT_STREAM_VOLUME
                 : eS.DEFAULT_VOLUME,
             a = null !== (t = i[e]) && void 0 !== t ? t : {},
-            { localMutes: o, localVolumes: l } = e6(r);
+            { localMutes: o, localVolumes: l } = e3(r);
           for (let [e, t] of Object.entries(a))
             null == (0, X.getPendingAudioSettings)(r, e) &&
               (t.muted ? (o[e] = !0) : delete o[e],
@@ -46373,7 +46296,7 @@
           });
       }
       function tf(e) {
-        let t = e6();
+        let t = e3();
         Z.default.track(eE.AnalyticEvents.VOICE_PROCESSING, {
           echo_cancellation: t.echoCancellation,
           noise_cancellation: t.noiseCancellation,
@@ -46383,7 +46306,7 @@
         });
       }
       function tE() {
-        let e = e6(),
+        let e = e3(),
           t = e.inputDeviceId,
           n = ea.default.hasEchoCancellation(t) || e.echoCancellation,
           i = ea.default.hasNoiseSuppression(t) || e.noiseSuppression,
@@ -46458,8 +46381,8 @@
               { location: "f627ab_3" },
               { autoTrackExposure: !1 }
             );
-            t > 0 && ev.setMaxSyncDelayOverride(t), e3(e), e7(e), te(e);
-            let n = e6();
+            t > 0 && ev.setMaxSyncDelayOverride(t), e6(e), e7(e), te(e);
+            let n = e3();
             e.setAttenuation(
               n.attenuation,
               n.attenuateWhileSpeakingSelf,
@@ -46478,25 +46401,29 @@
                 !0
               );
             {
-              (0, ee.isWindows)() &&
+              let { signalH265DesktopDecode: t } = b.default.getCurrentConfig(
+                { location: "MediaEngineStore_setupMediaEngine" },
+                { autoTrackExposure: !0 }
+              );
+              t &&
                 e.setExperimentFlag(
                   eS.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT,
                   !0
                 );
-              let { signalH265SupportMacOS: t } = M.default.getCurrentConfig(
+              let { signalH265SupportMacOS: n } = M.default.getCurrentConfig(
                 { location: "f627ab_8" },
-                { autoTrackExposure: !0 }
-              );
-              t &&
-                e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
-              let { signalH265SupportNvenc: n } = U.default.getCurrentConfig(
-                { location: "f627ab_9" },
                 { autoTrackExposure: !0 }
               );
               n &&
                 e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
+              let { signalH265SupportNvenc: i } = U.default.getCurrentConfig(
+                { location: "f627ab_9" },
+                { autoTrackExposure: !0 }
+              );
+              i &&
+                e.setExperimentFlag(eS.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
             }
-            let { signalAV1Support: a } = L.default.getCurrentConfig(
+            let { signalAV1Support: a } = P.default.getCurrentConfig(
               { location: "f627ab_10" },
               { autoTrackExposure: !0 }
             );
@@ -46508,11 +46435,11 @@
             if (
               (o &&
                 ev.setHasFullbandPerformance(
-                  (0, D.hasPerformanceForKrispFullband)()
+                  (0, O.hasPerformanceForKrispFullband)()
                 ),
-              (0, N.default)(i))
+              (0, R.default)(i))
             ) {
-              let t = R.default.getSettings();
+              let t = A.default.getSettings();
               e.setExperimentFlag(
                 eS.ExperimentFlags.STREAMER_CLIP,
                 t.clipsEnabled
@@ -46533,13 +46460,8 @@
                 e.setClipsKeyFrameInterval(
                   n && t.viewerClipsEnabled ? eS.VIEWERSIDE_CLIP_KFI_MS : r
                 );
-              let { allowQualityDecoupling: s } = A.default.getCurrentConfig(
-                { location: "MediaEngineStore_setupMediaEngine" },
-                { autoTrackExposure: !0 }
-              );
-              e.setQualityDecoupling(s);
             }
-            for (let t of ((n = e6(e.context)),
+            for (let t of ((n = e3(e.context)),
             e.setPostponeDecodeLevel(100),
             Object.keys(n.localMutes)))
               t !== er.default.getId() && e.setLocalMute(t, n.localMutes[t]);
@@ -46575,7 +46497,7 @@
                 (null == s ? void 0 : s.desktopSource) != null &&
                   Z.default.track(
                     eE.AnalyticEvents.SOUNDSHARE_ATTACHED,
-                    (0, P.default)(null == s ? void 0 : s.desktopSource)
+                    (0, y.default)(null == s ? void 0 : s.desktopSource)
                   );
               }),
               e.on(m.BaseConnectionEvent.SoundshareFailed, e => {
@@ -46586,7 +46508,7 @@
                 (null == s ? void 0 : s.desktopSource) != null &&
                   (Z.default.track(
                     eE.AnalyticEvents.SOUNDSHARE_TRANSMITTING,
-                    (0, P.default)(null == s ? void 0 : s.desktopSource)
+                    (0, y.default)(null == s ? void 0 : s.desktopSource)
                   ),
                   null !=
                     eu.default.getHookError(eE.MediaEngineHookTypes.SOUND) &&
@@ -46650,7 +46572,7 @@
                       sample_count: i,
                       success: r,
                       reinitialization: a,
-                      ...(0, P.default)(null == s ? void 0 : s.desktopSource),
+                      ...(0, y.default)(null == s ? void 0 : s.desktopSource),
                     });
                 }
               ),
@@ -46683,7 +46605,7 @@
                     context: eS.MediaEngineContextTypes.DEFAULT,
                     mode: eE.InputModes.VOICE_ACTIVITY,
                     options: {
-                      ...e6(eS.MediaEngineContextTypes.DEFAULT).modeOptions,
+                      ...e3(eS.MediaEngineContextTypes.DEFAULT).modeOptions,
                       vadUseKrisp: !1,
                     },
                   }),
@@ -46841,7 +46763,7 @@
                       ((e.av1EnabledSettingVersion = 1), (e.av1Enabled = !0));
                 }),
                 (function () {
-                  let e = e6();
+                  let e = e3();
                   ev.setAudioInputDevice(e.inputDeviceId),
                     ev.setAudioOutputDevice(e.outputDeviceId),
                     e8(),
@@ -46886,7 +46808,7 @@
               z.default.storage,
               Q.default,
               el.default,
-              R.default
+              A.default
             );
         }
         supports(e) {
@@ -46925,7 +46847,7 @@
           );
         }
         getAecDump() {
-          return e6().aecDumpEnabled;
+          return e3().aecDumpEnabled;
         }
         getMediaEngine() {
           return ev;
@@ -46968,7 +46890,7 @@
               : eS.MediaEngineContextTypes.DEFAULT;
           return (
             !this.isEnabled() ||
-            e6(e).mute ||
+            e3(e).mute ||
             !z.default.didHavePermission(eh.NativePermissionTypes.AUDIO) ||
             this.isSelfDeaf(e) ||
             (e === eS.MediaEngineContextTypes.DEFAULT && eU)
@@ -46990,7 +46912,7 @@
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return !this.isSupported() || e6(e).deaf;
+          return !this.isSupported() || e3(e).deaf;
         }
         isVideoEnabled() {
           return ew && eV;
@@ -47027,7 +46949,7 @@
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return e !== er.default.getId() && (e6(t).localMutes[e] || !1);
+          return e !== er.default.getId() && (e3(t).localMutes[e] || !1);
         }
         supportsDisableLocalVideo() {
           return ev.supports(eS.Features.DISABLE_VIDEO);
@@ -47039,7 +46961,7 @@
               ? arguments[1]
               : eS.MediaEngineContextTypes.DEFAULT;
           return (
-            null !== (t = e6(n).disabledLocalVideos[e]) && void 0 !== t && t
+            null !== (t = e3(n).disabledLocalVideos[e]) && void 0 !== t && t
           );
         }
         getVideoToggleState(e) {
@@ -47048,7 +46970,7 @@
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return null !== (t = e6(n).videoToggleStateMap[e]) && void 0 !== t
+          return null !== (t = e3(n).videoToggleStateMap[e]) && void 0 !== t
             ? t
             : eE.VideoToggleState.NONE;
         }
@@ -47083,7 +47005,7 @@
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : eS.MediaEngineContextTypes.DEFAULT,
-            n = e6(t).localPans[e];
+            n = e3(t).localPans[e];
           return null != n ? n : eI;
         }
         getLocalVolume(e) {
@@ -47093,28 +47015,28 @@
                 : eS.MediaEngineContextTypes.DEFAULT,
             n = t === eS.MediaEngineContextTypes.STREAM,
             i = n ? eS.DEFAULT_STREAM_VOLUME : eS.DEFAULT_VOLUME,
-            r = e6(t).localVolumes[e];
+            r = e3(t).localVolumes[e];
           return null != r ? r : i;
         }
         getInputVolume() {
-          return e6().inputVolume;
+          return e3().inputVolume;
         }
         getOutputVolume() {
-          return e6().outputVolume;
+          return e3().outputVolume;
         }
         getMode() {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return e6(e).mode;
+          return e3(e).mode;
         }
         getModeOptions() {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return e6(e).modeOptions;
+          return e3(e).modeOptions;
         }
         getShortcuts() {
           let e = {};
@@ -47130,13 +47052,13 @@
           );
         }
         getInputDeviceId() {
-          return tl(ey, e6().inputDeviceId);
+          return tl(ey, e3().inputDeviceId);
         }
         getOutputDeviceId() {
-          return tl(eP, e6().outputDeviceId);
+          return tl(eP, e3().outputDeviceId);
         }
         getVideoDeviceId() {
-          return tl(eL, e6().videoDeviceId);
+          return tl(eL, e3().videoDeviceId);
         }
         getInputDevices() {
           return ey;
@@ -47148,58 +47070,58 @@
           return eL;
         }
         getEchoCancellation() {
-          let e = e6();
+          let e = e3();
           return (
             ea.default.hasEchoCancellation(e.inputDeviceId) ||
             e.echoCancellation
           );
         }
         getH265Enabled() {
-          return e6().h265Enabled;
+          return e3().h265Enabled;
         }
         getLoopback() {
           return ev.getLoopback();
         }
         getNoiseSuppression() {
-          let e = e6();
+          let e = e3();
           return (
             ea.default.hasNoiseSuppression(e.inputDeviceId) ||
             e.noiseSuppression
           );
         }
         getAutomaticGainControl() {
-          let e = e6();
+          let e = e3();
           return (
             ea.default.hasAutomaticGainControl(e.inputDeviceId) ||
             e.automaticGainControl
           );
         }
         getNoiseCancellation() {
-          return e6().noiseCancellation;
+          return e3().noiseCancellation;
         }
         getExperimentalEncoders() {
-          return e6().experimentalEncoders;
+          return e3().experimentalEncoders;
         }
         getHardwareH264() {
-          return e6().hardwareH264;
+          return e3().hardwareH264;
         }
         getEnableSilenceWarning() {
-          return e6().silenceWarning;
+          return e3().silenceWarning;
         }
         getDebugLogging() {
           return ev.getDebugLogging();
         }
         getQoS() {
-          return e6().qos;
+          return e3().qos;
         }
         getAttenuation() {
-          return e6().attenuation;
+          return e3().attenuation;
         }
         getAttenuateWhileSpeakingSelf() {
-          return e6().attenuateWhileSpeakingSelf;
+          return e3().attenuateWhileSpeakingSelf;
         }
         getAttenuateWhileSpeakingOthers() {
-          return e6().attenuateWhileSpeakingOthers;
+          return e3().attenuateWhileSpeakingOthers;
         }
         getAudioSubsystem() {
           return ev.getAudioSubsystem();
@@ -47209,7 +47131,7 @@
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : eS.MediaEngineContextTypes.DEFAULT;
-          return e6(e);
+          return e3(e);
         }
         getState() {
           return {
@@ -47241,13 +47163,13 @@
           return eO;
         }
         getVideoHook() {
-          return e6().videoHook;
+          return e3().videoHook;
         }
         supportsVideoHook() {
           return ev.supports(eS.Features.VIDEO_HOOK);
         }
         getExperimentalSoundshare() {
-          let e = e6().experimentalSoundshare2;
+          let e = e3().experimentalSoundshare2;
           return this.supportsExperimentalSoundshare() && (null == e || e);
         }
         supportsExperimentalSoundshare() {
@@ -47262,10 +47184,10 @@
           );
         }
         getOpenH264() {
-          return e6().openH264;
+          return e3().openH264;
         }
         getAv1Enabled() {
-          return e6().av1Enabled;
+          return e3().av1Enabled;
         }
         getEverSpeakingWhileMuted() {
           return ex;
@@ -47381,7 +47303,7 @@
           }
           if (eY) return;
           eY = !0;
-          let s = e6();
+          let s = e3();
           (s.mute || s.deaf) &&
             (tr({ deaf: !1, mute: !1 }), ev.eachConnection(e7));
         },
@@ -47431,7 +47353,7 @@
               (function () {
                 if (0 === eJ.size) return;
                 let e = eS.MediaEngineContextTypes.DEFAULT,
-                  { disabledLocalVideos: t } = e6(e);
+                  { disabledLocalVideos: t } = e3(e);
                 eJ.forEach(n => {
                   f(
                     t[n],
@@ -47452,7 +47374,7 @@
         },
         AUDIO_TOGGLE_SELF_MUTE: function (e) {
           let { context: t } = e,
-            { mute: n, deaf: i } = e6(t);
+            { mute: n, deaf: i } = e3(t);
           if (
             t === eS.MediaEngineContextTypes.DEFAULT &&
             (z.default.requestPermission(eh.NativePermissionTypes.AUDIO), eU)
@@ -47464,13 +47386,13 @@
         },
         AUDIO_TOGGLE_SELF_DEAF: function (e) {
           let { context: t } = e,
-            n = e6(t);
+            n = e3(t);
           tr({ deaf: !n.deaf }, t), ev.eachConnection(e7);
         },
         AUDIO_TOGGLE_LOCAL_MUTE: function (e) {
           let { context: t, userId: n } = e;
           if (n === er.default.getId()) return;
-          let { localMutes: i } = e6(t);
+          let { localMutes: i } = e3(t);
           i[n] ? delete i[n] : (i[n] = !0),
             tr({ localMutes: i }, t),
             ev.eachConnection(e => e.setLocalMute(n, i[n] || !1), t);
@@ -47486,7 +47408,7 @@
           } = e;
           f(!(d && E), "These are not allowed to both be true.");
           let p = c === eE.VideoToggleState.DISABLED,
-            { disabledLocalVideos: h } = e6(l),
+            { disabledLocalVideos: h } = e3(l),
             _ = null !== (t = h[u]) && void 0 !== t && t,
             S = eJ.has(u),
             m =
@@ -47514,7 +47436,7 @@
               .concat(I, " isManualToggleByUser=")
               .concat(C)
           );
-          let { videoToggleStateMap: v } = e6(l);
+          let { videoToggleStateMap: v } = e3(l);
           if (
             (v[u] === eE.VideoToggleState.AUTO_PROBING &&
               c === eE.VideoToggleState.AUTO_ENABLED &&
@@ -47593,14 +47515,14 @@
           if (n === er.default.getId()) return;
           let r = t === eS.MediaEngineContextTypes.STREAM,
             s = r ? eS.DEFAULT_STREAM_VOLUME : eS.DEFAULT_VOLUME,
-            { localVolumes: a } = e6(t);
+            { localVolumes: a } = e3(t);
           i === s ? delete a[n] : (a[n] = i),
             tr({ localVolumes: a }, t),
             ev.eachConnection(e => e.setLocalVolume(n, i), t);
         },
         AUDIO_SET_LOCAL_PAN: function (e) {
           let { context: t, userId: n, left: i, right: r } = e,
-            { localPans: s } = e6(t);
+            { localPans: s } = e3(t);
           (s[n] = { left: i, right: r }),
             tr({ localPans: s }, t),
             ev.eachConnection(e => e.setLocalPan(n, i, r), t);
@@ -47608,7 +47530,7 @@
         AUDIO_SET_MODE: function (e) {
           let { context: t, mode: n, options: i } = e;
           tr({ mode: n, modeOptions: i }, t),
-            ev.eachConnection(e3),
+            ev.eachConnection(e6),
             ti.update();
         },
         AUDIO_SET_INPUT_VOLUME: function (e) {
@@ -47704,7 +47626,7 @@
               ((ey = to(e, em.default.Messages.NO_INPUT_DEVICES)),
               !p.isEqual(ey, t))
             ) {
-              let e = e6(),
+              let e = e3(),
                 t = tl(ey, e.inputDeviceId);
               ev.setAudioInputDevice(t);
             }
@@ -47715,7 +47637,7 @@
                 ((eP = to(e, em.default.Messages.NO_OUTPUT_DEVICES)),
                 !p.isEqual(eP, t))
               ) {
-                let e = e6(),
+                let e = e3(),
                   t = tl(eP, e.outputDeviceId);
                 ev.setAudioOutputDevice(t);
               }
@@ -47876,7 +47798,7 @@
         },
         APP_STATE_UPDATE: function (e) {
           let { state: t } = e,
-            n = y.default.isEnabled();
+            n = D.default.isEnabled();
           if (t === eE.AppStates.BACKGROUND && ew && !n) (eF = !0), e8(!1);
           else {
             if (t !== eE.AppStates.ACTIVE || !eF) return !1;
@@ -47968,11 +47890,11 @@
         },
         CLIPS_INIT: function (e) {
           let { sourceId: t, applicationName: n, quality: r } = e,
-            { enableDecoupledGameClipping: s } = b.default.getCurrentConfig(
+            { enableDecoupledGameClipping: s } = L.default.getCurrentConfig(
               { location: "handleClipsInit" },
               { autoTrackExposure: !0 }
             ),
-            o = R.default.getSettings().decoupledClipsEnabled;
+            o = A.default.getSettings().decoupledClipsEnabled;
           if (!s || !o || null == C.default) return;
           let l = null,
             u = null,
@@ -48003,7 +47925,7 @@
               { location: "f627ab_12" },
               { autoTrackExposure: !1 }
             ),
-            p = e6().videoHook,
+            p = e3().videoHook,
             h = ev.supports(eS.Features.CAPTURE_TIMEOUT_EXPERIMENTS),
             { videoHookStaleFrameTimeoutMs: _ } = H.default.getConfig(
               h && p,
@@ -48038,7 +47960,7 @@
             ev.eachConnection(
               e =>
                 e.setClipsKeyFrameInterval(
-                  R.default.getSettings().viewerClipsEnabled
+                  A.default.getSettings().viewerClipsEnabled
                     ? eS.VIEWERSIDE_CLIP_KFI_MS
                     : 0
                 ),
@@ -60009,7 +59931,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265126",
+                  build_number: "264922",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -60894,9 +60816,6 @@
           },
           getPremiumPlanItem: function () {
             return w;
-          },
-          getDefaultPrice: function () {
-            return k;
           },
           getPrice: function () {
             return x;
@@ -62549,9 +62468,6 @@
           formatRate: function () {
             return l;
           },
-          formatPercent: function () {
-            return u;
-          },
         }),
         n("70102");
       var i = n("988025"),
@@ -62583,12 +62499,6 @@
             .concat(t, ", and interval count: ")
             .concat(n)
         );
-      }
-      function u(e, t) {
-        return Intl.NumberFormat(e, {
-          style: "percent",
-          minimumFractionDigits: 0,
-        }).format(t);
       }
     },
     197881: function (e, t, n) {
@@ -67872,7 +67782,6 @@
         setClipRecordUser(e, t, n) {}
         setViewerSideClip(e) {}
         setClipsKeyFrameInterval(e) {}
-        setQualityDecoupling(e) {}
         getStreamParameters() {
           return s.cloneDeep(this.videoStreamParameters);
         }
@@ -69607,10 +69516,6 @@
         setViewerSideClip(e) {
           this.context === m.MediaEngineContextTypes.STREAM &&
             this.conn.setTransportOptions({ enableViewerSideClip: e });
-        }
-        setQualityDecoupling(e) {
-          this.context === m.MediaEngineContextTypes.STREAM &&
-            this.conn.setTransportOptions({ enableQualityDecoupling: e });
         }
         getLocalVolume(e) {
           var t;
@@ -78638,4 +78543,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.3fc6743e2f3c7577644e.js.map
+//# sourceMappingURL=41039.0eedcaa15c6965d01ae2.js.map

@@ -16078,9 +16078,6 @@
             ? _.Endpoints.REACTION_WITH_TYPE(x, t, k, a, y)
             : _.Endpoints.REACTION(x, t, k, a);
       }
-      ((s = a || (a = {})).MESSAGE = "Message"),
-        (s.FORUM_TOOLBAR = "Forum Toolbar"),
-        (s.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer");
       async function w(i) {
         let {
             channelId: x,
@@ -16090,30 +16087,21 @@
             after: y,
             type: d,
           } = i,
-          p =
-            d === r.ReactionTypes.VOTE
-              ? (function (i, x, t) {
-                  var s;
-                  let a = null !== (s = t.id) && void 0 !== s ? s : t.name;
-                  return _.Endpoints.POLL_ANSWER_VOTERS(i, x, a);
-                })(x, t, s)
-              : b({ channelId: x, messageId: t, emoji: s }),
-          e = await o.default.get({
-            url: p,
+          r = await o.default.get({
+            url: b({ channelId: x, messageId: t, emoji: s }),
             query: { limit: a, after: y, type: d },
             oldFormErrors: !0,
-          }),
-          n = d === r.ReactionTypes.VOTE ? e.body.users : e.body;
+          });
         return (
           k.default.dispatch({
             type: "MESSAGE_REACTION_ADD_USERS",
             channelId: x,
             messageId: t,
-            users: n,
+            users: r.body,
             emoji: s,
             reactionType: d,
           }),
-          n
+          r.body
         );
       }
       async function E(i, x, t) {
@@ -16293,6 +16281,9 @@
           } catch {}
         return t;
       }
+      ((s = a || (a = {})).MESSAGE = "Message"),
+        (s.FORUM_TOOLBAR = "Forum Toolbar"),
+        (s.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer");
       function N(i) {
         let {
             channelId: x,
@@ -16327,7 +16318,7 @@
       t.r(x),
         t.d(x, {
           CUSTOM_CALL_SOUND_ANIMATION_RANGE: function () {
-            return L;
+            return F;
           },
           AnimationTypeToAnimations: function () {
             return U;
@@ -16342,7 +16333,7 @@
             return V;
           },
           getEffectAnnouncement: function () {
-            return Y;
+            return j;
           },
         });
       var s = t("917351"),
@@ -16376,8 +16367,8 @@
         M = t("402671"),
         S = t("626334"),
         C = t("782340");
-      let L = { start: 10, end: 15 },
-        F = {
+      let F = { start: 10, end: 15 },
+        L = {
           BASIC: [o],
           PREMIUM: [
             y,
@@ -16404,8 +16395,8 @@
           ],
         },
         U = {
-          [S.VoiceChannelEffectAnimationType.BASIC]: F.BASIC,
-          [S.VoiceChannelEffectAnimationType.PREMIUM]: F.PREMIUM,
+          [S.VoiceChannelEffectAnimationType.BASIC]: L.BASIC,
+          [S.VoiceChannelEffectAnimationType.PREMIUM]: L.PREMIUM,
         },
         B = a.memoize(
           i =>
@@ -16454,7 +16445,7 @@
           a = O.default.getByName(s);
         return null != a ? M.default.getURL(a.surrogates) : "";
       }
-      function P(i, x) {
+      function Y(i, x) {
         return a(i)
           .map(i => {
             var t;
@@ -16464,11 +16455,11 @@
           .uniq()
           .value();
       }
-      function Y(i) {
+      function j(i) {
         var x, t, s, a, o, y;
         if (i.length < 1) return "";
-        let k = P(i, "userId"),
-          d = P(i, "emojiName"),
+        let k = Y(i, "userId"),
+          d = Y(i, "emojiName"),
           r =
             d.length < 2
               ? null !== (x = null == d ? void 0 : d[0]) && void 0 !== x
@@ -16581,4 +16572,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15750.7a2933406d0e3b8b1aa6.js.map
+//# sourceMappingURL=15750.1cf01bbbb50d2ba61aae.js.map

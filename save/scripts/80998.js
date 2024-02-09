@@ -474,8 +474,6 @@
           "var(--user-profile-header-overflow-background)"),
         (e.VOICE_VIDEO_TILE_BLUR_FALLBACK =
           "var(--voice-video-tile-blur-fallback)"),
-        (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND =
-          "var(--voice-video-video-tile-background)"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
           "var(--voice-video-video-tile-blur-fallback)"),
         (e.WHITE = "var(--white)");
@@ -485,4 +483,4 @@
     },
   },
 ]);
-//# sourceMappingURL=80998.0f7d87219130fb7d1b1c.js.map
+//# sourceMappingURL=80998.a0d0e898128eae84c54f.js.map

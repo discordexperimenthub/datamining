@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["827"],
+  ["96412"],
   {
     110126: function (e, t, n) {
       var l = {
@@ -24154,12 +24154,12 @@
               setUpsellConfigs: eO,
               emojiSelectAnalytics: e => {
                 "" !== eM
-                  ? (0, w.trackEmojiSearchSelect)(
-                      e.emoji,
-                      { ...eK, object: Z.AnalyticsObjects.EMOJI },
-                      eM,
-                      o
-                    )
+                  ? (0, w.trackEmojiSearchSelect)({
+                      emoji: e.emoji,
+                      location: { ...eK, object: Z.AnalyticsObjects.EMOJI },
+                      searchQuery: eM,
+                      intention: o,
+                    })
                   : (0, w.trackEmojiSelect)({
                       emoji: e.emoji,
                       location: {
@@ -46407,4 +46407,4 @@
     },
   },
 ]);
-//# sourceMappingURL=827.cdae33b1e62bfdcf6354.js.map
+//# sourceMappingURL=96412.b3104979b3ef0b174247.js.map

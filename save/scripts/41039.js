@@ -16727,7 +16727,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return c;
           },
         }),
         n("511434"),
@@ -16739,11 +16739,10 @@
       var i = n("917351"),
         r = n.n(i),
         s = n("669491"),
-        a = n("691898"),
-        o = n("49111");
-      let l = [
+        a = n("49111");
+      let o = [
           {
-            type: o.PlatformTypes.TWITCH,
+            type: a.PlatformTypes.TWITCH,
             name: "Twitch",
             color: s.default.unsafe_rawColors.TWITCH.css,
             icon: {
@@ -16762,7 +16761,7 @@
             domains: ["twitch.tv", "twitch.com"],
           },
           {
-            type: o.PlatformTypes.YOUTUBE,
+            type: a.PlatformTypes.YOUTUBE,
             name: "YouTube",
             color: s.default.unsafe_rawColors.YOUTUBE.css,
             icon: {
@@ -16783,7 +16782,7 @@
             domains: ["youtube.com", "youtu.be"],
           },
           {
-            type: o.PlatformTypes.BATTLENET,
+            type: a.PlatformTypes.BATTLENET,
             name: "Battle.net",
             color: s.default.unsafe_rawColors.BATTLENET.css,
             icon: {
@@ -16797,7 +16796,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.SKYPE,
+            type: a.PlatformTypes.SKYPE,
             name: "Skype",
             color: s.default.unsafe_rawColors.SKYPE.css,
             icon: {
@@ -16815,7 +16814,7 @@
             },
           },
           {
-            type: o.PlatformTypes.LEAGUE_OF_LEGENDS,
+            type: a.PlatformTypes.LEAGUE_OF_LEGENDS,
             name: "League of Legends",
             color: s.default.unsafe_rawColors.LOL.css,
             icon: {
@@ -16829,7 +16828,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.STEAM,
+            type: a.PlatformTypes.STEAM,
             name: "Steam",
             color: s.default.unsafe_rawColors.STEAM.css,
             icon: {
@@ -16850,7 +16849,7 @@
             hasMetadata: !0,
           },
           {
-            type: o.PlatformTypes.REDDIT,
+            type: a.PlatformTypes.REDDIT,
             name: "Reddit",
             color: s.default.unsafe_rawColors.REDDIT.css,
             icon: {
@@ -16869,7 +16868,7 @@
             hasMetadata: !0,
           },
           {
-            type: o.PlatformTypes.FACEBOOK,
+            type: a.PlatformTypes.FACEBOOK,
             name: "Facebook",
             color: s.default.unsafe_rawColors.FACEBOOK.css,
             icon: {
@@ -16883,7 +16882,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.TWITTER_LEGACY,
+            type: a.PlatformTypes.TWITTER_LEGACY,
             name: "Twitter",
             color: s.default.unsafe_rawColors.TWITTER.css,
             icon: {
@@ -16903,7 +16902,7 @@
             hasMetadata: !0,
           },
           {
-            type: o.PlatformTypes.TWITTER,
+            type: a.PlatformTypes.TWITTER,
             name: "X",
             color: s.default.unsafe_rawColors.TWITTER.css,
             icon: {
@@ -16923,7 +16922,7 @@
             hasMetadata: !0,
           },
           {
-            type: o.PlatformTypes.SPOTIFY,
+            type: a.PlatformTypes.SPOTIFY,
             name: "Spotify",
             color: s.default.unsafe_rawColors.SPOTIFY.css,
             icon: {
@@ -16943,7 +16942,7 @@
             },
           },
           {
-            type: o.PlatformTypes.XBOX,
+            type: a.PlatformTypes.XBOX,
             name: "Xbox",
             color: s.default.unsafe_rawColors.XBOX.css,
             icon: {
@@ -16958,7 +16957,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.SAMSUNG,
+            type: a.PlatformTypes.SAMSUNG,
             name: "Samsung Galaxy",
             color: s.default.unsafe_rawColors.SAMSUNG.css,
             icon: {
@@ -16972,7 +16971,7 @@
             enabled: !1,
           },
           {
-            type: o.PlatformTypes.GITHUB,
+            type: a.PlatformTypes.GITHUB,
             name: "GitHub",
             color: s.default.unsafe_rawColors.GITHUB.css,
             icon: {
@@ -16991,7 +16990,7 @@
             domains: ["github.com"],
           },
           {
-            type: o.PlatformTypes.PLAYSTATION,
+            type: a.PlatformTypes.PLAYSTATION,
             name: "PlayStation Network",
             color: s.default.unsafe_rawColors.PLAYSTATION.css,
             icon: {
@@ -17005,7 +17004,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.PLAYSTATION_STAGING,
+            type: a.PlatformTypes.PLAYSTATION_STAGING,
             name: "PlayStation Network (Staging)",
             color: s.default.unsafe_rawColors.PLAYSTATION.css,
             icon: {
@@ -17019,7 +17018,7 @@
             enabled: !1,
           },
           {
-            type: o.PlatformTypes.EPIC_GAMES,
+            type: a.PlatformTypes.EPIC_GAMES,
             name: "Epic Games",
             icon: {
               lightPNG: n("1308"),
@@ -17032,7 +17031,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.RIOT_GAMES,
+            type: a.PlatformTypes.RIOT_GAMES,
             name: "Riot Games",
             icon: {
               lightPNG: n("300525"),
@@ -17045,7 +17044,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.PAYPAL,
+            type: a.PlatformTypes.PAYPAL,
             name: "PayPal",
             icon: {
               lightPNG: n("347775"),
@@ -17059,7 +17058,7 @@
             hasMetadata: !0,
           },
           {
-            type: o.PlatformTypes.EBAY,
+            type: a.PlatformTypes.EBAY,
             name: "eBay",
             icon: {
               lightPNG: n("14366"),
@@ -17077,7 +17076,7 @@
             },
           },
           {
-            type: o.PlatformTypes.TIKTOK,
+            type: a.PlatformTypes.TIKTOK,
             name: "TikTok",
             icon: {
               lightPNG: n("482311"),
@@ -17095,7 +17094,7 @@
             },
           },
           {
-            type: o.PlatformTypes.INSTAGRAM,
+            type: a.PlatformTypes.INSTAGRAM,
             name: "Instagram",
             icon: {
               lightPNG: n("299059"),
@@ -17112,7 +17111,7 @@
             },
           },
           {
-            type: o.PlatformTypes.CRUNCHYROLL,
+            type: a.PlatformTypes.CRUNCHYROLL,
             name: "Crunchyroll",
             color: s.default.unsafe_rawColors.CRUNCHYROLL.css,
             icon: {
@@ -17126,7 +17125,7 @@
             enabled: !0,
           },
           {
-            type: o.PlatformTypes.DOMAIN,
+            type: a.PlatformTypes.DOMAIN,
             name: "Domain",
             icon: {
               lightPNG: n("145159"),
@@ -17140,38 +17139,34 @@
               let { id: t } = e;
               return "https://".concat(t, "/");
             },
-            get enabled() {
-              return a.DomainConnectionExperiment.getCurrentConfig({
-                location: "ed49a3_1",
-              }).enabled;
-            },
+            enabled: !0,
           },
         ],
-        u = r.keyBy(l, "type"),
-        c = {};
-      l.forEach(e => {
+        l = r.keyBy(o, "type"),
+        u = {};
+      o.forEach(e => {
         var t;
         null === (t = e.domains) ||
           void 0 === t ||
           t.forEach(t => {
-            c[t] = e;
+            u[t] = e;
           });
       });
-      var d = {
+      var c = {
         get(e) {
           var t;
-          return null !== (t = u[e]) && void 0 !== t ? t : null;
+          return null !== (t = l[e]) && void 0 !== t ? t : null;
         },
         getByUrl(e) {
           let t = new URL(e),
             n = t.hostname,
             i = n.startsWith("www.") ? n.slice(4) : n;
-          return c[i];
+          return u[i];
         },
-        isSupported: e => Object.prototype.hasOwnProperty.call(u, e),
-        map: e => l.map(e),
+        isSupported: e => Object.prototype.hasOwnProperty.call(l, e),
+        map: e => o.map(e),
         filter(e) {
-          let t = l.filter(e);
+          let t = o.filter(e);
           return (
             t.sort((e, t) => {
               let { name: n } = e,
@@ -17181,7 +17176,7 @@
             t
           );
         },
-        find: e => l.find(e),
+        find: e => o.find(e),
       };
     },
     70513: function (e, t, n) {
@@ -26760,35 +26755,6 @@
         return s;
       }
       n("49111");
-    },
-    691898: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          EXAMPLE_DOMAIN: function () {
-            return r;
-          },
-          getDnsName: function () {
-            return s;
-          },
-          getHttpName: function () {
-            return a;
-          },
-          DomainConnectionExperiment: function () {
-            return o;
-          },
-        });
-      var i = n("862205");
-      let r = "example.com",
-        s = e => "_discord.".concat(e),
-        a = e => "https://".concat(e, "/.well-known/discord"),
-        o = (0, i.createExperiment)({
-          id: "2023-07_domain_connection",
-          label: "Domain Connection",
-          kind: "user",
-          defaultConfig: { enabled: !1 },
-          treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
-        });
     },
     269936: function (e, t, n) {
       "use strict";
@@ -60011,7 +59977,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265317",
+                  build_number: "265324",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78640,4 +78606,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.960476c37ec66d508928.js.map
+//# sourceMappingURL=41039.c5f08948fcba5900e70d.js.map

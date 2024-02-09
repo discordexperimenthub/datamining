@@ -37862,8 +37862,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -51158,6 +51158,7 @@ html .progress__4ef76 {
   align-items: flex-start;
   width: 100%;
   padding: 24px;
+  overflow: hidden;
   background-color: var(--background-secondary-alt);
   border-radius: 20px;
   background-size: cover;
@@ -51181,13 +51182,13 @@ html .progress__4ef76 {
 .card_e97590:hover .carouselCardImage__4e898 {
   scale: 116.5%;
   margin-left: 0;
-  margin-bottom: -6px;
+  margin-bottom: -9px;
 }
 @media screen and (max-width: 1330px) {
   .card_e97590:hover .carouselCardImage__4e898 {
-    scale: 119%;
-    margin-left: -2px;
-    margin-bottom: -6px;
+    scale: 122%;
+    margin-left: 0;
+    margin-bottom: -9px;
   }
 }
 .reducedMotion__90450 .card_e97590 {
@@ -51230,7 +51231,7 @@ html .progress__4ef76 {
 }
 .carouselCardImage__4e898 {
   width: 270px;
-  height: 180px;
+  height: 150px;
   z-index: 10;
   padding: 15px;
   pointer-events: none;
@@ -51247,8 +51248,8 @@ html .progress__4ef76 {
 }
 @media screen and (max-width: 1330px) {
   .carouselCardImage__4e898 {
-    width: 210px;
-    height: 145px;
+    width: 200px;
+    height: 120px;
   }
 }
 .cardImage__9da5b {
@@ -108361,4 +108362,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3dae04515cb08ca44540.css.map*/
+/*# sourceMappingURL=app.a80c0a1cf9deb9603039.css.map*/

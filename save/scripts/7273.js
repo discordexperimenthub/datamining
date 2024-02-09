@@ -3993,6 +3993,7 @@
         (I3.COLLECTIBLES_SHOP_DETAILS_MODAL =
           "Collectibles Shop Details Modal"),
         (I3.PROFILE_EFFECT_CUSTOMIZATION = "Profile Effect Customization"),
+        (I3.COLLECTIBLES_SHOP = "Shop"),
         (I3.APPEAL_INGESTION_SPEED_BUMP = "Appeal Ingestion Speed Bump"),
         (I3.APPEAL_INGESTION_COLLECT_SIGNAL =
           "Appeal Ingestion Collect Signal"),
@@ -4229,6 +4230,7 @@
           FRIEND_REQUESTS: "Friend Requests",
           CLIPS: "Settings Clips",
           SPEED_TEST: "RTC Speed Test",
+          COLLECTIBLES_SHOP: "Shop",
           COMMUNITY_ALERTS: "Community Alerts Settings",
           HIGHLIGHT_NOTIFICATIONS: "Highlight notification settings",
         });
@@ -17219,4 +17221,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.80a68fd3a6eeee2122f0.js.map
+//# sourceMappingURL=7273.9c51ad29530bdefc97e7.js.map

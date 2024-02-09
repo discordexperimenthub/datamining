@@ -71,13 +71,13 @@
                 }),
               [R, O, r, d]
             ),
-            U = n.useCallback(() => C(!0), []),
-            g = n.useCallback(() => C(!1), []);
+            g = n.useCallback(() => C(!0), []),
+            U = n.useCallback(() => C(!1), []);
           return {
             avatarPlaceholderSrc: c,
             avatarDecorationSrc: P,
             isAvatarDecorationAnimating: O,
-            eventHandlers: { onMouseEnter: U, onMouseLeave: g },
+            eventHandlers: { onMouseEnter: g, onMouseLeave: U },
           };
         };
     },
@@ -211,6 +211,9 @@
           isCollectiblesGiftCode: function () {
             return P;
           },
+          getLogoSize: function () {
+            return g;
+          },
         }),
         r("222007");
       var n = r("917351"),
@@ -330,7 +333,8 @@
             });
           return { purchased: r, shopPreviews: n };
         },
-        P = t => t.applicationId === T.COLLECTIBLES_APPLICATION_ID;
+        P = t => t.applicationId === T.COLLECTIBLES_APPLICATION_ID,
+        g = t => 3.8 * t;
     },
     170313: function (t, e, r) {
       "use strict";
@@ -518,10 +522,10 @@
       function P() {
         (N = v.FormStates.OPEN), (O = {});
       }
-      function U() {
+      function g() {
         (N = v.FormStates.CLOSED), (O = {});
       }
-      function g() {
+      function U() {
         m(), F(), (O = {});
       }
       function m() {
@@ -635,9 +639,9 @@
           let { section: e } = t;
           return e === v.UserSettingsSections.ACCOUNT && P();
         },
-        USER_SETTINGS_ACCOUNT_CLOSE: U,
+        USER_SETTINGS_ACCOUNT_CLOSE: g,
         USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function () {
-          g(), L(), U();
+          U(), L(), g();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
           (N = v.FormStates.SUBMITTING), (O = {});
@@ -717,7 +721,7 @@
         },
         USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: m,
         USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: F,
-        USER_SETTINGS_RESET_ALL_PENDING: g,
+        USER_SETTINGS_RESET_ALL_PENDING: U,
         USER_SETTINGS_RESET_ALL_TRY_IT_OUT: L,
         USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function () {
           o = void 0;
@@ -746,4 +750,4 @@
     },
   },
 ]);
-//# sourceMappingURL=43870.0bfb9a80f88725fba82a.js.map
+//# sourceMappingURL=43870.3017a682fcda0afc6fcc.js.map

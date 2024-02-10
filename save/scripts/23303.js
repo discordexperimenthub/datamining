@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["23356"],
+  ["23303"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -64564,7 +64564,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return H;
+            return B;
           },
         }),
         n("222007"),
@@ -64607,20 +64607,24 @@
         }),
           b.clear();
       }
-      function k() {
-        o.default.forEach(e => {
-          e.forAll(e => {
-            e.timestamp.locale(h.default.locale);
-          });
-        });
-      }
+      let k = null;
       function M() {
+        let e = h.default.locale;
+        if (k === e) return !1;
+        o.default.forEach(t => {
+          t.forAll(t => {
+            t.timestamp.locale(e);
+          });
+        }),
+          (k = e);
+      }
+      function w() {
         o.default.forEach(e => {
           let { channelId: t } = e;
           null == p.default.getChannel(t) && o.default.clear(t);
         });
       }
-      function w() {
+      function L() {
         o.default.forEach(e => {
           o.default.commit(
             e.reset(
@@ -64629,8 +64633,8 @@
           );
         });
       }
-      function L(e) {}
-      function U(e) {
+      function U(e) {}
+      function G(e) {
         let {
             type: t,
             channelId: n,
@@ -64649,7 +64653,7 @@
         )),
           o.default.commit(d);
       }
-      function G(e) {
+      function F(e) {
         let { type: t, messageData: n } = e,
           { message: s } = n,
           i = (0, d.getFailedMessageId)(n),
@@ -64673,7 +64677,7 @@
         })),
           o.default.commit(a);
       }
-      class F extends r.default.Store {
+      class H extends r.default.Store {
         initialize() {
           this.waitFor(
             O.default,
@@ -64755,8 +64759,8 @@
           );
         }
       }
-      F.displayName = "MessageStore";
-      var H = new F(a.default, {
+      H.displayName = "MessageStore";
+      var B = new H(a.default, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
           let { changesByChannelId: t } = e;
           for (let e in t) {
@@ -64932,8 +64936,8 @@
                 )),
             o.default.commit(i);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: G,
-        MESSAGE_EDIT_FAILED_AUTOMOD: G,
+        MESSAGE_SEND_FAILED_AUTOMOD: F,
+        MESSAGE_EDIT_FAILED_AUTOMOD: F,
         MESSAGE_UPDATE: function (e) {
           let t = e.message.id,
             n = e.message.channel_id,
@@ -64988,8 +64992,8 @@
             s = o.default.getOrCreate(t);
           o.default.commit(s.mutate({ revealedMessageId: n }));
         },
-        USER_SETTINGS_PROTO_UPDATE: k,
-        I18N_LOAD_SUCCESS: k,
+        USER_SETTINGS_PROTO_UPDATE: M,
+        I18N_LOAD_SUCCESS: M,
         THREAD_CREATE_LOCAL: function (e) {
           let { channelId: t } = e,
             n = o.default.getOrCreate(t);
@@ -65000,14 +65004,14 @@
           })),
             o.default.commit(n);
         },
-        CHANNEL_DELETE: M,
-        THREAD_DELETE: M,
-        GUILD_DELETE: M,
-        RELATIONSHIP_ADD: w,
-        RELATIONSHIP_REMOVE: w,
-        GUILD_MEMBERS_CHUNK: L,
-        THREAD_MEMBER_LIST_UPDATE: L,
-        MESSAGE_REACTION_ADD: U,
+        CHANNEL_DELETE: w,
+        THREAD_DELETE: w,
+        GUILD_DELETE: w,
+        RELATIONSHIP_ADD: L,
+        RELATIONSHIP_REMOVE: L,
+        GUILD_MEMBERS_CHUNK: U,
+        THREAD_MEMBER_LIST_UPDATE: U,
+        MESSAGE_REACTION_ADD: G,
         MESSAGE_REACTION_ADD_MANY: function (e) {
           let { channelId: t, messageId: n, reactions: s } = e,
             i = o.default.get(t);
@@ -65023,7 +65027,7 @@
           })),
             o.default.commit(i);
         },
-        MESSAGE_REACTION_REMOVE: U,
+        MESSAGE_REACTION_REMOVE: G,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
           let { channelId: t, messageId: n } = e,
             s = o.default.get(t);
@@ -76668,4 +76672,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.bfb53efd8c3dd3d1d196.js.map
+//# sourceMappingURL=23303.2267d670ea48f6be4cdb.js.map

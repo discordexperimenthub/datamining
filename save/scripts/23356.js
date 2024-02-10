@@ -34134,9 +34134,9 @@
         return (null == e ? void 0 : e.guild_id) != null
           ? d.getCurrentConfig(
               { guildId: e.guild_id, location: t },
-              { autoTrackExposure: !1 }
+              { autoTrackExposure: !0 }
             ).enabled && n
-          : o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 })
+          : o.getCurrentConfig({ location: t }, { autoTrackExposure: !0 })
               .enabled && n;
       }
       function _(e, t) {
@@ -34147,7 +34147,7 @@
           r = (null == n ? void 0 : n.guild_id) != null ? d : o,
           u = r.useExperiment(
             { guildId: null == n ? void 0 : n.guild_id, location: t },
-            { autoTrackExposure: !1 }
+            { autoTrackExposure: !0 }
           );
         return u.enabled && s;
       }
@@ -34159,7 +34159,7 @@
           r = (null == n ? void 0 : n.guild_id) != null ? d : o,
           u = r.useExperiment(
             { guildId: null == n ? void 0 : n.guild_id, location: t },
-            { autoTrackExposure: !1 }
+            { autoTrackExposure: !0 }
           );
         return u.enabled && s
           ? {
@@ -61502,14 +61502,14 @@
       class f extends s.default.PersistedStore {
         initialize(e) {
           if (null != e) {
-            var t;
+            var t, n;
             (o =
               null !== (t = e.preset) && void 0 !== t
                 ? t
                 : r.ApplicationStreamPresets.PRESET_VIDEO),
               (d = e.resolution),
               (u = e.fps),
-              (l = e.soundshareEnabled);
+              (l = null === (n = e.soundshareEnabled) || void 0 === n || n);
           }
         }
         getState() {
@@ -76668,4 +76668,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.ce4fb05891051d5853af.js.map
+//# sourceMappingURL=23356.bfb53efd8c3dd3d1d196.js.map

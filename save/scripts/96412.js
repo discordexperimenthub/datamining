@@ -1933,9 +1933,10 @@
             useStoreStream: a = !0,
             showActions: o = !0,
             hideHeader: d = !1,
-            ...c
+            analyticsParams: c,
+            ...N
           } = e,
-          N = (0, r.useStateFromStores)([_.default, C.default], () => {
+          M = (0, r.useStateFromStores)([_.default, C.default], () => {
             var e;
             return C.default.getChannel(
               null === (e = _.default.getVoiceStateForUser(n.id)) ||
@@ -1944,19 +1945,19 @@
                 : e.channelId
             );
           }),
-          { enableHangStatus: M } = E.HangStatusExperiment.useExperiment({
-            guildId: null == N ? void 0 : N.guild_id,
+          { enableHangStatus: L } = E.HangStatusExperiment.useExperiment({
+            guildId: null == M ? void 0 : M.guild_id,
             location: "UserActivityContainer",
           }),
-          L = (0, r.useStateFromStores)([S.default], () =>
+          P = (0, r.useStateFromStores)([S.default], () =>
             a ? S.default.getAnyStreamForUser(n.id) : null
           ),
-          P = M && v.default.can(x.Permissions.CONNECT, N),
-          b =
-            (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && P
-              ? N
+          b = L && v.default.can(x.Permissions.CONNECT, M),
+          j =
+            (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS && b
+              ? M
               : null,
-          j = (0, r.useStateFromStores)(
+          U = (0, r.useStateFromStores)(
             [T.default, _.default, C.default],
             () => {
               var e, l;
@@ -1975,61 +1976,61 @@
                       ? void 0
                       : e.getGuildId()
                   )
-                : null != b
-                  ? T.default.getGuild(b.getGuildId())
+                : null != j
+                  ? T.default.getGuild(j.getGuildId())
                   : null;
             }
           ),
-          U = (0, r.useStateFromStores)([T.default], () =>
-            null != L ? T.default.getGuild(L.guildId) : null
+          D = (0, r.useStateFromStores)([T.default], () =>
+            null != P ? T.default.getGuild(P.guildId) : null
           ),
-          D = (0, r.useStateFromStores)([f.default], () => {
+          k = (0, r.useStateFromStores)([f.default], () => {
             if (null != t)
               return null != t.application_id
                 ? f.default.getApplication(t.application_id)
                 : f.default.getApplicationByName(t.name);
             return null;
           }),
-          k = (0, r.useStateFromStores)([I.default], () =>
+          w = (0, r.useStateFromStores)([I.default], () =>
             I.default.getCurrentUser()
           ),
-          w = (0, p.default)(),
-          F = w && null != t;
+          F = (0, p.default)(),
+          G = F && null != t;
         return (i.useEffect(() => {
           (null == t ? void 0 : t.type) === x.ActivityTypes.HANG_STATUS &&
-            P &&
+            b &&
             A.default.track(x.AnalyticEvents.VIEW_HANG_STATUS, {
               source: "UserProfilePopout",
-              guild_id: null == b ? void 0 : b.guild_id,
-              channel_id: null == b ? void 0 : b.id,
+              guild_id: null == j ? void 0 : j.guild_id,
+              channel_id: null == j ? void 0 : j.id,
             });
-        }, [null == t ? void 0 : t.type, P, b]),
-        (null == t ? void 0 : t.type) !== x.ActivityTypes.HANG_STATUS || P)
+        }, [null == t ? void 0 : t.type, b, j]),
+        (null == t ? void 0 : t.type) !== x.ActivityTypes.HANG_STATUS || b)
           ? (0, l.jsx)(y.default, {
-              ...c,
+              ...N,
               activity: t,
               user: n,
-              application: D,
+              application: k,
               hideHeader: d,
-              activityGuild: null != j ? j : U,
+              activityGuild: null != U ? U : D,
               renderActions: o
                 ? () =>
                     (0, l.jsxs)("div", {
-                      className: s(F && O.actionsWrapper),
+                      className: s(G && O.actionsWrapper),
                       children: [
                         (0, l.jsx)(R, {
-                          ...c,
-                          applicationStream: L,
+                          ...N,
+                          applicationStream: P,
                           activity: t,
                           user: n,
                         }),
-                        F &&
+                        G &&
                           (0, l.jsx)(m.default, {
                             activity: t,
                             user: n,
                             filename: ""
                               .concat(
-                                null == k ? void 0 : k.globalName,
+                                null == w ? void 0 : w.globalName,
                                 "-reacting-to-"
                               )
                               .concat(t.name, ".png")
@@ -2037,6 +2038,7 @@
                             showReact: !0,
                             showReply: !0,
                             reactor: h.default,
+                            analyticsParams: c,
                           }),
                       ],
                     })
@@ -6760,7 +6762,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return A;
+            return x;
           },
         }),
         n("222007");
@@ -6778,24 +6780,26 @@
         m = n("233069"),
         h = n("882641"),
         E = n("945330"),
-        g = n("964261"),
-        S = n("526409"),
-        C = n("314848"),
-        T = n("49111"),
-        v = n("782340"),
-        I = n("619187");
-      let _ = (0, m.createChannelRecord)({ id: "1", type: T.ChannelTypes.DM }),
-        y = i.forwardRef(function (e, t) {
+        g = n("599110"),
+        S = n("964261"),
+        C = n("407462"),
+        T = n("526409"),
+        v = n("314848"),
+        I = n("49111"),
+        _ = n("782340"),
+        y = n("619187");
+      let A = (0, m.createChannelRecord)({ id: "1", type: I.ChannelTypes.DM }),
+        N = i.forwardRef(function (e, t) {
           let { user: n, hide: a, onEnter: r } = e,
             [p, m] = i.useState(""),
-            [h, S] = i.useState((0, c.toRichValue)("")),
+            [h, g] = i.useState((0, c.toRichValue)("")),
             C = (0, u.default)();
           return (0, l.jsxs)("div", {
-            className: s([I.reply, "theme-".concat(C)]),
+            className: s([y.reply, "theme-".concat(C)]),
             ref: t,
             children: [
               (0, l.jsxs)("div", {
-                className: I.replyHeader,
+                className: y.replyHeader,
                 children: [
                   (0, l.jsxs)(o.Text, {
                     variant: "text-md/bold",
@@ -6806,30 +6810,30 @@
                     ],
                   }),
                   (0, l.jsx)(o.Clickable, {
-                    className: I.closeIcon,
+                    className: y.closeIcon,
                     "aria-label":
-                      v.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
+                      _.default.Messages.QUICK_REPLY_CLOSE_ARIA_LABEL,
                     onClick: a,
                     children: (0, l.jsx)(E.default, {}),
                   }),
                 ],
               }),
               (0, l.jsx)(f.default, {
-                className: I.replyInput,
+                className: y.replyInput,
                 focused: !0,
                 showRemainingCharsAfterCount: -1,
                 allowNewLines: !1,
-                maxCharacterCount: g.MAX_CHAR_COUNT,
-                channel: _,
+                maxCharacterCount: S.MAX_CHAR_COUNT,
+                channel: A,
                 onChange: (e, t, n) => {
-                  m(t), S(n);
+                  m(t), g(n);
                 },
                 type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
                 textValue: p,
                 richValue: h,
                 onSubmit: e => {
                   let { value: t } = e;
-                  return t.length > g.MAX_CHAR_COUNT
+                  return t.length > S.MAX_CHAR_COUNT
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
                     : (r(t),
                       Promise.resolve({ shouldClear: !1, shouldRefocus: !1 }));
@@ -6840,7 +6844,7 @@
             ],
           });
         });
-      var A = e => {
+      var x = e => {
         let {
             activity: t,
             user: n,
@@ -6849,56 +6853,66 @@
             requireConfirmation: d = !1,
             filename: c,
             reactor: f,
+            analyticsParams: m,
           } = e,
-          [m, E] = i.useState(!1),
-          g = (0, u.default)(),
-          [T, v] = i.useState(!1),
-          [A, N] = i.useState(!1),
-          [x, O] = i.useState(),
-          [R, M] = i.useState(""),
-          L = i.useRef(null),
-          P = i.useRef(null),
-          b = (0, C.default)(n);
-        function j(e) {
+          [E, S] = i.useState(!1),
+          _ = (0, u.default)(),
+          [x, O] = i.useState(!1),
+          [R, M] = i.useState(!1),
+          [L, P] = i.useState(),
+          [b, j] = i.useState(""),
+          U = i.useRef(null),
+          D = i.useRef(null),
+          k = (0, v.default)(n);
+        function w(e) {
           var t, n;
           null != e.target &&
-            (!(null == L
+            (!(null == U
               ? void 0
-              : null === (t = L.current) || void 0 === t
+              : null === (t = U.current) || void 0 === t
                 ? void 0
-                : t.contains(null == e ? void 0 : e.target)) && v(!1),
-            !(null == P
+                : t.contains(null == e ? void 0 : e.target)) && O(!1),
+            !(null == D
               ? void 0
-              : null === (n = P.current) || void 0 === n
+              : null === (n = D.current) || void 0 === n
                 ? void 0
-                : n.contains(null == e ? void 0 : e.target)) && N(!1));
+                : n.contains(null == e ? void 0 : e.target)) && M(!1));
+        }
+        function F(e) {
+          g.default.track(I.AnalyticEvents.ACTIVITY_REACTOR_INTERACTED, {
+            application_id: t.application_id,
+            interaction_type: e,
+            ...m,
+          });
         }
         return (i.useEffect(() => {
           let e = e => {
-            "Escape" === e.key && (N(!1), v(!1));
+            "Escape" === e.key && (M(!1), O(!1));
           };
           return (
             document.addEventListener("keydown", e),
-            document.addEventListener("mousedown", j),
+            document.addEventListener("mousedown", w),
             () => {
               document.removeEventListener("keydown", e),
-                document.removeEventListener("mousedown", j);
+                document.removeEventListener("mousedown", w);
             }
           );
         }, []),
-        b)
+        k)
           ? (0, l.jsxs)(l.Fragment, {
               children: [
                 (0, l.jsxs)("div", {
-                  className: I.reactions,
+                  className: y.reactions,
                   children: [
                     a &&
                       (0, l.jsx)(h.default, {
                         active: !1,
                         tabIndex: 0,
-                        className: I.reaction,
+                        className: y.reaction,
                         onClick: () => {
-                          v(!0), N(!1);
+                          F(C.ActivityReactorInteractionTypes.ReactBegin),
+                            O(!0),
+                            M(!1);
                         },
                       }),
                     o &&
@@ -6908,48 +6922,60 @@
                           marginTop: 4,
                           marginLeft: 8,
                         },
-                        className: I.reaction,
+                        className: y.reaction,
                         onClick: () => {
-                          N(!0);
+                          F(C.ActivityReactorInteractionTypes.ReplyBegin),
+                            M(!0);
                         },
                         children: (0, l.jsx)(r.ArrowAngleLeftUpIcon, {}),
                       }),
                   ],
                 }),
-                T &&
+                x &&
                   (0, l.jsx)("div", {
-                    className: s([I.picker, "theme-".concat(g)]),
-                    ref: L,
+                    className: s([y.picker, "theme-".concat(_)]),
+                    ref: U,
                     children: (0, l.jsx)(p.ReactionPicker, {
                       messageId: "",
-                      channel: _,
+                      channel: A,
                       closePopout: () => {
-                        v(!1);
+                        O(!1);
                       },
                       onSelectEmoji: e => {
-                        null != e && (O(e), v(!1), E(!0));
+                        null != e &&
+                          (F(C.ActivityReactorInteractionTypes.ReactSubmit),
+                          P(e),
+                          O(!1),
+                          S(!0));
                       },
                     }),
                   }),
-                A &&
-                  (0, l.jsx)(y, {
-                    ref: P,
+                R &&
+                  (0, l.jsx)(N, {
+                    ref: D,
                     user: n,
                     activity: t,
-                    hide: () => N(!1),
+                    hide: () => M(!1),
                     onEnter: e => {
-                      M(e), E(!0);
+                      F(C.ActivityReactorInteractionTypes.ReplySubmit),
+                        j(e),
+                        S(!0);
                     },
                   }),
-                m &&
+                E &&
                   (0, l.jsx)(f, {
                     activity: t,
                     user: n,
                     onComplete: e => {
-                      null != x
-                        ? ((0, S.sendReaction)(e, x, n, d, c), O(void 0))
-                        : null != R && ((0, S.sendReply)(e, R, n, d, c), M("")),
-                        E(!1);
+                      null != L
+                        ? (F(C.ActivityReactorInteractionTypes.ReactSend),
+                          (0, T.sendReaction)(e, L, n, d, c),
+                          P(void 0))
+                        : null != b &&
+                          (F(C.ActivityReactorInteractionTypes.ReplySend),
+                          (0, T.sendReply)(e, b, n, d, c),
+                          j("")),
+                        S(!1);
                     },
                   }),
               ],
@@ -7322,62 +7348,71 @@
     },
     407462: function (e, t, n) {
       "use strict";
-      var l, i;
+      var l, i, a, s;
       n.r(t),
         n.d(t, {
           canvasWidth: function () {
-            return a;
+            return r;
           },
           canvasHeight: function () {
-            return s;
+            return o;
           },
           AssetTypes: function () {
             return l;
           },
           padding: function () {
-            return r;
-          },
-          imagePadding: function () {
-            return o;
-          },
-          fontPadding: function () {
             return u;
           },
-          lineHeight: function () {
+          imagePadding: function () {
             return d;
           },
-          platformSize: function () {
+          fontPadding: function () {
             return c;
           },
-          activitySize: function () {
+          lineHeight: function () {
             return f;
           },
-          titleMaxWidthNoPlatform: function () {
+          platformSize: function () {
             return p;
           },
-          titleMaxWidthPlatform: function () {
+          activitySize: function () {
             return m;
           },
-          ACTIVITY_IMAGE_FALLBACK_PATH: function () {
+          titleMaxWidthNoPlatform: function () {
             return h;
           },
+          titleMaxWidthPlatform: function () {
+            return E;
+          },
+          ACTIVITY_IMAGE_FALLBACK_PATH: function () {
+            return g;
+          },
+          ActivityReactorInteractionTypes: function () {
+            return i;
+          },
         });
-      let a = 348,
-        s = 88;
-      ((i = l || (l = {})).AssetImage = "AssetImage"),
-        (i.ApplicationImage = "ApplicationImage"),
-        (i.Platform = "Platform"),
-        (i.StreamPreview = "StreamPreview");
-      let r = 12,
-        o = 12,
-        u = r + o,
-        d = 16,
-        c = 24,
-        f = 64,
-        p = 335,
-        m = 310,
-        h =
+      let r = 348,
+        o = 88;
+      ((a = l || (l = {})).AssetImage = "AssetImage"),
+        (a.ApplicationImage = "ApplicationImage"),
+        (a.Platform = "Platform"),
+        (a.StreamPreview = "StreamPreview");
+      let u = 12,
+        d = 12,
+        c = u + d,
+        f = 16,
+        p = 24,
+        m = 64,
+        h = 335,
+        E = 310,
+        g =
           "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm6.81 7c-.54 0-1 .26-1.23.61A1 1 0 0 1 8.92 8.5 3.49 3.49 0 0 1 11.82 7c1.81 0 3.43 1.38 3.43 3.25 0 1.45-.98 2.61-2.27 3.06a1 1 0 0 1-1.96.37l-.19-1a1 1 0 0 1 .98-1.18c.87 0 1.44-.63 1.44-1.25S12.68 9 11.81 9ZM13 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm7-10.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM18.5 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM7 18.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM5.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z";
+      ((s = i || (i = {})).ReactBegin = "React Begin"),
+        (s.ReplyBegin = "Reply Begin"),
+        (s.ReactSubmit = "React Submit"),
+        (s.ReplySubmit = "Reply Submit"),
+        (s.ReactSend = "React Send"),
+        (s.ReplySend = "Reply Send");
     },
     658567: function (e, t, n) {
       "use strict";
@@ -38295,6 +38330,7 @@
                           onClose: y,
                           setNote: s,
                           canDM: es,
+                          analyticsParams: V,
                         }),
                       ],
                     }),
@@ -38324,7 +38360,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return U;
+            return D;
           },
         }),
         n("222007");
@@ -38358,191 +38394,201 @@
         M = n("574191"),
         L = n("491250"),
         P = n("453649"),
-        b = n("956330"),
-        j = n("477691");
-      function U(e) {
+        b = n("49111"),
+        j = n("956330"),
+        U = n("477691");
+      function D(e) {
         var t, n, a;
         let {
-            activity: U,
-            customStatusActivity: D,
-            user: k,
-            displayProfile: w,
-            guild: F,
-            guildMember: G,
-            channelId: B,
-            onClose: H,
-            setNote: V = !1,
-            canDM: K,
-            hideNote: W = !1,
-            showCopiableUsername: Y = !1,
+            activity: D,
+            customStatusActivity: k,
+            user: w,
+            displayProfile: F,
+            guild: G,
+            guildMember: B,
+            channelId: H,
+            onClose: V,
+            setNote: K = !1,
+            canDM: W,
+            hideNote: Y = !1,
+            showCopiableUsername: z = !1,
+            analyticsParams: J,
           } = e,
-          z = (0, r.useStateFromStores)(
+          q = (0, r.useStateFromStores)(
             [c.default],
             () => c.default.hidePersonalInformation
           ),
-          J = (0, r.useStateFromStores)([m.default], () => {
+          Z = (0, r.useStateFromStores)([m.default], () => {
             var e;
-            return null === (e = m.default.getUserProfile(k.id)) || void 0 === e
+            return null === (e = m.default.getUserProfile(w.id)) || void 0 === e
               ? void 0
               : e.application;
           }),
-          q = (0, r.useStateFromStores)(
+          Q = (0, r.useStateFromStores)(
             [u.default],
-            () => null != u.default.getAnyStreamForUser(k.id)
+            () => null != u.default.getAnyStreamForUser(w.id)
           ),
-          Z = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(
-            k.id,
-            null == F ? void 0 : F.id
+          X = (0, P.useGetVoiceChannelInfoForVoiceActivitySection)(
+            w.id,
+            null == G ? void 0 : G.id
           ),
-          Q = !q && null != Z,
-          { showVoiceActivityInProfile: X } =
+          $ = !Q && null != X,
+          { showVoiceActivityInProfile: ee } =
             h.VoiceActivityProfileExperiment.useExperiment(
               { location: "user popout" },
-              { autoTrackExposure: Q }
+              { autoTrackExposure: $ }
             ),
-          $ = (0, r.useStateFromStores)([d.default], () =>
-            d.default.getChannel(B)
+          et = (0, r.useStateFromStores)([d.default], () =>
+            d.default.getChannel(H)
           ),
-          { profileTheme: ee } = (0, E.default)(k, w),
-          et = i.useRef(null),
-          [en, el] = i.useState(!0),
-          ei = i.useCallback(() => {
-            let { current: e } = et;
-            null != e && el(0 === e.getScrollerState().scrollTop);
+          { profileTheme: en } = (0, E.default)(w, F),
+          el = i.useRef(null),
+          [ei, ea] = i.useState(!0),
+          es = i.useCallback(() => {
+            let { current: e } = el;
+            null != e && ea(0 === e.getScrollerState().scrollTop);
           }, []);
         if (
           (i.useLayoutEffect(() => {
             var e;
-            let { current: t } = et;
+            let { current: t } = el;
             null != t &&
               (null === (e = t.getScrollerNode()) ||
                 void 0 === e ||
                 e.scrollTo({ top: 0 }));
           }, []),
-          k.isSystemUser())
+          w.isSystemUser())
         )
           return null;
-        if (k.isNonUserBot())
+        if (w.isNonUserBot())
           return (0, l.jsx)(L.default, {
-            user: k,
+            user: w,
             nickname: null,
             pronouns: null,
-            className: b.usernameSection,
+            className: j.usernameSection,
             lastSection: !0,
           });
-        let ea =
-          null !==
-            (t = f.default.getNickname(null == F ? void 0 : F.id, B, k)) &&
-          void 0 !== t
-            ? t
-            : p.default.getName(k);
+        let er =
+            null !==
+              (t = f.default.getNickname(null == G ? void 0 : G.id, H, w)) &&
+            void 0 !== t
+              ? t
+              : p.default.getName(w),
+          eo = {
+            location: {
+              page: b.AnalyticsPages.USER_POPOUT,
+              section: b.AnalyticsSections.USER_PROFILE,
+            },
+          };
         return (0, l.jsxs)(l.Fragment, {
           children: [
             (0, l.jsx)(L.default, {
-              className: b.usernameSection,
-              user: k,
-              nickname: ea,
-              pronouns: null == w ? void 0 : w.pronouns,
+              className: j.usernameSection,
+              user: w,
+              nickname: er,
+              pronouns: null == F ? void 0 : F.pronouns,
               usernameIcon:
-                k.hasAvatarForGuild(null == F ? void 0 : F.id) &&
-                (0, l.jsx)(S.default, { user: k, nickname: ea }),
-              shouldCopyOnClick: Y,
+                w.hasAvatarForGuild(null == G ? void 0 : G.id) &&
+                (0, l.jsx)(S.default, { user: w, nickname: er }),
+              shouldCopyOnClick: z,
             }),
             (0, l.jsxs)(o.HeadingLevel, {
               children: [
                 (0, l.jsx)(y.default, {
-                  className: b.customStatusSection,
-                  customStatusActivity: D,
+                  className: j.customStatusSection,
+                  customStatusActivity: k,
                 }),
-                (0, l.jsx)(g.default, { className: b.divider }),
+                (0, l.jsx)(g.default, { className: j.divider }),
                 (0, l.jsxs)(o.AdvancedScroller, {
-                  className: s(b.scroller, { [b.scrollerSeparator]: !en }),
-                  onScroll: ei,
-                  ref: et,
+                  className: s(j.scroller, { [j.scrollerSeparator]: !ei }),
+                  onScroll: es,
+                  ref: el,
                   children: [
                     (0, l.jsx)(I.default, {
-                      user: k,
-                      guildId: null == F ? void 0 : F.id,
+                      user: w,
+                      guildId: null == G ? void 0 : G.id,
                     }),
                     (0, l.jsx)(v.default, {
                       isUsingGuildBio:
                         null !==
                           (n =
-                            null == w ? void 0 : w.isUsingGuildMemberBio()) &&
+                            null == F ? void 0 : F.isUsingGuildMemberBio()) &&
                         void 0 !== n &&
                         n,
-                      bio: null == w ? void 0 : w.bio,
-                      guild: F,
-                      hidePersonalInformation: z,
+                      bio: null == F ? void 0 : F.bio,
+                      guild: G,
+                      hidePersonalInformation: q,
                     }),
                     (0, l.jsx)(N.default, {
-                      userId: k.id,
-                      guild: F,
-                      guildMember: G,
+                      userId: w.id,
+                      guild: G,
+                      guildMember: B,
                     }),
-                    X &&
-                      Q &&
+                    ee &&
+                      $ &&
                       (0, l.jsx)(P.default, {
-                        voiceChannel: Z.voiceChannel,
-                        voiceGuild: Z.voiceGuild,
-                        onClose: H,
-                        color: j.buttonColor,
+                        voiceChannel: X.voiceChannel,
+                        voiceGuild: X.voiceGuild,
+                        onClose: V,
+                        color: U.buttonColor,
                       }),
                     (0, l.jsx)(C.default, {
-                      activity: U,
-                      user: k,
-                      guild: F,
-                      channelId: B,
-                      onClose: H,
+                      activity: D,
+                      user: w,
+                      guild: G,
+                      channelId: H,
+                      onClose: V,
+                      analyticsParams:
+                        (null == J ? void 0 : J.location) != null ? J : eo,
                     }),
-                    (null == J ? void 0 : J.popularApplicationCommandIds) !=
-                      null && null != $
+                    (null == Z ? void 0 : Z.popularApplicationCommandIds) !=
+                      null && null != et
                       ? (0, l.jsx)(O.default, {
-                          applicationId: J.id,
-                          commandIds: J.popularApplicationCommandIds,
-                          channel: $,
-                          guildId: null == F ? void 0 : F.id,
-                          onClick: H,
+                          applicationId: Z.id,
+                          commandIds: Z.popularApplicationCommandIds,
+                          channel: et,
+                          guildId: null == G ? void 0 : G.id,
+                          onClick: V,
                         })
                       : null,
                     (0, l.jsx)(T.default, {
-                      user: k,
-                      guildId: null == F ? void 0 : F.id,
+                      user: w,
+                      guildId: null == G ? void 0 : G.id,
                     }),
                     (0, l.jsx)(M.default, {
-                      user: k,
-                      guild: F,
-                      guildMember: G,
+                      user: w,
+                      guild: G,
+                      guildMember: B,
                       showBorder:
-                        null !== (a = null == w ? void 0 : w.canEditThemes) &&
+                        null !== (a = null == F ? void 0 : F.canEditThemes) &&
                         void 0 !== a &&
                         a,
                     }),
                     (0, l.jsx)(_.default, {
-                      userId: k.id,
-                      channelId: B,
-                      guild: F,
-                      onClose: H,
-                      theme: ee,
+                      userId: w.id,
+                      channelId: H,
+                      guild: G,
+                      onClose: V,
+                      theme: en,
                     }),
-                    null != J &&
-                      void 0 !== B &&
+                    null != Z &&
+                      void 0 !== H &&
                       (0, l.jsx)(R.default, {
-                        channelId: B,
-                        applicationId: J.id,
+                        channelId: H,
+                        applicationId: Z.id,
                       }),
                     (0, l.jsx)(x.default, {
-                      user: k,
-                      setNote: V,
-                      autoFocus: !K,
-                      lastSection: !K,
-                      hideNote: z || W,
+                      user: w,
+                      setNote: K,
+                      autoFocus: !W,
+                      lastSection: !W,
+                      hideNote: q || Y,
                     }),
                     (0, l.jsx)(A.default, {
-                      user: k,
-                      setNote: V,
-                      canDM: K,
-                      onClose: H,
+                      user: w,
+                      setNote: K,
+                      canDM: W,
+                      onClose: V,
                     }),
                   ],
                 }),
@@ -38831,7 +38877,14 @@
         s = n("49111"),
         r = n("477691");
       function o(e) {
-        let { activity: t, user: n, guild: o, channelId: u, onClose: d } = e;
+        let {
+          activity: t,
+          user: n,
+          guild: o,
+          channelId: u,
+          onClose: d,
+          analyticsParams: c,
+        } = e;
         return (0, l.jsx)(a.default, {
           children: (0, l.jsx)(i.default, {
             type: i.UserActivityTypes.USER_POPOUT_V2,
@@ -38844,6 +38897,7 @@
             onOpenGameProfile: d,
             onAction: d,
             actionColor: r.buttonColor,
+            analyticsParams: c,
           }),
         });
       }
@@ -46333,4 +46387,4 @@
     },
   },
 ]);
-//# sourceMappingURL=96412.ca4d661a6f9f0ca9a04f.js.map
+//# sourceMappingURL=96412.4437c9f2c4f21d4846db.js.map

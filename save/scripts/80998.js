@@ -234,6 +234,7 @@
           "var(--guild-icon-inactive-nested-bg)"),
         (e.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND =
           "var(--guild-notifications-bottom-sheet-pill-background)"),
+        (e.HALO_POSITIVE = "var(--halo-positive)"),
         (e.HEADER_MUTED = "var(--header-muted)"),
         (e.HEADER_PRIMARY = "var(--header-primary)"),
         (e.HEADER_SECONDARY = "var(--header-secondary)"),
@@ -485,4 +486,4 @@
     },
   },
 ]);
-//# sourceMappingURL=80998.0f7d87219130fb7d1b1c.js.map
+//# sourceMappingURL=80998.c24c270476896d1f3801.js.map

@@ -23941,6 +23941,11 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser you can go to **User Settings > Gift Inventory** and accept the quest there.",
+        QUESTS_GET_THIS_GAME: "Get this game",
+        QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
+        QUESTS_HIDE_THIS: "Hide this",
+        QUESTS_FIND_QUEST:
+          "You can find this again in User Settings > Gift Inventory",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -25837,8 +25842,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265639", ", Version Hash: ")
-          .concat("41f63f98ecae237de95598ca6803a2697f211fa4")
+          .concat("265647", ", Version Hash: ")
+          .concat("551562ab5e55d19016b78464e6aceec3fcd2718f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28850,12 +28855,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265639"), "265639"));
+        let _ = parseInt(((e = "265647"), "265647"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265639"
+                "265647"
               )
             ),
             (_ = 0)),
@@ -50894,4 +50899,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.5d355275e8a7258d4e71.js.map
+//# sourceMappingURL=73222.d5aafc70cf497792cdb6.js.map

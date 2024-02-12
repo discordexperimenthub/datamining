@@ -8482,6 +8482,13 @@
             [a.MIDNIGHT]: { raw: "PRIMARY_700", opacity: 1 },
             [a.DARKER]: { raw: "PRIMARY_700", opacity: 1 },
           },
+          HALO_POSITIVE: {
+            category: "generic",
+            [a.DARK]: { raw: "GREEN_360", opacity: 0.24 },
+            [a.LIGHT]: { raw: "GREEN_360", opacity: 0.24 },
+            [a.MIDNIGHT]: { raw: "GREEN_360", opacity: 0.24 },
+            [a.DARKER]: { raw: "GREEN_360", opacity: 0.24 },
+          },
           HEADER_MUTED: {
             category: "text",
             [a.DARK]: { raw: "PRIMARY_360", opacity: 1 },
@@ -13797,6 +13804,7 @@
         (e.GUILD_ICON_INACTIVE_NESTED_BG = "guild-icon-inactive-nested-bg"),
         (e.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND =
           "guild-notifications-bottom-sheet-pill-background"),
+        (e.HALO_POSITIVE = "halo-positive"),
         (e.HEADER_MUTED = "header-muted"),
         (e.HEADER_PRIMARY = "header-primary"),
         (e.HEADER_SECONDARY = "header-secondary"),
@@ -14883,6 +14891,12 @@
           o.Color.WHITE_500,
           o.Color.PRIMARY_700,
           o.Color.PRIMARY_700,
+        ],
+        "halo-positive": [
+          o.Color.GREEN_360,
+          o.Color.GREEN_360,
+          o.Color.GREEN_360,
+          o.Color.GREEN_360,
         ],
         "header-muted": [
           o.Color.PRIMARY_360,
@@ -17201,4 +17215,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.3eda03d2523007a8c27b.js.map
+//# sourceMappingURL=7273.bbfad14d33c81b09376d.js.map

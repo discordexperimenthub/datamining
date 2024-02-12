@@ -23634,6 +23634,13 @@
           "Open safety tools",
         INAPPROPRIATE_CONVERSATION_BANNER_BLOCK_BUTTON: "Block",
         INAPPROPRIATE_CONVERSATION_BLOCK_CONFIRM: "User Blocked",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER: "Chats can be a lot",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION:
+          "Relax with Wumpus for as long as you need.",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE: "Mute music",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE: "Unmute music",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Back to conversation",
+        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT: "Wumpus vibing to music.",
         URF_LANDING_PAGE_TITLE: "Report Illegal Content",
         URF_LANDING_PAGE_SUBTITLE:
           "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement please [go here]({supportURL}).",
@@ -25821,8 +25828,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265586", ", Version Hash: ")
-          .concat("0627b5c6d75ee10cb6e436f7fc39d98f02599d6e")
+          .concat("265599", ", Version Hash: ")
+          .concat("3ca68f9ee72bb75582b3c7cf079e7606db759ba2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -27981,6 +27988,11 @@
           inlineRequire: () => E("282655").default,
           neverLoadBeforeConnectionOpen: !0,
         },
+        InappropriateConversationsManager: {
+          actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC"],
+          inlineRequire: () => E("874200").default,
+          neverLoadBeforeConnectionOpen: !0,
+        },
       };
       (0, t.initialize)(o);
     },
@@ -28829,12 +28841,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265586"), "265586"));
+        let _ = parseInt(((e = "265599"), "265599"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265586"
+                "265599"
               )
             ),
             (_ = 0)),
@@ -36199,6 +36211,44 @@
         );
         return 1 === o.length ? o[0] : null;
       }
+    },
+    874200: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          default: function () {
+            return N;
+          },
+        }),
+        E("222007");
+      var t = E("689988"),
+        o = E("709681");
+      let n = (0, o.createSound)("vibing_wumpus", "vibing_wumpus", 0),
+        r = 0,
+        i = 0,
+        a = null;
+      function I() {
+        let e = 0.2 * (i - r);
+        (e > 0 && r >= i) || (e < 0 && r <= i)
+          ? (clearInterval(a), 0 === i && n.stop())
+          : ((r += e), (n.volume = r));
+      }
+      function s() {
+        (i = 0), (a = setInterval(I, 100));
+      }
+      function T() {
+        n.loop(), (i = 0.5), (a = setInterval(I, 100));
+      }
+      class S extends t.default {
+        constructor(...e) {
+          super(...e),
+            (this.actions = {
+              VIBING_WUMPUS_PLAY_MUSIC: T,
+              VIBING_WUMPUS_STOP_MUSIC: s,
+            });
+        }
+      }
+      var N = new S();
     },
     537597: function (e, _, E) {
       "use strict";
@@ -50830,4 +50880,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.c27f8e1bfb81fdd14fbf.js.map
+//# sourceMappingURL=73222.795c2e802440aca8d118.js.map

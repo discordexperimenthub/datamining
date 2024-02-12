@@ -25837,8 +25837,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265637", ", Version Hash: ")
-          .concat("863f550a9716c6cd61070dd71f3e00dc59efea8e")
+          .concat("265639", ", Version Hash: ")
+          .concat("41f63f98ecae237de95598ca6803a2697f211fa4")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28850,12 +28850,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265637"), "265637"));
+        let _ = parseInt(((e = "265639"), "265639"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265637"
+                "265639"
               )
             ),
             (_ = 0)),
@@ -35716,23 +35716,26 @@
           getHeroAssetUrl: function () {
             return S;
           },
-          getQuestBarHeroAssetUrl: function () {
+          getQuestBarStaticHeroAssetUrl: function () {
             return N;
           },
-          getGameTileAssetUrl: function () {
+          getQuestBarAnimatedHeroAssetUrl: function () {
             return O;
           },
-          getGameLogotypeAssetUrl: function () {
+          getGameTileAssetUrl: function () {
             return A;
           },
-          getQuestForTargetedContent: function () {
+          getGameLogotypeAssetUrl: function () {
             return R;
           },
-          getPlatformString: function () {
+          getQuestForTargetedContent: function () {
             return l;
           },
-          calculatePercentComplete: function () {
+          getPlatformString: function () {
             return u;
+          },
+          calculatePercentComplete: function () {
+            return L;
           },
         }),
         E("222007");
@@ -35793,6 +35796,7 @@
             rewardCodePlatforms: _.reward_code_platforms.filter(e =>
               t.QUEST_REWARD_CODE_PLATFORMS_SET.has(e)
             ),
+            videoAssets: _.video_assets,
           },
           userStatus: null == e.user_status ? null : a(e.user_status),
           targetedContent: e.targeted_content,
@@ -35809,16 +35813,17 @@
       }
       let T = e => "".concat(n).concat(e).concat("/reward.png"),
         S = e => "".concat(n).concat(e).concat("/hero.png"),
-        N = e => "".concat(n).concat(e).concat("/quest_bar_hero.gif"),
-        O = e => "".concat(n).concat(e).concat("/game_tile.png"),
-        A = (e, _) =>
+        N = e => "".concat(n).concat(e).concat("/quests_bar_hero.png"),
+        O = e => "".concat(n).concat(e).concat("/quests_bar_hero.webm"),
+        A = e => "".concat(n).concat(e).concat("/game_tile.png"),
+        R = (e, _) =>
           "".concat(n).concat(e, "/").concat(_).concat("/game_logotype.png");
-      function R(e, _) {
+      function l(e, _) {
         for (let [E, t] of e)
           if (!i(t) && t.targetedContent.includes(_)) return t;
         return null;
       }
-      let l = e => {
+      let u = e => {
         switch (e) {
           case t.QuestRewardCodePlatforms.XBOX:
             return o.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -35833,7 +35838,7 @@
               .QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
         }
       };
-      function u(e) {
+      function L(e) {
         if (null == e.userStatus) return 0;
         let { streamProgressSeconds: _, completedAt: E } = e.userStatus;
         if (null != E) return 1;
@@ -50889,4 +50894,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.2de77ad2fffee6b067ba.js.map
+//# sourceMappingURL=73222.5d355275e8a7258d4e71.js.map

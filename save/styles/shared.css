@@ -10963,8 +10963,8 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   white-space: nowrap;
 }
 .icon_ecf39b {
-  width: 1rem;
-  height: 1rem;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
   margin-bottom: 0.2rem;
   margin-right: var(--spacing-4);
@@ -10999,14 +10999,20 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   background-color: var(--brand-experiment);
 }
 .icon_f8ef92 {
-  line-height: 1.05rem !important;
-  font-size: 0.5rem !important;
   display: inline-block;
   vertical-align: middle;
   margin-right: 3px;
   margin-bottom: 0.2rem;
+}
+.textIcon__1eaeb {
+  line-height: 1.05rem !important;
+  font-size: 0.5rem !important;
   width: 1.05rem;
   height: 1.05rem;
+}
+.imageIcon__87fe6 {
+  width: 1em;
+  height: 1em;
 }
 .name_cbb123 {
   text-overflow: ellipsis;
@@ -11510,8 +11516,8 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   text-decoration: underline;
 }
 .icon_dd1609 {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 0.5em;
+  height: 0.5em;
   margin-left: 4px;
   margin-right: 2px;
   margin-bottom: 1px;
@@ -23405,4 +23411,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.0423ff3a343c1e826633.css.map*/
+/*# sourceMappingURL=shared.70ad50778b24a35b29e1.css.map*/

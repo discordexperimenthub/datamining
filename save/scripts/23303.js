@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["23356"],
+  ["23303"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -31805,7 +31805,7 @@
         return null == n ||
           (function (e, t) {
             var n, s;
-            let i = null != e.editedTimestamp ? +e.editedTimestamp.toDate() : 0,
+            let i = null != e.editedTimestamp ? +e.editedTimestamp : 0,
               r =
                 null != t.edited_timestamp ? +new Date(t.edited_timestamp) : 0;
             return (
@@ -51377,39 +51377,39 @@
       n("782340");
       let p = new l.default({ id: "???", username: "???" });
       function y(e) {
-        var t, n, s, o, g, v, y, T, C;
-        let { reactions: N, interactionData: O } =
+        var t, n, s, i, o, g, v, y, T;
+        let { reactions: C, interactionData: N } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          P =
+          O =
             null !==
-              (o =
+              (i =
                 null === (t = e.mentions) || void 0 === t
                   ? void 0
-                  : t.map(e => e.id)) && void 0 !== o
-              ? o
+                  : t.map(e => e.id)) && void 0 !== i
+              ? i
               : [],
-          b = null !== (g = e.mention_roles) && void 0 !== g ? g : [],
-          V = null !== (v = e.mention_channels) && void 0 !== v ? v : [],
-          R = e.message_reference,
-          k = i(new Date(e.timestamp)),
-          M =
+          P = null !== (o = e.mention_roles) && void 0 !== o ? o : [],
+          b = null !== (g = e.mention_channels) && void 0 !== g ? g : [],
+          V = e.message_reference,
+          R = new Date(e.timestamp),
+          k =
             e.type === E.MessageTypes.THREAD_CREATED
               ? []
               : (0, r.default)(e.content);
-        let w =
-            null == (T = e).author
+        let M =
+            null == (y = e).author
               ? p
-              : null != T.webhook_id
-                ? new l.default(T.author)
-                : null !== (C = c.default.getUser(T.author.id)) && void 0 !== C
-                  ? C
-                  : new l.default(T.author),
-          L = null == e ? void 0 : e.gift_info,
-          U =
+              : null != y.webhook_id
+                ? new l.default(y.author)
+                : null !== (T = c.default.getUser(y.author.id)) && void 0 !== T
+                  ? T
+                  : new l.default(y.author),
+          w = null == e ? void 0 : e.gift_info,
+          L =
             null != e.interaction
               ? d.default.createFromServer(e.interaction)
               : null,
-          G =
+          U =
             e.type === E.MessageTypes.THREAD_STARTER_MESSAGE
               ? null === (s = e.referenced_message) || void 0 === s
                 ? void 0
@@ -51417,51 +51417,49 @@
                   ? void 0
                   : n.id
               : void 0,
-          F = e.type === E.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-          H = e.content;
+          G = e.type === E.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+          F = e.content;
         return (
-          e.type === E.MessageTypes.PREMIUM_REFERRAL && (H = ""),
+          e.type === E.MessageTypes.PREMIUM_REFERRAL && (F = ""),
           new u.default({
             ...e,
-            author: w,
+            author: M,
             webhookId: e.webhook_id,
             blocked:
-              _.default.isBlocked(w.id) ||
-              (null != G && _.default.isBlocked(G)),
-            timestamp: k,
+              _.default.isBlocked(M.id) ||
+              (null != U && _.default.isBlocked(U)),
+            timestamp: R,
             editedTimestamp:
-              null != e.edited_timestamp
-                ? i(new Date(e.edited_timestamp))
-                : null,
+              null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             mentionEveryone: e.mention_everyone,
-            mentions: P,
-            mentionRoles: b,
-            mentionChannels: V,
-            messageReference: R,
+            mentions: O,
+            mentionRoles: P,
+            mentionChannels: b,
+            messageReference: V,
             mentioned: (0, h.isMentioned)({
               userId: f.default.getId(),
               channelId: e.channel_id,
               mentionEveryone:
-                null !== (y = e.mention_everyone) && void 0 !== y && y,
-              mentionUsers: P,
-              mentionRoles: b,
+                null !== (v = e.mention_everyone) && void 0 !== v && v,
+              mentionUsers: O,
+              mentionRoles: P,
             }),
             attachments: I(e),
             embeds: A(e),
-            codedLinks: M,
+            codedLinks: k,
             giftCodes: (0, m.isGiftCodeEmbed)(e)
               ? (0, m.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url)
               : (0, m.findGiftCodes)(e.content),
-            content: H,
-            referralTrialOfferId: F,
-            call: S(e.call, k),
-            reactions: D(null != N ? N : e.reactions),
-            interaction: U,
-            interactionData: null != O ? O : e.interaction_data,
+            content: F,
+            referralTrialOfferId: G,
+            call: S(e.call, R),
+            reactions: D(null != C ? C : e.reactions),
+            interaction: L,
+            interactionData: null != N ? N : e.interaction_data,
             roleSubscriptionData: e.role_subscription_data,
             purchaseNotification: e.purchase_notification,
             poll: null == e.poll ? void 0 : (0, a.default)(e.poll),
-            giftInfo: null == L ? void 0 : L,
+            giftInfo: null == w ? void 0 : w,
           })
         );
       }
@@ -61145,22 +61143,20 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return c;
+            return f;
           },
         }),
         n("424973"),
         n("808653"),
         n("702976");
-      var s = n("866227"),
-        i = n.n(s),
-        r = n("666038"),
-        a = n("584375"),
-        o = n("875978"),
-        d = n("432173"),
-        u = n("568734"),
-        l = n("773336"),
-        f = n("49111");
-      class _ extends r.default {
+      var s = n("666038"),
+        i = n("584375"),
+        r = n("875978"),
+        a = n("432173"),
+        o = n("568734"),
+        d = n("773336"),
+        u = n("49111");
+      class l extends s.default {
         isEdited() {
           return null != this.editedTimestamp;
         }
@@ -61168,11 +61164,11 @@
           return this.channel_id;
         }
         getReaction(e) {
-          return this.reactions.find(t => (0, d.emojiEquals)(t.emoji, e));
+          return this.reactions.find(t => (0, a.emojiEquals)(t.emoji, e));
         }
         userHasReactedWithEmoji(e, t) {
           return this.reactions.some(n => {
-            if ((0, d.emojiEquals)(n.emoji, e))
+            if ((0, a.emojiEquals)(n.emoji, e))
               return (t && n.me) || (!t && n.me_burst);
           });
         }
@@ -61186,62 +61182,62 @@
             s =
               arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
-                : o.ReactionTypes.NORMAL,
-            i = -1,
-            r = this.reactions.map((r, u) => {
-              if ((0, d.emojiEquals)(r.emoji, e)) {
-                if (((i = u), s === o.ReactionTypes.BURST)) {
-                  if (t && r.me) return r;
-                  let e = t && r.me_burst ? r.burst_count : r.burst_count + 1,
+                : r.ReactionTypes.NORMAL,
+            o = -1,
+            u = this.reactions.map((u, l) => {
+              if ((0, a.emojiEquals)(u.emoji, e)) {
+                if (((o = l), s === r.ReactionTypes.BURST)) {
+                  if (t && u.me) return u;
+                  let e = t && u.me_burst ? u.burst_count : u.burst_count + 1,
                     s =
-                      null != r.burst_colors && r.burst_colors.length > 0
-                        ? r.burst_colors
+                      null != u.burst_colors && u.burst_colors.length > 0
+                        ? u.burst_colors
                         : n;
-                  r = {
-                    ...r,
-                    me_burst: !!t || r.me_burst,
+                  u = {
+                    ...u,
+                    me_burst: !!t || u.me_burst,
                     burst_count: e,
-                    count_details: { ...r.count_details, burst: e },
+                    count_details: { ...u.count_details, burst: e },
                     burst_colors: s,
                     themedBurstColors: (0,
-                    a.buildPlatformedThemedEmojiColorPalette)({
+                    i.buildPlatformedThemedEmojiColorPalette)({
                       colors: s,
-                      shouldProcessMobileColors: (0, l.isIOS)(),
+                      shouldProcessMobileColors: (0, d.isIOS)(),
                     }),
                   };
-                } else if (s === o.ReactionTypes.VOTE) {
+                } else if (s === r.ReactionTypes.VOTE) {
                   var f, _;
                   let e =
                       null !==
                         (_ =
-                          null === (f = r.count_details) || void 0 === f
+                          null === (f = u.count_details) || void 0 === f
                             ? void 0
                             : f.vote) && void 0 !== _
                         ? _
                         : 0,
-                    n = t && r.me_vote ? e : e + 1;
-                  r = {
-                    ...r,
-                    count_details: { ...r.count_details, vote: n },
-                    me_vote: !!t || r.me_vote,
+                    n = t && u.me_vote ? e : e + 1;
+                  u = {
+                    ...u,
+                    count_details: { ...u.count_details, vote: n },
+                    me_vote: !!t || u.me_vote,
                   };
                 } else {
-                  if (t && r.me_burst) return r;
-                  let e = t && r.me ? r.count : r.count + 1;
-                  r = {
-                    ...r,
+                  if (t && u.me_burst) return u;
+                  let e = t && u.me ? u.count : u.count + 1;
+                  u = {
+                    ...u,
                     count: e,
-                    count_details: { ...r.count_details, normal: e },
-                    me: !!t || r.me,
+                    count_details: { ...u.count_details, normal: e },
+                    me: !!t || u.me,
                   };
                 }
               }
-              return r;
+              return u;
             });
           return (
-            -1 === i &&
-              (s === o.ReactionTypes.BURST
-                ? r.push({
+            -1 === o &&
+              (s === r.ReactionTypes.BURST
+                ? u.push({
                     emoji: e,
                     me: !1,
                     me_burst: t,
@@ -61250,13 +61246,13 @@
                     burst_count: 1,
                     burst_colors: n,
                     themedBurstColors: (0,
-                    a.buildPlatformedThemedEmojiColorPalette)({
+                    i.buildPlatformedThemedEmojiColorPalette)({
                       colors: null != n ? n : [],
-                      shouldProcessMobileColors: (0, l.isIOS)(),
+                      shouldProcessMobileColors: (0, d.isIOS)(),
                     }),
                   })
-                : s === o.ReactionTypes.VOTE
-                  ? r.push({
+                : s === r.ReactionTypes.VOTE
+                  ? u.push({
                       emoji: e,
                       me: !1,
                       me_burst: !1,
@@ -61266,7 +61262,7 @@
                       burst_count: 0,
                       burst_colors: [],
                     })
-                  : r.push({
+                  : u.push({
                       emoji: e,
                       me: t,
                       me_burst: !1,
@@ -61275,7 +61271,7 @@
                       burst_count: 0,
                       burst_colors: [],
                     })),
-            this.set("reactions", r)
+            this.set("reactions", u)
           );
         }
         addReactionBatch(e, t) {
@@ -61286,24 +61282,24 @@
         }
         removeReaction(e) {
           var t, n, s, i;
-          let r =
+          let o =
               arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            a =
+            d =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
-                : o.ReactionTypes.NORMAL,
+                : r.ReactionTypes.NORMAL,
             u = -1,
             l = this.reactions.map((t, n) => {
-              if ((0, d.emojiEquals)(t.emoji, e)) {
-                if (a === o.ReactionTypes.BURST) {
-                  let e = r && !t.me_burst ? t.burst_count : t.burst_count - 1;
+              if ((0, a.emojiEquals)(t.emoji, e)) {
+                if (d === r.ReactionTypes.BURST) {
+                  let e = o && !t.me_burst ? t.burst_count : t.burst_count - 1;
                   t = {
                     ...t,
                     burst_count: e,
-                    me_burst: !r && t.me_burst,
+                    me_burst: !o && t.me_burst,
                     count_details: { ...t.count_details, burst: e },
                   };
-                } else if (a === o.ReactionTypes.VOTE) {
+                } else if (d === r.ReactionTypes.VOTE) {
                   var s, i;
                   let e =
                       null !==
@@ -61313,18 +61309,18 @@
                             : s.vote) && void 0 !== i
                         ? i
                         : 0,
-                    n = r && !t.me_vote ? e : e - 1;
+                    n = o && !t.me_vote ? e : e - 1;
                   t = {
                     ...t,
                     count_details: { ...t.count_details, vote: n },
-                    me_vote: !r && t.me_vote,
+                    me_vote: !o && t.me_vote,
                   };
                 } else {
-                  let e = r && !t.me ? t.count : t.count - 1;
+                  let e = o && !t.me ? t.count : t.count - 1;
                   t = {
                     ...t,
                     count: e,
-                    me: !r && t.me,
+                    me: !o && t.me,
                     count_details: { ...t.count_details, normal: e },
                   };
                 }
@@ -61363,19 +61359,19 @@
         removeReactionsForEmoji(e) {
           return this.set(
             "reactions",
-            this.reactions.filter(t => !(0, d.emojiEquals)(t.emoji, e))
+            this.reactions.filter(t => !(0, a.emojiEquals)(t.emoji, e))
           );
         }
         isSystemDM() {
           return this.author.isSystemUser();
         }
         hasFlag(e) {
-          return (0, u.hasFlag)(this.flags, e);
+          return (0, o.hasFlag)(this.flags, e);
         }
         isCommandType() {
           return (
-            this.type === f.MessageTypes.CHAT_INPUT_COMMAND ||
-            this.type === f.MessageTypes.CONTEXT_MENU_COMMAND
+            this.type === u.MessageTypes.CHAT_INPUT_COMMAND ||
+            this.type === u.MessageTypes.CONTEXT_MENU_COMMAND
           );
         }
         isPoll() {
@@ -61396,7 +61392,7 @@
           var t, n, s;
           super(),
             (this.id = e.id),
-            (this.type = e.type || f.MessageTypes.DEFAULT),
+            (this.type = e.type || u.MessageTypes.DEFAULT),
             (this.channel_id = e.channel_id),
             (this.author = e.author),
             (this.content = e.content || ""),
@@ -61412,9 +61408,9 @@
             (this.tts = e.tts || !1),
             (this.codedLinks = e.codedLinks || []),
             (this.giftCodes = e.giftCodes || []),
-            (this.timestamp = e.timestamp || i()),
+            (this.timestamp = e.timestamp || new Date()),
             (this.editedTimestamp = e.editedTimestamp || null),
-            (this.state = e.state || f.MessageStates.SENT),
+            (this.state = e.state || u.MessageStates.SENT),
             (this.nonce = e.nonce || null),
             (this.blocked = e.blocked || !1),
             (this.call = e.call || null),
@@ -61453,7 +61449,7 @@
               null !== (s = e.gift_info) && void 0 !== s ? s : e.giftInfo);
         }
       }
-      var c = _;
+      var f = l;
     },
     611310: function (e, t, n) {
       "use strict";
@@ -64562,7 +64558,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return B;
+            return F;
           },
         }),
         n("222007"),
@@ -64605,24 +64601,13 @@
         }),
           b.clear();
       }
-      let k = null;
-      function M() {
-        let e = h.default.locale;
-        if (k === e) return !1;
-        o.default.forEach(t => {
-          t.forAll(t => {
-            t.timestamp.locale(e);
-          });
-        }),
-          (k = e);
-      }
-      function w() {
+      function k() {
         o.default.forEach(e => {
           let { channelId: t } = e;
           null == p.default.getChannel(t) && o.default.clear(t);
         });
       }
-      function L() {
+      function M() {
         o.default.forEach(e => {
           o.default.commit(
             e.reset(
@@ -64631,8 +64616,8 @@
           );
         });
       }
-      function U(e) {}
-      function G(e) {
+      function w(e) {}
+      function L(e) {
         let {
             type: t,
             channelId: n,
@@ -64651,7 +64636,7 @@
         )),
           o.default.commit(d);
       }
-      function F(e) {
+      function U(e) {
         let { type: t, messageData: n } = e,
           { message: s } = n,
           i = (0, d.getFailedMessageId)(n),
@@ -64675,7 +64660,7 @@
         })),
           o.default.commit(a);
       }
-      class H extends r.default.Store {
+      class G extends r.default.Store {
         initialize() {
           this.waitFor(
             O.default,
@@ -64757,8 +64742,8 @@
           );
         }
       }
-      H.displayName = "MessageStore";
-      var B = new H(a.default, {
+      G.displayName = "MessageStore";
+      var F = new G(a.default, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
           let { changesByChannelId: t } = e;
           for (let e in t) {
@@ -64934,8 +64919,8 @@
                 )),
             o.default.commit(i);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: F,
-        MESSAGE_EDIT_FAILED_AUTOMOD: F,
+        MESSAGE_SEND_FAILED_AUTOMOD: U,
+        MESSAGE_EDIT_FAILED_AUTOMOD: U,
         MESSAGE_UPDATE: function (e) {
           let t = e.message.id,
             n = e.message.channel_id,
@@ -64990,8 +64975,6 @@
             s = o.default.getOrCreate(t);
           o.default.commit(s.mutate({ revealedMessageId: n }));
         },
-        USER_SETTINGS_PROTO_UPDATE: M,
-        I18N_LOAD_SUCCESS: M,
         THREAD_CREATE_LOCAL: function (e) {
           let { channelId: t } = e,
             n = o.default.getOrCreate(t);
@@ -65002,14 +64985,14 @@
           })),
             o.default.commit(n);
         },
-        CHANNEL_DELETE: w,
-        THREAD_DELETE: w,
-        GUILD_DELETE: w,
-        RELATIONSHIP_ADD: L,
-        RELATIONSHIP_REMOVE: L,
-        GUILD_MEMBERS_CHUNK: U,
-        THREAD_MEMBER_LIST_UPDATE: U,
-        MESSAGE_REACTION_ADD: G,
+        CHANNEL_DELETE: k,
+        THREAD_DELETE: k,
+        GUILD_DELETE: k,
+        RELATIONSHIP_ADD: M,
+        RELATIONSHIP_REMOVE: M,
+        GUILD_MEMBERS_CHUNK: w,
+        THREAD_MEMBER_LIST_UPDATE: w,
+        MESSAGE_REACTION_ADD: L,
         MESSAGE_REACTION_ADD_MANY: function (e) {
           let { channelId: t, messageId: n, reactions: s } = e,
             i = o.default.get(t);
@@ -65025,7 +65008,7 @@
           })),
             o.default.commit(i);
         },
-        MESSAGE_REACTION_REMOVE: G,
+        MESSAGE_REACTION_REMOVE: L,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
           let { channelId: t, messageId: n } = e,
             s = o.default.get(t);
@@ -76642,4 +76625,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.257968592f0393631836.js.map
+//# sourceMappingURL=23303.8cc92d1083c05e746c6c.js.map

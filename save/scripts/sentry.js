@@ -108,25 +108,25 @@
           }
         })();
         var l = [],
-          f = !1,
-          d = -1;
+          d = !1,
+          f = -1;
         function h() {
-          f &&
+          d &&
             i &&
-            ((f = !1),
-            i.length ? (l = i.concat(l)) : (d = -1),
+            ((d = !1),
+            i.length ? (l = i.concat(l)) : (f = -1),
             l.length && p());
         }
         function p() {
-          if (!f) {
+          if (!d) {
             var e = a(h);
-            f = !0;
+            d = !0;
             for (var t = l.length; t; ) {
-              for (i = l, l = []; ++d < t; ) i && i[d].run();
-              (d = -1), (t = l.length);
+              for (i = l, l = []; ++f < t; ) i && i[f].run();
+              (f = -1), (t = l.length);
             }
             (i = null),
-              (f = !1),
+              (d = !1),
               !(function (e) {
                 if (o === clearTimeout) return clearTimeout(e);
                 if ((o === s || !o) && clearTimeout)
@@ -143,17 +143,17 @@
               })(e);
           }
         }
-        function b(e, t) {
+        function m(e, t) {
           (this.fun = e), (this.array = t);
         }
-        function m() {}
+        function b() {}
         (u.nextTick = function (e) {
           var t = Array(arguments.length - 1);
           if (arguments.length > 1)
             for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-          l.push(new b(e, t)), 1 === l.length && !f && a(p);
+          l.push(new m(e, t)), 1 === l.length && !d && a(p);
         }),
-          (b.prototype.run = function () {
+          (m.prototype.run = function () {
             this.fun.apply(null, this.array);
           }),
           (u.title = "browser"),
@@ -162,15 +162,15 @@
           (u.argv = []),
           (u.version = ""),
           (u.versions = {}),
-          (u.on = m),
-          (u.addListener = m),
-          (u.once = m),
-          (u.off = m),
-          (u.removeListener = m),
-          (u.removeAllListeners = m),
-          (u.emit = m),
-          (u.prependListener = m),
-          (u.prependOnceListener = m),
+          (u.on = b),
+          (u.addListener = b),
+          (u.once = b),
+          (u.off = b),
+          (u.removeListener = b),
+          (u.removeAllListeners = b),
+          (u.emit = b),
+          (u.prependListener = b),
+          (u.prependOnceListener = b),
           (u.listeners = function (e) {
             return [];
           }),
@@ -268,7 +268,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-95b81c8bc38baacfe624ff9471f70b7ebfebf8e6",
+            release: "discord_web-0627b5c6d75ee10cb6e436f7fc39d98f02599d6e",
             beforeSend: e => {
               var t, n;
               return !(
@@ -339,8 +339,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((e = "265571"), "265571")),
-            r.setTag("builtAt", String("1707766248819"));
+            r.setTag("buildNumber", ((e = "265586"), "265586")),
+            r.setTag("builtAt", String("1707767769666"));
           let t = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != t && "object" == typeof t)
             for (let e in t) r.setTag(e, t[e]);
@@ -479,4 +479,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.d715e844575d57c6da75.js.map
+//# sourceMappingURL=sentry.47c44c29a62c8cb76acb.js.map

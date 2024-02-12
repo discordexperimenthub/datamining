@@ -5341,6 +5341,18 @@
         APP_ICON_BRAIN: "Big Brain",
         APP_ICON_SLIMY: "Slimy",
         APP_ICON_DRIP: "Drip",
+        VOICE_BACKGROUND_DEFAULT: "Default",
+        VOICE_BACKGROUND_SOFT_RAIN: "Soft Rain",
+        VOICE_BACKGROUND_PICNIC: "Picnic",
+        VOICE_BACKGROUND_SAKURA: "Sakura",
+        VOICE_BACKGROUND_FIGHT_SCENE: "Fight Scene",
+        VOICE_BACKGROUND_BLUE_SLUSH: "Blue Slush",
+        VOICE_BACKGROUND_HIGH_TIDE: "High Tide",
+        VOICE_BACKGROUND_DEBIL: "Debil",
+        VOICE_BACKGROUND_PURPLE_LAVA: "Purple Lava",
+        VOICE_BACKGROUND_BLUE_WORLD: "Blue World",
+        VOICE_BACKGROUND_MILAN: "Milan",
+        VOICE_BACKGROUND_NEUTRAL: "Neutral",
         SETTINGS_SYNC: "Sync across clients",
         FORM_LABEL_SENSITIVTY: "Sensitivity",
         FORM_LABEL_INPUT_SENSITIVTY: "Input Sensitivity",
@@ -20845,6 +20857,15 @@
         VOICE_CHANNEL_STATUS: "Status",
         VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL:
           "Status for !!{channelName}!!",
+        VOICE_CHANNEL_CUSTOMIZE_PERMISSION_TITLE: "Customize Voice Channels",
+        VOICE_CHANNEL_CUSTOMIZE_PERMISSION_DESCRIPTION:
+          "Allows members to modify voice channel status and change the background appearance.",
+        VOICE_CHANNEL_ACTION_SHEET_UPSELL_TITLE: "Change voice backgrounds",
+        VOICE_CHANNEL_ACTION_SHEET_UPSELL_DESCRIPTION:
+          "Choose unique backgrounds to customize voice channels for everyone. During a call, visit the channel details to begin.",
+        VOICE_CHANNEL_IN_CALL_COACHMARK_TITLE: "Customize this channel",
+        VOICE_CHANNEL_IN_CALL_COACHMARK_DESCRIPTION:
+          "Tap on the channel name to set the background for everyone. Control who can change the background with the Customize Voice Call permission.",
         INCOMING_CALLS: "Incoming calls",
         DIRECT_MESSAGE_NOTIFICATIONS: "Direct messages",
         VOICE_CONNECTED: "Voice connected",
@@ -23796,18 +23817,17 @@
         POLL_NOTIFICATIONS: "Polls",
         POLL_CHOOSE_SINGLE_ANSWER_PROMPT: "Choose an Answer",
         POLL_SUBMIT_VOTE: "Vote",
-        POLL_VOTES_COUNT:
-          "{count, plural, one {{count} vote} other {{count} votes}}",
+        POLL_VOTES_COUNT: "{count, plural, one {1 vote} other {{count} votes}}",
         POLL_ALREADY_VOTED: "Voted",
         POLL_EDIT_VOTE: "Change Vote",
         POLL_ANSWER_VOTED_ARIA: "You voted for this answer",
         POLL_OPTIONS_ARIA: "Poll options",
         POLL_EXPIRY_DAYS_REMAINING:
-          "{days, plural, one {{count} day} other {{days} days}} left",
+          "{days, plural, one {1 day} other {{days} days left}}",
         POLL_EXPIRY_HOURS_REMAINING:
-          "{hours, plural, one {{count} hour} other {{hours} hours}} left",
+          "{hours, plural, one {1 hour} other {{hours} hours left}}",
         POLL_EXPIRY_MINUTES_REMAINING:
-          "{minutes, plural, one {{count} min} other {{minutes} mins}} left",
+          "{minutes, plural, one {1 min} other {{minutes} mins left}}",
         POLL_EXPIRED: "Poll closed",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
@@ -25842,8 +25862,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265680", ", Version Hash: ")
-          .concat("21c7cfc32b44fac266f822645fd07da2f3a80dcf")
+          .concat("265718", ", Version Hash: ")
+          .concat("b753d3597c52ab3a6db1099f17226d94925d76c7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28855,12 +28875,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265680"), "265680"));
+        let _ = parseInt(((e = "265718"), "265718"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265680"
+                "265718"
               )
             ),
             (_ = 0)),
@@ -50915,4 +50935,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.4343f4ea5e396fa36288.js.map
+//# sourceMappingURL=73222.fd9e00c1d532933b56c3.js.map

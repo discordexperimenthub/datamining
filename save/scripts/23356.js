@@ -38253,6 +38253,10 @@
         i = n("492397"),
         r = {
           openNativeAppModal(e, t) {
+            let r =
+              arguments.length > 2 && void 0 !== arguments[2]
+                ? arguments[2]
+                : {};
             !i.CONFERENCE_MODE_ENABLED &&
               (s.default.dispatch({
                 type: "NATIVE_APP_MODAL_OPENING",
@@ -38263,10 +38267,15 @@
                 .then(n.bind(n, "43982"))
                 .then(n => {
                   let { default: s } = n;
-                  s.request(t, { code: e })
-                    .then(e => {
-                      let { code: t } = e;
-                      return this.nativeModalOpened(t);
+                  s.request(t, { code: e, ...r })
+                    .then(t => {
+                      var n;
+                      this.nativeModalOpened(
+                        null !== (n = null == t ? void 0 : t.code) &&
+                          void 0 !== n
+                          ? n
+                          : e
+                      );
                     })
                     .catch(() => this.nativeModalOpenFailed(e))
                     .then(() => s.disconnect());
@@ -76695,4 +76704,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23356.5af63a8d62a6e83e873f.js.map
+//# sourceMappingURL=23356.1395b69583608e5f9f10.js.map

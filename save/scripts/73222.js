@@ -23922,6 +23922,9 @@
           "Available until {expirationDate}.",
         QUESTS_BAR_PROGRESS_EXPANDED_SUBHEADING_COMPLETE:
           "Claim by {expirationDate}.",
+        QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
+        QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
+          "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser you can go to **User Settings > Gift Inventory** and accept the quest there.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -25818,8 +25821,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265499", ", Version Hash: ")
-          .concat("57e5e766d6390b0ddbf6a14d82dfd6ec062d1c96")
+          .concat("265507", ", Version Hash: ")
+          .concat("d19b9d18adcb5cde79ac26b80ba5d4c715caa667")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28826,12 +28829,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265499"), "265499"));
+        let _ = parseInt(((e = "265507"), "265507"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265499"
+                "265507"
               )
             ),
             (_ = 0)),
@@ -50827,4 +50830,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.ce01058680bc47675779.js.map
+//# sourceMappingURL=73222.ea0eb12ceb4bbd3f98de.js.map

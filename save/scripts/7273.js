@@ -3002,6 +3002,7 @@
           COLLECTIBLES_SHOP_FULLSCREEN: "/shop/fullscreen",
           COLLECTIBLES_SHOP_PRODUCT_DETAIL: _ => "/shop/product/".concat(_),
           ACCOUNT_STANDING: "/account-standing",
+          QUESTS: _ => "/quests/".concat(_),
         }),
         a4 = (0, aW.wrapPaths)(a2),
         a8 = (0, aW.wrapPaths)(a6, [":", "?", "@"]);
@@ -17200,4 +17201,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.667701702a3367787f41.js.map
+//# sourceMappingURL=7273.3eda03d2523007a8c27b.js.map

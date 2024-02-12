@@ -225,6 +225,8 @@
         (i.STAGE_VIDEO_LIMIT = "stage video limit"),
         (i.ACTIVITIES_MINI_SHELF = "activities mini shelf"),
         (i.ACTIVITIES_MINI_SHELF_BANNER = "activities mini shelf banner"),
+        (i.APP_LAUNCHER = "app launcher"),
+        (i.APP_DETAIL = "app detail"),
         (i.VC_TILE_ACTIVITY_INVITE = "vc tile activity invite"),
         (i.VC_TILE_ACTIVITY_SUGGESTION = "vc tile activity suggestion"),
         (i.VC_TILE_ACTIVITY_SHELF_BUTTON = "vc tile activity shelf button"),
@@ -320,4 +322,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.ba1d985a930439480dd1.js.map
+//# sourceMappingURL=14875.19d6f00c81ee3b89074a.js.map

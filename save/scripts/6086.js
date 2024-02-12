@@ -6,7 +6,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return c;
+            return _;
           },
         }),
         n("222007"),
@@ -18,10 +18,11 @@
         s = n("282109"),
         r = n("568734"),
         o = n("34676"),
-        u = n("49111"),
-        f = n("397336"),
-        g = n("782340"),
-        c = {
+        u = n("299039"),
+        f = n("49111"),
+        g = n("397336"),
+        c = n("782340"),
+        _ = {
           open(e) {
             i.default.dispatch({
               type: "NOTIFICATION_SETTINGS_MODAL_OPEN",
@@ -65,10 +66,10 @@
               });
           },
           updateGuildNotificationSettingsBulk(e, t, n) {
-            let a = Object.keys(e),
+            let a = u.default.keys(e),
               l = (0, o.getManyCurrentGuildSettings)(a);
             d.default.saveUserGuildSettingsBulk(e),
-              Object.entries(e).forEach(e => {
+              u.default.entries(e).forEach(e => {
                 let [a, d] = e,
                   s = l.get(a);
                 i.default.dispatch({
@@ -91,7 +92,7 @@
                 settings: n,
               }),
               l.AccessibilityAnnouncer.announce(
-                g.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED
+                c.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED
               ),
               (0, o.trackChannelNotificationSettingsUpdate)(e, t, n, r, a, s);
           },
@@ -117,11 +118,11 @@
           },
           setForumThreadsCreated(e, t) {
             let n = t
-                ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON
-                : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
+                ? g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON
+                : g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
               a = t
-                ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF
-                : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
+                ? g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF
+                : g.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
               l = s.default.getChannelFlags(e);
             this.updateChannelOverrideSettings(
               e.guild_id,
@@ -134,7 +135,7 @@
             let n = s.default.accountNotificationSettings.flags,
               l = (0, r.setFlag)(n, e, t);
             await a.default.patch({
-              url: u.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
+              url: f.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
               body: { flags: l },
             }),
               await i.default.dispatch({
@@ -1048,4 +1049,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6086.2af42e57fcf6739db519.js.map
+//# sourceMappingURL=6086.a4df9b5e4bbf985d13d5.js.map

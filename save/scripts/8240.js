@@ -1084,14 +1084,15 @@
       n.r(t),
         n.d(t, {
           isForumActivityExperimentEnabled: function () {
-            return a;
+            return s;
           },
         });
       var i = n("943314"),
-        l = n("531869");
-      function a(e) {
+        l = n("531869"),
+        a = n("49111");
+      function s(e) {
         let t = l.default.getCurrentConfig({
-            guildId: null != e ? e : "",
+            guildId: null != e ? e : a.EMPTY_STRING_GUILD_ID,
             location: "3fde52_1",
           }),
           n = i.default.getCurrentConfig({ location: "3fde52_2" });
@@ -2207,18 +2208,19 @@
       n.r(t),
         n.d(t, {
           INCREASED_ACTIVITY_LIST_FORUM_LAYOUT: function () {
-            return a;
+            return s;
           },
           useForumActivityExperiment: function () {
-            return s;
+            return r;
           },
         });
       var i = n("943314"),
-        l = n("531869");
-      let a = 3;
-      function s(e) {
+        l = n("531869"),
+        a = n("49111");
+      let s = 3;
+      function r(e) {
         let t = l.default.useExperiment({
-            guildId: null != e ? e : "",
+            guildId: null != e ? e : a.EMPTY_STRING_GUILD_ID,
             location: "9a247a_1",
           }),
           n = i.default.useExperiment({ location: "9a247a_2" });
@@ -4471,4 +4473,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8240.b0e75e5ef155879a89f0.js.map
+//# sourceMappingURL=8240.47b1a0a8150481caead3.js.map

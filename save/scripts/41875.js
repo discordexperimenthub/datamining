@@ -446,8 +446,8 @@
         I = n("505093"),
         N = n("161778"),
         y = n("168973"),
-        O = n("491605"),
-        C = n("476765"),
+        C = n("491605"),
+        O = n("476765"),
         A = n("599110"),
         M = n("32531"),
         P = n("714657"),
@@ -548,7 +548,7 @@
         },
         K = e => {
           let { type: t, children: n } = e,
-            i = (0, C.useUID)(),
+            i = (0, O.useUID)(),
             a = (0, m.useRadioGroup)({
               orientation: "horizontal",
               labelledBy: i,
@@ -624,7 +624,7 @@
                   : e.id,
               ];
             }),
-            [C, A] = l.useState(!1),
+            [O, A] = l.useState(!1),
             [w, x] = l.useState(-1),
             L = (0, d.useStateFromStores)(
               [g.default],
@@ -662,7 +662,7 @@
               ),
               null != t)
             ) {
-              if ((C && A(!1), t <= w || 0 === t)) {
+              if ((O && A(!1), t <= w || 0 === t)) {
                 x(0);
                 return;
               }
@@ -722,7 +722,7 @@
                     )
                   ),
                   (() => {
-                    if (!C) return null;
+                    if (!O) return null;
                     let e =
                       R.BACKGROUND_GRADIENT_PRESETS_MAP[
                         c.BackgroundGradientPresetId.EASTER_EGG
@@ -743,7 +743,7 @@
                             y === c.BackgroundGradientPresetId.EASTER_EGG,
                           onSelect: () => K(e),
                         }),
-                        (0, s.jsx)(O.default, {
+                        (0, s.jsx)(C.default, {
                           importData: t,
                           shouldAnimate: !L,
                           className: j.sparkles,
@@ -862,22 +862,22 @@
       n.r(t),
         n.d(t, {
           useGuildMigrationSteps: function () {
-            return D;
-          },
-          hasGoodCandidateServers: function () {
             return G;
           },
-          autoMigrateToNewSystem: function () {
+          hasGoodCandidateServers: function () {
             return x;
           },
-          useSaveSettings: function () {
+          autoMigrateToNewSystem: function () {
             return L;
           },
+          useSaveSettings: function () {
+            return U;
+          },
           revertToOldSystem: function () {
-            return H;
+            return B;
           },
           transformUsageData: function () {
-            return B;
+            return W;
           },
         }),
         n("222007"),
@@ -905,17 +905,18 @@
         v = n("568734"),
         I = n("449008"),
         N = n("286235"),
-        y = n("649649"),
+        y = n("299039"),
+        C = n("649649"),
         O = n("845868"),
-        C = n("287223"),
-        A = n("76618"),
-        M = n("380353"),
-        P = n("49111"),
-        b = n("133335"),
-        R = n("397336"),
-        w = n("782340");
-      function D(e, t) {
-        let [n, a] = i.useState(M.defaultThresholds),
+        A = n("287223"),
+        M = n("76618"),
+        P = n("380353"),
+        b = n("49111"),
+        R = n("133335"),
+        w = n("397336"),
+        D = n("782340");
+      function G(e, t) {
+        let [n, a] = i.useState(P.defaultThresholds),
           [r, o] = i.useState({});
         (0, m.useFrecencySettings)();
         let u = (0, l.useStateFromStoresArray)([S.default], () =>
@@ -927,10 +928,10 @@
               i[a.id] = (function (e, t, n, i, a) {
                 var s;
                 let [l, r, o] = h.default.hasConsented(
-                    P.Consents.PERSONALIZATION
+                    b.Consents.PERSONALIZATION
                   )
-                    ? (0, C.guessGuildModeWithRemoteData)(e, t, n, i, !0)
-                    : (0, C.guessGuildModeWithLocalData)(e, n),
+                    ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0)
+                    : (0, A.guessGuildModeWithLocalData)(e, n),
                   u =
                     null !== (s = n.filter(t => t.guild_id === e.id)[0]) &&
                     void 0 !== s
@@ -943,7 +944,7 @@
                   debugReason: o,
                   actions: d,
                   overrideMode: a,
-                  messagePain: u.messages === M.PainLevel.High,
+                  messagePain: u.messages === P.PainLevel.High,
                   visitsALot: r,
                   muted:
                     T.default.isMuted(e.id) &&
@@ -987,8 +988,8 @@
                   return -1 === t ? a.length : t;
                 }),
                 r = [
-                  ["Use Grey Dot", new Set([M.Mode.UseGreyDot])],
-                  ["Keep As Is", new Set([M.Mode.KeepAsIs])],
+                  ["Use Grey Dot", new Set([P.Mode.UseGreyDot])],
+                  ["Keep As Is", new Set([P.Mode.KeepAsIs])],
                 ].map(e => {
                   let [t, n] = e,
                     i = l.filter(e => {
@@ -1025,21 +1026,21 @@
             })(Object.values(c), t),
         };
       }
-      function G(e, t) {
+      function x(e, t) {
         return Object.values(S.default.getGuilds()).some(n => {
-          let [i] = h.default.hasConsented(P.Consents.PERSONALIZATION)
-            ? (0, C.guessGuildModeWithRemoteData)(
+          let [i] = h.default.hasConsented(b.Consents.PERSONALIZATION)
+            ? (0, A.guessGuildModeWithRemoteData)(
                 n,
-                M.defaultThresholds,
+                P.defaultThresholds,
                 e,
                 t,
                 !1
               )
-            : (0, C.guessGuildModeWithLocalData)(n, e);
-          return i === M.Mode.UseGreyDot;
+            : (0, A.guessGuildModeWithLocalData)(n, e);
+          return i === P.Mode.UseGreyDot;
         });
       }
-      function x() {
+      function L() {
         let e = Object.values(S.default.getGuilds()),
           t = {};
         for (let a of e) {
@@ -1053,24 +1054,24 @@
             s = null !== (i = e.flags) && void 0 !== i ? i : 0;
           (s = (0, v.setFlag)(
             s,
-            R.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES,
+            w.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES,
             !0
           )),
             (s = (0, v.setFlag)(
               s,
-              R.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS,
+              w.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS,
               !1
             )),
             (t[a.id] = { flags: s });
         }
-        j(t),
-          E.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+        k(t),
+          E.default.track(b.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter(e => _.default.hasUnread(e.id))
               .length,
           });
       }
-      function L(e) {
+      function U(e) {
         let [t, n] = i.useState(!1),
           [a, s] = i.useState(!1),
           l = i.useCallback(
@@ -1078,7 +1079,7 @@
               if (a) throw Error("Already submitted notifications migration");
               n(!0);
               try {
-                await U(t, e), s(!0);
+                await j(t, e), s(!0);
               } finally {
                 n(!1);
               }
@@ -1087,7 +1088,7 @@
           );
         return { submitting: t, submitted: a, saveSettings: l };
       }
-      async function U(e, t) {
+      async function j(e, t) {
         if (T.default.useNewNotifications) {
           u.default.show({
             title: "Info",
@@ -1102,7 +1103,7 @@
                 return (
                   (null !== (t = e.overrideMode) && void 0 !== t
                     ? t
-                    : e.mode) === M.Mode.UseGreyDot
+                    : e.mode) === P.Mode.UseGreyDot
                 );
               })
               .map(e => {
@@ -1117,24 +1118,24 @@
                 };
               }),
             n = {
-              num_unread_guilds_before: Object.keys(e).filter(e =>
-                _.default.hasUnread(e)
-              ).length,
+              num_unread_guilds_before: y.default
+                .keys(e)
+                .filter(e => _.default.hasUnread(e)).length,
               unmuted_server_ids: t
                 .filter(e => T.default.isMuted(e.plan.guildId))
                 .map(e => e.plan.guildId),
             };
           return () => {
-            E.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+            E.default.track(b.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
               ...n,
               auto_migrated: !0,
               pre_selected_server_ids: Object.values(e)
-                .filter(e => e.mode === M.Mode.UseGreyDot)
+                .filter(e => e.mode === P.Mode.UseGreyDot)
                 .map(e => e.guildId),
               final_selected_server_ids: t.map(e => e.plan.guildId),
-              num_unread_guids_after: Object.keys(e).filter(e =>
-                _.default.hasUnread(e)
-              ).length,
+              num_unread_guids_after: y.default
+                .keys(e)
+                .filter(e => _.default.hasUnread(e)).length,
               num_tiny_servers_selected: t.filter(e => e.memberCount <= 20)
                 .length,
               num_small_servers_selected: t.filter(
@@ -1174,7 +1175,7 @@
               null === (a = t.apply) || void 0 === a || a.call(t, s, e);
             t[n.guildId] = s;
           }
-          await j(t);
+          await k(t);
           let s = Object.values(e)
             .filter(e => e.actions.some(e => e.needsMarkedAsRead))
             .map(e => e.guildId);
@@ -1189,28 +1190,28 @@
         } catch (e) {
           N.default.captureException(e),
             u.default.show({
-              title: w.default.Messages.ERROR,
-              body: w.default.Messages.NOTIF_MIGRATION_ERROR,
+              title: D.default.Messages.ERROR,
+              body: D.default.Messages.NOTIF_MIGRATION_ERROR,
               onConfirm: t,
             });
         }
       }
-      async function j(e) {
-        await k(() => F()),
-          await k(() =>
+      async function k(e) {
+        await F(() => H()),
+          await F(() =>
             d.default.setAccountFlag(
-              A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+              M.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
               !0
             )
           );
-        let t = await k(() => f.default.saveUserGuildSettingsBulk(e));
+        let t = await F(() => f.default.saveUserGuildSettingsBulk(e));
         o.default.dispatch({
           type: "USER_GUILD_SETTINGS_FULL_UPDATE",
           userGuildSettings: t,
         }),
           o.default.dispatch({ type: "RECOMPUTE_READ_STATES" });
       }
-      async function k(e) {
+      async function F(e) {
         for (let e = 0; e < 3; e++)
           try {
             break;
@@ -1219,8 +1220,8 @@
           }
         return await e();
       }
-      async function F() {
-        let e = await (0, y.listSnapshots)();
+      async function H() {
+        let e = await (0, C.listSnapshots)();
         if (e.length > 0) {
           let t = await (function () {
             return new Promise(e => {
@@ -1234,24 +1235,24 @@
               });
             });
           })();
-          t && (0, y.backupSettings)(e);
+          t && (0, C.backupSettings)(e);
         } else
-          (0, y.takeSnapshot)(
+          (0, C.takeSnapshot)(
             "Backup from ".concat(new Date().toLocaleDateString())
           );
       }
-      async function H() {
+      async function B() {
         r.default.set("turnedOffNewNotifications", !0),
-          E.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
+          E.default.track(b.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
             num_guilds_with_new_setting: Object.values(
               S.default.getGuilds()
             ).filter(
               e =>
                 T.default.resolveGuildUnreadSetting(e) ===
-                b.UnreadSetting.ONLY_MENTIONS
+                R.UnreadSetting.ONLY_MENTIONS
             ).length,
           });
-        let e = await (0, y.listSnapshots)(),
+        let e = await (0, C.listSnapshots)(),
           t = s.sortBy(e, e => new Date(e.recorded_at).getTime());
         if (t.length > 0) {
           let e = t[t.length - 1];
@@ -1268,18 +1269,18 @@
               onCancel: () => {},
             })
           ),
-            await (0, y.restoreSnapshot)(e.id),
+            await (0, C.restoreSnapshot)(e.id),
             await d.default.setAccountFlag(
-              A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+              M.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
               !1
             );
         } else
           await d.default.setAccountFlag(
-            A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+            M.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
             !1
           );
       }
-      function B(e) {
+      function W(e) {
         var t, n, i;
         if (null == e) return [];
         let a = s.keyBy(
@@ -1852,13 +1853,13 @@
               "\n- Sent Msgs: "
             )
             .concat(N, "\n"),
-          O = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
-          C = (null !== (c = S.guildOpens) && void 0 !== c ? c : 0) > 0;
+          C = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
+          O = (null !== (c = S.guildOpens) && void 0 !== c ? c : 0) > 0;
         if (g.messages === d.PainLevel.High) {
-          if (!a) return [d.Mode.UseGreyDot, O, "UseGreyDot" + y];
-          if (!O && C) return [d.Mode.UseGreyDot, O, "UseGreyDot" + y];
+          if (!a) return [d.Mode.UseGreyDot, C, "UseGreyDot" + y];
+          if (!C && O) return [d.Mode.UseGreyDot, C, "UseGreyDot" + y];
         }
-        return [d.Mode.KeepAsIs, O, "KeepAsIs" + y];
+        return [d.Mode.KeepAsIs, C, "KeepAsIs" + y];
       }
       function f(e, t, n, i) {
         let s = t.reduce((e, t) => e + i(t), 0),
@@ -2085,4 +2086,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41875.e635605caa1faab92ca8.js.map
+//# sourceMappingURL=41875.675e5c9cc5489ff409b3.js.map

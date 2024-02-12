@@ -5389,29 +5389,31 @@
       n.r(t),
         n.d(t, {
           useGuildIdsToFetchSoundsFor: function () {
-            return o;
-          },
-          getGuildIdsToFetchSoundsFor: function () {
             return u;
           },
-        });
+          getGuildIdsToFetchSoundsFor: function () {
+            return d;
+          },
+        }),
+        n("222007");
       var l = n("884691"),
         a = n("65597"),
         s = n("305961"),
-        i = n("235004");
-      function r(e, t) {
-        let n = Object.keys(e);
+        i = n("299039"),
+        r = n("235004");
+      function o(e, t) {
+        let n = i.default.keys(e);
         return n.filter(e => null == t.get(e));
       }
-      function o() {
-        let e = (0, a.default)([s.default], () => s.default.getGuilds()),
-          t = (0, a.default)([i.default], () => i.default.getSounds());
-        return (0, l.useMemo)(() => r(e, t), [e, t]);
-      }
       function u() {
+        let e = (0, a.default)([s.default], () => s.default.getGuilds()),
+          t = (0, a.default)([r.default], () => r.default.getSounds());
+        return (0, l.useMemo)(() => o(e, t), [e, t]);
+      }
+      function d() {
         let e = s.default.getGuilds(),
-          t = i.default.getSounds();
-        return r(e, t);
+          t = r.default.getSounds();
+        return o(e, t);
       }
     },
     204653: function (e, t, n) {
@@ -13088,4 +13090,4 @@
     },
   },
 ]);
-//# sourceMappingURL=69875.539f89966b68395c1baa.js.map
+//# sourceMappingURL=69875.385d021a0317c08f81f5.js.map

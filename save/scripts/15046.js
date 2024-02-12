@@ -460,11 +460,12 @@
       n.r(t),
         n.d(t, {
           isIFrameModalForGuildEnabled: function () {
-            return l;
+            return s;
           },
         });
-      var i = n("862205");
-      let r = (0, i.createExperiment)({
+      var i = n("862205"),
+        r = n("49111");
+      let l = (0, i.createExperiment)({
         kind: "guild",
         id: "2023-08_iframe_modal_guild",
         label: "iFrame Modal guild experiment",
@@ -477,9 +478,12 @@
           },
         ],
       });
-      function l(e) {
-        return r.getCurrentConfig(
-          { guildId: null != e ? e : "", location: "2d360b_1" },
+      function s(e) {
+        return l.getCurrentConfig(
+          {
+            guildId: null != e ? e : r.EMPTY_STRING_GUILD_ID,
+            location: "2d360b_1",
+          },
           { autoTrackExposure: !0 }
         ).enabled;
       }
@@ -668,8 +672,8 @@
             subscriptionTier: N,
             trialId: T,
             postSuccessGuild: L,
-            openInvoiceId: w,
-            applicationId: R,
+            openInvoiceId: R,
+            applicationId: w,
             referralTrialOfferId: x,
             giftRecipient: M,
             returnRef: P,
@@ -720,8 +724,8 @@
                 trialId: T,
                 postSuccessGuild: L,
                 planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                openInvoiceId: w,
-                applicationId: R,
+                openInvoiceId: R,
+                applicationId: w,
                 referralTrialOfferId: x,
                 returnRef: P,
                 subscription: b,
@@ -743,7 +747,7 @@
                   subscription_type: h.SubscriptionTypes.PREMIUM,
                   is_gift: y,
                   eligible_for_trial: null != T,
-                  application_id: R,
+                  application_id: w,
                   location_stack: S,
                 }),
                 (0, s.clearError)(),
@@ -875,7 +879,7 @@
             return L;
           },
           favoriteSticker: function () {
-            return R;
+            return w;
           },
           unfavoriteSticker: function () {
             return x;
@@ -990,16 +994,16 @@
           draftType: t,
         });
       }
-      function w(e) {
+      function R(e) {
         return f.default.totalUnavailableGuilds > 0 || !o.default.isConnected()
           ? e
           : e.filter(e => null != p.default.getStickerById(e));
       }
-      function R(e) {
+      function w(e) {
         c.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteStickers",
           t =>
-            ((t.stickerIds = w(t.stickerIds)),
+            ((t.stickerIds = R(t.stickerIds)),
             r.size(t.stickerIds) >= E.MAX_FAVORITES)
               ? (a.default.show({
                   title: I.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
@@ -1017,7 +1021,7 @@
           "favoriteStickers",
           t => {
             (t.stickerIds = t.stickerIds.filter(t => t !== e)),
-              (t.stickerIds = w(t.stickerIds));
+              (t.stickerIds = R(t.stickerIds));
           },
           E.UserSettingsDelay.INFREQUENT_USER_ACTION
         );
@@ -2366,4 +2370,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15046.e3cf09e46be7af978605.js.map
+//# sourceMappingURL=15046.ea0127ebd61eb8e055fc.js.map

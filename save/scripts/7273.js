@@ -182,14 +182,26 @@
           FAVORITES: function () {
             return aq;
           },
-          COLLECTIBLES_APPLICATION_ID: function () {
+          NULL_STRING_GUILD_ID: function () {
             return a$;
           },
-          Endpoints: function () {
+          ZERO_STRING_GUILD_ID: function () {
+            return a0;
+          },
+          EMPTY_STRING_GUILD_ID: function () {
+            return a1;
+          },
+          NO_GUILD_STRING_GUILD_ID: function () {
             return a3;
           },
-          Routes: function () {
+          COLLECTIBLES_APPLICATION_ID: function () {
             return a5;
+          },
+          Endpoints: function () {
+            return a4;
+          },
+          Routes: function () {
+            return a8;
           },
           ActivityFlags: function () {
             return $;
@@ -198,82 +210,82 @@
             return __;
           },
           MAX_USER_GUILDS: function () {
-            return a2;
-          },
-          MAX_USER_GUILDS_PREMIUM: function () {
-            return a6;
-          },
-          MAX_MESSAGES_PER_CHANNEL: function () {
-            return a4;
-          },
-          MAX_MESSAGES_FOR_JUMP: function () {
-            return a8;
-          },
-          MAX_MENTIONS_PER_FETCH: function () {
             return a7;
           },
-          MAX_LOADED_MESSAGES: function () {
+          MAX_USER_GUILDS_PREMIUM: function () {
             return a9;
           },
-          TRUNCATED_MESSAGE_VIEW_SIZE: function () {
+          MAX_MESSAGES_PER_CHANNEL: function () {
             return o_;
           },
-          MAX_MESSAGE_CACHE_SIZE: function () {
+          MAX_MESSAGES_FOR_JUMP: function () {
             return oE;
           },
-          MAX_MESSAGE_LENGTH: function () {
+          MAX_MENTIONS_PER_FETCH: function () {
             return oI;
           },
-          MAX_MESSAGE_LENGTH_PREMIUM: function () {
+          MAX_LOADED_MESSAGES: function () {
             return oe;
           },
-          MAX_PINS_PER_CHANNEL: function () {
+          TRUNCATED_MESSAGE_VIEW_SIZE: function () {
             return oa;
           },
-          MAX_CHANNEL_NAME_LENGTH: function () {
+          MAX_MESSAGE_CACHE_SIZE: function () {
             return oo;
           },
-          ROLE_NAME_MAX_LENGTH: function () {
+          MAX_MESSAGE_LENGTH: function () {
             return oR;
           },
-          NOTE_MAX_LENGTH: function () {
+          MAX_MESSAGE_LENGTH_PREMIUM: function () {
             return ot;
           },
-          USERNAME_MAX_LENGTH: function () {
+          MAX_PINS_PER_CHANNEL: function () {
             return oA;
           },
-          BIO_MAX_LENGTH: function () {
+          MAX_CHANNEL_NAME_LENGTH: function () {
             return oT;
           },
-          DISPLAY_NAME_MAX_LENGTH: function () {
+          ROLE_NAME_MAX_LENGTH: function () {
             return or;
           },
-          IDLE_DURATION: function () {
+          NOTE_MAX_LENGTH: function () {
             return oN;
           },
-          SLOWMODE_VALUES: function () {
+          USERNAME_MAX_LENGTH: function () {
             return oi;
           },
-          MAX_UPLOAD_COUNT: function () {
+          BIO_MAX_LENGTH: function () {
             return oc;
           },
-          MAX_ATTACHMENT_SIZE: function () {
+          DISPLAY_NAME_MAX_LENGTH: function () {
             return oO;
           },
-          MAX_STAFF_ATTACHMENT_SIZE: function () {
+          IDLE_DURATION: function () {
             return on;
           },
-          MARKDOWN_SPOILER_WRAPPER: function () {
+          SLOWMODE_VALUES: function () {
             return oL;
           },
-          MARKDOWN_SPOILER_REGEXP: function () {
+          MAX_UPLOAD_COUNT: function () {
             return oD;
           },
-          MARKDOWN_STATIC_ROUTE_NAME_REGEXP: function () {
+          MAX_ATTACHMENT_SIZE: function () {
             return oS;
           },
-          ID_REGEX: function () {
+          MAX_STAFF_ATTACHMENT_SIZE: function () {
             return oC;
+          },
+          MARKDOWN_SPOILER_WRAPPER: function () {
+            return ol;
+          },
+          MARKDOWN_SPOILER_REGEXP: function () {
+            return os;
+          },
+          MARKDOWN_STATIC_ROUTE_NAME_REGEXP: function () {
+            return oP;
+          },
+          ID_REGEX: function () {
+            return oM;
           },
           ChannelStreamTypes: function () {
             return _E;
@@ -294,97 +306,97 @@
             return _R;
           },
           AVATAR_SIZE: function () {
-            return ol;
-          },
-          AVATAR_MAX_SIZE: function () {
-            return os;
-          },
-          MAX_PTT_RELEASE_DELAY: function () {
-            return oP;
-          },
-          BITRATE_MIN: function () {
-            return oM;
-          },
-          BITRATE_DEFAULT: function () {
             return oG;
           },
-          BITRATE_MAX: function () {
+          AVATAR_MAX_SIZE: function () {
             return oU;
           },
-          BITRATE_STEP: function () {
+          MAX_PTT_RELEASE_DELAY: function () {
             return od;
           },
-          NON_USER_BOT_DISCRIMINATOR: function () {
+          BITRATE_MIN: function () {
             return ou;
           },
-          LOCAL_BOT_ID: function () {
+          BITRATE_DEFAULT: function () {
             return op;
           },
-          MAX_VOICE_USER_LIMIT: function () {
+          BITRATE_MAX: function () {
             return oB;
           },
-          MAX_STAGE_VOICE_USER_LIMIT: function () {
+          BITRATE_STEP: function () {
             return og;
           },
-          MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: function () {
+          NON_USER_BOT_DISCRIMINATOR: function () {
             return oH;
           },
-          MAX_STAGE_VIDEO_USER_LIMIT_TIER01: function () {
+          LOCAL_BOT_ID: function () {
             return of;
           },
-          MAX_STAGE_VIDEO_USER_LIMIT_TIER2: function () {
+          MAX_VOICE_USER_LIMIT: function () {
             return oh;
           },
-          MAX_STAGE_VIDEO_USER_LIMIT_TIER3: function () {
+          MAX_STAGE_VOICE_USER_LIMIT: function () {
             return oy;
           },
-          MAX_GROUP_DM_PARTICIPANTS: function () {
+          MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: function () {
             return oY;
           },
-          MAX_GROUP_DM_BROADCAST_PARTICIPANTS: function () {
+          MAX_STAGE_VIDEO_USER_LIMIT_TIER01: function () {
             return ow;
           },
-          MAX_GROUP_DM_STAFF_PARTICIPANTS: function () {
+          MAX_STAGE_VIDEO_USER_LIMIT_TIER2: function () {
             return ob;
           },
-          PLACEHOLDER_TAG: function () {
+          MAX_STAGE_VIDEO_USER_LIMIT_TIER3: function () {
             return om;
           },
-          CHANNEL_SIDEBAR_WIDTH: function () {
+          MAX_GROUP_DM_PARTICIPANTS: function () {
             return oK;
           },
-          DEFAULT_CHAT_SIDEBAR_WIDTH: function () {
+          MAX_GROUP_DM_BROADCAST_PARTICIPANTS: function () {
             return oV;
           },
-          DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH: function () {
+          MAX_GROUP_DM_STAFF_PARTICIPANTS: function () {
             return oF;
           },
-          DEVICE_TOKEN: function () {
+          PLACEHOLDER_TAG: function () {
             return oW;
           },
-          DEVICE_VOIP_TOKEN: function () {
+          CHANNEL_SIDEBAR_WIDTH: function () {
             return ov;
           },
-          MarketingURLs: function () {
+          DEFAULT_CHAT_SIDEBAR_WIDTH: function () {
             return ok;
           },
-          RelativeMarketingURLs: function () {
+          DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH: function () {
             return ox;
           },
-          MAX_AUTOCOMPLETE_RESULTS: function () {
+          DEVICE_TOKEN: function () {
             return oX;
           },
-          SEARCH_PAGE_SIZE: function () {
+          DEVICE_VOIP_TOKEN: function () {
             return oQ;
           },
-          IS_SEARCH_FILTER_TOKEN: function () {
+          MarketingURLs: function () {
             return oJ;
           },
-          IS_SEARCH_ANSWER_TOKEN: function () {
+          RelativeMarketingURLs: function () {
             return oZ;
           },
-          MAX_GUILD_FOLDER_NAME_LENGTH: function () {
+          MAX_AUTOCOMPLETE_RESULTS: function () {
             return oj;
+          },
+          SEARCH_PAGE_SIZE: function () {
+            return oz;
+          },
+          IS_SEARCH_FILTER_TOKEN: function () {
+            return oq;
+          },
+          IS_SEARCH_ANSWER_TOKEN: function () {
+            return o$;
+          },
+          MAX_GUILD_FOLDER_NAME_LENGTH: function () {
+            return o0;
           },
           SearchTypes: function () {
             return _t;
@@ -408,7 +420,7 @@
             return _c;
           },
           HELP_CENTER_CTA_ANALYTICS_NAME: function () {
-            return oz;
+            return o1;
           },
           AnalyticsSections: function () {
             return _O;
@@ -420,10 +432,10 @@
             return _L;
           },
           DIRECT_ANALYTICS_LOCATION: function () {
-            return oq;
+            return o3;
           },
           UserSettingsSections: function () {
-            return o$;
+            return o5;
           },
           JoinGuildSources: function () {
             return _S;
@@ -453,7 +465,7 @@
             return _u;
           },
           NAVIGATION_THROTTLE: function () {
-            return o0;
+            return o2;
           },
           PlatformTypes: function () {
             return _p;
@@ -465,22 +477,22 @@
             return _H;
           },
           FRIEND_SYNC_PLATFORM_TYPES: function () {
-            return o1;
-          },
-          ACTIVITY_PLATFORM_TYPES: function () {
-            return o3;
-          },
-          DownloadLinks: function () {
-            return o5;
-          },
-          DEFAULT_ROLE_COLOR: function () {
-            return o2;
-          },
-          ROLE_COLORS: function () {
             return o6;
           },
-          DEFAULT_FOLDER_COLOR: function () {
+          ACTIVITY_PLATFORM_TYPES: function () {
+            return o4;
+          },
+          DownloadLinks: function () {
             return o8;
+          },
+          DEFAULT_ROLE_COLOR: function () {
+            return o7;
+          },
+          ROLE_COLORS: function () {
+            return o9;
+          },
+          DEFAULT_FOLDER_COLOR: function () {
+            return RE;
           },
           NativeFeatures: function () {
             return _h;
@@ -495,28 +507,28 @@
             return _w;
           },
           SEARCH_DATE_FORMAT: function () {
-            return o7;
+            return RI;
           },
           NEW_GROUP_DM_POPOUT_ID: function () {
-            return o9;
+            return Re;
           },
           BoostedGuildTiers: function () {
             return _b;
           },
           AppliedGuildBoostsRequiredForBoostedGuildTier: function () {
-            return R_;
+            return Ra;
           },
           GUILD_BOOST_APPLY_COOLDOWN_DAYS: function () {
-            return RE;
+            return Ro;
           },
           PREMIUM_TYPE_NONE: function () {
-            return RI;
+            return RR;
           },
           PriceSetAssignmentPurchaseTypes: function () {
             return _m;
           },
           StripeElementsOptions: function () {
-            return Re;
+            return Rt;
           },
           SubscriptionStatusTypes: function () {
             return _K;
@@ -525,13 +537,13 @@
             return _V;
           },
           PaymentModalPriceChangedError: function () {
-            return Ra;
+            return RA;
           },
           AutoCompleteResultTypes: function () {
             return _F;
           },
           Accessibility: function () {
-            return Ro;
+            return RT;
           },
           AnalyticEvents: function () {
             return _v;
@@ -549,13 +561,13 @@
             return _Q;
           },
           DefaultCloudSyncConfiguration: function () {
-            return RR;
+            return Rr;
           },
           CHANNEL_NOTICE_SHOW_DELAY: function () {
-            return Rt;
+            return RN;
           },
           GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY: function () {
-            return RA;
+            return Ri;
           },
           ChannelLayouts: function () {
             return _J;
@@ -567,7 +579,7 @@
             return _j;
           },
           AuditLogActions: function () {
-            return RT;
+            return Rc;
           },
           AuditLogActionTypes: function () {
             return _z;
@@ -585,7 +597,7 @@
             return _1;
           },
           AUDIT_LOG_PAGE_LIMIT: function () {
-            return Rr;
+            return RO;
           },
           UserRequiredActions: function () {
             return _3;
@@ -597,7 +609,7 @@
             return _2;
           },
           MAX_REASON_LENGTH: function () {
-            return RN;
+            return Rn;
           },
           MouseButtons: function () {
             return _6;
@@ -615,19 +627,19 @@
             return _9;
           },
           ChannelTextAreaIntegrations: function () {
-            return Ri;
+            return RL;
           },
           HelpdeskArticles: function () {
             return E_;
           },
           YOUTUBE_EMBED_URL: function () {
-            return Rc;
+            return RD;
           },
           YOUTUBE_PREVIEW_URL: function () {
-            return RO;
+            return RS;
           },
           MOBILE_WEB_HANDOFF_DEEP_LINK: function () {
-            return Rn;
+            return RC;
           },
           LibraryApplicationFlags: function () {
             return EE;
@@ -642,13 +654,13 @@
             return Ea;
           },
           DistributorNames: function () {
-            return RL;
+            return Rl;
           },
           MAX_VIDEO_WIDTH: function () {
-            return RD;
+            return Rs;
           },
           MAX_VIDEO_HEIGHT: function () {
-            return RS;
+            return RP;
           },
           Consents: function () {
             return Eo;
@@ -657,10 +669,10 @@
             return ER;
           },
           AllFriendSourceFlags: function () {
-            return RC;
+            return RM;
           },
           REQUEST_DATA_LIMIT_DAYS: function () {
-            return Rl;
+            return RG;
           },
           LobbyTypes: function () {
             return EA;
@@ -672,7 +684,7 @@
             return Er;
           },
           CURRENT_APP_CONTEXT: function () {
-            return Rs;
+            return RU;
           },
           DispatchApplicationStates: function () {
             return EN;
@@ -720,22 +732,22 @@
             return Ed;
           },
           RANDOM_HYPESQUAD_HOUSE: function () {
-            return RP;
+            return Rd;
           },
           KeyboardDeviceTypes: function () {
             return Eu;
           },
           LinuxKeyToCode: function () {
-            return RM;
+            return Ru;
           },
           MacosKeyToCode: function () {
-            return RG;
+            return Rp;
           },
           MouseKeyCodes: function () {
             return Ep;
           },
           WindowsKeyToCode: function () {
-            return RU;
+            return RB;
           },
           KeyboardEnvs: function () {
             return EB;
@@ -762,13 +774,13 @@
             return Eb;
           },
           GIFTABLE_CURRENCIES: function () {
-            return Rd;
+            return Rg;
           },
           SpoilerRenderSetting: function () {
             return Em;
           },
           OFF_PLATFORM_PREMIUM_PERKS: function () {
-            return Ru;
+            return RH;
           },
           PopoutWindowKeys: function () {
             return EK;
@@ -795,7 +807,7 @@
             return EX;
           },
           DISCODO_STORAGE_KEY: function () {
-            return Rp;
+            return Rf;
           },
           SpringTransitionPhases: function () {
             return EQ;
@@ -807,13 +819,13 @@
             return Ej;
           },
           MAX_MEMBERS_NOTIFY_ALL_MESSAGES: function () {
-            return RB;
+            return Rh;
           },
           UNREACHABLE_REQUEST_ANIMATION_FRAME_ID: function () {
-            return Rg;
+            return Ry;
           },
           WELCOME_OLD_GUILD_AGE_THRESHOLD: function () {
-            return RH;
+            return RY;
           },
           AllowedMentionTypes: function () {
             return Ez;
@@ -825,16 +837,16 @@
             return E$;
           },
           DEFAULT_NUM_REACTION_USERS: function () {
-            return Rf;
+            return Rw;
           },
           TOKEN_REGEX: function () {
-            return Rh;
+            return Rb;
           },
           HighlightSettings: function () {
             return E0;
           },
           SERVER_MONETIZATION_OWNERSHIP_TRANSFER_URL: function () {
-            return Ry;
+            return Rm;
           },
           VoiceFlags: function () {
             return E1;
@@ -1729,8 +1741,12 @@
         (IV[(IV.COLLEGE = 2)] = "COLLEGE");
       let az = "@me",
         aq = "@favorites",
-        a$ = "1096190356233670716",
-        a0 = Object.freeze({
+        a$ = "null",
+        a0 = "0",
+        a1 = "",
+        a3 = "NO_GUILD",
+        a5 = "1096190356233670716",
+        a2 = Object.freeze({
           USER: _ => "/users/".concat(_),
           USER_RELATIONSHIPS: function () {
             let _ =
@@ -2828,7 +2844,7 @@
           GAME_INVITE: _ => "/game-invite/@me/".concat(_),
           GAME_INVITES: "/game-invite/@me",
         }),
-        a1 = Object.freeze({
+        a6 = Object.freeze({
           INDEX: "/",
           APP: "/app",
           APP_WITH_INVITE_AND_GUILD_ONBOARDING: _ =>
@@ -2987,8 +3003,8 @@
           COLLECTIBLES_SHOP_PRODUCT_DETAIL: _ => "/shop/product/".concat(_),
           ACCOUNT_STANDING: "/account-standing",
         }),
-        a3 = (0, aW.wrapPaths)(a0),
-        a5 = (0, aW.wrapPaths)(a1, [":", "?", "@"]);
+        a4 = (0, aW.wrapPaths)(a2),
+        a8 = (0, aW.wrapPaths)(a6, [":", "?", "@"]);
       ((IF = $ || ($ = {}))[(IF.INSTANCE = 1)] = "INSTANCE"),
         (IF[(IF.JOIN = 2)] = "JOIN"),
         (IF[(IF.SYNC = 16)] = "SYNC"),
@@ -3001,25 +3017,25 @@
         (IW[(IW.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
         (IW[(IW.NO_MESSAGES = 2)] = "NO_MESSAGES"),
         (IW[(IW.NULL = 3)] = "NULL");
-      let a2 = 100,
-        a6 = 200,
-        a4 = 50,
-        a8 = 50,
-        a7 = 25,
-        a9 = 4 * a4,
-        o_ = 0.5 * a9,
-        oE = 5 * a4,
-        oI = 2e3,
-        oe = 4e3,
-        oa = 50,
-        oo = 100,
-        oR = 100,
-        ot = 256,
-        oA = 32,
-        oT = 190,
-        or = oA,
-        oN = 6e5,
-        oi = [
+      let a7 = 100,
+        a9 = 200,
+        o_ = 50,
+        oE = 50,
+        oI = 25,
+        oe = 4 * o_,
+        oa = 0.5 * oe,
+        oo = 5 * o_,
+        oR = 2e3,
+        ot = 4e3,
+        oA = 50,
+        oT = 100,
+        or = 100,
+        oN = 256,
+        oi = 32,
+        oc = 190,
+        oO = oi,
+        on = 6e5,
+        oL = [
           0,
           5,
           10,
@@ -3035,13 +3051,13 @@
           2 * av.default.Seconds.HOUR,
           6 * av.default.Seconds.HOUR,
         ],
-        oc = 10,
-        oO = 26214400,
-        on = 524288e3,
-        oL = _ => "||".concat(_, "||"),
-        oD = /^\|\|([\s\S]+?)\|\|/,
-        oS = /^<id:(home|browse|customize|guide)>/,
-        oC = /^\d{17,19}$/;
+        oD = 10,
+        oS = 26214400,
+        oC = 524288e3,
+        ol = _ => "||".concat(_, "||"),
+        os = /^\|\|([\s\S]+?)\|\|/,
+        oP = /^<id:(home|browse|customize|guide)>/,
+        oM = /^\d{17,19}$/;
       ((Iv = _E || (_E = {})).MESSAGE = "MESSAGE"),
         (Iv.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
         (Iv.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
@@ -3071,31 +3087,31 @@
         (IJ.GAMES_YOU_PLAY = "gamesYouPlay"),
         (IJ.SEARCH = "search"),
         (IJ.MISC = "misc");
-      let ol = 128,
-        os = 1024,
-        oP = 2e3,
-        oM = 8e3,
-        oG = 64e3,
-        oU = 96e3,
-        od = 1e3,
-        ou = "0000",
-        op = "1",
-        oB = 99,
-        og = 1e4,
-        oH = 1e4,
-        of = 50,
-        oh = 150,
-        oy = 300,
-        oY = 10,
-        ow = 20,
-        ob = 25,
-        om = "#0000",
-        oK = 240,
-        oV = 480,
-        oF = 650,
-        oW = "DEVICE_TOKEN",
-        ov = "DEVICE_VOIP_TOKEN",
-        ok = Object.freeze({
+      let oG = 128,
+        oU = 1024,
+        od = 2e3,
+        ou = 8e3,
+        op = 64e3,
+        oB = 96e3,
+        og = 1e3,
+        oH = "0000",
+        of = "1",
+        oh = 99,
+        oy = 1e4,
+        oY = 1e4,
+        ow = 50,
+        ob = 150,
+        om = 300,
+        oK = 10,
+        oV = 20,
+        oF = 25,
+        oW = "#0000",
+        ov = 240,
+        ok = 480,
+        ox = 650,
+        oX = "DEVICE_TOKEN",
+        oQ = "DEVICE_VOIP_TOKEN",
+        oJ = Object.freeze({
           API_DOCS: "".concat(
             window.GLOBAL_ENV.MARKETING_ENDPOINT,
             "/developers/docs/intro"
@@ -3211,7 +3227,7 @@
             "/safetycenter"
           ),
         }),
-        ox = Object.freeze({
+        oZ = Object.freeze({
           DEVELOPER_PORTAL: "/developers",
           DEVELOPER_PORTAL_GUILD_ANALYTICS: _ =>
             "/developers/servers/".concat(_),
@@ -3219,11 +3235,11 @@
           DEVELOPER_PORTAL_EDIT_PAYOUTS: _ =>
             "/developers/teams/".concat(_, "/payout-settings"),
         }),
-        oX = 10,
-        oQ = 25,
-        oJ = /^FILTER_/,
-        oZ = /^ANSWER_/,
-        oj = 32;
+        oj = 10,
+        oz = 25,
+        oq = /^FILTER_/,
+        o$ = /^ANSWER_/,
+        o0 = 32;
       ((IZ = _t || (_t = {})).GUILD = "GUILD"),
         (IZ.FAVORITES = "FAVORITES"),
         (IZ.CHANNEL = "CHANNEL"),
@@ -3634,7 +3650,7 @@
         (I1.GUILD_BOOSTING_USER_SETTINGS = "Guild Boosting User Settings"),
         (I1.COLLECTIBLES_SHOP = "Collectibles Shop"),
         (I1.NITRO_HOME = "Nitro Home");
-      let oz = "help_center_cta";
+      let o1 = "help_center_cta";
       ((I3 = _O || (_O = {})).HERO = "Hero"),
         (I3.BODY = "Body"),
         (I3.NAVIGATION = "Navigation"),
@@ -4116,8 +4132,8 @@
         ((I6 = _D || (_D = {})).PRIMARY = "primary"),
         (I6.SECONDARY = "secondary"),
         (I6.DISMISS = "dismiss");
-      let oq = { page: "Direct", object: "Web URL" },
-        o$ = Object.freeze({
+      let o3 = { page: "Direct", object: "Web URL" },
+        o5 = Object.freeze({
           TEXT_PLAYGROUND: "Text Playground",
           OVERVIEW: "Overview",
           BROWSER: "Browser",
@@ -4380,7 +4396,7 @@
           "TOGGLE_REACTION_POPOUT"),
         (eo.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
         (eo.VOICE_MESSAGE_SEND = "VOICE_MESSAGE_SEND");
-      let o0 = 50;
+      let o2 = 50;
       ((eR = _p || (_p = {})).TWITCH = "twitch"),
         (eR.YOUTUBE = "youtube"),
         (eR.SKYPE = "skype"),
@@ -4424,30 +4440,30 @@
           GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
           AUTHORIZATION_CANCEL_FRAGMENT: "/_discord/auth?cancel=true",
         });
-      let o1 = new Set(["facebook", "contacts"]),
-        o3 = new Set([
+      let o6 = new Set(["facebook", "contacts"]),
+        o4 = new Set([
           "spotify",
           "xbox",
           "playstation",
           "playstation-stg",
           "crunchyroll",
         ]),
-        o5 = Object.freeze({
+        o8 = Object.freeze({
           DESKTOP: ""
             .concat(location.protocol)
             .concat(window.GLOBAL_ENV.API_ENDPOINT, "/download"),
           IOS: "https://itunes.apple.com/app/discord/id985746746",
           ANDROID: "https://play.google.com/store/apps/details?id=com.discord",
         }),
-        o2 = 10070709,
-        o6 = [
+        o7 = 10070709,
+        o9 = [
           1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570,
           15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530,
           11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
         ],
-        o4 = (0, aF.hex2int)(aY.default.BRAND_500);
-      ay(null != o4, "Brand color could not be parsed");
-      let o8 = o4;
+        R_ = (0, aF.hex2int)(aY.default.BRAND_500);
+      ay(null != R_, "Brand color could not be parsed");
+      let RE = R_;
       ((er = _f || (_f = {})).ROLE = "ROLE"),
         (er.MEMBER = "MEMBER"),
         ((eN = _h || (_h = {})).VOICE_LEGACY_SUBSYSTEM =
@@ -4484,15 +4500,15 @@
         ((eO = _w || (_w = {})).EMPTY = "EMPTY"),
         (eO.FILTER = "FILTER"),
         (eO.FILTER_ALL = "FILTER_ALL");
-      let o7 = "YYYY-MM-DD",
-        o9 = "PrivateChannelRecipientsInvitePopout";
+      let RI = "YYYY-MM-DD",
+        Re = "PrivateChannelRecipientsInvitePopout";
       ((en = _b || (_b = {}))[(en.NONE = 0)] = "NONE"),
         (en[(en.TIER_1 = 1)] = "TIER_1"),
         (en[(en.TIER_2 = 2)] = "TIER_2"),
         (en[(en.TIER_3 = 3)] = "TIER_3");
-      let R_ = Object.freeze({ 0: 0, 1: 2, 2: 7, 3: 14 }),
-        RE = 7,
-        RI = 0;
+      let Ra = Object.freeze({ 0: 0, 1: 2, 2: 7, 3: 14 }),
+        Ro = 7,
+        RR = 0;
       ((eL = _m || (_m = {}))[(eL.DEFAULT = 0)] = "DEFAULT"),
         (eL[(eL.GIFT = 1)] = "GIFT"),
         (eL[(eL.SALE = 2)] = "SALE"),
@@ -4501,7 +4517,7 @@
         (eL[(eL.MOBILE = 5)] = "MOBILE"),
         (eL[(eL.PREMIUM_TIER_0 = 6)] = "PREMIUM_TIER_0"),
         (eL[(eL.MOBILE_PREMIUM_TIER_2 = 7)] = "MOBILE_PREMIUM_TIER_2");
-      let Re = Object.freeze({
+      let Rt = Object.freeze({
         fonts: [
           {
             src: "url(https://cdn.discordapp.com/assets/stripe/ggsans-vf.woff2)",
@@ -4522,7 +4538,7 @@
         (eS[(eS.PAID = 2)] = "PAID"),
         (eS[(eS.VOID = 3)] = "VOID"),
         (eS[(eS.UNCOLLECTIBLE = 4)] = "UNCOLLECTIBLE");
-      let Ra = "Price changed";
+      let RA = "Price changed";
       ((eC = _F || (_F = {})).USER = "USER"),
         (eC.GLOBAL = "GLOBAL"),
         (eC.ROLE = "ROLE"),
@@ -4534,7 +4550,7 @@
         (eC.STICKER = "STICKER"),
         (eC.CHOICE_LOADING = "CHOICE_LOADING"),
         (eC.LABEL = "LABEL");
-      let Ro = Object.freeze({
+      let RT = Object.freeze({
         FONT_SIZE_DEFAULT: 16,
         FONT_SIZE_MIN: 12,
         FONT_SIZE_MAX: 24,
@@ -5709,7 +5725,7 @@
         (eU.LINKED_ROLES_ADMIN = "LINKED_ROLES_ADMIN"),
         (eU.SUMMARIES = "SUMMARIES"),
         (eU.SUMMARIES_ENABLED = "SUMMARIES_ENABLED");
-      let RR = Object.freeze({
+      let Rr = Object.freeze({
           STORAGE_MANIFEST: (_, E) =>
             "".concat(_, "/storage/").concat(E, "/MANIFEST"),
           INSTALL_DIR: _ => "".concat(_, "/content"),
@@ -5723,8 +5739,8 @@
             linux: "linux",
           },
         }),
-        Rt = 864e5,
-        RA = 2592e5;
+        RN = 864e5,
+        Ri = 2592e5;
       ((ed = _J || (_J = {})).NORMAL = "normal"),
         (ed.MINIMUM = "minimum"),
         (ed.NO_CHAT = "no-chat"),
@@ -5742,7 +5758,7 @@
         (ep.RTC_DEBUG = "RTC_DEBUG"),
         (ep.GUILD_IDENTITY_SETTINGS = "GUILD_IDENTITY_SETTINGS"),
         (ep.COLLECTIBLES_SHOP = "COLLECTIBLES_SHOP");
-      let RT = Object.freeze({
+      let Rc = Object.freeze({
         ALL: null,
         GUILD_UPDATE: 1,
         CHANNEL_CREATE: 10,
@@ -5985,7 +6001,7 @@
         (eh.SCHEDULED_START_TIME = "scheduled_start_time"),
         (eh.SCHEDULED_END_TIME = "scheduled_end_time"),
         (eh.IS_CANCELED = "is_canceled");
-      let Rr = 50;
+      let RO = 50;
       ((ey = _3 || (_3 = {})).AGREEMENTS = "AGREEMENTS"),
         (ey.REQUIRE_CAPTCHA = "REQUIRE_CAPTCHA"),
         (ey.REQUIRE_VERIFIED_EMAIL = "REQUIRE_VERIFIED_EMAIL"),
@@ -6007,7 +6023,7 @@
         (eY.EMAIL = "email"),
         (eY.REVERIFY_PHONE = "reverify_phone"),
         (eY.REVERIFY_EMAIL = "reverify_email");
-      let RN = 512;
+      let Rn = 512;
       ((ew = _6 || (_6 = {}))[(ew.PRIMARY = 0)] = "PRIMARY"),
         (ew[(ew.SECONDARY = 2)] = "SECONDARY"),
         (ew[(ew.WHEEL = 4)] = "WHEEL"),
@@ -6054,7 +6070,7 @@
         ((eK = _7 || (_7 = {})).VIDEO = "VIDEO"),
         (eK.EMBED_IFRAME = "EMBED_IFRAME"),
         ((_9 || (_9 = {})).GIF = "GIF");
-      let Ri = Object.freeze({
+      let RL = Object.freeze({
         GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
         TENOR: {
           type: "GIF",
@@ -6211,9 +6227,9 @@
           "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
         (eV.WIN7_8_DEPRECATE = "20470973046295"),
         (eV.MACOS_17_18_DEPRECATE = "20900540446231");
-      let Rc = _ => "https://www.youtube.com/embed/".concat(_),
-        RO = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
-        Rn = "https://discordapp.com/mweb-handoff";
+      let RD = _ => "https://www.youtube.com/embed/".concat(_),
+        RS = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
+        RC = "https://discordapp.com/mweb-handoff";
       ((eF = EE || (EE = {}))[(eF.HIDDEN = 1)] = "HIDDEN"),
         (eF[(eF.PRIVATE = 2)] = "PRIVATE"),
         (eF[(eF.OVERLAY_DISABLED = 4)] = "OVERLAY_DISABLED"),
@@ -6238,7 +6254,7 @@
         (ek.ORIGIN = "origin"),
         (ek.GOG = "gog"),
         (ek.EPIC = "epic");
-      let RL = Object.freeze({
+      let Rl = Object.freeze({
           discord: "Discord",
           steam: "Steam",
           uplay: "Uplay",
@@ -6248,18 +6264,18 @@
           twitch: "Twitch",
           epic: "Epic",
         }),
-        RD = 6016,
-        RS = 3384;
+        Rs = 6016,
+        RP = 3384;
       ((ex = Eo || (Eo = {})).USAGE_STATISTICS = "usage_statistics"),
         (ex.PERSONALIZATION = "personalization"),
         ((eX = ER || (ER = {}))[(eX.MUTUAL_FRIENDS = 2)] = "MUTUAL_FRIENDS"),
         (eX[(eX.MUTUAL_GUILDS = 4)] = "MUTUAL_GUILDS"),
         (eX[(eX.NO_RELATION = 8)] = "NO_RELATION");
-      let RC = 14;
+      let RM = 14;
       ((eQ = Et || (Et = {}))[(eQ.NONE = 0)] = "NONE"),
         (eQ[(eQ.FIND_BY_PHONE = 2)] = "FIND_BY_PHONE"),
         (eQ[(eQ.FIND_BY_EMAIL = 4)] = "FIND_BY_EMAIL");
-      let Rl = 30;
+      let RG = 30;
       ((eJ = EA || (EA = {}))[(eJ.PRIVATE = 1)] = "PRIVATE"),
         (eJ[(eJ.PUBLIC = 2)] = "PUBLIC"),
         ((eZ = ET || (ET = {}))[(eZ.NO_ERROR = 0)] = "NO_ERROR"),
@@ -6273,7 +6289,7 @@
         ((ej = Er || (Er = {})).OVERLAY = "OVERLAY"),
         (ej.APP = "APP"),
         (ej.POPOUT = "POPOUT");
-      let Rs = __OVERLAY__ ? "OVERLAY" : "APP";
+      let RU = __OVERLAY__ ? "OVERLAY" : "APP";
       ((ez = EN || (EN = {})).COMPLETE = "complete"),
         (ez.TRANSITION = "transition"),
         ((eq = Ei || (Ei = {})).QUEUED = "queued"),
@@ -6356,12 +6372,12 @@
         ((aI = Ed || (Ed = {})).HOUSE_1 = "HOUSE_1"),
         (aI.HOUSE_2 = "HOUSE_2"),
         (aI.HOUSE_3 = "HOUSE_3");
-      let RP = "RANDOM_HYPESQUAD_HOUSE";
+      let Rd = "RANDOM_HYPESQUAD_HOUSE";
       ((ae = Eu || (Eu = {}))[(ae.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
         (ae[(ae.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
         (ae[(ae.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
         (ae[(ae.GAMEPAD_BUTTON = 3)] = "GAMEPAD_BUTTON");
-      let RM = Object.freeze({
+      let Ru = Object.freeze({
           esc: 9,
           f1: 67,
           f2: 68,
@@ -6480,7 +6496,7 @@
           "track back": 173,
           "track skip": 171,
         }),
-        RG = Object.freeze({
+        Rp = Object.freeze({
           a: 4,
           s: 22,
           d: 7,
@@ -6596,7 +6612,7 @@
         (aa[(aa.Center = 2)] = "Center"),
         (aa[(aa.Back = 3)] = "Back"),
         (aa[(aa.Forward = 4)] = "Forward");
-      let RU = Object.freeze({
+      let RB = Object.freeze({
         a: 65,
         s: 83,
         d: 68,
@@ -6750,7 +6766,7 @@
         (ac.TRENDING_CATEGORY = "Category"),
         (ac.SEARCH = "Search"),
         (ac.SEARCH_SUGGESTION = "Search Suggestion");
-      let Rd = new Set([
+      let Rg = new Set([
         aX.CurrencyCodes.USD,
         aX.CurrencyCodes.CAD,
         aX.CurrencyCodes.EUR,
@@ -6765,7 +6781,7 @@
       ((aO = Em || (Em = {})).ALWAYS = "ALWAYS"),
         (aO.ON_CLICK = "ON_CLICK"),
         (aO.IF_MODERATOR = "IF_MODERATOR");
-      let Ru = [];
+      let RH = [];
       ((an = EK || (EK = {})).CHANNEL_CALL_POPOUT =
         "DISCORD_CHANNEL_CALL_POPOUT"),
         (an.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
@@ -6801,7 +6817,7 @@
         (aP.THREE_G = "3g"),
         (aP.FOUR_G = "4g"),
         (aP.FIVE_G = "5g");
-      let Rp = "discodoEasterEgg";
+      let Rf = "discodoEasterEgg";
       ((aM = EQ || (EQ = {})).INITIAL = "initial"),
         (aM.ENTER = "enter"),
         (aM.UPDATE = "update"),
@@ -6817,9 +6833,9 @@
         (ad[(ad.TWITCH = 3)] = "TWITCH"),
         (ad[(ad.YOUTUBE = 4)] = "YOUTUBE"),
         (ad[(ad.WEBHOOKS = 5)] = "WEBHOOKS");
-      let RB = 2500,
-        Rg = 0,
-        RH = 2592e6;
+      let Rh = 2500,
+        Ry = 0,
+        RY = 2592e6;
       ((au = Ez || (Ez = {})).USERS = "users"),
         (au.ROLES = "roles"),
         (au.EVERYONE = "everyone"),
@@ -6829,14 +6845,14 @@
         (aB[(aB.ENABLING = 1)] = "ENABLING"),
         (aB[(aB.ENABLED = 2)] = "ENABLED"),
         (aB[(aB.FAILED_TO_ENABLE = 3)] = "FAILED_TO_ENABLE");
-      let Rf = 100,
-        Rh =
+      let Rw = 100,
+        Rb =
           /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
       aw.default,
         ((ag = E0 || (E0 = {}))[(ag.NULL = 0)] = "NULL"),
         (ag[(ag.DISABLED = 1)] = "DISABLED"),
         (ag[(ag.ENABLED = 2)] = "ENABLED");
-      let Ry =
+      let Rm =
         "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
       ((aH = E1 || (E1 = {}))[(aH.CLIPS_ENABLED = 1)] = "CLIPS_ENABLED"),
         (aH[(aH.ALLOW_VOICE_RECORDING = 2)] = "ALLOW_VOICE_RECORDING"),
@@ -17184,4 +17200,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.fa7b47de51db75b5e0b6.js.map
+//# sourceMappingURL=7273.667701702a3367787f41.js.map

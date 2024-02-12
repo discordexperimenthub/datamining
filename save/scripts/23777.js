@@ -901,7 +901,9 @@
       function h(t) {
         var e;
         let n =
-            null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
+            null !== (e = null == t ? void 0 : t.id) && void 0 !== e
+              ? e
+              : P.EMPTY_STRING_GUILD_ID,
           u = (0, l.useStateFromStores)([S.default], () =>
             S.default.can(P.Permissions.ADMINISTRATOR, t)
           ),
@@ -4016,4 +4018,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23777.9e9e7da77fb7df223e53.js.map
+//# sourceMappingURL=23777.5dc40c4c2b6c28d07d6a.js.map

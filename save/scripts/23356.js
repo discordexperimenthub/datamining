@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["23303"],
+  ["23356"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -34585,6 +34585,18 @@
               void 0 !== e
               ? e
               : void 0;
+        }
+        getEmbeddedActivityForUserId(e, t) {
+          let n;
+          if (void 0 !== t) {
+            e: for (let [s, i] of C)
+              for (let s of i)
+                if (s.applicationId === t && s.userIds.has(e)) {
+                  n = s;
+                  break e;
+                }
+            return n;
+          }
         }
       }
       (F.displayName = "EmbeddedActivitiesStore"),
@@ -76678,4 +76690,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23303.c67a9612c387737a5cf3.js.map
+//# sourceMappingURL=23356.dca9d89eb0c7ccfaf26a.js.map

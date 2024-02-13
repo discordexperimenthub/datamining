@@ -3223,7 +3223,7 @@
             tier2CTAButton: i,
             className: l,
             variant: a = 0,
-            toggleState: s,
+            selectedPremiumType: s,
           } = e,
           { AnalyticsLocationProvider: o } = (0, O.default)(
             R.default.PREMIUM_MARKETING_TIER_CARD
@@ -4283,4 +4283,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47387.acb9f3db1fae8e93795c.js.map
+//# sourceMappingURL=47387.1e2640226df51a61466d.js.map

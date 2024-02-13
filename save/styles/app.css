@@ -52189,9 +52189,18 @@ html .progress__4ef76 {
 .settingsHeroNoBackground__0cfbe {
   width: 660px;
 }
+.dynamicImage__10ecf {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  min-width: 700px;
+}
+.fullscreenHeroMarketingOptimization__4ad6b,
+.fullscreenHero_c52cb4 {
+  padding-top: 96px;
+}
 .fullscreenHero_c52cb4 {
   margin-bottom: 96px;
-  padding-top: 96px;
 }
 .noTopPaddingOverride__28e38 {
   padding-top: 0;
@@ -52291,20 +52300,24 @@ html .progress__4ef76 {
   margin-top: 56px;
   margin-bottom: 56px;
 }
-.whatsNewSection_e83a8d {
+.whatsNewSection_e83a8d,
+.whatsNewSectionBackground__38151 {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 64px;
-  padding-top: 64px;
+  padding-top: 20px;
   padding-bottom: 64px;
   margin-bottom: 64px;
+  border-radius: var(--radius-lg);
+}
+.whatsNewSectionBackground__38151 {
+  padding-top: 64px;
   background-image: var(
     --custom-premium-colors-premium-gradient-tier-2-transparent
   );
-  border-radius: var(--radius-lg);
 }
 .pdSparklesTop_eeb019 {
   position: absolute;
@@ -108177,4 +108190,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.72e59c48432532f273e7.css.map*/
+/*# sourceMappingURL=app.2fe12369a91af89c94d0.css.map*/

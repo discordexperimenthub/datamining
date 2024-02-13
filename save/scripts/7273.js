@@ -1995,6 +1995,8 @@
             "/channels/".concat(_, "/attachments"),
           UPDATE_VOICE_CHANNEL_STATUS: _ =>
             "/channels/".concat(_, "/voice-status"),
+          UPDATE_VOICE_CHANNEL_BACKGROUND: _ =>
+            "/channels/".concat(_, "/voice-background"),
           MESSAGE_DELETE_UPLOAD: _ => "/attachments/".concat(_),
           MESSAGE_CROSSPOST: (_, E) =>
             "/channels/".concat(_, "/messages/").concat(E, "/crosspost"),
@@ -17219,4 +17221,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.8d663ea05e2ff553a0e4.js.map
+//# sourceMappingURL=7273.348bb05b7ba79a8318c3.js.map

@@ -108,25 +108,25 @@
           }
         })();
         var l = [],
-          f = !1,
-          d = -1;
+          d = !1,
+          f = -1;
         function h() {
-          f &&
+          d &&
             i &&
-            ((f = !1),
-            i.length ? (l = i.concat(l)) : (d = -1),
+            ((d = !1),
+            i.length ? (l = i.concat(l)) : (f = -1),
             l.length && p());
         }
         function p() {
-          if (!f) {
+          if (!d) {
             var t = a(h);
-            f = !0;
+            d = !0;
             for (var e = l.length; e; ) {
-              for (i = l, l = []; ++d < e; ) i && i[d].run();
-              (d = -1), (e = l.length);
+              for (i = l, l = []; ++f < e; ) i && i[f].run();
+              (f = -1), (e = l.length);
             }
             (i = null),
-              (f = !1),
+              (d = !1),
               !(function (t) {
                 if (o === clearTimeout) return clearTimeout(t);
                 if ((o === s || !o) && clearTimeout)
@@ -151,7 +151,7 @@
           var e = Array(arguments.length - 1);
           if (arguments.length > 1)
             for (var n = 1; n < arguments.length; n++) e[n - 1] = arguments[n];
-          l.push(new m(t, e)), 1 === l.length && !f && a(p);
+          l.push(new m(t, e)), 1 === l.length && !d && a(p);
         }),
           (m.prototype.run = function () {
             this.fun.apply(null, this.array);
@@ -268,7 +268,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-77166c5f70f88a89e50c82c618f9ceab7611fbff",
+            release: "discord_web-f5c712f5acaa1fd3ed518d5905cce7813a1fbf87",
             beforeSend: t => {
               var e, n;
               return !(
@@ -339,8 +339,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((t = "265853"), "265853")),
-            r.setTag("builtAt", String("1707842075563"));
+            r.setTag("buildNumber", ((t = "265857"), "265857")),
+            r.setTag("builtAt", String("1707842993132"));
           let e = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != e && "object" == typeof e)
             for (let t in e) r.setTag(t, e[t]);
@@ -479,4 +479,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.84abbcd9579ad2c6d97e.js.map
+//# sourceMappingURL=sentry.ef637c93a01c1ac44b9e.js.map

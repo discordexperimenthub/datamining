@@ -25909,8 +25909,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265932", ", Version Hash: ")
-          .concat("5547b515d9b5945f4ae4f343decddcb69be05f5a")
+          .concat("265940", ", Version Hash: ")
+          .concat("852d6e44c1ad571cb4990d166290906ea25bdf13")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28990,12 +28990,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265932"), "265932"));
+        let _ = parseInt(((e = "265940"), "265940"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265932"
+                "265940"
               )
             ),
             (_ = 0)),
@@ -44635,6 +44635,10 @@
         (u[(u.SWIPE_TO_REPLY_COACHMARK = 349)] = "SWIPE_TO_REPLY_COACHMARK"),
         (u[(u.MOBILE_ACCESSIBILITY_COLOR_SETTINGS = 350)] =
           "MOBILE_ACCESSIBILITY_COLOR_SETTINGS"),
+        (u[(u.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP = 351)] =
+          "COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP"),
+        (u[(u.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP = 352)] =
+          "COLLECTIBLES_SHOP_ELEMENTS_COACHTIP"),
         ((L = a || (a = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51054,4 +51058,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.6faa3bb02610a1d096bb.js.map
+//# sourceMappingURL=73222.2c5b7f3df7ece1059347.js.map

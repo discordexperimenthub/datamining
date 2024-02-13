@@ -49291,10 +49291,10 @@
             return ei;
           },
           transformForGameSettings: function () {
-            return es;
+            return ea;
           },
           default: function () {
-            return ed;
+            return ef;
           },
         }),
         n("222007"),
@@ -49507,10 +49507,13 @@
         let t = j.enableDetection[ee(e)];
         return null == t || t;
       }
-      function er() {
+      function er(e) {
+        return !e.hidden && ei(e);
+      }
+      function es() {
         d.default.set(b, j);
       }
-      function es(e) {
+      function ea(e) {
         var t, n;
         let i = {
           ...e,
@@ -49532,7 +49535,7 @@
         }
         return i;
       }
-      function ea() {
+      function eo() {
         let e = !1;
         return (
           (w = o.values(O.default.libraryApplications).reduce((t, n) => {
@@ -49556,17 +49559,17 @@
             }
             return t;
           }, [])),
-          e && eo(),
+          e && el(),
           e
         );
       }
-      function eo() {
+      function el() {
         if (!__OVERLAY__ && v.isPlatformEmbedded) {
           let e = [...w, ...o.values(j.gameOverrides)];
           A.default.setGameCandidateOverrides(e);
         }
       }
-      function el(e) {
+      function eu(e) {
         null != e &&
           0 !== e.length &&
           (e.forEach(e => {
@@ -49606,10 +49609,10 @@
             }
           }),
           j.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
-          er(),
-          I.default.setRecentGames(eu().map(e => es(e))));
+          es(),
+          I.default.setRecentGames(ec().map(e => ea(e))));
       }
-      function eu() {
+      function ec() {
         let e = o.values(j.gameOverrides),
           t = j.gamesSeen.filter(e => void 0 === j.gameOverrides[ee(e)]);
         return t.concat(e);
@@ -49720,9 +49723,9 @@
                 (i = r),
                 $();
             }),
-            eo();
+            el();
         });
-      class ec extends c.default.Store {
+      class ed extends c.default.Store {
         initialize() {
           var e, t, n, i;
           let r =
@@ -49747,25 +49750,31 @@
               null !== (n = r.enableOverlay) && void 0 !== n ? n : {}),
             (j.enableDetection =
               null !== (i = r.enableDetection) && void 0 !== i ? i : {}),
-            eo(),
+            el(),
             Array.isArray(r.gamesSeen))
           )
             for (let e of r.gamesSeen)
               "number" == typeof e.id &&
                 ((e.nativeProcessObserverId = e.id), delete e.id, (s = !0));
-          el(r.gamesSeen),
+          eu(r.gamesSeen),
             this.waitFor(N.default),
             this.syncWith(
               [O.default, N.default, D.default],
-              o.throttle(ea, 1e3)
+              o.throttle(eo, 1e3)
             ),
-            s && er();
+            s && es();
         }
         getVisibleGame() {
-          return null != F && (F.hidden || !ei(F)) ? null : F;
+          return null == F || er(F) ? F : null;
         }
         getCurrentGameForAnalytics() {
           return F;
+        }
+        getVisibleRunningGames() {
+          return x.filter(er);
+        }
+        getRunningGames() {
+          return x;
         }
         getRunningDiscordApplicationIds() {
           let e = [];
@@ -49805,15 +49814,12 @@
             .filter(e => e.hidden || null == e.id)
             .filter(e => void 0 === j.gameOverrides[ee(e)]);
         }
-        getRunningGames() {
-          return x;
-        }
         getGamesSeen(e) {
           let t =
               !(arguments.length > 1) ||
               void 0 === arguments[1] ||
               arguments[1],
-            n = eu();
+            n = ec();
           if (e) {
             let e = this.getVisibleGame();
             if (null != e) {
@@ -49860,10 +49866,10 @@
           return U;
         }
       }
-      ec.displayName = "RunningGameStore";
-      var ed = new ec(f.default, {
+      ed.displayName = "RunningGameStore";
+      var ef = new ed(f.default, {
         RUNNING_GAMES_CHANGE: function (e) {
-          el(x);
+          eu(x);
         },
         CANDIDATE_GAMES_CHANGE: function (e) {
           k = e.games;
@@ -49894,15 +49900,15 @@
           (null == i.lastFocused || 0 === i.lastFocused) &&
             (i.lastFocused = Math.floor(Date.now() / 1e3)),
             (j.gameOverrides[t] = { ...i, add: !0 }),
-            el(x),
-            eo(),
-            er(),
+            eu(x),
+            el(),
+            es(),
             $();
         },
         RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
           if (
             ((j.enableOverlay[ee(e.game)] = e.newEnabledValue),
-            er(),
+            es(),
             !__OVERLAY__)
           ) {
             let t =
@@ -49920,7 +49926,7 @@
           let { game: t } = e,
             n = ei(t);
           (j.enableDetection[ee(t)] = !n),
-            er(),
+            es(),
             T.default.track(
               y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE,
               { enabled: !n }
@@ -49952,8 +49958,8 @@
           x.forEach(n => {
             ee(n) === t && ((n.name = e.newName), (s = !0));
           }),
-            eo(),
-            er(),
+            el(),
+            es(),
             s && $();
         },
         RUNNING_GAME_DELETE_ENTRY: function (e) {
@@ -49968,8 +49974,8 @@
               }),
               delete H[t],
               $()),
-            eo(),
-            er();
+            el(),
+            es();
         },
         GAMES_DATABASE_UPDATE: Y,
         GAME_LAUNCH_SUCCESS: function (e) {
@@ -49982,7 +49988,7 @@
             n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : []);
         },
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function () {
-          eo();
+          el();
         },
       });
     },
@@ -60075,7 +60081,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "266010",
+                  build_number: "266019",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78720,4 +78726,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.96a6aedbdeb4017ce028.js.map
+//# sourceMappingURL=41039.772237ecb8e01b768439.js.map

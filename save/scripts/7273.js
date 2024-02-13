@@ -5269,6 +5269,8 @@
         (es.SURVEY_SUBMITTED = "survey_submitted"),
         (es.CANCELLATION_FLOW_STARTED = "cancellation_flow_started"),
         (es.CANCELLATION_FLOW_STEP = "cancellation_flow_step"),
+        (es.ATTACHMENT_UPLOAD_STARTED = "attachment_upload_started"),
+        (es.ATTACHMENT_UPLOAD_FINISHED = "attachment_upload_finished"),
         (es.MESSAGE_SENT_WITH_ATTACHMENTS = "message_sent_with_attachments"),
         (es.MESSAGE_LINK_COPIED = "message_link_copied"),
         (es.MESSAGE_SWIPE_ACTION_SENT = "message_swipe_action_sent"),
@@ -17216,4 +17218,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.e9b8e36acfb73c77b3d4.js.map
+//# sourceMappingURL=7273.69dae81768e3ca523c2b.js.map

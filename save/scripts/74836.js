@@ -128,13 +128,12 @@
               searchQuery: e,
             });
           },
-          selectRole(e, t) {
+          selectRole: (e, t) =>
             r.default.dispatch({
               type: "GUILD_SETTINGS_ROLE_SELECT",
               roleId: e,
               searchQuery: t,
-            });
-          },
+            }),
           updateEmbed(e, t, n) {
             l.default
               .patch({
@@ -1169,18 +1168,18 @@
         o = "1",
         E = [
           d.Permissions.ADMINISTRATOR,
+          d.Permissions.KICK_MEMBERS,
+          d.Permissions.BAN_MEMBERS,
           d.Permissions.MANAGE_GUILD,
           d.Permissions.MANAGE_CHANNELS,
           d.Permissions.MANAGE_ROLES,
-          d.Permissions.KICK_MEMBERS,
-          d.Permissions.BAN_MEMBERS,
           d.Permissions.MANAGE_MESSAGES,
-          d.Permissions.MENTION_EVERYONE,
           d.Permissions.MANAGE_GUILD_EXPRESSIONS,
           d.Permissions.CREATE_GUILD_EXPRESSIONS,
           d.Permissions.MANAGE_EVENTS,
           d.Permissions.CREATE_EVENTS,
           d.Permissions.MODERATE_MEMBERS,
+          d.Permissions.MENTION_EVERYONE,
         ],
         _ = r.default.combine(...E),
         S = 1e3,
@@ -1191,4 +1190,4 @@
     },
   },
 ]);
-//# sourceMappingURL=74836.b991877dde75f9619c99.js.map
+//# sourceMappingURL=74836.ff680f90512a3312acaa.js.map

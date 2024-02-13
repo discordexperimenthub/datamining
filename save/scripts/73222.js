@@ -18943,6 +18943,19 @@
         GUILD_MEMBER_MOD_VIEW_RECENT_AUDIT_LOG: "Moderator Action Log",
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Member who initiated this action.",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Mod Permissions",
+        GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "All ({count})",
+        GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
+          "{roleCount, plural, =1 {# Role} other {# Roles}}",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE:
+          "All Granted Permissions",
+        GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "No Mod Permissions",
+        GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Granted By",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
+          "(Risky) Granted By",
+        GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
+          "Permission Granted By These Roles",
+        GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Highest Role",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE:
           "Show Members In Channel List",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION:
@@ -24008,6 +24021,18 @@
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "You've been on Do Not Disturb for a while. Would you like to enable Focus Mode instead?",
         QUICK_REPLY_CLOSE_ARIA_LABEL: "Close reply popout",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
+          "An activity card showing @{username} and {activity}",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:
+          "An activity card showing @{username} playing {activity}",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING:
+          "An activity card showing @{username} watching {activity}",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING:
+          "An activity card showing @{username} listening to {activity}",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_SPOTIFY:
+          "An activity card showing @{username} listening to {song} by {artist}",
+        ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
+          "An activity card showing @{username} streaming {activity}",
       });
     },
     444051: function (e, _, E) {
@@ -25884,8 +25909,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265886", ", Version Hash: ")
-          .concat("0bf8e408ba65db8e3aaf2e68d3c84b9f39094419")
+          .concat("265892", ", Version Hash: ")
+          .concat("a44518ab1731082c412b811259863ae86187eaab")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28897,12 +28922,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265886"), "265886"));
+        let _ = parseInt(((e = "265892"), "265892"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265886"
+                "265892"
               )
             ),
             (_ = 0)),
@@ -44538,6 +44563,8 @@
         (u[(u.VOICE_CALL_BG_PICKER_NEW_BADGE = 348)] =
           "VOICE_CALL_BG_PICKER_NEW_BADGE"),
         (u[(u.SWIPE_TO_REPLY_COACHMARK = 349)] = "SWIPE_TO_REPLY_COACHMARK"),
+        (u[(u.MOBILE_ACCESSIBILITY_COLOR_SETTINGS = 350)] =
+          "MOBILE_ACCESSIBILITY_COLOR_SETTINGS"),
         ((L = a || (a = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -50957,4 +50984,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.8c165e2e1f044bd0ea9d.js.map
+//# sourceMappingURL=73222.05d469bdc49fe6dd78ff.js.map

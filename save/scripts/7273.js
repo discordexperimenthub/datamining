@@ -3672,6 +3672,7 @@
         (I3.GAME_MODAL = "Game Modal"),
         (I3.GAME_POPOUT = "Game Popout"),
         (I3.EMOJI_UPSELL_POPOUT = "Emoji Upsell Popout"),
+        (I3.EMOJI_PICKER_FLOATING_UPSELL = "Emoji Picker Floating Upsell"),
         (I3.EMPTY_STICKER_PICKER_UPSELL = "Empty Sticker Picker Upsell"),
         (I3.CREATE_STICKER_MODAL = "Create Sticker Modal"),
         (I3.IOS_TWO_FA_MODAL = "Two Factor Auth Modal"),
@@ -17215,4 +17216,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.bbfad14d33c81b09376d.js.map
+//# sourceMappingURL=7273.e9b8e36acfb73c77b3d4.js.map

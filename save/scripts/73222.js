@@ -10248,6 +10248,7 @@
         PREMIUM_NITRO_DROP_2023_BANNER_NON_TIER_2_SUB_SUBHEADER_2:
           "Check out the latest perks: Themes, Avatar Decorations, Soundboard, and Super Reactions!",
         PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER: "Avatar Decorations",
+        EMOJI_PICKER_PREMIUM_UPSELL_TITLE: "Unlock these emoji with Nitro",
         EMOJI_PICKER_PREMIUM_UPSELL_BODY:
           "Use these emoji and more by subscribing to Nitro.",
         EMOJI_PICKER_PREMIUM_TIER_0_UPSELL_BODY:
@@ -25863,8 +25864,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265770", ", Version Hash: ")
-          .concat("3bada4e2c6266177aec0894e20e6ed00ce22ea2b")
+          .concat("265781", ", Version Hash: ")
+          .concat("049b548afa47d3b9c7c22165751cac19858609b2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28876,12 +28877,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265770"), "265770"));
+        let _ = parseInt(((e = "265781"), "265781"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265770"
+                "265781"
               )
             ),
             (_ = 0)),
@@ -50936,4 +50937,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.a4e59af20449464d9dd5.js.map
+//# sourceMappingURL=73222.73c0406bd90ddaa4c040.js.map

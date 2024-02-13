@@ -35841,6 +35841,12 @@
             return r.warn("couldn't load guild versions", e), {};
           }
         }
+        handleConnectionOpen(e, t) {
+          null != e.apiCodeVersion &&
+            i.default
+              .nonGuildVersionsTransaction(t)
+              .put({ id: "api_code_version", version: e.apiCodeVersion });
+        }
         handleClear(e) {
           i.default.nonGuildVersionsTransaction(e).delete();
         }
@@ -35849,6 +35855,8 @@
           this.actions = {
             CLEAR_CACHES: (e, t) => this.handleClear(t),
             CLEAR_GUILD_CACHE: (e, t) => this.handleClear(t),
+            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+            BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t),
           };
         }
       })();
@@ -37116,7 +37124,6 @@
           useGuildVersions: !1,
           version: r,
           cacheCreationDate: null,
-          apiCodeVersion: 0,
           guildIdsRequiringDeletedIdsSync: [],
           lastSelectedGuildId: null,
         };
@@ -37127,69 +37134,59 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return T;
           },
         }),
         n("222007");
-      var s,
-        i = n("446674"),
-        r = n("913144"),
-        a = n("105059"),
-        o = n("11275"),
-        d = n("605250"),
-        u = n("271938"),
-        l = n("162771"),
-        f = n("91131"),
-        _ = n("70754"),
-        c = n("548578");
-      let g = new d.default("ClientStateStore"),
-        m = f.initialState.nonce,
-        h = f.initialState.useGuildVersions,
-        v = f.initialState.cacheCreationDate,
-        E = f.initialState.apiCodeVersion,
-        p = new Set(
-          null !== (s = f.initialState.guildIdsRequiringDeletedIdsSync) &&
-          void 0 !== s
-            ? s
-            : []
-        ),
-        y = f.initialState.lastSelectedGuildId,
-        T = !1;
-      function C() {
-        f.clear(), (E = 0), p.clear();
+      var s = n("446674"),
+        i = n("913144"),
+        r = n("105059"),
+        a = n("11275"),
+        o = n("605250"),
+        d = n("271938"),
+        u = n("162771"),
+        l = n("91131"),
+        f = n("70754"),
+        _ = n("548578");
+      let c = new o.default("ClientStateStore"),
+        g = l.initialState.nonce,
+        m = l.initialState.useGuildVersions,
+        h = l.initialState.cacheCreationDate,
+        v = l.initialState.lastSelectedGuildId,
+        E = !1;
+      function p() {
+        l.clear();
       }
-      class I extends i.default.Store {
+      class y extends s.default.Store {
         initialize() {
-          this.waitFor(u.default),
-            this.syncWith([l.default], () => {
-              if (!T) return !1;
-              y = l.default.getGuildId();
+          this.waitFor(d.default),
+            this.syncWith([u.default], () => {
+              if (!E) return !1;
+              v = u.default.getGuildId();
             });
         }
         persist(e) {
-          g.verbose("writing ClientStateStore (nonce: ".concat(e, ")")),
-            null == v && (v = Date.now()),
-            (m = e),
-            f.persist(u.default.getId(), {
+          c.verbose("writing ClientStateStore (nonce: ".concat(e, ")")),
+            null == h && (h = Date.now()),
+            (g = e),
+            l.persist(d.default.getId(), {
               nonce: e,
-              version: c.CACHE_VERSION,
-              useGuildVersions: h,
-              cacheCreationDate: v,
-              apiCodeVersion: E,
-              guildIdsRequiringDeletedIdsSync: Array.from(p),
-              lastSelectedGuildId: y,
+              version: _.CACHE_VERSION,
+              useGuildVersions: m,
+              cacheCreationDate: h,
+              lastSelectedGuildId: v,
             });
         }
         clear() {
-          C();
+          p();
         }
         async getClientState() {
           let [e, t] = await Promise.all([
-            h && (0, _.isCacheEnabled)()
-              ? a.default.getCommittedVersions()
+            m && (0, f.isCacheEnabled)()
+              ? r.default.getCommittedVersions()
               : Promise.resolve({}),
-            h && (0, _.isCacheEnabled)()
-              ? o.default.getCommittedVersions()
+            m && (0, f.isCacheEnabled)()
+              ? a.default.getCommittedVersions()
               : Promise.resolve({}),
           ]);
           return {
@@ -37198,44 +37195,24 @@
             readStateVersion: t.read_state_version,
             userGuildSettingsVersion: t.user_guild_settings_version,
             privateChannelsVersion: t.private_channels_version,
-            apiCodeVersion: E,
-            lastSelectedGuildId: y,
+            apiCodeVersion: t.api_code_version,
+            lastSelectedGuildId: v,
             userSettingsVersion: t.user_settings_version,
           };
         }
-        getGuildIdsRequiringDeletedIdsSync() {
-          return p;
-        }
         getSavedNonce() {
-          return m;
+          return g;
         }
       }
-      I.displayName = "ClientStateStore";
-      var S = new I(r.default, {
-        BACKGROUND_SYNC: function (e) {
-          for (let t of e.guilds)
-            "partial" === t.data_mode && t.unableToSyncDeletes && p.add(t.id);
-          null != e.apiCodeVersion && (E = e.apiCodeVersion);
+      y.displayName = "ClientStateStore";
+      var T = new y(i.default, {
+        CONNECTION_OPEN: function () {
+          (E = !0), (m = !0);
         },
-        CONNECTION_OPEN: function (e) {
-          let { guilds: t, apiCodeVersion: n } = e;
-          for (let e of ((E = n), (T = !0), (h = !0), t))
-            e.unableToSyncDeletes && p.add(e.id),
-              e.unableToSyncDeletes && p.add(e.id);
-        },
-        DELETED_ENTITY_IDS: function (e) {
-          p.delete(e.guild_id);
-        },
-        GUILD_CREATE: function (e) {
-          let { guild: t } = e;
-          !t.unavailable &&
-            (t.unableToSyncDeletes && p.add(t.id),
-            t.unableToSyncDeletes && p.add(t.id));
-        },
-        CLEAR_GUILD_CACHE: C,
-        CLEAR_CACHES: C,
-        LOGOUT: C,
-        LOGIN: C,
+        CLEAR_GUILD_CACHE: p,
+        CLEAR_CACHES: p,
+        LOGOUT: p,
+        LOGIN: p,
       });
     },
     91131: function (e, t, n) {
@@ -76704,4 +76681,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23303.05cdb67608c0bec72b61.js.map
+//# sourceMappingURL=23303.bb9a5614fc670630af1c.js.map

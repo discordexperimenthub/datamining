@@ -23937,6 +23937,14 @@
             (this.guilds = u(
               e => new r.EntityDao("guilds", r.TableId.KvCache, e)
             )),
+            (this.guildsRequiringDeletedIdsSync = u(
+              e =>
+                new r.EntityDao(
+                  "guilds_requiring_deleted_ids_sync",
+                  r.TableId.KvCache,
+                  e
+                )
+            )),
             (this.messages = u(
               e => new r.MessageDao("messages", r.TableId.Messages, e)
             )),
@@ -23985,7 +23993,11 @@
             (this.readStatesTransaction = e =>
               this.readStates(e.database).upgradeTransaction(e)),
             (this.userGuildSettingsTransaction = e =>
-              this.userGuildSettings(e.database).upgradeTransaction(e));
+              this.userGuildSettings(e.database).upgradeTransaction(e)),
+            (this.guildsRequiringDeletedIdsSyncTransaction = e =>
+              this.guildsRequiringDeletedIdsSync(e.database).upgradeTransaction(
+                e
+              ));
         }
       }
       function u(e) {
@@ -60063,7 +60075,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "265912",
+                  build_number: "265913",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78708,4 +78720,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.360b5a31c6e0eeb7a238.js.map
+//# sourceMappingURL=41039.cdc9782bcea69d47384e.js.map

@@ -23594,13 +23594,19 @@
           "Contact Crisis Text Line",
         SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE:
           "Get live support.",
+        SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON: "Contact",
         SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE: "Visit NoFiltr",
         SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE:
           "NoFiltr is a community that empowers young people to safely navigate online.",
+        SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON: "Visit",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Take a break",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE: "Relax with Wumpus.",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relax",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Safety tips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
+        SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
+          "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we'll let you know. [Learn more about safety alerts]({learnMoreLink})",
+        SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Go to settings",
         STRANGER_DANGER_BANNER_HEADER: "Unwanted message?",
         STRANGER_DANGER_BANNER_DESCRIPTION:
           "If you don't want to chat with this person, you can block or mute them.",
@@ -25864,8 +25870,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265844", ", Version Hash: ")
-          .concat("7e92e4580e519057c0e16663f54e0b6f1469b03a")
+          .concat("265853", ", Version Hash: ")
+          .concat("77166c5f70f88a89e50c82c618f9ceab7611fbff")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28877,12 +28883,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265844"), "265844"));
+        let _ = parseInt(((e = "265853"), "265853"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265844"
+                "265853"
               )
             ),
             (_ = 0)),
@@ -50937,4 +50943,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.7bd599b4111757655564.js.map
+//# sourceMappingURL=73222.2864bc939354d7ade1bb.js.map

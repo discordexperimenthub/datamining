@@ -25909,8 +25909,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265940", ", Version Hash: ")
-          .concat("852d6e44c1ad571cb4990d166290906ea25bdf13")
+          .concat("265957", ", Version Hash: ")
+          .concat("a31a54bc9d4ab85ea1cdeabb00741b0594203456")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28990,12 +28990,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265940"), "265940"));
+        let _ = parseInt(((e = "265957"), "265957"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265940"
+                "265957"
               )
             ),
             (_ = 0)),
@@ -35918,6 +35918,7 @@
             streamDurationRequirementMinutes:
               _.stream_duration_requirement_minutes,
             gameTitle: _.game_title,
+            getGameLink: _.get_game_link,
             applicationId: _.application_id,
             messages: {
               questName: (E = _.messages).quest_name,
@@ -51058,4 +51059,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.2c5b7f3df7ece1059347.js.map
+//# sourceMappingURL=73222.83b5fc49a459c2f24b7b.js.map

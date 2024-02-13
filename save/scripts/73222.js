@@ -23690,6 +23690,11 @@
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE: "Unmute music",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Back to conversation",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT: "Wumpus vibing to music.",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Report them",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Reported",
+        INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
+          "Contact Crisis Text Line",
+        INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR: "Contact NoFiltr",
         URF_LANDING_PAGE_TITLE: "Report Illegal Content",
         URF_LANDING_PAGE_SUBTITLE:
           "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement please [go here]({supportURL}).",
@@ -25909,8 +25914,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("265989", ", Version Hash: ")
-          .concat("d586ccd9e09ce9fbff7bba148b92963a7a5506d9")
+          .concat("266001", ", Version Hash: ")
+          .concat("d841ddf838e2ac838e52a79277d426ad957783bd")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28990,12 +28995,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "265989"), "265989"));
+        let _ = parseInt(((e = "266001"), "266001"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "265989"
+                "266001"
               )
             ),
             (_ = 0)),
@@ -36412,18 +36417,25 @@
       E.r(_),
         E.d(_, {
           showTakeoverModal: function () {
-            return o;
+            return i;
           },
         });
-      var t = E("761771");
-      function o(e) {
-        let {} = e;
-        if (
-          !(0, t.isEligibleForInappropriateConversationWarning)({
-            location: "takeover-modal",
-          })
-        )
-          return;
+      var t = E("37983");
+      E("884691");
+      var o = E("77078"),
+        n = E("892974"),
+        r = E("761771");
+      function i(e) {
+        (0, r.isEligibleForInappropriateConversationWarning)({
+          location: "takeover-modal",
+        }) &&
+          (0, o.openModalLazy)(
+            async () => {
+              let { default: _ } = await E.el("33320").then(E.bind(E, "33320"));
+              return E => (0, t.jsx)(_, { ...e, modalProps: E });
+            },
+            { backdropStyle: n.BackdropStyles.BLUR }
+          );
       }
     },
     303167: function (e, _, E) {
@@ -51059,4 +51071,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73222.485b43fa9e2229a64dce.js.map
+//# sourceMappingURL=73222.92cb91aded79b195ceaa.js.map

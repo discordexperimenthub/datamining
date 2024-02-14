@@ -14289,6 +14289,10 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
   display: flex;
   flex-direction: column;
 }
+.replyHeader__46dc1 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
 .replyInput__0bc23 {
   background: var(--input-background);
 }
@@ -108466,4 +108470,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.327e4237a8c3a6093b4f.css.map*/
+/*# sourceMappingURL=app.545c86a9e2f06b98bc16.css.map*/

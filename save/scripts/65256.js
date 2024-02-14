@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["47146"],
+  ["65256"],
   {
     968194: function (e, t, i) {
       "use strict";
@@ -1950,6 +1950,16 @@
           },
         };
     },
+    292687: function (e, t, i) {
+      "use strict";
+      i.r(t),
+        i.d(t, {
+          default: function () {
+            return n.default;
+          },
+        });
+      var n = i("870346");
+    },
     974889: function (e, t, i) {
       "use strict";
       i.r(t),
@@ -1967,6 +1977,33 @@
         null != i &&
           !i.closed &&
           (n.isPlatformEmbedded ? l.default.focus(e, t) : i.focus());
+      }
+    },
+    812809: function (e, t, i) {
+      "use strict";
+      i.r(t),
+        i.d(t, {
+          default: function () {
+            return u;
+          },
+        });
+      var n = i("845579"),
+        l = i("42887"),
+        a = i("829536");
+      function u(e) {
+        let t = (function () {
+            var e;
+            let t = n.SoundboardSettings.getSetting();
+            return (
+              (0, a.amplitudeToPerceptual)(
+                null !== (e = null == t ? void 0 : t.volume) && void 0 !== e
+                  ? e
+                  : 100
+              ) / 100
+            );
+          })(),
+          i = Math.min(l.default.getOutputVolume() / 100, 1);
+        return Math.min(e * t * i, 1);
       }
     },
     884385: function (e, t, i) {
@@ -2565,4 +2602,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47146.14b04fbabb2e15d96fb8.js.map
+//# sourceMappingURL=65256.2f257926177bae51494f.js.map

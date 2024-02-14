@@ -1,26 +1,26 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["58533"],
   {
-    328269: function (e, t, s) {
+    328269: function (e, t, r) {
       "use strict";
-      e.exports = s.p + "746284e4cfc7cd6c5e15.svg";
+      e.exports = r.p + "746284e4cfc7cd6c5e15.svg";
     },
-    958787: function (e, t, s) {
+    958787: function (e, t, r) {
       "use strict";
-      e.exports = s.p + "80b04934274a1d198741.svg";
+      e.exports = r.p + "80b04934274a1d198741.svg";
     },
-    873390: function (e, t, s) {
+    873390: function (e, t, r) {
       "use strict";
-      e.exports = s.p + "6836d88af9197cbd4cbb.svg";
+      e.exports = r.p + "6836d88af9197cbd4cbb.svg";
     },
-    117262: function (e, t, s) {
+    117262: function (e, t, r) {
       "use strict";
-      e.exports = s.p + "c62fd6931adca229aac8.svg";
+      e.exports = r.p + "c62fd6931adca229aac8.svg";
     },
-    960476: function (e, t, s) {
+    960476: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           trackSearchStart: function () {
             return y;
           },
@@ -34,10 +34,10 @@
             return C;
           },
           resetSearch: function () {
-            return G;
+            return A;
           },
           trackSelectGIF: function () {
-            return A;
+            return G;
           },
           initializeSearch: function () {
             return x;
@@ -49,36 +49,36 @@
             return P;
           },
           addFavoriteGIF: function () {
-            return w;
+            return M;
           },
           removeFavoriteGIF: function () {
             return O;
           },
         }),
-        s("781738"),
-        s("511434"),
-        s("313619"),
-        s("654714"),
-        s("287168"),
-        s("956660"),
-        s("222007");
-      var r = s("917351"),
-        n = s.n(r),
-        l = s("748820"),
-        i = s("872717"),
-        a = s("713349"),
-        o = s("913144"),
-        u = s("716241"),
-        c = s("787336"),
-        d = s("915639"),
-        h = s("872173"),
-        f = s("510849"),
-        p = s("599110"),
-        m = s("564703"),
-        I = s("404118"),
-        g = s("49111"),
-        _ = s("397336"),
-        E = s("782340");
+        r("781738"),
+        r("511434"),
+        r("313619"),
+        r("654714"),
+        r("287168"),
+        r("956660"),
+        r("222007");
+      var s = r("917351"),
+        n = r.n(s),
+        l = r("748820"),
+        i = r("872717"),
+        a = r("713349"),
+        o = r("913144"),
+        u = r("716241"),
+        c = r("787336"),
+        d = r("915639"),
+        h = r("872173"),
+        f = r("510849"),
+        m = r("599110"),
+        p = r("564703"),
+        I = r("404118"),
+        g = r("49111"),
+        _ = r("397336"),
+        E = r("782340");
       let R = /-/g;
       function y(e) {
         let t = null != e ? { [e]: 1 } : {};
@@ -90,22 +90,22 @@
         });
       }
       function S(e, t) {
-        let { startTime: s, ...r } =
+        let { startTime: r, ...s } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
           n = { offset: 0, limit: null, totalResults: e.length },
-          l = (0, m.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
+          l = (0, p.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
             ...n,
-            ...r,
+            ...s,
             results: e,
           }),
-          i = null == s ? {} : { load_duration_ms: Date.now() - s };
+          i = null == r ? {} : { load_duration_ms: Date.now() - r };
         u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_VIEWED, {
           ...l,
           ...i,
         });
       }
-      function F(e, t, s) {
-        let r = Date.now();
+      function v(e, t, r) {
+        let s = Date.now();
         y(t),
           i.default
             .get({
@@ -115,14 +115,14 @@
                 media_format: f.default.getSelectedFormat(),
                 provider: "tenor",
                 locale: d.default.locale,
-                limit: s,
+                limit: r,
               },
               oldFormErrors: !0,
             })
             .then(
               n => {
                 let l = n.body;
-                S(l, t, { startTime: r, limit: s }),
+                S(l, t, { startTime: s, limit: r }),
                   o.default.dispatch({
                     type: "GIF_PICKER_QUERY_SUCCESS",
                     query: e,
@@ -136,14 +136,14 @@
                 })
             );
       }
-      let v = n.debounce(F, 250);
+      let F = n.debounce(v, 250);
       function T(e, t) {
-        let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          r = arguments.length > 3 ? arguments[3] : void 0;
+        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          s = arguments.length > 3 ? arguments[3] : void 0;
         "" === e
-          ? G()
+          ? A()
           : (o.default.dispatch({ type: "GIF_PICKER_QUERY", query: e }),
-            s ? F(e, t, r) : v(e, t, r));
+            r ? v(e, t, s) : F(e, t, s));
       }
       function C(e) {
         "" !== e &&
@@ -160,37 +160,37 @@
               oldFormErrors: !0,
             })
             .then(t => {
-              let s = t.body;
+              let r = t.body;
               o.default.dispatch({
                 type: "GIF_PICKER_SUGGESTIONS_SUCCESS",
                 query: e,
-                items: s,
+                items: r,
               });
             });
       }
-      function G() {
+      function A() {
         o.default.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
       }
-      function A(e) {
+      function G(e) {
         let {
             type: t,
-            index: s,
-            offset: r,
+            index: r,
+            offset: s,
             limit: n,
             results: l,
             totalResults: a,
             query: o,
             gifId: c,
           } = e,
-          d = (0, m.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
-            offset: r,
+          d = (0, p.calculateAnalyticsMetadata)(f.default.getAnalyticsID(), t, {
+            offset: s,
             limit: n,
             results: l,
             totalResults: a,
           });
         u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_SELECTED, {
           ...d,
-          index_num: s,
+          index_num: r,
           source_object: "GIF Picker",
           query: o,
         }),
@@ -227,11 +227,11 @@
           })
           .then(e => {
             let { body: t } = e,
-              { categories: s, gifs: r } = t;
+              { categories: r, gifs: s } = t;
             o.default.dispatch({
               type: "GIF_PICKER_TRENDING_FETCH_SUCCESS",
-              trendingCategories: s,
-              trendingGIFPreview: r[0],
+              trendingCategories: r,
+              trendingGIFPreview: s[0],
             });
           });
       }
@@ -250,15 +250,15 @@
               oldFormErrors: !0,
             })
             .then(
-              s => {
-                let { body: r } = s;
-                S(r, g.GIFPickerResultTypes.TRENDING_GIFS, {
+              r => {
+                let { body: s } = r;
+                S(s, g.GIFPickerResultTypes.TRENDING_GIFS, {
                   startTime: t,
                   limit: e,
                 }),
                   o.default.dispatch({
                     type: "GIF_PICKER_QUERY_SUCCESS",
-                    items: r,
+                    items: s,
                   });
               },
               () => {
@@ -266,23 +266,23 @@
               }
             );
       }
-      function M(e) {
+      function w(e) {
         let t = new URL(e);
         return (0, c.isAttachmentUrl)(t)
           ? (0, c.removeSignedUrlParameters)(t).toString()
           : e;
       }
-      function w(e) {
+      function M(e) {
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
           t => {
-            var s;
-            let r =
-              null !== (s = n.max(Object.values(t.gifs).map(e => e.order))) &&
-              void 0 !== s
-                ? s
+            var r;
+            let s =
+              null !== (r = n.max(Object.values(t.gifs).map(e => e.order))) &&
+              void 0 !== r
+                ? r
                 : 0;
-            t.gifs[M(e.url)] = { ...e, order: r + 1 };
+            t.gifs[w(e.url)] = { ...e, order: s + 1 };
             let l = a.FavoriteGIFs.toBinary(t).length;
             if (l > _.MAX_FAVORITE_GIFS_SIZE)
               return (
@@ -296,34 +296,34 @@
           },
           _.UserSettingsDelay.INFREQUENT_USER_ACTION
         ),
-          p.default.track(g.AnalyticEvents.GIF_FAVORITED);
+          m.default.track(g.AnalyticEvents.GIF_FAVORITED);
       }
       function O(e) {
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
           t => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[M(e)];
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)];
           },
           _.UserSettingsDelay.INFREQUENT_USER_ACTION
         ),
-          p.default.track(g.AnalyticEvents.GIF_UNFAVORITED);
+          m.default.track(g.AnalyticEvents.GIF_UNFAVORITED);
       }
     },
-    718302: function (e, t, s) {
+    718302: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return n;
           },
         }),
-        s("222007");
-      var r,
+        r("222007");
+      var s,
         n,
         l,
-        i = s("884691"),
-        a = s("49111");
-      ((l = r || (r = {})).ARROW_UP = "ARROW_UP"),
+        i = r("884691"),
+        a = r("49111");
+      ((l = s || (s = {})).ARROW_UP = "ARROW_UP"),
         (l.ARROW_DOWN = "ARROW_DOWN"),
         (l.ARROW_LEFT = "ARROW_LEFT"),
         (l.ARROW_RIGHT = "ARROW_RIGHT");
@@ -335,23 +335,23 @@
           document.removeEventListener("keydown", this.handleKeyDown, !0);
         }
         focusNext(e) {
-          let { getItemGrid: t, onFocus: s } = this.props,
-            { focusedColumn: r, focusedRow: n } = this.state;
+          let { getItemGrid: t, onFocus: r } = this.props,
+            { focusedColumn: s, focusedRow: n } = this.state;
           if (null == e) return;
           let l = t();
           if (null == l) return;
-          let i = this.getNext(l, r, n, e);
+          let i = this.getNext(l, s, n, e);
           this.setState({ focusedColumn: i.column, focusedRow: i.row }, () => {
             let e = this.calculateFocusedItem();
-            null != e && null != s && s(e);
+            null != e && null != r && r(e);
           });
         }
-        getNext(e, t, s, r) {
+        getNext(e, t, r, s) {
           let n, l, i, a;
-          if (null == t || null == s)
+          if (null == t || null == r)
             (l = 0), (i = 0), (n = { column: 0, row: 0 });
           else
-            switch (((l = t), (i = s), r)) {
+            switch (((l = t), (i = r), s)) {
               case "ARROW_UP":
                 n = { column: l, row: Math.max(i - 1, 0) };
                 break;
@@ -372,30 +372,30 @@
           );
         }
         calculateClosest(e, t) {
-          let s;
-          let r = this.props.getCoordsMap()[e];
-          if (null == r) return;
+          let r;
+          let s = this.props.getCoordsMap()[e];
+          if (null == s) return;
           let n = Number.MAX_SAFE_INTEGER;
           for (let e = 0; e < t.length; e++) {
             let l = this.props.getCoordsMap()[t[e]];
             if (null == l) continue;
-            let i = Math.abs(l.top - r.top);
-            if (i < n) (n = i), (s = e);
+            let i = Math.abs(l.top - s.top);
+            if (i < n) (n = i), (r = e);
             else break;
           }
-          return s;
+          return r;
         }
         calculateFocusedItem() {
           let { getItemGrid: e } = this.props,
-            { focusedRow: t, focusedColumn: s } = this.state,
-            r = e();
-          return null == r ||
-            null == s ||
+            { focusedRow: t, focusedColumn: r } = this.state,
+            s = e();
+          return null == s ||
+            null == r ||
             null == t ||
-            null == r[s] ||
-            null == r[s][t]
+            null == s[r] ||
+            null == s[r][t]
             ? null
-            : r[s][t];
+            : s[r][t];
         }
         render() {
           return this.props.children;
@@ -428,85 +428,117 @@
                   );
                   break;
                 case a.KeyboardKeys.ENTER:
-                  let s = this.calculateFocusedItem();
-                  null != s &&
+                  let r = this.calculateFocusedItem();
+                  null != r &&
                     null != t &&
-                    (e.preventDefault(), e.stopPropagation(), t(s));
+                    (e.preventDefault(), e.stopPropagation(), t(r));
               }
             }),
-            (this.wrapPosition = (e, t, s, r) => {
+            (this.wrapPosition = (e, t, r, s) => {
               var n;
               let l = e.length,
-                i = Math.max(s * l + t + r, 0) % l,
+                i = Math.max(r * l + t + s, 0) % l,
                 a =
-                  null !== (n = this.calculateClosest(e[t][s], e[i])) &&
+                  null !== (n = this.calculateClosest(e[t][r], e[i])) &&
                   void 0 !== n
                     ? n
-                    : s,
+                    : r,
                 o = 0;
               return (
-                r < 0 && i > t && (o = -1),
-                r > 0 && i < t && (o = 1),
+                s < 0 && i > t && (o = -1),
+                s > 0 && i < t && (o = 1),
                 { column: i, row: a + o }
               );
             });
         }
       };
     },
-    96386: function (e, t, s) {
+    96386: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return a;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("414456"),
-        l = s.n(n),
-        i = s("691870"),
+      var s = r("37983");
+      r("884691");
+      var n = r("414456"),
+        l = r.n(n),
+        i = r("21538"),
         a = e => {
           let {
             message: t,
-            className: s,
+            className: r,
             noResultsImageURL: n,
             forceLightTheme: a,
             suggestions: o,
           } = e;
-          return (0, r.jsx)("div", {
-            className: l({ [i.forceLightTheme]: a }, s),
-            children: (0, r.jsxs)("div", {
+          return (0, s.jsx)("div", {
+            className: l({ [i.forceLightTheme]: a }, r),
+            children: (0, s.jsxs)("div", {
               className: i.wrapper,
               children: [
-                (0, r.jsx)("div", {
+                (0, s.jsx)("div", {
                   className: i.sadImage,
                   style:
                     null != n ? { backgroundImage: "url(".concat(n, ")") } : {},
                 }),
-                (0, r.jsx)("div", { children: t }),
+                (0, s.jsx)("div", { children: t }),
                 o,
               ],
             }),
           });
         };
     },
-    891722: function (e, t, s) {
+    737960: function (e, t, r) {
       "use strict";
-      s.r(t);
-      var r = s("42641");
-      s.es(r, t);
+      r.r(t),
+        r.d(t, {
+          default: function () {
+            return i;
+          },
+        });
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("308723");
+      function i(e) {
+        return n.forwardRef(function (t, r) {
+          let i = n.useRef();
+          return (
+            n.useImperativeHandle(r, () => ({
+              triggerResize: () => {
+                var e;
+                null === (e = i.current) || void 0 === e || e.onResize();
+              },
+            })),
+            (0, s.jsx)(l.default, {
+              ref: i,
+              children: r => {
+                let { width: n, height: l } = r;
+                return (0, s.jsx)(e, { ...t, width: n, height: l });
+              },
+            })
+          );
+        });
+      }
     },
-    809803: function (e, t, s) {
+    891722: function (e, t, r) {
       "use strict";
-      s.r(t);
-      var r = s("261833");
-      s.es(r, t);
+      r.r(t);
+      var s = r("42641");
+      r.es(s, t);
     },
-    538282: function (e, t, s) {
+    809803: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t);
+      var s = r("261833");
+      r.es(s, t);
+    },
+    538282: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
           openExpressionPicker: function () {
             return c;
           },
@@ -520,20 +552,20 @@
             return f;
           },
           setExpressionPickerView: function () {
-            return p;
+            return m;
           },
           setSearchQuery: function () {
-            return m;
+            return p;
           },
           useExpressionPickerStore: function () {
             return I;
           },
         });
-      var r = s("995008"),
-        n = s.n(r),
-        l = s("308503"),
-        i = s("136759"),
-        a = s("13030");
+      var s = r("995008"),
+        n = r.n(s),
+        l = r("308503"),
+        i = r("136759"),
+        a = r("13030");
       let o = Object.freeze({
           activeView: null,
           lastActiveView: null,
@@ -574,10 +606,10 @@
         h = e => {
           let t = u.getState();
           if (null == t.activeView) {
-            var s;
+            var r;
             c(
-              null !== (s = t.lastActiveView) && void 0 !== s
-                ? s
+              null !== (r = t.lastActiveView) && void 0 !== r
+                ? r
                 : a.ExpressionPickerViewType.EMOJI,
               e
             );
@@ -586,23 +618,23 @@
         f = (e, t) => {
           u.getState().activeView === e ? d() : c(e, t);
         },
-        p = e => {
+        m = e => {
           u.setState({
             activeView: e,
             lastActiveView: u.getState().activeView,
           });
         },
-        m = function (e) {
+        p = function (e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           u.setState({ searchQuery: e, isSearchSuggestion: t });
         },
         I = u;
     },
-    140331: function (e, t, s) {
+    140331: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           useFavoriteGIFs: function () {
             return o;
           },
@@ -613,24 +645,24 @@
             return c;
           },
         });
-      var r = s("884691"),
-        n = s("917351"),
-        l = s.n(n),
-        i = s("42507");
+      var s = r("884691"),
+        n = r("917351"),
+        l = r.n(n),
+        i = r("42507");
       let a = {};
       function o() {
         var e, t;
-        let s = (0, i.useFrecencySettings)();
+        let r = (0, i.useFrecencySettings)();
         return null !==
           (t =
-            null === (e = s.favoriteGifs) || void 0 === e ? void 0 : e.gifs) &&
+            null === (e = r.favoriteGifs) || void 0 === e ? void 0 : e.gifs) &&
           void 0 !== t
           ? t
           : a;
       }
       function u() {
         let e = o();
-        return r.useMemo(
+        return s.useMemo(
           () =>
             l(e)
               .map((e, t) => ({ ...e, url: t }))
@@ -645,31 +677,31 @@
         return null != t[e];
       }
     },
-    354553: function (e, t, s) {
+    354553: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return i;
           },
         }),
-        s("222007");
-      var r,
-        n = s("884691");
-      function l(e, t, s) {
-        return Math.min(Math.max(Math.floor(e / t), 1), s);
+        r("222007");
+      var s,
+        n = r("884691");
+      function l(e, t, r) {
+        return Math.min(Math.max(Math.floor(e / t), 1), r);
       }
-      var i = (0, s("737960").default)(
-        (((r = class extends n.Component {
+      var i = (0, r("737960").default)(
+        (((s = class extends n.Component {
           static getDerivedStateFromProps(e, t) {
-            let { width: s, desiredItemWidth: r, maxColumns: n } = e,
-              i = l(s, r, n);
+            let { width: r, desiredItemWidth: s, maxColumns: n } = e,
+              i = l(r, s, n);
             return i !== t.columns ? { columns: i } : null;
           }
           render() {
-            let { width: e, height: t, children: s } = this.props,
-              { columns: r } = this.state;
-            return s(r, e, t);
+            let { width: e, height: t, children: r } = this.props,
+              { columns: s } = this.state;
+            return r(s, e, t);
           }
           constructor(...e) {
             super(...e),
@@ -682,40 +714,40 @@
               });
           }
         }).defaultProps = { desiredItemWidth: 200 }),
-        r)
+        s)
       );
     },
-    873622: function (e, t, s) {
+    873622: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return T;
           },
         }),
-        s("222007");
-      var r = s("37983"),
-        n = s("884691"),
-        l = s("414456"),
-        i = s.n(l),
-        a = s("446674"),
-        o = s("77078"),
-        u = s("913144"),
-        c = s("960476"),
-        d = s("538282"),
-        h = s("510849"),
-        f = s("145131"),
-        p = s("810567"),
-        m = s("531470"),
-        I = s("140331"),
-        g = s("588155"),
-        _ = s("762518"),
-        E = s("49111"),
-        R = s("115279"),
-        y = s("782340"),
-        S = s("705602");
-      let F = e => e.stopPropagation();
-      class v extends n.PureComponent {
+        r("222007");
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("414456"),
+        i = r.n(l),
+        a = r("446674"),
+        o = r("77078"),
+        u = r("913144"),
+        c = r("960476"),
+        d = r("538282"),
+        h = r("510849"),
+        f = r("145131"),
+        m = r("810567"),
+        p = r("531470"),
+        I = r("140331"),
+        g = r("588155"),
+        _ = r("762518"),
+        E = r("49111"),
+        R = r("115279"),
+        y = r("782340"),
+        S = r("901137");
+      let v = e => e.stopPropagation();
+      class F extends n.PureComponent {
         componentDidMount() {
           c.initializeSearch(),
             document.addEventListener("keydown", this.backToFrontPage),
@@ -726,8 +758,8 @@
           u.default.wait(() => c.resetSearch()),
             document.removeEventListener("keydown", this.backToFrontPage);
         }
-        search(e, t, s) {
-          c.search(e, t, s),
+        search(e, t, r) {
+          c.search(e, t, r),
             "" === e
               ? this.setState({ resultType: null })
               : this.state.resultType !== E.GIFPickerResultTypes.SEARCH &&
@@ -738,22 +770,22 @@
             { resultType: t } = this.state;
           switch (t) {
             case E.GIFPickerResultTypes.FAVORITES:
-              return (0, r.jsx)(o.FormTitle, {
+              return (0, s.jsx)(o.FormTitle, {
                 tag: "h5",
                 className: S.searchHeader,
                 children: y.default.Messages.CATEGORY_FAVORITE,
               });
             case E.GIFPickerResultTypes.TRENDING_GIFS:
-              return (0, r.jsx)(o.FormTitle, {
+              return (0, s.jsx)(o.FormTitle, {
                 tag: "h5",
                 className: S.searchHeader,
                 children:
                   y.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
               });
             default:
-              return (0, r.jsx)(p.default, {
+              return (0, s.jsx)(m.default, {
                 className: S.searchBar,
-                size: p.default.Sizes.MEDIUM,
+                size: m.default.Sizes.MEDIUM,
                 query: e,
                 onChange: this.handleChangeQuery,
                 onClear: this.handleClearQuery,
@@ -769,15 +801,15 @@
             t = null;
           return (
             null != e &&
-              (t = (0, r.jsx)(o.Clickable, {
+              (t = (0, s.jsx)(o.Clickable, {
                 onClick: this.handleClearQuery,
                 className: S.backButton,
                 "aria-label": y.default.Messages.BACK,
-                children: (0, r.jsx)(m.default, {
+                children: (0, s.jsx)(p.default, {
                   title: y.default.Messages.BACK,
                 }),
               })),
-            (0, r.jsxs)(f.default, {
+            (0, s.jsxs)(f.default, {
               align: f.default.Align.CENTER,
               children: [t, this.renderHeaderContent()],
             })
@@ -787,7 +819,7 @@
           let {
               resultItems: e,
               resultQuery: t,
-              query: s,
+              query: r,
               favorites: n,
               searchOffset: l,
               searchLimit: i,
@@ -797,16 +829,16 @@
             } = this.props,
             { resultType: c } = this.state;
           return null == c
-            ? (0, r.jsx)(g.default, {
+            ? (0, s.jsx)(g.default, {
                 hideFavoritesTile: u,
                 onSelectItem: this.handleSelectItem,
               })
-            : (0, r.jsx)(_.default, {
+            : (0, s.jsx)(_.default, {
                 data: c === E.GIFPickerResultTypes.FAVORITES ? n : e,
                 onSelectGIF: this.handleSelectGIF,
                 resultType: c,
                 resultQuery: t,
-                query: s,
+                query: r,
                 searchOffset: l,
                 searchLimit: i,
                 searchTotalResults: a,
@@ -816,19 +848,19 @@
         }
         render() {
           let { className: e, forwardedRef: t } = this.props;
-          return (0, r.jsxs)("div", {
+          return (0, s.jsxs)("div", {
             id: R.GIF_PICKER_TAB_PANEL_ID,
             role: "tabpanel",
             "aria-labelledby": R.GIF_PICKER_TAB_ID,
             className: i(S.container, e),
-            onClick: F,
+            onClick: v,
             ref: t,
             children: [
-              (0, r.jsx)("div", {
+              (0, s.jsx)("div", {
                 className: S.header,
                 children: this.renderHeader(),
               }),
-              (0, r.jsx)("div", {
+              (0, s.jsx)("div", {
                 className: S.content,
                 children: this.renderContent(),
               }),
@@ -868,11 +900,11 @@
               null != t && t(e);
             }),
             (this.handleSelectItem = (e, t) => {
-              let { current: s } = this.searchBarRef;
+              let { current: r } = this.searchBarRef;
               switch (e) {
                 case E.GIFPickerResultTypes.TRENDING_CATEGORY:
                   c.search(t, E.GIFPickerResultTypes.TRENDING_CATEGORY, !0),
-                    null != s && s.focus();
+                    null != r && r.focus();
                   break;
                 case E.GIFPickerResultTypes.TRENDING_GIFS:
                   c.fetchTrendingGIFs();
@@ -884,7 +916,7 @@
       var T = n.forwardRef((e, t) => {
         !e.persistSearch && (0, d.setSearchQuery)("");
         let {
-            query: s,
+            query: r,
             resultQuery: n,
             resultItems: l,
             suggestions: i,
@@ -896,10 +928,10 @@
           })),
           o = (0, d.useExpressionPickerStore)(e => e.searchQuery),
           u = (0, I.useSortedFavoriteGIFs)();
-        return (0, r.jsx)(v, {
+        return (0, s.jsx)(F, {
           ...e,
           forwardedRef: t,
-          query: null != o && "" !== o ? o : s,
+          query: null != o && "" !== o ? o : r,
           resultQuery: n,
           resultItems: l,
           suggestions: i,
@@ -910,37 +942,37 @@
         });
       });
     },
-    588155: function (e, t, s) {
+    588155: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return T;
           },
         }),
-        s("222007");
-      var r = s("37983"),
-        n = s("884691"),
-        l = s("917351"),
-        i = s.n(l),
-        a = s("446674"),
-        o = s("713349"),
-        u = s("669491"),
-        c = s("77078"),
-        d = s("960476"),
-        h = s("718302"),
-        f = s("510849"),
-        p = s("671434"),
-        m = s("117362"),
-        I = s("140331"),
-        g = s("354553"),
-        _ = s("4445"),
-        E = s("762518"),
-        R = s("49111"),
-        y = s("782340"),
-        S = s("70176");
-      let F = (e, t) => (0, r.jsx)(_.CategoryColumn, { columns: e }, t);
-      class v extends n.PureComponent {
+        r("222007");
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("917351"),
+        i = r.n(l),
+        a = r("446674"),
+        o = r("713349"),
+        u = r("669491"),
+        c = r("77078"),
+        d = r("960476"),
+        h = r("718302"),
+        f = r("510849"),
+        m = r("671434"),
+        p = r("117362"),
+        I = r("140331"),
+        g = r("354553"),
+        _ = r("4445"),
+        E = r("762518"),
+        R = r("49111"),
+        y = r("782340"),
+        S = r("138667");
+      let v = (e, t) => (0, s.jsx)(_.CategoryColumn, { columns: e }, t);
+      class F extends n.PureComponent {
         componentDidMount() {
           0 === this.props.trendingCategories.length && (0, d.fetchTrending)();
         }
@@ -952,22 +984,22 @@
           );
         }
         renderCategoryExtras(e) {
-          let { name: t, icon: s, type: l } = e;
-          return (0, r.jsxs)(n.Fragment, {
+          let { name: t, icon: r, type: l } = e;
+          return (0, s.jsxs)(n.Fragment, {
             children: [
-              (0, r.jsx)("div", {
+              (0, s.jsx)("div", {
                 className:
                   l === R.GIFPickerResultTypes.FAVORITES
                     ? S.categoryFadeBlurple
                     : S.categoryFade,
               }),
-              (0, r.jsxs)("div", {
+              (0, s.jsxs)("div", {
                 className: S.categoryText,
                 children: [
-                  null != s
-                    ? (0, r.jsx)(s, { className: S.categoryIcon })
+                  null != r
+                    ? (0, s.jsx)(r, { className: S.categoryIcon })
                     : null,
-                  (0, r.jsx)("span", {
+                  (0, s.jsx)("span", {
                     className: S.categoryName,
                     children: t,
                   }),
@@ -977,12 +1009,12 @@
           });
         }
         render() {
-          return (0, r.jsx)(h.default, {
+          return (0, s.jsx)(h.default, {
             getItemGrid: this.getItemGrid,
             getCoordsMap: this.getCoordsMap,
             onFocus: this.handleFocus,
             onSelect: this.handleSelect,
-            children: (0, r.jsx)(g.default, {
+            children: (0, s.jsx)(g.default, {
               desiredItemWidth: 200,
               maxColumns: 6,
               children: this.renderContent,
@@ -995,17 +1027,17 @@
             (this.state = {
               favoritesTile: (function (e) {
                 var t;
-                let s = i.sample(i.values(e));
+                let r = i.sample(i.values(e));
                 return {
                   type: R.GIFPickerResultTypes.FAVORITES,
                   name: y.default.Messages.CATEGORY_FAVORITE,
-                  icon: p.default,
+                  icon: m.default,
                   src:
-                    null != s
-                      ? s.src
+                    null != r
+                      ? r.src
                       : "https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif",
                   format:
-                    null !== (t = null == s ? void 0 : s.format) && void 0 !== t
+                    null !== (t = null == r ? void 0 : r.format) && void 0 !== t
                       ? t
                       : o.GIFType.IMAGE,
                 };
@@ -1016,36 +1048,36 @@
             (this.handleFocus = e => {
               let { current: t } = this._masonryRef;
               if (null == t) return;
-              let s = t.getCoordsMap()[e];
-              null != s &&
+              let r = t.getCoordsMap()[e];
+              null != r &&
                 (t.scrollIntoViewRect({
-                  start: s.top - 10,
-                  end: s.top + s.height + 10,
+                  start: r.top - 10,
+                  end: r.top + r.height + 10,
                 }),
                 this.setState({ focusedId: e }));
             }),
             (this.handleSelect = e => {
               let { onSelectItem: t } = this.props,
-                s = this.getData().find(t => t.name === e);
-              null != s && null != t && t(s.type, s.name);
+                r = this.getData().find(t => t.name === e);
+              null != r && null != t && t(r.type, r.name);
             }),
             (this.getItemKey = (e, t) => {
               if (e > 0) return null;
-              let s = this.getData()[t];
-              return null != s ? s.name : null;
+              let r = this.getData()[t];
+              return null != r ? r.name : null;
             }),
-            (this.memoizedData = (0, m.cachedFunction)(function (e, t) {
-              let s =
+            (this.memoizedData = (0, p.cachedFunction)(function (e, t) {
+              let r =
                 arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-              return s ? [...t] : [e, ...t];
+              return r ? [...t] : [e, ...t];
             })),
-            (this.renderItem = (e, t, s, n) => {
+            (this.renderItem = (e, t, r, n) => {
               if (e > 0) return null;
               let l = this.getData()[t];
               if (null == l) return;
               let { onSelectItem: i, imagePool: a, videoPool: o } = this.props,
                 { focusedId: c } = this.state;
-              return (0, r.jsx)(
+              return (0, s.jsx)(
                 E.GIFPickerSearchItem,
                 {
                   format: l.format,
@@ -1053,7 +1085,7 @@
                   src: l.src,
                   item: l,
                   index: t,
-                  coords: s,
+                  coords: r,
                   onClick: () => i(l.type, l.name),
                   renderExtras: this.renderCategoryExtras,
                   focused: l.name === c,
@@ -1063,15 +1095,15 @@
                 n
               );
             }),
-            (this.renderContent = (e, t, s) => {
+            (this.renderContent = (e, t, r) => {
               let { trendingCategories: n } = this.props;
               return 0 === n.length
-                ? (0, r.jsx)(_.ResultsLoader, {
+                ? (0, s.jsx)(_.ResultsLoader, {
                     columns: e,
                     width: t,
-                    renderColumn: F,
+                    renderColumn: v,
                   })
-                : (0, r.jsx)(c.MasonryList, {
+                : (0, s.jsx)(c.MasonryList, {
                     ref: this._masonryRef,
                     fade: !0,
                     className: S.container,
@@ -1098,36 +1130,36 @@
         let t = (0, a.useStateFromStores)([f.default], () =>
             f.default.getTrendingCategories()
           ),
-          s = (0, I.useFavoriteGIFs)(),
+          r = (0, I.useFavoriteGIFs)(),
           n = (0, E.useElementPools)();
-        return (0, r.jsx)(v, {
+        return (0, s.jsx)(F, {
           ...e,
           ...n,
           trendingCategories: t,
-          favorites: s,
+          favorites: r,
         });
       }
     },
-    4445: function (e, t, s) {
+    4445: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           CategoryColumn: function () {
             return f;
           },
           ResultsLoader: function () {
-            return p;
+            return m;
           },
         }),
-        s("222007"),
-        s("808653");
-      var r = s("37983"),
-        n = s("884691"),
-        l = s("917351"),
-        i = s.n(l),
-        a = s("458960"),
-        o = s("669491"),
-        u = s("527671");
+        r("222007"),
+        r("808653");
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("917351"),
+        i = r.n(l),
+        a = r("458960"),
+        o = r("669491"),
+        u = r("982939");
       let c = [
         o.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css,
         o.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css,
@@ -1139,7 +1171,7 @@
             props: { height: e },
             state: { backgroundColor: t },
           } = this;
-          return (0, r.jsx)("div", {
+          return (0, s.jsx)("div", {
             style: { height: e, backgroundColor: t },
             className: u.gif,
           });
@@ -1171,12 +1203,12 @@
         }
         render() {
           let { blocks: e } = this.state;
-          return (0, r.jsxs)(a.default.div, {
+          return (0, s.jsxs)(a.default.div, {
             className: u.column,
             style: this.getAnimatedStyle(),
             children: [
-              e.map((e, t) => (0, r.jsx)(d, { height: e }, t)),
-              e.map((e, t) => (0, r.jsx)(d, { height: e }, "alt".concat(t))),
+              e.map((e, t) => (0, s.jsx)(d, { height: e }, t)),
+              e.map((e, t) => (0, s.jsx)(d, { height: e }, "alt".concat(t))),
             ],
           });
         }
@@ -1185,12 +1217,12 @@
             (this.animateSlide = () => {
               let {
                 props: { direction: e },
-                state: { translateY: t, height: s },
+                state: { translateY: t, height: r },
               } = this;
-              t.setValue(e > 0 ? 0 : -s / 2 + 12),
+              t.setValue(e > 0 ? 0 : -r / 2 + 12),
                 a.default
                   .timing(t, {
-                    toValue: e > 0 ? -s / 2 + 12 : 0,
+                    toValue: e > 0 ? -r / 2 + 12 : 0,
                     duration: 800,
                     easing: a.default.Easing.linear,
                   })
@@ -1209,69 +1241,69 @@
       h.defaultProps = { direction: -1 };
       let f = e => {
         let { columns: t } = e;
-        return (0, r.jsx)("div", {
+        return (0, s.jsx)("div", {
           className: u.column,
           style: { width: "".concat(100 / t, "%") },
           children: [, , , ,]
             .fill(null)
             .map((e, t) =>
-              (0, r.jsx)("div", { className: u.categoryLoader }, t)
+              (0, s.jsx)("div", { className: u.categoryLoader }, t)
             ),
         });
       };
-      class p extends n.PureComponent {
+      class m extends n.PureComponent {
         render() {
           let { columns: e, renderColumn: t } = this.props;
-          return (0, r.jsx)("div", {
+          return (0, s.jsx)("div", {
             className: u.container,
             children: Array(e)
               .fill(null)
-              .map((s, r) => t(e, r)),
+              .map((r, s) => t(e, s)),
           });
         }
       }
     },
-    762518: function (e, t, s) {
+    762518: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           GIFPickerSearchItem: function () {
             return P;
           },
           useElementPools: function () {
-            return w;
+            return M;
           },
           default: function () {
             return O;
           },
         }),
-        s("222007");
-      var r = s("37983"),
-        n = s("884691"),
-        l = s("414456"),
-        i = s.n(l),
-        a = s("917351"),
-        o = s.n(a),
-        u = s("217982"),
-        c = s("713349"),
-        d = s("669491"),
-        h = s("77078"),
-        f = s("960476"),
-        p = s("718302"),
-        m = s("96386"),
-        I = s("244201"),
-        g = s("476714"),
-        _ = s("671434"),
-        E = s("354553"),
-        R = s("49111"),
-        y = s("782340"),
-        S = s("672123");
-      let F = [
+        r("222007");
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("414456"),
+        i = r.n(l),
+        a = r("917351"),
+        o = r.n(a),
+        u = r("217982"),
+        c = r("713349"),
+        d = r("669491"),
+        h = r("77078"),
+        f = r("960476"),
+        m = r("718302"),
+        p = r("96386"),
+        I = r("244201"),
+        g = r("476714"),
+        _ = r("671434"),
+        E = r("354553"),
+        R = r("49111"),
+        y = r("782340"),
+        S = r("186046");
+      let v = [
           d.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css,
           d.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css,
           "#929AFA",
         ],
-        v = 1220,
+        F = 1220,
         T = Array.from({ length: 16 }).map((e, t) => ({
           id: "".concat(t),
           height: Math.floor(100 * Math.random()) + 120,
@@ -1280,31 +1312,31 @@
         var t;
         return null !== (t = e.id) && void 0 !== t ? t : e.src;
       }
-      function G(e, t) {
-        let s = T[t];
-        return null == s ? 0 : s.height;
+      function A(e, t) {
+        let r = T[t];
+        return null == r ? 0 : r.height;
       }
-      function A(e, t, s, n) {
+      function G(e, t, r, n) {
         if (!(e > 0))
           return null == T[t]
             ? null
-            : (0, r.jsx)(
+            : (0, s.jsx)(
                 "div",
                 {
                   className: S.placeholder,
-                  style: { animationDelay: "".concat(75 * t, "ms"), ...s },
+                  style: { animationDelay: "".concat(75 * t, "ms"), ...r },
                 },
                 n
               );
       }
       function x(e, t) {
-        var s, r;
+        var r, s;
         return e > 0
           ? ""
           : null !==
-                (r = null === (s = T[t]) || void 0 === s ? void 0 : s.id) &&
-              void 0 !== r
-            ? r
+                (s = null === (r = T[t]) || void 0 === r ? void 0 : r.id) &&
+              void 0 !== s
+            ? s
             : "";
       }
       function N(e) {
@@ -1316,7 +1348,7 @@
             props: {
               format: e,
               src: t,
-              coords: { width: s, height: r },
+              coords: { width: r, height: s },
               videoPool: n,
             },
             ref: l,
@@ -1325,35 +1357,35 @@
           let i = n.getElement();
           (i.oncanplay = this.handleCanPlay),
             (i.src = t),
-            (i.width = s),
-            (i.height = r),
+            (i.width = r),
+            (i.height = s),
             l.appendChild(i),
             (this._video = i);
         }
         componentDidUpdate(e) {
-          let { width: t, height: s } = this.props.coords;
+          let { width: t, height: r } = this.props.coords;
           null != this._video &&
-            (e.coords.width !== t || e.coords.height !== s) &&
-            ((this._video.width = t), (this._video.height = s));
+            (e.coords.width !== t || e.coords.height !== r) &&
+            ((this._video.width = t), (this._video.height = r));
         }
         componentWillUnmount() {
           this._mounted = !1;
           let { _image: e, _video: t } = this,
-            { imagePool: s, videoPool: r } = this.props;
-          null != e && ((this._image = null), s.poolElement(e)),
-            null != t && ((this._video = null), r.poolElement(t));
+            { imagePool: r, videoPool: s } = this.props;
+          null != e && ((this._image = null), r.poolElement(e)),
+            null != t && ((this._video = null), s.poolElement(t));
         }
         renderGIF() {
           let {
               src: e,
-              coords: { width: t, height: s },
+              coords: { width: t, height: r },
             } = this.props,
             { loaded: n } = this.state;
           return n
-            ? (0, r.jsx)("img", {
+            ? (0, s.jsx)("img", {
                 src: e,
                 width: t,
-                height: s,
+                height: r,
                 className: S.gif,
                 alt: "",
               })
@@ -1363,12 +1395,12 @@
           let {
               item: e,
               renderExtras: t,
-              format: s,
+              format: r,
               coords: n,
               focused: l,
             } = this.props,
             { color: a, loaded: o } = this.state;
-          return (0, r.jsxs)(h.Clickable, {
+          return (0, s.jsxs)(h.Clickable, {
             tabIndex: -1,
             innerRef: e => {
               this.ref = e;
@@ -1376,7 +1408,7 @@
             className: i(S.result, { [S.focused]: l }),
             onClick: this.handleClick,
             style: { backgroundColor: o ? void 0 : a, ...n },
-            children: [N(s) ? null : this.renderGIF(), null != t ? t(e) : null],
+            children: [N(r) ? null : this.renderGIF(), null != t ? t(e) : null],
           });
         }
         constructor(e) {
@@ -1389,18 +1421,18 @@
               this._mounted && this.setState({ loaded: !0 });
             }),
             (this.handleClick = () => {
-              let { onClick: e, item: t, index: s } = this.props;
-              null != e && e(t, s);
+              let { onClick: e, item: t, index: r } = this.props;
+              null != e && e(t, r);
             });
-          let { format: t, color: s, imagePool: r } = this.props;
-          (this.state = { color: null == s ? o.sample(F) : s, loaded: !1 }),
+          let { format: t, color: r, imagePool: s } = this.props;
+          (this.state = { color: null == r ? o.sample(v) : r, loaded: !1 }),
             !N(t) &&
-              ((this._image = r.getElement()),
+              ((this._image = s.getElement()),
               (this._image.onload = () => this.setState({ loaded: !0 })),
               (this._image.src = e.src));
         }
       }
-      class M extends n.PureComponent {
+      class w extends n.PureComponent {
         componentDidMount() {
           let { resultType: e, data: t } = this.props;
           e === R.GIFPickerResultTypes.FAVORITES &&
@@ -1413,14 +1445,14 @@
         }
         selectItem(e, t) {
           let {
-            onSelectGIF: s,
-            resultType: r,
+            onSelectGIF: r,
+            resultType: s,
             data: n,
             resultQuery: l,
           } = this.props;
-          null != s && s(e),
+          null != r && r(e),
             (0, f.trackSelectGIF)({
-              type: r,
+              type: s,
               index: t,
               offset: this.props.searchOffset,
               limit: this.props.searchLimit,
@@ -1436,32 +1468,32 @@
         renderEmptyFavorite(e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, r.jsx)("div", {
+          return (0, s.jsx)("div", {
             className: S.emptyHint,
             children:
               null != e
-                ? (0, r.jsxs)("div", {
+                ? (0, s.jsxs)("div", {
                     className: S.emptyHintCard,
                     children: [
                       t
-                        ? (0, r.jsx)(_.default, {
+                        ? (0, s.jsx)(_.default, {
                             className: S.emptyHintFavorite,
                           })
                         : null,
-                      (0, r.jsx)("div", {
+                      (0, s.jsx)("div", {
                         className: S.emptyHintText,
                         children: e,
                       }),
                     ],
                   })
-                : (0, r.jsx)("div", { className: S.emptyHintSpacer }),
+                : (0, s.jsx)("div", { className: S.emptyHintSpacer }),
           });
         }
         renderEmptyFavorites() {
-          return (0, r.jsx)(h.Scroller, {
+          return (0, s.jsx)(h.Scroller, {
             className: S.results,
             fade: !0,
-            children: (0, r.jsxs)("div", {
+            children: (0, s.jsxs)("div", {
               className: S.emptyHints,
               children: [
                 this.renderEmptyFavorite(
@@ -1475,7 +1507,7 @@
                   y.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE
                 ),
                 Array.from({ length: 15 }).map((e, t) =>
-                  (0, r.jsx)(
+                  (0, s.jsx)(
                     n.Fragment,
                     { children: this.renderEmptyFavorite() },
                     t
@@ -1485,7 +1517,7 @@
                   y.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE
                 ),
                 Array.from({ length: 16 }).map((e, t) =>
-                  (0, r.jsx)(
+                  (0, s.jsx)(
                     n.Fragment,
                     { children: this.renderEmptyFavorite() },
                     t
@@ -1499,24 +1531,24 @@
           });
         }
         render() {
-          let { data: e, resultQuery: t, query: s, resultType: n } = this.props;
+          let { data: e, resultQuery: t, query: r, resultType: n } = this.props;
           return 0 === e.length &&
-            t === s &&
+            t === r &&
             n !== R.GIFPickerResultTypes.TRENDING_GIFS
             ? n === R.GIFPickerResultTypes.FAVORITES
               ? this.renderEmptyFavorites()
-              : (0, r.jsx)(m.default, {
+              : (0, s.jsx)(p.default, {
                   message: y.default.Messages.NO_GIF_SEARCH_RESULTS,
                   className: S.noResults,
                 })
-            : (0, r.jsx)(
-                p.default,
+            : (0, s.jsx)(
+                m.default,
                 {
                   getItemGrid: this.getItemGrid,
                   getCoordsMap: this.getCoordsMap,
                   onFocus: this.handleFocus,
                   onSelect: this.handleSelect,
-                  children: (0, r.jsx)(E.default, {
+                  children: (0, s.jsx)(E.default, {
                     desiredItemWidth: 200,
                     maxColumns: 8,
                     children: this.renderContent,
@@ -1533,19 +1565,19 @@
             (this.handleFocus = e => {
               let { current: t } = this._masonryRef;
               if (null == t) return;
-              let s = t.getCoordsMap()[e];
-              null != s &&
+              let r = t.getCoordsMap()[e];
+              null != r &&
                 (t.scrollIntoViewRect({
-                  start: s.top - 10,
-                  end: s.top + s.height + 10,
+                  start: r.top - 10,
+                  end: r.top + r.height + 10,
                 }),
                 this.setState({ focusedId: e }));
             }),
             (this.handleSelect = e => {
               let t;
-              let { data: s } = this.props,
-                r = s.findIndex(t => C(t) === e);
-              -1 !== r && (t = s[r]), null != t && this.selectItem(t, r);
+              let { data: r } = this.props,
+                s = r.findIndex(t => C(t) === e);
+              -1 !== s && (t = r[s]), null != t && this.selectItem(t, s);
             }),
             (this.handleClickItem = (e, t) => {
               this.selectItem(e, t);
@@ -1554,28 +1586,28 @@
               let { resultQuery: e } = this.props,
                 { current: t } = this._masonryRef;
               if (null == t) return;
-              let { scrollTop: s, scrollHeight: r } = t.getScrollerState();
-              r - s <= v &&
+              let { scrollTop: r, scrollHeight: s } = t.getScrollerState();
+              s - r <= F &&
                 (e !== this.prevResultQuery && (0, f.fetchSuggestions)(e),
                 (this.prevResultQuery = e));
             }),
-            (this.renderItem = (e, t, s, n) => {
+            (this.renderItem = (e, t, r, n) => {
               if (e > 0) return null;
               let { focusedId: l } = this.state,
                 i = this.props.data[t];
               return null == i
                 ? null
-                : (0, r.jsx)(
+                : (0, s.jsx)(
                     P,
                     {
                       item: i,
                       index: t,
                       format: i.format,
                       src: i.src,
-                      coords: s,
+                      coords: r,
                       onClick: this.handleClickItem,
                       renderExtras: () =>
-                        (0, r.jsx)(g.default, { className: S.favButton, ...i }),
+                        (0, s.jsx)(g.default, { className: S.favButton, ...i }),
                       focused: C(i) === l,
                       imagePool: this.props.imagePool,
                       videoPool: this.props.videoPool,
@@ -1583,45 +1615,45 @@
                     n
                   );
             }),
-            (this.getItemHeight = (e, t, s) => {
+            (this.getItemHeight = (e, t, r) => {
               if (e > 0) return 0;
-              let r = this.props.data[t];
-              if (null == r) return 0;
-              let n = r.height / r.width;
-              return s * n;
+              let s = this.props.data[t];
+              if (null == s) return 0;
+              let n = s.height / s.width;
+              return r * n;
             }),
             (this.getItemKey = (e, t) => {
-              var s;
+              var r;
               if (e > 0) return null;
-              let r = this.props.data[t];
-              return null != r
-                ? null !== (s = r.id) && void 0 !== s
-                  ? s
-                  : r.src
+              let s = this.props.data[t];
+              return null != s
+                ? null !== (r = s.id) && void 0 !== r
+                  ? r
+                  : s.src
                 : null;
             }),
-            (this.renderSection = (e, t, s) => {
+            (this.renderSection = (e, t, r) => {
               let { onSelectSuggestion: l, suggestions: i } = this.props;
               return 1 === e
-                ? (0, r.jsx)(
+                ? (0, s.jsx)(
                     "div",
                     {
                       className: S.endContainer,
                       style: t,
                       children:
                         i.length > 0
-                          ? (0, r.jsxs)(n.Fragment, {
+                          ? (0, s.jsxs)(n.Fragment, {
                               children: [
-                                (0, r.jsx)("div", {
+                                (0, s.jsx)("div", {
                                   className: S.endText,
                                   children:
                                     y.default.Messages
                                       .GIF_PICKER_RELATED_SEARCH,
                                 }),
-                                (0, r.jsx)("div", {
+                                (0, s.jsx)("div", {
                                   className: S.searchSuggestions,
                                   children: i.map(e =>
-                                    (0, r.jsx)(
+                                    (0, s.jsx)(
                                       h.Button,
                                       {
                                         look: h.Button.Looks.OUTLINED,
@@ -1641,11 +1673,11 @@
                             })
                           : null,
                     },
-                    s
+                    r
                   )
                 : null;
             }),
-            (this.renderContent = (e, t, s) => {
+            (this.renderContent = (e, t, r) => {
               let {
                 data: n,
                 resultQuery: l,
@@ -1654,7 +1686,7 @@
               } = this.props;
               return 0 === n.length &&
                 (l !== i || a === R.GIFPickerResultTypes.TRENDING_GIFS)
-                ? (0, r.jsx)(
+                ? (0, s.jsx)(
                     h.MasonryList,
                     {
                       fade: !0,
@@ -1663,13 +1695,13 @@
                       columns: e,
                       itemGutter: 12,
                       getItemKey: x,
-                      getItemHeight: G,
-                      renderItem: A,
+                      getItemHeight: A,
+                      renderItem: G,
                       chunkSize: 128,
                     },
                     l
                   )
-                : (0, r.jsx)(
+                : (0, s.jsx)(
                     h.MasonryList,
                     {
                       ref: this._masonryRef,
@@ -1699,10 +1731,10 @@
             });
         }
       }
-      function w() {
+      function M() {
         let { renderWindow: e } = n.useContext(I.default),
           t = e.document,
-          [s] = n.useState(
+          [r] = n.useState(
             () =>
               new u.default(
                 () => t.createElement("img"),
@@ -1711,7 +1743,7 @@
                 }
               )
           ),
-          [r] = n.useState(
+          [s] = n.useState(
             () =>
               new u.default(
                 () => {
@@ -1733,39 +1765,156 @@
                 }
               )
           );
-        return { imagePool: s, videoPool: r };
+        return { imagePool: r, videoPool: s };
       }
       var O = function (e) {
-        let t = w();
-        return (0, r.jsx)(M, { ...e, ...t });
+        let t = M();
+        return (0, s.jsx)(w, { ...e, ...t });
       };
     },
-    476714: function (e, t, s) {
+    519841: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
+          AttachmentLinkRefreshExperiment: function () {
+            return n;
+          },
+        });
+      var s = r("862205");
+      let n = (0, s.createExperiment)({
+        kind: "user",
+        id: "2023-12_attachment_link_refresh",
+        label: "Attachment Link Refresh User Experiment",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+          {
+            id: 1,
+            label: "Refresh expired attachment links",
+            config: { enabled: !0 },
+          },
+        ],
+      });
+    },
+    787336: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
+          isAttachmentUrl: function () {
+            return d;
+          },
+          removeSignedUrlParameters: function () {
+            return h;
+          },
+          messageHasExpiredAttachmentUrl: function () {
+            return g;
+          },
+          maybeRefreshAttachmentUrl: function () {
+            return E;
+          },
+        }),
+        r("222007"),
+        r("511434"),
+        r("313619"),
+        r("654714"),
+        r("287168"),
+        r("956660");
+      var s,
+        n = r("872717"),
+        l = r("718517"),
+        i = r("519841"),
+        a = r("49111");
+      let o = new Set([
+          window.GLOBAL_ENV.CDN_HOST,
+          null === (s = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === s
+            ? void 0
+            : s.substring(2),
+        ]),
+        u = new Set(["/attachments/", "/ephemeral-attachments/"]),
+        c = 1 * l.default.Millis.HOUR;
+      function d(e) {
+        return (
+          o.has(e.hostname) && Array.from(u).some(t => e.pathname.startsWith(t))
+        );
+      }
+      function h(e) {
+        for (let t of ((e = new URL(e)), ["ex", "is", "hm"]))
+          e.searchParams.delete(t);
+        return e;
+      }
+      function f(e) {
+        let t = (function (e) {
+          let t = e.searchParams.get("ex"),
+            r = parseInt(null != t ? t : "", 16);
+          return isNaN(r) ? void 0 : r * l.default.Millis.SECOND;
+        })(e);
+        return null == t || t <= Date.now() + c;
+      }
+      function m(e) {
+        let t = new URL(e.url);
+        return f(t);
+      }
+      function p(e) {
+        if (null == e) return !1;
+        let t = new URL(e.url);
+        return !!d(t) && f(t);
+      }
+      function I(e) {
+        var t;
+        return (
+          p(e.image) ||
+          (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) ||
+          p(e.video)
+        );
+      }
+      function g(e) {
+        return e.attachments.some(m) || e.embeds.some(I);
+      }
+      async function _(e) {
+        let t = await n.default.post({
+          url: a.Endpoints.ATTACHMENTS_REFRESH_URLS,
+          body: { attachment_urls: [e] },
+        });
+        return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
+      }
+      async function E(e) {
+        if (
+          !i.AttachmentLinkRefreshExperiment.getCurrentConfig({
+            location: "link_clicked",
+          }).enabled
+        )
+          return e;
+        let t = new URL(e);
+        if (!f(t)) return e;
+        let r = await _(e);
+        return null != r ? r : e;
+      }
+    },
+    476714: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
           default: function () {
             return I;
           },
         }),
-        s("222007");
-      var r = s("37983"),
-        n = s("884691"),
-        l = s("414456"),
-        i = s.n(l),
-        a = s("77078"),
-        o = s("960476"),
-        u = s("140331"),
-        c = s("118849"),
-        d = s("671434"),
-        h = s("659500"),
-        f = s("49111"),
-        p = s("782340"),
-        m = s("414763"),
+        r("222007");
+      var s = r("37983"),
+        n = r("884691"),
+        l = r("414456"),
+        i = r.n(l),
+        a = r("77078"),
+        o = r("960476"),
+        u = r("140331"),
+        c = r("118849"),
+        d = r("671434"),
+        h = r("659500"),
+        f = r("49111"),
+        m = r("782340"),
+        p = r("420804"),
         I = n.memo(function (e) {
           let {
               width: t,
-              height: s,
+              height: r,
               src: l,
               url: I,
               format: g,
@@ -1774,9 +1923,9 @@
             [E, R] = n.useState(!1),
             y = (0, u.useIsFavoriteGIF)(I),
             S = y
-              ? p.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES
-              : p.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
-            F = y ? d.default : c.default;
+              ? m.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES
+              : m.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
+            v = y ? d.default : c.default;
           n.useEffect(() => {
             if (!E) return;
             let e = setTimeout(() => {
@@ -1784,7 +1933,7 @@
             }, 500);
             return () => clearTimeout(e);
           }, [E]);
-          let v = e => {
+          let F = e => {
             e.preventDefault(),
               e.stopPropagation(),
               R(!0),
@@ -1794,46 +1943,46 @@
                     url: I,
                     src: l,
                     width: t,
-                    height: s,
+                    height: r,
                     format: g,
                   }),
                   h.ComponentDispatch.dispatch(
                     f.ComponentActions.FAVORITE_GIF
                   ));
           };
-          return (0, r.jsx)(a.Tooltip, {
+          return (0, s.jsx)(a.Tooltip, {
             text: S,
             children: e =>
-              (0, r.jsx)(a.Clickable, {
+              (0, s.jsx)(a.Clickable, {
                 ...e,
-                className: i(_, m.size, m.gifFavoriteButton, {
-                  [m.selected]: y,
-                  [m.showPulse]: E,
+                className: i(_, p.size, p.gifFavoriteButton, {
+                  [p.selected]: y,
+                  [p.showPulse]: E,
                 }),
                 onMouseDown: e => e.preventDefault(),
-                onClick: v,
+                onClick: F,
                 onDoubleClick: e => e.preventDefault(),
-                children: (0, r.jsx)(F, { className: m.icon }),
+                children: (0, s.jsx)(v, { className: p.icon }),
               }),
           });
         });
     },
-    510849: function (e, t, s) {
+    510849: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return y;
           },
         }),
-        s("781738"),
-        s("222007");
-      var r = s("446674"),
-        n = s("713349"),
-        l = s("913144"),
-        i = s("240292"),
-        a = s("49111"),
-        o = s("782340");
+        r("781738"),
+        r("222007");
+      var s = r("446674"),
+        n = r("713349"),
+        l = r("913144"),
+        i = r("240292"),
+        a = r("49111"),
+        o = r("782340");
       let u = {
           MP4: "mp4",
           TINYMP4: "tinymp4",
@@ -1853,15 +2002,15 @@
         d = u.MP4,
         h = null,
         f = "",
-        p = "",
-        m = [],
+        m = "",
+        p = [],
         I = [],
         g = [],
         _ = [];
       function E(e) {
         return e.replace(/^https?:/, "");
       }
-      class R extends r.default.Store {
+      class R extends s.default.Store {
         getAnalyticsID() {
           return h;
         }
@@ -1869,10 +2018,10 @@
           return f;
         }
         getResultQuery() {
-          return p;
+          return m;
         }
         getResultItems() {
-          return m;
+          return p;
         }
         getTrendingCategories() {
           return I;
@@ -1893,24 +2042,24 @@
           h = e.analyticsID;
         },
         GIF_PICKER_QUERY: function (e) {
-          "" === (f = e.query) && ((p = ""), (m = []), (g = []));
+          "" === (f = e.query) && ((m = ""), (p = []), (g = []));
         },
         GIF_PICKER_QUERY_SUCCESS: function (e) {
-          if (null != e.query && f === p) return !1;
-          null != e.query && (p = e.query),
-            (m = e.items.map(e => {
+          if (null != e.query && f === m) return !1;
+          null != e.query && (m = e.query),
+            (p = e.items.map(e => {
               let {
                 width: t,
-                height: s,
-                src: r,
+                height: r,
+                src: s,
                 gif_src: l,
                 url: i,
                 id: a,
               } = e;
               return {
                 width: t,
-                height: s,
-                src: E(r),
+                height: r,
+                src: E(s),
                 gifSrc: E(l),
                 url: i,
                 id: a,
@@ -1941,11 +2090,11 @@
         GIF_PICKER_QUERY_FAILURE: function (e) {
           let { query: t } = e;
           if (null == t) return !1;
-          (p = t), (m = []);
+          (m = t), (p = []);
         },
         GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
           let t = e.trendingCategories,
-            s =
+            r =
               null != e.trendingGIFPreview
                 ? [
                     {
@@ -1959,7 +2108,7 @@
                   ]
                 : [];
           I = [
-            ...s,
+            ...r,
             ...t.map(e => ({
               ...e,
               src: E(e.src),
@@ -1978,35 +2127,35 @@
         },
       });
     },
-    531470: function (e, t, s) {
+    531470: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return a;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("469563"),
-        l = s("891722"),
-        i = s("75196"),
+      var s = r("37983");
+      r("884691");
+      var n = r("469563"),
+        l = r("891722"),
+        i = r("75196"),
         a = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
-              height: s = 24,
+              height: r = 24,
               color: n = "currentColor",
               foreground: l,
               ...a
             } = e;
-            return (0, r.jsx)("svg", {
+            return (0, s.jsx)("svg", {
               ...(0, i.default)(a),
               width: t,
-              height: s,
+              height: r,
               viewBox: "0 0 24 24",
               fill: "none",
-              children: (0, r.jsx)("path", {
+              children: (0, s.jsx)("path", {
                 className: l,
                 fill: n,
                 d: "M20 10.9378H14.2199H8.06628L10.502 8.50202L9 7L4 12L9 17L10.502 15.498L8.06628 13.0622H20V10.9378Z",
@@ -2018,34 +2167,34 @@
           { size: 24 }
         );
     },
-    118849: function (e, t, s) {
+    118849: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return a;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("469563"),
-        l = s("809803"),
-        i = s("75196"),
+      var s = r("37983");
+      r("884691");
+      var n = r("469563"),
+        l = r("809803"),
+        i = r("75196"),
         a = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 16,
-              height: s = 16,
+              height: r = 16,
               color: n = "currentColor",
               foreground: l,
               ...a
             } = e;
-            return (0, r.jsx)("svg", {
+            return (0, s.jsx)("svg", {
               ...(0, i.default)(a),
               width: t,
-              height: s,
+              height: r,
               viewBox: "0 0 24 24",
-              children: (0, r.jsx)("path", {
+              children: (0, s.jsx)("path", {
                 className: l,
                 fill: n,
                 d: "M19.6,9l-4.2-0.4c-0.4,0-0.7-0.3-0.8-0.6l-1.6-3.9c-0.3-0.8-1.5-0.8-1.8,0L9.4,8.1C9.3,8.4,9,8.6,8.6,8.7L4.4,9 c-0.9,0.1-1.2,1.2-0.6,1.8L7,13.6c0.3,0.2,0.4,0.6,0.3,1l-1,4.1c-0.2,0.9,0.7,1.5,1.5,1.1l3.6-2.2c0.3-0.2,0.7-0.2,1,0l3.6,2.2 c0.8,0.5,1.7-0.2,1.5-1.1l-1-4.1c-0.1-0.4,0-0.7,0.3-1l3.2-2.8C20.9,10.2,20.5,9.1,19.6,9z M12,15.4l-3.8,2.3l1-4.3l-3.3-2.9 l4.4-0.4l1.7-4l1.7,4l4.4,0.4l-3.3,2.9l1,4.3L12,15.4z",
@@ -2057,36 +2206,36 @@
           { size: 16 }
         );
     },
-    671434: function (e, t, s) {
+    671434: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return a;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("469563"),
-        l = s("825701"),
-        i = s("75196"),
+      var s = r("37983");
+      r("884691");
+      var n = r("469563"),
+        l = r("825701"),
+        i = r("75196"),
         a = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 16,
-              height: s = 16,
+              height: r = 16,
               color: n = "currentColor",
               foreground: l,
               ...a
             } = e;
-            return (0, r.jsxs)("svg", {
+            return (0, s.jsxs)("svg", {
               ...(0, i.default)(a),
               viewBox: "0 0 24 24",
               width: t,
-              height: s,
+              height: r,
               children: [
-                (0, r.jsx)("path", { d: "M0,0H24V24H0Z", fill: "none" }),
-                (0, r.jsx)("path", {
+                (0, s.jsx)("path", { d: "M0,0H24V24H0Z", fill: "none" }),
+                (0, s.jsx)("path", {
                   fill: n,
                   className: l,
                   d: "M12.5,17.6l3.6,2.2a1,1,0,0,0,1.5-1.1l-1-4.1a1,1,0,0,1,.3-1l3.2-2.8A1,1,0,0,0,19.5,9l-4.2-.4a.87.87,0,0,1-.8-.6L12.9,4.1a1.05,1.05,0,0,0-1.9,0l-1.6,4a1,1,0,0,1-.8.6L4.4,9a1.06,1.06,0,0,0-.6,1.8L7,13.6a.91.91,0,0,1,.3,1l-1,4.1a1,1,0,0,0,1.5,1.1l3.6-2.2A1.08,1.08,0,0,1,12.5,17.6Z",
@@ -2099,38 +2248,38 @@
           { size: 16 }
         );
     },
-    240292: function (e, t, s) {
+    240292: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
             return a;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("469563"),
-        l = s("308472"),
-        i = s("75196"),
+      var s = r("37983");
+      r("884691");
+      var n = r("469563"),
+        l = r("308472"),
+        i = r("75196"),
         a = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
-              height: s = 24,
+              height: r = 24,
               color: n = "currentColor",
               foreground: l,
               ...a
             } = e;
-            return (0, r.jsx)("svg", {
+            return (0, s.jsx)("svg", {
               ...(0, i.default)(a),
               width: t,
-              height: s,
+              height: r,
               viewBox: "0 0 24 24",
-              children: (0, r.jsx)("g", {
+              children: (0, s.jsx)("g", {
                 fill: "none",
                 fillRule: "evenodd",
                 transform: "translate(2 6)",
-                children: (0, r.jsx)("path", {
+                children: (0, s.jsx)("path", {
                   className: l,
                   fill: n,
                   d: "M14 0l2.29 2.29-4.88 4.88-4-4L0 10.59 1.41 12l6-6 4 4 6.3-6.29L20 6V0z",
@@ -2143,25 +2292,25 @@
           { size: 24 }
         );
     },
-    564703: function (e, t, s) {
+    564703: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           calculateAnalyticsMetadata: function () {
             return n;
           },
         });
-      var r = s("49111");
-      function n(e, t, s) {
+      var s = r("49111");
+      function n(e, t, r) {
         let n = null != t ? { [t]: 1 } : {},
           {
             offset: l,
             limit: i,
             results: a,
             totalResults: o,
-          } = null != s ? s : {};
+          } = null != r ? r : {};
         return {
-          search_type: r.SearchTypes.GIF,
+          search_type: s.SearchTypes.GIF,
           load_id: e,
           limit: i,
           offset: l,
@@ -2173,34 +2322,34 @@
         };
       }
     },
-    42641: function (e, t, s) {
+    42641: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           ArrowSmallLeftIcon: function () {
             return i;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("669491"),
-        l = s("82169");
+      var s = r("37983");
+      r("884691");
+      var n = r("669491"),
+        l = r("82169");
       let i = e => {
         let {
           width: t = 24,
-          height: s = 24,
+          height: r = 24,
           color: i = n.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
-        return (0, r.jsx)("svg", {
+        return (0, s.jsx)("svg", {
           ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
-          height: s,
+          height: r,
           fill: "none",
           viewBox: "0 0 24 24",
-          children: (0, r.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "string" == typeof i ? i : i.css,
             d: "M3.3 11.3a1 1 0 0 0 0 1.4l5 5a1 1 0 0 0 1.4-1.4L6.42 13H20a1 1 0 1 0 0-2H6.41l3.3-3.3a1 1 0 0 0-1.42-1.4l-5 5Z",
             className: a,
@@ -2208,34 +2357,34 @@
         });
       };
     },
-    261833: function (e, t, s) {
+    261833: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           StarOutlineIcon: function () {
             return i;
           },
         });
-      var r = s("37983");
-      s("884691");
-      var n = s("669491"),
-        l = s("82169");
+      var s = r("37983");
+      r("884691");
+      var n = r("669491"),
+        l = r("82169");
       let i = e => {
         let {
           width: t = 24,
-          height: s = 24,
+          height: r = 24,
           color: i = n.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
-        return (0, r.jsx)("svg", {
+        return (0, s.jsx)("svg", {
           ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
-          height: s,
+          height: r,
           fill: "none",
           viewBox: "0 0 24 24",
-          children: (0, r.jsx)("path", {
+          children: (0, s.jsx)("path", {
             fill: "string" == typeof i ? i : i.css,
             fillRule: "evenodd",
             d: "M2.07 10.94a1.25 1.25 0 0 1 .73-2.25h6.12l1.9-5.83c.37-1.15 2-1.15 2.37 0l1.89 5.83h6.12c1.2 0 1.71 1.54.73 2.25l-4.95 3.6 1.9 5.82a1.25 1.25 0 0 1-1.93 1.4L12 18.16l-4.95 3.6c-.98.7-2.3-.25-1.92-1.4l1.89-5.82-4.95-3.6Zm11.55-.25h5.26l-4.25 3.09 1.62 5-4.25-3.1-4.25 3.1 1.62-5-4.25-3.1h5.26l1.62-5 1.62 5Z",
@@ -2245,16 +2394,16 @@
         });
       };
     },
-    217982: function (e, t, s) {
+    217982: function (e, t, r) {
       "use strict";
-      s.r(t),
-        s.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
-            return r;
+            return s;
           },
         }),
-        s("424973");
-      var r = class e {
+        r("424973");
+      var s = class e {
         getElement() {
           return 0 === this._elements.length
             ? this._createElement()
@@ -2275,4 +2424,4 @@
     },
   },
 ]);
-//# sourceMappingURL=58533.143d45d1fe30b5cb277f.js.map
+//# sourceMappingURL=58533.8992492456ae0cb1977b.js.map

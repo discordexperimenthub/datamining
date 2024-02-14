@@ -1280,7 +1280,7 @@
         _ = n("99795"),
         v = n("49111"),
         T = n("782340"),
-        I = n("2081");
+        I = n("964376");
       function A(e, t) {
         switch (e) {
           case _.ParticipantTypes.ACTIVITY:
@@ -1785,7 +1785,7 @@
         E = n("50885"),
         C = n("49111"),
         m = n("782340"),
-        S = n("143941");
+        S = n("966585");
       function g() {
         let [e, t] = r.useState(!1),
           n = (0, s.useStateFromStores)([u.default], () => {
@@ -1919,7 +1919,7 @@
         _ = n("439932"),
         v = n("50885"),
         T = n("782340"),
-        I = n("793804");
+        I = n("804392");
       let A = e => v.default.close(e),
         M = e => v.default.minimize(e),
         x = (e, t) => {
@@ -2290,7 +2290,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-fe7a3dcd75960bb8d13941bff8f46c3d6999b46a",
+          release: "discord_web-81788c6533f295bb4c2701c152d461787821beb9",
           beforeSend: h,
           integrations: [
             new a.Integrations.GlobalHandlers({
@@ -2337,8 +2337,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "266191"), "266191")),
-          a.setTag("builtAt", String("1707929076972"));
+          a.setTag("buildNumber", ((e = "266210"), "266210")),
+          a.setTag("builtAt", String("1707931334928"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -3062,7 +3062,7 @@
         });
       var a = n("37983");
       n("884691");
-      var r = n("364082"),
+      var r = n("404439"),
         s = e => {
           let { children: t, shouldAnimate: n } = e;
           return n
@@ -3234,7 +3234,7 @@
         r = n("884691"),
         s = n("414456"),
         i = n.n(s),
-        l = n("799869"),
+        l = n("952990"),
         u = r.forwardRef(function (e, t) {
           let {
             children: n,
@@ -3265,7 +3265,7 @@
       var r = n("414456"),
         s = n.n(r),
         i = n("77078"),
-        l = n("796863");
+        l = n("551694");
       function u(e) {
         let { children: t, onClick: n, className: r, tooltip: u } = e;
         return (0, a.jsx)(i.Tooltip, {
@@ -3303,7 +3303,7 @@
         s = n.n(r),
         i = n("77078"),
         l = n("145131"),
-        u = n("929422");
+        u = n("668458");
       function o(e) {
         return e < 400 ? "small" : e < 1e3 ? "medium" : "large";
       }
@@ -3611,7 +3611,7 @@
         f = n("100844"),
         h = n("607391"),
         p = n("782340"),
-        E = n("996810");
+        E = n("100469");
       let C = n("588281");
       function m(e) {
         let { participant: t, width: n, noArt: r = !1, selected: m = !1 } = e,
@@ -3828,7 +3828,7 @@
       n("884691");
       var r = n("607391"),
         s = n("145131"),
-        i = n("191933");
+        i = n("331639");
       function l(e) {
         let { mainText: t, supportingText: n, children: l, size: u } = e;
         return (0, a.jsxs)(s.default, {
@@ -3922,7 +3922,7 @@
         i = n("758710"),
         l = n("981913"),
         u = n("782340"),
-        o = n("407735");
+        o = n("936609");
       function d(e) {
         let { popoutOpen: t, onClosePopout: n, onOpenPopout: r, ...d } = e,
           c = t
@@ -3981,7 +3981,7 @@
         o = n("155207"),
         d = n("981913"),
         c = n("782340"),
-        f = n("789749");
+        f = n("31665");
       function h(e) {
         let { className: t, isVertical: n } = e;
         return (0, a.jsxs)("div", {
@@ -4056,7 +4056,7 @@
         u = n("437825"),
         o = n("142303"),
         d = n("981913"),
-        c = n("911360");
+        c = n("423725");
       function f(e) {
         let t = (0, l.getVideoButtonLabel)(e),
           {
@@ -4311,7 +4311,7 @@
         i = n.n(s),
         l = n("77078"),
         u = n("145131"),
-        o = n("648324");
+        o = n("324127");
       class d extends r.PureComponent {
         render() {
           let { note: e, title: t, action: n, className: r } = this.props;
@@ -4362,8 +4362,8 @@
         u = n("773336"),
         o = n("325753"),
         d = n("49111"),
-        c = n("925201"),
-        f = n("212029");
+        c = n("578549"),
+        f = n("678016");
       let h = { top: 80, bottom: 132, left: 80 };
       class p extends r.PureComponent {
         componentDidMount() {
@@ -4656,7 +4656,7 @@
         d = n("506885"),
         c = n("217513"),
         f = n("845579"),
-        h = n("249941"),
+        h = n("491595"),
         p = function (e) {
           let {
               style: t,
@@ -5295,4 +5295,4 @@
     },
   },
 ]);
-//# sourceMappingURL=807.04b53a20d636b2cca6e4.js.map
+//# sourceMappingURL=807.6a14606608cf6c275c68.js.map

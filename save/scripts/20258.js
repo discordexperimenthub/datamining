@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["15750"],
+  ["20258"],
   {
     440540: function (i, x, t) {
       "use strict";
@@ -15847,6 +15847,244 @@
         markers: [],
       };
     },
+    430568: function (i, x, t) {
+      "use strict";
+      t.r(x),
+        t.d(x, {
+          default: function () {
+            return b;
+          },
+        }),
+        t("222007"),
+        t("70102"),
+        t("843762"),
+        t("424973");
+      var s = t("37983"),
+        a = t("884691"),
+        o = t("414456"),
+        y = t.n(o),
+        d = t("817736"),
+        k = t.n(d),
+        r = t("118810"),
+        e = t("446674"),
+        p = t("407063"),
+        n = t("845579"),
+        m = t("901165"),
+        c = t("62843"),
+        l = t("315102"),
+        f = t("402671"),
+        _ = t("866190"),
+        u = t("115279");
+      class h extends a.PureComponent {
+        componentWillUnmount() {
+          var i;
+          null === (i = this.cancelLoadImage) || void 0 === i || i.call(this);
+        }
+        getSrc() {
+          let i =
+              arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : this.props,
+            {
+              src: x,
+              emojiId: t,
+              emojiName: s,
+              animated: a,
+              shouldAnimate: o,
+              isFocused: y,
+              isInteracting: d,
+              size: k = "default",
+            } = i,
+            { hover: r } = this.state;
+          if (null != x) return x;
+          if (null != t) {
+            let i = u.EMOJI_SIZE_MAP[k];
+            return l.default.getEmojiURL({
+              id: t,
+              animated: y && !0 === a && (!0 === o || r || !0 === d),
+              size: i,
+            });
+          }
+          if (null != s) return f.default.getURL(s);
+        }
+        render() {
+          var i;
+          let x;
+          let {
+              emojiName: t,
+              animated: o,
+              className: d,
+              size: k = "default",
+              alt: r,
+              shouldAnimate: e,
+              isFocused: p,
+              emojiId: n,
+              autoplay: m,
+              isInteracting: c,
+              ...l
+            } = this.props,
+            f = this.getSrc();
+          return null == f || "" === f
+            ? (0, s.jsx)("span", {
+                className: y("emoji", "emoji-text"),
+                children: t,
+              })
+            : (o &&
+                (x = {
+                  onMouseEnter: this.onMouseEnter,
+                  onMouseLeave: this.onMouseLeave,
+                }),
+              (0, a.createElement)("img", {
+                ...l,
+                key: this.key,
+                src: f,
+                alt:
+                  null !== (i = null != r ? r : t) && void 0 !== i ? i : void 0,
+                draggable: !1,
+                ...x,
+                className: y("emoji", d, { jumboable: "jumbo" === k }),
+                onError: this.onError,
+                "data-type": "emoji",
+                ...(null != n && "" !== n
+                  ? { "data-id": n }
+                  : { "data-name": t }),
+              }));
+        }
+        constructor(...i) {
+          super(...i),
+            (this.state = { hover: !1 }),
+            (this.key = void 0),
+            (this.onError = () => {
+              let i = this.getSrc();
+              null != i &&
+                (this.cancelLoadImage = (0, p.loadImage)(i, i => {
+                  !i && ((this.key = Date.now()), this.forceUpdate());
+                }));
+            }),
+            (this.onMouseEnter = i => {
+              this.setState({ hover: !0 });
+              let { onMouseEnter: x } = this.props;
+              null != x && x(i);
+            }),
+            (this.onMouseLeave = i => {
+              this.setState({ hover: !1 });
+              let { onMouseLeave: x } = this.props;
+              null != x && x(i);
+            });
+        }
+      }
+      h.defaultProps = { isInteracting: !1 };
+      let I = (function (i) {
+        if (null == window.IntersectionObserver)
+          return function (x) {
+            return (0, s.jsx)(i, { ...x, shouldAnimate: x.animated });
+          };
+        let x = [],
+          t = [],
+          o = new window.IntersectionObserver(
+            i => {
+              i.forEach(i => {
+                let s = t.find(x => {
+                  let [t] = x;
+                  return t === i.target;
+                });
+                if (null == s) return;
+                let a = s[1];
+                if (i.intersectionRatio >= 0.7) {
+                  var o, y;
+                  if (-1 !== x.indexOf(a)) return;
+                  let t =
+                    Math.abs(
+                      i.intersectionRect.bottom -
+                        Number(
+                          null === (o = i.rootBounds) || void 0 === o
+                            ? void 0
+                            : o.bottom
+                        )
+                    ) <
+                    Math.abs(
+                      i.intersectionRect.top -
+                        Number(
+                          null === (y = i.rootBounds) || void 0 === y
+                            ? void 0
+                            : y.top
+                        )
+                    );
+                  t ? x.unshift(a) : x.push(a),
+                    a.forceUpdate(),
+                    t && x.length > 100 && x[100].forceUpdate();
+                } else {
+                  let i = x.indexOf(a);
+                  -1 !== i &&
+                    (x.splice(i, 1),
+                    a.forceUpdate(),
+                    i < 100 && x.length >= 100 && x[99].forceUpdate());
+                }
+              });
+            },
+            { threshold: 0.7 }
+          );
+        function y(i) {
+          let x = k.findDOMNode(i);
+          (0, r.isElement)(x) && (t.push([x, i]), o.observe(x));
+        }
+        function d(i) {
+          let s = k.findDOMNode(i);
+          o.unobserve(s);
+          let a = t.findIndex(x => {
+            let [t, s] = x;
+            return s === i;
+          });
+          -1 !== a &&
+            (t.splice(a, 1),
+            -1 !== (a = x.indexOf(i)) &&
+              (x.splice(a, 1),
+              a < 100 && x.length >= 100 && x[99].forceUpdate()));
+        }
+        return class extends a.Component {
+          shouldAutoplay(i) {
+            return i.animated && i.autoplay;
+          }
+          componentDidMount() {
+            this.shouldAutoplay(this.props) && y(this);
+          }
+          componentDidUpdate(i) {
+            let x = this.shouldAutoplay(i),
+              t = this.shouldAutoplay(this.props);
+            t !== x && (t ? y(this) : d(this));
+          }
+          componentWillUnmount() {
+            this.shouldAutoplay(this.props) && d(this);
+          }
+          render() {
+            let t = x.indexOf(this),
+              { autoplay: a, allowAnimatedEmoji: o, ...y } = this.props;
+            return (0, s.jsx)(c.MessagesInteractionContext.Consumer, {
+              children: x =>
+                (0, s.jsx)(i, {
+                  ...y,
+                  autoplay: a || !1,
+                  shouldAnimate:
+                    -1 !== t && t < 100 && !x.disableAnimations && o,
+                }),
+            });
+          }
+        };
+      })(h);
+      function b(i) {
+        let x = n.AnimateEmoji.useSetting(),
+          t = {
+            autoplay: null == i.autoplay ? x : i.autoplay,
+            allowAnimatedEmoji: x,
+          },
+          a = __OVERLAY__
+            ? (0, e.useStateFromStores)([m.default], () =>
+                m.default.isInstanceFocused()
+              )
+            : (0, _.useIsWindowFocused)();
+        return (0, s.jsx)(I, { ...i, ...t, isFocused: a });
+      }
+    },
     145079: function (i, x, t) {
       "use strict";
       t.r(x),
@@ -15860,17 +16098,17 @@
       var a = t("414456"),
         o = t.n(a),
         y = t("446674"),
-        k = t("77078"),
-        d = t("102985"),
+        d = t("77078"),
+        k = t("102985"),
         r = t("79798"),
-        p = t("754474"),
-        e = t("158998"),
+        e = t("754474"),
+        p = t("158998"),
         n = t("782340"),
-        m = t("892802");
+        m = t("168540");
       function c(i) {
-        if (i.isSystemUser()) return p.BotTypes.SYSTEM_DM;
-        if (i.isClyde()) return p.BotTypes.AI;
-        if (i.bot) return p.BotTypes.BOT;
+        if (i.isSystemUser()) return e.BotTypes.SYSTEM_DM;
+        if (i.isClyde()) return e.BotTypes.AI;
+        if (i.bot) return e.BotTypes.BOT;
         return null;
       }
       let l = i => {
@@ -15879,31 +16117,31 @@
           secondary: t,
           botType: a,
           botVerified: y,
-          discriminatorClass: d,
-          className: p,
-          usernameClass: e,
+          discriminatorClass: k,
+          className: e,
+          usernameClass: p,
           color: c,
           botClass: l,
           showStreamerModeTooltip: f,
         } = i;
         return (0, s.jsxs)("div", {
-          className: o(m.info, p),
+          className: o(m.info, e),
           children: [
-            (0, s.jsx)(k.Tooltip, {
+            (0, s.jsx)(d.Tooltip, {
               text: n.default.Messages.STREAMER_MODE_ENABLED,
               shouldShow: f,
               "aria-label": !!f && void 0,
               children: i =>
                 (0, s.jsx)("span", {
                   ...i,
-                  className: o(m.username, e),
+                  className: o(m.username, p),
                   style: null != c ? { color: c } : void 0,
                   children: x,
                 }),
             }),
             null != t
               ? (0, s.jsx)("span", {
-                  className: o(m.infoSpacing, d),
+                  className: o(m.infoSpacing, k),
                   children: t,
                 })
               : void 0,
@@ -15922,40 +16160,40 @@
             user: t,
             nick: a,
             forceUsername: o,
-            showAccountIdentifier: k,
+            showAccountIdentifier: d,
             overrideDiscriminator: r,
             forcePomelo: n,
             ...m
           } = i,
           f = (0, y.useStateFromStores)(
-            [d.default],
-            () => d.default.hidePersonalInformation
+            [k.default],
+            () => k.default.hidePersonalInformation
           ),
           _ = f || x || t.isNonUserBot(),
-          h = t.toString(),
-          u = e.default.getName(t),
-          I = o ? h : null != a ? a : u,
+          u = t.toString(),
+          h = p.default.getName(t),
+          I = o ? u : null != a ? a : h,
           b = t.isPomelo() || n;
-        if (b || I !== h) {
+        if (b || I !== u) {
           let i =
-              I === h && b && o
-                ? e.default.getUserTag(t, { forcePomelo: n })
+              I === u && b && o
+                ? p.default.getUserTag(t, { forcePomelo: n })
                 : I,
-            x = k && i !== "@".concat(h) ? e.default.getUserTag(t) : void 0;
+            x = d && i !== "@".concat(u) ? p.default.getUserTag(t) : void 0;
           return (0, s.jsx)(l, {
             primary: i,
             secondary: x,
             botVerified: t.isVerifiedBot(),
             botType: c(t),
-            showStreamerModeTooltip: f && i !== u,
+            showStreamerModeTooltip: f && i !== h,
             ...m,
           });
         }
-        return (0, s.jsx)(p.default, {
+        return (0, s.jsx)(e.default, {
           name: I,
           botType: c(t),
           botVerified: t.isVerifiedBot(),
-          discriminator: _ || I !== h ? null : null != r ? r : t.discriminator,
+          discriminator: _ || I !== u ? null : null != r ? r : t.discriminator,
           ...m,
         });
       };
@@ -15998,26 +16236,26 @@
             return O;
           },
           removeReactionWithConfirmation: function () {
-            return N;
+            return T;
           },
         });
       var s,
         a,
         o = t("872717"),
         y = t("819855"),
-        k = t("913144"),
-        d = t("404118"),
+        d = t("913144"),
+        k = t("404118"),
         r = t("875978"),
-        p = t("263024"),
-        e = t("271938"),
+        e = t("263024"),
+        p = t("271938"),
         n = t("377253"),
         m = t("659500"),
         c = t("718517"),
         l = t("402671"),
         f = t("61069"),
         _ = t("49111"),
-        h = t("782340");
-      function u(i, x, t) {
+        u = t("782340");
+      function h(i, x, t) {
         let { status: s, body: a } = i;
         if (429 === s)
           return (
@@ -16026,10 +16264,10 @@
         if (403 === s)
           switch (a && a.code) {
             case _.AbortCodes.TOO_MANY_REACTIONS:
-              d.default.show({
-                title: h.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
-                body: h.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
-                confirmText: h.default.Messages.OKAY,
+              k.default.show({
+                title: u.default.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,
+                body: u.default.Messages.TOO_MANY_REACTIONS_ALERT_BODY,
+                confirmText: u.default.Messages.OKAY,
               });
               break;
             case _.AbortCodes.REACTION_BLOCKED:
@@ -16043,14 +16281,14 @@
       }
       function I(i, x, t, s, a) {
         var o, y;
-        k.default.dispatch({
+        d.default.dispatch({
           type: i,
           channelId: x,
           messageId: t,
           userId:
             null !== (o = null == a ? void 0 : a.userId) && void 0 !== o
               ? o
-              : e.default.getId(),
+              : p.default.getId(),
           emoji: s,
           optimistic: !0,
           colors:
@@ -16071,12 +16309,12 @@
             useTypeEndpoint: o = !1,
             type: y = r.ReactionTypes.NORMAL,
           } = i,
-          k = null != s.id ? "".concat(s.name, ":").concat(s.id) : s.name;
+          d = null != s.id ? "".concat(s.name, ":").concat(s.id) : s.name;
         return null == a
-          ? _.Endpoints.REACTIONS(x, t, k)
+          ? _.Endpoints.REACTIONS(x, t, d)
           : o
-            ? _.Endpoints.REACTION_WITH_TYPE(x, t, k, a, y)
-            : _.Endpoints.REACTION(x, t, k, a);
+            ? _.Endpoints.REACTION_WITH_TYPE(x, t, d, a, y)
+            : _.Endpoints.REACTION(x, t, d, a);
       }
       ((s = a || (a = {})).MESSAGE = "Message"),
         (s.FORUM_TOOLBAR = "Forum Toolbar"),
@@ -16088,30 +16326,30 @@
             emoji: s,
             limit: a,
             after: y,
-            type: d,
+            type: k,
           } = i,
-          p =
-            d === r.ReactionTypes.VOTE
+          e =
+            k === r.ReactionTypes.VOTE
               ? (function (i, x, t) {
                   var s;
                   let a = null !== (s = t.id) && void 0 !== s ? s : t.name;
                   return _.Endpoints.POLL_ANSWER_VOTERS(i, x, a);
                 })(x, t, s)
               : b({ channelId: x, messageId: t, emoji: s }),
-          e = await o.default.get({
-            url: p,
-            query: { limit: a, after: y, type: d },
+          p = await o.default.get({
+            url: e,
+            query: { limit: a, after: y, type: k },
             oldFormErrors: !0,
           }),
-          n = d === r.ReactionTypes.VOTE ? e.body.users : e.body;
+          n = k === r.ReactionTypes.VOTE ? p.body.users : p.body;
         return (
-          k.default.dispatch({
+          d.default.dispatch({
             type: "MESSAGE_REACTION_ADD_USERS",
             channelId: x,
             messageId: t,
             users: n,
             emoji: s,
-            reactionType: d,
+            reactionType: k,
           }),
           n
         );
@@ -16122,40 +16360,40 @@
               ? arguments[3]
               : "Message",
           a = arguments.length > 4 ? arguments[4] : void 0,
-          k = null != a && !!a.burst,
-          e = null != a && !!a.isRetry;
+          d = null != a && !!a.burst,
+          p = null != a && !!a.isRetry;
         if (
-          !e &&
+          !p &&
           (function (i, x, t, s) {
             let a = n.default.getMessage(i, x);
             return null != a && a.userHasReactedWithEmoji(t, s);
-          })(i, x, t, k)
+          })(i, x, t, d)
         ) {
-          d.default.show({
+          k.default.show({
             title:
-              h.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
-            body: h.default.Messages
+              u.default.Messages.EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_TITLE,
+            body: u.default.Messages
               .EMOJI_PICKER_DOUBLE_REACTION_SUPER_ERROR_BODY,
-            confirmText: h.default.Messages.GOT_IT,
+            confirmText: u.default.Messages.GOT_IT,
           });
           return;
         }
-        let m = await T(t, k);
-        I("MESSAGE_REACTION_ADD", i, x, t, { burst: k, colors: m }),
-          await p.default.unarchiveThreadIfNecessary(i),
+        let m = await v(t, d);
+        I("MESSAGE_REACTION_ADD", i, x, t, { burst: d, colors: m }),
+          await e.default.unarchiveThreadIfNecessary(i),
           o.default
             .put({
               url: b({ channelId: i, messageId: x, emoji: t, userId: "@me" }),
               query: {
                 location: s,
-                type: k ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL,
+                type: d ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL,
               },
               oldFormErrors: !0,
             })
             .then(() => {
-              k
+              d
                 ? (y.AccessibilityAnnouncer.announce(
-                    h.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format(
+                    u.default.Messages.BURST_REACTION_ADD_UNLIMITED_SUCCESS_A11Y.format(
                       { name: t.name }
                     )
                   ),
@@ -16165,24 +16403,24 @@
                     emoji: { ...t, animated: !1 },
                   }))
                 : y.AccessibilityAnnouncer.announce(
-                    h.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
+                    u.default.Messages.REACTION_ADD_SUCCESS_A11Y.format({
                       name: t.name,
                     })
                   );
             })
             .catch(a => {
-              u(a, () => E(i, x, t, s, { burst: k, isRetry: !0 }), {
-                isRetry: e,
+              h(a, () => E(i, x, t, s, { burst: d, isRetry: !0 }), {
+                isRetry: p,
               }) &&
-                (I("MESSAGE_REACTION_REMOVE", i, x, t, { burst: k }),
-                k
+                (I("MESSAGE_REACTION_REMOVE", i, x, t, { burst: d }),
+                d
                   ? y.AccessibilityAnnouncer.announce(
-                      h.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format(
+                      u.default.Messages.BURST_REACTION_ADD_UNLIMITED_ERROR_A11Y.format(
                         { name: t.name }
                       )
                     )
                   : y.AccessibilityAnnouncer.announce(
-                      h.default.Messages.REACTION_ADD_ERROR_A11Y.format({
+                      u.default.Messages.REACTION_ADD_ERROR_A11Y.format({
                         name: t.name,
                       })
                     ));
@@ -16190,7 +16428,7 @@
       }
       function g(i) {
         let { channelId: x, messageId: t, emoji: s, key: a } = i;
-        k.default.dispatch({
+        d.default.dispatch({
           type: "BURST_REACTION_EFFECT_PLAY",
           channelId: x,
           messageId: t,
@@ -16200,19 +16438,19 @@
       }
       async function A(i, x, t) {
         let s = null != t && !!t.isRetry;
-        await p.default.unarchiveThreadIfNecessary(i),
+        await e.default.unarchiveThreadIfNecessary(i),
           o.default
             .delete({
               url: _.Endpoints.REMOVE_REACTIONS(i, x),
               oldFormErrors: !0,
             })
             .catch(t => {
-              u(t, () => A(i, x, { isRetry: !0 }), { isRetry: s });
+              h(t, () => A(i, x, { isRetry: !0 }), { isRetry: s });
             });
       }
       async function R(i, x, t, s) {
         let a = null != s && !!s.isRetry;
-        await p.default.unarchiveThreadIfNecessary(i);
+        await e.default.unarchiveThreadIfNecessary(i);
         let y = null === t.id ? t.name : "".concat(t.name, ":").concat(t.id);
         o.default
           .delete({
@@ -16220,7 +16458,7 @@
             oldFormErrors: !0,
           })
           .catch(s => {
-            u(s, () => R(i, x, t, { isRetry: !0 }), { isRetry: a });
+            h(s, () => R(i, x, t, { isRetry: !0 }), { isRetry: a });
           });
       }
       async function O(i, x, t, s) {
@@ -16228,11 +16466,11 @@
             arguments.length > 4 && void 0 !== arguments[4]
               ? arguments[4]
               : "Message",
-          k = arguments.length > 5 ? arguments[5] : void 0,
-          d = null != k && !!k.burst,
-          e = null != k && !!k.isRetry;
-        I("MESSAGE_REACTION_REMOVE", i, x, t, { userId: s, burst: d }),
-          await p.default.unarchiveThreadIfNecessary(i),
+          d = arguments.length > 5 ? arguments[5] : void 0,
+          k = null != d && !!d.burst,
+          p = null != d && !!d.isRetry;
+        I("MESSAGE_REACTION_REMOVE", i, x, t, { userId: s, burst: k }),
+          await e.default.unarchiveThreadIfNecessary(i),
           o.default
             .delete({
               url: b({
@@ -16240,52 +16478,52 @@
                 messageId: x,
                 emoji: t,
                 userId: null != s ? s : "@me",
-                type: d ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL,
+                type: k ? r.ReactionTypes.BURST : r.ReactionTypes.NORMAL,
                 useTypeEndpoint: !0,
               }),
-              query: { location: a, burst: d },
+              query: { location: a, burst: k },
               oldFormErrors: !0,
             })
             .then(() => {
-              (null == k ? void 0 : k.burst)
+              (null == d ? void 0 : d.burst)
                 ? y.AccessibilityAnnouncer.announce(
-                    h.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format(
+                    u.default.Messages.BURST_REACTION_REMOVE_SUCCESS_A11Y.format(
                       { name: t.name }
                     )
                   )
                 : y.AccessibilityAnnouncer.announce(
-                    h.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
+                    u.default.Messages.REACTION_REMOVE_SUCCESS_A11Y.format({
                       name: t.name,
                     })
                   );
             })
             .catch(async o => {
               if (
-                u(o, () => O(i, x, t, s, a, { burst: d, isRetry: !0 }), {
-                  isRetry: e,
+                h(o, () => O(i, x, t, s, a, { burst: k, isRetry: !0 }), {
+                  isRetry: p,
                 })
               ) {
-                let a = await T(t, d);
+                let a = await v(t, k);
                 I("MESSAGE_REACTION_ADD", i, x, t, {
                   userId: s,
-                  burst: d,
+                  burst: k,
                   colors: a,
                 }),
-                  (null == k ? void 0 : k.burst)
+                  (null == d ? void 0 : d.burst)
                     ? y.AccessibilityAnnouncer.announce(
-                        h.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format(
+                        u.default.Messages.BURST_REACTION_REMOVE_ERROR_A11Y.format(
                           { name: t.name }
                         )
                       )
                     : y.AccessibilityAnnouncer.announce(
-                        h.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
+                        u.default.Messages.REACTION_REMOVE_ERROR_A11Y.format({
                           name: t.name,
                         })
                       );
               }
             });
       }
-      async function T(i, x) {
+      async function v(i, x) {
         let t = [];
         if (x)
           try {
@@ -16293,7 +16531,7 @@
           } catch {}
         return t;
       }
-      function N(i) {
+      function T(i) {
         let {
             channelId: x,
             messageId: t,
@@ -16302,8 +16540,8 @@
             userId: o,
             location: y,
           } = i,
-          k = a === r.ReactionTypes.BURST;
-        O(x, t, s, o, y, { burst: k });
+          d = a === r.ReactionTypes.BURST;
+        O(x, t, s, o, y, { burst: d });
       }
     },
     626334: function (i, x, t) {
@@ -16339,29 +16577,29 @@
             return D;
           },
           getEffectUrl: function () {
-            return V;
+            return j;
           },
           getEffectAnnouncement: function () {
-            return Y;
+            return P;
           },
         });
       var s = t("917351"),
         a = t.n(s),
         o = t("440540"),
         y = t("811217"),
-        k = t("504936"),
-        d = t("988078"),
+        d = t("504936"),
+        k = t("988078"),
         r = t("939118"),
-        p = t("101559"),
-        e = t("326209"),
+        e = t("101559"),
+        p = t("326209"),
         n = t("610237"),
         m = t("733261"),
         c = t("596926"),
         l = t("761999"),
         f = t("189580"),
         _ = t("679126"),
-        h = t("101593"),
-        u = t("414668"),
+        u = t("101593"),
+        h = t("414668"),
         I = t("97656"),
         b = t("812007"),
         w = t("721336"),
@@ -16370,10 +16608,10 @@
         A = t("155232"),
         R = t("843093"),
         O = t("867805"),
-        T = t("407063"),
-        N = t("697218"),
-        v = t("315102"),
-        M = t("402671"),
+        v = t("407063"),
+        T = t("697218"),
+        M = t("315102"),
+        N = t("402671"),
         S = t("626334"),
         C = t("782340");
       let L = { start: 10, end: 15 },
@@ -16381,19 +16619,19 @@
           BASIC: [o],
           PREMIUM: [
             y,
-            k,
             d,
+            k,
             r,
-            p,
             e,
+            p,
             n,
             m,
             c,
             l,
             f,
             _,
-            h,
             u,
+            h,
             I,
             b,
             w,
@@ -16414,7 +16652,7 @@
               (t.src = i),
                 (t.crossOrigin = "Anonymous"),
                 (t.onload = () => {
-                  let s = S.EMOJI_SIZE * (0, T.getDevicePixelRatio)();
+                  let s = S.EMOJI_SIZE * (0, v.getDevicePixelRatio)();
                   if (t.width === s && t.height === s) x(i);
                   else {
                     var a;
@@ -16437,14 +16675,14 @@
           }
           return Math.floor(Math.random() * t.length);
         };
-      function V(i) {
+      function j(i) {
         let x =
           arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
             : S.EMOJI_SIZE;
         if (null != i.id) {
           var t;
-          return v.default.getEmojiURL({
+          return M.default.getEmojiURL({
             id: i.id,
             animated: null !== (t = i.animated) && void 0 !== t && t,
             size: x,
@@ -16452,9 +16690,9 @@
         }
         let s = O.default.convertSurrogateToName(i.name, !1),
           a = O.default.getByName(s);
-        return null != a ? M.default.getURL(a.surrogates) : "";
+        return null != a ? N.default.getURL(a.surrogates) : "";
       }
-      function P(i, x) {
+      function V(i, x) {
         return a(i)
           .map(i => {
             var t;
@@ -16464,37 +16702,37 @@
           .uniq()
           .value();
       }
-      function Y(i) {
+      function P(i) {
         var x, t, s, a, o, y;
         if (i.length < 1) return "";
-        let k = P(i, "userId"),
-          d = P(i, "emojiName"),
+        let d = V(i, "userId"),
+          k = V(i, "emojiName"),
           r =
-            d.length < 2
-              ? null !== (x = null == d ? void 0 : d[0]) && void 0 !== x
+            k.length < 2
+              ? null !== (x = null == k ? void 0 : k[0]) && void 0 !== x
                 ? x
                 : ""
-              : d.join(", ");
-        if (k.length < 1) return "";
-        if (1 === k.length)
+              : k.join(", ");
+        if (d.length < 1) return "";
+        if (1 === d.length)
           return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_SINGLE.format(
             {
               firstUsername:
-                null === (t = N.default.getUser(k[0])) || void 0 === t
+                null === (t = T.default.getUser(d[0])) || void 0 === t
                   ? void 0
                   : t.username,
               emojiNames: r,
             }
           );
-        if (2 === k.length)
+        if (2 === d.length)
           return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_DOUBLE.format(
             {
               firstUsername:
-                null === (s = N.default.getUser(k[0])) || void 0 === s
+                null === (s = T.default.getUser(d[0])) || void 0 === s
                   ? void 0
                   : s.username,
               secondUsername:
-                null === (a = N.default.getUser(k[1])) || void 0 === a
+                null === (a = T.default.getUser(d[1])) || void 0 === a
                   ? void 0
                   : a.username,
               emojiNames: r,
@@ -16504,14 +16742,14 @@
           return C.default.Messages.A11Y_ANNOUNCEMENT_VOICE_CHANNEL_EFFECTS_MULTIPLE.format(
             {
               firstUsername:
-                null === (o = N.default.getUser(k[0])) || void 0 === o
+                null === (o = T.default.getUser(d[0])) || void 0 === o
                   ? void 0
                   : o.username,
               secondUsername:
-                null === (y = N.default.getUser(k[1])) || void 0 === y
+                null === (y = T.default.getUser(d[1])) || void 0 === y
                   ? void 0
                   : y.username,
-              count: k.length - 2,
+              count: d.length - 2,
               emojiNames: r,
             }
           );
@@ -16522,7 +16760,7 @@
       t.r(x),
         t.d(x, {
           BotTypes: function () {
-            return k.BotTagTypes;
+            return d.BotTagTypes;
           },
           default: function () {
             return r;
@@ -16533,17 +16771,17 @@
       var a = t("414456"),
         o = t.n(a),
         y = t("79798"),
-        k = t("988268"),
-        d = t("888770"),
+        d = t("988268"),
+        k = t("293005"),
         r = i => {
           let {
             name: x,
             discriminator: t,
             invertBotTagColor: a,
-            nameColor: k,
+            nameColor: d,
             className: r,
-            botType: p,
-            usernameClass: e,
+            botType: e,
+            usernameClass: p,
             discriminatorClass: n,
             botClass: m,
             botVerified: c = !1,
@@ -16552,12 +16790,12 @@
             usernameIcon: _,
           } = i;
           return (0, s.jsxs)("div", {
-            className: o(r, d.nameTag),
+            className: o(r, k.nameTag),
             style: l,
             children: [
               (0, s.jsxs)("span", {
-                className: o(d.username, e),
-                style: null != k ? { color: k } : void 0,
+                className: o(k.username, p),
+                style: null != d ? { color: d } : void 0,
                 children: [_, x],
               }),
               null != t
@@ -16566,11 +16804,11 @@
                     children: ["#", t],
                   })
                 : null,
-              null != p
+              null != e
                 ? (0, s.jsx)(y.default, {
-                    type: p,
+                    type: e,
                     invertColor: a,
-                    className: o(m, d.bot),
+                    className: o(m, k.bot),
                     verified: c,
                     useRemSizes: f,
                   })
@@ -16579,6 +16817,20 @@
           });
         };
     },
+    62843: function (i, x, t) {
+      "use strict";
+      t.r(x),
+        t.d(x, {
+          MessagesInteractionContext: function () {
+            return a;
+          },
+        });
+      var s = t("884691");
+      let a = s.createContext({
+        disableInteractions: !1,
+        disableAnimations: !1,
+      });
+    },
   },
 ]);
-//# sourceMappingURL=15750.7a2933406d0e3b8b1aa6.js.map
+//# sourceMappingURL=20258.22c525c8c490cd6ead84.js.map

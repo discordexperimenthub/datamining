@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["84408"],
+  ["94726"],
   {
     875212: function (e, t, r) {
       "use strict";
@@ -42,23 +42,23 @@
             return I;
           },
           fetchCollectiblesProduct: function () {
-            return L;
-          },
-          claimPremiumCollectiblesProduct: function () {
-            return T;
-          },
-          validateCollectiblesRecipient: function () {
             return A;
           },
+          claimPremiumCollectiblesProduct: function () {
+            return S;
+          },
+          validateCollectiblesRecipient: function () {
+            return L;
+          },
           setCollectiblesCategoryItemsViewed: function () {
-            return p;
+            return T;
           },
         });
       var u = r("872717"),
         n = r("913144"),
         i = r("54239"),
-        s = r("448993"),
-        E = r("514296"),
+        E = r("448993"),
+        s = r("514296"),
         l = r("407788"),
         c = r("489134"),
         o = r("49111");
@@ -87,7 +87,7 @@
             });
             n.default.dispatch({
               type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-              categories: t.body.map(E.default.fromServer),
+              categories: t.body.map(s.default.fromServer),
             });
           } catch (e) {
             throw (
@@ -95,7 +95,7 @@
                 type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
                 error: e,
               }),
-              new s.APIError(e))
+              new E.APIError(e))
             );
           }
         },
@@ -113,11 +113,11 @@
                 type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
                 error: e,
               }),
-              new s.APIError(e))
+              new E.APIError(e))
             );
           }
         },
-        L = async (e, t) => {
+        A = async (e, t) => {
           n.default.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH" });
           try {
             let r = await u.default.get({
@@ -134,11 +134,11 @@
                 type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
                 error: e,
               }),
-              new s.APIError(e))
+              new E.APIError(e))
             );
           }
         },
-        T = async e => {
+        S = async e => {
           n.default.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
           try {
             var t;
@@ -161,11 +161,11 @@
                 skuId: e,
                 error: t,
               }),
-              new s.APIError(t))
+              new E.APIError(t))
             );
           }
         },
-        A = async (e, t) => {
+        L = async (e, t) => {
           try {
             let r = await u.default.get({
               url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -173,10 +173,10 @@
             });
             return r.body.valid;
           } catch (e) {
-            throw new s.APIError(e);
+            throw new E.APIError(e);
           }
         },
-        p = e => {
+        T = e => {
           n.default.dispatch({
             type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
             ...e,
@@ -195,8 +195,8 @@
       var u = r("635058"),
         n = r("265586"),
         i = r("446674"),
-        s = r("913144"),
-        E = r("853987");
+        E = r("913144"),
+        s = r("853987");
       let l = new Date(2023, 8, 25),
         c = new Date(2023, 9, 5),
         o = () => ({
@@ -229,7 +229,7 @@
         isItemViewed(e) {
           var t, r;
           let u =
-            null === (t = E.default.getProduct(e.skuId)) || void 0 === t
+            null === (t = s.default.getProduct(e.skuId)) || void 0 === t
               ? void 0
               : t.categorySkuId;
           return (
@@ -245,7 +245,7 @@
       }
       (C.displayName = "CollectiblesPersistedStore"),
         (C.persistKey = "CollectiblesPersistedStoreV2");
-      var _ = new C(s.default, {
+      var _ = new C(E.default, {
         COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
           let { categories: t, itemTypes: r } = e,
             u = new Date();
@@ -277,13 +277,13 @@
           },
         }),
         r("222007");
-      var s = r("917351"),
-        E = r("446674"),
+      var E = r("917351"),
+        s = r("446674"),
         l = r("913144");
       let c = new Map(),
         o = c,
         a = !1;
-      class C extends E.default.Store {
+      class C extends s.default.Store {
         get isFetching() {
           return a;
         }
@@ -311,7 +311,7 @@
         COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
           0 === e.purchases.length
             ? (o = c)
-            : !(0, s.isEqual)([...o.values()], e.purchases) &&
+            : !(0, E.isEqual)([...o.values()], e.purchases) &&
               (o = new Map(e.purchases.map(e => [e.skuId, e]))),
             (a = !1),
             (n = void 0);
@@ -326,7 +326,7 @@
         COLLECTIBLES_CLAIM_SUCCESS: e => {
           null == e.purchases || 0 === e.purchases.length
             ? (o = c)
-            : !(0, s.isEqual)([...o.values()], e.purchases) &&
+            : !(0, E.isEqual)([...o.values()], e.purchases) &&
               (o = new Map(e.purchases.map(e => [e.skuId, e]))),
             (u = void 0),
             (i = void 0);
@@ -351,15 +351,15 @@
         });
       var n = r("446674"),
         i = r("913144");
-      let s = [],
-        E = s,
+      let E = [],
+        s = E,
         l = null,
         c = e => {
-          (E = s), (l = null);
+          (s = E), (l = null);
         };
       class o extends n.default.Store {
         get analyticsLocations() {
-          return E;
+          return s;
         }
         get analyticsSource() {
           return l;
@@ -368,14 +368,14 @@
           return u;
         }
         getAnalytics() {
-          return { analyticsLocations: E, analyticsSource: l };
+          return { analyticsLocations: s, analyticsSource: l };
         }
       }
       o.displayName = "CollectiblesShopStore";
       var a = new o(i.default, {
         COLLECTIBLES_SHOP_OPEN: e => {
           var t, r;
-          (E = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s),
+          (s = null !== (t = e.analyticsLocations) && void 0 !== t ? t : E),
             (l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null),
             (u = e.initialProductSkuId);
         },
@@ -430,8 +430,8 @@
       var u,
         n = r("506838"),
         i = r("265586"),
-        s = r("797647"),
-        E = r("730297"),
+        E = r("797647"),
+        s = r("730297"),
         l = r("792382"),
         c = r("806410"),
         o = r("49111");
@@ -461,7 +461,7 @@
                         countryPrices: {
                           countryCode: u.country_prices.country_code,
                           prices: u.country_prices.prices.map(e =>
-                            (0, s.getPriceFromServer)(e, !0)
+                            (0, E.getPriceFromServer)(e, !0)
                           ),
                         },
                         paymentSourcePrices: {},
@@ -474,7 +474,7 @@
                 (0, n.match)(t)
                   .with(
                     { type: i.CollectiblesItemType.AVATAR_DECORATION },
-                    t => (e.push(E.default.fromServer(t)), e)
+                    t => (e.push(s.default.fromServer(t)), e)
                   )
                   .with(
                     { type: i.CollectiblesItemType.PROFILE_EFFECT },
@@ -533,33 +533,33 @@
       var u,
         n = r("656280"),
         i = r.n(n),
-        s = r("509043"),
-        E = r("666038");
+        E = r("509043"),
+        s = r("666038");
       let l = e =>
         null == e
           ? e
           : {
               backgroundColors: e.background_colors.map(e =>
-                i((0, s.int2hex)(e))
+                i((0, E.int2hex)(e))
               ),
-              buttonColors: e.button_colors.map(e => i((0, s.int2hex)(e))),
-              confettiColors: e.confetti_colors.map(e => i((0, s.int2hex)(e))),
+              buttonColors: e.button_colors.map(e => i((0, E.int2hex)(e))),
+              confettiColors: e.confetti_colors.map(e => i((0, E.int2hex)(e))),
             };
-      u = class e extends E.default {
+      u = class e extends s.default {
         static fromServer(t) {
           let {
               store_listing_id: r,
               sku_id: u,
               unpublished_at: n,
               styles: i,
-              ...s
+              ...E
             } = t,
-            E = null != n ? new Date(n) : null;
+            s = null != n ? new Date(n) : null;
           return new e({
-            ...s,
+            ...E,
             storeListingId: r,
             skuId: u,
-            unpublishedAt: E,
+            unpublishedAt: s,
             styles: l(i),
           });
         }
@@ -607,19 +607,19 @@
             return I;
           },
           HOME_HEADER_MAX_HEIGHT: function () {
-            return L;
-          },
-          BANNER_ASPECT_RATIO: function () {
-            return T;
-          },
-          GUILD_BANNER_ASPECT_RATIO: function () {
             return A;
           },
+          BANNER_ASPECT_RATIO: function () {
+            return S;
+          },
+          GUILD_BANNER_ASPECT_RATIO: function () {
+            return L;
+          },
           SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function () {
-            return p;
+            return T;
           },
           HOME_HEADER_ASPECT_RATIO: function () {
-            return S;
+            return p;
           },
           MAX_BANNER_OVERLAY_HEIGHT: function () {
             return f;
@@ -640,14 +640,14 @@
             return m;
           },
           MessageTypes: function () {
-            return s;
+            return E;
           },
         });
       var u,
         n,
         i,
-        s,
-        E = r("917219");
+        E,
+        s = r("917219");
       ((u = i || (i = {}))[(u.AVATAR = 0)] = "AVATAR"),
         (u[(u.BANNER = 1)] = "BANNER"),
         (u[(u.GUILD_BANNER = 2)] = "GUILD_BANNER"),
@@ -663,23 +663,92 @@
         _ = 2400,
         d = 960,
         I = 2400,
-        L = 600,
-        T = 17 / 6,
-        A = 16 / 9,
-        p = 2.5,
-        S = 4,
-        f = l / T,
-        O = l / A,
-        R = l / p,
-        y = l / S,
+        A = 600,
+        S = 17 / 6,
+        L = 16 / 9,
+        T = 2.5,
+        p = 4,
+        f = l / S,
+        O = l / L,
+        R = l / T,
+        y = l / p,
         h =
-          E.BACKGROUND_REPLACEMENT_SIZE.width /
-          E.BACKGROUND_REPLACEMENT_SIZE.height,
+          s.BACKGROUND_REPLACEMENT_SIZE.width /
+          s.BACKGROUND_REPLACEMENT_SIZE.height,
         m = l / h;
-      ((n = s || (s = {}))[(n.CROP_GIF_START = 0)] = "CROP_GIF_START"),
+      ((n = E || (E = {}))[(n.CROP_GIF_START = 0)] = "CROP_GIF_START"),
         (n[(n.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
         (n[(n.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR");
     },
+    600785: function (e, t, r) {
+      "use strict";
+      r.r(t),
+        r.d(t, {
+          default: function () {
+            return s;
+          },
+        });
+      var u = r("37983");
+      r("884691");
+      var n = r("469563"),
+        i = r("434657"),
+        E = r("75196"),
+        s = (0, n.replaceIcon)(
+          function (e) {
+            let {
+              width: t = 24,
+              height: r = 24,
+              color: n = "currentColor",
+              foreground: i,
+              ...s
+            } = e;
+            return (0, u.jsx)("svg", {
+              ...(0, E.default)(s),
+              width: t,
+              height: r,
+              viewBox: "0 0 24 24",
+              children: (0, u.jsx)("path", {
+                className: i,
+                fill: n,
+                id: "a",
+                d: "M17 11V7C17 4.243 14.756 2 12 2C9.242 2 7 4.243 7 7V11C5.897 11 5 11.896 5 13V20C5 21.103 5.897 22 7 22H17C18.103 22 19 21.103 19 20V13C19 11.896 18.103 11 17 11ZM12 18C11.172 18 10.5 17.328 10.5 16.5C10.5 15.672 11.172 15 12 15C12.828 15 13.5 15.672 13.5 16.5C13.5 17.328 12.828 18 12 18ZM15 11H9V7C9 5.346 10.346 4 12 4C13.654 4 15 5.346 15 7V11Z",
+              }),
+            });
+          },
+          i.LockIcon,
+          void 0,
+          { size: 24 }
+        );
+    },
+    719347: function (e, t, r) {
+      "use strict";
+      var u, n;
+      r.r(t),
+        r.d(t, {
+          MEDIA_MOSAIC_MAX_WIDTH: function () {
+            return i;
+          },
+          MEDIA_MOSAIC_MAX_HEIGHT: function () {
+            return E;
+          },
+          MINIMUM_MEDIA_MOSAIC_DIM: function () {
+            return s;
+          },
+          MediaLayoutType: function () {
+            return u;
+          },
+          SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE: function () {
+            return l;
+          },
+        });
+      let i = 550,
+        E = 350,
+        s = 40;
+      ((n = u || (u = {})).STATIC = "STATIC"),
+        (n.RESPONSIVE = "RESPONSIVE"),
+        (n.MOSAIC = "MOSAIC");
+      let l = 20;
+    },
   },
 ]);
-//# sourceMappingURL=84408.4ada388609f7ddfe0b3e.js.map
+//# sourceMappingURL=94726.a50866dc5725be265eb5.js.map

@@ -1,40 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["63550"],
+  ["46224"],
   {
-    310013: function (t, e, n) {
-      "use strict";
-      var o = {
-          childContextTypes: !0,
-          contextTypes: !0,
-          defaultProps: !0,
-          displayName: !0,
-          getDefaultProps: !0,
-          mixins: !0,
-          propTypes: !0,
-          type: !0,
-        },
-        r = {
-          name: !0,
-          length: !0,
-          prototype: !0,
-          caller: !0,
-          arguments: !0,
-          arity: !0,
-        },
-        i = "function" == typeof Object.getOwnPropertySymbols;
-      t.exports = function (t, e, n) {
-        if ("string" != typeof e) {
-          var s = Object.getOwnPropertyNames(e);
-          i && (s = s.concat(Object.getOwnPropertySymbols(e)));
-          for (var h = 0; h < s.length; ++h)
-            if (!o[s[h]] && !r[s[h]] && (!n || !n[s[h]]))
-              try {
-                t[s[h]] = e[s[h]];
-              } catch (t) {}
-        }
-        return t;
-      };
-    },
     6268: function (t, e, n) {
       n("70102"),
         n("424973"),
@@ -67,10 +33,10 @@
               (this.isIntersecting = !!t.intersectionRect);
             var e = this.boundingClientRect,
               n = e.width * e.height,
-              o = this.intersectionRect,
-              r = o.width * o.height;
+              i = this.intersectionRect,
+              o = i.width * i.height;
             n
-              ? (this.intersectionRatio = r / n)
+              ? (this.intersectionRatio = o / n)
               : (this.intersectionRatio = this.isIntersecting ? 1 : 0);
           }
           function IntersectionObserver(t, e) {
@@ -173,8 +139,8 @@
                         this._checkForIntersections,
                         this.POLL_INTERVAL
                       ))
-                    : (o(t, "resize", this._checkForIntersections, !0),
-                      o(e, "scroll", this._checkForIntersections, !0),
+                    : (i(t, "resize", this._checkForIntersections, !0),
+                      i(e, "scroll", this._checkForIntersections, !0),
                       this.USE_MUTATION_OBSERVER &&
                         "MutationObserver" in t &&
                         ((this._domObserver = new MutationObserver(
@@ -193,8 +159,8 @@
                   ((this._monitoringIntersections = !1),
                   clearInterval(this._monitoringInterval),
                   (this._monitoringInterval = null),
-                  r(t, "resize", this._checkForIntersections, !0),
-                  r(e, "scroll", this._checkForIntersections, !0),
+                  o(t, "resize", this._checkForIntersections, !0),
+                  o(e, "scroll", this._checkForIntersections, !0),
                   this._domObserver &&
                     (this._domObserver.disconnect(),
                     (this._domObserver = null)));
@@ -203,87 +169,87 @@
               function () {
                 var e = this._rootIsInDom(),
                   n = e ? this._getRootRect() : s();
-                this._observationTargets.forEach(function (o) {
-                  var r = o.element,
-                    s = i(r),
-                    h = this._rootContainsTarget(r),
-                    c = o.entry,
-                    a = e && h && this._computeTargetAndRootIntersection(r, n),
-                    u = (o.entry = new IntersectionObserverEntry({
+                this._observationTargets.forEach(function (i) {
+                  var o = i.element,
+                    s = r(o),
+                    h = this._rootContainsTarget(o),
+                    c = i.entry,
+                    u = e && h && this._computeTargetAndRootIntersection(o, n),
+                    a = (i.entry = new IntersectionObserverEntry({
                       time: (function () {
                         return (
                           t.performance && performance.now && performance.now()
                         );
                       })(),
-                      target: r,
+                      target: o,
                       boundingClientRect: s,
                       rootBounds: n,
-                      intersectionRect: a,
+                      intersectionRect: u,
                     }));
                   c
                     ? e && h
-                      ? this._hasCrossedThreshold(c, u) &&
-                        this._queuedEntries.push(u)
-                      : c && c.isIntersecting && this._queuedEntries.push(u)
-                    : this._queuedEntries.push(u);
+                      ? this._hasCrossedThreshold(c, a) &&
+                        this._queuedEntries.push(a)
+                      : c && c.isIntersecting && this._queuedEntries.push(a)
+                    : this._queuedEntries.push(a);
                 }, this),
                   this._queuedEntries.length &&
                     this._callback(this.takeRecords(), this);
               }),
             (IntersectionObserver.prototype._computeTargetAndRootIntersection =
-              function (n, o) {
+              function (n, i) {
                 if ("none" != t.getComputedStyle(n).display) {
-                  for (var r = i(n), s = c(n), h = !1; !h; ) {
-                    var a = null,
-                      u = 1 == s.nodeType ? t.getComputedStyle(s) : {};
-                    if ("none" == u.display) return;
+                  for (var o = r(n), s = c(n), h = !1; !h; ) {
+                    var u = null,
+                      a = 1 == s.nodeType ? t.getComputedStyle(s) : {};
+                    if ("none" == a.display) return;
                     if (
                       (s == this.root || s == e
-                        ? ((h = !0), (a = o))
+                        ? ((h = !0), (u = i))
                         : s != e.body &&
                           s != e.documentElement &&
-                          "visible" != u.overflow &&
-                          (a = i(s)),
-                      a &&
-                        !(r = (function (t, e) {
+                          "visible" != a.overflow &&
+                          (u = r(s)),
+                      u &&
+                        !(o = (function (t, e) {
                           var n = Math.max(t.top, e.top),
-                            o = Math.min(t.bottom, e.bottom),
-                            r = Math.max(t.left, e.left),
-                            i = Math.min(t.right, e.right),
-                            s = i - r,
-                            h = o - n;
+                            i = Math.min(t.bottom, e.bottom),
+                            o = Math.max(t.left, e.left),
+                            r = Math.min(t.right, e.right),
+                            s = r - o,
+                            h = i - n;
                           return (
                             s >= 0 &&
                             h >= 0 && {
                               top: n,
-                              bottom: o,
-                              left: r,
-                              right: i,
+                              bottom: i,
+                              left: o,
+                              right: r,
                               width: s,
                               height: h,
                             }
                           );
-                        })(a, r)))
+                        })(u, o)))
                     )
                       break;
                     s = c(s);
                   }
-                  return r;
+                  return o;
                 }
               }),
             (IntersectionObserver.prototype._getRootRect = function () {
               var t;
-              if (this.root) t = i(this.root);
+              if (this.root) t = r(this.root);
               else {
                 var n = e.documentElement,
-                  o = e.body;
+                  i = e.body;
                 t = {
                   top: 0,
                   left: 0,
-                  right: n.clientWidth || o.clientWidth,
-                  width: n.clientWidth || o.clientWidth,
-                  bottom: n.clientHeight || o.clientHeight,
-                  height: n.clientHeight || o.clientHeight,
+                  right: n.clientWidth || i.clientWidth,
+                  width: n.clientWidth || i.clientWidth,
+                  bottom: n.clientHeight || i.clientHeight,
+                  height: n.clientHeight || i.clientHeight,
                 };
               }
               return this._expandRectByRootMargin(t);
@@ -311,11 +277,11 @@
               e
             ) {
               var n = t && t.isIntersecting ? t.intersectionRatio || 0 : -1,
-                o = e.isIntersecting ? e.intersectionRatio || 0 : -1;
-              if (n !== o)
-                for (var r = 0; r < this.thresholds.length; r++) {
-                  var i = this.thresholds[r];
-                  if (i == n || i == o || i < n != i < o) return !0;
+                i = e.isIntersecting ? e.intersectionRatio || 0 : -1;
+              if (n !== i)
+                for (var o = 0; o < this.thresholds.length; o++) {
+                  var r = this.thresholds[o];
+                  if (r == n || r == i || r < n != r < i) return !0;
                 }
             }),
             (IntersectionObserver.prototype._rootIsInDom = function () {
@@ -331,19 +297,19 @@
               var t = n.indexOf(this);
               -1 != t && n.splice(t, 1);
             });
-          function o(t, e, n, o) {
+          function i(t, e, n, i) {
             "function" == typeof t.addEventListener
-              ? t.addEventListener(e, n, o || !1)
+              ? t.addEventListener(e, n, i || !1)
               : "function" == typeof t.attachEvent &&
                 t.attachEvent("on" + e, n);
           }
-          function r(t, e, n, o) {
+          function o(t, e, n, i) {
             "function" == typeof t.removeEventListener
-              ? t.removeEventListener(e, n, o || !1)
+              ? t.removeEventListener(e, n, i || !1)
               : "function" == typeof t.detatchEvent &&
                 t.detatchEvent("on" + e, n);
           }
-          function i(t) {
+          function r(t) {
             var e;
             try {
               e = t.getBoundingClientRect();
@@ -388,4 +354,4 @@
     },
   },
 ]);
-//# sourceMappingURL=63550.a619020e4c7b3d5be7ac.js.map
+//# sourceMappingURL=46224.001f28ac67d0eec68d7b.js.map

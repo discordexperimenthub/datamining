@@ -1423,7 +1423,7 @@
         n.registerLanguage("verilog", a("435980")),
         n.registerLanguage("vhdl", a("656272")),
         n.registerLanguage("vim", a("210009")),
-        n.registerLanguage("wasm", a("677930")),
+        n.registerLanguage("wasm", a("9119")),
         n.registerLanguage("wren", a("736338")),
         n.registerLanguage("x86asm", a("850605")),
         n.registerLanguage("xl", a("94458")),
@@ -39267,7 +39267,7 @@
         };
       };
     },
-    677930: function (e, t, a) {
+    9119: function (e, t, a) {
       a("424973");
       e.exports = function (e) {
         e.regex;
@@ -40381,4 +40381,4 @@
     },
   },
 ]);
-//# sourceMappingURL=95569.3cf9d01d9b7b6b85fb2b.js.map
+//# sourceMappingURL=95569.986be2e499cd6f7ea4e7.js.map

@@ -25914,8 +25914,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266128", ", Version Hash: ")
-          .concat("9e23c9145abb5f862e3f10cf34c5f1a99a25c58c")
+          .concat("266133", ", Version Hash: ")
+          .concat("87609789fe6d8523abf518b5a3da07dfceff1aa7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -27709,6 +27709,7 @@
             "MESSAGE_CREATE",
             "MESSAGE_UPDATE",
             "SEARCH_FINISH",
+            "MOD_VIEW_SEARCH_FINISH",
             "LOAD_FORUM_POSTS",
             "LOAD_ARCHIVED_THREADS_SUCCESS",
             "LOAD_THREADS_SUCCESS",
@@ -27866,6 +27867,7 @@
             "LOAD_RECENT_MENTIONS_SUCCESS",
             "LOAD_PINNED_MESSAGES_SUCCESS",
             "SEARCH_FINISH",
+            "MOD_VIEW_SEARCH_FINISH",
             "GUILD_FEED_FETCH_SUCCESS",
           ],
           inlineRequire: () => E("149681").default,
@@ -28995,12 +28997,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266128"), "266128"));
+        let _ = parseInt(((e = "266133"), "266133"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266128"
+                "266133"
               )
             ),
             (_ = 0)),
@@ -29893,6 +29895,7 @@
               LOAD_RECENT_MENTIONS_SUCCESS: this.handleLoadRecentMentions,
               LOAD_PINNED_MESSAGES_SUCCESS: this.handleLoadPinnedMessages,
               SEARCH_FINISH: this.handleSearchFinish,
+              MOD_VIEW_SEARCH_FINISH: this.handleSearchFinish,
               GUILD_FEED_FETCH_SUCCESS: this.handleGuildFeedFetchSuccess,
               CHANNEL_SELECT: {
                 callback: this.handleChannelSelect,
@@ -50032,4 +50035,4 @@
     },
   },
 ]);
-//# sourceMappingURL=62067.04e19a923b21800d813a.js.map
+//# sourceMappingURL=62067.e7e58a08df6ac17a7b52.js.map

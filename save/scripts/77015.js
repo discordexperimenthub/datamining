@@ -491,13 +491,13 @@
           );
         null == t && !__OVERLAY__ && !U && m && e && (K(v), (U = !0));
       }
-      function w() {
+      function H() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         (U || e) && (V(v.id), (U = !1));
       }
-      function H(e) {
+      function w(e) {
         let { showKeybindIndicators: t } = e;
-        t ? Y() : w(!0);
+        t ? Y() : H(!0);
       }
       function V(e) {
         if (f.isPlatformEmbedded)
@@ -535,7 +535,7 @@
         }
         let l = e.id,
           i = b[n].keyEvents;
-        e.action === D.GlobalKeybindActions.TOGGLE_MUTE && w(),
+        e.action === D.GlobalKeybindActions.TOGGLE_MUTE && H(),
           !(function (e, t, n, a) {
             if (f.isPlatformEmbedded)
               N.default.inputEventRegister(parseInt(e), t, n, a);
@@ -869,7 +869,7 @@
           (m = t),
             t
               ? (O.default.enable(), s.forEach(P, K), Y())
-              : (O.default.disable(), s.forEach(P, e => V(e.id)), w());
+              : (O.default.disable(), s.forEach(P, e => V(e.id)), H());
         },
         KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function (e) {
           let { keybinds: t } = e;
@@ -888,7 +888,7 @@
             }),
             (m = !0),
             null == a &&
-              (a = T.default.subscribe({ location: "KeybindsStore" }, H));
+              (a = T.default.subscribe({ location: "KeybindsStore" }, w));
         },
       });
     },
@@ -961,8 +961,8 @@
       let U = {},
         M = new Map(),
         Y = !1,
-        w = new Set(),
         H = new Set(),
+        w = new Set(),
         V = !1,
         K = !1,
         W = null,
@@ -1065,6 +1065,7 @@
           "SEARCH_EDITOR_STATE_CLEAR",
           "SEARCH_START",
           "SEARCH_FINISH",
+          "MOD_VIEW_SEARCH_FINISH",
           "SEARCH_INDEXING",
           "SEARCH_CLEAR",
           "SEARCH_ENSURE_SEARCH_STATE",
@@ -1617,24 +1618,24 @@
                 ),
               },
             }),
-          w.add(e),
+          H.add(e),
           null == l && (l = setTimeout(eL, 1)),
           !1)
         );
       }
       function eL() {
         if ((null != l && (clearTimeout(l), (l = null)), !Y)) {
-          w.clear();
+          H.clear();
           return;
         }
-        w.size > 0 &&
+        H.size > 0 &&
           (I.send({
             type: m.OverlayEventTypes.DISPATCH,
             pid: null,
             token: null,
-            payloads: Array.from(w),
+            payloads: Array.from(H),
           }),
-          w.clear());
+          H.clear());
       }
       function eC(e) {
         return null != e && (0, v.constantTimeCompare)(e, F);
@@ -1686,7 +1687,7 @@
       class ey extends d.default.Store {
         initialize() {
           !(!b.OVERLAY_SUPPORTED || __OVERLAY__) &&
-            (H.add(b.OverlayMethod.Hook),
+            (w.add(b.OverlayMethod.Hook),
             this.waitFor(p.default, C.default),
             I.setReceiveCommandHandler(eD, eC),
             C.default.addChangeListener(eO),
@@ -1700,7 +1701,7 @@
           return b.OVERLAY_SUPPORTED;
         }
         isMethodSupported(e) {
-          return b.OVERLAY_SUPPORTED && H.has(e);
+          return b.OVERLAY_SUPPORTED && w.has(e);
         }
         get enabled() {
           return V;
@@ -1800,7 +1801,7 @@
                 let l = new URLSearchParams();
                 l.append(
                   "build_id",
-                  "9e23c9145abb5f862e3f10cf34c5f1a99a25c58c"
+                  "87609789fe6d8523abf518b5a3da07dfceff1aa7"
                 ),
                   l.append("rpc", String(t)),
                   l.append("rpc_auth_token", F),
@@ -1968,4 +1969,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77015.422a7b350e2d8e2dca24.js.map
+//# sourceMappingURL=77015.550b66c609169a17990b.js.map

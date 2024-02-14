@@ -41533,6 +41533,7 @@
               MESSAGE_UPDATE: G,
               LOGOUT: N,
               SEARCH_FINISH: B,
+              MOD_VIEW_SEARCH_FINISH: B,
               CHANNEL_SELECT: j,
               LOAD_PINNED_MESSAGES_SUCCESS: B,
               USER_SETTINGS_PROTO_UPDATE: K,
@@ -42025,7 +42026,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return _;
+            return c;
           },
         }),
         n("808653");
@@ -42038,32 +42039,34 @@
       function u(e) {
         return "".concat(e.channel_id, ":").concat(e.id);
       }
-      function l() {
+      function l(e) {
+        return (
+          !!(0, a.isEligibleForExplicitMediaRedaction)() &&
+          null != e.messages &&
+          ((d = e.messages.reduce(
+            (e, t) => (
+              t.forEach(t => {
+                e[u(t)] = (0, r.createMessageRecord)(t);
+              }),
+              e
+            ),
+            {}
+          )),
+          !0)
+        );
+      }
+      function f() {
         d = {};
       }
-      class f extends s.default.Store {
+      class _ extends s.default.Store {
         getMessage(e, t) {
           return d[u({ id: e, channel_id: t })];
         }
       }
-      f.displayName = "SearchMessageStore";
-      var _ = new f(i.default, {
-        SEARCH_FINISH: function (e) {
-          return (
-            !!(0, a.isEligibleForExplicitMediaRedaction)() &&
-            null != e.messages &&
-            ((d = e.messages.reduce(
-              (e, t) => (
-                t.forEach(t => {
-                  e[u(t)] = (0, r.createMessageRecord)(t);
-                }),
-                e
-              ),
-              {}
-            )),
-            !0)
-          );
-        },
+      _.displayName = "SearchMessageStore";
+      var c = new _(i.default, {
+        SEARCH_FINISH: l,
+        MOD_VIEW_SEARCH_FINISH: l,
         MESSAGE_UPDATE: function (e) {
           let { message: t } = e;
           if (
@@ -55305,7 +55308,7 @@
             return s;
           },
           default: function () {
-            return N;
+            return O;
           },
         }),
         n("222007"),
@@ -55447,20 +55450,24 @@
         return y(t, e => p(e));
       }
       function C(e) {
+        let { messages: t } = e;
+        return y(t, e => y(e, e => p(e)));
+      }
+      function I(e) {
         return E.deleteChannelCache(e.channel.id);
       }
-      function I(e, t) {
+      function S(e, t) {
         if (!E.has(e, t)) return !1;
         E.set(e, t, { state: 2 });
       }
-      function S() {
+      function A() {
         E.clear();
       }
-      function A(e) {
+      function D(e) {
         let { firstMessages: t } = e;
         return null != t && y(t, e => p(e));
       }
-      class D extends o.default.Store {
+      class N extends o.default.Store {
         initialize() {
           this.waitFor(c.default, _.default);
         }
@@ -55483,8 +55490,8 @@
           );
         }
       }
-      D.displayName = "ReferencedMessageStore";
-      var N = new D(d.default, {
+      N.displayName = "ReferencedMessageStore";
+      var O = new N(d.default, {
         CACHE_LOADED: function (e) {
           let { messages: t } = e;
           return y(Object.values(t), e => y(Object.values(e), e => p(e)));
@@ -55492,17 +55499,15 @@
         LOCAL_MESSAGES_LOADED: T,
         LOAD_MESSAGES_SUCCESS: T,
         LOAD_MESSAGES_AROUND_SUCCESS: T,
-        SEARCH_FINISH: function (e) {
-          let { messages: t } = e;
-          return y(t, e => y(e, e => p(e)));
-        },
+        SEARCH_FINISH: C,
+        MOD_VIEW_SEARCH_FINISH: C,
         GUILD_FEED_FETCH_SUCCESS: function (e) {
           let { data: t } = e,
             n = (0, l.getMessagesFromGuildFeedFetch)(t);
           return y(n, e => p(e));
         },
-        LOAD_THREADS_SUCCESS: A,
-        LOAD_ARCHIVED_THREADS_SUCCESS: A,
+        LOAD_THREADS_SUCCESS: D,
+        LOAD_ARCHIVED_THREADS_SUCCESS: D,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
           let { messageId: t, channelId: n } = e;
           if (!E.has(n, t)) return !1;
@@ -55538,24 +55543,24 @@
         },
         MESSAGE_DELETE: function (e) {
           let { id: t, channelId: n } = e;
-          return I(n, t);
+          return S(n, t);
         },
         MESSAGE_DELETE_BULK: function (e) {
           let { ids: t, channelId: n } = e;
-          return y(t, e => I(n, e));
+          return y(t, e => S(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
           let { message: t } = e;
           E.set(t.channel_id, t.id, { state: 0, message: t });
         },
-        CHANNEL_DELETE: C,
-        THREAD_DELETE: C,
+        CHANNEL_DELETE: I,
+        THREAD_DELETE: I,
         GUILD_DELETE: function () {
           let e = E.retainWhere(e => null != _.default.getChannel(e));
           if (0 === e) return !1;
         },
-        CONNECTION_OPEN: S,
-        LOGOUT: S,
+        CONNECTION_OPEN: A,
+        LOGOUT: A,
       });
     },
     925880: function (e, t, n) {
@@ -58972,6 +58977,7 @@
         LOAD_THREADS_SUCCESS: A,
         LOAD_ARCHIVED_THREADS_SUCCESS: A,
         SEARCH_FINISH: A,
+        MOD_VIEW_SEARCH_FINISH: A,
         GUILD_CREATE: function (e) {
           let { guild: t } = e;
           return D(t.id);
@@ -65569,7 +65575,7 @@
             return eI;
           },
           default: function () {
-            return eQ;
+            return eZ;
           },
         }),
         n("222007"),
@@ -66299,7 +66305,7 @@
                     P.default.getThreadsForParent(n.guild_id, s)
                   ).every(
                     e =>
-                      eX.hasOpenedThread(e) ||
+                      eQ.hasOpenedThread(e) ||
                       0 > F.default.compare(e, i.ackMessageId)
                   ) &&
                   i.ack({});
@@ -66752,40 +66758,53 @@
         eb(t);
       }
       function eH(e) {
+        let { messages: t, threads: n } = e;
+        for (let e of t)
+          eb(
+            e
+              .map(e => {
+                let { thread: t } = e;
+                return t;
+              })
+              .filter(U.isNotNullish)
+          );
+        eb(n);
+      }
+      function eB(e) {
         let t = $.default.getCurrentUser();
         return null != e.creator_id && null != t && e.creator_id === t.id;
       }
-      function eB(e) {
+      function ex(e) {
         let { channel: t } = e;
         return eO.clear(t.id);
       }
-      function ex() {
+      function eY() {
         let e = B.default.getCurrentSidebarChannelId(ed),
           t = !1;
-        return eu !== e ? ((t = ej(eu)), (eu = e)) : (t = ew(e) || t), t;
+        return eu !== e ? ((t = eK(eu)), (eu = e)) : (t = ew(e) || t), t;
       }
-      function eY(e) {
+      function ej(e) {
         if (null == e) return;
         let t = eO.get(e);
         t.isManualAck = !1;
       }
-      function ej(e) {
+      function eK(e) {
         if (null == e) return !1;
         let t = eO.get(e);
         return !t.hasUnread() && ((t.oldestUnreadMessageId = null), !0);
       }
-      function eK(e) {
+      function eW(e) {
         let { channelId: t, messageId: n, manual: s, newMentionCount: i } = e,
           r = eO.get(t);
         return s
           ? (r.rebuildChannelState(n, !0, i), !0)
           : n !== r._ackMessageId && r.ack({ messageId: n, local: !0 });
       }
-      function eW(e) {
+      function ez(e) {
         let { id: t, ackType: n, ackedId: s, local: i } = e;
-        return ez(t, n, s, i);
+        return eq(t, n, s, i);
       }
-      function ez(e, t, n, s) {
+      function eq(e, t, n, s) {
         var i;
         let r = eO.get(e, t);
         return (
@@ -66799,7 +66818,7 @@
           r.ack({ messageId: n, local: null == s || s }))
         );
       }
-      class eq extends l.default.Store {
+      class eX extends l.default.Store {
         initialize() {
           this.waitFor(
             Y.default,
@@ -66824,7 +66843,7 @@
             R.default,
             I.default
           ),
-            this.syncWith([B.default], ex);
+            this.syncWith([B.default], eY);
         }
         getReadStatesByChannel() {
           var e;
@@ -67057,8 +67076,8 @@
             : n.snapshot;
         }
       }
-      eq.displayName = "ReadStateStore";
-      let eX = new eq(g.default, {
+      eX.displayName = "ReadStateStore";
+      let eQ = new eX(g.default, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
           let { changesByChannelId: t } = e;
           for (let e in t) {
@@ -67258,7 +67277,7 @@
           if (null != r.author && null != d && r.author.id === d.id)
             return (
               null != o.outgoingAck && o.clearOutgoingAck(),
-              eK({ channelId: i, messageId: r.id, manual: !1 })
+              eW({ channelId: i, messageId: r.id, manual: !1 })
             );
           let l = (0, y.getRootNavigationRefIfInExperiment)();
           if ((null == l ? void 0 : l.isReady()) === !0) {
@@ -67323,7 +67342,7 @@
         },
         MESSAGE_DELETE: eG,
         MESSAGE_DELETE_BULK: eG,
-        MESSAGE_ACK: eK,
+        MESSAGE_ACK: eW,
         CHANNEL_ACK: function (e) {
           let {
               channelId: t,
@@ -67379,10 +67398,10 @@
                 : F.default.fromTimestamp(e.getAckTimestamp())),
               e.recordLastViewedTime();
           }
-          eY(ed), eY(eu);
+          ej(ed), ej(eu);
           let r = !1;
           return (
-            ed !== t && ((r = ej(ed) || r), (r = ej(eu) || r)),
+            ed !== t && ((r = eK(ed) || r), (r = eK(eu) || r)),
             (ed === t ||
               ((null == s ? void 0 : s.type) != null &&
                 et.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type))) &&
@@ -67428,7 +67447,7 @@
               if (e.ownerId === (null == s ? void 0 : s.id)) {
                 let n = eO.get(e.id);
                 (n._persisted = !0),
-                  eK({ channelId: t, messageId: e.id, manual: !1 });
+                  eW({ channelId: t, messageId: e.id, manual: !1 });
               }
             })(t);
         },
@@ -67460,19 +67479,8 @@
         },
         LOAD_THREADS_SUCCESS: eF,
         LOAD_ARCHIVED_THREADS_SUCCESS: eF,
-        SEARCH_FINISH: function (e) {
-          let { messages: t, threads: n } = e;
-          for (let e of t)
-            eb(
-              e
-                .map(e => {
-                  let { thread: t } = e;
-                  return t;
-                })
-                .filter(U.isNotNullish)
-            );
-          eb(n);
-        },
+        SEARCH_FINISH: eH,
+        MOD_VIEW_SEARCH_FINISH: eH,
         THREAD_MEMBER_UPDATE: function (e) {
           let { id: t } = e;
           return eO.get(t).syncThreadSettings();
@@ -67483,8 +67491,8 @@
             eO.get(e.id).syncThreadSettings()
           );
         },
-        CHANNEL_DELETE: eB,
-        THREAD_DELETE: eB,
+        CHANNEL_DELETE: ex,
+        THREAD_DELETE: ex,
         WINDOW_FOCUS: function (e) {
           let t = !1;
           for (let [n, s] of Object.entries(em))
@@ -67523,7 +67531,7 @@
             o = i.filter(
               e =>
                 null != e.messageId &&
-                eX.hasUnread(e.channelId, e.readStateType)
+                eQ.hasUnread(e.channelId, e.readStateType)
             );
           (t = o),
             (n = r),
@@ -67565,13 +67573,13 @@
           let { channelId: t } = e;
           return (em[t] = void 0), !1;
         },
-        GUILD_FEATURE_ACK: eW,
+        GUILD_FEATURE_ACK: ez,
         GUILD_SCHEDULED_EVENT_CREATE: function (e) {
           let { guildScheduledEvent: t } = e,
             n = t.guild_id,
             s = eO.get(t.guild_id, er.ReadStateTypes.GUILD_EVENT);
-          if (((s.lastMessageId = t.id), eH(t))) {
-            eW({
+          if (((s.lastMessageId = t.id), eB(t))) {
+            ez({
               type: "GUILD_FEATURE_ACK",
               id: n,
               ackType: er.ReadStateTypes.GUILD_EVENT,
@@ -67586,7 +67594,7 @@
           let { guildScheduledEvent: t } = e,
             n = t.guild_id;
           if (
-            eH(t) ||
+            eB(t) ||
             ![
               ei.GuildScheduledEventStatus.CANCELED,
               ei.GuildScheduledEventStatus.COMPLETED,
@@ -67599,7 +67607,7 @@
         GUILD_SCHEDULED_EVENT_DELETE: function (e) {
           let { guildScheduledEvent: t } = e,
             n = t.guild_id;
-          if (eH(t)) return !1;
+          if (eB(t)) return !1;
           let s = eO.get(t.guild_id, er.ReadStateTypes.GUILD_EVENT);
           s.handleGuildEventRemoval(n, t.id);
         },
@@ -67634,7 +67642,7 @@
           let i = eO.get(s, er.ReadStateTypes.NOTIFICATION_CENTER);
           i.lastMessageId = n.id;
           if ((0, A.default.active)) {
-            ez(s, er.ReadStateTypes.NOTIFICATION_CENTER, n.id, !1);
+            eq(s, er.ReadStateTypes.NOTIFICATION_CENTER, n.id, !1);
             return;
           }
           i.mentionCount++;
@@ -67661,7 +67669,7 @@
           r < i &&
             ((n.lastMessageId = F.default.fromTimestamp(i)),
             (0, A.default.active)
-              ? ez(t.id, er.ReadStateTypes.NOTIFICATION_CENTER, void 0, !1)
+              ? eq(t.id, er.ReadStateTypes.NOTIFICATION_CENTER, void 0, !1)
               : s
                 ? n.mentionCount--
                 : n.mentionCount++);
@@ -67706,7 +67714,7 @@
               null === (t = $.default.getCurrentUser()) || void 0 === t
                 ? void 0
                 : t.id;
-          return null != r && ez(r, n, s, i);
+          return null != r && eq(r, n, s, i);
         },
         PASSIVE_UPDATE_V1: function (e) {
           var t;
@@ -67723,14 +67731,14 @@
         },
         CLEAR_OLDEST_UNREAD_MESSAGE: function (e) {
           let { channelId: t } = e;
-          return ej(t);
+          return eK(t);
         },
         TRY_ACK: function (e) {
           let { channelId: t } = e;
           return ew(t);
         },
       });
-      var eQ = eX;
+      var eZ = eQ;
     },
     744983: function (e, t, n) {
       "use strict";
@@ -76681,4 +76689,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23303.bb9a5614fc670630af1c.js.map
+//# sourceMappingURL=23303.c375695b1365c446e626.js.map

@@ -23613,7 +23613,8 @@
           "NoFiltr is a community that empowers young people to safely navigate online.",
         SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON: "Visit",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Take a break",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE: "Relax with Wumpus.",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
+          "Listen to Lofi Beats with Wumpus.",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relax",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Safety tips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
@@ -25918,8 +25919,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266185", ", Version Hash: ")
-          .concat("329c4c527f55e14261fa31b5bd8c46e7d410636a")
+          .concat("266191", ", Version Hash: ")
+          .concat("fe7a3dcd75960bb8d13941bff8f46c3d6999b46a")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29001,12 +29002,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266185"), "266185"));
+        let _ = parseInt(((e = "266191"), "266191"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266185"
+                "266191"
               )
             ),
             (_ = 0)),
@@ -50039,4 +50040,4 @@
     },
   },
 ]);
-//# sourceMappingURL=62067.6c33a47cf52a8cb01310.js.map
+//# sourceMappingURL=62067.7333ac8aa95494ce553e.js.map

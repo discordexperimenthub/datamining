@@ -2326,7 +2326,7 @@
         L = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
         O = /^\/channels\/([0-9]+)\/shop$/,
         h = /^\/clyde-profiles\/([0-9-]+)\/?$/,
-        P = /^dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+$/i,
+        P = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
         g = w(window.GLOBAL_ENV.INVITE_HOST),
         m = w(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
         y = w(
@@ -5784,4 +5784,4 @@
     },
   },
 ]);
-//# sourceMappingURL=71554.61f7e87813a706aa90eb.js.map
+//# sourceMappingURL=71554.effa7a07b4c85f04d0d3.js.map

@@ -5496,6 +5496,12 @@
           "voice_channel_game_activity_indicator_viewed"),
         (Is.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED =
           "voice_channel_game_activity_indicator_hovered"),
+        (Is.VOICE_CHANNEL_BACKGROUND_PICKER_OPENED =
+          "voice_channel_background_picker_opened"),
+        (Is.VOICE_CHANNEL_BACKGROUND_SELECTED =
+          "voice_channel_background_selected"),
+        (Is.VOICE_CHANNEL_BACKGROUND_ENABLING_TOGGLED =
+          "voice_channel_background_enabling_toggled"),
         (Is.LOCAL_VOICE_SETTINGS_LOADED = "local_voice_settings_loaded"),
         (Is.HIGHLIGHTS_TEST_LOADED = "highlights_test_loaded"),
         (Is.CHANNEL_LIST_UPDATED = "channel_list_updated"),
@@ -18255,4 +18261,4 @@
     },
   },
 ]);
-//# sourceMappingURL=42061.28d0c1489e62d012c5b4.js.map
+//# sourceMappingURL=42061.e333422c8b56df3647f5.js.map

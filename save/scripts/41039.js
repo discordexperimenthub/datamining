@@ -47317,10 +47317,7 @@
             s =
               i.canSupportSecureFrames ||
               (null == r ? void 0 : r.canSupportSecureFrames),
-            a =
-              !(0, ee.isIOS)() &&
-              !(0, ee.isAndroid)() &&
-              (i.canSupportMls || (null == r ? void 0 : r.canSupportMls)),
+            a = i.canSupportMls || (null == r ? void 0 : r.canSupportMls),
             o = Math.max(
               i.protocolVersionFloor,
               null !== (t = null == r ? void 0 : r.protocolVersionFloor) &&
@@ -60032,7 +60029,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "266258",
+                  build_number: "266261",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78677,4 +78674,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.861c00f6b522b32ffbb0.js.map
+//# sourceMappingURL=41039.656c115e4307454a41a5.js.map

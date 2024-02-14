@@ -76072,6 +76072,8 @@ html .tabBadge__002b3 {
   position: relative;
 }
 .questSplash__4e680 {
+  -o-object-fit: cover;
+  object-fit: cover;
   position: absolute;
   height: 185px;
   width: 660px;
@@ -108504,4 +108506,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.06309c5244f53d8be966.css.map*/
+/*# sourceMappingURL=app.1cdf2cca8fd73c0624b3.css.map*/

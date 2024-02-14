@@ -25930,8 +25930,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266445", ", Version Hash: ")
-          .concat("922eb67cfa4a28cfb95a9c93709ed8b37d90b170")
+          .concat("266459", ", Version Hash: ")
+          .concat("a0e09f886315eed6bd4d6191b17d2d8338faebda")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29013,12 +29013,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266445"), "266445"));
+        let _ = parseInt(((e = "266459"), "266459"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266445"
+                "266459"
               )
             ),
             (_ = 0)),
@@ -35432,7 +35432,7 @@
       let O = 5 * r.default.Millis.SECOND,
         A = 12 * r.default.Millis.HOUR,
         R = 1 * r.default.Millis.MINUTE,
-        l = 15 * r.default.Millis.SECOND;
+        l = 30 * r.default.Millis.SECOND;
       class L extends t.default {
         maybeFetchCurrentQuests() {
           (0, T.getIsEligibleForQuests)({
@@ -35468,7 +35468,7 @@
                 return R;
               let { streamProgressSeconds: E } = _.userStatus,
                 t = 60 * _.config.streamDurationRequirementMinutes;
-              return Math.min(Math.max((t - E) * 30, l), R);
+              return t - E <= 0.1 * t ? l : R;
             }),
             (this.terminateHeartbeat = e => {
               window.clearTimeout(this.sendHeartbeatIntervalIds.get(e)),
@@ -50060,4 +50060,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.a4201d530359703634db.js.map
+//# sourceMappingURL=55115.a0edf23adda99c5bc906.js.map

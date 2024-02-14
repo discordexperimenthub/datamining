@@ -21066,6 +21066,7 @@
         percentCompleteWrapper: "percentCompleteWrapper_fb73d6",
         progressBar: "progressBar_eaa4be",
         progressBarFill: "progressBarFill_e448b3",
+        wrapper: "wrapper_a9c598",
       };
     },
     297261: function (e, t, n) {
@@ -21079,7 +21080,10 @@
     },
     741162: function (e, t, n) {
       "use strict";
-      e.exports = { sponsoredTag: "sponsoredTag_faf66e" };
+      e.exports = {
+        sponsoredTag: "sponsoredTag_faf66e",
+        sponsoredTagBackground: "sponsoredTagBackground_ede118",
+      };
     },
     647439: function (e, t, n) {
       "use strict";
@@ -21090,8 +21094,7 @@
         headingCopy: "headingCopy_b87825",
         headingGameTile: "headingGameTile_fa5324",
         instructions: "instructions__91a7f",
-        rewardTile: "rewardTile__3d525",
-        rewardWithInstructions: "rewardWithInstructions__997e0",
+        rewardTileWithInstructions: "rewardTileWithInstructions_f26a19",
         submenuIcon: "submenuIcon__95905",
         utils: "utils__9923a",
         wrapper: "wrapper__4582a",
@@ -21166,6 +21169,25 @@
         questsCardHeader: "questsCardHeader__4772e",
       };
     },
+    140999: function (e, t, n) {
+      "use strict";
+      e.exports = {
+        content: "content_ff15b7",
+        cta: "cta__3aa42",
+        ctas: "ctas__887e1",
+        gameTile: "gameTile_cda176",
+        heading: "heading__7decb",
+        headingWithSubmenu: "headingWithSubmenu__92275",
+        questTitle: "questTitle__8a5cd",
+        rewardTile: "rewardTile__53e16",
+        rewardTileWrapper: "rewardTileWrapper__5ce2b",
+        sponsoredTag: "sponsoredTag__0b9e7",
+        submenuIcon: "submenuIcon__6db12",
+        submenuWrapper: "submenuWrapper_f90a75",
+        wrapper: "wrapper__19d00",
+        wrapperAccepted: "wrapperAccepted_d4d9b6",
+      };
+    },
     38845: function (e, t, n) {
       "use strict";
       e.exports = {
@@ -21206,6 +21228,14 @@
         rewardSubheadingIcon: "rewardSubheadingIcon__51701",
         rewardSubheadingText: "rewardSubheadingText__50f73",
         rewardTile: "rewardTile__66a02",
+      };
+    },
+    267678: function (e, t, n) {
+      "use strict";
+      e.exports = {
+        instructions: "instructions__6409a",
+        rewardTile: "rewardTile_c9ce2b",
+        wrapper: "wrapper_cfda70",
       };
     },
     649474: function (e, t, n) {

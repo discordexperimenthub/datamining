@@ -10992,6 +10992,9 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
 .nitroTopDividerUpper_a3c956 {
   height: 12px;
 }
+.nitroTopDividerShadow_ba90d0 {
+  box-shadow: 0 -10px 30px 5px var(--premium-tier-2-purple);
+}
 .nitroTopDividerLockContainer__4adce {
   display: flex;
   align-items: center;
@@ -11030,6 +11033,36 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
   background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
   margin: var(--custom-emoji-picker-constants-emoji-premium-upsell-margin-top) 0
     var(--custom-emoji-picker-constants-emoji-premium-upsell-margin-top);
+}
+.upsellContainer__3c02a {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  right: 16px;
+  bottom: 8px;
+  left: 16px;
+  padding: 0 12px;
+  height: 52px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--background-secondary), var(--background-secondary))
+      padding-box,
+    var(--custom-premium-colors-premium-gradient-tier-2-tri-color) border-box;
+}
+.upsellText_afe92a {
+  margin: auto 16px auto 4px;
+}
+.upsellLock__8cc54 {
+  padding-bottom: 2px;
+  color: var(--icon-primary);
+}
+.upsellButton__5739a {
+  margin-left: auto;
+  background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+  border-radius: 3px;
+  flex-shrink: 0;
 }
 .premiumRetentionNotice__7e7c4 {
   background-color: var(--background-tertiary);
@@ -108506,4 +108539,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.46473e43f19d74ed3958.css.map*/
+/*# sourceMappingURL=app.754ed52278ba0a7f5379.css.map*/

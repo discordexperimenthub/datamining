@@ -36166,6 +36166,7 @@
         (A.EMOJI_IN_BURST_REACTION_HOVER = "emoji_in_burst_reaction_hover"),
         (A.EMOJI_IN_BURST_REACTION_HOVER_UPSELL =
           "emoji_in_burst_reaction_hover_upsell"),
+        (A.EMOJI_PICKER_FLOATING_UPSELL = "emoji_picker_floating_upsell"),
         (A.STICKER_IN_MESSAGE_HOVER = "sticker_in_message_hover"),
         (A.EMPTY_STICKER_PICKER_UPSELL = "empty_sticker_picker_upsell"),
         (A.STREAM_QUALITY_INDICATOR = "stream_quality_indicator"),
@@ -60029,7 +60030,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "266476",
+                  build_number: "266488",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78674,4 +78675,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.9d16cfbacc08faf55dbb.js.map
+//# sourceMappingURL=41039.87919d39394a28dd5295.js.map

@@ -38101,8 +38101,8 @@ html .progress__4ef76 {
   align-items: center;
 }
 .memberCount_d3ce07 {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   display: flex;
   align-items: center;
 }
@@ -38509,8 +38509,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -108466,4 +108466,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.327e4237a8c3a6093b4f.css.map*/
+/*# sourceMappingURL=app.d558e129be6eeb400464.css.map*/

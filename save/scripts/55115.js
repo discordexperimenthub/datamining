@@ -23594,6 +23594,9 @@
           "Unable to Mark as Not Sensitive",
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
+        SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
+          "They won’t be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
+        SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Block and report",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Close",
         SAFETY_TOOLS_BUTTON_LABEL: "Open Safety Tools",
         SAFETY_TOOLS_ACTION_SHEET_HEADER: "Safety tools",
@@ -25927,8 +25930,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266384", ", Version Hash: ")
-          .concat("2d74bb96295d835bb6bb3859c90105fa27a83d73")
+          .concat("266394", ", Version Hash: ")
+          .concat("09825f158f0799750325c3d8b2867a857bf2149d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29010,12 +29013,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266384"), "266384"));
+        let _ = parseInt(((e = "266394"), "266394"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266384"
+                "266394"
               )
             ),
             (_ = 0)),
@@ -50057,4 +50060,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.1cdcec10a67e6e419f62.js.map
+//# sourceMappingURL=55115.8209c9ce5297aec22487.js.map

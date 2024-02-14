@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["49074"],
+  ["35170"],
   {
     110126: function (e, t, n) {
       var l = {
@@ -1946,10 +1946,13 @@
                 : e.channelId
             );
           }),
-          { enableHangStatus: P } = g.HangStatusExperiment.useExperiment({
-            guildId: null == L ? void 0 : L.guild_id,
-            location: "UserActivityContainer",
-          }),
+          { enableHangStatus: P } = g.HangStatusExperiment.useExperiment(
+            {
+              guildId: null == L ? void 0 : L.guild_id,
+              location: "UserActivityContainer",
+            },
+            { autoTrackExposure: !1 }
+          ),
           b = (0, r.useStateFromStores)([C.default], () =>
             a ? C.default.getAnyStreamForUser(n.id) : null
           ),
@@ -46562,4 +46565,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49074.442589325ea85995ef91.js.map
+//# sourceMappingURL=35170.e8ce8764538615e66122.js.map

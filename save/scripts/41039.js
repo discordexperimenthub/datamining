@@ -34338,41 +34338,12 @@
           },
           treatments: [
             {
-              id: 1,
-              label: "Can support secure frames for voice/video",
-              config: {
-                protocolVersionFloor: 7,
-                canSupportSecureFrames: !0,
-                canSupportMls: !1,
-              },
-            },
-            {
-              id: 2,
-              label:
-                "Can support secure frames for voice/video w/ MLS negotiation",
-              config: {
-                protocolVersionFloor: 7,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
-              },
-            },
-            {
               id: 3,
               label: "Can support secure frames above protocol version 8",
               config: {
                 protocolVersionFloor: 8,
                 canSupportSecureFrames: !0,
                 canSupportMls: !1,
-              },
-            },
-            {
-              id: 4,
-              label:
-                "Can support secure frames above protocol version 108 (MLS)",
-              config: {
-                protocolVersionFloor: 8,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
               },
             },
             {
@@ -34417,41 +34388,12 @@
           },
           treatments: [
             {
-              id: 1,
-              label: "Can support secure frames for voice/video",
-              config: {
-                protocolVersionFloor: 7,
-                canSupportSecureFrames: !0,
-                canSupportMls: !1,
-              },
-            },
-            {
-              id: 2,
-              label:
-                "Can support secure frames for voice/video w/ MLS negotiation",
-              config: {
-                protocolVersionFloor: 107,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
-              },
-            },
-            {
               id: 3,
               label: "Can support secure frames above protocol version 8",
               config: {
                 protocolVersionFloor: 8,
                 canSupportSecureFrames: !0,
                 canSupportMls: !1,
-              },
-            },
-            {
-              id: 4,
-              label:
-                "Can support secure frames above protocol version 108 (MLS)",
-              config: {
-                protocolVersionFloor: 8,
-                canSupportSecureFrames: !0,
-                canSupportMls: !0,
               },
             },
             {
@@ -60081,7 +60023,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "266050",
+                  build_number: "266098",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78726,4 +78668,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.6ee5d3bac810393c43e3.js.map
+//# sourceMappingURL=41039.530069eed53e6f8a760e.js.map

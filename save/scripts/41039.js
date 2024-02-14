@@ -23698,7 +23698,7 @@
         (I[(I.SELECT_CHANNEL = 1)] = "SELECT_CHANNEL"),
         (I[(I.DETAIL_PAGE = 2)] = "DETAIL_PAGE");
       let ee = "activity-shelf",
-        et = new Set(["755600276941176913", L, b, x]),
+        et = new Set(["755600276941176913", L, b, x, "1010174316991762534", X]),
         en = new Set([L, b, x]);
       ((C = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8"),
         (C.GDM_ACTIVITIES = "GDM_ACTIVITIES"),
@@ -60032,7 +60032,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "266175",
+                  build_number: "266185",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78677,4 +78677,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.8b4808fc778d0f7c282b.js.map
+//# sourceMappingURL=41039.093d878f746dfbf5e2d2.js.map

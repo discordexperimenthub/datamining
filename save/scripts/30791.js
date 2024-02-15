@@ -878,8 +878,9 @@
         (u.WINTER = "1174459301239197856"),
         (u.MONSTERS = "1179493515038818325"),
         (u.CYBERPUNK = "1197342727608746044"),
-        (u.LUNAR_NEW_YEAR = "1202069709281828935");
+        (u.LUNAR_NEW_YEAR = "1202069709281828935"),
+        (u.ELEMENTS = "1207046915880124426");
     },
   },
 ]);
-//# sourceMappingURL=30791.af90e7d4ddc078f9fa8d.js.map
+//# sourceMappingURL=30791.edc98e4a47b9264a6319.js.map

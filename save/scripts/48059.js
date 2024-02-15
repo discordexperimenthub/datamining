@@ -6023,6 +6023,8 @@
         (o.ACTIVITY_SHELF = "impression_activity_shelf"),
         (o.ACTIVITY_SHELF_SELECT_CHANNEL =
           "impression_activity_shelf_select_channel"),
+        (o.APP_LAUNCHER_HOME_ACTIVITY_ITEM =
+          "impression_app_launcher_home_activity_item"),
         (o.APPLICATION_LIBRARY = "impression_application_library"),
         (o.APPLICATION_STORE = "impression_application_store"),
         (o.AVATAR_UPLOAD = "impression_avatar_upload"),
@@ -6727,7 +6729,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "266498"), "266498"), 10);
+          let o = parseInt(((n = "266557"), "266557"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7044,4 +7046,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48059.ed70a2373bbbb5f31689.js.map
+//# sourceMappingURL=48059.ad90a58c91d02c2a68b9.js.map

@@ -21631,7 +21631,7 @@
           "Element styles are here - which will you unleash?",
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Harness the Elements",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
-          "Fire. Water. Earth. Wind. Which will you unleash?",
+          "Fire. Wind. Water. Earth. Which will you unleash?",
         INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
           "$[!!{username}!!](usernameHook) added the $[!!{otherUsername}!!](otherUsernameHook) app. See our [help center]({helpCenterLink}) for more info.",
@@ -23996,7 +23996,7 @@
         QUESTS_COMPLETION_PROGRESS_STARTED: "Keep it up!",
         QUESTS_COMPLETION_PROGRESS_HALFWAY: "You're halfway there!",
         QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE: "You're so close!",
-        QUESTS_COMPLETION_PROGRESS_COMPLETE: "You did it!",
+        QUESTS_COMPLETION_PROGRESS_COMPLETE: "Quest completed for this game!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -25929,8 +25929,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266853", ", Version Hash: ")
-          .concat("75eb68c2056ffd6f5ed2df16aeb56cd00134f35a")
+          .concat("266860", ", Version Hash: ")
+          .concat("bc038ce0b11499c5d5abd9ec63fc171fdc3f2924")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29012,12 +29012,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266853"), "266853"));
+        let _ = parseInt(((e = "266860"), "266860"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266853"
+                "266860"
               )
             ),
             (_ = 0)),
@@ -50059,4 +50059,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.08a9b09fdeff44872dd6.js.map
+//# sourceMappingURL=55115.3ede42722851f85ce76e.js.map

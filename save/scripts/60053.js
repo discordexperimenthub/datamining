@@ -55073,49 +55073,45 @@
               minHeight: T,
               maxWidth: v,
               maxHeight: I,
-              renderItem: _,
-              onClick: N,
-              renderAccessory: A,
-              tabIndex: y,
-              limitResponsiveWidth: x,
-              useFullWidth: O,
-              placeholder: R,
-              placeholderVersion: M,
-              showThumbhashPlaceholder: L,
+              onClick: _,
+              renderAccessory: N,
+              tabIndex: A,
+              limitResponsiveWidth: y,
+              useFullWidth: x,
+              placeholder: O,
+              placeholderVersion: R,
             } = this.props,
-            { readyState: P, hasMouseOver: b, hasFocus: j } = this.state,
-            U = null != l,
-            D = this.getRatio(),
-            k = (0, r.clamp)(
-              Math.round(g * D),
+            { readyState: M, hasMouseOver: L, hasFocus: P } = this.state,
+            b = null != l,
+            j = this.getRatio(),
+            U = (0, r.clamp)(
+              Math.round(g * j),
               null != C ? C : 0,
               null != v ? v : 1 / 0
             ),
-            w = (0, r.clamp)(
-              Math.round(S * D),
+            D = (0, r.clamp)(
+              Math.round(S * j),
               null != T ? T : 0,
               null != I ? I : 1 / 0
             ),
-            F = {
+            k = {
               alt: t,
-              readyState: P,
+              readyState: M,
               onContextMenu: null != s ? s : void 0,
-              zoomable: U,
+              zoomable: b,
               className: d,
               imageClassName: c,
               minWidth: C,
               minHeight: T,
               mediaLayoutType: this.getType(),
-              limitResponsiveWidth: x,
-              useFullWidth: O,
-              tabIndex: y,
-              width: k,
-              height: w,
-              renderItem: _,
+              limitResponsiveWidth: y,
+              useFullWidth: x,
+              tabIndex: A,
+              width: U,
+              height: D,
               src: "",
-              placeholder: R,
-              placeholderVersion: M,
-              showThumbhashPlaceholder: L,
+              placeholder: O,
+              placeholderVersion: R,
               children:
                 null != f
                   ? e => {
@@ -55127,28 +55123,28 @@
               onFocus: this.onFocus,
               onBlur: this.onBlur,
             };
-          if (1 === F.width && 1 === F.height) return null;
+          if (1 === k.width && 1 === k.height) return null;
           switch (
-            ((U || null != N) && (F.onClick = this.onClick),
-            i && (F.original = null != u && "" !== u ? u : F.src),
-            P)
+            ((b || null != _) && (k.onClick = this.onClick),
+            i && (k.original = null != u && "" !== u ? u : k.src),
+            M)
           ) {
             case h.ImageReadyStates.LOADING:
-              null != n && (F.src = n);
+              null != n && (k.src = n);
               break;
             case h.ImageReadyStates.READY:
               if (e.isAnimated(this.props)) {
-                F.onMouseLeave = this.onMouseLeave;
+                k.onMouseLeave = this.onMouseLeave;
                 let t =
-                  (o || b || j) &&
+                  (o || L || P) &&
                   (null == E || E) &&
                   e.visibilityObserver.isVisible(this);
                 t
-                  ? ((F.src = this.getSrc(D)), (F.renderAccessory = A))
-                  : ((F.src = this.getSrc(D, !p || !o)),
-                    (F.renderAccessory = this.renderAccessory)),
+                  ? ((k.src = this.getSrc(j)), (k.renderAccessory = N))
+                  : ((k.src = this.getSrc(j, !p || !o)),
+                    (k.renderAccessory = this.renderAccessory)),
                   null != f &&
-                    (F.children = e => {
+                    (k.children = e => {
                       let { src: n, size: l, alt: i, mediaLayoutType: a } = e;
                       return f({
                         src: n,
@@ -55158,9 +55154,9 @@
                         mediaLayoutType: a,
                       });
                     });
-              } else F.src = this.getSrc(D);
+              } else k.src = this.getSrc(j);
           }
-          return (0, a.jsx)(m.default, { ...F });
+          return (0, a.jsx)(m.default, { ...k });
         }
         constructor(t) {
           super(t),
@@ -65535,4 +65531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.076a7af195e7b59dc4a6.js.map
+//# sourceMappingURL=60053.b1a73ff9cee3f4d1f576.js.map

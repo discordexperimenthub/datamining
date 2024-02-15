@@ -108,25 +108,25 @@
           }
         })();
         var l = [],
-          f = !1,
-          d = -1;
+          d = !1,
+          f = -1;
         function h() {
-          f &&
+          d &&
             i &&
-            ((f = !1),
-            i.length ? (l = i.concat(l)) : (d = -1),
+            ((d = !1),
+            i.length ? (l = i.concat(l)) : (f = -1),
             l.length && p());
         }
         function p() {
-          if (!f) {
+          if (!d) {
             var e = a(h);
-            f = !0;
+            d = !0;
             for (var t = l.length; t; ) {
-              for (i = l, l = []; ++d < t; ) i && i[d].run();
-              (d = -1), (t = l.length);
+              for (i = l, l = []; ++f < t; ) i && i[f].run();
+              (f = -1), (t = l.length);
             }
             (i = null),
-              (f = !1),
+              (d = !1),
               !(function (e) {
                 if (o === clearTimeout) return clearTimeout(e);
                 if ((o === s || !o) && clearTimeout)
@@ -151,7 +151,7 @@
           var t = Array(arguments.length - 1);
           if (arguments.length > 1)
             for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-          l.push(new E(e, t)), 1 === l.length && !f && a(p);
+          l.push(new E(e, t)), 1 === l.length && !d && a(p);
         }),
           (E.prototype.run = function () {
             this.fun.apply(null, this.array);
@@ -240,7 +240,7 @@
         n.r(t),
           n.d(t, {
             usesClientMods: function () {
-              return f;
+              return d;
             },
             initSentry: function () {
               return p;
@@ -255,7 +255,7 @@
           s = n("316217");
         let a = new u.default("Sentry"),
           l = ["oppobrowser", "realmebrowser", "heytapbrowser"];
-        function f() {
+        function d() {
           let e = window;
           return (
             null != e.jQuery ||
@@ -265,7 +265,7 @@
             null != e.rambox
           );
         }
-        let d = (0, s.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
+        let f = (0, s.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
         function h(e, t) {
           var n, r, u, s;
           if (
@@ -281,10 +281,10 @@
             l.some(
               e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0
             ) ||
-            f() ||
+            d() ||
             "Aborted" === (r = e).message ||
             "cancel captcha" === r.message ||
-            !d()
+            !f()
           )
             return null;
           return (
@@ -311,7 +311,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-633f9ac30f37f056f670eeafeb19b33b520f533c",
+            release: "discord_web-df2d5565bcd3e7ef39177970b2e339071928e68e",
             beforeSend: h,
             integrations: [
               new r.Integrations.GlobalHandlers({
@@ -358,8 +358,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((e = "266557"), "266557")),
-            r.setTag("builtAt", String("1707958768391"));
+            r.setTag("buildNumber", ((e = "266594"), "266594")),
+            r.setTag("builtAt", String("1707963929895"));
           let t = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != t && "object" == typeof t)
             for (let e in t) r.setTag(e, t[e]);
@@ -532,4 +532,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.cafcd26a0c1bcf8b4f4b.js.map
+//# sourceMappingURL=sentry.bb795d9ab9911fe9adb4.js.map

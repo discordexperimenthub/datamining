@@ -146,7 +146,7 @@
         function E(e, t) {
           (this.fun = e), (this.array = t);
         }
-        function b() {}
+        function m() {}
         (u.nextTick = function (e) {
           var t = Array(arguments.length - 1);
           if (arguments.length > 1)
@@ -162,15 +162,15 @@
           (u.argv = []),
           (u.version = ""),
           (u.versions = {}),
-          (u.on = b),
-          (u.addListener = b),
-          (u.once = b),
-          (u.off = b),
-          (u.removeListener = b),
-          (u.removeAllListeners = b),
-          (u.emit = b),
-          (u.prependListener = b),
-          (u.prependOnceListener = b),
+          (u.on = m),
+          (u.addListener = m),
+          (u.once = m),
+          (u.off = m),
+          (u.removeListener = m),
+          (u.removeAllListeners = m),
+          (u.emit = m),
+          (u.prependListener = m),
+          (u.prependOnceListener = m),
           (u.listeners = function (e) {
             return [];
           }),
@@ -311,7 +311,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-0b77b65ab2d1f693a850f9396555bb64b00e2ee0",
+            release: "discord_web-75eb68c2056ffd6f5ed2df16aeb56cd00134f35a",
             beforeSend: h,
             integrations: [
               new r.Integrations.GlobalHandlers({
@@ -358,8 +358,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((e = "266846"), "266846")),
-            r.setTag("builtAt", String("1708033444535"));
+            r.setTag("buildNumber", ((e = "266853"), "266853")),
+            r.setTag("builtAt", String("1708033902688"));
           let t = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != t && "object" == typeof t)
             for (let e in t) r.setTag(e, t[e]);
@@ -532,4 +532,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.f4fba6e21423bdb87d2b.js.map
+//# sourceMappingURL=sentry.95cb2bb2a70ada995c94.js.map

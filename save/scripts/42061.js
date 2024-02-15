@@ -3508,6 +3508,8 @@
         (ez[(ez.DSA_RSL_LIMITED_TIME = 521003)] = "DSA_RSL_LIMITED_TIME"),
         (ez[(ez.DSA_RSL_REPORT_INELIGIBLE = 521004)] =
           "DSA_RSL_REPORT_INELIGIBLE"),
+        (ez[(ez.DSA_APPEAL_REQUEST_DEFLECTION = 522001)] =
+          "DSA_APPEAL_REQUEST_DEFLECTION"),
         ((eq = _T || (_T = {})).GUILD_CREATE_INVITE_SUGGESTION =
           "Guild Create Invite Suggestion"),
         (eq.ADD_FRIENDS_TO_DM = "Add Friends to DM"),
@@ -18264,4 +18266,4 @@
     },
   },
 ]);
-//# sourceMappingURL=42061.fdf5e700d6becebb7907.js.map
+//# sourceMappingURL=42061.5322395bc9b270999720.js.map

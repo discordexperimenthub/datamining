@@ -23797,6 +23797,8 @@
         APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS: "Edit details",
         APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR:
           "Error requesting review",
+        APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR:
+          "Review request is not eligible for this violation currently",
         APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER:
           "Your request will be sent to our team. Violations will stay on your account until they expire or are removed after review.",
         APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER:
@@ -25927,8 +25929,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266788", ", Version Hash: ")
-          .concat("37137e5b79101f1a2708178a6c51ac5309b6754b")
+          .concat("266790", ", Version Hash: ")
+          .concat("cde73dbe5d800fcca7b9b36152e6b55b562985c9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29010,12 +29012,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266788"), "266788"));
+        let _ = parseInt(((e = "266790"), "266790"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266788"
+                "266790"
               )
             ),
             (_ = 0)),
@@ -50057,4 +50059,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.9b8bd1d358690e3021b8.js.map
+//# sourceMappingURL=55115.a9410d34d42255bbeed0.js.map

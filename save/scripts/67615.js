@@ -47586,7 +47586,7 @@
             return u;
           },
           useGetStreamApplication: function () {
-            return l;
+            return f;
           },
         });
       var s = n("446674"),
@@ -47605,12 +47605,15 @@
         let n = d(e, t);
         return null == n ? null : { id: n.application_id, name: n.name };
       }
-      function l(e) {
+      function l(e, t) {
+        return e === t || (null != e && null != t && (0, i.default)(e, t));
+      }
+      function f(e) {
         return (0, s.useStateFromStores)(
           [r.default],
           () => u(e, r.default),
           [e],
-          (e, t) => e === t || (null != e && null != t && (0, i.default)(e, t))
+          l
         );
       }
     },
@@ -76697,4 +76700,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.eb2a47ef27fb3d18c9fa.js.map
+//# sourceMappingURL=67615.e36756f4f2c7a2abec84.js.map

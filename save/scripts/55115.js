@@ -21621,9 +21621,6 @@
           "Like this profile effect? $[Claim it with your Nitro subscription](openShop).",
         COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO:
           "Like this profile customization? $[Get your own from the Shop](openShop).",
-        COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE: "NEW in the Shop! Cyberpunk",
-        COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION:
-          "The future is here, and it's looking good.",
         COLLECTIBLES_BANNER_TITLE_2024: "Give your profile a fresh look",
         COLLECTIBLES_BANNER_DESCRIPTION_2024:
           "Check out the latest avatar decorations and profile effects and collect your favorite styles.",
@@ -25930,8 +25927,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266602", ", Version Hash: ")
-          .concat("baf106c46aa0c667899f29e366f7ddadc64d93aa")
+          .concat("266637", ", Version Hash: ")
+          .concat("a0f8425cae1d664769057db97c12ecd025f34bfd")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29013,12 +29010,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266602"), "266602"));
+        let _ = parseInt(((e = "266637"), "266637"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266602"
+                "266637"
               )
             ),
             (_ = 0)),
@@ -43790,10 +43787,6 @@
         (L[(L.KRUNKER_STRIKE_COACHMARK = 339)] = "KRUNKER_STRIKE_COACHMARK"),
         (L[(L.OVERLAY_KEYBIND_NOTIFICATION = 340)] =
           "OVERLAY_KEYBIND_NOTIFICATION"),
-        (L[(L.COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE = 341)] =
-          "COLLECTIBLES_SHOP_CYBERPUNK_NEW_BADGE"),
-        (L[(L.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK = 342)] =
-          "COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK"),
         (L[(L.CHANNEL_LIST_V2_BROWSE_CHANNELS_NUX = 343)] =
           "CHANNEL_LIST_V2_BROWSE_CHANNELS_NUX"),
         (L[(L.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE = 344)] =
@@ -50064,4 +50057,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.ff23a701efb740aa0649.js.map
+//# sourceMappingURL=55115.354972103e5fcfe911f1.js.map

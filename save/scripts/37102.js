@@ -632,7 +632,10 @@
             break;
           case u.AutocompleterResultTypes.USER:
             a.default.openPrivateChannel([h.id], !1, !1, "Quickswitcher"),
-              s.default.channelListScrollTo(E.ME, h.id);
+              s.default.channelListScrollTo(
+                E.ME,
+                f.default.getDMFromUserId(h.id)
+              );
             break;
           case u.AutocompleterResultTypes.GROUP_DM:
             (0, r.transitionToChannel)(h.id, { navigationReplace: !0 }),
@@ -990,4 +993,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37102.dc86a99fa1f2545664e3.js.map
+//# sourceMappingURL=37102.87a5f4e0b566bb74ce9c.js.map

@@ -8455,7 +8455,7 @@
           BG_BACKDROP: {
             category: "background",
             [a.DARK]: { raw: "BLACK_500", opacity: 0.7 },
-            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.7 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.54 },
             [a.MIDNIGHT]: { raw: "PLUM_19", opacity: 0.75 },
             [a.DARKER]: { raw: "BLACK_500", opacity: 0.7 },
             gradient: {
@@ -9110,6 +9110,13 @@
             [a.MIDNIGHT]: { raw: "BLACK_500", opacity: 0.1 },
             [a.DARKER]: { raw: "BLACK_500", opacity: 0.1 },
           },
+          CONTEXT_MENU_BACKDROP_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "BLACK_500", opacity: 0.7 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.54 },
+            [a.MIDNIGHT]: { raw: "BLACK_500", opacity: 0.7 },
+            [a.DARKER]: { raw: "BLACK_500", opacity: 0.7 },
+          },
           CONTROL_BRAND_FOREGROUND: {
             category: "generic",
             [a.DARK]: { raw: "BRAND_360", opacity: 1 },
@@ -9276,7 +9283,7 @@
             [a.DARK]: { raw: "PRIMARY_130", opacity: 1 },
             [a.LIGHT]: { raw: "PRIMARY_860", opacity: 1 },
             [a.MIDNIGHT]: { raw: "PLUM_2", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_4", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_3", opacity: 1 },
           },
           EXPRESSION_PICKER_BG: {
             category: "background",
@@ -9350,7 +9357,7 @@
             [a.DARK]: { raw: "PRIMARY_130", opacity: 1 },
             [a.LIGHT]: { raw: "PRIMARY_860", opacity: 1 },
             [a.MIDNIGHT]: { raw: "PLUM_2", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_4", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_3", opacity: 1 },
           },
           HEADER_SECONDARY: {
             category: "text",
@@ -10180,7 +10187,7 @@
             [a.DARK]: { raw: "PRIMARY_130", opacity: 1 },
             [a.LIGHT]: { raw: "PRIMARY_860", opacity: 1 },
             [a.MIDNIGHT]: { raw: "PLUM_2", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_1", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_3", opacity: 1 },
           },
           REDESIGN_CHAT_INPUT_BACKGROUND: {
             category: "generic",
@@ -10543,13 +10550,6 @@
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_700", opacity: 0.5 },
             [a.LIGHT]: { raw: "WHITE_200", opacity: 0.5 },
-            [a.MIDNIGHT]: { raw: "PLUM_20", opacity: 0.5 },
-            [a.DARKER]: { raw: "PLUM_20", opacity: 0.5 },
-          },
-          VOICE_VIDEO_TILE_BLUR_FALLBACK: {
-            category: "generic",
-            [a.DARK]: { raw: "PRIMARY_700", opacity: 0.48 },
-            [a.LIGHT]: { raw: "PRIMARY_700", opacity: 0.48 },
             [a.MIDNIGHT]: { raw: "PLUM_20", opacity: 0.5 },
             [a.DARKER]: { raw: "PLUM_20", opacity: 0.5 },
           },
@@ -14744,6 +14744,8 @@
         (I.CHAT_SWIPE_TO_REPLY_BACKGROUND = "chat-swipe-to-reply-background"),
         (I.CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND =
           "chat-swipe-to-reply-gradient-background"),
+        (I.CONTEXT_MENU_BACKDROP_BACKGROUND =
+          "context-menu-backdrop-background"),
         (I.CONTROL_BRAND_FOREGROUND = "control-brand-foreground"),
         (I.CONTROL_BRAND_FOREGROUND_NEW = "control-brand-foreground-new"),
         (I.CREATOR_REVENUE_ICON_GRADIENT_END =
@@ -15009,7 +15011,6 @@
         (I.TYPING_INDICATOR_BG = "typing-indicator-bg"),
         (I.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND =
           "user-profile-header-overflow-background"),
-        (I.VOICE_VIDEO_TILE_BLUR_FALLBACK = "voice-video-tile-blur-fallback"),
         (I.VOICE_VIDEO_VIDEO_TILE_BACKGROUND =
           "voice-video-video-tile-background"),
         (I.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
@@ -15688,6 +15689,12 @@
           o.Color.BLACK_500,
           o.Color.BLACK_500,
         ],
+        "context-menu-backdrop-background": [
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+        ],
         "control-brand-foreground": [
           o.Color.BRAND_360,
           o.Color.BRAND_500,
@@ -15830,7 +15837,7 @@
           o.Color.PRIMARY_130,
           o.Color.PRIMARY_860,
           o.Color.PLUM_2,
-          o.Color.PLUM_4,
+          o.Color.PLUM_3,
         ],
         "expression-picker-bg": [
           o.Color.PRIMARY_630,
@@ -15890,7 +15897,7 @@
           o.Color.PRIMARY_130,
           o.Color.PRIMARY_860,
           o.Color.PLUM_2,
-          o.Color.PLUM_4,
+          o.Color.PLUM_3,
         ],
         "header-secondary": [
           o.Color.PRIMARY_330,
@@ -16574,7 +16581,7 @@
           o.Color.PRIMARY_130,
           o.Color.PRIMARY_860,
           o.Color.PLUM_2,
-          o.Color.PLUM_1,
+          o.Color.PLUM_3,
         ],
         "redesign-chat-input-background": [
           o.Color.PRIMARY_700,
@@ -16861,12 +16868,6 @@
         "user-profile-header-overflow-background": [
           o.Color.PRIMARY_700,
           o.Color.WHITE_200,
-          o.Color.PLUM_20,
-          o.Color.PLUM_20,
-        ],
-        "voice-video-tile-blur-fallback": [
-          o.Color.PRIMARY_700,
-          o.Color.PRIMARY_700,
           o.Color.PLUM_20,
           o.Color.PLUM_20,
         ],
@@ -18263,4 +18264,4 @@
     },
   },
 ]);
-//# sourceMappingURL=42061.c633878501111a990f62.js.map
+//# sourceMappingURL=42061.fdf5e700d6becebb7907.js.map

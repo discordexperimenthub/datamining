@@ -324,6 +324,8 @@
           "var(--chat-swipe-to-reply-background)"),
         (e.CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND =
           "var(--chat-swipe-to-reply-gradient-background)"),
+        (e.CONTEXT_MENU_BACKDROP_BACKGROUND =
+          "var(--context-menu-backdrop-background)"),
         (e.CONTROL_BRAND_FOREGROUND = "var(--control-brand-foreground)"),
         (e.CONTROL_BRAND_FOREGROUND_NEW =
           "var(--control-brand-foreground-new)"),
@@ -611,8 +613,6 @@
         (e.TYPING_INDICATOR_BG = "var(--typing-indicator-bg)"),
         (e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND =
           "var(--user-profile-header-overflow-background)"),
-        (e.VOICE_VIDEO_TILE_BLUR_FALLBACK =
-          "var(--voice-video-tile-blur-fallback)"),
         (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND =
           "var(--voice-video-video-tile-background)"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
@@ -624,4 +624,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.e59522d4bdd0716f4960.js.map
+//# sourceMappingURL=21251.2573803dec83960acc3a.js.map

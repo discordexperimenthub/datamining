@@ -149,13 +149,13 @@
             return h;
           },
           getBlindIds: function () {
-            return b;
-          },
-          uploadCallscopeLogs: function () {
             return E;
           },
-          uploadCallscopeLogFiles: function () {
+          uploadCallscopeLogs: function () {
             return L;
+          },
+          uploadCallscopeLogFiles: function () {
+            return b;
           },
         }),
         n("222007");
@@ -184,13 +184,13 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function b(t, e, n) {
+      async function E(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
         return { blindChannelId: l, blindUserId: r };
       }
-      async function E(t, e, n, o) {
+      async function L(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
           if (
@@ -212,7 +212,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await b(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await E(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -224,7 +224,7 @@
                 .concat(i)
             );
             let c = await l.default.fileManager.getCallscopeLogFiles(a);
-            await L(r, c);
+            await b(r, c);
           } catch (t) {
             f.error(
               "uploadCallscopeLogs: Error uploading logs ".concat(
@@ -235,7 +235,7 @@
           }
         }
       }
-      async function L(t, e) {
+      async function b(t, e) {
         try {
           if (0 === e.length) {
             f.error("uploadCallscopeLogFiles: No files found.");
@@ -370,8 +370,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "266761",
-          versionHash: "d43cb591b706b59ff2e4fa1b22f4adb3a141933a",
+          buildNumber: "266778",
+          versionHash: "2aa3a6358079cd500710efcf1f04a261447cc54c",
         };
       }
       n.r(e),
@@ -561,4 +561,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.5d82d7a7383703b554f4.js.map
+//# sourceMappingURL=18409.52fae7ec8b0282517cb9.js.map

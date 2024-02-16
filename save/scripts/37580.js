@@ -600,10 +600,10 @@
             return P;
           },
           fetchShelf: function () {
-            return U;
+            return b;
           },
           sendEmbeddedActivityInvite: function () {
-            return b;
+            return U;
           },
           sendEmbeddedActivityInviteUser: function () {
             return G;
@@ -830,29 +830,29 @@
         let { guildId: a } = n;
         (a === t || (null == a && null == t)) && e();
       };
-      async function U(t) {
-        var e, n, i;
-        let { guildId: r, force: u = !1 } = t,
-          d = N.default.getShelfActivities(r),
-          o = d
+      async function b(t) {
+        var e, n, i, r;
+        let { guildId: u, force: d = !1 } = t,
+          o = N.default.getShelfActivities(u),
+          c = o
             .map(t => s.default.getApplication(t.application_id))
             .filter(C.isNotNullish);
-        if (!u && !N.default.shouldFetchShelf(r)) {
+        if (!d && !N.default.shouldFetchShelf(u)) {
           if (
-            null === (e = N.default.getShelfFetchStatus(r)) || void 0 === e
+            null === (e = N.default.getShelfFetchStatus(u)) || void 0 === e
               ? void 0
               : e.isFetching
           ) {
             let t, e;
             let n = new Promise(e => {
-                (t = R.bind(null, r, e)),
+                (t = R.bind(null, u, e)),
                   l.default.subscribe(
                     "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS",
                     t
                   );
               }),
               a = new Promise(t => {
-                (e = R.bind(null, r, t)),
+                (e = R.bind(null, u, t)),
                   l.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e);
               });
             await Promise.race([n, a]),
@@ -866,55 +866,57 @@
                 (l.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e),
                 (e = null));
           }
-          return { activityConfigs: d, applications: o };
+          return { activityConfigs: o, applications: c };
         }
         try {
           l.default.dispatch({
             type: "EMBEDDED_ACTIVITY_FETCH_SHELF",
-            guildId: r,
+            guildId: u,
           });
-          let t = void 0 !== r && "" !== r,
-            e = t ? { guild_id: r } : void 0,
-            u = await y.default.get({
+          let t = void 0 !== u && "" !== u,
+            e = t ? { guild_id: u } : void 0,
+            d = await y.default.get({
               url: m.Endpoints.ACTIVITY_SHELF,
               query: e,
               trackedActionData: {
                 event: a.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
-                properties: { guild_id: r },
+                properties: { guild_id: u },
               },
               retries: 3,
               oldFormErrors: !0,
             }),
-            d = null !== (n = u.body.activities) && void 0 !== n ? n : [],
-            o = null !== (i = u.body.applications) && void 0 !== i ? i : [];
+            o = null !== (n = d.body.activities) && void 0 !== n ? n : [],
+            c = null !== (i = d.body.applications) && void 0 !== i ? i : [],
+            s = null !== (r = d.body.assets) && void 0 !== r ? r : {};
           return (
             l.default.dispatch({
               type: "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS",
-              guildId: r,
-              activities: d,
-              applications: o,
+              guildId: u,
+              activities: o,
+              applications: c,
+              assets: s,
             }),
-            o.length > 0 &&
+            c.length > 0 &&
               l.default.dispatch({
                 type: "APPLICATIONS_FETCH_SUCCESS",
-                applications: o,
+                applications: c,
               }),
             {
-              activityConfigs: d,
-              applications: o.map(t => p.default.createFromServer(t)),
+              activityConfigs: o,
+              applications: c.map(t => p.default.createFromServer(t)),
             }
           );
         } catch (t) {
           return (
             l.default.dispatch({
               type: "EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL",
-              guildId: r,
+              guildId: u,
             }),
-            { activityConfigs: d, applications: o }
+            { activityConfigs: o, applications: c }
           );
         }
       }
-      async function b(t) {
+      async function U(t) {
         let {
             activityChannelId: e,
             invitedChannelId: n,
@@ -1518,4 +1520,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37580.270f065816fb045bc8cd.js.map
+//# sourceMappingURL=37580.d26099f72612119e3df7.js.map

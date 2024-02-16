@@ -24539,6 +24539,14 @@
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Block and report",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_CANCEL_BUTTON: "Cancel",
+        SERVER_DRAWER_ACTIVITY_VOICE: "in **!!{channelName}!!**",
+        SERVER_DRAWER_ACTIVITY_VOICE_STATUS:
+          "$[](statusHook) in **!!{channelName}!!**",
+        SERVER_DRAWER_ACTIVITY_EVENT_IN_UPCOMING: "in !!{relativeTime}!!",
+        SERVER_DRAWER_ACTIVITY_TOPIC: "talking **!!{topic}!!**",
+        SERVER_DRAWER_ACTIVITY_PLAYING: "playing **!!{activity}!!**",
+        SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
+        SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen",
       });
     },
     657743: function (e, _, E) {
@@ -25975,8 +25983,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267138", ", Version Hash: ")
-          .concat("c8eee2e9ddc5e3225b8c6f606e9ced4d305cd799")
+          .concat("267151", ", Version Hash: ")
+          .concat("30ddd3fc6c9c49c23937584c0c4c3f9d3257278b")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29063,12 +29071,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267138"), "267138"));
+        let _ = parseInt(((e = "267151"), "267151"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267138"
+                "267151"
               )
             ),
             (_ = 0)),
@@ -34920,8 +34928,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708110430591",
-                    build_number: "267138",
+                    built_at: "1708112692786",
+                    build_number: "267151",
                   },
                 },
                 retries: 1,
@@ -51307,4 +51315,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.58ec77afa033c62f4a81.js.map
+//# sourceMappingURL=99392.f670ebb405492b765f36.js.map

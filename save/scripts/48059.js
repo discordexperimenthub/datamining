@@ -3804,6 +3804,7 @@
           },
         }),
         ((o = i || (i = {})).COZY = "cozy"),
+        (o.COZY_DRAWER = "cozy-drawer"),
         (o.COMPACT = "compact"),
         (o.MINIMAL = "minimal"),
         ((s = r || (r = {})).ALL = "all"),
@@ -6729,7 +6730,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "267138"), "267138"), 10);
+          let o = parseInt(((n = "267151"), "267151"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7046,4 +7047,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48059.2f199e556cd643a4b597.js.map
+//# sourceMappingURL=48059.729c793fa7d1106f749c.js.map

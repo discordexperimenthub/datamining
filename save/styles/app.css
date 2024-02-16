@@ -3024,7 +3024,7 @@
   margin-left: 8px;
 }
 .title__746ed {
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 .developerResources_fdd04d:hover {
   cursor: pointer;
@@ -3049,8 +3049,8 @@
   color: var(--interactive-normal);
 }
 .backHeader__18afe {
-  font-size: 17px;
-  line-height: 24px;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
   color: var(--interactive-normal);
 }
 .theme-light .directoryContainer_d3edd9 {
@@ -35786,8 +35786,8 @@ html .progress__4ef76 {
 .errorState_b806b1 {
   padding: 20px 20px 40px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-align: center;
 }
 .errorState_b806b1.noResults_c69767 {
@@ -35837,14 +35837,14 @@ html .progress__4ef76 {
 }
 .confirmChannelName_c49514 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 8px;
   color: var(--header-primary);
 }
 .lastActiveTimestamp__56cd7 {
   margin-left: 8px;
   color: var(--text-muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 2px;
 }
 .confirmInviteScroller__11391 {
@@ -49654,8 +49654,8 @@ html .progress__4ef76 {
   background-image: linear-gradient(270deg, #e82427 0%, #c81031 100%);
 }
 .planInfo_cd8cba {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 8px;
 }
 .buttons_c518ae {
@@ -54159,8 +54159,8 @@ html .progress__4ef76 {
   margin-left: 38px;
 }
 .name__8d1ec {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
   flex: 1 1 auto;
 }
@@ -63376,7 +63376,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 10px;
   margin: 32px 0 20px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .viewAllGamesButton__6eb3d {
   margin: 20px auto 40px;
@@ -63392,7 +63392,7 @@ input::-webkit-inner-spin-button {
 }
 .viewAllGames__9b81c,
 .viewAllNitroGames__4193c {
-  font-size: 16px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -63439,7 +63439,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 10px;
   margin: 32px 0 20px;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .headerBar_afb1ac {
   transform: translatez(0);
@@ -108472,4 +108472,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.2e688cd76eacfeb91e7e.css.map*/
+/*# sourceMappingURL=app.07fc3f74f2644e3b0285.css.map*/

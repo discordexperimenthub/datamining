@@ -20942,7 +20942,7 @@
           "Choose unique backgrounds to customize voice channels for everyone. During a call, visit the channel details to begin.",
         VOICE_CHANNEL_IN_CALL_COACHMARK_TITLE: "Customize this channel",
         VOICE_CHANNEL_IN_CALL_COACHMARK_DESCRIPTION:
-          "Tap on the channel name to set the background for everyone. Control who can change the background with the Customize Voice Call permission.",
+          "Tap on the channel name to set the background for everyone. Control who can change the background with the Customize Voice Channels permission.",
         INCOMING_CALLS: "Incoming calls",
         DIRECT_MESSAGE_NOTIFICATIONS: "Direct messages",
         VOICE_CONNECTED: "Voice connected",
@@ -24102,6 +24102,8 @@
         STOREFRONT_SUBSCRIPTION: "Subscription",
         STOREFRONT_SUBSCRIBE: "Subscribe",
         STOREFRONT_SUBSCRIPTION_BENEFITS: "Subscription Benefits",
+        STOREFRONT_PURCHASE: "Purchase",
+        STOREFRONT_ONE_TIME_PURCHASE: "One-Time Purchase",
         QUIET_MODE_DISABLED: "Focus Mode Disabled",
         QUIET_MODE_ENABLED: "Focus Mode Enabled",
         QUIET_MODE_DND: "Focus Mode (DND) Enabled",
@@ -25973,8 +25975,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267133", ", Version Hash: ")
-          .concat("3ae202c6874cc20c77ac27e3e90ef23ab2765b48")
+          .concat("267138", ", Version Hash: ")
+          .concat("c8eee2e9ddc5e3225b8c6f606e9ced4d305cd799")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29061,12 +29063,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267133"), "267133"));
+        let _ = parseInt(((e = "267138"), "267138"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267133"
+                "267138"
               )
             ),
             (_ = 0)),
@@ -34918,8 +34920,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708110088519",
-                    build_number: "267133",
+                    built_at: "1708110430591",
+                    build_number: "267138",
                   },
                 },
                 retries: 1,
@@ -51305,4 +51307,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.e44afe7615f7ba57533e.js.map
+//# sourceMappingURL=99392.58ec77afa033c62f4a81.js.map

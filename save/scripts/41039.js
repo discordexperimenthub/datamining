@@ -27799,6 +27799,7 @@
         i.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE,
         i.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP,
         i.DismissibleContent.FRIEND_FINDER_CONTACTS_IN_NOTIFICATIONS,
+        i.DismissibleContent.VOICE_CALL_BG_PICKER_NEW_BADGE,
       ]);
     },
     585653: function (e, t, n) {
@@ -59994,7 +59995,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267133",
+                  build_number: "267138",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78639,4 +78640,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.1d9bb1ba5a8b6142c7d6.js.map
+//# sourceMappingURL=41039.52f1f5bb448064aa2bf9.js.map

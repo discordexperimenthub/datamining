@@ -35930,36 +35930,6 @@
           },
         });
       var s = n("862205");
-      (0, s.createExperiment)({
-        kind: "user",
-        id: "2024-02_applaunchermobilenew",
-        label: "App Launcher - Mobile",
-        defaultConfig: {
-          entrypointEnabled: !1,
-          appLauncherEnabled: !1,
-          entrypointToSlashUIEnabled: !1,
-        },
-        treatments: [
-          {
-            id: 1,
-            label: "Enable the app launcher feature on mobile",
-            config: {
-              entrypointEnabled: !0,
-              appLauncherEnabled: !0,
-              entrypointToSlashUIEnabled: !1,
-            },
-          },
-          {
-            id: 2,
-            label: 'Enable "Apps" button opening existing slash command UI',
-            config: {
-              entrypointEnabled: !0,
-              appLauncherEnabled: !1,
-              entrypointToSlashUIEnabled: !0,
-            },
-          },
-        ],
-      });
       let i = (0, s.createExperiment)({
           kind: "user",
           id: "2023-11_app_launcher_desktop",
@@ -76829,4 +76799,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.97f788d427ec00ca0ebd.js.map
+//# sourceMappingURL=67615.e39e76e47cc29bb28c99.js.map

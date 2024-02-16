@@ -222,7 +222,7 @@
           fetchSKU: function () {
             return I;
           },
-          fetchSKUsForApplication: function () {
+          fetchTestSKUsForApplication: function () {
             return A;
           },
           fetchPurchasePreview: function () {
@@ -297,14 +297,7 @@
             T.Endpoints.APPLICATION_SKUS(t)
           ),
           r = u.body;
-        return (
-          i.default.dispatch({
-            type: "SKUS_FETCH_SUCCESS",
-            skus: r,
-            applicationId: t,
-          }),
-          r
-        );
+        return i.default.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: r }), r;
       }
       async function p(t, e, n, u) {
         let r;
@@ -4018,4 +4011,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23777.5dc40c4c2b6c28d07d6a.js.map
+//# sourceMappingURL=23777.ad6f118a66fceceeb8a2.js.map

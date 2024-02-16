@@ -25983,8 +25983,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267174", ", Version Hash: ")
-          .concat("d3b5e4ba9404bfebf250ab73037a9dcffe32d01b")
+          .concat("267184", ", Version Hash: ")
+          .concat("5f3dd389cd745d37068ba8478efca852d07a20b1")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29071,12 +29071,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267174"), "267174"));
+        let _ = parseInt(((e = "267184"), "267184"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267174"
+                "267184"
               )
             ),
             (_ = 0)),
@@ -34928,8 +34928,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708115221469",
-                    build_number: "267174",
+                    built_at: "1708115897702",
+                    build_number: "267184",
                   },
                 },
                 retries: 1,
@@ -35746,19 +35746,6 @@
             t.AbortCodes.BLOCKED_BY_PROXY
         );
       }
-    },
-    166604: function (e, _, E) {
-      "use strict";
-      var t, o;
-      E.r(_),
-        E.d(_, {
-          QuestsExperimentLocations: function () {
-            return t;
-          },
-        }),
-        ((o = t || (t = {})).ACTIVITY_PANEL = "quests_bar_activity_panel"),
-        (o.QUESTS_MANAGER = "quests_manager"),
-        (o.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory");
     },
     374023: function (e, _, E) {
       "use strict";
@@ -51315,4 +51302,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.1f486e942ce7c5727175.js.map
+//# sourceMappingURL=99392.c01241bb7fff24a220cf.js.map

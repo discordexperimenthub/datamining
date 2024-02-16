@@ -14457,8 +14457,12 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   max-height: inherit;
   border-radius: 2px;
 }
-.noBorderBottomRadius__1dde7,
-.noBorderBottomRadius__1dde7 video {
+.hasFooter__07269 {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-width: 100%;
+}
+.hasFooter__07269 video {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -23553,4 +23557,4 @@ span.button__4f306.disabled_dc5630 {
   line-height: 18px;
   color: var(--primary-330);
 }
-/*# sourceMappingURL=shared.b69d34984638d9fbdf72.css.map*/
+/*# sourceMappingURL=shared.0b1fed0e37a76fb6d2d3.css.map*/

@@ -23911,6 +23911,10 @@
         POLL_EXPIRY_MINUTES_REMAINING:
           "{minutes, plural, one {{minutes} min} other {{minutes} mins}} left",
         POLL_EXPIRED: "Poll closed",
+        POLL_SELECT_ONE_ANSWER: "Select one answer",
+        POLL_SELECT_MULTIPLE_ANSWERS: "Select one or more answers",
+        POLL_SHOW_VOTES: "Show votes",
+        POLL_HIDE_VOTES: "Hide votes",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -25942,8 +25946,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("266968", ", Version Hash: ")
-          .concat("6bfe423b0ad7d0b5b02983c7b11432d67cf00440")
+          .concat("267005", ", Version Hash: ")
+          .concat("bd575c6e0311ac48417fa61353e89dcfbc61f3cf")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29025,12 +29029,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266968"), "266968"));
+        let _ = parseInt(((e = "267005"), "267005"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266968"
+                "267005"
               )
             ),
             (_ = 0)),
@@ -34728,8 +34732,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708046416185",
-                    build_number: "266968",
+                    built_at: "1708053518465",
+                    build_number: "267005",
                   },
                 },
                 retries: 1,
@@ -51115,4 +51119,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.d5847d33db343861014b.js.map
+//# sourceMappingURL=99392.6c3efe73b0a1ecbca1bb.js.map

@@ -315,11 +315,12 @@
         (i.GUILD_EVENT_CARD = "guild event card"),
         (i.EVENT_SETTINGS = "event settings"),
         (i.GUILD_EVENT_RSVP_BUTTON = "guild event rsvp button"),
-        (i.GIFT_CODE_MODAL = "gift code modal");
+        (i.GIFT_CODE_MODAL = "gift code modal"),
+        (i.APP_STOREFRONT = "app storefront");
       var i,
         I,
         T = I;
     },
   },
 ]);
-//# sourceMappingURL=14875.19d6f00c81ee3b89074a.js.map
+//# sourceMappingURL=14875.39b9f8cdf558e2bdb74c.js.map

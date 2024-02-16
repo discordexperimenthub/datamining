@@ -16781,8 +16781,10 @@
         THREAD_BROWSER_ARCHIVED_HEADER: "older threads",
         THREAD_BROWSER_JOINED_HEADER: "{count} joined threads",
         THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} Other Active Threads",
+        THREAD_BROWSER_ACTIVE_COUNT: "Active Threads - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Older Threads",
         THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} Joined Threads",
+        THREAD_BROWSER_JOINED_COUNT: "Joined Threads - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}s ago",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}d ago",
         THREAD_BROWSER_TIMESTAMP_HOURS: "{count}h ago",
@@ -16802,6 +16804,8 @@
           "There are no archived threads.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
           "Stay focused on a conversation with a thread, a temporary text channel.",
+        THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
+          "Stay focused on a conversation with a thread - a temporary text channel.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filter Settings",
         THREAD_BROWSER_FILTER_SETTINGS_VISIBILITY: "Thread visibility",
         THREAD_MEMBER_WITHOUT_ACCESS: "Cannot view this thread",
@@ -25983,8 +25987,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267201", ", Version Hash: ")
-          .concat("83c5bb14333c1190c9dddd584d1b5c05273a4927")
+          .concat("267211", ", Version Hash: ")
+          .concat("b881c43fda29104906d44dee743ab13a13b9b546")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29071,12 +29075,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267201"), "267201"));
+        let _ = parseInt(((e = "267211"), "267211"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267201"
+                "267211"
               )
             ),
             (_ = 0)),
@@ -30410,8 +30414,8 @@
         j = E("773336"),
         X = E("719923"),
         Q = E("269936"),
-        q = E("302537"),
-        J = E("967889"),
+        J = E("302537"),
+        q = E("967889"),
         z = E("102999"),
         $ = E("160139"),
         Z = E("49111"),
@@ -30518,9 +30522,9 @@
             children: (0, t.jsx)(c.default, {
               children: (0, t.jsxs)(O.RedesignIconContextProvider, {
                 children: [
-                  (0, t.jsx)(q.default, { skipsSettingDefaultPageTitle: E }),
+                  (0, t.jsx)(J.default, { skipsSettingDefaultPageTitle: E }),
                   (0, t.jsx)(z.default, {
-                    children: (0, t.jsx)(J.default, {
+                    children: (0, t.jsx)(q.default, {
                       children: (0, t.jsxs)(O.FocusRingScope, {
                         containerRef: eA,
                         children: [
@@ -34928,8 +34932,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708117013088",
-                    build_number: "267201",
+                    built_at: "1708118238780",
+                    build_number: "267211",
                   },
                 },
                 retries: 1,
@@ -46294,7 +46298,7 @@
         }
       }
       let Q = new X();
-      class q extends M.MessageType {
+      class J extends M.MessageType {
         create(e) {
           let _ = {
             explicitContentGuilds: 0,
@@ -46397,7 +46401,7 @@
           ]);
         }
       }
-      let J = new q();
+      let q = new J();
       class z extends M.MessageType {
         create(e) {
           let _ = {
@@ -46619,7 +46623,7 @@
                   );
                 break;
               case 29:
-                o.explicitContentSettings = J.internalBinaryRead(
+                o.explicitContentSettings = q.internalBinaryRead(
                   e,
                   e.uint32(),
                   E,
@@ -46802,11 +46806,13 @@
                 E
               ).join(),
             e.explicitContentSettings &&
-              J.internalBinaryWrite(
-                e.explicitContentSettings,
-                _.tag(29, M.WireType.LengthDelimited).fork(),
-                E
-              ).join();
+              q
+                .internalBinaryWrite(
+                  e.explicitContentSettings,
+                  _.tag(29, M.WireType.LengthDelimited).fork(),
+                  E
+                )
+                .join();
           let t = E.writeUnknownFields;
           return (
             !1 !== t &&
@@ -46989,7 +46995,7 @@
               no: 29,
               name: "explicit_content_settings",
               kind: "message",
-              T: () => J,
+              T: () => q,
             },
           ]);
         }
@@ -51302,4 +51308,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.939afc47916baee4643d.js.map
+//# sourceMappingURL=99392.9290223bc21285fa7439.js.map

@@ -9363,6 +9363,9 @@
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Your first **3 months** are **{discountedPrice}**. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
+        CHURN_DISCOUNT_DESCRIPTION:
+          "Before cancelling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
+        CHURN_DISCOUNT_CLAIM: "Claim Discount",
         PREMIUM_TUTORIAL_GOT_IT: "Got it!",
         PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW:
           "Try {planName} for {duration} on us. Then !!{price}!!.",
@@ -25987,8 +25990,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267211", ", Version Hash: ")
-          .concat("b881c43fda29104906d44dee743ab13a13b9b546")
+          .concat("267218", ", Version Hash: ")
+          .concat("9ecd8a09d9a90a91c981071ecfef47f80a6eb309")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29075,12 +29078,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267211"), "267211"));
+        let _ = parseInt(((e = "267218"), "267218"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267211"
+                "267218"
               )
             ),
             (_ = 0)),
@@ -34932,8 +34935,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708118238780",
-                    build_number: "267211",
+                    built_at: "1708118979471",
+                    build_number: "267218",
                   },
                 },
                 retries: 1,
@@ -51308,4 +51311,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.9290223bc21285fa7439.js.map
+//# sourceMappingURL=99392.96ec32fab485892a7d24.js.map

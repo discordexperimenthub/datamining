@@ -23481,6 +23481,8 @@
           "You broke Discord's rules. You will be permanently suspended if you break them again.",
         SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION_V2:
           "You can't use some parts of Discord. You may be permanently banned if you break the rules again.",
+        SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION_V3:
+          "You can't use some parts of Discord. You may be permanently suspended if you break the rules again.",
         SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE:
           "Your account is $[suspended.](hook)",
         SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE_V2:
@@ -23528,6 +23530,7 @@
           "Discord's rules apply to everyone",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Go to account standing",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Go to account standing",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "See account standing",
         SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS:
           "You requested a review of this violation.",
         SAFETY_HUB_ERROR_MESSAGE: "Something went wrong...",
@@ -23750,6 +23753,8 @@
         URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON: "Report a Message",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Not a well formed email address.",
         IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR: "Invalid Input",
+        IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
+          "We couldn't locate the content you are trying to report. Please review the details of your submission and re-submit.",
         LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE:
           "Why don't I see application commands?",
         LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_TITLE:
@@ -25937,8 +25942,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("266918", ", Version Hash: ")
-          .concat("625dab9101952541231ddd66845d5ab2a051de8f")
+          .concat("266948", ", Version Hash: ")
+          .concat("24ba1240320a8bc4f5b57de037adf6d2837496b9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29020,12 +29025,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "266918"), "266918"));
+        let _ = parseInt(((e = "266948"), "266948"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "266918"
+                "266948"
               )
             ),
             (_ = 0)),
@@ -50067,4 +50072,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55115.10a8ba4b5fcc1f379ad2.js.map
+//# sourceMappingURL=55115.8d176c585acf6d265e55.js.map

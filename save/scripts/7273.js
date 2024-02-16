@@ -11019,11 +11019,11 @@
             let [e, a] = _,
               [o, R] = E;
             return o + (R - o) * ((I - e) / (a - e));
-          })([0, 1], [0.75, 1], I);
+          })([0, 1], [0.25, 1], I);
           return e.set("hsl.s", "*".concat(_)).hex();
         }
       }
-      let A = [1.3, 0.85],
+      let A = [1.3, 0.7],
         T = [0.98, 1],
         r = [0.75, 1.5],
         N = [1.45, 0.45];
@@ -17233,4 +17233,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.7cc8996b9928a73f8a3c.js.map
+//# sourceMappingURL=7273.bc9a20f8348a0254a209.js.map

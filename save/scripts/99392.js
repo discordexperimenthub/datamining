@@ -10259,7 +10259,8 @@
         EMOJI_PICKER_PREMIUM_UPSELL_BODY_TOP_OF_LIST:
           "Unlock every emoji and use them anywhere with Nitro.",
         EMOJI_PICKER_PREMIUM_UPSELL_CTA: "Get Nitro",
-        EMOJI_PICKER_CREATE_EMOJI_TITLE: "Upload an emoji to this server",
+        EMOJI_PICKER_CREATE_EMOJI_TITLE: "Upload a custom emoji",
+        EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION: "Feeling emoji-tional?",
         EMOJI_PICKER_PREMIUM_PROMO_DESCRIPTION:
           "Lift off with **{planName}** to use animated and custom emoji anywhere.",
         SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY:
@@ -25993,8 +25994,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267220", ", Version Hash: ")
-          .concat("6b16dbc153c611ab1c8976bd334acfe6c5744d68")
+          .concat("267231", ", Version Hash: ")
+          .concat("1c6da611d5af6c8b66ae72889999950dfc8b2eee")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29081,12 +29082,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267220"), "267220"));
+        let _ = parseInt(((e = "267231"), "267231"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267220"
+                "267231"
               )
             ),
             (_ = 0)),
@@ -34939,8 +34940,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708119251858",
-                    build_number: "267220",
+                    built_at: "1708120446229",
+                    build_number: "267231",
                   },
                 },
                 retries: 1,
@@ -51274,4 +51275,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.5199c606b88da2467511.js.map
+//# sourceMappingURL=99392.60fb40ae4ff3a851245d.js.map

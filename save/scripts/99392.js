@@ -24088,6 +24088,9 @@
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
+        QUESTS_EMBED_INVALID_HEADING: "This was a Quest but...",
+        QUESTS_EMBED_INVALID_BODY:
+          "Something went wrong here. Check the Gift Inventory for more available Quests!",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -25990,8 +25993,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267218", ", Version Hash: ")
-          .concat("9ecd8a09d9a90a91c981071ecfef47f80a6eb309")
+          .concat("267220", ", Version Hash: ")
+          .concat("6b16dbc153c611ab1c8976bd334acfe6c5744d68")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29078,12 +29081,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267218"), "267218"));
+        let _ = parseInt(((e = "267220"), "267220"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267218"
+                "267220"
               )
             ),
             (_ = 0)),
@@ -29926,6 +29929,7 @@
             else if (_ === i.CodedLinkType.GUILD_PRODUCT);
             else if (_ === i.CodedLinkType.SERVER_SHOP);
             else if (_ === i.CodedLinkType.CLYDE_PROFILE);
+            else if (_ === i.CodedLinkType.QUESTS_EMBED);
             else throw Error("Unknown coded link type: ".concat(_));
           });
       }
@@ -34935,8 +34939,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708118979471",
-                    build_number: "267218",
+                    built_at: "1708119251858",
+                    build_number: "267220",
                   },
                 },
                 retries: 1,
@@ -35754,48 +35758,6 @@
         );
       }
     },
-    374023: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          getIsEligibleForQuests: function () {
-            return r;
-          },
-          useIsEligibleForQuests: function () {
-            return i;
-          },
-        });
-      var t = E("619935"),
-        o = E("862205");
-      let n = (0, o.createExperiment)({
-          id: "2023-12_quests",
-          kind: "user",
-          label: "Quests",
-          defaultConfig: { enabled: !1 },
-          treatments: [
-            { id: 0, label: "Control", config: { enabled: !1 } },
-            { id: 1, label: "Quests enabled", config: { enabled: !0 } },
-          ],
-        }),
-        r = e => {
-          let { location: _, autoTrackExposure: E } = e,
-            o = n.getCurrentConfig({ location: _ }, { autoTrackExposure: E }),
-            r = t.default.getCurrentConfig(
-              { location: _ },
-              { autoTrackExposure: E }
-            );
-          return o.enabled && !r.paymentsBlocked;
-        },
-        i = e => {
-          let { location: _, autoTrackExposure: E } = e,
-            o = n.useExperiment({ location: _ }, { autoTrackExposure: E }),
-            r = t.default.useExperiment(
-              { location: _ },
-              { autoTrackExposure: E }
-            );
-          return o.enabled && !r.paymentsBlocked;
-        };
-    },
     319405: function (e, _, E) {
       "use strict";
       E.r(_),
@@ -35880,10 +35842,11 @@
                 });
             }),
             (this.handlePostConnectionOpen = () => {
-              window.setTimeout(
-                this.maybeFetchCurrentQuests,
-                Math.floor(Math.random() * O)
-              );
+              if (0 === T.default.lastFetchedCurrentQuests)
+                window.setTimeout(
+                  this.maybeFetchCurrentQuests,
+                  Math.floor(Math.random() * O)
+                );
             }),
             (this.handleSendHeartbeatSuccess = e => {
               let { streamKey: _, userStatus: E } = e;
@@ -51311,4 +51274,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.96ec32fab485892a7d24.js.map
+//# sourceMappingURL=99392.5199c606b88da2467511.js.map

@@ -1056,6 +1056,7 @@
                               );
                               else if (t === _.CodedLinkType.GUILD_PRODUCT);
                               else if (t === _.CodedLinkType.SERVER_SHOP);
+                              else if (t === _.CodedLinkType.QUESTS_EMBED);
                               else
                                 throw Error(
                                   "Unknown coded link type: ".concat(t)
@@ -3865,4 +3866,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31717.eaaf09c49eb1cddcd35f.js.map
+//# sourceMappingURL=31717.5de014170e864b09e475.js.map

@@ -6732,7 +6732,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "267353"), "267353"), 10);
+          let o = parseInt(((n = "267367"), "267367"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7049,4 +7049,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48059.50678c1691c08930e0d2.js.map
+//# sourceMappingURL=48059.afa161d7dca98e9bd40a.js.map

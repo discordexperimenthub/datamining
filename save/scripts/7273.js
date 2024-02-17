@@ -144,10 +144,10 @@
             return F;
           },
           OverlayNotificationTextChatTypes: function () {
-            return W;
+            return v;
           },
           OverlayEventTypes: function () {
-            return v;
+            return W;
           },
           OverlayActiveRegions: function () {
             return k;
@@ -360,10 +360,10 @@
             return oF;
           },
           PLACEHOLDER_TAG: function () {
-            return oW;
+            return ov;
           },
           CHANNEL_SIDEBAR_WIDTH: function () {
-            return ov;
+            return oW;
           },
           DEFAULT_CHAT_SIDEBAR_WIDTH: function () {
             return ok;
@@ -546,7 +546,7 @@
             return RT;
           },
           AnalyticEvents: function () {
-            return _v;
+            return _W;
           },
           PublicReleaseChannels: function () {
             return _k;
@@ -792,10 +792,10 @@
             return EF;
           },
           ApplicationStreamDeleteReasons: function () {
-            return EW;
+            return Ev;
           },
           MediaEngineHookTypes: function () {
-            return Ev;
+            return EW;
           },
           MediaEngineVideoStates: function () {
             return Ek;
@@ -896,8 +896,8 @@
         K,
         V,
         F,
-        W,
         v,
+        W,
         k,
         x,
         X,
@@ -950,8 +950,8 @@
         _K,
         _V,
         _F,
-        _W,
         _v,
+        _W,
         _k,
         _x,
         _X,
@@ -1014,8 +1014,8 @@
         EK,
         EV,
         EF,
-        EW,
         Ev,
+        EW,
         Ek,
         Ex,
         EX,
@@ -1078,8 +1078,8 @@
         IK,
         IV,
         IF,
-        IW,
         Iv,
+        IW,
         Ik,
         Ix,
         IX,
@@ -1142,8 +1142,8 @@
         eK,
         eV,
         eF,
-        eW,
         ev,
+        eW,
         ek,
         ex,
         eX,
@@ -1206,8 +1206,8 @@
         aK = I("637612"),
         aV = I("382825"),
         aF = I("509043"),
-        aW = I("447669"),
-        av = I("718517"),
+        av = I("447669"),
+        aW = I("718517"),
         ak = I("492397"),
         ax = I("397336"),
         aX = I("843455"),
@@ -1698,9 +1698,9 @@
         (Ig.BOTTOM_LEFT = "bottomLeft"),
         (Ig.BOTTOM_RIGHT = "bottomRight"),
         (Ig.DISABLED = "disabled"),
-        ((IH = W || (W = {})).ENABLED = "ENABLED"),
+        ((IH = v || (v = {})).ENABLED = "ENABLED"),
         (IH.DISABLED = "DISABLED"),
-        ((If = v || (v = {})).CONNECT = "CONNECT"),
+        ((If = W || (W = {})).CONNECT = "CONNECT"),
         (If.DISPATCH = "DISPATCH"),
         (If.LOG_MESSAGES = "LOG_MESSAGES"),
         (If.STORAGE_SYNC = "STORAGE_SYNC"),
@@ -3012,8 +3012,8 @@
           ACCOUNT_STANDING: "/account-standing",
           QUESTS: _ => "/quests/".concat(_),
         }),
-        a4 = (0, aW.wrapPaths)(a2),
-        a8 = (0, aW.wrapPaths)(a6, [":", "?", "@"]);
+        a4 = (0, av.wrapPaths)(a2),
+        a8 = (0, av.wrapPaths)(a6, [":", "?", "@"]);
       ((IF = $ || ($ = {}))[(IF.INSTANCE = 1)] = "INSTANCE"),
         (IF[(IF.JOIN = 2)] = "JOIN"),
         (IF[(IF.SYNC = 16)] = "SYNC"),
@@ -3022,10 +3022,10 @@
         (IF[(IF.PARTY_PRIVACY_VOICE_CHANNEL = 128)] =
           "PARTY_PRIVACY_VOICE_CHANNEL"),
         (IF[(IF.EMBEDDED = 256)] = "EMBEDDED"),
-        ((IW = __ || (__ = {}))[(IW.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
-        (IW[(IW.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
-        (IW[(IW.NO_MESSAGES = 2)] = "NO_MESSAGES"),
-        (IW[(IW.NULL = 3)] = "NULL");
+        ((Iv = __ || (__ = {}))[(Iv.ALL_MESSAGES = 0)] = "ALL_MESSAGES"),
+        (Iv[(Iv.ONLY_MENTIONS = 1)] = "ONLY_MENTIONS"),
+        (Iv[(Iv.NO_MESSAGES = 2)] = "NO_MESSAGES"),
+        (Iv[(Iv.NULL = 3)] = "NULL");
       let a7 = 100,
         a9 = 200,
         o_ = 50,
@@ -3050,15 +3050,15 @@
           10,
           15,
           30,
-          av.default.Seconds.MINUTE,
-          2 * av.default.Seconds.MINUTE,
-          5 * av.default.Seconds.MINUTE,
-          10 * av.default.Seconds.MINUTE,
-          15 * av.default.Seconds.MINUTE,
-          30 * av.default.Seconds.MINUTE,
-          1 * av.default.Seconds.HOUR,
-          2 * av.default.Seconds.HOUR,
-          6 * av.default.Seconds.HOUR,
+          aW.default.Seconds.MINUTE,
+          2 * aW.default.Seconds.MINUTE,
+          5 * aW.default.Seconds.MINUTE,
+          10 * aW.default.Seconds.MINUTE,
+          15 * aW.default.Seconds.MINUTE,
+          30 * aW.default.Seconds.MINUTE,
+          1 * aW.default.Seconds.HOUR,
+          2 * aW.default.Seconds.HOUR,
+          6 * aW.default.Seconds.HOUR,
         ],
         oD = 10,
         oS = 26214400,
@@ -3067,16 +3067,16 @@
         os = /^\|\|([\s\S]+?)\|\|/,
         oP = /^<id:(home|browse|customize|guide)>/,
         oM = /^\d{17,19}$/;
-      ((Iv = _E || (_E = {})).MESSAGE = "MESSAGE"),
-        (Iv.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
-        (Iv.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
-        (Iv.THREAD_STARTER_MESSAGE = "THREAD_STARTER_MESSAGE"),
-        (Iv.DIVIDER = "DIVIDER"),
-        (Iv.JUMP_TARGET = "JUMP_TARGET"),
-        (Iv.FORUM_POST_ACTION_BAR = "FORUM_POST_ACTION_BAR"),
-        (Iv.MESSAGE_GROUP = "MESSAGE_GROUP"),
-        (Iv.DIVIDER_TIME_STAMP = "DIVIDER_TIME_STAMP"),
-        (Iv.DIVIDER_NEW_MESSAGES = "DIVIDER_NEW_MESSAGES"),
+      ((IW = _E || (_E = {})).MESSAGE = "MESSAGE"),
+        (IW.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
+        (IW.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
+        (IW.THREAD_STARTER_MESSAGE = "THREAD_STARTER_MESSAGE"),
+        (IW.DIVIDER = "DIVIDER"),
+        (IW.JUMP_TARGET = "JUMP_TARGET"),
+        (IW.FORUM_POST_ACTION_BAR = "FORUM_POST_ACTION_BAR"),
+        (IW.MESSAGE_GROUP = "MESSAGE_GROUP"),
+        (IW.DIVIDER_TIME_STAMP = "DIVIDER_TIME_STAMP"),
+        (IW.DIVIDER_NEW_MESSAGES = "DIVIDER_NEW_MESSAGES"),
         ((Ik = _I || (_I = {})).VIDEO = "video"),
         (Ik.VOICE = "voice"),
         ((Ix = _e || (_e = {}))[(Ix.PLAYING = 0)] = "PLAYING"),
@@ -3114,8 +3114,8 @@
         oK = 10,
         oV = 20,
         oF = 25,
-        oW = "#0000",
-        ov = 240,
+        ov = "#0000",
+        oW = 240,
         ok = 480,
         ox = 650,
         oX = "DEVICE_TOKEN",
@@ -4576,7 +4576,7 @@
         ZOOM_MAX: 200,
         ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200],
       });
-      ((el = _W || (_W = {})).GIF = "GIF"),
+      ((el = _v || (_v = {})).GIF = "GIF"),
         (el.GIF_SEARCH = "GIF search"),
         (el.EMOJI = "emoji"),
         (el.EMOJI_SEARCH = "emoji search"),
@@ -4592,7 +4592,7 @@
         (el.ADD_BUTTON = "add button"),
         (el.APPS_BUTTON = "apps button"),
         (el.APPS = "apps"),
-        ((es = _v || (_v = {})).APP_OPENED = "app_opened"),
+        ((es = _W || (_W = {})).APP_OPENED = "app_opened"),
         (es.APP_CRASHED = "app_crashed"),
         (es.APP_BACKGROUND = "app_background"),
         (es.APP_NATIVE_CRASH = "app_native_crash"),
@@ -6256,17 +6256,17 @@
         (eF[(eF.OVERLAY_DISABLED = 4)] = "OVERLAY_DISABLED"),
         (eF[(eF.ENTITLED = 8)] = "ENTITLED"),
         (eF[(eF.PREMIUM = 16)] = "PREMIUM"),
-        ((eW = EI || (EI = {})).DONE = "DONE"),
-        (eW.PLANNING = "PLANNING"),
-        (eW.PREPARING = "PREPARING"),
-        (eW.PUSHING = "PUSHING"),
-        (eW.PULLING = "PULLING"),
-        (eW.CONFLICT = "CONFLICT"),
-        (eW.ERROR = "ERROR"),
-        ((ev = Ee || (Ee = {})).PULL = "PULL"),
-        (ev.PUSH = "PUSH"),
+        ((ev = EI || (EI = {})).DONE = "DONE"),
+        (ev.PLANNING = "PLANNING"),
+        (ev.PREPARING = "PREPARING"),
+        (ev.PUSHING = "PUSHING"),
+        (ev.PULLING = "PULLING"),
         (ev.CONFLICT = "CONFLICT"),
-        (ev.NONE = "NONE"),
+        (ev.ERROR = "ERROR"),
+        ((eW = Ee || (Ee = {})).PULL = "PULL"),
+        (eW.PUSH = "PUSH"),
+        (eW.CONFLICT = "CONFLICT"),
+        (eW.NONE = "NONE"),
         ((ek = Ea || (Ea = {})).DISCORD = "discord"),
         (ek.STEAM = "steam"),
         (ek.TWITCH = "twitch"),
@@ -6816,11 +6816,11 @@
         (aD.ENDED = "ENDED"),
         (aD.PAUSED = "PAUSED"),
         (aD.FAILED = "FAILED"),
-        ((aS = EW || (EW = {})).USER_REQUESTED = "user_requested"),
+        ((aS = Ev || (Ev = {})).USER_REQUESTED = "user_requested"),
         (aS.STREAM_FULL = "stream_full"),
         (aS.UNAUTHORIZED = "unauthorized"),
         (aS.SAFETY_GUILD_RATE_LIMITED = "safety_guild_rate_limited"),
-        ((aC = Ev || (Ev = {})).SOUND = "SOUND"),
+        ((aC = EW || (EW = {})).SOUND = "SOUND"),
         (aC.VIDEO = "VIDEO"),
         ((al = Ek || (Ek = {})).PLAYING = "playing"),
         (al.PAUSED = "paused"),
@@ -6948,8 +6948,8 @@
         K,
         V,
         F,
-        W,
         v,
+        W,
         k,
         x,
         X,
@@ -7016,11 +7016,11 @@
         ((F = N || (N = {}))[(F.GENERAL = 0)] = "GENERAL"),
         (F[(F.TEXT = 1)] = "TEXT"),
         (F[(F.VOICE = 2)] = "VOICE"),
-        ((W = i || (i = {})).LANDING = "LANDING"),
-        (W.NAME = "NAME"),
-        ((v = c || (c = {}))[(v.SAFARI = 0)] = "SAFARI"),
-        (v[(v.IN_APP = 1)] = "IN_APP"),
-        (v[(v.CHROME = 2)] = "CHROME"),
+        ((v = i || (i = {})).LANDING = "LANDING"),
+        (v.NAME = "NAME"),
+        ((W = c || (c = {}))[(W.SAFARI = 0)] = "SAFARI"),
+        (W[(W.IN_APP = 1)] = "IN_APP"),
+        (W[(W.CHROME = 2)] = "CHROME"),
         ((k = O || (O = {})).SOLVED = "solved"),
         (k.EXPIRED = "expired"),
         ((n || (n = {})).MENTIONS = "mentions"),
@@ -8878,19 +8878,26 @@
             [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
             [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
           },
+          POLLS_RESULT_FILL: {
+            category: "generic",
+            [a.DARK]: { raw: "BRAND_500", opacity: 0.2 },
+            [a.LIGHT]: { raw: "BRAND_500", opacity: 0.2 },
+            [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 0.2 },
+            [a.DARKER]: { raw: "BRAND_500", opacity: 0.2 },
+          },
           POLLS_VICTOR_BORDER: {
             category: "generic",
-            [a.DARK]: { raw: "YELLOW_300", opacity: 1 },
-            [a.LIGHT]: { raw: "YELLOW_300", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "YELLOW_300", opacity: 1 },
-            [a.DARKER]: { raw: "YELLOW_300", opacity: 1 },
+            [a.DARK]: { raw: "GREEN_330", opacity: 1 },
+            [a.LIGHT]: { raw: "GREEN_330", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "GREEN_330", opacity: 1 },
+            [a.DARKER]: { raw: "GREEN_330", opacity: 1 },
           },
           POLLS_VICTOR_FILL: {
             category: "generic",
-            [a.DARK]: { raw: "YELLOW_200", opacity: 1 },
-            [a.LIGHT]: { raw: "YELLOW_200", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "YELLOW_200", opacity: 1 },
-            [a.DARKER]: { raw: "YELLOW_200", opacity: 1 },
+            [a.DARK]: { raw: "GREEN_360", opacity: 0.2 },
+            [a.LIGHT]: { raw: "GREEN_400", opacity: 0.2 },
+            [a.MIDNIGHT]: { raw: "GREEN_360", opacity: 0.2 },
+            [a.DARKER]: { raw: "GREEN_360", opacity: 0.2 },
           },
           POLLS_VICTOR_LABEL: {
             category: "generic",
@@ -8901,17 +8908,17 @@
           },
           POLLS_VOTED_BORDER: {
             category: "generic",
-            [a.DARK]: { raw: "GREEN_330", opacity: 1 },
-            [a.LIGHT]: { raw: "GREEN_330", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "GREEN_330", opacity: 1 },
-            [a.DARKER]: { raw: "GREEN_330", opacity: 1 },
+            [a.DARK]: { raw: "BRAND_300", opacity: 1 },
+            [a.LIGHT]: { raw: "BRAND_300", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "BRAND_300", opacity: 1 },
+            [a.DARKER]: { raw: "BRAND_300", opacity: 1 },
           },
           POLLS_VOTED_FILL: {
             category: "generic",
-            [a.DARK]: { raw: "GREEN_160", opacity: 1 },
-            [a.LIGHT]: { raw: "GREEN_160", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "GREEN_160", opacity: 1 },
-            [a.DARKER]: { raw: "GREEN_160", opacity: 1 },
+            [a.DARK]: { raw: "BRAND_200", opacity: 1 },
+            [a.LIGHT]: { raw: "BRAND_200", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "BRAND_200", opacity: 1 },
+            [a.DARKER]: { raw: "BRAND_200", opacity: 1 },
           },
           POLLS_VOTED_LABEL: {
             category: "generic",
@@ -11204,7 +11211,7 @@
             return _F;
           },
           LocalizedLinks: function () {
-            return _W;
+            return _v;
           },
           AppRoutes: function () {
             return _k;
@@ -11286,8 +11293,8 @@
         K,
         V,
         F,
-        W,
         v,
+        W,
         k,
         x,
         X,
@@ -11479,12 +11486,12 @@
         ((F = i || (i = {}))[(F.PREMIUM = 1)] = "PREMIUM"),
         (F[(F.GUILD = 2)] = "GUILD"),
         (F[(F.APPLICATION = 3)] = "APPLICATION"),
-        ((W = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
-        (W.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
-        (W.VENMO_CANCELED = "VENMO_CANCELED"),
+        ((v = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
+        (v.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
+        (v.VENMO_CANCELED = "VENMO_CANCELED"),
         Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
-        ((v = O || (O = {}))[(v.DISCOVERY = 0)] = "DISCOVERY"),
-        (v[(v.CHECKOUT = 1)] = "CHECKOUT"),
+        ((W = O || (O = {}))[(W.DISCOVERY = 0)] = "DISCOVERY"),
+        (W[(W.CHECKOUT = 1)] = "CHECKOUT"),
         ((k = n || (n = {}))[(k.SUBSCRIPTION = 0)] = "SUBSCRIPTION"),
         (k[(k.ONE_TIME = 1)] = "ONE_TIME");
       let _p = Object.freeze({ 0: "subscription", 1: "sku" });
@@ -11781,13 +11788,13 @@
           COMMUNITY: "/community",
           TWITTER_SUPPORT: "https://twitter.com/discord_support",
         },
-        _W = Object.freeze({
+        _v = Object.freeze({
           TWITTER: Object.freeze({
             default: "https://twitter.com/discord",
             ja: "https://twitter.com/discord_jp",
           }),
         }),
-        _v = Object.freeze({
+        _W = Object.freeze({
           WELCOME: "".concat(_N, "/welcome/"),
           ME: "".concat(_N, "/channels/@me"),
           SETTINGS: (_, E) =>
@@ -11904,7 +11911,7 @@
         (j.SNOWSGIVING_GIVEAWAY_INSTAGRAM =
           "/terms/snowsgiving-2020/instagram"),
         (j.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter");
-      let _k = (0, _A.wrapPaths)(_v),
+      let _k = (0, _A.wrapPaths)(_W),
         _x = (0, _A.wrapPaths)(s),
         _X = Object.freeze({
           FACEBOOK_URL: "https://www.facebook.com/discord/",
@@ -13879,6 +13886,7 @@
         (e.POLLS_NORMAL_FILL_HOVER = "polls-normal-fill-hover"),
         (e.POLLS_NORMAL_IMAGE_BACKGROUND = "polls-normal-image-background"),
         (e.POLLS_NORMAL_LABEL = "polls-normal-label"),
+        (e.POLLS_RESULT_FILL = "polls-result-fill"),
         (e.POLLS_VICTOR_BORDER = "polls-victor-border"),
         (e.POLLS_VICTOR_FILL = "polls-victor-fill"),
         (e.POLLS_VICTOR_LABEL = "polls-victor-label"),
@@ -15225,17 +15233,23 @@
           o.Color.WHITE_500,
           o.Color.WHITE_500,
         ],
+        "polls-result-fill": [
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+          o.Color.BRAND_500,
+        ],
         "polls-victor-border": [
-          o.Color.YELLOW_300,
-          o.Color.YELLOW_300,
-          o.Color.YELLOW_300,
-          o.Color.YELLOW_300,
+          o.Color.GREEN_330,
+          o.Color.GREEN_330,
+          o.Color.GREEN_330,
+          o.Color.GREEN_330,
         ],
         "polls-victor-fill": [
-          o.Color.YELLOW_200,
-          o.Color.YELLOW_200,
-          o.Color.YELLOW_200,
-          o.Color.YELLOW_200,
+          o.Color.GREEN_360,
+          o.Color.GREEN_400,
+          o.Color.GREEN_360,
+          o.Color.GREEN_360,
         ],
         "polls-victor-label": [
           o.Color.PRIMARY_600,
@@ -15244,16 +15258,16 @@
           o.Color.PRIMARY_600,
         ],
         "polls-voted-border": [
-          o.Color.GREEN_330,
-          o.Color.GREEN_330,
-          o.Color.GREEN_330,
-          o.Color.GREEN_330,
+          o.Color.BRAND_300,
+          o.Color.BRAND_300,
+          o.Color.BRAND_300,
+          o.Color.BRAND_300,
         ],
         "polls-voted-fill": [
-          o.Color.GREEN_160,
-          o.Color.GREEN_160,
-          o.Color.GREEN_160,
-          o.Color.GREEN_160,
+          o.Color.BRAND_200,
+          o.Color.BRAND_200,
+          o.Color.BRAND_200,
+          o.Color.BRAND_200,
         ],
         "polls-voted-label": [
           o.Color.PRIMARY_600,
@@ -17236,4 +17250,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.823bff3ef96e987c82fc.js.map
+//# sourceMappingURL=7273.14a803808e98c6433616.js.map

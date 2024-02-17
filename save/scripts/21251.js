@@ -430,6 +430,7 @@
         (e.POLLS_NORMAL_IMAGE_BACKGROUND =
           "var(--polls-normal-image-background)"),
         (e.POLLS_NORMAL_LABEL = "var(--polls-normal-label)"),
+        (e.POLLS_RESULT_FILL = "var(--polls-result-fill)"),
         (e.POLLS_VICTOR_BORDER = "var(--polls-victor-border)"),
         (e.POLLS_VICTOR_FILL = "var(--polls-victor-fill)"),
         (e.POLLS_VICTOR_LABEL = "var(--polls-victor-label)"),
@@ -624,4 +625,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.2573803dec83960acc3a.js.map
+//# sourceMappingURL=21251.3412b316a28e566b4fce.js.map

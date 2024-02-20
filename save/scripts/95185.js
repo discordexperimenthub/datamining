@@ -411,10 +411,10 @@
       s.r(t),
         s.d(t, {
           SearchContext: function () {
-            return g;
+            return T;
           },
           default: function () {
-            return m;
+            return A;
           },
         }),
         s("424973"),
@@ -439,8 +439,9 @@
         c = s("27618"),
         p = s("697218"),
         _ = s("449008"),
-        f = s("158998");
-      function R(e) {
+        f = s("299039"),
+        R = s("158998");
+      function y(e) {
         if (null == e || c.default.isBlocked(e.id)) return null;
         let t = {
           id: e.id,
@@ -450,7 +451,7 @@
               : e.username,
         };
         return (
-          null != f.default.getGlobalName(e) && (t.globalName = e.globalName),
+          null != R.default.getGlobalName(e) && (t.globalName = e.globalName),
           e.bot && (t.isBot = !0),
           c.default.isFriend(e.id) &&
             ((t.isFriend = !0),
@@ -458,27 +459,27 @@
           t
         );
       }
-      function y(e, t, s) {
+      function E(e, t, s) {
         null != e && (e[t] = null != s && "" !== s ? s : null);
       }
-      function E(e) {
+      function C(e) {
         let t = [];
         if (null == e || !(0, o.isPrivate)(e.type)) return t;
         let { recipients: s = [] } = e;
         return (
           s.forEach(s => {
-            let l = R(p.default.getUser(s));
-            null != e && y(l, e.id), t.push(l);
+            let l = y(p.default.getUser(s));
+            null != e && E(l, e.id), t.push(l);
           }),
           t
         );
       }
-      function C(e, t) {
+      function g(e, t) {
         let s = [];
         return (
           e.forEach(e => {
-            let l = R(e.user);
-            null != l && (y(l, t, e.nick), s.push(l));
+            let l = y(e.user);
+            null != l && (E(l, t, e.nick), s.push(l));
           }),
           s
         );
@@ -487,7 +488,7 @@
         (u.USER_RESULTS = "USER_RESULTS"),
         (u.QUERY_SET = "QUERY_SET"),
         (u.QUERY_CLEAR = "QUERY_CLEAR");
-      class g {
+      class T {
         setLimit(e) {
           (this._limit = e),
             null != this._nextQuery && (this._nextQuery.limit = e);
@@ -566,7 +567,7 @@
             this.subscribe();
         }
       }
-      class T extends a.default {
+      class m extends a.default {
         _initialize() {
           this.rebootWebworker();
         }
@@ -592,7 +593,7 @@
           let { _worker: s } = this;
           if (null == s)
             throw Error("SearchContextManager: No webworker initialized");
-          return new g(s, e, t);
+          return new T(s, e, t);
         }
         constructor(...e) {
           super(...e),
@@ -622,10 +623,10 @@
               setTimeout(() => {
                 let e = p.default.getCurrentUser();
                 if (null == e) return;
-                let t = R(e),
+                let t = y(e),
                   s = { [t.id]: t };
                 Object.values(p.default.getUsers()).forEach(e => {
-                  s[e.id] = R(e);
+                  s[e.id] = y(e);
                 });
                 let l = d.default.getMutableAllGuildsAndMembers();
                 for (let e in l)
@@ -639,7 +640,7 @@
                               ? void 0
                               : u.nick) && void 0 !== i
                           ? i
-                          : f.default.getGlobalName(n);
+                          : R.default.getGlobalName(n);
                     null != n && (n[e] = null != r && "" !== r ? r : null);
                   }
                 this.updateUsers(Object.values(s));
@@ -648,15 +649,15 @@
             (this._handleConnectionOpenSupplemental = e => {
               let { guilds: t } = e;
               setTimeout(() => {
-                let e = n.flatMap(t, e => C(e.members, e.id));
+                let e = n.flatMap(t, e => g(e.members, e.id));
                 this.updateUsers(e);
               }, 3e3);
             }),
             (this._handleOverlayInitialize = e => {
               let { users: t, guildMembers: s } = e,
                 l = new Map();
-              for (let e of t) l.set(e.id, R(e));
-              let u = Object.keys(s);
+              for (let e of t) l.set(e.id, y(e));
+              let u = f.default.keys(s);
               for (let e of u) {
                 let t = s[e];
                 if (null == t) continue;
@@ -667,72 +668,72 @@
                   null != u &&
                     null != i &&
                     null != i.nick &&
-                    (y(u, e, i.nick), l.set(s, u));
+                    (E(u, e, i.nick), l.set(s, u));
                 }
               }
               this.updateUsers(Array.from(l.values())), l.clear();
             }),
             (this._handleCurrentUserUpdate = e => {
               let { user: t } = e,
-                s = R(t);
+                s = y(t);
               null != s && this.updateUsers([s]);
             }),
             (this._handleGuildCreate = e => {
               let { guild: t } = e,
                 { members: s } = t;
-              this.updateUsers(C(s, t.id));
+              this.updateUsers(g(s, t.id));
             }),
             (this._handleGuildMembersChunk = e => {
               let { members: t, guildId: s } = e;
-              this.updateUsers(C(t, s));
+              this.updateUsers(g(t, s));
             }),
             (this._handleGuildMemberUpdate = e => {
               let { guildId: t, user: s, nick: l } = e,
-                u = R(s);
-              null != u && (y(u, t, l), this.updateUsers([u]));
+                u = y(s);
+              null != u && (E(u, t, l), this.updateUsers([u]));
             }),
             (this._handlePassiveUpdateV1 = e => {
-              null != e.members && this.updateUsers(C(e.members, e.guildId));
+              null != e.members && this.updateUsers(g(e.members, e.guildId));
             }),
             (this._handleRelationshipAdd = e => {
-              let t = R(e.relationship.user);
+              let t = y(e.relationship.user);
               this.updateUsers([t]);
             }),
             (this._handleRelationshipUpdate = e => {
-              let t = R(p.default.getUser(e.relationship.id));
+              let t = y(p.default.getUser(e.relationship.id));
               this.updateUsers([t]);
             }),
             (this._handleRelationshipRemove = e => {
-              let t = R(p.default.getUser(e.relationship.id));
+              let t = y(p.default.getUser(e.relationship.id));
               this.updateUsers([t]);
             }),
             (this._handleDMCreate = e => {
               let {
                   channel: { id: t },
                 } = e,
-                s = E(h.default.getChannel(t));
+                s = C(h.default.getChannel(t));
               if (0 === s.length) return;
-              let l = R(p.default.getCurrentUser());
-              y(l, t), s.push(l), this.updateUsers(s);
+              let l = y(p.default.getCurrentUser());
+              E(l, t), s.push(l), this.updateUsers(s);
             }),
             (this._handleDMUpdates = e => {
               let { channels: t } = e;
               for (let e of t) {
-                let t = E(h.default.getChannel(e.id));
+                let t = C(h.default.getChannel(e.id));
                 if (0 === t.length) continue;
-                let s = R(p.default.getCurrentUser());
-                y(s, e.id), t.push(s), this.updateUsers(t);
+                let s = y(p.default.getCurrentUser());
+                E(s, e.id), t.push(s), this.updateUsers(t);
               }
             }),
             (this._handleRecipientChanges = e => {
               let { channelId: t, user: s, isMember: l } = e;
               if (!l) return;
-              let u = R(s);
-              y(u, t), this.updateUsers([u]);
+              let u = y(s);
+              E(u, t), this.updateUsers([u]);
             });
         }
       }
-      var m = new T();
+      var A = new m();
     },
     108964: function (e, t, s) {
       "use strict";
@@ -1477,4 +1478,4 @@
     },
   },
 ]);
-//# sourceMappingURL=95185.5e98663c6a751ef7771e.js.map
+//# sourceMappingURL=95185.868cc6e279c6ddb7836c.js.map

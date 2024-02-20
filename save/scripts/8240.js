@@ -1520,7 +1520,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return o;
           },
         }),
         n("222007");
@@ -1528,8 +1528,9 @@
         l = n("689275"),
         a = n("271938"),
         s = n("42203"),
-        r = n("786742");
-      class u extends i.default {
+        r = n("299039"),
+        u = n("786742");
+      class d extends i.default {
         handleThreadCreate(e) {
           let { channel: t } = e;
           if (t.isForumPost()) {
@@ -1555,8 +1556,8 @@
             }),
             (this.processForumChannel = (e, t) => {
               let n = l.default.getThreadsForParent(e, t);
-              Object.keys(n).forEach(e => {
-                let t = (0, r.getForumPostReadStatesById)(e);
+              r.default.keys(n).forEach(e => {
+                let t = (0, u.getForumPostReadStatesById)(e);
                 null != t && (this.readStateSnapshots[e] = t);
               });
             }),
@@ -1564,7 +1565,7 @@
               this.readStateSnapshots[e]);
         }
       }
-      var d = new u();
+      var o = new d();
     },
     369814: function (e, t, n) {
       "use strict";
@@ -4477,4 +4478,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8240.cb55cfb3a51b13360d50.js.map
+//# sourceMappingURL=8240.94c0d139ada793373af8.js.map

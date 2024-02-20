@@ -25995,8 +25995,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267408", ", Version Hash: ")
-          .concat("e6aa7f6befbb693128e1945bc58e6556e66fd578")
+          .concat("267422", ", Version Hash: ")
+          .concat("c5a199d94222afcd4734ee5f30df44bd87f3d7e0")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29083,12 +29083,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267408"), "267408"));
+        let _ = parseInt(((e = "267422"), "267422"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267408"
+                "267422"
               )
             ),
             (_ = 0)),
@@ -31624,17 +31624,19 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return i;
+            return a;
           },
         }),
         E("222007");
       var t = E("689988"),
         o = E("42203"),
-        n = E("612278");
-      class r extends t.default {
+        n = E("612278"),
+        r = E("724210");
+      class i extends t.default {
         handleChannelPreload(e) {
-          let { channelId: _ } = e,
-            E = o.default.getChannel(_);
+          let { channelId: _ } = e;
+          if ((0, r.isStaticChannelRoute)(_)) return;
+          let E = o.default.getChannel(_);
           null != E && E.isForumLikeChannel() && (0, n.preloadForumThreads)(E);
         }
         constructor(...e) {
@@ -31642,14 +31644,14 @@
             (this.actions = { CHANNEL_PRELOAD: this.handleChannelPreload });
         }
       }
-      var i = new r();
+      var a = new i();
     },
     144320: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
           default: function () {
-            return T;
+            return S;
           },
         }),
         E("511434"),
@@ -31664,12 +31666,14 @@
         n = E("42203"),
         r = E("315102"),
         i = E("402671"),
-        a = E("115279");
-      let I = new Worker(new URL(E.p + E.u("68638"), E.b));
-      class s extends t.default {
+        a = E("724210"),
+        I = E("115279");
+      let s = new Worker(new URL(E.p + E.u("68638"), E.b));
+      class T extends t.default {
         handleChannelPreload(e) {
-          let { channelId: _ } = e,
-            E = n.default.getChannel(_);
+          let { channelId: _ } = e;
+          if ((0, a.isStaticChannelRoute)(_)) return;
+          let E = n.default.getChannel(_);
           if (null != E && E.isForumLikeChannel()) {
             let e = (function (e) {
               let _ = [],
@@ -31690,7 +31694,7 @@
                             : t.animated) &&
                       void 0 !== n &&
                       n,
-                    size: a.EMOJI_SIZE_MAP.reaction,
+                    size: I.EMOJI_SIZE_MAP.reaction,
                   })
                 );
               } else
@@ -31703,7 +31707,7 @@
                         r.default.getEmojiURL({
                           id: e.emojiId,
                           animated: !1,
-                          size: a.EMOJI_SIZE_MAP.reaction,
+                          size: I.EMOJI_SIZE_MAP.reaction,
                         })
                       )
                     : null != e.emojiName &&
@@ -31721,11 +31725,11 @@
                       let {
                         data: { url: o },
                       } = t;
-                      null == I || I.removeEventListener("message", E),
+                      null == s || s.removeEventListener("message", E),
                         _ === o && e();
                     };
-                    null == I || I.addEventListener("message", E),
-                      null == I || I.postMessage({ url: _ });
+                    null == s || s.addEventListener("message", E),
+                      null == s || s.postMessage({ url: _ });
                   });
               }
             });
@@ -31736,7 +31740,7 @@
             (this.actions = { CHANNEL_PRELOAD: this.handleChannelPreload });
         }
       }
-      var T = new s();
+      var S = new T();
     },
     508412: function (e, _, E) {
       "use strict";
@@ -32912,7 +32916,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return c;
+            return d;
           },
         }),
         E("222007");
@@ -32927,27 +32931,28 @@
         T = E("364685"),
         S = E("42203"),
         N = E("305961"),
-        O = E("619443");
-      let A = new I.default("EntityVersionsManager");
-      class R extends i.default {
+        O = E("299039"),
+        A = E("619443");
+      let R = new I.default("EntityVersionsManager");
+      class l extends i.default {
         _initialize() {
-          r.default.subscribe("CONNECTION_OPEN", u);
+          r.default.subscribe("CONNECTION_OPEN", L);
         }
         _terminate() {
-          r.default.unsubscribe("CONNECTION_OPEN", u);
+          r.default.unsubscribe("CONNECTION_OPEN", L);
         }
         constructor(...e) {
           super(...e),
-            (this.actions = { GUILD_CREATE: L, DELETED_ENTITY_IDS: l });
+            (this.actions = { GUILD_CREATE: C, DELETED_ENTITY_IDS: u });
         }
       }
-      function l(e) {
+      function u(e) {
         var _;
         let E =
           null === (_ = N.default.getGuild(e.guild_id)) || void 0 === _
             ? void 0
             : _.name;
-        A.fileOnly(
+        R.fileOnly(
           "received deleted guild entities (id: "
             .concat(e.guild_id, ", name: ")
             .concat(E, ")")
@@ -32955,10 +32960,10 @@
           n.default.Emitter.batched(() => {
             null != e.channels &&
               (function (e, _) {
-                let E = Object.keys(
+                let E = O.default.keys(
                   S.default.getMutableBasicGuildChannelsForGuild(e)
                 );
-                A.fileOnly("syncChannels", {
+                R.fileOnly("syncChannels", {
                   channelIdsInMemory: E,
                   channelIdsFromServer: _,
                 }),
@@ -33019,16 +33024,16 @@
                 })(e.guild_id, new Set(e.stickers));
           });
       }
-      function u() {
+      function L() {
         a.default.getAll().then(e => {
-          e.forEach(e => C(e));
+          e.forEach(e => D(e));
         });
       }
-      function L(e) {
-        let { guild: _ } = e;
-        _.unableToSyncDeletes && C(_.id);
-      }
       function C(e) {
+        let { guild: _ } = e;
+        _.unableToSyncDeletes && D(_.id);
+      }
+      function D(e) {
         setTimeout(
           () =>
             (function (e) {
@@ -33037,15 +33042,15 @@
                 null === (_ = N.default.getGuild(e)) || void 0 === _
                   ? void 0
                   : _.name;
-              A.fileOnly(
+              R.fileOnly(
                 "requesting deleted guild entities (id: "
                   .concat(e, ", name: ")
                   .concat(r, ")")
               );
-              let i = D(
+              let i = c(
                   Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e))
                 ),
-                a = D(
+                a = c(
                   Object.keys(
                     null !==
                       (o =
@@ -33056,8 +33061,8 @@
                       : {}
                   )
                 ),
-                I = D(s.default.getGuildEmoji(e).map(e => e.id)),
-                R = D(
+                I = c(s.default.getGuildEmoji(e).map(e => e.id)),
+                O = c(
                   null !==
                     (n =
                       null === (t = T.default.getStickersByGuildId(e)) ||
@@ -33067,17 +33072,17 @@
                     ? n
                     : []
                 );
-              O.default
+              A.default
                 .getSocket()
-                .getDeletedEntityIdsNotMatchingHash(e, i, a, I, R);
+                .getDeletedEntityIdsNotMatchingHash(e, i, a, I, O);
             })(e),
           Math.ceil(2e3 * Math.random())
         );
       }
-      function D(e) {
+      function c(e) {
         return o.v3(e.sort().join(",")).toString();
       }
-      var c = new R();
+      var d = new l();
     },
     451772: function (e, _, E) {
       "use strict";
@@ -34941,8 +34946,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708366954704",
-                    build_number: "267408",
+                    built_at: "1708441838669",
+                    build_number: "267422",
                   },
                 },
                 retries: 1,
@@ -51278,4 +51283,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.bb51a375fef4e80f8dd0.js.map
+//# sourceMappingURL=99392.02cf585587fe7fceb0ca.js.map

@@ -9340,7 +9340,10 @@
         v = n("49111"),
         I = n("782340"),
         _ = n("789215");
-      let N = (0, p.createChannelRecord)({ id: "1", type: v.ChannelTypes.DM }),
+      let N = (0, p.createChannelRecord)({
+          id: v.ONE_STRING_CHANNEL_ID,
+          type: v.ChannelTypes.DM,
+        }),
         A = i.forwardRef(function (e, t) {
           let {
               user: n,
@@ -39579,7 +39582,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return h;
+            return E;
           },
         });
       var l = n("37983"),
@@ -39592,45 +39595,48 @@
         d = n("232268"),
         c = n("798592"),
         f = n("39141"),
-        m = n("172858");
-      function p(e) {
+        m = n("49111"),
+        p = n("172858");
+      function h(e) {
         var t, n;
         let { editorHeight: l, textValue: d } = e,
           f = i.useRef(d),
-          p = (0, s.useChannelAutocompleteLayerPosition)({ editorHeight: l }),
-          h = (0, c.default)(),
-          E = (0, a.useStateFromStores)(
+          h = (0, s.useChannelAutocompleteLayerPosition)({ editorHeight: l }),
+          E = (0, c.default)(),
+          g = (0, a.useStateFromStores)(
             [u.default, r.default, o.default],
             () => {
               var e;
               return u.default.isComboing(
                 r.default.getId(),
-                null !== (e = o.default.getChannelId()) && void 0 !== e ? e : ""
+                null !== (e = o.default.getChannelId()) && void 0 !== e
+                  ? e
+                  : m.EMPTY_STRING_CHANNEL_ID
               );
             }
           ),
-          g =
-            null !== (t = null == p ? void 0 : p.left) && void 0 !== t ? t : 0,
           S =
-            (null !== (n = null == p ? void 0 : p.top) && void 0 !== n
+            null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0,
+          C =
+            (null !== (n = null == h ? void 0 : h.top) && void 0 !== n
               ? n
               : 0) - 16,
-          C = i.useMemo(() => 0.05 > Math.random(), [0 === d.length]);
+          T = i.useMemo(() => 0.05 > Math.random(), [0 === d.length]);
         return (
           i.useEffect(() => {
             0 !== d.length &&
               d !== f.current &&
-              E &&
-              (h.fire(g, S, C ? { sprite: m.DUCK_CONFETTI_SPRITE } : null),
+              g &&
+              (E.fire(S, C, T ? { sprite: p.DUCK_CONFETTI_SPRITE } : null),
               (f.current = d));
-          }, [d, E, g, S, C, h]),
+          }, [d, g, S, C, T, E]),
           null
         );
       }
-      function h(e) {
+      function E(e) {
         return (0, l.jsx)(d.default, {
           confettiLocation: f.ConfettiLocation.CHAT_INPUT,
-          children: (0, l.jsx)(p, { ...e }),
+          children: (0, l.jsx)(h, { ...e }),
         });
       }
     },
@@ -42889,7 +42895,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return W;
+            return Y;
           },
         }),
         n("222007");
@@ -42928,27 +42934,28 @@
         U = n("181021"),
         D = n("299069"),
         k = n("569717"),
-        w = n("782340"),
-        F = n("851289");
-      let G = [8, 0, 8, 8];
-      function B(e) {
+        w = n("49111"),
+        F = n("782340"),
+        G = n("851289");
+      let B = [8, 0, 8, 8];
+      function H(e) {
         return 0 === e ? 16 : 32;
       }
-      function H(e) {
+      function V(e) {
         let { categoryInfo: t, collapsed: n, toggleCollapsed: i, index: a } = e;
         return (0, l.jsxs)(u.Clickable, {
-          className: s(F.sectionHeader, { [F.notFirstSectionHeader]: 0 !== a }),
+          className: s(G.sectionHeader, { [G.notFirstSectionHeader]: 0 !== a }),
           onClick: i,
           children: [
             (function () {
               switch (t.type) {
                 case O.SoundboardSoundGridSectionType.FAVORITES:
-                  return (0, l.jsx)(N.default, { className: F.headerIcon });
+                  return (0, l.jsx)(N.default, { className: G.headerIcon });
                 case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                  return (0, l.jsx)(I.default, { className: F.headerIcon });
+                  return (0, l.jsx)(I.default, { className: G.headerIcon });
                 case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
                   return (0, l.jsx)(o.AnalyticsIcon, {
-                    className: F.headerIcon,
+                    className: G.headerIcon,
                   });
                 case O.SoundboardSoundGridSectionType.GUILD:
                   return (0, l.jsx)(m.default, {
@@ -42957,34 +42964,34 @@
                     width: 16,
                   });
                 case O.SoundboardSoundGridSectionType.DEFAULTS:
-                  return (0, l.jsx)(_.default, { className: F.headerIcon });
+                  return (0, l.jsx)(_.default, { className: G.headerIcon });
                 case O.SoundboardSoundGridSectionType.SEARCH:
-                  return (0, l.jsx)(A.default, { className: F.headerIcon });
+                  return (0, l.jsx)(A.default, { className: G.headerIcon });
               }
             })(),
             (0, l.jsx)(u.Heading, {
               variant: "eyebrow",
               color: "none",
-              className: F.sectionTitle,
+              className: G.sectionTitle,
               children: (function () {
                 switch (t.type) {
                   case O.SoundboardSoundGridSectionType.FAVORITES:
-                    return w.default.Messages.FAVORITES;
+                    return F.default.Messages.FAVORITES;
                   case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                    return w.default.Messages.RECENTLY_HEARD;
+                    return F.default.Messages.RECENTLY_HEARD;
                   case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
-                    return w.default.Messages.FREQUENTLY_USED;
+                    return F.default.Messages.FREQUENTLY_USED;
                   case O.SoundboardSoundGridSectionType.GUILD:
                     return t.guild.name;
                   case O.SoundboardSoundGridSectionType.DEFAULTS:
-                    return w.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                    return F.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
                   case O.SoundboardSoundGridSectionType.SEARCH:
-                    return w.default.Messages.SEARCH_RESULTS_SECTION_LABEL;
+                    return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL;
                 }
               })(),
             }),
             (0, l.jsx)(v.default, {
-              className: F.headerIcon,
+              className: G.headerIcon,
               direction: n
                 ? v.default.Directions.RIGHT
                 : v.default.Directions.DOWN,
@@ -42992,12 +42999,12 @@
           ],
         });
       }
-      function V() {
+      function K() {
         return (0, l.jsx)(c.default, {
-          message: w.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY,
+          message: F.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY,
         });
       }
-      function K(e) {
+      function W(e) {
         let {
             descriptors: t,
             soundButtonProps: n,
@@ -43015,7 +43022,7 @@
           );
         return (0, l.jsx)("ul", {
           ...o,
-          className: F.soundRow,
+          className: G.soundRow,
           children: t.map((e, t) => {
             let l = "item-".concat(t),
               o = s && m.rowIndex === a && m.columnIndex === t;
@@ -43044,7 +43051,7 @@
           }),
         });
       }
-      function W(e) {
+      function Y(e) {
         let {
             guildId: t,
             channel: a,
@@ -43060,73 +43067,73 @@
             defaultSoundsOnly: P = !1,
           } = e,
           { analyticsLocations: b } = (0, f.default)(),
-          [W, Y] = i.useState(null),
-          z = (0, r.useStateFromStores)([S.default], () =>
+          [Y, z] = i.useState(null),
+          Z = (0, r.useStateFromStores)([S.default], () =>
             S.default.getCurrentUser()
           ),
-          Z = (0, r.useStateFromStores)([C.default], () => {
+          J = (0, r.useStateFromStores)([C.default], () => {
             var e;
             return C.default.getVoiceState(
               t,
-              null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : ""
+              null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : ""
             );
           }),
-          J =
-            (null == Z ? void 0 : Z.selfDeaf) ||
-            (null == Z ? void 0 : Z.mute) ||
-            (null == Z ? void 0 : Z.suppress),
-          q = (0, h.useExpressionPickerStore)(e => e.searchQuery),
-          X = (0, T.useUID)(),
-          { categories: Q } = (0, L.default)(a, void 0, P),
-          [$, ee] = i.useState([]),
-          et = (0, L.useSearchCategories)(Q, $, q),
-          en = g.SoundboardPickerCollapsedSections.useSetting(),
-          el = i.useMemo(() => new Set(en), [en]),
-          ei = null == a,
-          ea = x.default.canUseCustomCallSounds(z),
-          es = i.useCallback(
+          q =
+            (null == J ? void 0 : J.selfDeaf) ||
+            (null == J ? void 0 : J.mute) ||
+            (null == J ? void 0 : J.suppress),
+          X = (0, h.useExpressionPickerStore)(e => e.searchQuery),
+          Q = (0, T.useUID)(),
+          { categories: $ } = (0, L.default)(a, void 0, P),
+          [ee, et] = i.useState([]),
+          en = (0, L.useSearchCategories)($, ee, X),
+          el = g.SoundboardPickerCollapsedSections.useSetting(),
+          ei = i.useMemo(() => new Set(el), [el]),
+          ea = null == a,
+          es = x.default.canUseCustomCallSounds(Z),
+          er = i.useCallback(
             e => {
-              let t = !el.has(e);
-              t ? el.add(e) : el.delete(e),
+              let t = !ei.has(e);
+              t ? ei.add(e) : ei.delete(e),
                 g.SoundboardPickerCollapsedSections.updateSetting(
-                  Array.from(el)
+                  Array.from(ei)
                 );
             },
-            [el]
+            [ei]
           ),
-          er = i.useCallback(
+          eo = i.useCallback(
             (e, t) => {
-              if (!m && (0, R.canUseSoundboardSound)(z, e, a, !1)) {
+              if (!m && (0, R.canUseSoundboardSound)(Z, e, a, !1)) {
                 var n;
                 (0, R.playSound)(
                   e,
                   null !== (n = null == a ? void 0 : a.id) && void 0 !== n
                     ? n
-                    : "",
+                    : w.EMPTY_STRING_CHANNEL_ID,
                   t
                 );
               } else {
-                if ((0, R.canUseSoundboardSound)(z, e, a)) return;
-                v && Y(e);
+                if ((0, R.canUseSoundboardSound)(Z, e, a)) return;
+                v && z(e);
               }
             },
-            [m, z, a, v]
+            [m, Z, a, v]
           ),
-          eo = i.useCallback(
+          eu = i.useCallback(
             e => {
               switch (e.item.type) {
                 case O.SoundboardSoundItemType.SOUND:
-                  return null == c || c(e.item.sound), er(e.item.sound, b);
+                  return null == c || c(e.item.sound), eo(e.item.sound, b);
                 case O.SoundboardSoundItemType.ADD_SOUND:
                   return (0, k.default)(e.item.guild.id);
               }
             },
-            [b, er, c]
+            [b, eo, c]
           ),
-          eu = i.useCallback(
+          ed = i.useCallback(
             (e, t, n, i, s) =>
               (0, l.jsx)(
-                K,
+                W,
                 {
                   descriptors: e,
                   rowIndex: n.rowIndex,
@@ -43135,37 +43142,37 @@
                   getItemProps: i,
                   onItemMouseEnter: s,
                   suppressPlaySound: m,
-                  onSelectItem: eo,
+                  onSelectItem: eu,
                   soundButtonProps: {
                     channel: a,
-                    interactive: ei ? ea : !J,
-                    forceSecondaryActions: ei,
+                    interactive: ea ? es : !q,
+                    forceSecondaryActions: ea,
                     analyticsLocations: b,
                   },
                   buttonOverlay: _,
                 },
                 "row-".concat(t["aria-rowindex"])
               ),
-            [eo, a, J, m, b, ei, ea, _]
+            [eu, a, q, m, b, ea, es, _]
           ),
-          ed = i.useCallback(
+          ec = i.useCallback(
             (e, t) => {
               let n = "".concat(e.key);
               return (0, l.jsx)(
-                H,
+                V,
                 {
                   categoryInfo: e.categoryInfo,
-                  toggleCollapsed: () => es(n),
-                  collapsed: el.has(n),
+                  toggleCollapsed: () => er(n),
+                  collapsed: ei.has(n),
                   index: t,
                 },
                 "header-".concat(n)
               );
             },
-            [el, es]
+            [ei, er]
           ),
-          ec = i.useCallback(e => ee((0, M.default)(e, Q, z, a)), [a, z, Q]),
-          ef = i.useCallback(e => {
+          ef = i.useCallback(e => et((0, M.default)(e, $, Z, a)), [a, Z, $]),
+          em = i.useCallback(e => {
             (0, d.openContextMenuLazy)(e, async () => {
               let { default: e } = await n
                 .el("136137")
@@ -43173,28 +43180,28 @@
               return t => (0, l.jsx)(e, { ...t });
             });
           }, []),
-          em = i.useCallback(
+          ep = i.useCallback(
             () =>
               (0, l.jsx)(u.Clickable, {
                 tabIndex: 0,
-                className: F.settingsClickArea,
-                onClick: ef,
+                className: G.settingsClickArea,
+                onClick: em,
                 "aria-label":
-                  w.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-                children: (0, l.jsx)(y.default, { className: F.settingsIcon }),
+                  F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
+                children: (0, l.jsx)(y.default, { className: G.settingsIcon }),
               }),
-            [ef]
+            [em]
           ),
-          ep = i.useCallback(
+          eh = i.useCallback(
             e =>
               (0, l.jsx)(j.default, {
                 soundboardListRef: e,
-                categories: Q,
+                categories: $,
                 listPadding: N,
               }),
-            [Q, N]
+            [$, N]
           ),
-          eh = i.useCallback(
+          eE = i.useCallback(
             e => {
               if (
                 (null == e ? void 0 : e.item.type) ===
@@ -43216,34 +43223,34 @@
           );
         return (0, l.jsxs)(l.Fragment, {
           children: [
-            null != W &&
+            null != Y &&
               (0, l.jsx)(D.default, {
-                onClose: () => Y(null),
+                onClose: () => z(null),
                 closePopout: o,
-                sound: W,
+                sound: Y,
                 channel: a,
               }),
             (0, l.jsx)(E.default, {
-              categories: et,
-              collapsedCategories: el,
+              categories: en,
+              collapsedCategories: ei,
               containerWidth: s,
               store: p.SoundboardPickerStore,
-              onSelectItem: eo,
-              onSearchExpressions: ec,
-              hasSearchResults: $.length > 0,
+              onSelectItem: eu,
+              onSearchExpressions: ef,
+              hasSearchResults: ee.length > 0,
               defaultSearchPlaceholder:
-                w.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
-              renderRow: eu,
-              renderSectionHeader: ed,
-              renderCategoryList: ep,
-              renderHeaderAccessories: em,
+                F.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
+              renderRow: ed,
+              renderSectionHeader: ec,
+              renderCategoryList: eh,
+              renderHeaderAccessories: ep,
               rowHeight: 48,
-              sectionHeaderHeight: B,
-              listPadding: G,
+              sectionHeaderHeight: H,
+              listPadding: B,
               itemNodeWidth: 150,
-              gridNavigatorId: X,
-              renderEmptySearchState: V,
-              renderInspector: eh,
+              gridNavigatorId: Q,
+              renderEmptySearchState: K,
+              renderInspector: eE,
               gridNotice: I,
               renderHeader: A,
             }),
@@ -43712,21 +43719,23 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return u;
+            return d;
           },
         }),
         n("808653"),
-        n("424973");
+        n("424973"),
+        n("222007");
       var l = n("446674"),
         i = n("42203"),
         a = n("957255"),
         s = n("449008"),
-        r = n("923510"),
-        o = n("834052");
-      function u(e) {
+        r = n("299039"),
+        o = n("923510"),
+        u = n("834052");
+      function d(e) {
         let t = (0, l.useStateFromStoresArray)(
-          [o.default],
-          () => Object.keys(o.default.getStageInstancesByGuild(e)),
+          [u.default],
+          () => r.default.keys(u.default.getStageInstancesByGuild(e)),
           [e]
         );
         return (function (e) {
@@ -43738,7 +43747,7 @@
           return (0, l.useStateFromStoresArray)(
             [a.default],
             () =>
-              t.filter(e => a.default.can(r.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)),
+              t.filter(e => a.default.can(o.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)),
             [t]
           );
         })(t);
@@ -47936,7 +47945,7 @@
             channelId:
               null !== (n = null == ec ? void 0 : ec.id) && void 0 !== n
                 ? n
-                : "",
+                : B.EMPTY_STRING_CHANNEL_ID,
           }),
           ep = null == ed ? void 0 : ed.application,
           eh =
@@ -48574,7 +48583,9 @@
           { appsInGDMEnabled: _, availableApplications: N } = (0,
           d.usePrivateChannelIntegrationState)({
             channelId:
-              null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : "",
+              null !== (t = null == I ? void 0 : I.id) && void 0 !== t
+                ? t
+                : C.EMPTY_STRING_CHANNEL_ID,
           });
         if (
           null == n ||
@@ -65697,4 +65708,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.fa7ee101ca94c26a5f28.js.map
+//# sourceMappingURL=60053.8303cf88d2cbc7c1817c.js.map

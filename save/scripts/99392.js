@@ -23784,6 +23784,10 @@
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Contact Crisis Text Line",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR: "Contact NoFiltr",
+        SAFETY_ALERTS_SETTINGS_HEADER: "Safety Alerts",
+        SAFETY_ALERTS_SETTING_TITLE: "Show alerts in direct messages",
+        SAFETY_ALERTS_SETTING_DESCRIPTION:
+          "Display an alert when a possible risk to your safety is detected. [Learn more about safety alerts]({learnMoreLink})",
         URF_LANDING_PAGE_TITLE: "Report Illegal Content",
         URF_LANDING_PAGE_SUBTITLE:
           "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement please [go here]({supportURL}).",
@@ -26001,8 +26005,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267620", ", Version Hash: ")
-          .concat("9d766f2be44d8907d69766806715ae49e613086d")
+          .concat("267625", ", Version Hash: ")
+          .concat("52b59c0c95c2912c51966e17b011df59ef52cd14")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29089,12 +29093,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267620"), "267620"));
+        let _ = parseInt(((e = "267625"), "267625"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267620"
+                "267625"
               )
             ),
             (_ = 0)),
@@ -34952,8 +34956,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708470209185",
-                    build_number: "267620",
+                    built_at: "1708470460374",
+                    build_number: "267625",
                   },
                 },
                 retries: 1,
@@ -51289,4 +51293,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.31b05855db0eb40a67c8.js.map
+//# sourceMappingURL=99392.064139390fa95bcff42e.js.map

@@ -1575,6 +1575,9 @@
           useDiscountedPrice: function () {
             return d;
           },
+          useChurnDiscountedPrice: function () {
+            return f;
+          },
         }),
         n("222007");
       var i = n("798609"),
@@ -1586,47 +1589,89 @@
         u = n("154889"),
         c = n("646718");
       let d = e => {
-        var t, n, d, f;
-        let { paymentSourceId: m } = (0, l.default)({
-            isGift: !1,
-            activeSubscription: null,
-          }),
-          _ = c.SubscriptionPlanInfo[e].skuId,
-          { priceOptions: E } = (0, r.default)({
-            activeSubscription: null,
-            skuIDs: [_],
-            paymentSourceId: m,
-            isGift: !1,
-          }),
-          T = (0, u.usePremiumDiscountOffer)(),
-          [I, C] = (0, o.useSubscriptionInvoicePreview)({
-            items: [{ planId: e, quantity: 1 }],
-            renewal: !0,
-            preventFetch: !(null != T),
-            paymentSourceId: m,
-            currency: E.currency,
-          }),
-          p =
-            null == I
-              ? void 0
-              : null === (f = I.invoiceItems) || void 0 === f
+          var t, n, d, f;
+          let { paymentSourceId: m } = (0, l.default)({
+              isGift: !1,
+              activeSubscription: null,
+            }),
+            _ = c.SubscriptionPlanInfo[e].skuId,
+            { priceOptions: E } = (0, r.default)({
+              activeSubscription: null,
+              skuIDs: [_],
+              paymentSourceId: m,
+              isGift: !1,
+            }),
+            T = (0, u.usePremiumDiscountOffer)(),
+            [I, C] = (0, o.useSubscriptionInvoicePreview)({
+              items: [{ planId: e, quantity: 1 }],
+              renewal: !0,
+              preventFetch: !(null != T),
+              paymentSourceId: m,
+              currency: E.currency,
+            }),
+            p =
+              null == I
                 ? void 0
-                : null === (d = f.find(t => t.subscriptionPlanId === e)) ||
-                    void 0 === d
+                : null === (f = I.invoiceItems) || void 0 === f
                   ? void 0
-                  : null === (n = d.discounts) || void 0 === n
+                  : null === (d = f.find(t => t.subscriptionPlanId === e)) ||
+                      void 0 === d
                     ? void 0
-                    : null ===
-                          (t = n.find(
-                            e =>
-                              e.type ===
-                              i.InvoiceDiscountTypes.SUBSCRIPTION_PLAN
-                          )) || void 0 === t
+                    : null === (n = d.discounts) || void 0 === n
                       ? void 0
-                      : t.amount,
-          P = (0, a.getPrice)(e, !1, !1, E);
-        return (0, s.formatPrice)(P.amount - (null != p ? p : 0), P.currency);
-      };
+                      : null ===
+                            (t = n.find(
+                              e =>
+                                e.type ===
+                                i.InvoiceDiscountTypes.SUBSCRIPTION_PLAN
+                            )) || void 0 === t
+                        ? void 0
+                        : t.amount,
+            P = (0, a.getPrice)(e, !1, !1, E);
+          return (0, s.formatPrice)(P.amount - (null != p ? p : 0), P.currency);
+        },
+        f = (e, t, n) => {
+          var u, d, f, m;
+          let { paymentSourceId: _ } = (0, l.default)({
+              isGift: !1,
+              activeSubscription: null,
+            }),
+            E = c.SubscriptionPlanInfo[t].skuId,
+            { priceOptions: T } = (0, r.default)({
+              activeSubscription: null,
+              skuIDs: [E],
+              paymentSourceId: _,
+              isGift: !1,
+            }),
+            [I, C] = (0, o.useSubscriptionInvoicePreview)({
+              subscriptionId: e.id,
+              items: [{ planId: t, quantity: 1 }],
+              renewal: !0,
+              preventFetch: !(null != n),
+              paymentSourceId: _,
+              currency: T.currency,
+            }),
+            p =
+              null == I
+                ? void 0
+                : null === (m = I.invoiceItems) || void 0 === m
+                  ? void 0
+                  : null === (f = m.find(e => e.subscriptionPlanId === t)) ||
+                      void 0 === f
+                    ? void 0
+                    : null === (d = f.discounts) || void 0 === d
+                      ? void 0
+                      : null ===
+                            (u = d.find(
+                              e =>
+                                e.type ===
+                                i.InvoiceDiscountTypes.SUBSCRIPTION_PLAN
+                            )) || void 0 === u
+                        ? void 0
+                        : u.amount,
+            P = (0, a.getPrice)(t, !1, !1, T);
+          return (0, s.formatPrice)(P.amount - (null != p ? p : 0), P.currency);
+        };
     },
     641078: function (e, t, n) {
       "use strict";
@@ -1636,10 +1681,10 @@
             return x;
           },
           maybeFetchActiveBogoPromotion: function () {
-            return A;
+            return N;
           },
           isEligibleForBOGOAnnouncementModal: function () {
-            return v;
+            return A;
           },
           getBOGOPillCopy: function () {
             return U;
@@ -1744,7 +1789,7 @@
           );
         return !(_ > c) && E;
       }
-      async function N() {
+      async function v() {
         var e;
         let t = f.default.getCurrentUser(),
           n = !(null == t ? void 0 : t.isClaimed()),
@@ -1783,8 +1828,8 @@
           mostRecentSubscription: o,
         });
       }
-      async function A() {
-        let e = await N();
+      async function N() {
+        let e = await v();
         if (!e) return;
         let t = O.default.bogoPromotion;
         if (null != t) {
@@ -1793,7 +1838,7 @@
         }
         await (0, S.fetchActiveBogoPromotion)();
       }
-      async function v() {
+      async function A() {
         let e = O.default.bogoPromotion,
           t =
             null != e &&
@@ -1802,7 +1847,7 @@
           n = (0, c.isDismissibleContentDismissed)(
             a.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL
           ),
-          i = await N(),
+          i = await v(),
           { enabled: r } = p.BogoPromotionExperiment.getCurrentConfig(
             { location: "153d31_6" },
             { autoTrackExposure: !1 }
@@ -1880,31 +1925,31 @@
         g = n("917247"),
         h = n("635956"),
         x = n("400307"),
-        N = n("646718"),
-        A = n("49111"),
-        v = n("782340"),
+        v = n("646718"),
+        N = n("49111"),
+        A = n("782340"),
         U = n("821535"),
         b = n("481927");
-      function D(e) {
+      function y(e) {
         if (null == e) return null;
         let t = c(e),
           n = t.diff(c(), "h");
         if (n > 24) {
           let e = t.diff(c(), "d");
-          return v.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_DAYS.format({
+          return A.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_DAYS.format({
             numDays: e,
           });
         }
         if (n > 1)
-          return v.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_HOURS.format({
+          return A.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_HOURS.format({
             numHours: n,
           });
         let i = t.diff(c(), "minutes");
-        return v.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_MINUTES.format({
+        return A.default.Messages.PREMIUM_TRIAL_OFFER_ENDS_MINUTES.format({
           numMinutes: i,
         });
       }
-      function y(e) {
+      function D(e) {
         var t, n, r;
         let {
             className: l,
@@ -1929,13 +1974,13 @@
                     ? void 0
                     : f.sku_id) && void 0 !== r
               ? r
-              : N.PremiumSubscriptionSKUs.TIER_2;
+              : v.PremiumSubscriptionSKUs.TIER_2;
         return (0, i.jsxs)("div", {
           className: a(l, U.gradientUpsellWrapper, {
             [U.gradientUpsellWrapperTier0]:
-              m === N.PremiumSubscriptionSKUs.TIER_0,
+              m === v.PremiumSubscriptionSKUs.TIER_0,
             [U.gradientUpsellWrapperTier2]:
-              m === N.PremiumSubscriptionSKUs.TIER_2,
+              m === v.PremiumSubscriptionSKUs.TIER_2,
             [U.gradientUpsellWrapperWithBottomMargin]: o,
           }),
           children: [
@@ -1943,9 +1988,9 @@
               className: U.logo,
               children: [
                 (0, i.jsx)(R.default, { className: U.logoIcon }),
-                m === N.PremiumSubscriptionSKUs.TIER_0 &&
+                m === v.PremiumSubscriptionSKUs.TIER_0 &&
                   (0, i.jsx)(S.default, { className: U.logoWordmark }),
-                m === N.PremiumSubscriptionSKUs.TIER_2 &&
+                m === v.PremiumSubscriptionSKUs.TIER_2 &&
                   (0, i.jsx)(P.default, { className: U.logoWordmark }),
               ],
             }),
@@ -1958,12 +2003,12 @@
             (0, i.jsx)(x.PremiumPillWithSparkles, {
               text:
                 null != u
-                  ? v.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format(
+                  ? A.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format(
                       { percent: u.discount.amount }
                     )
-                  : v.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
+                  : A.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
               colorOptions:
-                m === N.PremiumSubscriptionSKUs.TIER_0
+                m === v.PremiumSubscriptionSKUs.TIER_0
                   ? x.PremiumPillAndSparklesColorOptions
                       .PREMIUM_TIER_0_WHITE_FILL
                   : x.PremiumPillAndSparklesColorOptions
@@ -1972,7 +2017,7 @@
             (0, i.jsx)(_.Text, {
               variant: "eyebrow",
               className: U.countdownText,
-              children: D(d),
+              children: y(d),
             }),
           ],
         });
@@ -1990,7 +2035,7 @@
           [d, f] = r.useState(!1),
           m =
             null != c
-              ? v.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+              ? A.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: c.discount.amount,
                 })
               : (0, O.formatTrialCtaIntervalDuration)({
@@ -2033,12 +2078,12 @@
           l =
             null !== (n = null == r ? void 0 : r.sku_id) && void 0 !== n
               ? n
-              : N.PremiumSubscriptionSKUs.TIER_2;
+              : v.PremiumSubscriptionSKUs.TIER_2;
         return (0, i.jsx)(_.Text, {
           variant: "text-xs/bold",
           className: a(U.trialBadge, e.className, {
-            [U.trialBadgeGradientTier0]: l === N.PremiumSubscriptionSKUs.TIER_0,
-            [U.trialBadgeGradientTier2]: l === N.PremiumSubscriptionSKUs.TIER_2,
+            [U.trialBadgeGradientTier0]: l === v.PremiumSubscriptionSKUs.TIER_0,
+            [U.trialBadgeGradientTier2]: l === v.PremiumSubscriptionSKUs.TIER_2,
           }),
           color: "none",
           children: (0, O.formatTrialOfferIntervalDuration)({
@@ -2063,7 +2108,7 @@
               size: _.Button.Sizes.SMALL,
               look: _.ButtonLooks.BLANK,
               className: U.cancelButton,
-              children: v.default.Messages.CLOSE,
+              children: A.default.Messages.CLOSE,
             }),
             (0, i.jsx)(j, {
               className: U.subscribeButton,
@@ -2084,7 +2129,7 @@
           children: [
             (0, i.jsx)(x.PremiumPillWithSparkles, {
               className: U.topRimPill,
-              text: v.default.Messages.PREMIUM_FREE_NITRO_TRIAL_TEXT,
+              text: A.default.Messages.PREMIUM_FREE_NITRO_TRIAL_TEXT,
               colorOptions:
                 x.PremiumPillAndSparklesColorOptions
                   .PREMIUM_TIER_2_NEW_GRADIENT_FILL,
@@ -2093,21 +2138,21 @@
               variant: "heading-md/semibold",
               color: "text-normal",
               children:
-                v.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format(
+                A.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format(
                   { onClick: L.navigateToPremiumMarketingPage }
                 ),
             }),
             (0, i.jsx)(j, {
               trialOffer: r,
               className: U.subscribeButtonWide,
-              subscriptionTier: N.PremiumSubscriptionSKUs.TIER_2,
+              subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
               analyticsLocationObject: n,
               onClose: t,
             }),
             (0, i.jsx)(_.Text, {
               variant: "eyebrow",
               className: U.countdownTextInSetting,
-              children: D(null == r ? void 0 : r.expires_at),
+              children: y(null == r ? void 0 : r.expires_at),
             }),
           ],
         });
@@ -2133,7 +2178,7 @@
                 variant: "text-md/normal",
                 children: n,
               }),
-            (0, i.jsx)(y, { trialOffer: l, discountOffer: a, children: r }),
+            (0, i.jsx)(D, { trialOffer: l, discountOffer: a, children: r }),
           ],
         });
       }
@@ -2155,7 +2200,7 @@
           ),
           g = (0, E.default)();
         switch (u) {
-          case N.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL:
+          case v.PremiumUpsellTypes.EMPTY_STICKER_PICKER_UPSELL:
             return (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)(_.Clickable, {
@@ -2169,24 +2214,24 @@
                     (0, i.jsx)("img", {
                       className: U.upsellImage,
                       src: b,
-                      alt: v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT,
+                      alt: A.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT,
                     }),
                     (0, i.jsx)(_.Heading, {
                       variant: "heading-xl/bold",
                       color: "header-primary",
                       children:
-                        v.default.Messages
+                        A.default.Messages
                           .STICKER_PICKER_PREMIUM_EMPTY_STATE_TITLE,
                     }),
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(D, {
                       trialOffer: S,
                       discountOffer: R,
                       children:
-                        v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format(
+                        A.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format(
                           {
                             planName: (0, O.getDisplayNameFromSku)(c),
                             onClick: () =>
-                              (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                              (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                           }
                         ),
                     }),
@@ -2196,15 +2241,15 @@
                   subscriptionTier: c,
                   onClose: s,
                   analyticsLocationObject: {
-                    section: A.AnalyticsSections.EXPRESSION_PICKER,
-                    object: A.AnalyticsObjects.BUTTON_CTA,
+                    section: N.AnalyticsSections.EXPRESSION_PICKER,
+                    object: N.AnalyticsObjects.BUTTON_CTA,
                   },
                   trialOffer: S,
                   discountOffer: R,
                 }),
               ],
             });
-          case N.PremiumUpsellTypes.STICKER_PICKER_UPSELL:
+          case v.PremiumUpsellTypes.STICKER_PICKER_UPSELL:
             return (
               o(null != l, "You must specify children for this upsell type"),
               (0, i.jsxs)(i.Fragment, {
@@ -2215,25 +2260,25 @@
                       (0, i.jsx)("img", {
                         className: U.upsellImage,
                         src: b,
-                        alt: v.default.Messages
+                        alt: A.default.Messages
                           .STICKER_PICKER_PREMIUM_UPSELL_ALT,
                       }),
                       (0, i.jsx)(_.Heading, {
                         variant: "heading-xl/bold",
                         color: "header-primary",
                         children:
-                          v.default.Messages
+                          A.default.Messages
                             .STICKER_PICKER_PREMIUM_UPSELL_TITLE,
                       }),
-                      (0, i.jsx)(y, {
+                      (0, i.jsx)(D, {
                         trialOffer: S,
                         discountOffer: R,
                         children:
-                          v.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format(
+                          A.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format(
                             {
                               planName: (0, O.getDisplayNameFromSku)(c),
                               onClick: () =>
-                                (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                                (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                             }
                           ),
                       }),
@@ -2243,8 +2288,8 @@
                     subscriptionTier: c,
                     onClose: s,
                     analyticsLocationObject: {
-                      section: A.AnalyticsSections.EXPRESSION_PICKER,
-                      object: A.AnalyticsObjects.BUTTON_CTA,
+                      section: N.AnalyticsSections.EXPRESSION_PICKER,
+                      object: N.AnalyticsObjects.BUTTON_CTA,
                     },
                     trialOffer: S,
                     discountOffer: R,
@@ -2252,7 +2297,7 @@
                 ],
               })
             );
-          case N.PremiumUpsellTypes
+          case v.PremiumUpsellTypes
             .AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             o(null != l, "You must specify children for this upsell type");
             let h = (0, m.isThemeLight)(g) ? n("602291") : n("609708");
@@ -2270,17 +2315,17 @@
                       variant: "heading-xl/bold",
                       color: "header-primary",
                       children:
-                        v.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL,
+                        A.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL,
                     }),
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(D, {
                       trialOffer: S,
                       discountOffer: R,
                       children:
-                        v.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format(
+                        A.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format(
                           {
                             planName: (0, O.getDisplayNameFromSku)(c),
                             onClick: () =>
-                              (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                              (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                           }
                         ),
                     }),
@@ -2290,68 +2335,68 @@
                   subscriptionTier: c,
                   onClose: s,
                   analyticsLocationObject: {
-                    section: A.AnalyticsSections.EMOJI_PICKER_POPOUT,
-                    object: A.AnalyticsObjects.BUTTON_CTA,
+                    section: N.AnalyticsSections.EMOJI_PICKER_POPOUT,
+                    object: N.AnalyticsObjects.BUTTON_CTA,
                   },
                   trialOffer: S,
                   discountOffer: R,
                 }),
               ],
             });
-          case N.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL:
-          case N.PremiumUpsellTypes.BURST_REACTION_UPSELL:
-          case N.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
-          case N.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL:
+          case v.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL:
+          case v.PremiumUpsellTypes.BURST_REACTION_UPSELL:
+          case v.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
+          case v.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL:
             let x;
             switch (u) {
-              case N.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL:
+              case v.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL:
                 x =
-                  v.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_WITH_SIZE_AND_ACTION_V2.format(
+                  A.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_WITH_SIZE_AND_ACTION_V2.format(
                     {
                       planName: (0, O.getDisplayNameFromSku)(c),
                       premiumMaxSize:
-                        c === N.PremiumSubscriptionSKUs.TIER_0
-                          ? v.default.Messages
+                        c === v.PremiumSubscriptionSKUs.TIER_0
+                          ? A.default.Messages
                               .FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
-                          : v.default.Messages
+                          : A.default.Messages
                               .FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
                       onClick: () => {
-                        (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                        (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == s || s();
                       },
                     }
                   );
                 break;
-              case N.PremiumUpsellTypes.BURST_REACTION_UPSELL:
+              case v.PremiumUpsellTypes.BURST_REACTION_UPSELL:
                 x =
-                  v.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format(
+                  A.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format(
                     {
                       planName: (0, O.getDisplayNameFromSku)(c),
                       onClick: () => {
-                        (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                        (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == s || s();
                       },
                     }
                   );
                 break;
-              case N.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
-                x = v.default.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format(
+              case v.PremiumUpsellTypes.STREAM_QUALITY_UPSELL:
+                x = A.default.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format(
                   {
                     onClick: () => {
-                      (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                      (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                         null == s || s(),
                         (0, f.closeAllModals)();
                     },
                   }
                 );
                 break;
-              case N.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL:
+              case v.PremiumUpsellTypes.MESSAGE_LENGTH_UPSELL:
                 x =
-                  v.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format(
+                  A.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format(
                     {
-                      premiumMaxMessageLength: A.MAX_MESSAGE_LENGTH_PREMIUM,
+                      premiumMaxMessageLength: N.MAX_MESSAGE_LENGTH_PREMIUM,
                       onClick: () => {
-                        (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                        (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                           null == s || s();
                       },
                     }
@@ -2372,7 +2417,7 @@
                       variant: "text-md/normal",
                       children: r,
                     }),
-                    (0, i.jsx)(y, {
+                    (0, i.jsx)(D, {
                       trialOffer: S,
                       discountOffer: R,
                       children: x,
@@ -2381,7 +2426,7 @@
                 }),
               })
             );
-          case N.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL:
+          case v.PremiumUpsellTypes.BURST_REACTION_QUICK_ACTION_UPSELL:
             return (0, i.jsxs)("div", {
               className: U.contentContainer,
               children: [
@@ -2391,15 +2436,15 @@
                   children: t,
                 }),
                 (0, i.jsx)(_.Text, { variant: "text-md/normal", children: r }),
-                (0, i.jsx)(y, {
+                (0, i.jsx)(D, {
                   trialOffer: S,
                   discountOffer: R,
                   children:
-                    v.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format(
+                    A.default.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format(
                       {
                         planName: (0, O.getDisplayNameFromSku)(c),
                         onClick: () =>
-                          (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                          (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                       }
                     ),
                 }),
@@ -2413,23 +2458,23 @@
                 }),
               ],
             });
-          case N.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
+          case v.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
               o(null != l, "You must specify children for this upsell type"),
-              (0, i.jsx)(y, {
+              (0, i.jsx)(D, {
                 trialOffer: S,
                 discountOffer: R,
-                children: v.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format(
+                children: A.default.Messages.CLIENT_THEMES_EDITOR_UPSELL.format(
                   {
                     onClick: () => {
-                      (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                      (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                         (0, I.closeEditor)();
                     },
                   }
                 ),
               })
             );
-          case N.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
+          case v.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, i.jsxs)("div", {
               className: a(U.messageLengthUpsellContainer, {
                 [U.messageLengthUpsellAppearAnimation]: !L,
@@ -2445,21 +2490,21 @@
                   color: "header-primary",
                   className: U.messageLengthUpsellHeader,
                   children:
-                    v.default.Messages
+                    A.default.Messages
                       .PREMIUM_MESSAGE_LENGTH_ROADBLOCK_MODAL_CONTEXT_NO_COUNT,
                 }),
                 (0, i.jsx)("div", { className: U.divider }),
-                (0, i.jsx)(y, {
+                (0, i.jsx)(D, {
                   trialOffer: S,
                   discountOffer: R,
                   className: U.messageLengthBrandedContainer,
                   subscriptionTier: c,
                   children:
-                    v.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format(
+                    A.default.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format(
                       {
-                        premiumMaxMessageLength: A.MAX_MESSAGE_LENGTH_PREMIUM,
+                        premiumMaxMessageLength: N.MAX_MESSAGE_LENGTH_PREMIUM,
                         onClick: () => {
-                          (0, C.transitionTo)(A.Routes.APPLICATION_STORE),
+                          (0, C.transitionTo)(N.Routes.APPLICATION_STORE),
                             null == s || s();
                         },
                       }
@@ -2474,17 +2519,17 @@
                 }),
               ],
             });
-          case N.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
-          case N.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
+          case v.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
+          case v.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
             return (0, i.jsx)(w, {});
-          case N.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
-          case N.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
-          case N.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
-          case N.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL:
-          case N.PremiumUpsellTypes
+          case v.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
+          case v.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
+          case v.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
+          case v.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL:
+          case v.PremiumUpsellTypes
             .VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
-          case N.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
-          case N.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
+          case v.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
+          case v.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
             return (0, i.jsx)(H, {
               trialOffer: S,
               discountOffer: R,
@@ -2547,13 +2592,13 @@
               size: g,
               className: h,
               trialId: x,
-              isTrialCTA: N,
-              buttonText: A,
-              buttonTextClassName: v,
+              isTrialCTA: v,
+              buttonText: N,
+              buttonTextClassName: A,
               iconClassName: U,
               postSuccessGuild: b,
-              onSubscribeModalClose: D,
-              premiumModalAnalyticsLocation: y,
+              onSubscribeModalClose: y,
+              premiumModalAnalyticsLocation: D,
               showIcon: j = !0,
               disableShine: F,
               applicationId: B,
@@ -2584,7 +2629,7 @@
               ) {
                 (0, c.trackPremiumSettingsPaneOpened)(),
                   o.default.open(R.UserSettingsSections.PREMIUM),
-                  null == D || D(!1);
+                  null == y || y(!1);
                 return;
               }
               !(function (e) {
@@ -2652,14 +2697,14 @@
                 subscriptionTier: r,
                 trialId: x,
                 postSuccessGuild: b,
-                onSubscribeModalClose: D,
+                onSubscribeModalClose: y,
                 analyticsLocations: Z,
-                premiumModalAnalyticsLocation: y,
+                premiumModalAnalyticsLocation: D,
                 applicationId: B,
                 giftMessage: w,
               });
             };
-          if (N)
+          if (v)
             return (0, i.jsxs)(s.Button, {
               size: g,
               className: h,
@@ -2670,10 +2715,10 @@
               children: [
                 j && (0, i.jsx)(p.default, { className: M.premiumIcon }),
                 (0, i.jsx)("span", {
-                  className: l(M.buttonText, v),
+                  className: l(M.buttonText, A),
                   children:
-                    null != A
-                      ? A
+                    null != N
+                      ? N
                       : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT,
                 }),
               ],
@@ -2689,9 +2734,9 @@
               children: [
                 (0, i.jsx)(C.default, { className: M.giftIcon }),
                 (0, i.jsx)("span", {
-                  className: l(M.buttonText, v),
+                  className: l(M.buttonText, A),
                   children:
-                    null != A ? A : O.default.Messages.PREMIUM_GIFTING_BUTTON,
+                    null != N ? N : O.default.Messages.PREMIUM_GIFTING_BUTTON,
                 }),
               ],
             });
@@ -2780,7 +2825,7 @@
               children: [
                 j && (0, i.jsx)(p.default, { className: l(M.premiumIcon, U) }),
                 (0, i.jsx)("span", {
-                  className: l(M.buttonText, v),
+                  className: l(M.buttonText, A),
                   children:
                     null !==
                       (n =
@@ -2788,7 +2833,7 @@
                           (t = null == $ ? void 0 : $.disabledButtonText) &&
                         void 0 !== t
                           ? t
-                          : A) && void 0 !== n
+                          : N) && void 0 !== n
                       ? n
                       : Y,
                 }),
@@ -2859,13 +2904,13 @@
         g = n("521012"),
         h = n("594098"),
         x = n("491614"),
-        N = n("716589"),
-        A = n("46829"),
-        v = n("118503"),
+        v = n("716589"),
+        N = n("46829"),
+        A = n("118503"),
         U = n("41250"),
         b = n("379863"),
-        D = n("216422"),
-        y = n("619911"),
+        y = n("216422"),
+        D = n("619911"),
         j = n("698015"),
         F = n("75196"),
         B = n("240481"),
@@ -3255,7 +3300,7 @@
               }),
             }),
             (0, d.jsx)(eo, {
-              Icon: A.default,
+              Icon: N.default,
               text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM,
             }),
             (0, d.jsx)(eo, {
@@ -3264,7 +3309,7 @@
                 .PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED,
             }),
             (0, d.jsx)(eo, {
-              Icon: D.default,
+              Icon: y.default,
               text: q.default.Messages.PREMIUM_TIER_NITRO_BADGE_ITEM,
             }),
           ],
@@ -3408,7 +3453,7 @@
           return (0, d.jsxs)(d.Fragment, {
             children: [
               (0, d.jsx)(eo, {
-                Icon: v.default,
+                Icon: A.default,
                 text: q.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format(
                   {
                     numBoosts: X.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
@@ -3429,15 +3474,15 @@
                 }),
               }),
               (0, d.jsx)(eo, {
-                Icon: A.default,
+                Icon: N.default,
                 text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM,
               }),
               (0, d.jsx)(eo, {
-                Icon: y.default,
+                Icon: D.default,
                 text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM,
               }),
               (0, d.jsx)(eo, {
-                Icon: N.default,
+                Icon: v.default,
                 text: q.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM,
               }),
             ],
@@ -3454,7 +3499,7 @@
               }),
             }),
             (0, d.jsx)(eo, {
-              Icon: A.default,
+              Icon: N.default,
               text: q.default.Messages.PREMIUM_TIER_CUSTOM_EMOJI_ITEM,
             }),
             (0, d.jsx)(eo, {
@@ -3463,15 +3508,15 @@
                 .PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED,
             }),
             (0, d.jsx)(eo, {
-              Icon: y.default,
+              Icon: D.default,
               text: q.default.Messages.PREMIUM_TIER_HD_STREAMING_ITEM,
             }),
             (0, d.jsx)(eo, {
-              Icon: v.default,
+              Icon: A.default,
               text: q.default.Messages.PREMIUM_TIER_SERVER_BOOST_ITEM,
             }),
             (0, d.jsx)(eo, {
-              Icon: N.default,
+              Icon: v.default,
               text: q.default.Messages.PREMIUM_TIER_CUSTOM_PROFILE_ITEM,
             }),
             a && s && (0, d.jsx)(Y.default, {}),
@@ -3885,7 +3930,7 @@
             }
             return n;
           }, [g]),
-          N = (0, i.jsxs)("div", {
+          v = (0, i.jsxs)("div", {
             className: P.body,
             children: [
               (0, i.jsx)("span", { children: x }),
@@ -3898,7 +3943,7 @@
           enableArtBoxShadow: !1,
           type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
           title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-          body: N,
+          body: v,
           context:
             p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
               maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD,
@@ -3953,13 +3998,13 @@
             analyticsSource: g,
             analyticsLocation: h,
             body: x,
-            context: N,
-            glowUp: A,
-            modalClassName: v,
+            context: v,
+            glowUp: N,
+            modalClassName: A,
             artContainerClassName: U,
             bodyClassName: b,
-            transitionState: D,
-            onClose: y,
+            transitionState: y,
+            onClose: D,
             onSubscribeClick: j,
             onSecondaryClick: F,
             secondaryCTA: B,
@@ -4020,9 +4065,9 @@
               ? (0, i.jsx)("img", { className: S.art, alt: "", src: Z.artURL })
               : Z.artElement),
           (0, i.jsxs)(s.ModalRoot, {
-            className: a(S.root, v),
+            className: a(S.root, A),
             "aria-label": O,
-            transitionState: D,
+            transitionState: y,
             children: [
               (0, i.jsxs)("div", {
                 className: en,
@@ -4039,7 +4084,7 @@
               }),
               ee
                 ? (0, i.jsx)(s.ModalCloseButton, {
-                    onClick: y,
+                    onClick: D,
                     className: S.closeButton,
                   })
                 : null,
@@ -4051,7 +4096,7 @@
                       children: J
                         ? (0, i.jsx)(i.Fragment, {
                             children: (0, i.jsx)(T.default, {
-                              onClose: y,
+                              onClose: D,
                               type: M,
                               subscriptionTier:
                                 null !==
@@ -4065,11 +4110,11 @@
                                   ? l
                                   : C.PremiumSubscriptionSKUs.TIER_2,
                               headingText: O,
-                              context: N,
+                              context: v,
                               analyticsLocationObject: h,
                               discountOffer: X,
                               trialOffer: Y,
-                              children: A,
+                              children: N,
                             }),
                           })
                         : (0, i.jsxs)(i.Fragment, {
@@ -4118,7 +4163,7 @@
                           return (0, i.jsx)(c.default, {
                             analyticsLocation: h,
                             guild: L.guild,
-                            onClose: y,
+                            onClose: D,
                           });
                         let t = ee
                           ? P.default.Messages.PREMIUM_UPSELL_GET_NITRO
@@ -4160,7 +4205,7 @@
                             ? s.Button.Colors.CUSTOM
                             : s.Button.Colors.GREEN,
                           onClick: () => {
-                            null == j || j(), y();
+                            null == j || j(), D();
                           },
                           buttonText: null != w ? w : t,
                         });
@@ -4170,7 +4215,7 @@
                   !V &&
                     !ee &&
                     (0, i.jsx)(s.Button, {
-                      onClick: y,
+                      onClick: D,
                       size: s.Button.Sizes.SMALL,
                       color: s.Button.Colors.PRIMARY,
                       look: s.Button.Looks.LINK,
@@ -4362,45 +4407,45 @@
           g = _ ? R(5, 5, p) : [],
           h = (0, i.thumbHashToApproximateAspectRatio)(e),
           x = o(h > 1 ? 32 : 32 * h),
-          N = o(h > 1 ? 32 / h : 32),
-          A = new Uint8Array(x * N * 4),
-          v = [],
+          v = o(h > 1 ? 32 / h : 32),
+          N = new Uint8Array(x * v * 4),
+          A = [],
           U = [];
-        for (let e = 0, n = 0; e < N; e++)
+        for (let e = 0, n = 0; e < v; e++)
           for (let i = 0; i < x; i++, n += 4) {
             let o = d,
               u = f,
               c = m,
               E = C;
             for (let e = 0, t = a(T, _ ? 5 : 3); e < t; e++)
-              v[e] = s((r / x) * (i + 0.5) * e);
+              A[e] = s((r / x) * (i + 0.5) * e);
             for (let t = 0, n = a(I, _ ? 5 : 3); t < n; t++)
-              U[t] = s((r / N) * (e + 0.5) * t);
+              U[t] = s((r / v) * (e + 0.5) * t);
             for (let e = 0, n = 0; e < I; e++)
               for (
                 let i = e ? 0 : 1, r = 2 * U[e];
                 i * I < T * (I - e);
                 i++, n++
               )
-                !(i > t) && !(e > t) && (o += O[n] * v[i] * r);
+                !(i > t) && !(e > t) && (o += O[n] * A[i] * r);
             for (let e = 0, t = 0; e < 3; e++)
               for (let n = e ? 0 : 1, i = 2 * U[e]; n < 3 - e; n++, t++) {
-                let e = v[n] * i;
+                let e = A[n] * i;
                 (u += M[t] * e), (c += L[t] * e);
               }
             if (_)
               for (let e = 0, t = 0; e < 5; e++)
                 for (let n = e ? 0 : 1, i = 2 * U[e]; n < 5 - e; n++, t++)
-                  E += g[t] * v[n] * i;
+                  E += g[t] * A[n] * i;
             let p = o - (2 / 3) * u,
               P = (3 * o - p + c) / 2,
               S = P - c;
-            (A[n] = a(0, 255 * l(1, P))),
-              (A[n + 1] = a(0, 255 * l(1, S))),
-              (A[n + 2] = a(0, 255 * l(1, p))),
-              (A[n + 3] = a(0, 255 * l(1, E)));
+            (N[n] = a(0, 255 * l(1, P))),
+              (N[n + 1] = a(0, 255 * l(1, S))),
+              (N[n + 2] = a(0, 255 * l(1, p))),
+              (N[n + 3] = a(0, 255 * l(1, E)));
           }
-        return { w: x, h: N, rgba: A };
+        return { w: x, h: v, rgba: N };
       }
     },
     106435: function (e, t, n) {
@@ -4601,13 +4646,13 @@
             mediaLayoutType: g,
             limitResponsiveWidth: h = !0,
             accessory: x,
-            zoomable: N,
-            original: A,
-            children: v,
+            zoomable: v,
+            original: N,
+            children: A,
             renderAccessory: U,
             onClick: b,
-            tabIndex: D,
-            useFullWidth: y = !1,
+            tabIndex: y,
+            useFullWidth: D = !1,
             ...j
           } = this.props;
           if (1 === m && 1 === p) return null;
@@ -4621,7 +4666,7 @@
             }),
             B = 0 !== F.width ? F.width / F.height : 1;
           null != l && i !== T.ImageReadyStates.ERROR
-            ? (e = v({
+            ? (e = A({
                 src: l,
                 size: F,
                 alt: c,
@@ -4648,7 +4693,7 @@
                 className: s(
                   C.imageWrapper,
                   {
-                    [C.imageZoom]: N,
+                    [C.imageZoom]: v,
                     [C.imageWrapperBackground]: i !== T.ImageReadyStates.READY,
                     [C.clickable]: null != b,
                   },
@@ -4675,16 +4720,16 @@
                             .concat(e.height),
                         }
                       : e;
-                })(F, h, y, g),
+                })(F, h, D, g),
                 ...j,
                 children: [
-                  null != A &&
+                  null != N &&
                     (0, r.jsx)("a", {
                       tabIndex: -1,
                       onClick: b,
                       "aria-hidden": !0,
                       className: C.originalLink,
-                      href: A,
+                      href: N,
                       ref: this._containerRef,
                       "data-role": "img",
                       "data-safe-src": l,
@@ -4692,7 +4737,7 @@
                   null != b
                     ? (0, r.jsx)(u.Clickable, {
                         className: C.clickableWrapper,
-                        tabIndex: null != D ? D : 0,
+                        tabIndex: null != y ? y : 0,
                         onClick: b,
                         "aria-label": null != c ? c : I.default.Messages.IMAGE,
                         "aria-describedby": d.IMAGE_OPEN_DIALOG_DESCRIPTION,
@@ -5240,4 +5285,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.943d7f34fa194029c849.js.map
+//# sourceMappingURL=72683.5c419b895fa6f7a68295.js.map

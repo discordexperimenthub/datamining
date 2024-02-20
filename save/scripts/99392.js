@@ -9368,6 +9368,14 @@
           "Before cancelling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
         CHURN_DISCOUNT_CLAIM: "Claim Discount",
         PREMIUM_TUTORIAL_GOT_IT: "Got it!",
+        CHURN_DISCOUNT_CONFIRM_HEADER:
+          "Confirm {percent, number}% Off Discount",
+        CHURN_DISCOUNT_CONFIRM_DESCRIPTION:
+          "Your {percent, number}% discount will end {numMonths, plural, one {1 month} other {{numMonths} months}} after purchase. After than you’ll be charged **{price}** a month.",
+        CHURN_DISCOUNT_CONFIRM_LEGALESE:
+          "By clicking “Confirm Discount” you are agreeing to continue your Nitro recurring subscription. You’ll be charged {discountedPrice}/{billingPeriod} for {numMonths, plural, one {1 month} other {{numMonths} months}}, and then {fullPrice}/{billingPeriod} after that until you cancel. Cancel anytime from your Settings page. [Paid Services Terms]({helpdeskArticle}) apply.",
+        CHURN_DISCOUNT_NEVERMIND: "Nevermind",
+        CHURN_DISCOUNT_CONFIRM_DISCOUNT: "Confirm Discount",
         PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW:
           "Try {planName} for {duration} on us. Then !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
@@ -25990,8 +25998,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267451", ", Version Hash: ")
-          .concat("3ea4acbab12c6391e8071d5155cfd421e063f20c")
+          .concat("267460", ", Version Hash: ")
+          .concat("e62970c58860f76883b69d6072721fbb601ea54f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29078,12 +29086,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267451"), "267451"));
+        let _ = parseInt(((e = "267460"), "267460"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267451"
+                "267460"
               )
             ),
             (_ = 0)),
@@ -34941,8 +34949,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708449018209",
-                    build_number: "267451",
+                    built_at: "1708452322772",
+                    build_number: "267460",
                   },
                 },
                 retries: 1,
@@ -51278,4 +51286,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.4c6349996fea012d595b.js.map
+//# sourceMappingURL=99392.3ea9e276ecea8c62cbeb.js.map

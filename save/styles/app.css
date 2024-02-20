@@ -35920,8 +35920,8 @@ html .progress__4ef76 {
 .errorState_b806b1 {
   padding: 20px 20px 40px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-align: center;
 }
 .errorState_b806b1.noResults_c69767 {
@@ -35971,14 +35971,14 @@ html .progress__4ef76 {
 }
 .confirmChannelName_c49514 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 8px;
   color: var(--header-primary);
 }
 .lastActiveTimestamp__56cd7 {
   margin-left: 8px;
   color: var(--text-muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 2px;
 }
 .confirmInviteScroller__11391 {
@@ -38607,8 +38607,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -108698,4 +108698,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3fa92e7008d8ea85bd59.css.map*/
+/*# sourceMappingURL=app.52e39d60928e1fcade32.css.map*/

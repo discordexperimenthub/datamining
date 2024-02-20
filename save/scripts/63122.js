@@ -667,8 +667,8 @@
       new (0, _.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(T, ", Build Number: ")
-          .concat("267486", ", Version Hash: ")
-          .concat("2a4c8a258b47cae4186ea12cd6dc9ada6de7b4e7")
+          .concat("267495", ", Version Hash: ")
+          .concat("0c92fc3e3bd0a06a04c0bddace134ffeba23aef3")
       ),
         i.default.setTags({ appContext: S.CURRENT_APP_CONTEXT }),
         f.default.initBasic(),
@@ -3263,12 +3263,12 @@
       var i = n("286235");
       function a() {
         var e;
-        let t = parseInt(((e = "267486"), "267486"));
+        let t = parseInt(((e = "267495"), "267495"));
         return (
           Number.isNaN(t) &&
             (i.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267486"
+                "267495"
               )
             ),
             (t = 0)),
@@ -3477,7 +3477,7 @@
               ],
             }),
           }),
-        U = e => {
+        b = e => {
           let { markAsDismissed: t } = e,
             n = (0, v.useTrackClientThemePreviewEvent)();
           return (0, i.jsxs)("div", {
@@ -3499,7 +3499,7 @@
             ],
           });
         },
-        b = e => {
+        U = e => {
           var t, n, a;
           let { onSubscribeSuccess: l, markAsDismissed: s } = e,
             { analyticsLocations: r } = (0, C.default)(
@@ -3588,7 +3588,7 @@
             className: P.editorFooter,
             children: [
               n &&
-                (0, i.jsx)(b, {
+                (0, i.jsx)(U, {
                   onSubscribeSuccess: () => {
                     u(!0);
                   },
@@ -3646,7 +3646,7 @@
               className: s(P.themeEditor, f ? P.editorAnimate : null),
               children: (0, i.jsxs)(d.HeadingLevel, {
                 children: [
-                  u ? (0, i.jsx)(w, {}) : (0, i.jsx)(U, { markAsDismissed: t }),
+                  u ? (0, i.jsx)(w, {}) : (0, i.jsx)(b, { markAsDismissed: t }),
                   (0, i.jsx)(d.Scroller, {
                     className: P.editorBody,
                     children: (0, i.jsxs)(R.default, {
@@ -4474,7 +4474,7 @@
                   [_.default],
                   () => _.default.sidebarWidth
                 ),
-                U = (0, f.useRedesignIconContext)().enabled;
+                b = (0, f.useRedesignIconContext)().enabled;
               return (0, i.jsx)("html", {
                 lang: t,
                 style: "font-size: "
@@ -4496,7 +4496,7 @@
                     "desaturate-user-colors": R,
                     "disable-forced-colors": !M && "active" === L,
                     "enable-forced-colors": M,
-                    "show-redesigned-icons": U,
+                    "show-redesigned-icons": b,
                   },
                   (0, T.getThemeClass)(n),
                   (0, m.default)(),
@@ -4588,8 +4588,8 @@
         D = n("374036"),
         P = n("384997"),
         w = n("234819"),
-        U = n("182033"),
-        b = n("928741"),
+        b = n("182033"),
+        U = n("928741"),
         F = n("161778"),
         G = n("778588"),
         k = n("697218"),
@@ -4665,7 +4665,7 @@
             [O.default],
             () => O.default.isEditorOpen
           ),
-          { enabled: es } = U.default.useExperiment(
+          { enabled: es } = b.default.useExperiment(
             { location: "client_themes_coachmark_reintro" },
             { autoTrackExposure: !0 }
           ),
@@ -4707,7 +4707,7 @@
         }, [eE, eh, ef, l]);
         let e_ = a.useRef(document.body);
         return (0, i.jsx)(
-          b.default,
+          U.default,
           {
             children: (0, i.jsx)(I.default, {
               children: (0, i.jsxs)(h.RedesignIconContextProvider, {
@@ -6856,7 +6856,7 @@
           !!e.enabled && null !== (t = e.keepOpen) && void 0 !== t && t
         );
       }
-      function U(e) {
+      function b(e) {
         var t;
         I.verbose("OVERLAY_MESSAGE_EVENT_ACTION", e);
         let n = R.getByName(
@@ -6874,7 +6874,7 @@
             ++n.overlayMessageCreateCount;
         }
       }
-      function b(e) {
+      function U(e) {
         I.verbose("MESSAGE_ACKED", e), R.desktopMessageEvent("ack");
       }
       function F(e) {
@@ -6966,10 +6966,10 @@
                   OVERLAY_NOTIFICATION_EVENT: y,
                   OVERLAY_SET_UI_LOCKED: L,
                   OVERLAY_WIDGET_CHANGED: D,
-                  OVERLAY_MESSAGE_EVENT_ACTION: U,
+                  OVERLAY_MESSAGE_EVENT_ACTION: b,
                   RUNNING_GAMES_CHANGE: M,
                   SOUNDBOARD_SET_OVERLAY_ENABLED: w,
-                  MESSAGE_ACKED: b,
+                  MESSAGE_ACKED: U,
                   MESSAGE_CREATE: F,
                   WINDOW_FOCUS: k,
                   RTC_CONNECTION_STATE: x.handleRTCConnectionState,
@@ -10526,10 +10526,10 @@
             return w;
           },
           useCanJoinThreadVoice: function () {
-            return U;
+            return b;
           },
           useIsNonModInLockedThread: function () {
-            return b;
+            return U;
           },
         });
       var i = n("917351"),
@@ -10727,7 +10727,7 @@
       function w(e) {
         return (0, s.useStateFromStores)([E.default], () => P(e, E.default));
       }
-      function U(e) {
+      function b(e) {
         let t = (0, o.default)(),
           n = (0, s.useStateFromStores)([E.default], () =>
             E.default.can(_.Permissions.CONNECT, e)
@@ -10739,7 +10739,7 @@
           ).enabled;
         return !t && e.isVocalThread() && a && n && i;
       }
-      function b(e) {
+      function U(e) {
         let t = w(e);
         return e.isLockedThread() && !t;
       }
@@ -12979,4 +12979,4 @@
     },
   },
 ]);
-//# sourceMappingURL=63122.e80fdb3c185a6ff0bc8a.js.map
+//# sourceMappingURL=63122.6a177a901c89e3d64867.js.map

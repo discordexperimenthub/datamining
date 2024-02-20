@@ -9812,6 +9812,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 .wrap_d2851e {
   flex-wrap: wrap;
 }
+.activityDetails__1c2a0 {
+  display: flex;
+  flex-direction: row;
+}
 .arrow_cb03b8 {
   transition: transform.2s ease-out;
 }
@@ -23721,4 +23725,4 @@ span.button__4f306.disabled_dc5630 {
   line-height: 18px;
   color: var(--primary-330);
 }
-/*# sourceMappingURL=shared.c1b2e62851491ebbcead.css.map*/
+/*# sourceMappingURL=shared.754635965573bc5bcdf5.css.map*/

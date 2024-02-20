@@ -2703,7 +2703,6 @@
       "use strict";
       e.exports = {
         activityActivityFeed: "activityActivityFeed__76436",
-        activityDetails: "activityDetails__1c2a0",
         activityName: "activityName__47e51",
         activityProfile: "activityProfile__61b44",
         activityProfileV2: "activityProfileV2__4de28",

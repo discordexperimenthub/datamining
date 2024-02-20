@@ -978,9 +978,9 @@
       var i = n("872717"),
         r = n("913144"),
         s = n("299285"),
-        a = n("161454"),
-        o = n("393414"),
-        l = n("845579"),
+        a = n("393414"),
+        o = n("845579"),
+        l = n("568307"),
         u = n("98328"),
         c = n("599110"),
         d = n("645672"),
@@ -1061,7 +1061,7 @@
       function I(e, t, n, i) {
         let s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         !(function (e, t, n, i) {
-          if (a.default.getRunningDiscordApplicationIds().includes(e.id))
+          if (l.default.getRunningDiscordApplicationIds().includes(e.id))
             return;
           let r = u.default.getInstallationPath(e.id, t);
           if (null == r)
@@ -1136,8 +1136,8 @@
         let n = s.default.getApplication(e);
         null != n &&
           f.default.createShortcuts(
-            l.InstallShortcutDesktop.getSetting(),
-            l.InstallShortcutStartMenu.getSetting(),
+            o.InstallShortcutDesktop.getSetting(),
+            o.InstallShortcutStartMenu.getSetting(),
             n.name,
             n.id,
             t.installPath
@@ -1151,8 +1151,8 @@
         }),
           null != r &&
             (f.default.createShortcuts(
-              l.InstallShortcutDesktop.getSetting(),
-              l.InstallShortcutStartMenu.getSetting(),
+              o.InstallShortcutDesktop.getSetting(),
+              o.InstallShortcutStartMenu.getSetting(),
               r.name,
               r.id,
               t.installPath
@@ -1172,7 +1172,7 @@
                   { notif_type: "Game Library Game Installed" },
                   {
                     onClick: () =>
-                      (0, o.transitionTo)(h.Routes.APPLICATION_LIBRARY),
+                      (0, a.transitionTo)(h.Routes.APPLICATION_LIBRARY),
                     omitViewTracking: !0,
                   }
                 );
@@ -22453,8 +22453,8 @@
         s = n("913144"),
         a = n("363658"),
         o = n("115718"),
-        l = n("161454"),
-        u = n("546463"),
+        l = n("546463"),
+        u = n("568307"),
         c = n("697218"),
         d = n("599110"),
         f = n("773336"),
@@ -22507,13 +22507,13 @@
         return m().then(n => {
           var i;
           let r =
-              null === (i = l.default.getGameForPID(e)) || void 0 === i
+              null === (i = u.default.getGameForPID(e)) || void 0 === i
                 ? void 0
                 : i.name,
-            c = u.default.getGameByName(r),
+            c = l.default.getGameByName(r),
             f = null;
           return new Promise(i => {
-            let u = (e, n) => {
+            let l = (e, n) => {
                 d.default.track(h.AnalyticEvents.HOOK_RESULT, {
                   game_name: r,
                   game_id: null == c ? null : c.id,
@@ -22524,18 +22524,18 @@
                   null != f && (clearTimeout(f), (f = null)),
                   n ? i() : i((e = null != e ? e : "Unknown hook error"));
               },
-              E = l.default.getOverlayOptionsForPID(e),
+              E = u.default.getOverlayOptionsForPID(e),
               p = {
                 ...o.DEFAULT_OVERLAY_OPTIONS,
                 ...E,
-                elevate: l.default.shouldElevateProcessForPID(e),
+                elevate: u.default.shouldElevateProcessForPID(e),
               };
             null == p.allowHook || p.allowHook
               ? ((f = setTimeout(() => {
                   n.cancelAttachToProcess(e),
-                    u("Timed out waiting for hook response", !1);
+                    l("Timed out waiting for hook response", !1);
                 }, 12e4)),
-                n.attachToProcess(e, p, u),
+                n.attachToProcess(e, p, l),
                 s.default.wait(() => a.default.clearElevatedProcess()))
               : i("Hook is disabled for this game");
           });
@@ -26055,9 +26055,9 @@
       var i = n("446674"),
         r = n("913144"),
         s = n("49671"),
-        a = n("161454"),
-        o = n("374014"),
-        l = n("271938"),
+        a = n("374014"),
+        o = n("271938"),
+        l = n("568307"),
         u = n("568734"),
         c = n("30591"),
         d = n("80028"),
@@ -26113,7 +26113,7 @@
       }
       class D extends i.default.DeviceSettingsStore {
         initialize(e) {
-          null != e && (N = e), O(), this.waitFor(a.default);
+          null != e && (N = e), O(), this.waitFor(l.default);
         }
         getClips() {
           return _;
@@ -26396,7 +26396,7 @@
           let i = t;
           if (null != n) {
             var r;
-            let e = a.default.getGameForPID(n);
+            let e = l.default.getGameForPID(n);
             i =
               null !== (r = null == e ? void 0 : e.name) && void 0 !== r
                 ? r
@@ -26411,7 +26411,7 @@
             ((v = null),
             (A[t] = []),
             null == g ||
-              (0, o.decodeStreamKey)(t).ownerId !== l.default.getId())
+              (0, a.decodeStreamKey)(t).ownerId !== o.default.getId())
           )
             return !1;
           g = 0 === g.newClipIds.length ? null : { ...g, ended: !0 };
@@ -27056,6 +27056,7 @@
           disable_alpha_voice_panel:
             "Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It's not feature complete so if there's something you are missing, or you find a problem, you can disable it here.",
           highlight_experimental_icons: "Highlight experimental icons",
+          happening_now_summary_card: "Enable Happening Now Card with Summary",
           enable_last_channel: "Enable launch into last channel",
           enable_recently_active: "Enable recently active channels",
           happening_main_tab: "Enable Happening tab containing summaries",
@@ -29907,731 +29908,6 @@
         },
       });
     },
-    161454: function (e, t, n) {
-      "use strict";
-      let i;
-      n.r(t),
-        n.d(t, {
-          gameKey: function () {
-            return $;
-          },
-          getOverlayGameStatus: function () {
-            return ee;
-          },
-          isDetectionEnabled: function () {
-            return et;
-          },
-          transformForGameSettings: function () {
-            return er;
-          },
-          default: function () {
-            return ec;
-          },
-        }),
-        n("222007"),
-        n("424973"),
-        n("808653"),
-        n("781738"),
-        n("843762");
-      var r = n("917351"),
-        s = n.n(r),
-        a = n("866227"),
-        o = n.n(a),
-        l = n("446674"),
-        u = n("95410"),
-        c = n("913144"),
-        d = n("115718"),
-        f = n("376556"),
-        E = n("605250"),
-        p = n("630915"),
-        h = n("756898"),
-        _ = n("32128"),
-        S = n("546463"),
-        m = n("686470"),
-        T = n("535974"),
-        g = n("599110"),
-        I = n("718517"),
-        C = n("269180"),
-        v = n("449008"),
-        A = n("773336"),
-        R = n("50885"),
-        N = n("819068"),
-        O = n("373807"),
-        D = n("49111"),
-        y = n("6791");
-      let P = new E.default("RunningGameStore"),
-        L = "RunningGameStore",
-        b = [
-          {
-            executables: [
-              { os: "win32", name: "obs/obs.exe" },
-              { os: "win32", name: "obs32.exe" },
-              { os: "win32", name: "obs64.exe" },
-              { os: "darwin", name: "OBS.app" },
-              { os: "linux", name: "obs" },
-            ],
-            name: "OBS",
-            streamerTool: !0,
-          },
-          {
-            executables: [
-              { os: "win32", name: "XSplit.Gamecaster.exe" },
-              { os: "win32", name: "XSplit.Core.exe" },
-              { os: "win32", name: "Gamecaster.exe" },
-            ],
-            name: "XSplit",
-            streamerTool: !0,
-          },
-          {
-            executables: [{ os: "win32", name: "bebo.exe" }],
-            name: "Bebo",
-            streamerTool: !0,
-          },
-          {
-            executables: [
-              { os: "win32", name: "Streamlabs OBS.exe" },
-              { os: "win32", name: "Streamlabs Desktop.exe" },
-              { os: "darwin", name: "Streamlabs Desktop.app" },
-            ],
-            name: "Streamlabs Desktop",
-            streamerTool: !0,
-          },
-          {
-            executables: [
-              { os: "win32", name: "TwitchStudio.exe" },
-              { os: "darwin", name: "Twitch Studio.app" },
-            ],
-            name: "Twitch Studio",
-            streamerTool: !0,
-          },
-          {
-            executables: [
-              { os: "win32", name: "Spotify.exe" },
-              { os: "darwin", name: "Spotify.app" },
-              { os: "linux", name: "spotify" },
-            ],
-            name: f.default.get(D.PlatformTypes.SPOTIFY).name,
-          },
-        ],
-        M = !0,
-        U = new Set(),
-        G = [],
-        w = [],
-        k = [],
-        x = null,
-        F = [],
-        V = {},
-        B = {},
-        H = {
-          gamesSeen: [],
-          gameOverrides: {},
-          enableOverlay: {},
-          enableDetection: {},
-        },
-        Y = function () {},
-        j = {},
-        W = 0,
-        K = null,
-        z = null,
-        q = {};
-      function X(e, t, n) {
-        let i = e[t];
-        void 0 !== i && (delete e[t], (e[n] = i));
-      }
-      function Q(e, t) {
-        null != t.lastLaunched
-          ? (e.lastLaunched = t.lastLaunched)
-          : null != t.start && (e.lastLaunched = t.start);
-      }
-      function Z(e) {
-        return b.some(t => t.name === e.name && !0 === t.streamerTool);
-      }
-      function J() {
-        if (k.length > 0) {
-          let e = x;
-          (x = k[0]),
-            null != e && x.pid === e.pid
-              ? (x.start = e.start)
-              : (x.start = Date.now());
-        } else x = null;
-        let e = [];
-        for (let t of k) !(t.pid in q) && ((q[t.pid] = t), e.push(t));
-        let t = [];
-        for (let e of Object.values(q))
-          !k.some(t => t.pid === e.pid) && (t.push(e), delete q[e.pid]);
-        P.info("games", {
-          runningGames: k,
-          added: e,
-          removed: t,
-          previousGames: q,
-        }),
-          c.default.dispatch({
-            type: "RUNNING_GAMES_CHANGE",
-            games: k,
-            added: e,
-            removed: t,
-          });
-      }
-      function $(e) {
-        let t = null != e.name ? e.name : "";
-        return "".concat(e.exePath, ":").concat(t);
-      }
-      function ee(e) {
-        if (e.isLauncher)
-          return {
-            source: O.OverlayGameStatusSource.LAUNCHER,
-            enabled: !1,
-            overlayMethod: y.OverlayMethod.Disabled,
-          };
-        let t = S.default.getGameByName(e.name);
-        if (null != t) {
-          let e = m.default.getActiveLibraryApplication(t.id);
-          if (null != e)
-            return {
-              source: O.OverlayGameStatusSource.LIBRARY_APPLICATION,
-              enabled: e.isOverlayEnabled(),
-              overlayMethod: y.OverlayMethod.Disabled,
-            };
-        }
-        let n = p.isOOPExperimentEnabled() && (0, N.supportsOutOfProcess)(),
-          i = null == e.id ? null : j[e.id],
-          r = n && null != i && i.supportsOutOfProcessOverlay,
-          s = r ? y.OverlayMethod.OutOfProcess : y.OverlayMethod.Hook,
-          a = _.OverlayStoredSettings.methodOverride;
-        if (null != a && a !== y.OverlayMethod.Disabled) {
-          let t = y.OverlayMethod[s],
-            n = y.OverlayMethod[a];
-          P.info(
-            "getOverlayGameStatus: overlay method overriden "
-              .concat(t, " -> ")
-              .concat(n, " (")
-              .concat(e.name, ")")
-          ),
-            (s = a);
-        }
-        let o = H.enableOverlay[$(e)];
-        return null != o
-          ? {
-              source: O.OverlayGameStatusSource.USER_OVERRIDE,
-              enabled: o,
-              overlayMethod: s,
-            }
-          : null != i
-            ? {
-                source: O.OverlayGameStatusSource.DATABASE,
-                enabled: i.enabled || r,
-                overlayMethod: s,
-              }
-            : {
-                source: O.OverlayGameStatusSource.DEFAULT,
-                enabled: !1,
-                overlayMethod: y.OverlayMethod.Hook,
-              };
-      }
-      function et(e) {
-        let t = H.enableDetection[$(e)];
-        return null == t || t;
-      }
-      function en(e) {
-        return !e.hidden && et(e);
-      }
-      function ei() {
-        u.default.set(L, H);
-      }
-      function er(e) {
-        var t, n;
-        let i = {
-          ...e,
-          played:
-            null != e.lastFocused && 0 !== e.lastFocused
-              ? o(new Date(e.lastFocused * I.default.Millis.SECOND)).fromNow()
-              : " ",
-          overlay:
-            ((t = e),
-            null !== (n = H.enableOverlay[$(t)]) && void 0 !== n
-              ? n
-              : ee(t).enabled),
-          verified: S.default.isGameInDatabase(e),
-          detectable: et(e),
-        };
-        if (null != e.id && null != j[e.id]) {
-          let t = j[e.id];
-          i.overlayWarn = t.warn;
-        }
-        return i;
-      }
-      function es() {
-        let e = !1;
-        return (
-          (G = s.values(m.default.libraryApplications).reduce((t, n) => {
-            let i = S.default.getDetectableGame(n.id);
-            if (null == i) return t;
-            let r = T.default.getLaunchOptions(n.id, n.branchId);
-            for (let s of r) {
-              let r = "".concat(n.id, ":").concat(n.branchId);
-              !U.has(r) && ((e = !0), U.add(r));
-              let { fullExecutablePath: a } = s,
-                o = a.replace(/\\/g, "/").toLowerCase();
-              (V[o] = i.id),
-                t.push({
-                  id: i.id,
-                  name: i.name,
-                  exePath: o,
-                  cmdLine: "",
-                  lastFocused: 0,
-                  add: !0,
-                });
-            }
-            return t;
-          }, [])),
-          e && ea(),
-          e
-        );
-      }
-      function ea() {
-        if (!__OVERLAY__ && A.isPlatformEmbedded) {
-          let e = [...G, ...s.values(H.gameOverrides)];
-          R.default.setGameCandidateOverrides(e);
-        }
-      }
-      function eo(e) {
-        null != e &&
-          0 !== e.length &&
-          (e.forEach(e => {
-            let t = H.gamesSeen.some(t => {
-              if (t.name === e.name) {
-                if (e.lastFocused) {
-                  t.lastFocused = e.lastFocused;
-                  let n = H.gameOverrides[$(e)];
-                  null != n && (n.lastFocused = e.lastFocused);
-                }
-                return Q(t, e), !0;
-              }
-              return !1;
-            });
-            if (t);
-            else {
-              if (e.hidden) return;
-              H.gamesSeen.unshift(
-                (function (e) {
-                  let t = {
-                    exePath: e.exePath,
-                    cmdLine: e.cmdLine,
-                    lastFocused: e.lastFocused,
-                  };
-                  return (
-                    null != e.id && (t.id = e.id),
-                    null != e.nativeProcessObserverId &&
-                      (t.nativeProcessObserverId = e.nativeProcessObserverId),
-                    null != e.name && (t.name = e.name),
-                    e.add && (t.add = !0),
-                    e.block && (t.block = !0),
-                    Q(t, e),
-                    t
-                  );
-                })(e)
-              );
-            }
-          }),
-          H.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
-          ei(),
-          C.default.setRecentGames(el().map(e => er(e))));
-      }
-      function el() {
-        let e = s.values(H.gameOverrides),
-          t = H.gamesSeen.filter(e => void 0 === H.gameOverrides[$(e)]);
-        return t.concat(e);
-      }
-      !__OVERLAY__ &&
-        (0, A.isDesktop)() &&
-        (Y = function () {
-          let e = [],
-            t = new Set();
-          i = {};
-          let n = S.default.games;
-          for (let e of n) {
-            var r, s, a, o;
-            j[e.id] = {
-              compatibilityHook:
-                null !== (r = e.overlayCompatibilityHook) && void 0 !== r
-                  ? r
-                  : d.DEFAULT_OVERLAY_OPTIONS.compatibilityHook,
-              warn:
-                null !== (s = e.overlayWarn) && void 0 !== s
-                  ? s
-                  : d.DEFAULT_OVERLAY_OPTIONS.warn,
-              enabled:
-                null !== (a = e.overlay) && void 0 !== a
-                  ? a
-                  : d.DEFAULT_OVERLAY_OPTIONS.enabled,
-              allowHook:
-                null !== (o = e.hook) && void 0 !== o
-                  ? o
-                  : d.DEFAULT_OVERLAY_OPTIONS.allowHook,
-              supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay,
-            };
-          }
-          [...n, ...b].forEach(n => {
-            var i;
-            let r =
-                null != n.executables
-                  ? null === (i = n.executables) || void 0 === i
-                    ? void 0
-                    : i.filter(e => {
-                        let { os: t } = e;
-                        return t === (0, A.getPlatformName)();
-                      })
-                  : [],
-              s = {};
-            r.forEach(e => {
-              let n =
-                null != e.arguments && e.arguments.length > 0
-                  ? e.arguments
-                  : "null";
-              null == s[n] && (s[n] = []),
-                s[n].push(e.name),
-                e.isLauncher && t.add(e.name);
-            }),
-              Object.keys(s).forEach(t =>
-                e.push({
-                  name: n.name,
-                  id: n.id,
-                  executables: s[t],
-                  cmdLine: "null" !== t ? t : null,
-                })
-              );
-          }),
-            (e = e.filter(
-              e => null != e.executables && e.executables.length > 0
-            )),
-            R.default.setObservedGamesCallback(e, e => {
-              let n = [],
-                r = {};
-              e = e.filter(
-                e => (
-                  (e.distributor = (function (e) {
-                    if (null != V[e.exePath]) return D.Distributors.DISCORD;
-                    if (/steamapps/.test(e.cmdLine))
-                      return D.Distributors.STEAM;
-                    if (/-epicapp/.test(e.cmdLine)) return D.Distributors.EPIC;
-                    return e.distributor;
-                  })(e)),
-                  (e.isLauncher = t.has(e.exeName)),
-                  e.isLauncher && null != e.id && (r[e.id] = e),
-                  (e.windowHandle = (function (e, t) {
-                    if (void 0 === t) {
-                      let t = R.default.getDiscordUtils();
-                      if (null != t && null != t.getWindowHandleFromPid) {
-                        let n = t.getWindowHandleFromPid(e);
-                        return null != n && "0" !== n ? n : null;
-                      }
-                      return null;
-                    }
-                    return "0" === t ? null : t;
-                  })(e.pid, e.windowHandle)),
-                  null ==
-                    b.find(t => {
-                      let { name: n } = t;
-                      return n === e.name;
-                    }) || (n.push(e), !1)
-                )
-              );
-              let s = n.filter(Z).length;
-              s !== W &&
-                ((W = s),
-                c.default.dispatch({
-                  type: "RUNNING_STREAMER_TOOLS_CHANGE",
-                  count: W,
-                })),
-                (k = e),
-                (F = n),
-                (i = r),
-                J();
-            }),
-            ea();
-        });
-      class eu extends l.default.Store {
-        initialize() {
-          var e, t, n, i;
-          let r =
-            null !== (e = u.default.get(L)) && void 0 !== e
-              ? e
-              : {
-                  gamesSeen: [],
-                  gameOverrides: {},
-                  enableOverlay: {},
-                  enableDetection: {},
-                };
-          H.gameOverrides = {};
-          let a = !1;
-          if (
-            (s
-              .values(null !== (t = r.gameOverrides) && void 0 !== t ? t : {})
-              .forEach(e => {
-                let t = $(e);
-                H.gameOverrides[t] = e;
-              }),
-            (H.enableOverlay =
-              null !== (n = r.enableOverlay) && void 0 !== n ? n : {}),
-            (H.enableDetection =
-              null !== (i = r.enableDetection) && void 0 !== i ? i : {}),
-            ea(),
-            Array.isArray(r.gamesSeen))
-          )
-            for (let e of r.gamesSeen)
-              "number" == typeof e.id &&
-                ((e.nativeProcessObserverId = e.id), delete e.id, (a = !0));
-          eo(r.gamesSeen),
-            this.waitFor(S.default),
-            this.syncWith(
-              [m.default, S.default, T.default],
-              s.throttle(es, 1e3)
-            ),
-            a && ei();
-        }
-        getVisibleGame() {
-          return null == x || en(x) ? x : null;
-        }
-        getCurrentGameForAnalytics() {
-          return x;
-        }
-        getVisibleRunningGames() {
-          return k.filter(en);
-        }
-        getRunningGames() {
-          return k;
-        }
-        getRunningDiscordApplicationIds() {
-          let e = [];
-          for (let t of k) null != V[t.exePath] && e.push(V[t.exePath]);
-          return e;
-        }
-        getRunningVerifiedApplicationIds() {
-          return this.getRunningGames()
-            .map(e => S.default.getGameByName(e.name))
-            .filter(v.isNotNullish)
-            .map(e => e.id);
-        }
-        getGameForPID(e) {
-          var t;
-          return null !== (t = k.find(t => t.pid === e)) && void 0 !== t
-            ? t
-            : null;
-        }
-        getLauncherForPID(e) {
-          let t = this.getGameForPID(e);
-          return null != t ? (null != t.id ? i[t.id] : null) : null;
-        }
-        getOverlayOptionsForPID(e) {
-          let t = this.getGameForPID(e);
-          return null == t || t.isLauncher || null == t.id
-            ? null
-            : { ...j[t.id] };
-        }
-        shouldElevateProcessForPID(e) {
-          return null != K && K === e;
-        }
-        shouldContinueWithoutElevatedProcessForPID(e) {
-          return null != z && z === e;
-        }
-        getCandidateGames() {
-          return w
-            .filter(e => e.hidden || null == e.id)
-            .filter(e => void 0 === H.gameOverrides[$(e)]);
-        }
-        getGamesSeen(e) {
-          let t =
-              !(arguments.length > 1) ||
-              void 0 === arguments[1] ||
-              arguments[1],
-            n = el();
-          if (e) {
-            let e = this.getVisibleGame();
-            if (null != e) {
-              let t = $(e);
-              n = n.filter(e => $(e) !== t);
-            }
-          }
-          return t && n.sort((e, t) => t.lastFocused - e.lastFocused), n;
-        }
-        getSeenGameByName(e) {
-          return H.gamesSeen.find(
-            t => null != t.name && t.name.toLowerCase() === e.toLowerCase()
-          );
-        }
-        isObservedAppRunning(e) {
-          return F.some(t => t.name === e);
-        }
-        getOverrides() {
-          return Object.values(H.gameOverrides);
-        }
-        getOverrideForGame(e) {
-          return H.gameOverrides[$(e)];
-        }
-        getGameOverlayStatus(e) {
-          if (e.hidden || e.isLauncher || e.elevated || e.sandboxed)
-            return (
-              P.verbose("getGameOverlayStatus: Overlay not supported.", e), null
-            );
-          let t = ee(e);
-          return t.enabled ? t : null;
-        }
-        getObservedAppNameForWindow(e) {
-          var t, n;
-          return null !==
-            (n =
-              null === (t = F.find(t => (0, h.default)(e, t.windowHandle))) ||
-              void 0 === t
-                ? void 0
-                : t.name) && void 0 !== n
-            ? n
-            : null;
-        }
-        get canShowAdminWarning() {
-          return M;
-        }
-      }
-      eu.displayName = "RunningGameStore";
-      var ec = new eu(c.default, {
-        RUNNING_GAMES_CHANGE: function (e) {
-          eo(k);
-        },
-        CANDIDATE_GAMES_CHANGE: function (e) {
-          w = e.games;
-        },
-        PERMISSION_CLEAR_PTT_ADMIN_WARNING: function () {
-          M = !1;
-        },
-        PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
-          let { pid: t } = e;
-          (K = t), (z = null);
-        },
-        PERMISSION_CLEAR_ELEVATED_PROCESS: function () {
-          K = null;
-        },
-        PERMISSION_CONTINUE_NONELEVATED_PROCESS: function (e) {
-          let { pid: t } = e;
-          (z = t), (K = null);
-        },
-        RUNNING_GAME_ADD_OVERRIDE: function (e) {
-          let t;
-          let n = e.pid,
-            i = k.find(e => e.pid === n);
-          if (null == i) {
-            let e = w.find(e => e.pid === n);
-            if (null == e) return;
-            ((i = { ...e }).hidden = !1), k.push(i), (t = $(i));
-          } else (t = $(i)), i.hidden && (B[t] = !0), (i.hidden = !1);
-          (null == i.lastFocused || 0 === i.lastFocused) &&
-            (i.lastFocused = Math.floor(Date.now() / 1e3)),
-            (H.gameOverrides[t] = { ...i, add: !0 }),
-            eo(k),
-            ea(),
-            ei(),
-            J();
-        },
-        RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
-          if (
-            ((H.enableOverlay[$(e.game)] = e.newEnabledValue),
-            ei(),
-            !__OVERLAY__)
-          ) {
-            let t =
-              null != e.game.id ? S.default.getDetectableGame(e.game.id) : null;
-            null != t &&
-              g.default.track(D.AnalyticEvents.OVERLAY_TOGGLED, {
-                enabled: e.newEnabledValue,
-                setting_type: "overlay toggled - game",
-                application_id: t.id,
-                application_name: t.name,
-              });
-          }
-        },
-        RUNNING_GAME_TOGGLE_DETECTION: function (e) {
-          let { game: t } = e,
-            n = et(t);
-          (H.enableDetection[$(t)] = !n),
-            ei(),
-            g.default.track(
-              D.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE,
-              { enabled: !n }
-            );
-        },
-        RUNNING_GAME_EDIT_NAME: function (e) {
-          let t = $(e.game),
-            n = H.gameOverrides[t];
-          if (null == n) {
-            var i;
-            (n = {
-              name: (i = e.game).name,
-              exePath: i.exePath,
-              cmdLine: i.cmdLine,
-              lastFocused: i.lastFocused,
-            }).add = !0;
-          }
-          n.name = e.newName;
-          let r = $(n);
-          delete H.gameOverrides[t],
-            (H.gameOverrides[r] = n),
-            X(H.enableOverlay, t, r),
-            X(H.enableDetection, t, r),
-            X(B, t, r),
-            H.gamesSeen.forEach(n => {
-              $(n) === t && (n.name = e.newName);
-            });
-          let s = !1;
-          k.forEach(n => {
-            $(n) === t && ((n.name = e.newName), (s = !0));
-          }),
-            ea(),
-            ei(),
-            s && J();
-        },
-        RUNNING_GAME_DELETE_ENTRY: function (e) {
-          let t = $(e.game);
-          delete H.gameOverrides[t],
-            delete H.enableOverlay[t],
-            delete H.enableDetection[t],
-            (H.gamesSeen = H.gamesSeen.filter(e => $(e) !== t)),
-            B[t] &&
-              (k.forEach(e => {
-                t === $(e) && (e.hidden = !0);
-              }),
-              delete B[t],
-              J()),
-            ea(),
-            ei();
-        },
-        GAMES_DATABASE_UPDATE: Y,
-        GAME_LAUNCH_SUCCESS: function (e) {
-          var t;
-          if (__OVERLAY__ || !A.isPlatformEmbedded) return;
-          let n = R.default.getDiscordUtils().notifyGameLaunched;
-          if (null == n) return;
-          let i = S.default.getDetectableGame(e.applicationId);
-          null != i &&
-            n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : []);
-        },
-        GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function () {
-          ea();
-        },
-      });
-    },
-    373807: function (e, t, n) {
-      "use strict";
-      var i, r;
-      n.r(t),
-        n.d(t, {
-          OverlayGameStatusSource: function () {
-            return i;
-          },
-        }),
-        ((r = i || (i = {})).LAUNCHER = "LAUNCHER"),
-        (r.LIBRARY_APPLICATION = "LIBRARY_APPLICATION"),
-        (r.USER_OVERRIDE = "USER_OVERRIDE"),
-        (r.DATABASE = "DATABASE"),
-        (r.DEFAULT = "DEFAULT");
-    },
     831610: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -30970,7 +30246,7 @@
             return r;
           },
         });
-      var i = n("161454");
+      var i = n("568307");
       function r(e) {
         let t, n;
         if (null == e) return {};
@@ -36296,194 +35572,191 @@
             return i;
           },
           UNSELECTED_PREMIUM_TYPE_OVERRIDE: function () {
-            return B;
+            return F;
           },
           PREMIUM_TYPE_OVERRIDE_OPTIONS: function () {
-            return H;
+            return V;
           },
           PremiumTypeOrder: function () {
-            return Y;
+            return B;
           },
           PREMIUM_SUBSCRIPTION_APPLICATION: function () {
-            return j;
+            return H;
           },
           PremiumSubscriptionSKUs: function () {
             return r;
           },
           ACTIVE_PREMIUM_SKUS: function () {
-            return W;
+            return Y;
           },
           PremiumSubscriptionSKUToPremiumType: function () {
-            return K;
+            return j;
           },
           SubscriptionPlans: function () {
             return s;
           },
           PREMIUM_PLANS: function () {
-            return z;
+            return W;
           },
           PREMIUM_TIER_2_PLANS: function () {
-            return q;
+            return K;
           },
           PREMIUM_GUILD_SUBSCRIPTION_PLANS: function () {
-            return X;
+            return z;
           },
           MULTI_MONTH_PLANS: function () {
-            return Q;
+            return q;
           },
           PREMIUM_MONTHLY_PLANS: function () {
-            return Z;
+            return X;
           },
           PREMIUM_SKU_TO_MONTHLY_PLAN: function () {
-            return J;
+            return Q;
           },
           PREMIUM_SKU_TO_YEARLY_PLAN: function () {
-            return $;
+            return Z;
           },
           SubscriptionIntervalTypes: function () {
             return a;
           },
-          DiscountUserUsageLimitIntervalTypes: function () {
-            return o;
-          },
           SubscriptionPlanInfo: function () {
-            return ee;
+            return J;
           },
           GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: function () {
-            return et;
+            return $;
           },
           NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: function () {
-            return en;
+            return ee;
           },
           DEFAULT_MAX_GRACE_PERIOD_DAYS: function () {
-            return ei;
+            return et;
           },
           PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS: function () {
-            return er;
+            return en;
           },
           MAX_ACCOUNT_HOLD_DAYS: function () {
-            return es;
+            return ei;
           },
           BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID: function () {
-            return ea;
+            return er;
           },
           STICKERS_GIFT_CODE_BATCH_ID: function () {
-            return eo;
+            return es;
           },
           USER_PREMIUM_SUBSCRIPTION_TRIAL_EXPIRES_APPROACHING_5_DAY_THRESHOLD:
             function () {
-              return el;
+              return ea;
             },
           MAX_PAYMENT_PROCESSING_TIME_DAYS: function () {
-            return eu;
+            return eo;
           },
           PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: function () {
-            return ec;
+            return el;
           },
           PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: function () {
-            return ed;
+            return eu;
           },
           PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID: function () {
-            return ef;
+            return ec;
           },
           PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID: function () {
-            return eE;
+            return ed;
           },
           PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID: function () {
-            return ep;
+            return ef;
           },
           PREMIUM_TIER_2_AUTH3_TRIAL_ID: function () {
-            return eh;
+            return eE;
           },
           PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID: function () {
-            return eS;
+            return eh;
           },
           PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID: function () {
-            return em;
+            return e_;
           },
           PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: function () {
-            return eT;
+            return eS;
           },
           SubscriptionTrials: function () {
-            return eg;
+            return em;
           },
           PremiumUpsellTypes: function () {
-            return l;
+            return o;
           },
           PurchasedFlags: function () {
-            return u;
+            return l;
           },
           SKU_ID_PURCHASED_FLAGS: function () {
-            return eI;
+            return eT;
           },
           MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE: function () {
-            return eC;
+            return eg;
           },
           IncrementalStickerCountsByTier: function () {
-            return ev;
+            return eI;
           },
           TotalStickerCountsByTier: function () {
-            return eA;
+            return eC;
           },
           TotalSoundboardSoundCountsByTier: function () {
-            return eR;
+            return ev;
           },
           BoostedGuildFeatures: function () {
-            return eN;
+            return eA;
           },
           ORDERED_PREMIUM_SUBSCRIPTION_PLANS: function () {
-            return eO;
+            return eR;
           },
           AnalyticsPremiumFeatureNames: function () {
-            return c;
+            return u;
           },
           AnalyticsPremiumFeatureTiers: function () {
-            return d;
+            return c;
           },
           DISCOUNTS: function () {
-            return eD;
+            return eN;
           },
           StreamQualities: function () {
-            return f;
+            return d;
           },
           StreamQualitiesToPremiumType: function () {
-            return ey;
+            return eO;
           },
           PremiumMarketingEntrypoints: function () {
-            return E;
+            return f;
           },
           PremiumHeaderThemes: function () {
-            return p;
+            return E;
           },
           PremiumGiftStyles: function () {
-            return h;
+            return p;
           },
           InboundPromotionErrorCodes: function () {
-            return _;
+            return h;
           },
           PromotionFlags: function () {
-            return eP;
+            return eD;
           },
           PremiumUserLimits: function () {
-            return eL;
+            return ey;
           },
           BoostingUpsellAction: function () {
-            return T;
+            return m;
           },
           ReferralTrialsAnalyticSteps: function () {
-            return g;
+            return T;
           },
           LegacyPricingCountries: function () {
-            return eb;
+            return eP;
           },
           LegacySeasonalGiftStyles: function () {
-            return eM;
+            return eL;
           },
           SeasonalGiftStyles2023: function () {
-            return eU;
+            return eb;
           },
           AllSeasonalGiftStyles: function () {
-            return eG;
+            return eM;
           },
         }),
         n("222007");
@@ -36521,60 +35794,58 @@
         U,
         G,
         w,
-        k,
-        x,
-        F = n("49111"),
-        V = n("958706");
-      ((I = i || (i = {}))[(I.TIER_1 = 1)] = "TIER_1"),
-        (I[(I.TIER_2 = 2)] = "TIER_2"),
-        (I[(I.TIER_0 = 3)] = "TIER_0");
-      let B = void 0,
-        H = [
+        k = n("49111"),
+        x = n("958706");
+      ((g = i || (i = {}))[(g.TIER_1 = 1)] = "TIER_1"),
+        (g[(g.TIER_2 = 2)] = "TIER_2"),
+        (g[(g.TIER_0 = 3)] = "TIER_0");
+      let F = void 0,
+        V = [
           { value: null, label: "Non-Nitro" },
           { value: 3, label: "Basic" },
           { value: 1, label: "Classic" },
           { value: 2, label: "Standard" },
         ],
-        Y = Object.freeze({ 3: 0, 1: 1, 2: 2 }),
-        j = "521842831262875670";
-      ((C = r || (r = {})).NONE = "628379670982688768"),
-        (C.TIER_0 = "978380684370378762"),
-        (C.TIER_1 = "521846918637420545"),
-        (C.TIER_2 = "521847234246082599"),
-        (C.GUILD = "590663762298667008"),
-        (C.LEGACY = "521842865731534868");
-      let W = [
+        B = Object.freeze({ 3: 0, 1: 1, 2: 2 }),
+        H = "521842831262875670";
+      ((I = r || (r = {})).NONE = "628379670982688768"),
+        (I.TIER_0 = "978380684370378762"),
+        (I.TIER_1 = "521846918637420545"),
+        (I.TIER_2 = "521847234246082599"),
+        (I.GUILD = "590663762298667008"),
+        (I.LEGACY = "521842865731534868");
+      let Y = [
           "628379670982688768",
           "978380684370378762",
           "521846918637420545",
           "521847234246082599",
           "590663762298667008",
         ],
-        K = Object.freeze({
+        j = Object.freeze({
           "978380684370378762": 3,
           "521846918637420545": 1,
           "521847234246082599": 2,
           "521842865731534868": 2,
         });
-      ((v = s || (s = {})).NONE_MONTH = "628379151761408000"),
-        (v.NONE_YEAR = "628381571568631808"),
-        (v.PREMIUM_MONTH_TIER_0 = "978380692553465866"),
-        (v.PREMIUM_YEAR_TIER_0 = "1024422698568122368"),
-        (v.PREMIUM_MONTH_TIER_1 = "511651871736201216"),
-        (v.PREMIUM_YEAR_TIER_1 = "511651876987469824"),
-        (v.PREMIUM_MONTH_TIER_2 = "511651880837840896"),
-        (v.PREMIUM_YEAR_TIER_2 = "511651885459963904"),
-        (v.PREMIUM_MONTH_GUILD = "590665532894740483"),
-        (v.PREMIUM_YEAR_GUILD = "590665538238152709"),
-        (v.NONE_3_MONTH = "944265614527037440"),
-        (v.NONE_6_MONTH = "944265636643602432"),
-        (v.PREMIUM_3_MONTH_TIER_2 = "642251038925127690"),
-        (v.PREMIUM_6_MONTH_TIER_2 = "944037208325619722"),
-        (v.PREMIUM_3_MONTH_GUILD = "944037355453415424"),
-        (v.PREMIUM_6_MONTH_GUILD = "944037391444738048"),
-        (v.PREMIUM_MONTH_LEGACY = "511651856145973248"),
-        (v.PREMIUM_YEAR_LEGACY = "511651860671627264");
-      let z = new Set([
+      ((C = s || (s = {})).NONE_MONTH = "628379151761408000"),
+        (C.NONE_YEAR = "628381571568631808"),
+        (C.PREMIUM_MONTH_TIER_0 = "978380692553465866"),
+        (C.PREMIUM_YEAR_TIER_0 = "1024422698568122368"),
+        (C.PREMIUM_MONTH_TIER_1 = "511651871736201216"),
+        (C.PREMIUM_YEAR_TIER_1 = "511651876987469824"),
+        (C.PREMIUM_MONTH_TIER_2 = "511651880837840896"),
+        (C.PREMIUM_YEAR_TIER_2 = "511651885459963904"),
+        (C.PREMIUM_MONTH_GUILD = "590665532894740483"),
+        (C.PREMIUM_YEAR_GUILD = "590665538238152709"),
+        (C.NONE_3_MONTH = "944265614527037440"),
+        (C.NONE_6_MONTH = "944265636643602432"),
+        (C.PREMIUM_3_MONTH_TIER_2 = "642251038925127690"),
+        (C.PREMIUM_6_MONTH_TIER_2 = "944037208325619722"),
+        (C.PREMIUM_3_MONTH_GUILD = "944037355453415424"),
+        (C.PREMIUM_6_MONTH_GUILD = "944037391444738048"),
+        (C.PREMIUM_MONTH_LEGACY = "511651856145973248"),
+        (C.PREMIUM_YEAR_LEGACY = "511651860671627264");
+      let W = new Set([
           "978380692553465866",
           "1024422698568122368",
           "511651871736201216",
@@ -36586,30 +35857,30 @@
           "511651856145973248",
           "511651860671627264",
         ]),
-        q = new Set([
+        K = new Set([
           "511651880837840896",
           "642251038925127690",
           "944037208325619722",
           "511651885459963904",
         ]),
-        X = new Set([
+        z = new Set([
           "590665532894740483",
           "944037355453415424",
           "944037391444738048",
           "590665538238152709",
         ]),
-        Q = new Set([
+        q = new Set([
           "642251038925127690",
           "944037208325619722",
           "944037355453415424",
           "944037391444738048",
         ]),
-        Z = new Set([
+        X = new Set([
           "978380692553465866",
           "511651871736201216",
           "511651880837840896",
         ]),
-        J = Object.freeze({
+        Q = Object.freeze({
           "978380684370378762": "978380692553465866",
           "521846918637420545": "511651871736201216",
           "521847234246082599": "511651880837840896",
@@ -36617,7 +35888,7 @@
           "590663762298667008": void 0,
           "521842865731534868": void 0,
         }),
-        $ = Object.freeze({
+        Z = Object.freeze({
           "978380684370378762": "1024422698568122368",
           "521846918637420545": "511651876987469824",
           "521847234246082599": "511651885459963904",
@@ -36625,14 +35896,10 @@
           "590663762298667008": void 0,
           "521842865731534868": void 0,
         });
-      ((A = a || (a = {}))[(A.MONTH = 1)] = "MONTH"),
-        (A[(A.YEAR = 2)] = "YEAR"),
-        (A[(A.DAY = 3)] = "DAY"),
-        ((R = o || (o = {}))[(R.DAY = 1)] = "DAY"),
-        (R[(R.WEEK = 2)] = "WEEK"),
-        (R[(R.MONTH = 3)] = "MONTH"),
-        (R[(R.YEAR = 4)] = "YEAR");
-      let ee = Object.freeze({
+      ((v = a || (a = {}))[(v.MONTH = 1)] = "MONTH"),
+        (v[(v.YEAR = 2)] = "YEAR"),
+        (v[(v.DAY = 3)] = "DAY");
+      let J = Object.freeze({
           628379151761408000: {
             id: "628379151761408000",
             name: "None Monthly",
@@ -36770,214 +36037,214 @@
             intervalCount: 1,
           },
         }),
-        et = 30,
-        en = 2,
-        ei = 3,
-        er = 7,
-        es = 30,
-        ea = "775514091874680832",
-        eo = "845031178288889946",
-        el = 432e6,
-        eu = 14,
-        ec = "520373071933079552",
-        ed = "902329034132684800",
-        ef = "983601860436819968",
-        eE = "983601860436819969",
-        ep = "984244797441048577",
-        eh = "1004850445463584768",
-        e_ = "1073698058383917056",
-        eS = "1070132870233980928",
-        em = "1150904354090532864",
-        eT = "1199128659810582528",
-        eg = Object.freeze({
+        $ = 30,
+        ee = 2,
+        et = 3,
+        en = 7,
+        ei = 30,
+        er = "775514091874680832",
+        es = "845031178288889946",
+        ea = 432e6,
+        eo = 14,
+        el = "520373071933079552",
+        eu = "902329034132684800",
+        ec = "983601860436819968",
+        ed = "983601860436819969",
+        ef = "984244797441048577",
+        eE = "1004850445463584768",
+        ep = "1073698058383917056",
+        eh = "1070132870233980928",
+        e_ = "1150904354090532864",
+        eS = "1199128659810582528",
+        em = Object.freeze({
+          [el]: { id: el, skus: ["521847234246082599"] },
+          [eu]: { id: eu, skus: ["521847234246082599"] },
           [ec]: { id: ec, skus: ["521847234246082599"] },
           [ed]: { id: ed, skus: ["521847234246082599"] },
           [ef]: { id: ef, skus: ["521847234246082599"] },
           [eE]: { id: eE, skus: ["521847234246082599"] },
+          [eh]: { id: eh, skus: ["978380684370378762"] },
           [ep]: { id: ep, skus: ["521847234246082599"] },
-          [eh]: { id: eh, skus: ["521847234246082599"] },
-          [eS]: { id: eS, skus: ["978380684370378762"] },
-          [e_]: { id: e_, skus: ["521847234246082599"] },
         });
-      ((N = l || (l = {})).ANIMATED_GUILD_BANNER_TOOLTIP =
+      ((A = o || (o = {})).ANIMATED_GUILD_BANNER_TOOLTIP =
         "animated_guild_banner_tooltip"),
-        (N.EMOJI_PICKER_SEARCH = "emoji_picker_search"),
-        (N.EMOJI_PICKER_EMOJI_CLICKED = "emoji_picker_emoji_clicked"),
-        (N.EMOJI_PICKER_STICKER_CLICKED = "emoji_picker_sticker_clicked"),
-        (N.EMOJI_PICKER_REACTION_EMOJI_CLICKED =
+        (A.EMOJI_PICKER_SEARCH = "emoji_picker_search"),
+        (A.EMOJI_PICKER_EMOJI_CLICKED = "emoji_picker_emoji_clicked"),
+        (A.EMOJI_PICKER_STICKER_CLICKED = "emoji_picker_sticker_clicked"),
+        (A.EMOJI_PICKER_REACTION_EMOJI_CLICKED =
           "emoji_picker_reaction_emoji_clicked"),
-        (N.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED =
+        (A.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED =
           "emoji_picker_super_reaction_emoji_clicked"),
-        (N.EMOJI_PICKER_STATUS_EMOJI_CLICKED =
+        (A.EMOJI_PICKER_STATUS_EMOJI_CLICKED =
           "emoji_picker_status_emoji_clicked"),
-        (N.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED =
+        (A.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED =
           "emoji_picker_top_server_emoji_clicked"),
-        (N.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED =
+        (A.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED =
           "emoji_picker_newly_added_emoji_clicked"),
-        (N.EMOJI_AUTOSUGGEST_CLICKED = "emoji_autosuggest_clicked"),
-        (N.EMOJI_AUTOCOMPLETE_INLINE = "emoji_autocomplete_inline"),
-        (N.EMOJI_AUTOCOMPLETE_MODAL = "emoji_autocomplete_modal"),
-        (N.EMOJI_IN_MESSAGE_HOVER = "emoji_in_message_hover"),
-        (N.EMOJI_IN_REACTION_HOVER = "emoji_in_reaction_hover"),
-        (N.EMOJI_IN_BURST_REACTION_HOVER = "emoji_in_burst_reaction_hover"),
-        (N.EMOJI_IN_BURST_REACTION_HOVER_UPSELL =
+        (A.EMOJI_AUTOSUGGEST_CLICKED = "emoji_autosuggest_clicked"),
+        (A.EMOJI_AUTOCOMPLETE_INLINE = "emoji_autocomplete_inline"),
+        (A.EMOJI_AUTOCOMPLETE_MODAL = "emoji_autocomplete_modal"),
+        (A.EMOJI_IN_MESSAGE_HOVER = "emoji_in_message_hover"),
+        (A.EMOJI_IN_REACTION_HOVER = "emoji_in_reaction_hover"),
+        (A.EMOJI_IN_BURST_REACTION_HOVER = "emoji_in_burst_reaction_hover"),
+        (A.EMOJI_IN_BURST_REACTION_HOVER_UPSELL =
           "emoji_in_burst_reaction_hover_upsell"),
-        (N.EMOJI_PICKER_FLOATING_UPSELL = "emoji_picker_floating_upsell"),
-        (N.STICKER_IN_MESSAGE_HOVER = "sticker_in_message_hover"),
-        (N.EMPTY_STICKER_PICKER_UPSELL = "empty_sticker_picker_upsell"),
-        (N.STREAM_QUALITY_INDICATOR = "stream_quality_indicator"),
-        (N.GIFT_STREAM_QUALITY_INDICATOR = "gift_stream_quality_indicator"),
-        (N.STREAM_QUALITY_UPSELL = "stream_quality_upsell"),
-        (N.MESSAGE_LENGTH_UPSELL = "message_length_upsell"),
-        (N.MESSAGE_LENGTH_IN_EDITOR_UPSELL = "message_length_in_editor_upsell"),
-        (N.CUSTOM_PROFILE_UPSELL = "custom profiles upsell modal"),
-        (N.CUSTOM_PROFILE_TRY_OUT_UPSELL =
+        (A.EMOJI_PICKER_FLOATING_UPSELL = "emoji_picker_floating_upsell"),
+        (A.STICKER_IN_MESSAGE_HOVER = "sticker_in_message_hover"),
+        (A.EMPTY_STICKER_PICKER_UPSELL = "empty_sticker_picker_upsell"),
+        (A.STREAM_QUALITY_INDICATOR = "stream_quality_indicator"),
+        (A.GIFT_STREAM_QUALITY_INDICATOR = "gift_stream_quality_indicator"),
+        (A.STREAM_QUALITY_UPSELL = "stream_quality_upsell"),
+        (A.MESSAGE_LENGTH_UPSELL = "message_length_upsell"),
+        (A.MESSAGE_LENGTH_IN_EDITOR_UPSELL = "message_length_in_editor_upsell"),
+        (A.CUSTOM_PROFILE_UPSELL = "custom profiles upsell modal"),
+        (A.CUSTOM_PROFILE_TRY_OUT_UPSELL =
           "try out custom profile in settings upsell"),
-        (N.VIDEO_BACKGROUNDS_MODAL = "video backgrounds modal"),
-        (N.VIDEO_BACKGROUNDS_INLINE = "video backgrounds inline"),
-        (N.GUILD_CAP_INLINE_SERVER_LIST = "guild_cap_inline_server_list"),
-        (N.GUILD_PREMIUM_UPSELL_MODAL = "premium guild premium upsell modal"),
-        (N.GUILD_CAP_INLINE_INVITE_MODAL = "guild_cap_inline_invite_modal"),
-        (N.GUILD_CAP_MODAL_UPSELL = "guild_cap_modal_upsell"),
-        (N.PREMIUM_GUILD_IDENTITY_MODAL =
+        (A.VIDEO_BACKGROUNDS_MODAL = "video backgrounds modal"),
+        (A.VIDEO_BACKGROUNDS_INLINE = "video backgrounds inline"),
+        (A.GUILD_CAP_INLINE_SERVER_LIST = "guild_cap_inline_server_list"),
+        (A.GUILD_PREMIUM_UPSELL_MODAL = "premium guild premium upsell modal"),
+        (A.GUILD_CAP_INLINE_INVITE_MODAL = "guild_cap_inline_invite_modal"),
+        (A.GUILD_CAP_MODAL_UPSELL = "guild_cap_modal_upsell"),
+        (A.PREMIUM_GUILD_IDENTITY_MODAL =
           "premium guild identity upsell alert"),
-        (N.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON =
+        (A.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON =
           "custom profiles settings banner upsell"),
-        (N.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL =
+        (A.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL =
           "custom profiles profile banner social upsell"),
-        (N.STICKER_PICKER_UPSELL = "sticker_picker_upsell"),
-        (N.ANIMATED_AVATAR_PREVIEW_GIF_MODAL =
+        (A.STICKER_PICKER_UPSELL = "sticker_picker_upsell"),
+        (A.ANIMATED_AVATAR_PREVIEW_GIF_MODAL =
           "animated avatar preview gif modal"),
-        (N.PREMIUM_PROGRESS_BAR = "premium_progress_bar_tooltip"),
-        (N.INVITE_SPLASH_UPSELL = "premium_invite_splash_upsell"),
-        (N.ANIMATED_USER_AVATAR_MODAL = "animated user avatar upsell modal"),
-        (N.UPLOAD_ERROR_UPSELL = "upload error upsell"),
-        (N.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE =
+        (A.PREMIUM_PROGRESS_BAR = "premium_progress_bar_tooltip"),
+        (A.INVITE_SPLASH_UPSELL = "premium_invite_splash_upsell"),
+        (A.ANIMATED_USER_AVATAR_MODAL = "animated user avatar upsell modal"),
+        (A.UPLOAD_ERROR_UPSELL = "upload error upsell"),
+        (A.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE =
           "premium guild member profile upsell inline"),
-        (N.CONCURRENT_ACTIVITIES = "Concurrent Activities"),
-        (N.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED =
+        (A.CONCURRENT_ACTIVITIES = "Concurrent Activities"),
+        (A.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED =
           "premium_uncancel_winback_modal_viewed"),
-        (N.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET =
+        (A.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET =
           "animated_video_background_new_preset"),
-        (N.LOW_PRICE_EXPERIMENT_TOOLTIP = "low_price_experiment_tooltip"),
-        (N.PREMIUM_PROFILE_BADGE_UPSELL = "premium_profile_badge_upsell"),
-        (N.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = "emoji"),
-        (N.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION =
+        (A.LOW_PRICE_EXPERIMENT_TOOLTIP = "low_price_experiment_tooltip"),
+        (A.PREMIUM_PROFILE_BADGE_UPSELL = "premium_profile_badge_upsell"),
+        (A.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = "emoji"),
+        (A.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION =
           "profile customization"),
-        (N.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING =
+        (A.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING =
           "hd streaming"),
-        (N.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS =
+        (A.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS =
           "larger file uploads"),
-        (N.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = "bogo"),
-        (N.VOICE_CHANNEL_EFFECTS_UPSELL = "voice_channel_effects_upsell"),
-        (N.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL =
+        (A.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = "bogo"),
+        (A.VOICE_CHANNEL_EFFECTS_UPSELL = "voice_channel_effects_upsell"),
+        (A.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL =
           "Voice Channel Effect Bar Emoji Upsell"),
-        (N.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED =
+        (A.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED =
           "voice_channel_effects_toggle_clicked"),
-        (N.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED =
+        (A.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED =
           "voice_channel_effects_toggle_clicked_expanded"),
-        (N.PROFILE_THEME_UPSELL_MODAL = "profile_theme_upsell_modal"),
-        (N.PROFILE_EFFECTS_INLINE_SETTINGS = "profile_effects_inline_settings"),
-        (N.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE =
+        (A.PROFILE_THEME_UPSELL_MODAL = "profile_theme_upsell_modal"),
+        (A.PROFILE_EFFECTS_INLINE_SETTINGS = "profile_effects_inline_settings"),
+        (A.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE =
           "profile_effects_inline_settings_mobile"),
-        (N.HIGH_VIDEO_QUALITY_UPSELL = "high_video_quality_upsell"),
-        (N.PREMIUM_PROFILE_TRY_IT_OUT = "premium_profile_try_it_out"),
-        (N.BURST_REACTION_RAIL_UPSELL = "burst_reaction_rail_upsell"),
-        (N.BURST_REACTION_UPSELL = "burst_reaction_upsell"),
-        (N.BURST_REACTION_QUICK_ACTION_UPSELL =
+        (A.HIGH_VIDEO_QUALITY_UPSELL = "high_video_quality_upsell"),
+        (A.PREMIUM_PROFILE_TRY_IT_OUT = "premium_profile_try_it_out"),
+        (A.BURST_REACTION_RAIL_UPSELL = "burst_reaction_rail_upsell"),
+        (A.BURST_REACTION_UPSELL = "burst_reaction_upsell"),
+        (A.BURST_REACTION_QUICK_ACTION_UPSELL =
           "burst_reaction_quick_action_upsell"),
-        (N.BURST_REACTION_CONTEXT_MENU_UPSELL =
+        (A.BURST_REACTION_CONTEXT_MENU_UPSELL =
           "burst_reaction_context_menu_upsell"),
-        (N.PREMIUM_CLIENT_THEME_TRY_IT_OUT = "premium_client_theme_try_it_out"),
-        (N.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL =
+        (A.PREMIUM_CLIENT_THEME_TRY_IT_OUT = "premium_client_theme_try_it_out"),
+        (A.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL =
           "premium_client_theme_settings_upsell"),
-        (N.VIDEO_STAGE_LIMIT = "video_stage_limit"),
-        (N.SOUND_PICKER_SOUND_CLICKED = "sound_picker_sound_clicked"),
-        (N.APP_ICON_UPSELL = "app_icon_upsell"),
-        (N.COLLECTIBLES_SHOP = "collectibles_shop"),
-        (N.COLLECTIBLES_PROFILE_SETTINGS_UPSELL =
+        (A.VIDEO_STAGE_LIMIT = "video_stage_limit"),
+        (A.SOUND_PICKER_SOUND_CLICKED = "sound_picker_sound_clicked"),
+        (A.APP_ICON_UPSELL = "app_icon_upsell"),
+        (A.COLLECTIBLES_SHOP = "collectibles_shop"),
+        (A.COLLECTIBLES_PROFILE_SETTINGS_UPSELL =
           "collectibles_profile_settings_upsell"),
-        (N.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL =
+        (A.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL =
           "collectibles_premium_marketing_page_upsell"),
-        (N.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL =
+        (A.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL =
           "clips_guild_sidebar_coachmark_premium_early_access_upsell"),
-        (N.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL =
+        (A.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL =
           "clips_go_live_premium_early_access_roadblock_upsell"),
-        ((O = u || (u = {}))[(O.PREMIUM_TIER_1 = 1)] = "PREMIUM_TIER_1"),
-        (O[(O.PREMIUM_TIER_2 = 2)] = "PREMIUM_TIER_2"),
-        (O[(O.GUILD_BOOST = 4)] = "GUILD_BOOST"),
-        (O[(O.PREMIUM_TIER_0 = 8)] = "PREMIUM_TIER_0");
-      let eI = Object.freeze({
+        ((R = l || (l = {}))[(R.PREMIUM_TIER_1 = 1)] = "PREMIUM_TIER_1"),
+        (R[(R.PREMIUM_TIER_2 = 2)] = "PREMIUM_TIER_2"),
+        (R[(R.GUILD_BOOST = 4)] = "GUILD_BOOST"),
+        (R[(R.PREMIUM_TIER_0 = 8)] = "PREMIUM_TIER_0");
+      let eT = Object.freeze({
           "978380684370378762": 8,
           "521846918637420545": 1,
           "521847234246082599": 2,
           "590663762298667008": 4,
         }),
-        eC = 52428800,
+        eg = 52428800,
+        eI = {
+          [k.BoostedGuildTiers.NONE]: 5,
+          [k.BoostedGuildTiers.TIER_1]: 10,
+          [k.BoostedGuildTiers.TIER_2]: 15,
+          [k.BoostedGuildTiers.TIER_3]: 30,
+        },
+        eC = {
+          [k.BoostedGuildTiers.NONE]: eI[k.BoostedGuildTiers.NONE],
+          [k.BoostedGuildTiers.TIER_1]:
+            eI[k.BoostedGuildTiers.NONE] + eI[k.BoostedGuildTiers.TIER_1],
+          [k.BoostedGuildTiers.TIER_2]:
+            eI[k.BoostedGuildTiers.NONE] +
+            eI[k.BoostedGuildTiers.TIER_1] +
+            eI[k.BoostedGuildTiers.TIER_2],
+          [k.BoostedGuildTiers.TIER_3]:
+            eI[k.BoostedGuildTiers.NONE] +
+            eI[k.BoostedGuildTiers.TIER_1] +
+            eI[k.BoostedGuildTiers.TIER_2] +
+            eI[k.BoostedGuildTiers.TIER_3],
+        },
         ev = {
-          [F.BoostedGuildTiers.NONE]: 5,
-          [F.BoostedGuildTiers.TIER_1]: 10,
-          [F.BoostedGuildTiers.TIER_2]: 15,
-          [F.BoostedGuildTiers.TIER_3]: 30,
+          [k.BoostedGuildTiers.NONE]: 8,
+          [k.BoostedGuildTiers.TIER_1]: 24,
+          [k.BoostedGuildTiers.TIER_2]: 36,
+          [k.BoostedGuildTiers.TIER_3]: 48,
         },
-        eA = {
-          [F.BoostedGuildTiers.NONE]: ev[F.BoostedGuildTiers.NONE],
-          [F.BoostedGuildTiers.TIER_1]:
-            ev[F.BoostedGuildTiers.NONE] + ev[F.BoostedGuildTiers.TIER_1],
-          [F.BoostedGuildTiers.TIER_2]:
-            ev[F.BoostedGuildTiers.NONE] +
-            ev[F.BoostedGuildTiers.TIER_1] +
-            ev[F.BoostedGuildTiers.TIER_2],
-          [F.BoostedGuildTiers.TIER_3]:
-            ev[F.BoostedGuildTiers.NONE] +
-            ev[F.BoostedGuildTiers.TIER_1] +
-            ev[F.BoostedGuildTiers.TIER_2] +
-            ev[F.BoostedGuildTiers.TIER_3],
-        },
-        eR = {
-          [F.BoostedGuildTiers.NONE]: 8,
-          [F.BoostedGuildTiers.TIER_1]: 24,
-          [F.BoostedGuildTiers.TIER_2]: 36,
-          [F.BoostedGuildTiers.TIER_3]: 48,
-        },
-        eN = Object.freeze({
-          [F.BoostedGuildTiers.NONE]: {
+        eA = Object.freeze({
+          [k.BoostedGuildTiers.NONE]: {
             features: [],
             limits: {
-              emoji: V.EMOJI_MAX_SLOTS,
-              bitrate: F.BITRATE_MAX,
-              fileSize: F.MAX_ATTACHMENT_SIZE,
+              emoji: x.EMOJI_MAX_SLOTS,
+              bitrate: k.BITRATE_MAX,
+              fileSize: k.MAX_ATTACHMENT_SIZE,
               screenShareQualityFramerate: 30,
               screenShareQualityResolution: "720p",
-              soundboardSounds: eR[F.BoostedGuildTiers.NONE],
+              soundboardSounds: ev[k.BoostedGuildTiers.NONE],
               maxConcurrentActivities: 2,
-              stickers: eA[F.BoostedGuildTiers.NONE],
-              stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
+              stickers: eC[k.BoostedGuildTiers.NONE],
+              stageVideoUsers: k.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
             },
           },
-          [F.BoostedGuildTiers.TIER_1]: {
+          [k.BoostedGuildTiers.TIER_1]: {
             features: [
-              F.GuildFeatures.INVITE_SPLASH,
-              F.GuildFeatures.ANIMATED_ICON,
+              k.GuildFeatures.INVITE_SPLASH,
+              k.GuildFeatures.ANIMATED_ICON,
             ],
             limits: {
               emoji: 100,
               bitrate: 128e3,
-              fileSize: F.MAX_ATTACHMENT_SIZE,
+              fileSize: k.MAX_ATTACHMENT_SIZE,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "720p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_1],
+              soundboardSounds: ev[k.BoostedGuildTiers.TIER_1],
               maxConcurrentActivities: 3,
-              stickers: eA[F.BoostedGuildTiers.TIER_1],
-              stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
+              stickers: eC[k.BoostedGuildTiers.TIER_1],
+              stageVideoUsers: k.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
             },
           },
-          [F.BoostedGuildTiers.TIER_2]: {
+          [k.BoostedGuildTiers.TIER_2]: {
             features: [
-              F.GuildFeatures.INVITE_SPLASH,
-              F.GuildFeatures.ANIMATED_ICON,
-              F.GuildFeatures.BANNER,
-              F.GuildFeatures.ROLE_ICONS,
+              k.GuildFeatures.INVITE_SPLASH,
+              k.GuildFeatures.ANIMATED_ICON,
+              k.GuildFeatures.BANNER,
+              k.GuildFeatures.ROLE_ICONS,
             ],
             limits: {
               emoji: 150,
@@ -36985,20 +36252,20 @@
               fileSize: 52428800,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "1080p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_2],
+              soundboardSounds: ev[k.BoostedGuildTiers.TIER_2],
               maxConcurrentActivities: 5,
-              stickers: eA[F.BoostedGuildTiers.TIER_2],
-              stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
+              stickers: eC[k.BoostedGuildTiers.TIER_2],
+              stageVideoUsers: k.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
             },
           },
-          [F.BoostedGuildTiers.TIER_3]: {
+          [k.BoostedGuildTiers.TIER_3]: {
             features: [
-              F.GuildFeatures.INVITE_SPLASH,
-              F.GuildFeatures.ANIMATED_ICON,
-              F.GuildFeatures.BANNER,
-              F.GuildFeatures.ANIMATED_BANNER,
-              F.GuildFeatures.VANITY_URL,
-              F.GuildFeatures.ROLE_ICONS,
+              k.GuildFeatures.INVITE_SPLASH,
+              k.GuildFeatures.ANIMATED_ICON,
+              k.GuildFeatures.BANNER,
+              k.GuildFeatures.ANIMATED_BANNER,
+              k.GuildFeatures.VANITY_URL,
+              k.GuildFeatures.ROLE_ICONS,
             ],
             limits: {
               emoji: 250,
@@ -37006,14 +36273,14 @@
               fileSize: 104857600,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "1080p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_3],
+              soundboardSounds: ev[k.BoostedGuildTiers.TIER_3],
               maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-              stickers: eA[F.BoostedGuildTiers.TIER_3],
-              stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
+              stickers: eC[k.BoostedGuildTiers.TIER_3],
+              stageVideoUsers: k.MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
             },
           },
         }),
-        eO = [
+        eR = [
           "978380692553465866",
           "1024422698568122368",
           "511651871736201216",
@@ -37023,97 +36290,97 @@
           "944037208325619722",
           "511651885459963904",
         ];
-      ((D = c || (c = {})).SOUNDBOARD_PLAY = "soundboard play"),
-        (D.PROFILE_THEME_COLOR = "profile_theme_color"),
-        (D.PROFILE_BANNER = "profile_banner"),
-        (D.ANIMATED_AVATAR = "animated_avatar"),
-        (D.AVATAR_DECORATION = "avatar_decoration"),
-        (D.CLIENT_THEME = "client_theme"),
-        (D.SHARED_CANVAS = "shared_canvas"),
-        (D.PROFILE_EFFECT = "profile_effect"),
-        ((y = d || (d = {})).FREE = "free"),
-        (y.PREMIUM_STANDARD = "premium-standard");
-      let eD = {
+      ((N = u || (u = {})).SOUNDBOARD_PLAY = "soundboard play"),
+        (N.PROFILE_THEME_COLOR = "profile_theme_color"),
+        (N.PROFILE_BANNER = "profile_banner"),
+        (N.ANIMATED_AVATAR = "animated_avatar"),
+        (N.AVATAR_DECORATION = "avatar_decoration"),
+        (N.CLIENT_THEME = "client_theme"),
+        (N.SHARED_CANVAS = "shared_canvas"),
+        (N.PROFILE_EFFECT = "profile_effect"),
+        ((O = c || (c = {})).FREE = "free"),
+        (O.PREMIUM_STANDARD = "premium-standard");
+      let eN = {
         "1024422698568122368": 16,
         "511651876987469824": 16,
         "511651885459963904": 16,
         "944037208325619722": 8,
         "642251038925127690": 5,
       };
-      ((P = f || (f = {})).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
-        (P.MID_STREAMING_QUALITY = "mid_streaming_quality");
-      let ey = Object.freeze({
+      ((D = d || (d = {})).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
+        (D.MID_STREAMING_QUALITY = "mid_streaming_quality");
+      let eO = Object.freeze({
         high_streaming_quality: 2,
         mid_streaming_quality: 1,
       });
-      ((L = E || (E = {}))[(L.UserSettings = 0)] = "UserSettings"),
-        (L[(L.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),
-        ((b = p || (p = {}))[(b.DEFAULT = 0)] = "DEFAULT"),
-        (b[(b.WINTER = 1)] = "WINTER"),
-        ((M = h || (h = {}))[(M.SNOWGLOBE = 1)] = "SNOWGLOBE"),
-        (M[(M.BOX = 2)] = "BOX"),
-        (M[(M.CUP = 3)] = "CUP"),
-        (M[(M.STANDARD_BOX = 4)] = "STANDARD_BOX"),
-        (M[(M.CAKE = 5)] = "CAKE"),
-        (M[(M.CHEST = 6)] = "CHEST"),
-        (M[(M.COFFEE = 7)] = "COFFEE"),
-        (M[(M.SEASONAL_STANDARD_BOX = 8)] = "SEASONAL_STANDARD_BOX"),
-        (M[(M.SEASONAL_CAKE = 9)] = "SEASONAL_CAKE"),
-        (M[(M.SEASONAL_CHEST = 10)] = "SEASONAL_CHEST"),
-        (M[(M.SEASONAL_COFFEE = 11)] = "SEASONAL_COFFEE"),
-        ((U = _ || (_ = {})).USER_NOT_VERIFIED = "user_not_verified"),
-        (U.NO_CODE_BODY = "no_code_body"),
-        (U.NO_PROMOTION = "no_promotion"),
-        (U.CODE_CLAIMED = "code_claimed"),
-        (U.EXISTING_SUBSCRIBER = "existing_subscriber"),
-        (U.PREVIOUS_SUBSCRIBER = "previous_subscriber"),
-        (U.BLOCKED_PAYMENT = "blocked_payment");
-      let eP = Object.freeze({
+      ((y = f || (f = {}))[(y.UserSettings = 0)] = "UserSettings"),
+        (y[(y.ApplicationStoreHome = 1)] = "ApplicationStoreHome"),
+        ((P = E || (E = {}))[(P.DEFAULT = 0)] = "DEFAULT"),
+        (P[(P.WINTER = 1)] = "WINTER"),
+        ((L = p || (p = {}))[(L.SNOWGLOBE = 1)] = "SNOWGLOBE"),
+        (L[(L.BOX = 2)] = "BOX"),
+        (L[(L.CUP = 3)] = "CUP"),
+        (L[(L.STANDARD_BOX = 4)] = "STANDARD_BOX"),
+        (L[(L.CAKE = 5)] = "CAKE"),
+        (L[(L.CHEST = 6)] = "CHEST"),
+        (L[(L.COFFEE = 7)] = "COFFEE"),
+        (L[(L.SEASONAL_STANDARD_BOX = 8)] = "SEASONAL_STANDARD_BOX"),
+        (L[(L.SEASONAL_CAKE = 9)] = "SEASONAL_CAKE"),
+        (L[(L.SEASONAL_CHEST = 10)] = "SEASONAL_CHEST"),
+        (L[(L.SEASONAL_COFFEE = 11)] = "SEASONAL_COFFEE"),
+        ((b = h || (h = {})).USER_NOT_VERIFIED = "user_not_verified"),
+        (b.NO_CODE_BODY = "no_code_body"),
+        (b.NO_PROMOTION = "no_promotion"),
+        (b.CODE_CLAIMED = "code_claimed"),
+        (b.EXISTING_SUBSCRIBER = "existing_subscriber"),
+        (b.PREVIOUS_SUBSCRIBER = "previous_subscriber"),
+        (b.BLOCKED_PAYMENT = "blocked_payment");
+      let eD = Object.freeze({
           IS_BLOCKED_IOS: 32,
           IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
           SUPPRESS_NOTIFICATION: 128,
         }),
-        eL = Object.freeze({
-          3: { fileSize: eC },
+        ey = Object.freeze({
+          3: { fileSize: eg },
           1: { fileSize: 52428800 },
           2: { fileSize: 524288e3 },
         });
-      ((G = S || (S = {})).EXPLORE_ALL_PERKS_CLICKED =
+      ((M = _ || (_ = {})).EXPLORE_ALL_PERKS_CLICKED =
         "explore_all_perks_clicked"),
-        (G.HELPER_COLLAPSED = "helper_collapsed"),
-        (G.HELPER_UNCOLLAPSED = "helper_uncollapsed"),
-        (G.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked"),
-        (G.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked"),
-        (G.SERVER_BOOSTS_CLICKED = "server_boosts_clicked"),
-        (G.HELPER_DISMISSED = "premium_feature_helper_dismissed"),
-        (G.HELPER_RENDERED = "premium_feature_helper_rendered"),
-        ((w = m || (m = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started"),
-        (w.EMOJI_INTRO_VIEWED = "emoji_intro_viewed"),
-        (w.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed"),
-        (w.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started"),
-        (w.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED =
+        (M.HELPER_COLLAPSED = "helper_collapsed"),
+        (M.HELPER_UNCOLLAPSED = "helper_uncollapsed"),
+        (M.UNLOCK_EMOJI_CLICKED = "unlock_emoji_clicked"),
+        (M.CUSTOM_PROFILES_CLICKED = "custom_profiles_clicked"),
+        (M.SERVER_BOOSTS_CLICKED = "server_boosts_clicked"),
+        (M.HELPER_DISMISSED = "premium_feature_helper_dismissed"),
+        (M.HELPER_RENDERED = "premium_feature_helper_rendered"),
+        ((U = S || (S = {})).EMOJI_TUTORIAL_STARTED = "emoji_tutorial_started"),
+        (U.EMOJI_INTRO_VIEWED = "emoji_intro_viewed"),
+        (U.EMOJI_PROMPT_VIEWED = "emoji_prompt_viewed"),
+        (U.CUSTOM_PROFILE_TUTORIAL_STARTED = "custom_profile_tutorial_started"),
+        (U.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED =
           "custom_profile_avatar_intro_viewed"),
-        (w.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED =
+        (U.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED =
           "custom_profile_avatar_decorations_viewed"),
-        (w.CUSTOM_PROFILE_BANNER_INTRO_VIEWED =
+        (U.CUSTOM_PROFILE_BANNER_INTRO_VIEWED =
           "custom_profile_banner_intro_viewed"),
-        (w.CUSTOM_PROFILE_THEME_INTRO_VIEWED =
+        (U.CUSTOM_PROFILE_THEME_INTRO_VIEWED =
           "custom_profile_theme_intro_viewed"),
-        (w.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed"),
-        (w.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started"),
-        (w.BOOST_INTRO_VIEWED = "boost_intro_viewed"),
-        (w.BOOST_PROMPT_VIEWED = "boost_prompt_viewed"),
-        ((k = T || (T = {})).BOOST = "boost"),
-        (k.DISMISS = "dismiss"),
-        ((x = g || (g = {})).BADGE_TOOLTIP_VIEWED =
+        (U.SERVER_PROFILE_INTRO_VIEWED = "server_profile_intro_viewed"),
+        (U.SERVER_BOOST_TUTORIAL_STARTED = "server_boost_tutorial_started"),
+        (U.BOOST_INTRO_VIEWED = "boost_intro_viewed"),
+        (U.BOOST_PROMPT_VIEWED = "boost_prompt_viewed"),
+        ((G = m || (m = {})).BOOST = "boost"),
+        (G.DISMISS = "dismiss"),
+        ((w = T || (T = {})).BADGE_TOOLTIP_VIEWED =
           "share_nitro_bagde_tooltip_viewed"),
-        (x.BADGE_CLICKED = "share_nitro_badge_clicked"),
-        (x.FLOW_STARTED = "share_nitro_flow_started"),
-        (x.FLOW_COMPLETED = "share_nitro_flow_completed");
-      let eb = new Set(["PL", "TR"]),
-        eM = [1, 2, 3],
-        eU = [8, 9, 11, 10],
-        eG = eU.concat(eM);
+        (w.BADGE_CLICKED = "share_nitro_badge_clicked"),
+        (w.FLOW_STARTED = "share_nitro_flow_started"),
+        (w.FLOW_COMPLETED = "share_nitro_flow_completed");
+      let eP = new Set(["PL", "TR"]),
+        eL = [1, 2, 3],
+        eb = [8, 9, 11, 10],
+        eM = eb.concat(eL);
     },
     45120: function (e, t, n) {
       "use strict";
@@ -44320,14 +43587,6 @@
           let t = e.toLowerCase();
           return Object.prototype.hasOwnProperty.call(E, t) ? E[t] : null;
         }
-        isGameInDatabase(e) {
-          let t = this.getGameByName(e.name);
-          return (
-            null != t ||
-            (void 0 !== e.nativeProcessObserverId &&
-              (2147483648 & e.nativeProcessObserverId) == 0)
-          );
-        }
         get fetching() {
           return !0 === i;
         }
@@ -46472,41 +45731,41 @@
         O = n("605250"),
         D = n("808122"),
         y = n("733589"),
-        P = n("161454"),
-        L = n("933034"),
-        b = n("746800"),
-        M = n("584687"),
-        U = n("705500"),
-        G = n("238847"),
-        w = n("981699"),
-        k = n("140622"),
-        x = n("16001"),
-        F = n("631508"),
-        V = n("368765"),
-        B = n("403770"),
-        H = n("940146"),
-        Y = n("353500"),
-        j = n("103979"),
-        W = n("665862"),
-        K = n("122530"),
-        z = n("928609"),
-        q = n("891760"),
-        X = n("536692"),
-        Q = n("374363"),
-        Z = n("599110"),
-        J = n("922932"),
-        $ = n("718517"),
-        ee = n("773336"),
-        et = n("286235"),
-        en = n("50885"),
-        ei = n("13798"),
-        er = n("271938"),
-        es = n("366679"),
-        ea = n("533222"),
-        eo = n("42203"),
-        el = n("760190"),
-        eu = n("855867"),
-        ec = n("945956"),
+        P = n("933034"),
+        L = n("746800"),
+        b = n("584687"),
+        M = n("705500"),
+        U = n("238847"),
+        G = n("981699"),
+        w = n("140622"),
+        k = n("16001"),
+        x = n("631508"),
+        F = n("368765"),
+        V = n("403770"),
+        B = n("940146"),
+        H = n("353500"),
+        Y = n("103979"),
+        j = n("665862"),
+        W = n("122530"),
+        K = n("928609"),
+        z = n("891760"),
+        q = n("536692"),
+        X = n("374363"),
+        Q = n("599110"),
+        Z = n("922932"),
+        J = n("718517"),
+        $ = n("773336"),
+        ee = n("286235"),
+        et = n("50885"),
+        en = n("13798"),
+        ei = n("271938"),
+        er = n("366679"),
+        es = n("533222"),
+        ea = n("42203"),
+        eo = n("760190"),
+        el = n("855867"),
+        eu = n("945956"),
+        ec = n("568307"),
         ed = n("123647"),
         ef = n("49111"),
         eE = n("706530"),
@@ -46532,7 +45791,7 @@
           mode: ef.InputModes.VOICE_ACTIVITY,
           modeOptions: {
             threshold: -60,
-            autoThreshold: ee.isPlatformEmbedded || __OVERLAY__,
+            autoThreshold: $.isPlatformEmbedded || __OVERLAY__,
             vadUseKrisp: !0,
             vadLeading: 5,
             vadTrailing: 25,
@@ -46612,10 +45871,10 @@
         eq = ef.SoundshareEnableState.NOT_ENABLED,
         eX = !1,
         eQ = !1;
-      z.default.hasPermission(ep.NativePermissionTypes.AUDIO, {
+      K.default.hasPermission(ep.NativePermissionTypes.AUDIO, {
         showAuthorizationError: !1,
       }),
-        z.default.hasPermission(ep.NativePermissionTypes.CAMERA, {
+        K.default.hasPermission(ep.NativePermissionTypes.CAMERA, {
           showAuthorizationError: !1,
         });
       let eZ = new Set(),
@@ -46623,7 +45882,7 @@
         e$ = !1,
         e0 = {},
         e1 = {},
-        e2 = 5 * $.default.Millis.SECOND;
+        e2 = 5 * J.default.Millis.SECOND;
       function e4() {
         let e =
             arguments.length > 0 && void 0 !== arguments[0]
@@ -46663,7 +45922,7 @@
             eL ||
             eb ||
             eM ||
-            !z.default.didHavePermission(ep.NativePermissionTypes.AUDIO)),
+            !K.default.didHavePermission(ep.NativePermissionTypes.AUDIO)),
           e.setSelfMute(n),
           e.setSelfDeaf(t.deaf);
       }
@@ -46683,7 +45942,7 @@
                   ? void 0
                   : e.id) &&
             (null != o.desktopSource.soundshareId &&
-              (0, ee.isWindows)() &&
+              (0, $.isWindows)() &&
               v.cancelAttachToProcess(o.desktopSource.soundshareId),
             eC.setGoLiveSource(null, eO)),
           (null == o ? void 0 : o.cameraSource) != null &&
@@ -46713,22 +45972,22 @@
             frameRate: a.quality.frameRate,
           };
           if (null != a.desktopSource) {
-            let { useQuartzCapturer: t } = F.default.getCurrentConfig(
+            let { useQuartzCapturer: t } = x.default.getCurrentConfig(
                 { location: "f627ab_1" },
                 { autoTrackExposure: !1 }
               ),
-              { hdrCaptureMode: n } = w.default.getCurrentConfig(
+              { hdrCaptureMode: n } = G.default.getCurrentConfig(
                 { location: "f627ab_2" },
                 { autoTrackExposure: !1 }
               ),
               r = e4().videoHook,
               s = eC.supports(e_.Features.CAPTURE_TIMEOUT_EXPERIMENTS),
-              { videoHookStaleFrameTimeoutMs: o } = H.default.getConfig(
+              { videoHookStaleFrameTimeoutMs: o } = B.default.getConfig(
                 s && r,
                 "e225cfdf5_vh1",
                 !0
               ),
-              { graphicsCaptureStaleFrameTimeoutMs: l } = W.default.getConfig(
+              { graphicsCaptureStaleFrameTimeoutMs: l } = j.default.getConfig(
                 s && te(),
                 "e225cfdf5_wgc2",
                 !0
@@ -46776,11 +46035,11 @@
         let a = null != t && !e1[s].has(t);
         a && e1[s].add(t),
           (null == t || a) &&
-            Z.default.track(ef.AnalyticEvents.SOUNDSHARE_FAILED, {
+            Q.default.track(ef.AnalyticEvents.SOUNDSHARE_FAILED, {
               soundshare_failure_code: t,
               soundshare_failure_reason: n,
               soundshare_failure_will_retry: i,
-              ...(0, L.default)(e),
+              ...(0, P.default)(e),
             });
       }
       function e9(e) {
@@ -46788,16 +46047,16 @@
           n = t.inputDeviceId;
         if (
           (e.setEchoCancellation(
-            ea.default.hasEchoCancellation(n) || t.echoCancellation
+            es.default.hasEchoCancellation(n) || t.echoCancellation
           ),
           e.setNoiseSuppression(
-            ea.default.hasNoiseSuppression(n) || t.noiseSuppression
+            es.default.hasNoiseSuppression(n) || t.noiseSuppression
           ),
           e.setAutomaticGainControl(
-            ea.default.hasAutomaticGainControl(n) || t.automaticGainControl
+            es.default.hasAutomaticGainControl(n) || t.automaticGainControl
           ),
           e.setNoiseCancellation(t.noiseCancellation),
-          (0, ee.isWeb)())
+          (0, $.isWeb)())
         ) {
           let n = t.noiseCancellation ? -150 : -100;
           e.setSilenceThreshold(n);
@@ -46805,7 +46064,7 @@
       }
       function te() {
         return (
-          (0, ee.isWindows)() &&
+          (0, $.isWindows)() &&
           _.satisfies(
             null === C.default || void 0 === C.default
               ? void 0
@@ -46817,7 +46076,7 @@
       function tt(e) {
         return (
           !!(
-            (0, ee.isMac)() &&
+            (0, $.isMac)() &&
             eC.supports(e_.Features.SCREEN_CAPTURE_KIT) &&
             _.satisfies(
               null === C.default || void 0 === C.default
@@ -46826,7 +46085,7 @@
               eE.DARWIN_SCKIT_VERSION
             )
           ) &&
-          V.default.getCurrentConfig(
+          F.default.getCurrentConfig(
             { location: "screenCaptureKitEnabled" },
             { autoTrackExposure: e }
           ).allowScreenCaptureKit
@@ -46853,7 +46112,7 @@
         update() {
           let e = e4();
           !eB &&
-          ec.default.getState() === ef.RTCConnectionStates.RTC_CONNECTED &&
+          eu.default.getState() === ef.RTCConnectionStates.RTC_CONNECTED &&
           e.mode === ef.InputModes.VOICE_ACTIVITY &&
           e.silenceWarning
             ? this.start()
@@ -46931,7 +46190,7 @@
         var e, t;
         let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
           i =
-            null !== (e = Q.default.settings.audioContextSettings) &&
+            null !== (e = X.default.settings.audioContextSettings) &&
             void 0 !== e
               ? e
               : { user: {}, stream: {} };
@@ -46947,7 +46206,7 @@
             a = null !== (t = i[e]) && void 0 !== t ? t : {},
             { localMutes: o, localVolumes: l } = e4(r);
           for (let [e, t] of Object.entries(a))
-            null == (0, X.getPendingAudioSettings)(r, e) &&
+            null == (0, q.getPendingAudioSettings)(r, e) &&
               (t.muted ? (o[e] = !0) : delete o[e],
               t.volume !== s ? (l[e] = t.volume) : delete l[e],
               eC.eachConnection(n => {
@@ -46975,19 +46234,19 @@
             { soundshareId: null, soundshareSession: "" }
           );
         {
-          let t = i.getExperimentalSoundshare() ? e : J.default.getAudioPid(e),
+          let t = i.getExperimentalSoundshare() ? e : Z.default.getAudioPid(e),
             n = "";
           return (
-            null != t && (n = J.default.generateSessionFromPid(t)),
+            null != t && (n = Z.default.generateSessionFromPid(t)),
             { soundshareId: t, soundshareSession: n }
           );
         }
       }
       function tc(e, t) {
-        (0, ee.isWindows)() &&
+        (0, $.isWindows)() &&
           v.attachToProcess(e, { soundshare_session: t }).then(t => {
             null != t &&
-              !P.default.shouldContinueWithoutElevatedProcessForPID(e) &&
+              !ec.default.shouldContinueWithoutElevatedProcessForPID(e) &&
               I.default.wait(() => {
                 I.default.dispatch({
                   type: "MEDIA_ENGINE_SOUNDSHARE_FAILED",
@@ -47005,7 +46264,7 @@
       }
       function tf(e) {
         let t = e4();
-        Z.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
+        Q.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
           echo_cancellation: t.echoCancellation,
           noise_cancellation: t.noiseCancellation,
           noise_suppression: t.noiseSuppression,
@@ -47016,9 +46275,9 @@
       function tE() {
         let e = e4(),
           t = e.inputDeviceId,
-          n = ea.default.hasEchoCancellation(t) || e.echoCancellation,
-          i = ea.default.hasNoiseSuppression(t) || e.noiseSuppression,
-          r = ea.default.hasAutomaticGainControl(t) || e.automaticGainControl,
+          n = es.default.hasEchoCancellation(t) || e.echoCancellation,
+          i = es.default.hasNoiseSuppression(t) || e.noiseSuppression,
+          r = es.default.hasAutomaticGainControl(t) || e.automaticGainControl,
           s = e.noiseCancellation;
         eC.setLoopback(e$, {
           echoCancellation: n,
@@ -47032,19 +46291,19 @@
       }
       async function th() {
         try {
-          await en.default.ensureModule("discord_krisp"),
-            en.default.requireModule("discord_krisp"),
+          await et.default.ensureModule("discord_krisp"),
+            et.default.requireModule("discord_krisp"),
             (eW = !0),
             i.emitChange();
         } catch (t) {
           em.warn("Failed to load Krisp module: ".concat(t.message)),
-            et.default.captureException(t);
+            ee.default.captureException(t);
           let e = e_.NoiseCancellerError.INITIALIZED;
           if (t.message.includes(": ")) {
             let n = parseInt(t.message.substring(t.message.indexOf(": ") + 1));
             e = isNaN(n) || 0 === n ? e_.NoiseCancellerError.INITIALIZED : n;
           }
-          Z.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
+          Q.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
             noise_canceller_error: e,
           }),
             ti({ noiseCancellation: !1 });
@@ -47079,13 +46338,13 @@
             (e = { status_code: -1, message: "".concat(t) });
         } finally {
           i.emitChange(),
-            Z.default.track(ef.AnalyticEvents.SOUNDSHARE_ENABLE, e);
+            Q.default.track(ef.AnalyticEvents.SOUNDSHARE_ENABLE, e);
         }
       }
       class tT extends S.default.Store {
         initialize() {
           eC.on(m.MediaEngineEvent.Connection, e => {
-            let { maxSyncDelayOverride: t } = x.default.getCurrentConfig(
+            let { maxSyncDelayOverride: t } = k.default.getCurrentConfig(
               { location: "f627ab_3" },
               { autoTrackExposure: !1 }
             );
@@ -47099,7 +46358,7 @@
               e.setQoS(n.qos),
               e.setExperimentalEncoders(n.experimentalEncoders),
               e.setHardwareH264(n.hardwareH264);
-            let { useExperimentalRateControl: r } = Y.default.getCurrentConfig(
+            let { useExperimentalRateControl: r } = H.default.getCurrentConfig(
               { location: "f627ab_4" },
               { autoTrackExposure: !1 }
             );
@@ -47109,30 +46368,30 @@
                 !0
               );
             {
-              (0, ee.isWindows)() &&
+              (0, $.isWindows)() &&
                 e.setExperimentFlag(
                   e_.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT,
                   !0
                 );
-              let { signalH265SupportNvenc: t } = G.default.getCurrentConfig(
+              let { signalH265SupportNvenc: t } = U.default.getCurrentConfig(
                 { location: "f627ab_9" },
                 { autoTrackExposure: !0 }
               );
               t &&
                 e.setExperimentFlag(e_.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
-              let { signalH265SupportMacOS: n } = U.default.getCurrentConfig(
+              let { signalH265SupportMacOS: n } = M.default.getCurrentConfig(
                 { location: "f627ab_8" },
                 { autoTrackExposure: !0 }
               );
               n &&
                 e.setExperimentFlag(e_.ExperimentFlags.SIGNAL_H265_SUPPORT, !0);
             }
-            let { signalAV1Support: a } = b.default.getCurrentConfig(
+            let { signalAV1Support: a } = L.default.getCurrentConfig(
               { location: "f627ab_10" },
               { autoTrackExposure: !0 }
             );
             a && e.setExperimentFlag(e_.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
-            let { allowSettingFullbandAndroid: o } = k.default.getCurrentConfig(
+            let { allowSettingFullbandAndroid: o } = w.default.getCurrentConfig(
               { location: "f627ab_14" },
               { autoTrackExposure: !0 }
             );
@@ -47148,7 +46407,7 @@
                 e_.ExperimentFlags.STREAMER_CLIP,
                 t.clipsEnabled
               );
-              let { enableViewerClipping: n } = j.default.getCurrentConfig(
+              let { enableViewerClipping: n } = Y.default.getCurrentConfig(
                 { location: "f627ab_15" },
                 { autoTrackExposure: !1 }
               );
@@ -47163,9 +46422,9 @@
             for (let t of ((n = e4(e.context)),
             e.setPostponeDecodeLevel(100),
             Object.keys(n.localMutes)))
-              t !== er.default.getId() && e.setLocalMute(t, n.localMutes[t]);
+              t !== ei.default.getId() && e.setLocalMute(t, n.localMutes[t]);
             for (let t of Object.keys(n.localVolumes))
-              t !== er.default.getId() &&
+              t !== ei.default.getId() &&
                 e.setLocalVolume(t, n.localVolumes[t]);
             for (let t of Object.keys(n.localPans)) {
               let i = n.localPans[t];
@@ -47194,9 +46453,9 @@
               }),
               e.on(m.BaseConnectionEvent.SoundshareAttached, () => {
                 (null == s ? void 0 : s.desktopSource) != null &&
-                  Z.default.track(
+                  Q.default.track(
                     ef.AnalyticEvents.SOUNDSHARE_ATTACHED,
-                    (0, L.default)(null == s ? void 0 : s.desktopSource)
+                    (0, P.default)(null == s ? void 0 : s.desktopSource)
                   );
               }),
               e.on(m.BaseConnectionEvent.SoundshareFailed, e => {
@@ -47205,12 +46464,12 @@
               }),
               e.on(m.BaseConnectionEvent.SoundshareSpeaking, () => {
                 (null == s ? void 0 : s.desktopSource) != null &&
-                  (Z.default.track(
+                  (Q.default.track(
                     ef.AnalyticEvents.SOUNDSHARE_TRANSMITTING,
-                    (0, L.default)(null == s ? void 0 : s.desktopSource)
+                    (0, P.default)(null == s ? void 0 : s.desktopSource)
                   ),
                   null !=
-                    eu.default.getHookError(ef.MediaEngineHookTypes.SOUND) &&
+                    el.default.getHookError(ef.MediaEngineHookTypes.SOUND) &&
                     I.default.wait(() =>
                       I.default.dispatch({
                         type: "MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING",
@@ -47264,21 +46523,21 @@
                 m.BaseConnectionEvent.VideoHookInitialize,
                 (e, t, n, i, r, a) => {
                   (null == s ? void 0 : s.desktopSource) != null &&
-                    Z.default.track(ef.AnalyticEvents.VIDEOHOOK_INITIALIZED, {
+                    Q.default.track(ef.AnalyticEvents.VIDEOHOOK_INITIALIZED, {
                       backend: e,
                       format: t,
                       framebuffer_format: n,
                       sample_count: i,
                       success: r,
                       reinitialization: a,
-                      ...(0, L.default)(null == s ? void 0 : s.desktopSource),
+                      ...(0, P.default)(null == s ? void 0 : s.desktopSource),
                     });
                 }
               ),
               e.on(m.BaseConnectionEvent.NoiseCancellationError, e => {
                 em.warn("noisecancellererror event: ".concat(e)),
                   (ez = !0),
-                  Z.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
+                  Q.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
                     noise_canceller_error: e,
                   }),
                   I.default.dispatch({
@@ -47296,7 +46555,7 @@
               }),
               e.on(m.BaseConnectionEvent.VoiceActivityDetectorError, e => {
                 em.warn("voiceactivitydetectorerror event: ".concat(e)),
-                  Z.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
+                  Q.default.track(ef.AnalyticEvents.VOICE_PROCESSING, {
                     noise_canceller_error: e,
                   }),
                   I.default.dispatch({
@@ -47323,7 +46582,7 @@
               e.on(m.BaseConnectionEvent.Destroy, () => {
                 l.stop();
               }),
-              e.setBitRate(es.default.bitrate),
+              e.setBitRate(er.default.bitrate),
               e.applyVideoQualityMode(ed.default.mode);
           }),
             eC.on(m.MediaEngineEvent.DeviceChange, (e, t, n) => {
@@ -47365,7 +46624,7 @@
             eC.on(m.MediaEngineEvent.WatchdogTimeout, async () => {
               let e;
               try {
-                await J.default.submitLiveCrashReport({
+                await Z.default.submitLiveCrashReport({
                   message: { message: "Voice Watchdog Timeout" },
                 });
               } catch (t) {
@@ -47376,16 +46635,16 @@
                   null != e ? e : 200
                 )
               ),
-                Z.default.track(ef.AnalyticEvents.VOICE_WATCHDOG_TIMEOUT, {
+                Q.default.track(ef.AnalyticEvents.VOICE_WATCHDOG_TIMEOUT, {
                   minidump_submission_error: e,
                 });
             }),
             eC.on(m.MediaEngineEvent.VideoInputInitialized, e => {
-              Z.default.track(ef.AnalyticEvents.VIDEO_INPUT_INITIALIZED, {
+              Q.default.track(ef.AnalyticEvents.VIDEO_INPUT_INITIALIZED, {
                 device_name: e.description.name,
                 time_to_first_frame_ms: e.initializationTimerExpired
                   ? null
-                  : Math.round(e.timeToFirstFrame * $.default.Millis.SECOND),
+                  : Math.round(e.timeToFirstFrame * J.default.Millis.SECOND),
                 timed_out: e.initializationTimerExpired,
                 activity: e.entropy,
               });
@@ -47432,7 +46691,7 @@
                     (p.defaultsDeep(e, eI()),
                     null != e.modeOptions &&
                       "string" == typeof e.modeOptions.shortcut &&
-                      (e.modeOptions.shortcut = (0, ei.toCombo)(
+                      (e.modeOptions.shortcut = (0, en.toCombo)(
                         e.modeOptions.shortcut
                       )),
                     null != e.modeOptions &&
@@ -47449,7 +46708,7 @@
                         : t.threshold) === -40 &&
                         (e.modeOptions.threshold = -60);
                   }
-                  (0, ee.isWeb)()
+                  (0, $.isWeb)()
                     ? 1 !== e.ncUseKrispjsSettingVersion &&
                       ((e.ncUseKrispjsSettingVersion = 1),
                       (e.noiseSuppression = !1),
@@ -47473,12 +46732,12 @@
                     eC.setAecDump(e.aecDumpEnabled);
                 })();
             })(),
-            !(0, ee.isDesktop)() || __OVERLAY__ || ej || eW
-              ? (0, ee.isWeb)() && eC.supports(e_.Features.NOISE_CANCELLATION)
+            !(0, $.isDesktop)() || __OVERLAY__ || ej || eW
+              ? (0, $.isWeb)() && eC.supports(e_.Features.NOISE_CANCELLATION)
                 ? ((eW = !0), i.emitChange())
-                : (0, ee.isWeb)() && ti({ noiseCancellation: !1 })
+                : (0, $.isWeb)() && ti({ noiseCancellation: !1 })
               : ((ej = !0), th()),
-            (0, ee.isMac)() && eC.supports(e_.Features.SOUNDSHARE)
+            (0, $.isMac)() && eC.supports(e_.Features.SOUNDSHARE)
               ? eC
                   .getSoundshareStatus()
                   .then(e => {
@@ -47499,15 +46758,15 @@
               [e_.Features.HYBRID_VIDEO]: eC.supports(e_.Features.HYBRID_VIDEO),
             }),
             this.waitFor(
-              er.default,
+              ei.default,
+              es.default,
               ea.default,
-              eo.default,
+              el.default,
               eu.default,
               ec.default,
-              P.default,
-              z.default.storage,
-              Q.default,
-              el.default,
+              K.default.storage,
+              X.default,
+              eo.default,
               R.default
             );
         }
@@ -47591,7 +46850,7 @@
           return (
             !this.isEnabled() ||
             e4(e).mute ||
-            !z.default.didHavePermission(ep.NativePermissionTypes.AUDIO) ||
+            !K.default.didHavePermission(ep.NativePermissionTypes.AUDIO) ||
             this.isSelfDeaf(e) ||
             (e === e_.MediaEngineContextTypes.DEFAULT && eM)
           );
@@ -47604,7 +46863,7 @@
           return (
             !this.isMute() &&
             !this.isSelfMutedTemporarily(e) &&
-            ea.default.isHardwareMute(this.getInputDeviceId())
+            es.default.isHardwareMute(this.getInputDeviceId())
           );
         }
         isSelfDeaf() {
@@ -47649,7 +46908,7 @@
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : e_.MediaEngineContextTypes.DEFAULT;
-          return e !== er.default.getId() && (e4(t).localMutes[e] || !1);
+          return e !== ei.default.getId() && (e4(t).localMutes[e] || !1);
         }
         supportsDisableLocalVideo() {
           return eC.supports(e_.Features.DISABLE_VIDEO);
@@ -47772,7 +47031,7 @@
         getEchoCancellation() {
           let e = e4();
           return (
-            ea.default.hasEchoCancellation(e.inputDeviceId) ||
+            es.default.hasEchoCancellation(e.inputDeviceId) ||
             e.echoCancellation
           );
         }
@@ -47785,14 +47044,14 @@
         getNoiseSuppression() {
           let e = e4();
           return (
-            ea.default.hasNoiseSuppression(e.inputDeviceId) ||
+            es.default.hasNoiseSuppression(e.inputDeviceId) ||
             e.noiseSuppression
           );
         }
         getAutomaticGainControl() {
           let e = e4();
           return (
-            ea.default.hasAutomaticGainControl(e.inputDeviceId) ||
+            es.default.hasAutomaticGainControl(e.inputDeviceId) ||
             e.automaticGainControl
           );
         }
@@ -47851,7 +47110,7 @@
           return eH;
         }
         getPacketDelay() {
-          return ee.isPlatformEmbedded ||
+          return $.isPlatformEmbedded ||
             this.getMode() !== ef.InputModes.VOICE_ACTIVITY
             ? 0
             : this.getModeOptions().vadLeading;
@@ -47897,7 +47156,7 @@
         }
         supportsEnableSoundshare() {
           return (
-            (0, ee.isMac)() &&
+            (0, $.isMac)() &&
             eC.supports(e_.Features.SOUNDSHARE) &&
             _.satisfies(
               null === C.default || void 0 === C.default
@@ -47917,7 +47176,7 @@
         }
         supportsScreenSoundshare() {
           return (
-            ((0, ee.isMac)() &&
+            ((0, $.isMac)() &&
               eC.supports(e_.Features.SOUNDSHARE) &&
               _.satisfies(
                 null === C.default || void 0 === C.default
@@ -47926,7 +47185,7 @@
                 eE.DARWIN_SCKIT_AUDIO_VERSION
               ) &&
               tt(!1)) ||
-            ((0, ee.isWindows)() &&
+            ((0, $.isWindows)() &&
               eC.supports(e_.Features.SCREEN_SOUNDSHARE) &&
               this.getExperimentalSoundshare())
           );
@@ -47958,12 +47217,12 @@
         getSupportedSecureFramesProtocolVersion(e) {
           var t;
           let n = eC.getSupportedSecureFramesProtocolVersion(),
-            i = B.SecureFramesUserExperiment.getCurrentConfig({
+            i = V.SecureFramesUserExperiment.getCurrentConfig({
               location: "MediaEngineStore",
             }),
             r =
               null != e
-                ? B.SecureFramesGuildExperiment.getCurrentConfig({
+                ? V.SecureFramesGuildExperiment.getCurrentConfig({
                     guildId: e,
                     location: "MediaEngineStore",
                   })
@@ -48019,8 +47278,8 @@
             }
             return (
               !__OVERLAY__ &&
-                t.userId === er.default.getId() &&
-                null == ec.default.getChannelId() &&
+                t.userId === ei.default.getId() &&
+                null == eu.default.getChannelId() &&
                 e7(!1, null),
               e
             );
@@ -48030,7 +47289,7 @@
           (r = e.sessionId),
             (eL = !1),
             (eU = !1),
-            (0, q.shouldReadWriteAudioSettings)() && tl();
+            (0, z.shouldReadWriteAudioSettings)() && tl();
         },
         CONNECTION_CLOSED: function () {
           r = null;
@@ -48075,7 +47334,7 @@
             { mute: n, deaf: i } = e4(t);
           if (
             t === e_.MediaEngineContextTypes.DEFAULT &&
-            (z.default.requestPermission(ep.NativePermissionTypes.AUDIO), eM)
+            (K.default.requestPermission(ep.NativePermissionTypes.AUDIO), eM)
           )
             return !1;
           !(n = !i && !n) && (i = !1),
@@ -48089,7 +47348,7 @@
         },
         AUDIO_TOGGLE_LOCAL_MUTE: function (e) {
           let { context: t, userId: n } = e;
-          if (n === er.default.getId()) return;
+          if (n === ei.default.getId()) return;
           let { localMutes: i } = e4(t);
           i[n] ? delete i[n] : (i[n] = !0),
             ti({ localMutes: i }, t),
@@ -48138,7 +47397,7 @@
           if (
             (v[u] === ef.VideoToggleState.AUTO_PROBING &&
               c === ef.VideoToggleState.AUTO_ENABLED &&
-              (0, K.default)(
+              (0, W.default)(
                 u,
                 p
                   ? e_.VideoToggleReason.AUTO_DISABLE
@@ -48148,10 +47407,10 @@
             (v[u] = c),
             ti({ videoToggleStateMap: v }, l, d),
             c === ef.VideoToggleState.AUTO_PROBING
-              ? null === (n = ec.default.getRTCConnection()) ||
+              ? null === (n = eu.default.getRTCConnection()) ||
                 void 0 === n ||
                 n.pauseStatsCollectionForUser(u, !0)
-              : null === (i = ec.default.getRTCConnection()) ||
+              : null === (i = eu.default.getRTCConnection()) ||
                 void 0 === i ||
                 i.pauseStatsCollectionForUser(u, !1),
             !eJ &&
@@ -48161,7 +47420,7 @@
                   " - disabling VideoHealthManager"
                 )
               ),
-              null === (s = ec.default.getRTCConnection()) ||
+              null === (s = eu.default.getRTCConnection()) ||
                 void 0 === s ||
                 null === (r = s.getVideoHealthManager()) ||
                 void 0 === r ||
@@ -48169,7 +47428,7 @@
             I)
           ) {
             if ((!p && !S) || (p && !eJ)) return;
-            (0, K.default)(
+            (0, W.default)(
               u,
               p
                 ? e_.VideoToggleReason.AUTO_DISABLE
@@ -48184,13 +47443,13 @@
                     "disallowing auto-disable for this session because of manual override by user"
                   ),
                   (eJ = !1),
-                  null === (o = ec.default.getRTCConnection()) ||
+                  null === (o = eu.default.getRTCConnection()) ||
                     void 0 === o ||
                     null === (a = o.getVideoHealthManager()) ||
                     void 0 === a ||
                     a.disable(),
-                  (0, K.default)(u, e_.VideoToggleReason.MANUAL_REENABLE, m))
-                : (0, K.default)(
+                  (0, W.default)(u, e_.VideoToggleReason.MANUAL_REENABLE, m))
+                : (0, W.default)(
                     u,
                     p
                       ? e_.VideoToggleReason.MANUAL_DISABLE
@@ -48210,7 +47469,7 @@
         },
         AUDIO_SET_LOCAL_VOLUME: function (e) {
           let { context: t, userId: n, volume: i } = e;
-          if (n === er.default.getId()) return;
+          if (n === ei.default.getId()) return;
           let r = t === e_.MediaEngineContextTypes.STREAM,
             s = r ? e_.DEFAULT_STREAM_VOLUME : e_.DEFAULT_VOLUME,
             { localVolumes: a } = e4(t);
@@ -48379,7 +47638,7 @@
         },
         MEDIA_ENGINE_SET_VIDEO_ENABLED: function (e) {
           let { enabled: t } = e;
-          z.default.requestPermission(ep.NativePermissionTypes.CAMERA), e7(t);
+          K.default.requestPermission(ep.NativePermissionTypes.CAMERA), e7(t);
         },
         MEDIA_ENGINE_PERMISSION: function (e) {
           let { kind: t, granted: n } = e;
@@ -48407,8 +47666,8 @@
                 null !== (n = o.qualityOptions) && void 0 !== n
                   ? n
                   : { resolution: 720, frameRate: 30 },
-              d = J.default.getPidFromDesktopSource(r);
-            ee.isPlatformEmbedded &&
+              d = Z.default.getPidFromDesktopSource(r);
+            $.isPlatformEmbedded &&
               !0 === l &&
               (({ soundshareId: e, soundshareSession: i } = tu(d)),
               null != e && tc(e, i)),
@@ -48536,7 +47795,7 @@
           eC.setAecDump(n.aecDumpEnabled);
         },
         CHANNEL_DELETE: function () {
-          if ((!eG && null == s) || null != ec.default.getRTCConnectionId())
+          if ((!eG && null == s) || null != eu.default.getRTCConnectionId())
             return !1;
           e7(!1, null);
         },
@@ -48578,7 +47837,7 @@
             wasSaved: i,
           } = e;
           if (
-            !(0, q.shouldReadWriteAudioSettings)() ||
+            !(0, z.shouldReadWriteAudioSettings)() ||
             t !== eh.UserSettingsTypes.PRELOADED_USER_SETTINGS ||
             n ||
             null != i
@@ -48588,7 +47847,7 @@
         },
         CLIPS_INIT: function (e) {
           let { sourceId: t, applicationName: n, quality: r } = e,
-            { enableDecoupledGameClipping: s } = M.default.getCurrentConfig(
+            { enableDecoupledGameClipping: s } = b.default.getCurrentConfig(
               { location: "handleClipsInit" },
               { autoTrackExposure: !0 }
             ),
@@ -48596,7 +47855,7 @@
           if (!s || !o || null == C.default) return;
           let l = null,
             u = null,
-            c = J.default.getPidFromDesktopSource(t);
+            c = Z.default.getPidFromDesktopSource(t);
           ({ soundshareId: l, soundshareSession: u } = tu(c));
           let d = {
             desktopSource: {
@@ -48610,27 +47869,27 @@
           null != a &&
             a.desktopSource.id !== d.desktopSource.id &&
             (eC.setClipsSource(null),
-            (0, ee.isWindows)() &&
+            (0, $.isWindows)() &&
               null != a.desktopSource.soundshareId &&
               v.cancelAttachToProcess(a.desktopSource.soundshareId)),
             null != l && tc(l, u),
             (a = d);
-          let { useQuartzCapturer: f } = F.default.getCurrentConfig(
+          let { useQuartzCapturer: f } = x.default.getCurrentConfig(
               { location: "f627ab_11" },
               { autoTrackExposure: !1 }
             ),
-            { hdrCaptureMode: E } = w.default.getCurrentConfig(
+            { hdrCaptureMode: E } = G.default.getCurrentConfig(
               { location: "f627ab_12" },
               { autoTrackExposure: !1 }
             ),
             p = e4().videoHook,
             h = eC.supports(e_.Features.CAPTURE_TIMEOUT_EXPERIMENTS),
-            { videoHookStaleFrameTimeoutMs: _ } = H.default.getConfig(
+            { videoHookStaleFrameTimeoutMs: _ } = B.default.getConfig(
               h && p,
               "e225cfdf5_vh2",
               !1
             ),
-            { graphicsCaptureStaleFrameTimeoutMs: S } = W.default.getConfig(
+            { graphicsCaptureStaleFrameTimeoutMs: S } = j.default.getConfig(
               h && te(),
               "e225cfdf5_wgc2",
               !1
@@ -49860,6 +49119,725 @@
             u[e] === l.RelationshipTypes.PENDING_INCOMING && delete u[e];
           }),
             _();
+        },
+      });
+    },
+    568307: function (e, t, n) {
+      "use strict";
+      let i;
+      n.r(t),
+        n.d(t, {
+          gameKey: function () {
+            return ee;
+          },
+          gameInDatabase: function () {
+            return et;
+          },
+          getOverlayGameStatus: function () {
+            return en;
+          },
+          isDetectionEnabled: function () {
+            return ei;
+          },
+          transformForGameSettings: function () {
+            return ea;
+          },
+          default: function () {
+            return ef;
+          },
+        }),
+        n("222007"),
+        n("424973"),
+        n("808653"),
+        n("781738"),
+        n("843762");
+      var r,
+        s,
+        a = n("917351"),
+        o = n.n(a),
+        l = n("866227"),
+        u = n.n(l),
+        c = n("446674"),
+        d = n("95410"),
+        f = n("913144"),
+        E = n("115718"),
+        p = n("376556"),
+        h = n("605250"),
+        _ = n("630915"),
+        S = n("756898"),
+        m = n("32128"),
+        T = n("599110"),
+        g = n("718517"),
+        I = n("269180"),
+        C = n("449008"),
+        v = n("773336"),
+        A = n("50885"),
+        R = n("819068"),
+        N = n("546463"),
+        O = n("686470"),
+        D = n("535974"),
+        y = n("49111"),
+        P = n("6791");
+      let L = new h.default("RunningGameStore"),
+        b = "RunningGameStore",
+        M = [
+          {
+            executables: [
+              { os: "win32", name: "obs/obs.exe" },
+              { os: "win32", name: "obs32.exe" },
+              { os: "win32", name: "obs64.exe" },
+              { os: "darwin", name: "OBS.app" },
+              { os: "linux", name: "obs" },
+            ],
+            name: "OBS",
+            streamerTool: !0,
+          },
+          {
+            executables: [
+              { os: "win32", name: "XSplit.Gamecaster.exe" },
+              { os: "win32", name: "XSplit.Core.exe" },
+              { os: "win32", name: "Gamecaster.exe" },
+            ],
+            name: "XSplit",
+            streamerTool: !0,
+          },
+          {
+            executables: [{ os: "win32", name: "bebo.exe" }],
+            name: "Bebo",
+            streamerTool: !0,
+          },
+          {
+            executables: [
+              { os: "win32", name: "Streamlabs OBS.exe" },
+              { os: "win32", name: "Streamlabs Desktop.exe" },
+              { os: "darwin", name: "Streamlabs Desktop.app" },
+            ],
+            name: "Streamlabs Desktop",
+            streamerTool: !0,
+          },
+          {
+            executables: [
+              { os: "win32", name: "TwitchStudio.exe" },
+              { os: "darwin", name: "Twitch Studio.app" },
+            ],
+            name: "Twitch Studio",
+            streamerTool: !0,
+          },
+          {
+            executables: [
+              { os: "win32", name: "Spotify.exe" },
+              { os: "darwin", name: "Spotify.app" },
+              { os: "linux", name: "spotify" },
+            ],
+            name: p.default.get(y.PlatformTypes.SPOTIFY).name,
+          },
+        ],
+        U = !0,
+        G = new Set(),
+        w = [],
+        k = [],
+        x = [],
+        F = null,
+        V = [],
+        B = {},
+        H = {},
+        Y = {
+          gamesSeen: [],
+          gameOverrides: {},
+          enableOverlay: {},
+          enableDetection: {},
+        },
+        j = function () {},
+        W = {},
+        K = 0,
+        z = null,
+        q = null,
+        X = {};
+      function Q(e, t, n) {
+        let i = e[t];
+        void 0 !== i && (delete e[t], (e[n] = i));
+      }
+      function Z(e, t) {
+        null != t.lastLaunched
+          ? (e.lastLaunched = t.lastLaunched)
+          : null != t.start && (e.lastLaunched = t.start);
+      }
+      function J(e) {
+        return M.some(t => t.name === e.name && !0 === t.streamerTool);
+      }
+      function $() {
+        if (x.length > 0) {
+          let e = F;
+          (F = x[0]),
+            null != e && F.pid === e.pid
+              ? (F.start = e.start)
+              : (F.start = Date.now());
+        } else F = null;
+        let e = [];
+        for (let t of x) !(t.pid in X) && ((X[t.pid] = t), e.push(t));
+        let t = [];
+        for (let e of Object.values(X))
+          !x.some(t => t.pid === e.pid) && (t.push(e), delete X[e.pid]);
+        L.info("games", {
+          runningGames: x,
+          added: e,
+          removed: t,
+          previousGames: X,
+        }),
+          f.default.dispatch({
+            type: "RUNNING_GAMES_CHANGE",
+            games: x,
+            added: e,
+            removed: t,
+          });
+      }
+      function ee(e) {
+        let t = null != e.name ? e.name : "";
+        return "".concat(e.exePath, ":").concat(t);
+      }
+      function et(e) {
+        let t = N.default.getGameByName(e.name);
+        return (
+          null != t ||
+          (void 0 !== e.nativeProcessObserverId &&
+            (2147483648 & e.nativeProcessObserverId) == 0)
+        );
+      }
+      function en(e) {
+        if (e.isLauncher)
+          return {
+            source: "LAUNCHER",
+            enabled: !1,
+            overlayMethod: P.OverlayMethod.Disabled,
+          };
+        let t = N.default.getGameByName(e.name);
+        if (null != t) {
+          let e = O.default.getActiveLibraryApplication(t.id);
+          if (null != e)
+            return {
+              source: "LIBRARY_APPLICATION",
+              enabled: e.isOverlayEnabled(),
+              overlayMethod: P.OverlayMethod.Disabled,
+            };
+        }
+        let n = _.isOOPExperimentEnabled() && (0, R.supportsOutOfProcess)(),
+          i = null == e.id ? null : W[e.id],
+          r = n && null != i && i.supportsOutOfProcessOverlay,
+          s = r ? P.OverlayMethod.OutOfProcess : P.OverlayMethod.Hook,
+          a = m.OverlayStoredSettings.methodOverride;
+        if (null != a && a !== P.OverlayMethod.Disabled) {
+          let t = P.OverlayMethod[s],
+            n = P.OverlayMethod[a];
+          L.info(
+            "getOverlayGameStatus: overlay method overriden "
+              .concat(t, " -> ")
+              .concat(n, " (")
+              .concat(e.name, ")")
+          ),
+            (s = a);
+        }
+        let o = Y.enableOverlay[ee(e)];
+        return null != o
+          ? { source: "USER_OVERRIDE", enabled: o, overlayMethod: s }
+          : null != i
+            ? { source: "DATABASE", enabled: i.enabled || r, overlayMethod: s }
+            : {
+                source: "DEFAULT",
+                enabled: !1,
+                overlayMethod: P.OverlayMethod.Hook,
+              };
+      }
+      ((s = r || (r = {})).LAUNCHER = "LAUNCHER"),
+        (s.LIBRARY_APPLICATION = "LIBRARY_APPLICATION"),
+        (s.USER_OVERRIDE = "USER_OVERRIDE"),
+        (s.DATABASE = "DATABASE"),
+        (s.DEFAULT = "DEFAULT");
+      function ei(e) {
+        let t = Y.enableDetection[ee(e)];
+        return null == t || t;
+      }
+      function er(e) {
+        return !e.hidden && ei(e);
+      }
+      function es() {
+        d.default.set(b, Y);
+      }
+      function ea(e) {
+        var t, n;
+        let i = {
+          ...e,
+          played:
+            null != e.lastFocused && 0 !== e.lastFocused
+              ? u(new Date(e.lastFocused * g.default.Millis.SECOND)).fromNow()
+              : " ",
+          overlay:
+            ((t = e),
+            null !== (n = Y.enableOverlay[ee(t)]) && void 0 !== n
+              ? n
+              : en(t).enabled),
+          verified: et(e),
+          detectable: ei(e),
+        };
+        if (null != e.id && null != W[e.id]) {
+          let t = W[e.id];
+          i.overlayWarn = t.warn;
+        }
+        return i;
+      }
+      function eo() {
+        let e = !1;
+        return (
+          (w = o.values(O.default.libraryApplications).reduce((t, n) => {
+            let i = N.default.getDetectableGame(n.id);
+            if (null == i) return t;
+            let r = D.default.getLaunchOptions(n.id, n.branchId);
+            for (let s of r) {
+              let r = "".concat(n.id, ":").concat(n.branchId);
+              !G.has(r) && ((e = !0), G.add(r));
+              let { fullExecutablePath: a } = s,
+                o = a.replace(/\\/g, "/").toLowerCase();
+              (B[o] = i.id),
+                t.push({
+                  id: i.id,
+                  name: i.name,
+                  exePath: o,
+                  cmdLine: "",
+                  lastFocused: 0,
+                  add: !0,
+                });
+            }
+            return t;
+          }, [])),
+          e && el(),
+          e
+        );
+      }
+      function el() {
+        if (!__OVERLAY__ && v.isPlatformEmbedded) {
+          let e = [...w, ...o.values(Y.gameOverrides)];
+          A.default.setGameCandidateOverrides(e);
+        }
+      }
+      function eu(e) {
+        null != e &&
+          0 !== e.length &&
+          (e.forEach(e => {
+            let t = Y.gamesSeen.some(t => {
+              if (t.name === e.name) {
+                if (e.lastFocused) {
+                  t.lastFocused = e.lastFocused;
+                  let n = Y.gameOverrides[ee(e)];
+                  null != n && (n.lastFocused = e.lastFocused);
+                }
+                return Z(t, e), !0;
+              }
+              return !1;
+            });
+            if (t);
+            else {
+              if (e.hidden) return;
+              Y.gamesSeen.unshift(
+                (function (e) {
+                  let t = {
+                    exePath: e.exePath,
+                    cmdLine: e.cmdLine,
+                    lastFocused: e.lastFocused,
+                  };
+                  return (
+                    null != e.id && (t.id = e.id),
+                    null != e.nativeProcessObserverId &&
+                      (t.nativeProcessObserverId = e.nativeProcessObserverId),
+                    null != e.name && (t.name = e.name),
+                    e.add && (t.add = !0),
+                    e.block && (t.block = !0),
+                    Z(t, e),
+                    t
+                  );
+                })(e)
+              );
+            }
+          }),
+          Y.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
+          es(),
+          I.default.setRecentGames(ec().map(e => ea(e))));
+      }
+      function ec() {
+        let e = o.values(Y.gameOverrides),
+          t = Y.gamesSeen.filter(e => void 0 === Y.gameOverrides[ee(e)]);
+        return t.concat(e);
+      }
+      !__OVERLAY__ &&
+        (0, v.isDesktop)() &&
+        (j = function () {
+          let e = [],
+            t = new Set();
+          i = {};
+          let n = N.default.games;
+          for (let e of n) {
+            var r, s, a, o;
+            W[e.id] = {
+              compatibilityHook:
+                null !== (r = e.overlayCompatibilityHook) && void 0 !== r
+                  ? r
+                  : E.DEFAULT_OVERLAY_OPTIONS.compatibilityHook,
+              warn:
+                null !== (s = e.overlayWarn) && void 0 !== s
+                  ? s
+                  : E.DEFAULT_OVERLAY_OPTIONS.warn,
+              enabled:
+                null !== (a = e.overlay) && void 0 !== a
+                  ? a
+                  : E.DEFAULT_OVERLAY_OPTIONS.enabled,
+              allowHook:
+                null !== (o = e.hook) && void 0 !== o
+                  ? o
+                  : E.DEFAULT_OVERLAY_OPTIONS.allowHook,
+              supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay,
+            };
+          }
+          [...n, ...M].forEach(n => {
+            var i;
+            let r =
+                null != n.executables
+                  ? null === (i = n.executables) || void 0 === i
+                    ? void 0
+                    : i.filter(e => {
+                        let { os: t } = e;
+                        return t === (0, v.getPlatformName)();
+                      })
+                  : [],
+              s = {};
+            r.forEach(e => {
+              let n =
+                null != e.arguments && e.arguments.length > 0
+                  ? e.arguments
+                  : "null";
+              null == s[n] && (s[n] = []),
+                s[n].push(e.name),
+                e.isLauncher && t.add(e.name);
+            }),
+              Object.keys(s).forEach(t =>
+                e.push({
+                  name: n.name,
+                  id: n.id,
+                  executables: s[t],
+                  cmdLine: "null" !== t ? t : null,
+                })
+              );
+          }),
+            (e = e.filter(
+              e => null != e.executables && e.executables.length > 0
+            )),
+            A.default.setObservedGamesCallback(e, e => {
+              let n = [],
+                r = {};
+              e = e.filter(
+                e => (
+                  (e.distributor = (function (e) {
+                    if (null != B[e.exePath]) return y.Distributors.DISCORD;
+                    if (/steamapps/.test(e.cmdLine))
+                      return y.Distributors.STEAM;
+                    if (/-epicapp/.test(e.cmdLine)) return y.Distributors.EPIC;
+                    return e.distributor;
+                  })(e)),
+                  (e.isLauncher = t.has(e.exeName)),
+                  e.isLauncher && null != e.id && (r[e.id] = e),
+                  (e.windowHandle = (function (e, t) {
+                    if (void 0 === t) {
+                      let t = A.default.getDiscordUtils();
+                      if (null != t && null != t.getWindowHandleFromPid) {
+                        let n = t.getWindowHandleFromPid(e);
+                        return null != n && "0" !== n ? n : null;
+                      }
+                      return null;
+                    }
+                    return "0" === t ? null : t;
+                  })(e.pid, e.windowHandle)),
+                  null ==
+                    M.find(t => {
+                      let { name: n } = t;
+                      return n === e.name;
+                    }) || (n.push(e), !1)
+                )
+              );
+              let s = n.filter(J).length;
+              s !== K &&
+                ((K = s),
+                f.default.dispatch({
+                  type: "RUNNING_STREAMER_TOOLS_CHANGE",
+                  count: K,
+                })),
+                (x = e),
+                (V = n),
+                (i = r),
+                $();
+            }),
+            el();
+        });
+      class ed extends c.default.Store {
+        initialize() {
+          var e, t, n, i;
+          let r =
+            null !== (e = d.default.get(b)) && void 0 !== e
+              ? e
+              : {
+                  gamesSeen: [],
+                  gameOverrides: {},
+                  enableOverlay: {},
+                  enableDetection: {},
+                };
+          Y.gameOverrides = {};
+          let s = !1;
+          if (
+            (o
+              .values(null !== (t = r.gameOverrides) && void 0 !== t ? t : {})
+              .forEach(e => {
+                let t = ee(e);
+                Y.gameOverrides[t] = e;
+              }),
+            (Y.enableOverlay =
+              null !== (n = r.enableOverlay) && void 0 !== n ? n : {}),
+            (Y.enableDetection =
+              null !== (i = r.enableDetection) && void 0 !== i ? i : {}),
+            el(),
+            Array.isArray(r.gamesSeen))
+          )
+            for (let e of r.gamesSeen)
+              "number" == typeof e.id &&
+                ((e.nativeProcessObserverId = e.id), delete e.id, (s = !0));
+          eu(r.gamesSeen),
+            this.waitFor(N.default),
+            this.syncWith(
+              [O.default, N.default, D.default],
+              o.throttle(eo, 1e3)
+            ),
+            s && es();
+        }
+        getVisibleGame() {
+          return null == F || er(F) ? F : null;
+        }
+        getCurrentGameForAnalytics() {
+          return F;
+        }
+        getVisibleRunningGames() {
+          return x.filter(er);
+        }
+        getRunningGames() {
+          return x;
+        }
+        getRunningDiscordApplicationIds() {
+          let e = [];
+          for (let t of x) null != B[t.exePath] && e.push(B[t.exePath]);
+          return e;
+        }
+        getRunningVerifiedApplicationIds() {
+          return this.getRunningGames()
+            .map(e => N.default.getGameByName(e.name))
+            .filter(C.isNotNullish)
+            .map(e => e.id);
+        }
+        getGameForPID(e) {
+          var t;
+          return null !== (t = x.find(t => t.pid === e)) && void 0 !== t
+            ? t
+            : null;
+        }
+        getLauncherForPID(e) {
+          let t = this.getGameForPID(e);
+          return null != t ? (null != t.id ? i[t.id] : null) : null;
+        }
+        getOverlayOptionsForPID(e) {
+          let t = this.getGameForPID(e);
+          return null == t || t.isLauncher || null == t.id
+            ? null
+            : { ...W[t.id] };
+        }
+        shouldElevateProcessForPID(e) {
+          return null != z && z === e;
+        }
+        shouldContinueWithoutElevatedProcessForPID(e) {
+          return null != q && q === e;
+        }
+        getCandidateGames() {
+          return k
+            .filter(e => e.hidden || null == e.id)
+            .filter(e => void 0 === Y.gameOverrides[ee(e)]);
+        }
+        getGamesSeen(e) {
+          let t =
+              !(arguments.length > 1) ||
+              void 0 === arguments[1] ||
+              arguments[1],
+            n = ec();
+          if (e) {
+            let e = this.getVisibleGame();
+            if (null != e) {
+              let t = ee(e);
+              n = n.filter(e => ee(e) !== t);
+            }
+          }
+          return t && n.sort((e, t) => t.lastFocused - e.lastFocused), n;
+        }
+        getSeenGameByName(e) {
+          return Y.gamesSeen.find(
+            t => null != t.name && t.name.toLowerCase() === e.toLowerCase()
+          );
+        }
+        isObservedAppRunning(e) {
+          return V.some(t => t.name === e);
+        }
+        getOverrides() {
+          return Object.values(Y.gameOverrides);
+        }
+        getOverrideForGame(e) {
+          return Y.gameOverrides[ee(e)];
+        }
+        getGameOverlayStatus(e) {
+          if (e.hidden || e.isLauncher || e.elevated || e.sandboxed)
+            return (
+              L.verbose("getGameOverlayStatus: Overlay not supported.", e), null
+            );
+          let t = en(e);
+          return t.enabled ? t : null;
+        }
+        getObservedAppNameForWindow(e) {
+          var t, n;
+          return null !==
+            (n =
+              null === (t = V.find(t => (0, S.default)(e, t.windowHandle))) ||
+              void 0 === t
+                ? void 0
+                : t.name) && void 0 !== n
+            ? n
+            : null;
+        }
+        get canShowAdminWarning() {
+          return U;
+        }
+      }
+      ed.displayName = "RunningGameStore";
+      var ef = new ed(f.default, {
+        RUNNING_GAMES_CHANGE: function (e) {
+          eu(x);
+        },
+        CANDIDATE_GAMES_CHANGE: function (e) {
+          k = e.games;
+        },
+        PERMISSION_CLEAR_PTT_ADMIN_WARNING: function () {
+          U = !1;
+        },
+        PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
+          let { pid: t } = e;
+          (z = t), (q = null);
+        },
+        PERMISSION_CLEAR_ELEVATED_PROCESS: function () {
+          z = null;
+        },
+        PERMISSION_CONTINUE_NONELEVATED_PROCESS: function (e) {
+          let { pid: t } = e;
+          (q = t), (z = null);
+        },
+        RUNNING_GAME_ADD_OVERRIDE: function (e) {
+          let t;
+          let n = e.pid,
+            i = x.find(e => e.pid === n);
+          if (null == i) {
+            let e = k.find(e => e.pid === n);
+            if (null == e) return;
+            ((i = { ...e }).hidden = !1), x.push(i), (t = ee(i));
+          } else (t = ee(i)), i.hidden && (H[t] = !0), (i.hidden = !1);
+          (null == i.lastFocused || 0 === i.lastFocused) &&
+            (i.lastFocused = Math.floor(Date.now() / 1e3)),
+            (Y.gameOverrides[t] = { ...i, add: !0 }),
+            eu(x),
+            el(),
+            es(),
+            $();
+        },
+        RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
+          if (
+            ((Y.enableOverlay[ee(e.game)] = e.newEnabledValue),
+            es(),
+            !__OVERLAY__)
+          ) {
+            let t =
+              null != e.game.id ? N.default.getDetectableGame(e.game.id) : null;
+            null != t &&
+              T.default.track(y.AnalyticEvents.OVERLAY_TOGGLED, {
+                enabled: e.newEnabledValue,
+                setting_type: "overlay toggled - game",
+                application_id: t.id,
+                application_name: t.name,
+              });
+          }
+        },
+        RUNNING_GAME_TOGGLE_DETECTION: function (e) {
+          let { game: t } = e,
+            n = ei(t);
+          (Y.enableDetection[ee(t)] = !n),
+            es(),
+            T.default.track(
+              y.AnalyticEvents.USER_SETTINGS_GAME_DETECTION_TOGGLE,
+              { enabled: !n }
+            );
+        },
+        RUNNING_GAME_EDIT_NAME: function (e) {
+          let t = ee(e.game),
+            n = Y.gameOverrides[t];
+          if (null == n) {
+            var i;
+            (n = {
+              name: (i = e.game).name,
+              exePath: i.exePath,
+              cmdLine: i.cmdLine,
+              lastFocused: i.lastFocused,
+            }).add = !0;
+          }
+          n.name = e.newName;
+          let r = ee(n);
+          delete Y.gameOverrides[t],
+            (Y.gameOverrides[r] = n),
+            Q(Y.enableOverlay, t, r),
+            Q(Y.enableDetection, t, r),
+            Q(H, t, r),
+            Y.gamesSeen.forEach(n => {
+              ee(n) === t && (n.name = e.newName);
+            });
+          let s = !1;
+          x.forEach(n => {
+            ee(n) === t && ((n.name = e.newName), (s = !0));
+          }),
+            el(),
+            es(),
+            s && $();
+        },
+        RUNNING_GAME_DELETE_ENTRY: function (e) {
+          let t = ee(e.game);
+          delete Y.gameOverrides[t],
+            delete Y.enableOverlay[t],
+            delete Y.enableDetection[t],
+            (Y.gamesSeen = Y.gamesSeen.filter(e => ee(e) !== t)),
+            H[t] &&
+              (x.forEach(e => {
+                t === ee(e) && (e.hidden = !0);
+              }),
+              delete H[t],
+              $()),
+            el(),
+            es();
+        },
+        GAMES_DATABASE_UPDATE: j,
+        GAME_LAUNCH_SUCCESS: function (e) {
+          var t;
+          if (__OVERLAY__ || !v.isPlatformEmbedded) return;
+          let n = A.default.getDiscordUtils().notifyGameLaunched;
+          if (null == n) return;
+          let i = N.default.getDetectableGame(e.applicationId);
+          null != i &&
+            n(i.id, i.name, null !== (t = e.pids) && void 0 !== t ? t : []);
+        },
+        GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function () {
+          el();
         },
       });
     },
@@ -54309,8 +54287,8 @@
         c = n("95410"),
         d = n("913144"),
         f = n("190017"),
-        E = n("161454"),
-        p = n("271938"),
+        E = n("271938"),
+        p = n("568307"),
         h = n("677225"),
         _ = n("964889"),
         S = n("152723"),
@@ -54352,8 +54330,8 @@
             (null == O || O.applicationId !== t || O.branchId !== n) &&
               (null == D || D.applicationId !== t || D.branchId !== n))
           ) {
-            let e = p.default.getToken(),
-              t = p.default.getId();
+            let e = E.default.getToken(),
+              t = E.default.getId();
             if (null == e) throw Error("missing user token");
             L = !S.default.setCurrentTask(s, a, r, t, e);
           }
@@ -54394,14 +54372,14 @@
         -1 !== r && R.splice(r, 1);
       }
       function V() {
-        let e = p.default.getToken(),
-          t = p.default.getId();
+        let e = E.default.getToken(),
+          t = E.default.getId();
         null != e && S.default.setCredentials(t, e);
       }
       function B() {
-        for (let e of E.default.getRunningDiscordApplicationIds())
+        for (let e of p.default.getRunningDiscordApplicationIds())
           f.cancel(e, e);
-        let e = E.default.getVisibleGame();
+        let e = p.default.getVisibleGame();
         return (
           !N && null != e && e.pid !== b && f.pause(),
           (b = null == e ? null : e.pid),
@@ -54421,8 +54399,8 @@
             );
           null != t.paused && (N = t.paused),
             null != t.userActions && (P = new Map(Array.from(t.userActions))),
-            this.waitFor(T.default, E.default),
-            this.syncWith([E.default], B),
+            this.waitFor(T.default, p.default),
+            this.syncWith([p.default], B),
             this.waitFor(T.default);
         }
         get activeItems() {
@@ -59961,7 +59939,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267572",
+                  build_number: "267592",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -60856,122 +60834,119 @@
           experimentalGetPrices: function () {
             return F;
           },
-          getDiscountIntervalString: function () {
+          getIntervalString: function () {
             return V;
           },
-          getIntervalString: function () {
+          getIntervalStringAsNoun: function () {
             return B;
           },
-          getIntervalStringAsNoun: function () {
+          getPremiumType: function () {
             return H;
           },
-          getPremiumType: function () {
+          getDisplayName: function () {
             return Y;
           },
-          getDisplayName: function () {
+          getDisplayNameFromSku: function () {
             return j;
           },
-          getDisplayNameFromSku: function () {
+          getTierDisplayName: function () {
             return W;
           },
-          getTierDisplayName: function () {
+          getDisplayPremiumType: function () {
             return K;
           },
-          getDisplayPremiumType: function () {
+          getPremiumTypeDisplayName: function () {
             return z;
           },
-          getPremiumTypeDisplayName: function () {
-            return q;
-          },
           getPlanDescriptionFromInvoice: function () {
-            return Q;
+            return X;
           },
           getExternalPlanDisplayName: function () {
-            return Z;
+            return Q;
           },
           getPremiumPlanOptions: function () {
-            return J;
+            return Z;
           },
           getNumPremiumGuildSubscriptions: function () {
-            return et;
+            return ee;
           },
           isPremiumBaseSubscriptionPlan: function () {
-            return ei;
+            return en;
           },
           isPremiumGuildSubscriptionPlan: function () {
-            return er;
+            return ei;
           },
           isPremiumSubscriptionPlan: function () {
-            return es;
+            return er;
           },
           getBillingGracePeriodDays: function () {
-            return ea;
+            return es;
           },
           isPrepaidPaymentSource: function () {
-            return eo;
+            return ea;
           },
           isPremiumGuildSubscriptionCanceled: function () {
-            return el;
+            return eo;
           },
           getPremiumGuildHeaderDescription: function () {
-            return eu;
+            return el;
           },
           getFormattedPriceForPlan: function () {
-            return ec;
+            return eu;
           },
           getFormattedRateForPlan: function () {
-            return ed;
+            return ec;
           },
           isSubscriptionStatusFailedPayment: function () {
-            return eE;
+            return ef;
           },
           getBillingReviewSubheader: function () {
-            return eh;
+            return ep;
           },
           getIntervalForInvoice: function () {
-            return e_;
+            return eh;
           },
           formatTrialOfferIntervalDuration: function () {
-            return eS;
+            return e_;
           },
           formatTrialCtaIntervalDuration: function () {
-            return em;
+            return eS;
           },
           formatIntervalDuration: function () {
-            return eT;
+            return em;
           },
           getExternalSubscriptionMethodUrl: function () {
-            return eg;
+            return eT;
           },
           hasPremiumSubscriptionToDisplay: function () {
-            return eI;
+            return eg;
           },
           getItemsFromNewAdditionalPlans: function () {
-            return eC;
+            return eI;
           },
           getItemsWithoutPremiumPlanItem: function () {
-            return ev;
+            return eC;
           },
           getItemsWithUpsertedPlanIdForGroup: function () {
-            return eA;
+            return ev;
           },
           getItemsWithUpsertedPremiumPlanId: function () {
-            return eR;
+            return eA;
           },
           getItemsWithUpsertedPremiumGuildPlan: function () {
-            return eN;
+            return eR;
           },
           coerceExistingItemsToNewItemInterval: function () {
-            return eO;
+            return eN;
           },
           getMaxFileSizeForPremiumType: function () {
-            return eD;
+            return eO;
           },
           getPremiumSkuIdForSubscription: function () {
-            return eP;
+            return ey;
           },
           default: function () {
-            return eL;
+            return eP;
           },
         }),
         n("70102"),
@@ -61222,19 +61197,7 @@
         }
         return i.countryPrices.prices;
       }
-      function V(e) {
-        switch (e) {
-          case y.DiscountUserUsageLimitIntervalTypes.MONTH:
-            return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
-          case y.DiscountUserUsageLimitIntervalTypes.YEAR:
-            return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR;
-          case y.DiscountUserUsageLimitIntervalTypes.DAY:
-          case y.DiscountUserUsageLimitIntervalTypes.WEEK:
-          default:
-            throw Error("Unexpected interval");
-        }
-      }
-      function B(e, t, n) {
+      function V(e, t, n) {
         let i =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
           r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
@@ -61280,7 +61243,7 @@
             throw Error("Unexpected interval");
         }
       }
-      function H(e) {
+      function B(e) {
         switch (e) {
           case y.SubscriptionIntervalTypes.MONTH:
             return L.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH;
@@ -61290,13 +61253,13 @@
             throw Error("Unexpected interval");
         }
       }
-      function Y(e) {
+      function H(e) {
         let t = y.SubscriptionPlanInfo[e];
         if (null != t) return t.premiumType;
         let n = Error("Unsupported plan");
         throw ((0, g.captureBillingException)(n, { tags: { planId: e } }), n);
       }
-      function j(e) {
+      function Y(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           i = arguments.length > 3 ? arguments[3] : void 0;
@@ -61365,7 +61328,7 @@
         let r = Error("Unsupported plan");
         throw ((0, g.captureBillingException)(r, { tags: { planId: e } }), r);
       }
-      function W(e) {
+      function j(e) {
         switch (e) {
           case y.PremiumSubscriptionSKUs.TIER_0:
             return L.default.Messages.PREMIUM_TIER_0;
@@ -61377,7 +61340,7 @@
         let t = Error("Unsupported sku");
         throw ((0, g.captureBillingException)(t, { tags: { skuId: e } }), t);
       }
-      function K(e) {
+      function W(e) {
         switch (e) {
           case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
           case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -61394,7 +61357,7 @@
         let t = Error("Unsupported plan");
         throw ((0, g.captureBillingException)(t, { tags: { planId: e } }), t);
       }
-      function z(e) {
+      function K(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
           case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
@@ -61412,7 +61375,7 @@
         let n = Error("Unsupported plan");
         throw ((0, g.captureBillingException)(n, { tags: { planId: e } }), n);
       }
-      function q(e) {
+      function z(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
           case y.PremiumTypes.TIER_0:
@@ -61423,7 +61386,7 @@
             return L.default.Messages.PREMIUM_TIER_2;
         }
       }
-      function X(e) {
+      function q(e) {
         var t, n;
         let {
             subscription: i,
@@ -61437,7 +61400,7 @@
             y.SubscriptionIntervalTypes.MONTH
           ),
           u =
-            ef(i) ||
+            ed(i) ||
             (null == i.paymentSourceId &&
               !i.isPurchasedExternally &&
               !(null === (t = h.default.getCurrentUser()) || void 0 === t
@@ -61457,7 +61420,7 @@
               : i.status,
           E =
             y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM +
-            (a ? et(i.additionalPlans) : 0);
+            (a ? ee(i.additionalPlans) : 0);
         switch (r) {
           case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
           case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
@@ -61553,7 +61516,7 @@
             throw Error("Invalid planId ".concat(r));
         }
       }
-      function Q(e) {
+      function X(e) {
         let {
             renewalInvoicePreview: t,
             subscription: n,
@@ -61564,7 +61527,7 @@
           a = m.default.get(i);
         return (
           l(null != a, "Missing plan"),
-          X({
+          q({
             subscription: n,
             planId: a.id,
             price: (function (e, t, n) {
@@ -61590,9 +61553,9 @@
           })
         );
       }
-      function Z(e) {
+      function Q(e) {
         let { planId: t, additionalPlans: n } = e,
-          i = (0, p.isNoneSubscription)(t) ? null : j(t),
+          i = (0, p.isNoneSubscription)(t) ? null : Y(t),
           r =
             null == n
               ? void 0
@@ -61625,7 +61588,7 @@
             "Subscription without premium or premium guild subscription"
           );
       }
-      function J(e) {
+      function Z(e) {
         let {
           skuId: t,
           isPremium: n,
@@ -61688,7 +61651,7 @@
         }
         return c;
       }
-      function $(e) {
+      function J(e) {
         let t = y.SubscriptionPlanInfo[e];
         if (null == t) {
           let t = Error("Unsupported plan");
@@ -61696,11 +61659,11 @@
         }
         return t.skuId;
       }
-      function ee(e) {
+      function $(e) {
         var t;
         return null == e ? G.ALL : null !== (t = G[e]) && void 0 !== t ? t : [];
       }
-      function et(e) {
+      function ee(e) {
         let t = m.default.getPlanIdsForSkus([y.PremiumSubscriptionSKUs.GUILD]);
         l(null != t, "Missing guildSubscriptionPlanIds");
         let n = e.find(e => {
@@ -61709,7 +61672,7 @@
         });
         return null != n ? n.quantity : 0;
       }
-      let en = new Set([
+      let et = new Set([
         y.SubscriptionPlans.NONE_MONTH,
         y.SubscriptionPlans.NONE_3_MONTH,
         y.SubscriptionPlans.NONE_6_MONTH,
@@ -61723,16 +61686,16 @@
         y.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2,
         y.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2,
       ]);
-      function ei(e) {
-        return en.has(e);
+      function en(e) {
+        return et.has(e);
       }
-      function er(e) {
+      function ei(e) {
         return y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e);
       }
-      function es(e) {
-        return ei(e) || er(e);
+      function er(e) {
+        return en(e) || ei(e);
       }
-      function ea(e) {
+      function es(e) {
         var t, n, i;
         if (
           e.isPurchasedViaApple &&
@@ -61761,24 +61724,24 @@
           return y.DEFAULT_MAX_GRACE_PERIOD_DAYS;
         return y.PAID_SUBSCRIPTION_MAX_GRACE_PERIOD_DAYS;
       }
-      function eo(e) {
+      function ea(e) {
         if (null == e) return !1;
         let t = S.default.getPaymentSource(e);
         return null != t && P.PREPAID_PAYMENT_SOURCES.has(t.type);
       }
-      function el(e) {
+      function eo(e) {
         return e.isPurchasedExternally
           ? e.status === O.SubscriptionStatusTypes.CANCELED
           : (function (e) {
               let { renewalMutations: t, additionalPlans: n, status: i } = e,
-                r = et(n),
-                s = null != t ? et(t.additionalPlans) : null;
+                r = ee(n),
+                s = null != t ? ee(t.additionalPlans) : null;
               return 0 === s && 0 !== r
                 ? O.SubscriptionStatusTypes.CANCELED
                 : i;
             })(e) === O.SubscriptionStatusTypes.CANCELED;
       }
-      function eu(e) {
+      function el(e) {
         let {
             subscription: t,
             user: n,
@@ -61788,8 +61751,8 @@
           { planId: s, additionalPlans: a } = t,
           o = m.default.get(s);
         l(null != o, "Missing plan");
-        let u = et(a),
-          c = ep(t.planId, t.paymentSourceId, t.currency, n),
+        let u = ee(a),
+          c = eE(t.planId, t.paymentSourceId, t.currency, n),
           d = c.amount * u;
         if (null != r) {
           let e = r.invoiceItems.find(e =>
@@ -61798,7 +61761,7 @@
           null != e && (d = e.amount);
         }
         i = null != i ? i : (0, N.formatPrice)(d, t.currency);
-        let f = el(t);
+        let f = eo(t);
         return f
           ? t.isPurchasedViaGoogle
             ? L.default.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_RENEWAL_INFO_PENDING_CANCELATION_NO_PRICE.format(
@@ -61833,7 +61796,7 @@
                   }
                 );
       }
-      function ec(e, t, n) {
+      function eu(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
           r = null != t ? x(e.id, !1, i, t) : k(e.id, !1, i),
           s = (0, N.formatPrice)(r.amount, r.currency);
@@ -61842,11 +61805,11 @@
           s
         );
       }
-      function ed(e, t, n) {
-        let i = ec(e, t, n);
+      function ec(e, t, n) {
+        let i = eu(e, t, n);
         return (0, N.formatRate)(i, e.interval, e.intervalCount);
       }
-      function ef(e) {
+      function ed(e) {
         let { status: t, renewalMutations: n } = e;
         return (
           t === O.SubscriptionStatusTypes.CANCELED ||
@@ -61855,14 +61818,14 @@
             !e.isPurchasedExternally)
         );
       }
-      function eE(e) {
+      function ef(e) {
         return (
           e === O.SubscriptionStatusTypes.PAST_DUE ||
           e === O.SubscriptionStatusTypes.ACCOUNT_HOLD ||
           e === O.SubscriptionStatusTypes.BILLING_RETRY
         );
       }
-      function ep(e, t, n, i) {
+      function eE(e, t, n, i) {
         let r =
             null != t
               ? { paymentSourceId: t, currency: n }
@@ -61883,7 +61846,7 @@
         }
         return x(a.id, (0, A.isPremium)(i), !1, r);
       }
-      function eh(e, t, n) {
+      function ep(e, t, n) {
         let i = t.id;
         if (null != e)
           switch (i) {
@@ -61949,7 +61912,7 @@
         let r = Error("User is purchasing an unsupported plan");
         throw ((0, g.captureBillingException)(r, { tags: { planId: i } }), r);
       }
-      function e_(e) {
+      function eh(e) {
         let t = e.invoiceItems[0].subscriptionPlanId,
           n = m.default.get(t);
         return (
@@ -61957,7 +61920,7 @@
           { intervalType: n.interval, intervalCount: n.intervalCount }
         );
       }
-      function eS(e) {
+      function e_(e) {
         let {
           intervalType: t = y.SubscriptionIntervalTypes.MONTH,
           intervalCount: n = 1,
@@ -62000,7 +61963,7 @@
             throw Error("Unsupported interval duration.");
         }
       }
-      function em(e) {
+      function eS(e) {
         let {
           intervalType: t = y.SubscriptionIntervalTypes.MONTH,
           intervalCount: n = 1,
@@ -62026,7 +61989,7 @@
             throw Error("Unsupported interval duration.");
         }
       }
-      function eT(e) {
+      function em(e) {
         let {
           intervalType: t = y.SubscriptionIntervalTypes.MONTH,
           intervalCount: n = 1,
@@ -62059,7 +62022,7 @@
             throw Error("Unsupported interval duration.");
         }
       }
-      function eg(e, t) {
+      function eT(e, t) {
         switch (e) {
           case O.PaymentGateways.APPLE_PARTNER:
           case O.PaymentGateways.APPLE:
@@ -62069,10 +62032,10 @@
         }
         throw Error("Invalid external payment gateway ".concat(e));
       }
-      function eI(e, t) {
-        return (0, A.isPremium)(e) || eE(null == t ? void 0 : t.status);
+      function eg(e, t) {
+        return (0, A.isPremium)(e) || ef(null == t ? void 0 : t.status);
       }
-      function eC(e, t) {
+      function eI(e, t) {
         var n, i;
         let r = [],
           s =
@@ -62094,10 +62057,10 @@
           })
         );
       }
-      function ev(e) {
+      function eC(e) {
         return e.filter(e => !y.PREMIUM_PLANS.has(e.planId));
       }
-      function eA(e, t, n, i) {
+      function ev(e, t, n, i) {
         var r, s;
         l(i.has(t), "Expected planId in group");
         let a = !1,
@@ -62119,13 +62082,13 @@
         }
         return u.filter(e => 0 !== e.quantity);
       }
-      function eR(e, t) {
-        return eA(e, t, 1, y.PREMIUM_PLANS);
+      function eA(e, t) {
+        return ev(e, t, 1, y.PREMIUM_PLANS);
       }
-      function eN(e, t, n) {
-        return eA(e, n, t, y.PREMIUM_GUILD_SUBSCRIPTION_PLANS);
+      function eR(e, t, n) {
+        return ev(e, n, t, y.PREMIUM_GUILD_SUBSCRIPTION_PLANS);
       }
-      function eO(e) {
+      function eN(e) {
         var t;
         let n =
           null !== (t = e.find(e => !("id" in e))) && void 0 !== t
@@ -62150,7 +62113,7 @@
         }
         return e;
       }
-      function eD(e) {
+      function eO(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -62161,17 +62124,17 @@
           useSpace: t.useSpace,
         });
       }
-      function ey(e) {
+      function eD(e) {
         return null == e
           ? null
           : e.items.find(e => y.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(e.planId));
       }
-      function eP(e) {
+      function ey(e) {
         let t = null != e ? w(e) : null,
-          n = null != t ? $(t.planId) : null;
+          n = null != t ? J(t.planId) : null;
         return n;
       }
-      var eL = Object.freeze({
+      var eP = Object.freeze({
         isNewUser: e =>
           null != e && Date.now() - e.createdAt.getTime() < 2592e6,
         isPremiumAtLeast: A.isPremiumAtLeast,
@@ -62186,14 +62149,14 @@
           let n = Error("Unsupported plan");
           throw ((0, g.captureBillingException)(n, { tags: { planId: e } }), n);
         },
-        getIntervalString: B,
-        getIntervalStringAsNoun: H,
-        getPremiumType: Y,
-        getDisplayName: j,
-        getDisplayPremiumType: z,
-        getPremiumPlanOptions: J,
-        getUpgradeEligibilities: ee,
-        getPlanDescription: X,
+        getIntervalString: V,
+        getIntervalStringAsNoun: B,
+        getPremiumType: H,
+        getDisplayName: Y,
+        getDisplayPremiumType: K,
+        getPremiumPlanOptions: Z,
+        getUpgradeEligibilities: $,
+        getPlanDescription: q,
         isPremiumSku: function (e) {
           return (
             e === y.PremiumSubscriptionSKUs.TIER_0 ||
@@ -62205,7 +62168,7 @@
           let t = y.SubscriptionPlanInfo[e];
           if (null == t) throw Error("Unrecognized plan.");
           let { interval: n } = t,
-            i = ee(e);
+            i = $(e);
           for (let e of Object.keys(y.SubscriptionPlanInfo)) {
             let { interval: t } = y.SubscriptionPlanInfo[e];
             if (n === t && i.includes(e)) return e;
@@ -62220,7 +62183,7 @@
           );
         },
         getUserMaxFileSize: v.getUserMaxFileSize,
-        getSkuIdForPlan: $,
+        getSkuIdForPlan: J,
         getSkuIdForPremiumType: function (e) {
           switch (e) {
             case y.PremiumTypes.TIER_0:
@@ -62232,7 +62195,7 @@
           }
         },
         getNumIncludedPremiumGuildSubscriptionSlots: function (e) {
-          if (Y(e) === y.PremiumTypes.TIER_2)
+          if (H(e) === y.PremiumTypes.TIER_2)
             return y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM;
           return 0;
         },
@@ -62256,7 +62219,7 @@
             });
           if (e.status === O.SubscriptionStatusTypes.PAST_DUE) {
             var r, s;
-            let t = ea(e),
+            let t = es(e),
               n = c(e.currentPeriodStart).add(t, "days");
             return (e.isPurchasedViaGoogle &&
               (null === (r = e.metadata) || void 0 === r
@@ -62274,7 +62237,7 @@
                     endDate: n,
                     paymentGatewayName:
                       P.PaymentGatewayToFriendlyName[e.paymentGateway],
-                    paymentSourceLink: eg(
+                    paymentSourceLink: eT(
                       e.paymentGateway,
                       "PAYMENT_SOURCE_MANAGEMENT"
                     ),
@@ -62295,7 +62258,7 @@
                     ),
                     paymentGatewayName:
                       P.PaymentGatewayToFriendlyName[e.paymentGateway],
-                    paymentSourceLink: eg(
+                    paymentSourceLink: eT(
                       e.paymentGateway,
                       "PAYMENT_SOURCE_MANAGEMENT"
                     ),
@@ -62311,7 +62274,7 @@
                   }
                 )
             : (function (e) {
-                  return null != e.paymentSourceId && eo(e.paymentSourceId);
+                  return null != e.paymentSourceId && ea(e.paymentSourceId);
                 })(e)
               ? L.default.Messages.PREMIUM_SETTINGS_PREPAID_THROUGH_DATE.format(
                   { prepaidEndDate: e.currentPeriodEnd }
@@ -62329,7 +62292,7 @@
                         renewalDate: t.subscriptionPeriodStart,
                         paymentGatewayName:
                           P.PaymentGatewayToFriendlyName[e.paymentGateway],
-                        subscriptionManagementLink: eg(
+                        subscriptionManagementLink: eT(
                           e.paymentGateway,
                           "SUBSCRIPTION_MANAGEMENT"
                         ),
@@ -62355,7 +62318,7 @@
           l(null != t, "Expected invoicePreview");
           let i = t.invoiceItems.find(e => {
             let { subscriptionPlanId: t } = e;
-            return ei(t);
+            return en(t);
           });
           return (n =
             null == i || (0, p.isNoneSubscription)(i.subscriptionPlanId)
@@ -62371,7 +62334,7 @@
           l(null != t, "Expected invoicePreview");
           let i = t.invoiceItems.find(e => {
             let { subscriptionPlanId: t } = e;
-            return ei(t);
+            return en(t);
           });
           return (
             (null == i || (0, p.isNoneSubscription)(i.subscriptionPlanId)) &&
@@ -62379,8 +62342,8 @@
             n
           );
         },
-        isBaseSubscriptionCanceled: ef,
-        getPremiumGuildIntervalPrice: ep,
+        isBaseSubscriptionCanceled: ed,
+        getPremiumGuildIntervalPrice: eE,
         hasAccountCredit: function (e) {
           return (
             null != e &&
@@ -62391,24 +62354,24 @@
             })
           );
         },
-        getBillingReviewSubheader: eh,
-        getIntervalForInvoice: e_,
+        getBillingReviewSubheader: ep,
+        getIntervalForInvoice: eh,
         getPremiumPlanItem: w,
-        getGuildBoostPlanItem: ey,
+        getGuildBoostPlanItem: eD,
         isBoostOnlySubscription: function (e) {
-          return null != e && null == w(e) && null != ey(e);
+          return null != e && null == w(e) && null != eD(e);
         },
-        getPremiumSkuIdForSubscription: eP,
+        getPremiumSkuIdForSubscription: ey,
         getPremiumTypeFromSubscription: function (e) {
           if (null != e) {
             let t = w(e);
-            if (null != t) return Y(t.planId);
+            if (null != t) return H(t.planId);
           }
         },
         getPremiumTypeFromSubscriptionRenewalMutations: function (e) {
           if (null != e && null != e.renewalMutations) {
             let t = w(e.renewalMutations);
-            if (null != t) return Y(t.planId);
+            if (null != t) return H(t.planId);
           }
         },
         getPremiumGradientColor: function (e) {
@@ -62500,7 +62463,7 @@
         },
         formatPriceString: function (e, t) {
           let n = (0, N.formatPrice)(e.amount, e.currency),
-            i = H(t);
+            i = B(t);
           return "".concat(n, "/").concat(i);
         },
         StreamQuality: r,
@@ -78826,4 +78789,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.bd79a2340604aa78d5bd.js.map
+//# sourceMappingURL=41039.1cfbc99116b8cfd49a95.js.map

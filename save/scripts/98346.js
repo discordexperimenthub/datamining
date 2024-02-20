@@ -683,12 +683,12 @@
         });
       var a = n("872717"),
         r = n("913144"),
-        s = n("161454"),
-        i = n("374014"),
-        l = n("766274"),
-        u = n("271938"),
-        o = n("42203"),
-        d = n("546463"),
+        s = n("374014"),
+        i = n("766274"),
+        l = n("271938"),
+        u = n("42203"),
+        o = n("546463"),
+        d = n("568307"),
         c = n("9759"),
         f = n("194051"),
         h = n("49111");
@@ -709,29 +709,29 @@
           { autoTrackExposure: !1 }
         );
         if (!n) return;
-        let a = (0, i.decodeStreamKey)(e),
-          { ownerId: l, channelId: f } = a;
-        if (null == l || null == f) return;
-        let h = u.default.getId();
-        if (l !== h) return;
-        let E = u.default.getSessionId();
+        let a = (0, s.decodeStreamKey)(e),
+          { ownerId: i, channelId: f } = a;
+        if (null == i || null == f) return;
+        let h = l.default.getId();
+        if (i !== h) return;
+        let E = l.default.getSessionId();
         if (null == E) return;
-        let C = o.default.getChannel(f),
+        let C = u.default.getChannel(f),
           m = null != C && C.isBroadcastChannel();
-        if (null == C || l !== C.ownerId || !m) return;
+        if (null == C || i !== C.ownerId || !m) return;
         let S = (function (e) {
           var t;
-          let n = s.default.getGameForPID(e),
+          let n = d.default.getGameForPID(e),
             a = p(n),
-            r = d.default.getGameByName(a);
+            r = o.default.getGameByName(a);
           return null !== (t = null == r ? void 0 : r.id) && void 0 !== t
             ? t
             : "0";
         })(t);
         null != S &&
           !(function (e) {
-            let t = u.default.getId(),
-              n = u.default.getSessionId();
+            let t = l.default.getId(),
+              n = l.default.getSessionId();
             null != t &&
               null != n &&
               r.default.dispatch({ type: "BROADCAST_START", broadcast: e });
@@ -791,7 +791,7 @@
                 var t;
                 let a = f.default.getBroadcastByChannel(e.id).userId,
                   r = null !== (t = e.recipients) && void 0 !== t ? t : [];
-                n[a] = r.map(e => new l.default(e)).filter(e => e.id !== a);
+                n[a] = r.map(e => new i.default(e)).filter(e => e.id !== a);
               }),
                 r.default.dispatch({
                   type: "BROADCAST_VIEWERS_UPDATE",
@@ -2270,7 +2270,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-5b4d5ea39cbb090f64907dc8f0cc4fca72db349f",
+          release: "discord_web-d985438099966365808db0116077f0eb6a5771bc",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2340,8 +2340,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "267572"), "267572")),
-          a.setTag("builtAt", String("1708465996496"));
+          a.setTag("buildNumber", ((e = "267592"), "267592")),
+          a.setTag("builtAt", String("1708467565605"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -5273,4 +5273,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98346.980c0c583b9e949d8265.js.map
+//# sourceMappingURL=98346.dd5f6e8e0a9369e37624.js.map

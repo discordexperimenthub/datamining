@@ -2111,12 +2111,12 @@
         s = n("446674"),
         c = n("913144"),
         d = n("299285"),
-        f = n("161454"),
-        p = n("860285"),
-        h = n("915639"),
-        m = n("86878"),
-        g = n("546463"),
-        E = n("686470"),
+        f = n("860285"),
+        p = n("915639"),
+        h = n("86878"),
+        m = n("546463"),
+        g = n("686470"),
+        E = n("568307"),
         C = n("102985"),
         y = n("251013"),
         L = n("946749"),
@@ -2138,7 +2138,7 @@
       function P(e, t) {
         return e.application.name.localeCompare(
           t.application.name,
-          h.default.locale,
+          p.default.locale,
           { sensitivity: "base" }
         );
       }
@@ -2202,16 +2202,16 @@
         return null != l ? l : 0;
       }
       function K() {
-        let e = new Set(f.default.getRunningVerifiedApplicationIds()),
+        let e = new Set(E.default.getRunningVerifiedApplicationIds()),
           t = {},
           n = new Set(),
-          l = f.default.getGamesSeen(!1, !1).map(e => {
-            let n = g.default.getGameByGameData(e);
+          l = E.default.getGamesSeen(!1, !1).map(e => {
+            let n = m.default.getGameByGameData(e);
             return null != n
               ? ((t[n.id] = e.lastFocused * _.default.Millis.SECOND), n.id)
               : null;
           }),
-          r = Object.values(E.default.getAllLibraryApplications()),
+          r = Object.values(g.default.getAllLibraryApplications()),
           a = r
             .map(l =>
               (function (e, t, n, l, r) {
@@ -2237,17 +2237,17 @@
                     ((a = e),
                     (i = s),
                     null != a && o(a.createdAt).isAfter(U) && 0 === i),
-                  isLaunching: p.default.launchingGames.has(e.id),
+                  isLaunching: f.default.launchingGames.has(e.id),
                   isRunning: l.has(e.id),
                   isLaunchable: (0, b.isLaunchable)({
-                    LibraryApplicationStore: E.default,
-                    LaunchableGameStore: p.default,
+                    LibraryApplicationStore: g.default,
+                    LaunchableGameStore: f.default,
                     DispatchApplicationStore: A.default,
-                    ConnectedAppsStore: m.default,
+                    ConnectedAppsStore: h.default,
                     applicationId: e.id,
                     branchId: e.branchId,
                   }),
-                  isUpdatingFlags: E.default.isUpdatingFlags(e.id, e.branchId),
+                  isUpdatingFlags: g.default.isUpdatingFlags(e.id, e.branchId),
                   shouldShowInLibrary: (0, N.shouldShowGameInLibrary)(
                     u,
                     e,
@@ -2276,13 +2276,13 @@
                     lastPlayed: a,
                     supportsCloudSync: !1,
                     isNew: !1,
-                    isLaunching: p.default.launchingGames.has(e),
+                    isLaunching: f.default.launchingGames.has(e),
                     isRunning: l.has(e),
                     isLaunchable: (0, b.isLaunchable)({
-                      LibraryApplicationStore: E.default,
-                      LaunchableGameStore: p.default,
+                      LibraryApplicationStore: g.default,
+                      LaunchableGameStore: f.default,
                       DispatchApplicationStore: A.default,
-                      ConnectedAppsStore: m.default,
+                      ConnectedAppsStore: h.default,
                       applicationId: e,
                       branchId: null,
                     }),
@@ -2303,7 +2303,7 @@
                 : 1
           );
         return (
-          (G = null != g.default.lastFetched && E.default.fetched),
+          (G = null != m.default.lastFetched && g.default.fetched),
           !i.isEqual(s, O) &&
             ((O = s),
             v.isPlatformEmbedded &&
@@ -2320,20 +2320,20 @@
           this.syncWith(
             [
               d.default,
-              g.default,
-              p.default,
+              m.default,
               f.default,
+              E.default,
               A.default,
               S.default,
-              E.default,
+              g.default,
               y.default,
               C.default,
-              m.default,
+              h.default,
             ],
             K,
             200
           ),
-            this.syncWith([L.default, h.default], () => !0);
+            this.syncWith([L.default, p.default], () => !0);
         }
         get applicationFilterQuery() {
           return D;
@@ -2355,7 +2355,7 @@
             this.filteredLibraryApplicationViewItems,
             L.default.sortKey,
             L.default.sortDirection,
-            h.default.locale
+            p.default.locale
           );
         }
         get hiddenLibraryApplicationViewItems() {
@@ -3591,4 +3591,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48590.795d840aee00d35739ee.js.map
+//# sourceMappingURL=48590.853ba1d651d155967d0d.js.map

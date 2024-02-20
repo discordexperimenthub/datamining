@@ -152,10 +152,10 @@
             return E;
           },
           uploadCallscopeLogs: function () {
-            return b;
+            return L;
           },
           uploadCallscopeLogFiles: function () {
-            return L;
+            return b;
           },
         }),
         n("222007");
@@ -190,7 +190,7 @@
           r = await o.blind(e);
         return { blindChannelId: l, blindUserId: r };
       }
-      async function b(t, e, n, o) {
+      async function L(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
           if (
@@ -224,7 +224,7 @@
                 .concat(i)
             );
             let c = await l.default.fileManager.getCallscopeLogFiles(a);
-            await L(r, c);
+            await b(r, c);
           } catch (t) {
             f.error(
               "uploadCallscopeLogs: Error uploading logs ".concat(
@@ -235,7 +235,7 @@
           }
         }
       }
-      async function L(t, e) {
+      async function b(t, e) {
         try {
           if (0 === e.length) {
             f.error("uploadCallscopeLogFiles: No files found.");
@@ -370,8 +370,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "267572",
-          versionHash: "5b4d5ea39cbb090f64907dc8f0cc4fca72db349f",
+          buildNumber: "267592",
+          versionHash: "d985438099966365808db0116077f0eb6a5771bc",
         };
       }
       n.r(e),
@@ -561,4 +561,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.5cad3a41002d3d1ee034.js.map
+//# sourceMappingURL=18409.0135ba4b24bdfdaf823c.js.map

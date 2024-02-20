@@ -38601,8 +38601,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -51901,7 +51901,6 @@ html .progress__4ef76 {
   align-items: flex-start;
   width: 100%;
   padding: 24px;
-  overflow: hidden;
   background-color: var(--background-secondary-alt);
   border-radius: 20px;
   background-size: cover;
@@ -51936,6 +51935,9 @@ html .progress__4ef76 {
 }
 .reducedMotion__90450 .card_e97590 {
   transition: none;
+}
+.hideOverflow__1aaae {
+  overflow: hidden;
 }
 .clickable__32f63 {
   cursor: pointer;
@@ -108678,4 +108680,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ca389becaa28f807d1a9.css.map*/
+/*# sourceMappingURL=app.fdc3849112099274d1a3.css.map*/

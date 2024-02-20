@@ -936,13 +936,13 @@
         T = n("6193"),
         I = n("121338"),
         S = n("605250"),
-        f = n("32128"),
-        N = n("127080"),
-        L = n("116949"),
-        C = n("271938"),
-        D = n("546463"),
-        y = n("505507"),
-        p = n("568307"),
+        f = n("161454"),
+        N = n("32128"),
+        L = n("127080"),
+        C = n("116949"),
+        D = n("271938"),
+        y = n("546463"),
+        p = n("505507"),
         h = n("703370"),
         R = n("599110"),
         v = n("27571"),
@@ -1162,7 +1162,7 @@
                     if (null == d) continue;
                     let e =
                       null != d.processName
-                        ? D.default.getGameByExecutable(d.processName)
+                        ? y.default.getGameByExecutable(d.processName)
                         : null;
                     R.default.track(m.AnalyticEvents.OVERLAY_HOOK_CRASHED, {
                       process_name: null == d ? void 0 : d.processName,
@@ -1313,7 +1313,7 @@
           return;
         }
         for (let n of null !== (t = e.added) && void 0 !== t ? t : []) {
-          let t = p.default.getGameOverlayStatus(n);
+          let t = f.default.getGameOverlayStatus(n);
           if (
             (Q.verbose("updateIntendedOverlayPIDs: newGame", n, t),
             null != t && t.enabled)
@@ -1495,12 +1495,12 @@
         return () => (null == e && (e = t()), e);
       })();
       function eu() {
-        return ea({ added: p.default.getRunningGames(), removed: [] });
+        return ea({ added: f.default.getRunningGames(), removed: [] });
       }
       let es = q("setOverlayEnabled", async e => {
         if (!b.OVERLAY_SUPPORTED || V === e) return;
         (V = e),
-          f.OverlayStoredSettings.update({ enabled: e }),
+          N.OverlayStoredSettings.update({ enabled: e }),
           ep.emitChange();
         let t = await eo(),
           { OutOfProcess: n } = t;
@@ -1525,10 +1525,10 @@
       function ec(e, t, n) {
         var a;
         let l =
-            null === (a = p.default.getGameForPID(e)) || void 0 === a
+            null === (a = f.default.getGameForPID(e)) || void 0 === a
               ? void 0
               : a.name,
-          o = D.default.getGameByName(l),
+          o = y.default.getGameByName(l),
           i = {
             game_name: l,
             game_id: null == o ? null : o.id,
@@ -1537,7 +1537,7 @@
           };
         (0, _.createLayout)(
           G.OVERLAY_LAYOUT_ID,
-          y.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID),
+          p.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID),
           { width: n.graphics_width, height: n.graphics_height }
         ),
           R.default.track(m.AnalyticEvents.OVERLAY_HOOK_RESULT, i),
@@ -1552,8 +1552,8 @@
             : J(e, "CONNECT_FAILED", "CONNECTING");
       }
       function eO() {
-        let e = C.default.getToken(),
-          t = C.default.getId();
+        let e = D.default.getToken(),
+          t = D.default.getId();
         null != e &&
           I.send({
             type: m.OverlayEventTypes.DISPATCH,
@@ -1576,8 +1576,8 @@
       }
       function eT(e) {
         if (e) {
-          let t = p.default.getVisibleGame(),
-            n = null == t ? null : p.default.getGameOverlayStatus(t);
+          let t = f.default.getVisibleGame(),
+            n = null == t ? null : f.default.getGameOverlayStatus(t);
           (null == n ? void 0 : n.overlayMethod) ===
           b.OverlayMethod.OutOfProcess
             ? eA(e)
@@ -1612,7 +1612,7 @@
               ...e,
               settings: {
                 type: e.settings.type,
-                proto: (0, L.protoToB64WithType)(
+                proto: (0, C.protoToB64WithType)(
                   e.settings.type,
                   e.settings.proto
                 ),
@@ -1643,14 +1643,14 @@
       function eD(e) {
         switch ((0, e.type)) {
           case m.OverlayEventTypes.CONNECT:
-            let t = C.default.getToken();
+            let t = D.default.getToken();
             if (null == t) break;
             (0, _.createLayout)(
               G.OVERLAY_LAYOUT_ID,
-              y.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID)
+              p.default.getDefaultLayout(G.OVERLAY_LAYOUT_ID)
             ),
               Promise.all([
-                (0, N.default)(t, e.pid),
+                (0, L.default)(t, e.pid),
                 d.default.PersistedStore.getAllStates(),
               ]).then(t => {
                 let [n, a] = t,
@@ -1688,10 +1688,10 @@
         initialize() {
           !(!b.OVERLAY_SUPPORTED || __OVERLAY__) &&
             (w.add(b.OverlayMethod.Hook),
-            this.waitFor(p.default, C.default),
+            this.waitFor(f.default, D.default),
             I.setReceiveCommandHandler(eD, eC),
-            C.default.addChangeListener(eO),
-            es(f.OverlayStoredSettings.enabled),
+            D.default.addChangeListener(eO),
+            es(N.OverlayStoredSettings.enabled),
             E.default.addInterceptor(eN));
         }
         isInputLocked(e) {
@@ -1801,7 +1801,7 @@
                 let l = new URLSearchParams();
                 l.append(
                   "build_id",
-                  "14bda2c4d3ef610e8d0a0c57b58cdcbe9c40ea21"
+                  "2a0fb3ec532d56caab983cd38ec11fe16cf4702f"
                 ),
                   l.append("rpc", String(t)),
                   l.append("rpc_auth_token", F),
@@ -1969,4 +1969,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77015.41b86c2880c5914e9864.js.map
+//# sourceMappingURL=77015.eadff96596d8b7eb32f6.js.map

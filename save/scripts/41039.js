@@ -29669,8 +29669,7 @@
         ((s = i || (i = {})).EMOJI = "emoji"),
         (s.GIF = "gif"),
         (s.STICKER = "sticker"),
-        (s.SOUNDBOARD = "soundboard"),
-        (s.CUSTOM_UPLOAD = "custom-upload");
+        (s.SOUNDBOARD = "soundboard");
       let o = "expression-picker-chat-input-button",
         l = 498;
       ((a = r || (r = {})).MIN = "min"), (a.MAX = "max");
@@ -60089,7 +60088,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267442",
+                  build_number: "267448",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78734,4 +78733,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.c8bfe4ad17d926531a51.js.map
+//# sourceMappingURL=41039.97999c12ae7d9b2414e6.js.map

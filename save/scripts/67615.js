@@ -39628,17 +39628,11 @@
           GIF_PICKER_TAB_ID: function () {
             return y;
           },
-          CUSTOM_UPLOAD_PICKER_TAB_PANEL_ID: function () {
+          EMOJI_SIZE_MAP: function () {
             return T;
           },
-          CUSTOM_UPLOAD_PICKER_TAB_ID: function () {
-            return C;
-          },
-          EMOJI_SIZE_MAP: function () {
-            return S;
-          },
           EMOJI_ROW_SIZE: function () {
-            return I;
+            return C;
           },
         }),
         ((d = s || (s = {})).GUILD = "GUILD"),
@@ -39677,10 +39671,8 @@
         E = "soundboard-picker-tab",
         p = "gif-picker-tab-panel",
         y = "gif-picker-tab",
-        T = "custom-upload-picker-tab-panel",
-        C = "custom-upload-picker-tab",
-        S = { reaction: 32, default: 44, jumbo: 96 },
-        I = 9;
+        T = { reaction: 32, default: 44, jumbo: 96 },
+        C = 9;
     },
     39616: function (e, t, n) {
       "use strict";
@@ -76805,4 +76797,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.97bb2c42e637a8931188.js.map
+//# sourceMappingURL=67615.412ea380a500310776b7.js.map

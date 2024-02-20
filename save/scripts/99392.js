@@ -23991,11 +23991,6 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Image Description (Alt Text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt text:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Select media",
-        EXPRESSION_PICKER_UPLOAD: "Upload",
-        EXPRESSION_PICKER_UPLOAD_IMAGE_TAG: "IMAGE",
-        EXPRESSION_PICKER_UPLOAD_DESCRIPTION:
-          "Drag and drop or click to upload an image",
-        EXPRESSION_PICKER_UPLOAD_ARIA: "Upload an image",
         POLL_END_EARLY: "End Poll Now",
         POLL_END_EARLY_CONFIRMATION_TITLE: "End Poll Now?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -25995,8 +25990,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267442", ", Version Hash: ")
-          .concat("35d63f829bbb45cbe9535ed1e161c0dd89597170")
+          .concat("267448", ", Version Hash: ")
+          .concat("577dae2090d8bb37941a6a079cd44cd6d62b444c")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29083,12 +29078,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267442"), "267442"));
+        let _ = parseInt(((e = "267448"), "267448"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267442"
+                "267448"
               )
             ),
             (_ = 0)),
@@ -34946,8 +34941,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708448059488",
-                    build_number: "267442",
+                    built_at: "1708448822571",
+                    build_number: "267448",
                   },
                 },
                 retries: 1,
@@ -51283,4 +51278,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.e1bc17248ce23972f3b7.js.map
+//# sourceMappingURL=99392.8f28c5c2fc894d749bc8.js.map

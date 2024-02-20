@@ -8750,6 +8750,7 @@
         SEARCH_ANSWER_HAS_SOUND: "sound",
         SEARCH_ANSWER_HAS_STICKER: "sticker",
         SEARCH_CLEAR_HISTORY: "Clear Search History",
+        SEARCH_REMOVE_FROM_HISTORY_A11Y_LABEL: "Remove from Search History",
         SEARCH_CLEAR: "Clear search",
         PAGINATION_PAGE_OF: "Page {page} of {totalPages}",
         PREMIUM_NOT_VERIFIED: "Verify your email first",
@@ -21253,6 +21254,7 @@
         NEW_MESSAGE_COMPOSER_SEARCH_EMPTY_SUBTITLE:
           "The person you're looking for might not be connected to you on Discord. Try adding them as a friend.",
         NEW_MESSAGE_COMPOSER_BACK_TO_CHAT: "Back to Chat Preview",
+        NEW_MESSAGE_COMPOSER_ADD_USER_A11Y_LABEL: "Add Recipient",
         SERVER_BADGE_DESCRIPTION_INVITE_ONLY:
           "People with an invite link can join.",
         SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN:
@@ -25999,8 +26001,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267600", ", Version Hash: ")
-          .concat("9dcf994bfa00598b545112792ca0e2702aeb1eee")
+          .concat("267605", ", Version Hash: ")
+          .concat("3b03de7d8bfc3119e221d33a578289262fe10ffd")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29087,12 +29089,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267600"), "267600"));
+        let _ = parseInt(((e = "267605"), "267605"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267600"
+                "267605"
               )
             ),
             (_ = 0)),
@@ -34950,8 +34952,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708468167957",
-                    build_number: "267600",
+                    built_at: "1708468860838",
+                    build_number: "267605",
                   },
                 },
                 retries: 1,
@@ -51287,4 +51289,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.07f8b4d6e81a269b9182.js.map
+//# sourceMappingURL=99392.2b2c5ebf83e153e9c272.js.map

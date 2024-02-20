@@ -2,8 +2,8 @@
   var e,
     a,
     d,
-    c,
     s,
+    c,
     f,
     b,
     p,
@@ -12,18 +12,18 @@
       93629: function (e, a, d) {
         "use strict";
         d.r(a);
-        var c = d("51545");
-        window.DiscordSentry = (0, c.initSentry)();
+        var s = d("51545");
+        window.DiscordSentry = (0, s.initSentry)();
       },
       900673: function (e, a, d) {
         "use strict";
         d.r(a),
           d.d(a, {
             default: function () {
-              return c.default;
+              return s.default;
             },
           });
-        var c = d("166745");
+        var s = d("166745");
       },
       455209: function (e, a, d) {
         "use strict";
@@ -37,8 +37,8 @@
           d("808653"),
           d("424973"),
           d("726581");
-        var c = d("872717"),
-          s = d("821316"),
+        var s = d("872717"),
+          c = d("821316"),
           f = d("129966"),
           b = d("583340"),
           p = d("823348"),
@@ -53,7 +53,7 @@
           ],
           i = new j.default(),
           u = /\/api(\/v\d+)?\/science/;
-        (0, c.setRequestPatch)({
+        (0, s.setRequestPatch)({
           prepareRequest(e) {
             let { default: a } = d("271938"),
               { default: f } = d("313915"),
@@ -63,14 +63,14 @@
               { isPlatformEmbedded: j } = d("773336");
             if ("/" === e.url[0]) {
               var n, l;
-              (e.url = c.default.getAPIBaseURL() + e.url),
+              (e.url = s.default.getAPIBaseURL() + e.url),
                 !("Authorization" in e.header) &&
                   !("authorization" in e.header) &&
                   e.set("Authorization", a.getToken());
               let d = r.getSuperPropertiesBase64();
               null != d && e.set("X-Super-Properties", d);
-              let s = a.getFingerprint();
-              if ((null != s && "" !== s && e.set("X-Fingerprint", s), j)) {
+              let c = a.getFingerprint();
+              if ((null != c && "" !== c && e.set("X-Fingerprint", c), j)) {
                 let a = [];
                 null != navigator && (a = ((n = [...navigator.languages]), n));
                 let d = (function (e) {
@@ -113,7 +113,7 @@
                 try {
                   let a = new URL(e.url).pathname;
                   if (!u.test(a)) {
-                    let c = (function (e) {
+                    let s = (function (e) {
                       let a = new URLSearchParams();
                       a.append(
                         "query",
@@ -126,14 +126,14 @@
                       );
                       return d.toString();
                     })(d);
-                    null !== c &&
+                    null !== s &&
                       console.debug(
                         "%c[tracing]%c %s %s\n%s",
                         "font-weight: bold",
                         "",
                         e.method,
                         a,
-                        c
+                        s
                       );
                   }
                 } catch (e) {
@@ -141,13 +141,13 @@
                 }
               }
             }
-            s.report(
+            c.report(
               "Network",
               "Sending ".concat(e.method, " to ").concat(e.url)
             ),
               e.on("response", a => {
                 let d = null != a && a.status >= 400 ? a.text : null;
-                s.report(
+                c.report(
                   "Network",
                   "Completed "
                     .concat(e.method, " to ")
@@ -158,7 +158,7 @@
               }),
               e.on("error", (a, d) => {
                 if (
-                  (s.report(
+                  (c.report(
                     "Network",
                     "Failed "
                       .concat(e.method, " to ")
@@ -170,13 +170,13 @@
                 ) {
                   let d = "[FILTERED]";
                   if (o.includes(e.url)) {
-                    var c, f;
+                    var s, f;
                     d =
                       null === (f = e.xhr) || void 0 === f
                         ? void 0
-                        : null === (c = f.responseText) || void 0 === c
+                        : null === (s = f.responseText) || void 0 === s
                           ? void 0
-                          : c.slice(0, 1e3);
+                          : s.slice(0, 1e3);
                   }
                   t.default.addBreadcrumb({
                     category: "superagent",
@@ -191,10 +191,10 @@
                 }
               });
           },
-          interceptResponse(e, a, c) {
-            var s, r, t, j, o;
+          interceptResponse(e, a, s) {
+            var c, r, t, j, o;
             return 400 === e.statusCode &&
-              (null === (s = e.body) || void 0 === s ? void 0 : s.captcha_key)
+              (null === (c = e.body) || void 0 === c ? void 0 : c.captcha_key)
               ? (Promise.all([
                   d.el("417814").then(d.bind(d, "417814")),
                   d.el("507445").then(d.bind(d, "507445")),
@@ -202,16 +202,16 @@
                   .then(a => {
                     let [
                       { default: d },
-                      { extractCaptchaPropsFromResponseBody: c },
+                      { extractCaptchaPropsFromResponseBody: s },
                     ] = a;
-                    return d.showCaptchaAsync(c(e.body));
+                    return d.showCaptchaAsync(s(e.body));
                   })
                   .then(e => {
-                    let { captcha_key: d, captcha_rqtoken: c } = e,
-                      s = { "X-Captcha-Key": d };
-                    null != c && (s["X-Captcha-Rqtoken"] = c), a(s);
+                    let { captcha_key: d, captcha_rqtoken: s } = e,
+                      c = { "X-Captcha-Key": d };
+                    null != s && (c["X-Captcha-Rqtoken"] = s), a(c);
                   })
-                  .catch(c),
+                  .catch(s),
                 !0)
               : 401 === e.statusCode &&
                   (null === (r = e.body) || void 0 === r ? void 0 : r.code) ===
@@ -221,10 +221,10 @@
                     .el("776502")
                     .then(d.bind(d, "776502"))
                     .then(d => {
-                      let { openMFAModal: s } = d;
-                      s(e.body.mfa, a, c);
+                      let { openMFAModal: c } = d;
+                      c(e.body.mfa, a, s);
                     })
-                    .catch(c),
+                    .catch(s),
                   !0)
                 : (0, p.isLimitedAccessErrorCode)(
                       e.statusCode,
@@ -247,8 +247,8 @@
                         .then(d.bind(d, "772545"))
                         .then(a => {
                           var d;
-                          let { default: c } = a;
-                          c(
+                          let { default: s } = a;
+                          s(
                             null === (d = e.body) || void 0 === d
                               ? void 0
                               : d.guild_id
@@ -266,16 +266,16 @@
                       !1);
           },
         }),
-          (0, c.setAwaitOnline)(async e => {
+          (0, s.setAwaitOnline)(async e => {
             if (
-              (s.report(
+              (c.report(
                 "Network",
                 "Request to ".concat(e, " failed, will retry.")
               ),
               !r.default.isOnline())
             )
               await r.default.awaitOnline(),
-                s.report(
+                c.report(
                   "Network",
                   "Network detected online, retrying ".concat(e)
                 );
@@ -294,8 +294,8 @@
           }),
           d("222007"),
           d("455209");
-        var c = d("245123"),
-          s = d("88807"),
+        var s = d("245123"),
+          c = d("88807"),
           f = d("432710"),
           b = d("605250"),
           p = d("155084"),
@@ -314,7 +314,7 @@
         }
         let o = (0, r.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
         function i(e, a) {
-          var d, c, b, r;
+          var d, s, b, r;
           if (
             (null != (d = e).exception &&
               null != d.exception.values &&
@@ -329,8 +329,8 @@
               e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0
             ) ||
             n() ||
-            "Aborted" === (c = e).message ||
-            "cancel captcha" === c.message ||
+            "Aborted" === (s = e).message ||
+            "cancel captcha" === s.message ||
             !o()
           )
             return null;
@@ -342,7 +342,7 @@
                 {
                   name: f.MetricEvents.APP_CRASHED,
                   tags: [
-                    "reason:".concat(s.AppCrashedReasons.UNHANDLED_JS_ERROR),
+                    "reason:".concat(c.AppCrashedReasons.UNHANDLED_JS_ERROR),
                     "level:".concat(b.level),
                   ],
                 },
@@ -353,19 +353,19 @@
         }
         function u() {
           var e;
-          c.init({
+          s.init({
             tunnel: "/error-reporting-proxy/web",
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-00e63f15dec4e342948642363038b7b9c259ef9b",
+            release: "discord_web-22466b27756df28e5097c44b192df678d7b9d656",
             beforeSend: i,
             integrations: [
-              new c.Integrations.GlobalHandlers({
+              new s.Integrations.GlobalHandlers({
                 onerror: !0,
                 onunhandledrejection: !0,
               }),
-              new c.Integrations.Breadcrumbs({
+              new s.Integrations.Breadcrumbs({
                 console: !0,
                 dom: !0,
                 fetch: !0,
@@ -405,12 +405,12 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            c.setTag("buildNumber", ((e = "267498"), "267498")),
-            c.setTag("builtAt", String("1708456222994"));
+            s.setTag("buildNumber", ((e = "267500"), "267500")),
+            s.setTag("builtAt", String("1708456377536"));
           let a = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != a && "object" == typeof a)
-            for (let e in a) c.setTag(e, a[e]);
-          return c;
+            for (let e in a) s.setTag(e, a[e]);
+          return s;
         }
       },
       129966: function (e, a, d) {
@@ -418,16 +418,16 @@
         d.r(a),
           d.d(a, {
             isLimitedAccessErrorCode: function () {
-              return s;
+              return c;
             },
           });
-        var c = d("49111");
-        function s(e, a) {
+        var s = d("49111");
+        function c(e, a) {
           return (
             403 === e &&
             null != a &&
-            a >= c.AbortCodes.GUILD_LIMITED_ACCESS_DEFAULT &&
-            a <= c.AbortCodes.GUILD_LIMITED_ACCESS_MAX
+            a >= s.AbortCodes.GUILD_LIMITED_ACCESS_DEFAULT &&
+            a <= s.AbortCodes.GUILD_LIMITED_ACCESS_MAX
           );
         }
       },
@@ -436,16 +436,16 @@
         d.r(a),
           d.d(a, {
             isBlockedByProxyErrorCode: function () {
-              return s;
+              return c;
             },
           });
-        var c = d("49111");
-        function s(e) {
+        var s = d("49111");
+        function c(e) {
           var a;
           return (
             !e.ok &&
             (null === (a = e.body) || void 0 === a ? void 0 : a.code) ===
-              c.AbortCodes.BLOCKED_BY_PROXY
+              s.AbortCodes.BLOCKED_BY_PROXY
           );
         }
       },
@@ -454,34 +454,34 @@
         d.r(a),
           d.d(a, {
             isLimitedAccessErrorCode: function () {
-              return s;
+              return c;
             },
           });
-        var c = d("49111");
-        function s(e, a) {
+        var s = d("49111");
+        function c(e, a) {
           return (
             e >= 400 &&
             e < 500 &&
             null != a &&
-            a >= c.AbortCodes.USER_LIMITED_ACCESS_DEFAULT &&
-            a <= c.AbortCodes.USER_LIMITED_ACCESS_MAX
+            a >= s.AbortCodes.USER_LIMITED_ACCESS_DEFAULT &&
+            a <= s.AbortCodes.USER_LIMITED_ACCESS_MAX
           );
         }
       },
       88807: function (e, a, d) {
         "use strict";
-        var c, s;
+        var s, c;
         d.r(a),
           d.d(a, {
             AppCrashedReasons: function () {
-              return c;
+              return s;
             },
           }),
           d("222007"),
-          ((s = c || (c = {})).UNHANDLED_NATIVE_ERROR =
+          ((c = s || (s = {})).UNHANDLED_NATIVE_ERROR =
             "unhandled_native_error"),
-          (s.UNHANDLED_JS_ERROR = "unhandled_js_error"),
-          (s.SOCKET_CRASHED = "socket_crashed");
+          (c.UNHANDLED_JS_ERROR = "unhandled_js_error"),
+          (c.SOCKET_CRASHED = "socket_crashed");
       },
     },
     j = {};
@@ -1615,7 +1615,7 @@
         1178: "ab4ca019d3016ca33831.js",
         11960: "3c121155cc6b9e27b34a.js",
         12031: "bbe41c3063247e43307e.js",
-        12586: "e32299641f6930efb81f.js",
+        12586: "dc18e6b545e50633e51b.js",
         12710: "c4fbfbb2e83d9e721c88.js",
         12872: "12872.6c32634f5ea6045f9cab.js",
         12896: "12896.7ad732e290783ca8aab9.js",
@@ -1652,7 +1652,7 @@
         18217: "bbed771b18de01728d38.js",
         1825: "3a4723618312ec2184fa.js",
         18407: "18407.3e22fc53a1eaa3bffb14.js",
-        18409: "18409.592a028ba4bcfe8ca792.js",
+        18409: "18409.5344e3481b4830373f84.js",
         1881: "0b72378d7827c561d68f.js",
         18814: "18814.335ed08939c971d35e24.js",
         18860: "7ce1451600d4feac8494.js",
@@ -1729,7 +1729,6 @@
         27949: "3fe51ac337cf11b050dd.js",
         28411: "70ce832ddd0069380e7d.js",
         28473: "fb37f64a8079f2d389dc.js",
-        28516: "93deb5b10ba20e966c3b.js",
         28649: "7e184c86c1f0fbb15bd1.js",
         28711: "5d5892b6e5131d145624.js",
         2872: "f3bc53164dcf06150d9a.js",
@@ -1756,7 +1755,7 @@
         31101: "35c92de75ba3d2efa0d2.js",
         31149: "ce5666c1fb398c70fb2f.js",
         31199: "23d2fb545836d49e047b.js",
-        31209: "c523a3be31c180b2cc96.js",
+        31209: "dcda62a35da949f2899d.js",
         31337: "31337.062f1acd625b6722b45f.js",
         31530: "64994b211ada7a8da1e1.js",
         31662: "328fc35b4ac179d462c4.js",
@@ -1801,10 +1800,11 @@
         37144: "37144.05929cc88bb7d469799d.js",
         37263: "ea4c59f259515ce2f610.js",
         37480: "703ab28acdb07070fcbe.js",
-        37553: "8156962d91bb6d24258f.js",
+        37553: "b9dad5350e5167818efa.js",
+        37565: "ef158e975bc7c7622a1e.js",
         37580: "37580.d26099f72612119e3df7.js",
         37628: "3cc8e55f5a1ad9e7cda3.js",
-        37897: "6d0035f678cce5aaa42f.js",
+        37897: "66bf2bb9b62b2a5d00d7.js",
         37903: "9dd2f883f5436157faa8.js",
         38081: "38081.2e687ba4efee360fcdbe.js",
         38519: "103dd9c39d1c9bf89185.js",
@@ -1813,7 +1813,7 @@
         38833: "f8efed81d842a497be39.js",
         38867: "b2683f417b08f389c3aa.js",
         38969: "49d3be01f1c30ef6db84.js",
-        38991: "b7ac9dddd4d5da162b25.js",
+        38991: "39df28f4cc016a833fe5.js",
         3903: "e186978c79580fa8b7fd.js",
         39101: "f8ac6442b5fb99ad9708.js",
         39385: "5be7c6c9e3839f467847.js",
@@ -1831,7 +1831,7 @@
         40787: "40787.b24da697afbb0ccf17aa.js",
         40912: "84971a3d6c47b0e0972c.js",
         40958: "236da21bfa0a88c6d309.js",
-        41039: "41039.cf10071b7a1dcd233566.js",
+        41039: "41039.06fcff3fdbee4cdecc05.js",
         41244: "535bfb5b74014f4dd300.js",
         41737: "dcfabde8cebf57cbafa7.js",
         41831: "41831.a3fac9e35abf8bb49eca.js",
@@ -1873,9 +1873,9 @@
         47362: "ae2595482d7e16dac490.js",
         47470: "47470.91c2d89ebc10ef7a8bdd.js",
         47498: "47498.38da6b2cf2f487359536.js",
-        48059: "48059.2ed3ab05dfd7b63a589b.js",
+        48059: "48059.7c98ca4a39a22c8fee28.js",
         48150: "5906c1406de131a9e5ce.js",
-        48265: "257752f00711aa7a6c56.js",
+        48265: "7813cb8f99be8e402073.js",
         4847: "f969e6b58a5839807666.js",
         48590: "48590.853ba1d651d155967d0d.js",
         4860: "c3d80bf99f78a9afa139.js",
@@ -1895,7 +1895,7 @@
         50549: "71c9d74707d37a98a846.js",
         50550: "37681ce68c26e3cd5b94.js",
         50659: "2a124e6e2dc0fbbb57eb.js",
-        50718: "944caed50087a439debe.js",
+        50718: "d04ba9c731d6bd3dac75.js",
         51077: "ddfa9c66271ce1f306d0.js",
         51572: "191bc232050ff3c27c2d.js",
         51635: "052047a12592f04f9ccb.js",
@@ -1904,8 +1904,8 @@
         52543: "18a187f546dbdffb9333.js",
         52719: "79ef3aee134b53cf7e8d.js",
         52762: "c979d794b29e251f7f53.js",
-        52807: "7e36387d55c7b7db7d85.js",
-        52885: "c99470aca8bb40756391.js",
+        52807: "999ed10df7c97debd6eb.js",
+        52885: "1ed77e22fb2e71c7e272.js",
         52962: "c72c2b54f8c493d08b23.js",
         53067: "9154e4d3416555d5b70d.js",
         53181: "f72404e2ebdf0ac0f887.js",
@@ -1952,7 +1952,7 @@
         58533: "58533.8992492456ae0cb1977b.js",
         58614: "f3a52beebe5a83c53a74.js",
         58628: "8e4f7d2b36220041c0ed.js",
-        58676: "58676.8f1c6a29df2f4c07f164.js",
+        58676: "58676.e3a9afdc3c69e2ee6f73.js",
         58935: "58935.fb1773bd72cabd25b7c5.js",
         59308: "b216c39766e45b779269.js",
         59421: "acbc14e6f7dabd3a55e6.js",
@@ -1985,7 +1985,7 @@
         63574: "d56f349886f26f76b7af.js",
         63760: "0c2c42b7cf7e8c0fcd12.js",
         63930: "fa1b9471d845af5e7586.js",
-        63938: "e974f5e1c4ee455faa0d.js",
+        63938: "0e8a7f3b6c85a2a31858.js",
         64031: "6f4f346950cc5fdb9e98.js",
         64072: "3a8ecb90fec5ae5f8f1f.js",
         64263: "2fd978a27923dc5bf3d8.js",
@@ -2057,19 +2057,19 @@
         71314: "8b3b37f3f7c1638e8b92.js",
         71518: "71518.2d979d3d8c6f7f1bd7d9.js",
         71554: "71554.327d6b7c965d2e1269e9.js",
-        71924: "70893a185a60b3677277.js",
+        71924: "3f093652e5648fe78edb.js",
         71948: "1578ce7c25adac8bfe5d.js",
         72059: "5fc6b702fab2a0944242.js",
         72142: "8cb97eee79863f4fc184.js",
         72579: "104697dda5ca45c2ade3.js",
         72592: "dc21d3e6cef65e31576d.js",
         72618: "f49f17adead84be83dd4.js",
-        72640: "4c943316e05401f45e0e.js",
+        72640: "3c38fb875f32365ff2e5.js",
         72655: "6839f7f5522dd3f58b1b.js",
         72683: "72683.5c419b895fa6f7a68295.js",
-        72857: "ec8570aaacee910005a0.js",
-        7291: "25a318c986b51040cbaf.js",
-        73041: "dde81969729a01ef9d26.js",
+        72857: "d48179c86d75b3ac7cf4.js",
+        7291: "955f2f3baec4a1364176.js",
+        73041: "5ee38f885184c6da3572.js",
         73070: "73070.545b97290bac712ab8a7.js",
         73140: "c6e6d95668e08702c74a.js",
         73187: "4d6e875cc856757dcfc8.js",
@@ -2097,11 +2097,12 @@
         76536: "97c06fe4391939de5247.js",
         76609: "00ebd11016cadd597237.js",
         76730: "7f90f04e47ddcfba3c6d.js",
-        77015: "77015.c75bae8d5cb3e18b24ef.js",
+        77015: "77015.2f91745d1bba363e7584.js",
         77117: "8f477611adf5d44c723a.js",
         77118: "88ad28edc5bb0671ae45.js",
         77132: "877a41b0014594dc063f.js",
         77561: "b05dd3735e231b1b89a6.js",
+        77576: "188e1a56e5bff3b2d960.js",
         77655: "77655.f04cc4c5b06c3338e6d8.js",
         77727: "25d904a7e46d8a1b073a.js",
         77895: "a4d3ef12e4bda571b226.js",
@@ -2114,7 +2115,7 @@
         78836: "ce0cd628a02ae2e8fdef.js",
         78891: "78891.49d43d53f7ab722777d3.js",
         78894: "6997c36c9587bcaff869.js",
-        791: "f2fe6f06090bf02523c4.js",
+        791: "2fa1ae9b4c3bf07c80f2.js",
         79326: "a091aa17800635599066.js",
         79423: "ece598f20120fa66d314.js",
         80013: "80013.fccdb738bf0cecc34db7.js",
@@ -2138,7 +2139,7 @@
         83063: "535537cb165205e6a310.js",
         83287: "d9a2942baf000ef781d1.js",
         83678: "3c68df440a79621ee8dd.js",
-        83795: "a82b74277711196bd8ec.js",
+        83795: "b7ec9fbcbb5530d0a2d4.js",
         83949: "c62e009070cbeae19639.js",
         84054: "0f13dfd6a7e040439072.js",
         84070: "132a22fb5f2be3b6eed5.js",
@@ -2147,7 +2148,7 @@
         84475: "51e8c47fbbf514b50a2d.js",
         84537: "8701d3a6acf17eed664a.js",
         84968: "aa8cdaecc991c7880f2d.js",
-        85380: "cb58ffd9c8f792523ad5.js",
+        85380: "49c3b68ae3f3deeef0d9.js",
         85387: "10f9283a1cbc6ebbc839.js",
         85866: "55b9b30779b01dfdba05.js",
         8588: "556b6a430537409ea0b4.js",
@@ -2197,7 +2198,6 @@
         91294: "a9b222c6d8127fecf6a4.js",
         91315: "d0821299ae936bcc093b.js",
         91355: "91355.5e6f1630bac7eb2f7cac.js",
-        91434: "e9fe34a3cd4e72f6d267.js",
         91467: "5236e4b3e37e7b7d9816.js",
         91535: "8b0a95e6554b8fa66372.js",
         91810: "b00036565cd960cf622a.js",
@@ -2247,7 +2247,7 @@
         98106: "98106.5d0f74b94113ede84656.js",
         98239: "98239.e933435eeb08030fb74c.js",
         98281: "98281.f2ff7c47bb45e261d995.js",
-        98346: "98346.82d08ac5cf099d6c472e.js",
+        98346: "98346.5b30110cb76fad5560db.js",
         98427: "21e5fe44f25488207f64.js",
         98538: "b20046615a04cd4fce94.js",
         98738: "50cca6efe742091428d0.js",
@@ -2264,17 +2264,17 @@
     }),
     (n.k = function (e) {
       return {
-        app: "app.fdc3849112099274d1a3.css",
+        app: "app.a9d66656ee7e7acd9ae7.css",
         shared: "shared.754635965573bc5bcdf5.css",
       }[e];
     }),
     (a = {}),
-    (n.l = function (e, d, c, s) {
+    (n.l = function (e, d, s, c) {
       if (a[e]) {
         a[e].push(d);
         return;
       }
-      if (void 0 !== c) {
+      if (void 0 !== s) {
         for (
           var f, b, p = document.getElementsByTagName("script"), r = 0;
           r < p.length;
@@ -2294,19 +2294,19 @@
         n.nc && f.setAttribute("nonce", n.nc),
         (f.src = e)),
         (a[e] = [d]);
-      var j = function (d, c) {
+      var j = function (d, s) {
           (f.onerror = f.onload = null), clearTimeout(o);
-          var s = a[e];
+          var c = a[e];
           if (
             (delete a[e],
             f.parentNode && f.parentNode.removeChild(f),
-            s &&
-              s.forEach(function (e) {
-                return e(c);
+            c &&
+              c.forEach(function (e) {
+                return e(s);
               }),
             d)
           )
-            return d(c);
+            return d(s);
         },
         o = setTimeout(
           j.bind(null, void 0, { type: "timeout", target: f }),
@@ -2320,28 +2320,28 @@
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
     (d = []),
-    (n.O = function (e, a, c, s) {
+    (n.O = function (e, a, s, c) {
       if (a) {
-        s = s || 0;
-        for (var f = d.length; f > 0 && d[f - 1][2] > s; f--) d[f] = d[f - 1];
-        d[f] = [a, c, s];
+        c = c || 0;
+        for (var f = d.length; f > 0 && d[f - 1][2] > c; f--) d[f] = d[f - 1];
+        d[f] = [a, s, c];
         return;
       }
       for (var b = 1 / 0, f = 0; f < d.length; f++) {
         for (
-          var a = d[f][0], c = d[f][1], s = d[f][2], p = !0, r = 0;
+          var a = d[f][0], s = d[f][1], c = d[f][2], p = !0, r = 0;
           r < a.length;
           r++
         )
-          b >= s &&
+          b >= c &&
           Object.keys(n.O).every(function (e) {
             return n.O[e](a[r]);
           })
             ? a.splice(r--, 1)
-            : ((p = !1), s < b && (b = s));
+            : ((p = !1), c < b && (b = c));
         if (p) {
           d.splice(f--, 1);
-          var t = c();
+          var t = s();
           void 0 !== t && (e = t);
         }
       }
@@ -2355,11 +2355,11 @@
         if ("object" == typeof window) return window;
       }
     })()),
-    (c =
+    (s =
       "function" == typeof Symbol
         ? Symbol("webpack queues")
         : "__webpack_queues__"),
-    (s =
+    (c =
       "function" == typeof Symbol
         ? Symbol("webpack exports")
         : "__webpack_exports__"),
@@ -2389,8 +2389,8 @@
         i = new Promise(function (e, a) {
           (j = a), (t = e);
         });
-      (i[s] = o),
-        (i[c] = function (e) {
+      (i[c] = o),
+        (i[s] = function (e) {
           p && e(p), n.forEach(e), i.catch(function () {});
         }),
         (e.exports = i),
@@ -2398,13 +2398,13 @@
           function (e) {
             r = e.map(function (e) {
               if (null !== e && "object" == typeof e) {
-                if (e[c]) return e;
+                if (e[s]) return e;
                 if (e.then) {
                   var a = [];
                   (a.d = 0),
                     e.then(
                       function (e) {
-                        (d[s] = e), b(a);
+                        (d[c] = e), b(a);
                       },
                       function (e) {
                         (d[f] = e), b(a);
@@ -2412,7 +2412,7 @@
                     );
                   var d = {};
                   return (
-                    (d[c] = function (e) {
+                    (d[s] = function (e) {
                       e(a);
                     }),
                     d
@@ -2420,26 +2420,26 @@
                 }
               }
               var p = {};
-              return (p[c] = function () {}), (p[s] = e), p;
+              return (p[s] = function () {}), (p[c] = e), p;
             });
             var a,
               d = function () {
                 return r.map(function (e) {
                   if (e[f]) throw e[f];
-                  return e[s];
+                  return e[c];
                 });
               },
               t = new Promise(function (e) {
                 (a = function () {
                   e(d);
                 }).r = 0;
-                var s = function (e) {
+                var c = function (e) {
                   e === p ||
                     n.has(e) ||
                     (n.add(e), e && !e.d && (a.r++, e.push(a)));
                 };
                 r.map(function (e) {
-                  e[c](s);
+                  e[s](c);
                 });
               });
             return a.r ? t : d();
@@ -2484,19 +2484,19 @@
         return e;
       var d = Object.create(null);
       n.r(d);
-      var c = {};
+      var s = {};
       p = p || [null, r({}), r([]), r(r)];
-      for (var s = 2 & a && e; "object" == typeof s && !~p.indexOf(s); s = r(s))
-        Object.getOwnPropertyNames(s).forEach(function (a) {
-          c[a] = function () {
+      for (var c = 2 & a && e; "object" == typeof c && !~p.indexOf(c); c = r(c))
+        Object.getOwnPropertyNames(c).forEach(function (a) {
+          s[a] = function () {
             return e[a];
           };
         });
       return (
-        (c.default = function () {
+        (s.default = function () {
           return e;
         }),
-        n.d(d, c),
+        n.d(d, s),
         d
       );
     }),
@@ -2536,7 +2536,7 @@
         },
         a = "webpack",
         d = "data-webpack-loading",
-        c = function (e, c, s, f) {
+        s = function (e, s, c, f) {
           var b,
             p,
             r = "chunk-" + e;
@@ -2553,14 +2553,14 @@
                   !i.startsWith(n.p) &&
                   (i = n.p + (i.startsWith("/") ? i.slice(1) : i)),
                 "stylesheet" == o.rel &&
-                  ((i && i.startsWith(c)) ||
+                  ((i && i.startsWith(s)) ||
                     o.getAttribute("data-webpack") == a + ":" + r))
               ) {
                 b = o;
                 break;
               }
             }
-            if (!s) return b;
+            if (!c) return b;
           }
           !b &&
             ((p = !0),
@@ -2570,14 +2570,14 @@
             ),
             b.setAttribute(d, 1),
             (b.rel = "stylesheet"),
-            (b.href = c));
+            (b.href = s));
           var u = function (e, a) {
             if (
               ((b.onerror = b.onload = null),
               b.removeAttribute(d),
               clearTimeout(l),
               a && "load" != a.type && b.parentNode.removeChild(b),
-              s(a),
+              c(a),
               e)
             )
               return e(a);
@@ -2598,74 +2598,74 @@
           );
         };
       n.f.css = function (a, d) {
-        var s = n.o(e, a) ? e[a] : void 0;
-        if (0 !== s) {
-          if (s) d.push(s[2]);
+        var c = n.o(e, a) ? e[a] : void 0;
+        if (0 !== c) {
+          if (c) d.push(c[2]);
           else if (["app", "shared"].indexOf(a) > -1) {
-            var f = new Promise(function (d, c) {
-              s = e[a] = [d, c];
+            var f = new Promise(function (d, s) {
+              c = e[a] = [d, s];
             });
-            d.push((s[2] = f));
+            d.push((c[2] = f));
             var b = n.p + n.k(a),
               p = Error();
-            c(a, b, function (d) {
-              if (n.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+            s(a, b, function (d) {
+              if (n.o(e, a) && (0 !== (c = e[a]) && (e[a] = void 0), c)) {
                 if ("load" !== d.type) {
-                  var c = d && d.type,
+                  var s = d && d.type,
                     f = d && d.target && d.target.src;
                   (p.message =
                     "Loading css chunk " +
                     a +
                     " failed.\n(" +
-                    c +
+                    s +
                     ": " +
                     f +
                     ")"),
                     (p.name = "ChunkLoadError"),
-                    (p.type = c),
+                    (p.type = s),
                     (p.request = f),
-                    s[1](p);
-                } else s[0]();
+                    c[1](p);
+                } else c[0]();
               }
             });
           } else e[a] = 0;
         }
       };
-      var s = function (a, d) {
-          var c = d[0];
+      var c = function (a, d) {
+          var s = d[0];
           a && a(d);
-          for (var s = 0; s < c.length; s++)
-            void 0 === e[c[s]] && (e[c[s]] = 0);
+          for (var c = 0; c < s.length; c++)
+            void 0 === e[s[c]] && (e[s[c]] = 0);
         },
         f = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
-      f.forEach(s.bind(null, 0)), (f.push = s.bind(null, f.push.bind(f)));
+      f.forEach(c.bind(null, 0)), (f.push = c.bind(null, f.push.bind(f)));
     })(),
     !(function () {
       n.b = document.baseURI || self.location.href;
       var e = { sentry: 0 };
       (n.f.j = function (a, d) {
-        var c = n.o(e, a) ? e[a] : void 0;
-        if (0 !== c) {
-          if (c) d.push(c[2]);
+        var s = n.o(e, a) ? e[a] : void 0;
+        if (0 !== s) {
+          if (s) d.push(s[2]);
           else {
-            var s = new Promise(function (d, s) {
-              c = e[a] = [d, s];
+            var c = new Promise(function (d, c) {
+              s = e[a] = [d, c];
             });
-            d.push((c[2] = s));
+            d.push((s[2] = c));
             var f = n.p + n.u(a),
               b = Error();
             n.l(
               f,
               function (d) {
-                if (n.o(e, a) && (0 !== (c = e[a]) && (e[a] = void 0), c)) {
-                  var s = d && ("load" === d.type ? "missing" : d.type),
+                if (n.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+                  var c = d && ("load" === d.type ? "missing" : d.type),
                     f = d && d.target && d.target.src;
                   (b.message =
-                    "Loading chunk " + a + " failed.\n(" + s + ": " + f + ")"),
+                    "Loading chunk " + a + " failed.\n(" + c + ": " + f + ")"),
                     (b.name = "ChunkLoadError"),
-                    (b.type = s),
+                    (b.type = c),
                     (b.request = f),
-                    c[1](b);
+                    s[1](b);
                 }
               },
               "chunk-" + a,
@@ -2678,38 +2678,38 @@
           return 0 === e[a];
         });
       var a = function (a, d) {
-          var c = d[0],
-            s = d[1],
+          var s = d[0],
+            c = d[1],
             f = d[2],
             b,
             p,
             r = 0;
           if (
-            c.some(function (a) {
+            s.some(function (a) {
               return 0 !== e[a];
             })
           ) {
-            for (b in s) n.o(s, b) && (n.m[b] = s[b]);
+            for (b in c) n.o(c, b) && (n.m[b] = c[b]);
             if (f) var t = f(n);
           }
-          for (a && a(d); r < c.length; r++)
-            (p = c[r]), n.o(e, p) && e[p] && e[p][0](), (e[p] = 0);
+          for (a && a(d); r < s.length; r++)
+            (p = s[r]), n.o(e, p) && e[p] && e[p][0](), (e[p] = 0);
           return n.O(t);
         },
         d = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
       d.forEach(a.bind(null, 0)), (d.push = a.bind(null, d.push.bind(d)));
     })(),
-    (n.v = (e, a, d, c) => {
-      var s = fetch(n.p + d);
+    (n.v = (e, a, d, s) => {
+      var c = fetch(n.p + d);
       return "function" == typeof WebAssembly.instantiateStreaming
-        ? WebAssembly.instantiateStreaming(s, c).then(a =>
+        ? WebAssembly.instantiateStreaming(c, s).then(a =>
             Object.assign(e, a.instance.exports)
           )
-        : s
+        : c
             .then(e => e.arrayBuffer())
-            .then(e => WebAssembly.instantiate(e, c))
+            .then(e => WebAssembly.instantiate(e, s))
             .then(a => Object.assign(e, a.instance.exports));
     }),
     n.x();
 })();
-//# sourceMappingURL=sentry.2d755644751f748d056b.js.map
+//# sourceMappingURL=sentry.ab13bed858a93a374446.js.map

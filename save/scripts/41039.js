@@ -34289,12 +34289,13 @@
       n.r(t),
         n.d(t, {
           getNavYouBarExperiment: function () {
-            return a;
+            return o;
           },
         });
       var i = n("868493"),
-        r = n("133337");
-      let s = (0, i.default)({
+        r = n("133337"),
+        s = n("21121");
+      let a = (0, i.default)({
         kind: "user",
         id: "2024-02_navi_bar",
         label: "Mobile Redesign - Nav Experiment: You Bar",
@@ -34304,12 +34305,22 @@
           { id: 1, label: "You Bar (2c)", config: { showYouBar: !0 } },
         ],
       });
-      function a(e, t) {
+      function o(e, t) {
+        var n;
+        let i = !(0, s.isInMainTabsExperiment)();
         return (0, r.getMergedExperimentConfigs)(
-          s.existingUsers,
-          s.newUsers,
+          a.existingUsers,
+          a.newUsers,
           e,
-          t
+          {
+            ...t,
+            disable: !!i || (null == t ? void 0 : t.disable),
+            autoTrackExposure:
+              !i &&
+              (null === (n = null == t ? void 0 : t.autoTrackExposure) ||
+                void 0 === n ||
+                n),
+          }
         );
       }
     },
@@ -34426,8 +34437,9 @@
       }
       function l() {
         return (
+          (0, i.isInMainTabsExperiment)() &&
           !(0, r.getNavYouBarExperiment)({ location: "isSplitMessagesTab" })
-            .showYouBar && (0, i.isInMainTabsExperiment)()
+            .showYouBar
         );
       }
       function u() {
@@ -34436,14 +34448,7 @@
         return (null == e ? void 0 : e.name) === "messages";
       }
       function c(e) {
-        return (
-          !!o() &&
-          ((0, r.getNavYouBarExperiment)({
-            location: "shouldHandleNewPanelsRoute",
-          }).showYouBar
-            ? null != e
-            : null != e && e !== a.ME)
-        );
+        return !!o() && (!l() || (null != e && e !== a.ME));
       }
     },
     491246: function (e, t, n) {
@@ -60075,7 +60080,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267664",
+                  build_number: "267673",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78940,4 +78945,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.6ce06093fab93976afcc.js.map
+//# sourceMappingURL=41039.3ebd9c418b439c1c7788.js.map

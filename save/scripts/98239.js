@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["67615"],
+  ["98239"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -64905,6 +64905,9 @@
                 e.interaction.user.id === (null == t ? void 0 : t.id)
             );
         }
+        getLastMessage(e) {
+          return i(this.getMessages(e).toArray()).reverse().get(0);
+        }
         jumpedMessageId(e) {
           let t = o.default.get(e);
           return null == t ? void 0 : t.jumpTargetId;
@@ -76829,4 +76832,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.ba37690a69591ac171e0.js.map
+//# sourceMappingURL=98239.cd77635fa956b010d1a3.js.map

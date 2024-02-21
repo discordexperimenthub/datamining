@@ -9364,10 +9364,14 @@
           "Your !!{percent, number}!!% discount will end 3 months after purchase. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Your first **3 months** are **{discountedPrice}**. After that you'll be charged {regularPrice}.",
+        PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
+          "Your next **{numMonths, plural, one {1 month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
         CHURN_DISCOUNT_DESCRIPTION:
           "Before cancelling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
         CHURN_DISCOUNT_CLAIM: "Claim Discount",
+        PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED: "Discount Applied!",
+        PREMIUM_DISCOUNT_SWEET: "Sweet",
         PREMIUM_TUTORIAL_GOT_IT: "Got it!",
         CHURN_DISCOUNT_CONFIRM_HEADER:
           "Confirm {percent, number}% Off Discount",
@@ -26005,8 +26009,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267780", ", Version Hash: ")
-          .concat("028d723fb2936101010bdaf03be836da57e4697a")
+          .concat("267785", ", Version Hash: ")
+          .concat("3b49eed1b7272e6da91088d50b4012e12c5b994d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29079,12 +29083,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267780"), "267780"));
+        let _ = parseInt(((e = "267785"), "267785"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267780"
+                "267785"
               )
             ),
             (_ = 0)),
@@ -34942,8 +34946,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708534669103",
-                    build_number: "267780",
+                    built_at: "1708535759521",
+                    build_number: "267785",
                   },
                 },
                 retries: 1,
@@ -51283,4 +51287,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.d4bb57359130cfdae781.js.map
+//# sourceMappingURL=99392.fccaf4e08f5258304d77.js.map

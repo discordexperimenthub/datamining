@@ -77,10 +77,10 @@
             return S;
           },
           sendGamingStatsMessage: function () {
-            return f;
+            return _;
           },
           updateGamingStats: function () {
-            return _;
+            return f;
           },
         });
       var s = n("872717"),
@@ -108,7 +108,7 @@
           body: { prompt_type: t },
         });
       }
-      async function f(e, t, n) {
+      async function _(e, t, n) {
         await s.default.post({
           url: c.Endpoints.SEND_GAMING_STATS(t),
           body: {
@@ -117,7 +117,7 @@
         }),
           T(t);
       }
-      async function _(e) {
+      async function f(e) {
         let t = await s.default.patch({
           url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id),
         });
@@ -192,8 +192,8 @@
         c = n("299039"),
         E = n("696326"),
         S = n("380710"),
-        f = n("49111"),
-        _ = n("994428");
+        _ = n("49111"),
+        f = n("994428");
       let T = [
           r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2,
           r.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE,
@@ -206,7 +206,7 @@
           r = c.default.entries(s).some(e => {
             let [t, n] = e,
               s = (0, S.isGuildOnboardingSettingsAvailable)(t),
-              i = n.hasFeature(f.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
+              i = n.hasFeature(_.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
             return s && i;
           });
         if (r || !(0, S.isGuildOnboardingSettingsAvailable)(e)) return !1;
@@ -214,8 +214,8 @@
             null === (n = o.default.settings.userContent) || void 0 === n
               ? void 0
               : n.guildOnboardingUpsellDismissedAt,
-          _ = null != u ? a.Timestamp.toDate(u) : void 0,
-          p = null != _ ? i().diff(_, "days") : null,
+          f = null != u ? a.Timestamp.toDate(u) : void 0,
+          p = null != f ? i().diff(f, "days") : null,
           A = T.indexOf(t);
         if (-1 === A) return !1;
         let g = null == p || p > C[A];
@@ -243,7 +243,7 @@
           null != t &&
             (0, l.markDismissibleContentAsDismissed)(t, {
               forceTrack: !0,
-              dismissAction: _.ContentDismissActionType.AUTO,
+              dismissAction: f.ContentDismissActionType.AUTO,
               guildId: e,
             });
       }
@@ -594,7 +594,7 @@
             return S;
           },
           dismissQuestContent: function () {
-            return f;
+            return _;
           },
         });
       var s = n("872717"),
@@ -657,15 +657,18 @@
           });
         }
       }
-      async function c(e) {
-        let t = a.default.isEnrolling(e);
-        if (!t) {
+      async function c(e, t) {
+        let n = a.default.isEnrolling(e);
+        if (!n) {
           i.default.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
           try {
-            let t = await s.default.post({ url: u.Endpoints.QUESTS_ENROLL(e) });
+            let n = await s.default.post({
+              url: u.Endpoints.QUESTS_ENROLL(e),
+              body: { location: t },
+            });
             i.default.dispatch({
               type: "QUESTS_ENROLL_SUCCESS",
-              enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(t.body),
+              enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(n.body),
             });
           } catch (t) {
             i.default.dispatch({ type: "QUESTS_ENROLL_FAILURE", questId: e });
@@ -729,7 +732,7 @@
           }
         }
       }
-      async function f(e, t) {
+      async function _(e, t) {
         let n = a.default.isDismissingContent(e);
         if (!n) {
           i.default.dispatch({
@@ -848,7 +851,7 @@
         let n = a.get(e);
         null != n && a.set(e, { ...n, ...t });
       }
-      function f(e, t) {
+      function _(e, t) {
         let n = new Map(E);
         n.set(e, t), (E = n);
         let s = a.get(e),
@@ -858,7 +861,7 @@
           S(e, n);
         }
       }
-      function _(e) {
+      function f(e) {
         let t = new Set(u);
         t.delete(e), (u = t);
       }
@@ -918,11 +921,11 @@
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
           let { enrolledQuestUserStatus: t } = e;
-          S(t.questId, { userStatus: t }), _(t.questId);
+          S(t.questId, { userStatus: t }), f(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
           let { questId: t } = e;
-          _(t);
+          f(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
           let { questId: t } = e,
@@ -932,7 +935,7 @@
         QUESTS_FETCH_REWARD_CODE_SUCCESS: function (e) {
           let { questId: t, rewardCode: n } = e,
             s = new Set(d);
-          s.delete(t), (d = s), f(t, n);
+          s.delete(t), (d = s), _(t, n);
         },
         QUESTS_FETCH_REWARD_CODE_FAILURE: function (e) {
           let { questId: t } = e,
@@ -947,7 +950,7 @@
         QUESTS_CLAIM_REWARD_CODE_SUCCESS: function (e) {
           let { questId: t, rewardCode: n } = e,
             s = new Set(o);
-          s.delete(t), (o = s), f(t, n);
+          s.delete(t), (o = s), _(t, n);
         },
         QUESTS_CLAIM_REWARD_CODE_FAILURE: function (e) {
           let { questId: t } = e,
@@ -996,7 +999,8 @@
         (a[(a.QUEST_BAR = 1)] = "QUEST_BAR"),
         (a[(a.QUEST_INVENTORY_CARD = 2)] = "QUEST_INVENTORY_CARD"),
         (a[(a.QUESTS_EMBED = 3)] = "QUESTS_EMBED"),
-        (a[(a.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL");
+        (a[(a.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL"),
+        (a[(a.QUEST_LIVE_STREAM = 5)] = "QUEST_LIVE_STREAM");
     },
     227231: function (e, t, n) {
       "use strict";
@@ -1018,10 +1022,10 @@
             return S;
           },
           getHeroStaticAssetUrl: function () {
-            return f;
+            return _;
           },
           getHeroAnimatedAssetUrl: function () {
-            return _;
+            return f;
           },
           getQuestBarStaticHeroAssetUrl: function () {
             return T;
@@ -1134,8 +1138,8 @@
         };
       }
       let S = e => "".concat(l).concat(e).concat("/reward.png"),
-        f = e => "".concat(l).concat(e).concat("/hero.png"),
-        _ = e => "".concat(l).concat(e).concat("/hero.webm"),
+        _ = e => "".concat(l).concat(e).concat("/hero.png"),
+        f = e => "".concat(l).concat(e).concat("/hero.webm"),
         T = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
         C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
         p = e => "".concat(l).concat(e).concat("/game_tile.png"),
@@ -1419,4 +1423,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.9d814ebcc80645f0b2ae.js.map
+//# sourceMappingURL=65656.6a8b75e787708b7abf32.js.map

@@ -36524,11 +36524,14 @@
           LegacySeasonalGiftStyles: function () {
             return eM;
           },
-          SeasonalGiftStyles2023: function () {
+          STANDARD_GIFT_OPTIONS: function () {
             return eU;
           },
-          AllSeasonalGiftStyles: function () {
+          SeasonalGiftStyles2023: function () {
             return eG;
+          },
+          AllSeasonalGiftStyles: function () {
+            return ew;
           },
         }),
         n("222007");
@@ -37157,8 +37160,9 @@
         (x.FLOW_COMPLETED = "share_nitro_flow_completed");
       let eb = new Set(["PL", "TR"]),
         eM = [1, 2, 3],
-        eU = [8, 9, 11, 10],
-        eG = eU.concat(eM);
+        eU = [4, 5, 7, 6],
+        eG = [8, 9, 11, 10],
+        ew = eG.concat(eM);
     },
     45120: function (e, t, n) {
       "use strict";
@@ -60080,7 +60084,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267946",
+                  build_number: "267954",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78955,4 +78959,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.1651dae9a3016dc12182.js.map
+//# sourceMappingURL=41039.2da9060944d78b54287b.js.map

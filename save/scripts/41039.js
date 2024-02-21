@@ -60080,7 +60080,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267921",
+                  build_number: "267925",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78955,4 +78955,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.097c87b200f216d0bc29.js.map
+//# sourceMappingURL=41039.9008d1d30b4fe4cb75b4.js.map

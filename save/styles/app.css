@@ -38607,8 +38607,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -63583,7 +63583,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 10px;
   margin: 32px 0 20px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .viewAllGamesButton__6eb3d {
   margin: 20px auto 40px;
@@ -63599,7 +63599,7 @@ input::-webkit-inner-spin-button {
 }
 .viewAllGames__9b81c,
 .viewAllNitroGames__4193c {
-  font-size: 1rem;
+  font-size: 16px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -63646,7 +63646,7 @@ input::-webkit-inner-spin-button {
   padding-bottom: 10px;
   margin: 32px 0 20px;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 16px;
 }
 .headerBar_afb1ac {
   transform: translatez(0);
@@ -108743,4 +108743,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3d77d5900fa2de9137b1.css.map*/
+/*# sourceMappingURL=app.fea7683e182f067b8695.css.map*/

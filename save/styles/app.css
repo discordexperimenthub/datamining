@@ -23447,12 +23447,17 @@ html .progress__4ef76 {
   position: absolute;
   width: 660px;
 }
-.headerContent__8ec3c {
+.header__6145e {
   position: absolute;
   padding: 24px 16px 20px;
   height: 100%;
   width: 100%;
   z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.headerContent__8ec3c {
+  flex: 1;
 }
 .iconLogotypeContainer_e2a170 {
   display: flex;
@@ -23491,6 +23496,42 @@ html .progress__4ef76 {
 }
 .theme-dark .outerContainer_d63ffb:after {
   background: linear-gradient(90deg, #000, rgba(0, 0, 0, 0));
+}
+.submenuWrapper_dcff9a {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  height: 32px;
+  opacity: 0.9;
+  position: relative;
+  transition: background-color.125s, opacity.125s;
+  width: 32px;
+}
+.submenuWrapper_dcff9a:focus,
+.submenuWrapper_dcff9a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.submenuWrapper_dcff9a:active {
+  opacity: 0.7;
+}
+.submenuIcon__762a6 {
+  color: var(--white-500);
+  height: 24px;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  width: 24px;
+}
+.theme-light .header__6145e {
+  background: linear-gradient(
+    90deg,
+    var(--white-100) 0.04%,
+    rgba(255, 255, 255, 0)
+  );
+}
+.theme-dark .header__6145e {
+  background: linear-gradient(90deg, var(--black-500) 0.04%, rgba(0, 0, 0, 0));
 }
 .questsCard_a68cbc {
   width: 660px;
@@ -38607,8 +38648,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -108746,4 +108787,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.8ebd8c4cbd532c09437a.css.map*/
+/*# sourceMappingURL=app.e8edf3138c8d174321ac.css.map*/

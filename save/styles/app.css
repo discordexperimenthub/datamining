@@ -38607,8 +38607,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -106308,7 +106308,7 @@ div.nagbar_c731ff {
   --spoiler-hidden-background: var(--primary-700);
   --spoiler-revealed-background: var(--primary-660);
   --status-danger: var(--red-400);
-  --status-danger-background: var(--red-400);
+  --status-danger-background: var(--red-430);
   --status-danger-text: var(--white-500);
   --status-dnd: var(--red-400);
   --status-idle: var(--yellow-300);
@@ -106484,7 +106484,7 @@ div.nagbar_c731ff {
   --embed-background-alternate: var(--primary-200);
   --embed-title: var(--primary-860);
   --expression-picker-bg: var(--primary-130);
-  --focus-primary: var(--blue-345);
+  --focus-primary: var(--blue-360);
   --forum-post-extra-media-count-container-background: hsl(
     var(--primary-160-hsl) / 0.8
   );
@@ -106974,7 +106974,7 @@ div.nagbar_c731ff {
   --spoiler-hidden-background: var(--plum-14);
   --spoiler-revealed-background: hsl(var(--plum-11-hsl) / 0.16);
   --status-danger: var(--red-400);
-  --status-danger-background: var(--red-400);
+  --status-danger-background: var(--red-430);
   --status-danger-text: var(--white-500);
   --status-dnd: var(--red-400);
   --status-idle: var(--yellow-300);
@@ -107305,7 +107305,7 @@ div.nagbar_c731ff {
   --spoiler-hidden-background: var(--plum-14);
   --spoiler-revealed-background: hsl(var(--plum-11-hsl) / 0.16);
   --status-danger: var(--red-400);
-  --status-danger-background: var(--red-400);
+  --status-danger-background: var(--red-430);
   --status-danger-text: var(--white-500);
   --status-dnd: var(--red-400);
   --status-idle: var(--yellow-300);
@@ -108698,4 +108698,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.5ccb2c7732d6c77ce561.css.map*/
+/*# sourceMappingURL=app.0e0bcd474babeaf558c3.css.map*/

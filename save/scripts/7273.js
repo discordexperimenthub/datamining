@@ -8492,7 +8492,7 @@
           FOCUS_PRIMARY: {
             category: "generic",
             [a.DARK]: { raw: "BLUE_345", opacity: 1 },
-            [a.LIGHT]: { raw: "BLUE_345", opacity: 1 },
+            [a.LIGHT]: { raw: "BLUE_360", opacity: 1 },
             [a.MIDNIGHT]: { raw: "BLUE_345", opacity: 1 },
             [a.DARKER]: { raw: "BLUE_345", opacity: 1 },
           },
@@ -9510,10 +9510,10 @@
           },
           STATUS_DANGER_BACKGROUND: {
             category: "generic",
-            [a.DARK]: { raw: "RED_400", opacity: 1 },
+            [a.DARK]: { raw: "RED_430", opacity: 1 },
             [a.LIGHT]: { raw: "RED_430", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "RED_400", opacity: 1 },
-            [a.DARKER]: { raw: "RED_400", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "RED_430", opacity: 1 },
+            [a.DARKER]: { raw: "RED_430", opacity: 1 },
           },
           STATUS_DANGER_TEXT: {
             category: "text",
@@ -14915,7 +14915,7 @@
         ],
         "focus-primary": [
           o.Color.BLUE_345,
-          o.Color.BLUE_345,
+          o.Color.BLUE_360,
           o.Color.BLUE_345,
           o.Color.BLUE_345,
         ],
@@ -15760,10 +15760,10 @@
           o.Color.RED_400,
         ],
         "status-danger-background": [
-          o.Color.RED_400,
           o.Color.RED_430,
-          o.Color.RED_400,
-          o.Color.RED_400,
+          o.Color.RED_430,
+          o.Color.RED_430,
+          o.Color.RED_430,
         ],
         "status-danger-text": [
           o.Color.WHITE_500,
@@ -17272,4 +17272,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.f11fce97cf676cbceac2.js.map
+//# sourceMappingURL=7273.254b706dc67d3f30b598.js.map

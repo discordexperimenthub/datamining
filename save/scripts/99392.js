@@ -24083,6 +24083,7 @@
           "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser you can go to **User Settings > Gift Inventory** and accept the quest there.",
         QUESTS_GET_THIS_GAME: "Get this game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
+        QUESTS_SHARE_LINK: "Copy share link",
         QUESTS_HIDE_THIS: "Hide this",
         QUESTS_FIND_QUEST:
           "You can find this again in User Settings > Gift Inventory",
@@ -26009,8 +26010,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267892", ", Version Hash: ")
-          .concat("c134521e14a38266137174715ebf925ab4df6302")
+          .concat("267921", ", Version Hash: ")
+          .concat("514ca0e8fd6d07e68efb0f06329fce4e3db66128")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29083,12 +29084,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267892"), "267892"));
+        let _ = parseInt(((e = "267921"), "267921"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267892"
+                "267921"
               )
             ),
             (_ = 0)),
@@ -34946,8 +34947,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708549985598",
-                    build_number: "267892",
+                    built_at: "1708552460457",
+                    build_number: "267921",
                   },
                 },
                 retries: 1,
@@ -51287,4 +51288,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.7201a5751232c05c3783.js.map
+//# sourceMappingURL=99392.8e54f3b7d9ab9b529712.js.map

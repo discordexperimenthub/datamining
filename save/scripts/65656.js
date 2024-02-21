@@ -1035,23 +1035,26 @@
           getGameLogotypeAssetUrl: function () {
             return A;
           },
-          getQuestForTargetedContent: function () {
+          getQuestUrl: function () {
             return g;
           },
-          getPlatformString: function () {
+          getQuestForTargetedContent: function () {
             return h;
           },
-          calculatePercentComplete: function () {
+          getPlatformString: function () {
             return I;
           },
-          getContextualEntrypointHeading: function () {
+          calculatePercentComplete: function () {
             return m;
           },
-          isDismissible: function () {
+          getContextualEntrypointHeading: function () {
             return R;
           },
-          isDismissed: function () {
+          isDismissible: function () {
             return N;
+          },
+          isDismissed: function () {
+            return U;
           },
         }),
         n("222007");
@@ -1137,13 +1140,18 @@
         C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
         p = e => "".concat(l).concat(e).concat("/game_tile.png"),
         A = (e, t) =>
-          "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png");
-      function g(e, t) {
+          "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
+        g = e =>
+          ""
+            .concat(location.protocol, "//")
+            .concat(location.host, "/quests/")
+            .concat(e);
+      function h(e, t) {
         for (let [n, s] of e)
           if (!o(s) && s.targetedContent.includes(t)) return s;
         return null;
       }
-      let h = e => {
+      let I = e => {
         switch (e) {
           case i.QuestRewardCodePlatforms.XBOX:
             return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -1158,14 +1166,14 @@
               .QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
         }
       };
-      function I(e) {
+      function m(e) {
         if (null == e.userStatus) return 0;
         let { streamProgressSeconds: t, completedAt: n } = e.userStatus;
         if (null != n) return 1;
         let { streamDurationRequirementMinutes: s } = e.config;
         return Math.min(t / 60 / s, 1);
       }
-      function m(e) {
+      function R(e) {
         var t, n;
         if (
           (null === (t = e.userStatus) || void 0 === t
@@ -1178,7 +1186,7 @@
             ? void 0
             : n.enrolledAt) != null
         ) {
-          let t = I(e);
+          let t = m(e);
           return t >= 0.75
             ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE
             : t >= 0.45 && t <= 0.55
@@ -1191,10 +1199,10 @@
           questName: e.config.messages.questName,
         });
       }
-      function R(e) {
+      function N(e) {
         return e in r.DismissibleQuestContentFlags;
       }
-      function N(e, t) {
+      function U(e, t) {
         return (0, s.hasFlag)(
           e.dismissedQuestContent,
           r.DismissibleQuestContentFlags[t]
@@ -1411,4 +1419,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.00ef0cc79201f60071a3.js.map
+//# sourceMappingURL=65656.9d814ebcc80645f0b2ae.js.map

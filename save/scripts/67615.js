@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["98239"],
+  ["67615"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -29698,8 +29698,8 @@
         y = n("290886"),
         T = n("374021"),
         C = n("398604"),
-        S = n("704341"),
-        I = n("9294"),
+        I = n("704341"),
+        S = n("9294"),
         A = n("487946"),
         D = n("258158"),
         N = n("877275"),
@@ -30094,7 +30094,7 @@
         acceptInvite(e) {
           var t, s, i;
           let { inviteKey: r, context: a, callback: o, skipOnboarding: d } = e,
-            f = (0, I.parseExtraDataFromInviteKey)(r),
+            f = (0, S.parseExtraDataFromInviteKey)(r),
             c = f.baseCode,
             g = V.default.getSessionId();
           let m =
@@ -30199,7 +30199,7 @@
               ? void 0
               : n.includes(W.GuildFeatures.HUB))
           ) {
-            S.default.onOpenHubInvite(e);
+            I.default.onOpenHubInvite(e);
             return;
           }
           if (
@@ -30239,7 +30239,7 @@
         openApp(e, t, n, s, r) {
           var u, f;
           let _;
-          let c = null != e ? (0, I.parseExtraDataFromInviteKey)(e) : null,
+          let c = null != e ? (0, S.parseExtraDataFromInviteKey)(e) : null,
             g = null == c ? void 0 : c.baseCode;
           if (
             (l.default.dispatch({ type: "INVITE_APP_OPENING", code: e }),
@@ -30784,8 +30784,8 @@
         y = n("12307"),
         T = n("840707"),
         C = n("561288"),
-        S = n("450911"),
-        I = n("255397"),
+        I = n("450911"),
+        S = n("255397"),
         A = n("987317"),
         D = n("49111"),
         N = n("706530");
@@ -30832,7 +30832,7 @@
         }),
           !a &&
             (null == t || !t.noFocus) &&
-            I.default.selectParticipant(e.channelId, r);
+            S.default.selectParticipant(e.channelId, r);
       }
       function R(e, t) {
         o.default.dispatch({
@@ -30935,7 +30935,7 @@
             options: { pid: n, sourceId: s, sourceName: i },
           }),
           null == t
-            ? S.default.createBroadcastPrivateChannel()
+            ? I.default.createBroadcastPrivateChannel()
             : O(null, t, { pid: n, sourceId: s, sourceName: i }));
       }
       function x(e, t) {
@@ -30943,7 +30943,7 @@
           s = (0, u.decodeStreamKey)(t),
           i = h.default.getVoiceChannelId();
         null != i && i !== e && A.default.disconnect(),
-          S.default.addRecipient(e, n, void 0, () => {
+          I.default.addRecipient(e, n, void 0, () => {
             C.default.call(e, !1, !1, null, () => {
               k(s);
             });
@@ -32472,8 +32472,8 @@
             y = null !== (t = e.isBefore) && void 0 !== t && t,
             T = null !== (n = e.isAfter) && void 0 !== n && n,
             C = null !== (s = e.jump) && void 0 !== s ? s : null,
-            S = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
-            I = null !== (d = e.hasMoreAfter) && void 0 !== d && d,
+            I = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+            S = null !== (d = e.hasMoreAfter) && void 0 !== d && d,
             A = null !== (l = e.cached) && void 0 !== l && l,
             D = i(p)
               .reverse()
@@ -32538,8 +32538,8 @@
               void 0 !== E
                 ? E
                 : null,
-            hasMoreBefore: null == C && T ? N.hasMoreBefore : S,
-            hasMoreAfter: null == C && y ? N.hasMoreAfter : I,
+            hasMoreBefore: null == C && T ? N.hasMoreBefore : I,
+            hasMoreAfter: null == C && y ? N.hasMoreAfter : S,
             cached: A,
             hasFetched: e.hasFetched,
             error: !1,
@@ -32760,9 +32760,9 @@
         y = n("231987"),
         T = n("980134"),
         C = n("282928"),
-        S = n("49111");
-      let I = null;
-      __OVERLAY__ && (I = n("901165").default),
+        I = n("49111");
+      let S = null;
+      __OVERLAY__ && (S = n("901165").default),
         ((r = s || (s = {})).OVERLAY_UNLOCKED = "overlay_unlocked"),
         (r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned"),
         (r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated"),
@@ -32805,7 +32805,7 @@
         startQueueMetricTimers(e) {
           let t = O.map(e =>
             setTimeout(() => {
-              (0, _.trackWithMetadata)(S.AnalyticEvents.SEND_MESSAGE_QUEUED, {
+              (0, _.trackWithMetadata)(I.AnalyticEvents.SEND_MESSAGE_QUEUED, {
                 queued_duration_ms: e,
               });
             }, e)
@@ -32828,8 +32828,8 @@
             )
               return t(null, n);
             null != n.body &&
-            (n.body.code === S.AbortCodes.SLOWMODE_RATE_LIMITED ||
-              n.body.code === S.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
+            (n.body.code === I.AbortCodes.SLOWMODE_RATE_LIMITED ||
+              n.body.code === I.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
               ? t(null, n)
               : 429 === n.status
                 ? t({
@@ -32861,11 +32861,11 @@
               });
             return;
           }
-          null != I &&
-            (I.isInstanceUILocked()
+          null != S &&
+            (S.isInstanceUILocked()
               ? (n = { location: "overlay_locked_activated" })
-              : !I.isInstanceUILocked() &&
-                (n = I.isPinned(S.OverlayWidgets.TEXT)
+              : !S.isInstanceUILocked() &&
+                (n = S.isPinned(I.OverlayWidgets.TEXT)
                   ? { location: "overlay_unlocked_pinned" }
                   : { location: "overlay_unlocked" }));
           let f = this.createResponseHandler(e.nonce, t),
@@ -32876,7 +32876,7 @@
           )
             l.default.post(
               {
-                url: S.Endpoints.MESSAGES(s),
+                url: I.Endpoints.MESSAGES(s),
                 fields: Object.entries(d).map(e => {
                   let [t, n] = e;
                   return { name: t, value: n };
@@ -32899,7 +32899,7 @@
             };
             l.default.post(
               {
-                url: S.Endpoints.MESSAGES(s),
+                url: I.Endpoints.MESSAGES(s),
                 body: d,
                 context: n,
                 oldFormErrors: !0,
@@ -32918,7 +32918,7 @@
             r = new AbortController();
           l.default.patch(
             {
-              url: S.Endpoints.MESSAGE(n, s),
+              url: I.Endpoints.MESSAGE(n, s),
               body: i,
               retries: 1,
               oldFormErrors: !0,
@@ -32967,7 +32967,7 @@
           let m = new AbortController();
           l.default.post(
             {
-              url: S.Endpoints.INTERACTIONS,
+              url: I.Endpoints.INTERACTIONS,
               fields: [{ name: "payload_json", value: JSON.stringify(g) }],
               attachments: n,
               signal: m.signal,
@@ -33198,8 +33198,8 @@
         y = n("337543"),
         T = n("18494"),
         C = n("162771"),
-        S = n("677099"),
-        I = n("599110"),
+        I = n("677099"),
+        S = n("599110"),
         A = n("253981");
       n("545158");
       var D = n("49111");
@@ -33230,7 +33230,7 @@
           await N(n, e.code);
           return;
         }
-        let s = S.default.getFlattenedGuildIds(),
+        let s = I.default.getFlattenedGuildIds(),
           i =
             null == n
               ? void 0
@@ -33262,7 +33262,7 @@
                   ? t
                   : void 0;
             return (
-              I.default.track(
+              S.default.track(
                 D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED,
                 {
                   application_id: i,
@@ -33305,10 +33305,10 @@
               !0
             );
           };
-        let { path: o, hostname: y = "", host: S, query: N } = i.parse(e),
+        let { path: o, hostname: y = "", host: I, query: N } = i.parse(e),
           b =
             A.default.isDiscordHostname(y) ||
-            A.default.isDiscordLocalhost(S, y);
+            A.default.isDiscordLocalhost(I, y);
         if (
           b &&
           (null == o ? void 0 : o.startsWith("/application-directory"))
@@ -33329,7 +33329,7 @@
               "search" === e && (f = d.SEARCH),
               null != s &&
                 ((f = d.APPLICATION),
-                I.default.track(
+                S.default.track(
                   D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED,
                   {
                     application_id: s,
@@ -33442,7 +33442,7 @@
             return s;
           },
           CloudUpload: function () {
-            return S;
+            return I;
           },
         }),
         n("222007"),
@@ -33473,7 +33473,7 @@
         (i.ERROR = "ERROR"),
         (i.COMPLETED = "COMPLETED"),
         (i.CANCELED = "CANCELED");
-      class S extends E.default {
+      class I extends E.default {
         static fromJson(e) {
           let {
               item: t,
@@ -33481,7 +33481,7 @@
               showLargeMessageDialog: s,
               reactNativeFileIndex: i,
             } = e,
-            r = new S(t, n, s, i);
+            r = new I(t, n, s, i);
           return (
             "COMPLETED" !== r.status && (r.status = "NOT_STARTED"),
             Object.entries(e).forEach(e => {
@@ -34393,8 +34393,8 @@
         y = new Map(),
         T = new Map(),
         C = new Map(),
-        S = new Map(),
-        I = !1,
+        I = new Map(),
+        S = !1,
         A = new Map(),
         D = new Map(),
         N = new Map(),
@@ -34450,9 +34450,9 @@
             url: g,
             userIds: new Set(f),
           },
-          I = o.default.getId(),
+          S = o.default.getId(),
           A = y.get(p.applicationId);
-        f.some(e => e === I) &&
+        f.some(e => e === S) &&
           null != A &&
           (y.set(A.applicationId, { ...A, ...p }),
           r.default.dispatch({
@@ -34462,9 +34462,9 @@
           })),
           null != A &&
             i === A.channelId &&
-            !f.some(e => e === I) &&
-            Array.from(A.userIds).some(e => e === I) &&
-            (S.get(i) === a ? S.delete(i) : y.delete(a));
+            !f.some(e => e === S) &&
+            Array.from(A.userIds).some(e => e === S) &&
+            (I.get(i) === a ? I.delete(i) : y.delete(a));
         let D = null !== (t = C.get(i)) && void 0 !== t ? t : [],
           N = D.filter(e => e.applicationId !== a),
           O = M(s),
@@ -34486,7 +34486,7 @@
         });
       }
       function U() {
-        I = !1;
+        S = !1;
       }
       function G(e, t) {
         return "".concat(e, ":").concat(t);
@@ -34545,7 +34545,7 @@
           return null == n ? null : Date.now() - n;
         }
         isLaunchingActivity() {
-          return I;
+          return S;
         }
         getShelfActivities(e) {
           var t;
@@ -34702,7 +34702,7 @@
           }
         },
         EMBEDDED_ACTIVITY_LAUNCH_START: function () {
-          I = !0;
+          S = !0;
         },
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: U,
         EMBEDDED_ACTIVITY_LAUNCH_FAIL: U,
@@ -34888,13 +34888,13 @@
             applicationId: n,
             isRejoiningFromCurrentSession: s,
           } = e;
-          s && S.set(t, n);
+          s && I.set(t, n);
         },
         CONNECTION_INTERRUPTED: function (e) {
           e.code === v.RPCCloseCodes.CLOSE_ABNORMAL &&
             ((s = void 0),
             y.clear(),
-            (I = !1),
+            (S = !1),
             (R = h.ActivityPanelModes.DISCONNECTED));
         },
       });
@@ -35120,8 +35120,8 @@
         y = n("162771"),
         T = n("282109"),
         C = n("800762"),
-        S = n("599110"),
-        I = n("718517"),
+        I = n("599110"),
+        S = n("718517"),
         A = n("991170"),
         D = n("761932"),
         N = n("49111"),
@@ -35217,7 +35217,7 @@
         let a =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
           o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (S.default.isThrottled(e)) return;
+        if (I.default.isThrottled(e)) return;
         let d =
             !("location" in a) ||
             a.location !== N.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
@@ -35251,14 +35251,14 @@
             ? ((r = 0), { channel_static_route: f, channel_hidden: !1 })
             : R(_)),
         };
-        S.default.track(e, g, { flush: o });
+        I.default.track(e, g, { flush: o });
       }
       function w(e) {
         let t = u.default.getChannel(e);
         if (null == t || null == t.guild_id) return {};
         let n = c.default.getGuild(t.guild_id);
         if (null == n) return {};
-        let s = E.default.getSnapshot(e, 10 * I.default.Millis.SECOND);
+        let s = E.default.getSnapshot(e, 10 * S.default.Millis.SECOND);
         return {
           channel_was_unread: s.unread,
           channel_mention_count: s.mentionCount,
@@ -35508,18 +35508,12 @@
               )
             : null != e.emojis && this.replace(e.id, e.emojis, t);
         }
-        handleClearGuildCache(e) {
-          this.clear(e);
-        }
-        handleReset() {}
+        resetInMemoryState() {}
         replace(e, t, n) {
           i.default.emojisTransaction(n).replaceAll(e, t);
         }
         delete(e, t) {
           i.default.emojisTransaction(t).delete(e);
-        }
-        clear(e) {
-          i.default.emojisTransaction(e).delete();
         }
         update(e, t, n, s) {
           let r = i.default.emojisTransaction(s);
@@ -35528,7 +35522,6 @@
         constructor() {
           this.actions = {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-            CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
@@ -35622,18 +35615,12 @@
                 t
               );
         }
-        handleClearGuildCache(e) {
-          this.clear(e);
-        }
-        handleReset() {}
+        resetInMemoryState() {}
         replace(e, t, n) {
           i.default.stickersTransaction(n).replaceAll(e, t);
         }
         delete(e, t) {
           i.default.stickersTransaction(t).delete(e);
-        }
-        clear(e) {
-          i.default.stickersTransaction(e).delete();
         }
         update(e, t, n, s) {
           let r = i.default.stickersTransaction(s);
@@ -35642,7 +35629,6 @@
         constructor() {
           this.actions = {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-            CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
             GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
@@ -35752,10 +35738,7 @@
             this.updateWith(e.channel.guild_id, [e.channel]),
             this.commit(t);
         }
-        handleClearGuildCache(e) {
-          this.reset(), r.default.guildVersionsTransaction(e).delete();
-        }
-        handleReset() {
+        resetInMemoryState() {
           this.reset();
         }
         reset() {
@@ -35801,7 +35784,6 @@
               CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
               CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
               CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-              CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
               CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
               GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
               GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
@@ -35826,50 +35808,117 @@
         });
       var s = n("605250"),
         i = n("802493"),
-        r = n("723939");
-      let a = "version";
-      new s.default("KvCacheVersion");
+        r = n("791109");
+      let a = new s.default("KvCacheVersion");
       var o = new (class e {
         async okAsync(e) {
-          let t = await i.default.cache(e).get(a);
-          return null == t ? null : 3 === t;
+          let t = await i.default
+            .cache(e)
+            .get(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY);
+          return null == t
+            ? null
+            : t === r.VERSION_TO_SKIP_READING_THE_DATABASE;
         }
-        handleClearGuildCache(e) {
-          i.default.cacheTransaction(e).delete(a),
-            i.default.cacheTransaction(e).delete("CacheStore.Nonce"),
-            r.default.replaceDisableAllDatabases(
-              "CLEAR_GUILD_CACHE (via KvCacheVersion)"
-            );
+        canUseGuildVersions() {
+          return this.hasSuccessfullyConnected
+            ? Promise.resolve(!0)
+            : this.doesDatabaseVersionMatchJsConstants();
+        }
+        async doesDatabaseVersionMatchJsConstants() {
+          let e = i.default.forceResyncVersion();
+          if (null == e) return !1;
+          let t = await e.get(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY),
+            n = null == t ? void 0 : t.version;
+          return (
+            n === r.VERSION_TO_FORCE_RESYNCING_ALL_DATA ||
+            (a.info(
+              "KVStore version mismatch: "
+                .concat(n, " vs ")
+                .concat(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA)
+            ),
+            !1)
+          );
+        }
+        handleClear() {
+          this.hasSuccessfullyConnected = !1;
+        }
+        handleConnectionOpen() {
+          this.hasSuccessfullyConnected = !0;
         }
         handleWrite(e) {
-          i.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"),
-            i.default.cacheTransaction(e).put(a, 3);
+          (this.hasSuccessfullyConnected = !0),
+            i.default.cacheTransaction(e).put(r.HELLO_KEY, "\uD83D\uDC4B"),
+            i.default
+              .cacheTransaction(e)
+              .put(
+                r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY,
+                r.VERSION_TO_SKIP_READING_THE_DATABASE
+              ),
+            i.default
+              .forceResyncVersionTransaction(e)
+              .put(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY, {
+                version: r.VERSION_TO_FORCE_RESYNCING_ALL_DATA,
+              });
         }
-        handleReset() {}
+        resetInMemoryState() {
+          this.hasSuccessfullyConnected = !1;
+        }
         constructor() {
-          this.actions = {
-            CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
-            CONNECTION_OPEN: (e, t) => this.handleWrite(t),
-            WRITE_CACHES: (e, t) => this.handleWrite(t),
-          };
+          (this.hasSuccessfullyConnected = !1),
+            (this.actions = {
+              BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
+              CONNECTION_OPEN: () => this.handleConnectionOpen(),
+              WRITE_CACHES: (e, t) => this.handleWrite(t),
+            });
         }
       })();
+    },
+    791109: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          HELLO_KEY: function () {
+            return s;
+          },
+          VERSION_TO_SKIP_READING_THE_DATABASE_KEY: function () {
+            return i;
+          },
+          VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: function () {
+            return r;
+          },
+          VERSION_TO_SKIP_READING_THE_DATABASE: function () {
+            return a;
+          },
+          VERSION_TO_FORCE_RESYNCING_ALL_DATA: function () {
+            return o;
+          },
+        });
+      let s = "hello",
+        i = "version",
+        r = "force-resync-version",
+        a = 3,
+        o = "stable-52";
     },
     11275: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return a;
+            return f;
           },
         });
-      var s = n("605250"),
-        i = n("802493");
-      let r = new s.default("NonGuildVersions");
-      var a = new (class e {
+      var s = n("917351"),
+        i = n.n(s),
+        r = n("400683"),
+        a = n("605250"),
+        o = n("162771"),
+        d = n("718517"),
+        u = n("802493");
+      let l = new a.default("NonGuildVersions");
+      var f = new (class e {
         async getCommittedVersions() {
           try {
-            let e = i.default.nonGuildVersions();
+            let e = u.default.nonGuildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map(e => [
               e.id,
@@ -35877,26 +35926,42 @@
             ]);
             return Object.fromEntries(null != t ? t : []);
           } catch (e) {
-            return r.warn("couldn't load guild versions", e), {};
+            return l.warn("couldn't load guild versions", e), {};
           }
         }
         handleConnectionOpen(e, t) {
           null != e.apiCodeVersion &&
-            i.default
+            u.default
               .nonGuildVersionsTransaction(t)
               .put({ id: "api_code_version", version: e.apiCodeVersion });
         }
-        handleClear(e) {
-          i.default.nonGuildVersionsTransaction(e).delete();
-        }
-        handleReset() {}
+        resetInMemoryState() {}
         constructor() {
-          this.actions = {
-            CLEAR_CACHES: (e, t) => this.handleClear(t),
-            CLEAR_GUILD_CACHE: (e, t) => this.handleClear(t),
-            CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
-            BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t),
-          };
+          if (
+            ((this.actions = {
+              CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+              BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t),
+            }),
+            !(0, r.isCacheEnabled)())
+          )
+            return;
+          o.default.addChangeListener(
+            i.throttle(() => {
+              var e;
+              null === (e = u.default.database()) ||
+                void 0 === e ||
+                e.transaction(e => {
+                  let t = o.default.getGuildId();
+                  null == t || isNaN(Number(t))
+                    ? u.default
+                        .nonGuildVersionsTransaction(e)
+                        .delete("initial_guild_id")
+                    : u.default
+                        .nonGuildVersionsTransaction(e)
+                        .put({ id: "initial_guild_id", versionString: t });
+                });
+            }, 10 * d.default.Millis.SECOND)
+          );
         }
       })();
     },
@@ -36209,10 +36274,10 @@
             return C;
           },
           buildApplicationCommands: function () {
-            return S;
+            return I;
           },
           isSnowflake: function () {
-            return I;
+            return S;
           },
           getMatchingGroupCommands: function () {
             return A;
@@ -36391,7 +36456,7 @@
           global_popularity_rank: r.global_popularity_rank,
         };
       }
-      function S(e, t) {
+      function I(e, t) {
         return d.flatMap(
           e,
           e => (
@@ -36500,7 +36565,7 @@
           )
         );
       }
-      function I(e) {
+      function S(e) {
         return y.ID_REGEX.test(e.trim());
       }
       function A(e, t, n, s) {
@@ -37190,149 +37255,17 @@
         ((i = s || (s = {}))[(i.GLOBAL = 0)] = "GLOBAL"),
         (i[(i.GUILD = 1)] = "GUILD");
     },
-    548578: function (e, t, n) {
+    400683: function (e, t, n) {
       "use strict";
+      function s() {
+        return !0;
+      }
       n.r(t),
         n.d(t, {
-          MAX_CACHE_AGE_MS: function () {
-            return i;
-          },
-          CACHE_VERSION: function () {
-            return r;
-          },
-          getDefaultState: function () {
-            return a;
+          isCacheEnabled: function () {
+            return s;
           },
         });
-      var s = n("718517");
-      let i = 30 * s.default.Millis.DAY,
-        r = "stable-51";
-      function a() {
-        return {
-          nonce: "",
-          useGuildVersions: !1,
-          version: r,
-          cacheCreationDate: null,
-          guildIdsRequiringDeletedIdsSync: [],
-          lastSelectedGuildId: null,
-        };
-      }
-    },
-    288206: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return T;
-          },
-        }),
-        n("222007");
-      var s = n("446674"),
-        i = n("913144"),
-        r = n("105059"),
-        a = n("11275"),
-        o = n("605250"),
-        d = n("271938"),
-        u = n("162771"),
-        l = n("91131"),
-        f = n("70754"),
-        _ = n("548578");
-      let c = new o.default("ClientStateStore"),
-        g = l.initialState.nonce,
-        m = l.initialState.useGuildVersions,
-        h = l.initialState.cacheCreationDate,
-        v = l.initialState.lastSelectedGuildId,
-        E = !1;
-      function p() {
-        l.clear();
-      }
-      class y extends s.default.Store {
-        initialize() {
-          this.waitFor(d.default),
-            this.syncWith([u.default], () => {
-              if (!E) return !1;
-              v = u.default.getGuildId();
-            });
-        }
-        persist(e) {
-          c.verbose("writing ClientStateStore (nonce: ".concat(e, ")")),
-            null == h && (h = Date.now()),
-            (g = e),
-            l.persist(d.default.getId(), {
-              nonce: e,
-              version: _.CACHE_VERSION,
-              useGuildVersions: m,
-              cacheCreationDate: h,
-              lastSelectedGuildId: v,
-            });
-        }
-        clear() {
-          p();
-        }
-        async getClientState() {
-          let [e, t] = await Promise.all([
-            m && (0, f.isCacheEnabled)()
-              ? r.default.getCommittedVersions()
-              : Promise.resolve({}),
-            m && (0, f.isCacheEnabled)()
-              ? a.default.getCommittedVersions()
-              : Promise.resolve({}),
-          ]);
-          return {
-            knownGuildVersions: e,
-            highestLastMessageId: t.highest_last_message_id,
-            readStateVersion: t.read_state_version,
-            userGuildSettingsVersion: t.user_guild_settings_version,
-            privateChannelsVersion: t.private_channels_version,
-            apiCodeVersion: t.api_code_version,
-            lastSelectedGuildId: v,
-            userSettingsVersion: t.user_settings_version,
-          };
-        }
-        getSavedNonce() {
-          return g;
-        }
-      }
-      y.displayName = "ClientStateStore";
-      var T = new y(i.default, {
-        CONNECTION_OPEN: function () {
-          (E = !0), (m = !0);
-        },
-        CLEAR_GUILD_CACHE: p,
-        CLEAR_CACHES: p,
-        LOGOUT: p,
-        LOGIN: p,
-      });
-    },
-    91131: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          initialState: function () {
-            return o;
-          },
-          persist: function () {
-            return d;
-          },
-          clear: function () {
-            return u;
-          },
-        });
-      var s = n("95410"),
-        i = n("548578");
-      let r = "ClientStateStore",
-        a = (0, i.getDefaultState)();
-      (a.version === i.CACHE_VERSION &&
-        null != a.cacheCreationDate &&
-        a.cacheCreationDate + i.MAX_CACHE_AGE_MS > Date.now()) ||
-        (a = (0, i.getDefaultState)());
-      let o = a;
-      function d(e, t) {
-        s.default.set(r, t);
-      }
-      function u() {
-        s.default.remove(r);
-      }
     },
     70754: function (e, t, n) {
       "use strict";
@@ -37380,8 +37313,8 @@
         y = n("387111"),
         T = n("246846"),
         C = n("99795"),
-        S = n("49111"),
-        I = n("353927");
+        I = n("49111"),
+        S = n("353927");
       let A = "__EMBEDDED_ACTIVITIES__";
       function D(e) {
         switch (e.type) {
@@ -37426,7 +37359,7 @@
           }
           rebuild() {
             let e = g.default.getChannel(this.channelId);
-            if (null == e || e.type === S.ChannelTypes.GUILD_TEXT) return !1;
+            if (null == e || e.type === I.ChannelTypes.GUILD_TEXT) return !1;
             if (
               ((this.call = c.default.getCall(this.channelId)),
               e.isPrivate() && (null == this.call || this.call.unavailable))
@@ -37550,7 +37483,7 @@
               return {
                 type: C.ParticipantTypes.ACTIVITY,
                 id: e.applicationId,
-                activityType: S.ActivityTypes.PLAYING,
+                activityType: I.ActivityTypes.PLAYING,
                 activityUrl: e.url,
                 participants: new Set(e.userIds),
                 guildId:
@@ -37572,7 +37505,7 @@
             let c = [],
               T = v.default.getUser(e);
             if (null == T) return c;
-            let S = p.default.getVoiceStateForChannel(this.channelId, e),
+            let I = p.default.getVoiceStateForChannel(this.channelId, e),
               A = p.default.getVoicePlatformForChannel(this.channelId, e),
               D = g.default.getChannel(this.channelId),
               N =
@@ -37585,7 +37518,7 @@
                         : t.includes(e)) &&
                 void 0 !== s &&
                 s;
-            (null != S || N) &&
+            (null != I || N) &&
               ((o = {
                 type: C.ParticipantTypes.USER,
                 ...E.default.getUserStreamData(
@@ -37594,7 +37527,7 @@
                 ),
                 user: T,
                 id: T.id,
-                voiceState: S,
+                voiceState: I,
                 voicePlatform: A,
                 speaking: (0, d.getIsSpeaking)({ userId: e, checkIsMuted: !0 }),
                 lastSpoke:
@@ -37640,7 +37573,7 @@
                 ...E.default.getUserStreamData(
                   e,
                   null == D ? void 0 : D.getGuildId(),
-                  I.MediaEngineContextTypes.STREAM
+                  S.MediaEngineContextTypes.STREAM
                 ),
                 ...i,
                 type: s
@@ -37648,7 +37581,7 @@
                   : C.ParticipantTypes.STREAM,
                 id: t,
                 userVideo:
-                  null !== (a = null == S ? void 0 : S.selfVideo) &&
+                  null !== (a = null == I ? void 0 : I.selfVideo) &&
                   void 0 !== a &&
                   a,
                 user: T,
@@ -37723,8 +37656,8 @@
         y = n("555035"),
         T = n("800762"),
         C = n("949719"),
-        S = n("99795"),
-        I = n("49111");
+        I = n("99795"),
+        S = n("49111");
       let A = new l.default("ChannelRTCStore"),
         D = Object.freeze([]),
         N = [],
@@ -37752,8 +37685,8 @@
                 let t = G(e);
                 if (0 === t.size()) return;
                 let n =
-                  ee(e) || K(t) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE;
-                n === I.ChannelModes.VOICE
+                  ee(e) || K(t) ? S.ChannelModes.VIDEO : S.ChannelModes.VOICE;
+                n === S.ChannelModes.VOICE
                   ? (delete V[e], delete R[e])
                   : (V[e] = n);
               })(n),
@@ -37764,17 +37697,17 @@
                   j(e, null);
                   return;
                 }
-                let s = S.ParticipantSelectionTypes.NONE,
+                let s = I.ParticipantSelectionTypes.NONE,
                   r = n
                     .toArray(C.ChannelRTCParticipantsIndexes.STREAM)
                     .find(
                       e =>
-                        e.type === S.ParticipantTypes.STREAM &&
+                        e.type === I.ParticipantTypes.STREAM &&
                         c.default.getActiveStreamForStreamKey(e.id)
                     );
                 if (null != r)
                   i(
-                    r.type === S.ParticipantTypes.STREAM,
+                    r.type === I.ParticipantTypes.STREAM,
                     "Impossible condition"
                   ),
                     (s = r.id);
@@ -37788,7 +37721,7 @@
                     .toArray()
                     .find(
                       e =>
-                        e.type === S.ParticipantTypes.USER &&
+                        e.type === I.ParticipantTypes.USER &&
                         e.id !== t &&
                         !e.ringing
                     );
@@ -37799,14 +37732,14 @@
                 }
                 let [o] = B(e);
                 if (
-                  o !== S.ParticipantSelectionTypes.AUTO &&
-                  o !== S.ParticipantSelectionTypes.NONE
+                  o !== I.ParticipantSelectionTypes.AUTO &&
+                  o !== I.ParticipantSelectionTypes.NONE
                 ) {
                   let e = n.getParticipant(o);
                   (null == e ||
-                    (e.type === S.ParticipantTypes.STREAM &&
+                    (e.type === I.ParticipantTypes.STREAM &&
                       null == c.default.getActiveStreamForStreamKey(e.id))) &&
-                    (o = S.ParticipantSelectionTypes.NONE);
+                    (o = I.ParticipantSelectionTypes.NONE);
                 }
                 j(e, [o, s]);
               })(n),
@@ -37823,17 +37756,17 @@
         var t;
         let n = h.default.getChannel(e),
           s = (null == n ? void 0 : n.isDM())
-            ? S.ParticipantSelectionTypes.AUTO
-            : S.ParticipantSelectionTypes.NONE;
+            ? I.ParticipantSelectionTypes.AUTO
+            : I.ParticipantSelectionTypes.NONE;
         return null !== (t = P[e]) && void 0 !== t
           ? t
-          : [s, S.ParticipantSelectionTypes.NONE];
+          : [s, I.ParticipantSelectionTypes.NONE];
       }
       function x(e) {
         let t = P[e];
         if (null == t) return !1;
         let [n] = P[e];
-        return n !== S.ParticipantSelectionTypes.NONE;
+        return n !== I.ParticipantSelectionTypes.NONE;
       }
       function Y(e) {
         null == b[e] &&
@@ -38002,12 +37935,12 @@
         }
         getSelectedParticipantId(e) {
           let [t, n] = B(e);
-          return t === S.ParticipantSelectionTypes.NONE
+          return t === I.ParticipantSelectionTypes.NONE
             ? null
-            : t !== S.ParticipantSelectionTypes.AUTO
+            : t !== I.ParticipantSelectionTypes.AUTO
               ? t
-              : n === S.ParticipantSelectionTypes.NONE ||
-                  n === S.ParticipantSelectionTypes.AUTO
+              : n === I.ParticipantSelectionTypes.NONE ||
+                  n === I.ParticipantSelectionTypes.AUTO
                 ? null
                 : n;
         }
@@ -38030,16 +37963,16 @@
           return null !== (t = V[e]) && void 0 !== t
             ? t
             : ee(e)
-              ? I.ChannelModes.VIDEO
-              : I.ChannelModes.VOICE;
+              ? S.ChannelModes.VIDEO
+              : S.ChannelModes.VOICE;
         }
         getLayout(e) {
           var t, n;
           let s =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
-              : I.AppContext.APP;
-          if (__OVERLAY__) return I.ChannelLayouts.NORMAL;
+              : S.AppContext.APP;
+          if (__OVERLAY__) return S.ChannelLayouts.NORMAL;
           let i = h.default.getChannel(e),
             r = ee(e) || (null == i ? void 0 : i.isBroadcastChannel());
           return null !==
@@ -38047,8 +37980,8 @@
             void 0 !== n
             ? n
             : r
-              ? I.ChannelLayouts.NO_CHAT
-              : I.ChannelLayouts.NORMAL;
+              ? S.ChannelLayouts.NO_CHAT
+              : S.ChannelLayouts.NORMAL;
         }
         getChatOpen(e) {
           var t;
@@ -38058,9 +37991,9 @@
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
-              : I.AppContext.APP;
+              : S.AppContext.APP;
           return Object.values(R).some(
-            t => t[e] === I.ChannelLayouts.FULL_SCREEN
+            t => t[e] === S.ChannelLayouts.FULL_SCREEN
           );
         }
         getStageStreamSize(e) {
@@ -38091,9 +38024,9 @@
             i = h.default.getChannel(t);
           return null == t ||
             null == n ||
-            ((null == i ? void 0 : i.type) !== I.ChannelTypes.GUILD_VOICE &&
+            ((null == i ? void 0 : i.type) !== S.ChannelTypes.GUILD_VOICE &&
               (null == i ? void 0 : i.type) !==
-                I.ChannelTypes.GUILD_STAGE_VOICE) ||
+                S.ChannelTypes.GUILD_STAGE_VOICE) ||
             w[t]
             ? s
             : ((w[t] = !0), !0);
@@ -38108,26 +38041,26 @@
         },
         CHANNEL_CREATE: function (e) {
           let { channel: t } = e;
-          if (t.type === I.ChannelTypes.GROUP_DM) {
+          if (t.type === S.ChannelTypes.GROUP_DM) {
             let e = t.originChannelId;
             if (null != e) {
               var n, s;
               return (
                 (R[t.id] = {
-                  [I.AppContext.APP]:
+                  [S.AppContext.APP]:
                     null !==
                       (s =
                         null === (n = R[e]) || void 0 === n
                           ? void 0
-                          : n[I.AppContext.APP]) && void 0 !== s
+                          : n[S.AppContext.APP]) && void 0 !== s
                       ? s
-                      : I.ChannelLayouts.NORMAL,
+                      : S.ChannelLayouts.NORMAL,
                 }),
                 !0
               );
             }
             t.isBroadcastChannel() &&
-              (R[t.id] = { [I.AppContext.APP]: I.ChannelLayouts.NO_CHAT });
+              (R[t.id] = { [S.AppContext.APP]: S.ChannelLayouts.NO_CHAT });
           }
           return !1;
         },
@@ -38145,11 +38078,11 @@
             i = null == n;
           i &&
             s.toArray(C.ChannelRTCParticipantsIndexes.STREAM).forEach(e => {
-              (0, S.isStreamParticipant)(e) && s.updateParticipant(e.user.id);
+              (0, I.isStreamParticipant)(e) && s.updateParticipant(e.user.id);
             });
           let [, r] = B(t);
           if (
-            (j(t, [null != n ? n : S.ParticipantSelectionTypes.NONE, r]),
+            (j(t, [null != n ? n : I.ParticipantSelectionTypes.NONE, r]),
             (0, _.isStreamKey)(n))
           ) {
             try {
@@ -39764,8 +39697,8 @@
         y = n("374363"),
         T = n("26989"),
         C = n("778689"),
-        S = n("305961"),
-        I = n("677099"),
+        I = n("305961"),
+        S = n("677099"),
         A = n("697218"),
         D = n("315102"),
         N = n("718517"),
@@ -40161,7 +40094,7 @@
                   .sort((e, t) => V.default.compare(t.id, e.id))
                   .slice(0, 3))
               : (this.newlyAddedEmoji[e] = []);
-          I.default.getFlattenedGuildIds().forEach(e => {
+          S.default.getFlattenedGuildIds().forEach(e => {
             e !== this.guildId && r(e);
           }),
             (this.escapedEmoticonNames = t.join("|"));
@@ -40310,7 +40243,7 @@
             f.default,
             C.default,
             T.default,
-            S.default,
+            I.default,
             p.default,
             v.default,
             w.default,
@@ -40723,9 +40656,9 @@
           }
         }
       }
-      let S = n("838426");
-      for (let e in S) {
-        let t = S[e],
+      let I = n("838426");
+      for (let e in I) {
+        let t = I[e],
           n = t.map(e => {
             let t = new C(e),
               n = t.surrogates,
@@ -40758,7 +40691,7 @@
           });
         u[e] = a.default.filterUnsupportedEmojis(n);
       }
-      function I(e) {
+      function S(e) {
         let t = _[e];
         return null != t
           ? { type: "emoji", surrogate: e, emojiName: ":".concat(t, ":") }
@@ -40780,12 +40713,12 @@
             else if (N.test(t)) {
               s += t;
               continue;
-            } else i.push(I(s)), (s = "");
+            } else i.push(S(s)), (s = "");
           } else if (t === D) {
             s = t;
             continue;
           }
-          let n = I(t);
+          let n = S(t);
           if (i.length > 0) {
             let e = i[i.length - 1];
             if ("text" === n.type && "text" === e.type) {
@@ -40795,7 +40728,7 @@
           }
           i.push(n);
         }
-        return null != s && "" !== s && i.push(I(s)), i;
+        return null != s && "" !== s && i.push(S(s)), i;
       }
       function P(e) {
         let t =
@@ -41102,7 +41035,7 @@
       n.r(t),
         n.d(t, {
           MESSAGE_SCAN_TIMEOUT: function () {
-            return I;
+            return S;
           },
           MAX_TIMEOUT_FOR_JITTER: function () {
             return A;
@@ -41133,8 +41066,8 @@
         y = n("447435"),
         T = n("574933"),
         C = n("49111"),
-        S = n("397336");
-      let I = 3e3,
+        I = n("397336");
+      let S = 3e3,
         A = 800,
         D = {};
       function N(e) {
@@ -41227,7 +41160,7 @@
                       });
                   }
                 })(e);
-              }, I),
+              }, S),
             });
         });
         let i = n || new Set(e.map(e => e.channel_id)).size > 1;
@@ -41538,7 +41471,7 @@
         if (
           !(0, p.isEligibleForExplicitMediaRedaction)() ||
           !n ||
-          t.type !== S.UserSettingsTypes.PRELOADED_USER_SETTINGS
+          t.type !== I.UserSettingsTypes.PRELOADED_USER_SETTINGS
         )
           return !1;
         let s = m.default.getChannelId();
@@ -41848,8 +41781,8 @@
         y = n("599110"),
         T = n("568734"),
         C = n("983850"),
-        S = n("457971"),
-        I = n("612920"),
+        I = n("457971"),
+        S = n("612920"),
         A = n("49111"),
         D = n("568456");
       n("782340");
@@ -41902,7 +41835,7 @@
       }
       function V(e) {
         var t;
-        if (!(0, S.isEligibleForExplicitMediaRedaction)()) return !1;
+        if (!(0, I.isEligibleForExplicitMediaRedaction)()) return !1;
         let n = p.default.getCurrentUser();
         if (
           null == n ||
@@ -42099,7 +42032,7 @@
       let x = (e, t) =>
         null != e &&
         null != t &&
-        (e <= I.EXPLICIT_MEDIA_MIN_WIDTH || t <= I.EXPLICIT_MEDIA_MIN_HEIGHT);
+        (e <= S.EXPLICIT_MEDIA_MIN_WIDTH || t <= S.EXPLICIT_MEDIA_MIN_HEIGHT);
     },
     574933: function (e, t, n) {
       "use strict";
@@ -42296,7 +42229,7 @@
             return C;
           },
           remoteAudioSettingsUpdate: function () {
-            return S;
+            return I;
           },
           fetchDevices: function () {
             return A;
@@ -42386,7 +42319,7 @@
           E("DISCONNECT", e),
           p();
       }
-      function S(e, t, n, s) {
+      function I(e, t, n, s) {
         let i = (0, d.coerceAudioContextForProto)(n);
         null != i &&
           (a.default.dispatch({
@@ -42396,7 +42329,7 @@
           }),
           E("AUDIO_SETTINGS_UPDATE", e));
       }
-      async function I() {
+      async function S() {
         let e;
         try {
           let t =
@@ -42519,7 +42452,7 @@
       }
       async function P(e, t, n) {
         await c.default.maybeShowPTTAlert(e), await p();
-        let s = await I();
+        let s = await S();
         await N(e, t, n, s), (0, m.default)(n.id, e);
       }
     },
@@ -42891,7 +42824,9 @@
             null != e &&
               r.default
                 .dispatch(e)
-                .catch(t => this.socket.resetSocketOnError(t, e.type));
+                .catch(t =>
+                  this.socket.resetSocketOnError({ error: t, action: e.type })
+                );
         }
         constructor(t, n, s) {
           (this.socket = t),
@@ -43140,48 +43075,46 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return H;
+            return F;
           },
         }),
-        n("808653"),
-        n("70102");
+        n("808653");
       var s = n("917351"),
         i = n.n(s),
         r = n("446674"),
         a = n("913144"),
         o = n("987317"),
-        d = n("723939"),
-        u = n("605250"),
-        l = n("374014"),
-        f = n("374363"),
-        _ = n("271938"),
-        c = n("950104"),
-        g = n("42203"),
-        m = n("260320"),
-        h = n("42887"),
-        v = n("945956"),
-        E = n("590401"),
-        p = n("18494"),
-        y = n("101125"),
-        T = n("205817"),
-        C = n("41642"),
-        S = n("518916"),
+        d = n("605250"),
+        u = n("374014"),
+        l = n("374363"),
+        f = n("271938"),
+        _ = n("950104"),
+        c = n("42203"),
+        g = n("260320"),
+        m = n("42887"),
+        h = n("945956"),
+        v = n("590401"),
+        E = n("18494"),
+        p = n("101125"),
+        y = n("205817"),
+        T = n("41642"),
+        C = n("518916"),
         I = n("571420"),
-        A = n("399010"),
-        D = n("49111"),
-        N = n("397336");
-      let O = window.DiscordNative;
-      S.socket.dispatcher.getDispatchHandler = A.default;
-      let P = new u.default("ConnectionStore"),
-        b = 0,
-        V = null,
-        R = !0;
-      async function k(e) {
-        (b = Date.now()),
-          (V = e.sessionId),
-          S.localPresenceState.handleConnectionOpen();
+        S = n("399010"),
+        A = n("49111"),
+        D = n("397336");
+      let N = window.DiscordNative;
+      C.socket.dispatcher.getDispatchHandler = S.default;
+      let O = new d.default("ConnectionStore"),
+        P = 0,
+        b = null,
+        V = !0;
+      async function R(e) {
+        (P = Date.now()),
+          (b = e.sessionId),
+          C.localPresenceState.handleConnectionOpen();
         let t = {},
-          n = p.default.getVoiceChannelId();
+          n = E.default.getVoiceChannelId();
         if (null != n) {
           var s, i, r, a, d, u, l, f;
           let e =
@@ -43197,121 +43130,122 @@
                       ? void 0
                       : s.type) === "reload" ||
             (null ===
-              (u = await (null == O
+              (u = await (null == N
                 ? void 0
-                : null === (f = O.processUtils) || void 0 === f
+                : null === (f = N.processUtils) || void 0 === f
                   ? void 0
                   : null === (l = f.getLastCrash) || void 0 === l
                     ? void 0
                     : l.call(f))) || void 0 === u
               ? void 0
               : u.rendererCrashReason) != null;
-          if (e || !R) {
-            let e = g.default.getChannel(n);
+          if (e || !V) {
+            let e = c.default.getChannel(n);
             null != e && (t = { guildId: e.getGuildId(), channelId: n });
           } else
-            v.default.setLastSessionVoiceChannelId(null != n ? n : null),
+            h.default.setLastSessionVoiceChannelId(null != n ? n : null),
               o.default.selectVoiceChannel(null);
         }
-        S.localVoiceState.update(t, !0),
-          S.localLobbyVoiceStates.update({}, !0),
-          (R = !1);
+        C.localVoiceState.update(t, !0),
+          C.localLobbyVoiceStates.update({}, !0),
+          (V = !1);
+      }
+      function k() {
+        C.localVoiceState.update();
       }
       function M() {
-        S.localVoiceState.update();
+        return C.localVoiceState.update(), C.localLobbyVoiceStates.update(), !1;
       }
       function w() {
-        return S.localVoiceState.update(), S.localLobbyVoiceStates.update(), !1;
+        return C.localPresenceState.update(), !1;
       }
       function L() {
-        return S.localPresenceState.update(), !1;
+        return C.localLobbyVoiceStates.update(), !1;
       }
-      function U() {
-        return S.localLobbyVoiceStates.update(), !1;
+      function U(e) {
+        C.socket.isSessionEstablished() && C.socket.streamDelete(e);
       }
-      function G(e) {
-        S.socket.isSessionEstablished() && S.socket.streamDelete(e);
-      }
-      class F extends r.default.Store {
+      class G extends r.default.Store {
         initialize() {
           this.waitFor(
-            _.default,
-            p.default,
-            g.default,
+            f.default,
+            E.default,
             c.default,
-            m.default,
-            f.default
+            _.default,
+            g.default,
+            l.default
           ),
-            this.syncWith([h.default], w),
-            this.syncWith([y.default], L);
+            this.syncWith([m.default], M),
+            this.syncWith([p.default], w);
         }
         getSocket() {
-          return S.socket;
+          return C.socket;
         }
         isTryingToConnect() {
-          return !S.socket.isClosed();
+          return !C.socket.isClosed();
         }
         isConnected() {
-          return S.socket.isSessionEstablished();
+          return C.socket.isSessionEstablished();
         }
         isConnectedOrOverlay() {
-          return S.socket.isSessionEstablished() || __OVERLAY__;
+          return C.socket.isSessionEstablished() || __OVERLAY__;
         }
         lastTimeConnectedChanged() {
-          return b;
+          return P;
         }
       }
-      F.displayName = "GatewayConnectionStore";
-      var H = new F(a.default, {
+      G.displayName = "GatewayConnectionStore";
+      var F = new G(a.default, {
         START_SESSION: function () {
-          return S.socket.isClosed()
-            ? (P.verbose(
+          return C.socket.isClosed()
+            ? (O.verbose(
                 "Socket is reconnecting because of starting new session"
               ),
-              S.socket.connect())
-            : (P.verbose(
+              C.socket.connect())
+            : (O.verbose(
                 "Socket is not reconnecting during a new session because it is not closed"
               ),
               !1);
         },
         LOGIN_SUCCESS: function () {
           return (
-            P.verbose("session refresh dispatched", {
-              isEstablished: S.socket.isSessionEstablished(),
+            O.verbose("session refresh dispatched", {
+              isEstablished: C.socket.isSessionEstablished(),
             }),
-            !!S.socket.isSessionEstablished() &&
-              (S.socket.close(), S.socket.connect())
+            !!C.socket.isSessionEstablished() &&
+              (C.socket.close(), C.socket.connect())
           );
         },
         LOGOUT: function (e) {
-          e.isSwitchingAccount && S.localPresenceState.handleAccountSwitch(),
-            P.verbose("Closing socket because of logout"),
-            S.socket.close();
+          e.isSwitchingAccount && C.localPresenceState.handleAccountSwitch(),
+            O.verbose("Closing socket because of logout"),
+            C.socket.close();
         },
         CLEAR_CACHES: function (e) {
           return (
-            S.socket.close(),
-            S.socket.dispatcher.clear(),
-            S.socket.connect(),
+            e.resetSocket &&
+              (C.socket.close(),
+              C.socket.dispatcher.clear(),
+              C.socket.connect()),
             !1
           );
         },
         CONNECTION_OPEN: e => {
-          k(e);
+          R(e);
         },
         CONNECTION_CLOSED: function () {
-          P.verbose("connection closed dispatched"), (b = Date.now());
+          O.verbose("connection closed dispatched"), (P = Date.now());
         },
         RTC_CONNECTION_STATE: function (e) {
-          if (e.state !== D.RTCConnectionStates.DISCONNECTED) return !1;
+          if (e.state !== A.RTCConnectionStates.DISCONNECTED) return !1;
           e.willReconnect &&
             (null != e.streamKey
-              ? S.socket.streamPing(e.streamKey)
-              : S.socket.voiceServerPing());
+              ? C.socket.streamPing(e.streamKey)
+              : C.socket.voiceServerPing());
         },
         VOICE_CHANNEL_SELECT: function (e) {
           return (
-            S.localVoiceState.update({
+            C.localVoiceState.update({
               guildId: e.guildId,
               channelId: e.channelId,
             }),
@@ -43321,55 +43255,55 @@
         VOICE_STATE_UPDATES: function (e) {
           let { voiceStates: t } = e;
           return t.reduce((e, t) => {
-            if (_.default.getId() !== t.userId) return e;
-            if (t.sessionId === V)
-              S.localVoiceState.setState({
+            if (f.default.getId() !== t.userId) return e;
+            if (t.sessionId === b)
+              C.localVoiceState.setState({
                 guildId: t.guildId,
                 channelId: t.channelId,
               });
             else {
-              if (t.guildId !== S.localVoiceState.guildId) return e;
-              S.localVoiceState.setState({ guildId: null, channelId: null });
+              if (t.guildId !== C.localVoiceState.guildId) return e;
+              C.localVoiceState.setState({ guildId: null, channelId: null });
             }
             return !0;
           }, !1);
         },
         GUILD_DELETE: function (e) {
-          e.guild.id === S.localVoiceState.guildId &&
-            S.localVoiceState.setState({ guildId: null, channelId: null });
+          e.guild.id === C.localVoiceState.guildId &&
+            C.localVoiceState.setState({ guildId: null, channelId: null });
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          t.id === S.localVoiceState.channelId &&
-            S.localVoiceState.setState({ guildId: null, channelId: null });
+          t.id === C.localVoiceState.channelId &&
+            C.localVoiceState.setState({ guildId: null, channelId: null });
         },
         CALL_DELETE: function (e) {
           let { channelId: t } = e;
-          t === S.localVoiceState.channelId &&
-            S.localVoiceState.setState({ guildId: null, channelId: null });
+          t === C.localVoiceState.channelId &&
+            C.localVoiceState.setState({ guildId: null, channelId: null });
         },
         APP_STATE_UPDATE: function (e) {
           return (
-            e.state === D.AppStates.ACTIVE &&
+            e.state === A.AppStates.ACTIVE &&
               (I.setIsPaused(!1),
-              _.default.isAuthenticated() &&
-                S.socket.resetBackoff("App state is active")),
+              f.default.isAuthenticated() &&
+                C.socket.resetBackoff("App state is active")),
             !1
           );
         },
         GUILD_MEMBERS_REQUEST: function (e) {
           return (
-            S.socket.isSessionEstablished() &&
+            C.socket.isSessionEstablished() &&
               ("userIds" in e
                 ? i(e.userIds)
                     .chunk(100)
                     .forEach(t => {
-                      S.socket.requestGuildMembers(e.guildIds, {
+                      C.socket.requestGuildMembers(e.guildIds, {
                         userIds: t,
                         presences: !!e.presences,
                       });
                     })
-                : S.socket.requestGuildMembers(e.guildIds, {
+                : C.socket.requestGuildMembers(e.guildIds, {
                     query: e.query,
                     limit: e.limit,
                     presences: !!e.presences,
@@ -43379,27 +43313,27 @@
         },
         GUILD_SEARCH_RECENT_MEMBERS: function (e) {
           let { guildId: t, query: n, continuationToken: s } = e;
-          S.socket.isSessionEstablished() &&
-            S.socket.searchRecentMembers(t, { query: n, continuationToken: s });
+          C.socket.isSessionEstablished() &&
+            C.socket.searchRecentMembers(t, { query: n, continuationToken: s });
         },
         GUILD_SUBSCRIPTIONS_FLUSH: function (e) {
           let { subscriptions: t } = e;
           return (
-            S.socket.isSessionEstablished() &&
-              S.socket.updateGuildSubscriptions(t),
+            C.socket.isSessionEstablished() &&
+              C.socket.updateGuildSubscriptions(t),
             !1
           );
         },
         CALL_CONNECT: function (e) {
           let { channelId: t } = e;
-          return S.socket.isSessionEstablished() && S.socket.callConnect(t), !1;
+          return C.socket.isSessionEstablished() && C.socket.callConnect(t), !1;
         },
         CALL_CONNECT_MULTIPLE: function (e) {
           let { channelIds: t } = e;
           return (
-            S.socket.isSessionEstablished() &&
+            C.socket.isSessionEstablished() &&
               t.forEach(e => {
-                S.socket.callConnect(e);
+                C.socket.callConnect(e);
               }),
             !1
           );
@@ -43407,38 +43341,38 @@
         LOBBY_CONNECT: function (e) {
           let { lobbyId: t, lobbySecret: n } = e;
           return (
-            S.socket.isSessionEstablished() && S.socket.lobbyConnect(t, n), !1
+            C.socket.isSessionEstablished() && C.socket.lobbyConnect(t, n), !1
           );
         },
         LOBBY_DISCONNECT: function (e) {
           let { lobbyId: t } = e;
           return (
-            S.socket.isSessionEstablished() && S.socket.lobbyDisconnect(t),
-            S.localLobbyVoiceStates.update(),
+            C.socket.isSessionEstablished() && C.socket.lobbyDisconnect(t),
+            C.localLobbyVoiceStates.update(),
             !1
           );
         },
-        LOBBY_VOICE_CONNECT: U,
-        LOBBY_VOICE_DISCONNECT: U,
-        RPC_APP_DISCONNECTED: U,
-        STREAM_CREATE: M,
+        LOBBY_VOICE_CONNECT: L,
+        LOBBY_VOICE_DISCONNECT: L,
+        RPC_APP_DISCONNECTED: L,
+        STREAM_CREATE: k,
         STREAM_START: function (e) {
           let { streamType: t, guildId: n, channelId: s } = e;
-          if (S.socket.isSessionEstablished()) {
+          if (C.socket.isSessionEstablished()) {
             var i, r;
             let e =
               null != n
-                ? null === (i = g.default.getChannel(s)) || void 0 === i
+                ? null === (i = c.default.getChannel(s)) || void 0 === i
                   ? void 0
                   : i.rtcRegion
-                : null === (r = c.default.getCall(s)) || void 0 === r
+                : null === (r = _.default.getCall(s)) || void 0 === r
                   ? void 0
                   : r.region;
-            S.socket.streamCreate(
+            C.socket.streamCreate(
               t,
               n,
               s,
-              null != e ? e : E.default.getPreferredRegion()
+              null != e ? e : v.default.getPreferredRegion()
             );
           }
           return !1;
@@ -43446,38 +43380,38 @@
         STREAM_WATCH: function (e) {
           let { streamKey: t, allowMultiple: n } = e;
           return (
-            S.socket.isSessionEstablished() &&
+            C.socket.isSessionEstablished() &&
               (n ||
                 !(function () {
                   let e = (function () {
-                    return T.default
+                    return y.default
                       .getAllActiveStreamKeys()
                       .find(
                         e =>
-                          (0, l.decodeStreamKey)(e).ownerId ===
-                          _.default.getId()
+                          (0, u.decodeStreamKey)(e).ownerId ===
+                          f.default.getId()
                       );
                   })();
-                  T.default
+                  y.default
                     .getAllActiveStreamKeys()
                     .filter(t => t !== e)
-                    .forEach(e => G(e));
+                    .forEach(e => U(e));
                 })(),
-              S.socket.streamWatch(t)),
+              C.socket.streamWatch(t)),
             !1
           );
         },
         STREAM_STOP: function (e) {
           let { streamKey: t } = e;
-          return G(t), M(), !1;
+          return U(t), k(), !1;
         },
         STREAM_SET_PAUSED: function (e) {
           let { streamKey: t, paused: n } = e;
-          S.socket.isSessionEstablished() && S.socket.streamSetPaused(t, n);
+          C.socket.isSessionEstablished() && C.socket.streamSetPaused(t, n);
         },
         PUSH_NOTIFICATION_CLICK: function () {
           return (
-            S.socket.expeditedHeartbeat(
+            C.socket.expeditedHeartbeat(
               5e3,
               "user clicked on notification",
               !0
@@ -43491,63 +43425,52 @@
             r =
               null !==
                 (n =
-                  null === (t = g.default.getChannel(s)) || void 0 === t
+                  null === (t = c.default.getChannel(s)) || void 0 === t
                     ? void 0
                     : t.getGuildId()) && void 0 !== n
                 ? n
                 : null;
-          S.socket.embeddedActivityClose(r, s, i);
+          C.socket.embeddedActivityClose(r, s, i);
         },
         REQUEST_FORUM_UNREADS: function (e) {
           let { guildId: t, channelId: n, threads: s } = e;
-          S.socket.requestForumUnreads(t, n, s);
+          C.socket.requestForumUnreads(t, n, s);
         },
         REQUEST_SOUNDBOARD_SOUNDS: function (e) {
           let { guildIds: t } = e;
-          S.socket.requestSoundboardSounds(t);
+          C.socket.requestSoundboardSounds(t);
         },
         REMOTE_COMMAND: function (e) {
           let { sessionId: t, payload: n } = e;
           return (
-            S.socket.isSessionEstablished() && S.socket.remoteCommand(t, n), !1
+            C.socket.isSessionEstablished() && C.socket.remoteCommand(t, n), !1
           );
         },
-        RESET_CONNECTION: function (e) {
-          S.socket.connectionState !== C.default.WILL_RECONNECT &&
-            (e.badCache
-              ? (d.default.replaceDisableAllDatabases("RESET_CONNECTION"),
-                S.socket.resetSocketOnError(
-                  Error(
-                    "Guild data was missing from store (via RESET_CONNECTION)"
-                  ),
-                  "RESET_CONNECTION_DATA_MISSING"
-                ))
-              : S.socket.resetSocketOnError(
-                  Error("Connection reset requested (via RESET_CONNECTION)"),
-                  "RESET_CONNECTION"
-                ));
+        RESET_SOCKET: function (e) {
+          C.socket.connectionState !== T.default.WILL_RECONNECT &&
+            C.socket.resetSocketOnError(e.args);
         },
         RTC_SPEED_TEST_START_TEST: function () {
           return (
-            S.socket.isSessionEstablished() &&
-              S.socket.speedTestCreate(E.default.getPreferredRegion()),
+            C.socket.isSessionEstablished() &&
+              C.socket.speedTestCreate(v.default.getPreferredRegion()),
             !1
           );
         },
         RTC_SPEED_TEST_STOP_TEST: function () {
           return (
-            S.socket.isSessionEstablished() && S.socket.speedTestDelete(), !1
+            C.socket.isSessionEstablished() && C.socket.speedTestDelete(), !1
           );
         },
-        CLIPS_SETTINGS_UPDATE: M,
-        RUNNING_GAMES_CHANGE: M,
+        CLIPS_SETTINGS_UPDATE: k,
+        RUNNING_GAMES_CHANGE: k,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
           var t;
-          e.settings.type === N.UserSettingsTypes.PRELOADED_USER_SETTINGS &&
+          e.settings.type === D.UserSettingsTypes.PRELOADED_USER_SETTINGS &&
             (null === (t = e.settings.proto.clips) || void 0 === t
               ? void 0
               : t.allowVoiceRecording) != null &&
-            M();
+            k();
         },
       });
     },
@@ -43680,43 +43603,45 @@
         l = n("446674"),
         f = n("872717"),
         _ = n("913144"),
-        c = n("288206"),
-        g = n("605250"),
-        m = n("155084"),
-        h = n("410912"),
-        v = n("313915"),
-        E = n("599110"),
-        p = n("922932"),
-        y = n("718517"),
-        T = n("773336"),
-        C = n("286235"),
-        S = n("41642"),
-        I = n("265912"),
-        A = n("799600"),
-        D = n("705215"),
-        N = n("342797"),
-        O = n("123265"),
-        P = n("340115"),
-        b = n("289362"),
-        V = n("571420"),
-        R = n("797785"),
-        k = n("49111");
-      let M = new g.default("GatewaySocket"),
-        w = new D.default();
-      function L() {}
-      let U = 30 * y.default.Millis.SECOND,
-        G = 3 * y.default.Millis.MINUTE,
-        F = 1 * y.default.Millis.MINUTE;
-      function H(e) {
+        c = n("105059"),
+        g = n("849365"),
+        m = n("11275"),
+        h = n("400683"),
+        v = n("605250"),
+        E = n("155084"),
+        p = n("410912"),
+        y = n("313915"),
+        T = n("599110"),
+        C = n("922932"),
+        I = n("718517"),
+        S = n("773336"),
+        A = n("286235"),
+        D = n("41642"),
+        N = n("265912"),
+        O = n("799600"),
+        P = n("705215"),
+        b = n("342797"),
+        V = n("123265"),
+        R = n("340115"),
+        k = n("571420"),
+        M = n("797785"),
+        w = n("49111");
+      let L = new v.default("GatewaySocket"),
+        U = new P.default();
+      function G() {}
+      let F = 30 * I.default.Millis.SECOND,
+        H = 3 * I.default.Millis.MINUTE,
+        B = 1 * I.default.Millis.MINUTE;
+      function x(e) {
         return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
       }
-      let B = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-      s = class extends P.default {
+      let Y = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+      s = class extends R.default {
         get connectionState() {
           return this.connectionState_;
         }
         set connectionState(e) {
-          M.verbose("Setting connection state to ".concat(e)),
+          L.verbose("Setting connection state to ".concat(e)),
             (this.connectionState_ = e);
         }
         addAnalytics(e) {
@@ -43724,35 +43649,35 @@
         }
         setResumeUrl(e) {
           null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)),
-            null !== e && M.verbose("Updating resume url to ".concat(e)),
+            null !== e && L.verbose("Updating resume url to ".concat(e)),
             (this.resumeUrl = e);
         }
         _connect() {
           var e, t;
           let n;
           if (!this.willReconnect()) {
-            M.verbose("Skipping _connect because willReconnect is false");
+            L.verbose("Skipping _connect because willReconnect is false");
             return;
           }
-          if (V.getIsPaused()) {
-            M.info("Skipping _connect because socket is paused");
+          if (k.getIsPaused()) {
+            L.info("Skipping _connect because socket is paused");
             return;
           }
-          (this.connectionState = S.default.CONNECTING),
+          (this.connectionState = D.default.CONNECTING),
             (this.nextReconnectIsImmediate = !1);
           let s = this.compressionHandler.getAlgorithm(),
-            i = w.getName(),
+            i = U.getName(),
             r = this._getGatewayUrl(),
             a = window.GLOBAL_ENV.API_VERSION;
           d.default.mark("\uD83C\uDF10", "Socket._connect"),
-            M.info(
+            L.info(
               "[CONNECT] ".concat(r, ", ") +
                 "encoding: ".concat(i, ", ") +
                 "version: ".concat(a, ", ") +
                 "compression: ".concat(null != s ? s : "none")
             ),
             null !== this.webSocket &&
-              (M.error("_connect called with already existing websocket"),
+              (L.error("_connect called with already existing websocket"),
               this._cleanup(e => e.close(4e3))),
             (this.connectionStartTime = Date.now()),
             (this.helloTimeout = setTimeout(() => {
@@ -43766,7 +43691,7 @@
                 )
               ),
                 this.setResumeUrl(null);
-            }, U));
+            }, F));
           let o = new URL(r);
           o.searchParams.append("encoding", i),
             o.searchParams.append("v", a.toString()),
@@ -43788,7 +43713,7 @@
               _ = null;
             if (((window._ws = null), null != d)) {
               if (((t = d.ws), d.state.gateway !== n))
-                M.verbose(
+                L.verbose(
                   "[FAST CONNECT] gatewayURL mismatch: "
                     .concat(d.state.gateway, " !== ")
                     .concat(n)
@@ -43804,7 +43729,7 @@
                       ? { ...e, data: e.data.substring(0, 100) }
                       : e
                   )),
-                  M.log(
+                  L.log(
                     "[FAST CONNECT] successfully took over websocket, state:",
                     {
                       ...e,
@@ -43820,7 +43745,7 @@
                   (_ = d.state.clientState);
               }
             }
-            null == t && ((t = (0, R.default)(n)).binaryType = "arraybuffer"),
+            null == t && ((t = (0, M.default)(n)).binaryType = "arraybuffer"),
               s(t),
               u && i(l, _),
               null != f && f.forEach(r),
@@ -43833,72 +43758,71 @@
             newCallback: e => {
               (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
             },
-            onOpen: (e, t) => {
+            onOpen: e => {
               d.default.mark("\uD83C\uDF10", "GatewaySocket.onOpen ".concat(e));
-              let n = Date.now() - this.connectionStartTime;
-              M.info(
-                "[CONNECTED] ".concat(o.toString(), " in ").concat(n, " ms")
+              let t = Date.now() - this.connectionStartTime;
+              L.info(
+                "[CONNECTED] ".concat(o.toString(), " in ").concat(t, " ms")
               ),
                 (this.isFastConnect = e),
-                (this.lastIdentifyClientState = t),
                 e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
             },
             onMessage:
               ((e = this.compressionHandler),
               (t = (e, t) => {
                 let n = Date.now(),
-                  { op: s, s: i, t: r, d: a } = w.unpack(e);
-                s !== P.Opcode.DISPATCH &&
+                  { op: s, s: i, t: r, d: a } = U.unpack(e);
+                s !== R.Opcode.DISPATCH &&
                   d.default.mark(
                     "\uD83C\uDF10",
                     "GatewaySocket.onMessage "
                       .concat(s, " ")
-                      .concat(P.Opcode[s])
+                      .concat(R.Opcode[s])
                   );
                 let o = Date.now() - n;
                 switch (
                   ("READY" === r
-                    ? h.default.parseReady.set(n, o)
+                    ? p.default.parseReady.set(n, o)
                     : "READY_SUPPLEMENTAL" === r
-                      ? h.default.parseReadySupplemental.set(n, o)
+                      ? p.default.parseReadySupplemental.set(n, o)
                       : o > 10 &&
                         d.default.mark("\uD83C\uDF10", "Parse " + r, o),
                   null != i && (this.seq = i),
                   s)
                 ) {
-                  case P.Opcode.HELLO:
+                  case R.Opcode.HELLO:
                     this._clearHelloTimeout(), this._handleHello(a);
                     break;
-                  case P.Opcode.RECONNECT:
+                  case R.Opcode.RECONNECT:
                     this._handleReconnect();
                     break;
-                  case P.Opcode.INVALID_SESSION:
+                  case R.Opcode.INVALID_SESSION:
                     this._handleInvalidSession(a);
                     break;
-                  case P.Opcode.HEARTBEAT:
+                  case R.Opcode.HEARTBEAT:
                     this._sendHeartbeat();
                     break;
-                  case P.Opcode.HEARTBEAT_ACK:
+                  case R.Opcode.HEARTBEAT_ACK:
                     this._handleHeartbeatAck(a);
                     break;
-                  case P.Opcode.DISPATCH:
+                  case R.Opcode.DISPATCH:
                     this._handleDispatch(
                       a,
                       r,
                       "READY" === r
                         ? {
                             compressed_byte_size: t,
-                            uncompressed_byte_size: H(e),
+                            uncompressed_byte_size: x(e),
                             compression_algorithm:
                               this.compressionHandler.getAlgorithm(),
-                            packing_algorithm: w.getName(),
+                            packing_algorithm: U.getName(),
                             unpack_duration_ms: o,
                           }
                         : null
                     );
                     break;
                   default:
-                    M.info("Unhandled op ".concat(s));
+                    L.info("Unhandled op ".concat(s));
                 }
               }),
               (n = 0),
@@ -43911,12 +43835,12 @@
               }),
               t => {
                 let s = t.data;
-                null != t.raw_length ? (n += t.raw_length) : (n += H(s)),
+                null != t.raw_length ? (n += t.raw_length) : (n += x(s)),
                   e.feed(s);
               }),
             onError: () => {
               this.setResumeUrl(null),
-                p.default.flushDNSCache(),
+                C.default.flushDNSCache(),
                 this._handleClose(
                   !1,
                   0,
@@ -43932,21 +43856,21 @@
         _handleHello(e) {
           let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-          M.verbose(
-            "[HELLO] via ".concat((0, N.getConnectionPath)(e), ", ") +
+          L.verbose(
+            "[HELLO] via ".concat((0, b.getConnectionPath)(e), ", ") +
               "heartbeat interval: ".concat(t, ", ") +
               "took ".concat(n, " ms")
           ),
             this._startHeartbeater();
         }
         _handleReconnect() {
-          M.verbose("[RECONNECT] gateway requested I reconnect."),
+          L.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup(e => e.close(4e3)),
-            (this.connectionState = S.default.WILL_RECONNECT),
+            (this.connectionState = D.default.WILL_RECONNECT),
             this._connect();
         }
         _handleInvalidSession(e) {
-          M.info("[INVALID_SESSION]".concat(e ? " can resume)" : "")),
+          L.info("[INVALID_SESSION]".concat(e ? " can resume)" : "")),
             e ? this._doResumeOrIdentify() : this._doIdentify();
         }
         _handleDispatch(e, t, n) {
@@ -43954,30 +43878,30 @@
           if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = (0, N.getConnectionPath)(e);
+            let n = (0, b.getConnectionPath)(e);
             d.default.setServerTrace(n),
-              M.info("[READY] took ".concat(s, "ms, as ").concat(t)),
-              M.verbose("".concat(n)),
-              (this.connectionState = S.default.SESSION_ESTABLISHED),
+              L.info("[READY] took ".concat(s, "ms, as ").concat(t)),
+              L.verbose("".concat(n)),
+              (this.connectionState = D.default.SESSION_ESTABLISHED),
               this.gatewayBackoff.succeed(),
               (this.iosGoingAwayEventCount = 0),
               this.setResumeUrl(e.resume_gateway_url);
           } else
             "READY_SUPPLEMENTAL" === t
-              ? (M.info("[READY_SUPPLEMENTAL] took ".concat(s, "ms")),
-                (this.connectionState = S.default.SESSION_ESTABLISHED),
+              ? (L.info("[READY_SUPPLEMENTAL] took ".concat(s, "ms")),
+                (this.connectionState = D.default.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0))
               : "RESUMED" === t &&
-                (M.verbose((0, N.getConnectionPath)(e)),
-                (this.connectionState = S.default.SESSION_ESTABLISHED),
+                (L.verbose((0, b.getConnectionPath)(e)),
+                (this.connectionState = D.default.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0));
           this.dispatcher.receiveDispatch(e, t, n);
         }
         handleResumeDispatched() {
           let e = Date.now() - this.connectionStartTime;
-          M.info(
+          L.info(
             "[RESUMED] took "
               .concat(e, "ms, replayed ")
               .concat(
@@ -43991,7 +43915,7 @@
           (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
         }
         _getGatewayUrl() {
-          return null != this.resumeUrl ? this.resumeUrl : B;
+          return null != this.resumeUrl ? this.resumeUrl : Y;
         }
         _handleHeartbeatAck(e) {
           (this.lastHeartbeatAckTime = Date.now()),
@@ -43999,13 +43923,13 @@
             null !== this.expeditedHeartbeatTimeout &&
               (clearTimeout(this.expeditedHeartbeatTimeout),
               (this.expeditedHeartbeatTimeout = null),
-              M.verbose("Expedited heartbeat succeeded"));
+              L.verbose("Expedited heartbeat succeeded"));
         }
         _handleHeartbeatTimeout() {
           this._cleanup(e => e.close(4e3)),
-            (this.connectionState = S.default.WILL_RECONNECT);
+            (this.connectionState = D.default.WILL_RECONNECT);
           let e = this.gatewayBackoff.fail(() => this._connect());
-          M.warn(
+          L.warn(
             "[ACK TIMEOUT] reconnecting in ".concat(
               (e / 1e3).toFixed(2),
               " seconds."
@@ -44020,18 +43944,18 @@
             4004 === t)
           )
             return (
-              (this.connectionState = S.default.CLOSED),
-              M.warn(
+              (this.connectionState = D.default.CLOSED),
+              L.warn(
                 "[WS CLOSED] because of authentication failure, marking as closed."
               ),
               this._reset(e, t, n)
             );
           if (
             (this._tryDetectInvalidIOSToken(t, n, e),
-            (this.connectionState = S.default.WILL_RECONNECT),
+            (this.connectionState = D.default.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
           )
-            M.info(
+            L.info(
               "[WS CLOSED] ("
                 .concat(e.toString(), ", ")
                 .concat(t, ", ")
@@ -44040,7 +43964,7 @@
               this._connect();
           else {
             let s = this.gatewayBackoff.fail(() => this._connect());
-            M.info(
+            L.info(
               "[WS CLOSED] ("
                 .concat(e.toString(), ", ")
                 .concat(t, ", ")
@@ -44051,7 +43975,7 @@
           }
         }
         _tryDetectInvalidIOSToken(e, t, n) {
-          (0, T.isIOS)() &&
+          (0, S.isIOS)() &&
             null != this.token &&
             1001 === e &&
             "Stream end encountered" === t &&
@@ -44059,27 +43983,27 @@
             3 === this.iosGoingAwayEventCount &&
               f.default
                 .get({
-                  url: k.Endpoints.ME,
+                  url: w.Endpoints.ME,
                   headers: { authorization: this.token },
                 })
                 .then(
                   e => {
                     let { status: t } = e;
-                    E.default.track(
-                      k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED,
+                    T.default.track(
+                      w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED,
                       { api_status_code: t }
                     );
                   },
                   e => {
                     let { status: t } = e;
                     401 === t &&
-                      ((this.connectionState = S.default.CLOSED),
-                      M.warn(
+                      ((this.connectionState = D.default.CLOSED),
+                      L.warn(
                         "[WS CLOSED] because of manual authentication failure, marking as closed."
                       ),
                       this._reset(n, 4004, "invalid token manually detected")),
-                      E.default.track(
-                        k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED,
+                      T.default.track(
+                        w.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED,
                         { api_status_code: t }
                       );
                   }
@@ -44088,7 +44012,7 @@
         _reset(e, t, n) {
           (this.sessionId = null),
             (this.seq = 0),
-            M.warn(
+            L.warn(
               "[RESET] ("
                 .concat(e.toString(), ", ")
                 .concat(t, ", ")
@@ -44143,22 +44067,22 @@
           let t = this.webSocket;
           (this.webSocket = null),
             null != t &&
-              ((t.onopen = L),
-              (t.onmessage = L),
-              (t.onerror = L),
-              (t.onclose = L),
+              ((t.onopen = G),
+              (t.onmessage = G),
+              (t.onerror = G),
+              (t.onclose = G),
               null == e || e(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = new A.default(w));
+            (this.compressionHandler = new O.default(U));
         }
         _doResume() {
           var e;
-          (this.connectionState = S.default.RESUMING),
-            (this.dispatcher.resumeAnalytics = (0, N.createResumeAnalytics)(
+          (this.connectionState = D.default.RESUMING),
+            (this.dispatcher.resumeAnalytics = (0, b.createResumeAnalytics)(
               Date.now() - this.connectionStartTime
             )),
-            M.info(
+            L.info(
               "[RESUME] resuming session "
                 .concat(
                   null !== (e = this.sessionId) && void 0 !== e ? e : "",
@@ -44167,7 +44091,7 @@
                 .concat(this.seq)
             ),
             this.send(
-              P.Opcode.RESUME,
+              R.Opcode.RESUME,
               { token: this.token, session_id: this.sessionId, seq: this.seq },
               !1
             );
@@ -44179,35 +44103,50 @@
             this._handleClose(!0, 4004, "No connection info provided");
             return;
           }
-          this.connectionState = S.default.IDENTIFYING;
+          this.connectionState = D.default.IDENTIFYING;
           let t = Date.now();
           this.identifyStartTime = t;
-          let n = await c.default.getClientState();
+          let [n, s, i] = await Promise.all([
+              (0, h.isCacheEnabled)() ? c.default.getCommittedVersions() : {},
+              (0, h.isCacheEnabled)() ? m.default.getCommittedVersions() : {},
+              !!(0, h.isCacheEnabled)() && g.default.canUseGuildVersions(),
+            ]),
+            r = i
+              ? {
+                  guild_versions: n,
+                  highest_last_message_id: s.highest_last_message_id,
+                  read_state_version: s.read_state_version,
+                  user_guild_settings_version: s.user_guild_settings_version,
+                  user_settings_version: s.user_settings_version,
+                  private_channels_version: s.private_channels_version,
+                  api_code_version: s.api_code_version,
+                  initial_guild_id: s.initial_guild_id,
+                }
+              : { guild_versions: {} };
           if (
-            this.connectionState !== S.default.IDENTIFYING ||
+            this.connectionState !== D.default.IDENTIFYING ||
             this.identifyStartTime !== t
           ) {
-            M.warn(
+            L.warn(
               "Skipping identify because connectionState or identifyStartTime has changed"
             );
             return;
           }
-          let { token: s, properties: i = {}, presence: r } = e;
-          (this.token = s), M.verbose("[IDENTIFY]");
-          let o = {
-              token: s,
-              capabilities: I.default,
-              properties: i,
-              presence: r,
+          let { token: o, properties: d = {}, presence: u } = e;
+          (this.token = o), L.verbose("[IDENTIFY]");
+          let l = {
+              token: o,
+              capabilities: N.default,
+              properties: d,
+              presence: u,
               compress: this.compressionHandler.usesLegacyCompression(),
-              client_state: (0, b.toGatewayClientState)(n),
+              client_state: r,
             },
-            d = JSON.stringify(o);
-          (this.identifyUncompressedByteSize = d.length),
-            (this.identifyCompressedByteSize = a.deflate(d).length),
-            (this.lastIdentifyClientState = o.client_state),
+            f = JSON.stringify(l);
+          (this.identifyUncompressedByteSize = f.length),
+            (this.identifyCompressedByteSize = a.deflate(f).length),
             (this.identifyCount += 1),
-            this.send(P.Opcode.IDENTIFY, o, !1);
+            this.send(R.Opcode.IDENTIFY, l, !1);
         }
         _doFastConnectIdentify() {
           (this.seq = 0), (this.sessionId = null);
@@ -44218,10 +44157,10 @@
           }
           let { token: t } = e;
           (this.token = t),
-            (this.connectionState = S.default.IDENTIFYING),
+            (this.connectionState = D.default.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
-            M.verbose("[IDENTIFY, fast-connect]"),
+            L.verbose("[IDENTIFY, fast-connect]"),
             this._updateLastHeartbeatAckTime();
         }
         _doResumeOrIdentify() {
@@ -44229,7 +44168,7 @@
             t =
               null !== this.sessionId &&
               (null == this.lastHeartbeatAckTime ||
-                e - this.lastHeartbeatAckTime <= G);
+                e - this.lastHeartbeatAckTime <= H);
           t ? this._doResume() : this._doIdentify(),
             this._updateLastHeartbeatAckTime();
         }
@@ -44237,105 +44176,102 @@
           this.lastHeartbeatAckTime = Date.now();
         }
         _sendHeartbeat() {
-          this.send(P.Opcode.HEARTBEAT, this.seq, !1);
+          this.send(R.Opcode.HEARTBEAT, this.seq, !1);
         }
         getLogger() {
-          return M;
+          return L;
         }
         willReconnect() {
-          return this.connectionState === S.default.WILL_RECONNECT;
+          return this.connectionState === D.default.WILL_RECONNECT;
         }
         isClosed() {
-          return this.connectionState === S.default.CLOSED;
+          return this.connectionState === D.default.CLOSED;
         }
         isSessionEstablished() {
           return (
-            this.connectionState === S.default.SESSION_ESTABLISHED ||
-            this.connectionState === S.default.RESUMING
+            this.connectionState === D.default.SESSION_ESTABLISHED ||
+            this.connectionState === D.default.RESUMING
           );
         }
         isConnected() {
           return (
-            this.connectionState === S.default.IDENTIFYING ||
-            this.connectionState === S.default.RESUMING ||
-            this.connectionState === S.default.SESSION_ESTABLISHED
+            this.connectionState === D.default.IDENTIFYING ||
+            this.connectionState === D.default.RESUMING ||
+            this.connectionState === D.default.SESSION_ESTABLISHED
           );
         }
         connect() {
           return this.isClosed()
-            ? (M.verbose(".connect() called, new state is WILL_RECONNECT"),
-              (this.connectionState = S.default.WILL_RECONNECT),
+            ? (L.verbose(".connect() called, new state is WILL_RECONNECT"),
+              (this.connectionState = D.default.WILL_RECONNECT),
               this._connect(),
               !0)
-            : (M.error(
+            : (L.error(
                 "Cannot start a new connection, connection state is not closed"
               ),
               !1);
         }
-        getIdentifyInitialGuildId() {
-          var e;
-          return null === (e = this.lastIdentifyClientState) || void 0 === e
-            ? void 0
-            : e.initial_guild_id;
-        }
-        resetSocketOnError(e, t) {
-          let n =
-            arguments.length > 2 && void 0 !== arguments[2]
-              ? arguments[2]
-              : { sentry: !0, immediate: !1 };
-          M.error(
-            "resetSocketOnError during ".concat(t, ": ").concat(e.message),
-            e.stack
-          );
-          let s =
-            null != e.message &&
-            e.message.indexOf("Guild data was missing from store") >= 0;
-          m.default.increment(
-            {
-              name: u.MetricEvents.SOCKET_CRASHED,
-              tags: ["action:".concat(t)],
-            },
-            !0
+        resetSocketOnError(e) {
+          let { action: t, error: n } = e;
+          L.error(
+            "resetSocketOnError during ".concat(t, ": ").concat(n.message),
+            n.stack
           ),
-            (n.sentry = n.sentry && !s),
-            (n.immediate = n.immediate || s),
-            n.sentry &&
-              C.default.captureException(e, {
+            E.default.increment(
+              {
+                name: u.MetricEvents.SOCKET_CRASHED,
+                tags: ["action:".concat(t)],
+              },
+              !0
+            ),
+            !1 !== e.sentry &&
+              A.default.captureException(n, {
                 tags: { socketCrashedAction: t },
               }),
-            E.default.track(k.AnalyticEvents.GATEWAY_SOCKET_RESET, {
-              error_message: e.message,
-              error_stack: e.stack,
+            T.default.track(w.AnalyticEvents.GATEWAY_SOCKET_RESET, {
+              error_message: n.message,
+              error_stack: n.stack,
               action: t,
             }),
             this._cleanup(e => e.close()),
             this._reset(!0, 1e3, "Resetting socket due to error."),
             this.dispatcher.clear(),
-            (this.connectionState = S.default.WILL_RECONNECT),
-            this.dispatchExceptionBackoff.cancel(),
-            0 === this.dispatchExceptionBackoff._fails && n.immediate
-              ? (M.verbose("Triggering fast reconnect"),
-                this.dispatchExceptionBackoff.fail(() => {}),
-                setTimeout(() => this._connect(), 0))
-              : this.dispatchExceptionBackoff.fail(() => this._connect()),
-            (this.didForceClearGuildHashes = !0),
-            _.default.dispatch({ type: "CLEAR_GUILD_CACHE" }),
+            (this.connectionState = D.default.WILL_RECONNECT),
+            this.dispatchExceptionBackoff.cancel();
+          let s = e.clearCache || this.dispatchExceptionBackoff._fails > 0;
+          0 === this.dispatchExceptionBackoff._fails
+            ? (L.verbose("Triggering fast reconnect"),
+              this.dispatchExceptionBackoff.fail(() => {}),
+              setTimeout(() => this._connect(), 0))
+            : this.dispatchExceptionBackoff.fail(() => this._connect()),
+            s &&
+              ((this.didForceClearGuildHashes = !0),
+              _.default.dispatch({
+                type: "CLEAR_CACHES",
+                reason: "Socket reset during ".concat(t),
+              })),
             clearTimeout(this.dispatchSuccessTimer),
             (this.dispatchSuccessTimer = setTimeout(
               () => this.dispatchExceptionBackoff.succeed(),
-              2 * F
+              2 * B
             ));
+        }
+        resetSocketOnDispatchError(e) {
+          let t =
+            null != e.error.message &&
+            e.error.message.indexOf("Guild data was missing from store") >= 0;
+          this.resetSocketOnError({ ...e, sentry: !t, clearCache: t });
         }
         close() {
           if (this.isClosed()) {
-            M.verbose("close() called, but socket is already closed.");
+            L.verbose("close() called, but socket is already closed.");
             return;
           }
-          M.info(
+          L.info(
             "Closing connection, current state is ".concat(this.connectionState)
           ),
             this._cleanup(e => e.close()),
-            (this.connectionState = S.default.CLOSED),
+            (this.connectionState = D.default.CLOSED),
             setImmediate(() => {
               this._reset(!0, 1e3, "Disconnect requested by user");
             });
@@ -44360,7 +44296,7 @@
               arguments[3];
           if (!this.isClosed()) {
             if (this.isConnected()) {
-              M.verbose(
+              L.verbose(
                 "Performing an expedited heartbeat ".concat(
                   null != t && "" !== t ? "reason: " + t : ""
                 )
@@ -44377,7 +44313,7 @@
             }
             n
               ? this.resetBackoff(t, s)
-              : M.verbose(
+              : L.verbose(
                   "Expedited heartbeat requested, but, connection state is "
                     .concat(
                       this.connectionState,
@@ -44396,7 +44332,7 @@
               !(arguments.length > 1) ||
               void 0 === arguments[1] ||
               arguments[1];
-          M.verbose(
+          L.verbose(
             "Connection has reset backoff".concat(
               null != e && "" !== e ? " for reason: " + e : ""
             )
@@ -44407,12 +44343,12 @@
             this.willReconnect()
               ? this._connect()
               : t &&
-                this.connectionState !== S.default.SESSION_ESTABLISHED &&
+                this.connectionState !== D.default.SESSION_ESTABLISHED &&
                 this._handleClose(!0, 0, e);
         }
         constructor() {
           super(),
-            (this.dispatchExceptionBackoff = new o.default(1e3, F)),
+            (this.dispatchExceptionBackoff = new o.default(1e3, B)),
             (this.dispatchSuccessTimer = 0),
             (this.didForceClearGuildHashes = !1),
             (this.identifyUncompressedByteSize = 0),
@@ -44420,32 +44356,31 @@
             (this.analytics = {}),
             (this.identifyCount = 0),
             (this.resumeUrl = null),
-            (this.lastIdentifyClientState = null),
             (this.iosGoingAwayEventCount = 0),
             (this.send = (e, t, n) => {
-              v.default.isLoggingGatewayEvents &&
-                M.verboseDangerously("~>", e, t);
-              let s = w.pack({ op: e, d: t });
+              y.default.isLoggingGatewayEvents &&
+                L.verboseDangerously("~>", e, t);
+              let s = U.pack({ op: e, d: t });
               if (!n || this.isSessionEstablished())
                 try {
                   null != this.webSocket
                     ? this.webSocket.send(s)
-                    : M.warn(
+                    : L.warn(
                         "Attempted to send without a websocket that exists. Opcode: ".concat(
                           e
                         )
                       );
                 } catch (e) {}
               else
-                M.warn(
+                L.warn(
                   "Attempted to send while not being in a connected state opcode: ".concat(
                     e
                   )
                 );
             }),
-            (this.dispatcher = new O.default(this)),
+            (this.dispatcher = new V.default(this)),
             (this.gatewayBackoff = new o.default(1e3, 6e4)),
-            (this.connectionState_ = S.default.CLOSED),
+            (this.connectionState_ = D.default.CLOSED),
             (this.webSocket = null),
             (this.seq = 0),
             (this.sessionId = null),
@@ -44460,7 +44395,7 @@
             (this.connectionStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
-            (this.compressionHandler = new A.default(w)),
+            (this.compressionHandler = new O.default(U)),
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
@@ -44628,8 +44563,8 @@
           y = [],
           T = [],
           C = [],
-          S = [],
-          I = [];
+          I = [],
+          S = [];
         return (
           i.forEach(e => {
             var t;
@@ -44655,8 +44590,8 @@
                   : e.stickers
               ),
               C.push(n),
-              S.push(r),
-              I.push(a, s);
+              I.push(r),
+              S.push(a, s);
           }),
           {
             presences_size: JSON.stringify(
@@ -44687,9 +44622,9 @@
             guild_emojis_size: JSON.stringify(p).length,
             guild_threads_size: JSON.stringify(y).length,
             guild_stickers_size: JSON.stringify(T).length,
-            guild_events_size: JSON.stringify(S).length,
+            guild_events_size: JSON.stringify(I).length,
             guild_features_size: JSON.stringify(C).length,
-            guild_remaining_data_size: JSON.stringify(I).length,
+            guild_remaining_data_size: JSON.stringify(S).length,
             size_metrics_duration_ms: Date.now() - s,
           }
         );
@@ -44749,13 +44684,15 @@
         l = n("41642"),
         f = n("342797");
       let _ = new o.default("GatewaySocket"),
-        c = new Set(["READY", "INITIAL_GUILD"]),
-        g = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
-      ((r = s || (s = {}))[(r.Loading = 0)] = "Loading"),
-        (r[(r.Loaded = 1)] = "Loaded"),
+        c = new Set(["INITIAL_GUILD", "READY"]),
+        g = new Set(["READY", "INITIAL_GUILD"]),
+        m = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
+      ((r = s || (s = {}))[(r.NotStarted = 0)] = "NotStarted"),
+        (r[(r.Loading = 1)] = "Loading"),
+        (r[(r.Loaded = 2)] = "Loaded"),
         (i = class {
           hasStuffToDispatchNow() {
-            return this.queue.length > 0 && 1 === this.queue[0].status;
+            return this.queue.length > 0 && 2 === this.queue[0].status;
           }
           processFirstQueuedDispatch(e) {
             let t = [];
@@ -44763,45 +44700,64 @@
               ;
               this.queue.length > 0 &&
               e.has(this.queue[0].type) &&
-              1 === this.queue[0].status;
+              2 === this.queue[0].status;
 
             )
               t.push(this.queue.shift());
             this.dispatchMultiple(t);
           }
           unpauseDispatchQueue() {
-            (this.paused = !1), this.flush();
+            for (let e of ((this.paused = !1), this.queue))
+              this.maybePreload(e);
+            this.flush();
           }
           receiveDispatch(e, t, n) {
-            var s;
             if (null == this.getDispatchHandler)
               throw Error("getDispatchHandler needs to be passed in first!");
-            let i =
-                null === (s = this.getDispatchHandler(t)) || void 0 === s
+            let s = {
+              data: e,
+              type: t,
+              compressionAnalytics: n,
+              status: 0,
+              preloadPromise: null,
+              preloadedData: null,
+            };
+            this.queue.push(s), !this.maybePreload(s) && this.scheduleFlush(t);
+          }
+          maybePreload(e) {
+            if (this.paused && !c.has(e.type)) return !1;
+            if (0 === e.status) {
+              var t;
+              let n =
+                null === (t = this.getDispatchHandler(e.type)) || void 0 === t
                   ? void 0
-                  : s.preload(e),
-              r = {
-                data: e,
-                type: t,
-                compressionAnalytics: n,
-                status: null == i ? 1 : 0,
-                preloadPromise: i,
-                preloadedData: null,
-              };
-            this.queue.push(r),
-              null != i
-                ? i
-                    .then(e => {
-                      (r.preloadedData = e),
-                        (r.status = 1),
-                        this.scheduleFlush(t);
+                  : t.preload(e.data);
+              if (
+                ((e.status = null == n ? 2 : 1),
+                (e.preloadPromise = n),
+                null != n)
+              )
+                return (
+                  n
+                    .then(t => {
+                      (e.preloadedData = t),
+                        (e.status = 2),
+                        this.scheduleFlush(e.type);
                     })
-                    .catch(e => this.socket.resetSocketOnError(e, t))
-                : this.scheduleFlush(t);
+                    .catch(t =>
+                      this.socket.resetSocketOnDispatchError({
+                        error: t,
+                        action: e.type,
+                      })
+                    ),
+                  !0
+                );
+            }
+            return !1;
           }
           scheduleFlush(e) {
             !this.paused &&
-              (c.has(e)
+              (g.has(e)
                 ? (null != this.dispatchTimeout &&
                     clearTimeout(this.dispatchTimeout),
                   this.flush())
@@ -44812,6 +44768,7 @@
                   )));
           }
           dispatchMultiple(e) {
+            if (0 === e.length) return;
             let t = "none",
               n = !1;
             try {
@@ -44819,13 +44776,13 @@
                 a.default.Emitter.pause(150),
                 a.default.Emitter.batched(() => {
                   e.forEach(e => {
-                    (t = e.type), (n = n || g.has(e.type)), this.dispatchOne(e);
+                    (t = e.type), (n = n || m.has(e.type)), this.dispatchOne(e);
                   }),
                     u.default.flush();
                 }),
                 n && a.default.Emitter.resume();
             } catch (e) {
-              this.socket.resetSocketOnError(e, t);
+              this.socket.resetSocketOnDispatchError({ error: e, action: t });
             }
           }
           dispatchOne(e) {
@@ -44891,7 +44848,7 @@
                   t = 0;
                 for (
                   ;
-                  t < this.queue.length && 1 === this.queue[t].status;
+                  t < this.queue.length && 2 === this.queue[t].status;
                   t++
                 );
                 if (0 === t) return;
@@ -45205,38 +45162,6 @@
           });
         });
     },
-    289362: function (e, t, n) {
-      "use strict";
-      function s(e) {
-        let {
-            knownGuildVersions: t,
-            highestLastMessageId: n,
-            readStateVersion: s,
-            userGuildSettingsVersion: i,
-            userSettingsVersion: r,
-            privateChannelsVersion: a,
-            apiCodeVersion: o,
-            lastSelectedGuildId: d,
-          } = e,
-          u = null == d || isNaN(Number(d)) ? void 0 : d;
-        return {
-          guild_versions: t,
-          highest_last_message_id: n,
-          read_state_version: s,
-          user_guild_settings_version: i,
-          user_settings_version: r,
-          private_channels_version: a,
-          api_code_version: o,
-          initial_guild_id: u,
-        };
-      }
-      n.r(t),
-        n.d(t, {
-          toGatewayClientState: function () {
-            return s;
-          },
-        });
-    },
     413196: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -45525,7 +45450,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return U;
           },
         }),
         n("424973"),
@@ -45553,8 +45478,8 @@
         y = n("778588"),
         T = n("260320"),
         C = n("697218"),
-        S = n("800762"),
-        I = n("10514"),
+        I = n("800762"),
+        S = n("10514"),
         A = n("521012"),
         D = n("224400"),
         N = n("390946"),
@@ -45621,15 +45546,20 @@
       function w(e, t) {
         for (let n of e) M[n] = { preload: () => null, dispatch: t };
       }
-      function L(e) {
-        return M[e];
+      function L(e, t, n) {
+        for (let s of e) M[s] = { preload: t, dispatch: n };
       }
       function U(e) {
+        return M[e];
+      }
+      function G(e) {
         a.default
           .dispatch(e)
-          .catch(t => P.socket.resetSocketOnError(t, e.type));
+          .catch(t =>
+            P.socket.resetSocketOnDispatchError({ error: t, action: e.type })
+          );
       }
-      function G(e, t, n) {
+      function F(e, t, n) {
         let {
             roles: s,
             nick: r,
@@ -45654,7 +45584,7 @@
           c.communicationDisabledUntil !== f ||
           c.flags !== o ||
           c.unusualDMActivityUntil !== _) &&
-          U({
+          G({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
             user: t,
@@ -45669,18 +45599,18 @@
             flags: o,
           });
       }
-      function F(e) {
+      function H(e) {
         let { member: t, mentions: n, author: s, guild_id: i } = e;
-        null != t && G(i, s, t),
+        null != t && null != i && F(i, s, t),
           null != n &&
             n.forEach(e => {
-              if (null != e.member) {
+              if (null != e.member && null != i) {
                 let { member: t } = e;
-                delete e.member, G(i, e, t);
+                delete e.member, F(i, e, t);
               }
             });
       }
-      function H(e) {
+      function B(e) {
         return e.map(e => ({
           sessionId: e.session_id,
           lastModified: e.last_modified,
@@ -45691,13 +45621,13 @@
           broadcast: e.broadcast,
         }));
       }
-      function B() {
+      function x() {
         P.socket.isSessionEstablished() &&
           T.default.getPendingLobbies().forEach(e => {
             P.socket.lobbyConnect(e.id, e.secret);
           });
       }
-      function x(e) {
+      function Y(e) {
         let {
           guildId: t,
           user: n,
@@ -45715,40 +45645,45 @@
           broadcast: a,
         });
       }
-      w(["INITIAL_GUILD"], e => {
-        c.default.initialGuild.measure(() => {
-          r.default.Emitter.batched(() => {
-            let t = N.hydrateInitialGuild(e, P.socket.identifyStartTime);
-            null != C.default.getCurrentUser() &&
-              (U({ type: "GUILD_CREATE", guild: t }),
-              U({
-                type: "VOICE_STATE_UPDATES",
-                voiceStates: t.voice_states.map(e => {
-                  var n;
-                  return {
-                    userId: e.user_id,
-                    guildId: t.id,
-                    sessionId: e.session_id,
-                    channelId: e.channel_id,
-                    mute: e.mute,
-                    deaf: e.deaf,
-                    selfMute: e.self_mute,
-                    selfDeaf: e.self_deaf,
-                    selfVideo: e.self_video || !1,
-                    suppress: e.suppress,
-                    selfStream: e.self_stream || !1,
-                    requestToSpeakTimestamp:
-                      null !== (n = e.request_to_speak_timestamp) &&
-                      void 0 !== n
-                        ? n
-                        : null,
-                  };
+      L(
+        ["INITIAL_GUILD"],
+        e =>
+          "full" === e.data_mode ? null : E.ChannelLoader.loadGuildIds([e.id]),
+        e => {
+          c.default.initialGuild.measure(() => {
+            r.default.Emitter.batched(() => {
+              let t = N.hydrateInitialGuild(e, P.socket.identifyStartTime);
+              null != C.default.getCurrentUser() &&
+                (G({ type: "GUILD_CREATE", guild: t }),
+                G({
+                  type: "VOICE_STATE_UPDATES",
+                  voiceStates: t.voice_states.map(e => {
+                    var n;
+                    return {
+                      userId: e.user_id,
+                      guildId: t.id,
+                      sessionId: e.session_id,
+                      channelId: e.channel_id,
+                      mute: e.mute,
+                      deaf: e.deaf,
+                      selfMute: e.self_mute,
+                      selfDeaf: e.self_deaf,
+                      selfVideo: e.self_video || !1,
+                      suppress: e.suppress,
+                      selfStream: e.self_stream || !1,
+                      requestToSpeakTimestamp:
+                        null !== (n = e.request_to_speak_timestamp) &&
+                        void 0 !== n
+                          ? n
+                          : null,
+                    };
+                  }),
                 }),
-              }),
-              b.log("Dispatched INITIAL_GUILD ".concat(e.id)));
+                b.log("Dispatched INITIAL_GUILD ".concat(e.id)));
+            });
           });
-        });
-      }),
+        }
+      ),
         w(["READY_SUPPLEMENTAL"], e => {
           c.default.readySupplemental.measure(() => {
             r.default.Emitter.batched(() => {
@@ -45776,7 +45711,7 @@
                 ).map(e => (0, m.createChannelRecordFromServer)(e)),
                 o = null !== (n = e.game_invites) && void 0 !== n ? n : [];
               c.default.dispatchReadySupplemental.measure(() => {
-                U({
+                G({
                   type: "CONNECTION_OPEN_SUPPLEMENTAL",
                   guilds: i,
                   presences: r,
@@ -45808,21 +45743,54 @@
                   });
                 });
               }),
-                U({ type: "VOICE_STATE_UPDATES", voiceStates: d, initial: !0 }),
+                G({ type: "VOICE_STATE_UPDATES", voiceStates: d, initial: !0 }),
                 P.localVoiceState.update(),
                 P.localLobbyVoiceStates.update({}, !0);
             });
           }),
-            setTimeout(() => U({ type: "POST_CONNECTION_OPEN" }), 2e3);
+            setTimeout(() => G({ type: "POST_CONNECTION_OPEN" }), 2e3);
         }),
-        !(function (e, t, n) {
-          for (let s of e) M[s] = { preload: t, dispatch: n };
-        })(
+        L(
           ["READY"],
-          () => N.preloadReadyPayloadData(),
+          e => {
+            var t;
+            let n = N.preloadReadyPayloadData(),
+              s = e.guilds,
+              i = s
+                .filter(e => {
+                  var t, n;
+                  return (
+                    !e.unavailable &&
+                    "partial" === e.data_mode &&
+                    (!!(
+                      (null !== (t = e.partial_updates.channels) && void 0 !== t
+                        ? t
+                        : []
+                      ).length > 0
+                    ) ||
+                      !!(
+                        (null !== (n = e.partial_updates.deleted_channel_ids) &&
+                        void 0 !== n
+                          ? n
+                          : []
+                        ).length > 0
+                      ) ||
+                      void 0)
+                  );
+                })
+                .map(e => e.id),
+              r =
+                null !== (t = E.ChannelLoader.loadGuildIds(i)) && void 0 !== t
+                  ? t
+                  : Promise.resolve();
+            return Promise.all([n, r]).then(e => {
+              let [t] = e;
+              return t;
+            });
+          },
           (e, t, n) => {
             if (e.user.bot) {
-              U({ type: "LOGOUT" });
+              G({ type: "LOGOUT" });
               return;
             }
             c.default.ready.measure(() => {
@@ -45855,7 +45823,7 @@
                       );
                 c.default.dispatchReady.measure(() => {
                   var n;
-                  U({
+                  G({
                     type: "CONNECTION_OPEN",
                     sessionId: e.session_id,
                     authSessionIdHash: e.auth_session_id_hash,
@@ -45876,7 +45844,7 @@
                     guildExperiments: e.guild_experiments,
                     requiredAction: e.required_action,
                     consents: e.consents,
-                    sessions: H(e.sessions || []),
+                    sessions: B(e.sessions || []),
                     pendingPayments: e.pending_payments,
                     countryCode:
                       null !== (n = e.country_code) && void 0 !== n
@@ -45893,7 +45861,7 @@
                   });
                 }),
                   null != e.auth_token &&
-                    U({
+                    G({
                       type: "UPDATE_TOKEN",
                       token: e.auth_token,
                       userId: e.user.id,
@@ -45901,7 +45869,7 @@
                   P.localPresenceState.update(),
                   P.localVoiceState.update(),
                   P.localLobbyVoiceStates.update(),
-                  B();
+                  x();
               });
             });
           }
@@ -45910,26 +45878,26 @@
           P.localPresenceState.forceUpdate(),
             P.localVoiceState.forceUpdate(),
             P.localLobbyVoiceStates.forceUpdate(),
-            B(),
-            U({ type: "CONNECTION_RESUMED" });
+            x(),
+            G({ type: "CONNECTION_RESUMED" });
         }),
         w(["TYPING_START"], e => {
-          null != e.member && G(e.guild_id, e.member.user, e.member),
-            U({
+          null != e.member && F(e.guild_id, e.member.user, e.member),
+            G({
               type: "TYPING_START",
               channelId: e.channel_id,
               userId: e.user_id,
             });
         }),
         w(["ACTIVITY_START"], e => {
-          U({
+          G({
             type: "ACTIVITY_START",
             userId: e.user_id,
             activity: e.activity,
           });
         }),
         w(["ACTIVITY_USER_ACTION"], e => {
-          U({
+          G({
             type: "ACTIVITY_USER_ACTION",
             actionType: e.action_type,
             user: e.user,
@@ -45938,49 +45906,70 @@
             messageId: e.message_id,
           });
         }),
-        w(["MESSAGE_CREATE"], e => {
-          F(e),
-            null != e.author &&
-              U({
-                type: "MESSAGE_CREATE",
-                guildId: e.guild_id,
-                channelId: e.channel_id,
-                message: e,
-                optimistic: !1,
-                isPushNotification: !1,
-              });
-        }),
-        w(["MESSAGE_UPDATE"], e => {
-          F(e), U({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
-        }),
-        w(["MESSAGE_DELETE"], e => {
-          U({
-            type: "MESSAGE_DELETE",
-            guildId: e.guild_id,
-            id: e.id,
-            channelId: e.channel_id,
-          });
-        }),
-        w(["MESSAGE_DELETE_BULK"], e => {
-          U({
-            type: "MESSAGE_DELETE_BULK",
-            guildId: e.guild_id,
-            ids: e.ids,
-            channelId: e.channel_id,
-          });
-        }),
-        w(["MESSAGE_ACK"], e => {
-          U({
-            type: "MESSAGE_ACK",
-            channelId: e.channel_id,
-            messageId: e.message_id,
-            manual: e.manual,
-            newMentionCount: e.mention_count,
-            version: e.version,
-          });
-        }),
+        L(
+          ["MESSAGE_CREATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            H(e),
+              null != e.author &&
+                G({
+                  type: "MESSAGE_CREATE",
+                  guildId: e.guild_id,
+                  channelId: e.channel_id,
+                  message: e,
+                  optimistic: !1,
+                  isPushNotification: !1,
+                });
+          }
+        ),
+        L(
+          ["MESSAGE_UPDATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            H(e),
+              G({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e });
+          }
+        ),
+        L(
+          ["MESSAGE_DELETE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "MESSAGE_DELETE",
+              guildId: e.guild_id,
+              id: e.id,
+              channelId: e.channel_id,
+            });
+          }
+        ),
+        L(
+          ["MESSAGE_DELETE_BULK"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "MESSAGE_DELETE_BULK",
+              guildId: e.guild_id,
+              ids: e.ids,
+              channelId: e.channel_id,
+            });
+          }
+        ),
+        L(
+          ["MESSAGE_ACK"],
+          e => E.ChannelLoader.loadGuildFromChannelId(e.channel_id),
+          e => {
+            G({
+              type: "MESSAGE_ACK",
+              channelId: e.channel_id,
+              messageId: e.message_id,
+              manual: e.manual,
+              newMentionCount: e.mention_count,
+              version: e.version,
+            });
+          }
+        ),
         w(["GUILD_FEATURE_ACK"], e => {
-          U({
+          G({
             type: "GUILD_FEATURE_ACK",
             id: e.resource_id,
             ackType: e.ack_type,
@@ -45988,66 +45977,90 @@
           });
         }),
         w(["USER_NON_CHANNEL_ACK"], e => {
-          U({
+          G({
             type: "USER_NON_CHANNEL_ACK",
             ackType: e.ack_type,
             ackedId: e.entity_id,
           });
         }),
-        w(["CHANNEL_PINS_ACK"], e => {
-          U({
-            type: "CHANNEL_PINS_ACK",
-            channelId: e.channel_id,
-            timestamp: e.timestamp,
-            version: e.version,
-          });
-        }),
-        w(["CHANNEL_PINS_UPDATE"], e => {
-          U({
-            type: "CHANNEL_PINS_UPDATE",
-            channelId: e.channel_id,
-            lastPinTimestamp: e.last_pin_timestamp,
-          });
-        }),
-        w(["CHANNEL_CREATE", "CHANNEL_DELETE"], (e, t) => {
-          U({ type: t, channel: (0, m.createChannelRecordFromServer)(e) });
-        }),
+        L(
+          ["CHANNEL_PINS_ACK"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "CHANNEL_PINS_ACK",
+              channelId: e.channel_id,
+              timestamp: e.timestamp,
+              version: e.version,
+            });
+          }
+        ),
+        L(
+          ["CHANNEL_PINS_UPDATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "CHANNEL_PINS_UPDATE",
+              channelId: e.channel_id,
+              lastPinTimestamp: e.last_pin_timestamp,
+            });
+          }
+        ),
+        L(
+          ["CHANNEL_CREATE", "CHANNEL_DELETE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          (e, t) => {
+            G({ type: t, channel: (0, m.createChannelRecordFromServer)(e) });
+          }
+        ),
         w(["VOICE_CHANNEL_STATUS_UPDATE"], (e, t) => {
-          U({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
+          G({ type: t, id: e.id, guildId: e.guild_id, status: e.status });
         }),
         w(["CHANNEL_STATUSES"], (e, t) => {
-          U({ type: t, guildId: e.guild_id, channels: e.channels });
+          G({ type: t, guildId: e.guild_id, channels: e.channels });
         }),
-        w(["CHANNEL_UPDATE"], e => {
-          V.add(e);
-        }),
-        w(["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"], (e, t) => {
-          let { newly_created: n, ...s } = e;
-          U({
-            type: t,
-            isNewlyCreated: n,
-            channel: (0, m.createChannelRecordFromServer)(s),
-          });
-        }),
-        w(["THREAD_LIST_SYNC"], e => {
-          U({
-            type: "THREAD_LIST_SYNC",
-            guildId: e.guild_id,
-            threads: e.threads.map(e => {
-              let t = E.default.getChannel(e.parent_id);
-              return (
-                null != t &&
-                  ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)),
-                (0, m.createChannelRecordFromServer)(e)
-              );
-            }),
-            mostRecentMessages: e.most_recent_messages,
-            members: e.members ? i.map(e.members, _.default) : void 0,
-            channelIds: e.channel_ids,
-          });
-        }),
+        L(
+          ["CHANNEL_UPDATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            V.add(e);
+          }
+        ),
+        L(
+          ["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          (e, t) => {
+            let { newly_created: n, ...s } = e;
+            G({
+              type: t,
+              isNewlyCreated: n,
+              channel: (0, m.createChannelRecordFromServer)(s),
+            });
+          }
+        ),
+        L(
+          ["THREAD_LIST_SYNC"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "THREAD_LIST_SYNC",
+              guildId: e.guild_id,
+              threads: e.threads.map(e => {
+                let t = E.default.getChannel(e.parent_id);
+                return (
+                  null != t &&
+                    ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)),
+                  (0, m.createChannelRecordFromServer)(e)
+                );
+              }),
+              mostRecentMessages: e.most_recent_messages,
+              members: e.members ? i.map(e.members, _.default) : void 0,
+              channelIds: e.channel_ids,
+            });
+          }
+        ),
         w(["THREAD_MEMBER_UPDATE"], e => {
-          U({
+          G({
             type: "THREAD_MEMBER_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -46060,7 +46073,7 @@
         }),
         w(["THREAD_MEMBERS_UPDATE"], e => {
           var t;
-          U({
+          G({
             type: "THREAD_MEMBERS_UPDATE",
             id: e.id,
             guildId: e.guild_id,
@@ -46081,7 +46094,7 @@
         }),
         w(["FORUM_UNREADS"], e => {
           !e.permission_denied &&
-            U({
+            G({
               type: "FORUM_UNREADS",
               channelId: e.channel_id,
               threads: e.threads.map(e => ({
@@ -46096,7 +46109,7 @@
         }),
         w(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
           let n = E.default.getBasicChannel(e.channel_id);
-          U({
+          G({
             type: t,
             channelId: e.channel_id,
             user: e.user,
@@ -46104,56 +46117,63 @@
             isMember: null != n,
           });
         }),
-        w(["GUILD_CREATE"], e => {
-          if (e.unavailable) U({ type: "GUILD_UNAVAILABLE", guildId: e.id });
-          else {
-            let t = N.hydratePreviouslyUnavailableGuild(e);
-            o.default.createGuild(t),
-              U({
-                type: "VOICE_STATE_UPDATES",
-                voiceStates: t.voice_states.map(e => {
-                  var n;
-                  return {
-                    userId: e.user_id,
-                    guildId: t.id,
-                    sessionId: e.session_id,
-                    channelId: e.channel_id,
-                    mute: e.mute,
-                    deaf: e.deaf,
-                    selfMute: e.self_mute,
-                    selfDeaf: e.self_deaf,
-                    selfVideo: e.self_video || !1,
-                    suppress: e.suppress,
-                    selfStream: e.self_stream || !1,
-                    requestToSpeakTimestamp:
-                      null !== (n = e.request_to_speak_timestamp) &&
-                      void 0 !== n
-                        ? n
-                        : null,
-                  };
-                }),
-              });
+        L(
+          ["GUILD_CREATE"],
+          e =>
+            "full" === e.data_mode
+              ? null
+              : E.ChannelLoader.loadGuildIds([e.id]),
+          e => {
+            if (e.unavailable) G({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+            else {
+              let t = N.hydratePreviouslyUnavailableGuild(e);
+              o.default.createGuild(t),
+                G({
+                  type: "VOICE_STATE_UPDATES",
+                  voiceStates: t.voice_states.map(e => {
+                    var n;
+                    return {
+                      userId: e.user_id,
+                      guildId: t.id,
+                      sessionId: e.session_id,
+                      channelId: e.channel_id,
+                      mute: e.mute,
+                      deaf: e.deaf,
+                      selfMute: e.self_mute,
+                      selfDeaf: e.self_deaf,
+                      selfVideo: e.self_video || !1,
+                      suppress: e.suppress,
+                      selfStream: e.self_stream || !1,
+                      requestToSpeakTimestamp:
+                        null !== (n = e.request_to_speak_timestamp) &&
+                        void 0 !== n
+                          ? n
+                          : null,
+                    };
+                  }),
+                });
+            }
           }
-        }),
+        ),
         w(["GUILD_UPDATE"], e => {
-          U({ type: "GUILD_UPDATE", guild: e }),
-            e.unavailable && U({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+          G({ type: "GUILD_UPDATE", guild: e }),
+            e.unavailable && G({ type: "GUILD_UNAVAILABLE", guildId: e.id });
         }),
         w(["GUILD_DELETE"], e => {
-          U({ type: "GUILD_DELETE", guild: e }),
+          G({ type: "GUILD_DELETE", guild: e }),
             e.geo_restricted
-              ? U({
+              ? G({
                   type: "GUILD_GEO_RESTRICTED",
                   guildId: e.id,
                   icon: e.icon,
                   name: e.name,
                 })
               : e.unavailable &&
-                U({ type: "GUILD_UNAVAILABLE", guildId: e.id });
+                G({ type: "GUILD_UNAVAILABLE", guildId: e.id });
         }),
         w(["GUILD_MEMBERS_CHUNK"], e => {
           r.default.Emitter.batched(() => {
-            U({
+            G({
               type: "GUILD_MEMBERS_CHUNK",
               guildId: e.guild_id,
               members: e.members,
@@ -46168,7 +46188,7 @@
                     activities: r,
                     broadcast: a,
                   } = t;
-                  return x({
+                  return Y({
                     guildId: e.guild_id,
                     user: n,
                     status: s,
@@ -46182,7 +46202,7 @@
         }),
         w(["THREAD_MEMBER_LIST_UPDATE"], e => {
           r.default.Emitter.batched(() => {
-            U({
+            G({
               type: "THREAD_MEMBER_LIST_UPDATE",
               guildId: e.guild_id,
               threadId: e.thread_id,
@@ -46197,7 +46217,7 @@
                     activities: r,
                     broadcast: a,
                   } = t;
-                  return x({
+                  return Y({
                     guildId: e.guild_id,
                     user: n,
                     status: s,
@@ -46218,7 +46238,7 @@
             "GUILD_MEMBER_REMOVE",
           ],
           (e, t) => {
-            U({
+            G({
               type: t,
               guildId: e.guild_id,
               user: e.user,
@@ -46234,50 +46254,58 @@
             });
           }
         ),
-        w(["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"], (e, t) => {
-          U({ type: t, guildId: e.guild_id, role: e.role });
-        }),
-        w(["GUILD_ROLE_DELETE"], e => {
-          U({
-            type: "GUILD_ROLE_DELETE",
-            guildId: e.guild_id,
-            roleId: e.role_id,
-            version: e.version,
-          });
-        }),
+        L(
+          ["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          (e, t) => {
+            G({ type: t, guildId: e.guild_id, role: e.role });
+          }
+        ),
+        L(
+          ["GUILD_ROLE_DELETE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "GUILD_ROLE_DELETE",
+              guildId: e.guild_id,
+              roleId: e.role_id,
+              version: e.version,
+            });
+          }
+        ),
         w(["GUILD_EMOJIS_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_EMOJIS_UPDATE",
             guildId: e.guild_id,
             emojis: e.emojis,
           });
         }),
         w(["GUILD_STICKERS_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_STICKERS_UPDATE",
             guildId: e.guild_id,
             stickers: e.stickers,
           });
         }),
         w(["GUILD_INTEGRATIONS_UPDATE"], e => {
-          U({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
+          G({ type: "GUILD_INTEGRATIONS_UPDATE", guildId: e.guild_id });
         }),
         w(["INTEGRATION_CREATE"], e => {
-          U({
+          G({
             type: "INTEGRATION_CREATE",
             application: e.application,
             guildId: e.guild_id,
           });
         }),
         w(["INTEGRATION_DELETE"], e => {
-          U({
+          G({
             type: "INTEGRATION_DELETE",
             applicationId: e.application_id,
             guildId: e.guild_id,
           });
         }),
         w(["USER_UPDATE"], e => {
-          U({ type: "CURRENT_USER_UPDATE", user: e });
+          G({ type: "CURRENT_USER_UPDATE", user: e });
         }),
         w(["USER_SETTINGS_PROTO_UPDATE"], e => {
           let t = (0, g.b64ToProtoWithType)(e.settings.type, e.settings.proto);
@@ -46296,7 +46324,7 @@
                 }),
                 Error("UserSettingsProto must not be a string"))
               );
-            U({
+            G({
               type: "USER_SETTINGS_PROTO_UPDATE",
               settings: { proto: t, type: e.settings.type },
               partial: e.partial,
@@ -46304,25 +46332,25 @@
           }
         }),
         w(["USER_GUILD_SETTINGS_UPDATE"], e => {
-          U({
+          G({
             type: "USER_GUILD_SETTINGS_FULL_UPDATE",
             userGuildSettings: [e],
           });
         }),
         w(["USER_CONNECTIONS_UPDATE"], () => {
-          U({ type: "USER_CONNECTIONS_UPDATE" });
+          G({ type: "USER_CONNECTIONS_UPDATE" });
         }),
         w(["USER_REQUIRED_ACTION_UPDATE"], e => {
-          U({
+          G({
             type: "USER_REQUIRED_ACTION_UPDATE",
             requiredAction: e.required_action,
           });
         }),
         w(["USER_NOTE_UPDATE"], e => {
-          U({ type: "USER_NOTE_UPDATE", ...e });
+          G({ type: "USER_NOTE_UPDATE", ...e });
         }),
         w(["RELATIONSHIP_ADD"], e => {
-          U({
+          G({
             type: "RELATIONSHIP_ADD",
             relationship: {
               id: e.id,
@@ -46335,13 +46363,13 @@
           });
         }),
         w(["RELATIONSHIP_REMOVE"], e => {
-          U({ type: "RELATIONSHIP_REMOVE", relationship: e });
+          G({ type: "RELATIONSHIP_REMOVE", relationship: e });
         }),
         w(["RELATIONSHIP_UPDATE"], e => {
-          U({ type: "RELATIONSHIP_UPDATE", relationship: e });
+          G({ type: "RELATIONSHIP_UPDATE", relationship: e });
         }),
         w(["PRESENCE_UPDATE"], e => {
-          x({
+          Y({
             guildId: e.guild_id,
             user: e.user,
             status: e.status,
@@ -46351,15 +46379,15 @@
           });
         }),
         w(["PRESENCES_REPLACE"], e => {
-          U({ type: "PRESENCES_REPLACE", presences: e });
+          G({ type: "PRESENCES_REPLACE", presences: e });
         }),
         w(["SESSIONS_REPLACE"], e => {
-          U({ type: "SESSIONS_REPLACE", sessions: H(e) });
+          G({ type: "SESSIONS_REPLACE", sessions: B(e) });
         }),
         w(["VOICE_STATE_UPDATE"], e => {
           var t;
-          null != e.member && G(e.guild_id, e.member.user, e.member),
-            U({
+          null != e.member && F(e.guild_id, e.member.user, e.member),
+            G({
               type: "VOICE_STATE_UPDATES",
               voiceStates: [
                 {
@@ -46378,7 +46406,7 @@
                     null !== (t = e.request_to_speak_timestamp) && void 0 !== t
                       ? t
                       : null,
-                  oldChannelId: S.default.getUserVoiceChannelId(
+                  oldChannelId: I.default.getUserVoiceChannelId(
                     e.guild_id,
                     e.user_id
                   ),
@@ -46387,7 +46415,7 @@
             });
         }),
         w(["LOBBY_VOICE_STATE_UPDATE"], e => {
-          U({
+          G({
             type: "LOBBY_VOICE_STATE_UPDATE",
             userId: e.user_id,
             lobbyId: e.lobby_id,
@@ -46400,7 +46428,7 @@
           });
         }),
         w(["VOICE_SERVER_UPDATE"], e => {
-          U({
+          G({
             type: "VOICE_SERVER_UPDATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
@@ -46409,7 +46437,7 @@
           });
         }),
         w(["LOBBY_VOICE_SERVER_UPDATE"], e => {
-          U({
+          G({
             type: "LOBBY_VOICE_SERVER_UPDATE",
             lobbyId: e.lobby_id,
             endpoint: e.endpoint,
@@ -46417,7 +46445,7 @@
           });
         }),
         w(["CALL_CREATE"], e => {
-          U({
+          G({
             type: "CALL_CREATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -46427,7 +46455,7 @@
           });
           let t = e.voice_states;
           null != t &&
-            U({
+            G({
               type: "VOICE_STATE_UPDATES",
               voiceStates: t.map(e => {
                 var t;
@@ -46452,7 +46480,7 @@
             });
         }),
         w(["CALL_UPDATE"], e => {
-          U({
+          G({
             type: "CALL_UPDATE",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -46461,36 +46489,36 @@
           });
         }),
         w(["CALL_DELETE"], e => {
-          U({
+          G({
             type: "CALL_DELETE",
             channelId: e.channel_id,
             unavailable: e.unavailable,
           });
         }),
         w(["OAUTH2_TOKEN_REVOKE"], e => {
-          U({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
+          G({ type: "OAUTH2_TOKEN_REVOKE", accessToken: e.access_token });
         }),
         w(["RECENT_MENTION_DELETE"], e => {
-          U({ type: "RECENT_MENTION_DELETE", id: e.message_id });
+          G({ type: "RECENT_MENTION_DELETE", id: e.message_id });
         }),
         w(["FRIEND_SUGGESTION_CREATE"], e => {
-          U({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
+          G({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
         }),
         w(["FRIEND_SUGGESTION_DELETE"], e => {
-          U({
+          G({
             type: "FRIEND_SUGGESTION_DELETE",
             suggestedUserId: e.suggested_user_id,
           });
         }),
         w(["WEBHOOKS_UPDATE"], e => {
-          U({
+          G({
             type: "WEBHOOKS_UPDATE",
             guildId: e.guild_id,
             channelId: e.channel_id,
           });
         }),
         w(["MESSAGE_REACTION_ADD", "MESSAGE_REACTION_REMOVE"], (e, t) => {
-          U({
+          G({
             type: t,
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -46501,7 +46529,7 @@
           });
         }),
         w(["MESSAGE_POLL_VOTE_ADD", "MESSAGE_POLL_VOTE_REMOVE"], (e, t) => {
-          U({
+          G({
             type:
               "MESSAGE_POLL_VOTE_ADD" === t
                 ? "MESSAGE_REACTION_ADD"
@@ -46514,14 +46542,14 @@
           });
         }),
         w(["MESSAGE_REACTION_REMOVE_ALL"], e => {
-          U({
+          G({
             type: "MESSAGE_REACTION_REMOVE_ALL",
             channelId: e.channel_id,
             messageId: e.message_id,
           });
         }),
         w(["MESSAGE_REACTION_REMOVE_EMOJI"], e => {
-          U({
+          G({
             type: "MESSAGE_REACTION_REMOVE_EMOJI",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -46529,7 +46557,7 @@
           });
         }),
         w(["MESSAGE_REACTION_ADD_MANY"], e => {
-          U({
+          G({
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
@@ -46537,25 +46565,25 @@
           });
         }),
         w(["PAYMENT_UPDATE"], e => {
-          U({ type: "PAYMENT_UPDATE", payment: e });
+          G({ type: "PAYMENT_UPDATE", payment: e });
         }),
         w(
           ["ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE"],
           (e, t) => {
-            U({ type: t, entitlement: e });
+            G({ type: t, entitlement: e });
           }
         ),
         w(["USER_PAYMENT_SOURCES_UPDATE"], () => {
           y.default.hasLayers() &&
             (n("850068").fetchPaymentSources(),
-            d.fetchSubscriptionPlansBySKUs(I.default.getFetchedSKUIDs()));
+            d.fetchSubscriptionPlansBySKUs(S.default.getFetchedSKUIDs()));
         }),
         w(["USER_SUBSCRIPTIONS_UPDATE"], () => {
           u.fetchCurrentUser(),
             y.default.hasLayers() && n("850068").fetchSubscriptions();
         }),
         w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], e => {
-          U({
+          G({
             type: "GUILD_BOOST_SLOT_CREATE",
             guildBoostSlot: h.default.createFromServer(
               e,
@@ -46564,7 +46592,7 @@
           });
         }),
         w(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_BOOST_SLOT_UPDATE",
             guildBoostSlot: h.default.createFromServer(
               e,
@@ -46573,7 +46601,7 @@
           });
         }),
         w(["BILLING_POPUP_BRIDGE_CALLBACK"], e => {
-          U({
+          G({
             type: "BILLING_POPUP_BRIDGE_CALLBACK",
             paymentSourceType: e.payment_source_type,
             state: e.state,
@@ -46582,13 +46610,13 @@
           });
         }),
         w(["USER_PAYMENT_BROWSER_CHECKOUT_DONE"], e => {
-          U({ type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE", loadId: e.load_id });
+          G({ type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE", loadId: e.load_id });
         }),
         w(["USER_PAYMENT_CLIENT_ADD"], e => {
           (0, D.getPurchaseTokenHash)().then(t => {
             let n = e.purchase_token_hash;
             n === t &&
-              U({
+              G({
                 type: "USER_PAYMENT_CLIENT_ADD",
                 purchaseTokenHash: n,
                 expiresAt: e.expires_at,
@@ -46600,9 +46628,9 @@
             let t = t => {
               if (null == t.member) return;
               let { member: n } = t;
-              if ((G(e.guild_id, n.user, n), null == n.presence)) return;
+              if ((F(e.guild_id, n.user, n), null == n.presence)) return;
               let { presence: s } = n;
-              x({
+              Y({
                 guildId: e.guild_id,
                 user: s.user,
                 status: s.status,
@@ -46623,7 +46651,7 @@
               }
             }),
               O.default.flush(),
-              U({
+              G({
                 type: "GUILD_MEMBER_LIST_UPDATE",
                 guildId: e.guild_id,
                 id: e.id,
@@ -46635,9 +46663,9 @@
           });
         }),
         w(["LOBBY_CREATE"], e => {
-          U({ type: "LOBBY_CREATE", lobby: e }),
+          G({ type: "LOBBY_CREATE", lobby: e }),
             e.voice_states.forEach(t => {
-              U({
+              G({
                 type: "LOBBY_VOICE_STATE_UPDATE",
                 lobbyId: e.id,
                 userId: t.user_id,
@@ -46651,10 +46679,10 @@
             });
         }),
         w(["LOBBY_UPDATE"], e => {
-          U({ type: "LOBBY_UPDATE", lobby: e });
+          G({ type: "LOBBY_UPDATE", lobby: e });
         }),
         w(["LOBBY_DELETE"], e => {
-          U({ type: "LOBBY_DELETE", lobbyId: e.id, reason: e.reason });
+          G({ type: "LOBBY_DELETE", lobbyId: e.id, reason: e.reason });
         }),
         w(
           [
@@ -46663,11 +46691,11 @@
             "LOBBY_MEMBER_DISCONNECT",
           ],
           (e, t) => {
-            U({ type: t, lobbyId: e.lobby_id, member: e.member });
+            G({ type: t, lobbyId: e.lobby_id, member: e.member });
           }
         ),
         w(["LOBBY_MESSAGE"], e => {
-          U({
+          G({
             type: "LOBBY_MESSAGE",
             lobbyId: e.lobby_id,
             senderId: e.sender_id,
@@ -46675,19 +46703,19 @@
           });
         }),
         w(["GIFT_CODE_UPDATE"], e => {
-          U({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
+          G({ type: "GIFT_CODE_UPDATE", uses: e.uses, code: e.code });
         }),
         w(["GIFT_CODE_CREATE"], e => {
-          U({ type: "GIFT_CODE_CREATE", giftCode: e });
+          G({ type: "GIFT_CODE_CREATE", giftCode: e });
         }),
         w(["USER_ACHIEVEMENT_UPDATE"], e => {
-          U({ type: "USER_ACHIEVEMENT_UPDATE", userAchievement: e });
+          G({ type: "USER_ACHIEVEMENT_UPDATE", userAchievement: e });
         }),
         w(["LIBRARY_APPLICATION_UPDATE"], e => {
-          U({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
+          G({ type: "LIBRARY_APPLICATION_UPDATE", libraryApplication: e });
         }),
         w(["STREAM_CREATE"], e => {
-          U({
+          G({
             type: "STREAM_CREATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -46697,7 +46725,7 @@
           });
         }),
         w(["STREAM_SERVER_UPDATE"], e => {
-          U({
+          G({
             type: "STREAM_SERVER_UPDATE",
             streamKey: e.stream_key,
             endpoint: e.endpoint,
@@ -46705,7 +46733,7 @@
           });
         }),
         w(["STREAM_UPDATE"], e => {
-          U({
+          G({
             type: "STREAM_UPDATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -46714,7 +46742,7 @@
           });
         }),
         w(["STREAM_DELETE"], e => {
-          U({
+          G({
             type: "STREAM_DELETE",
             streamKey: e.stream_key,
             unavailable: e.unavailable,
@@ -46722,7 +46750,7 @@
           });
         }),
         w(["GENERIC_PUSH_NOTIFICATION_SENT"], e => {
-          U({
+          G({
             type: "GENERIC_PUSH_NOTIFICATION_SENT",
             title: e.title,
             body: e.body,
@@ -46733,36 +46761,36 @@
           });
         }),
         w(["NOTIFICATION_CENTER_ITEM_CREATE"], e => {
-          U({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
+          G({ type: "NOTIFICATION_CENTER_ITEM_CREATE", item: e });
         }),
         w(["NOTIFICATION_CENTER_ITEM_DELETE"], e => {
-          U({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
+          G({ type: "NOTIFICATION_CENTER_ITEM_DELETE", id: e.id });
         }),
         w(["NOTIFICATION_CENTER_ITEMS_ACK"], e => {
-          U({
+          G({
             type: "NOTIFICATION_CENTER_ITEMS_ACK",
             ids: [e.id],
             optimistic: !1,
           });
         }),
         w(["NOTIFICATION_CENTER_ITEM_COMPLETED"], e => {
-          U({
+          G({
             type: "NOTIFICATION_CENTER_ITEM_COMPLETED",
             item_enum: e.item_enum,
           });
         }),
         w(["APPLICATION_COMMAND_PERMISSIONS_UPDATE"], (e, t) => {
-          U({ type: t, guildId: e.guild_id });
+          G({ type: t, guildId: e.guild_id });
         }),
         w(["GUILD_APPLICATION_COMMAND_INDEX_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE",
             guildId: e.guild_id,
             version: e.version,
           });
         }),
         w(["GUILD_JOIN_REQUEST_CREATE"], e => {
-          U({
+          G({
             type: "GUILD_JOIN_REQUEST_CREATE",
             request: e.request,
             status: e.status,
@@ -46770,7 +46798,7 @@
           });
         }),
         w(["GUILD_JOIN_REQUEST_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_JOIN_REQUEST_UPDATE",
             request: e.request,
             status: e.status,
@@ -46778,7 +46806,7 @@
           });
         }),
         w(["GUILD_JOIN_REQUEST_DELETE"], e => {
-          U({
+          G({
             type: "GUILD_JOIN_REQUEST_DELETE",
             id: e.id,
             userId: e.user_id,
@@ -46786,31 +46814,31 @@
           });
         }),
         w(["INTERACTION_CREATE"], e => {
-          U({
+          G({
             type: "INTERACTION_CREATE",
             interactionId: e.id,
             nonce: e.nonce,
           });
         }),
         w(["INTERACTION_SUCCESS"], e => {
-          U({
+          G({
             type: "INTERACTION_SUCCESS",
             interactionId: e.id,
             nonce: e.nonce,
           });
         }),
         w(["INTERACTION_FAILURE"], e => {
-          U({ type: "INTERACTION_FAILURE", nonce: e.nonce });
+          G({ type: "INTERACTION_FAILURE", nonce: e.nonce });
         }),
         w(["APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE"], e => {
-          U({
+          G({
             type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE",
             choices: e.choices,
             nonce: e.nonce,
           });
         }),
         w(["INTERACTION_MODAL_CREATE"], e => {
-          U({
+          G({
             type: "INTERACTION_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
@@ -46822,7 +46850,7 @@
           });
         }),
         w(["INTERACTION_IFRAME_MODAL_CREATE"], e => {
-          U({
+          G({
             type: "INTERACTION_IFRAME_MODAL_CREATE",
             id: e.id,
             channelId: e.channel_id,
@@ -46835,49 +46863,49 @@
           });
         }),
         w(["STAGE_INSTANCE_CREATE"], e => {
-          U({ type: "STAGE_INSTANCE_CREATE", instance: e });
+          G({ type: "STAGE_INSTANCE_CREATE", instance: e });
         }),
         w(["STAGE_INSTANCE_UPDATE"], e => {
-          U({ type: "STAGE_INSTANCE_UPDATE", instance: e });
+          G({ type: "STAGE_INSTANCE_UPDATE", instance: e });
         }),
         w(["STAGE_INSTANCE_DELETE"], e => {
-          U({ type: "STAGE_INSTANCE_DELETE", instance: e });
+          G({ type: "STAGE_INSTANCE_DELETE", instance: e });
         }),
         w(["GUILD_SCHEDULED_EVENT_CREATE"], e => {
-          U({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
+          G({ type: "GUILD_SCHEDULED_EVENT_CREATE", guildScheduledEvent: e });
         }),
         w(["GUILD_SCHEDULED_EVENT_UPDATE"], e => {
-          U({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
+          G({ type: "GUILD_SCHEDULED_EVENT_UPDATE", guildScheduledEvent: e });
         }),
         w(["GUILD_SCHEDULED_EVENT_DELETE"], e => {
-          U({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
+          G({ type: "GUILD_SCHEDULED_EVENT_DELETE", guildScheduledEvent: e });
         }),
         w(["GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
             eventException: e,
           });
         }),
         w(["GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE",
             eventException: e,
           });
         }),
         w(["GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE",
             eventException: e,
           });
         }),
         w(["GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
             eventId: e.event_id,
           });
         }),
         w(["GUILD_SCHEDULED_EVENT_USER_ADD"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_USER_ADD",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -46887,7 +46915,7 @@
           });
         }),
         w(["GUILD_SCHEDULED_EVENT_USER_REMOVE"], e => {
-          U({
+          G({
             type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
             userId: e.user_id,
             guildId: e.guild_id,
@@ -46897,28 +46925,28 @@
           });
         }),
         w(["GUILD_DIRECTORY_ENTRY_CREATE"], e => {
-          U({
+          G({
             type: "GUILD_DIRECTORY_ENTRY_CREATE",
             channelId: e.directory_channel_id,
             entry: e,
           });
         }),
         w(["GUILD_DIRECTORY_ENTRY_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_DIRECTORY_ENTRY_UPDATE",
             channelId: e.directory_channel_id,
             entry: e,
           });
         }),
         w(["GUILD_DIRECTORY_ENTRY_DELETE"], e => {
-          U({
+          G({
             type: "GUILD_DIRECTORY_ENTRY_DELETE",
             channelId: e.directory_channel_id,
             guildId: e.entity_id,
           });
         }),
         w(["AUTO_MODERATION_MENTION_RAID_DETECTION"], e => {
-          U({
+          G({
             type: "AUTO_MODERATION_MENTION_RAID_DETECTION",
             guildId: e.guild_id,
             decisionId: e.decision_id,
@@ -46926,7 +46954,7 @@
           });
         }),
         w(["VOICE_CHANNEL_EFFECT_SEND"], e => {
-          U({
+          G({
             type: "VOICE_CHANNEL_EFFECT_SEND",
             emoji: e.emoji,
             channelId: e.channel_id,
@@ -46942,7 +46970,7 @@
           });
         }),
         w(["GUILD_SOUNDBOARD_SOUND_CREATE"], e => {
-          U({
+          G({
             type: "GUILD_SOUNDBOARD_SOUND_CREATE",
             sound: {
               guildId: e.guild_id,
@@ -46958,7 +46986,7 @@
           });
         }),
         w(["GUILD_SOUNDBOARD_SOUND_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_SOUNDBOARD_SOUND_UPDATE",
             sound: {
               guildId: e.guild_id,
@@ -46974,14 +47002,14 @@
           });
         }),
         w(["GUILD_SOUNDBOARD_SOUND_DELETE"], e => {
-          U({
+          G({
             type: "GUILD_SOUNDBOARD_SOUND_DELETE",
             guildId: e.guild_id,
             soundId: e.sound_id,
           });
         }),
         w(["GUILD_SOUNDBOARD_SOUNDS_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
             guildId: e.guild_id,
             soundboardSounds: e.soundboard_sounds.map(t => ({
@@ -46996,35 +47024,43 @@
             })),
           });
         }),
-        w(["EMBEDDED_ACTIVITY_UPDATE"], e => {
-          U({
-            type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
-            guildId: e.guild_id,
-            channelId: e.channel_id,
-            embeddedActivity: e.embedded_activity,
-            connections: e.connections,
-            updateCode: e.update_code,
-          });
-        }),
-        w(["EMBEDDED_ACTIVITY_UPDATE_V2"], e => {
-          U({
-            type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2",
-            activitySessionId: e.activity_session_id,
-            applicationId: e.application_id,
-            channelId: e.channel_id,
-            guildId: e.guild_id,
-            instanceId: e.instance_id,
-            userIds: e.user_ids,
-          });
-        }),
+        L(
+          ["EMBEDDED_ACTIVITY_UPDATE"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
+              guildId: e.guild_id,
+              channelId: e.channel_id,
+              embeddedActivity: e.embedded_activity,
+              connections: e.connections,
+              updateCode: e.update_code,
+            });
+          }
+        ),
+        L(
+          ["EMBEDDED_ACTIVITY_UPDATE_V2"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            G({
+              type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2",
+              activitySessionId: e.activity_session_id,
+              applicationId: e.application_id,
+              channelId: e.channel_id,
+              guildId: e.guild_id,
+              instanceId: e.instance_id,
+              userIds: e.user_ids,
+            });
+          }
+        ),
         w(["AUTH_SESSION_CHANGE"], e => {
-          U({
+          G({
             type: "AUTH_SESSION_CHANGE",
             authSessionIdHash: e.auth_session_id_hash,
           });
         }),
         w(["USER_CONNECTIONS_LINK_CALLBACK"], e => {
-          U({
+          G({
             type: "USER_CONNECTIONS_LINK_CALLBACK",
             provider: e.provider,
             callbackCode: e.callback_code,
@@ -47032,84 +47068,88 @@
           });
         }),
         w(["DELETED_ENTITY_IDS"], e => {
-          U({ type: "DELETED_ENTITY_IDS", ...e });
+          G({ type: "DELETED_ENTITY_IDS", ...e });
         }),
         w(["CONSOLE_COMMAND_UPDATE"], e => {
-          U({
+          G({
             type: "CONSOLE_COMMAND_UPDATE",
             id: e.id,
             result: e.result,
             error: e.error,
           });
         }),
-        w(["PASSIVE_UPDATE_V1"], e => {
-          var t, n;
-          U({
-            type: "PASSIVE_UPDATE_V1",
-            guildId: e.guild_id,
-            members: e.members,
-            channels:
-              null === (t = e.channels) || void 0 === t
-                ? void 0
-                : t.map(e => ({
-                    id: e.id,
-                    lastMessageId: e.last_message_id,
-                    lastPinTimestamp: e.last_pin_timestamp,
-                  })),
-            voiceStates:
-              null === (n = e.voice_states) || void 0 === n
-                ? void 0
-                : n.map(e => {
-                    var t;
-                    return {
-                      channelId: e.channel_id,
-                      deaf: e.deaf || !1,
-                      mute: e.mute || !1,
-                      requestToSpeakTimestamp:
-                        null !== (t = e.request_to_speak_timestamp) &&
-                        void 0 !== t
-                          ? t
-                          : null,
-                      selfDeaf: e.self_deaf || !1,
-                      selfMute: e.self_mute || !1,
-                      selfStream: e.self_stream || !1,
-                      selfVideo: e.self_video || !1,
-                      sessionId: e.session_id,
-                      suppress: e.suppress,
-                      userId: e.user_id,
-                    };
-                  }),
-          });
-        }),
+        L(
+          ["PASSIVE_UPDATE_V1"],
+          e => E.ChannelLoader.loadGuildIds([e.guild_id]),
+          e => {
+            var t, n;
+            G({
+              type: "PASSIVE_UPDATE_V1",
+              guildId: e.guild_id,
+              members: e.members,
+              channels:
+                null === (t = e.channels) || void 0 === t
+                  ? void 0
+                  : t.map(e => ({
+                      id: e.id,
+                      lastMessageId: e.last_message_id,
+                      lastPinTimestamp: e.last_pin_timestamp,
+                    })),
+              voiceStates:
+                null === (n = e.voice_states) || void 0 === n
+                  ? void 0
+                  : n.map(e => {
+                      var t;
+                      return {
+                        channelId: e.channel_id,
+                        deaf: e.deaf || !1,
+                        mute: e.mute || !1,
+                        requestToSpeakTimestamp:
+                          null !== (t = e.request_to_speak_timestamp) &&
+                          void 0 !== t
+                            ? t
+                            : null,
+                        selfDeaf: e.self_deaf || !1,
+                        selfMute: e.self_mute || !1,
+                        selfStream: e.self_stream || !1,
+                        selfVideo: e.self_video || !1,
+                        sessionId: e.session_id,
+                        suppress: e.suppress,
+                        userId: e.user_id,
+                      };
+                    }),
+            });
+          }
+        ),
         w(["PRIVATE_CHANNEL_INTEGRATION_CREATE"], e => {
-          U({ type: "PRIVATE_CHANNEL_INTEGRATION_CREATE", integration: e });
+          G({ type: "PRIVATE_CHANNEL_INTEGRATION_CREATE", integration: e });
         }),
         w(["PRIVATE_CHANNEL_INTEGRATION_UPDATE"], e => {
-          U({ type: "PRIVATE_CHANNEL_INTEGRATION_UPDATE", integration: e });
+          G({ type: "PRIVATE_CHANNEL_INTEGRATION_UPDATE", integration: e });
         }),
         w(["PRIVATE_CHANNEL_INTEGRATION_DELETE"], e => {
-          U({
+          G({
             type: "PRIVATE_CHANNEL_INTEGRATION_DELETE",
             channelId: e.channel_id,
             applicationId: e.application_id,
           });
         }),
         w(["CREATOR_MONETIZATION_RESTRICTIONS_UPDATE"], e => {
-          U({
+          G({
             type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
             guildId: e.guild_id,
             restrictions: e.restrictions,
           });
         }),
         w(["BILLING_REFERRAL_TRIAL_OFFER_UPDATE"], e => {
-          U({
+          G({
             type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE",
             userTrialOfferId: e.user_trial_offer_id,
             recipientId: e.recipient_id,
           });
         }),
         w(["SPEED_TEST_CREATE"], e => {
-          U({
+          G({
             type: "SPEED_TEST_CREATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -47119,7 +47159,7 @@
           });
         }),
         w(["SPEED_TEST_SERVER_UPDATE"], e => {
-          U({
+          G({
             type: "SPEED_TEST_SERVER_UPDATE",
             streamKey: e.stream_key,
             endpoint: e.endpoint,
@@ -47127,7 +47167,7 @@
           });
         }),
         w(["SPEED_TEST_UPDATE"], e => {
-          U({
+          G({
             type: "SPEED_TEST_UPDATE",
             streamKey: e.stream_key,
             region: e.region,
@@ -47136,7 +47176,7 @@
           });
         }),
         w(["SPEED_TEST_DELETE"], e => {
-          U({
+          G({
             type: "SPEED_TEST_DELETE",
             streamKey: e.stream_key,
             unavailable: e.unavailable,
@@ -47144,47 +47184,47 @@
           });
         }),
         w(["LAST_MESSAGES"], e => {
-          U({
+          G({
             type: "MESSAGE_PREVIEWS_LOADED",
             guildId: e.guild_id,
             messages: e.messages,
           });
         }),
         w(["AUTHENTICATOR_UPDATE"], e => {
-          U({ type: "AUTHENTICATOR_UPDATE", credential: e });
+          G({ type: "AUTHENTICATOR_UPDATE", credential: e });
         }),
         w(["AUTHENTICATOR_CREATE"], e => {
-          U({ type: "AUTHENTICATOR_CREATE", credential: e });
+          G({ type: "AUTHENTICATOR_CREATE", credential: e });
         }),
         w(["AUTHENTICATOR_DELETE"], e => {
-          U({ type: "AUTHENTICATOR_DELETE", credential: e });
+          G({ type: "AUTHENTICATOR_DELETE", credential: e });
         }),
         w(["NOTIFICATION_SETTINGS_UPDATE"], e => {
-          U({
+          G({
             type: "NOTIFICATION_SETTINGS_UPDATE",
             settings: { flags: e.flags },
           });
         }),
         w(["GAME_INVITE_CREATE"], e => {
-          U({ type: "GAME_INVITE_CREATE", gameInvite: e });
+          G({ type: "GAME_INVITE_CREATE", gameInvite: e });
         }),
         w(["GAME_INVITE_DELETE"], e => {
-          U({ type: "GAME_INVITE_DELETE", inviteId: e.invite_id });
+          G({ type: "GAME_INVITE_DELETE", inviteId: e.invite_id });
         }),
         w(["GAME_INVITE_DELETE_MANY"], e => {
-          U({ type: "GAME_INVITE_DELETE_MANY", inviteIds: e.invite_ids });
+          G({ type: "GAME_INVITE_DELETE_MANY", inviteIds: e.invite_ids });
         }),
         w(["PREMIUM_MARKETING_PREVIEW"], e => {
-          U({ type: "PREMIUM_MARKETING_PREVIEW", properties: e.properties });
+          G({ type: "PREMIUM_MARKETING_PREVIEW", properties: e.properties });
         }),
         w(["USER_APPLICATION_UPDATE"], e => {
-          U({
+          G({
             type: "USER_APPLICATION_UPDATE",
             applicationId: e.application_id,
           });
         }),
         w(["USER_APPLICATION_REMOVE"], e => {
-          U({
+          G({
             type: "USER_APPLICATION_REMOVE",
             applicationId: e.application_id,
           });
@@ -47221,8 +47261,8 @@
         y = n("278163"),
         T = n("599110"),
         C = n("104478"),
-        S = n("374014"),
-        I = n("933034"),
+        I = n("374014"),
+        S = n("933034"),
         A = n("196383"),
         D = n("49111"),
         N = n("353927");
@@ -47371,7 +47411,7 @@
                         windows: l,
                         activity: f,
                         ...E,
-                        ...(0, I.default)(null == h ? void 0 : h.desktopSource),
+                        ...(0, S.default)(null == h ? void 0 : h.desktopSource),
                       });
                     });
                   }
@@ -47379,7 +47419,7 @@
             }
           }),
             this.on(u.RTCConnectionEvent.Video, (t, n, s, i, r) => {
-              let a = (0, S.decodeStreamKey)(this._streamKey);
+              let a = (0, I.decodeStreamKey)(this._streamKey);
               a.guildId === t &&
                 a.channelId === n &&
                 a.ownerId === s &&
@@ -47498,7 +47538,7 @@
         }
         _getExtraConnectionOptions() {
           return {
-            streamUserId: (0, S.decodeStreamKey)(this._streamKey).ownerId,
+            streamUserId: (0, I.decodeStreamKey)(this._streamKey).ownerId,
           };
         }
         constructor({
@@ -47510,7 +47550,7 @@
           isStreamer: a,
           parentMediaSessionId: d,
         }) {
-          let u = (0, S.decodeStreamKey)(t),
+          let u = (0, I.decodeStreamKey)(t),
             { guildId: l, channelId: f } = u;
           super({
             userId: g.default.getId(),
@@ -47531,7 +47571,7 @@
                 guildId: n,
                 channelId: s,
                 ownerId: i,
-              } = (0, S.decodeStreamKey)(this._streamKey);
+              } = (0, I.decodeStreamKey)(this._streamKey);
               o.default.wait(() =>
                 o.default.dispatch({
                   type: "RTC_CONNECTION_VIDEO",
@@ -48692,7 +48732,7 @@
             return C;
           },
           fetchMonetizationRestrictions: function () {
-            return S;
+            return I;
           },
         }),
         n("222007");
@@ -48847,7 +48887,7 @@
           a
         );
       }
-      async function S(e) {
+      async function I(e) {
         let { signal: t } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
           n = !1;
@@ -50109,10 +50149,10 @@
             return C;
           },
           updateImpersonatedRoles: function () {
-            return S;
+            return I;
           },
           updateImpersonatedData: function () {
-            return I;
+            return S;
           },
         }),
         n("222007");
@@ -50178,7 +50218,7 @@
           n.forEach(e => s.delete(e)),
           p(e, { type: m.ImpersonateType.NEW_MEMBER, optInChannels: s });
       }
-      function S(e, t) {
+      function I(e, t) {
         let n = u.default.getGuild(e);
         if (null == n) return;
         !(function (e, t) {
@@ -50203,7 +50243,7 @@
         t.forEach(e => (s[e] = n.roles[e])),
           p(e, { type: m.ImpersonateType.NEW_MEMBER, roles: s });
       }
-      function I(e, t) {
+      function S(e, t) {
         p(e, { type: m.ImpersonateType.NEW_MEMBER, ...t });
       }
     },
@@ -50618,7 +50658,7 @@
             return C;
           },
           default: function () {
-            return S;
+            return I;
           },
         }),
         n("222007"),
@@ -50711,7 +50751,7 @@
           return null;
         }
       }
-      var S = {
+      var I = {
         ...d.defaultRules.link,
         match: (e, t, n) =>
           t.allowLinks ? d.defaultRules.link.match(e, t, n) : null,
@@ -50720,12 +50760,12 @@
             _ = () => ({ type: f.AST_KEY.TEXT, content: s }),
             c = g(a),
             m = g(r),
-            S = g(null != o ? o : ""),
-            I = c.whitespaceSanitized,
+            I = g(null != o ? o : ""),
+            S = c.whitespaceSanitized,
             A = m.fullySanitized,
-            D = S.fullySanitized,
+            D = I.fullySanitized,
             N = A.trim(),
-            O = I.trim();
+            O = S.trim();
           if (0 === O.length || 0 === N.length) return _();
           let P = d.unescapeUrl(a),
             b = C(P),
@@ -50782,7 +50822,7 @@
           let x = i.pick(t.rules, k),
             Y = d.parserFor(x),
             j = Y(m.whitespaceSanitized, R),
-            K = S.whitespaceSanitized,
+            K = I.whitespaceSanitized,
             { target: W } = b;
           return { content: j, target: W, title: K };
         },
@@ -51589,7 +51629,7 @@
               mentionUsers: O,
               mentionRoles: P,
             }),
-            attachments: S(e),
+            attachments: I(e),
             embeds: A(e),
             codedLinks: k,
             giftCodes: (0, m.isGiftCodeEmbed)(e)
@@ -51597,7 +51637,7 @@
               : (0, m.findGiftCodes)(e.content),
             content: F,
             referralTrialOfferId: G,
-            call: I(e.call, R),
+            call: S(e.call, R),
             reactions: D(null != C ? C : e.reactions),
             interaction: L,
             interactionData: null != N ? N : e.interaction_data,
@@ -51625,8 +51665,8 @@
           });
         let n = e;
         if (
-          (null != t.call && (n = n.set("call", I(t.call, e.timestamp))),
-          null != t.attachments && (n = n.set("attachments", S(t))),
+          (null != t.call && (n = n.set("call", S(t.call, e.timestamp))),
+          null != t.attachments && (n = n.set("attachments", I(t))),
           null != t.content &&
             "" !== t.content &&
             (n = n.set("content", t.content)),
@@ -51651,7 +51691,7 @@
         }
         return null != t.poll && (n = n.set("poll", (0, a.default)(t.poll))), n;
       }
-      function S(e) {
+      function I(e) {
         return null == e.attachments
           ? []
           : e.attachments.map(e => ({
@@ -51659,7 +51699,7 @@
               spoiler: e.filename.startsWith(v.SPOILER_ATTACHMENT_PREFIX),
             }));
       }
-      function I(e, t) {
+      function S(e, t) {
         if (null != e) {
           let n =
               null != e.ended_timestamp ? i(new Date(e.ended_timestamp)) : null,
@@ -52250,7 +52290,7 @@
           (null === (s = e.other_user) || void 0 === s ? void 0 : s.id) === n
         );
       }
-      function S(e) {
+      function I(e) {
         var t;
         if (!(0, r.isGuildEventEnded)(e)) return;
         let n = t =>
@@ -52277,7 +52317,7 @@
             : e
         );
       }
-      class I extends s.default.PersistedStore {
+      class S extends s.default.PersistedStore {
         initialize(e) {
           if ((this.waitFor(u.default), null != e)) {
             let t = e.notifCenterItems.map(e => ({
@@ -52333,9 +52373,9 @@
           return h.notifCenterTabFocused;
         }
       }
-      (I.displayName = "NotificationCenterItemsStore"),
-        (I.persistKey = "NotificationCenterItemsStore_v2");
-      var A = new I(i.default, {
+      (S.displayName = "NotificationCenterItemsStore"),
+        (S.persistKey = "NotificationCenterItemsStore_v2");
+      var A = new S(i.default, {
         CONNECTION_OPEN: function (e) {
           E(),
             m.default.initialLanguageLoad.then(() => {
@@ -52355,7 +52395,7 @@
               }),
                 e.guilds.forEach(e => {
                   e.guild_scheduled_events.forEach(e => {
-                    S(e);
+                    I(e);
                   });
                 }),
                 (h.notifCenterLocalItems = t);
@@ -52372,7 +52412,7 @@
         },
         GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
           let { guildScheduledEvent: t } = e;
-          S(t);
+          I(t);
         },
         NOTIFICATION_CENTER_ITEM_CREATE: y,
         NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
@@ -53424,7 +53464,7 @@
             scopes: r,
             redirectUri: o,
             approximateGuildCount: C,
-            isEmbeddedFlow: I,
+            isEmbeddedFlow: S,
             embeddedActivityConfig: A,
           } = e,
           D = new Date(m.default.extractTimestamp(i.id)),
@@ -53433,7 +53473,7 @@
             null !== (t = i.flags) && void 0 !== t ? t : 0,
             E.ApplicationFlags.EMBEDDED
           );
-        if (null != o && !O && !I) {
+        if (null != o && !O && !S) {
           let e = new URL(o);
           n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         }
@@ -53441,7 +53481,7 @@
           className: T.applicationDetails,
           children: [
             null != n
-              ? (0, s.jsx)(S, {
+              ? (0, s.jsx)(I, {
                   className: T.redirectWarning,
                   icon: l.default,
                   text: y.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
@@ -53449,33 +53489,33 @@
                   }),
                 })
               : null,
-            (0, s.jsx)(S, {
+            (0, s.jsx)(I, {
               icon: f.default,
               text: (0, h.getApplicationDetailsText)(i),
             }),
-            (0, s.jsx)(S, {
+            (0, s.jsx)(I, {
               icon: d.default,
               text: y.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
                 date: D,
               }),
             }),
             r.includes(p.OAuth2Scopes.BOT) && null != C
-              ? (0, s.jsx)(S, {
+              ? (0, s.jsx)(I, {
                   icon: _.default,
                   text: y.default.Messages.OAUTH2_DETAILS_GUILDS.format({
                     guildCount: C,
                   }),
                 })
               : null,
-            (0, s.jsx)(S, { icon: c.default, text: N }),
+            (0, s.jsx)(I, { icon: c.default, text: N }),
             (null == A ? void 0 : A.has_csp_exception)
-              ? (0, s.jsx)(S, {
+              ? (0, s.jsx)(I, {
                   icon: u.default,
                   text: y.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE,
                 })
               : null,
             (null == A ? void 0 : A.displays_advertisements)
-              ? (0, s.jsx)(S, {
+              ? (0, s.jsx)(I, {
                   icon: a.EmbedIcon,
                   text: y.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE,
                 })
@@ -53483,7 +53523,7 @@
           ],
         });
       }
-      function S(e) {
+      function I(e) {
         let { icon: t, text: n, className: i } = e;
         return (0, s.jsxs)("div", {
           className: r(T.entry, i),
@@ -53547,8 +53587,8 @@
         y = n("716241"),
         T = n("148217"),
         C = n("970254"),
-        S = n("616265"),
-        I = n("894887"),
+        I = n("616265"),
+        S = n("894887"),
         A = n("393414"),
         D = n("766274"),
         N = n("271938"),
@@ -53623,9 +53663,9 @@
         var t, n, s, i, r, a, l, m;
         let h,
           T,
-          S,
+          I,
           {
-            clientId: I,
+            clientId: S,
             scopes: x,
             responseType: X,
             redirectUri: Q,
@@ -53654,8 +53694,8 @@
         !ev && (ec = !1);
         let [eE, ep] = d.useState(0),
           [ey, eT] = d.useState(null),
-          [eC, eS] = d.useState(P.default.NONE),
-          [eI, eA] = d.useState(1),
+          [eC, eI] = d.useState(P.default.NONE),
+          [eS, eA] = d.useState(1),
           [eD, eN] = d.useState(null),
           [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))),
           [eP, eb] = d.useState(null != ee ? ee : null),
@@ -53720,7 +53760,7 @@
                 eM(!0);
                 let t = await (0, R.authorize)({
                   authorize: e,
-                  clientId: I,
+                  clientId: S,
                   scopes: eg,
                   responseType: X,
                   redirectUri: Q,
@@ -53767,7 +53807,7 @@
             [
               eo,
               ed,
-              I,
+              S,
               Z,
               J,
               eC,
@@ -53799,7 +53839,7 @@
                     null != ea
                       ? ea
                       : await (0, R.fetchAuthorization)({
-                          clientId: I,
+                          clientId: S,
                           scopes: eg,
                           responseType: X,
                           redirectUri: Q,
@@ -53837,9 +53877,9 @@
                 }
               }
             }
-          }, [ea, I, Z, J, eE, em, es, Q, X, eg, eF, $, ec, ev]),
+          }, [ea, S, Z, J, eE, em, es, Q, X, eg, eF, $, ec, ev]),
           ex = d.useCallback((e, t) => {
-            eS(n => (e ? _.default.remove(n, t) : _.default.add(n, t)));
+            eI(n => (e ? _.default.remove(n, t) : _.default.add(n, t)));
           }, []);
         d.useEffect(() => {
           let e = eg.filter(e => !w.ValidScopes.includes(e));
@@ -53884,7 +53924,7 @@
               ? void 0
               : s.approximate_guild_count,
           ez = !1;
-        switch (eI) {
+        switch (eS) {
           case 1:
             let eq = null == eD || eD instanceof Error ? {} : eD,
               eX =
@@ -53939,7 +53979,7 @@
             })),
               eg.includes(j.OAuth2Scopes.BOT) &&
                 !_.default.equals(en, P.default.NONE) &&
-                (S = 2);
+                (I = 2);
             let eZ =
               null != ej &&
               eg.includes(j.OAuth2Scopes.WEBHOOK_INCOMING) &&
@@ -53981,9 +54021,9 @@
                     onClick: () => eF(!1),
                     children: W.default.Messages.CANCEL,
                   }),
-              null != S
+              null != I
                 ? (0, o.jsx)(g.Button, {
-                    onClick: () => eA(S),
+                    onClick: () => eA(I),
                     disabled: ez,
                     children: W.default.Messages.CONTINUE,
                   })
@@ -54009,7 +54049,7 @@
           header: e1,
           body: h,
           footer: e$,
-          nextStep: S,
+          nextStep: I,
           appDetails: eJ,
           sendAuthorize: eF,
         };
@@ -54060,9 +54100,9 @@
       }
       function ee(e, t) {
         if (
-          (0, I.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")
+          (0, S.isMidjourneyOnboardingFlow)("create-guild-and-oauth2-modal")
         ) {
-          S.default.openCreateGuildModal({
+          I.default.openCreateGuildModal({
             onSuccess: n => et({ ...e, guildId: n }, t),
           });
           return;
@@ -54660,10 +54700,10 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return I;
           },
           OAuth2Success: function () {
-            return I;
+            return S;
           },
           OAuth2AuthorizedSuccess: function () {
             return A;
@@ -54698,7 +54738,7 @@
         y = n("49111"),
         T = n("782340"),
         C = n("977396");
-      function S(e) {
+      function I(e) {
         let {
           message: t,
           footer: n,
@@ -54742,8 +54782,8 @@
           })
         );
       }
-      function I(e) {
-        return (0, s.jsx)(S, { ...e, headerClassName: C.headerSuccess });
+      function S(e) {
+        return (0, s.jsx)(I, { ...e, headerClassName: C.headerSuccess });
       }
       function A(e) {
         let { guild: t, application: n, ...r } = e,
@@ -54824,12 +54864,12 @@
           }, [null == n ? void 0 : n.id]),
           (0, s.jsx)("div", {
             className: C.authorizedSuccessWrapper,
-            children: (0, s.jsx)(I, { message: o, footer: f, ...r }),
+            children: (0, s.jsx)(S, { message: o, footer: f, ...r }),
           })
         );
       }
       function D(e) {
-        return (0, s.jsx)(S, { ...e, headerClassName: C.headerFailure });
+        return (0, s.jsx)(I, { ...e, headerClassName: C.headerFailure });
       }
       function N() {
         var e, t;
@@ -55023,7 +55063,7 @@
         y = new Set(),
         T = () => O.emitChange(),
         C = a.debounce(T, 150);
-      function S(e) {
+      function I(e) {
         let t = v[e];
         null != t &&
           !t.closed &&
@@ -55035,10 +55075,10 @@
             alwaysOnTop: !!f.isPlatformEmbedded && h[e],
           });
       }
-      function I(e) {
+      function S(e) {
         let t = v[e];
         null != t &&
-          (!t.closed && S(e),
+          (!t.closed && I(e),
           t.close(),
           !(function (e) {
             let t = v[e];
@@ -55112,7 +55152,7 @@
                 )
               );
             case g.PopoutEventTypes.UNLOADED:
-              return I(n.key);
+              return S(n.key);
           }
       }
       function D() {
@@ -55173,7 +55213,7 @@
           return m;
         }
         unmountWindow(e) {
-          return I(e);
+          return S(e);
         }
       }
       (N.displayName = "PopoutWindowStore"),
@@ -55238,7 +55278,7 @@
         POPOUT_WINDOW_CLOSE: function (e) {
           let { key: t } = e,
             n = v[t];
-          null != n && !n.closed && (S(t), n.close());
+          null != n && !n.closed && (I(t), n.close());
         },
         POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
           let { key: t, alwaysOnTop: n } = e;
@@ -55542,10 +55582,10 @@
         let { messages: t } = e;
         return y(t, e => y(e, e => p(e)));
       }
-      function S(e) {
+      function I(e) {
         return E.deleteChannelCache(e.channel.id);
       }
-      function I(e, t) {
+      function S(e, t) {
         if (!E.has(e, t)) return !1;
         E.set(e, t, { state: 2 });
       }
@@ -55632,18 +55672,18 @@
         },
         MESSAGE_DELETE: function (e) {
           let { id: t, channelId: n } = e;
-          return I(n, t);
+          return S(n, t);
         },
         MESSAGE_DELETE_BULK: function (e) {
           let { ids: t, channelId: n } = e;
-          return y(t, e => I(n, e));
+          return y(t, e => S(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
           let { message: t } = e;
           E.set(t.channel_id, t.id, { state: 0, message: t });
         },
-        CHANNEL_DELETE: S,
-        THREAD_DELETE: S,
+        CHANNEL_DELETE: I,
+        THREAD_DELETE: I,
         GUILD_DELETE: function () {
           let e = E.retainWhere(e => null != _.default.getChannel(e));
           if (0 === e) return !1;
@@ -55860,8 +55900,8 @@
         y = new Set(),
         T = 0,
         C = 0,
-        S = new Set(),
-        I = new Map(),
+        I = new Set(),
+        S = new Map(),
         A = !1;
       function D(e) {
         let { sound: t } = e,
@@ -55900,7 +55940,7 @@
         getOverlaySerializedState() {
           return {
             soundboardSounds: Object.fromEntries(E),
-            favoritedSoundIds: Array.from(S),
+            favoritedSoundIds: Array.from(I),
             localSoundboardMutes: Array.from(y),
           };
         }
@@ -55935,17 +55975,17 @@
           return 2 === T;
         }
         isUserPlayingSounds(e) {
-          let t = I.get(e);
+          let t = S.get(e);
           return null != t && t > 0;
         }
         isPlayingSound(e) {
           return null != p.get(e);
         }
         isFavoriteSound(e) {
-          return S.has(e);
+          return I.has(e);
         }
         getFavorites() {
-          return S;
+          return I;
         }
         isLocalSoundboardMuted(e) {
           return y.has(e);
@@ -55960,7 +56000,7 @@
       P.displayName = "SoundboardStore";
       var b = new P(d.default, {
         LOGOUT: function () {
-          E.clear(), p.clear(), I.clear(), (A = !1), (C = 0), (T = 0);
+          E.clear(), p.clear(), S.clear(), (A = !1), (C = 0), (T = 0);
         },
         GUILD_SOUNDBOARD_FETCH: function () {
           C = 1;
@@ -55980,9 +56020,9 @@
           var t, n, s;
           let { soundId: i, userId: r } = e,
             a = (null !== (n = p.get(i)) && void 0 !== n ? n : 0) + 1,
-            o = (null !== (s = I.get(r)) && void 0 !== s ? s : 0) + 1;
+            o = (null !== (s = S.get(r)) && void 0 !== s ? s : 0) + 1;
           p.set(i, a),
-            I.set(r, o),
+            S.set(r, o),
             r !==
               (null === (t = f.default.getCurrentUser()) || void 0 === t
                 ? void 0
@@ -55992,23 +56032,23 @@
           var t, n;
           let { soundId: s, userId: i } = e,
             r = (null !== (t = p.get(s)) && void 0 !== t ? t : 0) - 1,
-            a = (null !== (n = I.get(i)) && void 0 !== n ? n : 0) - 1;
+            a = (null !== (n = S.get(i)) && void 0 !== n ? n : 0) - 1;
           r <= 0 ? p.delete(s) : p.set(s, r),
-            a <= 0 ? I.delete(i) : I.set(i, a);
+            a <= 0 ? S.delete(i) : S.set(i, a);
         },
         USER_SOUNDBOARD_SET_VOLUME: function (e) {
           let { volume: t } = e;
           N(t);
         },
         VOICE_CHANNEL_SELECT: function () {
-          p.clear(), I.clear();
+          p.clear(), S.clear();
         },
         USER_SETTINGS_PROTO_UPDATE: function (e) {
           let { settings: t } = e,
             { type: n, proto: s } = t;
           if (n === v.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
             var i, r;
-            S = new Set(
+            I = new Set(
               null !==
                 (r =
                   null == s
@@ -56047,7 +56087,7 @@
         OVERLAY_INITIALIZE: function (e) {
           let { soundboardStoreState: t } = e;
           (E = new Map(g.default.entries(t.soundboardSounds))),
-            (S = new Set(t.favoritedSoundIds)),
+            (I = new Set(t.favoritedSoundIds)),
             (y = new Set(t.localSoundboardMutes));
         },
         GUILD_SOUNDBOARD_SOUNDS_UPDATE: function (e) {
@@ -56424,8 +56464,8 @@
         y = n("271938"),
         T = n("47319"),
         C = n("603699"),
-        S = n("824563"),
-        I = n("280168"),
+        I = n("824563"),
+        S = n("280168"),
         A = n("800762"),
         D = n("599110"),
         N = n("550368"),
@@ -56478,7 +56518,7 @@
         });
       }
       function en(e) {
-        return S.default.findActivity(
+        return I.default.findActivity(
           e,
           e =>
             null != e.party &&
@@ -56797,8 +56837,8 @@
       }
       class em extends f.default.Store {
         initialize() {
-          this.waitFor(T.default, I.default),
-            this.syncWith([S.default], () =>
+          this.waitFor(T.default, S.default),
+            this.syncWith([I.default], () =>
               (function () {
                 if (null == i) return !1;
                 let e = ee();
@@ -57614,13 +57654,13 @@
           let C = d.default.getGuild(T.getGuildId());
           if (null == C || !C.hasFeature(E.GuildFeatures.DISCOVERABLE))
             return null;
-          let S = (0, g.packStageChannelPartyId)(T, y),
-            I =
+          let I = (0, g.packStageChannelPartyId)(T, y),
+            S =
               (null == p
                 ? void 0
                 : null === (e = p.party) || void 0 === e
                   ? void 0
-                  : e.id) === S
+                  : e.id) === I
                 ? p
                 : null,
             A = _.default.getMutableParticipants(
@@ -57633,12 +57673,12 @@
             N = A.length - D,
             O = _.default.getParticipantCount(u) - D,
             P =
-              (null == I
+              (null == S
                 ? void 0
-                : null === (t = I.party) || void 0 === t
+                : null === (t = S.party) || void 0 === t
                   ? void 0
                   : t.size) != null
-                ? I.party.size[1]
+                ? S.party.size[1]
                 : 0;
           return {
             application_id: v.STAGE_APPLICATION_ID,
@@ -57655,9 +57695,9 @@
               start:
                 null !==
                   (r =
-                    null == I
+                    null == S
                       ? void 0
-                      : null === (n = I.timestamps) || void 0 === n
+                      : null === (n = S.timestamps) || void 0 === n
                         ? void 0
                         : n.start) && void 0 !== r
                   ? r
@@ -57667,7 +57707,7 @@
               small_image: null !== (a = C.icon) && void 0 !== a ? a : void 0,
               small_text: C.name,
             },
-            party: { id: S, size: [N, Math.max(O, P)] },
+            party: { id: I, size: [N, Math.max(O, P)] },
           };
         })();
         return !i(e, p) && ((p = e), !0);
@@ -58054,10 +58094,10 @@
         y = null,
         T = [],
         C = null,
-        S = !1,
-        I = new Map(),
+        I = !1,
+        S = new Map(),
         A = (e, t) => {
-          I = new Map(I.set(e, t));
+          S = new Map(S.set(e, t));
         },
         D = g.default.Millis.HOUR,
         N = async () => {
@@ -58155,7 +58195,7 @@
           (t || n) && e.stickers.forEach(e => O(e));
         },
         V = () => {
-          I.forEach((e, t) => {
+          S.forEach((e, t) => {
             let n = c.default.getGuild(t);
             null != n && e.forEach(e => P(e, n));
           }),
@@ -58184,7 +58224,7 @@
           return null != C && C + D > Date.now();
         }
         get isFetchingStickerPacks() {
-          return S;
+          return I;
         }
         getStickerById(e) {
           return !p.has(e) && N(), p.get(e);
@@ -58199,28 +58239,28 @@
           return T.some(t => t.id === e);
         }
         getRawStickersByGuild() {
-          return I;
+          return S;
         }
         getAllStickersIterator() {
           return N(), p.values();
         }
         getAllGuildStickers() {
-          return N(), I;
+          return N(), S;
         }
         getStickersByGuildId(e) {
-          return N(), I.get(e);
+          return N(), S.get(e);
         }
       }
       k.displayName = "StickersStore";
       var M = new k(r.default, {
         BACKGROUND_SYNC: () => {
-          (y = null), (p = new Map()), (I = new Map()), (v = 0);
+          (y = null), (p = new Map()), (S = new Map()), (v = 0);
         },
         CONNECTION_OPEN: e => {
           let { guilds: t } = e;
           (y = null),
             (p = new Map()),
-            (I = new Map()),
+            (S = new Map()),
             t.forEach(R),
             (v = t.every(e => null != e.stickers) ? 1 : 0);
         },
@@ -58236,12 +58276,12 @@
         GUILD_DELETE: function (e) {
           var t;
           let { guild: n } = e,
-            s = null !== (t = I.get(n.id)) && void 0 !== t ? t : [];
+            s = null !== (t = S.get(n.id)) && void 0 !== t ? t : [];
           s.forEach(e => {
             null != y && y.delete(e.id), p.delete(e.id);
           }),
-            I.delete(n.id),
-            (I = new Map(I));
+            S.delete(n.id),
+            (S = new Map(S));
         },
         LOGOUT: () => {
           (v = 0),
@@ -58249,17 +58289,17 @@
             p.clear(),
             E.clear(),
             (y = null),
-            I.clear(),
-            (I = new Map(I)),
-            (S = !1),
+            S.clear(),
+            (S = new Map(S)),
+            (I = !1),
             (C = null);
         },
         STICKER_PACKS_FETCH_START: () => {
-          S = !0;
+          I = !0;
         },
         STICKER_PACKS_FETCH_SUCCESS: e => {
           let { packs: t } = e;
-          t.forEach(e => b(e, !0)), (C = Date.now()), (S = !1);
+          t.forEach(e => b(e, !0)), (C = Date.now()), (I = !1);
         },
         STICKER_PACK_FETCH_SUCCESS: e => {
           let { pack: t, ingestStickers: n } = e;
@@ -58272,7 +58312,7 @@
         GUILD_STICKERS_CREATE_SUCCESS: e => {
           var t, n;
           let { guildId: s, sticker: i } = e,
-            r = null !== (t = I.get(s)) && void 0 !== t ? t : [];
+            r = null !== (t = S.get(s)) && void 0 !== t ? t : [];
           A(s, [
             ...(null !== (n = r.filter(e => e.id !== i.id)) && void 0 !== n
               ? n
@@ -58298,7 +58338,7 @@
                 { ...e, user: t }
               );
             },
-            r = null !== (t = I.get(n)) && void 0 !== t ? t : [],
+            r = null !== (t = S.get(n)) && void 0 !== t ? t : [],
             a = r.filter(e => null == s.find(t => t.id === e.id));
           a.forEach(e => {
             p.delete(e.id), null != y && y.delete(e.id);
@@ -58309,7 +58349,7 @@
         CACHED_STICKERS_LOADED: function (e) {
           let { stickers: t } = e;
           for (let [e, n] of t)
-            if (_.default.isMember(e) && !I.has(e)) {
+            if (_.default.isMember(e) && !S.has(e)) {
               let t = c.default.getGuild(e);
               for (let e of n) O(e, !0, t);
               A(e, n);
@@ -58390,7 +58430,7 @@
             return C;
           },
           getStickerFormatTypeFromFileType: function () {
-            return I;
+            return S;
           },
           getFilenameForSticker: function () {
             return A;
@@ -58471,7 +58511,7 @@
           }
           return e.stickers[0];
         },
-        S = e => {
+        I = e => {
           switch (e) {
             case l.StickerFormat.PNG:
               return o.SUPPORTS_WEBP
@@ -58487,7 +58527,7 @@
               throw Error("Unexpected format type: ".concat(e));
           }
         },
-        I = e => {
+        S = e => {
           switch (e) {
             case "application/json":
               return l.StickerFormat.LOTTIE;
@@ -58503,12 +58543,12 @@
           }
         },
         A = e =>
-          null == e ? null : "".concat(e.name, ".").concat(S(e.format_type)),
+          null == e ? null : "".concat(e.name, ".").concat(I(e.format_type)),
         D = function (e) {
           let { isPreview: t = !1, size: n = f.DEFAULT_STICKER_DIMENSIONS } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           if (null == e.format_type) return null;
-          let s = _.Endpoints.STICKER_ASSET(e.id, S(e.format_type));
+          let s = _.Endpoints.STICKER_ASSET(e.id, I(e.format_type));
           if ("development" !== m) {
             if (e.format_type === l.StickerFormat.LOTTIE)
               return "".concat(location.protocol).concat(h).concat(s);
@@ -58707,18 +58747,18 @@
         y = {},
         T = {},
         C = {},
-        S = null,
-        I = {};
+        I = null,
+        S = {};
       function A() {
         for (let e in ((v = {}),
         (T = {}),
         (E = {}),
         (p = {}),
         (y = {}),
-        (S = f.default.getChannelId()),
-        I))
-          clearTimeout(I[e]);
-        (I = {}),
+        (I = f.default.getChannelId()),
+        S))
+          clearTimeout(S[e]);
+        (S = {}),
           c.default.forEachGuild(e => {
             N(e);
           }),
@@ -58787,7 +58827,7 @@
             (i = _.default.fromTimestamp(e));
         }
         for (let n in p[e][t])
-          t === S
+          t === I
             ? l.default.isNewForumThread(n, t, s) && C[e][t]++
             : _.default.compare(n, i) > 0 &&
               !l.default.hasOpenedThread(n) &&
@@ -58893,9 +58933,9 @@
         O();
       }
       function L() {
-        let e = S;
-        if ((S = f.default.getChannelId()) === e) return !1;
-        P(e), P(S);
+        let e = I;
+        if ((I = f.default.getChannelId()) === e) return !1;
+        P(e), P(I);
       }
       function U(e) {
         let t = l.default.getMentionCount(e.id) > 0,
@@ -58913,7 +58953,7 @@
         F(e.id),
           t &&
             (function (e) {
-              I[e.id] = setTimeout(
+              S[e.id] = setTimeout(
                 () => {
                   let t = d.default.getChannel(e.id);
                   null != t &&
@@ -58924,7 +58964,7 @@
             })(e);
       }
       function F(e) {
-        e in I && (clearTimeout(I[e]), delete I[e]);
+        e in S && (clearTimeout(S[e]), delete S[e]);
       }
       function H(e, t, n, s) {
         let { guild_id: r, parent_id: a, id: o } = t;
@@ -61891,8 +61931,8 @@
         y = !0,
         T = !1,
         C = {},
-        S = {};
-      function I(e) {
+        I = {};
+      function S(e) {
         if (null == e) return null;
         if ((0, m.isStaticChannelRoute)(e)) {
           let t = _.default.getGuildId();
@@ -61910,7 +61950,7 @@
       function D(e) {
         let t = !1;
         T && ((T = !1), (t = !0));
-        let n = I(f.default.getChannelId());
+        let n = S(f.default.getChannelId());
         return null != n && n in C && (delete C[n], (t = !0)), t && e ? e : !e;
       }
       function N() {
@@ -61940,7 +61980,7 @@
               (p = null !== (n = e.isSummariesOpen) && void 0 !== n && n),
               (y = null === (s = e.isProfileOpen) || void 0 === s || s),
               (C = null !== (i = e.sidebars) && void 0 !== i ? i : {}),
-              (S = null !== (r = e.guildSidebars) && void 0 !== r ? r : {});
+              (I = null !== (r = e.guildSidebars) && void 0 !== r ? r : {});
           }
           this.syncWith([l.default], O), this.syncWith([u.default], N);
         }
@@ -61950,12 +61990,12 @@
             isSummariesOpen: p,
             isProfileOpen: y,
             sidebars: C,
-            guildSidebars: S,
+            guildSidebars: I,
           };
         }
         getSection(e, t) {
           if (T) return g.ChannelSections.SEARCH;
-          let n = I(e);
+          let n = S(e);
           return null != n && null != C[n]
             ? g.ChannelSections.SIDEBAR_CHAT
             : t && y
@@ -61967,14 +62007,14 @@
                   : g.ChannelSections.NONE;
         }
         getSidebarState(e) {
-          let t = I(e);
+          let t = S(e);
           return null == t ? void 0 : C[t];
         }
         getGuildSidebarState(e) {
-          return null == e ? void 0 : S[e];
+          return null == e ? void 0 : I[e];
         }
         getCurrentSidebarChannelId(e) {
-          let t = I(e);
+          let t = S(e);
           if (null == t || T) return null;
           let n = C[t];
           return null == n
@@ -61986,7 +62026,7 @@
         }
         getCurrentSidebarMessageId(e) {
           var t;
-          let n = I(e);
+          let n = S(e);
           if (null == n || T) return null;
           let s = C[n];
           return null == s
@@ -62023,7 +62063,7 @@
             details: i,
           } = e;
           T = !1;
-          let r = I(n);
+          let r = S(n);
           return (
             null != r && ((C[r] = { type: t, channelId: s, details: i }), !0)
           );
@@ -62031,16 +62071,16 @@
         SIDEBAR_VIEW_GUILD: function (e) {
           let { sidebarType: t, guildId: n, baseChannelId: s, details: i } = e;
           T = !1;
-          let r = I(s);
+          let r = S(s);
           return (
             null != r &&
-            ((S[n] = { type: t, baseChannelId: r, guildId: n, details: i }), !0)
+            ((I[n] = { type: t, baseChannelId: r, guildId: n, details: i }), !0)
           );
         },
         SIDEBAR_CREATE_THREAD: function (e) {
           let { parentChannelId: t, parentMessageId: n, location: s } = e;
           T = !1;
-          let i = I(t);
+          let i = S(t);
           null != i &&
             (C[i] = {
               type: a.SidebarType.CREATE_THREAD,
@@ -62051,12 +62091,12 @@
         },
         SIDEBAR_CLOSE: function (e) {
           let { baseChannelId: t } = e,
-            n = I(t);
+            n = S(t);
           null != n && delete C[n];
         },
         SIDEBAR_CLOSE_GUILD: function (e) {
           let { guildId: t } = e;
-          return null != S[t] && (delete S[t], !0);
+          return null != I[t] && (delete I[t], !0);
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
@@ -62292,7 +62332,7 @@
             return s;
           },
           default: function () {
-            return S;
+            return I;
           },
         }),
         n("222007");
@@ -62447,7 +62487,7 @@
             return n;
           },
         ]);
-      var S = new C(d.default, {
+      var I = new C(d.default, {
         CONNECTION_OPEN: function () {
           let e = f.default.getId();
           return !(e in h) && (h[e] = {}), y(), !1;
@@ -62542,8 +62582,8 @@
         y = 0,
         T = null,
         C = new Set(),
-        S = {};
-      function I(e, t, n) {
+        I = {};
+      function S(e, t, n) {
         return a.default.get({
           url: "".concat("https://api.twitch.tv/helix").concat(e),
           query: t,
@@ -62554,13 +62594,13 @@
         });
       }
       async function A(e, t) {
-        let n = S[e];
+        let n = I[e];
         if (null != n) return n;
         let {
             body: { data: s },
-          } = await I("/games", { id: e }, t),
+          } = await S("/games", { id: e }, t),
           i = s[0].name;
-        return (S[e] = i), i;
+        return (I[e] = i), i;
       }
       let D = new (class e {
         start() {
@@ -62586,7 +62626,7 @@
             var n, s, i, r, a;
             let {
                 body: { data: o },
-              } = await I("/streams", { user_id: e.id, first: 1 }, t),
+              } = await S("/streams", { user_id: e.id, first: 1 }, t),
               d = o[0];
             if (null == d || "live" !== d.type) throw Error("no stream");
             let { thumbnail_url: f, game_id: _, title: c } = d,
@@ -62805,13 +62845,13 @@
         y = n("49111"),
         T = n("724210"),
         C = n("133335");
-      let S = y.NULL_STRING_GUILD_ID,
-        I = {},
+      let I = y.NULL_STRING_GUILD_ID,
+        S = {},
         A = new Set(),
         D = 0;
       function N(e) {
         var t;
-        let n = I[null != e ? e : S];
+        let n = S[null != e ? e : I];
         return {
           unread: !1,
           unreadByType: {},
@@ -62827,8 +62867,8 @@
       }
       function O(e) {
         var t;
-        return (I[null != e ? e : S] =
-          null !== (t = I[null != e ? e : S]) && void 0 !== t ? t : N(e));
+        return (S[null != e ? e : I] =
+          null !== (t = S[null != e ? e : I]) && void 0 !== t ? t : N(e));
       }
       function P(e) {
         let t = O(e);
@@ -62875,7 +62915,7 @@
       }
       function R(e) {
         switch (e) {
-          case S:
+          case I:
           case null:
           case void 0:
             return null;
@@ -62912,10 +62952,10 @@
           t.unread !== n.unread || t.mentionCount !== n.mentionCount)
         )
           return (
-            (I[null != e ? e : S] = t),
+            (S[null != e ? e : I] = t),
             null != e && (t.unread ? A.add(e) : A.delete(e)),
             D++,
-            P(null != e ? e : S),
+            P(null != e ? e : I),
             !0
           );
         return !1;
@@ -63047,17 +63087,17 @@
         let i = O(n);
         if (s.unread !== i.unread || s.mentionCount !== i.mentionCount)
           return (
-            (I[null != n ? n : S] = s),
+            (S[null != n ? n : I] = s),
             null != n && (s.unread ? A.add(n) : A.delete(n)),
             D++,
-            P(null != n ? n : S),
+            P(null != n ? n : I),
             !0
           );
         return !1;
       }
       function B(e) {
         let { guilds: t } = e;
-        (I = {}), (D = 0), (A = new Set()), H(null);
+        (S = {}), (D = 0), (A = new Set()), H(null);
         let { length: n } = t;
         for (let e = 0; e < n; e++) {
           let n = t[e];
@@ -63066,7 +63106,7 @@
       }
       function x(e) {
         let { guilds: t, readState: n } = e;
-        (I = {}), (D = 0), (A = new Set());
+        (S = {}), (D = 0), (A = new Set());
         let s = n.entries.length < 500,
           i = new Set();
         for (let e of (s &&
@@ -63090,7 +63130,7 @@
           H(e.id, s ? i.has(e.id) : void 0);
       }
       function Y() {
-        (I = {}), (A = new Set()), H(null);
+        (S = {}), (A = new Set()), H(null);
         let e = Object.values(c.default.getGuildIds());
         for (let t of e) H(t);
       }
@@ -63100,7 +63140,7 @@
       }
       function K(e) {
         let { guild: t } = e;
-        return null != I[t.id] && (delete I[t.id], A.delete(t.id), D++, !0);
+        return null != S[t.id] && (delete S[t.id], A.delete(t.id), D++, !0);
       }
       function W(e) {
         let {
@@ -63229,14 +63269,14 @@
           n = new Set(
             t.map(e => {
               var t;
-              return null !== (t = e.guild_id) && void 0 !== t ? t : S;
+              return null !== (t = e.guild_id) && void 0 !== t ? t : I;
             })
           );
-        return l.default.keys(I).reduce((e, t) => (n.has(t) && H(t)) || e, !1);
+        return l.default.keys(S).reduce((e, t) => (n.has(t) && H(t)) || e, !1);
       }
       function e_() {
-        for (let e in I) {
-          let t = I[e];
+        for (let e in S) {
+          let t = S[e];
           t.ncMentionCount = 0;
         }
       }
@@ -63248,7 +63288,7 @@
         takeSnapshot() {
           return {
             version: eg.LATEST_SNAPSHOT_VERSION,
-            data: { guilds: I, unreadGuilds: Array.from(A) },
+            data: { guilds: S, unreadGuilds: Array.from(A) },
           };
         }
         hasAnyUnread() {
@@ -63261,7 +63301,7 @@
           return A;
         }
         getMutableGuildStates() {
-          return I;
+          return S;
         }
         hasUnread(e) {
           return A.has(e);
@@ -63296,23 +63336,23 @@
         }
         getTotalMentionCount(e) {
           let t = 0;
-          for (let n in I) {
-            let s = I[n];
-            (!0 !== e || n !== S) && (t += s.mentionCount);
+          for (let n in S) {
+            let s = S[n];
+            (!0 !== e || n !== I) && (t += s.mentionCount);
           }
           return t;
         }
         getTotalNotificationsMentionCount(e) {
           let t = 0;
-          for (let n in I) {
-            let s = I[n];
-            (!0 !== e || n !== S) && (t += s.ncMentionCount);
+          for (let n in S) {
+            let s = S[n];
+            (!0 !== e || n !== I) && (t += s.ncMentionCount);
           }
           return t;
         }
         getPrivateChannelMentionCount() {
           var e;
-          let t = I[S];
+          let t = S[I];
           return null !== (e = null == t ? void 0 : t.mentionCount) &&
             void 0 !== e
             ? e
@@ -63320,7 +63360,7 @@
         }
         getMentionCountForChannels(e, t) {
           let n = 0,
-            s = I[e];
+            s = S[e];
           return null == s
             ? 0
             : (t.forEach(e => {
@@ -63336,7 +63376,7 @@
           super(),
             (this.loadCache = () => {
               let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
-              null != e && ((I = e.guilds), (A = new Set(e.unreadGuilds)));
+              null != e && ((S = e.guilds), (A = new Set(e.unreadGuilds)));
             }),
             this.registerActionHandlers({
               CONNECTION_OPEN: x,
@@ -63484,17 +63524,17 @@
           (y = n.verificationLevel >= l.VerificationLevels.VERY_HIGH),
           (T = n.verificationLevel >= l.VerificationLevels.MEDIUM && m > 0),
           (C = n.verificationLevel >= l.VerificationLevels.HIGH && v > 0));
-        let S = [];
-        C && S.push(v),
-          T && S.push(m),
-          S.length > 0 &&
+        let I = [];
+        C && I.push(v),
+          T && I.push(m),
+          I.length > 0 &&
             (t = setTimeout(
               () =>
                 i.default.dispatch({
                   type: "GUILD_VERIFICATION_CHECK",
                   guildId: e,
                 }),
-              Math.max(...S)
+              Math.max(...I)
             )),
           (g[e] = {
             notClaimed: E,
@@ -63567,7 +63607,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return I;
           },
         });
       var s = n("446674"),
@@ -63661,7 +63701,7 @@
         }
       }
       C.displayName = "IdleStore";
-      var S = new C(i.default, {
+      var I = new C(i.default, {
         IDLE: function (e) {
           g = e.idle;
         },
@@ -64475,8 +64515,8 @@
         y = n("49111"),
         T = n("782340");
       let C = [],
-        S = {};
-      function I() {
+        I = {};
+      function S() {
         let e = [],
           t = h.CustomStatusSetting.getSetting();
         null != t &&
@@ -64490,7 +64530,7 @@
         null != s && e.push({ type: y.ActivityTypes.STREAMING, ...s });
         let r = new Set(),
           o = new Set();
-        a.forEach(S, t => {
+        a.forEach(I, t => {
           null != t.application_id &&
             (r.add(t.name), o.add(t.application_id), e.push(t));
         }),
@@ -64514,11 +64554,11 @@
           });
         let d = _.default.getVisibleGame(),
           v = null != d && null != d.name && r.has(d.name),
-          I = null != d && d.isLauncher,
+          S = null != d && d.isLauncher,
           A = E.default.getCurrentUserActiveStream();
         null != d &&
           null != d.name &&
-          !(v || (I && !(null != A))) &&
+          !(v || (S && !(null != A))) &&
           e.push({
             type: y.ActivityTypes.PLAYING,
             name: d.name,
@@ -64551,7 +64591,7 @@
             v.default,
             c.default
           ),
-            this.syncWith([g.default, c.default], () => I());
+            this.syncWith([g.default, c.default], () => S());
         }
         getActivities() {
           return C;
@@ -64571,39 +64611,39 @@
           return C.find(e);
         }
         getApplicationActivities() {
-          return S;
+          return I;
         }
       }
       A.displayName = "LocalActivityStore";
       var D = new A(d.default, {
         OVERLAY_INITIALIZE: function (e) {
           let { localActivities: t } = e;
-          (S = { ...t }), I();
+          (I = { ...t }), S();
         },
         START_SESSION: function () {
-          (S = {}), I();
+          (I = {}), S();
         },
         LOCAL_ACTIVITY_UPDATE: function (e) {
           let { socketId: t, activity: n } = e;
-          if (i(S[t], n)) return !1;
-          null != n ? (S[t] = n) : delete S[t], I();
+          if (i(I[t], n)) return !1;
+          null != n ? (I[t] = n) : delete I[t], S();
         },
         RPC_APP_DISCONNECTED: function (e) {
           let { socketId: t } = e;
-          delete S[t], I();
+          delete I[t], S();
         },
-        RUNNING_GAMES_CHANGE: I,
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: I,
-        SPOTIFY_PLAYER_STATE: I,
-        SPOTIFY_PLAYER_PLAY: I,
-        STREAMING_UPDATE: I,
-        USER_CONNECTIONS_UPDATE: I,
-        STREAM_START: I,
-        STREAM_STOP: I,
-        USER_SETTINGS_PROTO_UPDATE: I,
-        EMBEDDED_ACTIVITY_OPEN: I,
-        EMBEDDED_ACTIVITY_CLOSE: I,
-        UPDATE_HANG_STATUS: I,
+        RUNNING_GAMES_CHANGE: S,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: S,
+        SPOTIFY_PLAYER_STATE: S,
+        SPOTIFY_PLAYER_PLAY: S,
+        STREAMING_UPDATE: S,
+        USER_CONNECTIONS_UPDATE: S,
+        STREAM_START: S,
+        STREAM_STOP: S,
+        USER_SETTINGS_PROTO_UPDATE: S,
+        EMBEDDED_ACTIVITY_OPEN: S,
+        EMBEDDED_ACTIVITY_CLOSE: S,
+        UPDATE_HANG_STATUS: S,
       });
     },
     569983: function (e, t, n) {
@@ -64740,8 +64780,8 @@
         y = n("42203"),
         T = n("162805"),
         C = n("923959"),
-        S = n("26989"),
-        I = n("305961"),
+        I = n("26989"),
+        S = n("305961"),
         A = n("957255"),
         D = n("27618"),
         N = n("18494"),
@@ -64821,11 +64861,11 @@
             P.default,
             y.default,
             T.default,
-            S.default,
+            I.default,
             h.default,
             N.default,
             O.default,
-            I.default,
+            S.default,
             D.default,
             C.default
           ),
@@ -65309,7 +65349,7 @@
           }
         },
         C = e => ((0, u.default)(e) ? 1 : 0);
-      function S(e, t) {
+      function I(e, t) {
         var n, s, i, r, a;
         return (
           (n = e),
@@ -65320,7 +65360,7 @@
               (null !== (a = i.created_at) && void 0 !== a ? a : 0))
         );
       }
-      function I(e) {
+      function S(e) {
         if ((delete h[e], delete v[e], delete E[e], null == m[e])) return;
         let [t] = a.sortBy(m[e], e => -e.timestamp);
         t.status !== c.StatusTypes.OFFLINE
@@ -65361,7 +65401,7 @@
             timestamp: Date.now(),
           };
         else {
-          let e = a.length > 1 ? [...a].sort(S) : a,
+          let e = a.length > 1 ? [...a].sort(I) : a,
             n = o[t];
           (a = null != n && i(n.activities, e) ? n.activities : e),
             (o[t] = {
@@ -65371,7 +65411,7 @@
               timestamp: Date.now(),
             });
         }
-        return delete p[n], I(n), !0;
+        return delete p[n], S(n), !0;
       }
       function N(e) {
         let {
@@ -65396,7 +65436,7 @@
             timestamp: Date.now(),
           };
         else {
-          let e = r.length > 1 ? [...r].sort(S) : r;
+          let e = r.length > 1 ? [...r].sort(I) : r;
           o[t] = { status: s, clientStatus: i, activities: e, timestamp: a };
         }
       }
@@ -65404,7 +65444,7 @@
         if (t === f.default.getId()) return !1;
         let n = m[t];
         if (null == n || null == n[e]) return !1;
-        delete n[e], 0 === Object.keys(n).length && delete m[t], I(t);
+        delete n[e], 0 === Object.keys(n).length && delete m[t], S(t);
       }
       function P(e) {
         for (let t of Object.keys(m)) O(e, t);
@@ -65665,7 +65705,7 @@
       n.r(t),
         n.d(t, {
           shouldBadgeMessage: function () {
-            return eS;
+            return eI;
           },
           default: function () {
             return eZ;
@@ -65694,8 +65734,8 @@
         y = n("21121"),
         T = n("288518"),
         C = n("415435"),
-        S = n("486503"),
-        I = n("406297"),
+        I = n("486503"),
+        S = n("406297"),
         A = n("136511"),
         D = n("342176"),
         N = n("512395"),
@@ -65764,22 +65804,22 @@
         let t = Date.parse(e);
         return isNaN(t) ? 0 : t;
       }
-      function eS(e, t) {
+      function eI(e, t) {
         let n = x.default.getChannel(e.channel_id);
         return (
           !(null == n || Q.default.isBlocked(e.author.id)) &&
           (!!(
-            (0, I.default)({
+            (0, S.default)({
               message: e,
               userId: t.id,
               suppressEveryone: J.default.isSuppressEveryoneEnabled(n.guild_id),
               suppressRoles: J.default.isSuppressRolesEnabled(n.guild_id),
-            }) || eI(n)
+            }) || eS(n)
           ) ||
             !1)
         );
       }
-      function eI(e) {
+      function eS(e) {
         return (
           null != e &&
           e.isPrivate() &&
@@ -66048,7 +66088,7 @@
             _unreadCount: y,
             _mentionCount: T,
             flags: C,
-            lastViewed: S,
+            lastViewed: I,
           } = e;
           (this.channelId = t),
             (this.type = null != n ? n : er.ReadStateTypes.CHANNEL),
@@ -66073,7 +66113,7 @@
             (this._unreadCount = null != y ? y : 0),
             (this._mentionCount = T),
             (this.flags = C),
-            (this.lastViewed = S),
+            (this.lastViewed = I),
             eO._mentionChannels.delete(this.channelId),
             this._mentionCount > 0 &&
               this.canHaveMentions() &&
@@ -66196,7 +66236,7 @@
               } else i = n.id === this._ackMessageId;
               F.default.extractTimestamp(n.id) > t
                 ? (this.unreadCount++,
-                  s && eS(n, e) && this.mentionCount++,
+                  s && eI(n, e) && this.mentionCount++,
                   (a = null != a ? a : n.id))
                 : (r = !0);
             }),
@@ -66255,7 +66295,7 @@
               (this._isThread && !this._isJoinedThread) ||
               (0, C.isMessageRequestOrSpamRequest)(this.channelId, [
                 T.default,
-                S.default,
+                I.default,
               ]) ||
               (!this._isThread &&
                 (0, N.isOptInEnabledForGuild)(this._guildId) &&
@@ -66276,7 +66316,7 @@
               (this._isThread && !this._isJoinedThread) ||
               (0, C.isMessageRequestOrSpamRequest)(this.channelId, [
                 T.default,
-                S.default,
+                I.default,
               ]) ||
               ((0, N.isOptInEnabledForGuild)(this._guildId) &&
                 this._lastMessageTimestamp < eE)
@@ -66934,7 +66974,7 @@
             A.default,
             T.default,
             R.default,
-            S.default
+            I.default
           ),
             this.syncWith([B.default], eY);
         }
@@ -67409,7 +67449,7 @@
             (function (e, t, n) {
               if (
                 null != t &&
-                (0, I.isRawMessageMentioned)({
+                (0, S.isRawMessageMentioned)({
                   rawMessage: e,
                   userId: t.id,
                   suppressEveryone: J.default.isSuppressEveryoneEnabled(
@@ -67421,7 +67461,7 @@
                 return !0;
               let s = x.default.getChannel(e.channel_id);
               return (
-                !!eI(s) ||
+                !!eS(s) ||
                 (!!J.default.mentionOnAllMessages &&
                   null != s &&
                   !s.isVocal() &&
@@ -67902,7 +67942,7 @@
         y = !1,
         T = {},
         C = null;
-      function S(e) {
+      function I(e) {
         var t;
         let { searchId: n, query: s } = e;
         if ("string" != typeof s || "" === (s = s.trim())) return;
@@ -67916,7 +67956,7 @@
           i.length > 5 && i.splice(5, i.length),
           o.default.set(p, { history: T });
       }
-      function I(e) {
+      function S(e) {
         let { searchId: t } = e,
           n = g[t];
         if (null == n) return !1;
@@ -68061,7 +68101,7 @@
             (o.query = r.omit(a, "type")),
             (o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0),
             (o.showBlockedResults = !1),
-            S({ type: "SEARCH_ADD_HISTORY", searchId: i, query: s });
+            I({ type: "SEARCH_ADD_HISTORY", searchId: i, query: s });
           let m =
             i === c.FAVORITES
               ? null === (t = f.default.getChannel(i)) || void 0 === t
@@ -68134,7 +68174,7 @@
           let s = n.query;
           null == s && (n.hasError = !0);
         },
-        SEARCH_EDITOR_STATE_CLEAR: I,
+        SEARCH_EDITOR_STATE_CLEAR: S,
         SEARCH_ENSURE_SEARCH_STATE: function (e) {
           let { searchId: t } = e;
           null != t && h(t);
@@ -68157,7 +68197,7 @@
           A(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-          return null != C && I({ searchId: C });
+          return null != C && S({ searchId: C });
         },
         SEARCH_CLEAR_HISTORY: function (e) {
           let { searchId: t } = e;
@@ -68171,7 +68211,7 @@
             ((T[t] = T[t].filter(e => e !== n)),
             o.default.set(p, { history: T }));
         },
-        SEARCH_ADD_HISTORY: S,
+        SEARCH_ADD_HISTORY: I,
         LOGOUT: function () {
           o.default.remove(p), (T = {});
         },
@@ -68217,8 +68257,8 @@
         y = n("603699"),
         T = n("686470"),
         C = n("52028"),
-        S = n("824563"),
-        I = n("235660"),
+        I = n("824563"),
+        S = n("235660"),
         A = n("49111");
       let D = !1,
         N = A.StatusTypes.ONLINE,
@@ -68265,7 +68305,7 @@
               ? []
               : C.default.getActivities().filter(L);
         !a(b, n) && ((b = n), (t = !0));
-        let s = I.default.getRemoteActivities();
+        let s = S.default.getRemoteActivities();
         if ((k !== s && ((k = s), (t = !0)), t)) {
           let e = b.find(e => e.type === A.ActivityTypes.CUSTOM_STATUS),
             t = b.filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS);
@@ -68300,7 +68340,7 @@
         (R = !1),
           (O = A.StatusTypes.UNKNOWN),
           U(),
-          S.default.setCurrentUserOnConnectionOpen(N, M);
+          I.default.setCurrentUserOnConnectionOpen(N, M);
       }
       class H extends u.default.Store {
         initialize() {
@@ -68308,7 +68348,7 @@
             y.default,
             m.default,
             C.default,
-            I.default,
+            S.default,
             T.default,
             p.default
           ),
@@ -68418,14 +68458,14 @@
         y = n("42203"),
         T = n("42887"),
         C = n("824563"),
-        S = n("945956"),
-        I = n("49111"),
+        I = n("945956"),
+        S = n("49111"),
         A = n("353927");
       let D = {},
         N = {},
         O = {},
         P = {},
-        b = I.StreamLayouts.THEATRE,
+        b = S.StreamLayouts.THEATRE,
         V = {},
         R = [];
       function k() {
@@ -68524,10 +68564,10 @@
           );
         }
         getQuality() {
-          if (!(0, h.default)(T.default)) return I.RTCConnectionQuality.UNKNOWN;
+          if (!(0, h.default)(T.default)) return S.RTCConnectionQuality.UNKNOWN;
           let e = this.getActiveStreamKey(),
             t = null != e ? V[e] : null;
-          return null != t ? t.quality : I.RTCConnectionQuality.UNKNOWN;
+          return null != t ? t.quality : S.RTCConnectionQuality.UNKNOWN;
         }
         getMediaSessionId(e) {
           if (null == e) return null;
@@ -68684,7 +68724,7 @@
                       initialLayout: b,
                       analyticsContext: _,
                       isStreamer: null != N[u],
-                      parentMediaSessionId: S.default.getMediaSessionId(),
+                      parentMediaSessionId: I.default.getMediaSessionId(),
                     })),
                     (V[t] = d);
                 }
@@ -68980,14 +69020,14 @@
         y = null,
         T = null,
         C = [],
-        S = null,
-        I = null;
+        I = null,
+        S = null;
       function A(e) {
         var t, n, s, i, r, a;
         let l = o.default.getCurrentUser();
         if (null == l) return D();
         (f = null !== (t = e.section) && void 0 !== t ? t : f),
-          (S = null !== (n = e.section) && void 0 !== n ? n : f),
+          (I = null !== (n = e.section) && void 0 !== n ? n : f),
           null != e.subsection && null != f && (_[f] = e.subsection),
           null != e.scrollPosition && null != f && (c[f] = e.scrollPosition),
           (E = !!e.openWithoutBackstack),
@@ -69010,13 +69050,13 @@
           (y = null !== (s = e.onClose) && void 0 !== s ? s : null),
           (T = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
           (C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : []),
-          (I = null !== (a = e.impressionSource) && void 0 !== a ? a : null);
+          (S = null !== (a = e.impressionSource) && void 0 !== a ? a : null);
       }
       function D() {
         (u = d.FormStates.CLOSED),
           (v = !1),
           (m = null),
-          (S = null),
+          (I = null),
           (h = null),
           (l = null),
           (f = null),
@@ -69025,7 +69065,7 @@
           (y = null),
           (T = null),
           (C = []),
-          (I = null);
+          (S = null);
       }
       function N() {
         (u = d.FormStates.OPEN), (g = {});
@@ -69072,8 +69112,8 @@
             openWithoutBackstack: E,
             analyticsLocation: T,
             analyticsLocations: C,
-            initialSection: S,
-            impressionSource: I,
+            initialSection: I,
+            impressionSource: S,
           };
         }
         get onClose() {
@@ -69455,8 +69495,8 @@
           textWidgetOpacity: y.OpacityBounds.LOWER,
         }),
         C = null,
-        S = {},
-        I = null,
+        I = {},
+        S = null,
         A = new Set(),
         D = !1,
         N = null,
@@ -69465,8 +69505,8 @@
         b = new Set(),
         V = !1;
       function R(e) {
-        let t = S[e];
-        return null == t && (t = S[e] = { ...T }), t;
+        let t = I[e];
+        return null == t && (t = I[e] = { ...T }), t;
       }
       let k = { ...T },
         M = new Set([
@@ -69688,7 +69728,7 @@
               A.delete((0, v.getPID)())),
             null != e)
           ) {
-            S = e;
+            I = e;
             let t = l.default.getId();
             null != t &&
               (null == (k = R(t)).textChatNotifications &&
@@ -69698,7 +69738,7 @@
           }
         }
         getState() {
-          return S;
+          return I;
         }
         isUILocked(e) {
           return !A.has(e);
@@ -69738,7 +69778,7 @@
           return k.selectedChannelId;
         }
         getSelectedCallId() {
-          return I;
+          return S;
         }
         getDisplayUserMode() {
           return k.displayUserMode;
@@ -69800,10 +69840,10 @@
         ]);
       var H = new F(r.default, {
         LOGOUT: function (e) {
-          !e.isSwitchingAccount && (S = {});
+          !e.isSwitchingAccount && (I = {});
         },
         MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-          e.userId in S && delete S[e.userId];
+          e.userId in I && delete I[e.userId];
         },
         CONNECTION_CLOSED: function () {
           A.clear();
@@ -69887,10 +69927,10 @@
         },
         OVERLAY_SELECT_CALL: function (e) {
           let { callId: t } = e;
-          I = t;
+          S = t;
         },
         CALL_DELETE: function () {
-          I = null;
+          S = null;
         },
         LAYOUT_CREATE: function () {},
         OVERLAY_SET_DISPLAY_NAME_MODE: function (e) {
@@ -70032,7 +70072,7 @@
               : n
                 ? f.botTagInvert
                 : f.botTagRegular);
-        let S = e =>
+        let I = e =>
           (0, s.jsxs)("span", {
             ...e,
             className: r(_, t, m ? f.rem : f.px, {
@@ -70050,16 +70090,16 @@
             return (0, s.jsx)(a.Tooltip, {
               text: l.default.Messages.REMIXING_DOWNLOAD_APP,
               position: "top",
-              children: e => S(e),
+              children: e => I(e),
             });
           case u.BotTagTypes.ORIGINAL_POSTER:
             return (0, s.jsx)(a.Tooltip, {
               text: l.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
               position: "top",
-              children: e => S(e),
+              children: e => I(e),
             });
           default:
-            return S();
+            return I();
         }
       };
       _.Types = u.BotTagTypes;
@@ -71456,7 +71496,7 @@
         });
         for (let { url: e, external_asset_path: t } of s) v[e] = t;
       }
-      function S(e, t) {
+      function I(e, t) {
         let n = 0,
           s = e.filter(
             e =>
@@ -71472,7 +71512,7 @@
           }
         return n === e.length;
       }
-      function I(e, t, n, s) {
+      function S(e, t, n, s) {
         let i = !1;
         for (let r = 0; r < e.length; r++) {
           let a = e[r];
@@ -71503,7 +71543,7 @@
               (null == e ? void 0 : e.startsWith("https:"))
           );
         i.length > 0 && (await C(e, i));
-        let r = S(t, s);
+        let r = I(t, s);
         if (r)
           return (
             a.default.dispatch({
@@ -71513,7 +71553,7 @@
             s
           );
         let o = await T(e),
-          d = I(t, s, o, n);
+          d = S(t, s, o, n);
         return d
           ? E(e).then(() => A(e, t, n - 1))
           : (a.default.dispatch({
@@ -71524,10 +71564,10 @@
       }
       function D(e, t) {
         let n = [],
-          s = S(t, n);
+          s = I(t, n);
         if (s) return n;
         let i = o.default.getApplicationAssets(e);
-        return null == i ? n : (I(t, n, i), n);
+        return null == i ? n : (S(t, n, i), n);
       }
     },
     994440: function (e, t, n) {
@@ -72049,10 +72089,10 @@
             return C;
           },
           isQuestsEmbed: function () {
-            return S;
+            return I;
           },
           getMaxEmbedMediaSize: function () {
-            return I;
+            return S;
           },
         }),
         n("222007"),
@@ -72216,14 +72256,14 @@
           (m.test(e.url) || g.test(e.url))
         );
       }
-      function S(e) {
+      function I(e) {
         return (
           e.type === l.MessageEmbedTypes.ARTICLE &&
           null != e.url &&
           null != (0, d.parseQuestsEmbedCode)(e.url)
         );
       }
-      function I(e, t, n) {
+      function S(e, t, n) {
         var s;
         return null != t && null != n
           ? { maxMediaWidth: t, maxMediaHeight: n }
@@ -72244,10 +72284,10 @@
             return C;
           },
           getEmojiColors: function () {
-            return S;
+            return I;
           },
           getEmojiUrl: function () {
-            return I;
+            return S;
           },
         }),
         n("222007"),
@@ -72425,10 +72465,10 @@
         isFileTooBig: e => e.size > 2097152,
         isDataTooBig: e => (0, f.dataUriFileSize)(e) > g.EMOJI_MAX_FILESIZE,
       };
-      async function S(e) {
+      async function I(e) {
         return await l.default.getEmojiColors(e);
       }
-      function I(e) {
+      function S(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
           { id: n, name: s, animated: i } = e;
@@ -72640,8 +72680,8 @@
         C = ["discordapp.com/gifts", "discord.com/gifts"].map(e =>
           h.default.escape(e)
         ),
-        S = [T, ...C].join("|"),
-        I = RegExp("(?: |^|https?://)(?:".concat(S, ")/([a-z0-9-]+)"), "gi"),
+        I = [T, ...C].join("|"),
+        S = RegExp("(?: |^|https?://)(?:".concat(I, ")/([a-z0-9-]+)"), "gi"),
         A = ["discord.com/billing/promotions", "promos.discord.gg"].map(e =>
           h.default.escape(e)
         ),
@@ -72700,7 +72740,7 @@
           let t;
           if (null == e) return [];
           let n = new Set();
-          for (; null != (t = I.exec(e)) && n.size < 3; ) n.add(G(t[1]));
+          for (; null != (t = S.exec(e)) && n.size < 3; ) n.add(G(t[1]));
           for (; null != (t = N.exec(e)) && n.size < 3; ) n.add(G(t[1]));
           return Array.from(n);
         };
@@ -73272,13 +73312,13 @@
         y = n("48703"),
         T = n("377253"),
         C = n("27618"),
-        S = n("18494"),
-        I = n("599110"),
+        I = n("18494"),
+        S = n("599110"),
         A = n("49111"),
         D = n("782340");
       function N(e, t) {
         var n;
-        let s = v.default.getChannel(S.default.getChannelId());
+        let s = v.default.getChannel(I.default.getChannelId());
         return (
           !!(
             null == s ||
@@ -73354,13 +73394,13 @@
               (null == e ? void 0 : e.hasFlag(A.MessageFlags.EPHEMERAL)) === !0;
           M = null != e && !r && (s || i);
         }
-        let B = v.default.getChannel(S.default.getChannelId()),
+        let B = v.default.getChannel(I.default.getChannelId()),
           x = E.default.getGuild(null == B ? void 0 : B.getGuildId());
         if (
           (null != B &&
             null != x &&
             x.hasFeature(A.GuildFeatures.DISCOVERABLE) &&
-            I.default.track(A.AnalyticEvents.URL_CLICKED, {
+            S.default.track(A.AnalyticEvents.URL_CLICKED, {
               url_domain: (0, y.getHostname)(R),
               guild_id: x.id,
               channel_id: B.id,
@@ -73583,7 +73623,7 @@
       n.r(t),
         n.d(t, {
           hydrateReadySupplementalPayload: function () {
-            return I;
+            return S;
           },
           preloadReadyPayloadData: function () {
             return A;
@@ -73621,19 +73661,19 @@
       let y = new c.default("ReadyPayloadUtils"),
         T = {},
         C = null,
-        S = {};
-      function I(e, t) {
+        I = {};
+      function S(e, t) {
         var n;
         let { guilds: s, merged_members: i, merged_presences: r, ...a } = e,
-          o = P(S, null == r ? void 0 : r.friends),
+          o = P(I, null == r ? void 0 : r.friends),
           d =
             null !==
               (n =
                 null == s
                   ? void 0
                   : s.map((e, t) => {
-                      let n = P(S, null == r ? void 0 : r.guilds[t]),
-                        s = P(S, null == i ? void 0 : i[t]);
+                      let n = P(I, null == r ? void 0 : r.guilds[t]),
+                        s = P(I, null == i ? void 0 : i[t]);
                       return {
                         ...e,
                         unavailable: void 0 === e.voice_states,
@@ -73652,7 +73692,7 @@
             unavailable: !1,
           }));
         return (
-          null != u && d.push(u), (S = {}), { ...a, presences: o, guilds: d }
+          null != u && d.push(u), (I = {}), { ...a, presences: o, guilds: d }
         );
       }
       function A() {
@@ -73711,16 +73751,16 @@
               });
           }
         })(n),
-          (S = a.keyBy(r, e => e.id));
-        let h = P(S, d);
+          (I = a.keyBy(r, e => e.id));
+        let h = P(I, d);
         null == u ||
           u.forEach(e => {
             let t = e.recipient_ids;
             null != t &&
               (e.recipients = t.map(
                 e => (
-                  i(null != S[e], "Missing user in compressed ready payload"),
-                  S[e]
+                  i(null != I[e], "Missing user in compressed ready payload"),
+                  I[e]
                 )
               )),
               delete e.recipient_ids;
@@ -73733,7 +73773,7 @@
                   : _.map((e, t) =>
                       !0 === e.unavailable
                         ? e
-                        : ((e.members = P(S, null == l ? void 0 : l[t])), V(e))
+                        : ((e.members = P(I, null == l ? void 0 : l[t])), V(e))
                     )) && void 0 !== s
               ? s
               : [],
@@ -74128,10 +74168,10 @@
       n.r(t),
         n.d(t, {
           getStoreListingLocation: function () {
-            return S;
+            return I;
           },
           getApplicationStoreListingLocation: function () {
-            return I;
+            return S;
           },
           getAssetURL: function () {
             return A;
@@ -74181,7 +74221,7 @@
         T = n("782340");
       d.shim();
       let C = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
-      function S(e, t) {
+      function I(e, t) {
         let {
           analyticsSource: n,
           analyticsProperties: s,
@@ -74199,7 +74239,7 @@
           search: null != i ? "?store_listing_id=".concat(i) : "",
         };
       }
-      function I(e, t) {
+      function S(e, t) {
         let { analyticsSource: n, analyticsProperties: s, slug: i } = t;
         return {
           pathname: y.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, i),
@@ -76797,4 +76837,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98239.0c1d3ce23a0739b34692.js.map
+//# sourceMappingURL=67615.2d6cde6d39925747f418.js.map

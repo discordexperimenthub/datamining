@@ -23785,6 +23785,9 @@
               e => new r.Dao("basic_channels_synced", r.TableId.KvCache, e)
             )),
             (this.cache = u(e => new r.Dao("cache", r.TableId.KvCache, e))),
+            (this.forceResyncVersion = u(
+              e => new r.Dao("force_resync_version", r.TableId.KvCache, e)
+            )),
             (this.emojis = u(
               e => new r.GuildEntityDao("guild_emojis", r.TableId.KvCache, e)
             )),
@@ -23830,6 +23833,8 @@
               this.syncedBasicChannels(e.database).upgradeTransaction(e)),
             (this.cacheTransaction = e =>
               this.cache(e.database).upgradeTransaction(e)),
+            (this.forceResyncVersionTransaction = e =>
+              this.forceResyncVersion(e.database).upgradeTransaction(e)),
             (this.emojisTransaction = e =>
               this.emojis(e.database).upgradeTransaction(e)),
             (this.guildsTransaction = e =>
@@ -23867,58 +23872,65 @@
       n.r(t),
         n.d(t, {
           tryLoadAsync: function () {
-            return o;
+            return a;
           },
           tryLoadOrResetCacheGateway: function () {
-            return l;
+            return o;
           },
           tryLoadOrResetCacheGatewayAsync: function () {
-            return u;
+            return l;
           },
         });
       var i = n("913144"),
-        r = n("605250"),
-        s = n("723939");
-      let a = new r.default("TryLoad");
-      async function o(e) {
+        r = n("605250");
+      let s = new r.default("TryLoad");
+      async function a(e) {
         try {
           return await e();
         } catch (e) {
-          return a.log("database load failed.", e), null;
+          return s.log("database load failed.", e), null;
         }
       }
-      function l(e, t) {
+      function o(e, t) {
         try {
           return t();
         } catch (t) {
           return (
-            a.log(
+            s.log(
               "".concat(e, ": exception thrown, resetting socket."),
               t,
               t.stack
             ),
-            s.default.replaceDisableAllDatabases(
-              "tryLoadOrResetCacheGateway (".concat(e, ")")
-            ),
-            i.default.dispatch({ type: "RESET_CONNECTION", badCache: !0 }),
+            i.default.dispatch({
+              type: "RESET_SOCKET",
+              args: {
+                error: t,
+                action: "tryLoadOrResetCacheGateway (".concat(e, ")"),
+                clearCache: !0,
+              },
+            }),
             null
           );
         }
       }
-      async function u(e, t) {
+      async function l(e, t) {
         try {
           return await t();
         } catch (t) {
           return (
-            a.log(
+            s.log(
               "".concat(e, ": exception thrown, resetting socket."),
               t,
               t.stack
             ),
-            s.default.replaceDisableAllDatabases(
-              "tryLoadOrResetCacheGateway (".concat(e, ")")
-            ),
-            i.default.dispatch({ type: "RESET_CONNECTION", badCache: !0 }),
+            i.default.dispatch({
+              type: "RESET_SOCKET",
+              args: {
+                error: t,
+                action: "tryLoadOrResetCacheGatewayAsync (".concat(e, ")"),
+                clearCache: !0,
+              },
+            }),
             null
           );
         }
@@ -24100,6 +24112,13 @@
           return null;
         }
         carefullyOpenDatabase(e) {
+          if (this.preventWritingCachesAgainThisSession)
+            return (
+              u.verbose(
+                "Not opening database because caches have been manually cleared."
+              ),
+              null
+            );
           if (null != e && !this.databases.has(e)) {
             let t = (function (e) {
               return null;
@@ -24131,10 +24150,12 @@
             this.databases.delete(e),
             this.emitChange();
         }
-        handleClearCaches() {
-          this.replaceDisableAllDatabases(
-            "DatabaseManager (action: CLEAR_CACHES)"
-          );
+        handleClearCaches(e) {
+          e.preventWritingCachesAgainThisSession &&
+            (this.preventWritingCachesAgainThisSession = !0),
+            this.replaceDisableAllDatabases(
+              "DatabaseManager (".concat(e.reason, ")")
+            );
         }
         handleConnectionOpen() {
           let e = o.default.getId(),
@@ -24161,6 +24182,12 @@
           }
         }
         async carefullySpeculativelyOpen(e) {
+          if (this.preventWritingCachesAgainThisSession) {
+            u.verbose(
+              "Not opening database because caches have been manually cleared."
+            );
+            return;
+          }
           if (null != e) {
             let t = await f(e);
             null == t || this.databases.has(e)
@@ -24181,7 +24208,7 @@
           super(
             s.default,
             {
-              CLEAR_CACHES: () => this.handleClearCaches(),
+              CLEAR_CACHES: e => this.handleClearCaches(e),
               CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
               CONNECTION_OPEN: () => this.handleConnectionOpen(),
               LOGOUT: () => this.handleAuthenticationStoreChanged(),
@@ -24189,7 +24216,8 @@
             s.DispatchBand.Early
           ),
             (this.databases = new Map()),
-            (this.activeUserId = null);
+            (this.activeUserId = null),
+            (this.preventWritingCachesAgainThisSession = !1);
         }
       }
       function d(e) {
@@ -24744,6 +24772,16 @@
         for (let e in t.query) "s" !== e && delete t.query[e];
         return { payload: t.query.s, url: r.format(t) };
       }
+    },
+    91131: function (e, t, n) {
+      "use strict";
+      function i(e) {}
+      n.r(t),
+        n.d(t, {
+          setClientState: function () {
+            return i;
+          },
+        });
     },
     1544: function (e, t, n) {
       "use strict";
@@ -42657,7 +42695,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return ec;
+            return ed;
           },
         }),
         n("222007"),
@@ -42673,75 +42711,76 @@
         d = n("95410"),
         f = n("913144"),
         E = n("798609"),
-        p = n("821316"),
-        h = n("605250"),
-        _ = n("393414"),
-        S = n("705873"),
-        m = n("599110"),
-        T = n("831588"),
-        g = n("286235"),
-        I = n("72177"),
-        C = n("455079"),
-        v = n("49111"),
-        A = n("586391");
-      let R = n("551042").hasModalOpen,
-        N = new h.default("AuthenticationStore"),
-        O = "fingerprint",
-        D = "email_cache",
-        y = "user_id_cache",
-        P = null,
+        p = n("91131"),
+        h = n("821316"),
+        _ = n("605250"),
+        S = n("393414"),
+        m = n("705873"),
+        T = n("599110"),
+        g = n("831588"),
+        I = n("286235"),
+        C = n("72177"),
+        v = n("455079"),
+        A = n("49111"),
+        R = n("586391");
+      let N = n("551042").hasModalOpen,
+        O = new _.default("AuthenticationStore"),
+        D = "fingerprint",
+        y = "email_cache",
+        P = "user_id_cache",
         L = null,
         b = null,
         M = null,
         U = null,
         G = null,
         w = null,
-        k = v.LoginStates.NONE,
-        x = v.RegistrationStates.NONE,
-        F = !1,
-        V = [],
-        B = "",
-        H = !1,
-        Y = null,
-        j = !1,
+        k = null,
+        x = A.LoginStates.NONE,
+        F = A.RegistrationStates.NONE,
+        V = !1,
+        B = [],
+        H = "",
+        Y = !1,
+        j = null,
         W = !1,
-        K = "",
-        z = !1,
+        K = !1,
+        z = "",
         q = !1,
-        X = {},
+        X = !1,
         Q = {},
-        Z = null,
+        Z = {},
         J = null,
         $ = null,
-        ee = null;
-      function et(e) {
+        ee = null,
+        et = null;
+      function en(e) {
         let t = null != o.default.getToken(),
-          n = null != d.default.get(v.TOKEN_KEY);
-        N.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
+          n = null != d.default.get(A.TOKEN_KEY);
+        O.verbose(e, { tokenManagerHasToken: t, storageHasToken: n });
       }
-      function en() {
+      function ei() {
         let e =
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        if (((U = d.default.get(O)), null != J)) return J;
-        let t = null != U ? U : o.default.getToken();
+        if (((G = d.default.get(D)), null != $)) return $;
+        let t = null != G ? G : o.default.getToken();
         !(
-          !(0, _.isValidFingerprintRoute)() ||
+          !(0, S.isValidFingerprintRoute)() ||
           (!e && null != t) ||
-          I.default.isHandoffAvailable()
-        ) && ei({ withGuildExperiments: !0 });
+          C.default.isHandoffAvailable()
+        ) && er({ withGuildExperiments: !0 });
       }
-      function ei(e) {
+      function er(e) {
         let { withGuildExperiments: t } = e,
           n = {},
-          i = m.default.getSuperPropertiesBase64();
+          i = T.default.getSuperPropertiesBase64();
         null != i && (n["X-Super-Properties"] = i),
-          null != U && (n["X-Fingerprint"] = U),
-          (J = c.default
+          null != G && (n["X-Fingerprint"] = G),
+          ($ = c.default
             .get({
-              url: v.Endpoints.EXPERIMENTS,
+              url: A.Endpoints.EXPERIMENTS,
               query: { with_guild_experiments: t },
               headers: n,
-              context: { location: (0, _.getFingerprintLocation)() },
+              context: { location: (0, S.getFingerprintLocation)() },
               retries: 3,
               oldFormErrors: !0,
             })
@@ -42760,35 +42799,35 @@
                     experiments: n,
                     guildExperiments: i,
                   }),
-                  (J = null);
+                  ($ = null);
               },
               () => {
-                (J = null),
+                ($ = null),
                   f.default.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
               }
             ));
       }
-      function er() {
-        (G = U), (U = null), d.default.remove(O);
+      function es() {
+        (w = G), (G = null), d.default.remove(D);
       }
-      function es(e, t) {
-        et("setAuthToken called."), o.default.setToken(e, t);
-      }
-      function ea() {
-        et("removeAuthToken called."), o.default.removeToken();
+      function ea(e, t) {
+        en("setAuthToken called."), o.default.setToken(e, t);
       }
       function eo() {
-        (F = !0),
-          el(),
+        en("removeAuthToken called."), o.default.removeToken();
+      }
+      function el() {
+        (V = !0),
+          eu(),
           f.default.wait(() => {
-            (0, _.transitionTo)(v.Routes.REGISTER);
+            (0, S.transitionTo)(A.Routes.REGISTER);
           });
       }
-      function el(e) {
-        et("handleLogout called."),
-          ea(),
-          er(),
-          !(null == e ? void 0 : e.isSwitchingAccount) && en(),
+      function eu(e) {
+        en("handleLogout called."),
+          eo(),
+          es(),
+          !(null == e ? void 0 : e.isSwitchingAccount) && ei(),
           u.default.PersistedStore.clearAll({
             omit: [
               "InstallationManagerStore",
@@ -42804,135 +42843,136 @@
               ? "user-data-only"
               : "all",
           }),
-          C.default.clearAll(),
-          p.clear(),
-          g.default.clearUser(),
-          d.default.remove(y),
-          (P = null),
-          (k = (null == e ? void 0 : e.isSwitchingAccount)
-            ? v.LoginStates.LOGGING_IN
-            : v.LoginStates.NONE),
-          (x = v.RegistrationStates.NONE),
-          (B = ""),
-          (K = ""),
-          (Y = null),
-          (H = !1),
-          (z = !1),
+          v.default.clearAll(),
+          h.clear(),
+          I.default.clearUser(),
+          d.default.remove(P),
+          (L = null),
+          (x = (null == e ? void 0 : e.isSwitchingAccount)
+            ? A.LoginStates.LOGGING_IN
+            : A.LoginStates.NONE),
+          (F = A.RegistrationStates.NONE),
+          (H = ""),
+          (z = ""),
+          (j = null),
+          (Y = !1),
           (q = !1),
-          (X = {}),
-          (Q = {});
+          (X = !1),
+          (Q = {}),
+          (Z = {});
       }
-      class eu extends u.default.Store {
+      class ec extends u.default.Store {
         initialize() {
-          (P = d.default.get(y)),
-            (L = d.default.get(D)),
-            ($ = d.default.get("login_cache")),
-            null == o.default.getToken() && en();
+          (L = d.default.get(P)),
+            (b = d.default.get(y)),
+            (ee = d.default.get("login_cache")),
+            null == o.default.getToken() && ei(),
+            this.addChangeListener(() => (0, p.setClientState)(L));
         }
         getEmail() {
-          return L;
-        }
-        getLogin() {
-          return $;
-        }
-        didVerifyFail() {
-          return z;
-        }
-        getVerifyErrors() {
-          return X;
-        }
-        didVerifySucceed() {
-          return q;
-        }
-        getLoginStatus() {
-          return k;
-        }
-        getRegisterStatus() {
-          return x;
-        }
-        getId() {
-          return P;
-        }
-        getSessionId() {
           return b;
         }
-        getAuthSessionIdHash() {
-          return M;
+        getLogin() {
+          return ee;
         }
-        getToken() {
-          return (0, T.getToken)();
+        didVerifyFail() {
+          return q;
         }
-        isAuthenticated() {
-          return (0, T.isAuthenticated)();
-        }
-        getFingerprint() {
-          return U;
-        }
-        getAnalyticsToken() {
-          return w;
-        }
-        getErrors() {
+        getVerifyErrors() {
           return Q;
         }
-        getMFATicket() {
-          return B;
+        didVerifySucceed() {
+          return X;
         }
-        getMFASMS() {
+        getLoginStatus() {
+          return x;
+        }
+        getRegisterStatus() {
+          return F;
+        }
+        getId() {
+          return L;
+        }
+        getSessionId() {
+          return M;
+        }
+        getAuthSessionIdHash() {
+          return U;
+        }
+        getToken() {
+          return (0, g.getToken)();
+        }
+        isAuthenticated() {
+          return (0, g.isAuthenticated)();
+        }
+        getFingerprint() {
+          return G;
+        }
+        getAnalyticsToken() {
+          return k;
+        }
+        getErrors() {
+          return Z;
+        }
+        getMFATicket() {
           return H;
         }
-        getMFATotp() {
-          return j;
+        getMFASMS() {
+          return Y;
         }
-        getMFABackup() {
+        getMFATotp() {
           return W;
         }
+        getMFABackup() {
+          return K;
+        }
         getMFAWebAuthn() {
-          return Y;
+          return j;
         }
         getMFAMethods() {
           let e = [];
           return (
-            null != Y && e.push({ type: "webauthn", challenge: Y }),
-            j && e.push({ type: "totp", backup_codes_allowed: W }),
-            W && e.push({ type: "backup" }),
-            H && e.push({ type: "sms" }),
+            null != j && e.push({ type: "webauthn", challenge: j }),
+            W && e.push({ type: "totp", backup_codes_allowed: K }),
+            K && e.push({ type: "backup" }),
+            Y && e.push({ type: "sms" }),
             e
           );
         }
         hasTOTPEnabled() {
-          return V.includes(E.AuthenticatorType.TOTP);
+          return B.includes(E.AuthenticatorType.TOTP);
         }
         hasSMSEnabled() {
-          return V.includes(E.AuthenticatorType.SMS);
+          return B.includes(E.AuthenticatorType.SMS);
         }
         hasWebAuthnEnabled() {
-          return V.includes(E.AuthenticatorType.WEBAUTHN);
+          return B.includes(E.AuthenticatorType.WEBAUTHN);
         }
         getMaskedPhone() {
-          return K;
+          return z;
         }
         getCredentials() {
           if (null == i) throw Error("no credentials");
           return i;
         }
         getVerifyingUserId() {
-          return Z;
+          return J;
         }
         getCurrentRegistrationOptions() {
           return r;
         }
         allowLogoutRedirect() {
-          return !F;
+          return !V;
         }
         getWebAuthnChallenge() {
-          return Y;
+          return j;
         }
         getSuspendedUserToken() {
-          return ee;
+          return et;
         }
       }
-      eu.displayName = "AuthenticationStore";
-      var ec = new eu(
+      ec.displayName = "AuthenticationStore";
+      var ed = new ec(
         f.default,
         {
           CONNECTION_OPEN: function (e) {
@@ -42944,209 +42984,209 @@
               analyticsToken: s,
               auth: a,
             } = e;
-            et("handleConnectionOpen called"),
-              g.default.setUser(
+            en("handleConnectionOpen called"),
+              I.default.setUser(
                 n.id,
                 n.username,
                 null !== (t = n.email) && void 0 !== t ? t : void 0,
-                (0, S.default)(n)
+                (0, m.default)(n)
               ),
-              (b = i),
-              (M = r),
-              (w = s),
-              (P = n.id),
-              (L = n.email),
-              void 0 !== a && (V = a.authenticator_types),
-              d.default.set(D, n.email),
-              d.default.set(y, n.id);
+              (M = i),
+              (U = r),
+              (k = s),
+              (L = n.id),
+              (b = n.email),
+              void 0 !== a && (B = a.authenticator_types),
+              d.default.set(y, n.email),
+              d.default.set(P, n.id);
           },
           OVERLAY_INITIALIZE: function (e) {
             var t;
             let { user: n, sessionId: i, analyticsToken: r, token: s } = e;
-            g.default.setUser(
+            I.default.setUser(
               n.id,
               n.username,
               null !== (t = n.email) && void 0 !== t ? t : void 0,
-              (0, S.default)(n)
+              (0, m.default)(n)
             ),
-              (b = i),
-              (w = r),
-              es(s),
-              er(),
-              (P = n.id),
-              d.default.set(y, n.id);
+              (M = i),
+              (k = r),
+              ea(s),
+              es(),
+              (L = n.id),
+              d.default.set(P, n.id);
           },
           CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
             if (
-              (et("handleConnectionClosed called with code ".concat(t, ".")),
+              (en("handleConnectionClosed called with code ".concat(t, ".")),
               4004 === t)
             ) {
               if (
-                F ||
-                R(A.NEW_USER_AGE_GATE_MODAL_KEY) ||
-                R(A.EXISTING_USER_AGE_GATE_MODAL_KEY)
+                V ||
+                N(R.NEW_USER_AGE_GATE_MODAL_KEY) ||
+                N(R.EXISTING_USER_AGE_GATE_MODAL_KEY)
               ) {
-                eo();
+                el();
                 return;
               }
-              m.default.track(v.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
-                user_id: d.default.get(y),
+              T.default.track(A.AnalyticEvents.APP_USER_DEAUTHENTICATED, {
+                user_id: d.default.get(P),
               }),
-                el(),
+                eu(),
                 setImmediate(() =>
-                  (0, _.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT)
+                  (0, S.transitionTo)(A.Routes.DEFAULT_LOGGED_OUT)
                 );
             }
           },
           AUTH_SESSION_CHANGE: function (e) {
             let { authSessionIdHash: t } = e;
-            null != t && (M = t);
+            null != t && (U = t);
           },
           LOGIN: function (e) {
-            (Q = {}),
-              (k = v.LoginStates.LOGGING_IN),
-              (K = ""),
+            (Z = {}),
+              (x = A.LoginStates.LOGGING_IN),
+              (z = ""),
               (r = null),
-              null != e.login && ($ = e.login);
+              null != e.login && (ee = e.login);
           },
           LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
-            (k = v.LoginStates.NONE),
-              es(t),
-              er(),
-              (B = ""),
-              (H = !1),
-              (Y = null),
-              (K = "");
+            (x = A.LoginStates.NONE),
+              ea(t),
+              es(),
+              (H = ""),
+              (Y = !1),
+              (j = null),
+              (z = "");
           },
           LOGIN_FAILURE: function (e) {
             let { error: t } = e;
-            (B = ""),
-              (H = !1),
-              (Y = null),
-              (k =
+            (H = ""),
+              (Y = !1),
+              (j = null),
+              (x =
                 null !=
-                (Q = (function (e) {
+                (Z = (function (e) {
                   if (Object.keys(e.fields).length > 0) return e.fields;
                   let t = { message: e.message };
                   return (
                     null != e.retryAfter && (t.retry_after = e.retryAfter), t
                   );
                 })(t)).date_of_birth
-                  ? v.LoginStates.LOGIN_AGE_GATE
-                  : v.LoginStates.NONE);
+                  ? A.LoginStates.LOGIN_AGE_GATE
+                  : A.LoginStates.NONE);
           },
           LOGIN_MFA_STEP: function (e) {
             let { ticket: t, sms: n, webauthn: i, backup: r, totp: s } = e;
             null != t &&
-              ((B = t),
-              (H = n),
-              (K = ""),
-              (Y = null != i ? i : null),
-              (W = r),
-              (j = s)),
-              (Q = {}),
-              (k = v.LoginStates.MFA_STEP);
+              ((H = t),
+              (Y = n),
+              (z = ""),
+              (j = null != i ? i : null),
+              (K = r),
+              (W = s)),
+              (Z = {}),
+              (x = A.LoginStates.MFA_STEP);
           },
           LOGIN_MFA: function () {
-            k = v.LoginStates.LOGGING_IN_MFA;
+            x = A.LoginStates.LOGGING_IN_MFA;
           },
           LOGIN_MFA_FAILURE: function (e) {
             let { message: t } = e;
-            (k = v.LoginStates.MFA_STEP), (Q = { code: t });
+            (x = A.LoginStates.MFA_STEP), (Z = { code: t });
           },
           LOGIN_MFA_SMS: function () {
-            k = v.LoginStates.LOGGING_IN_MFA_SMS;
+            x = A.LoginStates.LOGGING_IN_MFA_SMS;
           },
           LOGIN_MFA_SMS_REQUEST_SUCCESS: function (e) {
             let { phone: t } = e;
-            (k = v.LoginStates.MFA_SMS_STEP), (K = t);
+            (x = A.LoginStates.MFA_SMS_STEP), (z = t);
           },
           LOGIN_MFA_SMS_FAILURE: function (e) {
             let { message: t } = e;
-            (k = v.LoginStates.MFA_SMS_STEP), (Q = { code: t });
+            (x = A.LoginStates.MFA_SMS_STEP), (Z = { code: t });
           },
           LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function (e) {
-            (k = v.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION),
+            (x = A.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION),
               (i = e.credentials);
           },
           LOGIN_ACCOUNT_DISABLED: function (e) {
-            (k = v.LoginStates.ACCOUNT_DISABLED), (i = e.credentials);
+            (x = A.LoginStates.ACCOUNT_DISABLED), (i = e.credentials);
           },
           LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function () {
-            k = v.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
+            x = A.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
           },
           LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function () {
-            k = v.LoginStates.PHONE_IP_AUTHORIZATION;
+            x = A.LoginStates.PHONE_IP_AUTHORIZATION;
           },
           LOGIN_RESET: function (e) {
             let { isMultiAccount: t } = e;
-            (Q = {}),
-              (k = v.LoginStates.NONE),
-              (B = ""),
-              (H = !1),
-              (Y = null),
+            (Z = {}),
+              (x = A.LoginStates.NONE),
+              (H = ""),
+              (Y = !1),
+              (j = null),
               (r = null),
               (i = null),
-              !t && (ea(), en(!1));
+              !t && (eo(), ei(!1));
           },
           LOGIN_STATUS_RESET: function () {
-            k = v.LoginStates.NONE;
+            x = A.LoginStates.NONE;
           },
           LOGIN_SUSPENDED_USER: function (e) {
             let { suspendedUserToken: t } = e;
-            (ee = t),
+            (et = t),
               setImmediate(() =>
-                (0, _.transitionTo)(v.Routes.ACCOUNT_STANDING)
+                (0, S.transitionTo)(A.Routes.ACCOUNT_STANDING)
               );
           },
           SET_LOGIN_CREDENTIALS: function (e) {
             let { login: t, password: n } = e;
             i = { login: t, password: n };
           },
-          LOGOUT: el,
+          LOGOUT: eu,
           FINGERPRINT: function (e) {
             let t = e.fingerprint;
-            null == U
+            null == G
               ? null != t
-                ? (m.default.track(v.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-                    old_fingerprint: null != G ? (0, l.extractId)(G) : null,
+                ? (T.default.track(A.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
+                    old_fingerprint: null != w ? (0, l.extractId)(w) : null,
                     new_fingerprint: (0, l.extractId)(t),
                   }),
-                  (U = t),
                   (G = t),
-                  d.default.set(O, U))
-                : en()
+                  (w = t),
+                  d.default.set(D, G))
+                : ei()
               : null != t &&
-                U !== t &&
-                m.default.track(v.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
-                  fingerprint: (0, l.extractId)(U),
+                G !== t &&
+                T.default.track(A.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+                  fingerprint: (0, l.extractId)(G),
                   dropped_fingerprint: (0, l.extractId)(t),
                 });
           },
           REGISTER_SAVE_FORM: function (e) {
             let { form: t } = e;
-            (r = t), (x = v.RegistrationStates.REGISTER_AGE_GATE);
+            (r = t), (F = A.RegistrationStates.REGISTER_AGE_GATE);
           },
           REGISTER: function (e) {
             let { birthday: t } = e;
-            (Q = {}),
+            (Z = {}),
               null != t &&
                 (a(
                   null != r,
                   "Got birthday in multistep registration without existing form"
                 ),
                 (r = { ...r, birthday: t })),
-              (x = v.RegistrationStates.REGISTERING);
+              (F = A.RegistrationStates.REGISTERING);
           },
           REGISTER_SUCCESS: function (e) {
             let { token: t } = e;
-            (x = v.RegistrationStates.NONE), (r = null), es(t), er();
+            (F = A.RegistrationStates.NONE), (r = null), ea(t), es();
           },
           REGISTER_FAILURE: function (e) {
             let { error: t } = e;
-            (Q = (function (e) {
+            (Z = (function (e) {
               let t = {};
               if (((t.error_code = e.code), null != e.errors)) {
                 for (let n of Object.keys(e.errors))
@@ -43159,51 +43199,51 @@
                 t
               );
             })(t)),
-              (x =
+              (F =
                 null != t.getFieldErrors("date_of_birth")
-                  ? v.RegistrationStates.REGISTER_AGE_GATE
-                  : v.RegistrationStates.REGISTER_WITH_ERROR);
+                  ? A.RegistrationStates.REGISTER_AGE_GATE
+                  : A.RegistrationStates.REGISTER_WITH_ERROR);
           },
           VERIFY_FAILURE: function (e) {
             let { errors: t } = e;
-            (z = !0), (q = !1), (X = null != t ? t : {});
+            (q = !0), (X = !1), (Q = null != t ? t : {});
           },
           VERIFY_SUCCESS: function (e) {
-            (q = !0), (z = !1), (X = {}), (Z = e.verifyingUserId);
+            (X = !0), (q = !1), (Q = {}), (J = e.verifyingUserId);
           },
           START_SESSION: function () {
-            if (0 === Object.keys(Q).length) return !1;
-            Q = {};
+            if (0 === Object.keys(Z).length) return !1;
+            Z = {};
           },
           FORGOT_PASSWORD_REQUEST: function () {
-            (k = v.LoginStates.FORGOT_PASSWORD), (Q = {});
+            (x = A.LoginStates.FORGOT_PASSWORD), (Z = {});
           },
           FORGOT_PASSWORD_SENT: function () {
-            (k = v.LoginStates.NONE), (Q = {});
+            (x = A.LoginStates.NONE), (Z = {});
           },
           UPDATE_TOKEN: function (e) {
             let { token: t, userId: n } = e;
-            et("handleUpdateToken called"), es(t, n), er();
+            en("handleUpdateToken called"), ea(t, n), es();
           },
-          EXPERIMENTS_FETCH: ei,
+          EXPERIMENTS_FETCH: er,
           CURRENT_USER_UPDATE: function (e) {
             let { user: t } = e;
-            (P = t.id),
-              (L = t.email),
-              void 0 !== t.authenticator_types && (V = t.authenticator_types),
-              d.default.set(D, t.email),
-              d.default.set(y, t.id);
+            (L = t.id),
+              (b = t.email),
+              void 0 !== t.authenticator_types && (B = t.authenticator_types),
+              d.default.set(y, t.email),
+              d.default.set(P, t.id);
           },
-          AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: eo,
+          AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: el,
           CLEAR_AUTHENTICATION_ERRORS: function () {
-            Q = {};
+            Z = {};
           },
           CLOSE_SUSPENDED_USER: function () {
-            (ee = null),
-              (k = v.LoginStates.NONE),
-              el(),
+            (et = null),
+              (x = A.LoginStates.NONE),
+              eu(),
               setImmediate(() =>
-                (0, _.transitionTo)(v.Routes.DEFAULT_LOGGED_OUT)
+                (0, S.transitionTo)(A.Routes.DEFAULT_LOGGED_OUT)
               );
           },
         },
@@ -43418,8 +43458,11 @@
       "use strict";
       n.r(t),
         n.d(t, {
+          ChannelLoader: function () {
+            return V;
+          },
           default: function () {
-            return er;
+            return eo;
           },
         }),
         n("222007"),
@@ -43439,30 +43482,87 @@
         p = n("379881"),
         h = n("560208"),
         _ = n("233069"),
-        S = n("299039"),
-        m = n("271938"),
-        T = n("305961"),
-        g = n("697218"),
-        I = n("49111");
-      let C = new E.default("ChannelStore"),
-        v = {},
+        S = n("449008"),
+        m = n("299039"),
+        T = n("271938"),
+        g = n("305961"),
+        I = n("697218"),
+        C = n("49111");
+      let v = new E.default("ChannelStore"),
         A = {},
         R = {},
         N = {},
-        O = null,
-        D = {},
+        O = {},
+        D = null,
         y = {},
-        P = 0,
-        L = {},
+        P = {},
+        L = 0,
         b = {},
-        M = new Set(),
-        U = {},
-        G = 0,
-        w = 0;
-      function k(e, t, n) {
-        if (null == e || !M.has(e) || (0 === t && d.default.hasGuild(e)))
+        M = {},
+        U = new Set(),
+        G = {},
+        w = 0,
+        k = {},
+        x = 0,
+        F = 0;
+      class V {
+        static loadAllMissingChannels() {
+          let e = g.default.getGuildIds().filter(e => !U.has(e));
+          return this.loadGuildIds(e);
+        }
+        static loadGuildFromChannelId(e) {
+          var t;
+          return null == e
+            ? null
+            : V.loadGuildIds([
+                null === (t = j(e)) || void 0 === t ? void 0 : t.guild_id,
+              ]);
+        }
+        static loadGuildIds(e) {
+          let t = e.filter(S.isNotNullish);
+          if (0 === t.length) return null;
+          let n = l.default.database();
+          if (null == n) return null;
+          let i = t.some(e => !U.has(e));
+          if (!i) return null;
+          let r = w;
+          return (0, u.tryLoadOrResetCacheGatewayAsync)(
+            "loadChannels",
+            async () => {
+              let e = t.map(e => {
+                  if (U.has(e))
+                    return Promise.resolve({ guildId: e, channels: null });
+                  let t = G[e];
+                  if (null != t)
+                    return t.then(() => ({ guildId: e, channels: null }));
+                  let i = c.default
+                    .getAsync(n, e)
+                    .then(t => ({ guildId: e, channels: t }));
+                  return (G[e] = i), i;
+                }),
+                i = await Promise.all(e);
+              if (w !== r) return null;
+              let s = i.filter(e => !U.has(e.guildId) && null != e.channels);
+              return (
+                await o.default.dispatch({
+                  type: "LOAD_CHANNELS",
+                  channels: s,
+                }),
+                null
+              );
+            }
+          );
+        }
+      }
+      function B(e, t, n) {
+        if (
+          null == e ||
+          "null" === e ||
+          U.has(e) ||
+          (0 === t && d.default.hasGuild(e))
+        )
           return;
-        C.verbose(
+        v.verbose(
           "hydrating guild (guild: ".concat(e, ", trace: ").concat(n, ")")
         );
         let i = l.default.database(),
@@ -43474,9 +43574,9 @@
                 )
               : null;
         if (null == r) {
-          M.delete(e),
+          U.add(e),
             d.default.restored(e),
-            C.log(
+            v.log(
               "load returned null; early returning (guild: "
                 .concat(e, ", database: ")
                 .concat(i, ")")
@@ -43485,8 +43585,8 @@
         }
         let [a, o] = r;
         for (let n of ((0, f.default)(a),
-        0 !== t && (w += 1),
-        M.delete(e),
+        0 !== t && (F += 1),
+        U.add(e),
         d.default.restored(e),
         s.default.mark(
           "❗",
@@ -43494,138 +43594,127 @@
           o
         ),
         a))
-          !Object.hasOwn(A, n.id) && W((0, _.castChannelRecord)(n));
-        C.verbose(
+          !Object.hasOwn(R, n.id) && X((0, _.castChannelRecord)(n));
+        v.verbose(
           "hydration complete (guild: "
             .concat(e, ", channels: ")
             .concat(a.length, ", guilds_loaded: ")
-            .concat(w, ")")
+            .concat(F, ")")
         );
       }
-      function x(e, t, n) {
+      function H(e, t, n) {
         if (
-          M.size > 0 &&
-          !Object.hasOwn(A, e) &&
-          !Object.hasOwn(N, e) &&
-          !Object.hasOwn(D, e) &&
-          !Object.hasOwn(b, e) &&
+          !Object.hasOwn(R, e) &&
+          !Object.hasOwn(O, e) &&
+          !Object.hasOwn(y, e) &&
+          !Object.hasOwn(M, e) &&
           1 === t
         ) {
           let i = d.default.getBasicChannel(e);
-          (null == i ? void 0 : i.guild_id) != null && k(i.guild_id, t, n);
+          (null == i ? void 0 : i.guild_id) != null && B(i.guild_id, t, n);
         }
       }
-      function F(e) {
-        if (null != R[e]) {
-          for (let t of S.default.keys(R[e])) delete A[t];
-          delete R[e];
+      function Y(e) {
+        if (null != N[e]) {
+          for (let t of m.default.keys(N[e])) delete R[t];
+          delete N[e];
         }
       }
-      function V(e) {
+      function j(e) {
         var t, n, i, r;
         return (
-          x(e, 0, "getBasicChannel"),
+          H(e, 0, "getBasicChannel"),
           null !==
             (r =
               null !==
                 (i =
                   null !==
-                    (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) &&
+                    (n = null !== (t = R[e]) && void 0 !== t ? t : O[e]) &&
                   void 0 !== n
                     ? n
-                    : D[e]) && void 0 !== i
+                    : y[e]) && void 0 !== i
                 ? i
-                : b[e]) && void 0 !== r
+                : M[e]) && void 0 !== r
             ? r
             : d.default.getBasicChannel(e)
         );
       }
-      function B(e) {
+      function W(e) {
         var t, n, i, r;
         return (
-          x(e, 1, "getChannel"),
+          H(e, 1, "getChannel"),
           null !==
             (r =
               null !==
                 (i =
                   null !==
-                    (n = null !== (t = A[e]) && void 0 !== t ? t : N[e]) &&
+                    (n = null !== (t = R[e]) && void 0 !== t ? t : O[e]) &&
                   void 0 !== n
                     ? n
-                    : D[e]) && void 0 !== i
+                    : y[e]) && void 0 !== i
                 ? i
-                : b[e]) && void 0 !== r
+                : M[e]) && void 0 !== r
             ? r
-            : U[e]
+            : k[e]
         );
       }
-      function H(e) {
+      function K(e) {
         e.isPrivate()
-          ? (delete U[e.id], Y(e))
+          ? (delete k[e.id], z(e))
           : e.isThread()
-            ? j(e)
+            ? q(e)
             : _.GUILD_CHANNEL_TYPES.has(e.type) &&
               (function (e) {
-                W(e);
+                X(e);
               })(e);
       }
-      function Y(e) {
-        (N[e.id] = e),
-          e.type === I.ChannelTypes.DM && (y[e.getRecipientId()] = e.id),
-          (P += 1);
+      function z(e) {
+        (O[e.id] = e),
+          e.type === C.ChannelTypes.DM && (P[e.getRecipientId()] = e.id),
+          (L += 1);
       }
-      function j(e) {
-        let t = A[e.parent_id];
-        (D[e.id] = e.merge({
+      function q(e) {
+        let t = R[e.parent_id];
+        (y[e.id] = e.merge({
           nsfw: (null == t ? void 0 : t.nsfw) === !0,
           parentChannelThreadType: null == t ? void 0 : t.type,
         })),
           e.isScheduledForDeletion() &&
             o.default.dispatch({ type: "THREAD_DELETE", channel: e });
       }
-      function W(e) {
+      function X(e) {
         var t, n;
         let { id: i, guild_id: r } = e;
-        (A[i] = e),
-          (R[r] = null !== (t = R[r]) && void 0 !== t ? t : {}),
-          (R[r][i] = e),
-          (L[r] = (null !== (n = L[r]) && void 0 !== n ? n : 0) + 1);
+        (R[i] = e),
+          (N[r] = null !== (t = N[r]) && void 0 !== t ? t : {}),
+          (N[r][i] = e),
+          (b[r] = (null !== (n = b[r]) && void 0 !== n ? n : 0) + 1);
       }
-      function K(e) {
-        if ((M.add(e.id), null != e.channels))
-          for (let t of (F(e.id),
-          M.delete(e.id),
+      function Q(e) {
+        if (null != e.channels)
+          for (let t of (Y(e.id),
+          U.add(e.id),
           d.default.restored(e.id),
           e.channels))
-            W(t);
+            X(t);
         if (null != e.channelUpdates) {
           let t = e.channelUpdates;
           for (let n of ((t.writes.length > 0 || t.deletes.length > 0) &&
             d.default.invalidate(e.id),
           t.deletes))
-            Z(A[n]);
-          for (let e of t.writes) W(e);
+            ee(R[n]);
+          for (let e of t.writes) X(e);
         }
-        if (null != e.threads) for (let t of e.threads) j(t);
+        if (null != e.threads) for (let t of e.threads) q(t);
       }
-      function z() {
-        (y = {}),
-          (A = {}),
-          (R = {}),
-          (L = {}),
-          (N = {}),
-          (U = {}),
-          (D = {}),
-          (M = new Set());
+      function Z(e) {
+        for (let t of e.channels)
+          K((0, f.deserializeChannel)((0, _.castChannelRecord)(t)));
+        e.guilds.forEach(e => U.add(e.id));
       }
-      function q(e) {
-        for (let t of (z(), e.channels))
-          H((0, f.deserializeChannel)((0, _.castChannelRecord)(t)));
-        M = new Set(e.guilds.map(e => e.id));
-      }
-      function X(e) {
+      function J(e) {
         if (!_.ALL_CHANNEL_TYPES.has(e.channel.type)) return !1;
-        let t = B(e.channel.id);
+        let t = W(e.channel.id);
         if (null == t) t = e.channel;
         else {
           var n;
@@ -43635,296 +43724,313 @@
               null !== (n = e.channel.bitrate) && void 0 !== n ? n : t.bitrate,
           });
         }
-        H(t);
+        K(t);
       }
-      function Q(e) {
+      function $(e) {
         let { threads: t } = e;
         t.forEach(e => {
           _.ALL_CHANNEL_TYPES.has(e.type) &&
-            H((0, _.createChannelRecordFromServer)(e));
+            K((0, _.createChannelRecordFromServer)(e));
         });
       }
-      function Z(e) {
+      function ee(e) {
         if (null == e) return;
         let t = e.guild_id;
-        e.id in N && delete N[e.id],
-          e.id in A && delete A[e.id],
-          e.id in D && delete D[e.id],
-          null != t && null != R[t] && e.id in R[t] && delete R[t][e.id],
+        e.id in O && delete O[e.id],
+          e.id in R && delete R[e.id],
+          e.id in y && delete y[e.id],
+          null != t && null != N[t] && e.id in N[t] && delete N[t][e.id],
           !(function (e) {
             if (null == e.guild_id || _.THREAD_CHANNEL_TYPES.has(e.type))
-              (0, _.isPrivate)(e.type) && (P += 1);
+              (0, _.isPrivate)(e.type) && (L += 1);
             else {
               var t;
-              L[e.guild_id] =
-                (null !== (t = L[e.guild_id]) && void 0 !== t ? t : 0) + 1;
+              b[e.guild_id] =
+                (null !== (t = b[e.guild_id]) && void 0 !== t ? t : 0) + 1;
             }
           })(e);
       }
-      function J(e) {
+      function et(e) {
         var t, n;
         let { channel: i } = e,
           r =
             null !==
-              (n = null !== (t = A[i.id]) && void 0 !== t ? t : N[i.id]) &&
+              (n = null !== (t = R[i.id]) && void 0 !== t ? t : O[i.id]) &&
             void 0 !== n
               ? n
-              : D[i.id];
+              : y[i.id];
         if (null == r) return !1;
-        Z(r),
+        ee(r),
           !(function (e) {
-            if ("basicPermissions" in e || e.type !== I.ChannelTypes.DM) return;
+            if ("basicPermissions" in e || e.type !== C.ChannelTypes.DM) return;
             let t = e.getRecipientId(),
-              n = y[t];
-            n === e.id && delete y[t];
+              n = P[t];
+            n === e.id && delete P[t];
           })(r);
       }
-      function $(e) {
+      function en(e) {
         let { messages: t } = e;
         for (let e of t)
           null != e.thread &&
-            !(e.thread.id in D) &&
+            !(e.thread.id in y) &&
             _.ALL_CHANNEL_TYPES.has(e.thread.type) &&
-            j((0, _.createChannelRecordFromServer)(e.thread));
+            q((0, _.createChannelRecordFromServer)(e.thread));
       }
-      function ee(e) {
+      function ei(e) {
         let { messages: t, threads: n, channels: i } = e;
-        for (let e of t) for (let t of e) et(t.thread);
-        n.forEach(et),
+        for (let e of t) for (let t of e) er(t.thread);
+        n.forEach(er),
           null == i ||
             i.forEach(e => {
               let t = (0, _.createChannelRecordFromServer)(e),
-                n = null != B(e.id),
-                i = null != U[e.id];
-              t.isPrivate() && (!n || i) ? (U[t.id] = t) : !n && H(t);
+                n = null != W(e.id),
+                i = null != k[e.id];
+              t.isPrivate() && (!n || i) ? (k[t.id] = t) : !n && K(t);
             });
       }
-      function et(e) {
+      function er(e) {
         null != e &&
-          !(e.id in D) &&
+          !(e.id in y) &&
           _.ALL_CHANNEL_TYPES.has(e.type) &&
-          j((0, _.createChannelRecordFromServer)(e));
+          q((0, _.createChannelRecordFromServer)(e));
       }
-      function en() {
-        for (let e in ((b = {}), p.default.getFavoriteChannels())) {
+      function es() {
+        for (let e in ((M = {}), p.default.getFavoriteChannels())) {
           let t = p.default.getCategoryRecord(e);
-          null != t && (b[e] = t);
+          null != t && (M[e] = t);
         }
       }
-      class ei extends a.default.Store {
+      class ea extends a.default.Store {
         initialize() {
-          this.waitFor(d.default, g.default, T.default, p.default),
-            this.syncWith([p.default], en);
+          this.waitFor(d.default, I.default, g.default, p.default),
+            this.syncWith([p.default], es);
         }
         hasChannel(e) {
-          return null != V(e);
+          return null != j(e);
         }
         getBasicChannel(e) {
-          if (null != e) return V(e);
+          if (null != e) return j(e);
         }
         getChannel(e) {
-          if (null != e) return B(e);
+          if (null != e) return W(e);
         }
         loadAllGuildAndPrivateChannelsFromDisk() {
-          for (let e of T.default.getGuildIds())
-            k(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
-          return { ...A, ...N };
+          for (let e of g.default.getGuildIds())
+            B(e, 1, "loadAllGuildAndPrivateChannelsFromDisk");
+          return { ...R, ...O };
         }
         getChannelIds(e) {
           var t, n;
-          return (k(e, 0, "getChannelIds"), null == e)
-            ? S.default.keys(N)
-            : S.default.keys(
+          return (B(e, 0, "getChannelIds"), null == e)
+            ? m.default.keys(O)
+            : m.default.keys(
                 null !==
                   (n =
                     null !== (t = d.default.getGuildBasicChannels(e)) &&
                     void 0 !== t
                       ? t
-                      : R[e]) && void 0 !== n
+                      : N[e]) && void 0 !== n
                   ? n
-                  : v
+                  : A
               );
         }
         getMutablePrivateChannels() {
-          return N;
+          return O;
         }
         getMutableBasicGuildChannelsForGuild(e) {
           var t, n;
           return (
-            k(e, 0, "getMutableBasicGuildChannelsForGuild"),
+            B(e, 0, "getMutableBasicGuildChannelsForGuild"),
             null !==
               (n =
                 null !== (t = d.default.getGuildBasicChannels(e)) &&
                 void 0 !== t
                   ? t
-                  : R[e]) && void 0 !== n
+                  : N[e]) && void 0 !== n
               ? n
-              : v
+              : A
           );
         }
         getMutableGuildChannelsForGuild(e) {
           var t;
           return (
-            k(e, 1, "getMutableGuildChannelsForGuild"),
-            null !== (t = R[e]) && void 0 !== t ? t : v
+            B(e, 1, "getMutableGuildChannelsForGuild"),
+            null !== (t = N[e]) && void 0 !== t ? t : A
           );
         }
         getSortedPrivateChannels() {
-          return r(N)
+          return r(O)
             .values()
-            .sort((e, t) => S.default.compare(e.lastMessageId, t.lastMessageId))
+            .sort((e, t) => m.default.compare(e.lastMessageId, t.lastMessageId))
             .reverse()
             .value();
         }
         getDMFromUserId(e) {
-          if (null != e) return y[e];
+          if (null != e) return P[e];
         }
         getDMUserIds() {
-          return Object.keys(y);
+          return Object.keys(P);
         }
         getPrivateChannelsVersion() {
-          return P;
+          return L;
         }
         getGuildChannelsVersion(e) {
           var t;
-          return null !== (t = L[e]) && void 0 !== t ? t : 0;
+          return null !== (t = b[e]) && void 0 !== t ? t : 0;
         }
         getAllThreadsForParent(e) {
-          return r.values(D).filter(t => t.parent_id === e);
+          return r.values(y).filter(t => t.parent_id === e);
         }
         getInitialOverlayState() {
-          return { ...A, ...N, ...D };
+          return { ...R, ...O, ...y };
         }
       }
-      ei.displayName = "ChannelStore";
-      var er = new ei(o.default, {
+      ea.displayName = "ChannelStore";
+      var eo = new ea(o.default, {
         BACKGROUND_SYNC: function (e) {
           let { guilds: t } = e,
-            n = R;
-          (A = {}),
-            (R = {}),
-            (L = {}),
+            n = N;
+          (R = {}),
+            (N = {}),
+            (b = {}),
             t.forEach(e => {
-              if ("unavailable" === e.data_mode) r.forEach(n[e.id], W);
+              if ("unavailable" === e.data_mode) r.forEach(n[e.id], X);
               else if ("partial" === e.data_mode) {
                 var t, i;
-                r.forEach(n[e.id], W);
+                r.forEach(n[e.id], X);
                 let s =
                   null !== (i = e.partial_updates.deleted_channel_ids) &&
                   void 0 !== i
                     ? i
                     : [];
                 s.length > 0 &&
-                  (k(e.id, 1, "handleBackgroundSync"), s.forEach(e => Z(A[e]))),
+                  (B(e.id, 1, "handleBackgroundSync"),
+                  s.forEach(e => ee(R[e]))),
                   null === (t = e.partial_updates.channels) ||
                     void 0 === t ||
                     t.forEach(t =>
-                      W((0, _.createChannelRecordFromServer)(t, e.id))
+                      X((0, _.createChannelRecordFromServer)(t, e.id))
                     );
               } else
-                F(e.id),
-                  M.delete(e.id),
+                Y(e.id),
+                  U.add(e.id),
                   d.default.restored(e.id),
                   e.channels.forEach(t =>
-                    W((0, _.createChannelRecordFromServer)(t, e.id))
+                    X((0, _.createChannelRecordFromServer)(t, e.id))
                   );
             });
         },
         CACHE_LOADED_LAZY: function (e) {
-          if (null != e.privateChannels)
-            for (let t of e.privateChannels) H((0, _.castChannelRecord)(t));
-          for (let [t, n] of e.guildChannels)
-            for (let e of n) H((0, _.castChannelRecord)(e));
-          e.guilds.length, (M = new Set(e.guilds.map(e => e.id)));
+          for (let [t, n] of (e.guilds.length, e.guildChannels))
+            for (let e of (U.add(t), n)) K((0, _.castChannelRecord)(e));
         },
-        CACHE_LOADED: q,
+        CACHE_LOADED: Z,
         CHANNEL_CREATE: function (e) {
-          H(e.channel);
+          K(e.channel);
         },
-        CHANNEL_DELETE: J,
+        CHANNEL_DELETE: et,
         CHANNEL_RECIPIENT_ADD: function (e) {
-          let t = B(e.channelId),
-            n = m.default.getId();
+          let t = W(e.channelId),
+            n = T.default.getId();
           return (
             (null == t ? !!void 0 : !!t.isPrivate()) &&
-            (H(t.addRecipient(e.user.id, e.nick, n)), !0)
+            (K(t.addRecipient(e.user.id, e.nick, n)), !0)
           );
         },
         CHANNEL_RECIPIENT_REMOVE: function (e) {
-          let t = B(e.channelId);
+          let t = W(e.channelId);
           return (
             (null == t ? !!void 0 : !!t.isPrivate()) &&
-            (H(t.removeRecipient(e.user.id)), !0)
+            (K(t.removeRecipient(e.user.id)), !0)
           );
         },
         CHANNEL_UPDATES: function (e) {
           let t = e.channels.some(e => {
-            let t = B(e.id);
+            let t = W(e.id);
             return (
               e.nsfw !== (null == t ? void 0 : t.nsfw) ||
               e.type !== (null == t ? void 0 : t.type)
             );
           });
-          for (let t of e.channels) H(t);
-          t && Object.values(D).forEach(e => H(e));
+          for (let t of e.channels) K(t);
+          t && Object.values(y).forEach(e => K(e));
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
           let { lazyPrivateChannels: t } = e;
-          null != O && ((N = {}), O.forEach(Y)), t.forEach(Y);
+          null != D && ((O = {}), D.forEach(z)), t.forEach(z);
         },
         CONNECTION_OPEN: function (e) {
-          let t = R;
-          for (let n of ((y = {}),
-          (A = {}),
+          let t = N;
+          for (let n of ((P = {}),
           (R = {}),
-          (D = {}),
-          (L = {}),
-          (U = {}),
-          (M = new Set()),
-          (O = e.initialPrivateChannels),
-          e.initialPrivateChannels.forEach(Y),
+          (N = {}),
+          (y = {}),
+          (b = {}),
+          (k = {}),
+          (G = {}),
+          (w = Date.now()),
+          (D = e.initialPrivateChannels),
+          e.initialPrivateChannels.forEach(z),
           e.guilds))
-            "partial" === n.dataMode && r.forEach(t[n.id], W), K(n);
-          en();
+            "partial" === n.dataMode && r.forEach(t[n.id], X), Q(n);
+          es();
         },
         GUILD_CREATE: function (e) {
-          K(e.guild);
+          Q(e.guild);
         },
         GUILD_DELETE: function (e) {
-          F(e.guild.id), M.delete(e.guild.id), d.default.invalidate(e.guild.id);
+          Y(e.guild.id), U.delete(e.guild.id), d.default.invalidate(e.guild.id);
         },
         GUILD_FEED_FETCH_SUCCESS: function (e) {
           let { data: t } = e,
             n = !1,
             i = (0, h.getThreadsFromGuildFeedFetch)(t);
           for (let e of i)
-            !(e.id in D) &&
+            !(e.id in y) &&
               _.ALL_CHANNEL_TYPES.has(e.type) &&
-              (j((0, _.createChannelRecordFromServer)(e)), (n = !0));
+              (q((0, _.createChannelRecordFromServer)(e)), (n = !0));
           return n;
         },
-        LOAD_ARCHIVED_THREADS_SUCCESS: Q,
-        LOAD_MESSAGES_AROUND_SUCCESS: $,
-        LOAD_MESSAGES_SUCCESS: $,
-        LOAD_THREADS_SUCCESS: Q,
-        LOGOUT: function () {
-          z();
+        LOAD_ARCHIVED_THREADS_SUCCESS: $,
+        LOAD_CHANNELS: function (e) {
+          for (let { guildId: t, channels: n } of e.channels)
+            for (let e of ((0, f.default)(n),
+            U.add(t),
+            d.default.restored(t),
+            n))
+              !Object.hasOwn(R, e.id) && X((0, _.castChannelRecord)(e));
+          return !1;
         },
-        OVERLAY_INITIALIZE: q,
-        SEARCH_FINISH: ee,
-        MOD_VIEW_SEARCH_FINISH: ee,
-        THREAD_CREATE: X,
-        THREAD_DELETE: J,
+        LOAD_MESSAGES_AROUND_SUCCESS: en,
+        LOAD_MESSAGES_SUCCESS: en,
+        LOAD_THREADS_SUCCESS: $,
+        LOGOUT: function () {
+          (P = {}),
+            (R = {}),
+            (N = {}),
+            (b = {}),
+            (O = {}),
+            (k = {}),
+            (y = {}),
+            (U = new Set()),
+            (G = {}),
+            (w = Date.now());
+        },
+        OVERLAY_INITIALIZE: Z,
+        SEARCH_FINISH: ei,
+        MOD_VIEW_SEARCH_FINISH: ei,
+        THREAD_CREATE: J,
+        THREAD_DELETE: et,
         THREAD_LIST_SYNC: function (e) {
           let { threads: t } = e;
           t.forEach(e => {
-            _.ALL_CHANNEL_TYPES.has(e.type) && H(e);
+            _.ALL_CHANNEL_TYPES.has(e.type) && K(e);
           });
         },
-        THREAD_UPDATE: X,
+        THREAD_UPDATE: J,
         VOICE_BACKGROUND_UPDATE: function (e) {
-          let t = B(e.channelId);
-          null != t && ((t.voiceBackgroundDisplay = e.background), H(t));
+          let t = W(e.channelId);
+          null != t && ((t.voiceBackgroundDisplay = e.background), K(t));
         },
       });
     },
@@ -51694,6 +51800,13 @@
         null != e.application.bot && C(e.application.bot);
       }
       function N(e) {
+        if ("CACHE_LOADED" === e.type)
+          for (let n of e.channels) {
+            var t;
+            null === (t = n.rawRecipients) ||
+              void 0 === t ||
+              t.forEach(e => C(e, !1));
+          }
         if (null != e.users) {
           for (let t of e.users)
             if (!(t.id in _ && !("incomplete" in t)))
@@ -51854,7 +51967,6 @@
         },
         OVERLAY_INITIALIZE: N,
         CACHE_LOADED: N,
-        CACHE_LOADED_LAZY: N,
         USER_UPDATE: function (e) {
           let { user: t } = e;
           t.id !== E.default.getId() && C(t);
@@ -59963,7 +60075,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "267643",
+                  build_number: "267664",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78828,4 +78940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41039.4bdae7980e810101f923.js.map
+//# sourceMappingURL=41039.6ce06093fab93976afcc.js.map

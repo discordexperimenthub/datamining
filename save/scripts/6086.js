@@ -195,22 +195,22 @@
         n("702976");
       var a = n("917351"),
         l = n.n(a),
-        i = n("249654"),
-        d = n("872717"),
-        s = n("913144"),
-        r = n("267363"),
-        o = n("716241"),
-        u = n("412355"),
-        f = n("479756"),
-        g = n("38654"),
-        c = n("629220"),
-        _ = n("42203"),
-        p = n("26989"),
-        E = n("697218"),
-        N = n("599110"),
-        S = n("568734"),
-        h = n("449008"),
-        C = n("286235"),
+        i = n("872717"),
+        d = n("913144"),
+        s = n("267363"),
+        r = n("716241"),
+        o = n("412355"),
+        u = n("479756"),
+        f = n("38654"),
+        g = n("629220"),
+        c = n("42203"),
+        _ = n("26989"),
+        p = n("697218"),
+        E = n("599110"),
+        N = n("568734"),
+        S = n("449008"),
+        h = n("286235"),
+        C = n("299039"),
         O = n("863636"),
         I = n("380710"),
         A = n("843323"),
@@ -219,31 +219,31 @@
         D = n("133335");
       function L(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (g.default.isFullServerPreview(e)) return;
+        if (f.default.isFullServerPreview(e)) return;
         let n = t
             ? O.default.getOnboardingPromptsForOnboarding(e)
             : O.default.getOnboardingPrompts(e),
           a = O.default.getOnboardingResponses(e),
           l = n.map(e => e.options.filter(e => a.includes(e.id))).flat(),
-          i = {},
+          s = {},
           r = {};
         return (n.forEach(e => {
-          (i[e.id] = Date.now()),
+          (s[e.id] = Date.now()),
             e.options.forEach(e => (r[e.id] = Date.now()));
         }),
         t)
-          ? d.default
+          ? i.default
               .post({
                 url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
                 body: {
                   onboarding_responses: l.map(e => e.id),
-                  onboarding_prompts_seen: i,
+                  onboarding_prompts_seen: s,
                   onboarding_responses_seen: r,
                 },
               })
               .then(t => {
                 null != t.body &&
-                  s.default.dispatch({
+                  d.default.dispatch({
                     type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
                     guildId: e,
                     options: t.body.onboarding_responses,
@@ -251,19 +251,19 @@
                     options_seen: t.body.onboarding_responses_seen,
                   });
               })
-              .catch(e => C.default.captureException(e))
-          : d.default
+              .catch(e => h.default.captureException(e))
+          : i.default
               .put({
                 url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
                 body: {
                   onboarding_responses: l.map(e => e.id),
-                  onboarding_prompts_seen: i,
+                  onboarding_prompts_seen: s,
                   onboarding_responses_seen: r,
                 },
               })
               .then(t => {
                 null != t.body &&
-                  s.default.dispatch({
+                  d.default.dispatch({
                     type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
                     guildId: e,
                     options: t.body.onboarding_responses,
@@ -271,42 +271,42 @@
                     options_seen: t.body.onboarding_responses_seen,
                   });
               })
-              .catch(e => C.default.captureException(e));
+              .catch(e => h.default.captureException(e));
       }
       var U = {
         selectOption(e, t, n, a) {
           let i = O.default.getOnboardingPrompt(t);
           if (null == i) return;
-          let d = i.singleSelect ? l.without(l.map(i.options, "id"), n) : [];
-          s.default.dispatch({
+          let s = i.singleSelect ? l.without(l.map(i.options, "id"), n) : [];
+          d.default.dispatch({
             type: "GUILD_ONBOARDING_SELECT_OPTION",
             guildId: e,
             promptId: t,
             optionId: n,
             selected: a,
-            removedOptionIds: d,
+            removedOptionIds: s,
           });
         },
         updateOnboardingResponses: l.debounce(L, 1e3),
         updateRolesLocal: function (e, t, n) {
           var a, i;
-          let d =
+          let s =
             null !==
               (i =
-                null === (a = p.default.getSelfMember(e)) || void 0 === a
+                null === (a = _.default.getSelfMember(e)) || void 0 === a
                   ? void 0
                   : a.roles) && void 0 !== i
               ? i
               : [];
-          if (g.default.isViewingRoles(e)) {
-            (0, f.updateImpersonatedRoles)(e, l.difference(l.union(d, t), n));
+          if (f.default.isViewingRoles(e)) {
+            (0, u.updateImpersonatedRoles)(e, l.difference(l.union(s, t), n));
             return;
           }
           (t.length > 0 || n.length > 0) &&
-            s.default.dispatch({
+            d.default.dispatch({
               type: "GUILD_MEMBER_UPDATE_LOCAL",
               guildId: e,
-              roles: l.difference(l.union(d, t), n),
+              roles: l.difference(l.union(s, t), n),
               addedRoleIds: t,
               removedRoleIds: n,
             });
@@ -315,18 +315,18 @@
           let n = t.length > 0 ? t[t.length - 1] : null,
             a = O.default.getSelectedOptions(e),
             l = (0, I.getSelectedRoleIds)(a),
-            d = (0, I.getSelectedChannelIds)(a),
-            s = O.default.getEnabled(e)
+            i = (0, I.getSelectedChannelIds)(a),
+            d = O.default.getEnabled(e)
               ? O.default.getDefaultChannelIds(e)
               : [],
-            [u, c] = (0, I.getChannelCoverageForOnboarding)(e, t, s),
-            C = [...d, ...s],
-            U = C.map(e => _.default.getChannel(e)).filter(h.isNotNullish),
-            v = (0, A.getFlattenedChannels)(e, new Set(C), U, !0).length,
+            [o, g] = (0, I.getChannelCoverageForOnboarding)(e, t, d),
+            h = [...i, ...d],
+            U = h.map(e => c.default.getChannel(e)).filter(S.isNotNullish),
+            v = (0, A.getFlattenedChannels)(e, new Set(h), U, !0).length,
             b = null == n ? [] : n.options.map(e => e.id);
           if (
-            (N.default.track(G.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
-              ...(0, o.collectGuildAnalyticsMetadata)(e),
+            (E.default.track(G.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
+              ...(0, r.collectGuildAnalyticsMetadata)(e),
               step: t.length - 1,
               options_selected:
                 null == n ? 0 : a.filter(e => b.includes(e.id)).length,
@@ -336,34 +336,34 @@
               is_final_step: !0,
               roles_granted: l.size,
               channels_granted: v,
-              guild_onboarding_covered_channel_ids: u.map(e => e.id),
-              guild_onboarding_uncovered_channel_ids: c.map(e => e.id),
+              guild_onboarding_covered_channel_ids: o.map(e => e.id),
+              guild_onboarding_uncovered_channel_ids: g.map(e => e.id),
             }),
-            (0, r.ackGuildFeature)(
+            (0, s.ackGuildFeature)(
               e,
               D.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-              i.default.fromTimestamp(Date.now())
+              C.default.fromTimestamp(Date.now())
             ),
             L(e, !0),
-            g.default.isFullServerPreview(e))
+            f.default.isFullServerPreview(e))
           ) {
-            (0, f.updateImpersonatedChannels)(e, C, []),
-              (0, f.updateImpersonatedData)(e, { optInEnabled: !0 }),
-              (0, f.updateImpersonatedRoles)(e, Array.from(l));
-            let t = E.default.getCurrentUser();
+            (0, u.updateImpersonatedChannels)(e, h, []),
+              (0, u.updateImpersonatedData)(e, { optInEnabled: !0 }),
+              (0, u.updateImpersonatedRoles)(e, Array.from(l));
+            let t = p.default.getCurrentUser();
             if (null != t) {
               var F, y;
               let n =
                 null !==
                   (y =
-                    null === (F = p.default.getMember(e, t.id)) || void 0 === F
+                    null === (F = _.default.getMember(e, t.id)) || void 0 === F
                       ? void 0
                       : F.flags) && void 0 !== y
                   ? y
                   : 0;
-              (0, f.updateImpersonatedData)(e, {
+              (0, u.updateImpersonatedData)(e, {
                 memberOptions: {
-                  flags: (0, S.setFlag)(
+                  flags: (0, N.setFlag)(
                     n,
                     T.GuildMemberFlags.COMPLETED_ONBOARDING,
                     !0
@@ -380,34 +380,34 @@
               : [];
           a.forEach(e => n.add(e)),
             n.size > 0 &&
-              (0, c.bulkOptInChannels)(e, Array.from(n), !0, {
+              (0, g.bulkOptInChannels)(e, Array.from(n), !0, {
                 page: G.AnalyticsPages.GUILD_ONBOARDING,
               });
         },
         finishOnboarding(e) {
-          s.default.dispatch({ type: "GUILD_ONBOARDING_COMPLETE", guildId: e });
+          d.default.dispatch({ type: "GUILD_ONBOARDING_COMPLETE", guildId: e });
         },
         setUserOnboardingStep(e, t) {
-          s.default.dispatch({
+          d.default.dispatch({
             type: "GUILD_ONBOARDING_SET_STEP",
             guildId: e,
             step: t,
           });
         },
         async resetOnboarding(e) {
-          let t = E.default.getCurrentUser();
+          let t = p.default.getCurrentUser();
           if (null != t) {
             var n, a;
             let l =
               null !==
                 (a =
-                  null === (n = p.default.getMember(e, t.id)) || void 0 === n
+                  null === (n = _.default.getMember(e, t.id)) || void 0 === n
                     ? void 0
                     : n.flags) && void 0 !== a
                 ? a
                 : 0;
-            await (0, u.updateGuildSelfMember)(e, {
-              flags: (0, S.setFlag)(
+            await (0, o.updateGuildSelfMember)(e, {
+              flags: (0, N.setFlag)(
                 l,
                 T.GuildMemberFlags.COMPLETED_ONBOARDING,
                 !1
@@ -1051,4 +1051,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6086.c01efd224fa0765b11f9.js.map
+//# sourceMappingURL=6086.57eee01cfa97489d9289.js.map

@@ -135,11 +135,11 @@
           )
             return;
           let l = d.default.getChannel(n),
-            s = E.default.getResourceForChannel(e, n);
+            _ = E.default.getResourceForChannel(e, n);
           null != e &&
             !u.default.isFullServerPreview(e) &&
             null != l &&
-            null != s &&
+            null != _ &&
             c.default.track(m.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
               channel_id: l.id,
@@ -149,7 +149,7 @@
             t && (0, a.transitionToChannel)(n),
             r.default.jumpToMessage({
               channelId: n,
-              messageId: n,
+              messageId: s.default.castChannelIdAsMessageId(n),
               flash: !1,
               jumpType: o.JumpTypes.INSTANT,
             });
@@ -277,10 +277,10 @@
             return v;
           },
           isWelcomeMessageEmpty: function () {
-            return S;
+            return I;
           },
           isSettingsEmpty: function () {
-            return I;
+            return S;
           },
           isSettingsValid: function () {
             return A;
@@ -477,7 +477,7 @@
         for (let t in e.channel_actions) n[t] = e.channel_actions[t].completed;
         return n;
       };
-      function S(e) {
+      function I(e) {
         return (
           null == e ||
           ((null == e.message || !(e.message.length > 0)) &&
@@ -485,10 +485,10 @@
             !0)
         );
       }
-      function I(e) {
+      function S(e) {
         return (
           null == e ||
-          (!!S(e.welcomeMessage) &&
+          (!!I(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)) &&
             !0)
@@ -498,7 +498,7 @@
         var n, t;
         return (
           null != e &&
-          (!!I(e) ||
+          (!!S(e) ||
             ((null === (n = e.welcomeMessage) || void 0 === n
               ? void 0
               : n.message) != null &&
@@ -672,4 +672,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23360.0cc55c6314b6c517d7cc.js.map
+//# sourceMappingURL=23360.8d943b1704a9e3ccf72e.js.map

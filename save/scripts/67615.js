@@ -66436,13 +66436,13 @@
                 let s = n.parent_id,
                   i = eO.get(s);
                 P.default.hasLoaded(n.guild_id) &&
-                  Object.keys(
-                    P.default.getThreadsForParent(n.guild_id, s)
-                  ).every(
-                    e =>
-                      eQ.hasOpenedThread(e) ||
-                      0 > F.default.compare(e, i.ackMessageId)
-                  ) &&
+                  F.default
+                    .keys(P.default.getThreadsForParent(n.guild_id, s))
+                    .every(
+                      e =>
+                        eQ.hasOpenedThread(e) ||
+                        0 > F.default.compare(e, i.ackMessageId)
+                    ) &&
                   i.ack({});
               })(this.channelId),
               n
@@ -76840,4 +76840,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.ba0929ddaec127c6c29f.js.map
+//# sourceMappingURL=67615.b1e15a2a66ea9744c121.js.map

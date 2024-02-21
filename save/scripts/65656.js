@@ -177,7 +177,7 @@
             return p;
           },
           dismissedGuildOnboardingUpsell: function () {
-            return g;
+            return A;
           },
         }),
         n("222007");
@@ -216,10 +216,10 @@
               : n.guildOnboardingUpsellDismissedAt,
           _ = null != u ? a.Timestamp.toDate(u) : void 0,
           p = null != _ ? i().diff(_, "days") : null,
-          g = T.indexOf(t);
-        if (-1 === g) return !1;
-        let A = null == p || p > C[g];
-        if (!A) return !1;
+          A = T.indexOf(t);
+        if (-1 === A) return !1;
+        let g = null == p || p > C[A];
+        if (!g) return !1;
         let h = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
         if (!h) return !1;
         let { showLifecycleUpsells: I } = E.default.getCurrentConfig(
@@ -231,7 +231,7 @@
         );
         return I;
       }
-      function g(e, t) {
+      function A(e, t) {
         let n = a.Timestamp.now();
         u.PreloadedUserSettingsActionCreators.updateAsync(
           "userContent",
@@ -779,6 +779,7 @@
       let a = {
         [r.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
         [r.QuestContent.QUEST_BAR]: 2,
+        [r.QuestContent.ACTIVITY_PANEL]: 4,
       };
     },
     374023: function (e, t, n) {
@@ -994,7 +995,8 @@
         "GIFT_INVENTORY_SETTINGS_BADGE"),
         (a[(a.QUEST_BAR = 1)] = "QUEST_BAR"),
         (a[(a.QUEST_INVENTORY_CARD = 2)] = "QUEST_INVENTORY_CARD"),
-        (a[(a.QUESTS_EMBED = 3)] = "QUESTS_EMBED");
+        (a[(a.QUESTS_EMBED = 3)] = "QUESTS_EMBED"),
+        (a[(a.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL");
     },
     227231: function (e, t, n) {
       "use strict";
@@ -1031,10 +1033,10 @@
             return p;
           },
           getGameLogotypeAssetUrl: function () {
-            return g;
+            return A;
           },
           getQuestForTargetedContent: function () {
-            return A;
+            return g;
           },
           getPlatformString: function () {
             return h;
@@ -1134,9 +1136,9 @@
         T = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
         C = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
         p = e => "".concat(l).concat(e).concat("/game_tile.png"),
-        g = (e, t) =>
+        A = (e, t) =>
           "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png");
-      function A(e, t) {
+      function g(e, t) {
         for (let [n, s] of e)
           if (!o(s) && s.targetedContent.includes(t)) return s;
         return null;
@@ -1409,4 +1411,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.c1c2dc85b81838d110bd.js.map
+//# sourceMappingURL=65656.00ef0cc79201f60071a3.js.map

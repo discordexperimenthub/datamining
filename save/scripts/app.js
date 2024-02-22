@@ -4912,8 +4912,6 @@
         optionIcon: "optionIcon__2b48d",
         optionLabel: "optionLabel__254ef",
         optionName: "optionName__81070",
-        tipIcon: "tipIcon__202f4",
-        tipSubtext: "tipSubtext_d3460f",
       };
     },
     981496: function (e, t, n) {

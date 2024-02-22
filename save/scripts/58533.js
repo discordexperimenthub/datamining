@@ -25,43 +25,37 @@
             return y;
           },
           trackSearchResultViewed: function () {
-            return S;
+            return v;
           },
           search: function () {
-            return T;
-          },
-          fetchSuggestions: function () {
             return C;
           },
-          resetSearch: function () {
+          fetchSuggestions: function () {
             return A;
           },
-          trackSelectGIF: function () {
+          resetSearch: function () {
             return G;
           },
-          initializeSearch: function () {
+          trackSelectGIF: function () {
             return x;
           },
-          fetchTrending: function () {
+          initializeSearch: function () {
             return N;
           },
-          fetchTrendingGIFs: function () {
+          fetchTrending: function () {
             return P;
           },
-          addFavoriteGIF: function () {
+          fetchTrendingGIFs: function () {
             return M;
           },
-          removeFavoriteGIF: function () {
+          addFavoriteGIF: function () {
             return O;
           },
+          removeFavoriteGIF: function () {
+            return k;
+          },
         }),
-        r("781738"),
-        r("511434"),
-        r("313619"),
-        r("654714"),
-        r("287168"),
-        r("956660"),
-        r("222007");
+        r("781738");
       var s = r("917351"),
         n = r.n(s),
         l = r("748820"),
@@ -75,21 +69,22 @@
         f = r("510849"),
         m = r("599110"),
         p = r("564703"),
-        I = r("404118"),
-        g = r("49111"),
-        _ = r("397336"),
-        E = r("782340");
-      let R = /-/g;
+        I = r("253981"),
+        g = r("404118"),
+        _ = r("49111"),
+        E = r("397336"),
+        R = r("782340");
+      let S = /-/g;
       function y(e) {
         let t = null != e ? { [e]: 1 } : {};
-        u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_STARTED, {
-          search_type: g.SearchTypes.GIF,
+        u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_STARTED, {
+          search_type: _.SearchTypes.GIF,
           load_id: f.default.getAnalyticsID(),
           num_modifiers: Object.keys(t).length,
           modifiers: t,
         });
       }
-      function S(e, t) {
+      function v(e, t) {
         let { startTime: r, ...s } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
           n = { offset: 0, limit: null, totalResults: e.length },
@@ -99,17 +94,17 @@
             results: e,
           }),
           i = null == r ? {} : { load_duration_ms: Date.now() - r };
-        u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+        u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_VIEWED, {
           ...l,
           ...i,
         });
       }
-      function v(e, t, r) {
+      function F(e, t, r) {
         let s = Date.now();
         y(t),
           i.default
             .get({
-              url: g.Endpoints.GIFS_SEARCH,
+              url: _.Endpoints.GIFS_SEARCH,
               query: {
                 q: e,
                 media_format: f.default.getSelectedFormat(),
@@ -122,7 +117,7 @@
             .then(
               n => {
                 let l = n.body;
-                S(l, t, { startTime: s, limit: r }),
+                v(l, t, { startTime: s, limit: r }),
                   o.default.dispatch({
                     type: "GIF_PICKER_QUERY_SUCCESS",
                     query: e,
@@ -136,21 +131,21 @@
                 })
             );
       }
-      let F = n.debounce(v, 250);
-      function T(e, t) {
+      let T = n.debounce(F, 250);
+      function C(e, t) {
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           s = arguments.length > 3 ? arguments[3] : void 0;
         "" === e
-          ? A()
+          ? G()
           : (o.default.dispatch({ type: "GIF_PICKER_QUERY", query: e }),
-            r ? v(e, t, s) : F(e, t, s));
+            r ? F(e, t, s) : T(e, t, s));
       }
-      function C(e) {
+      function A(e) {
         "" !== e &&
           null != e &&
           i.default
             .get({
-              url: g.Endpoints.GIFS_SUGGEST,
+              url: _.Endpoints.GIFS_SUGGEST,
               query: {
                 q: e,
                 provider: "tenor",
@@ -168,10 +163,10 @@
               });
             });
       }
-      function A() {
+      function G() {
         o.default.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
       }
-      function G(e) {
+      function x(e) {
         let {
             type: t,
             index: r,
@@ -188,7 +183,7 @@
             results: l,
             totalResults: a,
           });
-        u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+        u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_RESULT_SELECTED, {
           ...d,
           index_num: r,
           source_object: "GIF Picker",
@@ -196,15 +191,15 @@
         }),
           null != c &&
             i.default.post({
-              url: g.Endpoints.GIFS_SELECT,
+              url: _.Endpoints.GIFS_SELECT,
               body: { id: c, q: o },
               oldFormErrors: !0,
             });
       }
-      function x() {
-        let e = (0, l.v4)().replace(R, "");
-        u.default.trackWithMetadata(g.AnalyticEvents.SEARCH_OPENED, {
-          search_type: g.SearchTypes.GIF,
+      function N() {
+        let e = (0, l.v4)().replace(S, "");
+        u.default.trackWithMetadata(_.AnalyticEvents.SEARCH_OPENED, {
+          search_type: _.SearchTypes.GIF,
           load_id: e,
         }),
           o.default.wait(() => {
@@ -214,10 +209,10 @@
             });
           });
       }
-      function N() {
+      function P() {
         i.default
           .get({
-            url: g.Endpoints.GIFS_TRENDING,
+            url: _.Endpoints.GIFS_TRENDING,
             query: {
               provider: "tenor",
               locale: d.default.locale,
@@ -235,12 +230,12 @@
             });
           });
       }
-      function P(e) {
+      function M(e) {
         let t = Date.now();
-        y(g.GIFPickerResultTypes.TRENDING_GIFS),
+        y(_.GIFPickerResultTypes.TRENDING_GIFS),
           i.default
             .get({
-              url: g.Endpoints.GIFS_TRENDING_GIFS,
+              url: _.Endpoints.GIFS_TRENDING_GIFS,
               query: {
                 media_format: f.default.getSelectedFormat(),
                 provider: "tenor",
@@ -252,7 +247,7 @@
             .then(
               r => {
                 let { body: s } = r;
-                S(s, g.GIFPickerResultTypes.TRENDING_GIFS, {
+                v(s, _.GIFPickerResultTypes.TRENDING_GIFS, {
                   startTime: t,
                   limit: e,
                 }),
@@ -267,12 +262,14 @@
             );
       }
       function w(e) {
-        let t = new URL(e);
-        return (0, c.isAttachmentUrl)(t)
-          ? (0, c.removeSignedUrlParameters)(t).toString()
-          : e;
+        let t = I.default.toURLSafe(e);
+        return null == t
+          ? e
+          : (0, c.isAttachmentUrl)(t)
+            ? (0, c.removeSignedUrlParameters)(t).toString()
+            : e;
       }
-      function M(e) {
+      function O(e) {
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
           t => {
@@ -284,29 +281,29 @@
                 : 0;
             t.gifs[w(e.url)] = { ...e, order: s + 1 };
             let l = a.FavoriteGIFs.toBinary(t).length;
-            if (l > _.MAX_FAVORITE_GIFS_SIZE)
+            if (l > E.MAX_FAVORITE_GIFS_SIZE)
               return (
-                I.default.show({
-                  title: E.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-                  body: E.default.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY,
+                g.default.show({
+                  title: R.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+                  body: R.default.Messages.FAVORITE_GIFS_LIMIT_REACHED_BODY,
                 }),
                 !1
               );
             n.size(t.gifs) > 2 && (t.hideTooltip = !0);
           },
-          _.UserSettingsDelay.INFREQUENT_USER_ACTION
+          E.UserSettingsDelay.INFREQUENT_USER_ACTION
         ),
-          m.default.track(g.AnalyticEvents.GIF_FAVORITED);
+          m.default.track(_.AnalyticEvents.GIF_FAVORITED);
       }
-      function O(e) {
+      function k(e) {
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
           t => {
             e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)];
           },
-          _.UserSettingsDelay.INFREQUENT_USER_ACTION
+          E.UserSettingsDelay.INFREQUENT_USER_ACTION
         ),
-          m.default.track(g.AnalyticEvents.GIF_UNFAVORITED);
+          m.default.track(_.AnalyticEvents.GIF_UNFAVORITED);
       }
     },
     718302: function (e, t, r) {
@@ -744,8 +741,8 @@
         _ = r("762518"),
         E = r("49111"),
         R = r("115279"),
-        y = r("782340"),
-        S = r("901137");
+        S = r("782340"),
+        y = r("901137");
       let v = e => e.stopPropagation();
       class F extends n.PureComponent {
         componentDidMount() {
@@ -772,25 +769,25 @@
             case E.GIFPickerResultTypes.FAVORITES:
               return (0, s.jsx)(o.FormTitle, {
                 tag: "h5",
-                className: S.searchHeader,
-                children: y.default.Messages.CATEGORY_FAVORITE,
+                className: y.searchHeader,
+                children: S.default.Messages.CATEGORY_FAVORITE,
               });
             case E.GIFPickerResultTypes.TRENDING_GIFS:
               return (0, s.jsx)(o.FormTitle, {
                 tag: "h5",
-                className: S.searchHeader,
+                className: y.searchHeader,
                 children:
-                  y.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
+                  S.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS,
               });
             default:
               return (0, s.jsx)(m.default, {
-                className: S.searchBar,
+                className: y.searchBar,
                 size: m.default.Sizes.MEDIUM,
                 query: e,
                 onChange: this.handleChangeQuery,
                 onClear: this.handleClearQuery,
-                placeholder: y.default.Messages.SEARCH_TENOR,
-                "aria-label": y.default.Messages.SEARCH_TENOR,
+                placeholder: S.default.Messages.SEARCH_TENOR,
+                "aria-label": S.default.Messages.SEARCH_TENOR,
                 ref: this.searchBarRef,
                 autoFocus: !0,
               });
@@ -803,10 +800,10 @@
             null != e &&
               (t = (0, s.jsx)(o.Clickable, {
                 onClick: this.handleClearQuery,
-                className: S.backButton,
-                "aria-label": y.default.Messages.BACK,
+                className: y.backButton,
+                "aria-label": S.default.Messages.BACK,
                 children: (0, s.jsx)(p.default, {
-                  title: y.default.Messages.BACK,
+                  title: S.default.Messages.BACK,
                 }),
               })),
             (0, s.jsxs)(f.default, {
@@ -852,16 +849,16 @@
             id: R.GIF_PICKER_TAB_PANEL_ID,
             role: "tabpanel",
             "aria-labelledby": R.GIF_PICKER_TAB_ID,
-            className: i(S.container, e),
+            className: i(y.container, e),
             onClick: v,
             ref: t,
             children: [
               (0, s.jsx)("div", {
-                className: S.header,
+                className: y.header,
                 children: this.renderHeader(),
               }),
               (0, s.jsx)("div", {
-                className: S.content,
+                className: y.content,
                 children: this.renderContent(),
               }),
             ],
@@ -969,8 +966,8 @@
         _ = r("4445"),
         E = r("762518"),
         R = r("49111"),
-        y = r("782340"),
-        S = r("138667");
+        S = r("782340"),
+        y = r("138667");
       let v = (e, t) => (0, s.jsx)(_.CategoryColumn, { columns: e }, t);
       class F extends n.PureComponent {
         componentDidMount() {
@@ -990,17 +987,17 @@
               (0, s.jsx)("div", {
                 className:
                   l === R.GIFPickerResultTypes.FAVORITES
-                    ? S.categoryFadeBlurple
-                    : S.categoryFade,
+                    ? y.categoryFadeBlurple
+                    : y.categoryFade,
               }),
               (0, s.jsxs)("div", {
-                className: S.categoryText,
+                className: y.categoryText,
                 children: [
                   null != r
-                    ? (0, s.jsx)(r, { className: S.categoryIcon })
+                    ? (0, s.jsx)(r, { className: y.categoryIcon })
                     : null,
                   (0, s.jsx)("span", {
-                    className: S.categoryName,
+                    className: y.categoryName,
                     children: t,
                   }),
                 ],
@@ -1030,7 +1027,7 @@
                 let r = i.sample(i.values(e));
                 return {
                   type: R.GIFPickerResultTypes.FAVORITES,
-                  name: y.default.Messages.CATEGORY_FAVORITE,
+                  name: S.default.Messages.CATEGORY_FAVORITE,
                   icon: m.default,
                   src:
                     null != r
@@ -1106,7 +1103,7 @@
                 : (0, s.jsx)(c.MasonryList, {
                     ref: this._masonryRef,
                     fade: !0,
-                    className: S.container,
+                    className: y.container,
                     itemGutter: 12,
                     getItemKey: this.getItemKey,
                     columns: e,
@@ -1271,7 +1268,7 @@
             return P;
           },
           useElementPools: function () {
-            return M;
+            return w;
           },
           default: function () {
             return O;
@@ -1296,8 +1293,8 @@
         _ = r("671434"),
         E = r("354553"),
         R = r("49111"),
-        y = r("782340"),
-        S = r("186046");
+        S = r("782340"),
+        y = r("186046");
       let v = [
           d.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css,
           d.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css,
@@ -1323,7 +1320,7 @@
             : (0, s.jsx)(
                 "div",
                 {
-                  className: S.placeholder,
+                  className: y.placeholder,
                   style: { animationDelay: "".concat(75 * t, "ms"), ...r },
                 },
                 n
@@ -1386,7 +1383,7 @@
                 src: e,
                 width: t,
                 height: r,
-                className: S.gif,
+                className: y.gif,
                 alt: "",
               })
             : null;
@@ -1405,7 +1402,7 @@
             innerRef: e => {
               this.ref = e;
             },
-            className: i(S.result, { [S.focused]: l }),
+            className: i(y.result, { [y.focused]: l }),
             onClick: this.handleClick,
             style: { backgroundColor: o ? void 0 : a, ...n },
             children: [N(r) ? null : this.renderGIF(), null != t ? t(e) : null],
@@ -1432,7 +1429,7 @@
               (this._image.src = e.src));
         }
       }
-      class w extends n.PureComponent {
+      class M extends n.PureComponent {
         componentDidMount() {
           let { resultType: e, data: t } = this.props;
           e === R.GIFPickerResultTypes.FAVORITES &&
@@ -1469,42 +1466,42 @@
           let t =
             arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
           return (0, s.jsx)("div", {
-            className: S.emptyHint,
+            className: y.emptyHint,
             children:
               null != e
                 ? (0, s.jsxs)("div", {
-                    className: S.emptyHintCard,
+                    className: y.emptyHintCard,
                     children: [
                       t
                         ? (0, s.jsx)(_.default, {
-                            className: S.emptyHintFavorite,
+                            className: y.emptyHintFavorite,
                           })
                         : null,
                       (0, s.jsx)("div", {
-                        className: S.emptyHintText,
+                        className: y.emptyHintText,
                         children: e,
                       }),
                     ],
                   })
-                : (0, s.jsx)("div", { className: S.emptyHintSpacer }),
+                : (0, s.jsx)("div", { className: y.emptyHintSpacer }),
           });
         }
         renderEmptyFavorites() {
           return (0, s.jsx)(h.Scroller, {
-            className: S.results,
+            className: y.results,
             fade: !0,
             children: (0, s.jsxs)("div", {
-              className: S.emptyHints,
+              className: y.emptyHints,
               children: [
                 this.renderEmptyFavorite(
-                  y.default.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE,
+                  S.default.Messages.NO_GIF_FAVORITES_HOW_TO_FAVORITE,
                   !0
                 ),
                 this.renderEmptyFavorite(
-                  y.default.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE
+                  S.default.Messages.NO_GIF_FAVORITES_WHERE_TO_FAVORITE
                 ),
                 this.renderEmptyFavorite(
-                  y.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE
+                  S.default.Messages.NO_GIF_FAVORITES_GO_FAVORITE
                 ),
                 Array.from({ length: 15 }).map((e, t) =>
                   (0, s.jsx)(
@@ -1514,7 +1511,7 @@
                   )
                 ),
                 this.renderEmptyFavorite(
-                  y.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE
+                  S.default.Messages.NO_GIF_FAVORITES_FLAVOR_FAVORITE_PLEASE
                 ),
                 Array.from({ length: 16 }).map((e, t) =>
                   (0, s.jsx)(
@@ -1524,7 +1521,7 @@
                   )
                 ),
                 this.renderEmptyFavorite(
-                  y.default.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE
+                  S.default.Messages.NO_GIF_FAVORITES_FLAVOR_STILL_HERE
                 ),
               ],
             }),
@@ -1538,8 +1535,8 @@
             ? n === R.GIFPickerResultTypes.FAVORITES
               ? this.renderEmptyFavorites()
               : (0, s.jsx)(p.default, {
-                  message: y.default.Messages.NO_GIF_SEARCH_RESULTS,
-                  className: S.noResults,
+                  message: S.default.Messages.NO_GIF_SEARCH_RESULTS,
+                  className: y.noResults,
                 })
             : (0, s.jsx)(
                 m.default,
@@ -1607,7 +1604,7 @@
                       coords: r,
                       onClick: this.handleClickItem,
                       renderExtras: () =>
-                        (0, s.jsx)(g.default, { className: S.favButton, ...i }),
+                        (0, s.jsx)(g.default, { className: y.favButton, ...i }),
                       focused: C(i) === l,
                       imagePool: this.props.imagePool,
                       videoPool: this.props.videoPool,
@@ -1638,20 +1635,20 @@
                 ? (0, s.jsx)(
                     "div",
                     {
-                      className: S.endContainer,
+                      className: y.endContainer,
                       style: t,
                       children:
                         i.length > 0
                           ? (0, s.jsxs)(n.Fragment, {
                               children: [
                                 (0, s.jsx)("div", {
-                                  className: S.endText,
+                                  className: y.endText,
                                   children:
-                                    y.default.Messages
+                                    S.default.Messages
                                       .GIF_PICKER_RELATED_SEARCH,
                                 }),
                                 (0, s.jsx)("div", {
-                                  className: S.searchSuggestions,
+                                  className: y.searchSuggestions,
                                   children: i.map(e =>
                                     (0, s.jsx)(
                                       h.Button,
@@ -1659,7 +1656,7 @@
                                         look: h.Button.Looks.OUTLINED,
                                         color: h.Button.Colors.PRIMARY,
                                         size: h.Button.Sizes.SMALL,
-                                        className: S.searchSuggestion,
+                                        className: y.searchSuggestion,
                                         onClick: () => {
                                           l(e);
                                         },
@@ -1690,7 +1687,7 @@
                     h.MasonryList,
                     {
                       fade: !0,
-                      className: S.results,
+                      className: y.results,
                       sections: [T.length],
                       columns: e,
                       itemGutter: 12,
@@ -1707,7 +1704,7 @@
                       ref: this._masonryRef,
                       fade: !0,
                       itemGutter: 12,
-                      className: S.results,
+                      className: y.results,
                       columns: e,
                       sections: [n.length, 0],
                       getItemKey: this.getItemKey,
@@ -1731,7 +1728,7 @@
             });
         }
       }
-      function M() {
+      function w() {
         let { renderWindow: e } = n.useContext(I.default),
           t = e.document,
           [r] = n.useState(
@@ -1749,7 +1746,7 @@
                 () => {
                   let e = t.createElement("video");
                   return (
-                    (e.className = S.gif),
+                    (e.className = y.gif),
                     (e.autoplay = !0),
                     (e.loop = !0),
                     (e.muted = !0),
@@ -1768,8 +1765,8 @@
         return { imagePool: r, videoPool: s };
       }
       var O = function (e) {
-        let t = M();
-        return (0, s.jsx)(w, { ...e, ...t });
+        let t = w();
+        return (0, s.jsx)(M, { ...e, ...t });
       };
     },
     519841: function (e, t, r) {
@@ -1800,92 +1797,89 @@
       r.r(t),
         r.d(t, {
           isAttachmentUrl: function () {
-            return d;
-          },
-          removeSignedUrlParameters: function () {
             return h;
           },
+          removeSignedUrlParameters: function () {
+            return f;
+          },
           messageHasExpiredAttachmentUrl: function () {
-            return g;
+            return _;
           },
           maybeRefreshAttachmentUrl: function () {
-            return E;
+            return R;
           },
         }),
-        r("222007"),
-        r("511434"),
-        r("313619"),
-        r("654714"),
-        r("287168"),
-        r("956660");
+        r("222007");
       var s,
         n = r("872717"),
         l = r("718517"),
-        i = r("519841"),
-        a = r("49111");
-      let o = new Set([
+        i = r("253981"),
+        a = r("519841"),
+        o = r("49111");
+      let u = new Set([
           window.GLOBAL_ENV.CDN_HOST,
           null === (s = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === s
             ? void 0
             : s.substring(2),
         ]),
-        u = new Set(["/attachments/", "/ephemeral-attachments/"]),
-        c = 1 * l.default.Millis.HOUR;
-      function d(e) {
+        c = new Set(["/attachments/", "/ephemeral-attachments/"]),
+        d = 1 * l.default.Millis.HOUR;
+      function h(e) {
         return (
-          o.has(e.hostname) && Array.from(u).some(t => e.pathname.startsWith(t))
+          u.has(e.hostname) && Array.from(c).some(t => e.pathname.startsWith(t))
         );
       }
-      function h(e) {
-        for (let t of ((e = new URL(e)), ["ex", "is", "hm"]))
-          e.searchParams.delete(t);
-        return e;
-      }
       function f(e) {
+        let t = i.default.toURLSafe(e);
+        if (null == t) return e;
+        for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
+        return t;
+      }
+      function m(e) {
         let t = (function (e) {
           let t = e.searchParams.get("ex"),
             r = parseInt(null != t ? t : "", 16);
           return isNaN(r) ? void 0 : r * l.default.Millis.SECOND;
         })(e);
-        return null == t || t <= Date.now() + c;
-      }
-      function m(e) {
-        let t = new URL(e.url);
-        return f(t);
+        return null == t || t <= Date.now() + d;
       }
       function p(e) {
-        if (null == e) return !1;
-        let t = new URL(e.url);
-        return !!d(t) && f(t);
+        let t = i.default.toURLSafe(e.url);
+        return null != t && m(t);
       }
       function I(e) {
-        var t;
-        return (
-          p(e.image) ||
-          (null === (t = e.images) || void 0 === t ? void 0 : t.some(p)) ||
-          p(e.video)
-        );
+        if (null == e) return !1;
+        let t = i.default.toURLSafe(e.url);
+        return !!(null != t && h(t)) && m(t);
       }
       function g(e) {
-        return e.attachments.some(m) || e.embeds.some(I);
+        var t;
+        return (
+          I(e.image) ||
+          (null === (t = e.images) || void 0 === t ? void 0 : t.some(I)) ||
+          I(e.video)
+        );
       }
-      async function _(e) {
+      function _(e) {
+        return e.attachments.some(p) || e.embeds.some(g);
+      }
+      async function E(e) {
         let t = await n.default.post({
-          url: a.Endpoints.ATTACHMENTS_REFRESH_URLS,
+          url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
           body: { attachment_urls: [e] },
         });
         return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
       }
-      async function E(e) {
+      async function R(e) {
         if (
-          !i.AttachmentLinkRefreshExperiment.getCurrentConfig({
+          !a.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "link_clicked",
           }).enabled
         )
           return e;
-        let t = new URL(e);
-        if (!f(t)) return e;
-        let r = await _(e);
+        let t = i.default.toURLSafe(e);
+        if (null == t || !m(t)) return e;
+        let r = await E(e);
         return null != r ? r : e;
       }
     },
@@ -1921,11 +1915,11 @@
               className: _,
             } = e,
             [E, R] = n.useState(!1),
-            y = (0, u.useIsFavoriteGIF)(I),
-            S = y
+            S = (0, u.useIsFavoriteGIF)(I),
+            y = S
               ? m.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES
               : m.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES,
-            v = y ? d.default : c.default;
+            v = S ? d.default : c.default;
           n.useEffect(() => {
             if (!E) return;
             let e = setTimeout(() => {
@@ -1937,7 +1931,7 @@
             e.preventDefault(),
               e.stopPropagation(),
               R(!0),
-              y
+              S
                 ? (0, o.removeFavoriteGIF)(I)
                 : ((0, o.addFavoriteGIF)({
                     url: I,
@@ -1951,12 +1945,12 @@
                   ));
           };
           return (0, s.jsx)(a.Tooltip, {
-            text: S,
+            text: y,
             children: e =>
               (0, s.jsx)(a.Clickable, {
                 ...e,
                 className: i(_, p.size, p.gifFavoriteButton, {
-                  [p.selected]: y,
+                  [p.selected]: S,
                   [p.showPulse]: E,
                 }),
                 onMouseDown: e => e.preventDefault(),
@@ -1972,7 +1966,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return y;
+            return S;
           },
         }),
         r("781738"),
@@ -2037,7 +2031,7 @@
         }
       }
       R.displayName = "GIFPickerViewStore";
-      var y = new R(l.default, {
+      var S = new R(l.default, {
         GIF_PICKER_INITIALIZE: function (e) {
           h = e.analyticsID;
         },
@@ -2424,4 +2418,4 @@
     },
   },
 ]);
-//# sourceMappingURL=58533.8992492456ae0cb1977b.js.map
+//# sourceMappingURL=58533.18b20daadaa8142b6930.js.map

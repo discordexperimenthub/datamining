@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["99392"],
+  ["77761"],
   {
     229353: function (e, _, E) {
       e.exports = Object.freeze({
@@ -25262,6 +25262,7 @@
     },
     728315: function (e, _, E) {},
     594574: function (e, _, E) {},
+    246129: function (e, _, E) {},
     199005: function (e, _, E) {
       "use strict";
       e.exports = [
@@ -26010,8 +26011,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("267985", ", Version Hash: ")
-          .concat("de97b681421e0ebfc498871e35c6584c1a32aed9")
+          .concat("268004", ", Version Hash: ")
+          .concat("6a9ad161fdd8df2b321da69b840afe6b62b6251e")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -26408,9 +26409,9 @@
         E("287168"),
         E("956660"),
         E("222007"),
-        E("511434"),
         E("808653"),
         E("424973"),
+        E("511434"),
         E("726581");
       var t = E("872717"),
         o = E("821316"),
@@ -26420,14 +26421,15 @@
         a = E("35468");
       E("773336");
       var I = E("286235"),
-        s = E("900673"),
-        T = E("49111");
-      let S = [
+        s = E("253981"),
+        T = E("900673"),
+        S = E("49111");
+      let N = [
           "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
           "https://cdn.discordapp.com/bad-domains/hashes.json",
         ],
-        N = new s.default(),
-        O = /\/api(\/v\d+)?\/science/;
+        O = new T.default(),
+        A = /\/api(\/v\d+)?\/science/;
       (0, t.setRequestPatch)({
         prepareRequest(e) {
           let { default: _ } = E("271938"),
@@ -26435,9 +26437,9 @@
             { default: r } = E("915639"),
             { default: i } = E("697218"),
             { default: a } = E("599110"),
-            { isPlatformEmbedded: s } = E("773336");
+            { isPlatformEmbedded: T } = E("773336");
           if ("/" === e.url[0]) {
-            var T, A;
+            var S, R;
             (e.url = t.default.getAPIBaseURL() + e.url),
               !("Authorization" in e.header) &&
                 !("authorization" in e.header) &&
@@ -26445,9 +26447,9 @@
             let E = a.getSuperPropertiesBase64();
             null != E && e.set("X-Super-Properties", E);
             let o = _.getFingerprint();
-            if ((null != o && "" !== o && e.set("X-Fingerprint", o), s)) {
+            if ((null != o && "" !== o && e.set("X-Fingerprint", o), T)) {
               let _ = [];
-              null != navigator && (_ = ((T = [...navigator.languages]), T));
+              null != navigator && (_ = ((S = [...navigator.languages]), S));
               let E = (function (e) {
                 let _ = 10,
                   E = e.reduce(
@@ -26473,21 +26475,21 @@
               return _.timeZone;
             })();
             null != I && e.set("X-Discord-Timezone", I);
-            let S = n.getDebugOptionsHeaderValue();
+            let N = n.getDebugOptionsHeaderValue();
             if (
-              (null != S && "" !== S && e.set("X-Debug-Options", S),
+              (null != N && "" !== N && e.set("X-Debug-Options", N),
               n.isTracingRequests)
             ) {
               let _ = i.getCurrentUser(),
-                E = N.generate(
-                  null !== (A = null == _ ? void 0 : _.id) && void 0 !== A
-                    ? A
+                E = O.generate(
+                  null !== (R = null == _ ? void 0 : _.id) && void 0 !== R
+                    ? R
                     : "0"
                 );
               e.set("x-client-trace-id", E);
               try {
                 let _ = new URL(e.url).pathname;
-                if (!O.test(_)) {
+                if (!A.test(_)) {
                   let t = (function (e) {
                     let _ = new URLSearchParams();
                     _.append(
@@ -26495,11 +26497,11 @@
                       '@guid.x-client-trace-id:"'.concat(e, '"')
                     ),
                       _.append("showAllSpans", "true");
-                    let E = new URL(
+                    let E = s.default.toURLSafe(
                       "traces?".concat(_.toString()),
                       "https://datadog.discord.tools/apm/"
                     );
-                    return E.toString();
+                    return null == E ? null : E.toString();
                   })(E);
                   null !== t &&
                     console.debug(
@@ -26544,7 +26546,7 @@
                 null != _ && "parse" in _ && _.parse)
               ) {
                 let E = "[FILTERED]";
-                if (S.includes(e.url)) {
+                if (N.includes(e.url)) {
                   var t, n;
                   E =
                     null === (n = e.xhr) || void 0 === n
@@ -26567,7 +26569,7 @@
             });
         },
         interceptResponse(e, _, t) {
-          var o, a, I, s, S;
+          var o, a, I, s, T;
           return 400 === e.statusCode &&
             (null === (o = e.body) || void 0 === o ? void 0 : o.captcha_key)
             ? (Promise.all([
@@ -26590,7 +26592,7 @@
               !0)
             : 401 === e.statusCode &&
                 (null === (a = e.body) || void 0 === a ? void 0 : a.code) ===
-                  T.AbortCodes.MFA_REQUIRED &&
+                  S.AbortCodes.MFA_REQUIRED &&
                 (null === (I = e.body) || void 0 === I ? void 0 : I.mfa)
               ? (E.el("776502")
                   .then(E.bind(E, "776502"))
@@ -26613,7 +26615,7 @@
                   !1)
                 : (0, n.isLimitedAccessErrorCode)(
                       e.statusCode,
-                      null === (S = e.body) || void 0 === S ? void 0 : S.code
+                      null === (T = e.body) || void 0 === T ? void 0 : T.code
                     )
                   ? (E.el("772545")
                       .then(E.bind(E, "772545"))
@@ -29084,12 +29086,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "267985"), "267985"));
+        let _ = parseInt(((e = "268004"), "268004"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "267985"
+                "268004"
               )
             ),
             (_ = 0)),
@@ -34947,8 +34949,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708559287116",
-                    build_number: "267985",
+                    built_at: "1708561148608",
+                    build_number: "268004",
                   },
                 },
                 retries: 1,
@@ -39308,6 +39310,110 @@
         },
       };
     },
+    253981: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          default: function () {
+            return u;
+          },
+        }),
+        E("222007"),
+        E("511434"),
+        E("313619"),
+        E("654714"),
+        E("287168"),
+        E("956660");
+      var t = E("943224"),
+        o = E.n(t),
+        n = E("917351"),
+        r = E.n(n),
+        i = E("746379"),
+        a = E("49111");
+      let I = /(?:^|\.)(?:discordapp|discord)\.com$/i,
+        s = o.v4().source,
+        T = "(?:"
+          .concat("(?:(?:[a-z]+:)?//)", "|www\\.)")
+          .concat("(?:\\S+(?::\\S*)?@)?", "(?:localhost|")
+          .concat(s, "|")
+          .concat("(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+")
+          .concat("(?:(?:[a-z\\u00a1-\\uffff]{2,}))", ")")
+          .concat("(?::\\d{2,5})?")
+          .concat('(?:[/?#][^\\s"]*)?'),
+        S = RegExp(T, "ig"),
+        N = new Set([
+          window.GLOBAL_ENV.CDN_HOST,
+          window.GLOBAL_ENV.INVITE_HOST,
+          window.GLOBAL_ENV.GIFT_CODE_HOST,
+          window.GLOBAL_ENV.GUILD_TEMPLATE_HOST,
+        ]);
+      function O(e) {
+        var _;
+        let E = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (null == e) return !1;
+        return I.test(e) || (E && ((_ = e), N.has(_.toLowerCase())));
+      }
+      function A(e) {
+        return null != e && "discord:" === e;
+      }
+      function R(e) {
+        let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return null != e && O(i.parse(e).hostname, _);
+      }
+      function l(e) {
+        return null != e && A(i.parse(e).protocol);
+      }
+      var u = {
+        URL_REGEX: S,
+        isDiscordHostname: O,
+        isDiscordLocalhost: function (e, _) {
+          return null != e && null != _ && (window.location.host === e || !1);
+        },
+        isDiscordProtocol: A,
+        isDiscordUrl: R,
+        isDiscordUri: l,
+        isDiscordCdnUrl: function (e) {
+          return (
+            null != e && i.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST
+          );
+        },
+        isDiscordUrlOrUri: e => R(e) || l(e),
+        isAppRoute: e => {
+          let _ = e.toLowerCase();
+          return (
+            _.startsWith("/channels/") ||
+            _.startsWith(a.Routes.APPLICATION_STORE) ||
+            _.startsWith(a.Routes.APPLICATION_LIBRARY) ||
+            _.startsWith(a.Routes.MESSAGE_REQUESTS) ||
+            _.startsWith(a.Routes.ACTIVITIES) ||
+            _.startsWith(a.Routes.COLLECTIBLES_SHOP) ||
+            _.startsWith(a.Routes.ACTIVITY)
+          );
+        },
+        format: e => i.format(e),
+        formatPathWithQuery: (e, _) =>
+          i.format({ pathname: e, query: r.pickBy(_) }),
+        formatSearch: e => i.format({ query: r.pickBy(e) }),
+        safeParseWithQuery(e) {
+          try {
+            return i.parse(e, !0);
+          } catch (e) {
+            return null;
+          }
+        },
+        toURLSafe(e, _) {
+          try {
+            return new URL(e, _);
+          } catch (e) {
+            return null;
+          }
+        },
+        makeUrl: function (e) {
+          let _ = __DEV__ ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+          return "".concat(location.protocol, "//").concat(_).concat(e);
+        },
+      };
+    },
     50885: function (e, _, E) {
       "use strict";
       E.r(_),
@@ -39319,16 +39425,11 @@
             return a;
           },
           default: function () {
-            return g;
+            return y;
           },
         }),
         E("222007"),
         E("70102"),
-        E("511434"),
-        E("313619"),
-        E("654714"),
-        E("287168"),
-        E("956660"),
         E("424973");
       var t,
         o,
@@ -39345,28 +39446,29 @@
         A = E("95410"),
         R = E("115718"),
         l = E("773336"),
-        u = E("49111"),
-        L = E("446825").Buffer;
-      let C = window.DiscordNative,
-        D = ["jpg", "jpeg", "png"],
-        c = null,
+        u = E("253981"),
+        L = E("49111"),
+        C = E("446825").Buffer;
+      let D = window.DiscordNative,
+        c = ["jpg", "jpeg", "png"],
         d = null,
         U = null,
-        M = {};
-      null != C &&
-        ((c = C.remoteApp
+        M = null,
+        h = {};
+      null != D &&
+        ((d = D.remoteApp
           .getVersion()
           .split(".")
           .map(e => parseInt(e))),
-        (U =
-          null === (t = (o = C.remoteApp).getModuleVersions) || void 0 === t
+        (M =
+          null === (t = (o = D.remoteApp).getModuleVersions) || void 0 === t
             ? void 0
             : t.call(o)),
-        (d =
-          null === (n = (r = C.remoteApp).getBuildNumber) || void 0 === n
+        (U =
+          null === (n = (r = D.remoteApp).getBuildNumber) || void 0 === n
             ? void 0
             : n.call(r)));
-      let h = new Set([
+      let P = new Set([
           "discord_erlpack",
           "discord_game_utils",
           "discord_rpc",
@@ -39374,20 +39476,20 @@
           "discord_utils",
           "discord_voice",
         ]),
-        P = !1;
-      async function m(e) {
+        m = !1;
+      async function G(e) {
         let _ = await fetch(new Request(e, { method: "GET", mode: "cors" }));
         S(200 === _.status, "Data fetch unsuccessful");
         let E = await _.arrayBuffer();
         return S(null != E, "Data is null"), E;
       }
-      function G(e) {
-        return m(e);
-      }
       function p(e) {
+        return G(e);
+      }
+      function g(e) {
         var _, E, t, o, n, r, i, a;
         return {
-          id: M[null !== (_ = e.id) && void 0 !== _ ? _ : ""],
+          id: h[null !== (_ = e.id) && void 0 !== _ ? _ : ""],
           nativeProcessObserverId: parseInt(
             null !== (E = e.id) && void 0 !== E ? E : "",
             10
@@ -39422,19 +39524,19 @@
         (s.MUTE = "MUTE"),
         (s.DEAFEN = "DEAFEN"),
         (s.DISCONNECT = "DISCONNECT");
-      var g = {
-        requireModule: e => C.nativeModules.requireModule(e),
+      var y = {
+        requireModule: e => D.nativeModules.requireModule(e),
         ensureModule: e =>
           l.isPlatformEmbedded
-            ? __OVERLAY__ && h.has(e)
+            ? __OVERLAY__ && P.has(e)
               ? Promise.resolve()
-              : C.nativeModules.ensureModule(e)
+              : D.nativeModules.ensureModule(e)
             : Promise.reject(Error("not embedded")),
         get canBootstrapNewUpdater() {
-          return C.nativeModules.canBootstrapNewUpdater || !1;
+          return D.nativeModules.canBootstrapNewUpdater || !1;
         },
-        getCrashReporterMetadata: () => C.crashReporter.getMetadata(),
-        getSetting: async (e, _) => await C.settings.get(e, _),
+        getCrashReporterMetadata: () => D.crashReporter.getMetadata(),
+        getSetting: async (e, _) => await D.settings.get(e, _),
         beforeUnload() {
           let e;
           try {
@@ -39445,12 +39547,12 @@
               e.disconnectAllProcesses &&
               e.destroyHostProcess &&
               (e.disconnectAllProcesses(), e.destroyHostProcess()),
-            C.remotePowerMonitor.removeAllListeners(),
+            D.remotePowerMonitor.removeAllListeners(),
             window.location.origin ===
               window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
               !0 !== A.default.get(N.DOMAIN_MIGRATION_SUCCESS_KEY) &&
-              this.supportsFeature(u.NativeFeatures.USER_DATA_CACHE) &&
-              C.userDataCache.cacheUserData(A.default.stringify());
+              this.supportsFeature(L.NativeFeatures.USER_DATA_CACHE) &&
+              D.userDataCache.cacheUserData(A.default.stringify());
         },
         inputEventRegister(e, _, E, t) {
           !Array.isArray(_) && (_ = _.toJS()),
@@ -39475,22 +39577,22 @@
         },
         setObservedGamesCallback(e, _) {
           try {
-            M = {};
+            h = {};
             let E = 0;
             this.getDiscordUtils().setObservedGamesCallback(
               e.map(e => {
                 let _ = ++E;
                 return (
-                  null != e.id && (M[_] = e.id),
+                  null != e.id && (h[_] = e.id),
                   { ...e, cmdline: e.cmdLine, id: _ }
                 );
               }),
-              e => _(e.map(p))
+              e => _(e.map(g))
             );
           } catch (e) {}
         },
         setCandidateGamesCallback(e) {
-          this.getDiscordUtils().setCandidateGamesCallback(_ => e(_.map(p)));
+          this.getDiscordUtils().setCandidateGamesCallback(_ => e(_.map(g)));
         },
         clearCandidateGamesCallback() {
           this.getDiscordUtils().clearCandidateGamesCallback();
@@ -39506,10 +39608,10 @@
         getVoiceEngine() {
           if (__OVERLAY__)
             throw Error("cannot require discord_voice in overlay");
-          return (P = !0), this.requireModule("discord_voice");
+          return (m = !0), this.requireModule("discord_voice");
         },
         getDiscordUtils() {
-          if (!P)
+          if (!m)
             try {
               this.getVoiceEngine();
             } catch (e) {}
@@ -39542,12 +39644,12 @@
           if ("darwin" === (0, l.getPlatformName)()) {
             let _ = "";
             -1 === e ? (_ = "•") : e > 0 && (_ = "".concat(e)),
-              C.remoteApp.dock.setBadge(_);
+              D.remoteApp.dock.setBadge(_);
           } else
             "win32" === (0, l.getPlatformName)()
               ? this.send("APP_BADGE_SET", e)
               : "linux" === (0, l.getPlatformName)() &&
-                C.remoteApp.setBadgeCount(e >= 0 ? e : 0);
+                D.remoteApp.setBadgeCount(e >= 0 ? e : 0);
         },
         setSystemTrayIcon(e) {
           l.isPlatformEmbedded && this.send("SYSTEM_TRAY_SET_ICON", e);
@@ -39555,7 +39657,7 @@
         setThumbarButtons(e) {
           var _, E;
           l.isPlatformEmbedded &&
-            (null === (E = C.thumbar) ||
+            (null === (E = D.thumbar) ||
               void 0 === E ||
               null === (_ = E.setThumbarButtons) ||
               void 0 === _ ||
@@ -39563,7 +39665,7 @@
         },
         bounceDock(e) {
           if (l.isPlatformEmbedded) {
-            let _ = C.remoteApp;
+            let _ = D.remoteApp;
             if (null != _.dock) {
               let E = _.dock.bounce(e);
               return async () => {
@@ -39577,25 +39679,25 @@
           l.isPlatformEmbedded && this.send("SYSTEM_TRAY_SET_APPLICATIONS", e);
         },
         get architecture() {
-          return l.isPlatformEmbedded ? C.process.arch : "";
+          return l.isPlatformEmbedded ? D.process.arch : "";
         },
         get releaseChannel() {
           if (!l.isPlatformEmbedded) return "";
-          let e = C.remoteApp.getReleaseChannel();
+          let e = D.remoteApp.getReleaseChannel();
           if (null != e) return e;
           return "";
         },
         get version() {
-          return c;
-        },
-        get buildNumber() {
           return d;
         },
-        get moduleVersions() {
+        get buildNumber() {
           return U;
         },
+        get moduleVersions() {
+          return M;
+        },
         copy(e) {
-          l.isPlatformEmbedded && C.clipboard.copy(e);
+          l.isPlatformEmbedded && D.clipboard.copy(e);
         },
         async copyImage(e) {
           S(
@@ -39603,11 +39705,11 @@
             "Copy image method called outside native app"
           ),
             S(
-              "function" == typeof C.clipboard.copyImage,
+              "function" == typeof D.clipboard.copyImage,
               "Copy image not supported"
             );
-          let _ = await m(e);
-          C.clipboard.copyImage(L.from(_), e);
+          let _ = await G(e);
+          D.clipboard.copyImage(C.from(_), e);
         },
         async saveImage(e) {
           var _;
@@ -39615,27 +39717,29 @@
             l.isPlatformEmbedded,
             "Save image method called outside native app"
           );
-          let E = new URL(e),
-            t =
+          let E = u.default.toURLSafe(e);
+          if (null == E) return;
+          let t =
               null !== (_ = E.pathname.split("/").pop()) && void 0 !== _
                 ? _
                 : "unknown",
-            o = await m(e),
-            n = L.from(o);
-          C.fileManager.saveWithDialog(n, t);
+            o = await G(e),
+            n = C.from(o);
+          D.fileManager.saveWithDialog(n, t);
         },
         async saveFile(e, _) {
           var E;
           S(l.isPlatformEmbedded, "Save file method called outside native app");
-          let t = new URL(e),
-            o =
+          let t = u.default.toURLSafe(e);
+          if (null == t) return;
+          let o =
               null !== (E = null != _ ? _ : t.pathname.split("/").pop()) &&
               void 0 !== E
                 ? E
                 : "unknown",
-            n = await m(e),
-            r = L.from(n);
-          C.fileManager.saveWithDialog(r, o);
+            n = await G(e),
+            r = C.from(n);
+          D.fileManager.saveWithDialog(r, o);
         },
         canCopyImage() {
           let e =
@@ -39643,25 +39747,29 @@
               ? arguments[0]
               : void 0;
           if (null != e) {
-            var _;
-            let E = new URL(e).pathname,
-              t =
-                null === (_ = E.split(".").pop()) || void 0 === _
-                  ? void 0
-                  : _.toLowerCase();
-            if (null != t && !D.includes(t)) return !1;
+            var _, E;
+            let t =
+              null === (_ = u.default.toURLSafe(e)) || void 0 === _
+                ? void 0
+                : _.pathname;
+            if (null == t) return !1;
+            let o =
+              null === (E = t.split(".").pop()) || void 0 === E
+                ? void 0
+                : E.toLowerCase();
+            if (null != o && !c.includes(o)) return !1;
           }
-          return "function" == typeof C.clipboard.copyImage;
+          return "function" == typeof D.clipboard.copyImage;
         },
         cut() {
-          l.isPlatformEmbedded && C.clipboard.cut();
+          l.isPlatformEmbedded && D.clipboard.cut();
         },
         paste() {
-          l.isPlatformEmbedded && C.clipboard.paste();
+          l.isPlatformEmbedded && D.clipboard.paste();
         },
-        readClipboard: () => (l.isPlatformEmbedded ? C.clipboard.read() : ""),
+        readClipboard: () => (l.isPlatformEmbedded ? D.clipboard.read() : ""),
         on(e, _) {
-          C.ipc.on(e, _);
+          D.ipc.on(e, _);
         },
         invoke(e) {
           for (
@@ -39670,7 +39778,7 @@
             t++
           )
             E[t - 1] = arguments[t];
-          return C.ipc.invoke(e, ...E);
+          return D.ipc.invoke(e, ...E);
         },
         send(e) {
           for (
@@ -39679,74 +39787,74 @@
             t++
           )
             E[t - 1] = arguments[t];
-          C.ipc.send(e, ...E);
+          D.ipc.send(e, ...E);
         },
         flashFrame(e) {
-          C.window.flashFrame(e);
+          D.window.flashFrame(e);
         },
         webAuthnRegister: e =>
-          C.nativeModules
+          D.nativeModules
             .ensureModule("discord_webauthn")
-            .then(() => C.webAuthn.webAuthnRegister(e)),
+            .then(() => D.webAuthn.webAuthnRegister(e)),
         webAuthnAuthenticate: e =>
-          C.nativeModules
+          D.nativeModules
             .ensureModule("discord_webauthn")
-            .then(() => C.webAuthn.webAuthnAuthenticate(e)),
+            .then(() => D.webAuthn.webAuthnAuthenticate(e)),
         minimize(e) {
-          C.window.minimize(e);
+          D.window.minimize(e);
         },
         restore(e) {
-          C.window.restore(e);
+          D.window.restore(e);
         },
         maximize(e) {
-          C.window.maximize(e);
+          D.window.maximize(e);
         },
         focus(e) {
           let _ =
             arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          _ && (0, l.isWindows)() && this.minimize(null), C.window.focus(_, e);
+          _ && (0, l.isWindows)() && this.minimize(null), D.window.focus(_, e);
         },
         blur() {
-          l.isPlatformEmbedded && null != C.window.blur
-            ? C.window.blur()
+          l.isPlatformEmbedded && null != D.window.blur
+            ? D.window.blur()
             : window.blur();
         },
         fullscreen(e) {
-          C.window.fullscreen(e);
+          D.window.fullscreen(e);
         },
         close(e) {
-          C.window.close(e);
+          D.window.close(e);
         },
         setAlwaysOnTop(e, _) {
-          "function" == typeof C.window.setAlwaysOnTop &&
-            C.window.setAlwaysOnTop(e, _);
+          "function" == typeof D.window.setAlwaysOnTop &&
+            D.window.setAlwaysOnTop(e, _);
         },
         async isAlwaysOnTop(e) {
           let _ = !1;
           return (
-            "function" == typeof C.window.isAlwaysOnTop &&
-              (_ = await C.window.isAlwaysOnTop(e)),
+            "function" == typeof D.window.isAlwaysOnTop &&
+              (_ = await D.window.isAlwaysOnTop(e)),
             _
           );
         },
         purgeMemory() {
-          l.isPlatformEmbedded && C.processUtils.purgeMemory();
+          l.isPlatformEmbedded && D.processUtils.purgeMemory();
         },
         updateCrashReporter(e) {
-          C.crashReporter.updateCrashReporter(e);
+          D.crashReporter.updateCrashReporter(e);
         },
         triggerJSException(e) {
-          C.crashReporter.triggerJSException(e);
+          D.crashReporter.triggerJSException(e);
         },
         flushDNSCache() {
-          l.isPlatformEmbedded && C.processUtils.flushDNSCache();
+          l.isPlatformEmbedded && D.processUtils.flushDNSCache();
         },
-        supportsFeature: e => C.features.supports(e),
+        supportsFeature: e => D.features.supports(e),
         getEnableHardwareAcceleration: () =>
           !l.isPlatformEmbedded ||
-          (!__OVERLAY__ && C.gpuSettings.getEnableHardwareAcceleration()),
+          (!__OVERLAY__ && D.gpuSettings.getEnableHardwareAcceleration()),
         setEnableHardwareAcceleration(e) {
-          C.gpuSettings.setEnableHardwareAcceleration(e);
+          D.gpuSettings.setEnableHardwareAcceleration(e);
         },
         getGPUDriverVersions() {
           return (0, l.isWindows)() &&
@@ -39755,11 +39863,11 @@
             : Promise.resolve(Object.freeze({}));
         },
         setZoomFactor: e =>
-          !!l.isPlatformEmbedded && (C.window.setZoomFactor(e), !0),
+          !!l.isPlatformEmbedded && (D.window.setZoomFactor(e), !0),
         setBackgroundThrottling(e) {
-          null != C.window.setBackgroundThrottling
-            ? C.window.setBackgroundThrottling(e)
-            : C.window.webContents.setBackgroundThrottling(e);
+          null != D.window.setBackgroundThrottling
+            ? D.window.setBackgroundThrottling(e)
+            : D.window.webContents.setBackgroundThrottling(e);
         },
         getPidFromDesktopSource(e) {
           if (
@@ -39814,12 +39922,12 @@
             this.getDiscordUtils();
           return null == e ? void 0 : e();
         },
-        showOpenDialog: e => C.fileManager.showOpenDialog({ properties: e }),
+        showOpenDialog: e => D.fileManager.showOpenDialog({ properties: e }),
         flushStorageData: () =>
           l.isPlatformEmbedded
             ? new Promise((e, _) => {
-                null != C.processUtils.flushStorageData
-                  ? C.processUtils.flushStorageData(E =>
+                null != D.processUtils.flushStorageData
+                  ? D.processUtils.flushStorageData(E =>
                       null != E ? _(Error(E)) : e()
                     )
                   : e();
@@ -39828,8 +39936,8 @@
         flushCookies: () =>
           l.isPlatformEmbedded
             ? new Promise((e, _) => {
-                null != C.processUtils.flushCookies
-                  ? C.processUtils.flushCookies(E =>
+                null != D.processUtils.flushCookies
+                  ? D.processUtils.flushCookies(E =>
                       null != E ? _(Error(E)) : e()
                     )
                   : e();
@@ -39838,37 +39946,37 @@
         setCrashInformation(e, _) {
           var E;
           l.isPlatformEmbedded &&
-            (null == C
+            (null == D
               ? void 0
-              : null === (E = C.processUtils) || void 0 === E
+              : null === (E = D.processUtils) || void 0 === E
                 ? void 0
                 : E.setCrashInformation) != null &&
-            C.processUtils.setCrashInformation(e, _);
+            D.processUtils.setCrashInformation(e, _);
         },
         blockDisplaySleep: () =>
-          l.isPlatformEmbedded && null != C.powerSaveBlocker
-            ? C.powerSaveBlocker.blockDisplaySleep()
+          l.isPlatformEmbedded && null != D.powerSaveBlocker
+            ? D.powerSaveBlocker.blockDisplaySleep()
             : null,
         unblockDisplaySleep(e) {
           l.isPlatformEmbedded &&
-            null != C.powerSaveBlocker &&
-            C.powerSaveBlocker.unblockDisplaySleep(e);
+            null != D.powerSaveBlocker &&
+            D.powerSaveBlocker.unblockDisplaySleep(e);
         },
         cleanupDisplaySleep() {
           l.isPlatformEmbedded &&
-            null != C.powerSaveBlocker &&
-            C.powerSaveBlocker.cleanupDisplaySleep();
+            null != D.powerSaveBlocker &&
+            D.powerSaveBlocker.cleanupDisplaySleep();
         },
         relaunch() {
           l.isPlatformEmbedded &&
-            null != C.remoteApp.relaunch &&
-            C.remoteApp.relaunch();
+            null != D.remoteApp.relaunch &&
+            D.remoteApp.relaunch();
         },
         makeChunkedRequest(e, _, E) {
           let t = "".concat(O.default.getAPIBaseURL()).concat(e);
           if (!l.isPlatformEmbedded)
             return Promise.reject(Error("Not embedded!"));
-          if (null == C.http)
+          if (null == D.http)
             return Promise.reject(Error("HTTP module not available"));
           let {
               method: o,
@@ -39892,8 +40000,8 @@
             S[e] = I.substring(_, _ + s);
           }
           return new Promise((e, _) => {
-            null != C.http &&
-              C.http.makeChunkedRequest(
+            null != D.http &&
+              D.http.makeChunkedRequest(
                 t,
                 S,
                 { method: o, chunkInterval: i, contentType: a, token: r },
@@ -39913,7 +40021,7 @@
           )
             return Promise.resolve();
           let _ = this.getCrashReporterMetadata(),
-            E = C.app.getReleaseChannel(),
+            E = D.app.getReleaseChannel(),
             t = null == _ ? void 0 : _.sentry;
           return this.getDiscordUtils().submitLiveCrashReport(E, {
             ...t,
@@ -39925,7 +40033,7 @@
           return null != _ && (_(e), !0);
         },
         setApplicationBackgroundColor(e) {
-          C.ipc.send("SETTINGS_UPDATE_BACKGROUND_COLOR", e);
+          D.ipc.send("SETTINGS_UPDATE_BACKGROUND_COLOR", e);
         },
         initializeExitHook() {
           let { initializeExitHook: e } = this.getDiscordUtils();
@@ -39960,7 +40068,7 @@
         },
         isModuleVersionAtLeast(e, _) {
           var E, t, o;
-          let n = [...(null != c ? c : [0, 0, 0])];
+          let n = [...(null != d ? d : [0, 0, 0])];
           n.push(
             null !==
               (t =
@@ -51288,4 +51396,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99392.28aba32f7fcccd75dc9f.js.map
+//# sourceMappingURL=77761.1424b18205d15ed72065.js.map

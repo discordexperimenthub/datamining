@@ -26013,8 +26013,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268228", ", Version Hash: ")
-          .concat("8151147df263dceae1eac50c12c1dc84b35a0137")
+          .concat("268237", ", Version Hash: ")
+          .concat("756291da67986d7d61c107cccb41cad7cdfd624f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29088,12 +29088,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268228"), "268228"));
+        let _ = parseInt(((e = "268237"), "268237"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268228"
+                "268237"
               )
             ),
             (_ = 0)),
@@ -34951,8 +34951,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708631419078",
-                    build_number: "268228",
+                    built_at: "1708631917756",
+                    build_number: "268237",
                   },
                 },
                 retries: 1,
@@ -36168,7 +36168,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return N;
+            return O;
           },
         }),
         E("222007");
@@ -36178,19 +36178,25 @@
         r = 0,
         i = 0,
         a = null;
-      function I() {
-        let e = 0.2 * (i - r);
+      function I(e) {
         (e > 0 && r >= i) || (e < 0 && r <= i)
           ? (clearInterval(a), 0 === i && n.stop())
           : ((r += e), (n.volume = r));
       }
       function s() {
-        (i = 0), (a = setInterval(I, 100));
+        i = 0;
+        let e = S();
+        a = setInterval(() => I(e), 100);
       }
       function T() {
-        n.loop(), (i = 0.5), (a = setInterval(I, 100));
+        n.loop(), (i = 0.5);
+        let e = S();
+        a = setInterval(() => I(e), 100);
       }
-      class S extends t.default {
+      function S() {
+        return 0.2 * (i - r);
+      }
+      class N extends t.default {
         constructor(...e) {
           super(...e),
             (this.actions = {
@@ -36199,7 +36205,7 @@
             });
         }
       }
-      var N = new S();
+      var O = new N();
     },
     537597: function (e, _, E) {
       "use strict";
@@ -51398,4 +51404,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.2937f9c82e036b994161.js.map
+//# sourceMappingURL=77761.06b29081602acbe3b5f9.js.map

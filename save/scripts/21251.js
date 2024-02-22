@@ -16,16 +16,16 @@
       _.r(a),
         _.d(a, {
           BadgeShapes: function () {
-            return o;
-          },
-          getBadgeWidthForValue: function () {
             return T;
           },
+          getBadgeWidthForValue: function () {
+            return o;
+          },
           getBadgeCountString: function () {
-            return O;
+            return N;
           },
           NumberBadge: function () {
-            return N;
+            return O;
           },
           TextBadge: function () {
             return A;
@@ -48,35 +48,35 @@
       var R = _("20606");
       _("782340");
       var n = _("227940");
-      let o = {
+      let T = {
         ROUND: n.baseShapeRound,
         ROUND_LEFT: n.baseShapeRoundLeft,
         ROUND_RIGHT: n.baseShapeRoundRight,
         SQUARE: "",
       };
-      function T(r) {
+      function o(r) {
         return r < 10 ? 16 : r < 100 ? 22 : 30;
       }
-      function O(r) {
+      function N(r) {
         return r < 1e3
           ? "".concat(r)
           : "".concat(Math.min(Math.floor(r / 1e3), 9), "k+");
       }
-      let N = r => {
+      let O = r => {
           let {
             count: a,
             color: _ = R.default.STATUS_DANGER,
             disableColor: E = !1,
-            shape: N = o.ROUND,
+            shape: O = T.ROUND,
             className: A,
             style: d,
             ...i
           } = r;
           return (0, e.jsx)("div", {
-            className: t(A, n.numberBadge, N),
+            className: t(A, n.numberBadge, O),
             style: {
               backgroundColor: E ? void 0 : _,
-              width: T(a),
+              width: o(a),
               paddingRight: (function (r) {
                 switch (r) {
                   case 1:
@@ -90,7 +90,7 @@
               ...d,
             },
             ...i,
-            children: O(a),
+            children: N(a),
           });
         },
         A = r => {
@@ -98,14 +98,14 @@
             text: a,
             className: _,
             color: E = R.default.STATUS_DANGER,
-            shape: T = o.ROUND,
-            disableColor: O = !1,
-            style: N,
+            shape: o = T.ROUND,
+            disableColor: N = !1,
+            style: O,
             ...A
           } = r;
           return (0, e.jsx)("div", {
-            className: t(_, n.textBadge, T),
-            style: { backgroundColor: O ? void 0 : E, ...N },
+            className: t(_, n.textBadge, o),
+            style: { backgroundColor: N ? void 0 : E, ...O },
             ...A,
             children: a,
           });
@@ -123,13 +123,13 @@
             icon: a,
             className: _,
             color: E = R.default.STATUS_DANGER,
-            shape: T = o.ROUND,
-            disableColor: O = !1,
-            style: N,
+            shape: o = T.ROUND,
+            disableColor: N = !1,
+            style: O,
           } = r;
           return (0, e.jsx)("div", {
-            className: t(_, n.iconBadge, T),
-            style: { backgroundColor: O ? void 0 : E, ...N },
+            className: t(_, n.iconBadge, o),
+            style: { backgroundColor: N ? void 0 : E, ...O },
             children: (0, e.jsx)(a, { className: n.icon }),
           });
         },
@@ -137,15 +137,15 @@
           let {
             className: a,
             color: _ = R.default.INTERACTIVE_ACTIVE,
-            shape: E = o.ROUND,
-            disableColor: T = !1,
-            style: O,
-            ...N
+            shape: E = T.ROUND,
+            disableColor: o = !1,
+            style: N,
+            ...O
           } = r;
           return (0, e.jsx)("div", {
             className: t(a, n.circleBadge, E),
-            style: { backgroundColor: T ? void 0 : _, ...O },
-            ...N,
+            style: { backgroundColor: o ? void 0 : _, ...N },
+            ...O,
           });
         };
     },
@@ -420,23 +420,11 @@
         (e.MODAL_FOOTER_BACKGROUND = "var(--modal-footer-background)"),
         (e.NAVIGATOR_HEADER_TINT = "var(--navigator-header-tint)"),
         (e.PANEL_BG = "var(--panel-bg)"),
-        (e.POLLS_EMBED_BACKGROUND = "var(--polls-embed-background)"),
-        (e.POLLS_EMBED_BORDER = "var(--polls-embed-border)"),
-        (e.POLLS_IMAGE_NORMAL_BORDER = "var(--polls-image-normal-border)"),
-        (e.POLLS_NORMAL_BORDER = "var(--polls-normal-border)"),
-        (e.POLLS_NORMAL_CONFETTI = "var(--polls-normal-confetti)"),
-        (e.POLLS_NORMAL_FILL = "var(--polls-normal-fill)"),
         (e.POLLS_NORMAL_FILL_HOVER = "var(--polls-normal-fill-hover)"),
         (e.POLLS_NORMAL_IMAGE_BACKGROUND =
           "var(--polls-normal-image-background)"),
-        (e.POLLS_NORMAL_LABEL = "var(--polls-normal-label)"),
-        (e.POLLS_RESULT_FILL = "var(--polls-result-fill)"),
-        (e.POLLS_VICTOR_BORDER = "var(--polls-victor-border)"),
         (e.POLLS_VICTOR_FILL = "var(--polls-victor-fill)"),
-        (e.POLLS_VICTOR_LABEL = "var(--polls-victor-label)"),
-        (e.POLLS_VOTED_BORDER = "var(--polls-voted-border)"),
         (e.POLLS_VOTED_FILL = "var(--polls-voted-fill)"),
-        (e.POLLS_VOTED_LABEL = "var(--polls-voted-label)"),
         (e.PROFILE_GRADIENT_CARD_BACKGROUND =
           "var(--profile-gradient-card-background)"),
         (e.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER =
@@ -626,4 +614,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.16196a68cfa8b44f8e17.js.map
+//# sourceMappingURL=21251.a0e6aa60cfc1d59f1234.js.map

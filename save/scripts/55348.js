@@ -54,6 +54,10 @@
           IOS_APP_PREVIEW_DESCRIPTION:
             "Your place to talk with communities and friends.",
         },
+        Storefront: {
+          USER_SUBSCRIPTION: "Personal subscription",
+          SERVER_SUBSCRIPTION: "Server subscription",
+        },
       };
     },
     826507: function (I, N, A) {
@@ -1940,4 +1944,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55348.9f4d9bcb2bba94a62b76.js.map
+//# sourceMappingURL=55348.e9a1f20801bc6d28d98e.js.map

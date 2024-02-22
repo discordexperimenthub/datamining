@@ -783,6 +783,7 @@
         [r.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
         [r.QuestContent.QUEST_BAR]: 2,
         [r.QuestContent.ACTIVITY_PANEL]: 4,
+        [r.QuestContent.QUEST_LIVE_STREAM]: 8,
       };
     },
     374023: function (e, t, n) {
@@ -1423,4 +1424,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.6a8b75e787708b7abf32.js.map
+//# sourceMappingURL=65656.47071d0310cfac717709.js.map

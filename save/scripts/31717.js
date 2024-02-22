@@ -44,9 +44,9 @@
         R = n("28007"),
         b = n("880731"),
         G = n("562228"),
-        U = n("793277");
+        P = n("793277");
       n("685841");
-      var P = n("256572"),
+      var U = n("256572"),
         w = n("364685"),
         k = n("804888"),
         B = n("263024"),
@@ -702,7 +702,7 @@
                   ? arguments[3]
                   : {};
             if (t.reaction) return Promise.resolve();
-            let s = await (0, U.default)(e);
+            let s = await (0, P.default)(e);
             if (null != s) return eh.sendMessage(s, t, a, l);
             let i = () => eh._sendMessage(e, t, l),
               r = C.LocalMessageBackgroundSendingExperiment.getCurrentConfig({
@@ -856,7 +856,7 @@
           },
           _sendMessage(e, t, n) {
             var a, s;
-            let i = (0, U.default)(e);
+            let i = (0, P.default)(e);
             if (null != i)
               return (
                 ec.info("Converting channel to a private channel"),
@@ -877,10 +877,10 @@
                 poll: C,
               } = n,
               L = null !== (a = n.flags) && void 0 !== a ? a : 0,
-              [N, P] = (0, k.default)(d);
+              [N, U] = (0, k.default)(d);
             if (
               (N &&
-                ((d = P),
+                ((d = U),
                 (L = (0, ee.addFlag)(
                   L,
                   ei.MessageFlags.SUPPRESS_NOTIFICATIONS
@@ -1187,8 +1187,8 @@
             let l = (function (e, t) {
                 let n = W.default.getMessage(e, t);
                 if (null == n || n.type !== ei.MessageTypes.REPLY) return;
-                let a = P.default.getMessageByReference(n.messageReference);
-                if (a.state === P.ReferencedMessageState.LOADED) {
+                let a = U.default.getMessageByReference(n.messageReference);
+                if (a.state === U.ReferencedMessageState.LOADED) {
                   if (!n.mentions.includes(a.message.author.id))
                     return {
                       parse: Object.values(ei.AllowedMentionTypes),
@@ -3460,19 +3460,22 @@
         return !1;
       }
       function E(e) {
-        let { enabled: t } = r.CreateGuildPollsExperiment.useExperiment({
-            guildId: e.guild_id,
-            location: "useCanPostPollsInChannel",
-          }),
-          { enabled: n } = r.CreateGDMPollsExperiment.useExperiment({
-            location: "useCanPostPollsInChannel",
-          });
-        return (
-          !!d.ChannelTypesSets.POLLS.has(e.type) &&
-          (e.isPrivate()
-            ? n
-            : t && s.default.can(d.Permissions.SEND_MESSAGES, e))
-        );
+        let t = d.ChannelTypesSets.POLLS.has(e.type),
+          { enabled: n } = r.CreateGuildPollsExperiment.useExperiment(
+            { guildId: e.guild_id, location: "useCanPostPollsInChannel" },
+            {
+              autoTrackExposure: !0,
+              disable:
+                !t ||
+                e.isPrivate() ||
+                !s.default.can(d.Permissions.SEND_MESSAGES, e),
+            }
+          ),
+          { enabled: a } = r.CreateGDMPollsExperiment.useExperiment(
+            { location: "useCanPostPollsInChannel" },
+            { autoTrackExposure: !0, disable: !t || !e.isPrivate() }
+          );
+        return n || a;
       }
       function f(e, t) {
         return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS
@@ -3868,4 +3871,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31717.2761203135cf5f49d6ea.js.map
+//# sourceMappingURL=31717.97725480b667f9178289.js.map

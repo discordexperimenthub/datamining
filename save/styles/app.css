@@ -38640,8 +38640,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -50382,6 +50382,20 @@ html .progress__4ef76 {
 .theme-light .bioTextArea_a108c9 {
   background: var(--input-background);
 }
+.buttonsContainer__90115 {
+  display: flex;
+}
+.removeButton__64c13 {
+  margin-left: 4px;
+}
+.buttonHighlighted__73136 {
+  background: linear-gradient(
+    95.07deg,
+    var(--premium-tier-2-purple-for-gradients) 0%,
+    var(--premium-tier-2-purple-for-gradients-2) 49.96%,
+    var(--premium-tier-2-pink-for-gradients) 95.93%
+  );
+}
 .buttonsContainer_d0950f {
   display: flex;
 }
@@ -50409,6 +50423,24 @@ html .progress__4ef76 {
     var(--premium-tier-2-purple-for-gradients-2) 49.96%,
     var(--premium-tier-2-pink-for-gradients) 95.93%
   );
+}
+.buttonsContainer__5a359 {
+  display: flex;
+}
+.removeButton__7f2c2 {
+  margin-left: 4px;
+}
+.buttonHighlighted__2a548 {
+  background: linear-gradient(
+    95.07deg,
+    var(--premium-tier-2-purple-for-gradients) 0%,
+    var(--premium-tier-2-purple-for-gradients-2) 49.96%,
+    var(--premium-tier-2-pink-for-gradients) 95.93%
+  );
+}
+.newBadge__3253c {
+  margin-left: 2px;
+  align-items: center;
 }
 .colorSwatch__5f5b9 {
   cursor: pointer;
@@ -50607,38 +50639,6 @@ html .progress__4ef76 {
 }
 .shopForAllBackgroundImage__009d9 {
   background-image: url(/assets/de0896237eebfc178931.png);
-}
-.buttonsContainer__90115 {
-  display: flex;
-}
-.removeButton__64c13 {
-  margin-left: 4px;
-}
-.buttonHighlighted__73136 {
-  background: linear-gradient(
-    95.07deg,
-    var(--premium-tier-2-purple-for-gradients) 0%,
-    var(--premium-tier-2-purple-for-gradients-2) 49.96%,
-    var(--premium-tier-2-pink-for-gradients) 95.93%
-  );
-}
-.buttonsContainer__5a359 {
-  display: flex;
-}
-.removeButton__7f2c2 {
-  margin-left: 4px;
-}
-.buttonHighlighted__2a548 {
-  background: linear-gradient(
-    95.07deg,
-    var(--premium-tier-2-purple-for-gradients) 0%,
-    var(--premium-tier-2-purple-for-gradients-2) 49.96%,
-    var(--premium-tier-2-pink-for-gradients) 95.93%
-  );
-}
-.newBadge__3253c {
-  margin-left: 2px;
-  align-items: center;
 }
 .tryItOutSection__0f9fb {
   margin: 40px -24px 0;
@@ -108795,4 +108795,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ed35c1546ba5f222dfab.css.map*/
+/*# sourceMappingURL=app.54a20571f8dd46596e0e.css.map*/

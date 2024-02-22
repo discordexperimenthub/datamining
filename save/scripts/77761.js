@@ -16419,10 +16419,12 @@
         USER_SETTINGS_ADD_ANIMATED_AVATAR: "Add Animated Avatar",
         USER_SETTINGS_AVATAR_DECORATION: "Avatar Decoration",
         USER_SETTINGS_REMOVE_AVATAR_DECORATION: "Remove Decoration",
+        USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION: "Use Default",
         USER_SETTINGS_CHANGE_AVATAR_DECORATION: "Change Decoration",
         USER_SETTINGS_PROFILE_EFFECT: "Profile Effect",
         USER_SETTINGS_REMOVE_PROFILE_EFFECT: "Remove Effect",
         USER_SETTINGS_CHANGE_PROFILE_EFFECT: "Change Effect",
+        USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT: "Use Default",
         USER_SETTINGS_ABOUT_ME: "About Me",
         USER_SETTINGS_ABOUT_ME_HINT: "Tap to add an about me",
         USER_SETTINGS_PRONOUNS_HINT: "Tap to add pronouns",
@@ -26011,8 +26013,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268196", ", Version Hash: ")
-          .concat("58f0fb1182a3eed98ac9629fb0ecac369d3e5a67")
+          .concat("268206", ", Version Hash: ")
+          .concat("89882f1e6904a3d80feb511f8446a68cf27259b9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29086,12 +29088,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268196"), "268196"));
+        let _ = parseInt(((e = "268206"), "268206"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268196"
+                "268206"
               )
             ),
             (_ = 0)),
@@ -34949,8 +34951,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708628046074",
-                    build_number: "268196",
+                    built_at: "1708629669137",
+                    build_number: "268206",
                   },
                 },
                 retries: 1,
@@ -51396,4 +51398,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.74e6e6bb2412f974380d.js.map
+//# sourceMappingURL=77761.f5bbba2026fedc33b8ee.js.map

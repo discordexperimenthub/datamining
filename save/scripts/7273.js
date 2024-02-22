@@ -9306,8 +9306,8 @@
             [a.MIDNIGHT]: { raw: "PLUM_17", opacity: 1 },
             [a.DARKER]: { raw: "PLUM_15", opacity: 1 },
             gradient: {
-              light: { color: "BLACK_500", opacity: 0.1 },
-              dark: { color: "WHITE_500", opacity: 0.1 },
+              light: { color: "gradient.end", opacity: 0.1 },
+              dark: { color: "gradient.end", opacity: 0.1 },
             },
           },
           REDESIGN_BUTTON_SECONDARY_BORDER: {
@@ -9324,8 +9324,8 @@
             [a.MIDNIGHT]: { raw: "PLUM_15", opacity: 1 },
             [a.DARKER]: { raw: "PLUM_13", opacity: 1 },
             gradient: {
-              light: { color: "BLACK_500", opacity: 0.2 },
-              dark: { color: "WHITE_500", opacity: 0.2 },
+              light: { color: "gradient.end", opacity: 0.2 },
+              dark: { color: "gradient.end", opacity: 0.2 },
             },
           },
           REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER: {
@@ -9775,6 +9775,17 @@
             [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
             [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
             [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
+          },
+          YOU_BAR_BG: {
+            category: "background",
+            [a.DARK]: { raw: "PRIMARY_800", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_19", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_17", opacity: 1 },
+            gradient: {
+              light: { color: "gradient.mid", lightness: 0.98 },
+              dark: { color: "gradient.mid", lightness: 0.16 },
+            },
           },
         },
         R = {
@@ -14085,7 +14096,8 @@
           "voice-video-video-tile-background"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
           "voice-video-video-tile-blur-fallback"),
-        (e.WHITE = "white");
+        (e.WHITE = "white"),
+        (e.YOU_BAR_BG = "you-bar-bg");
       let R = {
         "action-sheet-gradient-bg": [
           o.Color.PRIMARY_630,
@@ -15965,6 +15977,12 @@
           o.Color.WHITE_500,
           o.Color.WHITE_500,
         ],
+        "you-bar-bg": [
+          o.Color.PRIMARY_800,
+          o.Color.WHITE_500,
+          o.Color.PLUM_19,
+          o.Color.PLUM_17,
+        ],
       };
       Object.freeze(R);
     },
@@ -17274,4 +17292,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.89ef14707422a95a811a.js.map
+//# sourceMappingURL=7273.d3845b4c60d16579d1b2.js.map

@@ -106429,6 +106429,7 @@ div.nagbar_c731ff {
   --voice-video-video-tile-background: hsl(var(--plum-17-hsl) / 0.4);
   --voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
   --white: var(--white-500);
+  --you-bar-bg: var(--primary-800);
 }
 .theme-light {
   --action-sheet-gradient-bg: var(--primary-130);
@@ -106762,6 +106763,7 @@ div.nagbar_c731ff {
   --voice-video-video-tile-background: hsl(var(--plum-17-hsl) / 0.4);
   --voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
   --white: var(--white-500);
+  --you-bar-bg: var(--white-500);
 }
 .theme-midnight {
   --action-sheet-gradient-bg: var(--black-500);
@@ -107095,6 +107097,7 @@ div.nagbar_c731ff {
   --voice-video-video-tile-background: hsl(var(--plum-17-hsl) / 0.4);
   --voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
   --white: var(--white-500);
+  --you-bar-bg: var(--plum-19);
 }
 .theme-darker {
   --action-sheet-gradient-bg: var(--plum-20);
@@ -107426,6 +107429,7 @@ div.nagbar_c731ff {
   --voice-video-video-tile-background: hsl(var(--plum-17-hsl) / 0.4);
   --voice-video-video-tile-blur-fallback: hsl(var(--primary-700-hsl) / 0.48);
   --white: var(--white-500);
+  --you-bar-bg: var(--plum-17);
 }
 .theme-dark {
   --shadow-border: 0 0 0 1px hsla(0, 0%, 100%, 0.08);
@@ -108785,4 +108789,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.4f954d7abeb85a5a2c43.css.map*/
+/*# sourceMappingURL=app.91f723d4254b3151e2b6.css.map*/

@@ -618,11 +618,12 @@
           "var(--voice-video-video-tile-background)"),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK =
           "var(--voice-video-video-tile-blur-fallback)"),
-        (e.WHITE = "var(--white)");
+        (e.WHITE = "var(--white)"),
+        (e.YOU_BAR_BG = "var(--you-bar-bg)");
       var e,
         E,
         t = E;
     },
   },
 ]);
-//# sourceMappingURL=21251.3412b316a28e566b4fce.js.map
+//# sourceMappingURL=21251.16196a68cfa8b44f8e17.js.map

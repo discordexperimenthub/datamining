@@ -6,7 +6,7 @@
       n.r(t),
         n.d(t, {
           accountDetailsInit: function () {
-            return I;
+            return c;
           },
           accountDetailsClose: function () {
             return s;
@@ -65,8 +65,8 @@
         d = n("437822"),
         a = n("49111"),
         S = n("191349"),
-        c = n("782340");
-      function I() {
+        I = n("782340");
+      function c() {
         o.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
       }
       function s() {
@@ -74,8 +74,8 @@
       }
       function f(e, t) {
         let n = t
-            ? c.default.Messages.DELETE_ACCOUNT
-            : c.default.Messages.DISABLE_ACCOUNT,
+            ? I.default.Messages.DELETE_ACCOUNT
+            : I.default.Messages.DISABLE_ACCOUNT,
           r = t ? a.Endpoints.DELETE_ACCOUNT : a.Endpoints.DISABLE_ACCOUNT;
         return (0, T.default)(
           t =>
@@ -119,7 +119,7 @@
           emailToken: u,
           password: _,
           avatar: d,
-          avatarDecoration: I,
+          avatarDecoration: c,
           newPassword: s,
           globalName: f,
         } = e;
@@ -138,10 +138,10 @@
                 new_password: s,
                 ...e,
               };
-              null === I && (o.avatar_decoration_id = null),
-                null != I &&
-                  ((o.avatar_decoration_id = I.id),
-                  (o.avatar_decoration_sku_id = I.skuId));
+              null === c && (o.avatar_decoration_id = null),
+                null != c &&
+                  ((o.avatar_decoration_id = c.id),
+                  (o.avatar_decoration_sku_id = c.skuId));
               let l = r.default.get(a.DEVICE_TOKEN),
                 E = (0, S.getDevicePushProvider)();
               null != E &&
@@ -158,7 +158,7 @@
             },
             {
               checkEnabled: !1,
-              modalProps: { title: c.default.Messages.TWO_FA_CHANGE_ACCOUNT },
+              modalProps: { title: I.default.Messages.TWO_FA_CHANGE_ACCOUNT },
               hooks: {
                 onEarlyClose: () =>
                   o.default.dispatch({
@@ -209,10 +209,10 @@
         }),
           null == e
             ? u.AccessibilityAnnouncer.announce(
-                c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE
+                I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE
               )
             : u.AccessibilityAnnouncer.announce(
-                c.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED
+                I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED
               );
       }
       function D(e) {
@@ -282,10 +282,10 @@
             return S;
           },
           setPendingProfileEffectId: function () {
-            return c;
+            return I;
           },
           setPendingBanner: function () {
-            return I;
+            return c;
           },
           setPendingBio: function () {
             return s;
@@ -392,13 +392,13 @@
           avatarDecoration: e,
         });
       }
-      function c(e) {
+      function I(e) {
         r.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID",
           profileEffectId: e,
         });
       }
-      function I(e) {
+      function c(e) {
         r.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
           banner: e,
@@ -462,8 +462,8 @@
             return C;
           },
         });
-      var c = n("446674"),
-        I = n("913144"),
+      var I = n("446674"),
+        c = n("913144"),
         s = n("49111");
       let f = s.FormStates.CLOSED,
         N = {},
@@ -480,7 +480,7 @@
       function D() {
         (o = void 0), (_ = void 0), (l = void 0), (T = void 0), (u = void 0);
       }
-      class G extends c.default.Store {
+      class G extends I.default.Store {
         getFormState() {
           return f;
         }
@@ -552,7 +552,7 @@
         }
       }
       G.displayName = "GuildIdentitySettingsStore";
-      var C = new G(I.default, {
+      var C = new G(c.default, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
           (d = e.guild),
             (f = s.FormStates.OPEN),
@@ -635,10 +635,10 @@
             return S;
           },
           useGlobalOrGuildIdentityProfileEffect: function () {
-            return c;
+            return I;
           },
           useGlobalOrGuildIdentityPendingProfileEffect: function () {
-            return I;
+            return c;
           },
           setNewPendingUserBio: function () {
             return s;
@@ -707,7 +707,7 @@
           pendingErrors: null != t ? l : u,
         };
       }
-      function c(e, t) {
+      function I(e, t) {
         return (0, r.useStateFromStores)(
           [E.default],
           () => {
@@ -724,7 +724,7 @@
           [e, t]
         );
       }
-      function I(e) {
+      function c(e) {
         return (0, r.useStateFromStoresObject)(
           [d.default, _.default],
           () =>
@@ -787,10 +787,10 @@
             return S;
           },
           handleProfileAccessibilityTooltipViewed: function () {
-            return c;
+            return I;
           },
           resetPendingProfileChanges: function () {
-            return I;
+            return c;
           },
           setPendingBanner: function () {
             return s;
@@ -882,12 +882,12 @@
           });
         }
       }
-      function c() {
+      function I() {
         r.default.dispatch({
           type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED",
         });
       }
-      function I() {
+      function c() {
         r.default.dispatch({
           type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES",
         });
@@ -972,8 +972,8 @@
         d = n("455079"),
         a = n("677099");
       let S = new Set(),
-        c = new Set(),
-        I = {},
+        I = new Set(),
+        c = {},
         s = {},
         f = {},
         N = {},
@@ -982,8 +982,8 @@
         p = !1;
       function R() {
         S.clear(),
-          c.clear(),
-          (I = {}),
+          I.clear(),
+          (c = {}),
           (s = {}),
           (f = {}),
           (N = {}),
@@ -992,14 +992,14 @@
       }
       function D(e) {
         let { userId: t } = e;
-        c.add(t);
+        I.add(t);
       }
       function G(e) {
         let { userId: t } = e;
-        c.delete(t);
+        I.delete(t);
       }
       function C(e) {
-        c.delete(e.userId),
+        I.delete(e.userId),
           (f[e.userId] = r(e.mutualFriends)
             .map(e => ({
               key: e.id,
@@ -1022,7 +1022,7 @@
         delete A[e.user.id];
       }
       function g(e) {
-        var t, n, i, r, o, _, l, T, d, c, f, U, p, R, D, G, C;
+        var t, n, i, r, o, _, l, T, d, I, f, U, p, R, D, G, C;
         if ((S.delete(e.user.id), null != e.mutual_guilds)) {
           let t = {};
           e.mutual_guilds.forEach(e => {
@@ -1042,7 +1042,7 @@
         let O = null !== (d = e.premium_since) && void 0 !== d ? d : null,
           P = e.application;
         if (
-          ((I[e.user.id] = {
+          ((c[e.user.id] = {
             userId: e.user.id,
             banner:
               null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
@@ -1060,11 +1060,11 @@
                 : r.popout_animation_particle_type,
             bio:
               null !==
-                (c =
+                (I =
                   null === (o = e.user_profile) || void 0 === o
                     ? void 0
-                    : o.bio) && void 0 !== c
-                ? c
+                    : o.bio) && void 0 !== I
+                ? I
                 : "",
             profileEffectId:
               null === (l = e.user_profile) || void 0 === l
@@ -1151,8 +1151,8 @@
       function L(e) {
         var t;
         let { userId: n } = e;
-        (I[n] =
-          null !== (t = I[n]) && void 0 !== t
+        (c[n] =
+          null !== (t = c[n]) && void 0 !== t
             ? t
             : {
                 connectedAccounts: [],
@@ -1214,9 +1214,9 @@
                     theme_colors: _,
                     profileEffectId: l,
                   } = e,
-                  E = I[t];
+                  E = c[t];
                 if (null == E) return !1;
-                I[t] = {
+                c[t] = {
                   ...E,
                   accentColor: n,
                   banner: i,
@@ -1236,24 +1236,27 @@
       }
       function M(e) {
         let { user: t } = e;
-        if (S.has(t.id) || null == I[t.id]) return !1;
-        I[t.id].lastFetched = 0;
+        if (S.has(t.id) || null == c[t.id]) return !1;
+        c[t.id].lastFetched = 0;
       }
       function b() {
-        S.clear(), (I = {}), (s = {});
+        S.clear(), (c = {}), (s = {});
       }
       class B extends d.default {
+        initialize() {
+          this.waitFor(a.default), this.syncWith([o.default], b);
+        }
         isFetchingProfile(e) {
           return S.has(e);
         }
         isFetchingFriends(e) {
-          return c.has(e);
+          return I.has(e);
         }
         get isSubmitting() {
           return U;
         }
         getUserProfile(e) {
-          return I[e];
+          return c[e];
         }
         getGuildMemberProfile(e, t) {
           var n;
@@ -1279,41 +1282,38 @@
           let e = l.default.getId();
           return {
             version: B.LATEST_SNAPSHOT_VERSION,
-            data: [{ userId: e, profile: I[e] }],
+            data: [{ userId: e, profile: c[e] }],
           };
         }
         constructor() {
-          super(),
+          super({
+            CACHE_LOADED_LAZY: () => this.loadCache(),
+            USER_PROFILE_FETCH_START: v,
+            USER_PROFILE_FETCH_FAILURE: L,
+            USER_PROFILE_FETCH_SUCCESS: g,
+            USER_PROFILE_UPDATE_START: m,
+            USER_PROFILE_UPDATE_SUCCESS: h,
+            USER_PROFILE_UPDATE_FAILURE: y,
+            USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: F,
+            MUTUAL_FRIENDS_FETCH_START: D,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: C,
+            MUTUAL_FRIENDS_FETCH_FAILURE: G,
+            GUILD_JOIN: O,
+            GUILD_DELETE: O,
+            GUILD_MEMBER_ADD: P,
+            GUILD_MEMBER_REMOVE: P,
+            GUILD_MEMBER_UPDATE: M,
+            USER_UPDATE: M,
+            LOGOUT: R,
+          }),
             (this.loadCache = () => {
               let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
               null != e &&
                 e.forEach(e => {
                   let { userId: t, profile: n } = e;
-                  I[t] = n;
+                  c[t] = n;
                 });
-            }),
-            this.registerActionHandlers({
-              CACHE_LOADED_LAZY: this.loadCache,
-              USER_PROFILE_FETCH_START: v,
-              USER_PROFILE_FETCH_FAILURE: L,
-              USER_PROFILE_FETCH_SUCCESS: g,
-              USER_PROFILE_UPDATE_START: m,
-              USER_PROFILE_UPDATE_SUCCESS: h,
-              USER_PROFILE_UPDATE_FAILURE: y,
-              USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: F,
-              MUTUAL_FRIENDS_FETCH_START: D,
-              MUTUAL_FRIENDS_FETCH_SUCCESS: C,
-              MUTUAL_FRIENDS_FETCH_FAILURE: G,
-              GUILD_JOIN: O,
-              GUILD_DELETE: O,
-              GUILD_MEMBER_ADD: P,
-              GUILD_MEMBER_REMOVE: P,
-              GUILD_MEMBER_UPDATE: M,
-              USER_UPDATE: M,
-              LOGOUT: R,
-            }),
-            this.waitFor(a.default),
-            this.syncWith([o.default], b);
+            });
         }
       }
       (B.displayName = "UserProfileStore"), (B.LATEST_SNAPSHOT_VERSION = 1);
@@ -1321,7 +1321,7 @@
     },
     790618: function (e, t, n) {
       "use strict";
-      let i, r, u, o, _, l, E, T, d, a, S, c, I, s;
+      let i, r, u, o, _, l, E, T, d, a, S, I, c, s;
       n.r(t),
         n.d(t, {
           default: function () {
@@ -1356,7 +1356,7 @@
           (o = void 0);
       }
       function v() {
-        (S = void 0), (c = void 0), (I = void 0), (s = void 0), (a = void 0);
+        (S = void 0), (I = void 0), (c = void 0), (s = void 0), (a = void 0);
       }
       class L extends N.default.Store {
         getFormState() {
@@ -1425,10 +1425,10 @@
           return S;
         }
         getTryItOutAvatarDecoration() {
-          return c;
+          return I;
         }
         getTryItOutProfileEffectId() {
-          return I;
+          return c;
         }
         getTryItOutBanner() {
           return s;
@@ -1437,8 +1437,8 @@
           return {
             tryItOutThemeColors: a,
             tryItOutAvatar: S,
-            tryItOutAvatarDecoration: c,
-            tryItOutProfileEffectId: I,
+            tryItOutAvatarDecoration: I,
+            tryItOutProfileEffectId: c,
             tryItOutBanner: s,
           };
         }
@@ -1485,8 +1485,8 @@
             let { item: t } = e;
             (null == t ? void 0 : t.type) ===
             f.CollectiblesItemType.PROFILE_EFFECT
-              ? ((c = null), (I = null == t ? void 0 : t.id))
-              : ((I = null), (c = t));
+              ? ((I = null), (c = null == t ? void 0 : t.id))
+              : ((c = null), (I = t));
           },
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
           let { profileEffectId: t } = e;
@@ -1518,11 +1518,11 @@
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
           let { avatarDecoration: t } = e;
-          c = t;
+          I = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function (e) {
           let { profileEffectId: t } = e;
-          I = t;
+          c = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function (e) {
           let { banner: t } = e;
@@ -1566,4 +1566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=28727.149a8dc7d544974333c3.js.map
+//# sourceMappingURL=28727.b8ac58c0c5d3ac709a52.js.map

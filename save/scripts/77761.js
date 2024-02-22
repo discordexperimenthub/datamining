@@ -13650,8 +13650,10 @@
           "Gift {username} a new Nitro membership",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_BODY:
           "Warning: gift may cause uncontrollable happiness!",
-        MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY:
-          "Choose from {monthlyPrice} or {yearlyPrice}",
+        MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
+          "Choose from {monthlyPrice}/month or {yearlyPrice}/year",
+        MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
+          "Your recipient will receive:",
         MOBILE_CUSTOM_GIFT_TITLE: "Gift a Nitro membership",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gift duration",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
@@ -26016,8 +26018,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268272", ", Version Hash: ")
-          .concat("87b715fba6247ef6fc3d3513103578a6dddad1b9")
+          .concat("268294", ", Version Hash: ")
+          .concat("90b5a0234a18b9d1fbbc23c5f3a07027f893336b")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29091,12 +29093,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268272"), "268272"));
+        let _ = parseInt(((e = "268294"), "268294"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268272"
+                "268294"
               )
             ),
             (_ = 0)),
@@ -34954,8 +34956,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708635772836",
-                    build_number: "268272",
+                    built_at: "1708637417195",
+                    build_number: "268294",
                   },
                 },
                 retries: 1,
@@ -41644,7 +41646,7 @@
               this._reactChangeCallbacks.remove),
             (this._dispatcher = e),
             (this._dispatchToken = this._dispatcher.createToken()),
-            null !== _ && this.registerActionHandlers(null != _ ? _ : {}, E),
+            this.registerActionHandlers(null != _ ? _ : {}, E),
             T.push(this),
             S && this.initializeIfNeeded();
         }
@@ -51407,4 +51409,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.4e62f787acab6663e6e6.js.map
+//# sourceMappingURL=77761.ae3e07f48122aa4cd08d.js.map

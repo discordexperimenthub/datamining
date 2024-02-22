@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["67615"],
+  ["98239"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -51290,6 +51290,13 @@
         _(t);
       }
       class y extends r.default {
+        initialize() {
+          this.waitFor(i.default);
+        }
+        loadCache() {
+          let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
+          null != e && (a = new Set(e));
+        }
         takeSnapshot() {
           return { version: y.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
         }
@@ -51312,23 +51319,17 @@
           return d;
         }
         constructor() {
-          super(),
-            (this.loadCache = () => {
-              let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
-              null != e && (a = new Set(e));
-            }),
-            this.registerActionHandlers({
-              CONNECTION_OPEN: c,
-              CONNECTION_OPEN_SUPPLEMENTAL: c,
-              CACHE_LOADED_LAZY: this.loadCache,
-              OVERLAY_INITIALIZE: E,
-              CHANNEL_CREATE: m,
-              CHANNEL_UPDATES: h,
-              CHANNEL_DELETE: v,
-              SET_LOCATION_METADATA: p,
-              MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: g,
-            }),
-            this.waitFor(i.default);
+          super({
+            CONNECTION_OPEN: c,
+            CONNECTION_OPEN_SUPPLEMENTAL: c,
+            CACHE_LOADED_LAZY: () => this.loadCache(),
+            OVERLAY_INITIALIZE: E,
+            CHANNEL_CREATE: m,
+            CHANNEL_UPDATES: h,
+            CHANNEL_DELETE: v,
+            SET_LOCATION_METADATA: p,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: g,
+          });
         }
       }
       (y.displayName = "MessageRequestStore"), (y.LATEST_SNAPSHOT_VERSION = 1);
@@ -51449,6 +51450,13 @@
         return r.has(t.id) && (r.delete(t.id), (n = !0)), n;
       }
       class m extends i.default {
+        initialize() {
+          this.waitFor(s.default);
+        }
+        loadCache() {
+          let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+          null != e && (r = new Set(e));
+        }
         takeSnapshot() {
           return { version: m.LATEST_SNAPSHOT_VERSION, data: Array.from(r) };
         }
@@ -51468,21 +51476,15 @@
           return o;
         }
         constructor() {
-          super(),
-            (this.loadCache = () => {
-              let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
-              null != e && (r = new Set(e));
-            }),
-            this.registerActionHandlers({
-              CONNECTION_OPEN: l,
-              CONNECTION_OPEN_SUPPLEMENTAL: l,
-              CACHE_LOADED_LAZY: this.loadCache,
-              CHANNEL_CREATE: _,
-              CHANNEL_UPDATES: c,
-              CHANNEL_DELETE: g,
-              MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f,
-            }),
-            this.waitFor(s.default);
+          super({
+            CONNECTION_OPEN: l,
+            CONNECTION_OPEN_SUPPLEMENTAL: l,
+            CACHE_LOADED_LAZY: () => this.loadCache(),
+            CHANNEL_CREATE: _,
+            CHANNEL_UPDATES: c,
+            CHANNEL_DELETE: g,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f,
+          });
         }
       }
       (m.displayName = "SpamMessageRequestStore"),
@@ -63291,6 +63293,23 @@
         return H(t);
       }
       class eg extends v.default {
+        initialize() {
+          this.waitFor(
+            _.default,
+            h.default,
+            m.default,
+            g.default,
+            f.default,
+            p.default,
+            E.default,
+            a.default,
+            o.default
+          );
+        }
+        loadCache() {
+          let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
+          null != e && ((S = e.guilds), (A = new Set(e.unreadGuilds)));
+        }
         takeSnapshot() {
           return {
             version: eg.LATEST_SNAPSHOT_VERSION,
@@ -63379,70 +63398,54 @@
           return O(e).sentinel;
         }
         constructor() {
-          super(),
-            (this.loadCache = () => {
-              let e = this.readSnapshot(eg.LATEST_SNAPSHOT_VERSION);
-              null != e && ((S = e.guilds), (A = new Set(e.unreadGuilds)));
-            }),
-            this.registerActionHandlers({
-              CONNECTION_OPEN: x,
-              OVERLAY_INITIALIZE: B,
-              CACHE_LOADED_LAZY: this.loadCache,
-              GUILD_CREATE: j,
-              GUILD_DELETE: K,
-              MESSAGE_CREATE: Q,
-              MESSAGE_ACK: X,
-              BULK_ACK: ee,
-              UPDATE_CHANNEL_DIMENSIONS: X,
-              CHANNEL_SELECT: Z,
-              CHANNEL_DELETE: W,
-              WINDOW_FOCUS: z,
-              GUILD_ACK: eu,
-              GUILD_ROLE_CREATE: el,
-              GUILD_ROLE_DELETE: el,
-              GUILD_ROLE_UPDATE: el,
-              CHANNEL_CREATE: J,
-              CHANNEL_UPDATES: $,
-              THREAD_CREATE: et,
-              THREAD_UPDATE: et,
-              THREAD_DELETE: et,
-              THREAD_LIST_SYNC: eo,
-              THREAD_MEMBER_UPDATE: er,
-              THREAD_MEMBERS_UPDATE: ea,
-              PASSIVE_UPDATE_V1: ed,
-              GUILD_MEMBER_UPDATE: q,
-              USER_GUILD_SETTINGS_FULL_UPDATE: ef,
-              USER_GUILD_SETTINGS_CHANNEL_UPDATE: ec,
-              USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: ec,
-              USER_GUILD_SETTINGS_GUILD_UPDATE: ec,
-              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ec,
-              GUILD_FEATURE_ACK: ei,
-              GUILD_SCHEDULED_EVENT_CREATE: en,
-              GUILD_SCHEDULED_EVENT_UPDATE: en,
-              GUILD_SCHEDULED_EVENT_DELETE: es,
-              CHANNEL_RTC_UPDATE_CHAT_OPEN: X,
-              LOAD_MESSAGES_SUCCESS: X,
-              CHANNEL_ACK: X,
-              CHANNEL_LOCAL_ACK: X,
-              NOTIFICATION_SETTINGS_UPDATE: Y,
-              RECOMPUTE_READ_STATES: Y,
-              VOICE_CHANNEL_SELECT: X,
-              ENABLE_AUTOMATIC_ACK: X,
-              RESORT_THREADS: X,
-              NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: e_,
-              TRY_ACK: X,
-            }),
-            this.waitFor(
-              _.default,
-              h.default,
-              m.default,
-              g.default,
-              f.default,
-              p.default,
-              E.default,
-              a.default,
-              o.default
-            );
+          super({
+            CONNECTION_OPEN: x,
+            OVERLAY_INITIALIZE: B,
+            CACHE_LOADED_LAZY: () => this.loadCache(),
+            GUILD_CREATE: j,
+            GUILD_DELETE: K,
+            MESSAGE_CREATE: Q,
+            MESSAGE_ACK: X,
+            BULK_ACK: ee,
+            UPDATE_CHANNEL_DIMENSIONS: X,
+            CHANNEL_SELECT: Z,
+            CHANNEL_DELETE: W,
+            WINDOW_FOCUS: z,
+            GUILD_ACK: eu,
+            GUILD_ROLE_CREATE: el,
+            GUILD_ROLE_DELETE: el,
+            GUILD_ROLE_UPDATE: el,
+            CHANNEL_CREATE: J,
+            CHANNEL_UPDATES: $,
+            THREAD_CREATE: et,
+            THREAD_UPDATE: et,
+            THREAD_DELETE: et,
+            THREAD_LIST_SYNC: eo,
+            THREAD_MEMBER_UPDATE: er,
+            THREAD_MEMBERS_UPDATE: ea,
+            PASSIVE_UPDATE_V1: ed,
+            GUILD_MEMBER_UPDATE: q,
+            USER_GUILD_SETTINGS_FULL_UPDATE: ef,
+            USER_GUILD_SETTINGS_CHANNEL_UPDATE: ec,
+            USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: ec,
+            USER_GUILD_SETTINGS_GUILD_UPDATE: ec,
+            USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ec,
+            GUILD_FEATURE_ACK: ei,
+            GUILD_SCHEDULED_EVENT_CREATE: en,
+            GUILD_SCHEDULED_EVENT_UPDATE: en,
+            GUILD_SCHEDULED_EVENT_DELETE: es,
+            CHANNEL_RTC_UPDATE_CHAT_OPEN: X,
+            LOAD_MESSAGES_SUCCESS: X,
+            CHANNEL_ACK: X,
+            CHANNEL_LOCAL_ACK: X,
+            NOTIFICATION_SETTINGS_UPDATE: Y,
+            RECOMPUTE_READ_STATES: Y,
+            VOICE_CHANNEL_SELECT: X,
+            ENABLE_AUTOMATIC_ACK: X,
+            RESORT_THREADS: X,
+            NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: e_,
+            TRY_ACK: X,
+          });
         }
       }
       (eg.displayName = "GuildReadStateStore"),
@@ -76842,4 +76845,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.164f9d143ece1e7362d3.js.map
+//# sourceMappingURL=98239.b4f0441c769fdf024b70.js.map

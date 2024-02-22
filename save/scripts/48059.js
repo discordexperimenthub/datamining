@@ -3585,9 +3585,7 @@
         "appearance",
         "messagePreviews",
         e =>
-          null != e && eg.has(e.value)
-            ? e.value
-            : s.MessagePreviewTypes.UNREADS,
+          null != e && eg.has(e.value) ? e.value : s.MessagePreviewTypes.ALL,
         e => o.StringValue.create({ value: e })
       );
       let eh = (0, l.wrapSettingWithSelectiveSyncing)(
@@ -5282,7 +5280,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "268215"), "268215"), 10);
+          let o = parseInt(((n = "268216"), "268216"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7120,4 +7118,4 @@
     },
   },
 ]);
-//# sourceMappingURL=48059.234ff848fe9aeda1d847.js.map
+//# sourceMappingURL=48059.3a735330a27ffe7e742b.js.map

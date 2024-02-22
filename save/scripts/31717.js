@@ -3426,14 +3426,17 @@
           useCanPostPollsInChannel: function () {
             return E;
           },
-          isAnswerFilled: function () {
+          useCanPostImagePolls: function () {
             return f;
           },
-          isIncompleteAnswer: function () {
+          isAnswerFilled: function () {
             return _;
           },
-          createPollServerDataFromCreateRequest: function () {
+          isIncompleteAnswer: function () {
             return g;
+          },
+          createPollServerDataFromCreateRequest: function () {
+            return h;
           },
         }),
         n("781738"),
@@ -3478,19 +3481,22 @@
           );
         return n || a;
       }
-      function f(e, t) {
+      function f() {
+        return !1;
+      }
+      function _(e, t) {
         return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS
           ? null != e.image
           : null != e.text && e.text.length > 0;
       }
-      function _(e, t) {
+      function g(e, t) {
         return (
           t === l.PollLayoutTypes.DEFAULT &&
           null != e.image &&
           (null == e.text || 0 === e.text.length)
         );
       }
-      function g(e) {
+      function h(e) {
         var t, n;
         if (null == e) return;
         let a =
@@ -3872,4 +3878,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31717.31785070014d1e7bc05b.js.map
+//# sourceMappingURL=31717.b2ff6588568eabfebf09.js.map

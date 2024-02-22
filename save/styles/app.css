@@ -33047,6 +33047,10 @@ html .progress__4ef76 {
 .formItemSpaced_e8c8ff {
   margin-top: 16px;
 }
+.clanLabel__35b0d {
+  display: flex;
+  gap: 8px;
+}
 @value responsiveWidthMobile from '../../../../uikit/auth/WaveSplash.module.css';
 .header_b4d776 {
   padding: 24px 16px 0;
@@ -34049,6 +34053,60 @@ html .progress__4ef76 {
   box-shadow: var(--elevation-low);
   z-index: 1;
   pointer-events: none;
+}
+.container_d412fb {
+  max-width: 320px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+.channelMembers__4dbfb > aside > div {
+  width: 100%;
+}
+.games__90579 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.gameContainer__49f2c {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.gameHeader__8b950 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.userGameContainer__2ca80 {
+  display: flex;
+  gap: 12px;
+}
+.userGameInfo__6b6fa {
+  display: flex;
+  flex-direction: column;
+}
+.alphaTag_a9afe9 {
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.partyUpContainer_bb4355 {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: var(--interactive-normal);
+  align-items: center;
+}
+.partyUpIconContainer_ff3eb1 {
+  border-radius: 10px;
+  padding: 2px;
+  background: var(--background-secondary);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inviteChipletContainer__8076e {
   display: flex;
@@ -50072,8 +50130,8 @@ html .progress__4ef76 {
   background-image: linear-gradient(270deg, #e82427 0%, #c81031 100%);
 }
 .planInfo_cd8cba {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 8px;
 }
 .buttons_c518ae {
@@ -109086,4 +109144,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.cde23edec0bb9e575517.css.map*/
+/*# sourceMappingURL=app.2b528ac031738f725bd7.css.map*/

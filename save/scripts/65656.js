@@ -220,16 +220,16 @@
         if (-1 === A) return !1;
         let g = null == p || p > C[A];
         if (!g) return !1;
-        let h = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
-        if (!h) return !1;
-        let { showLifecycleUpsells: I } = E.default.getCurrentConfig(
+        let I = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+        if (!I) return !1;
+        let { showLifecycleUpsells: h } = E.default.getCurrentConfig(
           { guildId: e, location: "7f5b67_1" },
           {
             disable: r || !(0, S.isGuildOnboardingSettingsAvailable)(e),
             autoTrackExposure: !0,
           }
         );
-        return I;
+        return h;
       }
       function A(e, t) {
         let n = a.Timestamp.now();
@@ -596,6 +596,9 @@
           dismissQuestContent: function () {
             return _;
           },
+          dismissProgressTrackingFailureNotice: function () {
+            return f;
+          },
         });
       var s = n("872717"),
         i = n("913144"),
@@ -760,6 +763,12 @@
           }
         }
       }
+      function f(e) {
+        i.default.dispatch({
+          type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
+          streamKey: e,
+        });
+      }
     },
     166604: function (e, t, n) {
       "use strict";
@@ -769,22 +778,27 @@
             return i;
           },
           DismissibleQuestContentFlags: function () {
-            return a;
+            return l;
+          },
+          CONSECUTIVE_HEARTBEAT_PERIOD_MS: function () {
+            return u;
           },
         });
       var s,
         i,
-        r = n("588025");
+        r = n("718517"),
+        a = n("588025");
       ((s = i || (i = {})).ACTIVITY_PANEL = "quests_bar_activity_panel"),
         (s.QUESTS_MANAGER = "quests_manager"),
         (s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
         (s.USE_QUESTS = "use_quests");
-      let a = {
-        [r.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
-        [r.QuestContent.QUEST_BAR]: 2,
-        [r.QuestContent.ACTIVITY_PANEL]: 4,
-        [r.QuestContent.QUEST_LIVE_STREAM]: 8,
-      };
+      let l = {
+          [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
+          [a.QuestContent.QUEST_BAR]: 2,
+          [a.QuestContent.ACTIVITY_PANEL]: 4,
+          [a.QuestContent.QUEST_LIVE_STREAM]: 8,
+        },
+        u = 2 * r.default.Millis.MINUTE;
     },
     374023: function (e, t, n) {
       "use strict";
@@ -833,7 +847,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return p;
+            return g;
           },
         }),
         n("222007");
@@ -846,31 +860,35 @@
         o = new Set(),
         d = new Set(),
         c = new Set(),
-        E = new Map();
-      function S(e, t) {
+        E = new Map(),
+        S = new Map();
+      function _(e, t) {
         a = new Map(a);
         let n = a.get(e);
         null != n && a.set(e, { ...n, ...t });
       }
-      function _(e, t) {
+      function f(e, t) {
         let n = new Map(E);
         n.set(e, t), (E = n);
         let s = a.get(e),
           i = null == s ? void 0 : s.userStatus;
         if (null != i && null == i.claimedAt) {
           let n = { userStatus: { ...i, claimedAt: t.claimedAt } };
-          S(e, n);
+          _(e, n);
         }
       }
-      function f(e) {
+      function T(e) {
+        null != S.get(e) && (S = new Map(S)).delete(e);
+      }
+      function C(e) {
         let t = new Set(u);
         t.delete(e), (u = t);
       }
-      function T(e) {
+      function p(e) {
         let t = new Set(c);
         t.delete(e), (c = t);
       }
-      class C extends s.default.Store {
+      class A extends s.default.Store {
         get quests() {
           return a;
         }
@@ -895,11 +913,14 @@
         getRewardCode(e) {
           return E.get(e);
         }
+        getStreamHeartbeatFailure(e) {
+          return S.get(e);
+        }
       }
-      C.displayName = "QuestsStore";
-      var p = new C(i.default, {
+      A.displayName = "QuestsStore";
+      var g = new A(i.default, {
         LOGOUT: function () {
-          (r = !1), (a = new Map()), (l = 0), (u = new Set());
+          (r = !1), (a = new Map()), (l = 0), (u = new Set()), (S = new Map());
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function () {
           (l = Date.now()), (r = !0);
@@ -912,8 +933,18 @@
           (l = 0), (r = !1);
         },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
-          let { questId: t, userStatus: n } = e;
-          S(t, { userStatus: n });
+          let { questId: t, streamKey: n, userStatus: s } = e;
+          _(t, { userStatus: s }), T(n);
+        },
+        QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
+          let { questId: t, streamKey: n } = e,
+            s = S.get(n);
+          null == s &&
+            (S = new Map(S)).set(n, {
+              questId: t,
+              streamKey: n,
+              firstFailedAt: Date.now(),
+            });
         },
         QUESTS_ENROLL_BEGIN: function (e) {
           let { questId: t } = e,
@@ -922,11 +953,11 @@
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
           let { enrolledQuestUserStatus: t } = e;
-          S(t.questId, { userStatus: t }), f(t.questId);
+          _(t.questId, { userStatus: t }), C(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
           let { questId: t } = e;
-          f(t);
+          C(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
           let { questId: t } = e,
@@ -936,7 +967,7 @@
         QUESTS_FETCH_REWARD_CODE_SUCCESS: function (e) {
           let { questId: t, rewardCode: n } = e,
             s = new Set(d);
-          s.delete(t), (d = s), _(t, n);
+          s.delete(t), (d = s), f(t, n);
         },
         QUESTS_FETCH_REWARD_CODE_FAILURE: function (e) {
           let { questId: t } = e,
@@ -951,7 +982,7 @@
         QUESTS_CLAIM_REWARD_CODE_SUCCESS: function (e) {
           let { questId: t, rewardCode: n } = e,
             s = new Set(o);
-          s.delete(t), (o = s), _(t, n);
+          s.delete(t), (o = s), f(t, n);
         },
         QUESTS_CLAIM_REWARD_CODE_FAILURE: function (e) {
           let { questId: t } = e,
@@ -965,10 +996,18 @@
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
           let { dismissedQuestUserStatus: t } = e;
-          S(t.questId, { userStatus: t }), T(t.questId);
+          _(t.questId, { userStatus: t }), p(t.questId);
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
           let { questId: t } = e;
+          p(t);
+        },
+        STREAM_CLOSE: function (e) {
+          let { streamKey: t } = e;
+          T(t);
+        },
+        QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function (e) {
+          let { streamKey: t } = e;
           T(t);
         },
       });
@@ -1044,16 +1083,16 @@
             return g;
           },
           getQuestForTargetedContent: function () {
-            return h;
-          },
-          getPlatformString: function () {
             return I;
           },
+          getPlatformString: function () {
+            return h;
+          },
           calculatePercentComplete: function () {
-            return m;
+            return R;
           },
           getContextualEntrypointHeading: function () {
-            return R;
+            return m;
           },
           isDismissible: function () {
             return N;
@@ -1153,12 +1192,12 @@
             .concat(location.protocol, "//")
             .concat(location.host, "/quests/")
             .concat(e);
-      function h(e, t) {
+      function I(e, t) {
         for (let [n, s] of e)
           if (!o(s) && s.targetedContent.includes(t)) return s;
         return null;
       }
-      let I = e => {
+      let h = e => {
         switch (e) {
           case i.QuestRewardCodePlatforms.XBOX:
             return a.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
@@ -1173,14 +1212,14 @@
               .QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
         }
       };
-      function m(e) {
+      function R(e) {
         if (null == e.userStatus) return 0;
         let { streamProgressSeconds: t, completedAt: n } = e.userStatus;
         if (null != n) return 1;
         let { streamDurationRequirementMinutes: s } = e.config;
         return Math.min(t / 60 / s, 1);
       }
-      function R(e) {
+      function m(e) {
         var t, n;
         if (
           (null === (t = e.userStatus) || void 0 === t
@@ -1193,7 +1232,7 @@
             ? void 0
             : n.enrolledAt) != null
         ) {
-          let t = m(e);
+          let t = R(e);
           return t >= 0.75
             ? a.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE
             : t >= 0.45 && t <= 0.55
@@ -1426,4 +1465,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.ecc6903460156cc3031e.js.map
+//# sourceMappingURL=65656.e4daf5ab729dd2a4b5bf.js.map

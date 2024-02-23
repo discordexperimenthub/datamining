@@ -23744,7 +23744,7 @@
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Safety tips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
-          "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we'll let you know. [Learn more about safety alerts]({learnMoreLink})",
+          "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we'll let you know. [Learn more about safety alerts.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Go to settings",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Dismiss",
         STRANGER_DANGER_BANNER_HEADER: "Unwanted message?",
@@ -26049,8 +26049,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268614", ", Version Hash: ")
-          .concat("8aa63b97e42e730ba2b0dc1602ff7b458122c5e2")
+          .concat("268626", ", Version Hash: ")
+          .concat("8ab40129bbde0bf7446183ccadbf6e609ea51ed7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29124,12 +29124,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268614"), "268614"));
+        let _ = parseInt(((e = "268626"), "268626"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268614"
+                "268626"
               )
             ),
             (_ = 0)),
@@ -34987,8 +34987,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708721058831",
-                    build_number: "268614",
+                    built_at: "1708721997426",
+                    build_number: "268626",
                   },
                 },
                 retries: 1,
@@ -51458,4 +51458,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.5977bd3303dcdfcbae42.js.map
+//# sourceMappingURL=77761.44b858a4c344d4d56609.js.map

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["35900"],
+  ["21201"],
   {
     662697: function (e, t, n) {
       let i = {};
@@ -60060,7 +60060,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "268455",
+                  build_number: "268467",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78843,4 +78843,4 @@
     },
   },
 ]);
-//# sourceMappingURL=35900.1792146c0d738fe07371.js.map
+//# sourceMappingURL=21201.060d64d70e881712b5bc.js.map

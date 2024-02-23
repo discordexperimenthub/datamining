@@ -7408,7 +7408,7 @@
         STREAM_PREMIUM_UPSELL_BODY:
           "Stream HD resolutions at 60 frames per second, get access to chat perks, [and more with Discord Nitro!](onPressMore)",
         STREAM_PREMIUM_UPSELL_BODY_V2:
-          "Unlock up to 4k/60fps streaming, custom emojis everywhere, animated avatar, and more with Nitro.",
+          "Unlock up to 4k/60fps streaming, custom emoji everywhere, animated avatar, and more with Nitro.",
         STREAM_PREMIUM_UPSELL_BODY_NO_CTA:
           "Stream HD resolutions at 60 frames per second, get access to chat perks, and more with Discord Nitro!",
         STREAM_PREMIUM_UPSELL_WITH_ACTION:
@@ -26049,8 +26049,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268571", ", Version Hash: ")
-          .concat("e0ed31d8695554cd22baf51b5989df2a8a1e14b4")
+          .concat("268586", ", Version Hash: ")
+          .concat("9289ee2376a695d717ed07ea41e67ff8a07a7777")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29124,12 +29124,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268571"), "268571"));
+        let _ = parseInt(((e = "268586"), "268586"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268571"
+                "268586"
               )
             ),
             (_ = 0)),
@@ -34987,8 +34987,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708716596251",
-                    build_number: "268571",
+                    built_at: "1708718678571",
+                    build_number: "268586",
                   },
                 },
                 retries: 1,
@@ -51481,4 +51481,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.520bdd96c4f6261c6a2f.js.map
+//# sourceMappingURL=77761.bf3edafc3063f9c35d2c.js.map

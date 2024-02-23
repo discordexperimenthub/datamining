@@ -47790,17 +47790,14 @@
           GuildFeedRenderSelectorExperiment: function () {
             return g;
           },
-          GuildFeedRefreshButtonExperiment: function () {
+          GuildHomeBadgeExperiment: function () {
             return m;
           },
-          GuildHomeBadgeExperiment: function () {
+          GuildHomeFeedbackExperiment: function () {
             return h;
           },
-          GuildHomeFeedbackExperiment: function () {
-            return v;
-          },
           GuildHomeDeprecationExperiment: function () {
-            return E;
+            return v;
           },
         });
       var s = n("446674"),
@@ -47856,15 +47853,6 @@
         }),
         m = (0, r.createExperiment)({
           kind: "user",
-          id: "2022-06_home_refresh_button",
-          label: "Show refresh button",
-          defaultConfig: { showRefreshButton: !1 },
-          treatments: [
-            { id: 1, label: "Yes button", config: { showRefreshButton: !0 } },
-          ],
-        }),
-        h = (0, r.createExperiment)({
-          kind: "user",
           id: "2022-08_home_badge",
           label: "Show badge on home channel",
           defaultConfig: { showBadge: !1 },
@@ -47918,7 +47906,7 @@
             },
           ],
         });
-      let v = (0, r.createExperiment)({
+      let h = (0, r.createExperiment)({
           kind: "user",
           id: "2022-12_home_feedback_ux",
           label: "Show post feedback for home",
@@ -47927,7 +47915,7 @@
             { id: 100, label: "show feedback", config: { showFeedback: !0 } },
           ],
         }),
-        E = (0, r.createExperiment)({
+        v = (0, r.createExperiment)({
           kind: "guild",
           id: "2023-03_home_deprecation",
           label: "Home Deprecation",
@@ -76850,4 +76838,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.79e2e8583edb1b57f975.js.map
+//# sourceMappingURL=67615.2e952e2a0a1ec2894791.js.map

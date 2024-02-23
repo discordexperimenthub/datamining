@@ -2270,7 +2270,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-e0ed31d8695554cd22baf51b5989df2a8a1e14b4",
+          release: "discord_web-9289ee2376a695d717ed07ea41e67ff8a07a7777",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2340,8 +2340,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "268571"), "268571")),
-          a.setTag("builtAt", String("1708716596251"));
+          a.setTag("buildNumber", ((e = "268586"), "268586")),
+          a.setTag("builtAt", String("1708718678571"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -4308,10 +4308,10 @@
       n.r(t),
         n.d(t, {
           PictureInPictureWindow: function () {
-            return p;
+            return h;
           },
           default: function () {
-            return E;
+            return p;
           },
         }),
         n("222007");
@@ -4323,10 +4323,9 @@
         u = n("773336"),
         o = n("325753"),
         d = n("49111"),
-        c = n("578549"),
-        f = n("678016");
-      let h = { top: 80, bottom: 132, left: 80 };
-      class p extends r.PureComponent {
+        c = n("578549");
+      let f = { top: 80, bottom: 132, left: 80 };
+      class h extends r.PureComponent {
         componentDidMount() {
           this.setPosition(this.props.position);
         }
@@ -4546,53 +4545,47 @@
             });
         }
       }
-      p.defaultProps = { hidden: !1, roundCorners: !0 };
-      var E = r.memo(e => {
+      h.defaultProps = { hidden: !1, roundCorners: !0 };
+      var p = r.memo(e => {
         let {
           selectedPIPWindow: t,
           pipWindows: n,
           maxX: r,
           maxY: s,
-          onWindowMove: l,
-          dockedRect: u,
-          pictureInPictureComponents: o,
-          appContext: E,
-          roundCorners: C,
+          onWindowMove: i,
+          dockedRect: l,
+          pictureInPictureComponents: u,
+          appContext: o,
+          roundCorners: p,
         } = e;
         return (0, a.jsx)("div", {
           className: c.pictureInPicture,
           children: (() => {
             if (null == t) return null;
             let e = n.map(e => {
-                if (
-                  e.id !== t.id &&
-                  e.component !== d.PictureInPictureComponents.EMBED_IFRAME
-                )
-                  return null;
-                let n =
-                  "string" == typeof e.component ? o[e.component] : e.component;
-                return (0, a.jsx)(n, { ...e.props }, "pipWindow-".concat(e.id));
-              }),
-              m = e.length > 1 ? c.noBoxShadow : {};
-            return (0, a.jsx)(p, {
-              className: i(
-                c.pictureInPictureWindowOverflow,
-                f.elevationHigh,
-                m
-              ),
-              appContext: E,
+              if (
+                e.id !== t.id &&
+                e.component !== d.PictureInPictureComponents.EMBED_IFRAME
+              )
+                return null;
+              let n =
+                "string" == typeof e.component ? u[e.component] : e.component;
+              return (0, a.jsx)(n, { ...e.props }, "pipWindow-".concat(e.id));
+            });
+            return (0, a.jsx)(h, {
+              appContext: o,
               position: t.position,
               id: t.id,
               hidden: t.hidden,
-              onMove: l,
+              onMove: i,
               maxX: r,
               maxY: s,
-              dockedRect: u,
-              edgeOffsetTop: h.top,
-              edgeOffsetBottom: h.bottom,
-              edgeOffsetLeft: h.left,
-              edgeOffsetRight: h.top,
-              roundCorners: C,
+              dockedRect: l,
+              edgeOffsetTop: f.top,
+              edgeOffsetBottom: f.bottom,
+              edgeOffsetLeft: f.left,
+              edgeOffsetRight: f.top,
+              roundCorners: p,
               children: e,
             });
           })(),
@@ -5273,4 +5266,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98346.e27b6d011b058ee20501.js.map
+//# sourceMappingURL=98346.64b4bb2422203424f17a.js.map

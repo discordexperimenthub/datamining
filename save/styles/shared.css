@@ -14261,17 +14261,11 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   position: absolute;
   z-index: 1000;
 }
-.pictureInPictureWindowOverflow__3abe4 {
-  overflow: hidden;
-}
 .borderRadius__3965c {
   border-radius: 8px;
 }
 .hidden__576d2 {
   display: none;
-}
-.noBoxShadow_d45938 {
-  box-shadow: none;
 }
 html,
 [data-popout-root] {
@@ -18465,7 +18459,7 @@ h6.title__7a3bb {
   background-color: #ffeef0;
 }
 .markdown_e76780 {
-  font-size: 1rem;
+  font-size: 16px;
   -webkit-user-select: text;
   -moz-user-select: text;
   user-select: text;
@@ -23777,4 +23771,4 @@ span.button__4f306.disabled_dc5630 {
   background: var(--background-modifier-hover);
   padding: 16px;
 }
-/*# sourceMappingURL=shared.59ee29abf1c3471474b6.css.map*/
+/*# sourceMappingURL=shared.c3620c890075d3247c90.css.map*/

@@ -1097,6 +1097,7 @@
         var t, n, s;
         return {
           id: e.id,
+          preview: e.preview,
           config: {
             expiresAt: (t = e.config).expires_at,
             streamDurationRequirementMinutes:
@@ -1104,6 +1105,7 @@
             gameTitle: t.game_title,
             getGameLink: t.get_game_link,
             applicationId: t.application_id,
+            applicationName: t.application_name,
             messages: {
               questName: (n = t.messages).quest_name,
               rewardName: n.reward_name,
@@ -1424,4 +1426,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.809de4d22a70afd0d874.js.map
+//# sourceMappingURL=65656.ecc6903460156cc3031e.js.map

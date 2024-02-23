@@ -4915,6 +4915,7 @@
         (es.MEDIA_DEVICE_CHANGED = "media_device_changed"),
         (es.IMAGE_VIDEO_DATA_SETTINGS_UPDATED =
           "image_video_data_settings_updated"),
+        (es.QUEST_STREAMING_STARTED = "quest_streaming_started"),
         (es.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
         (es.USER_ATTRIBUTION_RECEIVED = "user_attribution_received"),
         (es.USER_AVATAR_UPDATED = "user_avatar_updated"),
@@ -17124,4 +17125,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.4c6c7f1d10dd7e6a085b.js.map
+//# sourceMappingURL=7273.ad451d180230a8c8191a.js.map

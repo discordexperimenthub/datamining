@@ -2033,9 +2033,10 @@
       }
       function X(e, t) {
         let [n, i] = a.useState(!0),
-          l = (0, u.useStateFromStoresObject)([q], () =>
-            null != e ? q.indices[e] : B
-          );
+          l = (0, u.useStateFromStoresObject)([q], () => {
+            var t;
+            return null !== (t = q.indices[e]) && void 0 !== t ? t : B;
+          });
         return (
           a.useEffect(() => {
             n &&
@@ -6873,4 +6874,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31337.63cf6348ce4587e7379a.js.map
+//# sourceMappingURL=31337.15b00870fc5304994f7d.js.map

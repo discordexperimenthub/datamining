@@ -9371,7 +9371,7 @@
           "Your next **{numMonths, plural, one {1 month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
         CHURN_DISCOUNT_DESCRIPTION:
-          "Before cancelling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
+          "Before canceling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
         CHURN_DISCOUNT_CLAIM: "Claim Discount",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED: "Discount Applied!",
         PREMIUM_DISCOUNT_SWEET: "Sweet",
@@ -26053,8 +26053,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268654", ", Version Hash: ")
-          .concat("7809392e106f8463ca99afaaad57be39ecaabdc6")
+          .concat("268670", ", Version Hash: ")
+          .concat("e10a01077eda5fd54a87eaf0289fb55c8f558282")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29128,12 +29128,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268654"), "268654"));
+        let _ = parseInt(((e = "268670"), "268670"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268654"
+                "268670"
               )
             ),
             (_ = 0)),
@@ -34991,8 +34991,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708725706859",
-                    build_number: "268654",
+                    built_at: "1708727477827",
+                    build_number: "268670",
                   },
                 },
                 retries: 1,
@@ -51462,4 +51462,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.038476b9e91719b06c78.js.map
+//# sourceMappingURL=77761.adced9ad1ece5c11d499.js.map

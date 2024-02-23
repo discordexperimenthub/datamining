@@ -46590,6 +46590,7 @@
           noiseCancellation: !0,
           experimentalEncoders: !1,
           hardwareH264: !0,
+          hardwareEnabledVersion: 0,
           silenceWarning: !0,
           attenuation: 0,
           attenuateWhileSpeakingSelf: !1,
@@ -47498,7 +47499,9 @@
                       (e.noiseSuppression = !1),
                       (e.noiseCancellation = !0)),
                     1 !== e.av1EnabledSettingVersion &&
-                      ((e.av1EnabledSettingVersion = 1), (e.av1Enabled = !0));
+                      ((e.av1EnabledSettingVersion = 1), (e.av1Enabled = !0)),
+                    1 !== e.hardwareEnabledVersion &&
+                      ((e.hardwareH264 = !0), (e.hardwareEnabledVersion = 1));
                 }),
                 (function () {
                   let e = e4();
@@ -60060,7 +60063,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "268517",
+                  build_number: "268525",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78843,4 +78846,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.216a52a40e3387fafa90.js.map
+//# sourceMappingURL=21201.e3fa547eda2e7bbf8c13.js.map

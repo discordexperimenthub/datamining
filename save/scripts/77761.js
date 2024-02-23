@@ -24165,9 +24165,9 @@
         STOREFRONT_APP_PRODUCTS: "App Products",
         STOREFRONT_APP_PRODUCTS_BODY: "Purchase products from {appName}",
         STOREFRONT_SUBSCRIPTION: "Subscription",
-        STOREFRONT_SUBSCRIBE: "Subscribe",
+        STOREFRONT_SUBSCRIBE_FOR: "Subscribe for {rate}",
         STOREFRONT_SUBSCRIPTION_BENEFITS: "Subscription Benefits",
-        STOREFRONT_PURCHASE: "Purchase",
+        STOREFRONT_PURCHASE_FOR: "Buy for {price}",
         STOREFRONT_ONE_TIME_PURCHASE: "One-Time Purchase",
         QUIET_MODE_DISABLED: "Focus Mode Disabled",
         QUIET_MODE_ENABLED: "Focus Mode Enabled",
@@ -26049,8 +26049,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268525", ", Version Hash: ")
-          .concat("f07728517329822aafc869bcac677c8255875c33")
+          .concat("268539", ", Version Hash: ")
+          .concat("1066ff2d6bff8a050755fbc24b199e87cbc9f425")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29124,12 +29124,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268525"), "268525"));
+        let _ = parseInt(((e = "268539"), "268539"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268525"
+                "268539"
               )
             ),
             (_ = 0)),
@@ -34987,8 +34987,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708711128874",
-                    build_number: "268525",
+                    built_at: "1708712434145",
+                    build_number: "268539",
                   },
                 },
                 retries: 1,
@@ -51442,4 +51442,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.ce62833cb699855e2d27.js.map
+//# sourceMappingURL=77761.6ab49cf43a1f69b34719.js.map

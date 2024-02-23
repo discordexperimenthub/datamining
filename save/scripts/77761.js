@@ -26045,8 +26045,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268500", ", Version Hash: ")
-          .concat("4317b27da4499d6cb7708d7a9756f4028090eb50")
+          .concat("268501", ", Version Hash: ")
+          .concat("8f03c14a8ff749cb6e6cdc45306e47c5309b223b")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29120,12 +29120,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268500"), "268500"));
+        let _ = parseInt(((e = "268501"), "268501"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268500"
+                "268501"
               )
             ),
             (_ = 0)),
@@ -34983,8 +34983,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708705526559",
-                    build_number: "268500",
+                    built_at: "1708705812204",
+                    build_number: "268501",
                   },
                 },
                 retries: 1,
@@ -36211,9 +36211,11 @@
         i = 0,
         a = null;
       function I(e) {
-        (e > 0 && r >= i) || (e < 0 && r <= i)
-          ? (clearInterval(a), 0 === i && n.stop())
-          : ((r += e), (n.volume = r));
+        let _ = Math.round(100 * i),
+          E = Math.round(100 * r);
+        (e > 0 && E >= _) || (e < 0 && E <= _)
+          ? (clearInterval(a), 0 === _ && n.stop())
+          : ((E += Math.round(100 * e)), (r = E / 100), (n.volume = r));
       }
       function s() {
         i = 0;
@@ -51436,4 +51438,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.64538fa0b5b224dad869.js.map
+//# sourceMappingURL=77761.a24d4f2fa45a37b88639.js.map

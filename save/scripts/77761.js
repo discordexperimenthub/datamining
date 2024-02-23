@@ -13362,6 +13362,8 @@
         GO_LIVE_MODAL_APPLICATION_FORM_TITLE: "What you're streaming",
         GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE: "Select a voice channel",
         GO_LIVE_MODAL_CURRENT_CHANNEL_FORM_TITLE: "Streaming channel",
+        GO_LIVE_MODAL_HARDWARE_WARNING_INFOBOX:
+          "Discord relies on the video hardware encoder of your graphics card for optimal system performance and visual quality. [Enable Hardware Acceleration](onClick) in your settings for the best experience.",
         GO_LIVE_MODAL_CTA: "Go Live",
         GO_LIVE_MODAL_OVERFLOW_TWO_USERS: "!!{nickname0}!! and !!{nickname1}!!",
         GO_LIVE_MODAL_OVERFLOW_THREE_USERS:
@@ -26047,8 +26049,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268508", ", Version Hash: ")
-          .concat("3c4fb8abab68862481717fd540673199edeb5e26")
+          .concat("268517", ", Version Hash: ")
+          .concat("04e9fc0238fc8df3de61fed5a519f7d12a3b08a5")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29122,12 +29124,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268508"), "268508"));
+        let _ = parseInt(((e = "268517"), "268517"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268508"
+                "268517"
               )
             ),
             (_ = 0)),
@@ -34985,8 +34987,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708709203207",
-                    build_number: "268508",
+                    built_at: "1708710358910",
+                    build_number: "268517",
                   },
                 },
                 retries: 1,
@@ -51440,4 +51442,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.b2eaa188cf53709e813b.js.map
+//# sourceMappingURL=77761.e2c1cdc3bb31e3f63a33.js.map

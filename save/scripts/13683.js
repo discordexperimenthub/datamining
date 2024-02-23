@@ -1,10 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["79092"],
+  ["13683"],
   {
-    53708: function (e, t, n) {
-      "use strict";
-      e.exports = n.p + "f6c7b8245d3a54cf98b2.png";
-    },
     112679: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -2053,4 +2049,4 @@
     },
   },
 ]);
-//# sourceMappingURL=79092.c687fcdb9f55324c8218.js.map
+//# sourceMappingURL=13683.5bb433c3671175cc91a9.js.map

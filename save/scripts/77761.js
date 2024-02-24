@@ -21754,6 +21754,10 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Harness the Elements",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Fire. Wind. Water. Earth. Which will you unleash?",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "New Anime items are here!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
+          "Check out the latest styles that will definitely make senpai notice you.",
+        COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
           "$[!!{username}!!](usernameHook) added the $[!!{otherUsername}!!](otherUsernameHook) app. See our [help center]({helpCenterLink}) for more info.",
@@ -26053,8 +26057,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268757", ", Version Hash: ")
-          .concat("f91e129aefafeb4eba293c824b8aa9ebdeef0cde")
+          .concat("268786", ", Version Hash: ")
+          .concat("05bbe5fddbd3ab0ca2c5e9135f12cca755732766")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29128,12 +29132,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268757"), "268757"));
+        let _ = parseInt(((e = "268786"), "268786"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268757"
+                "268786"
               )
             ),
             (_ = 0)),
@@ -34991,8 +34995,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708735264909",
-                    build_number: "268757",
+                    built_at: "1708740435922",
+                    build_number: "268786",
                   },
                 },
                 retries: 1,
@@ -51462,4 +51466,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.49e9a22bd653540dfa17.js.map
+//# sourceMappingURL=77761.a45040223451f4df4c1c.js.map

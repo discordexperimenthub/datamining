@@ -19069,6 +19069,7 @@
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permission Granted By These Roles",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Highest Role",
+        GUILD_MEMBER_MOD_VIEW_TITLE: "Mod View",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE:
           "Show Members In Channel List",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION:
@@ -26057,8 +26058,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268874", ", Version Hash: ")
-          .concat("cd230f290497f7adc0f89ee0fcf04bddabc2008e")
+          .concat("268876", ", Version Hash: ")
+          .concat("e48d12c2b669904dea82b3f28f3789634452a79a")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29132,12 +29133,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268874"), "268874"));
+        let _ = parseInt(((e = "268876"), "268876"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268874"
+                "268876"
               )
             ),
             (_ = 0)),
@@ -34995,8 +34996,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708815378859",
-                    build_number: "268874",
+                    built_at: "1708818978501",
+                    build_number: "268876",
                   },
                 },
                 retries: 1,
@@ -51466,4 +51467,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.745b4d8bb4bc99628d8e.js.map
+//# sourceMappingURL=77761.cda2b1d88be2a2ae79d3.js.map

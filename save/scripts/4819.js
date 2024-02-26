@@ -806,7 +806,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return I;
           },
         }),
         n("222007");
@@ -818,133 +818,134 @@
         u = n("913144"),
         o = n("766274"),
         d = n("271938"),
-        c = n("9759"),
-        f = n("837374");
+        c = n("299039"),
+        f = n("9759"),
+        h = n("837374");
       ((r = a || (a = {}))[(r.INVALID = 0)] = "INVALID"),
         (r[(r.VALID_USER_ONLY = 1)] = "VALID_USER_ONLY"),
         (r[(r.VALID = 2)] = "VALID");
-      let h = new Set(),
-        E = new Set(),
+      let E = new Set(),
         C = new Set(),
-        p = [],
-        m = {
+        p = new Set(),
+        m = [],
+        S = {
           BROADCASTS_BY_USER_ID: e => "user:".concat(e),
           BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
           BROADCASTS_BY_VALIDITY: e => "validity:".concat(e),
         },
-        S = new l.default(
+        g = new l.default(
           function (e) {
-            let t = h.has(e.userId) ? 1 : 0;
+            let t = E.has(e.userId) ? 1 : 0;
             return (
               null != e.viewers && (t = 2),
               [
-                m.BROADCASTS_BY_USER_ID(e.userId),
-                m.BROADCASTS_BY_CHANNEL_ID(e.channelId),
-                m.BROADCASTS_BY_VALIDITY(t),
+                S.BROADCASTS_BY_USER_ID(e.userId),
+                S.BROADCASTS_BY_CHANNEL_ID(e.channelId),
+                S.BROADCASTS_BY_VALIDITY(t),
               ]
             );
           },
           e => e.channelId
         );
-      function g(e, t, n) {
+      function _(e, t, n) {
         if (d.default.getId() === e) return !1;
         if (null == t) {
-          let t = S.get(e);
+          let t = g.get(e);
           return (
             !!(null != t && (0, s.isEqual)(t.source, n)) &&
-            (S.delete(e), void 0)
+            (g.delete(e), void 0)
           );
         }
-        !h.has(e) && !E.has(e) && (C.add(e), (p = [...C]));
-        let a = (0, f.broadcastFromServer)(t, e, n);
-        S.set(e, a);
+        !E.has(e) && !C.has(e) && (p.add(e), (m = [...p]));
+        let a = (0, h.broadcastFromServer)(t, e, n);
+        g.set(e, a);
       }
-      function _(e) {
+      function T(e) {
         return null != e
-          ? { type: f.BroadcastSourceType.GUILD, guildId: e }
-          : { type: f.BroadcastSourceType.GLOBAL };
+          ? { type: h.BroadcastSourceType.GUILD, guildId: e }
+          : { type: h.BroadcastSourceType.GLOBAL };
       }
-      class T extends i.default.Store {
+      class v extends i.default.Store {
         getBroadcasts() {
-          return S.values(m.BROADCASTS_BY_VALIDITY(2));
+          return g.values(S.BROADCASTS_BY_VALIDITY(2));
         }
         getBroadcastsToValidateChannels() {
-          return S.values(m.BROADCASTS_BY_VALIDITY(1));
+          return g.values(S.BROADCASTS_BY_VALIDITY(1));
         }
         getBroadcastByChannel(e) {
-          return S.values(m.BROADCASTS_BY_CHANNEL_ID(e))[0];
+          return g.values(S.BROADCASTS_BY_CHANNEL_ID(e))[0];
         }
         getBroadcastByUser(e) {
-          return S.get(e);
+          return g.get(e);
         }
         getUserIdsToValidate() {
-          return p;
+          return m;
         }
       }
-      T.displayName = "BroadcastingStore";
-      var v = new T(u.default, {
+      v.displayName = "BroadcastingStore";
+      var I = new v(u.default, {
         PRESENCE_UPDATES: function (e) {
           let { updates: t } = e;
           return t.forEach(e => {
             let { user: t, broadcast: n, guildId: a } = e;
-            g(t.id, n, _(a));
+            _(t.id, n, T(a));
           });
         },
         PRESENCES_REPLACE: function (e) {
           let { presences: t } = e;
           return t.forEach(e => {
             let { user: t, broadcast: n, guildId: a } = e;
-            g(t.id, n, _(a));
+            _(t.id, n, T(a));
           });
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
           let { presences: t, guilds: n } = e;
           t.forEach(e => {
             let { user: t, broadcast: n, guildId: a } = e;
-            g(t.id, n, _(a));
+            _(t.id, n, T(a));
           }),
             n.forEach(e => {
               let { presences: t, id: n } = e;
               t.forEach(e => {
                 let { user: t, broadcast: a } = e;
-                g(t.id, a, _(n));
+                _(t.id, a, T(n));
               });
             });
         },
         BROADCASTER_BUCKETS_RECEIVED: function (e) {
           let { data: t } = e;
-          Object.keys(t).forEach(e => {
-            c.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? h.add(e) : E.add(e),
-              C.clear(),
-              (p = [...C]);
-            let n = S.get(e);
-            null != n && (S.delete(e), S.set(e, n));
+          c.default.keys(t).forEach(e => {
+            f.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : C.add(e),
+              p.clear(),
+              (m = [...p]);
+            let n = g.get(e);
+            null != n && (g.delete(e), g.set(e, n));
           });
         },
         BROADCAST_VIEWERS_UPDATE: function (e) {
           let { viewers: t } = e;
           Object.entries(t).forEach(e => {
             let [t, n] = e,
-              a = S.get(t);
-            null != a && S.set(t, { ...a, viewers: n });
+              a = g.get(t);
+            null != a && g.set(t, { ...a, viewers: n });
           });
         },
         CHANNEL_RECIPIENT_ADD: function (e) {
           let { channelId: t, user: n } = e,
-            a = S.values(m.BROADCASTS_BY_CHANNEL_ID(t))[0];
+            a = g.values(S.BROADCASTS_BY_CHANNEL_ID(t))[0];
           if (
             null == a ||
             null == a.viewers ||
             a.viewers.some(e => e.id === n.id)
           )
             return !1;
-          S.set(a.userId, { ...a, viewers: [...a.viewers, new o.default(n)] });
+          g.set(a.userId, { ...a, viewers: [...a.viewers, new o.default(n)] });
         },
         CHANNEL_RECIPIENT_REMOVE: function (e) {
           let { channelId: t, user: n } = e,
-            a = S.values(m.BROADCASTS_BY_CHANNEL_ID(t))[0];
+            a = g.values(S.BROADCASTS_BY_CHANNEL_ID(t))[0];
           if (null == a || null == a.viewers) return !1;
-          S.set(a.userId, {
+          g.set(a.userId, {
             ...a,
             viewers: a.viewers.filter(e => e.id !== n.id),
           });
@@ -952,10 +953,10 @@
         CHANNEL_CREATE: function (e) {
           var t;
           let { channel: n } = e,
-            a = S.values(m.BROADCASTS_BY_CHANNEL_ID(n.id))[0];
+            a = g.values(S.BROADCASTS_BY_CHANNEL_ID(n.id))[0];
           if (null == a) return !1;
           let r = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
-          S.set(a.userId, {
+          g.set(a.userId, {
             ...a,
             viewers: r
               .filter(e => e.id !== a.userId)
@@ -963,7 +964,7 @@
           });
         },
         LOGOUT: function () {
-          h.clear(), E.clear(), C.clear(), (p = []), S.clear();
+          E.clear(), C.clear(), p.clear(), (m = []), g.clear();
         },
       });
     },
@@ -1382,8 +1383,8 @@
             maxVisibleUsers: v = 3,
           } = e,
           [A, x] = r.useState(!1),
-          L = r.useRef(new d.DelayedCall(150, () => x(!1))),
-          R = (0, o.useStateFromStoresArray)(
+          R = r.useRef(new d.DelayedCall(150, () => x(!1))),
+          L = (0, o.useStateFromStoresArray)(
             [E.default, C.default],
             () => {
               if (l.type === _.ParticipantTypes.STREAM) {
@@ -1403,10 +1404,10 @@
             [l]
           ),
           y = r.useCallback(() => {
-            L.current.cancel(), x(!0);
+            R.current.cancel(), x(!0);
           }, []),
           P = r.useCallback(() => {
-            L.current.delay();
+            R.current.delay();
           }, []),
           D = r.useCallback(
             (e, t) => {
@@ -1424,17 +1425,17 @@
             },
             [P, y]
           );
-        if (0 === R.length) return null;
+        if (0 === L.length) return null;
         if (m)
           return (0, a.jsx)(N, {
             maxVisibleUsers: v,
-            users: R,
+            users: L,
             guildId: s,
             channelId: t,
             className: p,
             participantType: l.type,
           });
-        let b = u(R)
+        let b = u(L)
           .take(v)
           .map(e =>
             (0, a.jsx)(
@@ -1450,10 +1451,10 @@
           )
           .value();
         return (
-          R.length > v &&
+          L.length > v &&
             (b[b.length - 1] = (0, a.jsxs)(
               "div",
-              { className: I.overflow, children: ["+", R.length - v + 1] },
+              { className: I.overflow, children: ["+", L.length - v + 1] },
               "overflow"
             )),
           (0, a.jsx)(h.default, {
@@ -1468,7 +1469,7 @@
                     handleUserContextMenu: D,
                     guildId: s,
                     channelId: t,
-                    users: R,
+                    users: L,
                     disableInteraction: g,
                   }),
                 shouldShow: A,
@@ -1918,7 +1919,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return R;
           },
         });
       var a = n("37983");
@@ -2042,7 +2043,7 @@
             ],
           });
         };
-      function L(e) {
+      function R(e) {
         let {
             focused: t,
             type: n,
@@ -2270,7 +2271,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-e3f119821045d8a851d07a5389111f006b2c286d",
+          release: "discord_web-d3d22def98e0b16cd0627e8c4b8bac2565388885",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2340,8 +2341,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "268904"), "268904")),
-          a.setTag("builtAt", String("1708917324467"));
+          a.setTag("buildNumber", ((e = "268912"), "268912")),
+          a.setTag("builtAt", String("1708956567909"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -3459,8 +3460,8 @@
               ? t
               : null,
           x = v(n, r, l),
-          L = (0, o.default)(O, M),
-          R = (0, u.default)(O, M, g.NOOP_NULL),
+          R = (0, o.default)(O, M),
+          L = (0, u.default)(O, M, g.NOOP_NULL),
           y =
             null == O
               ? (0, a.jsx)(s.MenuItem, {
@@ -3475,10 +3476,10 @@
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "stream-settings",
                           label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-                          children: L,
+                          children: R,
                         })
                       : null,
-                    h ? R : null,
+                    h ? L : null,
                     N
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "change-windows",
@@ -4647,7 +4648,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return E;
+            return C;
           },
         });
       var a = n("37983"),
@@ -4660,56 +4661,57 @@
         d = n("506885"),
         c = n("217513"),
         f = n("845579"),
-        h = n("491595"),
-        E = function (e) {
+        h = n("49111"),
+        E = n("491595"),
+        C = function (e) {
           let {
               style: t,
               src: n,
-              backgroundSrc: E,
-              userId: C,
-              pulseSpeakingIndicator: p = !1,
-              speaking: m = !1,
-              ...S
+              backgroundSrc: C,
+              userId: p,
+              pulseSpeakingIndicator: m = !1,
+              speaking: S = !1,
+              ...g
             } = e,
-            g = null != E ? E : n,
-            _ = (0, l.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css),
-            T = (0, u.useCallBannerBackgroundExperiment)(
+            _ = null != C ? C : n,
+            T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css),
+            v = (0, u.useCallBannerBackgroundExperiment)(
               !0,
               "VideoBackground-web"
             ).enabled,
-            v = (0, c.default)(null != C ? C : ""),
-            I =
-              null == v
+            I = (0, c.default)(null != p ? p : h.EMPTY_STRING_USER_ID),
+            A =
+              null == I
                 ? void 0
-                : v.getBannerURL({
+                : I.getBannerURL({
                     size: 1024,
                     canAnimate: f.GifAutoPlay.getSetting(),
                   });
           if (
             (r.useEffect(() => {
-              null != C && T && (0, d.default)(C, void 0, { dispatchWait: !0 });
-            }, [T, C]),
+              null != p && v && (0, d.default)(p, void 0, { dispatchWait: !0 });
+            }, [v, p]),
             null == n)
           )
             return null;
-          let A = (0, a.jsx)(i.Avatar, {
-              className: h.avatarWrapper,
+          let M = (0, a.jsx)(i.Avatar, {
+              className: E.avatarWrapper,
               src: n,
-              ...S,
+              ...g,
             }),
-            M = { ...t, backgroundColor: _ };
+            N = { ...t, backgroundColor: T };
           return (
-            null != I &&
-              m &&
-              T &&
-              ((M.backgroundImage = "url(".concat(I, ")")),
-              (M.backgroundSize = "cover")),
+            null != A &&
+              S &&
+              v &&
+              ((N.backgroundImage = "url(".concat(A, ")")),
+              (N.backgroundSize = "cover")),
             (0, a.jsx)("div", {
-              style: M,
-              className: h.background,
-              children: p
-                ? (0, a.jsx)(o.default, { shouldAnimate: m, children: A })
-                : A,
+              style: N,
+              className: E.background,
+              children: m
+                ? (0, a.jsx)(o.default, { shouldAnimate: S, children: M })
+                : M,
             })
           );
         };
@@ -5316,4 +5318,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4819.ffd76106e1845a85de52.js.map
+//# sourceMappingURL=4819.e880a59f138deeb8987a.js.map

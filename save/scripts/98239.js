@@ -62410,7 +62410,7 @@
         initialize(e) {
           (h = null != e ? e : {}),
             !(function () {
-              for (let [e, t] of Object.entries(h))
+              for (let [e, t] of l.default.entries(h))
                 for (let [n, s] of l.default.entries(t)) {
                   let t = s[0];
                   null != t &&
@@ -65319,7 +65319,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return V;
+            return R;
           },
         }),
         n("222007"),
@@ -65332,65 +65332,66 @@
         d = n("913144"),
         u = n("309570"),
         l = n("32346"),
-        f = n("271938"),
-        _ = n("697218"),
-        c = n("49111");
-      let g = Object.freeze([]),
-        m = {},
+        f = n("299039"),
+        _ = n("271938"),
+        c = n("697218"),
+        g = n("49111");
+      let m = Object.freeze([]),
         h = {},
         v = {},
         E = {},
-        p = {};
-      function y(e, t) {
-        let n = m[e];
+        p = {},
+        y = {};
+      function T(e, t) {
+        let n = h[e];
         return null != n ? n[t] : null;
       }
-      let T = e => {
+      let C = e => {
           switch (e.type) {
-            case c.ActivityTypes.CUSTOM_STATUS:
+            case g.ActivityTypes.CUSTOM_STATUS:
               return 4;
-            case c.ActivityTypes.COMPETING:
+            case g.ActivityTypes.COMPETING:
               return 3;
-            case c.ActivityTypes.STREAMING:
+            case g.ActivityTypes.STREAMING:
               return 2;
-            case c.ActivityTypes.PLAYING:
+            case g.ActivityTypes.PLAYING:
               return 1;
             default:
               return 0;
           }
         },
-        C = e => ((0, u.default)(e) ? 1 : 0);
-      function I(e, t) {
+        I = e => ((0, u.default)(e) ? 1 : 0);
+      function S(e, t) {
         var n, s, i, r, a;
         return (
           (n = e),
-          T(t) - T(n) ||
-            ((s = e), C(t) - C(s)) ||
+          C(t) - C(n) ||
+            ((s = e), I(t) - I(s)) ||
             ((i = e),
             (null !== (r = t.created_at) && void 0 !== r ? r : 0) -
               (null !== (a = i.created_at) && void 0 !== a ? a : 0))
         );
       }
-      function S(e) {
-        if ((delete h[e], delete v[e], delete E[e], null == m[e])) return;
-        let [t] = a.sortBy(m[e], e => -e.timestamp);
-        t.status !== c.StatusTypes.OFFLINE
-          ? ((h[e] = t.status),
-            (v[e] = t.activities),
-            null != t.clientStatus && (E[e] = t.clientStatus))
-          : a.every(m[e], e => e.status === c.StatusTypes.OFFLINE) &&
-            delete m[e];
-      }
       function A(e) {
-        let t = m[e];
-        if (null == t) return;
-        let n = a.maxBy(Object.values(t), e => e.timestamp);
-        n.status !== c.StatusTypes.OFFLINE &&
-          ((h[e] = n.status),
-          (v[e] = n.activities),
-          null != n.clientStatus && (E[e] = n.clientStatus));
+        if ((delete v[e], delete E[e], delete p[e], null == h[e])) return;
+        let [t] = a.sortBy(h[e], e => -e.timestamp);
+        t.status !== g.StatusTypes.OFFLINE
+          ? ((v[e] = t.status),
+            (E[e] = t.activities),
+            null != t.clientStatus && (p[e] = t.clientStatus))
+          : a.every(h[e], e => e.status === g.StatusTypes.OFFLINE) &&
+            delete h[e];
       }
       function D(e) {
+        let t = h[e];
+        if (null == t) return;
+        let n = a.maxBy(Object.values(t), e => e.timestamp);
+        n.status !== g.StatusTypes.OFFLINE &&
+          ((v[e] = n.status),
+          (E[e] = n.activities),
+          null != n.clientStatus && (p[e] = n.clientStatus));
+      }
+      function N(e) {
         let {
           guildId: t,
           userId: n,
@@ -65398,21 +65399,21 @@
           clientStatus: r,
           activities: a,
         } = e;
-        if (n === f.default.getId()) return !1;
-        let o = m[n];
+        if (n === _.default.getId()) return !1;
+        let o = h[n];
         if (null == o) {
-          if (s === c.StatusTypes.OFFLINE) return !1;
-          o = m[n] = {};
+          if (s === g.StatusTypes.OFFLINE) return !1;
+          o = h[n] = {};
         }
-        if (s === c.StatusTypes.OFFLINE)
+        if (s === g.StatusTypes.OFFLINE)
           o[t] = {
             status: s,
             clientStatus: r,
-            activities: g,
+            activities: m,
             timestamp: Date.now(),
           };
         else {
-          let e = a.length > 1 ? [...a].sort(I) : a,
+          let e = a.length > 1 ? [...a].sort(S) : a,
             n = o[t];
           (a = null != n && i(n.activities, e) ? n.activities : e),
             (o[t] = {
@@ -65422,9 +65423,9 @@
               timestamp: Date.now(),
             });
         }
-        return delete p[n], S(n), !0;
+        return delete y[n], A(n), !0;
       }
-      function N(e) {
+      function O(e) {
         let {
           guildId: t,
           userId: n,
@@ -65433,39 +65434,39 @@
           activities: r,
           timestamp: a,
         } = e;
-        if (n === f.default.getId()) return;
-        let o = m[n];
+        if (n === _.default.getId()) return;
+        let o = h[n];
         if (null == o) {
-          if (s === c.StatusTypes.OFFLINE) return;
-          o = m[n] = {};
+          if (s === g.StatusTypes.OFFLINE) return;
+          o = h[n] = {};
         }
-        if (s === c.StatusTypes.OFFLINE)
+        if (s === g.StatusTypes.OFFLINE)
           o[t] = {
             status: s,
             clientStatus: i,
-            activities: g,
+            activities: m,
             timestamp: Date.now(),
           };
         else {
-          let e = r.length > 1 ? [...r].sort(I) : r;
+          let e = r.length > 1 ? [...r].sort(S) : r;
           o[t] = { status: s, clientStatus: i, activities: e, timestamp: a };
         }
       }
-      function O(e, t) {
-        if (t === f.default.getId()) return !1;
-        let n = m[t];
+      function P(e, t) {
+        if (t === _.default.getId()) return !1;
+        let n = h[t];
         if (null == n || null == n[e]) return !1;
-        delete n[e], 0 === Object.keys(n).length && delete m[t], S(t);
+        delete n[e], 0 === Object.keys(n).length && delete h[t], A(t);
       }
-      function P(e) {
-        for (let t of Object.keys(m)) O(e, t);
+      function b(e) {
+        for (let t of f.default.keys(h)) P(e, t);
       }
-      class b extends o.default.Store {
+      class V extends o.default.Store {
         initialize() {
-          this.waitFor(f.default, l.default);
+          this.waitFor(_.default, l.default);
         }
         setCurrentUserOnConnectionOpen(e, t) {
-          (h[f.default.getId()] = e), (v[f.default.getId()] = t);
+          (v[_.default.getId()] = e), (E[_.default.getId()] = t);
         }
         getStatus(e) {
           var t, n;
@@ -65476,17 +65477,17 @@
             i =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
-                : c.StatusTypes.OFFLINE,
-            r = _.default.getUser(e);
+                : g.StatusTypes.OFFLINE,
+            r = c.default.getUser(e);
           if (
             (null != r &&
-              r.hasFlag(c.UserFlags.BOT_HTTP_INTERACTIONS) &&
-              (i = c.StatusTypes.UNKNOWN),
+              r.hasFlag(g.UserFlags.BOT_HTTP_INTERACTIONS) &&
+              (i = g.StatusTypes.UNKNOWN),
             null == r ? void 0 : r.isClyde())
           )
-            return c.StatusTypes.ONLINE;
-          if (null == s) return null !== (t = h[e]) && void 0 !== t ? t : i;
-          let a = y(e, s);
+            return g.StatusTypes.ONLINE;
+          if (null == s) return null !== (t = v[e]) && void 0 !== t ? t : i;
+          let a = T(e, s);
           return null !== (n = null == a ? void 0 : a.status) && void 0 !== n
             ? n
             : i;
@@ -65498,10 +65499,10 @@
               : null;
           if (null == t) {
             var n;
-            return null !== (n = v[e]) && void 0 !== n ? n : g;
+            return null !== (n = E[e]) && void 0 !== n ? n : m;
           }
-          let s = y(e, t);
-          return null == s || null == s.activities ? g : s.activities;
+          let s = T(e, t);
+          return null == s || null == s.activities ? m : s.activities;
         }
         getPrimaryActivity(e) {
           let t =
@@ -65509,14 +65510,14 @@
                 ? arguments[1]
                 : null,
             n = this.getActivities(e, t).filter(
-              e => e.type !== c.ActivityTypes.HANG_STATUS
+              e => e.type !== g.ActivityTypes.HANG_STATUS
             );
           return n[0];
         }
         getAllApplicationActivities(e) {
           let t = [];
-          for (let n of Object.keys(v)) {
-            let s = v[n];
+          for (let n of f.default.keys(E)) {
+            let s = E[n];
             for (let i of s)
               i.application_id === e && t.push({ userId: n, activity: i });
           }
@@ -65537,51 +65538,51 @@
           return this.getActivities(e, n).find(t);
         }
         getActivityMetadata(e) {
-          return p[e];
+          return y[e];
         }
         getUserIds() {
-          return Object.keys(v);
+          return f.default.keys(E);
         }
         isMobileOnline(e) {
-          let t = E[e];
+          let t = p[e];
           return (
             null != t &&
-            t[c.ClientTypes.MOBILE] === c.StatusTypes.ONLINE &&
-            t[c.ClientTypes.DESKTOP] !== c.StatusTypes.ONLINE
+            t[g.ClientTypes.MOBILE] === g.StatusTypes.ONLINE &&
+            t[g.ClientTypes.DESKTOP] !== g.StatusTypes.ONLINE
           );
         }
         getClientStatus(e) {
-          return E[e];
+          return p[e];
         }
         getState() {
           return {
-            presencesForGuilds: m,
-            statuses: h,
-            activities: v,
-            activityMetadata: p,
-            clientStatuses: E,
+            presencesForGuilds: h,
+            statuses: v,
+            activities: E,
+            activityMetadata: y,
+            clientStatuses: p,
           };
         }
       }
-      b.displayName = "PresenceStore";
-      var V = new b(d.default, {
+      V.displayName = "PresenceStore";
+      var R = new V(d.default, {
         CONNECTION_OPEN: function () {
           return !0;
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
           let { guilds: t, presences: n } = e,
-            s = f.default.getId();
-          (m = {}),
-            (p = {}),
-            (h = { [s]: h[s] }),
+            s = _.default.getId();
+          (h = {}),
+            (y = {}),
             (v = { [s]: v[s] }),
-            (E = { [s]: {} });
+            (E = { [s]: E[s] }),
+            (p = { [s]: {} });
           let i = new Set(),
             r = Date.now();
           t.forEach(e => {
             e.presences.forEach(t => {
               let { user: n, status: s, clientStatus: a, activities: o } = t;
-              N({
+              O({
                 guildId: e.id,
                 userId: n.id,
                 status: s,
@@ -65595,8 +65596,8 @@
             n.forEach(e => {
               let { user: t, status: n, clientStatus: s, activities: a } = e;
               null != t &&
-                (N({
-                  guildId: c.ME,
+                (O({
+                  guildId: g.ME,
                   userId: t.id,
                   status: n,
                   clientStatus: s,
@@ -65606,20 +65607,20 @@
                 i.add(t.id));
             }),
             i.delete(s),
-            i.forEach(A);
+            i.forEach(D);
         },
         OVERLAY_INITIALIZE: function (e) {
           let { presences: t } = e;
-          (m = t.presencesForGuilds),
-            (h = t.statuses),
-            (v = t.activities),
-            (p = t.activityMetadata);
+          (h = t.presencesForGuilds),
+            (v = t.statuses),
+            (E = t.activities),
+            (y = t.activityMetadata);
         },
         GUILD_CREATE: function (e) {
           let { guild: t } = e;
           t.presences.forEach(e => {
             let { user: n, status: s, clientStatus: i, activities: r } = e;
-            D({
+            N({
               guildId: t.id,
               userId: n.id,
               status: s,
@@ -65630,11 +65631,11 @@
         },
         GUILD_DELETE: function (e) {
           let { guild: t } = e;
-          P(t.id);
+          b(t.id);
         },
         GUILD_MEMBER_REMOVE: function (e) {
           let { guildId: t, user: n } = e;
-          return O(t, n.id);
+          return P(t, n.id);
         },
         PRESENCE_UPDATES: function (e) {
           let { updates: t } = e;
@@ -65647,8 +65648,8 @@
                 clientStatus: i,
                 activities: r,
               } = e;
-              return D({
-                guildId: null != t ? t : c.ME,
+              return N({
+                guildId: null != t ? t : g.ME,
                 userId: n.id,
                 status: s,
                 clientStatus: i,
@@ -65659,12 +65660,12 @@
         },
         PRESENCES_REPLACE: function (e) {
           let { presences: t } = e;
-          P(c.ME),
+          b(g.ME),
             t.forEach(e => {
               let { user: t, status: n, clientStatus: s, activities: i } = e;
               null != t &&
-                D({
-                  guildId: c.ME,
+                N({
+                  guildId: g.ME,
                   userId: t.id,
                   status: n,
                   clientStatus: s,
@@ -65674,13 +65675,13 @@
         },
         ACTIVITY_METADATA_UPDATE: function (e) {
           let { userId: t, metadata: n } = e;
-          return (p[t] = n), !1;
+          return (y[t] = n), !1;
         },
         THREAD_MEMBER_LIST_UPDATE: function (e) {
           let { guildId: t, members: n } = e;
           n.forEach(e => {
             null != e.presence &&
-              D({
+              N({
                 guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
@@ -65694,7 +65695,7 @@
           null == n ||
             n.forEach(e => {
               null != e.presence &&
-                D({
+                N({
                   guildId: t,
                   userId: e.userId,
                   status: e.presence.status,
@@ -65704,9 +65705,9 @@
             });
         },
         SELF_PRESENCE_STORE_UPDATE: function (e) {
-          let t = f.default.getId();
-          if (h[t] === e.status && v[t] === e.activities) return !1;
-          (h[t] = e.status), (v[t] = e.activities), delete p[t];
+          let t = _.default.getId();
+          if (v[t] === e.status && E[t] === e.activities) return !1;
+          (v[t] = e.status), (E[t] = e.activities), delete y[t];
         },
       });
     },
@@ -74169,31 +74170,31 @@
       n.r(t),
         n.d(t, {
           getStoreListingLocation: function () {
-            return I;
-          },
-          getApplicationStoreListingLocation: function () {
             return S;
           },
-          getAssetURL: function () {
+          getApplicationStoreListingLocation: function () {
             return A;
           },
-          httpGetWithCountryCodeQuery: function () {
+          getAssetURL: function () {
             return D;
           },
-          nativePlatformTypeToSKUOperatingSystem: function () {
+          httpGetWithCountryCodeQuery: function () {
             return N;
           },
-          skuOperatingSystemToText: function () {
+          nativePlatformTypeToSKUOperatingSystem: function () {
             return O;
           },
-          getPrimarySKUForApplication: function () {
+          skuOperatingSystemToText: function () {
             return P;
           },
+          getPrimarySKUForApplication: function () {
+            return b;
+          },
           getSocialRecommendationReasons: function () {
-            return V;
+            return R;
           },
           getNonSocialRecommendationReasons: function () {
-            return k;
+            return M;
           },
         }),
         n("424973"),
@@ -74218,11 +74219,12 @@
         v = n("568734"),
         E = n("449008"),
         p = n("773336"),
-        y = n("49111"),
-        T = n("782340");
+        y = n("299039"),
+        T = n("49111"),
+        C = n("782340");
       d.shim();
-      let C = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
-      function I(e, t) {
+      let I = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
+      function S(e, t) {
         let {
           analyticsSource: n,
           analyticsProperties: s,
@@ -74234,20 +74236,20 @@
         return {
           pathname:
             null != a && null != o
-              ? y.Routes.CHANNEL(o, a, e)
-              : y.Routes.APPLICATION_STORE_LISTING_SKU(e, r),
+              ? T.Routes.CHANNEL(o, a, e)
+              : T.Routes.APPLICATION_STORE_LISTING_SKU(e, r),
           state: { analyticsSource: n, analyticsProperties: s },
           search: null != i ? "?store_listing_id=".concat(i) : "",
         };
       }
-      function S(e, t) {
+      function A(e, t) {
         let { analyticsSource: n, analyticsProperties: s, slug: i } = t;
         return {
-          pathname: y.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, i),
+          pathname: T.Routes.APPLICATION_STORE_LISTING_APPLICATION(e, i),
           state: { analyticsSource: n, analyticsProperties: s },
         };
       }
-      function A(e, t, n, s) {
+      function D(e, t, n, s) {
         var i;
         let r;
         let a = window.GLOBAL_ENV.CDN_HOST;
@@ -74263,7 +74265,7 @@
             default:
               s = "webp";
           }
-        "webp" === s && !C && (s = "png");
+        "webp" === s && !I && (s = "png");
         let o = "string" == typeof t ? t : t.id,
           d = ((i = "https:"), "https:");
         return (
@@ -74278,7 +74280,7 @@
               : ""
                   .concat(d)
                   .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                  .concat(y.Endpoints.STORE_ASSET(e, o, s))),
+                  .concat(T.Endpoints.STORE_ASSET(e, o, s))),
           null != n &&
             (r += "?size=".concat(
               (0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)())
@@ -74286,7 +74288,7 @@
           r
         );
       }
-      async function D(e) {
+      async function N(e) {
         var t, n, s, i;
         let r =
           !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -74346,46 +74348,46 @@
         }
         return l.default.get(e);
       }
-      function N(e) {
+      function O(e) {
         switch (e) {
           case p.PlatformTypes.WINDOWS:
-            return y.OperatingSystems.WINDOWS;
+            return T.OperatingSystems.WINDOWS;
           case p.PlatformTypes.OSX:
-            return y.OperatingSystems.MACOS;
+            return T.OperatingSystems.MACOS;
           case p.PlatformTypes.LINUX:
-            return y.OperatingSystems.LINUX;
+            return T.OperatingSystems.LINUX;
           default:
             return null;
         }
       }
-      function O(e) {
+      function P(e) {
         switch (e) {
-          case y.OperatingSystems.WINDOWS:
-            return T.default.Messages.WINDOWS;
-          case y.OperatingSystems.MACOS:
-            return T.default.Messages.MACOS;
-          case y.OperatingSystems.LINUX:
-            return T.default.Messages.LINUX;
+          case T.OperatingSystems.WINDOWS:
+            return C.default.Messages.WINDOWS;
+          case T.OperatingSystems.MACOS:
+            return C.default.Messages.MACOS;
+          case T.OperatingSystems.LINUX:
+            return C.default.Messages.LINUX;
         }
         throw Error("Unknown operating system value: ".concat(e));
       }
-      function P(e, t, n) {
+      function b(e, t, n) {
         let s = t.getApplication(e);
         return null == s || null == s.primarySkuId
           ? null
           : n.get(s.primarySkuId);
       }
-      let b = [];
-      function V(e, t, n, s, r) {
+      let V = [];
+      function R(e, t, n, s, r) {
         let a = t.get(e);
-        if (null == a) return b;
+        if (null == a) return V;
         let o = a.applicationId,
           d = [],
           u = [],
           l = (function (e, t, n) {
             var s;
             let i = null !== (s = n.getNowPlaying(e)) && void 0 !== s ? s : {},
-              r = Object.keys(i),
+              r = y.default.keys(i),
               a = r
                 .map(e => {
                   let n = t.getUser(e);
@@ -74397,7 +74399,7 @@
                 .sort((e, t) => t.startTime - e.startTime);
             return 0 === a.length
               ? null
-              : { type: y.StoreRecommendationTypes.NOW_PLAYING, userInfo: a };
+              : { type: T.StoreRecommendationTypes.NOW_PLAYING, userInfo: a };
           })(o, n, s);
         null != l &&
           (d.push(l),
@@ -74423,37 +74425,37 @@
                 .sort((e, t) => t.endTime - e.endTime);
               return 0 === i.length
                 ? null
-                : { type: y.StoreRecommendationTypes.EVER_PLAYED, userInfo: i };
+                : { type: T.StoreRecommendationTypes.EVER_PLAYED, userInfo: i };
             })(o, n, r);
             null != e && d.push(e);
           }
         }
         return d;
       }
-      let R = [];
-      function k(e, t, n) {
+      let k = [];
+      function M(e, t, n) {
         let s = t.get(e),
           i = n.getForSKU(e);
-        if (null == s || null == i) return R;
+        if (null == s || null == i) return k;
         let r = [];
-        (0, v.hasFlag)(s.flags, y.SKUFlags.HAS_FREE_PREMIUM_CONTENT) &&
-          r.push({ type: y.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT });
+        (0, v.hasFlag)(s.flags, T.SKUFlags.HAS_FREE_PREMIUM_CONTENT) &&
+          r.push({ type: T.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT });
         let o = s.releaseDate;
         return (
           null != o &&
             3 > a().diff(o, "months") &&
-            (s.accessType === y.SKUAccessTypes.EARLY_ACCESS
+            (s.accessType === T.SKUAccessTypes.EARLY_ACCESS
               ? r.push({
-                  type: y.StoreRecommendationTypes.EARLY_ACCESS,
+                  type: T.StoreRecommendationTypes.EARLY_ACCESS,
                   releaseDate: o,
                 })
               : r.push({
-                  type: y.StoreRecommendationTypes.RECENT_RELEASE_DATE,
+                  type: T.StoreRecommendationTypes.RECENT_RELEASE_DATE,
                   releaseDate: o,
                 })),
           null != i.flavorText &&
             r.push({
-              type: y.StoreRecommendationTypes.FLAVOR_TEXT,
+              type: T.StoreRecommendationTypes.FLAVOR_TEXT,
               flavorText: i.flavorText,
             }),
           r
@@ -76838,4 +76840,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98239.9cb590d0d5f18a0fd462.js.map
+//# sourceMappingURL=98239.5c787bad59ce9705ea62.js.map

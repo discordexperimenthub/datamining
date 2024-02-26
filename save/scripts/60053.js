@@ -42473,7 +42473,9 @@
             var e;
             return C.default.getVoiceState(
               t,
-              null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e ? e : ""
+              null !== (e = null == Z ? void 0 : Z.id) && void 0 !== e
+                ? e
+                : w.EMPTY_STRING_USER_ID
             );
           }),
           q =
@@ -65088,4 +65090,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.0bac6834ca0075b22c50.js.map
+//# sourceMappingURL=60053.ecd04deff015bbd3686e.js.map

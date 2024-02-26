@@ -26058,8 +26058,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("268912", ", Version Hash: ")
-          .concat("d3d22def98e0b16cd0627e8c4b8bac2565388885")
+          .concat("268915", ", Version Hash: ")
+          .concat("7e09c99508d587cdb1a648b166a4d4101228622f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29133,12 +29133,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "268912"), "268912"));
+        let _ = parseInt(((e = "268915"), "268915"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "268912"
+                "268915"
               )
             ),
             (_ = 0)),
@@ -33028,22 +33028,24 @@
               null != e.roles &&
                 (function (e, _) {
                   var E, t;
-                  Object.keys(
-                    null !==
-                      (t =
-                        null === (E = N.default.getGuild(e)) || void 0 === E
-                          ? void 0
-                          : E.roles) && void 0 !== t
-                      ? t
-                      : {}
-                  ).forEach(E => {
-                    !_.has(E) &&
-                      r.default.dispatch({
-                        type: "GUILD_ROLE_DELETE",
-                        guildId: e,
-                        roleId: E,
-                      });
-                  });
+                  O.default
+                    .keys(
+                      null !==
+                        (t =
+                          null === (E = N.default.getGuild(e)) || void 0 === E
+                            ? void 0
+                            : E.roles) && void 0 !== t
+                        ? t
+                        : {}
+                    )
+                    .forEach(E => {
+                      !_.has(E) &&
+                        r.default.dispatch({
+                          type: "GUILD_ROLE_DELETE",
+                          guildId: e,
+                          roleId: E,
+                        });
+                    });
                 })(e.guild_id, new Set(e.roles)),
               null != e.emojis &&
                 (function (e, _) {
@@ -34996,8 +34998,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708956567909",
-                    build_number: "268912",
+                    built_at: "1708958327343",
+                    build_number: "268915",
                   },
                 },
                 retries: 1,
@@ -51468,4 +51470,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.71073aa96e9353fc67b9.js.map
+//# sourceMappingURL=77761.1d6e53f1e6611171b458.js.map

@@ -22564,10 +22564,10 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return y;
+            return x;
           },
           unsetCommand: function () {
-            return x;
+            return O;
           },
         }),
         n("222007"),
@@ -22593,17 +22593,18 @@
         C = n("939563"),
         T = n("385887"),
         v = n("566819"),
-        I = n("406291");
-      let _ = new Set(["applicationCommandOption"]),
-        N = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
-        A = new Set(["line", "applicationCommand"]);
-      function y(e, t, n, d) {
+        I = n("49111"),
+        _ = n("406291");
+      let N = new Set(["applicationCommandOption"]),
+        A = new Set([l.ApplicationCommandOptionType.ATTACHMENT]),
+        y = new Set(["line", "applicationCommand"]);
+      function x(e, t, n, d) {
         let {
           insertData: m,
           isInline: p,
           isVoid: h,
-          onChange: y,
-          deleteBackward: b,
+          onChange: I,
+          deleteBackward: x,
           deleteForward: j,
           deleteFragment: U,
         } = e;
@@ -22655,18 +22656,18 @@
           }
           return m(n);
         }),
-          (e.isInline = e => !!_.has(e.type) || p(e)),
+          (e.isInline = e => !!N.has(e.type) || p(e)),
           (e.isVoid = e =>
-            !!("applicationCommandOption" === e.type && N.has(e.optionType)) ||
+            !!("applicationCommandOption" === e.type && A.has(e.optionType)) ||
             h(e)),
           (e.deleteBackward = t => {
-            L(e, () => b(t));
+            P(e, () => x(t));
           }),
           (e.deleteForward = t => {
-            L(e, () => j(t));
+            P(e, () => j(t));
           }),
           (e.deleteFragment = t => {
-            L(e, () => U(t));
+            P(e, () => U(t));
           });
         let D = null,
           k = null,
@@ -22705,7 +22706,7 @@
                         commandChanged: d,
                         previousOptionValues: m,
                       } = e,
-                      { command: p, commandText: h } = M(t),
+                      { command: p, commandText: h } = L(t),
                       g = n.activeCommand;
                     if (
                       !r ||
@@ -22715,12 +22716,12 @@
                         (null == g ? void 0 : g.inputType) !==
                           o.ApplicationCommandInputType.BUILT_IN_INTEGRATION)
                     )
-                      return null != p && x(t, a.id, g, !0), null;
+                      return null != p && O(t, a.id, g, !0), null;
                     if (null != p) {
                       if (T.EditorUtils.isEditorEmpty(t) || null == g)
-                        return x(t, a.id, g, !1), null;
+                        return O(t, a.id, g, !1), null;
                       let e = ""
-                        .concat(I.COMMAND_SENTINEL)
+                        .concat(_.COMMAND_SENTINEL)
                         .concat(p.displayName);
                       if (
                         null == h ||
@@ -22728,7 +22729,7 @@
                         (0 === E.getOptionNames(t).length &&
                           (h.length < e.length + 1 || " " !== h[e.length]))
                       )
-                        return x(t, a.id, g, !0), null;
+                        return O(t, a.id, g, !0), null;
                     } else {
                       if (null != g && d) {
                         let e = (function (e, t, n) {
@@ -22771,30 +22772,30 @@
                               h = m.toLocaleLowerCase(),
                               g = f.PREFIX_COMMAND_REGEX.exec(h);
                             null != g &&
-                              (h = I.COMMAND_SENTINEL + h.substring(g.length));
-                            let _ = ""
-                                .concat(I.COMMAND_SENTINEL)
+                              (h = _.COMMAND_SENTINEL + h.substring(g.length));
+                            let I = ""
+                                .concat(_.COMMAND_SENTINEL)
                                 .concat(d.displayName)
                                 .toLocaleLowerCase(),
-                              A = ""
-                                .concat(I.COMMAND_SENTINEL)
+                              N = ""
+                                .concat(_.COMMAND_SENTINEL)
                                 .concat(d.name)
                                 .toLocaleLowerCase();
-                            h.startsWith(_) && h.length > _.length
-                              ? (p = m.substring(_.length).trim())
-                              : h.startsWith(A) &&
-                                h.length > A.length &&
-                                (p = m.substring(A.length).trim());
+                            h.startsWith(I) && h.length > I.length
+                              ? (p = m.substring(I.length).trim())
+                              : h.startsWith(N) &&
+                                h.length > N.length &&
+                                (p = m.substring(N.length).trim());
                             let y = [],
                               x = null,
-                              R = null;
+                              O = null;
                             if (null != d.options) {
                               let e = new Set();
                               if (null != c)
                                 for (let l of c) {
                                   e.add(l.name);
                                   let i =
-                                      null !== (r = P(n, t, l.name)) &&
+                                      null !== (r = b(n, t, l.name)) &&
                                       void 0 !== r
                                         ? r
                                         : l.text,
@@ -22814,10 +22815,10 @@
                                   (l.required || null != u[l.name])
                                 ) {
                                   let e, i;
-                                  p.length > 0 && !N.has(l.type)
+                                  p.length > 0 && !A.has(l.type)
                                     ? ((e = p), (p = ""))
                                     : (e =
-                                        null != (i = P(n, t, l.name)) ? i : "");
+                                        null != (i = b(n, t, l.name)) ? i : "");
                                   let a = {
                                     type: "applicationCommandOption",
                                     optionName: l.name,
@@ -22827,21 +22828,21 @@
                                   };
                                   y.push(a),
                                     0 === e.length && null == x && (x = a),
-                                    null == i && (R = a);
+                                    null == i && (O = a);
                                 }
                             }
                             (o =
                               p.length > 0
                                 ? ""
-                                    .concat(I.COMMAND_SENTINEL)
+                                    .concat(_.COMMAND_SENTINEL)
                                     .concat(d.displayName, " ")
                                     .concat(p.replace(/\r|\n/g, " "))
                                 : 0 === y.length
                                   ? ""
-                                      .concat(I.COMMAND_SENTINEL)
+                                      .concat(_.COMMAND_SENTINEL)
                                       .concat(d.displayName, " ")
                                   : ""
-                                      .concat(I.COMMAND_SENTINEL)
+                                      .concat(_.COMMAND_SENTINEL)
                                       .concat(d.displayName)),
                               y.unshift({ text: o });
                             let M = {
@@ -22874,21 +22875,21 @@
                                     x.optionName
                                   ),
                                   (L = x.optionName))
-                                : null != R
+                                : null != O
                                   ? (C.SlateTransforms.selectCommandOption(
                                       e,
-                                      R.optionName,
+                                      O.optionName,
                                       !1
                                     ),
-                                    (L = R.optionName))
+                                    (L = O.optionName))
                                   : C.SlateTransforms.resetSelectionToEnd(e),
-                              null == R && O(e, d),
+                              null == O && R(e, d),
                               L
                             );
                           })(t, a, n),
                           l = E.getOptionValues(t, g);
                         return (
-                          R({
+                          M({
                             guildId: a.guild_id,
                             channelId: a.id,
                             command: g,
@@ -22913,7 +22914,7 @@
                       let e = T.EditorUtils.richValue(t),
                         r = e[0],
                         u = r.children[0];
-                      if (A.has(r.type) && T.TextUtils.isText(u)) {
+                      if (y.has(r.type) && T.TextUtils.isText(u)) {
                         let e = (function (e, t) {
                           if (!e.startsWith("/")) return null;
                           let n = (0, c.getCommandQuery)(t, e.substring(1));
@@ -22959,7 +22960,7 @@
                       }
                     }
                     if (null != g && null != p) {
-                      var _;
+                      var I;
                       !(function (e, t) {
                         if (null == t.options || 0 === t.options.length)
                           return !1;
@@ -22998,7 +22999,7 @@
                           }),
                           !0)
                         );
-                      })(t, g) && O(t, g);
+                      })(t, g) && R(t, g);
                       let e = E.getOptionValues(t, g),
                         n = T.EditorUtils.above(t, {
                           match: e =>
@@ -23007,12 +23008,12 @@
                           mode: "lowest",
                         }),
                         l =
-                          null !== (_ = null == n ? void 0 : n[0].optionName) &&
-                          void 0 !== _
-                            ? _
+                          null !== (I = null == n ? void 0 : n[0].optionName) &&
+                          void 0 !== I
+                            ? I
                             : null;
                       return (
-                        R({
+                        M({
                           guildId: a.guild_id,
                           channelId: a.id,
                           command: g,
@@ -23050,12 +23051,12 @@
                   (G = h);
               }
             }
-            y();
+            I();
           }),
           e
         );
       }
-      function x(e, t, n, l) {
+      function O(e, t, n, l) {
         let [a] = T.EditorUtils.blocks(e)[0],
           s = l
             ? (0, S.serializeDescendant)(a, { mode: "plain" }).trimEnd()
@@ -23073,12 +23074,12 @@
         null != n &&
           i.setActiveCommand({ channelId: t, command: null, section: null });
       }
-      function O(e, t) {
+      function R(e, t) {
         if (
           null == t.options ||
           1 !== t.options.length ||
           !0 === t.options[0].required ||
-          N.has(t.options[0].type) ||
+          A.has(t.options[0].type) ||
           E.getOptionNames(e).length > 0
         )
           return !1;
@@ -23093,7 +23094,7 @@
           !(
             !l.text.startsWith(
               ""
-                .concat(I.COMMAND_SENTINEL)
+                .concat(_.COMMAND_SENTINEL)
                 .concat(t.displayName, " ")
                 .toLocaleLowerCase()
             ) || T.PointUtils.equals(a, s)
@@ -23112,7 +23113,7 @@
           !0)
         );
       }
-      function R(e) {
+      function M(e) {
         let {
           guildId: t,
           channelId: n,
@@ -23171,7 +23172,7 @@
         }
         h && i.updateOptionStates(n, m);
       }
-      function M(e) {
+      function L(e) {
         let t = E.getCommandBlock(e);
         if (null == t) return { command: null, commandText: null };
         let [n] = t,
@@ -23180,12 +23181,12 @@
           ? { command: n.command, commandText: l.text }
           : { command: n.command, commandText: null };
       }
-      function L(e, t) {
+      function P(e, t) {
         let n = E.getOptionNames(e)[0];
         t();
         let l = T.RangeUtils.toPoint(e.selection);
         if (null == l || n === E.getOptionNames(e)[0]) return;
-        let { command: i, commandText: a } = M(e);
+        let { command: i, commandText: a } = L(e);
         !(null == i || null == a || a.endsWith(" ")) &&
           T.PointUtils.equals(l, {
             path: v.FIRST_TEXT_PATH,
@@ -23193,7 +23194,7 @@
           }) &&
           C.SlateTransforms.insertText(e, " ");
       }
-      function P(e, t, n) {
+      function b(e, t, n) {
         var i, a, s, r, o;
         let u =
             null === (a = e.activeCommand) || void 0 === a
@@ -23221,7 +23222,9 @@
                 (u.type === l.ApplicationCommandOptionType.MENTIONABLE &&
                   (null === (r = p.default.getGuild(t.guild_id)) || void 0 === r
                     ? void 0
-                    : r.getRole(null != c ? c : "")) != null)
+                    : r.getRole(
+                        null != c ? c : I.EMPTY_STRING_GUILD_ROLE_ID
+                      )) != null)
               ? "<@&".concat(c, ">")
               : c;
       }
@@ -38705,7 +38708,7 @@
                 let t = S.default.getChannel(s),
                   a = T.default.getGuild(R),
                   o = C.default.getMembers(a.id),
-                  u = null == i ? a.roles[a.id] : a.roles[i],
+                  u = null == i ? a.roles[a.getEveryoneRoleId()] : a.roles[i],
                   m = r(o)
                     .filter(e => {
                       if ("@everyone" === p || e.roles.includes(i)) {
@@ -65090,4 +65093,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.ecd04deff015bbd3686e.js.map
+//# sourceMappingURL=60053.47f4a26e487ec6d40df0.js.map

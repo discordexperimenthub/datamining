@@ -50207,8 +50207,8 @@ html .progress__4ef76 {
   background-image: linear-gradient(270deg, #e82427 0%, #c81031 100%);
 }
 .planInfo_cd8cba {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   margin-top: 8px;
 }
 .buttons_c518ae {
@@ -109131,4 +109131,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ab964290a4932a390f30.css.map*/
+/*# sourceMappingURL=app.f803e919530f18e97d61.css.map*/

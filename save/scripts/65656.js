@@ -1049,6 +1049,9 @@
           getQuestByApplicationId: function () {
             return u;
           },
+          isQuestExpired: function () {
+            return o;
+          },
           questUserStatusFromServer: function () {
             return d;
           },
@@ -1193,8 +1196,7 @@
             .concat(location.host, "/quests/")
             .concat(e);
       function I(e, t) {
-        for (let [n, s] of e)
-          if (!o(s) && s.targetedContent.includes(t)) return s;
+        for (let [n, s] of e) if (s.targetedContent.includes(t)) return s;
         return null;
       }
       let h = e => {
@@ -1465,4 +1467,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.e4daf5ab729dd2a4b5bf.js.map
+//# sourceMappingURL=65656.c773fd194c23951853e6.js.map

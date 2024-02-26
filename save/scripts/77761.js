@@ -17559,6 +17559,11 @@
         AFFINITIES_MARKETING_HEADER_2:
           "{username} and {otherUsername} have more fun with Nitro",
         AFFINITIES_MARKETING_HEADER_1: "{username} has more fun with Nitro",
+        AFFINITIES_MARKETING_HEADER_V2_3:
+          "Join {username} and other friends on Nitro",
+        AFFINITIES_MARKETING_HEADER_V2_2:
+          "Join {username} and {otherUsername} on Nitro",
+        AFFINITIES_MARKETING_HEADER_V2_1: "Join {username} on Nitro",
         PICK_YOUR_PLAN: "Pick Your Plan",
         AND_MORE: "And more!",
         PREMIUM_TIER_0_MARKETING_COMPARISON_TABLE_ROW_LABEL_MONTHLY_PRICE:
@@ -24080,6 +24085,7 @@
         GEO_RESTRICTED_MODAL_BODY:
           "**{serverName}** is not available in your region.",
         QUESTS: "Quests",
+        QUEST: "{questName} Quest",
         QUESTS_AVAILABLE_THROUGH: "Available through {date}",
         QUESTS_SHOW_CODE: "Show code",
         QUESTS_CLAIM_REWARD: "Claim reward",
@@ -24129,6 +24135,9 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser you can go to **User Settings > Gift Inventory** and accept the quest there.",
+        QUESTS_MOBILE_EMBED_TITLE: "Quests aren’t available on mobile...yet.",
+        QUESTS_MOBILE_EMBED_BODY:
+          "From your desktop Discord app or browser you can go to \nUser Settings > Gift Inventory and accept the quest there.",
         QUESTS_GET_THIS_GAME: "Get this game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
         QUESTS_SHARE_LINK: "Copy share link",
@@ -26061,8 +26070,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269012", ", Version Hash: ")
-          .concat("5743ee23d9515ab9a533801d8f08556f9cd182c0")
+          .concat("269019", ", Version Hash: ")
+          .concat("55b1987074650cbfba87dfd11de628d475da5f5b")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29136,12 +29145,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269012"), "269012"));
+        let _ = parseInt(((e = "269019"), "269019"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269012"
+                "269019"
               )
             ),
             (_ = 0)),
@@ -35001,8 +35010,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708977125416",
-                    build_number: "269012",
+                    built_at: "1708978336650",
+                    build_number: "269019",
                   },
                 },
                 retries: 1,
@@ -51473,4 +51482,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.fce9b882681ac2bcffee.js.map
+//# sourceMappingURL=77761.6032b45cbc104bd1c7aa.js.map

@@ -149,10 +149,10 @@
             return m;
           },
           getBlindIds: function () {
-            return L;
+            return b;
           },
           uploadCallscopeLogs: function () {
-            return b;
+            return L;
           },
           uploadCallscopeLogFiles: function () {
             return w;
@@ -185,13 +185,13 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function L(t, e, n) {
+      async function b(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
         return { blindChannelId: l, blindUserId: r };
       }
-      async function b(t, e, n, o) {
+      async function L(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
           if (
@@ -213,7 +213,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await L(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await b(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -375,8 +375,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "268930",
-          versionHash: "a51c7e721fd3d4daddb34a46d8147e436c0edb85",
+          buildNumber: "268934",
+          versionHash: "8328c5ae91a343ee1cfe4bf24ff2c1cb717ec3eb",
         };
       }
       n.r(e),
@@ -566,4 +566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.a592cbebef7cc4c000f0.js.map
+//# sourceMappingURL=18409.ed95272ca9a80c5cc4cc.js.map

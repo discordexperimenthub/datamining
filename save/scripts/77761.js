@@ -23826,8 +23826,6 @@
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER: "Chats can be a lot",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION:
           "Relax with Wumpus for as long as you need.",
-        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_MUTE: "Mute music",
-        INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_UNMUTE: "Unmute music",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Back to conversation",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT: "Wumpus vibing to music.",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Report them",
@@ -26068,8 +26066,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269052", ", Version Hash: ")
-          .concat("050bea69188e2163f9bf4323cecd4d0d7232af38")
+          .concat("269073", ", Version Hash: ")
+          .concat("62c8b0dc8b8ab37e45e3fe910e4dd3e7d38bea97")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29143,12 +29141,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269052"), "269052"));
+        let _ = parseInt(((e = "269073"), "269073"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269052"
+                "269073"
               )
             ),
             (_ = 0)),
@@ -35008,8 +35006,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708983387080",
-                    build_number: "269052",
+                    built_at: "1708985023542",
+                    build_number: "269073",
                   },
                 },
                 retries: 1,
@@ -51480,4 +51478,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.7ba88fba37f5b36e66e7.js.map
+//# sourceMappingURL=77761.9d43696a572e7c018c7e.js.map

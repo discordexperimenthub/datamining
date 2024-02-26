@@ -28066,21 +28066,21 @@
             return d;
           },
         });
-      var i = n("249654"),
-        r = n("65597"),
-        s = n("151426"),
-        a = n("271938"),
-        o = n("718517");
+      var i = n("65597"),
+        r = n("151426"),
+        s = n("271938"),
+        a = n("718517"),
+        o = n("299039");
       let l = {
-          [s.DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
-          [s.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
-          [s.DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
-          [s.DismissibleContent.SEEN_OLD_DESIGN]: 0,
+          [r.DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
+          [r.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
+          [r.DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
+          [r.DismissibleContent.SEEN_OLD_DESIGN]: 0,
         },
-        u = o.default.Millis.DAY;
+        u = a.default.Millis.DAY;
       function c(e) {
-        let t = (0, r.default)([a.default], () => a.default.getId()),
-          n = null != t ? i.default.age(t) : 0;
+        let t = (0, i.default)([s.default], () => s.default.getId()),
+          n = null != t ? o.default.age(t) : 0;
         return e.filter(e => {
           var t;
           let i = null !== (t = l[e]) && void 0 !== t ? t : u;
@@ -28090,9 +28090,9 @@
       function d(e) {
         var t;
         let n =
-            null != a.default.getId() ? i.default.age(a.default.getId()) : 0,
-          r = null !== (t = l[e]) && void 0 !== t ? t : u;
-        return n < r;
+            null != s.default.getId() ? o.default.age(s.default.getId()) : 0,
+          i = null !== (t = l[e]) && void 0 !== t ? t : u;
+        return n < i;
       }
     },
     543322: function (e, t, n) {
@@ -29050,11 +29050,11 @@
         r = n.n(i),
         s = n("210696"),
         a = n.n(s),
-        o = n("249654"),
-        l = n("519820"),
-        u = n("525065"),
-        c = n("305961"),
-        d = n("718517");
+        o = n("519820"),
+        l = n("525065"),
+        u = n("305961"),
+        c = n("718517"),
+        d = n("299039");
       function f(e, t, n) {
         let i = r(e),
           s = null != t ? r(t) : null,
@@ -29088,14 +29088,14 @@
         [a.v3("guild_age_range_days")]: e => {
           let { min: t, max: n } = E(e);
           return e => {
-            let i = Math.floor(o.default.age(e) / d.default.Millis.DAY);
+            let i = Math.floor(d.default.age(e) / c.default.Millis.DAY);
             return f(i, t, n);
           };
         },
         [a.v3("guild_member_count_range")]: e => {
           let { min: t, max: n } = E(e);
           return e => {
-            let i = u.default.getMemberCount(e);
+            let i = l.default.getMemberCount(e);
             return null != i && f(i, t, n);
           };
         },
@@ -29104,9 +29104,9 @@
           return e => {
             var n;
             let i =
-              null !== (n = c.default.getGuild(e)) && void 0 !== n
+              null !== (n = u.default.getGuild(e)) && void 0 !== n
                 ? n
-                : l.default.getGuild(e);
+                : o.default.getGuild(e);
             return null != i && t.some(e => i.hasFeature(e));
           };
         },
@@ -29115,9 +29115,9 @@
           return e => {
             var n;
             let i =
-              null !== (n = c.default.getGuild(e)) && void 0 !== n
+              null !== (n = u.default.getGuild(e)) && void 0 !== n
                 ? n
-                : l.default.getGuild(e);
+                : o.default.getGuild(e);
             return (
               null != i &&
               "number" == typeof i.hubType &&
@@ -29130,9 +29130,9 @@
           return e => {
             var n;
             let i =
-              null !== (n = c.default.getGuild(e)) && void 0 !== n
+              null !== (n = u.default.getGuild(e)) && void 0 !== n
                 ? n
-                : l.default.getGuild(e);
+                : o.default.getGuild(e);
             if (null == i) return !1;
             let r = null != i.vanityURLCode;
             return t === r;
@@ -58098,11 +58098,11 @@
       var r = n("552442"),
         s = n.n(r),
         a = n("522632"),
-        o = n("249654"),
-        l = n("234251"),
-        u = n("407063"),
-        c = n("240481"),
-        d = n("773336"),
+        o = n("234251"),
+        l = n("407063"),
+        u = n("240481"),
+        c = n("773336"),
+        d = n("299039"),
         f = n("49111"),
         E = n("680894"),
         p = n("363577");
@@ -58110,7 +58110,7 @@
       let h = i.DEFAULT_AVATARS;
       i.DEFAULT_GROUP_DM_AVATARS;
       let _ = i.canUseWebp(),
-        S = (0, d.isAndroid)();
+        S = (0, c.isAndroid)();
       function m(e) {
         let t,
           {
@@ -58119,13 +58119,13 @@
             id: r,
             hash: s,
             size: o,
-            canAnimate: l = !1,
+            canAnimate: u = !1,
             keepAspectRatio: c,
             format: d = null,
           } = e;
         if (null == r || null == s) return;
-        let f = null != d ? d : l && x(s) ? "gif" : "jpg";
-        l && F(s) && (f = "mp4");
+        let f = null != d ? d : u && x(s) ? "gif" : "jpg";
+        u && F(s) && (f = "mp4");
         let E = window.GLOBAL_ENV.CDN_HOST;
         if (
           (null != E
@@ -58147,8 +58147,8 @@
         let p = {};
         return (
           null != o &&
-            (p.size = (0, u.getBestMediaProxySize)(
-              o * (0, u.getDevicePixelRatio)()
+            (p.size = (0, l.getBestMediaProxySize)(
+              o * (0, l.getDevicePixelRatio)()
             )),
           null != c && (p.keep_aspect_ratio = c),
           t + "?".concat(a.stringify(p))
@@ -58165,7 +58165,7 @@
               .concat(t, ".")
               .concat(n ? "gif" : s, "?size=")
               .concat(
-                (0, u.getBestMediaProxySize)(i * (0, u.getDevicePixelRatio)())
+                (0, l.getBestMediaProxySize)(i * (0, l.getDevicePixelRatio)())
               )
               .concat(a)
           : location.protocol +
@@ -58174,7 +58174,7 @@
       }
       function g(e, t) {
         if (null == e && null == t) return h[0];
-        let n = (0, c.parseInteger)(t, 0);
+        let n = (0, u.parseInteger)(t, 0);
         return n > 0
           ? h[n % 5]
           : null != e
@@ -58231,24 +58231,24 @@
             canAnimate: s = !1,
             size: o = f.AVATAR_SIZE,
           } = e,
-          l = s && x(r) ? "gif" : "jpg",
+          u = s && x(r) ? "gif" : "jpg",
           { CDN_HOST: c } = window.GLOBAL_ENV;
         return (
           null != c
-            ? ("jpg" === l && (l = _ ? "webp" : "png"),
+            ? ("jpg" === u && (u = _ ? "webp" : "png"),
               (t = ""
                 .concat(location.protocol, "//")
                 .concat(c)
-                .concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, l))))
+                .concat(f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u))))
             : (t =
                 location.protocol +
                 window.GLOBAL_ENV.API_ENDPOINT +
-                f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, l)),
+                f.Endpoints.GUILD_MEMBER_AVATAR(n, i, r, u)),
           t +
             "?".concat(
               a.stringify({
-                size: (0, u.getBestMediaProxySize)(
-                  o * (0, u.getDevicePixelRatio)()
+                size: (0, l.getBestMediaProxySize)(
+                  o * (0, l.getDevicePixelRatio)()
                 ),
               })
             )
@@ -58279,7 +58279,7 @@
               window.GLOBAL_ENV.API_ENDPOINT +
               f.Endpoints.USER_BANNER(n, i, o)) +
           "?size=".concat(
-            (0, u.getBestMediaProxySize)(s * (0, u.getDevicePixelRatio)())
+            (0, l.getBestMediaProxySize)(s * (0, l.getDevicePixelRatio)())
           ));
       }
       function N(e) {
@@ -58287,23 +58287,23 @@
         if (null == t) return;
         let { CDN_HOST: r, API_ENDPOINT: s } = window.GLOBAL_ENV,
           a = f.Endpoints.AVATAR_DECORATION_PRESETS(t.asset),
-          o = new URL(
+          u = new URL(
             null != r
               ? "".concat(location.protocol, "//").concat(r).concat(a)
               : "".concat(location.protocol).concat(s).concat(a)
           );
         return (
-          o.searchParams.set(
+          u.searchParams.set(
             "size",
             "".concat(
-              (0, u.getBestMediaProxySize)(n * (0, u.getDevicePixelRatio)())
+              (0, l.getBestMediaProxySize)(n * (0, l.getDevicePixelRatio)())
             )
           ),
-          o.searchParams.set(
+          u.searchParams.set(
             "passthrough",
-            "".concat(i && (0, l.isAnimatedAvatarDecoration)(t.asset))
+            "".concat(i && (0, o.isAnimatedAvatarDecoration)(t.asset))
           ),
-          o.toString()
+          u.toString()
         );
       }
       function O(e) {
@@ -58311,22 +58311,22 @@
           { id: n, guildId: i, banner: r, canAnimate: s, size: a } = e;
         if (null == r || null == i) return;
         let o = window.GLOBAL_ENV.CDN_HOST,
-          l = s && x(r) ? "gif" : "png",
-          c = f.Endpoints.GUILD_MEMBER_BANNER(i, n, r, l);
+          u = s && x(r) ? "gif" : "png",
+          c = f.Endpoints.GUILD_MEMBER_BANNER(i, n, r, u);
         return (t =
           (null != o
             ? "".concat(location.protocol, "//").concat(o).concat(c)
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + c) +
           "?size=".concat(
-            (0, u.getBestMediaProxySize)(a * (0, u.getDevicePixelRatio)())
+            (0, l.getBestMediaProxySize)(a * (0, l.getDevicePixelRatio)())
           ));
       }
       function D(e) {
         let t,
           { id: n, splash: i, size: r } = e;
         if (null == i) return null;
-        null == r && (r = window.screen.width * (0, u.getDevicePixelRatio)()),
-          (r = (0, u.getBestMediaProxySize)(r));
+        null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()),
+          (r = (0, l.getBestMediaProxySize)(r));
         let s = window.GLOBAL_ENV.CDN_HOST;
         return (t =
           (null != s
@@ -58344,18 +58344,18 @@
           { id: n, banner: i } = e,
           r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == i) return null;
-        let s = (0, u.getBestMediaProxySize)(
-            240 * (0, u.getDevicePixelRatio)()
+        let s = (0, l.getBestMediaProxySize)(
+            240 * (0, l.getDevicePixelRatio)()
           ),
           a = _ ? "webp" : "jpg",
           o = r && x(i) ? "gif" : a,
-          l = window.GLOBAL_ENV.CDN_HOST;
+          u = window.GLOBAL_ENV.CDN_HOST;
         return (
           (t =
-            (null != l
+            (null != u
               ? ""
                   .concat(location.protocol, "//")
-                  .concat(l, "/banners/")
+                  .concat(u, "/banners/")
                   .concat(n, "/")
                   .concat(i, ".")
                   .concat(o)
@@ -58370,8 +58370,8 @@
         let t,
           { id: n, homeHeader: i } = e;
         if (null == i) return null;
-        let r = (0, u.getBestMediaProxySize)(
-            1096 * (0, u.getDevicePixelRatio)()
+        let r = (0, l.getBestMediaProxySize)(
+            1096 * (0, l.getDevicePixelRatio)()
           ),
           s = window.GLOBAL_ENV.CDN_HOST;
         return (t =
@@ -58389,8 +58389,8 @@
         let t,
           { id: n, splash: i, size: r } = e;
         if (null == i) return null;
-        null == r && (r = window.screen.width * (0, u.getDevicePixelRatio)()),
-          (r = (0, u.getBestMediaProxySize)(r));
+        null == r && (r = window.screen.width * (0, l.getDevicePixelRatio)()),
+          (r = (0, l.getBestMediaProxySize)(r));
         let s = window.GLOBAL_ENV.CDN_HOST;
         return (t =
           (null != s
@@ -58490,9 +58490,9 @@
       }
       function k(e) {
         var t, n, r;
-        let { id: s, icon: a, applicationId: l, size: u } = e;
-        if (null != l)
-          return null !== (t = U({ id: l, icon: a, size: u })) && void 0 !== t
+        let { id: s, icon: a, applicationId: o, size: l } = e;
+        if (null != o)
+          return null !== (t = U({ id: o, icon: a, size: l })) && void 0 !== t
             ? t
             : i.DEFAULT_CHANNEL_ICON;
         return null !==
@@ -58502,12 +58502,12 @@
             id: s,
             hash: a,
             canAnimate: !1,
-            size: u,
+            size: l,
           })) && void 0 !== n
           ? n
           : ((r = s),
             i.DEFAULT_GROUP_DM_AVATARS[
-              o.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length
+              d.default.extractTimestamp(r) % i.DEFAULT_GROUP_DM_AVATARS.length
             ]);
       }
       function x(e) {
@@ -58637,7 +58637,7 @@
         makeSource: B,
         getAnimatableSourceWithFallback(e, t) {
           let n = t(e);
-          if (!(0, d.isAndroid)() || !e || "number" == typeof n) return n;
+          if (!(0, c.isAndroid)() || !e || "number" == typeof n) return n;
           {
             let e = t(!1);
             return "number" != typeof e && e.uri === n.uri
@@ -60173,7 +60173,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "268937",
+                  build_number: "268944",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -63040,9 +63040,15 @@
         r = n.n(i),
         s = n("249654"),
         a = {
-          age: s.default.age,
-          extractTimestamp: s.default.extractTimestamp,
-          compare: s.default.compare,
+          age: function (e) {
+            return s.default.age(e);
+          },
+          extractTimestamp: function (e) {
+            return s.default.extractTimestamp(e);
+          },
+          compare: function (e, t) {
+            return s.default.compare(e, t);
+          },
           atPreviousMillisecond: function (e) {
             return s.default.atPreviousMillisecond(e);
           },
@@ -78965,4 +78971,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.dc8aa0c893f5166d679f.js.map
+//# sourceMappingURL=21201.2b53a6026ac6c8e79b2b.js.map

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["67615"],
+  ["98239"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -51640,6 +51640,7 @@
             reactions: D(null != C ? C : e.reactions),
             interaction: L,
             interactionData: null != N ? N : e.interaction_data,
+            interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
             purchaseNotification: e.purchase_notification,
             poll: null == e.poll ? void 0 : (0, a.default)(e.poll),
@@ -61630,6 +61631,7 @@
             (this.nick = e.nick),
             (this.interaction = e.interaction || null),
             (this.interactionData = e.interactionData || null),
+            (this.interactionMetadata = e.interactionMetadata || null),
             (this.interactionError = e.interactionError || null),
             (this.roleSubscriptionData = e.roleSubscriptionData),
             (this.purchaseNotification = e.purchaseNotification),
@@ -76840,4 +76842,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67615.55fd7da768e5ba6e20a5.js.map
+//# sourceMappingURL=98239.e0988440349897e99379.js.map

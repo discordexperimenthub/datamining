@@ -16177,7 +16177,7 @@
           "I am not interested in...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "All events in this series",
-        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE: "This event",
+        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE: "Only this event",
         GUILD_CREATE_STAFF_ONLY_HINT:
           "Only Discord employees would be able to join this server.",
         EDIT_THIS_EVENT: "Edit this Event",
@@ -26066,8 +26066,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269125", ", Version Hash: ")
-          .concat("35898768d4010a77a09065d101b095e431ffcbe4")
+          .concat("269150", ", Version Hash: ")
+          .concat("9185e7e36d5816f705431b74bd1fa6f33b9e7c4e")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29142,12 +29142,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269125"), "269125"));
+        let _ = parseInt(((e = "269150"), "269150"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269125"
+                "269150"
               )
             ),
             (_ = 0)),
@@ -35007,8 +35007,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708991301643",
-                    build_number: "269125",
+                    built_at: "1708994305707",
+                    build_number: "269150",
                   },
                 },
                 retries: 1,
@@ -51524,4 +51524,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.e17f02e10a1e5f52acf2.js.map
+//# sourceMappingURL=77761.41eb32e41d7f3fb85492.js.map

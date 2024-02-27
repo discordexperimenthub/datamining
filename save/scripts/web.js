@@ -72,7 +72,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return f;
+              return l;
             },
           });
         var s = t("37983"),
@@ -82,7 +82,7 @@
           c = t("474557"),
           r = t("793932"),
           o = t("125047");
-        class l extends d.Component {
+        class f extends d.Component {
           render() {
             return (0, s.jsx)("div", {
               className: i(r.app, o.vertical),
@@ -90,7 +90,7 @@
             });
           }
         }
-        var f = l;
+        var l = f;
       },
       474557: function (e, a, t) {
         "use strict";
@@ -124,8 +124,8 @@
           c = t("90915"),
           r = t("759843"),
           o = t("817792"),
-          l = t("815157"),
-          f = t("391679"),
+          f = t("815157"),
+          l = t("391679"),
           u = t("446674"),
           p = t("95410"),
           b = t("795137"),
@@ -495,12 +495,12 @@
                                       t,
                                       d.mobile
                                     ),
-                                    a = (0, l.parseDynamicLink)(e);
+                                    a = (0, f.parseDynamicLink)(e);
                                   null != a &&
                                     O.default.track(
                                       v.AnalyticEvents.DEEP_LINK_CLICKED,
                                       {
-                                        fingerprint: (0, f.maybeExtractId)(
+                                        fingerprint: (0, l.maybeExtractId)(
                                           a.fingerprint
                                         ),
                                         attempt_id: a.attemptId,
@@ -604,8 +604,8 @@
           r = t("37983");
         t("320777"), t("884691");
         var o = t("288661"),
-          l = t("627445"),
-          f = t.n(l),
+          f = t("627445"),
+          l = t.n(f),
           u = t("521143"),
           p = t("938460"),
           b = t("156820"),
@@ -633,7 +633,7 @@
           M = t("718517");
         let x = 5 * M.default.Millis.MINUTE,
           k = document.getElementById("app-mount");
-        f(null != k, "Could not find app-mount"),
+        l(null != k, "Could not find app-mount"),
           (k.className = __OVERLAY__ ? "" : L.appMount);
         let U = (0, o.createRoot)(k),
           G = e =>
@@ -824,8 +824,8 @@
           c = t.n(i),
           r = t("703809"),
           o = t("446674"),
-          l = t("895547"),
-          f = t("77078"),
+          f = t("895547"),
+          l = t("77078"),
           u = t("430568"),
           p = t("471671"),
           b = t("90404"),
@@ -869,7 +869,7 @@
                     " ",
                     (0, d.jsx)(u.default, {
                       src: h.default.getURL(
-                        l.default.convert.fromCodePoint("1f44c")
+                        f.default.convert.fromCodePoint("1f44c")
                       ),
                       emojiName: ":ok_hand:",
                       animated: !1,
@@ -877,8 +877,8 @@
                   ],
                 }),
               }),
-              a = (0, d.jsx)(f.Button, {
-                size: f.ButtonSizes.LARGE,
+              a = (0, d.jsx)(l.Button, {
+                size: l.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
                 children: T.default.Messages.DOWNLOAD,
               });
@@ -917,7 +917,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return f;
+              return l;
             },
           });
         var s = t("862337"),
@@ -927,26 +927,26 @@
           c = t("101125"),
           r = t("49111");
         let o = new s.Timeout(),
-          l = new s.Timeout();
-        var f = {
+          f = new s.Timeout();
+        var l = {
           init() {
             d.default.subscribe("USER_SETTINGS_PROTO_UPDATE", () => {
               let e = i.CustomStatusSetting.getSetting();
-              if (null == e) l.stop();
+              if (null == e) f.stop();
               else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
                 let a =
                   new Date(Number(e.expiresAtMs)).getTime() -
                   new Date().getTime();
                 a > 0
-                  ? l.start(
+                  ? f.start(
                       a,
                       () => {
                         i.CustomStatusSetting.updateSetting(void 0);
                       },
                       !0
                     )
-                  : (i.CustomStatusSetting.updateSetting(void 0), l.stop());
-              } else null != l && l.stop();
+                  : (i.CustomStatusSetting.updateSetting(void 0), f.stop());
+              } else null != f && f.stop();
               let a = i.StatusExpiresAtSetting.getSetting();
               if (
                 null != a &&
@@ -1101,8 +1101,8 @@
           c = t("599110"),
           r = t("50885"),
           o = t("50361"),
-          l = t("49111");
-        function f(e) {
+          f = t("49111");
+        function l(e) {
           var a;
           return null == e
             ? void 0
@@ -1116,13 +1116,13 @@
               window.location.origin ===
                 window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
                 !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) &&
-                r.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) &&
+                r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) &&
                 (o.migrate(),
                 i.default.userDataCache.getCached().then(e => {
                   if (null == e) {
                     o.failMigration(),
                       c.default.track(
-                        l.AnalyticEvents.DOMAIN_MIGRATED,
+                        f.AnalyticEvents.DOMAIN_MIGRATED,
                         { success: !1, has_data: !1 },
                         { flush: !0 }
                       );
@@ -1137,8 +1137,8 @@
                         : JSON.parse(e.RTCRegionStore),
                     u =
                       null == r ||
-                      null == f(r) ||
-                      f(r) <= f(n.default.get("RTCRegionStore"));
+                      null == l(r) ||
+                      l(r) <= l(n.default.get("RTCRegionStore"));
                   t &&
                     s &&
                     !u &&
@@ -1150,7 +1150,7 @@
                       } catch (e) {}
                     })),
                     c.default.track(
-                      l.AnalyticEvents.DOMAIN_MIGRATED,
+                      f.AnalyticEvents.DOMAIN_MIGRATED,
                       { success: !0, current_is_newer: u, has_data: t },
                       { flush: !0 }
                     ),
@@ -1190,8 +1190,8 @@
           c = t.n(i),
           r = t("872717"),
           o = t("784063"),
-          l = t("625454"),
-          f = t("441822"),
+          f = t("625454"),
+          l = t("441822"),
           u = t("862337"),
           p = t("913144"),
           b = t("605250"),
@@ -1209,7 +1209,7 @@
         (A.width = 512), (A.height = 288);
         let R = A.getContext("2d");
         function w() {
-          O.stop(), null != s && (l.default.removeSink(s, T), (s = null));
+          O.stop(), null != s && (f.default.removeSink(s, T), (s = null));
         }
         let v = c.debounce((e, a, t, s) => {
           N(
@@ -1248,13 +1248,13 @@
                             ? t.getNextVideoOutputFrame(e).then(c, a => {
                                 if (s === e) throw a;
                               })
-                            : l.default.addSink(e, T, c);
+                            : f.default.addSink(e, T, c);
                         }).finally(() => {
-                          !d && l.default.removeSink(e, T);
+                          !d && f.default.removeSink(e, T);
                         });
                       }
                     : function (e, a) {
-                        let t = (0, f.getVideoStream)(e);
+                        let t = (0, l.getVideoStream)(e);
                         if (null == t)
                           return Promise.resolve(new ImageData(0, 0));
                         let { width: s, height: d } = t
@@ -1395,8 +1395,8 @@
           c = t("660078"),
           r = t("268491"),
           o = t("373469"),
-          l = t("271938"),
-          f = t("374014"),
+          f = t("271938"),
+          l = t("374014"),
           u = t("16916"),
           p = t("49111"),
           b = t("353927");
@@ -1554,8 +1554,8 @@
                     audioSourceId: c,
                     sound: r,
                   } = e,
-                  o = l.default.getId(),
-                  u = (0, f.encodeStreamKey)({
+                  o = f.default.getId(),
+                  u = (0, l.encodeStreamKey)({
                     streamType: a,
                     guildId: t,
                     channelId: s,
@@ -1674,8 +1674,8 @@
           c = t("913144"),
           r = t("135230"),
           o = t("316272"),
-          l = t("701909"),
-          f = t("49111"),
+          f = t("701909"),
+          l = t("49111"),
           u = t("782340");
         class p extends o.default {
           _initialize() {
@@ -1696,8 +1696,8 @@
                 let { kind: a, granted: t } = e,
                   d =
                     "Firefox" === n.name
-                      ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX
-                      : f.HelpdeskArticles.ENABLE_MIC_CHROME;
+                      ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX
+                      : l.HelpdeskArticles.ENABLE_MIC_CHROME;
                 if (!t) {
                   let e = "audio" !== a;
                   (0, i.openModal)(a =>
@@ -1709,7 +1709,7 @@
                         ? u.default.Messages.NO_CAMERA_BODY
                         : u.default.Messages.NO_MIC_BODY,
                       onConfirm: () =>
-                        window.open(l.default.getArticleURL(d), "_blank"),
+                        window.open(f.default.getArticleURL(d), "_blank"),
                       confirmText: u.default.Messages.HELP_DESK,
                       ...a,
                     })
@@ -1745,18 +1745,18 @@
               },
               n.UserSettingsDelay.INFREQUENT_USER_ACTION
             );
-          let l = {
+          let f = {
             next_status: e,
             prev_status: a,
             ...d.default.getGlobalStats(),
           };
           null != t &&
-            (l = {
-              ...l,
+            (f = {
+              ...f,
               ...t,
               expire_duration_minutes: null != o ? o / 1e3 : null,
             }),
-            c.default.track(r.AnalyticEvents.USER_STATUS_UPDATED, l);
+            c.default.track(r.AnalyticEvents.USER_STATUS_UPDATED, f);
         }
       },
       891653: function (e, a, t) {
@@ -1764,7 +1764,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return l;
+              return f;
             },
           });
         var s = t("37983");
@@ -1775,7 +1775,7 @@
           c = t("216422"),
           r = t("782340"),
           o = t("321562");
-        function l(e) {
+        function f(e) {
           let {
             text: a = r.default.Messages
               .PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
@@ -1854,8 +1854,8 @@
           c = t("99317"),
           r = t("693051"),
           o = t("607542"),
-          l = t("153498"),
-          f = t("934306"),
+          f = t("153498"),
+          l = t("934306"),
           u = t("742171"),
           p = t("393027"),
           b = t("393414"),
@@ -1884,12 +1884,12 @@
               if (null == b || !b.isReady()) return;
               let _ = e.navigationReplace,
                 E = null !== (t = e.useScreen) && void 0 !== t && t;
-              if (j && (0, f.isSplitMessagesTab)() && p === h.Routes.ME) {
-                (0, l.navigateToRootTab)({ screen: "messages", resetRoot: _ });
+              if (j && (0, l.isSplitMessagesTab)() && p === h.Routes.ME) {
+                (0, f.navigateToRootTab)({ screen: "messages", resetRoot: _ });
                 return;
               }
               if (j && p === h.Routes.NOTIFICATIONS) {
-                (0, l.navigateToRootTab)({
+                (0, f.navigateToRootTab)({
                   screen: "notifications",
                   resetRoot: _,
                 });
@@ -1922,7 +1922,7 @@
                       ? void 0
                       : null === (s = n[0]) || void 0 === s
                         ? void 0
-                        : s.name) !== "panels" && (0, l.resetToPanelsUI)();
+                        : s.name) !== "panels" && (0, f.resetToPanelsUI)();
                   return;
                 }
                 if (null != a) {
@@ -1932,7 +1932,7 @@
                     voiceMessageId: s,
                   } = a.params;
                   (0, u.isOldVoiceUIEnabled)() &&
-                    (0, l.navigateToChannel)({
+                    (0, f.navigateToChannel)({
                       channelId: t,
                       guildId: e,
                       messageId: s,
@@ -1943,33 +1943,33 @@
                 }
                 if (null != e) {
                   let { channelId: a, guildId: t, messageId: s } = e.params;
-                  if (!(0, f.isSplitMessagesTab)() && !m) {
-                    (0, l.navigateToRootTab)({
+                  if (!(0, l.isSplitMessagesTab)() && !m) {
+                    (0, f.navigateToRootTab)({
                       screen: "guilds",
                       guildId: t,
                       resetRoot: _,
                     });
                     return;
                   }
-                  if ((0, f.isOnNewPanels)()) {
+                  if ((0, l.isOnNewPanels)()) {
                     let [e, s] = (0, o.default)(b.getCurrentRoute());
                     if (e === t && s === a) return;
                   }
                   null == a ||
-                  ((0, f.shouldHandleNewPanelsRoute)(t) && !1 !== _)
+                  ((0, l.shouldHandleNewPanelsRoute)(t) && !1 !== _)
                     ? t !== h.ME || m
-                      ? (0, l.navigateToRootTab)({
+                      ? (0, f.navigateToRootTab)({
                           screen: "guilds",
                           guildId: t,
-                          channelId: (0, f.isOnNewPanels)() ? a : void 0,
+                          channelId: (0, l.isOnNewPanels)() ? a : void 0,
                           resetRoot: _,
                         })
-                      : (0, l.navigateToRootTab)({
+                      : (0, f.navigateToRootTab)({
                           screen: "messages",
                           resetRoot: _,
                         })
                     : null != t &&
-                      (0, l.navigateToChannel)({
+                      (0, f.navigateToChannel)({
                         channelId: a,
                         guildId: t,
                         messageId: s,
@@ -1987,14 +1987,14 @@
                   ),
                 });
                 null != e &&
-                  (0, l.navigateToMemberVerification)(
+                  (0, f.navigateToMemberVerification)(
                     e.params.guildId,
                     e.params.inviteCode
                   );
                 return;
               }
               if (p.startsWith("/login") || p.startsWith("/register")) {
-                (0, l.resetToAuthRoute)();
+                (0, f.resetToAuthRoute)();
                 return;
               }
               if (p.startsWith("/account-standing")) {
@@ -2002,7 +2002,7 @@
                 return;
               }
               j &&
-                (0, l.navigateToRootTab)({ screen: "messages", resetRoot: _ });
+                (0, f.navigateToRootTab)({ screen: "messages", resetRoot: _ });
             }
             executeRouteRewrites(e, a) {
               if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
@@ -2309,8 +2309,8 @@
           c = t("913144"),
           r = t("629109"),
           o = t("987317"),
-          l = t("316272"),
-          f = t("830210"),
+          f = t("316272"),
+          l = t("830210"),
           u = t("289180"),
           p = t("289656"),
           b = t("727284"),
@@ -2321,7 +2321,7 @@
           E = t("50885"),
           g = t("49111"),
           I = t("782340");
-        class T extends l.default {
+        class T extends f.default {
           _initialize() {
             this.isSupported &&
               (c.default.subscribe("AUDIO_SET_MODE", this.handleViewUpdate),
@@ -2440,7 +2440,7 @@
                   i = null == n || (0, u.getVideoPermission)(n),
                   { reachedLimit: c, limit: r } =
                     null != n
-                      ? (0, f.getChannelVideoLimit)(n)
+                      ? (0, l.getChannelVideoLimit)(n)
                       : { reachedLimit: void 0, limit: void 0 },
                   o = (0, p.getVideoButtonLabel)({
                     enabled: s,
@@ -2679,7 +2679,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return l;
+              return f;
             },
           }),
           t("222007");
@@ -2733,7 +2733,7 @@
             super(...e), (this._tracker = new c.default());
           }
         }
-        var l = new o();
+        var f = new o();
       },
       830210: function (e, a, t) {
         "use strict";
@@ -2832,7 +2832,7 @@
               return o;
             },
             getPlatformReadableName: function () {
-              return f;
+              return l;
             },
             getCurrentPlatformDownloadURL: function () {
               return u;
@@ -2857,7 +2857,7 @@
             .concat(e)
             .concat(null != t ? "&format=".concat(t) : "");
         }
-        function l() {
+        function f() {
           var e;
           let a =
             arguments.length > 0 && void 0 !== arguments[0]
@@ -2878,11 +2878,11 @@
                 ? "osx"
                 : "win";
         }
-        function f(e) {
-          return { win: "Windows", osx: "Mac", [r]: "Linux" }[l(e)];
+        function l(e) {
+          return { win: "Windows", osx: "Mac", [r]: "Linux" }[f(e)];
         }
         function u() {
-          let e = l();
+          let e = f();
           return o(e, !1, e === r ? "tar.gz" : null);
         }
         function p(e, a, t) {
@@ -3029,16 +3029,16 @@
         }
       },
     },
-    l = {};
-  function f(e) {
-    var a = l[e];
+    f = {};
+  function l(e) {
+    var a = f[e];
     if (void 0 !== a) return a.exports;
-    var t = (l[e] = { id: e, loaded: !1, exports: {} });
-    return o[e](t, t.exports, f), (t.loaded = !0), t.exports;
+    var t = (f[e] = { id: e, loaded: !1, exports: {} });
+    return o[e](t, t.exports, l), (t.loaded = !0), t.exports;
   }
-  (f.m = o),
-    (f.c = l),
-    (f.es = function (e, a) {
+  (l.m = o),
+    (l.c = f),
+    (l.es = function (e, a) {
       return (
         Object.keys(e).forEach(function (t) {
           "default" !== t &&
@@ -3139,9 +3139,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "30791",
@@ -3268,9 +3268,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -3370,7 +3370,7 @@
         "23777",
         "90904",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "96897",
         "40787",
@@ -3433,11 +3433,11 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
-        "98239",
+        "67615",
         "86416",
         "20258",
         "30791",
@@ -3473,7 +3473,7 @@
         "21251",
         "41831",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "96163",
@@ -3511,7 +3511,7 @@
         "8240",
         "95185",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "77951",
@@ -3538,19 +3538,19 @@
         "81161",
         "84537",
         "66473",
-        "77951",
         "53181",
+        "77951",
         "98176",
         "64823",
         "3045",
         "64612",
         "67714",
         "61864",
+        "67131",
         "55639",
         "40318",
         "44941",
         "14566",
-        "67131",
         "32656",
         "35876",
         "40958",
@@ -3612,7 +3612,7 @@
         "8240",
         "61950",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "96897",
@@ -3729,7 +3729,7 @@
         "14582",
         "64999",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "27043",
@@ -3760,10 +3760,10 @@
         "3045",
         "67714",
         "6710",
+        "67131",
         "44893",
         "40318",
         "14566",
-        "67131",
         "32656",
         "40958",
         "69933",
@@ -3901,7 +3901,7 @@
         "14582",
         "64999",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "27043",
@@ -3945,9 +3945,9 @@
         "95185",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "20258",
         "30791",
@@ -3990,9 +3990,9 @@
         "64612",
         "67714",
         "6710",
+        "67131",
         "40318",
         "14566",
-        "67131",
         "32656",
         "40958",
         "65656",
@@ -4023,8 +4023,8 @@
         "58418",
         "67731",
         "18120",
-        "77951",
         "53181",
+        "77951",
         "64814",
         "98176",
         "56312",
@@ -4033,11 +4033,11 @@
         "67714",
         "61864",
         "6710",
+        "67131",
         "44893",
         "40318",
         "44941",
         "14566",
-        "67131",
         "32656",
         "35876",
         "40958",
@@ -4117,7 +4117,7 @@
         "14875",
         "67079",
         "60499",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "96897",
@@ -4168,9 +4168,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -4238,7 +4238,7 @@
         "90904",
         "67079",
         "44504",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "96897",
@@ -4254,7 +4254,7 @@
         "9065",
         "73070",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "96897",
@@ -4309,11 +4309,11 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
-        "98239",
+        "67615",
         "86416",
         "20258",
         "30791",
@@ -4369,9 +4369,9 @@
         "95185",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "20258",
         "30791",
@@ -4510,11 +4510,11 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
-        "98239",
+        "67615",
         "86416",
         "20258",
         "30791",
@@ -4652,9 +4652,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -4734,7 +4734,7 @@
         "73070",
         "14875",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "71554",
         "48265",
@@ -4798,8 +4798,8 @@
         "58418",
         "67731",
         "18120",
-        "77951",
         "53181",
+        "77951",
         "64814",
         "98176",
         "56312",
@@ -4808,11 +4808,11 @@
         "67714",
         "61864",
         "6710",
+        "67131",
         "44893",
         "40318",
         "44941",
         "14566",
-        "67131",
         "32656",
         "35876",
         "40958",
@@ -4920,9 +4920,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -4972,11 +4972,11 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
-        "98239",
+        "67615",
         "86416",
         "20258",
         "30791",
@@ -5039,9 +5039,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -5112,7 +5112,7 @@
         "8240",
         "23777",
         "67079",
-        "98239",
+        "67615",
         "18814",
         "96897",
         "40787",
@@ -5173,9 +5173,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -5256,9 +5256,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -5312,9 +5312,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -5334,7 +5334,7 @@
         "9065",
         "73070",
         "67079",
-        "98239",
+        "67615",
         "71554",
         "47498",
         "96897",
@@ -5407,9 +5407,9 @@
         "44504",
         "69171",
         "58533",
+        "60499",
         "37102",
         "94726",
-        "60499",
         "60053",
         "86416",
         "20258",
@@ -5434,9 +5434,9 @@
         "64823",
         "3045",
         "6710",
+        "67131",
         "40318",
         "14566",
-        "67131",
         "32656",
         "65656",
         "69667",
@@ -5468,24 +5468,24 @@
       998730: ["app", "26574"],
       999391: ["app", "88934"],
     }),
-    (f.el = function (a) {
+    (l.el = function (a) {
       var t = e[a];
       return void 0 === t
         ? Promise.resolve()
         : t.length > 1
-          ? Promise.all(t.map(f.e))
-          : f.e(t[0]);
+          ? Promise.all(t.map(l.e))
+          : l.e(t[0]);
     }),
-    (f.f = {}),
-    (f.e = function (e) {
+    (l.f = {}),
+    (l.e = function (e) {
       return Promise.all(
-        Object.keys(f.f).reduce(function (a, t) {
-          return f.f[t](e, a), a;
+        Object.keys(l.f).reduce(function (a, t) {
+          return l.f[t](e, a), a;
         }, [])
       );
     }),
-    (f.p = "/assets/"),
-    (f.u = function (e) {
+    (l.p = "/assets/"),
+    (l.u = function (e) {
       return {
         10093: "14609b11a998600fc9a0.js",
         10094: "4ed4378717d1538b0b73.js",
@@ -5514,7 +5514,7 @@
         12031: "bbe41c3063247e43307e.js",
         12109: "6524e212a5b9f61e9047.js",
         12227: "7eefe5e66687f5d6512f.js",
-        12586: "496a3a154ca2f6c7d911.js",
+        12586: "51ee73b96eb3789728ea.js",
         12710: "c4fbfbb2e83d9e721c88.js",
         12732: "da9a6be124e84dc35f90.js",
         13638: "d4eecab0279f7bb92894.js",
@@ -5561,7 +5561,7 @@
         18833: "55dbd0d540d7592f9c05.js",
         18860: "7ce1451600d4feac8494.js",
         18868: "41a086afb54ec37013f1.js",
-        18950: "481dd5ccd2466c909abe.js",
+        18950: "6321e831e3517c33108c.js",
         18990: "e6c624c9da8778fbc7ef.js",
         19193: "e4cda130eff51eea0516.js",
         19234: "b1bf6a17c02431733a65.js",
@@ -5622,7 +5622,7 @@
         25915: "face486af20ecd624196.js",
         25923: "4afcce3b54a63fc4039a.js",
         25958: "f1f30f0e465de23c1861.js",
-        25964: "0cc462c6e28a3997eff6.js",
+        25964: "9f397d165317f81e99f2.js",
         26077: "3c723e3c991fcd7cce58.js",
         26170: "b256901d89ad26bfa33a.js",
         26427: "18ecdb7990d5d94b0200.js",
@@ -5720,7 +5720,7 @@
         37628: "3cc8e55f5a1ad9e7cda3.js",
         37637: "f4e4ad0d0de9696a07d7.js",
         37864: "6d7723e8bfc58c2cb399.js",
-        37897: "caeedde69f983d089878.js",
+        37897: "4e521dc6ba9ec36b32c6.js",
         37903: "9dd2f883f5436157faa8.js",
         37961: "37961.d5d7f0b0829055ae7393.js",
         38519: "61c346ad8de9a0accf49.js",
@@ -5778,7 +5778,7 @@
         45966: "107974ba2b7308bb2bfa.js",
         46: "7f057930f245f8d40cb8.js",
         46116: "693b8d12ab7c8e7a4a50.js",
-        46173: "ae89ef825c00f0aea586.js",
+        46173: "677805c921b4b8a77558.js",
         46250: "6cc1f6d89a61540f35d0.js",
         46364: "46364.f3b81ab59beb0a0faabd.js",
         46533: "4fef881b4ff09b3542f6.js",
@@ -5796,7 +5796,7 @@
         47300: "98355d9e39f132ce4880.js",
         47362: "ae2595482d7e16dac490.js",
         47971: "4d90006e631b72080b1f.js",
-        48265: "31544704b5d1d75d7776.js",
+        48265: "a7e95b173e95c8cde9c5.js",
         4847: "f969e6b58a5839807666.js",
         48559: "aa1a62afbe7e924f00c5.js",
         4860: "c3d80bf99f78a9afa139.js",
@@ -5831,8 +5831,8 @@
         52719: "79ef3aee134b53cf7e8d.js",
         52756: "d9b90152b9e75a7f225e.js",
         52762: "5115a45fb8bb2fca8ef5.js",
-        52807: "5a3cfffc3b1eb034a948.js",
-        52885: "2fcef44cf75bf39e337a.js",
+        52807: "a52757cb89c7a6873213.js",
+        52885: "1de86408376052e36b16.js",
         52962: "c72c2b54f8c493d08b23.js",
         53067: "9154e4d3416555d5b70d.js",
         53159: "5c98b97e1446702613b1.js",
@@ -5849,7 +5849,7 @@
         54344: "95b013fd51c4e7e901b7.js",
         54361: "2d18244c9edbf741b224.js",
         54387: "89b22e1364074e54c86e.js",
-        54439: "33f3b8d30c77d0c3d0b3.js",
+        54439: "6290d02a496db7d636b2.js",
         5456: "8d3ae26d639d32f08486.js",
         54659: "0dd0ccbffde517acfc63.js",
         55007: "3bddeebeea54db59a4b5.js",
@@ -5934,7 +5934,7 @@
         65376: "66ce986f5fa149c9cb18.js",
         65568: "da65c25d39b00e60886f.js",
         65669: "17b86141b76a224893af.js",
-        65710: "d5edeac453d4db71c321.js",
+        65710: "8b1f3b3177ff478c078e.js",
         6580: "cf3dd833de4e3ba5c03c.js",
         65937: "20b33f8c1dec51ce9e00.js",
         65966: "ba476a559ac8ff62cdb9.js",
@@ -5998,7 +5998,7 @@
         71314: "8b3b37f3f7c1638e8b92.js",
         71780: "8624211533f402b331c4.js",
         71879: "48c0bfbf51142a6eee4f.js",
-        71924: "5858cc0bc0ec74503ece.js",
+        71924: "53ff2fd56144489fcb27.js",
         71948: "1578ce7c25adac8bfe5d.js",
         72059: "5fc6b702fab2a0944242.js",
         72142: "8cb97eee79863f4fc184.js",
@@ -6006,12 +6006,12 @@
         72579: "104697dda5ca45c2ade3.js",
         72592: "dc21d3e6cef65e31576d.js",
         72618: "f49f17adead84be83dd4.js",
-        72640: "d9b1334ce3d10954a5b0.js",
+        72640: "95f23b65728a5e395f8a.js",
         72655: "6839f7f5522dd3f58b1b.js",
-        72857: "dc6727bc04d7a2d84a25.js",
+        72857: "ec256a1c575e8d69cee1.js",
         72871: "7c94acd025fa39b2e916.js",
         72952: "91f8103c477e4ae580d7.js",
-        73041: "33896a9c400bb1cee65c.js",
+        73041: "21857fc787e9758f2912.js",
         73140: "c6e6d95668e08702c74a.js",
         73168: "b8803d170336d24407ac.js",
         73187: "4d6e875cc856757dcfc8.js",
@@ -6037,7 +6037,7 @@
         7553: "9abf8ccbef1c891a717f.js",
         75649: "35bd11940038b3a3d0d8.js",
         75658: "9cbb29915f6c16f17eb3.js",
-        75849: "e71d914051f7660b7add.js",
+        75849: "7ffd86b74eae114da823.js",
         75919: "5c5613526de4d1eddaf9.js",
         75949: "68ec5713b311e3706778.js",
         76192: "21e32965a2899c3da2cc.js",
@@ -6099,21 +6099,21 @@
         83125: "6e46c62bad665cf006ee.js",
         83197: "febde7c342bf77ef1925.js",
         83678: "a996e0b6a78b049a26ad.js",
-        83795: "555afbe30be8f86c23d7.js",
+        83795: "28867ab921aa7aaaaffe.js",
         83949: "c62e009070cbeae19639.js",
         84008: "235f76c242b102cd42f2.js",
         84054: "0f13dfd6a7e040439072.js",
         84070: "e8951e7c479c83f3d0e1.js",
         8414: "57adf097036b7bb65cac.js",
         84239: "cc273af843f494565a85.js",
-        84292: "f472f8a25f1d5a40aa1b.js",
+        84292: "48df5b49f0c2e74400fa.js",
         84325: "5f20129e3a1b552790b3.js",
         84475: "51e8c47fbbf514b50a2d.js",
         84537: "8701d3a6acf17eed664a.js",
         84648: "473174d11c7db51bdc4a.js",
         84968: "aa8cdaecc991c7880f2d.js",
         8519: "6e0ba55e518c1acb6fc8.js",
-        85380: "e5199975235e176db517.js",
+        85380: "2239c7c66abf398fde86.js",
         85387: "10f9283a1cbc6ebbc839.js",
         85429: "0c895cfd740d7a62362c.js",
         85657: "76692d410d9f32432fe4.js",
@@ -6221,7 +6221,7 @@
         97618: "3abd8d758e280ba7e0bb.js",
         9776: "d94c9a7351574ba7a786.js",
         97837: "0b65ca03b6685548478e.js",
-        97943: "2b9e84246c020e40187f.js",
+        97943: "71208726df5ef2378683.js",
         97962: "59fa1c0f8551c0ba18ea.js",
         98006: "8bda97a30f2e0ade7af8.js",
         98106: "98106.5d0f74b94113ede84656.js",
@@ -6244,11 +6244,11 @@
         "krisp-sdk": "5bf048a73e6b1187a119.js",
       }[e];
     }),
-    (f.k = function (e) {
+    (l.k = function (e) {
       return "" + e + ".css";
     }),
     (a = {}),
-    (f.l = function (e, t, s, d) {
+    (l.l = function (e, t, s, d) {
       if (a[e]) {
         a[e].push(t);
         return;
@@ -6270,10 +6270,10 @@
         ((i = !0),
         ((n = document.createElement("script")).charset = "utf-8"),
         (n.timeout = 120),
-        f.nc && n.setAttribute("nonce", f.nc),
+        l.nc && n.setAttribute("nonce", l.nc),
         (n.src = e)),
         (a[e] = [t]);
-      var l = function (t, s) {
+      var f = function (t, s) {
           (n.onerror = n.onload = null), clearTimeout(u);
           var d = a[e];
           if (
@@ -6288,18 +6288,18 @@
             return t(s);
         },
         u = setTimeout(
-          l.bind(null, void 0, { type: "timeout", target: n }),
+          f.bind(null, void 0, { type: "timeout", target: n }),
           12e4
         );
-      (n.onerror = l.bind(null, n.onerror)),
-        (n.onload = l.bind(null, n.onload)),
+      (n.onerror = f.bind(null, n.onerror)),
+        (n.onload = f.bind(null, n.onload)),
         i && document.head.appendChild(n);
     }),
-    (f.o = function (e, a) {
+    (l.o = function (e, a) {
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
     (t = []),
-    (f.O = function (e, a, s, d) {
+    (l.O = function (e, a, s, d) {
       if (a) {
         d = d || 0;
         for (var n = t.length; n > 0 && t[n - 1][2] > d; n--) t[n] = t[n - 1];
@@ -6313,8 +6313,8 @@
           r++
         )
           i >= d &&
-          Object.keys(f.O).every(function (e) {
-            return f.O[e](a[r]);
+          Object.keys(l.O).every(function (e) {
+            return l.O[e](a[r]);
           })
             ? a.splice(r--, 1)
             : ((c = !1), d < i && (i = d));
@@ -6326,7 +6326,7 @@
       }
       return e;
     }),
-    (f.g = (function () {
+    (l.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || Function("return this")();
@@ -6357,20 +6357,20 @@
           e.r-- ? e.r++ : e();
         }));
     }),
-    (f.a = function (e, a, t) {
+    (l.a = function (e, a, t) {
       t && ((c = []).d = -1);
       var c,
         r,
         o,
-        l,
-        f = new Set(),
+        f,
+        l = new Set(),
         u = e.exports,
         p = new Promise(function (e, a) {
-          (l = a), (o = e);
+          (f = a), (o = e);
         });
       (p[d] = u),
         (p[s] = function (e) {
-          c && e(c), f.forEach(e), p.catch(function () {});
+          c && e(c), l.forEach(e), p.catch(function () {});
         }),
         (e.exports = p),
         a(
@@ -6414,8 +6414,8 @@
                 }).r = 0;
                 var d = function (e) {
                   e === c ||
-                    f.has(e) ||
-                    (f.add(e), e && !e.d && (a.r++, e.push(a)));
+                    l.has(e) ||
+                    (l.add(e), e && !e.d && (a.r++, e.push(a)));
                 };
                 r.map(function (e) {
                   e[s](d);
@@ -6424,24 +6424,24 @@
             return a.r ? o : t();
           },
           function (e) {
-            e ? l((p[n] = e)) : o(u), i(c);
+            e ? f((p[n] = e)) : o(u), i(c);
           }
         ),
         c && c.d < 0 && (c.d = 0);
     }),
-    (f.d = function (e, a) {
+    (l.d = function (e, a) {
       for (var t in a)
-        f.o(a, t) &&
-          !f.o(e, t) &&
+        l.o(a, t) &&
+          !l.o(e, t) &&
           Object.defineProperty(e, t, { enumerable: !0, get: a[t] });
     }),
-    (f.r = function (e) {
+    (l.r = function (e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (f.n = function (e) {
+    (l.n = function (e) {
       return e && e.__esModule ? e.default : e;
     }),
     (r = Object.getPrototypeOf
@@ -6451,7 +6451,7 @@
       : function (e) {
           return e.__proto__;
         }),
-    (f.t = function (e, a) {
+    (l.t = function (e, a) {
       if (
         (1 & a && (e = this(e)),
         8 & a ||
@@ -6462,7 +6462,7 @@
       )
         return e;
       var t = Object.create(null);
-      f.r(t);
+      l.r(t);
       var s = {};
       c = c || [null, r({}), r([]), r(r)];
       for (var d = 2 & a && e; "object" == typeof d && !~c.indexOf(d); d = r(d))
@@ -6475,14 +6475,14 @@
         (s.default = function () {
           return e;
         }),
-        f.d(t, s),
+        l.d(t, s),
         t
       );
     }),
-    (f.nmd = function (e) {
+    (l.nmd = function (e) {
       return (e.paths = []), !e.children && (e.children = []), e;
     }),
-    (f.hmd = function (e) {
+    (l.hmd = function (e) {
       return (
         !(e = Object.create(e)).children && (e.children = []),
         Object.defineProperty(e, "exports", {
@@ -6558,6 +6558,7 @@
           65656: 0,
           65800: 0,
           67079: 0,
+          67615: 0,
           69171: 0,
           71193: 0,
           71554: 0,
@@ -6584,7 +6585,6 @@
           95185: 0,
           95569: 0,
           96897: 0,
-          98239: 0,
           98281: 0,
           web: 0,
         },
@@ -6596,16 +6596,16 @@
             r = "chunk-" + e;
           if (!n) {
             for (
-              var o = document.getElementsByTagName("link"), l = 0;
-              l < o.length;
-              l++
+              var o = document.getElementsByTagName("link"), f = 0;
+              f < o.length;
+              f++
             ) {
-              var u = o[l],
+              var u = o[f],
                 p = u.getAttribute("href") || u.href;
               if (
                 (p &&
-                  !p.startsWith(f.p) &&
-                  (p = f.p + (p.startsWith("/") ? p.slice(1) : p)),
+                  !p.startsWith(l.p) &&
+                  (p = l.p + (p.startsWith("/") ? p.slice(1) : p)),
                 "stylesheet" == u.rel &&
                   ((p && p.startsWith(s)) ||
                     u.getAttribute("data-webpack") == a + ":" + r))
@@ -6651,8 +6651,8 @@
             i
           );
         };
-      f.f.css = function (a, t) {
-        var d = f.o(e, a) ? e[a] : void 0;
+      l.f.css = function (a, t) {
+        var d = l.o(e, a) ? e[a] : void 0;
         if (0 !== d) {
           if (d) t.push(d[2]);
           else if (["app", "shared"].indexOf(a) > -1) {
@@ -6660,10 +6660,10 @@
               d = e[a] = [t, s];
             });
             t.push((d[2] = n));
-            var i = f.p + f.k(a),
+            var i = l.p + l.k(a),
               c = Error();
             s(a, i, function (t) {
-              if (f.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
+              if (l.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
                 if ("load" !== t.type) {
                   var s = t && t.type,
                     n = t && t.target && t.target.src;
@@ -6695,10 +6695,10 @@
       n.forEach(d.bind(null, 0)), (n.push = d.bind(null, n.push.bind(n)));
     })(),
     !(function () {
-      f.b = document.baseURI || self.location.href;
+      l.b = document.baseURI || self.location.href;
       var e = { web: 0 };
-      (f.f.j = function (a, t) {
-        var s = f.o(e, a) ? e[a] : void 0;
+      (l.f.j = function (a, t) {
+        var s = l.o(e, a) ? e[a] : void 0;
         if (0 !== s) {
           if (s) t.push(s[2]);
           else {
@@ -6706,12 +6706,12 @@
               s = e[a] = [t, d];
             });
             t.push((s[2] = d));
-            var n = f.p + f.u(a),
+            var n = l.p + l.u(a),
               i = Error();
-            f.l(
+            l.l(
               n,
               function (t) {
-                if (f.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+                if (l.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
                   var d = t && ("load" === t.type ? "missing" : t.type),
                     n = t && t.target && t.target.src;
                   (i.message =
@@ -6728,7 +6728,7 @@
           }
         }
       }),
-        (f.O.j = function (a) {
+        (l.O.j = function (a) {
           return 0 === e[a];
         });
       var a = function (a, t) {
@@ -6743,18 +6743,18 @@
               return 0 !== e[a];
             })
           ) {
-            for (i in d) f.o(d, i) && (f.m[i] = d[i]);
-            if (n) var o = n(f);
+            for (i in d) l.o(d, i) && (l.m[i] = d[i]);
+            if (n) var o = n(l);
           }
           for (a && a(t); r < s.length; r++)
-            (c = s[r]), f.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
-          return f.O(o);
+            (c = s[r]), l.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          return l.O(o);
         },
         t = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
       t.forEach(a.bind(null, 0)), (t.push = a.bind(null, t.push.bind(t)));
     })(),
-    (f.v = (e, a, t, s) => {
-      var d = fetch(f.p + t);
+    (l.v = (e, a, t, s) => {
+      var d = fetch(l.p + t);
       return "function" == typeof WebAssembly.instantiateStreaming
         ? WebAssembly.instantiateStreaming(d, s).then(a =>
             Object.assign(e, a.instance.exports)
@@ -6764,7 +6764,7 @@
             .then(e => WebAssembly.instantiate(e, s))
             .then(a => Object.assign(e, a.instance.exports));
     });
-  var u = f.O(
+  var u = l.O(
     void 0,
     [
       "shared",
@@ -6818,11 +6818,11 @@
       "44504",
       "69171",
       "58533",
+      "60499",
       "37102",
       "94726",
-      "60499",
       "60053",
-      "98239",
+      "67615",
       "86416",
       "20258",
       "30791",
@@ -6858,9 +6858,9 @@
       "77761",
     ],
     function () {
-      return f("20423");
+      return l("20423");
     }
   );
-  f.O(u);
+  l.O(u);
 })();
-//# sourceMappingURL=web.66fbad0531f29dac821a.js.map
+//# sourceMappingURL=web.3c3d1aa0223dff3f292d.js.map

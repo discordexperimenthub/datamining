@@ -28180,7 +28180,8 @@
         (u[(u.SOUNDBOARD = 7)] = "SOUNDBOARD"),
         (u[(u.VOICE_CHANNEL_TOPIC = 8)] = "VOICE_CHANNEL_TOPIC"),
         (u[(u.GIFT = 9)] = "GIFT"),
-        (u[(u.AUTO_SUGGESTION = 10)] = "AUTO_SUGGESTION");
+        (u[(u.AUTO_SUGGESTION = 10)] = "AUTO_SUGGESTION"),
+        (u[(u.POLLS = 11)] = "POLLS");
       let _ = new Set([2, 6, 4, 5, 7, 9]);
       function S(e) {
         return !_.has(e);
@@ -60169,7 +60170,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "269228",
+                  build_number: "269239",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78964,4 +78965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.ada30902f9c0df844e31.js.map
+//# sourceMappingURL=21201.893b9e4653c30f1f934b.js.map

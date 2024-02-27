@@ -11804,6 +11804,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Free Trial ({days, plural, =1 {# day left} other {# days left}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Free Trial",
+        POWERED_BY_NITRO: "Powered by Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Playing a game",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live on !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Playing on !!{platform}!!",
@@ -14254,8 +14255,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "This emoji is from",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "This emoji is from this server. You can use it everywhere.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "This emoji is from this server. Use it anywhere with Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "This emoji is from one of your servers. Type its name in the chat bar to use it.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "This emoji is from one of your servers. You can use it anywhere with Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Want to use this emoji everywhere? Join the server.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14270,6 +14275,8 @@
           "Want to use this emoji everywhere? Get Nitro and join the server.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "This emoji is from a server that is either invite-only or unavailable. [Learn more](openPremiumSettings) about using custom emoji.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "This custom emoji is from a server that is invite-only. Use custom emojis from any joined servers with Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Get this sticker from",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "This sticker is from",
@@ -26066,8 +26073,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269150", ", Version Hash: ")
-          .concat("9185e7e36d5816f705431b74bd1fa6f33b9e7c4e")
+          .concat("269177", ", Version Hash: ")
+          .concat("7bcc0f06528b127c693f180c33992fa7ac07b938")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29142,12 +29149,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269150"), "269150"));
+        let _ = parseInt(((e = "269177"), "269177"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269150"
+                "269177"
               )
             ),
             (_ = 0)),
@@ -35007,8 +35014,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1708994305707",
-                    build_number: "269150",
+                    built_at: "1708997906370",
+                    build_number: "269177",
                   },
                 },
                 retries: 1,
@@ -51524,4 +51531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.41eb32e41d7f3fb85492.js.map
+//# sourceMappingURL=77761.2cde0ef7dbb3b0a4fea9.js.map

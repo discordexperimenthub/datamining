@@ -1025,7 +1025,7 @@
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Open Activity Shelf",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Leave Activity",
         EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
-          "Activities are not available on this OS at this time",
+          "This feature is not available on this OS at this time",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "This Activity is not currently available on this OS",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "this Activity",
@@ -26074,8 +26074,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269241", ", Version Hash: ")
-          .concat("613b3daf3829e9d916e85c972d471f3c662cd9c8")
+          .concat("269258", ", Version Hash: ")
+          .concat("7aa8adf28c572d0aecec3374ba09f4e3100343f6")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29150,12 +29150,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269241"), "269241"));
+        let _ = parseInt(((e = "269258"), "269258"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269241"
+                "269258"
               )
             ),
             (_ = 0)),
@@ -35015,8 +35015,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709053514820",
-                    build_number: "269241",
+                    built_at: "1709054807851",
+                    build_number: "269258",
                   },
                 },
                 retries: 1,
@@ -51532,4 +51532,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.0c1b643111478ce3f0e0.js.map
+//# sourceMappingURL=77761.f95e7ec68d763f089b2c.js.map

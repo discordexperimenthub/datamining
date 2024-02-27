@@ -366,10 +366,15 @@
         });
       }
       function V(e) {
+        let { enabled: t, trackAnalytics: n = !1 } = e;
         r.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
-          settings: { viewerClipsEnabled: e },
-        });
+          settings: { viewerClipsEnabled: t },
+        }),
+          n &&
+            v.default.track(L.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+              viewer_clips_enabled: t,
+            });
       }
       function x(e, t) {
         var n, a, i, l, r, d, s, o, c, f;
@@ -1619,4 +1624,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12896.53aa859719fe56d857d7.js.map
+//# sourceMappingURL=12896.5ad03e5d772a2ec91f12.js.map

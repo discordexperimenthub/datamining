@@ -23377,6 +23377,8 @@
         CLIPS_SETTINGS_KEYBIND_HELP:
           "Set up your keybind to capture clips. The default is ALT + C.",
         CLIPS_SAVE: "Save Clip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Enable clips to capture this stream.",
         CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP:
           "Focus on a stream to capture clips.",
         CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP:
@@ -26074,8 +26076,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269276", ", Version Hash: ")
-          .concat("fc62621dc8f538c81cf938af1fd3866e3320d7f6")
+          .concat("269287", ", Version Hash: ")
+          .concat("371beada1bacadf252d3c76321d7d981d2c466cf")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29150,12 +29152,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269276"), "269276"));
+        let _ = parseInt(((e = "269287"), "269287"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269276"
+                "269287"
               )
             ),
             (_ = 0)),
@@ -35015,8 +35017,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709056253853",
-                    build_number: "269276",
+                    built_at: "1709057329914",
+                    build_number: "269287",
                   },
                 },
                 retries: 1,
@@ -51532,4 +51534,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.c0050d61132f93b366f5.js.map
+//# sourceMappingURL=77761.e38ecfd98ffc7842499d.js.map

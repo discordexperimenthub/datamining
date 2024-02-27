@@ -34176,6 +34176,16 @@ html .progress__4ef76 {
   z-index: 1;
   pointer-events: none;
 }
+.toggleExpandButton__22eac {
+  position: absolute;
+  cursor: pointer;
+  right: 8px;
+  margin-top: -1px;
+}
+.toggleExpandIcon_ab767d {
+  width: 16px;
+  height: 16px;
+}
 .container_d412fb {
   max-width: 320px;
   gap: 16px;
@@ -109163,4 +109173,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.7731c155686f64a24ede.css.map*/
+/*# sourceMappingURL=app.4e08dd852fbc7691ece5.css.map*/

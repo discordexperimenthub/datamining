@@ -24639,6 +24639,7 @@
         SERVER_DRAWER_ACTIVITY_PLAYING: "playing **!!{activity}!!**",
         SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
         SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
     657743: function (e, _, E) {
@@ -26076,8 +26077,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269334", ", Version Hash: ")
-          .concat("9220145387c50a74fc55fb90997a12491918cd96")
+          .concat("269354", ", Version Hash: ")
+          .concat("53fda424b38aa06b249bb8a65b74f2e73b029187")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29152,12 +29153,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269334"), "269334"));
+        let _ = parseInt(((e = "269354"), "269354"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269334"
+                "269354"
               )
             ),
             (_ = 0)),
@@ -30117,17 +30118,6 @@
         });
       }
     },
-    709377: function (e, _, E) {
-      "use strict";
-      var t;
-      E.r(_),
-        E.d(_, {
-          ContentInventoryFeedKey: function () {
-            return t;
-          },
-        }),
-        ((t || (t = {})).GLOBAL_FEED = "global feed");
-    },
     1405: function (e, _, E) {
       "use strict";
       E.r(_),
@@ -30159,16 +30149,21 @@
           getMyContentInventory: function () {
             return r;
           },
-        });
+        }),
+        E("222007");
       var t = E("872717"),
         o = E("448993"),
         n = E("49111");
       let r = async () => {
         try {
-          let e = await t.default.get({
-            url: n.Endpoints.MY_CONTENT_INVENTORY,
-          });
-          return e.body;
+          var e;
+          let _ = await t.default.get({
+              url: n.Endpoints.MY_CONTENT_INVENTORY,
+            }),
+            E = _.body;
+          return (
+            (E.entries = null !== (e = E.entries) && void 0 !== e ? e : []), E
+          );
         } catch (e) {
           throw new o.APIError(e);
         }
@@ -30242,34 +30237,6 @@
         }
       }
       var L = new u();
-    },
-    265596: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          default: function () {
-            return i;
-          },
-        }),
-        E("222007");
-      var t = E("446674"),
-        o = E("913144");
-      let n = new Map();
-      class r extends t.default.Store {
-        getFeed(e) {
-          return n.get(e);
-        }
-      }
-      r.displayName = "ContentInventoryStore";
-      var i = new r(o.default, {
-        CONNECTION_OPEN: function () {
-          n.clear();
-        },
-        CONTENT_INVENTORY_SET_FEED: function (e) {
-          let { feedId: _, feed: E } = e;
-          n.set(_, E);
-        },
-      });
     },
     302537: function (e, _, E) {
       "use strict";
@@ -35017,8 +34984,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709063213403",
-                    build_number: "269334",
+                    built_at: "1709064601052",
+                    build_number: "269354",
                   },
                 },
                 retries: 1,
@@ -51534,4 +51501,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.1ded6d70317477621a66.js.map
+//# sourceMappingURL=77761.19674038cba77fbdfd87.js.map

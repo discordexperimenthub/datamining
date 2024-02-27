@@ -1225,6 +1225,9 @@
           isDismissed: function () {
             return m;
           },
+          includesTarget: function () {
+            return O;
+          },
         }),
         n("222007");
       var s = n("568734"),
@@ -1378,6 +1381,9 @@
           e.dismissedQuestContent,
           r.DismissibleQuestContentFlags[t]
         );
+      }
+      function O(e, t) {
+        return e.targetedContent.includes(t);
       }
     },
     385649: function (e, t, n) {
@@ -1590,4 +1596,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.4a08bc651c31a84d2f8e.js.map
+//# sourceMappingURL=65656.39be8c0d8c8bfe0f1680.js.map

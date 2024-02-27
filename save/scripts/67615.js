@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["98239"],
+  ["67615"],
   {
     952110: function (e, t, n) {
       "use strict";
@@ -56248,32 +56248,28 @@
             )
           );
       }
-      function v(e, t, n) {
-        let s =
-            arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          i = l.SpotifyEndpoints.PLAYER_OPEN(
-            l.SpotifyResourceTypes.TRACK,
-            n,
-            !1
-          ),
-          { deviceId: a, position: o, contextUri: d, repeat: u } = s;
+      function v(e, t, n, s) {
+        let i =
+            arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+          a = l.SpotifyEndpoints.PLAYER_OPEN(s, n, !1),
+          { deviceId: o, position: d, contextUri: u, repeat: f } = i;
         return c
           .put(e, t, {
             url: l.SpotifyEndpoints.PLAYER_PLAY,
-            query: { device_id: a },
+            query: { device_id: o },
             body: {
-              context_uri: null != d ? d : void 0,
-              uris: null == d ? [i] : void 0,
-              offset: null != d ? { uri: i } : void 0,
-              position_ms: null != o ? o : 0,
+              context_uri: null != u ? u : void 0,
+              uris: null == u ? [a] : void 0,
+              offset: null != u ? { uri: a } : void 0,
+              position_ms: null != d ? d : 0,
             },
           })
           .then(n =>
-            null == u
+            null == f
               ? n
               : c.put(e, t, {
                   url: l.SpotifyEndpoints.PLAYER_REPEAT,
-                  query: { device_id: a, state: u ? "context" : "off" },
+                  query: { device_id: o, state: f ? "context" : "off" },
                 })
           )
           .then(
@@ -56281,7 +56277,7 @@
               r.default.dispatch({
                 type: "SPOTIFY_PLAYER_PLAY",
                 id: n,
-                position: null != o ? o : 0,
+                position: null != d ? d : 0,
               }),
               e
             )
@@ -56338,6 +56334,9 @@
           SpotifyEndpoints: function () {
             return v;
           },
+          getSpotifyResourceType: function () {
+            return E;
+          },
         });
       var s,
         i,
@@ -56356,6 +56355,8 @@
         (s.ARTIST = "artist"),
         (s.ALBUM = "album"),
         (s.PLAYLIST = "playlist"),
+        (s.EPISODE = "episode"),
+        (s.SHOW = "show"),
         ((i = a || (a = {})).USER_ACTIVITY_PLAY = "user_activity_play"),
         (i.USER_ACTIVITY_SYNC = "user_activity_sync"),
         (i.EMBED_SYNC = "embed_sync");
@@ -56411,6 +56412,25 @@
           IOS_APP_STORE:
             "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8",
         });
+      function E(e) {
+        if ("string" != typeof e) return null;
+        switch (e) {
+          case "track":
+            return "track";
+          case "artist":
+            return "artist";
+          case "album":
+            return "album";
+          case "playlist":
+            return "playlist";
+          case "episode":
+            return "episode";
+          case "show":
+            return "show";
+          default:
+            return null;
+        }
+      }
     },
     155815: function (e, t, n) {
       "use strict";
@@ -56653,42 +56673,47 @@
         for (let n of Q[e]) n.is_active = n.id === t;
       }
       function ed(e, t, n) {
-        let s = ee();
-        if (null == s) return !1;
-        let { socket: r, device: a } = s,
-          { sync_id: o, party: d, timestamps: u } = t;
+        var s;
+        let r = ee();
+        if (null == r) return !1;
+        let { socket: a, device: o } = r,
+          { sync_id: d, party: u, timestamps: l } = t;
         if (
-          null == o ||
           null == d ||
-          null == d.id ||
-          !(0, b.isSpotifyParty)(d.id)
+          null == u ||
+          null == u.id ||
+          !(0, b.isSpotifyParty)(u.id)
         )
           return !1;
-        let l = null != u && null != u.start ? u.start : Date.now(),
-          f = Math.max(0, Date.now() - l),
-          _ = !1,
-          c = Z[r.accountId];
-        null != c && !1 === c.repeat && (_ = null),
-          (0, P.play)(r.accountId, r.accessToken, o, {
-            position: +f,
-            deviceId: a.id,
-            repeat: _,
-          }),
-          (i = { userId: e, partyId: d.id, trackId: o, startTime: l });
-        let g = "presence change";
+        let f = null != l && null != l.start ? l.start : Date.now(),
+          _ = Math.max(0, Date.now() - f),
+          c = !1,
+          g = Z[a.accountId];
+        null != g && !1 === g.repeat && (c = null);
+        let m = (0, b.getSpotifyResourceType)(
+          null === (s = t.metadata) || void 0 === s ? void 0 : s.type
+        );
+        if (null == m) return;
+        (0, P.play)(a.accountId, a.accessToken, d, m, {
+          position: +_,
+          deviceId: o.id,
+          repeat: c,
+        }),
+          (i = { userId: e, partyId: u.id, trackId: d, startTime: f });
+        let h = "presence change";
         n &&
-          ((g = "started"),
+          ((h = "started"),
           D.default.track(V.AnalyticEvents.SPOTIFY_LISTEN_ALONG_STARTED, {
-            party_id: d.id,
+            party_id: u.id,
             other_user_id: e,
           })),
           Y.info(
             "Listen along "
-              .concat(g, ": ")
-              .concat(r.accountId, " to ")
+              .concat(h, ": ")
+              .concat(a.accountId, " to ")
               .concat(e, " playing ")
-              .concat(o, " on ")
-              .concat(a.name)
+              .concat(d, " on ")
+              .concat(o.name)
           );
       }
       function eu() {
@@ -56757,49 +56782,92 @@
         return !1;
       }
       function ec(e, t, n) {
-        let s,
-          i,
+        var s, i, r, a, o, d, u, l, f, _, c;
+        let m,
+          h,
           {
-            device: r,
-            progress_ms: a,
-            is_playing: o,
-            repeat_state: d,
-            item: u,
-            context: l,
+            device: v,
+            progress_ms: E,
+            is_playing: p,
+            repeat_state: y,
+            item: T,
+            context: C,
           } = n;
-        if (null != u && u.type === b.SpotifyResourceTypes.TRACK) {
-          let e = u.id;
-          null != u.linked_from &&
-            null != u.linked_from.id &&
-            (e = u.linked_from.id),
-            (s = {
+        if (null != T && T.type === b.SpotifyResourceTypes.TRACK) {
+          let e = T.id;
+          null != T.linked_from &&
+            null != T.linked_from.id &&
+            (e = T.linked_from.id),
+            (m = {
               id: e,
-              name: u.name,
-              duration: u.duration_ms,
+              name: T.name,
+              duration: T.duration_ms,
+              type: b.SpotifyResourceTypes.TRACK,
               album: {
-                id: u.album.id,
-                name: u.album.name,
-                image: u.album.images[0],
+                id:
+                  null !==
+                    (a =
+                      null === (s = T.album) || void 0 === s ? void 0 : s.id) &&
+                  void 0 !== a
+                    ? a
+                    : "",
+                name:
+                  null !==
+                    (o =
+                      null === (i = T.album) || void 0 === i
+                        ? void 0
+                        : i.name) && void 0 !== o
+                    ? o
+                    : "",
+                image:
+                  null === (r = T.album) || void 0 === r ? void 0 : r.images[0],
               },
-              artists: u.artists,
-              isLocal: u.is_local || !1,
+              artists: null !== (d = T.artists) && void 0 !== d ? d : [],
+              isLocal: T.is_local || !1,
             });
+        } else if (null != T && T.type === b.SpotifyResourceTypes.EPISODE) {
+          let e = T.id;
+          m = {
+            id: e,
+            name: T.name,
+            duration: T.duration_ms,
+            type: b.SpotifyResourceTypes.EPISODE,
+            album: {
+              id:
+                null !==
+                  (_ = null === (u = T.show) || void 0 === u ? void 0 : u.id) &&
+                void 0 !== _
+                  ? _
+                  : "",
+              name:
+                null !==
+                  (c =
+                    null === (l = T.show) || void 0 === l ? void 0 : l.name) &&
+                void 0 !== c
+                  ? c
+                  : "",
+              image:
+                null === (f = T.show) || void 0 === f ? void 0 : f.images[0],
+            },
+            artists: [],
+            isLocal: !1,
+          };
         }
         if (
-          (null != r && !0 !== r.is_active && (r = { ...r, is_active: !0 }),
-          null != l &&
+          (null != v && !0 !== v.is_active && (v = { ...v, is_active: !0 }),
+          null != C &&
             [
               b.SpotifyResourceTypes.PLAYLIST,
               b.SpotifyResourceTypes.ALBUM,
-            ].includes(l.type))
+            ].includes(C.type))
         ) {
           let n = eh.getPlayerState(e);
-          i =
-            null != n && null != n.context && n.context.uri === l.uri
+          h =
+            null != n && null != n.context && n.context.uri === C.uri
               ? Promise.resolve(n.context)
-              : l.type === b.SpotifyResourceTypes.ALBUM
-                ? Promise.resolve(l)
-                : P.SpotifyAPI.get(e, t, { url: l.href })
+              : C.type === b.SpotifyResourceTypes.ALBUM
+                ? Promise.resolve(C)
+                : P.SpotifyAPI.get(e, t, { url: C.href })
                     .then(e => {
                       let { body: t } = e;
                       return t;
@@ -56808,8 +56876,8 @@
                       if (e && 404 === e.status) return null;
                       throw e;
                     });
-        } else i = Promise.resolve(void 0);
-        return i.then(t => {
+        } else h = Promise.resolve(void 0);
+        return h.then(t => {
           null != t &&
             t.type === b.SpotifyResourceTypes.PLAYLIST &&
             !t.public &&
@@ -56817,19 +56885,24 @@
             g.default.dispatch({
               type: "SPOTIFY_PLAYER_STATE",
               accountId: e,
-              track: s,
-              volumePercent: null != r ? r.volume_percent : 0,
-              isPlaying: o,
-              repeat: "off" !== d,
-              position: a,
+              track: m,
+              volumePercent: null != v ? v.volume_percent : 0,
+              isPlaying: p,
+              repeat: "off" !== y,
+              position: E,
               context: t,
-              device: r,
+              device: v,
             });
         });
       }
       function eg(e, t) {
         return P.SpotifyAPI.get(e, t, {
           url: b.SpotifyEndpoints.PLAYER,
+          query: {
+            additional_types: ""
+              .concat(b.SpotifyResourceTypes.TRACK, ",")
+              .concat(b.SpotifyResourceTypes.EPISODE),
+          },
           onlyRetryOnAuthorizationErrors: !0,
         })
           .then(n => {
@@ -56921,55 +56994,57 @@
                 id: d,
                 duration: u,
                 isLocal: l,
+                type: f,
               },
-              startTime: f,
-              context: _,
+              startTime: _,
+              context: c,
             } = s,
-            c = r.slice(0, 5);
+            g = r.slice(0, 5);
           r.length > 0 &&
-            (e = c
+            (e = g
               .map(e => {
                 let { name: t } = e;
                 return t.replace(/;/g, "");
               })
               .join("; "));
-          let g = {},
-            m =
+          let m = {},
+            h =
               null != a.image
                 ? (0, N.getAssetFromImageURL)(
                     V.PlatformTypes.SPOTIFY,
                     a.image.url
                   )
                 : null;
-          null != a.image && null != m && (g.large_image = m),
-            "single" !== a.type && (g.large_text = a.name),
-            null != _ && (t = _.uri),
+          null != a.image && null != h && (m.large_image = h),
+            "single" !== a.type && (m.large_text = a.name),
+            null != c && (t = c.uri),
             (n =
               null != i && null != i.partyId
                 ? i.partyId
                 : "".concat(b.SPOTIFY_PARTY_PREFIX).concat(y.default.getId()));
-          let h = o.length > 128 ? o.substring(0, 125) + "..." : o,
-            v = {
+          let v = o.length > 128 ? o.substring(0, 125) + "..." : o,
+            E = {
               name: R.name,
-              assets: g,
-              details: h,
+              assets: m,
+              details: v,
               state: e,
-              timestamps: { start: f, end: f + u },
+              timestamps: { start: _, end: _ + u },
               party: { id: n },
             };
           return (
             !l &&
-              ((v.sync_id = d),
-              (v.flags = V.ActivityFlags.PLAY | V.ActivityFlags.SYNC),
-              (v.metadata = {
+              ((E.sync_id = d),
+              (E.flags = V.ActivityFlags.PLAY | V.ActivityFlags.SYNC),
+              (E.metadata = {
                 context_uri: t,
                 album_id: a.id,
-                artist_ids: c.map(e => {
+                artist_ids: g.map(e => {
                   let { id: t } = e;
                   return t;
                 }),
+                type: f,
               })),
-            v
+            E
           );
         }
       }
@@ -57091,25 +57166,27 @@
           if (null == r) return !1;
           let { socket: a, device: o } = r,
             { sync_id: d, party: u } = n;
-          if (
-            null == d ||
-            null == u ||
-            null == u.id ||
-            !(0, b.isSpotifyParty)(u.id)
-          )
-            return !1;
-          null != s && (t = s.context_uri),
+          return (
+            !!(
+              null != d &&
+              null != u &&
+              null != u.id &&
+              (0, b.isSpotifyParty)(u.id)
+            ) &&
+            (null != s && (t = s.context_uri),
             null != i && eu(),
-            (0, P.play)(a.accountId, a.accessToken, d, {
-              contextUri: t,
-              deviceId: o.id,
-            }),
-            Y.info(
-              "Play started: "
-                .concat(a.accountId, " playing ")
-                .concat(d, " on ")
-                .concat(o.name)
-            );
+            null != s &&
+              void ((0, P.play)(a.accountId, a.accessToken, d, s.type, {
+                contextUri: t,
+                deviceId: o.id,
+              }),
+              Y.info(
+                "Play started: "
+                  .concat(a.accountId, " playing ")
+                  .concat(d, " on ")
+                  .concat(o.name)
+              )))
+          );
         },
         ACTIVITY_SYNC: function (e) {
           let { activity: t, userId: n } = e;
@@ -76845,4 +76922,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98239.ce6b70ba1505be1addc3.js.map
+//# sourceMappingURL=67615.8cdc978240faf9364f54.js.map

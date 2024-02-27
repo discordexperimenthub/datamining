@@ -4160,11 +4160,11 @@
           _ = i.useMemo(
             () =>
               e.length >= 2
-                ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+                ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
                     username: m(e[0]),
                   })
                 : 1 === e.length
-                  ? d.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
+                  ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
                       username: m(e[0]),
                     })
                   : "",
@@ -5621,4 +5621,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.bba508b3ee66c1da0500.js.map
+//# sourceMappingURL=72683.01924140b2794a5e8981.js.map

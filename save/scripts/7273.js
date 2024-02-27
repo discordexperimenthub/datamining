@@ -5200,6 +5200,9 @@
           "channel_attach_menu_start_activity_clicked"),
         (es.APP_LAUNCHER_SEARCH_QUERY_TYPED =
           "app_launcher_search_query_typed"),
+        (es.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED =
+          "app_launcher_empty_state_encountered"),
+        (es.APP_LAUNCHER_CLOSED = "app_launcher_closed"),
         (es.COMMANDS_MIGRATION_TOOLTIP_DISMISSED =
           "commands_migration_tooltip_dismissed"),
         (es.COMMANDS_MIGRATION_TOOLTIP_VIEWED =
@@ -17148,4 +17151,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.a3b7d9447242fed6cc78.js.map
+//# sourceMappingURL=7273.2e60de5957cecd0a829e.js.map

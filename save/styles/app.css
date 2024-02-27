@@ -36640,6 +36640,13 @@ html .progress__4ef76 {
     bottom: 0;
   }
 }
+.tooltip__8fae1 {
+  max-width: 250px;
+}
+.tooltipContent__27a8f {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: 12px;
+}
 .searchHeader__19d87 {
   align-items: center;
   background-color: var(--background-tertiary);
@@ -109173,4 +109180,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.4e08dd852fbc7691ece5.css.map*/
+/*# sourceMappingURL=app.f2f0a272a61648bb5ed2.css.map*/

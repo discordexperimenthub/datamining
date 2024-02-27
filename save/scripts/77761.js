@@ -23844,6 +23844,8 @@
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_NOFILTR: "Contact NoFiltr",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP:
           "This conversation may not be safe.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "This conversation may not be safe. Open safety tools to take action.",
         SAFETY_ALERTS_SETTINGS_HEADER: "Safety Alerts",
         SAFETY_ALERTS_SETTING_TITLE: "Show alerts in direct messages",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
@@ -26077,8 +26079,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269354", ", Version Hash: ")
-          .concat("53fda424b38aa06b249bb8a65b74f2e73b029187")
+          .concat("269370", ", Version Hash: ")
+          .concat("f063883ffcb866a496a8a301e8aca885bf299558")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29153,12 +29155,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269354"), "269354"));
+        let _ = parseInt(((e = "269370"), "269370"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269354"
+                "269370"
               )
             ),
             (_ = 0)),
@@ -34984,8 +34986,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709064601052",
-                    build_number: "269354",
+                    built_at: "1709066080729",
+                    build_number: "269370",
                   },
                 },
                 retries: 1,
@@ -51501,4 +51503,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.19674038cba77fbdfd87.js.map
+//# sourceMappingURL=77761.7b305faae5d6e8f24100.js.map

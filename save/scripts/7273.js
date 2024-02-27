@@ -8874,7 +8874,7 @@
           POLLS_VICTOR_FILL: {
             category: "generic",
             [a.DARK]: { raw: "GREEN_360", opacity: 0.2 },
-            [a.LIGHT]: { raw: "GREEN_360", opacity: 0.2 },
+            [a.LIGHT]: { raw: "GREEN_400", opacity: 0.2 },
             [a.MIDNIGHT]: { raw: "GREEN_360", opacity: 0.2 },
             [a.DARKER]: { raw: "GREEN_360", opacity: 0.2 },
           },
@@ -15151,7 +15151,7 @@
         ],
         "polls-victor-fill": [
           o.Color.GREEN_360,
-          o.Color.GREEN_360,
+          o.Color.GREEN_400,
           o.Color.GREEN_360,
           o.Color.GREEN_360,
         ],
@@ -17142,4 +17142,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.8bc5fb4511ca7038a531.js.map
+//# sourceMappingURL=7273.2c3064ce1b564b2cd227.js.map

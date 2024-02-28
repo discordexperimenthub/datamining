@@ -9,7 +9,7 @@
             return L;
           },
           updateSubscriptionInvoicePreview: function () {
-            return _;
+            return E;
           },
           useGetSubscriptionInvoice: function () {
             return I;
@@ -26,15 +26,15 @@
         a = r("416573"),
         f = r("488867"),
         c = r("467006");
-      async function E(e) {
+      async function _(e) {
         let {
             items: t,
             paymentSourceId: r,
             trialId: i,
             code: n,
             applyEntitlements: a = !1,
-            currency: E,
-            renewal: _,
+            currency: _,
+            renewal: E,
             metadata: o,
           } = e,
           d = {
@@ -48,8 +48,8 @@
             trial_id: i,
             code: n,
             apply_entitlements: a,
-            currency: E,
-            renewal: _,
+            currency: _,
+            renewal: E,
             metadata: o,
           };
         try {
@@ -63,15 +63,15 @@
           throw new u.BillingError(e);
         }
       }
-      async function _(e) {
+      async function E(e) {
         let {
           subscriptionId: t,
           items: r,
           paymentSourceId: i,
           renewal: n,
           currency: a,
-          applyEntitlements: E = !1,
-          analyticsLocations: _,
+          applyEntitlements: _ = !1,
+          analyticsLocations: E,
           analyticsLocation: o,
           userDiscountOfferId: d,
         } = e;
@@ -83,14 +83,14 @@
           }),
           payment_source_id: i,
           renewal: n,
-          apply_entitlements: E,
+          apply_entitlements: _,
           currency: a,
-          userDiscountOfferId: d,
+          user_discount_offer_id: d,
         };
         try {
           let e = await l.default.patch({
             url: c.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
-            query: { location: o, location_stack: _ },
+            query: { location: o, location_stack: E },
             body: R,
             oldFormErrors: !0,
           });
@@ -143,7 +143,7 @@
           e = r;
         }
         let t = (0, i.useCallback)(
-          () => ("subscriptionId" in e ? _(e) : "items" in e ? E(e) : null),
+          () => ("subscriptionId" in e ? E(e) : "items" in e ? _(e) : null),
           [JSON.stringify(e)]
         );
         return d(e, t);
@@ -177,7 +177,7 @@
             return a;
           },
           resolveReferralTrialOffer: function () {
-            return E;
+            return _;
           },
         });
       var i = r("454836"),
@@ -267,7 +267,7 @@
           }
         }
       }
-      async function E(e) {
+      async function _(e) {
         try {
           let t =
             (
@@ -307,8 +307,8 @@
         a = r("467006");
       let f = null,
         c = {},
-        E = [],
-        _ = new Set(),
+        _ = [],
+        E = new Set(),
         o = !1,
         d = new Set(),
         R = new Set(),
@@ -351,17 +351,17 @@
           return this.checkAndFetchReferralsRemaining(), f;
         }
         getSentUserIds() {
-          return this.checkAndFetchReferralsRemaining(), null == E ? [] : E;
+          return this.checkAndFetchReferralsRemaining(), null == _ ? [] : _;
         }
         isFetchingReferralsRemaining() {
           return o;
         }
         isFetchingRecipientEligibility(e) {
-          return _.has(e);
+          return E.has(e);
         }
         getRecipientEligibility(e) {
           return (
-            void 0 === c[e] && !_.has(e) && (0, s.checkRecipientEligibility)(e),
+            void 0 === c[e] && !E.has(e) && (0, s.checkRecipientEligibility)(e),
             c[e]
           );
         }
@@ -377,7 +377,7 @@
           let { userTrialOfferId: t, recipientId: r } = e;
           if (
             (!o && (0, s.fetchReferralsRemaining)(),
-            !_.has(r) && (0, s.checkRecipientEligibility)(r),
+            !E.has(r) && (0, s.checkRecipientEligibility)(r),
             !d.has(t))
           ) {
             var i;
@@ -394,7 +394,7 @@
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
           let { referrals_remaining: t, sent_user_ids: r } = e;
-          (o = !1), (f = t), (E = r);
+          (o = !1), (f = t), (_ = r);
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
           let {} = e;
@@ -402,21 +402,21 @@
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
           let { recipientId: t } = e;
-          _.add(t);
+          E.add(t);
         },
         BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function (e) {
           let { recipientId: t, is_eligible: r } = e;
-          (c[t] = r), _.delete(t);
+          (c[t] = r), E.delete(t);
         },
         BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function (e) {
           let { recipientId: t } = e;
-          (c[t] = !1), _.delete(t);
+          (c[t] = !1), E.delete(t);
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
           (0, s.fetchReferralsRemaining)(),
             (I[t.id] = t),
-            (E = [...E, t.user_id]);
+            (_ = [..._, t.user_id]);
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
@@ -435,8 +435,8 @@
         LOGOUT: function () {
           (f = null),
             (c = {}),
-            (E = []),
-            (_ = new Set()),
+            (_ = []),
+            (E = new Set()),
             (o = !1),
             (d = new Set()),
             (R = new Set()),
@@ -511,7 +511,7 @@
             s.default.getUserTrialOffer(e)
           ),
           [r, c] = i.useState(f(t)),
-          E = (0, n.useStateFromStores)([u.default], () =>
+          _ = (0, n.useStateFromStores)([u.default], () =>
             (0, a.isPremium)(u.default.getCurrentUser())
           );
         return (
@@ -530,7 +530,7 @@
               return i(), () => e.stop();
             }
           }, [r, t]),
-          r || E ? null : t
+          r || _ ? null : t
         );
       }
     },
@@ -555,12 +555,12 @@
           userDiscounts: void 0,
         },
         c = f;
-      function E() {
+      function _() {
         (c.userTrialOffers = {}),
           (c.userDiscountOffers = {}),
           (c.userOffersLastFetchedAtDate = void 0);
       }
-      let _ = () => !0;
+      let E = () => !0;
       function o() {
         return (
           null != s.default.getPremiumTypeSubscription() &&
@@ -579,7 +579,7 @@
         initialize(e) {
           (c = e ?? f),
             this.waitFor(l.default),
-            this.syncWith([l.default], _),
+            this.syncWith([l.default], E),
             this.syncWith([s.default], o);
         }
         getUserTrialOffer(e) {
@@ -648,13 +648,13 @@
           return c;
         }
         forceReset() {
-          E();
+          _();
         }
       }
       var R = new d(n.default, {
         BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
-          null != t ? (c.userTrialOffers[t.trial_id] = t) : E(),
+          null != t ? (c.userTrialOffers[t.trial_id] = t) : _(),
             (c.userOffersLastFetchedAtDate = Date.now());
         },
         BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function (e) {
@@ -666,7 +666,7 @@
         },
         BILLING_USER_OFFER_FETCH_SUCCESS: function (e) {
           let { userTrialOffer: t, userDiscount: r, userDiscountOffer: i } = e;
-          null == t && null == r && null == i && E(),
+          null == t && null == r && null == i && _(),
             null != t
               ? ((c.userTrialOffers[t.trial_id] = t),
                 (c.userDiscountOffers = {}))
@@ -690,9 +690,9 @@
                 : (c.userDiscountOffers = {}),
             (c.userOffersLastFetchedAtDate = Date.now());
         },
-        LOGOUT: E,
+        LOGOUT: _,
       });
     },
   },
 ]);
-//# sourceMappingURL=83746.411468e16f07046d524f.js.map
+//# sourceMappingURL=83746.63116da8aedf807d2c2f.js.map

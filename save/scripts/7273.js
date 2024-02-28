@@ -4924,8 +4924,10 @@
         (el.MEDIA_DEVICE_CHANGED = "media_device_changed"),
         (el.IMAGE_VIDEO_DATA_SETTINGS_UPDATED =
           "image_video_data_settings_updated"),
+        (el.QUEST_HOVER = "quest_hover"),
         (el.QUEST_STREAMING_STARTED = "quest_streaming_started"),
         (el.QUEST_CONTENT_CLICKED = "quest_content_clicked"),
+        (el.QUEST_LINK_SHARED = "quest_link_shared"),
         (el.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
         (el.USER_ATTRIBUTION_RECEIVED = "user_attribution_received"),
         (el.USER_AVATAR_UPDATED = "user_avatar_updated"),
@@ -17142,4 +17144,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.2c3064ce1b564b2cd227.js.map
+//# sourceMappingURL=7273.bb4404d046f18bd03b7a.js.map

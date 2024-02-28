@@ -1135,7 +1135,8 @@
         },
         QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
           let { previewQuestUserStatus: t } = e;
-          _(t.questId, { userStatus: t });
+          _(t.questId, { userStatus: t }),
+            null == t.claimedAt && (E = new Map(E)).delete(t.questId);
         },
       });
     },
@@ -1601,4 +1602,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.57cc49b54a2a29dff033.js.map
+//# sourceMappingURL=65656.1d885227ab5c9d304e05.js.map

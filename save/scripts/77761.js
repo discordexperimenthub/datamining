@@ -24008,6 +24008,8 @@
         POLL_SELECT_MULTIPLE_ANSWERS: "Select one or more answers",
         POLL_SHOW_VOTES: "Show votes",
         POLL_HIDE_VOTES: "Hide votes",
+        POLL_VOTES_NO_RESULTS_TITLE: "Nothing to see here",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "There are no votes for this answer",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -26068,8 +26070,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269476", ", Version Hash: ")
-          .concat("aa20ef3511eed4c9994d8dc6d4bccb52314bf199")
+          .concat("269499", ", Version Hash: ")
+          .concat("64b3bdbf56abb079944ad828b85a992ec860c6c8")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29144,12 +29146,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269476"), "269476"));
+        let _ = parseInt(((e = "269499"), "269499"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269476"
+                "269499"
               )
             ),
             (_ = 0)),
@@ -34975,8 +34977,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709080037113",
-                    build_number: "269476",
+                    built_at: "1709083808948",
+                    build_number: "269499",
                   },
                 },
                 retries: 1,
@@ -51492,4 +51494,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.4c16eb974e5dbaf6574f.js.map
+//# sourceMappingURL=77761.f4c05894361e9def039b.js.map

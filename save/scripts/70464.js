@@ -5002,6 +5002,7 @@
           "cancellation_flow_discount_offer_prompt_viewed"),
         (el.ATTACHMENT_UPLOAD_STARTED = "attachment_upload_started"),
         (el.ATTACHMENT_UPLOAD_FINISHED = "attachment_upload_finished"),
+        (el.IMAGE_LOADING_COMPLETED = "image_loading_completed"),
         (el.MESSAGE_SENT_WITH_ATTACHMENTS = "message_sent_with_attachments"),
         (el.MESSAGE_LINK_COPIED = "message_link_copied"),
         (el.MESSAGE_SWIPE_ACTION_SENT = "message_swipe_action_sent"),
@@ -16789,4 +16790,4 @@
     },
   },
 ]);
-//# sourceMappingURL=70464.a57b17a8969b33cef510.js.map
+//# sourceMappingURL=70464.cf17bbfc4db27c0ff271.js.map

@@ -1479,15 +1479,15 @@
             },
             [l]
           ),
-          x = r.useCallback(() => {
+          b = r.useCallback(() => {
             R.current.cancel(), y(!0);
           }, []),
-          b = r.useCallback(() => {
+          x = r.useCallback(() => {
             R.current.delay();
           }, []),
           D = r.useCallback(
             (e, t) => {
-              x(),
+              b(),
                 (0, f.openContextMenuLazy)(
                   e,
                   async () => {
@@ -1496,10 +1496,10 @@
                       .then(n.bind(n, "84406"));
                     return n => (0, a.jsx)(e, { ...n, user: t });
                   },
-                  { onClose: b }
+                  { onClose: x }
                 );
             },
-            [b, x]
+            [x, b]
           );
         if (0 === O.length) return null;
         if (C)
@@ -1536,8 +1536,8 @@
           (0, a.jsx)(h.default, {
             section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
-              onMouseEnter: x,
-              onMouseLeave: b,
+              onMouseEnter: b,
+              onMouseLeave: x,
               children: (0, a.jsx)(c.Popout, {
                 renderPopout: () =>
                   (0, a.jsx)(N, {
@@ -2550,8 +2550,8 @@ ${u}`;
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "269732",
-          versionHash: "db239862f91dca360302bcd4dd4841c6f891b984",
+          buildNumber: "269734",
+          versionHash: "b3edf3acbfb77e2b8418bb6f0dcbcdfb6b879fe0",
         };
       }
       n.r(t),
@@ -2739,7 +2739,7 @@ ${h}`;
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-db239862f91dca360302bcd4dd4841c6f891b984",
+          release: "discord_web-b3edf3acbfb77e2b8418bb6f0dcbcdfb6b879fe0",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2809,8 +2809,8 @@ ${h}`;
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", "269732"),
-          a.setTag("builtAt", String("1709154935356"));
+          a.setTag("buildNumber", "269734"),
+          a.setTag("builtAt", String("1709155043576"));
         let e = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != e && "object" == typeof e)
           for (let t in e) a.setTag(t, e[t]);
@@ -3368,12 +3368,12 @@ ${h}`;
             g?.isThread() &&
             (function (e) {
               if (S.default.hasOpenedThread(e)) return !1;
-              if ((null == a && (a = s.default.get(x, {}) ?? {}), e in a))
+              if ((null == a && (a = s.default.get(b, {}) ?? {}), e in a))
                 return !1;
               a[e] = Date.now();
               let t = Date.now() - O;
               for (let e in a) a[e] < t && delete a[e];
-              return s.default.set(x, a), !0;
+              return s.default.set(b, a), !0;
             })(n)
           )
             y.log(`Jumping to start of thread ${g.id}`),
@@ -3409,8 +3409,8 @@ ${h}`;
         }
       }
       let O = 90 * I.default.Millis.DAY,
-        x = "viewedThreadIds";
-      function b() {
+        b = "viewedThreadIds";
+      function x() {
         let e = _.default.getChannelId();
         if (null != e) {
           let t = C.default.getChannel(e);
@@ -3551,10 +3551,10 @@ ${h}`;
       }
       class K extends c.default {
         _initialize() {
-          l.default.subscribe("CONNECTION_OPEN", b);
+          l.default.subscribe("CONNECTION_OPEN", x);
         }
         _terminate() {
-          l.default.unsubscribe("CONNECTION_OPEN", b);
+          l.default.unsubscribe("CONNECTION_OPEN", x);
         }
         constructor(...e) {
           super(...e),
@@ -3563,7 +3563,7 @@ ${h}`;
             (this.stores = new Map().set(E.default, U)),
             (this.actions = {
               APP_STATE_UPDATE: Y,
-              OVERLAY_INITIALIZE: b,
+              OVERLAY_INITIALIZE: x,
               CHANNEL_SELECT: P,
               VOICE_CHANNEL_SELECT: w,
               THREAD_CREATE: V,
@@ -6252,4 +6252,4 @@ ${h}`;
     },
   },
 ]);
-//# sourceMappingURL=91938.092ac907541fd2d40575.js.map
+//# sourceMappingURL=91938.de099673a776a0b7c3bf.js.map

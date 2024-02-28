@@ -149,10 +149,10 @@
             return m;
           },
           getBlindIds: function () {
-            return E;
+            return L;
           },
           uploadCallscopeLogs: function () {
-            return L;
+            return b;
           },
           uploadCallscopeLogFiles: function () {
             return w;
@@ -175,7 +175,7 @@
       async function m(t, e) {
         await y(t), await (0, r.uploadRtcLogFiles)(3670016, e);
       }
-      class b {
+      class E {
         static getTrimmedFilename(t) {
           let e = /^channel\.\d+\.(.+)$/.exec(t);
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
@@ -185,13 +185,13 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function E(t, e, n) {
+      async function L(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
         return { blindChannelId: l, blindUserId: r };
       }
-      async function L(t, e, n, o) {
+      async function b(t, e, n, o) {
         var a;
         if (!__OVERLAY__) {
           if (
@@ -213,7 +213,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await E(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await L(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -246,13 +246,13 @@
             c.transformNativeFile(t, "application/octet-stream")
           )) {
             h.log("uploadCallscopeLogFiles: Uploading ".concat(n.name));
-            let e = b.getChannelId(n.name);
+            let e = E.getChannelId(n.name);
             try {
               let a = await o.default.post({
                   url: f.Endpoints.CALLSCOPE_LOGS(
                     e,
                     t,
-                    b.getTrimmedFilename(n.name)
+                    E.getTrimmedFilename(n.name)
                   ),
                   headers: { "Content-Type": "application/octet-stream" },
                   body: n,
@@ -375,8 +375,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "269579",
-          versionHash: "1f3f7481bfbf3582e29a240a33a43bb14bd5589e",
+          buildNumber: "269585",
+          versionHash: "1a429b863cd8f62ab8d5cdd8541ddfcae19d94fe",
         };
       }
       n.r(e),
@@ -566,4 +566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.096860249e9f2a207a33.js.map
+//# sourceMappingURL=18409.8b51f1124bf7c88d3ada.js.map

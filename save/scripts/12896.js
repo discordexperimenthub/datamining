@@ -48,8 +48,8 @@
       var a = n("161454"),
         i = n("374014"),
         l = n("373469"),
-        r = n("271938"),
-        d = n("824563"),
+        d = n("271938"),
+        r = n("824563"),
         u = n("945956"),
         s = n("800762"),
         o = n("299039"),
@@ -61,8 +61,8 @@
             var t, n;
             if (null != e) {
               let { ownerId: t } = i.decodeStreamKey(e);
-              if (t !== r.default.getId()) {
-                let e = d.default
+              if (t !== d.default.getId()) {
+                let e = r.default
                   .getActivities(t)
                   .find(e => e.type === f.ActivityTypes.PLAYING);
                 return {
@@ -95,7 +95,7 @@
             };
           })(e),
           p = u.default.getChannelId(),
-          _ = [r.default.getId()];
+          _ = [d.default.getId()];
         return (
           null != p && (_ = Object.keys(s.default.getVoiceStatesForChannel(p))),
           {
@@ -117,7 +117,7 @@
       n.r(t),
         n.d(t, {
           validateClipMetadata: function () {
-            return r;
+            return d;
           },
         }),
         n("222007"),
@@ -147,11 +147,11 @@
           },
         ],
         l = null;
-      async function r(e) {
+      async function d(e) {
         var t;
-        let r = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
-        let d =
-          ((t = r),
+        let d = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
+        let r =
+          ((t = d),
           null != l
             ? l
             : (l = t
@@ -201,7 +201,7 @@
                 })
                 .required()));
         try {
-          r.assert(e, d);
+          d.assert(e, r);
           return (
             null == e.version && (e.version = 0),
             i.slice(e.version).reduce((e, t) => t(e), e)
@@ -272,8 +272,8 @@
       var a = n("773364"),
         i = n("784063"),
         l = n("750028"),
-        r = n("913144"),
-        d = n("49671"),
+        d = n("913144"),
+        r = n("49671"),
         u = n("44642"),
         s = n("161454"),
         o = n("374014"),
@@ -312,7 +312,7 @@
       }
       async function w(e) {
         let { clipsEnabled: t, guildId: n, trackAnalytics: a = !1 } = e;
-        await r.default.dispatch({
+        await d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: {
             clipsEnabled: t,
@@ -328,7 +328,7 @@
       }
       function O(e) {
         let { enabled: t, trackAnalytics: n = !1 } = e;
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: {
             ...(t && { clipsEnabled: !0 }),
@@ -342,32 +342,32 @@
             });
       }
       function P(e) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: { remindersEnabled: e },
         });
       }
       function U(e) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: { storageLocation: e },
         });
       }
       function G(e) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: { clipsQuality: e },
         });
       }
       function F(e) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: { clipsLength: e },
         });
       }
       function V(e) {
         let { enabled: t, trackAnalytics: n = !1 } = e;
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SETTINGS_UPDATE",
           settings: { viewerClipsEnabled: t },
         }),
@@ -377,7 +377,7 @@
             });
       }
       function x(e, t) {
-        var n, a, i, l, r, d, s, o, c, f;
+        var n, a, i, l, d, r, s, o, c, f;
         let g = new Map();
         for (let e in t.framesEncodedByEncoder) {
           let a = t.framesEncodedByEncoder[e],
@@ -398,12 +398,12 @@
           frames_encoded_openh264:
             null !== (l = g.get(u.Encoders.OPENH264)) && void 0 !== l ? l : 0,
           frames_encoded_videotoolbox:
-            null !== (r = g.get(u.Encoders.VIDEOTOOLBOX)) && void 0 !== r
-              ? r
+            null !== (d = g.get(u.Encoders.VIDEOTOOLBOX)) && void 0 !== d
+              ? d
               : 0,
           frames_encoded_amd_direct3d:
-            null !== (d = g.get(u.Encoders.AMD_DIRECT_3D)) && void 0 !== d
-              ? d
+            null !== (r = g.get(u.Encoders.AMD_DIRECT_3D)) && void 0 !== r
+              ? r
               : 0,
           frames_encoded_intel:
             null !== (s = g.get(u.Encoders.INTEL)) && void 0 !== s ? s : 0,
@@ -442,7 +442,7 @@
           i = ""
             .concat((0, A.default)(a.applicationName.substring(0, 20)), "_")
             .concat(a.id, ".mp4"),
-          l = d.default.fileManager.join(n, i),
+          l = r.default.fileManager.join(n, i),
           u = E.default.getMediaEngine(),
           s = JSON.stringify(a),
           c = null != e ? (0, o.decodeStreamKey)(e).ownerId : void 0,
@@ -481,7 +481,7 @@
             };
           })(e);
         null != e &&
-          r.default.dispatch({
+          d.default.dispatch({
             type: "CLIPS_SAVE_CLIP_PLACEHOLDER",
             clip: { ...a, filepath: l },
           });
@@ -502,20 +502,20 @@
               (i.encode_fps_during_clip = n.viewerEncodeFps),
               (i.target_fps = null)),
             v.default.track(L.AnalyticEvents.CLIP_SAVED, i);
-          let r = await (null != d.default.clips.getClipProtocolURLFromPath
+          let d = await (null != r.default.clips.getClipProtocolURLFromPath
             ? (0, M.createThumbnailFromVideo)(
-                d.default.clips.getClipProtocolURLFromPath(l),
+                r.default.clips.getClipProtocolURLFromPath(l),
                 0
               )
             : (0, M.createImageFromUint8Array)(t));
           return (
-            (a.thumbnail = r),
+            (a.thumbnail = d),
             (a.length = e),
             R.ClipsLogger.info(
               "Clip save succeeded with "
                 .concat(e, "ms and thumbnail ")
                 .concat(
-                  null !== (g = null == r ? void 0 : r.length) && void 0 !== g
+                  null !== (g = null == d ? void 0 : d.length) && void 0 !== g
                     ? g
                     : 0,
                   " bytes thumbnail."
@@ -527,7 +527,7 @@
         } catch (n) {
           if (
             (null != e &&
-              r.default.dispatch({
+              d.default.dispatch({
                 type: "CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR",
                 clipId: a.id,
               }),
@@ -554,7 +554,7 @@
             { autoTrackExposure: !1 }
           );
         if (C.default.getIsAtMaxSaveClipOperations()) return;
-        let d =
+        let r =
             C.default.getSettings().clipsEnabled &&
             null != _.default.getCurrentUserActiveStream(),
           u =
@@ -566,7 +566,7 @@
             E.default.hasClipsSource(),
           g =
             null != e && null != _.default.getActiveStreamForStreamKey(e) && l;
-        if (!d && !u && !g) return;
+        if (!r && !u && !g) return;
         let p = _.default.getCurrentUserActiveStream(),
           h = null != p ? (0, o.encodeStreamKey)(p) : void 0,
           v = null != e ? e : h,
@@ -591,7 +591,7 @@
                 return;
               }
           })();
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SAVE_CLIP_START",
           clipType: I,
           streamKey: v,
@@ -601,12 +601,12 @@
           D = performance.now();
         try {
           let e = await k(v);
-          r.default.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e });
+          d.default.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e });
         } catch (e) {
           R.ClipsLogger.error("Clip Failed to Save", e),
             null == T || T.stop(),
             (0, y.playSound)("clip_error", 0.5),
-            r.default.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
+            d.default.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
         }
         R.ClipsLogger.info(
           ""
@@ -618,7 +618,7 @@
         );
       }
       function H(e, t) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_SAVE_ANIMATION_END",
           streamKey: e,
           timestamp: t,
@@ -634,24 +634,24 @@
             .getMediaEngine()
             .updateClipMetadata(a.filepath, JSON.stringify(a)),
           v.default.track(L.AnalyticEvents.CLIP_EDITED, { clip_id: a.id }),
-          r.default.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: a }));
+          d.default.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: a }));
       }
       function B() {
-        r.default.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
+        d.default.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
       }
       function K() {
-        r.default.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
+        d.default.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });
       }
       async function J(e) {
         var t;
         if (
           !(0, I.isDesktop)() ||
-          (null === (t = d.default.clips) || void 0 === t
+          (null === (t = r.default.clips) || void 0 === t
             ? void 0
             : t.loadClipsDirectory) == null
         )
           return;
-        let n = await d.default.clips.loadClipsDirectory(e),
+        let n = await r.default.clips.loadClipsDirectory(e),
           a = [];
         for (let e of n) {
           let t = await (0, D.validateClipMetadata)({
@@ -660,16 +660,16 @@
           });
           null != t && a.push(t);
         }
-        r.default.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: a });
+        d.default.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: a });
       }
       async function j(e) {
         var t;
         (0, I.isDesktop)() &&
-          (null === (t = d.default.clips) || void 0 === t
+          (null === (t = r.default.clips) || void 0 === t
             ? void 0
             : t.deleteClip) != null &&
-          (await d.default.clips.deleteClip(e),
-          r.default.dispatch({ type: "CLIPS_DELETE_CLIP", filepath: e }));
+          (await r.default.clips.deleteClip(e),
+          d.default.dispatch({ type: "CLIPS_DELETE_CLIP", filepath: e }));
       }
       async function z(e, t) {
         let n = E.default.getMediaEngine(),
@@ -677,7 +677,7 @@
         return (0, N.default)(a);
       }
       function Y(e) {
-        r.default.dispatch({
+        d.default.dispatch({
           type: "CLIPS_DISMISS_EDUCATION",
           educationType: e,
         });
@@ -688,7 +688,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return r;
           },
         }),
         n("222007"),
@@ -705,10 +705,10 @@
       var a = n("627445"),
         i = n.n(a),
         l = n("469520"),
-        r = n.n(l);
-      async function d(e) {
+        d = n.n(l);
+      async function r(e) {
         let t;
-        let n = r.createFile(!1),
+        let n = d.createFile(!1),
           a = new Promise(e => {
             n.onReady = e;
           }),
@@ -723,9 +723,9 @@
         ),
         n.boxes))
           "uuid" === e.type && (t = e.start);
-        let d = e.slice(0, t, e.type),
+        let r = e.slice(0, t, e.type),
           u = e.slice(t + 4, t + 8 + 16, e.type);
-        return new Blob([d, new Uint8Array([0, 0, 0, 24]), u], {
+        return new Blob([r, new Uint8Array([0, 0, 0, 24]), u], {
           type: e.type,
         });
       }
@@ -741,7 +741,7 @@
             return l;
           },
           createThumbnailFromVideo: function () {
-            return r;
+            return d;
           },
         }),
         n("70102");
@@ -769,7 +769,7 @@
           t.toDataURL("image/jpeg", 0.9)
         );
       }
-      async function r(e, t) {
+      async function d(e, t) {
         let n = document.createElement("video");
         (n.muted = !0),
           (n.src = e),
@@ -778,15 +778,15 @@
           n.pause();
         let i = a.CLIPS_THUMBNAIL_MAX_WIDTH / n.videoWidth,
           l = a.CLIPS_THUMBNAIL_MAX_HEIGHT / n.videoHeight,
-          r = Math.min(i, l),
-          d = n.videoWidth * r,
-          u = n.videoHeight * r,
+          d = Math.min(i, l),
+          r = n.videoWidth * d,
+          u = n.videoHeight * d,
           s = document.createElement("canvas");
-        (s.width = d), (s.height = u);
+        (s.width = r), (s.height = u);
         let o = s.getContext("2d");
         if (null == o) throw Error("Could not create canvas context");
         return (
-          o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, d, u),
+          o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, r, u),
           s.toDataURL("image/jpeg", 0.9)
         );
       }
@@ -799,10 +799,10 @@
             return l;
           },
           toggleDisplayDevTools: function () {
-            return r;
+            return d;
           },
           clearAnalyticsLog: function () {
-            return d;
+            return r;
           },
         });
       var a = n("913144"),
@@ -810,10 +810,10 @@
       function l(e) {
         a.default.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: e });
       }
-      function r() {
+      function d() {
         l({ displayTools: !i.default.displayTools });
       }
-      function d() {
+      function r() {
         a.default.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
       }
     },
@@ -822,7 +822,7 @@
       n.r(t),
         n.d(t, {
           DEVTOOLS_SIDEBAR_MIN_WIDTH: function () {
-            return r;
+            return d;
           },
           default: function () {
             return s;
@@ -831,9 +831,9 @@
       var a = n("446674"),
         i = n("913144"),
         l = n("368694");
-      let r = 360,
-        d = {
-          sidebarWidth: r,
+      let d = 360,
+        r = {
+          sidebarWidth: d,
           lastOpenTabId: null,
           displayTools: !1,
           showDevWidget: !1,
@@ -841,34 +841,34 @@
         };
       class u extends a.default.DeviceSettingsStore {
         initialize(e) {
-          (d = null != e ? e : d),
+          (r = null != e ? e : r),
             (i.default.actionLogger.persist = l.default.isDeveloper);
         }
         getUserAgnosticState() {
-          return d;
+          return r;
         }
         get sidebarWidth() {
-          return this.displayTools ? d.sidebarWidth : 0;
+          return this.displayTools ? r.sidebarWidth : 0;
         }
         get lastOpenTabId() {
           var e;
-          return null !== (e = d.lastOpenTabId) && void 0 !== e ? e : null;
+          return null !== (e = r.lastOpenTabId) && void 0 !== e ? e : null;
         }
         get displayTools() {
-          return l.default.isDeveloper && d.displayTools;
+          return l.default.isDeveloper && r.displayTools;
         }
         get showDevWidget() {
-          return l.default.isDeveloper && d.showDevWidget;
+          return l.default.isDeveloper && r.showDevWidget;
         }
         get devWidgetPosition() {
-          return d.devWidgetPosition;
+          return r.devWidgetPosition;
         }
       }
       (u.displayName = "DevToolsSettingsStore"),
         (u.persistKey = "DevToolsSettingsStore");
       var s = new u(i.default, {
         DEV_TOOLS_SETTINGS_UPDATE: function (e) {
-          l.default.isDeveloper && (d = { ...d, ...e.settings });
+          l.default.isDeveloper && (r = { ...r, ...e.settings });
         },
       });
     },
@@ -890,8 +890,8 @@
       var a = n("917351"),
         i = n.n(a),
         l = n("446674"),
-        r = n("872717"),
-        d = n("913144"),
+        d = n("872717"),
+        r = n("913144"),
         u = n("42203"),
         s = n("299039"),
         o = n("670902"),
@@ -968,10 +968,10 @@
             [f.default],
             () => f.default.getMessage(e.id)
           ),
-          r = (0, l.useStateFromStores)([u.default], () =>
+          d = (0, l.useStateFromStores)([u.default], () =>
             u.default.getChannel(e.parent_id)
           );
-        if (null != r && ((t = a), (n = i), !t && null == n)) A(r, e.id);
+        if (null != d && ((t = a), (n = i), !t && null == n)) A(d, e.id);
         return { loaded: a, firstMessage: i };
       }
       function I(e, t) {
@@ -988,8 +988,8 @@
         let n = !1;
         t.forEach(t => {
           var a, i;
-          let { loaded: l, firstMessage: r } = f.default.getMessage(t);
-          if (((a = l), (i = r), (!a && null == i) || h(e.guild_id, t)))
+          let { loaded: l, firstMessage: d } = f.default.getMessage(t);
+          if (((a = l), (i = d), (!a && null == i) || h(e.guild_id, t)))
             m.request(e.id, t), (n = !0);
         }),
           n && null == E && (E = setTimeout(T, 0));
@@ -1023,11 +1023,11 @@
           if (null == a) return;
           let {
             body: { threads: i },
-          } = await r.default.post({
+          } = await d.default.post({
             url: p.Endpoints.FORUM_POSTS(e),
             body: { thread_ids: t },
           });
-          d.default.dispatch({
+          r.default.dispatch({
             type: "LOAD_FORUM_POSTS",
             guildId: a,
             threads: i,
@@ -1049,14 +1049,14 @@
       var a = n("446674"),
         i = n("913144"),
         l = n("692038"),
-        r = n("42203"),
-        d = n("697218"),
+        d = n("42203"),
+        r = n("697218"),
         u = n("449008"),
         s = n("299039");
       let o = {};
       function c(e) {
         var t;
-        let n = r.default.getChannel(null == e ? void 0 : e.channel_id);
+        let n = d.default.getChannel(null == e ? void 0 : e.channel_id);
         if (null == n || !n.isForumPost()) return !1;
         let a = o[n.id];
         return (
@@ -1091,7 +1091,7 @@
       }
       class m extends a.default.Store {
         initialize() {
-          this.waitFor(r.default, d.default);
+          this.waitFor(d.default, r.default);
         }
         getMessageState(e) {
           return !(e in o) && (o[e] = { loaded: !1, message: null }), o[e];
@@ -1140,7 +1140,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return g;
+            return p;
           },
         }),
         n("881410"),
@@ -1149,20 +1149,21 @@
       var a = n("917351"),
         i = n.n(a),
         l = n("267363"),
-        r = n("863636"),
-        d = n("401690"),
+        d = n("863636"),
+        r = n("401690"),
         u = n("923959"),
         s = n("660478"),
         o = n("599110"),
-        c = n("49111"),
-        f = n("133335");
-      function g(e, t, n) {
+        c = n("299039"),
+        f = n("49111"),
+        g = n("133335");
+      function p(e, t, n) {
         let a = i
           .flatMap(e, e => {
             let t = u.default.getSelectableChannelIds(e),
               n = u.default.getVocalChannelIds(e),
               a = [...t, ...n],
-              i = d.default.getActiveJoinedThreadsForGuild(e);
+              i = r.default.getActiveJoinedThreadsForGuild(e);
             for (let e of t) {
               var l;
               let t = null !== (l = i[e]) && void 0 !== l ? l : {};
@@ -1172,26 +1173,26 @@
           })
           .map(e => ({
             channelId: e,
-            readStateType: f.ReadStateTypes.CHANNEL,
+            readStateType: g.ReadStateTypes.CHANNEL,
             messageId: s.default.lastMessageId(e),
           }));
         return (
           e.forEach(e => {
             a.push({
-              channelId: e,
-              readStateType: f.ReadStateTypes.GUILD_EVENT,
+              channelId: c.default.castGuildIdAsReadStateChannelId(e),
+              readStateType: g.ReadStateTypes.GUILD_EVENT,
               messageId: s.default.lastMessageId(
                 e,
-                f.ReadStateTypes.GUILD_EVENT
+                g.ReadStateTypes.GUILD_EVENT
               ),
             }),
               a.push({
-                channelId: e,
-                readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-                messageId: r.default.ackIdForGuild(e),
+                channelId: c.default.castGuildIdAsReadStateChannelId(e),
+                readStateType: g.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
+                messageId: d.default.ackIdForGuild(e),
               });
           }),
-          o.default.track(c.AnalyticEvents.MARK_AS_READ, {
+          o.default.track(f.AnalyticEvents.MARK_AS_READ, {
             source: t,
             type: "guild",
           }),
@@ -1225,8 +1226,8 @@
       var a = n("872717"),
         i = n("913144"),
         l = n("679653"),
-        r = n("42203"),
-        d = n("305961"),
+        d = n("42203"),
+        r = n("305961"),
         u = n("27618"),
         s = n("697218"),
         o = n("599110"),
@@ -1247,14 +1248,14 @@
                 savedAt: new Date(),
                 dueAt: t,
                 ...(function (e) {
-                  let t = r.default.getChannel(e.channel_id);
+                  let t = d.default.getChannel(e.channel_id);
                   if (null == t) return null;
-                  let n = d.default.getGuild(t.guild_id),
+                  let n = r.default.getGuild(t.guild_id),
                     a = "",
                     i = (0, l.computeChannelName)(t, s.default, u.default, !0);
                   if (t.isPrivate()) a = i;
                   else if (t.isThread()) {
-                    let e = r.default.getChannel(t.parent_id);
+                    let e = d.default.getChannel(t.parent_id);
                     if (null == e) return null;
                     let n = (0, l.computeChannelName)(
                       e,
@@ -1398,8 +1399,8 @@
       var a = n("446674"),
         i = n("913144"),
         l = n("718517");
-      let r = [],
-        d = new Set(),
+      let d = [],
+        r = new Set(),
         u = 0;
       class s extends a.default.Store {
         initialize() {
@@ -1408,23 +1409,23 @@
           }, 1 * l.default.Millis.MINUTE);
         }
         getMessageReminders() {
-          return r;
+          return d;
         }
         isMessageReminder(e) {
-          let t = r.find(t => t.messageId === e);
+          let t = d.find(t => t.messageId === e);
           return null != t && !t.complete;
         }
         getOverdueMessageReminderCount() {
-          return r.filter(e => null == e.dueAt || new Date() > e.dueAt).length;
+          return d.filter(e => null == e.dueAt || new Date() > e.dueAt).length;
         }
         recentlyFetched() {
           return new Date().getTime() - u < 1 * l.default.Millis.MINUTE;
         }
         hasSentNotification(e) {
-          return d.has(e);
+          return r.has(e);
         }
         getState() {
-          return { messages: r };
+          return { messages: d };
         }
       }
       s.displayName = "MessageRemindersStore";
@@ -1432,21 +1433,21 @@
         SAVED_MESSAGES_UPDATE: function (e) {
           let { messages: t } = e;
           (u = new Date().getTime()),
-            (r = t.map(e => ({ ...e, complete: !1 }))),
+            (d = t.map(e => ({ ...e, complete: !1 }))),
             t.forEach(e => {
-              null != e.dueAt && e.dueAt > new Date() && d.delete(e.messageId),
-                null != e.dueAt && e.dueAt < new Date() && d.add(e.messageId);
+              null != e.dueAt && e.dueAt > new Date() && r.delete(e.messageId),
+                null != e.dueAt && e.dueAt < new Date() && r.add(e.messageId);
             });
         },
         MESSAGE_REMINDER_TOGGLE: function (e) {
           let { messageId: t, complete: n } = e,
-            a = r.findIndex(e => e.messageId === t);
+            a = d.findIndex(e => e.messageId === t);
           if (-1 === a) return !1;
-          r[a] = { ...r[a], complete: n };
+          d[a] = { ...d[a], complete: n };
         },
         MESSAGE_REMINDER_NOTIFIED: function (e) {
           let { messageId: t } = e;
-          d.add(t);
+          r.add(t);
         },
       });
     },
@@ -1458,10 +1459,10 @@
             return l;
           },
           savedMessageToClient: function () {
-            return r;
+            return d;
           },
           savedMessageHasMetadata: function () {
-            return d;
+            return r;
           },
           MESSAGE_REMINDER_DURATION_ITEMS: function () {
             return u;
@@ -1485,7 +1486,7 @@
             null === (t = e.dueAt) || void 0 === t ? void 0 : t.toISOString(),
         };
       }
-      function r(e) {
+      function d(e) {
         return {
           channelId: e.channel_id,
           messageId: e.message_id,
@@ -1499,7 +1500,7 @@
           dueAt: null != e.due_at ? new Date(e.due_at) : void 0,
         };
       }
-      function d(e) {
+      function r(e) {
         return (
           null != e.authorSummary &&
           e.authorSummary.length > 0 &&
@@ -1539,7 +1540,7 @@
       n.r(t),
         n.d(t, {
           useVoiceActivityNotificationSettingsExperiment: function () {
-            return d;
+            return r;
           },
           hasVoiceChannelActivityNotifsEnabled: function () {
             return u;
@@ -1566,7 +1567,7 @@
             },
           ],
         }),
-        r = (0, a.createExperiment)({
+        d = (0, a.createExperiment)({
           kind: "guild",
           id: "2023-11_voice_activity_notification_guild",
           label: "General Voice Channel Notifications for Guild",
@@ -1580,9 +1581,9 @@
             },
           ],
         });
-      function d(e) {
+      function r(e) {
         var t;
-        let { voiceChannelActivityNotifsEnabled: n } = r.useExperiment(
+        let { voiceChannelActivityNotifsEnabled: n } = d.useExperiment(
             {
               location: "useVoiceActivityNotificationSettingsExperiment",
               guildId:
@@ -1612,7 +1613,7 @@
       }
       function u(e) {
         var t;
-        let { voiceChannelActivityNotifsEnabled: n } = r.getCurrentConfig({
+        let { voiceChannelActivityNotifsEnabled: n } = d.getCurrentConfig({
           guildId:
             null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t
               ? t
@@ -1624,4 +1625,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12896.5ad03e5d772a2ec91f12.js.map
+//# sourceMappingURL=12896.82da9068aba38f378961.js.map

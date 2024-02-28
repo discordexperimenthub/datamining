@@ -66686,9 +66686,11 @@
                 case er.ReadStateTypes.NOTIFICATION_CENTER:
                   var t;
                   return (
-                    (null === (t = $.default.getCurrentUser()) || void 0 === t
-                      ? void 0
-                      : t.id) === e.channelId
+                    F.default.castUserIdAsReadStateChannelId(
+                      null === (t = $.default.getCurrentUser()) || void 0 === t
+                        ? void 0
+                        : t.id
+                    ) === e.channelId
                   );
                 default:
                   return !0;
@@ -67277,10 +67279,11 @@
                   break;
                 case er.ReadStateTypes.NOTIFICATION_CENTER:
                   var i;
-                  let r =
+                  let r = F.default.castUserIdAsReadStateChannelId(
                     null === (i = $.default.getCurrentUser()) || void 0 === i
                       ? void 0
-                      : i.id;
+                      : i.id
+                  );
                   r === n.channelId && t.push(n.serialize(e));
                   break;
                 default:
@@ -76922,4 +76925,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98239.e48f3db840c84d0b0df7.js.map
+//# sourceMappingURL=98239.bbd4ef58d367084ce961.js.map

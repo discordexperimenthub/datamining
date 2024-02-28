@@ -38,7 +38,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-a400159af9441b68d65d66a0b9a70f156332b4d9",
+            release: "discord_web-db239862f91dca360302bcd4dd4841c6f891b984",
             beforeSend: e => {
               var r, n;
               return !(
@@ -109,8 +109,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            t.setTag("buildNumber", "269722"),
-            t.setTag("builtAt", String("1709154177168"));
+            t.setTag("buildNumber", "269732"),
+            t.setTag("builtAt", String("1709154935356"));
           let e = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != e && "object" == typeof e)
             for (let r in e) t.setTag(r, e[r]);
@@ -163,8 +163,8 @@
             : ((l = !1), i < u && (u = i));
         if (l) {
           e.splice(a--, 1);
-          var s = o();
-          void 0 !== s && (r = s);
+          var d = o();
+          void 0 !== d && (r = d);
         }
       }
       return r;
@@ -239,11 +239,11 @@
             })
           ) {
             for (u in i) t.o(i, u) && (t.m[u] = i[u]);
-            if (a) var s = a(t);
+            if (a) var d = a(t);
           }
           for (r && r(n); c < o.length; c++)
             (l = o[c]), t.o(e, l) && e[l] && e[l][0](), (e[l] = 0);
-          return t.O(s);
+          return t.O(d);
         },
         n = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
       n.forEach(r.bind(null, 0)), (n.push = r.bind(null, n.push.bind(n)));
@@ -257,4 +257,4 @@
   );
   t.O(o);
 })();
-//# sourceMappingURL=sentry.06d3111c03908b3ddbf6.js.map
+//# sourceMappingURL=sentry.31f802fb0602d9c0a58f.js.map

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["57891"],
+  ["21201"],
   {
     662697: function (e, t, n) {
       let i = {};
@@ -36369,8 +36369,14 @@
           PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID: function () {
             return eT;
           },
-          SubscriptionTrials: function () {
+          PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: function () {
             return eg;
+          },
+          PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: function () {
+            return eI;
+          },
+          SubscriptionTrials: function () {
+            return eC;
           },
           PremiumUpsellTypes: function () {
             return l;
@@ -36379,25 +36385,25 @@
             return u;
           },
           SKU_ID_PURCHASED_FLAGS: function () {
-            return eI;
-          },
-          MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE: function () {
-            return eC;
-          },
-          IncrementalStickerCountsByTier: function () {
             return ev;
           },
-          TotalStickerCountsByTier: function () {
+          MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE: function () {
             return eA;
           },
-          TotalSoundboardSoundCountsByTier: function () {
+          IncrementalStickerCountsByTier: function () {
             return eR;
           },
-          BoostedGuildFeatures: function () {
+          TotalStickerCountsByTier: function () {
             return eN;
           },
-          ORDERED_PREMIUM_SUBSCRIPTION_PLANS: function () {
+          TotalSoundboardSoundCountsByTier: function () {
             return eO;
+          },
+          BoostedGuildFeatures: function () {
+            return eD;
+          },
+          ORDERED_PREMIUM_SUBSCRIPTION_PLANS: function () {
+            return ey;
           },
           AnalyticsPremiumFeatureNames: function () {
             return c;
@@ -36406,13 +36412,13 @@
             return d;
           },
           DISCOUNTS: function () {
-            return eD;
+            return eP;
           },
           StreamQualities: function () {
             return f;
           },
           StreamQualitiesToPremiumType: function () {
-            return ey;
+            return eL;
           },
           PremiumMarketingEntrypoints: function () {
             return E;
@@ -36427,10 +36433,10 @@
             return _;
           },
           PromotionFlags: function () {
-            return eP;
+            return eb;
           },
           PremiumUserLimits: function () {
-            return eL;
+            return eM;
           },
           BoostingUpsellAction: function () {
             return T;
@@ -36439,22 +36445,25 @@
             return g;
           },
           LegacyPricingCountries: function () {
-            return eb;
-          },
-          LegacySeasonalGiftStyles: function () {
-            return eM;
-          },
-          STANDARD_GIFT_OPTIONS: function () {
             return eU;
           },
-          SeasonalGiftStyles2023: function () {
+          LegacySeasonalGiftStyles: function () {
             return eG;
           },
-          AllSeasonalGiftStyles: function () {
+          STANDARD_GIFT_OPTIONS: function () {
             return ew;
           },
-          CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function () {
+          SeasonalGiftStyles2023: function () {
             return ek;
+          },
+          AllSeasonalGiftStyles: function () {
+            return ex;
+          },
+          CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function () {
+            return eF;
+          },
+          DISCOUNT_DURATION_FALLBACK: function () {
+            return eV;
           },
         }),
         n("222007");
@@ -36760,7 +36769,9 @@
         eS = "1070132870233980928",
         em = "1150904354090532864",
         eT = "1199128659810582528",
-        eg = Object.freeze({
+        eg = "1204865493622587392",
+        eI = "1204867673024888832",
+        eC = Object.freeze({
           [ec]: { id: ec, skus: ["521847234246082599"] },
           [ed]: { id: ed, skus: ["521847234246082599"] },
           [ef]: { id: ef, skus: ["521847234246082599"] },
@@ -36878,40 +36889,40 @@
         (O[(O.PREMIUM_TIER_2 = 2)] = "PREMIUM_TIER_2"),
         (O[(O.GUILD_BOOST = 4)] = "GUILD_BOOST"),
         (O[(O.PREMIUM_TIER_0 = 8)] = "PREMIUM_TIER_0");
-      let eI = Object.freeze({
+      let ev = Object.freeze({
           "978380684370378762": 8,
           "521846918637420545": 1,
           "521847234246082599": 2,
           "590663762298667008": 4,
         }),
-        eC = 52428800,
-        ev = {
+        eA = 52428800,
+        eR = {
           [F.BoostedGuildTiers.NONE]: 5,
           [F.BoostedGuildTiers.TIER_1]: 10,
           [F.BoostedGuildTiers.TIER_2]: 15,
           [F.BoostedGuildTiers.TIER_3]: 30,
         },
-        eA = {
-          [F.BoostedGuildTiers.NONE]: ev[F.BoostedGuildTiers.NONE],
+        eN = {
+          [F.BoostedGuildTiers.NONE]: eR[F.BoostedGuildTiers.NONE],
           [F.BoostedGuildTiers.TIER_1]:
-            ev[F.BoostedGuildTiers.NONE] + ev[F.BoostedGuildTiers.TIER_1],
+            eR[F.BoostedGuildTiers.NONE] + eR[F.BoostedGuildTiers.TIER_1],
           [F.BoostedGuildTiers.TIER_2]:
-            ev[F.BoostedGuildTiers.NONE] +
-            ev[F.BoostedGuildTiers.TIER_1] +
-            ev[F.BoostedGuildTiers.TIER_2],
+            eR[F.BoostedGuildTiers.NONE] +
+            eR[F.BoostedGuildTiers.TIER_1] +
+            eR[F.BoostedGuildTiers.TIER_2],
           [F.BoostedGuildTiers.TIER_3]:
-            ev[F.BoostedGuildTiers.NONE] +
-            ev[F.BoostedGuildTiers.TIER_1] +
-            ev[F.BoostedGuildTiers.TIER_2] +
-            ev[F.BoostedGuildTiers.TIER_3],
+            eR[F.BoostedGuildTiers.NONE] +
+            eR[F.BoostedGuildTiers.TIER_1] +
+            eR[F.BoostedGuildTiers.TIER_2] +
+            eR[F.BoostedGuildTiers.TIER_3],
         },
-        eR = {
+        eO = {
           [F.BoostedGuildTiers.NONE]: 8,
           [F.BoostedGuildTiers.TIER_1]: 24,
           [F.BoostedGuildTiers.TIER_2]: 36,
           [F.BoostedGuildTiers.TIER_3]: 48,
         },
-        eN = Object.freeze({
+        eD = Object.freeze({
           [F.BoostedGuildTiers.NONE]: {
             features: [],
             limits: {
@@ -36920,9 +36931,9 @@
               fileSize: F.MAX_ATTACHMENT_SIZE,
               screenShareQualityFramerate: 30,
               screenShareQualityResolution: "720p",
-              soundboardSounds: eR[F.BoostedGuildTiers.NONE],
+              soundboardSounds: eO[F.BoostedGuildTiers.NONE],
               maxConcurrentActivities: 2,
-              stickers: eA[F.BoostedGuildTiers.NONE],
+              stickers: eN[F.BoostedGuildTiers.NONE],
               stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
             },
           },
@@ -36937,9 +36948,9 @@
               fileSize: F.MAX_ATTACHMENT_SIZE,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "720p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_1],
+              soundboardSounds: eO[F.BoostedGuildTiers.TIER_1],
               maxConcurrentActivities: 3,
-              stickers: eA[F.BoostedGuildTiers.TIER_1],
+              stickers: eN[F.BoostedGuildTiers.TIER_1],
               stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER01,
             },
           },
@@ -36956,9 +36967,9 @@
               fileSize: 52428800,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "1080p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_2],
+              soundboardSounds: eO[F.BoostedGuildTiers.TIER_2],
               maxConcurrentActivities: 5,
-              stickers: eA[F.BoostedGuildTiers.TIER_2],
+              stickers: eN[F.BoostedGuildTiers.TIER_2],
               stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
             },
           },
@@ -36977,14 +36988,14 @@
               fileSize: 104857600,
               screenShareQualityFramerate: 60,
               screenShareQualityResolution: "1080p",
-              soundboardSounds: eR[F.BoostedGuildTiers.TIER_3],
+              soundboardSounds: eO[F.BoostedGuildTiers.TIER_3],
               maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-              stickers: eA[F.BoostedGuildTiers.TIER_3],
+              stickers: eN[F.BoostedGuildTiers.TIER_3],
               stageVideoUsers: F.MAX_STAGE_VIDEO_USER_LIMIT_TIER3,
             },
           },
         }),
-        eO = [
+        ey = [
           "978380692553465866",
           "1024422698568122368",
           "511651871736201216",
@@ -37004,7 +37015,7 @@
         (D.PROFILE_EFFECT = "profile_effect"),
         ((y = d || (d = {})).FREE = "free"),
         (y.PREMIUM_STANDARD = "premium-standard");
-      let eD = {
+      let eP = {
         "1024422698568122368": 16,
         "511651876987469824": 16,
         "511651885459963904": 16,
@@ -37013,7 +37024,7 @@
       };
       ((P = f || (f = {})).HIGH_STREAMING_QUALITY = "high_streaming_quality"),
         (P.MID_STREAMING_QUALITY = "mid_streaming_quality");
-      let ey = Object.freeze({
+      let eL = Object.freeze({
         high_streaming_quality: 2,
         mid_streaming_quality: 1,
       });
@@ -37039,13 +37050,13 @@
         (U.EXISTING_SUBSCRIBER = "existing_subscriber"),
         (U.PREVIOUS_SUBSCRIBER = "previous_subscriber"),
         (U.BLOCKED_PAYMENT = "blocked_payment");
-      let eP = Object.freeze({
+      let eb = Object.freeze({
           IS_BLOCKED_IOS: 32,
           IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
           SUPPRESS_NOTIFICATION: 128,
         }),
-        eL = Object.freeze({
-          3: { fileSize: eC },
+        eM = Object.freeze({
+          3: { fileSize: eA },
           1: { fileSize: 52428800 },
           2: { fileSize: 524288e3 },
         });
@@ -37081,12 +37092,13 @@
         (x.BADGE_CLICKED = "share_nitro_badge_clicked"),
         (x.FLOW_STARTED = "share_nitro_flow_started"),
         (x.FLOW_COMPLETED = "share_nitro_flow_completed");
-      let eb = new Set(["PL", "TR"]),
-        eM = [1, 2, 3],
-        eU = [4, 5, 7, 6],
-        eG = [8, 9, 11, 10],
-        ew = eG.concat(eM),
-        ek = 190;
+      let eU = new Set(["PL", "TR"]),
+        eG = [1, 2, 3],
+        ew = [4, 5, 7, 6],
+        ek = [8, 9, 11, 10],
+        ex = ek.concat(eG),
+        eF = 190,
+        eV = 3;
     },
     45120: function (e, t, n) {
       "use strict";
@@ -60095,7 +60107,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "269612",
+                  build_number: "269617",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -61566,46 +61578,47 @@
             price: s,
             includePremiumGuilds: a,
             hasDiscountApplied: o,
+            activeDiscountDuration: l,
           } = e,
-          l = R.default.formatPriceString(
+          u = R.default.formatPriceString(
             R.default.getDefaultPrice(y.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
             y.SubscriptionIntervalTypes.MONTH
           ),
-          u =
+          c =
             ef(i) ||
             (null == i.paymentSourceId &&
               !i.isPurchasedExternally &&
               !(null === (t = h.default.getCurrentUser()) || void 0 === t
                 ? void 0
                 : t.hasFreePremium())),
-          c = null != s,
-          d =
+          d = null != s,
+          f =
             i.status === O.SubscriptionStatusTypes.UNPAID &&
             null !== i.latestInvoice &&
             (null === (n = i.latestInvoice) || void 0 === n
               ? void 0
               : n.status) === O.InvoiceStatusTypes.OPEN,
-          f = u
+          E = c
             ? O.SubscriptionStatusTypes.CANCELED
-            : d
+            : f
               ? O.SubscriptionStatusTypes.UNPAID
               : i.status,
-          E =
+          p =
             y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM +
             (a ? et(i.additionalPlans) : 0);
         switch (r) {
           case y.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
           case y.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-            switch (f) {
+            switch (E) {
               case O.SubscriptionStatusTypes.CANCELED:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format(
                       { price: s }
                     )
                   : L.default.Messages
                       .PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
               case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format(
                       { price: s }
                     )
@@ -61613,7 +61626,7 @@
               case O.SubscriptionStatusTypes.UNPAID:
                 return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
               default:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format(
                       { price: s }
                     )
@@ -61622,16 +61635,16 @@
             }
           case y.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
           case y.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
-            switch (f) {
+            switch (E) {
               case O.SubscriptionStatusTypes.CANCELED:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format(
                       { price: s }
                     )
                   : L.default.Messages
                       .PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
               case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format(
                       { price: s }
                     )
@@ -61639,7 +61652,7 @@
               case O.SubscriptionStatusTypes.UNPAID:
                 return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
               default:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format(
                       { price: s }
                     )
@@ -61650,38 +61663,42 @@
           case y.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
           case y.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
           case y.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
-            switch (f) {
+            switch (E) {
               case O.SubscriptionStatusTypes.CANCELED:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format(
-                      { price: s, num: E }
+                      { price: s, num: p }
                     )
                   : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format(
-                      { num: E }
+                      { num: p }
                     );
               case O.SubscriptionStatusTypes.ACCOUNT_HOLD:
-                return c
+                return d
                   ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format(
-                      { price: s, num: E }
+                      { price: s, num: p }
                     )
                   : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE.format(
-                      { num: E }
+                      { num: p }
                     );
               case O.SubscriptionStatusTypes.UNPAID:
                 return L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAYMENT.format(
-                  { num: E }
+                  { num: p }
                 );
               default:
                 return o
-                  ? L.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION.format(
-                      { discountedPrice: s, regularPrice: l }
+                  ? L.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format(
+                      {
+                        percent: 30,
+                        regularPrice: u,
+                        numMonths: null != l ? l : y.DISCOUNT_DURATION_FALLBACK,
+                      }
                     )
-                  : c
+                  : d
                     ? L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format(
-                        { price: s, num: E }
+                        { price: s, num: p }
                       )
                     : L.default.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_NO_PRICE.format(
-                        { num: E }
+                        { num: p }
                       );
             }
           default:
@@ -61695,13 +61712,14 @@
             planId: i,
             includePremiumGuilds: r = !1,
             hasDiscountApplied: s = !1,
+            activeDiscountDuration: a,
           } = e,
-          a = m.default.get(i);
+          o = m.default.get(i);
         return (
-          l(null != a, "Missing plan"),
+          l(null != o, "Missing plan"),
           X({
             subscription: n,
-            planId: a.id,
+            planId: o.id,
             price: (function (e, t, n) {
               let i = e.invoiceItems.find(e => {
                   let { subscriptionPlanId: t } = e;
@@ -61719,9 +61737,10 @@
                 n.interval,
                 n.intervalCount
               );
-            })(t, n, a),
+            })(t, n, o),
             includePremiumGuilds: r,
             hasDiscountApplied: s,
+            activeDiscountDuration: a,
           })
         );
       }
@@ -78871,4 +78890,4 @@
     },
   },
 ]);
-//# sourceMappingURL=57891.6ad5b31bd3162174e74c.js.map
+//# sourceMappingURL=21201.df6bbe0bc5567ec47794.js.map

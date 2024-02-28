@@ -9363,6 +9363,8 @@
           "Pay just **{discountedPrice}** a month for **3 months!** Then pay {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION:
           "Your !!{percent, number}!!% discount will end 3 months after purchase. After that you'll be charged {regularPrice}.",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Your !!{percent, number}!!% discount will end {numMonths, plural, one {1 month} other {{numMonths} months}} after purchase. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Your first **3 months** are **{discountedPrice}**. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
@@ -26061,8 +26063,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("269612", ", Version Hash: ")
-          .concat("92d104c69d59c7c272d8d101e54afbb59e023857")
+          .concat("269617", ", Version Hash: ")
+          .concat("1aec254da8494669a568d5872abf9917cb55fb18")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29137,12 +29139,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "269612"), "269612"));
+        let _ = parseInt(((e = "269617"), "269617"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "269612"
+                "269617"
               )
             ),
             (_ = 0)),
@@ -34963,8 +34965,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709142310463",
-                    build_number: "269612",
+                    built_at: "1709142648960",
+                    build_number: "269617",
                   },
                 },
                 retries: 1,
@@ -51480,4 +51482,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.9eb97226aa993603d4e8.js.map
+//# sourceMappingURL=77761.a5a9b5fa7fbaa807fe79.js.map

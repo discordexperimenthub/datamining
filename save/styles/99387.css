@@ -5290,7 +5290,13 @@
   color: var(--interactive-active);
 }
 .tooltip_fbc8d9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+.tooltipEmojiName__487ec {
+  width: 100%;
 }
 .tooltipPremiumContent_e6a30a {
   display: flex;
@@ -26229,8 +26235,8 @@ html .progress__00e29 {
 }
 .message__702f7 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -109208,4 +109214,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=99387.1e06ccbd40e1c26bc3b3.css.map*/
+/*# sourceMappingURL=99387.314867541e3277387fd8.css.map*/

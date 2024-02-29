@@ -8779,7 +8779,7 @@
       n.r(t),
         n.d(t, {
           createPollServerDataFromCreateRequest: function () {
-            return g;
+            return S;
           },
           filterOutUUID: function () {
             return d;
@@ -8788,16 +8788,19 @@
             return o;
           },
           getTotalVotes: function () {
-            return S;
+            return m;
           },
           hasNonVoteReactions: function () {
             return c;
           },
           isAnswerFilled: function () {
-            return _;
+            return h;
           },
           isIncompleteAnswer: function () {
-            return h;
+            return g;
+          },
+          isPollCreationEmpty: function () {
+            return _;
           },
           useCanPostImagePolls: function () {
             return E;
@@ -8849,19 +8852,22 @@
       function E() {
         return !1;
       }
-      function _(e, t) {
+      function _(e, t, n) {
+        return 0 === e.length && null == t.find(e => h(e, n));
+      }
+      function h(e, t) {
         return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS
           ? null != e.image
           : null != e.text && e.text.length > 0;
       }
-      function h(e, t) {
+      function g(e, t) {
         return (
           t === l.PollLayoutTypes.DEFAULT &&
           null != e.image &&
           (null == e.text || 0 === e.text.length)
         );
       }
-      function g(e) {
+      function S(e) {
         var t;
         if (null == e) return;
         let n = e?.answers?.map((e, t) => {
@@ -8880,7 +8886,7 @@
             : "0";
         return { ...e, expiry: a, answers: n };
       }
-      function S(e) {
+      function m(e) {
         return e.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0);
       }
     },
@@ -12879,4 +12885,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49326.968cc36900db94743bf4.js.map
+//# sourceMappingURL=49326.03df3eb712eb4d1fb62e.js.map

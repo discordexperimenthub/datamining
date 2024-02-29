@@ -138,7 +138,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return f;
           },
         });
       var i,
@@ -156,7 +156,7 @@
       ((i = r || (r = {})).DEFAULT = ""),
         (i.BOLD = "Bold"),
         (i.SOLID = "Solid");
-      let f = e => {
+      let T = e => {
         let { closeAction: t, variant: s, keybind: i, className: r } = e;
         return (0, a.jsxs)("div", {
           className: n()(_.container, r),
@@ -191,8 +191,8 @@
           ],
         });
       };
-      (f.defaultProps = { variant: "" }), (f.Variants = r);
-      var T = f;
+      (T.defaultProps = { variant: "" }), (T.Variants = r);
+      var f = T;
     },
     883301: function (e, t, s) {
       "use strict";
@@ -254,18 +254,6 @@
       var i = s("429294");
       s.es(i, t);
     },
-    330604: function (e, t, s) {
-      "use strict";
-      s.r(t);
-      var i = s("794331");
-      s.es(i, t);
-    },
-    509036: function (e, t, s) {
-      "use strict";
-      s.r(t);
-      var i = s("124819");
-      s.es(i, t);
-    },
     69164: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -303,19 +291,19 @@
             addClickListener: E,
             removeClickListener: _,
           } = e,
-          f = (0, a.useConfettiCannon)(s, o),
-          T = (0, l.default)([n.default], () => n.default.useReducedMotion),
+          T = (0, a.useConfettiCannon)(s, o),
+          f = (0, l.default)([n.default], () => n.default.useReducedMotion),
           I = r.useMemo(
             () =>
-              T
+              f
                 ? u
                 : {
                     confettiCanvas: s,
-                    cannon: f,
+                    cannon: T,
                     createConfetti: (e, t) =>
-                      f.createConfetti({ ...c, ...e }, t),
+                      T.createConfetti({ ...c, ...e }, t),
                     createConfettiAt: (e, t, s, i) =>
-                      f.createConfetti(
+                      T.createConfetti(
                         {
                           ...c,
                           position: { type: "static", value: { x: e, y: t } },
@@ -329,7 +317,7 @@
                             ? arguments[1]
                             : 20,
                         s = arguments.length > 2 ? arguments[2] : void 0;
-                      return f.createMultipleConfetti({ ...c, ...e }, t, s);
+                      return T.createMultipleConfetti({ ...c, ...e }, t, s);
                     },
                     createMultipleConfettiAt: function (e, t, s) {
                       let i =
@@ -337,7 +325,7 @@
                             ? arguments[3]
                             : 20,
                         r = arguments.length > 4 ? arguments[4] : void 0;
-                      return f.createMultipleConfetti(
+                      return T.createMultipleConfetti(
                         {
                           ...c,
                           position: { type: "static", value: { x: e, y: t } },
@@ -350,7 +338,7 @@
                     addClickListener: E,
                     removeClickListener: _,
                   },
-            [E, c, f, s, T, _]
+            [E, c, T, s, f, _]
           );
         return (0, i.jsx)(d.Provider, { value: I, children: t });
       }
@@ -360,7 +348,7 @@
       s.r(t),
         s.d(t, {
           openGuildBoostingMarketingModal: function () {
-            return f;
+            return T;
           },
         });
       var i = s("735250");
@@ -388,12 +376,12 @@
             () => u.default.getGuild(t),
             [t]
           ),
-          { AnalyticsLocationProvider: f } = (0, o.default)(
+          { AnalyticsLocationProvider: T } = (0, o.default)(
             n.default.BOOSTED_GUILD_PERKS_MODAL
           );
         return null == _
           ? null
-          : (0, i.jsx)(f, {
+          : (0, i.jsx)(T, {
               children: (0, i.jsx)(E.default, {
                 analyticsLocation: r,
                 onClose: s,
@@ -401,7 +389,7 @@
               }),
             });
       };
-      function f(e) {
+      function T(e) {
         let { guildId: t, location: s } = e;
         (0, c.openFullScreenLayer)(
           e => {
@@ -417,7 +405,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return p;
+            return M;
           },
         });
       var i = s("735250"),
@@ -431,60 +419,60 @@
         c = s("411299"),
         E = s("19237"),
         _ = s("424326"),
-        f = s("221027"),
-        T = s("497141"),
+        T = s("221027"),
+        f = s("497141"),
         I = s("684667"),
         N = s("807234"),
         g = s("359238"),
         R = s("129176"),
         h = s("467006"),
         m = s("30175"),
-        v = s("170626"),
-        p = function (e) {
-          let { analyticsLocation: t, guild: s, onClose: p } = e,
-            [M, S] = r.useState(!0),
-            C = r.useRef(!1),
+        p = s("170626"),
+        M = function (e) {
+          let { analyticsLocation: t, guild: s, onClose: M } = e,
+            [v, S] = r.useState(!0),
+            G = r.useRef(!1),
             x = (0, a.useLazyValue)(() => Date.now()),
-            { analyticsLocations: G } = (0, u.default)(),
+            { analyticsLocations: C } = (0, u.default)(),
             O = r.useCallback(() => {
-              p(),
+              M(),
                 d.default.track(h.AnalyticEvents.MODAL_DISMISSED, {
                   type: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                  location_stack: G,
+                  location_stack: C,
                   location_section: t.section,
                   location_object: t.object,
                   guild_id: s.id,
                   duration_open_ms: Date.now() - x,
                 });
-            }, [p, t, G, x, s.id]),
-            A = r.useCallback(
+            }, [M, t, C, x, s.id]),
+            B = r.useCallback(
               e => {
                 e &&
-                  !C.current &&
+                  !G.current &&
                   (d.default.track(
                     h.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM,
                     {
                       type: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                      location_stack: G,
+                      location_stack: C,
                       location_section: t.section,
                       location_object: t.object,
                       guild_id: s.id,
                     }
                   ),
-                  (C.current = !0));
+                  (G.current = !0));
               },
-              [t, G, s.id]
+              [t, C, s.id]
             );
           return (
             r.useEffect(() => {
               d.default.track(h.AnalyticEvents.OPEN_MODAL, {
                 type: h.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                location_stack: G,
+                location_stack: C,
                 location_section: t.section,
                 location_object: t.object,
                 guild_id: s.id,
               });
-            }, [s.id, t, G]),
+            }, [s.id, t, C]),
             r.useEffect(() => {
               function e(e) {
                 "Escape" === e.key && O();
@@ -499,25 +487,25 @@
             (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)("div", {
-                  className: v.closeIconWrapper,
+                  className: p.closeIconWrapper,
                   children: (0, i.jsx)(o.default, {
-                    className: v.closeIcon,
+                    className: p.closeIcon,
                     closeAction: O,
                     keybind: "ESC",
                     variant: o.default.Variants.SOLID,
                   }),
                 }),
                 (0, i.jsxs)(n.AdvancedScrollerAuto, {
-                  className: v.scroller,
+                  className: p.scroller,
                   children: [
                     (0, i.jsxs)("div", {
-                      className: v.header,
+                      className: p.header,
                       children: [
                         (0, i.jsxs)("div", {
-                          className: v.headerContentWrapper,
+                          className: p.headerContentWrapper,
                           children: [
                             (0, i.jsx)(n.Heading, {
-                              className: v.heading,
+                              className: p.heading,
                               color: "always-white",
                               variant: "display-lg",
                               children:
@@ -529,7 +517,7 @@
                               closeLayer: O,
                               onCtaVisibilityChange: S,
                             }),
-                            (0, i.jsx)(T.default, { guild: s }),
+                            (0, i.jsx)(f.default, { guild: s }),
                             (0, i.jsx)(I.default, { guild: s }),
                           ],
                         }),
@@ -537,17 +525,17 @@
                       ],
                     }),
                     (0, i.jsx)("div", {
-                      className: v.middleBodyContentWrapper,
+                      className: p.middleBodyContentWrapper,
                       children: (0, i.jsx)(g.default, {}),
                     }),
                     (0, i.jsxs)("div", {
-                      className: v.lowerBody,
+                      className: p.lowerBody,
                       children: [
                         (0, i.jsxs)("div", {
-                          className: v.lowerBodyContentWrapper,
+                          className: p.lowerBodyContentWrapper,
                           children: [
                             (0, i.jsx)(N.default, {
-                              className: v.tierComparisonTable,
+                              className: p.tierComparisonTable,
                               guild: s,
                             }),
                             (0, i.jsx)(c.default, {}),
@@ -556,21 +544,21 @@
                         }),
                         (0, i.jsx)(R.BodyWave, {}),
                         (0, i.jsx)("div", {
-                          className: v.lowerBodyBackgroundImage,
+                          className: p.lowerBodyBackgroundImage,
                         }),
                       ],
                     }),
                     (0, i.jsx)(l.VisibilitySensor, {
-                      onChange: A,
+                      onChange: B,
                       children: (0, i.jsx)("div", {
-                        className: v.persistentCtaSpacer,
+                        className: p.persistentCtaSpacer,
                       }),
                     }),
                   ],
                 }),
-                (0, i.jsx)(f.default, {
+                (0, i.jsx)(T.default, {
                   guild: s,
-                  isVisible: !M,
+                  isVisible: !v,
                   closeLayer: O,
                 }),
               ],
@@ -583,7 +571,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return f;
+            return T;
           },
         });
       var i = s("735250");
@@ -611,7 +599,7 @@
           ],
         });
       }
-      var f = function (e) {
+      var T = function (e) {
         let { cardClassName: t } = e;
         return (0, i.jsxs)("div", {
           className: c.wrapper,
@@ -677,7 +665,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return p;
+            return M;
           },
         });
       var i = s("735250"),
@@ -691,64 +679,64 @@
         c = s("663698"),
         E = s("871831"),
         _ = s("433735"),
-        f = s("913185"),
-        T = s("985053"),
+        T = s("913185"),
+        f = s("985053"),
         I = s("7304"),
         N = s("488867"),
         g = s("620871"),
         R = s("467006"),
         h = s("171168"),
         m = s("30175"),
-        v = s("530831"),
-        p = function (e) {
+        p = s("530831"),
+        M = function (e) {
           let { closeLayer: t, guild: s, onCtaVisibilityChange: a } = e,
-            p = (0, n.useStateFromStores)([E.default], () =>
+            M = (0, n.useStateFromStores)([E.default], () =>
               E.default.getCurrentUser()
             ),
-            M = (0, n.useStateFromStores)(
+            v = (0, n.useStateFromStores)(
               [_.default],
               () => _.default.boostSlots
             ),
             { analyticsLocations: S } = (0, d.default)(),
-            C = r.useMemo(
+            G = r.useMemo(
               () =>
-                Object.keys(M).filter(e => {
-                  let t = M[e];
+                Object.keys(v).filter(e => {
+                  let t = v[e];
                   return (
                     null != t.premiumGuildSubscription &&
                     t.premiumGuildSubscription.guildId === s.id
                   );
                 }),
-              [M, s.id]
+              [v, s.id]
             );
           return (0, i.jsxs)("div", {
-            className: v.guildStatus,
+            className: p.guildStatus,
             children: [
-              (0, i.jsx)(f.default, {
-                className: v.guildIcon,
+              (0, i.jsx)(T.default, {
+                className: p.guildIcon,
                 guild: s,
-                size: f.default.Sizes.LARGER,
+                size: T.default.Sizes.LARGER,
               }),
               (0, i.jsx)(u.Heading, {
-                className: v.guildName,
+                className: p.guildName,
                 color: "always-white",
                 variant: "text-lg/bold",
                 children: s.name,
               }),
               (0, i.jsxs)("div", {
-                className: v.guildBoostCountWrapper,
+                className: p.guildBoostCountWrapper,
                 children: [
                   (0, i.jsxs)("div", {
-                    className: v.guildBoostCount,
+                    className: p.guildBoostCount,
                     children: [
                       (0, i.jsx)(I.default, {
-                        className: l()(v.guildBoostBadge, {
-                          [v.guildBoostBadgeWithBoosts]:
+                        className: l()(p.guildBoostBadge, {
+                          [p.guildBoostBadgeWithBoosts]:
                             s.premiumSubscriberCount > 0,
                         }),
                       }),
                       (0, i.jsx)(u.Text, {
-                        className: v.guildStatusCopy,
+                        className: p.guildStatusCopy,
                         variant: "text-md/bold",
                         children:
                           m.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format(
@@ -757,36 +745,36 @@
                       }),
                     ],
                   }),
-                  C.length > 0
+                  G.length > 0
                     ? (0, i.jsx)(u.Text, {
-                        className: v.guildBoostCountCurrentUser,
+                        className: p.guildBoostCountCurrentUser,
                         variant: "text-sm/normal",
                         children:
                           m.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format(
-                            { numSubscriptions: C.length }
+                            { numSubscriptions: G.length }
                           ),
                       })
                     : null,
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: v.guildBoostCtas,
+                className: p.guildBoostCtas,
                 children: [
                   (0, i.jsx)(o.VisibilitySensor, {
                     onChange: a,
                     threshold: 0.9,
                     children: (0, i.jsx)("div", {
                       className: l()(
-                        v.guildBoostCta,
-                        v.guildBoostCtaBoostWrapper
+                        p.guildBoostCta,
+                        p.guildBoostCtaBoostWrapper
                       ),
                       children: (0, i.jsx)(g.default, {
-                        className: v.guildBoostCtaBoost,
+                        className: p.guildBoostCtaBoost,
                         innerClassName: l()(
-                          v.guildBoostCtaContent,
-                          v.guildBoostCtaBoostContent
+                          p.guildBoostCtaContent,
+                          p.guildBoostCtaBoostContent
                         ),
-                        buttonShineClassName: v.guildBoostCtaBoostShine,
+                        buttonShineClassName: p.guildBoostCtaBoostShine,
                         guild: s,
                         analyticsLocation: {
                           page: R.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
@@ -803,16 +791,16 @@
                       }),
                     }),
                   }),
-                  N.default.hasFreeBoosts(p) ||
-                  N.default.isPremium(p, h.PremiumTypes.TIER_2)
+                  N.default.hasFreeBoosts(M) ||
+                  N.default.isPremium(M, h.PremiumTypes.TIER_2)
                     ? (0, i.jsxs)(u.Button, {
                         className: l()(
-                          v.guildBoostCta,
-                          v.guildBoostCtaSecondary
+                          p.guildBoostCta,
+                          p.guildBoostCtaSecondary
                         ),
                         innerClassName: l()(
-                          v.guildBoostCtaContent,
-                          v.guildBoostCtaGiftContent
+                          p.guildBoostCtaContent,
+                          p.guildBoostCtaGiftContent
                         ),
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.WHITE,
@@ -835,8 +823,8 @@
                         },
                         size: u.Button.Sizes.LARGE,
                         children: [
-                          (0, i.jsx)(T.default, {
-                            className: v.guildBoostCtaGiftIcon,
+                          (0, i.jsx)(f.default, {
+                            className: p.guildBoostCtaGiftIcon,
                           }),
                           m.default.Messages
                             .PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO,
@@ -844,12 +832,12 @@
                       })
                     : (0, i.jsx)(u.Button, {
                         className: l()(
-                          v.guildBoostCta,
-                          v.guildBoostCtaSecondary
+                          p.guildBoostCta,
+                          p.guildBoostCtaSecondary
                         ),
                         innerClassName: l()(
-                          v.guildBoostCtaContent,
-                          v.guildBoostCtaSubscribeContent
+                          p.guildBoostCtaContent,
+                          p.guildBoostCtaSubscribeContent
                         ),
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.WHITE,
@@ -885,7 +873,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return f;
           },
         });
       var i = s("735250"),
@@ -899,7 +887,7 @@
         c = s("467006"),
         E = s("30175"),
         _ = s("100897");
-      let f = [
+      let T = [
         {
           getQuestion: () =>
             E.default.Messages
@@ -938,7 +926,7 @@
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_4,
         },
       ];
-      var T = function (e) {
+      var f = function (e) {
         let { className: t } = e,
           [s, a] = r.useState(null);
         return (0, i.jsxs)("div", {
@@ -953,7 +941,7 @@
             }),
             (0, i.jsx)("ul", {
               className: _.list,
-              children: f.map((e, t) => {
+              children: T.map((e, t) => {
                 let r = s === t;
                 return (0, i.jsxs)(
                   "div",
@@ -1019,7 +1007,7 @@
         E = function (e) {
           let { closeLayer: t, guild: s, isVisible: E } = e,
             _ = (0, a.default)([n.default], () => n.default.useReducedMotion),
-            f = (0, r.useSpring)({
+            T = (0, r.useSpring)({
               transform: E ? "translateY(-100%)" : "translateY(0%)",
               opacity: E ? 1 : 0,
               config: { tension: 120, friction: 12 },
@@ -1027,7 +1015,7 @@
             });
           return (0, i.jsx)(r.animated.div, {
             className: c.wrapper,
-            style: f,
+            style: T,
             children: (0, i.jsxs)("div", {
               className: c.innerWrapper,
               children: [
@@ -1071,7 +1059,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return f;
           },
         });
       var i = s("735250"),
@@ -1085,34 +1073,34 @@
         c = s("467006"),
         E = s("30175"),
         _ = s("460138");
-      let f = [
+      let T = [
         c.BoostedGuildTiers.NONE,
         c.BoostedGuildTiers.TIER_1,
         c.BoostedGuildTiers.TIER_2,
         c.BoostedGuildTiers.TIER_3,
       ];
-      function T(e) {
+      function f(e) {
         let { guild: t } = e,
           s = (0, l.useStateFromStores)(
             [n.default],
             () => n.default.useReducedMotion
           ),
-          [T, I] = r.useState(!1),
+          [f, I] = r.useState(!1),
           [N, g] = r.useState(0),
           R = r.useRef(null),
           h = Math.min(c.BoostedGuildTiers.TIER_3, t.premiumTier + 1),
           m = c.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier],
-          v = c.AppliedGuildBoostsRequiredForBoostedGuildTier[h],
-          p = (t.premiumSubscriberCount - m) / (v - m),
-          M = d.TierMarkerPositions[t.premiumTier],
+          p = c.AppliedGuildBoostsRequiredForBoostedGuildTier[h],
+          M = (t.premiumSubscriberCount - m) / (p - m),
+          v = d.TierMarkerPositions[t.premiumTier],
           S = d.TierMarkerPositions[h],
-          C = t.premiumTier === c.BoostedGuildTiers.TIER_3,
+          G = t.premiumTier === c.BoostedGuildTiers.TIER_3,
           {
             progressBarFillWidthFactor: x,
-            isProgressBarAnimationComplete: G,
+            isProgressBarAnimationComplete: C,
             setShouldFireConfetti: O,
-            shouldFireConfetti: A,
-            tierMarkerAnimationPosition: B,
+            shouldFireConfetti: B,
+            tierMarkerAnimationPosition: A,
           } = (function (e) {
             let {
                 fillFactor: t,
@@ -1123,7 +1111,7 @@
               } = e,
               [o, u] = r.useState(n ? i : -1),
               [E, _] = r.useState(0 === s),
-              [f, T] = r.useState(!1),
+              [T, f] = r.useState(!1),
               I = r.useRef(!0),
               { widthFactor: N } = (0, a.useSpring)({
                 from: { widthFactor: 0 },
@@ -1146,9 +1134,9 @@
                 onRest: () => {
                   _(!0),
                     i === c.BoostedGuildTiers.TIER_3 &&
-                      (T(!0),
+                      (f(!0),
                       window.setTimeout(() => {
-                        I.current && T(!1);
+                        I.current && f(!1);
                       }, 200));
                 },
               });
@@ -1162,14 +1150,14 @@
               {
                 isProgressBarAnimationComplete: E,
                 progressBarFillWidthFactor: N,
-                setShouldFireConfetti: T,
-                shouldFireConfetti: f,
+                setShouldFireConfetti: f,
+                shouldFireConfetti: T,
                 tierMarkerAnimationPosition: o,
               }
             );
           })({
-            fillFactor: C ? 1 : p * (S - M) + M,
-            isRevealed: T || s,
+            fillFactor: G ? 1 : M * (S - v) + v,
+            isRevealed: f || s,
             useReducedMotion: s,
             premiumTier: t.premiumTier,
             guildBoostCount: t.premiumSubscriberCount,
@@ -1215,17 +1203,17 @@
                   (0, i.jsx)("div", { className: _.progressBarTrack }),
                 ],
               }),
-              f.map(e =>
+              T.map(e =>
                 (0, i.jsx)(
                   d.default,
                   {
                     confettiTriggerRef: R,
                     guild: t,
-                    isProgressBarAnimationComplete: G,
+                    isProgressBarAnimationComplete: C,
                     setConfettiCount: g,
                     setShouldFireConfetti: O,
                     tier: e,
-                    tierMarkerAnimationPosition: B,
+                    tierMarkerAnimationPosition: A,
                     children: (0, o.getTierName)(e),
                   },
                   e
@@ -1234,7 +1222,7 @@
               (0, i.jsx)(u.default, {
                 confettiCount: N,
                 confettiTriggerRef: R,
-                isFiring: A,
+                isFiring: B,
               }),
             ],
           })
@@ -1249,7 +1237,7 @@
             return _;
           },
           default: function () {
-            return f;
+            return T;
           },
         });
       var i,
@@ -1270,8 +1258,8 @@
             setShouldFireConfetti: r,
             tooltipProps: c,
           } = e,
-          [_, f] = l.useState(0),
-          T = l.useRef(-1),
+          [_, T] = l.useState(0),
+          f = l.useRef(-1),
           I = l.useRef(!0),
           N = (0, o.useStateFromStores)(
             [d.default],
@@ -1296,22 +1284,22 @@
               children: (0, a.jsx)(u.Clickable, {
                 className: E.confettiTrigger,
                 onMouseDown: () => {
-                  f(1),
+                  T(1),
                     r(!0),
                     i(e => Math.min(e + 2, 200)),
-                    window.clearTimeout(T.current),
-                    (T.current = window.setTimeout(() => {
+                    window.clearTimeout(f.current),
+                    (f.current = window.setTimeout(() => {
                       I.current && i(0);
                     }, 200));
                 },
                 onMouseUp: () => {
-                  f(0), r(!1);
+                  T(0), r(!1);
                 },
                 onMouseEnter: () => {
-                  f(2), c?.onMouseEnter?.();
+                  T(2), c?.onMouseEnter?.();
                 },
                 onMouseLeave: () => {
-                  f(0), c?.onMouseLeave?.();
+                  T(0), c?.onMouseLeave?.();
                 },
                 innerRef: s,
                 children: t,
@@ -1321,7 +1309,7 @@
       ((i = r || (r = {}))[(i.INACTIVE = 0)] = "INACTIVE"),
         (i[(i.PRESSED = 1)] = "PRESSED"),
         (i[(i.HOVERED = 2)] = "HOVERED");
-      var f = function (e) {
+      var T = function (e) {
         let { confettiCount: t, confettiTriggerRef: s, isFiring: i } = e,
           { cannon: r, createMultipleConfettiAt: a } = l.useContext(
             c.ConfettiCannonContext
@@ -1381,8 +1369,8 @@
         c = s("397857"),
         E = s("42693"),
         _ = s("965981"),
-        f = s("772918"),
-        T = s("583954"),
+        T = s("772918"),
+        f = s("583954"),
         I = s("467006"),
         N = s("30175"),
         g = s("908914");
@@ -1399,26 +1387,26 @@
             guild: r,
             isProgressBarAnimationComplete: h,
             setConfettiCount: m,
-            setShouldFireConfetti: v,
-            tier: p,
-            tierMarkerAnimationPosition: M,
+            setShouldFireConfetti: p,
+            tier: M,
+            tierMarkerAnimationPosition: v,
           } = e,
           S = (0, n.default)([u.default], () => u.default.useReducedMotion),
-          { analyticsLocations: C } = (0, d.default)(),
+          { analyticsLocations: G } = (0, d.default)(),
           x =
-            I.AppliedGuildBoostsRequiredForBoostedGuildTier[p] -
+            I.AppliedGuildBoostsRequiredForBoostedGuildTier[M] -
             r.premiumSubscriberCount,
-          G = p <= M || h,
-          O = G && p <= r.premiumTier,
-          A = G && p < r.premiumTier,
-          B = G && p === r.premiumTier,
+          C = M <= v || h,
+          O = C && M <= r.premiumTier,
+          B = C && M < r.premiumTier,
+          A = C && M === r.premiumTier,
           { scaleFactor: L } = (0, l.useSpring)({
             from: { scaleFactor: 0 },
             to: {
               scaleFactor:
-                M >= p ||
-                (h && M + 1 === p) ||
-                (h && -1 === M && p === I.BoostedGuildTiers.NONE)
+                v >= M ||
+                (h && v + 1 === M) ||
+                (h && -1 === v && M === I.BoostedGuildTiers.NONE)
                   ? 1
                   : 0,
             },
@@ -1433,21 +1421,21 @@
                   transform: L.to(e => `translate(-50%, -50%) scale(${e})`),
                 },
               }),
-              p !== I.BoostedGuildTiers.NONE &&
+              M !== I.BoostedGuildTiers.NONE &&
                 (0, i.jsx)(c.default, {
-                  tier: p,
+                  tier: M,
                   className: g.boostedTierIcon,
                 }),
             ],
           }),
           j = O ? "div" : o.Clickable,
-          w = O
+          b = O
             ? {}
             : {
                 onClick: function () {
-                  G &&
-                    (0, f.addAppliedGuildBoosts)({
-                      analyticsLocations: C,
+                  C &&
+                    (0, T.addAppliedGuildBoosts)({
+                      analyticsLocations: G,
                       analyticsLocation: {
                         page: I.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
                         section:
@@ -1465,7 +1453,7 @@
                             default:
                               throw Error(`Unsupported Boosting tier: ${e}`);
                           }
-                        })(p),
+                        })(M),
                       },
                       numberOfBoostsToAdd: x,
                       guild: r,
@@ -1475,34 +1463,34 @@
         return (0, i.jsx)(o.Tooltip, {
           text: O
             ? N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format(
-                { tierName: (0, _.getTierName)(p, { useLevels: !1 }) }
+                { tierName: (0, _.getTierName)(M, { useLevels: !1 }) }
               )
             : N.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format(
                 {
                   numBoostsRequired: x,
-                  tierName: (0, _.getTierName)(p, { useLevels: !1 }),
+                  tierName: (0, _.getTierName)(M, { useLevels: !1 }),
                 }
               ),
-          shouldShow: p !== I.BoostedGuildTiers.NONE,
+          shouldShow: M !== I.BoostedGuildTiers.NONE,
           children: e =>
             (0, i.jsxs)(j, {
               className: a()(g.progressBarMarker, {
                 [g.progressBarMarkerUnlocked]: O,
                 [g.progressBarMarkerLocked]: !O,
-                [g.progressBarMarkerLower]: A,
-                [g.progressBarMarkerCurrent]: B,
+                [g.progressBarMarkerLower]: B,
+                [g.progressBarMarkerCurrent]: A,
               }),
-              style: { left: `${100 * R[p]}%` },
+              style: { left: `${100 * R[M]}%` },
               ...e,
-              ...w,
+              ...b,
               children: [
                 !O &&
                   (0, i.jsx)("div", { className: g.boostedTierIconBackground }),
-                O && p === I.BoostedGuildTiers.TIER_3
-                  ? (0, i.jsx)(T.ProgressBarConfettiTrigger, {
+                O && M === I.BoostedGuildTiers.TIER_3
+                  ? (0, i.jsx)(f.ProgressBarConfettiTrigger, {
                       confettiTriggerRef: s,
                       setConfettiCount: m,
-                      setShouldFireConfetti: v,
+                      setShouldFireConfetti: p,
                       children: P,
                     })
                   : P,
@@ -1511,7 +1499,7 @@
                   variant: "text-md/normal",
                   children: [
                     O &&
-                      p !== I.BoostedGuildTiers.NONE &&
+                      M !== I.BoostedGuildTiers.NONE &&
                       (0, i.jsx)(E.default, {
                         className: g.progressBarMarkerUnlockedIcon,
                       }),
@@ -1528,7 +1516,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return C;
+            return G;
           },
         });
       var i = s("735250");
@@ -1543,17 +1531,17 @@
         c = s("263037"),
         E = s("87645"),
         _ = s("930232"),
-        f = s("699667"),
-        T = s("911400"),
+        T = s("699667"),
+        f = s("911400"),
         I = s("181257"),
         N = s("654703"),
         g = s("139820"),
         R = s("890138"),
         h = s("965981"),
         m = s("467006"),
-        v = s("171168"),
-        p = s("30175"),
-        M = s("473715");
+        p = s("171168"),
+        M = s("30175"),
+        v = s("473715");
       let S = [
         {
           tier: m.BoostedGuildTiers.TIER_1,
@@ -1561,21 +1549,21 @@
             {
               icon: o.default,
               getCopy: () =>
-                p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format(
+                M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_EMOJI.format(
                   {
                     numEmojiSlots:
-                      v.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_1].limits
+                      p.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_1].limits
                         .emoji,
                   }
                 ),
             },
             {
-              icon: f.default,
+              icon: T.default,
               getCopy: () =>
-                p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format(
+                M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_CUSTOM_SOUNDS.format(
                   {
                     numSoundboardSlots:
-                      v.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_1].limits
+                      p.BoostedGuildFeatures[m.BoostedGuildTiers.TIER_1].limits
                         .soundboardSounds,
                   }
                 ),
@@ -1584,13 +1572,13 @@
             {
               icon: c.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_ICON,
             },
             {
               icon: N.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_AUDIO_QUALITY,
             },
           ],
@@ -1601,29 +1589,29 @@
             {
               icon: _.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STREAM_QUALITY,
             },
             {
               icon: R.default,
               getCopy: () =>
-                p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format(
+                M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format(
                   {
                     uploadSizeLimit:
-                      p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2,
+                      M.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_2,
                   }
                 ),
             },
             {
               icon: u.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ROLE_ICONS,
             },
             {
               icon: d.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_GUILD_BANNER,
             },
           ],
@@ -1634,119 +1622,119 @@
             {
               icon: E.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_VANITY_URL,
             },
             {
               icon: R.default,
               getCopy: () =>
-                p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format(
+                M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_LARGER_FILE_UPLOADS.format(
                   {
                     uploadSizeLimit:
-                      p.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3,
+                      M.default.Messages.FILE_UPLOAD_LIMIT_BOOSTED_GUILD_TIER_3,
                   }
                 ),
             },
             {
               icon: N.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_HIGHEST_AUDIO_QUALITY,
             },
             {
               icon: c.default,
               getCopy: () =>
-                p.default.Messages
+                M.default.Messages
                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_ANIMATED_GUILD_BANNER,
             },
             {
               icon: g.default,
               getCopy: () =>
-                p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format(
+                M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PERK_STAGE_SEATS_AND_MORE.format(
                   { numStageSeats: m.MAX_STAGE_VIDEO_USER_LIMIT_TIER3 }
                 ),
             },
           ],
         },
       ];
-      var C = function (e) {
+      var G = function (e) {
         let { guild: t } = e;
         return (0, i.jsx)("div", {
-          className: M.tierCards,
+          className: v.tierCards,
           children: S.map(e =>
             (0, i.jsxs)(
               "div",
               {
-                className: M.tierCard,
+                className: v.tierCard,
                 children: [
                   e.tier === m.BoostedGuildTiers.TIER_3 &&
                     (0, i.jsxs)(i.Fragment, {
                       children: [
                         (0, i.jsx)("div", {
                           className: a()(
-                            M.tierCardBorderHighlight,
-                            M.tierCardBorderHighlightTopRight
+                            v.tierCardBorderHighlight,
+                            v.tierCardBorderHighlightTopRight
                           ),
                         }),
                         (0, i.jsx)("div", {
                           className: a()(
-                            M.tierCardBorderHighlight,
-                            M.tierCardBorderHighlightBottomLeft
+                            v.tierCardBorderHighlight,
+                            v.tierCardBorderHighlightBottomLeft
                           ),
                         }),
                         (0, i.jsxs)("div", {
                           className: a()(
-                            M.tierCardSparkleHighlight,
-                            M.tierCardSparkleHighlightTopRight
+                            v.tierCardSparkleHighlight,
+                            v.tierCardSparkleHighlightTopRight
                           ),
                           children: [
                             (0, i.jsx)(I.default, {
-                              className: M.tierCardSparkle1,
+                              className: v.tierCardSparkle1,
                             }),
                             (0, i.jsx)(I.default, {
-                              className: M.tierCardSparkle2,
+                              className: v.tierCardSparkle2,
                             }),
-                            (0, i.jsx)(T.default, {
-                              className: M.tierCardSparkle3,
+                            (0, i.jsx)(f.default, {
+                              className: v.tierCardSparkle3,
                             }),
                           ],
                         }),
                         (0, i.jsx)("div", {
                           className: a()(
-                            M.tierCardSparkleHighlight,
-                            M.tierCardSparkleHighlightBottomLeft
+                            v.tierCardSparkleHighlight,
+                            v.tierCardSparkleHighlightBottomLeft
                           ),
                           children: (0, i.jsx)(I.default, {
-                            className: M.tierCardSparkle1,
+                            className: v.tierCardSparkle1,
                           }),
                         }),
                       ],
                     }),
                   e.tier === t.premiumTier &&
                     (0, i.jsx)(l.Text, {
-                      className: M.tierCardCurrentTier,
+                      className: v.tierCardCurrentTier,
                       tag: "div",
                       variant: "text-xs/semibold",
                       color: "always-white",
                       children:
-                        p.default.Messages
+                        M.default.Messages
                           .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_CURRENT_TIER_LABEL,
                     }),
                   (0, i.jsxs)("div", {
-                    className: M.tierCardHeader,
+                    className: v.tierCardHeader,
                     children: [
                       (0, i.jsx)(l.Heading, {
-                        className: M.tierCardHeading,
+                        className: v.tierCardHeading,
                         variant: "heading-xxl/semibold",
                         color: "always-white",
                         children: (0, h.getTierName)(e.tier, { useLevels: !1 }),
                       }),
                       (0, i.jsx)(l.Text, {
-                        className: M.tierCardBoostRequirement,
+                        className: v.tierCardBoostRequirement,
                         variant: "text-md/normal",
                         color: "always-white",
                         children:
-                          p.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format(
+                          M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTS_REQUIRED.format(
                             {
                               numBoostsRequired:
                                 m.AppliedGuildBoostsRequiredForBoostedGuildTier[
@@ -1758,28 +1746,28 @@
                     ],
                   }),
                   (0, i.jsx)("ul", {
-                    className: M.tierCardList,
+                    className: v.tierCardList,
                     children: e.perks.map((e, t) =>
                       null == e.predicate || e.predicate()
                         ? (0, i.jsxs)(
                             "li",
                             {
-                              className: M.tierCardPerkRow,
+                              className: v.tierCardPerkRow,
                               children: [
                                 (0, i.jsxs)(l.Text, {
-                                  className: M.tierCardListItem,
+                                  className: v.tierCardListItem,
                                   variant: "text-md/normal",
                                   color: "always-white",
                                   children: [
                                     (0, i.jsx)(e.icon, {
-                                      className: M.tierCardListIcon,
+                                      className: v.tierCardListIcon,
                                     }),
                                     e.getCopy(),
                                   ],
                                 }),
                                 e.isNew
                                   ? (0, i.jsx)(n.default, {
-                                      className: M.tierCardNewFeatureBadge,
+                                      className: v.tierCardNewFeatureBadge,
                                       forceUseColorForSparkles: !0,
                                       shouldInheritBackgroundColor: !0,
                                       shouldInheritTextColor: !0,
@@ -1819,12 +1807,12 @@
         c = s("108679"),
         E = s("467006"),
         _ = s("171168"),
-        f = s("30175"),
-        T = s("912289");
+        T = s("30175"),
+        f = s("912289");
       let I = [
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
           getPerkPreviewLightTheme: () => s("414102"),
           getPerkPreviewDarkTheme: () => s("614600"),
@@ -1839,7 +1827,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STICKER_SLOTS,
           getPerkPreviewLightTheme: () => s("73541"),
           getPerkPreviewDarkTheme: () => s("43735"),
@@ -1854,7 +1842,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_SOUNDBOARD_SLOTS,
           getPerkPreviewLightTheme: () => s("69098"),
           getPerkPreviewDarkTheme: () => s("881755"),
@@ -1873,12 +1861,12 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_STREAM_QUALITY,
           getPerkPreviewLightTheme: () => s("989015"),
           getPerkPreviewDarkTheme: () => s("815152"),
           getTier0Value: () =>
-            f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
+            T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
               {
                 resolution:
                   _.BoostedGuildFeatures[E.BoostedGuildTiers.NONE].limits
@@ -1889,7 +1877,7 @@
               }
             ),
           getTier1Value: () =>
-            f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
+            T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
               {
                 resolution:
                   _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_1].limits
@@ -1900,7 +1888,7 @@
               }
             ),
           getTier2Value: () =>
-            f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
+            T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
               {
                 resolution:
                   _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_2].limits
@@ -1911,7 +1899,7 @@
               }
             ),
           getTier3Value: () =>
-            f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
+            T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_STREAM_QUALITY.format(
               {
                 resolution:
                   _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_3].limits
@@ -1924,30 +1912,30 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VOICE_QUALITY,
           getPerkPreviewLightTheme: () => s("222185"),
           getPerkPreviewDarkTheme: () => s("415480"),
           getTier0Value: () =>
-            f.default.Messages.BITRATE_KBPS_NO_SPACE.format({
+            T.default.Messages.BITRATE_KBPS_NO_SPACE.format({
               bitrate:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.NONE].limits
                   .bitrate / 1e3,
             }),
           getTier1Value: () =>
-            f.default.Messages.BITRATE_KBPS_NO_SPACE.format({
+            T.default.Messages.BITRATE_KBPS_NO_SPACE.format({
               bitrate:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_1].limits
                   .bitrate / 1e3,
             }),
           getTier2Value: () =>
-            f.default.Messages.BITRATE_KBPS_NO_SPACE.format({
+            T.default.Messages.BITRATE_KBPS_NO_SPACE.format({
               bitrate:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_2].limits
                   .bitrate / 1e3,
             }),
           getTier3Value: () =>
-            f.default.Messages.BITRATE_KBPS_NO_SPACE.format({
+            T.default.Messages.BITRATE_KBPS_NO_SPACE.format({
               bitrate:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_3].limits
                   .bitrate / 1e3,
@@ -1955,12 +1943,12 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_UPLOAD_SIZE_LIMIT,
           getPerkPreviewLightTheme: () => s("825588"),
           getPerkPreviewDarkTheme: () => s("954499"),
           getTier0Value: () =>
-            f.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
+            T.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
               size:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.NONE].limits
                   .fileSize /
@@ -1968,7 +1956,7 @@
                 1024,
             }),
           getTier1Value: () =>
-            f.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
+            T.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
               size:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_1].limits
                   .fileSize /
@@ -1976,7 +1964,7 @@
                 1024,
             }),
           getTier2Value: () =>
-            f.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
+            T.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
               size:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_2].limits
                   .fileSize /
@@ -1984,7 +1972,7 @@
                 1024,
             }),
           getTier3Value: () =>
-            f.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
+            T.default.Messages.FILE_SIZE_MB_NO_SPACE.format({
               size:
                 _.BoostedGuildFeatures[E.BoostedGuildTiers.TIER_3].limits
                   .fileSize /
@@ -1994,7 +1982,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VIDEO_STAGE_SEATS,
           getPerkPreviewLightTheme: () => s("241190"),
           getPerkPreviewDarkTheme: () => s("879846"),
@@ -2013,7 +2001,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_ANIMATED_GUILD_ICON,
           getPerkPreviewLightTheme: () => s("499059"),
           getPerkPreviewDarkTheme: () => s("488349"),
@@ -2024,7 +2012,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_INVITE_BACKGROUND,
           getPerkPreviewLightTheme: () => s("136631"),
           getPerkPreviewDarkTheme: () => s("692079"),
@@ -2035,22 +2023,22 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_GUILD_BANNER,
           getPerkPreviewLightTheme: () => s("277822"),
           getPerkPreviewDarkTheme: () => s("866919"),
           getTier0Value: () => !1,
           getTier1Value: () => !1,
           getTier2Value: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_STATIC,
           getTier3Value: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CELL_GUILD_BANNER_ANIMATED,
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_CUSTOM_ROLE_ICONS,
           getPerkPreviewLightTheme: () => s("872259"),
           getPerkPreviewDarkTheme: () => s("876049"),
@@ -2061,7 +2049,7 @@
         },
         {
           getPerkHeading: () =>
-            f.default.Messages
+            T.default.Messages
               .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_VANITY_URL,
           getPerkPreviewLightTheme: () => s("710717"),
           getPerkPreviewDarkTheme: () => s("945198"),
@@ -2079,7 +2067,7 @@
               ? "heading-xl/normal"
               : "heading-xl/bold";
         return (0, i.jsxs)("th", {
-          className: l()(T.columnHeading, s),
+          className: l()(f.columnHeading, s),
           scope: "col",
           children: [
             (0, i.jsx)(o.Heading, { color: a, variant: n, children: t }),
@@ -2088,7 +2076,7 @@
                 color: a,
                 variant: "text-md/normal",
                 children:
-                  f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format(
+                  T.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format(
                     {
                       subscriptions:
                         E.AppliedGuildBoostsRequiredForBoostedGuildTier[r],
@@ -2102,7 +2090,7 @@
         let t;
         let { className: s, textVariant: r = "text-md/bold", value: a } = e;
         if ("boolean" == typeof a) {
-          let e = l()(T.booleanValueIcon, { [T.booleanValueTrue]: a });
+          let e = l()(f.booleanValueIcon, { [f.booleanValueTrue]: a });
           t = a
             ? (0, i.jsx)(d.default, { className: e })
             : (0, i.jsx)(c.default, { className: e });
@@ -2113,7 +2101,7 @@
             children: a,
           });
         return (0, i.jsx)("td", {
-          className: l()(T.tableCell, s),
+          className: l()(f.tableCell, s),
           children: t,
         });
       }
@@ -2134,21 +2122,21 @@
         return null == s
           ? null
           : (0, i.jsx)("div", {
-              className: l()(T.recommendedTierHighlight, {
-                [T.recommendedTierHighlightTier2]:
+              className: l()(f.recommendedTierHighlight, {
+                [f.recommendedTierHighlightTier2]:
                   s === E.BoostedGuildTiers.TIER_2,
-                [T.recommendedTierHighlightTier3]:
+                [f.recommendedTierHighlightTier3]:
                   s === E.BoostedGuildTiers.TIER_3,
               }),
               children: (0, i.jsx)(o.Text, {
-                className: T.recommendedTierHighlightTag,
+                className: f.recommendedTierHighlightTag,
                 color: "always-white",
                 variant: "text-xs/bold",
                 children:
                   t === E.BoostedGuildTiers.TIER_3
-                    ? f.default.Messages
+                    ? T.default.Messages
                         .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_CURRENT_TAG
-                    : f.default.Messages
+                    : T.default.Messages
                         .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_RECOMMENDED_TAG,
               }),
             });
@@ -2165,55 +2153,55 @@
           children: [
             !_ &&
               (0, i.jsx)(o.Heading, {
-                className: T.heading,
+                className: f.heading,
                 variant: "heading-xxl/extrabold",
                 children:
-                  f.default.Messages
+                  T.default.Messages
                     .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_HEADING,
               }),
             (0, i.jsxs)("div", {
-              className: T.tableWrapper,
+              className: f.tableWrapper,
               children: [
                 null != c && (0, i.jsx)(R, { currentTier: c.premiumTier }),
                 (0, i.jsxs)("table", {
-                  className: T.table,
+                  className: f.table,
                   cellPadding: 0,
                   cellSpacing: 0,
                   children: [
                     (0, i.jsx)("thead", {
                       children: (0, i.jsxs)("tr", {
-                        className: T.tableRow,
+                        className: f.tableRow,
                         children: [
                           (0, i.jsx)(N, {
-                            className: T.tableRowHeading,
+                            className: f.tableRowHeading,
                             children:
-                              f.default.Messages
+                              T.default.Messages
                                 .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS,
                           }),
                           !h &&
                             (0, i.jsx)(N, {
                               tier: E.BoostedGuildTiers.NONE,
                               children:
-                                f.default.Messages
+                                T.default.Messages
                                   .BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME,
                             }),
                           (0, i.jsx)(N, {
                             tier: E.BoostedGuildTiers.TIER_1,
-                            children: f.default.Messages.PREMIUM_GUILD_TIER_1,
+                            children: T.default.Messages.PREMIUM_GUILD_TIER_1,
                           }),
                           (0, i.jsx)(N, {
                             tier: E.BoostedGuildTiers.TIER_2,
-                            children: f.default.Messages.PREMIUM_GUILD_TIER_2,
+                            children: T.default.Messages.PREMIUM_GUILD_TIER_2,
                           }),
                           (0, i.jsx)(N, {
                             tier: E.BoostedGuildTiers.TIER_3,
-                            children: f.default.Messages.PREMIUM_GUILD_TIER_3,
+                            children: T.default.Messages.PREMIUM_GUILD_TIER_3,
                           }),
                         ],
                       }),
                     }),
                     (0, i.jsx)("tbody", {
-                      className: T.tableBody,
+                      className: f.tableBody,
                       children: I.map((e, r) => {
                         let u = s === r;
                         function d() {
@@ -2223,19 +2211,19 @@
                           ? (0, i.jsxs)(
                               "tr",
                               {
-                                className: T.tableRow,
+                                className: f.tableRow,
                                 children: [
                                   (0, i.jsx)("th", {
                                     className: l()(
-                                      T.tableCell,
-                                      T.tableCellWrapper
+                                      f.tableCell,
+                                      f.tableCellWrapper
                                     ),
                                     scope: "row",
                                     children: (0, i.jsx)(o.Clickable, {
                                       className: l()(
-                                        T.tableRowHeading,
-                                        T.tableCell,
-                                        T.tableCellInner
+                                        f.tableRowHeading,
+                                        f.tableCell,
+                                        f.tableCellInner
                                       ),
                                       onFocus: d,
                                       onBlur: m,
@@ -2248,7 +2236,7 @@
                                         position: "bottom",
                                         renderPopout: () =>
                                           (0, i.jsx)("img", {
-                                            className: T.perkPreviewImage,
+                                            className: f.perkPreviewImage,
                                             src: (0, n.isThemeDark)(t)
                                               ? e.getPerkPreviewDarkTheme()
                                               : e.getPerkPreviewLightTheme(),
@@ -2292,7 +2280,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return f;
+            return T;
           },
         });
       var i = s("735250");
@@ -2329,7 +2317,7 @@
           ],
         });
       }
-      var f = function () {
+      var T = function () {
         let e = (0, r.default)([l.default], () => l.default.useReducedMotion);
         return (0, i.jsxs)("div", {
           className: o.wrapper,
@@ -3087,88 +3075,6 @@
         });
       }
     },
-    654703: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return n;
-          },
-        });
-      var i = s("735250");
-      s("470079");
-      var r = s("336328"),
-        a = s("509036"),
-        l = s("262113"),
-        n = (0, r.replaceIcon)(
-          function (e) {
-            let {
-              width: t = 24,
-              height: s = 24,
-              color: r = "currentColor",
-              foreground: a,
-              ...n
-            } = e;
-            return (0, i.jsx)("svg", {
-              ...(0, l.default)(n),
-              width: t,
-              height: s,
-              viewBox: "0 0 24 24",
-              children: (0, i.jsx)("path", {
-                className: a,
-                fill: r,
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M11.383 3.07904C11.009 2.92504 10.579 3.01004 10.293 3.29604L6 8.00204H3C2.45 8.00204 2 8.45304 2 9.00204V15.002C2 15.552 2.45 16.002 3 16.002H6L10.293 20.71C10.579 20.996 11.009 21.082 11.383 20.927C11.757 20.772 12 20.407 12 20.002V4.00204C12 3.59904 11.757 3.23204 11.383 3.07904ZM14 5.00195V7.00195C16.757 7.00195 19 9.24595 19 12.002C19 14.759 16.757 17.002 14 17.002V19.002C17.86 19.002 21 15.863 21 12.002C21 8.14295 17.86 5.00195 14 5.00195ZM14 9.00195C15.654 9.00195 17 10.349 17 12.002C17 13.657 15.654 15.002 14 15.002V13.002C14.551 13.002 15 12.553 15 12.002C15 11.451 14.551 11.002 14 11.002V9.00195Z",
-                "aria-hidden": !0,
-              }),
-            });
-          },
-          a.VoiceNormalIcon,
-          void 0,
-          { size: 24 }
-        );
-    },
-    139820: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return n;
-          },
-        });
-      var i = s("735250");
-      s("470079");
-      var r = s("336328"),
-        a = s("330604"),
-        l = s("262113"),
-        n = (0, r.replaceIcon)(
-          function (e) {
-            let {
-              width: t = 32,
-              height: s = 32,
-              color: r = "currentColor",
-              ...a
-            } = e;
-            return (0, i.jsx)("svg", {
-              ...(0, l.default)(a),
-              width: t,
-              height: s,
-              viewBox: "0 0 24 24",
-              fill: "none",
-              children: (0, i.jsx)("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M14 13C14 14.1 13.1 15 12 15C10.9 15 10 14.1 10 13C10 11.9 10.9 11 12 11C13.1 11 14 11.9 14 13ZM8.5 20V19.5C8.5 17.8 9.94 16.5 12 16.5C14.06 16.5 15.5 17.8 15.5 19.5V20H8.5ZM7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 13.91 16.74 14.75 16.31 15.49L17.62 16.25C18.17 15.29 18.5 14.19 18.5 13C18.5 9.42 15.58 6.5 12 6.5C8.42 6.5 5.5 9.42 5.5 13C5.5 14.18 5.82 15.29 6.38 16.25L7.69 15.49C7.26 14.75 7 13.91 7 13ZM2.5 13C2.5 7.75 6.75 3.5 12 3.5C17.25 3.5 21.5 7.75 21.5 13C21.5 14.73 21.03 16.35 20.22 17.75L21.51 18.5C22.45 16.88 23 15 23 13C23 6.93 18.07 2 12 2C5.93 2 1 6.93 1 13C1 15 1.55 16.88 2.48 18.49L3.77 17.74C2.97 16.35 2.5 14.73 2.5 13Z",
-                fill: r,
-              }),
-            });
-          },
-          a.StageIcon,
-          void 0,
-          { size: 32 }
-        );
-    },
     353333: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -3252,13 +3158,13 @@
       s.r(t),
         s.d(t, {
           FullScreenLayers: function () {
-            return v;
+            return p;
           },
           closeFullScreenLayer: function () {
-            return M;
+            return v;
           },
           openFullScreenLayer: function () {
-            return p;
+            return M;
           },
           useFullScreenLayerStore: function () {
             return g;
@@ -3275,10 +3181,10 @@
         c = s("849557"),
         E = s("974328"),
         _ = s("96185"),
-        f = s("702340"),
-        T = s("990119"),
+        T = s("702340"),
+        f = s("990119"),
         I = s("294082");
-      let N = (0, f.cssValueToNumber)(
+      let N = (0, T.cssValueToNumber)(
         c.default.FULL_SCREEN_LAYER_ANIMATION_DURATION
       );
       ((i = r || (r = {}))[(i.ENTERING = 1)] = "ENTERING"),
@@ -3308,7 +3214,7 @@
                       binds: ["esc"],
                       comboKeysBindGlobal: !0,
                       action() {
-                        M(e);
+                        v(e);
                       },
                     },
                   };
@@ -3328,7 +3234,7 @@
                 (0, a.jsx)("div", { className: I.drag }),
                 t.render({
                   transitionState: null != t ? t.transitionState : 3,
-                  closeLayer: () => M(t.key),
+                  closeLayer: () => v(t.key),
                 }),
               ],
             }),
@@ -3351,7 +3257,7 @@
           exitActive: I.exitActiveReducedMotion,
           exitDone: I.exitDoneReducedMotion,
         };
-      function v() {
+      function p() {
         let { reducedMotion: e } = l.useContext(
             E.AccessibilityPreferencesContext
           ),
@@ -3379,7 +3285,7 @@
           ),
         });
       }
-      function p(e) {
+      function M(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -3393,7 +3299,7 @@
               {
                 key: r,
                 transitionState: 1,
-                LayerComponent: i ?? T.default,
+                LayerComponent: i ?? f.default,
                 render: e,
               },
             ],
@@ -3401,7 +3307,7 @@
           r
         );
       }
-      function M(e) {
+      function v(e) {
         g.setState(t => ({
           fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e),
         }));
@@ -3797,95 +3703,6 @@
         });
       };
     },
-    794331: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          StageIcon: function () {
-            return l;
-          },
-        });
-      var i = s("735250");
-      s("470079");
-      var r = s("600186"),
-        a = s("11768");
-      let l = e => {
-        let {
-          width: t = 24,
-          height: s = 24,
-          color: l = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: n = "",
-          ...o
-        } = e;
-        return (0, i.jsxs)("svg", {
-          ...(0, a.default)(o),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: t,
-          height: s,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: [
-            (0, i.jsx)("path", {
-              fill: "string" == typeof l ? l : l.css,
-              d: "M19.61 18.25a1.08 1.08 0 0 1-.07-1.33 9 9 0 1 0-15.07 0c.26.42.25.97-.08 1.33l-.02.02c-.41.44-1.12.43-1.46-.07a11 11 0 1 1 18.17 0c-.33.5-1.04.51-1.45.07l-.02-.02Z",
-              className: n,
-            }),
-            (0, i.jsx)("path", {
-              fill: "string" == typeof l ? l : l.css,
-              d: "M16.83 15.23c.43.47 1.18.42 1.45-.14a7 7 0 1 0-12.57 0c.28.56 1.03.6 1.46.14l.05-.06c.3-.33.35-.81.17-1.23A4.98 4.98 0 0 1 12 7a5 5 0 0 1 4.6 6.94c-.17.42-.13.9.18 1.23l.05.06Z",
-              className: n,
-            }),
-            (0, i.jsx)("path", {
-              fill: "string" == typeof l ? l : l.css,
-              d: "M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.33 20.03c-.25.72.12 1.5.8 1.84a10.96 10.96 0 0 0 9.73 0 1.52 1.52 0 0 0 .8-1.84 6 6 0 0 0-11.33 0Z",
-              className: n,
-            }),
-          ],
-        });
-      };
-    },
-    124819: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          VoiceNormalIcon: function () {
-            return l;
-          },
-        });
-      var i = s("735250");
-      s("470079");
-      var r = s("600186"),
-        a = s("11768");
-      let l = e => {
-        let {
-          width: t = 24,
-          height: s = 24,
-          color: l = r.default.colors.INTERACTIVE_NORMAL,
-          colorClass: n = "",
-          ...o
-        } = e;
-        return (0, i.jsxs)("svg", {
-          ...(0, a.default)(o),
-          xmlns: "http://www.w3.org/2000/svg",
-          width: t,
-          height: s,
-          fill: "none",
-          viewBox: "0 0 24 24",
-          children: [
-            (0, i.jsx)("path", {
-              fill: "string" == typeof l ? l : l.css,
-              d: "M12 3a1 1 0 0 0-1-1h-.06a1 1 0 0 0-.74.32L5.92 7H3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.92l4.28 4.68a1 1 0 0 0 .74.32H11a1 1 0 0 0 1-1V3ZM15.1 20.75c-.58.14-1.1-.33-1.1-.92v-.03c0-.5.37-.92.85-1.05a7 7 0 0 0 0-13.5A1.11 1.11 0 0 1 14 4.2v-.03c0-.6.52-1.06 1.1-.92a9 9 0 0 1 0 17.5Z",
-              className: n,
-            }),
-            (0, i.jsx)("path", {
-              fill: "string" == typeof l ? l : l.css,
-              d: "M15.16 16.51c-.57.28-1.16-.2-1.16-.83v-.14c0-.43.28-.8.63-1.02a3 3 0 0 0 0-5.04c-.35-.23-.63-.6-.63-1.02v-.14c0-.63.59-1.1 1.16-.83a5 5 0 0 1 0 9.02Z",
-              className: n,
-            }),
-          ],
-        });
-      };
-    },
     455730: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -4044,4 +3861,4 @@
     },
   },
 ]);
-//# sourceMappingURL=10568.54bda704cc020ab01648.js.map
+//# sourceMappingURL=10568.574eec608a6550c71fee.js.map

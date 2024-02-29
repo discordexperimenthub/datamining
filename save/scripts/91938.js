@@ -2550,8 +2550,8 @@ ${u}`;
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "269740",
-          versionHash: "e521d7a38eeccb8b427dc171eb9d9a201495e5f4",
+          buildNumber: "270926",
+          versionHash: "707bbff09f6990f60b92d6ca6764bc0da98d0b27",
         };
       }
       n.r(t),
@@ -2739,7 +2739,7 @@ ${h}`;
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-e521d7a38eeccb8b427dc171eb9d9a201495e5f4",
+          release: "discord_web-707bbff09f6990f60b92d6ca6764bc0da98d0b27",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2809,8 +2809,8 @@ ${h}`;
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", "269740"),
-          a.setTag("builtAt", String("1709155747148"));
+          a.setTag("buildNumber", "270926"),
+          a.setTag("builtAt", String("1709222079061"));
         let e = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != e && "object" == typeof e)
           for (let t in e) a.setTag(t, e[t]);
@@ -3542,14 +3542,14 @@ ${h}`;
             messageId: n.id,
           });
       }
-      function Y(e) {
+      function K(e) {
         let { state: t } = e;
         if ("active" !== t) return !1;
         let n = _.default.getChannelId();
         if (null == n) return !1;
         o.default.fetchNewLocalMessages(n, N.MAX_MESSAGES_PER_CHANNEL);
       }
-      class K extends c.default {
+      class Y extends c.default {
         _initialize() {
           l.default.subscribe("CONNECTION_OPEN", b);
         }
@@ -3562,7 +3562,7 @@ ${h}`;
             (this.loadSelectedChannelIfNecessary = D),
             (this.stores = new Map().set(E.default, U)),
             (this.actions = {
-              APP_STATE_UPDATE: Y,
+              APP_STATE_UPDATE: K,
               OVERLAY_INITIALIZE: b,
               CHANNEL_SELECT: P,
               VOICE_CHANNEL_SELECT: w,
@@ -3580,7 +3580,7 @@ ${h}`;
             });
         }
       }
-      var $ = new K();
+      var $ = new Y();
     },
     189950: function (e, t, n) {
       "use strict";
@@ -5584,7 +5584,7 @@ ${h}`;
               !0,
               "VideoBackground-web"
             ).enabled,
-            A = (0, c.default)(E ?? h.EMPTY_STRING_USER_ID),
+            A = (0, c.default)(E ?? h.EMPTY_STRING_SNOWFLAKE_ID),
             v = A?.getBannerURL({
               size: 1024,
               canAnimate: f.GifAutoPlay.getSetting(),
@@ -6252,4 +6252,4 @@ ${h}`;
     },
   },
 ]);
-//# sourceMappingURL=91938.f89d71aa89ce135724d2.js.map
+//# sourceMappingURL=91938.dd41eeb58dd647966533.js.map

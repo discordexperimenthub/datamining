@@ -725,8 +725,8 @@
             breadcrumbs: D = [],
             skuIDs: B,
             isGift: H = !1,
-            children: b,
-            defaultPlanId: K,
+            children: K,
+            defaultPlanId: b,
             purchaseType: w = y.PurchaseTypes.SUBSCRIPTION,
             applicationId: v,
             referralCode: Y,
@@ -797,7 +797,7 @@
           [ty, tg] = u.useState(null),
           [tG, tD] = u.useState(null),
           [tB, tH] = u.useState(void 0),
-          [tb, tK] = u.useState([]),
+          [tK, tb] = u.useState([]),
           tw = u.useMemo(
             () => null == tA || (0, I.isPremiumSubscriptionPlan)(tA.id),
             [tA]
@@ -887,7 +887,7 @@
             setSelectedPlanId: tC,
             readySlideId: tB,
             setReadySlideId: tH,
-            defaultPlanId: K,
+            defaultPlanId: b,
             isPremium: tw,
             productLine: tX?.productLine,
             startedPaymentFlowWithPaymentSourcesRef: $,
@@ -900,14 +900,14 @@
             purchaseType: w,
             isEmbeddedIAP: tx,
             activitySessionId: tQ,
-            entitlementsGranted: tb,
-            setEntitlementsGranted: tK,
+            entitlementsGranted: tK,
+            setEntitlementsGranted: tb,
             referralCode: Y,
           },
           children: (0, i.jsx)(r.Elements, {
             options: y.StripeElementsOptions,
             stripe: W,
-            children: b,
+            children: K,
           }),
         });
       }
@@ -1858,7 +1858,7 @@
         };
       }
       function h(t) {
-        let e = t?.id ?? P.EMPTY_STRING_GUILD_ID,
+        let e = t?.id ?? P.EMPTY_STRING_SNOWFLAKE_ID,
           { entitlementsLoaded: n } = R({
             guildId: e,
             canFetch: (0, l.useStateFromStores)([S.default], () =>
@@ -3906,4 +3906,4 @@
     },
   },
 ]);
-//# sourceMappingURL=26627.d9b535b0548cded8977c.js.map
+//# sourceMappingURL=26627.ff922ae4d26b65deadc2.js.map

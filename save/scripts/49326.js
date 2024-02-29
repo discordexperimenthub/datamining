@@ -2024,7 +2024,7 @@
           for (let t of n) {
             if (null == t) continue;
             let n = l.default.getUser(t),
-              u = a.default.getTrueMember(e ?? i.EMPTY_STRING_GUILD_ID, t);
+              u = a.default.getTrueMember(e ?? i.EMPTY_STRING_SNOWFLAKE_ID, t);
             null != n && s.push(n), null != u && r.push(u);
           }
           return [r, s];
@@ -3687,7 +3687,7 @@
             arguments.length > 2 && void 0 !== arguments[2]
               ? arguments[2]
               : "1e9ccc_1",
-          a = e?.id ?? r.EMPTY_STRING_GUILD_ID;
+          a = e?.id ?? r.EMPTY_STRING_SNOWFLAKE_ID;
         return i.default.useExperiment(
           { guildId: a, location: n },
           { autoTrackExposure: t }
@@ -3719,7 +3719,7 @@
       }
       function f(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          a = e?.id ?? r.EMPTY_STRING_GUILD_ID;
+          a = e?.id ?? r.EMPTY_STRING_SNOWFLAKE_ID;
         return c(
           i.default.getCurrentConfig(
             { guildId: a, location: "1e9ccc_2" },
@@ -3772,7 +3772,7 @@
         i = n("467006");
       function r(e) {
         let t = l.default.getCurrentConfig({
-            guildId: e ?? i.EMPTY_STRING_GUILD_ID,
+            guildId: e ?? i.EMPTY_STRING_SNOWFLAKE_ID,
             location: "3fde52_1",
           }),
           n = a.default.getCurrentConfig({ location: "3fde52_2" });
@@ -4790,7 +4790,7 @@
       let r = 3;
       function s(e) {
         let t = l.default.useExperiment({
-            guildId: e ?? i.EMPTY_STRING_GUILD_ID,
+            guildId: e ?? i.EMPTY_STRING_SNOWFLAKE_ID,
             location: "9a247a_1",
           }),
           n = a.default.useExperiment({ location: "9a247a_2" });
@@ -12879,4 +12879,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49326.20af5530715069fd17a1.js.map
+//# sourceMappingURL=49326.968cc36900db94743bf4.js.map

@@ -345,7 +345,7 @@
             return q;
           },
           deleteClip: function () {
-            return Y;
+            return K;
           },
           dismissClipsUserEducation: function () {
             return j;
@@ -354,7 +354,7 @@
             return x;
           },
           exportClip: function () {
-            return K;
+            return Y;
           },
           loadClipsDirectory: function () {
             return $;
@@ -730,13 +730,13 @@
         }
         r.default.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
       }
-      async function Y(e) {
+      async function K(e) {
         (0, I.isDesktop)() &&
           l.default.clips?.deleteClip != null &&
           (await l.default.clips.deleteClip(e),
           r.default.dispatch({ type: "CLIPS_DELETE_CLIP", filepath: e }));
       }
-      async function K(e, t) {
+      async function Y(e, t) {
         let n = g.default.getMediaEngine(),
           i = await n.exportClip(e.filepath, t);
         return (0, R.default)(i);
@@ -1632,7 +1632,7 @@
         let { voiceChannelActivityNotifsEnabled: t } = r.useExperiment(
             {
               location: "useVoiceActivityNotificationSettingsExperiment",
-              guildId: e?.getGuildId() ?? a.EMPTY_STRING_GUILD_ID,
+              guildId: e?.getGuildId() ?? a.EMPTY_STRING_SNOWFLAKE_ID,
             },
             {
               disable: e?.type !== a.ChannelTypes.GUILD_VOICE,
@@ -1650,7 +1650,7 @@
       }
       function u(e) {
         let { voiceChannelActivityNotifsEnabled: t } = r.getCurrentConfig({
-          guildId: e?.getGuildId() ?? a.EMPTY_STRING_GUILD_ID,
+          guildId: e?.getGuildId() ?? a.EMPTY_STRING_SNOWFLAKE_ID,
           location: "hasVoiceChannelActivityNotifsEnabled",
         });
         return t;
@@ -2546,4 +2546,4 @@
     },
   },
 ]);
-//# sourceMappingURL=51266.f8dff56e935227f65e7a.js.map
+//# sourceMappingURL=51266.3248b945241f117311da.js.map

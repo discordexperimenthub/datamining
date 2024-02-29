@@ -1766,6 +1766,12 @@
         getFeed(e) {
           return s.get(e);
         }
+        getFeedRequestId(e) {
+          var t;
+          return null === (t = this.getFeed(e)) || void 0 === t
+            ? void 0
+            : t.request_id;
+        }
       }
       i.displayName = "ContentInventoryStore";
       var l = new i(r.default, {
@@ -2310,7 +2316,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-d4f35d9713dac3e95f141bf669ca55a3c4a90cf6",
+          release: "discord_web-37977afb3298cc8c47c87a4a0a92d4cf1b5704dc",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2380,8 +2386,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "271250"), "271250")),
-          a.setTag("builtAt", String("1709249964021"));
+          a.setTag("buildNumber", ((e = "271255"), "271255")),
+          a.setTag("builtAt", String("1709250237533"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -5307,4 +5313,4 @@
     },
   },
 ]);
-//# sourceMappingURL=86349.e0330e04edc2e915e578.js.map
+//# sourceMappingURL=86349.2caf1f8666858b5adcf8.js.map

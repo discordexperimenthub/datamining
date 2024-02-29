@@ -26234,8 +26234,8 @@ html .progress__00e29 {
 }
 .message__702f7 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -56207,8 +56207,8 @@ input::-webkit-inner-spin-button {
   align-items: center;
 }
 .memberCount__9a0a5 {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   display: flex;
   align-items: center;
 }
@@ -109216,4 +109216,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=99387.20b8f5b1036fc9836791.css.map*/
+/*# sourceMappingURL=99387.2da23fe889c624d02fb9.css.map*/

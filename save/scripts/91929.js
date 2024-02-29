@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["2575"],
+  ["91929"],
   {
     787333: function (e, t, n) {
       var i = {
@@ -66779,7 +66779,7 @@
                 let n = new URLSearchParams();
                 n.append(
                   "build_id",
-                  "6eaaf39dad685dc421a84bddbd2dfbfa4442130e"
+                  "66242f0893a62b8d3f0dee636339a8de674006c6"
                 ),
                   n.append("rpc", String(t)),
                   n.append("rpc_auth_token", V),
@@ -79498,4 +79498,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2575.48b917079316a8d55124.js.map
+//# sourceMappingURL=91929.d4468c302fd69726e7db.js.map

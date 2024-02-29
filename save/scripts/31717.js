@@ -3511,15 +3511,20 @@
         return 0 === e.length && null == t.find(e => g(e, n));
       }
       function g(e, t) {
-        return t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS
-          ? null != e.image
-          : null != e.text && e.text.length > 0;
+        if (t === l.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
+        {
+          var n;
+          let t = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
+          return null != t && t.length > 0;
+        }
       }
       function S(e, t) {
+        var n;
+        let a = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
         return (
           t === l.PollLayoutTypes.DEFAULT &&
           null != e.image &&
-          (null == e.text || 0 === e.text.length)
+          (null == a || 0 === a.length)
         );
       }
       function h(e) {
@@ -4181,4 +4186,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31717.d874d2f1e356c52ac93f.js.map
+//# sourceMappingURL=31717.23481df6ac9fb1a0d7ec.js.map

@@ -38261,8 +38261,8 @@ html .progress__4ef76 {
   align-items: center;
 }
 .memberCount_d3ce07 {
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 12px;
+  line-height: 16px;
   display: flex;
   align-items: center;
 }
@@ -39004,8 +39004,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -94925,10 +94925,13 @@ html .invoiceCancelRow_a8669b {
 }
 .answerRow__9fc86 {
   display: grid;
-  grid-template-columns: 1fr 24px;
-  grid-gap: 12px;
-  gap: 12px;
+  grid-template-columns: 1fr;
+  grid-gap: 4px 12px;
+  gap: 4px 12px;
   align-items: center;
+}
+.hasDeleteButton__0ee25 {
+  grid-template-columns: 1fr 24px;
 }
 .defaultTextInputWrapper__4f24b {
   display: flex;
@@ -94936,11 +94939,31 @@ html .invoiceCancelRow_a8669b {
   background-color: var(--input-background);
   border-radius: var(--radius-xs);
   overflow: hidden;
+  border: 2px solid var(--input-background);
+  transition: border-color.2s ease-in-out;
+}
+.defaultTextInputWrapper__4f24b:focus-within .characterCount__6f85a {
+  display: block;
+}
+.defaultTextInputWrapper__4f24b.hasError__2640e {
+  border-color: var(--button-danger-background);
+}
+.defaultTextInputWrapper__4f24b.hasError__2640e .characterCount__6f85a {
+  color: var(--text-danger);
 }
 .defaultTextInput__91909 {
   flex: 1;
   background-color: transparent;
-  padding-left: 4px;
+  padding: 5px 4px;
+}
+.characterCount__6f85a {
+  align-self: flex-end;
+  padding: 0 12px 7px 0;
+  font-size: 12px;
+  font-family: var(--font-code);
+  color: var(--text-muted);
+  pointer-events: none;
+  display: none;
 }
 .imageOnlyContainer__04301 {
   position: relative;
@@ -95193,6 +95216,20 @@ html .invoiceCancelRow_a8669b {
   flex-direction: column;
   padding: 4px 16px 18px;
 }
+.questionInput_ac682b {
+  max-height: 130px;
+  border: 2px solid var(--input-background);
+  transition: border-color.2s ease-in-out;
+}
+.questionInput_ac682b:hover,
+.questionInput_ac682b:focus {
+  border-color: var(--input-background);
+}
+.questionInput_ac682b.hasError__72dea,
+.questionInput_ac682b:hover.hasError__72dea,
+.questionInput_ac682b:focus.hasError__72dea {
+  border-color: var(--status-danger-background);
+}
 .answerInputsContainer__22676 {
   display: flex;
   row-gap: 12px;
@@ -95220,8 +95257,10 @@ html .invoiceCancelRow_a8669b {
 .addAnswerButtonDefault_f6a374 {
   justify-content: flex-start;
   gap: 8px;
-  margin-right: 36px;
   padding: 0 20px 0 9px;
+}
+.addAnswerButtonDefault_f6a374.canRemoveMoreAnswers__252d8 {
+  margin-right: 36px;
 }
 .addAnswerButtonImageOnly__73d3e {
   justify-content: center;
@@ -95234,7 +95273,7 @@ html .invoiceCancelRow_a8669b {
   color: var(--text-muted);
 }
 .addAnswerButtonLabel_da5029 {
-  padding: 11px 0;
+  padding: 13px 0;
 }
 .addAnswerIconImageOnly__048af {
   width: 48px;
@@ -95252,7 +95291,7 @@ html .invoiceCancelRow_a8669b {
   min-width: 6rem;
   gap: 4px;
   font-weight: 400;
-  padding: 11px;
+  padding: 13px;
 }
 .footer__1028f {
   display: flex;
@@ -104121,7 +104160,7 @@ div.nagbar_c731ff {
   display: inline;
   border-bottom: 2px solid transparent;
   height: 39px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 .enable-forced-colors .tabBarItem_b56b35 {
   margin-right: 32px;
@@ -109216,4 +109255,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.7f79e123ff6fe5bf3d6b.css.map*/
+/*# sourceMappingURL=app.25b922003c0cdd7ca9ec.css.map*/

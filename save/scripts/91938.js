@@ -2550,8 +2550,8 @@ ${u}`;
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "271016",
-          versionHash: "d31bf75c39e65a66a566f103fdf0aee2832c6aff",
+          buildNumber: "271018",
+          versionHash: "791e6c33087fc08e064cacba29da7e9db154f2eb",
         };
       }
       n.r(t),
@@ -2739,7 +2739,7 @@ ${h}`;
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-d31bf75c39e65a66a566f103fdf0aee2832c6aff",
+          release: "discord_web-791e6c33087fc08e064cacba29da7e9db154f2eb",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2809,8 +2809,8 @@ ${h}`;
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", "271016"),
-          a.setTag("builtAt", String("1709230718374"));
+          a.setTag("buildNumber", "271018"),
+          a.setTag("builtAt", String("1709230756310"));
         let e = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != e && "object" == typeof e)
           for (let t in e) a.setTag(t, e[t]);
@@ -3603,6 +3603,7 @@ ${h}`;
         l = n("661223"),
         u = n("312916"),
         o = n("731865");
+      let d = 5 * n("152551").default.Millis.SECOND;
       ((a = i || (i = {}))[(a.STRANGER_DANGER = 1)] = "STRANGER_DANGER"),
         (a[(a.INAPPROPRIATE_CONVERSATION_TIER_1 = 2)] =
           "INAPPROPRIATE_CONVERSATION_TIER_1"),
@@ -3610,21 +3611,27 @@ ${h}`;
           "INAPPROPRIATE_CONVERSATION_TIER_2"),
         ((r = s || (s = {}))[(r.UPVOTE = 0)] = "UPVOTE"),
         (r[(r.DOWNVOTE = 1)] = "DOWNVOTE");
-      let d = [],
-        c = {},
-        f = new Set();
-      function h(e) {
-        return 2 === e.type || 3 === e.type;
-      }
+      let c = [],
+        f = {},
+        h = new Set();
       function p(e) {
         let { safetyWarnings: t } = e;
         null != t &&
-          ((c[e.id] = t),
-          t.some(e => h(e) && null != e.dismiss_timestamp) && f.add(e.id)),
-          null == t && (null != c[e.id] && delete c[e.id], f.delete(e.id));
+          ((f[e.id] = t),
+          t.some(e => {
+            var t;
+            return (
+              (2 === (t = e).type || 3 === t.type) &&
+              null != e.dismiss_timestamp &&
+              !(function (e) {
+                return new Date(e).getTime() > Date.now() - d;
+              })(e.dismiss_timestamp)
+            );
+          }) && h.add(e.id)),
+          null == t && (null != f[e.id] && delete f[e.id], h.delete(e.id));
       }
       function g() {
-        (c = {}),
+        (f = {}),
           Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
             p(e);
           });
@@ -3634,13 +3641,13 @@ ${h}`;
           this.waitFor(o.default);
         }
         getChannelSafetyWarning(e, t) {
-          return c[e]?.find(e => e.id === t);
+          return f[e]?.find(e => e.id === t);
         }
         getChannelSafetyWarnings(e) {
-          return c[e] ?? d;
+          return f[e] ?? c;
         }
         hasShownInitialTooltipForChannel(e) {
-          return f.has(e);
+          return h.has(e);
         }
       }
       var C = new E(u.default, {
@@ -3649,7 +3656,7 @@ ${h}`;
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          null != c[t.id] && delete c[t.id], f.delete(t.id);
+          null != f[t.id] && delete f[t.id], h.delete(t.id);
         },
         CHANNEL_UPDATES: function (e) {
           e.channels.forEach(e => {
@@ -3660,29 +3667,28 @@ ${h}`;
         CONNECTION_OPEN_SUPPLEMENTAL: g,
         CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
           let { channelId: t, warningId: n, feedbackType: a } = e,
-            r = c[t];
+            r = f[t];
           null != r &&
-            (c[t] = r.map(e => (e.id === n ? { ...e, feedback_type: a } : e)));
+            (f[t] = r.map(e => (e.id === n ? { ...e, feedback_type: a } : e)));
         },
         CLEAR_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t } = e,
-            n = c[t];
+            n = f[t];
           null != n &&
-            (c[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
+            (f[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
         },
         DISMISS_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t, warningIds: n } = e,
-            a = c[t];
+            a = f[t];
           if (null == a) return;
-          null != a.find(e => n.includes(e.id) && h(e)) && f.add(t);
           let r = new Date().toISOString();
-          c[t] = a.map(e =>
+          f[t] = a.map(e =>
             n.includes(e.id) ? { ...e, dismiss_timestamp: r } : e
           );
         },
         ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function (e) {
           let { channelId: t } = e;
-          f.add(t);
+          h.add(t);
         },
       });
     },
@@ -6252,4 +6258,4 @@ ${h}`;
     },
   },
 ]);
-//# sourceMappingURL=91938.37927c7e1ddf6d433cf3.js.map
+//# sourceMappingURL=91938.14de711c4b90c2273444.js.map

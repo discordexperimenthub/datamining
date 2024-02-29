@@ -924,9 +924,10 @@
         (u[(u.VANITY_URL = 6)] = "VANITY_URL");
       let m = function (e) {
         let t =
-          arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : void 0;
+            arguments.length > 1 && void 0 !== arguments[1]
+              ? arguments[1]
+              : void 0,
+          n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         switch (e) {
           case 1:
             return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
@@ -939,7 +940,7 @@
           case 5:
             return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
           case 6:
-            if (null != t)
+            if (null != t && !n)
               return h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format(
                 { vanityUrl: t }
               );
@@ -1931,4 +1932,4 @@
     },
   },
 ]);
-//# sourceMappingURL=58504.e3c1f01282ef090fa3ff.js.map
+//# sourceMappingURL=58504.44409c0e908bfc428987.js.map

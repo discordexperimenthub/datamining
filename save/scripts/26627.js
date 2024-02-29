@@ -371,13 +371,9 @@
           expectedCurrency: f,
           analyticsLoadId: I,
           isGift: A,
-          giftStyle: p,
+          giftInfoOptions: p,
           subscriptionPlanId: C,
           loadId: N,
-          recipientId: R,
-          customMessage: U,
-          emojiConfetti: L,
-          soundEffect: M,
         } = { ...P, ...n };
         u.default.wait(() => {
           u.default.dispatch({
@@ -386,7 +382,7 @@
             skuId: e,
           });
         });
-        let O =
+        let R =
           c.default.inTestModeForApplication(t) ||
           o.default.inDevModeForApplication(t);
         try {
@@ -398,7 +394,7 @@
             ),
             load_id: N,
           };
-          if (O) t.test_mode = !0;
+          if (R) t.test_mode = !0;
           else {
             if (
               null != a &&
@@ -419,18 +415,7 @@
             }
             null != s && (t.expected_amount = s),
               null != f && (t.expected_currency = f),
-              null != p && (t.gift_style = p),
-              null != R && (t.recipient_id = R),
-              null != R &&
-                ((t.custom_message = U),
-                (L?.id != null ||
-                  L?.surrogates != null ||
-                  M?.soundId != null) &&
-                  (t.gift_info_options = {
-                    emoji_id: L?.id,
-                    emoji_name: L?.surrogates,
-                    sound_id: M?.soundId,
-                  })),
+              (t.gift_info_options = p),
               (t.purchase_token = (0, d.getPurchaseToken)());
           }
           let n = await i.default.post({
@@ -3906,4 +3891,4 @@
     },
   },
 ]);
-//# sourceMappingURL=26627.ff922ae4d26b65deadc2.js.map
+//# sourceMappingURL=26627.f9934efe240bd326b412.js.map

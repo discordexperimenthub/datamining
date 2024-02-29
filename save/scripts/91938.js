@@ -2550,8 +2550,8 @@ ${u}`;
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "271147",
-          versionHash: "8344246c5a58a484fac315aa5d6867f2e8dbc858",
+          buildNumber: "271151",
+          versionHash: "061934e07699559c2dfb279fa6f2f32abd328960",
         };
       }
       n.r(t),
@@ -2739,7 +2739,7 @@ ${h}`;
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-8344246c5a58a484fac315aa5d6867f2e8dbc858",
+          release: "discord_web-061934e07699559c2dfb279fa6f2f32abd328960",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2809,8 +2809,8 @@ ${h}`;
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", "271147"),
-          a.setTag("builtAt", String("1709241143152"));
+          a.setTag("buildNumber", "271151"),
+          a.setTag("builtAt", String("1709241600450"));
         let e = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != e && "object" == typeof e)
           for (let t in e) a.setTag(t, e[t]);
@@ -6261,4 +6261,4 @@ ${h}`;
     },
   },
 ]);
-//# sourceMappingURL=91938.b570001ad1807e86b4ba.js.map
+//# sourceMappingURL=91938.9c2b2119710fdda76b66.js.map

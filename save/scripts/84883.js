@@ -30711,8 +30711,8 @@ ${n}${t[i]}: ${t[i + 1].micros / 1e3}` + e(t[i + 1].calls, n + "|  ");
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709222079061",
-                    build_number: "270926",
+                    built_at: "1709222540756",
+                    build_number: "270928",
                   },
                 },
                 retries: 1,
@@ -56923,4 +56923,4 @@ ${n}${t[i]}: ${t[i + 1].micros / 1e3}` + e(t[i + 1].calls, n + "|  ");
     },
   },
 ]);
-//# sourceMappingURL=84883.be5a1effcb9ba4c7131a.js.map
+//# sourceMappingURL=84883.92a59471c9e5c660cc88.js.map

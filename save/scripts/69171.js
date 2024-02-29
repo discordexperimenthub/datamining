@@ -1987,7 +1987,10 @@
                   );
                 let i = n.descriptor.application;
                 (i.bot = e.user),
-                  (n.descriptor = (0, v.getApplicationCommandSection)(i)),
+                  (n.descriptor = {
+                    ...n.descriptor,
+                    ...(0, v.getApplicationCommandSection)(i),
+                  }),
                   (o = !0);
               }
             }),
@@ -6988,4 +6991,4 @@
     },
   },
 ]);
-//# sourceMappingURL=69171.86764cda81163729f901.js.map
+//# sourceMappingURL=69171.0c9c78de3e1dfecb1e5f.js.map

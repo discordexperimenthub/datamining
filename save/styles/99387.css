@@ -26234,8 +26234,8 @@ html .progress__00e29 {
 }
 .message__702f7 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -109216,4 +109216,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=99387.dfe1e25d1c7e9d28b695.css.map*/
+/*# sourceMappingURL=99387.20b8f5b1036fc9836791.css.map*/

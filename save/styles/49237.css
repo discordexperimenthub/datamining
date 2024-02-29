@@ -7031,10 +7031,7 @@ html.decorate-links .lowSaturationUnderline_a62e4d {
   color: var(--text-danger);
 }
 .errorMessage_dd9ae7 {
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--status-danger);
+  margin-top: 1px;
 }
 .select__65f6f {
   background-color: var(--deprecated-text-input-bg);
@@ -23936,4 +23933,4 @@ span.button_ae40a4.disabled__1dc58 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=49237.2d390dcac2e3eb8949c5.css.map*/
+/*# sourceMappingURL=49237.ed5911350ca8504e5cc0.css.map*/

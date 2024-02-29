@@ -4520,6 +4520,9 @@
         (el.SAFETY_WARNING_VIEWED = "safety_warning_viewed"),
         (el.SAFETY_WARNING_MODAL_VIEWED = "safety_warning_modal_viewed"),
         (el.SAFETY_WARNING_CTA_CLICKED = "safety_warning_cta_clicked"),
+        (el.VIBING_WUMPUS_VIEWED = "vibing_wumpus_viewed"),
+        (el.VIBING_WUMPUS_ACTION = "vibing_wumpus_action"),
+        (el.VIBING_WUMPUS_CLOSED = "vibing_wumpus_closed"),
         (el.DOWNLOAD_APP = "download_app"),
         (el.PAYMENT_FLOW_STARTED = "payment_flow_started"),
         (el.PAYMENT_FLOW_COMPLETED = "payment_flow_completed"),
@@ -16762,4 +16765,4 @@
     },
   },
 ]);
-//# sourceMappingURL=70464.a8d5d5019d65b4c2f94f.js.map
+//# sourceMappingURL=70464.76479c2713f1af11d781.js.map

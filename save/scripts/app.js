@@ -7942,6 +7942,8 @@
         alphaTag: "alphaTag_a9afe9",
         channelMembers: "channelMembers__4dbfb",
         container: "container_d412fb",
+        downToPlayContainer: "downToPlayContainer__81958",
+        downToPlayDetails: "downToPlayDetails__49849",
         gameContainer: "gameContainer__49f2c",
         gameHeader: "gameHeader__8b950",
         games: "games__90579",
@@ -17852,6 +17854,13 @@
         panelButtonContainer: "panelButtonContainer_ab1f3a",
         sparkleContainer: "sparkleContainer__698a7",
         sparkles: "sparkles__83f0e",
+      };
+    },
+    507626: function (e, t, n) {
+      "use strict";
+      e.exports = {
+        container: "container__05b21",
+        formSwitch: "formSwitch__00697",
       };
     },
     194416: function (e, t, n) {

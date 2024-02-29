@@ -33905,6 +33905,7 @@ html .progress__4ef76 {
 }
 .userGameInfo__6b6fa {
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 .alphaTag_a9afe9 {
@@ -33927,6 +33928,15 @@ html .progress__4ef76 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.downToPlayContainer__81958 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.downToPlayDetails__49849 {
+  display: flex;
+  justify-content: space-between;
 }
 .inviteChipletContainer__8076e {
   display: flex;
@@ -39004,8 +39014,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -47582,6 +47592,12 @@ html .progress__4ef76 {
 .channel_fa3b45:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
+}
+.container__05b21 {
+  padding: 12;
+}
+.formSwitch__00697 {
+  margin-bottom: 0;
 }
 .userList_a7e652 {
   position: relative;
@@ -109255,4 +109271,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.25b922003c0cdd7ca9ec.css.map*/
+/*# sourceMappingURL=app.cc2ee2287d6125ff561d.css.map*/

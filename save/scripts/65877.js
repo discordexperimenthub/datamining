@@ -3063,7 +3063,7 @@
             return G;
           },
           default: function () {
-            return k;
+            return w;
           },
         });
       var r = n("735250"),
@@ -3292,7 +3292,7 @@
           ],
         });
       }
-      function w(e) {
+      function H(e) {
         let {
           headingText: t,
           context: n,
@@ -3317,7 +3317,7 @@
           ],
         });
       }
-      function k(e) {
+      function w(e) {
         let {
             headingText: t,
             context: i,
@@ -3662,7 +3662,7 @@
             .VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
           case h.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
           case h.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
-            return (0, r.jsx)(w, {
+            return (0, r.jsx)(H, {
               trialOffer: P,
               discountOffer: R,
               headingText: t,
@@ -3674,7 +3674,7 @@
               N.default.captureMessage(
                 `Possible mishandling of a PremiumUpsellType: ${l}`
               ),
-              (0, r.jsx)(w, {
+              (0, r.jsx)(H, {
                 headingText: t,
                 context: i,
                 children: a,
@@ -3811,15 +3811,15 @@
         G = n("33848"),
         j = n("262113"),
         B = n("934439"),
-        w = n("488867"),
-        k = n("718408"),
-        H = n("468385"),
+        H = n("488867"),
+        w = n("718408"),
+        k = n("468385"),
         V = n("389280"),
         K = n("459992"),
         Y = n("921011"),
         W = n("908783"),
-        z = n("893302"),
-        Z = n("559063"),
+        Z = n("893302"),
+        z = n("559063"),
         $ = n("579093"),
         X = n("881343"),
         q = n("85359"),
@@ -4032,8 +4032,8 @@
           let e =
               null != u.trialEndsAt ? T()(u?.trialEndsAt).diff(T()(), "d") : 0,
             t = J.SubscriptionPlanInfo[u.planIdFromItems],
-            n = w.default.formatPriceString(
-              w.default.getDefaultPrice(t.id),
+            n = H.default.formatPriceString(
+              H.default.getDefaultPrice(t.id),
               t.interval
             );
           return (0, d.jsx)(d.Fragment, {
@@ -4057,8 +4057,8 @@
           });
         }
         if (!t && r && !s) {
-          let e = w.default.formatPriceString(
-            w.default.getDefaultPrice(
+          let e = H.default.formatPriceString(
+            H.default.getDefaultPrice(
               n === J.PremiumTypes.TIER_0
                 ? J.SubscriptionPlans.PREMIUM_MONTH_TIER_0
                 : J.SubscriptionPlans.PREMIUM_MONTH_TIER_2
@@ -4073,12 +4073,12 @@
               0 === i
                 ? ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format(
                     {
-                      planName: (0, w.getTierDisplayName)(
+                      planName: (0, H.getTierDisplayName)(
                         J.PREMIUM_SKU_TO_MONTHLY_PLAN[
                           p?.sku_id ?? J.PremiumSubscriptionSKUs.NONE
                         ] ?? J.SubscriptionPlans.PREMIUM_MONTH_TIER_2
                       ),
-                      duration: (0, w.formatIntervalDuration)({
+                      duration: (0, H.formatIntervalDuration)({
                         intervalType:
                           p?.interval ?? J.SubscriptionIntervalTypes.DAY,
                         intervalCount: p?.interval_count ?? 30,
@@ -4120,7 +4120,7 @@
             (0, d.jsx)(eo, {
               Icon: G.default,
               text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
+                maxUploadPremium: (0, H.getMaxFileSizeForPremiumType)(
                   J.PremiumTypes.TIER_0,
                   { useSpace: !1 }
                 ),
@@ -4302,15 +4302,15 @@
         let { featureSet: t = 0, isModal: n = !1, isGift: r = !1 } = e,
           i = (0, I.useStateFromStores)([L.default], () => L.default.locale),
           a = (0, I.useStateFromStores)(
-            [H.default],
-            () => H.default.affinities
+            [k.default],
+            () => k.default.affinities
           ),
-          { planSelectionEnabled: s } = k.default.useExperiment(
+          { planSelectionEnabled: s } = w.default.useExperiment(
             { location: "planSelection" },
             { autoTrackExposure: !1 }
           ),
           o = n && !r && a.length > 0;
-        o && k.default.trackExposure({ location: "planSelection" });
+        o && w.default.trackExposure({ location: "planSelection" });
         if (1 === t)
           return (0, d.jsxs)(d.Fragment, {
             children: [
@@ -4329,7 +4329,7 @@
               (0, d.jsx)(eo, {
                 Icon: G.default,
                 text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                  maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
+                  maxUploadPremium: (0, H.getMaxFileSizeForPremiumType)(
                     J.PremiumTypes.TIER_2,
                     { useSpace: !1 }
                   ),
@@ -4354,7 +4354,7 @@
             (0, d.jsx)(eo, {
               Icon: G.default,
               text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
+                maxUploadPremium: (0, H.getMaxFileSizeForPremiumType)(
                   J.PremiumTypes.TIER_2,
                   { useSpace: !1 }
                 ),
@@ -4412,9 +4412,9 @@
           N = (0, V.useHasDiscountApplied)(),
           L = null != m || null != P ? 0 : null != O || N ? 1 : null,
           h = 1 === l,
-          M = (0, z.useIsEligibleForBogoPromotion)(),
+          M = (0, Z.useIsEligibleForBogoPromotion)(),
           D = !o && R,
-          v = (0, z.getBOGOPillCopy)(),
+          v = (0, Z.getBOGOPillCopy)(),
           x = (0, S.isThemeLight)((0, p.default)()),
           y = x && h ? 5 : 2;
         return (
@@ -4577,7 +4577,7 @@
                         ],
                       }),
                       h &&
-                        (0, d.jsx)(Z.default, {
+                        (0, d.jsx)(z.default, {
                           isStacked: h,
                           ctaButton: r,
                           isGift: o,
@@ -4589,7 +4589,7 @@
                 ],
               }),
               !h &&
-                (0, d.jsx)(Z.default, {
+                (0, d.jsx)(z.default, {
                   isStacked: h,
                   ctaButton: r,
                   isGift: o,
@@ -5149,19 +5149,19 @@
             showNewBadge: G = !1,
             enableArtBoxShadow: j = !0,
             subscriptionTier: B = S.PremiumSubscriptionSKUs.TIER_2,
-            isLoading: w = !1,
-            hideBackButton: k,
-            backButtonText: H,
+            isLoading: H = !1,
+            hideBackButton: w,
+            backButtonText: k,
             ...V
           } = e,
           K = null != a,
           Y = (0, T.usePremiumTrialOffer)(),
           W = (0, E.usePremiumDiscountOffer)(),
-          z =
+          Z =
             (Y?.subscription_trial?.sku_id === B ||
               (0, E.discountOfferHasTier)(W, B)) &&
             !K,
-          { analyticsLocations: Z } = (0, l.default)(
+          { analyticsLocations: z } = (0, l.default)(
             u.default.PREMIUM_UPSELL_MODAL
           ),
           { enabled: $, variant: X } = f.default.useExperiment(
@@ -5171,23 +5171,23 @@
           q = $ && n === S.PremiumUpsellTypes.STREAM_QUALITY_UPSELL,
           J = q && f.GradientVariants.includes(X);
         i.useEffect(() => {
-          !w &&
+          !H &&
             (K
               ? d.default.track(C.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
                   type: `${n} - Tier ${a.boostedGuildTier}`,
                   guild_id: a.guild.id,
                   channel_id: a.channelId,
                   location: N,
-                  location_stack: Z,
+                  location_stack: z,
                 })
               : d.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                   type: n,
                   source: O,
                   location: N,
-                  location_stack: Z,
+                  location_stack: z,
                   sku_id: B,
                 }));
-        }, [K, B, w]);
+        }, [K, B, H]);
         let Q = j
             ? s()(P.artContainer, P.artContainerBoxShadow, h)
             : s()(P.artContainer, h),
@@ -5223,10 +5223,10 @@
                 : null,
               (0, r.jsx)(o.ModalContent, {
                 className: P.content,
-                children: w
+                children: H
                   ? (0, r.jsx)(o.Spinner, {})
                   : (0, r.jsx)(r.Fragment, {
-                      children: z
+                      children: Z
                         ? (0, r.jsx)(r.Fragment, {
                             children: (0, r.jsx)(I.default, {
                               onClose: v,
@@ -5294,7 +5294,7 @@
                           ? p.default.Messages.PREMIUM_UPSELL_GET_NITRO
                           : void 0;
                         return (
-                          z &&
+                          Z &&
                             (null != Y
                               ? ((t = (0, _.formatTrialCtaIntervalDuration)({
                                   intervalType: Y?.subscription_trial?.interval,
@@ -5325,14 +5325,14 @@
                       })(),
                     ],
                   }),
-                  !k &&
+                  !w &&
                     !q &&
                     (0, r.jsx)(o.Button, {
                       onClick: v,
                       size: o.Button.Sizes.SMALL,
                       color: o.Button.Colors.PRIMARY,
                       look: o.Button.Looks.LINK,
-                      children: null != H ? H : p.default.Messages.BACK,
+                      children: null != k ? k : p.default.Messages.BACK,
                     }),
                 ],
               }),
@@ -7164,6 +7164,52 @@
         });
       }
     },
+    433887: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return o;
+          },
+        });
+      var r = n("735250");
+      n("470079");
+      var i = n("336328"),
+        a = n("69240"),
+        s = n("262113"),
+        o = (0, i.replaceIcon)(
+          function (e) {
+            let {
+              width: t = 24,
+              height: n = 24,
+              color: i = "currentColor",
+              foreground: a,
+              ...o
+            } = e;
+            return (0, r.jsxs)("svg", {
+              ...(0, s.default)(o),
+              width: t,
+              height: n,
+              viewBox: "0 0 24 24",
+              children: [
+                (0, r.jsx)("path", {
+                  d: "M19 1C19.552 1 20 1.447 20 2V3L23 2V6L20 5V6C20 6.553 19.552 7 19 7H15C14.448 7 14 6.553 14 6V2C14 1.447 14.448 1 15 1H19Z",
+                  className: a,
+                  fill: i,
+                }),
+                (0, r.jsx)("path", {
+                  d: "M20 13.5V9H22V15.5C22 16.604 21.103 17.5 20 17.5H13V19.5H17V21.5H7V19.5H11V17.5H4C2.897 17.5 2 16.604 2 15.5V4.5C2 3.397 2.897 2.5 4 2.5H12V4.5H4V13.5H20Z",
+                  className: a,
+                  fill: i,
+                }),
+              ],
+            });
+          },
+          a.ScreenArrowIcon,
+          void 0,
+          { size: 24 }
+        );
+    },
     33848: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -7335,4 +7381,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65877.94b0d19a1731485f80c0.js.map
+//# sourceMappingURL=65877.d5474f290f10b57211d7.js.map

@@ -26235,8 +26235,8 @@ html .progress__00e29 {
 }
 .message__702f7 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -71989,6 +71989,9 @@ html .tabBadge_ff691d {
   display: flex;
   flex-direction: column;
 }
+.pageWithShopBannerHidden__4dbdc {
+  margin-top: 8px;
+}
 .closeWrapper_fa833c {
   box-sizing: border-box;
   display: flex;
@@ -109214,4 +109217,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=99387.314867541e3277387fd8.css.map*/
+/*# sourceMappingURL=99387.41a0a74a42805a18107e.css.map*/

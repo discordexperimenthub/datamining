@@ -5268,6 +5268,7 @@
         itemTypeTitleForTallerCard: "itemTypeTitleForTallerCard__9684f",
         logo: "logo_b80583",
         page: "page__8ffff",
+        pageWithShopBannerHidden: "pageWithShopBannerHidden__4dbdc",
         pageWrapper: "pageWrapper__18871",
         pageWrapperBackgroundPrimary: "pageWrapperBackgroundPrimary__36469",
         pageWrapperFullscreen: "pageWrapperFullscreen__0c78f",

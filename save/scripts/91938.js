@@ -2550,8 +2550,8 @@ ${u}`;
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "271034",
-          versionHash: "51342d63ba813f27d16944112ccb0b89a4ff5996",
+          buildNumber: "271041",
+          versionHash: "34be9f84754023ed8e939d0b94bb23c469d13271",
         };
       }
       n.r(t),
@@ -2739,7 +2739,7 @@ ${h}`;
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-51342d63ba813f27d16944112ccb0b89a4ff5996",
+          release: "discord_web-34be9f84754023ed8e939d0b94bb23c469d13271",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2809,8 +2809,8 @@ ${h}`;
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", "271034"),
-          a.setTag("builtAt", String("1709232232454"));
+          a.setTag("buildNumber", "271041"),
+          a.setTag("builtAt", String("1709232672665"));
         let e = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != e && "object" == typeof e)
           for (let t in e) a.setTag(t, e[t]);
@@ -3627,7 +3627,9 @@ ${h}`;
                 return new Date(e).getTime() > Date.now() - d;
               })(e.dismiss_timestamp)
             );
-          }) && h.add(e.id)),
+          })
+            ? h.add(e.id)
+            : h.delete(e.id)),
           null == t && (null != f[e.id] && delete f[e.id], h.delete(e.id));
       }
       function g() {
@@ -3674,8 +3676,9 @@ ${h}`;
         CLEAR_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t } = e,
             n = f[t];
-          null != n &&
-            (f[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
+          h.delete(t),
+            null != n &&
+              (f[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
         },
         DISMISS_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t, warningIds: n } = e,
@@ -6258,4 +6261,4 @@ ${h}`;
     },
   },
 ]);
-//# sourceMappingURL=91938.b313790e2579edd151e5.js.map
+//# sourceMappingURL=91938.9ae9c57ddb1d291ce9d1.js.map

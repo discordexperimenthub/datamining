@@ -11859,25 +11859,34 @@
         W.ChannelTypes.GUILD_CATEGORY,
       ];
       function ea(e, t) {
-        let { exactQuery: n, containQuery: a, queryLower: l } = t,
-          r =
+        let {
+            exactQuery: n,
+            containQuery: a,
+            queryLower: l,
+            isFullMatch: r,
+          } = t,
+          s =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         try {
-          var s, u;
+          var u, o;
           if (n.test(e)) {
             if (e.toLocaleLowerCase() === l) return 10;
+            if (!1 === r) {
+              let t = l.length / e.length;
+              return Math.max(1, 7 * t);
+            }
             return 7;
           }
           if (a.test(e)) return 5;
           if (
-            ((s = l),
-            (u = e),
-            s
+            ((u = l),
+            (o = e),
+            u
               .split(/(?:,| )+/)
-              .every(e => RegExp(x.default.escape(e), "i").test(u)))
+              .every(e => RegExp(x.default.escape(e), "i").test(o)))
           )
             return 3;
-          if (r && i()(l, e)) return 1;
+          if (s && i()(l, e)) return 1;
         } catch (e) {
           $.error(e);
         }
@@ -12239,7 +12248,7 @@
                   let e = er(n, t, !1);
                   0 !== e && (u += 0.5 * e);
                 }
-                u = Math.min(9, u);
+                u = Math.min(6, u);
               }
               if (
                 0 !== u &&
@@ -12885,4 +12894,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49326.03df3eb712eb4d1fb62e.js.map
+//# sourceMappingURL=49326.005b5affddb98fcfcc56.js.map

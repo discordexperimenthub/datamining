@@ -24050,6 +24050,9 @@
         POLL_HIDE_VOTES: "Go back to vote",
         POLL_VOTES_NO_RESULTS_TITLE: "Nothing to see here",
         POLL_VOTES_NO_RESULTS_SUBTITLE: "There are no votes for this answer",
+        POLL_COACHMARK_TITLE: "NEW! Polls are here.",
+        POLL_COACHMARK_SUBTITLE:
+          "Plan events, gather opinions, or drop a silly question in the chat.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -26116,8 +26119,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271682", ", Version Hash: ")
-          .concat("e5a52c686ebd8d5c649c420f1c6471bd48e05700")
+          .concat("271686", ", Version Hash: ")
+          .concat("390f24eed0af659030b98466efe5d893f3cffeee")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29196,12 +29199,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271682"), "271682"));
+        let _ = parseInt(((e = "271686"), "271686"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271682"
+                "271686"
               )
             ),
             (_ = 0)),
@@ -35022,8 +35025,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709336238732",
-                    build_number: "271682",
+                    built_at: "1709336844646",
+                    build_number: "271686",
                   },
                 },
                 retries: 1,
@@ -45093,6 +45096,8 @@
           "COLLECTIBLES_SHOP_ELEMENTS_COACHTIP"),
         (u[(u.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP = 353)] =
           "COLLECTIBLES_SHOP_ANIME_V2_COACHTIP"),
+        (u[(u.POLLS_CHAT_INPUT_COACHMARK = 354)] =
+          "POLLS_CHAT_INPUT_COACHMARK"),
         ((L = a || (a = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51545,4 +51550,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.96415e9a8c9fc1eb9c79.js.map
+//# sourceMappingURL=77761.3058c31331113bc3a492.js.map

@@ -149,7 +149,7 @@
             return m;
           },
           getBlindIds: function () {
-            return E;
+            return b;
           },
           uploadCallscopeLogs: function () {
             return L;
@@ -175,7 +175,7 @@
       async function m(t, e) {
         await y(t), await (0, r.uploadRtcLogFiles)(3670016, e);
       }
-      class b {
+      class E {
         static getTrimmedFilename(t) {
           let e = /^channel\.\d+\.(.+)$/.exec(t);
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
@@ -185,7 +185,7 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function E(t, e, n) {
+      async function b(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
@@ -213,7 +213,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await E(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await b(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -246,13 +246,13 @@
             c.transformNativeFile(t, "application/octet-stream")
           )) {
             h.log("uploadCallscopeLogFiles: Uploading ".concat(n.name));
-            let e = b.getChannelId(n.name);
+            let e = E.getChannelId(n.name);
             try {
               let a = await o.default.post({
                   url: f.Endpoints.CALLSCOPE_LOGS(
                     e,
                     t,
-                    b.getTrimmedFilename(n.name)
+                    E.getTrimmedFilename(n.name)
                   ),
                   headers: { "Content-Type": "application/octet-stream" },
                   body: n,
@@ -375,8 +375,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "271352",
-          versionHash: "88957451ba43531fedbac26609bcbd6410800829",
+          buildNumber: "271373",
+          versionHash: "be1378be843b3756a8d23018a9d8119ce3f1c9f5",
         };
       }
       n.r(e),
@@ -566,4 +566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.1a3e852bd6dd3d40d0ff.js.map
+//# sourceMappingURL=18409.46d4c3c10d314125c53d.js.map

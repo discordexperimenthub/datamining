@@ -24658,6 +24658,12 @@
         PROBLEMATIC_GPU_DRIVER_DETECTED:
           "There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).",
         MANAGE_AUTHORIZED_APP: "Manage Authorized App",
+        ADD_TO_USER: "Add to my apps",
+        ADD_TO_USER_SUBTITLE: "Add app to your account to use anywhere",
+        ADD_TO_GUILD: "Add to server",
+        ADD_TO_GUILD_SUBTITLE: "Customize your server by adding this app",
+        USER_APPS_LEARN_MORE:
+          "To learn more about apps on Discord, visit our [Help Center]({helpUrl}).",
         MFA_REQUIRED_FOR_STAFF:
           "Multi-factor authentication is required for staff.",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1:
@@ -26110,8 +26116,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271616", ", Version Hash: ")
-          .concat("b15e636721eac2821d3d111aaff40f87fd5e9ce8")
+          .concat("271638", ", Version Hash: ")
+          .concat("9895eee52857b9e0d29e0f936a5964bc5ad5e39a")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29190,12 +29196,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271616"), "271616"));
+        let _ = parseInt(((e = "271638"), "271638"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271616"
+                "271638"
               )
             ),
             (_ = 0)),
@@ -35016,8 +35022,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709329299574",
-                    build_number: "271616",
+                    built_at: "1709331643282",
+                    build_number: "271638",
                   },
                 },
                 retries: 1,
@@ -51539,4 +51545,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.b961f521482046b963ee.js.map
+//# sourceMappingURL=77761.283c03d37e518259a8b9.js.map

@@ -3536,24 +3536,23 @@
             : null === (t = e.answers) || void 0 === t
               ? void 0
               : t.map((e, t) => {
-                  var n, a, l;
-                  let s =
+                  var n, a;
+                  let l =
                       null === (n = e.poll_media) || void 0 === n
                         ? void 0
                         : n.emoji,
-                    i = {
+                    s = {
                       ...e.poll_media,
                       emoji:
-                        null != s
+                        null != l
                           ? {
-                              id:
-                                null !== (a = s.id) && void 0 !== a ? a : null,
+                              id: l.id,
                               name:
-                                null !== (l = s.name) && void 0 !== l ? l : "",
+                                null !== (a = l.name) && void 0 !== a ? a : "",
                             }
                           : void 0,
                     };
-                  return { ...e, answer_id: t + 1, poll_media: i };
+                  return { ...e, answer_id: t + 1, poll_media: s };
                 });
         let l =
           (null == e ? void 0 : e.duration) != null
@@ -4186,4 +4185,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31717.23481df6ac9fb1a0d7ec.js.map
+//# sourceMappingURL=31717.f4ab9612ab9052b2e477.js.map

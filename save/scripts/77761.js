@@ -17511,6 +17511,8 @@
           "If you reinstate Nitro Classic, we’ll resume charging your payment method **{price}** and continue to charge you **monthly** until you cancel the subscription. You can cancel any time from your Settings page.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "If you reinstate Nitro Classic, we’ll resume charging your payment method **{price}** and continue to charge you **yearly** until you cancel the subscription. You can cancel any time from your Settings page.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "If you reinstate Nitro, we’ll resume charging your payment method **{discountPrice}** a month until your discounted rate ends, then charge ***{defaultPrice}*** a month until you cancel your subscription. You can cancel any time from your Settings page.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Keep Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -26108,8 +26110,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271528", ", Version Hash: ")
-          .concat("db657e3202892732ac96eff47a9af8cfcd9d2fd1")
+          .concat("271530", ", Version Hash: ")
+          .concat("3f4ea43c0ede72a6b9a40ec73a456edf814704f9")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29188,12 +29190,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271528"), "271528"));
+        let _ = parseInt(((e = "271530"), "271530"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271528"
+                "271530"
               )
             ),
             (_ = 0)),
@@ -35014,8 +35016,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709321986130",
-                    build_number: "271528",
+                    built_at: "1709322026266",
+                    build_number: "271530",
                   },
                 },
                 retries: 1,
@@ -51537,4 +51539,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.5a8ce13f682d02d93a1d.js.map
+//# sourceMappingURL=77761.a6233f32078fd8576033.js.map

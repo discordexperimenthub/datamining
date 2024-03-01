@@ -857,7 +857,8 @@
       ((s = i || (i = {})).ACTIVITY_PANEL = "quests_bar_activity_panel"),
         (s.QUESTS_MANAGER = "quests_manager"),
         (s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
-        (s.USE_QUESTS = "use_quests");
+        (s.USE_QUESTS = "use_quests"),
+        (s.STREAM_SOURCE_SELECT = "stream_source_select");
       let u = {
           [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
           [a.QuestContent.QUEST_BAR]: 2,
@@ -961,10 +962,10 @@
             return y;
           },
           getContextualEntrypointHeading: function () {
-            return U;
+            return R;
           },
           isDismissible: function () {
-            return R;
+            return U;
           },
           isDismissed: function () {
             return N;
@@ -1095,7 +1096,7 @@
         let { streamDurationRequirementMinutes: s } = e.config;
         return Math.min(t / 60 / s, 1);
       }
-      function U(e) {
+      function R(e) {
         var t, n;
         if (
           (null === (t = e.userStatus) || void 0 === t
@@ -1121,7 +1122,7 @@
           questName: e.config.messages.questName,
         });
       }
-      function R(e) {
+      function U(e) {
         return e in a.DismissibleQuestContentFlags;
       }
       function N(e, t) {
@@ -1350,4 +1351,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.0530e2a5938cf993e768.js.map
+//# sourceMappingURL=65656.854487ced5d2b760c8e5.js.map

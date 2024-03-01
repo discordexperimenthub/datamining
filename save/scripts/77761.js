@@ -24213,6 +24213,10 @@
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "There's an issue tracking your Quest progress.",
         QUESTS_SHARE_QUEST: "Share Quest",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Select {gameTitle} to make progress on your Quest!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "You must select the application, not the whole screen.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -26104,8 +26108,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271479", ", Version Hash: ")
-          .concat("9750be9240af5ff82e1718427c7c866b9d4761e6")
+          .concat("271499", ", Version Hash: ")
+          .concat("23c836ae25dc6715e8f8976a3c9a2d931e9ae56d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29184,12 +29188,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271479"), "271479"));
+        let _ = parseInt(((e = "271499"), "271499"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271479"
+                "271499"
               )
             ),
             (_ = 0)),
@@ -35010,8 +35014,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709318526198",
-                    build_number: "271479",
+                    built_at: "1709319691154",
+                    build_number: "271499",
                   },
                 },
                 retries: 1,
@@ -51533,4 +51537,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.5d5aec6cae0441d391b0.js.map
+//# sourceMappingURL=77761.079e8dc2a8384a6a8ede.js.map

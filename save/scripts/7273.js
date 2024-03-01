@@ -5166,6 +5166,8 @@
           "application_command_performance"),
         (el.APPLICATION_COMMAND_CACHE_FETCH =
           "application_command_cache_fetch"),
+        (el.APPLICATION_COMMAND_TOP_OF_FUNNEL =
+          "application_command_top_of_funnel"),
         (el.APPLICATION_ADD_TO_SERVER_CLICKED =
           "application_add_to_server_clicked"),
         (el.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED =
@@ -17126,4 +17128,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.51558ab54a9e3591ae51.js.map
+//# sourceMappingURL=7273.d1f2f00b578919400e52.js.map

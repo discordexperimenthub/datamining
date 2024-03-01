@@ -749,6 +749,34 @@
         });
       }
     },
+    772926: function (e, t, i) {
+      "use strict";
+      i.r(t),
+        i.d(t, {
+          confirmExternalAppLaunchAlert: function () {
+            return a;
+          },
+        });
+      var n = i("37983");
+      i("884691");
+      var l = i("77078");
+      function a(e) {
+        let { application: t, onConfirm: a, onCancel: u } = e;
+        return (
+          (0, l.openModalLazy)(async () => {
+            let { default: e } = await i.el("285281").then(i.bind(i, "285281"));
+            return i =>
+              (0, n.jsx)(e, {
+                application: t,
+                onConfirm: a,
+                onCancel: u,
+                ...i,
+              });
+          }),
+          Promise.resolve()
+        );
+      }
+    },
     602718: function (e, t, i) {
       "use strict";
       i.r(t),
@@ -1191,14 +1219,37 @@
       i.r(t),
         i.d(t, {
           confirmActivityLaunchChecks: function () {
-            return s;
+            return C;
           },
-        });
-      var n = i("651057"),
-        l = i("653047"),
-        a = i("213765"),
-        u = i("370507");
-      async function r(e) {
+        }),
+        i("702976");
+      var n = i("913144"),
+        l = i("448993"),
+        a = i("651057"),
+        u = i("299285"),
+        r = i("653047"),
+        d = i("568734"),
+        s = i("191225"),
+        o = i("213765"),
+        c = i("370507"),
+        f = i("772926"),
+        _ = i("49111");
+      async function E(e, t) {
+        try {
+          var i;
+          return null !== (i = u.default.getApplication(e)) && void 0 !== i
+            ? i
+            : r.default.createFromServer(await a.default.fetchApplication(e));
+        } catch (i) {
+          n.default.dispatch({
+            type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+            applicationId: e,
+            guildId: t,
+            error: new l.APIError(i),
+          });
+        }
+      }
+      async function I(e) {
         let {
           channel: t,
           currentEmbeddedApplication: i,
@@ -1206,7 +1257,7 @@
         } = e;
         if (null != i) {
           let e = await new Promise(e => {
-            (0, u.default)(
+            (0, c.default)(
               i,
               t,
               () => {
@@ -1220,27 +1271,23 @@
         }
         return !0;
       }
-      async function d(e) {
-        let { application: t, applicationId: i, user: u } = e;
-        if (null == u.nsfwAllowed) {
-          var r, d;
-          let e =
-              null != t
-                ? t
-                : l.default.createFromServer(
-                    await n.default.fetchApplication(i)
-                  ),
-            u =
-              null !==
-                (d =
-                  null === (r = e.embeddedActivityConfig) || void 0 === r
-                    ? void 0
-                    : r.requires_age_gate) &&
-              void 0 !== d &&
-              d;
-          if (u) {
+      async function A(e) {
+        let { application: t, applicationId: i, channel: n, user: l } = e;
+        if (null == l.nsfwAllowed) {
+          var a, u;
+          let e = null != t ? t : await E(i, n.getGuildId());
+          if (null == e) return !1;
+          let l =
+            null !==
+              (u =
+                null === (a = e.embeddedActivityConfig) || void 0 === a
+                  ? void 0
+                  : a.requires_age_gate) &&
+            void 0 !== u &&
+            u;
+          if (l) {
             let t = await new Promise(t => {
-              (0, a.confirmActivityAgeGateAlert)({
+              (0, o.confirmActivityAgeGateAlert)({
                 application: e,
                 onAgree: () => t(!0),
                 onDisagree: () => t(!1),
@@ -1251,11 +1298,31 @@
         }
         return !0;
       }
-      async function s(e) {
-        let t = await r(e);
+      async function T(e) {
+        let { application: t, applicationId: i, channel: n } = e,
+          l = null != t ? t : await E(i, n.getGuildId());
+        return (
+          null != l &&
+          (!!(
+            (0, d.hasFlag)(l.flags, _.ApplicationFlags.EMBEDDED_RELEASED) ||
+            s.default.hasActivityEverBeenLaunched(i)
+          ) ||
+            new Promise(e => {
+              (0, f.confirmExternalAppLaunchAlert)({
+                application: l,
+                onConfirm: () => e(!0),
+                onCancel: () => e(!1),
+              });
+            }))
+        );
+      }
+      async function C(e) {
+        let t = await I(e);
         if (!t) return !1;
-        let i = await d(e);
-        return !!i || !1;
+        let i = await A(e);
+        if (!i) return !1;
+        let n = await T(e);
+        return !!n || !1;
       }
     },
     501260: function (e, t, i) {
@@ -2547,4 +2614,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65256.a46904e7e56b91294e79.js.map
+//# sourceMappingURL=65256.6549e485c32382c9883e.js.map

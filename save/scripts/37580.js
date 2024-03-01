@@ -153,8 +153,8 @@
         c = n("86878"),
         s = n("546463"),
         E = n("686470"),
-        I = n("535974"),
-        p = n("568734"),
+        p = n("535974"),
+        I = n("568734"),
         f = n("269180"),
         A = n("773336"),
         _ = n("260365"),
@@ -204,20 +204,20 @@
             ? Promise.reject(Error("Invalid channel ID"))
             : ((0, r.startEmbeddedActivity)(n, t, s), Promise.resolve());
         if (c.default.isConnected(t)) return Promise.resolve();
-        let p = null;
+        let I = null;
         if (null == e) {
           let n = E.default.getActiveLibraryApplication(t);
           e = null != n ? n.branchId : t;
         }
-        if (I.default.isLaunchable(t, e)) {
+        if (p.default.isLaunchable(t, e)) {
           var A;
-          let n = I.default.getState(t, e),
+          let n = p.default.getState(t, e),
             l = E.default.getActiveLaunchOptionId(t, e);
           if (null == n) throw Error("Missing dispatch game when launching");
           let r = E.default.getLibraryApplication(t, e);
           if (null == r)
             throw Error("Missing library application when launching");
-          p = ((A = t),
+          I = ((A = t),
           i.default
             .post({
               url: y.Endpoints.OAUTH2_AUTHORIZE,
@@ -264,35 +264,33 @@
           );
         } else {
           let e = u.default.getApplication(t);
-          p = null != e ? f.default.launch(e) : f.default.launchGame(t);
+          I = null != e ? f.default.launch(e) : f.default.launchGame(t);
         }
         let _ = Error("game not found");
-        return null != p
+        return null != I
           ? (l.default.dispatch({
               type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
               applicationId: t,
               branchId: e,
             }),
             l.default.dispatch({ type: "GAME_LAUNCH_START", applicationId: t }),
-            p
-              .then(e => {
+            I.then(e => {
+              l.default.dispatch({
+                type: "GAME_LAUNCH_SUCCESS",
+                applicationId: t,
+                pids: e,
+              });
+            }).catch(e => {
+              C.default.show(
+                y.NoticeTypes.LAUNCH_GAME_FAILURE,
+                N.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND
+              ),
                 l.default.dispatch({
-                  type: "GAME_LAUNCH_SUCCESS",
+                  type: "GAME_LAUNCH_FAIL",
                   applicationId: t,
-                  pids: e,
+                  error: _,
                 });
-              })
-              .catch(e => {
-                C.default.show(
-                  y.NoticeTypes.LAUNCH_GAME_FAILURE,
-                  N.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND
-                ),
-                  l.default.dispatch({
-                    type: "GAME_LAUNCH_FAIL",
-                    applicationId: t,
-                    error: _,
-                  });
-              }))
+            }))
           : (l.default.dispatch({
               type: "GAME_LAUNCH_FAIL",
               applicationId: t,
@@ -309,7 +307,7 @@
           if (null != n) {
             let t = E.default.getActiveLibraryApplication(n.id);
             if (null != t) {
-              let e = p.toggleFlag(
+              let e = I.toggleFlag(
                 t.getFlags(),
                 y.LibraryApplicationFlags.OVERLAY_DISABLED
               );
@@ -632,8 +630,8 @@
         c = n("599417"),
         s = n("299285"),
         E = n("191145"),
-        I = n("752598"),
-        p = n("653047"),
+        p = n("752598"),
+        I = n("653047"),
         f = n("271938"),
         A = n("42203"),
         _ = n("18494"),
@@ -716,7 +714,7 @@
                 ) || !1
               );
             })(t, u.applicationId)
-              ? await (0, I.executePrimaryEntryPointInteraction)({
+              ? await (0, p.executePrimaryEntryPointInteraction)({
                   applicationId: u.applicationId,
                   channelId: t,
                   guildId: r,
@@ -736,7 +734,10 @@
                   retries: 3,
                   oldFormErrors: !0,
                 }),
-            l.default.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS" });
+            l.default.dispatch({
+              type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
+              applicationId: u.applicationId,
+            });
         } catch (e) {
           l.default.dispatch({
             type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
@@ -791,7 +792,7 @@
               query: { with_team_applications: !0 },
               oldFormErrors: !0,
             }),
-            e = t.body.map(t => p.default.createFromServer(t));
+            e = t.body.map(t => I.default.createFromServer(t));
           l.default.dispatch({
             type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
             items: e,
@@ -903,7 +904,7 @@
               }),
             {
               activityConfigs: o,
-              applications: c.map(t => p.default.createFromServer(t)),
+              applications: c.map(t => I.default.createFromServer(t)),
             }
           );
         } catch (t) {
@@ -989,10 +990,10 @@
       n.r(e),
         n.d(e, {
           cleanExecutablePath: function () {
-            return I;
+            return p;
           },
           default: function () {
-            return p;
+            return I;
           },
         }),
         n("781738"),
@@ -1017,7 +1018,7 @@
           "" !== t &&
           (!(t = s(t)).endsWith("/") && (t += "/"), c.push(t));
       }
-      function I(t) {
+      function p(t) {
         t = s(t);
         let e = !1;
         return (c.forEach(n => {
@@ -1029,7 +1030,7 @@
               : t.split("/").slice(-2).join("/"))
           : null;
       }
-      async function p() {
+      async function I() {
         if (null != a) return a;
         try {
           await o.default.ensureModule("discord_game_utils"),
@@ -1151,12 +1152,12 @@
       let c = {},
         s = {},
         E = {};
-      function I(t) {
+      function p(t) {
         delete c[t];
         let e = E[t];
         null != e && delete s[e], delete E[t];
       }
-      class p extends l.default.Store {
+      class I extends l.default.Store {
         getInteraction(t) {
           let e = s[t.id];
           return null != e ? c[e] : null;
@@ -1186,8 +1187,8 @@
           return a;
         }
       }
-      p.displayName = "InteractionStore";
-      var f = new p(r.default, {
+      I.displayName = "InteractionStore";
+      var f = new I(r.default, {
         LOGOUT: function () {
           (c = {}), (s = {}), (E = {});
         },
@@ -1226,7 +1227,7 @@
           if (null == n) return !1;
           let a = c[n];
           if (null == a) return !1;
-          null === (e = a.onSuccess) || void 0 === e || e.call(a), I(n);
+          null === (e = a.onSuccess) || void 0 === e || e.call(a), p(n);
         },
         INTERACTION_FAILURE: function (t) {
           var e;
@@ -1236,7 +1237,7 @@
           if (null == l) return !1;
           null === (e = l.onFailure) || void 0 === e || e.call(l, a, i),
             l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND
-              ? I(n)
+              ? p(n)
               : (c[n] = {
                   ...l,
                   state: o.InteractionState.FAILED,
@@ -1251,7 +1252,7 @@
             var n;
             let t = c[e.nonce];
             if (null == t) return !1;
-            null === (n = t.onSuccess) || void 0 === n || n.call(t), I(e.nonce);
+            null === (n = t.onSuccess) || void 0 === n || n.call(t), p(e.nonce);
           }
         },
         CHANNEL_SELECT: function (t) {
@@ -1259,7 +1260,7 @@
             n = d.default.getChannel(e);
           if (null == n) return !1;
           for (let [t, e] of Object.entries(c))
-            e.state === o.InteractionState.FAILED && I(t);
+            e.state === o.InteractionState.FAILED && p(t);
         },
         INTERACTION_IFRAME_MODAL_CREATE: function (t) {
           let { application: e } = t;
@@ -1324,8 +1325,8 @@
         c = n("271938"),
         s = n("299039"),
         E = n("274800"),
-        I = n("809810"),
-        p = n("3765"),
+        p = n("809810"),
+        I = n("3765"),
         f = n("606981"),
         A = n("49111");
       function _(t) {
@@ -1341,13 +1342,13 @@
               customId: i,
               indices: r,
               applicationId: u,
-              channelId: p,
+              channelId: I,
               guildId: f,
               localState: _,
             } = t,
             T = s.default.fromTimestamp(Date.now());
-          if (!I.default.canQueueInteraction(n, T)) return;
-          await o.default.unarchiveThreadIfNecessary(p),
+          if (!p.default.canQueueInteraction(n, T)) return;
+          await o.default.unarchiveThreadIfNecessary(I),
             (0, E.addQueued)(T, {
               messageId: n,
               data: {
@@ -1355,14 +1356,14 @@
                 customId: i,
                 indices: r,
               },
-              onFailure: (t, e) => y(p, t, e),
+              onFailure: (t, e) => y(I, t, e),
             }),
             null != _ && (0, E.queueInteractionComponentState)(n, T, _, r);
           let C = {
             type: d.InteractionTypes.MESSAGE_COMPONENT,
             nonce: T,
             guild_id: f,
-            channel_id: p,
+            channel_id: I,
             message_flags: a,
             message_id: n,
             application_id: u,
@@ -1385,7 +1386,7 @@
           await l.default.post(
             { url: A.Endpoints.INTERACTIONS, body: C, timeout: 3e3 },
             t => {
-              h(T, p, f, t);
+              h(T, I, f, t);
             }
           );
         },
@@ -1463,12 +1464,12 @@
             d.InteractionTypes.APPLICATION_COMMAND,
           u = t.isCommandType();
         if (
-          (r && a === p.InteractionState.QUEUED) ||
+          (r && a === I.InteractionState.QUEUED) ||
           (u && t.state === A.MessageStates.SENDING && null != e)
         )
           return 0;
         if (
-          (r && a === p.InteractionState.CREATED) ||
+          (r && a === I.InteractionState.CREATED) ||
           (t.hasFlag(A.MessageFlags.LOADING) && !i)
         )
           return 1;
@@ -1520,4 +1521,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37580.ecc5d2d0fef085370975.js.map
+//# sourceMappingURL=37580.c3446cb50b2e9b5e9e7f.js.map

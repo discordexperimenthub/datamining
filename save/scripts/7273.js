@@ -5726,7 +5726,9 @@
         (eP[(eP.HAS_UNREAD_URGENT_MESSAGES = 8192)] =
           "HAS_UNREAD_URGENT_MESSAGES"),
         (eP[(eP.QUARANTINED = 17592186044416)] = "QUARANTINED"),
-        ((eM = _X || (_X = {}))[(eM.EMBEDDED_IAP = 8)] = "EMBEDDED_IAP"),
+        ((eM = _X || (_X = {}))[(eM.EMBEDDED_RELEASED = 2)] =
+          "EMBEDDED_RELEASED"),
+        (eM[(eM.EMBEDDED_IAP = 8)] = "EMBEDDED_IAP"),
         (eM[(eM.APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE = 64)] =
           "APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE"),
         (eM[(eM.GATEWAY_PRESENCE = 4096)] = "GATEWAY_PRESENCE"),
@@ -17124,4 +17126,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.53eadc0fd608dc66a993.js.map
+//# sourceMappingURL=7273.51558ab54a9e3591ae51.js.map

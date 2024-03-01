@@ -39014,8 +39014,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -66721,6 +66721,39 @@ input::-webkit-inner-spin-button {
   justify-content: center;
   align-items: center;
   margin-top: 64px;
+}
+.modalRoot_e3f659 {
+  width: 378px;
+}
+.birbContainer_ae02a8 {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: -52px;
+  justify-content: center;
+}
+.announcementBirb_ad85c1 {
+  width: 90px;
+  height: 100px;
+}
+.modalContent__921a6 {
+  margin-top: 30px;
+  text-align: center;
+  padding: 16px;
+}
+.eyebrow__11636,
+.header__405e6 {
+  margin-top: 16px;
+}
+.subHeader__6ee61 {
+  margin-top: 8px;
+  color: var(--header-secondary);
+}
+.buttonContainer__0dbbb {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .channelInfo__0e6aa {
   display: flex;
@@ -109315,4 +109348,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.c7c0cee5a1d2985312a6.css.map*/
+/*# sourceMappingURL=app.27d987e9a30b42729bcd.css.map*/

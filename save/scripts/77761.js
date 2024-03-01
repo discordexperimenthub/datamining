@@ -24260,6 +24260,13 @@
           "An activity card showing @{username} listening to {song} by {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "An activity card showing @{username} streaming {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Playing **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}w ago",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d ago",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}h ago",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m ago",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago",
       });
     },
     444051: function (e, _, E) {
@@ -26096,8 +26103,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271437", ", Version Hash: ")
-          .concat("637ae1cef207f0c786f1c85deb7fc8acb277f995")
+          .concat("271443", ", Version Hash: ")
+          .concat("8d0f0929f2fbb014e3d2f893fab19b8ab7298bcc")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29176,12 +29183,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271437"), "271437"));
+        let _ = parseInt(((e = "271443"), "271443"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271437"
+                "271443"
               )
             ),
             (_ = 0)),
@@ -35002,8 +35009,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709314094613",
-                    build_number: "271437",
+                    built_at: "1709315130203",
+                    build_number: "271443",
                   },
                 },
                 retries: 1,
@@ -51516,4 +51523,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.a0241b4a6d1a62cbdf5e.js.map
+//# sourceMappingURL=77761.fa2dcd9f6585dd167223.js.map

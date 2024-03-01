@@ -39014,8 +39014,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -98387,6 +98387,50 @@ html .invoiceCancelRow_c1bfe7 {
 .appOpenedTitle__40abe {
   margin-bottom: 12px;
 }
+.headerImage_b9823e {
+  position: absolute;
+  top: -68px;
+  left: 140px;
+  width: 180px;
+}
+.header__414d6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 75px;
+}
+.title_bcfe5a {
+  text-align: center;
+}
+.modalCloseButton_b8020e {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+.content_eaf824 {
+  padding-bottom: 16px;
+}
+.tooltip__410f2 {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 4%);
+  background: var(--background-tertiary);
+  box-shadow: var(--shadow-low);
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.infoFilledIcon_da5e66 {
+  color: var(--header-secondary);
+  margin-right: 8px;
+}
+.tooltipText__47e11 {
+  color: var(--header-secondary);
+  text-align: center;
+}
+.modalFooter__0eba0 {
+  display: flex;
+}
 .modalBody_bbc84d {
   display: flex;
   flex-direction: row;
@@ -109271,4 +109315,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.cf0cd48a8abfe7b4295d.css.map*/
+/*# sourceMappingURL=app.c7c0cee5a1d2985312a6.css.map*/

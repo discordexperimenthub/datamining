@@ -20246,16 +20246,26 @@
             return { ...this };
           }
           set(e, t) {
-            return this[e] !== t
-              ? new this.constructor({ ...this, [e]: t })
-              : this;
+            let n = this[e];
+            return t instanceof Date &&
+              n instanceof Date &&
+              t.getTime() === n.getTime()
+              ? this
+              : n !== t
+                ? new this.constructor({ ...this, [e]: t })
+                : this;
           }
           merge(e) {
             let t = null;
             for (let n in e) {
               if (!e.hasOwnProperty(n)) continue;
-              let i = e[n];
-              this[n] !== i && (null == t && (t = { ...this }), (t[n] = e[n]));
+              let i = this[n],
+                r = e[n];
+              (!(r instanceof Date) ||
+                !(i instanceof Date) ||
+                r.getTime() !== i.getTime()) &&
+                i !== r &&
+                (null == t && (t = { ...this }), (t[n] = e[n]));
             }
             return null != t ? new this.constructor(t) : this;
           }
@@ -40994,6 +41004,22 @@
         c = n("958706"),
         d = n("646718");
       i = class extends r.default {
+        merge(e) {
+          let { features: t } = e;
+          if (null != t) {
+            let n = new Set(t);
+            if (n.size === this.features.size) {
+              let t = !1;
+              for (let e of n)
+                if (!this.features.has(e)) {
+                  t = !0;
+                  break;
+                }
+              !t && (e.features = this.features);
+            }
+          }
+          return super.merge.call(this, e);
+        }
         getSafetyAlertsChannelId() {
           var e;
           return null !== (e = this.safetyAlertsChannelId) && void 0 !== e
@@ -41118,7 +41144,10 @@
         constructor(e) {
           var t, n;
           super();
-          let i = new Set(Array.from(e.features || []));
+          let i =
+            e.features instanceof Set
+              ? e.features
+              : new Set(Array.from(e.features || []));
           (this.id = e.id),
             (this.name = e.name || ""),
             (this.description = e.description || null),
@@ -41136,7 +41165,7 @@
             (this.verificationLevel =
               e.verificationLevel || u.VerificationLevels.NONE),
             (this.joinedAt =
-              null != e.joinedAt ? new Date(e.joinedAt) : e.joinedAt),
+              e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt)),
             (this.defaultMessageNotifications =
               e.defaultMessageNotifications ||
               u.UserNotificationSettings.ALL_MESSAGES),
@@ -60128,7 +60157,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "271261",
+                  build_number: "271306",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78914,4 +78943,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.f12f0052be577b7c2117.js.map
+//# sourceMappingURL=21201.a1d11dfe23f38a681b21.js.map

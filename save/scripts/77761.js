@@ -21764,9 +21764,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Harness the Elements",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Fire. Wind. Water. Earth. Which will you unleash?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "New Anime items are here!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: New styles",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Check out the latest styles that will definitely make senpai notice you.",
+          "Senpai will definitely notice you now.",
         COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -24127,10 +24127,12 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} to a friend for {minutes} minutes",
-        QUEST_REWARD_VERIFICATION_TITLE:
-          "Verify your account to claim the reward",
-        QUEST_REWARD_VERIFICATION_ERROR:
-          "Uh oh! We failed to send you a new verification email: {message}",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Verify your account to claim rewards!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "We have sent a verification email to: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Uh oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
         QUESTS_REWARD_CODE_HEADER: "Your reward code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
@@ -26082,8 +26084,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271261", ", Version Hash: ")
-          .concat("84b4fa38d5287e377033c3eefa9a6728b40116e8")
+          .concat("271306", ", Version Hash: ")
+          .concat("3ad3ab3de3e379eb3343ff4d45b0e1d7be1213ea")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29162,12 +29164,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271261"), "271261"));
+        let _ = parseInt(((e = "271306"), "271306"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271261"
+                "271306"
               )
             ),
             (_ = 0)),
@@ -34988,8 +34990,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709250431259",
-                    build_number: "271261",
+                    built_at: "1709254591028",
+                    build_number: "271306",
                   },
                 },
                 retries: 1,
@@ -45048,6 +45050,8 @@
           "COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP"),
         (u[(u.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP = 352)] =
           "COLLECTIBLES_SHOP_ELEMENTS_COACHTIP"),
+        (u[(u.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP = 353)] =
+          "COLLECTIBLES_SHOP_ANIME_V2_COACHTIP"),
         ((L = a || (a = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51500,4 +51504,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.6ef04a55a27e74964fa1.js.map
+//# sourceMappingURL=77761.87443ab485585f54d400.js.map

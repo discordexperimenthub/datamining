@@ -34103,8 +34103,9 @@
         s = n("308503"),
         a = n("95410");
       n("789563");
-      var o = n("132522"),
-        l = n("693051"),
+      var o = n("132522");
+      n("99317");
+      var l = n("693051"),
         u = n("139404"),
         c = n("61796"),
         d = n("264325"),
@@ -34348,30 +34349,33 @@
     },
     18108: function (e, t, n) {
       "use strict";
-      let i, r;
+      let i, r, s;
       n.r(t),
         n.d(t, {
           updateIsInTabsUI: function () {
-            return u;
+            return c;
           },
         });
-      var s = n("411916"),
-        a = n("827032"),
-        o = n("599110"),
-        l = n("286235");
-      function u(e) {
+      var a = n("411916"),
+        o = n("827032"),
+        l = n("599110"),
+        u = n("286235");
+      function c(e) {
         i !== e &&
           ((i = e),
           (r = e),
           !(function () {
-            let e = i
-              ? r
-                ? s.DesignIds.DESIGN_TABS_IA
-                : s.DesignIds.DESIGN_IA
-              : s.DesignIds.CLASSIC_IA;
-            o.default.extendSuperProperties({ design_id: e }),
-              a.addGlobalTag("design_id", e),
-              l.default.setTags({ design_id: "".concat(e) });
+            let e =
+              s && i && r
+                ? a.DesignIds.YOU_BAR_IA
+                : i
+                  ? r
+                    ? a.DesignIds.DESIGN_TABS_IA
+                    : a.DesignIds.DESIGN_IA
+                  : a.DesignIds.CLASSIC_IA;
+            l.default.extendSuperProperties({ design_id: e }),
+              o.addGlobalTag("design_id", e),
+              u.default.setTags({ design_id: "".concat(e) });
           })());
       }
     },
@@ -60213,7 +60217,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "271376",
+                  build_number: "271378",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -78542,7 +78546,8 @@
         }),
         ((r = i || (i = {}))[(r.CLASSIC_IA = 0)] = "CLASSIC_IA"),
         (r[(r.DESIGN_IA = 1)] = "DESIGN_IA"),
-        (r[(r.DESIGN_TABS_IA = 2)] = "DESIGN_TABS_IA");
+        (r[(r.DESIGN_TABS_IA = 2)] = "DESIGN_TABS_IA"),
+        (r[(r.YOU_BAR_IA = 3)] = "YOU_BAR_IA");
     },
     482402: function (e, t, n) {
       "use strict";
@@ -78999,4 +79004,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.af46044dcd580385789a.js.map
+//# sourceMappingURL=21201.04cd3500527ab63f2777.js.map

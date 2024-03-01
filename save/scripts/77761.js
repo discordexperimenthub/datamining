@@ -24167,6 +24167,7 @@
         QUESTS_REWARD_CODE_PLATFORM_SWITCH: "Switch",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsored",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Learn more",
         QUESTS_LEARN_MORE_STACKED: "Learn\n\nmore",
         QUESTS_ACCEPT_QUEST: "Accept Quest",
@@ -26103,8 +26104,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271466", ", Version Hash: ")
-          .concat("001c84d682d0a7345a72c421c91ce4d7599f9796")
+          .concat("271472", ", Version Hash: ")
+          .concat("7e9bfe91fcf1160e6c1f91d21d481d809e4e2fa7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29183,12 +29184,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271466"), "271466"));
+        let _ = parseInt(((e = "271472"), "271472"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271466"
+                "271472"
               )
             ),
             (_ = 0)),
@@ -35009,8 +35010,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709317733247",
-                    build_number: "271466",
+                    built_at: "1709317895113",
+                    build_number: "271472",
                   },
                 },
                 retries: 1,
@@ -35891,17 +35892,21 @@
             (this.sendHeartbeatTimeoutIds = new Map()),
             (this.initiateHeartbeat = e => {
               let { questId: _, streamKey: E, applicationId: t } = e;
-              window.clearTimeout(this.sendHeartbeatTimeoutIds.get(E));
+              this.terminateHeartbeat(E);
               let o = () => {
-                (null != n.default.getRTCStream(E) ||
-                  n.default.getViewerIds(E).length > 0) &&
+                var e;
+                null != n.default.getRTCStream(E) &&
+                  n.default.getViewerIds(E).length > 0 &&
+                  (null === (e = c()) || void 0 === e
+                    ? void 0
+                    : e.config.applicationId) === t &&
                   (0, S.sendHeartbeat)({
                     questId: _,
                     streamKey: E,
                     applicationId: t,
                   });
-                let e = this.calculateHeartbeatDurationMs(t);
-                this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, e));
+                let r = this.calculateHeartbeatDurationMs(_);
+                this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, r));
               };
               o();
             }),
@@ -35951,31 +35956,42 @@
             (this.handleStreamUpdate = e => {
               let { streamKey: _, viewerIds: E } = e,
                 t = c();
-              if (null != t) {
-                if (0 === E.length) {
-                  this.sendHeartbeatTimeoutIds.has(_) &&
-                    ((0, S.sendHeartbeat)({
-                      questId: t.id,
-                      streamKey: _,
-                      applicationId: t.config.applicationId,
-                    }),
-                    this.terminateHeartbeat(_));
-                  return;
-                }
-                this.initiateHeartbeat({
-                  streamKey: _,
-                  applicationId: t.config.applicationId,
-                  questId: t.id,
-                });
+              if (null == t) {
+                this.terminateHeartbeat(_);
+                return;
               }
+              if (0 === E.length) {
+                this.sendHeartbeatTimeoutIds.has(_) &&
+                  ((0, S.sendHeartbeat)({
+                    questId: t.id,
+                    streamKey: _,
+                    applicationId: t.config.applicationId,
+                  }),
+                  this.terminateHeartbeat(_));
+                return;
+              }
+              this.initiateHeartbeat({
+                streamKey: _,
+                applicationId: t.config.applicationId,
+                questId: t.id,
+              });
             }),
             (this.handleStreamStart = e => {
               var _;
               let { streamType: E, guildId: t, channelId: a } = e,
-                s = c();
-              if (null == s) return;
+                s = (0, o.encodeStreamKey)({
+                  streamType: E,
+                  guildId: t,
+                  channelId: a,
+                  ownerId: r.default.getId(),
+                }),
+                S = c();
+              if (null == S) {
+                this.terminateHeartbeat(s);
+                return;
+              }
               (0, T.trackQuestEvent)(
-                s.id,
+                S.id,
                 l.AnalyticEvents.QUEST_STREAMING_STARTED,
                 {
                   media_session_id: I.default.getMediaSessionId(),
@@ -35985,19 +36001,13 @@
                       : _.type,
                   guild_id: t,
                 }
-              );
-              let S = (0, o.encodeStreamKey)({
-                streamType: E,
-                guildId: t,
-                channelId: a,
-                ownerId: r.default.getId(),
-              });
-              0 !== n.default.getViewerIds(S).length &&
-                this.initiateHeartbeat({
-                  streamKey: S,
-                  applicationId: s.config.applicationId,
-                  questId: s.id,
-                });
+              ),
+                0 !== n.default.getViewerIds(s).length &&
+                  this.initiateHeartbeat({
+                    streamKey: s,
+                    applicationId: S.config.applicationId,
+                    questId: S.id,
+                  });
             }),
             (this.handleStreamClose = e => {
               let { streamKey: _ } = e;
@@ -51523,4 +51533,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.fd70856830081b22bb14.js.map
+//# sourceMappingURL=77761.af5b2bd265bb2c30b4f8.js.map

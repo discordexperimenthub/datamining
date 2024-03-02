@@ -33953,15 +33953,12 @@ html .progress__4ef76 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-width: 0;
 }
 .popoutDescription__875c7 {
   margin-top: 4px;
 }
 .heroImage_e3e7d9 {
-  min-width: 96px;
-  min-height: 96px;
-  max-width: 96px;
-  max-height: 96px;
   border-radius: var(--radius-md);
 }
 .reactions_d488fa {
@@ -34026,8 +34023,6 @@ html .progress__4ef76 {
   align-items: center;
 }
 .contentImage_d1bd0e {
-  width: 56px;
-  height: 56px;
   border-radius: var(--radius-md);
 }
 .container_d412fb {
@@ -109560,4 +109555,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.dc80547692fab34c0d81.css.map*/
+/*# sourceMappingURL=app.e34715184871f929e6ab.css.map*/

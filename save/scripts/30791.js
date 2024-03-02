@@ -411,7 +411,7 @@
             _ = u.useRef(null),
             [S, h] = u.useState([]);
           (0, A.default)(p);
-          let [O, N] = u.useState(0),
+          let [N, O] = u.useState(0),
             [C, y] = u.useState(0),
             { accessibilityLabel: F } = p,
             [g, L] = u.useState(-I),
@@ -432,7 +432,7 @@
                 let n = r.start + r.duration;
                 n > e && (e = n), r.loop && r.start < t && (t = r.start);
               }),
-                N(t),
+                O(t),
                 y(e);
             }, [y, S]);
           let [M, b] = u.useState(!1);
@@ -445,9 +445,9 @@
                   !x.current &&
                   (D(),
                   p.animationType === f.AnimationTypes.PERSISTENT
-                    ? L(T === f.RestartMethod.FromStart ? 0 : O)
+                    ? L(T === f.RestartMethod.FromStart ? 0 : N)
                     : L(0));
-            }, [i, M, O, o, P, D, x, p.animationType, s, T]),
+            }, [i, M, N, o, P, D, x, p.animationType, s, T]),
             (0, n.jsx)("div", {
               ref: _,
               className: l(m.profileEffects, { [m.hovered]: i && a }),
@@ -881,8 +881,9 @@
         (u.MONSTERS = "1179493515038818325"),
         (u.CYBERPUNK = "1197342727608746044"),
         (u.LUNAR_NEW_YEAR = "1202069709281828935"),
-        (u.ELEMENTS = "1207046915880124426");
+        (u.ELEMENTS = "1207046915880124426"),
+        (u.ANIME_V2 = "1212565175790473246");
     },
   },
 ]);
-//# sourceMappingURL=30791.88cd29e261bf94b04423.js.map
+//# sourceMappingURL=30791.71fd9c1881ea468e2a8d.js.map

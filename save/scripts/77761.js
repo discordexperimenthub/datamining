@@ -24272,11 +24272,20 @@
           "An activity card showing @{username} streaming {activity}",
         MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Playing **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} is playing **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} is playing a new game: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} played a new game: **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}w ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}h ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
       });
     },
     444051: function (e, _, E) {
@@ -26119,8 +26128,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271686", ", Version Hash: ")
-          .concat("390f24eed0af659030b98466efe5d893f3cffeee")
+          .concat("271703", ", Version Hash: ")
+          .concat("0914309089ea314ba2b0f0eee8cdd96e4dd4f18e")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29199,12 +29208,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271686"), "271686"));
+        let _ = parseInt(((e = "271703"), "271703"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271686"
+                "271703"
               )
             ),
             (_ = 0)),
@@ -35025,8 +35034,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709336844646",
-                    build_number: "271686",
+                    built_at: "1709339616467",
+                    build_number: "271703",
                   },
                 },
                 retries: 1,
@@ -51550,4 +51559,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.3058c31331113bc3a492.js.map
+//# sourceMappingURL=77761.99032b1f55228eeef395.js.map

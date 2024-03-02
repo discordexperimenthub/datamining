@@ -54260,9 +54260,7 @@
               ? eN(Error("No scopes were provided."))
               : e.length > 0
                 ? eN(Error("Invalid scope: ".concat(e[0])))
-                : (0, U.containsDisallowedPermission)(
-                      null != eW ? eW : R.default.NONE
-                    )
+                : (0, U.containsDisallowedPermission)(eW)
                   ? eN(Error("Invalid permission(s) provided."))
                   : eJ();
           }, [eJ, ej, eW, eF, eC, eD]),
@@ -54352,11 +54350,10 @@
               (e1 = (e8 && null == eG) || (e9 && null == ek));
             break;
           case 2:
-            if (null == eC || null == eU)
-              return { body: (0, r.jsx)(E.Spinner, {}) };
+            if (null == eC) return { body: (0, r.jsx)(E.Spinner, {}) };
             (d = (0, r.jsx)(x.default, {
               application: eC.application,
-              permissions: null != eW ? eW : R.default.NONE,
+              permissions: eW,
               deniedPermissions: ew,
               onPermissionsChange: (e, t) => {
                 eL(n => (e ? c.default.remove(n, t) : c.default.add(n, t)));
@@ -54411,20 +54408,20 @@
                       onClick: () => eQ(!1),
                       children: Z.default.Messages.CANCEL,
                     }),
-                null != h && 0 !== eS
-                  ? (0, r.jsx)(m.Button, {
-                      onClick: () => eA(h),
-                      disabled: e1,
-                      children: Z.default.Messages.CONTINUE,
-                    })
-                  : 0 !== eS
+                0 !== eS
+                  ? null != h
                     ? (0, r.jsx)(m.Button, {
+                        onClick: () => eA(h),
+                        disabled: e1,
+                        children: Z.default.Messages.CONTINUE,
+                      })
+                    : (0, r.jsx)(m.Button, {
                         onClick: () => eQ(!0),
                         disabled: e1,
                         submitting: eO,
                         children: Z.default.Messages.AUTHORIZE,
                       })
-                    : null,
+                  : null,
               ],
             })),
           {
@@ -77487,4 +77484,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98239.bc94e255dac0b149dc34.js.map
+//# sourceMappingURL=98239.c4e6832fa0c6bf7b5a61.js.map

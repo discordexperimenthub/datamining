@@ -1713,6 +1713,7 @@
   cursor: pointer;
   align-items: center;
   padding: 8px;
+  gap: 8px;
   background: var(--background-tertiary);
 }
 .row_eb598a.inApp__731d4 {
@@ -1733,12 +1734,10 @@
   border-bottom: 1px solid var(--background-modifier-hover);
 }
 .leftIcon_f180e1 {
-  margin-right: 8px;
   padding: 8px;
   color: var(--interactive-normal);
 }
 .rightIcon__53ec6 {
-  margin-left: auto;
   color: var(--interactive-normal);
 }
 .learnMore__02804 {
@@ -39173,8 +39172,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -109563,4 +109562,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.d3c31caa3171ff99899d.css.map*/
+/*# sourceMappingURL=app.ec629c90485e37d65870.css.map*/

@@ -371,6 +371,7 @@
           giftInfoOptions: p,
           subscriptionPlanId: C,
           loadId: N,
+          countryCode: R,
         } = { ...P, ...n };
         i.default.wait(() => {
           i.default.dispatch({
@@ -379,7 +380,7 @@
             skuId: e,
           });
         });
-        let R =
+        let U =
           c.default.inTestModeForApplication(t) ||
           o.default.inDevModeForApplication(t);
         try {
@@ -391,7 +392,7 @@
             ),
             load_id: N,
           };
-          if (R) t.test_mode = !0;
+          if (U) t.test_mode = !0;
           else {
             if (
               null != a &&
@@ -413,6 +414,7 @@
             null != s && (t.expected_amount = s),
               null != f && (t.expected_currency = f),
               (t.gift_info_options = p),
+              null != R && (t.country_code = R),
               (t.purchase_token = (0, d.getPurchaseToken)());
           }
           let n = await u.default.post({
@@ -4043,4 +4045,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23777.a6a2ef358b5f7a8e87fb.js.map
+//# sourceMappingURL=23777.6705f693df0978b321ee.js.map

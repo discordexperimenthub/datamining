@@ -6274,7 +6274,8 @@
         (eK.ROLE_SUBSCRIPTION_CANCEL =
           "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
         (eK.WIN7_8_DEPRECATE = "20470973046295"),
-        (eK.MACOS_17_18_DEPRECATE = "20900540446231");
+        (eK.MACOS_17_18_DEPRECATE = "20900540446231"),
+        (eK.QUESTS_LEARN_MORE = "9146392276375");
       let RL = _ => "https://www.youtube.com/embed/".concat(_),
         RD = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
         RS = "https://discordapp.com/mweb-handoff";
@@ -17131,4 +17132,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.74a582590de623b39c7e.js.map
+//# sourceMappingURL=7273.3e9ed2b2a3bf9039a775.js.map

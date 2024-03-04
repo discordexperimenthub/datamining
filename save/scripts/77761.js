@@ -24208,7 +24208,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, we think you fit some of these groups:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Learn more about Quests on Discord and how to manage your Privacy Settings [here]({privacySettingsUrl}).",
+          "[Learn more]({privacySettingsUrl}) about Quests on Discord and how to manage your Privacy Settings.",
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
@@ -26128,8 +26128,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271850", ", Version Hash: ")
-          .concat("54b733bbd25aab36e705f67be546637f52ae90de")
+          .concat("271872", ", Version Hash: ")
+          .concat("0b2588bd982ab57aa644bd3c1ac19ca1f012c1a8")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29208,12 +29208,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271850"), "271850"));
+        let _ = parseInt(((e = "271872"), "271872"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271850"
+                "271872"
               )
             ),
             (_ = 0)),
@@ -35042,8 +35042,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709571911967",
-                    build_number: "271850",
+                    built_at: "1709576306644",
+                    build_number: "271872",
                   },
                 },
                 retries: 1,
@@ -51567,4 +51567,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.0c31d87833db4420fece.js.map
+//# sourceMappingURL=77761.09e2264d27408df52905.js.map

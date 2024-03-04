@@ -26128,8 +26128,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271813", ", Version Hash: ")
-          .concat("9a82ec4752bc56284afe8c349abbaec9fa32d168")
+          .concat("271828", ", Version Hash: ")
+          .concat("7663893051367a04f7f7bc549b6bb467c45592dc")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29208,12 +29208,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271813"), "271813"));
+        let _ = parseInt(((e = "271828"), "271828"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271813"
+                "271828"
               )
             ),
             (_ = 0)),
@@ -34287,7 +34287,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return R;
+            return l;
           },
         }),
         E("222007");
@@ -34295,49 +34295,57 @@
         o = E("716241"),
         n = E("651057"),
         r = E("299285"),
-        i = E("271938"),
-        a = E("42203"),
-        I = E("18494"),
-        s = E("101125"),
-        T = E("774539"),
-        S = E("49111");
-      async function N(e) {
+        i = E("699209"),
+        a = E("271938"),
+        I = E("42203"),
+        s = E("18494"),
+        T = E("101125"),
+        S = E("774539"),
+        N = E("49111");
+      async function O(e) {
         await n.default.fetchApplications(e, !1);
       }
-      async function O(e) {
+      async function A(e) {
         if (null == e) return;
-        let _ = a.default.getChannel(e);
+        let _ = I.default.getChannel(e),
+          { enableHangStatus: E } = i.HangStatusExperiment.getCurrentConfig(
+            { location: "GameActivityManager" },
+            { autoTrackExposure: !1 }
+          );
         if (
           null == _ ||
-          !(0, T.isVoiceUserGameActivityEnabled)("running_games_change", !1)
+          !(
+            (0, S.isVoiceUserGameActivityEnabled)("running_games_change", !1) ||
+            E
+          )
         )
           return;
-        let E = s.default.getActivities();
-        if (0 === E.length) return;
-        let t = [...E]
-          .filter(e => e.type === S.ActivityTypes.PLAYING && e.application_id)
+        let t = T.default.getActivities();
+        if (0 === t.length) return;
+        let n = [...t]
+          .filter(e => e.type === N.ActivityTypes.PLAYING && e.application_id)
           .map(e => e.application_id);
-        await N([...t]);
-        let n = r.default.getApplication(t[0]);
-        null != n &&
+        await O([...n]);
+        let s = r.default.getApplication(n[0]);
+        null != s &&
           o.default.trackWithMetadata(
-            S.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET,
+            N.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET,
             {
               channel_id: e,
               guild_id: _.guild_id,
-              game_name: n.name,
-              user_id: i.default.getId(),
+              game_name: s.name,
+              user_id: a.default.getId(),
             }
           );
       }
-      class A extends t.default {
+      class R extends t.default {
         handleRunningGamesChange() {
-          let e = I.default.getVoiceChannelId();
-          O(e);
+          let e = s.default.getVoiceChannelId();
+          A(e);
         }
         handleVoiceChannelSelect(e) {
           let { channelId: _ } = e;
-          O(_);
+          A(_);
         }
         constructor(...e) {
           super(...e),
@@ -34347,7 +34355,7 @@
             });
         }
       }
-      var R = new A();
+      var l = new R();
     },
     589636: function (e, _, E) {
       "use strict";
@@ -35034,8 +35042,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709532572162",
-                    build_number: "271813",
+                    built_at: "1709563086074",
+                    build_number: "271828",
                   },
                 },
                 retries: 1,
@@ -51559,4 +51567,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.f70f0adeae6919bc5baf.js.map
+//# sourceMappingURL=77761.4f8532d0b90391cc4ddf.js.map

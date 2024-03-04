@@ -24083,16 +24083,6 @@ html .progress__4ef76 {
   top: 4px;
   width: 24px;
 }
-.theme-light .header__6145e {
-  background: linear-gradient(
-    90deg,
-    var(--white-100) 0.04%,
-    rgba(255, 255, 255, 0)
-  );
-}
-.theme-dark .header__6145e {
-  background: linear-gradient(90deg, var(--black-500) 0.04%, rgba(0, 0, 0, 0));
-}
 .questControls__9f18c {
   display: flex;
   flex-direction: row;
@@ -39165,8 +39155,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -109555,4 +109545,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.0d407430cc0f89ec485c.css.map*/
+/*# sourceMappingURL=app.3130680e795486988ca4.css.map*/

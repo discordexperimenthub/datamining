@@ -4907,6 +4907,9 @@
         (el.QUEST_STREAMING_STARTED = "quest_streaming_started"),
         (el.QUEST_CONTENT_CLICKED = "quest_content_clicked"),
         (el.QUEST_LINK_SHARED = "quest_link_shared"),
+        (el.QUEST_CONTENT_LOADED = "quest_content_loaded"),
+        (el.QUEST_CONTENT_VIEWED = "quest_content_viewed"),
+        (el.QUEST_CONTENT_VIEW_TIME = "quest_content_view_time"),
         (el.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
         (el.USER_ATTRIBUTION_RECEIVED = "user_attribution_received"),
         (el.USER_AVATAR_UPDATED = "user_avatar_updated"),
@@ -17128,4 +17131,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.d1f2f00b578919400e52.js.map
+//# sourceMappingURL=7273.74a582590de623b39c7e.js.map

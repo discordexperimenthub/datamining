@@ -21718,6 +21718,7 @@
           "This effect is now part of your collection and can be used anytime!",
         CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM:
           "Want this profile effect for yourself? Head to the Shop to buy and collect it!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Usually {price}",
         COLLECTIBLES_DAYS_LEFT_IN_SHOP: "{days} days left in Shop",
         COLLECTIBLES_DAYS_LEFT: "{days} days left",
         COLLECTIBLES_LAST_DAY: "Last day to buy",
@@ -26135,8 +26136,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271929", ", Version Hash: ")
-          .concat("8213b6abb703b63d4380bc3e958ac5195e77cc45")
+          .concat("271941", ", Version Hash: ")
+          .concat("c2746ddfc28ee2f1242bde8cdb9910501b8dc59d")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29215,12 +29216,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271929"), "271929"));
+        let _ = parseInt(((e = "271941"), "271941"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271929"
+                "271941"
               )
             ),
             (_ = 0)),
@@ -35049,8 +35050,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709580342921",
-                    build_number: "271929",
+                    built_at: "1709581728982",
+                    build_number: "271941",
                   },
                 },
                 retries: 1,
@@ -51574,4 +51575,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.4928cdd7778e35e64abf.js.map
+//# sourceMappingURL=77761.84a04a64752f374427ea.js.map

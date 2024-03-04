@@ -26155,8 +26155,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272062", ", Version Hash: ")
-          .concat("1c248ce73cb81653baff30112c1f557d47868849")
+          .concat("272082", ", Version Hash: ")
+          .concat("9e6db081b3b4daa89e73b0e04ae478d1434880b0")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29183,12 +29183,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272062"), "272062"));
+        let _ = parseInt(((e = "272082"), "272082"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272062"
+                "272082"
               )
             ),
             (_ = 0)),
@@ -36239,24 +36239,49 @@
       E.r(_),
         E.d(_, {
           showTakeoverModal: function () {
-            return a;
+            return I;
           },
         });
       var t = E("37983");
       E("884691");
       var o = E("77078"),
         n = E("892974"),
-        r = E("761771");
-      function a(e) {
-        (0, r.isEligibleForInappropriateConversationWarning)({
-          location: "takeover-modal",
-        }) &&
+        r = E("277734"),
+        a = E("217736"),
+        i = E("761771");
+      function I(e) {
+        let { channelId: _, warningId: I, senderId: T, warningType: s } = e;
+        if (
+          !!(0, i.isEligibleForInappropriateConversationWarning)({
+            location: "takeover-modal",
+          })
+        )
           (0, o.openModalLazy)(
             async () => {
-              let { default: _ } = await E.el("33320").then(E.bind(E, "33320"));
-              return E => (0, t.jsx)(_, { ...e, modalProps: E });
+              let { default: e } = await E.el("33320").then(E.bind(E, "33320"));
+              return E =>
+                (0, t.jsx)(e, {
+                  channelId: _,
+                  warningId: I,
+                  senderId: T,
+                  warningType: s,
+                  modalProps: E,
+                });
             },
-            { backdropStyle: n.BackdropStyles.BLUR }
+            {
+              backdropStyle: n.BackdropStyles.BLUR,
+              onCloseCallback: () => {
+                (0, r.dismissChannelSafetyWarnings)(_, [I]),
+                  (0, a.trackCtaEvent)({
+                    channelId: _,
+                    senderId: T,
+                    warningId: I,
+                    warningType: s,
+                    cta: a.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS,
+                    isNudgeWarning: !1,
+                  });
+              },
+            }
           );
       }
     },
@@ -50987,4 +51012,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.9ef328625793895fcee6.js.map
+//# sourceMappingURL=76039.4ddd65b185b9bd2b9e1d.js.map

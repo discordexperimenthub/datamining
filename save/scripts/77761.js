@@ -11717,6 +11717,12 @@
           "Get this cool badge for being a Nitro subscriber.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For the collectors. Grab this exclusive Nitro-only badge.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} Free {numFreeBoosts, plural, =1 {Boost} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Redeem in {days} {days, plural, =1 {day} other {days}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Redeem in {numDays} {numDays, plural, =1 {day} other {days}}",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Supercharge your Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -20200,6 +20206,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Media editing and meme creation, at the speed of Discord.",
         EARLY_ACCESS: "Early Access",
+        REWARD: "Reward",
         REMIXING_POST_CTA: "Send",
         REMIXING_CROP: "Crop media",
         REMIXING_BACKDROP_EDITOR_TITLE: "Adjust & Crop",
@@ -26128,8 +26135,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271914", ", Version Hash: ")
-          .concat("aa88499a93385abca05ff9852af08c711808d269")
+          .concat("271920", ", Version Hash: ")
+          .concat("8b64bc3952fab01af4f2606a5fafad562eecefca")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29208,12 +29215,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271914"), "271914"));
+        let _ = parseInt(((e = "271920"), "271920"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271914"
+                "271920"
               )
             ),
             (_ = 0)),
@@ -35042,8 +35049,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709579506155",
-                    build_number: "271914",
+                    built_at: "1709579932992",
+                    build_number: "271920",
                   },
                 },
                 retries: 1,
@@ -51567,4 +51574,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.64ccb385ef73d2ae93a1.js.map
+//# sourceMappingURL=77761.e53851263dc6085bd479.js.map

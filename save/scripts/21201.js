@@ -38016,6 +38016,7 @@
                     ? JSON.stringify(r.scope)
                     : r.scope,
                 application_id: e.application.id,
+                socket_scope: e.authorization.scopes.toString(),
               }),
               n(r);
           })
@@ -60242,7 +60243,7 @@
               var i;
               let d = {
                   environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                  build_number: "271914",
+                  build_number: "271920",
                 },
                 f = l.default.getCurrentUser();
               null != f &&
@@ -79029,4 +79030,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21201.f9224ad6615fdf410c4c.js.map
+//# sourceMappingURL=21201.a361dcaf8a96005c37d9.js.map

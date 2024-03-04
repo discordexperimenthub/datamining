@@ -1269,7 +1269,7 @@
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
           "You're about to test {activityName} for the first time.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
-          "This app is not made by Discord, and has not been reviewed. Only test apps from developers you trust.",
+          "This app is not made by Discord. Only test apps from developers you trust.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Learn more about private apps.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
@@ -26128,8 +26128,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("271888", ", Version Hash: ")
-          .concat("50d5577abdfc4198caf1d83194bb3f52a9f7e1a5")
+          .concat("271914", ", Version Hash: ")
+          .concat("aa88499a93385abca05ff9852af08c711808d269")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29208,12 +29208,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "271888"), "271888"));
+        let _ = parseInt(((e = "271914"), "271914"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "271888"
+                "271914"
               )
             ),
             (_ = 0)),
@@ -35042,8 +35042,8 @@
                 body: {
                   metrics: e,
                   client_info: {
-                    built_at: "1709577391606",
-                    build_number: "271888",
+                    built_at: "1709579506155",
+                    build_number: "271914",
                   },
                 },
                 retries: 1,
@@ -51567,4 +51567,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77761.a311ab99605c9a09f386.js.map
+//# sourceMappingURL=77761.64ccb385ef73d2ae93a1.js.map

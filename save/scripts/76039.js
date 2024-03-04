@@ -24709,6 +24709,7 @@
         ADD_TO_GUILD_SUBTITLE: "Customize your server by adding this app",
         USER_APPS_LEARN_MORE:
           "To learn more about apps on Discord, visit our [Help Center]({helpUrl}).",
+        SCOPE_DM_SELF: "Send you direct messages",
         MFA_REQUIRED_FOR_STAFF:
           "Multi-factor authentication is required for staff.",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1:
@@ -26155,8 +26156,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272082", ", Version Hash: ")
-          .concat("9e6db081b3b4daa89e73b0e04ae478d1434880b0")
+          .concat("272098", ", Version Hash: ")
+          .concat("81f2806771b9ca22d3c0be64e630a60f3fb802a7")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29183,12 +29184,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272082"), "272082"));
+        let _ = parseInt(((e = "272098"), "272098"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272082"
+                "272098"
               )
             ),
             (_ = 0)),
@@ -51012,4 +51013,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.4ddd65b185b9bd2b9e1d.js.map
+//# sourceMappingURL=76039.4c30543daeca8f60280e.js.map

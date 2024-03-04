@@ -149,7 +149,7 @@
             return m;
           },
           getBlindIds: function () {
-            return E;
+            return b;
           },
           uploadCallscopeLogs: function () {
             return L;
@@ -175,7 +175,7 @@
       async function m(t, e) {
         await y(t), await (0, r.uploadRtcLogFiles)(3670016, e);
       }
-      class b {
+      class E {
         static getTrimmedFilename(t) {
           let e = /^channel\.\d+\.(.+)$/.exec(t);
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
@@ -185,7 +185,7 @@
           return null == e || e.length < 2 || null == e[1] ? "unknown" : e[1];
         }
       }
-      async function E(t, e, n) {
+      async function b(t, e, n) {
         let o = new a.BlindID(n),
           l = await o.blind(t),
           r = await o.blind(e);
@@ -213,7 +213,7 @@
             return;
           }
           try {
-            let { blindChannelId: a, blindUserId: r } = await E(t, e, n),
+            let { blindChannelId: a, blindUserId: r } = await b(t, e, n),
               i = "channel blind("
                 .concat(t, "): ")
                 .concat(a, ", user blind(")
@@ -246,13 +246,13 @@
             c.transformNativeFile(t, "application/octet-stream")
           )) {
             h.log("uploadCallscopeLogFiles: Uploading ".concat(n.name));
-            let e = b.getChannelId(n.name);
+            let e = E.getChannelId(n.name);
             try {
               let a = await o.default.post({
                   url: f.Endpoints.CALLSCOPE_LOGS(
                     e,
                     t,
-                    b.getTrimmedFilename(n.name)
+                    E.getTrimmedFilename(n.name)
                   ),
                   headers: { "Content-Type": "application/octet-stream" },
                   body: n,
@@ -375,8 +375,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "272082",
-          versionHash: "9e6db081b3b4daa89e73b0e04ae478d1434880b0",
+          buildNumber: "272098",
+          versionHash: "81f2806771b9ca22d3c0be64e630a60f3fb802a7",
         };
       }
       n.r(e),
@@ -566,4 +566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18409.86a3768a327f0436d36a.js.map
+//# sourceMappingURL=18409.8cfeda427f50ac0885ae.js.map

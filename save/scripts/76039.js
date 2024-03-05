@@ -24727,6 +24727,7 @@
         SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
         SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen",
         PACKAGES: "Packages",
+        USER_SETTINGS_PACKAGES_HEADER_CTA: "Open your Mailbox",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
@@ -26159,8 +26160,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272358", ", Version Hash: ")
-          .concat("3d5e95e1a7dd6ec18a17ced423ffef5dc07ea5e0")
+          .concat("272381", ", Version Hash: ")
+          .concat("9904735c2dfbcc479cb307cf76b44a52f747a651")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29187,12 +29188,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272358"), "272358"));
+        let _ = parseInt(((e = "272381"), "272381"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272358"
+                "272381"
               )
             ),
             (_ = 0)),
@@ -51018,4 +51019,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.587b9d8957a829880c2c.js.map
+//# sourceMappingURL=76039.4d126e27bece109d9e9e.js.map

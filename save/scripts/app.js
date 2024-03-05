@@ -22166,7 +22166,11 @@
     },
     417365: function (e, t, o) {
       "use strict";
-      e.exports = { container: "container__1d01d" };
+      e.exports = {
+        container: "container__1d01d",
+        footer: "footer__8feef",
+        footerButton: "footerButton__3b860",
+      };
     },
     509728: function (e, t, o) {
       "use strict";
@@ -22190,7 +22194,6 @@
         buttonIcon: "buttonIcon__0dd53",
         buttonInner: "buttonInner__49063",
         description: "description_eb851a",
-        footer: "footer__386cd",
         heroImage: "heroImage__51d03",
         safetyTips: "safetyTips_cf2252",
         textContainer: "textContainer__5b062",

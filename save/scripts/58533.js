@@ -270,19 +270,18 @@
             : e;
       }
       function O(e) {
-        let t = 0;
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
-          r => {
-            var s;
-            let l =
-              null !== (s = n.max(Object.values(r.gifs).map(e => e.order))) &&
-              void 0 !== s
-                ? s
+          t => {
+            var r;
+            let s =
+              null !== (r = n.max(Object.values(t.gifs).map(e => e.order))) &&
+              void 0 !== r
+                ? r
                 : 0;
-            r.gifs[w(e.url)] = { ...e, order: l + 1 };
-            let i = a.FavoriteGIFs.toBinary(r).length;
-            if (i > E.MAX_FAVORITE_GIFS_SIZE)
+            t.gifs[w(e.url)] = { ...e, order: s + 1 };
+            let l = a.FavoriteGIFs.toBinary(t).length;
+            if (l > E.MAX_FAVORITE_GIFS_SIZE)
               return (
                 g.default.show({
                   title: R.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
@@ -290,27 +289,26 @@
                 }),
                 !1
               );
-            (t = n.size(r.gifs)) > 2 && (r.hideTooltip = !0);
+            let i = n.size(t.gifs);
+            i > 2 && (t.hideTooltip = !0),
+              m.default.track(_.AnalyticEvents.GIF_FAVORITED, {
+                total_num_favorited: i,
+              });
           },
           E.UserSettingsDelay.INFREQUENT_USER_ACTION
-        ),
-          m.default.track(_.AnalyticEvents.GIF_FAVORITED, {
-            total_num_favorited: t,
-          });
+        );
       }
       function k(e) {
-        let t = 0;
         h.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteGifs",
-          r => {
-            e in r.gifs ? delete r.gifs[e] : delete r.gifs[w(e)],
-              (t = n.size(r.gifs));
+          t => {
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)],
+              m.default.track(_.AnalyticEvents.GIF_UNFAVORITED, {
+                total_num_favorited: n.size(t.gifs),
+              });
           },
           E.UserSettingsDelay.INFREQUENT_USER_ACTION
-        ),
-          m.default.track(_.AnalyticEvents.GIF_UNFAVORITED, {
-            total_num_favorited: t,
-          });
+        );
       }
     },
     718302: function (e, t, r) {
@@ -2425,4 +2423,4 @@
     },
   },
 ]);
-//# sourceMappingURL=58533.12bcd9f8719f7ed35921.js.map
+//# sourceMappingURL=58533.905dede5cdbbedf50fce.js.map

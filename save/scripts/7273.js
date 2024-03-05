@@ -4012,6 +4012,7 @@
           "Collectibles Shop Details Modal"),
         (I1.PROFILE_EFFECT_CUSTOMIZATION = "Profile Effect Customization"),
         (I1.COLLECTIBLES_SHOP = "Shop"),
+        (I1.SHOP_PRODUCT_DETAILS = "Shop Product Details"),
         (I1.APPEAL_INGESTION_SPEED_BUMP = "Appeal Ingestion Speed Bump"),
         (I1.APPEAL_INGESTION_COLLECT_SIGNAL =
           "Appeal Ingestion Collect Signal"),
@@ -17134,4 +17135,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.89062b89050e5ddbd711.js.map
+//# sourceMappingURL=7273.4dc4a10be2b62ca2ff25.js.map

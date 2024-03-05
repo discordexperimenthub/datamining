@@ -21712,6 +21712,8 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} with Nitro",
         COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW:
           "{price} with Nitro. $[Subscribe now](subscribeNowHook)",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} with Nitro $[subscribe now](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Ready for a new look?",
         COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE_ALT:
           "Charming. Fierce. Hungry. Whatever your vibe, buy and collect your favorite styles for your profile for any occasion.",
@@ -21743,6 +21745,8 @@
         CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM:
           "Want this profile effect for yourself? Head to the Shop to buy and collect it!",
         COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Usually {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "By Clicking '{buyButtonLabel}' you agree to the [Paid Service Terms]({paidServiceTermURL}). Once you complete your purchase, the item will be added to your collection and can be used anytime. Note that Nitro subscriptions become non-refundable once you've purchased an item.",
         COLLECTIBLES_DAYS_LEFT_IN_SHOP: "{days} days left in Shop",
         COLLECTIBLES_DAYS_LEFT: "{days} days left",
         COLLECTIBLES_LAST_DAY: "Last day to buy",
@@ -23988,6 +23992,7 @@
         HANG_STATUS_VC_ROW_ADD: "Add a status",
         HANG_STATUS_HELP:
           "Show your friends what you're up to by setting an activity status.",
+        HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Set a custom status",
         LAUNCH_PAD: "LaunchPad",
         LAUNCH_PAD_HISTORY: "Recent Channels",
         LAUNCH_PAD_STUFF_TO_CATCH_UP_ON: "Stuff To Catch Up On",
@@ -26156,8 +26161,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272201", ", Version Hash: ")
-          .concat("34ea7754e13793f22af84dbca28f266fa4b26f05")
+          .concat("272231", ", Version Hash: ")
+          .concat("04f2f9ce3982d602f067a74ff456a5335c1d74c1")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29184,12 +29189,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272201"), "272201"));
+        let _ = parseInt(((e = "272231"), "272231"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272201"
+                "272231"
               )
             ),
             (_ = 0)),
@@ -51015,4 +51020,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.2f6175f45d48b82d1d60.js.map
+//# sourceMappingURL=76039.48e53e1a861d6854d951.js.map

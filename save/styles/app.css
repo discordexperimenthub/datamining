@@ -72162,6 +72162,7 @@ html .tabBadge__002b3 {
   display: flex;
   padding: 0;
   border-radius: inherit;
+  scrollbar-width: none;
 }
 .modalContent__3d79f::-webkit-scrollbar {
   width: 0;
@@ -72620,6 +72621,10 @@ html .tabBadge__002b3 {
   right: 16px;
   background-color: var(--white-500);
   color: var(--black-500);
+}
+.theme-light .newBadge_b2f114 {
+  background-color: var(--interactive-active);
+  color: var(--white-500);
 }
 .snowflake__3643b {
   color: var(--white-500);
@@ -109676,4 +109681,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.a6f50e5ca17973b88dc6.css.map*/
+/*# sourceMappingURL=app.f44684cf99e6c6ffb757.css.map*/

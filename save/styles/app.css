@@ -63899,11 +63899,11 @@ input::-webkit-inner-spin-button {
   border-radius: 16px;
   cursor: pointer;
   flex: 0 0 auto;
-  height: 32px;
+  height: 20px;
   opacity: 0.9;
   position: relative;
   transition: background-color.125s, opacity.125s;
-  width: 32px;
+  width: 20px;
 }
 .submenuWrapper__027da:focus,
 .submenuWrapper__027da:hover {
@@ -63925,11 +63925,11 @@ input::-webkit-inner-spin-button {
 }
 .submenuIcon__8f398 {
   color: var(--white-500);
-  height: 24px;
-  left: 4px;
+  height: 16px;
+  left: 2px;
   position: absolute;
-  top: 4px;
-  width: 24px;
+  top: 2px;
+  width: 16px;
 }
 .questAcceptedContent__9c385 .submenuIcon__8f398 {
   left: 0;
@@ -109740,4 +109740,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.badaabfaab5e1cd6e21d.css.map*/
+/*# sourceMappingURL=app.23bc24be6198194941e2.css.map*/

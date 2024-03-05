@@ -10192,7 +10192,8 @@
           default: function () {
             return l;
           },
-        });
+        }),
+        n("222007");
       var l,
         i = n("627445"),
         a = n.n(i),
@@ -10224,13 +10225,19 @@
         }
         drawRect(e) {
           let t =
-            !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+              !(arguments.length > 1) ||
+              void 0 === arguments[1] ||
+              arguments[1],
+            n =
+              !(arguments.length > 2) ||
+              void 0 === arguments[2] ||
+              arguments[2];
           if (null == this.context) return;
-          let { x: n, y: l, w: i, h: a } = e;
-          this.setContextProperties(),
+          let { x: l, y: i, w: a, h: s } = e;
+          n && this.setContextProperties(),
             t
-              ? this.context.fillRect(n, l, i, a)
-              : this.context.strokeRect(n, l, i, a);
+              ? this.context.fillRect(l, i, a, s)
+              : this.context.strokeRect(l, i, a, s);
         }
         drawRoundedRect(e) {
           let t =
@@ -10240,22 +10247,26 @@
             n =
               !(arguments.length > 2) ||
               void 0 === arguments[2] ||
-              arguments[2];
+              arguments[2],
+            l =
+              !(arguments.length > 3) ||
+              void 0 === arguments[3] ||
+              arguments[3];
           if (null == this.context) return;
-          let { x: l, y: i, w: a, h: s } = e;
-          this.setContextProperties(),
+          let { x: i, y: a, w: s, h: r } = e;
+          l && this.setContextProperties(),
             this.context.beginPath(),
-            this.context.roundRect(l, i, a, s, t),
+            this.context.roundRect(i, a, s, r, t),
             n ? this.context.fill() : this.context.stroke();
         }
         drawText(e, t, n, l) {
           if (null == this.context) return;
           this.setContextProperties();
-          let i = null != l ? l : this.canvas.width,
+          let i = null != l ? l : this.canvas.width - t.x,
             a = this.context.measureText(e),
             s = !1;
           if (this.font.truncate) {
-            for (; a.width + t.x + r.TEXT_TRUNCATION_PADDING_PX > i; )
+            for (; a.width + r.TEXT_TRUNCATION_PADDING_PX > i; )
               (e = e.slice(0, -4)), (a = this.context.measureText(e)), (s = !0);
             s && (e += "...");
           }
@@ -10322,6 +10333,26 @@
             this.context.restore(),
             o.DrawResultStatus.Success
           );
+        }
+        setGradientFillStyle(e, t, n) {
+          if (null == this.context) return;
+          let l = this.context.createLinearGradient(t.x, t.y, n.x, n.y);
+          for (let { color: t, stop: n } of e) l.addColorStop(n, t);
+          this.context.fillStyle = l;
+        }
+        drawGradientRect(e, t, n, l) {
+          return null == this.context
+            ? o.DrawResultStatus.Failure
+            : (this.setGradientFillStyle(e, t, n),
+              this.drawRect(l, !0, !1),
+              o.DrawResultStatus.Success);
+        }
+        drawGradientRoundedRect(e, t, n, l, i) {
+          return null == this.context
+            ? o.DrawResultStatus.Failure
+            : (this.setGradientFillStyle(e, t, n),
+              this.drawRoundedRect(l, i, !0, !1),
+              o.DrawResultStatus.Success);
         }
         constructor(e, t) {
           super(e, t),
@@ -29184,7 +29215,8 @@
                           (a(e, { isFinalSelection: !0, toggleFavorite: !1 }),
                           f.default.open(
                             e.guildId,
-                            T.GuildSettingsSections.EMOJI
+                            T.GuildSettingsSections.EMOJI,
+                            T.AnalyticsSections.EMOJI_PICKER_POPOUT
                           ));
                     },
                     c = () => {
@@ -65781,4 +65813,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.4559192b628045e78467.js.map
+//# sourceMappingURL=60053.7f6286c913adce3c02ea.js.map

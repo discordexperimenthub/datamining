@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["59196"],
+  ["60053"],
   {
     777483: function (e, t, n) {
       var l = {
@@ -9934,9 +9934,13 @@
               .concat(this.font.size, "px ")
               .concat(this.font.family)));
         }
-        setSize(e) {
-          let { w: t, h: n } = e;
-          (this.canvas.width = t), (this.canvas.height = n);
+        setSize(e, t) {
+          let { w: n, h: l } = e;
+          null != this.context && null != t
+            ? ((this.canvas.width = n * t),
+              (this.canvas.height = l * t),
+              this.context.scale(t, t))
+            : ((this.canvas.width = n), (this.canvas.height = l));
         }
         clearRect(e) {
           if (null == this.context) return;
@@ -10077,7 +10081,9 @@
         constructor(e, t) {
           super(e, t),
             (this.canvas = e),
-            (this.context = this.canvas.getContext("2d"));
+            (this.context = this.canvas.getContext("2d")),
+            null != this.context &&
+              (this.context.imageSmoothingQuality = "high");
         }
       };
     },
@@ -65601,4 +65607,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59196.34c5c7e7ab97ac2f204b.js.map
+//# sourceMappingURL=60053.bb86016603e296ab75a5.js.map

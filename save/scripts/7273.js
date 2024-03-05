@@ -3794,6 +3794,7 @@
         (I1.SETTINGS_PREMIUM = "Discord Nitro"),
         (I1.SETTINGS_PREMIUM_BANNER = "Nitro Upsell Banner"),
         (I1.SETTINGS_MOBILE_PREMIUM_BANNER = "Mobile Nitro Upsell Banner"),
+        (I1.SETTINGS_LOOTBOXES = "Lootboxes"),
         (I1.SETTINGS_PREMIUM_PLAN_SELECT = "Discord Premium Plan Select"),
         (I1.SETTINGS_PREMIUM_GIFTING = "Nitro Gifting"),
         (I1.GUILD_BOOSTING = "Nitro Server Boost"),
@@ -4252,6 +4253,7 @@
           CLIPS: "Settings Clips",
           SPEED_TEST: "RTC Speed Test",
           COLLECTIBLES_SHOP: "Shop",
+          LOOTBOXES: "Lootboxes",
           COMMUNITY_ALERTS: "Community Alerts Settings",
           HIGHLIGHT_NOTIFICATIONS: "Highlight notification settings",
         });
@@ -17137,4 +17139,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.1433a505dfe14ac19c83.js.map
+//# sourceMappingURL=7273.7221d87ac7ae850191b5.js.map

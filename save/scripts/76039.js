@@ -24729,6 +24729,7 @@
         SERVER_DRAWER_ACTIVITY_PLAYING: "playing **!!{activity}!!**",
         SERVER_DRAWER_ACTIVITY_STREAMING: "streaming **!!{activity}!!**",
         SERVER_DRAWER_ACTIVITY_STREAMING_SCREEN: "sharing screen",
+        PACKAGES: "Packages",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
@@ -26161,8 +26162,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272244", ", Version Hash: ")
-          .concat("6d45acba1e294c2df4af7eb31564970e6e488659")
+          .concat("272251", ", Version Hash: ")
+          .concat("b3b6df4216030ff12ee7b755ffdee0b9986f410b")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29189,12 +29190,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272244"), "272244"));
+        let _ = parseInt(((e = "272251"), "272251"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272244"
+                "272251"
               )
             ),
             (_ = 0)),
@@ -51020,4 +51021,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.0b8279320c0d8421b048.js.map
+//# sourceMappingURL=76039.8c484a38af05016fa99f.js.map

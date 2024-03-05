@@ -71369,6 +71369,10 @@ html .tabBadge__002b3 {
 }
 .summary__305b9 {
   z-index: 1;
+  color: var(--white-500);
+}
+.blackSummary__85da0 {
+  color: var(--black-500);
 }
 .limitedTimeBadge__30482 {
   position: absolute;
@@ -109681,4 +109685,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.f44684cf99e6c6ffb757.css.map*/
+/*# sourceMappingURL=app.b812eb67bd72ce200330.css.map*/

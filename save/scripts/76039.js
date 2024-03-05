@@ -5531,9 +5531,6 @@
         LANGUAGE: "Language",
         LANGUAGE_SELECT: "Select a Language",
         LANGUAGE_UPDATED: "Language has been Updated.",
-        ESLATAM_LANGUAGE_LAUNCH_NOTICE:
-          "Discord now supports Latin American Spanish.",
-        ESLATAM_LANGUAGE_LAUNCH_NOTICE_CTA: "Change Language",
         CHECKING_FOR_UPDATES: "Checking For Updates",
         UPDATE_AVAILABLE: "Downloading Update",
         UPDATE_DOWNLOADED: "Update Ready!",
@@ -26162,8 +26159,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272303", ", Version Hash: ")
-          .concat("910959fe2494891c4a2411d9d67b2a34b5fdb0ce")
+          .concat("272310", ", Version Hash: ")
+          .concat("aa08ae53697d90a910af40ada3e9d4e4649e8783")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29190,12 +29187,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272303"), "272303"));
+        let _ = parseInt(((e = "272310"), "272310"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272303"
+                "272310"
               )
             ),
             (_ = 0)),
@@ -51021,4 +51018,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.5f39b35fcb5e47f08c0c.js.map
+//# sourceMappingURL=76039.3a4e9a366b9548da488f.js.map

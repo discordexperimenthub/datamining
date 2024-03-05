@@ -23807,7 +23807,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Take a break",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Listen to Lofi Beats with Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relax",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Vibe",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Safety tips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "About safety alerts",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -26159,8 +26159,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272320", ", Version Hash: ")
-          .concat("3dc6eb0b0dab0b2431a844badb672e929ead53be")
+          .concat("272333", ", Version Hash: ")
+          .concat("2c137fd656bed1e84b1a9f943e76230849615479")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29187,12 +29187,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272320"), "272320"));
+        let _ = parseInt(((e = "272333"), "272333"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272320"
+                "272333"
               )
             ),
             (_ = 0)),
@@ -51018,4 +51018,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.3e9b4910d465bbd84197.js.map
+//# sourceMappingURL=76039.95202dc634fb05fe6804.js.map

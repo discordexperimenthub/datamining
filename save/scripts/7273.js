@@ -3738,6 +3738,7 @@
         (I1.CONTACT_SYNC_NC_MODAL = "Contact Sync Notification Center Modal"),
         (I1.MEDIA_VIEWER = "Media Viewer"),
         (I1.MARKETING_FLOATING_CTA = "Marketing Floating CTA"),
+        (I1.PREMIUM_GIFT_SUCCESS_MODAL = "Premium Gifting Success Modal"),
         (I1.CHANNEL_TEXT_AREA = "Channel Text Area"),
         (I1.THREAD_TEXT_AREA = "THREAD_TEXT_AREA"),
         (I1.TEXT_IN_VOICE = "TEXT_IN_VOICE"),
@@ -4625,6 +4626,7 @@
           "mobile_ota_asset_download_attempt"),
         (el.IOS_METRIC_KIT_PAYLOAD_RECEIVED =
           "ios_metric_kit_payload_received"),
+        (el.ANDROID_JANK_STATS = "android_jank_stats"),
         (el.EXTERNAL_FINGERPRINT_DROPPED = "external_fingerprint_dropped"),
         (el.EXTERNAL_DYNAMIC_LINK_RECEIVED = "external_dynamic_link_received"),
         (el.DEEP_LINK_CLICKED = "deep_link_clicked"),
@@ -17132,4 +17134,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.3e9ed2b2a3bf9039a775.js.map
+//# sourceMappingURL=7273.89062b89050e5ddbd711.js.map

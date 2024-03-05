@@ -36,13 +36,13 @@
               },
               [C]
             ),
-            R = a.sanitizeUrl(c);
+            p = a.sanitizeUrl(c);
           return (0, n.jsx)(s.Anchor, {
             ...h,
             title: i,
             target: "_blank",
             rel: "noreferrer noopener",
-            href: R,
+            href: p,
             onClick: C,
             onAuxClick: I,
             children: null != f ? f : i,
@@ -312,10 +312,11 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return m;
+            return _;
           },
         }),
-        r("222007");
+        r("222007"),
+        r("424973");
       var n = r("37983"),
         l = r("884691"),
         i = r("414456"),
@@ -328,10 +329,11 @@
         f = r("626820"),
         v = r("306160"),
         g = r("701909"),
-        h = r("161449"),
-        E = r("49111"),
-        C = r("782340"),
-        I = r("602302");
+        h = r("773336"),
+        E = r("161449"),
+        C = r("49111"),
+        I = r("782340"),
+        p = r("602302");
       function R(e) {
         let { url: t } = e,
           [r, i] = l.useState(!1),
@@ -345,19 +347,19 @@
           l.useEffect(() => () => clearTimeout(s.current), []),
           v.SUPPORTS_COPY
             ? (0, n.jsxs)(d.Clickable, {
-                className: a(I.copyLink, r ? I.copied : null),
+                className: a(p.copyLink, r ? p.copied : null),
                 onClick: u,
                 children: [
-                  (0, n.jsx)(c.default, { className: I.copyLinkIcon }),
+                  (0, n.jsx)(c.default, { className: p.copyLinkIcon }),
                   r
-                    ? C.default.Messages.BUILD_OVERRIDE_LINK_COPIED
-                    : C.default.Messages.BUILD_OVERRIDE_LINK_COPY,
+                    ? I.default.Messages.BUILD_OVERRIDE_LINK_COPIED
+                    : I.default.Messages.BUILD_OVERRIDE_LINK_COPY,
                 ],
               })
             : null
         );
       }
-      function p(e) {
+      function m(e) {
         let {
           subHead: t,
           buildDetails: r,
@@ -370,92 +372,92 @@
         return (0, n.jsxs)(l.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: I.buildInfo,
+              className: p.buildInfo,
               children: [
                 (0, n.jsx)(d.Text, {
                   variant: "text-sm/medium",
-                  className: I.subHead,
+                  className: p.subHead,
                   children: t,
                 }),
-                (0, n.jsx)("div", { className: I.buildDetails, children: r }),
+                (0, n.jsx)("div", { className: p.buildDetails, children: r }),
               ],
             }),
             (0, n.jsx)(d.Button, {
               submitting: c,
               color: i,
               onClick: s,
-              className: a(I.button, o ? I.disabledButtonOverride : null),
-              size: I.buttonSize,
+              className: a(p.button, o ? p.disabledButtonOverride : null),
+              size: p.buttonSize,
               disabled: o,
               children: u,
             }),
           ],
         });
       }
-      var m = e => {
+      var _ = e => {
         var t, r, i;
         let {
             loading: s = !1,
             currentOverrides: c,
             linkMeta: v,
-            url: m,
+            url: _,
             applyBuildOverride: L,
-            clearBuildOverride: _,
+            clearBuildOverride: O,
           } = e,
-          [O, B] = l.useState(!1),
+          [B, b] = l.useState(!1),
           D = l.useCallback(() => {
-            !O && (B(!0), L().catch(() => B(!1)));
-          }, [L, O]),
-          b = l.useCallback(() => {
-            !O && (B(!0), _().catch(() => B(!1)));
-          }, [_, O]);
+            !B && (b(!0), L().catch(() => b(!1)));
+          }, [L, B]),
+          x = l.useCallback(() => {
+            !B && (b(!0), O().catch(() => b(!1)));
+          }, [O, B]);
         return (0, n.jsxs)("div", {
-          className: I.wrapper,
+          className: p.wrapper,
           children: [
             ((t = v),
-            (r = m),
+            (r = _),
             (i = s),
             (0, n.jsxs)(d.Text, {
               variant: "text-xs/normal",
-              className: I.titleRegion,
+              className: p.titleRegion,
               children: [
                 (0, n.jsx)("strong", {
-                  className: I.title,
+                  className: p.title,
                   children:
                     null != t && null != t.releaseChannel
-                      ? C.default.Messages.BUILD_OVERRIDE_FOR.format({
+                      ? I.default.Messages.BUILD_OVERRIDE_FOR.format({
                           releaseChannel: t.releaseChannel,
                         })
-                      : C.default.Messages.BUILD_OVERRIDE,
+                      : I.default.Messages.BUILD_OVERRIDE,
                 }),
                 (0, n.jsx)(d.Anchor, {
-                  className: I.infoLink,
+                  className: p.infoLink,
                   href: g.default.getArticleURL(
-                    E.HelpdeskArticles.BUILD_OVERRIDE_EMBED
+                    C.HelpdeskArticles.BUILD_OVERRIDE_EMBED
                   ),
                   target: "_blank",
-                  children: (0, n.jsx)(o.default, { className: I.infoIcon }),
+                  children: (0, n.jsx)(o.default, { className: p.infoIcon }),
                 }),
                 i ? null : (0, n.jsx)(R, { url: r }),
               ],
             })),
             (0, n.jsxs)("div", {
-              className: I.content,
+              className: p.content,
               children: [
-                (0, n.jsx)(f.default, { className: I.icon }),
+                (0, n.jsx)(f.default, { className: p.icon }),
                 s
                   ? (0, n.jsxs)(l.Fragment, {
                       children: [
                         (0, n.jsxs)("div", {
-                          className: I.buildInfo,
+                          className: p.buildInfo,
                           children: [
                             (0, n.jsx)("div", {
-                              className: a(I.barLoader, I.barTitle),
+                              className: a(p.barLoader, p.barTitle),
                             }),
-                            (0, n.jsx)("div", { className: I.barLoader }),
+                            (0, n.jsx)("div", { className: p.barLoader }),
                           ],
                         }),
-                        (0, n.jsx)("div", { className: I.buttonLoader }),
+                        (0, n.jsx)("div", { className: p.buttonLoader }),
                       ],
                     })
                   : (function (e) {
@@ -470,44 +472,47 @@
                           clearBuildOverride: c,
                           submitting: f,
                         } = e,
-                        v = (0, h.default)(s, ["discord_web"]);
-                      if (!v.valid)
+                        v = ["discord_web"];
+                      !h.isPlatformEmbedded &&
+                        v.push("discord_marketing", "discord_developers");
+                      let g = (0, E.default)(s, v);
+                      if (!g.valid)
                         return (function (e) {
-                          return p({
+                          return m({
                             subHead:
-                              C.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
+                              I.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
                             buttonColor: d.Button.Colors.TRANSPARENT,
                             buttonText: "Invalid",
                             buildDetails: e,
                             disabled: !0,
                           });
-                        })(v.reason);
+                        })(g.reason);
                       u(
                         null != s,
                         "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved"
                       );
-                      let { discord_web: g } = s.targetBuildOverride;
+                      let { discord_web: C } = s.targetBuildOverride;
                       if (
                         (u(
-                          null != g,
+                          null != C,
                           "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"
                         ),
-                        (t = g),
+                        (t = C),
                         null == (r = a) || null == r.discord_web
                           ? 1
                           : t.id !== r.discord_web.id ||
                             t.type !== r.discord_web.type)
                       )
-                        (l = C.default.Messages.BUILD_OVERRIDE_APPLY),
+                        (l = I.default.Messages.BUILD_OVERRIDE_APPLY),
                           (n = o),
                           (i = d.Button.Colors.GREEN);
                       else
-                        (l = C.default.Messages.BUILD_OVERRIDE_CLEAR),
+                        (l = I.default.Messages.BUILD_OVERRIDE_CLEAR),
                           (n = c),
                           (i = d.Button.Colors.RED);
-                      return p({
-                        subHead: C.default.Messages.BUILD_OVERRIDE_ID,
-                        buildDetails: g.id,
+                      return m({
+                        subHead: I.default.Messages.BUILD_OVERRIDE_ID,
+                        buildDetails: C.id,
                         buttonClick: n,
                         buttonText: l,
                         buttonColor: i,
@@ -517,8 +522,8 @@
                       currentOverrides: c,
                       linkMeta: v,
                       applyBuildOverride: D,
-                      clearBuildOverride: b,
-                      submitting: O,
+                      clearBuildOverride: x,
+                      submitting: B,
                     }),
               ],
             }),
@@ -1007,4 +1012,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60499.a83590003d6d6e70abe4.js.map
+//# sourceMappingURL=60499.503ab84a0a5310db59fb.js.map

@@ -26156,8 +26156,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272177", ", Version Hash: ")
-          .concat("755ab0cb9daa5929dedf86c0e48b52947c1d34cb")
+          .concat("272183", ", Version Hash: ")
+          .concat("1e808add6cf02fcbcdc5605938a4dce326160ae2")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29184,12 +29184,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272177"), "272177"));
+        let _ = parseInt(((e = "272183"), "272183"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272177"
+                "272183"
               )
             ),
             (_ = 0)),
@@ -44627,6 +44627,8 @@
           "COLLECTIBLES_SHOP_ANIME_V2_COACHTIP"),
         (u[(u.POLLS_CHAT_INPUT_COACHMARK = 354)] =
           "POLLS_CHAT_INPUT_COACHMARK"),
+        (u[(u.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK = 355)] =
+          "PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51013,4 +51015,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.42e281aff70e299d0e89.js.map
+//# sourceMappingURL=76039.55b6b47a75233217fb36.js.map

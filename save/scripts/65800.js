@@ -488,17 +488,17 @@
         _ = n("99795"),
         L = n("327772"),
         w = n("735276"),
-        O = n("678016");
-      function b(e) {
+        b = n("678016");
+      function O(e) {
         let { channel: t, isLoading: n } = e,
           [i, x] = l.useState(!1),
-          b = (0, r.useStateFromStores)([y.default], () =>
+          O = (0, r.useStateFromStores)([y.default], () =>
             y.default.getSelfEmbeddedActivityForChannel(t.id)
           ),
           D = (0, r.useStateFromStores)([y.default], () =>
             y.default.getActivityPanelMode()
           ),
-          R = null == b ? void 0 : b.instanceId,
+          R = null == O ? void 0 : O.instanceId,
           F = (0, r.useStateFromStores)(
             [C.default],
             () => C.default.getChannelId() === t.id
@@ -522,8 +522,8 @@
             participantsOpen: H,
           } = (0, r.useStateFromStoresObject)([f.default], () => ({
             activityParticipant:
-              null != b
-                ? f.default.getParticipant(t.id, b.applicationId)
+              null != O
+                ? f.default.getParticipant(t.id, O.applicationId)
                 : null,
             selectedParticipant: f.default.getSelectedParticipant(t.id),
             participantsOpen: f.default.getParticipantsOpen(t.id),
@@ -541,7 +541,7 @@
         function Z() {
           var e;
           if (
-            (null != b && u.default.selectParticipant(t.id, b.applicationId),
+            (null != O && u.default.selectParticipant(t.id, O.applicationId),
             null != k)
           )
             return;
@@ -554,18 +554,18 @@
           x(!i);
         }
         l.useEffect(() => {
-          if ((null == b ? void 0 : b.applicationId) != null) {
+          if ((null == O ? void 0 : O.applicationId) != null) {
             let e = K ? N.ActivityLayoutMode.PIP : N.ActivityLayoutMode.FOCUSED;
             d.default.dispatch({
               type: "ACTIVITY_LAYOUT_MODE_UPDATE",
               layoutMode: e,
-              applicationId: b.applicationId,
+              applicationId: O.applicationId,
             });
           }
-        }, [null == b ? void 0 : b.applicationId, K]);
-        if (null == b || null == R || (null == V && (0, E.default)(t.id)))
+        }, [null == O ? void 0 : O.applicationId, K]);
+        if (null == O || null == R || (null == V && (0, E.default)(t.id)))
           return null;
-        let Q = Array.from(b.userIds)
+        let Q = Array.from(O.userIds)
             .map(e => S.default.getUser(e))
             .filter(e => null != e),
           $ = { instance_id: R, channel_id: t.id };
@@ -579,10 +579,10 @@
               return (0, a.jsxs)(v.default, {
                 className: o(L.root, {
                   [L.pipMode]: K,
-                  [O.elevationHigh]: K,
+                  [b.elevationHigh]: K,
                   [w.idle]:
                     h &&
-                    !(null === (l = b.config) || void 0 === l
+                    !(null === (l = O.config) || void 0 === l
                       ? void 0
                       : l.useInteractivePIP),
                   [L.pipModeShort]: K && !i,
@@ -598,18 +598,18 @@
                   (p = z),
                   (f = Q),
                   K &&
-                  null != b &&
+                  null != O &&
                   ((null == V ? void 0 : V.type) ===
                     _.ParticipantTypes.ACTIVITY ||
                     p)
                     ? (
-                        null === (m = b.config) || void 0 === m
+                        null === (m = O.config) || void 0 === m
                           ? void 0
                           : m.useInteractivePIP
                       )
                       ? (0, a.jsx)(A.InteractivePIPHeader, {
                           onJumpToChannel: Z,
-                          applicationId: b.applicationId,
+                          applicationId: O.applicationId,
                           channel: t,
                           showControls: !c,
                           onMouseDown: d,
@@ -633,7 +633,7 @@
                                   );
                               },
                               channel: t,
-                              applicationId: b.applicationId,
+                              applicationId: O.applicationId,
                               users: f,
                             }),
                           })
@@ -655,7 +655,7 @@
                                   onMouseLeave: u,
                                   onJumpToChannel: Z,
                                   channel: t,
-                                  applicationId: b.applicationId,
+                                  applicationId: O.applicationId,
                                   selectedParticipant: V,
                                 }),
                               ],
@@ -670,21 +670,21 @@
                       })
                     : (0, a.jsx)(T.EmbedIFrameWithLoadingBackground, {
                         allowPopups: N.APPLICATIONS_WITH_ALLOWED_POPUPS.has(
-                          b.applicationId
+                          O.applicationId
                         ),
                         referrerPolicy: N.APPLICATIONS_WITH_NO_REFFERER.has(
-                          b.applicationId
+                          O.applicationId
                         )
                           ? "no-referrer"
                           : "origin",
-                        url: b.url,
+                        url: O.url,
                         queryParams: $,
                         className: o(L.iframe, {
                           [L.pipModeShort]: K && !i,
                           [L.pipModeTall]: K && i,
                           [L.pipNonInteractive]:
                             K &&
-                            !(null === (r = b.config) || void 0 === r
+                            !(null === (r = O.config) || void 0 === r
                               ? void 0
                               : r.useInteractivePIP),
                         }),
@@ -705,7 +705,7 @@
       var D = e => {
         let { channel: t, ...n } = e,
           { isLoading: l } = (0, x.useEmbeddedActivityLifecycle)(t);
-        return (0, a.jsx)(b, { channel: t, isLoading: l, ...n });
+        return (0, a.jsx)(O, { channel: t, isLoading: l, ...n });
       };
     },
     386568: function (e, t, n) {
@@ -713,7 +713,7 @@
       n.r(t),
         n.d(t, {
           PIPOverlay: function () {
-            return b;
+            return O;
           },
           TextActivityPIPOverlay: function () {
             return D;
@@ -756,7 +756,7 @@
         _ = n("782340"),
         L = n("278121"),
         w = n("735276");
-      function O(e) {
+      function b(e) {
         let { onClick: t, isExpanded: n } = e;
         return (0, a.jsx)(I.default, {
           iconClassName: i(L.arrowIcon, { [L.arrowIconExpanded]: n }),
@@ -767,7 +767,7 @@
             : _.default.Messages.PICTURE_IN_PICTURE_EXPAND,
         });
       }
-      function b(e) {
+      function O(e) {
         var t, n;
         let {
             channel: l,
@@ -780,8 +780,8 @@
             selectedParticipant: x,
           } = e,
           _ = (0, d.useAppContext)(),
-          O = _ === M.AppContext.POPOUT,
-          b = (0, o.useStateFromStores)([y.default], () =>
+          b = _ === M.AppContext.POPOUT,
+          O = (0, o.useStateFromStores)([y.default], () =>
             y.default.isVideoEnabled()
           ),
           D = (0, o.useStateFromStores)(
@@ -825,7 +825,7 @@
                   children: [
                     (0, a.jsx)(g.default, {
                       className: L.leftPipIcon,
-                      enabled: b,
+                      enabled: O,
                       cameraUnavailable: !F,
                       hasPermission: U,
                       onChange: k,
@@ -851,7 +851,7 @@
                   basis: "50%",
                   align: E.default.Align.CENTER,
                   children: [
-                    O
+                    b
                       ? null
                       : (0, a.jsx)(C.default, {
                           className: L.rightPipIcon,
@@ -987,7 +987,7 @@
                     (0, a.jsxs)("div", {
                       className: L.pipHeaderButtonsRight,
                       children: [
-                        m ? null : (0, a.jsx)(O, { isExpanded: f, onClick: p }),
+                        m ? null : (0, a.jsx)(b, { isExpanded: f, onClick: p }),
                         (0, a.jsx)(P.default, {
                           applicationId: s,
                           channelId: d.id,
@@ -1253,8 +1253,8 @@
         _ = n("550410"),
         L = n("598873"),
         w = n("54727"),
-        O = n("336971"),
-        b = n("954519"),
+        b = n("336971"),
+        O = n("954519"),
         D = n("857398"),
         R = n("373469"),
         F = n("271938"),
@@ -1537,7 +1537,7 @@
             }),
             (this.renderStopStreamButton = () => {
               let { isSelf: e } = this.viewProperties;
-              return (0, a.jsx)(b.default, {
+              return (0, a.jsx)(O.default, {
                 isSelfStream: e,
                 className: el.rightTrayIcon,
                 onClick: this.handleStopStream,
@@ -1566,7 +1566,7 @@
               );
             }),
             (this.renderPopoutIcon = () =>
-              (0, a.jsx)(O.default, {
+              (0, a.jsx)(b.default, {
                 className: el.rightTrayIcon,
                 popoutOpen: !1,
                 onOpenPopout: this.handleOpenPopout,
@@ -1946,45 +1946,6 @@
                 }),
             });
       };
-    },
-    954519: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return r;
-          },
-        });
-      var a = n("37983");
-      n("884691");
-      var l = n("607837"),
-        i = n("981913"),
-        o = n("782340");
-      function r(e) {
-        let {
-            isSelfStream: t,
-            centerButton: n = !1,
-            onMouseEnter: r,
-            onMouseLeave: s,
-            ...d
-          } = e,
-          u = n ? i.CenterControlButton : i.default,
-          { Component: c, events: p } = (0, l.useScreenshareLottie)("off");
-        return (0, a.jsx)(u, {
-          label: t
-            ? o.default.Messages.STOP_STREAMING
-            : o.default.Messages.STOP_WATCHING,
-          iconComponent: c,
-          isActive: !0,
-          onMouseEnter: e => {
-            null == r || r(e), p.onMouseEnter();
-          },
-          onMouseLeave: e => {
-            null == s || s(e), p.onMouseLeave();
-          },
-          ...d,
-        });
-      }
     },
     857398: function (e, t, n) {
       "use strict";
@@ -2376,4 +2337,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65800.5cfbe810c92672733f9d.js.map
+//# sourceMappingURL=65800.e5783df1b5c507083376.js.map

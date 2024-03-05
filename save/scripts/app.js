@@ -23606,6 +23606,13 @@
       "use strict";
       e.exports = { roleDot: "roleDot__524f5", roleRow: "roleRow_b94d40" };
     },
+    203237: function (e, t, o) {
+      "use strict";
+      e.exports = {
+        coachmarkArt: "coachmarkArt__3085c",
+        coachmarkHeader: "coachmarkHeader_d9cce2",
+      };
+    },
     388874: function (e, t, o) {
       "use strict";
       e.exports = { profileColors: "profileColors__2e2f0" };

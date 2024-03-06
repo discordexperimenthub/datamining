@@ -39177,8 +39177,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -101437,7 +101437,7 @@ html .invoiceCancelRow_a8669b {
   box-sizing: border-box;
 }
 .itemDetail__846d8 {
-  background-color: var(--card-secondary-bg);
+  background-color: var(--bg-mod-strong);
   border-radius: var(--radius-md);
   cursor: pointer;
   height: -moz-max-content;
@@ -109888,4 +109888,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.f42f0096d75ea8355ac0.css.map*/
+/*# sourceMappingURL=app.a060b375117b72aaa648.css.map*/

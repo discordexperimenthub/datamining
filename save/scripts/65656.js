@@ -608,6 +608,9 @@
           resetQuestDismissibilityStatus: function () {
             return g;
           },
+          optimisticallyUpdateQuestProgress: function () {
+            return h;
+          },
         });
       var s = n("872717"),
         i = n("913144"),
@@ -835,6 +838,12 @@
           });
         }
       }
+      function h(e) {
+        i.default.dispatch({
+          type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
+          userStatus: e,
+        });
+      }
     },
     166604: function (e, t, n) {
       "use strict";
@@ -959,10 +968,10 @@
             return y;
           },
           calculatePercentComplete: function () {
-            return R;
+            return U;
           },
           getContextualEntrypointHeading: function () {
-            return U;
+            return R;
           },
           isDismissible: function () {
             return N;
@@ -971,10 +980,10 @@
             return b;
           },
           includesTarget: function () {
-            return L;
+            return O;
           },
           captureQuestsException: function () {
-            return O;
+            return L;
           },
         }),
         n("222007");
@@ -1090,14 +1099,14 @@
               .QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
         }
       };
-      function R(e) {
+      function U(e) {
         if (null == e.userStatus) return 0;
         let { streamProgressSeconds: t, completedAt: n } = e.userStatus;
         if (null != n) return 1;
         let { streamDurationRequirementMinutes: s } = e.config;
         return Math.min(t / 60 / s, 1);
       }
-      function U(e) {
+      function R(e) {
         var t, n;
         if (
           (null === (t = e.userStatus) || void 0 === t
@@ -1110,7 +1119,7 @@
             ? void 0
             : n.enrolledAt) != null
         ) {
-          let t = R(e);
+          let t = U(e);
           return t >= 0.75
             ? l.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE
             : t >= 0.45 && t <= 0.55
@@ -1132,10 +1141,10 @@
           u.DismissibleQuestContentFlags[t]
         );
       }
-      function L(e, t) {
+      function O(e, t) {
         return e.targetedContent.includes(t);
       }
-      function O(e, t) {
+      function L(e, t) {
         r.default.captureException(e, {
           ...t,
           tags: { ...(null == t ? void 0 : t.tags), app_context: "quests" },
@@ -1352,4 +1361,4 @@
     },
   },
 ]);
-//# sourceMappingURL=65656.66c8b8a169d8f459133f.js.map
+//# sourceMappingURL=65656.2f9293299a281fdfa244.js.map

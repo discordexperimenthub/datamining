@@ -19054,6 +19054,7 @@
         voteCount: "voteCount__9e7ee",
         voteCountButton: "voteCountButton__81a71",
         votePercentageBar: "votePercentageBar__4c440",
+        voterTooltip: "voterTooltip__04695",
         votesData: "votesData__4d275",
       };
     },

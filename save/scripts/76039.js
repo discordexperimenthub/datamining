@@ -24138,6 +24138,15 @@
         POLL_ANSWER_VOTES_MODAL_TITLE: "Votes",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Reveal voters",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Reveals voters",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! and {n, plural, one {1 other} other {{n} others}}",
+        POLL_VOTES_TOOLTIP_2: "!!{a}!! and !!{b}!!",
+        POLL_VOTES_TOOLTIP_2_N:
+          "!!{a}!!, !!{b}!!, and {n, plural, one {1 other} other {{n} others}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!!, and !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!!, and {n, plural, one {1 other} other {{n} others}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 person} other {{n} people}}",
         CREATE_POLL: "Create Poll",
         CREATE_POLL_HEADING: "Create a Poll",
         CREATE_POLL_EXPIRATION: "Poll will be live for 24 hours",
@@ -26216,8 +26225,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272535", ", Version Hash: ")
-          .concat("e437335b11ad3fcb02ce91943feb6182b27ade2f")
+          .concat("272537", ", Version Hash: ")
+          .concat("7294faf2bf7dfbbcae562299d2885bf9af67fe84")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29244,12 +29253,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272535"), "272535"));
+        let _ = parseInt(((e = "272537"), "272537"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272535"
+                "272537"
               )
             ),
             (_ = 0)),
@@ -51075,4 +51084,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.d72afdb0ffc5279456d2.js.map
+//# sourceMappingURL=76039.4f7491a81949ac27b463.js.map

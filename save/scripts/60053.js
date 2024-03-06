@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["59196"],
+  ["60053"],
   {
     777483: function (e, t, n) {
       var l = {
@@ -65624,4 +65624,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59196.6a56d613b8f6fa3e1b28.js.map
+//# sourceMappingURL=60053.927eefb8ed516f08fa5b.js.map

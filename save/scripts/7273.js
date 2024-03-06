@@ -5710,6 +5710,7 @@
         (el.GUILD_BAN_REMOVED = "guild_ban_removed"),
         (el.POLL_CREATION_CANCELLED = "poll_creation_cancelled"),
         (el.ACTIVITY_REACTOR_INTERACTED = "activity_reactor_interacted"),
+        (el.RANKING_ITEMS_SEEN = "ranking_items_seen"),
         ((es = _k || (_k = {})).CANARY = "canary"),
         (es.PTB = "ptb"),
         (es.STABLE = "stable"),
@@ -17138,4 +17139,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.23537d59574ecb4a37ad.js.map
+//# sourceMappingURL=7273.ffed94c46d604e58fc01.js.map

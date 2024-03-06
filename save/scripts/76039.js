@@ -24030,6 +24030,7 @@
         HANG_STATUS_HELP:
           "Show your friends what you're up to by setting an activity status.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Set a custom status",
+        HANG_STATUS_MOBILE_SET_ROW: "Set Voice Activity",
         LAUNCH_PAD: "LaunchPad",
         LAUNCH_PAD_HISTORY: "Recent Channels",
         LAUNCH_PAD_STUFF_TO_CATCH_UP_ON: "Stuff To Catch Up On",
@@ -26221,8 +26222,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272678", ", Version Hash: ")
-          .concat("4ece5396b88efbe1f10e4287bc74709fd22dd34f")
+          .concat("272683", ", Version Hash: ")
+          .concat("85d9db5fc9041399f98f962307f98255b2608e1f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29250,12 +29251,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272678"), "272678"));
+        let _ = parseInt(((e = "272683"), "272683"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272678"
+                "272683"
               )
             ),
             (_ = 0)),
@@ -51088,4 +51089,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.541fcd2b43c148255d18.js.map
+//# sourceMappingURL=76039.c3b4333799e639285f45.js.map

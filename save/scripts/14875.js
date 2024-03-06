@@ -216,12 +216,8 @@
         (i.PREMIUM_TRIAL_TUTORIAL_TOOLTIP = "premium trial tutorial tooltip"),
         (i.ACTIVITY_COACH_MARK_BASH_OUT = "activity coach mark bash out"),
         (i.ACTIVITY_COACH_MARK_POKER = "activity coach mark poker"),
-        (i.ACTIVITY_COACH_MARK_GARTIC_PHONE =
-          "activity coach mark gartic phone"),
         (i.ACTIVITIES_COACH_MARK_GAME_NIGHT =
           "activities coach mark game night"),
-        (i.ACTIVITY_COACH_MARK_KRUNKER_STRIKE =
-          "activity coach mark krunker strike"),
         (i.STAGE_VIDEO_LIMIT = "stage video limit"),
         (i.ACTIVITIES_MINI_SHELF = "activities mini shelf"),
         (i.ACTIVITIES_MINI_SHELF_BANNER = "activities mini shelf banner"),
@@ -324,4 +320,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.b3bfb9f6664d3074e870.js.map
+//# sourceMappingURL=14875.fa5adb0ff687e0964d44.js.map

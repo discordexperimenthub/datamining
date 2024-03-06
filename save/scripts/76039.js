@@ -1117,8 +1117,6 @@
         EMBEDDED_ACTIVITIES_MINI_SHELF_GAME_NIGHT_POSTER_ALT:
           "Wumpus and friends playing games on their phones. Game Night. April 7th",
         EMBEDDED_ACTIVITIES_GAME_NIGHT: "Game Night",
-        EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT: "Krunker Strike",
-        EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT: "Colonist",
         EMBEDDED_ACTIVITIES_RESOLVING_ACTIVITY: "Resolving Activity",
         EMBEDDED_ACTIVITIES_EMBED_ENDED: "Activity has ended.",
         EMBEDDED_ACTIVITIES_EMBED_START: "Start a new one?",
@@ -1288,11 +1286,6 @@
           "[!!{username}!!](usernameOnClick) started an [activity](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} started an activity",
-        KRUNKER_STRIKE_COACHMARK_TITLE: "Updated! Krunker Strike FRVR",
-        KRUNKER_STRIKE_COACHMARK_DESCRIPTION:
-          "Squad up with friends or other players around the world and battle your way to victory in this first person shooter game.",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Maybe later",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_ACCEPT: "Try it out",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "How'd !!{applicationName}!! go?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
           "What could have gone better?",
@@ -1445,9 +1438,6 @@
           "Try it for ghoulishly limited time.\nGot Nitro? Summon SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Test mode is currently active for **!!{applicationName}!!**. Your application should appear as an option in the activities button menu.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "New Activity! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Try out a game where you draw and guess what you see with your friends. Free until March 29.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Warning",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Desktop Beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "NEW! Voice channel reactions",
@@ -26231,8 +26221,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272660", ", Version Hash: ")
-          .concat("4f3870189060cc8ff053790bd52483a9502217bd")
+          .concat("272678", ", Version Hash: ")
+          .concat("4ece5396b88efbe1f10e4287bc74709fd22dd34f")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28387,7 +28377,8 @@
             "RUNNING_GAMES_CHANGE",
             "STREAM_START",
             "STREAM_CLOSE",
-            "STREAM_UPDATE",
+            "PASSIVE_UPDATE_V1",
+            "VOICE_STATE_UPDATES",
           ],
           inlineRequire: () => E("319405").default,
           neverLoadBeforeConnectionOpen: !0,
@@ -29259,12 +29250,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272660"), "272660"));
+        let _ = parseInt(((e = "272678"), "272678"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272660"
+                "272678"
               )
             ),
             (_ = 0)),
@@ -35815,7 +35806,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return U;
+            return M;
           },
         }),
         E("222007");
@@ -35826,25 +35817,26 @@
         a = E("42203"),
         i = E("546463"),
         I = E("945956"),
-        T = E("718517"),
-        s = E("815496"),
-        S = E("448881"),
-        N = E("374023"),
-        O = E("2973"),
-        A = E("227231"),
-        R = E("166604"),
-        l = E("49111");
-      let u = 5 * T.default.Millis.SECOND,
-        L = 12 * T.default.Millis.HOUR,
-        C = 1 * T.default.Millis.MINUTE,
-        D = 30 * T.default.Millis.SECOND;
-      function c() {
+        T = E("316133"),
+        s = E("718517"),
+        S = E("815496"),
+        N = E("448881"),
+        O = E("374023"),
+        A = E("2973"),
+        R = E("227231"),
+        l = E("166604"),
+        u = E("49111");
+      let L = 5 * s.default.Millis.SECOND,
+        C = 12 * s.default.Millis.HOUR,
+        D = 1 * s.default.Millis.MINUTE,
+        c = 30 * s.default.Millis.SECOND;
+      function d() {
         var e, _;
         let E = n.default.getStreamerActiveStreamMetadata();
         if ((null == E ? void 0 : E.id) == null) return null;
         let t = i.default.getGameById(E.id);
         if ((null == t ? void 0 : t.id) == null) return null;
-        let o = (0, A.getQuestByApplicationId)(O.default.quests, t.id);
+        let o = (0, R.getQuestByApplicationId)(A.default.quests, t.id);
         return (null == o
           ? void 0
           : null === (e = o.userStatus) || void 0 === e
@@ -35858,14 +35850,14 @@
           ? null
           : o;
       }
-      class d extends t.default {
+      class U extends t.default {
         maybeFetchCurrentQuests() {
-          (0, N.getIsEligibleForQuests)({
-            location: R.QuestsExperimentLocations.QUESTS_MANAGER,
+          (0, O.getIsEligibleForQuests)({
+            location: l.QuestsExperimentLocations.QUESTS_MANAGER,
             autoTrackExposure: !1,
           }) &&
-            !O.default.isFetchingCurrentQuests &&
-            (0, S.fetchCurrentQuests)();
+            !A.default.isFetchingCurrentQuests &&
+            (0, N.fetchCurrentQuests)();
         }
         constructor(...e) {
           super(...e),
@@ -35874,30 +35866,31 @@
             (this.initiateHeartbeat = e => {
               let { questId: _, streamKey: E, applicationId: t } = e;
               this.terminateHeartbeat(E);
-              let o = () => {
-                var e;
-                null != n.default.getRTCStream(E) &&
-                  n.default.getViewerIds(E).length > 0 &&
-                  (null === (e = c()) || void 0 === e
-                    ? void 0
-                    : e.config.applicationId) === t &&
-                  (0, S.sendHeartbeat)({
-                    questId: _,
-                    streamKey: E,
-                    applicationId: t,
-                  });
-                let r = this.calculateHeartbeatDurationMs(_);
-                this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, r));
-              };
-              o();
+              let { channelId: r } = (0, o.decodeStreamKey)(E),
+                a = () => {
+                  var e;
+                  null != n.default.getRTCStream(E) &&
+                    T.default.countVoiceStatesForChannel(r) >= 2 &&
+                    (null === (e = d()) || void 0 === e
+                      ? void 0
+                      : e.config.applicationId) === t &&
+                    (0, N.sendHeartbeat)({
+                      questId: _,
+                      streamKey: E,
+                      applicationId: t,
+                    });
+                  let o = this.calculateHeartbeatDurationMs(_);
+                  this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(a, o));
+                };
+              a();
             }),
             (this.calculateHeartbeatDurationMs = e => {
-              let _ = O.default.quests.get(e);
+              let _ = A.default.quests.get(e);
               if (null == _ || null == _.config || null == _.userStatus)
-                return C;
+                return D;
               let { streamProgressSeconds: E } = _.userStatus,
                 t = 60 * _.config.streamDurationRequirementMinutes;
-              return t - E <= 0.1 * t ? D : C;
+              return t - E <= 0.1 * t ? c : D;
             }),
             (this.terminateHeartbeat = e => {
               window.clearTimeout(this.sendHeartbeatTimeoutIds.get(e)),
@@ -35907,7 +35900,7 @@
               let {
                   enrolledQuestUserStatus: { questId: _ },
                 } = e,
-                E = c();
+                E = d();
               if (null == E || E.id !== _) return;
               let t = n.default.getCurrentUserActiveStream();
               null != t &&
@@ -35918,10 +35911,10 @@
                 });
             }),
             (this.handlePostConnectionOpen = () => {
-              if (0 === O.default.lastFetchedCurrentQuests)
+              if (0 === A.default.lastFetchedCurrentQuests)
                 window.setTimeout(
                   this.maybeFetchCurrentQuests,
-                  Math.floor(Math.random() * u)
+                  Math.floor(Math.random() * L)
                 );
             }),
             (this.handleSendHeartbeatSuccess = e => {
@@ -35930,64 +35923,67 @@
             }),
             (this.handleRunningGamesChange = () => {
               !(
-                this.instantiatedAt + L > Date.now() ||
-                O.default.lastFetchedCurrentQuests + L > Date.now()
+                this.instantiatedAt + C > Date.now() ||
+                A.default.lastFetchedCurrentQuests + C > Date.now()
               ) && this.maybeFetchCurrentQuests();
             }),
-            (this.handleStreamUpdate = e => {
-              let { streamKey: _, viewerIds: E } = e,
-                t = c();
-              if (null == t) {
+            (this.handleVoiceStateChange = () => {
+              let e = n.default.getCurrentUserActiveStream();
+              if (null == e) return;
+              let _ = (0, o.encodeStreamKey)(e),
+                E = d();
+              if (null == E) {
                 this.terminateHeartbeat(_);
                 return;
               }
-              if (0 === E.length) {
+              if (2 > T.default.countVoiceStatesForChannel(e.channelId)) {
                 this.sendHeartbeatTimeoutIds.has(_) &&
-                  ((0, S.sendHeartbeat)({
-                    questId: t.id,
+                  ((0, N.sendHeartbeat)({
+                    questId: E.id,
                     streamKey: _,
-                    applicationId: t.config.applicationId,
+                    applicationId: E.config.applicationId,
                   }),
                   this.terminateHeartbeat(_));
                 return;
               }
-              this.initiateHeartbeat({
-                streamKey: _,
-                applicationId: t.config.applicationId,
-                questId: t.id,
-              });
+              !this.sendHeartbeatTimeoutIds.has(_) &&
+                this.initiateHeartbeat({
+                  streamKey: _,
+                  applicationId: E.config.applicationId,
+                  questId: E.id,
+                });
             }),
             (this.handleStreamStart = e => {
               var _;
-              let { streamType: E, guildId: t, channelId: i } = e,
-                T = (0, o.encodeStreamKey)({
+              let { streamType: E, guildId: t, channelId: n } = e,
+                i = (0, o.encodeStreamKey)({
                   streamType: E,
                   guildId: t,
-                  channelId: i,
+                  channelId: n,
                   ownerId: r.default.getId(),
                 }),
-                S = c();
-              if (null == S) {
-                this.terminateHeartbeat(T);
+                s = d();
+              if (null == s) {
+                this.terminateHeartbeat(i);
                 return;
               }
-              (0, s.trackQuestEvent)(
-                S.id,
-                l.AnalyticEvents.QUEST_STREAMING_STARTED,
+              (0, S.trackQuestEvent)(
+                s.id,
+                u.AnalyticEvents.QUEST_STREAMING_STARTED,
                 {
                   media_session_id: I.default.getMediaSessionId(),
                   channel_type:
-                    null === (_ = a.default.getChannel(i)) || void 0 === _
+                    null === (_ = a.default.getChannel(n)) || void 0 === _
                       ? void 0
                       : _.type,
                   guild_id: t,
                 }
               ),
-                0 !== n.default.getViewerIds(T).length &&
+                !(2 > T.default.countVoiceStatesForChannel(n)) &&
                   this.initiateHeartbeat({
-                    streamKey: T,
-                    applicationId: S.config.applicationId,
-                    questId: S.id,
+                    streamKey: i,
+                    applicationId: s.config.applicationId,
+                    questId: s.id,
                   });
             }),
             (this.handleStreamClose = e => {
@@ -36001,11 +35997,12 @@
               RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
               STREAM_START: this.handleStreamStart,
               STREAM_CLOSE: this.handleStreamClose,
-              STREAM_UPDATE: this.handleStreamUpdate,
+              PASSIVE_UPDATE_V1: this.handleVoiceStateChange,
+              VOICE_STATE_UPDATES: this.handleVoiceStateChange,
             });
         }
       }
-      var U = new d();
+      var M = new U();
     },
     50733: function (e, _, E) {
       "use strict";
@@ -44509,8 +44506,6 @@
           "SUPER_REACTIONS_NITRO_MARKETING"),
         (u[(u.NITRO_DROP_2023_04_ANNOUNCEMENT_MODAL = 191)] =
           "NITRO_DROP_2023_04_ANNOUNCEMENT_MODAL"),
-        (u[(u.ACTIVITY_COACH_MARK_GARTIC_PHONE = 192)] =
-          "ACTIVITY_COACH_MARK_GARTIC_PHONE"),
         (u[(u.CLYDE_GUILD_HEADER_NUX = 193)] = "CLYDE_GUILD_HEADER_NUX"),
         (u[(u.CLYDE_CHAT_BAR_NUX = 194)] = "CLYDE_CHAT_BAR_NUX"),
         (u[(u.VOICE_MESSAGE_UPSELL_GUILD = 195)] =
@@ -44682,7 +44677,6 @@
           "INVENTORY_GUILD_SETTINGS_MODMIN_COACHMARK_ROLLBACK"),
         (u[(u.FRIEND_FINDER_CONTACTS_IN_NOTIFICATIONS = 338)] =
           "FRIEND_FINDER_CONTACTS_IN_NOTIFICATIONS"),
-        (u[(u.KRUNKER_STRIKE_COACHMARK = 339)] = "KRUNKER_STRIKE_COACHMARK"),
         (u[(u.OVERLAY_KEYBIND_NOTIFICATION = 340)] =
           "OVERLAY_KEYBIND_NOTIFICATION"),
         (u[(u.CHANNEL_LIST_V2_BROWSE_CHANNELS_NUX = 343)] =
@@ -51094,4 +51088,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.547c422c354e762d71fe.js.map
+//# sourceMappingURL=76039.541fcd2b43c148255d18.js.map

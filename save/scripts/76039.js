@@ -16889,10 +16889,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} other active threads",
         THREAD_BROWSER_ARCHIVED_HEADER: "older threads",
         THREAD_BROWSER_JOINED_HEADER: "{count} joined threads",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} Other Active Threads",
         THREAD_BROWSER_ACTIVE_COUNT: "Active Threads - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Older Threads",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} Joined Threads",
         THREAD_BROWSER_JOINED_COUNT: "Joined Threads - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}s ago",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}d ago",
@@ -16911,8 +16909,6 @@
           "There are no active threads.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "There are no archived threads.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Stay focused on a conversation with a thread, a temporary text channel.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Stay focused on a conversation with a thread - a temporary text channel.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filter Settings",
@@ -26222,8 +26218,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272711", ", Version Hash: ")
-          .concat("f88223e4105c690e1a7bbebd0129e9f63fb13efa")
+          .concat("272715", ", Version Hash: ")
+          .concat("49fc048ff3329081255e688d5c98c961a123f6f5")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29251,12 +29247,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272711"), "272711"));
+        let _ = parseInt(((e = "272715"), "272715"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272711"
+                "272715"
               )
             ),
             (_ = 0)),
@@ -51089,4 +51085,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.95b6e71d484119ac6143.js.map
+//# sourceMappingURL=76039.d5918812131840b4d66f.js.map

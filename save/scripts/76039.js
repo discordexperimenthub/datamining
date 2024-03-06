@@ -14613,10 +14613,9 @@
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
           "There was an error trying to load the application.",
         INTERACTION_RATE_LIMITED: "Slow down! You're clicking too fast.",
-        APPLICATION_ADD_TO_SERVER: "Add to Server",
         APPLICATION_ADD_BUTTON: "Add App",
-        APPLICATION_ADD_TO_SERVER_ACTIONS: "Add to Server Actions",
-        APPLICATION_ADD_TO_SERVER_ACTIONS_COPY: "Copy Add to Server URL",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Add App Actions",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "Copy Add App URL",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Members can't use this bot until you turn on permissions.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -24793,6 +24792,10 @@
         PACKAGE_ITEM_7_NAME: "Glitterbomb",
         PACKAGE_ITEM_8_NAME: "Empty Envelope",
         PACKAGE_ITEM_9_NAME: "Birthday Card",
+        PACKAGES_PACKAGES_OPENED: "Your Packages Opened",
+        PACKAGES_UNIQUE_PACKAGES_OPENED: "Packages Received",
+        PACKAGES_GLOBAL_PACKAGES_OPENED: "Total Packages Opened",
+        PACKAGES_OPENED_OUT_OF: "{count, number} / {total, number}",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
@@ -26225,8 +26228,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272555", ", Version Hash: ")
-          .concat("0de51664b5e082c5f989fc31003b0a2b01aa069c")
+          .concat("272561", ", Version Hash: ")
+          .concat("af6edec6d1c83136a201fad223fa085b9dad4b3e")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29253,12 +29256,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272555"), "272555"));
+        let _ = parseInt(((e = "272561"), "272561"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272555"
+                "272561"
               )
             ),
             (_ = 0)),
@@ -51088,4 +51091,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.5823a8313e8c62a7fa90.js.map
+//# sourceMappingURL=76039.717f2335328b17a3c9ce.js.map

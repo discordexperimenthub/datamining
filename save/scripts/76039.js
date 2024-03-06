@@ -52,6 +52,12 @@
         EMAIL_VERIFICATION_INSTRUCTIONS_HEADER: "Instructions Sent",
         EMAIL_VERIFICATION_INSTRUCTIONS_BODY:
           "\nWe sent instructions to change your password to **!!{email}!!**, please check both your inbox and spam folder.\n  ",
+        STAGE_VOICE_CHANNEL_TYPE: "Stage",
+        STORE_CHANNEL_TYPE: "Store",
+        NEWS_CHANNEL_TYPE: "Announcement",
+        VOICE_CHANNEL_TYPE: "Voice",
+        FORUM_CHANNEL_TYPE: "Forum",
+        TEXT_CHANNEL_TYPE: "Text",
         HELP: "Help",
         GOT_IT: "Got It",
         ALL_DONE: "All done",
@@ -24583,12 +24589,6 @@
         USER_SETTINGS_QUICK_ACTION_FORCE_NEW_USER_ONBOARDING:
           "Force new user onboarding flow",
         BETA: "Beta",
-        STAGE_VOICE_CHANNEL_TYPE: "Stage",
-        STORE_CHANNEL_TYPE: "Store",
-        NEWS_CHANNEL_TYPE: "Announcement",
-        VOICE_CHANNEL_TYPE: "Voice",
-        FORUM_CHANNEL_TYPE: "Forum",
-        TEXT_CHANNEL_TYPE: "Text",
         BAN_MULTIPLE_CONFIRM_TITLE:
           "Would you like to ban {count, plural, one {1 member} other {{count} members}}?",
         BAN_MULTIPLE_SUCCESS_TOAST: "Mass ban succesful",
@@ -26228,8 +26228,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272565", ", Version Hash: ")
-          .concat("dae4671c5a38f418949ff9b4252bfa19a5011e5b")
+          .concat("272579", ", Version Hash: ")
+          .concat("e05fd63dff03f5ebc59f3c10811c4366c78092bf")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29256,12 +29256,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272565"), "272565"));
+        let _ = parseInt(((e = "272579"), "272579"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272565"
+                "272579"
               )
             ),
             (_ = 0)),
@@ -51091,4 +51091,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.a1ffc569ef7904f47514.js.map
+//# sourceMappingURL=76039.130943fdf4c20668b31b.js.map

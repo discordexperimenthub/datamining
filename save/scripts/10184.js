@@ -304,11 +304,11 @@
             openInvoiceId: M,
             applicationId: x,
             referralTrialOfferId: w,
-            giftRecipient: O,
-            returnRef: P,
-            subscription: V,
+            giftRecipient: P,
+            returnRef: O,
+            subscription: b,
           } = null != e ? e : {},
-          b = !1,
+          V = !1,
           y = (0, s.v4)(),
           H = u.default.getCurrentUser(),
           j = (0, f.isPremiumExactly)(H, v.PremiumTypes.TIER_2);
@@ -321,10 +321,10 @@
                 ...r,
                 loadId: y,
                 subscriptionTier: A,
-                skuId: A,
+                skuId: (0, f.castPremiumSubscriptionAsSkuId)(A),
                 isGift: g,
                 giftMessage: R,
-                giftRecipient: O,
+                giftRecipient: P,
                 initialPlanId: t,
                 followupSKUInfo: C,
                 onClose: (e, t) => {
@@ -341,7 +341,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (b = !0),
+                  (V = !0),
                     null == p || p(),
                     !g && (0, a.setCanPlayWowMoment)(!0);
                 },
@@ -356,15 +356,15 @@
                 openInvoiceId: M,
                 applicationId: x,
                 referralTrialOfferId: w,
-                returnRef: P,
-                subscription: V,
+                returnRef: O,
+                subscription: b,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !b &&
+              !V &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: y,
                   payment_type:
@@ -381,8 +381,8 @@
                 }),
                 (0, l.clearError)(),
                 (0, o.clearPurchaseTokenAuthState)(),
-                null == E || E(b),
-                b && (null == _ || _());
+                null == E || E(V),
+                V && (null == _ || _());
             },
           }
         );
@@ -1544,4 +1544,4 @@
     },
   },
 ]);
-//# sourceMappingURL=10184.c0dbc94071c7f837193c.js.map
+//# sourceMappingURL=10184.e460942fa9adb4edae6d.js.map

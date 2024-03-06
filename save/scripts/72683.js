@@ -1613,7 +1613,9 @@
               isGift: !1,
               activeSubscription: null,
             }),
-            _ = c.SubscriptionPlanInfo[e].skuId,
+            _ = (0, a.castPremiumSubscriptionAsSkuId)(
+              c.SubscriptionPlanInfo[e].skuId
+            ),
             { priceOptions: E } = (0, i.default)({
               activeSubscription: null,
               skuIDs: [_],
@@ -1655,7 +1657,9 @@
               isGift: !1,
               activeSubscription: null,
             }),
-            E = c.SubscriptionPlanInfo[t].skuId,
+            E = (0, a.castPremiumSubscriptionAsSkuId)(
+              c.SubscriptionPlanInfo[t].skuId
+            ),
             { priceOptions: T } = (0, i.default)({
               activeSubscription: null,
               skuIDs: [E],
@@ -2141,7 +2145,7 @@
           ],
         });
       }
-      function w(e) {
+      function k(e) {
         let { onClose: t, analyticsLocationObject: n } = e,
           i = (0, g.usePremiumTrialOffer)();
         return (0, r.jsxs)("div", {
@@ -2177,7 +2181,7 @@
           ],
         });
       }
-      function k(e) {
+      function w(e) {
         let {
           headingText: t,
           context: n,
@@ -2541,7 +2545,7 @@
             });
           case N.PremiumUpsellTypes.CUSTOM_PROFILE_TRY_OUT_UPSELL:
           case N.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
-            return (0, r.jsx)(w, {});
+            return (0, r.jsx)(k, {});
           case N.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL:
           case N.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL:
           case N.PremiumUpsellTypes.CUSTOM_PROFILE_UPSELL:
@@ -2550,7 +2554,7 @@
             .VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
           case N.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
           case N.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED:
-            return (0, r.jsx)(k, {
+            return (0, r.jsx)(w, {
               trialOffer: P,
               discountOffer: R,
               headingText: t,
@@ -2562,7 +2566,7 @@
               O.default.captureMessage(
                 "Possible mishandling of a PremiumUpsellType: ".concat(u)
               ),
-              (0, r.jsx)(k, {
+              (0, r.jsx)(w, {
                 headingText: t,
                 context: i,
                 children: l,
@@ -2622,8 +2626,8 @@
               showIcon: j = !0,
               disableShine: F,
               applicationId: B,
-              giftMessage: w,
-              overrideDisabledButtonText: k,
+              giftMessage: k,
+              overrideDisabledButtonText: w,
               shinyButtonClassName: H,
               ...G
             } = e,
@@ -2721,7 +2725,7 @@
                 analyticsLocations: W,
                 premiumModalAnalyticsLocation: y,
                 applicationId: B,
-                giftMessage: w,
+                giftMessage: k,
               });
             };
           if (N)
@@ -2779,8 +2783,8 @@
               !(0, m.isNoneSubscription)(Z.planId) &&
               !q,
             $ = Q
-              ? null != k
-                ? k
+              ? null != w
+                ? w
                 : (function (e) {
                     let { ctaSubscriptionSkuId: t, currentPremiumType: n } = e,
                       r = null,
@@ -2798,7 +2802,9 @@
                       };
                     let l =
                         null != t
-                          ? P.PremiumSubscriptionSKUToPremiumType[t]
+                          ? P.PremiumSubscriptionSKUToPremiumType[
+                              (0, S.castPremiumSubscriptionAsSkuId)(t)
+                            ]
                           : null,
                       a = null != l ? P.PremiumTypeOrder[l] : null,
                       s = null != n ? P.PremiumTypeOrder[n] : null;
@@ -2993,8 +2999,8 @@
         j = n("619911"),
         F = n("698015"),
         B = n("75196"),
-        w = n("240481"),
-        k = n("719923"),
+        k = n("240481"),
+        w = n("719923"),
         H = n("309318"),
         G = n("446488"),
         K = n("182650"),
@@ -3219,8 +3225,8 @@
                 ? E(null == o ? void 0 : o.trialEndsAt).diff(E(), "d")
                 : 0,
             t = Q.SubscriptionPlanInfo[o.planIdFromItems],
-            n = k.default.formatPriceString(
-              k.default.getDefaultPrice(t.id),
+            n = w.default.formatPriceString(
+              w.default.getDefaultPrice(t.id),
               t.interval
             );
           return (0, d.jsx)(d.Fragment, {
@@ -3245,8 +3251,8 @@
         }
         if (!t && r && !a) {
           var P, R, L, O;
-          let e = k.default.formatPriceString(
-            k.default.getDefaultPrice(
+          let e = w.default.formatPriceString(
+            w.default.getDefaultPrice(
               n === Q.PremiumTypes.TIER_0
                 ? Q.SubscriptionPlans.PREMIUM_MONTH_TIER_0
                 : Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2
@@ -3261,7 +3267,7 @@
               0 === i
                 ? ee.default.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW.format(
                     {
-                      planName: (0, k.getTierDisplayName)(
+                      planName: (0, w.getTierDisplayName)(
                         null !==
                           (R =
                             Q.PREMIUM_SKU_TO_MONTHLY_PLAN[
@@ -3273,7 +3279,7 @@
                           ? R
                           : Q.SubscriptionPlans.PREMIUM_MONTH_TIER_2
                       ),
-                      duration: (0, k.formatIntervalDuration)({
+                      duration: (0, w.formatIntervalDuration)({
                         intervalType:
                           null !== (L = null == S ? void 0 : S.interval) &&
                           void 0 !== L
@@ -3323,7 +3329,7 @@
             (0, d.jsx)(es, {
               Icon: F.default,
               text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                maxUploadPremium: (0, k.getMaxFileSizeForPremiumType)(
+                maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
                   Q.PremiumTypes.TIER_0,
                   { useSpace: !1 }
                 ),
@@ -3533,7 +3539,7 @@
                 text: ee.default.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format(
                   {
                     numBoosts: Q.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                    percentageOff: (0, w.formatPercent)(
+                    percentageOff: (0, k.formatPercent)(
                       i,
                       Q.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100
                     ),
@@ -3543,7 +3549,7 @@
               (0, d.jsx)(es, {
                 Icon: F.default,
                 text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                  maxUploadPremium: (0, k.getMaxFileSizeForPremiumType)(
+                  maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
                     Q.PremiumTypes.TIER_2,
                     { useSpace: !1 }
                   ),
@@ -3568,7 +3574,7 @@
             (0, d.jsx)(es, {
               Icon: F.default,
               text: ee.default.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                maxUploadPremium: (0, k.getMaxFileSizeForPremiumType)(
+                maxUploadPremium: (0, w.getMaxFileSizeForPremiumType)(
                   Q.PremiumTypes.TIER_2,
                   { useSpace: !1 }
                 ),
@@ -3935,7 +3941,10 @@
               type: s.Spinner.Type.PULSING_ELLIPSIS,
               className: d.priceSpinner,
             });
-          let E = o.default.getForSkuAndInterval(t, n),
+          let E = o.default.getForSkuAndInterval(
+              (0, u.castPremiumSubscriptionAsSkuId)(t),
+              n
+            ),
             T =
               null != E
                 ? (0, u.getFormattedPriceForPlan)(E, void 0, !1, f)
@@ -4374,8 +4383,8 @@
             onSubscribeClick: j,
             onSecondaryClick: F,
             secondaryCTA: B,
-            subscribeButtonText: w,
-            showNewBadge: k = !1,
+            subscribeButtonText: k,
+            showNewBadge: w = !1,
             enableArtBoxShadow: H = !0,
             subscriptionTier: G = C.PremiumSubscriptionSKUs.TIER_2,
             isLoading: K = !1,
@@ -4418,7 +4427,7 @@
                   source: g,
                   location: h,
                   location_stack: q,
-                  sku_id: G,
+                  sku_id: (0, f.castPremiumSubscriptionAsSkuId)(G),
                 }));
         }, [z, G, K]);
         let en = H
@@ -4439,7 +4448,7 @@
                 className: en,
                 children: [
                   er,
-                  k
+                  w
                     ? (0, r.jsx)("img", {
                         className: P.sparkleBadge,
                         alt: "",
@@ -4573,7 +4582,7 @@
                           onClick: () => {
                             null == j || j(), y();
                           },
-                          buttonText: null != w ? w : t,
+                          buttonText: null != k ? k : t,
                         });
                       })(),
                     ],
@@ -5050,9 +5059,9 @@
               placeholderStyle: R(F, g),
               children: e,
             }));
-          let w = null != U ? U() : null;
+          let k = null != U ? U() : null;
           return (
-            (w = null != w ? w : x),
+            (k = null != k ? k : x),
             (0, i.jsx)(u.FocusRing, {
               ringTarget: this._containerRef,
               focusTarget: this._clickableRef,
@@ -5113,10 +5122,10 @@
                         children: e,
                       })
                     : e,
-                  null != w
+                  null != k
                     ? (0, i.jsx)("div", {
                         className: C.imageAccessory,
-                        children: w,
+                        children: k,
                       })
                     : null,
                 ],
@@ -5652,4 +5661,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.82f5ca46f6e8e9d994cd.js.map
+//# sourceMappingURL=72683.000015cc037bf5d890ef.js.map

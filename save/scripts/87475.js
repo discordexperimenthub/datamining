@@ -2802,182 +2802,185 @@
           UseThreadSidebar: function () {
             return h;
           },
-          QuietMode: function () {
+          FocusMode: function () {
             return m;
           },
-          EmojiPickerCollapsedSections: function () {
-            return I;
+          FocusModeExpiresAtSetting: function () {
+            return p;
           },
-          StickerPickerCollapsedSections: function () {
+          EmojiPickerCollapsedSections: function () {
             return T;
           },
-          SoundboardPickerCollapsedSections: function () {
+          StickerPickerCollapsedSections: function () {
             return v;
           },
-          ViewImageDescriptions: function () {
+          SoundboardPickerCollapsedSections: function () {
             return A;
           },
-          ShowCommandSuggestions: function () {
+          ViewImageDescriptions: function () {
             return N;
           },
-          AlwaysPreviewVideo: function () {
+          ShowCommandSuggestions: function () {
             return C;
           },
-          NotifyFriendsOnGoLive: function () {
+          AlwaysPreviewVideo: function () {
             return R;
           },
-          NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET: function () {
+          NotifyFriendsOnGoLive: function () {
             return O;
           },
-          NotificationCenterAckedBeforeId: function () {
+          NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET: function () {
             return L;
           },
-          InstallShortcutDesktop: function () {
+          NotificationCenterAckedBeforeId: function () {
             return y;
           },
-          InstallShortcutStartMenu: function () {
+          InstallShortcutDesktop: function () {
             return D;
           },
-          AllowActivityPartyPrivacyFriends: function () {
+          InstallShortcutStartMenu: function () {
             return P;
           },
-          AllowActivityPartyPrivacyVoiceChannel: function () {
+          AllowActivityPartyPrivacyFriends: function () {
             return M;
           },
-          MessageRequestRestrictedGuildIds: function () {
-            return b;
+          AllowActivityPartyPrivacyVoiceChannel: function () {
+            return U;
           },
-          MessageRequestRestrictedDefault: function () {
+          MessageRequestRestrictedGuildIds: function () {
             return w;
           },
-          NonSpamRetrainingOptIn: function () {
+          MessageRequestRestrictedDefault: function () {
             return G;
           },
-          DefaultGuildsRestricted: function () {
+          NonSpamRetrainingOptIn: function () {
             return F;
           },
-          RestrictedGuildIds: function () {
+          DefaultGuildsRestricted: function () {
             return k;
           },
-          FriendSourceFlagsSetting: function () {
+          RestrictedGuildIds: function () {
             return B;
           },
-          RtcPanelShowVoiceStates: function () {
+          FriendSourceFlagsSetting: function () {
             return x;
           },
-          ConvertEmoticons: function () {
+          RtcPanelShowVoiceStates: function () {
             return V;
           },
-          MessageDisplayCompact: function () {
+          ConvertEmoticons: function () {
             return H;
           },
-          SoundboardSettings: function () {
+          MessageDisplayCompact: function () {
             return W;
           },
-          DropsOptedOut: function () {
+          SoundboardSettings: function () {
             return Y;
           },
-          NativePhoneIntegrationEnabled: function () {
+          DropsOptedOut: function () {
             return z;
           },
-          AfkTimeout: function () {
+          NativePhoneIntegrationEnabled: function () {
             return j;
           },
-          ViewNsfwGuilds: function () {
+          AfkTimeout: function () {
             return K;
           },
-          ViewNsfwCommands: function () {
+          ViewNsfwGuilds: function () {
             return Z;
           },
-          DisableGamesTab: function () {
+          ViewNsfwCommands: function () {
             return X;
           },
-          EnableTTSCommand: function () {
+          DisableGamesTab: function () {
             return q;
           },
-          ExplicitContentFilter: function () {
+          EnableTTSCommand: function () {
             return J;
           },
-          DmSpamFilterV2: function () {
+          ExplicitContentFilter: function () {
             return Q;
           },
-          ShowCurrentGame: function () {
+          DmSpamFilterV2: function () {
             return $;
           },
-          StatusSetting: function () {
-            return et;
+          ShowCurrentGame: function () {
+            return ee;
           },
-          StatusExpiresAtSetting: function () {
+          StatusSetting: function () {
             return en;
           },
-          CustomStatusSetting: function () {
+          StatusExpiresAtSetting: function () {
             return ei;
           },
-          BroadcastAllowFriends: function () {
-            return eo;
+          CustomStatusSetting: function () {
+            return er;
           },
-          BroadcastAllowedGuildIds: function () {
+          BroadcastAllowFriends: function () {
             return es;
           },
-          BroadcastAllowedUserIds: function () {
+          BroadcastAllowedGuildIds: function () {
             return el;
           },
-          BroadcastAutoBroadcast: function () {
+          BroadcastAllowedUserIds: function () {
             return ea;
           },
-          ClipsAllowVoiceRecording: function () {
+          BroadcastAutoBroadcast: function () {
             return eu;
           },
-          InlineAttachmentMedia: function () {
+          ClipsAllowVoiceRecording: function () {
             return ec;
           },
-          InlineEmbedMedia: function () {
+          InlineAttachmentMedia: function () {
             return ed;
           },
-          RenderEmbeds: function () {
+          InlineEmbedMedia: function () {
             return e_;
           },
-          RenderReactions: function () {
+          RenderEmbeds: function () {
             return ef;
           },
-          TimezoneOffset: function () {
+          RenderReactions: function () {
             return eE;
           },
-          DeveloperMode: function () {
-            return eh;
+          TimezoneOffset: function () {
+            return eS;
           },
-          ClientThemeSettings: function () {
+          DeveloperMode: function () {
             return em;
           },
-          GifAutoPlay: function () {
+          ClientThemeSettings: function () {
             return ep;
           },
-          AnimateEmoji: function () {
+          GifAutoPlay: function () {
             return eI;
           },
-          AnimateStickers: function () {
+          AnimateEmoji: function () {
             return eT;
           },
+          AnimateStickers: function () {
+            return ev;
+          },
           ActivityRestrictedGuilds: function () {
-            return eA;
+            return eN;
           },
           ActivityJoiningRestrictedGuilds: function () {
-            return eC;
-          },
-          DefaultGuildsActivityRestricted: function () {
             return eR;
           },
-          DisableHomeAutoNav: function () {
+          DefaultGuildsActivityRestricted: function () {
             return eO;
           },
-          FamilyCenterEnabled: function () {
+          DisableHomeAutoNav: function () {
             return eL;
           },
-          LegacyUsernameDisabled: function () {
+          FamilyCenterEnabled: function () {
             return ey;
           },
-          ExplicitContentSettings: function () {
+          LegacyUsernameDisabled: function () {
             return eD;
+          },
+          ExplicitContentSettings: function () {
+            return eP;
           },
         }),
         n("222007");
@@ -3078,26 +3081,32 @@
           },
           e => o.BoolValue.create({ value: !!e })
         ),
-        p = [],
-        I = (0, l.defineProtoSetting)(
-          "textAndImages",
-          "emojiPickerCollapsedSections",
-          e => (null != e ? e : p),
+        p = (0, l.defineProtoSetting)(
+          "notifications",
+          "focusModeExpiresAtMs",
+          e => (null != e ? e : "0"),
           e => e
         ),
+        I = [],
         T = (0, l.defineProtoSetting)(
           "textAndImages",
-          "stickerPickerCollapsedSections",
-          e => (null != e ? e : p),
+          "emojiPickerCollapsedSections",
+          e => (null != e ? e : I),
           e => e
         ),
         v = (0, l.defineProtoSetting)(
           "textAndImages",
-          "soundboardPickerCollapsedSections",
-          e => (null != e ? e : p),
+          "stickerPickerCollapsedSections",
+          e => (null != e ? e : I),
           e => e
         ),
         A = (0, l.defineProtoSetting)(
+          "textAndImages",
+          "soundboardPickerCollapsedSections",
+          e => (null != e ? e : I),
+          e => e
+        ),
+        N = (0, l.defineProtoSetting)(
           "textAndImages",
           "viewImageDescriptions",
           e => {
@@ -3108,7 +3117,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        N = (0, l.defineProtoSetting)(
+        C = (0, l.defineProtoSetting)(
           "textAndImages",
           "showCommandSuggestions",
           e => {
@@ -3119,7 +3128,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        C = (0, l.defineProtoSetting)(
+        R = (0, l.defineProtoSetting)(
           "voiceAndVideo",
           "alwaysPreviewVideo",
           e => {
@@ -3130,17 +3139,17 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        R = (0, l.defineProtoSetting)(
+        O = (0, l.defineProtoSetting)(
           "notifications",
           "notifyFriendsOnGoLive",
           e => (null == e ? void 0 : e.value),
           e => o.BoolValue.create({ value: e })
         ),
-        O = "0",
-        L = (0, l.defineProtoSetting)(
+        L = "0",
+        y = (0, l.defineProtoSetting)(
           "notifications",
           "notificationCenterAckedBeforeId",
-          e => (null != e ? e : O),
+          e => (null != e ? e : L),
           e => e
         );
       (0, l.defineProtoSetting)(
@@ -3154,7 +3163,7 @@
         },
         e => o.BoolValue.create({ value: e })
       );
-      let y = (0, l.defineProtoSetting)(
+      let D = (0, l.defineProtoSetting)(
           "gameLibrary",
           "installShortcutDesktop",
           e => {
@@ -3165,7 +3174,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        D = (0, l.defineProtoSetting)(
+        P = (0, l.defineProtoSetting)(
           "gameLibrary",
           "installShortcutStartMenu",
           e => {
@@ -3176,7 +3185,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        P = (0, l.defineProtoSetting)(
+        M = (0, l.defineProtoSetting)(
           "privacy",
           "allowActivityPartyPrivacyFriends",
           e => {
@@ -3187,7 +3196,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        M = (0, l.defineProtoSetting)(
+        U = (0, l.defineProtoSetting)(
           "privacy",
           "allowActivityPartyPrivacyVoiceChannel",
           e => {
@@ -3198,14 +3207,14 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        U = [],
-        b = (0, l.defineProtoSetting)(
+        b = [],
+        w = (0, l.defineProtoSetting)(
           "privacy",
           "messageRequestRestrictedGuildIds",
-          e => (null != e ? e : U),
+          e => (null != e ? e : b),
           e => e
         ),
-        w = (0, l.defineProtoSetting)(
+        G = (0, l.defineProtoSetting)(
           "privacy",
           "defaultMessageRequestRestricted",
           e => {
@@ -3216,7 +3225,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        G = (0, l.defineProtoSetting)(
+        F = (0, l.defineProtoSetting)(
           "privacy",
           "nonSpamRetrainingOptIn",
           e => (null == e ? void 0 : e.value),
@@ -3233,13 +3242,13 @@
         },
         e => o.BoolValue.create({ value: e })
       );
-      let F = (0, l.defineProtoSetting)(
+      let k = (0, l.defineProtoSetting)(
           "privacy",
           "defaultGuildsRestricted",
           e => null != e && e,
           e => e
         ),
-        k = (0, l.defineProtoSetting)(
+        B = (0, l.defineProtoSetting)(
           "privacy",
           "restrictedGuildIds",
           e => (null != e ? e : []),
@@ -3256,7 +3265,7 @@
         },
         e => o.UInt32Value.create({ value: e })
       );
-      let B = (0, l.defineProtoSetting)(
+      let x = (0, l.defineProtoSetting)(
           "privacy",
           "friendSourceFlags",
           e => {
@@ -3267,7 +3276,7 @@
           },
           e => o.UInt32Value.create({ value: e })
         ),
-        x = (0, l.defineProtoSetting)(
+        V = (0, l.defineProtoSetting)(
           "debug",
           "rtcPanelShowVoiceStates",
           e => {
@@ -3278,7 +3287,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        V = (0, l.defineProtoSetting)(
+        H = (0, l.defineProtoSetting)(
           "textAndImages",
           "convertEmoticons",
           e => {
@@ -3289,7 +3298,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        H = (0, l.defineProtoSetting)(
+        W = (0, l.defineProtoSetting)(
           "textAndImages",
           "messageDisplayCompact",
           e => {
@@ -3300,7 +3309,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        W = (0, l.defineProtoSetting)(
+        Y = (0, l.defineProtoSetting)(
           "voiceAndVideo",
           "soundboardSettings",
           e => e,
@@ -3317,7 +3326,7 @@
         },
         e => o.BoolValue.create({ value: e })
       );
-      let Y = (0, l.defineProtoSetting)(
+      let z = (0, l.defineProtoSetting)(
           "privacy",
           "dropsOptedOut",
           e => {
@@ -3328,7 +3337,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        z = (0, l.defineProtoSetting)(
+        j = (0, l.defineProtoSetting)(
           "voiceAndVideo",
           "nativePhoneIntegrationEnabled",
           e => {
@@ -3339,7 +3348,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        j = (0, l.defineProtoSetting)(
+        K = (0, l.defineProtoSetting)(
           "voiceAndVideo",
           "afkTimeout",
           e => {
@@ -3350,7 +3359,7 @@
           },
           e => o.UInt32Value.create({ value: e })
         ),
-        K = (0, l.defineProtoSetting)(
+        Z = (0, l.defineProtoSetting)(
           "textAndImages",
           "viewNsfwGuilds",
           e => {
@@ -3361,7 +3370,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        Z = (0, l.defineProtoSetting)(
+        X = (0, l.defineProtoSetting)(
           "textAndImages",
           "viewNsfwCommands",
           e => {
@@ -3383,7 +3392,7 @@
         },
         e => o.BoolValue.create({ value: e })
       );
-      let X = (0, l.defineProtoSetting)(
+      let q = (0, l.defineProtoSetting)(
           "gameLibrary",
           "disableGamesTab",
           e => {
@@ -3394,7 +3403,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        q = (0, l.defineProtoSetting)(
+        J = (0, l.defineProtoSetting)(
           "textAndImages",
           "enableTtsCommand",
           e => {
@@ -3405,7 +3414,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        J = (0, l.defineProtoSetting)(
+        Q = (0, l.defineProtoSetting)(
           "textAndImages",
           "explicitContentFilter",
           e => {
@@ -3427,13 +3436,13 @@
         },
         e => o.UInt32Value.create({ value: e })
       );
-      let Q = (0, l.defineProtoSetting)(
+      let $ = (0, l.defineProtoSetting)(
           "textAndImages",
           "dmSpamFilterV2",
           e => (null != e ? e : r.DmSpamFilterV2.DEFAULT_UNSET),
           e => e
         ),
-        $ = (0, l.defineProtoSetting)(
+        ee = (0, l.defineProtoSetting)(
           "status",
           "showCurrentGame",
           e => {
@@ -3444,45 +3453,45 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        ee = new Set(Object.values(c.StatusTypes)),
-        et = (0, l.defineProtoSetting)(
+        et = new Set(Object.values(c.StatusTypes)),
+        en = (0, l.defineProtoSetting)(
           "status",
           "status",
-          e => (null != e && ee.has(e.value) ? e.value : c.StatusTypes.UNKNOWN),
+          e => (null != e && et.has(e.value) ? e.value : c.StatusTypes.UNKNOWN),
           e => o.StringValue.create({ value: e })
         ),
-        en = (0, l.defineProtoSetting)(
+        ei = (0, l.defineProtoSetting)(
           "status",
           "statusExpiresAtMs",
           e => (null != e ? e : "0"),
           e => e
         ),
-        ei = (0, l.defineProtoSetting)(
+        er = (0, l.defineProtoSetting)(
           "status",
           "customStatus",
           e => e,
           e => e
         ),
-        er = [],
-        eo = (0, l.defineProtoSetting)(
+        eo = [],
+        es = (0, l.defineProtoSetting)(
           "broadcast",
           "allowFriends",
           e => (null == e ? void 0 : e.value),
           e => o.BoolValue.create({ value: e })
         ),
-        es = (0, l.defineProtoSetting)(
-          "broadcast",
-          "allowedGuildIds",
-          e => (null != e ? e : er),
-          e => e
-        ),
         el = (0, l.defineProtoSetting)(
           "broadcast",
-          "allowedUserIds",
-          e => (null != e ? e : er),
+          "allowedGuildIds",
+          e => (null != e ? e : eo),
           e => e
         ),
         ea = (0, l.defineProtoSetting)(
+          "broadcast",
+          "allowedUserIds",
+          e => (null != e ? e : eo),
+          e => e
+        ),
+        eu = (0, l.defineProtoSetting)(
           "broadcast",
           "autoBroadcast",
           e => {
@@ -3493,7 +3502,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        eu = (0, l.defineProtoSetting)(
+        ec = (0, l.defineProtoSetting)(
           "clips",
           "allowVoiceRecording",
           e => {
@@ -3504,7 +3513,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        ec = (0, l.wrapSettingWithSelectiveSyncing)(
+        ed = (0, l.wrapSettingWithSelectiveSyncing)(
           (0, l.defineProtoSetting)(
             "textAndImages",
             "inlineAttachmentMedia",
@@ -3519,7 +3528,7 @@
           "text",
           "inlineAttachmentMedia"
         ),
-        ed = (0, l.wrapSettingWithSelectiveSyncing)(
+        e_ = (0, l.wrapSettingWithSelectiveSyncing)(
           (0, l.defineProtoSetting)(
             "textAndImages",
             "inlineEmbedMedia",
@@ -3534,7 +3543,7 @@
           "text",
           "inlineEmbedMedia"
         ),
-        e_ = (0, l.wrapSettingWithSelectiveSyncing)(
+        ef = (0, l.wrapSettingWithSelectiveSyncing)(
           (0, l.defineProtoSetting)(
             "textAndImages",
             "renderEmbeds",
@@ -3549,7 +3558,7 @@
           "text",
           "renderEmbeds"
         ),
-        ef = (0, l.wrapSettingWithSelectiveSyncing)(
+        eE = (0, l.wrapSettingWithSelectiveSyncing)(
           (0, l.defineProtoSetting)(
             "textAndImages",
             "renderReactions",
@@ -3564,7 +3573,7 @@
           "text",
           "renderReactions"
         ),
-        eE = (0, l.defineProtoSetting)(
+        eS = (0, l.defineProtoSetting)(
           "localization",
           "timezoneOffset",
           e => {
@@ -3581,7 +3590,7 @@
         e => null != e && e,
         e => e
       );
-      let eS = new Set([
+      let eg = new Set([
         s.ChannelListLayoutTypes.COZY,
         s.ChannelListLayoutTypes.COMPACT,
       ]);
@@ -3589,12 +3598,12 @@
         "appearance",
         "channelListLayout",
         e =>
-          null != e && eS.has(e.value)
+          null != e && eg.has(e.value)
             ? e.value
             : s.ChannelListLayoutTypes.COZY,
         e => o.StringValue.create({ value: e })
       );
-      let eg = new Set([
+      let eh = new Set([
         s.MessagePreviewTypes.ALL,
         s.MessagePreviewTypes.UNREADS,
         s.MessagePreviewTypes.NONE,
@@ -3603,10 +3612,10 @@
         "appearance",
         "messagePreviews",
         e =>
-          null != e && eg.has(e.value) ? e.value : s.MessagePreviewTypes.ALL,
+          null != e && eh.has(e.value) ? e.value : s.MessagePreviewTypes.ALL,
         e => o.StringValue.create({ value: e })
       );
-      let eh = (0, l.wrapSettingWithSelectiveSyncing)(
+      let em = (0, l.wrapSettingWithSelectiveSyncing)(
           (0, l.defineProtoSetting)(
             "appearance",
             "developerMode",
@@ -3616,7 +3625,7 @@
           "appearance",
           "developerMode"
         ),
-        em = (0, l.defineProtoSetting)(
+        ep = (0, l.defineProtoSetting)(
           "appearance",
           "clientThemeSettings",
           e => {
@@ -3637,7 +3646,7 @@
                 : void 0,
           })
         ),
-        ep = (0, l.wrapSettingWithOverride)(
+        eI = (0, l.wrapSettingWithOverride)(
           (0, l.wrapSettingWithSelectiveSyncing)(
             (0, l.defineProtoSetting)(
               "textAndImages",
@@ -3672,7 +3681,7 @@
                 : e.value;
             })
         ),
-        eI = (0, l.wrapSettingWithOverride)(
+        eT = (0, l.wrapSettingWithOverride)(
           (0, l.wrapSettingWithSelectiveSyncing)(
             (0, l.defineProtoSetting)(
               "textAndImages",
@@ -3707,7 +3716,7 @@
                 : e.value;
             })
         ),
-        eT = (0, l.wrapSettingWithOverride)(
+        ev = (0, l.wrapSettingWithOverride)(
           (0, l.wrapSettingWithSelectiveSyncing)(
             (0, l.defineProtoSetting)(
               "textAndImages",
@@ -3741,21 +3750,21 @@
                 : e.value;
             })
         ),
-        ev = [],
-        eA = (0, l.defineProtoSetting)(
+        eA = [],
+        eN = (0, l.defineProtoSetting)(
           "privacy",
           "activityRestrictedGuildIds",
-          e => (null != e ? e : ev),
+          e => (null != e ? e : eA),
           e => e
         ),
-        eN = [],
-        eC = (0, l.defineProtoSetting)(
+        eC = [],
+        eR = (0, l.defineProtoSetting)(
           "privacy",
           "activityJoiningRestrictedGuildIds",
-          e => (null != e ? e : eN),
+          e => (null != e ? e : eC),
           e => e
         ),
-        eR = (0, l.defineProtoSetting)(
+        eO = (0, l.defineProtoSetting)(
           "privacy",
           "defaultGuildsActivityRestricted",
           e =>
@@ -3765,7 +3774,7 @@
               ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS
               : r.GuildActivityStatusRestrictionDefault.OFF
         ),
-        eO = (0, l.defineProtoSetting)(
+        eL = (0, l.defineProtoSetting)(
           "communities",
           "disableHomeAutoNav",
           e => {
@@ -3776,13 +3785,13 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        eL = (0, l.defineProtoSetting)(
+        ey = (0, l.defineProtoSetting)(
           "privacy",
           "familyCenterEnabledV2",
           e => (null == e ? void 0 : e.value),
           e => o.BoolValue.create({ value: e })
         ),
-        ey = (0, l.defineProtoSetting)(
+        eD = (0, l.defineProtoSetting)(
           "privacy",
           "hideLegacyUsername",
           e => {
@@ -3793,7 +3802,7 @@
           },
           e => o.BoolValue.create({ value: e })
         ),
-        eD = (0, l.defineProtoSetting)(
+        eP = (0, l.defineProtoSetting)(
           "textAndImages",
           "explicitContentSettings",
           e => {
@@ -5301,7 +5310,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "273107"), "273107"), 10);
+          let o = parseInt(((n = "273109"), "273109"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7078,4 +7087,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.65296fd978ae9273f339.js.map
+//# sourceMappingURL=87475.361d29419e71176362e6.js.map

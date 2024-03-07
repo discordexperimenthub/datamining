@@ -47107,6 +47107,9 @@ html .progress__4ef76 {
 .menu__5cf7f .menuItemFocused__1490f .subMenuIcon_b0da00 {
   color: var(--interactive-hover);
 }
+.subMenuIcon_b0da00 {
+  margin-top: 1px;
+}
 .statusPickerModalMenu__13fe1 {
   width: 300px;
   overflow: hidden;
@@ -47164,9 +47167,20 @@ html .progress__4ef76 {
   align-items: flex-end;
   flex-direction: row-reverse;
 }
-.quietModeIcon__3b61a {
-  width: 18px;
-  height: 18px;
+.focusModeItem__7cff0 {
+  padding-left: 2px;
+}
+.focusModeIcon__2bad9 {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  margin-left: 8px;
+}
+.focusModeTitle_e1a011 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
 }
 .content__73f32 {
   box-sizing: border-box;
@@ -109959,4 +109973,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.eb29808a561876f4fc5f.css.map*/
+/*# sourceMappingURL=app.2f74aa2b5562e6109c6c.css.map*/

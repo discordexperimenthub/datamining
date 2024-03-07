@@ -3830,6 +3830,8 @@
         (I1.DESIGN_SYSTEM = "Design System"),
         (I1.DESIGN_SYSTEM_TEXT = "Design System (Text)"),
         (I1.DESIGN_SYSTEM_BUTTON = "Design System (Button)"),
+        (I1.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS =
+          "Design System (Experimental Buttons)"),
         (I1.DESIGN_SYSTEM_TABLE_ROW = "Design System (Table Row)"),
         (I1.DESIGN_SYSTEM_ALERT_MODAL = "Design System (Alert Modal)"),
         (I1.DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW =
@@ -4217,6 +4219,8 @@
           DESIGN_SYSTEM: "Design System",
           DESIGN_SYSTEM_TEXT: "Design System (Text)",
           DESIGN_SYSTEM_BUTTON: "Design System (Button)",
+          DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS:
+            "Design System (Experimental Buttons)",
           DESIGN_SYSTEM_TABLE_ROW: "Design System (Table Row)",
           DESIGN_SYSTEM_ALERT_MODAL: "Design System (Alert Modal)",
           DESIGN_SYSTEM_BACKGROUND_BLUR_VIEW:
@@ -17136,4 +17140,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.11fb863f9a952170d625.js.map
+//# sourceMappingURL=7273.086331d0c3c33d35bca8.js.map

@@ -5312,6 +5312,7 @@
         (el.ATTACHMENT_UPLOAD_STARTED = "attachment_upload_started"),
         (el.ATTACHMENT_UPLOAD_FINISHED = "attachment_upload_finished"),
         (el.IMAGE_LOADING_COMPLETED = "image_loading_completed"),
+        (el.MEDIA_PLAY_FINISHED = "media_play_finished"),
         (el.MESSAGE_SENT_WITH_ATTACHMENTS = "message_sent_with_attachments"),
         (el.MESSAGE_LINK_COPIED = "message_link_copied"),
         (el.MESSAGE_SWIPE_ACTION_SENT = "message_swipe_action_sent"),
@@ -17333,4 +17334,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.2bc88747cbe6ceaac288.js.map
+//# sourceMappingURL=7273.b2cfb71ca6d56a656469.js.map

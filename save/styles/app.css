@@ -3060,7 +3060,7 @@
   margin-left: 8px;
 }
 .title__746ed {
-  font-size: 1.0625rem;
+  font-size: 17px;
 }
 .developerResources_fdd04d:hover {
   cursor: pointer;
@@ -3085,8 +3085,8 @@
   color: var(--interactive-normal);
 }
 .backHeader__18afe {
-  font-size: 1.0625rem;
-  line-height: 1.5rem;
+  font-size: 17px;
+  line-height: 24px;
   color: var(--interactive-normal);
 }
 .theme-light .directoryContainer_d3edd9 {
@@ -109901,4 +109901,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.46640bc7378e9dada5c2.css.map*/
+/*# sourceMappingURL=app.d0b06d0a148c6ca35653.css.map*/

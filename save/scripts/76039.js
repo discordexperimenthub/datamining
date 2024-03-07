@@ -9378,6 +9378,8 @@
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Save on Nitro",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION:
           "Pay just **{discountedPrice}** a month for **3 months!** Then pay {regularPrice}.",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Pay just **{discountedPrice}** for **{numMonths, plural, one {a month!} other {{numMonths} months!}}** Then pay {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION:
           "Your !!{percent, number}!!% discount will end 3 months after purchase. After that you'll be charged {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
@@ -10855,8 +10857,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "free trial",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Pay just **{discountedPrice}** a month for your first **3 months** of Nitro. Pay {regularPrice} a month after the 3-month discount end.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Pay just **{discountedPrice}** a month for your first **{numMonths, plural, one {month} other {{numMonths} months}}** of Nitro. Pay {regularPrice} a month after the discount ends.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/month for 3 months\n\n{regularPrice}/month after 3 months",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/month for  **{numMonths, plural, one {one month} other {{numMonths} months}}**\n\n{regularPrice}/month after {numMonths, plural, one {one month} other {{numMonths} months}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Save !!{percent, number}!!% with annual subscription",
         BILLING_SUBTOTAL: "Subtotal",
@@ -26226,8 +26232,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("273068", ", Version Hash: ")
-          .concat("4aadc596c9098e57369d182a3fada8a1d00c9fb5")
+          .concat("273087", ", Version Hash: ")
+          .concat("f1475b9d2a19bf3aed7ee436a3181777d9537615")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29317,12 +29323,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273068"), "273068"));
+        let _ = parseInt(((e = "273087"), "273087"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273068"
+                "273087"
               )
             ),
             (_ = 0)),
@@ -51223,4 +51229,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.e7153c4afd930f86977b.js.map
+//# sourceMappingURL=76039.516d4de26bc194397167.js.map

@@ -9087,21 +9087,22 @@
           return await (0, r.generateImageFromCanvas)({
             assetsToLoad: d,
             drawImage: e => {
-              var s;
-              null != u
-                ? N(e, n, t)
-                : (0, a.default)(n)
-                  ? v(e, n, t)
-                  : (0, i.default)(n) &&
-                      n.name ===
-                        l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name
-                    ? _(e, n, t)
-                    : n.type === m.ActivityTypes.HANG_STATUS
-                      ? I(e, n, t)
-                      : T(e, n, t),
-                (null === (s = e.assetMap) || void 0 === s
+              var r;
+              e.setFont({ truncate: s.TextTruncationMethod.Truncate }),
+                null != u
+                  ? N(e, n, t)
+                  : (0, a.default)(n)
+                    ? v(e, n, t)
+                    : (0, i.default)(n) &&
+                        n.name ===
+                          l.default.get(m.PlatformTypes.LEAGUE_OF_LEGENDS).name
+                      ? _(e, n, t)
+                      : n.type === m.ActivityTypes.HANG_STATUS
+                        ? I(e, n, t)
+                        : T(e, n, t),
+                (null === (r = e.assetMap) || void 0 === r
                   ? void 0
-                  : s.has("Platform")) &&
+                  : r.has("Platform")) &&
                   e.drawImage(
                     "Platform",
                     {
@@ -9180,15 +9181,18 @@
             }),
             e.drawText(
               "".concat(t.name),
-              { x: o, y: c.fontPadding + 1 * c.lineHeight },
-              !0,
-              (
-                null === (a = e.assetMap) || void 0 === a
-                  ? void 0
-                  : a.has(c.AssetTypes.Platform)
-              )
-                ? c.titleMaxWidthPlatform
-                : c.titleMaxWidthNoPlatform
+              {
+                x: o,
+                y: c.fontPadding + 1 * c.lineHeight,
+                w: (
+                  null === (a = e.assetMap) || void 0 === a
+                    ? void 0
+                    : a.has(c.AssetTypes.Platform)
+                )
+                  ? c.titleMaxWidthPlatform
+                  : c.titleMaxWidthNoPlatform,
+              },
+              !0
             ),
             null != t.timestamps &&
               (e.setFont({ size: 14, weight: 400 }),
@@ -9234,15 +9238,18 @@
             }),
             e.drawText(
               "".concat(t.details),
-              { x: r, y: c.fontPadding + 1 * c.lineHeight },
-              !0,
-              (
-                null === (i = e.assetMap) || void 0 === i
-                  ? void 0
-                  : i.has(c.AssetTypes.Platform)
-              )
-                ? c.titleMaxWidthPlatform
-                : c.titleMaxWidthNoPlatform
+              {
+                x: r,
+                y: c.fontPadding + 1 * c.lineHeight,
+                w: (
+                  null === (i = e.assetMap) || void 0 === i
+                    ? void 0
+                    : i.has(c.AssetTypes.Platform)
+                )
+                  ? c.titleMaxWidthPlatform
+                  : c.titleMaxWidthNoPlatform,
+              },
+              !0
             ),
             e.setFont({ size: 14, weight: 400 }),
             e.drawText(
@@ -9290,15 +9297,18 @@
             }),
             e.drawText(
               p.default.Messages.STATUS_LEAD_IN_JUST,
-              { x: o, y: c.fontPadding + 1 * c.lineHeight },
-              !0,
-              (
-                null === (a = e.assetMap) || void 0 === a
-                  ? void 0
-                  : a.has(c.AssetTypes.Platform)
-              )
-                ? c.titleMaxWidthPlatform
-                : c.titleMaxWidthNoPlatform
+              {
+                x: o,
+                y: c.fontPadding + 1 * c.lineHeight,
+                w: (
+                  null === (a = e.assetMap) || void 0 === a
+                    ? void 0
+                    : a.has(c.AssetTypes.Platform)
+                )
+                  ? c.titleMaxWidthPlatform
+                  : c.titleMaxWidthNoPlatform,
+              },
+              !0
             ),
             e.setFont({ size: 14, weight: 400 });
           let u = "";
@@ -9349,15 +9359,18 @@
             }),
             e.drawText(
               "".concat(t.details),
-              { x: o, y: c.fontPadding + 1 * c.lineHeight },
-              !0,
-              (
-                null === (l = e.assetMap) || void 0 === l
-                  ? void 0
-                  : l.has("Platform")
-              )
-                ? c.titleMaxWidthPlatform
-                : c.titleMaxWidthNoPlatform
+              {
+                x: o,
+                y: c.fontPadding + 1 * c.lineHeight,
+                w: (
+                  null === (l = e.assetMap) || void 0 === l
+                    ? void 0
+                    : l.has("Platform")
+                )
+                  ? c.titleMaxWidthPlatform
+                  : c.titleMaxWidthNoPlatform,
+              },
+              !0
             ),
             e.setFont({ size: 14, weight: 400 }),
             e.drawText(
@@ -9421,15 +9434,15 @@
                 y:
                   c.fontPadding +
                   c.lineHeight * (null != t.timestamps ? 1 : 1.5),
+                w: (
+                  null === (a = e.assetMap) || void 0 === a
+                    ? void 0
+                    : a.has(c.AssetTypes.Platform)
+                )
+                  ? c.titleMaxWidthPlatform
+                  : c.titleMaxWidthNoPlatform,
               },
-              !0,
-              (
-                null === (a = e.assetMap) || void 0 === a
-                  ? void 0
-                  : a.has(c.AssetTypes.Platform)
-              )
-                ? c.titleMaxWidthPlatform
-                : c.titleMaxWidthNoPlatform
+              !0
             ),
             null != t.timestamps &&
               (e.setFont({ size: 14, weight: 500 }),
@@ -9782,13 +9795,14 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return s;
+            return r;
           },
         });
       var l = n("627445"),
         i = n.n(l),
         a = n("113149"),
-        s = class e {
+        s = n("695412"),
+        r = class e {
           getCanvas() {
             return this.canvas;
           }
@@ -9834,7 +9848,7 @@
                 weight: 300,
                 size: a.DEFAULT_FONT_SIZE,
                 family: "serif",
-                truncate: !1,
+                truncate: s.TextTruncationMethod.None,
               }),
               (this.canvas = e),
               (this.assetMap = t);
@@ -9996,68 +10010,106 @@
             this.context.roundRect(i, a, s, r, t),
             n ? this.context.fill() : this.context.stroke();
         }
-        drawText(e, t, n, l) {
+        drawText(e, t, n) {
+          var l, i;
           if (null == this.context) return;
           this.setContextProperties();
-          let i = null != l ? l : this.canvas.width - t.x,
-            a = this.context.measureText(e),
-            s = !1;
-          if (this.font.truncate) {
-            for (; a.width + r.TEXT_TRUNCATION_PADDING_PX > i; )
-              (e = e.slice(0, -4)), (a = this.context.measureText(e)), (s = !0);
-            s && (e += "...");
+          let s =
+              null !== (l = t.w) && void 0 !== l ? l : this.canvas.width - t.x,
+            u = this.context.measureText(e),
+            d = !1,
+            c = this.font.size,
+            f = (e, t) => {
+              null != this.context &&
+                (n
+                  ? this.context.fillText(e, t.x, t.y)
+                  : this.context.strokeText(e, t.x, t.y));
+            },
+            m = e => {
+              if (
+                null == this.context ||
+                u.width <= r.TEXT_TRUNCATION_PADDING_PX
+              )
+                return "";
+              let t = "".concat(e);
+              for (; u.width + r.TEXT_TRUNCATION_PADDING_PX > s; )
+                (t = t.slice(0, -4)),
+                  (u = this.context.measureText(t)),
+                  (d = !0);
+              return d && (t += "..."), t;
+            };
+          if (
+            (this.font.truncate === o.TextTruncationMethod.Truncate &&
+              f((e = m(e)), t),
+            this.font.truncate === o.TextTruncationMethod.Wrap)
+          ) {
+            let n = e.split(" "),
+              l = 1 / 0,
+              r = "",
+              o = 0;
+            for (
+              null != t.h &&
+              a(
+                (l = t.h / c) > 0,
+                "DiscordCavas: boundingBox.h of "
+                  .concat(t.h, " results in 0 visible lines with font size of ")
+                  .concat(c)
+              );
+              n.length > 0;
+
+            )
+              if ((u = this.context.measureText(r + " " + n[0])).width > s) {
+                let e = !1;
+                if ((o + 1 >= l && n.length > 0 && (e = !0), "" !== r))
+                  f(e ? m(r + "...") : r, { x: t.x, y: t.y + c * o }), (r = "");
+                else {
+                  let e = m(null !== (i = n.shift()) && void 0 !== i ? i : "");
+                  f(e, { x: t.x, y: t.y + c * o });
+                }
+                if (e) break;
+                o += 1;
+              } else
+                (r += " ".concat(n.shift())),
+                  0 === n.length && f(r, { x: t.x, y: t.y + c * o });
           }
-          return (
-            n
-              ? this.context.fillText(e, t.x, t.y)
-              : this.context.strokeText(e, t.x, t.y),
-            {
-              x: t.x,
-              y: t.y,
-              w: a.width,
-              h: a.actualBoundingBoxAscent + a.actualBoundingBoxDescent,
-            }
-          );
+          return {
+            x: t.x,
+            y: t.y,
+            w: u.width,
+            h: u.actualBoundingBoxAscent + u.actualBoundingBoxDescent,
+          };
         }
-        drawFormattedMessage(e, t, n, l) {
-          let i = this.font.weight,
-            a = (e, t, n, l) => {
-              let a;
+        drawFormattedMessage(e, t, n) {
+          this.font.truncate === o.TextTruncationMethod.Wrap &&
+            console.warn(
+              "DiscordCavas: `drawFormattedMessage` doesn't currently support wrapping formatted text. The results of this draw likely won't match your expectations."
+            );
+          let l = this.font.weight,
+            i = (e, t, n) => {
+              let i;
               if ("strong" === e.type) this.setFont({ weight: 700 });
               return (
                 Array.isArray(e.content)
-                  ? (a = s(e.content, t, n, l))
-                  : (a = this.drawText(e.content, t, n, l)),
-                this.setFont({ weight: i }),
-                a
+                  ? (i = a(e.content, t, n))
+                  : (i = this.drawText(e.content, t, n)),
+                this.setFont({ weight: l }),
+                i
               );
             },
-            s = (e, t, n, l) => {
-              var i;
-              let s = 0;
+            a = (e, t, n) => {
+              let l = 0;
               return (
                 e.forEach(e => {
-                  var i;
-                  let r = { x: t.x + s, y: t.y },
-                    o = (null != l ? l : 0) - s,
-                    u = a(e, r, n, null != l ? o : void 0);
-                  s +=
-                    null !== (i = null == u ? void 0 : u.w) && void 0 !== i
-                      ? i
-                      : 0;
+                  let { x: a, y: s, w: r, h: o } = t,
+                    u = null != r ? r - l : void 0,
+                    d = { x: a + l, y: s, w: u, h: o },
+                    c = i(e, d, n);
+                  null != c && (l += c.w);
                 }),
-                {
-                  x: t.x + s,
-                  y: t.y,
-                  w: s,
-                  h:
-                    null !== (i = this.font.size) && void 0 !== i
-                      ? i
-                      : r.DEFAULT_FONT_SIZE,
-                }
+                { x: t.x + l, y: t.y, w: l, h: this.font.size }
               );
             };
-          Array.isArray(e) ? s(e, t, n, l) : a(e, t, n, l);
+          Array.isArray(e) ? a(e, t, n) : i(e, t, n);
         }
         drawImage(e, t, n) {
           if (
@@ -10164,22 +10216,28 @@
     },
     695412: function (e, t, n) {
       "use strict";
-      var l, i, a, s;
+      var l, i, a, s, r, o;
       n.r(t),
         n.d(t, {
-          DiscordCanvasExporterOutputFormats: function () {
+          TextTruncationMethod: function () {
             return l;
           },
-          DrawResultStatus: function () {
+          DiscordCanvasExporterOutputFormats: function () {
             return i;
           },
+          DrawResultStatus: function () {
+            return a;
+          },
         }),
-        ((a = l || (l = {}))[(a.Base64 = 0)] = "Base64"),
-        (a[(a.Blob = 1)] = "Blob"),
-        (a[(a.File = 2)] = "File"),
-        ((s = i || (i = {}))[(s.Success = 0)] = "Success"),
-        (s[(s.Failure = 1)] = "Failure"),
-        (s[(s.ImageNotLoaded = 2)] = "ImageNotLoaded");
+        ((s = l || (l = {}))[(s.None = 0)] = "None"),
+        (s[(s.Truncate = 1)] = "Truncate"),
+        (s[(s.Wrap = 2)] = "Wrap"),
+        ((r = i || (i = {}))[(r.Base64 = 0)] = "Base64"),
+        (r[(r.Blob = 1)] = "Blob"),
+        (r[(r.File = 2)] = "File"),
+        ((o = a || (a = {}))[(o.Success = 0)] = "Success"),
+        (o[(o.Failure = 1)] = "Failure"),
+        (o[(o.ImageNotLoaded = 2)] = "ImageNotLoaded");
     },
     999317: function (e, t, n) {
       "use strict";
@@ -65683,4 +65741,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.a7edf2a0e9747f68ae49.js.map
+//# sourceMappingURL=60053.b904c7debdb8a692fc0c.js.map

@@ -33956,7 +33956,7 @@ html .progress__4ef76 {
 .hero_f37d0a {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
   padding: 32px 32px 16px;
   border-top-left-radius: var(--radius-md);
   border-top-right-radius: var(--radius-md);
@@ -33968,7 +33968,7 @@ html .progress__4ef76 {
   min-width: 0;
 }
 .popoutDescription__875c7 {
-  margin-top: 4px;
+  margin-top: 6px;
 }
 .heroImage_e3e7d9 {
   border-radius: var(--radius-md);
@@ -33996,6 +33996,9 @@ html .progress__4ef76 {
 .contentImage_ee0279 {
   border-radius: var(--radius-sm);
 }
+.badgeContainer__7ffff {
+  padding: 2px;
+}
 .container__35f96 {
   display: flex;
   margin: 8px 8px 0;
@@ -34012,6 +34015,10 @@ html .progress__4ef76 {
 }
 .container__35f96:hover .contentDescription__181da {
   color: var(--interactive-hover);
+}
+.container__35f96 .badgeContainer__626aa {
+  margin-top: 2px;
+  margin-bottom: -2px;
 }
 .contentDescription__181da {
   color: var(--text-secondary);
@@ -34037,7 +34044,6 @@ html .progress__4ef76 {
   align-items: center;
 }
 .badgesContainer__9dcef {
-  margin-top: 2px;
   display: flex;
   gap: 8px;
 }
@@ -109901,4 +109907,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.d0b06d0a148c6ca35653.css.map*/
+/*# sourceMappingURL=app.69542f087ba0f8e47330.css.map*/

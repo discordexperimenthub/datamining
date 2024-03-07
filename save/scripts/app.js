@@ -5688,6 +5688,7 @@
     375005: function (e, t, o) {
       "use strict";
       e.exports = {
+        badgeContainer: "badgeContainer__7ffff",
         contentImage: "contentImage_ee0279",
         emoji: "emoji_db6bae",
         emojiHotrail: "emojiHotrail_a7034f",

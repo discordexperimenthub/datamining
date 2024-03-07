@@ -53122,7 +53122,8 @@
             (this.headerLogoLightTheme = e.headerLogoLightTheme || null),
             (this.heroBackground = e.heroBackground || null),
             (this.heroVideo = e.heroVideo || null),
-            (this.entitlementBranchId = e.entitlementBranchId || null);
+            (this.entitlementBranchId = e.entitlementBranchId || null),
+            (this.benefits = e.benefits || []);
         }
       };
     },
@@ -65629,4 +65630,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.e0ab8db029219bc00448.js.map
+//# sourceMappingURL=60053.0a47965eb0d8b502e3e3.js.map

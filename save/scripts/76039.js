@@ -26243,8 +26243,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273110", ", Version Hash: ")
-          .concat("41cf48a9dae3e83c90a2a70e521993ae08667004")
+          .concat("273128", ", Version Hash: ")
+          .concat("910a76b093420ca8a9210aae82db138bf134b7bf")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29338,12 +29338,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273110"), "273110"));
+        let _ = parseInt(((e = "273128"), "273128"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273110"
+                "273128"
               )
             ),
             (_ = 0)),
@@ -36382,14 +36382,17 @@
                 let E = r.default.getMediaEngine();
                 E.rankRtcRegions(e)
                   .then(e => {
-                    S.verbose("RTC region latency test completed: ", e),
+                    S.verbose(
+                      "RTC region latency test completed, ranked regions are: ",
+                      e
+                    ),
                       (0, t.completeRTCLatencyTest)(e, _);
                   })
                   .catch(e => S.warn(e));
               } else
                 S.verbose(
-                  "RTC cached preferred region is ".concat(
-                    a.default.getPreferredRegion()
+                  "RTC cached ranked preferred regions are ".concat(
+                    a.default.getPreferredRegions()
                   )
                 );
             }),
@@ -51395,4 +51398,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.91573e6f5895f2bafe23.js.map
+//# sourceMappingURL=76039.2902587fa562afd59de4.js.map

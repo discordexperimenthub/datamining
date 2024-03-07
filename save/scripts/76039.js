@@ -26265,8 +26265,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273260", ", Version Hash: ")
-          .concat("fc7fe1bf69d70b372e62e3731f1e5ee32a89dfcf")
+          .concat("273266", ", Version Hash: ")
+          .concat("472651bafb5e5efc3ffc714cd09d66644c9481f2")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29360,12 +29360,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273260"), "273260"));
+        let _ = parseInt(((e = "273266"), "273266"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273260"
+                "273266"
               )
             ),
             (_ = 0)),
@@ -36539,41 +36539,6 @@
         }
       }
       var S = new T();
-    },
-    821240: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          getInappropriateConversationTakeoverForChannel: function () {
-            return o;
-          },
-        });
-      var t = E("764828");
-      function o(e) {
-        let _ = (function (e) {
-            let _ = t.default.getChannelSafetyWarnings(e);
-            return _.filter(
-              e =>
-                e.type ===
-                  t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
-                e.type ===
-                  t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2
-            );
-          })(e),
-          E = _.filter(
-            e =>
-              e.type ===
-                t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 &&
-              null != e.dismiss_timestamp
-          );
-        if (E.length > 0) return null;
-        let o = _.filter(
-          e =>
-            e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 &&
-            null == e.dismiss_timestamp
-        );
-        return 1 === o.length ? o[0] : null;
-      }
     },
     874200: function (e, _, E) {
       "use strict";
@@ -51426,4 +51391,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.cff11553182a9cb7b4d0.js.map
+//# sourceMappingURL=76039.7e22a8c0e36620c730b0.js.map

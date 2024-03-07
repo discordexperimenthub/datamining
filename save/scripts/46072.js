@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["86349"],
+  ["46072"],
   {
     203472: function (e, t, n) {
       "use strict";
@@ -1256,7 +1256,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return R;
+            return x;
           },
         }),
         n("70102"),
@@ -1336,7 +1336,7 @@
           }),
         });
       }
-      function x(e) {
+      function N(e) {
         let {
             users: t,
             guildId: n,
@@ -1371,8 +1371,8 @@
           }),
         });
       }
-      let N = [];
-      function R(e) {
+      let R = [];
+      function x(e) {
         let {
             channelId: t,
             guildId: s,
@@ -1382,8 +1382,8 @@
             disableInteraction: g = !1,
             maxVisibleUsers: v = 3,
           } = e,
-          [A, R] = r.useState(!1),
-          L = r.useRef(new d.DelayedCall(150, () => R(!1))),
+          [A, x] = r.useState(!1),
+          y = r.useRef(new d.DelayedCall(150, () => x(!1))),
           O = (0, o.useStateFromStoresArray)(
             [E.default, p.default],
             () => {
@@ -1391,27 +1391,27 @@
                 let e = E.default.getViewerIds(l.id);
                 return e.length > 0
                   ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish)
-                  : N;
+                  : R;
               }
               return l.type === _.ParticipantTypes.ACTIVITY
                 ? l.participants.size > 0
                   ? Array.from(l.participants)
                       .map(e => p.default.getUser(e))
                       .filter(S.isNotNullish)
-                  : N
-                : N;
+                  : R
+                : R;
             },
             [l]
           ),
-          y = r.useCallback(() => {
-            L.current.cancel(), R(!0);
+          L = r.useCallback(() => {
+            y.current.cancel(), x(!0);
           }, []),
           P = r.useCallback(() => {
-            L.current.delay();
+            y.current.delay();
           }, []),
           D = r.useCallback(
             (e, t) => {
-              y(),
+              L(),
                 (0, f.openContextMenuLazy)(
                   e,
                   async () => {
@@ -1423,11 +1423,11 @@
                   { onClose: P }
                 );
             },
-            [P, y]
+            [P, L]
           );
         if (0 === O.length) return null;
         if (m)
-          return (0, a.jsx)(x, {
+          return (0, a.jsx)(N, {
             maxVisibleUsers: v,
             users: O,
             guildId: s,
@@ -1460,7 +1460,7 @@
           (0, a.jsx)(h.default, {
             section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
             children: (0, a.jsx)("div", {
-              onMouseEnter: y,
+              onMouseEnter: L,
               onMouseLeave: P,
               children: (0, a.jsx)(c.Popout, {
                 renderPopout: () =>
@@ -1641,11 +1641,11 @@
             [t, A, T]
           );
         if (null == e) return null;
-        let x =
+        let N =
             S === p.ApplicationStreamPresets.PRESET_DOCUMENTS
               ? p.ApplicationStreamFPS.FPS_30
               : _,
-          N = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+          R = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
             let { value: t, label: n } = e,
               r = (0, o.default)(
                 p.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -1666,12 +1666,12 @@
               "stream-settings-fps-".concat(t)
             );
           }),
-          R = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+          x = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
             let { value: t, label: n } = e,
               r = (0, o.default)(
                 p.ApplicationStreamPresets.PRESET_CUSTOM,
                 t,
-                x,
+                N,
                 v,
                 I
               );
@@ -1682,7 +1682,7 @@
                 id: "stream-settings-resolution-".concat(t),
                 label: n,
                 checked: t === g,
-                action: () => M(r, t, x, E.AnalyticsObjectTypes.RESOLUTION),
+                action: () => M(r, t, N, E.AnalyticsObjectTypes.RESOLUTION),
               },
               "stream-settings-resolution-".concat(t)
             );
@@ -1691,11 +1691,11 @@
           children: [
             (0, a.jsx)(i.MenuGroup, {
               label: m.default.Messages.SCREENSHARE_FRAME_RATE,
-              children: N,
+              children: R,
             }),
             (0, a.jsx)(i.MenuGroup, {
               label: m.default.Messages.STREAM_RESOLUTION,
-              children: R,
+              children: x,
             }),
           ],
         });
@@ -1816,7 +1816,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return R;
+            return x;
           },
         }),
         n("222007");
@@ -1871,7 +1871,7 @@
           children: I.default.Messages.CLEAR_BUILD_OVERRIDE,
         });
       }
-      let x = i.throttle(
+      let N = i.throttle(
         () => {
           C.default.increment(
             {
@@ -1887,7 +1887,7 @@
         100,
         { trailing: !1 }
       );
-      class N extends r.PureComponent {
+      class R extends r.PureComponent {
         componentDidCatch(e, t) {
           this.triggerSoftCrash(e, t);
         }
@@ -1903,7 +1903,7 @@
             sentry_issue_id: a,
             uses_client_mods: (0, p.usesClientMods)(),
           }),
-            x(),
+            N(),
             T.default.cleanupDisplaySleep();
         }
         _handleSubmitReport() {
@@ -1961,14 +1961,14 @@
             (this.discordErrorsSet = !1);
         }
       }
-      var R = N;
+      var x = R;
     },
     160139: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return y;
           },
         });
       var a = n("37983");
@@ -1995,12 +1995,12 @@
         I = n("804392");
       let A = e => T.default.close(e),
         M = e => T.default.minimize(e),
-        x = (e, t) => {
+        N = (e, t) => {
           (0, g.isMac)() && !t.altKey
             ? T.default.fullscreen(e)
             : T.default.maximize(e);
         },
-        N = e => {
+        R = e => {
           let { windowKey: t, themeOverride: n, hasOpenLayer: r } = e;
           return (0, a.jsxs)("div", {
             className: s(I.typeWindows, (0, _.getThemeClass)(n), {
@@ -2020,7 +2020,7 @@
               }),
               (0, a.jsx)(l.Clickable, {
                 className: I.winButtonMinMax,
-                onClick: e => x(t, e),
+                onClick: e => N(t, e),
                 "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, a.jsx)(p.default, {}),
@@ -2035,7 +2035,7 @@
             ],
           });
         },
-        R = e => {
+        x = e => {
           let {
             focused: t,
             windowKey: n,
@@ -2075,7 +2075,7 @@
                       }),
                       (0, a.jsx)(l.Clickable, {
                         className: I.macButtonMaximize,
-                        onClick: e => x(n, e),
+                        onClick: e => N(n, e),
                         "aria-label":
                           v.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                         tabIndex: -1,
@@ -2092,7 +2092,7 @@
             ],
           });
         };
-      function L(e) {
+      function y(e) {
         let {
             focused: t,
             type: n,
@@ -2108,13 +2108,13 @@
         if (f) return null;
         switch (n) {
           case g.PlatformTypes.WINDOWS:
-            return (0, a.jsx)(N, {
+            return (0, a.jsx)(R, {
               windowKey: r,
               themeOverride: l,
               hasOpenLayer: h,
             });
           case g.PlatformTypes.OSX:
-            return (0, a.jsx)(R, {
+            return (0, a.jsx)(x, {
               focused: t,
               windowKey: r,
               frame: s,
@@ -2320,7 +2320,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-fc7fe1bf69d70b372e62e3731f1e5ee32a89dfcf",
+          release: "discord_web-472651bafb5e5efc3ffc714cd09d66644c9481f2",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2390,8 +2390,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "273260"), "273260")),
-          a.setTag("builtAt", String("1709850862203"));
+          a.setTag("buildNumber", ((e = "273266"), "273266")),
+          a.setTag("builtAt", String("1709851750739"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -2806,6 +2806,39 @@
             let a = s.default.getGuild(n.getGuildId());
             return null != a && a.id === e;
           });
+    },
+    821240: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          getInappropriateConversationTakeoverForChannel: function () {
+            return r;
+          },
+          shouldShowTakeoverForWarnings: function () {
+            return s;
+          },
+        });
+      var a = n("764828");
+      function r(e) {
+        let t = (function (e) {
+            let t = a.default.getChannelSafetyWarnings(e);
+            return t.filter(
+              e =>
+                e.type ===
+                a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+            );
+          })(e),
+          n = t.filter(e => null != e.dismiss_timestamp);
+        if (n.length > 0) return null;
+        let r = t.filter(e => null == e.dismiss_timestamp);
+        return 1 === r.length ? r[0] : null;
+      }
+      function s(e) {
+        let t = e.filter(
+          e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+        );
+        return t.length > 0 && t.every(e => null == e.dismiss_timestamp);
+      }
     },
     567469: function (e, t, n) {
       "use strict";
@@ -3451,18 +3484,18 @@
             onSelect: A,
             appContext: M = g.AppContext.APP,
           } = e,
-          x = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS),
-          N =
+          N = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS),
+          R =
             null !==
               (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) &&
             void 0 !== t
               ? t
               : null,
-          R = v(n, r, l),
-          L = (0, o.default)(N, M),
-          O = (0, u.default)(N, M, g.NOOP_NULL),
-          y =
-            null == N
+          x = v(n, r, l),
+          y = (0, o.default)(R, M),
+          O = (0, u.default)(R, M, g.NOOP_NULL),
+          L =
+            null == R
               ? (0, a.jsx)(s.MenuItem, {
                   id: "share-your-screen",
                   label: T.default.Messages.SHARE_YOUR_SCREEN,
@@ -3475,11 +3508,11 @@
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "stream-settings",
                           label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-                          children: L,
+                          children: y,
                         })
                       : null,
                     h ? O : null,
-                    x
+                    N
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "change-windows",
                           label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
@@ -3491,7 +3524,7 @@
                       id: "stop-streaming",
                       label: T.default.Messages.STOP_STREAMING,
                       icon: p.default,
-                      action: () => (0, d.default)(N),
+                      action: () => (0, d.default)(R),
                     }),
                   ],
                 });
@@ -3502,12 +3535,12 @@
             navId: "manage-streams",
             onClose: I,
             "aria-label":
-              null != N
+              null != R
                 ? T.default.Messages.STOP_STREAMING
                 : T.default.Messages.SHARE_YOUR_SCREEN,
             children: [
               (0, a.jsx)(s.MenuGroup, {
-                children: R.map(e => {
+                children: x.map(e => {
                   let { stream: t, username: n } = e;
                   return (0, a.jsx)(
                     s.MenuItem,
@@ -3523,7 +3556,7 @@
                   );
                 }),
               }),
-              c ? null : y,
+              c ? null : L,
             ],
           }),
         });
@@ -4698,15 +4731,15 @@
               src: n,
               ...g,
             }),
-            x = { ...t, backgroundColor: T };
+            N = { ...t, backgroundColor: T };
           return (
             null != A &&
               S &&
               v &&
-              ((x.backgroundImage = "url(".concat(A, ")")),
-              (x.backgroundSize = "cover")),
+              ((N.backgroundImage = "url(".concat(A, ")")),
+              (N.backgroundSize = "cover")),
             (0, a.jsx)("div", {
-              style: x,
+              style: N,
               className: E.background,
               children: m
                 ? (0, a.jsx)(o.default, { shouldAnimate: S, children: M })
@@ -5317,4 +5350,4 @@
     },
   },
 ]);
-//# sourceMappingURL=86349.45615c953437a8fbccbf.js.map
+//# sourceMappingURL=46072.9d462e187783a8e8edf2.js.map

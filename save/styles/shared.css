@@ -11021,7 +11021,8 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   min-height: 16px;
 }
 .autocompleteRowContentPrimary__533b6 {
-  flex: 0 2 auto;
+  flex-shrink: 1;
+  flex-grow: 0;
   overflow: hidden;
   min-width: 10ch;
 }
@@ -11039,7 +11040,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
   margin-top: 2px;
 }
 .autocompleteRowContentSecondary__6f0be {
-  flex: 1 1 auto;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 10ch;
+  min-width: 10ch;
   margin-left: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -23981,4 +23985,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.47e646697c5e4b8329d1.css.map*/
+/*# sourceMappingURL=shared.e04ac5cdf6854ce2ed4d.css.map*/

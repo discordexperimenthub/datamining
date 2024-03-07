@@ -1490,7 +1490,6 @@
         (Ir.AUTO_MODERATION_MENTION_RAID_DETECTION =
           "AUTO_MODERATION_MENTION_RAID_DETECTION"),
         (Ir.ACTIVATE_SERVER_SUBSCRIPTION = "ACTIVATE_SERVER_SUBSCRIPTION"),
-        (Ir.CALLSCOPE_MONITORING = "CALLSCOPE_MONITORING"),
         (Ir.AUTOMOD_QUARANTINED_USER_PROFILE =
           "AUTOMOD_QUARANTINED_USER_PROFILE"),
         (Ir.GUILD_ONBOARDING_UPSELL_NAGBAR = "GUILD_ONBOARDING_UPSELL_NAGBAR"),
@@ -2155,11 +2154,6 @@
             null != _ ? "/guilds/".concat(_, "/regions") : "/voice/regions",
           DEBUG_LOG: (_, E) => "/debug-logs/".concat(_, "/").concat(E),
           DEBUG_LOGS: _ => "/debug-logs/multi/".concat(_),
-          CALLSCOPE_LOGS: (_, E, I) =>
-            "/callscope/logs/"
-              .concat(_, "/user/")
-              .concat(E, "/")
-              .concat(encodeURIComponent(I)),
           REPORT_V2: "/reports",
           STAGE_REPORT: (_, E) =>
             "/reports/channels/".concat(_, "/messages/").concat(E),
@@ -5148,7 +5142,6 @@
           "drops_activity_panel_button_click"),
         (el.DROPS_ACTIVITY_PANEL_POPOVER_CTA_CLICK =
           "drops_activity_panel_popover_cta_click"),
-        (el.APPLICATION_COMMAND_BALKED = "application_command_balked"),
         (el.APPLICATION_COMMAND_BROWSER_OPENED =
           "application_command_browser_opened"),
         (el.APPLICATION_COMMAND_BROWSER_SCROLLED =
@@ -5192,6 +5185,7 @@
         (el.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED =
           "app_launcher_empty_state_encountered"),
         (el.APP_LAUNCHER_CLOSED = "app_launcher_closed"),
+        (el.APP_LAUNCHER_COMMAND_CLOSED = "app_launcher_command_closed"),
         (el.COMMANDS_MIGRATION_TOOLTIP_DISMISSED =
           "commands_migration_tooltip_dismissed"),
         (el.COMMANDS_MIGRATION_TOOLTIP_VIEWED =
@@ -17142,4 +17136,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.eefdee1e97722ec27af2.js.map
+//# sourceMappingURL=7273.11fb863f9a952170d625.js.map

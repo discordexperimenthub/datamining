@@ -19766,6 +19766,7 @@
         item: "item__4b324",
         lightBackgroundPill: "lightBackgroundPill_f6f09f",
         listItems: "listItems__61d04",
+        listItemsBasic: "listItemsBasic_c01252",
         mostPopularPill: "mostPopularPill__8c0b3",
         mostPopularText: "mostPopularText__13a42",
         newCircleIcon: "newCircleIcon_ba71bd",
@@ -20673,6 +20674,8 @@
         planComparisonTableContainer: "planComparisonTableContainer__5e152",
         premiumStackedTierCardsContainerFullscreen:
           "premiumStackedTierCardsContainerFullscreen__36cd5",
+        premiumStackedTierCardsContainerSettings:
+          "premiumStackedTierCardsContainerSettings__03d64",
         premiumTierCardsContainer: "premiumTierCardsContainer_e3c13b",
         premiumTierCardsContainerFullscreen:
           "premiumTierCardsContainerFullscreen__90547 premiumTierCardsContainer_e3c13b",

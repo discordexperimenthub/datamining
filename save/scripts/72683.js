@@ -3526,7 +3526,7 @@
                                 .NITRO_MARKETING_JUST_THE_BASICS,
                           }),
                         (0, d.jsx)("div", {
-                          className: m({ [et.listItems]: P }),
+                          className: m({ [et.listItemsBasic]: P }),
                           children: (0, d.jsx)(ec, {}),
                         }),
                       ],
@@ -3827,10 +3827,13 @@
                                 ee.default.Messages
                                   .NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD,
                             }),
-                          (0, d.jsx)(ef, {
-                            featureSet: a,
-                            isModal: u,
-                            isGift: o,
+                          (0, d.jsx)("div", {
+                            className: m({ [et.listItems]: N }),
+                            children: (0, d.jsx)(ef, {
+                              featureSet: a,
+                              isModal: u,
+                              isGift: o,
+                            }),
                           }),
                         ],
                       }),
@@ -5688,4 +5691,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.647f91e864c3c2da0330.js.map
+//# sourceMappingURL=72683.a68ac1a39b17e75c2d5d.js.map

@@ -24777,6 +24777,10 @@
         USER_SETTINGS_PACKAGES_HEADER_CTA: "Open your Mailbox",
         USER_SETTINGS_PACKAGES_MAILBOX_HEADER: "Mailbox",
         USER_SETTINGS_PACKAGE_COUNT: "x{count, number}",
+        USER_SETTINGS_PACKAGE_BANNER_DEFAULT: "Wow you have a lot of mail.",
+        USER_SETTINGS_PACKAGE_BANNER_PITY:
+          "How about you thank your mail delivery person?",
+        USER_SETTINGS_PACKAGE_BANNER_CTA: "Give Thanks",
         PACKAGE_ITEM_1_NAME: "Newspaper",
         PACKAGE_ITEM_2_NAME: "Bills",
         PACKAGE_ITEM_3_NAME: "Grocery Savings",
@@ -26222,8 +26226,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(L, ", Build Number: ")
-          .concat("272942", ", Version Hash: ")
-          .concat("0b0be8298f4ad83a4fcbdd47169070e0210e4543")
+          .concat("272961", ", Version Hash: ")
+          .concat("95612a54d85a82d5aff521115974dcc9994d5909")
       ),
         t.default.setTags({ appContext: l.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29252,12 +29256,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "272942"), "272942"));
+        let _ = parseInt(((e = "272961"), "272961"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "272942"
+                "272961"
               )
             ),
             (_ = 0)),
@@ -51151,4 +51155,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.1b7e3f10527e5bd1176a.js.map
+//# sourceMappingURL=76039.b6a5cf3aaeb18d0b7418.js.map

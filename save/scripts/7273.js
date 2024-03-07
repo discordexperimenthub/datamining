@@ -2860,6 +2860,7 @@
           MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
           USER_LOOTBOX_DATA: "/users/@me/lootboxes",
           USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
+          USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize",
         }),
         a5 = Object.freeze({
           INDEX: "/",
@@ -17141,4 +17142,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.2f0d633223470521adb7.js.map
+//# sourceMappingURL=7273.eefdee1e97722ec27af2.js.map

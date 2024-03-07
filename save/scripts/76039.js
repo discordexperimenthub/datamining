@@ -9318,7 +9318,15 @@
         PREMIUM_TRIAL_ACTION_SHEET_INTERVAL_CTA: "Continue to {duration} trial",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Continue to 30 day trial",
         PREMIUM_TRIAL_ACTION_SHEET_CUSTOM_APP_ICONS: "Custom app icons",
-        PREMIUM_TRIAL_ACTION_SHEET_CLIPS: "Clips early access",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL: "Enjoy {duration} on us",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Unleash more fun with {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Unique profile customizations and more!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Add a custom app icon, super reactions, and more!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} starts at {price}/month",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Welcome to Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "You’re ready to blast off!",
@@ -26243,8 +26251,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273159", ", Version Hash: ")
-          .concat("d2380435d3a6efcbc211bb967086c36efd78ca7c")
+          .concat("273166", ", Version Hash: ")
+          .concat("d88fba3975efc0679f4eae5550812caeb1a373c5")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29338,12 +29346,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273159"), "273159"));
+        let _ = parseInt(((e = "273166"), "273166"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273159"
+                "273166"
               )
             ),
             (_ = 0)),
@@ -51404,4 +51412,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.027f83642f54d3754e58.js.map
+//# sourceMappingURL=76039.d3a5c851ede145ccd90b.js.map

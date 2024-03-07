@@ -84,10 +84,10 @@
             return M;
           },
           NativeAppStates: function () {
-            return U;
+            return G;
           },
           GuildFeatures: function () {
-            return G;
+            return U;
           },
           SystemChannelFlags: function () {
             return aX;
@@ -132,10 +132,10 @@
             return b;
           },
           OverlayWidgetTypes: function () {
-            return m;
+            return K;
           },
           OverlayAvatarSizes: function () {
-            return K;
+            return m;
           },
           OverlayNotificationStatus: function () {
             return V;
@@ -312,10 +312,10 @@
             return oM;
           },
           AVATAR_MAX_SIZE: function () {
-            return oU;
+            return oG;
           },
           MAX_PTT_RELEASE_DELAY: function () {
-            return oG;
+            return oU;
           },
           BITRATE_MIN: function () {
             return od;
@@ -354,10 +354,10 @@
             return ob;
           },
           MAX_GROUP_DM_PARTICIPANTS: function () {
-            return om;
+            return oK;
           },
           MAX_GROUP_DM_BROADCAST_PARTICIPANTS: function () {
-            return oK;
+            return om;
           },
           MAX_GROUP_DM_STAFF_PARTICIPANTS: function () {
             return oV;
@@ -459,7 +459,7 @@
             return _M;
           },
           GuildNSFWContentLevel: function () {
-            return _G;
+            return _U;
           },
           ComponentActions: function () {
             return _d;
@@ -468,7 +468,7 @@
             return _u;
           },
           NAVIGATION_THROTTLE: function () {
-            return o2;
+            return o5;
           },
           PlatformTypes: function () {
             return _p;
@@ -480,7 +480,7 @@
             return _H;
           },
           FRIEND_SYNC_PLATFORM_TYPES: function () {
-            return o5;
+            return o2;
           },
           ACTIVITY_PLATFORM_TYPES: function () {
             return o6;
@@ -528,13 +528,13 @@
             return Ro;
           },
           PriceSetAssignmentPurchaseTypes: function () {
-            return _m;
+            return _K;
           },
           StripeElementsOptions: function () {
             return RR;
           },
           SubscriptionStatusTypes: function () {
-            return _K;
+            return _m;
           },
           InvoiceStatusTypes: function () {
             return _V;
@@ -606,10 +606,10 @@
             return _3;
           },
           LoginRequiredActions: function () {
-            return _2;
+            return _5;
           },
           VerificationTypes: function () {
-            return _5;
+            return _2;
           },
           MAX_REASON_LENGTH: function () {
             return RO;
@@ -687,7 +687,7 @@
             return Er;
           },
           CURRENT_APP_CONTEXT: function () {
-            return RU;
+            return RG;
           },
           DispatchApplicationStates: function () {
             return EN;
@@ -729,13 +729,13 @@
             return EM;
           },
           BuildPlatformTypes: function () {
-            return EG;
+            return EU;
           },
           HypeSquadHouses: function () {
             return Ed;
           },
           RANDOM_HYPESQUAD_HOUSE: function () {
-            return RG;
+            return RU;
           },
           KeyboardDeviceTypes: function () {
             return Eu;
@@ -780,13 +780,13 @@
             return RB;
           },
           SpoilerRenderSetting: function () {
-            return Em;
+            return EK;
           },
           OFF_PLATFORM_PREMIUM_PERKS: function () {
             return Rg;
           },
           PopoutWindowKeys: function () {
-            return EK;
+            return Em;
           },
           PopoutEventTypes: function () {
             return EV;
@@ -878,8 +878,8 @@
         s,
         P,
         M,
-        U,
         G,
+        U,
         d,
         u,
         p,
@@ -892,8 +892,8 @@
         Y,
         w,
         b,
-        m,
         K,
+        m,
         V,
         F,
         v,
@@ -932,8 +932,8 @@
         _s,
         _P,
         _M,
-        _U,
         _G,
+        _U,
         _d,
         _u,
         _p,
@@ -946,8 +946,8 @@
         _Y,
         _w,
         _b,
-        _m,
         _K,
+        _m,
         _V,
         _F,
         _v,
@@ -965,8 +965,8 @@
         _0,
         _1,
         _3,
-        _2,
         _5,
+        _2,
         _6,
         _4,
         _8,
@@ -996,8 +996,8 @@
         Es,
         EP,
         EM,
-        EU,
         EG,
+        EU,
         Ed,
         Eu,
         Ep,
@@ -1010,8 +1010,8 @@
         EY,
         Ew,
         Eb,
-        Em,
         EK,
+        Em,
         EV,
         EF,
         Ev,
@@ -1029,8 +1029,8 @@
         E0,
         E1,
         E3,
-        E2,
         E5,
+        E2,
         E6,
         E4,
         E8,
@@ -1060,8 +1060,8 @@
         Is,
         IP,
         IM,
-        IU,
         IG,
+        IU,
         Id,
         Iu,
         Ip,
@@ -1074,8 +1074,8 @@
         IY,
         Iw,
         Ib,
-        Im,
         IK,
+        Im,
         IV,
         IF,
         Iv,
@@ -1093,8 +1093,8 @@
         I0,
         I1,
         I3,
-        I2,
         I5,
+        I2,
         I6,
         I4,
         I8,
@@ -1124,8 +1124,8 @@
         es,
         eP,
         eM,
-        eU,
         eG,
+        eU,
         ed,
         eu,
         ep,
@@ -1138,8 +1138,8 @@
         eY,
         ew,
         eb,
-        em,
         eK,
+        em,
         eV,
         eF,
         ev,
@@ -1157,8 +1157,8 @@
         e0,
         e1,
         e3,
-        e2,
         e5,
+        e2,
         e6,
         e4,
         e8,
@@ -1188,8 +1188,8 @@
         as,
         aP,
         aM,
-        aU,
         aG,
+        aU,
         ad,
         au,
         ap,
@@ -1202,8 +1202,8 @@
         aY = I("298386"),
         aw = I("246111"),
         ab = I("637612"),
-        am = I("382825"),
-        aK = I("509043"),
+        aK = I("382825"),
+        am = I("509043"),
         aV = I("447669"),
         aF = I("718517"),
         av = I("492397"),
@@ -1225,12 +1225,12 @@
         (E3.PASSWORD_RECOVERY_PHONE_VERIFICATION =
           "PASSWORD_RECOVERY_VERIFY_PHONE"),
         (E3.PHONE_IP_AUTHORIZATION = "PHONE_IP_AUTHORIZATION"),
-        ((E2 = a || (a = {})).PASSWORD = "password"),
-        (E2.LOGIN_CODE = "login_code"),
-        ((E5 = o || (o = {})).NONE = "NONE"),
-        (E5.REGISTERING = "REGISTERING"),
-        (E5.REGISTER_AGE_GATE = "REGISTER_AGE_GATE"),
-        (E5.REGISTER_WITH_ERROR = "REGISTER_WITH_ERROR"),
+        ((E5 = a || (a = {})).PASSWORD = "password"),
+        (E5.LOGIN_CODE = "login_code"),
+        ((E2 = o || (o = {})).NONE = "NONE"),
+        (E2.REGISTERING = "REGISTERING"),
+        (E2.REGISTER_AGE_GATE = "REGISTER_AGE_GATE"),
+        (E2.REGISTER_WITH_ERROR = "REGISTER_WITH_ERROR"),
         ((E6 = R || (R = {})).OPEN = "OPEN"),
         (E6.SUBMITTING = "SUBMITTING"),
         (E6.CLOSED = "CLOSED"),
@@ -1515,10 +1515,10 @@
         (IN.APP_OPENED = "APP_OPENED"),
         (IN.APP_NOT_OPENED = "APP_NOT_OPENED"),
         (IN.ERROR = "ERROR"),
-        ((Ii = U || (U = {})).OPENING = "OPENING"),
+        ((Ii = G || (G = {})).OPENING = "OPENING"),
         (Ii.OPEN = "OPEN"),
         (Ii.OPEN_FAIL = "OPEN_FAIL"),
-        ((Ic = G || (G = {})).INVITE_SPLASH = "INVITE_SPLASH"),
+        ((Ic = U || (U = {})).INVITE_SPLASH = "INVITE_SPLASH"),
         (Ic.VIP_REGIONS = "VIP_REGIONS"),
         (Ic.VANITY_URL = "VANITY_URL"),
         (Ic.MORE_EMOJI = "MORE_EMOJI"),
@@ -1673,21 +1673,21 @@
         ((IM = Y || (Y = {})).ALWAYS = "ALWAYS"),
         (IM.NEVER = "NEVER"),
         (IM.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"),
-        ((IU = w || (w = {})).ALWAYS = "ALWAYS"),
-        (IU.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"),
-        ((IG = b || (b = {})).GUILDS = "GUILDS"),
-        (IG.VOICE = "VOICE"),
-        (IG.TEXT = "TEXT"),
-        (IG.GUILDS_TEXT = "GUILDS_TEXT"),
-        (IG.LOBBY_VOICE = "LOBBY_VOICE"),
-        ((Id = m || (m = {})).DEFAULT = "DEFAULT"),
+        ((IG = w || (w = {})).ALWAYS = "ALWAYS"),
+        (IG.ONLY_WHILE_SPEAKING = "ONLY_WHILE_SPEAKING"),
+        ((IU = b || (b = {})).GUILDS = "GUILDS"),
+        (IU.VOICE = "VOICE"),
+        (IU.TEXT = "TEXT"),
+        (IU.GUILDS_TEXT = "GUILDS_TEXT"),
+        (IU.LOBBY_VOICE = "LOBBY_VOICE"),
+        ((Id = K || (K = {})).DEFAULT = "DEFAULT"),
         (Id.PINNED = "PINNED"),
         (Id.UNPINNED = "UNPINNED"),
         (Id.IN_GAME = "IN_GAME"),
         (Id.IN_GAME_TEXT = "IN_GAME_TEXT"),
         (Id.IN_GAME_ACTIVE = "IN_GAME_ACTIVE"),
         (Id.IN_GAME_PREVIEW = "IN_GAME_PREVIEW"),
-        ((Iu = K || (K = {})).LARGE = "large"),
+        ((Iu = m || (m = {})).LARGE = "large"),
         (Iu.SMALL = "small"),
         ((Ip = V || (V = {}))[(Ip.ACTIVE = 0)] = "ACTIVE"),
         (Ip[(Ip.TIMED_OUT = 1)] = "TIMED_OUT"),
@@ -1730,14 +1730,14 @@
         (Ib[(Ib.LISTEN = 3)] = "LISTEN"),
         (Ib[(Ib.WATCH = 4)] = "WATCH"),
         (Ib[(Ib.JOIN_REQUEST = 5)] = "JOIN_REQUEST"),
-        ((Im = z || (z = {}))[(Im.RTC = 1)] = "RTC"),
-        (Im[(Im.IOS_APP = 2)] = "IOS_APP"),
-        (Im[(Im.WEB_APP = 3)] = "WEB_APP"),
-        (Im[(Im.ANDROID_APP = 4)] = "ANDROID_APP"),
-        (Im[(Im.SPEED_TEST = 5)] = "SPEED_TEST"),
-        ((IK = q || (q = {}))[(IK.DEFAULT = 0)] = "DEFAULT"),
-        (IK[(IK.HIGH_SCHOOL = 1)] = "HIGH_SCHOOL"),
-        (IK[(IK.COLLEGE = 2)] = "COLLEGE");
+        ((IK = z || (z = {}))[(IK.RTC = 1)] = "RTC"),
+        (IK[(IK.IOS_APP = 2)] = "IOS_APP"),
+        (IK[(IK.WEB_APP = 3)] = "WEB_APP"),
+        (IK[(IK.ANDROID_APP = 4)] = "ANDROID_APP"),
+        (IK[(IK.SPEED_TEST = 5)] = "SPEED_TEST"),
+        ((Im = q || (q = {}))[(Im.DEFAULT = 0)] = "DEFAULT"),
+        (Im[(Im.HIGH_SCHOOL = 1)] = "HIGH_SCHOOL"),
+        (Im[(Im.COLLEGE = 2)] = "COLLEGE");
       let aZ = "@me",
         aj = "@favorites",
         az = "@guilds-empty-nux",
@@ -1746,7 +1746,7 @@
         a0 = "0",
         a1 = "null",
         a3 = "1096190356233670716",
-        a2 = Object.freeze({
+        a5 = Object.freeze({
           USER: _ => "/users/".concat(_),
           USER_RELATIONSHIPS: function () {
             let _ =
@@ -2091,7 +2091,7 @@
           CONNECTIONS_AUTHORIZE_LINK_DEVICE: (_, E) =>
             "/connections/"
               .concat(_, "/authorize?two_way_link=true&two_way_link_type=")
-              .concat(am.TwoWayLinkType.DEVICE_CODE, "&two_way_user_code=")
+              .concat(aK.TwoWayLinkType.DEVICE_CODE, "&two_way_user_code=")
               .concat(E),
           CONNECTIONS_CALLBACK: _ => "/connections/".concat(_, "/callback"),
           CONNECTION: (_, E) =>
@@ -2856,7 +2856,7 @@
           USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
           USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize",
         }),
-        a5 = Object.freeze({
+        a2 = Object.freeze({
           INDEX: "/",
           APP: "/app",
           APP_WITH_INVITE_AND_GUILD_ONBOARDING: _ =>
@@ -3016,8 +3016,8 @@
           ACCOUNT_STANDING: "/account-standing",
           QUESTS: _ => "/quests/".concat(_),
         }),
-        a6 = (0, aV.wrapPaths)(a2),
-        a4 = (0, aV.wrapPaths)(a5, [":", "?", "@"]);
+        a6 = (0, aV.wrapPaths)(a5),
+        a4 = (0, aV.wrapPaths)(a2, [":", "?", "@"]);
       ((IV = $ || ($ = {}))[(IV.INSTANCE = 1)] = "INSTANCE"),
         (IV[(IV.JOIN = 2)] = "JOIN"),
         (IV[(IV.SYNC = 16)] = "SYNC"),
@@ -3101,8 +3101,8 @@
         (IQ.SEARCH = "search"),
         (IQ.MISC = "misc");
       let oM = 128,
-        oU = 1024,
-        oG = 2e3,
+        oG = 1024,
+        oU = 2e3,
         od = 8e3,
         ou = 64e3,
         op = 96e3,
@@ -3115,8 +3115,8 @@
         oY = 50,
         ow = 150,
         ob = 300,
-        om = 10,
-        oK = 20,
+        oK = 10,
+        om = 20,
         oV = 25,
         oF = "#0000",
         ov = 240,
@@ -4135,24 +4135,24 @@
         (I3.MESSAGE_REMIX_BUTTON = "MESSAGE_REMIX_BUTTON"),
         (I3.CUSTOM_STATUS_MANAGER = "CUSTOM_STATUS_MANAGER"),
         (I3.APP_COMMAND = "APP_COMMAND"),
-        ((I2 = _L || (_L = {})).GIFT = "gift"),
-        (I2.BUY = "buy"),
-        (I2.BOX_ART = "box_art"),
-        (I2.PERK = "perk"),
-        (I2.NONE = "none"),
-        (I2.TIER_1 = "tier_1"),
-        (I2.TIER_2 = "tier_2"),
-        (I2.TIER_3 = "tier_3"),
-        (I2.TRIAL = "trial"),
-        (I2.FPS = "fps"),
-        (I2.RESOLUTION = "resolution"),
-        (I2.ACTIVITY = "activity"),
-        (I2.REACTION = "reaction"),
-        (I2.CANT_ADD_OR_REMOVE = "cant_add_or_remove"),
-        (I2.REACTION_OVERFLOW = "reaction_overflow"),
-        ((I5 = _D || (_D = {})).PRIMARY = "primary"),
-        (I5.SECONDARY = "secondary"),
-        (I5.DISMISS = "dismiss");
+        ((I5 = _L || (_L = {})).GIFT = "gift"),
+        (I5.BUY = "buy"),
+        (I5.BOX_ART = "box_art"),
+        (I5.PERK = "perk"),
+        (I5.NONE = "none"),
+        (I5.TIER_1 = "tier_1"),
+        (I5.TIER_2 = "tier_2"),
+        (I5.TIER_3 = "tier_3"),
+        (I5.TRIAL = "trial"),
+        (I5.FPS = "fps"),
+        (I5.RESOLUTION = "resolution"),
+        (I5.ACTIVITY = "activity"),
+        (I5.REACTION = "reaction"),
+        (I5.CANT_ADD_OR_REMOVE = "cant_add_or_remove"),
+        (I5.REACTION_OVERFLOW = "reaction_overflow"),
+        ((I2 = _D || (_D = {})).PRIMARY = "primary"),
+        (I2.SECONDARY = "secondary"),
+        (I2.DISMISS = "dismiss");
       let o1 = { page: "Direct", object: "Web URL" },
         o3 = Object.freeze({
           TEXT_PLAYGROUND: "Text Playground",
@@ -4317,7 +4317,7 @@
         ((e_ = _M || (_M = {})).DIRECT_MESSAGE = "Direct Message"),
         (e_.SMS = "SMS"),
         (e_.EMAIL = "Email"),
-        ((eE = _U || (_U = {})).SHARE = "Share"),
+        ((eE = _G || (_G = {})).SHARE = "Share"),
         (eE.COPY = "Copy"),
         (eE.CONTACTS = "Contacts"),
         (eE.GMAIL = "Gmail"),
@@ -4328,7 +4328,7 @@
         (eE.TWITTER = "Twitter"),
         (eE.MESSENGER = "Messenger"),
         (eE.TELEGRAM = "Telegram"),
-        ((eI = _G || (_G = {}))[(eI.DEFAULT = 0)] = "DEFAULT"),
+        ((eI = _U || (_U = {}))[(eI.DEFAULT = 0)] = "DEFAULT"),
         (eI[(eI.EXPLICIT = 1)] = "EXPLICIT"),
         (eI[(eI.SAFE = 2)] = "SAFE"),
         (eI[(eI.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
@@ -4420,7 +4420,7 @@
           "TOGGLE_REACTION_POPOUT"),
         (ea.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
         (ea.VOICE_MESSAGE_SEND = "VOICE_MESSAGE_SEND");
-      let o2 = 50;
+      let o5 = 50;
       ((eo = _p || (_p = {})).TWITCH = "twitch"),
         (eo.YOUTUBE = "youtube"),
         (eo.SKYPE = "skype"),
@@ -4464,7 +4464,7 @@
           GAME_INVITE_FRAGMENT: "/_discord/join?secret=",
           AUTHORIZATION_CANCEL_FRAGMENT: "/_discord/auth?cancel=true",
         });
-      let o5 = new Set(["facebook", "contacts"]),
+      let o2 = new Set(["facebook", "contacts"]),
         o6 = new Set([
           "spotify",
           "xbox",
@@ -4485,7 +4485,7 @@
           15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530,
           11342935, 12745742, 11027200, 10038562, 9936031, 5533306,
         ],
-        o9 = (0, aK.hex2int)(ah.default.BRAND_500);
+        o9 = (0, am.hex2int)(ah.default.BRAND_500);
       af(null != o9, "Brand color could not be parsed");
       let R_ = o9;
       ((eT = _f || (_f = {})).ROLE = "ROLE"),
@@ -4533,7 +4533,7 @@
       let Re = Object.freeze({ 0: 0, 1: 2, 2: 7, 3: 14 }),
         Ra = 7,
         Ro = 0;
-      ((en = _m || (_m = {}))[(en.DEFAULT = 0)] = "DEFAULT"),
+      ((en = _K || (_K = {}))[(en.DEFAULT = 0)] = "DEFAULT"),
         (en[(en.GIFT = 1)] = "GIFT"),
         (en[(en.SALE = 2)] = "SALE"),
         (en[(en.PREMIUM_TIER_1 = 3)] = "PREMIUM_TIER_1"),
@@ -4549,7 +4549,7 @@
           },
         ],
       });
-      ((eL = _K || (_K = {}))[(eL.UNPAID = 0)] = "UNPAID"),
+      ((eL = _m || (_m = {}))[(eL.UNPAID = 0)] = "UNPAID"),
         (eL[(eL.ACTIVE = 1)] = "ACTIVE"),
         (eL[(eL.PAST_DUE = 2)] = "PAST_DUE"),
         (eL[(eL.CANCELED = 3)] = "CANCELED"),
@@ -5756,30 +5756,30 @@
         (eM[(eM.EMBEDDED_FIRST_PARTY = 1048576)] = "EMBEDDED_FIRST_PARTY"),
         (eM[(eM.APPLICATION_COMMAND_BADGE = 8388608)] =
           "APPLICATION_COMMAND_BADGE"),
-        ((eU = _Q || (_Q = {})).MFA_WARNING = "MFA_WARNING"),
-        (eU.INVITE = "INVITE"),
-        (eU.QUICKSWITCHER = "QUICKSWITCHER"),
-        (eU.GUILD_BOOSTING = "PREMIUM_GUILD_SUBSCRIPTIONS"),
-        (eU.GUILD_BOOSTING_GRACE_PERIOD = "PREMIUM_GUILD_GRACE_PERIOD"),
-        (eU.PUBLIC_UPSELL = "PUBLIC_UPSELL"),
-        (eU.MAX_MEMBER_COUNT_100 = "MAX_MEMBER_COUNT_100"),
-        (eU.MAX_MEMBER_COUNT_250 = "MAX_MEMBER_COUNT_250"),
-        (eU.MAX_MEMBER_COUNT = "MAX_MEMBER_COUNT"),
-        (eU.STAGE_CHANNEL_EVENT = "STAGE_CHANNEL_EVENT"),
-        (eU.HUB_LINK = "HUB_LINK"),
-        (eU.GUILD_BANNER = "GUILD_BANNER"),
-        (eU.CHANNEL_OPT_IN = "CHANNEL_OPT_IN"),
-        (eU.ROLE_SUBSCRIPTION_MWEB_PURCHASE =
+        ((eG = _Q || (_Q = {})).MFA_WARNING = "MFA_WARNING"),
+        (eG.INVITE = "INVITE"),
+        (eG.QUICKSWITCHER = "QUICKSWITCHER"),
+        (eG.GUILD_BOOSTING = "PREMIUM_GUILD_SUBSCRIPTIONS"),
+        (eG.GUILD_BOOSTING_GRACE_PERIOD = "PREMIUM_GUILD_GRACE_PERIOD"),
+        (eG.PUBLIC_UPSELL = "PUBLIC_UPSELL"),
+        (eG.MAX_MEMBER_COUNT_100 = "MAX_MEMBER_COUNT_100"),
+        (eG.MAX_MEMBER_COUNT_250 = "MAX_MEMBER_COUNT_250"),
+        (eG.MAX_MEMBER_COUNT = "MAX_MEMBER_COUNT"),
+        (eG.STAGE_CHANNEL_EVENT = "STAGE_CHANNEL_EVENT"),
+        (eG.HUB_LINK = "HUB_LINK"),
+        (eG.GUILD_BANNER = "GUILD_BANNER"),
+        (eG.CHANNEL_OPT_IN = "CHANNEL_OPT_IN"),
+        (eG.ROLE_SUBSCRIPTION_MWEB_PURCHASE =
           "ROLE_SUBSCRIPTION_MWEB_PURCHASE"),
-        (eU.COMMANDS_MIGRATION = "COMMANDS_MIGRATION"),
-        (eU.APPLICATION_SUBSCRIPTION_EXPIRATION =
+        (eG.COMMANDS_MIGRATION = "COMMANDS_MIGRATION"),
+        (eG.APPLICATION_SUBSCRIPTION_EXPIRATION =
           "APPLICATION_SUBSCRIPTION_EXPIRATION"),
-        (eU.HUB_STUDY_ROOM = "HUB_STUDY_ROOM"),
-        (eU.GUILD_ONBOARDING_UPSELL = "GUILD_ONBOARDING_UPSELL"),
-        (eU.CLIPS_EDUCATION = "CLIPS_EDUCATION"),
-        (eU.LINKED_ROLES_ADMIN = "LINKED_ROLES_ADMIN"),
-        (eU.SUMMARIES = "SUMMARIES"),
-        (eU.SUMMARIES_ENABLED = "SUMMARIES_ENABLED");
+        (eG.HUB_STUDY_ROOM = "HUB_STUDY_ROOM"),
+        (eG.GUILD_ONBOARDING_UPSELL = "GUILD_ONBOARDING_UPSELL"),
+        (eG.CLIPS_EDUCATION = "CLIPS_EDUCATION"),
+        (eG.LINKED_ROLES_ADMIN = "LINKED_ROLES_ADMIN"),
+        (eG.SUMMARIES = "SUMMARIES"),
+        (eG.SUMMARIES_ENABLED = "SUMMARIES_ENABLED");
       let RT = Object.freeze({
           STORAGE_MANIFEST: (_, E) =>
             "".concat(_, "/storage/").concat(E, "/MANIFEST"),
@@ -5796,10 +5796,10 @@
         }),
         Rr = 864e5,
         RN = 2592e5;
-      ((eG = _J || (_J = {})).NORMAL = "normal"),
-        (eG.MINIMUM = "minimum"),
-        (eG.NO_CHAT = "no-chat"),
-        (eG.FULL_SCREEN = "full-screen"),
+      ((eU = _J || (_J = {})).NORMAL = "normal"),
+        (eU.MINIMUM = "minimum"),
+        (eU.NO_CHAT = "no-chat"),
+        (eU.FULL_SCREEN = "full-screen"),
         ((ed = _Z || (_Z = {})).THEATRE = "theatre"),
         (ed.FULL_SCREEN = "full-screen"),
         (ed.PIP = "pip"),
@@ -6071,8 +6071,8 @@
           "REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE"),
         (eh.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE =
           "REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE"),
-        ((_2 || (_2 = {})).UPDATE_PASSWORD = "update_password"),
-        ((ey = _5 || (_5 = {})).CAPTCHA = "captcha"),
+        ((_5 || (_5 = {})).UPDATE_PASSWORD = "update_password"),
+        ((ey = _2 || (_2 = {})).CAPTCHA = "captcha"),
         (ey.EMAIL_OR_PHONE = "email_or_phone"),
         (ey.PHONE = "phone"),
         (ey.EMAIL = "email"),
@@ -6122,8 +6122,8 @@
         (eb.TOP_RIGHT = "top-right"),
         (eb.BOTTOM_LEFT = "bottom-left"),
         (eb.BOTTOM_RIGHT = "bottom-right"),
-        ((em = _7 || (_7 = {})).VIDEO = "VIDEO"),
-        (em.EMBED_IFRAME = "EMBED_IFRAME"),
+        ((eK = _7 || (_7 = {})).VIDEO = "VIDEO"),
+        (eK.EMBED_IFRAME = "EMBED_IFRAME"),
         ((_9 || (_9 = {})).GIF = "GIF");
       let Rn = Object.freeze({
         GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
@@ -6134,156 +6134,156 @@
           commandId: "-9",
         },
       });
-      ((eK = E_ || (E_ = {})).ENABLE_MIC_FIREFOX = "204392448"),
-        (eK.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
-        (eK.ENABLE_MIC_CHROME = "205093487"),
-        (eK.PERMISSIONS_TUTORIAL = "206029707"),
-        (eK.TWITCH_INTEGRATION = "212112068"),
-        (eK.YOUTUBE_INTEGRATION = "215162978"),
-        (eK.VOICE_CONNECTION_ERRORS = "115001310031"),
-        (eK.NO_INPUT_DETECTED = "214925018"),
-        (eK.OVERLAY_INTRODUCTION = "217659737"),
-        (eK.PERMISSIONS_LOCKOUT = "218449248"),
-        (eK.SETTING_UP_TWO_FACTOR = "219576828"),
-        (eK.WEBHOOKS_INTRODUCTION = "228383668"),
-        (eK.QUICK_SWITCHER_TUTORIAL = "115000070311"),
-        (eK.SEARCH_INDEXING = "115000414847"),
-        (eK.USING_SEARCH = "115000468588"),
-        (eK.RICH_PRESENCE_INTRODUCTION = "115001557452"),
-        (eK.CORRUPT_INSTALLATION = "115004307527"),
-        (eK.SPOTIFY_AUTO_PAUSED = "115002872212"),
-        (eK.SPOTIFY_CONNECTION = "360000167212"),
-        (eK.SPELLCHECK = "360000877191"),
-        (eK.INVALID_INVITES = "360001556852"),
-        (eK.GDPR_ACCOUNT_DELETE = "212500837"),
-        (eK.GDPR_ACCOUNT_DISABLE = "360004066391"),
-        (eK.GDPR_REQUEST_DATA = "360004027692"),
-        (eK.DATA_PRIVACY_CONTROLS = "360004109911"),
-        (eK.ACCESSIBILITY_TRACKING = "360035966492"),
-        (eK.NEARBY_FRIENDS = "360014894392"),
-        (eK.APPLICATION_STORE_OVERVIEW = "360012656092"),
-        (eK.APPLICATION_STORE_EARLY_ACCESS = "360027392172"),
-        (eK.GIFTING = "360020776291"),
-        (eK.GUILD_VANITY_URL = "115001542132"),
-        (eK.GUILD_SUBSCRIPTIONS = "360028038352"),
-        (eK.GUILD_BANNER_SPLASH = "360028716472"),
-        (eK.GUILD_INVITE_SPLASH = "4415841146391"),
-        (eK.GUILD_COMMUNITY_FEATURE = "360047132851"),
-        (eK.BUILD_OVERRIDE_EMBED = "360030114991"),
-        (eK.SUPPORTED_BROWSERS = "213491697"),
-        (eK.ANNOUNCEMENT_CHANNELS = "360032008192"),
-        (eK.GUILD_ANALYTICS = "360032807371"),
-        (eK.BILLING = "360017693772"),
-        (eK.PAYMENT_AUTHORIZATION_CHARGE = "4402712000663"),
-        (eK.FUNIMATION_PROMOTION = "360036587771"),
-        (eK.PUBLIC_GUILD_GUILDLINES = "360035969312"),
-        (eK.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES = "14078261239831"),
-        (eK.SYSTEM_DMS = "360036118732"),
-        (eK.MISSING_ENTITLEMENT = "360016422832"),
-        (eK.AGE_GATE = "360040724612"),
-        (eK.STREAM_FAILED = "360040816151"),
-        (eK.REDUCED_MOTION = "360040613412"),
-        (eK.NOISE_SUPPRESSION = "360040843952"),
-        (eK.APPLICATION_VERIFICATION = "360040720412"),
-        (eK.NSFW_AGE_GATING =
+      ((em = E_ || (E_ = {})).ENABLE_MIC_FIREFOX = "204392448"),
+        (em.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),
+        (em.ENABLE_MIC_CHROME = "205093487"),
+        (em.PERMISSIONS_TUTORIAL = "206029707"),
+        (em.TWITCH_INTEGRATION = "212112068"),
+        (em.YOUTUBE_INTEGRATION = "215162978"),
+        (em.VOICE_CONNECTION_ERRORS = "115001310031"),
+        (em.NO_INPUT_DETECTED = "214925018"),
+        (em.OVERLAY_INTRODUCTION = "217659737"),
+        (em.PERMISSIONS_LOCKOUT = "218449248"),
+        (em.SETTING_UP_TWO_FACTOR = "219576828"),
+        (em.WEBHOOKS_INTRODUCTION = "228383668"),
+        (em.QUICK_SWITCHER_TUTORIAL = "115000070311"),
+        (em.SEARCH_INDEXING = "115000414847"),
+        (em.USING_SEARCH = "115000468588"),
+        (em.RICH_PRESENCE_INTRODUCTION = "115001557452"),
+        (em.CORRUPT_INSTALLATION = "115004307527"),
+        (em.SPOTIFY_AUTO_PAUSED = "115002872212"),
+        (em.SPOTIFY_CONNECTION = "360000167212"),
+        (em.SPELLCHECK = "360000877191"),
+        (em.INVALID_INVITES = "360001556852"),
+        (em.GDPR_ACCOUNT_DELETE = "212500837"),
+        (em.GDPR_ACCOUNT_DISABLE = "360004066391"),
+        (em.GDPR_REQUEST_DATA = "360004027692"),
+        (em.DATA_PRIVACY_CONTROLS = "360004109911"),
+        (em.ACCESSIBILITY_TRACKING = "360035966492"),
+        (em.NEARBY_FRIENDS = "360014894392"),
+        (em.APPLICATION_STORE_OVERVIEW = "360012656092"),
+        (em.APPLICATION_STORE_EARLY_ACCESS = "360027392172"),
+        (em.GIFTING = "360020776291"),
+        (em.GUILD_VANITY_URL = "115001542132"),
+        (em.GUILD_SUBSCRIPTIONS = "360028038352"),
+        (em.GUILD_BANNER_SPLASH = "360028716472"),
+        (em.GUILD_INVITE_SPLASH = "4415841146391"),
+        (em.GUILD_COMMUNITY_FEATURE = "360047132851"),
+        (em.BUILD_OVERRIDE_EMBED = "360030114991"),
+        (em.SUPPORTED_BROWSERS = "213491697"),
+        (em.ANNOUNCEMENT_CHANNELS = "360032008192"),
+        (em.GUILD_ANALYTICS = "360032807371"),
+        (em.BILLING = "360017693772"),
+        (em.PAYMENT_AUTHORIZATION_CHARGE = "4402712000663"),
+        (em.FUNIMATION_PROMOTION = "360036587771"),
+        (em.PUBLIC_GUILD_GUILDLINES = "360035969312"),
+        (em.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES = "14078261239831"),
+        (em.SYSTEM_DMS = "360036118732"),
+        (em.MISSING_ENTITLEMENT = "360016422832"),
+        (em.AGE_GATE = "360040724612"),
+        (em.STREAM_FAILED = "360040816151"),
+        (em.REDUCED_MOTION = "360040613412"),
+        (em.NOISE_SUPPRESSION = "360040843952"),
+        (em.APPLICATION_VERIFICATION = "360040720412"),
+        (em.NSFW_AGE_GATING =
           "115000084051#h_5206f3f2-0ee4-4380-b50a-25319e45bc7c"),
-        (eK.NSFW_GUILD_GUIDELINES = "1500005292701"),
-        (eK.PREMIUM_TRIAL = "360042410272"),
-        (eK.VOICE_VIDEO_TROUBLESHOOTING = "360045138471"),
-        (eK.GUILD_GETTING_STARTED = "360045138571"),
-        (eK.CHANNEL_FOLLOWING = "360028384531"),
-        (eK.WEBHOOKS = "228383668"),
-        (eK.INTEGRATIONS = "360045093012"),
-        (eK.PARTNER_CODE_OF_CONDUCT = "360024871991"),
-        (eK.MAX_MEMBERS = "360052841734"),
-        (eK.STICKERS = "360056891113"),
-        (eK.BLACK_FRIDAY_2020_PROMOTION = "360057438734"),
-        (eK.KEYBOARD_NAVIGATION = "1500000056121"),
-        (eK.DM_COULD_NOT_BE_DELIVERED = "360060145013"),
-        (eK.EPHEMERAL_MESSAGES = "1500000580222"),
-        (eK.OSX_SOUNDSHARE = "1500006741102"),
-        (eK.STAGE_CHANNEL_GUIDELINES = "1500010879761"),
-        (eK.STAGE_DISCOVERY = "1500011599542"),
-        (eK.STICKERS_UPLOAD = "4403089981975"),
-        (eK.STREAM_QUALITY_SETTINGS =
+        (em.NSFW_GUILD_GUIDELINES = "1500005292701"),
+        (em.PREMIUM_TRIAL = "360042410272"),
+        (em.VOICE_VIDEO_TROUBLESHOOTING = "360045138471"),
+        (em.GUILD_GETTING_STARTED = "360045138571"),
+        (em.CHANNEL_FOLLOWING = "360028384531"),
+        (em.WEBHOOKS = "228383668"),
+        (em.INTEGRATIONS = "360045093012"),
+        (em.PARTNER_CODE_OF_CONDUCT = "360024871991"),
+        (em.MAX_MEMBERS = "360052841734"),
+        (em.STICKERS = "360056891113"),
+        (em.BLACK_FRIDAY_2020_PROMOTION = "360057438734"),
+        (em.KEYBOARD_NAVIGATION = "1500000056121"),
+        (em.DM_COULD_NOT_BE_DELIVERED = "360060145013"),
+        (em.EPHEMERAL_MESSAGES = "1500000580222"),
+        (em.OSX_SOUNDSHARE = "1500006741102"),
+        (em.STAGE_CHANNEL_GUIDELINES = "1500010879761"),
+        (em.STAGE_DISCOVERY = "1500011599542"),
+        (em.STICKERS_UPLOAD = "4403089981975"),
+        (em.STREAM_QUALITY_SETTINGS =
           "360040816151#h_01F02D2RBXRNRC20WS3ZHMMCTE"),
-        (eK.PREMIUM_DETAILS = "115000435108"),
-        (eK.PREMIUM_DETAILS_CANCEL_SUB =
+        (em.PREMIUM_DETAILS = "115000435108"),
+        (em.PREMIUM_DETAILS_CANCEL_SUB =
           "115000435108#h_01GFV3PNMEJEF92W0XX69MEE2W"),
-        (eK.LOCALIZED_PRICING = "4407269525911"),
-        (eK.SERVER_DISCOVERY = "360023968311"),
-        (eK.SERVER_DISCOVERY_GUIDELINES = "4409308485271"),
-        (eK.DISABLE_GUILD_COMMUNICATION = "4413305239191"),
-        (eK.GUILD_AUTOMOD_BLOCKED_MESSAGE = "4421269296535"),
-        (eK.GUILD_AUTOMOD_REGEX = "10069840290711"),
-        (eK.GUILD_RAID = "4421269296535"),
-        (eK.INVITE_DISABLED = "8458903738647"),
-        (eK.BLOCKED_PAYMENTS = "4708041338391"),
-        (eK.ROLE_SUBSCRIPTION_TRIAL = "5278912413335"),
-        (eK.HIGHLIGHTS = "5304469213079"),
-        (eK.FORCED_COLORS = "1500010454681"),
-        (eK.ROLE_STYLES = "1500010454681"),
-        (eK.CREATOR_TERMS = "5330075836311"),
-        (eK.CREATOR_FAQ = "5371495812631"),
-        (eK.CREATOR_POLICY = "10575066024983"),
-        (eK.POGGERMODE = "5706956956695"),
-        (eK.GUILD_HOME = "6156116949911"),
-        (eK.SERVER_WEB_PAGES = "4673515000983"),
-        (eK.TEXT_IN_VOICE = "4412085582359"),
-        (eK.QUARANTINE = "6461420677527"),
-        (eK.FORUMS = "6208479917079"),
-        (eK.GUILD_PROFILES = "4409388345495"),
-        (eK.XBOX_CONNECTION = "360003953831"),
-        (eK.PS_CONNECTION = "4419534960919"),
-        (eK.VERIFICATION_FAQ = "6181726888215"),
-        (eK.ACTIVITY_STATUS_SETTINGS = "7931156448919"),
-        (eK.MESSAGE_REQUESTS = "7924992471191"),
-        (eK.RNA_CHANGELOG = "8537198296727"),
-        (eK.CONNECTION_DETAILS = "8063233404823"),
-        (eK.CONNECTION_DETAILS_ADMIN = "10388356626711"),
-        (eK.APP_DIRECTORY_HEADER_LEARN_MORE = "9360431966359"),
-        (eK.BOT_DATA_ACCESS = "7933951485975"),
-        (eK.HIGHLIGHTS_NOTIFICATIONS = "5304469213079"),
-        (eK.CRUNCHYROLL_CONNECTION = "9929188048023"),
-        (eK.ACTIVE_NITRO_BOGO_PROMOTION = "10167328543127"),
-        (eK.APPLICATION_COMMAND_PERMISSION_V3_WHAT_CHANGED = "10952896421783"),
-        (eK.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT = "10952702911639"),
-        (eK.SUPER_REACTIONS = "12102061808663"),
-        (eK.SOUNDBOARD = "12612888127767"),
-        (eK.NEW_LAYOUT = "12654190110999"),
-        (eK.GUILD_BOOSTING_FAQ = "360028038352"),
-        (eK.CLYDE_AI = "13066317497239"),
-        (eK.NITRO = "115000435108"),
-        (eK.ACTIVITIES = "4422142836759"),
-        (eK.VOICE_MESSAGES = "13091096725527"),
-        (eK.SAFE_DIRECT_MESSAGING = "115000068672"),
-        (eK.PAID_TERMS = "4410339366295"),
-        (eK.CONVERSATION_SUMMARIES = "12926016807575"),
-        (eK.SHARE_NITRO_FAQ = "13771635451415"),
-        (eK.POMELO_FAQ = "12620128861463"),
-        (eK.CONTACT_SYNC = "360061878534"),
-        (eK.PRIVATE_CHANNEL_INTEGRATIONS = "15104189280151"),
-        (eK.MEDIA_CHANNEL = "14346342766743"),
-        (eK.REMIXING = "15145601963031"),
-        (eK.SUMMER_2023_BOGO = "15089153846551"),
-        (eK.MEMBER_SAFETY_DASHBOARD = "15946797617431"),
-        (eK.CLIPS = "16861982215703"),
-        (eK.REMIXING_TEXT_SUPPORT =
+        (em.LOCALIZED_PRICING = "4407269525911"),
+        (em.SERVER_DISCOVERY = "360023968311"),
+        (em.SERVER_DISCOVERY_GUIDELINES = "4409308485271"),
+        (em.DISABLE_GUILD_COMMUNICATION = "4413305239191"),
+        (em.GUILD_AUTOMOD_BLOCKED_MESSAGE = "4421269296535"),
+        (em.GUILD_AUTOMOD_REGEX = "10069840290711"),
+        (em.GUILD_RAID = "4421269296535"),
+        (em.INVITE_DISABLED = "8458903738647"),
+        (em.BLOCKED_PAYMENTS = "4708041338391"),
+        (em.ROLE_SUBSCRIPTION_TRIAL = "5278912413335"),
+        (em.HIGHLIGHTS = "5304469213079"),
+        (em.FORCED_COLORS = "1500010454681"),
+        (em.ROLE_STYLES = "1500010454681"),
+        (em.CREATOR_TERMS = "5330075836311"),
+        (em.CREATOR_FAQ = "5371495812631"),
+        (em.CREATOR_POLICY = "10575066024983"),
+        (em.POGGERMODE = "5706956956695"),
+        (em.GUILD_HOME = "6156116949911"),
+        (em.SERVER_WEB_PAGES = "4673515000983"),
+        (em.TEXT_IN_VOICE = "4412085582359"),
+        (em.QUARANTINE = "6461420677527"),
+        (em.FORUMS = "6208479917079"),
+        (em.GUILD_PROFILES = "4409388345495"),
+        (em.XBOX_CONNECTION = "360003953831"),
+        (em.PS_CONNECTION = "4419534960919"),
+        (em.VERIFICATION_FAQ = "6181726888215"),
+        (em.ACTIVITY_STATUS_SETTINGS = "7931156448919"),
+        (em.MESSAGE_REQUESTS = "7924992471191"),
+        (em.RNA_CHANGELOG = "8537198296727"),
+        (em.CONNECTION_DETAILS = "8063233404823"),
+        (em.CONNECTION_DETAILS_ADMIN = "10388356626711"),
+        (em.APP_DIRECTORY_HEADER_LEARN_MORE = "9360431966359"),
+        (em.BOT_DATA_ACCESS = "7933951485975"),
+        (em.HIGHLIGHTS_NOTIFICATIONS = "5304469213079"),
+        (em.CRUNCHYROLL_CONNECTION = "9929188048023"),
+        (em.ACTIVE_NITRO_BOGO_PROMOTION = "10167328543127"),
+        (em.APPLICATION_COMMAND_PERMISSION_V3_WHAT_CHANGED = "10952896421783"),
+        (em.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT = "10952702911639"),
+        (em.SUPER_REACTIONS = "12102061808663"),
+        (em.SOUNDBOARD = "12612888127767"),
+        (em.NEW_LAYOUT = "12654190110999"),
+        (em.GUILD_BOOSTING_FAQ = "360028038352"),
+        (em.CLYDE_AI = "13066317497239"),
+        (em.NITRO = "115000435108"),
+        (em.ACTIVITIES = "4422142836759"),
+        (em.VOICE_MESSAGES = "13091096725527"),
+        (em.SAFE_DIRECT_MESSAGING = "115000068672"),
+        (em.PAID_TERMS = "4410339366295"),
+        (em.CONVERSATION_SUMMARIES = "12926016807575"),
+        (em.SHARE_NITRO_FAQ = "13771635451415"),
+        (em.POMELO_FAQ = "12620128861463"),
+        (em.CONTACT_SYNC = "360061878534"),
+        (em.PRIVATE_CHANNEL_INTEGRATIONS = "15104189280151"),
+        (em.MEDIA_CHANNEL = "14346342766743"),
+        (em.REMIXING = "15145601963031"),
+        (em.SUMMER_2023_BOGO = "15089153846551"),
+        (em.MEMBER_SAFETY_DASHBOARD = "15946797617431"),
+        (em.CLIPS = "16861982215703"),
+        (em.REMIXING_TEXT_SUPPORT =
           "15145601963031-Remix-FAQ#h_01H2Y1F86HNTVKWNVJJSB4C6A5"),
-        (eK.SERVER_SUBSCRIPTION_AND_PRODUCTS = "10423011974551"),
-        (eK.SERVER_PRODUCTS =
+        (em.SERVER_SUBSCRIPTION_AND_PRODUCTS = "10423011974551"),
+        (em.SERVER_PRODUCTS =
           "10423011974551#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1"),
-        (eK.WIN32_DEPRECATE = "17997797368471"),
-        (eK.PROFILE_BADGES = "360035962891"),
-        (eK.EXPLICIT_MEDIA_REDACTION = "18210995019671"),
-        (eK.SAFETY_ALERTS = "18210977897239"),
-        (eK.COPYRIGHT_AND_IP_POLICY = "4410339349655"),
-        (eK.NVIDIA_DRIVER_ISSUES = "18621944634391"),
-        (eK.ROLE_SUBSCRIPTION_CANCEL =
+        (em.WIN32_DEPRECATE = "17997797368471"),
+        (em.PROFILE_BADGES = "360035962891"),
+        (em.EXPLICIT_MEDIA_REDACTION = "18210995019671"),
+        (em.SAFETY_ALERTS = "18210977897239"),
+        (em.COPYRIGHT_AND_IP_POLICY = "4410339349655"),
+        (em.NVIDIA_DRIVER_ISSUES = "18621944634391"),
+        (em.ROLE_SUBSCRIPTION_CANCEL =
           "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
-        (eK.WIN7_8_DEPRECATE = "20470973046295"),
-        (eK.MACOS_17_18_DEPRECATE = "20900540446231"),
-        (eK.QUESTS_LEARN_MORE = "9146392276375");
+        (em.WIN7_8_DEPRECATE = "20470973046295"),
+        (em.MACOS_17_18_DEPRECATE = "20900540446231"),
+        (em.QUESTS_LEARN_MORE = "9146392276375");
       let RL = _ => "https://www.youtube.com/embed/".concat(_),
         RD = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
         RS = "https://discordapp.com/mweb-handoff";
@@ -6346,7 +6346,7 @@
         ((eZ = Er || (Er = {})).OVERLAY = "OVERLAY"),
         (eZ.APP = "APP"),
         (eZ.POPOUT = "POPOUT");
-      let RU = __OVERLAY__ ? "OVERLAY" : "APP";
+      let RG = __OVERLAY__ ? "OVERLAY" : "APP";
       ((ej = EN || (EN = {})).COMPLETE = "complete"),
         (ej.TRANSITION = "transition"),
         ((ez = Ei || (Ei = {})).QUEUED = "queued"),
@@ -6381,16 +6381,16 @@
         ((e3 = ED || (ED = {})).WINDOWS = "1"),
         (e3.MACOS = "2"),
         (e3.LINUX = "3"),
-        ((e2 = ES || (ES = {}))[(e2.PURCHASE = 1)] = "PURCHASE"),
-        (e2[(e2.PREMIUM_SUBSCRIPTION = 2)] = "PREMIUM_SUBSCRIPTION"),
-        (e2[(e2.DEVELOPER_GIFT = 3)] = "DEVELOPER_GIFT"),
-        (e2[(e2.TEST_MODE_PURCHASE = 4)] = "TEST_MODE_PURCHASE"),
-        (e2[(e2.FREE_PURCHASE = 5)] = "FREE_PURCHASE"),
-        (e2[(e2.USER_GIFT = 6)] = "USER_GIFT"),
-        (e2[(e2.PREMIUM_PURCHASE = 7)] = "PREMIUM_PURCHASE"),
-        (e2[(e2.APPLICATION_SUBSCRIPTION = 8)] = "APPLICATION_SUBSCRIPTION"),
-        ((e5 = EC || (EC = {})).ESRB = "1"),
-        (e5.PEGI = "2"),
+        ((e5 = ES || (ES = {}))[(e5.PURCHASE = 1)] = "PURCHASE"),
+        (e5[(e5.PREMIUM_SUBSCRIPTION = 2)] = "PREMIUM_SUBSCRIPTION"),
+        (e5[(e5.DEVELOPER_GIFT = 3)] = "DEVELOPER_GIFT"),
+        (e5[(e5.TEST_MODE_PURCHASE = 4)] = "TEST_MODE_PURCHASE"),
+        (e5[(e5.FREE_PURCHASE = 5)] = "FREE_PURCHASE"),
+        (e5[(e5.USER_GIFT = 6)] = "USER_GIFT"),
+        (e5[(e5.PREMIUM_PURCHASE = 7)] = "PREMIUM_PURCHASE"),
+        (e5[(e5.APPLICATION_SUBSCRIPTION = 8)] = "APPLICATION_SUBSCRIPTION"),
+        ((e2 = EC || (EC = {})).ESRB = "1"),
+        (e2.PEGI = "2"),
         ((e6 = El || (El = {}))[(e6.DURABLE_PRIMARY = 1)] = "DURABLE_PRIMARY"),
         (e6[(e6.DURABLE = 2)] = "DURABLE"),
         (e6[(e6.CONSUMABLE = 3)] = "CONSUMABLE"),
@@ -6420,16 +6420,16 @@
         (e7[(e7.GUILD_PRODUCT = 5)] = "GUILD_PRODUCT"),
         (e7[(e7.APPLICATION = 6)] = "APPLICATION"),
         (e7[(e7.COLLECTIBLES = 7)] = "COLLECTIBLES"),
-        ((e9 = EU || (EU = {})).HOME = "1"),
+        ((e9 = EG || (EG = {})).HOME = "1"),
         (e9.BROWSE = "2"),
-        ((a_ = EG || (EG = {})).WIN32 = "win32"),
+        ((a_ = EU || (EU = {})).WIN32 = "win32"),
         (a_.WIN64 = "win64"),
         (a_.MACOS = "macos"),
         (a_.LINUX = "linux"),
         ((aE = Ed || (Ed = {})).HOUSE_1 = "HOUSE_1"),
         (aE.HOUSE_2 = "HOUSE_2"),
         (aE.HOUSE_3 = "HOUSE_3");
-      let RG = "RANDOM_HYPESQUAD_HOUSE";
+      let RU = "RANDOM_HYPESQUAD_HOUSE";
       ((aI = Eu || (Eu = {}))[(aI.KEYBOARD_KEY = 0)] = "KEYBOARD_KEY"),
         (aI[(aI.MOUSE_BUTTON = 1)] = "MOUSE_BUTTON"),
         (aI[(aI.KEYBOARD_MODIFIER_KEY = 2)] = "KEYBOARD_MODIFIER_KEY"),
@@ -6835,11 +6835,11 @@
         ak.CurrencyCodes.KRW,
         ak.CurrencyCodes.IDR,
       ]);
-      ((ac = Em || (Em = {})).ALWAYS = "ALWAYS"),
+      ((ac = EK || (EK = {})).ALWAYS = "ALWAYS"),
         (ac.ON_CLICK = "ON_CLICK"),
         (ac.IF_MODERATOR = "IF_MODERATOR");
       let Rg = [];
-      ((aO = EK || (EK = {})).CHANNEL_CALL_POPOUT =
+      ((aO = Em || (Em = {})).CHANNEL_CALL_POPOUT =
         "DISCORD_CHANNEL_CALL_POPOUT"),
         (aO.SOUNDBOARD = "DISCORD_SOUNDBOARD"),
         (aO.RTC_DEBUG_POPOUT = "DISCORD_RTC_DEBUG_POPOUT"),
@@ -6882,14 +6882,14 @@
         ((aM = EJ || (EJ = {})).CHANNEL_SETTINGS = "Channel Settings"),
         (aM.CHANNEL_NOTIFICATION_SETTINGS = "Channel Notification Settings"),
         (aM.GUILD_NOTIFICATION_SETTINGS = "Guild Notification Settings"),
-        ((aU = EZ || (EZ = {}))[(aU.INCOMING = 1)] = "INCOMING"),
-        (aU[(aU.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"),
-        ((aG = Ej || (Ej = {}))[(aG.APPLICATION = 0)] = "APPLICATION"),
-        (aG[(aG.OVERVIEW = 1)] = "OVERVIEW"),
-        (aG[(aG.CHANNEL_FOLLOWING = 2)] = "CHANNEL_FOLLOWING"),
-        (aG[(aG.TWITCH = 3)] = "TWITCH"),
-        (aG[(aG.YOUTUBE = 4)] = "YOUTUBE"),
-        (aG[(aG.WEBHOOKS = 5)] = "WEBHOOKS");
+        ((aG = EZ || (EZ = {}))[(aG.INCOMING = 1)] = "INCOMING"),
+        (aG[(aG.CHANNEL_FOLLOWER = 2)] = "CHANNEL_FOLLOWER"),
+        ((aU = Ej || (Ej = {}))[(aU.APPLICATION = 0)] = "APPLICATION"),
+        (aU[(aU.OVERVIEW = 1)] = "OVERVIEW"),
+        (aU[(aU.CHANNEL_FOLLOWING = 2)] = "CHANNEL_FOLLOWING"),
+        (aU[(aU.TWITCH = 3)] = "TWITCH"),
+        (aU[(aU.YOUTUBE = 4)] = "YOUTUBE"),
+        (aU[(aU.WEBHOOKS = 5)] = "WEBHOOKS");
       let Rf = 2500,
         Rh = 0,
         Ry = 2592e6;
@@ -6962,8 +6962,8 @@
         s,
         P,
         M,
-        U,
         G,
+        U,
         d,
         u,
         p,
@@ -6976,8 +6976,8 @@
         Y,
         w,
         b,
-        m,
         K,
+        m,
         V,
         F,
         v,
@@ -7036,11 +7036,11 @@
         (b.AGE_GATE = "AGE_GATE"),
         (b.COUNTRY_SELECT = "COUNTRY_SELECT"),
         (b.EXTERNAL_LINK = "EXTERNAL_LINK"),
-        ((m = A || (A = {})).DEFAULT = "default"),
-        (m.DARK = "dark"),
-        (m.LIGHT = "light"),
-        ((K = T || (T = {})).CAMERA = "camera"),
-        (K.PHOTO = "photo"),
+        ((K = A || (A = {})).DEFAULT = "default"),
+        (K.DARK = "dark"),
+        (K.LIGHT = "light"),
+        ((m = T || (T = {})).CAMERA = "camera"),
+        (m.PHOTO = "photo"),
         ((V = r || (r = {}))[(V.BLURRED_NO_QUERY = 0)] = "BLURRED_NO_QUERY"),
         (V[(V.BLURRED_WITH_QUERY = 1)] = "BLURRED_WITH_QUERY"),
         (V[(V.FOCUSED_NO_QUERY = 2)] = "FOCUSED_NO_QUERY"),
@@ -7118,7 +7118,7 @@
       let _t = "CacheStoreLazy",
         _A = "CacheStoreChannelsLazy",
         _T = "CacheStore";
-      ((z = U || (U = {})).UPLOAD = "upload"),
+      ((z = G || (G = {})).UPLOAD = "upload"),
         (z.GLOBAL_EMOJI = "global-emoji"),
         (z.EMOJI_AUTOCOMPLETE = "emoji-autocomplete"),
         (z.BADGE = "badge"),
@@ -7131,7 +7131,7 @@
         (z.GUILD_CAP = "guild-cap"),
         (z.ACTIVITIES = "activities"),
         (z.APP_ICONS = "app-icons"),
-        ((q = G || (G = {})).UNKNOWN = "ESKERRORDOMAIN0"),
+        ((q = U || (U = {})).UNKNOWN = "ESKERRORDOMAIN0"),
         (q.CLIENT_INVALID = "ESKERRORDOMAIN1"),
         (q.PAYMENT_CANCELED = "ESKERRORDOMAIN2"),
         (q.PAYMENT_INVALID = "ESKERRORDOMAIN3"),
@@ -7269,13 +7269,13 @@
             return T;
           },
           createEmptyEditInfo: function () {
-            return U;
+            return G;
           },
           ChangeEmailSteps: function () {
             return r;
           },
           ChannelNotificationSettingsFlags: function () {
-            return G;
+            return U;
           },
           GuildNotificationSettingsFlags: function () {
             return d;
@@ -7305,7 +7305,7 @@
         VoiceAndVideoScrollPositions: t,
         AppearanceScrollPositions: a,
       };
-      function U() {
+      function G() {
         return {
           protoToSave: void 0,
           timeout: void 0,
@@ -7333,7 +7333,7 @@
         (L[(L.CONFIRM_CODE = 1)] = "CONFIRM_CODE"),
         (L[(L.EMAIL_AND_PASSWORD = 2)] = "EMAIL_AND_PASSWORD"),
         (L[(L.COMPLETE = 3)] = "COMPLETE");
-      let G = {
+      let U = {
           NEW_FORUM_THREADS_ON: 16384,
           NEW_FORUM_THREADS_OFF: 8192,
           OPT_IN_ENABLED: 4096,
@@ -8989,6 +8989,27 @@
             [a.MIDNIGHT]: { raw: "PRIMARY_630", opacity: 1 },
             [a.DARKER]: { raw: "PLUM_17", opacity: 1 },
           },
+          REDESIGN_BUTTON_ACTIVE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "GREEN_430", opacity: 1 },
+            [a.LIGHT]: { raw: "GREEN_430", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "GREEN_430", opacity: 1 },
+            [a.DARKER]: { raw: "GREEN_430", opacity: 1 },
+          },
+          REDESIGN_BUTTON_ACTIVE_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "GREEN_460", opacity: 1 },
+            [a.LIGHT]: { raw: "GREEN_460", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "GREEN_460", opacity: 1 },
+            [a.DARKER]: { raw: "GREEN_460", opacity: 1 },
+          },
+          REDESIGN_BUTTON_ACTIVE_TEXT: {
+            category: "text",
+            [a.DARK]: { raw: "WHITE_500", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
+          },
           REDESIGN_BUTTON_DANGER_BACKGROUND: {
             category: "generic",
             [a.DARK]: { raw: "RED_430", opacity: 1 },
@@ -9004,6 +9025,27 @@
             [a.DARKER]: { raw: "RED_460", opacity: 1 },
           },
           REDESIGN_BUTTON_DANGER_TEXT: {
+            category: "text",
+            [a.DARK]: { raw: "WHITE_500", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
+          },
+          REDESIGN_BUTTON_DESTRUCTIVE_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "RED_430", opacity: 1 },
+            [a.LIGHT]: { raw: "RED_430", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "RED_430", opacity: 1 },
+            [a.DARKER]: { raw: "RED_430", opacity: 1 },
+          },
+          REDESIGN_BUTTON_DESTRUCTIVE_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "RED_460", opacity: 1 },
+            [a.LIGHT]: { raw: "RED_460", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "RED_460", opacity: 1 },
+            [a.DARKER]: { raw: "RED_460", opacity: 1 },
+          },
+          REDESIGN_BUTTON_DESTRUCTIVE_TEXT: {
             category: "text",
             [a.DARK]: { raw: "WHITE_500", opacity: 1 },
             [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
@@ -9042,15 +9084,15 @@
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_230", opacity: 1 },
             [a.LIGHT]: { raw: "PRIMARY_230", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "PLUM_4", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_4", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PRIMARY_230", opacity: 1 },
+            [a.DARKER]: { raw: "PRIMARY_230", opacity: 1 },
           },
           REDESIGN_BUTTON_OVERLAY_TEXT: {
             category: "text",
             [a.DARK]: { raw: "PRIMARY_860", opacity: 1 },
             [a.LIGHT]: { raw: "PRIMARY_860", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "PLUM_25", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_25", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PRIMARY_860", opacity: 1 },
+            [a.DARKER]: { raw: "PRIMARY_860", opacity: 1 },
           },
           REDESIGN_BUTTON_POSITIVE_BACKGROUND: {
             category: "generic",
@@ -9157,20 +9199,6 @@
             [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
             [a.DARKER]: { raw: "BRAND_500", opacity: 1 },
           },
-          REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: { raw: "WHITE_500", opacity: 1 },
-            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
-            [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
-          },
-          REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: { raw: "BRAND_200", opacity: 1 },
-            [a.LIGHT]: { raw: "BRAND_200", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "BRAND_200", opacity: 1 },
-            [a.DARKER]: { raw: "BRAND_200", opacity: 1 },
-          },
           REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT: {
             category: "text",
             [a.DARK]: { raw: "BRAND_530", opacity: 1 },
@@ -9178,12 +9206,26 @@
             [a.MIDNIGHT]: { raw: "BRAND_530", opacity: 1 },
             [a.DARKER]: { raw: "BRAND_530", opacity: 1 },
           },
-          REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_TEXT: {
+          REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "WHITE_500", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
+          },
+          REDESIGN_BUTTON_PRIMARY_OVERLAY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PRIMARY_230", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_230", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_4", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_4", opacity: 1 },
+          },
+          REDESIGN_BUTTON_PRIMARY_OVERLAY_TEXT: {
             category: "text",
-            [a.DARK]: { raw: "BRAND_500", opacity: 1 },
-            [a.LIGHT]: { raw: "BRAND_500", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
-            [a.DARKER]: { raw: "BRAND_500", opacity: 1 },
+            [a.DARK]: { raw: "PRIMARY_860", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_860", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_25", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_25", opacity: 1 },
           },
           REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND: {
             category: "generic",
@@ -9205,17 +9247,17 @@
           },
           REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND: {
             category: "generic",
-            [a.DARK]: { raw: "PRIMARY_660", opacity: 1 },
+            [a.DARK]: { raw: "PRIMARY_530", opacity: 1 },
             [a.LIGHT]: { raw: "BLACK_500", opacity: 0.08 },
-            [a.MIDNIGHT]: { raw: "PLUM_23_ALPHA", opacity: 0.09 },
-            [a.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
+            [a.MIDNIGHT]: { raw: "PRIMARY_530", opacity: 1 },
+            [a.DARKER]: { raw: "PRIMARY_530", opacity: 1 },
           },
           REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND: {
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_560", opacity: 1 },
             [a.LIGHT]: { raw: "BLACK_500", opacity: 0.16 },
-            [a.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.2 },
-            [a.DARKER]: { raw: "PLUM_11", opacity: 0.2 },
+            [a.MIDNIGHT]: { raw: "PRIMARY_560", opacity: 1 },
+            [a.DARKER]: { raw: "PRIMARY_560", opacity: 1 },
           },
           REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT: {
             category: "text",
@@ -9248,6 +9290,27 @@
             [a.LIGHT]: { raw: "BLACK_500", opacity: 0.08 },
             [a.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.12 },
             [a.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
+          },
+          REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "BLACK_500", opacity: 0.54 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.54 },
+            [a.MIDNIGHT]: { raw: "BLACK_500", opacity: 0.54 },
+            [a.DARKER]: { raw: "BLACK_500", opacity: 0.54 },
+          },
+          REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "BLACK_500", opacity: 0.64 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.64 },
+            [a.MIDNIGHT]: { raw: "BLACK_500", opacity: 0.64 },
+            [a.DARKER]: { raw: "BLACK_500", opacity: 0.64 },
+          },
+          REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT: {
+            category: "text",
+            [a.DARK]: { raw: "WHITE_500", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
           },
           REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND: {
             category: "generic",
@@ -9294,6 +9357,34 @@
             [a.LIGHT]: { raw: "BRAND_500", opacity: 1 },
             [a.MIDNIGHT]: { raw: "BRAND_500", opacity: 1 },
             [a.DARKER]: { raw: "BRAND_500", opacity: 1 },
+          },
+          REDESIGN_BUTTON_TERTIARY_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PRIMARY_660", opacity: 1 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.08 },
+            [a.MIDNIGHT]: { raw: "PLUM_23_ALPHA", opacity: 0.09 },
+            [a.DARKER]: { raw: "PLUM_11", opacity: 0.12 },
+          },
+          REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND: {
+            category: "generic",
+            [a.DARK]: { raw: "PRIMARY_560", opacity: 1 },
+            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.16 },
+            [a.MIDNIGHT]: { raw: "PLUM_11", opacity: 0.2 },
+            [a.DARKER]: { raw: "PLUM_11", opacity: 0.2 },
+          },
+          REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT: {
+            category: "text",
+            [a.DARK]: { raw: "PRIMARY_330", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_6", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_5", opacity: 1 },
+          },
+          REDESIGN_BUTTON_TERTIARY_TEXT: {
+            category: "text",
+            [a.DARK]: { raw: "PRIMARY_230", opacity: 1 },
+            [a.LIGHT]: { raw: "PRIMARY_600", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_4", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_6", opacity: 1 },
           },
           REDESIGN_CHANNEL_CATEGORY_NAME_TEXT: {
             category: "text",
@@ -11088,10 +11179,10 @@
             return _M;
           },
           VAULTABLE_PAYMENT_SOURCES: function () {
-            return _U;
+            return _G;
           },
           REDIRECTED_PAYMENT_SOURCES: function () {
-            return _G;
+            return _U;
           },
           DELAYED_PAYMENTS: function () {
             return _d;
@@ -11166,10 +11257,10 @@
             return _b;
           },
           TOKEN_KEY: function () {
-            return _m;
+            return _K;
           },
           TOKENS_KEY: function () {
-            return _K;
+            return _m;
           },
           STATUS_PAGE_ENDPOINT: function () {
             return _V;
@@ -11193,7 +11284,7 @@
             return P;
           },
           CurrencyCodes: function () {
-            return U;
+            return G;
           },
           FallbackCurrencyCountry: function () {
             return _Q;
@@ -11242,8 +11333,8 @@
         s,
         P,
         M,
-        U,
         G,
+        U,
         d,
         u,
         p,
@@ -11256,8 +11347,8 @@
         Y,
         w,
         b,
-        m,
         K,
+        m,
         V,
         F,
         v,
@@ -11403,26 +11494,26 @@
           },
           ADYEN: { KEY: window.GLOBAL_ENV.ADYEN_KEY, PAYMENT_GATEWAY: "adyen" },
         });
-      ((m = T || (T = {}))[(m.UNKNOWN = 0)] = "UNKNOWN"),
-        (m[(m.CARD = 1)] = "CARD"),
-        (m[(m.PAYPAL = 2)] = "PAYPAL"),
-        (m[(m.GIROPAY = 3)] = "GIROPAY"),
-        (m[(m.SOFORT = 4)] = "SOFORT"),
-        (m[(m.PRZELEWY24 = 5)] = "PRZELEWY24"),
-        (m[(m.SEPA_DEBIT = 6)] = "SEPA_DEBIT"),
-        (m[(m.PAYSAFE_CARD = 7)] = "PAYSAFE_CARD"),
-        (m[(m.GCASH = 8)] = "GCASH"),
-        (m[(m.GRABPAY_MY = 9)] = "GRABPAY_MY"),
-        (m[(m.MOMO_WALLET = 10)] = "MOMO_WALLET"),
-        (m[(m.VENMO = 11)] = "VENMO"),
-        (m[(m.GOPAY_WALLET = 12)] = "GOPAY_WALLET"),
-        (m[(m.KAKAOPAY = 13)] = "KAKAOPAY"),
-        (m[(m.BANCONTACT = 14)] = "BANCONTACT"),
-        (m[(m.EPS = 15)] = "EPS"),
-        (m[(m.IDEAL = 16)] = "IDEAL"),
-        (m[(m.CASH_APP = 17)] = "CASH_APP"),
-        (m[(m.APPLE = 18)] = "APPLE"),
-        (m[(m.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST");
+      ((K = T || (T = {}))[(K.UNKNOWN = 0)] = "UNKNOWN"),
+        (K[(K.CARD = 1)] = "CARD"),
+        (K[(K.PAYPAL = 2)] = "PAYPAL"),
+        (K[(K.GIROPAY = 3)] = "GIROPAY"),
+        (K[(K.SOFORT = 4)] = "SOFORT"),
+        (K[(K.PRZELEWY24 = 5)] = "PRZELEWY24"),
+        (K[(K.SEPA_DEBIT = 6)] = "SEPA_DEBIT"),
+        (K[(K.PAYSAFE_CARD = 7)] = "PAYSAFE_CARD"),
+        (K[(K.GCASH = 8)] = "GCASH"),
+        (K[(K.GRABPAY_MY = 9)] = "GRABPAY_MY"),
+        (K[(K.MOMO_WALLET = 10)] = "MOMO_WALLET"),
+        (K[(K.VENMO = 11)] = "VENMO"),
+        (K[(K.GOPAY_WALLET = 12)] = "GOPAY_WALLET"),
+        (K[(K.KAKAOPAY = 13)] = "KAKAOPAY"),
+        (K[(K.BANCONTACT = 14)] = "BANCONTACT"),
+        (K[(K.EPS = 15)] = "EPS"),
+        (K[(K.IDEAL = 16)] = "IDEAL"),
+        (K[(K.CASH_APP = 17)] = "CASH_APP"),
+        (K[(K.APPLE = 18)] = "APPLE"),
+        (K[(K.PAYMENT_REQUEST = 99)] = "PAYMENT_REQUEST");
       let _l = new Map([
           [7, "paysafecard"],
           [8, "gcash"],
@@ -11439,11 +11530,11 @@
         ]),
         _P = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
         _M = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-        _U = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
-        _G = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
+        _G = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
+        _U = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
         _d = new Set([6]),
         _u = new Set([4]);
-      ((K = r || (r = {}))[(K.NEW = 1)] = "NEW"),
+      ((m = r || (r = {}))[(m.NEW = 1)] = "NEW"),
         ((V = N || (N = {}))[(V.PENDING = 0)] = "PENDING"),
         (V[(V.COMPLETED = 1)] = "COMPLETED"),
         (V[(V.FAILED = 2)] = "FAILED"),
@@ -11721,8 +11812,8 @@
         (Z[(Z.INVALID_VERSION = 4004)] = "INVALID_VERSION"),
         (Z[(Z.INVALID_ENCODING = 4005)] = "INVALID_ENCODING");
       let _b = 250,
-        _m = "token",
-        _K = "tokens",
+        _K = "token",
+        _m = "tokens",
         _V = "https://".concat("status.discord.com"),
         _F = {
           PRESSKIT: "https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am",
@@ -11912,7 +12003,7 @@
         (z.CREATOR_STORE_PAGE_CTA_CLICKED = "creator_store_page_cta_clicked"),
         ((M || (M = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN =
           "mktg_ack_modal_open"),
-        ((q = U || (U = {})).AED = "aed"),
+        ((q = G || (G = {})).AED = "aed"),
         (q.AFN = "afn"),
         (q.ALL = "all"),
         (q.AMD = "amd"),
@@ -12095,7 +12186,7 @@
         (q.ZMW = "zmw"),
         (q.ZWL = "zwl");
       let _Q = "US";
-      (($ = G || (G = {})).COUNTRY = "US"),
+      (($ = U || (U = {})).COUNTRY = "US"),
         ($.CURRENCY = "usd"),
         ((__ = d || (d = {}))[(__.SINGLE_PLAYER = 1)] = "SINGLE_PLAYER"),
         (__[(__.ONLINE_MULTIPLAYER = 2)] = "ONLINE_MULTIPLAYER"),
@@ -13873,11 +13964,22 @@
         (e.REDESIGN_ACTIVITY_CARD_BORDER = "redesign-activity-card-border"),
         (e.REDESIGN_ACTIVITY_CARD_OVERFLOW_BACKGROUND =
           "redesign-activity-card-overflow-background"),
+        (e.REDESIGN_BUTTON_ACTIVE_BACKGROUND =
+          "redesign-button-active-background"),
+        (e.REDESIGN_BUTTON_ACTIVE_PRESSED_BACKGROUND =
+          "redesign-button-active-pressed-background"),
+        (e.REDESIGN_BUTTON_ACTIVE_TEXT = "redesign-button-active-text"),
         (e.REDESIGN_BUTTON_DANGER_BACKGROUND =
           "redesign-button-danger-background"),
         (e.REDESIGN_BUTTON_DANGER_PRESSED_BACKGROUND =
           "redesign-button-danger-pressed-background"),
         (e.REDESIGN_BUTTON_DANGER_TEXT = "redesign-button-danger-text"),
+        (e.REDESIGN_BUTTON_DESTRUCTIVE_BACKGROUND =
+          "redesign-button-destructive-background"),
+        (e.REDESIGN_BUTTON_DESTRUCTIVE_PRESSED_BACKGROUND =
+          "redesign-button-destructive-pressed-background"),
+        (e.REDESIGN_BUTTON_DESTRUCTIVE_TEXT =
+          "redesign-button-destructive-text"),
         (e.REDESIGN_BUTTON_OVERLAY_ALPHA_BACKGROUND =
           "redesign-button-overlay-alpha-background"),
         (e.REDESIGN_BUTTON_OVERLAY_ALPHA_PRESSED_BACKGROUND =
@@ -13918,14 +14020,14 @@
           "redesign-button-primary-alt-text"),
         (e.REDESIGN_BUTTON_PRIMARY_BACKGROUND =
           "redesign-button-primary-background"),
-        (e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_BACKGROUND =
-          "redesign-button-primary-on-blurple-background"),
-        (e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_BACKGROUND =
-          "redesign-button-primary-on-blurple-pressed-background"),
         (e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT =
           "redesign-button-primary-on-blurple-pressed-text"),
-        (e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_TEXT =
-          "redesign-button-primary-on-blurple-text"),
+        (e.REDESIGN_BUTTON_PRIMARY_OVERLAY_BACKGROUND =
+          "redesign-button-primary-overlay-background"),
+        (e.REDESIGN_BUTTON_PRIMARY_OVERLAY_PRESSED_BACKGROUND =
+          "redesign-button-primary-overlay-pressed-background"),
+        (e.REDESIGN_BUTTON_PRIMARY_OVERLAY_TEXT =
+          "redesign-button-primary-overlay-text"),
         (e.REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND =
           "redesign-button-primary-pressed-background"),
         (e.REDESIGN_BUTTON_PRIMARY_TEXT = "redesign-button-primary-text"),
@@ -13941,6 +14043,12 @@
           "redesign-button-secondary-background"),
         (e.REDESIGN_BUTTON_SECONDARY_BORDER =
           "redesign-button-secondary-border"),
+        (e.REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND =
+          "redesign-button-secondary-overlay-background"),
+        (e.REDESIGN_BUTTON_SECONDARY_OVERLAY_PRESSED_BACKGROUND =
+          "redesign-button-secondary-overlay-pressed-background"),
+        (e.REDESIGN_BUTTON_SECONDARY_OVERLAY_TEXT =
+          "redesign-button-secondary-overlay-text"),
         (e.REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND =
           "redesign-button-secondary-pressed-background"),
         (e.REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER =
@@ -13951,6 +14059,13 @@
         (e.REDESIGN_BUTTON_SELECTED_PRESSED_BACKGROUND =
           "redesign-button-selected-pressed-background"),
         (e.REDESIGN_BUTTON_SELECTED_TEXT = "redesign-button-selected-text"),
+        (e.REDESIGN_BUTTON_TERTIARY_BACKGROUND =
+          "redesign-button-tertiary-background"),
+        (e.REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND =
+          "redesign-button-tertiary-pressed-background"),
+        (e.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT =
+          "redesign-button-tertiary-pressed-text"),
+        (e.REDESIGN_BUTTON_TERTIARY_TEXT = "redesign-button-tertiary-text"),
         (e.REDESIGN_CHANNEL_CATEGORY_NAME_TEXT =
           "redesign-channel-category-name-text"),
         (e.REDESIGN_CHANNEL_MESSAGE_PREVIEW_TEXT =
@@ -15243,6 +15358,24 @@
           o.Color.PRIMARY_630,
           o.Color.PLUM_17,
         ],
+        "redesign-button-active-background": [
+          o.Color.GREEN_430,
+          o.Color.GREEN_430,
+          o.Color.GREEN_430,
+          o.Color.GREEN_430,
+        ],
+        "redesign-button-active-pressed-background": [
+          o.Color.GREEN_460,
+          o.Color.GREEN_460,
+          o.Color.GREEN_460,
+          o.Color.GREEN_460,
+        ],
+        "redesign-button-active-text": [
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+        ],
         "redesign-button-danger-background": [
           o.Color.RED_430,
           o.Color.RED_430,
@@ -15256,6 +15389,24 @@
           o.Color.RED_460,
         ],
         "redesign-button-danger-text": [
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+        ],
+        "redesign-button-destructive-background": [
+          o.Color.RED_430,
+          o.Color.RED_430,
+          o.Color.RED_430,
+          o.Color.RED_430,
+        ],
+        "redesign-button-destructive-pressed-background": [
+          o.Color.RED_460,
+          o.Color.RED_460,
+          o.Color.RED_460,
+          o.Color.RED_460,
+        ],
+        "redesign-button-destructive-text": [
           o.Color.WHITE_500,
           o.Color.WHITE_500,
           o.Color.WHITE_500,
@@ -15288,14 +15439,14 @@
         "redesign-button-overlay-pressed-background": [
           o.Color.PRIMARY_230,
           o.Color.PRIMARY_230,
-          o.Color.PLUM_4,
-          o.Color.PLUM_4,
+          o.Color.PRIMARY_230,
+          o.Color.PRIMARY_230,
         ],
         "redesign-button-overlay-text": [
           o.Color.PRIMARY_860,
           o.Color.PRIMARY_860,
-          o.Color.PLUM_25,
-          o.Color.PLUM_25,
+          o.Color.PRIMARY_860,
+          o.Color.PRIMARY_860,
         ],
         "redesign-button-positive-background": [
           o.Color.GREEN_430,
@@ -15387,29 +15538,29 @@
           o.Color.BRAND_500,
           o.Color.BRAND_500,
         ],
-        "redesign-button-primary-on-blurple-background": [
-          o.Color.WHITE_500,
-          o.Color.WHITE_500,
-          o.Color.WHITE_500,
-          o.Color.WHITE_500,
-        ],
-        "redesign-button-primary-on-blurple-pressed-background": [
-          o.Color.BRAND_200,
-          o.Color.BRAND_200,
-          o.Color.BRAND_200,
-          o.Color.BRAND_200,
-        ],
         "redesign-button-primary-on-blurple-pressed-text": [
           o.Color.BRAND_530,
           o.Color.BRAND_530,
           o.Color.BRAND_530,
           o.Color.BRAND_530,
         ],
-        "redesign-button-primary-on-blurple-text": [
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
-          o.Color.BRAND_500,
+        "redesign-button-primary-overlay-background": [
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+        ],
+        "redesign-button-primary-overlay-pressed-background": [
+          o.Color.PRIMARY_230,
+          o.Color.PRIMARY_230,
+          o.Color.PLUM_4,
+          o.Color.PLUM_4,
+        ],
+        "redesign-button-primary-overlay-text": [
+          o.Color.PRIMARY_860,
+          o.Color.PRIMARY_860,
+          o.Color.PLUM_25,
+          o.Color.PLUM_25,
         ],
         "redesign-button-primary-pressed-background": [
           o.Color.BRAND_560,
@@ -15424,16 +15575,16 @@
           o.Color.WHITE_500,
         ],
         "redesign-button-secondary-alt-background": [
-          o.Color.PRIMARY_660,
+          o.Color.PRIMARY_530,
           o.Color.BLACK_500,
-          o.Color.PLUM_23_ALPHA,
-          o.Color.PLUM_11,
+          o.Color.PRIMARY_530,
+          o.Color.PRIMARY_530,
         ],
         "redesign-button-secondary-alt-pressed-background": [
           o.Color.PRIMARY_560,
           o.Color.BLACK_500,
-          o.Color.PLUM_11,
-          o.Color.PLUM_11,
+          o.Color.PRIMARY_560,
+          o.Color.PRIMARY_560,
         ],
         "redesign-button-secondary-alt-pressed-text": [
           o.Color.PRIMARY_330,
@@ -15458,6 +15609,24 @@
           o.Color.BLACK_500,
           o.Color.PLUM_11,
           o.Color.PLUM_11,
+        ],
+        "redesign-button-secondary-overlay-background": [
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+        ],
+        "redesign-button-secondary-overlay-pressed-background": [
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+          o.Color.BLACK_500,
+        ],
+        "redesign-button-secondary-overlay-text": [
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
+          o.Color.WHITE_500,
         ],
         "redesign-button-secondary-pressed-background": [
           o.Color.PRIMARY_500,
@@ -15494,6 +15663,30 @@
           o.Color.BRAND_500,
           o.Color.BRAND_500,
           o.Color.BRAND_500,
+        ],
+        "redesign-button-tertiary-background": [
+          o.Color.PRIMARY_660,
+          o.Color.BLACK_500,
+          o.Color.PLUM_23_ALPHA,
+          o.Color.PLUM_11,
+        ],
+        "redesign-button-tertiary-pressed-background": [
+          o.Color.PRIMARY_560,
+          o.Color.BLACK_500,
+          o.Color.PLUM_11,
+          o.Color.PLUM_11,
+        ],
+        "redesign-button-tertiary-pressed-text": [
+          o.Color.PRIMARY_330,
+          o.Color.PRIMARY_500,
+          o.Color.PLUM_6,
+          o.Color.PLUM_5,
+        ],
+        "redesign-button-tertiary-text": [
+          o.Color.PRIMARY_230,
+          o.Color.PRIMARY_600,
+          o.Color.PLUM_4,
+          o.Color.PLUM_6,
         ],
         "redesign-channel-category-name-text": [
           o.Color.PRIMARY_330,
@@ -17140,4 +17333,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.086331d0c3c33d35bca8.js.map
+//# sourceMappingURL=7273.2bc88747cbe6ceaac288.js.map

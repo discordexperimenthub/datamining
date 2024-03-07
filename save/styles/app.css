@@ -39212,8 +39212,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -68570,6 +68570,10 @@ input::-webkit-inner-spin-button {
 }
 .productCard_eabca8 {
   margin: 0 auto;
+}
+.subDetailsModal__7eb23 {
+  border-radius: 12px;
+  overflow: hidden;
 }
 .footer_c689c6 {
   align-items: center;
@@ -110037,4 +110041,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3ad972bb81bd3dde0252.css.map*/
+/*# sourceMappingURL=app.cc6f72f2cde4ac7837e2.css.map*/

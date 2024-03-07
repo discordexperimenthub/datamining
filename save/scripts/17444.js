@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["64999"],
+  ["17444"],
   {
     50323: function (t, e, n) {
       "use strict";
@@ -344,15 +344,15 @@
             w = n ? 0 : f(e.borderBottomWidth),
             O = n ? 0 : f(e.borderLeftWidth),
             k = b + m,
-            S = y + g,
-            E = O + x,
+            E = y + g,
+            S = O + x,
             P = _ + w,
             C = v ? t.offsetHeight - P - t.clientHeight : 0,
-            A = d ? t.offsetWidth - E - t.clientWidth : 0,
-            j = n ? n.width : f(e.width) - (r ? k + E : 0) - A,
-            R = n ? n.height : f(e.height) - (r ? S + P : 0) - C,
-            T = j + k + A + E,
-            M = R + S + C + P,
+            A = d ? t.offsetWidth - S - t.clientWidth : 0,
+            j = n ? n.width : f(e.width) - (r ? k + S : 0) - A,
+            R = n ? n.height : f(e.height) - (r ? E + P : 0) - C,
+            T = j + k + A + S,
+            M = R + E + C + P,
             L = Object.freeze({
               devicePixelContentBoxSize: h(
                 Math.round(j * devicePixelRatio),
@@ -1251,12 +1251,12 @@
             n && (t.frequency = void 0);
         } else t.duration = void 0;
       }
-      var S = [],
+      var E = [],
         Animation = function () {
           (this.changed = !1),
-            (this.values = S),
+            (this.values = E),
             (this.toValues = null),
-            (this.fromValues = S),
+            (this.fromValues = E),
             (this.to = void 0),
             (this.from = void 0),
             (this.config = new O()),
@@ -1265,7 +1265,7 @@
             (this.onChange = void 0),
             (this.onRest = []);
         };
-      function E(t, e) {
+      function S(t, e) {
         (null == e || e > t.length) && (e = t.length);
         for (var n = 0, r = Array(e); n < e; n++) r[n] = t[n];
         return r;
@@ -1310,7 +1310,7 @@
                     Array.isArray(t) ||
                     (t = (function (t, e) {
                       if (t) {
-                        if ("string" == typeof t) return E(t, e);
+                        if ("string" == typeof t) return S(t, e);
                         var n = Object.prototype.toString.call(t).slice(8, -1);
                         if (
                           ("Object" === n &&
@@ -1323,7 +1323,7 @@
                           "Arguments" === n ||
                           /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
                         )
-                          return E(t, e);
+                          return S(t, e);
                       }
                     })(t))
                   )
@@ -1502,10 +1502,10 @@
         return r;
       }
       function q(t, e, n, r) {
-        return D.apply(this, arguments);
+        return $.apply(this, arguments);
       }
-      function D() {
-        return (D = c(
+      function $() {
+        return ($ = c(
           s.mark(function t(e, n, r, i) {
             var u, l, f, h, d;
             return s.wrap(function (t) {
@@ -1805,7 +1805,7 @@
           })
         )).apply(this, arguments);
       }
-      function $(t, e) {
+      function D(t, e) {
         (t.cancelId = e), (t.asyncId = t.asyncTo = t.promise = void 0);
       }
       var G = (function (t) {
@@ -1983,15 +1983,15 @@
                               w = a.clamp ? 0 : a.bounce,
                               O = !o.is.und(w),
                               k = v == f ? c.v0 > 0 : v < f,
-                              S = !1,
-                              E = Math.ceil(t / 1),
+                              E = !1,
+                              S = Math.ceil(t / 1),
                               P = 0;
-                            P < E &&
+                            P < S &&
                             !(!(Math.abs(b) > x) && (h = Math.abs(f - p) <= _));
                             ++P
                           ) {
                             O &&
-                              (S = p == f || p > f == k) &&
+                              (E = p == f || p > f == k) &&
                               ((b = -b * w), (p = f));
                             var C =
                               (-(1e-6 * a.tension) * (p - f) +
@@ -2120,7 +2120,7 @@
               var e = this;
               return (
                 !this.is(tt) &&
-                  ($(this._state, this._lastCallId),
+                  (D(this._state, this._lastCallId),
                   this._focus(this.get()),
                   p.batchedUpdates(function () {
                     return e._stop(t);
@@ -2239,9 +2239,9 @@
               x && (i.from = b);
               var O = !o.isEqual(m, d);
               O && this._focus(m);
-              var S = o.getFluidConfig(m),
-                E = o.getFluidConfig(b);
-              E && (b = E.get());
+              var E = o.getFluidConfig(m),
+                S = o.getFluidConfig(b);
+              S && (b = S.get());
               var P = o.is.arr(e.to) || o.is.fun(e.to),
                 j = i.config,
                 R = j.decay,
@@ -2276,23 +2276,23 @@
                 I = V ? b : this.get(),
                 N = F(m),
                 W = o.is.num(N) || o.is.arr(N) || o.isAnimatedString(N),
-                D = !P && (!W || A(u.immediate || e.immediate, r));
+                $ = !P && (!W || A(u.immediate || e.immediate, r));
               if (O) {
-                if (D) L = this._updateNode(N);
+                if ($) L = this._updateNode(N);
                 else {
-                  var $ = this._getNodeType(m);
-                  if ($ !== L.constructor)
+                  var D = this._getNodeType(m);
+                  if (D !== L.constructor)
                     throw Error(
                       "Cannot animate between " +
                         L.constructor.name +
                         " and " +
-                        $.name +
+                        D.name +
                         ', as the "to" prop suggests'
                     );
                 }
               }
               var G = L.constructor,
-                H = !!S,
+                H = !!E,
                 X = !1;
               if (!H) {
                 var K = V || (this.is(Y) && x);
@@ -2308,12 +2308,12 @@
               ) {
                 (H || o.getFluidConfig(d)) &&
                   ((i.values = L.getPayload()),
-                  (i.toValues = S
+                  (i.toValues = E
                     ? null
                     : G == h.AnimatedString
                       ? [1]
                       : o.toArray(N))),
-                  (i.immediate = D),
+                  (i.immediate = $),
                   (i.onStart = tr(l("onStart"), r)),
                   (i.onChange = tr(l("onChange"), r));
                 var Z = i.onRest,
@@ -2544,7 +2544,7 @@
                 this.each(function (t) {
                   return t.stop();
                 }),
-                  $(this._state, this._lastAsyncId);
+                  D(this._state, this._lastAsyncId);
               else {
                 var e = this.springs;
                 o.each(o.toArray(t), function (t) {
@@ -2694,13 +2694,13 @@
                             if (((t.onRest = u), t.cancel)) {
                               var r, i;
                               if (((r = t), (i = "cancel"), !o.is.und(R(r, i))))
-                                $(l, t.callId);
+                                D(l, t.callId);
                             } else n(q(s, t, l, e));
                           },
                         },
                       })
                     )
-                  : !n.keys && !0 === n.cancel && $(l, e._lastAsyncId),
+                  : !n.keys && !0 === n.cancel && D(l, e._lastAsyncId),
                 Promise.all(c).then(function (o) {
                   var u = N(e, o);
                   if (a && u.finished && !(r && u.noop)) {
@@ -2979,8 +2979,8 @@
         return u[0];
       }
       var tk = "mount",
-        tS = "enter",
-        tE = "update",
+        tE = "enter",
+        tS = "update",
         tP = "leave";
       function tC(t, e, n) {
         var r = e.ref,
@@ -3044,18 +3044,18 @@
             i,
             u = t.key,
             s = t.phase;
-          if (s == tk) (r = e.enter), (i = tS);
+          if (s == tk) (r = e.enter), (i = tE);
           else {
             var c = 0 > y.indexOf(u);
             if (s != tP) {
               if (c) (r = e.leave), (i = tP);
               else {
                 if (!(r = e.update)) return;
-                i = tE;
+                i = tS;
               }
             } else {
               if (c) return;
-              (r = e.enter), (i = tS);
+              (r = e.enter), (i = tE);
             }
           }
           if (
@@ -3066,7 +3066,7 @@
             r.config = C(l, t.item, n);
           }
           var h = a(a({}, O), {}, { delay: (x += f), reset: !1 }, r);
-          if (i == tS && o.is.und(h.from)) {
+          if (i == tE && o.is.und(h.from)) {
             var d = o.is.und(e.initial) || g ? e.from : e.initial;
             h.from = C(d, t.item, n);
           }
@@ -3079,7 +3079,7 @@
             if (n) {
               if (
                 (o.is.fun(v) && !0 !== t.noop && v(t, n),
-                t.cancelled && n.phase != tE)
+                t.cancelled && n.phase != tS)
               ) {
                 n.phase = s;
                 return;
@@ -3109,16 +3109,16 @@
           var b = th(t.ctrl, h);
           k.set(t, { phase: i, springs: b, payload: h });
         });
-        var S = tb();
+        var E = tb();
         i.useLayoutEffect(
           function () {
             o.each(v, function (t) {
-              t.ctrl.start({ default: S });
+              t.ctrl.start({ default: E });
             });
           },
-          [S]
+          [E]
         );
-        var E = u.useMemo(function () {
+        var S = u.useMemo(function () {
           return t_.create(function () {
             return m.current.map(function (t) {
               return t.ctrl;
@@ -3126,7 +3126,7 @@
           });
         }, []);
         u.useImperativeHandle(r, function () {
-          return E;
+          return S;
         }),
           i.useLayoutEffect(
             function () {
@@ -3135,9 +3135,9 @@
                   i = t.springs,
                   o = t.payload;
                 tp(e.ctrl, i),
-                  !S.cancel &&
+                  !E.cancel &&
                     ((e.phase = n),
-                    n == tS && e.ctrl.start({ default: S }),
+                    n == tE && e.ctrl.start({ default: E }),
                     e.ctrl[r ? "update" : "start"](o));
               });
             },
@@ -3162,7 +3162,7 @@
             })
           );
         };
-        return 3 == arguments.length ? [P, E.start, E.stop] : P;
+        return 3 == arguments.length ? [P, S.start, S.stop] : P;
       }
       var tA = (function (t) {
         function e(e, n) {
@@ -7993,7 +7993,7 @@
             return k;
           },
           createMemoryHistory: function () {
-            return E;
+            return S;
           },
           createLocation: function () {
             return h;
@@ -8188,14 +8188,14 @@
             o = i.pathname + i.search + i.hash;
           return O && (o = c(o, O)), h(o, r, n);
         }
-        function S() {
+        function E() {
           return Math.random().toString(36).substr(2, w);
         }
-        var E = d();
+        var S = d();
         function P(t) {
           (0, r.default)(z, t),
             (z.length = n.length),
-            E.notifyListeners(z.location, z.action);
+            S.notifyListeners(z.location, z.action);
         }
         function C(t) {
           if (
@@ -8210,7 +8210,7 @@
         function R(t) {
           j
             ? ((j = !1), P())
-            : E.confirmTransitionTo(t, "POP", _, function (e) {
+            : S.confirmTransitionTo(t, "POP", _, function (e) {
                 e
                   ? P({ action: "POP", location: t })
                   : (function (t) {
@@ -8249,8 +8249,8 @@
             createHref: L,
             push: function (t, e) {
               var r = "PUSH",
-                o = h(t, e, S(), z.location);
-              E.confirmTransitionTo(o, r, _, function (t) {
+                o = h(t, e, E(), z.location);
+              S.confirmTransitionTo(o, r, _, function (t) {
                 if (t) {
                   var e = L(o),
                     a = o.key,
@@ -8269,8 +8269,8 @@
             },
             replace: function (t, e) {
               var r = "REPLACE",
-                o = h(t, e, S(), z.location);
-              E.confirmTransitionTo(o, r, _, function (t) {
+                o = h(t, e, E(), z.location);
+              S.confirmTransitionTo(o, r, _, function (t) {
                 if (t) {
                   var e = L(o),
                     a = o.key,
@@ -8295,7 +8295,7 @@
             },
             block: function (t) {
               void 0 === t && (t = !1);
-              var e = E.setPrompt(t);
+              var e = S.setPrompt(t);
               return (
                 !N && (I(1), (N = !0)),
                 function () {
@@ -8304,7 +8304,7 @@
               );
             },
             listen: function (t) {
-              var e = E.appendListener(t);
+              var e = S.appendListener(t);
               return (
                 I(1),
                 function () {
@@ -8352,15 +8352,15 @@
           m = _[void 0 === s ? "slash" : s],
           g = m.encodePath,
           k = m.decodePath;
-        function S() {
+        function E() {
           var t = k(w());
           return p && (t = c(t, p)), h(t);
         }
-        var E = d();
+        var S = d();
         function P(t) {
           (0, r.default)(z, t),
             (z.length = e.length),
-            E.notifyListeners(z.location, z.action);
+            S.notifyListeners(z.location, z.action);
         }
         var C = !1,
           A = null;
@@ -8371,7 +8371,7 @@
           else {
             var n,
               r,
-              i = S(),
+              i = E(),
               a = z.location;
             if (
               (!C &&
@@ -8387,7 +8387,7 @@
               (function (t) {
                 C
                   ? ((C = !1), P())
-                  : E.confirmTransitionTo(t, "POP", o, function (e) {
+                  : S.confirmTransitionTo(t, "POP", o, function (e) {
                       e
                         ? P({ action: "POP", location: t })
                         : (function (t) {
@@ -8406,7 +8406,7 @@
         var R = w(),
           T = g(R);
         R !== T && O(T);
-        var M = S(),
+        var M = E(),
           L = [f(M)];
         function V(t) {
           e.go(t);
@@ -8433,7 +8433,7 @@
             push: function (t, e) {
               var n = "PUSH",
                 r = h(t, void 0, void 0, z.location);
-              E.confirmTransitionTo(r, n, o, function (t) {
+              S.confirmTransitionTo(r, n, o, function (t) {
                 if (t) {
                   var e = f(r),
                     i = g(p + e);
@@ -8450,7 +8450,7 @@
             replace: function (t, e) {
               var n = "REPLACE",
                 r = h(t, void 0, void 0, z.location);
-              E.confirmTransitionTo(r, n, o, function (t) {
+              S.confirmTransitionTo(r, n, o, function (t) {
                 if (t) {
                   var e = f(r),
                     i = g(p + e);
@@ -8469,7 +8469,7 @@
             },
             block: function (t) {
               void 0 === t && (t = !1);
-              var e = E.setPrompt(t);
+              var e = S.setPrompt(t);
               return (
                 !N && (I(1), (N = !0)),
                 function () {
@@ -8478,7 +8478,7 @@
               );
             },
             listen: function (t) {
-              var e = E.appendListener(t);
+              var e = S.appendListener(t);
               return (
                 I(1),
                 function () {
@@ -8489,10 +8489,10 @@
           };
         return z;
       }
-      function S(t, e, n) {
+      function E(t, e, n) {
         return Math.min(Math.max(t, e), n);
       }
-      function E(t) {
+      function S(t) {
         void 0 === t && (t = {});
         var e = t,
           n = e.getUserConfirmation,
@@ -8510,14 +8510,14 @@
         function p() {
           return Math.random().toString(36).substr(2, s);
         }
-        var v = S(void 0 === a ? 0 : a, 0, o.length - 1),
+        var v = E(void 0 === a ? 0 : a, 0, o.length - 1),
           y = o.map(function (t) {
             return "string" == typeof t
               ? h(t, void 0, p())
               : h(t, void 0, t.key || p());
           });
         function m(t) {
-          var e = S(g.index + t, 0, g.entries.length - 1),
+          var e = E(g.index + t, 0, g.entries.length - 1),
             r = g.entries[e];
           c.confirmTransitionTo(r, "POP", n, function (t) {
             t ? l({ action: "POP", location: r, index: e }) : l();
@@ -9674,9 +9674,9 @@
               w = l ? x : "ScriptBridgingProxyObject",
               O = l ? x : "Environment",
               k = l && s.java ? "JavaPackage" : y(s.java),
-              S = l ? x : "RuntimeObject",
-              E = /\bJava/.test(k) && s.java,
-              P = E && y(s.environment) == O,
+              E = l ? x : "RuntimeObject",
+              S = /\bJava/.test(k) && s.java,
+              P = S && y(s.environment) == O,
               C = s.document || {},
               A = s.operamini || s.opera,
               j = c.test((j = l && A ? A["[[Class]]"] : y(A))) ? j : (A = null),
@@ -10104,7 +10104,7 @@
               )
                 y((a = s.runtime)) == w
                   ? ((I = "Adobe AIR"), (B = a.flash.system.Capabilities.os))
-                  : y((a = s.phantom)) == S
+                  : y((a = s.phantom)) == E
                     ? ((I = "PhantomJS"),
                       (V =
                         (a = a.version || null) &&
@@ -10125,8 +10125,8 @@
                         (F = ["Trident"]),
                         (B = "Windows"));
               else if (
-                (E &&
-                  ((R = (a = E.lang.System).getProperty("os.arch")),
+                (S &&
+                  ((R = (a = S.lang.System).getProperty("os.arch")),
                   (B =
                     B ||
                     a.getProperty("os.name") +
@@ -10174,7 +10174,7 @@
                 ((M = /b/i.test(a) ? "beta" : "alpha"),
                 (V =
                   V.replace(RegExp(a + "\\+?$"), "") +
-                  ("beta" == M ? (E ? "b" : "β") : E ? "a" : "α") +
+                  ("beta" == M ? (S ? "b" : "β") : S ? "a" : "α") +
                   (/\d+\+?/.exec(a) || ""))),
               "Fennec" == I ||
                 ("Firefox" == I && /\b(?:Android|Firefox OS|KaiOS)\b/.test(B)))
@@ -10889,8 +10889,8 @@
           w = t.strict,
           O = t.style,
           k = t.to,
-          S = t.innerRef,
-          E = (0, c.default)(t, [
+          E = t.innerRef,
+          S = (0, c.default)(t, [
             "aria-current",
             "activeClassName",
             "activeStyle",
@@ -10942,10 +10942,10 @@
                 style: R,
                 to: o,
               },
-              E
+              S
             );
           return (
-            g !== b ? (T.ref = e || S) : (T.innerRef = S), a.createElement(m, T)
+            g !== b ? (T.ref = e || E) : (T.innerRef = E), a.createElement(m, T)
           );
         });
       });
@@ -11136,8 +11136,8 @@
               });
         });
       }
-      var S = {},
-        E = 0;
+      var E = {},
+        S = 0;
       function P(t, e) {
         void 0 === e && (e = {}),
           ("string" == typeof e || Array.isArray(e)) && (e = { path: e });
@@ -11154,11 +11154,11 @@
           if (e) return e;
           var r = (function (t, e) {
               var n = "" + e.end + e.strict + e.sensitive,
-                r = S[n] || (S[n] = {});
+                r = E[n] || (E[n] = {});
               if (r[t]) return r[t];
               var i = [],
                 o = { regexp: p(t, i, e), keys: i };
-              return E < 1e4 && ((r[t] = o), E++), o;
+              return S < 1e4 && ((r[t] = o), S++), o;
             })(n, { end: o, strict: u, sensitive: c }),
             i = r.regexp,
             a = r.keys,
@@ -11466,127 +11466,6 @@
       }
       var a = i,
         u = o;
-    },
-    748820: function (t, e, n) {
-      "use strict";
-      n.r(e),
-        n.d(e, {
-          v4: function () {
-            return r.default;
-          },
-        });
-      var r = n("267084");
-    },
-    292155: function (t, e, n) {
-      "use strict";
-      n.r(e),
-        n.d(e, {
-          default: function () {
-            return i;
-          },
-        });
-      let r =
-        "undefined" != typeof crypto &&
-        crypto.randomUUID &&
-        crypto.randomUUID.bind(crypto);
-      var i = { randomUUID: r };
-    },
-    379384: function (t, e, n) {
-      "use strict";
-      let r;
-      n.r(e),
-        n.d(e, {
-          default: function () {
-            return o;
-          },
-        }),
-        n("311790"),
-        n("477657"),
-        n("811875"),
-        n("90301"),
-        n("652153"),
-        n("28797"),
-        n("817884"),
-        n("597349"),
-        n("667536"),
-        n("690341"),
-        n("70102");
-      let i = new Uint8Array(16);
-      function o() {
-        if (
-          !r &&
-          !(r =
-            "undefined" != typeof crypto &&
-            crypto.getRandomValues &&
-            crypto.getRandomValues.bind(crypto))
-        )
-          throw Error(
-            "crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported"
-          );
-        return r(i);
-      }
-    },
-    765909: function (t, e, n) {
-      "use strict";
-      n.r(e),
-        n.d(e, {
-          unsafeStringify: function () {
-            return i;
-          },
-        }),
-        n("424973"),
-        n("70102");
-      let r = [];
-      for (let t = 0; t < 256; ++t) r.push((t + 256).toString(16).slice(1));
-      function i(t) {
-        let e =
-          arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (
-          r[t[e + 0]] +
-          r[t[e + 1]] +
-          r[t[e + 2]] +
-          r[t[e + 3]] +
-          "-" +
-          r[t[e + 4]] +
-          r[t[e + 5]] +
-          "-" +
-          r[t[e + 6]] +
-          r[t[e + 7]] +
-          "-" +
-          r[t[e + 8]] +
-          r[t[e + 9]] +
-          "-" +
-          r[t[e + 10]] +
-          r[t[e + 11]] +
-          r[t[e + 12]] +
-          r[t[e + 13]] +
-          r[t[e + 14]] +
-          r[t[e + 15]]
-        );
-      }
-    },
-    267084: function (t, e, n) {
-      "use strict";
-      n.r(e),
-        n.d(e, {
-          default: function () {
-            return a;
-          },
-        });
-      var r = n("292155"),
-        i = n("379384"),
-        o = n("765909"),
-        a = function (t, e, n) {
-          if (r.default.randomUUID && !e && !t) return r.default.randomUUID();
-          t = t || {};
-          let a = t.random || (t.rng || (0, i.default))();
-          if (((a[6] = (15 & a[6]) | 64), (a[8] = (63 & a[8]) | 128), e)) {
-            n = n || 0;
-            for (let t = 0; t < 16; ++t) e[n + t] = a[t];
-            return e;
-          }
-          return (0, o.unsafeStringify)(a);
-        };
     },
     260630: function (t, e, n) {
       "use strict";
@@ -12090,8 +11969,8 @@
         var O = Object.getPrototypeOf,
           k = O && O(O(R([])));
         k && k !== o && a.call(k, c) && (w = k);
-        var S = (x.prototype = b.prototype = Object.create(w));
-        function E(t) {
+        var E = (x.prototype = b.prototype = Object.create(w));
+        function S(t) {
           ["next", "throw", "return"].forEach(function (e) {
             h(t, e, function (t) {
               return this._invoke(e, t);
@@ -12169,7 +12048,7 @@
         }
         return (
           (_.prototype = x),
-          u(S, "constructor", { value: x, configurable: !0 }),
+          u(E, "constructor", { value: x, configurable: !0 }),
           u(x, "constructor", { value: _, configurable: !0 }),
           (_.displayName = h(x, f, "GeneratorFunction")),
           (n.isGeneratorFunction = function (t) {
@@ -12184,14 +12063,14 @@
               Object.setPrototypeOf
                 ? Object.setPrototypeOf(t, x)
                 : ((t.__proto__ = x), h(t, f, "GeneratorFunction")),
-              (t.prototype = Object.create(S)),
+              (t.prototype = Object.create(E)),
               t
             );
           }),
           (n.awrap = function (t) {
             return { __await: t };
           }),
-          E(P.prototype),
+          S(P.prototype),
           h(P.prototype, l, function () {
             return this;
           }),
@@ -12205,12 +12084,12 @@
                   return t.done ? t.value : a.next();
                 });
           }),
-          E(S),
-          h(S, f, "Generator"),
-          h(S, c, function () {
+          S(E),
+          h(E, f, "Generator"),
+          h(E, c, function () {
             return this;
           }),
-          h(S, "toString", function () {
+          h(E, "toString", function () {
             return "[object Generator]";
           }),
           (n.keys = function (t) {
@@ -13006,14 +12885,14 @@
       };
       let O = !1,
         k,
-        S = {};
-      function E() {
+        E = {};
+      function S() {
         if (!O) return;
         let t = null == r ? void 0 : r.getStyle();
-        null == t || w(t, S)
+        null == t || w(t, E)
           ? null != k && cancelAnimationFrame(k)
-          : ((S = t), null == r || r.invalidate()),
-          (k = requestAnimationFrame(E));
+          : ((E = t), null == r || r.invalidate()),
+          (k = requestAnimationFrame(S));
       }
       let P = !1,
         C = {
@@ -13024,7 +12903,7 @@
             (P = t), null == r || r.invalidate();
           },
           enableAnimationTracking() {
-            (O = !0), (k = requestAnimationFrame(E));
+            (O = !0), (k = requestAnimationFrame(S));
           },
           disableAnimationTracking() {
             (O = !1), null != k && cancelAnimationFrame(k);
@@ -13182,7 +13061,7 @@
             },
             [b, m]
           ),
-          S = u.useCallback(
+          E = u.useCallback(
             t => {
               let n = null == a ? void 0 : a.current;
               t.currentTarget === t.target
@@ -13199,7 +13078,7 @@
               ...w,
               className: h(w.className, d.current ? c : void 0, v ? l : void 0),
               onBlur: k,
-              onFocus: S,
+              onFocus: E,
             })
           : g;
       }
@@ -13223,4 +13102,4 @@
     },
   },
 ]);
-//# sourceMappingURL=64999.ef0a4ba5422c79916d68.js.map
+//# sourceMappingURL=17444.1efcd9d16f6a053bc445.js.map

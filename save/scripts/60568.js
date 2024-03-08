@@ -75,12 +75,12 @@
         a = i("627445"),
         u = i.n(a),
         c = i("817736"),
-        d = i.n(c),
-        o = i("77078"),
+        o = i.n(c),
+        d = i("77078"),
         f = i("642906"),
         S = i("304006");
       function m(e) {
-        var t, i, s, a, c, d;
+        var t, i, s, a, c, o;
         let {
             header: m,
             isLargeModal: h,
@@ -129,14 +129,14 @@
         return (0, r.jsxs)(r.Fragment, {
           children: [
             null ===
-              (d =
+              (o =
                 null == y
                   ? void 0
                   : null === (a = y.options) || void 0 === a
                     ? void 0
                     : a.renderHeader) ||
-            void 0 === d ||
-            d
+            void 0 === o ||
+            o
               ? m
               : null,
             y.renderStep(p),
@@ -144,15 +144,15 @@
               ? null
               : (0, r.jsxs)(r.Fragment, {
                   children: [
-                    (0, r.jsx)(o.ModalContent, {
+                    (0, r.jsx)(d.ModalContent, {
                       className: l(S.body, R),
-                      children: (0, r.jsx)(o.Slides, {
+                      children: (0, r.jsx)(d.Slides, {
                         activeSlide: E,
                         centered: !1,
                         onSlideReady: e => g(e),
                         children: I.filter(e => null != e.key).map(e =>
                           (0, r.jsx)(
-                            o.Slide,
+                            d.Slide,
                             {
                               id: e.key,
                               children: (0, r.jsx)("form", {
@@ -176,12 +176,12 @@
       function h(e) {
         let { children: t } = e,
           { bodyNode: i } = (0, f.usePaymentContext)();
-        return null == i ? null : d.createPortal(t, i);
+        return null == i ? null : o.createPortal(t, i);
       }
       function p(e) {
         let { children: t } = e,
           { footerNode: i } = (0, f.usePaymentContext)();
-        return null == i ? null : d.createPortal(t, i);
+        return null == i ? null : o.createPortal(t, i);
       }
     },
     716849: function (e, t, i) {
@@ -205,8 +205,8 @@
         a = i("775433"),
         u = i("697218"),
         c = i("10514"),
-        d = i("764364"),
-        o = i("719923"),
+        o = i("764364"),
+        d = i("719923"),
         f = i("676572"),
         S = i("646718"),
         m = i("49111");
@@ -263,37 +263,37 @@
       }
       function k(e, t, i, r) {
         null != e &&
-          !(0, d.isPremium)(e) &&
+          !(0, o.isPremium)(e) &&
           i &&
           (t && p(),
           r &&
             (!c.default.isLoadedForSKU(
-              (0, o.castPremiumSubscriptionAsSkuId)(
+              (0, d.castPremiumSubscriptionAsSkuId)(
                 S.PremiumSubscriptionSKUs.TIER_0
               )
             ) &&
               !c.default.isFetchingForSKU(
-                (0, o.castPremiumSubscriptionAsSkuId)(
+                (0, d.castPremiumSubscriptionAsSkuId)(
                   S.PremiumSubscriptionSKUs.TIER_0
                 )
               ) &&
               (0, a.fetchSubscriptionPlansForSKU)(
-                (0, o.castPremiumSubscriptionAsSkuId)(
+                (0, d.castPremiumSubscriptionAsSkuId)(
                   S.PremiumSubscriptionSKUs.TIER_0
                 )
               ),
             !c.default.isLoadedForSKU(
-              (0, o.castPremiumSubscriptionAsSkuId)(
+              (0, d.castPremiumSubscriptionAsSkuId)(
                 S.PremiumSubscriptionSKUs.TIER_2
               )
             ) &&
               !c.default.isFetchingForSKU(
-                (0, o.castPremiumSubscriptionAsSkuId)(
+                (0, d.castPremiumSubscriptionAsSkuId)(
                   S.PremiumSubscriptionSKUs.TIER_2
                 )
               ) &&
               (0, a.fetchSubscriptionPlansForSKU)(
-                (0, o.castPremiumSubscriptionAsSkuId)(
+                (0, d.castPremiumSubscriptionAsSkuId)(
                   S.PremiumSubscriptionSKUs.TIER_2
                 )
               )));
@@ -414,8 +414,8 @@
         a = i("404118"),
         u = i("619443"),
         c = i("915639"),
-        d = i("872173"),
-        o = i("766274"),
+        o = i("872173"),
+        d = i("766274"),
         f = i("341542"),
         S = i("697218"),
         m = i("271560"),
@@ -470,7 +470,7 @@
             type: "GUILD_STICKERS_FETCH_SUCCESS",
             guildId: e,
             stickers: t.map(e =>
-              null != e.user ? { ...e, user: new o.default(e.user) } : e
+              null != e.user ? { ...e, user: new d.default(e.user) } : e
             ),
           });
         },
@@ -521,7 +521,7 @@
           : e.filter(e => null != h.default.getStickerById(e));
       }
       function A(e) {
-        d.FrecencyUserSettingsActionCreators.updateAsync(
+        o.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteStickers",
           t =>
             ((t.stickerIds = x(t.stickerIds)),
@@ -538,7 +538,7 @@
         );
       }
       function P(e) {
-        d.FrecencyUserSettingsActionCreators.updateAsync(
+        o.FrecencyUserSettingsActionCreators.updateAsync(
           "favoriteStickers",
           t => {
             (t.stickerIds = t.stickerIds.filter(t => t !== e)),
@@ -593,8 +593,8 @@
         a = i("42507"),
         u = i("305961"),
         c = i("162771"),
-        d = i("677099"),
-        o = i("697218"),
+        o = i("677099"),
+        d = i("697218"),
         f = i("427459"),
         S = i("991170"),
         m = i("866353"),
@@ -628,12 +628,12 @@
             listPaddingRight: n = 0,
             listWidth: l = 0,
             stickerNodeMargin: a = 0,
-            stickerNodeWidth: d,
-            stickersCategories: o,
+            stickerNodeWidth: o,
+            stickersCategories: d,
           } = e;
           return r.useMemo(() => {
-            let e = Math.floor((l - n + a) / (d + a)),
-              r = Math.floor(Math.max(a, (l - n - d * e) / (e - 1))),
+            let e = Math.floor((l - n + a) / (o + a)),
+              r = Math.floor(Math.max(a, (l - n - o * e) / (e - 1))),
               S = [],
               m = [],
               h = [],
@@ -652,10 +652,10 @@
                   { canCreateExpressions: l } = (0,
                   s.getManageResourcePermissions)(n),
                   a = c.default.getGuildId(),
-                  d = o.findIndex(
+                  o = d.findIndex(
                     e => e.type === I.StickerCategoryTypes.FAVORITE
                   ),
-                  g = o.findIndex(
+                  g = d.findIndex(
                     e => e.type === I.StickerCategoryTypes.RECENT
                   ),
                   y = t.length;
@@ -685,7 +685,7 @@
                         category: i,
                       }));
                   E > g &&
-                    E > d &&
+                    E > o &&
                     null != n &&
                     y > t.length &&
                     u.push({
@@ -704,7 +704,7 @@
                 E++;
               };
               if (null == i)
-                for (let e of o)
+                for (let e of d)
                   e.stickers.length > 0
                     ? (p++,
                       r(
@@ -730,11 +730,11 @@
               gutterWidth: r,
               columnCounts: S,
             };
-          }, [t, i, n, l, a, d, o]);
+          }, [t, i, n, l, a, o, d]);
         },
         R = e => {
-          let t = (0, n.useStateFromStores)([o.default], () =>
-            o.default.getCurrentUser()
+          let t = (0, n.useStateFromStores)([d.default], () =>
+            d.default.getCurrentUser()
           );
           return (0, n.useStateFromStores)(
             [E.default],
@@ -756,9 +756,9 @@
               E.default.getAllGuildStickers()
             ),
             i = (0, n.useStateFromStoresArray)(
-              [d.default, u.default],
+              [o.default, u.default],
               () => {
-                let e = d.default.getFlattenedGuildIds(),
+                let e = o.default.getFlattenedGuildIds(),
                   t = [];
                 return (
                   e.forEach(e => {
@@ -770,8 +770,8 @@
               },
               []
             ),
-            l = (0, n.useStateFromStores)([o.default], () =>
-              o.default.getCurrentUser()
+            l = (0, n.useStateFromStores)([d.default], () =>
+              d.default.getCurrentUser()
             );
           return r.useMemo(() => {
             let r = [];
@@ -876,8 +876,8 @@
               }),
               []
             ),
-            l = (0, n.useStateFromStores)([o.default], () =>
-              o.default.getCurrentUser()
+            l = (0, n.useStateFromStores)([d.default], () =>
+              d.default.getCurrentUser()
             ),
             a = L(e);
           return r.useMemo(() => {
@@ -983,8 +983,8 @@
         a = i("627445"),
         u = i.n(a),
         c = i("907002"),
-        d = i("446674"),
-        o = i("290381"),
+        o = i("446674"),
+        d = i("290381"),
         f = i("77078"),
         S = i("206230"),
         m = i("407063"),
@@ -1049,8 +1049,8 @@
               sticker: l,
               fileUri: a,
               assetData: c,
-              isFocused: d,
-              className: o,
+              isFocused: o,
+              className: d,
               maskAsset: f,
               positionRef: S,
               withLoadingIndicator: h,
@@ -1061,7 +1061,7 @@
             [k, y] = n.useState(!0),
             [_, R] = n.useState(!1),
             A = n.useRef(!1);
-          A.current = t && d;
+          A.current = t && o;
           let P = null == a ? (0, C.getStickerAssetUrl)(l) : a;
           return (u(
             null != P,
@@ -1105,13 +1105,13 @@
             var e;
             let i;
             !t && (i = 0),
-              null === (e = I.current) || void 0 === e || e.setState(t && d, i);
-          }, [l, t, d]),
+              null === (e = I.current) || void 0 === e || e.setState(t && o, i);
+          }, [l, t, o]),
           null == P)
             ? null
             : (0, r.jsx)("div", {
                 role: "img",
-                className: o,
+                className: d,
                 "aria-label": _
                   ? v.default.Messages.ERROR_LOADING_STICKER
                   : L(l),
@@ -1137,7 +1137,7 @@
               size: a,
               className: u,
               maskAsset: c,
-              positionRef: d,
+              positionRef: o,
               withLoadingIndicator: f,
               fileUri: S,
             } = e,
@@ -1172,13 +1172,13 @@
           }, []),
           null == R)
             ? null
-            : (0, r.jsx)(o.VisibilitySensor, {
+            : (0, r.jsx)(d.VisibilitySensor, {
                 ref: v,
                 onChange: h,
                 threshold: 0.7,
                 children: (0, r.jsx)("div", {
                   className: l(u, g.pngImageWrapper),
-                  ref: d,
+                  ref: o,
                   children: (0, r.jsx)(x, {
                     hasError: I,
                     isLoading: p,
@@ -1210,9 +1210,9 @@
               isInteracting: l,
               positionRef: a,
               size: u,
-              sticker: o,
+              sticker: d,
             } = e,
-            m = (0, d.useStateFromStores)(
+            m = (0, o.useStateFromStores)(
               [S.default],
               () => S.default.useReducedMotion
             ),
@@ -1256,7 +1256,7 @@
                             enlargeOnInteraction: !1,
                             isInteracting: l,
                             maskAsset: !1,
-                            sticker: o,
+                            sticker: d,
                             size: Math.round(u * i),
                             withLoadingIndicator: !1,
                           }),
@@ -1268,7 +1268,7 @@
                             children: (0, r.jsx)(f.Text, {
                               variant: "text-sm/medium",
                               className: g.overlayLabel,
-                              children: o.name,
+                              children: d.name,
                             }),
                           }),
                       ],
@@ -1286,8 +1286,8 @@
               enlargeScaleFactor: a = 1.55,
               maskAsset: u = !1,
               size: c,
-              sticker: d,
-              className: o,
+              sticker: o,
+              className: d,
               withLoadingIndicator: f,
               assetData: S,
               fileUri: m,
@@ -1296,8 +1296,8 @@
             p = (0, E.useIsWindowFocused)(),
             C = (0, I.useShouldAnimateSticker)(t) && !i,
             v = n.useRef(null);
-          if (null == d) return null;
-          let g = d.format_type === k.StickerFormat.LOTTIE ? A : P;
+          if (null == o) return null;
+          let g = o.format_type === k.StickerFormat.LOTTIE ? A : P;
           return (0, r.jsxs)(
             n.Fragment,
             {
@@ -1306,8 +1306,8 @@
                   shouldAnimate: C,
                   isFocused: p,
                   size: c,
-                  sticker: d,
-                  className: o,
+                  sticker: o,
+                  className: d,
                   maskAsset: u,
                   positionRef: v,
                   withLoadingIndicator: f,
@@ -1323,11 +1323,11 @@
                     isInteracting: t,
                     positionRef: v,
                     size: c,
-                    sticker: d,
+                    sticker: o,
                   }),
               ],
             },
-            "".concat(d.id, ",").concat(c)
+            "".concat(o.id, ",").concat(c)
           );
         };
       var M = U;
@@ -1372,8 +1372,8 @@
         a = i("917351"),
         u = i("617258"),
         c = i("77078"),
-        d = i("272030"),
-        o = i("997289"),
+        o = i("272030"),
+        d = i("997289"),
         f = i("246511"),
         S = i("151185"),
         m = i("599110"),
@@ -1410,7 +1410,7 @@
               currentUser: G,
               checkSendability: D = !0,
             } = e,
-            { location: H } = (0, o.useAnalyticsContext)(),
+            { location: H } = (0, d.useAnalyticsContext)(),
             V = w + 2 * b,
             B = n.useMemo(
               () => ({
@@ -1427,7 +1427,7 @@
             style: B,
             ...(null == R ? void 0 : R(U)),
             children: F.map(e => {
-              var o;
+              var d;
               let y =
                   e.visibleRowIndex === (null == L ? void 0 : L.rowIndex) &&
                   e.columnIndex === (null == L ? void 0 : L.columnIndex),
@@ -1443,9 +1443,9 @@
                   tabIndex: F,
                   onFocus: b,
                   ...V
-                } = null !== (o = null == u ? void 0 : u(e.columnIndex, U)) &&
-                void 0 !== o
-                  ? o
+                } = null !== (d = null == u ? void 0 : u(e.columnIndex, U)) &&
+                void 0 !== d
+                  ? d
                   : {};
               switch (e.type) {
                 case p.StickerGridItemTypes.CREATE_STICKER:
@@ -1520,7 +1520,7 @@
                           (null == N || N(e, t));
                       },
                       onContextMenu: e => {
-                        (0, d.openContextMenuLazy)(e, async () => {
+                        (0, o.openContextMenuLazy)(e, async () => {
                           let { default: e } = await i
                             .el("367343")
                             .then(i.bind(i, "367343"));
@@ -1741,6 +1741,27 @@
           { size: 20 }
         );
     },
+    866190: function (e, t, i) {
+      "use strict";
+      i.r(t),
+        i.d(t, {
+          useIsWindowFocused: function () {
+            return a;
+          },
+        });
+      var r = i("884691"),
+        n = i("446674"),
+        s = i("244201"),
+        l = i("471671");
+      function a() {
+        let { windowId: e } = r.useContext(s.default);
+        return (0, n.useStateFromStores)(
+          [l.default],
+          () => l.default.isFocused(e),
+          [e]
+        );
+      }
+    },
     804830: function (e, t, i) {
       "use strict";
       i.r(t),
@@ -1871,4 +1892,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60568.0e09297979951bd241f5.js.map
+//# sourceMappingURL=60568.7c13f969e150bbf0720b.js.map

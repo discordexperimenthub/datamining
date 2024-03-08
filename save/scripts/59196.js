@@ -26123,7 +26123,8 @@
               return d && (t += "..."), t;
             };
           if (
-            (this.font.truncate === o.TextTruncationMethod.Truncate &&
+            (this.font.truncate === o.TextTruncationMethod.None && f(e, t),
+            this.font.truncate === o.TextTruncationMethod.Truncate &&
               f((e = p(e)), t),
             this.font.truncate === o.TextTruncationMethod.Wrap)
           ) {
@@ -82850,4 +82851,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59196.5b9f0f64647fa4c8c94e.js.map
+//# sourceMappingURL=59196.2902385a4be71ff5b416.js.map

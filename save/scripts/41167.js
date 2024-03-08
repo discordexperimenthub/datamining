@@ -5610,6 +5610,66 @@
       });
       var l = n;
     },
+    809094: function (e, t, s) {
+      "use strict";
+      s.r(t),
+        s.d(t, {
+          default: function () {
+            return o;
+          },
+        });
+      var a = s("37983");
+      s("884691");
+      var n = s("82169"),
+        l = s("900158"),
+        i = s("669491");
+      function r(e) {
+        let {
+          width: t = 24,
+          height: s = 24,
+          color: l = i.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...o
+        } = e;
+        return (0, a.jsxs)("svg", {
+          ...(0, n.default)(o),
+          width: t,
+          height: s,
+          viewBox: "0 0 24 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, a.jsx)("path", {
+              "fill-rule": "evenodd",
+              "clip-rule": "evenodd",
+              d: "M3 8C3 5.79086 4.79086 4 7 4C9.20914 4 11 5.79086 11 8V13C11 13.5523 10.5523 14 10 14H4C3.44772 14 3 13.5523 3 13V8ZM5 10C4.44772 10 4 9.55228 4 9C4 8.44772 4.44772 8 5 8H6V7C6 6.44772 6.44772 6 7 6C7.55228 6 8 6.44772 8 7V8H9.14286C9.61624 8 10 8.38376 10 8.85714V9.14286C10 9.61624 9.61624 10 9.14286 10H7.42857H6.57143H5Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: r,
+            }),
+            (0, a.jsx)("path", {
+              d: "M10 16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V21C14 21.5523 13.5523 22 13 22H11C10.4477 22 10 21.5523 10 21V16Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: r,
+            }),
+            (0, a.jsx)("path", {
+              d: "M10.6178 4.29252C10.4697 4.22237 10.5197 4 10.6836 4H17C19.2092 4 21 5.79087 21 8.00001L21 13C21 13.5523 20.5523 14 20 14H12.8774C12.4548 14 12.1121 13.6574 12.1121 13.2347V6.65331C12.1121 5.64373 11.5303 4.72454 10.6178 4.29252V4.29252Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: r,
+            }),
+            (0, a.jsx)("path", {
+              "fill-rule": "evenodd",
+              "clip-rule": "evenodd",
+              d: "M14 4C14 3.44772 14.4477 3 15 3V3C15.5523 3 16 2.55228 16 2V2C16 1.44772 15.5523 1 15 1H13C12.4477 1 12 1.44772 12 2V2V3V4C12 4.55228 12.4477 5 13 5V5C13.5523 5 14 4.55228 14 4V4Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: r,
+            }),
+          ],
+        });
+      }
+      function o(e) {
+        return (0, a.jsx)(r, { ...e });
+      }
+    },
     204062: function (e, t, s) {
       "use strict";
       let a;
@@ -11496,9 +11556,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "273669",
+          E = "273685",
           T =
-            ((e = "9c513732191d39a46dea38fc65c41c626e9a9db1"),
+            ((e = "a56b40468a3d7031b83d2849ab80cb3136247223"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20336,7 +20396,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return M;
+            return v;
           },
         }),
         s("222007"),
@@ -20354,16 +20414,17 @@
         E = s("77078"),
         T = s("206230"),
         f = s("841026"),
-        m = s("204062"),
-        _ = s("471671"),
-        g = s("181114"),
-        h = s("630615"),
-        N = s("782340"),
-        I = s("449617");
-      let p = { mass: 10, tension: 550, friction: 140 };
-      function C() {
-        let e = (0, u.useStateFromStores)([_.default], () =>
-            _.default.isFocused()
+        m = s("809094"),
+        _ = s("204062"),
+        g = s("471671"),
+        h = s("181114"),
+        N = s("630615"),
+        I = s("782340"),
+        p = s("449617");
+      let C = { mass: 10, tension: 550, friction: 140 };
+      function A() {
+        let e = (0, u.useStateFromStores)([g.default], () =>
+            g.default.isFocused()
           ),
           t = (0, u.useStateFromStores)(
             [T.default],
@@ -20387,13 +20448,13 @@
           ),
           [o]
         );
-        let [d, c] = (0, r.useSpring)(() => ({ x: 0, y: 0, config: p }));
+        let [d, c] = (0, r.useSpring)(() => ({ x: 0, y: 0, config: C }));
         return (
           n.useEffect(() => {
             c({ x: s.x, y: s.y });
           }, [s.x, s.y, c]),
           (0, a.jsxs)("div", {
-            className: I.headerContainer,
+            className: p.headerContainer,
             children: [
               (0, a.jsx)(r.animated.div, {
                 style: {
@@ -20401,40 +20462,46 @@
                     "translate3d(".concat(e, "px, ").concat(t, "px, 0)")
                   ),
                 },
-                className: I.headerBackground,
+                className: p.headerBackground,
               }),
               (0, a.jsx)(E.Heading, {
                 variant: "display-md",
-                className: I.header,
+                className: p.header,
                 color: "always-white",
-                children: N.default.Messages.PACKAGES,
+                children: I.default.Messages.PACKAGES,
               }),
               (0, a.jsx)("div", {
-                className: I.headerCTA,
-                children: (0, a.jsx)(g.default, {
-                  className: I.headerButton,
+                className: p.headerCTA,
+                children: (0, a.jsxs)(h.default, {
+                  className: p.headerButton,
+                  innerClassName: p.innerButton,
                   pauseAnimation: !e || t,
                   onClick: () => {
                     (0, f.openLootbox)();
                   },
                   size: E.ButtonSizes.SMALL,
                   color: E.ButtonColors.CUSTOM,
-                  children:
-                    N.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                  children: [
+                    (0, a.jsx)(m.default, {
+                      className: p.buttonIconLarge,
+                      color: E.tokens.colors.WHITE,
+                    }),
+                    I.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                  ],
                 }),
               }),
             ],
           })
         );
       }
-      function A(e) {
+      function O(e) {
         let { icon: t, text: s, count: n } = e;
         return (0, a.jsxs)("div", {
-          className: I.stat,
+          className: p.stat,
           children: [
             (0, a.jsx)(t, { color: E.tokens.colors.TEXT_MUTED }),
             (0, a.jsx)(E.Text, {
-              className: I.statText,
+              className: p.statText,
               variant: "text-xs/bold",
               color: "text-muted",
               children: s,
@@ -20447,49 +20514,49 @@
           ],
         });
       }
-      function O() {
-        let e = (0, h.getLootboxes)(),
+      function x() {
+        let e = (0, N.getLootboxes)(),
           t = (0, u.useStateFromStores)(
-            [m.default],
-            () => m.default.openedItems
+            [_.default],
+            () => _.default.openedItems
           ),
           s = n.useMemo(() => Object.values(t).reduce((e, t) => e + t, 0), [t]);
         return (0, a.jsxs)("div", {
-          className: I.stats,
+          className: p.stats,
           children: [
-            (0, a.jsx)(A, {
+            (0, a.jsx)(O, {
               icon: d.TicketIcon,
-              text: N.default.Messages.PACKAGES_PACKAGES_OPENED,
+              text: I.default.Messages.PACKAGES_PACKAGES_OPENED,
               count: s,
             }),
-            (0, a.jsx)(A, {
-              icon: d.TicketIcon,
-              text: N.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
-              count: N.default.Messages.PACKAGES_OPENED_OUT_OF.format({
+            (0, a.jsx)(O, {
+              icon: m.default,
+              text: I.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
+              count: I.default.Messages.PACKAGES_OPENED_OUT_OF.format({
                 count: Object.keys(t).length,
                 total: Object.keys(e).length,
               }),
             }),
-            (0, a.jsx)(A, {
+            (0, a.jsx)(O, {
               icon: o.GlobeEarthIcon,
-              text: N.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
+              text: I.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
               count: 42069,
             }),
           ],
         });
       }
-      function x() {
+      function R() {
         let e = (0, u.useStateFromStores)(
-            [m.default],
-            () => m.default.openedItems
+            [_.default],
+            () => _.default.openedItems
           ),
           t = (0, u.useStateFromStores)(
-            [m.default],
-            () => m.default.redeemedPrize
+            [_.default],
+            () => _.default.redeemedPrize
           ),
-          s = (0, h.getLootboxes)(),
+          s = (0, N.getLootboxes)(),
           l = n.useMemo(() => Object.values(e).reduce((e, t) => e + t, 0), [e]),
-          i = l >= h.LOOTBOX_PITY_PRIZE_OPEN_COUNT,
+          i = l >= N.LOOTBOX_PITY_PRIZE_OPEN_COUNT,
           r = n.useMemo(
             () =>
               Object.keys(e).length === Object.keys(s).length &&
@@ -20500,20 +20567,20 @@
           children: [
             (0, a.jsx)(E.Heading, {
               variant: "heading-md/semibold",
-              className: I.inventoryHeader,
+              className: p.inventoryHeader,
               children:
-                N.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
+                I.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
             }),
             (0, a.jsxs)("div", {
-              className: I.inventoryContainer,
+              className: p.inventoryContainer,
               children: [
                 !t &&
                   (r || i) &&
                   (0, a.jsxs)("div", {
-                    className: I.banner,
+                    className: p.banner,
                     children: [
                       (0, a.jsxs)("div", {
-                        className: I.inline,
+                        className: p.inline,
                         children: [
                           (0, a.jsx)(c.CircleInformationIcon, {
                             width: 16,
@@ -20524,37 +20591,36 @@
                             variant: "text-sm/medium",
                             color: "always-white",
                             children: r
-                              ? N.default.Messages
+                              ? I.default.Messages
                                   .USER_SETTINGS_PACKAGE_BANNER_DEFAULT
-                              : N.default.Messages
+                              : I.default.Messages
                                   .USER_SETTINGS_PACKAGE_BANNER_PITY,
                           }),
                         ],
                       }),
                       (0, a.jsxs)(E.Button, {
-                        className: I.headerButton,
-                        innerClassName: I.innerButton,
+                        className: p.headerButton,
+                        innerClassName: p.innerButton,
                         onClick: f.redeemPrize,
                         size: E.ButtonSizes.TINY,
                         color: E.ButtonColors.CUSTOM,
                         children: [
                           (0, a.jsx)(S.GiftIcon, {
-                            width: 14,
-                            height: 14,
+                            className: p.buttonIconSmall,
                             color: E.tokens.colors.WHITE,
                           }),
-                          N.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
+                          I.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
                         ],
                       }),
                     ],
                   }),
                 (0, a.jsx)("div", {
-                  className: I.inventoryItems,
+                  className: p.inventoryItems,
                   children: Object.keys(s).map(t => {
                     var n;
                     let l = s[t];
                     return (0, a.jsx)(
-                      R,
+                      M,
                       {
                         lootboxImage: l.image,
                         lootboxName: l.name,
@@ -20573,40 +20639,40 @@
           ],
         });
       }
-      function R(e) {
+      function M(e) {
         let { lootboxImage: t, lootboxName: s, openedCount: n } = e,
           l = n > 0;
         return (0, a.jsxs)("div", {
-          className: I.inventoryItem,
+          className: p.inventoryItem,
           children: [
             l &&
               (0, a.jsx)(E.Text, {
                 variant: "text-xxs/bold",
-                className: I.itemCount,
-                children: N.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
+                className: p.itemCount,
+                children: I.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
                   { count: n }
                 ),
               }),
             (0, a.jsx)(E.Heading, {
               variant: "display-md",
-              className: I.itemImageContainer,
+              className: p.itemImageContainer,
               color: "text-muted",
               children: l
-                ? (0, a.jsx)("img", { src: t, alt: "", className: I.itemImage })
+                ? (0, a.jsx)("img", { src: t, alt: "", className: p.itemImage })
                 : "?",
             }),
             l &&
               (0, a.jsx)(E.Text, {
                 variant: "text-xxs/bold",
-                className: I.itemName,
+                className: p.itemName,
                 children: s,
               }),
           ],
         });
       }
-      function M() {
-        let e = (0, u.useStateFromStores)([m.default], () =>
-          m.default.getFetchState()
+      function v() {
+        let e = (0, u.useStateFromStores)([_.default], () =>
+          _.default.getFetchState()
         );
         return (
           n.useEffect(() => {
@@ -20614,12 +20680,12 @@
           }, []),
           (0, a.jsx)("div", {
             children:
-              e === m.FetchState.FETCHED
+              e === _.FetchState.FETCHED
                 ? (0, a.jsxs)(a.Fragment, {
                     children: [
-                      (0, a.jsx)(C, {}),
-                      (0, a.jsx)(O, {}),
+                      (0, a.jsx)(A, {}),
                       (0, a.jsx)(x, {}),
+                      (0, a.jsx)(R, {}),
                     ],
                   })
                 : (0, a.jsx)(E.Spinner, {}),
@@ -31332,6 +31398,41 @@
         ];
       }
     },
+    900158: function (e, t, s) {
+      "use strict";
+      s.r(t),
+        s.d(t, {
+          ExperimentalLootboxIcon: function () {
+            return i;
+          },
+        });
+      var a = s("37983");
+      s("884691");
+      var n = s("669491"),
+        l = s("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: s = 24,
+          color: i = n.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...o
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, l.default)(o),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: s,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            d: "M23 6a3 3 0 0 0-3-3H4a3 3 0 0 0-3 3v4.5c0 .28.22.5.5.5h7c.22 0 .41-.14.5-.34.53-1.3 1.68-2.41 3-2.41s2.47 1.11 3 2.4c.09.2.28.35.5.35h7a.5.5 0 0 0 .5-.5V6ZM23 13.5a.5.5 0 0 0-.5-.5h-7c-.22 0-.41.14-.5.34-.53 1.3-1.68 2.41-3 2.41s-2.47-1.11-3-2.4a.54.54 0 0 0-.5-.35h-7a.5.5 0 0 0-.5.5V18a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-4.5Z",
+            className: r,
+          }),
+        });
+      };
+    },
     281069: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -31523,4 +31624,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2baed4dc2e129126ee56.js.map
+//# sourceMappingURL=2416c7760952ba7bbfb1.js.map

@@ -101030,6 +101030,20 @@ html .invoiceCancelRow_a8669b {
 .headerButton_fe8970[aria-disabled="true"] {
   background-color: var(--primary-700);
 }
+.buttonIcon__3ae1d {
+  width: 18px;
+  height: 18px;
+  color: var(--white-500);
+  margin-right: 8px;
+}
+.buttonIconLarge__6c2fd {
+  width: 18px;
+  height: 18px;
+}
+.buttonIconSmall__72e00 {
+  width: 14px;
+  height: 14px;
+}
 .inventoryHeader_de1495 {
   margin: 20px 0 8px 12px;
 }
@@ -110365,4 +110379,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.20f2acb61a06c45dc1bb.css.map*/
+/*# sourceMappingURL=app.a0bf06937868490646e0.css.map*/

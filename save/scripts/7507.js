@@ -2100,8 +2100,8 @@
         M = A("757515"),
         S = A("740259"),
         F = A("492724"),
-        G = A("155539"),
-        _ = A("959875"),
+        _ = A("155539"),
+        G = A("959875"),
         K = A("669297"),
         B = A("836312"),
         W = A("795785"),
@@ -2263,10 +2263,10 @@
             hasUnsavedAttachmentChanges: eS,
             cancelUnusedUploads: eF,
           } = (0, V.useGuildProductAttachmentManagerContext)(),
-          eG =
+          e_ =
             (null == es ? void 0 : es.attachments) != null &&
             (null == es ? void 0 : es.attachments.length) > 0,
-          e_ = null != eb ? eb : eq,
+          eG = null != eb ? eb : eq,
           eK = null != eV && "published" in eV,
           eB = null != eV && !eK,
           eW =
@@ -2277,13 +2277,12 @@
           eZ = null != eX || null != eW,
           eQ = (0, c.default)(
             [x.default],
-            () => {
-              if (null != eW && null !== eX) {
-                let e = x.default.getGuild(q);
-                return null == e ? void 0 : e.roles[eW];
-              }
-              return null != eX ? eX : void 0;
-            },
+            () =>
+              null != eW && null !== eX
+                ? x.default.getRole(q, eW)
+                : null != eX
+                  ? eX
+                  : void 0,
             [eX, eW, q]
           ),
           ey = "";
@@ -2315,14 +2314,14 @@
                 imageName: ex,
                 isImageChanged: eD,
                 newRoleParams: eX,
-                hasSavedAttachments: eG,
+                hasSavedAttachments: e_,
                 hasUnsavedAttachmentChanges: eS,
               }),
-            [es, eh, ev, em, eI, ex, eD, eX, eG, eS]
+            [es, eh, ev, em, eI, ex, eD, eX, e_, eS]
           ),
           e3 = r.useMemo(
             () =>
-              eJ || null == ek || "publish" === ek || null != e_
+              eJ || null == ek || "publish" === ek || null != eG
                 ? null
                 : (0, n.jsx)(D.default, {
                     className: k.successNotice,
@@ -2354,11 +2353,11 @@
                           .GUILD_PRODUCT_EDIT_NOTICE_BAR_DISMISS,
                     }),
                   }),
-            [e_, eJ, ek]
+            [eG, eJ, ek]
           ),
           e6 = r.useCallback(() => {
             eJ
-              ? (0, _.default)({
+              ? (0, G.default)({
                   title:
                     H.default.Messages
                       .GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_TITLE,
@@ -2402,10 +2401,10 @@
           }
         };
         r.useEffect(() => {
-          if (null != e_) {
+          if (null != eG) {
             var e;
             (0, B.showPublishErrorDialog)(
-              e_,
+              eG,
               q,
               null == eo
                 ? void 0
@@ -2414,7 +2413,7 @@
                   : e.id
             );
           }
-        }, [e_, q, eo]),
+        }, [eG, q, eo]),
           r.useEffect(() => {
             eJ && ew(void 0);
           }, [eJ]);
@@ -2469,9 +2468,9 @@
                         tag: "label",
                         htmlFor: Y,
                         error:
-                          null == e_
+                          null == eG
                             ? void 0
-                            : e_.getFirstFieldErrorMessage("name"),
+                            : eG.getFirstFieldErrorMessage("name"),
                         children: (0, n.jsx)(g.TextArea, {
                           value: eh,
                           onChange: ep,
@@ -2494,9 +2493,9 @@
                             .GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_LABEL,
                         tag: "label",
                         error:
-                          null == e_
+                          null == eG
                             ? void 0
-                            : e_.getFirstFieldErrorMessage("description"),
+                            : eG.getFirstFieldErrorMessage("description"),
                         htmlFor: J,
                         children: (0, n.jsx)(v.default, {
                           id: J,
@@ -2518,9 +2517,9 @@
                             .GUILD_PRODUCT_EDIT_MODAL_PRICE_LABEL,
                         tag: "label",
                         error:
-                          null == e_
+                          null == eG
                             ? void 0
-                            : e_.getFirstFieldErrorMessage("price_tier"),
+                            : eG.getFirstFieldErrorMessage("price_tier"),
                         children: (0, n.jsx)(et, {
                           guildId: q,
                           selectedPriceTier: ev,
@@ -2533,9 +2532,9 @@
                             .GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_LABEL,
                         tag: "label",
                         error:
-                          null == e_
+                          null == eG
                             ? void 0
-                            : e_.getFirstFieldErrorMessage("image"),
+                            : eG.getFirstFieldErrorMessage("image"),
                         titleClassName: k.thumbnailLabel,
                         children: [
                           (0, n.jsx)(g.Text, {
@@ -2585,10 +2584,10 @@
                               H.default.Messages
                                 .GUILD_PRODUCT_EDIT_MODAL_ATTACHMENTS_LABEL,
                             error:
-                              null == e_
+                              null == eG
                                 ? void 0
-                                : e_.getFirstFieldErrorMessage("attachments"),
-                            children: (0, n.jsx)(G.AttachmentsUploadComponent, {
+                                : eG.getFirstFieldErrorMessage("attachments"),
+                            children: (0, n.jsx)(_.AttachmentsUploadComponent, {
                               onFileAdded: () => {
                                 var e;
                                 null === (e = e2.current) ||
@@ -2606,9 +2605,9 @@
                             error:
                               null !==
                                 (I =
-                                  null == e_
+                                  null == eG
                                     ? void 0
-                                    : e_.getFirstFieldErrorMessage(
+                                    : eG.getFirstFieldErrorMessage(
                                         M.ROLE_FIELD_NAME
                                       )) && void 0 !== I
                                 ? I
@@ -2743,7 +2742,7 @@
                                 })
                               : eH();
                         },
-                        disabled: eG,
+                        disabled: e_,
                       }),
                     ],
                   }),
@@ -3069,15 +3068,8 @@
             listingRoleId: c,
             error: f,
           } = e,
-          C = (0, s.default)(
-            [o.default],
-            () => {
-              if (null != c) {
-                let e = o.default.getGuild(r);
-                return null == e ? void 0 : e.roles[c];
-              }
-            },
-            [c, r]
+          C = (0, s.default)([o.default], () =>
+            null != c ? o.default.getRole(r, c) : void 0
           );
         return null === t
           ? (0, a.jsxs)(i.FormItem, {
@@ -4498,4 +4490,4 @@
     },
   },
 ]);
-//# sourceMappingURL=799b3d6ec4e644edf809.js.map
+//# sourceMappingURL=561d41f323ff5232f94e.js.map

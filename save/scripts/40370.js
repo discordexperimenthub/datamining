@@ -564,9 +564,9 @@
         O = n("856246"),
         v = n("407417"),
         g = n("246421"),
-        j = n("782340"),
-        N = n("585649");
-      function R(t) {
+        R = n("782340"),
+        j = n("585649");
+      function N(t) {
         let { guildProductListing: e, guildId: n, skuPricePreview: r } = t,
           l = (0, C.useProductType)(e),
           i = (0, D.formatPrice)(r.amount, r.currency),
@@ -576,16 +576,16 @@
         return (
           u(null != s, "guild cannot be null"),
           (0, a.jsxs)("div", {
-            className: N.purchaseSummaryContainer,
+            className: j.purchaseSummaryContainer,
             children: [
               (0, a.jsx)(f.default, {
                 alt: "",
-                className: N.purchaseSummaryImage,
+                className: j.purchaseSummaryImage,
                 listing: e,
                 imageSize: 100,
               }),
               (0, a.jsxs)("div", {
-                className: N.purchaseSummarInfo,
+                className: j.purchaseSummarInfo,
                 children: [
                   (0, a.jsx)(c.Text, {
                     variant: "text-md/medium",
@@ -594,14 +594,14 @@
                   }),
                   (0, a.jsx)(_.default, { size: 4 }),
                   (0, a.jsxs)("div", {
-                    className: N.productTypeContainer,
+                    className: j.productTypeContainer,
                     children: [
                       (0, a.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: l,
                       }),
-                      (0, a.jsx)("div", { className: N.dotSeparator }),
+                      (0, a.jsx)("div", { className: j.dotSeparator }),
                       (0, a.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -613,7 +613,7 @@
                 ],
               }),
               (0, a.jsxs)("div", {
-                className: N.purchaseSummaryPrice,
+                className: j.purchaseSummaryPrice,
                 children: [
                   (0, a.jsx)(c.Text, {
                     variant: "text-md/medium",
@@ -625,7 +625,7 @@
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children:
-                      j.default.Messages
+                      R.default.Messages
                         .GUILD_PRODUCT_PURCHASE_SUMMARY_TOTAL_PAID,
                   }),
                 ],
@@ -643,15 +643,15 @@
           ? null
           : (0, a.jsx)(O.default, {
               label:
-                j.default.Messages
+                R.default.Messages
                   .GUILD_PRODUCT_CONFIRMATION_MODAL_DOWNLOADABLE_UNLOCKED,
               children: (0, a.jsxs)("div", {
-                className: i(N.attachmentsContainer, {
-                  [N.attachmentsContainerMultiple]: s,
+                className: i(j.attachmentsContainer, {
+                  [j.attachmentsContainerMultiple]: s,
                 }),
                 children: [
                   (0, a.jsx)("div", {
-                    className: N.attachmentGrid,
+                    className: j.attachmentGrid,
                     children: l.map(t =>
                       (0, a.jsx)(L.default, { attachment: t }, t.id)
                     ),
@@ -672,7 +672,7 @@
           ? null
           : (0, a.jsx)(O.default, {
               label:
-                j.default.Messages
+                R.default.Messages
                   .GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED,
               children: (0, a.jsx)(g.default, { role: e }),
             });
@@ -706,11 +706,11 @@
             } catch (t) {
               n(),
                 (0, h.default)({
-                  body: j.default.Messages
+                  body: R.default.Messages
                     .GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_BODY,
-                  confirmText: j.default.Messages.GOT_IT,
+                  confirmText: R.default.Messages.GOT_IT,
                   header:
-                    j.default.Messages
+                    R.default.Messages
                       .GUILD_PRODUCT_CONFIRMATION_MODAL_GENRIC_ERROR_HEADER,
                   confirmButtonColor: o.Button.Colors.BRAND,
                 });
@@ -720,38 +720,29 @@
         let O =
             (null !== (e = D.attachments) && void 0 !== e ? e : []).length > 0,
           v = D.role_id,
-          g = (0, d.useStateFromStores)(
-            [x.default],
-            () => {
-              var t;
-              return null != v
-                ? null === (t = x.default.getGuild(s)) || void 0 === t
-                  ? void 0
-                  : t.roles[v]
-                : void 0;
-            },
-            [s, v]
+          g = (0, d.useStateFromStores)([x.default], () =>
+            null != v ? x.default.getRole(s, v) : void 0
           );
         return (0, a.jsx)(c.ModalRoot, {
-          className: N.modal,
+          className: j.modal,
           size: c.ModalSize.DYNAMIC,
           transitionState: l,
           "aria-label": D.name,
           children: (0, a.jsx)(c.ModalContent, {
             children: (0, a.jsx)("div", {
-              className: N.container,
+              className: j.container,
               children: C
                 ? (0, a.jsx)(c.Spinner, {})
                 : (0, a.jsxs)(a.Fragment, {
                     children: [
                       (0, a.jsxs)("div", {
-                        className: N.header,
+                        className: j.header,
                         children: [
                           (0, a.jsx)(c.Heading, {
                             variant: "heading-xl/semibold",
                             color: "header-primary",
                             children:
-                              j.default.Messages
+                              R.default.Messages
                                 .GUILD_PRODUCT_CONFIRMATION_MODAL_TITLE,
                           }),
                           (0, a.jsx)(c.Clickable, {
@@ -759,7 +750,7 @@
                             children: (0, a.jsx)(m.default, {
                               width: 24,
                               height: 24,
-                              className: N.close,
+                              className: j.close,
                             }),
                           }),
                         ],
@@ -769,7 +760,7 @@
                         variant: "text-md/normal",
                         color: "text-normal",
                         children:
-                          j.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format(
+                          R.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format(
                             { productName: D.name, emphasisHook: p }
                           ),
                       }),
@@ -779,12 +770,12 @@
                         color: "text-normal",
                         children: [
                           O
-                            ? j.default.Messages
+                            ? R.default.Messages
                                 .GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ATTACHMENT +
                               " "
                             : "",
                           null != g
-                            ? j.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format(
+                            ? R.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format(
                                 { roleName: g.name, emphasisHook: p }
                               )
                             : "",
@@ -795,20 +786,20 @@
                         variant: "text-md/normal",
                         color: "text-normal",
                         children:
-                          j.default.Messages
+                          R.default.Messages
                             .GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_THANK_YOU,
                       }),
                       (0, a.jsx)(_.default, { size: 24 }),
-                      (0, a.jsx)(R, {
+                      (0, a.jsx)(N, {
                         guildProductListing: D,
                         guildId: s,
                         skuPricePreview: f,
                       }),
                       (0, a.jsx)(_.default, { size: 32 }),
-                      (0, a.jsx)("div", { className: N.divider }),
+                      (0, a.jsx)("div", { className: j.divider }),
                       (0, a.jsx)(_.default, { size: 32 }),
                       (0, a.jsxs)("ul", {
-                        className: N.benefitsContainer,
+                        className: j.benefitsContainer,
                         children: [
                           (0, a.jsx)(U, { guildProductListing: D, guildId: s }),
                           (0, a.jsx)(E, { role: g }),
@@ -907,4 +898,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ab8c63a04ba9cc2ad37e.js.map
+//# sourceMappingURL=b6466a5e590dd674c95d.js.map

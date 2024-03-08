@@ -141,9 +141,9 @@
             showContextMenu: p,
             theme: M,
             roleStyle: x,
-            "aria-label": I,
+            "aria-label": R,
           } = e,
-          R = a.useCallback(
+          I = a.useCallback(
             e => {
               (0, d.openContextMenuLazy)(e, async () => {
                 let { default: e } = await s
@@ -167,7 +167,7 @@
               selectedItem: T,
               onItemSelect: S,
               itemType: N,
-              "aria-label": null != _ ? "".concat(I, ", ").concat(_) : I,
+              "aria-label": null != _ ? "".concat(R, ", ").concat(_) : R,
               children: (0, l.jsxs)("div", {
                 className: f.roleContent,
                 children: [
@@ -198,7 +198,7 @@
                   })(),
                   (0, l.jsx)("div", {
                     className: f.roleInner,
-                    onContextMenu: R,
+                    onContextMenu: I,
                     children: h,
                   }),
                   p && null != i ? (0, l.jsx)(m, { guild: u, role: i }) : null,
@@ -266,14 +266,14 @@
                 (0, r.useToken)(i.default.unsafe_rawColors.WHITE_500).hex(),
               ],
             }),
-            I = p.to({
+            R = p.to({
               range: [0, 1],
               output: [
                 (0, r.useToken)(i.default.colors.BACKGROUND_FLOATING).hex(),
                 (0, r.useToken)(i.default.colors.STATUS_DANGER).hex(),
               ],
             }),
-            R = p.to({
+            I = p.to({
               range: [0, 1],
               output: [
                 (0, r.useToken)(i.default.colors.TEXT_DANGER).hex(),
@@ -282,7 +282,7 @@
             });
           return (0, l.jsx)(n.animated.div, {
             className: c.container,
-            style: { backgroundColor: I },
+            style: { backgroundColor: R },
             children: (0, l.jsx)("div", {
               className: c.flexContainer,
               ref: _,
@@ -293,7 +293,7 @@
                     className: c.shrinkingContainer,
                     children: (0, l.jsx)(n.animated.div, {
                       className: c.message,
-                      style: { color: null != h ? R : x },
+                      style: { color: null != h ? I : x },
                       children:
                         null !== (t = null != h ? h : s) && void 0 !== t
                           ? t
@@ -372,13 +372,13 @@
           let { channel: t, onClose: s, onConfirm: _, transitionState: p } = e,
             M = (0, r.default)(t, !0),
             x = t.id,
-            I = t.isForumPost(),
-            R = (0, n.useStateFromStores)([g.default], () =>
+            R = t.isForumPost(),
+            I = (0, n.useStateFromStores)([g.default], () =>
               g.default.getGuild(t.getGuildId())
             ),
             A = (0, h.useGuildChannelScheduledEvents)(x),
             { isSubscriptionGated: O } = (0, u.default)(t.id),
-            L = (0, c.default)(R, t),
+            L = (0, c.default)(I, t),
             [v, j] = a.useState(null),
             D = (0, n.useStateFromStores)(
               [m.default],
@@ -406,7 +406,7 @@
               },
               [t.id]
             ),
-            b = I && (y || (D && F < 1)),
+            b = R && (y || (D && F < 1)),
             P =
               A.length > 0 &&
               (t.type === S.ChannelTypes.GUILD_VOICE ||
@@ -465,9 +465,9 @@
                         variant: "text-md/normal",
                         children: e.format({
                           onClick: () => {
-                            null != R &&
+                            null != I &&
                               (E.default.open(
-                                R.id,
+                                I.id,
                                 S.GuildSettingsSections.ONBOARDING
                               ),
                               null == s || s());
@@ -486,12 +486,12 @@
               })
             );
           }
-          if (null == R) return null;
+          if (null == I) return null;
           if (
-            R.hasFeature(S.GuildFeatures.COMMUNITY) &&
-            (R.rulesChannelId === x || R.publicUpdatesChannelId === x)
+            I.hasFeature(S.GuildFeatures.COMMUNITY) &&
+            (I.rulesChannelId === x || I.publicUpdatesChannelId === x)
           ) {
-            let e = R.rulesChannelId === x,
+            let e = I.rulesChannelId === x,
               t = e
                 ? N.default.Messages.DELETE_RULES_CHANNEL_BODY
                 : N.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
@@ -520,7 +520,7 @@
                         N.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                           onClick: () => {
                             E.default.open(
-                              R.id,
+                              I.id,
                               S.GuildSettingsSections.COMMUNITY
                             ),
                               null == s || s();
@@ -740,8 +740,8 @@
         p = s("957255"),
         M = s("697218"),
         x = s("79798"),
-        I = s("145131"),
-        R = s("555158"),
+        R = s("145131"),
+        I = s("555158"),
         A = s("381546"),
         O = s("45029"),
         L = s("682344"),
@@ -845,15 +845,15 @@
             if (null == m) return null;
             let p = !C && null == n && null != m.id;
             return (0, l.jsxs)(
-              I.default,
+              R.default,
               {
-                justify: I.default.Justify.BETWEEN,
-                align: I.default.Align.CENTER,
+                justify: R.default.Justify.BETWEEN,
+                align: R.default.Align.CENTER,
                 className: V.memberRow,
                 children: [
-                  (0, l.jsx)(I.default, {
-                    justify: I.default.Justify.START,
-                    align: I.default.Align.CENTER,
+                  (0, l.jsx)(R.default, {
+                    justify: R.default.Justify.START,
+                    align: R.default.Align.CENTER,
                     className: V.memberRowBody,
                     children: c,
                   }),
@@ -942,13 +942,17 @@
       }
       function W(e) {
         let { guild: t, channel: a, permissionUpdates: n } = e,
-          d = F.getExistingRolesRowWithPermissionDisabled(
+          d = (0, r.useStateFromStores)([_.default], () =>
+            _.default.getRoles(t.id)
+          ),
+          u = F.getExistingRolesRowWithPermissionDisabled(
             t,
+            d,
             a,
             T.MODERATE_STAGE_CHANNEL_PERMISSIONS,
             n
           ),
-          u = (0, r.useStateFromStores)([C.default], () =>
+          c = (0, r.useStateFromStores)([C.default], () =>
             F.getExistingMembersRows(
               C.default.getMemberIds(t.id),
               a,
@@ -957,8 +961,8 @@
               n
             )
           ),
-          c = (0, g.useCanUpdateStageChannelModerators)(a.id);
-        function h() {
+          h = (0, g.useCanUpdateStageChannelModerators)(a.id);
+        function E() {
           (0, o.openModalLazy)(async () => {
             let { default: e } = await s.el("286470").then(s.bind(s, "286470"));
             return t => (0, l.jsx)(e, { ...t, channelId: a.id });
@@ -981,9 +985,9 @@
             (0, l.jsxs)("div", {
               className: V.cardFolder,
               children: [
-                (0, l.jsxs)(I.default, {
-                  justify: I.default.Justify.BETWEEN,
-                  align: I.default.Align.CENTER,
+                (0, l.jsxs)(R.default, {
+                  justify: R.default.Justify.BETWEEN,
+                  align: R.default.Align.CENTER,
                   className: V.folderHeader,
                   children: [
                     (0, l.jsx)(o.FormTitle, {
@@ -995,14 +999,14 @@
                     (0, l.jsx)(o.Tooltip, {
                       text: G.default.Messages
                         .CHANNEL_PERMISSIONS_NOT_MODERATOR,
-                      shouldShow: !c,
+                      shouldShow: !h,
                       children: e =>
                         (0, l.jsx)(o.Button, {
                           ...e,
                           size: o.Button.Sizes.SMALL,
                           color: o.Button.Colors.BRAND,
-                          onClick: h,
-                          disabled: !c,
+                          onClick: E,
+                          disabled: !h,
                           children:
                             G.default.Messages
                               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
@@ -1012,9 +1016,9 @@
                 }),
                 (0, l.jsx)(k, {
                   channel: a,
-                  roles: d,
-                  members: u,
-                  disabledReason: c
+                  roles: u,
+                  members: c,
+                  disabledReason: h
                     ? null
                     : G.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
                   getRemoveTooltipHint: S.getRemoveModeratorTooltipHint,
@@ -1084,8 +1088,8 @@
                   E &&
                     (0, l.jsx)("div", {
                       className: V.adminWarning,
-                      children: (0, l.jsx)(R.default, {
-                        messageType: R.HelpMessageTypes.WARNING,
+                      children: (0, l.jsx)(I.default, {
+                        messageType: I.HelpMessageTypes.WARNING,
                         children:
                           G.default.Messages
                             .CHANNEL_PERMISSIONS_EVERYONE_IS_ADMIN_WARNING,
@@ -1096,8 +1100,8 @@
                     !n &&
                     (0, l.jsx)("div", {
                       className: V.adminWarning,
-                      children: (0, l.jsx)(R.default, {
-                        messageType: R.HelpMessageTypes.WARNING,
+                      children: (0, l.jsx)(I.default, {
+                        messageType: I.HelpMessageTypes.WARNING,
                         children:
                           G.default.Messages
                             .CHANNEL_PERMISSIONS_EVERYONE_CAN_NOT_VIEW_WARNING,
@@ -1106,9 +1110,9 @@
                   n &&
                     (0, l.jsxs)(l.Fragment, {
                       children: [
-                        (0, l.jsxs)(I.default, {
-                          justify: I.default.Justify.BETWEEN,
-                          align: I.default.Align.CENTER,
+                        (0, l.jsxs)(R.default, {
+                          justify: R.default.Justify.BETWEEN,
+                          align: R.default.Align.CENTER,
                           className: V.folderHeader,
                           children: [
                             (0, l.jsx)(o.FormTitle, {
@@ -1178,14 +1182,16 @@
           if (null != t) {
             e = _.default.getGuild(t.getGuildId());
             let s = C.default.getMemberIds(null == e ? void 0 : e.id);
-            null != e &&
-              ((n = N.default.editedPermissionIds.reduce((e, t) => {
+            if (null != e) {
+              let r = _.default.getRoles(e.id);
+              (n = N.default.editedPermissionIds.reduce((e, t) => {
                 let s = N.default.getPermissionOverwrite(t);
                 return null != s && (e[t] = s), e;
               }, {})),
-              (l = F.getExistingRolesRows(e, t, t.accessPermissions, n)),
-              (a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n)),
-              (i = F.isPrivateGuildChannel(t, n)));
+                (l = F.getExistingRolesRows(e, r, t, t.accessPermissions, n)),
+                (a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n)),
+                (i = F.isPrivateGuildChannel(t, n));
+            }
           }
           return {
             canSyncChannel:
@@ -1463,8 +1469,8 @@
         p = s("492114"),
         M = s("42203"),
         x = s("957255"),
-        I = s("27618"),
-        R = s("697218"),
+        R = s("27618"),
+        I = s("697218"),
         A = s("228220"),
         O = s("659500"),
         L = s("291013"),
@@ -1566,8 +1572,8 @@
                                   : null,
                                 (0, f.computeChannelName)(
                                   t,
-                                  R.default,
-                                  I.default
+                                  I.default,
+                                  R.default
                                 ),
                                 null != s
                                   ? (0, l.jsx)(i.Text, {
@@ -1578,8 +1584,8 @@
                                       className: b.category,
                                       children: (0, f.computeChannelName)(
                                         s,
-                                        R.default,
-                                        I.default
+                                        I.default,
+                                        R.default
                                       ),
                                     })
                                   : null,
@@ -1878,8 +1884,8 @@
         p = s("86678"),
         M = s("867805"),
         x = s("339792"),
-        I = s("630473"),
-        R = s("20105"),
+        R = s("630473"),
+        I = s("20105"),
         A = s("677315"),
         O = s("252862"),
         L = s("300322"),
@@ -2138,7 +2144,7 @@
                           className: el.description,
                           children: es.default.Messages.FORM_HELP_FORUM_TAGS,
                         }),
-                        (0, l.jsx)(I.default, { channel: e }),
+                        (0, l.jsx)(R.default, { channel: e }),
                       ],
                     }),
                     (0, l.jsx)(h.Checkbox, {
@@ -2222,7 +2228,7 @@
                             }),
                           ],
                         }),
-                        (0, l.jsx)(R.default, {
+                        (0, l.jsx)(I.default, {
                           reactionEmoji: e.defaultReactionEmoji,
                         }),
                       ],
@@ -3239,8 +3245,8 @@
         p = s("901998"),
         M = s("492114"),
         x = s("26989"),
-        I = s("305961"),
-        R = s("957255"),
+        R = s("305961"),
+        I = s("957255"),
         A = s("697218"),
         O = s("669021"),
         L = s("730988"),
@@ -3276,25 +3282,28 @@
       function V(e) {
         let { overwrite: t } = e,
           s = (0, o.useStateFromStores)([p.default], () => p.default.channel),
-          a = (0, o.useStateFromStores)([I.default], () =>
-            null != s ? I.default.getGuild(s.getGuildId()) : null
+          a = (0, o.useStateFromStores)([R.default], () =>
+            null != s ? R.default.getGuild(s.getGuildId()) : null
+          ),
+          n = (0, o.useStateFromStores)([R.default], () =>
+            null != a ? R.default.getRoles(a.id) : void 0
           );
         if (null == s || null == a || null == t) return null;
-        let { guild_id: n, id: i } = s,
-          { id: d } = t,
-          f = () => {
+        let { guild_id: i, id: d } = s,
+          { id: f } = t,
+          g = () => {
             var e;
-            let t = I.default.getGuild(n);
-            if (null == t) return "";
-            let s = t.getRole(d),
-              l = A.default.getUser(d),
+            let t = R.default.getGuild(i);
+            if (null == t || null == n) return "";
+            let s = n[f],
+              l = A.default.getUser(f),
               a =
                 null !== (e = null == l ? void 0 : l.username) && void 0 !== e
                   ? e
                   : "";
             return null != s ? s.name : a;
           },
-          g = (e, l) => {
+          S = (e, l) => {
             if ("boolean" == typeof l) throw Error("Unexpected boolean action");
             let { allow: a, deny: n } = t;
             switch (
@@ -3306,82 +3315,82 @@
               case "DENY":
                 n = r.default.add(n, e);
             }
-            if (R.default.can(e, s, { [d]: { ...t, allow: a, deny: n } }))
-              (0, E.updatePermission)(s, d, a, n);
+            if (I.default.can(e, s, { [f]: { ...t, allow: a, deny: n } }))
+              (0, E.updatePermission)(s, f, a, n);
             else {
               let e;
               if (t.type === T.PermissionOverwriteType.MEMBER) {
                 let s = A.default.getUser(t.id);
                 null != s && (e = P.default.getName(s));
               } else if (t.type === T.PermissionOverwriteType.ROLE) {
-                let l = I.default.getGuild(s.getGuildId());
+                let l = R.default.getGuild(s.getGuildId());
                 if (null != l) {
-                  let s = l.getRole(t.id);
+                  let s = R.default.getRole(l.id, t.id);
                   null != s && (e = s.name);
                 }
               }
               H.showPermissionLockoutModal(e);
             }
           },
-          S = () => {
-            let e = f();
+          N = () => {
+            let e = g();
             c.default.show({
               title: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
               body: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                 name: e,
               }),
               cancelText: U.default.Messages.CANCEL,
-              onConfirm: () => h.default.clearPermissionOverwrite(i, d),
+              onConfirm: () => h.default.clearPermissionOverwrite(d, f),
             });
           },
-          N = e => {
+          _ = e => {
             let t =
-              R.default.can(w.Permissions.ADMINISTRATOR, a) ||
-              R.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
+              I.default.can(w.Permissions.ADMINISTRATOR, a) ||
+              I.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
             return s.isGuildStageVoice() &&
               C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e)
               ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION
               : !(
                   (!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) &&
-                  (null == e || R.default.can(e, a) || t)
+                  (null == e || I.default.can(e, a) || t)
                 ) && U.default.Messages.HELP_MISSING_PERMISSION;
           },
-          _ = d === n,
-          M =
+          M = f === i,
+          x =
             s.isForumLikeChannel() &&
             r.default.has(t.deny, w.Permissions.SEND_MESSAGES),
-          x = r.default.has(t.deny, w.Permissions.SEND_MESSAGES),
-          O = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY),
-          v = F.default.generateChannelPermissionSpec(n, s, _, {
-            createPostsDisabled: M,
-            sendMessagesDisabled: x,
-            readMessageHistoryDisabled: O,
+          O = r.default.has(t.deny, w.Permissions.SEND_MESSAGES),
+          v = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY),
+          j = F.default.generateChannelPermissionSpec(i, s, M, {
+            createPostsDisabled: x,
+            sendMessagesDisabled: O,
+            readMessageHistoryDisabled: v,
           });
         return (0, l.jsxs)(L.default.Content, {
           className: B.layoutStyle,
           children: [
-            v.map((e, s) =>
+            j.map((e, s) =>
               (0, l.jsx)(
                 m.default,
                 {
                   spec: e,
                   allow: t.allow,
                   deny: t.deny,
-                  onChange: g,
-                  permissionRender: N,
+                  onChange: S,
+                  permissionRender: _,
                   className: B.permissionsForm,
                 },
                 s
               )
             ),
-            n === d
+            i === f
               ? null
               : (0, l.jsx)(u.Button, {
                   look: u.Button.Looks.OUTLINED,
                   color: u.Button.Colors.RED,
-                  onClick: S,
+                  onClick: N,
                   children: U.default.Messages.REMOVE_ROLE_OR_USER.format({
-                    name: f(),
+                    name: g(),
                   }),
                 }),
           ],
@@ -3453,7 +3462,10 @@
             onSelect: r,
             position: d,
           } = e,
-          u = (0, o.useStateFromStores)([x.default], () =>
+          u = (0, o.useStateFromStores)([R.default], () =>
+            R.default.getRoles(t.id)
+          ),
+          c = (0, o.useStateFromStores)([x.default], () =>
             x.default.getMemberIds(t.id)
           );
         return (0, l.jsx)(O.default, {
@@ -3472,13 +3484,13 @@
             if (e instanceof _.default)
               return (0, l.jsx)(k, { guildId: t.id, channelId: s.id, user: e });
           },
-          onFilterResults: (e, s) =>
-            0 === s
-              ? i(t.roles)
+          onFilterResults: (e, t) =>
+            0 === t
+              ? i(u)
                   .filter(t => null == a[t.id] && e(t.name))
                   .sortBy(e => -e.position)
                   .value()
-              : i(u)
+              : i(c)
                   .map(A.default.getUser)
                   .filter(v.isNotNullish)
                   .filter(e => !e.isClyde())
@@ -3505,24 +3517,31 @@
             permissionOverwrites: t,
             selectedOverwriteId: n,
           } = (0, o.useStateFromStoresObject)([p.default], () => p.default),
-          r = (0, o.useStateFromStores)([I.default], () =>
-            null != e ? I.default.getGuild(e.getGuildId()) : null
+          r = null == e ? void 0 : e.getGuildId(),
+          { guild: c, guildRoles: m } = (0, o.useStateFromStoresObject)(
+            [R.default],
+            () => {
+              let e = null != r ? R.default.getGuild(r) : void 0,
+                t = null != e ? R.default.getRoles(e.id) : void 0;
+              return { guild: e, guildRoles: t };
+            },
+            [r]
           ),
-          c = (0, S.default)(),
-          m = (0, o.useStateFromStores)([N.default], () => N.default.roleStyle);
-        if (null == r || null == e || null == t) return null;
-        let g = s => {
+          g = (0, S.default)(),
+          C = (0, o.useStateFromStores)([N.default], () => N.default.roleStyle);
+        if (null == c || null == m || null == e || null == t) return null;
+        let _ = s => {
             let { position: a, closePopout: n } = s;
             return (0, l.jsx)(Y, {
-              guild: r,
+              guild: c,
               channel: e,
               permissionOverwrites: t,
               position: null != a ? a : "bottom",
-              onSelect: C,
+              onSelect: M,
               onClose: n,
             });
           },
-          C = (t, s) => {
+          M = (t, s) => {
             h.default
               .updatePermissionOverwrite(e.id, {
                 id: t,
@@ -3533,22 +3552,22 @@
               .then(() => (0, E.selectPermission)(t));
           };
         null != t &&
-          null == t[r.id] &&
-          (t[r.id] = b.default.makeEveryoneOverwrite(r.id));
-        let _ = i(t)
+          null == t[c.id] &&
+          (t[c.id] = b.default.makeEveryoneOverwrite(c.id));
+        let x = i(t)
             .filter(e => e.type === T.PermissionOverwriteType.ROLE)
-            .map(e => r.getRole(e.id))
+            .map(e => m[e.id])
             .filter(v.isNotNullish)
             .sortBy(e => -e.position)
             .map(e =>
               (0, l.jsx)(
                 f.default,
                 {
-                  theme: c,
-                  roleStyle: m,
+                  theme: g,
+                  roleStyle: C,
                   id: e.id,
                   role: e,
-                  guild: r,
+                  guild: c,
                   color: e.colorString,
                   "aria-label": e.name,
                   children: e.name,
@@ -3557,20 +3576,20 @@
               )
             )
             .value(),
-          M = i(t)
+          I = i(t)
             .filter(e => e.type === T.PermissionOverwriteType.MEMBER)
             .map(e => A.default.getUser(e.id))
             .filter(v.isNotNullish)
             .sortBy(e => e.username.toLowerCase())
             .map(e => {
-              let t = e.getAvatarURL(r.id, 24);
+              let t = e.getAvatarURL(c.id, 24);
               return (0, l.jsx)(
                 f.default,
                 {
                   id: e.id,
-                  guild: r,
-                  theme: c,
-                  roleStyle: m,
+                  guild: c,
+                  theme: g,
+                  roleStyle: C,
                   "aria-label": P.default.getUserTag(e, {
                     decoration: "never",
                   }),
@@ -3603,9 +3622,9 @@
             orientation: "vertical",
             children: [
               (() => {
-                let e = (0, d.isThemeDark)(c) ? s("706832") : s("623264");
+                let e = (0, d.isThemeDark)(g) ? s("706832") : s("623264");
                 return (0, l.jsx)(u.Popout, {
-                  renderPopout: g,
+                  renderPopout: _,
                   position: "bottom",
                   autoInvert: !1,
                   children: t =>
@@ -3631,8 +3650,8 @@
                     }),
                 });
               })(),
-              _,
-              M,
+              x,
+              I,
               (0, l.jsxs)(a.Fragment, {
                 children: [
                   (0, l.jsx)(u.TabBar.Separator, {
@@ -3660,8 +3679,8 @@
             permissionOverwrites: t,
             selectedOverwriteId: s,
           } = (0, o.useStateFromStoresObject)([p.default], () => p.default),
-          a = (0, o.useStateFromStores)([I.default], () =>
-            null != e ? I.default.getGuild(e.getGuildId()) : null
+          a = (0, o.useStateFromStores)([R.default], () =>
+            null != e ? R.default.getGuild(e.getGuildId()) : null
           );
         if (null == a || null == e || null == t || null == s) return null;
         let n = t[s];
@@ -4041,7 +4060,7 @@
           {
             handleDragStart: M,
             handleDragReset: x,
-            handleDragComplete: I,
+            handleDragComplete: R,
           } = (0, h.default)(t.availableTags, e => {
             (0, u.updateChannel)({ availableTags: e });
           });
@@ -4057,7 +4076,7 @@
                       availableTags: t.availableTags,
                       canManageChannels: n,
                       onTagClick: p,
-                      onDragComplete: I,
+                      onDragComplete: R,
                       onDragReset: x,
                       onDragStart: M,
                     },
@@ -4210,59 +4229,64 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return d;
+            return c;
           },
         }),
         s("222007");
       var l = s("884691"),
         a = s("316693"),
-        n = s("828674"),
-        i = s("866595"),
-        r = s("795228"),
-        o = s("49111");
-      function d(e, t) {
-        let s = (0, r.default)(null == e ? void 0 : e.id);
+        n = s("446674"),
+        i = s("305961"),
+        r = s("828674"),
+        o = s("866595"),
+        d = s("795228"),
+        u = s("49111");
+      function c(e, t) {
+        let s = (0, n.useStateFromStores)([i.default], () =>
+            null != e ? i.default.getRoles(e.id) : void 0
+          ),
+          c = (0, d.default)(null == e ? void 0 : e.id);
         return l.useMemo(() => {
           let l =
-              null != e
-                ? (function (e, t) {
-                    let s = new Set();
-                    for (let l of Object.keys(t.permissionOverwrites)) {
-                      let a = e.roles[l],
-                        r = t.permissionOverwrites[l];
-                      (0, n.isSubscriptionRole)(a) &&
-                        (0, i.isChannelAccessGrantedBy)(t, r) &&
-                        s.add(a);
+              null != e && null != s
+                ? (function (e, t, s) {
+                    let l = new Set();
+                    for (let e of Object.keys(s.permissionOverwrites)) {
+                      let a = t[e],
+                        n = s.permissionOverwrites[e];
+                      (0, r.isSubscriptionRole)(a) &&
+                        (0, o.isChannelAccessGrantedBy)(s, n) &&
+                        l.add(a);
                     }
-                    let l = e.getRole(e.getEveryoneRoleId()),
-                      r =
-                        null != l &&
+                    let n = t[e.getEveryoneRoleId()],
+                      i =
+                        null != n &&
                         !a.default.has(
-                          l.permissions,
-                          o.Permissions.VIEW_CHANNEL
+                          n.permissions,
+                          u.Permissions.VIEW_CHANNEL
                         ),
-                      d = (0, i.isChannelAccessDeniedBy)(
-                        t,
-                        t.permissionOverwrites[e.id]
+                      d = (0, o.isChannelAccessDeniedBy)(
+                        s,
+                        s.permissionOverwrites[e.id]
                       );
-                    if (r && !d)
-                      for (let t of Object.values(e.roles))
-                        (0, n.isSubscriptionRole)(t) &&
-                          (0, i.isAllChannelsRole)(t) &&
-                          s.add(t);
-                    return [...s];
-                  })(e, t)
+                    if (i && !d)
+                      for (let e of Object.values(t))
+                        (0, r.isSubscriptionRole)(e) &&
+                          (0, o.isAllChannelsRole)(e) &&
+                          l.add(e);
+                    return [...l];
+                  })(e, s, t)
                 : [],
-            r = 0;
+            n = 0;
           for (let e of l) {
             let t = e.id;
             if (null != t) {
-              let e = null == s ? void 0 : s[t];
-              null != e && (r += e);
+              let e = null == c ? void 0 : c[t];
+              null != e && (n += e);
             }
           }
-          return r;
-        }, [s, e, t]);
+          return n;
+        }, [c, e, t, s]);
       }
     },
     980480: function (e, t, s) {
@@ -4690,4 +4714,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76ea8c01b28053d1885f.js.map
+//# sourceMappingURL=6cb5fbb79f8c7fcfdea6.js.map

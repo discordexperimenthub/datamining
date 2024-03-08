@@ -10200,7 +10200,8 @@
         (0, _.useNewOwnerOnboardingRequired)(l);
         let P = i.useCallback(() => {
           if (null == l) return;
-          let e = l.roles[l.getEveryoneRoleId()];
+          let e = N.default.getRole(l.id, l.getEveryoneRoleId());
+          if (null == e) return;
           T.default.close();
           let t = { [e.id]: e };
           (0, f.startImpersonating)(l.id, {
@@ -10983,21 +10984,21 @@
         o = s("49111");
       let d = o.Permissions.VIEW_CHANNEL;
       function u(e) {
-        let t = (0, n.useStateFromStores)(
-            [i.default],
-            () => i.default.getGuild(e),
-            [e]
-          ),
-          s = null == t ? void 0 : t.roles[t.getEveryoneRoleId()],
-          o = a.useMemo(() => {
-            if (null == s) return r.GuildRoleSubscriptionFormat.SOME_CHANNELS;
-            let e = l.default.has(s.permissions, d);
+        let t = (0, n.useStateFromStores)([i.default], () => {
+            let t = i.default.getGuild(e);
+            return null != t
+              ? i.default.getRole(t.id, t.getEveryoneRoleId())
+              : void 0;
+          }),
+          s = a.useMemo(() => {
+            if (null == t) return r.GuildRoleSubscriptionFormat.SOME_CHANNELS;
+            let e = l.default.has(t.permissions, d);
             return e
               ? r.GuildRoleSubscriptionFormat.SOME_CHANNELS
               : r.GuildRoleSubscriptionFormat.ALL_CHANNELS;
-          }, [s]),
-          u = o === r.GuildRoleSubscriptionFormat.ALL_CHANNELS;
-        return { format: o, isFullServerGating: u };
+          }, [t]),
+          o = s === r.GuildRoleSubscriptionFormat.ALL_CHANNELS;
+        return { format: s, isFullServerGating: o };
       }
     },
     44737: function (e, t, s) {
@@ -12951,7 +12952,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return B;
+            return y;
           },
         });
       var a = s("37983");
@@ -12966,114 +12967,118 @@
         c = s("507950"),
         E = s("393414"),
         _ = s("719887"),
-        I = s("697218"),
-        T = s("191814"),
-        f = s("449008"),
-        S = s("257869"),
-        m = s("837008"),
-        N = s("757715"),
-        g = s("432153"),
-        h = s("195367"),
-        C = s("258984"),
-        R = s("417186"),
-        x = s("751886"),
-        L = s("412939"),
-        O = s("451419"),
-        p = s("326127"),
-        A = s("988449"),
-        M = s("514377"),
-        D = s("49111"),
-        v = s("724210"),
-        G = s("810367"),
-        j = s("782340"),
-        U = s("211426");
-      function P(e) {
+        I = s("305961"),
+        T = s("697218"),
+        f = s("191814"),
+        S = s("449008"),
+        m = s("257869"),
+        N = s("837008"),
+        g = s("757715"),
+        h = s("432153"),
+        C = s("195367"),
+        R = s("258984"),
+        x = s("417186"),
+        L = s("751886"),
+        O = s("412939"),
+        p = s("451419"),
+        A = s("326127"),
+        M = s("988449"),
+        D = s("514377"),
+        v = s("49111"),
+        G = s("724210"),
+        j = s("810367"),
+        U = s("782340"),
+        P = s("211426");
+      function b(e) {
         let { application: t, guild: s } = e,
-          l = (0, m.useSubscriptionsSettings)(s.id),
-          n = (0, m.useSubscriptionListingsForGuild)(s.id),
-          i = n.some(
+          n = (0, N.useSubscriptionsSettings)(s.id),
+          i = (0, N.useSubscriptionListingsForGuild)(s.id),
+          r = i.some(
             e =>
               null != e.name &&
               null != e.subscription_plans[0] &&
               null != e.description &&
               null != e.image_asset
           ),
-          r = n.map(e => (null == s ? void 0 : s.roles[e.role_id])),
-          o = r.some(e => null != e && 0 !== e.color),
-          d = n.some(e => e.role_benefits.benefits.length > 0),
-          u =
+          o = (0, l.useStateFromStores)([I.default], () =>
+            I.default.getRoles(s.id)
+          ),
+          d = i.map(e => o[e.role_id]),
+          u = d.some(e => null != e && 0 !== e.color),
+          c = i.some(e => e.role_benefits.benefits.length > 0),
+          E =
             null != t &&
-            s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
-          c = [
+            s.hasFeature(v.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
+          _ = [
             {
               title:
-                j.default.Messages
+                U.default.Messages
                   .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
               items: [
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE,
-                  completed: u,
+                  completed: E,
                 },
               ],
             },
             {
               title:
-                j.default.Messages
+                U.default.Messages
                   .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO,
               items: [
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_FORMAT,
                   completed: !0,
                 },
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_DESCRIPTION,
                   completed:
-                    (null == l ? void 0 : l.description) != null &&
-                    "" !== l.description,
+                    (null == n ? void 0 : n.description) != null &&
+                    "" !== n.description,
                 },
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_INFO_COVER_IMAGE,
-                  completed: (null == l ? void 0 : l.cover_image_asset) != null,
+                  completed: (null == n ? void 0 : n.cover_image_asset) != null,
                 },
               ],
             },
             {
               title:
-                j.default.Messages
+                U.default.Messages
                   .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS,
               items: [
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_BASICS,
-                  completed: i,
+                  completed: r,
                 },
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_FLAIR,
-                  completed: o,
+                  completed: u,
                 },
                 {
                   description:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_CHECKLIST_TIER_PERKS,
-                  completed: d,
+                  completed: c,
                 },
               ],
             },
           ];
-        return (0, a.jsx)(O.default, { children: c });
+        return (0, a.jsx)(p.default, { children: _ });
       }
-      function b(e) {
+      function B(e) {
         let { application: t } = e,
           { teams: s } = (0, _.default)({ refreshOnDepChange: !1 }),
           l = s.find(e => {
@@ -13088,31 +13093,31 @@
             );
           }),
           n = [
-            G.PayoutAccountStatuses.ACTION_REQUIRED,
-            G.PayoutAccountStatuses.BLOCKED,
-            G.PayoutAccountStatuses.SUSPENDED,
+            j.PayoutAccountStatuses.ACTION_REQUIRED,
+            j.PayoutAccountStatuses.BLOCKED,
+            j.PayoutAccountStatuses.SUSPENDED,
           ];
         return (null == l ? void 0 : l.payout_account_status) != null &&
           n.includes(null == l ? void 0 : l.payout_account_status)
           ? (0, a.jsxs)(a.Fragment, {
               children: [
-                (0, a.jsx)(T.default, { size: 16 }),
-                (0, a.jsx)(R.default, {
+                (0, a.jsx)(f.default, { size: 16 }),
+                (0, a.jsx)(x.default, {
                   children:
-                    j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format(
+                    U.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYOUTS_PROBLEM_WARNING.format(
                       {
-                        url: D.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(
+                        url: v.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(
                           l.id
                         ),
                       }
                     ),
                 }),
-                (0, a.jsx)(T.default, { size: 16 }),
+                (0, a.jsx)(f.default, { size: 16 }),
               ],
             })
           : null;
       }
-      function B(e) {
+      function y(e) {
         let t,
           { guild: s, application: n } = e,
           i = (0, l.useStateFromStores)(
@@ -13121,142 +13126,143 @@
           ),
           o =
             null != n &&
-            s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
+            s.hasFeature(v.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
         return (
           (0, r.useNewOwnerOnboardingRequired)(s),
           (t = o
             ? (function (e) {
-                if (e === D.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
-                  return A.TabBarSection.EMOJIS;
-                return A.TabBarSection.TIERS;
+                if (e === v.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI)
+                  return M.TabBarSection.EMOJIS;
+                return M.TabBarSection.TIERS;
               })(i)
-            : A.TabBarSection.PAYMENT),
-          (0, a.jsx)(S.GroupListingsFetchContextProvider, {
+            : M.TabBarSection.PAYMENT),
+          (0, a.jsx)(m.GroupListingsFetchContextProvider, {
             guildId: s.id,
             refetchOnMount: !0,
             children: (0, a.jsx)(
-              N.RoleSubscriptionSettingsDisabledContextProvider,
+              g.RoleSubscriptionSettingsDisabledContextProvider,
               {
                 guildId: s.id,
-                children: (0, a.jsx)(A.TabBarContextProvider, {
+                children: (0, a.jsx)(M.TabBarContextProvider, {
                   initialTab: t,
-                  children: (0, a.jsx)(y, { guild: s, application: n }),
+                  children: (0, a.jsx)(F, { guild: s, application: n }),
                 }),
               }
             ),
           })
         );
       }
-      function y(e) {
+      function F(e) {
         let t,
           { guild: s, application: r } = e,
           d =
             null != r &&
-            s.hasFeature(D.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
-          { currentTab: _, setCurrentTab: T } = (0, A.useTabBarState)(),
-          m = (0, S.useGroupListingsFetchContext)(),
-          N = (0, l.useStateFromStores)([I.default], () =>
-            I.default.getCurrentUser()
+            s.hasFeature(v.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
+          { currentTab: _, setCurrentTab: f } = (0, M.useTabBarState)(),
+          N = (0, m.useGroupListingsFetchContext)(),
+          g = (0, l.useStateFromStores)([T.default], () =>
+            T.default.getCurrentUser()
           ),
-          R = (0, h.default)(s.id),
-          O = s.isOwner(N),
-          G = () => {
-            let e = s.roles[s.getEveryoneRoleId()];
+          x = (0, C.default)(s.id),
+          p = s.isOwner(g),
+          j = () => {
+            let e = I.default.getRole(s.id, s.getEveryoneRoleId());
+            if (null == e) return;
             o.default.close();
             let t = { [e.id]: e };
             (0, u.startImpersonating)(s.id, {
               type: c.ImpersonateType.SERVER_SHOP,
               roles: t,
               initialTab: "role_subscriptions",
-              returnToSection: D.GuildSettingsSections.ROLE_SUBSCRIPTIONS,
+              returnToSection: v.GuildSettingsSections.ROLE_SUBSCRIPTIONS,
             }),
-              (0, g.announceCreateTemplateChannels)(s.id),
+              (0, h.announceCreateTemplateChannels)(s.id),
               (0, E.transitionTo)(
-                D.Routes.CHANNEL(s.id, v.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+                v.Routes.CHANNEL(s.id, G.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
               );
           };
-        if (!m) return (0, a.jsx)(n.Spinner, {});
+        if (!N) return (0, a.jsx)(n.Spinner, {});
         switch (_) {
-          case A.TabBarSection.BASIC_INFO:
+          case M.TabBarSection.BASIC_INFO:
+            t = (0, a.jsx)(O.default, { guild: s });
+            break;
+          case M.TabBarSection.TIERS:
+            t = (0, a.jsx)(A.default, { guildId: s.id });
+            break;
+          case M.TabBarSection.PAYMENT:
             t = (0, a.jsx)(L.default, { guild: s });
             break;
-          case A.TabBarSection.TIERS:
-            t = (0, a.jsx)(p.default, { guildId: s.id });
-            break;
-          case A.TabBarSection.PAYMENT:
-            t = (0, a.jsx)(x.default, { guild: s });
-            break;
-          case A.TabBarSection.EMOJIS:
-            t = (0, a.jsx)(M.default, { guild: s });
+          case M.TabBarSection.EMOJIS:
+            t = (0, a.jsx)(D.default, { guild: s });
             break;
           default:
-            (0, f.assertNever)(_);
+            (0, S.assertNever)(_);
         }
         return (0, a.jsxs)("div", {
-          className: U.container,
+          className: P.container,
           children: [
             (0, a.jsxs)("div", {
-              className: U.mainContent,
+              className: P.mainContent,
               children: [
                 (0, a.jsx)(n.FormTitle, {
                   tag: "h1",
-                  children: j.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+                  children: U.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
                 }),
                 (0, a.jsx)(n.FormText, {
                   type: n.FormText.Types.DESCRIPTION,
                   children:
-                    j.default.Messages
+                    U.default.Messages
                       .GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION,
                 }),
-                (0, a.jsx)(C.default, { guild: s }),
-                d && (0, a.jsx)(b, { application: r }),
+                (0, a.jsx)(R.default, { guild: s }),
+                d && (0, a.jsx)(B, { application: r }),
                 (0, a.jsxs)("div", {
-                  className: U.tabBarContainer,
+                  className: P.tabBarContainer,
                   children: [
                     (0, a.jsxs)(n.TabBar, {
-                      className: U.tabBar,
-                      "aria-label": j.default.Messages.OPTIONS,
+                      className: P.tabBar,
+                      "aria-label": U.default.Messages.OPTIONS,
                       selectedItem: _,
                       type: "top",
                       look: "brand",
-                      onItemSelect: T,
+                      onItemSelect: f,
                       children: [
                         (0, a.jsx)(i.default, {
-                          id: A.TabBarSection.BASIC_INFO,
+                          id: M.TabBarSection.BASIC_INFO,
                           disabledTooltip:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
                           disabled: !d,
                           children:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO,
                         }),
                         (0, a.jsx)(i.default, {
-                          id: A.TabBarSection.TIERS,
+                          id: M.TabBarSection.TIERS,
                           disabledTooltip:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
                           disabled: !d,
                           children:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS,
                         }),
                         (0, a.jsx)(i.default, {
-                          id: A.TabBarSection.EMOJIS,
+                          id: M.TabBarSection.EMOJIS,
                           disabledTooltip:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
                           disabled: !d,
                           children:
-                            j.default.Messages
+                            U.default.Messages
                               .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI,
                         }),
-                        O
+                        p
                           ? (0, a.jsx)(n.TabBar.Item, {
-                              className: U.tabBarItem,
-                              id: A.TabBarSection.PAYMENT,
+                              className: P.tabBarItem,
+                              id: M.TabBarSection.PAYMENT,
                               children:
-                                j.default.Messages
+                                U.default.Messages
                                   .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT,
                             })
                           : null,
@@ -13264,24 +13270,24 @@
                     }),
                     d &&
                       (0, a.jsx)("div", {
-                        className: U.previewButton,
+                        className: P.previewButton,
                         children: (0, a.jsx)(n.Tooltip, {
-                          text: j.default.Messages
+                          text: U.default.Messages
                             .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW_DISABLED,
                           children: e => {
                             let { onMouseEnter: t, onMouseLeave: s } = e;
                             return (0, a.jsx)(n.Button, {
-                              disabled: R,
-                              onMouseEnter: R ? t : void 0,
-                              onMouseLeave: R ? s : void 0,
-                              onClick: G,
+                              disabled: x,
+                              onMouseEnter: x ? t : void 0,
+                              onMouseLeave: x ? s : void 0,
+                              onClick: j,
                               color: n.Button.Colors.PRIMARY,
                               size: n.Button.Sizes.SMALL,
-                              grow: !R,
+                              grow: !x,
                               look: n.Button.Looks.OUTLINED,
-                              className: U.previewButton,
+                              className: P.previewButton,
                               children:
-                                j.default.Messages
+                                U.default.Messages
                                   .GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW,
                             });
                           },
@@ -13292,7 +13298,7 @@
                 t,
               ],
             }),
-            (0, a.jsx)(P, { application: r, guild: s }),
+            (0, a.jsx)(b, { application: r, guild: s }),
           ],
         });
       }
@@ -14179,13 +14185,16 @@
       }
       function K(e) {
         let { guild: t, onSelect: s } = e,
-          a = (0, E.useStateFromStores)([C.default], () =>
+          a = (0, E.useStateFromStores)([R.default], () =>
+            R.default.getRoles(t.id)
+          ),
+          l = (0, E.useStateFromStores)([C.default], () =>
             C.default.getCategories(t.id)
           ),
-          l = i.useMemo(
+          r = i.useMemo(
             () =>
-              a._categories.flatMap(e =>
-                a[e.channel.id]
+              l._categories.flatMap(e =>
+                l[e.channel.id]
                   .filter(e => {
                     let { channel: t } = e;
                     return h.GUILD_NON_CATEGORY_CHANNEL_TYPES.has(t.type);
@@ -14195,11 +14204,11 @@
                     return t;
                   })
               ),
-            [a]
+            [l]
           ),
-          r = i.useMemo(
+          o = i.useMemo(
             () =>
-              Object.values(t.roles).flatMap(e => {
+              Object.values(a).flatMap(e => {
                 var s;
                 if (
                   (0, m.isEveryoneRoleId)(t.id, e.id) ||
@@ -14209,15 +14218,15 @@
                   u.default.hasAny(e.permissions, b.ElevatedPermissions)
                 )
                   return [];
-                let a = (0, j.default)(l, e).length;
+                let a = (0, j.default)(r, e).length;
                 return a > 0 ? { role: e, channelCount: a } : [];
               }),
-            [t, l]
+            [t, a, r]
           );
-        return r.length > 0
+        return o.length > 0
           ? (0, n.jsx)("div", {
               className: y.list,
-              children: r.map(e =>
+              children: o.map(e =>
                 (0, n.jsx)(
                   z,
                   {
@@ -19327,7 +19336,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return F;
+            return H;
           },
         }),
         s("222007");
@@ -19338,181 +19347,209 @@
         u = s("446674"),
         c = s("913144"),
         E = s("382981"),
-        _ = s("746574"),
-        I = s("449008"),
-        T = s("991170"),
-        f = s("900938"),
-        S = s("53948"),
-        m = s("49111");
-      let N = new Set(),
-        g = m.FormStates.CLOSED,
-        h = !1,
+        _ = s("305961"),
+        I = s("746574"),
+        T = s("449008"),
+        f = s("991170"),
+        S = s("900938"),
+        m = s("53948"),
+        N = s("49111");
+      let g = new Set(),
+        h = N.FormStates.CLOSED,
         C = !1,
-        R = [],
+        R = !1,
         x = [],
-        L = S.GuildSettingsRoleEditSections.DISPLAY,
-        O = !1,
-        p = new Set(),
-        A = new Map(),
-        M = new Map();
-      function D() {
-        return null == a || null == R
-          ? []
-          : _.default.calculatePositionDeltas({
-              oldOrdering: r.values(a.roles),
-              newOrdering: R,
-              idGetter: e => {
-                let { id: t } = e;
-                return t;
-              },
-              existingPositionGetter: e => {
-                let { originalPosition: t } = e;
-                return null != t ? t : 1 / 0;
-              },
-              ascending: !1,
-            });
+        L = [],
+        O = m.GuildSettingsRoleEditSections.DISPLAY,
+        p = !1,
+        A = new Set(),
+        M = new Map(),
+        D = new Map();
+      function v() {
+        if (null == a || null == x) return [];
+        let e = r(_.default.getRoles(a.id))
+          .values()
+          .sortBy(e => {
+            let { position: t } = e;
+            return t;
+          })
+          .reverse()
+          .value();
+        return I.default.calculatePositionDeltas({
+          oldOrdering: e,
+          newOrdering: x,
+          idGetter: e => {
+            let { id: t } = e;
+            return t;
+          },
+          existingPositionGetter: e => {
+            let { originalPosition: t } = e;
+            return null != t ? t : 1 / 0;
+          },
+          ascending: !1,
+        });
       }
-      function v(e) {
+      function G(e) {
         let { section: t } = e;
-        if (null != a || t !== m.GuildSettingsSections.ROLES) return !1;
-        G();
+        if (null != a || t !== N.GuildSettingsSections.ROLES) return !1;
+        j();
       }
-      function G() {
+      function j() {
         let e =
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        (a = f.default.getProps().guild),
-          (h = !1),
+        (a = S.default.getProps().guild),
           (C = !1),
+          (R = !1),
           (n = void 0),
-          N.clear(),
-          (g = m.FormStates.OPEN),
-          (x = [...(R = null != a ? r(a.roles).values().value() : [])]),
-          (O = !1),
+          g.clear(),
+          (h = N.FormStates.OPEN),
+          (L = [
+            ...(x =
+              null != a
+                ? r(_.default.getRoles(a.id))
+                    .values()
+                    .sortBy(e => {
+                      let { position: t } = e;
+                      return t;
+                    })
+                    .reverse()
+                    .value()
+                : []),
+          ]),
+          (p = !1),
           e &&
-            (M.clear(),
-            A.forEach((e, t) => {
-              M.set(t, [...e]);
+            (D.clear(),
+            M.forEach((e, t) => {
+              D.set(t, [...e]);
             }));
       }
-      let j = r.debounce(() => {
+      let U = r.debounce(() => {
         let e = !1;
-        C && !(C = D().length > 0) && (e = !0),
-          [...N].forEach(t => {
+        R && !(R = v().length > 0) && (e = !0),
+          [...g].forEach(t => {
             r.isEqual(
-              P(t),
+              b(t),
               (function (e) {
-                return x.find(t => {
+                return L.find(t => {
                   let { id: s } = t;
                   return s === e;
                 });
               })(t)
-            ) && (N.delete(t), (e = !0));
+            ) && (g.delete(t), (e = !0));
           }),
-          0 === N.size && (h = !1),
-          O && r.isEqual(A, M) && ((e = !0), (O = !1)),
-          e && y.emitChange();
+          0 === g.size && (C = !1),
+          p && r.isEqual(M, D) && ((e = !0), (p = !1)),
+          e && F.emitChange();
       }, 500);
-      function U(e, t) {
-        let s = R.indexOf(e);
+      function P(e, t) {
+        let s = x.indexOf(e);
         if (s < 0) return !1;
         let a = { ...e, ...t };
-        (R[s] = a), (R = [...R]), (h = !0), N.add(a.id), j();
+        (x[s] = a), (x = [...x]), (C = !0), g.add(a.id), U();
       }
-      function P(e) {
-        return R.find(t => {
+      function b(e) {
+        return x.find(t => {
           let { id: s } = t;
           return s === e;
         });
       }
-      function b(e) {
+      function B(e) {
         let { guildId: t } = e;
-        if (null == a || t !== a.id || g === m.FormStates.SUBMITTING) return !1;
-        a = f.default.getProps().guild;
+        if (null == a || t !== a.id || h === N.FormStates.SUBMITTING) return !1;
+        a = S.default.getProps().guild;
         let s = [];
-        null != a && (s = r(a.roles).values().value()),
-          N.forEach(e => {
-            let t = P(e),
+        null != a &&
+          (s = r(_.default.getRoles(a.id))
+            .values()
+            .sortBy(e => {
+              let { position: t } = e;
+              return t;
+            })
+            .reverse()
+            .value()),
+          g.forEach(e => {
+            let t = b(e),
               a = -1,
               l = s.find((t, s) => {
                 let { id: l } = t;
                 if (l === e) return (a = s), !0;
               });
-            null == l || null == t ? N.delete(e) : (s[a] = t);
+            null == l || null == t ? g.delete(e) : (s[a] = t);
           }),
-          0 === N.size && (h = !1),
-          (C = !1),
-          (R = [...s]);
+          0 === g.size && (C = !1),
+          (R = !1),
+          (x = [...s]);
       }
-      class B extends u.default.Store {
+      class y extends u.default.Store {
         initialize() {
-          this.waitFor(f.default, E.default);
+          this.waitFor(S.default, E.default, _.default);
         }
         hasChanges() {
-          return h || C || O;
+          return C || R || p;
         }
         get errorMessage() {
           return n;
         }
         get hasSortChanges() {
-          return C;
+          return R;
         }
         get hasRoleConfigurationChanges() {
-          return O;
+          return p;
         }
         get guild() {
           return a;
         }
         get editedRoleIds() {
-          return Array.from(N);
+          return Array.from(g);
         }
         get editedRoleIdsForConfigurations() {
-          return p;
+          return A;
         }
         get roles() {
-          return R;
+          return x;
         }
         get formState() {
-          return g;
+          return h;
         }
         get lastRoleEditSection() {
-          return L;
+          return O;
         }
         getSortDeltas() {
-          return D();
+          return v();
         }
         showNotice() {
           return this.hasChanges();
         }
         getRole(e) {
-          return P(e);
+          return b(e);
         }
         getPermissionSearchQuery() {
           return l;
         }
         getEditedRoleConnectionConfigurationsMap() {
-          return M;
+          return D;
         }
       }
-      B.displayName = "GuildSettingsRolesStore";
-      let y = new B(
+      y.displayName = "GuildSettingsRolesStore";
+      let F = new y(
         c.default,
         __OVERLAY__
           ? {}
           : {
-              GUILD_SETTINGS_ROLES_INIT: () => G(),
-              GUILD_SETTINGS_INIT: v,
-              GUILD_SETTINGS_SET_SECTION: v,
+              GUILD_SETTINGS_ROLES_INIT: () => j(),
+              GUILD_SETTINGS_INIT: G,
+              GUILD_SETTINGS_SET_SECTION: G,
               GUILD_SETTINGS_ROLES_SORT_UPDATE: function (e) {
                 let { roles: t } = e;
-                if (null != R && t.length !== R.length) return !1;
-                (R = t.map(e => P(e)).filter(I.isNotNullish)), (C = !0), j();
+                if (null != x && t.length !== x.length) return !1;
+                (x = t.map(e => b(e)).filter(T.isNotNullish)), (R = !0), U();
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS: function (e) {
                 let { id: t, flag: s, allow: a } = e,
-                  l = P(t);
+                  l = b(t);
                 if (null == l) return !1;
                 let { permissions: n } = l;
-                return U(l, {
+                return P(l, {
                   permissions: (n = a
                     ? o.default.add(n, s)
                     : o.default.remove(n, s)),
@@ -19520,108 +19557,108 @@
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
                 let { id: t, permissions: s } = e,
-                  a = P(t);
-                return null != a && U(a, { permissions: s });
+                  a = b(t);
+                return null != a && P(a, { permissions: s });
               },
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                 let { id: t } = e,
-                  s = P(t);
-                return null != s && U(s, { permissions: T.default.NONE });
+                  s = b(t);
+                return null != s && P(s, { permissions: f.default.NONE });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                 let { id: t, name: s } = e,
-                  a = P(t);
-                return null != a && U(a, { name: s });
+                  a = b(t);
+                return null != a && P(a, { name: s });
               },
               GUILD_SETTINGS_ROLES_UPDATE_DESCRIPTION: function (e) {
                 let { id: t, description: s } = e,
-                  a = P(t);
-                return null != a && U(a, { description: s });
+                  a = b(t);
+                return null != a && P(a, { description: s });
               },
               GUILD_SETTINGS_ROLES_UPDATE_COLOR: function (e) {
                 let { id: t, color: s } = e,
                   a = 0 === s ? null : (0, d.int2hex)(s),
-                  l = P(t);
-                return null != l && U(l, { color: s, colorString: a });
+                  l = b(t);
+                return null != l && P(l, { color: s, colorString: a });
               },
               GUILD_SETTINGS_ROLES_UPDATE_SETTINGS: function (e) {
                 let { id: t, hoist: s, mentionable: a } = e,
-                  l = P(t);
-                return null != l && U(l, { hoist: s, mentionable: a });
+                  l = b(t);
+                return null != l && P(l, { hoist: s, mentionable: a });
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON: function (e) {
                 let { id: t, icon: s, unicodeEmoji: a } = e,
-                  l = P(t);
-                return null != l && U(l, { icon: s, unicodeEmoji: a });
+                  l = b(t);
+                return null != l && P(l, { icon: s, unicodeEmoji: a });
               },
               GUILD_SETTINGS_ROLE_SELECT: function (e) {
                 let { role: t, searchQuery: s } = e;
                 if (((l = s), null != t)) {
-                  if (null != P(t.id)) {
-                    U(t, t);
+                  if (null != b(t.id)) {
+                    P(t, t);
                     return;
                   }
-                  (R = [...R, t]), j();
+                  (x = [...x, t]), U();
                 }
               },
               GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (
                 e
               ) {
                 let { roleId: t, roleConnectionConfigurations: s } = e,
-                  a = P(t);
+                  a = b(t);
                 if (null == a) return !1;
-                let l = A.get(a.id);
+                let l = M.get(a.id);
                 if (r.isEqual(l, s)) return !1;
-                M.set(a.id, s), A.set(a.id, s), j();
+                D.set(a.id, s), M.set(a.id, s), U();
               },
               GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS:
                 function (e) {
                   let { roleId: t, roleConnectionConfigurations: s } = e,
-                    a = P(t);
+                    a = b(t);
                   if (null == a) return !1;
-                  (O = !0), p.add(a.id), M.set(a.id, s), j();
+                  (p = !0), A.add(a.id), D.set(a.id, s), U();
                 },
               GUILD_SETTINGS_CLOSE: function () {
                 (a = null),
-                  (x = R = []),
-                  A.clear(),
-                  N.clear(),
+                  (L = x = []),
                   M.clear(),
-                  (p = new Set()),
-                  (h = !1),
+                  g.clear(),
+                  D.clear(),
+                  (A = new Set()),
                   (C = !1),
-                  (O = !1),
-                  (g = m.FormStates.CLOSED);
+                  (R = !1),
+                  (p = !1),
+                  (h = N.FormStates.CLOSED);
               },
-              GUILD_ROLE_CREATE: b,
-              GUILD_ROLE_UPDATE: b,
+              GUILD_ROLE_CREATE: B,
+              GUILD_ROLE_UPDATE: B,
               GUILD_ROLE_DELETE: function (e) {
                 return (
-                  p.has(e.roleId) &&
-                    (p.delete(e.roleId),
-                    A.delete(e.roleId),
+                  A.has(e.roleId) &&
+                    (A.delete(e.roleId),
                     M.delete(e.roleId),
-                    (O = !1)),
-                  b(e)
+                    D.delete(e.roleId),
+                    (p = !1)),
+                  B(e)
                 );
               },
               GUILD_SETTINGS_ROLES_SUBMITTING: function () {
-                g = m.FormStates.SUBMITTING;
+                h = N.FormStates.SUBMITTING;
               },
               GUILD_SETTINGS_ROLES_SAVE_FAIL: function (e) {
                 let { message: t } = e;
-                (g = m.FormStates.OPEN), (n = t);
+                (h = N.FormStates.OPEN), (n = t);
               },
               GUILD_SETTINGS_ROLES_SAVE_SUCCESS: function () {
-                G(!1);
+                j(!1);
               },
               GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE: function (e) {
                 let { section: t } = e;
-                L = t;
+                O = t;
               },
             }
       );
-      var F = y;
+      var H = F;
     },
     385334: function (e, t, s) {
       "use strict";
@@ -31080,10 +31117,10 @@
       s.r(t),
         s.d(t, {
           getRiskyPerms: function () {
-            return f;
+            return m;
           },
           default: function () {
-            return S;
+            return N;
           },
         });
       var a = s("37983");
@@ -31091,100 +31128,104 @@
       var l = s("414456"),
         n = s.n(l),
         i = s("316693"),
-        r = s("77078"),
-        o = s("957255"),
-        d = s("578706"),
-        u = s("423487"),
-        c = s("991170"),
-        E = s("695838"),
-        _ = s("69741"),
-        I = s("782340"),
-        T = s("854743");
-      function f(e) {
-        return _.MODERATOR_PERMISSIONS.filter(
+        r = s("446674"),
+        o = s("77078"),
+        d = s("305961"),
+        u = s("957255"),
+        c = s("578706"),
+        E = s("423487"),
+        _ = s("991170"),
+        I = s("695838"),
+        T = s("69741"),
+        f = s("782340"),
+        S = s("854743");
+      function m(e) {
+        return T.MODERATOR_PERMISSIONS.filter(
           t =>
-            (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID &&
-            c.default.canEveryone(t, e)
+            (null == e ? void 0 : e.id) !== I.FAVORITES_RAW_GUILD_ID &&
+            _.default.canEveryone(t, e)
         );
       }
-      function S(e) {
+      function N(e) {
         let { guild: t } = e,
-          l = t.roles[t.getEveryoneRoleId()],
-          c = f(t),
-          E = c.length > 0,
-          S = _.MODERATOR_PERMISSIONS.some(
+          l = (0, r.useStateFromStores)([d.default], () =>
+            d.default.getRole(t.id, t.getEveryoneRoleId())
+          ),
+          _ = m(t),
+          I = _.length > 0,
+          N = T.MODERATOR_PERMISSIONS.some(
             e =>
-              !o.default.can(e, t, null, {
+              !u.default.can(e, t, null, {
                 [l.id]: {
                   ...l,
                   permissions: i.default.remove(l.permissions, e),
                 },
               })
           ),
-          m = (0, a.jsxs)(a.Fragment, {
+          g = (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)("div", {
-                className: T.itemContent,
+                className: S.itemContent,
                 children: [
-                  (0, a.jsx)(r.Heading, {
+                  (0, a.jsx)(o.Heading, {
                     variant: "text-md/semibold",
                     color: "header-primary",
                     children:
-                      I.default.Messages
+                      f.default.Messages
                         .GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS,
                   }),
-                  (0, a.jsx)(r.Text, {
+                  (0, a.jsx)(o.Text, {
                     variant: "text-sm/medium",
                     color: "header-secondary",
                     children:
-                      I.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format(
-                        { numPerms: c.length }
+                      f.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format(
+                        { numPerms: _.length }
                       ),
                   }),
                 ],
               }),
-              E
-                ? (0, a.jsx)(u.default, {
+              I
+                ? (0, a.jsx)(E.default, {
                     height: 24,
                     width: 24,
-                    className: T.warning,
+                    className: S.warning,
                     "aria-label":
-                      I.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL,
+                      f.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL,
                   })
-                : (0, a.jsx)(d.default, {
+                : (0, a.jsx)(c.default, {
                     height: 24,
                     width: 24,
-                    className: T.check,
+                    className: S.check,
                     "aria-label":
-                      I.default.Messages
+                      f.default.Messages
                         .SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE,
                   }),
             ],
           });
-        return E
-          ? S
-            ? (0, a.jsx)(r.Tooltip, {
-                text: I.default.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+        return I
+          ? N
+            ? (0, a.jsx)(o.Tooltip, {
+                text: f.default.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
                 children: e =>
                   (0, a.jsx)("div", {
-                    className: n(T.simpleItemWrapper, T.disabled),
+                    className: n(S.simpleItemWrapper, S.disabled),
                     ...e,
-                    children: m,
+                    children: g,
                   }),
               })
-            : (0, a.jsx)(r.Clickable, {
+            : (0, a.jsx)(o.Clickable, {
                 onClick: () => {
-                  (0, r.openModalLazy)(async () => {
+                  (0, o.openModalLazy)(async () => {
                     let { default: e } = await s
                       .el("343600")
                       .then(s.bind(s, "343600"));
                     return s => (0, a.jsx)(e, { guild: t, ...s });
                   });
                 },
-                className: n(T.simpleItemWrapper, T.clickable),
-                children: m,
+                className: n(S.simpleItemWrapper, S.clickable),
+                children: g,
               })
-          : (0, a.jsx)("div", { className: T.simpleItemWrapper, children: m });
+          : (0, a.jsx)("div", { className: S.simpleItemWrapper, children: g });
       }
     },
     380993: function (e, t, s) {
@@ -47795,4 +47836,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d718b930e9fe58698995.js.map
+//# sourceMappingURL=b4c185755309f0cf9e18.js.map

@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "273552",
+                  buildNumber: "273559",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -8155,13 +8155,9 @@
           !0 !== e.guild.unavailable && this.delete(e.guild.id, t);
         }
         handleGuildRoleUpdate(e, t) {
-          var n;
-          let a = e.role,
-            s =
-              null === (n = u.default.getGuild(e.guildId)) || void 0 === n
-                ? void 0
-                : n.getRole(a.id);
-          (null == s || a.permissions !== s.permissions) &&
+          let n = e.role,
+            a = u.default.getRole(e.guildId, n.id);
+          (null == a || n.permissions !== a.permissions) &&
             this.unsync(e.guildId, t);
         }
         handleGuildMemberUpdate(e, t) {
@@ -8288,7 +8284,23 @@
           for (let n of e.guilds) {
             if ("unavailable" === n.data_mode) return;
             let e = l.default.getGuild(n.id);
-            null != e && this.put(i.fromBackgroundSync(n, e), t);
+            if (null != e) {
+              let a = l.default.getRoles(n.id);
+              this.put(
+                i.attachRoles(
+                  i.fromBackgroundSync(n, e),
+                  "partial" === n.data_mode
+                    ? i.filterRoleDeletes(
+                        n.id,
+                        a,
+                        n.partial_updates.roles,
+                        n.partial_updates.deleted_role_ids
+                      )
+                    : (0, r.sortServerRoles)(n.id, n.roles)
+                ),
+                t
+              );
+            }
           }
         }
         handleConnectionOpen(e, t) {
@@ -8300,30 +8312,46 @@
         handleGuildUpdate(e, t) {
           let n = l.default.getGuild(e.guild.id),
             a = i.fromServerUpdate(e.guild, n);
-          this.put(a, t);
+          this.put(
+            i.attachRoles(a, (0, r.sortServerRoles)(e.guild.id, e.guild.roles)),
+            t
+          );
         }
         handleGuildDelete(e, t) {
           this.delete(e.guild.id, t);
         }
         handleGuildRoleChange(e, t) {
-          let n = r.fromServerRole(e.role),
-            a = l.default.getGuild(e.guildId);
-          null != a && this.put(a.upsertRole(n), t);
+          let n = l.default.getGuild(e.guildId),
+            a = l.default.getRoles(e.guildId);
+          null != n && this.put(i.attachRoles(n, a), t);
         }
         handleGuildRoleDelete(e, t) {
-          let n = l.default.getGuild(e.guildId);
-          null != n && this.put(n.deleteRole(e.roleId), t);
+          let n = l.default.getGuild(e.guildId),
+            a = l.default.getRoles(e.guildId);
+          null != n && this.put(i.attachRoles(n, a), t);
         }
         handleGuildMemberAdd(e, t) {
           if (null != e.joinedAt && e.user.id === s.default.getId()) {
             let n = l.default.getGuild(e.guildId);
-            null != n && this.put(n.updateJoinedAt(e.joinedAt), t);
+            null != n &&
+              this.put(
+                i.attachRoles(
+                  n.updateJoinedAt(e.joinedAt),
+                  l.default.getRoles(n.id)
+                ),
+                t
+              );
           }
         }
         resetInMemoryState() {}
         putOne(e, t) {
           let n = l.default.getGuild(e.id),
-            a = i.fromServer(e, n);
+            a = i.attachRoles(
+              i.fromServer(e, n),
+              e.roles instanceof Array
+                ? (0, r.sortServerRoles)(e.id, e.roles)
+                : e.roles
+            );
           this.put(a, t);
         }
         put(e, t) {
@@ -45831,7 +45859,7 @@
                 : A.default.getName(s);
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
-              let n = null != l ? l.roles[t] : null;
+              let n = null != l ? C.default.getRole(l.id, t) : null;
               return null != n && null != n.name
                 ? n.name
                 : L.default.Messages.MESSAGE_TTS_DELETED_ROLE;
@@ -52803,4 +52831,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b5fa345df5ce6469f560.js.map
+//# sourceMappingURL=4698f86b6f64dadbbbb4.js.map

@@ -1068,39 +1068,39 @@
             switch (e.type) {
               case l.SnowflakeSelectDefaultValueTypes.USER:
                 var t;
-                let o = s.default.getUser(e.id);
-                if (null == o) return null;
-                let r = null != a ? i.default.getNick(a.id, o.id) : void 0;
+                let r = s.default.getUser(e.id);
+                if (null == r) return null;
+                let d = null != a ? i.default.getNick(a.id, r.id) : void 0;
                 return {
                   type: c.SelectOptionType.USER,
-                  value: o.id,
+                  value: r.id,
                   label:
-                    null !== (t = null != r ? r : o.globalName) && void 0 !== t
+                    null !== (t = null != d ? d : r.globalName) && void 0 !== t
                       ? t
-                      : o.username,
+                      : r.username,
                 };
               case l.SnowflakeSelectDefaultValueTypes.ROLE:
                 if (null == a) return null;
-                let d = a.getRole(e.id);
-                if (null == d) return null;
+                let f = o.default.getRole(a.id, e.id);
+                if (null == f) return null;
                 return {
                   type: c.SelectOptionType.ROLE,
-                  value: d.id,
-                  label: d.name,
+                  value: f.id,
+                  label: f.name,
                 };
               case l.SnowflakeSelectDefaultValueTypes.CHANNEL:
                 if (null == a) return null;
-                let f = u.default.getChannel(e.id);
+                let E = u.default.getChannel(e.id);
                 if (
-                  null == f ||
-                  f.guild_id !== a.id ||
-                  (n.length > 0 && !n.includes(f.type))
+                  null == E ||
+                  E.guild_id !== a.id ||
+                  (n.length > 0 && !n.includes(E.type))
                 )
                   return null;
                 return {
                   type: c.SelectOptionType.CHANNEL,
-                  value: f.id,
-                  label: f.name,
+                  value: E.id,
+                  label: E.name,
                 };
             }
           })
@@ -1303,4 +1303,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f267b735baf4293d063b.js.map
+//# sourceMappingURL=d45647d17ff79cca3108.js.map

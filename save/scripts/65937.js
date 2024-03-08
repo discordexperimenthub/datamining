@@ -1008,45 +1008,52 @@
       n.r(t),
         n.d(t, {
           MODAL_KEY: function () {
-            return c;
+            return d;
           },
           openGuildRoleConnectionsModal: function () {
-            return r;
+            return u;
           },
           default: function () {
-            return d;
+            return C;
           },
         });
       var l = n("37983");
       n("884691");
-      var a = n("77078"),
-        o = n("83900"),
-        s = n("535013"),
-        i = n("782340");
-      let c = "guild-connection-roles";
-      function r(e) {
-        (0, a.openModalLazy)(
+      var a = n("446674"),
+        o = n("77078"),
+        s = n("305961"),
+        i = n("83900"),
+        c = n("535013"),
+        r = n("782340");
+      let d = "guild-connection-roles";
+      function u(e) {
+        (0, o.openModalLazy)(
           async () => {
             let { default: t } = await n.el("918771").then(n.bind(n, "918771"));
             return n => (0, l.jsx)(t, { ...n, guildId: e });
           },
           {
-            modalKey: c,
-            contextKey: a.DEFAULT_MODAL_CONTEXT,
+            modalKey: d,
+            contextKey: o.DEFAULT_MODAL_CONTEXT,
             onCloseRequest: () => {
-              (0, a.closeModal)(c, a.DEFAULT_MODAL_CONTEXT);
+              (0, o.closeModal)(d, o.DEFAULT_MODAL_CONTEXT);
             },
           }
         );
       }
-      function d(e) {
-        let t = (0, s.isVerifiedRolesChannelVisible)(e);
+      function C(e) {
+        let t = (0, a.useStateFromStores)(
+          [s.default],
+          () =>
+            (0, c.isVerifiedRolesChannelVisible)(e, s.default.getRoles(e.id)),
+          [e]
+        );
         return t
-          ? (0, l.jsx)(a.MenuItem, {
+          ? (0, l.jsx)(o.MenuItem, {
               id: "guild-connection-roles",
-              label: i.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
-              icon: o.default,
-              action: () => r(e.id),
+              label: r.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
+              icon: i.default,
+              action: () => u(e.id),
             })
           : null;
       }
@@ -1100,4 +1107,4 @@
     },
   },
 ]);
-//# sourceMappingURL=20b33f8c1dec51ce9e00.js.map
+//# sourceMappingURL=e00c6c2e4f4e324c4abc.js.map

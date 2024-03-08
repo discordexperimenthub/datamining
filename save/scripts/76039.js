@@ -21902,6 +21902,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: New styles",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai will definitely notice you now.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NEW: Springtoons",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "In the hush of night, a curious magic enchants the air and...",
         COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -26290,8 +26293,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273552", ", Version Hash: ")
-          .concat("0ea883d02e283b5d1dabc0d9112a015989c0f532")
+          .concat("273559", ", Version Hash: ")
+          .concat("05815695218c16e786cf20c2119265bb3b76698b")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29389,12 +29392,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273552"), "273552"));
+        let _ = parseInt(((e = "273559"), "273559"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273552"
+                "273559"
               )
             ),
             (_ = 0)),
@@ -33323,25 +33326,14 @@
               })(e.guild_id, new Set(e.channels)),
               null != e.roles &&
                 (function (e, _) {
-                  var E, t;
-                  O.default
-                    .keys(
-                      null !==
-                        (t =
-                          null === (E = N.default.getGuild(e)) || void 0 === E
-                            ? void 0
-                            : E.roles) && void 0 !== t
-                        ? t
-                        : {}
-                    )
-                    .forEach(E => {
-                      !_.has(E) &&
-                        r.default.dispatch({
-                          type: "GUILD_ROLE_DELETE",
-                          guildId: e,
-                          roleId: E,
-                        });
-                    });
+                  O.default.keys(N.default.getRoles(e)).forEach(E => {
+                    !_.has(E) &&
+                      r.default.dispatch({
+                        type: "GUILD_ROLE_DELETE",
+                        guildId: e,
+                        roleId: E,
+                      });
+                  });
                 })(e.guild_id, new Set(e.roles)),
               null != e.emojis &&
                 (function (e, _) {
@@ -33385,44 +33377,34 @@
         setTimeout(
           () =>
             (function (e) {
-              var _, E, t, o, n;
-              let r =
+              var _, E, t;
+              let o =
                 null === (_ = N.default.getGuild(e)) || void 0 === _
                   ? void 0
                   : _.name;
               R.fileOnly(
                 "requesting deleted guild entities (id: "
                   .concat(e, ", name: ")
-                  .concat(r, ")")
+                  .concat(o, ")")
               );
-              let a = c(
+              let n = c(
                   Object.keys(S.default.getMutableBasicGuildChannelsForGuild(e))
                 ),
+                r = c(Object.keys(N.default.getRoles(e))),
+                a = c(s.default.getGuildEmoji(e).map(e => e.id)),
                 i = c(
-                  Object.keys(
-                    null !==
-                      (o =
-                        null === (E = N.default.getGuild(e)) || void 0 === E
-                          ? void 0
-                          : E.roles) && void 0 !== o
-                      ? o
-                      : {}
-                  )
-                ),
-                I = c(s.default.getGuildEmoji(e).map(e => e.id)),
-                O = c(
                   null !==
-                    (n =
-                      null === (t = T.default.getStickersByGuildId(e)) ||
-                      void 0 === t
+                    (t =
+                      null === (E = T.default.getStickersByGuildId(e)) ||
+                      void 0 === E
                         ? void 0
-                        : t.map(e => e.id)) && void 0 !== n
-                    ? n
+                        : E.map(e => e.id)) && void 0 !== t
+                    ? t
                     : []
                 );
               A.default
                 .getSocket()
-                .getDeletedEntityIdsNotMatchingHash(e, a, i, I, O);
+                .getDeletedEntityIdsNotMatchingHash(e, n, r, a, i);
             })(e),
           Math.ceil(2e3 * Math.random())
         );
@@ -51567,4 +51549,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.bbcf3b17d6def0d231af.js.map
+//# sourceMappingURL=76039.c55a0e6e900fd1df6859.js.map

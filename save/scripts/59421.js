@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["71177"],
+  ["59421"],
   {
     767590: function (e, t, n) {
       var i = n("890022"),
@@ -139,21 +139,21 @@
           : (121 === e.charCodeAt(0) && ((t = !0), (e = "Y" + e.substr(1))),
             S.test(e)
               ? (e = e.substr(0, e.length - 2))
-              : x.test(e) && (e = e.substr(0, e.length - 1)),
-            (n = g.exec(e))
+              : C.test(e) && (e = e.substr(0, e.length - 1)),
+            (n = v.exec(e))
               ? s.test(n[1]) && (e = e.substr(0, e.length - 1))
-              : (n = v.exec(e)) &&
+              : (n = x.exec(e)) &&
                 c.test(n[1]) &&
                 ((e = n[1]),
-                _.test(e)
+                g.test(e)
                   ? (e += "e")
-                  : C.test(e)
+                  : b.test(e)
                     ? (e = e.substr(0, e.length - 1))
                     : f.test(e) && (e += "e")),
             (n = m.exec(e)) && c.test(n[1]) && (e = n[1] + "i"),
-            (n = y.exec(e)) && s.test(n[1]) && (e = n[1] + i[n[2]]),
-            (n = I.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]),
-            (n = T.exec(e))
+            (n = I.exec(e)) && s.test(n[1]) && (e = n[1] + i[n[2]]),
+            (n = y.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]),
+            (n = _.exec(e))
               ? d.test(n[1]) && (e = n[1])
               : (n = E.exec(e)) && d.test(n[1]) && (e = n[1]),
             (n = h.exec(e)) &&
@@ -207,17 +207,17 @@
         h = /^(.+?)e$/,
         m = /^(.+?)y$/,
         E = /^(.+?(s|t))(ion)$/,
-        v = /^(.+?)(ed|ing)$/,
-        _ = /(at|bl|iz)$/,
-        g = /^(.+?)eed$/,
-        x = /^.+?[^s]s$/,
+        x = /^(.+?)(ed|ing)$/,
+        g = /(at|bl|iz)$/,
+        v = /^(.+?)eed$/,
+        C = /^.+?[^s]s$/,
         S = /^.+?(ss|i)es$/,
-        C = /([^aeiouylsz])\1$/,
-        y = RegExp(
+        b = /([^aeiouylsz])\1$/,
+        I = RegExp(
           "^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"
         ),
-        I = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-        T = RegExp(
+        y = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+        _ = RegExp(
           "^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$"
         );
     },
@@ -279,27 +279,6 @@
         };
       }
     },
-    289867: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return a;
-          },
-        });
-      var i = n("913144"),
-        a = {
-          toggleMembersSection() {
-            i.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
-          },
-          toggleProfilePanelSection() {
-            i.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
-          },
-          toggleSummariesSection() {
-            i.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
-          },
-        };
-    },
     913452: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -326,7 +305,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return G;
+            return w;
           },
         });
       var i = n("37983");
@@ -344,39 +323,39 @@
         h = n("41205"),
         m = n("936947"),
         E = n("47495"),
-        v = n("715243"),
-        _ = n("458574"),
-        g = n("963150"),
-        x = n("308798"),
+        x = n("715243"),
+        g = n("458574"),
+        v = n("963150"),
+        C = n("308798"),
         S = n("47006"),
-        C = n("878526"),
-        y = n("44141"),
-        I = n("531674"),
-        T = n("619436"),
-        b = n("625399"),
-        A = n("731390"),
+        b = n("878526"),
+        I = n("44141"),
+        y = n("531674"),
+        _ = n("619436"),
+        A = n("625399"),
+        M = n("731390"),
         N = n("339876"),
-        M = n("49111"),
+        T = n("49111"),
         L = n("782340");
       function O(e) {
         let { channel: t, onSelect: n } = e,
-          r = (0, y.default)(t),
-          u = (0, _.default)(t),
+          r = (0, I.default)(t),
+          u = (0, g.default)(t),
           o = (0, f.useAddToFavoritesItem)(t),
           c = (0, f.useRemoveFromFavoritesItem)(t),
-          v = (0, p.default)(t),
-          g = (0, h.default)(t),
-          x = (0, m.default)(t),
-          C = (0, I.default)(t),
-          A = (0, T.default)(t),
+          x = (0, p.default)(t),
+          v = (0, h.default)(t),
+          C = (0, m.default)(t),
+          b = (0, y.default)(t),
+          M = (0, _.default)(t),
           N = (0, S.default)(t),
-          M = (0, d.default)({
+          T = (0, d.default)({
             id: t.id,
             label: L.default.Messages.COPY_ID_CHANNEL,
           }),
           O = (0, s.default)(t),
-          P = (0, b.default)(t),
-          G = (0, E.useShouldUseNewNotificationSystem)(
+          j = (0, A.default)(t),
+          w = (0, E.useShouldUseNewNotificationSystem)(
             "ChannelContextFavoritesMenu"
           );
         return (0, i.jsxs)(a.Menu, {
@@ -386,37 +365,37 @@
           onSelect: n,
           children: [
             (0, i.jsx)(a.MenuGroup, { children: r }),
-            (0, i.jsxs)(a.MenuGroup, { children: [g, x, v, o] }),
-            (0, i.jsxs)(a.MenuGroup, { children: [C, G ? P : A] }),
+            (0, i.jsxs)(a.MenuGroup, { children: [v, C, x, o] }),
+            (0, i.jsxs)(a.MenuGroup, { children: [b, w ? j : M] }),
             (0, i.jsx)(a.MenuGroup, { children: N }),
             (0, i.jsx)(a.MenuGroup, { children: O }),
             (0, i.jsx)(a.MenuGroup, { children: c }),
             (0, i.jsx)(a.MenuGroup, { children: u }),
-            (0, i.jsx)(a.MenuGroup, { children: M }),
+            (0, i.jsx)(a.MenuGroup, { children: T }),
           ],
         });
       }
-      function P(e) {
+      function j(e) {
         let { channel: t, guild: n, onSelect: r } = e,
-          u = (0, y.default)(t),
-          s = (0, _.default)(t),
+          u = (0, I.default)(t),
+          s = (0, g.default)(t),
           o = (0, f.useAddToFavoritesItem)(t),
           c = (0, f.useRemoveFromFavoritesItem)(t),
           p = (0, N.default)(t),
-          h = (0, I.default)(t),
+          h = (0, y.default)(t),
           m = (0, S.default)(t),
-          M = (0, C.default)(t, n),
-          O = (0, v.default)(t, n),
-          P = (0, g.default)(t, n),
-          G = (0, x.default)(t),
+          T = (0, b.default)(t, n),
+          O = (0, x.default)(t, n),
+          j = (0, v.default)(t, n),
+          w = (0, C.default)(t),
           U = (0, d.default)({
             id: t.id,
             label: L.default.Messages.COPY_ID_CHANNEL,
           }),
-          R = (0, A.default)(t, "list_text_channel_context_menu"),
-          w = (0, T.default)(t),
-          j = (0, b.default)(t),
-          D = (0, E.useShouldUseNewNotificationSystem)(
+          G = (0, M.default)(t, "list_text_channel_context_menu"),
+          R = (0, _.default)(t),
+          D = (0, A.default)(t),
+          P = (0, E.useShouldUseNewNotificationSystem)(
             "ChannelContextMenuNormal"
           );
         return (0, i.jsxs)(a.Menu, {
@@ -432,17 +411,17 @@
             ),
             (0, i.jsxs)(
               a.MenuGroup,
-              { children: [M, p, s, R] },
+              { children: [T, p, s, G] },
               "channel-actions"
             ),
             (0, i.jsxs)(
               a.MenuGroup,
-              { children: [h, D ? j : w] },
+              { children: [h, P ? D : R] },
               "notifications"
             ),
             (0, i.jsxs)(
               a.MenuGroup,
-              { children: [m, O, P, G] },
+              { children: [m, O, j, w] },
               "admin-actions"
             ),
             (0, i.jsx)(a.MenuGroup, { children: c }),
@@ -450,13 +429,13 @@
           ],
         });
       }
-      var G = (0, u.default)(
+      var w = (0, u.default)(
         (0, r.default)(
           function (e) {
             let t = (0, c.default)();
-            return t ? (0, i.jsx)(O, { ...e }) : (0, i.jsx)(P, { ...e });
+            return t ? (0, i.jsx)(O, { ...e }) : (0, i.jsx)(j, { ...e });
           },
-          { object: M.AnalyticsObjects.CONTEXT_MENU }
+          { object: T.AnalyticsObjects.CONTEXT_MENU }
         ),
         [o.default.CONTEXT_MENU, o.default.CHANNEL_LIST_TEXT_CHANNEL_MENU]
       );
@@ -681,79 +660,6 @@
           },
         };
     },
-    893980: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          trackProfilePanelViewed: function () {
-            return s;
-          },
-          trackProfilePanelToggled: function () {
-            return o;
-          },
-        });
-      var i = n("373469"),
-        a = n("824563"),
-        l = n("27618"),
-        r = n("599110"),
-        u = n("49111");
-      let s = e => {
-          let {
-            displayProfile: t,
-            isMobile: n,
-            loadDurationMs: i,
-            activity: a,
-            customStatusActivity: l,
-            status: s,
-          } = e;
-          r.default.track(u.AnalyticEvents.DM_PROFILE_VIEWED, {
-            has_mobile_indicator: n,
-            has_activity:
-              null != a &&
-              (null == a ? void 0 : a.type) !== u.ActivityTypes.CUSTOM_STATUS,
-            has_game_activity:
-              (null == a ? void 0 : a.type) === u.ActivityTypes.PLAYING,
-            load_duration_ms: i,
-            profile_user_status: s,
-            has_custom_status: null != l,
-            has_profile_effect: null != t.profileEffectId,
-            ...d(t),
-          });
-        },
-        o = (e, t) => {
-          r.default.track(u.AnalyticEvents.DM_PROFILE_TOGGLED, {
-            is_profile_open: t,
-            ...d(e),
-          });
-        },
-        d = e => {
-          var t;
-          if (null == e) return {};
-          let n = e.userId,
-            r = null != i.default.getAnyStreamForUser(n),
-            s = a.default.findActivity(n, e => {
-              let { type: t } = e;
-              return r
-                ? t === u.ActivityTypes.PLAYING
-                : t !== u.ActivityTypes.CUSTOM_STATUS;
-            }),
-            o = null == s ? void 0 : s.assets,
-            d = l.default.isFriend(n);
-          return {
-            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
-            void 0 !== t
-              ? t
-              : null == o
-                ? void 0
-                : o.small_image),
-            is_friend: d,
-            viewed_profile_user_id: n,
-            profile_has_nitro_customization: e.hasPremiumCustomization(),
-            profile_has_theme_color_customized: e.hasThemeColors(),
-            profile_has_theme_animation: null != e.popoutAnimationParticleType,
-          };
-        };
-    },
     830210: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -933,4 +839,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c24a01e148df3402c273.js.map
+//# sourceMappingURL=d52a211330f78369b71b.js.map

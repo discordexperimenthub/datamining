@@ -710,20 +710,21 @@
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
               : null,
-          m = (0, n.useStateFromStores)(
-            [c.default],
-            () => c.default.getGuild(t),
-            [t]
+          m = (0, n.useStateFromStores)([c.default], () =>
+            c.default.getGuild(t)
           ),
-          g = (0, n.useStateFromStores)([d.default], () => d.default.roleStyle),
-          R = (0, s.useTrackModerationAction)(t, {
+          g = (0, n.useStateFromStores)([c.default], () =>
+            c.default.getRoles(t)
+          ),
+          R = (0, n.useStateFromStores)([d.default], () => d.default.roleStyle),
+          T = (0, s.useTrackModerationAction)(t, {
             location: a,
             targetUserId: e,
           }),
           {
-            userRoles: T,
-            isGuildMember: C,
-            canManageRoles: I,
+            userRoles: C,
+            isGuildMember: I,
+            canManageRoles: N,
           } = (0, n.useStateFromStoresObject)(
             [f.default, E.default],
             () => {
@@ -737,44 +738,44 @@
             },
             [e, t, m]
           );
-        if (__OVERLAY__ || null == T || null == m || !C) return null;
-        let N = E.default.getHighestRole(m),
-          O = Object.values(m.roles).filter(
+        if (__OVERLAY__ || null == C || null == m || !I) return null;
+        let O = E.default.getHighestRole(m),
+          U = Object.values(g).filter(
             e => !(0, i.isEveryoneRoleId)(m.id, e.id)
           ),
-          U = I
-            ? O.map(l => {
-                let a = l.managed || !E.default.isRoleHigher(m, N, l),
-                  n = -1 !== T.indexOf(l.id);
+          v = N
+            ? U.map(l => {
+                let a = l.managed || !E.default.isRoleHigher(m, O, l),
+                  n = -1 !== C.indexOf(l.id);
                 return a && !n
                   ? null
                   : (0, u.jsx)(
                       r.MenuCheckboxItem,
                       {
                         id: l.id,
-                        label: () => A(l, g),
+                        label: () => A(l, R),
                         disabled: a,
                         action: () => {
                           var u;
                           return (
                             (u = l),
-                            void (T.includes(u.id)
+                            void (C.includes(u.id)
                               ? (o.default.updateMemberRoles(
                                   t,
                                   e,
-                                  T.filter(e => e !== u.id),
+                                  C.filter(e => e !== u.id),
                                   [],
                                   [u.id]
                                 ),
-                                R(s.ModerationActionType.REMOVE_ROLE))
+                                T(s.ModerationActionType.REMOVE_ROLE))
                               : (o.default.updateMemberRoles(
                                   t,
                                   e,
-                                  T.concat([u.id]),
+                                  C.concat([u.id]),
                                   [u.id],
                                   []
                                 ),
-                                R(s.ModerationActionType.ADD_ROLE)))
+                                T(s.ModerationActionType.ADD_ROLE)))
                           );
                         },
                         checked: n,
@@ -782,28 +783,28 @@
                       l.id
                     );
               })
-            : O.filter(e => -1 !== T.indexOf(e.id)).map(e =>
+            : U.filter(e => -1 !== C.indexOf(e.id)).map(e =>
                 (0, i.isEveryoneRoleId)(m.id, e.id)
                   ? null
                   : (0, u.jsx)(
                       r.MenuItem,
-                      { id: e.id, label: () => A(e, g) },
+                      { id: e.id, label: () => A(e, R) },
                       e.id
                     )
               );
-        return 0 === U.filter(_.isNotNullish).length
+        return 0 === v.filter(_.isNotNullish).length
           ? null
           : l
-            ? U
+            ? v
             : (0, u.jsx)(r.MenuItem, {
                 id: "roles",
                 label: S.default.Messages.ROLES_LIST.format({
-                  numRoles: U.length,
+                  numRoles: v.length,
                 }),
-                children: U,
+                children: v,
               });
       }
     },
   },
 ]);
-//# sourceMappingURL=f5cba2c98026b5db0ead.js.map
+//# sourceMappingURL=c4bb6755cb67c75ed97f.js.map

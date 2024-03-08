@@ -307,7 +307,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return g;
           },
         });
       var l = n("37983");
@@ -352,26 +352,27 @@
           ],
         });
       }
-      function T(e, t) {
+      function g(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           i =
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
               : null,
-          h = (0, o.useStateFromStores)(
-            [_.default],
-            () => _.default.getGuild(t),
-            [t]
+          h = (0, o.useStateFromStores)([_.default], () =>
+            _.default.getGuild(t)
+          ),
+          g = (0, o.useStateFromStores)([_.default], () =>
+            _.default.getRoles(t)
           ),
           T = (0, o.useStateFromStores)([u.default], () => u.default.roleStyle),
-          g = (0, d.useTrackModerationAction)(t, {
+          O = (0, d.useTrackModerationAction)(t, {
             location: i,
             targetUserId: e,
           }),
           {
-            userRoles: O,
-            isGuildMember: R,
-            canManageRoles: m,
+            userRoles: R,
+            isGuildMember: m,
+            canManageRoles: S,
           } = (0, o.useStateFromStoresObject)(
             [s.default, f.default],
             () => {
@@ -385,15 +386,15 @@
             },
             [e, t, h]
           );
-        if (__OVERLAY__ || null == O || null == h || !R) return null;
+        if (__OVERLAY__ || null == R || null == h || !m) return null;
         let b = f.default.getHighestRole(h),
-          S = Object.values(h.roles).filter(
+          p = Object.values(g).filter(
             e => !(0, a.isEveryoneRoleId)(h.id, e.id)
           ),
-          p = m
-            ? S.map(n => {
+          I = S
+            ? p.map(n => {
                 let i = n.managed || !f.default.isRoleHigher(h, b, n),
-                  o = -1 !== O.indexOf(n.id);
+                  o = -1 !== R.indexOf(n.id);
                 return i && !o
                   ? null
                   : (0, l.jsx)(
@@ -406,23 +407,23 @@
                           var l;
                           return (
                             (l = n),
-                            void (O.includes(l.id)
+                            void (R.includes(l.id)
                               ? (c.default.updateMemberRoles(
                                   t,
                                   e,
-                                  O.filter(e => e !== l.id),
+                                  R.filter(e => e !== l.id),
                                   [],
                                   [l.id]
                                 ),
-                                g(d.ModerationActionType.REMOVE_ROLE))
+                                O(d.ModerationActionType.REMOVE_ROLE))
                               : (c.default.updateMemberRoles(
                                   t,
                                   e,
-                                  O.concat([l.id]),
+                                  R.concat([l.id]),
                                   [l.id],
                                   []
                                 ),
-                                g(d.ModerationActionType.ADD_ROLE)))
+                                O(d.ModerationActionType.ADD_ROLE)))
                           );
                         },
                         checked: o,
@@ -430,28 +431,30 @@
                       n.id
                     );
               })
-            : S.filter(e => -1 !== O.indexOf(e.id)).map(e =>
-                (0, a.isEveryoneRoleId)(h.id, e.id)
-                  ? null
-                  : (0, l.jsx)(
-                      r.MenuItem,
-                      { id: e.id, label: () => v(e, T) },
-                      e.id
-                    )
-              );
-        return 0 === p.filter(E.isNotNullish).length
+            : p
+                .filter(e => -1 !== R.indexOf(e.id))
+                .map(e =>
+                  (0, a.isEveryoneRoleId)(h.id, e.id)
+                    ? null
+                    : (0, l.jsx)(
+                        r.MenuItem,
+                        { id: e.id, label: () => v(e, T) },
+                        e.id
+                      )
+                );
+        return 0 === I.filter(E.isNotNullish).length
           ? null
           : n
-            ? p
+            ? I
             : (0, l.jsx)(r.MenuItem, {
                 id: "roles",
                 label: M.default.Messages.ROLES_LIST.format({
-                  numRoles: p.length,
+                  numRoles: I.length,
                 }),
-                children: p,
+                children: I,
               });
       }
     },
   },
 ]);
-//# sourceMappingURL=28d560171a73469d9d5e.js.map
+//# sourceMappingURL=b199bdbd0f38ce3fa33e.js.map

@@ -6,7 +6,7 @@
       a.r(l),
         a.d(l, {
           default: function () {
-            return M;
+            return _;
           },
         }),
         a("222007"),
@@ -15,227 +15,237 @@
       var s = a("37983"),
         t = a("884691"),
         o = a("414456"),
-        i = a.n(o),
-        r = a("316693"),
+        r = a.n(o),
+        i = a("316693"),
+        n = a("446674"),
         d = a("77078"),
-        n = a("318738"),
-        u = a("798609"),
-        c = a("454273"),
-        N = a("991170"),
-        O = a("713955"),
-        v = a("782340"),
-        R = a("623929");
-      let h = (e, l) =>
-          t.useCallback(
-            (a, s) => {
-              let t = (0, O.getAllRolesRows)(e),
-                o = new Set(s),
-                i = { ...l.permissionOverwrites },
-                d = [],
-                v = [];
-              return (
-                t.forEach(l => {
-                  var s, t, n, O, R, h, E, m, _, f;
-                  let M = l.id,
-                    S = o.has(M);
-                  S
-                    ? d.push({
-                        id: M,
-                        type: u.PermissionOverwriteType.ROLE,
-                        allow: S
-                          ? r.default.add(
-                              null !==
-                                (O =
-                                  null === (s = i[M]) || void 0 === s
-                                    ? void 0
-                                    : s.allow) && void 0 !== O
-                                ? O
-                                : N.default.NONE,
-                              a
-                            )
-                          : r.default.remove(
-                              null !==
-                                (R =
-                                  null === (t = i[M]) || void 0 === t
-                                    ? void 0
-                                    : t.allow) && void 0 !== R
-                                ? R
-                                : N.default.NONE,
-                              a
-                            ),
-                        deny: r.default.remove(
-                          null !==
-                            (h =
-                              null === (n = i[M]) || void 0 === n
-                                ? void 0
-                                : n.deny) && void 0 !== h
-                            ? h
-                            : N.default.NONE,
-                          a
-                        ),
-                      })
-                    : (0, c.isEveryoneRoleId)(e.id, M)
-                      ? d.push({
-                          id: M,
-                          type: u.PermissionOverwriteType.ROLE,
-                          allow: r.default.remove(
-                            null !==
-                              (_ =
-                                null === (E = i[M]) || void 0 === E
-                                  ? void 0
-                                  : E.allow) && void 0 !== _
-                              ? _
-                              : N.default.NONE,
-                            a
-                          ),
-                          deny: r.default.add(
-                            null !==
-                              (f =
-                                null === (m = i[M]) || void 0 === m
-                                  ? void 0
-                                  : m.deny) && void 0 !== f
-                              ? f
-                              : N.default.NONE,
-                            a
-                          ),
-                        })
-                      : M in i && v.push(M);
-                }, []),
-                (0, n.saveAndClearPermissionUpdates)(l.id, d, v)
-              );
-            },
-            [e, l]
-          ),
-        E = e => l => null != l && !(0, c.isEveryoneRoleId)(e, l),
-        m = e =>
-          t.useMemo(
-            () => (0, O.getAllRolesRows)(e).filter(l => E(e.id)(l.id)),
-            [e]
-          ),
-        _ = (e, l, a) => {
-          let s = N.default.canEveryoneRole(a, l),
-            [o, i] = t.useState(s);
-          return { shouldEveryonePost: o, setShouldEveryonePost: i };
+        u = a("318738"),
+        c = a("798609"),
+        N = a("454273"),
+        O = a("305961"),
+        v = a("991170"),
+        R = a("713955"),
+        f = a("782340"),
+        m = a("623929");
+      function h(e) {
+        return l => null != l && !(0, N.isEveryoneRoleId)(e, l);
+      }
+      let E = (e, l, a) => {
+          let s = v.default.canEveryoneRole(a, l),
+            [o, r] = t.useState(s);
+          return { shouldEveryonePost: o, setShouldEveryonePost: r };
         },
-        f = e => {
+        S = e => {
           let { rolesRow: l } = e;
           return (0, s.jsx)("div", {
             "aria-hidden": !0,
-            className: R.roleCircle,
+            className: m.roleCircle,
             style: { backgroundColor: null == l ? void 0 : l.colorString },
           });
         };
-      var M = e => {
+      var _ = e => {
         let {
             guild: l,
             channel: a,
             permission: o,
-            onClose: r,
-            transitionState: n,
-            currentSelectedRoles: u = [],
+            onClose: _,
+            transitionState: M,
+            currentSelectedRoles: p = [],
           } = e,
-          { shouldEveryonePost: c, setShouldEveryonePost: N } = _(l, a, o),
-          O = t.useRef(null),
-          M = m(l),
-          S = M.reduce((e, l) => (e.set(l.id, l), e), new Map()),
-          p = M.map(e => ({ key: e.key, label: e.name, value: e.id })),
-          [I, x] = t.useState(u.map(e => e.id).filter(E(l.id))),
-          [A, L] = t.useState(!1),
-          [C, w] = t.useState(!1),
-          g = I.length > 0 || c,
-          j = h(l, a),
-          y = async () => {
-            if (!g) return;
-            L(!0), w(!1);
-            let e = [...I];
-            if (c) {
+          { shouldEveryonePost: I, setShouldEveryonePost: x } = E(l, a, o),
+          A = t.useRef(null),
+          L = (function (e) {
+            let l = (0, n.useStateFromStores)([O.default], () =>
+              O.default.getRoles(e.id)
+            );
+            return t.useMemo(
+              () => (0, R.getAllRolesRows)(e, l).filter(l => h(e.id)(l.id)),
+              [e, l]
+            );
+          })(l),
+          C = L.reduce((e, l) => (e.set(l.id, l), e), new Map()),
+          g = L.map(e => ({ key: e.key, label: e.name, value: e.id })),
+          [w, j] = t.useState(p.map(e => e.id).filter(h(l.id))),
+          [y, D] = t.useState(!1),
+          [B, P] = t.useState(!1),
+          b = w.length > 0 || I,
+          T = (function (e, l) {
+            let a = (0, n.useStateFromStores)([O.default], () =>
+              O.default.getRoles(e.id)
+            );
+            return t.useCallback(
+              (s, t) => {
+                let o = (0, R.getAllRolesRows)(e, a),
+                  r = new Set(t),
+                  n = { ...l.permissionOverwrites },
+                  d = [],
+                  O = [];
+                return (
+                  o.forEach(l => {
+                    var a, t, o, u, R, f, m, h, E, S;
+                    let _ = l.id,
+                      M = r.has(_);
+                    M
+                      ? d.push({
+                          id: _,
+                          type: c.PermissionOverwriteType.ROLE,
+                          allow: M
+                            ? i.default.add(
+                                null !==
+                                  (u =
+                                    null === (a = n[_]) || void 0 === a
+                                      ? void 0
+                                      : a.allow) && void 0 !== u
+                                  ? u
+                                  : v.default.NONE,
+                                s
+                              )
+                            : i.default.remove(
+                                null !==
+                                  (R =
+                                    null === (t = n[_]) || void 0 === t
+                                      ? void 0
+                                      : t.allow) && void 0 !== R
+                                  ? R
+                                  : v.default.NONE,
+                                s
+                              ),
+                          deny: i.default.remove(
+                            null !==
+                              (f =
+                                null === (o = n[_]) || void 0 === o
+                                  ? void 0
+                                  : o.deny) && void 0 !== f
+                              ? f
+                              : v.default.NONE,
+                            s
+                          ),
+                        })
+                      : (0, N.isEveryoneRoleId)(e.id, _)
+                        ? d.push({
+                            id: _,
+                            type: c.PermissionOverwriteType.ROLE,
+                            allow: i.default.remove(
+                              null !==
+                                (E =
+                                  null === (m = n[_]) || void 0 === m
+                                    ? void 0
+                                    : m.allow) && void 0 !== E
+                                ? E
+                                : v.default.NONE,
+                              s
+                            ),
+                            deny: i.default.add(
+                              null !==
+                                (S =
+                                  null === (h = n[_]) || void 0 === h
+                                    ? void 0
+                                    : h.deny) && void 0 !== S
+                                ? S
+                                : v.default.NONE,
+                              s
+                            ),
+                          })
+                        : _ in n && O.push(_);
+                  }, []),
+                  (0, u.saveAndClearPermissionUpdates)(l.id, d, O)
+                );
+              },
+              [e, a, l]
+            );
+          })(l, a),
+          F = async () => {
+            if (!b) return;
+            D(!0), P(!1);
+            let e = [...w];
+            if (I) {
               let a = l.getEveryoneRoleId();
               e.push(a);
             }
             try {
-              await j(o, e), r();
+              await T(o, e), _();
             } catch (e) {
-              w(!0);
+              P(!0);
             } finally {
-              L(!1);
+              D(!1);
             }
           };
-        return A
+        return y
           ? (0, s.jsx)(d.Spinner, {})
           : (0, s.jsxs)(d.ModalRoot, {
-              transitionState: n,
-              "aria-label": v.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
+              transitionState: M,
+              "aria-label": f.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
               children: [
                 (0, s.jsx)(d.ModalHeader, {
                   separator: !1,
-                  className: R.modalHeader,
+                  className: m.modalHeader,
                   children: (0, s.jsx)(d.Heading, {
                     variant: "heading-md/semibold",
-                    className: R.header,
+                    className: m.header,
                     children:
-                      v.default.Messages
+                      f.default.Messages
                         .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_TITLE,
                   }),
                 }),
                 (0, s.jsx)(d.ModalContent, {
                   children: (0, s.jsxs)("div", {
-                    className: R.container,
+                    className: m.container,
                     children: [
                       (0, s.jsx)("div", {
-                        className: R.row,
+                        className: m.row,
                         children: (0, s.jsx)("div", {
-                          ref: O,
-                          className: R.roleSelectorContainer,
+                          ref: A,
+                          className: m.roleSelectorContainer,
                           children: (0, s.jsx)(d.FocusRingScope, {
-                            containerRef: O,
+                            containerRef: A,
                             children: (0, s.jsx)(d.SearchableSelect, {
                               closeOnSelect: !1,
-                              className: R.roleSelector,
+                              className: m.roleSelector,
                               maxVisibleItems: 5,
                               placeholder:
-                                v.default.Messages
+                                f.default.Messages
                                   .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_ROLE_INPUT_PLACEHOLDER,
                               multi: !0,
-                              value: I,
-                              options: p,
+                              value: w,
+                              options: g,
                               onChange: e => {
-                                x(e);
+                                j(e);
                               },
                               renderOptionPrefix: e =>
                                 null != e
-                                  ? (0, s.jsx)(f, { rolesRow: S.get(e.value) })
+                                  ? (0, s.jsx)(S, { rolesRow: C.get(e.value) })
                                   : null,
                             }),
                           }),
                         }),
                       }),
                       (0, s.jsxs)("div", {
-                        className: R.row,
+                        className: m.row,
                         children: [
                           (0, s.jsx)(d.FormSwitch, {
-                            value: c,
+                            value: I,
                             hideBorder: !0,
-                            onChange: N,
-                            className: R.switchGroup,
+                            onChange: x,
+                            className: m.switchGroup,
                             children:
-                              v.default.Messages
+                              f.default.Messages
                                 .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_LET_EVERYONE_POST,
                           }),
                           (0, s.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             children:
-                              v.default.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_DESCRIPTION.format(),
+                              f.default.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_DESCRIPTION.format(),
                           }),
                         ],
                       }),
-                      C
+                      B
                         ? (0, s.jsx)("div", {
-                            className: R.row,
+                            className: m.row,
                             children: (0, s.jsx)(d.Text, {
-                              className: i(R.row, R.error),
+                              className: r(m.row, m.error),
                               variant: "text-sm/normal",
                               children:
-                                v.default.Messages
+                                f.default.Messages
                                   .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_ERROR,
                             }),
                           })
@@ -244,24 +254,24 @@
                   }),
                 }),
                 (0, s.jsxs)(d.ModalFooter, {
-                  className: R.footer,
+                  className: m.footer,
                   children: [
                     (0, s.jsx)(d.Button, {
                       type: "submit",
                       color: d.Button.Colors.BRAND_NEW,
                       size: d.Button.Sizes.SMALL,
-                      className: R.button,
-                      onClick: y,
-                      disabled: !g,
+                      className: m.button,
+                      onClick: F,
+                      disabled: !b,
                       autoFocus: !0,
-                      children: v.default.Messages.SAVE,
+                      children: f.default.Messages.SAVE,
                     }),
                     (0, s.jsx)(d.Button, {
                       color: d.Button.Colors.PRIMARY,
                       size: d.Button.Sizes.SMALL,
-                      className: R.button,
-                      onClick: r,
-                      children: v.default.Messages.CANCEL,
+                      className: m.button,
+                      onClick: _,
+                      children: f.default.Messages.CANCEL,
                     }),
                   ],
                 }),
@@ -271,4 +281,4 @@
     },
   },
 ]);
-//# sourceMappingURL=068bbc356d3442ef6dbb.js.map
+//# sourceMappingURL=a9de58e773265b6a3bd9.js.map

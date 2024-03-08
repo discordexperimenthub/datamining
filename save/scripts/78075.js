@@ -45,12 +45,12 @@
             let { user: t, guildId: l, analyticsContext: o, onSelect: d } = e,
               h = (0, c.default)(t.id),
               E = (0, f.default)(t.id, l),
-              p = (0, a.default)({
+              R = (0, a.default)({
                 id: t.id,
                 label: O.default.Messages.COPY_ID_USER,
               }),
-              x = (0, s.default)(t.id),
-              R = t.isNonUserBot();
+              p = (0, s.default)(t.id),
+              x = t.isNonUserBot();
             return (0, n.jsx)(r.default, {
               context: o,
               object: M.AnalyticsObjects.CONTEXT_MENU,
@@ -60,9 +60,9 @@
                 "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: d,
                 children: [
-                  (0, n.jsxs)(u.MenuGroup, { children: [!R && h, !R && x] }),
-                  (0, n.jsx)(u.MenuGroup, { children: !R && E }),
-                  (0, n.jsx)(u.MenuGroup, { children: p }),
+                  (0, n.jsxs)(u.MenuGroup, { children: [!x && h, !x && p] }),
+                  (0, n.jsx)(u.MenuGroup, { children: !x && E }),
+                  (0, n.jsx)(u.MenuGroup, { children: R }),
                 ],
               }),
             });
@@ -139,7 +139,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return R;
+            return x;
           },
         });
       var n = l("37983");
@@ -157,15 +157,15 @@
         O = l("449008"),
         h = l("49111"),
         E = l("782340"),
-        p = l("235324");
-      function x(e, t) {
+        R = l("235324");
+      function p(e, t) {
         var l, i;
         return (0, n.jsxs)("div", {
-          className: p.roleRow,
+          className: R.roleRow,
           children: [
             "dot" === t
               ? (0, n.jsx)(r.RoleDot, {
-                  className: p.roleDot,
+                  className: R.roleDot,
                   color:
                     null !== (l = e.colorString) && void 0 !== l
                       ? l
@@ -174,7 +174,7 @@
                   tooltip: !1,
                 })
               : (0, n.jsx)(r.RoleCircle, {
-                  className: p.roleDot,
+                  className: R.roleDot,
                   color:
                     null !== (i = e.colorString) && void 0 !== i
                       ? i
@@ -184,26 +184,27 @@
           ],
         });
       }
-      function R(e, t) {
+      function x(e, t) {
         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           u =
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
               : null,
-          p = (0, i.useStateFromStores)(
-            [f.default],
-            () => f.default.getGuild(t),
-            [t]
+          R = (0, i.useStateFromStores)([f.default], () =>
+            f.default.getGuild(t)
           ),
-          R = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle),
-          _ = (0, a.useTrackModerationAction)(t, {
+          x = (0, i.useStateFromStores)([f.default], () =>
+            f.default.getRoles(t)
+          ),
+          _ = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle),
+          m = (0, a.useTrackModerationAction)(t, {
             location: u,
             targetUserId: e,
           }),
           {
             userRoles: v,
-            isGuildMember: m,
-            canManageRoles: g,
+            isGuildMember: g,
+            canManageRoles: S,
           } = (0, i.useStateFromStoresObject)(
             [c.default, M.default],
             () => {
@@ -212,19 +213,19 @@
                 userRoles: null != l ? l.roles : [],
                 isGuildMember: null != l,
                 canManageRoles:
-                  null != p && M.default.can(h.Permissions.MANAGE_ROLES, p),
+                  null != R && M.default.can(h.Permissions.MANAGE_ROLES, R),
               };
             },
-            [e, t, p]
+            [e, t, R]
           );
-        if (__OVERLAY__ || null == v || null == p || !m) return null;
-        let S = M.default.getHighestRole(p),
-          b = Object.values(p.roles).filter(
-            e => !(0, d.isEveryoneRoleId)(p.id, e.id)
+        if (__OVERLAY__ || null == v || null == R || !g) return null;
+        let b = M.default.getHighestRole(R),
+          j = Object.values(x).filter(
+            e => !(0, d.isEveryoneRoleId)(R.id, e.id)
           ),
-          j = g
-            ? b.map(l => {
-                let u = l.managed || !M.default.isRoleHigher(p, S, l),
+          L = S
+            ? j.map(l => {
+                let u = l.managed || !M.default.isRoleHigher(R, b, l),
                   i = -1 !== v.indexOf(l.id);
                 return u && !i
                   ? null
@@ -232,7 +233,7 @@
                       r.MenuCheckboxItem,
                       {
                         id: l.id,
-                        label: () => x(l, R),
+                        label: () => p(l, _),
                         disabled: u,
                         action: () => {
                           var n;
@@ -246,7 +247,7 @@
                                   [],
                                   [n.id]
                                 ),
-                                _(a.ModerationActionType.REMOVE_ROLE))
+                                m(a.ModerationActionType.REMOVE_ROLE))
                               : (s.default.updateMemberRoles(
                                   t,
                                   e,
@@ -254,7 +255,7 @@
                                   [n.id],
                                   []
                                 ),
-                                _(a.ModerationActionType.ADD_ROLE)))
+                                m(a.ModerationActionType.ADD_ROLE)))
                           );
                         },
                         checked: i,
@@ -262,30 +263,30 @@
                       l.id
                     );
               })
-            : b
+            : j
                 .filter(e => -1 !== v.indexOf(e.id))
                 .map(e =>
-                  (0, d.isEveryoneRoleId)(p.id, e.id)
+                  (0, d.isEveryoneRoleId)(R.id, e.id)
                     ? null
                     : (0, n.jsx)(
                         r.MenuItem,
-                        { id: e.id, label: () => x(e, R) },
+                        { id: e.id, label: () => p(e, _) },
                         e.id
                       )
                 );
-        return 0 === j.filter(O.isNotNullish).length
+        return 0 === L.filter(O.isNotNullish).length
           ? null
           : l
-            ? j
+            ? L
             : (0, n.jsx)(r.MenuItem, {
                 id: "roles",
                 label: E.default.Messages.ROLES_LIST.format({
-                  numRoles: j.length,
+                  numRoles: L.length,
                 }),
-                children: j,
+                children: L,
               });
       }
     },
   },
 ]);
-//# sourceMappingURL=d371ff4e942a9cceadbd.js.map
+//# sourceMappingURL=6b4ca28cd30f5c135ecd.js.map

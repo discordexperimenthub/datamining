@@ -769,7 +769,7 @@
             }
             if ((null == e ? void 0 : e.type) === N.SelectOptionType.ROLE) {
               var a;
-              let n = null == x ? void 0 : x.getRole(e.value);
+              let n = null != x ? m.default.getRole(x.id, e.value) : void 0;
               if (null == n || null == x) return;
               let u = (0, i.canGuildUseRoleIcons)(x, n)
                 ? (0, r.getRoleIconProps)(n, t)
@@ -800,7 +800,7 @@
                   forceUsername: !0,
                 }));
             } else if (e.type === N.SelectOptionType.ROLE) {
-              let n = null == x ? void 0 : x.getRole(e.value),
+              let n = null != x ? m.default.getRole(x.id, e.value) : void 0,
                 a = null == n ? null : null == L ? void 0 : L[n.id];
               null != a &&
                 (t = (0, l.jsxs)("div", {
@@ -1340,4 +1340,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b4ea37361b70e3620310.js.map
+//# sourceMappingURL=df31a19b487eae9da070.js.map

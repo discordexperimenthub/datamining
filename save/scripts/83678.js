@@ -5999,25 +5999,31 @@
         let { channel: t } = e,
           [n, l] = s.useState(!1),
           r = (0, p.default)(t, !0),
-          b = (0, c.useStateFromStores)([T.default], () =>
-            T.default.getGuild(t.guild_id)
+          b = t.guild_id,
+          k = (0, c.useStateFromStores)([T.default], () =>
+            null != b ? T.default.getRoles(b) : void 0
           ),
-          k = (0, c.useStateFromStores)([A.default], () =>
-            A.default.getUser(null == b ? void 0 : b.ownerId)
-          ),
-          F = s.useMemo(
-            () =>
-              null != b
-                ? o(b.roles)
-                    .sortBy(e => -e.position)
-                    .filter(e => !(0, m.isEveryoneRoleId)(b.id, e.id))
-                    .value()
-                : [],
-            [b]
-          ),
+          F = (0, c.useStateFromStores)([A.default, T.default], () => {
+            var e;
+            return A.default.getUser(
+              null === (e = T.default.getGuild(b)) || void 0 === e
+                ? void 0
+                : e.ownerId
+            );
+          }),
           H = s.useMemo(
             () =>
-              o(F)
+              null != b
+                ? o(k)
+                    .sortBy(e => -e.position)
+                    .filter(e => !(0, m.isEveryoneRoleId)(b, e.id))
+                    .value()
+                : [],
+            [b, k]
+          ),
+          U = s.useMemo(
+            () =>
+              o(H)
                 .filter(e => {
                   if (null == b) return !1;
                   let n = x.default.computePermissionsForRoles({
@@ -6030,13 +6036,13 @@
                   );
                 })
                 .value(),
-            [t, b, F]
+            [t, b, H]
           ),
-          U = (0, c.useStateFromStoresArray)(
+          G = (0, c.useStateFromStoresArray)(
             [A.default],
             () => {
               let e = {};
-              for (let n of (null != k && (e[k.id] = k),
+              for (let n of (null != F && (e[F.id] = F),
               Object.values(t.permissionOverwrites))) {
                 if (
                   n.type !== C.PermissionOverwriteType.MEMBER ||
@@ -6064,15 +6070,15 @@
                 })
                 .value();
             },
-            [t, k]
+            [t, F]
           ),
-          G =
+          B =
             _.default.can(D.Permissions.MANAGE_CHANNELS, t) ||
             _.default.can(D.Permissions.MANAGE_ROLES, t);
-        function B() {
+        function V() {
           h.default.open(t.id);
         }
-        let V = s.useCallback(() => l(!1), []);
+        let w = s.useCallback(() => l(!1), []);
         return (0, a.jsxs)(R.default, {
           channelId: t.id,
           children: [
@@ -6092,7 +6098,7 @@
                   }
                 ),
             }),
-            G
+            B
               ? (0, a.jsxs)("div", {
                   className: j.channelSettingButtons,
                   children: [
@@ -6105,7 +6111,7 @@
                     }),
                     (0, a.jsx)(y.default, {
                       label: P.default.Messages.EDIT_CHANNEL,
-                      onClick: B,
+                      onClick: V,
                       icon: (0, a.jsx)(M.default, { width: 16, height: 16 }),
                     }),
                   ],
@@ -6115,14 +6121,14 @@
               className: j.members,
               children: [
                 (function () {
-                  if (1 !== U.length || H.length > 0)
+                  if (1 !== G.length || U.length > 0)
                     return (0, a.jsx)(O.default, {
                       guildId: t.guild_id,
                       className: j.avatars,
                       maxUsers: 5,
-                      users: U,
+                      users: G,
                     });
-                  let e = U[0],
+                  let e = G[0],
                     n = L.default.getName(e);
                   return (0, a.jsxs)("div", {
                     className: j.avatars,
@@ -6149,7 +6155,7 @@
                     ],
                   });
                 })(),
-                H.map((e, n) => {
+                U.map((e, n) => {
                   var s, l;
                   let r =
                       null !== (l = e.colorString) && void 0 !== l
@@ -6159,16 +6165,16 @@
                       (null === (s = e.tags) || void 0 === s
                         ? void 0
                         : s.guild_connections) !== void 0;
-                  return G
+                  return B
                     ? (0, a.jsx)(
                         N.default,
                         {
                           className: i(j.role, {
-                            [j.last]: n === H.length - 1,
+                            [j.last]: n === U.length - 1,
                           }),
                           roleName: e.name,
                           roleColor: r,
-                          disabled: !G,
+                          disabled: !B,
                           verified: o,
                           onClick: () => {
                             g.default.open(
@@ -6184,7 +6190,7 @@
                         v.default,
                         {
                           className: i(j.role, {
-                            [j.last]: n === H.length - 1,
+                            [j.last]: n === U.length - 1,
                           }),
                           roleName: e.name,
                           roleColor: r,
@@ -6200,7 +6206,7 @@
                   renderModal: e =>
                     (0, a.jsx)(E.default, {
                       ...e,
-                      onClose: () => (V(), e.onClose()),
+                      onClose: () => (w(), e.onClose()),
                       channelId: t.id,
                     }),
                   onCloseRequest: () => l(!1),
@@ -19774,4 +19780,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0e6614747eaaab49587d.js.map
+//# sourceMappingURL=e30bcbfbe5b6fc493d30.js.map

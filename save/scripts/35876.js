@@ -548,70 +548,70 @@
       E.r(t),
         E.d(t, {
           DEFAULT_FOR_STRINGS_KEY: function () {
-            return C;
+            return M;
           },
           GuildChangeStrings: function () {
-            return R;
-          },
-          ChannelChangeStrings: function () {
             return f;
           },
-          UserChangeStrings: function () {
+          ChannelChangeStrings: function () {
             return h;
           },
-          RoleChangeStrings: function () {
+          UserChangeStrings: function () {
             return p;
           },
-          InviteChangeStrings: function () {
+          RoleChangeStrings: function () {
             return P;
           },
-          WebhookChangeStrings: function () {
+          InviteChangeStrings: function () {
             return y;
           },
-          EmojiChangeStrings: function () {
+          WebhookChangeStrings: function () {
             return H;
           },
-          StickerChangeStrings: function () {
+          EmojiChangeStrings: function () {
             return m;
           },
-          IntegrationChangeStrings: function () {
+          StickerChangeStrings: function () {
             return v;
           },
-          StageInstanceChangeStrings: function () {
+          IntegrationChangeStrings: function () {
             return V;
           },
-          GuildScheduledEventChangeStrings: function () {
+          StageInstanceChangeStrings: function () {
             return B;
           },
-          ThreadChangeStrings: function () {
+          GuildScheduledEventChangeStrings: function () {
             return K;
           },
-          CommandPermissionChangeStrings: function () {
+          ThreadChangeStrings: function () {
             return F;
           },
-          NotRenderedChanges: function () {
+          CommandPermissionChangeStrings: function () {
             return x;
           },
+          NotRenderedChanges: function () {
+            return b;
+          },
           getSimpleAuditLogTitleFromChange: function () {
-            return k;
+            return Y;
           },
           getSimpleAuditLogTitleContextFromChange: function () {
-            return W;
+            return w;
           },
           getSimpleAuditLogChangeDetails: function () {
-            return J;
-          },
-          getChangeTitle: function () {
             return X;
           },
-          getStringForBanReason: function () {
+          getChangeTitle: function () {
             return z;
           },
-          getStringForPermission: function () {
+          getStringForBanReason: function () {
             return Z;
           },
-          transformLogs: function () {
+          getStringForPermission: function () {
             return Q;
+          },
+          transformLogs: function () {
+            return q;
           },
         }),
         E("70102"),
@@ -630,830 +630,831 @@
         o = E("364685"),
         r = E("242020"),
         d = E("42203"),
-        N = E("27618"),
-        S = E("697218"),
-        g = E("354023"),
-        D = E("299039"),
-        G = E("49111"),
-        O = E("745049"),
-        c = E("782340");
-      let U = new I.default("AuditLogUtils"),
-        C = -1,
-        M = () => ({
-          [G.AuditLogChangeKeys.REASON]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-        }),
+        N = E("305961"),
+        S = E("27618"),
+        g = E("697218"),
+        D = E("354023"),
+        G = E("299039"),
+        O = E("49111"),
+        c = E("745049"),
+        U = E("782340");
+      let C = new I.default("AuditLogUtils"),
+        M = -1,
         R = () => ({
-          [G.AuditLogChangeKeys.NAME]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
-          [G.AuditLogChangeKeys.DESCRIPTION]: e_(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE
-          ),
-          [G.AuditLogChangeKeys.ICON_HASH]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
-          [G.AuditLogChangeKeys.SPLASH_HASH]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
-          [G.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
-          [G.AuditLogChangeKeys.BANNER_HASH]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE
-          ),
-          [G.AuditLogChangeKeys.OWNER_ID]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
-          [G.AuditLogChangeKeys.REGION]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
-          [G.AuditLogChangeKeys.PREFERRED_LOCALE]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
-          [G.AuditLogChangeKeys.AFK_CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE
-          ),
-          [G.AuditLogChangeKeys.AFK_TIMEOUT]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
-          [G.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE
-          ),
-          [G.AuditLogChangeKeys.RULES_CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE
-          ),
-          [G.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE
-          ),
-          [G.AuditLogChangeKeys.MFA_LEVEL]: {
-            [G.MFALevels.NONE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
-            [G.MFALevels.ELEVATED]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED,
-          },
-          [G.AuditLogChangeKeys.WIDGET_ENABLED]: {
-            true: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
-            false:
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED,
-          },
-          [G.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE
-          ),
-          [G.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
-            [G.VerificationLevels.NONE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
-            [G.VerificationLevels.LOW]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
-            [G.VerificationLevels.MEDIUM]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
-            [G.VerificationLevels.HIGH]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
-            [G.VerificationLevels.VERY_HIGH]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH,
-          },
-          [G.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
-            [G.UserNotificationSettings.ALL_MESSAGES]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
-            [G.UserNotificationSettings.ONLY_MENTIONS]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS,
-          },
-          [G.AuditLogChangeKeys.VANITY_URL_CODE]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE
-          ),
-          [G.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
-            [G.GuildExplicitContentFilterTypes.DISABLED]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
-            [G.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
-            [G.GuildExplicitContentFilterTypes.ALL_MEMBERS]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS,
-          },
-          [G.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
-            true: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
-            false:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED,
-          },
-          [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-          [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
-          [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
-          [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
-          [G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
-          ...M(),
+          [O.AuditLogChangeKeys.REASON]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
         }),
         f = () => ({
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE
+          [O.AuditLogChangeKeys.NAME]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
+          [O.AuditLogChangeKeys.DESCRIPTION]: es(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE
           ),
-          [G.AuditLogChangeKeys.POSITION]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE
+          [O.AuditLogChangeKeys.ICON_HASH]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
+          [O.AuditLogChangeKeys.SPLASH_HASH]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
+          [O.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
+          [O.AuditLogChangeKeys.BANNER_HASH]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE
           ),
-          [G.AuditLogChangeKeys.TOPIC]: es(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR
+          [O.AuditLogChangeKeys.OWNER_ID]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
+          [O.AuditLogChangeKeys.REGION]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
+          [O.AuditLogChangeKeys.PREFERRED_LOCALE]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
+          [O.AuditLogChangeKeys.AFK_CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE
           ),
-          [G.AuditLogChangeKeys.BITRATE]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE
+          [O.AuditLogChangeKeys.AFK_TIMEOUT]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
+          [O.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE
           ),
-          [G.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: es(
-            c.default.Messages
+          [O.AuditLogChangeKeys.RULES_CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE
+          ),
+          [O.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE
+          ),
+          [O.AuditLogChangeKeys.MFA_LEVEL]: {
+            [O.MFALevels.NONE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
+            [O.MFALevels.ELEVATED]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED,
+          },
+          [O.AuditLogChangeKeys.WIDGET_ENABLED]: {
+            true: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
+            false:
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED,
+          },
+          [O.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE
+          ),
+          [O.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
+            [O.VerificationLevels.NONE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
+            [O.VerificationLevels.LOW]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
+            [O.VerificationLevels.MEDIUM]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
+            [O.VerificationLevels.HIGH]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
+            [O.VerificationLevels.VERY_HIGH]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH,
+          },
+          [O.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
+            [O.UserNotificationSettings.ALL_MESSAGES]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
+            [O.UserNotificationSettings.ONLY_MENTIONS]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS,
+          },
+          [O.AuditLogChangeKeys.VANITY_URL_CODE]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE
+          ),
+          [O.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
+            [O.GuildExplicitContentFilterTypes.DISABLED]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
+            [O.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
+            [O.GuildExplicitContentFilterTypes.ALL_MEMBERS]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS,
+          },
+          [O.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
+            true: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
+            false:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED,
+          },
+          [O.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+          [O.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
+          [O.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
+          [O.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
+          [O.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
+          ...R(),
+        }),
+        h = () => ({
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE
+          ),
+          [O.AuditLogChangeKeys.POSITION]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE
+          ),
+          [O.AuditLogChangeKeys.TOPIC]: ea(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR
+          ),
+          [O.AuditLogChangeKeys.BITRATE]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE
+          ),
+          [O.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: ea(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE
           ),
-          [G.AuditLogChangeKeys.USER_LIMIT]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.USER_LIMIT]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE
           ),
-          [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE
           ),
-          [G.AuditLogChangeKeys.PERMISSIONS_RESET]:
-            c.default.Messages
+          [O.AuditLogChangeKeys.PERMISSIONS_RESET]:
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
-          [G.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
-            c.default.Messages
+          [O.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
-          [G.AuditLogChangeKeys.PERMISSIONS_DENIED]:
-            c.default.Messages
+          [O.AuditLogChangeKeys.PERMISSIONS_DENIED]:
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
-          [G.AuditLogChangeKeys.REASON]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-          [G.AuditLogChangeKeys.NSFW]: {
+          [O.AuditLogChangeKeys.REASON]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+          [O.AuditLogChangeKeys.NSFW]: {
             false:
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
-            true: c.default.Messages
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
+            true: U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED,
           },
-          [G.AuditLogChangeKeys.TYPE]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE
+          [O.AuditLogChangeKeys.TYPE]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE
           ),
-          [G.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE
           ),
-          [G.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE
           ),
         }),
-        h = () => ({
-          [G.AuditLogChangeKeys.NICK]: es(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE
+        p = () => ({
+          [O.AuditLogChangeKeys.NICK]: ea(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE
           ),
-          [G.AuditLogChangeKeys.DEAF]: {
-            true: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
-            false: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF,
+          [O.AuditLogChangeKeys.DEAF]: {
+            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
+            false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF,
           },
-          [G.AuditLogChangeKeys.MUTE]: {
-            true: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
-            false: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF,
+          [O.AuditLogChangeKeys.MUTE]: {
+            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
+            false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF,
           },
-          [G.AuditLogChangeKeys.ROLES_REMOVE]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
-          [G.AuditLogChangeKeys.ROLES_ADD]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
-          [G.AuditLogChangeKeys.PRUNE_DELETE_DAYS]:
-            c.default.Messages
+          [O.AuditLogChangeKeys.ROLES_REMOVE]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
+          [O.AuditLogChangeKeys.ROLES_ADD]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
+          [O.AuditLogChangeKeys.PRUNE_DELETE_DAYS]:
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
-          [G.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: es(
-            c.default.Messages
+          [O.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: ea(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED
           ),
-          [G.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
-            true: c.default.Messages
+          [O.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
+            true: U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
             false:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF,
           },
-          [G.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
-            c.default.Messages
+          [O.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-          ...M(),
-        }),
-        p = () => ({
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE
-          ),
-          [G.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
-          [G.AuditLogChangeKeys.PERMISSIONS_DENIED]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
-          [G.AuditLogChangeKeys.COLOR]: {
-            "#000000":
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
-            [C]: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS,
-          },
-          [G.AuditLogChangeKeys.HOIST]: {
-            true: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
-            false: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF,
-          },
-          [G.AuditLogChangeKeys.MENTIONABLE]: {
-            true: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
-            false:
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF,
-          },
-          [G.AuditLogChangeKeys.ICON_HASH]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
-          [G.AuditLogChangeKeys.UNICODE_EMOJI]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
-          ...M(),
+          ...R(),
         }),
         P = () => ({
-          [G.AuditLogChangeKeys.CODE]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
-          [G.AuditLogChangeKeys.CHANNEL_ID]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
-          [G.AuditLogChangeKeys.MAX_USES]: {
-            0: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
-            [C]: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE,
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE
+          ),
+          [O.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
+          [O.AuditLogChangeKeys.PERMISSIONS_DENIED]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
+          [O.AuditLogChangeKeys.COLOR]: {
+            "#000000":
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
+            [M]: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS,
           },
-          [G.AuditLogChangeKeys.MAX_AGE]: {
-            0: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
-            [C]: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE,
+          [O.AuditLogChangeKeys.HOIST]: {
+            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
+            false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF,
           },
-          [G.AuditLogChangeKeys.TEMPORARY]: {
-            true: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
+          [O.AuditLogChangeKeys.MENTIONABLE]: {
+            true: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
             false:
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF,
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF,
           },
-          ...M(),
+          [O.AuditLogChangeKeys.ICON_HASH]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
+          [O.AuditLogChangeKeys.UNICODE_EMOJI]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
+          ...R(),
         }),
         y = () => ({
-          [G.AuditLogChangeKeys.CHANNEL_ID]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE
-          ),
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE
-          ),
-          [G.AuditLogChangeKeys.AVATAR_HASH]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
-          [G.AuditLogChangeKeys.REASON]:
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+          [O.AuditLogChangeKeys.CODE]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
+          [O.AuditLogChangeKeys.CHANNEL_ID]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
+          [O.AuditLogChangeKeys.MAX_USES]: {
+            0: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
+            [M]: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE,
+          },
+          [O.AuditLogChangeKeys.MAX_AGE]: {
+            0: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
+            [M]: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE,
+          },
+          [O.AuditLogChangeKeys.TEMPORARY]: {
+            true: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
+            false:
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF,
+          },
+          ...R(),
         }),
         H = () => ({
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE
+          [O.AuditLogChangeKeys.CHANNEL_ID]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE
           ),
-          ...M(),
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE
+          ),
+          [O.AuditLogChangeKeys.AVATAR_HASH]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
+          [O.AuditLogChangeKeys.REASON]:
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
         }),
         m = () => ({
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE
           ),
-          [G.AuditLogChangeKeys.TAGS]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE
-          ),
-          [G.AuditLogChangeKeys.DESCRIPTION]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
-          ),
-          ...M(),
+          ...R(),
         }),
         v = () => ({
-          [G.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
-            true: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
-            false:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF,
-          },
-          [G.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
-            0: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
-            1: c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER,
-          },
-          [G.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
-          ...M(),
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE
+          ),
+          [O.AuditLogChangeKeys.TAGS]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE
+          ),
+          [O.AuditLogChangeKeys.DESCRIPTION]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
+          ),
+          ...R(),
         }),
         V = () => ({
-          [G.AuditLogChangeKeys.TOPIC]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE
-          ),
-          [G.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-            [O.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [O.GuildScheduledEventPrivacyLevel.PUBLIC]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
+          [O.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
+            true: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
+            false:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF,
           },
-          ...M(),
+          [O.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
+            0: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
+            1: U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER,
+          },
+          [O.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
+          ...R(),
         }),
         B = () => ({
-          [G.AuditLogChangeKeys.NAME]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
-          [G.AuditLogChangeKeys.DESCRIPTION]:
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
-          [G.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-            [O.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
-              c.default.Messages
+          [O.AuditLogChangeKeys.TOPIC]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE
+          ),
+          [O.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+            [c.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
+              U.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [O.GuildScheduledEventPrivacyLevel.PUBLIC]:
-              c.default.Messages
+            [c.GuildScheduledEventPrivacyLevel.PUBLIC]:
+              U.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
           },
-          [G.AuditLogChangeKeys.STATUS]: {
-            [O.GuildScheduledEventStatus.SCHEDULED]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
-            [O.GuildScheduledEventStatus.ACTIVE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
-            [O.GuildScheduledEventStatus.COMPLETED]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
-            [O.GuildScheduledEventStatus.CANCELED]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED,
-          },
-          [G.AuditLogChangeKeys.ENTITY_TYPE]: {
-            [O.GuildScheduledEventEntityTypes.NONE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
-            [O.GuildScheduledEventEntityTypes.STAGE_INSTANCE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
-            [O.GuildScheduledEventEntityTypes.VOICE]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
-            [O.GuildScheduledEventEntityTypes.EXTERNAL]:
-              c.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL,
-          },
-          [G.AuditLogChangeKeys.CHANNEL_ID]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL
-          ),
-          [G.AuditLogChangeKeys.LOCATION]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION
-          ),
-          [G.AuditLogChangeKeys.RECURRENCE_RULE]: e_(
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR,
-            c.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE
-          ),
-          ...M(),
+          ...R(),
         }),
         K = () => ({
-          [G.AuditLogChangeKeys.NAME]: eE(
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE,
-            c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE
+          [O.AuditLogChangeKeys.NAME]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
+          [O.AuditLogChangeKeys.DESCRIPTION]:
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
+          [O.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+            [c.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
+            [c.GuildScheduledEventPrivacyLevel.PUBLIC]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
+          },
+          [O.AuditLogChangeKeys.STATUS]: {
+            [c.GuildScheduledEventStatus.SCHEDULED]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
+            [c.GuildScheduledEventStatus.ACTIVE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
+            [c.GuildScheduledEventStatus.COMPLETED]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
+            [c.GuildScheduledEventStatus.CANCELED]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED,
+          },
+          [O.AuditLogChangeKeys.ENTITY_TYPE]: {
+            [c.GuildScheduledEventEntityTypes.NONE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
+            [c.GuildScheduledEventEntityTypes.STAGE_INSTANCE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
+            [c.GuildScheduledEventEntityTypes.VOICE]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
+            [c.GuildScheduledEventEntityTypes.EXTERNAL]:
+              U.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL,
+          },
+          [O.AuditLogChangeKeys.CHANNEL_ID]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL
           ),
-          [G.AuditLogChangeKeys.ARCHIVED]: {
-            true: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
+          [O.AuditLogChangeKeys.LOCATION]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION
+          ),
+          [O.AuditLogChangeKeys.RECURRENCE_RULE]: es(
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE_CLEAR,
+            U.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_RULE
+          ),
+          ...R(),
+        }),
+        F = () => ({
+          [O.AuditLogChangeKeys.NAME]: e_(
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE,
+            U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE
+          ),
+          [O.AuditLogChangeKeys.ARCHIVED]: {
+            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
             false:
-              c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED,
+              U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED,
           },
-          [G.AuditLogChangeKeys.LOCKED]: {
-            true: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
-            false: c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED,
+          [O.AuditLogChangeKeys.LOCKED]: {
+            true: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
+            false: U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED,
           },
-          [G.AuditLogChangeKeys.INVITABLE]: {
-            true: c.default.Messages
+          [O.AuditLogChangeKeys.INVITABLE]: {
+            true: U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
             false:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED,
           },
-          [G.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE
           ),
-          [G.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eE(
-            c.default.Messages
+          [O.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: e_(
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE,
-            c.default.Messages
+            U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE
           ),
-          ...M(),
+          ...R(),
         }),
-        F = e => {
-          let t = { ...M() };
+        x = e => {
+          let t = { ...R() };
           return (
             null == e ||
               e.forEach(e => {
                 e.newValue
                   ? e.newValue.permission
                     ? (t[e.key] =
-                        c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED)
+                        U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED)
                     : (t[e.key] =
-                        c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED)
+                        U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED)
                   : (t[e.key] =
-                      c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED);
+                      U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED);
               }),
             t
           );
         },
-        x = {
-          [G.AuditLogTargetTypes.CHANNEL]: {
-            [G.AuditLogChangeKeys.ID]: !0,
-            [G.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
+        b = {
+          [O.AuditLogTargetTypes.CHANNEL]: {
+            [O.AuditLogChangeKeys.ID]: !0,
+            [O.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
           },
-          [G.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
-            [G.AuditLogChangeKeys.TYPE]: !0,
-            [G.AuditLogChangeKeys.ID]: !0,
-            [G.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
+          [O.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
+            [O.AuditLogChangeKeys.TYPE]: !0,
+            [O.AuditLogChangeKeys.ID]: !0,
+            [O.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
           },
-          [G.AuditLogTargetTypes.INVITE]: {
-            [G.AuditLogChangeKeys.INVITER_ID]: !0,
-            [G.AuditLogChangeKeys.USES]: !0,
+          [O.AuditLogTargetTypes.INVITE]: {
+            [O.AuditLogChangeKeys.INVITER_ID]: !0,
+            [O.AuditLogChangeKeys.USES]: !0,
           },
-          [G.AuditLogTargetTypes.WEBHOOK]: {
-            [G.AuditLogChangeKeys.TYPE]: !0,
-            [G.AuditLogChangeKeys.APPLICATION_ID]: !0,
+          [O.AuditLogTargetTypes.WEBHOOK]: {
+            [O.AuditLogChangeKeys.TYPE]: !0,
+            [O.AuditLogChangeKeys.APPLICATION_ID]: !0,
           },
-          [G.AuditLogTargetTypes.INTEGRATION]: {
-            [G.AuditLogChangeKeys.TYPE]: !0,
+          [O.AuditLogTargetTypes.INTEGRATION]: {
+            [O.AuditLogChangeKeys.TYPE]: !0,
           },
-          [G.AuditLogTargetTypes.THREAD]: {
-            [G.AuditLogChangeKeys.ID]: !0,
-            [G.AuditLogChangeKeys.TYPE]: !0,
+          [O.AuditLogTargetTypes.THREAD]: {
+            [O.AuditLogChangeKeys.ID]: !0,
+            [O.AuditLogChangeKeys.TYPE]: !0,
           },
-          [G.AuditLogTargetTypes.STICKER]: {
-            [G.AuditLogChangeKeys.ID]: !0,
-            [G.AuditLogChangeKeys.TYPE]: !0,
-            [G.AuditLogChangeKeys.ASSET]: !0,
-            [G.AuditLogChangeKeys.FORMAT_TYPE]: !0,
-            [G.AuditLogChangeKeys.AVAILABLE]: !0,
-            [G.AuditLogChangeKeys.GUILD_ID]: !0,
+          [O.AuditLogTargetTypes.STICKER]: {
+            [O.AuditLogChangeKeys.ID]: !0,
+            [O.AuditLogChangeKeys.TYPE]: !0,
+            [O.AuditLogChangeKeys.ASSET]: !0,
+            [O.AuditLogChangeKeys.FORMAT_TYPE]: !0,
+            [O.AuditLogChangeKeys.AVAILABLE]: !0,
+            [O.AuditLogChangeKeys.GUILD_ID]: !0,
           },
         },
-        b = () => [
+        j = () => [
           {
-            value: G.AuditLogActions.ALL,
-            label: c.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
-            valueLabel: c.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+            value: O.AuditLogActions.ALL,
+            label: U.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
+            valueLabel: U.default.Messages.GUILD_SETTINGS_FILTER_ALL,
           },
           {
-            value: G.AuditLogActions.GUILD_UPDATE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE,
+            value: O.AuditLogActions.GUILD_UPDATE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_CREATE,
+            value: O.AuditLogActions.CHANNEL_CREATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_UPDATE,
+            value: O.AuditLogActions.CHANNEL_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_DELETE,
+            value: O.AuditLogActions.CHANNEL_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
+            value: O.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_CREATE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
+            value: O.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_UPDATE,
           },
           {
-            value: G.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
+            value: O.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_DELETE,
           },
           {
-            value: G.AuditLogActions.MEMBER_KICK,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK,
+            value: O.AuditLogActions.MEMBER_KICK,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK,
           },
           {
-            value: G.AuditLogActions.MEMBER_PRUNE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE,
+            value: O.AuditLogActions.MEMBER_PRUNE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE,
           },
           {
-            value: G.AuditLogActions.MEMBER_BAN_ADD,
+            value: O.AuditLogActions.MEMBER_BAN_ADD,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD,
           },
           {
-            value: G.AuditLogActions.MEMBER_BAN_REMOVE,
+            value: O.AuditLogActions.MEMBER_BAN_REMOVE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE,
           },
           {
-            value: G.AuditLogActions.MEMBER_UPDATE,
+            value: O.AuditLogActions.MEMBER_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE,
           },
           {
-            value: G.AuditLogActions.MEMBER_ROLE_UPDATE,
+            value: O.AuditLogActions.MEMBER_ROLE_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_MEMBER_ROLE_UPDATE,
           },
           {
-            value: G.AuditLogActions.MEMBER_MOVE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE,
+            value: O.AuditLogActions.MEMBER_MOVE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE,
           },
           {
-            value: G.AuditLogActions.MEMBER_DISCONNECT,
+            value: O.AuditLogActions.MEMBER_DISCONNECT,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT,
           },
           {
-            value: G.AuditLogActions.BOT_ADD,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD,
+            value: O.AuditLogActions.BOT_ADD,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD,
           },
           {
-            value: G.AuditLogActions.THREAD_CREATE,
+            value: O.AuditLogActions.THREAD_CREATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE,
           },
           {
-            value: G.AuditLogActions.THREAD_UPDATE,
+            value: O.AuditLogActions.THREAD_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE,
           },
           {
-            value: G.AuditLogActions.THREAD_DELETE,
+            value: O.AuditLogActions.THREAD_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE,
           },
           {
-            value: G.AuditLogActions.ROLE_CREATE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
+            value: O.AuditLogActions.ROLE_CREATE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
           },
           {
-            value: G.AuditLogActions.ROLE_UPDATE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE,
+            value: O.AuditLogActions.ROLE_UPDATE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE,
           },
           {
-            value: G.AuditLogActions.ROLE_DELETE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE,
+            value: O.AuditLogActions.ROLE_DELETE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE,
           },
           {
-            value: G.AuditLogActions.INVITE_CREATE,
+            value: O.AuditLogActions.INVITE_CREATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE,
           },
           {
-            value: G.AuditLogActions.INVITE_UPDATE,
+            value: O.AuditLogActions.INVITE_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE,
           },
           {
-            value: G.AuditLogActions.INVITE_DELETE,
+            value: O.AuditLogActions.INVITE_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE,
           },
           {
-            value: G.AuditLogActions.WEBHOOK_CREATE,
+            value: O.AuditLogActions.WEBHOOK_CREATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE,
           },
           {
-            value: G.AuditLogActions.WEBHOOK_UPDATE,
+            value: O.AuditLogActions.WEBHOOK_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE,
           },
           {
-            value: G.AuditLogActions.WEBHOOK_DELETE,
+            value: O.AuditLogActions.WEBHOOK_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE,
           },
           {
-            value: G.AuditLogActions.EMOJI_CREATE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE,
+            value: O.AuditLogActions.EMOJI_CREATE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE,
           },
           {
-            value: G.AuditLogActions.EMOJI_UPDATE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE,
+            value: O.AuditLogActions.EMOJI_UPDATE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE,
           },
           {
-            value: G.AuditLogActions.EMOJI_DELETE,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE,
+            value: O.AuditLogActions.EMOJI_DELETE,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE,
           },
           {
-            value: G.AuditLogActions.MESSAGE_DELETE,
+            value: O.AuditLogActions.MESSAGE_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE,
           },
           {
-            value: G.AuditLogActions.MESSAGE_BULK_DELETE,
+            value: O.AuditLogActions.MESSAGE_BULK_DELETE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_MESSAGE_BULK_DELETE,
           },
           {
-            value: G.AuditLogActions.MESSAGE_PIN,
-            label: c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN,
+            value: O.AuditLogActions.MESSAGE_PIN,
+            label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN,
           },
           {
-            value: G.AuditLogActions.MESSAGE_UNPIN,
+            value: O.AuditLogActions.MESSAGE_UNPIN,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN,
           },
           {
-            value: G.AuditLogActions.INTEGRATION_CREATE,
+            value: O.AuditLogActions.INTEGRATION_CREATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_CREATE,
           },
           {
-            value: G.AuditLogActions.INTEGRATION_UPDATE,
+            value: O.AuditLogActions.INTEGRATION_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_UPDATE,
           },
           {
-            value: G.AuditLogActions.INTEGRATION_DELETE,
+            value: O.AuditLogActions.INTEGRATION_DELETE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_DELETE,
           },
           {
-            value: G.AuditLogActions.STICKER_CREATE,
+            value: O.AuditLogActions.STICKER_CREATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE,
           },
           {
-            value: G.AuditLogActions.STICKER_UPDATE,
+            value: O.AuditLogActions.STICKER_UPDATE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE,
           },
           {
-            value: G.AuditLogActions.STICKER_DELETE,
+            value: O.AuditLogActions.STICKER_DELETE,
             label:
-              c.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE,
+              U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE,
           },
           {
-            value: G.AuditLogActions.STAGE_INSTANCE_CREATE,
+            value: O.AuditLogActions.STAGE_INSTANCE_CREATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_CREATE,
           },
           {
-            value: G.AuditLogActions.STAGE_INSTANCE_UPDATE,
+            value: O.AuditLogActions.STAGE_INSTANCE_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_UPDATE,
           },
           {
-            value: G.AuditLogActions.STAGE_INSTANCE_DELETE,
+            value: O.AuditLogActions.STAGE_INSTANCE_DELETE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_DELETE,
           },
           {
-            value: G.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
+            value: O.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE,
           },
           {
-            value: G.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
+            value: O.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE,
           },
           {
-            value: G.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
+            value: O.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE,
           },
           {
-            value: G.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
+            value: O.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_APPLICATION_COMMAND_PERMISSION_UPDATE,
           },
           {
-            value: G.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
+            value: O.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE,
           },
           {
-            value: G.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL,
+            value: O.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_FLAG_TO_CHANNEL,
           },
           {
             value:
-              G.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED,
+              O.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_TIMEOUT,
           },
           {
-            value: G.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER,
+            value: O.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER,
             label:
-              c.default.Messages
+              U.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_QUARANTINE,
           },
         ];
-      function j(e, t) {
+      function k(e, t) {
         return null != t.changes ? t.changes.find(t => t.key === e) : null;
       }
-      function k(e) {
-        let t = b().find(t => t.value === e.action),
-          E = j(G.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL, e);
+      function Y(e) {
+        let t = j().find(t => t.value === e.action),
+          E = k(O.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL, e);
         switch (!0) {
           case null != E:
-            return c.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED;
+            return U.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED;
           case null != t:
             var _;
             return null !== (_ = null == t ? void 0 : t.label) && void 0 !== _
@@ -1463,25 +1464,25 @@
             return null;
         }
       }
-      let Y = {
+      let W = {
         [n.TimeUnits.SECONDS]: e =>
-          c.default.Messages.DURATION_SECONDS.format({ seconds: e }),
+          U.default.Messages.DURATION_SECONDS.format({ seconds: e }),
         [n.TimeUnits.MINUTES]: e =>
-          c.default.Messages.DURATION_MINUTES.format({ minutes: e }),
+          U.default.Messages.DURATION_MINUTES.format({ minutes: e }),
         [n.TimeUnits.HOURS]: e =>
-          c.default.Messages.DURATION_HOURS.format({ hours: e }),
+          U.default.Messages.DURATION_HOURS.format({ hours: e }),
         [n.TimeUnits.DAYS]: e =>
-          c.default.Messages.DURATION_DAYS.format({ days: e }),
+          U.default.Messages.DURATION_DAYS.format({ days: e }),
       };
-      function W(e) {
-        let t = j(G.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL, e),
-          E = w(G.AuditLogChangeKeys.ROLES_ADD, e).length > 0,
-          _ = w(G.AuditLogChangeKeys.ROLES_REMOVE, e).length > 0;
+      function w(e) {
+        let t = k(O.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL, e),
+          E = J(O.AuditLogChangeKeys.ROLES_ADD, e).length > 0,
+          _ = J(O.AuditLogChangeKeys.ROLES_REMOVE, e).length > 0;
         switch (!0) {
           case null != t:
             if ((null == t ? void 0 : t.newValue) != null) {
               let E = new Date(null == t ? void 0 : t.newValue).getTime(),
-                _ = D.default.extractTimestamp(e.id),
+                _ = G.default.extractTimestamp(e.id),
                 s = [
                   n.TimeUnits.DAYS,
                   n.TimeUnits.HOURS,
@@ -1490,33 +1491,33 @@
                 ],
                 a = (0, n.getTimeAndUnit)(Math.round((E - _) / 1e3 / 60), s);
               if (null == a.unit || null == a.time) return null;
-              if (a.unit in Y) {
+              if (a.unit in W) {
                 let e = a.unit;
-                return Y[e](a.time);
+                return W[e](a.time);
               }
               return null;
             }
             if ((null == t ? void 0 : t.oldValue) != null)
-              return c.default.Messages.GUILD_COMMUNICATION_DISABLED_REMOVED;
+              return U.default.Messages.GUILD_COMMUNICATION_DISABLED_REMOVED;
             return null;
           case E && _:
-            return c.default.Messages
+            return U.default.Messages
               .GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED_CONTEXT;
           case E:
-            return c.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_CONTEXT;
+            return U.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_CONTEXT;
           case _:
-            return c.default.Messages
+            return U.default.Messages
               .GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED_CONTEXT;
           default:
             return null;
         }
       }
-      function w(e, t) {
+      function J(e, t) {
         return null != t.changes ? t.changes.filter(t => t.key === e) : [];
       }
-      function J(e) {
-        let t = w(G.AuditLogChangeKeys.ROLES_ADD, e),
-          E = w(G.AuditLogChangeKeys.ROLES_REMOVE, e),
+      function X(e) {
+        let t = J(O.AuditLogChangeKeys.ROLES_ADD, e),
+          E = J(O.AuditLogChangeKeys.ROLES_REMOVE, e),
           _ =
             null == t
               ? void 0
@@ -1549,199 +1550,199 @@
                 }).join(", ");
         switch (!0) {
           case t.length > 0 && E.length > 0:
-            return c.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED.format(
+            return U.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED_AND_REMOVED.format(
               { roleNamesAdded: _, roleNamesRemoved: s }
             );
           case t.length > 0:
-            return c.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED.format({
+            return U.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_ADDED.format({
               roleNames: _,
             });
           case E.length > 0:
-            return c.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED.format(
+            return U.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLES_REMOVED.format(
               { roleNames: s }
             );
           default:
             return null;
         }
       }
-      function X(e) {
+      function z(e) {
         switch (e.action) {
-          case G.AuditLogActions.GUILD_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
-          case G.AuditLogActions.CHANNEL_CREATE:
+          case O.AuditLogActions.GUILD_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
+          case O.AuditLogActions.CHANNEL_CREATE:
             let t =
               null != e.changes
-                ? e.changes.find(e => e.key === G.AuditLogChangeKeys.TYPE)
+                ? e.changes.find(e => e.key === O.AuditLogChangeKeys.TYPE)
                 : null;
             if (null == t)
               throw Error(
                 "[AuditLog] Could not find type change for channel create"
               );
             switch (t.newValue) {
-              case G.ChannelTypes.GUILD_STAGE_VOICE:
-                return c.default.Messages
+              case O.ChannelTypes.GUILD_STAGE_VOICE:
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
-              case G.ChannelTypes.GUILD_VOICE:
-                return c.default.Messages
+              case O.ChannelTypes.GUILD_VOICE:
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
-              case G.ChannelTypes.GUILD_CATEGORY:
-                return c.default.Messages
+              case O.ChannelTypes.GUILD_CATEGORY:
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
               default:
-                return c.default.Messages
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE;
             }
-          case G.AuditLogActions.CHANNEL_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
-          case G.AuditLogActions.CHANNEL_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
-          case G.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
-            return c.default.Messages
+          case O.AuditLogActions.CHANNEL_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
+          case O.AuditLogActions.CHANNEL_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
+          case O.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
-          case G.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
-          case G.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
-            return c.default.Messages
+          case O.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
-          case G.AuditLogActions.MEMBER_KICK:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
-          case G.AuditLogActions.MEMBER_PRUNE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
-          case G.AuditLogActions.MEMBER_BAN_ADD:
-            return c.default.Messages
+          case O.AuditLogActions.MEMBER_KICK:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
+          case O.AuditLogActions.MEMBER_PRUNE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
+          case O.AuditLogActions.MEMBER_BAN_ADD:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_V2_MEMBER_BAN_ADD;
-          case G.AuditLogActions.MEMBER_BAN_REMOVE:
-            return c.default.Messages
+          case O.AuditLogActions.MEMBER_BAN_REMOVE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
-          case G.AuditLogActions.MEMBER_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
-          case G.AuditLogActions.MEMBER_ROLE_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.MEMBER_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
+          case O.AuditLogActions.MEMBER_ROLE_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
-          case G.AuditLogActions.MEMBER_MOVE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
-          case G.AuditLogActions.MEMBER_DISCONNECT:
-            return c.default.Messages
+          case O.AuditLogActions.MEMBER_MOVE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
+          case O.AuditLogActions.MEMBER_DISCONNECT:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
-          case G.AuditLogActions.BOT_ADD:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
-          case G.AuditLogActions.ROLE_CREATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
-          case G.AuditLogActions.ROLE_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
-          case G.AuditLogActions.ROLE_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
-          case G.AuditLogActions.INVITE_CREATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
-          case G.AuditLogActions.INVITE_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
-          case G.AuditLogActions.INVITE_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
-          case G.AuditLogActions.WEBHOOK_CREATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
-          case G.AuditLogActions.WEBHOOK_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
-          case G.AuditLogActions.WEBHOOK_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
-          case G.AuditLogActions.EMOJI_CREATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
-          case G.AuditLogActions.EMOJI_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
-          case G.AuditLogActions.EMOJI_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
-          case G.AuditLogActions.STICKER_CREATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
-          case G.AuditLogActions.STICKER_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
-          case G.AuditLogActions.STICKER_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
-          case G.AuditLogActions.MESSAGE_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
-          case G.AuditLogActions.MESSAGE_BULK_DELETE:
-            return c.default.Messages
+          case O.AuditLogActions.BOT_ADD:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
+          case O.AuditLogActions.ROLE_CREATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
+          case O.AuditLogActions.ROLE_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
+          case O.AuditLogActions.ROLE_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
+          case O.AuditLogActions.INVITE_CREATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
+          case O.AuditLogActions.INVITE_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
+          case O.AuditLogActions.INVITE_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
+          case O.AuditLogActions.WEBHOOK_CREATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
+          case O.AuditLogActions.WEBHOOK_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
+          case O.AuditLogActions.WEBHOOK_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
+          case O.AuditLogActions.EMOJI_CREATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
+          case O.AuditLogActions.EMOJI_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
+          case O.AuditLogActions.EMOJI_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
+          case O.AuditLogActions.STICKER_CREATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
+          case O.AuditLogActions.STICKER_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
+          case O.AuditLogActions.STICKER_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
+          case O.AuditLogActions.MESSAGE_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
+          case O.AuditLogActions.MESSAGE_BULK_DELETE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
-          case G.AuditLogActions.MESSAGE_PIN:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
-          case G.AuditLogActions.MESSAGE_UNPIN:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
-          case G.AuditLogActions.INTEGRATION_CREATE:
-            return c.default.Messages
+          case O.AuditLogActions.MESSAGE_PIN:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
+          case O.AuditLogActions.MESSAGE_UNPIN:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
+          case O.AuditLogActions.INTEGRATION_CREATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
-          case G.AuditLogActions.INTEGRATION_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.INTEGRATION_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
-          case G.AuditLogActions.INTEGRATION_DELETE:
-            return c.default.Messages
+          case O.AuditLogActions.INTEGRATION_DELETE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
-          case G.AuditLogActions.STAGE_INSTANCE_CREATE:
-            return c.default.Messages
+          case O.AuditLogActions.STAGE_INSTANCE_CREATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
-          case G.AuditLogActions.STAGE_INSTANCE_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.STAGE_INSTANCE_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
-          case G.AuditLogActions.STAGE_INSTANCE_DELETE:
+          case O.AuditLogActions.STAGE_INSTANCE_DELETE:
             if (null != e.userId)
-              return c.default.Messages
+              return U.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
-            return c.default.Messages
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
-          case G.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
-            return c.default.Messages
+          case O.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_CREATE;
-          case G.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_UPDATE;
-          case G.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
-            return c.default.Messages
+          case O.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_V2_SCHEDULED_EVENT_DELETE;
-          case G.AuditLogActions.THREAD_CREATE:
+          case O.AuditLogActions.THREAD_CREATE:
             let E =
               null != e.changes
-                ? e.changes.find(e => e.key === G.AuditLogChangeKeys.TYPE)
+                ? e.changes.find(e => e.key === O.AuditLogChangeKeys.TYPE)
                 : null;
             if (null == E)
               throw Error(
                 "[AuditLog] Could not find type change for thread create"
               );
             switch (E.newValue) {
-              case G.ChannelTypes.PRIVATE_THREAD:
-                return c.default.Messages
+              case O.ChannelTypes.PRIVATE_THREAD:
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_V2_PRIVATE_THREAD_CREATE;
-              case G.ChannelTypes.ANNOUNCEMENT_THREAD:
-                return c.default.Messages
+              case O.ChannelTypes.ANNOUNCEMENT_THREAD:
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_V2_ANNOUNCEMENT_THREAD_CREATE;
               default:
-                return c.default.Messages
+                return U.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_CREATE;
             }
-          case G.AuditLogActions.THREAD_UPDATE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_UPDATE;
-          case G.AuditLogActions.THREAD_DELETE:
-            return c.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_DELETE;
-          case G.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
-            return c.default.Messages
+          case O.AuditLogActions.THREAD_UPDATE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_UPDATE;
+          case O.AuditLogActions.THREAD_DELETE:
+            return U.default.Messages.GUILD_SETTINGS_AUDIT_LOG_V2_THREAD_DELETE;
+          case O.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
-          case G.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
-            return c.default.Messages
+          case O.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
-          case G.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
-            return c.default.Messages
+          case O.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
-          case G.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-            return c.default.Messages
+          case O.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+            return U.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
-          case G.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
-            return c.default.Messages
+          case O.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
+            return U.default.Messages
               .CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
-          case G.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-            return c.default.Messages
+          case O.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+            return U.default.Messages
               .CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
           default:
             return null;
         }
       }
-      function z(e) {
+      function Z(e) {
         var t;
         let E =
           null == e
@@ -1751,170 +1752,170 @@
               : t.find(e => "reason" === e.key);
         return null != E ? E.newValue : null;
       }
-      function Z(e, t) {
+      function Q(e, t) {
         switch (e) {
-          case G.Permissions.CREATE_INSTANT_INVITE:
-            return c.default.Messages.CREATE_INSTANT_INVITE;
-          case G.Permissions.KICK_MEMBERS:
-            return c.default.Messages.KICK_MEMBERS;
-          case G.Permissions.BAN_MEMBERS:
-            return c.default.Messages.BAN_MEMBERS;
-          case G.Permissions.ADMINISTRATOR:
-            return c.default.Messages.ADMINISTRATOR;
-          case G.Permissions.MANAGE_CHANNELS:
+          case O.Permissions.CREATE_INSTANT_INVITE:
+            return U.default.Messages.CREATE_INSTANT_INVITE;
+          case O.Permissions.KICK_MEMBERS:
+            return U.default.Messages.KICK_MEMBERS;
+          case O.Permissions.BAN_MEMBERS:
+            return U.default.Messages.BAN_MEMBERS;
+          case O.Permissions.ADMINISTRATOR:
+            return U.default.Messages.ADMINISTRATOR;
+          case O.Permissions.MANAGE_CHANNELS:
             if (
-              t.targetType === G.AuditLogTargetTypes.CHANNEL ||
-              t.targetType === G.AuditLogTargetTypes.CHANNEL_OVERWRITE
+              t.targetType === O.AuditLogTargetTypes.CHANNEL ||
+              t.targetType === O.AuditLogTargetTypes.CHANNEL_OVERWRITE
             )
-              return c.default.Messages.MANAGE_CHANNEL;
-            return c.default.Messages.MANAGE_CHANNELS;
-          case G.Permissions.MANAGE_GUILD:
-            return c.default.Messages.MANAGE_SERVER;
-          case G.Permissions.VIEW_GUILD_ANALYTICS:
-            return c.default.Messages.VIEW_GUILD_ANALYTICS;
-          case G.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS:
-            return c.default.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS;
-          case G.Permissions.CHANGE_NICKNAME:
-            return c.default.Messages.CHANGE_NICKNAME;
-          case G.Permissions.MANAGE_NICKNAMES:
-            return c.default.Messages.MANAGE_NICKNAMES;
-          case G.Permissions.MANAGE_ROLES:
-            return c.default.Messages.MANAGE_ROLES;
-          case G.Permissions.MANAGE_WEBHOOKS:
-            return c.default.Messages.MANAGE_WEBHOOKS;
-          case G.Permissions.CREATE_GUILD_EXPRESSIONS:
-            return c.default.Messages.CREATE_EXPRESSIONS;
-          case G.Permissions.MANAGE_GUILD_EXPRESSIONS:
-            return c.default.Messages.MANAGE_EXPRESSIONS;
-          case G.Permissions.VIEW_AUDIT_LOG:
-            return c.default.Messages.VIEW_AUDIT_LOG;
-          case G.Permissions.VIEW_CHANNEL:
-            return c.default.Messages.READ_MESSAGES;
-          case G.Permissions.SEND_MESSAGES:
-            return c.default.Messages.SEND_MESSAGES;
-          case G.Permissions.SEND_TTS_MESSAGES:
-            return c.default.Messages.SEND_TTS_MESSAGES;
-          case G.Permissions.USE_APPLICATION_COMMANDS:
-            return c.default.Messages.USE_APPLICATION_COMMANDS;
-          case G.Permissions.MANAGE_MESSAGES:
-            return c.default.Messages.MANAGE_MESSAGES;
-          case G.Permissions.EMBED_LINKS:
-            return c.default.Messages.EMBED_LINKS;
-          case G.Permissions.ATTACH_FILES:
-            return c.default.Messages.ATTACH_FILES;
-          case G.Permissions.READ_MESSAGE_HISTORY:
-            return c.default.Messages.READ_MESSAGE_HISTORY;
-          case G.Permissions.MENTION_EVERYONE:
-            return c.default.Messages.MENTION_EVERYONE;
-          case G.Permissions.USE_EXTERNAL_EMOJIS:
-            return c.default.Messages.USE_EXTERNAL_EMOJIS;
-          case G.Permissions.USE_EXTERNAL_STICKERS:
-            return c.default.Messages.USE_EXTERNAL_STICKERS;
-          case G.Permissions.ADD_REACTIONS:
-            return c.default.Messages.ADD_REACTIONS;
-          case G.Permissions.CONNECT:
-            return c.default.Messages.CONNECT;
-          case G.Permissions.SPEAK:
-            return c.default.Messages.SPEAK;
-          case G.Permissions.MUTE_MEMBERS:
-            return c.default.Messages.MUTE_MEMBERS;
-          case G.Permissions.DEAFEN_MEMBERS:
-            return c.default.Messages.DEAFEN_MEMBERS;
-          case G.Permissions.MOVE_MEMBERS:
-            return c.default.Messages.MOVE_MEMBERS;
-          case G.Permissions.USE_VAD:
-            return c.default.Messages.USE_VAD;
-          case G.Permissions.PRIORITY_SPEAKER:
-            return c.default.Messages.PRIORITY_SPEAKER;
-          case G.Permissions.STREAM:
-            return c.default.Messages.VIDEO;
-          case G.Permissions.REQUEST_TO_SPEAK:
-            return c.default.Messages.REQUEST_TO_SPEAK;
-          case G.Permissions.CREATE_EVENTS:
-            return c.default.Messages.CREATE_EVENTS;
-          case G.Permissions.MANAGE_EVENTS:
-            return c.default.Messages.MANAGE_EVENTS;
-          case G.Permissions.CREATE_PUBLIC_THREADS:
-            return c.default.Messages.CREATE_PUBLIC_THREADS;
-          case G.Permissions.CREATE_PRIVATE_THREADS:
-            return c.default.Messages.CREATE_PRIVATE_THREADS;
-          case G.Permissions.SEND_MESSAGES_IN_THREADS:
-            return c.default.Messages.SEND_MESSAGES_IN_THREADS;
-          case G.Permissions.MANAGE_THREADS:
-            return c.default.Messages.MANAGE_THREADS;
-          case G.Permissions.MODERATE_MEMBERS:
-            return c.default.Messages.MODERATE_MEMBER;
-          case G.Permissions.SET_VOICE_CHANNEL_STATUS:
-            return c.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
+              return U.default.Messages.MANAGE_CHANNEL;
+            return U.default.Messages.MANAGE_CHANNELS;
+          case O.Permissions.MANAGE_GUILD:
+            return U.default.Messages.MANAGE_SERVER;
+          case O.Permissions.VIEW_GUILD_ANALYTICS:
+            return U.default.Messages.VIEW_GUILD_ANALYTICS;
+          case O.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS:
+            return U.default.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS;
+          case O.Permissions.CHANGE_NICKNAME:
+            return U.default.Messages.CHANGE_NICKNAME;
+          case O.Permissions.MANAGE_NICKNAMES:
+            return U.default.Messages.MANAGE_NICKNAMES;
+          case O.Permissions.MANAGE_ROLES:
+            return U.default.Messages.MANAGE_ROLES;
+          case O.Permissions.MANAGE_WEBHOOKS:
+            return U.default.Messages.MANAGE_WEBHOOKS;
+          case O.Permissions.CREATE_GUILD_EXPRESSIONS:
+            return U.default.Messages.CREATE_EXPRESSIONS;
+          case O.Permissions.MANAGE_GUILD_EXPRESSIONS:
+            return U.default.Messages.MANAGE_EXPRESSIONS;
+          case O.Permissions.VIEW_AUDIT_LOG:
+            return U.default.Messages.VIEW_AUDIT_LOG;
+          case O.Permissions.VIEW_CHANNEL:
+            return U.default.Messages.READ_MESSAGES;
+          case O.Permissions.SEND_MESSAGES:
+            return U.default.Messages.SEND_MESSAGES;
+          case O.Permissions.SEND_TTS_MESSAGES:
+            return U.default.Messages.SEND_TTS_MESSAGES;
+          case O.Permissions.USE_APPLICATION_COMMANDS:
+            return U.default.Messages.USE_APPLICATION_COMMANDS;
+          case O.Permissions.MANAGE_MESSAGES:
+            return U.default.Messages.MANAGE_MESSAGES;
+          case O.Permissions.EMBED_LINKS:
+            return U.default.Messages.EMBED_LINKS;
+          case O.Permissions.ATTACH_FILES:
+            return U.default.Messages.ATTACH_FILES;
+          case O.Permissions.READ_MESSAGE_HISTORY:
+            return U.default.Messages.READ_MESSAGE_HISTORY;
+          case O.Permissions.MENTION_EVERYONE:
+            return U.default.Messages.MENTION_EVERYONE;
+          case O.Permissions.USE_EXTERNAL_EMOJIS:
+            return U.default.Messages.USE_EXTERNAL_EMOJIS;
+          case O.Permissions.USE_EXTERNAL_STICKERS:
+            return U.default.Messages.USE_EXTERNAL_STICKERS;
+          case O.Permissions.ADD_REACTIONS:
+            return U.default.Messages.ADD_REACTIONS;
+          case O.Permissions.CONNECT:
+            return U.default.Messages.CONNECT;
+          case O.Permissions.SPEAK:
+            return U.default.Messages.SPEAK;
+          case O.Permissions.MUTE_MEMBERS:
+            return U.default.Messages.MUTE_MEMBERS;
+          case O.Permissions.DEAFEN_MEMBERS:
+            return U.default.Messages.DEAFEN_MEMBERS;
+          case O.Permissions.MOVE_MEMBERS:
+            return U.default.Messages.MOVE_MEMBERS;
+          case O.Permissions.USE_VAD:
+            return U.default.Messages.USE_VAD;
+          case O.Permissions.PRIORITY_SPEAKER:
+            return U.default.Messages.PRIORITY_SPEAKER;
+          case O.Permissions.STREAM:
+            return U.default.Messages.VIDEO;
+          case O.Permissions.REQUEST_TO_SPEAK:
+            return U.default.Messages.REQUEST_TO_SPEAK;
+          case O.Permissions.CREATE_EVENTS:
+            return U.default.Messages.CREATE_EVENTS;
+          case O.Permissions.MANAGE_EVENTS:
+            return U.default.Messages.MANAGE_EVENTS;
+          case O.Permissions.CREATE_PUBLIC_THREADS:
+            return U.default.Messages.CREATE_PUBLIC_THREADS;
+          case O.Permissions.CREATE_PRIVATE_THREADS:
+            return U.default.Messages.CREATE_PRIVATE_THREADS;
+          case O.Permissions.SEND_MESSAGES_IN_THREADS:
+            return U.default.Messages.SEND_MESSAGES_IN_THREADS;
+          case O.Permissions.MANAGE_THREADS:
+            return U.default.Messages.MANAGE_THREADS;
+          case O.Permissions.MODERATE_MEMBERS:
+            return U.default.Messages.MODERATE_MEMBER;
+          case O.Permissions.SET_VOICE_CHANNEL_STATUS:
+            return U.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
         }
         return null;
       }
-      function Q(e, t) {
+      function q(e, t) {
         if (null == t) return [];
         let E = [];
         return (
           e.forEach(e => {
             let _ = (function (e, t) {
                 switch (e.targetType) {
-                  case G.AuditLogTargetTypes.GUILD:
+                  case O.AuditLogTargetTypes.GUILD:
                     return t;
-                  case G.AuditLogTargetTypes.CHANNEL:
-                  case G.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-                    return ee(
+                  case O.AuditLogTargetTypes.CHANNEL:
+                  case O.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => d.default.getChannel(e),
                       e =>
-                        (0, u.computeChannelName)(e, S.default, N.default, !0)
+                        (0, u.computeChannelName)(e, g.default, S.default, !0)
                     );
-                  case G.AuditLogTargetTypes.USER:
-                    return ee(
+                  case O.AuditLogTargetTypes.USER:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NICK,
-                      e => S.default.getUser(e),
+                      O.AuditLogChangeKeys.NICK,
+                      e => g.default.getUser(e),
                       void 0
                     );
-                  case G.AuditLogTargetTypes.ROLE:
-                    return ee(
+                  case O.AuditLogTargetTypes.ROLE:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
-                      e => t.getRole(e),
+                      O.AuditLogChangeKeys.NAME,
+                      e => N.default.getRole(t.id, e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.INVITE:
-                    return ee(e, G.AuditLogChangeKeys.CODE, G.NOOP_NULL);
-                  case G.AuditLogTargetTypes.INTEGRATION:
-                    return ee(
+                  case O.AuditLogTargetTypes.INVITE:
+                    return et(e, O.AuditLogChangeKeys.CODE, O.NOOP_NULL);
+                  case O.AuditLogTargetTypes.INTEGRATION:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.TYPE,
+                      O.AuditLogChangeKeys.TYPE,
                       e => l.default.integrations.find(t => t.id === e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.WEBHOOK:
-                    return ee(
+                  case O.AuditLogTargetTypes.WEBHOOK:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => l.default.webhooks.find(t => t.id === e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.EMOJI:
-                    return ee(
+                  case O.AuditLogTargetTypes.EMOJI:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => i.default.getGuildEmoji(t.id).find(t => t.id === e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.STICKER:
-                    return ee(
+                  case O.AuditLogTargetTypes.STICKER:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => o.default.getStickerById(e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.STAGE_INSTANCE:
-                    return ee(
+                  case O.AuditLogTargetTypes.STAGE_INSTANCE:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.TOPIC,
+                      O.AuditLogChangeKeys.TOPIC,
                       e => {
                         var E;
                         return null ===
@@ -1926,21 +1927,21 @@
                       },
                       e => e.topic
                     );
-                  case G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-                    return ee(
+                  case O.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => l.default.guildScheduledEvents.find(t => t.id === e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.THREAD:
-                    return ee(
+                  case O.AuditLogTargetTypes.THREAD:
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => l.default.threads.find(t => t.id === e),
                       e => e.name
                     );
-                  case G.AuditLogTargetTypes.APPLICATION_COMMAND:
+                  case O.AuditLogTargetTypes.APPLICATION_COMMAND:
                     if (e.targetId === e.options.application_id) {
                       let t = l.default.integrations.find(
                         t => t.application_id === e.targetId
@@ -1948,9 +1949,9 @@
                       if (null != t) return t.name;
                       return e.targetId;
                     }
-                    return ee(
+                    return et(
                       e,
-                      G.AuditLogChangeKeys.NAME,
+                      O.AuditLogChangeKeys.NAME,
                       e => l.default.applicationCommands.find(t => t.id === e),
                       e => {
                         let t =
@@ -1963,20 +1964,20 @@
                       }
                     );
                   default:
-                    return U.warn("Unknown targetType for log", e), null;
+                    return C.warn("Unknown targetType for log", e), null;
                 }
               })(e, t),
-              a = S.default.getUser(e.userId);
+              a = g.default.getUser(e.userId);
             if (
               null != a &&
               (null != _ ||
-                e.action === G.AuditLogActions.MEMBER_PRUNE ||
-                e.action === G.AuditLogActions.MEMBER_DISCONNECT ||
-                e.action === G.AuditLogActions.MEMBER_MOVE ||
+                e.action === O.AuditLogActions.MEMBER_PRUNE ||
+                e.action === O.AuditLogActions.MEMBER_DISCONNECT ||
+                e.action === O.AuditLogActions.MEMBER_MOVE ||
                 e.action ===
-                  G.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED ||
+                  O.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED ||
                 e.action ===
-                  G.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED)
+                  O.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED)
             ) {
               if (
                 null !=
@@ -1986,31 +1987,31 @@
                     if (null != e.options) {
                       let _ = { ...e.options };
                       switch (e.options.type) {
-                        case G.AuditLogSubtargetTypes.USER:
+                        case O.AuditLogSubtargetTypes.USER:
                           var t, E;
                           (null === (t = e.options) || void 0 === t
                             ? void 0
                             : t.id) != null &&
-                            (_.subtarget = et(
+                            (_.subtarget = eE(
                               null == e
                                 ? void 0
                                 : null === (E = e.options) || void 0 === E
                                   ? void 0
                                   : E.id,
-                              e => S.default.getUser(e),
+                              e => g.default.getUser(e),
                               e => e.tag
                             ));
                           break;
-                        case G.AuditLogSubtargetTypes.ROLE:
+                        case O.AuditLogSubtargetTypes.ROLE:
                           null != e.options.role_name &&
-                            (_.subtarget = et(
+                            (_.subtarget = eE(
                               e.options.role_name,
-                              G.NOOP_NULL
+                              O.NOOP_NULL
                             ));
                       }
                       return (
                         null != e.options.channel_id &&
-                          (_.channel = ee(
+                          (_.channel = et(
                             e,
                             "",
                             e => d.default.getChannel(e),
@@ -2032,35 +2033,35 @@
                   let a = (function (e, t, E) {
                     if (
                       t.action ===
-                      G.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE
+                      O.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE
                     ) {
                       let t = e.newValue || e.oldValue;
                       switch (t.type) {
-                        case G.ApplicationCommandPermissionTypes.ROLE:
-                          e.subtarget = et(
+                        case O.ApplicationCommandPermissionTypes.ROLE:
+                          e.subtarget = eE(
                             t.id,
-                            e => E.getRole(e),
+                            e => N.default.getRole(E.id, e),
                             e => e.name
                           );
                           break;
-                        case G.ApplicationCommandPermissionTypes.USER:
-                          e.subtarget = et(
+                        case O.ApplicationCommandPermissionTypes.USER:
+                          e.subtarget = eE(
                             t.id,
-                            e => S.default.getUser(e),
+                            e => g.default.getUser(e),
                             e => e.tag
                           );
                           break;
-                        case G.ApplicationCommandPermissionTypes.CHANNEL:
+                        case O.ApplicationCommandPermissionTypes.CHANNEL:
                           t.id === s(E.id).subtract(1).toString()
-                            ? (e.subtarget = c.default.Messages.ALL_CHANNELS)
-                            : (e.subtarget = et(
+                            ? (e.subtarget = U.default.Messages.ALL_CHANNELS)
+                            : (e.subtarget = eE(
                                 t.id,
                                 e => d.default.getChannel(e),
                                 e =>
                                   (0, u.computeChannelName)(
                                     e,
+                                    g.default,
                                     S.default,
-                                    N.default,
                                     !0
                                   )
                               ));
@@ -2068,44 +2069,44 @@
                       return e;
                     }
                     switch (e.key) {
-                      case G.AuditLogChangeKeys.OWNER_ID:
-                        return $(e, e => S.default.getUser(e));
-                      case G.AuditLogChangeKeys.CHANNEL_ID:
-                      case G.AuditLogChangeKeys.AFK_CHANNEL_ID:
-                      case G.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
-                      case G.AuditLogChangeKeys.RULES_CHANNEL_ID:
-                      case G.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                        return $(
+                      case O.AuditLogChangeKeys.OWNER_ID:
+                        return ee(e, e => g.default.getUser(e));
+                      case O.AuditLogChangeKeys.CHANNEL_ID:
+                      case O.AuditLogChangeKeys.AFK_CHANNEL_ID:
+                      case O.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
+                      case O.AuditLogChangeKeys.RULES_CHANNEL_ID:
+                      case O.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
+                        return ee(
                           e,
                           e => d.default.getChannel(e),
                           e =>
                             (0, u.computeChannelName)(
                               e,
+                              g.default,
                               S.default,
-                              N.default,
                               !0
                             )
                         );
-                      case G.AuditLogChangeKeys.AFK_TIMEOUT:
-                        return $(e, e => e / 60);
-                      case G.AuditLogChangeKeys.BITRATE:
-                        return $(e, e => e / 1e3);
-                      case G.AuditLogChangeKeys.COLOR:
-                        return $(e, e => (0, T.int2hex)(e).toUpperCase());
-                      case G.AuditLogChangeKeys.MAX_AGE:
-                        return $(e, e => {
-                          let t = g.default.getMaxAgeOptions.find(t => {
+                      case O.AuditLogChangeKeys.AFK_TIMEOUT:
+                        return ee(e, e => e / 60);
+                      case O.AuditLogChangeKeys.BITRATE:
+                        return ee(e, e => e / 1e3);
+                      case O.AuditLogChangeKeys.COLOR:
+                        return ee(e, e => (0, T.int2hex)(e).toUpperCase());
+                      case O.AuditLogChangeKeys.MAX_AGE:
+                        return ee(e, e => {
+                          let t = D.default.getMaxAgeOptions.find(t => {
                             let { value: E } = t;
                             return e === E;
                           });
                           return t ? t.label : e;
                         });
-                      case G.AuditLogChangeKeys.PERMISSIONS: {
+                      case O.AuditLogChangeKeys.PERMISSIONS: {
                         let t = [],
-                          { added: E, removed: _ } = q(e.oldValue, e.newValue);
+                          { added: E, removed: _ } = $(e.oldValue, e.newValue);
                         if (E.length > 0) {
                           let e = new r.AuditLogChange(
-                            G.AuditLogChangeKeys.PERMISSIONS_GRANTED,
+                            O.AuditLogChangeKeys.PERMISSIONS_GRANTED,
                             null,
                             E
                           );
@@ -2113,7 +2114,7 @@
                         }
                         if (_.length > 0) {
                           let e = new r.AuditLogChange(
-                            G.AuditLogChangeKeys.PERMISSIONS_DENIED,
+                            O.AuditLogChangeKeys.PERMISSIONS_DENIED,
                             null,
                             _
                           );
@@ -2121,17 +2122,17 @@
                         }
                         return t;
                       }
-                      case G.AuditLogChangeKeys.PERMISSIONS_GRANTED:
-                      case G.AuditLogChangeKeys.PERMISSIONS_DENIED: {
+                      case O.AuditLogChangeKeys.PERMISSIONS_GRANTED:
+                      case O.AuditLogChangeKeys.PERMISSIONS_DENIED: {
                         let t = [],
-                          { added: E, removed: _ } = q(e.oldValue, e.newValue);
+                          { added: E, removed: _ } = $(e.oldValue, e.newValue);
                         if (E.length > 0) {
                           let _ = new r.AuditLogChange(e.key, null, E);
                           t.push(_);
                         }
                         if (_.length > 0) {
                           let e = new r.AuditLogChange(
-                            G.AuditLogChangeKeys.PERMISSIONS_RESET,
+                            O.AuditLogChangeKeys.PERMISSIONS_RESET,
                             _,
                             _
                           );
@@ -2139,42 +2140,42 @@
                         }
                         return t;
                       }
-                      case G.AuditLogChangeKeys.PREFERRED_LOCALE:
-                        return $(e, e => {
-                          let t = c.default
+                      case O.AuditLogChangeKeys.PREFERRED_LOCALE:
+                        return ee(e, e => {
+                          let t = U.default
                             .getAvailableLocales()
                             .find(t => t.value === e);
                           return null != t ? t.name : null;
                         });
-                      case G.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
-                        return $(e, e =>
-                          e === G.VideoQualityMode.FULL
-                            ? c.default.Messages.VIDEO_QUALITY_MODE_FULL
-                            : c.default.Messages.VIDEO_QUALITY_MODE_AUTO
+                      case O.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
+                        return ee(e, e =>
+                          e === O.VideoQualityMode.FULL
+                            ? U.default.Messages.VIDEO_QUALITY_MODE_FULL
+                            : U.default.Messages.VIDEO_QUALITY_MODE_AUTO
                         );
-                      case G.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
+                      case O.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
                         return (function (e) {
                           let t = {
-                              [G.SystemChannelFlags
+                              [O.SystemChannelFlags
                                 .SUPPRESS_JOIN_NOTIFICATIONS]:
-                                G.AuditLogChangeKeys
+                                O.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                              [G.SystemChannelFlags
+                              [O.SystemChannelFlags
                                 .SUPPRESS_PREMIUM_SUBSCRIPTIONS]:
-                                G.AuditLogChangeKeys
+                                O.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                              [G.SystemChannelFlags
+                              [O.SystemChannelFlags
                                 .SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]:
-                                G.AuditLogChangeKeys
+                                O.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                              [G.SystemChannelFlags
+                              [O.SystemChannelFlags
                                 .SUPPRESS_JOIN_NOTIFICATION_REPLIES]:
-                                G.AuditLogChangeKeys
+                                O.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES,
                             },
                             E = [];
                           return (
-                            Object.values(G.SystemChannelFlags).forEach(_ => {
+                            Object.values(O.SystemChannelFlags).forEach(_ => {
                               let s = (e.oldValue & _) === _,
                                 a = (e.newValue & _) === _;
                               if (s === a) return;
@@ -2197,21 +2198,21 @@
           E
         );
       }
-      function q(e, t) {
+      function $(e, t) {
         let E = a.default.deserialize("string" == typeof e ? e : 0),
           _ = a.default.deserialize("string" == typeof t ? t : 0),
           s = a.default.remove(_, E),
           T = a.default.remove(E, _),
           n = [],
           A = [],
-          u = { ...G.Permissions };
+          u = { ...O.Permissions };
         for (let e in u) {
           let t = u[e];
           a.default.has(s, t) && n.push(t), a.default.has(T, t) && A.push(t);
         }
         return { added: n, removed: A };
       }
-      function $(e, t, E) {
+      function ee(e, t, E) {
         let _ = e.newValue,
           s = e.oldValue;
         return (
@@ -2222,7 +2223,7 @@
           new r.AuditLogChange(e.key, s || e.oldValue, _ || e.newValue)
         );
       }
-      function ee(e, t, E, _, s) {
+      function et(e, t, E, _, s) {
         let a = null;
         s = null != s ? s : e.targetId;
         let T = E(s);
@@ -2240,18 +2241,18 @@
         }
         return a || s;
       }
-      function et(e, t, E) {
+      function eE(e, t, E) {
         let _ = e,
           s = t(e);
         return null != s && null != E && (_ = E(s)), _;
       }
-      function eE(e, t) {
+      function e_(e, t) {
         return E => (null == E.oldValue ? e : t);
       }
-      function e_(e, t) {
+      function es(e, t) {
         return E => (null == E.newValue ? e : t);
       }
-      function es(e, t, E, _) {
+      function ea(e, t, E, _) {
         return s => {
           if (null != s.newValue && null != s.oldValue) return e;
           if (null != s.newValue) return t;
@@ -2964,7 +2965,8 @@
             let E = u.default.getGuild(e.guildId);
             return null == E || null == e.highestRoleId
               ? null
-              : null !== (t = E.roles[e.highestRoleId]) && void 0 !== t
+              : null !== (t = u.default.getRole(E.id, e.highestRoleId)) &&
+                  void 0 !== t
                 ? t
                 : null;
           },
@@ -3770,13 +3772,10 @@
         s = E("305961"),
         a = E("837008");
       function T(e, t) {
-        let E = (0, _.useStateFromStores)(
-            [s.default],
-            () => s.default.getGuild(e),
-            [e]
-          ),
-          T = (0, a.useSubscriptionListing)(t);
-        return null == E || null == T ? null : E.roles[T.role_id];
+        let E = (0, a.useSubscriptionListing)(t);
+        return (0, _.useStateFromStores)([s.default], () =>
+          null != e && null != E ? s.default.getRole(e, E.role_id) : void 0
+        );
       }
     },
     59767: function (e, t, E) {
@@ -4211,13 +4210,14 @@
         let { section: t } = e;
         if (t !== l.GuildSettingsSections.AUDIT_LOG) return !1;
         let E = I.default.getMembers(o),
-          _ = i.default.getGuild(o);
+          _ = i.default.getGuild(o),
+          T = null != o ? i.default.getRoles(o) : void 0;
         N = s(E)
           .filter(e =>
             e.roles.some(t => {
               if (null != _) {
                 if (e.userId === _.ownerId) return !0;
-                let E = _.roles[t];
+                let E = null == T ? void 0 : T[t];
                 return (
                   null != E && L.some(e => a.default.has(E.permissions, e))
                 );
@@ -4378,13 +4378,13 @@
       E.r(t),
         E.d(t, {
           shouldNotRenderChangeDetail: function () {
-            return c;
+            return U;
           },
           AuditLogIcon: function () {
-            return M;
+            return R;
           },
           AuditLogExpandedChangeDetails: function () {
-            return R;
+            return f;
           },
         }),
         E("424973");
@@ -4400,24 +4400,25 @@
         l = E("430568"),
         L = E("90625"),
         o = E("42203"),
-        r = E("697218"),
-        d = E("987663"),
-        N = E("404008"),
-        S = E("449008"),
-        g = E("159885"),
-        D = E("49111"),
-        G = E("782340"),
-        O = E("15994");
-      function c(e, t) {
-        let E = d.NotRenderedChanges[e.targetType];
+        r = E("305961"),
+        d = E("697218"),
+        N = E("987663"),
+        S = E("404008"),
+        g = E("449008"),
+        D = E("159885"),
+        G = E("49111"),
+        O = E("782340"),
+        c = E("15994");
+      function U(e, t) {
+        let E = N.NotRenderedChanges[e.targetType];
         return null != E && !0 === E[t.key];
       }
-      let U = {
-        [D.AuditLogActionTypes.CREATE]: O.typeCreate,
-        [D.AuditLogActionTypes.UPDATE]: O.typeUpdate,
-        [D.AuditLogActionTypes.DELETE]: O.typeDelete,
+      let C = {
+        [G.AuditLogActionTypes.CREATE]: c.typeCreate,
+        [G.AuditLogActionTypes.UPDATE]: c.typeUpdate,
+        [G.AuditLogActionTypes.DELETE]: c.typeDelete,
       };
-      function C(e) {
+      function M(e) {
         let {
             changeItem: t,
             subChanges: E,
@@ -4433,8 +4434,8 @@
         ) {
           if (null == t.format) {
             let e = t[A.newValue];
-            null == e && null != t[d.DEFAULT_FOR_STRINGS_KEY]
-              ? (t = t[d.DEFAULT_FOR_STRINGS_KEY])
+            null == e && null != t[N.DEFAULT_FOR_STRINGS_KEY]
+              ? (t = t[N.DEFAULT_FOR_STRINGS_KEY])
               : null != e && (t = e);
           }
           if (null != t && null != t.format) {
@@ -4457,7 +4458,7 @@
                 (0, _.jsx)(
                   "div",
                   {
-                    className: O.colorHook,
+                    className: c.colorHook,
                     style: { backgroundColor: A.newValue },
                   },
                   t
@@ -4466,7 +4467,7 @@
                 (0, _.jsx)(
                   "div",
                   {
-                    className: O.colorHook,
+                    className: c.colorHook,
                     style: { backgroundColor: A.oldValue },
                   },
                   t
@@ -4495,17 +4496,17 @@
             : (0, _.jsxs)(
                 "div",
                 {
-                  className: O.detail,
+                  className: c.detail,
                   style: { position: "relative", top: 1 },
                   children: [
                     (0, _.jsxs)(i.Text, {
-                      className: O.prefix,
+                      className: c.prefix,
                       variant: "code",
                       color: (function (e) {
                         switch (e) {
-                          case D.AuditLogActionTypes.CREATE:
+                          case G.AuditLogActionTypes.CREATE:
                             return "text-positive";
-                          case D.AuditLogActionTypes.DELETE:
+                          case G.AuditLogActionTypes.DELETE:
                             return "status-danger";
                           default:
                             return "text-warning";
@@ -4514,16 +4515,16 @@
                       children: [
                         s < 10 ? "0".concat(s) : s,
                         (0, _.jsx)("span", {
-                          className: O.dash,
+                          className: c.dash,
                           children: "—",
                         }),
                       ],
                     }),
                     (0, _.jsxs)("div", {
-                      className: O.change,
+                      className: c.change,
                       children: [
                         (0, _.jsx)("div", {
-                          className: O.changeStr,
+                          className: c.changeStr,
                           children: u,
                         }),
                         null != E ? (0, _.jsx)("div", { children: E }) : null,
@@ -4534,7 +4535,7 @@
                 s
               );
       }
-      class M extends s.PureComponent {
+      class R extends s.PureComponent {
         render() {
           var e, t;
           let {
@@ -4545,61 +4546,61 @@
             } = this.props,
             A =
               null != n
-                ? O["themeOverride".concat((0, g.upperCaseFirstChar)(n))]
+                ? c["themeOverride".concat((0, D.upperCaseFirstChar)(n))]
                 : null;
           let u = T(
-            O.icon,
-            U[E],
+            c.icon,
+            C[E],
             ((e = s),
-            (t = a) === D.AuditLogActions.MESSAGE_DELETE
-              ? O.targetMessage
-              : t === D.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE ||
-                  t === D.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+            (t = a) === G.AuditLogActions.MESSAGE_DELETE
+              ? c.targetMessage
+              : t === G.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE ||
+                  t === G.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL ||
                   t ===
-                    D.AuditLogActions
+                    G.AuditLogActions
                       .AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                  t === D.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER
-                ? O.autoModerationBlockMessage
+                  t === G.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER
+                ? c.autoModerationBlockMessage
                 : {
-                    [D.AuditLogTargetTypes.ALL]: O.targetAll,
-                    [D.AuditLogTargetTypes.GUILD]: O.targetGuild,
-                    [D.AuditLogTargetTypes.CHANNEL]: O.targetChannel,
-                    [D.AuditLogTargetTypes.CHANNEL_OVERWRITE]: O.targetChannel,
-                    [D.AuditLogTargetTypes.USER]: O.targetMember,
-                    [D.AuditLogTargetTypes.ROLE]: O.targetRole,
-                    [D.AuditLogTargetTypes.ONBOARDING_PROMPT]:
-                      O.targetOnboarding,
-                    [D.AuditLogTargetTypes.GUILD_ONBOARDING]:
-                      O.targetOnboarding,
-                    [D.AuditLogTargetTypes.HOME_SETTINGS]: O.targetOnboarding,
-                    [D.AuditLogTargetTypes.INTEGRATION]: O.targetIntegration,
-                    [D.AuditLogTargetTypes.INVITE]: O.targetInvite,
-                    [D.AuditLogTargetTypes.WEBHOOK]: O.targetWebhook,
-                    [D.AuditLogTargetTypes.EMOJI]: O.targetEmoji,
-                    [D.AuditLogTargetTypes.STICKER]: O.targetSticker,
-                    [D.AuditLogTargetTypes.STAGE_INSTANCE]:
-                      O.targetStageInstance,
-                    [D.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT]:
-                      O.targetGuildScheduledEvent,
-                    [D.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION]:
-                      O.targetGuildScheduledEvent,
-                    [D.AuditLogTargetTypes.THREAD]: O.thread,
-                    [D.AuditLogTargetTypes.APPLICATION_COMMAND]:
-                      O.applicationCommand,
-                    [D.AuditLogTargetTypes.AUTO_MODERATION_RULE]:
-                      O.autoModerationRule,
-                    [D.AuditLogTargetTypes.GUILD_HOME]: O.targetGuildHome,
-                    [D.AuditLogTargetTypes.GUILD_SOUNDBOARD]:
-                      O.targetGuildSoundboard,
-                    [D.AuditLogTargetTypes.VOICE_CHANNEL_STATUS]:
-                      O.targetChannel,
+                    [G.AuditLogTargetTypes.ALL]: c.targetAll,
+                    [G.AuditLogTargetTypes.GUILD]: c.targetGuild,
+                    [G.AuditLogTargetTypes.CHANNEL]: c.targetChannel,
+                    [G.AuditLogTargetTypes.CHANNEL_OVERWRITE]: c.targetChannel,
+                    [G.AuditLogTargetTypes.USER]: c.targetMember,
+                    [G.AuditLogTargetTypes.ROLE]: c.targetRole,
+                    [G.AuditLogTargetTypes.ONBOARDING_PROMPT]:
+                      c.targetOnboarding,
+                    [G.AuditLogTargetTypes.GUILD_ONBOARDING]:
+                      c.targetOnboarding,
+                    [G.AuditLogTargetTypes.HOME_SETTINGS]: c.targetOnboarding,
+                    [G.AuditLogTargetTypes.INTEGRATION]: c.targetIntegration,
+                    [G.AuditLogTargetTypes.INVITE]: c.targetInvite,
+                    [G.AuditLogTargetTypes.WEBHOOK]: c.targetWebhook,
+                    [G.AuditLogTargetTypes.EMOJI]: c.targetEmoji,
+                    [G.AuditLogTargetTypes.STICKER]: c.targetSticker,
+                    [G.AuditLogTargetTypes.STAGE_INSTANCE]:
+                      c.targetStageInstance,
+                    [G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT]:
+                      c.targetGuildScheduledEvent,
+                    [G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION]:
+                      c.targetGuildScheduledEvent,
+                    [G.AuditLogTargetTypes.THREAD]: c.thread,
+                    [G.AuditLogTargetTypes.APPLICATION_COMMAND]:
+                      c.applicationCommand,
+                    [G.AuditLogTargetTypes.AUTO_MODERATION_RULE]:
+                      c.autoModerationRule,
+                    [G.AuditLogTargetTypes.GUILD_HOME]: c.targetGuildHome,
+                    [G.AuditLogTargetTypes.GUILD_SOUNDBOARD]:
+                      c.targetGuildSoundboard,
+                    [G.AuditLogTargetTypes.VOICE_CHANNEL_STATUS]:
+                      c.targetChannel,
                   }[e]),
             A
           );
           return (0, _.jsx)("div", { className: u });
         }
       }
-      function R(e) {
+      function f(e) {
         let { log: t, guild: E, onContentClick: a, className: n } = e,
           u = s.useCallback(
             e => {
@@ -4610,7 +4611,7 @@
                     let { oldValue: T, newValue: n } = a,
                       u = null;
                     if (
-                      (t.action === D.AuditLogActions.MEMBER_ROLE_UPDATE
+                      (t.action === G.AuditLogActions.MEMBER_ROLE_UPDATE
                         ? (u = (function (e) {
                             let { newValue: t } = e;
                             return Array.isArray(t)
@@ -4618,7 +4619,7 @@
                                   (0, _.jsx)(
                                     "div",
                                     {
-                                      className: O.subListItem,
+                                      className: c.subListItem,
                                       children: e.name,
                                     },
                                     e.id
@@ -4626,11 +4627,11 @@
                                 )
                               : null;
                           })(a))
-                        : t.targetType === D.AuditLogTargetTypes.ROLE ||
+                        : t.targetType === G.AuditLogTargetTypes.ROLE ||
                             t.action ===
-                              D.AuditLogActions.CHANNEL_OVERWRITE_CREATE ||
+                              G.AuditLogActions.CHANNEL_OVERWRITE_CREATE ||
                             t.action ===
-                              D.AuditLogActions.CHANNEL_OVERWRITE_UPDATE
+                              G.AuditLogActions.CHANNEL_OVERWRITE_UPDATE
                           ? (u = (function (e, t) {
                               let { newValue: E } = e;
                               return Array.isArray(E)
@@ -4638,8 +4639,8 @@
                                     (0, _.jsx)(
                                       "div",
                                       {
-                                        className: O.subListItem,
-                                        children: d.getStringForPermission(
+                                        className: c.subListItem,
+                                        children: N.getStringForPermission(
                                           e,
                                           t
                                         ),
@@ -4649,9 +4650,9 @@
                                   )
                                 : null;
                             })(a, t))
-                          : (t.action === D.AuditLogActions.CHANNEL_UPDATE ||
-                              t.action === D.AuditLogActions.THREAD_UPDATE) &&
-                            a.key === D.AuditLogChangeKeys.FLAGS &&
+                          : (t.action === G.AuditLogActions.CHANNEL_UPDATE ||
+                              t.action === G.AuditLogActions.THREAD_UPDATE) &&
+                            a.key === G.AuditLogChangeKeys.FLAGS &&
                             (u = (function (e) {
                               let { newValue: t, oldValue: E } = e,
                                 s = [];
@@ -4661,9 +4662,9 @@
                                     (0, _.jsx)(
                                       "div",
                                       {
-                                        className: O.subListItem,
+                                        className: c.subListItem,
                                         children:
-                                          d.getStringForRemovedChannelFlag(e),
+                                          N.getStringForRemovedChannelFlag(e),
                                       },
                                       e
                                     )
@@ -4675,9 +4676,9 @@
                                     (0, _.jsx)(
                                       "div",
                                       {
-                                        className: O.subListItem,
+                                        className: c.subListItem,
                                         children:
-                                          d.getStringForAddedChannelFlag(e),
+                                          N.getStringForAddedChannelFlag(e),
                                       },
                                       e
                                     )
@@ -4687,34 +4688,35 @@
                                 ? s
                                 : null;
                             })(a)),
-                      (t.action === D.AuditLogActions.CHANNEL_UPDATE ||
-                        t.action === D.AuditLogActions.CHANNEL_CREATE) &&
-                        a.key === D.AuditLogChangeKeys.TYPE &&
+                      (t.action === G.AuditLogActions.CHANNEL_UPDATE ||
+                        t.action === G.AuditLogActions.CHANNEL_CREATE) &&
+                        a.key === G.AuditLogChangeKeys.TYPE &&
                         (null != T &&
-                          (T = (0, N.channelTypeString)({ type: T })),
+                          (T = (0, S.channelTypeString)({ type: T })),
                         null != n &&
-                          (n = (0, N.channelTypeString)({ type: n }))),
-                      t.action === D.AuditLogActions.MEMBER_UPDATE &&
+                          (n = (0, S.channelTypeString)({ type: n }))),
+                      t.action === G.AuditLogActions.MEMBER_UPDATE &&
                         a.key ===
-                          D.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL)
+                          G.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL)
                     ) {
                       if (null == (n = I(n)) || !n.isValid()) return null;
                       n = n.calendar();
                     }
-                    (t.action === D.AuditLogActions.ONBOARDING_PROMPT_UPDATE ||
+                    (t.action === G.AuditLogActions.ONBOARDING_PROMPT_UPDATE ||
                       t.action ===
-                        D.AuditLogActions.ONBOARDING_PROMPT_CREATE) &&
-                      a.key === D.AuditLogChangeKeys.OPTIONS &&
+                        G.AuditLogActions.ONBOARDING_PROMPT_CREATE) &&
+                      a.key === G.AuditLogChangeKeys.OPTIONS &&
                       (u = (function (e, t, E) {
                         let { newValue: s, oldValue: a } = e,
                           T = e => {
                             var t;
                             let _ =
-                              null == E
-                                ? void 0
-                                : null === (t = E.getRole(e)) || void 0 === t
+                              null != E
+                                ? null === (t = r.default.getRole(E.id, e)) ||
+                                  void 0 === t
                                   ? void 0
-                                  : t.name;
+                                  : t.name
+                                : void 0;
                             return null == _ ? null : "@".concat(_);
                           },
                           n = e => {
@@ -4728,24 +4730,24 @@
                           },
                           u = (e, E) => {
                             let { title: s, id: a } = E,
-                              u = e.role_ids.map(T).filter(S.isNotNullish),
-                              I = e.channel_ids.map(n).filter(S.isNotNullish),
-                              l = E.role_ids.map(T).filter(S.isNotNullish),
-                              L = E.channel_ids.map(n).filter(S.isNotNullish),
+                              u = e.role_ids.map(T).filter(g.isNotNullish),
+                              I = e.channel_ids.map(n).filter(g.isNotNullish),
+                              l = E.role_ids.map(T).filter(g.isNotNullish),
+                              L = E.channel_ids.map(n).filter(g.isNotNullish),
                               o = A.difference(l, u),
                               r = A.difference(u, l),
                               d = A.difference(L, I),
                               N = A.difference(I, L),
-                              g = [];
+                              S = [];
                             return (!A.isEqual(e.title, E.title) &&
-                              g.push("title"),
+                              S.push("title"),
                             !A.isEqual(e.description, E.description) &&
-                              g.push("description"),
+                              S.push("description"),
                             0 === o.length &&
                               0 === r.length &&
                               0 === d.length &&
                               0 === N.length &&
-                              0 === g.length)
+                              0 === S.length)
                               ? null
                               : (0, _.jsxs)(
                                   "li",
@@ -4753,18 +4755,18 @@
                                     children: [
                                       (0, _.jsxs)("div", {
                                         className:
-                                          O.onboardingChangeLogItemTitle,
+                                          c.onboardingChangeLogItemTitle,
                                         children: [
-                                          (0, _.jsx)(M, {
+                                          (0, _.jsx)(R, {
                                             actionType:
-                                              D.AuditLogActionTypes.UPDATE,
+                                              G.AuditLogActionTypes.UPDATE,
                                             targetType: t.targetType,
                                             action: t.action,
                                           }),
                                           (0, _.jsx)(i.Text, {
                                             variant: "text-md/normal",
                                             children:
-                                              G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format(
+                                              O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_UPDATED_OPTION.format(
                                                 { title: s }
                                               ),
                                           }),
@@ -4772,13 +4774,13 @@
                                       }),
                                       (0, _.jsxs)("div", {
                                         className:
-                                          O.onboardingChangeLogItemChanges,
+                                          c.onboardingChangeLogItemChanges,
                                         children: [
                                           o.length > 0 &&
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_ROLES.format(
                                                   { roles: o.join(", ") }
                                                 ),
                                             }),
@@ -4786,7 +4788,7 @@
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_ROLES.format(
                                                   { roles: r.join(", ") }
                                                 ),
                                             }),
@@ -4794,7 +4796,7 @@
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_ADD_CHANNELS.format(
                                                   { channels: d.join(", ") }
                                                 ),
                                             }),
@@ -4802,17 +4804,17 @@
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_REMOVE_CHANNELS.format(
                                                   { channels: N.join(", ") }
                                                 ),
                                             }),
-                                          g.map((t, s) =>
+                                          S.map((t, s) =>
                                             (0, _.jsx)(
                                               i.Text,
                                               {
                                                 variant: "text-md/normal",
                                                 children:
-                                                  G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format(
+                                                  O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_VALUE_CHANGE.format(
                                                     {
                                                       key: t,
                                                       oldValue: e[t],
@@ -4835,14 +4837,14 @@
                           L = A.difference(Object.keys(l), Object.keys(I)).map(
                             e => l[e]
                           ),
-                          r = A.difference(Object.keys(I), Object.keys(l)).map(
+                          d = A.difference(Object.keys(I), Object.keys(l)).map(
                             e => I[e]
                           ),
-                          d = A.intersection(Object.keys(l), Object.keys(I));
+                          N = A.intersection(Object.keys(l), Object.keys(I));
                         return (0, _.jsxs)(
                           "ul",
                           {
-                            className: O.onboardingChangeLogContainer,
+                            className: c.onboardingChangeLogContainer,
                             children: [
                               L.map(e => {
                                 let {
@@ -4853,28 +4855,28 @@
                                   } = e,
                                   u = (null != E ? E : [])
                                     .map(T)
-                                    .filter(S.isNotNullish),
+                                    .filter(g.isNotNullish),
                                   I = (null != s ? s : [])
                                     .map(n)
-                                    .filter(S.isNotNullish);
+                                    .filter(g.isNotNullish);
                                 return (0, _.jsxs)(
                                   "li",
                                   {
                                     children: [
                                       (0, _.jsxs)("div", {
                                         className:
-                                          O.onboardingChangeLogItemTitle,
+                                          c.onboardingChangeLogItemTitle,
                                         children: [
-                                          (0, _.jsx)(M, {
+                                          (0, _.jsx)(R, {
                                             actionType:
-                                              D.AuditLogActionTypes.CREATE,
+                                              G.AuditLogActionTypes.CREATE,
                                             targetType: t.targetType,
                                             action: t.action,
                                           }),
                                           (0, _.jsx)(i.Text, {
                                             variant: "text-md/normal",
                                             children:
-                                              G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format(
+                                              O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CREATED_OPTION.format(
                                                 { title: a }
                                               ),
                                           }),
@@ -4882,13 +4884,13 @@
                                       }),
                                       (0, _.jsxs)("div", {
                                         className:
-                                          O.onboardingChangeLogItemChanges,
+                                          c.onboardingChangeLogItemChanges,
                                         children: [
                                           u.length > 0 &&
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_ROLES.format(
                                                   { roles: u.join(", ") }
                                                 ),
                                             }),
@@ -4896,7 +4898,7 @@
                                             (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_WITH_CHANNELS.format(
                                                   { channels: I.join(", ") }
                                                 ),
                                             }),
@@ -4907,23 +4909,23 @@
                                   A
                                 );
                               }),
-                              r.map(e =>
+                              d.map(e =>
                                 (0, _.jsx)(
                                   "li",
                                   {
                                     children: (0, _.jsxs)("div", {
-                                      className: O.onboardingChangeLogItemTitle,
+                                      className: c.onboardingChangeLogItemTitle,
                                       children: [
-                                        (0, _.jsx)(M, {
+                                        (0, _.jsx)(R, {
                                           actionType:
-                                            D.AuditLogActionTypes.DELETE,
+                                            G.AuditLogActionTypes.DELETE,
                                           targetType: t.targetType,
                                           action: t.action,
                                         }),
                                         (0, _.jsx)(i.Text, {
                                           variant: "text-md/normal",
                                           children:
-                                            G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format(
+                                            O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_DELETED_OPTION.format(
                                               { title: e.title }
                                             ),
                                         }),
@@ -4933,22 +4935,22 @@
                                   e.id
                                 )
                               ),
-                              d.map(e => u(I[e], l[e])),
+                              N.map(e => u(I[e], l[e])),
                             ],
                           },
                           "options"
                         );
                       })(a, t, E)),
-                      (t.action === D.AuditLogActions.HOME_SETTINGS_CREATE ||
-                        t.action === D.AuditLogActions.HOME_SETTINGS_UPDATE) &&
+                      (t.action === G.AuditLogActions.HOME_SETTINGS_CREATE ||
+                        t.action === G.AuditLogActions.HOME_SETTINGS_UPDATE) &&
                         (u = (function (e, t) {
                           let { oldValue: E, newValue: s, key: a } = e,
                             { targetType: T, action: n } = t;
                           switch (a) {
-                            case D.AuditLogChangeKeys.WELCOME_MESSAGE:
+                            case G.AuditLogChangeKeys.WELCOME_MESSAGE:
                               return ((e, t) => {
                                 var E, s, a, T, n;
-                                let A = r.default.getUser(
+                                let A = d.default.getUser(
                                     null == t
                                       ? void 0
                                       : null === (E = t.author_ids) ||
@@ -4956,7 +4958,7 @@
                                         ? void 0
                                         : E[0]
                                   ),
-                                  u = r.default.getUser(
+                                  u = d.default.getUser(
                                     null === (s = e.author_ids) || void 0 === s
                                       ? void 0
                                       : s[0]
@@ -4967,11 +4969,11 @@
                                       ? (0, _.jsx)("li", {
                                           children: (0, _.jsx)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_AUTHOR_CHANGE.format(
                                                   {
                                                     oldUser:
                                                       null !==
@@ -4981,7 +4983,7 @@
                                                             : A.username) &&
                                                       void 0 !== a
                                                         ? a
-                                                        : G.default.Messages
+                                                        : O.default.Messages
                                                             .NONE,
                                                     newUser:
                                                       null !==
@@ -4991,7 +4993,7 @@
                                                             : u.username) &&
                                                       void 0 !== T
                                                         ? T
-                                                        : G.default.Messages
+                                                        : O.default.Messages
                                                             .NONE,
                                                   }
                                                 ),
@@ -5005,11 +5007,11 @@
                                       ? (0, _.jsx)("li", {
                                           children: (0, _.jsx)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: (0, _.jsx)(i.Text, {
                                               variant: "text-md/normal",
                                               children:
-                                                G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format(
+                                                O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_MESSAGE_CHANGE.format(
                                                   {
                                                     oldMessage:
                                                       null !==
@@ -5019,7 +5021,7 @@
                                                             : t.message) &&
                                                       void 0 !== n
                                                         ? n
-                                                        : G.default.Messages
+                                                        : O.default.Messages
                                                             .NONE,
                                                     newMessage: e.message,
                                                   }
@@ -5030,7 +5032,7 @@
                                       : null;
                                 return (0, _.jsxs)("ul", { children: [I, l] });
                               })(s, E);
-                            case D.AuditLogChangeKeys.NEW_MEMBER_ACTIONS:
+                            case G.AuditLogChangeKeys.NEW_MEMBER_ACTIONS:
                               return ((e, t) => {
                                 let E = e.map(e => e.channel_id),
                                   s = t.map(e => e.channel_id),
@@ -5046,18 +5048,18 @@
                                         {
                                           children: (0, _.jsxs)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: [
-                                              (0, _.jsx)(M, {
+                                              (0, _.jsx)(R, {
                                                 actionType:
-                                                  D.AuditLogActionTypes.CREATE,
+                                                  G.AuditLogActionTypes.CREATE,
                                                 targetType: T,
                                                 action: n,
                                               }),
                                               (0, _.jsx)(i.Text, {
                                                 variant: "text-md/normal",
                                                 children:
-                                                  G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format(
+                                                  O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_ADDED.format(
                                                     { name: e.title }
                                                   ),
                                               }),
@@ -5073,18 +5075,18 @@
                                         {
                                           children: (0, _.jsxs)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: [
-                                              (0, _.jsx)(M, {
+                                              (0, _.jsx)(R, {
                                                 actionType:
-                                                  D.AuditLogActionTypes.DELETE,
+                                                  G.AuditLogActionTypes.DELETE,
                                                 targetType: T,
                                                 action: n,
                                               }),
                                               (0, _.jsx)(i.Text, {
                                                 variant: "text-md/normal",
                                                 children:
-                                                  G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format(
+                                                  O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_NEW_MEMBER_ACTION_REMOVED.format(
                                                     { name: e.title }
                                                   ),
                                               }),
@@ -5097,7 +5099,7 @@
                                   ],
                                 });
                               })(null != E ? E : [], s);
-                            case D.AuditLogChangeKeys.RESOURCE_CHANNELS:
+                            case G.AuditLogChangeKeys.RESOURCE_CHANNELS:
                               return ((e, t) => {
                                 let E = e.map(e => e.channel_id),
                                   s = t.map(e => e.channel_id),
@@ -5113,18 +5115,18 @@
                                         {
                                           children: (0, _.jsxs)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: [
-                                              (0, _.jsx)(M, {
+                                              (0, _.jsx)(R, {
                                                 actionType:
-                                                  D.AuditLogActionTypes.CREATE,
+                                                  G.AuditLogActionTypes.CREATE,
                                                 targetType: T,
                                                 action: n,
                                               }),
                                               (0, _.jsx)(i.Text, {
                                                 variant: "text-md/normal",
                                                 children:
-                                                  G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format(
+                                                  O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_ADDED.format(
                                                     { name: e.title }
                                                   ),
                                               }),
@@ -5140,18 +5142,18 @@
                                         {
                                           children: (0, _.jsxs)("div", {
                                             className:
-                                              O.onboardingChangeLogItemTitle,
+                                              c.onboardingChangeLogItemTitle,
                                             children: [
-                                              (0, _.jsx)(M, {
+                                              (0, _.jsx)(R, {
                                                 actionType:
-                                                  D.AuditLogActionTypes.DELETE,
+                                                  G.AuditLogActionTypes.DELETE,
                                                 targetType: T,
                                                 action: n,
                                               }),
                                               (0, _.jsx)(i.Text, {
                                                 variant: "text-md/normal",
                                                 children:
-                                                  G.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format(
+                                                  O.default.Messages.GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_RESOURCE_CHANNEL_REMOVED.format(
                                                     { name: e.title }
                                                   ),
                                               }),
@@ -5169,13 +5171,13 @@
                           }
                         })(a, t));
                     let l = e[a.key];
-                    return c(t, a)
+                    return U(t, a)
                       ? null
                       : ("function" == typeof l && (l = l(a)), Array.isArray(l))
                         ? l.map(
                             e => (
                               s++,
-                              C({
+                              M({
                                 changeItem: e,
                                 subChanges: u,
                                 changeNumber: s,
@@ -5187,7 +5189,7 @@
                             )
                           )
                         : (s++,
-                          C({
+                          M({
                             changeItem: l,
                             subChanges: u,
                             changeNumber: s,
@@ -5197,10 +5199,10 @@
                             change: a,
                           }));
                   })
-                ).filter(S.isNotNullish);
+                ).filter(g.isNotNullish);
               return (0, _.jsx)(i.Clickable, {
                 onClick: a,
-                className: T(O.changeDetails, n),
+                className: T(c.changeDetails, n),
                 children: u,
               });
             },
@@ -5208,47 +5210,47 @@
           ),
           l = s.useMemo(() => {
             switch (t.targetType) {
-              case D.AuditLogTargetTypes.GUILD:
-                return u(d.GuildChangeStrings());
-              case D.AuditLogTargetTypes.CHANNEL:
-              case D.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-                return u(d.ChannelChangeStrings());
-              case D.AuditLogTargetTypes.USER:
-                return u(d.UserChangeStrings());
-              case D.AuditLogTargetTypes.ROLE:
-                return u(d.RoleChangeStrings());
-              case D.AuditLogTargetTypes.ONBOARDING_PROMPT:
-                return u(d.OnboardingPromptChangeStrings());
-              case D.AuditLogTargetTypes.GUILD_ONBOARDING:
-                return u(d.OnboardingChangeStrings());
-              case D.AuditLogTargetTypes.HOME_SETTINGS:
-                return u(d.HomeSettingsChangeStrings());
-              case D.AuditLogTargetTypes.INVITE:
-                return u(d.InviteChangeStrings());
-              case D.AuditLogTargetTypes.WEBHOOK:
-                return u(d.WebhookChangeStrings());
-              case D.AuditLogTargetTypes.EMOJI:
-                return u(d.EmojiChangeStrings());
-              case D.AuditLogTargetTypes.STICKER:
-                return u(d.StickerChangeStrings());
-              case D.AuditLogTargetTypes.INTEGRATION:
-                return u(d.IntegrationChangeStrings());
-              case D.AuditLogTargetTypes.STAGE_INSTANCE:
-                return u(d.StageInstanceChangeStrings());
-              case D.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-                return u(d.GuildScheduledEventChangeStrings());
-              case D.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                return u(d.GuildScheduledEventExceptionChangeStrings());
-              case D.AuditLogTargetTypes.THREAD:
-                return u(d.ThreadChangeStrings());
-              case D.AuditLogTargetTypes.APPLICATION_COMMAND:
-                return u(d.CommandPermissionChangeStrings(t.changes));
-              case D.AuditLogTargetTypes.AUTO_MODERATION_RULE:
-                return u(d.AutoModerationRuleChangeStrings());
-              case D.AuditLogTargetTypes.GUILD_SOUNDBOARD:
-                return u(d.GuildSoundboardChangeStrings());
-              case D.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
-                return u(d.VoiceChannelStatusStrings());
+              case G.AuditLogTargetTypes.GUILD:
+                return u(N.GuildChangeStrings());
+              case G.AuditLogTargetTypes.CHANNEL:
+              case G.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+                return u(N.ChannelChangeStrings());
+              case G.AuditLogTargetTypes.USER:
+                return u(N.UserChangeStrings());
+              case G.AuditLogTargetTypes.ROLE:
+                return u(N.RoleChangeStrings());
+              case G.AuditLogTargetTypes.ONBOARDING_PROMPT:
+                return u(N.OnboardingPromptChangeStrings());
+              case G.AuditLogTargetTypes.GUILD_ONBOARDING:
+                return u(N.OnboardingChangeStrings());
+              case G.AuditLogTargetTypes.HOME_SETTINGS:
+                return u(N.HomeSettingsChangeStrings());
+              case G.AuditLogTargetTypes.INVITE:
+                return u(N.InviteChangeStrings());
+              case G.AuditLogTargetTypes.WEBHOOK:
+                return u(N.WebhookChangeStrings());
+              case G.AuditLogTargetTypes.EMOJI:
+                return u(N.EmojiChangeStrings());
+              case G.AuditLogTargetTypes.STICKER:
+                return u(N.StickerChangeStrings());
+              case G.AuditLogTargetTypes.INTEGRATION:
+                return u(N.IntegrationChangeStrings());
+              case G.AuditLogTargetTypes.STAGE_INSTANCE:
+                return u(N.StageInstanceChangeStrings());
+              case G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+                return u(N.GuildScheduledEventChangeStrings());
+              case G.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                return u(N.GuildScheduledEventExceptionChangeStrings());
+              case G.AuditLogTargetTypes.THREAD:
+                return u(N.ThreadChangeStrings());
+              case G.AuditLogTargetTypes.APPLICATION_COMMAND:
+                return u(N.CommandPermissionChangeStrings(t.changes));
+              case G.AuditLogTargetTypes.AUTO_MODERATION_RULE:
+                return u(N.AutoModerationRuleChangeStrings());
+              case G.AuditLogTargetTypes.GUILD_SOUNDBOARD:
+                return u(N.GuildSoundboardChangeStrings());
+              case G.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
+                return u(N.VoiceChannelStatusStrings());
             }
           }, [t.targetType, t.changes, u]);
         return (0, _.jsx)(_.Fragment, { children: l });
@@ -6718,88 +6720,88 @@
       E.r(t),
         E.d(t, {
           DEFAULT_FOR_STRINGS_KEY: function () {
-            return V;
+            return B;
           },
           GuildChangeStrings: function () {
-            return K;
-          },
-          ChannelChangeStrings: function () {
             return F;
           },
-          UserChangeStrings: function () {
+          ChannelChangeStrings: function () {
             return x;
           },
-          RoleChangeStrings: function () {
+          UserChangeStrings: function () {
             return b;
           },
-          OnboardingPromptChangeStrings: function () {
+          RoleChangeStrings: function () {
             return j;
           },
-          OnboardingChangeStrings: function () {
+          OnboardingPromptChangeStrings: function () {
             return k;
           },
-          HomeSettingsChangeStrings: function () {
+          OnboardingChangeStrings: function () {
             return Y;
           },
-          InviteChangeStrings: function () {
+          HomeSettingsChangeStrings: function () {
             return W;
           },
-          WebhookChangeStrings: function () {
+          InviteChangeStrings: function () {
             return w;
           },
-          EmojiChangeStrings: function () {
+          WebhookChangeStrings: function () {
             return J;
           },
-          StickerChangeStrings: function () {
+          EmojiChangeStrings: function () {
             return X;
           },
-          IntegrationChangeStrings: function () {
+          StickerChangeStrings: function () {
             return z;
           },
-          StageInstanceChangeStrings: function () {
+          IntegrationChangeStrings: function () {
             return Z;
           },
-          GuildScheduledEventChangeStrings: function () {
+          StageInstanceChangeStrings: function () {
             return Q;
           },
-          GuildScheduledEventExceptionChangeStrings: function () {
+          GuildScheduledEventChangeStrings: function () {
             return q;
           },
-          ThreadChangeStrings: function () {
+          GuildScheduledEventExceptionChangeStrings: function () {
             return $;
           },
-          CommandPermissionChangeStrings: function () {
+          ThreadChangeStrings: function () {
             return ee;
           },
-          AutoModerationRuleChangeStrings: function () {
+          CommandPermissionChangeStrings: function () {
             return et;
           },
-          GuildSoundboardChangeStrings: function () {
+          AutoModerationRuleChangeStrings: function () {
             return eE;
           },
-          VoiceChannelStatusStrings: function () {
+          GuildSoundboardChangeStrings: function () {
             return e_;
           },
-          NotRenderedChanges: function () {
+          VoiceChannelStatusStrings: function () {
             return es;
           },
-          ACTION_FILTER_ITEMS: function () {
+          NotRenderedChanges: function () {
             return ea;
           },
-          getChangeTitle: function () {
+          ACTION_FILTER_ITEMS: function () {
             return eT;
           },
-          getStringForAddedChannelFlag: function () {
+          getChangeTitle: function () {
             return en;
           },
-          getStringForRemovedChannelFlag: function () {
+          getStringForAddedChannelFlag: function () {
             return eA;
           },
-          getStringForPermission: function () {
+          getStringForRemovedChannelFlag: function () {
             return eu;
           },
-          transformLogs: function () {
+          getStringForPermission: function () {
             return eI;
+          },
+          transformLogs: function () {
+            return ei;
           },
         }),
         E("70102"),
@@ -6824,434 +6826,435 @@
         D = E("364685"),
         G = E("242020"),
         O = E("42203"),
-        c = E("27618"),
-        U = E("697218"),
-        C = E("888400"),
-        M = E("568734"),
-        R = E("449008"),
-        f = E("354023"),
-        h = E("299039"),
-        p = E("49111"),
-        P = E("724210"),
-        y = E("143460"),
-        H = E("745049"),
-        m = E("782340");
-      let v = new L.default("AuditLogUtils"),
-        V = -1,
-        B = () => ({
-          [p.AuditLogChangeKeys.REASON]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-        }),
+        c = E("305961"),
+        U = E("27618"),
+        C = E("697218"),
+        M = E("888400"),
+        R = E("568734"),
+        f = E("449008"),
+        h = E("354023"),
+        p = E("299039"),
+        P = E("49111"),
+        y = E("724210"),
+        H = E("143460"),
+        m = E("745049"),
+        v = E("782340");
+      let V = new L.default("AuditLogUtils"),
+        B = -1,
         K = () => ({
-          [p.AuditLogChangeKeys.NAME]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
-          [p.AuditLogChangeKeys.DESCRIPTION]: eN(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE
-          ),
-          [p.AuditLogChangeKeys.ICON_HASH]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
-          [p.AuditLogChangeKeys.SPLASH_HASH]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
-          [p.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
-          [p.AuditLogChangeKeys.BANNER_HASH]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE
-          ),
-          [p.AuditLogChangeKeys.OWNER_ID]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
-          [p.AuditLogChangeKeys.REGION]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
-          [p.AuditLogChangeKeys.PREFERRED_LOCALE]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
-          [p.AuditLogChangeKeys.AFK_CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE
-          ),
-          [p.AuditLogChangeKeys.AFK_TIMEOUT]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
-          [p.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE
-          ),
-          [p.AuditLogChangeKeys.RULES_CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE
-          ),
-          [p.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE
-          ),
-          [p.AuditLogChangeKeys.MFA_LEVEL]: {
-            [p.MFALevels.NONE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
-            [p.MFALevels.ELEVATED]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED,
-          },
-          [p.AuditLogChangeKeys.WIDGET_ENABLED]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
-            false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED,
-          },
-          [p.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE
-          ),
-          [p.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
-            [p.VerificationLevels.NONE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
-            [p.VerificationLevels.LOW]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
-            [p.VerificationLevels.MEDIUM]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
-            [p.VerificationLevels.HIGH]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
-            [p.VerificationLevels.VERY_HIGH]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH,
-          },
-          [p.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
-            [p.UserNotificationSettings.ALL_MESSAGES]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
-            [p.UserNotificationSettings.ONLY_MENTIONS]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS,
-          },
-          [p.AuditLogChangeKeys.VANITY_URL_CODE]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE
-          ),
-          [p.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
-            [p.GuildExplicitContentFilterTypes.DISABLED]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
-            [p.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
-            [p.GuildExplicitContentFilterTypes.ALL_MEMBERS]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS,
-          },
-          [p.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
-            false:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED,
-          },
-          [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-          [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
-          [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
-          [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
-          [p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
-          ...B(),
+          [P.AuditLogChangeKeys.REASON]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
         }),
         F = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE
+          [P.AuditLogChangeKeys.NAME]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_NAME_CHANGE,
+          [P.AuditLogChangeKeys.DESCRIPTION]: eS(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CLEAR,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_DESCRIPTION_CHANGE
           ),
-          [p.AuditLogChangeKeys.POSITION]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE
+          [P.AuditLogChangeKeys.ICON_HASH]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_ICON_HASH_CHANGE,
+          [P.AuditLogChangeKeys.SPLASH_HASH]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SPLASH_HASH_CHANGE,
+          [P.AuditLogChangeKeys.DISCOVERY_SPLASH_HASH]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_DISCOVERY_SPLASH_HASH_CHANGE,
+          [P.AuditLogChangeKeys.BANNER_HASH]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_REMOVE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_BANNER_HASH_CHANGE
           ),
-          [p.AuditLogChangeKeys.TOPIC]: eS(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR
+          [P.AuditLogChangeKeys.OWNER_ID]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_OWNER_ID_CHANGE,
+          [P.AuditLogChangeKeys.REGION]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_REGION_CHANGE,
+          [P.AuditLogChangeKeys.PREFERRED_LOCALE]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREFERRED_LOCALE_CHANGE,
+          [P.AuditLogChangeKeys.AFK_CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CLEAR,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_CHANNEL_ID_CHANGE
           ),
-          [p.AuditLogChangeKeys.BITRATE]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE
+          [P.AuditLogChangeKeys.AFK_TIMEOUT]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_AFK_TIMEOUT_CHANGE,
+          [P.AuditLogChangeKeys.SYSTEM_CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_DISABLE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_ID_CHANGE
           ),
-          [p.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: eS(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE
+          [P.AuditLogChangeKeys.RULES_CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CLEAR,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_RULES_CHANNEL_ID_CHANGE
           ),
-          [p.AuditLogChangeKeys.USER_LIMIT]: ed(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE
+          [P.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CLEAR,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATES_CHANNEL_ID_CHANGE
           ),
-          [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ed(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE
-          ),
-          [p.AuditLogChangeKeys.PERMISSIONS_RESET]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
-          [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
-          [p.AuditLogChangeKeys.PERMISSIONS_DENIED]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
-          [p.AuditLogChangeKeys.REASON]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
-          [p.AuditLogChangeKeys.NSFW]: {
-            false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED,
+          [P.AuditLogChangeKeys.MFA_LEVEL]: {
+            [P.MFALevels.NONE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_DISABLED,
+            [P.MFALevels.ELEVATED]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_MFA_LEVEL_ENABLED,
           },
-          [p.AuditLogChangeKeys.TYPE]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE
+          [P.AuditLogChangeKeys.WIDGET_ENABLED]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_ENABLED,
+            false:
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_DISABLED,
+          },
+          [P.AuditLogChangeKeys.WIDGET_CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_DELETE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_WIDGET_CHANNEL_ID_CHANGE
           ),
-          [p.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: ed(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE
+          [P.AuditLogChangeKeys.VERIFICATION_LEVEL]: {
+            [P.VerificationLevels.NONE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_NONE,
+            [P.VerificationLevels.LOW]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_LOW,
+            [P.VerificationLevels.MEDIUM]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_MEDIUM,
+            [P.VerificationLevels.HIGH]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_HIGH,
+            [P.VerificationLevels.VERY_HIGH]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_VERIFICATION_LEVEL_CHANGE_VERY_HIGH,
+          },
+          [P.AuditLogChangeKeys.DEFAULT_MESSAGE_NOTIFICATIONS]: {
+            [P.UserNotificationSettings.ALL_MESSAGES]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ALL_MESSAGES,
+            [P.UserNotificationSettings.ONLY_MENTIONS]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_DEFAULT_MESSAGE_NOTIFICATIONS_CHANGE_ONLY_MENTIONS,
+          },
+          [P.AuditLogChangeKeys.VANITY_URL_CODE]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_DELETE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_VANITY_URL_CODE_CHANGE
           ),
-          [p.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: ed(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE
-          ),
-          [p.AuditLogChangeKeys.FLAGS]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
-          [p.AuditLogChangeKeys.AVAILABLE_TAG_ADD]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
-          [p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
-          [p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE,
+          [P.AuditLogChangeKeys.EXPLICIT_CONTENT_FILTER]: {
+            [P.GuildExplicitContentFilterTypes.DISABLED]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_DISABLE,
+            [P.GuildExplicitContentFilterTypes.MEMBERS_WITHOUT_ROLES]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_MEMBERS_WITHOUT_ROLES,
+            [P.GuildExplicitContentFilterTypes.ALL_MEMBERS]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_EXPLICIT_CONTENT_FILTER_ALL_MEMBERS,
+          },
+          [P.AuditLogChangeKeys.PREMIUM_PROGRESS_BAR_ENABLED]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_ENABLED,
+            false:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_GUILD_PREMIUM_PROGRESS_BAR_ENABLED_DISABLED,
+          },
+          [P.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+          [P.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATIONS,
+          [P.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_PREMIUM_SUBSCRIPTIONS,
+          [P.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_REMINDER_NOTIFICATIONS,
+          [P.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_SYSTEM_CHANNEL_JOIN_NOTIFICATION_REPLIES,
+          ...K(),
         }),
         x = () => ({
-          [p.AuditLogChangeKeys.NICK]: eS(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NAME_CHANGE
           ),
-          [p.AuditLogChangeKeys.DEAF]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
-            false: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF,
-          },
-          [p.AuditLogChangeKeys.MUTE]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
-            false: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF,
-          },
-          [p.AuditLogChangeKeys.ROLES_REMOVE]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
-          [p.AuditLogChangeKeys.ROLES_ADD]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
-          [p.AuditLogChangeKeys.PRUNE_DELETE_DAYS]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
-          [p.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: eS(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED
+          [P.AuditLogChangeKeys.POSITION]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_POSITION_CHANGE
           ),
-          [p.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
+          [P.AuditLogChangeKeys.TOPIC]: eg(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CLEAR
+          ),
+          [P.AuditLogChangeKeys.BITRATE]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_BITRATE_CHANGE
+          ),
+          [P.AuditLogChangeKeys.RTC_REGION_OVERRIDE]: eg(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CHANGE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_CREATE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RTC_REGION_OVERRIDE_DELETE
+          ),
+          [P.AuditLogChangeKeys.USER_LIMIT]: eN(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CREATE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_USER_LIMIT_CHANGE
+          ),
+          [P.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eN(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE
+          ),
+          [P.AuditLogChangeKeys.PERMISSIONS_RESET]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_RESET,
+          [P.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_GRANTED,
+          [P.AuditLogChangeKeys.PERMISSIONS_DENIED]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_PERMISSION_OVERRIDES_DENIED,
+          [P.AuditLogChangeKeys.REASON]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+          [P.AuditLogChangeKeys.NSFW]: {
             false:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF,
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_DISABLED,
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_NSFW_ENABLED,
           },
-          [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
-          ...B(),
+          [P.AuditLogChangeKeys.TYPE]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TYPE_CHANGE
+          ),
+          [P.AuditLogChangeKeys.VIDEO_QUALITY_MODE]: eN(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CREATE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VIDEO_QUALITY_MODE_CHANGE
+          ),
+          [P.AuditLogChangeKeys.DEFAULT_AUTO_ARCHIVE_DURATION]: eN(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CREATE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DEFAULT_AUTO_ARCHIVE_DURATION_CHANGE
+          ),
+          [P.AuditLogChangeKeys.FLAGS]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_FLAGS_CHANGE,
+          [P.AuditLogChangeKeys.AVAILABLE_TAG_ADD]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_ADD,
+          [P.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
+          [P.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE,
         }),
         b = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE
+          [P.AuditLogChangeKeys.NICK]: eg(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE
           ),
-          [p.AuditLogChangeKeys.DESCRIPTION]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
+          [P.AuditLogChangeKeys.DEAF]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
+            false: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_OFF,
+          },
+          [P.AuditLogChangeKeys.MUTE]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_ON,
+            false: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MUTE_OFF,
+          },
+          [P.AuditLogChangeKeys.ROLES_REMOVE]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_REMOVE,
+          [P.AuditLogChangeKeys.ROLES_ADD]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLES_ADD,
+          [P.AuditLogChangeKeys.PRUNE_DELETE_DAYS]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE_DELETE_DAYS,
+          [P.AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL]: eg(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_COMMUNICATION_DISABLED_UNTIL_REMOVED
           ),
-          [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
-          [p.AuditLogChangeKeys.PERMISSIONS_DENIED]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
-          [p.AuditLogChangeKeys.COLOR]: {
-            "#000000":
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
-            [V]: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS,
-          },
-          [p.AuditLogChangeKeys.HOIST]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
-            false: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF,
-          },
-          [p.AuditLogChangeKeys.MENTIONABLE]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
+          [P.AuditLogChangeKeys.BYPASSES_VERIFICATION]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_ON,
             false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF,
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BYPASSES_VERIFICATION_OFF,
           },
-          [p.AuditLogChangeKeys.ICON_HASH]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
-          [p.AuditLogChangeKeys.UNICODE_EMOJI]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
-          ...B(),
+          [P.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
+          ...K(),
         }),
         j = () => ({
-          ...B(),
-          [p.AuditLogChangeKeys.TITLE]: e => {
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE
+          ),
+          [P.AuditLogChangeKeys.DESCRIPTION]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
+          ),
+          [P.AuditLogChangeKeys.PERMISSIONS_GRANTED]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,
+          [P.AuditLogChangeKeys.PERMISSIONS_DENIED]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_DENIED,
+          [P.AuditLogChangeKeys.COLOR]: {
+            "#000000":
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_NONE,
+            [B]: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_COLOR_IOS,
+          },
+          [P.AuditLogChangeKeys.HOIST]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_ON,
+            false: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_HOIST_OFF,
+          },
+          [P.AuditLogChangeKeys.MENTIONABLE]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_ON,
+            false:
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_MENTIONABLE_OFF,
+          },
+          [P.AuditLogChangeKeys.ICON_HASH]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_ICON_HASH_CHANGE,
+          [P.AuditLogChangeKeys.UNICODE_EMOJI]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ROLE_UNICODE_EMOJI_CHANGE,
+          ...K(),
+        }),
+        k = () => ({
+          ...K(),
+          [P.AuditLogChangeKeys.TITLE]: e => {
             let { oldValue: t, newValue: E } = e;
             return null != t
               ? (0 === t.length &&
                   (t =
-                    m.default.Messages
+                    v.default.Messages
                       .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format(
+                v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CHANGE.format(
                   { oldValue: t, newValue: E }
                 ))
-              : m.default.Messages
+              : v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_TITLE_CREATE;
           },
-          [p.AuditLogChangeKeys.DESCRIPTION]: e => {
+          [P.AuditLogChangeKeys.DESCRIPTION]: e => {
             let { oldValue: t, newValue: E } = e;
             return null != t
               ? (0 === t.length &&
                   (t =
-                    m.default.Messages
+                    v.default.Messages
                       .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE),
-                m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format(
+                v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CHANGE.format(
                   { oldValue: t, newValue: E }
                 ))
-              : m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format(
+              : v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DESCRIPTION_CREATE.format(
                   { newValue: E }
                 );
           },
-          [p.AuditLogChangeKeys.OPTIONS]: () =>
-            m.default.Messages
+          [P.AuditLogChangeKeys.OPTIONS]: () =>
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_PROMPT_CHANGED_OPTIONS,
-          [p.AuditLogChangeKeys.SINGLE_SELECT]: {
-            true: m.default.Messages
+          [P.AuditLogChangeKeys.SINGLE_SELECT]: {
+            true: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_SINGLE_SELECT,
             false:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_MULTI_SELECT,
           },
-          [p.AuditLogChangeKeys.REQUIRED]: {
-            true: m.default.Messages
+          [P.AuditLogChangeKeys.REQUIRED]: {
+            true: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_REQUIRED,
             false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL,
-          },
-        }),
-        k = () => ({
-          ...B(),
-          [p.AuditLogChangeKeys.DEFAULT_CHANNEL_IDS]: e => {
-            let { newValue: t } = e;
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DEFAULT_CHANNEL_IDS.format(
-              { count: t.length }
-            );
-          },
-          [p.AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_DEFAULT_CHANNELS,
-            false:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_DEFAULT_CHANNELS,
-          },
-          [p.AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_PROMPTS,
-            false:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_PROMPTS,
-          },
-          [p.AuditLogChangeKeys.ENABLED]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE,
-            false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE,
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_OPTIONAL,
           },
         }),
         Y = () => ({
-          ...B(),
-          [p.AuditLogChangeKeys.WELCOME_MESSAGE]: () =>
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_WELCOME_MESSAGE,
-          [p.AuditLogChangeKeys.NEW_MEMBER_ACTIONS]: () =>
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_NEW_MEMBER_ACTIONS,
-          [p.AuditLogChangeKeys.RESOURCE_CHANNELS]: () =>
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_RESOURCE_CHANNELS,
+          ...K(),
+          [P.AuditLogChangeKeys.DEFAULT_CHANNEL_IDS]: e => {
+            let { newValue: t } = e;
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DEFAULT_CHANNEL_IDS.format(
+              { count: t.length }
+            );
+          },
+          [P.AuditLogChangeKeys.ENABLE_DEFAULT_CHANNELS]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_DEFAULT_CHANNELS,
+            false:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_DEFAULT_CHANNELS,
+          },
+          [P.AuditLogChangeKeys.ENABLE_ONBOARDING_PROMPTS]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE_PROMPTS,
+            false:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE_PROMPTS,
+          },
+          [P.AuditLogChangeKeys.ENABLED]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_ENABLE,
+            false:
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_DISABLE,
+          },
         }),
         W = () => ({
-          [p.AuditLogChangeKeys.CODE]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
-          [p.AuditLogChangeKeys.CHANNEL_ID]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
-          [p.AuditLogChangeKeys.MAX_USES]: {
-            0: m.default.Messages
+          ...K(),
+          [P.AuditLogChangeKeys.WELCOME_MESSAGE]: () =>
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_WELCOME_MESSAGE,
+          [P.AuditLogChangeKeys.NEW_MEMBER_ACTIONS]: () =>
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_NEW_MEMBER_ACTIONS,
+          [P.AuditLogChangeKeys.RESOURCE_CHANNELS]: () =>
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CHANGED_RESOURCE_CHANNELS,
+        }),
+        w = () => ({
+          [P.AuditLogChangeKeys.CODE]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CODE_CREATE,
+          [P.AuditLogChangeKeys.CHANNEL_ID]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CHANNEL_CREATE,
+          [P.AuditLogChangeKeys.MAX_USES]: {
+            0: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE_INFINITE,
-            [V]: m.default.Messages
+            [B]: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_USES_CREATE,
           },
-          [p.AuditLogChangeKeys.MAX_AGE]: {
-            0: m.default.Messages
+          [P.AuditLogChangeKeys.MAX_AGE]: {
+            0: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE_INFINITE,
-            [V]: m.default.Messages
+            [B]: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INVITE_MAX_AGE_CREATE,
           },
-          [p.AuditLogChangeKeys.TEMPORARY]: {
-            true: m.default.Messages
+          [P.AuditLogChangeKeys.TEMPORARY]: {
+            true: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_ON,
             false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF,
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_TEMPORARY_OFF,
           },
-          [p.AuditLogChangeKeys.FLAGS]: e => {
+          [P.AuditLogChangeKeys.FLAGS]: e => {
             let { newValue: t } = e;
             return (function (e) {
               let { newValue: t } = e;
@@ -7259,1183 +7262,1183 @@
                 .map(e =>
                   (function (e) {
                     if (e === A.GuildInviteFlags.IS_GUEST_INVITE)
-                      return m.default.Messages
+                      return v.default.Messages
                         .GUILD_SETTINGS_AUDIT_LOG_GUILD_INVITE_GUEST_INVITE;
                     return null;
                   })(e)
                 )
-                .filter(R.isNotNullish);
+                .filter(f.isNotNullish);
             })({ newValue: t });
           },
-          ...B(),
-        }),
-        w = () => ({
-          [p.AuditLogChangeKeys.CHANNEL_ID]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE
-          ),
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE
-          ),
-          [p.AuditLogChangeKeys.AVATAR_HASH]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
-          [p.AuditLogChangeKeys.REASON]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
+          ...K(),
         }),
         J = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE
+          [P.AuditLogChangeKeys.CHANNEL_ID]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CHANNEL_CHANGE
           ),
-          ...B(),
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_NAME_CHANGE
+          ),
+          [P.AuditLogChangeKeys.AVATAR_HASH]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_AVATAR,
+          [P.AuditLogChangeKeys.REASON]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMON_REASON,
         }),
         X = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_NAME_CHANGE
           ),
-          [p.AuditLogChangeKeys.TAGS]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE
-          ),
-          [p.AuditLogChangeKeys.DESCRIPTION]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
-          ),
-          ...B(),
+          ...K(),
         }),
         z = () => ({
-          [p.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
-            true: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
-            false:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF,
-          },
-          [p.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
-            0: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
-            1: m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER,
-          },
-          [p.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
-          ...B(),
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_NAME_CHANGE
+          ),
+          [P.AuditLogChangeKeys.TAGS]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_TAGS_CHANGE
+          ),
+          [P.AuditLogChangeKeys.DESCRIPTION]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE
+          ),
+          ...K(),
         }),
         Z = () => ({
-          [p.AuditLogChangeKeys.TOPIC]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE
-          ),
-          [p.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-            [H.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [H.GuildScheduledEventPrivacyLevel.PUBLIC]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
+          [P.AuditLogChangeKeys.ENABLE_EMOTICONS]: {
+            true: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_ON,
+            false:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_ENABLE_EMOTICONS_OFF,
           },
-          ...B(),
+          [P.AuditLogChangeKeys.EXPIRE_BEHAVIOR]: {
+            0: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_REMOVE_SYNCED_ROLE,
+            1: v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_BEHAVIOR_KICK_FROM_SERVER,
+          },
+          [P.AuditLogChangeKeys.EXPIRE_GRACE_PERIOD]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_EXPIRE_GRACE_PERIOD,
+          ...K(),
         }),
         Q = () => ({
-          [p.AuditLogChangeKeys.NAME]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
-          [p.AuditLogChangeKeys.DESCRIPTION]:
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
-          [p.AuditLogChangeKeys.PRIVACY_LEVEL]: {
-            [H.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
-              m.default.Messages
+          [P.AuditLogChangeKeys.TOPIC]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TOPIC_CHANGE
+          ),
+          [P.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+            [m.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
-            [H.GuildScheduledEventPrivacyLevel.PUBLIC]:
-              m.default.Messages
+            [m.GuildScheduledEventPrivacyLevel.PUBLIC]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
           },
-          [p.AuditLogChangeKeys.STATUS]: {
-            [H.GuildScheduledEventStatus.SCHEDULED]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
-            [H.GuildScheduledEventStatus.ACTIVE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
-            [H.GuildScheduledEventStatus.COMPLETED]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
-            [H.GuildScheduledEventStatus.CANCELED]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED,
-          },
-          [p.AuditLogChangeKeys.ENTITY_TYPE]: {
-            [H.GuildScheduledEventEntityTypes.NONE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
-            [H.GuildScheduledEventEntityTypes.STAGE_INSTANCE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
-            [H.GuildScheduledEventEntityTypes.VOICE]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
-            [H.GuildScheduledEventEntityTypes.EXTERNAL]:
-              m.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL,
-          },
-          [p.AuditLogChangeKeys.CHANNEL_ID]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL
-          ),
-          [p.AuditLogChangeKeys.LOCATION]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION
-          ),
-          [p.AuditLogChangeKeys.IMAGE_HASH]: eN(
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_REMOVE,
-            m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_CHANGE
-          ),
-          ...B(),
+          ...K(),
         }),
         q = () => ({
-          [p.AuditLogChangeKeys.SCHEDULED_START_TIME]: eN(
-            m.default.Messages
+          [P.AuditLogChangeKeys.NAME]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_NAME_CREATE,
+          [P.AuditLogChangeKeys.DESCRIPTION]:
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DESCRIPTION_CREATE,
+          [P.AuditLogChangeKeys.PRIVACY_LEVEL]: {
+            [m.GuildScheduledEventPrivacyLevel.GUILD_ONLY]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_GUILD_ONLY,
+            [m.GuildScheduledEventPrivacyLevel.PUBLIC]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_PRIVACY_LEVEL_PUBLIC,
+          },
+          [P.AuditLogChangeKeys.STATUS]: {
+            [m.GuildScheduledEventStatus.SCHEDULED]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_SCHEDULED,
+            [m.GuildScheduledEventStatus.ACTIVE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_ACTIVE,
+            [m.GuildScheduledEventStatus.COMPLETED]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_COMPLETED,
+            [m.GuildScheduledEventStatus.CANCELED]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_STATUS_CANCELED,
+          },
+          [P.AuditLogChangeKeys.ENTITY_TYPE]: {
+            [m.GuildScheduledEventEntityTypes.NONE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_NONE,
+            [m.GuildScheduledEventEntityTypes.STAGE_INSTANCE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_STAGE_INSTANCE,
+            [m.GuildScheduledEventEntityTypes.VOICE]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_VOICE,
+            [m.GuildScheduledEventEntityTypes.EXTERNAL]:
+              v.default.Messages
+                .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_ENTITY_TYPE_EXTERNAL,
+          },
+          [P.AuditLogChangeKeys.CHANNEL_ID]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL_CLEAR,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CHANNEL
+          ),
+          [P.AuditLogChangeKeys.LOCATION]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION_CLEAR,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_LOCATION
+          ),
+          [P.AuditLogChangeKeys.IMAGE_HASH]: eS(
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_REMOVE,
+            v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_IMAGE_HASH_CHANGE
+          ),
+          ...K(),
+        }),
+        $ = () => ({
+          [P.AuditLogChangeKeys.SCHEDULED_START_TIME]: eS(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_REMOVED,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_START_TIME_CHANGE
           ),
-          [p.AuditLogChangeKeys.SCHEDULED_END_TIME]: eN(
-            m.default.Messages
+          [P.AuditLogChangeKeys.SCHEDULED_END_TIME]: eS(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_REMOVED,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_SCHEDULED_END_TIME_CHANGE
           ),
-          [p.AuditLogChangeKeys.IS_CANCELED]: e => {
+          [P.AuditLogChangeKeys.IS_CANCELED]: e => {
             if (null != e.oldValue || !0 === e.newValue) {
               if (!e.oldValue && e.newValue)
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_CANCELED;
               if (e.oldValue && !e.newValue)
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_EXCEPTION_IS_CANCELED_RESTORED;
             }
             return "";
           },
-          ...B(),
+          ...K(),
         }),
-        $ = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE,
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE
+        ee = () => ({
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CREATE,
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_NAME_CHANGE
           ),
-          [p.AuditLogChangeKeys.ARCHIVED]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
+          [P.AuditLogChangeKeys.ARCHIVED]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_ARCHIVED,
             false:
-              m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED,
+              v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNARCHIVED,
           },
-          [p.AuditLogChangeKeys.LOCKED]: {
-            true: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
-            false: m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED,
+          [P.AuditLogChangeKeys.LOCKED]: {
+            true: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_LOCKED,
+            false: v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UNLOCKED,
           },
-          [p.AuditLogChangeKeys.INVITABLE]: {
-            true: m.default.Messages
+          [P.AuditLogChangeKeys.INVITABLE]: {
+            true: v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_ENABLED,
             false:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_THREAD_INVITABLE_DISABLED,
           },
-          [p.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: ed(
-            m.default.Messages
+          [P.AuditLogChangeKeys.AUTO_ARCHIVE_DURATION]: eN(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_THREAD_AUTO_ARCHIVE_DURATION_CHANGE
           ),
-          [p.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: ed(
-            m.default.Messages
+          [P.AuditLogChangeKeys.RATE_LIMIT_PER_USER]: eN(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_RATE_LIMIT_PER_USER_CHANGE
           ),
-          [p.AuditLogChangeKeys.FLAGS]:
-            m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
-          ...B(),
+          [P.AuditLogChangeKeys.FLAGS]:
+            v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_FLAGS_CHANGE,
+          ...K(),
         }),
-        ee = e => {
-          let t = { ...B() };
+        et = e => {
+          let t = { ...K() };
           return (
             null == e ||
               e.forEach(e => {
                 e.newValue
                   ? e.newValue.permission
                     ? (t[e.key] =
-                        m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED)
+                        v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_GRANTED)
                     : (t[e.key] =
-                        m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED)
+                        v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_DENIED)
                   : (t[e.key] =
-                      m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED);
+                      v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_REMOVED);
               }),
             t
           );
         },
-        et = () => {
+        eE = () => {
           let e = {
-            [p.AuditLogChangeKeys.NAME]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.NAME]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NAME_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_TYPE_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EVENT_TYPE_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ACTIONS_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: {
-              true: m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: {
+              true: v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE,
               false:
-                m.default.Messages
+                v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE,
             },
-            [p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_ROLES_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_EXEMPT_CHANNELS_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_METADATA]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_UPDATE,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_KEYWORDS,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_KEYWORDS,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ADD_REGEX_PATTERNS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_REGEX_PATTERNS,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_REGEX_PATTERNS]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_REGEX_PATTERNS,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ADD_ALLOW_LIST,
-            [p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST]:
-              m.default.Messages
+            [P.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_ALLOW_LIST]:
+              v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_REMOVE_ALLOW_LIST,
-            ...B(),
+            ...K(),
           };
           return e;
         },
-        eE = () => ({
-          [p.AuditLogChangeKeys.NAME]: ed(
-            m.default.Messages
+        e_ = () => ({
+          [P.AuditLogChangeKeys.NAME]: eN(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_NAME_CHANGE
           ),
-          [p.AuditLogChangeKeys.VOLUME]: ed(
-            m.default.Messages
+          [P.AuditLogChangeKeys.VOLUME]: eN(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_VOLUME_CHANGE
           ),
-          [p.AuditLogChangeKeys.EMOJI_NAME]: eS(
-            m.default.Messages
+          [P.AuditLogChangeKeys.EMOJI_NAME]: eg(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REPLACE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_NAME_REMOVE
           ),
-          [p.AuditLogChangeKeys.EMOJI_ID]: eS(
-            m.default.Messages
+          [P.AuditLogChangeKeys.EMOJI_ID]: eg(
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REPLACE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_CREATE,
-            m.default.Messages
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_EMOJI_ID_REMOVE
           ),
-          ...B(),
+          ...K(),
         }),
-        e_ = () => ({
-          [p.AuditLogChangeKeys.STATUS]:
-            m.default.Messages
+        es = () => ({
+          [P.AuditLogChangeKeys.STATUS]:
+            v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_STATUS_CREATE,
-          ...B(),
+          ...K(),
         }),
-        es = {
-          [p.AuditLogTargetTypes.CHANNEL]: {
-            [p.AuditLogChangeKeys.ID]: !0,
-            [p.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
+        ea = {
+          [P.AuditLogTargetTypes.CHANNEL]: {
+            [P.AuditLogChangeKeys.ID]: !0,
+            [P.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
           },
-          [p.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
-            [p.AuditLogChangeKeys.TYPE]: !0,
-            [p.AuditLogChangeKeys.ID]: !0,
-            [p.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
+          [P.AuditLogTargetTypes.CHANNEL_OVERWRITE]: {
+            [P.AuditLogChangeKeys.TYPE]: !0,
+            [P.AuditLogChangeKeys.ID]: !0,
+            [P.AuditLogChangeKeys.PERMISSION_OVERWRITES]: !0,
           },
-          [p.AuditLogTargetTypes.INVITE]: {
-            [p.AuditLogChangeKeys.INVITER_ID]: !0,
-            [p.AuditLogChangeKeys.USES]: !0,
+          [P.AuditLogTargetTypes.INVITE]: {
+            [P.AuditLogChangeKeys.INVITER_ID]: !0,
+            [P.AuditLogChangeKeys.USES]: !0,
           },
-          [p.AuditLogTargetTypes.WEBHOOK]: {
-            [p.AuditLogChangeKeys.TYPE]: !0,
-            [p.AuditLogChangeKeys.APPLICATION_ID]: !0,
+          [P.AuditLogTargetTypes.WEBHOOK]: {
+            [P.AuditLogChangeKeys.TYPE]: !0,
+            [P.AuditLogChangeKeys.APPLICATION_ID]: !0,
           },
-          [p.AuditLogTargetTypes.INTEGRATION]: {
-            [p.AuditLogChangeKeys.TYPE]: !0,
+          [P.AuditLogTargetTypes.INTEGRATION]: {
+            [P.AuditLogChangeKeys.TYPE]: !0,
           },
-          [p.AuditLogTargetTypes.THREAD]: {
-            [p.AuditLogChangeKeys.ID]: !0,
-            [p.AuditLogChangeKeys.TYPE]: !0,
+          [P.AuditLogTargetTypes.THREAD]: {
+            [P.AuditLogChangeKeys.ID]: !0,
+            [P.AuditLogChangeKeys.TYPE]: !0,
           },
-          [p.AuditLogTargetTypes.STICKER]: {
-            [p.AuditLogChangeKeys.ID]: !0,
-            [p.AuditLogChangeKeys.TYPE]: !0,
-            [p.AuditLogChangeKeys.ASSET]: !0,
-            [p.AuditLogChangeKeys.FORMAT_TYPE]: !0,
-            [p.AuditLogChangeKeys.AVAILABLE]: !0,
-            [p.AuditLogChangeKeys.GUILD_ID]: !0,
+          [P.AuditLogTargetTypes.STICKER]: {
+            [P.AuditLogChangeKeys.ID]: !0,
+            [P.AuditLogChangeKeys.TYPE]: !0,
+            [P.AuditLogChangeKeys.ASSET]: !0,
+            [P.AuditLogChangeKeys.FORMAT_TYPE]: !0,
+            [P.AuditLogChangeKeys.AVAILABLE]: !0,
+            [P.AuditLogChangeKeys.GUILD_ID]: !0,
           },
-          [p.AuditLogTargetTypes.GUILD_HOME]: {
-            [p.AuditLogChangeKeys.ENTITY_TYPE]: !0,
+          [P.AuditLogTargetTypes.GUILD_HOME]: {
+            [P.AuditLogChangeKeys.ENTITY_TYPE]: !0,
           },
-          [p.AuditLogTargetTypes.GUILD_ONBOARDING]: {
-            [p.AuditLogChangeKeys.PROMPTS]: !0,
+          [P.AuditLogTargetTypes.GUILD_ONBOARDING]: {
+            [P.AuditLogChangeKeys.PROMPTS]: !0,
           },
-          [p.AuditLogTargetTypes.GUILD_SOUNDBOARD]: {
-            [p.AuditLogChangeKeys.ID]: !0,
-            [p.AuditLogChangeKeys.SOUND_ID]: !0,
+          [P.AuditLogTargetTypes.GUILD_SOUNDBOARD]: {
+            [P.AuditLogChangeKeys.ID]: !0,
+            [P.AuditLogChangeKeys.SOUND_ID]: !0,
           },
         },
-        ea = () => [
+        eT = () => [
           {
-            value: p.AuditLogActions.ALL,
-            label: m.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
-            valueLabel: m.default.Messages.GUILD_SETTINGS_FILTER_ALL,
+            value: P.AuditLogActions.ALL,
+            label: v.default.Messages.GUILD_SETTINGS_FILTER_ALL_ACTIONS,
+            valueLabel: v.default.Messages.GUILD_SETTINGS_FILTER_ALL,
           },
           {
-            value: p.AuditLogActions.GUILD_UPDATE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE,
+            value: P.AuditLogActions.GUILD_UPDATE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_GUILD_UPDATE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_CREATE,
+            value: P.AuditLogActions.CHANNEL_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_CREATE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_UPDATE,
+            value: P.AuditLogActions.CHANNEL_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_UPDATE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_DELETE,
+            value: P.AuditLogActions.CHANNEL_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CHANNEL_DELETE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
+            value: P.AuditLogActions.CHANNEL_OVERWRITE_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_CREATE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
+            value: P.AuditLogActions.CHANNEL_OVERWRITE_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_UPDATE,
           },
           {
-            value: p.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
+            value: P.AuditLogActions.CHANNEL_OVERWRITE_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_CHANNEL_OVERWRITE_DELETE,
           },
           {
-            value: p.AuditLogActions.MEMBER_KICK,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK,
+            value: P.AuditLogActions.MEMBER_KICK,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_KICK,
           },
           {
-            value: p.AuditLogActions.MEMBER_PRUNE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE,
+            value: P.AuditLogActions.MEMBER_PRUNE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_PRUNE,
           },
           {
-            value: p.AuditLogActions.MEMBER_BAN_ADD,
+            value: P.AuditLogActions.MEMBER_BAN_ADD,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_ADD,
           },
           {
-            value: p.AuditLogActions.MEMBER_BAN_REMOVE,
+            value: P.AuditLogActions.MEMBER_BAN_REMOVE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_BAN_REMOVE,
           },
           {
-            value: p.AuditLogActions.MEMBER_UPDATE,
+            value: P.AuditLogActions.MEMBER_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_UPDATE,
           },
           {
-            value: p.AuditLogActions.MEMBER_ROLE_UPDATE,
+            value: P.AuditLogActions.MEMBER_ROLE_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_MEMBER_ROLE_UPDATE,
           },
           {
-            value: p.AuditLogActions.MEMBER_MOVE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE,
+            value: P.AuditLogActions.MEMBER_MOVE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_MOVE,
           },
           {
-            value: p.AuditLogActions.MEMBER_DISCONNECT,
+            value: P.AuditLogActions.MEMBER_DISCONNECT,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MEMBER_DISCONNECT,
           },
           {
-            value: p.AuditLogActions.BOT_ADD,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD,
+            value: P.AuditLogActions.BOT_ADD,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_BOT_ADD,
           },
           {
-            value: p.AuditLogActions.THREAD_CREATE,
+            value: P.AuditLogActions.THREAD_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_CREATE,
           },
           {
-            value: p.AuditLogActions.THREAD_UPDATE,
+            value: P.AuditLogActions.THREAD_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_UPDATE,
           },
           {
-            value: p.AuditLogActions.THREAD_DELETE,
+            value: P.AuditLogActions.THREAD_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_THREAD_DELETE,
           },
           {
-            value: p.AuditLogActions.ROLE_CREATE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
+            value: P.AuditLogActions.ROLE_CREATE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_CREATE,
           },
           {
-            value: p.AuditLogActions.ROLE_UPDATE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE,
+            value: P.AuditLogActions.ROLE_UPDATE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_UPDATE,
           },
           {
-            value: p.AuditLogActions.ROLE_DELETE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE,
+            value: P.AuditLogActions.ROLE_DELETE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ROLE_DELETE,
           },
           {
-            value: p.AuditLogActions.ONBOARDING_PROMPT_CREATE,
+            value: P.AuditLogActions.ONBOARDING_PROMPT_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_CREATE,
           },
           {
-            value: p.AuditLogActions.ONBOARDING_PROMPT_UPDATE,
+            value: P.AuditLogActions.ONBOARDING_PROMPT_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_UPDATE,
           },
           {
-            value: p.AuditLogActions.ONBOARDING_PROMPT_DELETE,
+            value: P.AuditLogActions.ONBOARDING_PROMPT_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_ROLE_PROMPT_DELETE,
           },
           {
-            value: p.AuditLogActions.ONBOARDING_CREATE,
+            value: P.AuditLogActions.ONBOARDING_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_CREATE,
           },
           {
-            value: p.AuditLogActions.ONBOARDING_UPDATE,
+            value: P.AuditLogActions.ONBOARDING_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_ONBOARDING_UPDATE,
           },
           {
-            value: p.AuditLogActions.HOME_SETTINGS_CREATE,
+            value: P.AuditLogActions.HOME_SETTINGS_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_CREATE,
           },
           {
-            value: p.AuditLogActions.HOME_SETTINGS_UPDATE,
+            value: P.AuditLogActions.HOME_SETTINGS_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_HOME_SETTINGS_UPDATE,
           },
           {
-            value: p.AuditLogActions.INVITE_CREATE,
+            value: P.AuditLogActions.INVITE_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_CREATE,
           },
           {
-            value: p.AuditLogActions.INVITE_UPDATE,
+            value: P.AuditLogActions.INVITE_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_UPDATE,
           },
           {
-            value: p.AuditLogActions.INVITE_DELETE,
+            value: P.AuditLogActions.INVITE_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_INVITE_DELETE,
           },
           {
-            value: p.AuditLogActions.WEBHOOK_CREATE,
+            value: P.AuditLogActions.WEBHOOK_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_CREATE,
           },
           {
-            value: p.AuditLogActions.WEBHOOK_UPDATE,
+            value: P.AuditLogActions.WEBHOOK_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_UPDATE,
           },
           {
-            value: p.AuditLogActions.WEBHOOK_DELETE,
+            value: P.AuditLogActions.WEBHOOK_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_WEBHOOK_DELETE,
           },
           {
-            value: p.AuditLogActions.EMOJI_CREATE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE,
+            value: P.AuditLogActions.EMOJI_CREATE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_CREATE,
           },
           {
-            value: p.AuditLogActions.EMOJI_UPDATE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE,
+            value: P.AuditLogActions.EMOJI_UPDATE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_UPDATE,
           },
           {
-            value: p.AuditLogActions.EMOJI_DELETE,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE,
+            value: P.AuditLogActions.EMOJI_DELETE,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_EMOJI_DELETE,
           },
           {
-            value: p.AuditLogActions.MESSAGE_DELETE,
+            value: P.AuditLogActions.MESSAGE_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_DELETE,
           },
           {
-            value: p.AuditLogActions.MESSAGE_BULK_DELETE,
+            value: P.AuditLogActions.MESSAGE_BULK_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_MESSAGE_BULK_DELETE,
           },
           {
-            value: p.AuditLogActions.MESSAGE_PIN,
-            label: m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN,
+            value: P.AuditLogActions.MESSAGE_PIN,
+            label: v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_PIN,
           },
           {
-            value: p.AuditLogActions.MESSAGE_UNPIN,
+            value: P.AuditLogActions.MESSAGE_UNPIN,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_MESSAGE_UNPIN,
           },
           {
-            value: p.AuditLogActions.INTEGRATION_CREATE,
+            value: P.AuditLogActions.INTEGRATION_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_CREATE,
           },
           {
-            value: p.AuditLogActions.INTEGRATION_UPDATE,
+            value: P.AuditLogActions.INTEGRATION_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_UPDATE,
           },
           {
-            value: p.AuditLogActions.INTEGRATION_DELETE,
+            value: P.AuditLogActions.INTEGRATION_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_INTEGRATION_DELETE,
           },
           {
-            value: p.AuditLogActions.STICKER_CREATE,
+            value: P.AuditLogActions.STICKER_CREATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_CREATE,
           },
           {
-            value: p.AuditLogActions.STICKER_UPDATE,
+            value: P.AuditLogActions.STICKER_UPDATE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_UPDATE,
           },
           {
-            value: p.AuditLogActions.STICKER_DELETE,
+            value: P.AuditLogActions.STICKER_DELETE,
             label:
-              m.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE,
+              v.default.Messages.GUILD_SETTINGS_ACTION_FILTER_STICKER_DELETE,
           },
           {
-            value: p.AuditLogActions.STAGE_INSTANCE_CREATE,
+            value: P.AuditLogActions.STAGE_INSTANCE_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_CREATE,
           },
           {
-            value: p.AuditLogActions.STAGE_INSTANCE_UPDATE,
+            value: P.AuditLogActions.STAGE_INSTANCE_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_UPDATE,
           },
           {
-            value: p.AuditLogActions.STAGE_INSTANCE_DELETE,
+            value: P.AuditLogActions.STAGE_INSTANCE_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_STAGE_INSTANCE_DELETE,
           },
           {
-            value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
+            value: P.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE,
           },
           {
-            value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
+            value: P.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE,
           },
           {
-            value: p.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
+            value: P.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE,
           },
           {
-            value: p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
+            value: P.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_APPLICATION_COMMAND_PERMISSION_UPDATE,
           },
           {
-            value: p.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
+            value: P.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTO_MODERATION_BLOCK_MESSAGE,
           },
           {
-            value: p.AuditLogActions.AUTO_MODERATION_RULE_CREATE,
+            value: P.AuditLogActions.AUTO_MODERATION_RULE_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
           },
           {
-            value: p.AuditLogActions.AUTO_MODERATION_RULE_UPDATE,
+            value: P.AuditLogActions.AUTO_MODERATION_RULE_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_UPDATE,
           },
           {
-            value: p.AuditLogActions.AUTO_MODERATION_RULE_DELETE,
+            value: P.AuditLogActions.AUTO_MODERATION_RULE_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_DELETE,
           },
           {
-            value: p.AuditLogActions.GUILD_HOME_FEATURE_ITEM,
+            value: P.AuditLogActions.GUILD_HOME_FEATURE_ITEM,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_FEATURE_ITEM,
           },
           {
-            value: p.AuditLogActions.GUILD_HOME_REMOVE_ITEM,
+            value: P.AuditLogActions.GUILD_HOME_REMOVE_ITEM,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_GUILD_HOME_REMOVE_ITEM,
           },
           {
-            value: p.AuditLogActions.SOUNDBOARD_SOUND_CREATE,
+            value: P.AuditLogActions.SOUNDBOARD_SOUND_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_CREATE,
           },
           {
-            value: p.AuditLogActions.SOUNDBOARD_SOUND_UPDATE,
+            value: P.AuditLogActions.SOUNDBOARD_SOUND_UPDATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_UPDATE,
           },
           {
-            value: p.AuditLogActions.SOUNDBOARD_SOUND_DELETE,
+            value: P.AuditLogActions.SOUNDBOARD_SOUND_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_SOUNDBOARD_SOUND_DELETE,
           },
           {
-            value: p.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE,
+            value: P.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_CREATE,
           },
           {
-            value: p.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE,
+            value: P.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE,
             label:
-              m.default.Messages
+              v.default.Messages
                 .GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_DELETE,
           },
         ];
-      function eT(e) {
+      function en(e) {
         switch (e.action) {
-          case p.AuditLogActions.GUILD_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
-          case p.AuditLogActions.CHANNEL_CREATE:
+          case P.AuditLogActions.GUILD_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_GUILD_UPDATE;
+          case P.AuditLogActions.CHANNEL_CREATE:
             let t =
               null != e.changes
-                ? e.changes.find(e => e.key === p.AuditLogChangeKeys.TYPE)
+                ? e.changes.find(e => e.key === P.AuditLogChangeKeys.TYPE)
                 : null;
             if (null == t)
               throw Error(
                 "[AuditLog] Could not find type change for channel create"
               );
             switch (t.newValue) {
-              case p.ChannelTypes.GUILD_STAGE_VOICE:
-                return m.default.Messages
+              case P.ChannelTypes.GUILD_STAGE_VOICE:
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_STAGE_CREATE;
-              case p.ChannelTypes.GUILD_VOICE:
-                return m.default.Messages
+              case P.ChannelTypes.GUILD_VOICE:
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_VOICE_CREATE;
-              case p.ChannelTypes.GUILD_CATEGORY:
-                return m.default.Messages
+              case P.ChannelTypes.GUILD_CATEGORY:
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_CATEGORY_CREATE;
               default:
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_TEXT_CREATE;
             }
-          case p.AuditLogActions.CHANNEL_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
-          case p.AuditLogActions.CHANNEL_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
-          case p.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.CHANNEL_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_UPDATE;
+          case P.AuditLogActions.CHANNEL_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_DELETE;
+          case P.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_CREATE;
-          case p.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_UPDATE;
-          case p.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_CHANNEL_OVERWRITE_DELETE;
-          case p.AuditLogActions.MEMBER_KICK:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
-          case p.AuditLogActions.MEMBER_PRUNE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
-          case p.AuditLogActions.MEMBER_BAN_ADD:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_ADD;
-          case p.AuditLogActions.MEMBER_BAN_REMOVE:
-            return m.default.Messages
+          case P.AuditLogActions.MEMBER_KICK:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_KICK;
+          case P.AuditLogActions.MEMBER_PRUNE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_PRUNE;
+          case P.AuditLogActions.MEMBER_BAN_ADD:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_ADD;
+          case P.AuditLogActions.MEMBER_BAN_REMOVE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_BAN_REMOVE;
-          case p.AuditLogActions.MEMBER_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
-          case p.AuditLogActions.MEMBER_ROLE_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.MEMBER_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_UPDATE;
+          case P.AuditLogActions.MEMBER_ROLE_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_ROLE_UPDATE;
-          case p.AuditLogActions.MEMBER_MOVE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
-          case p.AuditLogActions.MEMBER_DISCONNECT:
-            return m.default.Messages
+          case P.AuditLogActions.MEMBER_MOVE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_MOVE;
+          case P.AuditLogActions.MEMBER_DISCONNECT:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MEMBER_DISCONNECT;
-          case p.AuditLogActions.BOT_ADD:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
-          case p.AuditLogActions.ROLE_CREATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
-          case p.AuditLogActions.ROLE_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
-          case p.AuditLogActions.ROLE_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
-          case p.AuditLogActions.INVITE_CREATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
-          case p.AuditLogActions.INVITE_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
-          case p.AuditLogActions.INVITE_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
-          case p.AuditLogActions.WEBHOOK_CREATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
-          case p.AuditLogActions.WEBHOOK_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
-          case p.AuditLogActions.WEBHOOK_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
-          case p.AuditLogActions.EMOJI_CREATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
-          case p.AuditLogActions.EMOJI_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
-          case p.AuditLogActions.EMOJI_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
-          case p.AuditLogActions.STICKER_CREATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
-          case p.AuditLogActions.STICKER_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
-          case p.AuditLogActions.STICKER_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
-          case p.AuditLogActions.MESSAGE_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
-          case p.AuditLogActions.MESSAGE_BULK_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.BOT_ADD:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_BOT_ADD;
+          case P.AuditLogActions.ROLE_CREATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_CREATE;
+          case P.AuditLogActions.ROLE_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_UPDATE;
+          case P.AuditLogActions.ROLE_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_DELETE;
+          case P.AuditLogActions.INVITE_CREATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_CREATE;
+          case P.AuditLogActions.INVITE_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_UPDATE;
+          case P.AuditLogActions.INVITE_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_INVITE_DELETE;
+          case P.AuditLogActions.WEBHOOK_CREATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_CREATE;
+          case P.AuditLogActions.WEBHOOK_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_UPDATE;
+          case P.AuditLogActions.WEBHOOK_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_WEBHOOK_DELETE;
+          case P.AuditLogActions.EMOJI_CREATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_CREATE;
+          case P.AuditLogActions.EMOJI_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_UPDATE;
+          case P.AuditLogActions.EMOJI_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_EMOJI_DELETE;
+          case P.AuditLogActions.STICKER_CREATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_CREATE;
+          case P.AuditLogActions.STICKER_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_UPDATE;
+          case P.AuditLogActions.STICKER_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_STICKER_DELETE;
+          case P.AuditLogActions.MESSAGE_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_DELETE;
+          case P.AuditLogActions.MESSAGE_BULK_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_MESSAGE_BULK_DELETE;
-          case p.AuditLogActions.MESSAGE_PIN:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
-          case p.AuditLogActions.MESSAGE_UNPIN:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
-          case p.AuditLogActions.INTEGRATION_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.MESSAGE_PIN:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_PIN;
+          case P.AuditLogActions.MESSAGE_UNPIN:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MESSAGE_UNPIN;
+          case P.AuditLogActions.INTEGRATION_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_CREATE;
-          case p.AuditLogActions.INTEGRATION_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.INTEGRATION_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_UPDATE;
-          case p.AuditLogActions.INTEGRATION_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.INTEGRATION_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_INTEGRATION_DELETE;
-          case p.AuditLogActions.STAGE_INSTANCE_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.STAGE_INSTANCE_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_CREATE;
-          case p.AuditLogActions.STAGE_INSTANCE_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.STAGE_INSTANCE_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_UPDATE;
-          case p.AuditLogActions.STAGE_INSTANCE_DELETE:
+          case P.AuditLogActions.STAGE_INSTANCE_DELETE:
             if (null != e.userId)
-              return m.default.Messages
+              return v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE;
-            return m.default.Messages
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_STAGE_INSTANCE_DELETE_NO_USER;
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_CREATE;
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_UPDATE;
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_DELETE;
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_UPDATE;
-          case p.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_SCHEDULED_EVENT_RECURRENCE_DELETE;
-          case p.AuditLogActions.THREAD_CREATE:
+          case P.AuditLogActions.THREAD_CREATE:
             let E =
               null != e.changes
-                ? e.changes.find(e => e.key === p.AuditLogChangeKeys.TYPE)
+                ? e.changes.find(e => e.key === P.AuditLogChangeKeys.TYPE)
                 : null;
             if (null == E)
               throw Error(
                 "[AuditLog] Could not find type change for thread create"
               );
             switch (E.newValue) {
-              case p.ChannelTypes.PRIVATE_THREAD:
-                return m.default.Messages
+              case P.ChannelTypes.PRIVATE_THREAD:
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_PRIVATE_THREAD_CREATE;
-              case p.ChannelTypes.ANNOUNCEMENT_THREAD:
-                return m.default.Messages
+              case P.ChannelTypes.ANNOUNCEMENT_THREAD:
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_ANNOUNCEMENT_THREAD_CREATE;
               default:
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_THREAD_CREATE;
             }
-          case p.AuditLogActions.THREAD_UPDATE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UPDATE;
-          case p.AuditLogActions.THREAD_DELETE:
-            return m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_DELETE;
-          case p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.THREAD_UPDATE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_UPDATE;
+          case P.AuditLogActions.THREAD_DELETE:
+            return v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_THREAD_DELETE;
+          case P.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_COMMAND_PERMISSION_UPDATE;
-          case p.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_BLOCK_MESSAGE;
-          case p.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
+          case P.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
             var _;
             if (
               (null === (_ = e.options) || void 0 === _
                 ? void 0
                 : _.auto_moderation_rule_trigger_type) ===
-              y.AutomodTriggerType.USER_PROFILE.toString()
+              H.AutomodTriggerType.USER_PROFILE.toString()
             )
-              return m.default.Messages
+              return v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAGGED_USER_PROFILE;
-            return m.default.Messages
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_FLAG_TO_CHANNEL_MESSAGE;
-          case p.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_USER_COMMUNICATION_DISABLED_MESSAGE;
-          case p.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_QUARANTINE_USER;
-          case p.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
-            return m.default.Messages
+          case P.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
+            return v.default.Messages
               .CREATOR_MONETIZATION_APPLIED_AUDIT_LOG_TITLE;
-          case p.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-            return m.default.Messages
+          case P.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+            return v.default.Messages
               .CREATOR_MONETIZATION_TERMS_ACCEPTED_AUDIT_LOG_TITLE;
-          case p.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_CREATE;
-          case p.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_UPDATE;
-          case p.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DELETE;
-          case p.AuditLogActions.ONBOARDING_PROMPT_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.ONBOARDING_PROMPT_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_CREATE;
-          case p.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_UPDATE;
-          case p.AuditLogActions.ONBOARDING_PROMPT_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.ONBOARDING_PROMPT_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_DELETE;
-          case p.AuditLogActions.ONBOARDING_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.ONBOARDING_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_CREATE;
-          case p.AuditLogActions.ONBOARDING_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.ONBOARDING_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_ONBOARDING_UPDATE;
-          case p.AuditLogActions.HOME_SETTINGS_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.HOME_SETTINGS_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_CREATE;
-          case p.AuditLogActions.HOME_SETTINGS_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.HOME_SETTINGS_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_HOME_SETTINGS_UPDATE;
-          case p.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
+          case P.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
             let s =
               null != e.changes
                 ? e.changes.find(
-                    e => e.key === p.AuditLogChangeKeys.ENTITY_TYPE
+                    e => e.key === P.AuditLogChangeKeys.ENTITY_TYPE
                   )
                 : null;
             if (null == s)
-              return m.default.Messages
+              return v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
             switch (s.newValue) {
               case n.GuildFeedItemTypes.MESSAGE:
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_MESSAGE;
               case n.GuildFeedItemTypes.FORUM_POST:
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_FORUM_POST;
               default:
-                return m.default.Messages
+                return v.default.Messages
                   .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_FEATURE_ITEM;
             }
-          case p.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
-            return m.default.Messages
+          case P.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_ITEM;
-          case p.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_CREATED;
-          case p.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
-            return m.default.Messages
+          case P.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_UPDATED;
-          case p.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_GUILD_SOUNDBOARD_SOUND_DELETED;
-          case p.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
-            return m.default.Messages
+          case P.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_CREATED;
-          case p.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
-            return m.default.Messages
+          case P.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
+            return v.default.Messages
               .GUILD_SETTINGS_AUDIT_LOG_VOICE_CHANNEL_STATUS_DELETED;
           default:
             return null;
         }
       }
-      function en(e) {
-        switch (e) {
-          case P.ChannelFlags.GUILD_FEED_REMOVED:
-            return m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
-          case P.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
-            return m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
-          case P.ChannelFlags.PINNED:
-            return m.default.Messages.PINNED_POST;
-        }
-        return null;
-      }
       function eA(e) {
         switch (e) {
-          case P.ChannelFlags.GUILD_FEED_REMOVED:
-            return m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
-          case P.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
-            return m.default.Messages
-              .GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
-          case P.ChannelFlags.PINNED:
-            return m.default.Messages.UNPINNED_POST;
+          case y.ChannelFlags.GUILD_FEED_REMOVED:
+            return v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_REMOVE_CHANNEL;
+          case y.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+            return v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_REMOVE_CHANNEL;
+          case y.ChannelFlags.PINNED:
+            return v.default.Messages.PINNED_POST;
         }
         return null;
       }
-      function eu(e, t) {
+      function eu(e) {
         switch (e) {
-          case p.Permissions.CREATE_INSTANT_INVITE:
-            return m.default.Messages.CREATE_INSTANT_INVITE;
-          case p.Permissions.KICK_MEMBERS:
-            return m.default.Messages.KICK_MEMBERS;
-          case p.Permissions.BAN_MEMBERS:
-            return m.default.Messages.BAN_MEMBERS;
-          case p.Permissions.ADMINISTRATOR:
-            return m.default.Messages.ADMINISTRATOR;
-          case p.Permissions.MANAGE_CHANNELS:
-            if (
-              t.targetType === p.AuditLogTargetTypes.CHANNEL ||
-              t.targetType === p.AuditLogTargetTypes.CHANNEL_OVERWRITE
-            )
-              return m.default.Messages.MANAGE_CHANNEL;
-            return m.default.Messages.MANAGE_CHANNELS;
-          case p.Permissions.MANAGE_GUILD:
-            return m.default.Messages.MANAGE_SERVER;
-          case p.Permissions.VIEW_GUILD_ANALYTICS:
-            return m.default.Messages.VIEW_GUILD_ANALYTICS;
-          case p.Permissions.CHANGE_NICKNAME:
-            return m.default.Messages.CHANGE_NICKNAME;
-          case p.Permissions.MANAGE_NICKNAMES:
-            return m.default.Messages.MANAGE_NICKNAMES;
-          case p.Permissions.MANAGE_ROLES:
-            return m.default.Messages.MANAGE_ROLES;
-          case p.Permissions.MANAGE_WEBHOOKS:
-            return m.default.Messages.MANAGE_WEBHOOKS;
-          case p.Permissions.CREATE_GUILD_EXPRESSIONS:
-            return m.default.Messages.CREATE_EXPRESSIONS;
-          case p.Permissions.MANAGE_GUILD_EXPRESSIONS:
-            return m.default.Messages.MANAGE_EXPRESSIONS;
-          case p.Permissions.VIEW_AUDIT_LOG:
-            return m.default.Messages.VIEW_AUDIT_LOG;
-          case p.Permissions.VIEW_CHANNEL:
-            return m.default.Messages.READ_MESSAGES;
-          case p.Permissions.SEND_MESSAGES:
-            return m.default.Messages.SEND_MESSAGES;
-          case p.Permissions.SEND_TTS_MESSAGES:
-            return m.default.Messages.SEND_TTS_MESSAGES;
-          case p.Permissions.USE_APPLICATION_COMMANDS:
-            return m.default.Messages.USE_APPLICATION_COMMANDS;
-          case p.Permissions.MANAGE_MESSAGES:
-            return m.default.Messages.MANAGE_MESSAGES;
-          case p.Permissions.EMBED_LINKS:
-            return m.default.Messages.EMBED_LINKS;
-          case p.Permissions.ATTACH_FILES:
-            return m.default.Messages.ATTACH_FILES;
-          case p.Permissions.READ_MESSAGE_HISTORY:
-            return m.default.Messages.READ_MESSAGE_HISTORY;
-          case p.Permissions.MENTION_EVERYONE:
-            return m.default.Messages.MENTION_EVERYONE;
-          case p.Permissions.USE_EXTERNAL_EMOJIS:
-            return m.default.Messages.USE_EXTERNAL_EMOJIS;
-          case p.Permissions.USE_EXTERNAL_STICKERS:
-            return m.default.Messages.USE_EXTERNAL_STICKERS;
-          case p.Permissions.ADD_REACTIONS:
-            return m.default.Messages.ADD_REACTIONS;
-          case p.Permissions.CONNECT:
-            return m.default.Messages.CONNECT;
-          case p.Permissions.SPEAK:
-            return m.default.Messages.SPEAK;
-          case p.Permissions.MUTE_MEMBERS:
-            return m.default.Messages.MUTE_MEMBERS;
-          case p.Permissions.DEAFEN_MEMBERS:
-            return m.default.Messages.DEAFEN_MEMBERS;
-          case p.Permissions.MOVE_MEMBERS:
-            return m.default.Messages.MOVE_MEMBERS;
-          case p.Permissions.USE_VAD:
-            return m.default.Messages.USE_VAD;
-          case p.Permissions.PRIORITY_SPEAKER:
-            return m.default.Messages.PRIORITY_SPEAKER;
-          case p.Permissions.STREAM:
-            return m.default.Messages.VIDEO;
-          case p.Permissions.REQUEST_TO_SPEAK:
-            return m.default.Messages.REQUEST_TO_SPEAK;
-          case p.Permissions.CREATE_EVENTS:
-            return m.default.Messages.CREATE_EVENTS;
-          case p.Permissions.MANAGE_EVENTS:
-            return m.default.Messages.MANAGE_EVENTS;
-          case p.Permissions.CREATE_PUBLIC_THREADS:
-            return m.default.Messages.CREATE_PUBLIC_THREADS;
-          case p.Permissions.CREATE_PRIVATE_THREADS:
-            return m.default.Messages.CREATE_PRIVATE_THREADS;
-          case p.Permissions.SEND_MESSAGES_IN_THREADS:
-            return m.default.Messages.SEND_MESSAGES_IN_THREADS;
-          case p.Permissions.MANAGE_THREADS:
-            return m.default.Messages.MANAGE_THREADS;
-          case p.Permissions.MODERATE_MEMBERS:
-            return m.default.Messages.MODERATE_MEMBER;
-          case p.Permissions.USE_CLYDE_AI:
-            return m.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI;
-          case p.Permissions.SET_VOICE_CHANNEL_STATUS:
-            return m.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
+          case y.ChannelFlags.GUILD_FEED_REMOVED:
+            return v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_GUILD_HOME_UNREMOVE_CHANNEL;
+          case y.ChannelFlags.ACTIVE_CHANNELS_REMOVED:
+            return v.default.Messages
+              .GUILD_SETTINGS_AUDIT_LOG_ACTIVE_CHANNELS_UNREMOVE_CHANNEL;
+          case y.ChannelFlags.PINNED:
+            return v.default.Messages.UNPINNED_POST;
         }
         return null;
       }
       function eI(e, t) {
+        switch (e) {
+          case P.Permissions.CREATE_INSTANT_INVITE:
+            return v.default.Messages.CREATE_INSTANT_INVITE;
+          case P.Permissions.KICK_MEMBERS:
+            return v.default.Messages.KICK_MEMBERS;
+          case P.Permissions.BAN_MEMBERS:
+            return v.default.Messages.BAN_MEMBERS;
+          case P.Permissions.ADMINISTRATOR:
+            return v.default.Messages.ADMINISTRATOR;
+          case P.Permissions.MANAGE_CHANNELS:
+            if (
+              t.targetType === P.AuditLogTargetTypes.CHANNEL ||
+              t.targetType === P.AuditLogTargetTypes.CHANNEL_OVERWRITE
+            )
+              return v.default.Messages.MANAGE_CHANNEL;
+            return v.default.Messages.MANAGE_CHANNELS;
+          case P.Permissions.MANAGE_GUILD:
+            return v.default.Messages.MANAGE_SERVER;
+          case P.Permissions.VIEW_GUILD_ANALYTICS:
+            return v.default.Messages.VIEW_GUILD_ANALYTICS;
+          case P.Permissions.CHANGE_NICKNAME:
+            return v.default.Messages.CHANGE_NICKNAME;
+          case P.Permissions.MANAGE_NICKNAMES:
+            return v.default.Messages.MANAGE_NICKNAMES;
+          case P.Permissions.MANAGE_ROLES:
+            return v.default.Messages.MANAGE_ROLES;
+          case P.Permissions.MANAGE_WEBHOOKS:
+            return v.default.Messages.MANAGE_WEBHOOKS;
+          case P.Permissions.CREATE_GUILD_EXPRESSIONS:
+            return v.default.Messages.CREATE_EXPRESSIONS;
+          case P.Permissions.MANAGE_GUILD_EXPRESSIONS:
+            return v.default.Messages.MANAGE_EXPRESSIONS;
+          case P.Permissions.VIEW_AUDIT_LOG:
+            return v.default.Messages.VIEW_AUDIT_LOG;
+          case P.Permissions.VIEW_CHANNEL:
+            return v.default.Messages.READ_MESSAGES;
+          case P.Permissions.SEND_MESSAGES:
+            return v.default.Messages.SEND_MESSAGES;
+          case P.Permissions.SEND_TTS_MESSAGES:
+            return v.default.Messages.SEND_TTS_MESSAGES;
+          case P.Permissions.USE_APPLICATION_COMMANDS:
+            return v.default.Messages.USE_APPLICATION_COMMANDS;
+          case P.Permissions.MANAGE_MESSAGES:
+            return v.default.Messages.MANAGE_MESSAGES;
+          case P.Permissions.EMBED_LINKS:
+            return v.default.Messages.EMBED_LINKS;
+          case P.Permissions.ATTACH_FILES:
+            return v.default.Messages.ATTACH_FILES;
+          case P.Permissions.READ_MESSAGE_HISTORY:
+            return v.default.Messages.READ_MESSAGE_HISTORY;
+          case P.Permissions.MENTION_EVERYONE:
+            return v.default.Messages.MENTION_EVERYONE;
+          case P.Permissions.USE_EXTERNAL_EMOJIS:
+            return v.default.Messages.USE_EXTERNAL_EMOJIS;
+          case P.Permissions.USE_EXTERNAL_STICKERS:
+            return v.default.Messages.USE_EXTERNAL_STICKERS;
+          case P.Permissions.ADD_REACTIONS:
+            return v.default.Messages.ADD_REACTIONS;
+          case P.Permissions.CONNECT:
+            return v.default.Messages.CONNECT;
+          case P.Permissions.SPEAK:
+            return v.default.Messages.SPEAK;
+          case P.Permissions.MUTE_MEMBERS:
+            return v.default.Messages.MUTE_MEMBERS;
+          case P.Permissions.DEAFEN_MEMBERS:
+            return v.default.Messages.DEAFEN_MEMBERS;
+          case P.Permissions.MOVE_MEMBERS:
+            return v.default.Messages.MOVE_MEMBERS;
+          case P.Permissions.USE_VAD:
+            return v.default.Messages.USE_VAD;
+          case P.Permissions.PRIORITY_SPEAKER:
+            return v.default.Messages.PRIORITY_SPEAKER;
+          case P.Permissions.STREAM:
+            return v.default.Messages.VIDEO;
+          case P.Permissions.REQUEST_TO_SPEAK:
+            return v.default.Messages.REQUEST_TO_SPEAK;
+          case P.Permissions.CREATE_EVENTS:
+            return v.default.Messages.CREATE_EVENTS;
+          case P.Permissions.MANAGE_EVENTS:
+            return v.default.Messages.MANAGE_EVENTS;
+          case P.Permissions.CREATE_PUBLIC_THREADS:
+            return v.default.Messages.CREATE_PUBLIC_THREADS;
+          case P.Permissions.CREATE_PRIVATE_THREADS:
+            return v.default.Messages.CREATE_PRIVATE_THREADS;
+          case P.Permissions.SEND_MESSAGES_IN_THREADS:
+            return v.default.Messages.SEND_MESSAGES_IN_THREADS;
+          case P.Permissions.MANAGE_THREADS:
+            return v.default.Messages.MANAGE_THREADS;
+          case P.Permissions.MODERATE_MEMBERS:
+            return v.default.Messages.MODERATE_MEMBER;
+          case P.Permissions.USE_CLYDE_AI:
+            return v.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI;
+          case P.Permissions.SET_VOICE_CHANNEL_STATUS:
+            return v.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE;
+        }
+        return null;
+      }
+      function ei(e, t) {
         let E = [];
         return (
           e.forEach(e => {
             let _ = (function (e, t) {
                 switch (e.targetType) {
-                  case p.AuditLogTargetTypes.GUILD:
-                  case p.AuditLogTargetTypes.GUILD_HOME:
+                  case P.AuditLogTargetTypes.GUILD:
+                  case P.AuditLogTargetTypes.GUILD_HOME:
                     return t;
-                  case p.AuditLogTargetTypes.CHANNEL:
-                  case p.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-                    return eo(
+                  case P.AuditLogTargetTypes.CHANNEL:
+                  case P.AuditLogTargetTypes.CHANNEL_OVERWRITE:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => O.default.getChannel(e),
                       e =>
-                        (0, l.computeChannelName)(e, U.default, c.default, !0)
+                        (0, l.computeChannelName)(e, C.default, U.default, !0)
                     );
-                  case p.AuditLogTargetTypes.USER:
-                    return eo(
+                  case P.AuditLogTargetTypes.USER:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NICK,
-                      e => U.default.getUser(e),
+                      P.AuditLogChangeKeys.NICK,
+                      e => C.default.getUser(e),
                       e => e
                     );
-                  case p.AuditLogTargetTypes.ROLE:
-                    return eo(
+                  case P.AuditLogTargetTypes.ROLE:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
-                      e => t.getRole(e),
+                      P.AuditLogChangeKeys.NAME,
+                      e => c.default.getRole(t.id, e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.ONBOARDING_PROMPT:
-                    let E = eo(
+                  case P.AuditLogTargetTypes.ONBOARDING_PROMPT:
+                    let E = er(
                       e,
-                      p.AuditLogChangeKeys.ID,
+                      P.AuditLogChangeKeys.ID,
                       e => d.default.getOnboardingPrompt(e),
                       e => e.title
                     );
                     return null != E
                       ? E
-                      : m.default.Messages
+                      : v.default.Messages
                           .GUILD_SETTINGS_AUDIT_LOG_ROLE_PROMPT_EMPTY_VALUE;
-                  case p.AuditLogTargetTypes.GUILD_ONBOARDING:
+                  case P.AuditLogTargetTypes.GUILD_ONBOARDING:
                     return t;
-                  case p.AuditLogTargetTypes.INVITE:
-                    return eo(e, p.AuditLogChangeKeys.CODE, p.NOOP_NULL);
-                  case p.AuditLogTargetTypes.INTEGRATION:
-                    return eo(
+                  case P.AuditLogTargetTypes.INVITE:
+                    return er(e, P.AuditLogChangeKeys.CODE, P.NOOP_NULL);
+                  case P.AuditLogTargetTypes.INTEGRATION:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.TYPE,
+                      P.AuditLogChangeKeys.TYPE,
                       e => S.default.integrations.find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.WEBHOOK:
-                    return eo(
+                  case P.AuditLogTargetTypes.WEBHOOK:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => S.default.webhooks.find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.EMOJI:
-                    return eo(
+                  case P.AuditLogTargetTypes.EMOJI:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => o.default.getGuildEmoji(t.id).find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.STICKER:
-                    return eo(
+                  case P.AuditLogTargetTypes.STICKER:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => D.default.getStickerById(e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.STAGE_INSTANCE:
-                    return eo(
+                  case P.AuditLogTargetTypes.STAGE_INSTANCE:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.TOPIC,
+                      P.AuditLogChangeKeys.TOPIC,
                       e => {
                         var E;
                         return null ===
@@ -8447,22 +8450,22 @@
                       },
                       e => e.topic
                     );
-                  case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
-                  case p.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
-                    return eo(
+                  case P.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT:
+                  case P.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => S.default.guildScheduledEvents.find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.THREAD:
-                    return eo(
+                  case P.AuditLogTargetTypes.THREAD:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => S.default.threads.find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.APPLICATION_COMMAND:
+                  case P.AuditLogTargetTypes.APPLICATION_COMMAND:
                     if (e.targetId === e.options.application_id) {
                       let t = S.default.integrations.find(
                         t => t.application_id === e.targetId
@@ -8470,9 +8473,9 @@
                       if (null != t) return t.name;
                       return e.targetId;
                     }
-                    return eo(
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => S.default.applicationCommands.find(t => t.id === e),
                       e => {
                         let t =
@@ -8484,44 +8487,44 @@
                           : t;
                       }
                     );
-                  case p.AuditLogTargetTypes.AUTO_MODERATION_RULE:
-                    return eo(
+                  case P.AuditLogTargetTypes.AUTO_MODERATION_RULE:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.NAME,
+                      P.AuditLogChangeKeys.NAME,
                       e => S.default.automodRules.find(t => t.id === e),
                       e => e.name
                     );
-                  case p.AuditLogTargetTypes.GUILD_SOUNDBOARD:
-                    return eo(e, p.AuditLogChangeKeys.NAME, p.NOOP_NULL);
-                  case p.AuditLogTargetTypes.HOME_SETTINGS:
-                    return eo(
+                  case P.AuditLogTargetTypes.GUILD_SOUNDBOARD:
+                    return er(e, P.AuditLogChangeKeys.NAME, P.NOOP_NULL);
+                  case P.AuditLogTargetTypes.HOME_SETTINGS:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.GUILD_ID,
+                      P.AuditLogChangeKeys.GUILD_ID,
                       e => N.default.getSettings(e),
-                      () => m.default.Messages.SERVER_GUIDE,
+                      () => v.default.Messages.SERVER_GUIDE,
                       t.id
                     );
-                  case p.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
-                    return eo(
+                  case P.AuditLogTargetTypes.VOICE_CHANNEL_STATUS:
+                    return er(
                       e,
-                      p.AuditLogChangeKeys.STATUS,
+                      P.AuditLogChangeKeys.STATUS,
                       e => O.default.getChannel(e),
                       e =>
-                        (0, l.computeChannelName)(e, U.default, c.default, !0)
+                        (0, l.computeChannelName)(e, C.default, U.default, !0)
                     );
                   default:
-                    return v.warn("Unknown targetType for log", e), null;
+                    return V.warn("Unknown targetType for log", e), null;
                 }
               })(e, t),
-              a = U.default.getUser(e.userId);
+              a = C.default.getUser(e.userId);
             if (
               null != _ ||
               [
-                p.AuditLogActions.MEMBER_PRUNE,
-                p.AuditLogActions.MEMBER_DISCONNECT,
-                p.AuditLogActions.MEMBER_MOVE,
-                p.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED,
-                p.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED,
+                P.AuditLogActions.MEMBER_PRUNE,
+                P.AuditLogActions.MEMBER_DISCONNECT,
+                P.AuditLogActions.MEMBER_MOVE,
+                P.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED,
+                P.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED,
               ].includes(e.action)
             ) {
               if (
@@ -8532,19 +8535,19 @@
                     if (null != e.options) {
                       let E = { ...e.options };
                       switch (e.options.type) {
-                        case p.AuditLogSubtargetTypes.USER:
-                          E.subtarget = er(
+                        case P.AuditLogSubtargetTypes.USER:
+                          E.subtarget = ed(
                             e.options.id,
-                            e => U.default.getUser(e),
+                            e => C.default.getUser(e),
                             e => e.tag
                           );
                           break;
-                        case p.AuditLogSubtargetTypes.ROLE:
-                          E.subtarget = er(e.options.role_name, p.NOOP_NULL);
+                        case P.AuditLogSubtargetTypes.ROLE:
+                          E.subtarget = ed(e.options.role_name, P.NOOP_NULL);
                       }
                       if (
                         (null != e.options.channel_id &&
-                          (E.channel = eo(
+                          (E.channel = er(
                             e,
                             "",
                             e => O.default.getChannel(e),
@@ -8568,9 +8571,9 @@
                                     t.event_exception_id ===
                                     e.options.event_exception_id
                                 );
-                        E.subtarget = (0, C.dateFormat)(
+                        E.subtarget = (0, M.dateFormat)(
                           T(
-                            h.default.extractTimestamp(
+                            p.default.extractTimestamp(
                               null !==
                                 (t =
                                   null == s ? void 0 : s.event_exception_id) &&
@@ -8593,35 +8596,35 @@
                   let a = (function (e, t, E) {
                     if (
                       t.action ===
-                      p.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE
+                      P.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE
                     ) {
                       let t = e.newValue || e.oldValue;
                       switch (t.type) {
-                        case p.ApplicationCommandPermissionTypes.ROLE:
-                          e.subtarget = er(
+                        case P.ApplicationCommandPermissionTypes.ROLE:
+                          e.subtarget = ed(
                             t.id,
-                            e => E.getRole(e),
+                            e => c.default.getRole(E.id, e),
                             e => e.name
                           );
                           break;
-                        case p.ApplicationCommandPermissionTypes.USER:
-                          e.subtarget = er(
+                        case P.ApplicationCommandPermissionTypes.USER:
+                          e.subtarget = ed(
                             t.id,
-                            e => U.default.getUser(e),
+                            e => C.default.getUser(e),
                             e => e.tag
                           );
                           break;
-                        case p.ApplicationCommandPermissionTypes.CHANNEL:
+                        case P.ApplicationCommandPermissionTypes.CHANNEL:
                           t.id === s(E.id).subtract(1).toString()
-                            ? (e.subtarget = m.default.Messages.ALL_CHANNELS)
-                            : (e.subtarget = er(
+                            ? (e.subtarget = v.default.Messages.ALL_CHANNELS)
+                            : (e.subtarget = ed(
                                 t.id,
                                 e => O.default.getChannel(e),
                                 e =>
                                   (0, l.computeChannelName)(
                                     e,
+                                    C.default,
                                     U.default,
-                                    c.default,
                                     !0
                                   )
                               ));
@@ -8629,50 +8632,50 @@
                       return e;
                     }
                     switch (e.key) {
-                      case p.AuditLogChangeKeys.OWNER_ID:
-                        return eL(e, e => U.default.getUser(e));
-                      case p.AuditLogChangeKeys.CHANNEL_ID:
-                      case p.AuditLogChangeKeys.AFK_CHANNEL_ID:
-                      case p.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
-                      case p.AuditLogChangeKeys.RULES_CHANNEL_ID:
-                      case p.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
-                        return eL(
+                      case P.AuditLogChangeKeys.OWNER_ID:
+                        return eo(e, e => C.default.getUser(e));
+                      case P.AuditLogChangeKeys.CHANNEL_ID:
+                      case P.AuditLogChangeKeys.AFK_CHANNEL_ID:
+                      case P.AuditLogChangeKeys.SYSTEM_CHANNEL_ID:
+                      case P.AuditLogChangeKeys.RULES_CHANNEL_ID:
+                      case P.AuditLogChangeKeys.PUBLIC_UPDATES_CHANNEL_ID:
+                        return eo(
                           e,
                           e => O.default.getChannel(e),
                           e =>
                             (0, l.computeChannelName)(
                               e,
+                              C.default,
                               U.default,
-                              c.default,
                               !0
                             )
                         );
-                      case p.AuditLogChangeKeys.AFK_TIMEOUT:
-                        return eL(e, e => e / 60);
-                      case p.AuditLogChangeKeys.BITRATE:
-                        return eL(e, e => e / 1e3);
-                      case p.AuditLogChangeKeys.COLOR:
-                        return eL(e, e => (0, I.int2hex)(e).toUpperCase());
-                      case p.AuditLogChangeKeys.THEME_COLORS:
-                        return eL(e, e =>
+                      case P.AuditLogChangeKeys.AFK_TIMEOUT:
+                        return eo(e, e => e / 60);
+                      case P.AuditLogChangeKeys.BITRATE:
+                        return eo(e, e => e / 1e3);
+                      case P.AuditLogChangeKeys.COLOR:
+                        return eo(e, e => (0, I.int2hex)(e).toUpperCase());
+                      case P.AuditLogChangeKeys.THEME_COLORS:
+                        return eo(e, e =>
                           ""
                             .concat((0, I.int2hex)(e[0]).toUpperCase(), ", ")
                             .concat((0, I.int2hex)(e[1]).toUpperCase())
                         );
-                      case p.AuditLogChangeKeys.MAX_AGE:
-                        return eL(e, e => {
-                          let t = f.default.getMaxAgeOptions.find(t => {
+                      case P.AuditLogChangeKeys.MAX_AGE:
+                        return eo(e, e => {
+                          let t = h.default.getMaxAgeOptions.find(t => {
                             let { value: E } = t;
                             return e === E;
                           });
                           return t ? t.label : e;
                         });
-                      case p.AuditLogChangeKeys.PERMISSIONS: {
+                      case P.AuditLogChangeKeys.PERMISSIONS: {
                         let t = [],
-                          { added: E, removed: _ } = ei(e.oldValue, e.newValue);
+                          { added: E, removed: _ } = el(e.oldValue, e.newValue);
                         if (E.length > 0) {
                           let e = new G.AuditLogChange(
-                            p.AuditLogChangeKeys.PERMISSIONS_GRANTED,
+                            P.AuditLogChangeKeys.PERMISSIONS_GRANTED,
                             null,
                             E
                           );
@@ -8680,7 +8683,7 @@
                         }
                         if (_.length > 0) {
                           let e = new G.AuditLogChange(
-                            p.AuditLogChangeKeys.PERMISSIONS_DENIED,
+                            P.AuditLogChangeKeys.PERMISSIONS_DENIED,
                             null,
                             _
                           );
@@ -8688,17 +8691,17 @@
                         }
                         return t;
                       }
-                      case p.AuditLogChangeKeys.PERMISSIONS_GRANTED:
-                      case p.AuditLogChangeKeys.PERMISSIONS_DENIED: {
+                      case P.AuditLogChangeKeys.PERMISSIONS_GRANTED:
+                      case P.AuditLogChangeKeys.PERMISSIONS_DENIED: {
                         let t = [],
-                          { added: E, removed: _ } = ei(e.oldValue, e.newValue);
+                          { added: E, removed: _ } = el(e.oldValue, e.newValue);
                         if (E.length > 0) {
                           let _ = new G.AuditLogChange(e.key, null, E);
                           t.push(_);
                         }
                         if (_.length > 0) {
                           let e = new G.AuditLogChange(
-                            p.AuditLogChangeKeys.PERMISSIONS_RESET,
+                            P.AuditLogChangeKeys.PERMISSIONS_RESET,
                             _,
                             _
                           );
@@ -8706,19 +8709,19 @@
                         }
                         return t;
                       }
-                      case p.AuditLogChangeKeys.FLAGS: {
+                      case P.AuditLogChangeKeys.FLAGS: {
                         let t = [],
                           { added: E, removed: _ } = (function (e, t) {
                             let E = "number" == typeof e ? e : 0,
                               _ = "number" == typeof t ? t : 0,
-                              s = M.removeFlag(_, E),
-                              a = M.removeFlag(E, _),
+                              s = R.removeFlag(_, E),
+                              a = R.removeFlag(E, _),
                               T = [],
                               n = [];
-                            for (let e in P.ChannelFlags) {
-                              let t = P.ChannelFlags[e];
-                              M.hasFlag(s, t) && T.push(t),
-                                M.hasFlag(a, t) && n.push(t);
+                            for (let e in y.ChannelFlags) {
+                              let t = y.ChannelFlags[e];
+                              R.hasFlag(s, t) && T.push(t),
+                                R.hasFlag(a, t) && n.push(t);
                             }
                             return { added: T, removed: n };
                           })(e.oldValue, e.newValue);
@@ -8732,42 +8735,42 @@
                         }
                         return t;
                       }
-                      case p.AuditLogChangeKeys.PREFERRED_LOCALE:
-                        return eL(e, e => {
-                          let t = m.default
+                      case P.AuditLogChangeKeys.PREFERRED_LOCALE:
+                        return eo(e, e => {
+                          let t = v.default
                             .getAvailableLocales()
                             .find(t => t.value === e);
                           return null != t ? t.name : null;
                         });
-                      case p.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
-                        return eL(e, e =>
-                          e === p.VideoQualityMode.FULL
-                            ? m.default.Messages.VIDEO_QUALITY_MODE_FULL
-                            : m.default.Messages.VIDEO_QUALITY_MODE_AUTO
+                      case P.AuditLogChangeKeys.VIDEO_QUALITY_MODE:
+                        return eo(e, e =>
+                          e === P.VideoQualityMode.FULL
+                            ? v.default.Messages.VIDEO_QUALITY_MODE_FULL
+                            : v.default.Messages.VIDEO_QUALITY_MODE_AUTO
                         );
-                      case p.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
+                      case P.AuditLogChangeKeys.SYSTEM_CHANNEL_FLAGS:
                         return (function (e) {
                           let t = {
-                              [p.SystemChannelFlags
+                              [P.SystemChannelFlags
                                 .SUPPRESS_JOIN_NOTIFICATIONS]:
-                                p.AuditLogChangeKeys
+                                P.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS,
-                              [p.SystemChannelFlags
+                              [P.SystemChannelFlags
                                 .SUPPRESS_PREMIUM_SUBSCRIPTIONS]:
-                                p.AuditLogChangeKeys
+                                P.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS,
-                              [p.SystemChannelFlags
+                              [P.SystemChannelFlags
                                 .SUPPRESS_GUILD_REMINDER_NOTIFICATIONS]:
-                                p.AuditLogChangeKeys
+                                P.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS,
-                              [p.SystemChannelFlags
+                              [P.SystemChannelFlags
                                 .SUPPRESS_JOIN_NOTIFICATION_REPLIES]:
-                                p.AuditLogChangeKeys
+                                P.AuditLogChangeKeys
                                   .SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES,
                             },
                             E = [];
                           return (
-                            Object.values(p.SystemChannelFlags).forEach(_ => {
+                            Object.values(P.SystemChannelFlags).forEach(_ => {
                               let s = (e.oldValue & _) === _,
                                 a = (e.newValue & _) === _;
                               if (s === a) return;
@@ -8777,42 +8780,42 @@
                             E
                           );
                         })(e);
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(
+                          return eo(
                             e,
                             e => e.map(e => e.type),
                             e => e.map(r.actionTypeToName).join(", ")
                           );
                         break;
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_EVENT_TYPE:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(e, r.eventTypeToName);
+                          return eo(e, r.eventTypeToName);
                         break;
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_TRIGGER_TYPE:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(e, r.triggerTypeToName);
+                          return eo(e, r.triggerTypeToName);
                         break;
-                      case p.AuditLogChangeKeys
+                      case P.AuditLogChangeKeys
                         .AUTO_MODERATION_TRIGGER_METADATA:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(e, e => {
+                          return eo(e, e => {
                             if (null != e && "object" == typeof e)
                               return null != e.keyword_filter &&
                                 Array.isArray(e.keyword_filter)
-                                ? m.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat(
+                                ? v.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_TRIGGER_METADATA_KEYWORDS_UPDATE.plainFormat(
                                     {
                                       newValue: e.keyword_filter
                                         .map(e => "'".concat(e, "'"))
@@ -8823,31 +8826,31 @@
                             return e;
                           });
                         break;
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS:
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS:
-                      case p.AuditLogChangeKeys
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_ADD_KEYWORDS:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_REMOVE_KEYWORDS:
+                      case P.AuditLogChangeKeys
                         .AUTO_MODERATION_ADD_REGEX_PATTERNS:
-                      case p.AuditLogChangeKeys
+                      case P.AuditLogChangeKeys
                         .AUTO_MODERATION_REMOVE_REGEX_PATTERNS:
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST:
-                      case p.AuditLogChangeKeys
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_ADD_ALLOW_LIST:
+                      case P.AuditLogChangeKeys
                         .AUTO_MODERATION_REMOVE_ALLOW_LIST:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(e, e =>
+                          return eo(e, e =>
                             null != e && Array.isArray(e)
                               ? e.map(e => "'".concat(e, "'")).join(", ")
                               : JSON.stringify(e)
                           );
                         break;
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_CHANNELS:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(
+                          return eo(
                             e,
                             e =>
                               e
@@ -8856,38 +8859,38 @@
                                 .map(e =>
                                   (0, l.computeChannelName)(
                                     e,
+                                    C.default,
                                     U.default,
-                                    c.default,
                                     !0
                                   )
                                 ),
                             e =>
                               null != e && e.length > 0
                                 ? e.join(", ")
-                                : m.default.Messages
+                                : v.default.Messages
                                     .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE
                           );
                         break;
-                      case p.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
+                      case P.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES:
                         if (
                           t.targetType ===
-                          p.AuditLogTargetTypes.AUTO_MODERATION_RULE
+                          P.AuditLogTargetTypes.AUTO_MODERATION_RULE
                         )
-                          return eL(
+                          return eo(
                             e,
                             e =>
                               e
-                                .map(e => E.getRole(e))
+                                .map(e => c.default.getRole(E.id, e))
                                 .filter(e => null != e)
                                 .map(e => e.name),
                             e =>
                               null != e && e.length > 0
                                 ? e.join(", ")
-                                : m.default.Messages
+                                : v.default.Messages
                                     .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_NONE
                           );
                         break;
-                      case p.AuditLogChangeKeys.AVAILABLE_TAGS:
+                      case P.AuditLogChangeKeys.AVAILABLE_TAGS:
                         return (function (e) {
                           let { oldValue: t, newValue: E } = e,
                             _ = Array.isArray(t) ? t : [],
@@ -8907,18 +8910,18 @@
                             for (let e in T)
                               if (null == a[e])
                                 return new G.AuditLogChange(
-                                  p.AuditLogChangeKeys.AVAILABLE_TAG_ADD,
+                                  P.AuditLogChangeKeys.AVAILABLE_TAG_ADD,
                                   null,
-                                  el(T[e])
+                                  eL(T[e])
                                 );
                           }
                           if (_.length > s.length) {
                             for (let e in a)
                               if (null == T[e])
                                 return new G.AuditLogChange(
-                                  p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE,
+                                  P.AuditLogChangeKeys.AVAILABLE_TAG_DELETE,
                                   null,
-                                  el(a[e])
+                                  eL(a[e])
                                 );
                           }
                           for (let e in a) {
@@ -8932,17 +8935,17 @@
                                 t.emoji_name
                             )
                               return new G.AuditLogChange(
-                                p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT,
-                                el(t),
-                                el(E)
+                                P.AuditLogChangeKeys.AVAILABLE_TAG_EDIT,
+                                eL(t),
+                                eL(E)
                               );
                           }
                           return e;
                         })(e);
-                      case p.AuditLogChangeKeys.SCHEDULED_START_TIME:
-                      case p.AuditLogChangeKeys.SCHEDULED_END_TIME:
-                        return eL(e, e =>
-                          (0, C.dateFormat)(T(new Date(e)), "LLLL")
+                      case P.AuditLogChangeKeys.SCHEDULED_START_TIME:
+                      case P.AuditLogChangeKeys.SCHEDULED_END_TIME:
+                        return eo(e, e =>
+                          (0, M.dateFormat)(T(new Date(e)), "LLLL")
                         );
                     }
                     return e;
@@ -8957,20 +8960,20 @@
           E
         );
       }
-      function ei(e, t) {
+      function el(e, t) {
         let E = u.default.deserialize("string" == typeof e ? e : 0),
           _ = u.default.deserialize("string" == typeof t ? t : 0),
           s = u.default.remove(_, E),
           a = u.default.remove(E, _),
           T = [],
           n = [];
-        for (let e in p.Permissions) {
-          let t = p.Permissions[e];
+        for (let e in P.Permissions) {
+          let t = P.Permissions[e];
           u.default.has(s, t) && T.push(t), u.default.has(a, t) && n.push(t);
         }
         return { added: T, removed: n };
       }
-      function el(e) {
+      function eL(e) {
         return null == e
           ? null
           : {
@@ -8981,7 +8984,7 @@
               moderated: e.moderated,
             };
       }
-      function eL(e, t, E) {
+      function eo(e, t, E) {
         let _ = e.newValue,
           s = e.oldValue;
         return (
@@ -8992,7 +8995,7 @@
           new G.AuditLogChange(e.key, s || e.oldValue, _ || e.newValue)
         );
       }
-      function eo(e, t, E, _, s) {
+      function er(e, t, E, _, s) {
         let a = null;
         s = null != s ? s : e.targetId;
         let T = E(s);
@@ -9006,18 +9009,18 @@
         }
         return null != a ? a : s;
       }
-      function er(e, t, E) {
+      function ed(e, t, E) {
         let _ = e,
           s = t(e);
         return null != s && null != E && (_ = E(s)), _;
       }
-      function ed(e, t) {
+      function eN(e, t) {
         return E => (null == E.oldValue ? e : t);
       }
-      function eN(e, t) {
+      function eS(e, t) {
         return E => (null == E.newValue ? e : t);
       }
-      function eS(e, t, E, _) {
+      function eg(e, t, E, _) {
         return s => {
           if (null != s.newValue && null != s.oldValue) return e;
           if (null != s.newValue) return t;
@@ -9179,4 +9182,4 @@
     },
   },
 ]);
-//# sourceMappingURL=61b1407073899ba8783e.js.map
+//# sourceMappingURL=502652b77f0db0c4492c.js.map

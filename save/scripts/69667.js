@@ -10143,94 +10143,94 @@
         m = n("875746"),
         N = n("49111");
       function p(e) {
-        var t;
         let {
-            guildProductListing: n,
-            guildId: p,
-            location: S,
-            shouldShowFullDescriptionButton: C = !0,
-            hideRoleTag: A = !1,
-            lineClamp: h = 1,
-            cardWidth: g,
-            cardHeight: M,
-            thumbnailHeight: O,
-            descriptionTextVariant: R = "text-sm/normal",
-            showOpaqueBackground: v = !1,
+            guildProductListing: t,
+            guildId: n,
+            location: p,
+            shouldShowFullDescriptionButton: S = !0,
+            hideRoleTag: C = !1,
+            lineClamp: A = 1,
+            cardWidth: h,
+            cardHeight: g,
+            thumbnailHeight: M,
+            descriptionTextVariant: O = "text-sm/normal",
+            showOpaqueBackground: R = !1,
           } = e,
-          L = (0, l.default)([o.default], () => o.default.getGuild(p), [p]),
-          P =
-            null == L
-              ? void 0
-              : L.roles[
-                  null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t
-                    ? t
-                    : N.EMPTY_STRING_SNOWFLAKE_ID
-                ],
-          D = (0, a.useListingThumbnailUrl)(n, 600),
-          x = (0, _.useProductType)(n),
-          y = (0, d.useCanManageGuildProduct)(L),
-          { shouldHideGuildPurchaseEntryPoints: U } = (0,
-          r.useShouldHideGuildPurchaseEntryPoints)(p),
-          j = (0, _.usePrice)(n);
-        if (null == L || U) return null;
-        let b = () =>
+          v = (0, l.default)([o.default], () => o.default.getGuild(n), [n]),
+          L = (0, l.default)([o.default], () => {
+            var e;
+            return o.default.getRole(
+              n,
+              null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e
+                ? e
+                : N.EMPTY_STRING_SNOWFLAKE_ID
+            );
+          }),
+          P = (0, a.useListingThumbnailUrl)(t, 600),
+          D = (0, _.useProductType)(t),
+          x = (0, d.useCanManageGuildProduct)(v),
+          { shouldHideGuildPurchaseEntryPoints: y } = (0,
+          r.useShouldHideGuildPurchaseEntryPoints)(n),
+          U = (0, _.usePrice)(t);
+        if (null == v || y) return null;
+        let j = () =>
             (0, I.openGuildProductInfoModal)({
-              guildId: p,
-              guildProductListingId: n.id,
-              analyticsLocation: S,
+              guildId: n,
+              guildProductListingId: t.id,
+              analyticsLocation: p,
             }),
-          G = (0, s.jsx)(T.GuildProductListingPopout, {
-            product: n,
-            guildId: p,
-            showEditProduct: y,
+          b = (0, s.jsx)(T.GuildProductListingPopout, {
+            product: t,
+            guildId: n,
+            showEditProduct: x,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: y
+            onEditProduct: x
               ? () => {
-                  E.openModal(L.id, n.id);
+                  E.openModal(v.id, t.id);
                 }
               : () => {},
             onUnpublishProduct: () => {},
             onDeleteProduct: () => {},
             onReportProduct: () => {
-              (0, i.openGuildShopReportModal)({ listing: n });
+              (0, i.openGuildShopReportModal)({ listing: t });
             },
             onCopyProductLink: () => {
-              (0, u.copy)((0, c.getGuildProductListingUrl)(p, n.id));
+              (0, u.copy)((0, c.getGuildProductListingUrl)(n, t.id));
             },
             onTestDownload: () => {},
           });
         return (0, s.jsx)(
           f.default,
           {
-            imageUrl: D,
-            name: n.name,
-            description: n.description,
-            formattedPrice: j,
-            role: P,
+            imageUrl: P,
+            name: t.name,
+            description: t.description,
+            formattedPrice: U,
+            role: L,
             ctaComponent: (0, s.jsx)(m.default, {
-              guildId: p,
-              guildProductListingId: n.id,
-              sourceAnalyticsLocations: S,
+              guildId: n,
+              guildProductListingId: t.id,
+              sourceAnalyticsLocations: p,
             }),
-            productType: x,
-            shouldShowFullDescriptionButton: C,
-            onShowFullDescription: b,
-            onTapCard: b,
-            actionMenu: G,
-            showOpaqueBackground: v,
-            hideRoleTag: A,
-            lineClamp: h,
-            cardWidth: g,
-            cardHeight: M,
-            thumbnailHeight: O,
-            descriptionTextVariant: R,
-            isDraft: !n.published,
+            productType: D,
+            shouldShowFullDescriptionButton: S,
+            onShowFullDescription: j,
+            onTapCard: j,
+            actionMenu: b,
+            showOpaqueBackground: R,
+            hideRoleTag: C,
+            lineClamp: A,
+            cardWidth: h,
+            cardHeight: g,
+            thumbnailHeight: M,
+            descriptionTextVariant: O,
+            isDraft: !t.published,
           },
-          n.id
+          t.id
         );
       }
     },
@@ -28197,9 +28197,9 @@
           for (let n of null !== (M = P.options) && void 0 !== M ? M : [])
             e = e.concat(
               (function e(t, n, a, i, r) {
-                var d, c, T, C, M, O, R;
-                let v;
-                let L = null != i ? i + " " + t.name : t.name;
+                var d, c, C, M, O, R, v;
+                let L;
+                let P = null != i ? i + " " + t.name : t.name;
                 if (
                   t.type === u.ApplicationCommandOptionType.SUB_COMMAND ||
                   t.type === u.ApplicationCommandOptionType.SUB_COMMAND_GROUP
@@ -28221,26 +28221,26 @@
                             }),
                           ],
                         },
-                        L
+                        P
                       ),
                     ],
                     u = Object.fromEntries(
                       null ===
                         (d =
-                          null !== (T = null == r ? void 0 : r.options) &&
-                          void 0 !== T
-                            ? T
+                          null !== (C = null == r ? void 0 : r.options) &&
+                          void 0 !== C
+                            ? C
                             : []) || void 0 === d
                         ? void 0
                         : d.map(e => [e.name, e])
                     );
-                  for (let s of null !== (C = t.options) && void 0 !== C
-                    ? C
+                  for (let s of null !== (M = t.options) && void 0 !== M
+                    ? M
                     : [])
-                    i = i.concat(e(s, n, a, L, u[s.name]));
+                    i = i.concat(e(s, n, a, P, u[s.name]));
                   return i;
                 }
-                let P = t.value;
+                let D = t.value;
                 if (null != t.value)
                   switch (t.type) {
                     case u.ApplicationCommandOptionType.USER: {
@@ -28248,7 +28248,7 @@
                         l = I.default.getUser(e);
                       if (null != l) {
                         let e = (0, E.getUserAuthor)(l, n);
-                        v = (0, s.jsxs)(m.default, {
+                        L = (0, s.jsxs)(m.default, {
                           ...h,
                           onClick: () =>
                             (0, f.openUserProfileModal)({
@@ -28269,7 +28269,7 @@
                       let e = t.value.toString(),
                         n = _.default.getChannel(e);
                       null != n &&
-                        (v = (0, s.jsxs)(m.default, {
+                        (L = (0, s.jsxs)(m.default, {
                           ...h,
                           children: [p.CHANNEL_SENTINEL, n.name],
                         }));
@@ -28277,12 +28277,9 @@
                     }
                     case u.ApplicationCommandOptionType.ROLE: {
                       let e = t.value.toString(),
-                        n =
-                          (null == a ? void 0 : a.roles) != null
-                            ? a.roles[e]
-                            : null;
+                        n = null != a ? T.default.getRole(a.id, e) : void 0;
                       null != n &&
-                        (v = (0, s.jsxs)(m.default, {
+                        (L = (0, s.jsxs)(m.default, {
                           ...h,
                           children: [p.MENTION_SENTINEL, n.name],
                         }));
@@ -28290,19 +28287,16 @@
                     }
                     case u.ApplicationCommandOptionType.MENTIONABLE: {
                       let e = t.value.toString(),
-                        l =
-                          (null == a ? void 0 : a.roles) != null
-                            ? a.roles[e]
-                            : null;
+                        l = null != a ? T.default.getRole(a.id, e) : void 0;
                       if (null != l)
-                        v = (0, s.jsxs)(m.default, {
+                        L = (0, s.jsxs)(m.default, {
                           children: [p.MENTION_SENTINEL, l.name],
                         });
                       else {
                         let t = I.default.getUser(e);
                         if (null != t) {
                           let e = (0, E.getUserAuthor)(t, n);
-                          v = (0, s.jsxs)(m.default, {
+                          L = (0, s.jsxs)(m.default, {
                             ...h,
                             onClick: () =>
                               (0, f.openUserProfileModal)({
@@ -28321,7 +28315,7 @@
                       break;
                     }
                     case u.ApplicationCommandOptionType.ATTACHMENT:
-                      v = g(
+                      L = g(
                         S.default.Messages
                           .EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE
                       );
@@ -28330,18 +28324,18 @@
                       let e =
                         null == r
                           ? void 0
-                          : null === (M = r.choices) || void 0 === M
+                          : null === (O = r.choices) || void 0 === O
                             ? void 0
-                            : M.find(e => e.value === t.value);
+                            : O.find(e => e.value === t.value);
                       null != e &&
-                        (P =
-                          null !== (O = e.name_localized) && void 0 !== O
-                            ? O
+                        (D =
+                          null !== (R = e.name_localized) && void 0 !== R
+                            ? R
                             : e.name);
                     }
                   }
                 return (
-                  null == v && (v = g(null == P ? void 0 : P.toString())),
+                  null == L && (L = g(null == D ? void 0 : D.toString())),
                   [
                     (0, s.jsxs)(
                       l.Fragment,
@@ -28352,17 +28346,17 @@
                             children: [
                               " ",
                               null !==
-                                (R = null == r ? void 0 : r.name_localized) &&
-                              void 0 !== R
-                                ? R
+                                (v = null == r ? void 0 : r.name_localized) &&
+                              void 0 !== v
+                                ? v
                                 : t.name,
                               ": ",
                             ],
                           }),
-                          v,
+                          L,
                         ],
                       },
-                      L
+                      P
                     ),
                   ]
                 );
@@ -32105,4 +32099,4 @@
     },
   },
 ]);
-//# sourceMappingURL=114b133f6669749c5ae2.js.map
+//# sourceMappingURL=8c7d4275b41105bba9c3.js.map

@@ -205,6 +205,27 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
+    289867: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var a = n("913144"),
+        l = {
+          toggleMembersSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+          },
+          toggleProfilePanelSection() {
+            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
+          },
+          toggleSummariesSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+          },
+        };
+    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -816,14 +837,13 @@
             g = (0, c.useStateFromStores)(
               [x.default],
               () => {
-                var e, n;
+                var e;
                 return (null == p ? void 0 : p.colorRoleId) != null
-                  ? null === (n = x.default.getGuild(t.guild_id)) ||
-                    void 0 === n
+                  ? null ===
+                      (e = x.default.getRole(t.guild_id, p.colorRoleId)) ||
+                    void 0 === e
                     ? void 0
-                    : null === (e = n.getRole(p.colorRoleId)) || void 0 === e
-                      ? void 0
-                      : e.name
+                    : e.name
                   : void 0;
               },
               [t.guild_id, p]
@@ -7858,14 +7878,12 @@
             f = (0, c.useStateFromStores)(
               [y.default],
               () => {
-                var e, n;
+                var e;
                 return null != t
-                  ? null === (n = y.default.getGuild(l.guild_id)) ||
-                    void 0 === n
+                  ? null === (e = y.default.getRole(l.guild_id, t)) ||
+                    void 0 === e
                     ? void 0
-                    : null === (e = n.getRole(t)) || void 0 === e
-                      ? void 0
-                      : e.name
+                    : e.name
                   : void 0;
               },
               [l, t]
@@ -14017,46 +14035,43 @@
         S = n("865331");
       function C(e) {
         let { member: t } = e,
-          n = (0, r.default)([f.default], () => f.default.getGuild(t.guildId), [
-            t.guildId,
-          ]),
-          s = l.useMemo(() => {
-            var e;
-            if (null == n) return [];
-            let a =
-              null !== (e = null == n ? void 0 : n.roles) && void 0 !== e
-                ? e
-                : {};
-            return null == t.highestRoleId
-              ? t.roles
-              : t.roles
-                  .filter(e => null != e && e !== t.highestRoleId)
-                  .sort((e, t) => {
-                    var n, l, s, i;
-                    return null !==
-                      (i =
-                        null !==
-                          (s =
-                            null === (n = a[t]) || void 0 === n
-                              ? void 0
-                              : n.position) && void 0 !== s
-                          ? s
-                          : 0 -
-                            (null === (l = a[e]) || void 0 === l
-                              ? void 0
-                              : l.position)) && void 0 !== i
-                      ? i
-                      : 0;
-                  });
-          }, [t.roles, t.highestRoleId, n]),
-          C = (0, r.default)(
+          n = (0, r.default)([f.default], () => f.default.getGuild(t.guildId)),
+          s = (0, r.default)([f.default], () => f.default.getRoles(t.guildId)),
+          C = l.useMemo(
+            () =>
+              null == n
+                ? []
+                : null == t.highestRoleId
+                  ? t.roles
+                  : t.roles
+                      .filter(e => null != e && e !== t.highestRoleId)
+                      .sort((e, t) => {
+                        var n, a, l, i;
+                        return null !==
+                          (i =
+                            null !==
+                              (l =
+                                null === (n = s[t]) || void 0 === n
+                                  ? void 0
+                                  : n.position) && void 0 !== l
+                              ? l
+                              : 0 -
+                                (null === (a = s[e]) || void 0 === a
+                                  ? void 0
+                                  : a.position)) && void 0 !== i
+                          ? i
+                          : 0;
+                      }),
+            [t.roles, t.highestRoleId, n, s]
+          ),
+          _ = (0, r.default)(
             [o.default],
             () => o.default.getEnhancedMember(t.guildId, t.userId),
             [t.guildId, t.userId]
           ),
-          _ = (0, d.useHighestRole)(C),
-          I = (0, d.useContextMenuModerateRoles)(t),
-          T = (0, r.default)(
+          I = (0, d.useHighestRole)(_),
+          T = (0, d.useContextMenuModerateRoles)(t),
+          v = (0, r.default)(
             [h.default],
             () => h.default.can(E.Permissions.MANAGE_ROLES, n),
             [n]
@@ -14086,24 +14101,24 @@
                             onMouseLeave: l,
                             children: (0, a.jsx)(c.default, {
                               className: i(S.roleTooltipItem, S.highestRole),
-                              role: _,
+                              role: I,
                               guildId: t.guildId,
                             }),
                           });
                         },
                       }),
-                      s.map(e =>
+                      C.map(e =>
                         (0, a.jsx)(
                           c.default,
                           {
                             className: i(S.roleTooltipItem),
-                            role: n.roles[e],
+                            role: s[e],
                             guildId: t.guildId,
                           },
                           e
                         )
                       ),
-                      T &&
+                      v &&
                         (0, a.jsx)(u.Tooltip, {
                           "aria-label": g.default.Messages.ADD_ROLE_A11Y_LABEL,
                           tooltipContentClassName: S.permissionTooltip,
@@ -14113,7 +14128,7 @@
                             let { onMouseEnter: t, onMouseLeave: n } = e;
                             return (0, a.jsx)(u.Clickable, {
                               className: i(S.addRoleContainer),
-                              onClick: I,
+                              onClick: T,
                               onMouseEnter: t,
                               onMouseLeave: n,
                               children: (0, a.jsx)(m.default, {
@@ -14456,17 +14471,18 @@
         C = n("206845");
       function _(e) {
         var t, n;
-        let { permission: l, roleIds: s, guild: r, specMap: u } = e,
-          f = g.Permissions[l],
-          h =
+        let { permission: l, roleIds: s, guild: u, specMap: h } = e,
+          m = g.Permissions[l],
+          E =
             null !==
               (n =
-                null === (t = u[f.toString()]) || void 0 === t
+                null === (t = h[m.toString()]) || void 0 === t
                   ? void 0
                   : t.title) && void 0 !== n
               ? n
-              : (0, c.getPermissionName)(f),
-          m = p.ELEVATED_PERMISSIONS.has(f);
+              : (0, c.getPermissionName)(m),
+          _ = p.ELEVATED_PERMISSIONS.has(m),
+          I = (0, r.default)([f.default], () => f.default.getRoles(u.id));
         return (0, a.jsx)(o.Tooltip, {
           "aria-label":
             S.default.Messages
@@ -14478,7 +14494,7 @@
             children: [
               (0, a.jsx)(o.Text, {
                 variant: "text-sm/normal",
-                children: m
+                children: _
                   ? S.default.Messages
                       .GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY
                   : S.default.Messages
@@ -14490,8 +14506,8 @@
                   {
                     className: i(C.roleTooltipItem),
                     children: (0, a.jsx)(d.default, {
-                      role: r.getRole(e),
-                      guildId: r.id,
+                      role: I[e],
+                      guildId: u.id,
                     }),
                   },
                   e
@@ -14502,13 +14518,13 @@
           children: e => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, a.jsx)(o.Clickable, {
-              className: i(C.permissionChiplet, { [C.elevatedPermission]: m }),
+              className: i(C.permissionChiplet, { [C.elevatedPermission]: _ }),
               onMouseEnter: t,
               onMouseLeave: n,
               children: (0, a.jsx)(o.Text, {
                 variant: "text-xs/medium",
-                color: m ? "text-danger" : "text-normal",
-                children: h,
+                color: _ ? "text-danger" : "text-normal",
+                children: E,
               }),
             });
           },
@@ -15189,47 +15205,48 @@
       function N(e) {
         var t, n, s, h;
         let {
-            permission: m,
-            roleIds: E,
-            guild: g,
-            specMap: S,
-            categoryTitle: C,
+            permission: E,
+            roleIds: g,
+            guild: S,
+            specMap: C,
+            categoryTitle: v,
           } = e,
-          v = I.Permissions[m],
-          N =
+          N = (0, r.default)([m.default], () => m.default.getRoles(S.id)),
+          A = I.Permissions[E],
+          M =
             null !==
               (s =
-                null === (t = S[v.toString()]) || void 0 === t
+                null === (t = C[A.toString()]) || void 0 === t
                   ? void 0
                   : t.title) && void 0 !== s
               ? s
-              : (0, f.getPermissionName)(v),
-          A =
+              : (0, f.getPermissionName)(A),
+          R =
             null !==
               (h =
-                null === (n = S[v.toString()]) || void 0 === n
+                null === (n = C[A.toString()]) || void 0 === n
                   ? void 0
                   : n.description) && void 0 !== h
               ? h
               : "",
-          M = _.ELEVATED_PERMISSIONS.has(v),
-          R = E.length,
-          j = (0, r.default)(
+          j = _.ELEVATED_PERMISSIONS.has(A),
+          y = g.length,
+          L = (0, r.default)(
             [p.default],
-            () => p.default.can(I.Permissions.MANAGE_ROLES, g),
-            [g]
+            () => p.default.can(I.Permissions.MANAGE_ROLES, S),
+            [S]
           ),
-          y = l.useCallback(
+          O = l.useCallback(
             async e => {
-              j &&
-                (await c.default.open(g.id, I.GuildSettingsSections.ROLES),
+              L &&
+                (await c.default.open(S.id, I.GuildSettingsSections.ROLES),
                 await c.default.selectRole(e));
             },
-            [j, g.id]
+            [L, S.id]
           );
         return (0, a.jsxs)("div", {
           className: i(x.permissionItemContainer, {
-            [x.elevatedPermission]: M,
+            [x.elevatedPermission]: j,
           }),
           children: [
             (0, a.jsxs)("div", {
@@ -15240,14 +15257,14 @@
                   children: [
                     (0, a.jsx)(u.Text, {
                       variant: "text-md/medium",
-                      color: M ? "text-danger" : "header-primary",
-                      children: N,
+                      color: j ? "text-danger" : "header-primary",
+                      children: M,
                     }),
-                    null != C &&
+                    null != v &&
                       (0, a.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         color: "header-muted",
-                        children: C,
+                        children: v,
                       }),
                   ],
                 }),
@@ -15256,33 +15273,33 @@
                   color: "text-normal",
                   children:
                     T.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({
-                      roleCount: R,
+                      roleCount: y,
                     }),
                 }),
               ],
             }),
-            null != A &&
+            null != R &&
               (0, a.jsx)("div", {
                 className: x.permissionItemDescription,
                 children: (0, a.jsx)(u.Text, {
                   variant: "text-sm/normal",
                   color: "text-secondary",
-                  children: A,
+                  children: R,
                 }),
               }),
             (0, a.jsx)("div", {
               className: x.permissionItemRoleContainer,
-              children: E.map(e =>
+              children: g.map(e =>
                 (0, a.jsx)(
                   u.Clickable,
                   {
                     className: i(x.roleTooltipItem, {
-                      [x.editable]: j && !(0, o.isEveryoneRoleId)(g.id, e),
+                      [x.editable]: L && !(0, o.isEveryoneRoleId)(S.id, e),
                     }),
-                    onClick: () => y(e),
+                    onClick: () => O(e),
                     children: (0, a.jsx)(d.default, {
-                      role: g.getRole(e),
-                      guildId: g.id,
+                      role: N[e],
+                      guildId: S.id,
                     }),
                   },
                   e
@@ -15424,34 +15441,34 @@
       function p(e, t, n) {
         let d = (0, l.default)([i.default], () => i.default.getGuild(t), [t]);
         return (0, l.default)(
-          [s.default, r.default],
+          [s.default, r.default, i.default],
           () => {
             let l = {},
-              i = s.default.getMember(t, e),
-              c = r.default.getUser(e);
-            if (null == d || null == i || null == c) return l;
-            let f = d.getRole(d.getEveryoneRoleId()),
-              h = u.default.computePermissions({ user: c, context: d });
+              c = s.default.getMember(t, e),
+              f = r.default.getUser(e);
+            if (null == d || null == c || null == f) return l;
+            let h = i.default.getRole(d.id, d.getEveryoneRoleId()),
+              m = u.default.computePermissions({ user: f, context: d });
             for (let e of n) {
               let t = o.Permissions[e];
-              if (a.default.has(h, t)) {
-                for (let n of ((l[e] = []), i.roles)) {
-                  let s = null == d ? void 0 : d.roles[n];
+              if (a.default.has(m, t)) {
+                for (let n of ((l[e] = []), c.roles)) {
+                  let s = i.default.getRole(d.id, n);
                   if (null == s) continue;
-                  let i = a.default.has(
+                  let r = a.default.has(
                     s.permissions,
                     o.Permissions.ADMINISTRATOR
                   );
-                  (i || a.default.hasAny(s.permissions, t)) && l[e].push(s.id);
+                  (r || a.default.hasAny(s.permissions, t)) && l[e].push(s.id);
                 }
-                if (null != f) {
+                if (null != h) {
                   let n = a.default.has(
-                    f.permissions,
+                    h.permissions,
                     o.Permissions.ADMINISTRATOR
                   );
-                  (n || a.default.hasAny(f.permissions, t)) && l[e].push(f.id);
+                  (n || a.default.hasAny(h.permissions, t)) && l[e].push(h.id);
                 }
-                d.isOwner(c) && l[e].push(c.id);
+                d.isOwner(f) && l[e].push(f.id);
               }
             }
             return l;
@@ -16116,23 +16133,23 @@
                     if (!(l || e.published)) return !1;
                     let s = n.permissionOverwrites[e.role_id];
                     if ((0, o.isChannelAccessGrantedBy)(n, s)) return !0;
-                    let i = t.getRole(t.getEveryoneRoleId()),
-                      r =
+                    let i = r.default.getRole(t.id, t.getEveryoneRoleId()),
+                      u =
                         null != i &&
                         !a.default.has(
                           i.permissions,
                           d.Permissions.VIEW_CHANNEL
                         ),
-                      u = (0, o.isChannelAccessDeniedBy)(
+                      c = (0, o.isChannelAccessDeniedBy)(
                         n,
                         n.permissionOverwrites[t.id]
                       ),
-                      c = t.getRole(e.role_id);
+                      f = r.default.getRole(t.id, e.role_id);
                     return (
-                      r &&
-                      !u &&
-                      null != c &&
-                      (0, o.isAllChannelsRole)(c) &&
+                      u &&
+                      !c &&
+                      null != f &&
+                      (0, o.isAllChannelsRole)(f) &&
                       !(0, o.isChannelAccessDeniedBy)(n, s)
                     );
                   })(t, l, e, { isPreviewingRoles: u })
@@ -28820,7 +28837,7 @@
       n.r(t),
         n.d(t, {
           useThreadMemberListSections: function () {
-            return c;
+            return f;
           },
         }),
         n("222007"),
@@ -28829,21 +28846,25 @@
         l = n("917351"),
         s = n.n(l),
         i = n("446674"),
-        r = n("593752"),
-        u = n("843455"),
-        o = n("782340");
-      let d = [];
-      function c(e, t) {
-        let { version: n, members: l } = (0, i.useStateFromStoresObject)(
-            [r.default],
+        r = n("305961"),
+        u = n("593752"),
+        o = n("843455"),
+        d = n("782340");
+      let c = [];
+      function f(e, t) {
+        let n = (0, i.useStateFromStores)([r.default], () =>
+            null != t ? r.default.getRoles(t.id) : void 0
+          ),
+          { version: l, members: f } = (0, i.useStateFromStoresObject)(
+            [u.default],
             () => ({
-              version: r.default.getMemberListVersion(e),
-              members: r.default.getMemberListSections(e),
+              version: u.default.getMemberListVersion(e),
+              members: u.default.getMemberListSections(e),
             })
           ),
-          c = a.useMemo(() => {
-            if (null == t) return d;
-            let e = s(t.roles)
+          h = a.useMemo(() => {
+            if (null == t) return c;
+            let e = s(n)
               .values()
               .filter(e => e.hoist)
               .sortBy(e => e.position)
@@ -28851,23 +28872,29 @@
               .map(e => e.id)
               .value();
             return (
-              e.push(u.StatusTypes.ONLINE, u.StatusTypes.OFFLINE),
+              e.push(o.StatusTypes.ONLINE, o.StatusTypes.OFFLINE),
               e.map(e => {
-                var n, a, s;
+                var t, a, l, s;
                 let i =
-                    e === u.StatusTypes.ONLINE
-                      ? o.default.Messages.STATUS_ONLINE
-                      : e === u.StatusTypes.OFFLINE
-                        ? o.default.Messages.STATUS_OFFLINE
-                        : null === (n = t.roles[e]) || void 0 === n
-                          ? void 0
-                          : n.name,
+                    e === o.StatusTypes.ONLINE
+                      ? d.default.Messages.STATUS_ONLINE
+                      : e === o.StatusTypes.OFFLINE
+                        ? d.default.Messages.STATUS_OFFLINE
+                        : null !==
+                              (l =
+                                null == n
+                                  ? void 0
+                                  : null === (t = n[e]) || void 0 === t
+                                    ? void 0
+                                    : t.name) && void 0 !== l
+                          ? l
+                          : "",
                   r =
                     null !==
                       (s =
-                        null == l
+                        null == f
                           ? void 0
-                          : null === (a = l[e]) || void 0 === a
+                          : null === (a = f[e]) || void 0 === a
                             ? void 0
                             : a.userIds) && void 0 !== s
                       ? s
@@ -28875,8 +28902,8 @@
                 return { label: i, userIds: r, id: e, roleId: e };
               })
             );
-          }, [null == t ? void 0 : t.roles, l, n]);
-        return null != l ? c : d;
+          }, [n, f, l]);
+        return null != f ? h : c;
       }
     },
     593752: function (e, t, n) {
@@ -30384,6 +30411,79 @@
           },
         });
       }
+    },
+    893980: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          trackProfilePanelViewed: function () {
+            return u;
+          },
+          trackProfilePanelToggled: function () {
+            return o;
+          },
+        });
+      var a = n("373469"),
+        l = n("824563"),
+        s = n("27618"),
+        i = n("599110"),
+        r = n("49111");
+      let u = e => {
+          let {
+            displayProfile: t,
+            isMobile: n,
+            loadDurationMs: a,
+            activity: l,
+            customStatusActivity: s,
+            status: u,
+          } = e;
+          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+            has_mobile_indicator: n,
+            has_activity:
+              null != l &&
+              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+            has_game_activity:
+              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+            load_duration_ms: a,
+            profile_user_status: u,
+            has_custom_status: null != s,
+            has_profile_effect: null != t.profileEffectId,
+            ...d(t),
+          });
+        },
+        o = (e, t) => {
+          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+            is_profile_open: t,
+            ...d(e),
+          });
+        },
+        d = e => {
+          var t;
+          if (null == e) return {};
+          let n = e.userId,
+            i = null != a.default.getAnyStreamForUser(n),
+            u = l.default.findActivity(n, e => {
+              let { type: t } = e;
+              return i
+                ? t === r.ActivityTypes.PLAYING
+                : t !== r.ActivityTypes.CUSTOM_STATUS;
+            }),
+            o = null == u ? void 0 : u.assets,
+            d = s.default.isFriend(n);
+          return {
+            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
+            void 0 !== t
+              ? t
+              : null == o
+                ? void 0
+                : o.small_image),
+            is_friend: d,
+            viewed_profile_user_id: n,
+            profile_has_nitro_customization: e.hasPremiumCustomization(),
+            profile_has_theme_color_customized: e.hasThemeColors(),
+            profile_has_theme_animation: null != e.popoutAnimationParticleType,
+          };
+        };
     },
     69682: function (e, t, n) {
       "use strict";
@@ -41942,4 +42042,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cdf3c6a10be0cd5da27e.js.map
+//# sourceMappingURL=a40e95d759c9947300e4.js.map

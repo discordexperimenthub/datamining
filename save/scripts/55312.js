@@ -121,18 +121,18 @@
             onPrevPressed: I,
             onComplete: m,
             sequencerClassName: L,
-            initialStep: x = 0,
-            forceStep: O,
-            submitting: f = !1,
+            initialStep: f = 0,
+            forceStep: x,
+            submitting: O = !1,
             autoCloseOnComplete: C = !0,
           } = e,
           [S, A] = l.useState([]),
-          [p, h] = l.useState(x),
+          [p, h] = l.useState(f),
           v = (0, o.useUID)();
         l.useEffect(() => {
           A([...Array(i.length).keys()]);
         }, [i.length]);
-        let g = null != O ? O : p,
+        let g = null != x ? x : p,
           D = i[g],
           R = 0 === g,
           j = g === i.length - 1,
@@ -194,7 +194,7 @@
                   children: [
                     (0, a.jsx)(r.Button, {
                       type: "submit",
-                      submitting: f,
+                      submitting: O,
                       onClick: () => {
                         j ? (m(), C && _()) : (null == T || T(), h(g + 1));
                       },
@@ -246,9 +246,9 @@
         I = t("610903"),
         m = t("978970"),
         L = t("161778"),
-        x = t("923959"),
-        O = t("305961"),
-        f = t("27618"),
+        f = t("923959"),
+        x = t("305961"),
+        O = t("27618"),
         C = t("697218"),
         S = t("476765"),
         A = t("578706"),
@@ -279,8 +279,8 @@
               theme: d,
             } = e,
             u = (0, o.useStateFromStores)(
-              [O.default],
-              () => O.default.getGuild(s.id),
+              [x.default],
+              () => x.default.getGuild(s.id),
               [s.id]
             ),
             _ = null != u && u.verificationLevel > j.VerificationLevels.NONE,
@@ -638,7 +638,9 @@
         };
       function W(e) {
         let { guild: s } = e,
-          t = s.getRole(s.getEveryoneRoleId());
+          t = (0, o.useStateFromStores)([x.default], () =>
+            x.default.getRole(s.id, s.getEveryoneRoleId())
+          );
         if (null == t) return null;
         let { name: l, color: i } = t;
         return (0, a.jsx)("div", {
@@ -924,81 +926,78 @@
           ),
           d = (0, o.useStateFromStores)([L.default], () => L.default.theme),
           [c, E] = l.useState(!1),
-          [m, O] = l.useState(
+          [m, A] = l.useState(
             !R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))
           ),
-          [A, p] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
-          [v, D] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
-          [P] = l.useState(null == n ? void 0 : n.defaultMessageNotifications),
-          [F] = l.useState(null == n ? void 0 : n.verificationLevel),
-          [B] = l.useState(null == n ? void 0 : n.explicitContentFilter),
-          [Y] = l.useState(m),
-          y =
-            null == n
-              ? void 0
-              : n.getRole(null == n ? void 0 : n.getEveryoneRoleId()),
-          G = (0, o.useStateFromStores)(
-            [x.default],
-            () => (null != n ? x.default.getChannels(n.id) : null),
-            [n]
+          [p, v] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
+          [D, P] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
+          [F] = l.useState(null == n ? void 0 : n.defaultMessageNotifications),
+          [B] = l.useState(null == n ? void 0 : n.verificationLevel),
+          [Y] = l.useState(null == n ? void 0 : n.explicitContentFilter),
+          [y] = l.useState(m),
+          G = (0, o.useStateFromStores)([x.default], () =>
+            null != n ? x.default.getRole(n.id, n.getEveryoneRoleId()) : void 0
           ),
-          W = (0, S.useUID)(),
-          { enabled: K } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(
+          W = (0, o.useStateFromStores)([f.default], () =>
+            null != n ? f.default.getChannels(n.id) : null
+          ),
+          K = (0, S.useUID)(),
+          { enabled: X } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(
             null !== (s = null == n ? void 0 : n.id) && void 0 !== s
               ? s
               : j.EMPTY_STRING_SNOWFLAKE_ID
           );
         if (null == n) return null;
-        let X = [
+        let q = [
           {
             value: R.CREATE_NEW_CHANNEL_VALUE,
             label: U.default.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL,
           },
         ];
-        G[(0, x.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(e => {
+        W[(0, f.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(e => {
           let { channel: s } = e;
           s.type === j.ChannelTypes.GUILD_TEXT &&
-            X.push({
+            q.push({
               value: s.id,
-              label: (0, _.computeChannelName)(s, C.default, f.default, !0),
+              label: (0, _.computeChannelName)(s, C.default, O.default, !0),
             });
         });
-        let q = F !== j.VerificationLevels.NONE,
-          Q = B === j.GuildExplicitContentFilterTypes.ALL_MEMBERS,
-          J = P === j.UserNotificationSettings.ONLY_MENTIONS,
-          Z = async () => {
-            if (null == y || !c) return;
+        let Q = B !== j.VerificationLevels.NONE,
+          J = Y === j.GuildExplicitContentFilterTypes.ALL_MEMBERS,
+          Z = F === j.UserNotificationSettings.ONLY_MENTIONS,
+          $ = async () => {
+            if (null == G || !c) return;
             let e = new Set(n.features);
             e.add(j.GuildFeatures.COMMUNITY);
             let s = m
-                ? r.default.remove(y.permissions, R.MODERATOR_PERMISSIONS_FLAG)
-                : y.permissions,
-              t = { ...y, permissions: s };
-            s !== y.permissions && (await (0, M.saveRoleSettings)(n.id, [t])),
+                ? r.default.remove(G.permissions, R.MODERATOR_PERMISSIONS_FLAG)
+                : G.permissions,
+              t = { ...G, permissions: s };
+            s !== G.permissions && (await (0, M.saveRoleSettings)(n.id, [t])),
               N.default.updateGuild({
                 features: e,
-                rulesChannelId: A,
-                publicUpdatesChannelId: v,
+                rulesChannelId: p,
+                publicUpdatesChannelId: D,
               }),
               await N.default.saveGuild(n.id, {
                 features: e,
-                rulesChannelId: A,
+                rulesChannelId: p,
                 verificationLevel: n.verificationLevel,
                 explicitContentFilter: n.explicitContentFilter,
-                publicUpdatesChannelId: v,
+                publicUpdatesChannelId: D,
                 defaultMessageNotifications: n.defaultMessageNotifications,
               }),
               setTimeout(() => {
                 i();
               }, 0);
           },
-          $ = (0, a.jsx)(H, {
+          ee = (0, a.jsx)(H, {
             guild: n,
-            disableVerificationLevel: q,
-            disableContentFilter: Q,
+            disableVerificationLevel: Q,
+            disableContentFilter: J,
             onAcceptVerificationLevel: (e, s) => {
               if (!s) {
-                N.default.updateGuild({ verificationLevel: F });
+                N.default.updateGuild({ verificationLevel: B });
                 return;
               }
               s &&
@@ -1008,7 +1007,7 @@
             },
             onAcceptContentFilter: (e, s) => {
               if (!s) {
-                N.default.updateGuild({ explicitContentFilter: B });
+                N.default.updateGuild({ explicitContentFilter: Y });
                 return;
               }
               N.default.updateGuild({
@@ -1016,50 +1015,50 @@
                   j.GuildExplicitContentFilterTypes.ALL_MEMBERS,
               });
             },
-            headerId: W,
+            headerId: K,
             theme: d,
           }),
-          ee = (0, a.jsx)(w, {
-            selectableChannels: X,
+          es = (0, a.jsx)(w, {
+            selectableChannels: q,
             onRuleChannelChange: e => {
-              p(e);
+              v(e);
             },
             onPublicUpdatesChannelChange: e => {
-              D(e);
+              P(e);
             },
-            ruleChannel: A,
-            publicUpdatesChannel: v,
-            headerId: W,
+            ruleChannel: p,
+            publicUpdatesChannel: D,
+            headerId: K,
             theme: d,
             guildId: n.id,
           }),
-          es = K
+          et = X
             ? (0, a.jsx)(z, {
                 guild: n,
                 policyAccepted: c,
                 onAcceptPolicy: (e, s) => {
                   if (s) {
                     E(!0),
-                      !J &&
+                      !Z &&
                         N.default.updateGuild({
                           defaultMessageNotifications:
                             j.UserNotificationSettings.ONLY_MENTIONS,
                         }),
-                      !m && null != y && O(!0);
+                      !m && null != G && A(!0);
                     return;
                   }
                   E(!1),
-                    J &&
-                      N.default.updateGuild({ defaultMessageNotifications: P }),
-                    m && null != y && O(!1);
+                    Z &&
+                      N.default.updateGuild({ defaultMessageNotifications: F }),
+                    m && null != G && A(!1);
                 },
-                headerId: W,
+                headerId: K,
                 theme: d,
               })
             : (0, a.jsx)(V, {
                 guild: n,
-                disableDefaultNotifications: J,
-                disableEveryoneRolePermissions: Y,
+                disableDefaultNotifications: Z,
+                disableEveryoneRolePermissions: y,
                 policyAccepted: c,
                 everyoneRolePermissionsAccepted: m,
                 onAcceptPolicy: (e, s) => {
@@ -1071,7 +1070,7 @@
                 },
                 onAcceptDefaultNotifications: (e, s) => {
                   if (!s) {
-                    N.default.updateGuild({ defaultMessageNotifications: P });
+                    N.default.updateGuild({ defaultMessageNotifications: F });
                     return;
                   }
                   N.default.updateGuild({
@@ -1080,20 +1079,20 @@
                   });
                 },
                 onAcceptEveryoneRolePermissions: (e, s) => {
-                  null != y && (s ? O(!0) : O(!1));
+                  null != G && (s ? A(!0) : A(!1));
                 },
-                headerId: W,
+                headerId: K,
                 theme: d,
               }),
-          et = (0, a.jsx)("img", {
+          ea = (0, a.jsx)("img", {
             alt: "",
             src: k,
             className: b.footerImage,
             width: 240,
           }),
-          ea = [
+          el = [
             {
-              modalContent: $,
+              modalContent: ee,
               disableNextStep:
                 n.explicitContentFilter !==
                   j.GuildExplicitContentFilterTypes.ALL_MEMBERS ||
@@ -1102,20 +1101,20 @@
                 U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_1_TITLE,
             },
             {
-              modalContent: ee,
-              disableNextStep: null == A || null == v,
+              modalContent: es,
+              disableNextStep: null == p || null == D,
               overviewTitle:
                 U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_2_TITLE,
             },
             {
-              modalContent: es,
+              modalContent: et,
               disableNextStep: !c,
               overviewTitle:
                 U.default.Messages.ENABLE_COMMUNITY_MODAL_STEP_3_TITLE,
             },
           ];
         return (0, a.jsx)(I.default, {
-          stepData: ea,
+          stepData: el,
           title: U.default.Messages.ENABLE_COMMUNITY_MODAL_TITLE,
           transitionState: t,
           onClose: () => {
@@ -1125,8 +1124,8 @@
               });
           },
           completeButtonText: U.default.Messages.ENABLE_COMMUNITY_BUTTON_TEXT,
-          onComplete: Z,
-          overviewFooter: et,
+          onComplete: $,
+          overviewFooter: ea,
           sequencerClassName: b.container,
           autoCloseOnComplete: !1,
         });
@@ -1134,4 +1133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c34fa8763d3a3d76cec9.js.map
+//# sourceMappingURL=94f174f8128130baa560.js.map

@@ -25,8 +25,8 @@
         N = n("271938"),
         T = n("305961"),
         h = n("957255"),
-        m = n("49111"),
-        S = n("782340"),
+        S = n("49111"),
+        m = n("782340"),
         R = n("221640"),
         v = e => {
           let { channel: t, onClose: n, onConfirm: v, transitionState: C } = e,
@@ -50,8 +50,8 @@
               () =>
                 h.default.can(
                   t.isThread()
-                    ? m.Permissions.MANAGE_THREADS
-                    : m.Permissions.MANAGE_CHANNELS,
+                    ? S.Permissions.MANAGE_THREADS
+                    : S.Permissions.MANAGE_CHANNELS,
                   t
                 ),
               [t]
@@ -69,8 +69,8 @@
             H = I && (U || (G && w < 1)),
             F =
               L.length > 0 &&
-              (t.type === m.ChannelTypes.GUILD_VOICE ||
-                t.type === m.ChannelTypes.GUILD_STAGE_VOICE);
+              (t.type === S.ChannelTypes.GUILD_VOICE ||
+                t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
           if (
             (u.useEffect(() => {
               (async () => {
@@ -95,23 +95,23 @@
             null != O)
           ) {
             let e;
-            let t = S.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
+            let t = m.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
             return (
               (e =
                 "todo" === O
-                  ? S.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO
+                  ? m.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO
                   : "resource" === O
-                    ? S.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE
-                    : S.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
+                    ? m.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE
+                    : m.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
               (0, l.jsxs)(i.ModalRoot, {
                 transitionState: C,
-                "aria-label": S.default.Messages.CANNOT_DELETE_CHANNEL,
+                "aria-label": m.default.Messages.CANNOT_DELETE_CHANNEL,
                 children: [
                   (0, l.jsx)(i.ModalHeader, {
                     separator: !1,
                     children: (0, l.jsx)(i.Heading, {
                       variant: "heading-lg/semibold",
-                      children: S.default.Messages.CANNOT_DELETE_CHANNEL,
+                      children: m.default.Messages.CANNOT_DELETE_CHANNEL,
                     }),
                   }),
                   (0, l.jsxs)(i.ModalContent, {
@@ -128,7 +128,7 @@
                             null != M &&
                               (f.default.open(
                                 M.id,
-                                m.GuildSettingsSections.ONBOARDING
+                                S.GuildSettingsSections.ONBOARDING
                               ),
                               null == n || n());
                           },
@@ -139,7 +139,7 @@
                   (0, l.jsx)(i.ModalFooter, {
                     children: (0, l.jsx)(i.Button, {
                       onClick: n,
-                      children: S.default.Messages.OKAY,
+                      children: m.default.Messages.OKAY,
                     }),
                   }),
                 ],
@@ -148,22 +148,22 @@
           }
           if (null == M) return null;
           if (
-            M.hasFeature(m.GuildFeatures.COMMUNITY) &&
+            M.hasFeature(S.GuildFeatures.COMMUNITY) &&
             (M.rulesChannelId === D || M.publicUpdatesChannelId === D)
           ) {
             let e = M.rulesChannelId === D,
               t = e
-                ? S.default.Messages.DELETE_RULES_CHANNEL_BODY
-                : S.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
+                ? m.default.Messages.DELETE_RULES_CHANNEL_BODY
+                : m.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
             return (0, l.jsxs)(i.ModalRoot, {
               transitionState: C,
-              "aria-label": S.default.Messages.CANNOT_DELETE_CHANNEL,
+              "aria-label": m.default.Messages.CANNOT_DELETE_CHANNEL,
               children: [
                 (0, l.jsx)(i.ModalHeader, {
                   separator: !1,
                   children: (0, l.jsx)(i.Heading, {
                     variant: "heading-lg/semibold",
-                    children: S.default.Messages.CANNOT_DELETE_CHANNEL,
+                    children: m.default.Messages.CANNOT_DELETE_CHANNEL,
                   }),
                 }),
                 (0, l.jsxs)(i.ModalContent, {
@@ -177,11 +177,11 @@
                       variant: "text-md/normal",
                       className: R.modalText,
                       children:
-                        S.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
+                        m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                           onClick: () => {
                             f.default.open(
                               M.id,
-                              m.GuildSettingsSections.COMMUNITY
+                              S.GuildSettingsSections.COMMUNITY
                             ),
                               null == n || n();
                           },
@@ -192,7 +192,7 @@
                 (0, l.jsx)(i.ModalFooter, {
                   children: (0, l.jsx)(i.Button, {
                     onClick: n,
-                    children: S.default.Messages.OKAY,
+                    children: m.default.Messages.OKAY,
                   }),
                 }),
               ],
@@ -200,48 +200,48 @@
           }
           {
             let { deleteText: e, deleteBody: u } = (() => {
-              if (t.type === m.ChannelTypes.GUILD_CATEGORY)
+              if (t.type === S.ChannelTypes.GUILD_CATEGORY)
                 return {
-                  deleteText: S.default.Messages.DELETE_CATEGORY,
-                  deleteBody: S.default.Messages.DELETE_CHANNEL_BODY.format({
+                  deleteText: m.default.Messages.DELETE_CATEGORY,
+                  deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
                     channelName: g,
                   }),
                 };
               if (t.isForumPost())
                 return {
                   deleteText: H
-                    ? S.default.Messages.DELETE_FORUM_POST
-                    : S.default.Messages.DELETE_MESSAGE,
+                    ? m.default.Messages.DELETE_FORUM_POST
+                    : m.default.Messages.DELETE_MESSAGE,
                   deleteBody:
                     H && G && !U
-                      ? S.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format(
+                      ? m.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format(
                           { postName: g }
                         )
                       : H
-                        ? S.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format(
+                        ? m.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format(
                             { postName: g }
                           )
-                        : S.default.Messages
+                        : m.default.Messages
                             .DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY,
                 };
               if (t.isThread())
                 return {
-                  deleteText: S.default.Messages.DELETE_THREAD,
-                  deleteBody: S.default.Messages.DELETE_CHANNEL_BODY.format({
+                  deleteText: m.default.Messages.DELETE_THREAD,
+                  deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
                     channelName: g,
                   }),
                 };
               else if (y && A > 0)
                 return {
-                  deleteText: S.default.Messages.DELETE_CHANNEL,
+                  deleteText: m.default.Messages.DELETE_CHANNEL,
                   deleteBody:
-                    S.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format(
+                    m.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format(
                       { channelName: g, numGuildRoleSubscriptionMembers: A }
                     ),
                 };
               return {
-                deleteText: S.default.Messages.DELETE_CHANNEL,
-                deleteBody: S.default.Messages.DELETE_CHANNEL_BODY.format({
+                deleteText: m.default.Messages.DELETE_CHANNEL,
+                deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
                   channelName: g,
                 }),
               };
@@ -271,7 +271,7 @@
                           color: "header-secondary",
                           className: R.warningText,
                           children:
-                            S.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format(
+                            m.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format(
                               { count: L.length }
                             ),
                         })
@@ -289,7 +289,7 @@
                       onClick: n,
                       look: i.Button.Looks.LINK,
                       color: i.Button.Colors.PRIMARY,
-                      children: S.default.Messages.CANCEL,
+                      children: m.default.Messages.CANCEL,
                     }),
                   ],
                 }),
@@ -379,10 +379,10 @@
             return h;
           },
           fetchNewMemberActions: function () {
-            return m;
+            return S;
           },
           selectHomeResourceChannel: function () {
-            return S;
+            return m;
           },
           selectNewMemberActionChannel: function () {
             return R;
@@ -436,7 +436,7 @@
             });
           }
         },
-        m = async e => {
+        S = async e => {
           if (!a.default.isFullServerPreview(e)) {
             u.default.dispatch({
               type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -464,7 +464,7 @@
             }
           }
         },
-        S = function (e, t) {
+        m = function (e, t) {
           let n =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
           if (
@@ -604,10 +604,10 @@
             return u;
           },
           newMemberActionFromServer: function () {
-            return m;
+            return S;
           },
           resourceChannelFromServer: function () {
-            return S;
+            return m;
           },
           settingsFromServer: function () {
             return R;
@@ -649,7 +649,7 @@
         N = 30,
         T = 200,
         h = 7;
-      function m(e) {
+      function S(e) {
         var t;
         return {
           channelId: e.channel_id,
@@ -667,7 +667,7 @@
           icon: null !== (t = e.icon) && void 0 !== t ? t : null,
         };
       }
-      function S(e) {
+      function m(e) {
         var t, n;
         return {
           channelId: e.channel_id,
@@ -697,12 +697,12 @@
             .filter(e =>
               (0, i.isNotNullish)(r.default.getChannel(e.channel_id))
             )
-            .map(m),
+            .map(S),
           o = l
             .filter(e =>
               (0, i.isNotNullish)(r.default.getChannel(e.channel_id))
             )
-            .map(S);
+            .map(m);
         return {
           welcomeMessage: a,
           newMemberActions: d,
@@ -968,59 +968,64 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return c;
           },
         }),
         n("222007");
       var l = n("884691"),
         u = n("316693"),
-        r = n("828674"),
-        i = n("866595"),
-        a = n("795228"),
-        d = n("49111");
-      function o(e, t) {
-        let n = (0, a.default)(null == e ? void 0 : e.id);
+        r = n("446674"),
+        i = n("305961"),
+        a = n("828674"),
+        d = n("866595"),
+        o = n("795228"),
+        s = n("49111");
+      function c(e, t) {
+        let n = (0, r.useStateFromStores)([i.default], () =>
+            null != e ? i.default.getRoles(e.id) : void 0
+          ),
+          c = (0, o.default)(null == e ? void 0 : e.id);
         return l.useMemo(() => {
           let l =
-              null != e
-                ? (function (e, t) {
-                    let n = new Set();
-                    for (let l of Object.keys(t.permissionOverwrites)) {
-                      let u = e.roles[l],
-                        a = t.permissionOverwrites[l];
-                      (0, r.isSubscriptionRole)(u) &&
-                        (0, i.isChannelAccessGrantedBy)(t, a) &&
-                        n.add(u);
+              null != e && null != n
+                ? (function (e, t, n) {
+                    let l = new Set();
+                    for (let e of Object.keys(n.permissionOverwrites)) {
+                      let u = t[e],
+                        r = n.permissionOverwrites[e];
+                      (0, a.isSubscriptionRole)(u) &&
+                        (0, d.isChannelAccessGrantedBy)(n, r) &&
+                        l.add(u);
                     }
-                    let l = e.getRole(e.getEveryoneRoleId()),
-                      a =
-                        null != l &&
+                    let r = t[e.getEveryoneRoleId()],
+                      i =
+                        null != r &&
                         !u.default.has(
-                          l.permissions,
-                          d.Permissions.VIEW_CHANNEL
+                          r.permissions,
+                          s.Permissions.VIEW_CHANNEL
                         ),
-                      o = (0, i.isChannelAccessDeniedBy)(
-                        t,
-                        t.permissionOverwrites[e.id]
+                      o = (0, d.isChannelAccessDeniedBy)(
+                        n,
+                        n.permissionOverwrites[e.id]
                       );
-                    if (a && !o)
-                      for (let t of Object.values(e.roles))
-                        (0, r.isSubscriptionRole)(t) &&
-                          (0, i.isAllChannelsRole)(t) &&
-                          n.add(t);
-                    return [...n];
-                  })(e, t)
+                    if (i && !o)
+                      for (let e of Object.values(t))
+                        (0, a.isSubscriptionRole)(e) &&
+                          (0, d.isAllChannelsRole)(e) &&
+                          l.add(e);
+                    return [...l];
+                  })(e, n, t)
                 : [],
-            a = 0;
+            r = 0;
           for (let e of l) {
             let t = e.id;
             if (null != t) {
-              let e = null == n ? void 0 : n[t];
-              null != e && (a += e);
+              let e = null == c ? void 0 : c[t];
+              null != e && (r += e);
             }
           }
-          return a;
-        }, [n, e, t]);
+          return r;
+        }, [c, e, t, n]);
       }
     },
     757767: function (e, t, n) {
@@ -1314,16 +1319,16 @@
         N = n("466148"),
         T = n("822516"),
         h = n("745049"),
-        m = n("49111");
-      let S = [],
+        S = n("49111");
+      let m = [],
         R = 15 * s.default.Millis.MINUTE;
       function v(e, t) {
         return (0, u.useStateFromStoresArray)(
           [d.default, r.default, E.default, o.default, i.default, a.default],
           () => {
             let n = d.default.getGuild(e);
-            if (null == n) return S;
-            let l = n.hasFeature(m.GuildFeatures.HUB);
+            if (null == n) return m;
+            let l = n.hasFeature(S.GuildFeatures.HUB);
             if (l) {
               var u, s;
               let e =
@@ -1355,7 +1360,7 @@
               let t = e.channel_id;
               if (null == t) return !0;
               let n = i.default.getChannel(t);
-              return o.default.can(m.Permissions.VIEW_CHANNEL, n);
+              return o.default.can(S.Permissions.VIEW_CHANNEL, n);
             });
           },
           [t, e]
@@ -1366,7 +1371,7 @@
           [E.default, i.default, o.default],
           () => {
             let t = i.default.getChannel(e);
-            if (!o.default.can(m.Permissions.VIEW_CHANNEL, t)) return null;
+            if (!o.default.can(S.Permissions.VIEW_CHANNEL, t)) return null;
             let n = null == t ? void 0 : t.guild_id;
             if (null == n) return null;
             let l = E.default.getGuildScheduledEventsByIndex(
@@ -1413,7 +1418,7 @@
                     return !1;
                   if (null == e.channel_id) return !0;
                   let t = i.default.getChannel(e.channel_id);
-                  return o.default.can(m.Permissions.VIEW_CHANNEL, t);
+                  return o.default.can(S.Permissions.VIEW_CHANNEL, t);
                 });
               },
               [t]
@@ -1463,7 +1468,7 @@
                 return !1;
               if (null == e.channel_id) return !0;
               let t = i.default.getChannel(e.channel_id);
-              return o.default.can(m.Permissions.VIEW_CHANNEL, t);
+              return o.default.can(S.Permissions.VIEW_CHANNEL, t);
             });
           },
           [e]
@@ -1546,7 +1551,7 @@
             return f;
           },
           getRecurrenceOptions: function () {
-            return S;
+            return m;
           },
           getInitialEventStartDate: function () {
             return R;
@@ -1635,8 +1640,8 @@
           i.RRule.FR.weekday,
           i.RRule.SA.weekday,
         ],
-        m = new Set([0, 6]);
-      function S(e) {
+        S = new Set([0, 6]);
+      function m(e) {
         let t = e.toDate(),
           n = Math.ceil(t.getDate() / 7),
           l = e.format("dddd"),
@@ -1675,7 +1680,7 @@
             },
           ];
         return (
-          !m.has(t.getDay()) &&
+          !S.has(t.getDay()) &&
             u.push({
               value: o.RecurrenceOptions.WEEKDAY_ONLY,
               label: s.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS,
@@ -2062,4 +2067,4 @@
     },
   },
 ]);
-//# sourceMappingURL=454f91ff1e54b38cef7a.js.map
+//# sourceMappingURL=bd6a436eecc3c3649e12.js.map

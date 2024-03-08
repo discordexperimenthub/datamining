@@ -6,22 +6,22 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return u;
+            return i;
           },
         });
       var a = l("866227"),
         n = l.n(a),
-        i = l("851387"),
-        u = {
-          async setCommunicationDisabledDuration(e, t, l, a, u) {
+        u = l("851387"),
+        i = {
+          async setCommunicationDisabledDuration(e, t, l, a, i) {
             let d = null != l ? n().add(l, "s").toISOString() : null;
-            await i.default.setCommunicationDisabledUntil({
+            await u.default.setCommunicationDisabledUntil({
               guildId: e,
               userId: t,
               communicationDisabledUntilTimestamp: d,
               duration: l,
               reason: a,
-              location: u,
+              location: i,
             });
           },
         };
@@ -36,8 +36,8 @@
         });
       var a = l("37983"),
         n = l("884691"),
-        i = l("446674"),
-        u = l("77078"),
+        u = l("446674"),
+        i = l("77078"),
         d = l("750560"),
         s = l("38766"),
         r = l("506885"),
@@ -60,15 +60,15 @@
           } = e,
           p = f.default.getGuild(t),
           N = o.default.getId(),
-          T = (0, i.useStateFromStores)([M.default], () =>
+          T = (0, u.useStateFromStores)([M.default], () =>
             M.default.getUser(g)
           ),
-          R = (0, i.useStateFromStores)(
+          R = (0, u.useStateFromStores)(
             [c.default],
             () => c.default.isGuestOrLurker(t, g),
             [t, g]
           );
-        (0, i.useStateFromStores)(
+        (0, u.useStateFromStores)(
           [E.default],
           () => E.default.getGuildVersion(t),
           [t]
@@ -90,7 +90,7 @@
             ? m.default.Messages.HUB_EDIT_PROFILE
             : m.default.Messages.CHANGE_IDENTITY,
           U = D ? P : m.default.Messages.CHANGE_NICKNAME;
-        return (0, a.jsx)(u.MenuItem, {
+        return (0, a.jsx)(i.MenuItem, {
           id: "change-nickname",
           label: (0, a.jsx)("div", {
             className: I.labelWrapper,
@@ -101,7 +101,7 @@
             D
               ? ((0, r.default)(T.id, T.getAvatarURL(t, 80), { guildId: t }),
                 L())
-              : (0, u.openModalLazy)(async () => {
+              : (0, i.openModalLazy)(async () => {
                   let { default: e } = await l
                     .el("59709")
                     .then(l.bind(l, "59709"));
@@ -123,35 +123,35 @@
       l.r(t),
         l.d(t, {
           openDisableCommunication: function () {
-            return i;
+            return u;
           },
           openEnableCommunication: function () {
-            return u;
+            return i;
           },
         });
       var a = l("37983");
       l("884691");
       var n = l("77078");
-      function i(e, t, i) {
+      function u(e, t, u) {
         (0, n.openModalLazy)(async () => {
           let { default: n } = await l.el("693120").then(l.bind(l, "693120"));
           return l =>
             (0, a.jsx)(n, {
               guildId: e,
               userId: t,
-              anaylticsLocations: i,
+              anaylticsLocations: u,
               ...l,
             });
         });
       }
-      function u(e, t, i) {
+      function i(e, t, u) {
         (0, n.openModalLazy)(async () => {
           let { default: n } = await l.el("750331").then(l.bind(l, "750331"));
           return l =>
             (0, a.jsx)(n, {
               guildId: e,
               userId: t,
-              anaylticsLocations: i,
+              anaylticsLocations: u,
               ...l,
             });
         });
@@ -167,8 +167,8 @@
         });
       var a = l("812204"),
         n = l("208021"),
-        i = l("582713"),
-        u = l("383606"),
+        u = l("582713"),
+        i = l("383606"),
         d = l("459824"),
         s = l("789150");
       function r(e, t, l) {
@@ -188,13 +188,13 @@
               ? o
               : a.default.MEMBER_SAFETY_PAGE;
         return (
-          (0, u.trackModViewOpened)(e, t, E, M),
+          (0, i.trackModViewOpened)(e, t, E, M),
           n.default.openGuildSidebar({
             guildId: e,
             baseChannelId: l,
-            sidebarType: i.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
+            sidebarType: u.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
             details: {
-              type: i.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
+              type: u.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
               userId: t,
               guildId: e,
               ...f,
@@ -218,8 +218,8 @@
         l("884691");
       var a = l("812204"),
         n = l("716241"),
-        i = l("599110"),
-        u = l("789150"),
+        u = l("599110"),
+        i = l("789150"),
         d = l("49111");
       function s(e, t, l) {
         let s =
@@ -229,11 +229,11 @@
           r = {
             guild_id: e,
             target_user_id: t,
-            subpanel_name: u.ModViewPanelNameMap[l],
+            subpanel_name: i.ModViewPanelNameMap[l],
             location: s,
             ...(0, n.collectGuildAnalyticsMetadata)(e),
           };
-        return i.default.track(d.AnalyticEvents.GUILD_MOD_VIEW_OPENED, r);
+        return u.default.track(d.AnalyticEvents.GUILD_MOD_VIEW_OPENED, r);
       }
     },
     789150: function (e, t, l) {
@@ -245,14 +245,14 @@
             return a;
           },
           ModViewPanelNameMap: function () {
-            return i;
+            return u;
           },
         }),
         ((n = a || (a = {}))[(n.UNKNOWN = 0)] = "UNKNOWN"),
         (n[(n.INFO = 1)] = "INFO"),
         (n[(n.MESSAGE_HISTORY = 2)] = "MESSAGE_HISTORY"),
         (n[(n.PERMISSIONS = 3)] = "PERMISSIONS");
-      let i = {
+      let u = {
         0: "UNKNOWN",
         1: "INFO",
         2: "MESSAGE_HISTORY",
@@ -270,8 +270,8 @@
         }),
         l("222007");
       var n = l("803182"),
-        i = l("811022"),
-        u = l("95410"),
+        u = l("811022"),
+        i = l("95410"),
         d = l("913144"),
         s = l("404118"),
         r = l("819689"),
@@ -293,13 +293,13 @@
         T = l("49111"),
         R = l("724210"),
         O = l("782340");
-      let b = new i.default("MessageManager");
+      let b = new u.default("MessageManager");
       function L(e) {
         let {
           guildId: t,
           channelId: l,
           messageId: n,
-          forceFetch: i,
+          forceFetch: u,
           isPreload: d,
           jumpType: s,
           skipLocalFetch: c,
@@ -341,7 +341,7 @@
           null != m.focusTargetId &&
             null == n &&
             ((m = m.mutate({ focusTargetId: null })), f.default.commit(m));
-        let h = i;
+        let h = u;
         if (
           (!d || E.default.isConnected() || m.loadingMore
             ? m.loadingMore || (m.ready && !m.cached)
@@ -374,13 +374,13 @@
               if (null == a) {
                 var t;
                 a =
-                  null !== (t = u.default.get(D, {})) && void 0 !== t ? t : {};
+                  null !== (t = i.default.get(D, {})) && void 0 !== t ? t : {};
               }
               if (e in a) return !1;
               a[e] = Date.now();
               let l = Date.now() - v;
               for (let e in a) a[e] < l && delete a[e];
-              return u.default.set(D, a), !0;
+              return i.default.set(D, a), !0;
             })(l)
           )
             b.log("Jumping to start of thread ".concat(S.id)),
@@ -531,10 +531,10 @@
       let k = {};
       function B(e) {
         var t;
-        let { channelId: l, jump: a, isStale: n, isPreview: i = !1 } = e;
-        if (i) return;
-        let u = null !== (t = k[l]) && void 0 !== t ? t : 0;
-        if (Date.now() - u < 10 * C.default.Millis.SECOND) return;
+        let { channelId: l, jump: a, isStale: n, isPreview: u = !1 } = e;
+        if (u) return;
+        let i = null !== (t = k[l]) && void 0 !== t ? t : 0;
+        if (Date.now() - i < 10 * C.default.Millis.SECOND) return;
         k[l] = Date.now();
         let d = h.default.getChannelId(),
           s = m.default.getCurrentSidebarChannelId(d),
@@ -607,8 +607,8 @@
         });
       var a = l("913144"),
         n = l("819689"),
-        i = l("115718"),
-        u = l("347895"),
+        u = l("115718"),
+        i = l("347895"),
         d = l("341329"),
         s = l("582713"),
         r = l("724210"),
@@ -617,17 +617,17 @@
             let {
               channelId: t,
               messageId: l,
-              baseChannelId: i,
-              hasSingleMessageRequest: u,
+              baseChannelId: u,
+              hasSingleMessageRequest: i,
             } = e;
             a.default.dispatch({
               type: "SIDEBAR_VIEW_CHANNEL",
               sidebarType: s.SidebarType.VIEW_MESSAGE_REQUEST,
-              baseChannelId: i,
+              baseChannelId: u,
               channelId: t,
               details: {
                 type: s.SidebarOpenDetailsType.MESSAGE_REQUEST,
-                hasSingleMessageRequest: u,
+                hasSingleMessageRequest: i,
               },
             }),
               null != l
@@ -642,7 +642,7 @@
             let {
               guildId: t,
               channelId: l,
-              baseChannelId: u,
+              baseChannelId: i,
               flash: r = !0,
               details: o,
             } = e;
@@ -650,7 +650,7 @@
               type: "SIDEBAR_VIEW_CHANNEL",
               sidebarType: s.SidebarType.VIEW_CHANNEL,
               guildId: t,
-              baseChannelId: u,
+              baseChannelId: i,
               channelId: l,
               details: o,
             });
@@ -660,14 +660,14 @@
                   channelId: l,
                   messageId: c,
                   flash: r,
-                  jumpType: i.JumpTypes.INSTANT,
+                  jumpType: u.JumpTypes.INSTANT,
                 })
               : d.default.fetchMessages({ guildId: t, channelId: l });
           },
           openResourceChannelAsSidebar(e) {
             let { guildId: t, channelId: l } = e;
             null != t &&
-              ((0, u.selectHomeResourceChannel)(t, l, !1),
+              ((0, i.selectHomeResourceChannel)(t, l, !1),
               a.default.dispatch({
                 type: "SIDEBAR_VIEW_CHANNEL",
                 sidebarType: s.SidebarType.VIEW_CHANNEL,
@@ -680,7 +680,7 @@
             let {
               guildId: t,
               baseChannelId: l,
-              channelId: u,
+              channelId: i,
               flash: r = !0,
               details: o,
             } = e;
@@ -688,17 +688,17 @@
               type: "SIDEBAR_VIEW_CHANNEL",
               sidebarType: s.SidebarType.VIEW_THREAD,
               baseChannelId: l,
-              channelId: u,
+              channelId: i,
               details: o,
             }),
               (null == o ? void 0 : o.initialMessageId) != null
                 ? n.default.jumpToMessage({
-                    channelId: u,
+                    channelId: i,
                     messageId: o.initialMessageId,
                     flash: r,
-                    jumpType: i.JumpTypes.INSTANT,
+                    jumpType: u.JumpTypes.INSTANT,
                   })
-                : d.default.fetchMessages({ guildId: t, channelId: u });
+                : d.default.fetchMessages({ guildId: t, channelId: i });
           },
           closeChannelSidebar(e) {
             a.default.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e });
@@ -708,14 +708,14 @@
               guildId: t,
               baseChannelId: l,
               sidebarType: n,
-              details: i,
+              details: u,
             } = e;
             return a.default.dispatch({
               type: "SIDEBAR_VIEW_GUILD",
               sidebarType: n,
               baseChannelId: l,
               guildId: t,
-              details: i,
+              details: u,
             });
           },
           closeGuildSidebar(e) {
@@ -735,8 +735,8 @@
         l("702976");
       var a = l("37983"),
         n = l("884691"),
-        i = l("446674"),
-        u = l("77078"),
+        u = l("446674"),
+        i = l("77078"),
         d = l("158574"),
         s = l("851387"),
         r = l("750560"),
@@ -761,17 +761,17 @@
         let L = n.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
           v = null != b ? [b] : [];
         (0, r.useSubscribeGuildMembers)(L),
-          (0, i.useStateFromStores)(
+          (0, u.useStateFromStores)(
             [I.default],
             () => I.default.getGuildVersion(t),
             [t]
           );
-        let D = (0, i.useStateFromStores)(
+        let D = (0, u.useStateFromStores)(
             [m.default],
             () => m.default.getGuild(t),
             [t]
           ),
-          y = (0, i.useStateFromStores)(
+          y = (0, u.useStateFromStores)(
             [g.default],
             () => {
               var t;
@@ -783,12 +783,12 @@
             },
             [e.id]
           ),
-          G = (0, i.useStateFromStores)(
+          G = (0, u.useStateFromStores)(
             [S.default],
             () => S.default.isGuestOrLurker(t, e.id),
             [t, e.id]
           ),
-          P = (0, i.useStateFromStores)(
+          P = (0, u.useStateFromStores)(
             [M.default],
             () => M.default.getChannel(O),
             [O]
@@ -800,22 +800,22 @@
             deafened: x,
             suppressed: j,
             voiceChannelId: w,
-          } = (0, i.useStateFromStoresObject)([_.default], () => {
+          } = (0, u.useStateFromStoresObject)([_.default], () => {
             var l, a, n;
-            let i = _.default.getVoiceState(t, e.id);
+            let u = _.default.getVoiceState(t, e.id);
             return {
               muted:
-                null !== (l = null == i ? void 0 : i.mute) && void 0 !== l && l,
+                null !== (l = null == u ? void 0 : u.mute) && void 0 !== l && l,
               deafened:
-                null !== (a = null == i ? void 0 : i.deaf) && void 0 !== a && a,
+                null !== (a = null == u ? void 0 : u.deaf) && void 0 !== a && a,
               suppressed:
-                null !== (n = null == i ? void 0 : i.suppress) &&
+                null !== (n = null == u ? void 0 : u.suppress) &&
                 void 0 !== n &&
                 n,
-              voiceChannelId: null == i ? void 0 : i.channelId,
+              voiceChannelId: null == u ? void 0 : u.channelId,
             };
           }),
-          H = (0, i.useStateFromStores)([S.default], () =>
+          H = (0, u.useStateFromStores)([S.default], () =>
             S.default.getMember(t, e.id)
           ),
           k = (0, C.default)(e.id, t, O, b),
@@ -837,7 +837,7 @@
                     channelId: O,
                   })
                     ? (0, a.jsx)(
-                        u.MenuCheckboxItem,
+                        i.MenuCheckboxItem,
                         {
                           id: "voice-mute",
                           label: R.default.Messages.SERVER_VOICE_MUTE,
@@ -857,7 +857,7 @@
                     { channelId: O }
                   )
                     ? (0, a.jsx)(
-                        u.MenuCheckboxItem,
+                        i.MenuCheckboxItem,
                         {
                           id: "voice-deafen",
                           label: R.default.Messages.SERVER_DEAFEN,
@@ -874,7 +874,7 @@
                     channelId: O,
                   })
                     ? (0, a.jsx)(
-                        u.MenuItem,
+                        i.MenuItem,
                         {
                           id: "voice-disconnect",
                           label: y
@@ -900,8 +900,8 @@
                   b
                 ),
                   B(E.ModerationActionType.TIMEOUT),
-                  (0, u.showToast)(
-                    (0, u.createToast)(
+                  (0, i.showToast)(
+                    (0, i.createToast)(
                       R.default.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format(
                         {
                           user:
@@ -911,15 +911,15 @@
                               : "",
                         }
                       ),
-                      u.ToastType.SUCCESS
+                      i.ToastType.SUCCESS
                     )
                   );
               } catch (e) {
-                (0, u.showToast)(
-                  (0, u.createToast)(
+                (0, i.showToast)(
+                  (0, i.createToast)(
                     R.default.Messages
                       .APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR,
-                    u.ToastType.FAILURE
+                    i.ToastType.FAILURE
                   )
                 );
               }
@@ -940,7 +940,7 @@
             T.GuildMemberFlags.BYPASSES_VERIFICATION
           )
             ? (0, a.jsx)(
-                u.MenuItem,
+                i.MenuItem,
                 {
                   id: "verify",
                   label: R.default.Messages.MANUALLY_UNVERIFY_MEMBER,
@@ -960,7 +960,7 @@
                 "verify"
               )
             : (0, a.jsx)(
-                u.MenuItem,
+                i.MenuItem,
                 {
                   id: "verify",
                   label: R.default.Messages.MANUALLY_VERIFY_MEMBER,
@@ -989,7 +989,7 @@
                 W && !G
                   ? U
                     ? (0, a.jsx)(
-                        u.MenuItem,
+                        i.MenuItem,
                         {
                           id: "removetimeout",
                           label:
@@ -1004,7 +1004,7 @@
                         "removetimeout"
                       )
                     : (0, a.jsx)(
-                        u.MenuItem,
+                        i.MenuItem,
                         {
                           id: "timeout",
                           label:
@@ -1023,7 +1023,7 @@
                 I.default.canManageUser(p.Permissions.KICK_MEMBERS, e, D) &&
                 !e.isClyde()
                   ? (0, a.jsx)(
-                      u.MenuItem,
+                      i.MenuItem,
                       {
                         id: "kick",
                         label: R.default.Messages.KICK_USER.format({
@@ -1031,7 +1031,7 @@
                         }),
                         color: "danger",
                         action: () =>
-                          (0, u.openModalLazy)(async () => {
+                          (0, i.openModalLazy)(async () => {
                             let { default: n } = await l
                               .el("125104")
                               .then(l.bind(l, "125104"));
@@ -1049,7 +1049,7 @@
                   : null,
                 I.default.canManageUser(p.Permissions.BAN_MEMBERS, e, D)
                   ? (0, a.jsx)(
-                      u.MenuItem,
+                      i.MenuItem,
                       {
                         id: "ban",
                         label: R.default.Messages.BAN_USER.format({
@@ -1057,7 +1057,7 @@
                         }),
                         color: "danger",
                         action: () =>
-                          (0, u.openModalLazy)(async () => {
+                          (0, i.openModalLazy)(async () => {
                             let { default: n } = await l
                               .el("743506")
                               .then(l.bind(l, "743506"));
@@ -1087,8 +1087,8 @@
         });
       var a = l("37983"),
         n = l("884691"),
-        i = l("446674"),
-        u = l("77078"),
+        u = l("446674"),
+        i = l("77078"),
         d = l("244201"),
         s = l("994906"),
         r = l("459824"),
@@ -1101,14 +1101,14 @@
       function m(e, t, l, m) {
         let I = n.useContext(c.AnalyticsContext),
           g = (0, d.useWindowDispatch)(),
-          _ = (0, i.useStateFromStores)(
+          _ = (0, u.useStateFromStores)(
             [o.default],
             () => (null != l ? l : o.default.getChannelId(t, !0)),
             [l, t]
           ),
           h = (0, r.useCanAccessGuildMemberModView)(t, !0);
         return null != t && h
-          ? (0, a.jsx)(u.MenuItem, {
+          ? (0, a.jsx)(i.MenuItem, {
               id: "mod-view",
               label: S.default.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
               action: () => {
@@ -1138,8 +1138,8 @@
       var a = l("37983");
       l("884691");
       var n = l("77078"),
-        i = l("450911"),
-        u = l("54239"),
+        u = l("450911"),
+        i = l("54239"),
         d = l("271938"),
         s = l("49111"),
         r = l("782340");
@@ -1152,7 +1152,7 @@
               id: "message-user",
               label: r.default.Messages.USER_POPOUT_MESSAGE,
               action: () => {
-                i.default.openPrivateChannel(e), (0, u.popLayer)();
+                u.default.openPrivateChannel(e), (0, i.popLayer)();
               },
             });
       }
@@ -1168,8 +1168,8 @@
       var a = l("37983");
       l("884691");
       var n = l("446674"),
-        i = l("77078"),
-        u = l("851387"),
+        u = l("77078"),
+        i = l("851387"),
         d = l("987317"),
         s = l("679653"),
         r = l("271938"),
@@ -1226,13 +1226,13 @@
         });
         return 0 === T.length
           ? null
-          : (0, a.jsx)(i.MenuItem, {
+          : (0, a.jsx)(u.MenuItem, {
               id: "voice-move",
               label: A.default.Messages.MOVE_TO,
               children: T.map(l => {
                 let { channel: n } = l;
                 return (0, a.jsx)(
-                  i.MenuItem,
+                  u.MenuItem,
                   {
                     id: n.id,
                     action: () => {
@@ -1241,7 +1241,7 @@
                         (l = n),
                         void (e.id === r.default.getId()
                           ? d.default.selectVoiceChannel(l.id)
-                          : u.default.setChannel(t, e.id, l.id))
+                          : i.default.setChannel(t, e.id, l.id))
                       );
                     },
                     label: (0, s.computeChannelName)(n, m.default, S.default),
@@ -1263,8 +1263,8 @@
       var a = l("37983");
       l("884691");
       var n = l("509043"),
-        i = l("446674"),
-        u = l("77078"),
+        u = l("446674"),
+        i = l("77078"),
         d = l("206230"),
         s = l("454273"),
         r = l("130037"),
@@ -1277,12 +1277,12 @@
         m = l("782340"),
         I = l("235324");
       function g(e, t) {
-        var l, i;
+        var l, u;
         return (0, a.jsxs)("div", {
           className: I.roleRow,
           children: [
             "dot" === t
-              ? (0, a.jsx)(u.RoleDot, {
+              ? (0, a.jsx)(i.RoleDot, {
                   className: I.roleDot,
                   color:
                     null !== (l = e.colorString) && void 0 !== l
@@ -1291,11 +1291,11 @@
                   background: !1,
                   tooltip: !1,
                 })
-              : (0, a.jsx)(u.RoleCircle, {
+              : (0, a.jsx)(i.RoleCircle, {
                   className: I.roleDot,
                   color:
-                    null !== (i = e.colorString) && void 0 !== i
-                      ? i
+                    null !== (u = e.colorString) && void 0 !== u
+                      ? u
                       : (0, n.int2hex)(S.DEFAULT_ROLE_COLOR),
                 }),
             (0, a.jsx)("div", { children: e.name }),
@@ -1308,21 +1308,22 @@
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
               : null,
-          I = (0, i.useStateFromStores)(
-            [f.default],
-            () => f.default.getGuild(t),
-            [t]
+          I = (0, u.useStateFromStores)([f.default], () =>
+            f.default.getGuild(t)
           ),
-          _ = (0, i.useStateFromStores)([d.default], () => d.default.roleStyle),
-          h = (0, r.useTrackModerationAction)(t, {
+          _ = (0, u.useStateFromStores)([f.default], () =>
+            f.default.getRoles(t)
+          ),
+          h = (0, u.useStateFromStores)([d.default], () => d.default.roleStyle),
+          A = (0, r.useTrackModerationAction)(t, {
             location: n,
             targetUserId: e,
           }),
           {
-            userRoles: A,
-            isGuildMember: C,
-            canManageRoles: p,
-          } = (0, i.useStateFromStoresObject)(
+            userRoles: C,
+            isGuildMember: p,
+            canManageRoles: N,
+          } = (0, u.useStateFromStoresObject)(
             [c.default, E.default],
             () => {
               let l = c.default.getMember(t, e);
@@ -1335,73 +1336,73 @@
             },
             [e, t, I]
           );
-        if (__OVERLAY__ || null == A || null == I || !C) return null;
-        let N = E.default.getHighestRole(I),
-          T = Object.values(I.roles).filter(
+        if (__OVERLAY__ || null == C || null == I || !p) return null;
+        let T = E.default.getHighestRole(I),
+          R = Object.values(_).filter(
             e => !(0, s.isEveryoneRoleId)(I.id, e.id)
           ),
-          R = p
-            ? T.map(l => {
-                let n = l.managed || !E.default.isRoleHigher(I, N, l),
-                  i = -1 !== A.indexOf(l.id);
-                return n && !i
+          O = N
+            ? R.map(l => {
+                let n = l.managed || !E.default.isRoleHigher(I, T, l),
+                  u = -1 !== C.indexOf(l.id);
+                return n && !u
                   ? null
                   : (0, a.jsx)(
-                      u.MenuCheckboxItem,
+                      i.MenuCheckboxItem,
                       {
                         id: l.id,
-                        label: () => g(l, _),
+                        label: () => g(l, h),
                         disabled: n,
                         action: () => {
                           var a;
                           return (
                             (a = l),
-                            void (A.includes(a.id)
+                            void (C.includes(a.id)
                               ? (o.default.updateMemberRoles(
                                   t,
                                   e,
-                                  A.filter(e => e !== a.id),
+                                  C.filter(e => e !== a.id),
                                   [],
                                   [a.id]
                                 ),
-                                h(r.ModerationActionType.REMOVE_ROLE))
+                                A(r.ModerationActionType.REMOVE_ROLE))
                               : (o.default.updateMemberRoles(
                                   t,
                                   e,
-                                  A.concat([a.id]),
+                                  C.concat([a.id]),
                                   [a.id],
                                   []
                                 ),
-                                h(r.ModerationActionType.ADD_ROLE)))
+                                A(r.ModerationActionType.ADD_ROLE)))
                           );
                         },
-                        checked: i,
+                        checked: u,
                       },
                       l.id
                     );
               })
-            : T.filter(e => -1 !== A.indexOf(e.id)).map(e =>
+            : R.filter(e => -1 !== C.indexOf(e.id)).map(e =>
                 (0, s.isEveryoneRoleId)(I.id, e.id)
                   ? null
                   : (0, a.jsx)(
-                      u.MenuItem,
-                      { id: e.id, label: () => g(e, _) },
+                      i.MenuItem,
+                      { id: e.id, label: () => g(e, h) },
                       e.id
                     )
               );
-        return 0 === R.filter(M.isNotNullish).length
+        return 0 === O.filter(M.isNotNullish).length
           ? null
           : l
-            ? R
-            : (0, a.jsx)(u.MenuItem, {
+            ? O
+            : (0, a.jsx)(i.MenuItem, {
                 id: "roles",
                 label: m.default.Messages.ROLES_LIST.format({
-                  numRoles: R.length,
+                  numRoles: O.length,
                 }),
-                children: R,
+                children: O,
               });
       }
     },
   },
 ]);
-//# sourceMappingURL=7fa783e44d665b8aa01b.js.map
+//# sourceMappingURL=6ad75a115c6ecc78e526.js.map

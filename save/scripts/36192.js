@@ -30,24 +30,24 @@
         n("222007");
       var l = n("570277"),
         u = n.n(l),
-        r = n("773336");
-      let i = {
-        [r.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" },
+        i = n("773336");
+      let r = {
+        [i.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" },
       };
       function a(t) {
-        let e = i[(0, r.getPlatform)()];
+        let e = r[(0, i.getPlatform)()];
         if (null == e) return !1;
         for (let n of Object.keys(t)) {
           let l = t[n],
-            r = e[n];
-          if (null == l || null == r || null != l.error) continue;
-          let i = (function (t) {
+            i = e[n];
+          if (null == l || null == i || null != l.error) continue;
+          let r = (function (t) {
             var e, n;
             return ""
               .concat(null !== (e = t.major) && void 0 !== e ? e : 0, ".")
               .concat(null !== (n = t.minor) && void 0 !== n ? n : 0, ".0");
           })(l);
-          if (!u.satisfies(i, r)) return !0;
+          if (!u.satisfies(r, i)) return !0;
         }
         return !1;
       }
@@ -63,22 +63,22 @@
         n("222007");
       var l = n("570277"),
         u = n.n(l),
-        r = n("773336");
-      let i = { [r.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } };
+        i = n("773336");
+      let r = { [i.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } };
       function a(t) {
-        let e = i[(0, r.getPlatform)()];
+        let e = r[(0, i.getPlatform)()];
         if (null == e) return !1;
         for (let n of Object.keys(t)) {
           let l = t[n],
-            r = e[n];
-          if (null == l || null == r || null != l.error) continue;
-          let i = (function (t) {
+            i = e[n];
+          if (null == l || null == i || null != l.error) continue;
+          let r = (function (t) {
             var e, n;
             return ""
               .concat(null !== (e = t.major) && void 0 !== e ? e : 0, ".")
               .concat(null !== (n = t.minor) && void 0 !== n ? n : 0, ".0");
           })(l);
-          if (!u.satisfies(i, r)) return !0;
+          if (!u.satisfies(r, i)) return !0;
         }
         return !1;
       }
@@ -93,8 +93,8 @@
         });
       var l = n("446674"),
         u = n("913144"),
-        r = n("773336"),
-        i = n("50885"),
+        i = n("773336"),
+        r = n("50885"),
         a = n("288207"),
         o = n("439792"),
         s = n("709496");
@@ -103,8 +103,8 @@
         c = !1;
       class E extends l.default.Store {
         initialize() {
-          !(!r.isPlatformEmbedded || __OVERLAY__) &&
-            i.default.getGPUDriverVersions().then(t => {
+          !(!i.isPlatformEmbedded || __OVERLAY__) &&
+            r.default.getGPUDriverVersions().then(t => {
               (d = (0, s.default)(t)),
                 (f = (0, a.default)(t)),
                 (c = (0, o.default)(t)),
@@ -147,8 +147,8 @@
         n("222007");
       var l = n("446674"),
         u = n("913144"),
-        r = n("197881"),
-        i = n("492397");
+        i = n("197881"),
+        r = n("492397");
       let a = new Set(),
         o = {};
       class s extends l.default.PersistedStore {
@@ -163,7 +163,7 @@
             n = !e && o[t];
           return (
             !(
-              i.CONFERENCE_MODE_ENABLED || r.ProcessArgs.isDisallowPopupsSet()
+              r.CONFERENCE_MODE_ENABLED || i.ProcessArgs.isDisallowPopupsSet()
             ) &&
             (n || !a.has(t))
           );
@@ -216,8 +216,8 @@
         n("222007");
       var l = n("917351"),
         u = n.n(l),
-        r = n("981980"),
-        i = n("151426"),
+        i = n("981980"),
+        r = n("151426"),
         a = n("299285"),
         o = n("385976"),
         s = n("789563"),
@@ -238,8 +238,8 @@
         v = n("925758"),
         y = n("546463"),
         h = n("341542"),
-        L = n("525065"),
-        R = n("26989"),
+        R = n("525065"),
+        L = n("26989"),
         P = n("305961"),
         m = n("216391"),
         D = n("260320"),
@@ -264,7 +264,7 @@
         let n =
           arguments.length > 2 && void 0 !== arguments[2]
             ? arguments[2]
-            : new r.default();
+            : new i.default();
         await new Promise(t => setImmediate(t));
         let l = F.default.getCurrentUser();
         if (null == l)
@@ -276,39 +276,40 @@
         n.succeed();
         let Q = Object.values(F.default.getUsers()),
           K = Object.values(P.default.getGuilds()),
-          X = u.values(_.default.getInitialOverlayState()),
-          $ = R.default.getMutableAllGuildsAndMembers(),
-          tt = Y.default.getAllReadStates(!0),
-          te = k.default.getAllVoiceStates(),
-          tn = H.default.getState(),
-          tl = h.default.unavailableGuilds,
-          tu = u.mapValues(o.default.getGuilds(), t => t.emojis),
+          X = P.default.getAllGuildsRoles(),
+          $ = u.values(_.default.getInitialOverlayState()),
+          tt = L.default.getMutableAllGuildsAndMembers(),
+          te = Y.default.getAllReadStates(!0),
+          tn = k.default.getAllVoiceStates(),
+          tl = H.default.getState(),
+          tu = h.default.unavailableGuilds,
+          ti = u.mapValues(o.default.getGuilds(), t => t.emojis),
           tr = G.default.getAllSettings(),
-          ti = N.default.getInternalState(),
-          ta = z.default.getStates(),
-          to = p.default.getAllConnections(),
-          ts = V.default.getApplicationActivities(),
-          td = v.default.getParties(),
-          tf = v.default.getUserParties(),
-          tc = A.default.getSessionId(),
-          tE = A.default.getAnalyticsToken(),
-          tI = x.default.getGameForPID(e),
-          tg = L.default.getMemberCounts(),
-          tS = B.default.getRelationships(),
-          tO = Array.from(c.default.getMessageRequestChannelIds()),
-          tC = M.default.getVoiceChannelId(),
-          tT = W.default.getFocusedPID(),
-          tA = W.default.getSelectedGuildId(),
-          tN = W.default.getSelectedChannelId(),
-          t_ = w.default.getState(),
-          tp = y.default.games,
-          tv = Object.values(j.default.paymentSources).map(t => t.toJS()),
-          ty = j.default.defaultPaymentSourceId,
-          th = j.default.hasFetchedPaymentSources,
+          ta = N.default.getInternalState(),
+          to = z.default.getStates(),
+          ts = p.default.getAllConnections(),
+          td = V.default.getApplicationActivities(),
+          tf = v.default.getParties(),
+          tc = v.default.getUserParties(),
+          tE = A.default.getSessionId(),
+          tI = A.default.getAnalyticsToken(),
+          tg = x.default.getGameForPID(e),
+          tS = R.default.getMemberCounts(),
+          tO = B.default.getRelationships(),
+          tC = Array.from(c.default.getMessageRequestChannelIds()),
+          tT = M.default.getVoiceChannelId(),
+          tA = W.default.getFocusedPID(),
+          tN = W.default.getSelectedGuildId(),
+          t_ = W.default.getSelectedChannelId(),
+          tp = w.default.getState(),
+          tv = y.default.games,
+          ty = Object.values(j.default.paymentSources).map(t => t.toJS()),
+          th = j.default.defaultPaymentSourceId,
+          tR = j.default.hasFetchedPaymentSources,
           tL = T.default.getState(),
-          tR = a.default._getAllApplications().map(t => t.toJS()),
-          tP = J.default.testModeApplicationId,
-          tm = {
+          tP = a.default._getAllApplications().map(t => t.toJS()),
+          tm = J.default.testModeApplicationId,
+          tD = {
             null: {
               state: U.default.getState(),
               pings: U.default.getPings(),
@@ -318,7 +319,7 @@
             },
           };
         m.default.forEach((t, e) => {
-          tm[e] = {
+          tD[e] = {
             state: t.state,
             pings: t.getPings(),
             quality: t.quality,
@@ -326,66 +327,67 @@
             lossRate: t.getOutboundLossRate(),
           };
         });
-        let tD = D.default.getLobbies(),
-          tb = b.default.getAllVoiceStates(),
-          tV = Array.from(f.default.getState().hiddenHotspots),
-          tw = s.default.getSerializedState(),
-          tH = d.default.getState(),
-          tU = I.default.getInitialOverlayState(),
-          tY = g.default.getInitialOverlayState(),
-          tB = S.default.getInitialOverlayState(),
-          tM = (0, C.protoToB64)(i.PreloadedUserSettings, O.default.settings),
-          tG = E.default.getOverlaySerializedState();
+        let tb = D.default.getLobbies(),
+          tV = b.default.getAllVoiceStates(),
+          tw = Array.from(f.default.getState().hiddenHotspots),
+          tH = s.default.getSerializedState(),
+          tU = d.default.getState(),
+          tY = I.default.getInitialOverlayState(),
+          tB = g.default.getInitialOverlayState(),
+          tM = S.default.getInitialOverlayState(),
+          tG = (0, C.protoToB64)(r.PreloadedUserSettings, O.default.settings),
+          tF = E.default.getOverlaySerializedState();
         return {
           type: "OVERLAY_INITIALIZE",
           version: Z.OVERLAY_VERSION,
           users: Q,
           guilds: K,
-          channels: X,
-          guildMembers: $,
-          readStates: tt,
-          voiceStates: te,
-          unavailableGuilds: tl,
-          emojis: tu,
+          allGuildsRoles: X,
+          channels: $,
+          guildMembers: tt,
+          readStates: te,
+          voiceStates: tn,
+          unavailableGuilds: tu,
+          emojis: ti,
           allUserGuildSettings: tr,
-          callStoreInternalState: ti,
-          activityLauncherStates: ta,
-          connectedApps: to,
-          localActivities: ts,
-          parties: td,
-          userParties: tf,
+          callStoreInternalState: ta,
+          activityLauncherStates: to,
+          connectedApps: ts,
+          localActivities: td,
+          parties: tf,
+          userParties: tc,
           user: l,
-          messageRequestChannelIds: tO,
+          messageRequestChannelIds: tC,
           token: t,
-          sessionId: tc,
-          analyticsToken: tE,
-          presences: tn,
-          currentGame: tI,
-          selectedVoiceChannelId: tC,
-          selectedChannelId: tN,
-          selectedGuildId: tA,
-          guildMemberCounts: tg,
-          relationships: tS,
-          mediaEngineState: t_,
-          rtcConnectionStates: tm,
-          focusedPID: tT,
-          applications: tR,
-          paymentSources: tv,
-          defaultPaymentSourceId: ty,
-          hasFetchedPaymentSources: th,
-          testModeApplicationId: tP,
-          lobbies: tD,
-          lobbyVoiceStates: tb,
+          sessionId: tE,
+          analyticsToken: tI,
+          presences: tl,
+          currentGame: tg,
+          selectedVoiceChannelId: tT,
+          selectedChannelId: t_,
+          selectedGuildId: tN,
+          guildMemberCounts: tS,
+          relationships: tO,
+          mediaEngineState: tp,
+          rtcConnectionStates: tD,
+          focusedPID: tA,
+          applications: tP,
+          paymentSources: ty,
+          defaultPaymentSourceId: th,
+          hasFetchedPaymentSources: tR,
+          testModeApplicationId: tm,
+          lobbies: tb,
+          lobbyVoiceStates: tV,
           applicationStreamState: tL,
-          hiddenHotspots: tV,
-          serializedExperimentStore: tw,
-          streamingCapabilitiesStoreState: tH,
-          joinedThreads: tU,
-          threadMembers: tY,
-          threadMessages: tB,
-          userSettingsProto: tM,
-          soundboardStoreState: tG,
-          detectableApplications: tp,
+          hiddenHotspots: tw,
+          serializedExperimentStore: tH,
+          streamingCapabilitiesStoreState: tU,
+          joinedThreads: tY,
+          threadMembers: tB,
+          threadMessages: tM,
+          userSettingsProto: tG,
+          soundboardStoreState: tF,
+          detectableApplications: tv,
         };
       }
     },
@@ -400,8 +402,8 @@
         n("222007");
       var l = n("917351"),
         u = n.n(l),
-        r = n("446674"),
-        i = n("913144"),
+        i = n("446674"),
+        r = n("913144"),
         a = n("271938"),
         o = n("27618"),
         s = n("101125"),
@@ -418,17 +420,17 @@
         if (null == n) return;
         let l = f[t];
         delete l[e], u.isEmpty(l) && delete f[t];
-        let r = c[n];
-        null != r && (r.delete(t), 0 === r.size && delete c[n]);
+        let i = c[n];
+        null != i && (i.delete(t), 0 === i.size && delete c[n]);
       }
       function g(t, e, n, l) {
         let u = n.find(t => null != t.party && t.party.id),
-          r = null != u && null != u.party ? u.party.id : null,
-          i = E(e, t);
-        if (null == r || l === d.StatusTypes.OFFLINE)
-          return null != i && (I(e, t), void 0);
-        if (null != i) {
-          if (i === r) return !1;
+          i = null != u && null != u.party ? u.party.id : null,
+          r = E(e, t);
+        if (null == i || l === d.StatusTypes.OFFLINE)
+          return null != r && (I(e, t), void 0);
+        if (null != r) {
+          if (r === i) return !1;
           I(e, t);
         }
         !(function (t, e, n) {
@@ -438,9 +440,9 @@
             (null == u && (u = f[t] = {}), (u[e] = n), o.default.isBlocked(t))
           )
             return;
-          let r = null !== (l = c[n]) && void 0 !== l ? l : new Set();
-          (c[n] = r), r.add(t);
-        })(e, t, r);
+          let i = null !== (l = c[n]) && void 0 !== l ? l : new Set();
+          (c[n] = i), i.add(t);
+        })(e, t, i);
       }
       function S(t) {
         let { guild: e } = t,
@@ -463,7 +465,7 @@
           e = s.default.getActivities();
         return g(d.ME, t, e);
       }
-      class T extends r.default.Store {
+      class T extends i.default.Store {
         initialize() {
           this.syncWith([s.default], C), this.waitFor(s.default, o.default);
         }
@@ -478,7 +480,7 @@
         }
       }
       T.displayName = "GamePartyStore";
-      var A = new T(i.default, {
+      var A = new T(r.default, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (t) {
           let { guilds: e, presences: n } = t,
             l = !1;
@@ -559,8 +561,8 @@
         }),
         n("70102");
       var u = n("917351"),
-        r = n.n(u),
-        i = n("446674"),
+        i = n.n(u),
+        r = n("446674"),
         a = n("913144"),
         o = n("997722"),
         s = n("422791"),
@@ -570,7 +572,7 @@
         E = n("49111");
       let I = {};
       function g() {
-        r.forEach(I, (t, e) => {
+        i.forEach(I, (t, e) => {
           t.destroy(), delete I[e];
         });
       }
@@ -587,9 +589,9 @@
       function C() {
         return !0;
       }
-      class T extends i.default.Store {
+      class T extends r.default.Store {
         forEach(t) {
-          r.each(I, t);
+          i.each(I, t);
         }
         getState(t) {
           return S(t, t => t.state, E.RTCConnectionStates.DISCONNECTED);
@@ -643,7 +645,7 @@
               RTC_CONNECTION_PING: C,
               RTC_CONNECTION_LOSS_RATE: C,
               RTC_CONNECTION_UPDATE_ID: function (t) {
-                return r.some(I, e => e === t.connection);
+                return i.some(I, e => e === t.connection);
               },
               LOBBY_VOICE_STATE_UPDATE: function (t) {
                 if (d.default.getId() !== t.userId || t.sessionId !== l)
@@ -663,7 +665,7 @@
                         if (null == n)
                           throw Error("Creating RTCConnection without lobby.");
                         let u = n.application_id,
-                          r = new o.default({
+                          i = new o.default({
                             userId: d.default.getId(),
                             sessionId: l,
                             guildId: t,
@@ -671,7 +673,7 @@
                             context: u,
                           });
                         return (
-                          r.on(s.RTCConnectionEvent.State, (e, n, l) => {
+                          i.on(s.RTCConnectionEvent.State, (e, n, l) => {
                             a.default.dispatch({
                               type: "RTC_CONNECTION_STATE",
                               state: e,
@@ -680,7 +682,7 @@
                               lobbyId: t,
                             });
                           }),
-                          r.on(s.RTCConnectionEvent.Ping, (e, n) => {
+                          i.on(s.RTCConnectionEvent.Ping, (e, n) => {
                             a.default.dispatch({
                               type: "RTC_CONNECTION_PING",
                               pings: e,
@@ -688,14 +690,14 @@
                               lobbyId: t,
                             });
                           }),
-                          r.on(s.RTCConnectionEvent.OutboundLossRate, e => {
+                          i.on(s.RTCConnectionEvent.OutboundLossRate, e => {
                             a.default.dispatch({
                               type: "RTC_CONNECTION_LOSS_RATE",
                               lossRate: e,
                               lobbyId: t,
                             });
                           }),
-                          r
+                          i
                         );
                       })(t.lobbyId, t.channelId)),
                       (I[t.lobbyId] = e));
@@ -720,8 +722,8 @@
             return I;
           },
         });
-      var r = n("917351"),
-        i = n.n(r),
+      var i = n("917351"),
+        r = n.n(i),
         a = n("446674"),
         o = n("913144"),
         s = n("628454");
@@ -753,23 +755,23 @@
           (f = {}), (l = e.id), (u = n);
         },
         OVERLAY_INITIALIZE: function (t) {
-          let { lobbyVoiceStates: e, user: n, sessionId: r } = t;
+          let { lobbyVoiceStates: e, user: n, sessionId: i } = t;
           (f = {}),
-            i.each(e, (t, e) => {
+            r.each(e, (t, e) => {
               (f[e] = {}),
-                i.each(t, (t, n) => {
+                r.each(t, (t, n) => {
                   f[e][n] = new s.default(t);
                 });
             }),
             (l = n.id),
-            (u = r);
+            (u = i);
         },
         LOBBY_VOICE_STATE_UPDATE: function (t) {
           var e;
           let n,
             {
-              sessionId: r,
-              userId: i,
+              sessionId: i,
+              userId: r,
               lobbyId: a,
               channelId: o,
               mute: d,
@@ -777,17 +779,17 @@
               selfMute: E,
               selfDeaf: I,
             } = t,
-            g = i === l && r !== u,
+            g = r === l && i !== u,
             S = null !== (e = f[a]) && void 0 !== e ? e : {},
-            O = S[i];
+            O = S[r];
           if (
             (null != o &&
               !g &&
               (n =
                 null == O
                   ? new s.default({
-                      userId: i,
-                      sessionId: r,
+                      userId: r,
+                      sessionId: i,
                       channelId: o,
                       mute: d,
                       deaf: c,
@@ -795,8 +797,8 @@
                       selfDeaf: I,
                     })
                   : O.merge({
-                      userId: i,
-                      sessionId: r,
+                      userId: r,
+                      sessionId: i,
                       channelId: o,
                       mute: d,
                       deaf: c,
@@ -806,7 +808,7 @@
             O === n)
           )
             return !1;
-          null == n ? ((S = { ...S }), delete S[i]) : (S = { ...S, [i]: n }),
+          null == n ? ((S = { ...S }), delete S[r]) : (S = { ...S, [r]: n }),
             (f[a] = S);
         },
         LOBBY_DELETE: c,
@@ -823,8 +825,8 @@
         });
       var l = n("446674"),
         u = n("862337"),
-        r = n("913144"),
-        i = n("49111");
+        i = n("913144"),
+        r = n("49111");
       let a = {},
         o = {};
       function s(t, e, n) {
@@ -834,12 +836,12 @@
         if (
           ((d[e] = t),
           (a[s] = d),
-          !__OVERLAY__ && t === i.ActivityActionStates.FAILED)
+          !__OVERLAY__ && t === r.ActivityActionStates.FAILED)
         ) {
           null != o[s] && o[s].stop();
           let t = new u.Timeout();
           t.start(12e4, () =>
-            r.default.dispatch({
+            i.default.dispatch({
               type: "ACTIVITY_LAUNCH_FAIL",
               applicationId: s,
               activityType: e,
@@ -850,8 +852,8 @@
       }
       function d(t) {
         return s(
-          i.ActivityActionStates.COMPLETE,
-          i.ActivityActionTypes.JOIN,
+          r.ActivityActionStates.COMPLETE,
+          r.ActivityActionTypes.JOIN,
           t
         );
       }
@@ -865,25 +867,25 @@
         }
       }
       f.displayName = "ActivityLauncherStore";
-      var c = new f(r.default, {
+      var c = new f(i.default, {
         OVERLAY_INITIALIZE: function (t) {
           let { activityLauncherStates: e } = t;
           a = { ...e };
         },
         ACTIVITY_JOIN_LOADING: t =>
-          s(i.ActivityActionStates.LOADING, i.ActivityActionTypes.JOIN, t),
+          s(r.ActivityActionStates.LOADING, r.ActivityActionTypes.JOIN, t),
         ACTIVITY_JOIN_FAILED: t =>
-          s(i.ActivityActionStates.FAILED, i.ActivityActionTypes.JOIN, t),
+          s(r.ActivityActionStates.FAILED, r.ActivityActionTypes.JOIN, t),
         ACTIVITY_JOIN: d,
         EMBEDDED_ACTIVITY_CLOSE: d,
         ACTIVITY_LAUNCH_FAIL: function (t) {
           let { applicationId: e, activityType: n } = t,
             l = a[e];
-          if (null == l || l[n] !== i.ActivityActionStates.FAILED) return !1;
+          if (null == l || l[n] !== r.ActivityActionStates.FAILED) return !1;
           delete l[n];
         },
       });
     },
   },
 ]);
-//# sourceMappingURL=dd653438ad0c6223aabf.js.map
+//# sourceMappingURL=055dc4ddf279f0efb2ce.js.map

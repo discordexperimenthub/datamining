@@ -12,8 +12,8 @@
         a("222007");
       var l = a("37983"),
         n = a("884691"),
-        d = a("627445"),
-        s = a.n(d),
+        s = a("627445"),
+        d = a.n(s),
         i = a("65597"),
         u = a("77078"),
         r = a("404118"),
@@ -26,18 +26,17 @@
         D = a("782340"),
         O = a("342269");
       function m(e) {
-        var t;
-        let { guildProductListing: a, guildId: n } = e,
-          d = (0, i.default)([o.default], () => o.default.getGuild(n)),
-          s =
-            null == d
-              ? void 0
-              : d.roles[
-                  null !== (t = null == a ? void 0 : a.role_id) && void 0 !== t
-                    ? t
-                    : f.EMPTY_STRING_SNOWFLAKE_ID
-                ];
-        return null == s
+        let { guildProductListing: t, guildId: a } = e,
+          n = (0, i.default)([o.default], () => {
+            var e;
+            return o.default.getRole(
+              a,
+              null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e
+                ? e
+                : f.EMPTY_STRING_SNOWFLAKE_ID
+            );
+          });
+        return null == n
           ? null
           : (0, l.jsxs)(l.Fragment, {
               children: [
@@ -56,16 +55,16 @@
                   variant: "text-md/normal",
                   children:
                     D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format(
-                      { roleName: s.name }
+                      { roleName: n.name }
                     ),
                 }),
               ],
             });
       }
       function I(e) {
-        let { guildId: t, productId: a, ...d } = e,
+        let { guildId: t, productId: a, ...s } = e,
           [i] = n.useState(() => T.default.getGuildProduct(a));
-        s(null != i, "guildProductListing cannot be null");
+        d(null != i, "guildProductListing cannot be null");
         let [o, _] = n.useState(!1),
           c = async () => {
             try {
@@ -80,7 +79,7 @@
             }
           };
         return (0, l.jsxs)(u.ConfirmModal, {
-          ...d,
+          ...s,
           className: O.modalContainer,
           header: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
           confirmText:
@@ -103,4 +102,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8cb2112fec301d751bb5.js.map
+//# sourceMappingURL=eae334e0d86462c1a3ae.js.map

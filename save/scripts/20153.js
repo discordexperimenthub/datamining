@@ -212,14 +212,13 @@
         let { listing: a } = e,
           s = null !== (t = a.attachments) && void 0 !== t ? t : [],
           i = (0, n.useStateFromStores)([r.default], () => {
-            var e, t;
-            return null === (e = r.default.getGuild(a.guild_id)) || void 0 === e
-              ? void 0
-              : e.roles[
-                  null !== (t = a.role_id) && void 0 !== t
-                    ? t
-                    : f.EMPTY_STRING_SNOWFLAKE_ID
-                ];
+            var e;
+            return r.default.getRole(
+              a.guild_id,
+              null !== (e = a.role_id) && void 0 !== e
+                ? e
+                : f.EMPTY_STRING_SNOWFLAKE_ID
+            );
           }),
           d = !a.has_entitlement;
         return 0 === s.length && null == i
@@ -462,4 +461,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5607de10a32b69544327.js.map
+//# sourceMappingURL=2169826cf9d7e6d2885c.js.map

@@ -296,10 +296,8 @@
         P = n("856614"),
         b = function (e) {
           let { guildId: t, transitionState: s, onClose: b } = e,
-            y = (0, a.useStateFromStores)(
-              [S.default],
-              () => S.default.getGuild(t),
-              [t]
+            y = (0, a.useStateFromStores)([S.default], () =>
+              S.default.getRoles(t)
             ),
             M = (0, a.useStateFromStores)([m.default], () => m.default.getId()),
             O = (0, a.useStateFromStores)([p.default], () =>
@@ -324,10 +322,10 @@
                 .getGuildRoleConnectionsConfigurations(t)
                 .then(e => V(e));
             }, [t]),
-            null == y || null == O)
+            null == O)
           )
             return null;
-          let U = Object.values(y.roles).filter(e => {
+          let U = Object.values(y).filter(e => {
             var t;
             return (
               (null === (t = e.tags) || void 0 === t
@@ -446,14 +444,14 @@
                                 );
                               },
                           onContextMenu: s
-                            ? t => {
-                                var r, s, l;
+                            ? r => {
+                                var s, l, a;
                                 return (
-                                  (r = y.id),
-                                  (s = e.id),
-                                  (l = t),
+                                  (s = t),
+                                  (l = e.id),
+                                  (a = r),
                                   void (0, c.openContextMenuLazy)(
-                                    l,
+                                    a,
                                     async () => {
                                       let { default: e } = await n
                                         .el("232006")
@@ -461,11 +459,11 @@
                                       return t =>
                                         (0, i.jsx)(e, {
                                           ...t,
-                                          roleId: s,
+                                          roleId: l,
                                           onLeaveRole: () =>
                                             d.default.unassignGuildRoleConnection(
-                                              r,
-                                              s
+                                              s,
+                                              l
                                             ),
                                         });
                                     }
@@ -2111,4 +2109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6a6864b6fc87c4025ce8.js.map
+//# sourceMappingURL=0da2a2ddc10ad23647cb.js.map

@@ -777,14 +777,7 @@
           u = null == l ? void 0 : l.role_id,
           o = (0, _.useStateFromStores)(
             [U.default],
-            () => {
-              var e;
-              return null != u
-                ? null === (e = U.default.getGuild(a)) || void 0 === e
-                  ? void 0
-                  : e.roles[u]
-                : void 0;
-            },
+            () => (null != u ? U.default.getRole(a, u) : void 0),
             [a, u]
           ),
           d =
@@ -4961,4 +4954,4 @@
     },
   },
 ]);
-//# sourceMappingURL=25505.953ee627f97552ca896b.js.map
+//# sourceMappingURL=25505.69395abaefb5c185d5a8.js.map

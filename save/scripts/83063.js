@@ -38,7 +38,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return f;
+            return m;
           },
         }),
         r("222007");
@@ -51,31 +51,32 @@
         u = r("351105"),
         d = r("581583"),
         c = r("454273"),
-        p = r("957255"),
-        h = r("414943"),
-        v = r("782340"),
-        g = r("418563"),
-        f = e => {
+        p = r("305961"),
+        h = r("957255"),
+        v = r("414943"),
+        g = r("782340"),
+        f = r("418563"),
+        m = e => {
           let { guild: t, transitionState: r, onClose: n } = e,
-            [f, m] = a.useState(7),
-            [b, E] = a.useState(null),
-            [x, S] = a.useState([]),
+            [m, b] = a.useState(7),
+            [E, x] = a.useState(null),
+            [S, R] = a.useState([]),
             M = a.useCallback(async () => {
-              E(null);
-              let e = await u.default.updateEstimate(t.id, f, x);
-              E(e);
-            }, [f, t.id, x]);
+              x(null);
+              let e = await u.default.updateEstimate(t.id, m, S);
+              x(e);
+            }, [m, t.id, S]);
           a.useEffect(() => {
             M();
           }, [M]);
-          let R = (0, s.useStateFromStoresArray)(
-            [p.default],
+          let _ = (0, s.useStateFromStoresArray)(
+            [h.default, p.default],
             () => {
-              let e = p.default.getHighestRole(t);
-              return l(t.roles)
+              let e = h.default.getHighestRole(t);
+              return l(p.default.getRoles(t.id))
                 .sortBy(e => e.position)
                 .filter(e => !(0, c.isEveryoneRoleId)(t.id, e.id))
-                .filter(r => p.default.isRoleHigher(t, e, r))
+                .filter(r => h.default.isRoleHigher(t, e, r))
                 .value()
                 .map(e => {
                   let { id: t, name: r } = e;
@@ -92,28 +93,28 @@
                 children: (0, o.jsxs)(i.Heading, {
                   variant: "heading-lg/semibold",
                   children: [
-                    v.default.Messages.PRUNE_MEMBERS,
+                    g.default.Messages.PRUNE_MEMBERS,
                     "—",
                     null != t ? t.toString() : "",
                   ],
                 }),
               }),
               (0, o.jsxs)("div", {
-                className: g.content,
+                className: f.content,
                 children: [
                   (0, o.jsx)(i.FormItem, {
-                    title: v.default.Messages.FORM_LABEL_LAST_SEEN,
+                    title: g.default.Messages.FORM_LABEL_LAST_SEEN,
                     children: (0, o.jsx)(i.RadioGroup, {
-                      value: f,
+                      value: m,
                       options: [
                         {
-                          name: v.default.Messages.LAST_SEEN.format({
+                          name: g.default.Messages.LAST_SEEN.format({
                             days: 7,
                           }),
                           value: 7,
                         },
                         {
-                          name: v.default.Messages.LAST_SEEN.format({
+                          name: g.default.Messages.LAST_SEEN.format({
                             days: 30,
                           }),
                           value: 30,
@@ -121,31 +122,31 @@
                       ],
                       onChange: e => {
                         let { value: t } = e;
-                        m(t);
+                        b(t);
                       },
-                      className: g.spacing,
+                      className: f.spacing,
                     }),
                   }),
                   (0, o.jsx)(i.FormItem, {
-                    title: v.default.Messages.PRUNE_WITH_ROLES,
-                    children: (0, o.jsx)(h.default, {
+                    title: g.default.Messages.PRUNE_WITH_ROLES,
+                    children: (0, o.jsx)(v.default, {
                       isMulti: !0,
-                      options: R,
+                      options: _,
                       onChange: e => {
-                        S(e.map(e => e.value));
+                        R(e.map(e => e.value));
                       },
-                      value: x,
+                      value: S,
                       multiValueRenderer: e => {
                         let { value: r } = e,
-                          a = t.getRole(r);
+                          a = p.default.getRole(t.id, r);
                         if (null == a) return null;
-                        let n = x.indexOf(r);
+                        let n = S.indexOf(r);
                         return (0, o.jsx)(d.MemberRole, {
-                          className: g.role,
+                          className: f.role,
                           role: a,
                           canRemove: !0,
                           onRemove: () => {
-                            S([...x.slice(0, n), ...x.slice(n + 1)]);
+                            R([...S.slice(0, n), ...S.slice(n + 1)]);
                           },
                           onMouseDown: e => {
                             e.stopPropagation(), e.preventDefault();
@@ -158,15 +159,15 @@
                   }),
                   (0, o.jsx)(i.FormText, {
                     type: i.FormText.Types.DESCRIPTION,
-                    className: g.spacing,
+                    className: f.spacing,
                     children:
-                      x.length > 0
-                        ? v.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format(
-                            { members: b, days: f }
+                      S.length > 0
+                        ? g.default.Messages.FORM_HELP_LAST_SEEN_WITH_ROLES_1.format(
+                            { members: E, days: m }
                           )
-                        : v.default.Messages.FORM_HELP_LAST_SEEN_1.format({
-                            members: b,
-                            days: f,
+                        : g.default.Messages.FORM_HELP_LAST_SEEN_1.format({
+                            members: E,
+                            days: m,
                           }),
                   }),
                 ],
@@ -175,15 +176,15 @@
                 children: [
                   (0, o.jsx)(i.Button, {
                     onClick: () => {
-                      u.default.prune(t.id, f, x), n();
+                      u.default.prune(t.id, m, S), n();
                     },
-                    children: v.default.Messages.PRUNE,
+                    children: g.default.Messages.PRUNE,
                   }),
                   (0, o.jsx)(i.Button, {
                     look: i.Button.Looks.LINK,
                     color: i.Button.Colors.PRIMARY,
                     onClick: n,
-                    children: v.default.Messages.CANCEL,
+                    children: g.default.Messages.CANCEL,
                   }),
                 ],
               }),
@@ -358,8 +359,8 @@
               searchable: E,
               styleOverrides: x,
               isMulti: S,
-              placeholder: M,
-              filterOption: R,
+              placeholder: R,
+              filterOption: M,
               closeMenuOnSelect: _ = !0,
               ...y
             } = this.props,
@@ -409,9 +410,9 @@
                   closeMenuOnSelect: _,
                   value: e,
                   onKeyDown: this.handleKeyDown,
-                  placeholder: null != M ? M : v.default.Messages.SELECT,
+                  placeholder: null != R ? R : v.default.Messages.SELECT,
                   noOptionsMessage: () => v.default.Messages.NO_RESULTS_FOUND,
-                  filterOption: R,
+                  filterOption: M,
                 }),
                 null != o
                   ? (0, s.jsx)("div", {
@@ -459,4 +460,4 @@
     },
   },
 ]);
-//# sourceMappingURL=43a222df8cc8df6e10b1.js.map
+//# sourceMappingURL=73b8bcca02be95d1db64.js.map

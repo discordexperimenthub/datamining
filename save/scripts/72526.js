@@ -2625,44 +2625,47 @@
           l = (0, d.useStateFromStores)([S.default], () =>
             S.default.getGuild(t)
           ),
-          { impersonateType: u, viewingRoles: R } = (0,
+          u = (0, d.useStateFromStores)([S.default], () =>
+            S.default.getRoles(t)
+          ),
+          { impersonateType: R, viewingRoles: N } = (0,
           d.useStateFromStoresObject)([p.default], () => ({
             impersonateType: p.default.getImpersonateType(t),
             viewingRoles: p.default.getViewingRoles(t),
           })),
-          N = u === C.ImpersonateType.SERVER_SHOP,
-          M = (0, d.useStateFromStores)([f.default], () =>
+          M = R === C.ImpersonateType.SERVER_SHOP,
+          O = (0, d.useStateFromStores)([f.default], () =>
             null != n ? f.default.getTrueMember(t, n.id) : null
           ),
-          [O, A] = (0, c.useMultiSelect)(null == R ? [] : _.default.keys(R)),
-          L = r.useRef(l);
+          [A, L] = (0, c.useMultiSelect)(null == N ? [] : _.default.keys(N)),
+          b = r.useRef(l);
         r.useEffect(() => {
           let e = {},
-            t = L.current;
-          if (null != t && null != u) {
-            for (let n of O) {
-              let i = t.getRole(n);
-              null != i && (e[n] = i);
+            t = b.current;
+          if (null != t && null != R) {
+            for (let t of A) {
+              let n = u[t];
+              null != n && (e[t] = n);
             }
-            (0, g.updateImpersonating)(t.id, { type: u, roles: e });
+            (0, g.updateImpersonating)(t.id, { type: R, roles: e });
           }
-        }, [O, u]);
-        let b =
-            null != l && null != n && null != M
-              ? o(l.roles)
-                  .filter(e => -1 !== M.roles.indexOf(e.id))
+        }, [A, R, u]);
+        let P =
+            null != l && null != n && null != O
+              ? o(u)
+                  .filter(e => -1 !== O.roles.indexOf(e.id))
                   .sortBy(e => -e.position)
                   .first()
               : void 0,
-          P = r.useMemo(
+          x = r.useMemo(
             () =>
               null != l && null != n
-                ? Object.values(l.roles)
+                ? Object.values(u)
                     .filter(e => e.id !== l.id)
                     .filter(e => {
                       var t;
                       return (
-                        !N ||
+                        !M ||
                         (null === (t = e.tags) || void 0 === t
                           ? void 0
                           : t.subscription_listing_id) != null
@@ -2670,35 +2673,35 @@
                     })
                     .filter(
                       e =>
-                        (null == b ? void 0 : b.id) === e.id ||
-                        h.default.isRoleHigher(l, n.id, b, e)
+                        (null == P ? void 0 : P.id) === e.id ||
+                        h.default.isRoleHigher(l, n.id, P, e)
                     )
                 : [],
-            [l, n, N, b]
+            [l, n, M, P, u]
           );
-        if (null == n || null == l || null == M) return null;
-        let x = {};
-        M.roles.forEach(e => {
-          let t = l.roles[e];
-          null != t && (x[t.id] = t);
+        if (null == n || null == l || null == O) return null;
+        let D = {};
+        O.roles.forEach(e => {
+          let t = u[e];
+          null != t && (D[t.id] = t);
         });
-        let D = a.default.has(
-          h.default.computePermissionsForRoles({ forceRoles: x, context: l }),
+        let G = a.default.has(
+          h.default.computePermissionsForRoles({ forceRoles: D, context: l }),
           a.default.combine(
             I.Permissions.MANAGE_GUILD,
             I.Permissions.MANAGE_ROLES
           )
         );
-        return D || l.isOwner(n.id)
+        return G || l.isOwner(n.id)
           ? (0, i.jsx)("div", {
               className: m.container,
               children: (0, i.jsx)(c.Combobox, {
                 placeholder: T.default.Messages.SEARCH_ROLES,
-                value: O,
-                onChange: A,
+                value: A,
+                onChange: L,
                 autoFocus: !0,
                 children: e => {
-                  let t = P.reduce(
+                  let t = x.reduce(
                       (t, n) => (
                         s(e.toLowerCase(), n.name.toLowerCase()) &&
                           t.push(
@@ -2720,7 +2723,7 @@
                       ),
                       []
                     ),
-                    n = l.getRole(l.getEveryoneRoleId());
+                    n = u[l.getEveryoneRoleId()];
                   return (
                     null != n &&
                       t.push(
@@ -3982,4 +3985,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e58e85b3706f0778a854.js.map
+//# sourceMappingURL=10098d871a3031ab3134.js.map

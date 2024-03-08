@@ -49,8 +49,8 @@
         g = l("483093"),
         I = l("782340"),
         R = l("761394");
-      let v = (0, N.uid)(),
-        j = (0, N.uid)(),
+      let j = (0, N.uid)(),
+        v = (0, N.uid)(),
         D = "text-sm/medium";
       function b(e) {
         return 1 === e.type;
@@ -81,13 +81,8 @@
         let { row: l, guildId: a, className: n } = e,
           { id: s, name: i } = l.record,
           o = (0, x.useRoleIcon)({ guildId: a, roleId: s, size: 16 }),
-          d = (0, m.useStateFromStores)(
-            [p.default],
-            () => {
-              let e = p.default.getGuild(a);
-              return null == e ? null : e.roles[s];
-            },
-            [s, a]
+          d = (0, m.useStateFromStores)([p.default], () =>
+            p.default.getRole(a, s)
           ),
           u = i.includes(S.EVERYONE_ID) ? "" : "@",
           C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(),
@@ -162,19 +157,8 @@
             helperText: d,
             className: C,
           } = e,
-          f = (0, m.useStateFromStores)(
-            [p.default],
-            () => {
-              var e, l;
-              return null !==
-                (l =
-                  null === (e = p.default.getGuild(t)) || void 0 === e
-                    ? void 0
-                    : e.roles) && void 0 !== l
-                ? l
-                : {};
-            },
-            [t]
+          f = (0, m.useStateFromStores)([p.default], () =>
+            p.default.getRoles(t)
           ),
           _ = u.useMemo(
             () =>
@@ -334,8 +318,8 @@
                           .GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
                   sections: [T.length],
                   inputProps: {
-                    "aria-labelledby": v,
-                    "aria-controls": j,
+                    "aria-labelledby": j,
+                    "aria-controls": v,
                     "aria-expanded": D,
                     onFocus: e => Y(!0, 2, e),
                     onBlur: e => Y(!1, 2, e),
@@ -395,7 +379,7 @@
                       },
                       role: void 0,
                       innerRole: "listbox",
-                      innerId: j,
+                      innerId: v,
                       innerAriaOrientation: "vertical",
                     }),
                   }),
@@ -436,21 +420,11 @@
       function o(e, t, l) {
         return (0, n.useStateFromStoresArray)(
           [s.default],
-          () => {
-            var a, n;
-            return Object.values(
-              null !==
-                (n =
-                  null === (a = s.default.getGuild(e)) || void 0 === a
-                    ? void 0
-                    : a.roles) && void 0 !== n
-                ? n
-                : {}
-            )
+          () =>
+            Object.values(s.default.getRoles(e))
               .filter(e => !t.has(e.id))
               .filter(t => !l || t.id !== e)
-              .map(e => (0, i.roleToPendingAddition)(e).row);
-          },
+              .map(e => (0, i.roleToPendingAddition)(e).row),
           [l, e, t]
         );
       }
@@ -651,7 +625,7 @@
               }),
             ],
           }),
-          v = (0, a.jsxs)("span", {
+          j = (0, a.jsxs)("span", {
             className: A.buttonContainer,
             children: [
               (0, a.jsx)(E.default, { width: 20, height: 20 }),
@@ -695,7 +669,7 @@
                             });
                         });
                     },
-                    onSaveText: v,
+                    onSaveText: j,
                     onSaveButtonColor: d.ButtonColors.RED,
                     message: R,
                   }),
@@ -846,8 +820,8 @@
         g = { transform: "translate3d(5%, 0, 0)", opacity: 0.5 },
         I = { transform: "translate3d(0, 0, 0)", opacity: 1 },
         R = { mass: 1.1, friction: 24, tension: 260 },
-        v = e => e.shiftKey || e.key === L.KeyboardKeysUpdated.SHIFT,
-        j = e => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
+        j = e => e.shiftKey || e.key === L.KeyboardKeysUpdated.SHIFT,
+        v = e => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
         D = n.memo(
           function (e) {
             let {
@@ -870,10 +844,10 @@
             }, [D]),
               n.useLayoutEffect(() => {
                 let e = e => {
-                    v(e) && O(!0), j(e) && V(!0);
+                    j(e) && O(!0), v(e) && V(!0);
                   },
                   t = e => {
-                    v(e) && O(!1), j(e) && V(!1);
+                    j(e) && O(!1), v(e) && V(!1);
                   };
                 return (
                   window.addEventListener("keydown", e),
@@ -1195,10 +1169,10 @@
               );
             return null;
           })(),
-          v = i.useCallback(() => {
+          j = i.useCallback(() => {
             I(!0), p();
           }, [p]),
-          j = i.useCallback(
+          v = i.useCallback(
             e => {
               L(e);
             },
@@ -1254,7 +1228,7 @@
                             ...e,
                             calendarClassName: _.calendar,
                             value: r && null != a ? u(a) : void 0,
-                            onSelect: j,
+                            onSelect: v,
                             maxDate: u().local(),
                             minDate: x,
                           }),
@@ -1303,7 +1277,7 @@
                     (0, s.jsx)(c.MenuSeparator, {}),
                     (0, s.jsx)(c.MenuItem, {
                       id: "guild-member-".concat(C, "-custom-option}"),
-                      action: v,
+                      action: j,
                       render: e =>
                         (0, s.jsxs)("div", {
                           className: d(_.otherDatesContainer, {
@@ -1507,7 +1481,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return v;
+            return j;
           },
         }),
         l("222007");
@@ -1580,7 +1554,7 @@
         );
       }
       let R = "member-safety-force-show-signals-tooltip";
-      function v(e) {
+      function j(e) {
         let { guildId: t, currentPagedMembers: l } = e,
           s = (0, r.default)(
             [h.default],
@@ -1596,8 +1570,8 @@
           ),
           {
             selectedUserIds: E,
-            addUsers: v,
-            clearSelection: j,
+            addUsers: j,
+            clearSelection: v,
           } = (0, _.default)(t),
           D =
             s.requireUnusualDmActivity ||
@@ -1629,8 +1603,8 @@
           q = G.filter(e => !E.has(e)),
           z = 0 === q.length,
           K = n.useCallback(() => {
-            J && (z ? j() : v(G));
-          }, [J, z, j, v, G]);
+            J && (z ? v() : j(G));
+          }, [J, z, v, j, G]);
         return (0, a.jsx)("thead", {
           children: (0, a.jsxs)("tr", {
             className: N.tableHeaderRow,
@@ -2000,8 +1974,8 @@
         g = l("49111"),
         I = l("782340"),
         R = l("655295"),
-        v = l("639826");
-      let j = [
+        j = l("639826");
+      let v = [
         H.JoinSourceType.DISCOVERY,
         H.JoinSourceType.VANITY_URL,
         H.JoinSourceType.BOT,
@@ -2147,7 +2121,7 @@
                         ],
                       }),
                   }),
-                  j.map(e =>
+                  v.map(e =>
                     (0, a.jsx)(
                       c.MenuRadioItem,
                       {
@@ -2235,7 +2209,7 @@
                           ),
                           children: [
                             (0, a.jsxs)("div", {
-                              className: i(v.label),
+                              className: i(j.label),
                               children: [
                                 (0, a.jsx)(c.Text, {
                                   variant: "text-sm/medium",
@@ -2583,8 +2557,8 @@
         g = l("663745"),
         I = l("781896"),
         R = l("864982"),
-        v = l("151185"),
-        j = l("339123"),
+        j = l("151185"),
+        v = l("339123"),
         D = l("387111"),
         b = l("299039"),
         O = l("158998"),
@@ -2697,39 +2671,33 @@
       });
       function z(e) {
         let { member: t } = e,
-          l = (0, u.default)([x.default], () => x.default.getGuild(t.guildId), [
-            t.guildId,
-          ]),
-          s = n.useMemo(() => {
-            var e;
-            if (null == l) return [];
-            let a =
-              null !== (e = null == l ? void 0 : l.roles) && void 0 !== e
-                ? e
-                : {};
-            return null == t.highestRoleId
-              ? t.roles
-              : t.roles
-                  .filter(e => null != e && e !== t.highestRoleId)
-                  .sort((e, t) => {
-                    var l, n, s, i;
-                    return null !==
-                      (i =
-                        null !==
-                          (s =
-                            null === (l = a[t]) || void 0 === l
-                              ? void 0
-                              : l.position) && void 0 !== s
-                          ? s
-                          : 0 -
-                            (null === (n = a[e]) || void 0 === n
-                              ? void 0
-                              : n.position)) && void 0 !== i
-                      ? i
-                      : 0;
-                  });
-          }, [t.roles, t.highestRoleId, l]);
-        return null == l || 0 === s.length
+          l = (0, u.default)([x.default], () => x.default.getRoles(t.guildId)),
+          s = n.useMemo(
+            () =>
+              null == t.highestRoleId
+                ? t.roles
+                : t.roles
+                    .filter(e => null != e && e !== t.highestRoleId)
+                    .sort((e, t) => {
+                      var a, n, s, i;
+                      return null !==
+                        (i =
+                          null !==
+                            (s =
+                              null === (a = l[t]) || void 0 === a
+                                ? void 0
+                                : a.position) && void 0 !== s
+                            ? s
+                            : 0 -
+                              (null === (n = l[e]) || void 0 === n
+                                ? void 0
+                                : n.position)) && void 0 !== i
+                        ? i
+                        : 0;
+                    }),
+            [t.roles, t.highestRoleId, l]
+          );
+        return 0 === s.length
           ? null
           : (0, a.jsx)("div", {
               className: J.roleTooltipItemContainer,
@@ -2738,7 +2706,7 @@
                   P.default,
                   {
                     className: i(J.roleTooltipItem),
-                    role: l.roles[e],
+                    role: l[e],
                     guildId: t.guildId,
                   },
                   e
@@ -2825,7 +2793,7 @@
                           onClick: f,
                           onMouseEnter: t,
                           onMouseLeave: l,
-                          children: (0, a.jsx)(v.default, {
+                          children: (0, a.jsx)(j.default, {
                             className: i(J.addRoleIcon),
                             width: 16,
                             height: 16,
@@ -3112,7 +3080,7 @@
                           onClick: C,
                           className: i(J.button),
                           children: p
-                            ? (0, a.jsx)(j.default, { width: et, height: et })
+                            ? (0, a.jsx)(v.default, { width: et, height: et })
                             : (0, a.jsx)(I.default, { width: et, height: et }),
                         });
                       },
@@ -3290,7 +3258,7 @@
             u
           ),
           R = (0, _.useTrackMemberSearchUsed)(s.id),
-          [v, j] = n.useState(I.query),
+          [j, v] = n.useState(I.query),
           D =
             null != I.selectedSort &&
             I.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC &&
@@ -3305,17 +3273,17 @@
           O = n.useCallback(d(b, 300), [b]),
           B = n.useCallback(
             e => {
-              j(e), O(e);
+              v(e), O(e);
             },
             [O]
           ),
           V = n.useCallback(() => {
-            j(""), b("");
+            v(""), b("");
           }, [b]);
         return (
           n.useImperativeHandle(t, () => ({
             resetSearchText() {
-              j("");
+              v("");
             },
           })),
           (0, a.jsxs)("div", {
@@ -3340,7 +3308,7 @@
                   className: i(H.searchHeader),
                   children: (0, a.jsx)(h.default, {
                     className: H.searchBar,
-                    query: v,
+                    query: j,
                     placeholder:
                       L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
                     onChange: B,
@@ -4304,4 +4272,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98bdef2fca72f5b442e7.js.map
+//# sourceMappingURL=7d764850d1b409513192.js.map

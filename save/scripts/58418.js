@@ -436,45 +436,52 @@
       i.r(e),
         i.d(e, {
           MODAL_KEY: function () {
-            return o;
+            return c;
           },
           openGuildRoleConnectionsModal: function () {
-            return d;
+            return h;
           },
           default: function () {
-            return c;
+            return u;
           },
         });
       var l = i("37983");
       i("884691");
-      var r = i("77078"),
-        a = i("83900"),
-        n = i("535013"),
-        s = i("782340");
-      let o = "guild-connection-roles";
-      function d(t) {
-        (0, r.openModalLazy)(
+      var r = i("446674"),
+        a = i("77078"),
+        n = i("305961"),
+        s = i("83900"),
+        o = i("535013"),
+        d = i("782340");
+      let c = "guild-connection-roles";
+      function h(t) {
+        (0, a.openModalLazy)(
           async () => {
             let { default: e } = await i.el("918771").then(i.bind(i, "918771"));
             return i => (0, l.jsx)(e, { ...i, guildId: t });
           },
           {
-            modalKey: o,
-            contextKey: r.DEFAULT_MODAL_CONTEXT,
+            modalKey: c,
+            contextKey: a.DEFAULT_MODAL_CONTEXT,
             onCloseRequest: () => {
-              (0, r.closeModal)(o, r.DEFAULT_MODAL_CONTEXT);
+              (0, a.closeModal)(c, a.DEFAULT_MODAL_CONTEXT);
             },
           }
         );
       }
-      function c(t) {
-        let e = (0, n.isVerifiedRolesChannelVisible)(t);
+      function u(t) {
+        let e = (0, r.useStateFromStores)(
+          [n.default],
+          () =>
+            (0, o.isVerifiedRolesChannelVisible)(t, n.default.getRoles(t.id)),
+          [t]
+        );
         return e
-          ? (0, l.jsx)(r.MenuItem, {
+          ? (0, l.jsx)(a.MenuItem, {
               id: "guild-connection-roles",
-              label: s.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
-              icon: a.default,
-              action: () => d(t.id),
+              label: d.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME,
+              icon: s.default,
+              action: () => h(t.id),
             })
           : null;
       }
@@ -737,121 +744,125 @@
       i.r(e),
         i.d(e, {
           default: function () {
-            return N;
+            return T;
           },
         });
       var l = i("37983"),
         r = i("884691"),
-        a = i("77078"),
-        n = i("716241"),
-        s = i("689226"),
-        o = i("95039"),
-        d = i("828674"),
-        c = i("393414"),
-        h = i("42203"),
-        u = i("18494"),
-        f = i("98292"),
-        x = i("118503"),
-        m = i("483093"),
-        g = i("599110"),
-        j = i("933629"),
-        w = i("49111"),
-        p = i("724210"),
-        v = i("782340"),
-        C = i("805435"),
-        N = t => {
+        a = i("446674"),
+        n = i("77078"),
+        s = i("716241"),
+        o = i("689226"),
+        d = i("95039"),
+        c = i("828674"),
+        h = i("393414"),
+        u = i("42203"),
+        f = i("305961"),
+        x = i("18494"),
+        m = i("98292"),
+        g = i("118503"),
+        j = i("483093"),
+        w = i("599110"),
+        p = i("933629"),
+        v = i("49111"),
+        C = i("724210"),
+        N = i("782340"),
+        y = i("805435"),
+        T = t => {
           let { roleIcon: e, guild: i } = t,
-            { name: N } = e;
+            { name: T } = e;
           r.useEffect(() => {
-            g.default.track(w.AnalyticEvents.OPEN_POPOUT, {
+            w.default.track(v.AnalyticEvents.OPEN_POPOUT, {
               type: "Role Icon Popout",
               guild_id: i.id,
-              ...(0, n.collectChannelAnalyticsMetadata)(
-                h.default.getChannel(u.default.getChannelId(i.id))
+              ...(0, s.collectChannelAnalyticsMetadata)(
+                u.default.getChannel(x.default.getChannelId(i.id))
               ),
             });
           }, []);
-          let y = null != e.roleId ? i.roles[e.roleId] : void 0,
-            T = (0, d.isSubscriptionRole)(y),
-            I = T
-              ? v.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format(
-                  { name: N }
+          let I = (0, a.useStateFromStores)([f.default], () =>
+              null != e.roleId ? f.default.getRole(i.id, e.roleId) : void 0
+            ),
+            E = (0, c.isSubscriptionRole)(I),
+            _ = E
+              ? N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format(
+                  { name: T }
                 )
-              : v.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
-                  name: N,
+              : N.default.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({
+                  name: T,
                 }),
-            E = {
+            O = {
               ...e,
               src:
                 null == e.src
                   ? e.src
-                  : (0, s.replaceRoleIconSourceSize)(e.src, 40),
+                  : (0, o.replaceRoleIconSourceSize)(e.src, 40),
               size: 40,
             };
-          return (0, l.jsx)(a.Dialog, {
-            children: (0, l.jsx)(j.MessagePopoutContent, {
+          return (0, l.jsx)(n.Dialog, {
+            children: (0, l.jsx)(p.MessagePopoutContent, {
               children: (0, l.jsxs)("div", {
-                className: C.popoutContainer,
+                className: y.popoutContainer,
                 children: [
                   (0, l.jsxs)("div", {
-                    className: C.mainContent,
+                    className: y.mainContent,
                     children: [
                       (0, l.jsx)("div", {
-                        className: C.roleIconContainer,
-                        children: (0, l.jsx)(m.default, {
-                          ...E,
+                        className: y.roleIconContainer,
+                        children: (0, l.jsx)(j.default, {
+                          ...O,
                           enableTooltip: !1,
-                          className: C.roleIcon,
+                          className: y.roleIcon,
                           enableHeight: !1,
                         }),
                       }),
                       (0, l.jsxs)("div", {
-                        className: C.truncatingText,
+                        className: y.truncatingText,
                         children: [
-                          (0, l.jsx)(a.Heading, {
+                          (0, l.jsx)(n.Heading, {
                             variant: "heading-md/semibold",
-                            className: C.roleName,
-                            children: (0, l.jsx)(f.default, { children: N }),
+                            className: y.roleName,
+                            children: (0, l.jsx)(m.default, { children: T }),
                           }),
-                          (0, l.jsx)(a.Text, {
+                          (0, l.jsx)(n.Text, {
                             variant: "text-sm/normal",
-                            children: I,
+                            children: _,
                           }),
                         ],
                       }),
                     ],
                   }),
-                  (0, l.jsxs)(a.Button, {
-                    size: a.Button.Sizes.SMALL,
-                    color: a.Button.Colors.PRIMARY,
-                    className: C.ctaButton,
-                    innerClassName: C.ctaButtonContent,
+                  (0, l.jsxs)(n.Button, {
+                    size: n.Button.Sizes.SMALL,
+                    color: n.Button.Colors.PRIMARY,
+                    className: y.ctaButton,
+                    innerClassName: y.ctaButtonContent,
                     fullWidth: !0,
-                    onClick: T
+                    onClick: E
                       ? () => {
-                          (0, c.transitionTo)(
-                            w.Routes.CHANNEL(
+                          (0, h.transitionTo)(
+                            v.Routes.CHANNEL(
                               i.id,
-                              p.StaticChannelRoute.ROLE_SUBSCRIPTIONS
+                              C.StaticChannelRoute.ROLE_SUBSCRIPTIONS
                             )
                           );
                         }
                       : () => {
-                          (0, o.openGuildBoostingMarketingModal)({
+                          (0, d.openGuildBoostingMarketingModal)({
                             guildId: i.id,
                             location: {
-                              section: w.AnalyticsSections.ROLE_ICON_POPOUT,
+                              section: v.AnalyticsSections.ROLE_ICON_POPOUT,
                             },
                           });
                         },
                     autoFocus: !0,
                     children: [
-                      (0, l.jsx)(x.default, {
+                      (0, l.jsx)(g.default, {
                         width: 14,
                         height: 14,
-                        className: C.boosterBadge,
+                        className: y.boosterBadge,
                       }),
-                      v.default.Messages.ROLE_ICON_POPOUT_CTA,
+                      N.default.Messages.ROLE_ICON_POPOUT_CTA,
                     ],
                   }),
                 ],
@@ -2173,10 +2184,10 @@
       i.r(e),
         i.d(e, {
           useUsername: function () {
-            return V;
+            return F;
           },
           useAvatar: function () {
-            return F;
+            return V;
           },
           BaseMessageHeader: function () {
             return H;
@@ -2268,7 +2279,7 @@
           ],
         });
       }
-      function V(t, e, i) {
+      function F(t, e, i) {
         let {
           message: r,
           channel: a,
@@ -2306,7 +2317,7 @@
           ],
         });
       }
-      function F(t) {
+      function V(t) {
         var e, i;
         let {
             props: a,
@@ -2559,7 +2570,7 @@
               G
             ),
           W = k && Z,
-          K = F({
+          K = V({
             props: t,
             guildId: t.guildId,
             handleRenderPopout: P,
@@ -2648,7 +2659,7 @@
         let tl = {};
         (tl[L.UsernameDecorationTypes.SYSTEM_TAG] = q),
           (tl[L.UsernameDecorationTypes.BADGES] = J);
-        let tr = V(t, P, tl),
+        let tr = F(t, P, tl),
           ta = (0, x.getMessageUsernameId)(e, C),
           tn = (0, x.getMessageTimestampId)(e),
           ts = N ? "".concat(ta) : "".concat(ta, " ").concat(tn),
@@ -2832,4 +2843,4 @@
     },
   },
 ]);
-//# sourceMappingURL=410590ce9249d7bed57b.js.map
+//# sourceMappingURL=29c023a938b34fbec237.js.map

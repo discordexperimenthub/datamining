@@ -26288,8 +26288,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273455", ", Version Hash: ")
-          .concat("a2c8fe438884a1f46fe27ddf3d480dfc76fe8cf8")
+          .concat("273512", ", Version Hash: ")
+          .concat("d756452f845fc170440de9fb16b3598f62ec575b")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29387,12 +29387,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273455"), "273455"));
+        let _ = parseInt(((e = "273512"), "273512"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273455"
+                "273512"
               )
             ),
             (_ = 0)),
@@ -51562,4 +51562,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.b4b9dcca93f776e5aa4e.js.map
+//# sourceMappingURL=76039.8dd303063b41c5c21bdf.js.map

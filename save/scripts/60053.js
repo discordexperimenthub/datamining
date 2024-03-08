@@ -19902,9 +19902,10 @@
             : blur();
         }
         handlePasteCapture(e) {
-          let { editor: t, onPaste: n } = this.props;
+          let { editor: t, onPaste: n, readOnly: l } = this.props;
           null == n || n(e),
             !(e.isDefaultPrevented() || e.isPropagationStopped()) &&
+              !l &&
               (t.insertData(e.clipboardData),
               e.preventDefault(),
               e.stopPropagation());
@@ -66544,4 +66545,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.228002af2ddacde20235.js.map
+//# sourceMappingURL=60053.a6d913bc812fc5c2a139.js.map

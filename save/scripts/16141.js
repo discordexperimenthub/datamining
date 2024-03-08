@@ -42023,7 +42023,8 @@
         }),
         ((l = a || (a = {}))[(l.CONTENT_TYPE_UNSPECIFIED = 0)] =
           "CONTENT_TYPE_UNSPECIFIED"),
-        (l[(l.PLAYED_GAME = 1)] = "PLAYED_GAME");
+        (l[(l.PLAYED_GAME = 1)] = "PLAYED_GAME"),
+        (l[(l.WATCHED_MEDIA = 2)] = "WATCHED_MEDIA");
     },
     417847: function (e, t, n) {
       "use strict";
@@ -42042,4 +42043,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a40e95d759c9947300e4.js.map
+//# sourceMappingURL=c408b31452e36594d8b0.js.map

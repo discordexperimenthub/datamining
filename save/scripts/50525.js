@@ -50,7 +50,7 @@
             { ref: R, height: M = 0 } = (0, u.default)(),
             { ref: F, height: v = 0 } = (0, u.default)(),
             [N, S] = a.useState(l),
-            g = (0, r.useSpring)({
+            C = (0, r.useSpring)({
               height: N ? v + M : M,
               immediate: _ || m,
               config: { ...r.config.stiff, clamp: !0 },
@@ -64,8 +64,8 @@
           a.useLayoutEffect(() => {
             p(!1), S(l);
           }, [l]);
-          let [C, A] = a.useState(!1),
-            j = () => {
+          let [g, A] = a.useState(!1),
+            L = () => {
               A(!1);
             };
           return (
@@ -76,17 +76,17 @@
               return () => clearTimeout(e);
             }, []),
             (0, n.jsx)(d.Clickable, {
-              className: s(E.editCard, { [E.toggled]: l, [E.active]: C }),
-              onMouseLeave: j,
+              className: s(E.editCard, { [E.toggled]: l, [E.active]: g }),
+              onMouseLeave: L,
               onMouseDown: () => {
                 A(!0);
               },
-              onMouseUp: j,
+              onMouseUp: L,
               children: (0, n.jsxs)(r.animated.div, {
                 className: s(E.contentExpandContainer, {
                   [E.showOverflow]: l && h,
                 }),
-                style: g,
+                style: C,
                 children: [
                   (0, n.jsx)(d.Clickable, {
                     innerRef: R,
@@ -185,8 +185,8 @@
       }
       let N = {},
         S = {},
-        g = {};
-      class C extends n.default.Store {
+        C = {};
+      class g extends n.default.Store {
         getRequests(e, t) {
           let i = _.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
           return (0, o.isActionedApplicationStatus)(t)
@@ -217,12 +217,12 @@
         }
         getSelectedGuildJoinRequest(e) {
           var t;
-          let i = g[e];
+          let i = C[e];
           return null != i ? ((t = i.id), h.get(t)) : null;
         }
       }
-      C.displayName = "GuildJoinRequestStoreV2";
-      var A = new C(l.default, {
+      g.displayName = "GuildJoinRequestStoreV2";
+      var A = new g(l.default, {
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
           let { status: t, requests: i, total: n, guildId: a } = e;
           if (
@@ -287,7 +287,7 @@
         },
         GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {
           let { guildId: t, request: i } = e;
-          g[t] = i;
+          C[t] = i;
         },
       });
     },
@@ -1400,15 +1400,15 @@
             M = t.hasFeature(x.GuildFeatures.CLAN),
             F = a.useRef(!1),
             [v, N] = a.useState(null),
-            [S, g] = a.useState(e.formFields),
-            C = a.useRef(e.formFields),
+            [S, C] = a.useState(e.formFields),
+            g = a.useRef(e.formFields),
             A = a.useMemo(() => S.filter(d.isAutomaticApprovalFormField), [S]),
-            j = a.useMemo(() => S.filter(d.isManualApprovalFormField), [S]),
-            L = j.length,
+            L = a.useMemo(() => S.filter(d.isManualApprovalFormField), [S]),
+            j = L.length,
             y = a.useMemo(() => S.length === _.MAX_FORM_ELEMENTS, [S]),
             O = a.useMemo(() => S.some(o.isTermsFormField), [S]),
             U = a.useMemo(() => S.some(e => !(0, o.isTermsFormField)(e)), [S]),
-            D = L > 1,
+            D = j > 1,
             V = (0, r.useIsMemberVerificationManualApproval)(t.id),
             w = a.useCallback(() => {
               (0, l.showToast)(
@@ -1425,10 +1425,10 @@
                   try {
                     await s.default.updateVerificationForm(t.id, e),
                       p(),
-                      g(e),
-                      (C.current = e);
+                      C(e),
+                      (g.current = e);
                   } catch (e) {
-                    throw (g(C.current), e);
+                    throw (C(g.current), e);
                   } finally {
                     null != v && N(null), (F.current = !1);
                   }
@@ -1436,7 +1436,7 @@
               },
               [v, t.id, p]
             ),
-            b = a.useCallback(
+            B = a.useCallback(
               async e => {
                 let t =
                   e.field_type === o.VerificationFormFieldTypes.TERMS
@@ -1446,7 +1446,7 @@
               },
               [S, G]
             ),
-            B = a.useCallback(
+            b = a.useCallback(
               async (e, t) => {
                 if (S[e] === t) return;
                 let i = [...S];
@@ -1461,7 +1461,7 @@
                 if (
                   (null != t &&
                     t !== n &&
-                    (a.splice(n, 1), a.splice(t, 0, e), g(a)),
+                    (a.splice(n, 1), a.splice(t, 0, e), C(a)),
                   i)
                 )
                   try {
@@ -1489,7 +1489,7 @@
                 (0, n.jsx)(c.default, { guildId: t.id }),
                 !O &&
                   !y &&
-                  (0, n.jsx)(f.default, { addFormField: b, guild: t }),
+                  (0, n.jsx)(f.default, { addFormField: B, guild: t }),
                 A.map(e =>
                   (0, m.getFormFieldBuilderComponent)({
                     dropHoveredIndex: v,
@@ -1499,7 +1499,7 @@
                     isDragEnabled: !1,
                     submittedGuildJoinRequestsCount: i,
                     removeFormField: H,
-                    updateFormField: B,
+                    updateFormField: b,
                     updateFormFieldOrder: P,
                   })
                 ),
@@ -1519,11 +1519,11 @@
                   }),
                   !U &&
                     (0, n.jsx)(u.default, {
-                      addFormField: b,
-                      showManualApprovalWarning: !M && !(L > 0),
+                      addFormField: B,
+                      showManualApprovalWarning: !M && !(j > 0),
                       guild: t,
                     }),
-                  j.map(e =>
+                  L.map(e =>
                     (0, m.getFormFieldBuilderComponent)({
                       dropHoveredIndex: v,
                       formField: e,
@@ -1532,13 +1532,13 @@
                       isDragEnabled: D,
                       submittedGuildJoinRequestsCount: i,
                       removeFormField: H,
-                      updateFormField: B,
+                      updateFormField: b,
                       updateFormFieldOrder: P,
                     })
                   ),
                   U &&
                     !y &&
-                    (0, n.jsx)(I.default, { addFormField: b, guild: t }),
+                    (0, n.jsx)(I.default, { addFormField: B, guild: t }),
                 ],
               })
             : k;
@@ -1947,6 +1947,48 @@
           { size: 16 }
         );
     },
+    641892: function (e, t, i) {
+      "use strict";
+      i.r(t),
+        i.d(t, {
+          default: function () {
+            return s;
+          },
+        });
+      var n = i("37983");
+      i("884691");
+      var a = i("469563"),
+        l = i("797350"),
+        s = (0, a.replaceIcon)(
+          function (e) {
+            let {
+              width: t = 16,
+              height: i = 16,
+              color: a = "currentColor",
+              className: l,
+              foreground: s,
+            } = e;
+            return (0, n.jsx)("svg", {
+              className: l,
+              width: t,
+              height: i,
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0, n.jsx)("path", {
+                className: s,
+                fill: a,
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.5 17.2916V3.74996H17.5V18.3333H4.5C3.3955 18.3333 2.5 17.4005 2.5 16.25V3.74996C2.5 2.59944 3.3955 1.66663 4.5 1.66663H15.5V15.2083H4.5C3.94775 15.2083 3.5 15.6742 3.5 16.25C3.5 16.8257 3.94775 17.2916 4.5 17.2916H16.5ZM11.9859 4.99996L7.94446 8.9957L6.35432 7.42204L5 8.75288L7.94427 11.6666L13.3333 6.33344L11.9859 4.99996Z",
+              }),
+            });
+          },
+          l.BookCheckIcon,
+          void 0,
+          { size: 16 }
+        );
+    },
     179016: function (e, t, i) {
       "use strict";
       i.r(t),
@@ -2067,4 +2109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cd01080dfe9d56c44a49.js.map
+//# sourceMappingURL=c37b45ccfc03c3bcf450.js.map

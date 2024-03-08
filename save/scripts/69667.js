@@ -21522,7 +21522,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return p;
+            return C;
           },
         });
       var s = n("37983");
@@ -21531,27 +21531,29 @@
         a = n.n(l),
         i = n("446674"),
         r = n("77078"),
-        o = n("815496"),
-        u = n("448881"),
-        d = n("2973"),
-        c = n("588025"),
-        E = n("227231"),
-        f = n("315130"),
-        _ = n("782340"),
-        T = n("199890");
-      let I = (e, t, n) =>
+        o = n("393414"),
+        u = n("815496"),
+        d = n("448881"),
+        c = n("2973"),
+        E = n("588025"),
+        f = n("227231"),
+        _ = n("315130"),
+        T = n("49111"),
+        I = n("782340"),
+        m = n("199890");
+      let N = (e, t, n) =>
           n
-            ? _.default.Messages.QUESTS_SHOW_CODE
+            ? I.default.Messages.QUESTS_SHOW_CODE
             : e || t
-              ? _.default.Messages.QUESTS_CLAIM_REWARD
-              : _.default.Messages.QUESTS_ACCEPT,
-        m = (e, t) =>
+              ? I.default.Messages.QUESTS_CLAIM_REWARD
+              : I.default.Messages.QUESTS_ACCEPT,
+        p = (e, t) =>
           e
-            ? _.default.Messages.QUESTS_COMPLETE_TOOLTIP
+            ? I.default.Messages.QUESTS_COMPLETE_TOOLTIP
             : t
-              ? _.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP
-              : _.default.Messages.QUESTS_ACCEPT_TOOLTIP,
-        N = (e, t) => {
+              ? I.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP
+              : I.default.Messages.QUESTS_ACCEPT_TOOLTIP,
+        S = (e, t) => {
           var l, a, i;
           return (null === (l = e.userStatus) || void 0 === l
             ? void 0
@@ -21564,14 +21566,14 @@
               : i.claimedAt) != null
             ? () => {
                 var l;
-                (0, o.trackQuestContentClicked)(
+                (0, u.trackQuestContentClicked)(
                   e.id,
                   t,
                   (null === (l = e.userStatus) || void 0 === l
                     ? void 0
                     : l.claimedAt) != null
-                    ? o.QuestContentCTA.SHOW_REWARD
-                    : o.QuestContentCTA.CLAIM_REWARD
+                    ? u.QuestContentCTA.SHOW_REWARD
+                    : u.QuestContentCTA.CLAIM_REWARD
                 ),
                   (0, r.openModalLazy)(async () => {
                     let { default: l } = await n
@@ -21581,102 +21583,119 @@
                   });
               }
             : () => {
-                (0, u.enrollInQuest)(e.id, {
+                (0, d.enrollInQuest)(e.id, {
                   questContent: t,
-                  questContentCTA: o.QuestContentCTA.ACCEPT_QUEST,
+                  questContentCTA: u.QuestContentCTA.ACCEPT_QUEST,
                 });
               };
         };
-      var p = e => {
+      var C = e => {
         var t, n, l;
-        let { quest: o, location: u } = e,
-          p =
-            (null === (t = o.userStatus) || void 0 === t
+        let { quest: u, location: d } = e,
+          C =
+            (null === (t = u.userStatus) || void 0 === t
               ? void 0
               : t.completedAt) != null,
-          S =
-            (null === (n = o.userStatus) || void 0 === n
+          A =
+            (null === (n = u.userStatus) || void 0 === n
               ? void 0
               : n.enrolledAt) != null,
-          C =
-            (null === (l = o.userStatus) || void 0 === l
+          h =
+            (null === (l = u.userStatus) || void 0 === l
               ? void 0
               : l.claimedAt) != null,
-          A = S && !C,
-          h = S ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
-          g = I(p, S, C),
-          M = m(p, S),
-          O = N(o, u),
-          R = S && !p,
-          v = (0, i.useStateFromStores)([d.default], () =>
-            d.default.isEnrolling(o.id)
+          g = A && !h,
+          M = A ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
+          O = N(C, A, h),
+          R = p(C, A),
+          v = S(u, d),
+          L = A && !C,
+          P = (0, i.useStateFromStores)([c.default], () =>
+            c.default.isEnrolling(u.id)
           );
         return (0, s.jsxs)("div", {
-          className: a(T.outerContainer, {
-            [T.outerContainerGiftInventory]:
-              u === c.QuestContent.QUEST_INVENTORY_CARD,
-            [T.outerContainerEmbed]: u === c.QuestContent.QUESTS_EMBED,
+          className: a(m.outerContainer, {
+            [m.outerContainerGiftInventory]:
+              d === E.QuestContent.QUEST_INVENTORY_CARD,
+            [m.outerContainerEmbed]: d === E.QuestContent.QUESTS_EMBED,
           }),
           children: [
             (0, s.jsx)("img", {
-              src: (0, E.getRewardAssetUrl)(o.id),
+              src: (0, f.getRewardAssetUrl)(u.id),
               alt: "",
-              className: a(T.questReward, {
-                [T.questRewardGiftInventory]:
-                  u === c.QuestContent.QUEST_INVENTORY_CARD,
-                [T.questRewardEmbed]: u === c.QuestContent.QUESTS_EMBED,
+              className: a(m.questReward, {
+                [m.questRewardGiftInventory]:
+                  d === E.QuestContent.QUEST_INVENTORY_CARD,
+                [m.questRewardEmbed]: d === E.QuestContent.QUESTS_EMBED,
               }),
             }),
             (0, s.jsxs)("div", {
-              className: T.innerContainer,
+              className: m.innerContainer,
               children: [
                 (0, s.jsxs)("div", {
-                  className: T.questCopyCta,
+                  className: m.questCopyCta,
                   children: [
                     (0, s.jsxs)("div", {
                       children: [
                         (0, s.jsx)(r.Text, {
                           variant: "text-lg/medium",
-                          className: T.taskInstructions,
+                          className: m.taskInstructions,
                           children:
-                            _.default.Messages.QUESTS_STREAM_TASK.format({
+                            I.default.Messages.QUESTS_STREAM_TASK.format({
                               minutes:
-                                o.config.streamDurationRequirementMinutes,
-                              gameTitle: o.config.messages.gameTitle,
+                                u.config.streamDurationRequirementMinutes,
+                              gameTitle: u.config.messages.gameTitle,
                             }),
                         }),
                         (0, s.jsx)(r.Text, {
                           variant: "text-sm/medium",
                           color: "text-muted",
-                          children: _.default.Messages.QUEST_REWARD.format({
-                            reward: o.config.messages.rewardNameWithArticle,
+                          children: I.default.Messages.QUEST_REWARD.format({
+                            reward: u.config.messages.rewardNameWithArticle,
                           }),
                         }),
                       ],
                     }),
-                    (0, s.jsx)(r.Tooltip, {
-                      text: M,
-                      tooltipContentClassName: T.ctaTooltipCopy,
-                      shouldShow: !C,
-                      children: e =>
-                        (0, s.jsx)(r.Button, {
-                          ...e,
-                          wrapperClassName: T.ctaButtonWrapper,
-                          color: h,
-                          disabled: R,
-                          submitting: v,
-                          onClick: O,
-                          children: g,
+                    (0, s.jsxs)("div", {
+                      className: m.ctaButtonContainer,
+                      children: [
+                        d === E.QuestContent.QUESTS_EMBED &&
+                          !A &&
+                          (0, s.jsx)(r.Button, {
+                            wrapperClassName: m.ctaButtonWrapper,
+                            color: r.ButtonColors.PRIMARY,
+                            onClick: () => {
+                              (0, o.transitionTo)(
+                                T.Routes.SETTINGS("inventory")
+                              );
+                            },
+                            children: I.default.Messages.QUESTS_LEARN_MORE_V2,
+                          }),
+                        (0, s.jsx)(r.Tooltip, {
+                          text: R,
+                          tooltipContentClassName: m.ctaTooltipCopy,
+                          shouldShow: !h,
+                          children: e =>
+                            (0, s.jsx)(r.Button, {
+                              ...e,
+                              wrapperClassName: m.ctaButtonWrapper,
+                              color: M,
+                              disabled: L,
+                              submitting: P,
+                              onClick: v,
+                              children: O,
+                            }),
                         }),
+                      ],
                     }),
                   ],
                 }),
-                A &&
-                  (0, s.jsx)(f.default, {
-                    color: p
+                g &&
+                  (0, s.jsx)(_.default, {
+                    color: C
                       ? r.tokens.colors.TEXT_POSITIVE
                       : r.tokens.colors.BG_BRAND,
-                    quest: o,
+                    quest: u,
                   }),
               ],
             }),
@@ -32099,4 +32118,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8c7d4275b41105bba9c3.js.map
+//# sourceMappingURL=3b750de4e9d02ec96005.js.map

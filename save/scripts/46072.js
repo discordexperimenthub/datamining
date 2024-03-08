@@ -1256,7 +1256,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return x;
+            return O;
           },
         }),
         n("70102"),
@@ -1372,7 +1372,7 @@
         });
       }
       let N = [];
-      function x(e) {
+      function O(e) {
         let {
             channelId: t,
             guildId: s,
@@ -1382,8 +1382,8 @@
             disableInteraction: g = !1,
             maxVisibleUsers: v = 3,
           } = e,
-          [A, x] = r.useState(!1),
-          O = r.useRef(new d.DelayedCall(150, () => x(!1))),
+          [A, O] = r.useState(!1),
+          x = r.useRef(new d.DelayedCall(150, () => O(!1))),
           y = (0, o.useStateFromStoresArray)(
             [E.default, p.default],
             () => {
@@ -1404,10 +1404,10 @@
             [l]
           ),
           L = r.useCallback(() => {
-            O.current.cancel(), x(!0);
+            x.current.cancel(), O(!0);
           }, []),
           P = r.useCallback(() => {
-            O.current.delay();
+            x.current.delay();
           }, []),
           D = r.useCallback(
             (e, t) => {
@@ -1666,7 +1666,7 @@
               "stream-settings-fps-".concat(t)
             );
           }),
-          x = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
+          O = p.ApplicationStreamResolutionButtonsWithSuffixLabel.map(e => {
             let { value: t, label: n } = e,
               r = (0, o.default)(
                 p.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -1695,7 +1695,7 @@
             }),
             (0, a.jsx)(i.MenuGroup, {
               label: m.default.Messages.STREAM_RESOLUTION,
-              children: x,
+              children: O,
             }),
           ],
         });
@@ -1823,7 +1823,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return x;
+            return O;
           },
         }),
         n("222007");
@@ -1968,14 +1968,14 @@
             (this.discordErrorsSet = !1);
         }
       }
-      var x = N;
+      var O = N;
     },
     160139: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return O;
+            return x;
           },
         });
       var a = n("37983");
@@ -2042,7 +2042,7 @@
             ],
           });
         },
-        x = e => {
+        O = e => {
           let {
             focused: t,
             windowKey: n,
@@ -2099,7 +2099,7 @@
             ],
           });
         };
-      function O(e) {
+      function x(e) {
         let {
             focused: t,
             type: n,
@@ -2121,7 +2121,7 @@
               hasOpenLayer: h,
             });
           case g.PlatformTypes.OSX:
-            return (0, a.jsx)(x, {
+            return (0, a.jsx)(O, {
               focused: t,
               windowKey: r,
               frame: s,
@@ -2327,7 +2327,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-888e5b07a0aa30678bc7508d8db0ade1b9c952c1",
+          release: "discord_web-db4853b9212f81ef407bd967756c6bd7a3137997",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2397,8 +2397,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "273597"), "273597")),
-          a.setTag("builtAt", String("1709931255697"));
+          a.setTag("buildNumber", ((e = "273599"), "273599")),
+          a.setTag("builtAt", String("1709931552838"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -2818,31 +2818,52 @@
       "use strict";
       n.r(t),
         n.d(t, {
+          getSafetyAlertsSettingOrDefault: function () {
+            return i;
+          },
           getInappropriateConversationTakeoverForChannel: function () {
-            return r;
+            return l;
           },
           shouldShowTakeoverForWarnings: function () {
-            return s;
+            return u;
           },
         });
-      var a = n("764828");
-      function r(e) {
+      var a = n("374363"),
+        r = n("764828"),
+        s = n("217736");
+      function i() {
+        var e, t, n;
+        let r =
+            null ===
+              (n =
+                null === (t = a.default.settings.privacy) || void 0 === t
+                  ? void 0
+                  : null === (e = t.inappropriateConversationWarnings) ||
+                      void 0 === e
+                    ? void 0
+                    : e.value) ||
+            void 0 === n ||
+            n,
+          i = (0, s.getUserIsTeen)("safety_warnings_setting");
+        return i && r;
+      }
+      function l(e) {
         let t = (function (e) {
-            let t = a.default.getChannelSafetyWarnings(e);
+            let t = r.default.getChannelSafetyWarnings(e);
             return t.filter(
               e =>
                 e.type ===
-                a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+                r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
             );
           })(e),
           n = t.filter(e => null != e.dismiss_timestamp);
         if (n.length > 0) return null;
-        let r = t.filter(e => null == e.dismiss_timestamp);
-        return 1 === r.length ? r[0] : null;
+        let a = t.filter(e => null == e.dismiss_timestamp);
+        return 1 === a.length ? a[0] : null;
       }
-      function s(e) {
+      function u(e) {
         let t = e.filter(
-          e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+          e => e.type === r.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
         );
         return t.length > 0 && t.every(e => null == e.dismiss_timestamp);
       }
@@ -3498,8 +3519,8 @@
             void 0 !== t
               ? t
               : null,
-          x = v(n, r, l),
-          O = (0, o.default)(N, M),
+          O = v(n, r, l),
+          x = (0, o.default)(N, M),
           y = (0, u.default)(N, M, g.NOOP_NULL),
           L =
             null == N
@@ -3515,7 +3536,7 @@
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "stream-settings",
                           label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-                          children: O,
+                          children: x,
                         })
                       : null,
                     h ? y : null,
@@ -3547,7 +3568,7 @@
                 : T.default.Messages.SHARE_YOUR_SCREEN,
             children: [
               (0, a.jsx)(s.MenuGroup, {
-                children: x.map(e => {
+                children: O.map(e => {
                   let { stream: t, username: n } = e;
                   return (0, a.jsx)(
                     s.MenuItem,
@@ -5357,4 +5378,4 @@
     },
   },
 ]);
-//# sourceMappingURL=46072.812900b98cb8a42b82dd.js.map
+//# sourceMappingURL=46072.e7c23dc55ef24e9a4b83.js.map

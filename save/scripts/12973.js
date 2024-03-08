@@ -13,49 +13,49 @@
       var a = n("913144"),
         l = n("689988"),
         i = n("26989"),
-        _ = n("697218"),
-        r = n("509");
-      let u = null,
-        s = () => {
+        r = n("697218"),
+        s = n("509");
+      let _ = null,
+        u = () => {
           let e = i.default.getCommunicationDisabledUserMap();
           Object.keys(e).forEach(t => {
             let n = (0, i.getGuildIdFromCommunicationDisabledUserKey)(t),
               a = (0, i.getUserIdFromCommunicationDisabledUserKey)(t),
               l = e[t];
-            !(0, r.isCommunicationDisabled)(l) && o(n, a);
+            !(0, s.isCommunicationDisabled)(l) && o(n, a);
           });
         },
         o = (e, t) => {
-          var n, l, u, s, o, d;
+          var n, l, _, u, o, d;
           let E = i.default.getMember(e, t),
-            c = _.default.getUser(t);
-          if (null == E || null == c || (0, r.isMemberCommunicationDisabled)(E))
+            f = r.default.getUser(t);
+          if (null == E || null == f || (0, s.isMemberCommunicationDisabled)(E))
             return;
-          let f = {
+          let c = {
             ...E,
             guildId: e,
-            nick: null !== (n = E.nick) && void 0 !== n ? n : c.username,
+            nick: null !== (n = E.nick) && void 0 !== n ? n : f.username,
             avatar: null !== (l = E.avatar) && void 0 !== l ? l : void 0,
             avatarDecoration:
               null != E.avatarDecoration ? { ...E.avatarDecoration } : void 0,
             premiumSince:
-              null !== (u = E.premiumSince) && void 0 !== u ? u : void 0,
-            isPending: null !== (s = E.isPending) && void 0 !== s && s,
+              null !== (_ = E.premiumSince) && void 0 !== _ ? _ : void 0,
+            isPending: null !== (u = E.isPending) && void 0 !== u && u,
             user: {
-              ...c,
-              email: null !== (o = c.email) && void 0 !== o ? o : void 0,
-              phone: null !== (d = c.phone) && void 0 !== d ? d : void 0,
+              ...f,
+              email: null !== (o = f.email) && void 0 !== o ? o : void 0,
+              phone: null !== (d = f.phone) && void 0 !== d ? d : void 0,
             },
             communicationDisabledUntil: null,
           };
-          a.default.dispatch({ type: "GUILD_MEMBER_UPDATE", ...f });
+          a.default.dispatch({ type: "GUILD_MEMBER_UPDATE", ...c });
         };
       class d extends l.default {
         _initialize() {
-          u = setInterval(() => s(), 1e4);
+          _ = setInterval(() => u(), 1e4);
         }
         _terminate() {
-          clearInterval(u);
+          clearInterval(_);
         }
         constructor(...e) {
           super(...e), (this.clearGuildMemberTimeout = o);
@@ -75,46 +75,46 @@
         n("222007");
       var l = n("803182"),
         i = n("811022"),
-        _ = n("95410"),
-        r = n("913144"),
-        u = n("404118"),
-        s = n("819689"),
+        r = n("95410"),
+        s = n("913144"),
+        _ = n("404118"),
+        u = n("819689"),
         o = n("115718"),
         d = n("689988"),
         E = n("408062"),
-        c = n("619443"),
-        f = n("582713"),
+        f = n("619443"),
+        c = n("582713"),
         A = n("233069"),
         S = n("982108"),
         C = n("42203"),
         T = n("305961"),
         N = n("660478"),
-        O = n("18494"),
-        p = n("162771"),
-        g = n("718517"),
+        p = n("18494"),
+        g = n("162771"),
+        O = n("718517"),
         I = n("519841"),
         m = n("787336"),
         R = n("49111"),
         L = n("724210"),
         h = n("782340");
       let v = new i.default("MessageManager");
-      function M(e) {
+      function y(e) {
         let {
           guildId: t,
           channelId: n,
           messageId: l,
           forceFetch: i,
-          isPreload: r,
-          jumpType: u,
+          isPreload: s,
+          jumpType: _,
           skipLocalFetch: d,
-          logFailures: f,
+          logFailures: c,
         } = e;
         if (null == n) {
-          f && v.log("Skipping fetch because channelId is null");
+          c && v.log("Skipping fetch because channelId is null");
           return;
         }
         if ((0, L.isStaticChannelRoute)(n)) {
-          f && v.log("Skipping fetch because channelId is a static route");
+          c && v.log("Skipping fetch because channelId is a static route");
           return;
         }
         let A = C.default.getChannel(n);
@@ -123,7 +123,7 @@
           ((null == A ? void 0 : A.type) != null &&
             R.ChannelTypesSets.GUILD_THREADS_ONLY.has(A.type))
         ) {
-          f && v.log("Skipping fetch because channel is a forum/store");
+          c && v.log("Skipping fetch because channel is a forum/store");
           return;
         }
         let S = E.default.getOrCreate(n);
@@ -145,31 +145,31 @@
           null != S.focusTargetId &&
             null == l &&
             ((S = S.mutate({ focusTargetId: null })), E.default.commit(S));
-        let O = i;
+        let p = i;
         if (
-          (!r || c.default.isConnected() || S.loadingMore
+          (!s || f.default.isConnected() || S.loadingMore
             ? S.loadingMore || (S.ready && !S.cached)
               ? null != l
-                ? (O = !0)
-                : f &&
+                ? (p = !0)
+                : c &&
                   v.log("Skipping fetch because no other conditions matched")
               : null == t || null != T.default.getGuild(t)
-                ? (O = !0)
-                : f &&
+                ? (p = !0)
+                : c &&
                   v.log(
                     "Skipping fetch we are connected and have loaded messages"
                   )
-            : (O = !0),
-          O)
+            : (p = !0),
+          p)
         ) {
           if ((E.default.commit(S.mutate({ loadingMore: !0 })), null != l))
-            s.default.jumpToMessage({
+            u.default.jumpToMessage({
               channelId: n,
               messageId: l,
               flash: !0,
-              isPreload: r,
+              isPreload: s,
               skipLocalFetch: d,
-              jumpType: u,
+              jumpType: _,
             });
           else if (
             (null == A ? void 0 : A.isThread()) &&
@@ -178,21 +178,21 @@
               if (null == a) {
                 var t;
                 a =
-                  null !== (t = _.default.get(b, {})) && void 0 !== t ? t : {};
+                  null !== (t = r.default.get(M, {})) && void 0 !== t ? t : {};
               }
               if (e in a) return !1;
               a[e] = Date.now();
-              let n = Date.now() - D;
+              let n = Date.now() - b;
               for (let e in a) a[e] < n && delete a[e];
-              return _.default.set(b, a), !0;
+              return r.default.set(M, a), !0;
             })(n)
           )
             v.log("Jumping to start of thread ".concat(A.id)),
-              s.default.fetchMessages({
+              u.default.fetchMessages({
                 channelId: n,
                 limit: R.MAX_MESSAGES_PER_CHANNEL,
                 jump: { messageId: n, flash: !1 },
-                isPreload: r,
+                isPreload: s,
                 skipLocalFetch: d,
               });
           else if (
@@ -206,27 +206,27 @@
                 .concat(A.id, " - ")
                 .concat(e)
             ),
-              s.default.fetchMessages({
+              u.default.fetchMessages({
                 channelId: n,
                 limit: R.MAX_MESSAGES_PER_CHANNEL,
                 jump: { messageId: e, flash: !1, offset: 1 },
-                isPreload: r,
+                isPreload: s,
                 skipLocalFetch: d,
               });
           } else
-            s.default.fetchMessages({
+            u.default.fetchMessages({
               channelId: n,
               limit: R.MAX_MESSAGES_PER_CHANNEL,
-              isPreload: r,
+              isPreload: s,
               skipLocalFetch: d,
               jump: { jumpType: o.JumpTypes.ANIMATED },
             });
         }
       }
-      let D = 90 * g.default.Millis.DAY,
-        b = "viewedThreadIds";
-      function y() {
-        let e = O.default.getChannelId();
+      let b = 90 * O.default.Millis.DAY,
+        M = "viewedThreadIds";
+      function D() {
+        let e = p.default.getChannelId();
         if (null != e) {
           let n = C.default.getChannel(e);
           if (null != n) {
@@ -235,7 +235,7 @@
               path: R.Routes.CHANNEL(":guild", ":channel", ":message"),
               exact: !0,
             });
-            M({
+            y({
               guildId: n.getGuildId(),
               channelId: n.id,
               messageId:
@@ -257,12 +257,12 @@
           } = arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
             : {},
-          a = O.default.getChannelId();
+          a = p.default.getChannelId();
         if (null != a) {
           let l = C.default.getChannel(a);
           null != l
             ? ((0, A.isTextChannel)(l.type)
-                ? M({
+                ? y({
                     guildId: l.getGuildId(),
                     channelId: l.id,
                     isPreload: e,
@@ -278,53 +278,53 @@
         } else
           n && v.log("Skipping fetch because there is no selected channel");
       }
-      function F(e) {
-        let { guildId: t, channelId: n, messageId: a, jumpType: l } = e;
-        M({ guildId: t, channelId: n, messageId: a, jumpType: l }), P(t, n);
-      }
       function k(e) {
+        let { guildId: t, channelId: n, messageId: a, jumpType: l } = e;
+        y({ guildId: t, channelId: n, messageId: a, jumpType: l }), P(t, n);
+      }
+      function F(e) {
         let { guildId: t, channelId: n } = e;
-        M({ guildId: t, channelId: n });
+        y({ guildId: t, channelId: n });
       }
       function P(e, t) {
         let n = S.default.getCurrentSidebarChannelId(t);
         if (null == n) return;
         let a = S.default.getCurrentSidebarMessageId(t);
-        M({ guildId: e, channelId: n, messageId: a });
+        y({ guildId: e, channelId: n, messageId: a });
       }
       function w() {
-        let e = O.default.getChannelId(),
-          t = p.default.getGuildId();
+        let e = p.default.getChannelId(),
+          t = g.default.getGuildId();
         if (null == t || null == e) return;
         let n = S.default.getSidebarState(e);
-        (null == n ? void 0 : n.type) !== f.SidebarType.VIEW_CHANNEL && P(t, e);
+        (null == n ? void 0 : n.type) !== c.SidebarType.VIEW_CHANNEL && P(t, e);
       }
       function G(e) {
         let { guildId: t, channelId: n, context: a } = e;
         a === R.CURRENT_APP_CONTEXT &&
-          (M({ guildId: t, channelId: n }), P(t, n));
+          (y({ guildId: t, channelId: n }), P(t, n));
       }
       function Y(e) {
         let { channel: t, messageId: n } = e,
           a = t.guild_id;
         null != a &&
-          O.default.getChannelId(a) === t.id &&
-          M({ guildId: a, channelId: t.id, messageId: n });
+          p.default.getChannelId(a) === t.id &&
+          y({ guildId: a, channelId: t.id, messageId: n });
       }
       function W(e) {
         let { channelId: t } = e;
-        s.default.fetchMessages({
+        u.default.fetchMessages({
           channelId: t,
           limit: R.MAX_MESSAGES_PER_CHANNEL,
         });
       }
-      function H(e) {
+      function B(e) {
         let { response: t } = e;
         if (null == t || null == t.body) return null;
         if (t.body.code === R.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
           let e = t.body.retry_after;
           null != e &&
-            u.default.show({
+            _.default.show({
               title: h.default.Messages.RATE_LIMITED,
               body: h.default.Messages.ANNOUNCEMENT_EDIT_RATE_LIMIT.format({
                 retryAfterMinutes: Math.ceil(e / 60),
@@ -332,30 +332,30 @@
             });
         }
       }
-      let V = {};
-      function K(e) {
+      let H = {};
+      function V(e) {
         var t;
         let { channelId: n, jump: a, isStale: l, isPreview: i = !1 } = e;
         if (i) return;
-        let _ = null !== (t = V[n]) && void 0 !== t ? t : 0;
-        if (Date.now() - _ < 10 * g.default.Millis.SECOND) return;
-        V[n] = Date.now();
-        let r = O.default.getChannelId(),
-          u = S.default.getCurrentSidebarChannelId(r),
-          o = n === r || n === u;
+        let r = null !== (t = H[n]) && void 0 !== t ? t : 0;
+        if (Date.now() - r < 10 * O.default.Millis.SECOND) return;
+        H[n] = Date.now();
+        let s = p.default.getChannelId(),
+          _ = S.default.getCurrentSidebarChannelId(s),
+          o = n === s || n === _;
         l &&
-          c.default.isConnected() &&
+          f.default.isConnected() &&
           o &&
-          s.default.fetchMessages({
+          u.default.fetchMessages({
             channelId: n,
             limit: R.MAX_MESSAGES_PER_CHANNEL,
             jump: a,
           });
       }
-      function B(e) {
+      function K(e) {
         let { channelId: t, messageRecord: n } = e;
         null != n &&
-          r.default.dispatch({
+          s.default.dispatch({
             type: "MESSAGE_SEND_FAILED",
             channelId: t,
             messageId: n.id,
@@ -364,36 +364,36 @@
       function x(e) {
         let { state: t } = e;
         if ("active" !== t) return !1;
-        let n = O.default.getChannelId();
+        let n = p.default.getChannelId();
         if (null == n) return !1;
-        s.default.fetchNewLocalMessages(n, R.MAX_MESSAGES_PER_CHANNEL);
+        u.default.fetchNewLocalMessages(n, R.MAX_MESSAGES_PER_CHANNEL);
       }
       class j extends d.default {
         _initialize() {
-          r.default.subscribe("CONNECTION_OPEN", y);
+          s.default.subscribe("CONNECTION_OPEN", D);
         }
         _terminate() {
-          r.default.unsubscribe("CONNECTION_OPEN", y);
+          s.default.unsubscribe("CONNECTION_OPEN", D);
         }
         constructor(...e) {
           super(...e),
-            (this.fetchMessages = M),
+            (this.fetchMessages = y),
             (this.loadSelectedChannelIfNecessary = U),
             (this.stores = new Map().set(S.default, w)),
             (this.actions = {
               APP_STATE_UPDATE: x,
-              OVERLAY_INITIALIZE: y,
-              CHANNEL_SELECT: F,
-              VOICE_CHANNEL_SELECT: k,
+              OVERLAY_INITIALIZE: D,
+              CHANNEL_SELECT: k,
+              VOICE_CHANNEL_SELECT: F,
               THREAD_CREATE: Y,
               THREAD_LIST_SYNC: () => U(),
               CHANNEL_CREATE: Y,
               CHANNEL_PRELOAD: G,
               THREAD_CREATE_LOCAL: W,
               GUILD_CREATE: () => U(),
-              MESSAGE_END_EDIT: H,
-              LOAD_MESSAGES_SUCCESS: K,
-              UPLOAD_FAIL: B,
+              MESSAGE_END_EDIT: B,
+              LOAD_MESSAGES_SUCCESS: V,
+              UPLOAD_FAIL: K,
               CHANNEL_DELETE: () => U(),
               THREAD_DELETE: () => U(),
             });
@@ -406,22 +406,22 @@
       n.r(t),
         n.d(t, {
           dismissChannelSafetyWarnings: function () {
-            return _;
-          },
-          setChannelSafetyWarningFeedback: function () {
             return r;
           },
+          setChannelSafetyWarningFeedback: function () {
+            return s;
+          },
           clearChannelSafetyWarnings: function () {
-            return u;
+            return _;
           },
           acknowledgeChannelSafetyWarningTooltip: function () {
-            return s;
+            return u;
           },
         });
       var a = n("872717"),
         l = n("913144"),
         i = n("49111");
-      function _(e, t) {
+      function r(e, t) {
         return (
           l.default.dispatch({
             type: "DISMISS_CHANNEL_SAFETY_WARNINGS",
@@ -435,7 +435,7 @@
           })
         );
       }
-      function r(e, t, n) {
+      function s(e, t, n) {
         l.default.dispatch({
           type: "CHANNEL_SAFETY_WARNING_FEEDBACK",
           channelId: e,
@@ -443,13 +443,13 @@
           feedbackType: n,
         });
       }
-      function u(e) {
+      function _(e) {
         l.default.dispatch({
           type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
           channelId: e,
         });
       }
-      function s(e) {
+      function u(e) {
         l.default.dispatch({
           type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP",
           channelId: e,
@@ -474,10 +474,10 @@
       var a,
         l,
         i,
-        _,
-        r = n("446674"),
-        u = n("913144"),
-        s = n("42203"),
+        r,
+        s = n("446674"),
+        _ = n("913144"),
+        u = n("42203"),
         o = n("718517");
       let d = 5 * o.default.Millis.SECOND;
       ((i = a || (a = {}))[(i.STRANGER_DANGER = 1)] = "STRANGER_DANGER"),
@@ -485,15 +485,15 @@
           "INAPPROPRIATE_CONVERSATION_TIER_1"),
         (i[(i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3)] =
           "INAPPROPRIATE_CONVERSATION_TIER_2"),
-        ((_ = l || (l = {}))[(_.UPVOTE = 0)] = "UPVOTE"),
-        (_[(_.DOWNVOTE = 1)] = "DOWNVOTE");
+        ((r = l || (l = {}))[(r.UPVOTE = 0)] = "UPVOTE"),
+        (r[(r.DOWNVOTE = 1)] = "DOWNVOTE");
       let E = [],
-        c = {},
-        f = new Set();
+        f = {},
+        c = new Set();
       function A(e) {
         let { safetyWarnings: t } = e;
         null != t &&
-          ((c[e.id] = t),
+          ((f[e.id] = t),
           t.some(e => {
             var t;
             return (
@@ -504,41 +504,41 @@
               })(e.dismiss_timestamp)
             );
           })
-            ? f.add(e.id)
-            : f.delete(e.id)),
-          null == t && (null != c[e.id] && delete c[e.id], f.delete(e.id));
+            ? c.add(e.id)
+            : c.delete(e.id)),
+          null == t && (null != f[e.id] && delete f[e.id], c.delete(e.id));
       }
       function S() {
-        (c = {}),
-          Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+        (f = {}),
+          Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
             A(e);
           });
       }
-      class C extends r.default.Store {
+      class C extends s.default.Store {
         initialize() {
-          this.waitFor(s.default);
+          this.waitFor(u.default);
         }
         getChannelSafetyWarning(e, t) {
           var n;
-          return null === (n = c[e]) || void 0 === n
+          return null === (n = f[e]) || void 0 === n
             ? void 0
             : n.find(e => e.id === t);
         }
         getChannelSafetyWarnings(e) {
           var t;
-          return null !== (t = c[e]) && void 0 !== t ? t : E;
+          return null !== (t = f[e]) && void 0 !== t ? t : E;
         }
         hasShownInitialTooltipForChannel(e) {
-          return f.has(e);
+          return c.has(e);
         }
       }
-      var T = new C(u.default, {
+      var T = new C(_.default, {
         CHANNEL_CREATE: function (e) {
           A(e.channel);
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          null != c[t.id] && delete c[t.id], f.delete(t.id);
+          null != f[t.id] && delete f[t.id], c.delete(t.id);
         },
         CHANNEL_UPDATES: function (e) {
           e.channels.forEach(e => {
@@ -549,41 +549,79 @@
         CONNECTION_OPEN_SUPPLEMENTAL: S,
         CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
           let { channelId: t, warningId: n, feedbackType: a } = e,
-            l = c[t];
+            l = f[t];
           null != l &&
-            (c[t] = l.map(e => (e.id === n ? { ...e, feedback_type: a } : e)));
+            (f[t] = l.map(e => (e.id === n ? { ...e, feedback_type: a } : e)));
         },
         CLEAR_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t } = e,
-            n = c[t];
-          f.delete(t),
+            n = f[t];
+          c.delete(t),
             null != n &&
-              (c[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
+              (f[t] = n.map(e => ({ ...e, dismiss_timestamp: void 0 })));
         },
         DISMISS_CHANNEL_SAFETY_WARNINGS: function (e) {
           let { channelId: t, warningIds: n } = e,
-            a = c[t];
+            a = f[t];
           if (null == a) return;
           let l = new Date().toISOString();
-          c[t] = a.map(e =>
+          f[t] = a.map(e =>
             n.includes(e.id) ? { ...e, dismiss_timestamp: l } : e
           );
         },
         ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function (e) {
           let { channelId: t } = e;
-          f.add(t);
+          c.add(t);
         },
       });
+    },
+    499799: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          isStaffTeenSafetyAssistAgeBypass: function () {
+            return i;
+          },
+          useStaffTeenSafetyAssistAgeBypass: function () {
+            return r;
+          },
+        });
+      var a = n("862205");
+      let l = (0, a.createExperiment)({
+        kind: "user",
+        id: "2023-10_staff_teen_safety_assist_age_bypass",
+        label: "Staff Teen Safety Assist Age Bypass",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+          {
+            id: 1,
+            label:
+              "Enable staff teen safety assist age bypass (your account will behave as a teen user)",
+            config: { enabled: !0 },
+          },
+        ],
+      });
+      function i(e) {
+        let { enabled: t } = l.getCurrentConfig(
+          { location: e },
+          { autoTrackExposure: !0 }
+        );
+        return t;
+      }
+      function r(e) {
+        return l.useExperiment({ location: e }, { autoTrackExposure: !0 })
+          .enabled;
+      }
     },
     761771: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           isEligibleForInappropriateConversationWarning: function () {
-            return _;
+            return r;
           },
           useIsEligibleForInappropriateConversationWarning: function () {
-            return r;
+            return s;
           },
         });
       var a = n("862205");
@@ -613,29 +651,29 @@
             },
           ],
         });
-      function _(e) {
+      function r(e) {
         let { location: t, autoTrackExposure: n = !1 } = e,
           { enabled: a } = l.getCurrentConfig(
             { location: t },
             { autoTrackExposure: n }
           ),
-          { enabled: _ } = i.getCurrentConfig(
+          { enabled: r } = i.getCurrentConfig(
             { location: t },
             { autoTrackExposure: n }
           );
-        return a || _;
+        return a || r;
       }
-      function r(e) {
+      function s(e) {
         let { location: t, autoTrackExposure: n = !1 } = e,
           { enabled: a } = l.useExperiment(
             { location: t },
             { autoTrackExposure: n }
           ),
-          { enabled: _ } = i.useExperiment(
+          { enabled: r } = i.useExperiment(
             { location: t },
             { autoTrackExposure: n }
           );
-        return a || _;
+        return a || r;
       }
     },
     217736: function (e, t, n) {
@@ -643,77 +681,91 @@
       n.r(t),
         n.d(t, {
           trackViewedEvent: function () {
-            return s;
+            return d;
           },
           ViewNameTypes: function () {
             return i;
           },
           trackNamedViewEvent: function () {
-            return o;
+            return E;
           },
           CtaEventTypes: function () {
-            return _;
+            return r;
           },
           trackCtaEvent: function () {
-            return d;
+            return f;
+          },
+          getUserIsTeen: function () {
+            return c;
           },
         });
       var a,
         l,
         i,
-        _,
-        r = n("599110"),
-        u = n("49111");
-      function s(e, t) {
+        r,
+        s = n("697218"),
+        _ = n("599110"),
+        u = n("499799"),
+        o = n("49111");
+      function d(e, t) {
         let { channelId: n, warningId: a, senderId: l, warningType: i } = t;
-        r.default.track(e, {
+        _.default.track(e, {
           channel_id: n,
           warning_id: null != a ? parseInt(a) : void 0,
           warning_type: i,
           other_user_id: l,
         });
       }
-      function o(e) {
+      function E(e) {
         let {
           channelId: t,
           warningId: n,
           senderId: a,
           warningType: l,
           viewName: i,
-          isNudgeWarning: _,
+          isNudgeWarning: r,
         } = e;
-        r.default.track(u.AnalyticEvents.SAFETY_WARNING_VIEWED, {
+        _.default.track(o.AnalyticEvents.SAFETY_WARNING_VIEWED, {
           channel_id: t,
           warning_id: null != n ? parseInt(n) : void 0,
           warning_type: l,
           other_user_id: a,
           view_name: i,
-          is_nudge_warning: _,
+          is_nudge_warning: r,
         });
       }
-      function d(e) {
+      function f(e) {
         let {
           channelId: t,
           warningId: n,
           senderId: a,
           warningType: l,
           cta: i,
-          isNudgeWarning: _,
+          isNudgeWarning: r,
         } = e;
-        r.default.track(u.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
+        _.default.track(o.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
           channel_id: t,
           warning_id: null != n ? parseInt(n) : void 0,
           warning_type: l,
           other_user_id: a,
           cta: i,
-          is_nudge_warning: _,
+          is_nudge_warning: r,
         });
+      }
+      function c(e) {
+        var t;
+        let n =
+            null === (t = s.default.getCurrentUser()) || void 0 === t
+              ? void 0
+              : t.nsfwAllowed,
+          a = (0, u.isStaffTeenSafetyAssistAgeBypass)(e);
+        return !1 === n || a;
       }
       ((a = i || (i = {})).SAFETY_WARNING_BANNER = "safety_warning_banner"),
         (a.SAFETY_TAKEOVER_MODAL = "safety_takeover_modal"),
         (a.SAFETY_TOOLS_NUDGE_TOOLTIP = "safety_tools_nudge_tooltip"),
         (a.SAFETY_TOOLS_BUTTON = "safety_tools_button"),
-        ((l = _ || (_ = {})).OPEN_MORE_TIPS = "open_more_tips"),
+        ((l = r || (r = {})).OPEN_MORE_TIPS = "open_more_tips"),
         (l.USER_BANNER_DISMISS = "user_banner_dismiss"),
         (l.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm"),
         (l.USER_BANNER_BLOCK_AND_REPORT_CONFIRM =
@@ -767,18 +819,18 @@
           width: t = 24,
           height: n = 24,
           color: i = "currentColor",
-          className: _,
-          foreground: r,
-          ...u
+          className: r,
+          foreground: s,
+          ..._
         } = e;
         return (0, a.jsx)("svg", {
-          ...(0, l.default)(u),
-          className: _,
+          ...(0, l.default)(_),
+          className: r,
           width: t,
           height: n,
           viewBox: "0 0 24 24",
           children: (0, a.jsx)("path", {
-            className: r,
+            className: s,
             fill: i,
             fillRule: "evenodd",
             clipRule: "evenodd",
@@ -789,4 +841,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12973.bd4038efbb41b7ae6e75.js.map
+//# sourceMappingURL=12973.003e230597c8dd661b32.js.map

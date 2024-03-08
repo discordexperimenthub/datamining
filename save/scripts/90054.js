@@ -9,31 +9,52 @@
       "use strict";
       s.r(t),
         s.d(t, {
+          getSafetyAlertsSettingOrDefault: function () {
+            return r;
+          },
           getInappropriateConversationTakeoverForChannel: function () {
-            return a;
+            return o;
           },
           shouldShowTakeoverForWarnings: function () {
-            return l;
+            return i;
           },
         });
-      var n = s("764828");
-      function a(e) {
+      var n = s("374363"),
+        a = s("764828"),
+        l = s("217736");
+      function r() {
+        var e, t, s;
+        let a =
+            null ===
+              (s =
+                null === (t = n.default.settings.privacy) || void 0 === t
+                  ? void 0
+                  : null === (e = t.inappropriateConversationWarnings) ||
+                      void 0 === e
+                    ? void 0
+                    : e.value) ||
+            void 0 === s ||
+            s,
+          r = (0, l.getUserIsTeen)("safety_warnings_setting");
+        return r && a;
+      }
+      function o(e) {
         let t = (function (e) {
-            let t = n.default.getChannelSafetyWarnings(e);
+            let t = a.default.getChannelSafetyWarnings(e);
             return t.filter(
               e =>
                 e.type ===
-                n.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+                a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
             );
           })(e),
           s = t.filter(e => null != e.dismiss_timestamp);
         if (s.length > 0) return null;
-        let a = t.filter(e => null == e.dismiss_timestamp);
-        return 1 === a.length ? a[0] : null;
+        let n = t.filter(e => null == e.dismiss_timestamp);
+        return 1 === n.length ? n[0] : null;
       }
-      function l(e) {
+      function i(e) {
         let t = e.filter(
-          e => e.type === n.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
+          e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1
         );
         return t.length > 0 && t.every(e => null == e.dismiss_timestamp);
       }
@@ -44,27 +65,29 @@
         s.d(t, {
           useInappropriateConversationSafetyToolsWarningForChannel:
             function () {
-              return l;
+              return r;
             },
         });
       var n = s("761771"),
-        a = s("888203");
-      function l(e) {
+        a = s("888203"),
+        l = s("328564");
+      function r(e) {
         let t = (0, n.useIsEligibleForInappropriateConversationWarning)({
             location: "safety-tools-button",
           }),
-          s = (0, a.useInappropriateConversationWarningsForChannel)(e);
-        if (!t) return;
-        let l = s.filter(e => null != e.dismiss_timestamp);
-        if (0 === l.length) return;
-        let r = l.sort((e, t) =>
+          s = (0, l.useSafetyAlertsSettingOrDefault)(),
+          r = (0, a.useInappropriateConversationWarningsForChannel)(e);
+        if (!t || !s) return;
+        let o = r.filter(e => null != e.dismiss_timestamp);
+        if (0 === o.length) return;
+        let i = o.sort((e, t) =>
           e.type > t.type
             ? 1
             : e.dismiss_timestamp < t.dismiss_timestamp
               ? 1
               : -1
         );
-        return r[0];
+        return i[0];
       }
     },
     615992: function (e, t, s) {
@@ -121,8 +144,8 @@
         l = s("821240"),
         r = s("774298"),
         o = s("888203"),
-        T = s("408815");
-      let i = 1 * n.default.Millis.HOUR,
+        i = s("408815");
+      let T = 1 * n.default.Millis.HOUR,
         u = 12 * n.default.Millis.HOUR;
       function S(e) {
         var t;
@@ -130,7 +153,7 @@
             e
           ),
           n = (0, o.useInappropriateConversationWarningsForChannel)(e),
-          S = (0, T.useShouldShowInitialSafetyToolsButtonTooltip)(e);
+          S = (0, i.useShouldShowInitialSafetyToolsButtonTooltip)(e);
         if (null == s || S || (0, l.shouldShowTakeoverForWarnings)(n)) return;
         let _ = n.some(
             e =>
@@ -148,7 +171,7 @@
             let t =
               arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             if (null == e) return !0;
-            let s = new Date(e).getTime() + (t ? i : u),
+            let s = new Date(e).getTime() + (t ? T : u),
               n = new Date().getTime();
             return n >= s;
           })(E.dismiss_timestamp, _)
@@ -195,7 +218,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return i;
           },
         });
       var n = s("37983");
@@ -204,7 +227,7 @@
         l = s.n(a),
         r = s("77078"),
         o = s("968246");
-      function T(e) {
+      function i(e) {
         let { tips: t, className: s, headerText: a } = e;
         return (0, n.jsxs)("div", {
           className: l(o.tipsSection, s),
@@ -258,16 +281,16 @@
         l = s("77078"),
         r = s("79112"),
         o = s("701909"),
-        T = s("514914"),
-        i = s("49111"),
+        i = s("514914"),
+        T = s("49111"),
         u = s("782340"),
         S = s("821054"),
         _ = function (e) {
           let { onClose: t } = e,
             s = a.useCallback(() => {
-              r.default.open(i.UserSettingsSections.PRIVACY_AND_SAFETY), t();
+              r.default.open(T.UserSettingsSections.PRIVACY_AND_SAFETY), t();
             }, [t]);
-          return (0, n.jsxs)(T.default, {
+          return (0, n.jsxs)(i.default, {
             style: S.wrapperStyle,
             children: [
               (0, n.jsx)(l.Text, {
@@ -276,7 +299,7 @@
                   u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format(
                     {
                       learnMoreLink: o.default.getArticleURL(
-                        i.HelpdeskArticles.SAFETY_ALERTS
+                        T.HelpdeskArticles.SAFETY_ALERTS
                       ),
                     }
                   ),
@@ -297,7 +320,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return g;
+            return m;
           },
         });
       var n = s("37983"),
@@ -305,8 +328,8 @@
         l = s("414456"),
         r = s.n(l),
         o = s("446674"),
-        T = s("669491"),
-        i = s("748802"),
+        i = s("669491"),
+        T = s("748802"),
         u = s("77078"),
         S = s("736964"),
         _ = s("545158"),
@@ -361,7 +384,7 @@
           ],
         });
       }
-      function m(e) {
+      function g(e) {
         let { title: t, onPress: s } = e;
         return (0, n.jsxs)(u.Clickable, {
           className: r(N.actionRow, N.clickableActionRow),
@@ -372,55 +395,55 @@
               color: "header-primary",
               children: t,
             }),
-            (0, n.jsx)(i.ChevronSmallRightIcon, {
+            (0, n.jsx)(T.ChevronSmallRightIcon, {
               width: 24,
               height: 24,
-              color: T.default.colors.INTERACTIVE_NORMAL,
+              color: i.default.colors.INTERACTIVE_NORMAL,
             }),
           ],
         });
       }
-      var g = function (e) {
+      var m = function (e) {
         let {
             otherUserId: t,
             channelId: l,
             warningId: r,
-            warningType: T,
-            transitionToSlide: i,
+            warningType: i,
+            transitionToSlide: T,
           } = e,
           N = (0, E.useShouldShowHelplineLink)(),
-          g = (0, O.useLastChannelMessage)(l),
-          x = null != (0, A.useSafetyToolsButtonTooltipForChannel)(l),
-          M = (0, o.useStateFromStores)([c.default], () =>
+          m = (0, O.useLastChannelMessage)(l),
+          v = null != (0, A.useSafetyToolsButtonTooltipForChannel)(l),
+          x = (0, o.useStateFromStores)([c.default], () =>
             c.default.isBlocked(t)
           ),
-          v = a.useCallback(
+          M = a.useCallback(
             e => {
               (0, I.trackCtaEvent)({
                 channelId: l,
                 warningId: r,
                 senderId: t,
-                warningType: T,
+                warningType: i,
                 cta: e,
-                isNudgeWarning: x,
+                isNudgeWarning: v,
               });
             },
-            [l, r, t, T, x]
+            [l, r, t, i, v]
           ),
           Y = a.useCallback(() => {
             (0, u.closeModal)(p.SAFETY_TOOLS_MODAL_KEY),
-              v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
-          }, [v]),
-          B = a.useCallback(() => {
+              M(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM);
+          }, [M]),
+          y = a.useCallback(() => {
             S.default.unblockUser(t, {
               location: p.MODAL_LOCATION_CONTEXT_WEB,
             }),
-              v(I.CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK);
-          }, [t, v]),
-          y = a.useCallback(() => {
+              M(I.CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK);
+          }, [t, M]),
+          B = a.useCallback(() => {
             (0, u.closeModal)(p.SAFETY_TOOLS_MODAL_KEY),
-              v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
-          }, [v]),
+              M(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM);
+          }, [M]),
           P = a.useMemo(() => {
             let e = {
                 title:
@@ -434,7 +457,7 @@
                 buttonColor: u.ButtonColors.PRIMARY,
                 onPress: () => {
                   (0, _.default)(p.CRISIS_TEXT_LINE_URL),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_CTL);
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_CTL);
                 },
               },
               a = {
@@ -448,7 +471,7 @@
                 buttonColor: u.ButtonColors.PRIMARY,
                 onPress: () => {
                   (0, _.default)(p.NOFILTR_URL),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR);
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR);
                 },
               };
             return [
@@ -456,13 +479,13 @@
                 title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
                 subTitle:
                   R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-                buttonText: M
+                buttonText: x
                   ? R.default.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK
                   : R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
                 buttonColor: u.ButtonColors.BRAND,
                 onPress: () => {
-                  M
-                    ? B()
+                  x
+                    ? y()
                     : (0, u.openModalLazy)(async () => {
                         let { default: e } = await s
                           .el("811578")
@@ -472,10 +495,10 @@
                           return (0, n.jsx)(e, {
                             transitionState: a,
                             onBlock: Y,
-                            onBlockAndReport: y,
+                            onBlockAndReport: B,
                             onCancel: () => {
                               null == r || r(),
-                                v(
+                                M(
                                   I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL
                                 );
                             },
@@ -499,9 +522,9 @@
                   (0, u.closeModal)(p.SAFETY_TOOLS_MODAL_KEY),
                     (0,
                     d.showReportModalForInappropriateConversationSafetyAlert)(
-                      g
+                      m
                     ),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_REPORT);
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_REPORT);
                 },
               },
               N ? e : a,
@@ -514,11 +537,11 @@
                 buttonColor: u.ButtonColors.PRIMARY,
                 onPress: () => {
                   (0, f.default)(u.closeAllModals),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS);
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS);
                 },
               },
             ];
-          }, [M, N, v, B, Y, y, t, l, g]),
+          }, [x, N, M, y, Y, B, t, l, m]),
           b = a.useMemo(
             () => [
               {
@@ -526,19 +549,19 @@
                   R.default.Messages
                     .SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
                 onPress: () => {
-                  i(C.SafetyToolsSlides.SAFETY_TIPS),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS);
+                  T(C.SafetyToolsSlides.SAFETY_TIPS),
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS);
                 },
               },
               {
                 title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
                 onPress: () => {
-                  i(C.SafetyToolsSlides.ABOUT_SAFETY_ALERTS),
-                    v(I.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
+                  T(C.SafetyToolsSlides.ABOUT_SAFETY_ALERTS),
+                    M(I.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS);
                 },
               },
             ],
-            [i, v]
+            [T, M]
           );
         return (0, n.jsxs)(L.default, {
           children: [
@@ -567,7 +590,7 @@
             (0, n.jsx)(h, {
               children: b.map(e => {
                 let { title: t, onPress: s } = e;
-                return (0, n.jsx)(m, { title: t, onPress: s }, t);
+                return (0, n.jsx)(g, { title: t, onPress: s }, t);
               }),
             }),
           ],
@@ -591,8 +614,8 @@
         l = s("37983"),
         r = s("884691"),
         o = s("77078"),
-        T = s("13355"),
-        i = s("217736"),
+        i = s("13355"),
+        T = s("217736"),
         u = s("903303"),
         S = s("96928"),
         _ = s("926945"),
@@ -610,11 +633,11 @@
             otherUserId: c,
             transitionState: O,
           } = e,
-          A = null != (0, T.useSafetyToolsButtonTooltipForChannel)(s),
+          A = null != (0, i.useSafetyToolsButtonTooltipForChannel)(s),
           [f, I] = r.useState("ACTIONS"),
           C = r.useCallback(
             e => {
-              (0, i.trackCtaEvent)({
+              (0, T.trackCtaEvent)({
                 channelId: s,
                 warningId: n,
                 warningType: a,
@@ -699,7 +722,7 @@
                       onClose: () => {
                         t(),
                           C(
-                            i.CtaEventTypes
+                            T.CtaEventTypes
                               .USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS
                           );
                       },
@@ -718,7 +741,7 @@
                 (0, l.jsx)(L, {
                   text: d.default.Messages.CLOSE,
                   onClick: () => {
-                    t(), C(i.CtaEventTypes.USER_SAFETY_TOOLS_DISMISS);
+                    t(), C(T.CtaEventTypes.USER_SAFETY_TOOLS_DISMISS);
                   },
                 }),
                 p(),
@@ -733,7 +756,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return i;
           },
         });
       var n = s("37983");
@@ -742,7 +765,7 @@
         l = s("514914"),
         r = s("324252"),
         o = s("782340"),
-        T = function () {
+        i = function () {
           let e = (0, r.getInappropriateConversationsSafetyTips)();
           return (0, n.jsx)(l.default, {
             children: (0, n.jsx)(a.default, {
@@ -758,7 +781,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return i;
           },
         });
       var n = s("37983");
@@ -767,7 +790,7 @@
         l = s.n(a),
         r = s("77078"),
         o = s("130152"),
-        T = function (e) {
+        i = function (e) {
           let { children: t, style: s } = e;
           return (0, n.jsx)(r.ModalContent, {
             className: l(o.modalContent, s),
@@ -777,4 +800,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f32fb529f88fac132e85.js.map
+//# sourceMappingURL=e14ea00a4c937166117d.js.map

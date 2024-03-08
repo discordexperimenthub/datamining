@@ -10949,37 +10949,6 @@
         };
       }
     },
-    328564: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          useSafetyAlertsSettingOrDefault: function () {
-            return i;
-          },
-        });
-      var a = s("446674"),
-        n = s("374363"),
-        l = s("908041");
-      let i = () => {
-        let e = (0, a.useStateFromStores)([n.default], () => {
-            var e, t, s;
-            return (
-              null ===
-                (s =
-                  null === (t = n.default.settings.privacy) || void 0 === t
-                    ? void 0
-                    : null === (e = t.inappropriateConversationWarnings) ||
-                        void 0 === e
-                      ? void 0
-                      : e.value) ||
-              void 0 === s ||
-              s
-            );
-          }),
-          t = (0, l.useUserIsTeen)("safety_warnings_setting");
-        return t && e;
-      };
-    },
     281098: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -11527,9 +11496,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "273597",
+          E = "273599",
           T =
-            ((e = "888e5b07a0aa30678bc7508d8db0ade1b9c952c1"),
+            ((e = "db4853b9212f81ef407bd967756c6bd7a3137997"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -31516,4 +31485,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e6741b94df6277fd7327.js.map
+//# sourceMappingURL=d5b19d03ace387f9aafd.js.map

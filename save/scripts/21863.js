@@ -423,7 +423,7 @@
             return h;
           },
           default: function () {
-            return N;
+            return v;
           },
         }),
         n("222007");
@@ -475,14 +475,14 @@
             mute_config: { selected_time_window: e, end_time: t },
           };
         };
-      function N(e, t) {
+      function v(e, t) {
         let [n, a] = (0, s.useStateFromStoresArray)([c.default], () => [
             c.default.isChannelMuted(e.guild_id, e.id),
             c.default.getChannelMuteConfig(e.guild_id, e.id),
           ]),
           r = (0, d.useMutedUntilText)(a),
           p = (0, E.default)(e, !0);
-        function N(t) {
+        function v(t) {
           t &&
             e.type === C.ChannelTypes.GUILD_CATEGORY &&
             (0, u.categoryCollapse)(e.id),
@@ -493,36 +493,36 @@
               f.NotificationLabel.muted(t)
             );
         }
-        let v = _.default.Messages.MUTE_CHANNEL_GENERIC,
-          S = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
+        let S = _.default.Messages.MUTE_CHANNEL_GENERIC,
+          N = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
         switch (e.type) {
           case C.ChannelTypes.GUILD_CATEGORY:
-            (v = _.default.Messages.MUTE_CATEGORY),
-              (S = _.default.Messages.UNMUTE_CATEGORY);
+            (S = _.default.Messages.MUTE_CATEGORY),
+              (N = _.default.Messages.UNMUTE_CATEGORY);
             break;
           case C.ChannelTypes.GROUP_DM:
-            (v = _.default.Messages.MUTE_CONVERSATION),
-              (S = _.default.Messages.UNMUTE_CONVERSATION);
+            (S = _.default.Messages.MUTE_CONVERSATION),
+              (N = _.default.Messages.UNMUTE_CONVERSATION);
             break;
           case C.ChannelTypes.DM:
-            (v = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
-              (S = _.default.Messages.UNMUTE_CHANNEL.format({ name: p }));
+            (S = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
+              (N = _.default.Messages.UNMUTE_CHANNEL.format({ name: p }));
             break;
           default:
-            (v = _.default.Messages.MUTE_CHANNEL_GENERIC),
-              (S = _.default.Messages.UNMUTE_CHANNEL_GENERIC);
+            (S = _.default.Messages.MUTE_CHANNEL_GENERIC),
+              (N = _.default.Messages.UNMUTE_CHANNEL_GENERIC);
         }
         return n
           ? (0, i.jsx)(l.MenuItem, {
               id: "unmute-channel",
-              label: S,
+              label: N,
               subtext: r,
-              action: () => N(!1),
+              action: () => v(!1),
             })
           : (0, i.jsx)(l.MenuItem, {
               id: "mute-channel",
-              label: v,
-              action: () => N(!0),
+              label: S,
+              action: () => v(!0),
               children: h().map(n => {
                 let { value: a, label: r } = n;
                 return (0, i.jsx)(
@@ -576,7 +576,7 @@
             return g;
           },
           toggleFavoriteServerMuted: function () {
-            return N;
+            return v;
           },
         }),
         n("222007");
@@ -702,7 +702,7 @@
           a.UserSettingsDelay.FREQUENT_USER_ACTION
         );
       }
-      function N() {
+      function v() {
         a.PreloadedUserSettingsActionCreators.updateAsync(
           "favorites",
           e => {
@@ -1580,26 +1580,26 @@
             onClose: _,
             onComplete: h,
             onSubscriptionConfirmation: g,
-            analyticsLocations: N,
-            analyticsObject: v,
-            analyticsLocation: S,
+            analyticsLocations: v,
+            analyticsObject: S,
+            analyticsLocation: N,
             analyticsSourceLocation: I,
             isGift: A = !1,
             giftMessage: T,
             subscriptionTier: m,
             trialId: R,
-            postSuccessGuild: M,
-            openInvoiceId: y,
+            postSuccessGuild: y,
+            openInvoiceId: M,
             applicationId: O,
             referralTrialOfferId: U,
             giftRecipient: L,
             returnRef: P,
-            subscription: G,
+            subscription: b,
           } = null != e ? e : {},
-          b = !1,
-          F = (0, a.v4)(),
-          x = o.default.getCurrentUser(),
-          D = (0, f.isPremiumExactly)(x, C.PremiumTypes.TIER_2);
+          G = !1,
+          x = (0, a.v4)(),
+          F = o.default.getCurrentUser(),
+          D = (0, f.isPremiumExactly)(F, C.PremiumTypes.TIER_2);
         (0, r.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -1607,7 +1607,7 @@
               let { onClose: a, ...r } = n;
               return (0, i.jsx)(e, {
                 ...r,
-                loadId: F,
+                loadId: x,
                 subscriptionTier: m,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(m),
                 isGift: A,
@@ -1629,48 +1629,48 @@
                         ));
                 },
                 onComplete: () => {
-                  (b = !0),
+                  (G = !0),
                     null == h || h(),
                     !A && (0, u.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: g,
-                analyticsLocations: N,
-                analyticsObject: v,
-                analyticsLocation: S,
+                analyticsLocations: v,
+                analyticsObject: S,
+                analyticsLocation: N,
                 analyticsSourceLocation: I,
                 trialId: R,
-                postSuccessGuild: M,
+                postSuccessGuild: y,
                 planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                openInvoiceId: y,
+                openInvoiceId: M,
                 applicationId: O,
                 referralTrialOfferId: U,
                 returnRef: P,
-                subscription: G,
+                subscription: b,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !b &&
+              !G &&
                 d.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: F,
+                  load_id: x,
                   payment_type:
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != S ? S : v,
+                  location: null != N ? N : S,
                   source: I,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
                   is_gift: A,
                   eligible_for_trial: null != R,
                   application_id: O,
-                  location_stack: N,
+                  location_stack: v,
                 }),
                 (0, s.clearError)(),
                 (0, l.clearPurchaseTokenAuthState)(),
-                null == _ || _(b),
-                b && (null == g || g());
+                null == _ || _(G),
+                G && (null == g || g());
             },
           }
         );
@@ -2025,6 +2025,44 @@
         },
       });
     },
+    499799: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          isStaffTeenSafetyAssistAgeBypass: function () {
+            return r;
+          },
+          useStaffTeenSafetyAssistAgeBypass: function () {
+            return s;
+          },
+        });
+      var i = n("862205");
+      let a = (0, i.createExperiment)({
+        kind: "user",
+        id: "2023-10_staff_teen_safety_assist_age_bypass",
+        label: "Staff Teen Safety Assist Age Bypass",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+          {
+            id: 1,
+            label:
+              "Enable staff teen safety assist age bypass (your account will behave as a teen user)",
+            config: { enabled: !0 },
+          },
+        ],
+      });
+      function r(e) {
+        let { enabled: t } = a.getCurrentConfig(
+          { location: e },
+          { autoTrackExposure: !0 }
+        );
+        return t;
+      }
+      function s(e) {
+        return a.useExperiment({ location: e }, { autoTrackExposure: !0 })
+          .enabled;
+      }
+    },
     533855: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -2052,6 +2090,28 @@
           }, [t, u.length, n]),
           u.find(e => null == e.dismiss_timestamp)
         );
+      }
+    },
+    908041: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          useUserIsTeen: function () {
+            return s;
+          },
+        });
+      var i = n("446674"),
+        a = n("697218"),
+        r = n("499799");
+      function s(e) {
+        let t = (0, i.useStateFromStores)([a.default], () => {
+            var e;
+            return null === (e = a.default.getCurrentUser()) || void 0 === e
+              ? void 0
+              : e.nsfwAllowed;
+          }),
+          n = (0, r.useStaffTeenSafetyAssistAgeBypass)(e);
+        return !1 === t || n;
       }
     },
     559922: function (e, t, n) {
@@ -2158,26 +2218,28 @@
       n.r(t),
         n.d(t, {
           useInappropriateConversationBannerForChannel: function () {
-            return l;
+            return u;
           },
         });
       var i = n("764828"),
         a = n("533855"),
         r = n("761771"),
-        s = n("888203");
-      function l(e, t) {
+        s = n("888203"),
+        l = n("328564");
+      function u(e, t) {
         let n = (0, r.useIsEligibleForInappropriateConversationWarning)({
             location: t,
           }),
-          l = (0, s.useInappropriateConversationWarningsForChannel)(e),
-          u = (0, a.useChannelSafetyWarning)(
+          u = (0, l.useSafetyAlertsSettingOrDefault)(),
+          o = (0, s.useInappropriateConversationWarningsForChannel)(e),
+          d = (0, a.useChannelSafetyWarning)(
             e,
             i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2,
             t
           );
-        if (!!n && 0 !== l.length) {
+        if (!!n && !!u && 0 !== o.length) {
           if (
-            !l.some(
+            !o.some(
               e =>
                 e.type ===
                   i.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 ||
@@ -2186,7 +2248,7 @@
                   null != e.dismiss_timestamp)
             )
           )
-            return u;
+            return d;
         }
       }
     },
@@ -2248,6 +2310,37 @@
         return { isTier1: o, isTier2: d };
       };
     },
+    328564: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          useSafetyAlertsSettingOrDefault: function () {
+            return s;
+          },
+        });
+      var i = n("446674"),
+        a = n("374363"),
+        r = n("908041");
+      let s = () => {
+        let e = (0, i.useStateFromStores)([a.default], () => {
+            var e, t, n;
+            return (
+              null ===
+                (n =
+                  null === (t = a.default.settings.privacy) || void 0 === t
+                    ? void 0
+                    : null === (e = t.inappropriateConversationWarnings) ||
+                        void 0 === e
+                      ? void 0
+                      : e.value) ||
+              void 0 === n ||
+              n
+            );
+          }),
+          t = (0, r.useUserIsTeen)("safety_warnings_setting");
+        return t && e;
+      };
+    },
     13427: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -2303,24 +2396,24 @@
         _ = n("861370"),
         h = n("972701"),
         g = n("390008"),
-        N = n("936947"),
-        v = n("918034"),
-        S = n("976127"),
+        v = n("936947"),
+        S = n("918034"),
+        N = n("976127"),
         I = n("856030"),
         A = n("726750"),
         T = n("170990"),
         m = n("304582"),
         R = n("72057"),
-        M = n("563816"),
-        y = n("489836"),
+        y = n("563816"),
+        M = n("489836"),
         O = n("406703"),
         U = n("126710"),
         L = n("502533"),
         P = n("314838"),
-        G = n("151200"),
-        b = n("692986"),
-        F = n("806179"),
-        x = n("816106"),
+        b = n("151200"),
+        G = n("692986"),
+        x = n("806179"),
+        F = n("816106"),
         D = n("623879"),
         w = n("49111"),
         V = n("782340"),
@@ -2336,24 +2429,24 @@
                   showChannelCallItems: w = !1,
                   showModalItems: j = !0,
                   targetIsUser: H = !1,
-                  context: W,
-                  onSelect: k,
+                  context: k,
+                  onSelect: W,
                   onHeightUpdate: Y,
                 } = e,
-                B = (0, F.default)(t.id, null),
-                Z = (0, O.default)(t, W),
-                z = (0, R.default)({ user: t, context: W }),
+                B = (0, x.default)(t.id, null),
+                Z = (0, O.default)(t, k),
+                z = (0, R.default)({ user: t, context: k }),
                 q = (0, m.default)(t),
                 K = (0, D.default)(t.id),
                 X = (0, U.default)(n.id, s),
                 Q = (0, P.default)(t),
                 J = (0, o.default)(null, t),
-                $ = (0, x.default)(t.id),
-                ee = (0, G.default)(t.id, n.id),
+                $ = (0, F.default)(t.id),
+                ee = (0, b.default)(t.id, n.id),
                 et = (0, T.default)(t),
-                en = (0, b.default)(t.id),
+                en = (0, G.default)(t.id),
                 ei = (0, L.default)(t.id, n.id),
-                ea = (0, y.default)(t),
+                ea = (0, M.default)(t),
                 er = (0, p.default)(n),
                 es = (0, _.default)({
                   id: t.id,
@@ -2368,7 +2461,7 @@
                 ed = (0, c.default)(n.id),
                 ec = (0, A.default)(t),
                 ef = (0, E.default)(t.id),
-                eE = (0, M.default)({
+                eE = (0, y.default)({
                   commandType: u.ApplicationCommandType.USER,
                   commandTargetId: t.id,
                   channel: n,
@@ -2378,29 +2471,29 @@
                 eC = (0, h.useAddToFavoritesItem)(n),
                 ep = (0, h.useRemoveFromFavoritesItem)(n),
                 e_ = (0, g.default)(n),
-                eh = (0, N.default)(n),
-                eg = (0, S.useMessageRequestItem)(n),
-                eN = (0, v.useInappropriateConversationItem)(n),
-                ev = (0, I.useSafetyWarningsItem)(n),
-                eS = n.isManaged(),
+                eh = (0, v.default)(n),
+                eg = (0, N.useMessageRequestItem)(n),
+                ev = (0, S.useInappropriateConversationItem)(n),
+                eS = (0, I.useSafetyWarningsItem)(n),
+                eN = n.isManaged(),
                 eI = t.isNonUserBot();
               return (0, i.jsxs)(a.Menu, {
                 navId: "user-context",
                 onClose: r.closeContextMenu,
                 "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: k,
+                onSelect: W,
                 children: [
                   (0, i.jsx)(a.MenuGroup, { children: !eI && eu }),
                   (0, i.jsx)(a.MenuGroup, { children: eg }),
+                  (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsx)(a.MenuGroup, { children: ev }),
-                  (0, i.jsx)(a.MenuGroup, { children: eN }),
                   (0, i.jsxs)(a.MenuGroup, { children: [eC, e_, eh] }),
                   (0, i.jsx)(a.MenuGroup, { children: !eI && ec }),
                   (0, i.jsxs)(a.MenuGroup, {
                     children: [
                       !eI &&
                         (0, i.jsxs)(i.Fragment, {
-                          children: [j && B, Z, !eS && ee, j && z, j && q, K],
+                          children: [j && B, Z, !eN && ee, j && z, j && q, K],
                         }),
                       X,
                     ],
@@ -2794,8 +2887,8 @@
             ...h
           } = e,
           g = s.createRef(),
-          N = (0, c.default)(g),
-          v = !i && !a && !0 !== l && (!p || N);
+          v = (0, c.default)(g),
+          S = !i && !a && !0 !== l && (!p || v);
         return (0, r.jsxs)(d.Button, {
           buttonRef: g,
           ...h,
@@ -2804,7 +2897,7 @@
           submitting: a,
           children: [
             t,
-            v
+            S
               ? (0, r.jsx)(_, {
                   shinePaused: f,
                   className: u(
@@ -2911,19 +3004,19 @@
               className: _,
               foreground: h,
               expanded: g,
-              ...N
+              ...v
             } = e,
-            { enabled: v } = (0, d.useRedesignIconContext)(),
-            S = t;
-          if ((!0 === g ? (S = E.DOWN) : !1 === g && (S = E.RIGHT), v)) {
+            { enabled: S } = (0, d.useRedesignIconContext)(),
+            N = t;
+          if ((!0 === g ? (N = E.DOWN) : !1 === g && (N = E.RIGHT), S)) {
             let e = {
               [E.UP]: o.ChevronSmallUpIcon,
               [E.DOWN]: s.ChevronSmallDownIcon,
               [E.LEFT]: l.ChevronSmallLeftIcon,
               [E.RIGHT]: u.ChevronSmallRightIcon,
-            }[S];
+            }[N];
             return (0, i.jsx)(e, {
-              ...N,
+              ...v,
               className: _,
               width: n,
               height: a,
@@ -2932,11 +3025,11 @@
             });
           }
           return (0, i.jsx)("svg", {
-            className: r(_, p, S),
+            className: r(_, p, N),
             width: n,
             height: a,
             viewBox: "0 0 24 24",
-            ...(0, c.default)(N),
+            ...(0, c.default)(v),
             children: (0, i.jsx)("path", {
               className: h,
               fill: "none",
@@ -3788,4 +3881,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c4a3f131bd308a9c55f4.js.map
+//# sourceMappingURL=28c28b941d57dea3ce69.js.map

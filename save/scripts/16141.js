@@ -21037,88 +21037,96 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return E;
+            return C;
           },
         }),
         n("222007");
       var a = n("37983"),
         l = n("884691"),
-        s = n("77078"),
-        i = n("277734"),
-        r = n("774298"),
-        u = n("408815"),
-        o = n("13355"),
-        d = n("217736"),
-        c = n("561359"),
-        f = n("664336"),
-        h = n("324252"),
-        m = n("782340"),
-        p = n("209515"),
-        E = l.memo(function (e) {
+        s = n("446674"),
+        i = n("551042"),
+        r = n("77078"),
+        u = n("277734"),
+        o = n("774298"),
+        d = n("408815"),
+        c = n("13355"),
+        f = n("217736"),
+        h = n("778588"),
+        m = n("561359"),
+        p = n("664336"),
+        E = n("324252"),
+        g = n("782340"),
+        S = n("209515"),
+        C = l.memo(function (e) {
           let { channel: t } = e,
-            E = (0, r.useInappropriateConversationSafetyToolsWarningForChannel)(
+            C = (0, o.useInappropriateConversationSafetyToolsWarningForChannel)(
               t.id
             ),
-            g = (0, u.useShouldShowInitialSafetyToolsButtonTooltip)(t.id),
-            S = (0, o.useSafetyToolsButtonTooltipForChannel)(t.id),
-            C = l.useCallback(
+            _ = (0, d.useShouldShowInitialSafetyToolsButtonTooltip)(t.id),
+            I = (0, c.useSafetyToolsButtonTooltipForChannel)(t.id),
+            T = (0, i.useHasAnyModalOpen)(),
+            v = (0, s.useStateFromStores)([h.default], () =>
+              h.default.hasLayers()
+            ),
+            x = l.useCallback(
               () =>
-                g
-                  ? m.default.Messages
+                _
+                  ? g.default.Messages
                       .INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP
-                  : null != S
-                    ? m.default.Messages
+                  : null != I
+                    ? g.default.Messages
                         .INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP
                     : null,
-              [g, S]
+              [_, I]
             ),
-            [_, I] = l.useState(C());
+            N = l.useMemo(() => (_ || null != I) && !T && !v, [_, I, T, v]),
+            [A, M] = l.useState(x());
           l.useEffect(() => {
-            null != S &&
-              null != E &&
-              (s.AccessibilityAnnouncer.announce(
-                m.default.Messages
+            null != I &&
+              null != C &&
+              (r.AccessibilityAnnouncer.announce(
+                g.default.Messages
                   .INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT
               ),
               setTimeout(() => {
-                (0, i.dismissChannelSafetyWarnings)(t.id, [S.id]);
+                (0, u.dismissChannelSafetyWarnings)(t.id, [I.id]);
               }, 5e3),
-              (0, d.trackNamedViewEvent)({
+              (0, f.trackNamedViewEvent)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: S.id,
-                warningType: S.type,
-                isNudgeWarning: null != S,
-                viewName: d.ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP,
+                warningId: I.id,
+                warningType: I.type,
+                isNudgeWarning: null != I,
+                viewName: f.ViewNameTypes.SAFETY_TOOLS_NUDGE_TOOLTIP,
               })),
-              g &&
-                (s.AccessibilityAnnouncer.announce(
-                  m.default.Messages
+              _ &&
+                (r.AccessibilityAnnouncer.announce(
+                  g.default.Messages
                     .INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT
                 ),
                 setTimeout(() => {
-                  (0, i.acknowledgeChannelSafetyWarningTooltip)(t.id);
+                  (0, u.acknowledgeChannelSafetyWarningTooltip)(t.id);
                 }, 5e3));
-          }, [t, S, E, g]),
+          }, [t, I, C, _]),
             l.useEffect(() => {
-              null != E &&
-                (0, d.trackNamedViewEvent)({
+              null != C &&
+                (0, f.trackNamedViewEvent)({
                   channelId: t.id,
                   senderId: t.getRecipientId(),
-                  warningId: E.id,
-                  warningType: E.type,
-                  isNudgeWarning: null != S,
-                  viewName: d.ViewNameTypes.SAFETY_TOOLS_BUTTON,
+                  warningId: C.id,
+                  warningType: C.type,
+                  isNudgeWarning: null != I,
+                  viewName: f.ViewNameTypes.SAFETY_TOOLS_BUTTON,
                 });
             }, []),
             l.useEffect(() => {
-              let e = C();
-              null != e && I(e);
-            }, [g, S, C]);
-          let T = l.useCallback(() => {
-            null != S && (0, i.dismissChannelSafetyWarnings)(t.id, [S.id]),
-              null != E &&
-                ((0, s.openModalLazy)(
+              let e = x();
+              null != e && M(e);
+            }, [_, I, x]);
+          let R = l.useCallback(() => {
+            null != I && (0, u.dismissChannelSafetyWarnings)(t.id, [I.id]),
+              null != C &&
+                ((0, r.openModalLazy)(
                   async () => {
                     let { default: e } = await n
                       .el("161297")
@@ -21128,39 +21136,39 @@
                       return (0, a.jsx)(e, {
                         otherUserId: t.getRecipientId(),
                         channelId: t.id,
-                        warningId: E.id,
-                        warningType: E.type,
+                        warningId: C.id,
+                        warningType: C.type,
                         onClose: l,
                         transitionState: s,
                       });
                     };
                   },
-                  { modalKey: h.SAFETY_TOOLS_MODAL_KEY }
+                  { modalKey: E.SAFETY_TOOLS_MODAL_KEY }
                 ),
-                (0, d.trackCtaEvent)({
+                (0, f.trackCtaEvent)({
                   channelId: t.id,
                   senderId: t.getRecipientId(),
-                  warningId: E.id,
-                  warningType: E.type,
-                  cta: d.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                  isNudgeWarning: null != S,
+                  warningId: C.id,
+                  warningType: C.type,
+                  cta: f.CtaEventTypes.USER_SAFETY_TOOLS_BUTTON_CLICK,
+                  isNudgeWarning: null != I,
                 }));
-          }, [S, E, t]);
-          return null == E
+          }, [I, C, t]);
+          return null == C
             ? null
-            : (0, a.jsx)(s.Tooltip, {
-                forceOpen: g || null != S,
-                text: _,
-                color: s.TooltipColors.BRAND,
+            : (0, a.jsx)(r.Tooltip, {
+                forceOpen: N,
+                text: A,
+                color: r.TooltipColors.BRAND,
                 position: "bottom",
-                tooltipClassName: p.tooltip,
-                tooltipContentClassName: p.tooltipContent,
+                tooltipClassName: S.tooltip,
+                tooltipContentClassName: S.tooltipContent,
                 children: () =>
-                  (0, a.jsx)(f.default.Icon, {
-                    icon: c.default,
-                    onClick: T,
-                    tooltip: m.default.Messages.SAFETY_TOOLS_BUTTON_LABEL,
-                    tooltipDisabled: null != S,
+                  (0, a.jsx)(p.default.Icon, {
+                    icon: m.default,
+                    onClick: R,
+                    tooltip: g.default.Messages.SAFETY_TOOLS_BUTTON_LABEL,
+                    tooltipDisabled: null != I,
                   }),
               });
         });
@@ -23843,27 +23851,29 @@
         n.d(t, {
           useInappropriateConversationSafetyToolsWarningForChannel:
             function () {
-              return s;
+              return i;
             },
         });
       var a = n("761771"),
-        l = n("888203");
-      function s(e) {
+        l = n("888203"),
+        s = n("328564");
+      function i(e) {
         let t = (0, a.useIsEligibleForInappropriateConversationWarning)({
             location: "safety-tools-button",
           }),
-          n = (0, l.useInappropriateConversationWarningsForChannel)(e);
-        if (!t) return;
-        let s = n.filter(e => null != e.dismiss_timestamp);
-        if (0 === s.length) return;
-        let i = s.sort((e, t) =>
+          n = (0, s.useSafetyAlertsSettingOrDefault)(),
+          i = (0, l.useInappropriateConversationWarningsForChannel)(e);
+        if (!t || !n) return;
+        let r = i.filter(e => null != e.dismiss_timestamp);
+        if (0 === r.length) return;
+        let u = r.sort((e, t) =>
           e.type > t.type
             ? 1
             : e.dismiss_timestamp < t.dismiss_timestamp
               ? 1
               : -1
         );
-        return i[0];
+        return u[0];
       }
     },
     408815: function (e, t, n) {
@@ -42043,4 +42053,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c408b31452e36594d8b0.js.map
+//# sourceMappingURL=e87003e2d97342729fcb.js.map

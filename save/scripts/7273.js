@@ -2855,6 +2855,7 @@
           USER_LOOTBOX_DATA: "/users/@me/lootboxes",
           USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
           USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize",
+          TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
         }),
         a2 = Object.freeze({
           INDEX: "/",
@@ -17291,4 +17292,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.1b11d61a50316a5cc1a4.js.map
+//# sourceMappingURL=7273.5b909cfd7f4a4a247db4.js.map

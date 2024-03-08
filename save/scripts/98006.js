@@ -5814,18 +5814,6 @@
           dark: "primary.500",
           light: "primary.130",
         },
-        "redesign-button-secondary-alt-text": { name: "text-primary" },
-        "redesign-button-secondary-alt-background": {
-          dark: "primary.530",
-          light: { color: "black.500", opacity: 0.08 },
-        },
-        "redesign-button-secondary-alt-pressed-background": {
-          dark: "primary.560",
-          light: { color: "black.500", opacity: 0.16 },
-        },
-        "redesign-button-secondary-alt-pressed-text": {
-          name: "text-secondary",
-        },
         "redesign-button-danger-text": { name: "white" },
         "redesign-button-danger-background": {
           dark: "red.430",
@@ -7289,4 +7277,4 @@
     },
   },
 ]);
-//# sourceMappingURL=79b33675df258f955f33.js.map
+//# sourceMappingURL=a642b849b87ae1549717.js.map

@@ -522,14 +522,6 @@
           "var(--redesign-button-primary-pressed-background)"),
         (_.REDESIGN_BUTTON_PRIMARY_TEXT =
           "var(--redesign-button-primary-text)"),
-        (_.REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND =
-          "var(--redesign-button-secondary-alt-background)"),
-        (_.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND =
-          "var(--redesign-button-secondary-alt-pressed-background)"),
-        (_.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT =
-          "var(--redesign-button-secondary-alt-pressed-text)"),
-        (_.REDESIGN_BUTTON_SECONDARY_ALT_TEXT =
-          "var(--redesign-button-secondary-alt-text)"),
         (_.REDESIGN_BUTTON_SECONDARY_BACKGROUND =
           "var(--redesign-button-secondary-background)"),
         (_.REDESIGN_BUTTON_SECONDARY_BORDER =
@@ -639,4 +631,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21251.7c3ac2190a8c60d62a4c.js.map
+//# sourceMappingURL=21251.8273829d10e610575c69.js.map

@@ -9257,34 +9257,6 @@
             [a.MIDNIGHT]: { raw: "WHITE_500", opacity: 1 },
             [a.DARKER]: { raw: "WHITE_500", opacity: 1 },
           },
-          REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: { raw: "PRIMARY_530", opacity: 1 },
-            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.08 },
-            [a.MIDNIGHT]: { raw: "PRIMARY_530", opacity: 1 },
-            [a.DARKER]: { raw: "PRIMARY_530", opacity: 1 },
-          },
-          REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND: {
-            category: "generic",
-            [a.DARK]: { raw: "PRIMARY_560", opacity: 1 },
-            [a.LIGHT]: { raw: "BLACK_500", opacity: 0.16 },
-            [a.MIDNIGHT]: { raw: "PRIMARY_560", opacity: 1 },
-            [a.DARKER]: { raw: "PRIMARY_560", opacity: 1 },
-          },
-          REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT: {
-            category: "text",
-            [a.DARK]: { raw: "PRIMARY_330", opacity: 1 },
-            [a.LIGHT]: { raw: "PRIMARY_500", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "PLUM_8", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_9", opacity: 1 },
-          },
-          REDESIGN_BUTTON_SECONDARY_ALT_TEXT: {
-            category: "text",
-            [a.DARK]: { raw: "PRIMARY_230", opacity: 1 },
-            [a.LIGHT]: { raw: "PRIMARY_600", opacity: 1 },
-            [a.MIDNIGHT]: { raw: "PLUM_4", opacity: 1 },
-            [a.DARKER]: { raw: "PLUM_6", opacity: 1 },
-          },
           REDESIGN_BUTTON_SECONDARY_BACKGROUND: {
             category: "generic",
             [a.DARK]: { raw: "PRIMARY_460", opacity: 1 },
@@ -14048,14 +14020,6 @@
         (e.REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND =
           "redesign-button-primary-pressed-background"),
         (e.REDESIGN_BUTTON_PRIMARY_TEXT = "redesign-button-primary-text"),
-        (e.REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND =
-          "redesign-button-secondary-alt-background"),
-        (e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND =
-          "redesign-button-secondary-alt-pressed-background"),
-        (e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT =
-          "redesign-button-secondary-alt-pressed-text"),
-        (e.REDESIGN_BUTTON_SECONDARY_ALT_TEXT =
-          "redesign-button-secondary-alt-text"),
         (e.REDESIGN_BUTTON_SECONDARY_BACKGROUND =
           "redesign-button-secondary-background"),
         (e.REDESIGN_BUTTON_SECONDARY_BORDER =
@@ -15590,30 +15554,6 @@
           o.Color.WHITE_500,
           o.Color.WHITE_500,
           o.Color.WHITE_500,
-        ],
-        "redesign-button-secondary-alt-background": [
-          o.Color.PRIMARY_530,
-          o.Color.BLACK_500,
-          o.Color.PRIMARY_530,
-          o.Color.PRIMARY_530,
-        ],
-        "redesign-button-secondary-alt-pressed-background": [
-          o.Color.PRIMARY_560,
-          o.Color.BLACK_500,
-          o.Color.PRIMARY_560,
-          o.Color.PRIMARY_560,
-        ],
-        "redesign-button-secondary-alt-pressed-text": [
-          o.Color.PRIMARY_330,
-          o.Color.PRIMARY_500,
-          o.Color.PLUM_8,
-          o.Color.PLUM_9,
-        ],
-        "redesign-button-secondary-alt-text": [
-          o.Color.PRIMARY_230,
-          o.Color.PRIMARY_600,
-          o.Color.PLUM_4,
-          o.Color.PLUM_6,
         ],
         "redesign-button-secondary-background": [
           o.Color.PRIMARY_460,
@@ -17351,4 +17291,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.ac0352ff0db259de13ec.js.map
+//# sourceMappingURL=7273.1b11d61a50316a5cc1a4.js.map

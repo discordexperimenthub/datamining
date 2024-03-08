@@ -4013,6 +4013,8 @@
         (I1.PROFILE_EFFECT_CUSTOMIZATION = "Profile Effect Customization"),
         (I1.COLLECTIBLES_SHOP = "Shop"),
         (I1.SHOP_PRODUCT_DETAILS = "Shop Product Details"),
+        (I1.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS =
+          "Collectibles Shop View All Category Items"),
         (I1.APPEAL_INGESTION_SPEED_BUMP = "Appeal Ingestion Speed Bump"),
         (I1.APPEAL_INGESTION_COLLECT_SIGNAL =
           "Appeal Ingestion Collect Signal"),
@@ -4253,6 +4255,8 @@
           SPEED_TEST: "RTC Speed Test",
           COLLECTIBLES_SHOP: "Shop",
           LOOTBOXES: "Lootboxes",
+          COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS:
+            "Collectibles Shop View All Category Items",
           COMMUNITY_ALERTS: "Community Alerts Settings",
           HIGHLIGHT_NOTIFICATIONS: "Highlight notification settings",
         });
@@ -4427,6 +4431,7 @@
         (eo.STEAM = "steam"),
         (eo.LEAGUE_OF_LEGENDS = "leagueoflegends"),
         (eo.BATTLENET = "battlenet"),
+        (eo.BUNGIE = "bungie"),
         (eo.REDDIT = "reddit"),
         (eo.TWITTER = "twitter"),
         (eo.TWITTER_LEGACY = "twitter_legacy"),
@@ -9958,6 +9963,7 @@
             BRAND_830: "#141738",
             BRAND_860: "#0d0f24",
             BRAND_900: "#04050c",
+            BUNGIE: "#00a3e3",
             CRUNCHYROLL: "#f78b24",
             DISCORD_8TH_BDAY_BLUE: "#5665f9",
             DISCORD_8TH_BDAY_DARK_BLUE: "#3241e0",
@@ -12457,6 +12463,7 @@
         (a.BRAND_830 = "brand-830"),
         (a.BRAND_860 = "brand-860"),
         (a.BRAND_900 = "brand-900"),
+        (a.BUNGIE = "bungie"),
         (a.CRUNCHYROLL = "crunchyroll"),
         (a.DISCORD_8TH_BDAY_BLUE = "discord-8th-bday-blue"),
         (a.DISCORD_8TH_BDAY_DARK_BLUE = "discord-8th-bday-dark-blue"),
@@ -12917,6 +12924,7 @@
         "brand-830": { hex: "#141738" },
         "brand-860": { hex: "#0d0f24" },
         "brand-900": { hex: "#04050c" },
+        bungie: { hex: "#00a3e3" },
         crunchyroll: { hex: "#f78b24" },
         "discord-8th-bday-blue": { hex: "#5665f9" },
         "discord-8th-bday-dark-blue": { hex: "#3241e0" },
@@ -13374,6 +13382,7 @@
         BRAND_830: "#141738",
         BRAND_860: "#0d0f24",
         BRAND_900: "#04050c",
+        BUNGIE: "#00a3e3",
         CRUNCHYROLL: "#f78b24",
         DISCORD_8TH_BDAY_BLUE: "#5665f9",
         DISCORD_8TH_BDAY_DARK_BLUE: "#3241e0",
@@ -16271,6 +16280,7 @@
         BRAND_830: "hsl(235, calc(var(--saturation-factor, 1) * 47.4%), 14.9%)",
         BRAND_860: "hsl(235, calc(var(--saturation-factor, 1) * 46.9%), 9.6%)",
         BRAND_900: "hsl(233, calc(var(--saturation-factor, 1) * 50%), 3.1%)",
+        BUNGIE: "hsl(197, calc(var(--saturation-factor, 1) * 100%), 44.5%)",
         CRUNCHYROLL: "hsl(29, calc(var(--saturation-factor, 1) * 93%), 55.5%)",
         DISCORD_8TH_BDAY_BLUE:
           "hsl(234, calc(var(--saturation-factor, 1) * 93.1%), 65.7%)",
@@ -17334,4 +17344,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.b2cfb71ca6d56a656469.js.map
+//# sourceMappingURL=7273.f32b7afd168fb8888941.js.map

@@ -47515,57 +47515,62 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return u;
           },
         });
       var l = n("446674"),
         i = n("991254"),
-        a = n("129408"),
-        s = n("713135"),
-        r = n("49111");
-      function o(e) {
+        a = n("785473"),
+        s = n("129408"),
+        r = n("713135"),
+        o = n("49111");
+      function u(e) {
         var t;
-        let { user: n, guildId: o } = e,
-          u = (0, l.useStateFromStores)(
-            [s.default],
+        let { user: n, guildId: u } = e,
+          d = (0, l.useStateFromStores)(
+            [r.default],
             () => {
               var e;
-              return null === (e = s.default.getUserProfile(n.id)) ||
+              return null === (e = r.default.getUserProfile(n.id)) ||
                 void 0 === e
                 ? void 0
                 : e.application;
             },
             [n]
           ),
-          { applicationSubscriptionListingsShown: d } = (0, i.default)({
-            applicationId: null == u ? void 0 : u.id,
-            groupListingId: null == u ? void 0 : u.primarySkuId,
-            guildId: o,
+          { applicationSubscriptionListingsShown: c } = (0, i.default)({
+            applicationId: null == d ? void 0 : d.id,
+            groupListingId: null == d ? void 0 : d.primarySkuId,
+            guildId: u,
           }),
           {
-            activeSubscriptionListing: c,
-            activeEntitlement: f,
-            subscriptionGroupListing: m,
+            activeSubscriptionListing: f,
+            activeEntitlement: m,
+            subscriptionGroupListing: p,
           } = (0, i.useActiveSubscriptionListingForApplication)(
-            null == u ? void 0 : u.id,
-            o
+            null == d ? void 0 : d.id,
+            u
           ),
-          p =
-            null !== (t = null == m ? void 0 : m.sku_flags) && void 0 !== t
+          { enabled: h } = a.otpSkusExperiment.useExperiment({
+            location: "useBotApplicationSubscription",
+          }),
+          E =
+            null !== (t = null == p ? void 0 : p.sku_flags) && void 0 !== t
               ? t
               : 0,
-          h =
-            (0, a.isApplicationUserSubscription)(p) ||
-            (null != o &&
-              o !== r.ME &&
-              (0, a.isApplicationGuildSubscription)(p)),
-          E = null != f;
-        return d
+          g =
+            (0, s.isApplicationUserSubscription)(E) ||
+            (null != u &&
+              u !== o.ME &&
+              (0, s.isApplicationGuildSubscription)(E)) ||
+            h,
+          S = null != m;
+        return c
           ? {
-              botUpgraded: E,
-              botUpgradeable: !E && d && h,
-              activeSubscriptionListing: c,
-              subscriptionGroupListing: m,
+              botUpgraded: S,
+              botUpgradeable: !S && c && g,
+              activeSubscriptionListing: f,
+              subscriptionGroupListing: p,
             }
           : {
               botUpgraded: !1,
@@ -51200,7 +51205,11 @@
                   }),
                   o &&
                     (d
-                      ? (0, l.jsx)(_, { app: a, listing: u, guildId: n })
+                      ? (0, l.jsx)(_, {
+                          app: a,
+                          listing: null != u ? u : void 0,
+                          guildId: n,
+                        })
                       : (0, l.jsx)(I, { guildId: n, listing: u })),
                 ],
               }),
@@ -51232,7 +51241,7 @@
       }
       function _(e) {
         let { app: t, listing: i, guildId: r } = e;
-        return null == t || null == i || null == r
+        return null == t || null == r
           ? null
           : (0, l.jsx)(u.default, {
               onClick: () =>
@@ -66535,4 +66544,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.44937555273fe6fbff40.js.map
+//# sourceMappingURL=60053.774708572f10105b1507.js.map

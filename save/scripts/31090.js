@@ -684,6 +684,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Gần đ\xe2y",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bot trong m\xe1y chủ n\xe0y",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Phổ biến",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Kh\xf4ng c\xf3 y\xeau cầu n\xe0o cả. Bạn c\xf3 thể gửi c\xe2u lệnh hoặc th\xeam một t\xf9y chọn b\xean dưới",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Chọn một t\xf9y chọn b\xean dưới",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Bạn kh\xf4ng c\xf3 quyền khởi chạy c\xe2u lệnh tại k\xeanh n\xe0y",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Mở c\xe2u lệnh",
@@ -1295,7 +1299,6 @@
           "[!!{username}!!](usernameOnClick) đ\xe3 bắt đầu một [hoạt động](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} đ\xe3 bắt đầu một hoạt động",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "C\xf3 lẽ để sau",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! diễn ra như thế n\xe0o rồi?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1457,9 +1460,6 @@
           "H\xe3y thử n\xf3 trong thời gian giới hạn si\xeau ngắn.\nC\xf3 Nitro ư? Triệu hồi Ph\xe9p Thuật.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Chế Độ thử nghiệm hiện hoạt động cho **!!{applicationName}!!**. Ứng dụng của bạn sẽ xuất hiện dưới dạng một t\xf9y chọn trong menu n\xfat hoạt động.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Hoạt Động Mới! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Thử chơi tr\xf2 chơi vẽ v\xe0 đo\xe1n h\xecnh c\xf9ng bạn b\xe8 của m\xecnh. Miễn ph\xed cho tới ng\xe0y 29/03.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Cảnh b\xe1o",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG:
           "(Phi\xean bản Beta d\xe0nh cho m\xe1y t\xednh)",
@@ -3558,7 +3558,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Kh\xf4ng",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Huy hiệu chưa đọc",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "T\xean k\xeanh ti\xeau điểm v\xe0 dấu chấm mờ dần",
+          "T\xean k\xeanh ti\xeau điểm v\xe0 dấu chấm th\xf4ng b\xe1o",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE:
           "C\xe1c Th\xf4ng B\xe1o",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
@@ -3607,6 +3607,8 @@
           "Bạn sẽ kh\xf4ng nhận được th\xf4ng b\xe1o từ c\xe1c k\xeanh đ\xe3 bị tắt \xe2m v\xe0 c\xe1c k\xeanh n\xe0y sẽ bị l\xe0m mờ đi trong danh s\xe1ch k\xeanh của bạn. C\xe0i đặt n\xe0y \xe1p dụng tr\xean tất cả c\xe1c thiết bị của bạn.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Bạn sẽ kh\xf4ng nhận được th\xf4ng b\xe1o từ c\xe1c danh mục đ\xe3 bị tắt \xe2m v\xe0 c\xe1c k\xeanh n\xe0y sẽ bị l\xe0m mờ đi trong danh s\xe1ch k\xeanh của bạn. C\xe0i đặt n\xe0y \xe1p dụng tr\xean tất cả c\xe1c thiết bị của bạn.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "M\xe1y chủ của bạn hiện đang $[**bị tắt \xe2m**](mutedHook). Bạn kh\xf4ng thể nhận th\xf4ng b\xe1o từ k\xeanh n\xe0y v\xe0 cũng kh\xf4ng thể thay đổi c\xe1c c\xe0i đặt cho đến khi bạn bật tiếng cho m\xe1y chủ n\xe0y.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Th\xf4ng b\xe1o tr\xean m\xe1y chủ của bạn được đặt th\xe0nh $[**trống**](notificationHook). Bạn sẽ kh\xf4ng nhận được bất k\xec th\xf4ng b\xe1o n\xe0o từ k\xeanh n\xe0y, nhưng bạn c\xf3 thể ghi đ\xe8 n\xf3 ở đ\xe2y.",
         CHANNEL_OR_GUILD_MUTED:
@@ -3752,7 +3754,7 @@
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE:
           "Bạn sẽ kh\xf4ng nh\xecn thấy th\xf4ng b\xe1o hoặc huy hiệu chưa đọc.",
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE_UNTIL:
-          "Bạn sẽ kh\xf4ng nh\xecn thấy th\xf4ng b\xe1o hoặc huy hiệu chưa đọc cho tới !!{endTime}!!",
+          "Bạn sẽ kh\xf4ng nh\xecn thấy th\xf4ng b\xe1o hoặc huy hiệu chưa đọc cho tới ng\xe0y !!{endTime}!!",
         CONTACT_SYNC_FAILED_ALERT_TITLE:
           "\xd4i kh\xf4ng, c\xf3 g\xec đ\xf3 kh\xf4ng ổn.",
         CONTACT_SYNC_FAILED_ALERT_MESSAGE:
@@ -4397,7 +4399,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Th\xf4ng b\xe1o n\xe0y c\xf3 hữu \xedch kh\xf4ng? [H\xe3y cho ch\xfang t\xf4i biết!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[C\xe0i Đặt Th\xf4ng B\xe1o Ti\xeau Điểm](handleMessage)",
+          "[C\xe0i Đặt Th\xf4ng B\xe1o Tin Tức Nổi Bật](handleMessage)",
         NOTIFICATION_REPORT_TITLE:
           "Th\xf4ng b\xe1o n\xe0y c\xf3 hữu \xedch kh\xf4ng?",
         NOTIFICATION_REPORT_FEEDBACK:
@@ -4473,6 +4475,9 @@
         SEARCH_EMOJIS: "T\xecm kiếm emoji",
         SEARCH_FOR_EMOJI: "T\xecm emoji hợp l\xfd nhất",
         SEARCH_FOR_STICKER: "T\xecm sticker ph\xf9 hợp nhất",
+        SEARCH_FOR_REACTION: "T\xecm biểu cảm ph\xf9 hợp nhất",
+        SEARCH_FOR_SUPER_REACTION:
+          "T\xecm Biểu Cảm Si\xeau Cấp ph\xf9 hợp nhất",
         NO_EMOJI_SEARCH_RESULTS:
           "Kh\xf4ng c\xf3 emoji n\xe0o hợp với t\xecm kiếm của bạn",
         EMOJI_CATEGORY_PACK: "G\xf3i {packName}",
@@ -5436,6 +5441,7 @@
           "Đ\xe3 c\xf3 lỗi xảy ra khi đọc tệp sửa lỗi từ hệ thống của bạn. Vui l\xf2ng thử lại.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Đ\xe3 c\xf3 lỗi xảy ra v\xe0 ch\xfang t\xf4i kh\xf4ng thể tải tệp nhật k\xfd của bạn l\xean được. Vui l\xf2ng thử lại.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Chia sẻ bản ghi th\xf4ng b\xe1o đẩy",
         FORM_CHECKBOX_AEC_DUMP: "Ph\xe2n T\xedch Ghi \xc2m",
         FORM_HELP_AEC_DUMP:
           "T\xednh năng ph\xe2n t\xedch ghi \xe2m được d\xf9ng để x\xe1c định c\xe1c vấn đề về \xe2m thanh. Đoạn ghi \xe2m giọng n\xf3i d\xe0i 5 ph\xfat mới nhất đ\xe3 được lưu trong thư mục m\xf4-đun giọng n\xf3i.",
@@ -5493,6 +5499,7 @@
         APP_ICON_SUNSET: "Ho\xe0ng H\xf4n",
         APP_ICON_HOLO_WAVES: "S\xf3ng Lăng K\xednh",
         APP_ICON_PIRATE: "Bạn Hiền",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "C\xf3 Chứ",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5580,6 +5587,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# C\xe1 nh\xe2n} other {# Mọi người}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Mở t\xe1c vụ cuộc gọi thoại",
+        TURN_CAMERA_ON_A11Y_LABEL: "Bật Camera",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Tắt Camera",
         IN_GAME_VOICE_SETTINGS: "C\xe0i Đặt Giọng N\xf3i Trong Game",
         VIDEO_SETTINGS: "C\xe0i Đặt Video",
         TEXT: "Văn bản",
@@ -5793,6 +5802,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Đ\xe3 Kết Nối Giọng N\xf3i",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Đ\xe3 Kết Nối Video",
         CONNECTION_STATUS_RTC_CONNECTING: "Đang kết nối RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Đang kiểm tra định tuyến",
         CONNECTION_STATUS_DTLS_CONNECTING: "Đang kết nối DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Kh\xf4ng C\xf3 Đường Truyền",
         CONNECTION_STATUS_RTC_DISCONNECTED: "Đ\xe3 ngắt kết nối RTC",
@@ -6255,7 +6265,7 @@
         DISPLAY_OPTION_ONLY_WHILE_SPEAKING: "Chỉ Khi Đang N\xf3i",
         FORM_LABEL_AUTOMATIC_VAD_MOBILE: "Độ Nhạy Tự Động",
         RESET_NOTIFICATION_SETTINGS: "Đặt Lại C\xe0i Đặt Th\xf4ng B\xe1o",
-        RESET_NOTIFICATION_OVERRIDE: "Đặt lại Ghi Đ\xe8",
+        RESET_NOTIFICATION_OVERRIDE: "Gỡ c\xe0i đặt Ghi Đ\xe8",
         CHANNEL_SETTINGS: "C\xe0i Đặt K\xeanh",
         SEND_MESSAGE: "Gửi Tin Nhắn",
         OVERLAY_NOTIFICATIONS_SETTINGS: "Th\xf4ng B\xe1o Overlay",
@@ -8510,6 +8520,12 @@
           "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp. Hiện đ\xe3 c\xf3 tr\xean [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn. Hiện đ\xe3 c\xf3 tr\xean [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn! Hiện đ\xe3 c\xf3 tr\xean Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Hiện đ\xe3 c\xf3 tr\xean Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp. Nhận {refillAmount} lượt mỗi tuần, đ\xe3 c\xf3 tr\xean [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8638,6 +8654,10 @@
           "Khuấy động khung tr\xf2 chuyện bằng Biểu Cảm Si\xeau Cấp! Nhận Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn v\xe0 c\xe1c đặc quyền hấp dẫn kh\xe1c c\xf9ng [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Nhấn v\xe0o n\xfat để th\xeam một Biểu Cảm Si\xeau Cấp.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Nhấp v\xe0o n\xfat để th\xeam một Biểu Cảm Si\xeau Cấp.",
         HOLD_UP: "Chờ Đ\xe3",
         MASKED_LINK_ALERT_V2_HEADER: "Tho\xe1t Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9733,6 +9753,10 @@
           "M\xe0u Sắc Chủ Đề",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Thể hiện c\xe1 t\xednh của bạn tr\xean Discord với những m\xe0u sắc chủ đề độc nhất.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Biểu Tượng Ứng Dụng T\xf9y Biến",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Chọn một biểu tượng ph\xf9 hợp với t\xednh c\xe1ch của bạn trong điện thoại di động v\xe0 trong ứng dụng m\xe1y t\xednh.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "C\xe1c đặc quyền",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "N\xe2ng cấp trải nghiệm Discord của bạn",
@@ -10395,6 +10419,8 @@
           "H\xecnh như c\xf3 một v\xe0i trục trặc v\xe0 bạn kh\xf4ng thể d\xf9ng m\xe3 n\xe0y. Xin lỗi nha.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Xin lỗi, c\xf3 vẻ như m\xe3 n\xe0y đ\xe3 được đổi.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "C\xf3 vẻ như m\xe3 n\xe0y thuộc về người kh\xe1c.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "C\xf3 vẻ như m\xe3 n\xe0y kh\xf4ng hoạt động. Đảm bảo rằng bạn c\xf3 m\xe3 ch\xednh x\xe1c v\xe0 thử lại.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10438,6 +10464,8 @@
           "M\xe3 n\xe0y được gửi k\xe8m trong email x\xe1c nhận m\xe0 ch\xfang t\xf4i vừa gửi cho bạn.",
         REDEMPTION_CODE: "M\xe3 Đổi Thưởng",
         PARTNER_PROMOTION_CLAIM: "Tiếp theo",
+        PARTNER_PROMOTION_ERROR_TITLE: "Ui ch\xe0!",
+        PARTNER_PROMOTION_ERROR_BODY: "C\xf3 g\xec đ\xf3 kh\xf4ng ổn rồi.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY:
           "Qu\xe0 tặng kh\xf4ng x\xe1c định.",
         REDEEM: "Lấy lại",
@@ -11977,7 +12005,7 @@
           "Xuất Hiện Theo C\xe1ch M\xe0 Bạn Muốn",
         NITRO_HOME_ALL_YOUR_NITRO_PERKS: "Tất cả đặc quyền Nitro của bạn",
         NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO:
-          "Được bao gồm trong g\xf3i Basic v\xe0 Nitro.",
+          "C\xf3 chứa trong g\xf3i Basic v\xe0 Nitro.",
         NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO:
           "Chỉ c\xf3 khi đăng k\xfd Nitro.",
         NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI:
@@ -12000,6 +12028,7 @@
           "Nhận huy hiệu cực ngầu n\xe0y khi trở th\xe0nh người đăng k\xfd Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Nếu bạn th\xedch sưu tầm, h\xe3y nhận ngay huy hiệu Nitro độc quyền n\xe0y.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Lấy lại",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Tăng cường Discord của bạn",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13537,6 +13566,7 @@
         MOST_POPULAR: "Phổ biến nhất",
         SPELLCHECK: "Kiểm tra ch\xednh tả",
         ADD_TO_DICTIONARY: "Th\xeam V\xe0o Từ Điển",
+        REMOVE_FROM_DICTIONARY: "X\xf3a khỏi Từ Điển",
         LANGUAGES: "Ng\xf4n ngữ",
         AUTO_SUGGEST_STICKERS: "Gợi \xdd Sticker",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13845,6 +13875,7 @@
           "C\xf3 một tin nhắn ch\xednh thức từ đội ngũ Discord cần bạn quan t\xe2m n\xe0y.",
         BUILD_OVERRIDE: "Ghi Đ\xe8 Phi\xean Bản",
         BUILD_OVERRIDE_FOR: "Ghi Đ\xe8 Phi\xean Bản của {releaseChannel}",
+        BUILD_OVERRIDE_ID: "X\xe1c nhận hash",
         BUILD_OVERRIDE_APPLY: "Tham Gia",
         BUILD_OVERRIDE_CLEAR: "X\xf3a",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Kh\xf4ng c\xf3 phi\xean bản n\xe0o",
@@ -14052,7 +14083,6 @@
           "Chọn từ {monthlyPrice}/th\xe1ng hoặc {yearlyPrice}/năm",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Người nhận của bạn sẽ được:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Tặng g\xf3i th\xe0nh vi\xean Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Thời lượng qu\xe0 tặng",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Tặng {count, plural, one {# th\xe1ng} other {# th\xe1ng}} {nitroTierName}",
@@ -14074,7 +14104,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Mở qu\xe0 tặng",
         GIFT_RECIPIENT_INFO: "Đến: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Th\xeam hiệu ứng \xe2m thanh",
+        GIFT_SELECT_EMOJI: "Th\xeam emoji tung hoa giấy",
         GIFT_SELECT_SOUNDBOARD_ADD: "Th\xeam",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Được ph\xe1t khi bạn b\xe8 của bạn mở qu\xe0 của họ",
         NITRO_CONFIRMATION: "Bạn đ\xe3 c\xf3 Nitro",
         OPENED_GIFT_CONFIRMATION: "Bạn đ\xe3 mở m\xf3n qu\xe0 n\xe0y!",
         NITRO_PERKS: "H\xe3y đến xem những đặc quyền Nitro mới của bạn!",
@@ -14733,6 +14767,8 @@
           "Nhấn v\xe0o h\xecnh la b\xe0n trong danh s\xe1ch m\xe1y chủ của bạn để t\xecm m\xe1y chủ mới.",
         LOADING_TIP_12:
           "K\xe9o v\xe0 thả m\xe1y chủ l\xean tr\xean m\xe1y chủ kh\xe1c để tạo thư mục m\xe1y chủ.",
+        LOADING_TIP_13:
+          "G\xf5 /gif hoặc /tenor v\xe0 th\xeam từ kh\xf3a bất kỳ để t\xecm ảnh GIF tương ứng!",
         LOADING_TIP_14:
           "Chia sẻ game m\xe0 bạn đang chơi bằng c\xe1ch sử dụng c\xe0i đặt Hoạt Động Game.",
         LOADING_TIP_15:
@@ -14761,6 +14797,22 @@
           "Bạn c\xf3 thể nhập / để xem c\xe1c lệnh bot v\xe0 c\xe1c lệnh c\xe0i sẵn kh\xe1c",
         LOADING_TIP_27:
           "Bạn c\xf3 thể nhập !!{asterisks}!! xung quanh chữ của bạn để **t\xf4 đậm**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "halloween vui vẻ nhớ đem m\xe1y chủ của bạn trở về từ c\xf5i chết nh\xe9",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO đ\xe3 c\xf3 một m\xf9a halloween đầy th\xfa vị",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Đang tạo một bản nhạc chu\xf4ng lạnh sống lưng",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5:
+          "Trong cuộc tr\xf2 chuyện thoại, tất cả mọi người đều l\xe0 linh hồn",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Đang x\xe1c minh m\xe1y chủ của bạn kh\xf4ng bị ma \xe1m (chắc vậy)",
+        HALLOWEEN_LOADING_TEXT_7: "Đang l\xean tinh “thần” cho lễ Halloween",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Lũ x\xe1c sống chỉ biết đăng meme chết ch\xf3c th\xf4i ư?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord đang bị l\xe2y nhiễm! H\xe3y cẩn thận với X\xe1c Sống Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Chọn nền s\xe1ng hoặc tối trong C\xe0i Đặt Hiển Thị.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14791,6 +14843,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Đ\xe3 r\xf5",
         VOICE_PANEL_SHOW_VOICE_USERS: "Hiển thị Người D\xf9ng K\xeanh Thoại",
         VOICE_PANEL_USERS_A11Y_LABEL: "Người D\xf9ng K\xeanh Thoại",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, đ\xe3 tắt tiếng v\xe0 tắt \xe2m",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, đ\xe3 tắt \xe2m",
         VOICE_PANEL_SHOW_EXTRAS: "Hiển thị tất cả người d\xf9ng",
         VOICE_PANEL_HIDE_EXTRAS: "Thu nhỏ",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15216,7 +15271,7 @@
           "T\xednh năng Đuổi sẽ x\xf3a c\xe1c th\xe0nh vi\xean kh\xe1c khỏi m\xe1y chủ n\xe0y. Th\xe0nh vi\xean bị đuổi c\xf3 thể tham gia lại nếu nhận được lời mời kh\xe1c. Nếu m\xe1y chủ k\xedch hoạt Y\xeau Cầu Đối Với Th\xe0nh Vi\xean, quyền n\xe0y cho ph\xe9p chấp thuận hoặc từ chối c\xe1c th\xe0nh vi\xean y\xeau cầu tham gia v\xe0o m\xe1y chủ.",
         BAN_MEMBERS: "Cấm Th\xe0nh Vi\xean",
         ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION:
-          "Cho ph\xe9p th\xe0nh vi\xean cấm v\xe0 x\xf3a vĩnh viễn lịch sử tin nhắn của c\xe1c th\xe0nh vi\xean kh\xe1c từ m\xe1y chủ n\xe0y.",
+          "Cho ph\xe9p th\xe0nh vi\xean cấm vĩnh viễn v\xe0 x\xf3a lịch sử tin nhắn của c\xe1c th\xe0nh vi\xean kh\xe1c từ m\xe1y chủ n\xe0y.",
         SEND_MESSAGES: "Gửi tin nhắn",
         ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION:
           "Cho ph\xe9p th\xe0nh vi\xean gửi tin nhắn trong k\xeanh chat.",
@@ -15951,6 +16006,8 @@
         FRIEND_FINDER_FRIENDS: "Tất cả bạn b\xe8",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Danh bạ tr\xean Discord - {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Những người c\xf3 thể bạn quen — {count}",
         CONTACT_SYNC_TITLE: "T\xecm bạn b\xe8",
         CONTACT_SYNC_LANDING_TITLE: "T\xecm bạn b\xe8",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16565,7 +16622,7 @@
         CREATE_EVENT_RECUR_WEEKLY: "H\xe0ng tuần v\xe0o {weekday}",
         CREATE_EVENT_RECUR_BIWEEKLY: "V\xe0o {weekday} sau mỗi 2 tuần",
         CREATE_EVENT_RECUR_MONTHLY:
-          "H\xe0ng th\xe1ng v\xe0o {weekday} {nth, plural, =1 {đầu ti\xean} =2 {thứ hai} =3 {thứ ba} =4 {thứ tư} =5 {thứ năm}}",
+          "H\xe0ng th\xe1ng v\xe0o ng\xe0y {weekday} {nth, plural, =1 {đầu ti\xean} =2 {thứ hai} =3 {thứ ba} =4 {thứ tư} =5 {thứ năm}}",
         CREATE_EVENT_RECUR_YEARLY: "H\xe0ng năm v\xe0o ng\xe0y {date}",
         CREATE_EVENT_RECUR_WEEKDAYS:
           "Mọi ng\xe0y trong tuần (thứ Hai đến thứ S\xe1u)",
@@ -16584,9 +16641,9 @@
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS:
           "Lặp lại mọi ng\xe0y trong tuần (thứ Hai đến thứ S\xe1u)",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED:
-          "T\xf4i hứng th\xfa với...",
+          "T\xf4i quan t\xe2m với...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED:
-          "T\xf4i kh\xf4ng hứng th\xfa với...",
+          "T\xf4i kh\xf4ng quan t\xe2m với...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "Tất cả sự kiện trong chuỗi n\xe0y",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE:
@@ -17229,11 +17286,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} chủ đề đang hoạt động kh\xe1c",
         THREAD_BROWSER_ARCHIVED_HEADER: "chủ đề cũ hơn",
         THREAD_BROWSER_JOINED_HEADER: "{count} chủ đề đ\xe3 tham gia",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER:
-          "{count} chủ đề đang hoạt động kh\xe1c",
         THREAD_BROWSER_ACTIVE_COUNT: "Chủ Đề Đang Hoạt Động - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Chủ đề cũ hơn",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} chủ đề đ\xe3 tham gia",
         THREAD_BROWSER_JOINED_COUNT: "Chủ Đề Đ\xe3 Tham Gia - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} gi\xe2y trước",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} ng\xe0y trước",
@@ -17253,8 +17307,6 @@
           "Kh\xf4ng c\xf3 chủ đề n\xe0o đang hoạt động.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Kh\xf4ng c\xf3 chủ đề n\xe0o đ\xe3 lưu trữ.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Tập trung v\xe0o cuộc tr\xf2 chuyện với một chủ đề, một k\xeanh văn bản tạm thời.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Tập trung v\xe0o cuộc tr\xf2 chuyện với một chủ đề - một k\xeanh văn bản tạm thời.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "C\xe0i Đặt Bộ Lọc",
@@ -19440,10 +19492,13 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Kết Quả T\xecm Kiếm",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "T\xean",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Gia Nhập Từ",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Đ\xe3 Tham Gia Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Vai tr\xf2",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "T\xedn hiệu",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL:
           "gồm **{count}** th\xe0nh vi\xean",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "th\xe0nh vi\xean **{pageRange}** / **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Ở đ\xe2y chỉ hiển thị những th\xe0nh vi\xean mới nhất - những th\xe0nh vi\xean đ\xe3 tham gia l\xe2u hơn c\xf3 thể kh\xf4ng hiển thị (nhưng sẽ sớm hiển thị).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Đang hiện",
@@ -19458,7 +19513,7 @@
         MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE:
           "Cờ an to\xe0n cho th\xe0nh vi\xean",
         MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP: "Xem Hồ Sơ",
-        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Mở hiển thị quản trị",
+        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Mở Chế Độ Hiển Thị Mod",
         MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP: "Mở Th\xeam T\xf9y Chọn",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY: "Hoạt động DM bất thường",
         MEMBER_SAFETY_COMMUNICATION_DISABLED: "Bị hạn chế",
@@ -19745,6 +19800,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Cảnh B\xe1o Tấn C\xf4ng",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "K\xeanh Cảnh B\xe1o",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Kh\xf4ng",
+        GUILD_ANTIRAID_RAID_ALERT: "Cảnh B\xe1o Tấn C\xf4ng",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Đ\xe3 Bật Ngăn Chặn",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "Thiết Lập Cảnh B\xe1o",
@@ -20243,7 +20299,7 @@
           "Bạn đang thay đổi c\xe0i đặt thủ c\xf4ng.",
         NOTIFICATION_SETTINGS_USE_PRESET: "Sử dụng mẫu đặt sẵn",
         NOTIF_MIGRATION_SETTINGS_TITLE:
-          "C\xe0i đặt tin chưa đọc mới (Thử nghiệm)",
+          "C\xe0i đặt mới d\xe0nh cho Tin chưa đọc (Thử nghiệm)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "Tắt c\xe0i đặt chưa đọc mới cho ph\xe9p bạn chọn những k\xeanh quan trọng nhất trong một m\xe1y chủ.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -20253,7 +20309,7 @@
         NOTIF_MIGRATION_CUSTOMIZE_TAB: "2. Chọn m\xe1y chủ",
         NOTIF_MIGRATION_TIPS_TAB: "3. \xc1p dụng thay đổi",
         NOTIF_MIGRATION_INTRO_TITLE:
-          "Th\xf4ng b\xe1o Discord đ\xe3 được cải thiện!",
+          "Xem th\xf4ng b\xe1o r\xf5 r\xe0ng hơn với hệ thống th\xf4ng b\xe1o mới",
         NOTIF_MIGRATION_INTRO_SUB_TITLE:
           "Ch\xfang t\xf4i đ\xe3 th\xeam một c\xe0i đặt mới để cắt bỏ sự nhiễu loạn v\xe0 tập trung v\xe0o những nội dung quan trọng.",
         NOTIF_MIGRATION_INTRO_CHANNEL_1: "th\xf4ng-b\xe1o",
@@ -22299,6 +22355,10 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} khi c\xf3 đăng k\xfd Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Sẵn s\xe0ng cho diện mạo mới chưa?",
+        COLLECTIBLES_SHOP_ERROR_HEADING:
+          "Ch\xe0, thiệt l\xe0 kh\xf3 xử qu\xe1.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Ừm, ch\xfang t\xf4i kh\xf4ng thể tải cửa h\xe0ng. Vui l\xf2ng quay lại sau.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Sử dụng bất kỳ l\xfac n\xe0o với g\xf3i đăng k\xfd Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT:
@@ -22391,6 +22451,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Th\xeam ứng dụng",
         MONETIZATION: "Kiếm tiền",
         GUILD_SETTINGS_MONETIZATION: "Kiếm tiền tr\xean m\xe1y chủ",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "G\xf3i Đăng K\xfd M\xe1y Chủ",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Trang quảng b\xe1",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Bậc g\xf3i đăng k\xfd",
@@ -22843,6 +22904,8 @@
           "Thay đổi Nh\xf3m Thanh To\xe1n",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Chọn Nh\xf3m Thanh To\xe1n",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Thay đổi nh\xf3m m\xe0 khoản thanh to\xe1n cho kiếm tiền m\xe1y chủ sẽ được gửi tới.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Thay đổi nh\xf3m của bạn c\xf3 thể ảnh hưởng đến t\xednh hợp lệ của thanh to\xe1n",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23784,7 +23847,7 @@
           "Đ\xe2y l\xe0 tốc độ khung h\xecnh tối đa m\xe0 clip của bạn c\xf3 thể được ghi lại.",
         CLIPS_CROP_START: "Cắt điểm khởi đầu",
         CLIPS_CROP_END: "Cắt điểm kết th\xfac",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Clip h\xe9 lộ",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "H\xe9 lộ clip",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "X\xf3a Clip",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Giờ bạn c\xf3 thể thu clip trực tiếp trong tr\xf2 chơi bằng $[!!{keybind}!!](keybindHook) hoặc đặt một ph\xedm tắt t\xf9y chỉnh.",
@@ -23797,6 +23860,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Quản l\xfd c\xe0i đặt Clip",
         CLIPS_USER_EDUCATION_LEARN_MORE: "T\xecm hiểu th\xeam",
+        SOUND_INCOMING_RING_HALLOWEEN: "Chu\xf4ng B\xe1o Halloween",
+        CUSTOM_SOUNDS: "\xc2m thanh t\xf9y biến",
+        ENABLE_PHONE_INTEGRATION:
+          "K\xedch hoạt t\xednh năng t\xedch hợp với ứng dụng Discord tr\xean Điện Thoại để trải nghiệm.",
         GUILD_SHOP_CHANNEL_LABEL: "Cửa H\xe0ng M\xe1y Chủ",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Sản phẩm c\xf3 sẵn",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23904,6 +23971,10 @@
           "T\xecm hiểu về ch\xednh s\xe1ch {classificationDescription} của ch\xfang t\xf4i.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "C\xe1c quy tắc của Discord được \xe1p dụng với tất cả mọi người",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Tới trang trạng th\xe1i t\xe0i khoản",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Tới trang trạng th\xe1i t\xe0i khoản",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Xem trạng th\xe1i t\xe0i khoản",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Thử lại",
@@ -23983,6 +24054,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Bỏ qua",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Đ\xe2y l\xe0 lỗi ư? [H\xe3y cho ch\xfang t\xf4i biết](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "Đ\xe1nh dấu kh\xf4ng phải nhạy cảm",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Cảm ơn đ\xe3 cho ch\xfang t\xf4i biết!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -24018,7 +24091,7 @@
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "Ch\xfang t\xf4i kh\xf4ng lưu trữ nội dung đa phương tiện bị chặn vĩnh viễn. V\xec nội dung n\xe0y đ\xe3 được tải l\xean c\xe1ch đ\xe2y một thời gian, t\xf9y chọn đ\xe1nh dấu kh\xf4ng phải nội dung nhạy cảm đ\xe3 hết hạn.",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "Họ sẽ kh\xf4ng thể gửi tin nhắn cho bạn. Nếu bạn cảm thấy h\xe0nh động của họ c\xf3 thể g\xe2y hại cho người kh\xe1c, vui l\xf2ng gửi b\xe1o c\xe1o cho Discord.",
+          "Người n\xe0y sẽ kh\xf4ng thể gửi tin nhắn cho bạn. Nếu bạn cảm thấy h\xe0nh động của họ c\xf3 thể g\xe2y hại cho người kh\xe1c, vui l\xf2ng gửi b\xe1o c\xe1o cho Discord.",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Chặn v\xe0 b\xe1o c\xe1o",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Tắt",
         SAFETY_TOOLS_BUTTON_LABEL: "Mở c\xe1c C\xf4ng Cụ An To\xe0n",
@@ -24088,7 +24161,7 @@
           "Trở lại cuộc tr\xf2 chuyện",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT:
           "Wumpus cảm nhận \xe2m nhạc.",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "B\xe1o c\xe1o họ",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "B\xe1o c\xe1o người n\xe0y",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Đ\xe3 b\xe1o c\xe1o",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Li\xean Hệ Đường D\xe2y Tin Nhắn Về Khủng Hoảng",
@@ -24124,7 +24197,7 @@
         STATUS_POPOUT_SET_CUSTOM: "Đặt hoạt động t\xf9y biến",
         STATUS_POPOUT_EDIT_CUSTOM: "Sửa đổi hoạt động t\xf9y biến",
         STATUS_POPOUT_CLEAR_STATUS: "X\xf3a Trạng Th\xe1i",
-        SET_STATUS_MODAL_TITLE: "Đặt hoạt động thoại t\xf9y biến",
+        SET_STATUS_MODAL_TITLE: "Đặt Hoạt Động \xc2m Thanh Voice t\xf9y chỉnh",
         SET_STATUS_MODAL_SUBTITLE:
           "Ch\xfang t\xf4i sẽ lưu những nội dung s\xe1ng tạo gần nhất của bạn v\xe0 sẽ tự động x\xf3a những nội dung n\xe0y sau một khoảng thời gian.",
         SET_STATUS_MODAL_CTA: "X\xe1c nhận",
@@ -24137,7 +24210,7 @@
         STATUS_IN_TRANSIT: "Đang di chuyển",
         STATUS_WATCHING: "Đang xem linh tinh",
         STATUS_NONE: "Kh\xf4ng c\xf3 trạng th\xe1i",
-        HANG_STATUS: "Treo trạng th\xe1i",
+        HANG_STATUS: "Trạng th\xe1i Treo",
         HANG_STATUS_LOCATION: "trong !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Trạng Th\xe1i T\xf9y Chỉnh",
         CUSTOM_HANG_STATUS_CTA: "V\xe0o đ\xe2y n\xe0o!",
@@ -24261,7 +24334,8 @@
           "Phong c\xe1ch trả lời bảng thăm d\xf2 \xfd kiến",
         CREATE_POLL_LAYOUT_DEFAULT:
           "Trả lời bằng văn bản với nội dung đa phương tiện t\xf9y chọn",
-        CREATE_POLL_LAYOUT_IMAGE: "Chỉ trả lời bằng nội dung đa phương tiện",
+        CREATE_POLL_LAYOUT_IMAGE:
+          "Chỉ cho ph\xe9p c\xe2u trả lời bằng nội dung đa phương tiện",
         CREATE_POLL_ANSWERS_FIELDSET_LABEL: "C\xe2u trả lời",
         CREATE_POLL_ADD_IMAGE_ARIA:
           "Th\xeam đa phương tiện, c\xe2u trả lời {answerNumber}",
@@ -24430,7 +24504,7 @@
         STOREFRONT_SUBSCRIBE_FOR: "Đăng k\xfd với gi\xe1 {rate}",
         STOREFRONT_SUBSCRIPTION_BENEFITS: "Quyền Lợi Đăng K\xfd",
         STOREFRONT_PURCHASE_FOR: "Mua với gi\xe1 {price}",
-        STOREFRONT_ONE_TIME_PURCHASE: "Mua một lần",
+        STOREFRONT_ONE_TIME_PURCHASE: "Vật phẩm Mua một lần",
         QUIET_MODE_DISABLED: "Đ\xe3 tắt Chế Độ Tập Trung",
         QUIET_MODE_ENABLED: "Đ\xe3 bật Chế Độ Tập Trung",
         QUIET_MODE_DND: "Đ\xe3 bật Chế Độ Tập Trung (VLKLP)",
@@ -24441,6 +24515,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord sẽ kh\xf4ng c\xf2n hiện th\xf4ng b\xe1o tr\xean m\xe0n h\xecnh, trong ứng dụng hoặc ph\xe1t \xe2m thanh tin nhắn.",
         QUIET_MODE_DISABLED_BY: "Chế Độ Tập Trung đ\xe3 tắt t\xf9y chọn n\xe0y",
+        FOCUS_MODE_TITLE: "Chế Độ Tập Trung (BETA)",
+        FOCUS_MODE_BADGE_ON: "BẬT",
+        FOCUS_MODE_BADGE_OFF: "TẮT",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Bạn ở trạng th\xe1i Vui L\xf2ng Kh\xf4ng L\xe0m Phiền đ\xe3 kh\xe1 l\xe2u. Bạn c\xf3 muốn bật Chế Độ Tập Trung thay cho Chế độ Vui L\xf2ng Kh\xf4ng L\xe0m Phiền kh\xf4ng?",
         ACTIVITY_REACTION_REPLY_TITLE: "Tr\xf2 chuyện về {activity}",

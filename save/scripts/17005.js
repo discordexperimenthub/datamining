@@ -668,6 +668,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Senaste",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bottar p\xe5 den h\xe4r servern",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popul\xe4ra",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Det \xe4r ingenting som \xe4r obligatoriskt. Du kan skicka kommandot eller l\xe4gga till ett alternativ nedan",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "V\xe4lj ett alternativ nedan",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Du har inte beh\xf6righeterna att k\xf6ra kommandon i den h\xe4r kanalen",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "\xd6ppna kommando",
@@ -973,7 +977,7 @@
         EMBEDDED_ACTIVITIES_LAUNCH: "Starta",
         EMBEDDED_ACTIVITIES_JOIN: "G\xe5 med",
         EMBEDDED_ACTIVITIES_JOINED: "Ansluten",
-        EMBEDDED_ACTIVITIES_ENDED: "Avslutade",
+        EMBEDDED_ACTIVITIES_ENDED: "Avslutad",
         EMBEDDED_ACTIVITIES_RETURN_TO_ACTIVITY: "\xc5terg\xe5 till aktivitet",
         EMBEDDED_ACTIVITIES_PEOPLE_ARE_IN_AN_ACTIVITY:
           "{n, plural, one {1 person \xe4r} other {{n} personer \xe4r}} i en aktivitet",
@@ -1274,7 +1278,6 @@
           "[!!{username}!!](usernameOnClick) startade en [aktivitet](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} startade en aktivitet",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Kanske senare",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Hur gick det med !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1431,9 +1434,6 @@
           "Testa under en rysligt begr\xe4nsad tid.\nHar du Nitro? \xc5kalla SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Testl\xe4get \xe4r f\xf6r n\xe4rvarande aktivt f\xf6r **!!{applicationName}!!**. Din ans\xf6kan b\xf6r visas som ett alternativ i aktivitetsknappmenyn.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Ny aktivitet! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Pr\xf6va ett nytt spel d\xe4r du ska rita och gissa vad du ser med dina v\xe4nner. Gratis fram till den 29 mars.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Varning",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Dator, beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3548,6 +3548,8 @@
           "Du f\xe5r inga aviseringar fr\xe5n tystade kanaler och de \xe4r gr\xe5markerade i din kanallista. Den h\xe4r inst\xe4llningen g\xe4ller alla dina enheter.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Du f\xe5r inga aviseringar fr\xe5n tystade kategorier och de \xe4r gr\xe5markerade i din kanallista. Den h\xe4r inst\xe4llningen g\xe4ller alla dina enheter.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Din server \xe4r f\xf6r n\xe4rvarande $[**tystad**](mutedHook). Du kan inte f\xe5 aviseringar fr\xe5n den h\xe4r kanalen eller \xe4ndra dess inst\xe4llningar f\xf6rr\xe4n du satt p\xe5 ljudet f\xf6r den h\xe4r servern.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Din serveravisering st\xe5r p\xe5 $[**inget**](notificationHook). Du kommer inte att f\xe5 n\xe5gra aviseringar fr\xe5n den h\xe4r kanalen, men du kan \xe5sidos\xe4tta detta h\xe4r.",
         CHANNEL_OR_GUILD_MUTED:
@@ -3688,7 +3690,7 @@
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE:
           "Du kommer inte att se n\xe5gra aviseringar eller ol\xe4sta m\xe4rken.",
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE_UNTIL:
-          "Du kommer inte att se n\xe5gra aviseringar eller ol\xe4sta m\xe4rken fram till !!{endTime}!!",
+          "Du kommer inte att se n\xe5gra aviseringar eller ol\xe4sta m\xe4rken f\xf6rr\xe4n!!{endTime}!!",
         CONTACT_SYNC_FAILED_ALERT_TITLE: "Oj d\xe5. N\xe5got gick snett.",
         CONTACT_SYNC_FAILED_ALERT_MESSAGE:
           "N\xe5got gick fel n\xe4r du skulle synka dina kontakter. V\xe4nta en stund och f\xf6rs\xf6k igen.",
@@ -4401,6 +4403,8 @@
         SEARCH_EMOJIS: "S\xf6k emoji",
         SEARCH_FOR_EMOJI: "Hitta den perfekta emojin",
         SEARCH_FOR_STICKER: "Hitta den perfekta dekalen",
+        SEARCH_FOR_REACTION: "Hitta den perfekta reaktionen",
+        SEARCH_FOR_SUPER_REACTION: "Hitta den perfekta superreaktionen",
         NO_EMOJI_SEARCH_RESULTS: "Ingen emoji matchar din s\xf6kning",
         EMOJI_CATEGORY_PACK: "{packName}-paket",
         EMOJI_CATEGORY_RECENT: "Ofta anv\xe4nda",
@@ -5343,6 +5347,7 @@
           "N\xe5gonting gick fel n\xe4r loggfilerna l\xe4stes fr\xe5n sitt system. F\xf6rs\xf6k igen.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "N\xe5got gick fel och vi kunde inte ladda upp dina fels\xf6kningsfiler. F\xf6rs\xf6k igen.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Dela push-aviseringsloggar",
         FORM_CHECKBOX_AEC_DUMP: "Diagnostisk ljudinspelning",
         FORM_HELP_AEC_DUMP:
           "Diagnostisk ljudinspelning anv\xe4nds f\xf6r analys av ljudproblem. De senaste fem minuterna med r\xf6st sparas till r\xf6stmodulmappen.",
@@ -5401,6 +5406,7 @@
         APP_ICON_SUNSET: "Solnedg\xe5ng",
         APP_ICON_HOLO_WAVES: "Prismav\xe5gor",
         APP_ICON_PIRATE: "Kapten Krok",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Ajaj",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Jarr!",
@@ -5486,6 +5492,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Person} other {# M\xe4nniskor}}",
         VOICE_CALL_ACTION_A11Y_HINT: "\xd6ppna r\xf6stsamtals\xe5tg\xe4rder",
+        TURN_CAMERA_ON_A11Y_LABEL: "S\xe4tt p\xe5 kamera",
+        TURN_CAMERA_OFF_A11Y_LABEL: "St\xe4ng av kamera",
         IN_GAME_VOICE_SETTINGS: "R\xf6stinst\xe4llningar i spelet",
         VIDEO_SETTINGS: "Videoinst\xe4llningar",
         TEXT: "Text",
@@ -5696,6 +5704,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "R\xf6st ansluten",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video ansluten",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC ansluter",
+        CONNECTION_STATUS_ICE_CHECKING: "Kollar fl\xf6de",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS ansluter",
         CONNECTION_STATUS_NO_ROUTE: "Ingen rutt",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC fr\xe5nkopplad",
@@ -6088,8 +6097,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "bild, knapp",
         A11Y_LOADING_STARTED: "Laddar",
         A11Y_LOADING_FINISHED: "Laddning klar",
-        A11Y_CHECKBOX_CHECKED: "kollade",
-        A11Y_CHECKBOX_UNCHECKED: "ej kollade",
+        A11Y_CHECKBOX_CHECKED: "markerad",
+        A11Y_CHECKBOX_UNCHECKED: "omarkerad",
         DND_ITEM_PICKED_UP: "Plockade upp !!{itemName}!!",
         DND_ITEM_DROPPED: "Sl\xe4ppte f\xf6rem\xe5l",
         DND_DRAG_CANCELED: "Slutade dra",
@@ -6150,7 +6159,7 @@
         FORM_LABEL_AUTOMATIC_VAD_MOBILE: "Automatisk k\xe4nslighet",
         RESET_NOTIFICATION_SETTINGS:
           "\xc5terst\xe4ll aviseringsinst\xe4llningar",
-        RESET_NOTIFICATION_OVERRIDE: "\xc5terst\xe4ll \xe5sidos\xe4ttning",
+        RESET_NOTIFICATION_OVERRIDE: "Ta bort \xe5sidos\xe4ttning",
         CHANNEL_SETTINGS: "Kanalinst\xe4llningar",
         SEND_MESSAGE: "Skicka meddelande",
         OVERLAY_NOTIFICATIONS_SETTINGS: "Overlay-aviseringar",
@@ -8371,6 +8380,12 @@
           "Hajpa upp chatten med superreaktioner. Ute nu i [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Hajpa upp chatten med obegr\xe4nsade superreaktioner. Finns nu i [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Hajpa upp chatten med obegr\xe4nsade superreaktioner! Nu tillg\xe4ngligt med Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Hajpa upp chatten med obegr\xe4nsade superreaktioner!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nu tillg\xe4ngligt med Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Hajpa upp chatten med superreaktioner. F\xe5 {refillAmount} per vecka med [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8489,6 +8504,10 @@
           "Hajpa upp chatten med superreaktioner! F\xe5 obegr\xe4nsat med superreaktioner och andra coola f\xf6rm\xe5ner med [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Obegr\xe4nsat med superreaktioner!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Klicka p\xe5 knappen f\xf6r att l\xe4gga till en superreaktion.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Tryck p\xe5 knappen f\xf6r att l\xe4gga till en superreaktion.",
         HOLD_UP: "V\xe4nta",
         MASKED_LINK_ALERT_V2_HEADER: "L\xe4mna Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9558,6 +9577,9 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "F\xe4rgteman",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "L\xe5t Discord k\xe4nna dina vibbar med unika temaf\xe4rger.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "Anpassade appikoner",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "V\xe4lj en ikon f\xf6r appen till mobil och dator som passar dig.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "F\xf6rm\xe5nerna",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Uppgradera din Discord-upplevelse",
@@ -10204,6 +10226,8 @@
           "N\xe5got verkar ha g\xe5tt fel och du kan inte anv\xe4nda koden. Vi beklagar.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Det verkar som att den h\xe4r koden redan har l\xf6sts in.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Den h\xe4r g\xe5vokoden verkar tillh\xf6ra n\xe5gon annan.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Den h\xe4r koden fungerar inte. Kontrollera att du anv\xe4nder r\xe4tt kod och f\xf6rs\xf6k igen.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10245,6 +10269,8 @@
           "Koden f\xf6ljer med i ett bekr\xe4ftelsemejl som vi just skickat till dig.",
         REDEMPTION_CODE: "Inl\xf6sningskod",
         PARTNER_PROMOTION_CLAIM: "N\xe4sta",
+        PARTNER_PROMOTION_ERROR_TITLE: "Oj d\xe5!",
+        PARTNER_PROMOTION_ERROR_BODY: "N\xe5got verkar att ha g\xe5tt fel.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Ok\xe4nd g\xe5va.",
         REDEEM: "L\xf6s in",
         UNLOCK_CODE: "L\xe5s upp kod",
@@ -11774,6 +11800,7 @@
           "F\xe5 det h\xe4r coola m\xe4rket som Nitro-prenumerant.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "F\xf6r samlaren. Ett exklusivt endast-f\xf6r-Nitro-m\xe4rke.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "L\xf6s in",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Superladda din Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13284,6 +13311,7 @@
         MOST_POPULAR: "Mest popul\xe4r",
         SPELLCHECK: "Stavningskontroll",
         ADD_TO_DICTIONARY: "L\xe4gg till i ordlista",
+        REMOVE_FROM_DICTIONARY: "Ta bort fr\xe5n ordbok",
         LANGUAGES: "Spr\xe5k",
         AUTO_SUGGEST_STICKERS: "Dekalf\xf6rslag",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13580,6 +13608,7 @@
         BUILD_OVERRIDE: "Versions\xe5sidos\xe4ttning",
         BUILD_OVERRIDE_FOR:
           "Versions\xe5sidos\xe4ttning f\xf6r {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Commit hash",
         BUILD_OVERRIDE_APPLY: "Till\xe4mpa",
         BUILD_OVERRIDE_CLEAR: "Rensa",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Version ej tillg\xe4nglig",
@@ -13784,7 +13813,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "V\xe4lj fr\xe5n {monthlyPrice}/m\xe5nad eller {yearlyPrice}/\xe5r",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Din mottagare f\xe5r:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Ge ett Nitro-medlemskap",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "G\xe5vans varaktighet",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Ge {count, plural, one {# m\xe5nad} other {# m\xe5nader}} av {nitroTierName}",
@@ -13805,7 +13833,11 @@
         GIFT_DURATION: "1 {timeInterval} med Nitro",
         GIFT_OPEN_PROMPT: "\xd6ppna g\xe5van",
         GIFT_RECIPIENT_INFO: "Till: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "L\xe4gg till ljudeffekt",
+        GIFT_SELECT_EMOJI: "L\xe4gg till emojikonfetti",
         GIFT_SELECT_SOUNDBOARD_ADD: "L\xe4gg till",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Detta spelas n\xe4r din kompis \xf6ppnar sin present",
         NITRO_CONFIRMATION: "Du har f\xe5tt Nitro",
         OPENED_GIFT_CONFIRMATION: "Du har \xf6ppnat g\xe5van!",
         NITRO_PERKS: "Kolla in dina nya Nitro-f\xf6rm\xe5ner!",
@@ -14447,6 +14479,8 @@
           "Klicka p\xe5 kompassen i serverlistan f\xf6r att hitta nya servrar.",
         LOADING_TIP_12:
           "Dra och sl\xe4pp servrar p\xe5 varandra f\xf6r att skapa servermappar.",
+        LOADING_TIP_13:
+          "Skriv /gif eller /tenor + vad som helst f\xf6r att hitta en GIF f\xf6r det \xe4mnet!",
         LOADING_TIP_14:
           "Dela det du spelar med hj\xe4lp av spelaktivitetsinst\xe4llningarna.",
         LOADING_TIP_15:
@@ -14475,6 +14509,19 @@
           "Du kan trycka p\xe5 / f\xf6r att visa botkommando och andra inbyggda kommandon",
         LOADING_TIP_27:
           "Du kan anv\xe4nda !!{asterisks}!! vid sidan av dina ord f\xf6r att skriva dem i**fetstil**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "Glad halloween, se till att f\xe5 tillbaka din server fr\xe5n de d\xf6da",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO ha en h\xe4rligt l\xe4skig halloween",
+        HALLOWEEN_LOADING_TEXT_3: "Kokar ihop en h\xe5rresande ringsignal",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "I r\xf6stchatten \xe4r alla sp\xf6ken",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Kollar s\xe5 att servrarna inte \xe4r f\xf6rh\xe4xade (hoppas)",
+        HALLOWEEN_LOADING_TEXT_7: "F\xf6rs\xe4tter oss i halloweenst\xe4mning",
+        HALLOWEEN_LOADING_TEXT_8: "\xc4r zombier d\xf6dstr\xe5kiga?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord har infekterats! Se upp f\xf6r zombieversionen av Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "V\xe4lj mellan ljust och m\xf6rkt tema under Utseendeinst\xe4llningar.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14505,6 +14552,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Jag f\xf6rst\xe5r",
         VOICE_PANEL_SHOW_VOICE_USERS: "Visa r\xf6stanv\xe4ndare",
         VOICE_PANEL_USERS_A11Y_LABEL: "R\xf6stanv\xe4ndare",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, st\xe4ngde av ljudet till och tystade",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, tystade",
         VOICE_PANEL_SHOW_EXTRAS: "Visa alla anv\xe4ndare",
         VOICE_PANEL_HIDE_EXTRAS: "Minimera",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -14941,7 +14991,7 @@
           "”Sparka” tar bort andra medlemmar fr\xe5n den h\xe4r servern. Utsparkade medlemmar kommer att kunna g\xe5 med igen om de f\xe5r en ny inbjudan. Om servern aktiverar medlemskrav kommer denna beh\xf6righet att g\xf6ra det m\xf6jligt att godk\xe4nna eller avvisa medlemmar som beg\xe4r att f\xe5 g\xe5 med.",
         BAN_MEMBERS: "St\xe4nga av medlemmar",
         ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION:
-          "L\xe5ter medlemmar permanent bannlysa och ta bort meddelandehistorik fr\xe5n andra medlemmar p\xe5 den h\xe4r servern.",
+          "L\xe5ter medlemmar permanent bannlysa och ta bort meddelandehistorik f\xf6r andra medlemmar p\xe5 den h\xe4r servern.",
         SEND_MESSAGES: "Skicka meddelanden",
         ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION:
           "L\xe5ter medlemmarna skicka meddelanden i textkanaler.",
@@ -15662,6 +15712,8 @@
         FRIEND_FINDER_FRIENDS: "Alla v\xe4nner",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontakter p\xe5 Discord: {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Personer du kanske k\xe4nner – {count}",
         CONTACT_SYNC_TITLE: "Hitta dina v\xe4nner",
         CONTACT_SYNC_LANDING_TITLE: "Hitta dina v\xe4nner",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16256,7 +16308,7 @@
         CREATE_EVENT_RECUR_YEARLY: "Varje \xe5r den {date}",
         CREATE_EVENT_RECUR_WEEKDAYS: "Varje veckodag (m\xe5ndag till fredag)",
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES: "Visa framtida event",
-        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Upprepas {recurrenceRule}",
+        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Repeats {recurrenceRule}",
         GUILD_SCHEDULED_EVENT_REPEATS: "Event i serie",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY: "Upprepas varje {weekday}",
         GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY: "Upprepas varannan {weekday}",
@@ -16902,10 +16954,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} andra aktiva tr\xe5dar",
         THREAD_BROWSER_ARCHIVED_HEADER: "\xe4ldre tr\xe5dar",
         THREAD_BROWSER_JOINED_HEADER: "{count} anslutna tr\xe5dar",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} Andra aktiva tr\xe5dar",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktiva tr\xe5dar – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "\xc4ldre tr\xe5dar",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} anslutna tr\xe5dar",
         THREAD_BROWSER_JOINED_COUNT: "Anslutna tr\xe5dar – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}er sedan",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} dagar sedan",
@@ -16924,8 +16974,6 @@
           "Det finns inga aktiva tr\xe5dar.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Det finns inga arkiverade tr\xe5dar.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "H\xe5ll fokus p\xe5 en konversation med en tr\xe5d, en tempor\xe4r textkanal.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "H\xe5ll fokus p\xe5 en konversation med en tr\xe5d, en tempor\xe4r textkanal.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filterinst\xe4llningar",
@@ -19028,7 +19076,7 @@
         GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION:
           "Nu \xf6vervakas din servers\xe4kerhet av nya och f\xf6rb\xe4ttrade aktivitetsvarningar. AutoMod skickar ett meddelande hit om DM- eller anslutningsaktiviteten \xf6verskrider din servers normala gr\xe4ns.",
         GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX:
-          "Aktiverad av",
+          "Aktiverat av",
         GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS:
           "~{joinCount, number} anslutningar har aktiverats",
         GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE:
@@ -19052,9 +19100,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "S\xf6kresultat",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Namn",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Medlem sedan",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Gick med i Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roller",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signaler",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "medlemmar av **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "medlemmar **{pageRange}** av **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Det h\xe4r visar endast de nyaste medlemmarna. Det \xe4r m\xf6jligt att \xe4ldre medlemmar inte visas (de kommer dock att visas snart).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Visar",
@@ -19347,6 +19398,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "R\xe4dvarningar",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Varningskanal",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Ingen",
+        GUILD_ANTIRAID_RAID_ALERT: "R\xe4dvarning",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Skydd aktiverat",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "St\xe4ll in varningar",
@@ -19835,11 +19887,11 @@
           "Du \xe4ndrar inst\xe4llningarna manuellt.",
         NOTIFICATION_SETTINGS_USE_PRESET: "Anv\xe4nd f\xf6rinst\xe4llningar",
         NOTIF_MIGRATION_SETTINGS_TITLE:
-          "Nya ol\xe4sta meddelanden (experimentellt)",
+          "Ny inst\xe4llning f\xf6r ol\xe4sta meddelanden (experimentellt)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
-          "St\xe4nger av inst\xe4llningen Nya ol\xe4sta meddelanden som l\xe5ter dig v\xe4lja vilka kanaler som \xe4r viktigast p\xe5 en server.",
+          "St\xe4nger av den nya inst\xe4llningen f\xf6r ol\xe4sta meddelanden som l\xe5ter dig v\xe4lja vilka kanaler som \xe4r viktigast p\xe5 en server.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
-          "Det h\xe4r st\xe4nger av inst\xe4llningen Nya ol\xe4sta meddelanden och \xe5terst\xe4ller *alla* din aviseringsinst\xe4llningar till en s\xe4kerhetskopia som skapades {date, date, medium}",
+          "Det h\xe4r st\xe4nger av den nya inst\xe4llningen f\xf6r ol\xe4sta meddelanden och \xe5terst\xe4ller *alla* din aviseringsinst\xe4llningar till en s\xe4kerhetskopia som skapades {date, date, medium}",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION: "St\xe4ng av",
         NOTIF_MIGRATION_INTRO_TAB: "1. Vad \xe4r nytt",
         NOTIF_MIGRATION_CUSTOMIZE_TAB: "2. V\xe4lj servrar",
@@ -21852,6 +21904,9 @@
           "Nitro-prenumeranter f\xe5r rabatt p\xe5 den h\xe4r dekorationen",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} med Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Dags f\xf6r en ny look?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Okej, det h\xe4r blev knasigt.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, vi lyckades inte ladda butiken. Kom tillbaka senare.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Anv\xe4nd den n\xe4r som helst med en aktiv Nitro-prenumeration.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Titta p\xe5 min vackra dekoration",
@@ -21939,6 +21994,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "L\xe4gg till app",
         MONETIZATION: "Int\xe4ktsgenerering",
         GUILD_SETTINGS_MONETIZATION: "Serverint\xe4ktsgenerering",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Serverprenumerationer",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Kampanjsida",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Prenumerationsniv\xe5",
@@ -22396,6 +22452,8 @@
           "Byt betalningsteam",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "V\xe4lj betalningsteam",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Byt teamet som betalningarna f\xf6r int\xe4ktsgenerering ska skickas till.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Om du \xe4ndrar ditt team kan ditt ber\xe4ttigande till utbetalningar komma att p\xe5verkas",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23334,6 +23392,11 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Hantera Klippinst\xe4llningar",
         CLIPS_USER_EDUCATION_LEARN_MORE: "L\xe4s mer",
+        SOUND_INCOMING_RING_HALLOWEEN:
+          "Halloweensignal f\xf6r inkommande samtal",
+        CUSTOM_SOUNDS: "Egna ljud",
+        ENABLE_PHONE_INTEGRATION:
+          "Aktivera integration med mobilappen f\xf6r att f\xe5 det h\xe4r.",
         GUILD_SHOP_CHANNEL_LABEL: "Serverbutik",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Tillg\xe4ngliga produkter",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23440,6 +23503,8 @@
           "L\xe4s mer om policyn {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discords regler g\xe4ller alla",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "G\xe5 till Kontostatus",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "G\xe5 till Kontostatus",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Se kontostatus",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "F\xf6rs\xf6k igen",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23518,6 +23583,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Avvisa",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Har vi beg\xe5tt ett misstag? [Ber\xe4tta f\xf6r oss h\xe4r](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "Markera att det inte \xe4r k\xe4nsligt",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Tack f\xf6r att du ber\xe4ttade f\xf6r oss!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23674,7 +23741,7 @@
         CUSTOM_HANG_STATUS: "Anpassad status",
         CUSTOM_HANG_STATUS_CTA: "Hoppa in h\xe4r!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Vad h\xe5ller du p\xe5 med?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Svepstatus",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Sno status",
         HANG_STATUS_VC_ROW_ADD: "L\xe4gg till en status",
         HANG_STATUS_HELP:
           "Visa dina v\xe4nner vad du h\xe5ller p\xe5 med genom att st\xe4lla in en aktivitetsstatus.",
@@ -23970,6 +24037,9 @@
           "Discord kommer inte att visa app-inneh\xe5ll, skrivbordsaviseringar eller spela upp ljud f\xf6r meddelanden.",
         QUIET_MODE_DISABLED_BY:
           "Det h\xe4r \xe4r inaktiverat av Fokuseringsl\xe4get",
+        FOCUS_MODE_TITLE: "Fokuseringsl\xe4get (BETA)",
+        FOCUS_MODE_BADGE_ON: "P\xc5",
+        FOCUS_MODE_BADGE_OFF: "AV",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Du har anv\xe4nt St\xf6r ej ett tag nu. Vill du aktivera Fokuseringsl\xe4get ist\xe4llet?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chatta om {activity}",

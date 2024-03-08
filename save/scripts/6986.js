@@ -634,6 +634,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "최근",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "이 서버의 봇",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "인기",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "필요 사항 없음. 명령어를 보내거나 하단에서 옵션을 추가할 수 있어요",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "하단에서 옵션 선택하기",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "이 채널에서 명령어를 실행할 권한이 없어요",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "명령어 열기",
@@ -1194,7 +1198,6 @@
           "[!!{username}!!](usernameOnClick) 님이 [활동](activityTextOnClick)을 시작했어요",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} 님이 활동을 시작했어요",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "나중에",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! 이용 경험이 어땠나요?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1343,9 +1346,6 @@
           "무시무시한 한정 기간 동안 이용해보세요.\nNitro가 있나요? SpellCast를 소환하세요.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "**!!{applicationName}!!**의 테스트 모드가 활성화되었어요. 애플리케이션이 활동 버튼 메뉴에서 옵션으로 표시될 거예요.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "새로운 활동! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "친구들과 그림을 그리고 추측하는 게임을 즐겨 보세요. 3월 29일까지 무료예요.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "경고",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(PC 베타)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "신규! 음성 채널 반응",
@@ -3328,7 +3328,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "없음",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "읽지 않음 배지",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "강조 표시된 채널 이름 및 반점",
+          "강조 표시된 채널 이름 및 알림 반점",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "알림",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "푸시 알림 및 핑 알림음",
@@ -3371,6 +3371,8 @@
           "알림을 끈 채널은 채널 목록에서 회색으로 표시돼요. 이 설정은 모든 장치에 같이 적용돼요.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "알림을 끈 카테고리는 채널 목록에서 회색으로 표시돼요. 이 설정은 모든 장치에 같이 적용돼요.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "서버가 현재 $[**알림이 꺼진**](mutedHook) 상태예요. 이 서버의 알림을 다시 활성화할 때까지 이 채널의 알림을 받거나 설정을 바꿀 수 없어요.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "서버 알림이 $[**없음**](notificationHook)으로 설정되었어요. 이 채널에서 알림을 받을 수 없지만 여기에서 설정할 수 있어요.",
         CHANNEL_OR_GUILD_MUTED: "이 채널 또는 서버는 현재 알림이 꺼져 있어요.",
@@ -4178,6 +4180,8 @@
         SEARCH_EMOJIS: "이모지 검색",
         SEARCH_FOR_EMOJI: "딱 맞는 이모지 찾기",
         SEARCH_FOR_STICKER: "딱 맞는 스티커 찾기",
+        SEARCH_FOR_REACTION: "딱 맞는 반응 찾기",
+        SEARCH_FOR_SUPER_REACTION: "딱 맞는 슈퍼 반응 찾기",
         NO_EMOJI_SEARCH_RESULTS: "검색과 일치하는 이모지가 없음",
         EMOJI_CATEGORY_PACK: "{packName} 팩",
         EMOJI_CATEGORY_RECENT: "자주 사용",
@@ -5060,6 +5064,7 @@
           "시스템에서 로그 파일을 읽는 중에 문제가 생겼어요. 다시 시도해주세요.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "문제가 발생해서 디버그 파일을 업로드할 수 없었어요. 다시 시도해주세요.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "푸시 알림 로그 공유",
         FORM_CHECKBOX_AEC_DUMP: "오디오 녹음 진단",
         FORM_HELP_AEC_DUMP:
           "오디오 녹음 진단은 오디오 문제 분석에 사용돼요. 지난 5분 동안의 음성이 음성 모듈 폴더에 저장되어 있어요.",
@@ -5117,6 +5122,7 @@
         APP_ICON_SUNSET: "선셋 대로",
         APP_ICON_HOLO_WAVES: "프리즈마틱 웨이브",
         APP_ICON_PIRATE: "선원 친구",
+        APP_ICON_PIRATE_1: "오호",
         APP_ICON_PIRATE_2: "아이 아이",
         APP_ICON_PIRATE_3: "디스카아아드",
         APP_ICON_PIRATE_4: "아르르",
@@ -5201,6 +5207,8 @@
         VOICE_SETTINGS: "음성 설정",
         VOICE_CALL_MEMBER_LIST_TITLE: "{count, plural, =1 {#명} other {#명}}",
         VOICE_CALL_ACTION_A11Y_HINT: "음성 통화 동작 열기",
+        TURN_CAMERA_ON_A11Y_LABEL: "카메라 켜기",
+        TURN_CAMERA_OFF_A11Y_LABEL: "카메라 끄기",
         IN_GAME_VOICE_SETTINGS: "게임 내 음성 설정",
         VIDEO_SETTINGS: "영상 설정",
         TEXT: "문자",
@@ -5406,6 +5414,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "음성 연결됨",
         CONNECTION_STATUS_VIDEO_CONNECTED: "영상 연결됨",
         CONNECTION_STATUS_RTC_CONNECTING: "실시간 통신 서버 연결 중",
+        CONNECTION_STATUS_ICE_CHECKING: "경로 확인 중",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS 연결 중",
         CONNECTION_STATUS_NO_ROUTE: "연결 안 됨",
         CONNECTION_STATUS_RTC_DISCONNECTED: "실시간 통신 서버 연결 해제",
@@ -7919,6 +7928,12 @@
           "슈퍼 반응으로 더 신나는 채팅을 해봐요. 이제 [{planName}](onClick) 구독으로 이용할 수 있어요.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "무제한 슈퍼 반응으로 더 신나는 채팅을 즐겨 봐요. 이제 [{planName}](onClick) 구독으로 이용할 수 있어요.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "무제한 슈퍼 반응으로 더 신나는 채팅을 즐겨 봐요! 이제 Nitro 구독으로 이용할 수 있어요.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "무제한 슈퍼 반응으로 더 신나는 채팅을 즐겨 봐요!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "이제 Nitro 구독으로 이용할 수 있어요.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "슈퍼 반응으로 더 신나는 채팅을 해봐요. 이제 [Nitro]({nitroLink}) 구독과 함께 매주 {refillAmount}개를 획득하세요.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8037,6 +8052,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "슈퍼 반응으로 채팅 분위기를 띄워 보세요! [Nitro](onClick)로 무제한 슈퍼 반응도 받고 기타 멋진 특전도 사용해 보세요.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "슈퍼 반응 무제한!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "버튼을 클릭해 슈퍼 반응을 추가하세요.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "버튼을 탭해 슈퍼 반응을 추가하세요.",
         HOLD_UP: "잠시만요",
         MASKED_LINK_ALERT_V2_HEADER: "Discord 나가는 중",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -8367,7 +8386,7 @@
         SEARCH_GROUP_HINT_PINNED:
           "탭해서 필터를 적용하고 고정된 메시지를 검색하세요",
         SEARCH_FILTERS: "검색 필터",
-        SEARCH_FILTER_RESULTS_ELLIPSIZED: "필터링 결과....",
+        SEARCH_FILTER_RESULTS_ELLIPSIZED: "결과 필터링하기...",
         SEARCH_FILTER_FROM: "보낸 이",
         SEARCH_FILTER_HAS: "내용",
         SEARCH_FILTER_BEFORE: "이전",
@@ -9059,6 +9078,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "색상 테마",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "독특한 테마 색상으로 Discord에 나만의 개성을 더하세요.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "사용자 지정 앱 아이콘",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "취향에 맞는 모바일과 앱 내 데스크톱 아이콘을 고르세요.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "특전",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Discord 경험을 업그레이드하세요",
@@ -9696,6 +9719,8 @@
           "뭔가 잘못된 모양이에요. 그 코드를 사용할 수 없네요. 죄송해요.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "죄송하지만 이 코드는 이미 사용한 것 같아요.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "다른 사람이 소유한 코드인 것 같아요.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "이 코드는 작동하지 않는 것 같아요. 올바른 코드인지 확인하고 다시 시도해보세요.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -9737,6 +9762,8 @@
           "이 코드는 방금 보내드린 확인 이메일에서도 확인하실 수 있어요.",
         REDEMPTION_CODE: "코드 등록",
         PARTNER_PROMOTION_CLAIM: "다음",
+        PARTNER_PROMOTION_ERROR_TITLE: "이런!",
+        PARTNER_PROMOTION_ERROR_BODY: "오류가 발생한 것 같아요.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "알 수 없는 선물.",
         REDEEM: "적용하기",
         UNLOCK_CODE: "코드 잠금 해제",
@@ -11191,6 +11218,7 @@
           "Nitro 구독자에게 드리는 멋진 배지를 받으세요.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "수집가 여러분, 이 특별한 Nitro 전용 배지를 놓치지 마세요.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "적용하기",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD: "Discord를 강화하세요",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
           "모든 서버에서 사용 가능한 사용자 지정 프로필",
@@ -12630,6 +12658,7 @@
         MOST_POPULAR: "인기",
         SPELLCHECK: "맞춤법 검사",
         ADD_TO_DICTIONARY: "사전에 추가하기",
+        REMOVE_FROM_DICTIONARY: "사전에서 삭제하기",
         LANGUAGES: "언어",
         AUTO_SUGGEST_STICKERS: "스티커 추천",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -12912,6 +12941,7 @@
           "Discord 팀의 공식 메시지를 확인해주세요.",
         BUILD_OVERRIDE: "빌드 우선 설정",
         BUILD_OVERRIDE_FOR: "{releaseChannel} 빌드 우선 설정",
+        BUILD_OVERRIDE_ID: "커밋 해시",
         BUILD_OVERRIDE_APPLY: "적용하기",
         BUILD_OVERRIDE_CLEAR: "지우기",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "사용할 수 없는 빌드",
@@ -13113,7 +13143,6 @@
           "{monthlyPrice}/월 또는 {yearlyPrice}/년 중에서 선택하세요",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "상대는 다음을 받게 돼요.",
-        MOBILE_CUSTOM_GIFT_TITLE: "Nitro 멤버십 선물하기",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "선물 유효 기간",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {#개월} other {#개월}}치 {nitroTierName} 선물",
@@ -13134,7 +13163,11 @@
         GIFT_DURATION: "Nitro 1{timeInterval} 이용권",
         GIFT_OPEN_PROMPT: "선물 열기",
         GIFT_RECIPIENT_INFO: "받는 사람: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "음향 효과 추가하기",
+        GIFT_SELECT_EMOJI: "이모지 색종이 추가하기",
         GIFT_SELECT_SOUNDBOARD_ADD: "추가하기",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "친구가 선물을 열면 재생돼요",
         NITRO_CONFIRMATION: "Nitro를 받았어요",
         OPENED_GIFT_CONFIRMATION: "이 선물은 열어봤어요!",
         NITRO_PERKS: "새로운 Nitro 특전을 확인하세요!",
@@ -13744,6 +13777,8 @@
         LOADING_TIP_11: "새 서버를 찾으려면 서버 목록에서 나침반을 클릭하세요.",
         LOADING_TIP_12:
           "서버 폴더를 생성하려면 서버를 다른 서버 위에 끌어다 놓으세요.",
+        LOADING_TIP_13:
+          "/gif 또는 /tenor와 함께 검색어를 입력하면 해당하는 GIF를 찾을 수 있어요!",
         LOADING_TIP_14:
           "게임 활동을 설정하면 플레이 중인 게임을 공유할 수 있어요.",
         LOADING_TIP_15:
@@ -13769,6 +13804,16 @@
           "/키를 누르면 봇 명령어 및 다른 내장 명령어를 확인할 수 있어요",
         LOADING_TIP_27:
           "글자를 **굵게** 표시하려면 !!{asterisks}!!를 입력하세요.",
+        HALLOWEEN_LOADING_TEXT_1: "즐거운 핼러윈! 죽은 서버를 꼭 되살리세요",
+        HALLOWEEN_LOADING_TEXT_2: "우우우! 우우우! 오싹오싹 핼러윈 시즌",
+        HALLOWEEN_LOADING_TEXT_3: "뼛속까지 오싹한 벨소리 출몰",
+        HALLOWEEN_LOADING_TEXT_4: "우우우! 우우우! 우우우!",
+        HALLOWEEN_LOADING_TEXT_5: "음성 채팅 중에는 모두가 유령",
+        HALLOWEEN_LOADING_TEXT_6: "서버에 유령이 없는지 확인 중 (과연)",
+        HALLOWEEN_LOADING_TEXT_7: "핼러윈 '분위기'에 빠져들고 있어요",
+        HALLOWEEN_LOADING_TEXT_8: "좀비들은 죽은 밈밖에 올릴 줄 모르나요?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord가 감염되고 있어요! 좀비 Wumpus를 조심하세요",
         ACCESSIBILITY_LOADING_TIP_1:
           "디스플레이 설정에서 밝은 테마 또는 어두운 테마를 고를 수 있습니다.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -13798,6 +13843,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "알겠어요",
         VOICE_PANEL_SHOW_VOICE_USERS: "음성 사용자 보기",
         VOICE_PANEL_USERS_A11Y_LABEL: "음성 사용자",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username} 님, 스피커 및 마이크 꺼짐",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username} 님, 마이크 꺼짐",
         VOICE_PANEL_SHOW_EXTRAS: "모든 사용자 보기",
         VOICE_PANEL_HIDE_EXTRAS: "최소화",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -14900,6 +14948,8 @@
         FRIEND_FINDER_FRIENDS: "모든 친구",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord 연락처 — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "알 수도 있는 사람 — {count}명",
         CONTACT_SYNC_TITLE: "친구 찾기",
         CONTACT_SYNC_LANDING_TITLE: "친구 찾기",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16087,10 +16137,8 @@
         THREAD_BROWSER_OTHER_HEADER: "활성화된 다른 스레드 {count}개",
         THREAD_BROWSER_ARCHIVED_HEADER: "기타 스레드",
         THREAD_BROWSER_JOINED_HEADER: "{count}개의 스레드에 참여함",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "활성화된 다른 스레드 {count}개",
         THREAD_BROWSER_ACTIVE_COUNT: "활성 스레드 - {count}개",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "이전 스레드",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "참여 스레드 {count}개",
         THREAD_BROWSER_JOINED_COUNT: "참여 스레드 - {count}개",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}초 전",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}일 전",
@@ -16107,8 +16155,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER:
           "활성 상태인 스레드가 없어요.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "보관된 스레드가 없어요.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "임시 채팅 채널인 스레드로 대화에 집중해보세요.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "임시 채팅 채널인 스레드로 대화에 집중해보세요.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "설정 필터하기",
@@ -18107,7 +18153,8 @@
           "활동 알림 활성화됨",
         GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION:
           "새롭게 개선된 활동 알림 기능이 서버의 안전을 모니터링 중이에요. 서버의 정상적인 활동을 넘어서는 DM 또는 참가 활동이 발생할 경우, AutoMod가 여기로 메시지를 보낼 거예요.",
-        GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX: "활성",
+        GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX:
+          "활성화한 사람:",
         GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS:
           "~{joinCount, number}명에게 조치 취함",
         GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE: "비정상적인 참가 활동 감지됨",
@@ -18128,9 +18175,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "검색 결과",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "이름",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "가입 시기:",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Discord 계정 생성 일자",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "역할",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "신호",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "멤버 **{count}**명",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "멤버 **{total}**명 중 **{pageRange}**명",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "가장 최근의 멤버만 표시해서 예전 멤버는 보이지 않을 수도 있습니다(조만간 표시될 예정).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "표시 중",
@@ -18403,6 +18453,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "레이드 알림",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "알림 채널",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "없음",
+        GUILD_ANTIRAID_RAID_ALERT: "레이드 알림",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "보호 기능 활성화됨",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "알림 설정",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION: "AutoMod에서 설정",
@@ -18866,7 +18917,7 @@
         NOTIFICATION_PRESET_CUSTOM_DESCRIPTION:
           "수동으로 설정을 변경 중이에요.",
         NOTIFICATION_SETTINGS_USE_PRESET: "프리셋 사용하기",
-        NOTIF_MIGRATION_SETTINGS_TITLE: "신규 읽지 않음 설정(실험 기능)",
+        NOTIF_MIGRATION_SETTINGS_TITLE: "읽지 않음 신규 설정(실험 기능)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "서버에서 중요한 채널들을 선택할 수 있는 신규 읽지 않음 설정을 끕니다.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -20765,6 +20816,9 @@
           "Nitro 구독자는 이 장식을 구매할 때 할인받을 수 있어요",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro 구독 시 {price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "스타일을 바꿀 준비가 되셨나요?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "아, 이걸 어쩌죠.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "흐음, 상점을 불러오지 못했어요. 나중에 다시 시도해주세요.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Nitro를 구독 중이라면 언제든 사용 가능해요.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "제 아름다운 장식을 보세요",
@@ -20849,6 +20903,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "앱 추가",
         MONETIZATION: "수익화",
         GUILD_SETTINGS_MONETIZATION: "서버 수익화",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "서버 구독",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "프로모션 페이지",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "구독 티어",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "계속하기",
@@ -21274,6 +21329,8 @@
           "결제 팀 변경하기",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "결제 팀 선택하기",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "서버 수익화에 대한 수익금을 지급받을 팀을 변경합니다.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "팀을 변경하면 수익금 적격성에 영향을 줄 수 있어요",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22146,7 +22203,7 @@
         CLIPS_SETTINGS_FRAMERATE_NOTE: "클립이 녹화되는 최대 프레임 속도예요.",
         CLIPS_CROP_START: "자르기 시작",
         CLIPS_CROP_END: "자르기 종료",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "스포일러 클립",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "클립 스포일러 처리",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "클립 삭제하기",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "이제 $[!!{keybind}!!](keybindHook) 또는 사용자 지정 단축키를 설정해서 게임 내에서 바로 클립을 생성할 수 있어요.",
@@ -22158,6 +22215,9 @@
           "이런! 지금은 클립을 생성할 수 없어요.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "클립 설정 관리",
         CLIPS_USER_EDUCATION_LEARN_MORE: "자세히 알아보기",
+        SOUND_INCOMING_RING_HALLOWEEN: "핼러윈 수신음",
+        CUSTOM_SOUNDS: "사용자 지정 사운드",
+        ENABLE_PHONE_INTEGRATION: "휴대폰 앱 연동을 활성화해 체험해보세요.",
         GUILD_SHOP_CHANNEL_LABEL: "서버 상점",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "이용 가능 제품",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "{productName} 제품 목록 카드",
@@ -22262,6 +22322,8 @@
           "당사의 {classificationDescription} 정책에 대해 자세히 알아보세요.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord 규정은 모두에게 적용돼요",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "계정 상태로 가기",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "계정 상태로 가기",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "계정 상태를 확인하세요",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "다시 시도",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -22339,6 +22401,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "닫기",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "착오라고 생각되시나요? [저희에게 문의해주세요](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "민감하지 않음으로 표시하기",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "알려주셔서 감사합니다!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
           "민감하지 않음으로 표시하기",
@@ -22490,7 +22553,7 @@
         CUSTOM_HANG_STATUS: "사용자 지정 상태",
         CUSTOM_HANG_STATUS_CTA: "여기로 와보세요!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "무엇을 하고 있나요?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "상태 스와이프",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "상태 복사하기",
         HANG_STATUS_VC_ROW_ADD: "상태 추가하기",
         HANG_STATUS_HELP:
           "활동 상태를 설정해서 친구들에게 무엇을 하고 있는지 보여주세요.",
@@ -22760,6 +22823,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord가 앱 내 알림과 PC 알림을 표시하지 않고 메시지 알림음을 재생하지 않아요.",
         QUIET_MODE_DISABLED_BY: "집중 모드로 인해 비활성화되었어요",
+        FOCUS_MODE_TITLE: "집중 모드(베타)",
+        FOCUS_MODE_BADGE_ON: "켜짐",
+        FOCUS_MODE_BADGE_OFF: "꺼짐",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "오랫동안 방해 금지 상태였어요. 집중 모드를 활성화할까요?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity}에 대해 채팅하기",

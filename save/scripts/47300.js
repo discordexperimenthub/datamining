@@ -674,6 +674,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Uusimmat",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "T\xe4m\xe4n palvelimen botit",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Suositut",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Mit\xe4\xe4n ei tarvitse m\xe4\xe4ritt\xe4\xe4. Voit l\xe4hett\xe4\xe4 komennon tai lis\xe4t\xe4 vaihtoehdon alla",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Valitse vaihtoehto alta",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Sinulla ei ole oikeuksia komentojen suorittamiseen t\xe4ll\xe4 kanavalla",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Avaa komento",
@@ -1282,7 +1286,6 @@
           "[!!{username}!!](usernameOnClick) aloitti [toiminnan](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} aloitti toiminnan",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Ehk\xe4 my\xf6hemmin",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Miten !!{applicationName}!! onnistui?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1444,9 +1447,6 @@
           "T\xe4m\xe4 kylm\xe4\xe4v\xe4 kokeilu on tarjolla rajoitetun ajan.\nL\xf6ytyyk\xf6 Nitro? Ota avuksi SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Sovelluksen **!!{applicationName}!!** testitila on parhaillaan k\xe4yt\xf6ss\xe4. Sovelluksesi pit\xe4isi n\xe4ky\xe4 vaihtoehtona toimintapainikkeen valikossa.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Uusi toiminta! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Kokeile kavereidesi kanssa peli\xe4, jossa vuorotellen piirr\xe4t ja arvailet kaverin piirroksia. Ilmainen 29.3. asti.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Varoitus",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG:
           "(ty\xf6p\xf6yt\xe4sovelluksen beetatoiminto)",
@@ -3594,6 +3594,8 @@
           "Et saa ilmoituksia mykistetyist\xe4 kanavista, ja ne n\xe4kyv\xe4t harmaina kanavaluettelossasi. T\xe4m\xe4 asetus koskee kaikkia laitteitasi.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Et saa ilmoituksia mykistetyist\xe4 luokista, ja ne n\xe4kyv\xe4t harmaina kanavaluettelossasi. T\xe4m\xe4 asetus koskee kaikkia laitteitasi.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Palvelimesi on t\xe4ll\xe4 hetkell\xe4 $[**mykistettyn\xe4**](mutedHook). Et voi saada ilmoituksia t\xe4lt\xe4 kanavalta etk\xe4 voi muuttaa asetuksia, ennen kuin olet poistanut palvelimen mykistyksen.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Palvelimesi ilmoitusasetukseksi on m\xe4\xe4ritetty $[**ei mit\xe4\xe4n**](notificationHook). Et saa mit\xe4\xe4n ilmoituksia t\xe4lt\xe4 kanavalta, mutta voit ohittaa asetuksen t\xe4\xe4ll\xe4.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4378,7 +4380,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Oliko t\xe4m\xe4 ilmoitus hy\xf6dyllinen? [Kerro meille siit\xe4!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[Korosta ilmoitusasetukset](handleMessage)",
+          "[Kohokohtien ilmoitusasetukset](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "Oliko t\xe4m\xe4 ilmoitus hy\xf6dyllinen?",
         NOTIFICATION_REPORT_FEEDBACK:
           "Anna palautetta t\xe4st\xe4 ilmoituksesta",
@@ -4450,6 +4452,8 @@
         SEARCH_EMOJIS: "Etsi emojeja",
         SEARCH_FOR_EMOJI: "L\xf6yd\xe4 t\xe4ydellinen emoji",
         SEARCH_FOR_STICKER: "L\xf6yd\xe4 t\xe4ydellinen tarra",
+        SEARCH_FOR_REACTION: "L\xf6yd\xe4 t\xe4ydellinen reaktio",
+        SEARCH_FOR_SUPER_REACTION: "L\xf6yd\xe4 t\xe4ydellinen superreaktio",
         NO_EMOJI_SEARCH_RESULTS: "Hakemaasi emojia ei l\xf6ytynyt",
         EMOJI_CATEGORY_PACK: "{packName}: pakkaus",
         EMOJI_CATEGORY_RECENT: "Usein k\xe4ytetyt",
@@ -5406,6 +5410,7 @@
           "Jokin meni vikaan j\xe4rjestelm\xe4si vianm\xe4\xe4ritystiedostojen lukemisessa. Yrit\xe4 uudelleen.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Jokin meni vikaan emmek\xe4 voineet ladata vianm\xe4\xe4ritystiedostojasi palvelimelle. Yrit\xe4 latausta uudelleen.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Jaa push-ilmoituslokit",
         FORM_CHECKBOX_AEC_DUMP: "Vianm\xe4\xe4rityksen \xe4\xe4nitallenne",
         FORM_HELP_AEC_DUMP:
           "Vianm\xe4\xe4rityksen \xe4\xe4nitallenteen avulla voidaan analysoida \xe4\xe4niongelmia. Edelliset viisi minuuttia puheesta tallennetaan \xe4\xe4nimoduulin kansioon.",
@@ -5463,6 +5468,7 @@
         APP_ICON_SUNSET: "Auringonlaskun katu",
         APP_ICON_HOLO_WAVES: "Prismaattiset aallot",
         APP_ICON_PIRATE: "Kamu",
+        APP_ICON_PIRATE_1: "Arrr",
         APP_ICON_PIRATE_2: "Kyl maar",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5550,6 +5556,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# henkil\xf6} other {# henkil\xf6\xe4}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Avoimen puhelun toiminnot",
+        TURN_CAMERA_ON_A11Y_LABEL: "Laita kamera p\xe4\xe4lle",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Ota kamera pois p\xe4\xe4lt\xe4",
         IN_GAME_VOICE_SETTINGS: "Pelinsis\xe4iset \xe4\xe4niasetukset",
         VIDEO_SETTINGS: "Videoasetukset",
         TEXT: "Teksti",
@@ -5765,6 +5773,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "\xc4\xe4net yhdistetty",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Videokuva yhdistetty",
         CONNECTION_STATUS_RTC_CONNECTING: "Yhdistet\xe4\xe4n RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Tarkistetaan reitti",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS yhdistet\xe4\xe4n",
         CONNECTION_STATUS_NO_ROUTE: "Ei reitti\xe4",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC katkaistu",
@@ -8457,6 +8466,12 @@
           "Hypet\xe4 keskusteluissa superreaktioilla. [{planName}](onClick) antaa ne nyt k\xe4ytt\xf6\xf6si.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Hypet\xe4 keskusteluissa rajoittamattomilla superreaktioilla. [{planName}](onClick) antaa ne nyt k\xe4ytt\xf6\xf6si.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Hypet\xe4 keskusteluissa rajoittamattomilla superreaktioilla! Nyt k\xe4ytett\xe4viss\xe4 Nitrolla.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Hypet\xe4 keskusteluissa rajoittamattomilla superreaktioilla!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nyt k\xe4ytett\xe4viss\xe4 Nitrolla.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Hypet\xe4 keskusteluissa superreaktioilla. Saat niit\xe4 {refillAmount} kpl viikossa [Nitrolla]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8578,6 +8593,10 @@
           "Hypet\xe4 keskusteluissa superreaktioilla! [Nitrolla](onClick) saat rajoittamattomat superreaktiot ja muita etuja.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Rajoittamattomat superreaktiot!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Lis\xe4\xe4 superreaktio painiketta napsauttamalla.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Lis\xe4\xe4 superreaktio painiketta napauttamalla.",
         HOLD_UP: "Odotas hetki",
         MASKED_LINK_ALERT_V2_HEADER: "Poistutaan Discordista",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9665,6 +9684,10 @@
           "V\xe4riteemat",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Lis\xe4\xe4 oma silauksesi Discordiin yksil\xf6llisill\xe4 teemav\xe4reill\xe4.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Mukautetut sovelluskuvakkeet",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Valitse omaan fiilikseesi sopiva mobiiliversion ja ty\xf6p\xf6yt\xe4sovelluksen sis\xe4inen kuvake.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Edut",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "P\xe4ivit\xe4 Discord-k\xe4ytt\xf6kokemustasi",
@@ -10322,6 +10345,8 @@
           "Jokin n\xe4ytt\xe4\xe4 menneen vikaan, etk\xe4 voi k\xe4ytt\xe4\xe4 t\xe4t\xe4 koodia. Pahoittelut t\xe4st\xe4.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "T\xe4m\xe4 koodi on ilmeisesti jo lunastettu.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "T\xe4m\xe4 koodi vaikuttaisi kuuluvan jollekin toiselle.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "T\xe4m\xe4 koodi ei toiminut. Varmista, ett\xe4 koodi on oikein, ja yrit\xe4 uudelleen.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10363,6 +10388,8 @@
           "T\xe4m\xe4 koodi on sinulle l\xe4hetetyss\xe4 s\xe4hk\xf6postiviestiss\xe4.",
         REDEMPTION_CODE: "Lunastuskoodi",
         PARTNER_PROMOTION_CLAIM: "Seuraava",
+        PARTNER_PROMOTION_ERROR_TITLE: "Oho.",
+        PARTNER_PROMOTION_ERROR_BODY: "Jokin n\xe4ytt\xe4\xe4 menneen vikaan.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Tuntematon lahja.",
         REDEEM: "Lunasta",
         UNLOCK_CODE: "Avauskoodi",
@@ -11906,6 +11933,7 @@
           "Hanki t\xe4m\xe4 siisti merkki ryhtym\xe4ll\xe4 Nitro-tilaajaksi.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Ker\xe4ilij\xf6ille. Hanki t\xe4m\xe4 eksklusiivinen vain Nitro-tilaajille annettava merkki.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Lunasta",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Pist\xe4 Discordisi turbovaihteelle",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13429,6 +13457,7 @@
         MOST_POPULAR: "Suosituin",
         SPELLCHECK: "Oikoluku",
         ADD_TO_DICTIONARY: "Lis\xe4\xe4 sanastoon",
+        REMOVE_FROM_DICTIONARY: "Poista sanastosta",
         LANGUAGES: "Kielet",
         AUTO_SUGGEST_STICKERS: "Tarraehdotukset",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13728,6 +13757,7 @@
           "Olet saanut huomiotasi vaativan virallisen viestin Discordilta.",
         BUILD_OVERRIDE: "Koontiversion ohitus",
         BUILD_OVERRIDE_FOR: "Koontiversion ohitus kanavalle {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Vahvista hash-tunniste",
         BUILD_OVERRIDE_APPLY: "K\xe4yt\xe4",
         BUILD_OVERRIDE_CLEAR: "Tyhjenn\xe4",
         BUILD_OVERRIDE_ISNT_AVAILABLE:
@@ -13936,7 +13966,6 @@
           "Valitse joko {monthlyPrice}\xa0/\xa0kk tai {yearlyPrice}\xa0/\xa0vuosi",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Lahjan saaja saa t\xe4m\xe4n:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Lahjoita Nitro-j\xe4senyys",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Lahjan kesto",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Anna {nitroTierName} lahjaksi {count, plural, one {# kuukaudeksi} other {# kuukaudeksi}}",
@@ -13957,7 +13986,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitroa",
         GIFT_OPEN_PROMPT: "Avaa lahja",
         GIFT_RECIPIENT_INFO: "Vastaanottaja: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Lis\xe4\xe4 \xe4\xe4nitehoste",
+        GIFT_SELECT_EMOJI: "Lis\xe4\xe4 emojikonfetti",
         GIFT_SELECT_SOUNDBOARD_ADD: "Lis\xe4\xe4",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "T\xe4m\xe4 \xe4\xe4ni toistetaan, kun kaverisi avaa lahjansa",
         NITRO_CONFIRMATION: "Sait Nitron",
         OPENED_GIFT_CONFIRMATION: "Avasit t\xe4m\xe4n lahjan!",
         NITRO_PERKS: "Tutustu uusimpiin Nitro-etuihisi!",
@@ -14614,6 +14647,8 @@
           "Voit etsi\xe4 uusia palvelimia napsauttamalla palvelinluettelon kompassikuvaketta.",
         LOADING_TIP_12:
           "Voit luoda palvelinkansioita vet\xe4m\xe4ll\xe4 ja pudottamalla palvelimia toistensa p\xe4\xe4lle.",
+        LOADING_TIP_13:
+          "Voit etsi\xe4 aiheeseen liittyv\xe4n GIF-kuvan kirjoittamalla /gif tai /tenor + aihe.",
         LOADING_TIP_14:
           "Pelitila-asetusten avulla voit valita, haluatko muiden k\xe4ytt\xe4jien n\xe4kev\xe4n, mit\xe4 milloinkin pelaat.",
         LOADING_TIP_15:
@@ -14642,6 +14677,21 @@
           "Kun kirjoitat vinoviivan /, n\xe4et bottikomennot ja muut sis\xe4iset komennot",
         LOADING_TIP_27:
           "Voit **lihavoida** kirjoittamasi sanat kirjoittamalla niiden alkuun ja loppuun !!{asterisks}!!.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "Hauskaa halloweenia – muista nostaa palvelimesi kuolleista",
+        HALLOWEEN_LOADING_TEXT_2: "uuuUUUuuu – kauhean hauskaa halloweenia",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Keittelemme kokoon luita hyyt\xe4v\xe4\xe4 soitto\xe4\xe4nt\xe4",
+        HALLOWEEN_LOADING_TEXT_4:
+          "P\xf6\xf6\xd6\xd6\xd6\xd6\xd6\xf6\xf6\xf6\xd6\xf6\xd6\xf6",
+        HALLOWEEN_LOADING_TEXT_5: "Puhekeskustelussa jokainen on aave",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Varmistetaan, ettei palvelimillasi kummittele (todenn\xe4k\xf6isesti)",
+        HALLOWEEN_LOADING_TEXT_7: "Omaksumme halloweenin ”hengen”",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Julkaisevatko zombit vain haudattuja meemej\xe4?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord on saanut tartunnan! Varo zombi-Wumpusta",
         ACCESSIBILITY_LOADING_TIP_1:
           "Valitse vaalea tai tumma teema ulkoasuasetuksista.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14672,6 +14722,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Selv\xe4",
         VOICE_PANEL_SHOW_VOICE_USERS: "N\xe4yt\xe4 puhek\xe4ytt\xe4j\xe4t",
         VOICE_PANEL_USERS_A11Y_LABEL: "Puhek\xe4ytt\xe4j\xe4t",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, hiljennetty ja mykistetty",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, mykistetty",
         VOICE_PANEL_SHOW_EXTRAS: "N\xe4yt\xe4 kaikki k\xe4ytt\xe4j\xe4t",
         VOICE_PANEL_HIDE_EXTRAS: "Pienenn\xe4",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15845,6 +15898,8 @@
         FRIEND_FINDER_FRIENDS: "Kaikki kaverit",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontaktit Discordissa – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Mahdollisesti tuntemiasi ihmisi\xe4 – {count}",
         CONTACT_SYNC_TITLE: "Etsi kaverisi",
         CONTACT_SYNC_LANDING_TITLE: "Etsi kaverisi",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -17115,10 +17170,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} muuta aktiivista ketjua",
         THREAD_BROWSER_ARCHIVED_HEADER: "vanhemmat ketjut",
         THREAD_BROWSER_JOINED_HEADER: "Mukana {count} ketjussa",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} muuta aktiivista ketjua",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktiiviset ketjut – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Vanhemmat ketjut",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} ketjua, joissa mukana",
         THREAD_BROWSER_JOINED_COUNT: "Ketjut, joissa mukana – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}\xa0s sitten",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} p\xe4iv\xe4\xe4 sitten",
@@ -17137,8 +17190,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Aktiivisia ketjuja ei ole.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Arkistoituja ketjuja ei ole.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Pid\xe4 keskustelu k\xe4ynniss\xe4 ketjun, tilap\xe4isen tekstikanavan, avulla.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Pid\xe4 keskustelu keski\xf6ss\xe4 ketjun, tilap\xe4isen tekstikanavan, avulla.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Suodatusasetukset",
@@ -19311,10 +19362,13 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Hakutulokset",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Nimi",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "J\xe4sen alkaen",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Liittynyt Discordiin",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roolit",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Varoitusmerkkej\xe4",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL:
           "j\xe4sent\xe4 **{count}** j\xe4senest\xe4",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "j\xe4senet **{pageRange}**/**{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "T\xe4m\xe4 n\xe4ytt\xe4\xe4 vain uusimmat j\xe4senet – vanhempia j\xe4seni\xe4 ei v\xe4ltt\xe4m\xe4tt\xe4 n\xe4ytet\xe4 (pian tosin n\xe4ytet\xe4\xe4n).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "N\xe4kyviss\xe4",
@@ -19620,6 +19674,7 @@
           "Hy\xf6kk\xe4ysh\xe4lytykset",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "H\xe4lytyskanava",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Pois",
+        GUILD_ANTIRAID_RAID_ALERT: "Hy\xf6kk\xe4ysh\xe4lytys",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Suojaus k\xe4yt\xf6ss\xe4",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -22164,6 +22219,9 @@
           "Nitro-tilaajat saavat alennuksen t\xe4st\xe4 koristeesta",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} Nitro-tilauksella",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Oletko valmis uuteen ilmeeseen?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "T\xe4m\xe4p\xe4 kiusallista.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Kaupan lataaminen ei onnistunut. Tarkista tilanne my\xf6hemmin.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "K\xe4yt\xe4 milloin tahansa aktiivisella Nitro-tilauksella.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Katsohan kauniita koristeitani",
@@ -22253,6 +22311,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Lis\xe4\xe4 sovellus",
         MONETIZATION: "Rahallistaminen",
         GUILD_SETTINGS_MONETIZATION: "Palvelimen rahallistaminen",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Palvelintilaukset",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Promosivu",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "Tilaustaso",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "Jatka",
@@ -22694,6 +22753,8 @@
           "Vaihda maksuyhteystiimi",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Valitse maksuyhteystiimi",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Vaihda maksuyhteystiimi, jolle palvelimen rahallistamismaksut v\xe4litet\xe4\xe4n.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Maksuyhteystiimin muuttaminen saattaa vaikuttaa maksujen vastaanottokelpoisuuteen",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23631,6 +23692,11 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Hallinnoi leikkeiden asetuksia",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Lue lis\xe4\xe4",
+        SOUND_INCOMING_RING_HALLOWEEN:
+          "Halloweenin saapuvan puhelun soitto\xe4\xe4ni",
+        CUSTOM_SOUNDS: "Mukautetut \xe4\xe4net",
+        ENABLE_PHONE_INTEGRATION:
+          "Ota integrointi puhelinsovelluksen kanssa k\xe4ytt\xf6\xf6n, jos haluat kokea t\xe4m\xe4n.",
         GUILD_SHOP_CHANNEL_LABEL: "Palvelimen kauppa",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Saatavana olevat tuotteet",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23737,6 +23803,10 @@
           "Lis\xe4tietoja k\xe4yt\xe4nn\xf6ist\xe4mme liittyen aiheeseen {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discordin s\xe4\xe4nn\xf6t koskevat kaikkia",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Siirry tilin asematietoihin",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Siirry tilin asematietoihin",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Tarkasta tilin asema",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Yrit\xe4 uudelleen",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23818,6 +23888,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Sulje",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Olemmeko tehneet virheen? [Kerro meille](handleFalsePositiveHook).",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Merkitse vaarattomaksi",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Kiitos, ett\xe4 kerroit meille!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -24275,6 +24346,9 @@
           "Discord ei n\xe4yt\xe4 sovelluksensis\xe4isi\xe4 ja ty\xf6p\xf6yt\xe4ilmoituksia eik\xe4 toista viestien merkki\xe4\xe4ni\xe4.",
         QUIET_MODE_DISABLED_BY:
           "T\xe4m\xe4 on keskittymistilan k\xe4yt\xf6st\xe4 poistama",
+        FOCUS_MODE_TITLE: "Keskittymistila (BEETA)",
+        FOCUS_MODE_BADGE_ON: "P\xe4\xe4ll\xe4",
+        FOCUS_MODE_BADGE_OFF: "Pois",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Olet ollut \xc4l\xe4 h\xe4iritse ‑tilassa hetken aikaa. Haluatko ottaa keskittymistilan k\xe4ytt\xf6\xf6n sen sijasta?",
         ACTIVITY_REACTION_REPLY_TITLE: "Keskustele toiminnasta {activity}",

@@ -645,6 +645,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Recents",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bots in this server",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popular",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Nothing required. You can send the command or add an option below",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Select an option below",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "You do not have permissions to run commands in this channel",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Open Command",
@@ -1222,7 +1226,6 @@
           "[!!{username}!!](usernameOnClick) started an [activity](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} started an activity",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Maybe later",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "How'd !!{applicationName}!! go?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
           "What could have gone better?",
@@ -1369,9 +1372,6 @@
           "Try it for a ghoulishly limited time.\nGot Nitro? Summon SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Test mode is currently active for **!!{applicationName}!!**. Your application should appear as an option in the activities button menu.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "New Activity! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Try out a game where you draw and guess what you see with your friends. Free until 29th March.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Warning",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Desktop Beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "NEW! Voice channel reactions",
@@ -3421,6 +3421,8 @@
           "You won't receive notifications from muted channels and they will appear greyed out in your channel list. This setting applies across all your devices.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "You won't receive notifications from muted categories and they will appear greyed out in your channel list. This setting applies across all your devices.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Your server is currently $[**muted**](mutedHook). You can’t get notifications from this channel nor change settings until you unmute this server.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Your server's notification is set to $[**nothing**](notificationHook). You will not get any notifications from this channel, but you can override it here.",
         CHANNEL_OR_GUILD_MUTED: "This channel or server is currently muted.",
@@ -4247,6 +4249,8 @@
         SEARCH_EMOJIS: "Search emojis",
         SEARCH_FOR_EMOJI: "Find the perfect emoji",
         SEARCH_FOR_STICKER: "Find the perfect sticker",
+        SEARCH_FOR_REACTION: "Find the perfect reaction",
+        SEARCH_FOR_SUPER_REACTION: "Find the perfect Super Reaction",
         NO_EMOJI_SEARCH_RESULTS: "No emojis match your search",
         EMOJI_CATEGORY_PACK: "{packName} Pack",
         EMOJI_CATEGORY_RECENT: "Frequently Used",
@@ -5153,6 +5157,7 @@
           "Something went wrong while reading log files from your system. Please try again.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Something went wrong and we were unable to upload your debug files. Please try again.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Share Push Notification Logs",
         FORM_CHECKBOX_AEC_DUMP: "Diagnostic Audio Recording",
         FORM_HELP_AEC_DUMP:
           "Diagnostic audio recording is used for analysing audio problems. The last five minutes of voice is saved to voice module folder.",
@@ -5210,6 +5215,7 @@
         APP_ICON_SUNSET: "Sunset Ave",
         APP_ICON_HOLO_WAVES: "Prismatic Waves",
         APP_ICON_PIRATE: "Matey",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Aye Aye",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5295,6 +5301,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Person} other {# People}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Open voice call actions",
+        TURN_CAMERA_ON_A11Y_LABEL: "Turn Camera On",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Turn Camera Off",
         IN_GAME_VOICE_SETTINGS: "In-Game Voice Settings",
         VIDEO_SETTINGS: "Video Settings",
         TEXT: "Text",
@@ -5502,6 +5510,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Voice Connected",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video Connected",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC Connecting",
+        CONNECTION_STATUS_ICE_CHECKING: "Checking Route",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS Connecting",
         CONNECTION_STATUS_NO_ROUTE: "No Route",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC Disconnected",
@@ -8054,6 +8063,12 @@
           "Hype up the chat with Super Reactions. Now available with [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Hype up the chat with unlimited Super Reactions. Now available with [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Hype up the chat with unlimited Super Reactions! Now available with Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Hype up the chat with unlimited Super Reactions!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Now available with Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Hype up the chat with Super Reactions. Get {refillAmount} per week, available with [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8170,6 +8185,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Hype up the chat with Super Reactions! Get unlimited Super Reactions and other cool perks with [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Unlimited Super Reactions!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Click the button to add a Super Reaction.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Tap the button to add a Super Reaction.",
         HOLD_UP: "Hang On",
         MASKED_LINK_ALERT_V2_HEADER: "Leaving Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9211,6 +9230,9 @@
           "Colour Themes",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Add your vibe to Discord with unique theme colours.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "Custom App Icons",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Choose a mobile and in-app desktop icon that fits your vibe.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "The Perks",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Upgrade Your Discord Experience",
@@ -9846,6 +9868,8 @@
           "Seems like something's gone wrong and you can't use that code. Sorry about that.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Sorry, looks like this code has already been redeemed.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Looks like this code belongs to someone else.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Looks like this code didn't work. Make sure you have the right code and try again.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -9887,6 +9911,8 @@
           "This code is included in a confirmation email we just sent you.",
         REDEMPTION_CODE: "Redemption Code",
         PARTNER_PROMOTION_CLAIM: "Next",
+        PARTNER_PROMOTION_ERROR_TITLE: "Uh-oh!",
+        PARTNER_PROMOTION_ERROR_BODY: "Looks like something went wrong.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Unknown gift.",
         REDEEM: "Redeem",
         UNLOCK_CODE: "Unlock Code",
@@ -11370,6 +11396,7 @@
           "Get this cool badge for being a Nitro subscriber.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For the collectors. Grab this exclusive Nitro-only badge.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Redeem",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Supercharge your Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11775,7 +11802,7 @@
         GAME_INVITES_EMPTY_STATE_TITLE:
           "Game invites from your friends will show up here!",
         GAME_INVITES_EMPTY_STATE_SUBTITLE:
-          "You’ll be able to launch or install games you own\n directly your from invites.",
+          "You’ll be able to launch or install games you own\n directly from your invites.",
         GAME_INVITE_ACTIONS_MENU_LABEL: "Game invite actions",
         GAME_INVITES_DELETE_MODAL_TITLE:
           "Are you sure you want to delete all game invites?",
@@ -12822,6 +12849,7 @@
         MOST_POPULAR: "Most Popular",
         SPELLCHECK: "Spellcheck",
         ADD_TO_DICTIONARY: "Add to Dictionary",
+        REMOVE_FROM_DICTIONARY: "Remove from Dictionary",
         LANGUAGES: "Languages",
         AUTO_SUGGEST_STICKERS: "Sticker Suggestions",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13104,6 +13132,7 @@
           "There's an official message from the Discord team that needs your attention.",
         BUILD_OVERRIDE: "Build Override",
         BUILD_OVERRIDE_FOR: "Build Override for {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Commit Hash",
         BUILD_OVERRIDE_APPLY: "Apply",
         BUILD_OVERRIDE_CLEAR: "Clear",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Build isn't available",
@@ -13305,7 +13334,6 @@
           "Choose from {monthlyPrice}/month or {yearlyPrice}/year",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Your recipient will receive:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Gift a Nitro membership",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gift duration",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Gift {count, plural, one {# month} other {# months}} of {nitroTierName}",
@@ -13325,7 +13353,11 @@
         GIFT_DURATION: "1 {timeInterval} of Nitro",
         GIFT_OPEN_PROMPT: "Open gift",
         GIFT_RECIPIENT_INFO: "To: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Add sound effect",
+        GIFT_SELECT_EMOJI: "Add emoji confetti",
         GIFT_SELECT_SOUNDBOARD_ADD: "Add",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "This will play when your friend opens their gift",
         NITRO_CONFIRMATION: "You’ve got Nitro",
         OPENED_GIFT_CONFIRMATION: "You opened this gift!",
         NITRO_PERKS: "Check out your new Nitro perks!",
@@ -13943,6 +13975,8 @@
           "Click the compass in your server list to find new servers.",
         LOADING_TIP_12:
           "Drag and drop servers on top of each other to create server folders.",
+        LOADING_TIP_13:
+          "Type /gif or /tenor + anything to find a GIF for that topic!",
         LOADING_TIP_14:
           "Share what you're playing by using the game activity settings.",
         LOADING_TIP_15:
@@ -13971,6 +14005,20 @@
           "You can type / to view bot commands and other built-in commands",
         LOADING_TIP_27:
           "You can type !!{asterisks}!! around your words to make them **bold**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "Happy Halloween! Make sure to bring your server back from the dead",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO have a very spooky Halloween season",
+        HALLOWEEN_LOADING_TEXT_3: "Brewing up a bone-chilling ringtone",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "In voice chat, everyone is a spirit",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Verifying your servers aren’t haunted (probably)",
+        HALLOWEEN_LOADING_TEXT_7:
+          "We’re getting into the ‘spirit’ of Halloween",
+        HALLOWEEN_LOADING_TEXT_8: "Do zombies only post dead memes?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord is getting infected! Watch out for Zombie Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Pick light or dark theme in Appearance Settings.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14000,6 +14048,8 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Got it",
         VOICE_PANEL_SHOW_VOICE_USERS: "Show Voice Users",
         VOICE_PANEL_USERS_A11Y_LABEL: "Voice Users",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL: "{username}, deafened and muted",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, muted",
         VOICE_PANEL_SHOW_EXTRAS: "Show All Users",
         VOICE_PANEL_HIDE_EXTRAS: "Minimise",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15116,6 +15166,8 @@
         FRIEND_FINDER_FRIENDS: "All Friends",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Contacts on Discord – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "People you may know – {count}",
         CONTACT_SYNC_TITLE: "Find Your Friends",
         CONTACT_SYNC_LANDING_TITLE: "Find Your Friends",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16316,10 +16368,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} other active threads",
         THREAD_BROWSER_ARCHIVED_HEADER: "older threads",
         THREAD_BROWSER_JOINED_HEADER: "{count} joined threads",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} Other Active Threads",
         THREAD_BROWSER_ACTIVE_COUNT: "Active Threads – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Older Threads",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} Joined Threads",
         THREAD_BROWSER_JOINED_COUNT: "Joined Threads – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}s ago",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}d ago",
@@ -16338,8 +16388,6 @@
           "There are no active threads.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "There are no archived threads.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Stay focused on a conversation with a thread, a temporary text channel.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Stay focused on a conversation with a thread – a temporary text channel.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filter Settings",
@@ -18390,9 +18438,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Search Results",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Name",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Member Since",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Joined Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roles",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signals",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "members of **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "members **{pageRange}** of **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "This only shows the most recent members – older members may not be shown (but will be soon).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Showing",
@@ -18669,6 +18720,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Raid Alerts",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Alert Channel",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "None",
+        GUILD_ANTIRAID_RAID_ALERT: "Raid Alert",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Protection Enabled",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "Setup Alerts",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION: "Set up in AutoMod",
@@ -21079,6 +21131,9 @@
           "Nitro subscribers get a discount on this decoration",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} with Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Ready for a new look?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Well, this is awkward.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, we weren’t able to load the shop. Check back later.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Use at any time with an active Nitro subscription.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Look at my beautiful decoration",
@@ -21164,6 +21219,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Add App",
         MONETIZATION: "Monetisation",
         GUILD_SETTINGS_MONETIZATION: "Server Monetisation",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Server Subscriptions",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Promo Page",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Subscription Tier",
@@ -21600,6 +21656,8 @@
           "Change Payment Team",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Select Payment Team",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Change the team that payments for server monetisation will be sent to.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Changing your team may affect pay-out eligibility",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22512,6 +22570,10 @@
           "Oh no! We are currently unable to take clips.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "Manage Clips Settings",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Learn More",
+        SOUND_INCOMING_RING_HALLOWEEN: "Halloween Incoming Ring",
+        CUSTOM_SOUNDS: "Custom Sounds",
+        ENABLE_PHONE_INTEGRATION:
+          "Enable integration with the Phone app to experience this.",
         GUILD_SHOP_CHANNEL_LABEL: "Server Shop",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Available Products",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -22617,6 +22679,8 @@
           "Learn about our {classificationDescription} policy.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord’s rules apply to everyone",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Go to account standing",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Go to account standing",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "See account standing",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Retry",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -22690,6 +22754,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Dismiss",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Did we make a mistake? [Let us know](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Mark as not sensitive",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Thanks for letting us know!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23110,6 +23175,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord will not show in-app, desktop notifications or play message sounds.",
         QUIET_MODE_DISABLED_BY: "This is disabled by Focus Mode",
+        FOCUS_MODE_TITLE: "Focus Mode (BETA)",
+        FOCUS_MODE_BADGE_ON: "ON",
+        FOCUS_MODE_BADGE_OFF: "OFF",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "You’ve been on Do Not Disturb for a while. Would you like to enable Focus Mode instead?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chat about {activity}",

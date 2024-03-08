@@ -697,6 +697,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Leg\xfajabbak",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Botok a szerveren",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "N\xe9pszerű",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Nincs semmilyen k\xf6telező teendő. Elk\xfcldheted a parancsot, vagy megadhatsz lent egy opci\xf3t",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "V\xe1lassz egy opci\xf3t al\xe1bb",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Nincs jogosults\xe1god parancsok futtat\xe1s\xe1ra ezen a csatorn\xe1n",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Parancs megnyit\xe1sa",
@@ -1341,7 +1345,6 @@
           "[!!{username}!!](usernameOnClick) elind\xedtott egy [tev\xe9kenys\xe9get](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} elind\xedtott egy tev\xe9kenys\xe9get",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Tal\xe1n k\xe9sőbb",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Hogy ment: !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Mi lehetett volna jobb?",
@@ -1507,10 +1510,6 @@
           "Borzalmasan r\xf6vid ideig \xe9rhető el!\nVan Nitro-előfizet\xe9sed? A SpellCast is var\xe1zslatos \xe9lm\xe9nyeket tartogat!",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "A k\xf6vetkező alkalmaz\xe1s teszt m\xf3dja jelenleg akt\xedv: **!!{applicationName}!!**. Az alkalmaz\xe1sodnak meg kell jelennie a tev\xe9kenys\xe9gek gomb men\xfcj\xe9ben.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE:
-          "\xdaj tev\xe9kenys\xe9g! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Pr\xf3b\xe1lj ki egy j\xe1t\xe9kot, amelyben rajzolnotok kell, \xe9s a bar\xe1taiddal k\xf6z\xf6sen ki kell tal\xe1lnotok, mit l\xe1ttok. M\xe1rcius 29-ig ingyenesen el\xe9rhető.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Figyelmeztet\xe9s",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Asztali b\xe9ta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3718,6 +3717,8 @@
           "A n\xe9m\xedtott csatorn\xe1kb\xf3l nem fogsz \xe9rtes\xedt\xe9seket kapni, \xe9s ezek sz\xfcrke h\xe1tt\xe9rrel jelennek meg a csatornalist\xe1don. Ez a be\xe1ll\xedt\xe1s minden eszk\xf6z\xf6d\xf6n \xe9rv\xe9nyre jut.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "A n\xe9m\xedtott kateg\xf3ri\xe1kb\xf3l nem fogsz \xe9rtes\xedt\xe9seket kapni, \xe9s ezek kisz\xfcrk\xedtve jelennek meg a csatornalist\xe1dban. Ez a be\xe1ll\xedt\xe1s minden eszk\xf6z\xf6dre vonatkozik.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "A szervered pillanatnyilag $[**el van n\xe9m\xedtva**](mutedHook). Am\xedg vissza nem vonod a szerver n\xe9m\xedt\xe1s\xe1t, nem kapsz \xe9rtes\xedt\xe9seket ettől a csatorn\xe1t\xf3l, illetve nem m\xf3dos\xedthatod a be\xe1ll\xedt\xe1sokat sem.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "A szervered m\xf3dos\xedt\xe1si \xe1llapota jelenleg $[**semmi**](notificationHook). Ebből a csatorn\xe1b\xf3l semmilyen \xe9rtes\xedt\xe9st nem fogsz kapni, ezt itt tudod fel\xfclb\xedr\xe1lni.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4617,6 +4618,9 @@
         SEARCH_EMOJIS: "Emotikon keres\xe9se",
         SEARCH_FOR_EMOJI: "Tal\xe1ld meg a t\xf6k\xe9letes emotikont",
         SEARCH_FOR_STICKER: "Tal\xe1ld meg a t\xf6k\xe9letes matric\xe1t!",
+        SEARCH_FOR_REACTION: "A t\xf6k\xe9letes reakci\xf3 megkeres\xe9se",
+        SEARCH_FOR_SUPER_REACTION:
+          "A t\xf6k\xe9letes szuper reakci\xf3 megkeres\xe9se",
         NO_EMOJI_SEARCH_RESULTS: "Nincs a keres\xe9snek megfelelő emotikon",
         EMOJI_CATEGORY_PACK: "{packName} csomag",
         EMOJI_CATEGORY_RECENT: "Gyakran haszn\xe1lt",
@@ -5610,6 +5614,8 @@
           "Hiba t\xf6rt\xe9nt a napl\xf3f\xe1jlok rendszeredből val\xf3 olvas\xe1sa sor\xe1n. Pr\xf3b\xe1ld meg \xfajra!",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Hiba t\xf6rt\xe9nt a hibakeres\xe9si f\xe1jljaid felt\xf6lt\xe9se sor\xe1n. Pr\xf3b\xe1ld meg \xfajra!",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Lek\xfcld\xe9ses \xe9rtes\xedt\xe9sek napl\xf3j\xe1nak megoszt\xe1sa",
         FORM_CHECKBOX_AEC_DUMP: "Diagnosztikai hangr\xf6gz\xedt\xe9s",
         FORM_HELP_AEC_DUMP:
           "A diagnosztikai hangr\xf6gz\xedt\xe9s a hangprobl\xe9m\xe1k elemz\xe9s\xe9re szolg\xe1l. A hang utols\xf3 \xf6t perce ker\xfcl ment\xe9sre a hangmodul-mapp\xe1ba.",
@@ -5669,6 +5675,7 @@
         APP_ICON_SUNSET: "Sunset sug\xe1r\xfat",
         APP_ICON_HOLO_WAVES: "Prizmahull\xe1mok",
         APP_ICON_PIRATE: "Sz\xe1razf\xf6ldi patk\xe1ny",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Aye Aye",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5757,6 +5764,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Szem\xe9ly} other {# Szem\xe9lyek}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Hangh\xedv\xe1si műveletek megnyit\xe1sa",
+        TURN_CAMERA_ON_A11Y_LABEL: "Kamera bekapcsol\xe1sa",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Kamera kikapcsol\xe1sa",
         IN_GAME_VOICE_SETTINGS:
           "J\xe1t\xe9k k\xf6zbeni hangbe\xe1ll\xedt\xe1sok",
         VIDEO_SETTINGS: "Videobe\xe1ll\xedt\xe1sok",
@@ -5976,6 +5985,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Hang csatlakoztatva",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Vide\xf3 csatlakoztatva",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC csatlakoz\xe1s",
+        CONNECTION_STATUS_ICE_CHECKING: "\xdatvonal ellenőrz\xe9se",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS csatlakoztat\xe1sa",
         CONNECTION_STATUS_NO_ROUTE: "Nincs \xfatvonal",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC lev\xe1lasztva",
@@ -8795,6 +8805,12 @@
           "Dobd fel a cseveg\xe9st szuper reakci\xf3kkal. M\xe1r el\xe9rhetők a(z) [{planName}](onClick) csomaggal.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Dobd fel a cseveg\xe9st korl\xe1tlan szuper reakci\xf3kkal. M\xe1r el\xe9rhetők a(z) [{planName}](onClick) csomaggal.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Dobd fel a cseveg\xe9st korl\xe1tlan szuper reakci\xf3kkal. M\xe1r el\xe9rhetők a Nitro csomaggal.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Dobd fel a cseveg\xe9st korl\xe1tlan szuper reakci\xf3kkal!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nitro-előfizet\xe9ssel el\xe9rhető.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Dobd fel a cseveg\xe9st szuper reakci\xf3kkal. Heti {refillAmount} reakci\xf3t kapsz a [Nitr\xf3val]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8921,6 +8937,10 @@
           "Dobd fel a cseveg\xe9st szuper reakci\xf3kkal! Ha előfizetsz a [Nitr\xf3ra](onClick), korl\xe1tlan sz\xe1m\xfa szuper reakci\xf3hoz \xe9s m\xe1s menő jutalmakhoz juthatsz hozz\xe1.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Korl\xe1tlan szuper reakci\xf3k!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Kattints a gombra szuper reakci\xf3 hozz\xe1ad\xe1s\xe1hoz.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Koppints a gombra szuper reakci\xf3 hozz\xe1ad\xe1s\xe1hoz.",
         HOLD_UP: "H\xe9",
         MASKED_LINK_ALERT_V2_HEADER: "Elhagyod a Discordot",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -10037,6 +10057,10 @@
           "Sz\xednt\xe9m\xe1k",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Igaz\xedtsd a hangulatodhoz a Discordot egyedi t\xe9masz\xednekkel.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Egyedi alkalmaz\xe1s ikonok",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "A hangulatodnak megfelelő mobilos \xe9s alkalmaz\xe1son bel\xfcli asztali ikont v\xe1laszthatsz.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "A jutalmak",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Fejleszd tov\xe1bb a Discord-\xe9lm\xe9nyedet!",
@@ -10711,6 +10735,8 @@
           "\xdagy tűnik, hogy hiba t\xf6rt\xe9nt, \xe9s nem haszn\xe1lhatod ezt a k\xf3dot. Nagyon sajn\xe1ljuk.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Sajn\xe1lom, \xfagy tűnik, hogy ez a k\xf3d m\xe1r bev\xe1lt\xe1sra ker\xfclt.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "\xdagy tűnik, ez a k\xf3d m\xe1s\xe9.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "\xdagy tűnik, ez a k\xf3d nem műk\xf6dik. Győződj meg arr\xf3l, hogy a megfelelő k\xf3dot haszn\xe1lod, \xe9s pr\xf3b\xe1ld meg \xfajra.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10752,6 +10778,8 @@
           "A k\xf3dot a megerős\xedtő e-mail tartalmazza, amit \xe9pp az im\xe9nt k\xfcldt\xfcnk el neked.",
         REDEMPTION_CODE: "Bev\xe1lthat\xf3 k\xf3d",
         PARTNER_PROMOTION_CLAIM: "K\xf6vetkező",
+        PARTNER_PROMOTION_ERROR_TITLE: "Ajjajj!",
+        PARTNER_PROMOTION_ERROR_BODY: "\xdagy tűnik, hiba t\xf6rt\xe9nt.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Ismeretlen aj\xe1nd\xe9k.",
         REDEEM: "Bev\xe1lt\xe1s",
         UNLOCK_CODE: "K\xf3d felold\xe1sa",
@@ -12346,6 +12374,7 @@
           "Szerezd meg ezt a Nitro-előfizetőknek j\xe1r\xf3 menő jelv\xe9nyt!",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Igazi gyűjtőknek. Csapj le erre az exkluz\xedv, csak Nitr\xf3val el\xe9rhető jelv\xe9nyre!",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Bev\xe1lt\xe1s",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Adj l\xf6ketet a Discord-\xe9lm\xe9nyednek",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13940,6 +13969,7 @@
         MOST_POPULAR: "Legn\xe9pszerűbb",
         SPELLCHECK: "Helyes\xedr\xe1s-ellenőrz\xe9s",
         ADD_TO_DICTIONARY: "Hozz\xe1ad\xe1s a sz\xf3t\xe1rhoz",
+        REMOVE_FROM_DICTIONARY: "Elt\xe1vol\xedt\xe1s a sz\xf3t\xe1rb\xf3l",
         LANGUAGES: "Nyelvek",
         AUTO_SUGGEST_STICKERS: "Matricajavaslatok",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -14258,6 +14288,7 @@
         BUILD_OVERRIDE: "K\xe9sz\xedt\xe9s fel\xfclb\xedr\xe1l\xe1sa",
         BUILD_OVERRIDE_FOR:
           "K\xe9sz\xedt\xe9s fel\xfclb\xedr\xe1l\xe1sa a k\xf6vetkezőh\xf6z: {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Kivonat v\xe9gleges\xedt\xe9se",
         BUILD_OVERRIDE_APPLY: "Alkalmaz\xe1s",
         BUILD_OVERRIDE_CLEAR: "T\xf6rl\xe9s",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "K\xe9sz\xedt\xe9s nem el\xe9rhető",
@@ -14469,7 +14500,6 @@
           "A k\xf6vetkezőkből v\xe1laszthatsz: {monthlyPrice}/h\xf3nap vagy {yearlyPrice}/\xe9v",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "A c\xedmzettet a k\xf6vetkezővel \xf6rvendeztetj\xfck meg:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Nitro-tags\xe1got aj\xe1nd\xe9kozhatsz",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Aj\xe1nd\xe9k időtartama",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# h\xf3napnyi} other {# h\xf3napnyi}} {nitroTierName} aj\xe1nd\xe9koz\xe1sa",
@@ -14490,7 +14520,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Aj\xe1nd\xe9k kinyit\xe1sa",
         GIFT_RECIPIENT_INFO: "C\xedmzett: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Hangeffektus hozz\xe1ad\xe1sa",
+        GIFT_SELECT_EMOJI: "Emotikonkonfetti hozz\xe1ad\xe1sa",
         GIFT_SELECT_SOUNDBOARD_ADD: "Hozz\xe1ad\xe1s",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "A rendszer ezt j\xe1tssza le, amikor a bar\xe1tod kibontja az aj\xe1nd\xe9kot",
         NITRO_CONFIRMATION: "Nitr\xf3t kapt\xe1l",
         OPENED_GIFT_CONFIRMATION: "Kinyitottad az aj\xe1nd\xe9kot!",
         NITRO_PERKS: "N\xe9zd meg az \xfaj Nitro-jutalmaidat!",
@@ -15169,6 +15203,8 @@
           "Kattints az ir\xe1nytűre a szerverlist\xe1n, ha szeretn\xe9l \xfaj szervereket tal\xe1lni.",
         LOADING_TIP_12:
           "H\xfazd \xe9s ejtsd egym\xe1sra a szervereket, ha szervermapp\xe1kat szeretn\xe9l l\xe9trehozni.",
+        LOADING_TIP_13:
+          "Adott t\xe9m\xe1hoz kapcsol\xf3d\xf3 GIF-et a /gif vagy /tenor + b\xe1rmilyen sz\xf3 be\xedr\xe1s\xe1val kereshetsz!",
         LOADING_TIP_14:
           "Oszd meg, mivel j\xe1tszol a J\xe1t\xe9ktev\xe9kenys\xe9g be\xe1ll\xedt\xe1sokn\xe1l.",
         LOADING_TIP_15:
@@ -15197,6 +15233,21 @@
           "A botparancsok \xe9s az egy\xe9b be\xe9p\xedtett parancsok megtekint\xe9s\xe9hez \xedrj be egy / jelet",
         LOADING_TIP_27:
           "Ha !!{asterisks}!! szimb\xf3lumokat \xedrsz a szavaid k\xf6r\xe9, **f\xe9lk\xf6v\xe9rek** lesznek.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "boldog halloweent! felt\xe9tlen\xfcl hozd vissza az \xe9lők sor\xe1ba a szerveredet",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO h\xe1tborzongat\xf3an j\xf3 halloweent k\xedv\xe1nunk",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Hidegr\xe1z\xf3san j\xf3 csengőhangon dolgozunk",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "A hangcseveg\xe9sben mindenki szellem",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Ellenőrizz\xfck, hogy k\xeds\xe9rtet j\xe1rja-e a szervereidet (val\xf3sz\xednűleg igen)",
+        HALLOWEEN_LOADING_TEXT_7: "\xc1tj\xe1r minket a Halloween hangulata",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Vajon mindenki eldobja az agy\xe1t a zombik m\xe9mjeitől?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "A Discordot teljesen megfertőzt\xe9k! Vigy\xe1zz Zombi Wumpusszal!",
         ACCESSIBILITY_LOADING_TIP_1:
           "V\xe1lassz vil\xe1gos vagy s\xf6t\xe9t t\xe9m\xe1t a Megjelen\xe9si be\xe1ll\xedt\xe1sok k\xf6z\xf6tt.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -15227,6 +15278,9 @@
         VOICE_PANEL_SHOW_VOICE_USERS:
           "Hangcsatorna haszn\xe1l\xf3inak megjelen\xedt\xe9se",
         VOICE_PANEL_USERS_A11Y_LABEL: "Hangcsatorna haszn\xe1l\xf3i",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, s\xfcket\xedtve \xe9s n\xe9m\xedtva",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, n\xe9m\xedtva",
         VOICE_PANEL_SHOW_EXTRAS: "Minden felhaszn\xe1l\xf3 megjelen\xedt\xe9se",
         VOICE_PANEL_HIDE_EXTRAS: "Kis m\xe9ret",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -16421,6 +16475,8 @@
         FRIEND_FINDER_FRIENDS: "\xd6sszes bar\xe1t",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord-kapcsolatok – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Emberek, akiket ismerhetsz – {count}",
         CONTACT_SYNC_TITLE: "Tal\xe1ld meg bar\xe1taidat",
         CONTACT_SYNC_LANDING_TITLE: "Tal\xe1ld meg bar\xe1taidat",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -17738,12 +17794,8 @@
           "{count} tov\xe1bbi akt\xedv gondolatmenet",
         THREAD_BROWSER_ARCHIVED_HEADER: "r\xe9gebbi gondolatmenetek",
         THREAD_BROWSER_JOINED_HEADER: "{count} gondolatmenetbe l\xe9pt\xe9l be",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER:
-          "{count} tov\xe1bbi akt\xedv gondolatmenet",
         THREAD_BROWSER_ACTIVE_COUNT: "Akt\xedv gondolatmenetek – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "R\xe9gebbi gondolatmenetek",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "{count} gondolatmenethez csatlakozt\xe1l",
         THREAD_BROWSER_JOINED_COUNT:
           "Gondolatmenetek, amelyekhez csatlakozt\xe1l – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}\xa0m\xe1sodperccel ezelőtt",
@@ -17763,8 +17815,6 @@
           "Nincsenek akt\xedv gondolatmenetek.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Nincsenek archiv\xe1lt gondolatmenetek.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Maradj t\xe9m\xe1n\xe1l egy gondolatmenettel, egy ideiglenes sz\xf6veges csatorn\xe1n.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "A gondolatmenetekkel – azaz ideiglenes sz\xf6veges csatorn\xe1kkal – t\xe9m\xe1n\xe1l maradhatsz.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Szűrőbe\xe1ll\xedt\xe1sok",
@@ -20031,9 +20081,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Keres\xe9si eredm\xe9nyek",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "N\xe9v",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Tags\xe1g kezdete:",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Csatlakozott a Discordhoz",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Rangok",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Jelz\xe9sek",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "/**{count}** tag",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "**{pageRange}**/**{total}** tag",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Itt csak a leg\xfajabb tagok jelennek meg – előfordulhat, hogy a r\xe9gebbi tagokat nem fogod l\xe1tni (ez hamarosan v\xe1ltozni fog).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Megjelen\xedt\xe9s",
@@ -20361,6 +20414,7 @@
           "Raidekről sz\xf3l\xf3 figyelmeztet\xe9sek",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Figyelmeztet\xe9si csatorna",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Nincs",
+        GUILD_ANTIRAID_RAID_ALERT: "Raidekről sz\xf3l\xf3 figyelmeztet\xe9s",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "V\xe9delem enged\xe9lyezve",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -22986,6 +23040,9 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} Nitro-előfizet\xe9ssel",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "K\xe9szen \xe1llsz egy \xfaj megjelen\xe9sre?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Na, ez k\xednos.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, nem siker\xfclt bet\xf6lteni a boltot. T\xe9rj vissza k\xe9sőbb.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Akt\xedv Nitro-előfizet\xe9ssel b\xe1rmikor haszn\xe1lhat\xf3k.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT:
@@ -23082,6 +23139,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Alkalmaz\xe1s hozz\xe1ad\xe1sa",
         MONETIZATION: "Bev\xe9telszerz\xe9s",
         GUILD_SETTINGS_MONETIZATION: "Bev\xe9telszerz\xe9s a szerverrel",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Szerver-előfizet\xe9sek",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE:
           "N\xe9pszerűs\xedtő oldal",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
@@ -23559,6 +23617,8 @@
           "Fizet\xe9s\xe9rt felelős csapat m\xf3dos\xedt\xe1sa",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Fizet\xe9s\xe9rt felelős csapat kiv\xe1laszt\xe1sa",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "M\xf3dos\xedthatod a csapatot, amelynek a szerveres bev\xe9telszerz\xe9s\xe9rt j\xe1r\xf3 fizet\xe9seket k\xfcldj\xfck.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "A csapat m\xf3dos\xedt\xe1sa hat\xe1ssal lehet a kifizet\xe9si jogosults\xe1gra",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -24545,6 +24605,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Klipek be\xe1ll\xedt\xe1sainak kezel\xe9se",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Tov\xe1bbi t\xe1j\xe9koztat\xe1s",
+        SOUND_INCOMING_RING_HALLOWEEN: "Halloweeni h\xedv\xe1s",
+        CUSTOM_SOUNDS: "Egyedi hangok",
+        ENABLE_PHONE_INTEGRATION:
+          "Enged\xe9lyezd az integr\xe1ci\xf3t a telefonos alkalmaz\xe1ssal, hogy ezt halld.",
         GUILD_SHOP_CHANNEL_LABEL: "Szerverbolt",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "El\xe9rhető term\xe9kek",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -24651,6 +24715,10 @@
           "Tudnival\xf3k a k\xf6vetkező szab\xe1lyzatr\xf3l: {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "A Discord szab\xe1lyai mindenkire \xe9rv\xe9nyesek",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Ugr\xe1s a Fi\xf3k \xe1llapota ter\xfcletre",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Ugr\xe1s a Fi\xf3k \xe1llapota ter\xfcletre",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Fi\xf3k\xe1llapot megtekint\xe9se",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "\xdajra",
@@ -24738,6 +24806,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Elvet\xe9s",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "T\xe9vedt\xfcnk? [Add a tudtunkra!](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "Megjel\xf6l\xe9s nem \xe9rz\xe9kenyk\xe9nt",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "K\xf6sz\xf6nj\xfck, hogy a tudtunkra adtad!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -25213,6 +25283,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "A Discord nem fog megjelenni az alkalmaz\xe1son bel\xfcli \xe9s az asztali \xe9rtes\xedt\xe9sekn\xe9l, \xe9s \xfczenethangot sem fog lej\xe1tszani.",
         QUIET_MODE_DISABLED_BY: "A F\xf3kusz m\xf3d letiltja ezt",
+        FOCUS_MODE_TITLE: "F\xf3kusz m\xf3d (B\xc9TA)",
+        FOCUS_MODE_BADGE_ON: "BE",
+        FOCUS_MODE_BADGE_OFF: "KI",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Egy ideje m\xe1r Elfoglalt m\xf3dot haszn\xe1lsz. Szeretn\xe9d ink\xe1bb enged\xe9lyezni a F\xf3kusz m\xf3dot?",
         ACTIVITY_REACTION_REPLY_TITLE:

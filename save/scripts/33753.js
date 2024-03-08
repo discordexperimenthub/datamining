@@ -637,6 +637,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "ล่าสุด",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "บอทในเซิร์ฟเวอร์นี้",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "ยอดนิยม",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "ไม่ต้องทำอะไร คุณส่งคำสั่งหรือเพิ่มตัวเลือกด้านล่างได้",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "เลือกตัวเลือกด้านล่าง",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "คุณไม่ได้รับอนุญาตให้ใช้คำสั่งในช่องนี้",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "เปิดคำสั่ง",
@@ -1217,7 +1221,6 @@
           "[!!{username}!!](usernameOnClick) เริ่ม[กิจกรรม](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} เริ่มกิจกรรม",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "ไว้ทีหลัง",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! เป็นอย่างไรบ้าง",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "มีอะไรที่พัฒนาได้บ้าง",
@@ -1358,9 +1361,6 @@
           "ลองเปิดใน Ghoulish แบบจำกัดเวลาดูสิ\nมี Nitro แล้วหรือยัง เรียก SpellCast",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "โหมดทดสอบกำลังเปิดใช้งานอยู่กับ **!!{applicationName}!!** แอปพลิเคชันของคุณจะปรากฏเป็นตัวเลือกในเมนูของปุ่มกิจกรรม",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "กิจกรรมใหม่! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "ลองเล่นเกมที่คุณต้องวาดภาพและเดาว่าเป็นภาพอะไรกับเพื่อนๆ ของคุณ เล่นฟรีจนถึง 29 มีนาคม",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "คำเตือน",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(เดสก์ท็อปเบต้า)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3416,6 +3416,8 @@
           "คุณจะไม่เห็นการแจ้งเตือนจากช่องที่ปิดแจ้งเตือน และช่องเหล่านี้จะปรากฏเป็นสีเทาในรายการช่องของคุณ การตั้งค่านี้ใช้กับอุปกรณ์ของคุณทั้งหมด",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "คุณจะไม่เห็นการแจ้งเตือนจากหมวดหมู่ที่ปิดแจ้งเตือน และช่องเหล่านี้จะปรากฏเป็นสีเทาในรายการช่องของคุณ การตั้งค่านี้ใช้กับอุปกรณ์ของคุณทั้งหมด",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "ขณะนี้เซิร์ฟเวอร์ของคุณถูก$[**ปิดเสียง**](mutedHook)อยู่ คุณจะไม่ได้รับการแจ้งเตือนจากช่องนี้หรือเปลี่ยนการตั้งค่าได้จนกว่าคุณจะเปิดเสียงเซิร์ฟเวอร์นี้",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "การแจ้งเตือนเซิร์ฟเวอร์ของคุณตั้งค่าเป็น $[**ไม่มี**](notificationHook) คุณจะไม่ได้รับการแจ้งเตือนใดๆ จากช่องนี้ แต่คุณสามารถแทนที่ได้ที่นี่",
         CHANNEL_OR_GUILD_MUTED: "ช่องหรือเซิร์ฟเวอร์นี้ปิดแจ้งเตือนอยู่",
@@ -4241,6 +4243,8 @@
         SEARCH_EMOJIS: "ค้นหาอีโมจิ",
         SEARCH_FOR_EMOJI: "ค้นหาอีโมจิที่เหมาะกับคุณ",
         SEARCH_FOR_STICKER: "ค้นหาสติกเกอร์ที่เหมาะกับคุณ",
+        SEARCH_FOR_REACTION: "ค้นหารีแอ็กชันที่สมบูรณ์แบบ",
+        SEARCH_FOR_SUPER_REACTION: "ค้นหาซูเปอร์รีแอ็กชันที่สมบูรณ์แบบ",
         NO_EMOJI_SEARCH_RESULTS: "ไม่พบอิโมจิที่ตรงกับคำค้นหา",
         EMOJI_CATEGORY_PACK: "แพ็ค {packName}",
         EMOJI_CATEGORY_RECENT: "ใช้บ่อย",
@@ -5137,6 +5141,7 @@
           "เกิดข้อผิดพลาดขณะกำลังอ่านไฟล์บันทึกจากระบบของคุณ โปรดลองอีกครั้ง",
         UPLOAD_DEBUG_LOG_FAILURE:
           "เกิดข้อผิดพลาดบางอย่าง เราไม่สามารถอัปโหลดไฟล์การดีบักของคุณได้ โปรดลองอีกครั้ง",
+        SHARE_PUSH_NOTIFICATION_LOGS: "แชร์รายบันทึกการแจ้งเตือนแบบพุช",
         FORM_CHECKBOX_AEC_DUMP: "การวิเคราะห์การบันทึกเสียง",
         FORM_HELP_AEC_DUMP:
           "การวิเคราะห์การบันทึกเสียงมีไว้สำหรับวิเคราะห์ปัญหาด้านเสียง ช่วงห้านาทีสุดท้ายของไฟล์เสียงจะถูกบันทึกลงในโฟลเดอร์โมดูลเสียง",
@@ -5194,6 +5199,7 @@
         APP_ICON_SUNSET: "ถนนอาทิตย์อัสดง",
         APP_ICON_HOLO_WAVES: "คลื่นรุ้ง",
         APP_ICON_PIRATE: "พวก",
+        APP_ICON_PIRATE_1: "ส่งเสียงขู่",
         APP_ICON_PIRATE_2: "อ่าฮะ อ่าฮะ",
         APP_ICON_PIRATE_3: "ทิ้งงง",
         APP_ICON_PIRATE_4: "อาาร์",
@@ -5278,6 +5284,8 @@
         VOICE_SETTINGS: "ตั้งค่าเสียง",
         VOICE_CALL_MEMBER_LIST_TITLE: "{count, plural, =1 {# คน} other {# คน}}",
         VOICE_CALL_ACTION_A11Y_HINT: "เปิดการดำเนินการโทรด้วยเสียง",
+        TURN_CAMERA_ON_A11Y_LABEL: "เปิดกล้อง",
+        TURN_CAMERA_OFF_A11Y_LABEL: "ปิดกล้อง",
         IN_GAME_VOICE_SETTINGS: "การตั้งค่าเสียงในเกม",
         VIDEO_SETTINGS: "การตั้งค่าวิดีโอ",
         TEXT: "ข้อความ",
@@ -5482,6 +5490,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "เชื่อมต่อเสียงแล้ว",
         CONNECTION_STATUS_VIDEO_CONNECTED: "เชื่อมต่อวิดีโอแล้ว",
         CONNECTION_STATUS_RTC_CONNECTING: "กำลังเชื่อมต่อ RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "กำลังตรวจสอบเส้นทาง",
         CONNECTION_STATUS_DTLS_CONNECTING: "กำลังเชื่อมต่อ DTLS",
         CONNECTION_STATUS_NO_ROUTE: "ไม่มีเส้นทาง",
         CONNECTION_STATUS_RTC_DISCONNECTED: "ตัดการเชื่อมต่อ RTC แล้ว",
@@ -5953,7 +5962,7 @@
         COPY_ID_COMMAND: "คัดลอก ID คำสั่ง",
         COPY_ID_EMOJI: "คัดลอก ID อีโมจิ",
         COPY_ID_EVENT: "คัดลอก ID กิจกรรม",
-        COPY_ID_EVENT_RECURRENCE: "คัดลอก ID ที่ซ้ำ",
+        COPY_ID_EVENT_RECURRENCE: "คัดลอก ID กิจกรรมครั้งเดียว",
         COPY_ID_GUILD: "คัดลอก ID เซิร์ฟเวอร์",
         COPY_ID_MESSAGE: "คัดลอก ID ข้อความ",
         COPY_ID_ROLE: "คัดลอก ID บทบาท",
@@ -8026,6 +8035,12 @@
           "เพิ่มความสนุกให้กับแชทด้วยการตอบสนองแบบซูเปอร์ พร้อมใช้งานแล้วสำหรับ [{planName}](onClick)",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "สนุกกับการแชตกันให้สุด ด้วย Super Reaction แบบไม่อั้น ใช้งานกับ [{planName}](onClick) ได้แล้ว",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "สนุกกับการแชทให้สุดด้วยซูเปอร์รีแอ็กชันแบบไม่อั้น! พร้อมใช้งานแล้วกับ Nitro",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "สนุกกับการแชทให้สุดด้วยซูเปอร์รีแอ็กชันแบบไม่อั้น!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "พร้อมใช้งานแล้วกับ Nitro",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "เพิ่มความไฮป์ให้กับแชทด้วยการตอบสนองแบบซูเปอร์ รับ {refillAmount} ครั้งต่อสัปดาห์ พร้อมใช้งานแล้วสำหรับ [Nitro]({nitroLink})",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8142,6 +8157,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "แชตมันกันกว่าเดิมด้วย Super Reaction! รับ Super Reaction ไม่อั้น และสิทธิประโยชน์สุดเจ๋งอื่น ๆ ด้วย [Nitro](onClick)",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Super Reaction ไม่จำกัด!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "คลิกที่ปุ่มเพื่อเพิ่มซูเปอร์รีแอ็กชัน",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "แตะที่ปุ่มเพื่อเพิ่มซูเปอร์รีแอ็กชัน",
         HOLD_UP: "รอเดี๋ยว",
         MASKED_LINK_ALERT_V2_HEADER: "ออกจาก Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9175,6 +9194,9 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "สีธีม",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "เพิ่มบรรยากาศให้กับ Discord ด้วยสีธีมที่ไม่เหมือนใคร",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "ไอคอนแอปแบบกำหนดเอง",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "เลือกไอคอนบนมือถือและเดสก์ท็อปในแอปในแบบที่คุณชอบ",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "สิทธิประโยชน์",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "อัปเกรดประสบการณ์ Discord ของคุณ",
@@ -9239,7 +9261,7 @@
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2:
           "การตอบสนองแบบซูเปอร์ได้ไม่อั้น",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED:
-          "การตอบสนองแบบซูเปอร์ได้ไม่อั้น",
+          "ซูเปอร์รีแอ็กชันแบบไม่อั้น",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION:
           "เพิ่มความไฮป์ให้กับแชทด้วยการตอบสนองแบบเคลื่อนไหวสุดดุ๊กดิ๊ก",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2:
@@ -9820,6 +9842,7 @@
           "ดูเหมือนจะมีบางอย่างผิดพลาด คุณไม่สามารถใช้รหัสนั้นได้ ต้องขอโทษด้วย",
         PROMOTION_ERROR_CLAIMED_BODY:
           "ขออภัย ดูเหมือนว่ารหัสนี้จะมีการแลกรับไปแล้ว",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY: "ดูเหมือนว่ารหัสนี้จะเป็นของคนอื่น",
         PROMOTION_ERROR_NO_CODE_BODY:
           "ดูเหมือนว่ารหัสนี้จะใช้งานไม่ได้ โปรดตรวจสอบว่าคุณใช้รหัสที่ถูกต้องแล้วลองอีกครั้ง",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -9861,6 +9884,8 @@
           "รหัสนี้รวมอยู่ในอีเมลยืนยันที่เราส่งให้คุณ",
         REDEMPTION_CODE: "รหัสแลกรับ",
         PARTNER_PROMOTION_CLAIM: "ถัดไป",
+        PARTNER_PROMOTION_ERROR_TITLE: "โอ๊ะโอ!",
+        PARTNER_PROMOTION_ERROR_BODY: "ดูเหมือนว่าจะเกิดข้อผิดพลาด",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "ของขวัญที่ไม่รู้จัก",
         REDEEM: "แลกใช้",
         UNLOCK_CODE: "ปลดล็อกรหัส",
@@ -11343,6 +11368,7 @@
           "รับป้ายสุดเท่นี้สำหรับการเป็นสมาชิก Nitro",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "สำหรับนักสะสม รับป้ายสุดพิเศษเฉพาะชาว Nitro นี้เลย",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "แลกใช้",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "ยกระดับ Discord ของคุณ",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -12793,6 +12819,7 @@
         MOST_POPULAR: "ยอดนิยม",
         SPELLCHECK: "ตรวจตัวสะกด",
         ADD_TO_DICTIONARY: "เพิ่มไปในพจนานุกรม",
+        REMOVE_FROM_DICTIONARY: "ลบออกจากพจนานุกรม",
         LANGUAGES: "ภาษา",
         AUTO_SUGGEST_STICKERS: "สติ๊กเกอร์แนะนำ",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13075,6 +13102,7 @@
           "มีข้อความทางการจากทีม Discord ต้องการความสนใจจากคุณ",
         BUILD_OVERRIDE: "Build Override",
         BUILD_OVERRIDE_FOR: "Build Override สำหรับ {releaseChannel}",
+        BUILD_OVERRIDE_ID: "สร้างแฮช",
         BUILD_OVERRIDE_APPLY: "ใช้",
         BUILD_OVERRIDE_CLEAR: "ล้าง",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "ไม่มี Build",
@@ -13276,7 +13304,6 @@
           "เลือก {monthlyPrice}/เดือน หรือ {yearlyPrice}/ปี",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "ผู้ที่ได้ของขวัญจะได้รับ:",
-        MOBILE_CUSTOM_GIFT_TITLE: "ส่งการสมัครสมาชิก Nitro เป็นของขวัญ",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "ระยะเวลาของขวัญ",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "ให้ของขวัญเป็น {nitroTierName} นาน {count, plural, one {# เดือน} other {# เดือน}}",
@@ -13296,7 +13323,11 @@
         GIFT_DURATION: "Nitro ซึ่งใช้ได้ 1 {timeInterval}",
         GIFT_OPEN_PROMPT: "เปิดของขวัญ",
         GIFT_RECIPIENT_INFO: "ถึง: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "เพิ่มเอฟเฟกต์เสียง",
+        GIFT_SELECT_EMOJI: "เพิ่มคอนเฟตติอีโมจิ",
         GIFT_SELECT_SOUNDBOARD_ADD: "เพิ่ม",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "เอฟเฟกต์นี้จะเล่นเมื่อเพื่อนของคุณเปิดของขวัญt",
         NITRO_CONFIRMATION: "คุณได้รับ Nitro",
         OPENED_GIFT_CONFIRMATION: "คุณได้เปิดของขวัญชิ้นนี้แล้ว!",
         NITRO_PERKS: "ตรวจสอบสิทธิประโยชน์ใหม่ๆ จาก Nitro!",
@@ -13921,6 +13952,8 @@
           "คลิกเข็มทิศในรายการเซิร์ฟเวอร์ของคุณเพื่อค้นหาเซิร์ฟเวอร์ใหม่",
         LOADING_TIP_12:
           "ลากและวางเซิร์ฟเวอร์หนึ่งบนเซิร์ฟเวอร์อื่น เพื่อสร้างโฟลเดอร์เซิร์ฟเวอร์",
+        LOADING_TIP_13:
+          "พิมพ์ /gif หรือ /tenor + อะไรก็ได้เพื่อค้นหา GIF สำหรับหัวข้อที่ต้องการ!",
         LOADING_TIP_14: "แชร์เกมที่คุณกำลังเล่นด้วยการตั้งค่ากิจกรรมเกม",
         LOADING_TIP_15:
           "ลากคลุมข้อความในแถบแชทของคุณเพื่อทำตัวหนา ใช้ตัวเอียง และอื่น ๆ",
@@ -13947,6 +13980,17 @@
           "คุณสามารถพิมพ์ / เพื่อดูคำสั่งบอทและคำสั่งบิลท์อินอื่น ๆ ได้",
         LOADING_TIP_27:
           "คุณสามารถพิมพ์ !!{asterisks}!! ครอบคำเหล่านี้เพื่อทำให้เป็น**ตัวหนา**ได้",
+        HALLOWEEN_LOADING_TEXT_1:
+          "สุขสันต์วันฮาโลวีน อย่าลืมปลุกเซิร์ฟเวอร์ให้ฟื้นคืนชีพขึ้นมานะ",
+        HALLOWEEN_LOADING_TEXT_2: "oooOOOooO มีฮาโลวันที่น่ากลัวสุดๆ ไปเลย",
+        HALLOWEEN_LOADING_TEXT_3: "สร้างเสียงริงโทนชวนขนลุก",
+        HALLOWEEN_LOADING_TEXT_4: "แบร่~",
+        HALLOWEEN_LOADING_TEXT_5: "ในแชทเสียง ทุกคนเป็นวิญญาณ",
+        HALLOWEEN_LOADING_TEXT_6:
+          "กำลังยืนยันว่าเซิร์ฟเวอร์ของคุณไม่ได้โดนผีสิง (น่าจะนะ)",
+        HALLOWEEN_LOADING_TEXT_7: "เราพยายามเข้าถึง “จิตวิญญาณ” ของฮาโลวีน",
+        HALLOWEEN_LOADING_TEXT_8: "ซอมบี้โพสต์แต่มีมที่ตายแล้วหรอ",
+        HALLOWEEN_LOADING_TEXT_9: "Discord ติดเชื้อแล้ว! ระวังฝูงซอมบี้บุกเลย",
         ACCESSIBILITY_LOADING_TIP_1:
           "เลือกชุดรูปแบบสว่างหรือมืดได้ในการตั้งค่าลักษณะ",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -13977,6 +14021,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "เข้าใจแล้ว",
         VOICE_PANEL_SHOW_VOICE_USERS: "Show Voice Users",
         VOICE_PANEL_USERS_A11Y_LABEL: "Voice Users",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username} ถูกปิดการได้ยินและปิดเสียง",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username} ถูกปิดเสียง",
         VOICE_PANEL_SHOW_EXTRAS: "แสดงผู้ใช้ทั้งหมด",
         VOICE_PANEL_HIDE_EXTRAS: "ย่อ",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15092,6 +15139,8 @@
         FRIEND_FINDER_FRIENDS: "เพื่อนทั้งหมด",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "ผู้ติดต่อบน Discord - {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "คนที่คุณอาจรู้จัก — {count}",
         CONTACT_SYNC_TITLE: "ค้นหาเพื่อนของคุณ",
         CONTACT_SYNC_LANDING_TITLE: "ค้นหาเพื่อนของคุณ",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16283,10 +16332,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} เธรดอื่นๆ ที่ใช้งานอยู่",
         THREAD_BROWSER_ARCHIVED_HEADER: "เธรดเก่า",
         THREAD_BROWSER_JOINED_HEADER: "{count} เธรดที่เข้าร่วม",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} เธรดอื่นๆ ที่ใช้งานอยู่",
         THREAD_BROWSER_ACTIVE_COUNT: "เธรดที่ใช้งานอยู่ - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "เธรดเก่า",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} เธรดที่เข้าร่วม",
         THREAD_BROWSER_JOINED_COUNT: "เธรดที่เข้าร่วม - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} วินาทีที่แล้ว",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} วันที่แล้ว",
@@ -16303,8 +16350,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "ไม่มีเธรด",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "ไม่มีเธรดที่ใช้งานอยู่",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "ไม่มีเธรดที่เก็บถาวร",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "ไม่พลาดทุกการสนทนาด้วยเธรด ซึ่งเป็นช่องข้อความชั่วคราว",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "ไม่พลาดทุกการสนทนาด้วยเธรด ซึ่งเป็นช่องข้อความชั่วคราว",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "การตั้งค่าตัวกรอง",
@@ -18348,9 +18393,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "ผลการค้นหา",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "ชื่อ",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "เป็นสมาชิกตั้งแต่",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "เข้าร่วม Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "บทบาท",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "สัญญาณ",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "สมาชิกจำนวน **{count}** คน",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "สมาชิก **{pageRange}** จาก **{total}** คน",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "จะแสดงเฉพาะคนที่เพิ่งเป็นสมาชิกเมื่อเร็วๆ นี้ - อาจจะไม่แสดงสมาชิกที่มาก่อนนั้น (แต่เดี๋ยวจะแสดง)",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "กำลังแสดง",
@@ -18639,6 +18687,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "แจ้งเตือนการบุกรุก",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "ช่องแจ้งเตือน",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "ไม่มี",
+        GUILD_ANTIRAID_RAID_ALERT: "แจ้งเตือนการบุกโจมตี",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "เปิดใช้งานการป้องกันแล้ว",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "ติดตั้งการแจ้งเตือน",
@@ -21065,6 +21114,9 @@
           "ผู้ที่เป็นสมาชิก Nitro จะได้รับส่วนลดสำหรับของตกแต่งชิ้นนี้",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} ด้วย Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "พร้อมสำหรับลุคใหม่หรือยัง",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "เอ่อ จะว่ายังไงดีล่ะ",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "คือว่าเราโหลดร้านค้าไม่ได้ ลองเข้ามาดูคราวหลังนะ",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "ใช้ได้เสมอเมื่อมีสถานะสมาชิก Nitro ที่ใช้งานอยู่",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "ดูของประดับอันแสนสวยงามของฉันสิ",
@@ -21150,6 +21202,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "เพิ่มแอป",
         MONETIZATION: "การสร้างรายได้",
         GUILD_SETTINGS_MONETIZATION: "การสร้างรายได้ในเซิร์ฟเวอร์",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "การสมัครสมาชิกเซิร์ฟเวอร์",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "หน้าโปรโมท",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "ระดับการสมัครสมาชิก",
@@ -21586,6 +21639,8 @@
           "เปลี่ยนทีมการชำระเงิน",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "เลือกทีมการชำระเงิน",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "เปลี่ยนทีมที่จะส่งเงินจากการสร้างรายได้ในเซิร์ฟเวอร์ไปให้",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "การเปลี่ยนทีมอาจส่งผลต่อสิทธิ์ในการรับเงิน",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22403,7 +22458,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "ดูคลิป",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "คุณมี {count, plural, =1 {# คลิปใหม่} other {# คลิปใหม่}}!",
-        CLIPS_REVIEW_NOW: "ตรวจสอบเลย",
+        CLIPS_REVIEW_NOW: "ดูเลย",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "คุณได้บันทึกคลิปในระหว่างการสตรีม !!{applicationName}!! ครั้งล่าสุด ลองดูในไลบรารีคลิปเลย!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "ดูคลิป",
@@ -22490,6 +22545,10 @@
         CLIPS_USER_EDUCATION_ERROR_BODY: "โอ้ไม่นะ! ตอนนี้เราถ่ายคลิปไม่ได้",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "จัดการการตั้งค่าคลิป",
         CLIPS_USER_EDUCATION_LEARN_MORE: "เรียนรู้เพิ่มเติม",
+        SOUND_INCOMING_RING_HALLOWEEN: "เสียงกริ๊งเรียกเข้าฮาโลวีน",
+        CUSTOM_SOUNDS: "กำหนดเสียงเอง",
+        ENABLE_PHONE_INTEGRATION:
+          "เปิดใช้งานการผสานการทำงานกับแอปโทรศัพท์เพื่อสัมผัสประสบการณ์นี้",
         GUILD_SHOP_CHANNEL_LABEL: "ร้านค้าเซิร์ฟเวอร์",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "ผลิตภัณฑ์ที่มี",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -22594,6 +22653,8 @@
           "เรียนรู้เพิ่มเติมเกี่ยวกับนโยบาย{classificationDescription}",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "กฎของ Discord มีผลบังคับใช้กับทุกคน",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "ไปที่สถานะบัญชี",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "ไปที่สถานะบัญชี",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "ดูสถานะบัญชี",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "ลองใหม่",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -22666,6 +22727,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "ยกเลิก",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "หากเราตัดสินผิดพลาด โปรด[แจ้งให้เราทราบ](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "ทำเครื่องหมายว่าไม่ใช่เนื้อหาละเอียดอ่อน",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "ขอบคุณที่แจ้งให้เราทราบ",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
           "ทำเครื่องหมายว่าไม่ใช่เนื้อหาละเอียดอ่อน",
@@ -22699,7 +22762,7 @@
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "เราจะไม่เก็บสื่อที่ถูกบล็อกเป็นการถาวร เนื่องจากสื่อนี้ถูกอัปโหลดมาสักพักหนึ่ง ตัวเลือกทำเครื่องหมายเป็นไม่ละเอียดอ่อนจึงหมดอายุไปแล้ว",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "พวกเขาจะส่งข้อความถึงคุณไม่ได้อีก หากคุณรู้สึกว่าการกระทำของพวกเขาอาจทำร้ายคนอื่น โปรดส่งรายงานถึง Discord",
+          "ผู้ใช้จะส่งข้อความถึงคุณไม่ได้อีก หากคุณรู้สึกว่าการกระทำของผู้ใช้อาจทำร้ายคนอื่น โปรดส่งรายงานถึง Discord",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "บล็อกและรายงาน",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "ปิด",
         SAFETY_TOOLS_BUTTON_LABEL: "เปิดเครื่องมือความปลอดภัย",
@@ -22765,7 +22828,7 @@
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "กลับไปที่การสนทนา",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT:
           "Wumpus เพลิดเพลินไปกับเสียงเพลง",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "รายงาน",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "รายงานผู้ใช้",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "รายงานแล้ว",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "ติดต่อ Crisis Text Line",
@@ -22817,7 +22880,7 @@
         CUSTOM_HANG_STATUS: "สถานะกำหนดเอง",
         CUSTOM_HANG_STATUS_CTA: "เข้ามาเลย!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "ทำอะไรอยู่",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "ปัดเลือกสถานะ",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "ก็อปปี้สถานะ",
         HANG_STATUS_VC_ROW_ADD: "เพิ่มสถานะ",
         HANG_STATUS_HELP:
           "แสดงให้เพื่อนของคุณเห็นว่าคุณกำลังทำอะไรอยู่โดยตั้งค่าสถานะกิจกรรม",
@@ -23034,7 +23097,7 @@
         QUESTS_HIDE_THIS: "ซ่อนสิ่งนี้",
         QUESTS_FIND_QUEST:
           "คุณสามารถดูสิ่งนี้ได้อีกครั้งในการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ",
-        QUESTS_CLAIM_BY: "รับสิทธิ์ภายใน {expirationDate}",
+        QUESTS_CLAIM_BY: "รับภายใน {expirationDate}",
         QUESTS_AVAILABLE_UNTIL: "เล่นได้จนถึง {expirationDate}",
         QUESTS_COMPLETION_PROGRESS_NOT_STARTED: "พร้อมแล้ว...",
         QUESTS_COMPLETION_PROGRESS_STARTED: "ลุยต่อเลย!",
@@ -23051,7 +23114,7 @@
           "เรียนรู้เพิ่มเติมเกี่ยวกับภารกิจบน Discord และวิธีจัดการการตั้งค่าความเป็นส่วนตัวของคุณ[ที่นี่]({privacySettingsUrl})",
         QUESTS_DISCLOSURE_LOCATION: "ตำแหน่ง",
         QUESTS_DISCLOSURE_AGE: "อายุ",
-        QUESTS_DISCLOSURE_ACTIVITY: "กิจกรรม: เกมที่เกี่ยวข้อง",
+        QUESTS_DISCLOSURE_ACTIVITY: "กิจกรรม: การเล่นเกมที่เกี่ยวข้อง",
         QUESTS_EMBED_INVALID_HEADING: "นี่คือภารกิจแต่...",
         QUESTS_EMBED_INVALID_BODY:
           "เกิดข้อผิดพลาด ตรวจสอบห้องเก็บของขวัญเพื่อดูภารกิจเพิ่มเติม!",
@@ -23078,7 +23141,7 @@
         STOREFRONT_SUBSCRIBE_FOR: "สมัครสมาชิกในราคา {rate}",
         STOREFRONT_SUBSCRIPTION_BENEFITS: "สิทธิประโยชน์ของการสมัครสมาชิก",
         STOREFRONT_PURCHASE_FOR: "ซื้อในราคา {price}",
-        STOREFRONT_ONE_TIME_PURCHASE: "ซื้อครั้งเดียว",
+        STOREFRONT_ONE_TIME_PURCHASE: "การซื้อครั้งเดียว",
         QUIET_MODE_DISABLED: "ปิดใช้งานโหมดโฟกัสแล้ว",
         QUIET_MODE_ENABLED: "เปิดใช้งานโหมดโฟกัสแล้ว",
         QUIET_MODE_DND: "เปิดใช้งานโหมดโฟกัส (DND) แล้ว",
@@ -23089,6 +23152,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord จะไม่แสดงการแจ้งเตือนภายในแอปและบนหน้าเดสก์ท็อป และจะไม่เล่นเสียงข้อความ",
         QUIET_MODE_DISABLED_BY: "รายการนี้ถูกปิดใช้งานโดยโหมดโฟกัส",
+        FOCUS_MODE_TITLE: "โหมดโฟกัส (เบต้า)",
+        FOCUS_MODE_BADGE_ON: "เปิด",
+        FOCUS_MODE_BADGE_OFF: "ปิด",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "คุณอยู่ในโหมดห้ามรบกวนมาระยะหนึ่งแล้ว คุณต้องการเปิดใช้งานโหมดโฟกัสแทนหรือไม่",
         ACTIVITY_REACTION_REPLY_TITLE: "แชทเกี่ยวกับ {activity}",

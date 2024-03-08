@@ -667,9 +667,13 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Ned\xe1vn\xe9",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Boti na tomto serveru",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Obl\xedben\xe9",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Nic nen\xed povinn\xe9. Můžeš odeslat př\xedkaz nebo přidat možnost n\xedže",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Vyber některou z\xa0možnost\xed n\xedže",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Nem\xe1š opr\xe1vněn\xed spouštět v\xa0tomto kan\xe1lu př\xedkazy",
-        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Př\xedkaz Otevř\xedt",
+        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Otevř\xedt př\xedkaz",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE:
           "Ž\xe1dn\xe1 opr\xe1vněn\xed",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY:
@@ -1277,7 +1281,6 @@
           "[!!{username}!!](usernameOnClick) zah\xe1jil/a [aktivitu](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} zah\xe1jil/a aktivitu",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Možn\xe1 později",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Jak to šlo v !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1437,9 +1440,6 @@
           "Vyzkoušej je na ď\xe1belsky omezenou dobu.\nM\xe1š Nitro? Vyčaruj si SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "**!!{applicationName}!!** je aktu\xe1lně ve zkušebn\xedm režimu. Tv\xe1 aplikace by měla b\xfdt vidět jako jedna z možnost\xed v nab\xeddce tlač\xedtek aktivit.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Nov\xe1 aktivita! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Vyzkoušej si tuto novou hru, ve kter\xe9 budeš spolu s\xa0př\xe1teli kreslit a\xa0h\xe1dat, co je na obr\xe1zc\xedch. Do 29.\xa0března zdarma.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Varov\xe1n\xed",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Desktop Beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3577,6 +3577,8 @@
           "Ze ztlumen\xfdch kan\xe1lů nebudeš dost\xe1vat ozn\xe1men\xed a v seznamu kan\xe1lů budou zašedl\xe9. Toto nastaven\xed plat\xed pro všechna tv\xe1 zař\xedzen\xed.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Ze ztlumen\xfdch kategori\xed nebudeš dost\xe1vat ozn\xe1men\xed a v seznamu kan\xe1lů budou zašedl\xe9. Toto nastaven\xed plat\xed pro všechna tv\xe1 zař\xedzen\xed.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Tvůj server je aktu\xe1lně $[**ztlumen\xfd**](mutedHook). Nemůžeš z\xa0tohoto kan\xe1lu dost\xe1vat upozorněn\xed ani měnit nastaven\xed, dokud ztlumen\xed serveru nezruš\xedš.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Upozorněn\xed z tv\xe9ho serveru jsou nastaven\xe1 na $[**nic**](notificationHook). Nebudeš z tohoto kan\xe1lu dost\xe1vat ž\xe1dn\xe1 upozorněn\xed, ale tady můžeš nastaven\xed změnit.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4430,6 +4432,8 @@
         SEARCH_EMOJIS: "Hledat smajl\xedky",
         SEARCH_FOR_EMOJI: "Naj\xedt perfektn\xed smajl\xedk",
         SEARCH_FOR_STICKER: "Najdi perfektn\xed samolepku",
+        SEARCH_FOR_REACTION: "Naj\xedt perfektn\xed reakci",
+        SEARCH_FOR_SUPER_REACTION: "Naj\xedt perfektn\xed super reakci",
         NO_EMOJI_SEARCH_RESULTS:
           "Hled\xe1n\xed neodpov\xeddaj\xed ž\xe1dn\xe9 smajl\xedky",
         EMOJI_CATEGORY_PACK: "Bal\xedček {packName}",
@@ -5384,6 +5388,8 @@
           "Něco se během čten\xed protokolů z tv\xe9ho syst\xe9mu pokazilo. Zkus to pros\xedm znovu.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Něco se pokazilo a nemohli jsme tv\xe9 soubory laděn\xed nahr\xe1t. Zkus to pros\xedm znovu.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Sd\xedlet protokoly nab\xedzen\xfdch ozn\xe1men\xed",
         FORM_CHECKBOX_AEC_DUMP: "Nahr\xe1v\xe1n\xed kontroln\xedho z\xe1znamu",
         FORM_HELP_AEC_DUMP:
           "Kontroln\xed nahr\xe1vka slouž\xed k anal\xfdze probl\xe9mů se zvukem. Ve složce hlasov\xe9ho modulu je uloženo posledn\xedch pět minut z\xe1znamu.",
@@ -5441,6 +5447,7 @@
         APP_ICON_SUNSET: "Z\xe1pad slunce",
         APP_ICON_HOLO_WAVES: "Prizmatick\xe9 vlny",
         APP_ICON_PIRATE: "Pir\xe1t",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Ano, kapit\xe1ne",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5527,6 +5534,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# člověk} other {# lid\xe9}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Otevř\xedt akce hlasov\xe9ho hovoru",
+        TURN_CAMERA_ON_A11Y_LABEL: "Zapnout kameru",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Vypnout kameru",
         IN_GAME_VOICE_SETTINGS: "Nastaven\xed hlasu ve hře",
         VIDEO_SETTINGS: "Nastaven\xed videa",
         TEXT: "Text",
@@ -5740,6 +5749,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Hlas připojen",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video připojeno",
         CONNECTION_STATUS_RTC_CONNECTING: "Připojov\xe1n\xed RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Kontrola trasy",
         CONNECTION_STATUS_DTLS_CONNECTING: "Připojov\xe1n\xed DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Ž\xe1dn\xe1 cesta",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC odpojeno",
@@ -6305,7 +6315,7 @@
         SWITCH_TO_COMPACT_MODE: "Přepnout do kompaktn\xedho režimu",
         SWITCH_TO_PUSH_TO_TALK: "Přepnout na Push to Talk",
         SWITCH_TO_VOICE_ACTIVITY: "Přepnout na hlasovou činnost",
-        MOVE_TO: "Posunout do",
+        MOVE_TO: "Přesunout do",
         MOVE_TO_SUCCESS: "Uživatele jsme přesunuli do vybran\xe9ho kan\xe1lu.",
         DISCONNECT_USER_SUCCESS: "Uživatel byl odpojen od hlasov\xe9ho chatu.",
         CHANGE: "Změnit",
@@ -8427,6 +8437,12 @@
           "Oživ chat super reakcemi. Nyn\xed dostupn\xe9 s\xa0předplatn\xfdm [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Oživ chat s\xa0neomezen\xfdm počtem super reakc\xed. Nyn\xed dostupn\xe9 s\xa0předplatn\xfdm [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Oživ chat neomezen\xfdm počtem super reakc\xed. Nyn\xed dostupn\xe9 s\xa0předplatn\xfdm Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Oživ chat neomezen\xfdm počtem super reakc\xed!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nyn\xed dostupn\xe9 s\xa0Nitrem.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Oživ chat super reakcemi. Z\xedskej až {refillAmount} za t\xfdden. Nyn\xed dostupn\xe9 s\xa0[Nitrem]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8547,6 +8563,10 @@
           "Oživ chat super reakcemi! Z\xedskej neomezen\xfd počet super reakc\xed a\xa0dalš\xed skvěl\xe9 v\xfdhody s\xa0předplatn\xfdm [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Neomezen\xfd počet super reakc\xed!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Kliknut\xedm na tlač\xedtko přidej super reakci.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Klepnut\xedm na tlač\xedtko přidej super reakci.",
         HOLD_UP: "Vydrž",
         MASKED_LINK_ALERT_V2_HEADER: "Opoušt\xedš Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9635,6 +9655,10 @@
           "Barevn\xe9 motivy",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Udělej na Discordu skvěl\xfd dojem s\xa0jedinečn\xfdmi barvami motivu.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Vlastn\xed ikony aplikac\xed",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Vyber si ikonu, kter\xe1 s\xa0tebou bude nejl\xe9pe ladit, a\xa0použij ji na ploše telefonu nebo poč\xedtače.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Vylepšen\xed",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Dopřej si lepš\xed z\xe1žitek z Discordu",
@@ -10298,6 +10322,8 @@
           "Asi se něco pokazilo. Tento k\xf3d nelze použ\xedt. Omlouv\xe1me se za nepř\xedjemnosti.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Je n\xe1m l\xedto, ale tento k\xf3d už nejsp\xedš někdo uplatnil.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Zd\xe1 se, že tento k\xf3d patř\xed někomu jin\xe9mu.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Zd\xe1 se, že tento k\xf3d nefunguje. Zkontroluj, že m\xe1š spr\xe1vn\xfd k\xf3d, a zkus to znovu.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10339,6 +10365,8 @@
           "Tento k\xf3d najdeš tak\xe9 v potvrzen\xed, kter\xe9 jsme ti pr\xe1vě poslali na e-mail.",
         REDEMPTION_CODE: "K\xf3d nab\xeddky",
         PARTNER_PROMOTION_CLAIM: "Dalš\xed",
+        PARTNER_PROMOTION_ERROR_TITLE: "Ajaj!",
+        PARTNER_PROMOTION_ERROR_BODY: "Asi se něco pokazilo.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Nezn\xe1m\xfd d\xe1rek.",
         REDEEM: "Uplatnit",
         UNLOCK_CODE: "Odemknout k\xf3d",
@@ -11855,7 +11883,7 @@
         NITRO_HOME_SHOW_UP_HOW_YOU_WANT: "Ukaž se po sv\xe9m",
         NITRO_HOME_ALL_YOUR_NITRO_PERKS: "Všechny tvoje v\xfdhody Nitra",
         NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO:
-          "Je souč\xe1st\xed předplatn\xfdch Basic a\xa0Nitro.",
+          "Jsou souč\xe1st\xed předplatn\xfdch Basic a\xa0Nitro.",
         NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO: "Pouze s\xa0Nitrem.",
         NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI:
           "Vyb\xedrej si ze všech sv\xfdch vlastn\xedch smajl\xedků v\xa0libovoln\xe9 konverzaci.",
@@ -11878,6 +11906,7 @@
           "Z\xedskej tento skvěl\xfd odznak za předplatn\xe9 Nitra.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pro sběratele. Z\xedskej tento exkluzivn\xed odznak vyhrazen\xfd pouze předplatitelům Nitra.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Uplatnit",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Vyšperkuj svůj Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13410,6 +13439,7 @@
         MOST_POPULAR: "Nejobl\xedbenějš\xed",
         SPELLCHECK: "Kontrola pravopisu",
         ADD_TO_DICTIONARY: "Přidat do slovn\xedku",
+        REMOVE_FROM_DICTIONARY: "Odebrat z\xa0adres\xe1ře",
         LANGUAGES: "Jazyky",
         AUTO_SUGGEST_STICKERS: "N\xe1vrhy samolepek",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13707,6 +13737,7 @@
           "M\xe1š ofici\xe1ln\xed zpr\xe1vu od t\xfdmu Discord, kter\xe1 vyžaduje tvou pozornost.",
         BUILD_OVERRIDE: "Prioritn\xed pravidlo verze",
         BUILD_OVERRIDE_FOR: "Prioritn\xed pravidlo verze pro {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Prov\xe9st hash",
         BUILD_OVERRIDE_APPLY: "Použ\xedt",
         BUILD_OVERRIDE_CLEAR: "Vymazat",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Vytv\xe1řen\xed nen\xed k dispozici",
@@ -13913,7 +13944,6 @@
           "Zvol si mezi {monthlyPrice}/měs\xedc nebo {yearlyPrice}/rok",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Šťastn\xfd př\xedjemce dostane:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Darovat členstv\xed Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Darovan\xe1 doba",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Darovat {nitroTierName} na {count, plural, one {#\xa0měs\xedc} few {#\xa0měs\xedce} other {#\xa0měs\xedců}}",
@@ -13933,7 +13963,11 @@
         GIFT_DURATION: "Nitro na 1\xa0{timeInterval}",
         GIFT_OPEN_PROMPT: "Otevř\xedt d\xe1rek",
         GIFT_RECIPIENT_INFO: "Pro: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Přidat zvukov\xfd efekt",
+        GIFT_SELECT_EMOJI: "Přidat konfety ke smajl\xedku",
         GIFT_SELECT_SOUNDBOARD_ADD: "Přidat",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Tento zvuk se přehraje, jakmile tvůj př\xedtel otevře svůj d\xe1rek",
         NITRO_CONFIRMATION: "Dostal/a jsi Nitro",
         OPENED_GIFT_CONFIRMATION: "Tento d\xe1rek už m\xe1š otevřen\xfd!",
         NITRO_PERKS: "Omrkni sv\xe9 nov\xe9 v\xfdhody Nitra.",
@@ -14589,6 +14623,8 @@
           "Kliknut\xedm na kompas ve sv\xe9m seznamu serverů můžeš naj\xedt nov\xe9 servery.",
         LOADING_TIP_12:
           "Přetažen\xedm serverů na sebe můžeš vytvořit složky serverů.",
+        LOADING_TIP_13:
+          "Když nap\xedšeš /gif nebo /tenor + libovoln\xfd text, najdeš GIFy na zadan\xe9 t\xe9ma!",
         LOADING_TIP_14:
           "Pochlub se t\xedm, co pr\xe1vě hraješ. Použij nastaven\xed Hern\xed aktivity.",
         LOADING_TIP_15:
@@ -14617,6 +14653,21 @@
           "Když nap\xedšeš lom\xedtko (/), zobraz\xed se př\xedkazy bota a dalš\xed integrovan\xe9 př\xedkazy",
         LOADING_TIP_27:
           "Pokud chceš napsat text **tučně**, můžeš ho ohraničit pomoc\xed !!{asterisks}!!.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "Přejeme ti vesel\xfd halloween. Ať tvůj server ožije!",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO, přejeme ti strašideln\xfd halloween!",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Klohn\xedme vyzv\xe1něn\xed, ze kter\xe9ho budeš m\xedt hus\xed k\xfaži",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5:
+          "V\xa0hlasov\xe9m chatu jsou jenom sam\xed duchov\xe9",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Ujišťujeme se, zda tv\xe9 servery nejsou posedl\xe9 ď\xe1blem",
+        HALLOWEEN_LOADING_TEXT_7: "Lad\xedme se na „ducha“ halloweenu",
+        HALLOWEEN_LOADING_TEXT_8: "Pos\xedlaj\xed zombie jenom mrtv\xe9 memy?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord byl infikov\xe1n! Pozor na zombie Wumpuse",
         ACCESSIBILITY_LOADING_TIP_1:
           "V nastaven\xed vzhledu si můžeš vybrat světl\xfd nebo tmav\xfd motiv.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14649,6 +14700,9 @@
           "Zobrazit uživatele použ\xedvaj\xedc\xed hlasovou komunikaci",
         VOICE_PANEL_USERS_A11Y_LABEL:
           "Uživatel\xe9 použ\xedvaj\xedc\xed hlasovou komunikaci",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, ohlušen\xfd a\xa0ztlumen\xfd",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, ztlumen\xfd",
         VOICE_PANEL_SHOW_EXTRAS: "Zobrazit všechny uživatele",
         VOICE_PANEL_HIDE_EXTRAS: "Minimalizovat",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15824,6 +15878,8 @@
         FRIEND_FINDER_FRIENDS: "Všichni př\xe1tel\xe9",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontakty na Discordu – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Lid\xe9, kter\xe9 můžeš zn\xe1t – {count}",
         CONTACT_SYNC_TITLE: "Najdi sv\xe9 př\xe1tele",
         CONTACT_SYNC_LANDING_TITLE: "Najdi sv\xe9 př\xe1tele",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16453,8 +16509,7 @@
           "Nem\xe1m z\xe1jem o…",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "Všechny ud\xe1losti v\xa0t\xe9to s\xe9rii",
-        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE:
-          "Pouze tato ud\xe1lost",
+        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE: "Tuto ud\xe1lost",
         GUILD_CREATE_STAFF_ONLY_HINT:
           "K\xa0tomuto serveru se budou moct připojit pouze zaměstnanci Discordu.",
         EDIT_THIS_EVENT: "Upravit tuto ud\xe1lost",
@@ -17088,12 +17143,8 @@
           "Počet dalš\xedch aktivn\xedch vl\xe1ken: {count}",
         THREAD_BROWSER_ARCHIVED_HEADER: "starš\xed vl\xe1kna",
         THREAD_BROWSER_JOINED_HEADER: "Vl\xe1kna, kde jsem připojen/a: {count}",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER:
-          "Počet dalš\xedch aktivn\xedch vl\xe1ken: {count}",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktivn\xed vl\xe1kna – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Starš\xed vl\xe1kna",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "Vl\xe1kna, kde jsem připojen/a: {count}",
         THREAD_BROWSER_JOINED_COUNT: "Připojen\xe1 vl\xe1kna – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}\xa0s\xa0nazpět",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} d nazpět",
@@ -17113,8 +17164,6 @@
           "Nejsou tady ž\xe1dn\xe1 aktivn\xed vl\xe1kna.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Nejsou tady ž\xe1dn\xe1 archivovan\xe1 vl\xe1kna.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Udrž si přehled o konverzaci d\xedky dočasn\xe9mu textov\xe9mu kan\xe1lu vl\xe1kna.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Udrž si přehled o\xa0konverzaci d\xedky vl\xe1knům – dočasn\xfdm textov\xfdm kan\xe1lům.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Nastaven\xed filtru",
@@ -19276,9 +19325,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "V\xfdsledky hled\xe1n\xed",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Jm\xe9no",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Členem od",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Přid\xe1n\xed na Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Role",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Sign\xe1ly",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "členů z\xa0**{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "členů **{pageRange}** z\xa0**{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Tohle zobraz\xed jenom nejnovějš\xed členy – starš\xed členov\xe9 se nemus\xed objevit (ale brzy se objev\xed).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Zobrazuje se",
@@ -19584,6 +19636,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "V\xfdstrahy před \xfatoky",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Kan\xe1l pro v\xfdstrahy",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Ž\xe1dn\xfd",
+        GUILD_ANTIRAID_RAID_ALERT: "V\xfdstrahy před \xfatoky",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Ochrana zapnuta",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "Nastavit v\xfdstrahy",
@@ -22120,6 +22173,9 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "S\xa0Nitrem za {price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Tak co, nasad\xedme nov\xfd look?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Ale tohle je nepř\xedjemn\xe9.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, nepodařilo se n\xe1m nač\xedst obchod. Zkus to později.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Použ\xedvej kdykoli v\xa0r\xe1mci aktivn\xedho předplatn\xe9ho Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT:
@@ -22211,6 +22267,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Přidat aplikaci",
         MONETIZATION: "Monetizace",
         GUILD_SETTINGS_MONETIZATION: "Monetizace serveru",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Předplatn\xe1 serveru",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Str\xe1nka propagace",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "\xdaroveň předplatn\xe9ho",
@@ -22678,6 +22735,8 @@
           "Změna t\xfdmu pro platby",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "V\xfdběru t\xfdmu pro platby",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Změň t\xfdm, kter\xe9mu budou zas\xedl\xe1ny platby z\xa0monetizace serveru.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Změna t\xfdmu může ovlivnit n\xe1rok na vypl\xe1cen\xed",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23532,7 +23591,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "Zobrazit klip",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "M\xe1š {count, plural, =1 {# nov\xfd klip} few {# nov\xe9 klipy} other {# nov\xfdch klipů}}!",
-        CLIPS_REVIEW_NOW: "Zkontrolovat teď",
+        CLIPS_REVIEW_NOW: "Prohl\xe9dnout teď",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "Během uplynul\xfdch !!{applicationName}!! streamů jsi poř\xeddil/a několik klipů. Omrkni je ve sv\xe9 knihovně klipů!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "Zobrazit klipy",
@@ -23614,7 +23673,7 @@
           "Toto je maxim\xe1ln\xed sn\xedmkov\xe1 frekvence tv\xfdch klipů, se kterou budou nahr\xe1v\xe1ny.",
         CLIPS_CROP_START: "Oř\xedznout zač\xe1tek",
         CLIPS_CROP_END: "Oř\xedznout konec",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Klip se spojlerem",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spojlovat klip",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Odebrat klip",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Odteď můžeš pomoc\xed kl\xe1vesov\xe9 zkratky $[!!{keybind}!!](keybindHook) pořizovat klipy př\xedmo ve hře. Taky si můžeš nastavit vlastn\xed kl\xe1vesovou zkratku.",
@@ -23627,6 +23686,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Spravovat nastaven\xed klipů",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Zjistit v\xedce",
+        SOUND_INCOMING_RING_HALLOWEEN: "Halloweensk\xe9 vyzv\xe1něn\xed",
+        CUSTOM_SOUNDS: "Vlastn\xed zvuky",
+        ENABLE_PHONE_INTEGRATION:
+          "Chceš-li tohle zaž\xedt, mus\xedš povolit integraci s\xa0aplikac\xed telefonu.",
         GUILD_SHOP_CHANNEL_LABEL: "Obchod serveru",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Dostupn\xe9 produkty",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23734,6 +23797,9 @@
           "Zjisti v\xedc o\xa0našich z\xe1sad\xe1ch {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Pravidla Discordu se vztahuj\xed na všechny",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Přej\xedt na stav \xfačtu",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Přej\xedt na stav \xfačtu",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Zobrazit stav \xfačtu",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Zkusit znovu",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23813,6 +23879,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Zrušit",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Zm\xfdlili jsme se? [Ozvi se n\xe1m](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Označit jako Nen\xed citliv\xe9",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "D\xedky za informaci!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
           "Označit jako Nen\xed citliv\xe9",
@@ -23847,7 +23914,7 @@
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "Zablokovan\xe1 m\xe9dia trvale neukl\xe1d\xe1me. Protože tato m\xe9dia byla nahr\xe1na již před delš\xed dobou, možnost pro jejich označen\xed př\xedznakem „nen\xed citliv\xe9“ vypršela.",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "Už ti nebudou moct pos\xedlat zpr\xe1vy. Pokud m\xe1š dojem, že by dan\xe9 chov\xe1n\xed mohlo někoho ohrozit nebo mu uškodit, nahlas to pros\xedm Discordu.",
+          "Už ti nebude moct pos\xedlat zpr\xe1vy. Pokud m\xe1š dojem, že by dan\xe9 chov\xe1n\xed mohlo někoho ohrozit nebo mu uškodit, nahlas to pros\xedm Discordu.",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Zablokovat a\xa0nahl\xe1sit",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Zavř\xedt‏",
         SAFETY_TOOLS_BUTTON_LABEL: "Otevř\xedt n\xe1stroje zabezpečen\xed",
@@ -23966,12 +24033,12 @@
         STATUS_IN_TRANSIT: "Měn\xedm lokaci",
         STATUS_WATCHING: "Sj\xedžd\xedm videa",
         STATUS_NONE: "Ž\xe1dn\xfd stav",
-        HANG_STATUS: "Stav pro schůzky",
+        HANG_STATUS: "Stav pro pokec",
         HANG_STATUS_LOCATION: "v !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Vlastn\xed status",
         CUSTOM_HANG_STATUS_CTA: "Přiskoč k\xa0n\xe1m!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Co prov\xe1d\xedš?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Přet\xe1hni stav",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Čmajznout stav",
         HANG_STATUS_VC_ROW_ADD: "Přidej stav",
         HANG_STATUS_HELP:
           "Pomoc\xed stavu aktivity ukaž sv\xfdm př\xe1telům, co m\xe1š pr\xe1vě za lubem.",
@@ -24047,7 +24114,7 @@
         POLL_SUBMIT_VOTE: "Hlasovat",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count}\xa0hlas} few {{count}\xa0hlasy} other {{count}\xa0hlasů}}",
-        POLL_ALREADY_VOTED: "Hlasov\xe1no",
+        POLL_ALREADY_VOTED: "Odhlasov\xe1no",
         POLL_EDIT_VOTE: "Změnit hlasov\xe1n\xed",
         POLL_REMOVE_VOTE: "Odebrat hlas",
         POLL_ANSWER_VOTED_ARIA: "Tato odpověď už m\xe1 tvůj hlas",
@@ -24229,7 +24296,7 @@
           "Při sledov\xe1n\xed postupu plněn\xed tv\xe9ho \xfakolu došlo k\xa0probl\xe9mu.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Pož\xe1dat členy, aby začali chatovat, když bude tento kan\xe1l nějakou dobu neaktivn\xed.",
-        PROMPT_CAMERA_LOADING_TITLE: "Na co se d\xedv\xe1š?",
+        PROMPT_CAMERA_LOADING_TITLE: "Na co kouk\xe1š?",
         PROMPT_CAMERA_ERROR:
           "Při pořizovan\xed fotky došlo k\xa0chybě, zkus to znovu",
         DEADCHAT_ACTION_CAMERA: "Moje zobrazen\xed",
@@ -24261,9 +24328,13 @@
           "Discord nebude zobrazovat ozn\xe1men\xed na ploše ani v\xa0aplikaci a\xa0nebude přehr\xe1vat zvuky zpr\xe1v.",
         QUIET_MODE_DISABLED_BY:
           "Tohle je v\xa0režimu soustředěn\xed vypnut\xe9",
+        FOCUS_MODE_TITLE: "Režim soustředěn\xed (BETA VERZE)",
+        FOCUS_MODE_BADGE_ON: "ZAP",
+        FOCUS_MODE_BADGE_OFF: "VYP",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Už nějakou dobu jsi v\xa0režimu Nerušit. Chceš m\xedsto něj zapnout režim soustředěn\xed?",
-        ACTIVITY_REACTION_REPLY_TITLE: "Chat o\xa0aktivitě {activity}",
+        ACTIVITY_REACTION_REPLY_TITLE:
+          "Popov\xeddejte si o\xa0aktivitě {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "Karta aktivity zobrazuj\xedc\xed @{username} a\xa0{activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:

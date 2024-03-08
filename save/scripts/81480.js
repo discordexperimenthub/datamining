@@ -652,6 +652,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "直近",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "このサーバーのBot",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "人気",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "必須要件はありません。コマンドを送信するか、下でオプションを追加することができます",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "下でオプションを選択してください",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "このチャンネルでコマンドを実行する権限がありません",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "コマンドを開く",
@@ -1246,7 +1250,6 @@
           "[!!{username}!!](usernameOnClick)が[アクティビティ](activityTextOnClick)を開始しました",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username}がアクティビティを開始しました",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "気が向いたら",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!!はいかがでしたか？",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1402,10 +1405,6 @@
           "期間限定です。\nNitroをお持ちなら、SpellCastも召喚できますよ。",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "**!!{applicationName}!!**は現在テストモードで提供中です。あなたのアプリケーションがアクティビティ・ボタンメニューに表示され、選択できる状態になっているはずです。",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE:
-          "新アクティビティ！Gartic Phone（伝言ゲーム）",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "描いた絵が何かを当てるゲームを友達と試してみよう。3月29日まで無料です。",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "注意",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "（デスクトップ ベータ版）",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3481,6 +3480,8 @@
           "通知オフにしたチャンネルからは通知が届かず、チャンネルリストでは灰色で表示されます。 この設定は全てのデバイスで適用されます。",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "通知オフにしたカテゴリーからは通知が届かず、チャンネルリストでは灰色で表示されます。この設定は全てのデバイスで適用されます。",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "あなたのサーバーは現在$[**ミュート**](mutedHook)状態です。このサーバーをミュート解除するまで、このチャンネルの通知や設定変更通知は届きません。",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "あなたのサーバー通知が$[**なし**](notificationHook)に設定されています。 このチャンネルから通知は届きませんが、ここからオーバーライドできます。",
         CHANNEL_OR_GUILD_MUTED:
@@ -4234,7 +4235,7 @@
         NOTIFICATION_REPORT_BODY: "通知について感想を聞かせてください。",
         NOTIFICATION_EMBED_BUTTON:
           "この通知は有用でしたか？[こちらからご連絡ください！](handleMessage)",
-        NOTIFICATION_EMBED_BUTTON_2: "[通知設定をハイライト](handleMessage)",
+        NOTIFICATION_EMBED_BUTTON_2: "[ハイライト通知設定](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "この通知は有用でしたか？",
         NOTIFICATION_REPORT_FEEDBACK: "この通知についてフィードバックを送る",
         NOTIFICATION_REPORT_TEXT:
@@ -4304,6 +4305,8 @@
         SEARCH_EMOJIS: "絵文字を検索",
         SEARCH_FOR_EMOJI: "絵文字を検索する",
         SEARCH_FOR_STICKER: "完璧なスタンプを見つけよう",
+        SEARCH_FOR_REACTION: "完璧なリアクションを見つけよう",
+        SEARCH_FOR_SUPER_REACTION: "完璧なスーパーリアクションを見つけよう",
         NO_EMOJI_SEARCH_RESULTS: "検索に一致する絵文字がありません",
         EMOJI_CATEGORY_PACK: "{packName}パック",
         EMOJI_CATEGORY_RECENT: "よく使う絵文字",
@@ -5217,6 +5220,7 @@
           "システムからのログファイルの読み出し中に問題が発生しました。もう一度お試しください。",
         UPLOAD_DEBUG_LOG_FAILURE:
           "問題が発生し、デバッグファイルをアップロードできませんでした。もう一度アップロードしてみてください。",
+        SHARE_PUSH_NOTIFICATION_LOGS: "プッシュ通知ログを共有",
         FORM_CHECKBOX_AEC_DUMP: "診断用録音",
         FORM_HELP_AEC_DUMP:
           "診断用録音は、音声の問題を分析するために使います。音声の最後の5秒間がボイスモジュールフォルダーに保存されます。",
@@ -5275,6 +5279,7 @@
         APP_ICON_SUNSET: "サンセット",
         APP_ICON_HOLO_WAVES: "プリズマ・ウェーブ",
         APP_ICON_PIRATE: "相棒！",
+        APP_ICON_PIRATE_1: "ヤー！",
         APP_ICON_PIRATE_2: "アイアイ！",
         APP_ICON_PIRATE_3: "ﾃﾞｨｽｶｧｧｧｧﾄﾞ",
         APP_ICON_PIRATE_4: "アホイ！",
@@ -5359,6 +5364,8 @@
         VOICE_SETTINGS: "音声設定",
         VOICE_CALL_MEMBER_LIST_TITLE: "{count, plural, =1 {# 人} other {# 人}}",
         VOICE_CALL_ACTION_A11Y_HINT: "音声通話操作を開く",
+        TURN_CAMERA_ON_A11Y_LABEL: "カメラON",
+        TURN_CAMERA_OFF_A11Y_LABEL: "カメラOFF",
         IN_GAME_VOICE_SETTINGS: "ゲーム内の音声設定",
         VIDEO_SETTINGS: "ビデオ設定",
         TEXT: "テキスト",
@@ -5567,6 +5574,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "通話中",
         CONNECTION_STATUS_VIDEO_CONNECTED: "ビデオ接続完了",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC接続中",
+        CONNECTION_STATUS_ICE_CHECKING: "ルート確認中",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS接続",
         CONNECTION_STATUS_NO_ROUTE: "ルートがありません",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTCから切断しました",
@@ -5961,7 +5969,7 @@
         DND_MOVE_DOWN: "項目をリスト内で下に移動",
         DND_MOBILE_ITEM_HINT: "ダブルタップから長押ししてドラッグ",
         DND_MOBILE_DROP_ADD_TO_FOLDER: "フォルダー「!!{folderName}!!」に追加",
-        DND_MOBILE_DROP_COMBINE_TO_NEW_FOLDER: "結合して新しいフォルダー",
+        DND_MOBILE_DROP_COMBINE_TO_NEW_FOLDER: "結合して新しいフォルダーを作成",
         A11Y_ANNOUNCEMENT_GENERIC_FAIL: "アップデートに失敗しました",
         A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST: "フレンド申請を却下しました",
         A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST: "フレンド申請が承認されました",
@@ -8148,6 +8156,12 @@
           "スーパーリアクションでチャットを盛り上げよう。[{planName}](onClick)で利用可能。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "無制限のスーパーリアクションでチャットを盛り上げよう。[{planName}](onClick)で利用可能。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "無制限のスーパーリアクションでチャットを盛り上げよう。Nitroで利用可能。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "無制限のスーパーリアクションでチャットを盛り上げよう！",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nitroで利用可能。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "スーパーリアクションでチャットを盛り上げよう。毎週、{refillAmount}個手に入ります。[Nitro]({nitroLink})で利用可能。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8268,6 +8282,10 @@
           "スーパーリアクションでチャットを盛り上げよう！[Nitro](onClick)で無制限のスーパーリアクションなどのイカした特典をゲット。",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "無制限のスーパーリアクション！",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "ボタンをクリックしてスーパーリアクションを追加しよう。",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "ボタンをタップしてスーパーリアクションを追加しよう。",
         HOLD_UP: "ストップ！",
         MASKED_LINK_ALERT_V2_HEADER: "Discordを退出",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -8617,7 +8635,7 @@
         SEARCH_GROUP_HINT_PINNED:
           "タップするとフィルターを追加できます。ピン留めされたメッセージを検索",
         SEARCH_FILTERS: "検索フィルター",
-        SEARCH_FILTER_RESULTS_ELLIPSIZED: "フィルター結果……",
+        SEARCH_FILTER_RESULTS_ELLIPSIZED: "結果をフィルタリング……",
         SEARCH_FILTER_FROM: "from",
         SEARCH_FILTER_HAS: "has",
         SEARCH_FILTER_BEFORE: "before",
@@ -9325,6 +9343,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "テーマの色",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "ユニークなテーマの色で、気分に合わせてDiscordをカスタマイズしよう。",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "カスタムアプリアイコン",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "モバイル＆アプリ内デスクトップアイコンを気分に合わせて選ぼう。",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "特典",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Discord 体験をグレードアップ！",
@@ -9963,6 +9985,8 @@
         PROMOTION_ERROR_BODY:
           "そのコードはお使いいただけないようです。申し訳ございません。",
         PROMOTION_ERROR_CLAIMED_BODY: "このコードは引換済みのようです。",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "このコードは他の人が所有しているようです。",
         PROMOTION_ERROR_NO_CODE_BODY:
           "このコードは使えないようです。コードが正しいか確かめて、もう一度お試しください。",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10005,6 +10029,8 @@
           "このコードは、先ほどお送りした確認メールに記載されています。",
         REDEMPTION_CODE: "引換コード",
         PARTNER_PROMOTION_CLAIM: "次へ",
+        PARTNER_PROMOTION_ERROR_TITLE: "おっと！",
+        PARTNER_PROMOTION_ERROR_BODY: "問題が発生したようです。",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "不明なギフトです。",
         REDEEM: "交換する",
         UNLOCK_CODE: "コードをアンロック",
@@ -11498,6 +11524,7 @@
           "Nitroサブスクライバーになってこのクールなバッジをゲット。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "コレクター向け。Nitro限定バッジをゲットしよう。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "交換する",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Discordをスーパーチャージ",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -12981,6 +13008,7 @@
         MOST_POPULAR: "人気トップ",
         SPELLCHECK: "スペルチェック",
         ADD_TO_DICTIONARY: "辞書に追加",
+        REMOVE_FROM_DICTIONARY: "ディクショナリから削除",
         LANGUAGES: "言語",
         AUTO_SUGGEST_STICKERS: "スタンプ候補",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13266,6 +13294,7 @@
           "Discordチームから公式メッセージが届いています。必ずご確認ください。",
         BUILD_OVERRIDE: "ビルドの上書き",
         BUILD_OVERRIDE_FOR: "{releaseChannel}のビルドの上書き",
+        BUILD_OVERRIDE_ID: "コミットハッシュ",
         BUILD_OVERRIDE_APPLY: "申請する",
         BUILD_OVERRIDE_CLEAR: "クリア",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "ビルドが利用できません",
@@ -13467,7 +13496,6 @@
           "{monthlyPrice}/月、または{yearlyPrice}/年から選択可能",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "贈り先の方が受け取るもの：",
-        MOBILE_CUSTOM_GIFT_TITLE: "Nitroメンバーシップを贈りましょう",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "プレゼントの期間",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName}の{count, plural, one {#ヵ月} other {#ヵ月}}分をプレゼント",
@@ -13488,7 +13516,11 @@
         GIFT_DURATION: "Nitro 1{timeInterval}分",
         GIFT_OPEN_PROMPT: "ギフトを開ける",
         GIFT_RECIPIENT_INFO: "受取人：{recipientDisplayName}",
+        GIFT_SELECT_SOUND: "サウンドエフェクトを追加",
+        GIFT_SELECT_EMOJI: "絵文字コンフェティを追加",
         GIFT_SELECT_SOUNDBOARD_ADD: "追加",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "フレンドがギフトを開けると再生されます",
         NITRO_CONFIRMATION: "Nitroをゲットしました",
         OPENED_GIFT_CONFIRMATION: "ギフトを開けました！",
         NITRO_PERKS: "新しいNitro特典をチェック！",
@@ -14120,6 +14152,8 @@
           "サーバーリストのコンパスをクリックすると、新しいサーバーを探せます。",
         LOADING_TIP_12:
           "サーバー同士をドラッグ＆ドロップで重ね合わせると、サーバーフォルダが作れます。",
+        LOADING_TIP_13:
+          "/gif または /tenor + 任意の言葉をタイプして、テーマに合ったGIFを探そう！",
         LOADING_TIP_14:
           "ゲームアクティビティ設定で今プレイ中のゲームを皆とシェアできます。",
         LOADING_TIP_15:
@@ -14148,6 +14182,18 @@
           "/ を入力するとBotコマンドなどのビルトインコマンドを表示できます",
         LOADING_TIP_27:
           "タイプした文字を !!{asterisks}!! で囲むと**太字**にできます。",
+        HALLOWEEN_LOADING_TEXT_1:
+          "ハッピーハロウィン… サーバーを死から蘇らせるときだ",
+        HALLOWEEN_LOADING_TEXT_2: "ｫｫｫｵｵｫｫｫｵ楽しいハロウィンを",
+        HALLOWEEN_LOADING_TEXT_3: "骨まで凍える着信音をまぜまぜ中",
+        HALLOWEEN_LOADING_TEXT_4: "お～ば～け～だ～ぞ～",
+        HALLOWEEN_LOADING_TEXT_5: "ボイスチャットでは誰もが亡霊",
+        HALLOWEEN_LOADING_TEXT_6:
+          "サーバーが（たぶん）呪われてないことを認証中",
+        HALLOWEEN_LOADING_TEXT_7: "これがハロウィン「魂」",
+        HALLOWEEN_LOADING_TEXT_8: "ゾンビの言うジョークって全部サムいの？",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discordに感染が広がってる。ゾンビワンパスに注意",
         ACCESSIBILITY_LOADING_TIP_1:
           "「テーマ」設定でライトテーマかダークテーマを選べます。",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14177,6 +14223,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "了解",
         VOICE_PANEL_SHOW_VOICE_USERS: "ボイスユーザーを表示",
         VOICE_PANEL_USERS_A11Y_LABEL: "ボイスユーザー",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}、スピーカーミュート＆ミュート",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}、ミュート",
         VOICE_PANEL_SHOW_EXTRAS: "全ユーザーを表示",
         VOICE_PANEL_HIDE_EXTRAS: "最小化",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!、{status}",
@@ -15301,6 +15350,8 @@
         FRIEND_FINDER_FRIENDS: "すべてのフレンド",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discordの連絡先 — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "知り合いかも：{count}人",
         CONTACT_SYNC_TITLE: "フレンドを探す",
         CONTACT_SYNC_LANDING_TITLE: "フレンドを探す",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -15897,7 +15948,8 @@
         GUILD_SCHEDULED_EVENT_REPEATS_YEARLY: "繰り返し：毎年{date}",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS:
           "繰り返し：平日すべて（月曜日から金曜日）",
-        GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED: "興味あり：",
+        GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED:
+          "次に興味があります：",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED: "興味なし：",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "このシリーズ内の全てのイベント",
@@ -16514,11 +16566,8 @@
         THREAD_BROWSER_OTHER_HEADER: "他 {count} 件のアクティブ状態のスレッド",
         THREAD_BROWSER_ARCHIVED_HEADER: "古いスレッド",
         THREAD_BROWSER_JOINED_HEADER: "参加したスレッド：{count}",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER:
-          "他{count}件のアクティブ状態のスレッド",
         THREAD_BROWSER_ACTIVE_COUNT: "アクティブ状態のスレッド - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "古いスレッド",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "参加したスレッド：{count}件",
         THREAD_BROWSER_JOINED_COUNT: "参加したスレッド - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}秒前",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} 日前",
@@ -16536,8 +16585,6 @@
           "アクティブなスレッドはありません。",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "アーカイブされたスレッドはありません。",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "一時的なテキストチャンネルである「スレッド」を使って、会話を追いましょう。",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "一時的に使えるテキストチャンネル「スレッド」を使えば話の内容を見失う心配はありません。",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "フィルター設定",
@@ -18620,9 +18667,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "検索結果",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "お名前",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "メンバーになった日",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Discordに参加",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "ロール",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "シグナル",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "**{count}**人のメンバー",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "メンバー：**{pageRange}**/**{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "これには最も新しいメンバーのみが表示されます。古いメンバーは表示されない可能性があります（ただしすぐに表示される予定です）。",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "表示中",
@@ -18908,6 +18958,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "レイドアラート",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "アラートチャンネル",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "設定しない",
+        GUILD_ANTIRAID_RAID_ALERT: "レイドアラート",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "プロテクションを有効にしました",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "アラートを設定",
@@ -19380,11 +19431,11 @@
         NOTIFICATION_PRESET_CUSTOM: "カスタム",
         NOTIFICATION_PRESET_CUSTOM_DESCRIPTION: "手動で設定を変更しています。",
         NOTIFICATION_SETTINGS_USE_PRESET: "プリセットを使用",
-        NOTIF_MIGRATION_SETTINGS_TITLE: "新しい未読の設定（試験段階）",
+        NOTIF_MIGRATION_SETTINGS_TITLE: "新しい未読設定（試験段階）",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
-          "新しい未読の設定をオフにします。これによりサーバー内で重要なチャンネルをピックできます。",
+          "新しい未読設定をオフにします。これによりサーバー内で重要なチャンネルをピックできます。",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
-          "これにより新しい未読の設定はオフになり、すべての通知設定が{date, date, medium}に作成されたバックアップに戻ります。",
+          "これにより新しい未読設定はオフになり、すべての通知設定が{date, date, medium}に作成されたバックアップに戻ります。",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_ACTION: "オフにする",
         NOTIF_MIGRATION_INTRO_TAB: "1. 新着情報",
         NOTIF_MIGRATION_CUSTOMIZE_TAB: "2. サーバーを選択",
@@ -21345,6 +21396,9 @@
           "Nitroサブスクライバーはこのデコレーションが割引になります",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro特価：{price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "イメチェンしたい？",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "あー... これは大変ですね。",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "うーん、ショップを読み込めなかったようです。あとでもう一度お試しください。",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Nitroサブスクリプションが有効な限りいつでも使えるぞ。",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "私の美しいデコレーションを見て",
@@ -21430,6 +21484,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "アプリを追加",
         MONETIZATION: "収益化",
         GUILD_SETTINGS_MONETIZATION: "サーバー収益化",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "サーバーサブスクリプション",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "プロモーションページ",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "サブスクリプションティア",
@@ -21864,6 +21919,8 @@
           "支払いチームを変更",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "支払いチームを選択",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "サーバー収益化の支払いが送られるチームを変更してください。",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "チームを変更すると支払い資格に影響する可能性があります",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22775,6 +22832,10 @@
           "おっと！現在、クリップをキャプチャすることはできません。",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "クリップ設定を管理",
         CLIPS_USER_EDUCATION_LEARN_MORE: "詳細",
+        SOUND_INCOMING_RING_HALLOWEEN: "ハロウィン着信音",
+        CUSTOM_SOUNDS: "カスタムサウンド",
+        ENABLE_PHONE_INTEGRATION:
+          "これを有効にするにはスマートフォン版アプリとの連携を有効にしてください。",
         GUILD_SHOP_CHANNEL_LABEL: "サーバーショップ",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "入手可能なアイテム",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -22882,6 +22943,8 @@
           "{classificationDescription}ポリシーの詳細を確認しましょう。",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discordのルールは全員に適用されます",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "アカウントの状態を確認",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "アカウントの状態を確認",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "アカウントのステータスを確認",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "再試行",
@@ -22959,6 +23022,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "閉じる",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Discord側のミスだと思われる場合は、[ご連絡ください](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "「センシティブではない」としてマークする",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "お知らせいただきありがとうございます！",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23018,7 +23083,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "休憩を取りましょう",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "ワンパスと一緒にLofi Beatsを聴く。",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "リラックス",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "休憩",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "安全のためのヒント",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "セーフティ・アラートについて",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23116,7 +23181,7 @@
         CUSTOM_HANG_STATUS: "カスタムステータス",
         CUSTOM_HANG_STATUS_CTA: "ここで参加！",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "今なにしてる？",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "ステータスをスワイプ",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "ステータスをパクる",
         HANG_STATUS_VC_ROW_ADD: "ステータスを追加",
         HANG_STATUS_HELP:
           "アクティビティステータスを設定して、フレンドにあなたの状態を表示しましょう。",
@@ -23336,7 +23401,7 @@
         QUESTS_HIDE_THIS: "これを非表示",
         QUESTS_FIND_QUEST:
           "これは「ユーザー設定」→「ギフトインベントリ」から再度表示できます。",
-        QUESTS_CLAIM_BY: "{expirationDate}までに入手しましょう。",
+        QUESTS_CLAIM_BY: "{expirationDate}までに受け取ろう。",
         QUESTS_AVAILABLE_UNTIL: "{expirationDate}まで入手可能です。",
         QUESTS_COMPLETION_PROGRESS_NOT_STARTED: "準備おっけー？",
         QUESTS_COMPLETION_PROGRESS_STARTED: "その調子でお願いします！",
@@ -23360,7 +23425,7 @@
           "クエストの進捗トラッキング中に問題が発生しました。",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "このチャンネルが一定期間休止したあとメンバーにチャットするよう促す",
-        PROMPT_CAMERA_LOADING_TITLE: "何が見えてる？",
+        PROMPT_CAMERA_LOADING_TITLE: "何見てるの？",
         PROMPT_CAMERA_ERROR:
           "写真の撮影で問題が発生しました。もう一度お試しください",
         DEADCHAT_ACTION_CAMERA: "見えてるもの",
@@ -23392,9 +23457,12 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discordがアプリ内通知とデスクトップ通知の表示やメッセージ音の再生を行わなくなります。",
         QUIET_MODE_DISABLED_BY: "これはフォーカスモードにより無効です",
+        FOCUS_MODE_TITLE: "フォーカスモード（ベータ版）",
+        FOCUS_MODE_BADGE_ON: "ON",
+        FOCUS_MODE_BADGE_OFF: "OFF",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "しばらくの間「取り込み中」を使用しています。代わりに「フォーカスモード」を有効にしますか？",
-        ACTIVITY_REACTION_REPLY_TITLE: "{activity}についてチャット",
+        ACTIVITY_REACTION_REPLY_TITLE: "{activity}についてチャットしよう",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "@{username}と{activity}を表示するアクティビティカード",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:

@@ -672,9 +672,13 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Recent",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bots in deze server",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Populair",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Niets vereist. Je kunt de opdracht versturen of hieronder een optie toevoegen",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Hieronder een optie selecteren",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Je bent niet gemachtigd om opdrachten uit te voeren in dit kanaal",
-        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Opdrachtprompt openen",
+        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Opdrachtdetails tonen",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "Geen machtigingen",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY:
           "Je bent niet gemachtigd om deze opdracht uit te voeren",
@@ -1268,7 +1272,6 @@
           "[!!{username}!!](usernameOnClick) heeft een [activiteit](activityTextOnClick) gestart",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} heeft een activiteit gestart",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Misschien later",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "Hoe ging !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Wat had beter gekund?",
         ACTIVITY_REPORTED_POSITIVE:
@@ -1422,9 +1425,6 @@
           "Probeer deze tijdelijke, monsterlijke deal uit.\nHeb je Nitro? Tover dan SpellCast tevoorschijn.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Testmodus is momenteel actief voor **!!{applicationName}!!**. Je applicatie verschijnt als een optie in het menu van de activiteitenknop.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Nieuwe Activiteit! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Speel een spel met je vrienden waarbij je moet tekenen en de rest moet raden wat het is. Gratis tot 29 maart.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Waarschuwing",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Desktop-b\xe8ta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "NIEUW! Spraakkanaalreacties",
@@ -3463,7 +3463,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Geen",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Ongelezen badges",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Uitgelicht kanaalnaam en halve stip",
+          "Uitgelichte kanaalnaam en halve stip",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Meldingen",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Pushmelding en pinggeluid",
@@ -3473,7 +3473,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "aankondigingen",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "algemeen",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "willekeurig",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Eenzame avonturier",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "Aangepaste meldingsinstellingen van het kanaal",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "Schakel alle meldingen in",
@@ -3509,6 +3509,8 @@
           "Je ontvangt geen notificaties van gedempte kanalen (grijs in je kanalenlijst). Deze instelling geldt op al je apparaten.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Je ontvangt geen notificaties van gedempte categorie\xebn (grijs in je kanaallijst). Deze instelling geldt op al je apparaten.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Je server is momenteel $[**gedempt**](mutedHook). Je kunt geen notificaties ontvangen van dit kanaal of instellingen ervan wijzigen totdat het dempen van deze server is opgeheven.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "De notificatie van je server is ingesteld op $[**niets**](notificationHook). Je ontvangt geen notificaties van dit kanaal, maar dat kun je hier wijzigen.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4283,7 +4285,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Was deze melding nuttig? [Laat het ons weten!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[Meldinginstellingen uitlichten](handleMessage)",
+          "[Instellingen hoogtepuntmeldingen](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "Was deze melding nuttig?",
         NOTIFICATION_REPORT_FEEDBACK: "Geef feedback over deze melding",
         NOTIFICATION_REPORT_TEXT:
@@ -4356,6 +4358,8 @@
         SEARCH_EMOJIS: "Emoji's zoeken",
         SEARCH_FOR_EMOJI: "Zoek de perfecte emoji",
         SEARCH_FOR_STICKER: "Vind de perfecte sticker",
+        SEARCH_FOR_REACTION: "Zoek de perfecte reactie",
+        SEARCH_FOR_SUPER_REACTION: "Zoek de perfecte superreactie",
         NO_EMOJI_SEARCH_RESULTS: "Geen emoji komen overeen met je zoekopdracht",
         EMOJI_CATEGORY_PACK: "{packName}-pakket",
         EMOJI_CATEGORY_RECENT: "Vaak gebruikt",
@@ -5288,6 +5292,7 @@
           "Er ging iets fout met het lezen van de logbestanden van je systeem. Probeer het opnieuw.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Er ging iets fout en je foutopsporingslogboeken konden niet worden ge\xfcpload. Probeer het opnieuw.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Pushmeldinglogs delen",
         FORM_CHECKBOX_AEC_DUMP: "Diagnostische audio-opname",
         FORM_HELP_AEC_DUMP:
           "Diagnostische audio-opnamen worden gebruikt voor het analyseren van audioproblemen. De laatste vijf minuten spraak zijn opgeslagen in de map met spraakmodules.",
@@ -5345,6 +5350,7 @@
         APP_ICON_SUNSET: "Zonsondergang",
         APP_ICON_HOLO_WAVES: "Prismatische golven",
         APP_ICON_PIRATE: "Ahoi",
+        APP_ICON_PIRATE_1: "Harr",
         APP_ICON_PIRATE_2: "Aye, aye",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5430,6 +5436,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# persoon} other {# mensen}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Spraakoproepacties openen",
+        TURN_CAMERA_ON_A11Y_LABEL: "Camera aanzetten",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Camera uitzetten",
         IN_GAME_VOICE_SETTINGS: "Spraakinstellingen in-game",
         VIDEO_SETTINGS: "Videoinstellingen",
         TEXT: "Tekst",
@@ -5640,6 +5648,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Spraak gekoppeld",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Videogekoppeld",
         CONNECTION_STATUS_RTC_CONNECTING: "Bezig met RTC-koppelen",
+        CONNECTION_STATUS_ICE_CHECKING: "Route wordt gecontroleerd",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS verbinden",
         CONNECTION_STATUS_NO_ROUTE: "Geen route",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC ontkoppeld",
@@ -6128,7 +6137,7 @@
         COPY_ID_COMMAND: "Opdracht-ID kopi\xebren",
         COPY_ID_EMOJI: "Emoji-ID kopi\xebren",
         COPY_ID_EVENT: "Evenement-ID kopi\xebren",
-        COPY_ID_EVENT_RECURRENCE: "ID terugkerend evenement kopi\xebren",
+        COPY_ID_EVENT_RECURRENCE: "Specifiek ID kopi\xebren",
         COPY_ID_GUILD: "Server-ID kopi\xebren",
         COPY_ID_MESSAGE: "Bericht-ID kopi\xebren",
         COPY_ID_ROLE: "Rol-ID kopi\xebren",
@@ -8273,6 +8282,12 @@
           "Laat de chat shinen met superreacties. Nu verkrijgbaar met [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Laat de chat shinen met superreacties. Nu verkrijgbaar met [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Laat de chat shinen met superreacties! Nu verkrijgbaar met Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Laat de chat shinen met onbeperkte superreacties!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nu verkrijgbaar met Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Laat de chat shinen met superreacties. Ontvang er {refillAmount} per week, met [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8392,6 +8407,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Laat de chat shinen met superreacties! Krijg onbeperkte superreacties en andere coole voordelen met [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Onbeperkte superreacties!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Klik op de knop om een superreactie toe te voegen.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Tik op de knop om een superreactie toe te voegen.",
         HOLD_UP: "Ho even",
         MASKED_LINK_ALERT_V2_HEADER: "Discord verlaten",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -8745,7 +8764,7 @@
         SEARCH_GROUP_HINT_PINNED:
           "Tik om een filter toe te voegen. Zoek vastgepinde berichten",
         SEARCH_FILTERS: "Zoekfilters",
-        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Filterresultaten...",
+        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Resultaten filteren...",
         SEARCH_FILTER_FROM: "van",
         SEARCH_FILTER_HAS: "heeft",
         SEARCH_FILTER_BEFORE: "voor",
@@ -9455,6 +9474,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "Kleurthema's",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Geef Discord je eigen vibe met unieke kleurthema's.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Persoonlijke applicatiepictogrammen",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Kies een pictogram dat het best bij jou past, voor op je mobiel en voor in de app op je desktop.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "De voordelen",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "Upgrade je Discord-ervaring",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -10098,6 +10121,8 @@
           "Er lijkt iets mis te gaan en je kunt die code niet gebruiken. Onze excuses.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Sorry, deze code lijkt al verzilverd te zijn.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Deze code lijkt bij iemand anders te horen.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Deze code werkt niet. Controleer of je de goede code hebt en probeer het opnieuw.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10139,6 +10164,8 @@
           "Deze code vind je in een bevestigingsmail die we je zojuist hebben gestuurd.",
         REDEMPTION_CODE: "Verzilvercode",
         PARTNER_PROMOTION_CLAIM: "Volgende",
+        PARTNER_PROMOTION_ERROR_TITLE: "O-oh!",
+        PARTNER_PROMOTION_ERROR_BODY: "Dit ging niet helemaal goed.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Onbekend cadeau.",
         REDEEM: "Verzilveren",
         UNLOCK_CODE: "Ontgrendelcode",
@@ -11653,6 +11680,7 @@
           "Als Nitro-abonnee krijg je deze coole badge.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Voor de verzamelaars. Een exclusieve Nitro-badge.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Verzilveren",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Supercharge je Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13144,6 +13172,7 @@
         MOST_POPULAR: "Populairst",
         SPELLCHECK: "Spellingscontrole",
         ADD_TO_DICTIONARY: "Toevoegen aan bibliotheek",
+        REMOVE_FROM_DICTIONARY: "Verwijderen uit woordenboek",
         LANGUAGES: "Talen",
         AUTO_SUGGEST_STICKERS: "Stickersuggesties",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13433,6 +13462,7 @@
           "Er is een officieel bericht van het Discord-team dat jouw aandacht nodig heeft.",
         BUILD_OVERRIDE: "Build-overschrijving",
         BUILD_OVERRIDE_FOR: "Build-overschrijving voor {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Commit hash",
         BUILD_OVERRIDE_APPLY: "Toepassen",
         BUILD_OVERRIDE_CLEAR: "Wissen",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Build is niet beschikbaar",
@@ -13636,7 +13666,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Kies uit {monthlyPrice}/maand of {yearlyPrice}/jaar",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "De ontvanger krijgt:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Geef een Nitro-lidmaatschap cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Cadeauduur",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Geef {count, plural, one {# maand} other {# maanden}} {nitroTierName} cadeau",
@@ -13657,7 +13686,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Pak het cadeau uit",
         GIFT_RECIPIENT_INFO: "Aan: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Geluidseffect toevoegen",
+        GIFT_SELECT_EMOJI: "Emojiconfetti toevoegen",
         GIFT_SELECT_SOUNDBOARD_ADD: "Toevoegen",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Dit wordt afgespeeld als je vriend(in) diens cadeau opent",
         NITRO_CONFIRMATION: "Je hebt Nitro",
         OPENED_GIFT_CONFIRMATION: "Je hebt dit cadeau uitgepakt!",
         NITRO_PERKS: "Check je nieuwe Nitro-voordelen!",
@@ -14297,6 +14330,8 @@
           "Klik op het kompas in je serverlijst om nieuwe servers te vinden.",
         LOADING_TIP_12:
           "Versleep servers naar andere servers om servermappen te maken.",
+        LOADING_TIP_13:
+          "Typ /gif of /tenor + wat dan ook om een gifje voor dat onderwerp te vinden!",
         LOADING_TIP_14:
           "Deel wat je speelt via de instellingen onder Game-activiteiten.",
         LOADING_TIP_15:
@@ -14325,6 +14360,19 @@
           "Typ / om botopdrachten en andere ingebouwde opdrachten te bekijken",
         LOADING_TIP_27:
           "Je kunt woorden tussen !!{asterisks}!! zetten om ze **vetgedrukt** te maken.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "happy halloween zorg ervoor dat je je server niet voor dood achterlaat",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO een heel geestig halloween gewenst",
+        HALLOWEEN_LOADING_TEXT_3: "Een huiveringwekkende ringtone brouwen...",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "In de voicechat is iedereen een geest",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Verifi\xebren dat je servers (waarschijnlijk) niet bezeten zijn",
+        HALLOWEEN_LOADING_TEXT_7: "Het wordt hier al steeds griezeliger",
+        HALLOWEEN_LOADING_TEXT_8: "Posten zombies alleen dode memes?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord raakt ge\xefnfecteerd! Pas op voor de Wumpus-zombie",
         ACCESSIBILITY_LOADING_TIP_1:
           "Kies voor het lichte of donkere thema in de weergave-instellingen.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14354,6 +14402,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Begrepen",
         VOICE_PANEL_SHOW_VOICE_USERS: "Voicechatgebruikers weergeven",
         VOICE_PANEL_USERS_A11Y_LABEL: "Spraakgebruikers",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, luisteren uitgeschakeld en gedempt",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, gedempt",
         VOICE_PANEL_SHOW_EXTRAS: "Alle gebruikers weergeven",
         VOICE_PANEL_HIDE_EXTRAS: "Minimaliseren",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15496,6 +15547,8 @@
         FRIEND_FINDER_FRIENDS: "Alle vrienden",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Contactpersonen op Discord — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Mensen die je misschien kent — {count}",
         CONTACT_SYNC_TITLE: "Zoek je vrienden",
         CONTACT_SYNC_LANDING_TITLE: "Zoek je vrienden",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16736,11 +16789,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} andere actieve threads",
         THREAD_BROWSER_ARCHIVED_HEADER: "oudere threads",
         THREAD_BROWSER_JOINED_HEADER: "{count} threads waaraan je deelneemt",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} Andere actieve threads",
         THREAD_BROWSER_ACTIVE_COUNT: "Actieve threads - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Oudere threads",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "{count} hebben deelgenomen aan threads",
         THREAD_BROWSER_JOINED_COUNT: "Threads waaraan je deelneemt - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} s geleden",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}d geleden",
@@ -16759,8 +16809,6 @@
           "Er zijn geen actieve threads.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Er zijn geen gearchiveerde threads.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Blijf gefocust op een gesprek met een thread, een tijdelijk tekstkanaal.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Blijf gefocust op een gesprek met een thread - een tijdelijk tekstkanaal.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filterinstellingen",
@@ -18888,9 +18936,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Zoekresultaten",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Naam",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Lid sinds",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Lid geworden van Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Rollen",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signalen",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "leden van de **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "**{pageRange}** van **{total}** leden",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Hiermee worden alleen de recentste nieuwe leden getoond. Mogelijk worden oudere leden niet getoond (vooralsnog).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Getoond:",
@@ -19179,6 +19230,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Raidwaarschuwingen",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Waarschuwingskanaal",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Geen",
+        GUILD_ANTIRAID_RAID_ALERT: "Raidwaarschuwing",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Bescherming ingeschakeld",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -19666,7 +19718,7 @@
           "Je wijzigt instellingen handmatig.",
         NOTIFICATION_SETTINGS_USE_PRESET: "Presets gebruiken",
         NOTIF_MIGRATION_SETTINGS_TITLE:
-          "Instelling nieuwe ongelezen berichten (experimenteel)",
+          "Nieuwe instelling ongelezen berichten (experimenteel)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "Hiermee schakel je de instelling voor nieuwe ongelezen berichten in waarmee je kunt kiezen welke kanalen het belangrijkst zijn op een server.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -21649,6 +21701,9 @@
           "Nitro-abonnees krijgen korting op deze versiering",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} met Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Toe aan een nieuwe look?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Nou, dit is een beetje g\xeanant.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmm, we konden de winkel niet laden. Probeer het later nog een keer.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Altijd bruikbaar zolang je een actief Nitro-abonnement hebt.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Kijk mijn prachtige versiering eens",
@@ -21736,6 +21791,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "App toevoegen",
         MONETIZATION: "Monetisatie",
         GUILD_SETTINGS_MONETIZATION: "Servermonetisatie",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Serverabonnementen",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Promopagina",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Abonnementsniveau",
@@ -22182,6 +22238,8 @@
           "Van betalingsteam veranderen",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Betalingsteam selecteren",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Wijzig naar welk team de betalingen voor servermonetisatie worden overgemaakt.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Teamwijzigingen kunnen van invloed zijn op de goedkeuring van uitbetalingen",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23026,7 +23084,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "Clip kijken",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "Je hebt {count, plural, =1 {# nieuwe clip} other {# nieuwe clips}}!",
-        CLIPS_REVIEW_NOW: "Nu beoordelen",
+        CLIPS_REVIEW_NOW: "Nu bekijken",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "Je hebt clips opgenomen tijdens je recente !!{applicationName}!!-stream. Check ze snel in je clipsbibliotheek!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "Clips bekijken",
@@ -23107,7 +23165,7 @@
           "Dit is de maximale framerate waarop je clips worden opgenomen.",
         CLIPS_CROP_START: "Bijsnijden starten",
         CLIPS_CROP_END: "Bijsnijden be\xebindigen",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoilerclip",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoiler toevoegen",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Clip verwijderen",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Nu kun je met $[!!{keybind}!!](keybindHook) of een zelfbedachte toetsencombinatie direct clips opnemen in een game.",
@@ -23119,6 +23177,10 @@
           "Nee toch! Het is momenteel niet mogelijk om clips te maken.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "Clipsinstellingen beheren",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Meer informatie",
+        SOUND_INCOMING_RING_HALLOWEEN: "Inkomend belgeluid Halloween",
+        CUSTOM_SOUNDS: "Persoonlijke geluiden",
+        ENABLE_PHONE_INTEGRATION:
+          "Schakel de integratie met de telefoonapp in om dit te ervaren.",
         GUILD_SHOP_CHANNEL_LABEL: "Servershop",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Beschikbare producten",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23225,6 +23287,8 @@
           "Meer info over ons {classificationDescription} beleid.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discords regels gelden voor iedereen",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Naar Accountstatus",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Naar Accountstatus",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Accountstatus bekijken",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Opnieuw proberen",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23301,6 +23365,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Afwijzen",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Hebben we een fout gemaakt? [Laat het ons weten](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Markeren als niet-gevoelig",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Bedankt dat je het ons hebt laten weten!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23450,12 +23515,12 @@
         STATUS_IN_TRANSIT: "Een stukje lopen",
         STATUS_WATCHING: "Iets aan het kijken",
         STATUS_NONE: "Geen status",
-        HANG_STATUS: "Aan het hangen",
+        HANG_STATUS: "Hangstatus",
         HANG_STATUS_LOCATION: "in !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Gepersonaliseerde status",
         CUSTOM_HANG_STATUS_CTA: "Kom er lekker bij!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Wat ben je aan het doen?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Status swipen",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Status inpikken",
         HANG_STATUS_VC_ROW_ADD: "Voeg een status toe",
         HANG_STATUS_HELP:
           "Laat je vrienden zien waar je mee bezig bent door een activiteitsstatus in te stellen.",
@@ -23743,6 +23808,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord toont geen bureaubladmeldingen meer in apps en er worden er ook geen meldingsgeluiden meer afgespeeld.",
         QUIET_MODE_DISABLED_BY: "Dit is uitgeschakeld vanwege de Focusmodus",
+        FOCUS_MODE_TITLE: "Focusmodus (B\xc8TA)",
+        FOCUS_MODE_BADGE_ON: "AAN",
+        FOCUS_MODE_BADGE_OFF: "UIT",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Je gebruikt 'Niet storen' vrij vaak. Wil je misschien de Focusmodus inschakelen?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chatten over {activity}",

@@ -600,6 +600,9 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "最近",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "此伺服器中的機器人",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "熱門",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "無任何要求，您可以發送指令或在下面新增選項",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER: "選擇下列任一選項",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY: "您沒有權限在此頻道執行指令",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "開啟指令",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "沒有權限",
@@ -1125,8 +1128,6 @@
           "[!!{username}!!](usernameOnClick) 開始了一項[活動](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} 開始了一項活動",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "晚點吧",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_ACCEPT: "快試試看",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "!!{applicationName}!! 如何？",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "有什麼需要改善的嗎？",
         ACTIVITY_REPORTED_POSITIVE:
@@ -1261,9 +1262,6 @@
           "在可怕的有限時間內嘗試一下。\n您有訂閱 Nitro 嗎？快召喚 SpellCast。",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "現在已針對 **!!{applicationName}!!** 啟用測試模式。您的應用程式在活動按鈕選單中應該會顯示為一個選項。",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "新活動！Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "快來和好友試玩全新「你畫我猜」遊戲。3 月 29 日前免費暢玩。",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "警告",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(桌面測試版)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "全新推出的語音頻道反應",
@@ -3198,7 +3196,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "公告",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "一般",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "隨機",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "孤獨的漂泊者",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "頻道自訂通知設定",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "啟用所有通知",
@@ -3226,6 +3224,8 @@
           "您不會收到已靜音頻道的通知，而且它們會在您的頻道名單上呈現灰色。此設定套用在您的所有裝置中。",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "您不會收到已靜音類別的通知，而且它們會在您的頻道名單上呈現灰色。此設定套用在您的所有裝置中。",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "您的伺服器目前 $[**已靜音**](mutedHook)。在您對此伺服器解除靜音前，您無法收到此頻道的通知，也無法變更設定。",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "您的伺服器通知設定為 $[**無**](notificationHook)。您將無法收到此頻道的任何通知，但您可以在此覆蓋設定。",
         CHANNEL_OR_GUILD_MUTED: "此頻道或伺服器目前設為不接受通知。",
@@ -3998,6 +3998,8 @@
         SEARCH_EMOJIS: "搜尋表情符號",
         SEARCH_FOR_EMOJI: "尋找完美的表情符號",
         SEARCH_FOR_STICKER: "尋找完美的貼圖",
+        SEARCH_FOR_REACTION: "尋找完美的反應",
+        SEARCH_FOR_SUPER_REACTION: "尋找完美的超級反應",
         NO_EMOJI_SEARCH_RESULTS: "沒有表情符號符合您的搜尋",
         EMOJI_CATEGORY_PACK: "{packName} 表情包",
         EMOJI_CATEGORY_RECENT: "經常使用",
@@ -4836,6 +4838,7 @@
         UPLOAD_DEBUG_LOG_FAILURE_READ: "讀取系統紀錄檔時發生錯誤，請再試一次。",
         UPLOAD_DEBUG_LOG_FAILURE:
           "發生問題導致我們無法上傳你的除錯檔案，請再試一次。",
+        SHARE_PUSH_NOTIFICATION_LOGS: "分享推播通知紀錄",
         FORM_CHECKBOX_AEC_DUMP: "錄音診斷",
         FORM_HELP_AEC_DUMP:
           "錄音診斷能夠用來分析音訊的問題。語音的最後五分鐘儲存到了語音模組資料夾裡。",
@@ -4892,6 +4895,7 @@
         APP_ICON_SUNSET: "日落",
         APP_ICON_HOLO_WAVES: "七彩波紋",
         APP_ICON_PIRATE: "海賊夥伴",
+        APP_ICON_PIRATE_1: "海盜",
         APP_ICON_PIRATE_2: "好啦",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "啊啊啊",
@@ -4976,6 +4980,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# 人} other {# 個人物}}",
         VOICE_CALL_ACTION_A11Y_HINT: "開啟語音通話操作",
+        TURN_CAMERA_ON_A11Y_LABEL: "開啟相機",
+        TURN_CAMERA_OFF_A11Y_LABEL: "關閉相機",
         IN_GAME_VOICE_SETTINGS: "遊戲內語音設定",
         VIDEO_SETTINGS: "視訊設定",
         TEXT: "文字",
@@ -5176,6 +5182,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "語音已連線",
         CONNECTION_STATUS_VIDEO_CONNECTED: "視訊已連線",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC 連線中",
+        CONNECTION_STATUS_ICE_CHECKING: "正在確認路由",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS 連線中",
         CONNECTION_STATUS_NO_ROUTE: "沒有路由",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC 已中斷連線",
@@ -7578,6 +7585,12 @@
           "[{planName}](onClick) 現可使用超級反應炒熱聊天室。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "[{planName}](onClick) 現可無限使用超級反應炒熱聊天室。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Nitro 訂閱現可無限使用超級反應炒熱聊天室。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "現可無限使用超級反應炒熱聊天室！",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nitro 訂閱現可使用。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "使用超級反應炒熱聊天室，[Nitro]({nitroLink}) 訂閱每周可獲得 {refillAmount} 個超級反應。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -7693,6 +7706,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "用超級反應炒熱聊天室！訂閱 [Nitro](onClick) 即可獲得無限量的超級反應和其他超酷福利。",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "無限量的超級反應！",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "按一下按鈕，加入一個超級反應。",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "點選按鈕，加入一個超級反應。",
         HOLD_UP: "耽誤一下！",
         MASKED_LINK_ALERT_V2_HEADER: "正在離開 Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE: "這個連結將帶您前往以下網站",
@@ -8682,6 +8699,9 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "色彩主題",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "使用獨特主題色彩將個人風格帶入 Discord。",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "自訂應用程式圖示",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "選擇與您風格相符的行動裝置與應用程式內桌面圖示。",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "福利",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "升級您的 Discord 體驗",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -9295,6 +9315,7 @@
         PROMOTION_ERROR_TITLE: "請稍後...",
         PROMOTION_ERROR_BODY: "好像出了點問題，您無法使用此代碼。很抱歉。",
         PROMOTION_ERROR_CLAIMED_BODY: "抱歉，此代碼似乎已經被換取了。",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY: "看來這個禮物代碼屬於其他人。",
         PROMOTION_ERROR_NO_CODE_BODY:
           "此代碼似乎無法運作。請確認您擁有正確的代碼並再試一次。",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -9335,6 +9356,8 @@
           "此代碼附在我們剛剛傳送的確認電子郵件中。",
         REDEMPTION_CODE: "兌換代碼",
         PARTNER_PROMOTION_CLAIM: "下一步",
+        PARTNER_PROMOTION_ERROR_TITLE: "糟糕！",
+        PARTNER_PROMOTION_ERROR_BODY: "好像出問題了。",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "未知禮物。",
         REDEEM: "換取",
         UNLOCK_CODE: "解鎖代碼",
@@ -10722,6 +10745,7 @@
           "成為 Nitro 訂閱者，即可獲得這個酷徽章。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "收藏家們，快來收集這個 Nitro 專屬的獨家徽章吧。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "換取",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD: "充實您的 Discord 體驗",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "在所有伺服器中自訂個人資料",
         NITRO_MARKETING_CARDS_UNLIMITED_SUPER_REACTIONS: "每週無限量的超級反應",
@@ -12103,6 +12127,7 @@
         MOST_POPULAR: "最受歡迎",
         SPELLCHECK: "檢查拼寫",
         ADD_TO_DICTIONARY: "加入字典",
+        REMOVE_FROM_DICTIONARY: "從字典移除",
         LANGUAGES: "語言",
         AUTO_SUGGEST_STICKERS: "貼圖建議",
         AUTO_SUGGEST_STICKERS_DESCRIPTION: "允許輸入訊息時提供貼圖建議。",
@@ -12376,6 +12401,7 @@
           "這是 Discord 團隊的官方通知，請注意。",
         BUILD_OVERRIDE: "組建覆寫",
         BUILD_OVERRIDE_FOR: "組建 {releaseChannel} 的覆寫",
+        BUILD_OVERRIDE_ID: "提交雜湊",
         BUILD_OVERRIDE_APPLY: "申請",
         BUILD_OVERRIDE_CLEAR: "清除",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "組建無法使用",
@@ -12571,7 +12597,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "請選擇每月 {monthlyPrice} 或每年 {yearlyPrice}",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人會收到：",
-        MOBILE_CUSTOM_GIFT_TITLE: "贈送 Nitro 會員身分",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "禮物期限",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "贈送 {count, plural, one {# 個月} other {# 個月}}的 {nitroTierName}",
@@ -12591,7 +12616,11 @@
         GIFT_DURATION: "1 {timeInterval}的 Nitro",
         GIFT_OPEN_PROMPT: "打開禮物",
         GIFT_RECIPIENT_INFO: "收件人：{recipientDisplayName}",
+        GIFT_SELECT_SOUND: "新增音效",
+        GIFT_SELECT_EMOJI: "新增表情符號五彩紙屑",
         GIFT_SELECT_SOUNDBOARD_ADD: "加入",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "您的好友打開禮物時會播放此音效",
         NITRO_CONFIRMATION: "您獲得了 Nitro 訂閱",
         OPENED_GIFT_CONFIRMATION: "您打開這份禮物了！",
         NITRO_PERKS: "查看新的 Nitro 福利！",
@@ -13155,6 +13184,7 @@
         LOADING_TIP_10: "群組訊息最多可包含十名成員。",
         LOADING_TIP_11: "按一下您伺服器清單中的指南針以尋找新伺服器。",
         LOADING_TIP_12: "將伺服器拖曳並放下至另一伺服器上以建立伺服器資料夾。",
+        LOADING_TIP_13: "輸入 /gif 或 /tenor + 任何東西以尋找該主題的 GIF！",
         LOADING_TIP_14: "使用遊戲偵測設定以分享您正在遊玩的遊戲。",
         LOADING_TIP_15: "在聊天室中，使用粗體字、斜體字等來凸顯您的文字。",
         LOADING_TIP_16:
@@ -13172,6 +13202,15 @@
         LOADING_TIP_25: "您可以輸入 /nick 以快速變更在伺服器中的暱稱。",
         LOADING_TIP_26: "您可以輸入 / 查看機器人命令和其他內建命令",
         LOADING_TIP_27: "在文字旁輸入 !!{asterisks}!! 即可使用 **粗體字**。",
+        HALLOWEEN_LOADING_TEXT_1: "萬聖節快樂，記得回來伺服器「鬼」混一下",
+        HALLOWEEN_LOADING_TEXT_2: "嗚嗚嗚嗚嗚...祝您有個愉快「瘟腥」的萬聖節",
+        HALLOWEEN_LOADING_TEXT_3: "正在醞釀令人不寒而慄的鈴聲",
+        HALLOWEEN_LOADING_TEXT_4: "嗚嗚嗚嗚嗚",
+        HALLOWEEN_LOADING_TEXT_5: "語音聊天中的每個人都是幽靈",
+        HALLOWEEN_LOADING_TEXT_6: "正在驗證您的伺服器沒有鬧鬼 (大概吧)",
+        HALLOWEEN_LOADING_TEXT_7: "我們越來越會「裝神弄鬼」了呢",
+        HALLOWEEN_LOADING_TEXT_8: "殭屍只會玩一些老掉牙的爛梗嗎？",
+        HALLOWEEN_LOADING_TEXT_9: "Discord 被感染了！小心殭屍 Wumpus 出沒",
         ACCESSIBILITY_LOADING_TIP_1: "在外觀設定中選擇明亮或灰暗主題。",
         ACCESSIBILITY_LOADING_TIP_2: "在輔助功能設定中使用減少動作以關閉動畫。",
         ACCESSIBILITY_LOADING_TIP_3: "在輔助功能設定中變更文字朗讀速度。",
@@ -13195,6 +13234,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "知道了",
         VOICE_PANEL_SHOW_VOICE_USERS: "顯示語音使用者",
         VOICE_PANEL_USERS_A11Y_LABEL: "語音使用者",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}，已設為請勿打擾與靜音",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}，已設為靜音",
         VOICE_PANEL_SHOW_EXTRAS: "顯示所有使用者",
         VOICE_PANEL_HIDE_EXTRAS: "最小化",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!，{status}",
@@ -14263,6 +14305,8 @@
         FRIEND_FINDER_FRIENDS: "所有好友",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord 上的聯絡人：{count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "您可能認識的人 — {count}",
         CONTACT_SYNC_TITLE: "尋找您的好友",
         CONTACT_SYNC_LANDING_TITLE: "尋找您的好友",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -15380,10 +15424,8 @@
         THREAD_BROWSER_OTHER_HEADER: "其他 {count} 個進行中的討論串",
         THREAD_BROWSER_ARCHIVED_HEADER: "較舊的討論串",
         THREAD_BROWSER_JOINED_HEADER: "{count} 個已加入的討論串",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "其他 {count} 個進行中的討論串",
         THREAD_BROWSER_ACTIVE_COUNT: "進行中的討論串：{count} 個",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "較舊的討論串",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} 個已加入的討論串",
         THREAD_BROWSER_JOINED_COUNT: "已加入的討論串：{count} 個",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} 秒前",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} 天以前",
@@ -15399,8 +15441,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "沒有討論串。",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "沒有任何進行中討論串。",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "沒有任何存檔的討論串。",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "注意討論串中的對話，這是個暫時性的文字頻道。",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "掌握討論串中的對話進度，這是個暫時性的文字頻道。",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "篩選設定",
@@ -17313,9 +17353,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "搜尋結果",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "名稱",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "成為成員時間",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "已加入 Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "身分組",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "警訊",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "位成員 (共 **{count}** 位)",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "位成員 (**{pageRange}** / **{total}**)",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "僅會顯示最近加入的新成員，可能不會顯示加入時間較久的成員 (不過很快就能同時顯示這些資深成員)。",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "顯示",
@@ -17414,7 +17457,7 @@
         MEMBER_SAFETY_DATE_OPTION_BEFORE: "在此日期前",
         MEMBER_SAFETY_DATE_OPTION_BEFORE_ONLY: "{date} 之前",
         MEMBER_SAFETY_DATE_OPTION_AFTER_ONLY: "{date} 之後",
-        MEMBER_SAFETY_JOINED_DATE_LABEL: "自日期選項開始的成員",
+        MEMBER_SAFETY_JOINED_DATE_LABEL: "成員加入日期選項",
         MEMBER_SAFETY_ACCOUNT_AGE_LABEL: "Discord 加入日期選項",
         MEMBER_SAFETY_JOIN_METHOD_LABEL: "伺服器加入方式選項",
         MEMBER_SAFETY_GUILD_JOINED_AT_DESC: "成為成員時間 (由新到舊)",
@@ -17581,6 +17624,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "攻擊警告",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "警告頻道",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "無",
+        GUILD_ANTIRAID_RAID_ALERT: "攻擊警告",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "已啟用保護",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "設定警告",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION: "在 AutoMod 設定",
@@ -19828,6 +19872,9 @@
           "Nitro 訂閱者購買此裝飾可享折扣",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro 訂閱為 {price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "準備嘗試新造型了嗎？",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "哇，這下有點小尷尬。",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "嗯...商店沒辦法載入耶。等等再回來看看吧。",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "隨時可透過啟用中的 Nitro 訂閱使用。",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "看看這美麗的裝飾",
@@ -19910,6 +19957,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "新增應用程式",
         MONETIZATION: "營利",
         GUILD_SETTINGS_MONETIZATION: "伺服器營利",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "伺服器訂閱",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "宣傳頁面",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "訂閱層級",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "繼續",
@@ -20321,6 +20369,8 @@
           "變更付款團隊",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "選擇付款團隊",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "變更伺服器營利付款要傳送到哪個團隊。",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "變更團隊可能影響您的收款資格",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -21171,6 +21221,9 @@
         CLIPS_USER_EDUCATION_ERROR_BODY: "哎呀！我們目前無法進行剪輯。",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "管理剪輯影片設定",
         CLIPS_USER_EDUCATION_LEARN_MORE: "了解更多",
+        SOUND_INCOMING_RING_HALLOWEEN: "萬聖節來電鈴聲",
+        CUSTOM_SOUNDS: "自訂音效",
+        ENABLE_PHONE_INTEGRATION: "啟用手機版應用程式整合功能以體驗此鈴聲。",
         GUILD_SHOP_CHANNEL_LABEL: "伺服器商店",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "上架產品",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "{productName} 的產品清單卡片",
@@ -21272,6 +21325,8 @@
           "瞭解我們的 {classificationDescription} 政策。",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord 的規則適用於所有人",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "前往帳號信譽",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "前往帳號信譽",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "查看帳號信譽",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "重試",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE: "有效的違規：{count} 個",
@@ -21340,6 +21395,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "關閉",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "如果我們弄錯了，[請告訴我們](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "標記為非敏感內容",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "謝謝您的回報！",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER: "標記為非敏感內容",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION:
@@ -21474,12 +21530,12 @@
         STATUS_IN_TRANSIT: "在現實中移動",
         STATUS_WATCHING: "看東西",
         STATUS_NONE: "沒有狀態",
-        HANG_STATUS: "掛機",
+        HANG_STATUS: "閒晃狀態",
         HANG_STATUS_LOCATION: "在 !!{guildName}!! 中",
         CUSTOM_HANG_STATUS: "自訂狀態",
         CUSTOM_HANG_STATUS_CTA: "快加入！",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "您在做什麼？",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "滑動狀態",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "拿走狀態",
         HANG_STATUS_VC_ROW_ADD: "新增狀態",
         HANG_STATUS_HELP: "透過設定活動狀態，向您的朋友展示您正在進行的事情。",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "設定自訂狀態",
@@ -21734,6 +21790,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord 不會顯示應用程式內、桌面通知，或播放訊息音效。",
         QUIET_MODE_DISABLED_BY: "這已經被「專注模式」停用",
+        FOCUS_MODE_TITLE: "專注模式 (測試版)",
+        FOCUS_MODE_BADGE_ON: "開啟",
+        FOCUS_MODE_BADGE_OFF: "關閉",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "您已經開啟「勿擾模式」一段時間了。您想要啟用「專注模式」嗎？",
         ACTIVITY_REACTION_REPLY_TITLE: "關於 {activity} 的聊天",

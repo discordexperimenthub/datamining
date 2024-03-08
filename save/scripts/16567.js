@@ -657,9 +657,13 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Nedavno",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Botovi na ovom serveru",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popularno",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Ništa nije obavezno. U nastavku možeš poslati naredbu ili dodati opciju",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Odaberi neku opciju u nastavku",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Nemaš dozvole potrebne za izvršavanje naredbi na ovom kanalu",
-        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Otvori naredbu",
+        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Naredba Otvori",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "Nema dozvola",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY:
           "Nemaš dozvole potrebne za izvršavanje ove naredbe",
@@ -1254,7 +1258,6 @@
           "[!!{username}!!](usernameOnClick) je započeo/la [aktivnost](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} je započeo/la aktivnost",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Možda kasnije",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Kako je bilo s aplikacijom !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Što je moglo biti bolje?",
@@ -1408,9 +1411,6 @@
           "Isprobaj ih na jezivo ograničeno vrijeme.\nImaš Nitro? Dozovi SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Aplikacija **!!{applicationName}!!** je od sada dostupna za testiranje. Tvoja aplikacija bi se od sada trebala pojavljivati kao stavka u izborniku pod dugmetom aktivnosti.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Nova aktivnost! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Isprobaj igru u kojoj crtaš i pogađaš što vidiš sa svojim prijateljima. Besplatna je do 29. ožujka.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Upozorenje",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Za PC verziju, beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3498,6 +3498,8 @@
           "Od utišanih kanala nećeš primiti nikakve obavijesti i na tvojem popisu kanala će se pojavljivati u sivoj boji. Ova postavka vrijedi na svim tvojim uređajima.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Od utišanih kategorija nećeš primiti nikakve obavijesti i na tvojem popisu kanala će se pojavljivati u sivoj boji. Ova postavka vrijedi na svim tvojim uređajima.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Tvoj je server trenutačno $[**utišan**](mutedHook). Ne možeš dobiti obavijesti s tog kanala niti promijeniti postavke sve dok ne ukineš utišavanje servera.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Obavijesti s tvojeg servera sada su postavljene na $[**ništa**](notificationHook). S tog kanala ne možeš dobiti nikakve obavijesti, ali to možeš zaobići s ovog mjesta.",
         CHANNEL_OR_GUILD_MUTED: "Server ili kanal je trenutno utišan.",
@@ -4346,6 +4348,8 @@
         SEARCH_EMOJIS: "Traži emoji",
         SEARCH_FOR_EMOJI: "Pronađi savršen emoji",
         SEARCH_FOR_STICKER: "Pronađi savršenu naljepnicu",
+        SEARCH_FOR_REACTION: "Pronađi savršenu reakciju",
+        SEARCH_FOR_SUPER_REACTION: "Pronađi savršenu Super reakciju",
         NO_EMOJI_SEARCH_RESULTS: "Niti jedan emoji ne odgovara tvojoj pretrazi",
         EMOJI_CATEGORY_PACK: "Paket {packName}",
         EMOJI_CATEGORY_RECENT: "Često korišteno",
@@ -5267,6 +5271,7 @@
           "Nešto je pošlo po krivu tijekom čitanja dnevničkih datoteka s tvojeg sustava. Pokušaj ponovo.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Nešto nije bilo kako treba i nismo uspjeli prenijeti tvoje datoteke za otklanjanje pogrešaka. Pokušaj ponoviti.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Podijeli zapisnike o push obavijestima",
         FORM_CHECKBOX_AEC_DUMP: "Audio snimak za dijagnostiku",
         FORM_HELP_AEC_DUMP:
           "Audio snimak za dijagnostiku koristi se kako bi se analizirale poteškoće sa zvukom. Posljednjih pet minuta glasa spremljeno je u mapu glasovnog modula.",
@@ -5324,6 +5329,7 @@
         APP_ICON_SUNSET: "Sunset Ave",
         APP_ICON_HOLO_WAVES: "Lomovi svjetla",
         APP_ICON_PIRATE: "Morski vuče",
+        APP_ICON_PIRATE_1: "Grrr",
         APP_ICON_PIRATE_2: "Na zapovijed",
         APP_ICON_PIRATE_3: "Bacaj to",
         APP_ICON_PIRATE_4: "Narrrravno",
@@ -5409,6 +5415,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# osoba} few {# osobe} other {# osobe}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Otvori radnje za glasovne pozive",
+        TURN_CAMERA_ON_A11Y_LABEL: "Uključi kameru",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Isključi kameru",
         IN_GAME_VOICE_SETTINGS: "Postavke glasovnih opcija unutar igre",
         VIDEO_SETTINGS: "Postavke videa",
         TEXT: "Tekst",
@@ -5618,6 +5626,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Glas povezan",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video povezan",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC se spaja",
+        CONNECTION_STATUS_ICE_CHECKING: "Provjera rute",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS se spaja",
         CONNECTION_STATUS_NO_ROUTE: "Bez relacije",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC isključen",
@@ -6058,7 +6067,7 @@
         DISPLAY_OPTION_ONLY_WHILE_SPEAKING: "Samo dok govore",
         FORM_LABEL_AUTOMATIC_VAD_MOBILE: "Auto osjetljivost",
         RESET_NOTIFICATION_SETTINGS: "Vraćanje izvornih postavki obavijesti",
-        RESET_NOTIFICATION_OVERRIDE: "Resetiraj zamjenu",
+        RESET_NOTIFICATION_OVERRIDE: "Resetiraj prekoračenje",
         CHANNEL_SETTINGS: "Postavke kanala",
         SEND_MESSAGE: "Pošalji poruku",
         OVERLAY_NOTIFICATIONS_SETTINGS: "Obavijesti u overlayu",
@@ -6167,7 +6176,7 @@
         SWITCH_TO_COMPACT_MODE: "Prebaci na kompaktan način",
         SWITCH_TO_PUSH_TO_TALK: "Prebaci na Push to Talk",
         SWITCH_TO_VOICE_ACTIVITY: "Prebaci na Glasovnu aktivnost",
-        MOVE_TO: "Premjesti na",
+        MOVE_TO: "Premjesti u",
         MOVE_TO_SUCCESS: "Korisnik je premješten u odabrani kanal.",
         DISCONNECT_USER_SUCCESS: "Korisnik je odspojen od glasovne veze.",
         CHANGE: "Promijeni",
@@ -8247,6 +8256,12 @@
           "Podigni atmosferu na chatu uz Super Reakcije. Sada su dostupne uz [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Podigni atmosferu na chatu uz Super reakcije. Sada su dostupne uz [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Podigni atmosferu na chatu uz neograničene Super reakcije! Sada su dostupne uz Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Podigni atmosferu na chatu uz neograničene Super reakcije!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Sada su dostupne uz Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Podigni uzbuđenje na chatu uz Super Reakcije. Uzmi si ih {refillAmount} tjedno, sada su dostupne uz [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8368,6 +8383,10 @@
           "Podigni uzbuđenje na chatu uz Super reakcije! Nabavi neograničen broj Super reakcija i drugih zabavnih posebnih pogodnosti uz [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Neograničen broj Super reakcija!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Klikni gumb želiš li dodati Super reakciju.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Dodirni gumb želiš li dodati Super reakciju.",
         HOLD_UP: "Pričekaj",
         MASKED_LINK_ALERT_V2_HEADER: "Napuštaš Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9435,6 +9454,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "Teme u boji",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Dodaj Discordu svoju vibru služeći se jedinstvenim temama u boji.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Prilagođene ikone aplikacije",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Odaberi ikonu za mobilni uređaj i desktop unutar aplikacije koja najbolje opisuje kako se osjećaš.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Posebne pogodnosti",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Neka ti Discord služi još bolje",
@@ -10086,6 +10109,8 @@
           "Čini se da je nešto pošlo po zlu i ne možeš koristiti taj kod. Ispričavamo se zbog toga.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Žao nam je, čini se da je ovaj k\xf4d već iskorišten.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Čini se da ovaj k\xf4d pripada nekome drugome.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Čini se da ovaj k\xf4d nije valjao. Provjeri ispravnost koda i pokušaj ponovo.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10127,6 +10152,8 @@
           "Ovaj k\xf4d nalazi se u pošti potvrde koju smo vam upravo poslali.",
         REDEMPTION_CODE: " K\xf4d",
         PARTNER_PROMOTION_CLAIM: "Dalje",
+        PARTNER_PROMOTION_ERROR_TITLE: "A joj!",
+        PARTNER_PROMOTION_ERROR_BODY: "Izgleda da je nešto pošlo krivo.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Nepoznat dar.",
         REDEEM: "Iskoristi",
         UNLOCK_CODE: "Otključaj k\xf4d",
@@ -11649,6 +11676,7 @@
           "Uzmi za sebe ovaj cool badge jer si Nitro pretplatnik.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Za kolekcionare. Uhvati ovu ekskluzivnu Nitro-only značku.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Iskoristi",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Podigni svoj Discord na super razinu",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13153,6 +13181,7 @@
         MOST_POPULAR: "Najpopularnije",
         SPELLCHECK: "Provjera pravopisa",
         ADD_TO_DICTIONARY: "Dodaj u rječnik",
+        REMOVE_FROM_DICTIONARY: "Ukloni iz rječnika",
         LANGUAGES: "Jezici",
         AUTO_SUGGEST_STICKERS: "Prijedlozi za naljepnicu",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13443,6 +13472,7 @@
           "Imaš službenu poruku koju ti šalje Discord tim i koju bi trebao što prije pročitati.",
         BUILD_OVERRIDE: "Prekoračenje builda",
         BUILD_OVERRIDE_FOR: "Prekoračenje builda za {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Commit Hash",
         BUILD_OVERRIDE_APPLY: "Primijeni",
         BUILD_OVERRIDE_CLEAR: "Obriši",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Build nije dostupan",
@@ -13646,7 +13676,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Odaberi {monthlyPrice} mjesečno ili {yearlyPrice} godišnje",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Primatelj će dobiti:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Daruj Nitro članstvo",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Trajanje dara",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Daruj {nitroTierName} na {count, plural, one {# mjesec} few {# mjeseca} other {# mjeseci}}",
@@ -13666,7 +13695,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitra",
         GIFT_OPEN_PROMPT: "Otvori dar",
         GIFT_RECIPIENT_INFO: "Za: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Dodaj zvučni efekt",
+        GIFT_SELECT_EMOJI: "Dodavati emojije s konfetima",
         GIFT_SELECT_SOUNDBOARD_ADD: "Dodaj",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Reproducirat će se kada tvoj prijatelj otvori dar",
         NITRO_CONFIRMATION: "Dobio/la si Nitro",
         OPENED_GIFT_CONFIRMATION: "Otvorio/la si ovaj dar!",
         NITRO_PERKS:
@@ -14305,6 +14338,8 @@
           "Da bi pronašao nove servere, klikni na kompas u svojem popisu servera.",
         LOADING_TIP_12:
           "Povuci i ispusti servere jednog na drugi da bi napravio direktorij za servere.",
+        LOADING_TIP_13:
+          "Ukucaj /gif ili /tenor + nešto i tako nađi GIF za tu temu!",
         LOADING_TIP_14:
           "Prikaži što igraš tako da upotrijebiš postavke za igranje.",
         LOADING_TIP_15:
@@ -14333,6 +14368,19 @@
           "Možeš ukucati / za prikaz bot naredbi i ostalih ugrađenih naredbi",
         LOADING_TIP_27:
           "Možeš utipkati !!{asterisks}!! ispred i iza svojih riječi i one će onda postati **masno otisnute**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "sretna Noć vještica, potrudi se da vratiš svoj server iz mrtvih",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO želimo ti vrlo sablasno smiješnu Noć vještica",
+        HALLOWEEN_LOADING_TEXT_3: "Pripremamo jezovitu melodiju zvona",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "U glasovnom chatu svi su duhovi",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Provjeravamo da tvoji serveri nisu ukleti (vjerojatno jesu)",
+        HALLOWEEN_LOADING_TEXT_7: "Ufuravamo se u „duh“ Noći vještica",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Objavljuju li zombiji samo memeove s mrtvacima?",
+        HALLOWEEN_LOADING_TEXT_9: "Discord je zaražen! Pazi se zombija Wumpusa",
         ACCESSIBILITY_LOADING_TIP_1:
           "U postavkama izgleda odaberi tamnu ili svijetlu temu.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14363,6 +14411,8 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "U redu",
         VOICE_PANEL_SHOW_VOICE_USERS: "Prikaži korisnike s glasom",
         VOICE_PANEL_USERS_A11Y_LABEL: "Korisnici s glasom",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL: "{username}, zaglušeno i utišano",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, utišano",
         VOICE_PANEL_SHOW_EXTRAS: "Prikaži sve korisnike",
         VOICE_PANEL_HIDE_EXTRAS: "Smanji",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15493,6 +15543,8 @@
         FRIEND_FINDER_FRIENDS: "Svi prijatelji",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontakata na Discordu – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Ljudi koje možda poznaješ — {count}",
         CONTACT_SYNC_TITLE: "Pronađi svoje prijatelje",
         CONTACT_SYNC_LANDING_TITLE: "Pronađi svoje prijatelje",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16709,11 +16761,8 @@
         THREAD_BROWSER_OTHER_HEADER: "Ostale aktivne niti: {count}",
         THREAD_BROWSER_ARCHIVED_HEADER: "starije niti",
         THREAD_BROWSER_JOINED_HEADER: "{count} spojenih niti",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "Ostale aktivne niti: {count}",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktivne niti - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Starije niti",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "Niti kojima si pridružen/a: {count}",
         THREAD_BROWSER_JOINED_COUNT: "Niti kojima si pridružen/a - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "Prije {count} s",
         THREAD_BROWSER_TIMESTAMP_DAYS: "prije {count} d",
@@ -16730,8 +16779,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "Nema niti.",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Nema aktivnih niti.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "Nema arhiviranih niti.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Kada imate niti, ostajete koncentrirani na ono o čemu je riječ, to je kao privremeni tekstualni kanal.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Kada imate niti, ostajete koncentrirani na ono o čemu je riječ – to je kao privremeni tekstualni kanal.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Postavke filtra",
@@ -18841,9 +18888,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Rezultati pretraživanja",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Ime",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Član od",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Pridružio/la se Discordu",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Uloge",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signali",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "članova od **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "članova od **{pageRange}** od **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Prikazuje samo najnovije članove - stariji možda neće biti prikazani (ali bit će uskoro).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Prikazano",
@@ -19134,6 +19184,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Dojava prepada",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Kanal za dojave",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Ništa",
+        GUILD_ANTIRAID_RAID_ALERT: "Dojava prepada",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Zaštita je omogućena",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "Postavi dojave",
@@ -21607,6 +21658,9 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} s Nitrom",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Jesi li spreman/na za novi izgled?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Ups, ovo je neugodno.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, nismo mogli učitati trgovinu. Vrati se kasnije.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Koristi kad poželiš uz aktivnu pretplatu na Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Pogledaj moj predivan ukras",
@@ -21695,6 +21749,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Dodavanje aplikacije",
         MONETIZATION: "Monetizacija",
         GUILD_SETTINGS_MONETIZATION: "Monetizacija servera",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Pretplate na servere",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Promotivna stranica",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "Model pretplate",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "Nastavi",
@@ -22145,6 +22200,8 @@
           "Promjena tima za plaćanje",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Odabir tima za plaćanje",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Promijeni tim kojemu će se slati plaćanja za monetizaciju servera.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Promjena tima može utjecati na ispunjavanje uvjeta za isplatu",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23066,7 +23123,7 @@
           "Ovo je maksimalna brzina slike u kojoj će tvoji isječci biti snimljeni.",
         CLIPS_CROP_START: "Oreži početak",
         CLIPS_CROP_END: "Oreži kraj",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Isječak spoilera",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoiler-avanje isječka",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Ukloni Isječak",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Sada možeš snimati isječke izravno u igri koristeći $[!!{keybind}!!](keybindHook) ili možeš postaviti prilagođeni prečac.",
@@ -23079,6 +23136,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Upravljaj postavkama isječaka",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Saznaj više",
+        SOUND_INCOMING_RING_HALLOWEEN: "Halloween zvuk dolaznog",
+        CUSTOM_SOUNDS: "Prilagođeni zvukovi",
+        ENABLE_PHONE_INTEGRATION:
+          "Da bi ovo mogao koristiti, omogući integraciju s aplikacijom za telefon.",
         GUILD_SHOP_CHANNEL_LABEL: "Trgovina servera",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Dostupni proizvodi",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23185,6 +23246,8 @@
           "Saznaj više o našim pravilima koja se odnose na {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discordova pravila primjenjuju se na sve",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Idi na stanje računa",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Idi na stanje računa",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Pogledaj stanje računa",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Pokušaj ponovno",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23259,6 +23322,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Odbaci",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Jesmo li pogriješili? [Javi nam](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "Označi kao sadržaj koji nije osjetljiv",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Hvala što si nam javio/la!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23592,7 +23657,7 @@
         QUESTS_CLAIM_YOUR_REWARD: "Uzmi svoju nagradu",
         QUESTS_ACCEPT: "Prihvati zadatak",
         QUESTS_COMPLETE_TOOLTIP:
-          "Klikni na zatraži da bi dobio k\xf4d za nagradu!",
+          "Klikni na Zatraži da bi dobio k\xf4d za nagradu!",
         QUESTS_ACCEPT_TOOLTIP:
           "Prihvati izazov i dovrši zadatak da bi otključao nagradu",
         QUESTS_IN_PROGRESS_TOOLTIP: "Dovrši zadatak kako bi otključao nagradu",
@@ -23698,6 +23763,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord neće prikazivati obavijesti u aplikaciji, neće davati obavijesti na radnoj površini ni reproducirati zvukove poruka.",
         QUIET_MODE_DISABLED_BY: "Ovo je onemogućio način rada za fokusiranje",
+        FOCUS_MODE_TITLE: "Koncentriranje (BETA)",
+        FOCUS_MODE_BADGE_ON: "UKLJ.",
+        FOCUS_MODE_BADGE_OFF: "ISKLJ.",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Već si neko vrijeme u načinu rada Ne uznemiravaj. Želiš li radije omogućiti Koncentraciju?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chat o {activity}",

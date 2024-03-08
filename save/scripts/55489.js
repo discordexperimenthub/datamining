@@ -603,9 +603,12 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "最近",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "该服务器中的机器人",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "热门",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "无要求。您可以发送命令或者在下方添加选项",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER: "从下方选择一个选项",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "您在此频道内没有执行命令的权限",
-        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "打开命令",
+        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "打开命令窗口",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "无权限",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY: "您没有执行此命令的权限",
         READY: "准备完毕",
@@ -1104,7 +1107,7 @@
         EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL:
           "您好！此购买属于自动续订，并将于 **{renewalDate, date, medium}** 按照 **{rate}** 续费。您可以随时前往“用户设置>订阅”取消订阅。除非有法律要求，否则已收取的费用不予退还。此购买是由该小活动开发者向您提供的，且仅当您参与该小活动时才能使用。",
         EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL: "最小化小活动",
-        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "开发中",
+        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "全力开发中",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_ENDED: "小活动已结束。",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "小活动已开始。",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
@@ -1126,7 +1129,6 @@
           "[!!{username}!!](usernameOnClick)开始了一个[小活动](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username}开始了一个小活动",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "之后再说",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! 体验如何？",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "有什么值得改进的地方吗？",
@@ -1259,9 +1261,6 @@
           "时间有限，快来试试吧。\n订阅了 Nitro？召唤 SpellCast。",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "测试模式当前已为 **!!{applicationName}!!** 激活。您的应用应该会作为一个选项出现在“小活动”键菜单中。",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "全新小活动！Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "跟朋友一起试试这个你画我猜版的传话游戏吧。3 月 29 日前免费。",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "警告",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "（桌面测试版）",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "新功能！语音频道反应",
@@ -3188,7 +3187,8 @@
         NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES: "所有消息",
         NOTIFICATION_SETTINGS_PRESETS_NONE: "无限制",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "未读标记",
-        NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE: "高亮显示频道名称和半点",
+        NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
+          "高亮频道名，并在左侧显示半个白点",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "通知",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "推送通知和提及音效",
@@ -3198,7 +3198,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "公告",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "综合",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "随机",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "孤独流浪者",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "频道自定义通知设置",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "开启所有通知",
@@ -3226,6 +3226,8 @@
           "您不会收到已静音频道的任何提示信息，而且它们会在您的频道列表上显示为灰色。该设定适用于您所有的设备。",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "您不会收到已静音类别的任何提示信息，而且它们会在您的频道列表上显示为灰色。该设置适用于您所有的设备。",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "您的服务器目前$[**已静音**](mutedHook)。在取消此服务器静音状态前，您既不能收到该频道的提示信息，也无法更改任何设置。",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "您的服务器提示设置为$[**无提示**](notificationHook)。您将不会收到该频道的提示信息，不过您可以在这里进行重设。",
         CHANNEL_OR_GUILD_MUTED: "该频道或服务器当前已静音。",
@@ -3356,7 +3358,7 @@
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE:
           "您不会看到任何通知或未读标记。",
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE_UNTIL:
-          "在!!{endTime}!!之前，您不会看到任何通知或未读标记",
+          "在 !!{endTime}!! 之前，您不会看到任何通知或未读标记",
         CONTACT_SYNC_FAILED_ALERT_TITLE: "哎呀，哪里出错了。",
         CONTACT_SYNC_FAILED_ALERT_MESSAGE:
           "在同步您联系人的过程中出现错误，请稍后再试。",
@@ -3926,7 +3928,7 @@
         NOTIFICATION_REPORT_BODY: "和我们分享您的通知体验。",
         NOTIFICATION_EMBED_BUTTON:
           "这条通知有用吗？[请告诉我们！](handleMessage)",
-        NOTIFICATION_EMBED_BUTTON_2: "[高亮显示通知设定](handleMessage)",
+        NOTIFICATION_EMBED_BUTTON_2: "[集锦通知设定](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "这条通知有用吗？",
         NOTIFICATION_REPORT_FEEDBACK: "分享关于这条通知的意见反馈",
         NOTIFICATION_REPORT_TEXT:
@@ -3993,6 +3995,8 @@
         SEARCH_EMOJIS: "搜索表情符号",
         SEARCH_FOR_EMOJI: "探索最适用的表情符号",
         SEARCH_FOR_STICKER: "探索最适用的贴纸",
+        SEARCH_FOR_REACTION: "找到最完美的反应",
+        SEARCH_FOR_SUPER_REACTION: "找到最完美的超级反应",
         NO_EMOJI_SEARCH_RESULTS: "搜索不到符合的表情符号",
         EMOJI_CATEGORY_PACK: "{packName} 表情包",
         EMOJI_CATEGORY_RECENT: "常用",
@@ -4835,6 +4839,7 @@
           "从您的系统中读取日志文件时出错，请重试。",
         UPLOAD_DEBUG_LOG_FAILURE:
           "出现错误，我们无法上传您的调试文件，请重试。",
+        SHARE_PUSH_NOTIFICATION_LOGS: "分享推送通知日志",
         FORM_CHECKBOX_AEC_DUMP: "录音诊断",
         FORM_HELP_AEC_DUMP:
           "录音诊断用于分析音频问题。音频的最后五分钟内容会被存入语音模块文件夹。",
@@ -4891,6 +4896,7 @@
         APP_ICON_SUNSET: "日落大道",
         APP_ICON_HOLO_WAVES: "棱波",
         APP_ICON_PIRATE: "伙计",
+        APP_ICON_PIRATE_1: "嘿呀嘿",
         APP_ICON_PIRATE_2: "是，船长",
         APP_ICON_PIRATE_3: "Discord 呦喂",
         APP_ICON_PIRATE_4: "啊啊啊啊",
@@ -4974,6 +4980,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# 个人} other {# 个人}}",
         VOICE_CALL_ACTION_A11Y_HINT: "打开语音通话操作",
+        TURN_CAMERA_ON_A11Y_LABEL: "开启摄像头",
+        TURN_CAMERA_OFF_A11Y_LABEL: "关闭摄像头",
         IN_GAME_VOICE_SETTINGS: "游戏内语音设置",
         VIDEO_SETTINGS: "视频设置",
         TEXT: "文字信息",
@@ -5172,6 +5180,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "语音已连接",
         CONNECTION_STATUS_VIDEO_CONNECTED: "视频已连接",
         CONNECTION_STATUS_RTC_CONNECTING: "即时通讯服务器连接中",
+        CONNECTION_STATUS_ICE_CHECKING: "正在检查连接路径",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS 连接中",
         CONNECTION_STATUS_NO_ROUTE: "没有路径",
         CONNECTION_STATUS_RTC_DISCONNECTED: "即时通讯服务器已断开",
@@ -5530,8 +5539,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "图片，按钮",
         A11Y_LOADING_STARTED: "加载中",
         A11Y_LOADING_FINISHED: "加载完毕",
-        A11Y_CHECKBOX_CHECKED: "已检查",
-        A11Y_CHECKBOX_UNCHECKED: "未勾选",
+        A11Y_CHECKBOX_CHECKED: "已查看",
+        A11Y_CHECKBOX_UNCHECKED: "未查看",
         DND_ITEM_PICKED_UP: "已选取!!{itemName}!!",
         DND_ITEM_DROPPED: "已放下",
         DND_DRAG_CANCELED: "停止拖拽",
@@ -7569,6 +7578,12 @@
           "用超级反应火热畅聊。现已登陆 [{planName}](onClick)。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "无限使用的超级反应助你火热畅聊。订阅 [{planName}](onClick) 即可尽情享用。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "可无限使用的超级反应助你火热畅聊！现已登陆 Nitro。",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "可无限使用的超级反应助你火热畅聊！",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "现已登陆 Nitro。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "用超级反应火热畅聊。订阅 [Nitro]({nitroLink})，每周获得 {refillAmount} 个超级反应。",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -7682,6 +7697,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "用超级反应火热畅聊！获取无限超级反应和其他超酷特权，尽在 [Nitro](onClick)。",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "无限量尽享超级反应！",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "点击按钮添加超级反应。",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "点击按钮添加超级反应。",
         HOLD_UP: "等一下！",
         MASKED_LINK_ALERT_V2_HEADER: "离开 Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE: "该链接将带您前往下列网站",
@@ -8675,6 +8694,9 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "主题色彩",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "用独特的主题色彩给 Discord 带来您的范儿。",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "自定义 APP 图标",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "选择最符合您个人风格的移动端图标和桌面端 APP 内图标。",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "特权",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "升级您的 Discord 体验",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -9286,6 +9308,7 @@
         PROMOTION_ERROR_TITLE: "请稍等……",
         PROMOTION_ERROR_BODY: "出了一些问题，导致您无法使用该代码。非常抱歉。",
         PROMOTION_ERROR_CLAIMED_BODY: "抱歉，这个兑换码似乎已被兑换。",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY: "该礼物代码似乎属于其他人。",
         PROMOTION_ERROR_NO_CODE_BODY:
           "该兑换码无效。请确保您拥有正确的兑换码，然后再试一次。",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -9327,6 +9350,8 @@
           "该代码包含在我们刚刚发送给您的电子邮件内。",
         REDEMPTION_CODE: "兑换码",
         PARTNER_PROMOTION_CLAIM: "下一页",
+        PARTNER_PROMOTION_ERROR_TITLE: "哎呀！",
+        PARTNER_PROMOTION_ERROR_BODY: "好像出错了。",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "未知礼物。",
         REDEEM: "兑换",
         UNLOCK_CODE: "解锁兑换码",
@@ -10716,6 +10741,7 @@
           "订阅 Nitro 即可获得这枚超酷徽章。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "专为收藏家设计。获取这枚 Nitro 用户独占的徽章吧。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "兑换",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "为您的 Discord 进行氮气增压",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "在所有服务器上自定义个人资料",
@@ -12104,6 +12130,7 @@
         MOST_POPULAR: "最热门",
         SPELLCHECK: "错别字检查",
         ADD_TO_DICTIONARY: "添加到词典",
+        REMOVE_FROM_DICTIONARY: "从目录中移除",
         LANGUAGES: "语言",
         AUTO_SUGGEST_STICKERS: "贴纸推荐",
         AUTO_SUGGEST_STICKERS_DESCRIPTION: "允许在输入消息时出现贴纸提醒。",
@@ -12367,6 +12394,7 @@
           "这里有一条来自 Discord 团队的官方消息需要您的注意。",
         BUILD_OVERRIDE: "版本覆盖",
         BUILD_OVERRIDE_FOR: "{releaseChannel} 版本覆盖",
+        BUILD_OVERRIDE_ID: "提交 Hash",
         BUILD_OVERRIDE_APPLY: "申请",
         BUILD_OVERRIDE_CLEAR: "清除",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "版本不可用",
@@ -12562,7 +12590,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "选择 {monthlyPrice}/ 月或 {yearlyPrice}/ 年",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人将会收到：",
-        MOBILE_CUSTOM_GIFT_TITLE: "赠送 Nitro 会员",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "礼物有效期",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "赠送 {count, plural, one {# 个月} other {# 个月}}的 {nitroTierName}",
@@ -12582,7 +12609,11 @@
         GIFT_DURATION: "1 {timeInterval}的 Nitro 订阅",
         GIFT_OPEN_PROMPT: "打开礼物",
         GIFT_RECIPIENT_INFO: "送给：{recipientDisplayName}",
+        GIFT_SELECT_SOUND: "添加音效",
+        GIFT_SELECT_EMOJI: "添加表情符号彩色纸屑",
         GIFT_SELECT_SOUNDBOARD_ADD: "添加",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "会在您的好友打开礼物时播放",
         NITRO_CONFIRMATION: "您收到了 Nitro 订阅",
         OPENED_GIFT_CONFIRMATION: "您打开了礼物！",
         NITRO_PERKS: "查看您的全新 Nitro 特权！",
@@ -13149,6 +13180,7 @@
         LOADING_TIP_10: "群组私信最多可添加 10 名成员。",
         LOADING_TIP_11: "点击服务器列表中的指南针来搜索新服务器。",
         LOADING_TIP_12: "将服务器拖拽叠加，创建服务器文件夹。",
+        LOADING_TIP_13: "输入 /gif 或 /tenor + 主题即可找到相关 GIF！",
         LOADING_TIP_14: "通过游戏活跃设置，分享你正在玩的游戏。",
         LOADING_TIP_15: "将聊天栏中的文字突出显示为粗体、斜体等。",
         LOADING_TIP_16: "右键单击服务器名称，可在服务器中隐藏已静音的频道。",
@@ -13164,6 +13196,15 @@
         LOADING_TIP_25: "您可以输入 /nick 快速更改您在服务器中的昵称。",
         LOADING_TIP_26: "您可输入 / 查看机器人命令及其他内置命令",
         LOADING_TIP_27: "您可以在文字前后键入!!{asterisks}!!来进行**加粗**。",
+        HALLOWEEN_LOADING_TEXT_1: "万圣节快乐，记得让你的服务器起死回生",
+        HALLOWEEN_LOADING_TEXT_2: "oooOOOooO 祝你有个恐怖的万圣季",
+        HALLOWEEN_LOADING_TEXT_3: "正在酝酿令人胆寒的铃声",
+        HALLOWEEN_LOADING_TEXT_4: "BoooOOOOooOo0o",
+        HALLOWEEN_LOADING_TEXT_5: "在语音聊天中，所有人都是幽灵",
+        HALLOWEEN_LOADING_TEXT_6: "确保你的服务器没有闹鬼（尽量吧）",
+        HALLOWEEN_LOADING_TEXT_7: "越来越有万圣节“精神”了",
+        HALLOWEEN_LOADING_TEXT_8: "僵尸是不是只会用吃灰好久的梗？",
+        HALLOWEEN_LOADING_TEXT_9: "Discord 已被感染！当心丧尸 Wumpus",
         ACCESSIBILITY_LOADING_TIP_1: "在“外观设置”里选择浅色或深色主题。",
         ACCESSIBILITY_LOADING_TIP_2:
           "在“辅助功能设置”中关闭“弱化动态效果”即可关闭动画。",
@@ -13190,6 +13231,8 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "收到",
         VOICE_PANEL_SHOW_VOICE_USERS: "显示语音用户",
         VOICE_PANEL_USERS_A11Y_LABEL: "语音用户",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL: "{username}，耳机与麦克风静音",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}，麦克风静音",
         VOICE_PANEL_SHOW_EXTRAS: "显示所有用户",
         VOICE_PANEL_HIDE_EXTRAS: "最小化",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!，{status}",
@@ -14255,6 +14298,8 @@
         FRIEND_FINDER_FRIENDS: "所有好友",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord 上的联系人——{count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "您可能认识的人——{count}",
         CONTACT_SYNC_TITLE: "发现您的好友",
         CONTACT_SYNC_LANDING_TITLE: "发现您的好友",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -15373,10 +15418,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} 个其它活跃子区",
         THREAD_BROWSER_ARCHIVED_HEADER: "更早的子区",
         THREAD_BROWSER_JOINED_HEADER: "{count} 个加入的子区",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} 个其它活跃子区",
         THREAD_BROWSER_ACTIVE_COUNT: "活跃子区 - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "更早的子区",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} 个加入的子区",
         THREAD_BROWSER_JOINED_COUNT: "已加入子区 - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} 秒前",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} 天前",
@@ -15392,8 +15435,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "这里没有子区。",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "没有活跃子区。",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "没有已归档的子区。",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "在子区，一个临时的文字频道中，专注于一段对话。",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "在子区，一个临时的文字频道中，专注于一段对话。",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "筛选设置",
@@ -17275,7 +17316,7 @@
         GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_TITLE: "移除提及网暴限制",
         GUILD_AUTOMOD_REMOVE_MENTION_RAID_MODAL_BODY:
           "您确定要移除所有因疑似提及网暴而在此服务器上设置的消息限制吗？",
-        GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE: "安全警告！",
+        GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE: "安全警报！",
         GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE: "不支持的消息",
         GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION:
           "您的 Discord 客户端不支持这种消息类型。请更新以查看此消息。",
@@ -17283,7 +17324,8 @@
           "已启用活动警报",
         GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION:
           "全新且改进的活动警报正在监控您服务器的安全。如果有任何超过您服务器正常情况的私信或加入动态，AutoMod 将在此发送消息。",
-        GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX: "启用：",
+        GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX:
+          "启用人：",
         GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS:
           "~{joinCount, number} 个加入已执行！",
         GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE: "检测到不正常的加入活动",
@@ -17303,9 +17345,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "搜索结果",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "名称",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "成员加入时间",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "加入 Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "身份组",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "信号",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "共 **{count}** 名成员",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "**{pageRange}** /**{total}** 名成员",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "这只会显示最近的成员——较早的成员可能不会显示（但不久后将能够显示）。",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "显示",
@@ -17403,8 +17448,8 @@
         MEMBER_SAFETY_DATE_OPTION_BEFORE: "在指定日期之前",
         MEMBER_SAFETY_DATE_OPTION_BEFORE_ONLY: "在 {date} 之前",
         MEMBER_SAFETY_DATE_OPTION_AFTER_ONLY: "在 {date} 之后",
-        MEMBER_SAFETY_JOINED_DATE_LABEL: "成员注册时间选项",
-        MEMBER_SAFETY_ACCOUNT_AGE_LABEL: "Discord 加入日期选项",
+        MEMBER_SAFETY_JOINED_DATE_LABEL: "成员加入日期选项",
+        MEMBER_SAFETY_ACCOUNT_AGE_LABEL: "注册 Discord 日期选项",
         MEMBER_SAFETY_JOIN_METHOD_LABEL: "服务器加入方式选项",
         MEMBER_SAFETY_GUILD_JOINED_AT_DESC: "成员加入时间（时间降序排列）",
         MEMBER_SAFETY_GUILD_JOINED_AT_ASC: "成员加入时间（时间升序排列）",
@@ -17572,6 +17617,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "网暴警报",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "警报频道",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "无限制",
+        GUILD_ANTIRAID_RAID_ALERT: "网暴警报",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "保护已开启",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "设置警报",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION: "在 AutoMod 中设置",
@@ -18018,7 +18064,7 @@
         NOTIF_MIGRATION_INTRO_TAB: "1. 新鲜事儿",
         NOTIF_MIGRATION_CUSTOMIZE_TAB: "2. 选择服务器",
         NOTIF_MIGRATION_TIPS_TAB: "3. 应用更改",
-        NOTIF_MIGRATION_INTRO_TITLE: "Discord 通知功能不断进步中！",
+        NOTIF_MIGRATION_INTRO_TITLE: "利用新通知功能消除提示噪音",
         NOTIF_MIGRATION_INTRO_SUB_TITLE:
           "我们新增了一个设置，助您摆脱信息流干扰，专注于重要的事情。",
         NOTIF_MIGRATION_INTRO_CHANNEL_1: "公告",
@@ -19800,6 +19846,9 @@
           "Nitro 订阅用户购买此装饰可享受折扣",
         COLLECTIBLES_NON_PREMIUM_PRICE: "在 Nitro 中的价格：{price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "准备好变身新形象了吗？",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "呃，这就尴尬了。",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "唔，我们暂时无法加载商店。稍后再来看看吧。",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "拥有已激活的 Nitro 订阅即可随心使用。",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "看看我漂亮的装饰",
@@ -19881,6 +19930,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "添加 APP",
         MONETIZATION: "货币化",
         GUILD_SETTINGS_MONETIZATION: "服务器货币化",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "服务器订阅",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "推广页面",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "订阅层级",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "继续",
@@ -20290,6 +20340,8 @@
           "更改支付团队",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "选择支付团队",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "更改服务器货币化付款发送至的支付团队。",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "变更团队可能会影响收款资格",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -21053,7 +21105,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "查看剪辑片段",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "您有 {count, plural, =1 {# 个新剪辑片段} other {# 个新剪辑片段}}！",
-        CLIPS_REVIEW_NOW: "立即审阅",
+        CLIPS_REVIEW_NOW: "立即查看",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "您在最近的 !!{applicationName}!! 直播中捕捉了剪辑片段。可以在剪辑片段库中查看！",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "查看剪辑片段",
@@ -21135,6 +21187,9 @@
         CLIPS_USER_EDUCATION_ERROR_BODY: "哦，不！我们目前无法进行剪辑。",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "管理剪辑设置",
         CLIPS_USER_EDUCATION_LEARN_MORE: "了解更多",
+        SOUND_INCOMING_RING_HALLOWEEN: "万圣节来电铃声",
+        CUSTOM_SOUNDS: "自定义声音",
+        ENABLE_PHONE_INTEGRATION: "开启手机 app 集成体验吧。",
         GUILD_SHOP_CHANNEL_LABEL: "服务器商店",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "可购买产品",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "{productName}产品列表卡",
@@ -21233,6 +21288,8 @@
           "了解更多关于我们 {classificationDescription} 政策的信息。",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord 的规则适用于所有人",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "前往账号信誉",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "前往账号信誉",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "查看账号信誉",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "重试",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE: "活跃违规——{count}",
@@ -21301,6 +21358,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "忽略",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "我们判断有误？[点击此处告知我们](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "标记为非敏感内容",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "感谢您告知我们！",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER: "标记为非敏感内容",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION:
@@ -21420,10 +21478,10 @@
         SCREENSHARE_APPS_INSTAGRAM: "Instagram",
         SCREENSHARE_APPS_PHOTOS: "照片",
         STATUS_POPOUT_CUSTOM_TITLE: "自定义",
-        STATUS_POPOUT_SET_CUSTOM: "设置自定义活动",
-        STATUS_POPOUT_EDIT_CUSTOM: "编辑自定义活动",
+        STATUS_POPOUT_SET_CUSTOM: "设置自定义状态",
+        STATUS_POPOUT_EDIT_CUSTOM: "编辑自定义状态",
         STATUS_POPOUT_CLEAR_STATUS: "清除状态",
-        SET_STATUS_MODAL_TITLE: "设置自定义语音活动",
+        SET_STATUS_MODAL_TITLE: "设置自定义语音状态",
         SET_STATUS_MODAL_SUBTITLE:
           "我们将保存您最近创作的内容，并在一段时间后自动将其删除。",
         SET_STATUS_MODAL_CTA: "确认",
@@ -21540,10 +21598,10 @@
         CREATE_POLL_LAYOUT_DEFAULT: "纯文本答案，可选择添加媒体",
         CREATE_POLL_LAYOUT_IMAGE: "纯媒体答案",
         CREATE_POLL_ANSWERS_FIELDSET_LABEL: "回答",
-        CREATE_POLL_ADD_IMAGE_ARIA: "添加媒体回答 {answerNumber}",
+        CREATE_POLL_ADD_IMAGE_ARIA: "为答案 {answerNumber} 添加媒体",
         CREATE_POLL_EDIT_IMAGE_ARIA:
-          "更新回答 {answerNumber} 的媒体为{imageName}",
-        CREATE_POLL_ANSWER_INPUT_LABEL: "回答 {answerNumber}",
+          "更新答案 {answerNumber} 的媒体为{imageName}",
+        CREATE_POLL_ANSWER_INPUT_LABEL: "答案 {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "请输入您的答案",
         CREATE_POLL_ADD_ANSWER_BUTTON: "添加另一个答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票将持续",
@@ -21576,7 +21634,7 @@
         POLL_END_EARLY_CONFIRMATION_TITLE: "现在就结束投票吗？",
         POLL_END_EARLY_CONFIRMATION_TEXT: "将立即结束投票并显示结果。",
         POLL_SENT_NOTIFICATION: "[投票] !!{question}!!",
-        SUMMONED: "召唤成功！",
+        SUMMONED: "Summoned!",
         WAVED_AT_USER: "\uD83D\uDC4B 您向!!{username}!!挥了挥手",
         WAVED_AT_YOU: "\uD83D\uDC4B !!{username}!! 向您挥了挥手",
         YOU_ARE_IN_CHANNEL: "您正在$[](channelHook)中",
@@ -21666,7 +21724,7 @@
           "在跟踪任务进度方面出现了问题。",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "在此频道不活跃一段时间后，提示成员交流聊天。",
-        PROMPT_CAMERA_LOADING_TITLE: "您在看什么？",
+        PROMPT_CAMERA_LOADING_TITLE: "您瞅啥？",
         PROMPT_CAMERA_ERROR: "拍照时出现了问题，请再试一次",
         DEADCHAT_ACTION_CAMERA: "我的视图",
         DEADCHAT_ACTION_STICKER: "给我一个惊喜",
@@ -21696,9 +21754,12 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord 不会显示 APP 内物品，桌面通知或播放消息音效。",
         QUIET_MODE_DISABLED_BY: "已被专注模式禁用",
+        FOCUS_MODE_TITLE: "专注模式（测试版）",
+        FOCUS_MODE_BADGE_ON: "开启",
+        FOCUS_MODE_BADGE_OFF: "关闭",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "您已使用“请勿打扰”好一阵了。您是否想要启用“专注模式”？",
-        ACTIVITY_REACTION_REPLY_TITLE: "关于 {activity} 的聊天",
+        ACTIVITY_REACTION_REPLY_TITLE: "聊聊 {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "显示 @{username} 和 {activity} 的动态卡片",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:

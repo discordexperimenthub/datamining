@@ -650,6 +650,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Paskutiniai",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Botai šiame serveryje",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Populiarūs",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Reikalavimų nėra. Gali siųsti komandą arba pridėti parinktį",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Pasirink vieną iš parinkčių",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Neturi leidimo paleisti komandas šiame kanale",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Atidaryti komandą",
@@ -953,7 +957,7 @@
         EMBEDDED_ACTIVITIES_LAUNCH: "Paleisti",
         EMBEDDED_ACTIVITIES_JOIN: "Prisijungti",
         EMBEDDED_ACTIVITIES_JOINED: "Prisijungė",
-        EMBEDDED_ACTIVITIES_ENDED: "Baigta",
+        EMBEDDED_ACTIVITIES_ENDED: "Baigėsi",
         EMBEDDED_ACTIVITIES_RETURN_TO_ACTIVITY: "Grįžti į veiklą",
         EMBEDDED_ACTIVITIES_PEOPLE_ARE_IN_AN_ACTIVITY:
           "{n, plural, one {1 žmogus} few {{n} žmonės} other {{n} žmonių}} dalyvauja kažkurioje veikloje",
@@ -1243,7 +1247,6 @@
           "[!!{username}!!](usernameOnClick) pradėjo [veiklą](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} pradėjo veiklą",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Galbūt vėliau",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Kaip sekėsi su !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Kas galėjo būti geriau?",
@@ -1397,9 +1400,6 @@
           "Išbandyk kraupiai ribotą laiką.\nTuri Nitro? Išsišauk SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "**!!{applicationName}!!** šiuo metu veikia bandymo režimu. Tavo programėlė turėtų būtų rodoma tarp veiklų mygtuko meniu parinkčių.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Nauja veikla! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Žaisk žaidimą, kuriame su draugais gali piešti ir spėlioti, kas piešiama. Nemokamai iki kovo 29 d.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Įspėjimas",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Kompiuterinė beta versija)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "NAUJA! Balso kanalo reakcijos",
@@ -3445,7 +3445,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Nėra",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Neskaitytųjų ženkleliai",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Paryškintas kanalo pavadinimas ir pusė taško",
+          "Paryškintas kanalo pavadinimas ir pranešimo taškas",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Pranešimai",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Push pranešimas ir ryšio užklausos garsas",
@@ -3455,7 +3455,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "pranešimai",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "bendra",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "atsitiktinis",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Vienišas klajoklis",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "Tinkinami kanalo pranešimų nustatymai",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "Įjungti visus pranešimus",
@@ -3491,6 +3491,8 @@
           "Negausi pranešimų iš nutildytų kanalų ir jie kanalų sąraše bus rodomi kaip neveiksnūs. Šis nustatymas bus taikomas visuose tavo įrenginiuose.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Negausi pranešimų iš nutildytų kategorijų ir jie kanalų sąraše bus rodomi kaip neveiksnūs. Šis nustatymas bus taikomas visuose tavo įrenginiuose.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Šiuo metu tavo serveris yra $[**nutildytas**](mutedHook). Kol neatšauksi šio serverio nutildymo, tol negalėsi gauti pranešimų iš šio kanalo arba keisti nustatymų.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Nustatyta tavo serverio pranešimų parinktis yra $[**nieko**](notificationHook). Negausi jokių pranešimų iš šio kanalo, bet šią parinktį gali čia pakeisti.",
         CHANNEL_OR_GUILD_MUTED: "Šiuo metu šis kanalas ar serveris nutildytas.",
@@ -4338,6 +4340,8 @@
         SEARCH_EMOJIS: "Ieškoti jaustukų",
         SEARCH_FOR_EMOJI: "Rasti tinkama jaustuką",
         SEARCH_FOR_STICKER: "Rask tinkamiausią lipduką",
+        SEARCH_FOR_REACTION: "Rasti tobulą reakciją",
+        SEARCH_FOR_SUPER_REACTION: "Rasti tobulą super reakciją",
         NO_EMOJI_SEARCH_RESULTS: "Nerasta jaustuko pagal tavo paiešką",
         EMOJI_CATEGORY_PACK: "{packName} paketas",
         EMOJI_CATEGORY_RECENT: "Dažniausiai naudojamas",
@@ -5267,6 +5271,7 @@
           "Nuskaitant derinimo žurnalus iš tavo sistemos iškilo problema. Bandyk dar kartą.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Kažkas nutiko ir mums nepavyko įkelti derinimo žurnalų. Bandyk dar kartą.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Bendrinti pranešimų žurnalus",
         FORM_CHECKBOX_AEC_DUMP: "Diagnostinis garso įrašas",
         FORM_HELP_AEC_DUMP:
           "Diagnostinis garso įrašas naudojamas garso problemoms analizuoti. Paskutinės penkios balso įrašo minutės išsaugomos į balso modulių aplanką.",
@@ -5324,6 +5329,7 @@
         APP_ICON_SUNSET: "Saulėlydžio alėja",
         APP_ICON_HOLO_WAVES: "Prizmės bangos",
         APP_ICON_PIRATE: "Bičiuli",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Taip taip",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5409,6 +5415,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# žmogus} few {# žmonės} other {# žmonių}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Atidaryti balso skambučio veiksmus",
+        TURN_CAMERA_ON_A11Y_LABEL: "Įjungti kamerą",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Išjungti kamerą",
         IN_GAME_VOICE_SETTINGS: "Balso nustatymai žaidime",
         VIDEO_SETTINGS: "Vaizdo Nustatymai",
         TEXT: "Tekstas",
@@ -5616,6 +5624,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Prisijungta Prie Pokalbio",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Vaizdas Prijungtas",
         CONNECTION_STATUS_RTC_CONNECTING: "Jungiama RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Tikrinamas kelias",
         CONNECTION_STATUS_DTLS_CONNECTING: "Jungiamasi prie DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Nėra Maršruto",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC Atjungta",
@@ -5997,8 +6006,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "vaizdas, mygtukas",
         A11Y_LOADING_STARTED: "Įkeliama",
         A11Y_LOADING_FINISHED: "Įkėlimas baigtas",
-        A11Y_CHECKBOX_CHECKED: "patikrinta",
-        A11Y_CHECKBOX_UNCHECKED: "nepatikrinta",
+        A11Y_CHECKBOX_CHECKED: "pažymėta",
+        A11Y_CHECKBOX_UNCHECKED: "nepažymėta",
         DND_ITEM_PICKED_UP: "Pasiėmei !!{itemName}!!",
         DND_ITEM_DROPPED: "Nuvilkai",
         DND_DRAG_CANCELED: "Nustojai vilkti",
@@ -8232,6 +8241,12 @@
           "Įpūsk gyvybės pokalbiams su super reakcijomis. Nuo šiol prieinama su [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Įpūsk gyvybės pokalbiams su neribotomis super reakcijomis. Nuo šiol prieinama su [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Įpūsk gyvybės pokalbiams su neribotomis super reakcijomis! Nuo šiol prieinama su Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Įpūsk gyvybės pokalbiams su neribotomis super reakcijomis!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nuo šiol prieinama su Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Įpūsk gyvybės pokalbiams su super reakcijomis. Gauk po {refillAmount} per savaitę. Nuo šiol prieinama su [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8348,6 +8363,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Įpūsk gyvybės pokalbiams su super reakcijomis! Gauk neribotas super reakcijas ir kitų šaunių pranašumų su [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Neribotos super reakcijos!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Spausk mygtuką, kad pridėtum super reakciją.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Paliesk mygtuką, kad pridėtum super reakciją.",
         HOLD_UP: "Palaukite",
         MASKED_LINK_ALERT_V2_HEADER: "Palieki Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9422,6 +9441,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "Spalvų temos",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Su unikaliomis temų spalvomis Discord atrodys taip, kaip nori tu.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Tinkintos programėlės piktogramos",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Pasirink tavo asmenybę atitinkančią mobiliosios ir darbalaukio programėlės piktogramą.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Pranašumai",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Pagerink Discord naudojimo patirtį",
@@ -10075,6 +10098,8 @@
           "Kažkas negerai, todėl negali naudoti šio kodo. Atsiprašome.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Atsiprašome, atrodo, kad šis kodas jau buvo panaudotas.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Panašu, kad šis kodas priklauso kažkam kitam.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Atrodo, kad šis kodas nesuveikė. Įsitikink, kad turi teisingą kodą, ir pabandyk iš naujo.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10116,6 +10141,8 @@
           "Šis kodas bus patvirtinimo el. laiške, kurį tau išsiuntėme.",
         REDEMPTION_CODE: "Kodo panaudojimas",
         PARTNER_PROMOTION_CLAIM: "Toliau",
+        PARTNER_PROMOTION_ERROR_TITLE: "O ne!",
+        PARTNER_PROMOTION_ERROR_BODY: "Panašu, kad kažkas nepavyko.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Nežinoma dovana.",
         REDEEM: "Panaudok",
         UNLOCK_CODE: "Gauti kodą",
@@ -11632,6 +11659,7 @@
           "Tapk Nitro prenumeratoriumi (-e) ir gauk šį šaunų ženklelį.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Kolekcionieriams. Griebk šį išskirtinį ženklelį, prieinamą tik su Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Panaudok",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Pakelk savo Discord į naują lygį",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13136,6 +13164,7 @@
         MOST_POPULAR: "Populiariausi",
         SPELLCHECK: "Rašybos tikrinimas",
         ADD_TO_DICTIONARY: "Įtraukti į žodyną",
+        REMOVE_FROM_DICTIONARY: "Pašalinti iš žodyno",
         LANGUAGES: "Kalbos",
         AUTO_SUGGEST_STICKERS: "Lipdukų pasiūlymai",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13427,6 +13456,7 @@
           "Gauta oficiali Discord komandos žinutė, kurią reikia perskaityti.",
         BUILD_OVERRIDE: "Versijos apėjimas",
         BUILD_OVERRIDE_FOR: "Versijos apėjimas {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Kodo pakeitimo maiša",
         BUILD_OVERRIDE_APPLY: "Taikyti",
         BUILD_OVERRIDE_CLEAR: "Išvalyti",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Versija neprieinama",
@@ -13628,7 +13658,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Rinkis iš {monthlyPrice}/mėn. ir {yearlyPrice}/m.",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Tavo gavėjas gaus:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Dovanok Nitro narystę",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Dovanos trukmė",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Padovanok {count, plural, one {# mėnesį} few {# mėnesius} other {# mėnesių}} {nitroTierName}",
@@ -13648,7 +13677,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Atidaryti dovaną",
         GIFT_RECIPIENT_INFO: "Kam: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Pridėti garso efektą",
+        GIFT_SELECT_EMOJI: "Pridėti jaustukų konfeti",
         GIFT_SELECT_SOUNDBOARD_ADD: "Pridėti",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Bus rodomas / grojamas, kai tavo draugas (-ė) išpakuos dovaną",
         NITRO_CONFIRMATION: "Dabar turi Nitro",
         OPENED_GIFT_CONFIRMATION: "Šią dovaną išpakavai!",
         NITRO_PERKS: "Išbandyk savo naujuosius Nitro pranašumus!",
@@ -14290,6 +14323,8 @@
           "Norėdamas rasti naujų serverių, spustelėk kompasą savo serverių sąraše.",
         LOADING_TIP_12:
           "Norėdamas sukurti serverių aplankus, nuvilk serverius vieną ant kito.",
+        LOADING_TIP_13:
+          "Gali įvesti /gif arba /tenor + ką nors, kad rastum tos temos GIF!",
         LOADING_TIP_14:
           "Parodyk kitiems, ką žaidi, naudodamas žaidimų veiklos nustatymus.",
         LOADING_TIP_15:
@@ -14317,6 +14352,19 @@
           "Gali įvesti / peržiūrėti boto komandas ir kitas įtaisytąsias komandas",
         LOADING_TIP_27:
           "Jei nori **paryškinti** žodį, jo abiejose pusėse įvesk !!{asterisks}!!.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "smagaus helovyno, nepamiršk savo serverį prikelti iš numirusių",
+        HALLOWEEN_LOADING_TEXT_2: "ūūūŪŪŪūūŪ šiurpaus tau helovyno",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Ruošiame kaulus veriančiai šiurpią skambučio melodiją",
+        HALLOWEEN_LOADING_TEXT_4: "BūūūŪŪŪūūūŪūŪū",
+        HALLOWEEN_LOADING_TEXT_5: "Pokalbyje balsu visi mes dvasios",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Patvirtinama, ar tavo serveriuose nesivaidena (tikriausiai)",
+        HALLOWEEN_LOADING_TEXT_7: "Pradedame jausti helovyno „dvasią“",
+        HALLOWEEN_LOADING_TEXT_8: "Ar zombių memai visada tik bedvasiai?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord platformoje plinta užkratas! Saugokis zombio Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Pasirink šviesią arba tamsią temą išvaizdos nustatymuose.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14347,6 +14395,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Supratau",
         VOICE_PANEL_SHOW_VOICE_USERS: "Rodyti balso kanalo naudotojus",
         VOICE_PANEL_USERS_A11Y_LABEL: "Balso kanalo naudotojai",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, su išjungtu garsu ir nutildytas (-a)",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, nutildytas (-a)",
         VOICE_PANEL_SHOW_EXTRAS: "Rodyti visus naudotojus",
         VOICE_PANEL_HIDE_EXTRAS: "Sumažinti",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -14777,7 +14828,7 @@
           "Išmetimas reiškia kitų šio serverio narių pašalinimą. Išmesti nariai galės vėl prisijungti, jei gaus kitą kvietimą. Jei serveryje įjungti nariams taikomi reikalavimai, šis leidimas suteikia galimybę patvirtinti arba atmesti narius, norinčius prisijungti.",
         BAN_MEMBERS: "Užblokuoti Narius",
         ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION:
-          "Nariams leidžiama visam laikui užblokuoti ir ištrinti kitų šio serverio narių žinučių istoriją.",
+          "Nariams leidžiama visam laikui užblokuoti kitus šio serverio narius ir ištrinti jų žinučių istoriją.",
         SEND_MESSAGES: "Siųsti Pranešimus",
         ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION:
           "Nariams leidžiama siųsti žinutes teksto kanaluose.",
@@ -15498,6 +15549,8 @@
         FRIEND_FINDER_FRIENDS: "Visi draugai",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontaktų Discord: {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Žmonių, kuriuos galbūt pažįsti: {count}",
         CONTACT_SYNC_TITLE: "Rask draugus",
         CONTACT_SYNC_LANDING_TITLE: "Rask draugus",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16096,7 +16149,7 @@
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES:
           "Peržiūrėti ateities renginius",
         GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Pasikartoja {recurrenceRule}",
-        GUILD_SCHEDULED_EVENT_REPEATS: "Renginių sekos",
+        GUILD_SCHEDULED_EVENT_REPEATS: "Renginių seka",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY: "Pasikartoja kiekvieną {weekday}",
         GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY:
           "Pasikartoja kas antrą {weekday}",
@@ -16745,11 +16798,8 @@
         THREAD_BROWSER_OTHER_HEADER: "Kitų aktyvių gijų: {count}",
         THREAD_BROWSER_ARCHIVED_HEADER: "senesnės gijos",
         THREAD_BROWSER_JOINED_HEADER: "Gijos, prie kurių prisijungei: {count}",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "Kitų aktyvių gijų: {count}",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktyvių gijų: {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Senesnės gijos",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "Gijos, prie kurių prisijungei: {count}",
         THREAD_BROWSER_JOINED_COUNT: "Gijų, prie kurių prisijungei: {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "Prieš {count} sek.",
         THREAD_BROWSER_TIMESTAMP_DAYS: "prieš {count} d.",
@@ -16766,8 +16816,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "Gijų nėra.",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Nėra aktyvių gijų.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "Nėra archyvuotų gijų.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Išlik susikoncentravęs į pokalbį gijose, laikinuose tekstinių pokalbių kanaluose.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Išlik susikoncentravęs (-usi) į pokalbį gijose – laikinuose tekstinių pokalbių kanaluose.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filtravimo nustatymai",
@@ -18888,9 +18936,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Paieškos rezultatai",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Pavadinimas",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Narys (-ė) nuo",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Prisijungė prie Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Rolės",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signalai",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "**{count}** nariai",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "**{pageRange}** narių iš **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Čia rodomi tik naujausia nariai: senesni negali būti rodomo (bet greitai bus).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Rodoma",
@@ -19184,6 +19235,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Įspėjimai apie reidus",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Įspėjimų kanalas",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Nėra",
+        GUILD_ANTIRAID_RAID_ALERT: "Įspėjimas apie reidą",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Apsauga įjungta",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "Atlikti įspėjimų apie reidus sąranką",
@@ -19673,7 +19725,7 @@
           "Nustatymus keiti rankiniu būdu.",
         NOTIFICATION_SETTINGS_USE_PRESET: "Naudoti išankstinius nustatymus",
         NOTIF_MIGRATION_SETTINGS_TITLE:
-          "Naujų neskaitytų pranešimų nustatymai (eksperimentinė funkcija)",
+          "Nauji neskaitytų pranešimų nustatymai (eksperimentinė funkcija)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "Išjungiamas naujų neskaitytų pranešimų nustatymas, kad serveryje galėtum pasirinkti, kurie kanalai svarbiausi.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -21671,6 +21723,9 @@
           "Nitro prenumeratoriai šiam papuošimui gauna nuolaidą",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} su Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Atėjo laikas naujai išvaizdai?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Tikrai nesmagu dėl šito.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hm, mums nepavyko įkelti parduotuvės. Sugrįžk vėliau.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Naudok bet kada su aktyvia Nitro prenumerata.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Pažvelkite į mano nuostabų papuošimą",
@@ -21758,6 +21813,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Pridėti programėlę",
         MONETIZATION: "Monetizavimas",
         GUILD_SETTINGS_MONETIZATION: "Serverio monetizavimas",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Serverių prenumerata",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Reklamos puslapis",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Prenumeratos lygis",
@@ -22213,6 +22269,8 @@
           "Mokėjimų komandos keitimas",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Mokėjimų komandos pasirinkimas",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Pakeisk komandą, kuriai bus siunčiami mokėjimai už serverio monetizavimą.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Komandos pakeitimas gali turėti įtakos galimybei gauti išmoką",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23131,7 +23189,8 @@
           "Tai didžiausias kadrų skaičius per sekundę, kuriuo bus įrašomi klipai.",
         CLIPS_CROP_START: "Apkirpti pradžią",
         CLIPS_CROP_END: "Apkirpti pabaigą",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Atskleidžiamo turinio klipas",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER:
+          "Pažymėti kaip atskleidžiamo turinio klipą",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Pašalinti klipą",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Dabar gali iškirpti klipus tiesiai žaidime: spausk $[!!{keybind}!!](keybindHook) arba nustatyk tinkintus sparčiuosius klavišus.",
@@ -23144,6 +23203,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Tvarkyti iškarpų nustatymus",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Sužinoti daugiau",
+        SOUND_INCOMING_RING_HALLOWEEN: "Per Heloviną gaunamas skambutis",
+        CUSTOM_SOUNDS: "Tinkinti garsai",
+        ENABLE_PHONE_INTEGRATION:
+          "Jei nori tai išbandyti, įjunk integraciją su telefono programėle.",
         GUILD_SHOP_CHANNEL_LABEL: "Serverio parduotuvė",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Prieinami produktai",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23250,6 +23313,8 @@
           "Sužinok apie {classificationDescription} politiką.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord taisyklės galioja visiems",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Eiti į paskyros būseną",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Eiti į paskyros būseną",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Peržiūrėti paskyros būseną",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Bandyti dar kartą",
@@ -23326,6 +23391,8 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Atmesti",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Padarėme klaidą? [Pranešk apie tai](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE:
+          "Pažymėk, kad tai nėra neskelbtinas turinys",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "Ačiū, kad pranešei!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
           "Pažymėk, kad tai nėra neskelbtinas turinys",
@@ -23428,7 +23495,7 @@
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Atgal į pokalbį",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT:
           "Wumpus juda pagal muziką.",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Pranešti apie šį asmenį",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Pranešti apie šį naudotoją",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Pranešta",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Kreipkis į krizių SMS liniją",
@@ -23482,7 +23549,7 @@
         CUSTOM_HANG_STATUS: "Pritaikyta būsena",
         CUSTOM_HANG_STATUS_CTA: "Šok čia!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Ką veiki?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Braukymo būsena",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Nušvilpti būseną",
         HANG_STATUS_VC_ROW_ADD: "Pridėti būseną",
         HANG_STATUS_HELP:
           "Nustatyk veiklos būseną ir parodyk savo draugams, ką veiki.",
@@ -23736,7 +23803,7 @@
           "Kilo problemų sekant tavo misijos pažangą.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Paskatink narius bendrauti, nes šis kanalas kurį laiką yra neaktyvus.",
-        PROMPT_CAMERA_LOADING_TITLE: "Ką matai?",
+        PROMPT_CAMERA_LOADING_TITLE: "Ką gero matai?",
         PROMPT_CAMERA_ERROR:
           "Fotografuojant iškilo problema, pabandyk dar kartą",
         DEADCHAT_ACTION_CAMERA: "Mano vaizdas",
@@ -23767,9 +23834,12 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord neberodys pranešimų programėlėje, darbalaukio pranešimų ir išjungus žinučių garsus.",
         QUIET_MODE_DISABLED_BY: "Šią funkciją išjungė Susikaupimo režimas",
+        FOCUS_MODE_TITLE: "Susikaupimo režimas (BETA)",
+        FOCUS_MODE_BADGE_ON: "ĮJUNGTA",
+        FOCUS_MODE_BADGE_OFF: "IŠJUNGTA",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Kurį laiką naudojai režimą Netrukdyti. Gal nori vietoje jo įjungti Susikaupimo režimą?",
-        ACTIVITY_REACTION_REPLY_TITLE: "Kalbėkit apie {activity}",
+        ACTIVITY_REACTION_REPLY_TITLE: "Pakalbėkit apie {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "Veiklos kortelė rodo @{username} ir {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:

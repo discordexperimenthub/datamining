@@ -681,6 +681,10 @@
           "Ajouter l'argument de commande {optionName}",
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "R\xe9centes",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Populaires",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Rien n'est requis. Tu peux envoyer la commande ou ajouter une option ci-dessous",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Choisis une option ci-dessous",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Tu n'as pas les permissions n\xe9cessaires pour ex\xe9cuter des commandes dans ce salon",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Ouvrir la commande",
@@ -1047,6 +1051,8 @@
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF:
           "Ouvrir l’\xc9tag\xe8re des activit\xe9s",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Quitter l'activit\xe9",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Cette fonctionnalit\xe9 n'est pas disponible sur ce syst\xe8me d'exploitation \xe0 l'heure actuelle",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Cette Activit\xe9 n'est pas disponible sur ce syst\xe8me d'exploitation \xe0 l'heure actuelle.",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "cette Activit\xe9",
@@ -1285,6 +1291,9 @@
           "L'activit\xe9 a commenc\xe9.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Tu ne peux pas d\xe9marrer cette Activit\xe9 sur un serveur comptant plus de 25\xa0membres",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Application externe",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Tu t'appr\xeates \xe0 lancer une application externe. Veux-tu vraiment continuer\xa0?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "L'activit\xe9 est termin\xe9e. Veux-tu en commencer une nouvelle\xa0?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1293,6 +1302,15 @@
           "Tu n'as pas la permission de rejoindre ce salon vocal.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Tu ne peux pas participer aux Activit\xe9s dans ce salon.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Un oiseau ayant un m\xe9gaphone en guise de t\xeate",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Pour info\xa0!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Tu t'appr\xeates \xe0 tester {activityName} pour la premi\xe8re fois.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Cette application n'est pas cr\xe9\xe9e par Discord. Teste uniquement les applications des d\xe9veloppeurs en qui tu as confiance.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "En savoir plus sur les applications priv\xe9es.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) a lanc\xe9 une Activit\xe9",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -1303,7 +1321,6 @@
           "[!!{username}!!](usernameOnClick) a lanc\xe9 une [Activit\xe9](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} a commenc\xe9 une activit\xe9",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Peut-\xeatre plus tard",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Comment s'est pass\xe9 !!{applicationName}!!\xa0?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1463,10 +1480,6 @@
           "Essaie pendant un temps monstrueusement limit\xe9.\nTu as Nitro\xa0? Invoque SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Le mode de test est actuellement actif pour **!!{applicationName}!!**. Ton application devrait appara\xeetre en tant qu'option dans le menu du bouton Activit\xe9s.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE:
-          "Nouvelle activit\xe9\xa0! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Essaie ce jeu o\xf9 tu dessines et devines ce que tu vois avec tes amis. Gratuit jusqu'au 29\xa0mars.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Avertissement",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG:
           "(En version b\xeata sur le bureau)",
@@ -3599,7 +3612,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Aucun",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Badges non lus",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Nom du salon en surbrillance et demi-teinte",
+          "Nom du salon en surbrillance et demi-point",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Notifications",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Notification push et son d'alerte",
@@ -3649,6 +3662,8 @@
           "Tu ne recevras pas de notifications des salons muets, et ils seront gris\xe9s sur ta liste des salons. Ce param\xe8tre s'applique sur tous tes appareils.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Tu ne recevras pas de notifications des cat\xe9gories muettes, et elles seront gris\xe9es sur ta liste des salons. Ce param\xe8tre s'applique sur tous tes appareils.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Ton serveur est actuellement $[**muet**](mutedHook). Tu dois r\xe9tablir les notifications du serveur pour recevoir des notifications de ce salon ou modifier des param\xe8tres.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "La limite de notifications de ton serveur est de $[**z\xe9ro**](notificationHook). Tu ne recevras pas de notifications de ce salon, mais tu peux modifier ce choix ici.",
         CHANNEL_OR_GUILD_MUTED: "Ce salon ou ce serveur est muet.",
@@ -4529,6 +4544,8 @@
         SEARCH_EMOJIS: "Rechercher des \xe9mojis",
         SEARCH_FOR_EMOJI: "Trouve l'\xe9moji parfait",
         SEARCH_FOR_STICKER: "Trouver l'autocollant parfait",
+        SEARCH_FOR_REACTION: "Trouve la r\xe9action parfaite",
+        SEARCH_FOR_SUPER_REACTION: "Trouve la super r\xe9action parfaite",
         NO_EMOJI_SEARCH_RESULTS:
           "Aucun \xe9moji ne correspond \xe0 ta recherche",
         EMOJI_CATEGORY_PACK: "Lot {packName}",
@@ -5507,6 +5524,8 @@
           "Une erreur s'est produite lors de la lecture des fichiers de journalisation de ton syst\xe8me. Merci d'essayer \xe0 nouveau.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Une erreur s'est produite et nous n'avons pas r\xe9ussi \xe0 transf\xe9rer tes fichiers de d\xe9bugage. Merci d'essayer de transf\xe9rer \xe0 nouveau.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Partager les journaux de notifications push",
         FORM_CHECKBOX_AEC_DUMP: "Diagnostic de l'enregistrement audio",
         FORM_HELP_AEC_DUMP:
           "Le diagnostic de l'enregistrement audio est utilis\xe9 pour analyser les probl\xe8mes audio. Les cinq derni\xe8res minutes vocales sont sauvegard\xe9es dans le dossier du module vocal.",
@@ -5569,6 +5588,7 @@
         APP_ICON_SUNSET: "Avenue du coucher de soleil",
         APP_ICON_HOLO_WAVES: "Vagues prismatiques",
         APP_ICON_PIRATE: "Matelot",
+        APP_ICON_PIRATE_1: "\xc0 l'abordage",
         APP_ICON_PIRATE_2: "Oh\xe9 du bateau",
         APP_ICON_PIRATE_3: "Discor-saire",
         APP_ICON_PIRATE_4: "Yo ho ho",
@@ -5655,6 +5675,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {#\xa0personne} other {#\xa0personnes}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Ouvrir les actions d'appel vocal",
+        TURN_CAMERA_ON_A11Y_LABEL: "Allumer la cam\xe9ra",
+        TURN_CAMERA_OFF_A11Y_LABEL: "\xc9teindre la cam\xe9ra",
         IN_GAME_VOICE_SETTINGS: "Param\xe8tres vocaux en jeu",
         VIDEO_SETTINGS: "Param\xe8tres vid\xe9o",
         TEXT: "Texte",
@@ -5868,6 +5890,8 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Voix connect\xe9e",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Vid\xe9o connect\xe9e",
         CONNECTION_STATUS_RTC_CONNECTING: "Connexion SCTR",
+        CONNECTION_STATUS_ICE_CHECKING:
+          "V\xe9rification de ton chemin de connexion",
         CONNECTION_STATUS_DTLS_CONNECTING:
           "Connexion du protocole DTLS en cours",
         CONNECTION_STATUS_NO_ROUTE: "Aucun chemin de connexion",
@@ -8604,6 +8628,12 @@
           "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions. Disponible d\xe8s maintenant avec [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions illimit\xe9es. Disponible d\xe8s maintenant avec [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions illimit\xe9es\xa0! Disponibles d\xe8s maintenant avec Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions illimit\xe9es\xa0!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Disponibles d\xe8s maintenant avec Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions. Obtiens-en {refillAmount} par semaine, disponible avec [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8731,6 +8761,10 @@
           "Mets de l'ambiance dans la discussion gr\xe2ce aux super r\xe9actions\xa0! Obtiens des super r\xe9actions illimit\xe9es et d'autres avantages fantastiques avec [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Super r\xe9actions illimit\xe9es\xa0!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Clique sur le bouton pour ajouter une super r\xe9action.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Touche le bouton pour ajouter une super r\xe9action.",
         HOLD_UP: "Attends\xa0!",
         MASKED_LINK_ALERT_V2_HEADER: "Tu quittes Discord…",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9761,10 +9795,12 @@
           "!!{percent, number}!!% de r\xe9duction",
         PREMIUM_DISCOUNT_CTA: "\xc9conomise !!{percent, number}!!% sur Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "\xc9conomise sur Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Ta r\xe9duction de !!{percent, number}!!\xa0% se terminera {numMonths, plural, one {1\xa0mois} other {{numMonths}\xa0mois}} apr\xe8s l'achat. Ensuite, tu seras factur\xe9(e) {regularPrice} par mois.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Tes **3\xa0premiers mois** sont \xe0 **{discountedPrice}**. Ensuite, tu seras factur\xe9(e) {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {Ton prochain 1\xa0mois} other {Tes {numMonths}\xa0prochains mois}}** {numMonths, plural, one {est} other {sont}} \xe0 **{discountedPrice}**. Ensuite, ils te seront factur\xe9s {regularPrice}.",
+          "**{numMonths, plural, one {Ton prochain mois} other {Tes {numMonths}\xa0prochains mois}}** {numMonths, plural, one {sera \xe0} other {seront \xe0}} **{discountedPrice}**. Ensuite, tu seras factur\xe9(e) {regularPrice}/mois.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "r\xe9duction appliqu\xe9e",
         CHURN_DISCOUNT_DESCRIPTION:
           "Avant d'annuler, profite de **{percent, number}\xa0% de r\xe9duction sur ton abonnement Nitro** pendant {numMonths, plural, one {1\xa0mois} other {{numMonths}\xa0mois}}.",
@@ -9826,6 +9862,10 @@
           "Th\xe8mes de couleur",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Ajoute ta touche \xe0 Discord avec des couleurs de th\xe8me uniques.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Ic\xf4nes d'application personnalis\xe9es",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Choisis une ic\xf4ne dans l'application en version bureau et mobile qui correspond \xe0 ton style.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Les avantages",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Enrichis ton exp\xe9rience Discord",
@@ -10488,6 +10528,8 @@
           "Il semblerait qu'il y ait eu un probl\xe8me et que tu ne puisses pas utiliser ce code. Toutes nos excuses\xa0!",
         PROMOTION_ERROR_CLAIMED_BODY:
           "D\xe9sol\xe9, on dirait que ce code a d\xe9j\xe0 \xe9t\xe9 utilis\xe9.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Il semble que ce code appartienne \xe0 quelqu'un d'autre.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "On dirait que ce code n'a pas fonctionn\xe9. Assure-toi d'avoir le bon code, et essaie \xe0 nouveau.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10530,6 +10572,8 @@
           "Ce code est inscrit dans l'e-mail de confirmation que nous venons de t'envoyer.",
         REDEMPTION_CODE: "Code cadeau",
         PARTNER_PROMOTION_CLAIM: "Suivant",
+        PARTNER_PROMOTION_ERROR_TITLE: "Oh oh\xa0!",
+        PARTNER_PROMOTION_ERROR_BODY: "On dirait qu'une erreur s'est produite.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Cadeau inconnu.",
         REDEEM: "Utiliser",
         UNLOCK_CODE: "D\xe9verrouiller le code",
@@ -12085,7 +12129,7 @@
         NITRO_HOME_CARD_USE_CUSTOM_SOUNDS:
           "Utilise des sons de Soundboard personnalis\xe9s dans tous les salons vocaux.",
         NITRO_HOME_CARD_UPLOAD_POWER:
-          "Ressens la puissance de l'upload couler dans tes veines.",
+          "Ressens la puissance de l'upload couler dan tes veines.",
         NITRO_HOME_STREAM_UP_TO_4K: "Jusqu'\xe0 4K et 60\xa0FPS.",
         NITRO_HOME_UPLOAD_ALL_YOU_WANT:
           "Uploade ce que tu veux avec une taille d'upload augment\xe9e \xe0 500\xa0Mo.",
@@ -12093,12 +12137,58 @@
         NITRO_HOME_SUPER_REACTIONS_DESCRIPTION:
           "Mets de l'ambiance dans la discussion gr\xe2ce \xe0 des r\xe9actions anim\xe9es pleines d'action\xa0!",
         NITRO_HOME_ENTRANCE_SOUNDS_BENEFIT:
-          "Fais une entr\xe9e remarqu\xe9e dont seuls les abonn\xe9s Nitro sont capables dans tes salons vocaux pr\xe9f\xe9r\xe9s.",
+          "Fais une entr\xe9e remarqu\xe9e comme seuls les abonn\xe9s Nitro peuvent faire dans tes salons vocaux pr\xe9f\xe9r\xe9s.",
         NITRO_HOME_SUBSCRIBER_BADGE: "Badge d'abonn\xe9",
         NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE:
           "Obtiens ce super badge en remerciement de ton abonnement Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pour les collectionneurs. Profite ce badge exclusif r\xe9serv\xe9 aux abonn\xe9s Nitro.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts}\xa0{numFreeBoosts, plural, =1 {boost gratuit} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "F\xe9licitations pour ton premier mois de Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "R\xe9compense Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Tu peux utiliser ton boost suppl\xe9mentaire comme tu le souhaites tant que ton abonnement Nitro actuel reste actif.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "R\xe9cup\xe8re ta r\xe9compense\xa0!",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Utiliser",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "R\xe9cup\xe9r\xe9",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Merci d'\xeatre un membre Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Maintiens ton boost avec un abonnement Nitro actif. L'annuler r\xe9initialise la progression et supprime le boost.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Gagne un boost apr\xe8s ton premier mois de Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "R\xe9cup\xe9ration dans {days}\xa0{days, plural, =1 {jour} other {jours}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "R\xe9cup\xe9ration dans {numDays}\xa0{numDays, plural, =1 {jour} other {jours}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "R\xe9compense Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Gagne un boost apr\xe8s ton premier mois de Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Gagne un boost au bout de 3\xa0mois de Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Tu peux utiliser ton boost suppl\xe9mentaire comme tu le souhaites tant que ton abonnement Nitro actuel reste actif.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "R\xe9cup\xe8re ta r\xe9compense\xa0!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "F\xe9licitations pour ton premier mois de Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "F\xe9licitations pour tes 3\xa0mois de Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Merci d'\xeatre un membre Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Maintiens ton boost avec un abonnement Nitro actif. L'annuler r\xe9initialise la progression et supprime le boost.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "R\xe9cup\xe9r\xe9",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Tu as obtenu un boost suppl\xe9mentaire, beau travail.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Ton boost t'attend\xa0!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Merci d'\xeatre un membre Nitro. Voici un boost suppl\xe9mentaire pour avoir atteint ton premier mois de Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Merci d'\xeatre un membre Nitro. Voici un boost suppl\xe9mentaire pour avoir atteint 3\xa0mois de Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Pousse ton Discord encore plus loin",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -12191,6 +12281,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Essai gratuit ({days, plural, =1 {#\xa0jour restant} other {#\xa0jours restants}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Essai gratuit",
+        POWERED_BY_NITRO: "Propuls\xe9 par Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "En train de jouer",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "En direct sur !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Joue sur !!{platform}!!",
@@ -13654,6 +13745,7 @@
         MOST_POPULAR: "Plus pris\xe9",
         SPELLCHECK: "Correcteur",
         ADD_TO_DICTIONARY: "Ajouter au dictionnaire",
+        REMOVE_FROM_DICTIONARY: "Enlever du dictionnaire",
         LANGUAGES: "Langues",
         AUTO_SUGGEST_STICKERS: "Suggestions d'autocollants",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13964,6 +14056,7 @@
           "Un message officiel de Discord requiert ton attention.",
         BUILD_OVERRIDE: "D\xe9rogation de version",
         BUILD_OVERRIDE_FOR: "D\xe9rogation de version pour {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Code de hachage de validation",
         BUILD_OVERRIDE_APPLY: "Appliquer",
         BUILD_OVERRIDE_CLEAR: "Effacer",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Version non disponible",
@@ -14176,7 +14269,6 @@
           "Choisis entre {monthlyPrice}/mois ou {yearlyPrice}/an",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Ton destinataire recevra\xa0:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Offrir un abonnement Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Dur\xe9e du cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Offrir {count, plural, one {# mois} other {# mois}} de {nitroTierName} en cadeau",
@@ -14197,7 +14289,11 @@
         GIFT_DURATION: "1\xa0{timeInterval} de Nitro",
         GIFT_OPEN_PROMPT: "Ouvrir le cadeau",
         GIFT_RECIPIENT_INFO: "Pour\xa0: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Ajouter un effet sonore",
+        GIFT_SELECT_EMOJI: "Ajoute un \xe9moji de confettis",
         GIFT_SELECT_SOUNDBOARD_ADD: "Ajouter",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Ceci se lancera lorsque ton ami ouvrira son cadeau",
         NITRO_CONFIRMATION: "Tu as obtenu Nitro",
         OPENED_GIFT_CONFIRMATION: "Tu as ouvert ce cadeau\xa0!",
         NITRO_PERKS: "D\xe9couvre tes nouveaux avantages Nitro\xa0!",
@@ -14743,8 +14839,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Cet \xe9moji vient de",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Cet \xe9moji vient du serveur. Tu peux l'utiliser n'importe o\xf9.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Cet \xe9moji provient de ce serveur. Utilise-le o\xf9 tu veux gr\xe2ce \xe0 Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Cet \xe9moji vient de l'un de tes serveurs. Tape son nom dans la barre de discussion pour l'utiliser.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Cet \xe9moji provient de l'un de tes serveurs. Tu peux l'utiliser o\xf9 tu veux gr\xe2ce \xe0 Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Tu veux utiliser cet \xe9moji n'importe o\xf9\xa0? Rejoins le serveur\xa0!",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14759,6 +14859,8 @@
           "Tu veux utiliser cet \xe9moji n'importe o\xf9\xa0? Passe \xe0 Nitro et rejoins le serveur.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Cet \xe9moji vient soit d'un serveur accessible uniquement sur invitation, soit d'un serveur indisponible. [En savoir plus](openPremiumSettings) sur l'utilisation des \xe9mojis personnalis\xe9s.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Cet \xe9moji personnalis\xe9 provient d'un serveur qui n'est accessible que sur invitation. Utilise des \xe9mojis personnalis\xe9s de tous les serveurs dont tu es membre gr\xe2ce \xe0 Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Obtiens cet autocollant de",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -14862,6 +14964,8 @@
           "Clique sur la boussole dans ta liste de serveurs pour trouver de nouveaux serveurs.",
         LOADING_TIP_12:
           "Fais glisser des serveurs et d\xe9pose-les les uns sur les autres pour cr\xe9er des dossiers de serveurs.",
+        LOADING_TIP_13:
+          "Tape /gif ou /tenor + ce que tu veux pour trouver un GIF en lien avec ce sujet\xa0!",
         LOADING_TIP_14:
           "Partage les jeux auxquels tu joues avec les param\xe8tres d'activit\xe9 de jeu.",
         LOADING_TIP_15:
@@ -14890,6 +14994,23 @@
           "Tu peux taper / pour afficher les commandes de bot et autres commandes int\xe9gr\xe9es",
         LOADING_TIP_27:
           "Tu peux mettre des !!{asterisks}!! autour de ce que tu \xe9cris pour le mettre en **gras**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "joyeuse Halloween, assure-toi de ramener ton serveur d'entre les morts",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO passe une saison d'Halloween tr\xe8s effrayante",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Pr\xe9paration d'une sonnerie qui donne la chair de poule",
+        HALLOWEEN_LOADING_TEXT_4: "BouuUUUUuuUuUuh",
+        HALLOWEEN_LOADING_TEXT_5:
+          "Dans le chat vocal, tout le monde est un esprit",
+        HALLOWEEN_LOADING_TEXT_6:
+          "V\xe9rification que tes serveurs ne sont (probablement) pas hant\xe9s",
+        HALLOWEEN_LOADING_TEXT_7:
+          "\xab\xa0Esprit\xa0\xbb d'Halloween, es-tu l\xe0\xa0?",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Les zombies ne postent-ils que des m\xe8mes morts\xa0?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord est en train d'\xeatre infect\xe9\xa0! Fais attention \xe0 Wumpus zombie",
         ACCESSIBILITY_LOADING_TIP_1:
           "Choisis entre les th\xe8mes clair et sombre dans les param\xe8tres d’apparence.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14920,6 +15041,8 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Compris",
         VOICE_PANEL_SHOW_VOICE_USERS: "Afficher les utilisateurs en vocal",
         VOICE_PANEL_USERS_A11Y_LABEL: "Utilisateurs en vocal",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL: "{username}, en sourdine et muet",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, muet",
         VOICE_PANEL_SHOW_EXTRAS: "Afficher tous les utilisateurs",
         VOICE_PANEL_HIDE_EXTRAS: "Minimiser",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -16103,6 +16226,8 @@
         FRIEND_FINDER_FRIENDS: "Tous les amis",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Contacts sur Discord\xa0: {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Personnes que tu pourrais conna\xeetre\xa0: {count}",
         CONTACT_SYNC_TITLE: "Trouver tes amis",
         CONTACT_SYNC_LANDING_TITLE: "Trouver tes amis",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16734,7 +16859,7 @@
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES:
           "Voir les \xe9v\xe9nements \xe0 venir",
         GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Recommence {recurrenceRule}",
-        GUILD_SCHEDULED_EVENT_REPEATS: "\xc9v\xe9nements en s\xe9rie",
+        GUILD_SCHEDULED_EVENT_REPEATS: "S\xe9rie d'\xe9v\xe9nements",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY: "Recommence chaque {weekday}",
         GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY:
           "Recommence un {weekday} sur deux",
@@ -16765,8 +16890,9 @@
           "NOUVEAU\xa0! \xc9v\xe9nements r\xe9currents",
         GUILD_EVENT_RECURRING_COACHMARK_BODY:
           "Tu peux maintenant r\xe9p\xe9ter facilement les \xe9v\xe9nements.",
-        COPY_RECURRENCE_LINK: "Copier ce lien d'\xe9v\xe9nement",
-        COPY_SERIES_LINK: "Copier le lien de la s\xe9rie d'\xe9v\xe9nements",
+        COPY_RECURRENCE_LINK:
+          "Copier le lien uniquement pour cet \xe9v\xe9nement",
+        COPY_SERIES_LINK: "Copier le lien pour tous les \xc9v\xe9nements",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Cr\xe9er un \xe9v\xe9nement",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17406,10 +17532,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count}\xa0autres fils actifs",
         THREAD_BROWSER_ARCHIVED_HEADER: "anciens fils",
         THREAD_BROWSER_JOINED_HEADER: "{count}\xa0fils rejoints",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count}\xa0autres fils actifs",
         THREAD_BROWSER_ACTIVE_COUNT: "Fils actifs - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Anciens fils",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count}\xa0fils rejoints",
         THREAD_BROWSER_JOINED_COUNT: "Fils rejoints - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "Il y a {count}\xa0s",
         THREAD_BROWSER_TIMESTAMP_DAYS: "Il y a {count}\xa0j",
@@ -17427,8 +17551,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "Il n’y a aucun fil.",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Aucun fil actif.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "Aucun fil archiv\xe9.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Concentre toute ton attention sur une conversation dans un salon textuel temporaire, autrement appel\xe9 \xab\xa0fil\xa0\xbb.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Concentre toute ton attention sur une conversation dans un salon textuel temporaire, autrement appel\xe9 \xab\xa0fil\xa0\xbb.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Param\xe8tres du filtre",
@@ -18117,6 +18239,8 @@
           "Si tu r\xe9installes Nitro Classic, nous recommencerons \xe0 facturer via ton mode de paiement\xa0**{price}** et nous continuerons \xe0 te facturer **tous les mois** jusqu'\xe0 ce que tu r\xe9silies ton abonnement. Tu peux le r\xe9silier \xe0 tout moment depuis ta page Param\xe8tres.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Si tu r\xe9installes Nitro Classic, nous recommencerons \xe0 facturer via ton mode de paiement\xa0**{price}** et nous continuerons \xe0 te facturer **tous les ans** jusqu'\xe0 ce que tu r\xe9silies ton abonnement. Tu peux le r\xe9silier \xe0 tout moment depuis ta page Param\xe8tres.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Si tu r\xe9actives Nitro, nous recommencerons \xe0 facturer **{discountPrice}**\xa0par mois sur ton mode de paiement jusqu'\xe0 la fin de ton tarif r\xe9duit, puis nous pr\xe9l\xe8verons ***{defaultPrice}***\xa0par mois jusqu'\xe0 ce que tu annules ton abonnement. Tu peux r\xe9silier \xe0 tout moment depuis ta page de param\xe8tres.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Conserver l'abonnement Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19635,9 +19759,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "R\xe9sultats de la recherche",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Nom",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Membre depuis",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "A rejoint Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "R\xf4les",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Les signalements",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "membres de **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "membres **{pageRange}** sur **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Ceci n'affiche que les membres les plus r\xe9cents\xa0: il se peut que les membres plus anciens ne soient pas visibles (mais le seront bient\xf4t).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Affich\xe9",
@@ -19652,7 +19779,7 @@
         MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE:
           "Signalements de s\xe9curit\xe9 des membres",
         MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP: "Voir le profil",
-        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Ouvrir la vue du mod\xe9rateur",
+        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Ouvrir la vue mod\xe9rateur",
         MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP: "Plus d'options",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY:
           "Activit\xe9 inhabituelle en messages priv\xe9s",
@@ -19716,6 +19843,9 @@
           "Filtrer en fonction des informations de s\xe9curit\xe9, telles que l'exclusion temporaire ou la participation \xe0 une activit\xe9 inhabituelle en message priv\xe9.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Bannir des membres",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Inconnu",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Masqu\xe9",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Le mode streamer est actif, les codes d'invitation sont masqu\xe9s",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "D\xe9couverte de serveurs",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "P\xf4le \xe9tudiant",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME:
@@ -19939,6 +20069,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Alertes de raid",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Salon d'alertes",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Aucun",
+        GUILD_ANTIRAID_RAID_ALERT: "Alerte de raid",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Protection activ\xe9e",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -20450,7 +20581,7 @@
         NOTIF_MIGRATION_CUSTOMIZE_TAB: "2. Choisis les serveurs",
         NOTIF_MIGRATION_TIPS_TAB: "3. Applique les modifications",
         NOTIF_MIGRATION_INTRO_TITLE:
-          "R\xe9duisez le bruit avec les nouvelles notifications",
+          "Vois-y plus clair gr\xe2ce aux nouvelles notifications",
         NOTIF_MIGRATION_INTRO_SUB_TITLE:
           "Concentre-toi davantage sur les salons qui t'int\xe9ressent vraiment.",
         NOTIF_MIGRATION_INTRO_CHANNEL_1: "annonces",
@@ -20932,6 +21063,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Montage m\xe9dia et cr\xe9ation de m\xe8mes, \xe0 la vitesse de Discord.",
         EARLY_ACCESS: "Acc\xe8s anticip\xe9",
+        REWARD: "R\xe9compense",
         REMIXING_POST_CTA: "Envoyer",
         REMIXING_CROP: "Rogner image",
         REMIXING_BACKDROP_EDITOR_TITLE: "Ajuster et recadrer",
@@ -22333,6 +22465,10 @@
           "Les serveurs dans lesquels tu as envoy\xe9 des messages au cours de la semaine derni\xe8re. Ce ne sont pas des liens d'invitation, tes parents ne pourront pas cliquer dessus.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Les serveurs dans lesquels votre ado a envoy\xe9 des messages au cours de la derni\xe8re semaine.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Serveurs auxquels tu as particip\xe9 (messages ou chat vocal) au cours de la derni\xe8re semaine. Ce ne sont pas des liens d'invitation\xa0: tes parents ne pourront pas cliquer dessus.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Serveurs sur lesquels votre ado a \xe9t\xe9 actif (a envoy\xe9 des messages ou rejoint un chat vocal) au cours de la derni\xe8re semaine.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Serveurs actifs — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -22477,7 +22613,12 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Les abonn\xe9s Nitro b\xe9n\xe9ficient d'une r\xe9duction sur cette d\xe9coration",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} avec Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} avec Nitro. $[Abonne-toi maintenant](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Envie d'un nouveau look\xa0?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Mhm, c'est un peu g\xeanant.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, nous n'avons pas r\xe9ussi \xe0 charger la boutique. Reviens plus tard.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Utilisable quand tu veux avec un abonnement Nitro actif.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Regarde ma magnifique d\xe9coration",
@@ -22489,6 +22630,9 @@
           "Une fois achet\xe9, cet effet sera ajout\xe9 \xe0 ta collection et pourra \xeatre utilis\xe9 \xe0 tout moment",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Cet effet fait maintenant partie de ta collection et peut \xeatre utilis\xe9 \xe0 tout moment\xa0!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Habituellement {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "En cliquant sur \xab\xa0{buyButtonLabel}\xa0\xbb, tu acceptes les [Conditions des Services Payants]({paidServiceTermURL}). D\xe8s que tu auras finalis\xe9 ton achat, l'article sera ajout\xe9 \xe0 ta collection et pourra \xeatre utilis\xe9 \xe0 tout moment. Note que les abonnements Nitro deviennent non remboursables une fois l'article achet\xe9.",
         COLLECTIBLES_DAYS_LEFT: "{days}\xa0jours restants",
         COLLECTIBLES_LAST_DAY: "Dernier jour pour acheter",
         COLLECTIBLES_SHOP_VIEW_ALL: "Afficher tout",
@@ -22508,10 +22652,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Ma\xeetrise les \xe9l\xe9ments",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Feu. Vent. Eau. Terre. Lequel veux-tu d\xe9cha\xeener\xa0?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "Les nouveaux articles sur le th\xe8me \xab\xa0Anime\xa0\xbb sont arriv\xe9s\xa0!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime\xa0: de nouveaux styles",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "D\xe9couvre les derniers styles gr\xe2ce auxquels senpai te remarquera \xe0 coup s\xfbr.",
+          "Senpai va certainement te remarquer maintenant.",
         COLLECTIBLES_NEW_BADGE: "NOUVEAU",
         INVENTORY_EMOJI_DETAILS_V2: "Voir les d\xe9tails des \xe9mojis",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22566,6 +22709,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Ajouter l'application",
         MONETIZATION: "Mon\xe9tisation",
         GUILD_SETTINGS_MONETIZATION: "Mon\xe9tisation du serveur",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Abonnements de serveurs",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Page promotionnelle",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Niveau d'abonnement",
@@ -23030,6 +23174,8 @@
           "Modifier l'\xe9quipe de paiement",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "S\xe9lectionne l'\xe9quipe de paiement",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Modifie l'\xe9quipe \xe0 laquelle seront envoy\xe9s les paiements pour la mon\xe9tisation du serveur.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Modifier ton \xe9quipe peut affecter l'\xe9ligibilit\xe9 \xe0 un versement",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23877,6 +24023,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {#\xa0minute} other {#\xa0minutes}}",
         CLIPS_SAVE: "Enregistrer le clip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Active les clips pour capturer ce stream.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Autorise les spectateurs \xe0 capturer des clips",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23903,7 +24051,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "Voir le clip",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "Tu as {count, plural, =1 {#\xa0nouveau clip} other {#\xa0nouveaux clips}}\xa0!",
-        CLIPS_REVIEW_NOW: "Revoir maintenant",
+        CLIPS_REVIEW_NOW: "Voir maintenant",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "Tu as captur\xe9 des clips pendant ton r\xe9cent stream sur !!{applicationName}!!. Regarde-les dans ta biblioth\xe8que de clips\xa0!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "Voir les clips",
@@ -23984,7 +24132,7 @@
           "La fr\xe9quence d'images maximale \xe0 laquelle tes clips seront enregistr\xe9s.",
         CLIPS_CROP_START: "D\xe9but du clip",
         CLIPS_CROP_END: "Fin du clip",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Clip spoiler",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Ajouter un spoiler",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Supprimer le clip",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Tu peux d\xe9sormais enregistrer des clips directement en jeu avec $[!!{keybind}!!](keybindHook) ou d\xe9finir un raccourci clavier personnalis\xe9.",
@@ -23997,6 +24145,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "G\xe9rer les param\xe8tres de clips",
         CLIPS_USER_EDUCATION_LEARN_MORE: "En savoir plus",
+        SOUND_INCOMING_RING_HALLOWEEN: "Sonnerie d'appel d'Halloween",
+        CUSTOM_SOUNDS: "Sons personnalis\xe9s",
+        ENABLE_PHONE_INTEGRATION:
+          "Autorise l'int\xe9gration avec l'application de ton t\xe9l\xe9phone pour en faire l'exp\xe9rience.",
         GUILD_SHOP_CHANNEL_LABEL: "Boutique du serveur",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Produits disponibles",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -24046,8 +24198,7 @@
           "Ton compte est $[suspendu.](hook)",
         SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION:
           "Tu as enfreint les [CGU]({termsOfService}) et la [Charte d'Utilisation de la Communaut\xe9]({communityGuidelines}) de Discord.",
-        SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT:
-          "$[Tout est pr\xeat\xa0!](hook)",
+        SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT: "$[Tout bon!](hook)",
         SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT: "$[Limit\xe9](hook)",
         SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT:
           "$[Tr\xe8s limit\xe9](hook)",
@@ -24075,6 +24226,10 @@
           "Consulte notre politique {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Les r\xe8gles de Discord s'appliquent \xe0 tout le monde",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Consulter le statut du compte",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Consulter le statut du compte",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Voir le statut du compte",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "R\xe9essayer",
@@ -24143,6 +24298,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Ignorer",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Avons-nous commis une erreur\xa0? [Fais-le-nous savoir](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Marquer comme non sensible",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Merci de nous avoir inform\xe9s\xa0!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -24176,7 +24332,7 @@
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "Nous ne conservons pas les contenus m\xe9dias bloqu\xe9s d\xe9finitivement. Comme ce contenu m\xe9dia a \xe9t\xe9 t\xe9l\xe9charg\xe9 il y a quelque temps d\xe9j\xe0, l'option pour le marquer comme non sensible a expir\xe9.",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "Cette personne ne pourra pas t'envoyer de messages. Si tu penses que ses actions pourraient nuire \xe0 quelqu'un, merci d'envoyer un signalement \xe0 Discord.",
+          "Cette personne ne pourra pas t'envoyer de message. Si tu penses que ses actions pourraient nuire \xe0 quelqu'un, merci d'envoyer un signalement \xe0 Discord.",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Bloquer et signaler",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Fermer",
         SAFETY_TOOLS_BUTTON_LABEL: "Ouvrir les outils de s\xe9curit\xe9",
@@ -24257,9 +24413,19 @@
           "Cette conversation n'est peut-\xeatre pas s\xfbre.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Prends des mesures pour te prot\xe9ger.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Prends des mesures pour te prot\xe9ger en ouvrant des outils de s\xe9curit\xe9.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Cette conversation n'est peut-\xeatre pas s\xfbre. Ouvre les outils de s\xe9curit\xe9 pour agir.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Bloquer",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "D\xe9bloquer",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Compte bloqu\xe9",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Compte d\xe9bloqu\xe9",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Compte signal\xe9",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Une erreur s'est produite. Merci de r\xe9essayer plus tard.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Cette personne ne pourra pas t'envoyer de messages. Si tu penses que ses actions pourraient nuire \xe0 quelqu'un, merci d'envoyer un signalement \xe0 Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Bloquer",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Bloquer et signaler",
@@ -24296,12 +24462,12 @@
         STATUS_IN_TRANSIT: "voyage IRL",
         STATUS_WATCHING: "mate des trucs",
         STATUS_NONE: "Aucun statut",
-        HANG_STATUS: "Statut d'attente",
+        HANG_STATUS: "Statut du moment",
         HANG_STATUS_LOCATION: "dans !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Statut personnalis\xe9",
         CUSTOM_HANG_STATUS_CTA: "Viens donc\xa0!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Qu'est-ce que tu fais, l\xe0\xa0?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Supprimer le statut",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Chiper le statut",
         HANG_STATUS_VC_ROW_ADD: "Ajouter un statut",
         HANG_STATUS_HELP:
           "Montre \xe0 tes amis ce que tu fais en d\xe9finissant un statut d'activit\xe9.",
@@ -24355,7 +24521,7 @@
           "Cette requ\xeate concerne du spam.",
         APPEAL_INGESTION_MODAL_SPAM_LINK: "Contacter l'assistance Discord",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER:
-          "Avons-nous commis une erreur\xa0? Fais-le-nous savoir.",
+          "Avons-nous fait une erreur\xa0? Fais-le nous savoir.",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_ACTIVITY_HEADER: "TON ACTIVIT\xc9",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_ACTIVITY_SUBHEADER:
           "Nous avons d\xe9termin\xe9 que ce contenu enfreignait notre politique",
@@ -24382,6 +24548,8 @@
         POLL_SUBMIT_VOTE: "Voter",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count}\xa0vote} other {{count}\xa0votes}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count}\xa0vote} other {{count}\xa0votes}}",
         POLL_ALREADY_VOTED: "A vot\xe9",
         POLL_EDIT_VOTE: "Changer de vote",
         POLL_REMOVE_VOTE: "Supprimer le vote",
@@ -24397,9 +24565,16 @@
         POLL_SELECT_ONE_ANSWER: "S\xe9lectionne une r\xe9ponse",
         POLL_SELECT_MULTIPLE_ANSWERS:
           "S\xe9lectionne une ou plusieurs r\xe9ponses",
-        POLL_SHOW_VOTES: "Afficher les votes",
-        POLL_HIDE_VOTES: "Masquer les votes",
+        POLL_SHOW_VOTES: "Afficher les r\xe9sultats",
+        POLL_HIDE_VOTES: "Revenir au vote",
+        POLL_VOTES_NO_RESULTS_TITLE: "Rien \xe0 voir ici",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "Il n'y a aucun vote pour cette r\xe9ponse",
+        POLL_COACHMARK_TITLE: "Nouveau\xa0! Les sondages d\xe9barquent.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planifie des \xe9v\xe9nements, rassemble des opinions ou pose une question idiote dans le chat.",
         POLL_NOT_INTERACTIVE: "Consulte le message original pour interagir",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Rien \xe0 voir ici",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Il n'y a aucun vote pour cette r\xe9ponse.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Votes",
@@ -24463,6 +24638,12 @@
           "Description de l'image (alternative textuelle)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Texte alternatif\xa0:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "S\xe9lectionne un m\xe9dia",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Oups, tu as oubli\xe9 quelque chose. Merci d'ajouter une question.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Oups, tu as oubli\xe9 quelque chose. Merci d'ajouter au moins une r\xe9ponse.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Ne laisse pas le champ de r\xe9ponse vide\xa0! Merci d'ajouter du texte.",
         POLL_END_EARLY: "Clore le sondage maintenant",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Clore le sondage maintenant\xa0?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -24501,6 +24682,12 @@
           "Accomplis la t\xe2che pour d\xe9verrouiller la r\xe9compense",
         QUESTS_STREAM_TASK:
           "Streame {gameTitle} \xe0 un(e) ami(e) pendant {minutes}\xa0minutes",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "V\xe9rifie ton compte pour r\xe9cup\xe9rer des r\xe9compenses\xa0!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Nous avons envoy\xe9 un e-mail de v\xe9rification \xe0\xa0: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Oh oh\xa0! Nous n'avons pas r\xe9ussi \xe0 t'envoyer un e-mail de v\xe9rification.",
         QUEST_REWARD: "Gagne ceci\xa0: {reward}",
         QUESTS_REWARD_CODE_CONGRATS: "F\xe9licitations\xa0!",
         QUESTS_REWARD_CODE_DONE: "Termin\xe9",
@@ -24513,8 +24700,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsoris\xe9e",
+        QUESTS_PROMOTED: "\xc0 la une",
         QUESTS_LEARN_MORE_V2: "En savoir plus",
         QUESTS_LEARN_MORE_STACKED: "En savoir\n\nplus",
+        QUESTS_LEARN_MORE_LINK: "[En savoir plus]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accepter la qu\xeate",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streame {gameTitle} \xe0 un(e) ami(e) pendant {streamingDurationRequirement, number}\xa0minutes et gagne ceci\xa0: {questReward}.",
@@ -24549,7 +24738,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} essaie de toucher certains types d'utilisateurs Discord. En nous basant sur ce que tu nous as dit ou sur d'autres informations que nous avons collect\xe9es, nous pensons que tu corresponds \xe0 certains de ces groupes\xa0:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Pour en savoir plus sur les qu\xeates sur Discord et comment g\xe9rer tes param\xe8tres de confidentialit\xe9, clique [ici]({privacySettingsUrl}).",
+          "[Pour en savoir plus]({privacySettingsUrl}) sur les qu\xeates sur Discord et comment g\xe9rer tes param\xe8tres de confidentialit\xe9, clique ici.",
         QUESTS_DISCLOSURE_LOCATION: "Emplacement",
         QUESTS_DISCLOSURE_AGE: "\xc2ge",
         QUESTS_DISCLOSURE_ACTIVITY: "Activit\xe9\xa0: jeu pertinent",
@@ -24558,6 +24747,11 @@
           "Une erreur s'est produite. Consulte l'inventaire des cadeaux pour voir s'il y a d'autres qu\xeates disponibles\xa0!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Un probl\xe8me est survenu dans le suivi de ta progression de qu\xeate.",
+        QUESTS_SHARE_QUEST: "Partager la qu\xeate",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "S\xe9lectionne {gameTitle} pour avancer dans ta qu\xeate\xa0!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Tu dois s\xe9lectionner l'application, pas l'int\xe9gralit\xe9 de l'\xe9cran.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Incite les membres du chat \xe0 discuter lorsque ce salon reste inactif trop longtemps.",
         PROMPT_CAMERA_LOADING_TITLE: "Qu'est-ce que tu regardes\xa0?",
@@ -24590,9 +24784,12 @@
           "Discord n'affichera pas les notifications dans l'application, les notifications sur le bureau ou les sons de message.",
         QUIET_MODE_DISABLED_BY:
           "Cette option est d\xe9sactiv\xe9e par le mode Concentration",
+        FOCUS_MODE_TITLE: "Mode Concentration (B\xcaTA)",
+        FOCUS_MODE_BADGE_ON: "ACTIV\xc9",
+        FOCUS_MODE_BADGE_OFF: "D\xc9SACTIV\xc9",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Tu es en mode \xab\xa0Ne pas d\xe9ranger\xa0\xbb depuis plusieurs jours d\xe9j\xe0. Souhaiterais-tu activer le mode Concentration \xe0 la place\xa0?",
-        ACTIVITY_REACTION_REPLY_TITLE: "Discute de {activity}",
+        ACTIVITY_REACTION_REPLY_TITLE: "Discuter de {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "Une carte d'activit\xe9 montrant @{username} et {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:
@@ -24605,10 +24802,23 @@
           "Une carte d'activit\xe9 montrant @{username} en train d'\xe9couter {song}, de {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Une carte d'activit\xe9 montrant @{username} en train de streamer {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Joue \xe0 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "A jou\xe9 \xe0 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} joue \xe0 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} a jou\xe9 \xe0 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} joue \xe0 un nouveau jeu\xa0: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} a jou\xe9 \xe0 un nouveau jeu\xa0: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO:
+          "Il y a {count}\xa0semaines",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "Il y a {count}\xa0j",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "Il y a {count}\xa0h",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "Il y a {count}\xa0min",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Il y a {count}\xa0s",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Premi\xe8re fois",
       };
     },
   },

@@ -650,6 +650,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "हाल ही की फ़ोटो",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "इस सर्वर में बॉट",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "लोकप्रिय",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "कुछ ज़रूरत नहीं है. आप कमांड भेज सकते हैं या नीचे ऑप्शन जोड़ सकते हैं",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "नीचे दिया गया ऑप्शन सलेक्ट करें",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "आपको इस चैनल में कमांड्स देने की परमिशन नहीं है",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "कमांड खोलें",
@@ -949,7 +953,7 @@
         EMBEDDED_ACTIVITIES_LAUNCH: "लॉन्च करें",
         EMBEDDED_ACTIVITIES_JOIN: "जॉइन करें",
         EMBEDDED_ACTIVITIES_JOINED: "जॉइन कर लिया",
-        EMBEDDED_ACTIVITIES_ENDED: "खत्म हुआ",
+        EMBEDDED_ACTIVITIES_ENDED: "खत्म हुई",
         EMBEDDED_ACTIVITIES_RETURN_TO_ACTIVITY: "एक्टिविटी पर लौटें",
         EMBEDDED_ACTIVITIES_PEOPLE_ARE_IN_AN_ACTIVITY:
           "{n, plural, one {1 इंसान} other {एक्टिविटी में{n} लोग हैं}}",
@@ -1239,7 +1243,6 @@
           "[!!{username}!!](usernameOnClick) ने [एक्टिविटी](activityTextOnClick) शुरू की",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} ने एक्टिविटी शुरू की",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "शायद कभी बाद में",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! कैसा काम कर रहा है?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1395,9 +1398,6 @@
           "बहुत ही सीमित समय के लिए आज़मा सकते हैं.\nNitro का सब्सक्रिप्शन है? तब तो SpellCast का जादू देखें.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "टेस्ट मोड फ़िलहाल **!!{applicationName}!!** के लिए एक्टिव है. आपके एप्लिकेशन एक्टिविटी बटन मेन्यू में ऑप्शन के तौर पर दिखना चाहिए.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "नई एक्टिविटी! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "ऐसा गेम खेलें जिसमें आप अपने दोस्तों के साथ ड्रॉइंग करके अंदाज़ा लगाते हैं. 29 मार्च तक फ़्री.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "वॉर्निंग",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(डेस्कटॉप बीटा)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "नया! वॉइस चैनल रिएक्शन",
@@ -3484,6 +3484,8 @@
           "म्यूट किए गए चैनल में से आपके कोई नोटिफिकेशन नहीं रिसीव होगा और आपकी चैनल लिस्ट में ग्रे कलर में दिखाई देंगे. यह सेटिंग आपकी सभी डिवाइस पर अप्लाई होती है.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "म्यूट की गई कैटेगरी से आपको कोई नोटिफिकेशन नहीं रिसीव होंगे और आपकी चैनल लिस्ट में ग्रे कलर में दिखाई देंगे. यह सेटिंग आपके सभी डिवाइस पर अप्लाई होती है.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "आपका सर्वर अभी $[**म्यूट किया गया है**](mutedHook). जब तक आप इस सर्वर को अनम्यूट नहीं करेंगे, तब तक आपको इस चैनल से नोटिफ़िकेशन नहीं मिल सकती और ना ही आप सेटिंग बदल सकते हैं.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "आपके सर्वर की नोटिफिकेशन $[**कुछ नहीं**](notificationHook) पर सेट है. आपको इस चैनल से कोई नोटिफिकेशन नहीं मिलेंगी, लेकिन आप इसे यहां पर ओवरराइड कर सकते हैं.",
         CHANNEL_OR_GUILD_MUTED: "यह चैनल या सर्वर अभी म्यूट है.",
@@ -4259,7 +4261,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "क्या ये नोटिफ़िकेशन काम का था? [हमें बताएं!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[नोटिफ़िकेशन सेटिंग हाईलाइट करें](handleMessage)",
+          "[हाईलाइट नोटिफ़िकेशन सेटिंग](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "क्या ये नोटिफ़िकेशन काम का था?",
         NOTIFICATION_REPORT_FEEDBACK: "इस नोटिफ़िकेशन के बारे में फ़ीडबैक दें",
         NOTIFICATION_REPORT_TEXT:
@@ -4330,6 +4332,8 @@
         SEARCH_EMOJIS: "इमोजी सर्च करें",
         SEARCH_FOR_EMOJI: "परफेक्ट इमोजी ढूंढें",
         SEARCH_FOR_STICKER: "परफेक्ट स्टीकर ढूंढें",
+        SEARCH_FOR_REACTION: "परफ़ेक्ट रिएक्शन ढूंढें",
+        SEARCH_FOR_SUPER_REACTION: "परफ़ेक्ट सुपर रिएक्शन ढूंढें",
         NO_EMOJI_SEARCH_RESULTS: "कोई भी इमोजी आपके सर्च से मैच नहीं करती",
         EMOJI_CATEGORY_PACK: "{packName} पैक",
         EMOJI_CATEGORY_RECENT: "अक्सर इस्तेमाल किए गए",
@@ -5256,6 +5260,7 @@
           "आपके सिस्टम से लॉग फ़ाइलों को पढ़ने के दौरान कुछ गड़बड़ी हुई है. कृपया एक बार फिर से कोशिश करें.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "कुछ गड़बड़ी हुई है और हम आपकी डिबग फ़ाइल को अपलोड नहीं कर सके. कृपया एक बार फिर से कोशिश करें.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "पुश नोटिफ़िकेशन लॉग शेयर करें",
         FORM_CHECKBOX_AEC_DUMP: "डायग्नोस्टिक ऑडियो रिकॉर्डिंग",
         FORM_HELP_AEC_DUMP:
           "डायग्नोस्टिक ऑडियो रिकॉर्डिंग ऑडियो समस्याओं के एनालिसिस के लिए किया जाता है. वॉइस के आखिरी पांच मिनट वॉइस मॉड्यूल फ़ोल्डर में सेव की गई है.",
@@ -5313,6 +5318,7 @@
         APP_ICON_SUNSET: "सनसेट",
         APP_ICON_HOLO_WAVES: "प्रिज़्मीय वेव",
         APP_ICON_PIRATE: "मेट",
+        APP_ICON_PIRATE_1: "ओह",
         APP_ICON_PIRATE_2: "ऐ ये",
         APP_ICON_PIRATE_3: "बेकार",
         APP_ICON_PIRATE_4: "अर्रर्र",
@@ -5398,6 +5404,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# व्यक्ति} other {# लोग}}",
         VOICE_CALL_ACTION_A11Y_HINT: "वॉयस कॉल एक्शन ओपन करें",
+        TURN_CAMERA_ON_A11Y_LABEL: "कैमरा ऑन करें",
+        TURN_CAMERA_OFF_A11Y_LABEL: "कैमरा ऑफ़ करें",
         IN_GAME_VOICE_SETTINGS: "इन-गेम वॉयस सेटिंग",
         VIDEO_SETTINGS: "वीडियो सेटिंग",
         TEXT: "टैक्स्ट",
@@ -5608,6 +5616,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "वॉयस कनेक्ट हो गई है",
         CONNECTION_STATUS_VIDEO_CONNECTED: "वीडियो\xa0कनेक्ट हो गई है",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC कनेक्ट हो रहा है",
+        CONNECTION_STATUS_ICE_CHECKING: "रूट चेक कर रहे हैं",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS कनेक्ट हो रहा है",
         CONNECTION_STATUS_NO_ROUTE: "कोई रूट नहीं",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC डिस्कनेक्ट हो गया है",
@@ -6160,7 +6169,7 @@
         SWITCH_TO_COMPACT_MODE: "कॉम्पैक्ट मोड पर स्विच करें",
         SWITCH_TO_PUSH_TO_TALK: "पुश टू टॉक पर स्विच करें",
         SWITCH_TO_VOICE_ACTIVITY: "वॉयस एक्टिविटी पर स्विच करें",
-        MOVE_TO: "इस पर मूव करें",
+        MOVE_TO: "पर मूव करें",
         MOVE_TO_SUCCESS: "यूज़र को सलेक्ट किए गए चैनल पर ले जाया गया है.",
         DISCONNECT_USER_SUCCESS: "यूज़र की आवाज़ डिसकनेक्ट हो गयी है.",
         CHANGE: "बदलें",
@@ -8235,6 +8244,12 @@
           "सुपर रिएक्शन के साथ चैट में धमाका करें. अब [{planName}](onClick) के साथ उपलब्ध है.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "अनलिमिटेड सुपर रिएक्शन के साथ चैट में धमाका करें. अब [{planName}](onClick) के साथ उपलब्ध है.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "अनलिमिटेड सुपर रिएक्शन के साथ चैट में धमाका करें. अब Nitro के साथ उपलब्ध है.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "अनलिमिटेड सुपर रिएक्शन के साथ चैट में धमाका करें!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Nitro के साथ अब उपलब्ध है.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "सुपर रिएक्शन के साथ चैट में धमाका करें. अब [Nitro]({nitroLink}) के साथ हर हफ़्ते{refillAmount} पाएं.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8355,6 +8370,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "सुपर रिएक्शन के साथ चैट में धमाका करें! [Nitro](onClick) के साथ अनलिमिटेड सुपर रिएक्शन और दूसरे बढ़िया पर्क पाएं.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "अनलिमिटेड सुपर रिएक्शन!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "सुपर रिएक्शन जोड़ने के लिए बटन को क्लिक करें.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "सुपर रिएक्शन जोड़ने के लिए बटन पर टैप करें.",
         HOLD_UP: "होल्ड अप",
         MASKED_LINK_ALERT_V2_HEADER: "Discord छोड़ रहे हैं",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9411,6 +9430,9 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "रंगों के थीम",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "थीम के अनोखे रंगों के साथ Discord को अपने रंग में रंग दें.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE: "कस्टम ऐप आइकन",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "अपनी पसंद के अनुसार मोबाइल और इन-ऐप डेस्कटॉप आइकन चुनें.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "पर्क्स",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "अपने Discord अनुभव को अपग्रेड करें",
@@ -10054,6 +10076,8 @@
           "ऐसा लग रहा है कि कुछ गड़बड़ हो गई है और आप उस कोड का इस्तेमाल नहीं कर सकते हैं. इसके लिए हम माफ़ी चाहते हैं.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "माफ़ कीजिए, ऐसा लग रहा है इस कोड को पहले ही रिडीम किया जा चुका है.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "ऐसा लगता है कि ये किसी और का कोड है.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "ऐसा लगता है यह कोड काम नहीं कर रहा. पक्का करें कि आपके पास सही कोड है और फिर से कोशिश करें.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10095,6 +10119,8 @@
           "यह कोड उस कन्फर्मेशन ईमेल में दिया गया है जिसे अभी-अभी हमने आपके पास भेजा है.",
         REDEMPTION_CODE: "रिडेम्पशन कोड",
         PARTNER_PROMOTION_CLAIM: "अगला",
+        PARTNER_PROMOTION_ERROR_TITLE: "ओफ्फ़ोह!",
+        PARTNER_PROMOTION_ERROR_BODY: "ऐसा लगता है कि कुछ गड़बड़ी हुई है.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "अनजान गिफ़्ट.",
         REDEEM: "रिडीम करें",
         UNLOCK_CODE: "कोड को अनलॉक करें",
@@ -11572,7 +11598,7 @@
         NITRO_HOME_SHOW_UP_HOW_YOU_WANT: "जैसा आपको पसंद हो वैसा दिखाएं",
         NITRO_HOME_ALL_YOUR_NITRO_PERKS: "आपके सभी Nitro पर्क",
         NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO:
-          "Basic और Nitro में शामिल है.",
+          "Basic और Nitro में शामिल हैं.",
         NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO: "सिर्फ़ Nitro के साथ.",
         NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI:
           "किसी भी बातचीत में अपनी कस्टम इमोजी से चुनें.",
@@ -11593,6 +11619,7 @@
           "Nitro के सब्सक्राइबर होने की खुशी में यह कूल बैज पाएं.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "कलेक्टर के लिए. ये खास Nitro बैज हासिल करें.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "रिडीम करें",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "अपने Discord को सुपरचार्ज करें",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "सभी सर्वर पर कस्टम प्रोफ़ाइल्स",
@@ -13077,6 +13104,7 @@
         MOST_POPULAR: "सबसे लोकप्रिय",
         SPELLCHECK: "स्पेलचेक",
         ADD_TO_DICTIONARY: "डिक्शनरी में जोड़ें",
+        REMOVE_FROM_DICTIONARY: "डिक्शनरी से हटाएं",
         LANGUAGES: "भाषाएं",
         AUTO_SUGGEST_STICKERS: "स्टीकर के सुझाव",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13363,6 +13391,7 @@
           "Discord टीम की तरफ से एक ऑफिशियल मैसेज है जिस पर आपको ध्यान देना चाहिए.",
         BUILD_OVERRIDE: "बिल्ड ओवरराइड",
         BUILD_OVERRIDE_FOR: "{releaseChannel} के लिए बिल्ड ओवरराइड",
+        BUILD_OVERRIDE_ID: "हैश करें",
         BUILD_OVERRIDE_APPLY: "लागू करें",
         BUILD_OVERRIDE_CLEAR: "क्लियर करें",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "बिल्ड उपलब्ध नहीं है",
@@ -13562,7 +13591,6 @@
           "{monthlyPrice}/महीने या {yearlyPrice}/साल में से चुनें",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "पाने वाले को ये चीज़ें मिलेंगी:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Nitro सब्सक्रिप्शन गिफ़्ट करें",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "गिफ़्ट की अवधि",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# महीना} other {# महीनों}} का {nitroTierName} गिफ़्ट करें",
@@ -13583,7 +13611,11 @@
         GIFT_DURATION: "1 {timeInterval} का Nitro",
         GIFT_OPEN_PROMPT: "गिफ़्ट खोलें",
         GIFT_RECIPIENT_INFO: "{recipientDisplayName}: को",
+        GIFT_SELECT_SOUND: "साउंड इफ़ेक्ट जोड़ें",
+        GIFT_SELECT_EMOJI: "इमोजी कन्फ़ेटी जोड़ें",
         GIFT_SELECT_SOUNDBOARD_ADD: "ऐड करें",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "आपके फ़्रेंड के गिफ़्ट खोलने पर ये प्ले होगा",
         NITRO_CONFIRMATION: "आपको Nitro मिला",
         OPENED_GIFT_CONFIRMATION: "आपने इस गिफ़्ट को खोला है!",
         NITRO_PERKS: "अपने नए Nitro पर्क देखें!",
@@ -14220,6 +14252,8 @@
           "नए सर्वर्स को ढ़ूंढ़ने के लिए अपनी सर्वर लिस्ट में कम्पास पर क्लिक करें.",
         LOADING_TIP_12:
           "सर्वर फोल्डर क्रिएट करने के लिए हरेक सर्वर के टॉप पर ड्रैग और ड्रॉप करें.",
+        LOADING_TIP_13:
+          "उस टॉपिक के लिए GIF को ढूंढ़ने के लिए /जिफ़ या / टेनर + कुछ भी टाइप करें!",
         LOADING_TIP_14:
           "गेम एक्टिविटी सेटिंग्स का इस्तेमाल करके वह शेयर करें जो आप प्ले कर रहे हैं.",
         LOADING_TIP_15:
@@ -14248,6 +14282,19 @@
           "आप बॉट कमांड और दूसरे बिल्ट-इन कमांड को देखने के लिए टाइप / कर सकते हैं",
         LOADING_TIP_27:
           "अपने शब्दों को **बोल्ड** करने के लिए उनके आसपास!!{asterisks}!! टाइप करें.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "हैप्पी हैलोवीन. ध्यान दें कि आप अपने सर्वर को फिर से वापस ले आएं",
+        HALLOWEEN_LOADING_TEXT_2: "उउउउउऊ डरावने हैलोवीन सीज़न का मज़ा लें",
+        HALLOWEEN_LOADING_TEXT_3: "डरावनी रिंगटोन बन रही है",
+        HALLOWEEN_LOADING_TEXT_4: "बूउउउउ",
+        HALLOWEEN_LOADING_TEXT_5: "वॉयस चैट में, हर कोई आत्मा है",
+        HALLOWEEN_LOADING_TEXT_6:
+          "अपने सर्वर को वेरीफ़ाई करना भूतिया नहीं है (संभावित तौर पर)",
+        HALLOWEEN_LOADING_TEXT_7: 'हम हैलोवीन के "माहौल" में डूब रहे हैं',
+        HALLOWEEN_LOADING_TEXT_8:
+          "क्या ज़ॉम्बी सिर्फ़ मरे हुए मीम्स पोस्ट करते हैं?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord में इंफ़ेक्शन हो रहा है! ज़ॉम्बी Wumpus से बचकर रहें",
         ACCESSIBILITY_LOADING_TIP_1:
           "एपीयरेंस सेटिंग्स में लाइट या डार्क थीम पिक करें.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14277,6 +14324,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "समझ गए",
         VOICE_PANEL_SHOW_VOICE_USERS: "वॉयस चैनल में यूज़र्स को दिखाएं",
         VOICE_PANEL_USERS_A11Y_LABEL: "वॉयस यूज़र्स",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, आवाज़ बंद और म्यूट की गई",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, म्यूट किया गया",
         VOICE_PANEL_SHOW_EXTRAS: "सभी यूज़र्स को दिखाएं",
         VOICE_PANEL_HIDE_EXTRAS: "छोटा करें",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15410,6 +15460,8 @@
         FRIEND_FINDER_FRIENDS: "सभी फ्रेंड्स",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord पर कॉन्टैक्ट - {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "इन लोगों को आप जानते होंगे — {count}",
         CONTACT_SYNC_TITLE: "अपने फ्रेंड्स को ढूंढें",
         CONTACT_SYNC_LANDING_TITLE: "अपने फ्रेंड्स को ढूंढें",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16646,10 +16698,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} अन्य एक्टिव थ्रेड्स",
         THREAD_BROWSER_ARCHIVED_HEADER: "पुरानी थ्रेड्स",
         THREAD_BROWSER_JOINED_HEADER: "{count} जॉइन्ड थ्रेड्स",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} दूसरे एक्टिव थ्रेड्स",
         THREAD_BROWSER_ACTIVE_COUNT: "एक्टिव थ्रेड - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "पुरानी थ्रेड्स",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} जॉइन किए गए थ्रेड्स",
         THREAD_BROWSER_JOINED_COUNT: "जॉइन किए गए थ्रेड - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}पहले",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}दिन पहले",
@@ -16668,8 +16718,6 @@
           "कोई एक्टिव थ्रेड्स नहीं हैं.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "कोई अर्काइव किए गए थ्रेड्स नहीं हैं.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "थ्रेड के साथ बातचीत पर ध्यान रखें, कुछ समय के लिए बनाए गए टेक्स्ट चैनल.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "थ्रेड यानी अस्थायी टेक्स्ट चैनल की मदद से किसी बातचीत पर पूरा ध्यान दें.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "फ़िल्टर सेटिंग्स",
@@ -18772,9 +18820,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "नतीजे सर्च करें",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "नाम",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "से मेम्बर हैं",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Discord को जॉइन किया",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "रोल्स",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "सिग्नल",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "**{count}** के मेंबर",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "**{total}** के**{pageRange}**मेंबर्स",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "ये सिर्फ़ सबसे नए मेंबर्स को दिखाता है - पुराने मेंबर्स को नहीं दिखाया जा सकता है (लेकिन जल्द ही दिखाया जाएगा).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "दिखाई दे रहा है",
@@ -18786,7 +18837,7 @@
           "सर्च किए गए इन नतीजों से कोई भी मेंबर मेल नहीं खाता.",
         MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE: "मेंबर सेफ़्टी फ़्लैग",
         MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP: "प्रोफ़ाइल देखें",
-        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "मॉड व्यू खोलें",
+        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "मॉडरेटर व्यू खोलें",
         MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP: "ज्यादा ऑप्शन",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY: "असामान्य DM एक्टिविटी",
         MEMBER_SAFETY_COMMUNICATION_DISABLED: "टाइमआउट किया गया",
@@ -18914,7 +18965,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "कोई मॉड परमिशन नहीं",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "किसने दी",
         GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(जोखिम) किसने दी",
+          "(जोखिम) द्वारा दी गई",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "इन रोल के द्वारा दी गई परमिशन",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "सबसे ऊंचा रोल",
@@ -19053,6 +19104,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "रेड अलर्ट",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "अलर्ट चैनल",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "कोई नहीं",
+        GUILD_ANTIRAID_RAID_ALERT: "रेड अलर्ट",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "प्रोटेक्शन ऑन की गई है",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "अलर्ट सेटअप करें",
@@ -19538,7 +19590,7 @@
         NOTIFICATION_PRESET_CUSTOM_DESCRIPTION:
           "आप मैन्युअल तरह से सेटिंग बदल रहे हैं.",
         NOTIFICATION_SETTINGS_USE_PRESET: "प्रीसेट इस्तेमाल करें",
-        NOTIF_MIGRATION_SETTINGS_TITLE: "नई पढ़ी नहीं गई सेटिंग (एक्सपेरिमेंटल)",
+        NOTIF_MIGRATION_SETTINGS_TITLE: "पढ़ी नहीं गई नई सेटिंग (एक्सपेरिमेंटल)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "नई पढ़ी नहीं गई सेटिंग को बंद कर देता है जो आपको सर्वर में सबसे ज़रूरी चैनल चुनने की अनुमति देती है.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -21512,6 +21564,9 @@
           "Nitro के सबस्क्राइबर्स को इस डेकोरेशन पर डिस्काउंट मिलती है",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro के साथ {price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "नए लुक के लिए तैयार हैं?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "खैर, ये बहुत अजीब है.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "हम्म, हम शॉप को लोड नहीं कर सके. इसे बाद में फिर से चेक करें.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "एक्टिव Nitro सब्सक्रिप्शन के साथ किसी भी समय इस्तेमाल करें.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "मेरी खूबसूरत डेकोरेशन को देखें",
@@ -21599,6 +21654,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "ऐप ऐड करें",
         MONETIZATION: "मोनेटाइज़ेशन",
         GUILD_SETTINGS_MONETIZATION: "सर्वर मोनेटाइज़ेशन",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "सर्वर सब्सक्रिप्शन",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "प्रोमो पेज",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "सब्सक्रिप्शन टियर",
@@ -22046,6 +22102,8 @@
           "पेमेंट टीम बदलें",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "पेमेंट टीम सलेक्ट करें",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "उस टीम को बदलें जिसे सर्वर मोनेटाइज़ेशन के लिए पेमेंट भेजी जाएगी.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "अपनी टीम बदलने से पेमेंट की पात्रता पर असर पड़ सकता है",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22978,6 +23036,10 @@
           "अरे नहीं! फ़िलहाल हम क्लिप लेने में असमर्थ हैं.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "क्लिप सेटिंग्स मैनेज करें",
         CLIPS_USER_EDUCATION_LEARN_MORE: "ज़्यादा जानें",
+        SOUND_INCOMING_RING_HALLOWEEN: "हैलोवीन इनकमिंग रिंग",
+        CUSTOM_SOUNDS: "साउंड कस्टम करें",
+        ENABLE_PHONE_INTEGRATION:
+          "इसे एक्सपीरियंस करने के लिए फ़ोन ऐप के साथ इंटीग्रेशन को इनेबल करें.",
         GUILD_SHOP_CHANNEL_LABEL: "सर्वर शॉप",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "उपलब्ध प्रोडक्ट",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23083,6 +23145,9 @@
           "हमारी {classificationDescription} पॉलिसी के बारे में जानें.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord के नियम सभी पर लागू होते हैं",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "अकाउंट की स्थिति पर जाएं",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "अकाउंट की स्थिति पर जाएं",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "अकाउंट की स्थिति देखें",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "फिर से कोशिश करें",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23159,6 +23224,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "खारिज कर दें",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "क्या हमसे कोई गलती हो गई है? [हमें बताएं](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: '"संवेदनशील नहीं" मार्क करें',
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "हमें बताने के लिए शुक्रिया!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23309,9 +23375,9 @@
         HANG_STATUS: "हैंग स्टेटस",
         HANG_STATUS_LOCATION: "!!{guildName}!! में",
         CUSTOM_HANG_STATUS: "कस्टम स्टेटस",
-        CUSTOM_HANG_STATUS_CTA: "यहां आएं!",
+        CUSTOM_HANG_STATUS_CTA: "इसे जॉइन करें!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "आप क्या कर रहे हैं?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "स्टेटस स्वाइप करें",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "स्टेटस कॉपी करें",
         HANG_STATUS_VC_ROW_ADD: "स्टेटस ऐड करें",
         HANG_STATUS_HELP:
           "एक्टिविटी स्टेटस सेट करके अपने फ़्रेंड्स को दिखाएं कि आप क्या कर रहे हैं.",
@@ -23446,7 +23512,8 @@
         CREATE_POLL_ADD_IMAGE: "मीडिया ऐड करें",
         CREATE_POLL_REPLACE_IMAGE: "मीडिया बदलें",
         CREATE_POLL_POLL_ANSWER: "पोल का जवाब",
-        CREATE_POLL_EDIT_ALT_TEXT: "इमेज डिस्क्रिप्शन (Alt टेक्स्ट) एडिट करें",
+        CREATE_POLL_EDIT_ALT_TEXT:
+          "इमेज डिस्क्रिप्शन (वैकल्पिक टेक्स्ट) एडिट करें",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "इमेज डिस्क्रिप्शन एडिट करें",
         CREATE_POLL_ADD_ALT_ARIA_LABEL:
           "वैकल्पिक टेक्स्ट ऐड करें, जवाब {answerNumber}",
@@ -23562,7 +23629,7 @@
           "आपके क्वेस्ट की प्रोग्रेस देखने में समस्या आ रही है.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "इस चैनल के कुछ समय तक एक्टिव न रहने के बाद मेंबर्स को चैट करने के लिए प्रेरित करें.",
-        PROMPT_CAMERA_LOADING_TITLE: "आप क्या चाहते हैं?",
+        PROMPT_CAMERA_LOADING_TITLE: "आप क्या देखना चाहते हैं?",
         PROMPT_CAMERA_ERROR: "फ़ोटो लेते हुए कुछ गड़बड़ी हुई, दुबारा कोशिश करें",
         DEADCHAT_ACTION_CAMERA: "मेरे व्यू",
         DEADCHAT_ACTION_STICKER: "सरप्राइज़ करें",
@@ -23592,6 +23659,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord इन-ऐप, डेस्कटॉप नोटिफ़िकेशन या मैसेज साउंड प्ले करें को नहीं दिखाएगा.",
         QUIET_MODE_DISABLED_BY: "इसे साइलेंट मोड ने डिसेबल किया है",
+        FOCUS_MODE_TITLE: "फ़ोकस मोड (बीटा)",
+        FOCUS_MODE_BADGE_ON: "ऑन",
+        FOCUS_MODE_BADGE_OFF: "ऑफ़",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "आप काफ़ी दिनों से डिस्टर्ब न करें मोड पर हैं. क्या आप इसके बजाय फ़ोकस मोड इनेबल करना चाहेंगे?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity} के बारे में चैट करें",

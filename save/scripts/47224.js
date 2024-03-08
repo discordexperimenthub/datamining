@@ -659,6 +659,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Скорошни",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Ботове в този сървър",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Популярни",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Нищо не се изисква. По-долу можеш да изпратиш командата или да добавиш опция",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Избери опция по-долу",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Нямаш разрешение да задаваш команди в този канал",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Отваряне на команда",
@@ -1256,8 +1260,6 @@
           "[!!{username}!!](usernameOnClick) стартира [активност](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} стартира дейност",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Може би по-късно",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_ACCEPT: "Изпробвай",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Как ти се стори !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1414,9 +1416,6 @@
           "Опитай за призрачно кратко време.\nИмаш Nitro? Призови SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "В момента е активен тестов режим за **!!{applicationName}!!**. Твоето приложение би трябвало да се появява като опция в менюто на бутона с активности.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Нова дейност! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Опитай игра с приятели, в която рисувате и отгатвате какво виждате. Безплатно до 29 март.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Предупреждение",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG:
           "(Бета-версия за настолен компютър)",
@@ -3527,6 +3526,8 @@
           "Няма да получаваш известия от заглушени канали и те няма да бъдат активни в списъка ти с канали. Тази настройка се отнася за всичките ти устройства.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Няма да получаваш известия от заглушените категории и те ще бъдат в сиво в списъка ти с канали. Тази настройка ще се прилага за всички твои устройства.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Сървърът ти в момента е $[**заглушен**](mutedHook). Не можеш да получаваш известия от този канал, нито да променяш настройките, докато не премахнеш заглушаването на този сървър.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Известието на сървъра ти е настроено на $[**никакво**](notificationHook). Няма да получаваш известия от този канал, но можеш да го заместиш тук.",
         CHANNEL_OR_GUILD_MUTED: "Този канал или сървър в момента е заглушен.",
@@ -4368,6 +4369,8 @@
         SEARCH_EMOJIS: "Търсене на емотикони",
         SEARCH_FOR_EMOJI: "Намери перфектния емотикон",
         SEARCH_FOR_STICKER: "Намери перфектния стикер",
+        SEARCH_FOR_REACTION: "Намери перфектната реакция",
+        SEARCH_FOR_SUPER_REACTION: "Намери перфектната супер реакция",
         NO_EMOJI_SEARCH_RESULTS: "Няма съвпадение на търсения емотикон",
         EMOJI_CATEGORY_PACK: "Пакет {packName}",
         EMOJI_CATEGORY_RECENT: "Често използвани",
@@ -5304,6 +5307,8 @@
           "Нещо се обърка по-време на четенето на файлове за влизане от твоята система. Моля те, опитай пак.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Нещо се обърка и не можахме да качим файловете на регистрите за отстраняване на грешки. Моля те, опитай пак.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Споделяне на лог файлове с насочени известия",
         FORM_CHECKBOX_AEC_DUMP: "Диагностичен аудио запис",
         FORM_HELP_AEC_DUMP:
           "Диагностичният аудиозапис се използва за анализиране на звукови проблеми. Последните пет минути от гласа са запазени в папката на гласовия модул.",
@@ -5363,6 +5368,7 @@
         APP_ICON_SUNSET: "Сънсет авеню",
         APP_ICON_HOLO_WAVES: "Призматични вълни",
         APP_ICON_PIRATE: "Приятелче",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Тъй вярно",
         APP_ICON_PIRATE_3: "Отхвъррррляне",
         APP_ICON_PIRATE_4: "Арррр",
@@ -5449,6 +5455,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Човек} other {# Хора}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Отваряне на действия за гласово обаждане",
+        TURN_CAMERA_ON_A11Y_LABEL: "Включи камерата",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Изключи камерата",
         IN_GAME_VOICE_SETTINGS: "Гласови настройки в играта",
         VIDEO_SETTINGS: "Видео настройки",
         TEXT: "Текст",
@@ -5657,6 +5665,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Свързано гласово устройство",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Свързано видео устройство",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC свързване",
+        CONNECTION_STATUS_ICE_CHECKING: "Проверка на маршрут",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS свързване",
         CONNECTION_STATUS_NO_ROUTE: "Няма маршрут",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC разкачен",
@@ -6040,7 +6049,7 @@
         A11Y_ROLE_IMAGE_BUTTON: "изображение, бутон",
         A11Y_LOADING_STARTED: "Зареждане",
         A11Y_LOADING_FINISHED: "Зареждането приключи",
-        A11Y_CHECKBOX_CHECKED: "името {} е потвърдено.",
+        A11Y_CHECKBOX_CHECKED: "с поставена отметка",
         A11Y_CHECKBOX_UNCHECKED: "премахната отметка",
         DND_ITEM_PICKED_UP: "Взе !!{itemName}!!",
         DND_ITEM_DROPPED: "Изпуснат елемент",
@@ -6147,7 +6156,7 @@
         COPY_ID_COMMAND: "Копиране на ID на команда",
         COPY_ID_EMOJI: "Копиране на ID на емоджи",
         COPY_ID_EVENT: "Копиране на ID на събитие",
-        COPY_ID_EVENT_RECURRENCE: "Копиране на ID на повтарящ се елемент",
+        COPY_ID_EVENT_RECURRENCE: "Копирай ID на повтарящ се елемент",
         COPY_ID_GUILD: "Копиране на ID на сървър",
         COPY_ID_MESSAGE: "Копиране на ID на съобщение",
         COPY_ID_ROLE: "Копиране на ID на роля",
@@ -8298,6 +8307,12 @@
           "Вдигни градуса на чата със супер реакции. Вече налични с(ъс) [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Вдигни градуса на чата с неограничени супер реакции. Вече налични с(ъс) [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Вдигни градуса на чата с неограничени супер реакции. Вече налични с Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Вдигни градуса на чата с неограничени супер реакции!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Вече налично с Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Вдигни градуса на чата със супер реакции. Вземи {refillAmount} на седмица, налично с [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8413,6 +8428,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Вдигни градуса на чата със супер реакции! Вземи неограничен брой супер реакции и други готини бонуси с [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Неограничени супер реакции!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Кликни бутона, за да добавиш супер реакция.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Докосни бутона, за да добавиш супер реакция.",
         HOLD_UP: "Задръж",
         MASKED_LINK_ALERT_V2_HEADER: "Напускане на Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9490,6 +9509,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "Цветови теми",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Добави своя собствен вайб към Discord с уникални цветове за теми.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Персонализирани икони на приложения",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Избери икони за десктопа и за мобилното приложение, които отговарят на стила ти.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Бонусите",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Надгради изживяването си в Discord",
@@ -10138,6 +10161,8 @@
         PROMOTION_ERROR_BODY:
           "Явно нещо се обърка и не можеш да използваш този код. Съжаляваме за това.",
         PROMOTION_ERROR_CLAIMED_BODY: "Съжаляваме, този код вече е осребрен.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Този код май принадлежи на някой друг.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Този код изглежда не работи. Увери се, че имаш правилния код, и опитай отново.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10179,6 +10204,8 @@
           "Този код е включен и в имейла за потвърждение, който току-що ти изпратихме.",
         REDEMPTION_CODE: "Код за осребряване",
         PARTNER_PROMOTION_CLAIM: "Напред",
+        PARTNER_PROMOTION_ERROR_TITLE: "О, не!",
+        PARTNER_PROMOTION_ERROR_BODY: "Нещо се обърка.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Неизвестен подарък.",
         REDEEM: "Осребри",
         UNLOCK_CODE: "Код за отключване",
@@ -11701,6 +11728,7 @@
           "Вземи тази готина значка за това, че си абонат на Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "За колекционерите. Грабни тази значка, ексклузивна за Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Осребри",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Зареди своя Discord на макс",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13195,6 +13223,7 @@
         MOST_POPULAR: "Най-популярни",
         SPELLCHECK: "Проверка на правописа",
         ADD_TO_DICTIONARY: "Добави към речника",
+        REMOVE_FROM_DICTIONARY: "Премахни от речника",
         LANGUAGES: "Езици",
         AUTO_SUGGEST_STICKERS: "Предложения за стикери",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13487,6 +13516,7 @@
           "Има официално съобщение от екипа на Discord, което се нуждае от твоето внимание.",
         BUILD_OVERRIDE: "Заместване на компилация",
         BUILD_OVERRIDE_FOR: "Заместване на компилация за {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Commit Hash",
         BUILD_OVERRIDE_APPLY: "Приложи",
         BUILD_OVERRIDE_CLEAR: "Изчистване",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Компилацията не е налична",
@@ -13688,7 +13718,6 @@
           "Избери между {monthlyPrice}/месец или {yearlyPrice}/година",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Човекът, на когото правиш подаръка, ще получи:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Подари членство в Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Продължителност на подаръка",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подари {count, plural, one {# месец} other {# месеца}} от {nitroTierName}",
@@ -13708,7 +13737,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Отвори подаръка",
         GIFT_RECIPIENT_INFO: "До: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Добави звуков ефект",
+        GIFT_SELECT_EMOJI: "Добави емоджи конфети",
         GIFT_SELECT_SOUNDBOARD_ADD: "Добавяне",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Това ще се възпроизведе, когато приятелят отвори подаръка си",
         NITRO_CONFIRMATION: "Имаш Nitro",
         OPENED_GIFT_CONFIRMATION: "Ти отвори този подарък!",
         NITRO_PERKS: "Виж новите си Nitro бонуси!",
@@ -14350,6 +14383,8 @@
           "Кликни върху компаса в списъка на сървъра ти, за да намериш нови сървъри.",
         LOADING_TIP_12:
           "Плъзни и пусни сървъри един върху друг, за да създадеш папки със сървъри.",
+        LOADING_TIP_13:
+          "Въведи /gif или /tenor + каквото и да е, за да намериш GIF за тази тема!",
         LOADING_TIP_14:
           "Сподели какво играеш, като използваш настройките за Активност в игра.",
         LOADING_TIP_15:
@@ -14378,6 +14413,20 @@
           "Можеш да въведеш „/“, за да прегледаш командите за ботове и други вградени команди",
         LOADING_TIP_27:
           "Можеш да въведеш !!{asterisks}!! около думите, които пишеш, за да ги **потъмниш**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "честит хелоуин, не забравяй да съживиш сървъра си",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO пожелаваме ти да имаш много призрачен хелоуин",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Готвим отвара за смразяваща мелодия за звънене",
+        HALLOWEEN_LOADING_TEXT_4: "БууУууУУууУуууу",
+        HALLOWEEN_LOADING_TEXT_5: "В гласовите чатове всички са духове",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Проверяваме дали сървърите не са обсебени от духове (евентуално)",
+        HALLOWEEN_LOADING_TEXT_7: "Настройваме се за „духа“ на Хелоуин",
+        HALLOWEEN_LOADING_TEXT_8: "Зомбитата само умрели мемета ли публикуват?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord започва да се инфектира! Оглеждай се за Зомби Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Избиране на тъмна или светла тема от настройките за външния вид.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14409,6 +14458,8 @@
         VOICE_PANEL_SHOW_VOICE_USERS:
           "Показване на потребителите в гласовия канал",
         VOICE_PANEL_USERS_A11Y_LABEL: "Потребители в гласовия канал",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL: "{username}, онемял и заглушен",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, заглушен",
         VOICE_PANEL_SHOW_EXTRAS: "Показване на всички потребители",
         VOICE_PANEL_HIDE_EXTRAS: "Минимизирай",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15563,6 +15614,8 @@
         FRIEND_FINDER_FRIENDS: "Всички приятели",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Контакти в Discord – {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Хора, които може би познаваш – {count}",
         CONTACT_SYNC_TITLE: "Намери приятелите си",
         CONTACT_SYNC_LANDING_TITLE: "Намери приятелите си",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16809,10 +16862,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} други активни теми",
         THREAD_BROWSER_ARCHIVED_HEADER: "по-стари теми",
         THREAD_BROWSER_JOINED_HEADER: "{count} теми, към които се присъедини",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "Още {count} активни теми",
         THREAD_BROWSER_ACTIVE_COUNT: "Активни теми – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "По-стари теми",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} Теми, в които участваш",
         THREAD_BROWSER_JOINED_COUNT:
           "Теми, в които някой се е присъединил – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "Преди {count}",
@@ -16830,8 +16881,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "Няма теми.",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Няма активни теми.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "Няма архивирани теми.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Фокусирай се върху разговор чрез тема, временен текстови канал.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Запази концентрация върху разговора в тази тема – временен текстови канал.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Настройки на филтъра",
@@ -18975,9 +19024,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Резултати от търсенето",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Име",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Член от",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Присъедини се към Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Роли",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Сигнали",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "членове от **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "членове **{pageRange}** от **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Това показва само най-скорошните членове – по-старите членове може да не се показват (но скоро ще се показват).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Показване на",
@@ -19283,6 +19335,7 @@
           "Предупреждения за нападение",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Канал за предупреждения",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Няма",
+        GUILD_ANTIRAID_RAID_ALERT: "Предупреждение за рейд",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Защитата е активирана",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -21793,6 +21846,9 @@
           "Абонатите на Nitro получават отстъпка за тази декорация",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} с Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Искаш ли да имаш нов облик?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Хм, това е неприятно.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Хм, не успяхме да заредим магазина. Пробвай пак по-късно.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Използвай по всяко време с активен абонамент за Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Виж красивата ми декорация",
@@ -21884,6 +21940,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Добавяне на приложение",
         MONETIZATION: "Монетизация",
         GUILD_SETTINGS_MONETIZATION: "Монетизация на сървъра",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Абонаменти за сървъра",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Промоционална страница",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Ниво на абонамент",
@@ -22300,7 +22357,7 @@
         GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER:
           "Кредитът ти за безплатен период от време от {trialInterval} ще е в сила, докато не изтече, а ние ще ти изпратим имейл за напомняне **{days, plural, =1 {1 ден} other {{days} дни}}** преди края на безплатния период. Имаш въпроси? [Виж ЧЗВ за нашата оферта]({helpdeskArticle}) или [се свържи с нашия екип за поддръжка]({contactLink}).",
         GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2:
-          'Избирайки "{buttonText}“, ти се съгласяваш с [Условията на платените услуги]({paidServiceTermsArticle}) на Discord. "{tierName}" е абонамент, който се подновява. Според метода ти на плащане ще те таксуваме след приключване на пробния период и ще продължим да те таксуваме на всеки {interval}, освен ако [не отмениш абонамента си]({cancelSubscriptionArticle}). Ще изпратим имейл за напомняне **{days, plural, =1 {1 ден} other {{days} дни}}** преди изтичане на пробния период. Общата сума не включва никакви допълнителни такси, начислени от съответната финансова институция. Имаш въпроси? [Провери ЧЗВ за офертата]({helpdeskArticle}) или [се свържи с екипа ни за поддръжка]({contactLink}).',
+          'Избирайки "{buttonText}", ти се съгласяваш с [Условията на платените услуги]({paidServiceTermsArticle}) на Discord. "{tierName}" е абонамент, който се подновява. Според метода ти на плащане ще те таксуваме след приключване на пробния период и ще продължим да те таксуваме на всеки {interval}, освен ако [не отмениш абонамента си]({cancelSubscriptionArticle}). Ще изпратим имейл за напомняне **{days, plural, =1 {1 ден} other {{days} дни}}** преди изтичане на пробния период. Общата сума не включва никакви допълнителни такси, начислени от съответната финансова институция. Имаш въпроси? [Провери ЧЗВ за офертата]({helpdeskArticle}) или [се свържи с екипа ни за поддръжка]({contactLink}).',
         GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT:
           "еха, това изглежда толкова яко",
         GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_BADGE_TITLE: "Икона",
@@ -22338,6 +22395,8 @@
           "Смяна на екип за плащания",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Избор на екип за плащания",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Промени екипа, към който ще се пращат плащанията за сървъра.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Ако промениш екипа си, може да не отговаряш на условията за изплащане",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23279,6 +23338,11 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Управление на настройките за клипове",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Научи повече",
+        SOUND_INCOMING_RING_HALLOWEEN:
+          "Мелодия за входящи обаждания за Хелоуин",
+        CUSTOM_SOUNDS: "Персонализирани звуци",
+        ENABLE_PHONE_INTEGRATION:
+          "Активирай интегрирането с приложението „Телефон“, за да се насладиш на това.",
         GUILD_SHOP_CHANNEL_LABEL: "Магазин на сървъра",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Налични продукти",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "Продуктова карта за {productName}",
@@ -23384,6 +23448,9 @@
           "Научи повече за правилата ни относно {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Правилата на Discord важат за всички",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Към настройките на акаунта",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Към настройките на акаунта",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Виж репутацията на акаунта",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Опитай пак",
@@ -23464,6 +23531,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Затваряне",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Може би сме допуснали грешка? [Кажи ни](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Отбележи като нечувствително",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Благодарим ти, че ни съобщи!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23907,6 +23975,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord няма да показва известия в приложението, за работния плот или да възпроизвежда звуци от съобщения.",
         QUIET_MODE_DISABLED_BY: "Това е деактивирано от режима за фокусиране",
+        FOCUS_MODE_TITLE: "Режим за фокусиране (BETA)",
+        FOCUS_MODE_BADGE_ON: "ВКЛ.",
+        FOCUS_MODE_BADGE_OFF: "ИЗКЛ.",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "От известно време си в режим „Не безпокойте“. Искаш ли вместо това да активираш режима за фокусиране?",
         ACTIVITY_REACTION_REPLY_TITLE: "Чат относно {activity}",

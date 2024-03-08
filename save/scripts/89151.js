@@ -652,6 +652,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Yeni",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bu sunucudaki botlar",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Pop\xfcler",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Bir şey gerekmiyor. Komutu g\xf6nderebilirsin veya aşağıya bir se\xe7enek ekleyebilirsin",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Aşağıdan bir se\xe7enek se\xe7",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Bu kanalda komut \xe7alıştırma izinlerine sahip değilsin",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Komut A\xe7",
@@ -1253,7 +1257,6 @@
           "[!!{username}!!](usernameOnClick) bir [etkinlik](activityTextOnClick) başlattı",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} bir etkinlik başlattı.",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Belki daha sonra",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "!!{applicationName}!! nasıl ge\xe7ti?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Ne daha iyi olabilirdi?",
@@ -1409,9 +1412,6 @@
           "Korkun\xe7 kısa bir s\xfcre i\xe7in dene.\nNitron var mı? SpellCast'i \xe7ağır.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "**!!{applicationName}!!** i\xe7in test modu şu anda etkin. Uygulaman etkinlikler d\xfcğme men\xfcs\xfcnde bir se\xe7enek olarak g\xf6r\xfcnecektir.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Yeni Etkinlik! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Arkadaşlarınla \xe7izim yaparak tahmin etmeye \xe7alıştığın bir oyun oyna. 29 Mart'a kadar \xfccretsiz.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Uyarı",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Masa\xfcst\xfc Beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "YENİ! Ses kanalı tepkileri",
@@ -3478,7 +3478,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "duyurular",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "genel",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "rastgele",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Tek Tabanca",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "Kanalın \xf6zel bildirim ayarları",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL:
@@ -3518,6 +3518,8 @@
           "Susturulmuş kanallardan bildirim almazsın ve bunlar kanal listesinde gri olarak g\xf6r\xfcn\xfcr. Bu ayar t\xfcm cihazlarında ge\xe7erlidir.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Susturulmuş kategorilerden bildirim almazsın ve bunlar kanal listesinde gri olarak g\xf6r\xfcn\xfcr. Bu ayar t\xfcm cihazlarında ge\xe7erlidir.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Sunucun şu anda $[**susturulmuş**](mutedHook) durumda. Bu sunucudaki susturmayı kaldırmadan bu kanaldan bildirim alamaz veya ayarları değiştiremezsin.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Sunucunun bildirimi $[**hi\xe7bir şey**](notificationHook) olarak ayarlı. Bu kanaldan hi\xe7bir bildirim almayacaksın, ama bu durumu buradan ge\xe7ersiz kılabilirsin.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4290,7 +4292,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Bu bildirim faydalı mıydı? [G\xf6r\xfcşlerini bizimle paylaş!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[Bildirim Ayarlarını \xd6ne \xc7ıkar](handleMessage)",
+          "[\xd6ne \xc7ıkan Bildirim Ayarları](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "Bu bildirim faydalı mıydı?",
         NOTIFICATION_REPORT_FEEDBACK:
           "Bu bildirim ile ilgili geri bildirim ver",
@@ -4365,6 +4367,8 @@
         SEARCH_EMOJIS: "Emoji ara",
         SEARCH_FOR_EMOJI: "M\xfckemmel emojiyi bul",
         SEARCH_FOR_STICKER: "M\xfckemmel \xe7ıkartmayı bul",
+        SEARCH_FOR_REACTION: "M\xfckemmel tepkiyi bul",
+        SEARCH_FOR_SUPER_REACTION: "M\xfckemmel S\xfcper Tepki'yi bul",
         NO_EMOJI_SEARCH_RESULTS: "Aramanızla eşleşen emoji bulunamadı",
         EMOJI_CATEGORY_PACK: "{packName} Paketi",
         EMOJI_CATEGORY_RECENT: "Sık kullanılan",
@@ -5301,6 +5305,8 @@
           "Sistemindeki g\xfcnl\xfck dosyalar okunurken bir hata oluştu. L\xfctfen tekrar dene.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Bir hata oluştu ve hata ayıklama dosyalarını y\xfckleyemedik. L\xfctfen tekrar dene.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Anlık Bildirim G\xfcnl\xfcklerini Paylaş",
         FORM_CHECKBOX_AEC_DUMP: "Ses Teşhisi İ\xe7in Ses Kaydı",
         FORM_HELP_AEC_DUMP:
           "Ses teşhisi i\xe7in ses kaydı, sesle ilgili sorunları analiz etmek i\xe7in kullanılır. Son beş dakikadaki sesler ses mod\xfcl\xfc klas\xf6r\xfcne kaydedilir.",
@@ -5359,6 +5365,7 @@
         APP_ICON_SUNSET: "G\xfcnbatımı Caddesi",
         APP_ICON_HOLO_WAVES: "Prizmatik Dalgalar",
         APP_ICON_PIRATE: "Ahbap",
+        APP_ICON_PIRATE_1: "Grr",
         APP_ICON_PIRATE_2: "Hay Hay",
         APP_ICON_PIRATE_3: "Discorrrd",
         APP_ICON_PIRATE_4: "Harrr",
@@ -5445,6 +5452,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Kişi} other {# Kişi}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Sesli arama eylemlerini a\xe7",
+        TURN_CAMERA_ON_A11Y_LABEL: "Kamerayı A\xe7",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Kamerayı Kapat",
         IN_GAME_VOICE_SETTINGS: "Oyun-İ\xe7i Ses Ayarları",
         VIDEO_SETTINGS: "G\xf6r\xfcnt\xfc Ayarları",
         TEXT: "Metin",
@@ -5657,6 +5666,7 @@
         CONNECTION_STATUS_VIDEO_CONNECTED:
           "G\xf6r\xfcnt\xfcl\xfc Bağlantı Kuruldu",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC Bağlanıyor",
+        CONNECTION_STATUS_ICE_CHECKING: "Rota Kontrol Ediliyor",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS Bağlanıyor",
         CONNECTION_STATUS_NO_ROUTE: "Hat Yok",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC Bağlantısı Kesildi",
@@ -6214,7 +6224,7 @@
         SWITCH_TO_COMPACT_MODE: "Sıkıştırılmış Moda ge\xe7",
         SWITCH_TO_PUSH_TO_TALK: "Bas-Konuşa ge\xe7",
         SWITCH_TO_VOICE_ACTIVITY: "Ses Etkinliğine Ge\xe7",
-        MOVE_TO: "Şuraya Taşı",
+        MOVE_TO: "Git",
         MOVE_TO_SUCCESS: "Kullanıcı se\xe7ili kanala taşındı.",
         DISCONNECT_USER_SUCCESS: "Kullanıcı sesli konuşmadan ayrıldı.",
         CHANGE: "Değiştir",
@@ -8290,6 +8300,12 @@
           "Sohbeti S\xfcper Tepkiler ile coştur. Şimdi [{planName}](onClick) ile kullanılabilir.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Sohbeti sınırsız S\xfcper Tepkiler ile coştur. Şimdi [{planName}](onClick) ile kullanılabilir.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Sohbeti sınırsız S\xfcper Tepkiler ile coştur! Şimdi Nitro ile kullanılabilir.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Sohbeti sınırsız S\xfcper Tepkiler ile coştur!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Şimdi Nitro ile kullanılabilir.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Sohbeti S\xfcper Tepkiler ile coştur. Her hafta {refillAmount} tane kazan, [Nitro]({nitroLink}) ile kullanılabilir.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8411,6 +8427,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Sohbeti S\xfcper Tepkiler ile coştur! [Nitro](onClick) ile sınırsız S\xfcper Tepki hakkı ve diğer havalı avantajları elde et.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Sınırsız S\xfcper Tepkiler!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Bir S\xfcper Tepki eklemek i\xe7in butona tıkla.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Bir S\xfcper Tepki eklemek i\xe7in butona dokun.",
         HOLD_UP: "Bekle",
         MASKED_LINK_ALERT_V2_HEADER: "Discord'dan Ayrılıyorsun",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9475,6 +9495,10 @@
           "Renk Temaları",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Eşsiz renk temalarıyla Discord'a havanı kat.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "\xd6zel Uygulama Simgeleri",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Tarzına uyan bir mobil ve uygulama i\xe7i masa\xfcst\xfc simgesi se\xe7.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Avantajlar",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "Discord Deneyimini Geliştir",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -10130,6 +10154,7 @@
           "Bir hata oluştu ve o kodu kullanamayacaksın. \xdczg\xfcn\xfcz.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "\xdczg\xfcn\xfcz, g\xf6r\xfcn\xfcşe g\xf6re bu kod \xe7oktan alınmış.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY: "Bu kod başkasına ait.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "G\xf6r\xfcn\xfcşe g\xf6re bu kod \xe7alışmıyor. Doğru kodu kullandığından emin ol ve tekrar dene.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10171,6 +10196,8 @@
           "Bu kod, sana az \xf6nce g\xf6nderdiğimiz onay e-postasında bulunuyor.",
         REDEMPTION_CODE: "Alım Kodu",
         PARTNER_PROMOTION_CLAIM: "Sonraki",
+        PARTNER_PROMOTION_ERROR_TITLE: "Hayda!",
+        PARTNER_PROMOTION_ERROR_BODY: "Bir hata oluştu.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Bilinmeyen hediye.",
         REDEEM: "Al",
         UNLOCK_CODE: "Kodu A\xe7",
@@ -11697,6 +11724,7 @@
           "Nitro abonesi olarak bu havalı rozeti kazan.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Koleksiyonculara \xf6zel. Bu Nitro'ya \xf6zel sınırlı rozeti ka\xe7ırma.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Al",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Discord'una s\xfcper g\xfc\xe7ler ekle",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13197,6 +13225,7 @@
         MOST_POPULAR: "En Pop\xfcler",
         SPELLCHECK: "Yazım Denetimi",
         ADD_TO_DICTIONARY: "S\xf6zl\xfcğe Ekle",
+        REMOVE_FROM_DICTIONARY: "S\xf6zl\xfckten Kaldır",
         LANGUAGES: "Diller",
         AUTO_SUGGEST_STICKERS: "\xc7ıkartma \xd6nerileri",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13489,6 +13518,7 @@
           "Discord Ekibinden gelen ve bakman gereken resmi bir mesaj var.",
         BUILD_OVERRIDE: "Yapı Ge\xe7ersiz Kılma",
         BUILD_OVERRIDE_FOR: "{releaseChannel} i\xe7in Yapı Ge\xe7ersiz Kılma",
+        BUILD_OVERRIDE_ID: "Commit Hash",
         BUILD_OVERRIDE_APPLY: "Uygula",
         BUILD_OVERRIDE_CLEAR: "Temizle",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Yapı mevcut değil",
@@ -13693,7 +13723,6 @@
           "Aylık {monthlyPrice} veya yıllık {yearlyPrice} arasında se\xe7im yap",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Alıcı şunu elde edecek:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Nitro aboneliği hediye et",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Hediye s\xfcresi",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# aylık} other {# aylık}} {nitroTierName} hediye et",
@@ -13713,7 +13742,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Hediyeyi a\xe7",
         GIFT_RECIPIENT_INFO: "Alıcı: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Ses efekti ekle",
+        GIFT_SELECT_EMOJI: "Emoji konfetisi ekle",
         GIFT_SELECT_SOUNDBOARD_ADD: "Ekle",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Arkadaşın hediyesini a\xe7tığında bu \xe7alacak",
         NITRO_CONFIRMATION: "Nitro aldın",
         OPENED_GIFT_CONFIRMATION: "Bu hediyeyi a\xe7tın!",
         NITRO_PERKS: "Yeni Nitro avantajlarına g\xf6z at!",
@@ -14355,6 +14388,8 @@
           "Yeni sunucular bulmak i\xe7in sunucu listendeki pusulaya tıkla.",
         LOADING_TIP_12:
           "Sunucu klas\xf6rleri oluşturmak i\xe7in sunucuları s\xfcr\xfckleyip diğerlerinin \xfczerine bırak.",
+        LOADING_TIP_13:
+          "/gif veya /tenor + herhangi bir şey yazarak o konuyla ilgili GIF'ler bulabilirsin!",
         LOADING_TIP_14:
           "Oyun Etkinliği ayarlarını kullanarak ne oynadığını diğerleriyle paylaş.",
         LOADING_TIP_15:
@@ -14383,6 +14418,22 @@
           "Bot komutlarını ve diğer dahili komutları g\xf6rmek i\xe7in / yazabilirsin",
         LOADING_TIP_27:
           "Başına ve sonuna !!{asterisks}!! koyarak kelimelerini **kalın** yapabilirsin.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "cadılar bayramın \xfcrk\xfcn\xe7 olsun, sunucunu diriltmeyi unutma",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO cadılar bayramın korkun\xe7 ge\xe7sin",
+        HALLOWEEN_LOADING_TEXT_3: "T\xfcyler \xfcrpertici bir melodi pişiriyor",
+        HALLOWEEN_LOADING_TEXT_4:
+          "B\xf6\xd6\xf6\xf6\xf6\xd6\xd6\xf6\xf6\xd6\xf6\xd6\xd6\xf6",
+        HALLOWEEN_LOADING_TEXT_5: "Sesli sohbette herkes hayalet olur",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Sunucularının perili olmadığı doğrulanıyor (b\xfcy\xfck ihtimalle)",
+        HALLOWEEN_LOADING_TEXT_7:
+          'Cadılar Bayramı "ruhuna" b\xfcr\xfcn\xfcyoruz',
+        HALLOWEEN_LOADING_TEXT_8:
+          "Zombiler sadece \xf6l\xfc meme'ler mi paylaşır?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord enfekte oluyor! Zombi Wumpus'a dikkat et",
         ACCESSIBILITY_LOADING_TIP_1:
           "G\xf6r\xfcn\xfcm Ayarları'ndan a\xe7ık ya da koyu temayı se\xe7.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14412,6 +14463,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Anladım",
         VOICE_PANEL_SHOW_VOICE_USERS: "Ses Kanalı Kullanıcılarını G\xf6ster",
         VOICE_PANEL_USERS_A11Y_LABEL: "Ses Kanalı Kullanıcıları",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username} sağırlaştırıldı ve susturuldu",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username} susturuldu",
         VOICE_PANEL_SHOW_EXTRAS: "T\xfcm Kullanıcıları G\xf6ster",
         VOICE_PANEL_HIDE_EXTRAS: "K\xfc\xe7\xfclt",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15551,6 +15605,8 @@
         FRIEND_FINDER_FRIENDS: "T\xfcm Arkadaşlar",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Discord'daki Kişilerin - {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Tanıyor olabileceğin insanlar: {count}",
         CONTACT_SYNC_TITLE: "Arkadaşlarını bul",
         CONTACT_SYNC_LANDING_TITLE: "Arkadaşlarını bul",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16787,12 +16843,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} tane daha aktif alt başlık",
         THREAD_BROWSER_ARCHIVED_HEADER: "eski alt başlıklar",
         THREAD_BROWSER_JOINED_HEADER: "{count} alt başlığa katıldın",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER:
-          "{count} Tane Daha Aktif Alt Başlık",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktif Alt Başlıklar - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Eski Alt Başlıklar",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "{count} Kişi Alt Başlıklara Katıldı",
         THREAD_BROWSER_JOINED_COUNT: "Katılınan Alt Başlıklar - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} sn \xf6nce",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} g\xfcn \xf6nce",
@@ -16810,8 +16862,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Aktif alt başlık yok.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Arşivlenen alt başlık yok.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Ge\xe7ici bir metin kanalı olan bir alt başlıkla, konuşmaya odaklan.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Ge\xe7ici metin kanalları olan alt başlıklarla konuya odaklan.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filtre Ayarları",
@@ -18936,9 +18986,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Arama Sonu\xe7ları",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "İsim",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Şu Tarihten Beri \xdcye:",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Discord'a Katıldı",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roller",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Sinyaller",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "Toplam \xfcye: **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "Toplam **{total}** \xfcyeden **{pageRange}** tanesi g\xf6steriliyor",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Bu sadece en yeni \xfcyeleri g\xf6sterir. Eski \xfcyeler g\xf6sterilmeyebilir (ama yakında g\xf6sterilecek).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "G\xf6sterilen \xfcye:",
@@ -19234,6 +19287,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "İstila Uyarıları",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Uyarı Kanalı",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Yok",
+        GUILD_ANTIRAID_RAID_ALERT: "İstila Uyarısı",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Koruma Etkin",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "Uyarıları Kur",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION: "AutoMod'da Kur",
@@ -21729,6 +21783,9 @@
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro ile {price}",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Yeni bir g\xf6r\xfcn\xfcme hazır mısın?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Hmm, bu biraz garip.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmmm, mağazayı y\xfckleyemedik. Daha sonra tekrar g\xf6z at.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Aktif bir Nitro aboneliğiyle istediğin zaman kullan.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "G\xfczel dekorasyonuma bak",
@@ -21817,6 +21874,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Uygulamayı Ekle",
         MONETIZATION: "Parasallaştırma",
         GUILD_SETTINGS_MONETIZATION: "Sunucu Parasallaştırma",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Sunucu Abonelikleri",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Tanıtım Sayfası",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Abonelik Kademesi",
@@ -22269,6 +22327,8 @@
           "\xd6deme Ekibini Değiştir",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "\xd6deme Ekibini Se\xe7",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Sunucu parasallaştırması i\xe7in \xf6demelerin g\xf6nderileceği ekibi değiştir.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Takımını değiştirmek \xf6deme uygunluğunu etkileyebilir",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23111,7 +23171,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "Klibi G\xf6r\xfcnt\xfcle",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "{count, plural, =1 {# yeni klibin} other {# yeni klibin}} var!",
-        CLIPS_REVIEW_NOW: "Hemen İncele",
+        CLIPS_REVIEW_NOW: "G\xf6zden Ge\xe7ir",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "Yakın zamanda yaptığın !!{applicationName}!! yayınında klipler kaydettin. Onlara klip kitaplığında g\xf6z at!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "Klipleri G\xf6r\xfcnt\xfcle",
@@ -23192,7 +23252,7 @@
           "Bu, kliplerinin kaydedileceği maksimum kare hızıdır.",
         CLIPS_CROP_START: "Kırpma Başlangıcı",
         CLIPS_CROP_END: "Kırpma Sonu",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoiler Klip",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Klibe Spoiler Ekle",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Klibi Kaldır",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Artık $[!!{keybind}!!](keybindHook) kullanarak veya kendi belirleyeceğin bir tuş atamasıyla direkt oyun i\xe7inden klip alabilirsin.",
@@ -23203,6 +23263,10 @@
         CLIPS_USER_EDUCATION_ERROR_BODY: "Olamaz! Şu anda klip alamıyoruz.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "Klip Ayarlarını y\xf6net",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Daha Fazla Bilgi Edin",
+        SOUND_INCOMING_RING_HALLOWEEN: "Cadılar Bayramı Gelen \xc7aldırma",
+        CUSTOM_SOUNDS: "\xd6zel Sesler",
+        ENABLE_PHONE_INTEGRATION:
+          "Bunu deneyimlemek i\xe7in Telefon uygulamasıyla entegrasyona izin ver.",
         GUILD_SHOP_CHANNEL_LABEL: "Sunucu Mağazası",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Mevcut \xdcr\xfcnler",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23307,6 +23371,8 @@
           "{classificationDescription} politikamız hakkında bilgi al.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discord'un kuralları herkes i\xe7in ge\xe7erlidir",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Hesap durumuna git",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "Hesap durumuna git",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Hesap durumunu g\xf6r\xfcnt\xfcle",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Yeniden Dene",
@@ -23384,6 +23450,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Kapat",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Hata yaptığımızı mı d\xfcş\xfcn\xfcyorsun? [Bizimle iletişime ge\xe7](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Hassas değil olarak işaretle",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Haber verdiğin i\xe7in teşekk\xfcrler!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23404,7 +23471,7 @@
           "{count, plural, =1 {# Aktif Kanal} other {# Aktif Kanal}}",
         GUILD_HEADER_ACTIVE_CHANNELS_COUNT_UNKNOWN: "— Aktif Kanallar",
         GUILD_HEADER_ONLINE_COUNT: "{count, number} \xc7evrimi\xe7i",
-        GUILD_HEADER_ONLINE_COUNT_UNKNOWN: "— \xc7evrim i\xe7i",
+        GUILD_HEADER_ONLINE_COUNT_UNKNOWN: "— \xc7evrimi\xe7i",
         GUILD_HEADER_MEMBER_COUNT:
           "{count, plural, =1 {# \xdcye} other {# \xdcye}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— \xdcyeler",
@@ -23537,12 +23604,12 @@
         STATUS_IN_TRANSIT: "Yoldayım",
         STATUS_WATCHING: "Bir şeyler izliyorum",
         STATUS_NONE: "Durum yok",
-        HANG_STATUS: "Durum Bilgisi",
+        HANG_STATUS: "Takılma Durumu",
         HANG_STATUS_LOCATION: "!!{guildName}!! kategorisinde",
         CUSTOM_HANG_STATUS: "\xd6zel Durum",
         CUSTOM_HANG_STATUS_CTA: "Atla gel!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Ne yapıyorsun?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Durumu kaydır",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Durumu kopyala",
         HANG_STATUS_VC_ROW_ADD: "Durum ekle",
         HANG_STATUS_HELP:
           "Etkinlik durumu belirleyerek arkadaşlarına ne yaptığını g\xf6ster.",
@@ -23829,6 +23896,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord uygulama i\xe7i veya masa\xfcst\xfc bildirimlerini g\xf6stermeyecek ve mesaj sesi oynatmayacak.",
         QUIET_MODE_DISABLED_BY: "Odak Modu tarafından devre dışı bırakıldı",
+        FOCUS_MODE_TITLE: "Odak Modu (BETA)",
+        FOCUS_MODE_BADGE_ON: "A\xc7IK",
+        FOCUS_MODE_BADGE_OFF: "KAPALI",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Bir s\xfcredir Rahatsız Etmeyin modundasın. Bunun yerine Odak Moduna ge\xe7mek ister misin?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity} hakkında sohbet et",

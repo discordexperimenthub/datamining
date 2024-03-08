@@ -654,6 +654,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Nylige",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Boter i denne serveren",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popul\xe6rt",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Ingenting kreves. Du kan sende kommandoen og legge til et alternativ under",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Velg et alternativ under",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Du har ikke tillatelse til \xe5 kj\xf8re kommandoer i denne kanalen",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "\xc5pne kommando",
@@ -1252,7 +1256,6 @@
           "[!!{username}!!](usernameOnClick) startet en [aktivitet](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} startet en aktivitet",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Kanskje senere",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Hvordan var !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Hva kunne v\xe6rt bedre?",
@@ -1405,9 +1408,6 @@
           "Du kan pr\xf8ve i en uhyggelig kort periode.\nHar du Nitro? P\xe5kall SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Testmodus er aktiv for **!!{applicationName}!!**. Appen b\xf8r dukke opp som et valg i menyknappen for aktiviteter.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Ny aktivitet! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Pr\xf8v et spill der du og vennene dine skal tegne og gjette p\xe5 hva de andre har tegnet. Gratis frem til 29. mars.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Advarsel",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Beta p\xe5 datamaskin)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2: "NYHET! Reaksjoner i talekanaler",
@@ -3449,7 +3449,7 @@
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Ingen",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Uleste merker",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Fremhev kanalnavn og halvprikk",
+          "Fremhev kanalnavn ogapp halvprikk",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Varsler",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Pushvarsel og pinglyd",
@@ -3494,6 +3494,8 @@
           "Du f\xe5r ikke varslinger fra dempede kanaler og de vises som nedtonet i kanallisten. Denne innstillingen gjelder p\xe5 tvers av alle enhetene.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Du f\xe5r ikke varslinger fra dempede kategorier, og de vises som nedtonet i kanallisten. Denne innstillingen gjelder p\xe5 tvers av alle enhetene.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Serveren din er for \xf8yeblikket $[**dempet**](mutedHook). Du kan ikke f\xe5 varsler fra denne kanalen eller endre innstillingene f\xf8r du opphever demping av denne serveren.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Serverens varsling er angitt til $[**ingenting**](notificationHook). Du f\xe5r ingen varslinger fra denne kanalen, men du kan overskrive det her.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4270,7 +4272,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Var varselet nyttig? [Si hva du synes!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[Fremhev varslingsinnstillinger](handleMessage)",
+          "[Varselinnstillinger for h\xf8ydepunkter](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "Var varselet nyttig?",
         NOTIFICATION_REPORT_FEEDBACK: "Gi en tilbakemelding om dette varselet",
         NOTIFICATION_REPORT_TEXT:
@@ -4342,6 +4344,8 @@
         SEARCH_EMOJIS: "S\xf8k etter emoji",
         SEARCH_FOR_EMOJI: "Finn den perfekte emojien",
         SEARCH_FOR_STICKER: "Finn et perfekt klistremerke",
+        SEARCH_FOR_REACTION: "Finn den perfekte reaksjonen",
+        SEARCH_FOR_SUPER_REACTION: "Finn den perfekte superreaksjonen",
         NO_EMOJI_SEARCH_RESULTS: "Ingen emojier samsvarer s\xf8ket ditt",
         EMOJI_CATEGORY_PACK: "{packName}-pakke",
         EMOJI_CATEGORY_RECENT: "Ofte brukt",
@@ -5275,6 +5279,7 @@
           "Noe gikk galt ved lesing av loggfiler fra systemet. Pr\xf8v p\xe5 nytt.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Noe gikk galt og vi kunne ikke laste opp feils\xf8kingsfilene. Pr\xf8v p\xe5 nytt.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Del logger med pushvarsler",
         FORM_CHECKBOX_AEC_DUMP: "Feils\xf8kende lydopptak",
         FORM_HELP_AEC_DUMP:
           "Feils\xf8kende lydopptak brukes til \xe5 analysere lydproblemer. De seneste fem minuttene med tale er lagret i en talemodul-mappe.",
@@ -5332,6 +5337,7 @@
         APP_ICON_SUNSET: "Solnedgang",
         APP_ICON_HOLO_WAVES: "Prismatiske b\xf8lger",
         APP_ICON_PIRATE: "Havets skrekk",
+        APP_ICON_PIRATE_1: "Yarr",
         APP_ICON_PIRATE_2: "Aye Aye",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5417,6 +5423,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Person} other {# People}}",
         VOICE_CALL_ACTION_A11Y_HINT: "\xc5pne taleanrophandlinger",
+        TURN_CAMERA_ON_A11Y_LABEL: "Sl\xe5 p\xe5 kamera",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Sl\xe5 av kamera",
         IN_GAME_VOICE_SETTINGS: "Taleinnstillinger i spillet",
         VIDEO_SETTINGS: "Videoinnstillinger",
         TEXT: "Tekst",
@@ -5627,6 +5635,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Tale er tilkoblet",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video er tilkoblet",
         CONNECTION_STATUS_RTC_CONNECTING: "RTC kobler til",
+        CONNECTION_STATUS_ICE_CHECKING: "Sjekker rute",
         CONNECTION_STATUS_DTLS_CONNECTING: "DTLS kobler til",
         CONNECTION_STATUS_NO_ROUTE: "Ingen rute",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC er frakoblet",
@@ -6012,8 +6021,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "bilde, knapp",
         A11Y_LOADING_STARTED: "Laster inn",
         A11Y_LOADING_FINISHED: "Innlasting fullf\xf8rt",
-        A11Y_CHECKBOX_CHECKED: "sjekket",
-        A11Y_CHECKBOX_UNCHECKED: "usjekket",
+        A11Y_CHECKBOX_CHECKED: "markert",
+        A11Y_CHECKBOX_UNCHECKED: "ikke markert",
         DND_ITEM_PICKED_UP: "Plukket opp !!{itemName}!!",
         DND_ITEM_DROPPED: "Slapp gjenstand",
         DND_DRAG_CANCELED: "Sluttet \xe5 dra",
@@ -8247,6 +8256,12 @@
           "F\xe5 mer futt i chatten med superreaksjoner. Tilgjengelig n\xe5 med [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "F\xe5 mer futt i chatten med et ubegrenset antall superreaksjoner. Tilgjengelig n\xe5 med [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "F\xe5 mer futt i chatten med et ubegrenset antall superreaksjoner! Tilgjengelig n\xe5 med Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "F\xe5 mer futt i chatten med et ubegrenset antall superreaksjoner!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Tilgjengelig n\xe5 med Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "F\xe5 mer futt i chatten med superreaksjoner. Med [Nitro]({nitroLink}) f\xe5r du {refillAmount} i uken.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8367,6 +8382,10 @@
           "F\xe5 mer futt i chatten med superreaksjoner. Med [Nitro](onClick) f\xe5r du et ubegrenset antall superreaksjoner samt andre kule fordeler.",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Et ubegrenset antall superreaksjoner!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Klikk p\xe5 knappen for \xe5 legge til en superreaksjon.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Trykk p\xe5 knappen for \xe5 legge til en superreaksjon.",
         HOLD_UP: "Stopp en hal",
         MASKED_LINK_ALERT_V2_HEADER: "Forlater Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -8718,7 +8737,7 @@
         SEARCH_GROUP_HINT_PINNED:
           "Trykk for \xe5 endre filteret. S\xf8k etter festede meldinger",
         SEARCH_FILTERS: "S\xf8kefiltre",
-        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Filtrerer resultater …",
+        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Filtrer resultater …",
         SEARCH_FILTER_FROM: "fra",
         SEARCH_FILTER_HAS: "har",
         SEARCH_FILTER_BEFORE: "f\xf8r",
@@ -9428,6 +9447,10 @@
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE: "Fargetemaer",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Bruk unike temafarger for \xe5 sette ditt eget preg p\xe5 Discord.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Egendefinerte appikoner",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Velg en mobil og et passende skrivebordsikon til appen.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Fordelene",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "F\xe5 en bedre Discord-opplevelse",
@@ -10079,6 +10102,8 @@
           "Det ser ut til at noe er galt, og at du ikke kan bruke den koden. Beklager.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Beklager, men det ser ut som denne koden allerede er l\xf8st inn.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Det ser ut til at gavekoden tilh\xf8rer noen andre.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Det ser ut som denne koden ikke fungerte. Sjekk at du har riktig kode og pr\xf8v igjen.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10120,6 +10145,8 @@
           "Denne koden er sendt i en e-postbekreftelse til deg.",
         REDEMPTION_CODE: "Innl\xf8sningskode",
         PARTNER_PROMOTION_CLAIM: "Neste",
+        PARTNER_PROMOTION_ERROR_TITLE: "Oi da!",
+        PARTNER_PROMOTION_ERROR_BODY: "Det virker som noe gikk galt.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Ukjent gave.",
         REDEEM: "L\xf8s inn",
         UNLOCK_CODE: "Kode for oppl\xe5sing",
@@ -11634,6 +11661,7 @@
           "Som Nitro-abonnent f\xe5r du dette kule merket.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For samlerne blant oss. Skaff deg dette Nitro-eksklusive merket.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "L\xf8s inn",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Discord p\xe5 h\xf8ygir",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13113,6 +13141,7 @@
         MOST_POPULAR: "Mest popul\xe6rt",
         SPELLCHECK: "Stavekontroll",
         ADD_TO_DICTIONARY: "Legg til i ordbok",
+        REMOVE_FROM_DICTIONARY: "Fjern fra ordlisten",
         LANGUAGES: "Spr\xe5k",
         AUTO_SUGGEST_STICKERS: "Klistremerkeforslag",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13406,6 +13435,7 @@
           "En offisiell melding fra Discord-teamet trenger din oppmerksomhet.",
         BUILD_OVERRIDE: "Overstyring av delversjon",
         BUILD_OVERRIDE_FOR: "Overstyring av delversjon for {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Bekreft hash",
         BUILD_OVERRIDE_APPLY: "Bruk",
         BUILD_OVERRIDE_CLEAR: "Fjern",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Delversjonen er ikke tilgjengelig",
@@ -13608,7 +13638,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Velg mellom {monthlyPrice}/m\xe5ned og {yearlyPrice}/\xe5r",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Mottageren mottar:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Gi et Nitro-medlemskap i gave",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gavens varighet",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Gi {count, plural, one {# m\xe5ned} other {# m\xe5neder}} med {nitroTierName} i gave",
@@ -13629,7 +13658,11 @@
         GIFT_DURATION: "1 {timeInterval} med Nitro",
         GIFT_OPEN_PROMPT: "\xc5pne gave",
         GIFT_RECIPIENT_INFO: "Til: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Legg til lydeffekt",
+        GIFT_SELECT_EMOJI: "Legg til emojikonfetti",
         GIFT_SELECT_SOUNDBOARD_ADD: "Legg til",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Dette spilles av n\xe5r vennen din \xe5pner gaven",
         NITRO_CONFIRMATION: "Du har f\xe5tt Nitro",
         OPENED_GIFT_CONFIRMATION: "Du \xe5pnet gaven!",
         NITRO_PERKS: "Sjekk de nye Nitro-fordelene!",
@@ -14258,6 +14291,8 @@
           "Klikk p\xe5 kompasset i serverlisten for \xe5 finne nye servere.",
         LOADING_TIP_12:
           "Dra og slipp servere p\xe5 hverandre for \xe5 lage servermapper.",
+        LOADING_TIP_13:
+          "Skriv /gif eller /tenor + et-eller-annet for \xe5 finne en GIF om det emnet!",
         LOADING_TIP_14:
           "Bruk Spillaktivitet-innstillingene hvis du vil vise hva du spiller.",
         LOADING_TIP_15:
@@ -14286,6 +14321,22 @@
           "Du kan skrive inn / for \xe5 vise botkommandoer og andre innebygde kommandoer",
         LOADING_TIP_27:
           "Du kan skrive !!{asterisks}!! rundt ordene for \xe5 gj\xf8re dem **fete**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "God halloween, husk \xe5 vekke serveren din fra de d\xf8de",
+        HALLOWEEN_LOADING_TEXT_2:
+          "oooOOOooO har en veldig s\xe5 skummel halloweentid",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Brygger en ringetone som kan f\xe5 deg til \xe5 gr\xf8sse",
+        HALLOWEEN_LOADING_TEXT_4:
+          "B\xf8\xf8\xf8\xd8\xd8\xd8\xd8\xd8\xf8\xf8\xd8\xd8\xf8\xd8\xf8\xf8",
+        HALLOWEEN_LOADING_TEXT_5: "I talechat er alle fra \xe5nderiket",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Verifiserer at serverne dine ikke er hjems\xf8kt (vi garanterer ingenting)",
+        HALLOWEEN_LOADING_TEXT_7:
+          "Vi begynner \xe5 f\xf8le \xab\xe5nden\xbb til halloween",
+        HALLOWEEN_LOADING_TEXT_8: "Poster zombier bare d\xf8de memer?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord blir invadert! Pass deg for Zombie-Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Velg lyst eller m\xf8rkt tema i innstillingene for utseende.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14316,6 +14367,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Skj\xf8nner",
         VOICE_PANEL_SHOW_VOICE_USERS: "Vis talebrukere",
         VOICE_PANEL_USERS_A11Y_LABEL: "Talebrukere",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}: dempet og sl\xe5tt av lyd",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}: dempet",
         VOICE_PANEL_SHOW_EXTRAS: "Vis alle brukere",
         VOICE_PANEL_HIDE_EXTRAS: "Minimer",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15439,6 +15493,8 @@
         FRIEND_FINDER_FRIENDS: "Alle venner",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Kontakter p\xe5 Discord: {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Folk du kanskje kjenner – {count}",
         CONTACT_SYNC_TITLE: "Finn vennene dine",
         CONTACT_SYNC_LANDING_TITLE: "Finn vennene dine",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16049,7 +16105,7 @@
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED:
           "Jeg er interessert i\xa0…",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED:
-          "Jeg er ikke interessert i\xa0…",
+          "Jeg er uinteressert i\xa0…",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "Alle eventene i denne serien",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE:
@@ -16669,10 +16725,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} andre aktive tr\xe5der",
         THREAD_BROWSER_ARCHIVED_HEADER: "eldre tr\xe5der",
         THREAD_BROWSER_JOINED_HEADER: "{count} ble med i tr\xe5der",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} andre aktive tr\xe5der",
         THREAD_BROWSER_ACTIVE_COUNT: "Aktive tr\xe5der\xa0– {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Eldre tr\xe5der",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "{count} aktive tr\xe5der",
         THREAD_BROWSER_JOINED_COUNT: "Alle tr\xe5der – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} s siden",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}d siden",
@@ -16692,8 +16746,6 @@
           "Det er ingen aktive tr\xe5der.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Det er ingen arkiverte tr\xe5der.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Fokuser p\xe5 en samtale med en tr\xe5d, en midlertidig tekstkanal.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Bruk en tr\xe5d, en midlertidig tekstkanal, hvis det er noe bestemt du vil snakke om.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Filterinnstillinger",
@@ -18791,9 +18843,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "S\xf8keresultater",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Navn",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Medlem siden",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Bli med i Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roller",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Signaler",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "av **{count}** medlemmer ",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "medlemmer **{pageRange}** av **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Dette viser bare de nyeste medlemmene – de som har v\xe6rt medlem lenger, vises kanskje ikke (men snart dukker de opp).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Viser",
@@ -18901,11 +18956,11 @@
         MEMBER_SAFETY_DATE_OPTION_BEFORE: "F\xf8r dato",
         MEMBER_SAFETY_DATE_OPTION_BEFORE_ONLY: "F\xf8r {date}",
         MEMBER_SAFETY_DATE_OPTION_AFTER_ONLY: "Etter {date}",
-        MEMBER_SAFETY_JOINED_DATE_LABEL: "Discord-medlem siden – alternativer",
+        MEMBER_SAFETY_JOINED_DATE_LABEL: "Alternativer for medlem siden",
         MEMBER_SAFETY_ACCOUNT_AGE_LABEL:
-          "Medlemskapsstart i Discord – alternativer",
+          "Alternativ for medlemskapsstart i Discord",
         MEMBER_SAFETY_JOIN_METHOD_LABEL:
-          "Metoder for \xe5 bli med p\xe5 server – alternativer",
+          "Alternativer for metoder for \xe5 bli med p\xe5 server",
         MEMBER_SAFETY_GUILD_JOINED_AT_DESC: "Medlem siden (nyeste f\xf8rst)",
         MEMBER_SAFETY_GUILD_JOINED_AT_ASC: "Medlem siden (eldste first)",
         MEMBER_SAFETY_USER_JOINED_AT_DESC: "Ble med i Discord (nyeste first)",
@@ -19077,6 +19132,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Raidvarsler",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Varslingskanal",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Ingen",
+        GUILD_ANTIRAID_RAID_ALERT: "Raidvarsel",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Beskyttelse er aktivert",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "Sett opp varsler",
@@ -21547,6 +21603,9 @@
           "Nitro-abonnenter f\xe5r rabatt p\xe5 denne dekorasjonen",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} med Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Klar for en ny stil?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Hmm, dette er pinlig.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hm, vi klarte ikke \xe5 laste inn butikken. Sjekk igjen senere.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Med et aktivt Nitro-abonnement kan du bruke dette n\xe5r du vil.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Se p\xe5 den vakre dekorasjonen min",
@@ -21633,6 +21692,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Legg til app",
         MONETIZATION: "Inntektsgenerering",
         GUILD_SETTINGS_MONETIZATION: "Generere inntekter fra serveren",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Serverabonnementer",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Promoteringsside",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Abonnementsniv\xe5",
@@ -22081,6 +22141,8 @@
           "Endre betalingsteam",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Velg betalingsteam",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Endre teamet som skal motta betalinger for serverinntektsgenerering.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Hvis du endrer team, kan dette p\xe5virke hvorvidt du er kvalifisert for utbetaling",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -22990,7 +23052,7 @@
           "Dette er den h\xf8yeste bildefrekvensen som klippene dine blir tatt opp i.",
         CLIPS_CROP_START: "Beskj\xe6ring – start",
         CLIPS_CROP_END: "Beskj\xe6ring – slutt",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Spoilerklipp",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Legg spoiler til klipp",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Fjerne klipp",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "N\xe5 kan du spille inn klipp direkte i spillet med $[!!{keybind}!!](keybindHook). Eventuelt kan du angi hurtigtast selv.",
@@ -23003,6 +23065,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Administrer klippinnstillinger",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Finn ut mer",
+        SOUND_INCOMING_RING_HALLOWEEN: "Innkommende halloweensamtale",
+        CUSTOM_SOUNDS: "Tilpassede lyder",
+        ENABLE_PHONE_INTEGRATION:
+          "Aktiver integrasjon med telefonappen for \xe5 oppleve dette.",
         GUILD_SHOP_CHANNEL_LABEL: "Serverbutikk",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Tilgjengelige produkter",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23109,6 +23175,8 @@
           "Mer informasjon om {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Discords regler gjelder for alle",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "G\xe5 til kontostatus",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2: "G\xe5 til kontostatus",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Se kontostatus",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Pr\xf8v p\xe5 nytt",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23185,6 +23253,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Avvis",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Har vi gjort en feil? [Gi oss beskjed](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Merk som ikke st\xf8tende",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Takk for at du sier fra til oss!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23285,7 +23354,7 @@
           "Slapp av med Wumpus s\xe5 lenge du vil.",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Tilbake til samtalen",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT: "Wumpus digger musikken.",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Rapporter hen",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Rapporter brukeren",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Rapportert",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Kontakt Crisis Text Line",
@@ -23320,7 +23389,7 @@
         STATUS_POPOUT_SET_CUSTOM: "Sett som egendefinert aktivitet",
         STATUS_POPOUT_EDIT_CUSTOM: "Rediger egendefinert aktivitet",
         STATUS_POPOUT_CLEAR_STATUS: "Fjern status",
-        SET_STATUS_MODAL_TITLE: "Sett som egendefinert taleaktivitet",
+        SET_STATUS_MODAL_TITLE: "Angi egendefinert taleaktivitet",
         SET_STATUS_MODAL_SUBTITLE:
           "Vi lagrer de nyeste kreasjonene og sletter dem automatisk etter en stund.",
         SET_STATUS_MODAL_CTA: "Bekreft",
@@ -23333,12 +23402,12 @@
         STATUS_IN_TRANSIT: "Er jeg ute og g\xe5r",
         STATUS_WATCHING: "Ser jeg p\xe5 noe",
         STATUS_NONE: "Ingen status",
-        HANG_STATUS: "Samlingsstatus",
+        HANG_STATUS: "Treffstatus",
         HANG_STATUS_LOCATION: "i !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Egendefinert status",
         CUSTOM_HANG_STATUS_CTA: "Hopp inn her!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Hva driver du med?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Sveipestatus",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Stjel status",
         HANG_STATUS_VC_ROW_ADD: "Legg til en status",
         HANG_STATUS_HELP:
           "Angi en aktivitetsstatus for \xe5 vise vennene dine hva du holder p\xe5 med.",
@@ -23507,12 +23576,12 @@
         THEY_ARE_IN_CHANNEL: "De henger i $[](channelHook)",
         YOU_ARE_IN_CHANNEL_NAME: "Du er i #!!{channelName}!!",
         THEY_ARE_IN_CHANNEL_NAME: "De henger i #!!{channelName}!!",
-        HANGOUT_OVER_SENDER: "Samlingen er over. Vil du starte den p\xe5 nytt?",
-        HANGOUT_OVER_RECEIVER: "Du gikk glipp av samlingen :(",
+        HANGOUT_OVER_SENDER: "Treffet er over. Vil du starte den p\xe5 nytt?",
+        HANGOUT_OVER_RECEIVER: "Du gikk glipp av treffet :(",
         WAVE_AGAIN: "Vink igjen",
         WAVE_BACK: "Vink tilbake",
-        JOIN_HANGOUT: "Bli med i samlingen",
-        CANNOT_ACCESS_HANGOUT: "Du har ikke tilgang til denne samlingen",
+        JOIN_HANGOUT: "Bli med i treffet",
+        CANNOT_ACCESS_HANGOUT: "Du har ikke tilgang til dette treffet",
         GEO_RESTRICTED_MODAL_TITLE: "Serveren er ikke tilgjengelig",
         GEO_RESTRICTED_MODAL_BODY:
           "**{serverName}** er ikke tilgjengelig i omr\xe5det ditt.",
@@ -23573,7 +23642,7 @@
         QUESTS_HIDE_THIS: "Skjul dette",
         QUESTS_FIND_QUEST:
           "Du finner tilbake til dette i Brukerinnstillinger\xa0> Gavebeholdning",
-        QUESTS_CLAIM_BY: "Hent innen {expirationDate}.",
+        QUESTS_CLAIM_BY: "M\xe5 hentes innen {expirationDate}.",
         QUESTS_AVAILABLE_UNTIL: "Tilgjengelig til {expirationDate}.",
         QUESTS_COMPLETION_PROGRESS_NOT_STARTED: "Klar n\xe5r du er det\xa0…",
         QUESTS_COMPLETION_PROGRESS_STARTED: "Fortsett s\xe5nn!",
@@ -23629,6 +23698,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord kommer ikke til \xe5 vise deg varsler og spiller ikke meldingslyder.",
         QUIET_MODE_DISABLED_BY: "Dette blir deaktivert av Fokusmodus",
+        FOCUS_MODE_TITLE: "Fokusmodus (BETA)",
+        FOCUS_MODE_BADGE_ON: "P\xc5",
+        FOCUS_MODE_BADGE_OFF: "AV",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Du har hatt Ikke forstyrr p\xe5 i en stund. Vil du aktivere Fokusmodus?",
         ACTIVITY_REACTION_REPLY_TITLE: "Snakk om {activity}",

@@ -665,9 +665,13 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Нещодавнє",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Боти на цьому сервері",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Популярні",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Немає вимог. Можна надіслати команду або додати опцію нижче",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Оберіть варіант нижче",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "У вас немає дозволів на запуск команд в цьому каналі",
-        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Відкрити команду",
+        APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Відкрити вікно команди",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_TITLE: "Немає дозволів",
         APP_LAUNCHER_COMMAND_NO_PERMISSIONS_BODY:
           "У вас немає дозволів запускати цю команду",
@@ -1242,7 +1246,7 @@
         EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL:
           "Привіт! Ця покупка призначена для передплати з автоматичним оновленням, це означає, що передплату буде оновлено **{renewalDate, date, medium}** за **{rate}**. Ви можете скасувати підписку в будь-який час у розділі \xabКористувацькі налаштування\xbb > \xabПередплати\xbb. Кошті за попередні оплати не повертаються, окрім випадків, коли це вимагається законодавством. Цю покупку пропонує вам розробник цієї активності, доступ до неї та її використання можливий лише під час цієї активності.",
         EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL: "Згорнути активність",
-        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "У процесі",
+        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "У розробці",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_ENDED: "Активність закінчилася.",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE:
           "Активність почалася.",
@@ -1265,7 +1269,6 @@
           "[!!{username}!!](usernameOnClick) починає [активність](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} починає активність",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Іншим разом",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Як працює !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "Що можна покращити?",
@@ -1420,9 +1423,6 @@
           "Доступний протягом жахливо обмеженого часу.\nЄ Nitro? Викличте SpellCast!",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Тестовий режим наразі активний для **!!{applicationName}!!**. Ваша програма має з'явитися як параметр в меню кнопок дій.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Нова активність! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Спробуйте гру, у якій треба малювати та вгадувати що намалювали разом із друзями. Безкоштовно до 29 березня.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Увага",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(в бета-версії для комп'ютера)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3482,7 +3482,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE:
           "Індикатори непрочитаних повідомлень",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Виділена назва каналу й значок статусу",
+          "Виділена назва каналу і півколо",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Сповіщення",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Push-сповіщення й звуковий сигнал",
@@ -3492,9 +3492,9 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "оголошення",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "загальний",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "випадковий",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Самотній блукач",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
-          "Спеціальні налаштування сповіщень каналу",
+          "Користувацькі налаштування сповіщень каналу",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "Увімкнути всі сповіщення",
         FORM_LABEL_MOBILE_NOTIFICATIONS_SYSTEM_LABEL: "Системні сповіщення",
         FORM_LABEL_MOBILE_NOTIFICATIONS_SYSTEM_DESC:
@@ -3528,6 +3528,8 @@
           "Ви не отримуватимете сповіщення від заглушених каналів, і вони відображатимуться сірими в вашому списку каналів. Цей параметр застосовується до всіх ваших пристроїв.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Ви не отримуватимете сповіщення для заглушених категорій, і вони відображатимуться сірим кольором у вашому списку каналів. Це налаштування застосовується до всіх ваших пристроїв.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Ваш сервер наразі $[**заглушено**](mutedHook). Ви не отримуватимете сповіщення від каналу й не зможете змінити налаштування, доки знову не ввімкнете звук для сервера.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Для сповіщень на твоєму сервері задано параметр $[**жодних**](notificationHook). Ти не отримуватимеш жодних сповіщень з цього каналу, але ти можеш скасувати це налаштування тут.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4374,6 +4376,8 @@
         SEARCH_EMOJIS: "Пошук емодзі",
         SEARCH_FOR_EMOJI: "Знайди ідеальний емодзі",
         SEARCH_FOR_STICKER: "Знайди ідеальний стікер",
+        SEARCH_FOR_REACTION: "Знайди ідеальну реакцію",
+        SEARCH_FOR_SUPER_REACTION: "Знайди ідеальну суперреакцію",
         NO_EMOJI_SEARCH_RESULTS:
           "Немає емодзі, які б відповідали пошуковому запиту",
         EMOJI_CATEGORY_PACK: "Набір {packName}",
@@ -5305,6 +5309,8 @@
           "Під час читання файлів журналу подій твоєї системи щось пішло не так. Спробуй ще раз.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Щось пішло не так, і ми не змогли завантажити твої файли налагодження на сервер. Спробуй ще раз.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Поділитися журналом мобільних push-сповіщень",
         FORM_CHECKBOX_AEC_DUMP: "Діагностичний запис аудіо",
         FORM_HELP_AEC_DUMP:
           "Діагностичний запис аудіо використовується для аналізу проблем зі звуком. Останні п'ять хвилин голосового повідомлення зберігаються в каталозі голосового модуля.",
@@ -5362,6 +5368,7 @@
         APP_ICON_SUNSET: "Вулиця у заході сонця",
         APP_ICON_HOLO_WAVES: "Призматичні хвилі",
         APP_ICON_PIRATE: "Друг-пірат",
+        APP_ICON_PIRATE_1: "Йар-р-р",
         APP_ICON_PIRATE_2: "Так, капітане!",
         APP_ICON_PIRATE_3: "Капітан Discord",
         APP_ICON_PIRATE_4: "Ар-р",
@@ -5447,6 +5454,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# людина} few {особи} other {# осіб}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Відкрити дії голосового виклику",
+        TURN_CAMERA_ON_A11Y_LABEL: "Увімкнути камеру",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Вимкнути камеру",
         IN_GAME_VOICE_SETTINGS: "Налаштування голосового спілкування у грі",
         VIDEO_SETTINGS: "Налаштування відео",
         TEXT: "Текст",
@@ -5657,6 +5666,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Голосовий зв'язок підключено",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Відео підключено",
         CONNECTION_STATUS_RTC_CONNECTING: "Під'єднання RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Перевірка шляху",
         CONNECTION_STATUS_DTLS_CONNECTING: "Під'єднання DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Немає маршруту",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC від'єднано",
@@ -6049,8 +6059,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "зображення, кнопка",
         A11Y_LOADING_STARTED: "Завантаження",
         A11Y_LOADING_FINISHED: "Завантаження завершено",
-        A11Y_CHECKBOX_CHECKED: "робить чек",
-        A11Y_CHECKBOX_UNCHECKED: "не робить чек",
+        A11Y_CHECKBOX_CHECKED: "зазначено",
+        A11Y_CHECKBOX_UNCHECKED: "не зазначено",
         DND_ITEM_PICKED_UP: "!!{itemName}!!: підібрано",
         DND_ITEM_DROPPED: "Викинутий предмет",
         DND_DRAG_CANCELED: "Перетягування припинено",
@@ -8290,6 +8300,12 @@
           "Вражайте відвідувачів чата суперреакціями. Зараз можливість доступна з передплатою [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Порадуйте відвідувачів чата необмеженою кількістю суперреакцій. Зараз можливість доступна з [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Порадуйте чат необмеженою кількістю суперреакцій! Доступно з Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Порадуйте чат необмеженою кількістю суперреакцій!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Доступно з Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Вражайте відвідувачів чата суперреакціями. Отримуйте {refillAmount} на тиждень. Зараз можливість доступна з передплатою [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8405,6 +8421,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Порадуйте відвідувачів чата суперреакціями! Отримайте необмежені суперреакції й інші чудові переваги з [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Необмежені суперреакції!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Натисніть кнопку, щоб додати суперреакцію.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Торкніться кнопки, щоб додати суперреакцію.",
         HOLD_UP: "Стривай-но",
         MASKED_LINK_ALERT_V2_HEADER: "Покинути Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -8763,7 +8783,7 @@
         SEARCH_GROUP_HINT_PINNED:
           "Натисніть, щоб додати фільтр. Пошук в закріплених повідомленнях",
         SEARCH_FILTERS: "Фільтри пошуку",
-        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Результати фільтрування...",
+        SEARCH_FILTER_RESULTS_ELLIPSIZED: "Відфільтрувати результати...",
         SEARCH_FILTER_FROM: "від",
         SEARCH_FILTER_HAS: "має",
         SEARCH_FILTER_BEFORE: "перед",
@@ -9483,6 +9503,10 @@
           "Кольорові теми",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Додайте свою атмосферу до Discord за допомогою унікальних кольорів теми.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Користувацькі піктограми програми",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Оберіть піктограму для мобільної версії й для показу у програмі на ПК.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Переваги",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "Зробіть Discord ще кращим.",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -10131,6 +10155,8 @@
           "Здається, щось пішло не так, і цей код використати не можна. Вибач.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Вибач, але здається, що цей код вже використано.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Схоже, код належить комусь іншому.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Здається, код не спрацював. Перевір, чи правильний код, та спробуй ще раз.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10172,6 +10198,8 @@
           "Цей код вкладено до листа з підтвердженням, який ми вам щойно надіслали.",
         REDEMPTION_CODE: "Код підтвердження",
         PARTNER_PROMOTION_CLAIM: "Далі",
+        PARTNER_PROMOTION_ERROR_TITLE: "О ні!",
+        PARTNER_PROMOTION_ERROR_BODY: "Щось пішло не так.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Невідомий подарунок.",
         REDEEM: "Використати",
         UNLOCK_CODE: "Отримати код",
@@ -11697,6 +11725,7 @@
           "Отримайте цей прикольний бейдж за те, що у вас передплата Discord Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Для колекціонерів. Отримайте цей ексклюзивний значок, доступний лише передплатникам Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Використати",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Прокачайте Discord ще більше",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13203,6 +13232,7 @@
         MOST_POPULAR: "Найпопулярніше",
         SPELLCHECK: "Перевірка правопису",
         ADD_TO_DICTIONARY: "Додати до словника",
+        REMOVE_FROM_DICTIONARY: "Видалити зі словника",
         LANGUAGES: "Мови",
         AUTO_SUGGEST_STICKERS: "Рекомендовані стікери",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13494,6 +13524,7 @@
           "Команда Discord має офіційне повідомлення, яке потребує твоєї уваги.",
         BUILD_OVERRIDE: "Обхід збірки",
         BUILD_OVERRIDE_FOR: "Обхід збірки для {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Задіяти хеш",
         BUILD_OVERRIDE_APPLY: "Застосувати",
         BUILD_OVERRIDE_CLEAR: "Очистити",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Збірка недоступна",
@@ -13697,7 +13728,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Оберіть між {monthlyPrice}/місяць або {yearlyPrice}/рік",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Отримувач одержить:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Подарувати нову передплату Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Подарувати тривалість",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подарувати {count, plural, one {# місяць} other {# міс.}} {nitroTierName}",
@@ -13717,7 +13747,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Розкрити подарунок",
         GIFT_RECIPIENT_INFO: "Кому: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Додати звуковий ефект",
+        GIFT_SELECT_EMOJI: "Додати конфеті емодзі",
         GIFT_SELECT_SOUNDBOARD_ADD: "Додати",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Це буде програватися, коли друг відкриє подарунок",
         NITRO_CONFIRMATION: "Ви отримали Nitro",
         OPENED_GIFT_CONFIRMATION: "Цей подарунок розкрито!",
         NITRO_PERKS: "Ознайомтеся з останніми перевагами Nitro!",
@@ -14356,6 +14390,8 @@
           "Натисни на компас в списку серверів, щоб знайти нові сервери.",
         LOADING_TIP_12:
           "Перетягуй сервери мишею один на одного, щоб створювати з ними папки.",
+        LOADING_TIP_13:
+          "Введіть /gif або /tenor + будь-який текст, щоб знайти відповідні GIF!",
         LOADING_TIP_14:
           "Розкажи, в яку гру граєш, за допомогою налаштувань \xabІгрова активність\xbb.",
         LOADING_TIP_15:
@@ -14384,6 +14420,18 @@
           "Можна поставити /, щоб побачити команди для бота та інші вбудовані команди.",
         LOADING_TIP_27:
           "Ви можете відокремлювати свої слова !!{asterisks}!!, щоби вони мали **напівжирне** накреслення.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "веселого гелловіну не забудьте повернути сервер із того світу",
+        HALLOWEEN_LOADING_TEXT_2:
+          "у-у-у-У-У-У-у лячного вам гелловінського сезону",
+        HALLOWEEN_LOADING_TEXT_3: "Готуємо моторошний рингтон",
+        HALLOWEEN_LOADING_TEXT_4: "Б-у-у-у-У-У-У-У-у",
+        HALLOWEEN_LOADING_TEXT_5: "Усі в голосовому чаті — духи",
+        HALLOWEEN_LOADING_TEXT_6: "Шукаємо привидів на серверах...",
+        HALLOWEEN_LOADING_TEXT_7: "Проймаємося \xabдухом\xbb Гелловіну",
+        HALLOWEEN_LOADING_TEXT_8: "Чи справді зомбі постять лише мертві меми?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "На Discord напали! Стережіться зомбо-Вампуса",
         ACCESSIBILITY_LOADING_TIP_1:
           "Ви можете обрати світлу чи темну тему у налаштуваннях зовнішнього виду.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14414,6 +14462,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Зрозуміло",
         VOICE_PANEL_SHOW_VOICE_USERS: "Показати користувачів голосових каналів",
         VOICE_PANEL_USERS_A11Y_LABEL: "Користувачі голосових каналів",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username} — нічого не чує, нічого не каже",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username} — мікрофон вимкнено",
         VOICE_PANEL_SHOW_EXTRAS: "Показати всіх користувачів",
         VOICE_PANEL_HIDE_EXTRAS: "Згорнути",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -14848,7 +14899,7 @@
           "Видалення прибере інших учасників з цього сервера. Видалені учасники зможуть знову приєднатися до сервера, якщо їх знову запросять. Якщо ввімкнути вимоги до членства на сервері, цей дозвіл дасть можливість схвалювати або відхиляти учасників, що бажають приєднатися до сервера.",
         BAN_MEMBERS: "Блокувати членів",
         ROLE_PERMISSIONS_BAN_MEMBERS_DESCRIPTION:
-          "Дозволяє назавжди блокувати інших учасників цього сервера й видаляти їхню історію повідомлень.",
+          "Дозволяє учасникам назавжди блокувати інших учасників цього сервера й видаляти їхню історію повідомлень.",
         SEND_MESSAGES: "Відправляти повідомлення",
         ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION:
           "Дозволяє учасникам відправляти повідомлення на текстових каналах.",
@@ -15575,6 +15626,8 @@
         FRIEND_FINDER_FRIENDS: "Всі друзі",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Контакти у Discord — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Люди, яких ви можете знати\xa0— {count}",
         CONTACT_SYNC_TITLE: "Знайти друзів",
         CONTACT_SYNC_LANDING_TITLE: "Знайти друзів",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16167,7 +16220,7 @@
         CREATE_EVENT_RECUR_WEEKDAYS:
           "Кожен будній день (з понеділка по п'ятницю)",
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES: "Дивитися майбутні події",
-        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Повторюється {recurrenceRule}",
+        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Повторюється: {recurrenceRule}",
         GUILD_SCHEDULED_EVENT_REPEATS: "Події у серії",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY:
           "Повторюється завжди в: {weekday}",
@@ -16178,12 +16231,13 @@
         GUILD_SCHEDULED_EVENT_REPEATS_YEARLY: "Повторюється кожне {date}",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS:
           "Кожен будній день (з понеділка по п'ятницю)",
-        GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED: "Мене цікавить...",
+        GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_INTERESTED:
+          "Хочу відвідати...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED:
-          "Мене не цікавить...",
+          "Не хочу відвідати...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
           "Усі події в цій серії",
-        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE: "Тільки ця подія",
+        GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE: "Цю подію",
         GUILD_CREATE_STAFF_ONLY_HINT:
           "Тільки працівники Discord можуть приєднатися до цього сервера.",
         EDIT_THIS_EVENT: "Редагувати цю подію",
@@ -16809,11 +16863,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} інших активних гілок",
         THREAD_BROWSER_ARCHIVED_HEADER: "старі гілки",
         THREAD_BROWSER_JOINED_HEADER: "Гілок, до яких ти приєднався: {count}",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "Інших активних гілок: {count}",
         THREAD_BROWSER_ACTIVE_COUNT: "Активні гілки: {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Старі гілки",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "Гілок, до яких ви приєдналися: {count}",
         THREAD_BROWSER_JOINED_COUNT: "Гілки, до яких ви приєдналися: {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} сек. тому",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count} дн. тому",
@@ -16831,8 +16882,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Немає активних гілок.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Немає заархівованих гілок.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Зосередься на спілкуванні в гілці з тимчасовим текстовим каналом.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Зосередьтеся на спілкуванні в гілці — тимчасовому текстовому каналі.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Фільтр налаштувань",
@@ -18965,9 +19014,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Результати пошуку",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Назва",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "У числі учасників з",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Приєднується до Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Ролі",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Сигнали",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "учасники **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "учасники **{pageRange}** із **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Тут показані тільки нещодавні учасники — старі учасники можуть не відображуватися (але незабаром з'являться).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Відображається",
@@ -18981,7 +19033,7 @@
           "Не знайдено учасників за цими критеріями.",
         MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE: "Позначки безпеки учасника",
         MEMBER_SAFETY_TABLE_PROFILE_TOOLTIP: "Профіль",
-        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Відкрити модераторський вигляд",
+        MEMBER_SAFETY_TABLE_MOD_VIEW_TOOLTIP: "Відкрити з доступом модератора",
         MEMBER_SAFETY_TABLE_OVERFLOW_TOOLTIP: "Додаткові параметри",
         MEMBER_SAFETY_UNUSUAL_DM_ACTIVITY: "Підозрілі приватні повідомлення",
         MEMBER_SAFETY_COMMUNICATION_DISABLED: "Тимчасово заблоковані",
@@ -19080,7 +19132,7 @@
         MEMBER_SAFETY_JOINED_DATE_LABEL: "Параметри дати приєднання до сервера",
         MEMBER_SAFETY_ACCOUNT_AGE_LABEL: "Параметри дати реєстрації в Discord",
         MEMBER_SAFETY_JOIN_METHOD_LABEL:
-          "Параметри способу приєднатися до сервера",
+          "Параметри способу приєднання до сервера",
         MEMBER_SAFETY_GUILD_JOINED_AT_DESC:
           "У числі учасників з (спочатку найновіші)",
         MEMBER_SAFETY_GUILD_JOINED_AT_ASC:
@@ -19115,9 +19167,9 @@
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "Усі надані дозволи",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Немає дозволів модераторів",
-        GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Надано",
+        GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Надано:",
         GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Ризиковано) Надано",
+          "(Ризиковано) Надано:",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Дозвіл надано цими ролями",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Найвища роль",
@@ -19255,6 +19307,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Сповіщення про рейди",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Канал сповіщень",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Пусто",
+        GUILD_ANTIRAID_RAID_ALERT: "Сповіщення про рейд",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Захист увімкнений",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "Налаштувати сповіщення",
@@ -19744,7 +19797,7 @@
           "Ви змінюєте налаштування вручну.",
         NOTIFICATION_SETTINGS_USE_PRESET: "Використати пакети налаштувань",
         NOTIF_MIGRATION_SETTINGS_TITLE:
-          "Нові непрочитані повідомлення (експериментальна функція)",
+          "Нове налаштування \xabНепрочитані повідомлення\xbb (експериментальна функція)",
         NOTIF_MIGRATION_SETTINGS_SUBTITLE:
           "Вимикає функцію нових непрочитаних повідомлень, що дозволяє вибрати найважливіші канали на сервері.",
         NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY:
@@ -21750,6 +21803,9 @@
           "Підписники Nitro отримують знижку на цю прикрасу",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} з Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Пора оновити вигляд?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Отакої!",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Гм-м-м, не вдалося завантажити крамницю. Спробуйте пізніше.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Доступно у будь-який час з активною передплатою Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Подивіться на мою гарненьку прикрасу",
@@ -21836,6 +21892,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Додати програму",
         MONETIZATION: "Монетизація",
         GUILD_SETTINGS_MONETIZATION: "Монетизація сервера",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Підписки сервера",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Рекламна сторінка",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "Рівень підписки",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "Продовжити",
@@ -22294,6 +22351,8 @@
           "Змінити команду оплати",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Вибрати команду оплати",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Змінити команду, якій будуть надсилатися платежі від монетизації сервера.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Зміна команди може вплинути на відповідність вимогам для виплат",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23220,7 +23279,7 @@
           "Це максимальна частота кадрів у ваших відеонарізках.",
         CLIPS_CROP_START: "Обрізати початок",
         CLIPS_CROP_END: "Обрізати кінець",
-        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Позначити відеонарізку як спойлер",
+        CLIPS_ATTACHMENT_UTILITIES_SPOILER: "Відеонарізка-спойлер",
         CLIPS_ATTACHMENT_UTILITIES_REMOVE: "Видалити відеонарізку",
         CLIPS_USER_EDUCATION_ENABLED_BODY:
           "Тепер ви можете робити відеонарізки безпосередньо в грі, натискаючи $[!!{keybind}!!](keybindHook), або визначити власну гарячу клавішу.",
@@ -23233,6 +23292,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Керувати налаштуваннями відеонарізок",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Дізнатися більше",
+        SOUND_INCOMING_RING_HALLOWEEN: "Геловінська мелодія вхідного дзвінка",
+        CUSTOM_SOUNDS: "Користувацькі звуки",
+        ENABLE_PHONE_INTEGRATION:
+          "Для використання необхідно увімкнути інтеграцію з програмою \xabТелефон\xbb.",
         GUILD_SHOP_CHANNEL_LABEL: "Магазин сервера",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Доступні продукти",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "Картка продукту: {productName}",
@@ -23338,6 +23401,9 @@
           "Дізнайтеся більше про політику щодо: {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Правила Discord стосуються всіх",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT: "Перейти до стану акаунту",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Перейти до стану акаунту",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Дивитися стан акаунту",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Повторити",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23414,6 +23480,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Закрити",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Ми помилилися? [Дайте знати](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Позначити як прийнятне для всіх",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS: "Дякуємо за інформацію!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
           "Позначити як прийнятне для всіх",
@@ -23447,7 +23514,7 @@
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "Ми зберігаємо заблоковані медіафайли лише деякий час. Оскільки цей медіафайл було завантажено доволі давно, позначити його як прийнятний для всіх більше не можна.",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "Ця людина не зможе надсилати вам повідомлення. Якщо думаєте, що своїми діями ця людина може нашкодити комусь, будь ласка, подайте скаргу до Discord.",
+          "Цей користувач не зможе надсилати вам повідомлення. Якщо думаєте, що своїми діями ця людина може нашкодити комусь, будь ласка, подайте скаргу до Discord.",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Заблокувати й поскаржитися",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Закрити",
         SAFETY_TOOLS_BUTTON_LABEL: "Відкрити інструменти безпеки",
@@ -23471,7 +23538,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Зробити перерву",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Слухайте Lofi Beats із Вампусом.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Розслабтеся",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Розслабитися",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Поради з безпеки",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Сповіщення про загрози",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23554,7 +23621,7 @@
         STATUS_POPOUT_SET_CUSTOM: "Установити користувацьку активність",
         STATUS_POPOUT_EDIT_CUSTOM: "Редагувати користувацьку активність",
         STATUS_POPOUT_CLEAR_STATUS: "Очистити статус",
-        SET_STATUS_MODAL_TITLE: "Установити користувацьку голосову активність",
+        SET_STATUS_MODAL_TITLE: "Установити користувацький голосовий статус",
         SET_STATUS_MODAL_SUBTITLE:
           "Ми збережемо ваші останні твори й автоматично видалимо їх через деякий час.",
         SET_STATUS_MODAL_CTA: "Підтвердити",
@@ -23572,7 +23639,7 @@
         CUSTOM_HANG_STATUS: "Користувацький статус",
         CUSTOM_HANG_STATUS_CTA: "Давайте сюди!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Що робите?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Прогорнути статус",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Запозичити статус",
         HANG_STATUS_VC_ROW_ADD: "Додати статус",
         HANG_STATUS_HELP:
           "Покажіть друзям, чим ви займаєтеся, встановивши статус активності.",
@@ -23649,7 +23716,7 @@
         POLL_SUBMIT_VOTE: "Голосувати",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} голос} other {{count} голос.}}",
-        POLL_ALREADY_VOTED: "Голос надіслано",
+        POLL_ALREADY_VOTED: "Ви проголосували",
         POLL_EDIT_VOTE: "Змінити голос",
         POLL_REMOVE_VOTE: "Видалити голос",
         POLL_ANSWER_VOTED_ARIA: "Ви проголосували за цю відповідь",
@@ -23683,10 +23750,10 @@
           "Тип відповіді на опитування",
         CREATE_POLL_LAYOUT_DEFAULT:
           "Текстові відповіді з додатковим медіаконтентом",
-        CREATE_POLL_LAYOUT_IMAGE: "Тільки медіаконтент",
+        CREATE_POLL_LAYOUT_IMAGE: "Відповіді тільки з медіафайлами",
         CREATE_POLL_ANSWERS_FIELDSET_LABEL: "Відповіді",
         CREATE_POLL_ADD_IMAGE_ARIA:
-          "Додати медіаконтент, відповісти {answerNumber}",
+          "Додати медіаконтент, відповідь {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Оновити медіаконтент {imageName}, відповісти {answerNumber}",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Відповісти {answerNumber}",
@@ -23802,7 +23869,7 @@
         QUESTS_HIDE_THIS: "Приховати",
         QUESTS_FIND_QUEST:
           "Ви зможете переглянути це знову, якщо перейдете в Користувацькі налаштування > Склад подарунків",
-        QUESTS_CLAIM_BY: "Отримати до {expirationDate}.",
+        QUESTS_CLAIM_BY: "Отримайте до {expirationDate}.",
         QUESTS_AVAILABLE_UNTIL: "Доступно до {expirationDate}.",
         QUESTS_COMPLETION_PROGRESS_NOT_STARTED: "За вашим сигналом...",
         QUESTS_COMPLETION_PROGRESS_STARTED: "Так тримати!",
@@ -23819,7 +23886,7 @@
           "Дізнайтеся більше про квести в Discord і як керувати налаштуваннями конфіденційності [тут]({privacySettingsUrl}).",
         QUESTS_DISCLOSURE_LOCATION: "Місце розташування",
         QUESTS_DISCLOSURE_AGE: "Вік",
-        QUESTS_DISCLOSURE_ACTIVITY: "Активність: геймінг",
+        QUESTS_DISCLOSURE_ACTIVITY: "Діяльність: актуальні ігри",
         QUESTS_EMBED_INVALID_HEADING: "Це був квест, але...",
         QUESTS_EMBED_INVALID_BODY:
           "Щось пішло не так. Дивіться нові доступні квести в переліку подарунків!",
@@ -23827,7 +23894,7 @@
           "З відстеженням прогресу вашого завдання виникла проблема.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Запропонувати учасникам каналу поспілкуватися в чаті після певного періоду неактивності.",
-        PROMPT_CAMERA_LOADING_TITLE: "На що зиркаєте?",
+        PROMPT_CAMERA_LOADING_TITLE: "Посміхніться!",
         PROMPT_CAMERA_ERROR:
           "Із фотографуванням виникла проблема, спробуйте знову",
         DEADCHAT_ACTION_CAMERA: "Мій перегляд",
@@ -23847,7 +23914,7 @@
         STOREFRONT_SUBSCRIBE_FOR: "Підписатися за {rate}",
         STOREFRONT_SUBSCRIPTION_BENEFITS: "Привілеї передплати",
         STOREFRONT_PURCHASE_FOR: "Купити за {price}",
-        STOREFRONT_ONE_TIME_PURCHASE: "Одноразова покупка",
+        STOREFRONT_ONE_TIME_PURCHASE: "Разова покупка",
         QUIET_MODE_DISABLED: "Режим концентрації вимкнено",
         QUIET_MODE_ENABLED: "Режим концентрації ввімкнено",
         QUIET_MODE_DND: "Режим концентрації (\xabНе турбувати\xbb) ввімкнено",
@@ -23858,9 +23925,12 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord не показуватиме сповіщення в програмі, на робочому столі й не відтворюватиме звуки повідомлень.",
         QUIET_MODE_DISABLED_BY: "Відключено в режимі концентрації",
+        FOCUS_MODE_TITLE: "Режим концентрації (БЕТА)",
+        FOCUS_MODE_BADGE_ON: "УВІМК.",
+        FOCUS_MODE_BADGE_OFF: "ВИМК.",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "У вас досить довго був увімкнений режим \xabНе турбувати\xbb. Бажаєте замість нього ввімкнути режим концентрації?",
-        ACTIVITY_REACTION_REPLY_TITLE: "Чат про: {activity}",
+        ACTIVITY_REACTION_REPLY_TITLE: "Тема чату: {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_BASE:
           "Картка активності, що показує @{username} і {activity}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING:

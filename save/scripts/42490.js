@@ -667,6 +667,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Recente",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Boți pe acest server",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Popular",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Nu există condiții necesare. Poți trimite comanda sau poți adăuga o opțiune mai jos",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Selectează o opțiune mai jos",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Nu ai permisiunile necesare pentru a rula comenzi \xeen acest canal",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Deschide comanda",
@@ -971,7 +975,7 @@
         EMBEDDED_ACTIVITIES_LAUNCH: "Lansează",
         EMBEDDED_ACTIVITIES_JOIN: "Alătură-te",
         EMBEDDED_ACTIVITIES_JOINED: "Te-ai alăturat",
-        EMBEDDED_ACTIVITIES_ENDED: "\xcencheiate",
+        EMBEDDED_ACTIVITIES_ENDED: "\xcencheiată",
         EMBEDDED_ACTIVITIES_RETURN_TO_ACTIVITY: "Revino la activitate",
         EMBEDDED_ACTIVITIES_PEOPLE_ARE_IN_AN_ACTIVITY:
           "{n, plural, one {1 persoană este} other {{n} persoane sunt}} \xeentr-o activitate",
@@ -1273,7 +1277,6 @@
           "[!!{username}!!](usernameOnClick) a \xeenceput o [activitate](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "{username} a \xeenceput o activitate",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Poate mai t\xe2rziu",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Cum a mers !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1433,9 +1436,6 @@
           "\xcencearcă pentru o perioadă macabru de limitată de timp.\nAi Nitro? Invocă SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Modul de testare este momentan activ pentru **!!{applicationName}!!**. Aplicația ta ar trebui să apară ca opțiune \xeen meniul de butoane al activităților.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Activitate nouă! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "\xcencearcă un joc \xeen care desenezi și ghicești ce vezi cu prietenii tăi. Gratuit p\xe2nă pe 29 martie.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Avertisment",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Desktop Beta)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3492,7 +3492,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE:
           "Indicatoare pentru mesaje necitite",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
-          "Numele canalului evidențiat și o jumătate de punct",
+          "Numele canalului evidențiat și o jumătate de bulină",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Notificări",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE:
           "Notificare push și sunet ping",
@@ -3502,8 +3502,7 @@
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "anunțuri",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_2: "general",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_3: "aleator",
-        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR:
-          "Rătăcitor singuratic",
+        NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_AUTHOR: "Lone Wanderer",
         NOTIFICATION_SETTINGS_CHANNELS_CUSTOM_MENU_ARIA_LABEL:
           "Setările de notificare personalizate pentru canal",
         FORM_LABEL_MOBILE_NOTIFICATIONS_LABEL: "Activează toate notificările",
@@ -3541,6 +3540,8 @@
           "Nu vei primi notificări de la canalele amuțite, iar acestea vor fi marcate cu gri \xeen lista ta de canale. Setarea are efect pe toate dispozitivele tale.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Nu vei primi notificări de la categoriile amuțite, iar acestea vor fi marcate cu gri \xeen lista de canale. Setarea are efect pe toate dispozitivele tale.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Server-ul tău este \xeen prezent $[**amuțit**](mutedHook). Nu poți să modifici setările și nici să primești notificări de pe acest canal p\xe2nă nu dezamuțești serverul.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Notificările server-ului sunt setate la opțiunea $[**nimic**](notificationHook). Nu vei primi nicio notificare de la acest canal, \xeensă poți suprascrie setările aici.",
         CHANNEL_OR_GUILD_MUTED: "Acest canal sau server este momentan amuțit.",
@@ -4400,6 +4401,8 @@
         SEARCH_EMOJIS: "Caută emojiuri",
         SEARCH_FOR_EMOJI: "Găsește emoji-ul perfect",
         SEARCH_FOR_STICKER: "Găsește stickerul perfect",
+        SEARCH_FOR_REACTION: "Găsește reacția perfectă",
+        SEARCH_FOR_SUPER_REACTION: "Găsește super-reacția perfectă",
         NO_EMOJI_SEARCH_RESULTS: "Niciun emoji nu corespunde căutării tale",
         EMOJI_CATEGORY_PACK: "Pachet {packName}",
         EMOJI_CATEGORY_RECENT: "Folosite des",
@@ -5346,6 +5349,7 @@
           "A apărut o problemă la citirea fișierelor-jurnal din sistem. \xcencearcă din nou.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Ceva nu a mers bine și nu am reușit să-ți \xeencărcăm fișierele de depanare. \xcencearcă din nou.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Partajează jurnalele de notificări push",
         FORM_CHECKBOX_AEC_DUMP: "\xcenregistrare audio de diagnosticare",
         FORM_HELP_AEC_DUMP:
           "\xcenregistrarea audio de diagnosticare se folosește la analiza problemelor audio. Ultimele cinci minute se salvează \xeen folder-ul modulului vocal.",
@@ -5406,6 +5410,7 @@
         APP_ICON_SUNSET: "Sunset Avenue",
         APP_ICON_HOLO_WAVES: "Valuri curcubeu",
         APP_ICON_PIRATE: "La raport, matelotule",
+        APP_ICON_PIRATE_1: "Arrr",
         APP_ICON_PIRATE_2: "Să trăiți, căpitane",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Arrr",
@@ -5491,6 +5496,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# persoană} other {# persoane}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Deschide acțiunile pentru apel vocal",
+        TURN_CAMERA_ON_A11Y_LABEL: "Pornește camera",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Oprește camera",
         IN_GAME_VOICE_SETTINGS: "Setări voce \xeen cadrul jocului",
         VIDEO_SETTINGS: "Setări video",
         TEXT: "Text",
@@ -5701,6 +5708,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Voce conectată",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Video conectat",
         CONNECTION_STATUS_RTC_CONNECTING: "Conectare RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Se verifică ruta",
         CONNECTION_STATUS_DTLS_CONNECTING: "Se conectează DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Nicio rută",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC deconectat",
@@ -6084,8 +6092,8 @@
         A11Y_ROLE_IMAGE_BUTTON: "imagine, buton",
         A11Y_LOADING_STARTED: "Se \xeencarcă",
         A11Y_LOADING_FINISHED: "\xcencărcare \xeencheiată",
-        A11Y_CHECKBOX_CHECKED: "bifată",
-        A11Y_CHECKBOX_UNCHECKED: "nebifată",
+        A11Y_CHECKBOX_CHECKED: "căsuță bifată",
+        A11Y_CHECKBOX_UNCHECKED: "căsuță nebifată",
         DND_ITEM_PICKED_UP: "S-a ridicat !!{itemName}!!",
         DND_ITEM_DROPPED: "Articol fixat",
         DND_DRAG_CANCELED: "S-a oprit glisarea",
@@ -6186,7 +6194,7 @@
         COPY_ID_COMMAND: "Copiază ID-ul comenzii",
         COPY_ID_EMOJI: "Copiază ID-ul emojiului",
         COPY_ID_EVENT: "Copiază ID-ul evenimentului",
-        COPY_ID_EVENT_RECURRENCE: "Copiază ID-ul evenimentului recurent",
+        COPY_ID_EVENT_RECURRENCE: "Copiază ID-ul recurenței",
         COPY_ID_GUILD: "Copiază ID-ul serverului",
         COPY_ID_MESSAGE: "Copiază ID-ul mesajului",
         COPY_ID_ROLE: "Copiază ID-ul rolului",
@@ -8364,6 +8372,12 @@
           "Animă discuțiile cu super-reacții. Disponibile acum cu [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Animă discuțiile cu super-reacții nelimitate. Disponibile acum cu [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Animă discuțiile cu super-reacții nelimitate! Disponibile acum cu Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Animă discuțiile cu super-reacții nelimitate!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Disponibile acum cu Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Animă discuțiile cu super-reacții. Obține {refillAmount} pe săptăm\xe2nă prin [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8486,6 +8500,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Animă discuțiile cu super-reacții! Primește super-reacții nelimitate și alte avantaje grozave cu [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Super-reacții nelimitate!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Dă clic pe buton pentru a adăuga o super-reacție.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Atinge butonul pentru a adăuga o super-reacție.",
         HOLD_UP: "Stai puțin",
         MASKED_LINK_ALERT_V2_HEADER: "Pleci de pe Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9567,6 +9585,10 @@
           "Culori pentru teme",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Bucură-te de Discord \xeen stilul tău cu culori unice pentru teme.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Pictograme personalizate pentru aplicații",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Alege o pictogramă pentru mobil sau pentru desktop care să meargă la fix cu stilul tău.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Avantajele",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "\xcembunătățește-ți experiența Discord",
@@ -10223,6 +10245,8 @@
           "Se pare că ceva nu a funcționat corect și nu poți folosi acest cod. Ne pare rău.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Ne pare rău, se pare că acest cod a fost valorificat deja.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Se pare că acest cod \xeei aparține altcuiva.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Codul nu a funcționat. Asigură-te că ai codul corect, apoi \xeencearcă din nou.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10264,6 +10288,8 @@
           "Acest cod este notat \xeen e-mail-ul de confirmare pe care tocmai ți l-am trimis.",
         REDEMPTION_CODE: "Cod de răscumpărare",
         PARTNER_PROMOTION_CLAIM: "Următorul",
+        PARTNER_PROMOTION_ERROR_TITLE: "O, nu!",
+        PARTNER_PROMOTION_ERROR_BODY: "Ceva nu a mers bine.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Cadou necunoscut.",
         REDEEM: "Valorifică",
         UNLOCK_CODE: "Deblochează codul",
@@ -11768,7 +11794,8 @@
           "Bucură-te de un Discord \xeembunătățit",
         NITRO_HOME_SHOW_UP_HOW_YOU_WANT: "Prezintă-te așa cum \xeeți dorești",
         NITRO_HOME_ALL_YOUR_NITRO_PERKS: "Toate avantajele tale Nitro",
-        NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO: "Cu Basic și Nitro.",
+        NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO:
+          "Incluse cu Basic și Nitro.",
         NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO: "Numai cu Nitro.",
         NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI:
           "Alege dintre toate emojiurile tale personalizate din orice conversație.",
@@ -11790,6 +11817,7 @@
           "\xcen calitate de abonat Nitro, primești această insignă grozavă.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pentru colecționari. Obține această insignă exclusivă Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Valorifică",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Energizează-ți experiența Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13301,6 +13329,7 @@
         MOST_POPULAR: "Cel mai popular",
         SPELLCHECK: "Corector ortografic",
         ADD_TO_DICTIONARY: "Adaugă \xeen dicționar",
+        REMOVE_FROM_DICTIONARY: "Elimină din dicționar",
         LANGUAGES: "Limbi",
         AUTO_SUGGEST_STICKERS: "Sugestii de stickere",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13599,6 +13628,7 @@
           "Un mesaj oficial de la echipa Discord are nevoie de atenția ta.",
         BUILD_OVERRIDE: "Suprascriere build",
         BUILD_OVERRIDE_FOR: "Suprascriere build pentru {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Salvează și trimite hash",
         BUILD_OVERRIDE_APPLY: "Aplică",
         BUILD_OVERRIDE_CLEAR: "Șterge",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Build indisponibil",
@@ -13801,7 +13831,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Poți alege \xeentre {monthlyPrice}/lună și {yearlyPrice}/an",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Destinatarul va primi:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Dăruiește un abonament Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Durata cadoului",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Dăruiește {count, plural, one {# lună} other {# luni}} de {nitroTierName}",
@@ -13821,7 +13850,11 @@
         GIFT_DURATION: "1 {timeInterval} de Nitro",
         GIFT_OPEN_PROMPT: "Deschide cadoul",
         GIFT_RECIPIENT_INFO: "Către: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Adaugă efect sonor",
+        GIFT_SELECT_EMOJI: "Adaugă confetti emoji",
         GIFT_SELECT_SOUNDBOARD_ADD: "Adaugă",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Se va reda la deschiderea cadoului",
         NITRO_CONFIRMATION: "Ai primit Nitro",
         OPENED_GIFT_CONFIRMATION: "Ai deschis acest cadou!",
         NITRO_PERKS: "\xcencearcă-ți noile avantaje Nitro!",
@@ -14470,6 +14503,8 @@
           "Poți da clic pe busola din lista de servere pentru a găsi noi servere.",
         LOADING_TIP_12:
           "Poți glisa și fixa serverele unele peste altele pentru a crea foldere cu servere.",
+        LOADING_TIP_13:
+          "Poți tasta /gif sau /tenor + orice pentru a găsi GIF-uri pe tema respectivă!",
         LOADING_TIP_14:
           "Poți arăta jocul pe care \xeel joci cu ajutorul setărilor Activitate joc.",
         LOADING_TIP_15:
@@ -14498,6 +14533,20 @@
           "Poți tasta / pentru a vedea comenzile pentru boți și alte comenzi \xeencorporate",
         LOADING_TIP_27:
           "Tastează !!{asterisks}!! \xeen jurul cuvintelor ca să le faci **\xeengroșate**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "distracție plăcută de halloween și nu uita să-ți scoli serverul din morți",
+        HALLOWEEN_LOADING_TEXT_2:
+          "baaAaaUuuu sperăm să te b\xe2ntuie distracția de halloween",
+        HALLOWEEN_LOADING_TEXT_3: "Creăm un ton de apel \xeenfricoșător",
+        HALLOWEEN_LOADING_TEXT_4: "BaaaAAaaaaUuUU",
+        HALLOWEEN_LOADING_TEXT_5: "\xcen chat-ul vocal, toți sunt fantome",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Verificăm starea de b\xe2ntuire a serverelor tale (probabilitate fantome: minimală)",
+        HALLOWEEN_LOADING_TEXT_7: "Intrăm \xeen „spiritul” Halloweenului",
+        HALLOWEEN_LOADING_TEXT_8:
+          "Oare zombii nu postează dec\xe2t meme moarte demult?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord suferă mutații! Atenție la Wumpus zombi",
         ACCESSIBILITY_LOADING_TIP_1:
           "Alege tema luminoasă sau \xeentunecată din setările de Aspect.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14528,6 +14577,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Am \xeențeles",
         VOICE_PANEL_SHOW_VOICE_USERS: "Arată utilizatorii voce",
         VOICE_PANEL_USERS_A11Y_LABEL: "Utilizatori voce",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, sunet dezactivat și microfon oprit",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, microfon oprit",
         VOICE_PANEL_SHOW_EXTRAS: "Arată toți utilizatorii",
         VOICE_PANEL_HIDE_EXTRAS: "Minimizează",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15676,6 +15728,8 @@
         FRIEND_FINDER_FRIENDS: "Toți prietenii",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Contacte pe Discord — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Persoane pe care s-ar putea să le cunoști — {count}",
         CONTACT_SYNC_TITLE: "Găsește-ți prietenii",
         CONTACT_SYNC_LANDING_TITLE: "Găsește-ți prietenii",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16277,7 +16331,7 @@
           "\xcen fiecare zi lucrătoare (de luni p\xe2nă vineri)",
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES:
           "Vezi evenimentele viitoare",
-        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Se repetă {recurrenceRule}",
+        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Repeats {recurrenceRule}",
         GUILD_SCHEDULED_EVENT_REPEATS: "Evenimente \xeen serie",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY:
           "Se repetă \xeen fiecare {weekday}",
@@ -16924,11 +16978,8 @@
         THREAD_BROWSER_OTHER_HEADER: "\xcencă {count} fire active",
         THREAD_BROWSER_ARCHIVED_HEADER: "fire mai vechi",
         THREAD_BROWSER_JOINED_HEADER: "{count} fir(e) la care te-ai alăturat",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "\xcencă {count} fire active",
         THREAD_BROWSER_ACTIVE_COUNT: "Fire active – {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Fire mai vechi",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "{count} fire la care te-ai alăturat",
         THREAD_BROWSER_JOINED_COUNT: "Fire la care te-ai alăturat – {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "acum {count}s",
         THREAD_BROWSER_TIMESTAMP_DAYS: "acum {count} z",
@@ -16945,8 +16996,6 @@
         THREAD_BROWSER_EMPTY_STATE_HEADER: "Nu există fire.",
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Nu există fire active.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER: "Nu există fire arhivate.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Concentrează-te pe o singură conversație cu ajutorul firelor, canale de text temporare.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Concentrează-te pe o singură conversație cu ajutorul firelor, care sunt canale de text temporare.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Setări filtrare",
@@ -19086,9 +19135,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Rezultatele căutării",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Nume",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Membru \xeencep\xe2nd cu",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "S-a \xeenregistrat pe Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Roluri",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Semnale",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "membri din **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "membri **{pageRange}** din **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Se afișează doar membrii cei mai recenți – cei mai vechi s-ar putea să nu fie afișați (dar vor fi \xeen cur\xe2nd).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Se afișează",
@@ -19240,7 +19292,7 @@
           "Nu există permisiuni pentru moderatori",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Oferită de",
         GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riscant) Oferită de",
+          "(Riscantă) Oferită de",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permisiune oferită de aceste roluri",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Cel mai important rol",
@@ -19387,6 +19439,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Alerte raiduri",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Canal de alerte",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Niciunul",
+        GUILD_ANTIRAID_RAID_ALERT: "Alertă raid",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Protecție activată",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION: "Configurează alerte",
         GUILD_ANTIRAID_SAFETY_SETUP_IN_AUTOMOD_ACTION:
@@ -21882,6 +21935,9 @@
           "Abonații la Nitro beneficiază de o reducere la această decorațiune",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} cu Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Ești gata pentru un look nou?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Ei bine, e cam jenant.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Hmm, n-am reușit să \xeencărcăm magazinul. Revino mai t\xe2rziu.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Folosește-le oric\xe2nd cu un abonament Nitro activ.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Uite ce decorație frumoasă am",
@@ -21969,6 +22025,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Adaugă aplicația",
         MONETIZATION: "Monetizare",
         GUILD_SETTINGS_MONETIZATION: "Monetizarea serverului",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Abonamente la server",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Pagină de promovare",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Nivel de abonament",
@@ -22425,6 +22482,8 @@
           "Schimbă echipa de plată",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Selectează echipa de plată",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Schimbă echipa către care se vor trimite plățile pentru monetizarea serverului.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Schimbarea echipei \xeeți poate afecta eligibilitatea pentru plăți",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23371,6 +23430,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Gestionează setările clipurilor",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Află mai multe",
+        SOUND_INCOMING_RING_HALLOWEEN: "Sonerie de Halloween",
+        CUSTOM_SOUNDS: "Sunete personalizate",
+        ENABLE_PHONE_INTEGRATION:
+          "Activează integrarea cu aplicația pentru iPhone pentru a o putea folosi.",
         GUILD_SHOP_CHANNEL_LABEL: "Magazinul serverului",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Produse disponibile",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23476,6 +23539,10 @@
           "Află despre politica noastră privind {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Regulile Discord se aplică pentru toată lumea",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Mergi la reputația contului",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Mergi la reputația contului",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3: "Vezi reputația contului",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Re\xeencearcă",
         SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE:
@@ -23553,6 +23620,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Ignoră",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Am făcut o greșeală? [Dă-ne de știre](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Marchează ca nefiind sensibil",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "\xceți mulțumim că ne-ai spus!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23656,7 +23724,7 @@
           "\xcenapoi la conversație",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT:
           "Wumpus \xeen timp ce se bucură de muzică.",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Raportează",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Raportează utilizatorul",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Raportat",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Contactează Crisis Text Line",
@@ -23708,9 +23776,9 @@
         HANG_STATUS: "Stare discuții de grup",
         HANG_STATUS_LOCATION: "\xeen !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Status personalizat",
-        CUSTOM_HANG_STATUS_CTA: "Hai aici!",
+        CUSTOM_HANG_STATUS_CTA: "Hai și tu!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Ce faci?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Trage starea",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Fură starea",
         HANG_STATUS_VC_ROW_ADD: "Adaugă o stare",
         HANG_STATUS_HELP:
           "Arată-le prietenilor tăi cu ce te ocupi set\xe2ndu-ți statusul activității.",
@@ -23823,12 +23891,12 @@
           "Stilul de răspuns al sondajului",
         CREATE_POLL_LAYOUT_DEFAULT:
           "Răspunsuri text cu conținut media opțional",
-        CREATE_POLL_LAYOUT_IMAGE: "Răspunsuri doar cu conținut media",
+        CREATE_POLL_LAYOUT_IMAGE: "Doar răspunsuri cu conținut media",
         CREATE_POLL_ANSWERS_FIELDSET_LABEL: "Răspunsuri",
         CREATE_POLL_ADD_IMAGE_ARIA:
-          "Adaugă conținut media, răspunsul {answerNumber}",
+          "Adăugare răspuns cu conținut media {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
-          "Actualizează conținutul media, {imageName}, răspunsul {answerNumber}",
+          "Actualizare conținut media, {imageName}, răspunsul {answerNumber}",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Răspunsul {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Scrie răspunsul",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Adaugă alt răspuns",
@@ -23853,21 +23921,22 @@
         CREATE_POLL_ADD_IMAGE: "Adaugă fișiere media",
         CREATE_POLL_REPLACE_IMAGE: "\xcenlocuiește conținutul media",
         CREATE_POLL_POLL_ANSWER: "Răspuns la sondaj",
-        CREATE_POLL_EDIT_ALT_TEXT: "Editează descrierea imaginii (Text Alt)",
+        CREATE_POLL_EDIT_ALT_TEXT:
+          "Editează descrierea imaginii (text alternativ)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "Editează descrierea imaginii",
         CREATE_POLL_ADD_ALT_ARIA_LABEL:
-          "Adăugare text alt, răspunsul {answerNumber}",
+          "Adăugare text alternativ, răspunsul {answerNumber}",
         CREATE_POLL_EDIT_ALT_ARIA_LABEL:
-          "Editare text alt, răspunsul {answerNumber}",
+          "Editare text alternativ, răspunsul {answerNumber}",
         CREATE_POLL_ALT_TEXT_LABEL: "Descriere imagine (Alt Text)",
-        CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Text Alt:",
+        CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Text alternativ:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Selectare conținut media",
         POLL_END_EARLY: "\xcencheie sondajul acum",
         POLL_END_EARLY_CONFIRMATION_TITLE: "\xcenchei sondajul acum?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
           "Această acțiune va \xeencheia imediat sondajul și va dezvălui rezultatele.",
         POLL_SENT_NOTIFICATION: "[sondaj] !!{question}!!",
-        SUMMONED: "Invocare realizată cu succes!",
+        SUMMONED: "Summoned!",
         WAVED_AT_USER: "\uD83D\uDC4B I-ai făcut cu m\xe2na lui !!{username}!!",
         WAVED_AT_YOU: "\uD83D\uDC4B !!{username}!! ți-a făcut cu m\xe2na",
         YOU_ARE_IN_CHANNEL: "Ești \xeen $[](channelHook)",
@@ -23998,6 +24067,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord nu va afișa notificări \xeen aplicație și pe desktop și nici nu va reda sunetele mesajelor.",
         QUIET_MODE_DISABLED_BY: "Opțiunea este dezactivată de modul Silențios",
+        FOCUS_MODE_TITLE: "Modul Silențios (BETA)",
+        FOCUS_MODE_BADGE_ON: "PORNIT",
+        FOCUS_MODE_BADGE_OFF: "OPRIT",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Folosești des modul „Nu deranja”. Ai prefera să activezi modul Silențios?",
         ACTIVITY_REACTION_REPLY_TITLE: "Discută despre {activity}",

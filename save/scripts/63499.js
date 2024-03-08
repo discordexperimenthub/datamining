@@ -671,6 +671,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Недавнее",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Боты на этом сервере",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Популярные",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Отсутствуют обязательные параметры. Вы можете отправить команду или добавить параметр ниже",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Выберите подходящий параметр ниже",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "У вас нет прав на запуск команд в этом канале",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN:
@@ -1267,7 +1271,6 @@
           "Пользователь [!!{username}!!](usernameOnClick) начал [активность](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "Пользователь {username} начал активность",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Может, позже",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Как прошла активность !!{applicationName}!!?",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1422,9 +1425,6 @@
           "Доступен в течение жутко ограниченного времени.\nЕсть Nitro? Призовите SpellCast!",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "В настоящее время для **!!{applicationName}!!** активирован режим тестирования. Ваше приложение должно появиться в виде варианта в меню кнопки активностей.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Новая активность! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Играйте с друзьями: рисуйте и угадывайте, что нарисовали другие. Бесплатно до 29\xa0марта.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Внимание",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(в бета-версии для компьютера)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -3531,6 +3531,8 @@
           "Вы не будете получать уведомления от заглушённых каналов. В списке они будут закрашены серым. Эти настройки действуют на всех ваших устройствах.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Вы не будете получать уведомления от заглушённых категорий. В списке каналов они будут закрашены серым. Эти настройки действуют на всех ваших устройствах.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Ваш сервер $[**заглушен**](mutedHook). Вы не будете получать уведомления от этого канала и не сможете изменить его настройки, пока не включите оповещения на этом сервере.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Вы выбрали следующие параметры уведомлений сервера: $[**ничего**](notificationHook). Вы не будете получать уведомления от этого канала, но вы всегда можете включить их здесь.",
         CHANNEL_OR_GUILD_MUTED:
@@ -4381,6 +4383,8 @@
         SEARCH_EMOJIS: "Искать эмодзи",
         SEARCH_FOR_EMOJI: "Найдите идеальный эмодзи",
         SEARCH_FOR_STICKER: "Найдите идеальный стикер",
+        SEARCH_FOR_REACTION: "Найдите идеальную реакцию",
+        SEARCH_FOR_SUPER_REACTION: "Найдите идеальную суперреакцию",
         NO_EMOJI_SEARCH_RESULTS: "Эмодзи по вашему запросу не найдены",
         EMOJI_CATEGORY_PACK: "Набор \xab{packName}\xbb",
         EMOJI_CATEGORY_RECENT: "Часто используемые",
@@ -5312,6 +5316,7 @@
           "Во время считывания файлов отладки из системы что-то пошло не так. Попробуйте ещё раз.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Что-то пошло не так, и нам не удалось загрузить файлы отладки. Попробуйте ещё раз.",
+        SHARE_PUSH_NOTIFICATION_LOGS: "Поделиться журналами Push-уведомлений",
         FORM_CHECKBOX_AEC_DUMP: "Запись звука для диагностики",
         FORM_HELP_AEC_DUMP:
           "Запись звука для диагностики используется для анализа проблем со звуком. Последние пять минут голосовой записи сохраняется в папку голосового модуля.",
@@ -5370,6 +5375,7 @@
         APP_ICON_SUNSET: "Закатная улица",
         APP_ICON_HOLO_WAVES: "Призматические волны",
         APP_ICON_PIRATE: "Корсар",
+        APP_ICON_PIRATE_1: "Три тысячи чер-р-р-тей",
         APP_ICON_PIRATE_2: "Есть, капитан",
         APP_ICON_PIRATE_3: "Капитан Discord",
         APP_ICON_PIRATE_4: "Полундра",
@@ -5455,6 +5461,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# человек} few {# человека} other {# человек}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Открыть действия для голосового звонка",
+        TURN_CAMERA_ON_A11Y_LABEL: "Включить камеру",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Отключить камеру",
         IN_GAME_VOICE_SETTINGS: "Настройки голоса в игре",
         VIDEO_SETTINGS: "Настройки видео",
         TEXT: "Текст",
@@ -5666,6 +5674,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Голосовая связь подключена",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Видео подключено",
         CONNECTION_STATUS_RTC_CONNECTING: "Подключение к RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Проверка маршрута",
         CONNECTION_STATUS_DTLS_CONNECTING: "Подключение DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Не установлен маршрут",
         CONNECTION_STATUS_RTC_DISCONNECTED: "RTC отключено",
@@ -8293,6 +8302,12 @@
           "Оформите подписку [{planName}](onClick) и\xa0наведите суету в\xa0чате с\xa0помощью суперреакций.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Оформите подписку [{planName}](onClick) и\xa0наведите суету в\xa0чате с\xa0помощью неограниченных суперреакций.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Оформите подписку Nitro и\xa0наведите суету в\xa0чате с\xa0помощью неограниченных суперреакций!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Наведите суету в\xa0чате с\xa0помощью неограниченных суперреакций!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Доступно с подпиской Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Наведите суету в\xa0чате с\xa0помощью суперреакций! Получайте по\xa0{refillAmount} из них каждую неделю с\xa0подпиской [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8410,6 +8425,10 @@
         SUPER_REACTIONS_UPSELL_UNLIMITED_BODY:
           "Наведите суету в\xa0чате, отправляя суперреакции! Получите неограниченные суперреакции и\xa0другие классные бонусы с\xa0подпиской [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE: "Неограниченные суперреакции!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Щелкните по кнопке, чтобы добавить суперреакцию.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Коснитесь кнопки, чтобы добавить суперреакцию.",
         HOLD_UP: "Погодите-ка",
         MASKED_LINK_ALERT_V2_HEADER: "Вы покидаете Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9484,6 +9503,10 @@
           "Цветовые темы",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Преобразите Discord с помощью уникальных цветов темы.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Пользовательские значки приложения",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Выберите значки приложения для компьютера и мобильного устройства по своему вкусу.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Бонусы",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING: "Сделайте Discord ещё лучше.",
         PREMIUM_MARKETING_SURFACE_HERO_SUBHEADING:
@@ -10132,6 +10155,8 @@
           "Похоже, что-то пошло не так. К сожалению, вы не можете использовать этот код.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Ой! Похоже, что этот код уже был активирован.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Похоже, что этот код принадлежит другому пользователю.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Похоже, что этот код не сработал. Убедитесь, что ввели верный код, и попробуйте ещё раз.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10173,6 +10198,8 @@
           "Код можно найти в только что отправленном вам письме с подтверждением.",
         REDEMPTION_CODE: "Код активации",
         PARTNER_PROMOTION_CLAIM: "Далее",
+        PARTNER_PROMOTION_ERROR_TITLE: "Ой-ой!",
+        PARTNER_PROMOTION_ERROR_BODY: "Похоже, что что-то пошло не так.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Неизвестный подарок.",
         REDEEM: "Активировать",
         UNLOCK_CODE: "Получить код",
@@ -11703,6 +11730,7 @@
           "Получите этот прикольный значок за то, что у вас подписка Discord Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Для коллекционеров. Получите эксклюзивный значок подписчика Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Активировать",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Сделайте Discord ещё круче!",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13215,6 +13243,7 @@
         MOST_POPULAR: "Самое популярное",
         SPELLCHECK: "Проверка правописания",
         ADD_TO_DICTIONARY: "Добавить в словарь",
+        REMOVE_FROM_DICTIONARY: "Удалить из словаря",
         LANGUAGES: "Языки",
         AUTO_SUGGEST_STICKERS: "Предлагать стикеры",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13509,6 +13538,7 @@
           "Вы получили официальное сообщение от команды Discord, которое требует вашего внимания.",
         BUILD_OVERRIDE: "Переопределение сборки",
         BUILD_OVERRIDE_FOR: "Переопределение сборки для {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Хэширование коммита",
         BUILD_OVERRIDE_APPLY: "Применить",
         BUILD_OVERRIDE_CLEAR: "Очистить",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Сборка недоступна",
@@ -13712,7 +13742,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Выберите подписку за {monthlyPrice} в месяц или {yearlyPrice} в год",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Ваш адресат получит:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Подписка Nitro в подарок",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Длительность подарка",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName} на {count, plural, one {# месяц} few {# месяца} other {# месяцев}}.",
@@ -13732,7 +13761,11 @@
         GIFT_DURATION: "1 {timeInterval} подписки Nitro",
         GIFT_OPEN_PROMPT: "Открыть подарок",
         GIFT_RECIPIENT_INFO: "Кому: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Добавить звуковой эффект",
+        GIFT_SELECT_EMOJI: "Добавить конфетти из эмодзи",
         GIFT_SELECT_SOUNDBOARD_ADD: "Добавить",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Этот объект будет воспроизводиться, когда ваш друг откроет подарок",
         NITRO_CONFIRMATION: "Вы получили подписку Nitro",
         OPENED_GIFT_CONFIRMATION: "Вы открыли этот подарок!",
         NITRO_PERKS: "Ознакомьтесь с новыми бонусами Nitro!",
@@ -14375,6 +14408,8 @@
           "Чтобы найти новые серверы, щёлкните по компасу в списке серверов.",
         LOADING_TIP_12:
           "Перетаскивайте серверы друг на друга, чтобы создать папки серверов.",
+        LOADING_TIP_13:
+          "Введите /gif или /tenor в сочетании с любым словом, чтобы найти гифку по заданной теме!",
         LOADING_TIP_14:
           "Расскажите всем о том, во что играете, с помощью опции \xabИгровая активность\xbb.",
         LOADING_TIP_15:
@@ -14402,6 +14437,20 @@
           "Введите /, чтобы просмотреть бот-команды и другие встроенные команды",
         LOADING_TIP_27:
           "Поставьте вокруг своих слов !!{asterisks}!!, чтобы написать их **жирным** шрифтом.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "веселого Хэллоуина не забудьте воскресить ваш сервер",
+        HALLOWEEN_LOADING_TEXT_2: "У-у-у-у-у-у-у, страшенного вам Хэллоуина",
+        HALLOWEEN_LOADING_TEXT_3: "Миксуем леденящий душу рингтон",
+        HALLOWEEN_LOADING_TEXT_4: "Б-у-у-у-у",
+        HALLOWEEN_LOADING_TEXT_5:
+          "В голосовом чате каждый\xa0— бестелесный призрак",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Проверяем, что на вашем сервере не водятся привидения (мы почти уверены)",
+        HALLOWEEN_LOADING_TEXT_7: "Проникаемся духом Хэллоуина",
+        HALLOWEEN_LOADING_TEXT_8:
+          "А правда, что зомби могут постить только мертвые мемы?",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Discord заражен! Смотрите не попадитесь зомби-Вампусу",
         ACCESSIBILITY_LOADING_TIP_1:
           "Вы можете выбрать светлую или тёмную тему в настройках внешнего вида.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14433,6 +14482,10 @@
         VOICE_PANEL_SHOW_VOICE_USERS:
           "Показать пользователей голосового канала",
         VOICE_PANEL_USERS_A11Y_LABEL: "Пользователи голосового канала",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "Пользователю {username} отключен звук и микрофон",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL:
+          "Пользователю {username} отключен микрофон",
         VOICE_PANEL_SHOW_EXTRAS: "Показать всех пользователей",
         VOICE_PANEL_HIDE_EXTRAS: "Свернуть",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -15584,6 +15637,8 @@
         FRIEND_FINDER_FRIENDS: "Все друзья",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Контакты в Discord: {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Люди, которых вы можете знать\xa0— {count}",
         CONTACT_SYNC_TITLE: "Найдите своих друзей",
         CONTACT_SYNC_LANDING_TITLE: "Найдите своих друзей",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16823,10 +16878,8 @@
         THREAD_BROWSER_OTHER_HEADER: "Другие активные ветки: {count}",
         THREAD_BROWSER_ARCHIVED_HEADER: "старые ветки",
         THREAD_BROWSER_JOINED_HEADER: "Участие в ветках: {count}",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "Другие активные ветки: {count}",
         THREAD_BROWSER_ACTIVE_COUNT: "Активные ветки: {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Старые ветки",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER: "Участвуют в ветках: {count}",
         THREAD_BROWSER_JOINED_COUNT: "Участие в ветках: {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count} сек. назад",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}\xa0д. назад",
@@ -16844,8 +16897,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Нет активных веток.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Нет заархивированных веток.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Не отвлекайтесь от беседы с помощью веток\xa0— временных текстовых каналов.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Не отвлекайтесь от беседы с помощью веток\xa0— временных текстовых каналов.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Настройки фильтра",
@@ -18996,9 +19047,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Результаты поиска",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Имя",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "В числе участников с",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "В Discord с",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Роли",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Сигналы",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "из **{count}** участников",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "участники **{pageRange}** из **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Здесь видны только новые участники. Давние участники могут не отображаться, но скоро их будет видно.",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Отображается",
@@ -19288,6 +19342,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Оповещения о рейдах",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Канал оповещений",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Отсутствует",
+        GUILD_ANTIRAID_RAID_ALERT: "Оповещение о рейде",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION: "Защита включена",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
           "Настроить оповещения",
@@ -21784,6 +21839,9 @@
           "На это украшение действует скидка для подписчиков Nitro",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} с подпиской Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Готовы сменить образ?",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Как-то неловко получается.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Хм-м, нам не удалось загрузить магазин. Зайдите попозже.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Доступно в любое время с активной подпиской Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Смотрите, какое у меня украшение",
@@ -21871,6 +21929,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Добавить приложение",
         MONETIZATION: "Монетизация",
         GUILD_SETTINGS_MONETIZATION: "Монетизация сервера",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Подписки на сервер",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Рекламная страница",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE: "Уровень подписки",
         GUILD_ROLE_SUBSCRIPTION_CREATE_TIER_CONTINUE: "Продолжить",
@@ -22328,6 +22387,8 @@
           "Изменить команду — получателя платежей",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Выбрать команду — получателя платежей",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Измените команду, которой будут отправляться платежи за монетизацию сервера.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Смена команды может повлиять на получение ваших выплат",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23262,6 +23323,10 @@
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS:
           "Управление настройками клипов",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Подробнее",
+        SOUND_INCOMING_RING_HALLOWEEN: "Хэллоуинский входящий звонок",
+        CUSTOM_SOUNDS: "Пользовательские звуки",
+        ENABLE_PHONE_INTEGRATION:
+          "Чтобы воспользоваться данной функцией, включите интеграцию с приложением для телефона.",
         GUILD_SHOP_CHANNEL_LABEL: "Магазин сервера",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Доступные продукты",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL: "Карточка продукта: {productName}",
@@ -23368,6 +23433,10 @@
           "{classificationDescription}: узнайте больше",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Правила Discord действуют для всех",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Перейти к репутации учетной записи",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Перейти к репутации учетной записи",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Просмотреть статус учётной записи",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Повторить",
@@ -23449,6 +23518,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Закрыть",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Считаете, что мы ошиблись? [Свяжитесь с нами](handleFalsePositiveHook).",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Отменить как обычный контент",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Спасибо, что дали нам знать!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23603,12 +23673,12 @@
         STATUS_IN_TRANSIT: "В реале",
         STATUS_WATCHING: "Кое-что смотрю",
         STATUS_NONE: "Статус не установлен",
-        HANG_STATUS: "Установить статус",
+        HANG_STATUS: "Статус состояния",
         HANG_STATUS_LOCATION: "в !!{guildName}!!",
         CUSTOM_HANG_STATUS: "Пользовательский статус",
         CUSTOM_HANG_STATUS_CTA: "Переходите сюда!",
         CUSTOM_HANG_STATUS_PLACEHOLDER: "Чем занимаетесь?",
-        CUSTOM_HANGS_STATUS_COPY_CTA: "Сменить статус",
+        CUSTOM_HANGS_STATUS_COPY_CTA: "Позаимствовать статус",
         HANG_STATUS_VC_ROW_ADD: "Добавить статус",
         HANG_STATUS_HELP:
           "Расскажите друзьям, чем вы заняты, установив статус.",
@@ -23751,15 +23821,15 @@
         CREATE_POLL_REPLACE_IMAGE: "Заменить медиафайл",
         CREATE_POLL_POLL_ANSWER: "Ответ на вопрос",
         CREATE_POLL_EDIT_ALT_TEXT:
-          "Редактировать описание изображения (alt-текст)",
+          "Редактировать описание изображения (замещающий текст)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION:
           "Редактировать описание изображения",
         CREATE_POLL_ADD_ALT_ARIA_LABEL:
-          "Добавить alt-текст, ответ {answerNumber}",
+          "Добавить замещающий текст, ответ {answerNumber}",
         CREATE_POLL_EDIT_ALT_ARIA_LABEL:
-          "Редактировать alt-текст, ответ {answerNumber}",
+          "Редактировать замещающий текст, ответ {answerNumber}",
         CREATE_POLL_ALT_TEXT_LABEL: "Описание изображения (alt-текст)",
-        CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt-текст:",
+        CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Замещающий текст:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Выбрать медиафайл",
         POLL_END_EARLY: "Завершить опрос сейчас",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Завершить опрос сейчас?",
@@ -23839,7 +23909,7 @@
         QUESTS_HIDE_THIS: "Скрыть",
         QUESTS_FIND_QUEST:
           "Вы можете найти его снова, открыв \xabНастройки пользователя\xbb > \xabСклад подарков\xbb",
-        QUESTS_CLAIM_BY: "Получите до {expirationDate}.",
+        QUESTS_CLAIM_BY: "Заберите до {expirationDate}.",
         QUESTS_AVAILABLE_UNTIL: "Доступно до {expirationDate}.",
         QUESTS_COMPLETION_PROGRESS_NOT_STARTED: "По вашему сигналу...",
         QUESTS_COMPLETION_PROGRESS_STARTED: "Так держать!",
@@ -23895,6 +23965,9 @@
         QUIET_MODE_SETTINGS_DESCRIPTION:
           "Discord уберёт уведомления и звуки входящих сообщений в приложении и на рабочем столе.",
         QUIET_MODE_DISABLED_BY: "Отключено в режиме концентрации",
+        FOCUS_MODE_TITLE: "Режим концентрации (БЕТА)",
+        FOCUS_MODE_BADGE_ON: "ВКЛ",
+        FOCUS_MODE_BADGE_OFF: "ВЫКЛ",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Вы уже давно используете функцию \xabНе беспокоить\xbb. Хотите попробовать режим концентрации?",
         ACTIVITY_REACTION_REPLY_TITLE: "Тема чата: {activity}",

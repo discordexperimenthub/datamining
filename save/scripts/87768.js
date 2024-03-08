@@ -672,6 +672,10 @@
         APP_LAUNCHER_HOME_RECENT_COMMANDS_HEADER: "Πρόσφατες",
         APP_LAUNCHER_HOME_SERVER_APPS_HEADER: "Bot σε αυτόν τον διακομιστή",
         APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR: "Δημοφιλή",
+        APP_LAUNCHER_NO_REQUIRED_OPTIONS_CALLOUT:
+          "Δεν απαιτείται κάτι. Μπορείς να στείλεις την εντολή ή να προσθέσεις μια επιλογή παρακάτω",
+        APP_LAUNCHER_COMMAND_OPTIONAL_OPTIONS_LIST_HEADER:
+          "Κάνε μια επιλογή παρακάτω",
         APP_LAUNCHER_NO_PERMISSIONS_STATE_BODY:
           "Δεν έχεις άδειες εκτέλεσης εντολών σε αυτό το κανάλι",
         APP_LAUNCHER_PREVIOUSLY_EXECUTED_COMMAND_OPEN: "Άνοιγμα εντολής",
@@ -1266,7 +1270,7 @@
           "Γεια! Αυτή η αγορά είναι για μια επαναλαμβανόμενη συνδρομή, που σημαίνει ότι θα ανανεωθεί με **{rate}** στις **{renewalDate, date, medium}**. Μπορείς να ακυρώσεις οποιαδήποτε στιγμή πηγαίνοντας στις Ρυθμίσεις χρήστη > Συνδρομές. Οι προηγούμενες χρεώσεις δεν θα επιστραφούν, εκτός αν απαιτείται από τον νόμο. Αυτή η αγορά σού προσφέρεται από τον προγραμματιστή αυτής της Δραστηριότητας και μπορείς να έχεις πρόσβαση σε αυτή και να τη χρησιμοποιείς μόνο όταν βρίσκεσαι σε αυτή τη Δραστηριότητα.",
         EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL:
           "Ελαχιστοποίηση δραστηριότητας",
-        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "Σε ανάπτυξη",
+        EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "Σε στάδιο ανάπτυξης",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_ENDED:
           "Η δραστηριότητα έχει τελειώσει.",
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE:
@@ -1278,7 +1282,7 @@
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
           "Η δραστηριότητα ξεκίνησε",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION:
-          "Δεν έχεις άδεια να συνδεθείς σε αυτό το κανάλι ομιλίας.",
+          "Δεν έχεις άδεια να συνδεθείς σε αυτό το Κανάλι ομιλίας.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Δεν μπορείς να συμμετάσχεις σε Δραστηριότητες σε αυτό το κανάλι.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
@@ -1291,7 +1295,6 @@
           "Ο χρήστης [!!{username}!!](usernameOnClick) ξεκίνησε μια [δραστηριότητα](activityTextOnClick)",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_NOTIFICATION:
           "Ο χρήστης {username} ξεκίνησε μια δραστηριότητα",
-        KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Ίσως αργότερα",
         ACTIVITY_REPORT_POST_ACTIVITY_HEADER:
           "Πώς πήγε το !!{applicationName}!!;",
         ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE:
@@ -1450,9 +1453,6 @@
           "Δοκίμασέ το για τρομακτικά περιορισμένο χρόνο.\nΈχεις Nitro; Κάλεσε το SpellCast.",
         NOTICE_EMBEDDED_APPLICATION_TEST_MODE:
           "Η δοκιμαστική λειτουργία είναι προς το παρόν ενεργή για το **!!{applicationName}!!**. Η εφαρμογή σου πρέπει να εμφανίζεται ως επιλογή στο μενού του κουμπιού δραστηριοτήτων.",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_TITLE: "Νέα δραστηριότητα! Gartic Phone",
-        EMBEDDED_ACTIVITY_GARTIC_PHONE_DESCRIPTION:
-          "Δοκίμασε ένα παιχνίδι όπου ζωγραφίζεις και μαντεύεις τι βλέπεις μαζί με τους φίλους σου. Δωρεάν έως τις 29 Μαρτίου.",
         EMBEDDED_ACTIVITES_THERMAL_ALERT_HEADER: "Προειδοποίηση",
         VOICE_CHANNEL_EFFECTS_NOTICE_BETA_TAG: "(Beta για υπολογιστή)",
         VOICE_CHANNEL_EFFECTS_NOTICE_TITLE_2:
@@ -1543,7 +1543,7 @@
         FAVORITES_GO_TO_ORIGINAL_GUILD: "Μετάβαση στον αρχικό διακομιστή",
         FAVORITES_SET_NICKNAME_DESCRIPTION:
           "Αυτό το όνομα θα φαίνεται μόνο στα αγαπημένα σου.",
-        FAVORITE_ADDED: "Προστέθηκε στα αγαπημένα!",
+        FAVORITE_ADDED: "Προστέθηκε στα Αγαπημένα!",
         FAVORITES_RENAME_CATEGORY: "Μετονομασία κατηγορίας",
         FAVORITES_ADD_A_CHANNEL: "Προσθήκη καναλιού",
         AFK_SETTINGS: "Ρυθμίσεις αδράνειας",
@@ -3538,7 +3538,7 @@
         NOTIFICATION_SETTINGS_ADVANCED: "Προχωρημένο",
         NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES: "Όλα τα μηνύματα",
         NOTIFICATION_SETTINGS_PRESETS_NONE: "Κανένα",
-        NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Μη διαβασμένα εμβλήματα",
+        NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Κουκίδες μη αναγνωσμένων",
         NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE:
           "Επισημασμένο όνομα καναλιού και μισή τελεία",
         NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Ειδοποιήσεις",
@@ -3589,6 +3589,8 @@
           "Δεν θα λαμβάνεις ειδοποιήσεις από κανάλια με σίγαση, τα οποία θα εμφανίζονται με γκρι χρώμα στη λίστα καναλιών σου. Αυτή η ρύθμιση ισχύει για όλες σου τις συσκευές.",
         FORM_LABEL_MOBILE_CATEGORY_OVERRIDE_MUTE:
           "Δεν θα λαμβάνεις ειδοποιήσεις από τις κατηγορίες σε σίγαση, οι οποίες θα εμφανίζονται με γκρι χρώμα στη λίστα καναλιών σου. Αυτή η ρύθμιση εφαρμόζεται σε όλες τις συσκευές σου.",
+        FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MUTED:
+          "Ο διακομιστής σου βρίσκεται $[**σε σίγαση**](mutedHook). Δεν μπορείς να λαμβάνεις ειδοποιήσεις από αυτό το κανάλι ή να αλλάξεις τις ρυθμίσεις μέχρι να καταργήσεις τη σίγαση από αυτόν τον διακομιστή.",
         FORM_LABEL_MOBILE_CHANNEL_OVERRIDE_GUILD_MESSAGE_NOTIFICATION:
           "Έχεις ρυθμίσει τον διακομιστή σου ώστε να μην λαμβάνεις $[**καθόλου ειδοποιήσεις**](notificationHook). Δεν θα λαμβάνεις ειδοποιήσεις από αυτό το κανάλι αλλά μπορείς παρακάμψεις εδώ.",
         CHANNEL_OR_GUILD_MUTED:
@@ -3730,9 +3732,9 @@
         NOTIFICATION_SETTINGS_MUTE_BANNER_CHANNEL_TITLE:
           "Το κανάλι είναι προς το παρόν σε σίγαση",
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE:
-          "Δεν βλέπεις ειδοποιήσεις ή μη αναγνωσμένα εμβλήματα.",
+          "Δεν βλέπεις ειδοποιήσεις ή κουκίδες μη αναγνωσμένων.",
         NOTIFICATION_SETTINGS_MUTE_BANNER_SUBTITLE_UNTIL:
-          "Δεν βλέπεις ειδοποιήσεις ή μη αναγνωσμένα εμβλήματα έως τις !!{endTime}!!",
+          "Δεν βλέπεις ειδοποιήσεις ή κουκίδες μη αναγνωσμένων έως τις !!{endTime}!!",
         CONTACT_SYNC_FAILED_ALERT_TITLE: "Ωχ, κάτι πήγε στραβά.",
         CONTACT_SYNC_FAILED_ALERT_MESSAGE:
           "Κάτι πήγε στραβά κατά τον συγχρονισμό των επαφών σου. Περίμενε λίγο και προσπάθησε ξανά.",
@@ -4378,7 +4380,7 @@
         NOTIFICATION_EMBED_BUTTON:
           "Ήταν χρήσιμη αυτή η ειδοποίηση; [Θέλουμε να μάθουμε!](handleMessage)",
         NOTIFICATION_EMBED_BUTTON_2:
-          "[Επισήμανση ρυθμίσεων ειδοποιήσεων](handleMessage)",
+          "[Ρυθμίσεις ειδοποιήσεων Επισημάνσεων](handleMessage)",
         NOTIFICATION_REPORT_TITLE: "Ήταν χρήσιμη αυτή η ειδοποίηση;",
         NOTIFICATION_REPORT_FEEDBACK: "Υπόβαλε σχόλια για αυτή την ειδοποίηση",
         NOTIFICATION_REPORT_TEXT:
@@ -4454,6 +4456,8 @@
         SEARCH_EMOJIS: "Αναζήτηση emoji",
         SEARCH_FOR_EMOJI: "Βρες το τέλειο emoji",
         SEARCH_FOR_STICKER: "Βρες το τέλειο αυτοκόλλητο",
+        SEARCH_FOR_REACTION: "Βρες την τέλεια αντίδραση",
+        SEARCH_FOR_SUPER_REACTION: "Βρες την τέλεια Σούπερ αντίδραση",
         NO_EMOJI_SEARCH_RESULTS:
           "Δεν υπάρχει emoji που να ταιριάζει με την αναζήτησή σου",
         EMOJI_CATEGORY_PACK: "Πακέτο {packName}",
@@ -5406,6 +5410,8 @@
           "Κάτι πήγε στραβά κατά την ανάγνωση των αρχείων καταγραφής από το σύστημά σου. Προσπάθησε ξανά.",
         UPLOAD_DEBUG_LOG_FAILURE:
           "Κάτι πήγε στραβά και δεν ήταν δυνατή η μεταφόρτωση των αρχείων αποσφαλμάτωσης. Προσπάθησε ξανά.",
+        SHARE_PUSH_NOTIFICATION_LOGS:
+          "Κοινοποίηση καταγραφών ειδοποιήσεων push",
         FORM_CHECKBOX_AEC_DUMP: "Διαγνωστική καταγραφή ήχου",
         FORM_HELP_AEC_DUMP:
           "Η διαγνωστική καταγραφή ήχου χρησιμοποιείται για την ανάλυση προβλημάτων ήχου. Τα τελευταία πέντε λεπτά ομιλίας αποθηκεύονται στον φάκελο μονάδων φωνής.",
@@ -5466,6 +5472,7 @@
         APP_ICON_SUNSET: "Ηλιοβασίλεμα",
         APP_ICON_HOLO_WAVES: "Πρισματικά Κύματα",
         APP_ICON_PIRATE: "Ναύτης",
+        APP_ICON_PIRATE_1: "Γκρρ",
         APP_ICON_PIRATE_2: "Άι άι",
         APP_ICON_PIRATE_3: "Discarrrd",
         APP_ICON_PIRATE_4: "Αρρρ",
@@ -5552,6 +5559,8 @@
         VOICE_CALL_MEMBER_LIST_TITLE:
           "{count, plural, =1 {# Ατόμου} other {# Ατόμων}}",
         VOICE_CALL_ACTION_A11Y_HINT: "Άνοιγμα ενεργειών φωνητικής κλήσης",
+        TURN_CAMERA_ON_A11Y_LABEL: "Ενεργοποίηση κάμερας",
+        TURN_CAMERA_OFF_A11Y_LABEL: "Απενεργοποίηση κάμερας",
         IN_GAME_VOICE_SETTINGS: "Ρυθμίσεις φωνής εντός του παιχνιδιού",
         VIDEO_SETTINGS: "Ρυθμίσεις βίντεο",
         TEXT: "Κείμενο",
@@ -5765,6 +5774,7 @@
         CONNECTION_STATUS_VOICE_CONNECTED: "Η φωνή συνδέθηκε",
         CONNECTION_STATUS_VIDEO_CONNECTED: "Η βιντεοκλήση συνδέθηκε",
         CONNECTION_STATUS_RTC_CONNECTING: "Γίνεται σύνδεση RTC",
+        CONNECTION_STATUS_ICE_CHECKING: "Γίνεται έλεγχος της διαδρομής",
         CONNECTION_STATUS_DTLS_CONNECTING: "Σύνδεση DTLS",
         CONNECTION_STATUS_NO_ROUTE: "Καμία διαδρομή",
         CONNECTION_STATUS_RTC_DISCONNECTED: "Το RTC αποσυνδέθηκε",
@@ -8461,6 +8471,12 @@
           "Ανέβασε τη γραπτή συνομιλία με τις Σούπερ αντιδράσεις. Τώρα διαθέσιμες με το [{planName}](onClick).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED:
           "Ανέβασε τη γραπτή συνομιλία με απεριόριστες Σούπερ αντιδράσεις. Τώρα διαθέσιμες με το [{planName}](onClick).",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2:
+          "Ανέβασε τη γραπτή συνομιλία με απεριόριστες Σούπερ αντιδράσεις! Τώρα διαθέσιμο με το Nitro.",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_A:
+          "Ανέβασε τη γραπτή συνομιλία με απεριόριστες Σούπερ αντιδράσεις!",
+        SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_UNLIMITED_V2_B:
+          "Τώρα διαθέσιμο με το Nitro.",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION:
           "Ανέβασε τη γραπτή συνομιλία με τις Σούπερ αντιδράσεις. Απόκτησε {refillAmount} την εβδομάδα, διαθέσιμες με το [Nitro]({nitroLink}).",
         SUPER_REACTIONS_LAUNCH_COACHMARK_NITRO_DESCRIPTION_DAILY:
@@ -8584,6 +8600,10 @@
           "Ανέβασε τη γραπτή συνομιλία με τις Σούπερ αντιδράσεις! Απόκτησε απεριόριστες Σούπερ αντιδράσεις και άλλα ωραία προνόμια με το [Nitro](onClick).",
         SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE:
           "Απεριόριστες Σούπερ αντιδράσεις!",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2:
+          "Κάνε κλικ στο κουμπί για να προσθέσεις μια Σούπερ αντίδραση.",
+        SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_MOBILE_V2:
+          "Πάτησε το κουμπί για να προσθέσεις μια Σούπερ αντίδραση.",
         HOLD_UP: "Για βάστα λίγο",
         MASKED_LINK_ALERT_V2_HEADER: "Φεύγεις από το Discord",
         MASKED_LINK_ALERT_V2_WARNING_WEBSITE:
@@ -9626,7 +9646,7 @@
         CHURN_DISCOUNT_CONFIRM_DESCRIPTION:
           "Η έκπτωση {percent, number}% θα τελειώσει {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}} μετά την αγορά. Μετά θα χρεώνεσαι **{price}** τον μήνα.",
         CHURN_DISCOUNT_CONFIRM_LEGALESE:
-          "Κάνοντας κλικ στην επιλογή “Επιβεβαίωση έκπτωσης”, συμφωνείς να συνεχίσεις την επαναλαμβανόμενη Nitro συνδρομή σου. Θα χρεωθείς {discountedPrice}/{billingPeriod} για {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}}, και μετά {fullPrice}/{billingPeriod} μέχρι να την ακυρώσεις. Ακύρωσε ανά πάσα στιγμή από τη σελίδα των Ρυθμίσεων. Ισχύουν οι [Όροι Παροχής Υπηρεσιών επί Πληρωμή]({helpdeskArticle}).",
+          "Κάνοντας κλικ στην επιλογή “Επιβεβαίωση έκπτωσης”, συμφωνείς να συνεχίσεις την επαναλαμβανόμενη Nitro συνδρομή σου. Θα χρεώνεσαι {discountedPrice}/{billingPeriod} για {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}}, και μετά {fullPrice}/{billingPeriod} μέχρι να την ακυρώσεις. Ακύρωσε ανά πάσα στιγμή από τη σελίδα των Ρυθμίσεων. Ισχύουν οι [Όροι Παροχής Υπηρεσιών επί Πληρωμή]({helpdeskArticle}).",
         CHURN_DISCOUNT_NEVERMIND: "Δεν πειράζει",
         CHURN_DISCOUNT_CONFIRM_DISCOUNT: "Επιβεβαίωση έκπτωσης",
         CHURN_DISCOUNT_REDEMPTION_ERROR: "Κάτι πήγε στραβά. Προσπάθησε ξανά.",
@@ -9673,6 +9693,10 @@
           "Χρωματικά θέματα",
         PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION:
           "Πρόσθεσε το δικό σου vibe στο Discord με μοναδικά χρωματικά θέματα.",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE:
+          "Προσαρμοσμένα εικονίδια εφαρμογών",
+        PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION:
+          "Επίλεξε ένα εικονίδιο κινητού και ένα εντός της εφαρμογής για υπολογιστή που να ταιριάζει με το στυλ σου.",
         PREMIUM_MARKETING_SURFACE_PERKS_TITLE: "Προνόμια",
         PREMIUM_MARKETING_SURFACE_HERO_HEADING:
           "Αναβάθμισε την εμπειρία σου στο Discord",
@@ -10335,6 +10359,8 @@
           "Φαίνεται ότι παρουσιάστηκε κάποιο πρόβλημα και δεν μπορείς να χρησιμοποιήσεις αυτόν τον κωδικό. Λυπούμαστε γι’ αυτό.",
         PROMOTION_ERROR_CLAIMED_BODY:
           "Συγγνώμη, φαίνεται πως αυτός ο κωδικός έχει ήδη εξαργυρωθεί.",
+        PROMOTION_ERROR_NOT_YOUR_CODE_BODY:
+          "Φαίνεται ότι αυτός ο κωδικός ανήκει σε κάποιον άλλον.",
         PROMOTION_ERROR_NO_CODE_BODY:
           "Φαίνεται ότι αυτός ο κωδικός δεν λειτούργησε. Βεβαιώσου ότι έχεις τον σωστό κωδικό και προσπάθησε ξανά.",
         PROMOTION_ERROR_NOT_VERIFIED_BODY:
@@ -10376,6 +10402,8 @@
           "Αυτός ο κωδικός περιλαμβάνεται στο email επιβεβαίωσης που μόλις σου στείλαμε.",
         REDEMPTION_CODE: "Κωδικός εξαργύρωσης",
         PARTNER_PROMOTION_CLAIM: "Επόμενο",
+        PARTNER_PROMOTION_ERROR_TITLE: "Ωχ!",
+        PARTNER_PROMOTION_ERROR_BODY: "Φαίνεται πως κάτι πήγε στραβά.",
         PARTNER_PROMOTION_UNKNOWN_GIFT_ERROR_BODY: "Άγνωστο δώρο.",
         REDEEM: "Εξαργύρωση",
         UNLOCK_CODE: "Ξεκλείδωσε κωδικό",
@@ -10456,7 +10484,7 @@
           "Χρειάζεσαι κι άλλο λόγο για να δοκιμάσεις το Nitro;",
         PREMIUM_NITRO_DROP_2023_CLIENT_THEMES_FEATURE_HEADER: "Νέα θέματα",
         PREMIUM_NITRO_DROP_2023_CLIENT_THEMES_FEATURE_SUBHEADER:
-          "Φέρε το δικό σου vibe στο Discord με νέα θέματα.",
+          "Πρόσθεσε το δικό σου vibe στο Discord με νέα θέματα.",
         PREMIUM_NITRO_DROP_2023_AVATAR_DECO_FEATURE_HEADER:
           "Διακοσμήσεις άβαταρ",
         PREMIUM_NITRO_DROP_2023_AVATAR_DECO_FEATURE_SUBHEADER:
@@ -11890,14 +11918,14 @@
         NITRO_HOME_SHOW_UP_HOW_YOU_WANT: "Διάλεξε την εμφάνισή σου",
         NITRO_HOME_ALL_YOUR_NITRO_PERKS: "Όλα τα προνόμια Nitro σου",
         NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO:
-          "Περιλαμβάνεται με το Basic και το Nitro.",
+          "Περιλαμβάνονται με το Basic και το Nitro.",
         NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO: "Μόνο με το Nitro.",
         NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI:
           "Διάλεξε από όλα τα προσαρμοσμένα emoji σου σε οποιαδήποτε συνομιλία.",
         NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE: "Προσαρμοσμένοι ήχοι παντού",
         NITRO_HOME_CARD_USE_CUSTOM_SOUNDS:
           "Χρησιμοποίησε προσαρμοσμένους ήχους soundboard σε όλα τα κανάλια ομιλίας.",
-        NITRO_HOME_CARD_UPLOAD_POWER: "Νιώσε τη δύναμη μεταφόρτωσης.",
+        NITRO_HOME_CARD_UPLOAD_POWER: "Νιώσε τη δύναμη της μεταφόρτωσης.",
         NITRO_HOME_STREAM_UP_TO_4K: "Έως και 4Κ και 60FPS.",
         NITRO_HOME_UPLOAD_ALL_YOU_WANT:
           "Ανέβασε ό,τι θες, με μεγαλύτερο μέγεθος μεταφόρτωσης έως 500MB.",
@@ -11911,6 +11939,7 @@
           "Πάρε αυτό το φοβερό έμβλημα ως συνδρομητής Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Για τους συλλέκτες. Απόκτησε αυτό το αποκλειστικό έμβλημα Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Εξαργύρωση",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Ενίσχυσε το Discord σου",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -13434,6 +13463,7 @@
         MOST_POPULAR: "Δημοφιλέστερο",
         SPELLCHECK: "Ορθογραφικός έλεγχος",
         ADD_TO_DICTIONARY: "Προσθήκη στο λεξικό",
+        REMOVE_FROM_DICTIONARY: "Αφαίρεση από το λεξικό",
         LANGUAGES: "Γλώσσες",
         AUTO_SUGGEST_STICKERS: "Προτάσεις αυτοκόλλητων",
         AUTO_SUGGEST_STICKERS_DESCRIPTION:
@@ -13734,6 +13764,7 @@
         BUILD_OVERRIDE: "Παράκαμψη εσωτερικής έκδοσης",
         BUILD_OVERRIDE_FOR:
           "Παράκαμψη εσωτερικής έκδοσης για τον/την {releaseChannel}",
+        BUILD_OVERRIDE_ID: "Υποβολή κατακερματισμού",
         BUILD_OVERRIDE_APPLY: "Κάνε αίτηση",
         BUILD_OVERRIDE_CLEAR: "Διαγραφή",
         BUILD_OVERRIDE_ISNT_AVAILABLE: "Η εσωτερική έκδοση δεν είναι διαθέσιμη",
@@ -13937,7 +13968,6 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Επίλεξε από {monthlyPrice}/μήνα ή {yearlyPrice}/έτος",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Ο παραλήπτης θα λάβει:",
-        MOBILE_CUSTOM_GIFT_TITLE: "Κάνε δώρο μια συνδρομή Nitro",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Διάρκεια δώρου",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Κάνε δώρο {count, plural, one {# μήνα} other {# μήνες}} της βαθμίδας {nitroTierName}",
@@ -13957,7 +13987,11 @@
         GIFT_DURATION: "1 {timeInterval} Nitro",
         GIFT_OPEN_PROMPT: "Άνοιγμα δώρου",
         GIFT_RECIPIENT_INFO: "Προς: {recipientDisplayName}",
+        GIFT_SELECT_SOUND: "Προσθήκη ηχητικού εφέ",
+        GIFT_SELECT_EMOJI: "Προσθήκη κομφετί emoji",
         GIFT_SELECT_SOUNDBOARD_ADD: "Προσθήκη",
+        GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION:
+          "Θα παίζει όταν ο φίλος σου ανοίξει το δώρο του",
         NITRO_CONFIRMATION: "Έχεις Nitro",
         OPENED_GIFT_CONFIRMATION: "Έχεις ανοίξει αυτό το δώρο!",
         NITRO_PERKS: "Δες τα νέα σου προνόμια Nitro!",
@@ -14610,6 +14644,8 @@
           "Κάνε κλικ στην πυξίδα στη λίστα διακομιστών σου για να βρεις νέους διακομιστές.",
         LOADING_TIP_12:
           "Σύρε τους διακομιστές τον έναν πάνω στον άλλον για να δημιουργήσεις φακέλους διακομιστών.",
+        LOADING_TIP_13:
+          "Πληκτρολόγησε /gif ή /tenor + οτιδήποτε για να βρεις ένα GIF σχετικά με αυτό το θέμα!",
         LOADING_TIP_14:
           "Μοιράσου ό,τι παίζεις χρησιμοποιώντας τις ρυθμίσεις δραστηριότητας παιχνιδιού.",
         LOADING_TIP_15:
@@ -14638,6 +14674,19 @@
           "Μπορείς να πληκτρολογήσεις / για να προβάλεις εντολές bot και άλλες ενσωματωμένες εντολές",
         LOADING_TIP_27:
           "Μπορείς να πληκτρολογήσεις !!{asterisks}!! γύρω από τις λέξεις σου για να τις κάνεις **έντονες**.",
+        HALLOWEEN_LOADING_TEXT_1:
+          "καλό Halloween φρόντισε να επαναφέρεις τον διακομιστή σου από τον Κάτω Κόσμο",
+        HALLOWEEN_LOADING_TEXT_2: "ουουουΟΥΟΥΟΥουουουΟΥΟΥΟΥ καλό Halloween",
+        HALLOWEEN_LOADING_TEXT_3:
+          "Ετοιμάζεται ένας ανατριχιαστικός ήχος κλήσης",
+        HALLOWEEN_LOADING_TEXT_4: "ΜπουουουΟΥΟΥΟΥουουουΟΥΟΥΟΥ",
+        HALLOWEEN_LOADING_TEXT_5: "Στη φωνητική συνομιλία, όλοι είναι πνεύματα",
+        HALLOWEEN_LOADING_TEXT_6:
+          "Γίνεται επαλήθευση ότι οι διακομιστές σου δεν είναι στοιχειωμένοι (πιθανότατα)",
+        HALLOWEEN_LOADING_TEXT_7: "Μπαίνουμε στο \xabπνεύμα\xbb του Halloween",
+        HALLOWEEN_LOADING_TEXT_8: "Τα ζόμπι δημοσιεύουν μόνο νεκρά meme;",
+        HALLOWEEN_LOADING_TEXT_9:
+          "Το Discord δέχεται επίθεση! Πρόσεχε τον Zombie Wumpus",
         ACCESSIBILITY_LOADING_TIP_1:
           "Επίλεξε φωτεινό ή σκοτεινό θέμα στις Ρυθμίσεις εμφάνισης.",
         ACCESSIBILITY_LOADING_TIP_2:
@@ -14669,6 +14718,9 @@
         VOICE_PANEL_INTRODUCTION_CLOSE: "Το κατάλαβα",
         VOICE_PANEL_SHOW_VOICE_USERS: "Προβολή χρηστών ομιλίας",
         VOICE_PANEL_USERS_A11Y_LABEL: "Χρήστες ομιλίας",
+        VOICE_PANEL_USER_A11Y_DEAFENED_LABEL:
+          "{username}, σε σίγαση ακουστικών και φωνής",
+        VOICE_PANEL_USER_A11Y_MUTED_LABEL: "{username}, σε σίγαση φωνής",
         VOICE_PANEL_SHOW_EXTRAS: "Προβολή όλων των χρηστών",
         VOICE_PANEL_HIDE_EXTRAS: "Ελαχιστοποίηση",
         VOICE_PANEL_USER_TOOLTIP: "!!{userName}!!, {status}",
@@ -14723,7 +14775,7 @@
           "Έφτασες το όριο {quantity, number} του διακομιστή.",
         TOO_MANY_USER_GUILDS_DESCRIPTION:
           "Πρέπει να βγεις από έναν διακομιστή για να γίνεις μέλος.",
-        ONGOING_CALL_TAP_TO_JOIN: " — Πάτησε για να γίνεις μέλος",
+        ONGOING_CALL_TAP_TO_JOIN: " — Πάτησε για να συνδεθείς",
         CALL_ENDED_DESCRIPTION: "!!{duration}!! — !!{timestamp}!!",
         CALL_MOBILE_TAP_TO_RETURN:
           "!!{callState}!! — Πάτησε για να αποδεχτείς την κλήση",
@@ -15834,6 +15886,8 @@
         FRIEND_FINDER_FRIENDS: "Όλοι οι φίλοι",
         FRIEND_FINDER_CONTACT_FRIEND_SUGGESTIONS_HEADER:
           "Επαφές στο Discord — {count}",
+        FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER:
+          "Άτομα που ίσως γνωρίζεις — {count}",
         CONTACT_SYNC_TITLE: "Βρες τους φίλους σου",
         CONTACT_SYNC_LANDING_TITLE: "Βρες τους φίλους σου",
         CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN:
@@ -16445,8 +16499,7 @@
           "Κάθε εργάσιμη ημέρα (Δευτέρα έως Παρασκευή)",
         GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES:
           "Προβολή μελλοντικών εκδηλώσεων",
-        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE:
-          "Επαναλαμβάνεται {recurrenceRule}",
+        GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Repeats {recurrenceRule}",
         GUILD_SCHEDULED_EVENT_REPEATS: "Εκδηλώσεις της σειράς",
         GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY: "Επαναλαμβάνεται κάθε {weekday}",
         GUILD_SCHEDULED_EVENT_REPEATS_BIWEEKLY:
@@ -16461,9 +16514,9 @@
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_HEADER_UNINTERESTED:
           "Δεν ενδιαφέρομαι για...",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_SERIES:
-          "Όλες οι εκδηλώσεις αυτής της σειράς",
+          "Όλες τις εκδηλώσεις αυτής της σειράς",
         GUILD_SCHEDULED_EVENT_RSVP_PICKER_OPTION_RECURRENCE:
-          "Μόνο αυτή η εκδήλωση",
+          "Αυτή την εκδήλωση",
         GUILD_CREATE_STAFF_ONLY_HINT:
           "Μόνο υπάλληλοι του Discord θα μπορούσαν να συνδεθούν σε αυτόν τον διακομιστή.",
         EDIT_THIS_EVENT: "Επεξεργασία αυτής της εκδήλωσης",
@@ -16477,7 +16530,7 @@
           "ΝΕΟ! Επαναλαμβανόμενες εκδηλώσεις",
         GUILD_EVENT_RECURRING_COACHMARK_BODY:
           "Τώρα μπορείς να επαναλαμβάνεις εκδηλώσεις εύκολα.",
-        COPY_RECURRENCE_LINK: "Αντιγραφή αυτού του συνδέσμου εκδήλωσης",
+        COPY_RECURRENCE_LINK: "Αντιγραφή του συνδέσμου αυτής της εκδήλωσης",
         COPY_SERIES_LINK: "Αντιγραφή του συνδέσμου εκδηλώσεων αυτής της σειράς",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Δημιουργία εκδήλωσης",
@@ -17100,11 +17153,8 @@
         THREAD_BROWSER_OTHER_HEADER: "{count} άλλα ενεργά νήματα",
         THREAD_BROWSER_ARCHIVED_HEADER: "παλαιότερα νήματα",
         THREAD_BROWSER_JOINED_HEADER: "{count} νήματα όπου συμμετέχεις",
-        THREAD_BROWSER_OTHER_REDESIGN_HEADER: "{count} άλλα ενεργά νήματα",
         THREAD_BROWSER_ACTIVE_COUNT: "Ενεργά νήματα - {count}",
         THREAD_BROWSER_ARCHIVED_REDESIGN_HEADER: "Παλαιότερα νήματα",
-        THREAD_BROWSER_JOINED_REDESIGN_HEADER:
-          "{count} νήματα όπου συμμετέχεις",
         THREAD_BROWSER_JOINED_COUNT: "Νήματα όπου συμμετέχεις - {count}",
         THREAD_BROWSER_TIMESTAMP_SECONDS: "{count}δευτ. πριν",
         THREAD_BROWSER_TIMESTAMP_DAYS: "{count}η πριν",
@@ -17122,8 +17172,6 @@
         THREAD_BROWSER_EMPTY_STATE_ACTIVE_HEADER: "Δεν υπάρχουν ενεργά νήματα.",
         THREAD_BROWSER_EMPTY_STATE_ARCHIVED_HEADER:
           "Δεν υπάρχουν αρχειοθετημένα νήματα.",
-        THREAD_BROWSER_EMPTY_STATE_SUBTEXT:
-          "Εστίασε σε μια συζήτηση με ένα νήμα, ένα προσωρινό κανάλι κειμένου.",
         THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN:
           "Εστίασε σε μια συζήτηση με ένα νήμα - ένα προσωρινό κανάλι κειμένου.",
         THREAD_BROWSER_FILTER_SETTINGS_TITLE: "Ρυθμίσεις φίλτρου",
@@ -19282,9 +19330,12 @@
         MEMBER_SAFETY_TABLE_TITLE_SEARCH: "Αποτελέσματα αναζήτησης",
         MEMBER_SAFETY_TABLE_HEADER_NAME: "Όνομα",
         MEMBER_SAFETY_TABLE_HEADER_JOINED_AT: "Μέλος από",
+        MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE: "Έγινε μέλος στο Discord",
         MEMBER_SAFETY_TABLE_HEADER_ROLES: "Ρόλοι",
         MEMBER_SAFETY_TABLE_HEADER_FLAGS: "Στοιχεία ασφαλείας",
         MEMBER_SAFETY_TABLE_PAGINATION_LABEL: "μέλη από **{count}**",
+        MEMBER_SAFETY_TABLE_PAGINATION_ADVANCED_LABEL:
+          "μέλη **{pageRange}** από **{total}**",
         MEMBER_SAFETY_TABLE_PAGINATION_TOOLTIP:
           "Αυτό δείχνει μόνο τα πιο πρόσφατα μέλη - τα παλαιότερα μέλη ενδεχομένως να μην εμφανίζονται (ακόμα).",
         MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL: "Εμφανίζονται",
@@ -19360,13 +19411,13 @@
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Άγνωστο",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Ανακάλυψη διακομιστή",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Φοιτητικό Hub",
-        MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Άλλοι τρόποι εγγραφής",
+        MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Άλλοι μέθοδοι εγγραφής",
         MEMBER_SAFETY_JOIN_TYPE_HUB_LABEL_NAME: "Hub",
         MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME: "{vanityUrl} (Vanity)",
         MEMBER_SAFETY_JOIN_TYPE_VANITY_URL: "Vanity URL",
         MEMBER_SAFETY_JOIN_TYPE_BOT_LABEL_NAME: "Bot (OAuth2)",
-        MEMBER_SAFETY_JOIN_TYPE_LABEL_NAME: "Το μέλος εγγράφηκε μέσω",
-        MEMBER_SAFETY_INVITE_CODE_: "Το μέλος εγγράφηκε μέσω",
+        MEMBER_SAFETY_JOIN_TYPE_LABEL_NAME: "Το μέλος συνδέθηκε μέσω",
+        MEMBER_SAFETY_INVITE_CODE_: "Το μέλος συνδέθηκε μέσω",
         MEMBER_SAFETY_INVITE_CODE_SEARCH_PLACEHOLDER:
           "Πληκτρολόγησε τον κωδικό πρόσκλησης...",
         MEMBER_SAFETY_JOIN_TYPE_INVITE: "Πρόσκληση διακομιστή",
@@ -19396,7 +19447,7 @@
         MEMBER_SAFETY_ACCOUNT_AGE_LABEL:
           "Επιλογές Ημερομηνίας εγγραφής στο Discord",
         MEMBER_SAFETY_JOIN_METHOD_LABEL:
-          "Επιλογές Τρόπου εγγραφής στον διακομιστή",
+          "Επιλογές Μεθόδου εγγραφής στον διακομιστή",
         MEMBER_SAFETY_GUILD_JOINED_AT_DESC: "Μέλος από (τα νεότερα πρώτα)",
         MEMBER_SAFETY_GUILD_JOINED_AT_ASC: "Μέλος από (τα παλαιότερα πρώτα)",
         MEMBER_SAFETY_USER_JOINED_AT_DESC:
@@ -19438,7 +19489,7 @@
         GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
           "(Ριψοκίνδυνο) Παραχώρηση από",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
-          "Η άδεια παραχωρείται από αυτούς τους ρόλους",
+          "Παραχώρηση άδειας από αυτούς τους ρόλους",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Ανώτατος ρόλος",
         GUILD_MEMBER_MOD_VIEW_TITLE: "Προβολή συντονιστή",
         GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE:
@@ -19581,6 +19632,7 @@
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE_LABEL: "Ειδοποιήσεις για επιδρομές",
         GUILD_ANTIRAID_SETTING_CHANNEL_LABEL: "Κανάλι ειδοποιήσεων",
         GUILD_ANTIRAID_SETTING_CHANNEL_NONE: "Κανένα",
+        GUILD_ANTIRAID_RAID_ALERT: "Ειδοποίηση επιδρομής",
         GUILD_ANTIRAID_SAFETY_SETUP_NO_EXPERIMENT_ACTION:
           "Προστασία ενεργοποιημένη",
         GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_SETUP_ACTION:
@@ -20742,7 +20794,7 @@
         UNREAD_NOTIFICATION_SETTING_NOTICE:
           "Να επισημαίνουμε αυτό το κανάλι ως μη αναγνωσμένο για κάθε νέο μήνυμα, αντί μόνο για τις αναφορές mention;",
         UNREAD_NOTIFICATION_SETTING_NOTICE_TITLE:
-          "Επισήμανση κάθε μηνύματος ως μη αναγνωσμένο;",
+          "Επισήμανση ως μη αναγνωσμένου για κάθε μήνυμα;",
         UNREAD_NOTIFICATION_SETTING_NOTICE_DESCRIPTION:
           "Το κανάλι θα εμφανίζεται ως μη αναγνωσμένο για κάθε μήνυμα, ώστε να μην χάνεις τίποτα.",
         UNREAD_NOTIFICATION_SETTING_NOTICE_ALL_MESSAGES:
@@ -22087,6 +22139,9 @@
           "Οι συνδρομητές Nitro έχουν έκπτωση σε αυτή τη διακόσμηση",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} με το Nitro",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Θες νέο λουκ;",
+        COLLECTIBLES_SHOP_ERROR_HEADING: "Μμμμ, περίεργο αυτό.",
+        COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
+          "Χμμμ, δεν καταφέραμε να φορτώσουμε το κατάστημα. Έλα ξανά αργότερα.",
         CHANGE_DECORATION_MODAL_STARTER_DESC:
           "Χρησιμοποίησε οποιαδήποτε στιγμή με μία ενεργή συνδρομή Nitro.",
         COLLECTIBLES_CHAT_PREVIEW_TEXT: "Κοίτα την όμορφη διακόσμησή μου",
@@ -22174,6 +22229,7 @@
         BOT_PROFILE_ADD_TO_PRIVATE_CHANNEL: "Προσθήκη εφαρμογής",
         MONETIZATION: "Δημιουργία εσόδων",
         GUILD_SETTINGS_MONETIZATION: "Δημιουργία εσόδων διακομιστή",
+        GUILD_ROLE_SUBSCRIPTIONS_TITLE: "Συνδρομές διακομιστή",
         GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_STORE_PAGE: "Σελίδα διαφήμισης",
         GUILD_SETTINGS_ROLE_SUBSCRIPTION_TIER_EDIT_SUBTITLE:
           "Βαθμίδα συνδρομής",
@@ -22632,6 +22688,8 @@
           "Αλλαγή ομάδας πληρωμής",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_SELECT_TEAM_TITLE:
           "Επιλογή ομάδας πληρωμής",
+        GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_MODAL_DESCRIPTION:
+          "Άλλαξε την ομάδα στην οποία θα αποστέλλονται οι πληρωμές για τη δημιουργία εσόδων διακομιστή.",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING_HEADING:
           "Η αλλαγή της ομάδας σου μπορεί να επηρεάσει την επιλεξιμότητα πληρωμής",
         GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TEAM_CHANGE_WARNING:
@@ -23485,7 +23543,7 @@
         CLIPS_CALL_TOOLTIP_LINK_CTA: "Προβολή κλιπ",
         CLIPS_YOU_HAVE_NEW_CLIPS:
           "Έχεις {count, plural, =1 {# νέο κλιπ} other {# νέα κλιπ}}!",
-        CLIPS_REVIEW_NOW: "Έλεγχος τώρα",
+        CLIPS_REVIEW_NOW: "Επισκόπηση τώρα",
         CLIPS_SESSION_ENDED_TOOLTIP_BODY:
           "Κατέγραψες μερικά κλιπ κατά τη διάρκεια της πρόσφατης ζωντανής μετάδοσης !!{applicationName}!!. Δες τα εδώ στη βιβλιοθήκη των κλιπ σου!",
         CLIPS_SESSION_ENDED_TOOLTIP_PRIMARY_CTA: "Προβολή κλιπ",
@@ -23579,6 +23637,10 @@
           "Ωχ, όχι! Για την ώρα δεν μπορούμε να καταγράψουμε κλιπ.",
         CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS: "Διαχείριση ρυθμίσεων κλιπ",
         CLIPS_USER_EDUCATION_LEARN_MORE: "Μάθε περισσότερα",
+        SOUND_INCOMING_RING_HALLOWEEN: "Ήχος εισερχόμενης κλήσης Halloween",
+        CUSTOM_SOUNDS: "Προσαρμοσμένοι ήχοι",
+        ENABLE_PHONE_INTEGRATION:
+          "Ενεργοποίησε την ενσωμάτωση με την εφαρμογή Τηλέφωνο για να έχεις αυτή την εμπειρία.",
         GUILD_SHOP_CHANNEL_LABEL: "Κατάστημα διακομιστή",
         GUILD_SHOP_PRODUCTS_A11Y_LABEL: "Διαθέσιμα προϊόντα",
         GUILD_SHOP_LISTING_CARD_A11Y_LABEL:
@@ -23685,6 +23747,10 @@
           "Μάθε σχετικά με την πολιτική {classificationDescription}.",
         SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_SUBTEXT:
           "Οι κανόνες του Discord ισχύουν για όλους",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT:
+          "Μετάβαση στην κατάσταση λογαριασμού",
+        SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V2:
+          "Μετάβαση στην κατάσταση λογαριασμού",
         SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT_V3:
           "Δες την κατάσταση του λογαριασμού",
         SAFETY_HUB_ERROR_ACTION_BUTTON: "Νέα προσπάθεια",
@@ -23764,6 +23830,7 @@
         OBSCURED_CONTENT_LEARN_MORE_DISMISS: "Απόρριψη",
         OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE:
           "Κάναμε λάθος; [Ενημέρωσέ μας](handleFalsePositiveHook)",
+        OBSCURED_CONTENT_MARK_FALSE_POSITIVE: "Επισήμανση ως μη ευαίσθητο",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS:
           "Ευχαριστούμε για την ενημέρωση!",
         OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER:
@@ -23791,13 +23858,13 @@
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Το μήνυμά σου δεν μπόρεσε να σταλεί. Μπορεί να περιέχει ακατάλληλα πολυμέσα, τα οποία έχουν αποκλειστεί από τον διακομιστή.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
-          "Το μήνυμά σου δεν μπόρεσε να σταλεί. Μπορεί να περιέχει ευαίσθητα πολυμέσα, τα οποία έχουν αποκλειστεί από κάποιον σε αυτήν τη συνομιλία.",
+          "Το μήνυμά σου δεν μπόρεσε να σταλεί. Μπορεί να περιέχει ευαίσθητα πολυμέσα, τα οποία έχουν αποκλειστεί από κάποιον σε αυτή τη συνομιλία.",
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER:
           "Αδυναμία επισήμανσης ως μη ευαίσθητο",
         SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY:
           "Δεν αποθηκεύουμε μόνιμα τα αποκλεισμένα πολυμέσα. Δεδομένου ότι αυτό το πολυμέσο ανέβηκε πριν από λίγο καιρό, η επιλογή να το επισημάνεις ως μη ευαίσθητο έχει λήξει.",
         SAFETY_ALERT_BLOCK_AND_REPORT_DESCRIPTION:
-          "Δεν θα μπορεί να σου στείλει μήνυμα. Αν πιστεύεις πως οι ενέργειές του θα μπορούσαν να βλάψουν κάποιον, παρακαλούμε να το αναφέρεις στο Discord.",
+          "Αυτός ο χρήστης δεν θα μπορεί να σου στείλει μήνυμα. Εάν πιστεύεις πως οι ενέργειες αυτού του χρήστη θα μπορούσαν να βλάψουν κάποιον, παρακαλούμε να το αναφέρεις στο Discord.",
         SAFETY_ALERT_BLOCK_AND_REPORT_BUTTON: "Αποκλεισμός και αναφορά",
         SAFETY_WARNING_BANNER_CLOSE_A11Y: "Κλείσιμο",
         SAFETY_TOOLS_BUTTON_LABEL: "Άνοιγμα εργαλείων ασφαλείας",
@@ -23867,7 +23934,8 @@
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN: "Πίσω στη συζήτηση",
         INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_ALT:
           "Ο Wumpus κουνιέται με τη μουσική.",
-        INAPPROPRIATE_CONVERSATION_ACTION_REPORT: "Κάνε αναφορά",
+        INAPPROPRIATE_CONVERSATION_ACTION_REPORT:
+          "Κάνε αναφορά αυτού του χρήστη",
         INAPPROPRIATE_CONVERSATION_ACTION_REPORTED: "Αναφέρθηκε",
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL:
           "Επικοινώνησε με τη γραμμή κρίσεων Crisis Text Line",
@@ -24090,12 +24158,12 @@
         YOU_ARE_IN_CHANNEL_NAME: "Βρίσκεσαι στο #!!{channelName}!!",
         THEY_ARE_IN_CHANNEL_NAME: "Αράζουν στο #!!{channelName}!!",
         HANGOUT_OVER_SENDER:
-          "Το άραγμα τελείωσε, θέλεις να ξεκινήσεις από την αρχή;",
-        HANGOUT_OVER_RECEIVER: "Έχασες το άραγμα :(",
+          "Το άραγμα στο στέκι τελείωσε, θέλεις να ξεκινήσεις από την αρχή;",
+        HANGOUT_OVER_RECEIVER: "Έχασες το άραγμα στο στέκι :(",
         WAVE_AGAIN: "Χαιρέτησε ξανά",
         WAVE_BACK: "Χαιρέτησε κι εσύ",
-        JOIN_HANGOUT: "Πάρε μέρος στο άραγμα",
-        CANNOT_ACCESS_HANGOUT: "Δεν έχεις πρόσβαση στο συγκεκριμένο άραγμα",
+        JOIN_HANGOUT: "Πάρε μέρος στο στέκι",
+        CANNOT_ACCESS_HANGOUT: "Δεν έχεις πρόσβαση στο συγκεκριμένο στέκι",
         GEO_RESTRICTED_MODAL_TITLE: "Μη διαθέσιμος διακομιστής",
         GEO_RESTRICTED_MODAL_BODY:
           "Ο διακομιστής **{serverName}** δεν είναι διαθέσιμος στην περιοχή σου.",
@@ -24113,7 +24181,7 @@
         QUESTS_IN_PROGRESS_TOOLTIP:
           "Ολοκλήρωσε την επιμέρους αποστολή για να ξεκλειδώσεις την ανταμοιβή",
         QUESTS_STREAM_TASK:
-          "Κάνε ζωντανή μετάδοση {gameTitle} σε έναν φίλο για {minutes} λεπτά",
+          "Κάνε ζωντανή μετάδοση του {gameTitle} σε έναν φίλο για {minutes} λεπτά",
         QUEST_REWARD: "Κέρδισε {reward}",
         QUESTS_REWARD_CODE_HEADER: "Ο κωδικός ανταμοιβής σου",
         QUESTS_REWARD_CODE_CONGRATS: "Συγχαρητήρια!",
@@ -24216,6 +24284,9 @@
           'Το Discord δεν θα εμφανίζει ειδοποιήσεις εντός της εφαρμογής, ειδοποιήσεις επιφάνειας εργασίας και δεν θα παίζει ήχους μηνυμάτων. Όπως το "Μην ενοχλείτε".',
         QUIET_MODE_DISABLED_BY:
           "Αυτό είναι απενεργοποιημένο από τη Λειτουργία συγκέντρωσης",
+        FOCUS_MODE_TITLE: "Λειτουργία συγκέντρωσης (BETA)",
+        FOCUS_MODE_BADGE_ON: "ΕΝΕΡΓΟ",
+        FOCUS_MODE_BADGE_OFF: "ΑΝΕΝΕΡΓΟ",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           'Είσαι σε λειτουργία "Μην ενοχλείτε" εδώ και λίγο καιρό. Θα ήθελες να ενεργοποιήσεις τη Λειτουργία συγκέντρωσης;',
         ACTIVITY_REACTION_REPLY_TITLE: "Συνομίλησε για {activity}",

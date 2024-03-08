@@ -11853,6 +11853,7 @@
           OFFICIAL_3RD_PARTY_MERCH: "https://discordmerch.com/evergreenfooter",
           COMMUNITY: "/community",
           TWITTER_SUPPORT: "https://twitter.com/discord_support",
+          QUESTS: "/quests",
         },
         _v = Object.freeze({
           TWITTER: Object.freeze({
@@ -17345,4 +17346,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.3f7d993662b0de1c1fba.js.map
+//# sourceMappingURL=7273.1da56a80dcca462ead48.js.map

@@ -205,6 +205,27 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
+    289867: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var a = n("913144"),
+        l = {
+          toggleMembersSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+          },
+          toggleProfilePanelSection() {
+            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
+          },
+          toggleSummariesSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+          },
+        };
+    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -8816,58 +8837,60 @@
       n.r(t),
         n.d(t, {
           generateGamingContentImage: function () {
-            return u;
+            return d;
           },
         });
       var a = n("407462"),
         l = n("695412"),
         s = n("999317"),
-        i = n("878984");
-      let r = (e, t) => ({
+        i = n("476774"),
+        r = n("878984"),
+        u = n("782340");
+      let o = (e, t) => ({
           AvatarImage: e,
           ...(null != t && { ApplicationImage: t }),
         }),
-        u = async e => {
+        d = async e => {
           let {
               applicationImageSrc: t,
               entry: n,
-              avatarSrc: u,
-              description: o,
-              timestamp: d,
-              colors: c,
+              avatarSrc: d,
+              description: c,
+              timestamp: f,
+              colors: h,
             } = e,
-            f = n.extra.game_name,
-            h = r(u, t);
+            m = n.extra.game_name,
+            p = o(d, t);
           return await (0, s.generateImageFromCanvas)({
-            assetsToLoad: h,
+            assetsToLoad: p,
             drawImage: e => {
-              let t = c.map((e, t) => ({ color: e, stop: t }));
-              e.setSize({ w: i.imageWidth, h: i.imageHeight }, 4),
+              let t = h.map((e, t) => ({ color: e, stop: t }));
+              e.setSize({ w: r.imageWidth, h: r.imageHeight }, 4),
                 e.drawGradientRoundedRect(
                   t,
-                  { x: 0, y: i.imageHeight },
-                  { x: i.imageWidth, y: 0 },
-                  { x: 0, y: 0, h: i.imageHeight, w: i.imageWidth },
+                  { x: 0, y: r.imageHeight },
+                  { x: r.imageWidth, y: 0 },
+                  { x: 0, y: 0, h: r.imageHeight, w: r.imageWidth },
                   8
                 ),
                 e.setColor("white");
-              let n = e.drawRoundedImage(
+              let s = e.drawRoundedImage(
                 "ApplicationImage",
-                { x: i.imagePadding, y: i.imagePadding },
-                { w: i.applicationImageSize, h: i.applicationImageSize },
+                { x: r.imagePadding, y: r.imagePadding },
+                { w: r.applicationImageSize, h: r.applicationImageSize },
                 8
               );
-              n === l.DrawResultStatus.Failure &&
+              s === l.DrawResultStatus.Failure &&
                 e.drawPath(
                   a.ACTIVITY_IMAGE_FALLBACK_PATH,
-                  { x: i.imagePadding, y: i.imagePadding },
+                  { x: r.imagePadding, y: r.imagePadding },
                   !0,
                   2 + 2 / 3
                 ),
                 e.drawRoundedImage(
                   "AvatarImage",
-                  { x: i.descriptionIndent, y: i.imagePadding },
-                  { w: i.avatarImageSize, h: i.avatarImageSize },
+                  { x: r.descriptionIndent, y: r.imagePadding },
+                  { w: r.avatarImageSize, h: r.avatarImageSize },
                   50
                 ),
                 e.setFont({
@@ -8877,12 +8900,12 @@
                   truncate: l.TextTruncationMethod.Wrap,
                 }),
                 e.drawText(
-                  o,
+                  c,
                   {
-                    x: i.descriptionIndent,
-                    y: 72,
+                    x: r.descriptionIndent,
+                    y: 64,
                     h: 32,
-                    w: i.descriptionMaxWidth,
+                    w: r.descriptionMaxWidth,
                   },
                   !0
                 ),
@@ -8893,25 +8916,55 @@
                   truncate: l.TextTruncationMethod.None,
                 }),
                 e.drawText(
-                  d,
+                  f,
                   {
-                    x: i.descriptionIndent + 20,
-                    y: 104,
-                    w: i.descriptionMaxWidth,
+                    x: r.descriptionIndent + r.attributionSpacing,
+                    y: r.attributionTextPosition,
+                    w: r.descriptionMaxWidth,
                   },
                   !0
                 ),
                 e.drawPath(
-                  i.GAME_CONTROLLER_ICON_PATH,
-                  { x: i.descriptionIndent, y: 92 },
+                  r.GAME_CONTROLLER_ICON_PATH,
+                  { x: r.descriptionIndent, y: r.attributionIconPosition },
                   !0,
                   0.6
-                );
+                ),
+                (0, i.isEntryNew)(n) &&
+                  (e.drawPath(
+                    r.NEW_GAME_ICON_PATH_TOP,
+                    {
+                      x: r.descriptionIndent + r.attributionSize,
+                      y: r.attributionIconPosition,
+                    },
+                    !0,
+                    0.6
+                  ),
+                  e.drawPath(
+                    r.NEW_GAME_ICON_PATH_BOTTOM,
+                    {
+                      x: r.descriptionIndent + r.attributionSize,
+                      y: r.attributionIconPosition,
+                    },
+                    !0,
+                    0.6
+                  ),
+                  e.drawText(
+                    u.default.Messages.MEMBER_LIST_CONTENT_FEED_FIRST_TIME,
+                    {
+                      x:
+                        r.descriptionIndent +
+                        r.attributionSize +
+                        r.attributionSpacing,
+                      y: r.attributionTextPosition,
+                    },
+                    !0
+                  ));
             },
             exportConfigs: {
               format: l.DiscordCanvasExporterOutputFormats.File,
               quality: 1,
-              fileName: "user-reacting-to-".concat(f, ".png").toLowerCase(),
+              fileName: "user-reacting-to-".concat(m, ".png").toLowerCase(),
               fileType: "png",
             },
           });
@@ -8924,37 +8977,63 @@
           GAME_CONTROLLER_ICON_PATH: function () {
             return a;
           },
-          imageWidth: function () {
+          NEW_GAME_ICON_PATH_TOP: function () {
             return l;
           },
-          imageHeight: function () {
+          NEW_GAME_ICON_PATH_BOTTOM: function () {
             return s;
           },
-          imagePadding: function () {
+          imageWidth: function () {
             return i;
           },
-          applicationImageSize: function () {
+          imageHeight: function () {
             return r;
           },
-          avatarImageSize: function () {
+          imagePadding: function () {
             return u;
           },
-          descriptionIndent: function () {
+          applicationImageSize: function () {
             return o;
           },
-          descriptionMaxWidth: function () {
+          avatarImageSize: function () {
             return d;
+          },
+          descriptionIndent: function () {
+            return c;
+          },
+          descriptionMaxWidth: function () {
+            return f;
+          },
+          attributionIconPosition: function () {
+            return h;
+          },
+          attributionTextPosition: function () {
+            return m;
+          },
+          attributionSize: function () {
+            return p;
+          },
+          attributionSpacing: function () {
+            return E;
           },
         });
       let a =
           "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.09v4.91a3.09 3.09 0 0 1-5.85 1.38l-1.76-3.51a1.09 1.09 0 0 0-1.23-.55c-.57.13-1.36.27-2.16.27s-1.6-.14-2.16-.27c-.49-.11-1 .1-1.23.55l-1.76 3.51A3.09 3.09 0 0 1 1 17.91V13c0-3.38.46-5.85.75-7.1.15-.6.49-1.13 1.04-1.4a.47.47 0 0 0 .24-.44c0-.7.48-1.32 1.2-1.47l2.93-.62c.5-.1 1 .06 1.36.4.35.34.78.71 1.28.68a42.4 42.4 0 0 1 4.4 0c.5.03.93-.34 1.28-.69.35-.33.86-.5 1.36-.39l2.94.62c.7.15 1.19.78 1.19 1.47ZM20 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5 7a1 1 0 0 1 2 0v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 1 1 0-2h1V7Z",
-        l = 400,
-        s = 120,
-        i = 12,
-        r = 96,
-        u = 40,
-        o = 120,
-        d = 260;
+        l =
+          "M11.55 14.4c.28.17.62.17.9 0 1.6-.96 6.88-4.46 6.88-8.57A3.83 3.83 0 0 0 15.5 2c-1.56 0-2.58.6-3.5 1.5A4.66 4.66 0 0 0 8.5 2a3.83 3.83 0 0 0-3.83 3.83c0 4.1 5.29 7.61 6.88 8.57Z",
+        s =
+          "M3.11 14.86a1 1 0 0 0-.83 1.24l.23.89a6 6 0 0 0 6.46 4.45l2.03-.22V22a1 1 0 1 0 2 0v-.78l2.03.22A6 6 0 0 0 21.5 17l.23-.89a1 1 0 0 0-.83-1.24l-2.05-.29a6 6 0 0 0-6.1 3.07L12 19l-.74-1.36a6 6 0 0 0-6.1-3.07l-2.05.29ZM2.93 9.4a.6.6 0 0 1 1.14 0l.1.25a2 2 0 0 0 1.18 1.19l.25.1a.6.6 0 0 1 0 1.13l-.25.1a2 2 0 0 0-1.19 1.18l-.1.25a.6.6 0 0 1-1.13 0l-.1-.25a2 2 0 0 0-1.18-1.19l-.25-.1a.6.6 0 0 1 0-1.13l.25-.1a2 2 0 0 0 1.19-1.18l.1-.25ZM21.46 9.82a.49.49 0 0 0-.92 0v.03a2 2 0 0 1-1.19 1.18l-.03.01a.49.49 0 0 0 0 .92h.03a2 2 0 0 1 1.18 1.19l.01.03c.16.43.76.43.92 0v-.03a2 2 0 0 1 1.19-1.18l.03-.01a.49.49 0 0 0 0-.92h-.03a2 2 0 0 1-1.18-1.19l-.01-.03Z",
+        i = 400,
+        r = 120,
+        u = 12,
+        o = 96,
+        d = 32,
+        c = 120,
+        f = 260,
+        h = 88,
+        m = 99,
+        p = 72,
+        E = 18;
     },
     909346: function (e, t, n) {
       "use strict";
@@ -30327,6 +30406,79 @@
         });
       }
     },
+    893980: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          trackProfilePanelViewed: function () {
+            return u;
+          },
+          trackProfilePanelToggled: function () {
+            return o;
+          },
+        });
+      var a = n("373469"),
+        l = n("824563"),
+        s = n("27618"),
+        i = n("599110"),
+        r = n("49111");
+      let u = e => {
+          let {
+            displayProfile: t,
+            isMobile: n,
+            loadDurationMs: a,
+            activity: l,
+            customStatusActivity: s,
+            status: u,
+          } = e;
+          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+            has_mobile_indicator: n,
+            has_activity:
+              null != l &&
+              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+            has_game_activity:
+              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+            load_duration_ms: a,
+            profile_user_status: u,
+            has_custom_status: null != s,
+            has_profile_effect: null != t.profileEffectId,
+            ...d(t),
+          });
+        },
+        o = (e, t) => {
+          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+            is_profile_open: t,
+            ...d(e),
+          });
+        },
+        d = e => {
+          var t;
+          if (null == e) return {};
+          let n = e.userId,
+            i = null != a.default.getAnyStreamForUser(n),
+            u = l.default.findActivity(n, e => {
+              let { type: t } = e;
+              return i
+                ? t === r.ActivityTypes.PLAYING
+                : t !== r.ActivityTypes.CUSTOM_STATUS;
+            }),
+            o = null == u ? void 0 : u.assets,
+            d = s.default.isFriend(n);
+          return {
+            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
+            void 0 !== t
+              ? t
+              : null == o
+                ? void 0
+                : o.small_image),
+            is_friend: d,
+            viewed_profile_user_id: n,
+            profile_has_nitro_customization: e.hasPremiumCustomization(),
+            profile_has_theme_color_customized: e.hasThemeColors(),
+            profile_has_theme_animation: null != e.popoutAnimationParticleType,
+          };
+        };
+    },
     69682: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -41884,4 +42036,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b15b52a2e6d5f33c46a1.js.map
+//# sourceMappingURL=a33240079e2119f2422c.js.map

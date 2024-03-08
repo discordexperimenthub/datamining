@@ -1336,7 +1336,7 @@
           }),
         });
       }
-      function N(e) {
+      function R(e) {
         let {
             users: t,
             guildId: n,
@@ -1371,7 +1371,7 @@
           }),
         });
       }
-      let R = [];
+      let N = [];
       function x(e) {
         let {
             channelId: t,
@@ -1383,31 +1383,31 @@
             maxVisibleUsers: v = 3,
           } = e,
           [A, x] = r.useState(!1),
-          y = r.useRef(new d.DelayedCall(150, () => x(!1))),
-          O = (0, o.useStateFromStoresArray)(
+          O = r.useRef(new d.DelayedCall(150, () => x(!1))),
+          y = (0, o.useStateFromStoresArray)(
             [E.default, p.default],
             () => {
               if (l.type === _.ParticipantTypes.STREAM) {
                 let e = E.default.getViewerIds(l.id);
                 return e.length > 0
                   ? e.map(e => p.default.getUser(e)).filter(S.isNotNullish)
-                  : R;
+                  : N;
               }
               return l.type === _.ParticipantTypes.ACTIVITY
                 ? l.participants.size > 0
                   ? Array.from(l.participants)
                       .map(e => p.default.getUser(e))
                       .filter(S.isNotNullish)
-                  : R
-                : R;
+                  : N
+                : N;
             },
             [l]
           ),
           L = r.useCallback(() => {
-            y.current.cancel(), x(!0);
+            O.current.cancel(), x(!0);
           }, []),
           P = r.useCallback(() => {
-            y.current.delay();
+            O.current.delay();
           }, []),
           D = r.useCallback(
             (e, t) => {
@@ -1425,17 +1425,17 @@
             },
             [P, L]
           );
-        if (0 === O.length) return null;
+        if (0 === y.length) return null;
         if (m)
-          return (0, a.jsx)(N, {
+          return (0, a.jsx)(R, {
             maxVisibleUsers: v,
-            users: O,
+            users: y,
             guildId: s,
             channelId: t,
             className: C,
             participantType: l.type,
           });
-        let b = u(O)
+        let b = u(y)
           .take(v)
           .map(e =>
             (0, a.jsx)(
@@ -1451,10 +1451,10 @@
           )
           .value();
         return (
-          O.length > v &&
+          y.length > v &&
             (b[b.length - 1] = (0, a.jsxs)(
               "div",
-              { className: I.overflow, children: ["+", O.length - v + 1] },
+              { className: I.overflow, children: ["+", y.length - v + 1] },
               "overflow"
             )),
           (0, a.jsx)(h.default, {
@@ -1469,7 +1469,7 @@
                     handleUserContextMenu: D,
                     guildId: s,
                     channelId: t,
-                    users: O,
+                    users: y,
                     disableInteraction: g,
                   }),
                 shouldShow: A,
@@ -1641,11 +1641,11 @@
             [t, A, T]
           );
         if (null == e) return null;
-        let N =
+        let R =
             S === p.ApplicationStreamPresets.PRESET_DOCUMENTS
               ? p.ApplicationStreamFPS.FPS_30
               : _,
-          R = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
+          N = p.ApplicationStreamFPSButtonsWithSuffixLabel.map(e => {
             let { value: t, label: n } = e,
               r = (0, o.default)(
                 p.ApplicationStreamPresets.PRESET_CUSTOM,
@@ -1671,7 +1671,7 @@
               r = (0, o.default)(
                 p.ApplicationStreamPresets.PRESET_CUSTOM,
                 t,
-                N,
+                R,
                 v,
                 I
               );
@@ -1682,7 +1682,7 @@
                 id: "stream-settings-resolution-".concat(t),
                 label: n,
                 checked: t === g,
-                action: () => M(r, t, N, E.AnalyticsObjectTypes.RESOLUTION),
+                action: () => M(r, t, R, E.AnalyticsObjectTypes.RESOLUTION),
               },
               "stream-settings-resolution-".concat(t)
             );
@@ -1691,7 +1691,7 @@
           children: [
             (0, a.jsx)(i.MenuGroup, {
               label: m.default.Messages.SCREENSHARE_FRAME_RATE,
-              children: R,
+              children: N,
             }),
             (0, a.jsx)(i.MenuGroup, {
               label: m.default.Messages.STREAM_RESOLUTION,
@@ -1741,7 +1741,7 @@
     },
     709377: function (e, t, n) {
       "use strict";
-      var a, r, s;
+      var a, r, s, i, l;
       n.r(t),
         n.d(t, {
           ContentInventoryFeedKey: function () {
@@ -1750,9 +1750,16 @@
           ContentInventorySurfaceTypes: function () {
             return r;
           },
+          ContentInventoryInteractionTypes: function () {
+            return s;
+          },
         }),
         ((a || (a = {})).GLOBAL_FEED = "global feed"),
-        ((s = r || (r = {}))[(s.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST");
+        ((i = r || (r = {}))[(i.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"),
+        ((l = s || (s = {}))[(l.CARD_HOVER = 1)] = "CARD_HOVER"),
+        (l[(l.CARD_CLICK = 2)] = "CARD_CLICK"),
+        (l[(l.REACTION_EMOJI_REACT_SENT = 3)] = "REACTION_EMOJI_REACT_SENT"),
+        (l[(l.REACTION_MESSAGE_SENT = 4)] = "REACTION_MESSAGE_SENT");
     },
     265596: function (e, t, n) {
       "use strict";
@@ -1871,7 +1878,7 @@
           children: I.default.Messages.CLEAR_BUILD_OVERRIDE,
         });
       }
-      let N = i.throttle(
+      let R = i.throttle(
         () => {
           C.default.increment(
             {
@@ -1887,7 +1894,7 @@
         100,
         { trailing: !1 }
       );
-      class R extends r.PureComponent {
+      class N extends r.PureComponent {
         componentDidCatch(e, t) {
           this.triggerSoftCrash(e, t);
         }
@@ -1903,7 +1910,7 @@
             sentry_issue_id: a,
             uses_client_mods: (0, p.usesClientMods)(),
           }),
-            N(),
+            R(),
             T.default.cleanupDisplaySleep();
         }
         _handleSubmitReport() {
@@ -1961,14 +1968,14 @@
             (this.discordErrorsSet = !1);
         }
       }
-      var x = R;
+      var x = N;
     },
     160139: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return y;
+            return O;
           },
         });
       var a = n("37983");
@@ -1995,12 +2002,12 @@
         I = n("804392");
       let A = e => T.default.close(e),
         M = e => T.default.minimize(e),
-        N = (e, t) => {
+        R = (e, t) => {
           (0, g.isMac)() && !t.altKey
             ? T.default.fullscreen(e)
             : T.default.maximize(e);
         },
-        R = e => {
+        N = e => {
           let { windowKey: t, themeOverride: n, hasOpenLayer: r } = e;
           return (0, a.jsxs)("div", {
             className: s(I.typeWindows, (0, _.getThemeClass)(n), {
@@ -2020,7 +2027,7 @@
               }),
               (0, a.jsx)(l.Clickable, {
                 className: I.winButtonMinMax,
-                onClick: e => N(t, e),
+                onClick: e => R(t, e),
                 "aria-label": v.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                 tabIndex: -1,
                 children: (0, a.jsx)(p.default, {}),
@@ -2075,7 +2082,7 @@
                       }),
                       (0, a.jsx)(l.Clickable, {
                         className: I.macButtonMaximize,
-                        onClick: e => N(n, e),
+                        onClick: e => R(n, e),
                         "aria-label":
                           v.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                         tabIndex: -1,
@@ -2092,7 +2099,7 @@
             ],
           });
         };
-      function y(e) {
+      function O(e) {
         let {
             focused: t,
             type: n,
@@ -2108,7 +2115,7 @@
         if (f) return null;
         switch (n) {
           case g.PlatformTypes.WINDOWS:
-            return (0, a.jsx)(R, {
+            return (0, a.jsx)(N, {
               windowKey: r,
               themeOverride: l,
               hasOpenLayer: h,
@@ -2320,7 +2327,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-cef91a472c411fd35e2597452eac9080d1f4f368",
+          release: "discord_web-9cc77f859ec738bc8eadff624cab502d58f8525a",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2390,8 +2397,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "273433"), "273433")),
-          a.setTag("builtAt", String("1709866434202"));
+          a.setTag("buildNumber", ((e = "273445"), "273445")),
+          a.setTag("builtAt", String("1709869646989"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -3484,18 +3491,18 @@
             onSelect: A,
             appContext: M = g.AppContext.APP,
           } = e,
-          N = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS),
-          R =
+          R = f.default.supports(_.Features.DESKTOP_CAPTURE_APPLICATIONS),
+          N =
             null !==
               (t = l.find(e => e.ownerId === (null == r ? void 0 : r.id))) &&
             void 0 !== t
               ? t
               : null,
           x = v(n, r, l),
-          y = (0, o.default)(R, M),
-          O = (0, u.default)(R, M, g.NOOP_NULL),
+          O = (0, o.default)(N, M),
+          y = (0, u.default)(N, M, g.NOOP_NULL),
           L =
-            null == R
+            null == N
               ? (0, a.jsx)(s.MenuItem, {
                   id: "share-your-screen",
                   label: T.default.Messages.SHARE_YOUR_SCREEN,
@@ -3508,11 +3515,11 @@
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "stream-settings",
                           label: T.default.Messages.SCREENSHARE_STREAM_QUALITY,
-                          children: y,
+                          children: O,
                         })
                       : null,
-                    h ? O : null,
-                    N
+                    h ? y : null,
+                    R
                       ? (0, a.jsx)(s.MenuItem, {
                           id: "change-windows",
                           label: T.default.Messages.SCREENSHARE_CHANGE_WINDOWS,
@@ -3524,7 +3531,7 @@
                       id: "stop-streaming",
                       label: T.default.Messages.STOP_STREAMING,
                       icon: p.default,
-                      action: () => (0, d.default)(R),
+                      action: () => (0, d.default)(N),
                     }),
                   ],
                 });
@@ -3535,7 +3542,7 @@
             navId: "manage-streams",
             onClose: I,
             "aria-label":
-              null != R
+              null != N
                 ? T.default.Messages.STOP_STREAMING
                 : T.default.Messages.SHARE_YOUR_SCREEN,
             children: [
@@ -4731,15 +4738,15 @@
               src: n,
               ...g,
             }),
-            N = { ...t, backgroundColor: T };
+            R = { ...t, backgroundColor: T };
           return (
             null != A &&
               S &&
               v &&
-              ((N.backgroundImage = "url(".concat(A, ")")),
-              (N.backgroundSize = "cover")),
+              ((R.backgroundImage = "url(".concat(A, ")")),
+              (R.backgroundSize = "cover")),
             (0, a.jsx)("div", {
-              style: N,
+              style: R,
               className: E.background,
               children: m
                 ? (0, a.jsx)(o.default, { shouldAnimate: S, children: M })
@@ -5350,4 +5357,4 @@
     },
   },
 ]);
-//# sourceMappingURL=46072.96023637cdba5567c027.js.map
+//# sourceMappingURL=46072.4ca035e279b9e14707bc.js.map

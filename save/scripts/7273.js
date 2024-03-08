@@ -5718,6 +5718,7 @@
         (el.POLL_SHOW_RESULTS_CLICKED = "poll_show_results_clicked"),
         (el.ACTIVITY_REACTOR_INTERACTED = "activity_reactor_interacted"),
         (el.RANKING_ITEMS_SEEN = "ranking_items_seen"),
+        (el.RANKING_ITEM_INTERACTED = "ranking_item_interacted"),
         ((es = _k || (_k = {})).CANARY = "canary"),
         (es.PTB = "ptb"),
         (es.STABLE = "stable"),
@@ -17344,4 +17345,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.f32b7afd168fb8888941.js.map
+//# sourceMappingURL=7273.3f7d993662b0de1c1fba.js.map

@@ -207,7 +207,7 @@
     },
     932498: function (e, t, s) {
       "use strict";
-      e.exports = s.p + "b6d0036df41400587d8f.svg";
+      e.exports = s.p + "7f10d688807618fef460.svg";
     },
     226992: function (e, t, s) {
       "use strict";
@@ -11496,9 +11496,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "273658",
+          E = "273669",
           T =
-            ((e = "3f4193a899f0f4617594af0a0f0dbc92f94b33ec"),
+            ((e = "9c513732191d39a46dea38fc65c41c626e9a9db1"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20336,72 +20336,110 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return A;
+            return M;
           },
         }),
+        s("222007"),
         s("808653");
       var a = s("37983"),
         n = s("884691"),
-        l = s("768961"),
-        i = s("300036"),
-        r = s("446674"),
-        o = s("225389"),
-        d = s("998460"),
-        u = s("77078"),
-        c = s("206230"),
-        S = s("841026"),
-        E = s("204062"),
-        T = s("471671"),
-        f = s("181114"),
-        m = s("630615"),
-        _ = s("782340"),
-        g = s("449617");
-      function h() {
-        let e = (0, r.useStateFromStores)([T.default], () =>
-            T.default.isFocused()
+        l = s("917351"),
+        i = s.n(l),
+        r = s("907002"),
+        o = s("768961"),
+        d = s("300036"),
+        u = s("446674"),
+        c = s("225389"),
+        S = s("998460"),
+        E = s("77078"),
+        T = s("206230"),
+        f = s("841026"),
+        m = s("204062"),
+        _ = s("471671"),
+        g = s("181114"),
+        h = s("630615"),
+        N = s("782340"),
+        I = s("449617");
+      let p = { mass: 10, tension: 550, friction: 140 };
+      function C() {
+        let e = (0, u.useStateFromStores)([_.default], () =>
+            _.default.isFocused()
           ),
-          t = (0, r.useStateFromStores)(
-            [c.default],
-            () => c.default.useReducedMotion
+          t = (0, u.useStateFromStores)(
+            [T.default],
+            () => T.default.useReducedMotion
+          ),
+          [s, l] = n.useState({ x: 0, y: 0 }),
+          o = n.useMemo(
+            () =>
+              i.throttle(e => {
+                if (t) return;
+                let s = (window.innerWidth - 10 * e.pageX) / 90,
+                  a = (window.innerHeight - 10 * e.pageY) / 90;
+                l({ x: s, y: a });
+              }, 20),
+            [t]
           );
-        return (0, a.jsxs)("div", {
-          className: g.headerContainer,
-          children: [
-            (0, a.jsx)(u.Heading, {
-              variant: "display-md",
-              className: g.header,
-              color: "always-white",
-              children: _.default.Messages.PACKAGES,
-            }),
-            (0, a.jsx)("div", {
-              className: g.headerCTA,
-              children: (0, a.jsx)(f.default, {
-                className: g.headerButton,
-                pauseAnimation: !e || t,
-                onClick: () => {
-                  (0, S.openLootbox)();
+        n.useEffect(
+          () => (
+            window.addEventListener("mousemove", o),
+            () => window.removeEventListener("mousemove", o)
+          ),
+          [o]
+        );
+        let [d, c] = (0, r.useSpring)(() => ({ x: 0, y: 0, config: p }));
+        return (
+          n.useEffect(() => {
+            c({ x: s.x, y: s.y });
+          }, [s.x, s.y, c]),
+          (0, a.jsxs)("div", {
+            className: I.headerContainer,
+            children: [
+              (0, a.jsx)(r.animated.div, {
+                style: {
+                  transform: (0, r.to)([d.x, d.y], (e, t) =>
+                    "translate3d(".concat(e, "px, ").concat(t, "px, 0)")
+                  ),
                 },
-                size: u.ButtonSizes.SMALL,
-                color: u.ButtonColors.CUSTOM,
-                children: _.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                className: I.headerBackground,
               }),
-            }),
-          ],
-        });
+              (0, a.jsx)(E.Heading, {
+                variant: "display-md",
+                className: I.header,
+                color: "always-white",
+                children: N.default.Messages.PACKAGES,
+              }),
+              (0, a.jsx)("div", {
+                className: I.headerCTA,
+                children: (0, a.jsx)(g.default, {
+                  className: I.headerButton,
+                  pauseAnimation: !e || t,
+                  onClick: () => {
+                    (0, f.openLootbox)();
+                  },
+                  size: E.ButtonSizes.SMALL,
+                  color: E.ButtonColors.CUSTOM,
+                  children:
+                    N.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                }),
+              }),
+            ],
+          })
+        );
       }
-      function N(e) {
+      function A(e) {
         let { icon: t, text: s, count: n } = e;
         return (0, a.jsxs)("div", {
-          className: g.stat,
+          className: I.stat,
           children: [
-            (0, a.jsx)(t, { color: u.tokens.colors.TEXT_MUTED }),
-            (0, a.jsx)(u.Text, {
-              className: g.statText,
+            (0, a.jsx)(t, { color: E.tokens.colors.TEXT_MUTED }),
+            (0, a.jsx)(E.Text, {
+              className: I.statText,
               variant: "text-xs/bold",
               color: "text-muted",
               children: s,
             }),
-            (0, a.jsx)(u.Text, {
+            (0, a.jsx)(E.Text, {
               variant: "text-lg/bold",
               color: "text-primary",
               children: n.toLocaleString(),
@@ -20409,50 +20447,50 @@
           ],
         });
       }
-      function I() {
-        let e = (0, m.getLootboxes)(),
-          t = (0, r.useStateFromStores)(
-            [E.default],
-            () => E.default.openedItems
+      function O() {
+        let e = (0, h.getLootboxes)(),
+          t = (0, u.useStateFromStores)(
+            [m.default],
+            () => m.default.openedItems
           ),
           s = n.useMemo(() => Object.values(t).reduce((e, t) => e + t, 0), [t]);
         return (0, a.jsxs)("div", {
-          className: g.stats,
+          className: I.stats,
           children: [
-            (0, a.jsx)(N, {
-              icon: i.TicketIcon,
-              text: _.default.Messages.PACKAGES_PACKAGES_OPENED,
+            (0, a.jsx)(A, {
+              icon: d.TicketIcon,
+              text: N.default.Messages.PACKAGES_PACKAGES_OPENED,
               count: s,
             }),
-            (0, a.jsx)(N, {
-              icon: i.TicketIcon,
-              text: _.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
-              count: _.default.Messages.PACKAGES_OPENED_OUT_OF.format({
+            (0, a.jsx)(A, {
+              icon: d.TicketIcon,
+              text: N.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
+              count: N.default.Messages.PACKAGES_OPENED_OUT_OF.format({
                 count: Object.keys(t).length,
                 total: Object.keys(e).length,
               }),
             }),
-            (0, a.jsx)(N, {
-              icon: l.GlobeEarthIcon,
-              text: _.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
+            (0, a.jsx)(A, {
+              icon: o.GlobeEarthIcon,
+              text: N.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
               count: 42069,
             }),
           ],
         });
       }
-      function p() {
-        let e = (0, r.useStateFromStores)(
-            [E.default],
-            () => E.default.openedItems
+      function x() {
+        let e = (0, u.useStateFromStores)(
+            [m.default],
+            () => m.default.openedItems
           ),
-          t = (0, r.useStateFromStores)(
-            [E.default],
-            () => E.default.redeemedPrize
+          t = (0, u.useStateFromStores)(
+            [m.default],
+            () => m.default.redeemedPrize
           ),
-          s = (0, m.getLootboxes)(),
+          s = (0, h.getLootboxes)(),
           l = n.useMemo(() => Object.values(e).reduce((e, t) => e + t, 0), [e]),
-          i = l >= m.LOOTBOX_PITY_PRIZE_OPEN_COUNT,
-          c = n.useMemo(
+          i = l >= h.LOOTBOX_PITY_PRIZE_OPEN_COUNT,
+          r = n.useMemo(
             () =>
               Object.keys(e).length === Object.keys(s).length &&
               !Object.values(e).some(e => 0 === e),
@@ -20460,63 +20498,63 @@
           );
         return (0, a.jsxs)(a.Fragment, {
           children: [
-            (0, a.jsx)(u.Heading, {
+            (0, a.jsx)(E.Heading, {
               variant: "heading-md/semibold",
-              className: g.inventoryHeader,
+              className: I.inventoryHeader,
               children:
-                _.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
+                N.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
             }),
             (0, a.jsxs)("div", {
-              className: g.inventoryContainer,
+              className: I.inventoryContainer,
               children: [
                 !t &&
-                  (c || i) &&
+                  (r || i) &&
                   (0, a.jsxs)("div", {
-                    className: g.banner,
+                    className: I.banner,
                     children: [
                       (0, a.jsxs)("div", {
-                        className: g.inline,
+                        className: I.inline,
                         children: [
-                          (0, a.jsx)(o.CircleInformationIcon, {
+                          (0, a.jsx)(c.CircleInformationIcon, {
                             width: 16,
                             height: 16,
-                            color: u.tokens.colors.WHITE,
+                            color: E.tokens.colors.WHITE,
                           }),
-                          (0, a.jsx)(u.Text, {
+                          (0, a.jsx)(E.Text, {
                             variant: "text-sm/medium",
                             color: "always-white",
-                            children: c
-                              ? _.default.Messages
+                            children: r
+                              ? N.default.Messages
                                   .USER_SETTINGS_PACKAGE_BANNER_DEFAULT
-                              : _.default.Messages
+                              : N.default.Messages
                                   .USER_SETTINGS_PACKAGE_BANNER_PITY,
                           }),
                         ],
                       }),
-                      (0, a.jsxs)(u.Button, {
-                        className: g.headerButton,
-                        innerClassName: g.innerButton,
-                        onClick: S.redeemPrize,
-                        size: u.ButtonSizes.TINY,
-                        color: u.ButtonColors.CUSTOM,
+                      (0, a.jsxs)(E.Button, {
+                        className: I.headerButton,
+                        innerClassName: I.innerButton,
+                        onClick: f.redeemPrize,
+                        size: E.ButtonSizes.TINY,
+                        color: E.ButtonColors.CUSTOM,
                         children: [
-                          (0, a.jsx)(d.GiftIcon, {
+                          (0, a.jsx)(S.GiftIcon, {
                             width: 14,
                             height: 14,
-                            color: u.tokens.colors.WHITE,
+                            color: E.tokens.colors.WHITE,
                           }),
-                          _.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
+                          N.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
                         ],
                       }),
                     ],
                   }),
                 (0, a.jsx)("div", {
-                  className: g.inventoryItems,
+                  className: I.inventoryItems,
                   children: Object.keys(s).map(t => {
                     var n;
                     let l = s[t];
                     return (0, a.jsx)(
-                      C,
+                      R,
                       {
                         lootboxImage: l.image,
                         lootboxName: l.name,
@@ -20535,56 +20573,56 @@
           ],
         });
       }
-      function C(e) {
+      function R(e) {
         let { lootboxImage: t, lootboxName: s, openedCount: n } = e,
           l = n > 0;
         return (0, a.jsxs)("div", {
-          className: g.inventoryItem,
+          className: I.inventoryItem,
           children: [
             l &&
-              (0, a.jsx)(u.Text, {
+              (0, a.jsx)(E.Text, {
                 variant: "text-xxs/bold",
-                className: g.itemCount,
-                children: _.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
+                className: I.itemCount,
+                children: N.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
                   { count: n }
                 ),
               }),
-            (0, a.jsx)(u.Heading, {
+            (0, a.jsx)(E.Heading, {
               variant: "display-md",
-              className: g.itemImageContainer,
+              className: I.itemImageContainer,
               color: "text-muted",
               children: l
-                ? (0, a.jsx)("img", { src: t, alt: "", className: g.itemImage })
+                ? (0, a.jsx)("img", { src: t, alt: "", className: I.itemImage })
                 : "?",
             }),
             l &&
-              (0, a.jsx)(u.Text, {
+              (0, a.jsx)(E.Text, {
                 variant: "text-xxs/bold",
-                className: g.itemName,
+                className: I.itemName,
                 children: s,
               }),
           ],
         });
       }
-      function A() {
-        let e = (0, r.useStateFromStores)([E.default], () =>
-          E.default.getFetchState()
+      function M() {
+        let e = (0, u.useStateFromStores)([m.default], () =>
+          m.default.getFetchState()
         );
         return (
           n.useEffect(() => {
-            (0, S.fetchUserLootboxData)();
+            (0, f.fetchUserLootboxData)();
           }, []),
           (0, a.jsx)("div", {
             children:
-              e === E.FetchState.FETCHED
+              e === m.FetchState.FETCHED
                 ? (0, a.jsxs)(a.Fragment, {
                     children: [
-                      (0, a.jsx)(h, {}),
-                      (0, a.jsx)(I, {}),
-                      (0, a.jsx)(p, {}),
+                      (0, a.jsx)(C, {}),
+                      (0, a.jsx)(O, {}),
+                      (0, a.jsx)(x, {}),
                     ],
                   })
-                : (0, a.jsx)(u.Spinner, {}),
+                : (0, a.jsx)(E.Spinner, {}),
           })
         );
       }
@@ -31485,4 +31523,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b2986801be6f2f9b1d02.js.map
+//# sourceMappingURL=2baed4dc2e129126ee56.js.map

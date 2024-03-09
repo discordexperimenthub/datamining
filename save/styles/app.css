@@ -17082,12 +17082,12 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
 .streamerModeEnabledBtn__51c2f {
   margin-top: 20px;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--white-500);
   background-color: var(--twitch);
   padding: 10px 20px;
   border-radius: 3px;
-  line-height: 29px;
+  line-height: 1.8125rem;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -71587,8 +71587,8 @@ html .tabBadge__002b3 {
 }
 .bodyText__923f7 {
   color: var(--interactive-normal);
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   font-weight: 500;
   margin-bottom: 16px;
 }
@@ -71627,8 +71627,8 @@ html .tabBadge__002b3 {
   align-items: flex-start;
 }
 .trialCheckboxLabel__0297c {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
 }
 .loader_acb69b {
   margin-top: 64px;
@@ -110402,4 +110402,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.7582306698076d12647f.css.map*/
+/*# sourceMappingURL=app.623cdd5a8a165d8da2b0.css.map*/

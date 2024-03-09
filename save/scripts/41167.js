@@ -5526,18 +5526,14 @@
       "use strict";
       s.r(t),
         s.d(t, {
-          LOOTBOX_PITY_PRIZE_OPEN_COUNT: function () {
-            return r;
-          },
           getLootboxes: function () {
-            return o;
+            return r;
           },
         });
       var a,
         n,
         l = s("782340"),
         i = s("262228");
-      let r = 20;
       ((a = n || (n = {})).ITEM_1 = "1214340999644446720"),
         (a.ITEM_2 = "1214340999644446721"),
         (a.ITEM_3 = "1214340999644446722"),
@@ -5547,7 +5543,7 @@
         (a.ITEM_7 = "1214340999644446726"),
         (a.ITEM_8 = "1214340999644446727"),
         (a.ITEM_9 = "1214340999644446728");
-      let o = () => ({
+      let r = () => ({
         "1214340999644446720": {
           name: l.default.Messages.PACKAGE_ITEM_1_NAME,
           image: i,
@@ -11556,9 +11552,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "273685",
+          E = "273706",
           T =
-            ((e = "a56b40468a3d7031b83d2849ab80cb3136247223"),
+            ((e = "8b6a273d72f9c93920bd342480373a796f63b8f8"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20555,9 +20551,7 @@
             () => _.default.redeemedPrize
           ),
           s = (0, N.getLootboxes)(),
-          l = n.useMemo(() => Object.values(e).reduce((e, t) => e + t, 0), [e]),
-          i = l >= N.LOOTBOX_PITY_PRIZE_OPEN_COUNT,
-          r = n.useMemo(
+          l = n.useMemo(
             () =>
               Object.keys(e).length === Object.keys(s).length &&
               !Object.values(e).some(e => 0 === e),
@@ -20575,7 +20569,7 @@
               className: p.inventoryContainer,
               children: [
                 !t &&
-                  (r || i) &&
+                  l &&
                   (0, a.jsxs)("div", {
                     className: p.banner,
                     children: [
@@ -20590,11 +20584,9 @@
                           (0, a.jsx)(E.Text, {
                             variant: "text-sm/medium",
                             color: "always-white",
-                            children: r
-                              ? I.default.Messages
-                                  .USER_SETTINGS_PACKAGE_BANNER_DEFAULT
-                              : I.default.Messages
-                                  .USER_SETTINGS_PACKAGE_BANNER_PITY,
+                            children:
+                              I.default.Messages
+                                .USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
                           }),
                         ],
                       }),
@@ -31624,4 +31616,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2416c7760952ba7bbfb1.js.map
+//# sourceMappingURL=7a52ecabd948a94211d1.js.map

@@ -144,7 +144,7 @@
           let a = l.useRef(null),
             n = l.useRef((0, s.v4)()),
             o = (0, r.useThrottledFunction)(i, 5e3, [], { trailing: !0 }),
-            c = l.useCallback(() => {
+            u = l.useCallback(() => {
               var l;
               let s =
                 null === (l = a.current) || void 0 === l
@@ -158,7 +158,7 @@
                   scrollWidth: s.scrollWidth,
                 });
             }, [o, e, t]);
-          return { scrollerRef: a, scrollHandler: c, sessionId: n.current };
+          return { scrollerRef: a, scrollHandler: u, sessionId: n.current };
         };
     },
     846893: function (e, t, a) {
@@ -257,7 +257,7 @@
             );
           return s({ r, g: n, b: o });
         },
-        c = (e, t) => {
+        u = (e, t) => {
           if (0 !== t.length)
             return 1 === t.length
               ? {
@@ -273,7 +273,7 @@
                   label: o(t[0], t[1]).isLight() ? e.dark : e.light,
                 };
         },
-        u = (e, t) => {
+        c = (e, t) => {
           if (0 !== t.length)
             return 1 === t.length
               ? {
@@ -295,8 +295,8 @@
         let a = (0, r.default)([n.default], () => n.default.saturation);
         if (null == t) return {};
         let l = {
-          backgroundColors: c(e, t.backgroundColors),
-          buttonColors: u(e, t.buttonColors),
+          backgroundColors: u(e, t.backgroundColors),
+          buttonColors: c(e, t.buttonColors),
           confettiColors: t.confettiColors,
         };
         return 1 === a
@@ -396,7 +396,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return c;
+            return u;
           },
         }),
         a("222007");
@@ -406,7 +406,7 @@
         n = a("21526"),
         i = a("853987"),
         o = a("775416");
-      function c(e) {
+      function u(e) {
         var t;
         let a = "useFetchCollectiblesCategoriesAndPurchases";
         (0, r.useTriggerDebuggingAA)({
@@ -418,8 +418,8 @@
             autoTrackExposure: !1,
           });
         let {
-            isFetching: c,
-            categories: u,
+            isFetching: u,
+            categories: c,
             error: d,
           } = (function (e) {
             let t = "useMaybeFetchCollectiblesCategories";
@@ -431,7 +431,7 @@
                 location: t + " auto off",
                 autoTrackExposure: !1,
               });
-            let [a, o, c, u] = (0, s.useStateFromStoresArray)(
+            let [a, o, u, c] = (0, s.useStateFromStoresArray)(
               [i.default],
               () => {
                 var e;
@@ -445,10 +445,10 @@
             );
             return (
               (0, l.useEffect)(() => {
-                !(a || o || Date.now() - c < 6e5) &&
+                !(a || o || Date.now() - u < 6e5) &&
                   (0, n.fetchCollectiblesCategories)(e);
-              }, [a, c, o, e]),
-              { isFetching: a, categories: u, error: o }
+              }, [a, u, o, e]),
+              { isFetching: a, categories: c, error: o }
             );
           })(e),
           {
@@ -467,7 +467,7 @@
                 location: e + " auto off",
                 autoTrackExposure: !1,
               });
-            let [t, a, i, c, u] = (0, s.useStateFromStoresArray)(
+            let [t, a, i, u, c] = (0, s.useStateFromStoresArray)(
               [o.default],
               () => [
                 o.default.isFetching,
@@ -484,19 +484,19 @@
               {
                 isClaiming: a,
                 fetchError: i,
-                claimError: c,
+                claimError: u,
                 isFetching: t,
-                purchases: u,
+                purchases: c,
               }
             );
           })(),
           h = null !== (t = null != d ? d : p) && void 0 !== t ? t : m;
         return {
-          isFetching: c || C,
-          isFetchingCategories: c,
+          isFetching: u || C,
+          isFetchingCategories: u,
           isFetchingPurchases: C,
           isClaiming: f,
-          categories: u,
+          categories: c,
           purchases: g,
           error: h,
         };
@@ -559,7 +559,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return u;
+            return c;
           },
         });
       var l = a("656280"),
@@ -572,8 +572,8 @@
         o = s(
           r.default.unsafe_rawColors.BLACK_500.resolve({ saturation: 1 }).hex()
         ),
-        c = (0, n.default)({ dark: o, light: i });
-      var u = c;
+        u = (0, n.default)({ dark: o, light: i });
+      var c = u;
     },
     716120: function (e, t, a) {
       "use strict";
@@ -590,8 +590,8 @@
         n = a("65597"),
         i = a("854588"),
         o = a("206230"),
-        c = a("284679"),
-        u = a("491232"),
+        u = a("284679"),
+        c = a("491232"),
         d = a("408381"),
         f = a("467618"),
         p = e => {
@@ -625,7 +625,7 @@
                   : {
                       ...C,
                       backgroundImage: "url(".concat(
-                        (0, u.getCollectiblesAssetURL)(t, {
+                        (0, c.getCollectiblesAssetURL)(t, {
                           size: s,
                           format: "jpg",
                         }),
@@ -633,7 +633,7 @@
                       ),
                       backgroundSize: "cover",
                     };
-              let e = (0, c.hexOpacityToRgba)(
+              let e = (0, u.hexOpacityToRgba)(
                 i.default.unsafe_rawColors.BLACK_500,
                 1 - h
               );
@@ -643,7 +643,7 @@
                   .concat(e, ", ")
                   .concat(e, "), url(")
                   .concat(
-                    (0, u.getCollectiblesAssetURL)(t, {
+                    (0, c.getCollectiblesAssetURL)(t, {
                       size: s,
                       format: "jpg",
                     }),
@@ -677,11 +677,11 @@
         n = a("812204"),
         i = a("685665"),
         o = a("216719"),
-        c = a("54809"),
-        u = a("49111");
+        u = a("54809"),
+        c = a("49111");
       let d = "".concat("#").concat("itemSkuId", "="),
         f = new RegExp("^".concat(d, "(\\d+)$")),
-        p = [u.Routes.COLLECTIBLES_SHOP, u.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
+        p = [c.Routes.COLLECTIBLES_SHOP, c.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
         m = e => {
           let t = (0, s.useLocation)();
           l.useEffect(() => {
@@ -717,7 +717,7 @@
               let a = setTimeout(() => {
                 let a = document.getElementById("shop-item-".concat(t.skuId));
                 a !== document.activeElement && (null == a || a.focus()),
-                  (0, c.openCollectiblesShopProductDetailsModal)({
+                  (0, u.openCollectiblesShopProductDetailsModal)({
                     product: t,
                     category: e,
                     analyticsSource: s,
@@ -734,20 +734,20 @@
           let {
               categories: t,
               isFetchingCategories: a,
-              isLayer: c,
+              isLayer: u,
               initialItemCardRef: d,
             } = e,
             p = l.useRef(null),
             m = (0, s.useLocation)(),
             g =
-              m.pathname === u.Routes.COLLECTIBLES_SHOP
+              m.pathname === c.Routes.COLLECTIBLES_SHOP
                 ? n.default.HOME_PAGE_SHOP_TAB
-                : m.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN
+                : m.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN
                   ? n.default.COLLECTIBLES_SHOP_FULLSCREEN
                   : n.default.COLLECTIBLES_SHOP,
             { analyticsLocations: h } = (0, i.default)(g);
           l.useEffect(() => {
-            if (c) return;
+            if (u) return;
             let e = f.exec(m.hash);
             if (null != e) {
               let t = e[1];
@@ -762,8 +762,8 @@
             if (a) return;
             let e = null;
             if (
-              (c && null != E && (e = E),
-              !c && null != p.current && (e = p.current),
+              (u && null != E && (e = E),
+              !u && null != p.current && (e = p.current),
               null != e)
             ) {
               let a = [],
@@ -784,7 +784,7 @@
                 }
               );
             }
-          }, [c, h, g, t, a, E, d]);
+          }, [u, h, g, t, a, E, d]);
         };
     },
     342676: function (e, t, a) {
@@ -803,8 +803,8 @@
       var n = a("414456"),
         i = a.n(n),
         o = a("506838"),
-        c = a("956089"),
-        u = a("782340"),
+        u = a("956089"),
+        c = a("782340"),
         d = a("53248");
       ((s = l || (l = {})).BANNER = "banner"),
         (s.MODAL = "modal"),
@@ -819,7 +819,7 @@
           return Math.floor((l - a) / 864e5);
         })(t.unpublishedAt);
         function n(e) {
-          return (0, r.jsx)(c.TextBadge, {
+          return (0, r.jsx)(u.TextBadge, {
             disableColor: !0,
             text: e,
             className: i(d.badge, l),
@@ -828,19 +828,19 @@
         return (0, o.match)([a, s > 1])
           .with(["card", !0], () => null)
           .with(["banner", !0], () => {
-            let e = u.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+            let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
               days: s,
             });
             return n(e);
           })
           .with(["modal", !0], () => {
-            let e = u.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
+            let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
               days: s,
             });
             return n(e);
           })
           .otherwise(() => {
-            let e = u.default.Messages.COLLECTIBLES_LAST_DAY;
+            let e = c.default.Messages.COLLECTIBLES_LAST_DAY;
             return n(e);
           });
       };
@@ -861,8 +861,8 @@
         n = a.n(r),
         i = a("917351"),
         o = a("506838"),
-        c = a("265586"),
-        u = a("65597"),
+        u = a("265586"),
+        c = a("65597"),
         d = a("151426"),
         f = a("551042"),
         p = a("77078"),
@@ -931,7 +931,7 @@
           h = s.useRef(10 + 70 * Math.random()),
           E = (0, w.usePurchasedProductsSort)(r.products),
           b = (0, i.groupBy)(E, "type"),
-          x = (0, u.default)([P.default], () => P.default.initialProductSkuId),
+          x = (0, c.default)([P.default], () => P.default.initialProductSkuId),
           { tallerCardsEnabled: T } = (0,
           B.useCollectiblesShopTallerCardsExperiment)({
             location: "CollectiblesShop",
@@ -996,14 +996,14 @@
               className: T ? et.tallerShopCardBanner : void 0,
             }),
             _(
-              null !== (t = b[c.CollectiblesItemType.AVATAR_DECORATION]) &&
+              null !== (t = b[u.CollectiblesItemType.AVATAR_DECORATION]) &&
                 void 0 !== t
                 ? t
                 : [],
               ee.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER
             ),
             _(
-              null !== (a = b[c.CollectiblesItemType.PROFILE_EFFECT]) &&
+              null !== (a = b[u.CollectiblesItemType.PROFILE_EFFECT]) &&
                 void 0 !== a
                 ? a
                 : [],
@@ -1016,17 +1016,17 @@
       var es = function (e) {
         let { isFullScreen: t = !0 } = e,
           { analyticsSource: a, analyticsLocations: r } = (0,
-          u.useStateFromStoresObject)([P.default], () =>
+          c.useStateFromStoresObject)([P.default], () =>
             P.default.getAnalytics()
           ),
           { AnalyticsLocationProvider: i, analyticsLocations: o } = (0,
           E.default)([...r, h.default.COLLECTIBLES_SHOP]),
-          S = (0, u.default)([I.default], () =>
+          S = (0, c.default)([I.default], () =>
             I.default.getLayers().includes(q.Layers.COLLECTIBLES_SHOP)
           ),
           v = (0, f.useHasAnyModalOpen)(),
           { onClose: R } = (0, K.useCollectiblesShopRouting)(),
-          w = (0, u.default)([_.default], () => _.default.getCurrentUser()),
+          w = (0, c.default)([_.default], () => _.default.getCurrentUser()),
           U = O.default.canUseCollectibles(w),
           W = (0, x.default)("shop_disable_cache"),
           z = (0, x.default)("shop_include_unpublished"),
@@ -1041,7 +1041,7 @@
             location: "CollectiblesShop",
           }),
           ei = s.useRef(null),
-          [eo, ec] = s.useState(!1);
+          [eo, eu] = s.useState(!1);
         (0, H.useProductDetailsDeepLinking)({
           categories: V,
           isFetchingCategories: X,
@@ -1049,7 +1049,7 @@
           initialItemCardRef: ei,
         });
         let {
-          sessionId: eu,
+          sessionId: ec,
           scrollerRef: ed,
           scrollHandler: ef,
         } = (0, b.usePageScrollPosition)(
@@ -1060,14 +1060,14 @@
           y.default.track(q.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
             location_stack: o,
             source: a,
-            page_session_id: eu,
+            page_session_id: ec,
           }),
             !U &&
               y.default.track(q.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: Q.PremiumUpsellTypes.COLLECTIBLES_SHOP,
                 location_stack: o,
               });
-        }, [U, o, a, eu]),
+        }, [U, o, a, ec]),
           s.useEffect(() => {
             !(0, T.isDismissibleContentDismissed)(
               d.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK
@@ -1088,8 +1088,8 @@
               (0, j.setCollectiblesCategoryItemsViewed)({
                 categories: [...V.values()],
                 itemTypes: [
-                  c.CollectiblesItemType.AVATAR_DECORATION,
-                  c.CollectiblesItemType.PROFILE_EFFECT,
+                  u.CollectiblesItemType.AVATAR_DECORATION,
+                  u.CollectiblesItemType.PROFILE_EFFECT,
                 ],
               });
             },
@@ -1114,11 +1114,20 @@
           em = (0, g.default)(),
           { shopBannerHidden: eC } = (0, D.default)({
             location: "CollectiblesShop",
-          });
+          }),
+          { containerRef: eg, returnRef: eh } = (function () {
+            let e = s.useRef(null),
+              t = s.useRef(null);
+            return (
+              (0, p.useFocusLock)(e, { returnRef: t }),
+              { containerRef: e, returnRef: t }
+            );
+          })();
         return (0, l.jsxs)(i, {
           children: [
             (0, l.jsxs)("div", {
               className: et.shop,
+              ref: eg,
               children: [
                 t
                   ? null
@@ -1161,6 +1170,7 @@
                         t
                           ? (0, l.jsx)(N.default, {
                               title: ee.default.Messages.COLLECTIBLES_SHOP,
+                              ref: eh,
                             })
                           : null,
                         !eC && (0, l.jsx)(ea, { isFullScreen: t }),
@@ -1182,7 +1192,7 @@
                                         isPremiumUser: U,
                                         category: e,
                                         initialItemCardRef: ei,
-                                        setIsGiftEasterEggEnabled: ec,
+                                        setIsGiftEasterEggEnabled: eu,
                                         isGiftEasterEggEnabled: eo,
                                       },
                                       e.skuId
@@ -1214,8 +1224,8 @@
         n = a.n(r),
         i = a("635058"),
         o = a("65597"),
-        c = a("77078"),
-        u = a("685665"),
+        u = a("77078"),
+        c = a("685665"),
         d = a("649844"),
         f = a("697218"),
         p = a("153769"),
@@ -1232,7 +1242,7 @@
       let v = (0, g.getLogoSize)(96),
         I = e => {
           let { category: t } = e,
-            { analyticsLocations: a } = (0, u.default)(),
+            { analyticsLocations: a } = (0, c.default)(),
             r = s.useRef(null),
             n = (0, o.default)([f.default], () => f.default.getCurrentUser());
           return C.default.canUseCollectibles(n)
@@ -1242,7 +1252,7 @@
                   L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format(
                     {
                       getPremium: e =>
-                        (0, l.jsx)(c.Clickable, {
+                        (0, l.jsx)(u.Clickable, {
                           innerRef: r,
                           className: S.getPremiumHook,
                           onClick: () => {
@@ -1254,7 +1264,7 @@
                             });
                           },
                           tag: "span",
-                          children: (0, l.jsx)(c.Text, {
+                          children: (0, l.jsx)(u.Text, {
                             variant: "text-md/normal",
                             color: "always-white",
                             tag: "span",
@@ -1295,7 +1305,7 @@
               src: (0, g.getCollectiblesAssetURL)(t.logo, { size: v }),
               alt: t.name,
             }),
-            (0, l.jsx)(c.Text, {
+            (0, l.jsx)(u.Text, {
               className: n(S.summary, { [S.blackSummary]: r }),
               variant: "text-md/normal",
               children:
@@ -1327,8 +1337,8 @@
         n = a.n(r),
         i = a("265586"),
         o = a("65597"),
-        c = a("77078"),
-        u = a("54239"),
+        u = a("77078"),
+        c = a("54239"),
         d = a("252744"),
         f = a("812204"),
         p = a("685665"),
@@ -1360,15 +1370,15 @@
         w = a("782340"),
         H = a("682123");
       let U = _.default.getEnableHardwareAcceleration()
-          ? c.AnimatedAvatar
-          : c.Avatar,
-        W = c.AvatarSizes.SIZE_120,
+          ? u.AnimatedAvatar
+          : u.Avatar,
+        W = u.AvatarSizes.SIZE_120,
         G = (0, m.getDecorationSizeForAvatarSize)(W),
         z = e => {
           let { children: t, onClick: a, ...s } = e;
-          return (0, l.jsx)(c.Button, {
+          return (0, l.jsx)(u.Button, {
             fullWidth: !0,
-            look: c.Button.Looks.FILLED,
+            look: u.Button.Looks.FILLED,
             onClick: e => {
               e.stopPropagation(), a();
             },
@@ -1378,10 +1388,10 @@
         },
         V = e => {
           let { className: t, ...a } = e;
-          return (0, l.jsx)(c.Button, {
-            color: c.ButtonColors.CUSTOM,
-            look: c.Button.Looks.FILLED,
-            size: c.ButtonSizes.ICON,
+          return (0, l.jsx)(u.Button, {
+            color: u.ButtonColors.CUSTOM,
+            look: u.Button.Looks.FILLED,
+            size: u.ButtonSizes.ICON,
             className: n(H.previewButton, t),
             innerClassName: H.previewButtonInner,
             "aria-label": w.default.Messages.PREVIEW,
@@ -1427,7 +1437,7 @@
           en = (0, y.getFormattedPriceForCollectiblesProduct)(t, S),
           ei = (0, y.isPremiumCollectiblesProduct)(t),
           eo = (0, y.isFreeCollectiblesProduct)(t),
-          [ec, eu, ed] = (0, o.useStateFromStoresArray)([k.default], () => [
+          [eu, ec, ed] = (0, o.useStateFromStoresArray)([k.default], () => [
             k.default.getPurchase(t.skuId),
             k.default.isClaiming === t.skuId,
             null != k.default.isClaiming && k.default.isClaiming !== t.skuId,
@@ -1448,7 +1458,7 @@
         let ep = (0, E.default)({ analyticsLocations: K }),
           em = () => {
             if (
-              ((0, u.popLayer)(),
+              ((0, c.popLayer)(),
               ep(),
               (null == Q ? void 0 : Q.type) ===
                 i.CollectiblesItemType.AVATAR_DECORATION)
@@ -1494,15 +1504,15 @@
           null == r || r(Y);
         }, [r]);
         let eb = () =>
-            null != ec
-              ? (0, l.jsx)(c.Text, {
+            null != eu
+              ? (0, l.jsx)(u.Text, {
                   color: "always-white",
                   variant: "text-md/semibold",
                   className: H.priceTag,
                   children: w.default.Messages.COLLECTIBLES_ALREADY_OWNED,
                 })
               : ei
-                ? (0, l.jsx)(c.Text, {
+                ? (0, l.jsx)(u.Text, {
                     color: "always-white",
                     variant: "text-md/semibold",
                     className: H.priceTag,
@@ -1546,7 +1556,7 @@
                   : void 0,
               a = ei
                 ? {
-                    submitting: eu,
+                    submitting: ec,
                     submittingStartedLabel:
                       w.default.Messages.COLLECTIBLES_COLLECTING,
                     submittingFinishedLabel:
@@ -1567,7 +1577,7 @@
             return (0, l.jsxs)("div", {
               className: H.buttonsContainer,
               children: [
-                null == ec
+                null == eu
                   ? (0, l.jsx)(z, {
                       style: e,
                       disabled: ed,
@@ -1602,8 +1612,8 @@
                     : "none",
                 }
               : void 0;
-        return (0, l.jsx)(c.FocusRing, {
-          children: (0, l.jsxs)(c.Clickable, {
+        return (0, l.jsx)(u.FocusRing, {
+          children: (0, l.jsxs)(u.Clickable, {
             innerRef: Y,
             className: H.shopCard,
             onBlur: () => q(!1),
@@ -1612,9 +1622,9 @@
             id: "shop-item-".concat(t.skuId),
             children: [
               ei &&
-                (0, l.jsx)(c.Tooltip, {
+                (0, l.jsx)(u.Tooltip, {
                   tooltipContentClassName: H.premiumWheelTooltipContent,
-                  color: c.Tooltip.Colors.PRIMARY,
+                  color: u.Tooltip.Colors.PRIMARY,
                   text: w.default.Messages
                     .COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
                   children: e =>
@@ -1633,7 +1643,7 @@
                   children: (0, l.jsx)(b.default, {
                     isHovering: $,
                     profileEffectId: Q.id,
-                    isPurchased: null != ec,
+                    isPurchased: null != eu,
                   }),
                 }),
               (null == Q ? void 0 : Q.type) ===
@@ -1642,11 +1652,11 @@
                   ...et,
                   avatarDecoration: ee,
                   src: ea,
-                  className: n(H.avatar, { [H.avatarPurchased]: null != ec }),
+                  className: n(H.avatar, { [H.avatarPurchased]: null != eu }),
                   size: W,
                   "aria-label": w.default.Messages.USER_SETTINGS_AVATAR,
                 }),
-              null != ec
+              null != eu
                 ? (0, l.jsx)("div", {
                     className:
                       (null == Q ? void 0 : Q.type) ===
@@ -1667,7 +1677,7 @@
                     i.CollectiblesItemType.PROFILE_EFFECT,
                 }),
                 children: [
-                  (0, l.jsx)(c.Text, {
+                  (0, l.jsx)(u.Text, {
                     color: "always-white",
                     variant: "text-lg/bold",
                     className: H.productName,
@@ -1680,7 +1690,7 @@
                         className: H.innerBlur,
                         children: [
                           !el &&
-                            (0, l.jsx)(c.Text, {
+                            (0, l.jsx)(u.Text, {
                               color: "always-white",
                               className: H.description,
                               variant: "text-md/normal",
@@ -1722,8 +1732,8 @@
         n = a("841098"),
         i = a("782340"),
         o = a("706055"),
-        c = a("321220"),
-        u = a("684386"),
+        u = a("321220"),
+        c = a("684386"),
         d = e => {
           let { onRetry: t } = e,
             a = (0, n.default)();
@@ -1732,7 +1742,7 @@
             children: [
               (0, l.jsx)("img", {
                 className: o.loadIssueImg,
-                src: (0, s.isThemeDark)(a) ? c : u,
+                src: (0, s.isThemeDark)(a) ? u : c,
                 alt: "",
               }),
               (0, l.jsx)(r.Heading, {
@@ -1769,8 +1779,8 @@
         n = a("252744"),
         i = a("685665"),
         o = a("108486"),
-        c = a("946964"),
-        u = a("978679"),
+        u = a("946964"),
+        c = a("978679"),
         d = a("677257"),
         f = a("843455"),
         p = a("782340"),
@@ -1835,7 +1845,7 @@
               "aria-label": p.default.Messages.PREMIUM_GIFTING_BUTTON,
               onClick: e => {
                 e.stopPropagation(),
-                  (0, c.default)({
+                  (0, u.default)({
                     skuId: t.skuId,
                     isGift: !0,
                     analyticsLocations: x,
@@ -1855,7 +1865,7 @@
                     themeOverride: I,
                     boxColors: C,
                   })
-                : (0, l.jsx)(u.default, { width: 24, height: 24 }),
+                : (0, l.jsx)(c.default, { width: 24, height: 24 }),
             }),
         });
       };
@@ -1875,8 +1885,8 @@
         n = a("77078"),
         i = a("782340"),
         o = a("313506"),
-        c = a("247329"),
-        u = a("333838"),
+        u = a("247329"),
+        c = a("333838"),
         d = a("399637"),
         f = a("976076"),
         p = function (e) {
@@ -1910,13 +1920,13 @@
                 children: (0, l.jsx)("img", {
                   className: o.bannerBackground,
                   alt: "",
-                  src: c,
+                  src: u,
                 }),
               }),
               (0, l.jsx)("img", {
                 className: o.bannerForeground,
                 alt: "",
-                src: u,
+                src: c,
               }),
               (0, l.jsx)("img", { className: o.bannerHand, alt: "", src: d }),
               (0, l.jsx)("img", {
@@ -1968,8 +1978,8 @@
         n = a("77078"),
         i = a("782340"),
         o = a("859155"),
-        c = a("200406"),
-        u = a("283045"),
+        u = a("200406"),
+        c = a("283045"),
         d = a("718297"),
         f = a("929880"),
         p = function (e) {
@@ -2006,7 +2016,7 @@
                   (0, l.jsx)("img", {
                     className: o.bannerGrid,
                     alt: "",
-                    src: c,
+                    src: u,
                     width: "484",
                     height: "402",
                   }),
@@ -2020,7 +2030,7 @@
                   (0, l.jsx)("img", {
                     className: o.bannerGridMedium,
                     alt: "",
-                    src: u,
+                    src: c,
                     width: "178",
                     height: "106",
                   }),
@@ -2052,8 +2062,8 @@
         n = a("65597"),
         i = a("755854"),
         o = a("77078"),
-        c = a("161778"),
-        u = a("697218"),
+        u = a("161778"),
+        c = a("697218"),
         d = a("216422"),
         f = a("719923"),
         p = a("491232"),
@@ -2068,9 +2078,9 @@
             disableTooltipPointerEvents: s,
             alwaysWhiteText: E = !0,
           } = e,
-          b = (0, n.default)([u.default], () => u.default.getCurrentUser()),
-          x = (0, n.default)([c.default], () =>
-            (0, i.isThemeDark)(c.default.theme)
+          b = (0, n.default)([c.default], () => c.default.getCurrentUser()),
+          x = (0, n.default)([u.default], () =>
+            (0, i.isThemeDark)(u.default.theme)
           ),
           T = (0, p.extractPriceByPurchaseTypes)(
             t,
@@ -2131,7 +2141,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return c;
+            return u;
           },
         });
       var l = a("37983");
@@ -2141,12 +2151,12 @@
         n = a("77078"),
         i = a("153160"),
         o = a("468437"),
-        c = e => {
+        u = e => {
           var t;
           let {
               price: { amount: a, currency: s },
-              renderPrice: c,
-              icon: u,
+              renderPrice: u,
+              icon: c,
               className: d,
               variant: f = "heading-md/semibold",
               alwaysWhiteText: p = !0,
@@ -2157,8 +2167,8 @@
             color: p ? "always-white" : "none",
             className: r(o.heading, d),
             children: [
-              u,
-              null !== (t = null == c ? void 0 : c(m)) && void 0 !== t ? t : m,
+              c,
+              null !== (t = null == u ? void 0 : u(m)) && void 0 !== t ? t : m,
             ],
           });
         };
@@ -2184,7 +2194,7 @@
             category: n,
             analyticsSource: i,
             analyticsLocations: o,
-            returnRef: c,
+            returnRef: u,
           } = e;
           (0, s.openModalLazy)(
             async () => {
@@ -2198,7 +2208,7 @@
                   category: n,
                   analyticsSource: i,
                   analyticsLocations: o,
-                  returnRef: c,
+                  returnRef: u,
                 });
             },
             { modalKey: r }
@@ -2213,7 +2223,7 @@
       a.r(t),
         a.d(t, {
           useCollectiblesShopRouting: function () {
-            return u;
+            return c;
           },
         }),
         a("313619"),
@@ -2227,25 +2237,25 @@
         n = a("90915"),
         i = a("54239"),
         o = a("393414"),
-        c = a("49111");
-      function u() {
+        u = a("49111");
+      function c() {
         let { search: e } = (0, n.useLocation)(),
           t = (0, n.useParams)(),
           a = r.useMemo(() => new URLSearchParams(e), [e]),
           l = a.get("source"),
           s = null != l ? parseInt(l, 10) : null,
-          u = r.useCallback(() => {
+          c = r.useCallback(() => {
             if (0 === s) {
-              (0, o.back)(), (0, i.pushLayer)(c.Layers.USER_SETTINGS);
+              (0, o.back)(), (0, i.pushLayer)(u.Layers.USER_SETTINGS);
               return;
             }
             if ((0, o.currentRouteHasBackNavigation)()) {
               (0, o.back)();
               return;
             }
-            (0, o.transitionTo)(c.Routes.APP);
+            (0, o.transitionTo)(u.Routes.APP);
           }, [s]);
-        return { onClose: u, source: s, ...t };
+        return { onClose: c, source: s, ...t };
       }
       ((s = l || (l = {}))[(s.SETTINGS = 0)] = "SETTINGS"),
         (s[(s.CHANGELOG = 1)] = "CHANGELOG"),
@@ -2266,9 +2276,9 @@
         n = a("922063"),
         i = a("858422"),
         o = a("682123"),
-        c = a("183891");
-      let u = () => 4 * Math.random() + 8,
-        d = [u(), u(), u()];
+        u = a("183891");
+      let c = () => 4 * Math.random() + 8,
+        d = [c(), c(), c()];
       var f = () =>
         (0, l.jsx)(l.Fragment, {
           children: d.map(e =>
@@ -2278,21 +2288,21 @@
                 className: n.cardsContainer,
                 children: [
                   (0, l.jsx)("div", {
-                    className: r(c.skeleton, i.shopBanner),
-                    children: (0, l.jsx)("div", { className: c.bannerBody }),
+                    className: r(u.skeleton, i.shopBanner),
+                    children: (0, l.jsx)("div", { className: u.bannerBody }),
                   }),
                   Array.from({ length: e }, (e, t) => t).map(e =>
                     (0, l.jsx)(
                       "div",
                       {
-                        className: r(c.skeleton, o.shopCard),
+                        className: r(u.skeleton, o.shopCard),
                         children: (0, l.jsxs)("div", {
-                          className: c.cardBody,
+                          className: u.cardBody,
                           children: [
-                            (0, l.jsx)("div", { className: c.cardAvatar }),
-                            (0, l.jsx)("div", { className: c.cardTitle }),
-                            (0, l.jsx)("div", { className: c.cardDescription }),
-                            (0, l.jsx)("div", { className: c.cardSummary }),
+                            (0, l.jsx)("div", { className: u.cardAvatar }),
+                            (0, l.jsx)("div", { className: u.cardTitle }),
+                            (0, l.jsx)("div", { className: u.cardDescription }),
+                            (0, l.jsx)("div", { className: u.cardSummary }),
                           ],
                         }),
                       },
@@ -2321,8 +2331,8 @@
         n = a.n(r),
         i = a("265586"),
         o = a("65597"),
-        c = a("669491"),
-        u = a("755854"),
+        u = a("669491"),
+        c = a("755854"),
         d = a("77078"),
         f = a("54239"),
         p = a("252744"),
@@ -2422,15 +2432,15 @@
           }),
           { backgroundColors: ei } = (0, B.default)(t.styles),
           eo = (0, R.getFormattedPriceForCollectiblesProduct)(t, _),
-          ec = (0, R.isPremiumCollectiblesProduct)(t),
-          eu = (0, R.isFreeCollectiblesProduct)(t),
+          eu = (0, R.isPremiumCollectiblesProduct)(t),
+          ec = (0, R.isFreeCollectiblesProduct)(t),
           [ed, ef, ep] = (0, o.useStateFromStoresArray)([j.default], () => [
             j.default.getPurchase(t.skuId),
             j.default.isClaiming === t.skuId,
             null != j.default.isClaiming && j.default.isClaiming !== t.skuId,
           ]),
           em = (0, o.default)([S.default], () =>
-            (0, u.isThemeDark)(S.default.theme)
+            (0, c.isThemeDark)(S.default.theme)
           ),
           eC = (0, o.default)([A.default], () =>
             A.default.getIsProductNew(ea.skuId)
@@ -2503,7 +2513,7 @@
                   className: G.priceTag,
                   children: W.default.Messages.COLLECTIBLES_ALREADY_OWNED,
                 })
-              : ec
+              : eu
                 ? (0, l.jsx)(d.Text, {
                     variant: "text-md/semibold",
                     className: G.priceTag,
@@ -2517,9 +2527,9 @@
                     disableTooltipPointerEvents: !0,
                   }),
           ev = () =>
-            ec
+            eu
               ? null
-              : eu
+              : ec
                 ? (0, l.jsx)(X, { onClick: eT })
                 : (0, l.jsx)(F.default, {
                     product: t,
@@ -2529,8 +2539,8 @@
                     tooltipDelay: 250,
                   }),
           eI = () => {
-            if (ec && !_ && !eu) return eL();
-            let e = ec
+            if (eu && !_ && !ec) return eL();
+            let e = eu
               ? {
                   submitting: ef,
                   submittingStartedLabel:
@@ -2558,7 +2568,7 @@
                       disabled: ep,
                       className: G.purchaseButton,
                       ...e,
-                      children: ec
+                      children: eu
                         ? W.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION
                         : W.default.Messages.COLLECTIBLES_PURCHASE.format({
                             price: eo,
@@ -2574,7 +2584,7 @@
             });
           },
           e_ = em
-            ? "0 0 15px 1px ".concat(c.default.unsafe_rawColors.PRIMARY_700.css)
+            ? "0 0 15px 1px ".concat(u.default.unsafe_rawColors.PRIMARY_700.css)
             : "var(--elevation-high)";
         return (0, l.jsx)(d.FocusRing, {
           children: (0, l.jsxs)(d.Clickable, {
@@ -2594,7 +2604,7 @@
                 : void 0,
             id: "shop-item-".concat(t.skuId),
             children: [
-              ec &&
+              eu &&
                 (0, l.jsx)(d.Tooltip, {
                   tooltipContentClassName: G.premiumWheelTooltipContent,
                   color: d.Tooltip.Colors.PRIMARY,
@@ -2717,7 +2727,7 @@
             return i;
           },
           getConfettiSprites: function () {
-            return u;
+            return c;
           },
         });
       var l = a("635058"),
@@ -2736,7 +2746,7 @@
             .concat(l.toHslString(), ")");
         },
         o = [a("424869"), a("714293")],
-        c = {
+        u = {
           ["".concat(l.CollectiblesCategorySkuId.FANTASY)]: [
             a("655029"),
             a("290216"),
@@ -2766,9 +2776,9 @@
             a("125221"),
           ],
         },
-        u = e => {
+        c = e => {
           var t;
-          return null == e ? o : null !== (t = c[e]) && void 0 !== t ? t : o;
+          return null == e ? o : null !== (t = u[e]) && void 0 !== t ? t : o;
         };
     },
     368560: function (e, t, a) {
@@ -2837,8 +2847,8 @@
         n = a("112679"),
         i = a("55689"),
         o = a("21526"),
-        c = a("599110"),
-        u = a("49111");
+        u = a("599110"),
+        c = a("49111");
       function d(e) {
         let {
             skuId: t,
@@ -2876,11 +2886,11 @@
           {
             onCloseCallback: () => {
               !h &&
-                c.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                u.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: E,
                   payment_type:
-                    u.PurchaseTypeToAnalyticsPaymentType[
-                      u.PurchaseTypes.ONE_TIME
+                    c.PurchaseTypeToAnalyticsPaymentType[
+                      c.PurchaseTypes.ONE_TIME
                     ],
                   location: g,
                   is_gift: d,
@@ -2891,7 +2901,7 @@
                 null == p || p(h),
                 h && (0, o.fetchCollectiblesPurchases)();
             },
-            onCloseRequest: u.NOOP,
+            onCloseRequest: c.NOOP,
           }
         );
       }
@@ -2911,8 +2921,8 @@
         n = a.n(r),
         i = a("859498"),
         o = a("635471"),
-        c = a("126746"),
-        u = a("93902"),
+        u = a("126746"),
+        c = a("93902"),
         d = e => {
           let {
               profileEffectId: t,
@@ -2936,20 +2946,20 @@
           }, [p, r]),
           null != t)
             ? (0, l.jsxs)("div", {
-                className: n(c.previewContainer, {
-                  [c.previewContainerAnimation]: r,
-                  [c.previewContainerSetHeight]: !f,
+                className: n(u.previewContainer, {
+                  [u.previewContainerAnimation]: r,
+                  [u.previewContainerSetHeight]: !f,
                 }),
                 children: [
                   (0, l.jsx)("img", {
-                    src: u,
+                    src: c,
                     alt: " ",
-                    className: r ? c.previewForCollected : c.preview,
+                    className: r ? u.previewForCollected : u.preview,
                     "aria-hidden": !0,
                   }),
                   !m &&
                     (0, l.jsx)("div", {
-                      className: d ? c.purchasedEffect : void 0,
+                      className: d ? u.purchasedEffect : void 0,
                       children: (0, l.jsx)(o.default, {
                         profileEffectId: t,
                         useThumbnail: !0,
@@ -3035,4 +3045,4 @@
     },
   },
 ]);
-//# sourceMappingURL=53b2626e582404797817.js.map
+//# sourceMappingURL=11f8579b78e422386834.js.map

@@ -5147,9 +5147,10 @@
         r = l("29557"),
         c = l("283082");
       function o(e) {
-        let { title: t, className: l } = e;
+        let { title: t, className: l, ref: a } = e;
         return (0, i.jsxs)("div", {
           className: n(c.header, l),
+          ref: a,
           children: [
             (0, i.jsx)(r.default, { className: c.logo }),
             (0, i.jsx)(s.HeadingLevel, {
@@ -5279,4 +5280,4 @@
     },
   },
 ]);
-//# sourceMappingURL=468857345722e7247b10.js.map
+//# sourceMappingURL=fa7758d455921c2586c1.js.map

@@ -12793,7 +12793,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return L;
           },
         }),
         n("222007");
@@ -12814,124 +12814,140 @@
         m = n("685665"),
         N = n("653047"),
         p = n("271938"),
-        S = n("824563"),
-        C = n("697218"),
-        A = n("811305"),
-        h = n("449008"),
-        g = n("29883"),
-        M = n("954016"),
-        O = n("782340"),
-        R = n("75644");
-      function v(e) {
+        S = n("42203"),
+        C = n("824563"),
+        A = n("697218"),
+        h = n("811305"),
+        g = n("449008"),
+        M = n("29883"),
+        O = n("954016"),
+        R = n("782340"),
+        v = n("75644");
+      function L(e) {
+        var t;
         let {
-            application: t,
-            activityInstance: n,
-            channelId: v,
-            guildId: L,
+            application: n,
+            activityInstance: L,
+            channelId: P,
+            guildId: D,
           } = e,
-          [P, D] = l.useState(!1),
-          { analyticsLocations: x } = (0, m.default)(
+          [x, y] = l.useState(!1),
+          { analyticsLocations: U } = (0, m.default)(
             I.default.ACTIVITY_INSTANCE_EMBED
           ),
-          y = (0, r.useAnalyticsContext)(),
-          U = (0, _.default)(),
-          j = (0, a.useStateFromStores)([p.default], () => p.default.getId()),
-          { embeddedActivity: b, currentEmbeddedActivity: G } = (0,
+          j = (0, r.useAnalyticsContext)(),
+          b = (0, _.default)(),
+          G = (0, a.useStateFromStores)([S.default], () =>
+            S.default.getChannel(P)
+          ),
+          B = (
+            null == G
+              ? void 0
+              : null === (t = G.isThread) || void 0 === t
+                ? void 0
+                : t.call(G)
+          )
+            ? null == G
+              ? void 0
+              : G.parent_id
+            : P,
+          k = (0, a.useStateFromStores)([p.default], () => p.default.getId()),
+          { embeddedActivity: F, currentEmbeddedActivity: w } = (0,
           a.useStateFromStoresObject)([u.default], () => ({
             embeddedActivity: u.default
-              .getEmbeddedActivitiesForChannel(v)
-              .find(e => e.instanceId === n.id),
+              .getEmbeddedActivitiesForChannel(null != B ? B : "")
+              .find(e => e.instanceId === L.id),
             currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity(),
           })),
-          B = (0, a.useStateFromStoresArray)([C.default], () => {
+          H = (0, a.useStateFromStoresArray)([A.default], () => {
             var e;
             return Array.from(
-              null !== (e = null == b ? void 0 : b.userIds) && void 0 !== e
+              null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e
                 ? e
                 : []
             )
-              .map(e => C.default.getUser(e))
-              .filter(h.isNotNullish);
+              .map(e => A.default.getUser(e))
+              .filter(g.isNotNullish);
           }),
-          k = (0, a.useStateFromStores)([S.default], () => {
+          V = (0, a.useStateFromStores)([C.default], () => {
             var e;
-            let n = null == b ? void 0 : b.userIds.values().next().value;
-            return null == n
+            let t = null == F ? void 0 : F.userIds.values().next().value;
+            return null == t
               ? null
               : null ===
-                    (e = S.default.findActivity(
-                      n,
-                      e => e.application_id === t.id
+                    (e = C.default.findActivity(
+                      t,
+                      e => e.application_id === n.id
                     )) || void 0 === e
                 ? void 0
                 : e.details;
           }),
-          F = l.useMemo(() => {
-            let e = new N.default(t);
+          Y = l.useMemo(() => {
+            let e = new N.default(n);
             return (
               null == e.embeddedActivityConfig &&
-                (e.embeddedActivityConfig = M.DEFAULT_EMBEDDED_ACTIVITY_CONFIG),
+                (e.embeddedActivityConfig = O.DEFAULT_EMBEDDED_ACTIVITY_CONFIG),
               e
             );
-          }, [t]),
-          w = (0, f.useEmbeddedActivityJoinability)({
-            userId: j,
-            channelId: v,
-            application: F,
+          }, [n]),
+          W = (0, f.useEmbeddedActivityJoinability)({
+            userId: k,
+            channelId: P,
+            application: Y,
           }),
-          H = null == b,
-          V = (0, g.useJoinOrStartButtonState)({
-            embeddedActivity: b,
-            joinability: w,
-            currentEmbeddedActivity: G,
+          K = null == F,
+          z = (0, M.useJoinOrStartButtonState)({
+            embeddedActivity: F,
+            joinability: W,
+            currentEmbeddedActivity: w,
           }),
-          Y = async () => {
-            D(!0);
+          Q = async () => {
+            y(!0);
             try {
-              if (H) {
-                let { activityConfigs: e, applications: n } = await (0,
-                  o.fetchShelf)({ guildId: L }),
+              if (K) {
+                let { activityConfigs: e, applications: t } = await (0,
+                  o.fetchShelf)({ guildId: D }),
                   s = (0, d.default)({
-                    applicationId: t.id,
+                    applicationId: n.id,
                     activityConfigs: e,
-                    applications: n,
+                    applications: t,
                   });
                 await (0, E.default)({
                   activityItem: s,
-                  currentEmbeddedApplication: U,
-                  channelId: v,
-                  guildId: L,
-                  locationObject: y.location,
+                  currentEmbeddedApplication: b,
+                  channelId: P,
+                  guildId: D,
+                  locationObject: j.location,
                   embeddedActivitiesManager: T.default,
-                  analyticsLocations: x,
+                  analyticsLocations: U,
                 });
               } else
                 await (0, c.default)({
-                  applicationId: b.applicationId,
-                  currentEmbeddedApplication: U,
-                  activityChannelId: v,
-                  locationObject: y.location,
+                  applicationId: F.applicationId,
+                  currentEmbeddedApplication: b,
+                  activityChannelId: P,
+                  locationObject: j.location,
                   embeddedActivitiesManager: T.default,
-                  analyticsLocations: x,
+                  analyticsLocations: U,
                 });
             } finally {
-              D(!1);
+              y(!1);
             }
           };
         return (0, s.jsx)("div", {
-          className: R.container,
+          className: v.container,
           children: (0, s.jsxs)("div", {
-            className: R.contentContainer,
+            className: v.contentContainer,
             children: [
               (0, s.jsx)("div", {
-                className: R.headerContainer,
-                children: H
+                className: v.headerContainer,
+                children: K
                   ? (0, s.jsx)("div", {
-                      className: R.endedNote,
+                      className: v.endedNote,
                       children: (0, s.jsx)(i.Text, {
                         variant: "text-md/medium",
                         children:
-                          O.default.Messages
+                          R.default.Messages
                             .EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED,
                       }),
                     })
@@ -12940,43 +12956,43 @@
                       lineClamp: 1,
                       color: "text-normal",
                       children:
-                        null != k
-                          ? k
-                          : O.default.Messages
+                        null != V
+                          ? V
+                          : R.default.Messages
                               .EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE,
                     }),
               }),
               (0, s.jsxs)("div", {
-                className: R.footerContainer,
+                className: v.footerContainer,
                 children: [
                   (0, s.jsx)(i.Tooltip, {
-                    text: V.tooltip,
+                    text: z.tooltip,
                     children: e => {
                       let { onClick: t, ...n } = e;
                       return (0, l.createElement)(
                         i.Button,
                         {
                           ...n,
-                          key: "".concat(V.isJoinAction),
+                          key: "".concat(z.isJoinAction),
                           onClick: () => {
-                            Y(), null == t || t();
+                            Q(), null == t || t();
                           },
-                          color: V.isJoinAction
+                          color: z.isJoinAction
                             ? i.ButtonColors.GREEN
                             : i.ButtonColors.PRIMARY,
-                          submitting: P,
-                          disabled: V.disabled,
+                          submitting: x,
+                          disabled: z.disabled,
                         },
-                        V.text
+                        z.text
                       );
                     },
                   }),
-                  !H &&
-                    (0, s.jsx)(A.default, {
-                      guildId: L,
-                      users: B,
+                  !K &&
+                    (0, s.jsx)(h.default, {
+                      guildId: D,
+                      users: H,
                       max: 4,
-                      size: A.Sizes.SIZE_32,
+                      size: h.Sizes.SIZE_32,
                     }),
                 ],
               }),
@@ -32121,4 +32137,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3c96face79b375d31c38.js.map
+//# sourceMappingURL=9aaa1de42c4a32a8efb3.js.map

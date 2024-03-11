@@ -24211,8 +24211,8 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Add another answer",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Poll will be live for",
         CREATE_POLL_DURATION_LABEL: "Duration",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 hour",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 hours",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 hour} other {{num} hours}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 days",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -26297,8 +26297,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274060", ", Version Hash: ")
-          .concat("2ab593e213d9e077b6e19777eb7c627eee6fefa0")
+          .concat("274061", ", Version Hash: ")
+          .concat("024b3d66e10f77383e4d936c1896fdc6c7dd3aae")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29399,12 +29399,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274060"), "274060"));
+        let _ = parseInt(((e = "274061"), "274061"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274060"
+                "274061"
               )
             ),
             (_ = 0)),
@@ -51904,4 +51904,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.daccb6ea930962dfaa4e.js.map
+//# sourceMappingURL=76039.17f91cc02fa8afe859e6.js.map

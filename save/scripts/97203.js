@@ -26,14 +26,14 @@
       a.r(t),
         a.d(t, {
           createAudioMP4FromVideoMP4: function () {
-            return i;
+            return r;
           },
         }),
         a("222007"),
         a("424973");
       var l = a("469520"),
         n = a.n(l);
-      async function i(e) {
+      async function r(e) {
         let t = n.createFile(),
           a = n.createFile(),
           l = {};
@@ -60,10 +60,10 @@
                 });
             t.start();
           });
-        let i = new Promise(e => {
-          t.onSamples = (n, i, r) => {
-            for (let e of r) a.addSample(n, e.data, e);
-            t.releaseUsedSamples(n, r.length), delete l[n];
+        let r = new Promise(e => {
+          t.onSamples = (n, r, i) => {
+            for (let e of i) a.addSample(n, e.data, e);
+            t.releaseUsedSamples(n, i.length), delete l[n];
             let s = a.getTrackById(n),
               u = t.getTrackById(n);
             if (null != u.edts) {
@@ -73,7 +73,107 @@
             0 === Object.keys(l).length && e();
           };
         });
-        return t.appendBuffer(e), t.flush(), await i, a.getBuffer();
+        return t.appendBuffer(e), t.flush(), await r, a.getBuffer();
+      }
+    },
+    712652: function (e, t, a) {
+      "use strict";
+      a.r(t),
+        a.d(t, {
+          default: function () {
+            return c;
+          },
+        });
+      var l = a("37983"),
+        n = a("884691"),
+        r = a("77078"),
+        i = a("5431"),
+        s = a("464135"),
+        u = a("28388"),
+        o = a("141210"),
+        d = a("204839");
+      function c(e) {
+        let {
+            isLoading: t,
+            onDoneLoading: a,
+            videoURL: c,
+            audioURL: f,
+            transitionState: m,
+          } = e,
+          {
+            videoPlayerRef: v,
+            cropData: p,
+            applicationAudioEnabled: h,
+            voiceAudioEnabled: x,
+          } = (0, o.useEditModalContext)(),
+          C = n.useCallback(() => {
+            var e;
+            null === (e = v.current) || void 0 === e || e.seek(p.start), a();
+          }, [a, p.start]);
+        return (
+          n.useEffect(() => {
+            function e(e) {
+              var t, a;
+              if (
+                (null === (t = document.activeElement) || void 0 === t
+                  ? void 0
+                  : t.tagName) === "INPUT"
+              )
+                return;
+              let l = v.current;
+              if (null == l) return;
+              let n =
+                null === (a = v.current) || void 0 === a
+                  ? void 0
+                  : a.videoElement;
+              if (null == n) return;
+              let r = (0, u.default)(n.duration, e.shiftKey),
+                i = !1;
+              switch (e.key) {
+                case " ":
+                  (i = !0), n.paused ? l.play() : l.pause();
+                  break;
+                case "ArrowLeft":
+                  (i = !0), l.seek(Math.max(n.currentTime - r, p.start));
+                  break;
+                case "ArrowRight":
+                  (i = !0), l.seek(Math.min(n.currentTime + r, p.end));
+              }
+              i && (e.stopPropagation(), e.preventDefault());
+            }
+            return (
+              document.addEventListener("keydown", e),
+              () => document.removeEventListener("keydown", e)
+            );
+          }, [p.start, p.end, v]),
+          (0, l.jsxs)("div", {
+            className: d.editorPane,
+            children: [
+              (0, l.jsx)("div", {
+                className: d.videoSizer,
+                children: (0, l.jsx)(i.default, {
+                  applicationAudioEnabled: h,
+                  voiceAudioEnabled: x,
+                  ref: v,
+                  audioSrc: f,
+                  src: c,
+                  isLoading: t,
+                  onDoneLoading: C,
+                  startTime: p.start,
+                  endTime: p.end,
+                }),
+              }),
+              !t &&
+              m &&
+              [
+                r.ModalTransitionState.ENTERED,
+                r.ModalTransitionState.HIDDEN,
+              ].includes(m)
+                ? (0, l.jsx)(s.default, { sourceURL: c })
+                : null,
+            ],
+          })
+        );
       }
     },
     643290: function (e, t, a) {
@@ -87,8 +187,8 @@
         a("222007");
       var l = a("37983"),
         n = a("884691"),
-        i = a("446674"),
-        r = a("77078"),
+        r = a("446674"),
+        i = a("77078"),
         s = a("442939"),
         u = a("915639"),
         o = a("953109"),
@@ -101,7 +201,7 @@
           [v] = (0, s.default)([
             null !== (t = m.applicationId) && void 0 !== t ? t : "",
           ]),
-          p = (0, i.useStateFromStores)([u.default], () => u.default.locale),
+          p = (0, r.useStateFromStores)([u.default], () => u.default.locale),
           h = n.useMemo(
             () => new Date(d.default.extractTimestamp(m.id)),
             [m.id]
@@ -113,7 +213,7 @@
               className: f.nameSection,
               children: [
                 (0, l.jsx)(o.default, { game: v }),
-                (0, l.jsx)(r.Text, {
+                (0, l.jsx)(i.Text, {
                   className: f.name,
                   variant: "text-md/medium",
                   color: "interactive-active",
@@ -129,11 +229,11 @@
               children: [
                 (0, l.jsxs)("div", {
                   children: [
-                    (0, l.jsx)(r.FormTitle, {
+                    (0, l.jsx)(i.FormTitle, {
                       className: f.timeTitle,
                       children: c.default.Messages.CLIPS_EDIT_DATE_TITLE,
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, l.jsx)(i.Text, {
                       variant: "text-sm/normal",
                       color: "interactive-active",
                       children: h.toLocaleDateString(p, {
@@ -146,11 +246,11 @@
                 }),
                 (0, l.jsxs)("div", {
                   children: [
-                    (0, l.jsx)(r.FormTitle, {
+                    (0, l.jsx)(i.FormTitle, {
                       className: f.timeTitle,
                       children: c.default.Messages.CLIPS_EDIT_TIME_TITLE,
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, l.jsx)(i.Text, {
                       variant: "text-sm/normal",
                       color: "interactive-active",
                       children: h.toLocaleTimeString(p, {
@@ -177,8 +277,8 @@
         a("222007");
       var l = a("37983"),
         n = a("884691"),
-        i = a("414456"),
-        r = a.n(i),
+        r = a("414456"),
+        i = a.n(r),
         s = a("551042"),
         u = a("77078"),
         o = a("272030"),
@@ -194,65 +294,69 @@
         g = a("142485"),
         E = a("643290"),
         N = a("431734"),
-        L = a("80028"),
-        I = a("846325"),
+        L = a("141210"),
+        I = a("80028"),
+        M = a("846325"),
         j = a("782340"),
-        M = a("309799"),
-        T = a("446825").Buffer;
+        T = a("309799"),
+        _ = a("446825").Buffer;
       function S(e) {
         let {
             clip: t,
-            cropData: i,
-            channelId: S,
-            clipName: _,
-            voiceAudioEnabled: b,
-            applicationAudioEnabled: w,
-            onSetClipName: R,
-            onChangeVoiceAudioEnabled: A,
-            onChangeApplicationAudioEnabled: y,
-            onPrompt: D,
-            onClose: k,
+            channelId: r,
+            clipName: S,
+            onSetClipName: b,
+            onClose: w,
           } = e,
-          [P, O] = n.useState(null),
-          { onShareClick: F } = (0, g.default)({
-            channelId: S,
-            setExporting: e => O(null != e ? "share" : null),
+          {
+            videoPlayerRef: R,
+            cropData: A,
+            voiceAudioEnabled: y,
+            setVoiceAudioEnabled: k,
+            applicationAudioEnabled: D,
+            setApplicationAudioEnabled: P,
+          } = (0, L.useEditModalContext)(),
+          [O, F] = n.useState(null),
+          { onShareClick: B } = (0, g.default)({
+            channelId: r,
+            setExporting: e => F(null != e ? "share" : null),
           });
-        async function B() {
-          let e = f.default.getChannel(S);
-          O("export"), D(!0);
+        async function U() {
+          var e;
+          let n = f.default.getChannel(r);
+          F("export"), null === (e = R.current) || void 0 === e || e.pause();
           try {
-            let n = await (0, C.exportClip)(t, {
-              ...i,
-              applicationAudio: w,
-              voiceAudio: b,
+            let e = await (0, C.exportClip)(t, {
+              ...A,
+              applicationAudio: D,
+              voiceAudio: y,
             });
             (0, u.openModalLazy)(async () => {
-              let { default: i } = await a
+              let { default: r } = await a
                   .el("823749")
                   .then(a.bind(a, "823749")),
-                r =
-                  (null == e ? void 0 : e.guild_id) != null
-                    ? m.default.getGuild(e.guild_id)
+                i =
+                  (null == n ? void 0 : n.guild_id) != null
+                    ? m.default.getGuild(n.guild_id)
                     : null,
                 s =
-                  null != r &&
-                  (0, c.getManageResourcePermissions)(r, v.default, p.default)
+                  null != i &&
+                  (0, c.getManageResourcePermissions)(i, v.default, p.default)
                     .canCreateExpressions,
                 u =
-                  null == _ || "" === _
-                    ? (0, L.CLIP_NAME_TEMPLATE)(
+                  null == S || "" === S
+                    ? (0, I.CLIP_NAME_TEMPLATE)(
                         x.default.extractTimestamp(t.id)
                       )
-                    : _,
-                o = u.slice(0, I.MAX_LENGTH_SOUND_NAME);
+                    : S,
+                o = u.slice(0, M.MAX_LENGTH_SOUND_NAME);
               return t =>
-                (0, l.jsx)(i, {
+                (0, l.jsx)(r, {
                   ...t,
                   showGuildPicker: !0,
-                  guildId: s ? (null == e ? void 0 : e.guild_id) : void 0,
+                  guildId: s ? (null == n ? void 0 : n.guild_id) : void 0,
                   sourceFile: {
-                    file: new File([n], "".concat(u, ".mp4"), {
+                    file: new File([e], "".concat(u, ".mp4"), {
                       type: "video/mp4",
                     }),
                     name: o,
@@ -261,29 +365,31 @@
             });
           } catch (e) {
           } finally {
-            O(null), D(!1);
+            F(null);
           }
         }
-        async function U() {
-          O("export"), D(!0);
+        async function H() {
+          var e;
+          F("export"), null === (e = R.current) || void 0 === e || e.pause();
           try {
             let e = await (0, C.exportClip)(t, {
-                ...i,
-                applicationAudio: w,
-                voiceAudio: b,
+                ...A,
+                applicationAudio: D,
+                voiceAudio: y,
               }),
               a = await e.arrayBuffer();
             await d.default.fileManager.saveWithDialog(
-              T.from(a),
-              (0, L.CLIPS_EXPORT_FILENAME)(t.id)
+              _.from(a),
+              (0, I.CLIPS_EXPORT_FILENAME)(t.id)
             );
           } catch (e) {
           } finally {
-            O(null), D(!1);
+            F(null);
           }
         }
-        function H() {
-          D(!0),
+        function z() {
+          var e;
+          null === (e = R.current) || void 0 === e || e.pause(),
             (0, u.openModalLazy)(async () => {
               let { default: e } = await a
                 .el("386092")
@@ -293,45 +399,45 @@
                   clip: t,
                   ...a,
                   onClose: async () => {
-                    await a.onClose(), D(!1);
+                    await a.onClose();
                   },
                   onAfterDelete: async () => {
-                    await a.onClose(), k(), D(!1);
+                    await a.onClose(), w();
                   },
                 });
             });
         }
         return (0, l.jsxs)("div", {
-          className: M.clipForm,
+          className: T.clipForm,
           children: [
             (0, l.jsxs)("div", {
-              className: r(M.clipFormSection, M.editSection),
+              className: i(T.clipFormSection, T.editSection),
               children: [
                 (0, l.jsx)(u.FormItem, {
-                  className: M.clipFormItem,
+                  className: T.clipFormItem,
                   title: j.default.Messages.CLIPS_EDIT_TITLE,
                   children: (0, l.jsx)(u.TextInput, {
                     onChange: e => {
-                      "" === e ? R(void 0) : R(e);
+                      "" === e ? b(void 0) : b(e);
                     },
-                    value: _,
-                    minLength: L.CLIP_NAME_MIN_CHAR_LENGTH,
-                    maxLength: L.CLIP_NAME_MAX_CHAR_LENGTH,
+                    value: S,
+                    minLength: I.CLIP_NAME_MIN_CHAR_LENGTH,
+                    maxLength: I.CLIP_NAME_MAX_CHAR_LENGTH,
                     placeholder: j.default.Messages.CLIPS_UNTITLED,
                   }),
                 }),
                 (0, l.jsxs)("div", {
-                  className: M.clipFormSwitches,
+                  className: T.clipFormSwitches,
                   children: [
                     (0, l.jsx)(u.FormSwitch, {
-                      onChange: y,
-                      value: w,
+                      onChange: P,
+                      value: D,
                       hideBorder: !0,
                       children: j.default.Messages.CLIPS_EDIT_GAME_AUDIO,
                     }),
                     (0, l.jsx)(u.FormSwitch, {
-                      onChange: A,
-                      value: b,
+                      onChange: k,
+                      value: y,
                       hideBorder: !0,
                       children:
                         j.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO,
@@ -341,52 +447,52 @@
               ],
             }),
             (0, l.jsxs)("div", {
-              className: r(M.clipFormSection, M.metadataSection),
+              className: i(T.clipFormSection, T.metadataSection),
               children: [
                 (0, l.jsx)(E.default, { clip: t }),
-                (0, l.jsx)(N.default, { className: M.userList, clip: t }),
+                (0, l.jsx)(N.default, { className: T.userList, clip: t }),
               ],
             }),
             (0, l.jsxs)("div", {
-              className: M.clipFormFooter,
+              className: T.clipFormFooter,
               children: [
                 (0, l.jsx)(u.Button, {
-                  submitting: "share" === P,
-                  disabled: null != P && "share" !== P,
+                  submitting: "share" === O,
+                  disabled: null != O && "share" !== O,
                   color: u.Button.Colors.BRAND,
-                  wrapperClassName: M.clipFormFooterButton,
+                  wrapperClassName: T.clipFormFooterButton,
                   onClick: () =>
-                    F({
-                      clip: { ...t, name: _ },
-                      cropData: i,
-                      applicationAudioEnabled: w,
-                      voiceAudioEnabled: b,
+                    B({
+                      clip: { ...t, name: S },
+                      cropData: A,
+                      applicationAudioEnabled: D,
+                      voiceAudioEnabled: y,
                       onShareComplete: () => {
-                        s.closeModal(L.CLIPS_EDIT_MODAL_KEY),
-                          s.closeModal(L.CLIPS_GALLERY_MODAL_KEY);
+                        s.closeModal(I.CLIPS_EDIT_MODAL_KEY),
+                          s.closeModal(I.CLIPS_GALLERY_MODAL_KEY);
                       },
                     }),
                   children: j.default.Messages.CLIPS_EDIT_SHARE_CLIP,
                 }),
                 (0, l.jsx)(u.Button, {
                   size: u.Button.Sizes.ICON,
-                  className: M.clipFormFooterButton,
-                  disabled: null != P,
-                  wrapperClassName: r(M.clipFormFooterButton, {
-                    [M.submittingWrapperFix]: null != P,
+                  className: T.clipFormFooterButton,
+                  disabled: null != O,
+                  wrapperClassName: i(T.clipFormFooterButton, {
+                    [T.submittingWrapperFix]: null != O,
                   }),
                   color: u.Button.Colors.PRIMARY,
-                  onClick: k,
+                  onClick: w,
                   children: j.default.Messages.SAVE_CHANGES,
                 }),
                 (0, l.jsx)(u.Button, {
                   "aria-label": j.default.Messages.MORE_OPTIONS,
                   size: u.Button.Sizes.ICON,
-                  wrapperClassName: r(M.clipFormFooterButton, {
-                    [M.submittingWrapperFix]: null != P,
+                  wrapperClassName: i(T.clipFormFooterButton, {
+                    [T.submittingWrapperFix]: null != O,
                   }),
-                  submitting: "export" === P,
-                  disabled: null != P && "export" !== P,
+                  submitting: "export" === O,
+                  disabled: null != O && "export" !== O,
                   color: u.Button.Colors.PRIMARY,
                   onClick: function (e) {
                     (0, o.openContextMenuLazy)(e, async () => {
@@ -396,10 +502,10 @@
                       return t =>
                         (0, l.jsx)(e, {
                           ...t,
-                          onExportToSoundboard: B,
-                          onExportToFile: U,
-                          onDelete: H,
-                          channelId: S,
+                          onExportToSoundboard: U,
+                          onExportToFile: H,
+                          onDelete: z,
+                          channelId: r,
                         });
                     });
                   },
@@ -416,7 +522,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return N;
+            return E;
           },
         }),
         a("222007"),
@@ -427,8 +533,8 @@
         a("956660");
       var l = a("37983"),
         n = a("884691"),
-        i = a("759843"),
-        r = a("77078"),
+        r = a("759843"),
+        i = a("77078"),
         s = a("477566"),
         u = a("49671"),
         o = a("812204"),
@@ -437,32 +543,30 @@
         f = a("758946"),
         m = a("430481"),
         v = a("135284"),
-        p = a("488673"),
-        h = a("5431"),
-        x = a("464135"),
-        C = a("28388"),
-        g = a("782340"),
-        E = a("204839");
-      function N(e) {
-        var t, a, h, x, C, N, I, j;
-        let { clip: M, channelId: T, transitionState: S, onClose: _ } = e,
-          [b, w] = n.useState(!0),
-          [R, A] = n.useState(!1),
-          [y, D] = n.useState(null),
-          [k, P] = n.useState(null),
-          { AnalyticsLocationProvider: O } = (0, d.default)(
+        p = a("712652"),
+        h = a("488673"),
+        x = a("141210"),
+        C = a("782340"),
+        g = a("204839");
+      function E(e) {
+        var t, a, E, N, L, I, M, j;
+        let { clip: T, channelId: _, transitionState: S, onClose: b } = e,
+          [w, R] = n.useState(!0),
+          [A, y] = n.useState(null),
+          [k, D] = n.useState(null),
+          { AnalyticsLocationProvider: P } = (0, d.default)(
             o.default.CLIPS_EDITOR
           );
         n.useEffect(() => {
           (async function e() {
             let e;
             try {
-              e = await u.default.clips.loadClip(M.filepath);
+              e = await u.default.clips.loadClip(T.filepath);
             } catch {
-              _(),
+              b(),
                 s.default.show({
-                  title: g.default.Messages.CLIPS_LOAD_ERROR_TITLE,
-                  body: g.default.Messages.CLIPS_LOAD_ERROR_BODY,
+                  title: C.default.Messages.CLIPS_LOAD_ERROR_TITLE,
+                  body: C.default.Messages.CLIPS_LOAD_ERROR_BODY,
                 });
               return;
             }
@@ -472,14 +576,14 @@
               n = URL.createObjectURL(
                 new Blob([e.data], { type: "video/mp4" })
               );
-            P(l), D(n);
+            D(l), y(n);
           })();
-        }, [M.filepath, _]),
+        }, [T.filepath, b]),
           n.useEffect(
             () => () => {
-              null != y && URL.revokeObjectURL(y);
+              null != A && URL.revokeObjectURL(A);
             },
-            [y]
+            [A]
           ),
           n.useEffect(
             () => () => {
@@ -487,227 +591,130 @@
             },
             [k]
           );
-        let [F, B] = n.useState(
+        let [O, F] = n.useState(
             null ===
-              (C =
-                null === (t = M.editMetadata) || void 0 === t
+              (L =
+                null === (t = T.editMetadata) || void 0 === t
                   ? void 0
                   : t.voiceAudio) ||
-              void 0 === C ||
-              C
+              void 0 === L ||
+              L
           ),
-          [U, H] = n.useState(
+          [B, U] = n.useState(
             null ===
-              (N =
-                null === (a = M.editMetadata) || void 0 === a
+              (I =
+                null === (a = T.editMetadata) || void 0 === a
                   ? void 0
                   : a.applicationAudio) ||
-              void 0 === N ||
-              N
+              void 0 === I ||
+              I
           ),
-          [z, Z] = n.useState({
+          [H, z] = n.useState({
             start:
               null !==
-                (I =
-                  null === (h = M.editMetadata) || void 0 === h
+                (M =
+                  null === (E = T.editMetadata) || void 0 === E
                     ? void 0
-                    : h.start) && void 0 !== I
-                ? I
+                    : E.start) && void 0 !== M
+                ? M
                 : 0,
             end:
               null !==
                 (j =
-                  null === (x = M.editMetadata) || void 0 === x
+                  null === (N = T.editMetadata) || void 0 === N
                     ? void 0
-                    : x.end) && void 0 !== j
+                    : N.end) && void 0 !== j
                 ? j
                 : 0,
           }),
-          [V, G] = n.useState(M.name),
-          K = n.useRef({
-            name: V,
+          [Z, V] = n.useState(T.name),
+          G = n.useRef({
+            name: Z,
             editMetadata: {
-              start: z.start,
-              end: z.end,
-              voiceAudio: F,
-              applicationAudio: U,
+              start: H.start,
+              end: H.end,
+              voiceAudio: O,
+              applicationAudio: B,
             },
           });
-        K.current = {
-          name: V,
+        G.current = {
+          name: Z,
           editMetadata: {
-            start: z.start,
-            end: z.end,
-            voiceAudio: F,
-            applicationAudio: U,
+            start: H.start,
+            end: H.end,
+            voiceAudio: O,
+            applicationAudio: B,
           },
         };
-        let Y = (0, v.useClipProtocolURL)(M);
-        return (
-          n.useEffect(() => {
-            async function e() {
-              let e = {};
-              null != Y &&
-                (e = {
-                  thumbnail: await (0, m.createThumbnailFromVideo)(
-                    Y,
-                    K.current.editMetadata.start
-                  ),
-                }),
-                (0, c.updateClipMetadata)(M.id, { ...K.current, ...e });
-            }
-            return () => {
-              e();
-            };
-          }, [M.id, Y]),
-          (0, l.jsx)(r.ModalRoot, {
-            impression: {
-              impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED,
-            },
-            size: r.ModalSize.DYNAMIC,
-            className: E.modalRoot,
-            transitionState: S,
-            children: (0, l.jsx)(O, {
-              children: (0, l.jsx)(r.ModalContent, {
-                className: E.modalContent,
+        let K = (0, v.useClipProtocolURL)(T);
+        n.useEffect(() => {
+          async function e() {
+            let e = {};
+            null != K &&
+              (e = {
+                thumbnail: await (0, m.createThumbnailFromVideo)(
+                  K,
+                  G.current.editMetadata.start
+                ),
+              }),
+              (0, c.updateClipMetadata)(T.id, { ...G.current, ...e });
+          }
+          return () => {
+            e();
+          };
+        }, [T.id, K]);
+        let Y = n.useRef(null),
+          W = n.useMemo(
+            () => ({
+              videoPlayerRef: Y,
+              applicationAudioEnabled: B,
+              setApplicationAudioEnabled: U,
+              voiceAudioEnabled: O,
+              setVoiceAudioEnabled: F,
+              cropData: H,
+              setCropData: z,
+            }),
+            [B, O, H]
+          );
+        return (0, l.jsx)(i.ModalRoot, {
+          impression: { impressionName: r.ImpressionNames.CLIP_EDITOR_VIEWED },
+          size: i.ModalSize.DYNAMIC,
+          className: g.modalRoot,
+          transitionState: S,
+          children: (0, l.jsx)(P, {
+            children: (0, l.jsx)(i.ModalContent, {
+              className: g.modalContent,
+              children: (0, l.jsx)(x.EditModalContext.Provider, {
+                value: W,
                 children:
-                  null == y || null == k
+                  null == A || null == k
                     ? (0, l.jsx)("div", {
-                        className: E.spinnerContainer,
-                        children: (0, l.jsx)(r.Spinner, {}),
+                        className: g.spinnerContainer,
+                        children: (0, l.jsx)(i.Spinner, {}),
                       })
                     : (0, l.jsxs)(l.Fragment, {
                         children: [
-                          (0, l.jsx)(L, {
-                            voiceAudioEnabled: F,
-                            applicationAudioEnabled: U,
-                            videoURL: y,
-                            cropData: z,
-                            onSetCropData: Z,
-                            isLoading: b,
-                            hasOpenPrompt: R,
-                            onDoneLoading: () => w(!1),
+                          (0, l.jsx)(p.default, {
+                            videoURL: A,
+                            isLoading: w,
+                            onDoneLoading: () => R(!1),
                             audioURL: k,
                             transitionState: S,
                           }),
-                          !b &&
-                            (0, l.jsx)(p.default, {
-                              voiceAudioEnabled: F,
-                              channelId: T,
-                              applicationAudioEnabled: U,
-                              onChangeApplicationAudioEnabled: H,
-                              onChangeVoiceAudioEnabled: B,
-                              cropData: z,
-                              onSetClipName: G,
-                              clipName: V,
-                              clip: M,
-                              onPrompt: A,
-                              onClose: _,
+                          !w &&
+                            (0, l.jsx)(h.default, {
+                              channelId: _,
+                              onSetClipName: V,
+                              clipName: Z,
+                              clip: T,
+                              onClose: b,
                             }),
                         ],
                       }),
               }),
             }),
-          })
-        );
-      }
-      function L(e) {
-        let {
-            cropData: t,
-            onSetCropData: a,
-            voiceAudioEnabled: i,
-            applicationAudioEnabled: s,
-            isLoading: u,
-            hasOpenPrompt: o,
-            onDoneLoading: d,
-            videoURL: c,
-            audioURL: f,
-            transitionState: m,
-          } = e,
-          v = n.useRef(null),
-          p = n.useCallback(() => {
-            var e;
-            null === (e = v.current) || void 0 === e || e.seek(t.start), d();
-          }, [d, t.start]);
-        return (
-          n.useEffect(() => {
-            var e, t, a;
-            o &&
-              !(null === (t = v.current) || void 0 === t
-                ? void 0
-                : null === (e = t.videoElement) || void 0 === e
-                  ? void 0
-                  : e.paused) &&
-              (null === (a = v.current) || void 0 === a || a.pause());
-          }, [o]),
-          n.useEffect(() => {
-            function e(e) {
-              var a, l;
-              if (
-                (null === (a = document.activeElement) || void 0 === a
-                  ? void 0
-                  : a.tagName) === "INPUT"
-              )
-                return;
-              let n = v.current;
-              if (null == n) return;
-              let i =
-                null === (l = v.current) || void 0 === l
-                  ? void 0
-                  : l.videoElement;
-              if (null == i) return;
-              let r = (0, C.default)(i.duration, e.shiftKey),
-                s = !1;
-              switch (e.key) {
-                case " ":
-                  (s = !0), i.paused ? n.play() : n.pause();
-                  break;
-                case "ArrowLeft":
-                  (s = !0), n.seek(Math.max(i.currentTime - r, t.start));
-                  break;
-                case "ArrowRight":
-                  (s = !0), n.seek(Math.min(i.currentTime + r, t.end));
-              }
-              s && (e.stopPropagation(), e.preventDefault());
-            }
-            return (
-              document.addEventListener("keydown", e),
-              () => document.removeEventListener("keydown", e)
-            );
-          }, [t.start, t.end]),
-          (0, l.jsxs)("div", {
-            className: E.editorPane,
-            children: [
-              (0, l.jsx)("div", {
-                className: E.videoSizer,
-                children: (0, l.jsx)(h.default, {
-                  applicationAudioEnabled: s,
-                  voiceAudioEnabled: i,
-                  ref: v,
-                  audioSrc: f,
-                  src: c,
-                  isLoading: u,
-                  onDoneLoading: p,
-                  startTime: t.start,
-                  endTime: t.end,
-                }),
-              }),
-              !u &&
-              m &&
-              [
-                r.ModalTransitionState.ENTERED,
-                r.ModalTransitionState.HIDDEN,
-              ].includes(m)
-                ? (0, l.jsx)(x.default, {
-                    videoPlayerRef: v,
-                    cropData: t,
-                    setCropData: a,
-                    sourceURL: c,
-                  })
-                : null,
-            ],
-          })
-        );
+          }),
+        });
       }
     },
     5431: function (e, t, a) {
@@ -722,12 +729,12 @@
         a("424973");
       var l = a("37983"),
         n = a("884691"),
-        i = a("917351"),
-        r = a("31695"),
+        r = a("917351"),
+        i = a("31695"),
         s = a("58608"),
         u = a("204839");
       function o(e) {
-        let { setRef: t, audioTrackLabel: a, src: i, muted: r } = e,
+        let { setRef: t, audioTrackLabel: a, src: r, muted: i } = e,
           s = n.useCallback(
             e => {
               t(e, a);
@@ -746,8 +753,8 @@
           id: "ClipsPlayerAudioTrack:".concat(a),
           className: u.hidden,
           ref: s,
-          src: i,
-          muted: r,
+          src: r,
+          muted: i,
           preload: "auto",
           onLoadedMetadata: o,
         });
@@ -769,16 +776,16 @@
           N = n.useCallback(() => {
             let e = x.current.main;
             if (null == e) return;
-            let t = (0, i.round)(e.currentTime, 3),
-              a = (0, i.round)(p, 3),
-              l = null != h ? (0, i.round)(h, 3) : (0, i.round)(e.duration, 3);
+            let t = (0, r.round)(e.currentTime, 3),
+              a = (0, r.round)(p, 3),
+              l = null != h ? (0, r.round)(h, 3) : (0, r.round)(e.duration, 3);
             if (t >= l || t < a) {
               for (let e of Object.values(x.current))
                 null != e && (e.currentTime = p);
               return !0;
             }
           }, [p, h]);
-        (0, r.default)(() => {
+        (0, i.default)(() => {
           if (E.current) {
             let e = N();
             e && L();
@@ -791,7 +798,7 @@
           I = n.useCallback(() => {
             for (let e of Object.values(x.current)) null != e && e.pause();
           }, []),
-          j = n.useCallback(e => {
+          M = n.useCallback(e => {
             var t;
             for (let a of ((null === (t = x.current.main) || void 0 === t
               ? void 0
@@ -799,7 +806,7 @@
             Object.values(x.current)))
               null != a && (a.currentTime = e);
           }, []),
-          M = n.useCallback(() => {
+          j = n.useCallback(() => {
             var e;
             (null === (e = x.current.main) || void 0 === e ? void 0 : e.paused)
               ? L()
@@ -808,7 +815,7 @@
           T = n.useCallback(e => {
             x.current.main = e;
           }, []),
-          S = n.useCallback(e => {
+          _ = n.useCallback(e => {
             let t = [];
             for (let a of Object.values(e.currentTarget.audioTracks))
               a.label.includes(":application")
@@ -818,12 +825,12 @@
                   : (a.enabled = !1);
             g(t);
           }, []),
-          _ = n.useCallback((e, t) => {
+          S = n.useCallback((e, t) => {
             x.current[t] = e;
           }, []);
         return (n.useImperativeHandle(t, () => ({
           play: L,
-          seek: j,
+          seek: M,
           pause: I,
           videoElement: x.current.main,
         })),
@@ -832,7 +839,7 @@
           : (0, l.jsxs)(l.Fragment, {
               children: [
                 (0, l.jsx)(s.default, {
-                  onClick: M,
+                  onClick: j,
                   className: m ? u.hidden : u.displayVideo,
                   ref: T,
                   src: a,
@@ -846,13 +853,13 @@
                   muted: !c,
                   preload: "auto",
                   className: u.hidden,
-                  ref: e => _(e, "application"),
-                  onLoadedMetadata: S,
+                  ref: e => S(e, "application"),
+                  onLoadedMetadata: _,
                 }),
                 C.map(e =>
                   (0, l.jsx)(
                     o,
-                    { audioTrackLabel: e, setRef: _, src: d, muted: !f },
+                    { audioTrackLabel: e, setRef: S, src: d, muted: !f },
                     e
                   )
                 ),
@@ -865,14 +872,14 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return N;
+            return L;
           },
         }),
         a("222007");
       var l = a("37983"),
         n = a("884691"),
-        i = a("414456"),
-        r = a.n(i),
+        r = a("414456"),
+        i = a.n(r),
         s = a("917351"),
         u = a("65597"),
         o = a("718776"),
@@ -884,156 +891,136 @@
         p = a("132755"),
         h = a("58608"),
         x = a("28388"),
-        C = a("80028"),
-        g = a("782340"),
-        E = a("504835"),
-        N = function (e) {
-          var t, a, i, N, j, M;
-          let {
-              sourceURL: T,
-              cropData: S,
-              videoPlayerRef: _,
-              setCropData: b,
-            } = e,
-            [w, R] = n.useState(
-              ((M = !(null === (a = _.current) || void 0 === a
+        C = a("141210"),
+        g = a("80028"),
+        E = a("782340"),
+        N = a("504835"),
+        L = function (e) {
+          var t, a, r, L, j, T;
+          let { sourceURL: _ } = e,
+            {
+              videoPlayerRef: S,
+              cropData: b,
+              setCropData: w,
+            } = (0, C.useEditModalContext)(),
+            [R, A] = n.useState(
+              ((T = !(null === (a = S.current) || void 0 === a
                 ? void 0
                 : null === (t = a.videoElement) || void 0 === t
                   ? void 0
                   : t.paused)),
-              M)
+              T)
             ),
-            A = n.useRef(null),
-            [y, D] = n.useState(null),
-            [k, P] = n.useState(),
-            O = n.useRef(null),
+            y = n.useRef(null),
+            [k, D] = n.useState(null),
+            [P, O] = n.useState(),
             F = n.useRef(null),
-            [B, U] = n.useState(0),
-            [H, z] = n.useState(!1),
-            [Z, V] = n.useState(null);
+            B = n.useRef(null),
+            [U, H] = n.useState(0),
+            [z, Z] = n.useState(!1),
+            [V, G] = n.useState(null);
           (0, f.default)(() => {
             var e;
             let t =
-              null === (e = _.current) || void 0 === e
+              null === (e = S.current) || void 0 === e
                 ? void 0
                 : e.videoElement;
-            null != t && B !== t.currentTime && U(t.currentTime);
+            null != t && U !== t.currentTime && H(t.currentTime);
           });
-          let G = n.useMemo(() => S.end - S.start, [S]);
+          let K = n.useMemo(() => b.end - b.start, [b]);
           n.useEffect(() => {
             var e;
             let t =
-                null === (e = _.current) || void 0 === e
+                null === (e = S.current) || void 0 === e
                   ? void 0
                   : e.videoElement,
-              a = O.current,
-              l = F.current;
+              a = F.current,
+              l = B.current;
             if (null == t || null == a || null == l) return;
-            let n = (0, s.debounce)(R, C.CLIP_PLAYING_DEBOUNCE_MS),
-              i = () => {
-                D(null), z(!1), n.cancel(), n(!0);
-              },
+            let n = (0, s.debounce)(A, g.CLIP_PLAYING_DEBOUNCE_MS),
               r = () => {
+                D(null), Z(!1), n.cancel(), n(!0);
+              },
+              i = () => {
                 n.cancel(), n(!1);
               };
             return (
-              t.addEventListener("play", i),
-              t.addEventListener("pause", r),
+              t.addEventListener("play", r),
+              t.addEventListener("pause", i),
               () => {
-                t.removeEventListener("play", i),
-                  t.removeEventListener("pause", r);
+                t.removeEventListener("play", r),
+                  t.removeEventListener("pause", i);
               }
             );
-          }, [_]);
-          let { ref: K, width: Y = 0, height: W = 0 } = (0, c.default)(),
-            X = (0, u.default)([m.default], () => m.default.windowSize());
+          }, [S]);
+          let { ref: Y, width: W = 0, height: X = 0 } = (0, c.default)(),
+            q = (0, u.default)([m.default], () => m.default.windowSize());
           n.useMemo(() => {
-            let e = K.current;
-            null != e && V(e.getBoundingClientRect());
-          }, [X.width, X.height, Y]);
-          let q = n.useRef(null),
-            J = n.useRef({}),
-            Q = n.useCallback(
+            let e = Y.current;
+            null != e && G(e.getBoundingClientRect());
+          }, [q.width, q.height, W]);
+          let J = n.useRef(null),
+            Q = n.useRef({}),
+            $ = n.useCallback(
               e => {
                 var t;
-                let a = (0, s.clamp)(e, 0, S.end - C.MIN_CLIP_DURATION_SECONDS);
-                b({ ...S, start: a }),
-                  null === (t = _.current) || void 0 === t || t.seek(a);
+                let a = (0, s.clamp)(e, 0, b.end - g.MIN_CLIP_DURATION_SECONDS);
+                w({ ...b, start: a }),
+                  null === (t = S.current) || void 0 === t || t.seek(a);
               },
-              [S, b, _]
+              [b, w, S]
             ),
-            $ = n.useCallback(
+            ee = n.useCallback(
               e => {
                 var t, a;
                 let l =
-                  null === (t = _.current) || void 0 === t
+                  null === (t = S.current) || void 0 === t
                     ? void 0
                     : t.videoElement;
                 if (null == l) return;
                 let n = (0, s.clamp)(
                   e,
-                  S.start + C.MIN_CLIP_DURATION_SECONDS,
+                  b.start + g.MIN_CLIP_DURATION_SECONDS,
                   l.duration
                 );
-                b({ ...S, end: n }),
-                  null === (a = _.current) || void 0 === a || a.seek(n);
+                w({ ...b, end: n }),
+                  null === (a = S.current) || void 0 === a || a.seek(n);
               },
-              [S, b, _]
+              [b, w, S]
             ),
-            ee = n.useCallback(
+            et = n.useCallback(
               (e, t) => {
                 var a, l;
-                if (null == k) return;
-                if (null == Z) return null;
-                let n = (0, s.clamp)(e, Z.left, Z.right),
-                  i = ((n - Z.left) / Z.width) * k,
-                  r = (0, s.clamp)(i, 0, k),
-                  u = y;
+                if (null == P) return;
+                if (null == V) return null;
+                let n = (0, s.clamp)(e, V.left, V.right),
+                  r = ((n - V.left) / V.width) * P,
+                  i = (0, s.clamp)(r, 0, P),
+                  u = k;
                 if (
                   (null == u &&
                     t &&
                     ((u =
-                      r <= S.start ? "start" : r >= S.end ? "end" : "playhead"),
-                    null === (a = _.current) || void 0 === a || a.pause(),
+                      i <= b.start ? "start" : i >= b.end ? "end" : "playhead"),
+                    null === (a = S.current) || void 0 === a || a.pause(),
                     D(u),
-                    z(w)),
+                    Z(R)),
                   "start" === u)
                 )
-                  Q(r);
-                else if ("end" === u) $(r);
+                  $(i);
+                else if ("end" === u) ee(i);
                 else if ("playhead" === u) {
-                  let e = (0, s.clamp)(r, S.start, S.end);
-                  null === (l = _.current) || void 0 === l || l.seek(e);
+                  let e = (0, s.clamp)(i, b.start, b.end);
+                  null === (l = S.current) || void 0 === l || l.seek(e);
                 }
               },
-              [k, Z, y, S.start, S.end, _, w, Q, $]
-            ),
-            et = n.useCallback(
-              e => {
-                var t;
-                let a =
-                  null === (t = _.current) || void 0 === t
-                    ? void 0
-                    : t.videoElement;
-                if (null == a) return;
-                let l = (0, x.default)(a.duration, e.shiftKey),
-                  n = !1;
-                switch (e.key) {
-                  case "ArrowLeft":
-                    (n = !0), Q(S.start - l);
-                    break;
-                  case "ArrowRight":
-                    (n = !0), Q(S.start + l);
-                }
-                n && (e.stopPropagation(), e.preventDefault());
-              },
-              [_, Q, S.start]
+              [P, V, k, b.start, b.end, S, R, $, ee]
             ),
             ea = n.useCallback(
               e => {
                 var t;
                 let a =
-                  null === (t = _.current) || void 0 === t
+                  null === (t = S.current) || void 0 === t
                     ? void 0
                     : t.videoElement;
                 if (null == a) return;
@@ -1041,143 +1028,164 @@
                   n = !1;
                 switch (e.key) {
                   case "ArrowLeft":
-                    (n = !0), $(S.end - l);
+                    (n = !0), $(b.start - l);
                     break;
                   case "ArrowRight":
-                    (n = !0), $(S.end + l);
+                    (n = !0), $(b.start + l);
                 }
                 n && (e.stopPropagation(), e.preventDefault());
               },
-              [_, $, S.end]
+              [S, $, b.start]
             ),
             el = n.useCallback(
               e => {
-                ee(e.clientX, !0);
+                var t;
+                let a =
+                  null === (t = S.current) || void 0 === t
+                    ? void 0
+                    : t.videoElement;
+                if (null == a) return;
+                let l = (0, x.default)(a.duration, e.shiftKey),
+                  n = !1;
+                switch (e.key) {
+                  case "ArrowLeft":
+                    (n = !0), ee(b.end - l);
+                    break;
+                  case "ArrowRight":
+                    (n = !0), ee(b.end + l);
+                }
+                n && (e.stopPropagation(), e.preventDefault());
               },
-              [ee]
+              [S, ee, b.end]
             ),
             en = n.useCallback(
               e => {
-                ee(e.clientX, !1);
+                et(e.clientX, !0);
               },
-              [ee]
+              [et]
+            ),
+            er = n.useCallback(
+              e => {
+                et(e.clientX, !1);
+              },
+              [et]
             ),
             ei = n.useCallback(() => {
-              if (H) {
+              if (z) {
                 var e;
-                null === (e = _.current) || void 0 === e || e.play();
+                null === (e = S.current) || void 0 === e || e.play();
               }
-              z(!1), D(null);
-            }, [_, H]);
+              Z(!1), D(null);
+            }, [S, z]);
           n.useEffect(
             () => (
-              document.addEventListener("mousemove", en),
+              document.addEventListener("mousemove", er),
               document.addEventListener("mouseup", ei),
               () => {
-                document.removeEventListener("mousemove", en),
+                document.removeEventListener("mousemove", er),
                   document.removeEventListener("mouseup", ei);
               }
             ),
-            [en, ei]
+            [er, ei]
           ),
             n.useEffect(() => {
               (async function e() {
                 var e;
-                let t = K.current,
-                  a = A.current;
-                if (null == t || null == a || null == k) return;
-                (t.height = W), (t.width = Y);
+                let t = Y.current,
+                  a = y.current;
+                if (null == t || null == a || null == P) return;
+                (t.height = X), (t.width = W);
                 let l = t.getContext("2d");
                 if (null == l) return;
-                (l.fillStyle = "#000"), l.fillRect(0, 0, Y, W);
+                (l.fillStyle = "#000"), l.fillRect(0, 0, W, X);
                 let n = a.videoWidth / a.videoHeight,
-                  i = Math.ceil(W * n),
-                  r = Math.ceil(Y / i),
-                  s = q.current;
+                  r = Math.ceil(X * n),
+                  i = Math.ceil(W / r),
+                  s = J.current;
                 if (null == s) return;
-                (s.width = i), (s.height = W);
+                (s.width = r), (s.height = X);
                 let u =
                   null == s
                     ? void 0
                     : s.getContext("2d", { willReadFrequently: !0 });
                 if (null == u) return;
-                let o = J.current;
+                let o = Q.current;
                 if (
-                  (null === (e = o[r]) || void 0 === e ? void 0 : e.length) ===
-                  r
+                  (null === (e = o[i]) || void 0 === e ? void 0 : e.length) ===
+                  i
                 ) {
-                  for (let e = 0; e < r; e++) l.putImageData(o[r][e], i * e, 0);
+                  for (let e = 0; e < i; e++) l.putImageData(o[i][e], r * e, 0);
                   return;
                 }
-                for (let e = 0; e < r; e++)
+                for (let e = 0; e < i; e++)
                   await new Promise(t => {
                     (a.onseeked = () => {
-                      l.drawImage(a, i * e, 0, i, W),
-                        u.drawImage(a, 0, 0, i, W);
-                      let n = u.getImageData(0, 0, i, W);
-                      null == o[r] && (o[r] = []), (o[r][e] = n), t();
+                      l.drawImage(a, r * e, 0, r, X),
+                        u.drawImage(a, 0, 0, r, X);
+                      let n = u.getImageData(0, 0, r, X);
+                      null == o[i] && (o[i] = []), (o[i][e] = n), t();
                     }),
-                      (a.currentTime = (i / Y) * k * e);
+                      (a.currentTime = (r / W) * P * e);
                   });
               })();
-            }, [Y, W, K, k, q]);
-          let er = B - S.start,
-            es =
-              null === (i = _.current) || void 0 === i
+            }, [W, X, Y, P, J]);
+          let es = U - b.start,
+            eu =
+              null === (r = S.current) || void 0 === r
                 ? void 0
-                : i.videoElement;
+                : r.videoElement;
           return (0, l.jsx)("div", {
-            className: E.centeringWrapper,
+            className: N.centeringWrapper,
             children: (0, l.jsxs)("div", {
-              className: E.timelineContainer,
+              className: N.timelineContainer,
               children: [
                 (0, l.jsx)("div", {
-                  className: E.playPauseButtonWrapper,
+                  className: N.playPauseButtonWrapper,
                   children: (0, l.jsx)(d.Clickable, {
                     tabIndex: 0,
                     onClick: () => {
                       var e, t;
-                      return w
-                        ? null === (e = _.current) || void 0 === e
+                      return R
+                        ? null === (e = S.current) || void 0 === e
                           ? void 0
                           : e.pause()
-                        : null === (t = _.current) || void 0 === t
+                        : null === (t = S.current) || void 0 === t
                           ? void 0
                           : t.play();
                     },
-                    className: E.playPauseButton,
-                    children: w
+                    className: N.playPauseButton,
+                    children: R
                       ? (0, l.jsx)(v.default, {
                           width: 24,
                           height: 24,
-                          className: E.playPauseIcon,
+                          className: N.playPauseIcon,
                         })
                       : (0, l.jsx)(p.default, {
                           width: 24,
                           height: 24,
-                          className: E.playPauseIcon,
+                          className: N.playPauseIcon,
                         }),
                   }),
                 }),
                 (0, l.jsxs)("div", {
-                  className: r(E.timeline, { [E.timelineDragging]: null != y }),
-                  onMouseDown: el,
+                  className: i(N.timeline, { [N.timelineDragging]: null != k }),
+                  onMouseDown: en,
                   children: [
-                    (0, l.jsx)("canvas", { className: E.hiddenCanvas, ref: q }),
+                    (0, l.jsx)("canvas", { className: N.hiddenCanvas, ref: J }),
                     (0, l.jsx)("canvas", {
-                      className: E.timelineBackground,
-                      ref: K,
+                      className: N.timelineBackground,
+                      ref: Y,
                     }),
                     (0, l.jsx)(o.FocusRing, {
                       children: (0, l.jsx)("div", {
                         tabIndex: 0,
-                        ref: O,
-                        className: E.playhead,
+                        ref: F,
+                        className: N.playhead,
                         style: {
                           left:
-                            null != es
+                            null != eu
                               ? "".concat(
-                                  (es.currentTime / es.duration) * 100,
+                                  (eu.currentTime / eu.duration) * 100,
                                   "%"
                                 )
                               : 0,
@@ -1187,100 +1195,100 @@
                     (0, l.jsx)(h.default, {
                       preload: "auto",
                       onLoadedMetadata: function () {
-                        let e = A.current;
+                        let e = y.current;
                         if (null != e) {
                           if (
-                            (P(e.duration),
-                            0 === S.start &&
-                              (0 === S.end || S.end === e.duration))
+                            (O(e.duration),
+                            0 === b.start &&
+                              (0 === b.end || b.end === e.duration))
                           ) {
                             var t;
-                            null === (t = _.current) ||
+                            null === (t = S.current) ||
                               void 0 === t ||
                               t.seek(e.duration / 2),
-                              U(e.duration / 2);
+                              H(e.duration / 2);
                           }
-                          0 === S.end && b(t => ({ ...t, end: e.duration }));
+                          0 === b.end && w(t => ({ ...t, end: e.duration }));
                         }
                       },
-                      className: E.timelineVideo,
-                      ref: A,
-                      src: T,
+                      className: N.timelineVideo,
+                      ref: y,
+                      src: _,
                       muted: !0,
                     }),
                     (0, l.jsxs)("div", {
-                      className: E.dragBox,
+                      className: N.dragBox,
                       style: {
                         left:
-                          null != k ? "".concat((S.start / k) * 100, "%") : "0",
+                          null != P ? "".concat((b.start / P) * 100, "%") : "0",
                         right:
-                          null != k
-                            ? "".concat(((k - S.end) / k) * 100, "%")
+                          null != P
+                            ? "".concat(((P - b.end) / P) * 100, "%")
                             : "0",
                       },
                       children: [
                         (0, l.jsx)("div", {
-                          className: E.timePillContainer,
+                          className: N.timePillContainer,
                           children: (0, l.jsx)("div", {
-                            ref: F,
-                            className: E.timePillBackground,
+                            ref: B,
+                            className: N.timePillBackground,
                             children: (0, l.jsxs)(d.Text, {
                               variant: "text-sm/normal",
-                              className: E.timePillText,
+                              className: N.timePillText,
                               color: "always-white",
                               children: [
-                                L(er),
+                                I(es),
                                 (0, l.jsx)("span", {
-                                  className: E.slashCharacter,
+                                  className: N.slashCharacter,
                                   children: " / ",
                                 }),
-                                L(G),
+                                I(K),
                               ],
                             }),
                           }),
                         }),
                         (0, l.jsx)(o.FocusRing, {
                           children: (0, l.jsx)("button", {
-                            className: r(E.dragHandleLeft, {
-                              [E.dragging]: "start" === y,
+                            className: i(N.dragHandleLeft, {
+                              [N.dragging]: "start" === k,
                             }),
-                            onMouseDown: el,
-                            onKeyDown: et,
+                            onMouseDown: en,
+                            onKeyDown: ea,
                             role: "slider",
                             tabIndex: 0,
                             "aria-valuemin": 0,
-                            "aria-valuenow": S.start,
-                            "aria-valuetext": I(S.start),
+                            "aria-valuenow": b.start,
+                            "aria-valuetext": M(b.start),
                             "aria-valuemax":
-                              S.end - C.MIN_CLIP_DURATION_SECONDS,
-                            "aria-label": g.default.Messages.CLIPS_CROP_START,
+                              b.end - g.MIN_CLIP_DURATION_SECONDS,
+                            "aria-label": E.default.Messages.CLIPS_CROP_START,
                             children: (0, l.jsx)("div", {
-                              className: E.cropLeftArrow,
+                              className: N.cropLeftArrow,
                             }),
                           }),
                         }),
                         (0, l.jsx)(o.FocusRing, {
                           children: (0, l.jsx)("button", {
-                            className: r(E.dragHandleRight, {
-                              [E.dragging]: "end" === y,
+                            className: i(N.dragHandleRight, {
+                              [N.dragging]: "end" === k,
                             }),
-                            onMouseDown: el,
-                            onKeyDown: ea,
+                            onMouseDown: en,
+                            onKeyDown: el,
                             role: "slider",
                             tabIndex: 0,
                             "aria-valuemin":
-                              S.start + C.MIN_CLIP_DURATION_SECONDS,
-                            "aria-valuenow": S.end,
-                            "aria-valuetext": I(S.end),
+                              b.start + g.MIN_CLIP_DURATION_SECONDS,
+                            "aria-valuenow": b.end,
+                            "aria-valuetext": M(b.end),
                             "aria-valuemax":
-                              null === (j = _.current) || void 0 === j
+                              null === (j = S.current) || void 0 === j
                                 ? void 0
-                                : null === (N = j.videoElement) || void 0 === N
+                                : null === (L = j.videoElement) || void 0 === L
                                   ? void 0
-                                  : N.duration,
-                            "aria-label": g.default.Messages.CLIPS_CROP_END,
+                                  : L.duration,
+                            "aria-label": E.default.Messages.CLIPS_CROP_END,
                             children: (0, l.jsx)("div", {
-                              className: E.cropRightArrow,
+                              className: N.cropRightArrow,
                             }),
                           }),
                         }),
@@ -1292,7 +1300,7 @@
             }),
           });
         };
-      function L(e) {
+      function I(e) {
         ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
         let t = Math.floor(e / 60),
           a = Math.floor(e % 60),
@@ -1304,11 +1312,11 @@
           "".concat(t, ":").concat(a, ".").concat(l)
         );
       }
-      function I(e) {
-        let t = g.default.Messages.DURATION_MINUTES.format({
+      function M(e) {
+        let t = E.default.Messages.DURATION_MINUTES.format({
             minutes: Math.floor(e / 60),
           }),
-          a = g.default.Messages.DURATION_SECONDS.format({ seconds: e % 60 });
+          a = E.default.Messages.DURATION_SECONDS.format({ seconds: e % 60 });
         return "".concat(t, " ").concat(a);
       }
     },
@@ -1322,8 +1330,8 @@
         });
       var l = a("37983"),
         n = a("884691"),
-        i = a("414456"),
-        r = a.n(i),
+        r = a("414456"),
+        i = a.n(r),
         s = a("446674"),
         u = a("77078"),
         o = a("308289"),
@@ -1350,19 +1358,19 @@
       }
       function x(e) {
         let { clip: t, className: a } = e,
-          i = (0, s.useStateFromStoresArray)([d.default], () =>
+          r = (0, s.useStateFromStoresArray)([d.default], () =>
             t.users.map(d.default.getUser).filter(f.isNotNullish)
           ),
           o = n.useCallback(
             e => {
               let { row: t } = e,
-                a = i[t];
+                a = r[t];
               return null == a ? null : (0, l.jsx)(h, { user: a }, t);
             },
-            [i]
+            [r]
           );
         return (0, l.jsxs)("div", {
-          className: r(a, p.root),
+          className: i(a, p.root),
           children: [
             (0, l.jsx)("div", {
               className: p.header,
@@ -1376,7 +1384,7 @@
                       (0, l.jsx)(u.Text, {
                         color: "text-normal",
                         variant: "text-xs/medium",
-                        children: i.length,
+                        children: r.length,
                       }),
                       (0, l.jsx)(c.default, { className: p.userCountIcon }),
                     ],
@@ -1388,7 +1396,7 @@
               className: p.userList,
               sectionHeight: 0,
               rowHeight: 40,
-              sections: [i.length],
+              sections: [r.length],
               renderRow: o,
             }),
           ],
@@ -1409,6 +1417,31 @@
         return t && (a /= l.SEEK_SHIFT_MODIFIER), a;
       }
     },
+    141210: function (e, t, a) {
+      "use strict";
+      a.r(t),
+        a.d(t, {
+          EditModalContext: function () {
+            return n;
+          },
+          useEditModalContext: function () {
+            return r;
+          },
+        });
+      var l = a("884691");
+      let n = l.createContext({
+        videoPlayerRef: { current: null },
+        applicationAudioEnabled: !0,
+        setApplicationAudioEnabled: () => {},
+        voiceAudioEnabled: !0,
+        setVoiceAudioEnabled: () => {},
+        cropData: { start: 0, end: 0 },
+        setCropData: () => {},
+      });
+      function r() {
+        return l.useContext(n);
+      }
+    },
     433487: function (e, t, a) {
       "use strict";
       a.r(t),
@@ -1420,32 +1453,32 @@
       var l = a("37983");
       a("884691");
       var n = a("469563"),
-        i = a("304983"),
-        r = a("75196"),
+        r = a("304983"),
+        i = a("75196"),
         s = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: a = 24,
               color: n = "currentColor",
-              foreground: i,
+              foreground: r,
               ...s
             } = e;
             return (0, l.jsx)("svg", {
-              ...(0, r.default)(s),
+              ...(0, i.default)(s),
               width: t,
               height: a,
               viewBox: "0 0 24 24",
               children: (0, l.jsx)("path", {
                 fill: n,
-                className: i,
+                className: r,
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z",
               }),
             });
           },
-          i.MoreHorizontalIcon,
+          r.MoreHorizontalIcon,
           void 0,
           { size: 24 }
         );
@@ -1461,19 +1494,19 @@
       var l = a("37983");
       a("884691");
       var n = a("469563"),
-        i = a("907572"),
-        r = a("75196"),
+        r = a("907572"),
+        i = a("75196"),
         s = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 16,
               height: a = 16,
               color: n = "currentColor",
-              foreground: i,
+              foreground: r,
               ...s
             } = e;
             return (0, l.jsx)("svg", {
-              ...(0, r.default)(s),
+              ...(0, i.default)(s),
               width: t,
               height: a,
               viewBox: "0 0 24 24",
@@ -1483,7 +1516,7 @@
                 children: [
                   (0, l.jsx)("path", {
                     fill: n,
-                    className: i,
+                    className: r,
                     fillRule: "nonzero",
                     d: "M0.5,0 L0.5,1.5 C0.5,5.65 2.71,9.28 6,11.3 L6,16 L21,16 L21,14 C21,11.34 15.67,10 13,10 C13,10 12.83,10 12.75,10 C8,10 4,6 4,1.5 L4,0 L0.5,0 Z M13,0 C10.790861,0 9,1.790861 9,4 C9,6.209139 10.790861,8 13,8 C15.209139,8 17,6.209139 17,4 C17,1.790861 15.209139,0 13,0 Z",
                     transform: "translate(2 4)",
@@ -1495,7 +1528,7 @@
               }),
             });
           },
-          i.FriendsIcon,
+          r.FriendsIcon,
           void 0,
           { size: 16 }
         );
@@ -1505,23 +1538,23 @@
       a.r(t),
         a.d(t, {
           FriendsIcon: function () {
-            return r;
+            return i;
           },
         });
       var l = a("37983");
       a("884691");
       var n = a("669491"),
-        i = a("82169");
-      let r = e => {
+        r = a("82169");
+      let i = e => {
         let {
           width: t = 24,
           height: a = 24,
-          color: r = n.default.colors.INTERACTIVE_NORMAL,
+          color: i = n.default.colors.INTERACTIVE_NORMAL,
           colorClass: s = "",
           ...u
         } = e;
         return (0, l.jsxs)("svg", {
-          ...(0, i.default)(u),
+          ...(0, r.default)(u),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: a,
@@ -1529,12 +1562,12 @@
           viewBox: "0 0 24 24",
           children: [
             (0, l.jsx)("path", {
-              fill: "string" == typeof r ? r : r.css,
+              fill: "string" == typeof i ? i : i.css,
               d: "M13 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
               className: s,
             }),
             (0, l.jsx)("path", {
-              fill: "string" == typeof r ? r : r.css,
+              fill: "string" == typeof i ? i : i.css,
               d: "M3 5v-.75C3 3.56 3.56 3 4.25 3s1.24.56 1.33 1.25C6.12 8.65 9.46 12 13 12h1a8 8 0 0 1 8 8 2 2 0 0 1-2 2 .21.21 0 0 1-.2-.15 7.65 7.65 0 0 0-1.32-2.3c-.15-.2-.42-.06-.39.17l.25 2c.02.15-.1.28-.25.28H9a2 2 0 0 1-2-2v-2.22c0-1.57-.67-3.05-1.53-4.37A15.85 15.85 0 0 1 3 5Z",
               className: s,
             }),
@@ -1547,30 +1580,30 @@
       a.r(t),
         a.d(t, {
           MoreHorizontalIcon: function () {
-            return r;
+            return i;
           },
         });
       var l = a("37983");
       a("884691");
       var n = a("669491"),
-        i = a("82169");
-      let r = e => {
+        r = a("82169");
+      let i = e => {
         let {
           width: t = 24,
           height: a = 24,
-          color: r = n.default.colors.INTERACTIVE_NORMAL,
+          color: i = n.default.colors.INTERACTIVE_NORMAL,
           colorClass: s = "",
           ...u
         } = e;
         return (0, l.jsx)("svg", {
-          ...(0, i.default)(u),
+          ...(0, r.default)(u),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: a,
           fill: "none",
           viewBox: "0 0 24 24",
           children: (0, l.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
+            fill: "string" == typeof i ? i : i.css,
             fillRule: "evenodd",
             d: "M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z",
             clipRule: "evenodd",
@@ -1581,4 +1614,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2570b3d43b7a9e2b8883.js.map
+//# sourceMappingURL=f6dc31990e692991d688.js.map

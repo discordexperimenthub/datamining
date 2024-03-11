@@ -176,44 +176,6 @@
         (a[(a.WEEKDAY_ONLY = 4)] = "WEEKDAY_ONLY"),
         (a[(a.BIWEEKLY = 5)] = "BIWEEKLY");
     },
-    651072: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return r;
-          },
-        });
-      var l = n("862205");
-      let a = (0, l.createExperiment)({
-        kind: "guild",
-        id: "2023-09_recurring_events",
-        label: "Allows guild to create recurring events",
-        defaultConfig: {
-          showRecurringEventsDesktop: !1,
-          showRecurringEventsMobile: !1,
-        },
-        treatments: [
-          {
-            id: 1,
-            label: "Recurring Events are enabled (Desktop Only)",
-            config: {
-              showRecurringEventsDesktop: !0,
-              showRecurringEventsMobile: !1,
-            },
-          },
-          {
-            id: 2,
-            label: "Recurring Events are enabled on Mobile + Desktop",
-            config: {
-              showRecurringEventsDesktop: !0,
-              showRecurringEventsMobile: !0,
-            },
-          },
-        ],
-      });
-      var r = a;
-    },
     776863: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -271,16 +233,16 @@
             return E;
           },
           getRecurrenceOptions: function () {
-            return R;
-          },
-          getInitialEventStartDate: function () {
             return m;
           },
+          getInitialEventStartDate: function () {
+            return R;
+          },
           getEventTimeData: function () {
-            return N;
+            return T;
           },
           getBaseScheduleForRecurrence: function () {
-            return x;
+            return I;
           },
           getScheduleForRecurrenceWithException: function () {
             return L;
@@ -361,7 +323,7 @@
           s.RRule.SA.weekday,
         ],
         S = new Set([0, 6]);
-      function R(e) {
+      function m(e) {
         let t = e.toDate(),
           n = Math.ceil(t.getDate() / 7),
           l = e.format("dddd"),
@@ -408,30 +370,30 @@
           a
         );
       }
-      let m = () => {
+      let R = () => {
           let e = r().add(1, "hour"),
             t = e.hour();
           return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
         },
-        T = (e, t) =>
+        C = (e, t) =>
           e.format(
             e.get("years") === t.get("years")
               ? "ddd MMM Do \xb7 LT"
               : "ddd MMM Do, YYYY \xb7 LT"
           ),
-        C = (e, t) => {
+        N = (e, t) => {
           let n = e.diff(t, "days");
-          return n > 1 ? T(e, t) : e.calendar(t);
+          return n > 1 ? C(e, t) : e.calendar(t);
         };
-      function N(e, t, n) {
+      function T(e, t, n) {
         null == n && (n = r());
         let l = r(e),
           a = null != t && "" !== t ? r(t) : void 0,
           s = null != t && l.isSame(a, "day");
         return {
-          startDateTimeString: C(l, n),
+          startDateTimeString: N(l, n),
           endDateTimeString:
-            null != a ? (s ? a.format("LT") : T(a, n)) : void 0,
+            null != a ? (s ? a.format("LT") : C(a, n)) : void 0,
           currentOrPastEvent: l <= n,
           upcomingEvent: l <= r().add(1, "hour"),
           withinStartWindow: l <= r().add(15, "minute"),
@@ -441,7 +403,7 @@
       function p(e) {
         return new s.Weekday(v[e]);
       }
-      function I(e, t) {
+      function x(e, t) {
         let n;
         return (
           null != e &&
@@ -450,9 +412,9 @@
           n
         );
       }
-      function x(e, t) {
+      function I(e, t) {
         let n = (function (e) {
-            return I(e.scheduled_start_time, e.scheduled_end_time);
+            return x(e.scheduled_start_time, e.scheduled_end_time);
           })(t),
           l = r(u.default.extractTimestamp(e)),
           a =
@@ -475,7 +437,7 @@
         };
       }
       function A(e) {
-        return I(e.scheduledStartTime, e.scheduledEndTime);
+        return x(e.scheduledStartTime, e.scheduledEndTime);
       }
       function y(e, t) {
         return null == e || null == t ? null == e && null == t : e.isSame(t);
@@ -749,7 +711,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return E;
           },
         });
       var l = n("37983");
@@ -757,106 +719,88 @@
       var a = n("866227"),
         r = n.n(a),
         s = n("77078"),
-        i = n("812204"),
-        u = n("685665"),
-        o = n("381546"),
-        c = n("351825"),
-        d = n("651072"),
-        f = n("822516"),
-        E = n("844808"),
-        h = n("49111"),
-        g = n("782340"),
-        _ = n("785548");
-      function v(e) {
+        i = n("381546"),
+        u = n("351825"),
+        o = n("822516"),
+        c = n("844808"),
+        d = n("782340"),
+        f = n("785548");
+      function E(e) {
         let {
-            className: t,
-            guildId: n,
-            onScheduleChange: a,
-            onRecurrenceChange: v,
-            onTimeChange: S,
-            timeSelected: R = !0,
-            schedule: m,
-            recurrenceRule: T,
-            showEndDate: C = !1,
-            requireEndDate: N = !1,
-            disableStartDateTime: p = !1,
-          } = e,
-          { analyticsLocations: I } = (0, u.default)(i.default.EVENT_SETTINGS),
-          { showRecurringEventsDesktop: x } = d.default.useExperiment(
-            {
-              guildId: null != n ? n : h.EMPTY_STRING_SNOWFLAKE_ID,
-              location: I[0],
-            },
-            { autoTrackExposure: !1 }
-          );
-        if (null == m) return null;
-        let L = null,
-          A = m.startDate,
-          y = r(),
-          D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-          M = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
-        null != T &&
-          (D.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"),
-          M.add(f.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
-        let j = e => {
-          a({ ...m, endDate: e });
+          className: t,
+          onScheduleChange: n,
+          onRecurrenceChange: a,
+          onTimeChange: E,
+          timeSelected: h = !0,
+          schedule: g,
+          recurrenceRule: _,
+          showEndDate: v = !1,
+          requireEndDate: S = !1,
+          disableStartDateTime: m = !1,
+        } = e;
+        if (null == g) return null;
+        let R = null,
+          C = g.startDate,
+          N = r(),
+          T = r().add(o.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+          p = r().add(o.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+        null != _ &&
+          (T.add(o.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"),
+          p.add(o.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
+        let x = e => {
+          n({ ...g, endDate: e });
         };
         return (
-          null != A &&
-            d.default.trackExposure({
-              guildId: null != n ? n : h.EMPTY_STRING_SNOWFLAKE_ID,
-              location: I[0],
-            }),
-          C &&
-            (L =
-              null != m.endDate || N
+          v &&
+            (R =
+              null != g.endDate || S
                 ? (0, l.jsxs)(l.Fragment, {
                     children: [
                       (0, l.jsxs)("div", {
-                        className: _.doubleInput,
+                        className: f.doubleInput,
                         children: [
                           (0, l.jsx)(s.FormItem, {
                             title:
-                              g.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-                            required: N,
+                              d.default.Messages.CREATE_EVENT_END_DATE_LABEL,
+                            required: S,
                             children: (0, l.jsx)(s.DateInput, {
-                              value: m.endDate,
-                              onSelect: j,
-                              minDate: m.startDate,
-                              maxDate: M,
+                              value: g.endDate,
+                              onSelect: x,
+                              minDate: g.startDate,
+                              maxDate: p,
                             }),
                           }),
                           (0, l.jsx)(s.FormItem, {
                             title:
-                              g.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-                            required: N,
+                              d.default.Messages.CREATE_EVENT_END_TIME_LABEL,
+                            required: S,
                             children: (0, l.jsx)(s.TimeInput, {
-                              value: m.endDate,
-                              onChange: j,
+                              value: g.endDate,
+                              onChange: x,
                             }),
                           }),
                         ],
                       }),
-                      N
+                      S
                         ? null
                         : (0, l.jsx)(s.Button, {
                             onClick: () => {
-                              j(void 0);
+                              x(void 0);
                             },
                             look: s.Button.Looks.BLANK,
                             size: s.Button.Sizes.MIN,
                             children: (0, l.jsxs)("div", {
-                              className: _.link,
+                              className: f.link,
                               children: [
-                                (0, l.jsx)(o.default, {
+                                (0, l.jsx)(i.default, {
                                   width: 17,
                                   height: 17,
-                                  className: _.removeIcon,
+                                  className: f.removeIcon,
                                 }),
                                 (0, l.jsx)(s.Text, {
                                   variant: "text-sm/normal",
                                   children:
-                                    g.default.Messages
+                                    d.default.Messages
                                       .CREATE_EVENT_REMOVE_END_TIME_LABEL,
                                 }),
                               ],
@@ -868,20 +812,20 @@
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.MIN,
                     onClick: () => {
-                      j(r(m.startDate).add(1, "hour"));
+                      x(r(g.startDate).add(1, "hour"));
                     },
                     children: (0, l.jsxs)("div", {
-                      className: _.link,
+                      className: f.link,
                       children: [
-                        (0, l.jsx)(c.default, {
+                        (0, l.jsx)(u.default, {
                           width: 20,
                           height: 20,
-                          className: _.addIcon,
+                          className: f.addIcon,
                         }),
                         (0, l.jsx)(s.Text, {
                           variant: "text-sm/normal",
                           children:
-                            g.default.Messages.CREATE_EVENT_ADD_END_TIME_LABEL,
+                            d.default.Messages.CREATE_EVENT_ADD_END_TIME_LABEL,
                         }),
                       ],
                     }),
@@ -890,44 +834,43 @@
             className: t,
             children: [
               (0, l.jsxs)("div", {
-                className: _.doubleInput,
+                className: f.doubleInput,
                 children: [
                   (0, l.jsx)(s.FormItem, {
-                    title: g.default.Messages.CREATE_EVENT_START_DATE_LABEL,
+                    title: d.default.Messages.CREATE_EVENT_START_DATE_LABEL,
                     required: !0,
                     children: (0, l.jsx)(s.DateInput, {
-                      value: m.startDate,
+                      value: g.startDate,
                       onSelect: e => {
-                        a({ ...m, startDate: e });
+                        n({ ...g, startDate: e });
                       },
-                      minDate: y,
-                      maxDate: D,
-                      disabled: p,
+                      minDate: N,
+                      maxDate: T,
+                      disabled: m,
                     }),
                   }),
                   (0, l.jsx)(s.FormItem, {
-                    title: g.default.Messages.CREATE_EVENT_START_TIME_LABEL,
+                    title: d.default.Messages.CREATE_EVENT_START_TIME_LABEL,
                     required: !0,
                     children: (0, l.jsx)(s.TimeInput, {
-                      value: m.startDate,
+                      value: g.startDate,
                       onChange: e => {
                         e.isValid() &&
-                          (null == S || S(!0), a({ ...m, startDate: e }));
+                          (null == E || E(!0), n({ ...g, startDate: e }));
                       },
-                      hideValue: !R,
-                      disabled: p,
+                      hideValue: !h,
+                      disabled: m,
                     }),
                   }),
                 ],
               }),
-              L,
-              x &&
-                null != A &&
-                null != v &&
-                (0, l.jsx)(E.default, {
-                  onRecurrenceChange: v,
-                  startDate: A,
-                  recurrenceRule: T,
+              R,
+              null != C &&
+                null != a &&
+                (0, l.jsx)(c.default, {
+                  onRecurrenceChange: a,
+                  startDate: C,
+                  recurrenceRule: _,
                 }),
             ],
           })
@@ -1332,10 +1275,10 @@
             source: _,
             speakers: v,
             speakerCount: S,
-            audienceCount: R,
-            channelName: m,
+            audienceCount: m,
+            channelName: R,
           } = e,
-          T = t.id;
+          C = t.id;
         return (0, r.jsx)("div", {
           className: g.contentContainer,
           children: (0, r.jsxs)("div", {
@@ -1345,7 +1288,7 @@
                 className: g.guildInfoContainer,
                 children: [
                   (0, r.jsx)(o.default, {
-                    guildId: T,
+                    guildId: C,
                     shouldShow: l,
                     onRequestClose: () => a(!1),
                     children: () =>
@@ -1388,7 +1331,7 @@
                           }),
                         }),
                       (0, r.jsx)(h.default, {
-                        count: R,
+                        count: m,
                         className: g.audienceCount,
                       }),
                     ],
@@ -1413,7 +1356,7 @@
                 speakerCount: S,
                 className: g.speakers,
               }),
-              null != m &&
+              null != R &&
                 (0, r.jsxs)(r.Fragment, {
                   children: [
                     (0, r.jsx)("hr", { className: g.divider }),
@@ -1429,7 +1372,7 @@
                           color: "header-secondary",
                           className: g.label,
                           variant: "text-sm/normal",
-                          children: m,
+                          children: R,
                         }),
                       ],
                     }),
@@ -1452,7 +1395,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return N;
+            return T;
           },
         }),
         n("424973");
@@ -1473,25 +1416,25 @@
         _ = n("49111"),
         v = n("745049"),
         S = n("782340"),
-        R = n("290145");
-      function m(e) {
+        m = n("290145");
+      function R(e) {
         let { icon: t } = e;
         return (0, l.jsx)("div", {
-          className: R.iconContainer,
+          className: m.iconContainer,
           children: (0, l.jsx)(t, { width: 24, height: 24 }),
         });
       }
-      function T(e) {
+      function C(e) {
         let { icon: t, text: n } = e;
         return (0, l.jsxs)("div", {
-          className: R.listItemContainer,
+          className: m.listItemContainer,
           children: [
             (0, l.jsx)("div", {
-              className: R.listItemIconContainer,
+              className: m.listItemIconContainer,
               children: t,
             }),
             (0, l.jsx)(r.Text, {
-              className: R.listItemText,
+              className: m.listItemText,
               variant: "text-md/normal",
               color: "header-secondary",
               children: n,
@@ -1499,7 +1442,7 @@
           ],
         });
       }
-      function C(e) {
+      function N(e) {
         var t;
         let { guild: n, channel: r, stageData: i } = e,
           u = (0, a.useStateFromStores)(
@@ -1538,9 +1481,9 @@
             }) &&
             _.push({ user: u, userNick: f.default.getName(n.id, r.id, u) }),
           (0, l.jsx)("div", {
-            className: R.previewCardContainer,
+            className: m.previewCardContainer,
             children: (0, l.jsx)("div", {
-              className: R.previewCard,
+              className: m.previewCard,
               children: (0, l.jsx)(g.default, {
                 guild: n,
                 stageInstance: o,
@@ -1556,7 +1499,7 @@
           })
         );
       }
-      function N(e) {
+      function T(e) {
         let {
           guild: t,
           channel: n,
@@ -1571,22 +1514,22 @@
           ? null
           : (0, l.jsxs)(l.Fragment, {
               children: [
-                (0, l.jsx)(C, { guild: t, channel: n, stageData: a }),
+                (0, l.jsx)(N, { guild: t, channel: n, stageData: a }),
                 (0, l.jsxs)(r.ModalContent, {
-                  className: R.container,
+                  className: m.container,
                   children: [
                     (0, l.jsxs)("div", {
-                      className: R.header,
+                      className: m.header,
                       children: [
                         (0, l.jsx)(r.Heading, {
                           id: s,
-                          className: R.title,
+                          className: m.title,
                           variant: "heading-xl/semibold",
                           children:
                             S.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE,
                         }),
                         (0, l.jsx)(r.Text, {
-                          className: R.subtitle,
+                          className: m.subtitle,
                           color: "header-secondary",
                           variant: "text-sm/normal",
                           children:
@@ -1596,27 +1539,27 @@
                       ],
                     }),
                     (0, l.jsxs)("div", {
-                      className: R.list,
+                      className: m.list,
                       children: [
-                        (0, l.jsx)(T, {
-                          icon: (0, l.jsx)(m, { icon: i.default }),
+                        (0, l.jsx)(C, {
+                          icon: (0, l.jsx)(R, { icon: i.default }),
                           text: S.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_ONE,
                         }),
-                        (0, l.jsx)(T, {
-                          icon: (0, l.jsx)(m, { icon: o.default }),
+                        (0, l.jsx)(C, {
+                          icon: (0, l.jsx)(R, { icon: o.default }),
                           text: S.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_TWO,
                         }),
-                        (0, l.jsx)(T, {
-                          icon: (0, l.jsx)(m, { icon: u.default }),
+                        (0, l.jsx)(C, {
+                          icon: (0, l.jsx)(R, { icon: u.default }),
                           text: S.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_THREE,
                         }),
-                        (0, l.jsx)(T, {
+                        (0, l.jsx)(C, {
                           icon: (0, l.jsx)(c.default, {
-                            className: R.badgeIconBackground,
-                            foreground: R.badgeIconForeground,
+                            className: m.badgeIconBackground,
+                            foreground: m.badgeIconForeground,
                             width: 40,
                             height: 40,
                           }),
@@ -1644,14 +1587,14 @@
                     }),
                     (0, l.jsx)(r.Button, {
                       color: r.Button.Colors.PRIMARY,
-                      className: R.cancelButton,
+                      className: m.cancelButton,
                       onClick: h,
                       children: S.default.Messages.CANCEL,
                     }),
                     (0, l.jsx)(r.Button, {
                       look: r.Button.Looks.LINK,
                       color: r.Button.Colors.LINK,
-                      className: R.backButton,
+                      className: m.backButton,
                       onClick: g,
                       size: r.Button.Sizes.MIN,
                       children: S.default.Messages.BACK,
@@ -1687,14 +1630,14 @@
         _ = n("697218"),
         v = n("228427"),
         S = n("599110"),
-        R = n("887143"),
-        m = n("834052"),
-        T = n("151642"),
-        C = n("29846"),
-        N = n("837979"),
+        m = n("887143"),
+        R = n("834052"),
+        C = n("151642"),
+        N = n("29846"),
+        T = n("837979"),
         p = n("49111"),
-        I = n("745049"),
-        x = n("533613"),
+        x = n("745049"),
+        I = n("533613"),
         L = n("782340"),
         A = n("873206");
       function y(e) {
@@ -1740,13 +1683,13 @@
             onSave: U,
             onEventSave: B,
             onClose: P,
-            onSelectChannel: b,
-            isEvent: V = !1,
+            onSelectChannel: V,
+            isEvent: b = !1,
             defaultOptions: H,
             isSlideReady: Y = !0,
           } = e,
           F = a.useMemo(
-            () => m.default.getStageInstanceByChannel(j.id),
+            () => R.default.getStageInstanceByChannel(j.id),
             [j.id]
           ),
           [W, Z] = a.useState(
@@ -1765,23 +1708,23 @@
               ? r
               : ""
           ),
-          [q] = a.useState(V),
+          [q] = a.useState(b),
           [X, J] = a.useState(
             null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g
               ? g
               : { startDate: (0, d.getInitialEventStartDate)() }
           ),
           [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null),
-          ee = (0, R.useCanSendStageStartNotification)(j),
-          et = (0, R.useDefaultSendStartStageNotificationToggle)(j),
+          ee = (0, m.useCanSendStageStartNotification)(j),
+          et = (0, m.useDefaultSendStartStageNotificationToggle)(j),
           en = null == F && ee && !q,
           [el, ea] = a.useState(en && et),
           er = (0, i.useStateFromStores)([h.default], () =>
             h.default.hasHotspot(
-              x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE
+              I.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE
             )
           ),
-          es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
+          es = x.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
           [ei] = a.useState(
             null !==
               (v =
@@ -1795,11 +1738,11 @@
               : es
           ),
           [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule),
-          ec = (0, T.useStageBlockedUsersCount)(j.id),
+          ec = (0, C.useStageBlockedUsersCount)(j.id),
           [ed, ef] = a.useState(!1),
           eE = (0, o.default)(j),
           eh = (0, c.useChannelsUserCanStartStageIn)(O),
-          eg = null != b,
+          eg = null != V,
           e_ = eh.length > 1;
         a.useEffect(() => {
           S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
@@ -1811,7 +1754,7 @@
         let ev = e => {
           if (
             (e.preventDefault(),
-            ei === I.GuildScheduledEventPrivacyLevel.PUBLIC &&
+            ei === x.GuildScheduledEventPrivacyLevel.PUBLIC &&
               W.length < 20 &&
               !ed)
           ) {
@@ -1826,13 +1769,13 @@
                 ...t,
                 schedule: X,
                 description: K,
-                entityType: I.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
+                entityType: x.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
               });
             return;
           }
           null == U || U(t);
         };
-        let { color: eS, text: eR } =
+        let { color: eS, text: em } =
             ((D = F),
             (M = ei),
             q
@@ -1840,9 +1783,9 @@
                   color: u.Button.Colors.BRAND,
                   text: L.default.Messages.SCHEDULE_EVENT,
                 }
-              : M === I.GuildScheduledEventPrivacyLevel.PUBLIC &&
+              : M === x.GuildScheduledEventPrivacyLevel.PUBLIC &&
                   (null == D ? void 0 : D.privacy_level) !==
-                    I.GuildScheduledEventPrivacyLevel.PUBLIC
+                    x.GuildScheduledEventPrivacyLevel.PUBLIC
                 ? {
                     color: u.Button.Colors.BRAND,
                     text: L.default.Messages.CONTINUE,
@@ -1857,12 +1800,12 @@
                       color: u.Button.Colors.BRAND,
                       text: L.default.Messages.SAVE_CHANGES,
                     }),
-          em = a.useRef(null);
+          eR = a.useRef(null);
         a.useEffect(() => {
           var e;
-          Y && (null === (e = em.current) || void 0 === e || e.focus());
+          Y && (null === (e = eR.current) || void 0 === e || e.focus());
         }, [Y]);
-        let eT = Q && null != X.startDate && X.startDate >= s();
+        let eC = Q && null != X.startDate && X.startDate >= s();
         return (0, l.jsxs)(l.Fragment, {
           children: [
             (0, l.jsxs)(u.ModalContent, {
@@ -1874,14 +1817,14 @@
                   children:
                     null == F &&
                     ec > 0 &&
-                    (0, l.jsx)(C.BlockedUsersNotice, { channelId: j.id }),
+                    (0, l.jsx)(N.BlockedUsersNotice, { channelId: j.id }),
                 }),
                 (0, l.jsxs)("form", {
                   onSubmit: ev,
                   className: A.form,
                   children: [
                     (0, l.jsxs)(u.FormItem, {
-                      title: V
+                      title: b
                         ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL
                         : L.default.Messages
                             .START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
@@ -1894,10 +1837,10 @@
                           placeholder:
                             L.default.Messages
                               .START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
-                          maxLength: N.MAX_STAGE_TOPIC_LENGTH,
+                          maxLength: T.MAX_STAGE_TOPIC_LENGTH,
                           value: W,
                           autoComplete: "off",
-                          inputRef: em,
+                          inputRef: eR,
                         }),
                         ed &&
                           (0, l.jsx)(u.Text, {
@@ -1922,7 +1865,7 @@
                       ? (0, l.jsx)(y, {
                           stageChannelsInGuild: eh,
                           channel: j,
-                          onSelectChannel: b,
+                          onSelectChannel: V,
                         })
                       : null,
                     q &&
@@ -1957,7 +1900,7 @@
                             : null,
                         ],
                       }),
-                    V &&
+                    b &&
                       (0, l.jsx)(u.FormItem, {
                         title:
                           L.default.Messages
@@ -1969,7 +1912,7 @@
                               .GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
                           value: K,
                           onChange: e => z(e),
-                          maxLength: I.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
+                          maxLength: x.GUILD_EVENT_MAX_DESCRIPTION_LENGTH,
                         }),
                       }),
                     en
@@ -2010,9 +1953,9 @@
                 (0, l.jsx)(u.Button, {
                   color: eS,
                   onClick: ev,
-                  disabled: "" === W || null == ei || (V && !eT),
+                  disabled: "" === W || null == ei || (b && !eC),
                   submitting: G,
-                  children: eR,
+                  children: em,
                 }),
                 (0, l.jsx)(u.Button, {
                   color: u.Button.Colors.PRIMARY,
@@ -2031,7 +1974,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return m;
+            return R;
           },
         });
       var l = n("37983"),
@@ -2050,7 +1993,7 @@
         _ = n("837979"),
         v = n("782340"),
         S = n("652809");
-      function R(e) {
+      function m(e) {
         let {
           guild: t,
           channel: n,
@@ -2113,30 +2056,30 @@
           ],
         });
       }
-      function m(e) {
+      function R(e) {
         let { channel: t, onClose: n, transitionState: o, ...d } = e,
           E = (0, u.useUID)(),
           v = (0, r.useStateFromStores)([i.default], () =>
             i.default.getGuild(t.guild_id)
           ),
-          m = a.useMemo(
+          R = a.useMemo(
             () => c.default.getStageInstanceByChannel(t.id),
             [t.id]
           ),
-          { loading: T, error: C, onSave: N } = (0, h.default)(t, n),
+          { loading: C, error: N, onSave: T } = (0, h.default)(t, n),
           {
             modalStep: p,
-            setModalStep: I,
-            readySlide: x,
+            setModalStep: x,
+            readySlide: I,
             handleSlideReady: L,
             savedOptions: A,
             handleSettingsSave: y,
             handleDelayedSave: D,
           } = (0, g.default)({
-            stageInstance: m,
+            stageInstance: R,
             defaultStep: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
-            error: C,
-            onSave: N,
+            error: N,
+            onSave: T,
           });
         return (a.useEffect(() => {
           null == v && n();
@@ -2157,18 +2100,18 @@
                     id: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                     children: (0, l.jsx)("div", {
                       className: S.slideContainer,
-                      children: (0, l.jsx)(R, {
+                      children: (0, l.jsx)(m, {
                         guild: v,
                         channel: t,
-                        stageInstance: m,
+                        stageInstance: R,
                         headerId: E,
                         onClose: n,
-                        loading: T,
-                        error: C,
+                        loading: C,
+                        error: N,
                         onSave: y,
                         defaultOptions: A,
                         isSlideReady:
-                          x === _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
+                          I === _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                       }),
                     }),
                   }),
@@ -2181,11 +2124,11 @@
                         guild: v,
                         channel: t,
                         stageData: A,
-                        loading: T,
+                        loading: C,
                         onNext: D,
                         onCancel: n,
                         onBack: () =>
-                          I(_.StartStageSteps.STAGE_CHANNEL_SETTINGS),
+                          x(_.StartStageSteps.STAGE_CHANNEL_SETTINGS),
                       }),
                     }),
                   }),
@@ -2347,7 +2290,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return N;
+            return T;
           },
         });
       var l = n("37983"),
@@ -2384,7 +2327,7 @@
           [v.LARGER]: 64,
           [v.XLARGE]: 100,
         },
-        R = {
+        m = {
           [v.SMOL]: [10, 10, 8, 6, 6, 4],
           [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
           [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -2394,7 +2337,7 @@
           [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
           [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
         };
-      class m extends a.PureComponent {
+      class R extends a.PureComponent {
         renderAcronym() {
           let { guild: e, iconSrc: t } = this.props;
           return null != e.icon || null != t
@@ -2426,15 +2369,15 @@
               onClick: g,
               to: v,
               badgeStrokeColor: S,
-              animate: m,
-              tabIndex: T,
-              iconSrc: C,
-              "aria-hidden": N,
+              animate: R,
+              tabIndex: C,
+              iconSrc: N,
+              "aria-hidden": T,
               ...p
             } = this.props,
-            I = R[u],
-            x = null != g ? c.Clickable : "div";
-          return (0, l.jsxs)(x, {
+            x = m[u],
+            I = null != g ? c.Clickable : "div";
+          return (0, l.jsxs)(I, {
             className: s(_.icon, a, (0, h.getClass)(_, "iconSize", u), {
               [null !== (e = (0, h.getClass)(_, "iconActive", u)) &&
               void 0 !== e
@@ -2443,19 +2386,19 @@
               [_.iconInactive]: !i,
               [_.noIcon]: null == n.icon,
             }),
-            "aria-hidden": N,
+            "aria-hidden": T,
             style:
               null == n.icon
                 ? {
                     fontSize:
-                      (null !== (t = I[n.acronym.length]) && void 0 !== t
+                      (null !== (t = x[n.acronym.length]) && void 0 !== t
                         ? t
-                        : I[I.length - 1]) * d,
+                        : x[x.length - 1]) * d,
                     ...o,
                   }
                 : o,
             onClick: null != v || null == g ? void 0 : g,
-            tabIndex: T,
+            tabIndex: C,
             ...p,
             children: [this.renderAcronym(), this.renderBadge()],
           });
@@ -2494,7 +2437,7 @@
             : this.renderTooltip();
         }
       }
-      let T = u.default.connectStores([f.default], e => {
+      let C = u.default.connectStores([f.default], e => {
         let { guild: t, animate: n, iconSrc: l, style: a, size: r } = e;
         return {
           style: {
@@ -2504,14 +2447,14 @@
             ),
           },
         };
-      })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(m, { ...e })));
-      class C extends a.PureComponent {
+      })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(R, { ...e })));
+      class N extends a.PureComponent {
         render() {
-          return (0, l.jsx)(T, { ...this.props });
+          return (0, l.jsx)(C, { ...this.props });
         }
       }
-      (C.Sizes = v),
-        (C.defaultProps = {
+      (N.Sizes = v),
+        (N.defaultProps = {
           size: v.LARGE,
           textScale: 1,
           showBadge: !1,
@@ -2521,7 +2464,7 @@
           badgeStrokeColor: o.default.unsafe_rawColors.WHITE_500.css,
           animate: !1,
         });
-      var N = C;
+      var T = N;
     },
     381546: function (e, t, n) {
       "use strict";
@@ -2914,28 +2857,28 @@
             return S;
           },
           trackDiscoveryViewed: function () {
-            return R;
-          },
-          trackDiscoveryExited: function () {
             return m;
           },
-          trackSearchClosed: function () {
-            return T;
+          trackDiscoveryExited: function () {
+            return R;
           },
-          trackSearchStarted: function () {
+          trackSearchClosed: function () {
             return C;
           },
-          trackTagSearchStarted: function () {
+          trackSearchStarted: function () {
             return N;
+          },
+          trackTagSearchStarted: function () {
+            return T;
           },
           trackSearchResultsViewed: function () {
             return p;
           },
           trackGuildJoinClicked: function () {
-            return I;
+            return x;
           },
           getDiscoverableGuild: function () {
-            return x;
+            return I;
           },
         }),
         n("222007");
@@ -3049,7 +2992,7 @@
           keywords: e.keywords,
         };
       }
-      function R(e) {
+      function m(e) {
         let {
             loadId: t,
             gamesYouPlayGuilds: n,
@@ -3069,7 +3012,7 @@
           recommendations_source: r,
         });
       }
-      function m(e, t) {
+      function R(e, t) {
         let n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_EXITED, {
@@ -3078,10 +3021,10 @@
           recommendations_source: n,
         });
       }
-      function T(e) {
+      function C(e) {
         E.default.track(h.AnalyticEvents.SEARCH_CLOSED, { load_id: e });
       }
-      function C(e, t) {
+      function N(e, t) {
         let n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
@@ -3091,7 +3034,7 @@
           category_id: t,
         });
       }
-      function N(e, t, n, l) {
+      function T(e, t, n, l) {
         E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
           search_type: h.SearchTypes.GUILD_DISCOVERY_TAG,
           load_id: e,
@@ -3123,7 +3066,7 @@
           category_id: s,
         });
       }
-      function I(e) {
+      function x(e) {
         let t = u.default.getLoadId(e);
         E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
           guild_id: e,
@@ -3131,7 +3074,7 @@
           guild_size: d.default.getMemberCount(e),
         });
       }
-      async function x(e) {
+      async function I(e) {
         try {
           var t, n;
           let l = await s.default.get({
@@ -3491,4 +3434,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3afaf380f1bc736e6321.js.map
+//# sourceMappingURL=999599593ec86e3bcf96.js.map

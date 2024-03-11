@@ -16299,10 +16299,6 @@
           "Are you sure you want to edit this event?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Editing this event will also **update all events** in this series.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Try it",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NEW! Repeating Events",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "You can now easily repeat events.",
         COPY_RECURRENCE_LINK: "Copy Link for Only this Event",
         COPY_SERIES_LINK: "Copy Link for all Events",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
@@ -26298,8 +26294,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273903", ", Version Hash: ")
-          .concat("995b39f9fbeba5f46c4687d1663b076c17372495")
+          .concat("273911", ", Version Hash: ")
+          .concat("18df2756c8efb9563c666ca4d2782d905bf5b60b")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29399,12 +29395,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273903"), "273903"));
+        let _ = parseInt(((e = "273911"), "273911"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273903"
+                "273911"
               )
             ),
             (_ = 0)),
@@ -45263,7 +45259,6 @@
         (u[(u.SEEN_LAUNCH_WELCOME_OR_REDESIGN = 325)] =
           "SEEN_LAUNCH_WELCOME_OR_REDESIGN"),
         (u[(u.SEEN_OLD_DESIGN = 326)] = "SEEN_OLD_DESIGN"),
-        (u[(u.RECURRING_EVENT_COACHMARK = 327)] = "RECURRING_EVENT_COACHMARK"),
         (u[(u.SEASONAL_GIFTING_COACHMARK_2023 = 328)] =
           "SEASONAL_GIFTING_COACHMARK_2023"),
         (u[(u.SHOP_FOR_ALL_USER_POPOUT_UPSELL = 329)] =
@@ -51701,4 +51696,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.e7e0358141677c54d430.js.map
+//# sourceMappingURL=76039.407388433146dc12da3e.js.map

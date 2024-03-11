@@ -423,7 +423,7 @@
             return h;
           },
           default: function () {
-            return v;
+            return S;
           },
         }),
         n("222007");
@@ -475,14 +475,14 @@
             mute_config: { selected_time_window: e, end_time: t },
           };
         };
-      function v(e, t) {
+      function S(e, t) {
         let [n, a] = (0, s.useStateFromStoresArray)([c.default], () => [
             c.default.isChannelMuted(e.guild_id, e.id),
             c.default.getChannelMuteConfig(e.guild_id, e.id),
           ]),
           r = (0, d.useMutedUntilText)(a),
           p = (0, E.default)(e, !0);
-        function v(t) {
+        function S(t) {
           t &&
             e.type === C.ChannelTypes.GUILD_CATEGORY &&
             (0, u.categoryCollapse)(e.id),
@@ -493,23 +493,23 @@
               f.NotificationLabel.muted(t)
             );
         }
-        let S = _.default.Messages.MUTE_CHANNEL_GENERIC,
+        let v = _.default.Messages.MUTE_CHANNEL_GENERIC,
           N = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
         switch (e.type) {
           case C.ChannelTypes.GUILD_CATEGORY:
-            (S = _.default.Messages.MUTE_CATEGORY),
+            (v = _.default.Messages.MUTE_CATEGORY),
               (N = _.default.Messages.UNMUTE_CATEGORY);
             break;
           case C.ChannelTypes.GROUP_DM:
-            (S = _.default.Messages.MUTE_CONVERSATION),
+            (v = _.default.Messages.MUTE_CONVERSATION),
               (N = _.default.Messages.UNMUTE_CONVERSATION);
             break;
           case C.ChannelTypes.DM:
-            (S = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
+            (v = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
               (N = _.default.Messages.UNMUTE_CHANNEL.format({ name: p }));
             break;
           default:
-            (S = _.default.Messages.MUTE_CHANNEL_GENERIC),
+            (v = _.default.Messages.MUTE_CHANNEL_GENERIC),
               (N = _.default.Messages.UNMUTE_CHANNEL_GENERIC);
         }
         return n
@@ -517,12 +517,12 @@
               id: "unmute-channel",
               label: N,
               subtext: r,
-              action: () => v(!1),
+              action: () => S(!1),
             })
           : (0, i.jsx)(l.MenuItem, {
               id: "mute-channel",
-              label: S,
-              action: () => v(!0),
+              label: v,
+              action: () => S(!0),
               children: h().map(n => {
                 let { value: a, label: r } = n;
                 return (0, i.jsx)(
@@ -576,7 +576,7 @@
             return g;
           },
           toggleFavoriteServerMuted: function () {
-            return v;
+            return S;
           },
         }),
         n("222007");
@@ -702,7 +702,7 @@
           a.UserSettingsDelay.FREQUENT_USER_ACTION
         );
       }
-      function v() {
+      function S() {
         a.PreloadedUserSettingsActionCreators.updateAsync(
           "favorites",
           e => {
@@ -1149,7 +1149,7 @@
       n.r(t),
         n.d(t, {
           useSafetyWarningsItem: function () {
-            return d;
+            return c;
           },
         });
       var i = n("37983");
@@ -1158,11 +1158,12 @@
         r = n("77078"),
         s = n("277734"),
         l = n("764828"),
-        u = n("697218"),
-        o = n("782340");
-      function d(e) {
-        let t = (0, a.useStateFromStores)([u.default], () =>
-            u.default.getCurrentUser()
+        u = n("559922"),
+        o = n("697218"),
+        d = n("782340");
+      function c(e) {
+        let t = (0, a.useStateFromStores)([o.default], () =>
+            o.default.getCurrentUser()
           ),
           n = (0, a.useStateFromStores)([l.default], () =>
             l.default.getChannelSafetyWarnings(e.id)
@@ -1171,12 +1172,19 @@
           null == n ||
           0 === n.length
           ? null
-          : (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsx)(r.MenuItem, {
-                id: "clear-safety-warnings",
-                label: o.default.Messages.STRANGER_DANGER_CONTEXT_MENU_CLEAR,
-                action: () => (0, s.clearChannelSafetyWarnings)(e.id),
-              }),
+          : (0, i.jsxs)(i.Fragment, {
+              children: [
+                (0, i.jsx)(r.MenuItem, {
+                  id: "delete-safety-warnings",
+                  label: d.default.Messages.SAFETY_WARNINGS_DELETE,
+                  action: () => (0, u.deleteAllSafetyWarnings)(e.id),
+                }),
+                (0, i.jsx)(r.MenuItem, {
+                  id: "clear-safety-warnings",
+                  label: d.default.Messages.STRANGER_DANGER_CONTEXT_MENU_CLEAR,
+                  action: () => (0, s.clearChannelSafetyWarnings)(e.id),
+                }),
+              ],
             });
       }
     },
@@ -1580,11 +1588,11 @@
             onClose: _,
             onComplete: h,
             onSubscriptionConfirmation: g,
-            analyticsLocations: v,
-            analyticsObject: S,
+            analyticsLocations: S,
+            analyticsObject: v,
             analyticsLocation: N,
-            analyticsSourceLocation: I,
-            isGift: A = !1,
+            analyticsSourceLocation: A,
+            isGift: I = !1,
             giftMessage: T,
             subscriptionTier: m,
             trialId: R,
@@ -1610,7 +1618,7 @@
                 loadId: x,
                 subscriptionTier: m,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(m),
-                isGift: A,
+                isGift: I,
                 giftMessage: T,
                 giftRecipient: L,
                 initialPlanId: t,
@@ -1620,7 +1628,7 @@
                     null == _ || _(e),
                     e &&
                       (null == g || g(),
-                      !A &&
+                      !I &&
                         null != t &&
                         t === C.PremiumSubscriptionSKUs.TIER_2 &&
                         !D &&
@@ -1631,13 +1639,13 @@
                 onComplete: () => {
                   (G = !0),
                     null == h || h(),
-                    !A && (0, u.setCanPlayWowMoment)(!0);
+                    !I && (0, u.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: g,
-                analyticsLocations: v,
-                analyticsObject: S,
+                analyticsLocations: S,
+                analyticsObject: v,
                 analyticsLocation: N,
-                analyticsSourceLocation: I,
+                analyticsSourceLocation: A,
                 trialId: R,
                 postSuccessGuild: y,
                 planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -1659,13 +1667,13 @@
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != N ? N : S,
-                  source: I,
+                  location: null != N ? N : v,
+                  source: A,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
-                  is_gift: A,
+                  is_gift: I,
                   eligible_for_trial: null != R,
                   application_id: O,
-                  location_stack: v,
+                  location_stack: S,
                 }),
                 (0, s.clearError)(),
                 (0, l.clearPurchaseTokenAuthState)(),
@@ -2127,8 +2135,11 @@
           pauseVibingWumpusMusic: function () {
             return u;
           },
-          markAsInappropriateConversation: function () {
+          deleteAllSafetyWarnings: function () {
             return o;
+          },
+          markAsInappropriateConversation: function () {
+            return d;
           },
         });
       var i = n("872717"),
@@ -2143,7 +2154,10 @@
       function u() {
         a.default.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
       }
-      function o(e, t) {
+      function o(e) {
+        return i.default.delete({ url: r.Endpoints.DELETE_SAFETY_WARNINGS(e) });
+      }
+      function d(e, t) {
         return i.default.post({
           url: r.Endpoints.ADD_SAFETY_WARNING(e),
           body: { safety_warning_type: t },
@@ -2396,11 +2410,11 @@
         _ = n("861370"),
         h = n("972701"),
         g = n("390008"),
-        v = n("936947"),
-        S = n("918034"),
+        S = n("936947"),
+        v = n("918034"),
         N = n("976127"),
-        I = n("856030"),
-        A = n("726750"),
+        A = n("856030"),
+        I = n("726750"),
         T = n("170990"),
         m = n("304582"),
         R = n("72057"),
@@ -2429,13 +2443,13 @@
                   showChannelCallItems: w = !1,
                   showModalItems: j = !0,
                   targetIsUser: H = !1,
-                  context: k,
-                  onSelect: W,
+                  context: W,
+                  onSelect: k,
                   onHeightUpdate: Y,
                 } = e,
                 B = (0, x.default)(t.id, null),
-                Z = (0, O.default)(t, k),
-                z = (0, R.default)({ user: t, context: k }),
+                Z = (0, O.default)(t, W),
+                z = (0, R.default)({ user: t, context: W }),
                 q = (0, m.default)(t),
                 K = (0, D.default)(t.id),
                 X = (0, U.default)(n.id, s),
@@ -2459,7 +2473,7 @@
                 eu = (0, C.default)(n),
                 eo = (0, f.default)(t.id),
                 ed = (0, c.default)(n.id),
-                ec = (0, A.default)(t),
+                ec = (0, I.default)(t),
                 ef = (0, E.default)(t.id),
                 eE = (0, y.default)({
                   commandType: u.ApplicationCommandType.USER,
@@ -2471,34 +2485,34 @@
                 eC = (0, h.useAddToFavoritesItem)(n),
                 ep = (0, h.useRemoveFromFavoritesItem)(n),
                 e_ = (0, g.default)(n),
-                eh = (0, v.default)(n),
+                eh = (0, S.default)(n),
                 eg = (0, N.useMessageRequestItem)(n),
-                ev = (0, S.useInappropriateConversationItem)(n),
-                eS = (0, I.useSafetyWarningsItem)(n),
+                eS = (0, v.useInappropriateConversationItem)(n),
+                ev = (0, A.useSafetyWarningsItem)(n),
                 eN = n.isManaged(),
-                eI = t.isNonUserBot();
+                eA = t.isNonUserBot();
               return (0, i.jsxs)(a.Menu, {
                 navId: "user-context",
                 onClose: r.closeContextMenu,
                 "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: W,
+                onSelect: k,
                 children: [
-                  (0, i.jsx)(a.MenuGroup, { children: !eI && eu }),
+                  (0, i.jsx)(a.MenuGroup, { children: !eA && eu }),
                   (0, i.jsx)(a.MenuGroup, { children: eg }),
-                  (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsx)(a.MenuGroup, { children: ev }),
+                  (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsxs)(a.MenuGroup, { children: [eC, e_, eh] }),
-                  (0, i.jsx)(a.MenuGroup, { children: !eI && ec }),
+                  (0, i.jsx)(a.MenuGroup, { children: !eA && ec }),
                   (0, i.jsxs)(a.MenuGroup, {
                     children: [
-                      !eI &&
+                      !eA &&
                         (0, i.jsxs)(i.Fragment, {
                           children: [j && B, Z, !eN && ee, j && z, j && q, K],
                         }),
                       X,
                     ],
                   }),
-                  !eI &&
+                  !eA &&
                     (0, i.jsxs)(i.Fragment, {
                       children: [
                         (0, i.jsx)(a.MenuGroup, { children: d && $ }),
@@ -2887,8 +2901,8 @@
             ...h
           } = e,
           g = s.createRef(),
-          v = (0, c.default)(g),
-          S = !i && !a && !0 !== l && (!p || v);
+          S = (0, c.default)(g),
+          v = !i && !a && !0 !== l && (!p || S);
         return (0, r.jsxs)(d.Button, {
           buttonRef: g,
           ...h,
@@ -2897,7 +2911,7 @@
           submitting: a,
           children: [
             t,
-            S
+            v
               ? (0, r.jsx)(_, {
                   shinePaused: f,
                   className: u(
@@ -3004,11 +3018,11 @@
               className: _,
               foreground: h,
               expanded: g,
-              ...v
+              ...S
             } = e,
-            { enabled: S } = (0, d.useRedesignIconContext)(),
+            { enabled: v } = (0, d.useRedesignIconContext)(),
             N = t;
-          if ((!0 === g ? (N = E.DOWN) : !1 === g && (N = E.RIGHT), S)) {
+          if ((!0 === g ? (N = E.DOWN) : !1 === g && (N = E.RIGHT), v)) {
             let e = {
               [E.UP]: o.ChevronSmallUpIcon,
               [E.DOWN]: s.ChevronSmallDownIcon,
@@ -3016,7 +3030,7 @@
               [E.RIGHT]: u.ChevronSmallRightIcon,
             }[N];
             return (0, i.jsx)(e, {
-              ...v,
+              ...S,
               className: _,
               width: n,
               height: a,
@@ -3029,7 +3043,7 @@
             width: n,
             height: a,
             viewBox: "0 0 24 24",
-            ...(0, c.default)(v),
+            ...(0, c.default)(S),
             children: (0, i.jsx)("path", {
               className: h,
               fill: "none",
@@ -3881,4 +3895,4 @@
     },
   },
 ]);
-//# sourceMappingURL=28c28b941d57dea3ce69.js.map
+//# sourceMappingURL=29b3e0576bc51612a49a.js.map

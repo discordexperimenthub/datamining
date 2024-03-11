@@ -23934,8 +23934,6 @@
         STRANGER_DANGER_THUMBS_UP_A11Y: "Vote yes (thumbs up)",
         STRANGER_DANGER_THUMBS_DOWN_A11Y: "Vote no (thumbs down)",
         STRANGER_DANGER_FEEDBACK_CONFIRM: "Thanks for your feedback!",
-        STRANGER_DANGER_CONTEXT_MENU_CLEAR:
-          "Reset Safety Warnings (Experimental)",
         INAPPROPRIATE_CONVERSATION_TAKEOVER_HEADER:
           "This conversation may not be safe",
         INAPPROPRIATE_CONVERSATION_TAKEOVER_DESCRIPTION:
@@ -24836,6 +24834,9 @@
           "Add Inappropriate Tier 1 Warning (Experimental)",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_2:
           "Add Inappropriate Tier 2 Warning (Experimental)",
+        SAFETY_WARNINGS_DELETE: "Delete all Safety Warnings (Experimental)",
+        STRANGER_DANGER_CONTEXT_MENU_CLEAR:
+          "Reset Safety Warning dismissals (Experimental)",
         SERVER_DRAWER_ACTIVITY_VOICE: "in **!!{channelName}!!**",
         SERVER_DRAWER_ACTIVITY_VOICE_STATUS:
           "$[](statusHook) in **!!{channelName}!!**",
@@ -26297,8 +26298,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273850", ", Version Hash: ")
-          .concat("477ea0836667f606fdb7a6be4515f24a6f4a9691")
+          .concat("273873", ", Version Hash: ")
+          .concat("4c07c4e30dcac5eee570f798e5ee936553dea270")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29398,12 +29399,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273850"), "273850"));
+        let _ = parseInt(((e = "273873"), "273873"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273850"
+                "273873"
               )
             ),
             (_ = 0)),
@@ -51700,4 +51701,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.62fa1c611b0969ddecdf.js.map
+//# sourceMappingURL=76039.185c6b7a5663a2cfbb20.js.map

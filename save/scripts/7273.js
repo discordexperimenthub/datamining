@@ -144,10 +144,10 @@
             return F;
           },
           OverlayNotificationTextChatTypes: function () {
-            return v;
+            return W;
           },
           OverlayEventTypes: function () {
-            return W;
+            return v;
           },
           OverlayActiveRegions: function () {
             return k;
@@ -366,10 +366,10 @@
             return oF;
           },
           CHANNEL_SIDEBAR_WIDTH: function () {
-            return ov;
+            return oW;
           },
           DEFAULT_CHAT_SIDEBAR_WIDTH: function () {
-            return oW;
+            return ov;
           },
           DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH: function () {
             return ok;
@@ -549,7 +549,7 @@
             return RA;
           },
           AnalyticEvents: function () {
-            return _W;
+            return _v;
           },
           PublicReleaseChannels: function () {
             return _k;
@@ -795,10 +795,10 @@
             return EF;
           },
           ApplicationStreamDeleteReasons: function () {
-            return Ev;
+            return EW;
           },
           MediaEngineHookTypes: function () {
-            return EW;
+            return Ev;
           },
           MediaEngineVideoStates: function () {
             return Ek;
@@ -896,8 +896,8 @@
         K,
         V,
         F,
-        v,
         W,
+        v,
         k,
         x,
         X,
@@ -950,8 +950,8 @@
         _K,
         _V,
         _F,
-        _v,
         _W,
+        _v,
         _k,
         _x,
         _X,
@@ -1014,8 +1014,8 @@
         EK,
         EV,
         EF,
-        Ev,
         EW,
+        Ev,
         Ek,
         Ex,
         EX,
@@ -1078,8 +1078,8 @@
         IK,
         IV,
         IF,
-        Iv,
         IW,
+        Iv,
         Ik,
         Ix,
         IX,
@@ -1142,8 +1142,8 @@
         eK,
         eV,
         eF,
-        ev,
         eW,
+        ev,
         ek,
         ex,
         eX,
@@ -1206,8 +1206,8 @@
         aK = I("509043"),
         aV = I("447669"),
         aF = I("718517"),
-        av = I("492397"),
-        aW = I("397336"),
+        aW = I("492397"),
+        av = I("397336"),
         ak = I("843455"),
         ax = I("504593");
       I.es(ax, E),
@@ -1697,9 +1697,9 @@
         (IB.BOTTOM_LEFT = "bottomLeft"),
         (IB.BOTTOM_RIGHT = "bottomRight"),
         (IB.DISABLED = "disabled"),
-        ((Ig = v || (v = {})).ENABLED = "ENABLED"),
+        ((Ig = W || (W = {})).ENABLED = "ENABLED"),
         (Ig.DISABLED = "DISABLED"),
-        ((IH = W || (W = {})).CONNECT = "CONNECT"),
+        ((IH = v || (v = {})).CONNECT = "CONNECT"),
         (IH.DISPATCH = "DISPATCH"),
         (IH.LOG_MESSAGES = "LOG_MESSAGES"),
         (IH.STORAGE_SYNC = "STORAGE_SYNC"),
@@ -2851,6 +2851,8 @@
           GAME_INVITES: "/game-invite/@me",
           ADD_SAFETY_WARNING: _ =>
             "/channels/".concat(_, "/add-safety-warning"),
+          DELETE_SAFETY_WARNINGS: _ =>
+            "/channels/".concat(_, "/safety-warnings"),
           MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
           USER_LOOTBOX_DATA: "/users/@me/lootboxes",
           USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
@@ -2915,7 +2917,7 @@
           LOGIN: "/login",
           LOGIN_HANDOFF: "/login/handoff",
           REGISTER: "/register",
-          DEFAULT_LOGGED_OUT: av.CONFERENCE_MODE_ENABLED
+          DEFAULT_LOGGED_OUT: aW.CONFERENCE_MODE_ENABLED
             ? "/register"
             : "/login",
           INVITE: _ => "/invite/".concat(_),
@@ -3077,18 +3079,18 @@
         ol = /^\|\|([\s\S]+?)\|\|/,
         os = /^<id:(home|browse|customize|guide)>/,
         oP = /^\d{17,19}$/;
-      ((Iv = _E || (_E = {})).MESSAGE = "MESSAGE"),
-        (Iv.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
-        (Iv.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
-        (Iv.THREAD_STARTER_MESSAGE = "THREAD_STARTER_MESSAGE"),
-        (Iv.DIVIDER = "DIVIDER"),
-        (Iv.JUMP_TARGET = "JUMP_TARGET"),
-        (Iv.FORUM_POST_ACTION_BAR = "FORUM_POST_ACTION_BAR"),
-        (Iv.MESSAGE_GROUP = "MESSAGE_GROUP"),
-        (Iv.DIVIDER_TIME_STAMP = "DIVIDER_TIME_STAMP"),
-        (Iv.DIVIDER_NEW_MESSAGES = "DIVIDER_NEW_MESSAGES"),
-        ((IW = _I || (_I = {})).VIDEO = "video"),
-        (IW.VOICE = "voice"),
+      ((IW = _E || (_E = {})).MESSAGE = "MESSAGE"),
+        (IW.MESSAGE_GROUP_BLOCKED = "MESSAGE_GROUP_BLOCKED"),
+        (IW.MESSAGE_GROUP_SPAMMER = "MESSAGE_GROUP_SPAMMER"),
+        (IW.THREAD_STARTER_MESSAGE = "THREAD_STARTER_MESSAGE"),
+        (IW.DIVIDER = "DIVIDER"),
+        (IW.JUMP_TARGET = "JUMP_TARGET"),
+        (IW.FORUM_POST_ACTION_BAR = "FORUM_POST_ACTION_BAR"),
+        (IW.MESSAGE_GROUP = "MESSAGE_GROUP"),
+        (IW.DIVIDER_TIME_STAMP = "DIVIDER_TIME_STAMP"),
+        (IW.DIVIDER_NEW_MESSAGES = "DIVIDER_NEW_MESSAGES"),
+        ((Iv = _I || (_I = {})).VIDEO = "video"),
+        (Iv.VOICE = "voice"),
         ((Ik = _e || (_e = {}))[(Ik.PLAYING = 0)] = "PLAYING"),
         (Ik[(Ik.STREAMING = 1)] = "STREAMING"),
         (Ik[(Ik.LISTENING = 2)] = "LISTENING"),
@@ -3125,8 +3127,8 @@
         oK = 20,
         oV = 25,
         oF = "#0000",
-        ov = 240,
-        oW = 480,
+        oW = 240,
+        ov = 480,
         ok = 650,
         ox = "DEVICE_TOKEN",
         oX = "DEVICE_VOIP_TOKEN",
@@ -4209,7 +4211,7 @@
           GUILD_ROLE_SUBSCRIPTIONS_CANCEL: "Guild Role Subscription Cancel",
           GUILD_BOOSTING: "Nitro Server Boost",
           WEBAUTHN_VIEW: "View Security Keys",
-          [aW.ROLE_SUBSCRIPTION_SUBSECTION]: "Guild Role Subscription",
+          [av.ROLE_SUBSCRIPTION_SUBSECTION]: "Guild Role Subscription",
           BILLING: "Billing",
           EXPERIMENTS: "Experiments",
           DEVELOPER_OPTIONS: "Developer Options",
@@ -4600,7 +4602,7 @@
         ZOOM_MAX: 200,
         ZOOM_SCALES: [50, 67, 75, 80, 90, 100, 110, 125, 150, 175, 200],
       });
-      ((eC = _v || (_v = {})).GIF = "GIF"),
+      ((eC = _W || (_W = {})).GIF = "GIF"),
         (eC.GIF_SEARCH = "GIF search"),
         (eC.EMOJI = "emoji"),
         (eC.EMOJI_SEARCH = "emoji search"),
@@ -4616,7 +4618,7 @@
         (eC.ADD_BUTTON = "add button"),
         (eC.APPS_BUTTON = "apps button"),
         (eC.APPS = "apps"),
-        ((el = _W || (_W = {})).APP_OPENED = "app_opened"),
+        ((el = _v || (_v = {})).APP_OPENED = "app_opened"),
         (el.APP_CRASHED = "app_crashed"),
         (el.APP_BACKGROUND = "app_background"),
         (el.APP_NATIVE_CRASH = "app_native_crash"),
@@ -6313,18 +6315,18 @@
         (eF.PULLING = "PULLING"),
         (eF.CONFLICT = "CONFLICT"),
         (eF.ERROR = "ERROR"),
-        ((ev = Ee || (Ee = {})).PULL = "PULL"),
-        (ev.PUSH = "PUSH"),
-        (ev.CONFLICT = "CONFLICT"),
-        (ev.NONE = "NONE"),
-        ((eW = Ea || (Ea = {})).DISCORD = "discord"),
-        (eW.STEAM = "steam"),
-        (eW.TWITCH = "twitch"),
-        (eW.UPLAY = "uplay"),
-        (eW.BATTLENET = "battlenet"),
-        (eW.ORIGIN = "origin"),
-        (eW.GOG = "gog"),
-        (eW.EPIC = "epic");
+        ((eW = Ee || (Ee = {})).PULL = "PULL"),
+        (eW.PUSH = "PUSH"),
+        (eW.CONFLICT = "CONFLICT"),
+        (eW.NONE = "NONE"),
+        ((ev = Ea || (Ea = {})).DISCORD = "discord"),
+        (ev.STEAM = "steam"),
+        (ev.TWITCH = "twitch"),
+        (ev.UPLAY = "uplay"),
+        (ev.BATTLENET = "battlenet"),
+        (ev.ORIGIN = "origin"),
+        (ev.GOG = "gog"),
+        (ev.EPIC = "epic");
       let RC = Object.freeze({
           discord: "Discord",
           steam: "Steam",
@@ -6866,11 +6868,11 @@
         (aL.ENDED = "ENDED"),
         (aL.PAUSED = "PAUSED"),
         (aL.FAILED = "FAILED"),
-        ((aD = Ev || (Ev = {})).USER_REQUESTED = "user_requested"),
+        ((aD = EW || (EW = {})).USER_REQUESTED = "user_requested"),
         (aD.STREAM_FULL = "stream_full"),
         (aD.UNAUTHORIZED = "unauthorized"),
         (aD.SAFETY_GUILD_RATE_LIMITED = "safety_guild_rate_limited"),
-        ((aS = EW || (EW = {})).SOUND = "SOUND"),
+        ((aS = Ev || (Ev = {})).SOUND = "SOUND"),
         (aS.VIDEO = "VIDEO"),
         ((aC = Ek || (Ek = {})).PLAYING = "playing"),
         (aC.PAUSED = "paused"),
@@ -6994,8 +6996,8 @@
         K,
         V,
         F,
-        v,
         W,
+        v,
         k,
         x,
         X,
@@ -7062,11 +7064,11 @@
         ((F = N || (N = {}))[(F.GENERAL = 0)] = "GENERAL"),
         (F[(F.TEXT = 1)] = "TEXT"),
         (F[(F.VOICE = 2)] = "VOICE"),
-        ((v = i || (i = {})).LANDING = "LANDING"),
-        (v.NAME = "NAME"),
-        ((W = c || (c = {}))[(W.SAFARI = 0)] = "SAFARI"),
-        (W[(W.IN_APP = 1)] = "IN_APP"),
-        (W[(W.CHROME = 2)] = "CHROME"),
+        ((W = i || (i = {})).LANDING = "LANDING"),
+        (W.NAME = "NAME"),
+        ((v = c || (c = {}))[(v.SAFARI = 0)] = "SAFARI"),
+        (v[(v.IN_APP = 1)] = "IN_APP"),
+        (v[(v.CHROME = 2)] = "CHROME"),
         ((k = O || (O = {})).SOLVED = "solved"),
         (k.EXPIRED = "expired"),
         ((n || (n = {})).MENTIONS = "mentions"),
@@ -11256,7 +11258,7 @@
             return _F;
           },
           LocalizedLinks: function () {
-            return _v;
+            return _W;
           },
           AppRoutes: function () {
             return _k;
@@ -11338,8 +11340,8 @@
         K,
         V,
         F,
-        v,
         W,
+        v,
         k,
         x,
         X,
@@ -11531,12 +11533,12 @@
         ((F = i || (i = {}))[(F.PREMIUM = 1)] = "PREMIUM"),
         (F[(F.GUILD = 2)] = "GUILD"),
         (F[(F.APPLICATION = 3)] = "APPLICATION"),
-        ((v = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
-        (v.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
-        (v.VENMO_CANCELED = "VENMO_CANCELED"),
+        ((W = c || (c = {})).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
+        (W.VENMO_APP_CANCELED = "VENMO_APP_CANCELED"),
+        (W.VENMO_CANCELED = "VENMO_CANCELED"),
         Object.freeze({ CONSTANT: 1, APPLE_STICKER: 2 }),
-        ((W = O || (O = {}))[(W.DISCOVERY = 0)] = "DISCOVERY"),
-        (W[(W.CHECKOUT = 1)] = "CHECKOUT"),
+        ((v = O || (O = {}))[(v.DISCOVERY = 0)] = "DISCOVERY"),
+        (v[(v.CHECKOUT = 1)] = "CHECKOUT"),
         ((k = n || (n = {}))[(k.SUBSCRIPTION = 0)] = "SUBSCRIPTION"),
         (k[(k.ONE_TIME = 1)] = "ONE_TIME");
       let _p = Object.freeze({ 0: "subscription", 1: "sku" });
@@ -11834,13 +11836,13 @@
           TWITTER_SUPPORT: "https://twitter.com/discord_support",
           QUESTS: "/quests",
         },
-        _v = Object.freeze({
+        _W = Object.freeze({
           TWITTER: Object.freeze({
             default: "https://twitter.com/discord",
             ja: "https://twitter.com/discord_jp",
           }),
         }),
-        _W = Object.freeze({
+        _v = Object.freeze({
           WELCOME: "".concat(_N, "/welcome/"),
           ME: "".concat(_N, "/channels/@me"),
           SETTINGS: (_, E) =>
@@ -11957,7 +11959,7 @@
         (j.SNOWSGIVING_GIVEAWAY_INSTAGRAM =
           "/terms/snowsgiving-2020/instagram"),
         (j.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter");
-      let _k = (0, _A.wrapPaths)(_W),
+      let _k = (0, _A.wrapPaths)(_v),
         _x = (0, _A.wrapPaths)(s),
         _X = Object.freeze({
           FACEBOOK_URL: "https://www.facebook.com/discord/",
@@ -17293,4 +17295,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.d329aaecd022c0820949.js.map
+//# sourceMappingURL=7273.b931cac9b3cc0ffe1216.js.map

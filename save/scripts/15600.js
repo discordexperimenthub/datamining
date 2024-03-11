@@ -13,50 +13,56 @@
             return u;
           },
           stopVibingWumpusMusic: function () {
-            return c;
-          },
-          pauseVibingWumpusMusic: function () {
             return r;
           },
-          markAsInappropriateConversation: function () {
+          pauseVibingWumpusMusic: function () {
+            return c;
+          },
+          deleteAllSafetyWarnings: function () {
             return o;
+          },
+          markAsInappropriateConversation: function () {
+            return l;
           },
         });
       var i = n("872717"),
-        s = n("913144"),
-        a = n("49111");
+        a = n("913144"),
+        s = n("49111");
       function u() {
-        s.default.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
-      }
-      function c() {
-        s.default.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
+        a.default.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
       }
       function r() {
-        s.default.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+        a.default.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
       }
-      function o(t, e) {
+      function c() {
+        a.default.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+      }
+      function o(t) {
+        return i.default.delete({ url: s.Endpoints.DELETE_SAFETY_WARNINGS(t) });
+      }
+      function l(t, e) {
         return i.default.post({
-          url: a.Endpoints.ADD_SAFETY_WARNING(t),
+          url: s.Endpoints.ADD_SAFETY_WARNING(t),
           body: { safety_warning_type: e },
         });
       }
     },
     128605: function (t, e, n) {
       "use strict";
-      var i, s, a, u;
+      var i, a, s, u;
       n.r(e),
         n.d(e, {
           VibingWumpusAction: function () {
             return i;
           },
           VibingWumpusSource: function () {
-            return s;
+            return a;
           },
         }),
-        ((a = i || (i = {})).PLAY = "play"),
-        (a.PAUSE = "pause"),
-        (a.BACK_TO_CONVERSATION = "back_to_conversation"),
-        ((u = s || (s = {})).INAPPROPRIATE_CONVERSATION =
+        ((s = i || (i = {})).PLAY = "play"),
+        (s.PAUSE = "pause"),
+        (s.BACK_TO_CONVERSATION = "back_to_conversation"),
+        ((u = a || (a = {})).INAPPROPRIATE_CONVERSATION =
           "inappropriate_conversation"),
         (u.KEYBIND = "keybind");
     },
@@ -65,7 +71,7 @@
       n.r(e),
         n.d(e, {
           VibingWumpus: function () {
-            return E;
+            return m;
           },
           default: function () {
             return M;
@@ -73,59 +79,59 @@
         }),
         n("222007");
       var i = n("37983"),
-        s = n("884691"),
-        a = n("414456"),
-        u = n.n(a),
-        c = n("65597"),
-        r = n("77078"),
+        a = n("884691"),
+        s = n("414456"),
+        u = n.n(s),
+        r = n("65597"),
+        c = n("77078"),
         o = n("206230"),
         l = n("491605"),
         d = n("830837"),
         p = n("132755"),
-        I = n("599110"),
-        A = n("559922"),
-        N = n("128605"),
-        _ = n("49111"),
-        f = n("782340"),
-        P = n("509728"),
-        m = n("932379"),
+        A = n("599110"),
+        I = n("559922"),
+        f = n("128605"),
+        N = n("49111"),
+        _ = n("782340"),
+        E = n("509728"),
+        P = n("932379"),
         S = n("340419");
-      function E(t) {
+      function m(t) {
         let {
             onClose: e,
-            source: a = N.VibingWumpusSource.INAPPROPRIATE_CONVERSATION,
+            source: s = f.VibingWumpusSource.INAPPROPRIATE_CONVERSATION,
           } = t,
-          E = (0, c.default)([o.default], () => o.default.useReducedMotion),
-          [M, V] = s.useState(!1);
-        s.useEffect(() => {
+          m = (0, r.default)([o.default], () => o.default.useReducedMotion),
+          [M, V] = a.useState(!1);
+        a.useEffect(() => {
           let t = new Date();
           return (
-            I.default.track(_.AnalyticEvents.VIBING_WUMPUS_VIEWED, {
-              source: a,
+            A.default.track(N.AnalyticEvents.VIBING_WUMPUS_VIEWED, {
+              source: s,
             }),
-            (0, A.playVibingWumpusMusic)(),
+            (0, I.playVibingWumpusMusic)(),
             () => {
-              I.default.track(_.AnalyticEvents.VIBING_WUMPUS_CLOSED, {
+              A.default.track(N.AnalyticEvents.VIBING_WUMPUS_CLOSED, {
                 duration_open_ms: new Date().getTime() - t.getTime(),
-                source: a,
+                source: s,
               }),
-                (0, A.stopVibingWumpusMusic)();
+                (0, I.stopVibingWumpusMusic)();
             }
           );
-        }, [a]);
-        let U = () => {
+        }, [s]);
+        let g = () => {
           M
-            ? ((0, A.playVibingWumpusMusic)(),
-              I.default.track(_.AnalyticEvents.VIBING_WUMPUS_ACTION, {
-                action: N.VibingWumpusAction.PLAY,
+            ? ((0, I.playVibingWumpusMusic)(),
+              A.default.track(N.AnalyticEvents.VIBING_WUMPUS_ACTION, {
+                action: f.VibingWumpusAction.PLAY,
               }))
-            : ((0, A.pauseVibingWumpusMusic)(),
-              I.default.track(_.AnalyticEvents.VIBING_WUMPUS_ACTION, {
-                action: N.VibingWumpusAction.PAUSE,
+            : ((0, I.pauseVibingWumpusMusic)(),
+              A.default.track(N.AnalyticEvents.VIBING_WUMPUS_ACTION, {
+                action: f.VibingWumpusAction.PAUSE,
               })),
             V(!M);
         };
-        async function g() {
+        async function U() {
           let { default: t } = await n
             .el("926299")
             .then(n.t.bind(n, "926299", 19));
@@ -134,71 +140,71 @@
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("div", {
-              className: P.ringContainer,
+              className: E.ringContainer,
               children: (0, i.jsx)("img", {
                 src: S,
                 alt: "",
-                className: P.ringArt,
+                className: E.ringArt,
               }),
             }),
             (0, i.jsx)(l.default, {
-              importData: g,
-              shouldAnimate: !M && !E,
-              className: P.wumpus,
-              pauseAtFrame: E ? 200 : void 0,
+              importData: U,
+              shouldAnimate: !M && !m,
+              className: E.wumpus,
+              pauseAtFrame: m ? 200 : void 0,
             }),
-            (0, i.jsx)(r.Tooltip, {
-              text: M ? f.default.Messages.PLAY : f.default.Messages.PAUSE,
+            (0, i.jsx)(c.Tooltip, {
+              text: M ? _.default.Messages.PLAY : _.default.Messages.PAUSE,
               position: "top",
               "aria-label": M
-                ? f.default.Messages.PLAY
-                : f.default.Messages.PAUSE,
+                ? _.default.Messages.PLAY
+                : _.default.Messages.PAUSE,
               children: t =>
-                (0, i.jsx)(r.Clickable, {
+                (0, i.jsx)(c.Clickable, {
                   ...t,
-                  onClick: U,
-                  className: P.iconButton,
+                  onClick: g,
+                  className: E.iconButton,
                   children: M
-                    ? (0, i.jsx)(p.default, { className: P.icon })
-                    : (0, i.jsx)(d.default, { className: P.icon }),
+                    ? (0, i.jsx)(p.default, { className: E.icon })
+                    : (0, i.jsx)(d.default, { className: E.icon }),
                 }),
             }),
-            (0, i.jsxs)(r.ModalContent, {
-              className: u(m.body, P.body),
+            (0, i.jsxs)(c.ModalContent, {
+              className: u(P.body, E.body),
               children: [
                 (0, i.jsxs)("div", {
-                  className: u(m.textContainer, P.textContainer),
+                  className: u(P.textContainer, E.textContainer),
                   children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(c.Heading, {
                       variant: "heading-xl/semibold",
                       color: "header-primary",
                       children:
-                        f.default.Messages
+                        _.default.Messages
                           .INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_HEADER,
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(c.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
                       children:
-                        f.default.Messages
+                        _.default.Messages
                           .INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_DESCRIPTION,
                     }),
                   ],
                 }),
                 (0, i.jsx)("div", {
-                  className: P.buttonContainer,
-                  children: (0, i.jsx)(r.Button, {
+                  className: E.buttonContainer,
+                  children: (0, i.jsx)(c.Button, {
                     fullWidth: !0,
-                    color: r.Button.Colors.BRAND,
-                    size: r.Button.Sizes.MEDIUM,
+                    color: c.Button.Colors.BRAND,
+                    size: c.Button.Sizes.MEDIUM,
                     onClick: () => {
                       e(),
-                        I.default.track(_.AnalyticEvents.VIBING_WUMPUS_ACTION, {
-                          action: N.VibingWumpusAction.BACK_TO_CONVERSATION,
+                        A.default.track(N.AnalyticEvents.VIBING_WUMPUS_ACTION, {
+                          action: f.VibingWumpusAction.BACK_TO_CONVERSATION,
                         });
                     },
                     children:
-                      f.default.Messages
+                      _.default.Messages
                         .INAPPROPRIATE_CONVERSATION_VIBING_WUMPUS_RETURN,
                   }),
                 }),
@@ -209,12 +215,12 @@
       }
       var M = t => {
         let { onClose: e, transitionState: n } = t;
-        return (0, i.jsx)(r.ModalRoot, {
+        return (0, i.jsx)(c.ModalRoot, {
           transitionState: n,
-          children: (0, i.jsx)(E, { onClose: e }),
+          children: (0, i.jsx)(m, { onClose: e }),
         });
       };
     },
   },
 ]);
-//# sourceMappingURL=9f12b649195462849d51.js.map
+//# sourceMappingURL=6fc380a843375b5b5762.js.map

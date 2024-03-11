@@ -4275,13 +4275,17 @@
                 s.id
               ));
         }
-        (null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) ===
-          O.SKUTypes.SUBSCRIPTION &&
-          !(0, _.getSubscriptionPlansLoaded)([c.id]) &&
-          (await (0, f.fetchSubscriptionPlansForSKU)(c.id));
+        a(
+          null != (c = null != c ? c : g.default.get(n)) &&
+            c.applicationId === t,
+          "SKU must belong to application"
+        ),
+          c.type === O.SKUTypes.SUBSCRIPTION &&
+            !(0, _.getSubscriptionPlansLoaded)([c.id]) &&
+            (await (0, f.fetchSubscriptionPlansForSKU)(c.id));
         let m = v(),
           A = C.default.getCurrentUser();
-        if (null != c && c.premium) {
+        if (c.premium) {
           if (M.default.canInstallPremiumApplications(A)) return R(c, d);
           await u.openModal(d),
             await (function (e, t, n, s, l) {
@@ -4312,7 +4316,7 @@
             })(c, i, o, r, d),
             await R(c, d);
         } else {
-          if (null == c || c.type !== O.SKUTypes.SUBSCRIPTION)
+          if (c.type !== O.SKUTypes.SUBSCRIPTION)
             return new Promise(async (e, s) => {
               await (0, I.default)({
                 applicationId: t,
@@ -32137,4 +32141,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9aaa1de42c4a32a8efb3.js.map
+//# sourceMappingURL=41553bb8cd542c9c182a.js.map

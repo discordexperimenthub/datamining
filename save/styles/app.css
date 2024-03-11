@@ -39327,8 +39327,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -45107,6 +45107,7 @@ html .progress__4ef76 {
   color: var(--header-primary);
 }
 .primaryInfo_b44f9d {
+  justify-content: space-between;
   height: 24px;
 }
 .headerButton__3af9f {
@@ -45171,6 +45172,7 @@ html .progress__4ef76 {
   z-index: 1;
   display: inline-block;
   align-items: center;
+  margin-right: auto;
 }
 .favoritesIcon__95de7 {
   margin-right: 8px;
@@ -110399,4 +110401,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.304e7d264c49bbd593a7.css.map*/
+/*# sourceMappingURL=app.d35d92db577fc8d11d42.css.map*/

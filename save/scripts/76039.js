@@ -24865,6 +24865,23 @@
         PACKAGES_ENTRYPOINT_TITLE: "Your mail has arrived!",
         PACKAGES_ENTRYPOINT_DESCRIPTION: "See what you got...",
         PACKAGES_ENTRYPOINT_CLOSE: "Didn't ask",
+        PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_YES: "Yes",
+        PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_NO: "No",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_1: "Is this a joke?",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2:
+          "What will you get in your package?",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_1: "The forbidden dish",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_2: "Rat poison",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3:
+          "How many packages will you open?",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_1: "I'm disappointed",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_2: "Nice",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_4: "Are you confused?",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_5: "No Text to Speech?",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6:
+          "How about you give thanks to your mail delivery person",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6_ANSWER_1: "Okay",
+        PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7: "You're welcome :)",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
@@ -26297,8 +26314,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274083", ", Version Hash: ")
-          .concat("eaa8a8115039ea1284eadc4d55e149aadba914ad")
+          .concat("274098", ", Version Hash: ")
+          .concat("707600c7dca5b1393021812d277ca4ba4d534ca8")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28522,6 +28539,7 @@
             "QUESTS_SEND_HEARTBEAT_FAILURE",
             "QUESTS_ENROLL_SUCCESS",
             "RUNNING_GAMES_CHANGE",
+            "STREAM_START",
             "STREAM_CREATE",
             "STREAM_CLOSE",
             "PASSIVE_UPDATE_V1",
@@ -29399,12 +29417,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274083"), "274083"));
+        let _ = parseInt(((e = "274098"), "274098"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274083"
+                "274098"
               )
             ),
             (_ = 0)),
@@ -36498,22 +36516,26 @@
         constructor(...e) {
           super(...e),
             (this.instantiatedAt = Date.now()),
-            (this.sendHeartbeatTimeoutIds = new Map()),
+            (this.streamKeyToHeartbeatState = new Map()),
             (this.optimisticProgressUpdateIntervalIds = new Map()),
             (this.lastOptimisticallyUpdatedProgressMap = new Map()),
             (this.initiateHeartbeat = e => {
               let { questId: _, streamKey: E, applicationId: t } = e;
-              this.terminateHeartbeat(E);
+              if (this.streamKeyToHeartbeatState.has(E)) return;
               let o = () => {
                 if (p({ questId: _, streamKey: E, applicationId: t })) {
-                  (0, O.sendHeartbeat)({
+                  (0, O.sendHeartbeat)({ questId: _, streamKey: E });
+                  let e = this.calculateHeartbeatDurationMs(_),
+                    t = window.setTimeout(o, e);
+                  this.streamKeyToHeartbeatState.set(E, {
+                    heartbeatTimeoutId: t,
                     questId: _,
-                    streamKey: E,
-                    applicationId: t,
                   });
-                  let e = this.calculateHeartbeatDurationMs(_);
-                  this.sendHeartbeatTimeoutIds.set(E, window.setTimeout(o, e));
-                } else this.terminateHeartbeat(E);
+                } else
+                  this.terminateHeartbeat({
+                    streamKey: E,
+                    sendTerminalHeartbeat: !0,
+                  });
               };
               o();
             }),
@@ -36526,9 +36548,20 @@
               return t - E <= 0.1 * t ? U : d;
             }),
             (this.terminateHeartbeat = e => {
-              window.clearTimeout(this.sendHeartbeatTimeoutIds.get(e)),
-                this.sendHeartbeatTimeoutIds.delete(e),
-                this.terminateOptimisticProgressUpdateInterval(e);
+              let { streamKey: _, sendTerminalHeartbeat: E } = e;
+              this.terminateOptimisticProgressUpdateInterval(_);
+              let t = this.streamKeyToHeartbeatState.get(_);
+              if (null != t) {
+                let { questId: e, heartbeatTimeoutId: o } = t;
+                window.clearTimeout(o),
+                  this.streamKeyToHeartbeatState.delete(_),
+                  E &&
+                    (0, O.sendHeartbeat)({
+                      questId: e,
+                      streamKey: _,
+                      terminal: !0,
+                    });
+              }
             }),
             (this.initiateOptimisticProgressUpdateInterval = e => {
               this.terminateOptimisticProgressUpdateInterval(e),
@@ -36625,7 +36658,10 @@
               let { streamKey: _, userStatus: E } = e;
               this.terminateOptimisticProgressUpdateInterval(_),
                 null != E.completedAt
-                  ? (this.terminateHeartbeat(_),
+                  ? (this.terminateHeartbeat({
+                      streamKey: _,
+                      sendTerminalHeartbeat: !1,
+                    }),
                     this.terminateOptimisticProgressUpdateInterval(_))
                   : this.initiateOptimisticProgressUpdateInterval(_);
             }),
@@ -36658,19 +36694,14 @@
             }),
             (this._handleVoiceStateChange = e => {
               let { streamKey: _, channelId: E, quest: t } = e,
-                o = !G(E) && this.sendHeartbeatTimeoutIds.has(_),
-                n = G(E) && !this.sendHeartbeatTimeoutIds.has(_) && null != t;
-              if (null == t) this.terminateHeartbeat(_);
-              else if (o) {
-                (0, O.sendHeartbeat)({
-                  questId: t.id,
-                  streamKey: _,
-                  applicationId: t.config.applicationId,
-                }),
-                  this.terminateHeartbeat(_);
-                return;
-              } else
-                n &&
+                o = null == t || !G(E),
+                n = G(E) && !this.streamKeyToHeartbeatState.has(_) && null != t;
+              o
+                ? this.terminateHeartbeat({
+                    streamKey: _,
+                    sendTerminalHeartbeat: !0,
+                  })
+                : n &&
                   this.initiateHeartbeat({
                     streamKey: _,
                     applicationId: t.config.applicationId,
@@ -36683,14 +36714,17 @@
                 o = P(_),
                 n =
                   (null == t || null == E) &&
-                  this.sendHeartbeatTimeoutIds.has(o),
+                  this.streamKeyToHeartbeatState.has(o),
                 r =
                   null != t &&
                   null != E &&
                   G(_) &&
-                  !this.sendHeartbeatTimeoutIds.has(o);
+                  !this.streamKeyToHeartbeatState.has(o);
               n
-                ? this.terminateHeartbeat(o)
+                ? this.terminateHeartbeat({
+                    streamKey: o,
+                    sendTerminalHeartbeat: !0,
+                  })
                 : r &&
                   this.initiateHeartbeat({
                     streamKey: o,
@@ -36709,7 +36743,10 @@
               if (r !== a.default.getId()) return;
               let I = m();
               if (null == I) {
-                this.terminateHeartbeat(E);
+                this.terminateHeartbeat({
+                  streamKey: E,
+                  sendTerminalHeartbeat: !1,
+                });
                 return;
               }
               (0, N.trackQuestEvent)(
@@ -36725,15 +36762,41 @@
                 }
               ),
                 G(t) &&
+                  !this.streamKeyToHeartbeatState.has(E) &&
                   this.initiateHeartbeat({
                     streamKey: E,
                     applicationId: I.config.applicationId,
                     questId: I.id,
                   });
             }),
+            (this.handleStreamStart = e => {
+              let { streamType: _, guildId: E, channelId: t } = e,
+                o = m(),
+                r = (0, n.encodeStreamKey)({
+                  streamType: _,
+                  guildId: E,
+                  channelId: t,
+                  ownerId: a.default.getId(),
+                });
+              null == o
+                ? this.terminateHeartbeat({
+                    streamKey: r,
+                    sendTerminalHeartbeat: !0,
+                  })
+                : G(t) &&
+                  !this.streamKeyToHeartbeatState.has(r) &&
+                  this.initiateHeartbeat({
+                    streamKey: r,
+                    applicationId: o.config.applicationId,
+                    questId: o.id,
+                  });
+            }),
             (this.handleStreamClose = e => {
               let { streamKey: _ } = e;
-              this.terminateHeartbeat(_);
+              this.terminateHeartbeat({
+                streamKey: _,
+                sendTerminalHeartbeat: !0,
+              });
             }),
             (this.actions = {
               QUESTS_ENROLL_SUCCESS: this.handleEnrollmentSuccess,
@@ -36741,6 +36804,7 @@
               QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
               POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
               RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
+              STREAM_START: this.handleStreamStart,
               STREAM_CREATE: this.handleStreamCreate,
               STREAM_CLOSE: this.handleStreamClose,
               PASSIVE_UPDATE_V1: this.handleVoiceStateChange,
@@ -51904,4 +51968,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.833df8d4b9fe5e130725.js.map
+//# sourceMappingURL=76039.0b2099ecd3e63e466c3d.js.map

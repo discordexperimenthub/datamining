@@ -1,41 +1,41 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["47007"],
   {
-    743925: function (e, t, l) {
+    743925: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           useActivityShelfData: function () {
             return f;
           },
         }),
-        l("222007");
-      var i = l("884691"),
-        n = l("446674"),
-        a = l("442939"),
-        d = l("697218"),
-        u = l("167726"),
-        o = l("449008"),
-        r = l("773336"),
-        c = l("191225"),
-        s = l("334368");
+        i("222007");
+      var l = i("884691"),
+        n = i("446674"),
+        a = i("442939"),
+        d = i("697218"),
+        u = i("167726"),
+        r = i("449008"),
+        o = i("773336"),
+        c = i("191225"),
+        s = i("334368");
       function f(e) {
         let t = (0, n.useStateFromStores)(
             [d.default],
             d.default.getCurrentUser
           ),
-          l = (0, n.useStateFromStoresArray)([c.default], () =>
+          i = (0, n.useStateFromStoresArray)([c.default], () =>
             c.default.getShelfActivities(e)
           ),
           f = (0, n.useStateFromStores)(
             [u.default],
             () => u.default.testModeEmbeddedApplicationId
           ),
-          p = l.map(e => e.application_id),
+          p = i.map(e => e.application_id),
           v = null != f ? [f, ...p] : p,
           A = (0, a.default)(v),
-          E = i.useMemo(() => A.filter(o.isNotNullish), [A]),
-          m = i.useMemo(
+          E = l.useMemo(() => A.filter(r.isNotNullish), [A]),
+          m = l.useMemo(
             () =>
               null != f &&
               E.length > 0 &&
@@ -45,30 +45,30 @@
                 : [],
             [E, f]
           ),
-          y = i.useMemo(
+          y = l.useMemo(
             () =>
-              l
+              i
                 .map(e => {
                   let t = E.find(t => t.id === e.application_id);
                   return null == t ? null : { activity: e, application: t };
                 })
-                .filter(o.isNotNullish),
-            [l, E]
+                .filter(r.isNotNullish),
+            [i, E]
           );
-        return i.useMemo(
+        return l.useMemo(
           () =>
             [...m, ...y]
               .filter(e => {
                 var t;
-                let { activity: l } = e;
+                let { activity: i } = e;
                 return (
-                  null !== (t = l.supported_platforms) && void 0 !== t ? t : []
-                ).includes((0, s.default)((0, r.getOS)()));
+                  null !== (t = i.supported_platforms) && void 0 !== t ? t : []
+                ).includes((0, s.default)((0, o.getOS)()));
               })
               .filter(e => {
-                let { activity: l } = e;
+                let { activity: i } = e;
                 return (
-                  !l.requires_age_gate ||
+                  !i.requires_age_gate ||
                   (null == t ? void 0 : t.nsfwAllowed) === !0 ||
                   (null == t ? void 0 : t.nsfwAllowed) == null
                 );
@@ -77,99 +77,108 @@
         );
       }
     },
-    91761: function (e, t, l) {
+    91761: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           default: function () {
             return o;
           },
         }),
-        l("222007");
-      var i = l("446674"),
-        n = l("84460"),
-        a = l("743925"),
-        d = l("807106"),
-        u = l("119420");
+        i("222007"),
+        i("424973");
+      var l = i("884691"),
+        n = i("446674"),
+        a = i("84460"),
+        d = i("743925"),
+        u = i("807106"),
+        r = i("119420");
       function o(e) {
-        let { guildId: t, enableFilter: l = !1 } = e,
-          { filter: o } = (0, i.useStateFromStoresObject)([n.default], () => ({
-            filter: n.default.getFilter(),
+        let { guildId: t, enableFilter: i = !1 } = e,
+          { filter: o } = (0, n.useStateFromStoresObject)([a.default], () => ({
+            filter: a.default.getFilter(),
           })),
-          r = (0, a.useActivityShelfData)(t),
-          c = (0, d.default)(r),
-          s = (0, u.useDeveloperActivityShelfItems)();
-        return [...s, ...c].filter(
-          e =>
-            !l ||
-            "" === o ||
-            e.application.name
-              .toLocaleLowerCase()
-              .includes(o.toLocaleLowerCase())
-        );
+          c = (0, d.useActivityShelfData)(t),
+          s = (0, u.default)(c),
+          f = (0, r.useDeveloperActivityShelfItems)();
+        return l.useMemo(() => {
+          function e(e) {
+            return (
+              !!(
+                !i ||
+                "" === o ||
+                e.application.name.toLowerCase().includes(o.toLowerCase())
+              ) || !1
+            );
+          }
+          let t = [...f].filter(e),
+            l = new Set(t.map(e => e.application.id));
+          for (let i of s) !l.has(i.application.id) && e(i) && t.push(i);
+          return t;
+        }, [f, i, o, s]);
       }
     },
-    807106: function (e, t, l) {
+    807106: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           default: function () {
-            return r;
+            return o;
           },
         }),
-        l("424973"),
-        l("222007");
-      var i = l("884691"),
-        n = l("798609"),
-        a = l("605393"),
-        d = l("872173"),
-        u = l("773336"),
-        o = l("334368");
-      function r(e) {
+        i("424973"),
+        i("222007");
+      var l = i("884691"),
+        n = i("798609"),
+        a = i("605393"),
+        d = i("872173"),
+        u = i("773336"),
+        r = i("334368");
+      function o(e) {
         return (
           d.FrecencyUserSettingsActionCreators.loadIfNecessary(),
-          i.useMemo(() => {
+          l.useMemo(() => {
             let t = [];
             e.forEach(e => t.push(e.application.id));
-            let l = [...t];
-            l.sort((e, l) => {
-              let i = a.default.getScoreWithoutLoadingLatest(e),
-                n = a.default.getScoreWithoutLoadingLatest(l);
-              return i !== n
-                ? n - i
-                : t.findIndex(t => t === e) < t.findIndex(e => e === l)
+            let i = [...t];
+            i.sort((e, i) => {
+              let l = a.default.getScoreWithoutLoadingLatest(e),
+                n = a.default.getScoreWithoutLoadingLatest(i);
+              return l !== n
+                ? n - l
+                : t.findIndex(t => t === e) < t.findIndex(e => e === i)
                   ? -1
                   : 1;
             });
-            let i = c(e, l);
-            return i;
+            let l = c(e, i);
+            return l;
           }, [e])
         );
       }
       let c = (e, t) => {
-        let l = [...e],
-          i = 0;
+        let i = [...e],
+          l = 0;
         return (
           t.forEach(e => {
-            let t = l.findIndex(t => t.application.id === e);
+            let t = i.findIndex(t => t.application.id === e);
             if (-1 !== t) {
-              let e = l[t];
-              l.splice(t, 1), (l = [...l.slice(0, i), e, ...l.slice(i)]), ++i;
+              let e = i[t];
+              i.splice(t, 1), (i = [...i.slice(0, l), e, ...i.slice(l)]), ++l;
             }
           }),
-          l
+          i
             .map((e, t) => [e, t])
             .filter(e => {
-              var t, l;
-              let [i] = e,
+              var t, i;
+              let [l] = e,
                 a =
-                  null === (l = i.application.embeddedActivityConfig) ||
-                  void 0 === l
+                  null === (i = l.application.embeddedActivityConfig) ||
+                  void 0 === i
                     ? void 0
                     : null ===
                           (t =
-                            l.client_platform_config[
-                              (0, o.default)((0, u.getOS)())
+                            i.client_platform_config[
+                              (0, r.default)((0, u.getOS)())
                             ]) || void 0 === t
                       ? void 0
                       : t.label_type;
@@ -180,33 +189,33 @@
               );
             })
             .forEach(e => {
-              let [t, i] = e,
+              let [t, l] = e,
                 n =
                   null != t.application.embeddedActivityConfig &&
                   null != t.application.embeddedActivityConfig.shelf_rank
                     ? t.application.embeddedActivityConfig.shelf_rank - 1
-                    : i;
-              if (n < i) {
-                let e = l[i];
-                l.splice(i, 1), (l = [...l.slice(0, n), e, ...l.slice(n)]);
+                    : l;
+              if (n < l) {
+                let e = i[l];
+                i.splice(l, 1), (i = [...i.slice(0, n), e, ...i.slice(n)]);
               }
             }),
-          l
+          i
         );
       };
     },
-    119420: function (e, t, l) {
+    119420: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           useDeveloperActivityShelfItems: function () {
             return u;
           },
         });
-      var i = l("884691"),
-        n = l("446674"),
-        a = l("84460"),
-        d = l("954016");
+      var l = i("884691"),
+        n = i("446674"),
+        a = i("84460"),
+        d = i("954016");
       let u = () => {
         let { isEnabled: e, lastUsedObject: t } = (0,
           n.useStateFromStoresObject)(
@@ -217,15 +226,15 @@
             }),
             []
           ),
-          l = (0, n.useStateFromStoresArray)(
+          i = (0, n.useStateFromStoresArray)(
             [a.default],
             () => a.default.getDeveloperShelfItems(),
             []
           ),
-          u = i.useMemo(
+          u = l.useMemo(
             () =>
               e
-                ? l
+                ? i
                     .map(e => {
                       let t = {
                         application: e,
@@ -237,21 +246,21 @@
                       };
                       return t;
                     })
-                    .sort((e, l) => {
-                      let i = t[e.application.id],
-                        n = t[l.application.id];
-                      return null == i ? 1 : null == n ? -1 : n - i;
+                    .sort((e, i) => {
+                      let l = t[e.application.id],
+                        n = t[i.application.id];
+                      return null == l ? 1 : null == n ? -1 : n - l;
                     })
                 : [],
-            [l, e, t]
+            [i, e, t]
           );
         return u;
       };
     },
-    575136: function (e, t, l) {
+    575136: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           default: function () {
             return c;
           },
@@ -265,74 +274,74 @@
             return p;
           },
         }),
-        l("222007"),
-        l("424973");
-      var i = l("884691"),
-        n = l("446674"),
-        a = l("442939"),
-        d = l("824563"),
-        u = l("697218"),
-        o = l("449008"),
-        r = l("191225");
+        i("222007"),
+        i("424973");
+      var l = i("884691"),
+        n = i("446674"),
+        a = i("442939"),
+        d = i("824563"),
+        u = i("697218"),
+        r = i("449008"),
+        o = i("191225");
       function c(e, t) {
-        let l = (0, n.useStateFromStoresArray)([r.default], () =>
+        let i = (0, n.useStateFromStoresArray)([o.default], () =>
             null != e && null != e.id && "" !== e.id
-              ? r.default.getEmbeddedActivitiesForChannel(e.id)
-              : r.NO_ACTIVITIES
+              ? o.default.getEmbeddedActivitiesForChannel(e.id)
+              : o.NO_ACTIVITIES
           ),
-          i = f(l, t);
-        return i;
+          l = f(i, t);
+        return l;
       }
       function s(e) {
-        let t = (0, n.useStateFromStores)([r.default], () =>
+        let t = (0, n.useStateFromStores)([o.default], () =>
             null != e
-              ? r.default.getEmbeddedActivitiesForGuild(e)
-              : r.NO_ACTIVITIES
+              ? o.default.getEmbeddedActivitiesForGuild(e)
+              : o.NO_ACTIVITIES
           ),
-          l = f(t),
-          a = i.useMemo(() => {
+          i = f(t),
+          a = l.useMemo(() => {
             let e = new Map();
             return (
-              l.forEach(t => {
-                var l;
-                let i = t.embeddedActivity.channelId,
-                  n = null !== (l = e.get(i)) && void 0 !== l ? l : [];
-                n.push(t), e.set(i, n);
+              i.forEach(t => {
+                var i;
+                let l = t.embeddedActivity.channelId,
+                  n = null !== (i = e.get(l)) && void 0 !== i ? i : [];
+                n.push(t), e.set(l, n);
               }),
               e
             );
-          }, [l]);
+          }, [i]);
         return a;
       }
       function f(e, t) {
-        let l = e.map(e => e.applicationId),
-          d = (0, a.default)(l),
-          r = new Set([]);
-        for (let t of e) for (let e of t.userIds) r.add(e);
+        let i = e.map(e => e.applicationId),
+          d = (0, a.default)(i),
+          o = new Set([]);
+        for (let t of e) for (let e of t.userIds) o.add(e);
         let c = (0, n.useStateFromStoresArray)(
             [u.default],
             () => {
               let e = [];
-              for (let t of r) e.push(u.default.getUser(t));
+              for (let t of o) e.push(u.default.getUser(t));
               return e;
             },
-            [r]
+            [o]
           ),
-          s = i.useMemo(() => {
-            let l = new Map();
+          s = l.useMemo(() => {
+            let i = new Map();
             c.forEach(e => {
-              null != e && l.set(e.id, e);
+              null != e && i.set(e.id, e);
             });
-            let i = e
-              .map((e, i) => {
-                let n = d[i],
+            let l = e
+              .map((e, l) => {
+                let n = d[l],
                   a = [];
                 if (null != a)
-                  for (let i of e.userIds) {
-                    let e = l.get(i);
+                  for (let l of e.userIds) {
+                    let e = i.get(l);
                     if (null != e && null != t) {
-                      let l = t(e);
-                      null != l && a.push(l);
+                      let i = t(e);
+                      null != i && a.push(i);
                     }
                   }
                 return null == n
@@ -343,8 +352,8 @@
                       userParticipantAvatarUrls: a,
                     };
               })
-              .filter(o.isNotNullish);
-            return i;
+              .filter(r.isNotNullish);
+            return l;
           }, [e, d, c, t]);
         return s;
       }
@@ -355,30 +364,30 @@
             let t = new Map();
             return (
               e.forEach(e => {
-                var l;
-                let i = d.default.findActivity(
+                var i;
+                let l = d.default.findActivity(
                   null == e
                     ? void 0
                     : e.embeddedActivity.userIds.values().next().value,
                   t => {
-                    var l;
+                    var i;
                     return (
                       t.application_id ===
                       (null == e
                         ? void 0
-                        : null === (l = e.application) || void 0 === l
+                        : null === (i = e.application) || void 0 === i
                           ? void 0
-                          : l.id)
+                          : i.id)
                     );
                   }
                 );
                 t.set(
                   null == e
                     ? void 0
-                    : null === (l = e.application) || void 0 === l
+                    : null === (i = e.application) || void 0 === i
                       ? void 0
-                      : l.id,
-                  { ...e, presenceActivity: i }
+                      : i.id,
+                  { ...e, presenceActivity: l }
                 );
               }),
               t
@@ -390,20 +399,20 @@
         return t;
       }
     },
-    525167: function (e, t, l) {
+    525167: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           default: function () {
             return n;
           },
         });
-      var i = l("49111");
+      var l = i("49111");
       function n(e, t) {
-        let l;
+        let i;
         let n = window.GLOBAL_ENV.CDN_HOST,
           a = window.GLOBAL_ENV.API_ENDPOINT;
-        return (l =
+        return (i =
           null != n
             ? ""
                 .concat(location.protocol, "//")
@@ -413,102 +422,102 @@
             : ""
                 .concat(location.protocol)
                 .concat(a)
-                .concat(i.Endpoints.STORE_ASSET(e, t, "mp4")));
+                .concat(l.Endpoints.STORE_ASSET(e, t, "mp4")));
       }
     },
-    607573: function (e, t, l) {
+    607573: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           ActivityAction: function () {
-            return i;
+            return l;
           },
           default: function () {
             return y;
           },
         }),
-        l("781738");
-      var i,
+        i("781738");
+      var l,
         n,
-        a = l("798609"),
-        d = l("685665"),
-        u = l("773336"),
-        o = l("191225"),
-        r = l("706508"),
-        c = l("986214"),
-        s = l("575136"),
-        f = l("334368"),
-        p = l("525167"),
-        v = l("577261"),
-        A = l("698372"),
-        E = l("969380"),
-        m = l("954016");
-      ((n = i || (i = {})).START = "START"),
+        a = i("798609"),
+        d = i("685665"),
+        u = i("773336"),
+        r = i("191225"),
+        o = i("706508"),
+        c = i("986214"),
+        s = i("575136"),
+        f = i("334368"),
+        p = i("525167"),
+        v = i("577261"),
+        A = i("698372"),
+        E = i("969380"),
+        m = i("954016");
+      ((n = l || (l = {})).START = "START"),
         (n.JOIN = "JOIN"),
         (n.LEAVE = "LEAVE");
       function y(e) {
         let {
             activityItem: t,
-            channel: l,
-            guildId: i,
+            channel: i,
+            guildId: l,
             locationObject: n,
             onActivityItemSelected: y,
             embeddedActivitiesManager: S,
             assetNames: b,
             backgroundResolution: _ = 250,
           } = e,
-          { analyticsLocations: I } = (0, d.default)(),
-          { application: g, activity: h } = t,
-          T = h.client_platform_config[(0, f.default)((0, u.getOS)())],
+          { analyticsLocations: h } = (0, d.default)(),
+          { application: I, activity: g } = t,
+          T = g.client_platform_config[(0, f.default)((0, u.getOS)())],
           N = null != T.label_until && Date.now() < Date.parse(T.label_until),
-          L = (0, E.default)({ applicationId: g.id, size: _, names: b }),
-          C =
-            null != h.activity_preview_video_asset_id
-              ? (0, p.default)(g.id, h.activity_preview_video_asset_id)
+          C = (0, E.default)({ applicationId: I.id, size: _, names: b }),
+          L =
+            null != g.activity_preview_video_asset_id
+              ? (0, p.default)(I.id, g.activity_preview_video_asset_id)
               : null,
           w = (0, v.default)(),
           D = (0, A.default)(),
-          O = (0, s.default)(l),
-          F = O.find(e => {
+          O = (0, s.default)(i),
+          M = O.find(e => {
             let { embeddedActivity: t } = e;
-            return g.id === t.applicationId;
+            return I.id === t.applicationId;
           }),
-          M = "START",
+          F = "START",
           U = () => {
             (0, c.default)({
               activityItem: t,
               currentEmbeddedApplication: D,
               locationObject: n,
-              guildId: i,
-              channelId: null == l ? void 0 : l.id,
+              guildId: l,
+              channelId: null == i ? void 0 : i.id,
               embeddedActivitiesManager: S,
-              analyticsLocations: I,
+              analyticsLocations: h,
             }).then(
-              e => e && (null == y ? void 0 : y({ applicationId: g.id }))
+              e => e && (null == y ? void 0 : y({ applicationId: I.id }))
             );
           };
-        null != l &&
-        (null == w ? void 0 : w.channelId) === l.id &&
-        (null == D ? void 0 : D.id) === g.id
-          ? ((M = "LEAVE"),
+        null != i &&
+        (null == w ? void 0 : w.channelId) === i.id &&
+        (null == D ? void 0 : D.id) === I.id
+          ? ((F = "LEAVE"),
             (U = () => {
-              !o.default.isLaunchingActivity() &&
-                (S.leaveActivity({ channelId: l.id, applicationId: g.id }),
-                null == y || y({ applicationId: g.id }));
+              !r.default.isLaunchingActivity() &&
+                (S.leaveActivity({ channelId: i.id, applicationId: I.id }),
+                null == y || y({ applicationId: I.id }));
             }))
-          : null != F &&
-            ((M = "JOIN"),
+          : null != M &&
+            ((F = "JOIN"),
             (U = () => {
-              !o.default.isLaunchingActivity() &&
-                (0, r.default)({
-                  applicationId: F.embeddedActivity.applicationId,
+              !r.default.isLaunchingActivity() &&
+                (0, o.default)({
+                  applicationId: M.embeddedActivity.applicationId,
                   currentEmbeddedApplication: D,
-                  activityChannelId: null == l ? void 0 : l.id,
+                  activityChannelId: null == i ? void 0 : i.id,
                   locationObject: n,
                   embeddedActivitiesManager: S,
-                  analyticsLocations: I,
+                  analyticsLocations: h,
                 }).then(
-                  e => e && (null == y ? void 0 : y({ applicationId: g.id }))
+                  e => e && (null == y ? void 0 : y({ applicationId: I.id }))
                 );
             }));
         let W =
@@ -519,77 +528,77 @@
             ? W.replace("_", " ").replace(/(^\w|\s\w)/g, e => e.toUpperCase())
             : void 0;
         return {
-          imageBackground: L,
-          videoUrl: C,
-          joinableEmbeddedApp: F,
-          activityAction: M,
+          imageBackground: C,
+          videoUrl: L,
+          joinableEmbeddedApp: M,
+          activityAction: F,
           onActivityItemSelected: U,
           labelType: N ? T.label_type : a.EmbeddedActivityLabelTypes.NONE,
           staffReleasePhase: P,
         };
       }
     },
-    687292: function (e, t, l) {
+    687292: function (e, t, i) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      i.r(t),
+        i.d(t, {
           default: function () {
             return c;
           },
         }),
-        l("222007");
-      var i = l("37983"),
-        n = l("884691"),
-        a = l("77078"),
-        d = l("798609"),
-        u = l("956089"),
-        o = l("782340"),
-        r = l("827755");
+        i("222007");
+      var l = i("37983"),
+        n = i("884691"),
+        a = i("77078"),
+        d = i("798609"),
+        u = i("956089"),
+        r = i("782340"),
+        o = i("827755");
       function c(e) {
         let {
             name: t,
-            labelType: l,
+            labelType: i,
             collapsed: c = !1,
             showTooltip: s = !1,
           } = e,
           f =
-            l === d.EmbeddedActivityLabelTypes.NEW
-              ? o.default.Messages.NEW
-              : o.default.Messages.UPDATED,
+            i === d.EmbeddedActivityLabelTypes.NEW
+              ? r.default.Messages.NEW
+              : r.default.Messages.UPDATED,
           p =
-            l === d.EmbeddedActivityLabelTypes.NEW
-              ? r.activityNewBadge
-              : r.activityUpdatedBadge,
+            i === d.EmbeddedActivityLabelTypes.NEW
+              ? o.activityNewBadge
+              : o.activityUpdatedBadge,
           [v, A] = n.useState(c ? "" : f);
         if (
           (n.useEffect(() => {
             c
               ? A("")
-              : l === d.EmbeddedActivityLabelTypes.NEW
-                ? A(o.default.Messages.NEW)
-                : l === d.EmbeddedActivityLabelTypes.UPDATED &&
-                  A(o.default.Messages.UPDATED);
-          }, [c, l]),
-          l === d.EmbeddedActivityLabelTypes.NONE)
+              : i === d.EmbeddedActivityLabelTypes.NEW
+                ? A(r.default.Messages.NEW)
+                : i === d.EmbeddedActivityLabelTypes.UPDATED &&
+                  A(r.default.Messages.UPDATED);
+          }, [c, i]),
+          i === d.EmbeddedActivityLabelTypes.NONE)
         )
           return null;
-        let E = (0, i.jsx)(u.TextBadge, {
+        let E = (0, l.jsx)(u.TextBadge, {
           className: p,
           disableColor: !0,
-          text: (0, i.jsx)("span", { children: v }),
+          text: (0, l.jsx)("span", { children: v }),
         });
         if (!s) return E;
         let m =
-          o.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
+          r.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
             activity: t,
           });
-        return (0, i.jsx)(a.TooltipContainer, {
+        return (0, l.jsx)(a.TooltipContainer, {
           text: m,
-          tooltipContentClassName: r.tooltip,
+          tooltipContentClassName: o.tooltip,
           children: E,
         });
       }
     },
   },
 ]);
-//# sourceMappingURL=0da2fe9cf55137c44106.js.map
+//# sourceMappingURL=6145827c9f0ea386eef8.js.map

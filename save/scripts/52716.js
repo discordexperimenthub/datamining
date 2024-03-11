@@ -1,6 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["61370"],
+  ["52716"],
   {
+    932498: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "7f10d688807618fef460.svg";
+    },
     890747: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -135,7 +139,7 @@
           } = e,
           [h, p] = a.useState(g.ICONS_BY_ID[t].name),
           E = t === c.PremiumAppIconIds.PIRATE,
-          T = (0, u.useRadioItem)({ label: h, isSelected: o });
+          v = (0, u.useRadioItem)({ label: h, isSelected: o });
         return (0, i.jsx)(u.Tooltip, {
           text: h,
           onTooltipShow: () => E && p(S()),
@@ -145,8 +149,8 @@
               children: [
                 (0, i.jsx)(u.Clickable, {
                   ...e,
-                  ...T,
-                  tabIndex: null != r ? r : T.tabIndex,
+                  ...v,
+                  tabIndex: null != r ? r : v.tabIndex,
                   className: s(_.appIconSelection, { [_.selected]: o }, n),
                   onClick: o ? m.NOOP : () => (null == l ? void 0 : l(t)),
                   children: f,
@@ -206,18 +210,18 @@
             c.default.getCurrentDesktopIcon(),
             c.default.isEditorOpen,
           ]),
-          T = a.useRef(null);
-        (0, u.default)(T, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
-        let v = (0, d.useUID)(),
+          v = a.useRef(null);
+        (0, u.default)(v, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+        let T = (0, d.useUID)(),
           N = (0, s.useRadioGroup)({
             orientation: "horizontal",
-            labelledBy: v,
+            labelledBy: T,
           }),
           I = e => {
             o.default.dispatch({ type: "APP_ICON_UPDATED", id: e });
           };
         return (0, i.jsx)("div", {
-          ref: T,
+          ref: v,
           children: (0, i.jsx)("div", {
             ...N,
             className: _.container,
@@ -366,7 +370,7 @@
             return E;
           },
           DefaultThemeSelection: function () {
-            return v;
+            return T;
           },
           GradientThemeSelection: function () {
             return N;
@@ -400,7 +404,7 @@
           }),
         });
       }
-      function T(e) {
+      function v(e) {
         let {
             name: t,
             className: n,
@@ -431,7 +435,7 @@
             }),
         });
       }
-      function v(e) {
+      function T(e) {
         let { theme: t, isSelected: n, onSelect: a } = e,
           g = (0, o.useStateFromStores)(
             [f.default],
@@ -448,16 +452,16 @@
             )
             .with({ theme: _.ThemeTypes.LIGHT }, () => S.lightIcon)
             .otherwise(() => S.darkIcon),
-          v = (0, s.match)(t)
+          T = (0, s.match)(t)
             .with(_.ThemeTypes.LIGHT, () => p.default.Messages.THEME_LIGHT)
             .with(_.ThemeTypes.DARK, () => p.default.Messages.THEME_DARK)
             .with("system", () => p.default.Messages.THEME_SYSTEM)
             .exhaustive(),
           N = (0, c.useRedesignIconContext)().enabled;
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(v, {
           onSelect: a,
           isSelected: n,
-          name: v,
+          name: T,
           className: l(S.defaultThemeSelection, E),
           children:
             "system" === t &&
@@ -482,7 +486,7 @@
             colors: r,
             angle: u,
           });
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(v, {
           onSelect: a ? void 0 : o,
           isSelected: n,
           name: t.getName(),
@@ -506,7 +510,7 @@
             return H;
           },
           default: function () {
-            return V;
+            return W;
           },
         }),
         n("794252"),
@@ -528,8 +532,8 @@
         p = n("685665"),
         S = n("626301"),
         E = n("917247"),
-        T = n("956597"),
-        v = n("891653"),
+        v = n("956597"),
+        T = n("891653"),
         N = n("505093"),
         I = n("161778"),
         y = n("168973"),
@@ -538,24 +542,24 @@
         A = n("599110"),
         b = n("32531"),
         M = n("714657"),
-        P = n("164546"),
-        R = n("941719"),
-        w = n("49111"),
+        w = n("164546"),
+        P = n("941719"),
+        R = n("49111"),
         D = n("646718"),
-        L = n("116319"),
-        G = n("397336"),
-        U = n("843455"),
-        x = n("782340"),
+        x = n("116319"),
+        L = n("397336"),
+        G = n("843455"),
+        U = n("782340"),
         j = n("845797");
       ((a = i || (i = {})).EDITOR = "EDITOR"), (a.SETTINGS = "SETTINGS");
       let k = Object.freeze({
-          EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
-          SETTINGS: G.UserSettingsDelay.INFREQUENT_USER_ACTION,
+          EDITOR: L.UserSettingsDelay.SLOW_USER_ACTION,
+          SETTINGS: L.UserSettingsDelay.INFREQUENT_USER_ACTION,
         }),
         F = s.createContext({}),
         H = e => {
           let { isPersisted: t, themeName: n, analyticsLocations: i } = e;
-          A.default.track(w.AnalyticEvents.CLIENT_THEME_UPDATED, {
+          A.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
             feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
@@ -568,16 +572,16 @@
               .with(
                 { type: "EDITOR", isCoachmark: !0, isPreview: !0 },
                 () =>
-                  x.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
+                  U.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
               )
               .with(
                 { type: "EDITOR", isCoachmark: !0 },
                 () =>
-                  x.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
+                  U.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
               )
               .otherwise(
                 () =>
-                  x.default.Messages
+                  U.default.Messages
                     .USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE
               );
           return (0, l.jsxs)("div", {
@@ -588,11 +592,11 @@
                 variant: "text-md/medium",
                 children: a,
               }),
-              (0, l.jsx)(v.default, { className: j.premiumIcon }),
+              (0, l.jsx)(T.default, { className: j.premiumIcon }),
             ],
           });
         },
-        K = e => {
+        V = e => {
           var t, n;
           let { type: i, isPreview: a, isCoachmark: s } = e,
             o =
@@ -604,28 +608,28 @@
           if (o && a) return null;
           let r = (0, u.match)({ type: i, isPreview: a, isCoachmark: s })
             .with({ type: "EDITOR", isPreview: !0 }, () =>
-              x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
+              U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
                 { onPremiumClick: S.navigateToPremiumMarketingPage }
               )
             )
             .with(
               { type: "EDITOR", isCoachmark: !0 },
               () =>
-                x.default.Messages
+                U.default.Messages
                   .CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK
             )
             .with(
               { type: "EDITOR", isPreview: !1 },
-              () => x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
+              () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
             )
             .with({ isPreview: !0 }, () =>
-              x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format(
+              U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format(
                 { onPremiumClick: S.navigateToPremiumMarketingPage }
               )
             )
             .otherwise(
               () =>
-                x.default.Messages
+                U.default.Messages
                   .CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS
             );
           return (0, l.jsx)(g.Heading, {
@@ -633,7 +637,7 @@
             children: r,
           });
         },
-        W = e => {
+        K = e => {
           let { type: t, children: n } = e,
             i = (0, O.useUID)(),
             a = (0, g.useRadioGroup)({
@@ -650,7 +654,7 @@
             }),
           });
         };
-      (W.Basic = e => {
+      (K.Basic = e => {
         let { className: t } = e,
           { delay: n } = s.useContext(F),
           { analyticsLocations: i } = (0, p.default)(
@@ -661,7 +665,7 @@
             () => [
               I.default.theme,
               null == M.default.gradientPreset,
-              y.default.useSystemTheme === L.SystemThemeState.ON,
+              y.default.useSystemTheme === x.SystemThemeState.ON,
             ]
           ),
           c = e => {
@@ -676,17 +680,17 @@
         return (0, l.jsxs)("section", {
           className: r(j.presets, t),
           children: [
-            (0, l.jsx)(P.DefaultThemeSelection, {
-              theme: U.ThemeTypes.LIGHT,
+            (0, l.jsx)(w.DefaultThemeSelection, {
+              theme: G.ThemeTypes.LIGHT,
               isSelected: o && !u && (0, f.isThemeLight)(a),
-              onSelect: () => c(U.ThemeTypes.LIGHT),
+              onSelect: () => c(G.ThemeTypes.LIGHT),
             }),
-            (0, l.jsx)(P.DefaultThemeSelection, {
-              theme: U.ThemeTypes.DARK,
+            (0, l.jsx)(w.DefaultThemeSelection, {
+              theme: G.ThemeTypes.DARK,
               isSelected: o && !u && (0, f.isThemeDark)(a),
-              onSelect: () => c(U.ThemeTypes.DARK),
+              onSelect: () => c(G.ThemeTypes.DARK),
             }),
-            (0, l.jsx)(P.DefaultThemeSelection, {
+            (0, l.jsx)(w.DefaultThemeSelection, {
               theme: "system",
               isSelected: o && u,
               onSelect: () => c("system"),
@@ -694,14 +698,14 @@
           ],
         });
       }),
-        (W.Gradient = e => {
+        (K.Gradient = e => {
           var t, i;
           let { className: a, renderCTAButtons: o, disabled: r = !1 } = e,
             { type: u, delay: f } = s.useContext(F),
             { analyticsLocations: g } = (0, p.default)(
               _.default.CLIENT_THEMES_THEME_SELECTOR
             ),
-            [v, I, y] = (0, d.useStateFromStoresArray)([M.default], () => {
+            [T, I, y] = (0, d.useStateFromStoresArray)([M.default], () => {
               var e;
               return [
                 M.default.isPreview,
@@ -712,8 +716,8 @@
               ];
             }),
             [O, A] = s.useState(!1),
-            [w, G] = s.useState(-1),
-            U = (0, d.useStateFromStores)(
+            [R, L] = s.useState(-1),
+            G = (0, d.useStateFromStores)(
               [h.default],
               () => h.default.useReducedMotion
             ),
@@ -724,22 +728,22 @@
                   ? void 0
                   : t.sku_id) === D.PremiumSubscriptionSKUs.TIER_2;
           s.useEffect(() => {
-            ((w === R.BACKGROUND_GRADIENT_PRESETS.length - 2 &&
+            ((R === P.BACKGROUND_GRADIENT_PRESETS.length - 2 &&
               "EDITOR" === u) ||
               y === c.BackgroundGradientPresetId.EASTER_EGG) &&
               A(!0);
-          }, [w, u, y]);
-          let W = (e, t) => {
+          }, [R, u, y]);
+          let K = (e, t) => {
             if (
               ((0, b.updateBackgroundGradientPreset)(e.id),
               H({
-                isPersisted: !v,
+                isPersisted: !T,
                 analyticsLocations: g,
                 themeName: c.BackgroundGradientPresetId[e.id],
               }),
-              v)
+              T)
             ) {
-              (0, N.setUseSystemTheme)(L.SystemThemeState.OFF);
+              (0, N.setUseSystemTheme)(x.SystemThemeState.OFF);
               return;
             }
             if (
@@ -749,22 +753,22 @@
               ),
               null != t)
             ) {
-              if ((O && A(!1), t <= w || 0 === t)) {
-                G(0);
+              if ((O && A(!1), t <= R || 0 === t)) {
+                L(0);
                 return;
               }
-              G(e => e + 1);
+              L(e => e + 1);
             }
           };
           return (0, l.jsxs)("section", {
             className: a,
             children: [
-              "EDITOR" === u && v && k
-                ? (0, l.jsx)(T.default, {
+              "EDITOR" === u && T && k
+                ? (0, l.jsx)(v.default, {
                     type: D.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
                     children:
-                      x.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
+                      U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
                         { onPremiumClick: S.navigateToPremiumMarketingPage }
                       ),
                   })
@@ -776,12 +780,12 @@
                         children: [
                           (0, l.jsx)(B, {
                             type: u,
-                            isPreview: v,
+                            isPreview: T,
                             isCoachmark: I,
                           }),
-                          (0, l.jsx)(K, {
+                          (0, l.jsx)(V, {
                             type: u,
-                            isPreview: v,
+                            isPreview: T,
                             isCoachmark: I,
                           }),
                         ],
@@ -792,16 +796,16 @@
               (0, l.jsxs)("div", {
                 className: j.presets,
                 children: [
-                  R.BACKGROUND_GRADIENT_PRESETS.filter(e => {
+                  P.BACKGROUND_GRADIENT_PRESETS.filter(e => {
                     let { id: t } = e;
                     return t !== c.BackgroundGradientPresetId.EASTER_EGG;
                   }).map((e, t) =>
                     (0, l.jsx)(
-                      P.GradientThemeSelection,
+                      w.GradientThemeSelection,
                       {
                         preset: e,
                         isSelected: y === e.id,
-                        onSelect: () => W(e, t),
+                        onSelect: () => K(e, t),
                         disabled: r,
                         tabIndex: 0 !== t || r ? void 0 : 0,
                       },
@@ -811,7 +815,7 @@
                   (() => {
                     if (!O) return null;
                     let e =
-                      R.BACKGROUND_GRADIENT_PRESETS_MAP[
+                      P.BACKGROUND_GRADIENT_PRESETS_MAP[
                         c.BackgroundGradientPresetId.EASTER_EGG
                       ];
                     if (null == e) return null;
@@ -824,15 +828,15 @@
                     return (0, l.jsxs)("div", {
                       className: j.easterEggSelection,
                       children: [
-                        (0, l.jsx)(P.GradientThemeSelection, {
+                        (0, l.jsx)(w.GradientThemeSelection, {
                           preset: e,
                           isSelected:
                             y === c.BackgroundGradientPresetId.EASTER_EGG,
-                          onSelect: () => W(e),
+                          onSelect: () => K(e),
                         }),
                         (0, l.jsx)(C.default, {
                           importData: t,
-                          shouldAnimate: !U,
+                          shouldAnimate: !G,
                           className: j.sparkles,
                         }),
                       ],
@@ -843,7 +847,7 @@
             ],
           });
         });
-      var V = W;
+      var W = K;
     },
     147746: function (e, t, n) {
       "use strict";
@@ -958,8 +962,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "273955",
-          versionHash: "7bc7cd281d68945f4b750e15575b3a71d3e0d3e2",
+          buildNumber: "273958",
+          versionHash: "60d801b274e3aa7d4187efe8c9f0e3b186169e61",
         };
       }
       n.r(t),
@@ -1147,6 +1151,150 @@
         );
       }
     },
+    447845: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var i = n("862205");
+      let a = (0, i.createExperiment)({
+        kind: "user",
+        id: "2024-03_packages",
+        label: "Packages",
+        defaultConfig: { allowOpeningLootboxes: !1 },
+        treatments: [
+          {
+            id: 1,
+            label: "Allow users to open packages",
+            config: { allowOpeningLootboxes: !0 },
+          },
+        ],
+      });
+      var l = a;
+    },
+    809094: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return r;
+          },
+        });
+      var i = n("37983");
+      n("884691");
+      var a = n("82169"),
+        l = n("900158"),
+        s = n("669491");
+      function o(e) {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: l = s.default.colors.INTERACTIVE_NORMAL,
+          colorClass: o = "",
+          ...r
+        } = e;
+        return (0, i.jsxs)("svg", {
+          ...(0, a.default)(r),
+          width: t,
+          height: n,
+          viewBox: "0 0 24 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [
+            (0, i.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M3 8C3 5.79086 4.79086 4 7 4C9.20914 4 11 5.79086 11 8V13C11 13.5523 10.5523 14 10 14H4C3.44772 14 3 13.5523 3 13V8ZM5 10C4.44772 10 4 9.55228 4 9C4 8.44772 4.44772 8 5 8H6V7C6 6.44772 6.44772 6 7 6C7.55228 6 8 6.44772 8 7V8H9.14286C9.61624 8 10 8.38376 10 8.85714V9.14286C10 9.61624 9.61624 10 9.14286 10H7.42857H6.57143H5Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: o,
+            }),
+            (0, i.jsx)("path", {
+              d: "M10 16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V21C14 21.5523 13.5523 22 13 22H11C10.4477 22 10 21.5523 10 21V16Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: o,
+            }),
+            (0, i.jsx)("path", {
+              d: "M10.6178 4.29252C10.4697 4.22237 10.5197 4 10.6836 4H17C19.2092 4 21 5.79087 21 8.00001L21 13C21 13.5523 20.5523 14 20 14H12.8774C12.4548 14 12.1121 13.6574 12.1121 13.2347V6.65331C12.1121 5.64373 11.5303 4.72454 10.6178 4.29252V4.29252Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: o,
+            }),
+            (0, i.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M14 4C14 3.44772 14.4477 3 15 3V3C15.5523 3 16 2.55228 16 2V2C16 1.44772 15.5523 1 15 1H13C12.4477 1 12 1.44772 12 2V2V3V4C12 4.55228 12.4477 5 13 5V5C13.5523 5 14 4.55228 14 4V4Z",
+              fill: "string" == typeof l ? l : l.css,
+              className: o,
+            }),
+          ],
+        });
+      }
+      function r(e) {
+        return (0, i.jsx)(o, { ...e });
+      }
+    },
+    108250: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return m;
+          },
+        }),
+        n("222007");
+      var i = n("37983"),
+        a = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
+        o = n("917351"),
+        r = n.n(o),
+        u = n("907002"),
+        d = n("446674"),
+        c = n("206230"),
+        f = n("150496");
+      let g = { mass: 10, tension: 550, friction: 140 };
+      function m(e) {
+        let { className: t, pageMultiplier: n } = e,
+          l = (0, d.useStateFromStores)(
+            [c.default],
+            () => c.default.useReducedMotion
+          ),
+          [o, m] = a.useState({ x: 0, y: 0 }),
+          h = a.useMemo(
+            () =>
+              r.throttle(e => {
+                if (l) return;
+                let t = (window.innerWidth - e.pageX * n) / 90,
+                  i = (window.innerHeight - e.pageY * n) / 90;
+                m({ x: t, y: i });
+              }, 20),
+            [n, l]
+          );
+        a.useEffect(
+          () => (
+            window.addEventListener("mousemove", h),
+            () => window.removeEventListener("mousemove", h)
+          ),
+          [h]
+        );
+        let [_, p] = (0, u.useSpring)(() => ({ x: 0, y: 0, config: g }));
+        return (
+          a.useEffect(() => {
+            p({ x: o.x, y: o.y });
+          }, [o.x, o.y, p]),
+          (0, i.jsx)(u.animated.div, {
+            style: {
+              transform: (0, u.to)([_.x, _.y], (e, t) =>
+                "translate3d(".concat(e, "px, ").concat(t, "px, 0)")
+              ),
+            },
+            className: s(f.background, t),
+          })
+        );
+      }
+    },
     649649: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -1251,22 +1399,22 @@
       n.r(t),
         n.d(t, {
           useGuildMigrationSteps: function () {
-            return L;
+            return x;
           },
           hasGoodCandidateServers: function () {
-            return G;
+            return L;
           },
           autoMigrateToNewSystem: function () {
-            return U;
+            return G;
           },
           useSaveSettings: function () {
-            return x;
+            return U;
           },
           revertToOldSystem: function () {
             return B;
           },
           transformUsageData: function () {
-            return K;
+            return V;
           },
         }),
         n("222007"),
@@ -1290,8 +1438,8 @@
         p = n("305961"),
         S = n("677099"),
         E = n("282109"),
-        T = n("599110"),
-        v = n("568734"),
+        v = n("599110"),
+        T = n("568734"),
         N = n("449008"),
         I = n("286235"),
         y = n("299039"),
@@ -1300,11 +1448,11 @@
         A = n("287223"),
         b = n("76618"),
         M = n("380353"),
-        P = n("49111"),
-        R = n("133335"),
-        w = n("397336"),
+        w = n("49111"),
+        P = n("133335"),
+        R = n("397336"),
         D = n("782340");
-      function L(e, t) {
+      function x(e, t) {
         let [n, a] = i.useState(M.defaultThresholds),
           [o, r] = i.useState({});
         (0, g.useFrecencySettings)();
@@ -1317,7 +1465,7 @@
               i[a.id] = (function (e, t, n, i, a) {
                 var l;
                 let [s, o, r] = m.default.hasConsented(
-                    P.Consents.PERSONALIZATION
+                    w.Consents.PERSONALIZATION
                   )
                     ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0)
                     : (0, A.guessGuildModeWithLocalData)(e, n),
@@ -1415,9 +1563,9 @@
             })(Object.values(c), t),
         };
       }
-      function G(e, t) {
+      function L(e, t) {
         return Object.values(p.default.getGuilds()).some(n => {
-          let [i] = m.default.hasConsented(P.Consents.PERSONALIZATION)
+          let [i] = m.default.hasConsented(w.Consents.PERSONALIZATION)
             ? (0, A.guessGuildModeWithRemoteData)(
                 n,
                 M.defaultThresholds,
@@ -1429,7 +1577,7 @@
           return i === M.Mode.UseGreyDot;
         });
       }
-      function U() {
+      function G() {
         let e = Object.values(p.default.getGuilds()),
           t = {};
         for (let a of e) {
@@ -1441,26 +1589,26 @@
                 ? n
                 : {},
             l = null !== (i = e.flags) && void 0 !== i ? i : 0;
-          (l = (0, v.setFlag)(
+          (l = (0, T.setFlag)(
             l,
-            w.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES,
+            R.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES,
             !0
           )),
-            (l = (0, v.setFlag)(
+            (l = (0, T.setFlag)(
               l,
-              w.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS,
+              R.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS,
               !1
             )),
             (t[a.id] = { flags: l });
         }
         k(t),
-          T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+          v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter(e => _.default.hasUnread(e.id))
               .length,
           });
       }
-      function x(e) {
+      function U(e) {
         let [t, n] = i.useState(!1),
           [a, l] = i.useState(!1),
           s = i.useCallback(
@@ -1515,7 +1663,7 @@
                 .map(e => e.plan.guildId),
             };
           return () => {
-            T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
+            v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_COMPLETED, {
               ...n,
               auto_migrated: !0,
               pre_selected_server_ids: Object.values(e)
@@ -1632,13 +1780,13 @@
       }
       async function B() {
         o.default.set("turnedOffNewNotifications", !0),
-          T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
+          v.default.track(w.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
             num_guilds_with_new_setting: Object.values(
               p.default.getGuilds()
             ).filter(
               e =>
                 E.default.resolveGuildUnreadSetting(e) ===
-                R.UnreadSetting.ONLY_MENTIONS
+                P.UnreadSetting.ONLY_MENTIONS
             ).length,
           });
         let e = await (0, C.listSnapshots)(),
@@ -1669,7 +1817,7 @@
             !1
           );
       }
-      function K(e) {
+      function V(e) {
         var t, n, i;
         if (null == e) return [];
         let a = l.keyBy(
@@ -1804,7 +1952,7 @@
                     debug: a.map(e => "\n    - #".concat(e.name)).join(""),
                     apply: (e, t) => {
                       for (let n of a)
-                        T(e, t, n.id, e => {
+                        v(e, t, n.id, e => {
                           e.message_notifications =
                             _.UserNotificationSettings.ONLY_MENTIONS;
                         });
@@ -1867,7 +2015,7 @@
                     ),
                     debug: i.map(e => "\n    - #".concat(e.name)).join(""),
                     apply: (e, t) => {
-                      for (let n of i) v(e, t, n.id, !0);
+                      for (let n of i) T(e, t, n.id, !0);
                     },
                   }),
                 t
@@ -1896,8 +2044,8 @@
                     debug: n.map(e => "\n    - #".concat(e.name)).join(""),
                     apply: (e, t) => {
                       for (let i of n)
-                        v(e, t, i.id, !1),
-                          T(e, t, i.id, e => {
+                        T(e, t, i.id, !1),
+                          v(e, t, i.id, e => {
                             (e.muted = !1), (e.mute_config = null);
                           });
                     },
@@ -1931,7 +2079,7 @@
                     ),
                     debug: n.map(e => "\n    - #".concat(e.name)).join(""),
                     apply: (e, t) => {
-                      for (let i of n) v(e, t, i.id, !0);
+                      for (let i of n) T(e, t, i.id, !0);
                     },
                   }),
                 i.length > 0 &&
@@ -1942,7 +2090,7 @@
                     ),
                     debug: i.map(e => "\n    - #".concat(e.name)).join(""),
                     apply: (e, t) => {
-                      for (let n of i) v(e, t, n.id, !1);
+                      for (let n of i) T(e, t, n.id, !1);
                     },
                   }),
                 t
@@ -2024,7 +2172,7 @@
                           )
                           .join(""),
                         apply: (e, t) => {
-                          for (let n of g) v(e, t, n.id, !0);
+                          for (let n of g) T(e, t, n.id, !0);
                         },
                       }),
                     m.length > 0 &&
@@ -2083,7 +2231,7 @@
                         ),
                         debug: r.map(e => "\n    - #".concat(e.name)).join(""),
                         apply: (e, t) => {
-                          for (let n of r) v(e, t, n.id, !0);
+                          for (let n of r) T(e, t, n.id, !0);
                         },
                       }),
                     i
@@ -2109,7 +2257,7 @@
             !n
           ));
       }
-      function T(e, t, n, i) {
+      function v(e, t, n, i) {
         var l, s, o, r;
         let u =
             null !==
@@ -2132,8 +2280,8 @@
             (null == e.channel_overrides && (e.channel_overrides = {}),
             (e.channel_overrides[n] = u));
       }
-      function v(e, t, n, i) {
-        T(e, t, n, (e, t) => {
+      function T(e, t, n, i) {
+        v(e, t, n, (e, t) => {
           var n, a;
           (e.flags = (0, g.setFlag)(
             null !==
@@ -2199,13 +2347,13 @@
               null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0
             );
           }),
-          T = f("six month", i, m, e => {
+          v = f("six month", i, m, e => {
             var t;
             return Number(
               null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0
             );
           }),
-          v = [S, E, T, p],
+          T = [S, E, v, p],
           N = 0,
           I = 0;
         m.forEach(e => {
@@ -2226,19 +2374,19 @@
             .concat(_, "\n**Remote**:\n- Channels: ")
             .concat(N, "\n- AllVisits: ")
             .concat(
-              v.map(e => e.totalOpensAcrossAllServers).join(" / "),
+              T.map(e => e.totalOpensAcrossAllServers).join(" / "),
               "\n- GuildVisits: "
             )
             .concat(
-              v.map(e => e.guildOpens).join(" / "),
+              T.map(e => e.guildOpens).join(" / "),
               "\n- Biggest Channel (abs): "
             )
             .concat(
-              v.map(e => e.biggestChannel).join(" / "),
+              T.map(e => e.biggestChannel).join(" / "),
               "\n- Biggest Channel (%): "
             )
             .concat(
-              v.map(e => e.biggestChannelFormatted).join(" / "),
+              T.map(e => e.biggestChannelFormatted).join(" / "),
               "\n- Sent Msgs: "
             )
             .concat(I, "\n"),
@@ -2473,6 +2621,41 @@
         }, [e, t, r, n]);
       };
     },
+    900158: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ExperimentalLootboxIcon: function () {
+            return s;
+          },
+        });
+      var i = n("37983");
+      n("884691");
+      var a = n("669491"),
+        l = n("82169");
+      let s = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: s = a.default.colors.INTERACTIVE_NORMAL,
+          colorClass: o = "",
+          ...r
+        } = e;
+        return (0, i.jsx)("svg", {
+          ...(0, l.default)(r),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, i.jsx)("path", {
+            fill: "string" == typeof s ? s : s.css,
+            d: "M23 6a3 3 0 0 0-3-3H4a3 3 0 0 0-3 3v4.5c0 .28.22.5.5.5h7c.22 0 .41-.14.5-.34.53-1.3 1.68-2.41 3-2.41s2.47 1.11 3 2.4c.09.2.28.35.5.35h7a.5.5 0 0 0 .5-.5V6ZM23 13.5a.5.5 0 0 0-.5-.5h-7c-.22 0-.41.14-.5.34-.53 1.3-1.68 2.41-3 2.41s-2.47-1.11-3-2.4a.54.54 0 0 0-.5-.35h-7a.5.5 0 0 0-.5.5V18a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-4.5Z",
+            className: o,
+          }),
+        });
+      };
+    },
   },
 ]);
-//# sourceMappingURL=61370.449164a19709336666ed.js.map
+//# sourceMappingURL=52716.adda4d8790e82ebe4818.js.map

@@ -24862,6 +24862,9 @@
         PACKAGES_UNIQUE_PACKAGES_OPENED: "Packages Received",
         PACKAGES_GLOBAL_PACKAGES_OPENED: "Total Packages Opened",
         PACKAGES_OPENED_OUT_OF: "{count, number} / {total, number}",
+        PACKAGES_ENTRYPOINT_TITLE: "Your mail has arrived!",
+        PACKAGES_ENTRYPOINT_DESCRIPTION: "See what you got...",
+        PACKAGES_ENTRYPOINT_CLOSE: "Didn't ask",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       });
     },
@@ -26294,8 +26297,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("273955", ", Version Hash: ")
-          .concat("7bc7cd281d68945f4b750e15575b3a71d3e0d3e2")
+          .concat("273958", ", Version Hash: ")
+          .concat("60d801b274e3aa7d4187efe8c9f0e3b186169e61")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28296,6 +28299,7 @@
                 "WINDOW_FOCUS",
                 "RTC_CONNECTION_STATE",
                 "AUDIO_TOGGLE_SELF_MUTE",
+                "OVERLAY_SUCCESSFULLY_SHOWN",
               ],
           inlineRequire: () => E("488507").default,
           neverLoadBeforeConnectionOpen: !0,
@@ -29395,12 +29399,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "273955"), "273955"));
+        let _ = parseInt(((e = "273958"), "273958"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "273955"
+                "273958"
               )
             ),
             (_ = 0)),
@@ -30649,7 +30653,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return eo;
+            return en;
           },
         }),
         E("222007"),
@@ -30684,34 +30688,35 @@
         p = E("36773"),
         g = E("374036"),
         y = E("384997"),
-        B = E("234819"),
-        f = E("182033"),
-        H = E("928741"),
-        v = E("161778"),
-        b = E("778588"),
-        w = E("697218"),
-        F = E("471671"),
-        Y = E("791106"),
-        V = E("542489"),
-        k = E("983782"),
-        W = E("708169"),
-        K = E("668596"),
-        x = E("587974"),
-        j = E("773336"),
-        X = E("719923"),
-        Q = E("269936"),
-        J = E("302537"),
-        q = E("967889"),
-        z = E("102999"),
-        $ = E("160139"),
-        Z = E("49111"),
-        ee = E("994428"),
-        e_ = E("414482");
+        B = E("881889"),
+        f = E("234819"),
+        H = E("182033"),
+        v = E("928741"),
+        b = E("161778"),
+        w = E("778588"),
+        F = E("697218"),
+        Y = E("471671"),
+        V = E("791106"),
+        k = E("542489"),
+        W = E("983782"),
+        K = E("708169"),
+        x = E("668596"),
+        j = E("587974"),
+        X = E("773336"),
+        Q = E("719923"),
+        J = E("269936"),
+        q = E("302537"),
+        z = E("967889"),
+        $ = E("102999"),
+        Z = E("160139"),
+        ee = E("49111"),
+        e_ = E("994428"),
+        eE = E("414482");
       E("551184"),
         E.el("573055")
           .then(E.bind(E, "573055"))
           .then(e => {
-            j.isPlatformEmbedded
+            X.isPlatformEmbedded
               ? window.addEventListener(
                   "contextmenu",
                   e.contextMenuCallbackNative,
@@ -30724,68 +30729,68 @@
                 );
           }),
         (0, N.setDesignConfig)({ getDefaultLinkInterceptor: L.default }),
-        (0, Q.makeLazy)({
+        (0, J.makeLazy)({
           createPromise: () => E.el("737511").then(E.bind(E, "737511")),
           webpackId: "737511",
         }),
-        (0, Q.makeLazy)({
+        (0, J.makeLazy)({
           createPromise: () => E.el("424797").then(E.bind(E, "424797")),
           webpackId: "424797",
         });
-      let eE = (0, Q.makeLazy)({
+      let et = (0, J.makeLazy)({
           createPromise: () => E.el("406915").then(E.bind(E, "406915")),
           webpackId: "406915",
         }),
-        et = o.memo(function (e) {
-          let _ = (0, T.useStateFromStores)([F.default], () =>
-            F.default.isFocused()
+        eo = o.memo(function (e) {
+          let _ = (0, T.useStateFromStores)([Y.default], () =>
+            Y.default.isFocused()
           );
-          return (0, t.jsx)($.default, { ...e, focused: _ });
+          return (0, t.jsx)(Z.default, { ...e, focused: _ });
         });
-      var eo = function (e) {
+      var en = function (e) {
         let { children: _, skipsSettingDefaultPageTitle: E } = e,
           { pathname: n } = (0, I.useLocation)(),
-          N = (0, j.getPlatform)(),
+          N = (0, X.getPlatform)(),
           L = s.isMobile || s.isTablet,
-          F = (0, T.useStateFromStores)([v.default], () =>
-            v.default.darkSidebar ? Z.ThemeTypes.DARK : void 0
+          Y = (0, T.useStateFromStores)([b.default], () =>
+            b.default.darkSidebar ? ee.ThemeTypes.DARK : void 0
           ),
-          Q = (0, T.useStateFromStores)([D.default], () =>
+          J = (0, T.useStateFromStores)([D.default], () =>
             D.default.useForcedColors ? "yes" : "no"
           ),
-          [$, eo] = (0, T.useStateFromStoresArray)([m.default], () => [
+          [Z, en] = (0, T.useStateFromStoresArray)([m.default], () => [
             m.default.isEditorOpen,
             m.default.isCoachmark,
           ]),
-          en = (0, T.useStateFromStores)(
+          er = (0, T.useStateFromStores)(
             [M.default],
             () => M.default.isEditorOpen
           ),
-          { enabled: er } = f.default.useExperiment(
+          { enabled: ea } = H.default.useExperiment(
             { location: "client_themes_coachmark_reintro" },
             { autoTrackExposure: !0 }
           ),
-          ea = (0, T.useStateFromStores)([b.default], () =>
-            b.default.getLayers().includes(Z.Layers.USER_SETTINGS)
-          ),
           ei = (0, T.useStateFromStores)([w.default], () =>
-            X.default.canUseClientThemes(w.default.getCurrentUser())
+            w.default.getLayers().includes(ee.Layers.USER_SETTINGS)
           ),
-          eI = $ && !ea,
-          es = [];
-        eI &&
-          eo &&
-          er &&
-          !ei &&
-          es.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
-        let [eT, eS] = (0, y.useSelectedDismissibleContent)(
-          es,
-          ee.DismissibleContentGroupName.SIDEBAR,
+          eI = (0, T.useStateFromStores)([F.default], () =>
+            Q.default.canUseClientThemes(F.default.getCurrentUser())
+          ),
+          es = Z && !ei,
+          eT = [];
+        es &&
+          en &&
+          ea &&
+          !eI &&
+          eT.push(S.DismissibleContent.CLIENT_THEMES_COACHMARK);
+        let [eS, eN] = (0, y.useSelectedDismissibleContent)(
+          eT,
+          e_.DismissibleContentGroupName.SIDEBAR,
           !0
         );
-        es.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-        let eN = eT === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-          eO = eT === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
+        eT.push(S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        let eO = eS === S.DismissibleContent.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+          eA = eS === S.DismissibleContent.CLIENT_THEMES_COACHMARK;
         o.useEffect(() => {
           let e = (0, i.matchPath)(n, {
             path: "invite",
@@ -30793,46 +30798,46 @@
             strict: !1,
           });
           null == e &&
-            eN &&
-            !eO &&
+            eO &&
+            !eA &&
             (A.default.dispatch({ type: "APP_ICON_EDITOR_OPEN" }),
             A.default.dispatch({
               type: "APP_ICON_TRACK_IMPRESSION",
-              markAsDismissed: eS,
+              markAsDismissed: eN,
             }));
-        }, [eN, eO, eS, n]);
-        let eA = o.useRef(document.body);
+        }, [eO, eA, eN, n]);
+        let eR = o.useRef(document.body);
         return (0, t.jsx)(
-          H.default,
+          v.default,
           {
             children: (0, t.jsx)(c.default, {
               children: (0, t.jsxs)(O.RedesignIconContextProvider, {
                 children: [
-                  (0, t.jsx)(J.default, { skipsSettingDefaultPageTitle: E }),
-                  (0, t.jsx)(z.default, {
-                    children: (0, t.jsx)(q.default, {
+                  (0, t.jsx)(q.default, { skipsSettingDefaultPageTitle: E }),
+                  (0, t.jsx)($.default, {
+                    children: (0, t.jsx)(z.default, {
                       children: (0, t.jsxs)(O.FocusRingScope, {
-                        containerRef: eA,
+                        containerRef: eR,
                         children: [
-                          (0, t.jsx)(x.MaskLibrary, {}),
-                          (0, t.jsx)(Y.default, {}),
+                          (0, t.jsx)(j.MaskLibrary, {}),
+                          (0, t.jsx)(V.default, {}),
                           (0, t.jsx)(a.FocusGuard, {}),
                           null != N
-                            ? (0, t.jsx)(et, { type: N, themeOverride: F })
+                            ? (0, t.jsx)(eo, { type: N, themeOverride: Y })
                             : null,
                           (0, t.jsx)(C.AppWindowContextProvider, {
-                            appContext: Z.AppContext.APP,
+                            appContext: ee.AppContext.APP,
                             renderWindow: window,
-                            children: (0, t.jsxs)(k.AppLayerProvider, {
+                            children: (0, t.jsxs)(W.AppLayerProvider, {
                               children: [
                                 (0, t.jsxs)("div", {
                                   className: r(
-                                    e_.appAsidePanelWrapper,
-                                    L && e_.mobileAppAsidePanelWrapper,
+                                    eE.appAsidePanelWrapper,
+                                    L && eE.mobileAppAsidePanelWrapper,
                                     {
-                                      [e_.allowsScrolling]: (() => {
+                                      [eE.allowsScrolling]: (() => {
                                         let e = (0, i.matchPath)(n, {
-                                          path: Z.Routes.APPLICATION_DIRECTORY,
+                                          path: ee.Routes.APPLICATION_DIRECTORY,
                                           exact: !1,
                                           strict: !1,
                                         });
@@ -30846,41 +30851,42 @@
                                   ),
                                   children: [
                                     (0, t.jsx)("div", {
-                                      className: e_.notAppAsidePanel,
+                                      className: eE.notAppAsidePanel,
                                       "data-app-not-dev-tools": !0,
                                       children: (0, t.jsx)(
                                         p.CommonConfettiCannonContextProvider,
                                         {
                                           children: (0, t.jsx)(
-                                            K.VerificationLayerProvider,
+                                            x.VerificationLayerProvider,
                                             {
                                               children: (0, t.jsxs)(
-                                                V.default.Provider,
+                                                k.default.Provider,
                                                 {
                                                   value: d.default,
                                                   children: [
                                                     (0, t.jsx)("div", {
                                                       className: r(
                                                         L
-                                                          ? e_.mobileApp
-                                                          : e_.app
+                                                          ? eE.mobileApp
+                                                          : eE.app
                                                       ),
                                                       children: _,
                                                     }),
+                                                    (0, t.jsx)(B.default, {}),
                                                     (0, t.jsx)(P.default, {}),
                                                     (0, t.jsx)(l.default, {}),
                                                     (0, t.jsx)(O.Modals, {}),
                                                     (0, t.jsx)(u.default, {}),
                                                     (0, t.jsx)(
-                                                      W.FullScreenLayers,
+                                                      K.FullScreenLayers,
                                                       {}
                                                     ),
                                                     (0, t.jsx)(
-                                                      k.AppLayerContainer,
+                                                      W.AppLayerContainer,
                                                       {}
                                                     ),
                                                     (0, t.jsx)(
-                                                      K.VerificationLayerContainer,
+                                                      x.VerificationLayerContainer,
                                                       {}
                                                     ),
                                                     (0, t.jsx)(
@@ -30888,8 +30894,8 @@
                                                       {}
                                                     ),
                                                     (0, t.jsx)(U.default, {}),
-                                                    (0, t.jsx)(B.default, {}),
-                                                    (0, t.jsx)(eE, {}),
+                                                    (0, t.jsx)(f.default, {}),
+                                                    (0, t.jsx)(et, {}),
                                                   ],
                                                 }
                                               ),
@@ -30899,16 +30905,16 @@
                                       ),
                                     }),
                                     (0, t.jsx)(R.default, {}),
-                                    (eI && !eo) || eO
+                                    (es && !en) || eA
                                       ? (0, t.jsx)(G.default, {
-                                          markAsDismissed: eS,
+                                          markAsDismissed: eN,
                                         })
                                       : null,
-                                    !en || ea || eO
+                                    !er || ei || eA
                                       ? null
                                       : (0, t.jsx)(h.default, {
-                                          isCoachmark: eN,
-                                          markAsDismissed: eS,
+                                          isCoachmark: eO,
+                                          markAsDismissed: eN,
                                         }),
                                     (0, t.jsx)(g.default, { mobile: L }),
                                   ],
@@ -30926,7 +30932,7 @@
               }),
             }),
           },
-          Q
+          J
         );
       };
     },
@@ -32558,7 +32564,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return k;
+            return W;
           },
         }),
         E("222007"),
@@ -32863,6 +32869,9 @@
         static get debug() {
           return { gamesByPid: P.gamesByPid, gamesByName: P.gamesByName };
         }
+        set successfullyShown(e) {
+          this._successfullyShown = e;
+        }
         static getGameName(e) {
           var _, E;
           return null !==
@@ -32932,7 +32941,7 @@
             a = (0, T.getOverlayGameStatus)(this.game),
             i = {
               event_uuid: this.uuid,
-              overlay_usage_stats_version: 2,
+              overlay_usage_stats_version: 3,
               ...this.notificationAnalytics.getAnalytics(),
               ...this.widgetAnalytics.getAnalytics(),
               ...this.screenAnalytics.getAnalytics(),
@@ -32984,6 +32993,7 @@
                 .elapsed()
                 .asMilliseconds(),
               mute_toggled_count: this.muteToggledCount,
+              overlay_successfully_shown: this._successfullyShown,
             };
           return {
             usage: i,
@@ -33061,10 +33071,11 @@
             (this.soundboardShownCount = 0),
             (this.soundboardKeepOpenCount = 0),
             (this.muteToggledCount = 0),
+            (this._successfullyShown = !1),
             (this.screenAnalytics = new h(e)),
             (this.overlayStatus = T.default.getGameOverlayStatus(e)),
             P.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(),
-            F.hasConnection() && this.rtcConnectionTimer.start();
+            Y.hasConnection() && this.rtcConnectionTimer.start();
         }
       }
       function m(e) {
@@ -33181,12 +33192,20 @@
         }
         P.desktopSetFocused(e.focused);
       }
+      function F(e) {
+        let _ = P.getByPid(e.pid);
+        if (null == _) {
+          c.error("OVERLAY_SUCCESSFULLY_SHOWN: Game not found", e, P.debug);
+          return;
+        }
+        _.successfullyShown = !0;
+      }
       (P.gamesByPid = {}),
         (P.gamesByName = {}),
         (P.desktopMainWindowHasFocus = document.hasFocus());
-      class F {
+      class Y {
         static hasConnection() {
-          return F.connections.size > 0;
+          return Y.connections.size > 0;
         }
         static handleRTCConnectionState(e) {
           var _;
@@ -33195,18 +33214,18 @@
             e.context;
           switch (e.state) {
             case C.RTCConnectionStates.RTC_CONNECTED:
-              F.connections.add(E);
+              Y.connections.add(E);
               break;
             case C.RTCConnectionStates.DISCONNECTED:
-              F.connections.delete(E);
+              Y.connections.delete(E);
           }
-          let t = F.hasConnection();
-          F.previousHasConnection !== t &&
-            (P.toggleRtcConnection(t), (F.previousHasConnection = t));
+          let t = Y.hasConnection();
+          Y.previousHasConnection !== t &&
+            (P.toggleRtcConnection(t), (Y.previousHasConnection = t));
         }
       }
-      (F.connections = new Set()), (F.previousHasConnection = !1);
-      class Y {
+      (Y.connections = new Set()), (Y.previousHasConnection = !1);
+      class V {
         static handleMessageAcked(e) {
           c.verbose("MESSAGE_ACKED", e);
           let _ = S.default.getGame();
@@ -33237,13 +33256,13 @@
           });
         }
       }
-      class V extends I.default {
+      class k extends I.default {
         constructor(...e) {
           super(...e),
             (this.actions = __OVERLAY__
               ? {
-                  MESSAGE_ACKED: Y.handleMessageAcked,
-                  MESSAGE_CREATE: Y.handleMessageCreate,
+                  MESSAGE_ACKED: V.handleMessageAcked,
+                  MESSAGE_CREATE: V.handleMessageCreate,
                 }
               : {
                   OVERLAY_FOCUSED: y,
@@ -33256,12 +33275,13 @@
                   MESSAGE_ACKED: H,
                   MESSAGE_CREATE: v,
                   WINDOW_FOCUS: w,
-                  RTC_CONNECTION_STATE: F.handleRTCConnectionState,
+                  RTC_CONNECTION_STATE: Y.handleRTCConnectionState,
                   AUDIO_TOGGLE_SELF_MUTE: b,
+                  OVERLAY_SUCCESSFULLY_SHOWN: F,
                 });
         }
       }
-      var k = new V();
+      var W = new k();
     },
     382022: function (e, _, E) {
       "use strict";
@@ -35024,6 +35044,123 @@
             modalKey: _,
           });
         }
+      }
+    },
+    881889: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          default: function () {
+            return C;
+          },
+        });
+      var t = E("37983"),
+        o = E("884691"),
+        n = E("66007"),
+        r = E("800619"),
+        a = E("459334"),
+        i = E("151426"),
+        I = E("669491"),
+        s = E("77078"),
+        T = E("79112"),
+        S = E("10641"),
+        N = E("447845"),
+        O = E("809094"),
+        A = E("108250"),
+        R = E("49111"),
+        l = E("994428"),
+        u = E("782340"),
+        L = E("543178");
+      function C() {
+        let { allowOpeningLootboxes: e } = N.default.useExperiment({
+            location: "lootbox_entrypoint",
+          }),
+          _ = !(0, S.useIsDismissibleContentDismissed)(
+            i.DismissibleContent.LOOTBOXES_ENTRYPOINT
+          ),
+          E = e => {
+            (0, S.markDismissibleContentAsDismissed)(
+              i.DismissibleContent.LOOTBOXES_ENTRYPOINT,
+              { dismissAction: e }
+            );
+          };
+        return (o.useEffect(() => {
+          e &&
+            (0, S.requestMarkDismissibleContentAsShown)(
+              i.DismissibleContent.LOOTBOXES_ENTRYPOINT
+            );
+        }, [e]),
+        e && _)
+          ? (0, t.jsxs)("div", {
+              className: L.wrapper,
+              children: [
+                (0, t.jsxs)(s.Clickable, {
+                  className: L.closeButton,
+                  onClick: () => E(l.ContentDismissActionType.DISMISS),
+                  children: [
+                    (0, t.jsx)(r.CloseSmallIcon, {
+                      className: L.closeIcon,
+                      color: I.default.colors.WHITE,
+                    }),
+                    (0, t.jsx)(a.Text, {
+                      variant: "text-xs/bold",
+                      color: "always-white",
+                      children: u.default.Messages.PACKAGES_ENTRYPOINT_CLOSE,
+                    }),
+                  ],
+                }),
+                (0, t.jsxs)(s.Clickable, {
+                  className: L.entrypoint,
+                  onClick: () => {
+                    E(l.ContentDismissActionType.PRIMARY),
+                      T.default.open(R.UserSettingsSections.LOOTBOXES);
+                  },
+                  children: [
+                    (0, t.jsx)("div", {
+                      className: L.backgroundWrapper,
+                      children: (0, t.jsx)(A.default, {
+                        className: L.backgroundImage,
+                        pageMultiplier: 5,
+                      }),
+                    }),
+                    (0, t.jsx)(O.default, {
+                      className: L.image,
+                      color: I.default.colors.POLLS_NORMAL_FILL_HOVER,
+                      width: 70,
+                      height: 70,
+                    }),
+                    (0, t.jsxs)("div", {
+                      className: L.body,
+                      children: [
+                        (0, t.jsx)(a.Text, {
+                          variant: "text-md/bold",
+                          color: "always-white",
+                          children:
+                            u.default.Messages.PACKAGES_ENTRYPOINT_TITLE,
+                        }),
+                        (0, t.jsx)(a.Text, {
+                          variant: "text-sm/medium",
+                          color: "always-white",
+                          children:
+                            u.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION,
+                        }),
+                      ],
+                    }),
+                    (0, t.jsx)("div", {
+                      className: L.buttonWrapper,
+                      children: (0, t.jsx)("div", {
+                        className: L.iconButton,
+                        children: (0, t.jsx)(n.ArrowLargeRightIcon, {
+                          className: L.buttonIcon,
+                          color: I.default.colors.WHITE,
+                        }),
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            })
+          : null;
       }
     },
     41377: function (e, _, E) {
@@ -40756,6 +40893,76 @@
           }
         });
     },
+    66007: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          ArrowLargeRightIcon: function () {
+            return r;
+          },
+        });
+      var t = E("37983");
+      E("884691");
+      var o = E("669491"),
+        n = E("82169");
+      let r = e => {
+        let {
+          width: _ = 24,
+          height: E = 24,
+          color: r = o.default.colors.INTERACTIVE_NORMAL,
+          colorClass: a = "",
+          ...i
+        } = e;
+        return (0, t.jsx)("svg", {
+          ...(0, n.default)(i),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: _,
+          height: E,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, t.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
+            d: "M20.7 12.7a1 1 0 0 0 0-1.4l-8-8a1 1 0 1 0-1.4 1.4l6.29 6.3H4a1 1 0 1 0 0 2h13.59l-6.3 6.3a1 1 0 0 0 1.42 1.4l8-8Z",
+            className: a,
+          }),
+        });
+      };
+    },
+    800619: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          CloseSmallIcon: function () {
+            return r;
+          },
+        });
+      var t = E("37983");
+      E("884691");
+      var o = E("669491"),
+        n = E("82169");
+      let r = e => {
+        let {
+          width: _ = 24,
+          height: E = 24,
+          color: r = o.default.colors.INTERACTIVE_NORMAL,
+          colorClass: a = "",
+          ...i
+        } = e;
+        return (0, t.jsx)("svg", {
+          ...(0, n.default)(i),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: _,
+          height: E,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, t.jsx)("path", {
+            fill: "string" == typeof r ? r : r.css,
+            d: "M17.3 18.7a1 1 0 0 0 1.4-1.4L13.42 12l5.3-5.3a1 1 0 0 0-1.42-1.4L12 10.58l-5.3-5.3a1 1 0 0 0-1.4 1.42L10.58 12l-5.3 5.3a1 1 0 1 0 1.42 1.4L12 13.42l5.3 5.3Z",
+            className: a,
+          }),
+        });
+      };
+    },
     962821: function (e, _, E) {
       "use strict";
       E.r(_),
@@ -45300,6 +45507,7 @@
         (u[(u.ACTIVITIES_OMNIBUTTON_NUX = 356)] = "ACTIVITIES_OMNIBUTTON_NUX"),
         (u[(u.ACTIVITIES_OMNIMENU_NEW_BADGE = 357)] =
           "ACTIVITIES_OMNIMENU_NEW_BADGE"),
+        (u[(u.LOOTBOXES_ENTRYPOINT = 358)] = "LOOTBOXES_ENTRYPOINT"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51696,4 +51904,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.6384e8fa460284f36941.js.map
+//# sourceMappingURL=76039.47be0e26b4732c1a0c69.js.map

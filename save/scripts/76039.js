@@ -26314,8 +26314,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274098", ", Version Hash: ")
-          .concat("707600c7dca5b1393021812d277ca4ba4d534ca8")
+          .concat("274121", ", Version Hash: ")
+          .concat("e1c49106b25e1672b47caedcd0cac53b855d81f1")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29417,12 +29417,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274098"), "274098"));
+        let _ = parseInt(((e = "274121"), "274121"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274098"
+                "274121"
               )
             ),
             (_ = 0)),
@@ -45568,10 +45568,11 @@
           "POLLS_CHAT_INPUT_COACHMARK"),
         (u[(u.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK = 355)] =
           "PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK"),
-        (u[(u.ACTIVITIES_OMNIBUTTON_NUX = 356)] = "ACTIVITIES_OMNIBUTTON_NUX"),
         (u[(u.ACTIVITIES_OMNIMENU_NEW_BADGE = 357)] =
           "ACTIVITIES_OMNIMENU_NEW_BADGE"),
         (u[(u.LOOTBOXES_ENTRYPOINT = 358)] = "LOOTBOXES_ENTRYPOINT"),
+        (u[(u.ACTIVITIES_CHAT_BUTTON_NUX = 359)] =
+          "ACTIVITIES_CHAT_BUTTON_NUX"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -51968,4 +51969,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.0b2099ecd3e63e466c3d.js.map
+//# sourceMappingURL=76039.54080ac4423f48cdd2ff.js.map

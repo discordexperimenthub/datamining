@@ -4387,7 +4387,7 @@
             onRequestOpen: () => {
               eg &&
                 (0, T.markDismissibleContentAsDismissed)(
-                  o.DismissibleContent.ACTIVITIES_OMNIBUTTON_NUX,
+                  o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX,
                   { dismissAction: V.ContentDismissActionType.TAKE_ACTION }
                 ),
                 ef("attachMenu");
@@ -4574,17 +4574,17 @@
         return (
           a &&
             (null == s ? void 0 : s.desktopThrobberEnabled) &&
-            i.push(d.DismissibleContent.ACTIVITIES_OMNIBUTTON_NUX),
+            i.push(d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX),
           (0, l.jsx)(h.default, {
             contentTypes: i,
             children: e => {
               let { visibleContent: n, markAsDismissed: a } = e;
-              return (setTimeout(
-                () => a(E.ContentDismissActionType.AUTO_DISMISS),
-                1e4
-              ),
-              n === d.DismissibleContent.ACTIVITIES_OMNIBUTTON_NUX)
-                ? (0, l.jsx)(A, { children: t })
+              return n === d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX
+                ? (setTimeout(
+                    () => a(E.ContentDismissActionType.AUTO_DISMISS),
+                    1e4
+                  ),
+                  (0, l.jsx)(A, { children: t }))
                 : t;
             },
           })
@@ -19785,4 +19785,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0bfd2fa0ade86063a9fd.js.map
+//# sourceMappingURL=12321c4aca9fa733c34c.js.map

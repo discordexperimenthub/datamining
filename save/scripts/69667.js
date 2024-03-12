@@ -21238,84 +21238,79 @@
       n.r(t),
         n.d(t, {
           useQuests: function () {
-            return _;
+            return f;
           },
           useIsQuestExpired: function () {
-            return I;
+            return T;
           },
           useQuestFormattedDate: function () {
-            return m;
+            return I;
           },
           useShouldShowSettingBadgeForQuests: function () {
-            return N;
+            return m;
           },
           useDismissNewQuestBadge: function () {
-            return p;
-          },
-          useIsLoadingChildAssets: function () {
-            return C;
+            return N;
           },
         }),
         n("222007"),
-        n("424973"),
-        n("70102");
+        n("424973");
       var s = n("884691"),
         l = n("862337"),
         a = n("446674"),
         i = n("915639"),
-        r = n("286235"),
-        o = n("448881"),
-        u = n("374023"),
-        d = n("2973"),
-        c = n("588025"),
-        E = n("227231"),
-        f = n("166604");
-      function _(e) {
+        r = n("448881"),
+        o = n("374023"),
+        u = n("2973"),
+        d = n("588025"),
+        c = n("227231"),
+        E = n("166604");
+      function f(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
           [n, l] = s.useState(!1),
-          i = (0, a.useStateFromStoresArray)([d.default], () => [
-            ...d.default.quests.values(),
+          i = (0, a.useStateFromStoresArray)([u.default], () => [
+            ...u.default.quests.values(),
           ]),
-          { isFetchingCurrentQuests: r, lastFetchedCurrentQuests: c } = (0,
-          a.useStateFromStoresObject)([d.default], () => ({
-            isFetchingCurrentQuests: d.default.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: d.default.lastFetchedCurrentQuests,
+          { isFetchingCurrentQuests: d, lastFetchedCurrentQuests: c } = (0,
+          a.useStateFromStoresObject)([u.default], () => ({
+            isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests,
           })),
-          E = (0, u.getIsEligibleForQuests)({
-            location: f.QuestsExperimentLocations.USE_QUESTS,
+          f = (0, o.getIsEligibleForQuests)({
+            location: E.QuestsExperimentLocations.USE_QUESTS,
             autoTrackExposure: !1,
           });
         s.useEffect(() => {
           !0 === t.fetch &&
-            E &&
+            f &&
             !n &&
-            !r &&
+            !d &&
             0 === c &&
-            (l(!0), (0, o.fetchCurrentQuests)());
-        }, [t.fetch, E, n, r, c]);
+            (l(!0), (0, r.fetchCurrentQuests)());
+        }, [t.fetch, f, n, d, c]);
         let _ = s.useMemo(() => {
           let t = null != e ? new Set(e) : null;
           return i.filter(e => null == t || t.has(e.id));
         }, [e, i]);
-        return { quests: _, isFetchingCurrentQuests: r };
+        return { quests: _, isFetchingCurrentQuests: d };
       }
-      function T() {
-        let { quests: e, isFetchingCurrentQuests: t } = _(),
+      function _() {
+        let { quests: e, isFetchingCurrentQuests: t } = f(),
           [n, a] = s.useState(
-            () => new Map(e.map(e => [e.id, (0, E.isQuestExpired)(e)]))
+            () => new Map(e.map(e => [e.id, (0, c.isQuestExpired)(e)]))
           );
         return (
           s.useEffect(() => {
             if (t) return;
             let n = [];
             for (let t of e)
-              if (null != t && !(0, E.isQuestExpired)(t)) {
+              if (null != t && !(0, c.isQuestExpired)(t)) {
                 let e = new l.Timeout(),
                   s = () => {
                     let l = Date.parse(t.config.expiresAt) - Date.now();
                     e.start(l, () => {
-                      (0, E.isQuestExpired)(t)
+                      (0, c.isQuestExpired)(t)
                         ? a(e => new Map(e).set(t.id, !0))
                         : s();
                     }),
@@ -21330,14 +21325,14 @@
           n
         );
       }
-      function I(e) {
-        let t = T();
+      function T(e) {
+        let t = _();
         return s.useMemo(() => {
           var n;
           return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
         }, [e, t]);
       }
-      function m(e) {
+      function I(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -21348,20 +21343,20 @@
           [e, t, n]
         );
       }
-      function N() {
-        let { quests: e, isFetchingCurrentQuests: t } = _(void 0, {
+      function m() {
+        let { quests: e, isFetchingCurrentQuests: t } = f(void 0, {
             fetch: !0,
           }),
-          n = T(),
+          n = _(),
           l = s.useMemo(() => {
             let s = [];
             if (t || 0 === e.length) return s;
             for (let t of e) {
               var l;
               if (
-                !(0, E.includesTarget)(
+                !(0, c.includesTarget)(
                   t,
-                  c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                  d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
                 ) ||
                 (null !== (l = n.get(t.id)) && void 0 !== l && l)
               )
@@ -21371,9 +21366,9 @@
                 continue;
               }
               let e = null != t.userStatus.claimedAt,
-                a = (0, E.isDismissed)(
+                a = (0, c.isDismissed)(
                   t.userStatus,
-                  c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                  d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
                 );
               if (!e && !a) {
                 s.push(t.id);
@@ -21384,98 +21379,17 @@
           }, [e, n, t]);
         return l;
       }
-      function p() {
-        let { quests: e } = _(),
-          t = N().length > 0;
+      function N() {
+        let { quests: e } = f(),
+          t = m().length > 0;
         s.useEffect(() => {
           for (let n of e)
             t &&
-              (0, o.dismissQuestContent)(
+              (0, r.dismissQuestContent)(
                 n.id,
-                c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
               );
         }, [e, t]);
-      }
-      function S(e) {
-        let {
-          assetNodes: t,
-          assetsLoading: n,
-          loadEvent: s,
-          onLoad: l,
-          onError: a,
-          getNodeId: i,
-          isNodeLoaded: o,
-          sentrySource: u,
-        } = e;
-        for (let e = 0; e < t.length; e++) {
-          let d = t[e];
-          if (o(d)) continue;
-          let c = i(d, e);
-          n.add(c),
-            d.addEventListener(s, () => {
-              n.delete(c), l();
-            }),
-            d.addEventListener("error", () => {
-              let e = Error("Could not load quest bar asset: ".concat(c));
-              r.default.captureException(e, { tags: { source: u } }), a();
-            });
-        }
-      }
-      function C(e, t) {
-        let [n, l] = s.useState(!0),
-          [a, i] = s.useState(!1),
-          r = s.useRef(!1);
-        return (
-          s.useLayoutEffect(() => {
-            if (null != e.current && !r.current) {
-              r.current = !0;
-              let a = new Set();
-              function n() {
-                0 === a.size && l(!1);
-              }
-              function s() {
-                i(!0);
-              }
-              S({
-                assetNodes: e.current.querySelectorAll("img"),
-                assetsLoading: a,
-                loadEvent: "load",
-                onLoad: n,
-                onError: s,
-                getNodeId: (e, t) => {
-                  var n;
-                  return null !== (n = e.getAttribute("src")) && void 0 !== n
-                    ? n
-                    : "image-".concat(t);
-                },
-                isNodeLoaded: e => e.complete,
-                sentrySource: t,
-              }),
-                S({
-                  assetNodes: e.current.querySelectorAll("video"),
-                  assetsLoading: a,
-                  loadEvent: "loadeddata",
-                  onLoad: n,
-                  onError: s,
-                  getNodeId: (e, t) => {
-                    var n, s;
-                    return null !==
-                      (s =
-                        null === (n = e.querySelectorAll("source")[0]) ||
-                        void 0 === n
-                          ? void 0
-                          : n.getAttribute("src")) && void 0 !== s
-                      ? s
-                      : "video-".concat(t);
-                  },
-                  isNodeLoaded: e => e.readyState >= 3,
-                  sentrySource: t,
-                }),
-                n();
-            }
-          }),
-          { isLoading: n, hasError: a }
-        );
       }
     },
     315130: function (e, t, n) {
@@ -32263,4 +32177,4 @@
     },
   },
 ]);
-//# sourceMappingURL=955c760db27f5542a380.js.map
+//# sourceMappingURL=9f43f3d11da7370a5c97.js.map

@@ -625,19 +625,29 @@
       I.displayName = "GuildIncidentsStore";
       var E = new I(l.default, {
         CONNECTION_OPEN: function (e) {
-          for (let t of ((f = {}), e.guilds)) {
-            let e = D(t.properties.incidents_data);
+          for (let n of ((f = {}), e.guilds)) {
+            var t;
+            let e = D(
+              null === (t = n.properties) || void 0 === t
+                ? void 0
+                : t.incidents_data
+            );
             null != e &&
               ((0, c.hasDetectedActivity)(e) || (0, c.isUnderLockdown)(e)) &&
-              (f[t.id] = e);
+              (f[n.id] = e);
           }
         },
         GUILD_CREATE: function (e) {
-          let { guild: t } = e,
-            n = D(t.properties.incidents_data);
-          null != n &&
-            ((0, c.hasDetectedActivity)(n) || (0, c.isUnderLockdown)(n)) &&
-            (f[t.id] = n);
+          var t;
+          let { guild: n } = e,
+            i = D(
+              null === (t = n.properties) || void 0 === t
+                ? void 0
+                : t.incidents_data
+            );
+          null != i &&
+            ((0, c.hasDetectedActivity)(i) || (0, c.isUnderLockdown)(i)) &&
+            (f[n.id] = i);
         },
         GUILD_UPDATE: function (e) {
           let { guild: t } = e,
@@ -848,12 +858,12 @@
             (h &&
               (null == p ? void 0 : p.invitesDisabledUntil) != null &&
               new Date(p.invitesDisabledUntil) > new Date()),
-          [b, g] = l.useState(R),
-          G = async t => {
+          [b, v] = l.useState(R),
+          g = async t => {
             if (!m && null != S) {
               M(!0);
               try {
-                if ((g(t), h)) {
+                if ((v(t), h)) {
                   if (t) {
                     let t = {
                       source: o.GuildIncidentActionSources.MESSAGE,
@@ -869,7 +879,7 @@
                   } else await (0, s.setGuildIncidentActions)(S.id, !1, !1);
                 } else await (0, _.setInvitesDisabled)(S, t);
               } catch (e) {
-                g(!t);
+                v(!t);
               } finally {
                 M(!1), (0, r.closeContextMenu)();
               }
@@ -881,7 +891,7 @@
               id: "pause-invites",
               label: I.default.Messages.DISABLE_INVITES,
               action: () => {
-                G(!b);
+                g(!b);
               },
               checked: b,
             });
@@ -952,4 +962,4 @@
     },
   },
 ]);
-//# sourceMappingURL=878ba8c66c2c61da87ca.js.map
+//# sourceMappingURL=937617c8d71b476c1e32.js.map

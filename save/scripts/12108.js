@@ -38,8 +38,8 @@
         u = n("42203"),
         a = n("245997"),
         d = n("697218"),
-        s = n("299039"),
-        o = n("49111");
+        o = n("299039"),
+        s = n("49111");
       function c(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -51,7 +51,7 @@
           messageId: i,
           immediate: t,
           force: n,
-          context: o.CURRENT_APP_CONTEXT,
+          context: s.CURRENT_APP_CONTEXT,
           location: r,
         });
       }
@@ -70,7 +70,7 @@
               if (null == l || null == l.guild_id) return;
               let d = a.default.getCategories(l.guild_id);
               if (null == d[e]) return;
-              let s = d[e]
+              let o = d[e]
                   .filter(e => {
                     let { channel: t } = e;
                     return (0, r.isGuildReadableType)(t.type);
@@ -79,26 +79,26 @@
                     let { channel: t } = e;
                     return t.id;
                   }),
-                o = [...s];
-              for (let e of (s.forEach(e => {
+                s = [...o];
+              for (let e of (o.forEach(e => {
                 let t = i.default.getActiveJoinedThreadsForParent(
                   l.guild_id,
                   e
                 );
-                for (let e in t) o.push(e);
+                for (let e in t) s.push(e);
               }),
-              o))
+              s))
                 c(e, t, n);
             })(e.id, !0, !0)
           : e.isForumLikeChannel()
-            ? c(e.id, !0, !0, s.default.fromTimestamp(Date.now()))
+            ? c(e.id, !0, !0, o.default.fromTimestamp(Date.now()))
             : c(e.id, !0, !0);
       }
       function _(e, t) {
         l.default.dispatch({
           type: "BULK_ACK",
           channels: e,
-          context: o.CURRENT_APP_CONTEXT,
+          context: s.CURRENT_APP_CONTEXT,
           onFinished: t,
         });
       }
@@ -226,7 +226,7 @@
         u = n("305961"),
         a = n("957255"),
         d = n("421127");
-      let s = (0, r.createExperiment)({
+      let o = (0, r.createExperiment)({
           kind: "guild",
           id: "2023-04_guild_alert_mode",
           label: "Guild Alert Mode",
@@ -244,7 +244,7 @@
             },
           ],
         }),
-        o = (0, r.createExperiment)({
+        s = (0, r.createExperiment)({
           kind: "guild",
           id: "2023-08_guild_alert_mode_friend_server",
           label: "Guild Alert Mode (friend servers only)",
@@ -275,11 +275,11 @@
                 d.IncidentAlertModeratorPermissions
               )
           ),
-          r = s.useExperiment(
+          r = o.useExperiment(
             { guildId: e, location: "c3fae3_1" },
             { disable: !n, autoTrackExposure: !0 }
           ),
-          c = o.useExperiment(
+          c = s.useExperiment(
             { guildId: e, location: "c3fae3_2" },
             { disable: !n, autoTrackExposure: !0 }
           );
@@ -297,11 +297,11 @@
               a.default.computePermissions(t),
               d.IncidentAlertModeratorPermissions
             ),
-          i = s.getCurrentConfig(
+          i = o.getCurrentConfig(
             { guildId: e, location: "c3fae3_3" },
             { disable: !n, autoTrackExposure: !0 }
           ),
-          r = o.getCurrentConfig(
+          r = s.getCurrentConfig(
             { guildId: e, location: "c3fae3_4" },
             { disable: !n, autoTrackExposure: !0 }
           );
@@ -326,7 +326,7 @@
             return d;
           },
           IncidentAlertModeratorPermissions: function () {
-            return s;
+            return o;
           },
         });
       var l = n("316693"),
@@ -360,7 +360,7 @@
             label: r.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS,
           },
         ],
-        s = l.default.combine(
+        o = l.default.combine(
           i.Permissions.ADMINISTRATOR,
           i.Permissions.MANAGE_GUILD,
           i.Permissions.BAN_MEMBERS,
@@ -402,10 +402,10 @@
             return d;
           },
           hasDetectedActivity: function () {
-            return s;
+            return o;
           },
           hasDetectedRaid: function () {
-            return o;
+            return s;
           },
           hasDetectedDMRaid: function () {
             return c;
@@ -444,7 +444,7 @@
         hour: "numeric",
         minute: "2-digit",
       };
-      function s(e) {
+      function o(e) {
         return (
           (null != e.dmSpamDetectedAt &&
             i(e.dmSpamDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") >
@@ -453,7 +453,7 @@
             i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i())
         );
       }
-      function o(e) {
+      function s(e) {
         return (
           null != e.raidDetectedAt &&
           i(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > i()
@@ -468,7 +468,7 @@
       function f(e) {
         return null == e
           ? void 0
-          : o(e)
+          : s(e)
             ? r.GuildIncidentAlertTypes.JOIN_RAID
             : r.GuildIncidentAlertTypes.DM_RAID;
       }
@@ -559,8 +559,8 @@
         u = n("305961"),
         a = n("957255"),
         d = n("607620"),
-        s = n("299039"),
-        o = n("610174"),
+        o = n("299039"),
+        s = n("610174"),
         c = n("311161");
       let f = {},
         _ = {};
@@ -569,9 +569,9 @@
         let t =
             null !== (e = r.default.getGuildsProto()) && void 0 !== e ? e : {},
           n = u.default.getGuilds(),
-          l = s.default.keys(n);
+          l = o.default.keys(n);
         for (let e of ((_ = {}), l))
-          (0, o.getGuildAlertModeEnabled)(e).showAlertMode &&
+          (0, s.getGuildAlertModeEnabled)(e).showAlertMode &&
             (_[e] = { guildId: e, guildName: n[e].name, ...t[e] });
       }
       function A(e) {
@@ -602,19 +602,29 @@
       h.displayName = "GuildIncidentsStore";
       var v = new h(i.default, {
         CONNECTION_OPEN: function (e) {
-          for (let t of ((f = {}), e.guilds)) {
-            let e = A(t.properties.incidents_data);
+          for (let n of ((f = {}), e.guilds)) {
+            var t;
+            let e = A(
+              null === (t = n.properties) || void 0 === t
+                ? void 0
+                : t.incidents_data
+            );
             null != e &&
               ((0, c.hasDetectedActivity)(e) || (0, c.isUnderLockdown)(e)) &&
-              (f[t.id] = e);
+              (f[n.id] = e);
           }
         },
         GUILD_CREATE: function (e) {
-          let { guild: t } = e,
-            n = A(t.properties.incidents_data);
-          null != n &&
-            ((0, c.hasDetectedActivity)(n) || (0, c.isUnderLockdown)(n)) &&
-            (f[t.id] = n);
+          var t;
+          let { guild: n } = e,
+            l = A(
+              null === (t = n.properties) || void 0 === t
+                ? void 0
+                : t.incidents_data
+            );
+          null != l &&
+            ((0, c.hasDetectedActivity)(l) || (0, c.isUnderLockdown)(l)) &&
+            (f[n.id] = l);
         },
         GUILD_UPDATE: function (e) {
           let { guild: t } = e,
@@ -693,8 +703,8 @@
         u = n("379881"),
         a = n("271938"),
         d = n("42203"),
-        s = n("923959"),
-        o = n("305961"),
+        o = n("923959"),
+        s = n("305961"),
         c = n("49111");
       let f = null,
         _ = {},
@@ -707,7 +717,7 @@
         e.index = t;
       }
       function I(e) {
-        let t = s.default.getChannels(e),
+        let t = o.default.getChannels(e),
           n = A(),
           l = e => {
             var t;
@@ -724,8 +734,8 @@
             let { channel: t } = e;
             n._categories.push({ channel: t, index: -1 }), (n[t.id] = []);
           }),
-          t[(0, s.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(l),
-          t[(0, s.GUILD_VOCAL_CHANNELS_KEY)].forEach(l),
+          t[(0, o.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(l),
+          t[(0, o.GUILD_VOCAL_CHANNELS_KEY)].forEach(l),
           (0, r.default)(n._categories, n).forEach(v),
           (_[e] = n),
           n
@@ -761,7 +771,7 @@
       }
       class m extends l.default.Store {
         initialize() {
-          this.waitFor(s.default, o.default, a.default, d.default, u.default),
+          this.waitFor(o.default, s.default, a.default, d.default, u.default),
             this.syncWith([u.default], S);
         }
         getCategories(e) {
@@ -1140,11 +1150,11 @@
           secondaryColor: u = "transparent",
           secondaryColorClass: a = "",
           color: d = i.default.colors.INTERACTIVE_NORMAL,
-          colorClass: s = "",
-          ...o
+          colorClass: o = "",
+          ...s
         } = e;
         return (0, l.jsxs)("svg", {
-          ...(0, r.default)(o),
+          ...(0, r.default)(s),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -1163,7 +1173,7 @@
               fillRule: "evenodd",
               d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
               clipRule: "evenodd",
-              className: s,
+              className: o,
             }),
           ],
         });
@@ -1317,4 +1327,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12108.e238f3689ff5c75db314.js.map
+//# sourceMappingURL=12108.2ffc303b04df908b5b3b.js.map

@@ -11538,9 +11538,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "274322",
+          E = "274330",
           T =
-            ((e = "cf1ac149e9da57b5c9da13479b23d5899e5fea1d"),
+            ((e = "bea574954fcf0e8ae1347462c014bf3db4699229"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -26128,7 +26128,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return h;
+            return m;
           },
         });
       var a = s("37983");
@@ -26142,144 +26142,105 @@
         u = s("305961"),
         c = s("476263"),
         S = s("118503"),
-        E = s("277703"),
-        T = s("16988"),
-        f = s("427459"),
-        _ = s("49111"),
-        m = s("782340"),
-        g = s("605566");
-      function N(e) {
-        let { className: t, extraLongSparkle: s } = e,
-          n = 48,
-          i = 18;
-        return (
-          s && ((n = 61), (i = 22)),
-          (0, a.jsx)("div", {
-            className: l(g.sideSparkleContainer, t),
-            style: { height: n },
-            children: (0, a.jsx)(T.default, {
-              className: l(g.sparkle, g.sideSparkle),
-              style: { top: i },
-            }),
-          })
-        );
-      }
-      var h = function (e) {
-        let {
-            className: t,
-            guildId: s,
-            boostingVariant: n,
-            showSparkes: h,
-          } = e,
-          I = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
-        return null == I
-          ? (0, a.jsx)("div", {
-              className: l(t, g.guildContainer),
-              children: (0, a.jsx)("div", {
-                className: g.guildInfoContainer,
-                children: (0, a.jsx)(r.Text, {
-                  variant: "text-lg/bold",
-                  children:
-                    m.default.Messages
-                      .GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD,
+        E = s("427459"),
+        T = s("49111"),
+        f = s("782340"),
+        _ = s("605566"),
+        m = function (e) {
+          let { className: t, guildId: s, boostingVariant: n } = e,
+            m = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
+          return null == m
+            ? (0, a.jsx)("div", {
+                className: l(t, _.guildContainer),
+                children: (0, a.jsx)("div", {
+                  className: _.guildInfoContainer,
+                  children: (0, a.jsx)(r.Text, {
+                    variant: "text-lg/bold",
+                    children:
+                      f.default.Messages
+                        .GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD,
+                  }),
                 }),
-              }),
-            })
-          : (0, a.jsxs)("div", {
-              className: l(t, g.guildContainer),
-              children: [
-                (0, a.jsx)(c.default, {
-                  className: g.guildIcon,
-                  guild: I,
-                  size: c.default.Sizes.LARGER,
-                }),
-                (0, a.jsxs)("div", {
-                  className: g.guildInfoContainer,
-                  children: [
-                    (0, a.jsx)(r.Text, {
-                      variant: "text-lg/bold",
-                      children: I.name,
-                    }),
-                    (0, a.jsxs)("div", {
-                      className: g.guildBoostStatsContainer,
-                      children: [
-                        (0, a.jsx)(S.default, {
-                          className: g.guildBoostBadge,
-                          width: 16,
-                          height: 16,
-                        }),
-                        (0, a.jsx)(r.Text, {
-                          variant: "text-sm/bold",
-                          color: "text-muted",
-                          children:
-                            m.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format(
-                              { subscriptions: I.premiumSubscriberCount }
-                            ),
-                        }),
-                        (0, a.jsx)("div", { className: g.separator }),
-                        (0, a.jsx)(r.Text, {
-                          variant: "text-sm/bold",
-                          color: "text-muted",
-                          children: (0, f.getTierName)(I.premiumTier, {
-                            useLevels: !1,
-                          }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                n
-                  ? (0, a.jsx)(d.default, {
-                      guild: I,
-                      analyticsLocation: {
-                        page: _.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
-                        section:
-                          _.AnalyticsSections
-                            .GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                        object: _.AnalyticsObjects.BUTTON_CTA,
-                        objectType: _.AnalyticsObjectTypes.BUY,
-                      },
-                      pauseAnimation: !0,
-                      size: r.Button.Sizes.MEDIUM,
-                      color: r.Button.Colors.PRIMARY,
-                      buttonText:
-                        m.default.Messages
-                          .GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER,
-                    })
-                  : (0, a.jsx)(r.Button, {
-                      color: r.Button.Colors.PRIMARY,
-                      onClick: () => {
-                        (0, o.openGuildBoostingMarketingModal)({
-                          guildId: I.id,
-                          location: {
-                            section:
-                              _.AnalyticsSections
-                                .GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA,
-                          },
-                        });
-                      },
-                      size: r.Button.Sizes.MEDIUM,
-                      children: m.default.Messages.NAVIGATE_TO_GUILD,
-                    }),
-                h &&
-                  (0, a.jsxs)(a.Fragment, {
+              })
+            : (0, a.jsxs)("div", {
+                className: l(t, _.guildContainer),
+                children: [
+                  (0, a.jsx)(c.default, {
+                    className: _.guildIcon,
+                    guild: m,
+                    size: c.default.Sizes.LARGER,
+                  }),
+                  (0, a.jsxs)("div", {
+                    className: _.guildInfoContainer,
                     children: [
-                      (0, a.jsx)(N, { className: g.sparkle1 }),
-                      (0, a.jsx)(E.default, {
-                        className: l(g.sparkle, g.sparkle2),
+                      (0, a.jsx)(r.Text, {
+                        variant: "text-lg/bold",
+                        children: m.name,
                       }),
-                      (0, a.jsx)(N, {
-                        className: g.sparkle3,
-                        extraLongSparkle: !0,
-                      }),
-                      (0, a.jsx)(T.default, {
-                        className: l(g.sparkle, g.sparkle4),
+                      (0, a.jsxs)("div", {
+                        className: _.guildBoostStatsContainer,
+                        children: [
+                          (0, a.jsx)(S.default, {
+                            className: _.guildBoostBadge,
+                            width: 16,
+                            height: 16,
+                          }),
+                          (0, a.jsx)(r.Text, {
+                            variant: "text-sm/bold",
+                            color: "text-muted",
+                            children:
+                              f.default.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format(
+                                { subscriptions: m.premiumSubscriberCount }
+                              ),
+                          }),
+                          (0, a.jsx)("div", { className: _.separator }),
+                          (0, a.jsx)(r.Text, {
+                            variant: "text-sm/bold",
+                            color: "text-muted",
+                            children: (0, E.getTierName)(m.premiumTier, {
+                              useLevels: !1,
+                            }),
+                          }),
+                        ],
                       }),
                     ],
                   }),
-              ],
-            });
-      };
+                  n
+                    ? (0, a.jsx)(d.default, {
+                        guild: m,
+                        analyticsLocation: {
+                          page: T.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
+                          section:
+                            T.AnalyticsSections
+                              .GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                          object: T.AnalyticsObjects.BUTTON_CTA,
+                          objectType: T.AnalyticsObjectTypes.BUY,
+                        },
+                        pauseAnimation: !0,
+                        size: r.Button.Sizes.MEDIUM,
+                        color: r.Button.Colors.PRIMARY,
+                        buttonText:
+                          f.default.Messages
+                            .GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER,
+                      })
+                    : (0, a.jsx)(r.Button, {
+                        color: r.Button.Colors.PRIMARY,
+                        onClick: () => {
+                          (0, o.openGuildBoostingMarketingModal)({
+                            guildId: m.id,
+                            location: {
+                              section:
+                                T.AnalyticsSections
+                                  .GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA,
+                            },
+                          });
+                        },
+                        size: r.Button.Sizes.MEDIUM,
+                        children: f.default.Messages.NAVIGATE_TO_GUILD,
+                      }),
+                ],
+              });
+        };
     },
     358189: function (e, t, s) {
       "use strict";
@@ -26452,14 +26413,13 @@
                         c.default.Messages
                           .GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING,
                     }),
-                  T.map((e, t) =>
+                  T.map(e =>
                     (0, a.jsx)(
                       u.default,
                       {
                         className: S.recommendedServerCard,
                         guildId: e,
                         boostingVariant: !0,
-                        showSparkes: 0 === t,
                       },
                       e
                     )
@@ -26564,33 +26524,35 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return p;
+            return A;
           },
         }),
         s("424973");
       var a = s("37983"),
         n = s("884691"),
-        l = s("446674"),
-        i = s("77078"),
-        r = s("206230"),
-        o = s("626301"),
-        d = s("697218"),
-        u = s("521012"),
-        c = s("427459"),
-        S = s("719923"),
-        E = s("560437"),
-        T = s("397723"),
-        f = s("717266"),
-        _ = s("49111"),
-        m = s("782340"),
-        g = s("998228");
-      function N(e) {
+        l = s("414456"),
+        i = s.n(l),
+        r = s("446674"),
+        o = s("77078"),
+        d = s("206230"),
+        u = s("626301"),
+        c = s("697218"),
+        S = s("521012"),
+        E = s("427459"),
+        T = s("719923"),
+        f = s("560437"),
+        _ = s("397723"),
+        m = s("717266"),
+        g = s("49111"),
+        N = s("782340"),
+        h = s("998228");
+      function I(e) {
         let {
             guildBoostSlot: t,
             isCancellable: s,
             onCancel: l,
-            onUncancel: r,
-            premiumSubscription: o,
+            onUncancel: i,
+            premiumSubscription: r,
             useReducedMotion: d,
           } = e,
           u = n.useMemo(
@@ -26598,66 +26560,66 @@
               null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null,
             [t]
           ),
-          S = (0, c.isGuildBoostSlotCanceled)(t);
+          c = (0, E.isGuildBoostSlotCanceled)(t);
         return (0, a.jsxs)(
           "li",
           {
-            className: g.unappliedGuildBoostSlot,
+            className: h.unappliedGuildBoostSlot,
             children: [
               (0, a.jsxs)("div", {
-                className: g.unappliedGuildBoostSlotContentPrimary,
+                className: h.unappliedGuildBoostSlotContentPrimary,
                 children: [
-                  (0, a.jsx)(f.default, {
-                    className: g.unappliedGuildBoostSlotIcon,
+                  (0, a.jsx)(m.default, {
+                    className: h.unappliedGuildBoostSlotIcon,
                     hasCooldown: t.isOnCooldown(),
-                    isCanceled: S,
+                    isCanceled: c,
                     useReducedMotion: d,
                   }),
-                  S && null != o
-                    ? (0, a.jsx)(i.Text, {
+                  c && null != r
+                    ? (0, a.jsx)(o.Text, {
                         color: "text-muted",
                         variant: "text-sm/medium",
                         children:
-                          m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format(
-                            { date: o.currentPeriodEnd }
+                          N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format(
+                            { date: r.currentPeriodEnd }
                           ),
                       })
                     : t.isOnCooldown() && null != u
-                      ? (0, a.jsx)(T.default, { cooldown: u.getTime() })
-                      : (0, a.jsx)(i.Text, {
-                          className: g.unappliedGuildBoostSlotDescription,
+                      ? (0, a.jsx)(_.default, { cooldown: u.getTime() })
+                      : (0, a.jsx)(o.Text, {
+                          className: h.unappliedGuildBoostSlotDescription,
                           color: "text-muted",
                           variant: "text-sm/medium",
                           children:
-                            m.default.Messages
+                            N.default.Messages
                               .GUILD_BOOSTING_USER_SETTINGS_UNAPPLIED_GUILD_BOOST_DESCRIPTION,
                         }),
                 ],
               }),
               (0, a.jsxs)("div", {
-                className: g.unappliedGuildBoostSlotContentSecondary,
+                className: h.unappliedGuildBoostSlotContentSecondary,
                 children: [
                   s &&
-                    !S &&
-                    (0, a.jsx)(i.Button, {
-                      className: g.unappliedGuildBoostSlotCta,
-                      color: i.Button.Colors.PRIMARY,
-                      look: i.Button.Looks.LINK,
+                    !c &&
+                    (0, a.jsx)(o.Button, {
+                      className: h.unappliedGuildBoostSlotCta,
+                      color: o.Button.Colors.PRIMARY,
+                      look: o.Button.Looks.LINK,
                       onClick: () => l(t),
-                      size: i.Button.Sizes.NONE,
+                      size: o.Button.Sizes.NONE,
                       children:
-                        m.default.Messages
+                        N.default.Messages
                           .PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
                     }),
-                  S &&
-                    (0, a.jsx)(i.Button, {
-                      className: g.unappliedGuildBoostSlotCta,
-                      color: i.Button.Colors.PRIMARY,
-                      look: i.Button.Looks.LINK,
-                      onClick: () => r(t),
-                      size: i.Button.Sizes.NONE,
+                  c &&
+                    (0, a.jsx)(o.Button, {
+                      className: h.unappliedGuildBoostSlotCta,
+                      color: o.Button.Colors.PRIMARY,
+                      look: o.Button.Looks.LINK,
+                      onClick: () => i(t),
+                      size: o.Button.Sizes.NONE,
                       children:
-                        m.default.Messages
+                        N.default.Messages
                           .PREMIUM_GUILD_SUBSCRIPTION_SLOT_UNCANCEL_BUTTON,
                     }),
                 ],
@@ -26667,41 +26629,41 @@
           t.id
         );
       }
-      function h(e) {
-        (0, i.openModalLazy)(async () => {
+      function p(e) {
+        (0, o.openModalLazy)(async () => {
           let { default: t } = await s.el("933182").then(s.bind(s, "933182"));
           return s => (0, a.jsx)(t, { ...s, guildBoostSlot: e });
         });
       }
-      function I(e) {
-        (0, i.openModalLazy)(async () => {
+      function C(e) {
+        (0, o.openModalLazy)(async () => {
           let { default: t } = await s.el("738400").then(s.bind(s, "738400"));
           return s => (0, a.jsx)(t, { ...s, guildBoostSlotId: e.id });
         });
       }
-      var p = function (e) {
+      var A = function (e) {
         let { guildBoostSlots: t } = e,
-          T = (0, l.useStateFromStores)([u.default], () =>
-            u.default.getPremiumTypeSubscription()
+          l = (0, r.useStateFromStores)([S.default], () =>
+            S.default.getPremiumTypeSubscription()
           ),
-          f = (0, l.useStateFromStores)(
-            [r.default],
-            () => r.default.useReducedMotion
+          _ = (0, r.useStateFromStores)(
+            [d.default],
+            () => d.default.useReducedMotion
           ),
-          p = (0, l.useStateFromStores)([d.default], () =>
-            d.default.getCurrentUser()
+          m = (0, r.useStateFromStores)([c.default], () =>
+            c.default.getCurrentUser()
           ),
           {
-            appliedGuildBoostSlots: C,
-            unappliedGuildBoostSlots: A,
-            numActiveGuildBoostSlots: O,
+            appliedGuildBoostSlots: A,
+            unappliedGuildBoostSlots: O,
+            numActiveGuildBoostSlots: x,
           } = n.useMemo(() => {
             let e = [],
               s = [],
               a = 0;
             return (
               t.forEach(t => {
-                !(0, c.isGuildBoostSlotCanceled)(t) && a++,
+                !(0, E.isGuildBoostSlotCanceled)(t) && a++,
                   null != t.premiumGuildSubscription ? e.push(t) : s.push(t);
               }),
               {
@@ -26711,81 +26673,77 @@
               }
             );
           }, [t]),
-          x =
-            null != T
-              ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(T.planId)
+          M =
+            null != l
+              ? T.default.getNumIncludedPremiumGuildSubscriptionSlots(l.planId)
               : 0,
-          M = Math.max(0, x - C.length),
-          R = O > x,
-          D = x === t.length,
-          v = D && M === x ? x : 1,
-          L = n.useMemo(() => {
+          R = Math.max(0, M - A.length),
+          D = x > M,
+          v = M === t.length,
+          L = v && R === M ? M : 1,
+          P = n.useMemo(() => {
             let e = [];
-            for (let t = 0; t < v; t++)
+            for (let t = 0; t < L; t++)
               e.push(
                 (0, a.jsx)(
-                  E.default,
-                  { className: g.headerBoostGem, useReducedMotion: f },
+                  f.default,
+                  { className: h.headerBoostGem, useReducedMotion: _ },
                   t
                 )
               );
             return e;
-          }, [v, f]),
-          P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
-        if (0 === A.length) return null;
-        let j = A.length;
+          }, [L, _]),
+          j = n.useMemo(() => O.find(e => e.isAvailable()), [O]);
+        if (0 === O.length) return null;
+        let b = O.length;
         return (0, a.jsxs)("div", {
-          className: g.wrapper,
+          className: h.wrapper,
           children: [
-            (0, a.jsx)("svg", {
-              className: g.border,
-              children: (0, a.jsx)("rect", {
-                className: g.borderRect,
-                height: "100%",
-                width: "100%",
-              }),
-            }),
+            !1,
             (0, a.jsxs)("div", {
-              className: g.header,
+              className: i(h.header, {
+                [h.headerWithBoost]: !1,
+                [h.headerWithoutSpecialHeader]: true,
+              }),
               children: [
                 (0, a.jsxs)("div", {
-                  className: g.headerContentPrimary,
+                  className: h.headerContentPrimary,
                   children: [
                     (0, a.jsx)("div", {
-                      className: g.headerBoostGems,
-                      children: L,
+                      className: h.headerBoostGems,
+                      children: P,
                     }),
                     (0, a.jsxs)("div", {
-                      className: g.headerCopy,
+                      className: h.headerCopy,
                       children: [
-                        (0, a.jsx)(i.Heading, {
-                          className: g.headerHeading,
+                        (0, a.jsx)(o.Heading, {
+                          className: h.headerHeading,
                           variant: "heading-lg/bold",
-                          children: D
-                            ? m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format(
-                                { numUnappliedGuildBoostSlots: j }
+                          children: v
+                            ? N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION.format(
+                                { numUnappliedGuildBoostSlots: b }
                               )
-                            : m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format(
-                                { numUnappliedGuildBoostSlots: j }
+                            : N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2.format(
+                                { numUnappliedGuildBoostSlots: b }
                               ),
                         }),
-                        (0, a.jsx)(i.Text, {
-                          className: g.headerSubheading,
-                          color: "text-muted",
+                        (0, a.jsx)(o.Text, {
+                          className: h.headerSubheading,
+                          color: "text-primary",
                           variant: "text-sm/normal",
-                          children: S.default.isPremium(p)
-                            ? m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format(
+                          children: T.default.isPremium(m)
+                            ? N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION.format(
                                 {
-                                  numUnappliedGuildBoostSlots: j,
+                                  numUnappliedGuildBoostSlots: b,
                                   learnMoreHook: (e, t) =>
                                     (0, a.jsx)(
-                                      i.Clickable,
+                                      o.Clickable,
                                       {
-                                        className: g.headerLearnMoreLink,
+                                        className: h.headerLearnMoreLink,
                                         tag: "span",
                                         onClick: () => {
                                           (0,
-                                          o.navigateToPremiumMarketingPage)();
+                                          u.navigateToPremiumMarketingPage)();
                                         },
                                         children: e,
                                       },
@@ -26793,8 +26751,8 @@
                                     ),
                                 }
                               )
-                            : m.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format(
-                                { numUnappliedGuildBoostSlots: j }
+                            : N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING.format(
+                                { numUnappliedGuildBoostSlots: b }
                               ),
                         }),
                       ],
@@ -26802,22 +26760,22 @@
                   ],
                 }),
                 (0, a.jsx)("div", {
-                  className: g.headerContentSecondary,
-                  children: (0, a.jsx)(i.Tooltip, {
-                    shouldShow: null == P,
-                    text: m.default.Messages
+                  className: h.headerContentSecondary,
+                  children: (0, a.jsx)(o.Tooltip, {
+                    shouldShow: null == j,
+                    text: N.default.Messages
                       .GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
                     children: e =>
-                      (0, a.jsx)(i.Button, {
+                      (0, a.jsx)(o.Button, {
                         ...e,
-                        disabled: null == P,
+                        disabled: null == j,
                         onClick:
-                          null != P
+                          null != j
                             ? () => {
                                 var e;
                                 return (
-                                  (e = P),
-                                  void (0, i.openModalLazy)(async () => {
+                                  (e = j),
+                                  void (0, o.openModalLazy)(async () => {
                                     let { default: t } = await s
                                       .el("247760")
                                       .then(s.bind(s, "247760"));
@@ -26826,33 +26784,33 @@
                                         ...s,
                                         guildBoostSlots: [e],
                                         locationSection:
-                                          _.AnalyticsSections.SETTINGS_PREMIUM,
+                                          g.AnalyticsSections.SETTINGS_PREMIUM,
                                       });
                                   })
                                 );
                               }
                             : void 0,
                         children:
-                          m.default.Messages
+                          N.default.Messages
                             .GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER,
                       }),
                   }),
                 }),
               ],
             }),
-            !D &&
+            !v &&
               (0, a.jsx)("ul", {
-                className: g.unappliedBoostSlots,
-                children: A.map(e =>
+                className: h.unappliedBoostSlots,
+                children: O.map(e =>
                   (0, a.jsx)(
-                    N,
+                    I,
                     {
                       guildBoostSlot: e,
-                      isCancellable: R,
-                      onCancel: h,
-                      onUncancel: I,
-                      premiumSubscription: T,
-                      useReducedMotion: f,
+                      isCancellable: D,
+                      onCancel: p,
+                      onUncancel: C,
+                      premiumSubscription: l,
+                      useReducedMotion: _,
                     },
                     e.id
                   )
@@ -31694,4 +31652,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dda459efd6f403938f5d.js.map
+//# sourceMappingURL=c149aee2561864a1f4f7.js.map

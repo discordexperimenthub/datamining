@@ -4400,7 +4400,7 @@
       s("884691");
       var r = s("43837"),
         i = e => {
-          let { percentage: t = 20, children: s, animationClassName: i } = e,
+          let { percentage: t = 60, children: s, animationClassName: i } = e,
             n = 2 * Math.PI * 43;
           return (0, a.jsxs)("div", {
             className: r.circleContainer,
@@ -4423,7 +4423,7 @@
                     strokeLinecap: "round",
                     strokeDasharray: "".concat(n, " ").concat(n),
                     className: i,
-                    style: { strokeDashoffset: -(1 - t / 100) * n },
+                    style: { strokeDashoffset: (1 - t / 100) * n },
                     r: "".concat(43, "%"),
                     cx: "50%",
                     cy: "50%",
@@ -9570,4 +9570,4 @@
     },
   },
 ]);
-//# sourceMappingURL=213ac7c362d94d494d6d.js.map
+//# sourceMappingURL=090552d65f42a460001d.js.map

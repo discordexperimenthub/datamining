@@ -67365,6 +67365,8 @@ html .tabBadge__002b3 {
 }
 .activityPanel__22355 {
   border-bottom: 1px solid var(--background-modifier-accent);
+  position: relative;
+  z-index: 2;
 }
 .enable-forced-colors .sidebar_ded4b5 {
   border-right: 2px solid CanvasText;
@@ -110582,4 +110584,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.8361697bf20e06629a85.css.map*/
+/*# sourceMappingURL=app.c8373c8972cb9808aa32.css.map*/

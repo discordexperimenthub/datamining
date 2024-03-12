@@ -2650,14 +2650,14 @@
             (0, g.updateImpersonating)(t.id, { type: R, roles: e });
           }
         }, [A, R, u]);
-        let P =
+        let x =
             null != l && null != n && null != O
               ? o(u)
                   .filter(e => -1 !== O.roles.indexOf(e.id))
                   .sortBy(e => -e.position)
                   .first()
               : void 0,
-          x = r.useMemo(
+          P = r.useMemo(
             () =>
               null != l && null != n
                 ? Object.values(u)
@@ -2673,11 +2673,11 @@
                     })
                     .filter(
                       e =>
-                        (null == P ? void 0 : P.id) === e.id ||
-                        h.default.isRoleHigher(l, n.id, P, e)
+                        (null == x ? void 0 : x.id) === e.id ||
+                        h.default.isRoleHigher(l, n.id, x, e)
                     )
                 : [],
-            [l, n, M, P, u]
+            [l, n, M, x, u]
           );
         if (null == n || null == l || null == O) return null;
         let D = {};
@@ -2701,7 +2701,7 @@
                 onChange: L,
                 autoFocus: !0,
                 children: e => {
-                  let t = x.reduce(
+                  let t = P.reduce(
                       (t, n) => (
                         s(e.toLowerCase(), n.name.toLowerCase()) &&
                           t.push(
@@ -2795,7 +2795,7 @@
         A = n("677795"),
         L = n("782340"),
         b = n("459186");
-      function P(e) {
+      function x(e) {
         let { className: t, onClick: n, children: r } = e;
         return (0, i.jsx)(o.Button, {
           className: l(b.button, t),
@@ -2807,9 +2807,9 @@
           children: r,
         });
       }
-      function x(e) {
+      function P(e) {
         let { onClick: t } = e;
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(x, {
           onClick: t,
           children: L.default.Messages.DISABLE,
         });
@@ -2867,7 +2867,7 @@
           color: I.NoticeColors.BRAND,
           className: b.notice,
           children: [
-            (0, i.jsxs)(P, {
+            (0, i.jsxs)(x, {
               onClick: () => F({ backToSettings: !0 }),
               className: b.backButton,
               children: [
@@ -2906,7 +2906,7 @@
                       renderPopout: () => (0, i.jsx)(R.default, { guildId: e }),
                       children: e => {
                         let { onClick: t } = e;
-                        return (0, i.jsxs)(P, {
+                        return (0, i.jsxs)(x, {
                           onClick: t,
                           children: [
                             G,
@@ -2949,7 +2949,7 @@
                 }),
             l || r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS
               ? null
-              : (0, i.jsx)(x, { onClick: () => F({ backToSettings: !1 }) }),
+              : (0, i.jsx)(P, { onClick: () => F({ backToSettings: !1 }) }),
           ],
         });
       }
@@ -3078,31 +3078,57 @@
         });
       }
     },
+    188649: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          isEligibleForQuestsClientMonitoring: function () {
+            return l;
+          },
+        });
+      var i = n("862205");
+      let r = (0, i.createExperiment)({
+          id: "2024-03_quests_client_monitoring",
+          kind: "user",
+          label: "Quests client monitoring experiment",
+          defaultConfig: { enabled: !1 },
+          treatments: [
+            { id: 0, label: "disabled", config: { enabled: !1 } },
+            { id: 1, label: "enabled", config: { enabled: !0 } },
+          ],
+        }),
+        l = e =>
+          r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 })
+            .enabled;
+    },
     534801: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           QuestContentImpressionTracker: function () {
-            return E;
+            return g;
           },
         }),
         n("222007");
       var i = n("37983"),
         r = n("884691"),
         l = n("748820"),
-        s = n("446674"),
-        u = n("811425"),
-        o = n("84339"),
-        a = n("471671"),
-        d = n("815496"),
-        c = n("2973"),
-        f = n("49111");
-      class S {
+        s = n("432710"),
+        u = n("446674"),
+        o = n("811425"),
+        a = n("84339"),
+        d = n("155084"),
+        c = n("471671"),
+        f = n("815496"),
+        S = n("188649"),
+        E = n("2973"),
+        h = n("49111");
+      class _ {
         constructor(e, t) {
           var n = this;
           (this.onMinViewTimeReached = () => {
             this.questIds.forEach(e => {
-              (0, d.trackQuestEvent)(e, f.AnalyticEvents.QUEST_CONTENT_VIEWED, {
+              (0, f.trackQuestEvent)(e, h.AnalyticEvents.QUEST_CONTENT_VIEWED, {
                 min_view_time_seconds: this.minViewTimeSecond,
                 min_viewport_percentage: this.minViewportPercentage,
                 ...this.commonProperties(e),
@@ -3114,9 +3140,9 @@
                 arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
               n.questIds.forEach(t => {
                 null != n.lastBeatTime &&
-                  (0, d.trackQuestEvent)(
+                  (0, f.trackQuestEvent)(
                     t,
-                    f.AnalyticEvents.QUEST_CONTENT_VIEW_TIME,
+                    h.AnalyticEvents.QUEST_CONTENT_VIEW_TIME,
                     {
                       is_termination_beat: e,
                       viewed_time_ms: Date.now() - n.lastBeatTime,
@@ -3128,8 +3154,8 @@
             }),
             (this.commonProperties = e => ({
               impression_id: this.id,
-              quest_status: (0, d.getQuestStatus)(c.default.quests.get(e)),
-              ...(0, d.getContentProperties)(this.questContent),
+              quest_status: (0, f.getQuestStatus)(E.default.quests.get(e)),
+              ...(0, f.getContentProperties)(this.questContent),
             })),
             (this.start = () => {
               this.stop(!1),
@@ -3140,12 +3166,23 @@
                   1e3 * this.minViewTimeSecond
                 )),
                 this.questIds.forEach(e => {
-                  (0, d.trackQuestEvent)(
+                  (0, f.trackQuestEvent)(
                     e,
-                    f.AnalyticEvents.QUEST_CONTENT_LOADED,
+                    h.AnalyticEvents.QUEST_CONTENT_LOADED,
                     this.commonProperties(e)
                   );
-                });
+                }),
+                (0, S.isEligibleForQuestsClientMonitoring)(
+                  "QuestImpressionTracker"
+                ) &&
+                  d.default.increment({
+                    name: s.MetricEvents.QUEST_CONTENT_IMPRESSION,
+                    tags: [
+                      "quest_content:".concat(
+                        (0, f.getQuestContentName)(this.questContent)
+                      ),
+                    ],
+                  });
             }),
             (this.stop = function () {
               let e =
@@ -3164,43 +3201,43 @@
             (this.questIds = Array.isArray(e) ? e : [e]);
         }
       }
-      function E(e) {
+      function g(e) {
         let t = Array.isArray(e.questId)
           ? e.questId.sort().join("_")
           : e.questId;
         return (0, i.jsx)(
-          h,
+          p,
           { ...e },
           "".concat(t, "_").concat(e.questContent)
         );
       }
-      function h(e) {
+      function p(e) {
         var t;
-        let n = (0, s.useStateFromStores)([a.default], () =>
-            a.default.isFocused()
+        let n = (0, u.useStateFromStores)([c.default], () =>
+            c.default.isFocused()
           ),
-          l = n !== (0, o.default)(n),
-          [d, c] = r.useState(!1),
-          f = null !== (t = e.overrideVisibility) && void 0 !== t ? t : d,
-          E = f !== (0, o.default)(f),
-          h = r.useRef(null),
-          _ = (0, u.useIsVisible)(e => c(e), 0.5);
+          l = n !== (0, a.default)(n),
+          [s, d] = r.useState(!1),
+          f = null !== (t = e.overrideVisibility) && void 0 !== t ? t : s,
+          S = f !== (0, a.default)(f),
+          E = r.useRef(null),
+          h = (0, o.useIsVisible)(e => d(e), 0.5);
         return (
           r.useEffect(
             () => () => {
-              null != h.current && h.current.stop();
+              null != E.current && E.current.stop();
             },
             []
           ),
           r.useEffect(() => {
-            let t = (E && f) || (l && n && f),
-              i = (E && !f) || (l && !n);
-            (t || i) && null != h.current && h.current.stop(),
+            let t = (S && f) || (l && n && f),
+              i = (S && !f) || (l && !n);
+            (t || i) && null != E.current && E.current.stop(),
               t &&
-                ((h.current = new S(e.questId, e.questContent)),
-                h.current.start());
-          }, [n, f, h, l, E, e.questId, e.questContent]),
-          (0, i.jsx)(i.Fragment, { children: e.children(_) })
+                ((E.current = new _(e.questId, e.questContent)),
+                E.current.start());
+          }, [n, f, E, l, S, e.questId, e.questContent]),
+          (0, i.jsx)(i.Fragment, { children: e.children(h) })
         );
       }
     },
@@ -3985,4 +4022,4 @@
     },
   },
 ]);
-//# sourceMappingURL=10098d871a3031ab3134.js.map
+//# sourceMappingURL=3cfa7a752ac5762abf2d.js.map

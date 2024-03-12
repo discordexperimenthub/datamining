@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "274330",
+                  buildNumber: "274341",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -25233,7 +25233,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return D;
+            return x;
           },
         }),
         n("222007");
@@ -25247,163 +25247,167 @@
         d = n("77078"),
         c = n("913144"),
         f = n("777273"),
-        E = n("843823"),
-        h = n("697218"),
-        _ = n("392453"),
-        C = n("599110"),
-        I = n("718517"),
-        S = n("744923"),
-        m = n("333705"),
-        p = n("749554"),
-        T = n("62659"),
-        g = n("36512"),
-        A = n("638441"),
-        N = n("49111"),
-        R = n("988268"),
-        O = n("782340"),
-        v = n("852865");
-      let L = 15 * I.default.Millis.MINUTE,
-        M = (0, A.default)(function (e) {
+        E = n("2973"),
+        h = n("227231"),
+        _ = n("843823"),
+        C = n("697218"),
+        I = n("392453"),
+        S = n("599110"),
+        m = n("718517"),
+        p = n("744923"),
+        T = n("333705"),
+        g = n("749554"),
+        A = n("62659"),
+        N = n("36512"),
+        R = n("638441"),
+        O = n("49111"),
+        v = n("988268"),
+        L = n("782340"),
+        M = n("852865");
+      let P = 15 * m.default.Millis.MINUTE,
+        D = (0, R.default)(function (e) {
           let {
               party: t,
               onUserContextMenu: n,
               onChannelContextMenu: l,
-              registerQuestEntrypoint: i,
-              shouldRenderQuestEntrypoint: r,
+              quest: i,
             } = e,
-            u = (0, a.jsx)(p.default, { party: t, onUserContextMenu: n }),
-            c = (0, a.jsx)(m.default, {
+            r = (0, a.jsx)(g.default, { party: t, onUserContextMenu: n }),
+            u = (0, a.jsx)(T.default, {
               party: t,
               onChannelContextMenu: l,
-              registerQuestEntrypoint: i,
-              shouldRenderQuestEntrypoint: r,
+              quest: i,
             }),
             {
-              partiedMembers: f,
-              applicationStreams: E,
-              currentActivities: h,
-              voiceChannels: _,
+              partiedMembers: c,
+              applicationStreams: f,
+              currentActivities: E,
+              voiceChannels: h,
             } = t,
-            I = f.length,
-            S = E.length,
-            A = h.length,
-            O = _.length > 0,
-            M = s.useCallback(() => {
-              let e = h
-                .filter(e => {
-                  var t, n;
-                  return (
-                    (null === (t = e.game) || void 0 === t ? void 0 : t.name) !=
-                      null &&
-                    (null === (n = e.game) || void 0 === n
-                      ? void 0
-                      : n.type) === R.ApplicationTypes.GAME
-                  );
-                })
-                .map(e => e.game.name);
-              C.default.track(N.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
-                num_users: I,
-                num_streams: S,
-                num_activities: A,
-                in_voice_channel: O,
+            _ = c.length,
+            C = f.length,
+            I = E.length,
+            m = h.length > 0,
+            p = s.useCallback(() => {
+              let e = E.filter(e => {
+                var t, n;
+                return (
+                  (null === (t = e.game) || void 0 === t ? void 0 : t.name) !=
+                    null &&
+                  (null === (n = e.game) || void 0 === n ? void 0 : n.type) ===
+                    v.ApplicationTypes.GAME
+                );
+              }).map(e => e.game.name);
+              S.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+                num_users: _,
+                num_streams: C,
+                num_activities: I,
+                in_voice_channel: m,
                 games_detected: e,
               });
-            }, [I, S, A, O, h]),
-            P = o(M, L);
-          return null != u || null != c
+            }, [_, C, I, m, E]),
+            R = o(p, P);
+          return null != r || null != u
             ? (0, a.jsx)(d.Popout, {
                 position: "left",
                 renderPopout: e => {
                   let { closePopout: n } = e;
-                  return (0, a.jsx)(g.default, { party: t, close: n });
+                  return (0, a.jsx)(N.default, { party: t, close: n });
                 },
                 spacing: 8,
                 children: (e, t) => {
                   let { isShown: n } = t;
-                  return (0, a.jsx)(T.default, {
+                  return (0, a.jsx)(A.default, {
                     ...e,
-                    onMouseEnter: P,
+                    onMouseEnter: R,
                     "aria-haspopup": "menu",
-                    className: v.itemCard,
+                    className: M.itemCard,
                     active: n,
-                    children: (0, a.jsxs)("div", { children: [u, c] }),
+                    children: (0, a.jsxs)("div", { children: [r, u] }),
                   });
                 },
               })
             : null;
         }),
-        P = i.throttle(() => f.fetchUserAffinities(!1), 3e5);
-      function D() {
+        y = i.throttle(() => f.fetchUserAffinities(!1), 3e5);
+      function x() {
         let {
-          nowPlayingCards: e,
-          loaded: t,
-          needsRefresh: n,
-          fetching: l,
-          currentUser: i,
-        } = (0, u.useStateFromStoresObject)(
-          [_.default, E.default, h.default],
-          () => ({
-            nowPlayingCards: _.default.nowPlayingCards,
-            loaded: _.default.loaded,
-            needsRefresh: E.default.needsRefresh(),
-            fetching: E.default.getFetching(),
-            currentUser: h.default.getCurrentUser(),
-          })
-        );
+            nowPlayingCards: e,
+            loaded: t,
+            needsRefresh: n,
+            fetching: l,
+            currentUser: i,
+          } = (0, u.useStateFromStoresObject)(
+            [I.default, _.default, C.default],
+            () => ({
+              nowPlayingCards: I.default.nowPlayingCards,
+              loaded: I.default.loaded,
+              needsRefresh: _.default.needsRefresh(),
+              fetching: _.default.getFetching(),
+              currentUser: C.default.getCurrentUser(),
+            })
+          ),
+          r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
         s.useEffect(
           () => (
-            c.default.wait(() => S.mount()),
-            () => c.default.wait(() => S.unmount())
+            c.default.wait(() => p.mount()),
+            () => c.default.wait(() => p.unmount())
           ),
           [null == i ? void 0 : i.id]
         ),
           s.useEffect(() => {
-            n && !l && P();
+            n && !l && y();
           }, [n, l]);
-        let r = null;
-        if (!t)
-          return (0, a.jsx)("div", {
-            className: v.emptyCard,
-            children: (0, a.jsx)(d.Spinner, {}),
-          });
-        if (e.length > 0) {
-          let t = new Set();
-          function o(e) {
-            return !t.has(e);
-          }
-          function f(e) {
-            t.add(e);
-          }
-          r = e.map(e => {
-            let { party: t } = e;
-            return (0, a.jsx)(
-              M,
-              {
-                party: t,
-                shouldRenderQuestEntrypoint: o,
-                registerQuestEntrypoint: f,
-              },
-              t.id
-            );
-          });
-        } else
-          r = (0, a.jsxs)("div", {
-            className: v.emptyCard,
-            children: [
-              (0, a.jsx)(d.Heading, {
-                variant: "heading-md/semibold",
-                className: v.emptyHeader,
-                children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER,
-              }),
-              (0, a.jsx)(d.Text, {
-                color: "none",
-                className: v.emptyText,
-                variant: "text-sm/normal",
-                children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY,
-              }),
-            ],
-          });
-        return (0, a.jsx)(a.Fragment, { children: r });
+        let o = s.useMemo(() => {
+            let t = new Map(),
+              n = new Set();
+            for (let a of e)
+              a.party.currentActivities.forEach(e => {
+                let { game: s } = e;
+                if (null != s) {
+                  let e = (0, h.getQuestByApplicationId)(r, s.id);
+                  null != e &&
+                    !n.has(e.id) &&
+                    (t.set(a.party.id, e), n.add(e.id));
+                }
+              });
+            return t;
+          }, [e, r]),
+          f = null;
+        return t
+          ? ((f =
+              e.length > 0
+                ? e.map(e => {
+                    let { party: t } = e;
+                    return (0, a.jsx)(
+                      D,
+                      { party: t, quest: o.get(t.id) },
+                      t.id
+                    );
+                  })
+                : (0, a.jsxs)("div", {
+                    className: M.emptyCard,
+                    children: [
+                      (0, a.jsx)(d.Heading, {
+                        variant: "heading-md/semibold",
+                        className: M.emptyHeader,
+                        children:
+                          L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER,
+                      }),
+                      (0, a.jsx)(d.Text, {
+                        color: "none",
+                        className: M.emptyText,
+                        variant: "text-sm/normal",
+                        children:
+                          L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY,
+                      }),
+                    ],
+                  })),
+            (0, a.jsx)(a.Fragment, { children: f }))
+          : (0, a.jsx)("div", {
+              className: M.emptyCard,
+              children: (0, a.jsx)(d.Spinner, {}),
+            });
       }
     },
     333705: function (e, t, n) {
@@ -25411,54 +25415,45 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return S;
           },
         }),
         n("424973"),
         n("222007");
       var a = n("37983");
       n("884691");
-      var s = n("446674"),
-        l = n("987317"),
-        i = n("990766"),
-        r = n("309570"),
-        o = n("152311"),
-        u = n("429928"),
-        d = n("36539"),
-        c = n("502651"),
-        f = n("2973"),
-        E = n("227231"),
-        h = n("834440"),
-        _ = n("239380"),
-        C = n("550368"),
-        I = n("67139"),
-        S = n("62659"),
-        m = n("636174"),
-        p = n("49111");
-      function T(e) {
-        let {
-            party: t,
-            onChannelContextMenu: n,
-            registerQuestEntrypoint: T,
-            shouldRenderQuestEntrypoint: g,
-          } = e,
+      var s = n("987317"),
+        l = n("990766"),
+        i = n("309570"),
+        r = n("152311"),
+        o = n("429928"),
+        u = n("36539"),
+        d = n("502651"),
+        c = n("834440"),
+        f = n("239380"),
+        E = n("550368"),
+        h = n("67139"),
+        _ = n("62659"),
+        C = n("636174"),
+        I = n("49111");
+      function S(e) {
+        let { party: t, onChannelContextMenu: n, quest: S } = e,
           {
-            voiceChannels: A,
-            currentActivities: N,
-            partiedMembers: R,
-            applicationStreams: O,
-            guildContext: v,
+            voiceChannels: m,
+            currentActivities: p,
+            partiedMembers: T,
+            applicationStreams: g,
+            guildContext: A,
           } = t,
-          L = (0, s.useStateFromStores)([f.default], () => f.default.quests),
-          M = [],
-          P = e => {
+          N = [],
+          R = e => {
             var t, n;
-            let { length: s } = M;
+            let { length: s } = N;
             if (0 === s) {
-              M.push(e);
+              N.push(e);
               return;
             }
-            let l = M[s - 1],
+            let l = N[s - 1],
               i = "".concat(
                 null !== (t = null == e ? void 0 : e.key) && void 0 !== t
                   ? t
@@ -25470,17 +25465,17 @@
                   : ""
               ),
               o = r.startsWith("game") && i.startsWith("rich-presence");
-            M.push(
-              (0, a.jsx)(S.default.Separator, { inset: o }, "sep-".concat(i))
+            N.push(
+              (0, a.jsx)(_.default.Separator, { inset: o }, "sep-".concat(i))
             ),
-              M.push(e);
+              N.push(e);
           };
-        for (let { activity: e } of (A.length > 0 &&
-          A.forEach(e => {
+        for (let { activity: e } of (m.length > 0 &&
+          m.forEach(e => {
             let { members: t, channel: s, guild: l } = e;
-            P(
+            R(
               (0, a.jsx)(
-                S.default.VoiceSection,
+                _.default.VoiceSection,
                 {
                   guild: l,
                   channel: s,
@@ -25502,7 +25497,7 @@
                   })(t),
                   onChannelContextMenu: n,
                   onGuildClick: () => {
-                    (0, _.transitionToGuild)(l.id);
+                    (0, f.transitionToGuild)(l.id);
                   },
                 },
                 "voice-".concat(s.id)
@@ -25511,190 +25506,183 @@
           }),
         t.currentActivities))
           if (null != e) {
-            let t = I.createBody(e);
+            let t = h.createBody(e);
             if (null != t) {
-              P(t);
+              R(t);
               break;
             }
           }
         return (
-          O.length > 0 &&
-            O.forEach(e => {
-              let { stream: t, streamUser: n, activity: s } = e;
-              P(
+          g.length > 0 &&
+            g.forEach(e => {
+              let { stream: t, streamUser: n, activity: i } = e;
+              R(
                 (0, a.jsx)(
-                  S.default.ApplicationStreamingSection,
+                  _.default.ApplicationStreamingSection,
                   {
-                    guildId: null == v ? void 0 : v.id,
+                    guildId: null == A ? void 0 : A.id,
                     user: n,
-                    activity: s,
+                    activity: i,
                     applicationStream: t,
                     onPreviewClick: () => {
-                      l.default.selectVoiceChannel(t.channelId),
-                        (0, i.watchStreamAndTransitionToStream)(t);
+                      s.default.selectVoiceChannel(t.channelId),
+                        (0, l.watchStreamAndTransitionToStream)(t);
                     },
                   },
                   "application-stream-".concat(t.ownerId)
                 )
               );
             }),
-          N.forEach((e, t) => {
-            var n, s, l, i, f, _, I, O, M;
+          p.forEach((e, t) => {
+            var n, s, l, f, h, g, N, O, v;
             let {
-              activity: D,
-              game: y,
-              playingMembers: x,
-              activityUser: b,
+              activity: L,
+              game: M,
+              playingMembers: P,
+              activityUser: D,
             } = e;
-            if (null == D || null == D.type) return null;
+            if (null == L || null == L.type) return null;
             if (
-              N.length > 1 &&
-              D.type === p.ActivityTypes.PLAYING &&
-              !(0, r.default)(D) &&
-              null != y
+              p.length > 1 &&
+              L.type === I.ActivityTypes.PLAYING &&
+              !(0, i.default)(L) &&
+              null != M
             )
-              P(
+              R(
                 (0, a.jsx)(
-                  S.default.GameSection,
+                  _.default.GameSection,
                   {
-                    icon: y.getIconURL(m.ICON_SIZE),
-                    name: y.name,
+                    icon: M.getIconURL(C.ICON_SIZE),
+                    name: M.name,
                     partySize: {
-                      knownSize: x.length,
+                      knownSize: P.length,
                       unknownSize: 0,
-                      totalSize: x.length,
+                      totalSize: P.length,
                     },
-                    members: x,
+                    members: P,
                   },
                   "game-"
                     .concat(
-                      null !== (n = D.session_id) && void 0 !== n ? n : t,
+                      null !== (n = L.session_id) && void 0 !== n ? n : t,
                       "-"
                     )
                     .concat(
-                      null !== (s = D.application_id) && void 0 !== s ? s : t
+                      null !== (s = L.application_id) && void 0 !== s ? s : t
                     )
                 )
               );
-            else if ((0, o.default)(D)) {
-              let e = new Set(x.map(e => e.id)),
+            else if ((0, r.default)(L)) {
+              let e = new Set(P.map(e => e.id)),
                 t =
-                  null === (l = A.find(e => null != e)) || void 0 === l
+                  null === (l = m.find(e => null != e)) || void 0 === l
                     ? void 0
                     : l.channel;
               null != t &&
-                P(
+                R(
                   (0, a.jsx)(
-                    S.default.EmbeddedActivitySection,
+                    _.default.EmbeddedActivitySection,
                     {
-                      activity: D,
+                      activity: L,
                       participants: e,
                       channel: t,
                       guildId: t.guild_id,
                     },
-                    "embedded-activity-".concat(D.application_id)
+                    "embedded-activity-".concat(L.application_id)
                   )
                 );
             } else if (
-              (null != D.assets || (0, r.default)(D)) &&
-              D.type === p.ActivityTypes.PLAYING
+              (null != L.assets || (0, i.default)(L)) &&
+              L.type === I.ActivityTypes.PLAYING
             )
-              P(
+              R(
                 (0, a.jsx)(
-                  S.default.RichPresenceSection,
-                  { activity: D, getAssetImage: C.getAssetImage },
+                  _.default.RichPresenceSection,
+                  { activity: L, getAssetImage: E.getAssetImage },
                   "rich-presence-"
                     .concat(
-                      null !== (i = D.session_id) && void 0 !== i ? i : t,
+                      null !== (f = L.session_id) && void 0 !== f ? f : t,
                       "-"
                     )
-                    .concat(b.id)
+                    .concat(D.id)
                 )
               );
-            else if ((0, c.default)(D)) {
-              let e = A.length > 0 && A[0].members.length > 1,
-                n = x.length > 1;
-              P(
+            else if ((0, d.default)(L)) {
+              let e = m.length > 0 && m[0].members.length > 1,
+                n = P.length > 1;
+              R(
                 (0, a.jsx)(
-                  S.default.TwitchSection,
+                  _.default.TwitchSection,
                   {
-                    guildId: null == v ? void 0 : v.id,
-                    activity: D,
-                    user: e || n ? b : null,
-                    getAssetImage: C.getAssetImage,
+                    guildId: null == A ? void 0 : A.id,
+                    activity: L,
+                    user: e || n ? D : null,
+                    getAssetImage: E.getAssetImage,
                   },
                   "streaming-".concat(
-                    null !== (f = D.session_id) && void 0 !== f ? f : t
+                    null !== (h = L.session_id) && void 0 !== h ? h : t
                   )
                 )
               );
             } else
-              (0, u.default)(D)
-                ? P(
+              (0, o.default)(L)
+                ? R(
                     (0, a.jsx)(
-                      S.default.SpotifySection,
+                      _.default.SpotifySection,
                       {
-                        activity: D,
-                        isSolo: 1 === R.length,
+                        activity: L,
+                        isSolo: 1 === T.length,
                         partySize: {
-                          knownSize: x.length,
+                          knownSize: P.length,
                           unknownSize: 0,
-                          totalSize: x.length,
+                          totalSize: P.length,
                         },
-                        getAssetImage: C.getAssetImage,
-                        members: x,
+                        getAssetImage: E.getAssetImage,
+                        members: P,
                       },
                       "spotify-"
                         .concat(
-                          null !== (_ = D.session_id) && void 0 !== _ ? _ : t,
+                          null !== (g = L.session_id) && void 0 !== g ? g : t,
                           "-"
                         )
-                        .concat(b.id)
+                        .concat(D.id)
                     )
                   )
-                : (null != D.assets || (0, r.default)(D)) &&
-                    D.type === p.ActivityTypes.LISTENING
-                  ? P(
+                : (null != L.assets || (0, i.default)(L)) &&
+                    L.type === I.ActivityTypes.LISTENING
+                  ? R(
                       (0, a.jsx)(
-                        S.default.RichPresenceSection,
-                        { activity: D, getAssetImage: C.getAssetImage },
+                        _.default.RichPresenceSection,
+                        { activity: L, getAssetImage: E.getAssetImage },
                         "rich-presence-"
                           .concat(
-                            null !== (I = D.session_id) && void 0 !== I ? I : t,
+                            null !== (N = L.session_id) && void 0 !== N ? N : t,
                             "-"
                           )
-                          .concat(b.id)
+                          .concat(D.id)
                       )
                     )
-                  : (0, d.default)(D) &&
-                    P(
+                  : (0, u.default)(L) &&
+                    R(
                       (0, a.jsx)(
-                        S.default.XboxSection,
-                        { title: y.name },
+                        _.default.XboxSection,
+                        { title: M.name },
                         "xbox-".concat(
-                          null !== (O = D.session_id) && void 0 !== O ? O : t
+                          null !== (O = L.session_id) && void 0 !== O ? O : t
                         )
                       )
                     );
-            if (null != y) {
-              let e = (0, E.getQuestByApplicationId)(L, y.id);
-              null != e &&
-                g(e.id) &&
-                (T(e.id),
-                P(
-                  (0, a.jsx)(
-                    h.default,
-                    { quest: e },
-                    "quest-"
-                      .concat(e.id, "-")
-                      .concat(
-                        null !== (M = D.session_id) && void 0 !== M ? M : t
-                      )
-                  )
-                ));
-            }
+            null != S &&
+              R(
+                (0, a.jsx)(
+                  c.default,
+                  { quest: S },
+                  "quest-"
+                    .concat(S.id, "-")
+                    .concat(null !== (v = L.session_id) && void 0 !== v ? v : t)
+                )
+              );
           }),
-          M.length > 0 ? (0, a.jsx)(S.default.Body, { children: M }) : null
+          N.length > 0 ? (0, a.jsx)(_.default.Body, { children: N }) : null
         );
       }
     },
@@ -52797,4 +52785,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6b715263bbb00a9c487a.js.map
+//# sourceMappingURL=93c7a4ed2f501c93d783.js.map

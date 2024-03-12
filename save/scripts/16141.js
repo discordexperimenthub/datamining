@@ -205,6 +205,27 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
+    289867: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var a = n("913144"),
+        l = {
+          toggleMembersSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+          },
+          toggleProfilePanelSection() {
+            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
+          },
+          toggleSummariesSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+          },
+        };
+    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -758,7 +779,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return Q;
+            return X;
           },
         }),
         n("222007");
@@ -1006,7 +1027,7 @@
               })
             : null;
         });
-      function Q(e) {
+      function X(e) {
         let { channel: t, guild: n } = e,
           s = "members-".concat(t.id),
           r = (0, g.useThreadMemberListSections)(t.id, n),
@@ -1085,7 +1106,7 @@
           }, [t.guild_id, t.id, t.type]),
           E)
         )
-          return (0, a.jsx)(X, { channel: t });
+          return (0, a.jsx)(Q, { channel: t });
         let S = u.omit(h.containerProps, ["ref"]),
           C = U.default.getGuildVisualOwnerId(n);
         return (0, a.jsx)(o.ListNavigatorProvider, {
@@ -1151,7 +1172,7 @@
           }),
         });
       }
-      function X(e) {
+      function Q(e) {
         let { channel: t } = e;
         return (0, a.jsxs)("div", {
           className: i(H.membersWrap, H.hiddenMembers, H.members, G.emptyState),
@@ -1577,6 +1598,12 @@
       var a = n("122421");
       n.es(a, t);
     },
+    233676: function (e, t, n) {
+      "use strict";
+      n.r(t);
+      var a = n("759275");
+      n.es(a, t);
+    },
     392646: function (e, t, n) {
       "use strict";
       n.r(t);
@@ -1909,13 +1936,13 @@
           });
           return e.observe(z.current), () => e.disconnect();
         }, []);
-        let Q = K.width / Math.max(K.height, 1),
-          X = Q < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+        let X = K.width / Math.max(K.height, 1),
+          Q = X < M.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
           q = 0,
           J = 0,
           $ = K.width,
           ee = K.height;
-        X
+        Q
           ? ((ee = K.width / M.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height &&
               ($ = (ee = K.height) * M.LANDSCAPE_ACTIVITY_ASPECT_RATIO),
             (J = (K.height - ee) / 2))
@@ -2368,7 +2395,7 @@
             p.default)([...H, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
             K = G === M.AppContext.POPOUT,
             Z = (0, c.useAnalyticsContext)(),
-            Q = (function (e) {
+            X = (function (e) {
               let t = (0, v.default)({ guildId: e });
               return t.slice(0, 5);
             })(n.getGuildId());
@@ -2376,7 +2403,7 @@
             let e = setTimeout(() => T.dismissNewActivityIndicator(), 1e3);
             return () => clearTimeout(e);
           }, []);
-          let X = l.useCallback(() => {
+          let Q = l.useCallback(() => {
               var e;
               (0, A.default)({
                 channel: n,
@@ -2456,7 +2483,7 @@
                           }),
                           (0, a.jsxs)(d.Clickable, {
                             className: j.titleRight,
-                            onClick: X,
+                            onClick: Q,
                             children: [
                               (0, a.jsx)(d.Text, {
                                 variant: "eyebrow",
@@ -2478,7 +2505,7 @@
                       (0, a.jsxs)("div", {
                         className: j.activityContainer,
                         children: [
-                          Q.map(e =>
+                          X.map(e =>
                             (0, a.jsx)(
                               x.ActivitySuggestion,
                               {
@@ -3472,8 +3499,8 @@
         z = n("115531"),
         K = n("620592"),
         Z = n("172131"),
-        Q = n("640553"),
-        X = n("95032"),
+        X = n("640553"),
+        Q = n("95032"),
         q = n("331759"),
         J = n("336971"),
         $ = n("555038"),
@@ -4219,7 +4246,7 @@
                       })
                     : null,
                   s
-                    ? (0, a.jsx)(X.default, {
+                    ? (0, a.jsx)(Q.default, {
                         themeable: u,
                         node: this.getRootNode(),
                         guestWindow: e,
@@ -4235,7 +4262,7 @@
                 { channel: l, chatOpen: s, inCall: i } = this.props;
               return s || (this.popoutOpen && !this.inPopout && i)
                 ? null
-                : (0, a.jsx)(Q.ChatButton, {
+                : (0, a.jsx)(X.ChatButton, {
                     channelId: l.id,
                     className: t,
                     showingClassName: n,
@@ -4389,7 +4416,7 @@
             [n.id]
           ),
           K = (0, o.useStateFromStores)([ea.default], () => ea.default.getId()),
-          { popoutWindow: Z, popoutWindowAlwaysOnTop: Q } = (0,
+          { popoutWindow: Z, popoutWindowAlwaysOnTop: X } = (0,
           o.useStateFromStoresObject)([F.default], () => ({
             popoutWindow: F.default.getWindow(
               eO.PopoutWindowKeys.CHANNEL_CALL_POPOUT
@@ -4398,7 +4425,7 @@
               eO.PopoutWindowKeys.CHANNEL_CALL_POPOUT
             ),
           })),
-          X = (0, o.useStateFromStores)([er.default], () =>
+          Q = (0, o.useStateFromStores)([er.default], () =>
             er.default.can(eO.Permissions.CONNECT, n)
           ),
           q = (0, o.useStateFromStores)([el.default], () =>
@@ -4471,13 +4498,13 @@
                   (0, a.jsx)(ew, {
                     channel: n,
                     guild: W,
-                    hasConnectPermission: X,
+                    hasConnectPermission: Q,
                     participantsOpen: w,
                     renderExternalHeader: s,
                     appContext: E,
                     call: Y,
                     popoutWindow: Z,
-                    popoutWindowAlwaysOnTop: Q,
+                    popoutWindowAlwaysOnTop: X,
                     mentionCount: z,
                     selectedStream: H,
                     mode: b,
@@ -6663,8 +6690,8 @@
         z = n("155832"),
         K = n("353054"),
         Z = n("262956"),
-        Q = n("723431"),
-        X = n("977983"),
+        X = n("723431"),
+        Q = n("977983"),
         q = n("539938"),
         J = n("557809"),
         $ = n("853189"),
@@ -6717,8 +6744,8 @@
         ez = n("624027"),
         eK = n("49111"),
         eZ = n("272505"),
-        eQ = n("99795"),
-        eX = n("994428"),
+        eX = n("99795"),
+        eQ = n("994428"),
         eq = n("237542"),
         eJ = n("837979"),
         e$ = n("782340"),
@@ -7176,7 +7203,7 @@
             (this.renderStreamQualityLiveIndicatorToolbarItem = () => {
               let { selectedParticipant: e } = this.props;
               return (null == e ? void 0 : e.type) !==
-                eQ.ParticipantTypes.STREAM
+                eX.ParticipantTypes.STREAM
                 ? null
                 : (0, a.jsx)(
                     F.default,
@@ -7268,7 +7295,7 @@
                     null != t &&
                       (0, T.canSeeChannelSummaries)(e) &&
                       s.push(
-                        (0, a.jsx)(Q.default, { channel: e }, "summaries")
+                        (0, a.jsx)(X.default, { channel: e }, "summaries")
                       ),
                     s.push(
                       (0, a.jsx)(eC.default, { channel: e }, "threads-overflow")
@@ -7288,14 +7315,14 @@
                     ),
                     (0, T.canSeeChannelSummaries)(e) &&
                       s.push(
-                        (0, a.jsx)(Q.default, { channel: e }, "summaries")
+                        (0, a.jsx)(X.default, { channel: e }, "summaries")
                       );
                   break;
                 case eK.ChannelTypes.GUILD_FORUM:
                 case eK.ChannelTypes.GUILD_MEDIA:
                   !n &&
                     (s.push(
-                      (0, a.jsx)(X.default, { channel: e }, "forum-onboarding")
+                      (0, a.jsx)(Q.default, { channel: e }, "forum-onboarding")
                     ),
                     s.push(
                       (0, a.jsx)(K.default, { channel: e }, "notifications")
@@ -7563,8 +7590,8 @@
           z = Y === eK.FAVORITES,
           K = (0, eB.default)(o),
           Z = (0, eB.default)(o, !0),
-          Q = null != o && u === o.id,
-          X = null != o && o.isGuildStageVoice();
+          X = null != o && u === o.id,
+          Q = null != o && o.isGuildStageVoice();
         l.useEffect(() => {
           var e, t, n;
           let a = (0, eu.getHistory)();
@@ -7592,11 +7619,11 @@
           l.useEffect(() => {
             null != s &&
               null != o &&
-              X &&
+              Q &&
               o.id === s &&
-              !Q &&
+              !X &&
               ((0, em.connectAndOpen)(o), i(null));
-          }, [s, X]);
+          }, [s, Q]);
         let q = (0, T.useChannelSummariesExperiment)(o),
           J = null != o && o.isPrivate(),
           $ = (0, v.default)(J),
@@ -7607,7 +7634,7 @@
           (e || t) &&
             (0, D.markDismissibleContentAsDismissed)(
               h.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP,
-              { dismissAction: eX.ContentDismissActionType.AUTO }
+              { dismissAction: eQ.ContentDismissActionType.AUTO }
             );
         }, [null == o ? void 0 : o.id, ee, J, $]);
         let et = (0, m.useHasAnyModalOpen)();
@@ -7660,7 +7687,7 @@
             () => ({ hasVideo: null != o && eF.default.hasVideo(o.id) }),
             [o]
           ),
-          inCall: Q,
+          inCall: X,
           selectedParticipant: U,
           nsfwAllowed: (null == w ? void 0 : w.nsfwAllowed) === !0,
           showChannelSummaries: q,
@@ -7909,12 +7936,12 @@
                 ],
               });
         });
-      function Q(e) {
+      function X(e) {
         let { index: t } = e,
           n = (0, o.useListItem)("".concat(t));
         return (0, a.jsx)(S.default, { itemProps: n });
       }
-      class X extends l.Component {
+      class Q extends l.Component {
         shouldComponentUpdate(e) {
           return (
             e.channel.id !== this.props.channel.id ||
@@ -8108,7 +8135,7 @@
                   );
               }
               return (0, a.jsx)(
-                Q,
+                X,
                 { index: l },
                 "placeholder-".concat(t, ":").concat(n)
               );
@@ -8288,7 +8315,7 @@
           className: i(G.container, n),
           children: (0, a.jsx)(o.ListNavigatorProvider, {
             navigator: C,
-            children: (0, a.jsx)(X, {
+            children: (0, a.jsx)(Q, {
               ...e,
               ...r,
               version: f,
@@ -14503,7 +14530,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return T;
           },
         }),
         n("424973");
@@ -14513,55 +14540,56 @@
         i = n.n(s),
         r = n("65597"),
         u = n("748802"),
-        o = n("77078"),
-        d = n("412013"),
-        c = n("978970"),
-        f = n("305961"),
-        h = n("465305"),
-        m = n("136281"),
-        p = n("914275"),
-        E = n("789150"),
-        S = n("49111"),
-        g = n("782340"),
-        C = n("206845");
-      function _(e) {
+        o = n("233676"),
+        d = n("77078"),
+        c = n("412013"),
+        f = n("978970"),
+        h = n("305961"),
+        m = n("465305"),
+        p = n("136281"),
+        E = n("914275"),
+        S = n("789150"),
+        g = n("49111"),
+        C = n("782340"),
+        _ = n("206845");
+      function I(e) {
         var t, n;
-        let { permission: l, roleIds: s, guild: u, specMap: h } = e,
-          m = S.Permissions[l],
-          E =
+        let { permission: l, roleIds: s, guild: u, specMap: m } = e,
+          p = g.Permissions[l],
+          S =
             null !==
               (n =
-                null === (t = h[m.toString()]) || void 0 === t
+                null === (t = m[p.toString()]) || void 0 === t
                   ? void 0
                   : t.title) && void 0 !== n
               ? n
-              : (0, c.getPermissionName)(m),
-          _ = p.ELEVATED_PERMISSIONS.has(m),
-          I = (0, r.default)([f.default], () => f.default.getRoles(u.id));
-        return (0, a.jsx)(o.Tooltip, {
+              : (0, f.getPermissionName)(p),
+          I = E.ELEVATED_PERMISSIONS.has(p),
+          T = (0, r.default)([h.default], () => h.default.getRoles(u.id));
+        return (0, a.jsx)(d.Tooltip, {
           "aria-label":
-            g.default.Messages
+            C.default.Messages
               .GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL,
-          tooltipClassName: C.roleTooltipContainer,
-          tooltipContentClassName: C.roleTooltipContentContainer,
+          tooltipClassName: _.roleTooltipContainer,
+          tooltipContentClassName: _.roleTooltipContentContainer,
           allowOverflow: !0,
           text: (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(o.Text, {
+              (0, a.jsx)(d.Text, {
                 variant: "text-sm/normal",
-                children: _
-                  ? g.default.Messages
+                children: I
+                  ? C.default.Messages
                       .GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY
-                  : g.default.Messages
+                  : C.default.Messages
                       .GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY,
               }),
               s.map(e =>
                 (0, a.jsx)(
                   "div",
                   {
-                    className: i(C.roleTooltipItem),
-                    children: (0, a.jsx)(d.default, {
-                      role: I[e],
+                    className: i(_.roleTooltipItem),
+                    children: (0, a.jsx)(c.default, {
+                      role: T[e],
                       guildId: u.id,
                     }),
                   },
@@ -14572,54 +14600,62 @@
           }),
           children: e => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
-            return (0, a.jsx)(o.Clickable, {
-              className: i(C.permissionChiplet, { [C.elevatedPermission]: _ }),
+            return (0, a.jsxs)(d.Clickable, {
+              className: i(_.permissionChiplet, { [_.elevatedPermission]: I }),
               onMouseEnter: t,
               onMouseLeave: n,
-              children: (0, a.jsx)(o.Text, {
-                variant: "text-xs/medium",
-                color: _ ? "text-danger" : "text-normal",
-                children: E,
-              }),
+              children: [
+                I &&
+                  (0, a.jsx)(o.ShieldLockIcon, {
+                    width: 16,
+                    height: 16,
+                    color: d.tokens.colors.TEXT_BRAND,
+                  }),
+                (0, a.jsx)(d.Text, {
+                  variant: "text-xs/medium",
+                  color: "interactive-normal",
+                  children: S,
+                }),
+              ],
             });
           },
         });
       }
-      var I = l.memo(function (e) {
+      var T = l.memo(function (e) {
         let { member: t, onNavigate: n } = e,
-          s = (0, r.default)([f.default], () => f.default.getGuild(t.guildId), [
+          s = (0, r.default)([h.default], () => h.default.getGuild(t.guildId), [
             t.guildId,
           ]),
-          d = (0, p.useUserPermissionsAndRoles)(
+          o = (0, E.useUserPermissionsAndRoles)(
             t.userId,
             t.guildId,
-            p.MOD_PERMISSIONS
+            E.MOD_PERMISSIONS
           ),
-          c = (0, p.useUserPermissionsAndRoles)(
+          c = (0, E.useUserPermissionsAndRoles)(
             t.userId,
             t.guildId,
-            p.ALL_PERMISSIONS
+            E.ALL_PERMISSIONS
           ),
-          I = Object.keys(d).length,
+          f = Object.keys(o).length,
           T = Object.keys(c).length,
           v = l.useMemo(
-            () => (null != s ? h.default.getGuildPermissionSpecMap(s) : null),
+            () => (null != s ? m.default.getGuildPermissionSpecMap(s) : null),
             [s]
           ),
           x = l.useMemo(
-            () => (null != s ? h.default.generateGuildPermissionSpec(s) : null),
+            () => (null != s ? m.default.generateGuildPermissionSpec(s) : null),
             [s]
           ),
           N = l.useMemo(() => {
             if (null == s || null == v) return null;
-            if (0 === I)
+            if (0 === f)
               return (0, a.jsx)("div", {
-                className: i(C.permissionChiplet, C.noModPerms),
-                children: (0, a.jsx)(o.Text, {
+                className: i(_.permissionChiplet, _.noModPerms),
+                children: (0, a.jsx)(d.Text, {
                   variant: "text-sm/normal",
                   color: "text-positive",
                   children:
-                    g.default.Messages
+                    C.default.Messages
                       .GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND,
                 }),
               });
@@ -14629,13 +14665,13 @@
                 x.forEach(t => {
                   t.permissions.forEach(t => {
                     let n = t.flag,
-                      l = p.ALL_PERMISSIONS.find(e => S.Permissions[e] === n);
+                      l = E.ALL_PERMISSIONS.find(e => g.Permissions[e] === n);
                     if (null == l) return;
-                    let i = d[l];
+                    let i = o[l];
                     null != i &&
                       e.push(
                         (0, a.jsx)(
-                          _,
+                          I,
                           { permission: l, roleIds: i, guild: s, specMap: v },
                           l
                         )
@@ -14644,29 +14680,29 @@
                 }),
               e
             );
-          }, [s, I, d, x, v]);
+          }, [s, f, o, x, v]);
         return null == s
           ? null
-          : (0, a.jsx)(o.FormItem, {
+          : (0, a.jsx)(d.FormItem, {
               title: (0, a.jsxs)("div", {
-                className: C.headerContainer,
+                className: _.headerContainer,
                 children: [
-                  (0, a.jsx)(o.Text, {
+                  (0, a.jsx)(d.Text, {
                     variant: "eyebrow",
                     color: "header-secondary",
                     children:
-                      g.default.Messages
+                      C.default.Messages
                         .GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE,
                   }),
-                  (0, a.jsxs)(o.Clickable, {
-                    className: C.viewAllPermissions,
-                    onClick: () => n(E.ModViewPanel.PERMISSIONS),
+                  (0, a.jsxs)(d.Clickable, {
+                    className: _.viewAllPermissions,
+                    onClick: () => n(S.ModViewPanel.PERMISSIONS),
                     children: [
-                      (0, a.jsx)(o.Text, {
+                      (0, a.jsx)(d.Text, {
                         variant: "eyebrow",
                         color: "interactive-normal",
                         children:
-                          g.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format(
+                          C.default.Messages.GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS.format(
                             { count: T }
                           ),
                       }),
@@ -14678,11 +14714,11 @@
                   }),
                 ],
               }),
-              titleClassName: C.infoTitle,
-              children: (0, a.jsx)(m.UserModInfoItemContainer, {
-                children: (0, a.jsx)(m.UserModInfoItem, {
+              titleClassName: _.infoTitle,
+              children: (0, a.jsx)(p.UserModInfoItemContainer, {
+                children: (0, a.jsx)(p.UserModInfoItem, {
                   description: (0, a.jsx)("div", {
-                    className: C.permissionsContainer,
+                    className: _.permissionsContainer,
                     children: N,
                   }),
                 }),
@@ -15231,131 +15267,212 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return A;
+            return O;
           },
         }),
+        n("222007"),
         n("424973");
       var a = n("37983"),
         l = n("884691"),
         s = n("414456"),
         i = n.n(s),
-        r = n("65597"),
-        u = n("77078"),
-        o = n("454273"),
-        d = n("412013"),
-        c = n("592407"),
-        f = n("978970"),
-        h = n("26989"),
-        m = n("305961"),
-        p = n("957255"),
-        E = n("697218"),
-        S = n("465305"),
-        g = n("473073"),
-        C = n("763225"),
-        _ = n("914275"),
-        I = n("49111"),
-        T = n("782340"),
-        v = n("865331"),
-        x = n("680153");
-      function N(e) {
-        var t, n, s, h;
+        r = n("483366"),
+        u = n.n(r),
+        o = n("65597"),
+        d = n("233676"),
+        c = n("77078"),
+        f = n("454273"),
+        h = n("120027"),
+        m = n("412013"),
+        p = n("592407"),
+        E = n("978970"),
+        S = n("26989"),
+        g = n("305961"),
+        C = n("957255"),
+        _ = n("697218"),
+        I = n("810567"),
+        T = n("465305"),
+        v = n("473073"),
+        x = n("763225"),
+        N = n("914275"),
+        A = n("49111"),
+        M = n("782340"),
+        R = n("865331"),
+        j = n("680153");
+      function y(e) {
+        var t, n, s, r;
         let {
-            permission: E,
+            permission: u,
             roleIds: S,
-            guild: g,
-            specMap: C,
-            categoryTitle: v,
+            guild: _,
+            specMap: I,
+            categoryTitle: T,
           } = e,
-          N = (0, r.default)([m.default], () => m.default.getRoles(g.id)),
-          A = I.Permissions[E],
-          M =
+          v = (0, o.default)([g.default], () => g.default.getRoles(_.id)),
+          x = A.Permissions[u],
+          R =
             null !==
               (s =
-                null === (t = C[A.toString()]) || void 0 === t
+                null === (t = I[x.toString()]) || void 0 === t
                   ? void 0
                   : t.title) && void 0 !== s
               ? s
-              : (0, f.getPermissionName)(A),
-          R =
+              : (0, E.getPermissionName)(x),
+          y =
             null !==
-              (h =
-                null === (n = C[A.toString()]) || void 0 === n
+              (r =
+                null === (n = I[x.toString()]) || void 0 === n
                   ? void 0
-                  : n.description) && void 0 !== h
-              ? h
+                  : n.description) && void 0 !== r
+              ? r
               : "",
-          j = _.ELEVATED_PERMISSIONS.has(A),
-          y = S.length,
-          L = (0, r.default)(
-            [p.default],
-            () => p.default.can(I.Permissions.MANAGE_ROLES, g),
-            [g]
+          L = N.ELEVATED_PERMISSIONS.has(x),
+          O = N.MOD_PERMISSIONS.includes(u),
+          P = S.length,
+          D = (0, o.default)(
+            [C.default],
+            () => C.default.can(A.Permissions.MANAGE_ROLES, _),
+            [_]
           ),
-          O = l.useCallback(
+          b = l.useCallback(
             async e => {
-              L &&
-                (await c.default.open(g.id, I.GuildSettingsSections.ROLES),
-                await c.default.selectRole(e));
+              D &&
+                (await p.default.open(_.id, A.GuildSettingsSections.ROLES),
+                await p.default.selectRole(e));
             },
-            [L, g.id]
+            [D, _.id]
           );
         return (0, a.jsxs)("div", {
-          className: i(x.permissionItemContainer, {
-            [x.elevatedPermission]: j,
+          className: i(j.permissionItemContainer, {
+            [j.elevatedPermission]: L,
           }),
           children: [
             (0, a.jsxs)("div", {
-              className: i(x.permissionItemHeader),
+              className: i(j.permissionItemHeader),
               children: [
                 (0, a.jsxs)("div", {
-                  className: x.permissionTitle,
+                  className: j.permissionTitle,
                   children: [
-                    (0, a.jsx)(u.Text, {
+                    (0, a.jsx)(c.Text, {
                       variant: "text-md/medium",
-                      color: j ? "text-danger" : "header-primary",
-                      children: M,
+                      color: "header-primary",
+                      children: R,
                     }),
-                    null != v &&
-                      (0, a.jsx)(u.Text, {
-                        variant: "text-xs/normal",
-                        color: "header-muted",
-                        children: v,
+                    null != T &&
+                      (0, a.jsxs)("div", {
+                        className: j.permissionItemSubheader,
+                        children: [
+                          (0, a.jsx)(c.Text, {
+                            variant: "text-xs/normal",
+                            color: "header-muted",
+                            children: T,
+                          }),
+                          L &&
+                            (0, a.jsxs)(a.Fragment, {
+                              children: [
+                                (0, a.jsx)(h.default, {
+                                  height: 4,
+                                  width: 4,
+                                  "aria-hidden": "true",
+                                  color: c.tokens.colors.INTERACTIVE_MUTED.css,
+                                }),
+                                (0, a.jsx)(c.Tooltip, {
+                                  text: M.default.Messages
+                                    .GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP,
+                                  children: e =>
+                                    (0, a.jsxs)(c.Clickable, {
+                                      className: j.elevatedPermissionContainer,
+                                      ...e,
+                                      children: [
+                                        (0, a.jsx)(d.ShieldLockIcon, {
+                                          width: 12,
+                                          height: 12,
+                                          color: c.tokens.colors.TEXT_BRAND,
+                                        }),
+                                        (0, a.jsx)(c.Text, {
+                                          variant: "text-xs/normal",
+                                          color: "text-brand",
+                                          children:
+                                            M.default.Messages
+                                              .GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION,
+                                        }),
+                                      ],
+                                    }),
+                                }),
+                              ],
+                            }),
+                          !L &&
+                            O &&
+                            (0, a.jsxs)(a.Fragment, {
+                              children: [
+                                (0, a.jsx)(h.default, {
+                                  height: 4,
+                                  width: 4,
+                                  "aria-hidden": "true",
+                                  color: c.tokens.colors.INTERACTIVE_MUTED.css,
+                                }),
+                                (0, a.jsx)("div", {
+                                  className: j.elevatedPermissionContainer,
+                                  children: (0, a.jsx)(c.Text, {
+                                    variant: "text-xs/normal",
+                                    color: "header-muted",
+                                    children:
+                                      M.default.Messages
+                                        .GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION,
+                                  }),
+                                }),
+                              ],
+                            }),
+                        ],
                       }),
                   ],
                 }),
-                (0, a.jsx)(u.Text, {
+                (0, a.jsx)(c.Text, {
                   variant: "text-sm/medium",
                   color: "text-normal",
                   children:
-                    T.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({
-                      roleCount: y,
+                    M.default.Messages.GUILD_MEMBER_MOD_VIEW_ROLE_COUNT.format({
+                      roleCount: P,
                     }),
                 }),
               ],
             }),
-            null != R &&
+            null != y &&
               (0, a.jsx)("div", {
-                className: x.permissionItemDescription,
-                children: (0, a.jsx)(u.Text, {
+                className: j.permissionItemDescription,
+                children: (0, a.jsx)(c.Text, {
                   variant: "text-sm/normal",
                   color: "text-secondary",
-                  children: R,
+                  children: y,
                 }),
               }),
             (0, a.jsx)("div", {
-              className: x.permissionItemRoleContainer,
+              className: j.permissionItemRoleContainer,
               children: S.map(e =>
                 (0, a.jsx)(
-                  u.Clickable,
+                  c.Clickable,
                   {
-                    className: i(x.roleTooltipItem, {
-                      [x.editable]: L && !(0, o.isEveryoneRoleId)(g.id, e),
+                    className: i(j.roleTooltipItem, {
+                      [j.editable]:
+                        D &&
+                        !(0, f.isEveryoneRoleId)(_.id, e) &&
+                        !(0, N.isOwnerRole)(e, _.id),
                     }),
-                    onClick: () => O(e),
-                    children: (0, a.jsx)(d.default, {
-                      role: N[e],
-                      guildId: g.id,
-                    }),
+                    onClick: () => b(e),
+                    children: (0, N.isOwnerRole)(e, _.id)
+                      ? (0, a.jsx)("div", {
+                          className: j.roleChiplet,
+                          children: (0, a.jsx)(c.Text, {
+                            variant: "text-xs/medium",
+                            color: "text-normal",
+                            children: M.default.Messages.GUILD_OWNER,
+                          }),
+                        })
+                      : (0, a.jsx)(m.default, {
+                          role: v[e],
+                          guildId: _.id,
+                          className: j.roleChiplet,
+                        }),
                   },
                   e
                 )
@@ -15364,89 +15481,158 @@
           ],
         });
       }
-      function A(e) {
+      function L(e, t) {
+        return t.toLowerCase().includes(e.toLowerCase());
+      }
+      function O(e) {
         let {
             userId: t,
             guildId: n,
             location: s,
-            className: o,
+            className: r,
             onNavigate: d,
           } = e,
-          c = (0, r.default)([E.default], () => E.default.getUser(t), [t]),
-          f = (0, r.default)([m.default], () => m.default.getGuild(n), [n]),
-          p = (0, r.default)([h.default], () => h.default.getMember(n, t), [
+          f = (0, o.default)([_.default], () => _.default.getUser(t), [t]),
+          h = (0, o.default)([g.default], () => g.default.getGuild(n), [n]),
+          m = (0, o.default)([S.default], () => S.default.getMember(n, t), [
             n,
             t,
           ]),
-          A = (0, C.useProfileThemedPanelBackground)(t, n),
-          M = (0, _.useUserPermissionsAndRoles)(t, n, _.ALL_PERMISSIONS),
-          R = Object.keys(M).length,
-          j = l.useMemo(
-            () => (null != f ? S.default.getGuildPermissionSpecMap(f) : null),
-            [f]
+          p = (0, x.useProfileThemedPanelBackground)(t, n),
+          C = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS),
+          O = Object.keys(C).length,
+          P = l.useMemo(
+            () => (null != h ? T.default.getGuildPermissionSpecMap(h) : null),
+            [h]
           ),
-          y = l.useMemo(
-            () => (null != f ? S.default.generateGuildPermissionSpec(f) : null),
-            [f]
+          D = l.useMemo(
+            () => (null != h ? T.default.generateGuildPermissionSpec(h) : null),
+            [h]
           ),
-          L = l.useMemo(() => {
-            if (null == f || null == j || null == p) return null;
-            if (0 === R)
+          [b, U] = l.useState(""),
+          [w, F] = l.useState(""),
+          V = l.useCallback(u(F, 300), []),
+          k = l.useCallback(
+            e => {
+              U(e), V(e);
+            },
+            [V]
+          ),
+          B = l.useCallback(() => {
+            U(""), F("");
+          }, []),
+          G = l.useMemo(() => {
+            if (null == h || null == P || null == m) return null;
+            if (0 === O)
               return (0, a.jsx)("div", {
-                className: i(x.permissionChiplet, x.noModPerms),
-                children: (0, a.jsx)(u.Text, {
+                className: i(j.permissionChiplet, j.noModPerms),
+                children: (0, a.jsx)(c.Text, {
                   variant: "text-sm/normal",
                   color: "text-positive",
                   children:
-                    T.default.Messages
+                    M.default.Messages
                       .GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND,
                 }),
               });
             let e = [];
             return (
-              null == y ||
-                y.forEach(t => {
+              null == D ||
+                D.forEach(t => {
                   t.permissions.forEach(n => {
                     let l = n.flag,
-                      s = _.ALL_PERMISSIONS.find(e => I.Permissions[e] === l);
+                      s = N.ALL_PERMISSIONS.find(e => A.Permissions[e] === l);
                     if (null == s) return;
-                    let i = M[s];
-                    null != i &&
+                    let i = C[s];
+                    if (null != i) {
+                      if (w.length > 0) {
+                        var r, u, o, d, c;
+                        let e =
+                            null !==
+                              (d =
+                                null === (r = P[l.toString()]) || void 0 === r
+                                  ? void 0
+                                  : r.title) && void 0 !== d
+                              ? d
+                              : (0, E.getPermissionName)(l),
+                          n =
+                            null !==
+                              (c =
+                                null === (o = P[l.toString()]) || void 0 === o
+                                  ? void 0
+                                  : null === (u = o.description) || void 0 === u
+                                    ? void 0
+                                    : u.toString()) && void 0 !== c
+                              ? c
+                              : "",
+                          a = t.title,
+                          i = N.ELEVATED_PERMISSIONS.has(l),
+                          f = N.MOD_PERMISSIONS.includes(s),
+                          h = i
+                            ? M.default.Messages
+                                .GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION
+                            : f
+                              ? M.default.Messages
+                                  .GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION
+                              : null,
+                          m = L(w, e),
+                          p = L(w, n),
+                          S = L(w, a),
+                          g = null != h && L(w, h);
+                        if (!m && !p && !S && !g) return;
+                      }
                       e.push(
                         (0, a.jsx)(
-                          N,
+                          y,
                           {
                             permission: s,
                             roleIds: i,
-                            guild: f,
-                            specMap: j,
+                            guild: h,
+                            specMap: P,
                             categoryTitle: t.title,
                           },
                           s
                         )
                       );
+                    }
                   });
                 }),
               e
             );
-          }, [f, j, p, R, M, y]);
-        return null == c || null == p
+          }, [h, P, m, O, D, C, w]);
+        return null == f || null == m
           ? null
           : (0, a.jsxs)("div", {
-              className: i(v.container, o),
-              style: { backgroundColor: A },
+              className: i(R.container, r),
+              style: { backgroundColor: p },
               children: [
-                (0, a.jsx)(g.default, { guildId: n, userId: t, onNavigate: d }),
-                (0, a.jsx)(u.Scroller, {
-                  className: x.permissionsGroupContainer,
-                  children: (0, a.jsx)(u.FormItem, {
+                (0, a.jsx)(v.default, { guildId: n, userId: t, onNavigate: d }),
+                (0, a.jsx)(c.Scroller, {
+                  className: j.permissionsGroupContainer,
+                  children: (0, a.jsx)(c.FormItem, {
                     title:
-                      T.default.Messages
+                      M.default.Messages
                         .GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE,
-                    titleClassName: x.infoTitle,
-                    children: (0, a.jsx)("div", {
-                      className: x.permissionsItemContainer,
-                      children: L,
+                    titleClassName: j.infoTitle,
+                    children: (0, a.jsxs)("div", {
+                      className: j.permissionsItemContainer,
+                      children: [
+                        (0, a.jsx)(I.default, {
+                          className: j.searchBar,
+                          query: b,
+                          placeholder:
+                            M.default.Messages
+                              .GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
+                          onChange: k,
+                          onClear: B,
+                          autoComplete: "off",
+                          inputProps: {
+                            autoCapitalize: "none",
+                            autoCorrect: "off",
+                            spellCheck: "false",
+                          },
+                        }),
+                        G,
+                      ],
                     }),
                   }),
                 }),
@@ -15462,17 +15648,20 @@
             return f;
           },
           MOD_PERMISSIONS: function () {
-            return h;
-          },
-          ELEVATED_PERMISSIONS: function () {
-            return m;
-          },
-          useUserPermissionsAndRoles: function () {
             return p;
           },
+          ELEVATED_PERMISSIONS: function () {
+            return E;
+          },
+          isOwnerRole: function () {
+            return S;
+          },
+          useUserPermissionsAndRoles: function () {
+            return g;
+          },
         }),
-        n("70102"),
         n("222007"),
+        n("70102"),
         n("424973");
       var a = n("316693"),
         l = n("65597"),
@@ -15486,14 +15675,37 @@
         f = Object.keys(o.Permissions).filter(
           e => !c.includes(o.Permissions[e])
         ),
-        h = d.MODERATOR_PERMISSIONS.map(e => {
+        h = [
+          ...d.MODERATOR_PERMISSIONS,
+          ...o.ElevatedPermissionsList,
+          o.Permissions.ADMINISTRATOR,
+          o.Permissions.KICK_MEMBERS,
+          o.Permissions.BAN_MEMBERS,
+          o.Permissions.MANAGE_GUILD,
+          o.Permissions.MANAGE_CHANNELS,
+          o.Permissions.MANAGE_ROLES,
+          o.Permissions.MANAGE_MESSAGES,
+          o.Permissions.MANAGE_THREADS,
+          o.Permissions.MANAGE_GUILD_EXPRESSIONS,
+          o.Permissions.CREATE_GUILD_EXPRESSIONS,
+          o.Permissions.MANAGE_EVENTS,
+          o.Permissions.CREATE_EVENTS,
+          o.Permissions.MODERATE_MEMBERS,
+          o.Permissions.MENTION_EVERYONE,
+          o.Permissions.MANAGE_WEBHOOKS,
+        ],
+        m = new Set(h),
+        p = Array.from(m).map(e => {
           let t = f.find(t => o.Permissions[t] === e);
           if (null == t)
             throw Error("Permission ".concat(e, " not found in Permissions"));
           return t;
         }),
-        m = new Set(o.ElevatedPermissionsList);
-      function p(e, t, n) {
+        E = new Set(o.ElevatedPermissionsList);
+      function S(e, t) {
+        return e === t;
+      }
+      function g(e, t, n) {
         let d = (0, l.default)([i.default], () => i.default.getGuild(t), [t]);
         return (0, l.default)(
           [s.default, r.default, i.default],
@@ -16804,9 +17016,9 @@
           [z] = _.useName(n),
           [K] = _.useDescription(n),
           [Z] = _.useTrialInterval(n),
-          [Q] = _.useTrialLimit(n),
-          X = (0, T.default)(s, n),
-          q = null != Z && null == R && X,
+          [X] = _.useTrialLimit(n),
+          Q = (0, T.default)(s, n),
+          q = null != Z && null == R && Q,
           J = (0, o.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
           [$, ee] = l.useState(!1),
           et = $ || !J,
@@ -16839,7 +17051,7 @@
                       (0, a.jsx)(u.Tooltip, {
                         clickableOnMobile: !0,
                         text: D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format(
-                          { activeTrialUserLimit: null != Q ? Q : 0 }
+                          { activeTrialUserLimit: null != X ? X : 0 }
                         ),
                         children: e =>
                           (0, a.jsx)(E.default, {
@@ -17491,7 +17703,7 @@
             z = (0, x.getRoleSubscriptionMutationPlanId)(B),
             K = null != z,
             Z = (null == B ? void 0 : B.trialId) != null,
-            { loading: Q, getTrialPurchaseEligibility: X } = (0,
+            { loading: X, getTrialPurchaseEligibility: Q } = (0,
             A.useGetTrialPurchaseEligibility)(),
             q = (0, v.useSubscriptionTrial)(null == e ? void 0 : e.id),
             { analyticsLocations: J } = (0, h.default)(),
@@ -17544,7 +17756,7 @@
                 i(F, "Cannot purchase this unpublished plan"),
                 (null == q ? void 0 : q.active_trial) != null)
               ) {
-                let a = await X(t, e.id, q.active_trial.id);
+                let a = await Q(t, e.id, q.active_trial.id);
                 if ((null == a ? void 0 : a.is_eligible) === !0) {
                   var r;
                   n =
@@ -17611,7 +17823,7 @@
                       }),
                 reviewWarningMessage: l,
               });
-            }, [F, e, U, B, Y, t, J, s, X, q, ee]),
+            }, [F, e, U, B, Y, t, J, s, Q, q, ee]),
             en = l.useCallback(() => {
               (0, m.openMemberVerificationModal)(t);
             }, [t]);
@@ -17619,7 +17831,7 @@
             openModal: P ? en : et,
             canOpenModal: !O && null != k && H && !b && !K && !Z && !$,
             cannotOpenReason: r,
-            isCheckingTrialEligibility: Q,
+            isCheckingTrialEligibility: X,
           };
         };
     },
@@ -18640,8 +18852,8 @@
           Z = (0, r.useStateFromStores)([v.default], () =>
             v.default.getSessionById(u)
           ),
-          Q = R.default.useName(s),
-          X = (0, r.useStateFromStores)(
+          X = R.default.useName(s),
+          Q = (0, r.useStateFromStores)(
             [N.default],
             () => N.default.getVoicePlatformForChannel(i.id, A),
             [i.id, A]
@@ -18674,7 +18886,7 @@
           isShaking: F,
           children: (0, a.jsx)(y.default, {
             ...e,
-            nick: null != _ ? _ : Q,
+            nick: null != _ ? _ : X,
             canDrag: e.canDrag && !V,
             otherClientSessionType:
               null == Z
@@ -18682,7 +18894,7 @@
                 : null === (t = Z.clientInfo) || void 0 === t
                   ? void 0
                   : t.os,
-            voicePlatform: X,
+            voicePlatform: Q,
             localMute: D && !P,
             localVideoDisabled: U,
             mute: n || D,
@@ -20238,8 +20450,8 @@
         z = n("659500"),
         K = n("449008"),
         Z = n("299039"),
-        Q = n("158998"),
-        X = n("993063"),
+        X = n("158998"),
+        Q = n("993063"),
         q = n("849324"),
         J = n("49111"),
         $ = n("782340"),
@@ -20399,7 +20611,7 @@
         createInvite() {
           let { channel: e } = this.props;
           if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
-          let { inviteMaxAgeSeconds: t } = X.default.getCurrentConfig(
+          let { inviteMaxAgeSeconds: t } = Q.default.getCurrentConfig(
             { location: "5326c5_1" },
             { autoTrackExposure: !1 }
           );
@@ -20501,7 +20713,7 @@
           return (
             r.forEach(e => {
               let t = F.default.getUser(e);
-              null != t && u.push(Q.default.getName(t));
+              null != t && u.push(X.default.getName(t));
             }),
             (0, a.jsxs)(V.default, {
               className: i(ee.searchBar, en.marginTop20),
@@ -20767,7 +20979,7 @@
         handleAddFriend(e) {
           this.props.onClose(),
             _.default.sendRequest({
-              discordTag: Q.default.getUserTag(e, { identifiable: "always" }),
+              discordTag: X.default.getUserTag(e, { identifiable: "always" }),
               context: { location: "Group DM" },
             });
         }
@@ -23476,13 +23688,13 @@
             null != e.scrollWidth &&
             Z(e.offsetWidth < e.scrollWidth);
         }, []);
-        let Q = [F, B, V].filter(e => null != e).join(", ");
+        let X = [F, B, V].filter(e => null != e).join(", ");
         return (0, a.jsx)(A.ObscuredDisplayContext.Provider, {
           value: (0, m.default)(U, W),
           children: (0, a.jsxs)("ul", {
             role: "group",
             className: O.searchResultGroup,
-            "aria-label": Q,
+            "aria-label": X,
             children: [
               (0, a.jsx)(i.Clickable, {
                 onClick: () => w(s.id),
@@ -26393,8 +26605,8 @@
         z = n("92447"),
         K = n("96151"),
         Z = n("49111"),
-        Q = n("99795"),
-        X = n("782340"),
+        X = n("99795"),
+        Q = n("782340"),
         q = n("716208");
       let J = "HasBeenInStageChannel",
         $ = (e, t) => () => {
@@ -26434,7 +26646,7 @@
                 D.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS))),
           S =
             null != o &&
-            o.type !== Q.ParticipantTypes.ACTIVITY &&
+            o.type !== X.ParticipantTypes.ACTIVITY &&
             o.user.id !== f,
           g = l.useMemo(() => {
             var e;
@@ -26602,7 +26814,7 @@
             onAllowIdle: () => {},
             onForceIdle: () => {},
             screenMessage: x
-              ? { mainText: X.default.Messages.POPOUT_PLAYER_OPENED }
+              ? { mainText: Q.default.Messages.POPOUT_PLAYER_OPENED }
               : null,
             idle: !1,
             children: !x && t,
@@ -27546,8 +27758,8 @@
         z = n("716214"),
         K = n("619395"),
         Z = n("923510"),
-        Q = n("325861"),
-        X = n("834052"),
+        X = n("325861"),
+        Q = n("834052"),
         q = n("819450"),
         J = n("111542"),
         $ = n("924872"),
@@ -27643,8 +27855,8 @@
           l = (0, d.useAppContext)(),
           { canManageGuildEvent: s } = (0, _.useManageResourcePermissions)(t),
           o = (0, r.useStateFromStores)(
-            [X.default],
-            () => X.default.getStageInstanceByChannel(t.id),
+            [Q.default],
+            () => Q.default.getStageInstanceByChannel(t.id),
             [t.id]
           ),
           c = (0, r.useStateFromStores)([S.default], () =>
@@ -27660,7 +27872,7 @@
           { suppress: h } = (0, x.default)(t),
           m = L.default.getId(),
           [p] = (0, el.default)(t),
-          E = Q.default.isModerator(m, t.id),
+          E = X.default.isModerator(m, t.id),
           g = (0, K.useCanModerateRequestToSpeak)(t.id),
           C = s(c);
         return f
@@ -29407,7 +29619,7 @@
                         }),
                       ],
                     }),
-                    (0, a.jsx)(Q, {
+                    (0, a.jsx)(X, {
                       parentChannel: s,
                       parentMessageId: n,
                       location: l,
@@ -29417,7 +29629,7 @@
               }),
             });
       }
-      function Q(e) {
+      function X(e) {
         let { parentChannel: t, parentMessageId: n, location: s } = e,
           d = (0, r.useStateFromStores)(
             [h.default],
@@ -29607,7 +29819,7 @@
                             error: x,
                           }),
                           t.type === H.ChannelTypes.GUILD_TEXT
-                            ? (0, a.jsx)(X, {
+                            ? (0, a.jsx)(Q, {
                                 startedFromMessage: null != n,
                                 threadSettings: m,
                                 updateThreadSettings: E,
@@ -29638,7 +29850,7 @@
           }),
         });
       }
-      function X(e) {
+      function Q(e) {
         let {
             startedFromMessage: t,
             threadSettings: n,
@@ -30474,6 +30686,79 @@
         });
       }
     },
+    893980: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          trackProfilePanelViewed: function () {
+            return u;
+          },
+          trackProfilePanelToggled: function () {
+            return o;
+          },
+        });
+      var a = n("373469"),
+        l = n("824563"),
+        s = n("27618"),
+        i = n("599110"),
+        r = n("49111");
+      let u = e => {
+          let {
+            displayProfile: t,
+            isMobile: n,
+            loadDurationMs: a,
+            activity: l,
+            customStatusActivity: s,
+            status: u,
+          } = e;
+          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+            has_mobile_indicator: n,
+            has_activity:
+              null != l &&
+              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+            has_game_activity:
+              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+            load_duration_ms: a,
+            profile_user_status: u,
+            has_custom_status: null != s,
+            has_profile_effect: null != t.profileEffectId,
+            ...d(t),
+          });
+        },
+        o = (e, t) => {
+          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+            is_profile_open: t,
+            ...d(e),
+          });
+        },
+        d = e => {
+          var t;
+          if (null == e) return {};
+          let n = e.userId,
+            i = null != a.default.getAnyStreamForUser(n),
+            u = l.default.findActivity(n, e => {
+              let { type: t } = e;
+              return i
+                ? t === r.ActivityTypes.PLAYING
+                : t !== r.ActivityTypes.CUSTOM_STATUS;
+            }),
+            o = null == u ? void 0 : u.assets,
+            d = s.default.isFriend(n);
+          return {
+            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
+            void 0 !== t
+              ? t
+              : null == o
+                ? void 0
+                : o.small_image),
+            is_friend: d,
+            viewed_profile_user_id: n,
+            profile_has_nitro_customization: e.hasPremiumCustomization(),
+            profile_has_theme_color_customized: e.hasThemeColors(),
+            profile_has_theme_animation: null != e.popoutAnimationParticleType,
+          };
+        };
+    },
     69682: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -31044,8 +31329,8 @@
         z = n("491250"),
         K = n("453649"),
         Z = n("849674"),
-        Q = n("817080"),
-        X = n("390413"),
+        X = n("817080"),
+        Q = n("390413"),
         q = n("104649"),
         J = n("80615"),
         $ = n("80531"),
@@ -31217,7 +31502,7 @@
                 : ey.map(e => (0, a.jsx)(q.default, { connection: e }, e.key)),
             eW = ef.map(e =>
               (0, a.jsx)(
-                Q.default,
+                X.default,
                 { channel: n, integration: e },
                 e.application.id
               )
@@ -31230,12 +31515,12 @@
             eZ = (0, o.useStateFromStores)([_.default], () =>
               _.default.getId()
             ),
-            eQ = eo.id === eZ,
-            eX = eo.bot || eQ,
+            eX = eo.id === eZ,
+            eQ = eo.bot || eX,
             { enabled: eq } = (0, j.useProfileMutualsExperiment)({
               autoTrackExposure: !0,
               location: h.default.PROFILE,
-              disable: eX,
+              disable: eQ,
             });
           return eE
             ? (0, a.jsx)("aside", {
@@ -31334,7 +31619,7 @@
                             className: el.profilePanelConnections,
                             children: [
                               eF
-                                ? (0, a.jsx)(X.default, {
+                                ? (0, a.jsx)(Q.default, {
                                     className: el.mutualGuildsList,
                                     header:
                                       ea.default.Messages.MUTUAL_GUILDS_COUNT.format(
@@ -31348,7 +31633,7 @@
                                   })
                                 : null,
                               eV
-                                ? (0, a.jsx)(X.default, {
+                                ? (0, a.jsx)(Q.default, {
                                     className: i(el.mutualFriendsList, {
                                       [el.mutualFriendsDivider]: eF,
                                     }),
@@ -31361,7 +31646,7 @@
                                     loadingContentsCount: ej,
                                     onFocus: eY,
                                     onHover: eY,
-                                    itemType: X.ListType.MutualFriendsList,
+                                    itemType: Q.ListType.MutualFriendsList,
                                     children: eH,
                                   })
                                 : null,
@@ -31373,7 +31658,7 @@
                               el.profilePanelConnections,
                               el.appListThemedContainer
                             ),
-                            children: (0, a.jsxs)(X.default, {
+                            children: (0, a.jsxs)(Q.default, {
                               header:
                                 eW.length > 0
                                   ? ea.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format(
@@ -31383,7 +31668,7 @@
                                       .PRIVATE_CHANNEL_APPS_HEADER,
                               isLoadingContents: !eh,
                               isLoadingHeader: !1,
-                              itemType: X.ListType.AppsList,
+                              itemType: Q.ListType.AppsList,
                               children: [
                                 eW,
                                 ep.length > 0 &&
@@ -32468,8 +32753,8 @@
         z = n("998564"),
         K = n("420145"),
         Z = n("368121"),
-        Q = n("570511"),
-        X = n("491519"),
+        X = n("570511"),
+        Q = n("491519"),
         q = n("395763"),
         J = n("784981"),
         $ = n("729185"),
@@ -32501,7 +32786,7 @@
             selected: z = !1,
             noBorder: K = !1,
             noVideoRender: Z = !1,
-            focused: Q = !1,
+            focused: X = !1,
             blocked: et = !1,
             fit: eo = w.VideoStreamFit.CONTAIN,
             paused: ed = !1,
@@ -32662,8 +32947,8 @@
               : void 0
           );
         l.useEffect(() => {
-          ep(Q);
-        }, [Q]);
+          ep(X);
+        }, [X]);
         let ew = l.useCallback(() => {
             null != eS &&
               m.default.toggleLocalMute(eS, ei.MediaEngineContextTypes.STREAM);
@@ -32699,13 +32984,13 @@
               onVideoResize: W,
               paused: ed,
               inPopout: H,
-              focused: Q,
+              focused: X,
             })),
               (eG = (0, a.jsx)($.StreamTileIndicators, {
                 participant: d,
                 selected: z,
                 width: G,
-                focused: Q,
+                focused: X,
                 idle: eh,
               })),
               (eH = er.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
@@ -32732,7 +33017,7 @@
             break;
           case el.ParticipantTypes.ACTIVITY:
             (eB = (0, a.jsx)(q.default, {
-              interactible: Q,
+              interactible: X,
               participant: d,
               selected: z,
               channel: B,
@@ -32751,7 +33036,7 @@
               onVideoResize: W,
               paused: ed,
               inPopout: H,
-              focused: Q,
+              focused: X,
             });
         }
         let eW = l.useRef(null);
@@ -32845,7 +33130,7 @@
                         : null,
                       d.type !== el.ParticipantTypes.ACTIVITY
                         ? (0, a.jsx)(ec, {
-                            focused: Q,
+                            focused: X,
                             width: G,
                             inCall: Y,
                             participantType: d.type,
@@ -32853,7 +33138,7 @@
                             ...eA,
                             idle: eh,
                             platform: ej,
-                            title: (0, X.default)(B, d),
+                            title: (0, Q.default)(B, d),
                             blocked: et,
                             localVideoDisabled: e_,
                             videoToggleState: eI,
@@ -32875,8 +33160,8 @@
                       Y && !K
                         ? (0, a.jsx)("div", {
                             className: i(eu.border, {
-                              [eu.voiceChannelEffect]: !Q && null != eR,
-                              [eu.speaking]: ev && !Q,
+                              [eu.voiceChannelEffect]: !X && null != eR,
+                              [eu.speaking]: ev && !X,
                             }),
                           })
                         : null,
@@ -32940,7 +33225,7 @@
           W = null,
           z = null,
           K = null,
-          X = (0, et.isVideoCompact)(S),
+          Q = (0, et.isVideoCompact)(S),
           q = (0, et.isNamesCompact)(S),
           J = (0, r.useStateFromStores)(
             [P.default],
@@ -32962,11 +33247,11 @@
                     e.stopPropagation(), null == t || t(), L();
                   },
                   className: i(eu.interactive, eu.toggleMute),
-                  children: (0, a.jsx)(Q.default, {}),
+                  children: (0, a.jsx)(X.default, {}),
                 });
               },
             });
-          else if (l || R !== el.ParticipantTypes.STREAM || !C || X || N) {
+          else if (l || R !== el.ParticipantTypes.STREAM || !C || Q || N) {
             if ($) {
               let e;
               m
@@ -33297,8 +33582,8 @@
         z = n("742683"),
         K = n("576242"),
         Z = n("54727"),
-        Q = n("785344"),
-        X = n("954519"),
+        X = n("785344"),
+        Q = n("954519"),
         q = n("719874"),
         J = n("116439"),
         $ = n("373469"),
@@ -33385,7 +33670,7 @@
             let { onClick: n, ...a } = null != e ? e : { onClick: void 0 },
               l = null != c && !C;
             return null != c
-              ? (0, s.jsx)(X.default, {
+              ? (0, s.jsx)(Q.default, {
                   ...a,
                   centerButton: !0,
                   className: eC.controlButton,
@@ -33535,7 +33820,7 @@
                   onPopoutClick: C.length > 0 ? t : null,
                 });
               case "STREAM":
-                return (0, s.jsx)(X.default, {
+                return (0, s.jsx)(Q.default, {
                   ...i,
                   color: "red",
                   onClick: j,
@@ -33770,7 +34055,7 @@
                     children: (e, t) => {
                       let { onClick: n } = e,
                         { isShown: a } = t;
-                      return (0, s.jsx)(Q.default, {
+                      return (0, s.jsx)(X.default, {
                         centerButton: !0,
                         onPopoutClick: x ? null : n,
                         className: eC.controlButton,
@@ -34708,17 +34993,17 @@
             K && null != k && k.width > 0 && k.height > 0
               ? k.width / k.height
               : I,
-          Q = D <= 2 * T + 144,
-          X = y && !Q,
-          q = (0, u.default)(X),
+          X = D <= 2 * T + 144,
+          Q = y && !X,
+          q = (0, u.default)(Q),
           J = 0;
-        (z || X) && (J += 72), z && !X && (J += 48), X && (J += 0.5 * T + 8);
+        (z || Q) && (J += 72), z && !Q && (J += 48), Q && (J += 0.5 * T + 8);
         let $ = D - 2 * J,
           ee = $ * Z,
           et = Math.floor(Math.min(P, ee) / Z),
           en = D > P / Z + 72 + T + 8,
-          ea = !X && !z;
-        (t = ea ? 40 + Math.max(0, 72 - (D - et) / 2) : X ? -16 : -8),
+          ea = !Q && !z;
+        (t = ea ? 40 + Math.max(0, 72 - (D - et) / 2) : Q ? -16 : -8),
           l.useEffect(() => {
             let e = setTimeout(() => {
               H(!1);
@@ -34728,8 +35013,8 @@
             };
           }, []);
         let el = (0, r.useSpring)({
-            value: X ? 1 : 0,
-            delay: en || !X ? 0 : 100,
+            value: Q ? 1 : 0,
+            delay: en || !Q ? 0 : 100,
             config: { ...r.config.stiff, clamp: !0 },
             onStart: () => Y(!0),
             onChange: () =>
@@ -34742,13 +35027,13 @@
             },
           }),
           es = (0, r.useSpring)({
-            value: X ? 1 : 0,
+            value: Q ? 1 : 0,
             config: { ...r.config.stiff, clamp: !0 },
           }),
           ei = (0, r.useSpring)({
             value: ee,
             config: { ...r.config.stiff, clamp: !0 },
-            immediate: q === X && es.value.idle,
+            immediate: q === Q && es.value.idle,
           }),
           er = (0, r.useSpring)({
             value: t,
@@ -34765,7 +35050,7 @@
           eo = l.useCallback(e => {
             B(e), H(!1);
           }, []),
-          ed = X || O ? [] : (0, p.getPipParticipants)(x, j, V),
+          ed = Q || O ? [] : (0, p.getPipParticipants)(x, j, V),
           { visibleParticipants: ec, participantTileWidth: ef } = (0,
           E.useVisibleParticipants)(P, N);
         return (0, a.jsxs)("div", {
@@ -34816,7 +35101,7 @@
                         }),
                       }),
                     }),
-                    Q ||
+                    X ||
                     b === S.ChannelLayouts.MINIMUM ||
                     b === S.ChannelLayouts.NORMAL
                       ? null
@@ -35488,25 +35773,25 @@
           Z = (0, r.useStateFromStores)([I.default], () =>
             I.default.getChannel(Y.channelId)
           ),
-          Q = (0, r.useStateFromStores)(
+          X = (0, r.useStateFromStores)(
             [C.default],
             () => C.default.getActiveStreamForUser(z.id, Y.guildId),
             [z.id, Y.guildId]
           ),
-          X = (0, r.useStateFromStores)(
+          Q = (0, r.useStateFromStores)(
             [C.default],
             () => C.default.getAllActiveStreams().length > 0
           ),
           q = (0, r.useStateFromStores)([v.default], () =>
             v.default.isFocused()
           ),
-          J = (null == Q ? void 0 : Q.ownerId) === H,
+          J = (null == X ? void 0 : X.ownerId) === H,
           $ = J && !q && !A,
-          ee = null != Q ? (0, m.default)(Q, z, z.id === H, $) : null,
+          ee = null != X ? (0, m.default)(X, z, z.id === H, $) : null,
           et = D < 195;
         if (
           (l.useEffect(() => {
-            !X &&
+            !Q &&
               (null == Z ? void 0 : Z.isGuildStageVoice()) &&
               !J &&
               ((0, d.watchStream)(Y),
@@ -35515,12 +35800,12 @@
           l.useEffect(() => {
             B.info(
               "Stream Tile State - activeStream: "
-                .concat(null != Q, " | selected: ")
+                .concat(null != X, " | selected: ")
                 .concat(n, " | Video: ")
                 .concat(null != G, " | MediaEngine: ")
                 .concat(T.default.supports(F.Features.VIDEO))
             );
-          }, [G, Q, n]),
+          }, [G, X, n]),
           W)
         )
           return (0, a.jsx)(P.default, {
@@ -35529,10 +35814,10 @@
             selected: n,
             isSelfStream: z.id === H,
           });
-        if ((null == Q ? void 0 : Q.state) === U.ApplicationStreamStates.ENDED)
-          return (0, a.jsx)(y.default, { selected: n, stream: Q, width: D });
-        if ((null == Q ? void 0 : Q.state) === U.ApplicationStreamStates.FAILED)
-          return (0, a.jsx)(L.default, { selected: n, stream: Q, width: D });
+        if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.ENDED)
+          return (0, a.jsx)(y.default, { selected: n, stream: X, width: D });
+        if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.FAILED)
+          return (0, a.jsx)(L.default, { selected: n, stream: X, width: D });
         else if (t.type === w.ParticipantTypes.HIDDEN_STREAM)
           return (0, a.jsx)(O.default, {
             selected: n,
@@ -35540,7 +35825,7 @@
             width: D,
           });
         else if (
-          null != Q &&
+          null != X &&
           !n &&
           null != G &&
           T.default.supports(F.Features.VIDEO)
@@ -35590,7 +35875,7 @@
               (0, a.jsx)(p.default, {
                 noText: !0,
                 className: i(k.absoluteFill, {
-                  [k.streamPreviewOpacity]: null == Q,
+                  [k.streamPreviewOpacity]: null == X,
                 }),
                 stream: t.stream,
               }),
@@ -35609,7 +35894,7 @@
                               : V.default.Messages.WATCH_STREAM,
                         }),
                       }),
-                      X
+                      Q
                         ? (0, a.jsx)(M.CallTileCTA, {
                             className: k.addCTA,
                             tooltip:
@@ -35731,11 +36016,11 @@
             I.default.getName(n.getGuildId(), n.id, F) +
             (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""),
           Z = k && (W || H),
-          Q = u < 124 ? R : M,
-          { avatarSrc: X, avatarDecorationSrc: q } = (0, m.default)({
+          X = u < 124 ? R : M,
+          { avatarSrc: Q, avatarDecorationSrc: q } = (0, m.default)({
             user: F,
             guildId: n.guild_id,
-            size: Q,
+            size: X,
             animateOnHover: !Z,
           }),
           J = (0, r.useStateFromStores)([c.default], () =>
@@ -35777,10 +36062,10 @@
               className: i(A.content, { [A.blockedAvatar]: P }),
               children: (0, a.jsx)(C.default, {
                 "aria-label": K,
-                src: X,
+                src: Q,
                 avatarDecoration: q,
                 backgroundSrc: F.getAvatarURL(n.guild_id, 80),
-                size: Q,
+                size: X,
                 pulseSpeakingIndicator: b,
                 speaking: k,
                 userId: F.id,
@@ -37603,7 +37888,7 @@
                 isPremium: k,
               });
           },
-          Q = () => {
+          X = () => {
             (0, A.openEffectsUpsellModal)({
               analytics: {
                 type: O.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
@@ -37612,7 +37897,7 @@
               },
             });
           },
-          X = e => {
+          Q = e => {
             (G.current = e),
               e &&
                 f.default.trackWithMetadata(
@@ -37685,9 +37970,9 @@
                   channel: n,
                   closePopout: p,
                   onSelectEmoji: Z,
-                  onSelectDisabledEmoji: Q,
+                  onSelectDisabledEmoji: X,
                   onFocus: C,
-                  onExpandedToggle: X,
+                  onExpandedToggle: Q,
                   analyticsOverride: w,
                   emojiSearchProps: {
                     accessory: (0, a.jsx)(N.default, {
@@ -41908,6 +42193,43 @@
         });
       };
     },
+    759275: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ShieldLockIcon: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("669491"),
+        s = n("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: i = l.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            fillRule: "evenodd",
+            d: "M4.56 4.22A2.83 2.83 0 0 0 3 6.75v3.03c0 5.6 3.3 10.69 8.42 12.96.37.17.79.17 1.16 0A14.19 14.19 0 0 0 21 9.78V6.75c0-1.07-.6-2.05-1.56-2.53l-6.1-3.05a3 3 0 0 0-2.68 0l-6.1 3.05ZM14 11a2 2 0 0 1-1 1.73v2.77a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-2.77A2 2 0 1 1 14 11Z",
+            clipRule: "evenodd",
+            className: r,
+          }),
+        });
+      };
+    },
     30625: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -42038,4 +42360,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f094ea156d208575ba60.js.map
+//# sourceMappingURL=b1e531b6fe7200955d7d.js.map

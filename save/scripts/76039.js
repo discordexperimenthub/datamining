@@ -19188,6 +19188,8 @@
         GUILD_MEMBER_MOD_VIEW_AUDIT_LOG_SOURCE_USER:
           "Member who initiated this action.",
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_TITLE: "Mod Permissions",
+        GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER:
+          "Search permission names, category, or description...",
         GUILD_MEMBER_MOD_VIEW_VIEW_ALL_PERMISSIONS: "All ({count})",
         GUILD_MEMBER_MOD_VIEW_ROLE_COUNT:
           "{roleCount, plural, =1 {# Role} other {# Roles}}",
@@ -19196,7 +19198,11 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "No Mod Permissions",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Granted By",
         GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Risky) Granted By",
+          "(Elevated) Granted By",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION: "Elevated",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
+        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_TOOLTIP:
+          "Elevated permissions grant higher levels of access to server settings, and should only be granted to highly trusted mods.",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permission Granted By These Roles",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Highest Role",
@@ -26324,8 +26330,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274498", ", Version Hash: ")
-          .concat("375b27e7d4b08c95c174b6f82a207904d395f9ca")
+          .concat("274504", ", Version Hash: ")
+          .concat("478020c679bee8904ed36b5772063146bf938f4d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29427,12 +29433,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274498"), "274498"));
+        let _ = parseInt(((e = "274504"), "274504"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274498"
+                "274504"
               )
             ),
             (_ = 0)),
@@ -51973,4 +51979,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.2af36db91c23c680a3ff.js.map
+//# sourceMappingURL=76039.c7a1a2fb611c447fd3ea.js.map

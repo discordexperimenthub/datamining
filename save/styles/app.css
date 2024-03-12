@@ -32248,7 +32248,7 @@ html .progress__4ef76 {
 .permissionsContainer__90341 {
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 .permissionChiplet__7a040 {
@@ -32256,14 +32256,15 @@ html .progress__4ef76 {
   align-items: center;
   padding: 4px;
   border-radius: 4px;
-  background-color: var(--background-tertiary);
+  background-color: var(--bg-mod-subtle);
   cursor: normal;
+  gap: 4px;
 }
 .noModPerms__93d74 {
   cursor: not-allowed;
 }
 .elevatedPermission_af9178 {
-  background-color: var(--background-modifier-accent);
+  background-color: var(--bg-mod-strong);
 }
 .headerContainer_e95048 {
   display: flex;
@@ -32445,18 +32446,28 @@ html .progress__4ef76 {
   gap: 12px;
   border-radius: 8px;
   background-color: var(--background-secondary);
-  box-shadow: var(--elevation-stroke);
+  box-shadow: none;
 }
 .permissionItemContainer__274fd.elevatedPermission_c4dcb1 {
-  background-color: var(--background-secondary-alt);
-  border: 1px solid var(--background-modifier-accent);
-  box-shadow: none;
+  box-shadow: var(--elevation-stroke);
 }
 .permissionItemHeader__327be {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+}
+.permissionItemSubheader__05325 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.elevatedPermissionContainer_b0e607 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
 }
 .permissionItemDescription__284c1 {
   flex: 1;
@@ -32473,8 +32484,26 @@ html .progress__4ef76 {
   text-overflow: ellipsis;
   vertical-align: top;
 }
+.roleTooltipItem__23787 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .roleTooltipItem__23787.editable_f98c46 {
   cursor: pointer;
+}
+.roleChiplet_b47a73 {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--bg-mod-strong);
+  margin: 0;
+  height: auto;
+}
+.searchBar__38bbb {
+  padding: 8px;
+  background-color: var(--background-secondary);
 }
 .container__8316e {
   display: flex;
@@ -40132,8 +40161,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -110582,4 +110611,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.24cca4f13069f88ddc97.css.map*/
+/*# sourceMappingURL=app.9825ae5b6e8a7c50efeb.css.map*/

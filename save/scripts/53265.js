@@ -798,18 +798,18 @@
           {
             plan: i,
             className: r,
-            paymentSourceId: l,
-            isPrepaidPaymentSource: a = !1,
-            isCustomGift: s = !1,
-            invoicePreview: u = null,
+            isPrepaidPaymentSource: l = !1,
+            isCustomGift: a = !1,
+            invoicePreview: s = null,
+            priceOptions: u,
           } = e,
-          o = (0, M.getPrice)(i.id, !1, !0, { paymentSourceId: l }),
+          o = (0, M.getPrice)(i.id, !1, !0, u),
           I = (0, R.formatPrice)(o.amount, o.currency);
         return (
-          (null == u ? void 0 : u.total) !== void 0 &&
-            (null == u ? void 0 : u.currency) !== void 0 &&
-            (I = (0, R.formatPrice)(u.total, u.currency)),
-          (n = s
+          (null == s ? void 0 : s.total) !== void 0 &&
+            (null == s ? void 0 : s.currency) !== void 0 &&
+            (I = (0, R.formatPrice)(s.total, s.currency)),
+          (n = a
             ? (0, M.getIntervalString)(
                 i.interval,
                 !0,
@@ -819,9 +819,9 @@
                 (0, M.getPremiumType)(i.id)
               )
             : L.default.Messages.BILLING_INVOICE_GIFT_PLAN.format({
-                planName: (0, M.getDisplayName)(i.id, !1, a),
+                planName: (0, M.getDisplayName)(i.id, !1, l),
               })),
-          s
+          a
             ? (0, t.jsxs)("div", {
                 className: r,
                 children: [
@@ -873,4 +873,4 @@
     },
   },
 ]);
-//# sourceMappingURL=53265.14d1de0549b33ca65b38.js.map
+//# sourceMappingURL=53265.4605863e9dd5b0435fe4.js.map

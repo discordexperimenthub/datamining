@@ -3456,12 +3456,12 @@
         }
         if (eE)
           W = (0, r.jsx)(G.SubscriptionInvoiceGift, {
-            paymentSourceId: V.paymentSourceId,
             plan: eA,
             className: H.invoice,
             isPrepaidPaymentSource: ek,
             isCustomGift: eG,
             invoicePreview: eb,
+            priceOptions: V,
           });
         else if (eu && null != eg)
           W = (0, r.jsxs)("div", {
@@ -4750,4 +4750,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8857.7ec405bc4d22574162cd.js.map
+//# sourceMappingURL=8857.c06b32dc2252bd8266f7.js.map

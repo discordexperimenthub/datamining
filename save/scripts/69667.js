@@ -21238,79 +21238,84 @@
       n.r(t),
         n.d(t, {
           useQuests: function () {
-            return f;
+            return _;
           },
           useIsQuestExpired: function () {
-            return T;
-          },
-          useQuestFormattedDate: function () {
             return I;
           },
-          useShouldShowSettingBadgeForQuests: function () {
+          useQuestFormattedDate: function () {
             return m;
           },
-          useDismissNewQuestBadge: function () {
+          useShouldShowSettingBadgeForQuests: function () {
             return N;
+          },
+          useDismissNewQuestBadge: function () {
+            return p;
+          },
+          useIsLoadingChildAssets: function () {
+            return C;
           },
         }),
         n("222007"),
-        n("424973");
+        n("424973"),
+        n("70102");
       var s = n("884691"),
         l = n("862337"),
         a = n("446674"),
         i = n("915639"),
-        r = n("448881"),
-        o = n("374023"),
-        u = n("2973"),
-        d = n("588025"),
-        c = n("227231"),
-        E = n("166604");
-      function f(e) {
+        r = n("286235"),
+        o = n("448881"),
+        u = n("374023"),
+        d = n("2973"),
+        c = n("588025"),
+        E = n("227231"),
+        f = n("166604");
+      function _(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
           [n, l] = s.useState(!1),
-          i = (0, a.useStateFromStoresArray)([u.default], () => [
-            ...u.default.quests.values(),
+          i = (0, a.useStateFromStoresArray)([d.default], () => [
+            ...d.default.quests.values(),
           ]),
-          { isFetchingCurrentQuests: d, lastFetchedCurrentQuests: c } = (0,
-          a.useStateFromStoresObject)([u.default], () => ({
-            isFetchingCurrentQuests: u.default.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: u.default.lastFetchedCurrentQuests,
+          { isFetchingCurrentQuests: r, lastFetchedCurrentQuests: c } = (0,
+          a.useStateFromStoresObject)([d.default], () => ({
+            isFetchingCurrentQuests: d.default.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: d.default.lastFetchedCurrentQuests,
           })),
-          f = (0, o.getIsEligibleForQuests)({
-            location: E.QuestsExperimentLocations.USE_QUESTS,
+          E = (0, u.getIsEligibleForQuests)({
+            location: f.QuestsExperimentLocations.USE_QUESTS,
             autoTrackExposure: !1,
           });
         s.useEffect(() => {
           !0 === t.fetch &&
-            f &&
+            E &&
             !n &&
-            !d &&
+            !r &&
             0 === c &&
-            (l(!0), (0, r.fetchCurrentQuests)());
-        }, [t.fetch, f, n, d, c]);
+            (l(!0), (0, o.fetchCurrentQuests)());
+        }, [t.fetch, E, n, r, c]);
         let _ = s.useMemo(() => {
           let t = null != e ? new Set(e) : null;
           return i.filter(e => null == t || t.has(e.id));
         }, [e, i]);
-        return { quests: _, isFetchingCurrentQuests: d };
+        return { quests: _, isFetchingCurrentQuests: r };
       }
-      function _() {
-        let { quests: e, isFetchingCurrentQuests: t } = f(),
+      function T() {
+        let { quests: e, isFetchingCurrentQuests: t } = _(),
           [n, a] = s.useState(
-            () => new Map(e.map(e => [e.id, (0, c.isQuestExpired)(e)]))
+            () => new Map(e.map(e => [e.id, (0, E.isQuestExpired)(e)]))
           );
         return (
           s.useEffect(() => {
             if (t) return;
             let n = [];
             for (let t of e)
-              if (null != t && !(0, c.isQuestExpired)(t)) {
+              if (null != t && !(0, E.isQuestExpired)(t)) {
                 let e = new l.Timeout(),
                   s = () => {
                     let l = Date.parse(t.config.expiresAt) - Date.now();
                     e.start(l, () => {
-                      (0, c.isQuestExpired)(t)
+                      (0, E.isQuestExpired)(t)
                         ? a(e => new Map(e).set(t.id, !0))
                         : s();
                     }),
@@ -21325,14 +21330,14 @@
           n
         );
       }
-      function T(e) {
-        let t = _();
+      function I(e) {
+        let t = T();
         return s.useMemo(() => {
           var n;
           return null != e && null !== (n = t.get(e.id)) && void 0 !== n && n;
         }, [e, t]);
       }
-      function I(e) {
+      function m(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -21343,20 +21348,20 @@
           [e, t, n]
         );
       }
-      function m() {
-        let { quests: e, isFetchingCurrentQuests: t } = f(void 0, {
+      function N() {
+        let { quests: e, isFetchingCurrentQuests: t } = _(void 0, {
             fetch: !0,
           }),
-          n = _(),
+          n = T(),
           l = s.useMemo(() => {
             let s = [];
             if (t || 0 === e.length) return s;
             for (let t of e) {
               var l;
               if (
-                !(0, c.includesTarget)(
+                !(0, E.includesTarget)(
                   t,
-                  d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                  c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
                 ) ||
                 (null !== (l = n.get(t.id)) && void 0 !== l && l)
               )
@@ -21366,9 +21371,9 @@
                 continue;
               }
               let e = null != t.userStatus.claimedAt,
-                a = (0, c.isDismissed)(
+                a = (0, E.isDismissed)(
                   t.userStatus,
-                  d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                  c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
                 );
               if (!e && !a) {
                 s.push(t.id);
@@ -21379,17 +21384,98 @@
           }, [e, n, t]);
         return l;
       }
-      function N() {
-        let { quests: e } = f(),
-          t = m().length > 0;
+      function p() {
+        let { quests: e } = _(),
+          t = N().length > 0;
         s.useEffect(() => {
           for (let n of e)
             t &&
-              (0, r.dismissQuestContent)(
+              (0, o.dismissQuestContent)(
                 n.id,
-                d.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
+                c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE
               );
         }, [e, t]);
+      }
+      function S(e) {
+        let {
+          assetNodes: t,
+          assetsLoading: n,
+          loadEvent: s,
+          onLoad: l,
+          onError: a,
+          getNodeId: i,
+          isNodeLoaded: o,
+          sentrySource: u,
+        } = e;
+        for (let e = 0; e < t.length; e++) {
+          let d = t[e];
+          if (o(d)) continue;
+          let c = i(d, e);
+          n.add(c),
+            d.addEventListener(s, () => {
+              n.delete(c), l();
+            }),
+            d.addEventListener("error", () => {
+              let e = Error("Could not load quest bar asset: ".concat(c));
+              r.default.captureException(e, { tags: { source: u } }), a();
+            });
+        }
+      }
+      function C(e, t) {
+        let [n, l] = s.useState(!0),
+          [a, i] = s.useState(!1),
+          r = s.useRef(!1);
+        return (
+          s.useLayoutEffect(() => {
+            if (null != e.current && !r.current) {
+              r.current = !0;
+              let a = new Set();
+              function n() {
+                0 === a.size && l(!1);
+              }
+              function s() {
+                i(!0);
+              }
+              S({
+                assetNodes: e.current.querySelectorAll("img"),
+                assetsLoading: a,
+                loadEvent: "load",
+                onLoad: n,
+                onError: s,
+                getNodeId: (e, t) => {
+                  var n;
+                  return null !== (n = e.getAttribute("src")) && void 0 !== n
+                    ? n
+                    : "image-".concat(t);
+                },
+                isNodeLoaded: e => e.complete,
+                sentrySource: t,
+              }),
+                S({
+                  assetNodes: e.current.querySelectorAll("video"),
+                  assetsLoading: a,
+                  loadEvent: "loadeddata",
+                  onLoad: n,
+                  onError: s,
+                  getNodeId: (e, t) => {
+                    var n, s;
+                    return null !==
+                      (s =
+                        null === (n = e.querySelectorAll("source")[0]) ||
+                        void 0 === n
+                          ? void 0
+                          : n.getAttribute("src")) && void 0 !== s
+                      ? s
+                      : "video-".concat(t);
+                  },
+                  isNodeLoaded: e => e.readyState >= 3,
+                  sentrySource: t,
+                }),
+                n();
+            }
+          }),
+          { isLoading: n, hasError: a }
+        );
       }
     },
     315130: function (e, t, n) {
@@ -21545,7 +21631,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return C;
+            return g;
           },
         });
       var s = n("37983");
@@ -21554,29 +21640,32 @@
         a = n.n(l),
         i = n("446674"),
         r = n("77078"),
-        o = n("393414"),
-        u = n("815496"),
-        d = n("448881"),
-        c = n("2973"),
-        E = n("588025"),
-        f = n("227231"),
-        _ = n("315130"),
-        T = n("49111"),
-        I = n("782340"),
-        m = n("199890");
-      let N = (e, t, n) =>
+        o = n("206230"),
+        u = n("393414"),
+        d = n("181114"),
+        c = n("815496"),
+        E = n("448881"),
+        f = n("879364"),
+        _ = n("2973"),
+        T = n("588025"),
+        I = n("227231"),
+        m = n("315130"),
+        N = n("49111"),
+        p = n("782340"),
+        S = n("199890");
+      let C = (e, t, n) =>
           n
-            ? I.default.Messages.QUESTS_SHOW_CODE
+            ? p.default.Messages.QUESTS_SHOW_CODE
             : e || t
-              ? I.default.Messages.QUESTS_CLAIM_REWARD
-              : I.default.Messages.QUESTS_ACCEPT,
-        p = (e, t) =>
+              ? p.default.Messages.QUESTS_CLAIM_REWARD
+              : p.default.Messages.QUESTS_ACCEPT,
+        A = (e, t) =>
           e
-            ? I.default.Messages.QUESTS_COMPLETE_TOOLTIP
+            ? p.default.Messages.QUESTS_COMPLETE_TOOLTIP
             : t
-              ? I.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP
-              : I.default.Messages.QUESTS_ACCEPT_TOOLTIP,
-        S = (e, t) => {
+              ? p.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP
+              : p.default.Messages.QUESTS_ACCEPT_TOOLTIP,
+        h = (e, t) => {
           var l, a, i;
           return (null === (l = e.userStatus) || void 0 === l
             ? void 0
@@ -21589,14 +21678,14 @@
               : i.claimedAt) != null
             ? () => {
                 var l;
-                (0, u.trackQuestContentClicked)(
+                (0, c.trackQuestContentClicked)(
                   e.id,
                   t,
                   (null === (l = e.userStatus) || void 0 === l
                     ? void 0
                     : l.claimedAt) != null
-                    ? u.QuestContentCTA.SHOW_REWARD
-                    : u.QuestContentCTA.CLAIM_REWARD
+                    ? c.QuestContentCTA.SHOW_REWARD
+                    : c.QuestContentCTA.CLAIM_REWARD
                 ),
                   (0, r.openModalLazy)(async () => {
                     let { default: l } = await n
@@ -21606,119 +21695,152 @@
                   });
               }
             : () => {
-                (0, d.enrollInQuest)(e.id, {
+                (0, E.enrollInQuest)(e.id, {
                   questContent: t,
-                  questContentCTA: u.QuestContentCTA.ACCEPT_QUEST,
+                  questContentCTA: c.QuestContentCTA.ACCEPT_QUEST,
                 });
               };
         };
-      var C = e => {
-        var t, n, l;
-        let { quest: u, location: d } = e,
-          C =
-            (null === (t = u.userStatus) || void 0 === t
+      var g = e => {
+        var t, n, l, c;
+        let { quest: E, location: g } = e,
+          M =
+            (null === (t = E.userStatus) || void 0 === t
               ? void 0
               : t.completedAt) != null,
-          A =
-            (null === (n = u.userStatus) || void 0 === n
+          O =
+            (null === (n = E.userStatus) || void 0 === n
               ? void 0
               : n.enrolledAt) != null,
-          h =
-            (null === (l = u.userStatus) || void 0 === l
+          R =
+            (null === (l = E.userStatus) || void 0 === l
               ? void 0
               : l.claimedAt) != null,
-          g = A && !h,
-          M = A ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
-          O = N(C, A, h),
-          R = p(C, A),
-          v = S(u, d),
-          L = A && !C,
-          P = (0, i.useStateFromStores)([c.default], () =>
-            c.default.isEnrolling(u.id)
+          v = O && !R && g !== T.QuestContent.QUESTS_EMBED,
+          L = (0, i.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion
+          ),
+          P = O ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
+          D = C(M, O, R),
+          x = A(M, O),
+          y = h(E, g),
+          U = O && !M,
+          j = (0, f.useQuestFormattedDate)(
+            null === (c = E.userStatus) || void 0 === c
+              ? void 0
+              : c.completedAt,
+            { year: "numeric", month: "long", day: "numeric" }
+          ),
+          b = (0, i.useStateFromStores)([_.default], () =>
+            _.default.isEnrolling(E.id)
           );
         return (0, s.jsxs)("div", {
-          className: a(m.outerContainer, {
-            [m.outerContainerGiftInventory]:
-              d === E.QuestContent.QUEST_INVENTORY_CARD,
-            [m.outerContainerEmbed]: d === E.QuestContent.QUESTS_EMBED,
+          className: a(S.outerContainer, {
+            [S.outerContainerGiftInventory]:
+              g === T.QuestContent.QUEST_INVENTORY_CARD,
+            [S.outerContainerEmbed]: g === T.QuestContent.QUESTS_EMBED,
           }),
           children: [
             (0, s.jsx)("img", {
-              src: (0, f.getRewardAssetUrl)(u.id),
+              src: (0, I.getRewardAssetUrl)(E.id),
               alt: "",
-              className: a(m.questReward, {
-                [m.questRewardGiftInventory]:
-                  d === E.QuestContent.QUEST_INVENTORY_CARD,
-                [m.questRewardEmbed]: d === E.QuestContent.QUESTS_EMBED,
+              className: a(S.questReward, {
+                [S.questRewardGiftInventory]:
+                  g === T.QuestContent.QUEST_INVENTORY_CARD,
+                [S.questRewardEmbed]: g === T.QuestContent.QUESTS_EMBED,
               }),
             }),
             (0, s.jsxs)("div", {
-              className: m.innerContainer,
+              className: S.innerContainer,
               children: [
                 (0, s.jsxs)("div", {
-                  className: m.questCopyCta,
+                  className: S.questCopyCta,
                   children: [
                     (0, s.jsxs)("div", {
                       children: [
                         (0, s.jsx)(r.Text, {
                           variant: "text-lg/medium",
-                          className: m.taskInstructions,
+                          className: S.taskInstructions,
                           children:
-                            I.default.Messages.QUESTS_STREAM_TASK.format({
+                            p.default.Messages.QUESTS_STREAM_TASK.format({
                               minutes:
-                                u.config.streamDurationRequirementMinutes,
-                              gameTitle: u.config.messages.gameTitle,
+                                E.config.streamDurationRequirementMinutes,
+                              gameTitle: E.config.messages.gameTitle,
                             }),
                         }),
-                        (0, s.jsx)(r.Text, {
-                          variant: "text-sm/medium",
-                          color: "text-muted",
-                          children: I.default.Messages.QUEST_REWARD.format({
-                            reward: u.config.messages.rewardNameWithArticle,
-                          }),
-                        }),
+                        M
+                          ? (0, s.jsx)(r.Text, {
+                              variant: "text-sm/medium",
+                              color: "text-muted",
+                              children:
+                                p.default.Messages.QUEST_REWARD_COMPLETED.format(
+                                  {
+                                    reward:
+                                      E.config.messages.rewardNameWithArticle,
+                                    date: j,
+                                  }
+                                ),
+                            })
+                          : (0, s.jsx)(r.Text, {
+                              variant: "text-sm/medium",
+                              color: "text-muted",
+                              children: p.default.Messages.QUEST_REWARD.format({
+                                reward: E.config.messages.rewardNameWithArticle,
+                              }),
+                            }),
                       ],
                     }),
                     (0, s.jsxs)("div", {
-                      className: m.ctaButtonContainer,
+                      className: S.ctaButtonContainer,
                       children: [
-                        d === E.QuestContent.QUESTS_EMBED &&
-                          !A &&
+                        g === T.QuestContent.QUESTS_EMBED &&
+                          !O &&
                           (0, s.jsx)(r.Button, {
-                            wrapperClassName: m.ctaButtonWrapper,
+                            wrapperClassName: S.ctaButtonWrapper,
                             color: r.ButtonColors.PRIMARY,
                             onClick: () => {
-                              (0, o.transitionTo)(
-                                T.Routes.SETTINGS("inventory")
+                              (0, u.transitionTo)(
+                                N.Routes.SETTINGS("inventory")
                               );
                             },
-                            children: I.default.Messages.QUESTS_LEARN_MORE_V2,
+                            children: p.default.Messages.QUESTS_LEARN_MORE_V2,
                           }),
                         (0, s.jsx)(r.Tooltip, {
-                          text: R,
-                          tooltipContentClassName: m.ctaTooltipCopy,
-                          shouldShow: !h,
+                          text: x,
+                          tooltipContentClassName: S.ctaTooltipCopy,
+                          shouldShow: !R,
                           children: e =>
-                            (0, s.jsx)(r.Button, {
-                              ...e,
-                              wrapperClassName: m.ctaButtonWrapper,
-                              color: M,
-                              disabled: L,
-                              submitting: P,
-                              onClick: v,
-                              children: O,
-                            }),
+                            M && !L
+                              ? (0, s.jsx)(d.default, {
+                                  ...e,
+                                  wrapperClassName: S.ctaButtonWrapper,
+                                  color: P,
+                                  disabled: U,
+                                  submitting: b,
+                                  onClick: y,
+                                  children: D,
+                                })
+                              : (0, s.jsx)(r.Button, {
+                                  ...e,
+                                  wrapperClassName: S.ctaButtonWrapper,
+                                  color: P,
+                                  disabled: U,
+                                  submitting: b,
+                                  onClick: y,
+                                  children: D,
+                                }),
                         }),
                       ],
                     }),
                   ],
                 }),
-                g &&
-                  (0, s.jsx)(_.default, {
-                    color: C
+                v &&
+                  (0, s.jsx)(m.default, {
+                    color: M
                       ? r.tokens.colors.TEXT_POSITIVE
                       : r.tokens.colors.BG_BRAND,
-                    quest: u,
+                    quest: E,
                   }),
               ],
             }),
@@ -32141,4 +32263,4 @@
     },
   },
 ]);
-//# sourceMappingURL=41553bb8cd542c9c182a.js.map
+//# sourceMappingURL=955c760db27f5542a380.js.map

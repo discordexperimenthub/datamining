@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "274133",
+                  buildNumber: "274203",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -37224,7 +37224,7 @@
       var j = function () {
         var e, t, n;
         let l = (0, I.useIsEligibleForQuests)({
-            location: R.QuestsExperimentLocations.ACTIVITY_PANEL,
+            location: R.QuestsExperimentLocations.QUESTS_BAR,
             autoTrackExposure: !0,
           }),
           r = (0, d.useStateFromStores)(
@@ -37247,52 +37247,57 @@
           [j, w] = s.useState(!1),
           [k, F] = s.useState(!1),
           [B, H] = s.useState(!1),
-          [V, Y] = s.useState(!0),
-          [W, K] = s.useState(!0),
+          [V, Y] = s.useState(!1),
+          [W, K] = s.useState(!1),
           [z, q] = s.useState(240),
           Q = s.useRef(!1),
           Z = s.useRef(null),
           X = (0, d.useStateFromStores)([f.default], () =>
             f.default.hasLayers()
           ),
-          J =
+          J = s.useRef(null),
+          { isLoading: $, hasError: ee } = (0, S.useIsLoadingChildAssets)(
+            J,
+            R.QuestsExperimentLocations.QUESTS_BAR
+          ),
+          et =
             (null == o
               ? void 0
               : null === (e = o.userStatus) || void 0 === e
                 ? void 0
                 : e.enrolledAt) != null,
-          $ = s.useRef(J),
-          ee =
+          en = s.useRef(et),
+          ea =
             (null == o
               ? void 0
               : null === (t = o.userStatus) || void 0 === t
                 ? void 0
                 : t.completedAt) != null,
-          et =
+          es =
             (null == o
               ? void 0
               : null === (n = o.userStatus) || void 0 === n
                 ? void 0
                 : n.claimedAt) != null,
-          en =
+          el =
             (null == o ? void 0 : o.userStatus) != null &&
             (0, T.isDismissed)(
               null == o ? void 0 : o.userStatus,
               p.QuestContent.QUEST_BAR
             ),
-          ea = s.useMemo(() => {
+          ei = s.useMemo(() => {
             if (null == o) return null;
             let e = (0, _.hexToRgb)(o.config.colors.primary);
             return [G(e.r) / 255, G(e.g) / 255, G(e.b) / 255];
           }, [o]),
-          es = s.useMemo(() => {
+          er = s.useMemo(() => {
             if (null == o) return null;
             let e = (0, _.hexToRgb)(o.config.colors.primary),
               t = { r: e.r / 255, g: e.g / 255, b: e.b / 255 };
             return M.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
           }, [o]),
-          el = (0, S.useIsQuestExpired)(o),
-          ei = s.useCallback(() => {
+          eo = (0, S.useIsQuestExpired)(o),
+          eu = s.useCallback(() => {
             var e, t;
             q(
               (null !==
@@ -37305,16 +37310,16 @@
             ),
               H(!0);
           }, []),
-          er = s.useCallback(() => {
+          ed = s.useCallback(() => {
             w(!0);
           }, []),
-          eo = s.useCallback(() => {
-            w(!1), !b.current && !ee && H(!1);
-          }, [ee]),
-          eu = s.useCallback(() => {
+          ec = s.useCallback(() => {
+            w(!1), !b.current && !ea && H(!1);
+          }, [ea]),
+          ef = s.useCallback(() => {
             w(!1), H(!1), (b.current = !1);
           }, []),
-          ed = s.useCallback(
+          eE = s.useCallback(
             function () {
               let e =
                   arguments.length > 0 && void 0 !== arguments[0]
@@ -37324,27 +37329,27 @@
               window.clearTimeout(D.current),
                 (Q.current = !0),
                 F(!1),
-                t ? (y.current = window.setTimeout(ei, 125)) : ei();
+                t ? (y.current = window.setTimeout(eu, 125)) : eu();
             },
-            [ei]
+            [eu]
           ),
-          ec = s.useCallback(() => {
-            if ((window.clearTimeout(y.current), !ee))
+          eh = s.useCallback(() => {
+            if ((window.clearTimeout(y.current), !ea))
               !j &&
                 (D.current = window.setTimeout(() => {
                   !b.current && H(!1);
                 }, 200));
-          }, [j, ee]),
-          ef = s.useCallback(() => {
+          }, [j, ea]),
+          e_ = s.useCallback(() => {
             null != o &&
               (0, C.trackQuestEvent)(o.id, O.AnalyticEvents.QUEST_HOVER),
               (b.current = !0),
-              ed({ withDelay: !0 });
-          }, [ed, o]),
-          eE = s.useCallback(() => {
-            (b.current = !1), ec();
-          }, [ec]),
-          eh = s.useCallback(() => {
+              eE({ withDelay: !0 });
+          }, [eE, o]),
+          eC = s.useCallback(() => {
+            (b.current = !1), eh();
+          }, [eh]),
+          eI = s.useCallback(() => {
             Q.current = !0;
           }, []);
         s.useEffect(() => {
@@ -37357,23 +37362,23 @@
           };
         }, []),
           s.useLayoutEffect(() => {
-            ee && ei();
-          }, [ee, ei]),
+            ea && eu();
+          }, [ea, eu]),
           s.useLayoutEffect(() => {
-            J && !$.current && b.current && ei();
-          }, [J, ei]),
+            et && !en.current && b.current && eu();
+          }, [et, eu]),
           s.useLayoutEffect(() => {
-            !ee && J && !$.current && !b.current && H(!1);
-          }, [J, ee]);
-        let e_ = l && !en && !et && null != o && !el,
-          eC = s.useRef(e_);
+            !ea && et && !en.current && !b.current && H(!1);
+          }, [et, ea]);
+        let eS = !$ && l && !el && !es && null != o && !eo,
+          em = s.useRef(eS);
         s.useLayoutEffect(() => {
-          e_ !== eC.current && K(!1), (eC.current = e_);
-        }, [e_]),
+          eS !== em.current && K(!1), (em.current = eS);
+        }, [eS]),
           s.useEffect(() => {
-            $.current = J;
-          }, [J]);
-        let { expansionSpring: eI } = (0, u.useSpring)({
+            en.current = et;
+          }, [et]);
+        let { expansionSpring: ep } = (0, u.useSpring)({
             from: { expansionSpring: B ? 0 : 1 },
             to: { expansionSpring: B ? 1 : 0 },
             config: { tension: 300, friction: 30, clamp: !0 },
@@ -37385,9 +37390,9 @@
               Y(!1);
             },
           }),
-          { visibilitySpring: eS } = (0, u.useSpring)({
+          { visibilitySpring: eT } = (0, u.useSpring)({
             from: { visibilitySpring: 0 },
-            to: { visibilitySpring: e_ ? 1 : 0 },
+            to: { visibilitySpring: eS ? 1 : 0 },
             config: { tension: 250, friction: 10, clamp: !0 },
             immediate: r,
             onRest: () => {
@@ -37397,59 +37402,61 @@
               K(!1);
             },
           });
-        return l && null != o && (e_ || !W)
-          ? (0, a.jsx)(g.QuestContentImpressionTracker, {
+        return !l || null == o || (!eS && W) || ee
+          ? null
+          : (0, a.jsx)(g.QuestContentImpressionTracker, {
               questId: o.id,
               questContent: p.QuestContent.QUEST_BAR,
-              overrideVisibility: !X,
+              overrideVisibility: !X && !!eS,
               children: () =>
                 (0, a.jsxs)(u.animated.div, {
-                  className: i(v.wrapper, { [v.wrapperVisible]: e_ && W }),
+                  ref: J,
+                  className: i(v.wrapper, { [v.wrapperVisible]: eS && W }),
                   style: {
                     color: o.config.colors.secondary,
-                    height: eS.to({
+                    height: eT.to({
                       range: [0, 1],
-                      output: [0, ee && B ? z : 40],
+                      output: [0, ea && B ? z : 40],
                     }),
                   },
                   children: [
                     (0, a.jsxs)(u.animated.div, {
-                      onMouseLeave: eE,
-                      onMouseEnter: ef,
-                      onFocus: () => ed(),
-                      onBlur: ec,
+                      onMouseLeave: eC,
+                      onMouseEnter: e_,
+                      onFocus: () => eE(),
+                      onBlur: eh,
                       className: i(v.contentWrapper, {
                         [v.contentWrapperExpanded]: B,
-                        [v.contentWrapperAccepted]: J,
+                        [v.contentWrapperAccepted]: et,
                       }),
                       style: {
-                        backgroundImage: J
+                        backgroundImage: et
                           ? "linear-gradient(90deg, "
                               .concat(o.config.colors.primary, ", ")
                               .concat(o.config.colors.secondary, ")")
                           : void 0,
-                        height: eI.to({
+                        height: ep.to({
                           range: [0, 1],
-                          output: [40, J ? z : 240],
+                          output: [40, et ? z : 240],
                         }),
-                        transform: eS
+                        transform: eT
                           .to({ range: [0, 1], output: [100, 0] })
                           .to(e => "translateY(".concat(e, "%)")),
                       },
                       children: [
                         (0, a.jsx)(A.default, {
                           className: v.content,
-                          expansionSpring: eI,
+                          expansionSpring: ep,
                           isExpanded: B,
                           isExpansionAnimationComplete: V,
                           quest: o,
                         }),
                         (0, a.jsx)(N.default, {
                           className: v.content,
-                          onCtxMenuOpen: er,
-                          onCtxMenuClose: eo,
-                          onCtxMenuSelect: eu,
-                          expansionSpring: eI,
+                          onCtxMenuOpen: ed,
+                          onCtxMenuClose: ec,
+                          onCtxMenuSelect: ef,
+                          expansionSpring: ep,
                           isExpanded: B,
                           isExpansionAnimationComplete: V,
                           quest: o,
@@ -37458,13 +37465,13 @@
                         }),
                       ],
                     }),
-                    null != es &&
-                      !J &&
+                    null != er &&
+                      !et &&
                       (!B || (B && !V)) &&
                       (0, a.jsx)("div", {
                         className: v.lottieAnimationBackgroundWrapper,
                         children: (0, a.jsx)(h.default, {
-                          importData: () => x(o.id, es),
+                          importData: () => x(o.id, er),
                           shouldAnimate: P,
                           className: i(
                             v.lottieAnimation,
@@ -37473,10 +37480,12 @@
                           loop: !0,
                         }),
                       }),
-                    !J &&
-                      null != ea &&
+                    eS &&
+                      W &&
+                      !et &&
+                      null != ei &&
                       (0, a.jsx)(h.default, {
-                        importData: () => U(o.id, ea),
+                        importData: () => U(o.id, ei),
                         shouldAnimate: k,
                         className: i(
                           v.lottieAnimation,
@@ -37484,15 +37493,14 @@
                           { [v.lottieAnimationForegroundHidden]: !k }
                         ),
                         loop: !1,
-                        onComplete: eh,
+                        onComplete: eI,
                         autoplay: k,
                       }),
-                    !J &&
+                    !et &&
                       (0, a.jsx)("div", { className: v.backgroundFallback }),
                   ],
                 }),
-            })
-          : null;
+            });
       };
     },
     919354: function (e, t, n) {
@@ -37843,28 +37851,26 @@
                   (0, a.jsx)("div", {
                     className: N.heroAssetWrapper,
                     style: { color: y.config.colors.primary },
-                    children: (0, a.jsx)(
-                      c.default,
-                      {
-                        autoPlay: !x,
-                        loop: !0,
-                        muted: !0,
-                        playsInline: !0,
-                        className: N.heroAsset,
-                        controls: !1,
-                        poster: (0, I.getQuestBarStaticHeroAssetUrl)(y.id),
-                        children:
-                          x || !j
-                            ? null
-                            : (0, a.jsx)("source", {
-                                src: (0, I.getQuestBarAnimatedHeroAssetUrl)(
-                                  y.id
-                                ),
-                                type: "video/webm",
-                              }),
-                      },
-                      x ? "static" : "animated"
-                    ),
+                    children:
+                      x || !j
+                        ? (0, a.jsx)("img", {
+                            alt: "",
+                            className: N.heroAsset,
+                            src: (0, I.getQuestBarStaticHeroAssetUrl)(y.id),
+                          })
+                        : (0, a.jsx)(c.default, {
+                            autoPlay: !0,
+                            loop: !0,
+                            muted: !0,
+                            playsInline: !0,
+                            className: N.heroAsset,
+                            controls: !1,
+                            poster: (0, I.getQuestBarStaticHeroAssetUrl)(y.id),
+                            children: (0, a.jsx)("source", {
+                              src: (0, I.getQuestBarAnimatedHeroAssetUrl)(y.id),
+                              type: "video/webm",
+                            }),
+                          }),
                   }),
                 ],
               }),
@@ -52791,4 +52797,4 @@
     },
   },
 ]);
-//# sourceMappingURL=582929be38d3766fd0cb.js.map
+//# sourceMappingURL=d72c15b744b1c6c79dd2.js.map

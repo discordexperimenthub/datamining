@@ -5999,7 +5999,7 @@
           "\nAo ativar esta op\xe7\xe3o, as configura\xe7\xf5es de apar\xeancia acima ser\xe3o alteradas em todos os clientes, incluindo no computador e navegador.\n  ",
         SETTINGS_TITLE_NEW_LAYOUT: "Novo layout",
         NEW_LAYOUT_TOGGLE_TEXT: "Mostrar novo layout",
-        NEW_LAYOUT_FEEDBACK_TEXT: "Dar coment\xe1rios",
+        NEW_LAYOUT_FEEDBACK_TEXT: "Nos envie feedback",
         NEW_LAYOUT_LEARN_MORE: "Saiba Mais",
         NETWORK_ERROR_CLOUDFLARE_INTERMITTENT:
           "Pode ter havido uma breve interrup\xe7\xe3o no servi\xe7o da CloudFlare; tente novamente.",
@@ -7695,7 +7695,7 @@
         FEEDBACK_DESCRIBE_ISSUE: "Descreva seu problema",
         FEEDBACK_NEED_MORE_HELP:
           "Precisa de ajuda com um problema? [Abra um pedido de ajuda com nossa equipe de experi\xeancia do consumidor.]({helpdeskURL})",
-        SUMMARIES_FEEDBACK_MENU_ITEM_LABEL: "Fazer coment\xe1rios",
+        SUMMARIES_FEEDBACK_MENU_ITEM_LABEL: "Enviar feedback",
         SUMMARIES_FEEDBACK_HEADER: "Como estava o resumo?",
         SUMMARIES_FEEDBACK_BODY:
           "Conte para n\xf3s sobre a qualidade do resumo.",
@@ -22143,7 +22143,7 @@
           "Fogo. Vento. \xc1gua. Terra. Qual voc\xea vai liberar?",
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Novos estilos",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "O Senpai definitivamente vai notar voc\xea.",
+          "Senpai certamente te notar\xe1 agora.",
         COLLECTIBLES_NEW_BADGE: "NOVO",
         INVENTORY_EMOJI_DETAILS_V2: "Ver os detalhes do emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:

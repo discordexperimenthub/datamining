@@ -24289,6 +24289,7 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Uh oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
+        QUEST_REWARD_COMPLETED: "You unlocked {reward} on {date}",
         QUESTS_REWARD_CODE_HEADER: "Your reward code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
@@ -26314,8 +26315,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274133", ", Version Hash: ")
-          .concat("53abd5f318ea07cd449fc09a827e74dc2ce683a0")
+          .concat("274203", ", Version Hash: ")
+          .concat("c4cda81593427b784fcd7112fe3a4d3ab26196c3")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29417,12 +29418,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274133"), "274133"));
+        let _ = parseInt(((e = "274203"), "274203"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274133"
+                "274203"
               )
             ),
             (_ = 0)),
@@ -35069,108 +35070,102 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return C;
+            return L;
           },
         });
-      var t = E("37983"),
-        o = E("884691"),
-        n = E("66007"),
-        r = E("800619"),
-        a = E("459334"),
-        i = E("151426"),
-        I = E("669491"),
-        s = E("77078"),
-        T = E("79112"),
-        S = E("10641"),
-        N = E("447845"),
-        O = E("809094"),
-        A = E("108250"),
-        R = E("49111"),
-        l = E("994428"),
-        u = E("782340"),
-        L = E("543178");
-      function C() {
-        let { allowOpeningLootboxes: e } = N.default.useExperiment({
+      var t = E("37983");
+      E("884691");
+      var o = E("66007"),
+        n = E("800619"),
+        r = E("459334"),
+        a = E("151426"),
+        i = E("669491"),
+        I = E("77078"),
+        s = E("79112"),
+        T = E("10641"),
+        S = E("447845"),
+        N = E("809094"),
+        O = E("108250"),
+        A = E("49111"),
+        R = E("994428"),
+        l = E("782340"),
+        u = E("543178");
+      function L() {
+        let { allowOpeningLootboxes: e } = S.default.useExperiment({
             location: "lootbox_entrypoint",
           }),
-          _ = !(0, S.useIsDismissibleContentDismissed)(
-            i.DismissibleContent.LOOTBOXES_ENTRYPOINT
+          _ = !(0, T.useIsDismissibleContentDismissed)(
+            a.DismissibleContent.LOOTBOXES_ENTRYPOINT
           ),
           E = e => {
-            (0, S.markDismissibleContentAsDismissed)(
-              i.DismissibleContent.LOOTBOXES_ENTRYPOINT,
+            (0, T.markDismissibleContentAsDismissed)(
+              a.DismissibleContent.LOOTBOXES_ENTRYPOINT,
               { dismissAction: e }
             );
           };
-        return (o.useEffect(() => {
-          e &&
-            (0, S.requestMarkDismissibleContentAsShown)(
-              i.DismissibleContent.LOOTBOXES_ENTRYPOINT
-            );
-        }, [e]),
-        e && _)
+        return e && _
           ? (0, t.jsxs)("div", {
-              className: L.wrapper,
+              className: u.wrapper,
               children: [
-                (0, t.jsxs)(s.Clickable, {
-                  className: L.closeButton,
-                  onClick: () => E(l.ContentDismissActionType.DISMISS),
+                (0, t.jsxs)(I.Clickable, {
+                  className: u.closeButton,
+                  onClick: () => E(R.ContentDismissActionType.DISMISS),
                   children: [
-                    (0, t.jsx)(r.CloseSmallIcon, {
-                      className: L.closeIcon,
-                      color: I.default.colors.WHITE,
+                    (0, t.jsx)(n.CloseSmallIcon, {
+                      className: u.closeIcon,
+                      color: i.default.colors.WHITE,
                     }),
-                    (0, t.jsx)(a.Text, {
+                    (0, t.jsx)(r.Text, {
                       variant: "text-xs/bold",
                       color: "always-white",
-                      children: u.default.Messages.PACKAGES_ENTRYPOINT_CLOSE,
+                      children: l.default.Messages.PACKAGES_ENTRYPOINT_CLOSE,
                     }),
                   ],
                 }),
-                (0, t.jsxs)(s.Clickable, {
-                  className: L.entrypoint,
+                (0, t.jsxs)(I.Clickable, {
+                  className: u.entrypoint,
                   onClick: () => {
-                    E(l.ContentDismissActionType.PRIMARY),
-                      T.default.open(R.UserSettingsSections.LOOTBOXES);
+                    E(R.ContentDismissActionType.PRIMARY),
+                      s.default.open(A.UserSettingsSections.LOOTBOXES);
                   },
                   children: [
                     (0, t.jsx)("div", {
-                      className: L.backgroundWrapper,
-                      children: (0, t.jsx)(A.default, {
-                        className: L.backgroundImage,
+                      className: u.backgroundWrapper,
+                      children: (0, t.jsx)(O.default, {
+                        className: u.backgroundImage,
                         pageMultiplier: 5,
                       }),
                     }),
-                    (0, t.jsx)(O.default, {
-                      className: L.image,
-                      color: I.default.colors.POLLS_NORMAL_FILL_HOVER,
+                    (0, t.jsx)(N.default, {
+                      className: u.image,
+                      color: i.default.colors.POLLS_NORMAL_FILL_HOVER,
                       width: 70,
                       height: 70,
                     }),
                     (0, t.jsxs)("div", {
-                      className: L.body,
+                      className: u.body,
                       children: [
-                        (0, t.jsx)(a.Text, {
+                        (0, t.jsx)(r.Text, {
                           variant: "text-md/bold",
                           color: "always-white",
                           children:
-                            u.default.Messages.PACKAGES_ENTRYPOINT_TITLE,
+                            l.default.Messages.PACKAGES_ENTRYPOINT_TITLE,
                         }),
-                        (0, t.jsx)(a.Text, {
+                        (0, t.jsx)(r.Text, {
                           variant: "text-sm/medium",
                           color: "always-white",
                           children:
-                            u.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION,
+                            l.default.Messages.PACKAGES_ENTRYPOINT_DESCRIPTION,
                         }),
                       ],
                     }),
                     (0, t.jsx)("div", {
-                      className: L.buttonWrapper,
+                      className: u.buttonWrapper,
                       children: (0, t.jsx)("div", {
-                        className: L.iconButton,
-                        children: (0, t.jsx)(n.ArrowLargeRightIcon, {
-                          className: L.buttonIcon,
-                          color: I.default.colors.WHITE,
+                        className: u.iconButton,
+                        children: (0, t.jsx)(o.ArrowLargeRightIcon, {
+                          className: u.buttonIcon,
+                          color: i.default.colors.WHITE,
                         }),
                       }),
                     }),
@@ -51969,4 +51964,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.d76ccca3e0dbc599f37e.js.map
+//# sourceMappingURL=76039.933256b3830f25e0d749.js.map

@@ -8797,6 +8797,51 @@
         );
       }
     },
+    626346: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return o;
+          },
+        });
+      var a = n("358977"),
+        l = n("446674"),
+        s = n("824563"),
+        i = n("476774"),
+        r = n("49111");
+      let u = [];
+      function o(e) {
+        return (0, l.useStateFromStoresArray)(
+          [s.default],
+          () =>
+            null == e
+              ? u
+              : e.filter(e => {
+                  if ((0, i.isEntryExpired)(e)) return !1;
+                  if (
+                    (0, i.isEntryActive)(e) &&
+                    e.author_type === a.ContentInventoryAuthorType.USER
+                  ) {
+                    let t = s.default.getActivities(e.author_id),
+                      n = t.find(t => {
+                        var n;
+                        return (
+                          t.type === r.ActivityTypes.PLAYING &&
+                          t.application_id ===
+                            (null === (n = e.extra) || void 0 === n
+                              ? void 0
+                              : n.application_id)
+                        );
+                      });
+                    return null != n;
+                  }
+                  return !0;
+                }),
+          [e]
+        );
+      }
+    },
     447313: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -9798,15 +9843,16 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return u;
           },
         }),
         n("222007");
       var a = n("884691"),
         l = n("446674"),
         s = n("265596"),
-        i = n("843719");
-      function r(e) {
+        i = n("843719"),
+        r = n("626346");
+      function u(e) {
         let t = (0, l.useStateFromStores)([s.default], () =>
             s.default.getFeed(e)
           ),
@@ -9814,7 +9860,7 @@
             () => (null == t ? void 0 : t.entries.map(e => e.content)),
             [t]
           );
-        return (n = (0, i.default)(n));
+        return (n = (0, i.default)(n)), (n = (0, r.default)(n));
       }
     },
     476774: function (e, t, n) {
@@ -9832,6 +9878,9 @@
           },
           isEntryNew: function () {
             return h;
+          },
+          isEntryExpired: function () {
+            return m;
           },
         });
       var a = n("866227"),
@@ -9909,6 +9958,9 @@
           e => e.type === s.ContentInventoryTraitType.FIRST_TIME
         );
         return null != t && t.first_time;
+      }
+      function m(e) {
+        return null != e.expires_at && new Date(e.expires_at) < new Date();
       }
     },
     71102: function (e, t, n) {
@@ -42017,6 +42069,19 @@
         });
       };
     },
+    358977: function (e, t, n) {
+      "use strict";
+      var a, l;
+      n.r(t),
+        n.d(t, {
+          ContentInventoryAuthorType: function () {
+            return a;
+          },
+        }),
+        ((l = a || (a = {}))[(l.AUTHOR_TYPE_UNSPECIFIED = 0)] =
+          "AUTHOR_TYPE_UNSPECIFIED"),
+        (l[(l.USER = 1)] = "USER");
+    },
     901803: function (e, t, n) {
       "use strict";
       var a, l;
@@ -42048,4 +42113,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1af834e6a29d0b80ea5d.js.map
+//# sourceMappingURL=21b356b357b9fe603e90.js.map

@@ -93,15 +93,23 @@
         if (null == s) return null;
         let a = s.query.iframe_url;
         if (null == a || Array.isArray(a) || null == u(a)) return null;
-        let { width: d, height: c } = r;
-        return (0, n.jsx)("iframe", {
-          className: i(o.embedAmazonMusic, t),
-          src: a,
-          style: { width: Math.min(d, 500), height: Math.min(c, 400) },
-          frameBorder: 0,
-          sandbox:
-            "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
-        });
+        let { width: d, height: c } = r,
+          m = d,
+          h = c;
+        return (
+          (d > 500 || c > 400) &&
+            (d > c
+              ? ((m = 500), (h = (500 * c) / d))
+              : ((m = (400 * d) / c), (h = 400))),
+          (0, n.jsx)("iframe", {
+            className: i(o.embedAmazonMusic, t),
+            src: a,
+            style: { width: m, height: h },
+            frameBorder: 0,
+            sandbox:
+              "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
+          })
+        );
       }
     },
     560176: function (e, t, l) {
@@ -1473,4 +1481,4 @@
     },
   },
 ]);
-//# sourceMappingURL=103361cbccff64f1039f.js.map
+//# sourceMappingURL=020258538b955405915b.js.map

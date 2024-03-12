@@ -10,8 +10,8 @@
           },
         }),
         n("424973");
-      var a = n("446873"),
-        r = n("728983"),
+      var r = n("446873"),
+        a = n("728983"),
         i = n("884691"),
         c = n("634849"),
         o = "hcaptcha-api-script-id",
@@ -22,12 +22,12 @@
           var t = (0, c.getMountElement)(e.scriptLocation);
           delete e.scriptLocation;
           var n = (0, c.getFrame)(t),
-            a = p.find(function (e) {
+            r = p.find(function (e) {
               return e.scope === n.window;
             });
-          if (n.document.getElementById(o) && a) return a.promise;
-          var r = new Promise(function (a, r) {
-            n.window[s] = a;
+          if (n.document.getElementById(o) && r) return r.promise;
+          var a = new Promise(function (r, a) {
+            n.window[s] = r;
             var i = e.apihost || "https://js.hcaptcha.com";
             delete e.apihost;
             var p = n.document.createElement("script");
@@ -36,31 +36,31 @@
               (p.async = void 0 === e.loadAsync || e.loadAsync),
               delete e.loadAsync,
               (p.onerror = function (e) {
-                return r("script-error");
+                return a("script-error");
               });
             var d = (0, c.generateQuery)(e);
             (p.src += "" !== d ? "&" + d : ""), t.appendChild(p);
           });
-          return p.push({ promise: r, scope: n.window }), r;
+          return p.push({ promise: a, scope: n.window }), a;
         },
         l = (function (e) {
           function t(t) {
             var n;
             return (
               ((n = e.call(this, t) || this)._hcaptcha = void 0),
-              (n.renderCaptcha = n.renderCaptcha.bind((0, a.default)(n))),
-              (n.resetCaptcha = n.resetCaptcha.bind((0, a.default)(n))),
-              (n.removeCaptcha = n.removeCaptcha.bind((0, a.default)(n))),
-              (n.isReady = n.isReady.bind((0, a.default)(n))),
-              (n.loadCaptcha = n.loadCaptcha.bind((0, a.default)(n))),
-              (n.handleOnLoad = n.handleOnLoad.bind((0, a.default)(n))),
-              (n.handleSubmit = n.handleSubmit.bind((0, a.default)(n))),
-              (n.handleExpire = n.handleExpire.bind((0, a.default)(n))),
-              (n.handleError = n.handleError.bind((0, a.default)(n))),
-              (n.handleOpen = n.handleOpen.bind((0, a.default)(n))),
-              (n.handleClose = n.handleClose.bind((0, a.default)(n))),
+              (n.renderCaptcha = n.renderCaptcha.bind((0, r.default)(n))),
+              (n.resetCaptcha = n.resetCaptcha.bind((0, r.default)(n))),
+              (n.removeCaptcha = n.removeCaptcha.bind((0, r.default)(n))),
+              (n.isReady = n.isReady.bind((0, r.default)(n))),
+              (n.loadCaptcha = n.loadCaptcha.bind((0, r.default)(n))),
+              (n.handleOnLoad = n.handleOnLoad.bind((0, r.default)(n))),
+              (n.handleSubmit = n.handleSubmit.bind((0, r.default)(n))),
+              (n.handleExpire = n.handleExpire.bind((0, r.default)(n))),
+              (n.handleError = n.handleError.bind((0, r.default)(n))),
+              (n.handleOpen = n.handleOpen.bind((0, r.default)(n))),
+              (n.handleClose = n.handleClose.bind((0, r.default)(n))),
               (n.handleChallengeExpired = n.handleChallengeExpired.bind(
-                (0, a.default)(n)
+                (0, r.default)(n)
               )),
               (n.ref = i.createRef()),
               (n.apiScriptRequested = !1),
@@ -73,7 +73,7 @@
               n
             );
           }
-          (0, r.default)(t, e);
+          (0, a.default)(t, e);
           var n = t.prototype;
           return (
             (n.componentDidMount = function () {
@@ -124,8 +124,8 @@
                 var e = this.props,
                   t = e.apihost,
                   n = e.assethost,
-                  a = e.endpoint,
-                  r = e.host,
+                  r = e.endpoint,
+                  a = e.host,
                   i = e.imghost,
                   c = e.languageOverride,
                   o = e.reCaptchaCompat,
@@ -137,9 +137,9 @@
                 d({
                   apihost: t,
                   assethost: n,
-                  endpoint: a,
+                  endpoint: r,
                   hl: c,
-                  host: r,
+                  host: a,
                   imghost: i,
                   recaptchacompat: !1 === o ? "off" : null,
                   reportapi: s,
@@ -204,12 +204,12 @@
             (n.handleSubmit = function (e) {
               var t = this.props.onVerify,
                 n = this.state,
-                a = n.isRemoved,
-                r = n.captchaId,
+                r = n.isRemoved,
+                a = n.captchaId,
                 i = this._hcaptcha;
-              if (void 0 !== i && !a) {
-                var c = i.getResponse(r),
-                  o = i.getRespKey(r);
+              if (void 0 !== i && !r) {
+                var c = i.getResponse(a),
+                  o = i.getRespKey(a);
                 t && t(c, o);
               }
             }),
@@ -222,8 +222,8 @@
             (n.handleError = function (e) {
               var t = this.props.onError,
                 n = this.state.captchaId,
-                a = this._hcaptcha;
-              this.isReady() && a.reset(n), t && t(e);
+                r = this._hcaptcha;
+              this.isReady() && r.reset(n), t && t(e);
             }),
             (n.isReady = function () {
               var e = this.state,
@@ -271,7 +271,7 @@
     },
     634849: function (e, t, n) {
       "use strict";
-      function a(e) {
+      function r(e) {
         return Object.entries(e)
           .filter(function (e) {
             e[0];
@@ -285,7 +285,7 @@
           })
           .join("&");
       }
-      function r(e) {
+      function a(e) {
         var t = (e && e.ownerDocument) || document,
           n = t.defaultView || t.parentWindow || window;
         return { document: t, window: n };
@@ -296,10 +296,10 @@
       n.r(t),
         n.d(t, {
           generateQuery: function () {
-            return a;
+            return r;
           },
           getFrame: function () {
-            return r;
+            return a;
           },
           getMountElement: function () {
             return i;
@@ -316,8 +316,8 @@
         }),
         n("808653"),
         n("70102");
-      var a = n("884691"),
-        r = n.n(a);
+      var r = n("884691"),
+        a = n.n(r);
       function i(e, t) {
         return (i =
           Object.setPrototypeOf ||
@@ -336,10 +336,10 @@
         s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
         p = (function (e) {
           function t() {
-            for (var t, n = arguments.length, a = Array(n), i = 0; i < n; i++)
-              a[i] = arguments[i];
+            for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++)
+              r[i] = arguments[i];
             return (
-              ((t = e.call.apply(e, [this].concat(a)) || this).container =
+              ((t = e.call.apply(e, [this].concat(r)) || this).container =
                 void 0),
               (t.timer = void 0),
               (t.state = {
@@ -367,10 +367,10 @@
               (t._prepare = function () {
                 var e = t.props,
                   n = e.explicit,
-                  a = e.onLoad;
+                  r = e.onLoad;
                 window.grecaptcha.ready(function () {
                   t.setState({ ready: !0 }, function () {
-                    n || t.renderExplicitly(), a && a();
+                    n || t.renderExplicitly(), r && r();
                   });
                 });
               }),
@@ -421,7 +421,7 @@
                     return n(
                       Error("Recaptcha is not ready for rendering yet.")
                     );
-                  var a = t._renderRecaptcha(t.container, {
+                  var r = t._renderRecaptcha(t.container, {
                     sitekey: t.props.sitekey,
                     theme: t.props.theme,
                     size: t.props.size,
@@ -433,7 +433,7 @@
                     isolated: t.state.invisible ? t.props.isolated : void 0,
                     hl: t.state.invisible ? void 0 : t.props.hl,
                   });
-                  t.setState({ instanceId: a, rendered: !0 }, function () {
+                  t.setState({ instanceId: r, rendered: !0 }, function () {
                     t.props.onRender && t.props.onRender(), e();
                   });
                 });
@@ -463,7 +463,7 @@
                 });
               }),
               (t.render = function () {
-                var e = r.createElement("div", {
+                var e = a.createElement("div", {
                   key: t.state.instanceKey,
                   id: t.props.id,
                   className: t.props.className,
@@ -494,8 +494,8 @@
             }),
             (t.prototype.componentDidUpdate = function (e) {
               var t = this;
-              s.reduce(function (n, a) {
-                return t.props[a] !== e[a] ? [].concat(n, [a]) : n;
+              s.reduce(function (n, r) {
+                return t.props[r] !== e[r] ? [].concat(n, [r]) : n;
               }, []).length > 0 &&
                 this.setState(
                   { instanceKey: Date.now(), rendered: !1 },
@@ -506,7 +506,7 @@
             }),
             t
           );
-        })(a.Component);
+        })(r.Component);
       p.defaultProps = {
         id: "",
         className: "g-recaptcha",
@@ -526,7 +526,7 @@
     },
     446873: function (e, t, n) {
       "use strict";
-      function a(e) {
+      function r(e) {
         if (void 0 === e)
           throw ReferenceError(
             "this hasn't been initialised - super() hasn't been called"
@@ -536,7 +536,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return a;
+            return r;
           },
         }),
         n("854508"),
@@ -544,7 +544,7 @@
     },
     507445: function (e, t, n) {
       "use strict";
-      var a, r;
+      var r, a;
       function i(e) {
         return {
           captchaService: e.captcha_service,
@@ -555,15 +555,15 @@
       n.r(t),
         n.d(t, {
           CaptchaError: function () {
-            return a;
+            return r;
           },
           extractCaptchaPropsFromResponseBody: function () {
             return i;
           },
         }),
-        ((r = a || (a = {})).CANCEL = "cancel"),
-        (r.ERROR = "error"),
-        (r.EXPIRED = "expired");
+        ((a = r || (r = {})).CANCEL = "cancel"),
+        (a.ERROR = "error"),
+        (a.EXPIRED = "expired");
     },
     158945: function (e, t, n) {
       "use strict";
@@ -573,27 +573,27 @@
             return o;
           },
         });
-      var a = n("884691"),
-        r = n("599110"),
+      var r = n("884691"),
+        a = n("599110"),
         i = n("507445"),
         c = n("49111");
       function o(e) {
-        let t = a.useRef(!0);
+        let t = r.useRef(!0);
         return (
-          a.useEffect(
+          r.useEffect(
             () => () => {
               t.current && (null == e || e(i.CaptchaError.CANCEL));
             },
             []
           ),
-          a.useEffect(
+          r.useEffect(
             () => (
-              r.default.track(c.AnalyticEvents.OPEN_MODAL, {
+              a.default.track(c.AnalyticEvents.OPEN_MODAL, {
                 type: "Guild Join Captcha",
               }),
               () => {
                 t.current &&
-                  r.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
+                  a.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
                     type: "Guild Join Captcha",
                   });
               }
@@ -615,8 +615,8 @@
           },
         }),
         n("222007");
-      var a = n("37983"),
-        r = n("884691"),
+      var r = n("37983"),
+        a = n("884691"),
         i = n("77078"),
         c = n("421963"),
         o = n("659500"),
@@ -641,40 +641,40 @@
             ...C
           } = e,
           R = (0, s.default)(f);
-        return (r.useEffect(() => {
+        return (a.useEffect(() => {
           o.ComponentDispatch.subscribe(
             p.ComponentActions.LAYER_POP_ESCAPE_KEY,
             t
           );
         }, [t]),
         null != v && h.has(v))
-          ? (0, a.jsx)(i.ModalRoot, {
+          ? (0, r.jsx)(i.ModalRoot, {
               transitionState: v,
               "aria-label": "CAPTCHA",
               className: l.modal,
-              children: (0, a.jsxs)(i.ModalContent, {
+              children: (0, r.jsxs)(i.ModalContent, {
                 className: l.container,
                 children: [
-                  (0, a.jsx)(i.ModalCloseButton, {
+                  (0, r.jsx)(i.ModalCloseButton, {
                     className: l.close,
                     onClick: t,
                   }),
-                  (0, a.jsx)("div", {
+                  (0, r.jsx)("div", {
                     className: l.content,
                     children:
                       v !== i.ModalTransitionState.ENTERED
-                        ? (0, a.jsx)(i.Spinner, {
+                        ? (0, r.jsx)(i.Spinner, {
                             type: i.Spinner.Type.SPINNING_CIRCLE,
                           })
-                        : (0, a.jsxs)(a.Fragment, {
+                        : (0, r.jsxs)(r.Fragment, {
                             children: [
-                              (0, a.jsx)("div", {
-                                children: (0, a.jsx)("img", {
+                              (0, r.jsx)("div", {
+                                children: (0, r.jsx)("img", {
                                   src: u,
                                   alt: "",
                                 }),
                               }),
-                              (0, a.jsx)("div", {
+                              (0, r.jsx)("div", {
                                 className: l.title,
                                 "aria-hidden": !0,
                                 children:
@@ -682,16 +682,16 @@
                                     ? m
                                     : d.default.Messages.GENERIC_CAPTCHA_HEADER,
                               }),
-                              (0, a.jsx)("div", {
+                              (0, r.jsx)("div", {
                                 children:
                                   null != y
                                     ? y
                                     : d.default.Messages
                                         .GENERIC_CAPTCHA_DESCRIPTION,
                               }),
-                              (0, a.jsx)("div", {
+                              (0, r.jsx)("div", {
                                 className: l.captchaContainer,
-                                children: (0, a.jsx)(c.default, {
+                                children: (0, r.jsx)(c.default, {
                                   onVerify: e => {
                                     R(), n(e, E), t();
                                   },
@@ -716,8 +716,8 @@
           },
         }),
         n("222007");
-      var a = n("37983"),
-        r = n("884691"),
+      var r = n("37983"),
+        a = n("884691"),
         i = n("128981"),
         c = n("67164"),
         o = n("748820"),
@@ -739,10 +739,10 @@
               onChalExpired: C,
               ...R
             } = e,
-            b = r.useRef(null),
+            b = a.useRef(null),
             _ = (0, o.v4)(),
-            [x, g] = r.useState(!1),
-            w = r.useCallback(
+            [x, g] = a.useState(!1),
+            w = a.useCallback(
               e => {
                 l.default.track(u.AnalyticEvents.CAPTCHA_EVENT, {
                   captcha_event_name: e,
@@ -753,7 +753,7 @@
               },
               [_, t, n]
             ),
-            A = r.useCallback(
+            A = a.useCallback(
               e => {
                 d.default.increment({
                   name: s.MetricEvents.CAPTCHA_EVENT,
@@ -762,70 +762,70 @@
               },
               [t]
             ),
-            k = r.useCallback(() => {
-              !x && (w("initial-load"), A("initial-load"), g(!0));
-            }, [A, x, w]),
-            I = r.useCallback(() => {
-              if (x && null != h && "" !== h) {
+            k = a.useCallback(() => {
+              if (null != h && "" !== h && null != b.current) {
                 var e;
                 null === (e = b.current) ||
                   void 0 === e ||
                   e.setData({ rqdata: h });
               }
-            }, [x, h, b]);
-          r.useEffect(() => {
-            I();
-          }, [I]),
-            r.useEffect(() => {
-              k();
-            }, [k]);
-          let S = r.useCallback(() => {
-              w("error"), A("error"), I(), null == m || m();
-            }, [w, A, I, m]),
-            T = r.useCallback(
+            }, [h, b]),
+            I = a.useCallback(() => {
+              !x && (w("initial-load"), A("initial-load"), g(!0)), k();
+            }, [A, x, w, k]);
+          a.useEffect(() => {
+            k();
+          }, [k]),
+            a.useEffect(() => {
+              I();
+            }, [I]);
+          let S = a.useCallback(() => {
+              w("error"), A("error"), k(), null == m || m();
+            }, [w, A, k, m]),
+            T = a.useCallback(
               e => {
                 w("verify"), A("verify"), v(e);
               },
               [A, v, w]
             ),
-            j = r.useCallback(() => {
+            j = a.useCallback(() => {
               w("render"), null == f || f();
             }, [f, w]),
-            O = r.useCallback(() => {
+            O = a.useCallback(() => {
               w("open"), A("open"), null == y || y();
             }, [A, y, w]),
-            P = r.useCallback(() => {
-              w("close"), I(), null == E || E();
-            }, [E, w, I]),
-            N = r.useCallback(() => {
+            P = a.useCallback(() => {
+              w("close"), k(), null == E || E();
+            }, [E, w, k]),
+            N = a.useCallback(() => {
               w("chal-expire"), null == C || C();
             }, [C, w]);
           return ((null == n || "" === n) && (n = u.RECAPTCHA_SITE_KEY),
           t === p.CaptchaTypes.RECAPTCHA)
-            ? (0, a.jsx)(c.default, {
+            ? (0, r.jsx)(c.default, {
                 ...R,
-                onLoad: k,
+                onLoad: I,
                 onRender: j,
                 onVerify: T,
                 onError: S,
                 sitekey: n,
               })
             : t === p.CaptchaTypes.HCAPTCHA
-              ? (0, a.jsx)(i.default, {
+              ? (0, r.jsx)(i.default, {
                   ref: b,
                   ...R,
                   sitekey: n,
-                  onLoad: k,
+                  onLoad: I,
                   onError: S,
                   onVerify: T,
                   onChalExpired: N,
                   onOpen: O,
                   onClose: P,
                 })
-              : (0, a.jsx)(c.default, {
+              : (0, r.jsx)(c.default, {
                   ...R,
                   sitekey: n,
-                  onLoad: k,
+                  onLoad: I,
                   onRender: j,
                   onVerify: T,
                   onError: S,
@@ -834,4 +834,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f457039f50ab50e13858.js.map
+//# sourceMappingURL=30a0ef8d3bfa6fc3b5b5.js.map

@@ -24827,6 +24827,14 @@
         SCOPE_DM_SELF: "Send you direct messages",
         MFA_REQUIRED_FOR_STAFF:
           "Multi-factor authentication is required for staff.",
+        INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_HEADER:
+          "Contact Crisis Text Line",
+        INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_DESCRIPTION:
+          "Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741.",
+        INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_ALT:
+          "Illustration of floating phone surrounded by various abstract health info bubbles",
+        INAPPROPRIATE_CONVERSATION_SEND_A_TEXT: "Send a text",
+        INAPPROPRIATE_CONVERSATION_CHAT_ON_THE_WEB: "Chat on the web",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_1:
           "Add Inappropriate Tier 1 Warning (Experimental)",
         INAPPROPRIATE_CONVERSATION_MARK_AS_TIER_2:
@@ -26315,8 +26323,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274311", ", Version Hash: ")
-          .concat("4878bc6a7b470d4a9a15a762305b744fd3c45df1")
+          .concat("274322", ", Version Hash: ")
+          .concat("cf1ac149e9da57b5c9da13479b23d5899e5fea1d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29418,12 +29426,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274311"), "274311"));
+        let _ = parseInt(((e = "274322"), "274322"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274311"
+                "274322"
               )
             ),
             (_ = 0)),
@@ -51964,4 +51972,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.953a74fb3006801fffff.js.map
+//# sourceMappingURL=76039.62daa0dcb65f3ab79761.js.map

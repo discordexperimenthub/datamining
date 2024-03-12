@@ -6,16 +6,16 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return i;
+            return l;
           },
         });
-      var l = n("913144"),
-        i = {
+      var i = n("913144"),
+        l = {
           startTyping(e) {
-            l.default.dispatch({ type: "TYPING_START_LOCAL", channelId: e });
+            i.default.dispatch({ type: "TYPING_START_LOCAL", channelId: e });
           },
           stopTyping(e) {
-            l.default.dispatch({ type: "TYPING_STOP_LOCAL", channelId: e });
+            i.default.dispatch({ type: "TYPING_STOP_LOCAL", channelId: e });
           },
         };
     },
@@ -27,13 +27,13 @@
             return u;
           },
         });
-      var l = n("884691"),
-        i = n("599110");
-      let u = () => l.useContext(i.AnalyticsContext);
+      var i = n("884691"),
+        l = n("599110");
+      let u = () => i.useContext(l.AnalyticsContext);
     },
     837707: function (e, t, n) {
       "use strict";
-      function l(e) {
+      function i(e) {
         if (null != e) {
           if ("activitySessionId" in e) return e.activitySessionId;
           if ("instanceId" in e) return e.instanceId;
@@ -43,7 +43,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return i;
           },
         });
     },
@@ -61,12 +61,12 @@
             return c;
           },
         });
-      var l = n("446674"),
-        i = n("26989"),
+      var i = n("446674"),
+        l = n("26989"),
         u = n("697218"),
         r = n("509");
       function a(e) {
-        let t = (0, l.useStateFromStores)([u.default], () =>
+        let t = (0, i.useStateFromStores)([u.default], () =>
           u.default.getCurrentUser()
         );
         return s(null == t ? void 0 : t.id, e);
@@ -85,15 +85,15 @@
         ];
       }
       function s(e, t) {
-        let n = (0, l.useStateFromStores)(
-          [i.default],
-          () => o(e, t, i.default),
+        let n = (0, i.useStateFromStores)(
+          [l.default],
+          () => o(e, t, l.default),
           [t, e]
         );
         return d(n);
       }
       function c(e, t) {
-        let n = o(e, t, i.default);
+        let n = o(e, t, l.default);
         return d(n);
       }
     },
@@ -108,9 +108,9 @@
             return a;
           },
         });
-      var l = n("812204"),
-        i = n("862205");
-      let u = (0, i.createExperiment)({
+      var i = n("812204"),
+        l = n("862205");
+      let u = (0, l.createExperiment)({
           kind: "guild",
           id: "2023-08_guild_member_mod_view",
           label: "Guild Member Mod View",
@@ -123,12 +123,12 @@
           let {
               autoTrackExposure: t = !1,
               disable: n = !1,
-              location: i = l.default.GUILD_MEMBER_MOD_VIEW,
+              location: l = i.default.GUILD_MEMBER_MOD_VIEW,
             } = arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : {},
             { enabled: r } = u.getCurrentConfig(
-              { guildId: e, location: i },
+              { guildId: e, location: l },
               { autoTrackExposure: t, disable: n }
             );
           return r;
@@ -137,12 +137,12 @@
           let {
               autoTrackExposure: t = !1,
               disable: n = !1,
-              location: i = l.default.GUILD_MEMBER_MOD_VIEW,
+              location: l = i.default.GUILD_MEMBER_MOD_VIEW,
             } = arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : {},
             { enabled: r } = u.useExperiment(
-              { guildId: null != e ? e : void 0, location: i },
+              { guildId: null != e ? e : void 0, location: l },
               { autoTrackExposure: t, disable: n }
             );
           return r;
@@ -160,8 +160,8 @@
           },
         }),
         n("222007");
-      var l = n("316693"),
-        i = n("446674"),
+      var i = n("316693"),
+        l = n("446674"),
         u = n("305961"),
         r = n("697218"),
         a = n("991170"),
@@ -173,11 +173,11 @@
               ? arguments[1]
               : [u.default, r.default];
           if (null == e) return !1;
-          let [n, i] = t,
+          let [n, l] = t,
             o = n.getGuild(e);
           if (null == o) return !1;
-          let s = i.getCurrentUser(),
-            c = l.default.hasAny(
+          let s = l.getCurrentUser(),
+            c = i.default.hasAny(
               a.default.computePermissions({
                 user: s,
                 context: o,
@@ -192,28 +192,28 @@
               arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 ? arguments[2] : void 0;
           if (null == e) return !1;
-          let l = s(e),
-            i = (0, o.isInGuildMemberModViewExperiment)(e, {
+          let i = s(e),
+            l = (0, o.isInGuildMemberModViewExperiment)(e, {
               autoTrackExposure: t,
-              disable: !l,
+              disable: !i,
               location: n,
             });
-          return l && i;
+          return i && l;
         };
       function f(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           n = arguments.length > 2 ? arguments[2] : void 0,
-          l = (0, i.useStateFromStores)(
+          i = (0, l.useStateFromStores)(
             [u.default, r.default],
             () => s(e, [u.default, r.default]),
             [e]
           ),
           a = (0, o.useGuildMemberModViewExperiment)(e, {
             autoTrackExposure: t,
-            disable: !l,
+            disable: !i,
             location: n,
           });
-        return l && a;
+        return i && a;
       }
     },
     130037: function (e, t, n) {
@@ -236,14 +236,14 @@
             return r;
           },
           useTrackModerationAction: function () {
-            return T;
+            return h;
           },
           trackMembersPageViewed: function () {
-            return C;
+            return T;
           },
         });
-      var l,
-        i,
+      var i,
+        l,
         u,
         r,
         a = n("884691"),
@@ -253,14 +253,14 @@
         c = n("599110"),
         f = n("49111");
       function E(e, t, n) {
-        var l;
-        let i = {
+        var i;
+        let l = {
           ...t,
           ...(0, d.collectGuildAnalyticsMetadata)(
-            null !== (l = t.guild_id) && void 0 !== l ? l : n
+            null !== (i = t.guild_id) && void 0 !== i ? i : n
           ),
         };
-        c.default.track(e, i);
+        c.default.track(e, l);
       }
       function _(e) {
         let t = a.useCallback(
@@ -290,10 +290,10 @@
         );
         return t;
       }
-      ((l = u || (u = {})).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity"),
-        (l.COMMUNICATION_DISABLED = "communication_disabled"),
-        (l.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity"),
-        (l.USERNAME_QUARANTINED = "username_quarantined");
+      ((i = u || (u = {})).UNUSUAL_DM_ACTIVITY = "unusual_dm_activity"),
+        (i.COMMUNICATION_DISABLED = "communication_disabled"),
+        (i.UNUSUAL_ACCOUNT_ACTIVITY = "unusual_account_activity"),
+        (i.USERNAME_QUARANTINED = "username_quarantined");
       function M(e) {
         let t = a.useCallback(
           t => {
@@ -310,8 +310,8 @@
         );
         return t;
       }
-      function T(e, t) {
-        let { location: n, targetUserId: l, targets: i, locations: u } = t,
+      function h(e, t) {
+        let { location: n, targetUserId: i, targets: l, locations: u } = t,
           r = a.useCallback(
             t => {
               let r = {
@@ -320,57 +320,57 @@
                 guild_id: e,
                 location: n,
                 locations: u,
-                target_user_id: null != l ? l : void 0,
-                targets: null != i ? i : void 0,
+                target_user_id: null != i ? i : void 0,
+                targets: null != l ? l : void 0,
               };
               E(f.AnalyticEvents.MODERATION_ACTION, r);
             },
-            [e, n, l, i, u]
+            [e, n, i, l, u]
           );
         return r;
       }
-      function C(e, t) {
+      function T(e, t) {
         E(f.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
           guild_id: e,
           location: t,
         });
       }
-      ((i = r || (r = {})).BAN = "ban"),
-        (i.KICK = "kick"),
-        (i.MUTE = "mute"),
-        (i.TIMEOUT = "timeout"),
-        (i.ADD_ROLE = "add_role"),
-        (i.REMOVE_ROLE = "remove_role"),
-        (i.COPY_ID = "copy_id"),
-        (i.CHANGE_NICKNAME = "change_nickname");
+      ((l = r || (r = {})).BAN = "ban"),
+        (l.KICK = "kick"),
+        (l.MUTE = "mute"),
+        (l.TIMEOUT = "timeout"),
+        (l.ADD_ROLE = "add_role"),
+        (l.REMOVE_ROLE = "remove_role"),
+        (l.COPY_ID = "copy_id"),
+        (l.CHANGE_NICKNAME = "change_nickname");
     },
     347895: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           fetchGuildHomeSettings: function () {
-            return T;
-          },
-          fetchNewMemberActions: function () {
-            return C;
-          },
-          selectHomeResourceChannel: function () {
             return h;
           },
-          selectNewMemberActionChannel: function () {
-            return S;
+          fetchNewMemberActions: function () {
+            return T;
           },
-          completeNewMemberAction: function () {
+          selectHomeResourceChannel: function () {
+            return C;
+          },
+          selectNewMemberActionChannel: function () {
             return A;
           },
+          completeNewMemberAction: function () {
+            return S;
+          },
           getBlockForChannelDeletion: function () {
-            return N;
+            return v;
           },
         }),
         n("222007"),
         n("808653");
-      var l = n("872717"),
-        i = n("913144"),
+      var i = n("872717"),
+        l = n("913144"),
         u = n("819689"),
         r = n("115718"),
         a = n("38654"),
@@ -383,19 +383,19 @@
         _ = n("675305"),
         m = n("290886"),
         M = n("49111");
-      let T = async e => {
-          i.default.dispatch({
+      let h = async e => {
+          l.default.dispatch({
             type: "GUILD_HOME_SETTINGS_FETCH_START",
             guildId: e,
           });
           try {
-            let t = await l.default.get({
+            let t = await i.default.get({
                 url: M.Endpoints.GUILD_HOME_SETTINGS(e),
                 oldFormErrors: !0,
               }),
               n = (0, E.settingsFromServer)(t.body);
             return (
-              i.default.dispatch({
+              l.default.dispatch({
                 type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
                 guildId: e,
                 homeSettings: n,
@@ -403,26 +403,26 @@
               n
             );
           } catch (t) {
-            i.default.dispatch({
+            l.default.dispatch({
               type: "GUILD_HOME_SETTINGS_FETCH_FAIL",
               guildId: e,
             });
           }
         },
-        C = async e => {
+        T = async e => {
           if (!a.default.isFullServerPreview(e)) {
-            i.default.dispatch({
+            l.default.dispatch({
               type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
               guildId: e,
             });
             try {
-              let t = await l.default.get({
+              let t = await i.default.get({
                   url: M.Endpoints.GUILD_MEMBER_ACTIONS(e),
                   oldFormErrors: !0,
                 }),
                 n = (0, E.actionsFromServer)(t.body);
               return (
-                i.default.dispatch({
+                l.default.dispatch({
                   type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
                   guildId: e,
                   memberActions: n,
@@ -430,18 +430,18 @@
                 n
               );
             } catch (t) {
-              i.default.dispatch({
+              l.default.dispatch({
                 type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL",
                 guildId: e,
               });
             }
           }
         },
-        h = function (e, t) {
+        C = function (e, t) {
           let n =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
           if (
-            (i.default.dispatch({
+            (l.default.dispatch({
               type: "SELECT_HOME_RESOURCE_CHANNEL",
               guildId: e,
               channelId: t,
@@ -449,15 +449,15 @@
             null == t)
           )
             return;
-          let l = d.default.getChannel(t),
+          let i = d.default.getChannel(t),
             E = f.default.getResourceForChannel(e, t);
           null != e &&
             !a.default.isFullServerPreview(e) &&
-            null != l &&
+            null != i &&
             null != E &&
             s.default.track(M.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
-              channel_id: l.id,
+              channel_id: i.id,
               server_guide_channel_type: "resource",
               channel_action_type: -1,
             }),
@@ -469,29 +469,29 @@
               jumpType: r.JumpTypes.INSTANT,
             });
         },
-        S = (e, t) => {
-          i.default.dispatch({
+        A = (e, t) => {
+          l.default.dispatch({
             type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
             guildId: e,
             channelId: t,
           });
           let n = d.default.getChannel(t),
-            l = f.default.getActionForChannel(e, t);
+            i = f.default.getActionForChannel(e, t);
           null != e &&
             !a.default.isFullServerPreview(e) &&
             null != n &&
-            null != l &&
+            null != i &&
             s.default.track(M.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
               channel_id: n.id,
               server_guide_channel_type: "member action",
-              channel_action_type: l.actionType,
+              channel_action_type: i.actionType,
             }),
             (0, o.transitionToChannel)(t);
         },
-        A = (e, t) => {
+        S = (e, t) => {
           if (
-            (i.default.dispatch({
+            (l.default.dispatch({
               type: "COMPLETE_NEW_MEMBER_ACTION",
               guildId: e,
               channelId: t,
@@ -508,7 +508,7 @@
                   ? r
                   : {}
               ),
-              l =
+              i =
                 null !== (o = f.default.getNewMemberActions(e)) && void 0 !== o
                   ? o
                   : [];
@@ -516,28 +516,28 @@
               guild_id: n.guild_id,
               channel_id: n.id,
               channel_action_type: u.actionType,
-              has_completed_all: l.reduce(
+              has_completed_all: i.reduce(
                 (e, n) => e && t.includes(n.channelId),
                 !0
               ),
             });
           }
-          l.default.post({ url: M.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
+          i.default.post({ url: M.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
         };
-      async function N(e, t) {
+      async function v(e, t) {
         if (null == e) return !1;
         let n = (0, m.canSeeOnboardingHome)(e);
         if (!n) return !1;
-        let l = f.default.getSettings(e);
+        let i = f.default.getSettings(e);
         return (
-          l === f.NO_SETTINGS && (await T(e), (l = f.default.getSettings(e))),
-          l !== f.NO_SETTINGS &&
-            null != l &&
-            (null != l.newMemberActions &&
-            null != l.newMemberActions.find(e => e.channelId === t)
+          i === f.NO_SETTINGS && (await h(e), (i = f.default.getSettings(e))),
+          i !== f.NO_SETTINGS &&
+            null != i &&
+            (null != i.newMemberActions &&
+            null != i.newMemberActions.find(e => e.channelId === t)
               ? "todo"
-              : null != l.resourceChannels &&
-                null != l.resourceChannels.find(e => e.channelId === t) &&
+              : null != i.resourceChannels &&
+                null != i.resourceChannels.find(e => e.channelId === t) &&
                 "resource")
         );
       }
@@ -571,44 +571,44 @@
             return M;
           },
           RESOURCE_CHANNEL_MAX: function () {
-            return T;
-          },
-          NewMemberActionTypes: function () {
-            return i;
-          },
-          newMemberActionFromServer: function () {
-            return C;
-          },
-          resourceChannelFromServer: function () {
             return h;
           },
-          settingsFromServer: function () {
-            return S;
+          NewMemberActionTypes: function () {
+            return l;
           },
-          settingsToServer: function () {
+          newMemberActionFromServer: function () {
+            return T;
+          },
+          resourceChannelFromServer: function () {
+            return C;
+          },
+          settingsFromServer: function () {
             return A;
           },
-          actionsFromServer: function () {
-            return N;
+          settingsToServer: function () {
+            return S;
           },
-          isWelcomeMessageEmpty: function () {
+          actionsFromServer: function () {
             return v;
           },
-          isSettingsEmpty: function () {
-            return I;
+          isWelcomeMessageEmpty: function () {
+            return N;
           },
-          isSettingsValid: function () {
+          isSettingsEmpty: function () {
             return p;
           },
-          isChannelValidForResourceChannel: function () {
+          isSettingsValid: function () {
             return g;
           },
+          isChannelValidForResourceChannel: function () {
+            return I;
+          },
           isChannelValidForNewMemberAction: function () {
-            return L;
+            return y;
           },
         });
-      var l,
-        i,
+      var i,
+        l,
         u = n("42203"),
         r = n("449008"),
         a = n("991170"),
@@ -621,8 +621,8 @@
         _ = 1,
         m = 30,
         M = 200,
-        T = 7;
-      function C(e) {
+        h = 7;
+      function T(e) {
         var t;
         return {
           channelId: e.channel_id,
@@ -640,7 +640,7 @@
           icon: null !== (t = e.icon) && void 0 !== t ? t : null,
         };
       }
-      function h(e) {
+      function C(e) {
         var t, n;
         return {
           channelId: e.channel_id,
@@ -657,55 +657,55 @@
           icon: null !== (n = e.icon) && void 0 !== n ? n : null,
         };
       }
-      function S(e) {
+      function A(e) {
         if (null == e) return null;
         let {
             welcome_message: t,
             new_member_actions: n,
-            resource_channels: l,
-            enabled: i,
+            resource_channels: i,
+            enabled: l,
           } = e,
           a = { authorIds: t.author_ids, message: t.message },
           o = n
             .filter(e =>
               (0, r.isNotNullish)(u.default.getChannel(e.channel_id))
             )
-            .map(C),
-          d = l
+            .map(T),
+          d = i
             .filter(e =>
               (0, r.isNotNullish)(u.default.getChannel(e.channel_id))
             )
-            .map(h);
+            .map(C);
         return {
           welcomeMessage: a,
           newMemberActions: o,
           resourceChannels: d,
-          enabled: i,
+          enabled: l,
         };
       }
-      function A(e, t) {
-        var n, l;
+      function S(e, t) {
+        var n, i;
         if (null == t) return null;
         let {
-            welcomeMessage: i,
+            welcomeMessage: l,
             newMemberActions: a,
             resourceChannels: o,
             enabled: d,
           } = t,
           s = {
             author_ids:
-              null !== (n = null == i ? void 0 : i.authorIds) && void 0 !== n
+              null !== (n = null == l ? void 0 : l.authorIds) && void 0 !== n
                 ? n
                 : [],
             message:
-              null !== (l = null == i ? void 0 : i.message) && void 0 !== l
-                ? l
+              null !== (i = null == l ? void 0 : l.message) && void 0 !== i
+                ? i
                 : "",
           },
           c = (null != a ? a : [])
             .filter(e => (0, r.isNotNullish)(u.default.getChannel(e.channelId)))
             .map(e => {
-              var t, n, l, i, u, r, a;
+              var t, n, i, l, u, r, a;
               return {
                 channel_id: e.channelId,
                 action_type: e.actionType,
@@ -714,11 +714,11 @@
                 emoji: {
                   id:
                     null !==
-                      (i =
+                      (l =
                         null === (t = e.emoji) || void 0 === t
                           ? void 0
-                          : t.id) && void 0 !== i
-                      ? i
+                          : t.id) && void 0 !== l
+                      ? l
                       : void 0,
                   name:
                     null !==
@@ -731,9 +731,9 @@
                   animated:
                     null !==
                       (r =
-                        null === (l = e.emoji) || void 0 === l
+                        null === (i = e.emoji) || void 0 === i
                           ? void 0
-                          : l.animated) && void 0 !== r
+                          : i.animated) && void 0 !== r
                       ? r
                       : void 0,
                 },
@@ -743,7 +743,7 @@
           f = (null != o ? o : [])
             .filter(e => (0, r.isNotNullish)(u.default.getChannel(e.channelId)))
             .map(e => {
-              var t, n, l, i, u, r, a;
+              var t, n, i, l, u, r, a;
               return {
                 channel_id: e.channelId,
                 title: e.title,
@@ -751,11 +751,11 @@
                 emoji: {
                   id:
                     null !==
-                      (i =
+                      (l =
                         null === (t = e.emoji) || void 0 === t
                           ? void 0
-                          : t.id) && void 0 !== i
-                      ? i
+                          : t.id) && void 0 !== l
+                      ? l
                       : void 0,
                   name:
                     null !==
@@ -768,9 +768,9 @@
                   animated:
                     null !==
                       (r =
-                        null === (l = e.emoji) || void 0 === l
+                        null === (i = e.emoji) || void 0 === i
                           ? void 0
-                          : l.animated) && void 0 !== r
+                          : i.animated) && void 0 !== r
                       ? r
                       : void 0,
                 },
@@ -785,14 +785,14 @@
           enabled: d,
         };
       }
-      ((l = i || (i = {}))[(l.VIEW = 0)] = "VIEW"), (l[(l.CHAT = 1)] = "CHAT");
-      let N = e => {
+      ((i = l || (l = {}))[(i.VIEW = 0)] = "VIEW"), (i[(i.CHAT = 1)] = "CHAT");
+      let v = e => {
         if (null == e) return null;
         let t = {};
         for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
         return t;
       };
-      function v(e) {
+      function N(e) {
         return (
           null == e ||
           ((null == e.message || !(e.message.length > 0)) &&
@@ -800,20 +800,20 @@
             !0)
         );
       }
-      function I(e) {
+      function p(e) {
         return (
           null == e ||
-          (!!v(e.welcomeMessage) &&
+          (!!N(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)) &&
             !0)
         );
       }
-      function p(e) {
+      function g(e) {
         var t, n;
         return (
           null != e &&
-          (!!I(e) ||
+          (!!p(e) ||
             ((null === (t = e.welcomeMessage) || void 0 === t
               ? void 0
               : t.message) != null &&
@@ -827,14 +827,14 @@
               !0))
         );
       }
-      function g(e) {
+      function I(e) {
         return (
           e.type === o.ChannelTypes.GUILD_TEXT &&
           !a.default.canEveryoneRole(o.Permissions.SEND_MESSAGES, e) &&
           a.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e)
         );
       }
-      function L(e) {
+      function y(e) {
         switch (e.type) {
           case o.ChannelTypes.GUILD_TEXT:
           case o.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -846,76 +846,16 @@
         }
       }
     },
-    675305: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return d;
-          },
-        }),
-        n("222007");
-      var l = n("446674"),
-        i = n("913144");
-      let u = {},
-        r = {},
-        a = new Set();
-      class o extends l.default.Store {
-        getCompletedActions(e) {
-          return null == e ? null : r[e];
-        }
-        hasCompletedActionForChannel(e, t) {
-          let n = this.getCompletedActions(e);
-          return null != n && null != n[t];
-        }
-        getState(e) {
-          return null == e ? {} : { completedActions: r[e], loading: a.has(e) };
-        }
-      }
-      o.displayName = "GuildOnboardingMemberActionStore";
-      var d = new o(i.default, {
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
-          let { guildId: t } = e;
-          a.add(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function (e) {
-          let { memberActions: t, guildId: n } = e;
-          if (null == t) {
-            r[n] = u;
-            return;
-          }
-          (r[n] = t), a.delete(n);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function (e) {
-          let { guildId: t } = e;
-          a.delete(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function (e) {
-          let { guildId: t } = e;
-          if (null == r[t]) return !1;
-          delete r[t];
-        },
-        COMPLETE_NEW_MEMBER_ACTION: function (e) {
-          let { guildId: t, channelId: n } = e;
-          r = { ...r, [t]: { ...r[t], [n]: !0 } };
-        },
-        GUILD_DELETE: function (e) {
-          let { guild: t } = e;
-          if (null == r[t.id]) return !1;
-          delete r[t.id];
-        },
-      });
-    },
     519841: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           AttachmentLinkRefreshExperiment: function () {
-            return i;
+            return l;
           },
         });
-      var l = n("862205");
-      let i = (0, l.createExperiment)({
+      var i = n("862205");
+      let l = (0, i.createExperiment)({
         kind: "user",
         id: "2023-12_attachment_link_refresh",
         label: "Attachment Link Refresh User Experiment",
@@ -940,24 +880,24 @@
             return E;
           },
           messageHasExpiredAttachmentUrl: function () {
-            return C;
+            return T;
           },
           maybeRefreshAttachmentUrl: function () {
-            return S;
+            return A;
           },
         }),
         n("222007");
-      var l,
-        i = n("872717"),
+      var i,
+        l = n("872717"),
         u = n("718517"),
         r = n("253981"),
         a = n("519841"),
         o = n("49111");
       let d = new Set([
           window.GLOBAL_ENV.CDN_HOST,
-          null === (l = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === l
+          null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i
             ? void 0
-            : l.substring(2),
+            : i.substring(2),
         ]),
         s = new Set(["/attachments/", "/ephemeral-attachments/"]),
         c = 1 * u.default.Millis.HOUR;
@@ -989,7 +929,7 @@
         let t = r.default.toURLSafe(e.url);
         return !!(null != t && f(t)) && _(t);
       }
-      function T(e) {
+      function h(e) {
         var t;
         return (
           M(e.image) ||
@@ -997,17 +937,17 @@
           M(e.video)
         );
       }
-      function C(e) {
-        return e.attachments.some(m) || e.embeds.some(T);
+      function T(e) {
+        return e.attachments.some(m) || e.embeds.some(h);
       }
-      async function h(e) {
-        let t = await i.default.post({
+      async function C(e) {
+        let t = await l.default.post({
           url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
           body: { attachment_urls: [e] },
         });
         return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
       }
-      async function S(e) {
+      async function A(e) {
         if (
           !a.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "link_clicked",
@@ -1016,7 +956,7 @@
           return e;
         let t = r.default.toURLSafe(e);
         if (null == t || !_(t)) return e;
-        let n = await h(e);
+        let n = await C(e);
         return null != n ? n : e;
       }
     },
@@ -1028,8 +968,8 @@
             return d;
           },
         });
-      var l = n("884691"),
-        i = n("79112"),
+      var i = n("884691"),
+        l = n("79112"),
         u = n("685665"),
         r = n("929423");
       n("424562");
@@ -1044,9 +984,9 @@
             openWithoutBackstack: c = !1,
           } = e,
           { analyticsLocations: f } = (0, u.default)(),
-          E = (0, l.useCallback)(() => {
+          E = (0, i.useCallback)(() => {
             null != t && (0, r.initGuildIdentitySettings)(t, null != s ? s : f),
-              i.default.open(
+              l.default.open(
                 a.UserSettingsSections.PROFILE_CUSTOMIZATION,
                 null != t
                   ? o.ProfileCustomizationSubsection.GUILD
@@ -1070,9 +1010,9 @@
             return _;
           },
         });
-      var l = n("37983");
+      var i = n("37983");
       n("884691");
-      var i = n("446674"),
+      var l = n("446674"),
         u = n("77078"),
         r = n("42203"),
         a = n("305961"),
@@ -1085,21 +1025,21 @@
       function _(e, t, n) {
         var _;
         let m = r.default.getChannel(n),
-          M = (0, i.useStateFromStores)(
+          M = (0, l.useStateFromStores)(
             [a.default],
             () => a.default.getGuild(t),
             [t]
           ),
-          T = (0, i.useStateFromStores)(
+          h = (0, l.useStateFromStores)(
             [c.default],
             () => c.default.getPermissionsForUser(e.id, n),
             [n, e.id]
           ),
-          C =
+          T =
             (null === (_ = d.default.getCurrentUser()) || void 0 === _
               ? void 0
               : _.id) === e.id,
-          h = (0, i.useStateFromStores)(
+          C = (0, l.useStateFromStores)(
             [o.default],
             () =>
               null != n &&
@@ -1108,14 +1048,14 @@
               }),
             [n]
           );
-        return null != m && null != M && (h || C) && T.speaker
-          ? (0, l.jsx)(u.MenuItem, {
+        return null != m && null != M && (C || T) && h.speaker
+          ? (0, i.jsx)(u.MenuItem, {
               id: "audience",
-              label: C
+              label: T
                 ? E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE
                 : E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
               action: () => {
-                C
+                T
                   ? (0, s.moveSelfToAudience)(m)
                   : (0, s.moveUserToAudience)(e, m);
               },
@@ -1131,9 +1071,9 @@
             return w;
           },
         });
-      var l = n("37983");
+      var i = n("37983");
       n("884691");
-      var i = n("77078"),
+      var l = n("77078"),
         u = n("272030"),
         r = n("838446"),
         a = n("158534"),
@@ -1146,19 +1086,19 @@
         _ = n("861370"),
         m = n("230947"),
         M = n("726750"),
-        T = n("85166"),
-        C = n("170990"),
-        h = n("304582"),
-        S = n("72057"),
-        A = n("300925"),
-        N = n("563816"),
-        v = n("489836"),
-        I = n("406703"),
-        p = n("502533"),
-        g = n("314838"),
-        L = n("383161"),
+        h = n("85166"),
+        T = n("170990"),
+        C = n("304582"),
+        A = n("72057"),
+        S = n("300925"),
+        v = n("563816"),
+        N = n("489836"),
+        p = n("406703"),
+        g = n("502533"),
+        I = n("314838"),
+        y = n("383161"),
         U = n("421602"),
-        y = n("459870"),
+        L = n("459870"),
         R = n("692986"),
         O = n("806179"),
         b = n("97508"),
@@ -1177,73 +1117,73 @@
                   showChatItems: s = !0,
                   showChannelCallItems: w = !1,
                   showModalItems: P = !0,
-                  showStageChannelItems: x = !1,
-                  context: j,
+                  showStageChannelItems: j = !1,
+                  context: x,
                   onSelect: k,
-                  onHeightUpdate: B,
+                  onHeightUpdate: V,
                 } = e,
-                V = {
+                B = {
                   page: F.AnalyticsPages.GUILD_CHANNEL,
                   section: F.AnalyticsSections.CHAT_USERNAME,
                   object: F.AnalyticsObjects.CONTEXT_MENU_ITEM,
                 },
                 W = (0, O.default)(t.id, n, r.id),
-                X = (0, L.default)(t, n, j),
-                Y = (0, U.default)(t.id, j),
+                X = (0, y.default)(t, n, x),
+                Y = (0, U.default)(t.id, x),
                 z = (0, D.default)(t.id),
-                K = (0, I.default)(t, j),
-                q = (0, S.default)({ user: t, guildId: n, context: j }),
-                J = (0, h.default)(t),
+                K = (0, p.default)(t, x),
+                q = (0, A.default)({ user: t, guildId: n, context: x }),
+                J = (0, C.default)(t),
                 Q = (0, G.default)(t.id),
                 Z = (0, R.default)(t.id),
                 $ = (0, m.default)({
                   guildId: n,
                   userId: t.id,
-                  analyticsLocation: V,
-                  context: j,
+                  analyticsLocation: B,
+                  context: x,
                 }),
-                ee = (0, g.default)(t, n),
+                ee = (0, I.default)(t, n),
                 et = (0, d.default)(null, t),
-                en = (0, C.default)(t),
-                el = (0, v.default)(t),
-                ei = (0, A.default)(t, n, r.id),
+                en = (0, T.default)(t),
+                ei = (0, N.default)(t),
+                el = (0, S.default)(t, n, r.id),
                 eu = (0, b.default)(t.id, n),
-                er = (0, y.default)(t, n),
+                er = (0, L.default)(t, n),
                 ea = (0, _.default)({
                   id: t.id,
                   label: H.default.Messages.COPY_ID_USER,
                 }),
-                eo = (0, p.default)(t.id, r.id),
+                eo = (0, g.default)(t.id, r.id),
                 ed = (0, f.default)(t.id),
                 es = (0, c.default)(r.id),
                 ec = (0, M.default)(t),
-                ef = (0, T.default)(t, n, r.id),
-                eE = (0, N.default)({
+                ef = (0, h.default)(t, n, r.id),
+                eE = (0, v.default)({
                   commandType: o.ApplicationCommandType.USER,
                   commandTargetId: t.id,
                   channel: r,
                   guildId: n,
-                  onHeightUpdate: B,
-                  context: j,
+                  onHeightUpdate: V,
+                  context: x,
                 }),
                 e_ = (0, E.default)(t.id),
                 em = t.isNonUserBot();
-              return (0, l.jsxs)(i.Menu, {
+              return (0, i.jsxs)(l.Menu, {
                 navId: "user-context",
                 onClose: u.closeContextMenu,
                 "aria-label": H.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: k,
                 children: [
                   !em &&
-                    (0, l.jsxs)(l.Fragment, {
+                    (0, i.jsxs)(i.Fragment, {
                       children: [
-                        (0, l.jsxs)(i.MenuGroup, { children: [ec, x && ef] }),
-                        (0, l.jsxs)(i.MenuGroup, {
+                        (0, i.jsxs)(l.MenuGroup, { children: [ec, j && ef] }),
+                        (0, i.jsxs)(l.MenuGroup, {
                           children: [P && W, s && X, Y, K, P && q, P && J, z],
                         }),
-                        a && (0, l.jsx)(i.MenuGroup, { children: Q }),
-                        (0, l.jsx)(i.MenuGroup, { children: P && et }),
-                        (0, l.jsxs)(i.MenuGroup, {
+                        a && (0, i.jsx)(l.MenuGroup, { children: Q }),
+                        (0, i.jsx)(l.MenuGroup, { children: P && et }),
+                        (0, i.jsxs)(l.MenuGroup, {
                           children: [
                             a && Z,
                             a && eo,
@@ -1251,16 +1191,16 @@
                             eE,
                             P && ee,
                             en,
-                            P && el,
+                            P && ei,
                             w && e_,
                           ],
                         }),
-                        (0, l.jsx)(i.MenuGroup, { children: ei }),
-                        (0, l.jsxs)(i.MenuGroup, { children: [eu, er] }),
-                        w && (0, l.jsxs)(i.MenuGroup, { children: [es, ed] }),
+                        (0, i.jsx)(l.MenuGroup, { children: el }),
+                        (0, i.jsxs)(l.MenuGroup, { children: [eu, er] }),
+                        w && (0, i.jsxs)(l.MenuGroup, { children: [es, ed] }),
                       ],
                     }),
-                  (0, l.jsx)(i.MenuGroup, { children: ea }),
+                  (0, i.jsx)(l.MenuGroup, { children: ea }),
                 ],
               });
             },
@@ -1281,9 +1221,9 @@
           },
         }),
         n("222007");
-      var l = n("37983");
+      var i = n("37983");
       n("884691");
-      var i = n("446674"),
+      var l = n("446674"),
         u = n("77078"),
         r = n("352674"),
         a = n("42203"),
@@ -1295,31 +1235,31 @@
         E = n("782340");
       function _(e, t) {
         let { id: n } = e,
-          l = "@".concat(c.default.getUserTag(e, { decoration: "never" }));
+          i = "@".concat(c.default.getUserTag(e, { decoration: "never" }));
         s.ComponentDispatch.dispatchToLastSubscribed(
           f.ComponentActions.INSERT_TEXT,
-          { plainText: l, rawText: "<@".concat(n, ">") }
+          { plainText: i, rawText: "<@".concat(n, ">") }
         ),
           null != t && r.default.startTyping(t);
       }
       function m(e, t, n) {
-        let [r, s] = (0, i.useStateFromStoresArray)(
+        let [r, s] = (0, l.useStateFromStoresArray)(
             [d.default, a.default, o.default],
             () => {
               let e = d.default.getChannelId(t),
                 n = a.default.getChannel(e),
-                l =
+                i =
                   null != n &&
                   (n.isMultiUserDM() ||
                     o.default.can(f.Permissions.SEND_MESSAGES, n));
-              return [e, l];
+              return [e, i];
             },
             [t]
           ),
           c = n === f.AppContext.POPOUT;
         return !s || c
           ? null
-          : (0, l.jsx)(u.MenuItem, {
+          : (0, i.jsx)(u.MenuItem, {
               id: "mention",
               label: E.default.Messages.MENTION,
               action: function () {
@@ -1330,4 +1270,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6c057b8068fe76189ca7.js.map
+//# sourceMappingURL=2dc2af4879f4512d4777.js.map

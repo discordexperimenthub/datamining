@@ -532,13 +532,13 @@
             return v;
           },
           selectNewMemberActionChannel: function () {
-            return A;
+            return p;
           },
           completeNewMemberAction: function () {
-            return S;
+            return A;
           },
           getBlockForChannelDeletion: function () {
-            return p;
+            return g;
           },
         }),
         n("222007"),
@@ -643,7 +643,7 @@
               jumpType: r.JumpTypes.INSTANT,
             });
         },
-        A = (e, t) => {
+        p = (e, t) => {
           u.default.dispatch({
             type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
             guildId: e,
@@ -663,7 +663,7 @@
             }),
             (0, a.transitionToChannel)(t);
         },
-        S = (e, t) => {
+        A = (e, t) => {
           if (
             (u.default.dispatch({
               type: "COMPLETE_NEW_MEMBER_ACTION",
@@ -698,7 +698,7 @@
           }
           l.default.post({ url: h.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
         };
-      async function p(e, t) {
+      async function g(e, t) {
         if (null == e) return !1;
         let n = (0, m.canSeeOnboardingHome)(e);
         if (!n) return !1;
@@ -757,19 +757,19 @@
             return v;
           },
           settingsFromServer: function () {
-            return A;
-          },
-          settingsToServer: function () {
-            return S;
-          },
-          actionsFromServer: function () {
             return p;
           },
+          settingsToServer: function () {
+            return A;
+          },
+          actionsFromServer: function () {
+            return g;
+          },
           isWelcomeMessageEmpty: function () {
-            return T;
+            return S;
           },
           isSettingsEmpty: function () {
-            return g;
+            return T;
           },
           isSettingsValid: function () {
             return I;
@@ -831,7 +831,7 @@
           icon: null !== (n = e.icon) && void 0 !== n ? n : null,
         };
       }
-      function A(e) {
+      function p(e) {
         if (null == e) return null;
         let {
             welcome_message: t,
@@ -857,7 +857,7 @@
           enabled: u,
         };
       }
-      function S(e, t) {
+      function A(e, t) {
         var n, l;
         if (null == t) return null;
         let {
@@ -960,13 +960,13 @@
         };
       }
       ((l = u || (u = {}))[(l.VIEW = 0)] = "VIEW"), (l[(l.CHAT = 1)] = "CHAT");
-      let p = e => {
+      let g = e => {
         if (null == e) return null;
         let t = {};
         for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
         return t;
       };
-      function T(e) {
+      function S(e) {
         return (
           null == e ||
           ((null == e.message || !(e.message.length > 0)) &&
@@ -974,10 +974,10 @@
             !0)
         );
       }
-      function g(e) {
+      function T(e) {
         return (
           null == e ||
-          (!!T(e.welcomeMessage) &&
+          (!!S(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)) &&
             !0)
@@ -987,7 +987,7 @@
         var t, n;
         return (
           null != e &&
-          (!!g(e) ||
+          (!!T(e) ||
             ((null === (t = e.welcomeMessage) || void 0 === t
               ? void 0
               : t.message) != null &&
@@ -1019,66 +1019,6 @@
             return !1;
         }
       }
-    },
-    675305: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return d;
-          },
-        }),
-        n("222007");
-      var l = n("446674"),
-        u = n("913144");
-      let i = {},
-        r = {},
-        o = new Set();
-      class a extends l.default.Store {
-        getCompletedActions(e) {
-          return null == e ? null : r[e];
-        }
-        hasCompletedActionForChannel(e, t) {
-          let n = this.getCompletedActions(e);
-          return null != n && null != n[t];
-        }
-        getState(e) {
-          return null == e ? {} : { completedActions: r[e], loading: o.has(e) };
-        }
-      }
-      a.displayName = "GuildOnboardingMemberActionStore";
-      var d = new a(u.default, {
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
-          let { guildId: t } = e;
-          o.add(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function (e) {
-          let { memberActions: t, guildId: n } = e;
-          if (null == t) {
-            r[n] = i;
-            return;
-          }
-          (r[n] = t), o.delete(n);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function (e) {
-          let { guildId: t } = e;
-          o.delete(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function (e) {
-          let { guildId: t } = e;
-          if (null == r[t]) return !1;
-          delete r[t];
-        },
-        COMPLETE_NEW_MEMBER_ACTION: function (e) {
-          let { guildId: t, channelId: n } = e;
-          r = { ...r, [t]: { ...r[t], [n]: !0 } };
-        },
-        GUILD_DELETE: function (e) {
-          let { guild: t } = e;
-          if (null == r[t.id]) return !1;
-          delete r[t.id];
-        },
-      });
     },
     519841: function (e, t, n) {
       "use strict";
@@ -1117,7 +1057,7 @@
             return C;
           },
           maybeRefreshAttachmentUrl: function () {
-            return A;
+            return p;
           },
         }),
         n("222007");
@@ -1181,7 +1121,7 @@
         });
         return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
       }
-      async function A(e) {
+      async function p(e) {
         if (
           !o.AttachmentLinkRefreshExperiment.getCurrentConfig({
             location: "link_clicked",
@@ -1241,7 +1181,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return O;
           },
         });
       var l = n("37983"),
@@ -1261,15 +1201,15 @@
         M = n("800762"),
         C = n("300925"),
         v = n("489836"),
-        A = n("421602"),
-        S = n("459870"),
-        p = n("325882"),
-        T = n("625187"),
-        g = n("806179"),
+        p = n("421602"),
+        A = n("459870"),
+        g = n("325882"),
+        S = n("625187"),
+        T = n("806179"),
         I = n("97508"),
         N = n("49111"),
         y = n("782340"),
-        L = (0, d.default)(
+        O = (0, d.default)(
           (0, a.default)(
             function (e) {
               var t;
@@ -1278,26 +1218,26 @@
                   guildId: a,
                   channelId: d,
                   context: N,
-                  onSelect: L,
-                  moderationAlertId: O,
+                  onSelect: O,
+                  moderationAlertId: L,
                   analyticsLocation: R,
                   analyticsLocations: U,
                   onCloseContextMenu: b,
                   showTransferOwnershipItem: D,
                 } = e,
-                { analyticsLocations: G } = (0, f.default)(
+                { analyticsLocations: x } = (0, f.default)(
                   c.default.CONTEXT_MENU
                 ),
-                x = (0, s.useAnalyticsContext)(),
-                F =
+                G = (0, s.useAnalyticsContext)(),
+                P =
                   null !== (t = null == U ? void 0 : U[0]) && void 0 !== t
                     ? t
-                    : G[0],
+                    : x[0],
                 w = (0, m.useTrackModerationAction)(a, {
-                  location: F,
+                  location: P,
                   targetUserId: n.id,
                 }),
-                P = (0, i.useStateFromStores)(
+                F = (0, i.useStateFromStores)(
                   [M.default],
                   () => {
                     var e;
@@ -1317,26 +1257,26 @@
                   () => h.default.isMember(a, n.id),
                   [a, n.id]
                 ),
-                B = (0, g.default)(n.id, a),
-                k = (0, A.default)(n.id, N),
-                V = (0, _.default)({
+                k = (0, T.default)(n.id, a),
+                V = (0, p.default)(n.id, N),
+                B = (0, _.default)({
                   guildId: a,
                   userId: n.id,
-                  analyticsLocation: null != R ? R : x.location,
-                  analyticsLocations: [F],
+                  analyticsLocation: null != R ? R : G.location,
+                  analyticsLocations: [P],
                   context: N,
                 }),
-                W = (0, v.default)(n, F),
-                Y = (0, C.default)(n, a, null != d ? d : P, F),
-                X = (0, p.default)(d, O),
-                K = (0, T.default)(n, a),
-                Z = (0, I.default)(n.id, a, !1, F),
+                W = (0, v.default)(n, P),
+                Y = (0, C.default)(n, a, null != d ? d : F, P),
+                X = (0, g.default)(d, L),
+                K = (0, S.default)(n, a),
+                Z = (0, I.default)(n.id, a, !1, P),
                 z = (0, E.default)({
                   id: n.id,
                   label: y.default.Messages.COPY_ID_USER,
                   onSuccess: j,
                 }),
-                q = (0, S.default)(n, a),
+                q = (0, A.default)(n, a),
                 J = !!(null == n ? void 0 : n.isNonUserBot());
               return (0, l.jsxs)(r.Menu, {
                 navId: "user-context",
@@ -1344,13 +1284,13 @@
                   (0, o.closeContextMenu)(), null == b || b();
                 },
                 "aria-label": y.default.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: L,
+                onSelect: O,
                 children: [
                   !J &&
                     (0, l.jsxs)(l.Fragment, {
                       children: [
-                        (0, l.jsxs)(r.MenuGroup, { children: [B, k] }),
-                        (0, l.jsxs)(r.MenuGroup, { children: [V, W] }),
+                        (0, l.jsxs)(r.MenuGroup, { children: [k, V] }),
+                        (0, l.jsxs)(r.MenuGroup, { children: [B, W] }),
                         H &&
                           (0, l.jsxs)(l.Fragment, {
                             children: [
@@ -1358,7 +1298,7 @@
                               (0, l.jsxs)(r.MenuGroup, { children: [Z, q] }),
                             ],
                           }),
-                        null != O ? X : null,
+                        null != L ? X : null,
                         D && null != K
                           ? (0, l.jsx)(r.MenuGroup, { children: K })
                           : null,
@@ -1802,4 +1742,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7aa40910dee316adcd0a.js.map
+//# sourceMappingURL=fc795f2df0a75b3a7b82.js.map

@@ -6,7 +6,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return S;
           },
         }),
         n("222007");
@@ -25,19 +25,19 @@
         N = n("271938"),
         T = n("305961"),
         h = n("957255"),
-        S = n("49111"),
-        m = n("782340"),
-        R = n("221640"),
-        v = e => {
-          let { channel: t, onClose: n, onConfirm: v, transitionState: C } = e,
+        m = n("49111"),
+        R = n("782340"),
+        v = n("221640"),
+        S = e => {
+          let { channel: t, onClose: n, onConfirm: S, transitionState: C } = e,
             g = (0, a.default)(t, !0),
             D = t.id,
             I = t.isForumPost(),
             M = (0, r.useStateFromStores)([T.default], () =>
               T.default.getGuild(t.getGuildId())
             ),
-            L = (0, E.useGuildChannelScheduledEvents)(D),
-            { isSubscriptionGated: y } = (0, s.default)(t.id),
+            y = (0, E.useGuildChannelScheduledEvents)(D),
+            { isSubscriptionGated: L } = (0, s.default)(t.id),
             A = (0, c.default)(M, t),
             [O, p] = u.useState(null),
             G = (0, r.useStateFromStores)(
@@ -50,8 +50,8 @@
               () =>
                 h.default.can(
                   t.isThread()
-                    ? S.Permissions.MANAGE_THREADS
-                    : S.Permissions.MANAGE_CHANNELS,
+                    ? m.Permissions.MANAGE_THREADS
+                    : m.Permissions.MANAGE_CHANNELS,
                   t
                 ),
               [t]
@@ -68,9 +68,9 @@
             ),
             H = I && (U || (G && w < 1)),
             F =
-              L.length > 0 &&
-              (t.type === S.ChannelTypes.GUILD_VOICE ||
-                t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
+              y.length > 0 &&
+              (t.type === m.ChannelTypes.GUILD_VOICE ||
+                t.type === m.ChannelTypes.GUILD_STAGE_VOICE);
           if (
             (u.useEffect(() => {
               (async () => {
@@ -95,27 +95,27 @@
             null != O)
           ) {
             let e;
-            let t = m.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
+            let t = R.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
             return (
               (e =
                 "todo" === O
-                  ? m.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO
+                  ? R.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO
                   : "resource" === O
-                    ? m.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE
-                    : m.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
+                    ? R.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE
+                    : R.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING),
               (0, l.jsxs)(i.ModalRoot, {
                 transitionState: C,
-                "aria-label": m.default.Messages.CANNOT_DELETE_CHANNEL,
+                "aria-label": R.default.Messages.CANNOT_DELETE_CHANNEL,
                 children: [
                   (0, l.jsx)(i.ModalHeader, {
                     separator: !1,
                     children: (0, l.jsx)(i.Heading, {
                       variant: "heading-lg/semibold",
-                      children: m.default.Messages.CANNOT_DELETE_CHANNEL,
+                      children: R.default.Messages.CANNOT_DELETE_CHANNEL,
                     }),
                   }),
                   (0, l.jsxs)(i.ModalContent, {
-                    className: R.modalContent,
+                    className: v.modalContent,
                     children: [
                       (0, l.jsx)(i.Text, {
                         variant: "text-md/normal",
@@ -128,7 +128,7 @@
                             null != M &&
                               (f.default.open(
                                 M.id,
-                                S.GuildSettingsSections.ONBOARDING
+                                m.GuildSettingsSections.ONBOARDING
                               ),
                               null == n || n());
                           },
@@ -139,7 +139,7 @@
                   (0, l.jsx)(i.ModalFooter, {
                     children: (0, l.jsx)(i.Button, {
                       onClick: n,
-                      children: m.default.Messages.OKAY,
+                      children: R.default.Messages.OKAY,
                     }),
                   }),
                 ],
@@ -148,40 +148,40 @@
           }
           if (null == M) return null;
           if (
-            M.hasFeature(S.GuildFeatures.COMMUNITY) &&
+            M.hasFeature(m.GuildFeatures.COMMUNITY) &&
             (M.rulesChannelId === D || M.publicUpdatesChannelId === D)
           ) {
             let e = M.rulesChannelId === D,
               t = e
-                ? m.default.Messages.DELETE_RULES_CHANNEL_BODY
-                : m.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
+                ? R.default.Messages.DELETE_RULES_CHANNEL_BODY
+                : R.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
             return (0, l.jsxs)(i.ModalRoot, {
               transitionState: C,
-              "aria-label": m.default.Messages.CANNOT_DELETE_CHANNEL,
+              "aria-label": R.default.Messages.CANNOT_DELETE_CHANNEL,
               children: [
                 (0, l.jsx)(i.ModalHeader, {
                   separator: !1,
                   children: (0, l.jsx)(i.Heading, {
                     variant: "heading-lg/semibold",
-                    children: m.default.Messages.CANNOT_DELETE_CHANNEL,
+                    children: R.default.Messages.CANNOT_DELETE_CHANNEL,
                   }),
                 }),
                 (0, l.jsxs)(i.ModalContent, {
                   children: [
                     (0, l.jsx)(i.Text, {
                       variant: "text-md/normal",
-                      className: R.modalText,
+                      className: v.modalText,
                       children: t,
                     }),
                     (0, l.jsx)(i.Text, {
                       variant: "text-md/normal",
-                      className: R.modalText,
+                      className: v.modalText,
                       children:
-                        m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
+                        R.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                           onClick: () => {
                             f.default.open(
                               M.id,
-                              S.GuildSettingsSections.COMMUNITY
+                              m.GuildSettingsSections.COMMUNITY
                             ),
                               null == n || n();
                           },
@@ -192,7 +192,7 @@
                 (0, l.jsx)(i.ModalFooter, {
                   children: (0, l.jsx)(i.Button, {
                     onClick: n,
-                    children: m.default.Messages.OKAY,
+                    children: R.default.Messages.OKAY,
                   }),
                 }),
               ],
@@ -200,48 +200,48 @@
           }
           {
             let { deleteText: e, deleteBody: u } = (() => {
-              if (t.type === S.ChannelTypes.GUILD_CATEGORY)
+              if (t.type === m.ChannelTypes.GUILD_CATEGORY)
                 return {
-                  deleteText: m.default.Messages.DELETE_CATEGORY,
-                  deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
+                  deleteText: R.default.Messages.DELETE_CATEGORY,
+                  deleteBody: R.default.Messages.DELETE_CHANNEL_BODY.format({
                     channelName: g,
                   }),
                 };
               if (t.isForumPost())
                 return {
                   deleteText: H
-                    ? m.default.Messages.DELETE_FORUM_POST
-                    : m.default.Messages.DELETE_MESSAGE,
+                    ? R.default.Messages.DELETE_FORUM_POST
+                    : R.default.Messages.DELETE_MESSAGE,
                   deleteBody:
                     H && G && !U
-                      ? m.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format(
+                      ? R.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format(
                           { postName: g }
                         )
                       : H
-                        ? m.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format(
+                        ? R.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format(
                             { postName: g }
                           )
-                        : m.default.Messages
+                        : R.default.Messages
                             .DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY,
                 };
               if (t.isThread())
                 return {
-                  deleteText: m.default.Messages.DELETE_THREAD,
-                  deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
+                  deleteText: R.default.Messages.DELETE_THREAD,
+                  deleteBody: R.default.Messages.DELETE_CHANNEL_BODY.format({
                     channelName: g,
                   }),
                 };
-              else if (y && A > 0)
+              else if (L && A > 0)
                 return {
-                  deleteText: m.default.Messages.DELETE_CHANNEL,
+                  deleteText: R.default.Messages.DELETE_CHANNEL,
                   deleteBody:
-                    m.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format(
+                    R.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format(
                       { channelName: g, numGuildRoleSubscriptionMembers: A }
                     ),
                 };
               return {
-                deleteText: m.default.Messages.DELETE_CHANNEL,
-                deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
+                deleteText: R.default.Messages.DELETE_CHANNEL,
+                deleteBody: R.default.Messages.DELETE_CHANNEL_BODY.format({
                   channelName: g,
                 }),
               };
@@ -258,7 +258,7 @@
                   }),
                 }),
                 (0, l.jsxs)(i.ModalContent, {
-                  className: R.modalContent,
+                  className: v.modalContent,
                   children: [
                     (0, l.jsx)(i.Text, {
                       variant: "text-md/normal",
@@ -269,10 +269,10 @@
                       ? (0, l.jsx)(i.Text, {
                           variant: "text-md/normal",
                           color: "header-secondary",
-                          className: R.warningText,
+                          className: v.warningText,
                           children:
-                            m.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format(
-                              { count: L.length }
+                            R.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format(
+                              { count: y.length }
                             ),
                         })
                       : null,
@@ -281,7 +281,7 @@
                 (0, l.jsxs)(i.ModalFooter, {
                   children: [
                     (0, l.jsx)(i.Button, {
-                      onClick: v,
+                      onClick: S,
                       color: i.Button.Colors.RED,
                       children: e,
                     }),
@@ -289,7 +289,7 @@
                       onClick: n,
                       look: i.Button.Looks.LINK,
                       color: i.Button.Colors.PRIMARY,
-                      children: m.default.Messages.CANCEL,
+                      children: R.default.Messages.CANCEL,
                     }),
                   ],
                 }),
@@ -379,16 +379,16 @@
             return h;
           },
           fetchNewMemberActions: function () {
-            return S;
-          },
-          selectHomeResourceChannel: function () {
             return m;
           },
-          selectNewMemberActionChannel: function () {
+          selectHomeResourceChannel: function () {
             return R;
           },
-          completeNewMemberAction: function () {
+          selectNewMemberActionChannel: function () {
             return v;
+          },
+          completeNewMemberAction: function () {
+            return S;
           },
           getBlockForChannelDeletion: function () {
             return C;
@@ -436,7 +436,7 @@
             });
           }
         },
-        S = async e => {
+        m = async e => {
           if (!a.default.isFullServerPreview(e)) {
             u.default.dispatch({
               type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -464,7 +464,7 @@
             }
           }
         },
-        m = function (e, t) {
+        R = function (e, t) {
           let n =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
           if (
@@ -496,7 +496,7 @@
               jumpType: i.JumpTypes.INSTANT,
             });
         },
-        R = (e, t) => {
+        v = (e, t) => {
           u.default.dispatch({
             type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
             guildId: e,
@@ -516,7 +516,7 @@
             }),
             (0, d.transitionToChannel)(t);
         },
-        v = (e, t) => {
+        S = (e, t) => {
           if (
             (u.default.dispatch({
               type: "COMPLETE_NEW_MEMBER_ACTION",
@@ -604,16 +604,16 @@
             return u;
           },
           newMemberActionFromServer: function () {
-            return S;
-          },
-          resourceChannelFromServer: function () {
             return m;
           },
-          settingsFromServer: function () {
+          resourceChannelFromServer: function () {
             return R;
           },
-          settingsToServer: function () {
+          settingsFromServer: function () {
             return v;
+          },
+          settingsToServer: function () {
+            return S;
           },
           actionsFromServer: function () {
             return C;
@@ -631,7 +631,7 @@
             return M;
           },
           isChannelValidForNewMemberAction: function () {
-            return L;
+            return y;
           },
         });
       var l,
@@ -649,7 +649,7 @@
         N = 30,
         T = 200,
         h = 7;
-      function S(e) {
+      function m(e) {
         var t;
         return {
           channelId: e.channel_id,
@@ -667,7 +667,7 @@
           icon: null !== (t = e.icon) && void 0 !== t ? t : null,
         };
       }
-      function m(e) {
+      function R(e) {
         var t, n;
         return {
           channelId: e.channel_id,
@@ -684,7 +684,7 @@
           icon: null !== (n = e.icon) && void 0 !== n ? n : null,
         };
       }
-      function R(e) {
+      function v(e) {
         if (null == e) return null;
         let {
             welcome_message: t,
@@ -697,12 +697,12 @@
             .filter(e =>
               (0, i.isNotNullish)(r.default.getChannel(e.channel_id))
             )
-            .map(S),
+            .map(m),
           o = l
             .filter(e =>
               (0, i.isNotNullish)(r.default.getChannel(e.channel_id))
             )
-            .map(m);
+            .map(R);
         return {
           welcomeMessage: a,
           newMemberActions: d,
@@ -710,7 +710,7 @@
           enabled: u,
         };
       }
-      function v(e, t) {
+      function S(e, t) {
         var n, l;
         if (null == t) return null;
         let {
@@ -861,7 +861,7 @@
           a.default.canEveryoneRole(d.Permissions.VIEW_CHANNEL, e)
         );
       }
-      function L(e) {
+      function y(e) {
         switch (e.type) {
           case d.ChannelTypes.GUILD_TEXT:
           case d.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -872,66 +872,6 @@
             return !1;
         }
       }
-    },
-    675305: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return o;
-          },
-        }),
-        n("222007");
-      var l = n("446674"),
-        u = n("913144");
-      let r = {},
-        i = {},
-        a = new Set();
-      class d extends l.default.Store {
-        getCompletedActions(e) {
-          return null == e ? null : i[e];
-        }
-        hasCompletedActionForChannel(e, t) {
-          let n = this.getCompletedActions(e);
-          return null != n && null != n[t];
-        }
-        getState(e) {
-          return null == e ? {} : { completedActions: i[e], loading: a.has(e) };
-        }
-      }
-      d.displayName = "GuildOnboardingMemberActionStore";
-      var o = new d(u.default, {
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
-          let { guildId: t } = e;
-          a.add(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function (e) {
-          let { memberActions: t, guildId: n } = e;
-          if (null == t) {
-            i[n] = r;
-            return;
-          }
-          (i[n] = t), a.delete(n);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function (e) {
-          let { guildId: t } = e;
-          a.delete(t);
-        },
-        GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function (e) {
-          let { guildId: t } = e;
-          if (null == i[t]) return !1;
-          delete i[t];
-        },
-        COMPLETE_NEW_MEMBER_ACTION: function (e) {
-          let { guildId: t, channelId: n } = e;
-          i = { ...i, [t]: { ...i[t], [n]: !0 } };
-        },
-        GUILD_DELETE: function (e) {
-          let { guild: t } = e;
-          if (null == i[t.id]) return !1;
-          delete i[t.id];
-        },
-      });
     },
     795228: function (e, t, n) {
       "use strict";
@@ -1278,7 +1218,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return S;
           },
           useActiveEvent: function () {
             return C;
@@ -1296,10 +1236,10 @@
             return M;
           },
           useFirstActiveEventChannel: function () {
-            return L;
+            return y;
           },
           useImminentUpcomingGuildEvents: function () {
-            return y;
+            return L;
           },
         }),
         n("222007"),
@@ -1319,16 +1259,16 @@
         N = n("466148"),
         T = n("822516"),
         h = n("745049"),
-        S = n("49111");
-      let m = [],
-        R = 15 * s.default.Millis.MINUTE;
-      function v(e, t) {
+        m = n("49111");
+      let R = [],
+        v = 15 * s.default.Millis.MINUTE;
+      function S(e, t) {
         return (0, u.useStateFromStoresArray)(
           [d.default, r.default, E.default, o.default, i.default, a.default],
           () => {
             let n = d.default.getGuild(e);
-            if (null == n) return m;
-            let l = n.hasFeature(S.GuildFeatures.HUB);
+            if (null == n) return R;
+            let l = n.hasFeature(m.GuildFeatures.HUB);
             if (l) {
               var u, s;
               let e =
@@ -1360,7 +1300,7 @@
               let t = e.channel_id;
               if (null == t) return !0;
               let n = i.default.getChannel(t);
-              return o.default.can(S.Permissions.VIEW_CHANNEL, n);
+              return o.default.can(m.Permissions.VIEW_CHANNEL, n);
             });
           },
           [t, e]
@@ -1371,7 +1311,7 @@
           [E.default, i.default, o.default],
           () => {
             let t = i.default.getChannel(e);
-            if (!o.default.can(S.Permissions.VIEW_CHANNEL, t)) return null;
+            if (!o.default.can(m.Permissions.VIEW_CHANNEL, t)) return null;
             let n = null == t ? void 0 : t.guild_id;
             if (null == n) return null;
             let l = E.default.getGuildScheduledEventsByIndex(
@@ -1418,7 +1358,7 @@
                     return !1;
                   if (null == e.channel_id) return !0;
                   let t = i.default.getChannel(e.channel_id);
-                  return o.default.can(S.Permissions.VIEW_CHANNEL, t);
+                  return o.default.can(m.Permissions.VIEW_CHANNEL, t);
                 });
               },
               [t]
@@ -1468,7 +1408,7 @@
                 return !1;
               if (null == e.channel_id) return !0;
               let t = i.default.getChannel(e.channel_id);
-              return o.default.can(S.Permissions.VIEW_CHANNEL, t);
+              return o.default.can(m.Permissions.VIEW_CHANNEL, t);
             });
           },
           [e]
@@ -1484,7 +1424,7 @@
           [e]
         );
       }
-      function L(e) {
+      function y(e) {
         return (0, u.useStateFromStores)(
           [i.default, E.default],
           () => {
@@ -1501,12 +1441,12 @@
           [e]
         );
       }
-      function y(e) {
+      function L(e) {
         let [t, n] = l.useState(() => Date.now());
         l.useEffect(() => {
           let e = setInterval(() => {
             n(Date.now());
-          }, R);
+          }, v);
           return () => clearInterval(e);
         }, []);
         let r = (0, u.useStateFromStores)(
@@ -1551,10 +1491,10 @@
             return f;
           },
           getRecurrenceOptions: function () {
-            return m;
+            return R;
           },
           getInitialEventStartDate: function () {
-            return R;
+            return v;
           },
           getEventTimeData: function () {
             return g;
@@ -1563,10 +1503,10 @@
             return M;
           },
           getScheduleForRecurrenceWithException: function () {
-            return L;
+            return y;
           },
           getScheduleFromEventData: function () {
-            return y;
+            return L;
           },
           areDatesIdentical: function () {
             return A;
@@ -1640,8 +1580,8 @@
           i.RRule.FR.weekday,
           i.RRule.SA.weekday,
         ],
-        S = new Set([0, 6]);
-      function m(e) {
+        m = new Set([0, 6]);
+      function R(e) {
         let t = e.toDate(),
           n = Math.ceil(t.getDate() / 7),
           l = e.format("dddd"),
@@ -1680,7 +1620,7 @@
             },
           ];
         return (
-          !S.has(t.getDay()) &&
+          !m.has(t.getDay()) &&
             u.push({
               value: o.RecurrenceOptions.WEEKDAY_ONLY,
               label: s.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS,
@@ -1688,12 +1628,12 @@
           u
         );
       }
-      let R = () => {
+      let v = () => {
           let e = r().add(1, "hour"),
             t = e.hour();
           return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
         },
-        v = (e, t) =>
+        S = (e, t) =>
           e.format(
             e.get("years") === t.get("years")
               ? "ddd MMM Do \xb7 LT"
@@ -1701,7 +1641,7 @@
           ),
         C = (e, t) => {
           let n = e.diff(t, "days");
-          return n > 1 ? v(e, t) : e.calendar(t);
+          return n > 1 ? S(e, t) : e.calendar(t);
         };
       function g(e, t, n) {
         null == n && (n = r());
@@ -1711,7 +1651,7 @@
         return {
           startDateTimeString: C(l, n),
           endDateTimeString:
-            null != u ? (i ? u.format("LT") : v(u, n)) : void 0,
+            null != u ? (i ? u.format("LT") : S(u, n)) : void 0,
           currentOrPastEvent: l <= n,
           upcomingEvent: l <= r().add(1, "hour"),
           withinStartWindow: l <= r().add(15, "minute"),
@@ -1741,7 +1681,7 @@
               : void 0;
         return { startDate: l, endDate: u };
       }
-      function L(e, t) {
+      function y(e, t) {
         var n;
         if (null == t) return e;
         let l =
@@ -1754,7 +1694,7 @@
           endDate: null != l ? r(l) : void 0,
         };
       }
-      function y(e) {
+      function L(e) {
         return I(e.scheduledStartTime, e.scheduledEndTime);
       }
       function A(e, t) {
@@ -2067,4 +2007,4 @@
     },
   },
 ]);
-//# sourceMappingURL=bd6a436eecc3c3649e12.js.map
+//# sourceMappingURL=0aaa3ed2cb9fd851a1df.js.map

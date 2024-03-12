@@ -82,7 +82,7 @@
           } = (0, i.usePaymentContext)();
         if (null == u || 0 === u.length) return null;
         let S = u.flatMap(e => {
-          let t = e.useBreadcrumbLabel();
+          let t = e.useBreadcrumbLabel(r);
           return null != t ? { id: e.id, label: t } : [];
         });
         return 0 === S.length
@@ -673,4 +673,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b7f892aa2c5723dc49b9.js.map
+//# sourceMappingURL=d7180ebdc987c440d7b9.js.map

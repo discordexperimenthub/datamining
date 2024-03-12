@@ -488,7 +488,7 @@
           } = (0, o.usePaymentContext)();
         if (null == c || 0 === c.length) return null;
         let p = c.flatMap(e => {
-          let t = e.useBreadcrumbLabel();
+          let t = e.useBreadcrumbLabel(a);
           return null != t ? { id: e.id, label: t } : [];
         });
         return 0 === p.length
@@ -2133,4 +2133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77655.f04cc4c5b06c3338e6d8.js.map
+//# sourceMappingURL=77655.f7ee822fbaa3cd69980f.js.map

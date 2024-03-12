@@ -130,11 +130,11 @@
         _ = n("782340"),
         E = n("872773"),
         T = n("584503"),
-        A = n("45656");
-      function P(e) {
+        P = n("45656");
+      function A(e) {
         let { className: t } = e,
           n = (0, o.default)(),
-          l = (0, i.isThemeDark)(n) ? T : A;
+          l = (0, i.isThemeDark)(n) ? T : P;
         return (0, a.jsxs)("div", {
           className: r(E.container, t),
           children: [
@@ -170,7 +170,7 @@
         });
       }
       function m() {
-        return (0, a.jsx)(P, { className: E.settings });
+        return (0, a.jsx)(A, { className: E.settings });
       }
       function N(e) {
         let { onClose: t } = e;
@@ -183,7 +183,7 @@
             }),
             (0, a.jsx)(u.ModalContent, {
               className: E.blockedPaymentsModalContent,
-              children: (0, a.jsx)(P, { className: E.modal }),
+              children: (0, a.jsx)(A, { className: E.modal }),
             }),
           ],
         });
@@ -293,16 +293,16 @@
       n.r(t),
         n.d(t, {
           ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG: function () {
-            return f;
-          },
-          ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG: function () {
             return I;
           },
+          ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG: function () {
+            return S;
+          },
           REVIEW_STEP_CONFIG: function () {
-            return E;
+            return T;
           },
           ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG: function () {
-            return T;
+            return P;
           },
           SHARED_STEP_CONFIGS: function () {
             return A;
@@ -317,12 +317,13 @@
         u = n("724269"),
         o = n("7127"),
         d = n("99836"),
-        c = n("217796");
-      let f = {
+        c = n("217796"),
+        f = n("782340");
+      let I = {
           key: null,
           renderStep: e => (0, a.jsx)(c.OneTimePaymentPredicateStep, { ...e }),
         },
-        I = {
+        S = {
           key: r.Step.ADD_PAYMENT_STEPS,
           renderStep: e =>
             (0, a.jsx)(a.Fragment, {
@@ -345,23 +346,27 @@
             }),
           options: { renderHeader: !0 },
         },
-        S = {
+        _ = {
           key: r.Step.AWAITING_PURCHASE_TOKEN_AUTH,
           renderStep: () => (0, a.jsx)(u.default, {}),
         },
-        _ = {
+        E = {
           key: r.Step.AWAITING_AUTHENTICATION,
           renderStep: () => (0, a.jsx)(i.default, {}),
-        },
-        E = {
-          key: r.Step.REVIEW,
-          renderStep: e => (0, a.jsx)(d.PaymentModalReviewStep, { ...e }),
+          options: { renderHeader: !0 },
         },
         T = {
+          key: r.Step.REVIEW,
+          renderStep: e => (0, a.jsx)(d.PaymentModalReviewStep, { ...e }),
+          options: {
+            useBreadcrumbLabel: () => f.default.Messages.BILLING_STEP_REVIEW,
+          },
+        },
+        P = {
           key: r.Step.CONFIRM,
           renderStep: e => (0, a.jsx)(o.PaymentModalConfirmStep, { ...e }),
         },
-        A = [S, _];
+        A = [_, E];
     },
     217796: function (e, t, n) {
       "use strict";
@@ -391,9 +396,9 @@
             hasFetchedPaymentSources: _,
             application: E,
             skusById: T,
-            selectedSkuId: A,
+            selectedSkuId: P,
           } = (0, o.usePaymentContext)(),
-          { isGift: P } = (0, u.useGiftContext)(),
+          { isGift: A } = (0, u.useGiftContext)(),
           [m, N] = l.useState(!0);
         return (l.useEffect(() => {
           let e = null != E;
@@ -401,10 +406,10 @@
         }, [I, _, E]),
         l.useEffect(() => {
           if (m || r) return;
-          s(null != A, "Expected selectedSkuId");
-          let e = T[A];
+          s(null != P, "Expected selectedSkuId");
+          let e = T[P];
           if (
-            P &&
+            A &&
             (null == e ? void 0 : e.productLine) ===
               f.SKUProductLines.COLLECTIBLES
           ) {
@@ -416,7 +421,7 @@
             return;
           }
           t(d.Step.REVIEW);
-        }, [m, r, t, S, P, T, A]),
+        }, [m, r, t, S, A, T, P]),
         m)
           ? (0, a.jsx)(c.default, {})
           : r
@@ -502,8 +507,8 @@
         _ = n("286350"),
         E = n("153727"),
         T = n("39065"),
-        A = n("628738"),
-        P = n("650484"),
+        P = n("628738"),
+        A = n("650484"),
         m = n("367767"),
         N = n("680439"),
         C = n("782340"),
@@ -514,8 +519,8 @@
             backButtonEligible: n,
             prevStep: r,
             showGuildPicker: p,
-            handleStepChange: h,
-            trialFooterMessageOverride: L,
+            handleStepChange: L,
+            trialFooterMessageOverride: h,
             reviewWarningMessage: R,
             planGroup: M,
             openInvoiceId: g,
@@ -567,9 +572,9 @@
         }, [G]);
         let es = l.useCallback(
             e => {
-              k(e), h(S.Step.CONFIRM);
+              k(e), L(S.Step.CONFIRM);
             },
-            [h, k]
+            [L, k]
           ),
           ei = l.useCallback(
             e => {
@@ -579,11 +584,11 @@
           ),
           eu = l.useRef(null);
         return Z === _.PurchaseState.PURCHASING
-          ? (0, a.jsx)(A.default, {})
+          ? (0, a.jsx)(P.default, {})
           : (0, a.jsxs)(a.Fragment, {
               children: [
                 (0, a.jsx)(E.default, { className: O.breadcrumbs }),
-                (0, a.jsxs)(P.PaymentPortalBody, {
+                (0, a.jsxs)(A.PaymentPortalBody, {
                   children: [
                     (0, a.jsx)(m.default, {}),
                     er &&
@@ -639,11 +644,11 @@
                       priceOptions: H,
                       currencies: j,
                       onCurrencyChange: e => W(e),
-                      handlePaymentSourceAdd: () => h(S.Step.ADD_PAYMENT_STEPS),
+                      handlePaymentSourceAdd: () => L(S.Step.ADD_PAYMENT_STEPS),
                       setHasAcceptedTerms: q,
                       legalTermsNodeRef: eu,
                       hasLegalTermsFlash: ee,
-                      trialFooterMessageOverride: L,
+                      trialFooterMessageOverride: h,
                       reviewWarningMessage: R,
                       metadata: p || er ? void 0 : Q,
                       purchaseState: Z,
@@ -652,11 +657,11 @@
                     }),
                   ],
                 }),
-                (0, a.jsx)(P.PaymentPortalFooter, {
+                (0, a.jsx)(A.PaymentPortalFooter, {
                   children: (0, a.jsx)(T.default, {
                     premiumSubscription: null != B ? B : null,
                     setPurchaseState: X,
-                    onBack: () => null != r && h(r),
+                    onBack: () => null != r && L(r),
                     onNext: es,
                     onPurchaseError: e => z(e),
                     legalTermsNodeRef: eu,
@@ -705,13 +710,13 @@
             application: t,
             listing: n,
             handleStepChange: T,
-            handleClose: A,
+            handleClose: P,
           } = e,
-          { subscriptionMetadataRequest: P } = (0, c.usePaymentContext)(),
+          { subscriptionMetadataRequest: A } = (0, c.usePaymentContext)(),
           m = (0, s.default)(_.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
           N = (0, i.isApplicationUserSubscription)(n.sku_flags),
           C = (0, r.useStateFromStores)([d.default], () =>
-            d.default.getGuild(null == P ? void 0 : P.guild_id)
+            d.default.getGuild(null == A ? void 0 : A.guild_id)
           ),
           O = l.useCallback(() => T(f.Step.REVIEW), [T]);
         return (0, a.jsxs)(a.Fragment, {
@@ -723,7 +728,7 @@
                       E.default.Messages
                         .APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_CONTINUE_BUTTON,
                     onConfirm: O,
-                    onCancel: A,
+                    onCancel: P,
                     title:
                       E.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_BENEFITS_LITE_TITLE_V2.format(
                         { tier: n.name }
@@ -761,7 +766,7 @@
             !m &&
               (0, a.jsx)(S.PaymentPortalFooter, {
                 children: (0, a.jsx)(I.default, {
-                  onBack: A,
+                  onBack: P,
                   backText:
                     E.default.Messages
                       .APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CANCEL_BUTTON,
@@ -801,8 +806,8 @@
         _ = n("85336"),
         E = n("159149"),
         T = n("650484"),
-        A = n("367767"),
-        P = n("101703"),
+        P = n("367767"),
+        A = n("101703"),
         m = n("782340");
       function N(e) {
         let t,
@@ -815,16 +820,16 @@
             onSubscriptionConfirmation: p,
           } = e,
           {
-            selectedPlan: h,
-            selectedSkuId: L,
+            selectedPlan: L,
+            selectedSkuId: h,
             step: R,
             updatedSubscription: M,
             readySlideId: g,
           } = (0, S.usePaymentContext)();
-        s(null != h, "Expected plan to selected"),
-          s(null != L, "Expected selectedSkuId"),
+        s(null != L, "Expected plan to selected"),
+          s(null != h, "Expected selectedSkuId"),
           s(null != R, "Step should be set");
-        let b = (0, u.default)(P.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
+        let b = (0, u.default)(A.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
           { createMultipleConfettiAt: U } = l.useContext(
             d.ConfettiCannonContext
           ),
@@ -926,7 +931,7 @@
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(T.PaymentPortalBody, {
-                children: [(0, a.jsx)(A.default, {}), t],
+                children: [(0, a.jsx)(P.default, {}), t],
               }),
               null != n && (0, a.jsx)(T.PaymentPortalFooter, { children: n }),
             ],
@@ -1057,30 +1062,30 @@
           {
             blockedPayments: E,
             setStep: T,
-            hasFetchedSubscriptions: A,
-            hasFetchedSubscriptionPlans: P,
+            hasFetchedSubscriptions: P,
+            hasFetchedSubscriptionPlans: A,
             currencyLoading: m,
             selectedSkuId: N,
             setSelectedSkuId: C,
             setSelectedPlanId: O,
             priceOptions: p,
-            setSubscriptionMetadataRequest: h,
+            setSubscriptionMetadataRequest: L,
           } = (0, d.usePaymentContext)(),
-          { isGift: L } = (0, o.useGiftContext)(),
-          [R, M] = l.useState(!A || !P || m);
+          { isGift: h } = (0, o.useGiftContext)(),
+          [R, M] = l.useState(!P || !A || m);
         return (l.useEffect(() => {
-          M(!A || !P || m);
-        }, [m, P, A]),
+          M(!P || !A || m);
+        }, [m, A, P]),
         l.useEffect(() => {
-          null != I && h({ guild_id: I });
-        }, [I, h]),
+          null != I && L({ guild_id: I });
+        }, [I, L]),
         l.useEffect(() => {
           O(n);
           let e = null != n ? s.default.get(n) : null;
           !R &&
             !E &&
             (S(t => {
-              let n = null != e ? (0, u.getPrice)(e.id, !1, L, p) : void 0,
+              let n = null != e ? (0, u.getPrice)(e.id, !1, h, p) : void 0,
                 a = {
                   ...t,
                   subscription_plan_id: null == e ? void 0 : e.id,
@@ -1093,7 +1098,7 @@
               );
             }),
             null != e && (C(null == e ? void 0 : e.skuId), T(t)));
-        }, [E, n, L, R, p, N, S, O, C, T, t]),
+        }, [E, n, h, R, p, N, S, O, C, T, t]),
         R)
           ? (0, a.jsx)(c.default, {})
           : E
@@ -1166,14 +1171,14 @@
           ),
           [S, _] = l.useState(c),
           E = l.useRef((0, u.getGiftAnimationData)(t, S)),
-          [T, A] = l.useState(null == f),
-          [P, m] = l.useState(!1),
+          [T, P] = l.useState(null == f),
+          [A, m] = l.useState(!1),
           [N, C] = l.useState(-1),
           O = () => {
             (E.current = (0, u.getGiftAnimationData)(t, S)), C(e => e + 1);
           },
           p = () => {
-            A(!1), m(!0), C(-1), _(c);
+            P(!1), m(!0), C(-1), _(c);
           };
         l.useEffect(() => {
           null == f && _(c);
@@ -1186,11 +1191,11 @@
             O();
           }, [t, f]),
           l.useEffect(() => {
-            (!P || null == f) && O();
+            (!A || null == f) && O();
           }, [S]),
           l.useEffect(() => {
-            P && (A(null == f), m(!1), O());
-          }, [P]);
+            A && (P(null == f), m(!1), O());
+          }, [A]);
         if (!o.PremiumGiftStyles.hasOwnProperty(t))
           throw Error("Unexpected giftStyle ".concat(t));
         return (0, a.jsx)(i.default, {
@@ -1201,7 +1206,7 @@
           onComplete:
             null != f
               ? () => {
-                  null != f && (_(f), A(!0));
+                  null != f && (_(f), P(!0));
                 }
               : void 0,
           loop: T,
@@ -1835,4 +1840,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7ad061bf61621bf79723.js.map
+//# sourceMappingURL=c9d3338e0bb45802bb8c.js.map

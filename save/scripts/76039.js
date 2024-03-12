@@ -10919,7 +10919,7 @@
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continue",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Didn't recieve anything?",
+          "Didn't receive anything?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Resend email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -26323,8 +26323,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274361", ", Version Hash: ")
-          .concat("30198daaa7aafeaec9a26fd3bec08b58bac57d38")
+          .concat("274372", ", Version Hash: ")
+          .concat("84bb7284241ad396f395a11b576bb2afac06289e")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29426,12 +29426,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274361"), "274361"));
+        let _ = parseInt(((e = "274372"), "274372"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274361"
+                "274372"
               )
             ),
             (_ = 0)),
@@ -51972,4 +51972,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.168cb1e4c77f8ee93c8f.js.map
+//# sourceMappingURL=76039.4880703e20cc10ce4cd6.js.map

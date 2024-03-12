@@ -214,8 +214,8 @@
             giftRecipient: A,
             giftCode: k,
             hasSentMessage: L,
-            isSendingMessage: v,
-            sendGiftMessage: O,
+            isSendingMessage: O,
+            sendGiftMessage: v,
           } = (0, c.useGiftContext)();
         l(null != g, "Expected plan to selected"),
           l(null != y, "Expected selectedSkuId"),
@@ -230,15 +230,15 @@
               null == A ||
               null == k ||
               L ||
-              v ||
+              O ||
               (0, o.shouldShowCustomGiftExperience)(A)
             )
               return;
             let e = u.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
               location: "36b986_1",
             }).enabled;
-            e && O({ onSubscriptionConfirmation: E });
-          }, [O, j, A, k, L, v, E]),
+            e && v({ onSubscriptionConfirmation: E });
+          }, [v, j, A, k, L, O, E]),
           (s =
             null != _
               ? _(g, R, N)
@@ -349,8 +349,8 @@
             renderHeader: A,
             applicationId: k,
             guildId: L,
-            referralTrialOfferId: v,
-            skuId: O,
+            referralTrialOfferId: O,
+            skuId: v,
             returnRef: R,
           } = e,
           { analyticsLocations: B } = (0, o.default)();
@@ -393,14 +393,14 @@
           renderHeader: A,
           applicationId: k,
           guildId: L,
-          referralTrialOfferId: v,
-          skuId: O,
+          referralTrialOfferId: O,
+          skuId: v,
           shakeWhilePurchasing: !0,
           isLargeModal: D,
           returnRef: R,
         });
       }
-      function v(e) {
+      function O(e) {
         let { startedPaymentFlowWithPaymentSourcesRef: t, selectedSkuId: n } =
             (0, m.usePaymentContext)(),
           { isGift: r } = (0, f.useGiftContext)();
@@ -411,7 +411,7 @@
           startedPaymentFlowWithPaymentSources: t.current,
         });
       }
-      function O(e) {
+      function v(e) {
         let {
             initialPlanId: t,
             handleStepChange: n,
@@ -420,7 +420,7 @@
           { paymentSources: s, selectedSkuId: l } = (0, m.usePaymentContext)(),
           { isGift: u } = (0, f.useGiftContext)(),
           a = (0, N.default)({ isGift: u, skuId: l, referralTrialOfferId: i }),
-          o = v(a);
+          o = O(a);
         return (0, r.jsx)(r.Fragment, {
           children: (0, r.jsx)(E.PaymentModalAddPaymentStep, {
             ...e,
@@ -458,7 +458,7 @@
           options: {
             renderHeader: !0,
             useBreadcrumbLabel: e => {
-              let t = v(e);
+              let t = O(e);
               return t ? null : A.default.Messages.BILLING_STEP_SELECT_PLAN;
             },
           },
@@ -466,11 +466,11 @@
         {
           key: S.Step.ADD_PAYMENT_STEPS,
           renderStep: e =>
-            (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(O, { ...e }) }),
+            (0, r.jsx)(r.Fragment, { children: (0, r.jsx)(v, { ...e }) }),
           options: {
             renderHeader: !0,
             useBreadcrumbLabel: e => {
-              let t = v(e);
+              let t = O(e);
               return t ? null : A.default.Messages.BILLING_STEP_PAYMENT;
             },
           },
@@ -493,7 +493,7 @@
           options: {
             renderHeader: !0,
             useBreadcrumbLabel: e => {
-              let t = v(e);
+              let t = O(e);
               return t
                 ? A.default.Messages.BILLING_STEP_PLAN_AND_PAYMENT
                 : A.default.Messages.BILLING_STEP_REVIEW;
@@ -582,8 +582,8 @@
         A = n("367767"),
         k = n("49111"),
         L = n("646718"),
-        v = n("782340"),
-        O = n("508233");
+        O = n("782340"),
+        v = n("508233");
       function R(e) {
         var t, n, s;
         let {
@@ -693,7 +693,7 @@
         let ex =
             null !== (s = null == e_ ? void 0 : e_.message) && void 0 !== s
               ? s
-              : v.default.Messages.ERROR_GENERIC_TITLE,
+              : O.default.Messages.ERROR_GENERIC_TITLE,
           eC = eo && null == e_,
           eI = eo && null != e_;
         return eC && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null
@@ -709,7 +709,7 @@
                   children: [
                     eC &&
                       (0, r.jsx)("hr", {
-                        className: O.planSelectSeparatorUpper,
+                        className: v.planSelectSeparatorUpper,
                       }),
                     (0, r.jsx)(S.default, { isGift: Q, plan: V }),
                     (0, r.jsx)(A.default, {}),
@@ -733,12 +733,12 @@
                       (0, r.jsxs)(r.Fragment, {
                         children: [
                           (0, r.jsx)("hr", {
-                            className: O.planSelectSeparatorLower,
+                            className: v.planSelectSeparatorLower,
                           }),
                           (0, r.jsx)(a.Text, {
                             variant: "text-xs/normal",
                             children:
-                              v.default.Messages.BILLING_TRIAL_CANCEL_ANYTIME_LINK.format(
+                              O.default.Messages.BILLING_TRIAL_CANCEL_ANYTIME_LINK.format(
                                 {
                                   link: I.default.getArticleURL(
                                     k.HelpdeskArticles
@@ -806,10 +806,11 @@
             activeSubscription: l,
             startedPaymentFlowWithPaymentSourcesRef: o,
             setSelectedPlanId: d,
+            priceOptions: _,
           } = (0, f.usePaymentContext)(),
-          { isGift: _ } = (0, p.useGiftContext)(),
-          x = (0, a.usePremiumTrialOffer)(i),
-          C = (0, u.useIsInPremiumOfferExperience)();
+          { isGift: x } = (0, p.useGiftContext)(),
+          C = (0, a.usePremiumTrialOffer)(i),
+          T = (0, u.useIsInPremiumOfferExperience)();
         return (0, r.jsx)(I, {
           selectSku: e =>
             (function (e) {
@@ -853,18 +854,25 @@
               newSkuId: e,
               setSelectedSkuId: s,
               handleStepChange: t,
-              isGift: _,
-              userTrialOffer: x,
+              isGift: x,
+              userTrialOffer: C,
               startedPaymentFlowWithPaymentSources: o.current,
               setSelectedPlanId: d,
             }),
           onClose: n,
-          isGift: _,
-          inOfferExperience: C,
+          isGift: x,
+          inOfferExperience: T,
+          priceOptions: _,
         });
       }
       function I(e) {
-        let { selectSku: t, onClose: n, isGift: i, inOfferExperience: u } = e;
+        let {
+          selectSku: t,
+          onClose: n,
+          isGift: i,
+          inOfferExperience: u,
+          priceOptions: a,
+        } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsxs)(l.ModalHeader, {
@@ -888,6 +896,7 @@
                 (0, r.jsx)(d.default, {
                   onSelectSku: e => t((0, c.castPremiumSubscriptionAsSkuId)(e)),
                   isGift: i,
+                  priceOptions: a,
                 }),
               ],
             }),
@@ -1043,7 +1052,7 @@
         l = n("646718"),
         u = n("932865");
       function a(e) {
-        let { onClick: t, isGift: n } = e;
+        let { onClick: t, isGift: n, priceOptions: l } = e;
         return (0, r.jsx)(i.Clickable, {
           onClick: t,
           style: { cursor: "pointer" },
@@ -1054,11 +1063,12 @@
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
+            priceOptions: l,
           }),
         });
       }
       function o(e) {
-        let { onClick: t, isGift: n } = e;
+        let { onClick: t, isGift: n, priceOptions: l } = e;
         return (0, r.jsx)(i.Clickable, {
           onClick: t,
           style: { cursor: "pointer" },
@@ -1068,20 +1078,23 @@
             showWumpus: !0,
             showYearlyPrice: !0,
             isGift: n,
+            priceOptions: l,
           }),
         });
       }
       var d = function (e) {
-        let { onSelectSku: t, isGift: n } = e;
+        let { onSelectSku: t, isGift: n, priceOptions: i } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(a, {
               onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
               isGift: n,
+              priceOptions: i,
             }),
             (0, r.jsx)(o, {
               onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
               isGift: n,
+              priceOptions: i,
             }),
           ],
         });
@@ -1133,4 +1146,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15262.c45d6ec80385ab313cdf.js.map
+//# sourceMappingURL=15262.bf1a2fc39c05f55d25ac.js.map

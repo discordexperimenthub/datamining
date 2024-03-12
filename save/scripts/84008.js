@@ -1127,7 +1127,7 @@
           children: [
             (0, l.jsxs)("div", {
               className: et.shop,
-              ref: eg,
+              ref: t ? eg : void 0,
               children: [
                 t
                   ? null
@@ -1170,7 +1170,7 @@
                         t
                           ? (0, l.jsx)(N.default, {
                               title: ee.default.Messages.COLLECTIBLES_SHOP,
-                              ref: eh,
+                              ref: t ? eh : void 0,
                             })
                           : null,
                         !eC && (0, l.jsx)(ea, { isFullScreen: t }),
@@ -3045,4 +3045,4 @@
     },
   },
 ]);
-//# sourceMappingURL=11f8579b78e422386834.js.map
+//# sourceMappingURL=9be09170b02c406dabac.js.map

@@ -55124,27 +55124,6 @@ html .progress__4ef76 {
   align-items: center;
   text-align: center;
 }
-.confirmationContainer__3c615 {
-  margin-top: 56px;
-}
-.confirmationHeader__2f254 {
-  text-align: center;
-  margin-bottom: 8px;
-  color: var(--header-secondary);
-}
-.confirmationHeader__2f254 strong {
-  color: var(--header-primary);
-}
-.confirmationSubtitle__5043d {
-  text-align: center;
-}
-.buttonContainer_c2452b {
-  display: grid;
-  padding-top: 24px;
-  grid-gap: 8px;
-  gap: 8px;
-  width: 100%;
-}
 .nitroIcon_bd3594 {
   width: 16px;
   height: 16px;
@@ -96771,21 +96750,21 @@ html .invoiceCancelRow_a8669b {
   background-color: var(--background-secondary);
   border-radius: 3px;
 }
-.guildPickerContainer__5754a:not(:last-child) {
+.guildPickerContainer_feed7d:not(:last-child) {
   margin-bottom: 8px;
   padding-top: 16px;
 }
-.guildPickerDescription_c5e28a {
+.guildPickerDescription_e2bc20 {
   margin-bottom: 8px;
 }
-.breadcrumbs__4fa23:after {
+.breadcrumbs_b587a9:after {
   content: "";
   display: block;
   border-bottom: 1px solid var(--background-modifier-accent);
   margin-top: 16px;
   padding-bottom: 0;
 }
-.userSubscriptionDetailsContainer__11ba5 {
+.userSubscriptionDetailsContainer__5e335 {
   padding-top: 16px;
 }
 .answerRow__9fc86 {
@@ -99602,6 +99581,27 @@ html .invoiceCancelRow_a8669b {
 }
 .img__8dbc5 {
   padding: 0 24px 24px;
+}
+.confirmationContainer__3c615 {
+  margin-top: 56px;
+}
+.confirmationHeader__2f254 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--header-secondary);
+}
+.confirmationHeader__2f254 strong {
+  color: var(--header-primary);
+}
+.confirmationSubtitle__5043d {
+  text-align: center;
+}
+.buttonContainer_c2452b {
+  display: grid;
+  padding-top: 24px;
+  grid-gap: 8px;
+  gap: 8px;
+  width: 100%;
 }
 .headerContainer_d9fdf2 {
   flex-direction: column;
@@ -110543,4 +110543,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.360c88427b162ff0c87c.css.map*/
+/*# sourceMappingURL=app.55e84e7e949c9aaaf03e.css.map*/

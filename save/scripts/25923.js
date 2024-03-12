@@ -3547,22 +3547,19 @@
       n.r(t),
         n.d(t, {
           getNowPlayingAnalytics: function () {
-            return u;
+            return i;
           },
         }),
         n("808653"),
         n("446674");
-      var l = n("350522"),
+      var l = n("389817"),
         a = n("392453"),
-        s = n("471671"),
-        i = n("49111"),
-        r = n("988268");
-      function u() {
-        let e = s.default.windowSize().width,
-          t = l.default.hasConsented(i.Consents.PERSONALIZATION),
-          n = a.default.nowPlayingCards;
-        return (function (e, t, n) {
-          let l = e.reduce((e, t) => {
+        s = n("988268");
+      function i() {
+        let e = (0, l.getNowPlayingVisible)(),
+          t = a.default.nowPlayingCards;
+        return (function (e, t) {
+          let n = e.reduce((e, t) => {
             var n;
             let l =
               null !==
@@ -3570,7 +3567,7 @@
                   .filter(
                     e =>
                       null != e.game.name &&
-                      e.game.type === r.ApplicationTypes.GAME
+                      e.game.type === s.ApplicationTypes.GAME
                   )
                   .map(e => e.game.name)) && void 0 !== n
                 ? n
@@ -3578,11 +3575,11 @@
             return e.concat(l);
           }, []);
           return {
-            now_playing_visible: t > 1200 && n,
+            now_playing_visible: t,
             now_playing_num_cards: e.length,
-            now_playing_games_detected: l,
+            now_playing_games_detected: n,
           };
-        })(n, e, t);
+        })(t, e);
       }
     },
     951039: function (e, t, n) {
@@ -9806,16 +9803,13 @@
                       className: i(I.headerContent, I.primaryInfo),
                       children: [
                         (0, l.jsx)(p.default, { guild: x, isBannerVisible: n }),
-                        (0, l.jsxs)(o.Text, {
+                        x.id === E.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}),
+                        (0, l.jsx)(o.Text, {
                           color: "none",
                           variant: "text-md/semibold",
                           lineClamp: 1,
                           className: I.name,
-                          children: [
-                            x.id === E.FAVORITES_RAW_GUILD_ID &&
-                              (0, l.jsx)(N, {}),
-                            x.toString(),
-                          ],
+                          children: x.toString(),
                         }),
                         null != f &&
                           (0, l.jsx)(o.Clickable, {
@@ -17129,6 +17123,20 @@
         );
       }
     },
+    636174: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ICON_SIZE: function () {
+            return l;
+          },
+          NOW_PLAYING_MINIMUM_WIDTH: function () {
+            return a;
+          },
+        });
+      let l = 64,
+        a = 1200;
+    },
     67139: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -17194,6 +17202,41 @@
             ? void 0
             : t.call(l, e)) !== !1
         );
+      }
+    },
+    389817: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          useNowPlayingVisible: function () {
+            return u;
+          },
+          getNowPlayingVisible: function () {
+            return o;
+          },
+        });
+      var l = n("446674"),
+        a = n("350522"),
+        s = n("471671"),
+        i = n("636174"),
+        r = n("49111");
+      function u() {
+        let e = (0, l.useStateFromStores)(
+            [s.default],
+            () => s.default.windowSize().width
+          ),
+          t = (0, l.useStateFromStores)([a.default], () =>
+            a.default.hasConsented(r.Consents.PERSONALIZATION)
+          );
+        return d(e, t);
+      }
+      function o() {
+        let e = s.default.windowSize().width,
+          t = a.default.hasConsented(r.Consents.PERSONALIZATION);
+        return d(e, t);
+      }
+      function d(e, t) {
+        return e > i.NOW_PLAYING_MINIMUM_WIDTH && t;
       }
     },
     934743: function (e, t, n) {
@@ -23243,4 +23286,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3a63137eb548cea8cace.js.map
+//# sourceMappingURL=9bd26f9ec2ab07495260.js.map

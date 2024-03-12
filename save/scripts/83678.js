@@ -2368,8 +2368,8 @@
         U = n("406043"),
         G = n("68895"),
         B = n("934288"),
-        V = n("87635"),
-        w = n("734570"),
+        w = n("87635"),
+        V = n("734570"),
         W = n("884351"),
         Z = n("818950"),
         z = n("28007"),
@@ -2759,7 +2759,7 @@
                       ),
                       { shouldClear: !1, shouldRefocus: !0 })
                     : { shouldClear: !1, shouldRefocus: !1 };
-                let h = (0, w.handleLegacyCommands)(t, {
+                let h = (0, V.handleLegacyCommands)(t, {
                   channel: o,
                   isEdit: !1,
                 });
@@ -2978,7 +2978,7 @@
                             }),
                             null == n.guild_id || I
                               ? null
-                              : (0, a.jsx)(V.default, {
+                              : (0, a.jsx)(w.default, {
                                   guildId: n.guild_id,
                                   channel: n,
                                 }),
@@ -4190,8 +4190,8 @@
         U = n("64096"),
         G = n("49111"),
         B = n("80028"),
-        V = n("994428"),
-        w = n("782340"),
+        w = n("994428"),
+        V = n("782340"),
         W = n("465597"),
         Z = s.memo(function (e) {
           var t, l, Z;
@@ -4388,7 +4388,7 @@
               eg &&
                 (0, T.markDismissibleContentAsDismissed)(
                   o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX,
-                  { dismissAction: V.ContentDismissActionType.TAKE_ACTION }
+                  { dismissAction: w.ContentDismissActionType.TAKE_ACTION }
                 ),
                 ef("attachMenu");
             },
@@ -4397,7 +4397,7 @@
                 (eg &&
                   (0, T.markDismissibleContentAsDismissed)(
                     o.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE,
-                    { dismissAction: V.ContentDismissActionType.TAKE_ACTION }
+                    { dismissAction: w.ContentDismissActionType.TAKE_ACTION }
                   ),
                 ef(null));
             },
@@ -4436,7 +4436,7 @@
                 size: d.Button.Sizes.NONE,
                 className: i(W.attachButton, K),
                 innerClassName: W.attachButtonInner,
-                "aria-label": w.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
+                "aria-label": V.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
                 onDoubleClick: ep
                   ? () => {
                       var e;
@@ -4539,16 +4539,21 @@
         });
       }
       let A = e => {
-        let { children: t } = e;
-        return (0, l.jsxs)("div", {
-          className: g.animation,
-          children: [
-            (0, l.jsx)(T, {}),
-            (0, l.jsx)("div", { className: g.circleLayer }),
-            (0, l.jsx)("div", { className: g.omniButton, children: t }),
-            (0, l.jsx)(_, {}),
-          ],
-        });
+        let { children: t, markAsDismissed: n } = e;
+        return (
+          i.useEffect(() => {
+            setTimeout(() => n(E.ContentDismissActionType.AUTO_DISMISS), 1e4);
+          }, [n]),
+          (0, l.jsxs)("div", {
+            className: g.animation,
+            children: [
+              (0, l.jsx)(T, {}),
+              (0, l.jsx)("div", { className: g.circleLayer }),
+              (0, l.jsx)("div", { className: g.omniButton, children: t }),
+              (0, l.jsx)(_, {}),
+            ],
+          })
+        );
       };
       function M(e, t) {
         let n = f.default.getCurrentConfig(
@@ -4580,11 +4585,7 @@
             children: e => {
               let { visibleContent: n, markAsDismissed: a } = e;
               return n === d.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX
-                ? (setTimeout(
-                    () => a(E.ContentDismissActionType.AUTO_DISMISS),
-                    1e4
-                  ),
-                  (0, l.jsx)(A, { children: t }))
+                ? (0, l.jsx)(A, { markAsDismissed: a, children: t })
                 : t;
             },
           })
@@ -4596,7 +4597,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return j;
+            return P;
           },
         }),
         n("424973");
@@ -4610,26 +4611,25 @@
         d = n("550766"),
         c = n("478272"),
         f = n("685665"),
-        h = n("10641"),
-        C = n("384997"),
-        p = n("716849"),
-        m = n("552917"),
-        E = n("967241"),
-        g = n("377253"),
-        S = n("956089"),
-        T = n("599110"),
-        _ = n("659500"),
-        A = n("254490"),
-        M = n("412861"),
-        I = n("149022"),
-        N = n("891302"),
-        v = n("64096"),
-        x = n("49111"),
-        L = n("994428"),
-        R = n("491096"),
-        y = n("782340"),
-        O = n("245150");
-      function D(e, t, s, l) {
+        h = n("384997"),
+        C = n("716849"),
+        p = n("552917"),
+        m = n("967241"),
+        E = n("377253"),
+        g = n("956089"),
+        S = n("599110"),
+        T = n("659500"),
+        _ = n("254490"),
+        A = n("412861"),
+        M = n("149022"),
+        I = n("891302"),
+        N = n("64096"),
+        v = n("49111"),
+        x = n("994428"),
+        L = n("491096"),
+        R = n("782340"),
+        y = n("245150");
+      function O(e, t, s, l) {
         (0, o.openModalLazy)(
           async () => {
             let { default: i } = await n.el("811475").then(n.bind(n, "811475"));
@@ -4645,54 +4645,44 @@
           { modalKey: u.activityInviteKey }
         );
       }
-      let P = /(.*)```(\w+)\n(.*)```(.*)/s;
-      function j(e) {
+      let D = /(.*)```(\w+)\n(.*)```(.*)/s;
+      function P(e) {
         let {
           channel: t,
           options: u,
-          onFileUpload: j,
-          onClose: b,
-          onSelect: k,
-          draftType: F,
-          editorTextContent: H,
-          setValue: U,
-          openClips: G,
+          onFileUpload: P,
+          onClose: j,
+          onSelect: b,
+          draftType: k,
+          editorTextContent: F,
+          setValue: H,
+          openClips: U,
         } = e;
-        (0, p.useMaybeFetchPremiumLikelihood)(m.default);
-        let { analyticsLocations: B } = (0, f.default)(),
-          V = (0, i.useStateFromStores)([g.default], () =>
-            g.default.hasCurrentUserSentMessageSinceAppStart()
+        (0, C.useMaybeFetchPremiumLikelihood)(p.default);
+        let { analyticsLocations: G } = (0, f.default)(),
+          B = (0, i.useStateFromStores)([E.default], () =>
+            E.default.hasCurrentUserSentMessageSinceAppStart()
           );
         s.useEffect(() => {
-          T.default.track(x.AnalyticEvents.OPEN_POPOUT, {
+          S.default.track(v.AnalyticEvents.OPEN_POPOUT, {
             type: "Send Attachment",
             channel_id: t.id,
             guild_id: t.guild_id,
           });
-        }, [t.guild_id, t.id]),
-          s.useEffect(
-            () => () => {
-              V &&
-                (0, h.markDismissibleContentAsDismissed)(
-                  r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE,
-                  { dismissAction: L.ContentDismissActionType.TAKE_ACTION }
-                );
-            },
-            [V]
-          );
+        }, [t.guild_id, t.id]);
         function w() {
-          (0, E.openThreadSidebarForCreating)(t, void 0, "Plus Button");
+          (0, m.openThreadSidebarForCreating)(t, void 0, "Plus Button");
+        }
+        function V() {
+          S.default.track(
+            v.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED
+          ),
+            H("/", (0, M.toRichValue)("/"));
         }
         function W() {
-          T.default.track(
-            x.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED
-          ),
-            U("/", (0, I.toRichValue)("/"));
+          U();
         }
         function Z() {
-          G();
-        }
-        function z() {
           (0, o.openModalLazy)(
             async () => {
               let { default: e } = await n
@@ -4700,12 +4690,12 @@
                 .then(n.bind(n, "487757"));
               return n => (0, a.jsx)(e, { ...n, channel: t });
             },
-            { modalKey: R.POLL_CREATION_MODAL_KEY }
+            { modalKey: L.POLL_CREATION_MODAL_KEY }
           );
         }
-        function K() {
-          T.default.track(
-            x.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED,
+        function z() {
+          S.default.track(
+            v.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED,
             { channel_type: t.type, channel_id: t.id, guild_id: t.guild_id }
           ),
             (0, c.default)({
@@ -4713,63 +4703,63 @@
               guildId: t.guild_id,
               locationObject: {
                 page: t.isPrivate()
-                  ? x.AnalyticsPages.DM_CHANNEL
-                  : x.AnalyticsPages.GUILD_CHANNEL,
-                section: x.AnalyticsSections.CHANNEL_TEXT_AREA,
-                object: x.AnalyticsObjects.CONTEXT_MENU_ITEM,
-                objectType: x.AnalyticsObjectTypes.ACTIVITY,
+                  ? v.AnalyticsPages.DM_CHANNEL
+                  : v.AnalyticsPages.GUILD_CHANNEL,
+                section: v.AnalyticsSections.CHANNEL_TEXT_AREA,
+                object: v.AnalyticsObjects.CONTEXT_MENU_ITEM,
+                objectType: v.AnalyticsObjectTypes.ACTIVITY,
               },
               openInPopout: !1,
               enableSelectedTextChannelInvite: !0,
-              analyticsLocations: B,
+              analyticsLocations: G,
             }),
             (0, d.fetchShelf)({ guildId: t.guild_id });
         }
-        function Y() {
-          let e = H,
+        function K() {
+          let e = F,
             n = "txt",
             a = "",
-            s = H.match(P);
+            s = F.match(D);
           null != s && ((a = s[1]), (n = s[2]), (e = s[3]), (a += s[4])),
-            (0, M.promptToUpload)(
+            (0, A.promptToUpload)(
               [
-                (0, A.makeFile)(
+                (0, _.makeFile)(
                   new Blob([e], { type: "text/plain" }),
                   "message.".concat(n)
                 ),
               ],
               t,
-              F
+              k
             ),
-            _.ComponentDispatch.dispatchToLastSubscribed(
-              x.ComponentActions.CLEAR_TEXT
+            T.ComponentDispatch.dispatchToLastSubscribed(
+              v.ComponentActions.CLEAR_TEXT
             ),
             "" !== a &&
-              _.ComponentDispatch.dispatchToLastSubscribed(
-                x.ComponentActions.INSERT_TEXT,
+              T.ComponentDispatch.dispatchToLastSubscribed(
+                v.ComponentActions.INSERT_TEXT,
                 { plainText: a }
               );
         }
         return (0, a.jsx)(o.Menu, {
-          onSelect: k,
+          onSelect: b,
           navId: "channel-attach",
-          onClose: b,
-          "aria-label": y.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-          className: O.menu,
+          onClose: j,
+          "aria-label": R.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+          className: y.menu,
           children: u.map(function (e) {
             var n;
-            let s = (0, a.jsxs)("div", {
-              className: O.optionLabel,
+            let i = (0, a.jsxs)("div", {
+              className: y.optionLabel,
               children: [
-                (0, a.jsx)(e.icon, { className: O.optionIcon }),
+                (0, a.jsx)(e.icon, { className: y.optionIcon }),
                 (0, a.jsx)("div", {
-                  className: O.optionName,
+                  className: y.optionName,
                   children: e.display,
                 }),
                 null != e.badgeVal &&
                   e.badgeVal > 0 &&
-                  (0, a.jsx)(S.NumberBadge, {
-                    className: O.badge,
+                  (0, a.jsx)(g.NumberBadge, {
+                    className: y.badge,
                     color:
                       null !== (n = e.badgeColor) && void 0 !== n
                         ? n
@@ -4778,134 +4768,146 @@
                   }),
               ],
             });
+            function u(e) {
+              let { markAsDismissed: t } = e;
+              return (
+                s.useEffect(
+                  () => () => {
+                    t(x.ContentDismissActionType.TAKE_ACTION);
+                  },
+                  [t]
+                ),
+                (0, a.jsx)(g.TextBadge, {
+                  text: R.default.Messages.NEW,
+                  color: l.default.BUTTON_DANGER_BACKGROUND,
+                })
+              );
+            }
             switch (e.type) {
-              case v.AttachmentTypes.UPLOAD_A_FILE:
+              case N.AttachmentTypes.UPLOAD_A_FILE:
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "upload-file", label: s, action: j },
+                  { id: "upload-file", label: i, action: P },
                   "upload-file"
                 );
-              case v.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
-                if ("" === H) return null;
+              case N.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
+                if ("" === F) return null;
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "upload-text-as-file", label: s, action: Y },
+                  { id: "upload-text-as-file", label: i, action: K },
                   "upload-text-as-file"
                 );
-              case v.AttachmentTypes.CLIPS:
+              case N.AttachmentTypes.CLIPS:
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "clips", label: s, action: Z },
+                  { id: "clips", label: i, action: W },
                   "clips"
                 );
-              case v.AttachmentTypes.POLL:
+              case N.AttachmentTypes.POLL:
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "poll", label: s, action: z },
+                  { id: "poll", label: i, action: Z },
                   "poll"
                 );
-              case v.AttachmentTypes.INVITE_TO_PLAY_GAME:
+              case N.AttachmentTypes.INVITE_TO_PLAY_GAME:
                 return (0, a.jsx)(
                   o.MenuItem,
                   {
                     id: "play",
-                    label: s,
+                    label: i,
                     action: () => {
                       var n;
                       return (
                         (n = e.activity),
-                        void (T.default.track(x.AnalyticEvents.OPEN_MODAL, {
+                        void (S.default.track(v.AnalyticEvents.OPEN_MODAL, {
                           type: "Send Join Invite",
                           application_id: n.application_id,
-                          location: x.AnalyticsSections.CHANNEL_TEXT_AREA,
+                          location: v.AnalyticsSections.CHANNEL_TEXT_AREA,
                         }),
-                        D(n, t, x.ActivityActionTypes.JOIN, B))
+                        O(n, t, v.ActivityActionTypes.JOIN, G))
                       );
                     },
                   },
                   "play"
                 );
-              case v.AttachmentTypes.INVITE_TO_LISTEN:
+              case N.AttachmentTypes.INVITE_TO_LISTEN:
                 return (0, a.jsx)(
                   o.MenuItem,
                   {
                     id: "listen",
-                    label: s,
+                    label: i,
                     action: () => {
                       var n;
                       return (
                         (n = e.activity),
-                        void (T.default.track(x.AnalyticEvents.OPEN_MODAL, {
+                        void (S.default.track(v.AnalyticEvents.OPEN_MODAL, {
                           type: "Send Listen Invite",
-                          location: x.AnalyticsSections.CHANNEL_TEXT_AREA,
+                          location: v.AnalyticsSections.CHANNEL_TEXT_AREA,
                         }),
-                        D(n, t, x.ActivityActionTypes.LISTEN, B))
+                        O(n, t, v.ActivityActionTypes.LISTEN, G))
                       );
                     },
                   },
                   "listen"
                 );
-              case v.AttachmentTypes.INVITE_TO_WATCH:
+              case N.AttachmentTypes.INVITE_TO_WATCH:
                 return (0, a.jsx)(
                   o.MenuItem,
                   {
                     id: "watch",
-                    label: s,
+                    label: i,
                     action: () => {
                       var n;
                       return (
                         (n = e.activity),
-                        void (T.default.track(x.AnalyticEvents.OPEN_MODAL, {
+                        void (S.default.track(v.AnalyticEvents.OPEN_MODAL, {
                           type: "Send Watch Invite",
-                          location: x.AnalyticsSections.CHANNEL_TEXT_AREA,
+                          location: v.AnalyticsSections.CHANNEL_TEXT_AREA,
                         }),
-                        D(n, t, x.ActivityActionTypes.WATCH, B))
+                        O(n, t, v.ActivityActionTypes.WATCH, G))
                       );
                     },
                   },
                   "watch"
                 );
-              case v.AttachmentTypes.CREATE_THREAD:
+              case N.AttachmentTypes.CREATE_THREAD:
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "THREAD", label: s, action: w },
+                  { id: "THREAD", label: i, action: w },
                   "THREAD"
                 );
-              case v.AttachmentTypes.SLASH_COMMAND:
+              case N.AttachmentTypes.SLASH_COMMAND:
                 return (0, a.jsx)(
                   o.MenuItem,
-                  { id: "SLASH_COMMAND", label: s, action: W },
+                  { id: "SLASH_COMMAND", label: i, action: V },
                   "SLASH_COMMAND"
                 );
-              case v.AttachmentTypes.ACTIVITY:
+              case N.AttachmentTypes.ACTIVITY:
                 return (0, a.jsx)(
                   o.MenuItem,
                   {
                     id: "activity",
-                    label: s,
-                    action: K,
+                    label: i,
+                    action: z,
                     hint: (0, a.jsx)(function () {
-                      let e = (0, N.useActivitiesInTextOnboardingVisibility)(
+                      let e = (0, I.useActivitiesInTextOnboardingVisibility)(
                           t,
                           "ChannelAttachMenu"
                         ),
                         n = [];
                       return (
-                        V &&
+                        B &&
                           (null == e ? void 0 : e.desktopThrobberEnabled) &&
                           n.push(
                             r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE
                           ),
-                        (0, a.jsx)(C.default, {
+                        (0, a.jsx)(h.default, {
                           contentTypes: n,
                           children: e => {
-                            let { visibleContent: t } = e;
+                            let { visibleContent: t, markAsDismissed: n } = e;
                             return t ===
                               r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE
-                              ? (0, a.jsx)(S.TextBadge, {
-                                  text: y.default.Messages.NEW,
-                                  color: l.default.BUTTON_DANGER_BACKGROUND,
-                                })
+                              ? (0, a.jsx)(u, { markAsDismissed: n })
                               : null;
                           },
                         })
@@ -6075,10 +6077,10 @@
           B =
             _.default.can(D.Permissions.MANAGE_CHANNELS, t) ||
             _.default.can(D.Permissions.MANAGE_ROLES, t);
-        function V() {
+        function w() {
           h.default.open(t.id);
         }
-        let w = s.useCallback(() => l(!1), []);
+        let V = s.useCallback(() => l(!1), []);
         return (0, a.jsxs)(y.default, {
           channelId: t.id,
           children: [
@@ -6111,7 +6113,7 @@
                     }),
                     (0, a.jsx)(R.default, {
                       label: P.default.Messages.EDIT_CHANNEL,
-                      onClick: V,
+                      onClick: w,
                       icon: (0, a.jsx)(M.default, { width: 16, height: 16 }),
                     }),
                   ],
@@ -6206,7 +6208,7 @@
                   renderModal: e =>
                     (0, a.jsx)(E.default, {
                       ...e,
-                      onClose: () => (w(), e.onClose()),
+                      onClose: () => (V(), e.onClose()),
                       channelId: t.id,
                     }),
                   onCloseRequest: () => l(!1),
@@ -6616,8 +6618,8 @@
             handleInvite: U,
             handleMessage: G,
             handlePersonalize: B,
-            handleDownload: V,
-            handleAddApplication: w,
+            handleDownload: w,
+            handleAddApplication: V,
           } = (function (e) {
             let t = s.useCallback(() => {
                 h.default.trackWithMetadata(
@@ -6841,7 +6843,7 @@
                     iconUrl: n("238032"),
                     header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
                     completed: b,
-                    onClick: V,
+                    onClick: w,
                   }),
                 },
                 "download"
@@ -6858,7 +6860,7 @@
                   header:
                     y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
                   completed: Y,
-                  onClick: w,
+                  onClick: V,
                 }),
               },
               "addapp"
@@ -7004,7 +7006,7 @@
           { ref: k, width: F } = (0, d.default)(),
           [H, U] = s.useState(3),
           [G, B] = s.useState(!n),
-          [V, w] = (0, c.default)(!1, 2e3),
+          [w, V] = (0, c.default)(!1, 2e3),
           W = (0, o.useStateFromStores)(
             [A.default],
             () => A.default.getChannel(t),
@@ -7076,7 +7078,7 @@
               location: { section: O.AnalyticsSections.CHANNEL_HEADER },
             }),
               (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)),
-              w(!0);
+              V(!0);
           },
           eo = z ? I.default : M.default;
         return (0, a.jsxs)(a.Fragment, {
@@ -7167,13 +7169,13 @@
                           className: P.button,
                           innerClassName: P.buttonInner,
                           children: [
-                            V
+                            w
                               ? (0, a.jsx)(I.default, { width: 16, height: 16 })
                               : (0, a.jsx)(N.default, {
                                   width: 16,
                                   height: 16,
                                 }),
-                            V ? D.default.Messages.COPIED : null,
+                            w ? D.default.Messages.COPIED : null,
                           ],
                         }),
                     }),
@@ -10431,8 +10433,8 @@
         U = n("82080"),
         G = n("535993"),
         B = n("144553"),
-        V = n("862451"),
-        w = n("894488"),
+        w = n("862451"),
+        V = n("894488"),
         W = n("49111"),
         Z = n("782340"),
         z = n("5762");
@@ -10460,7 +10462,7 @@
           ),
           { popouts: C, setPopout: p } = (0, D.default)(
             s.id,
-            w.DEFAULT_POPOUTS
+            V.DEFAULT_POPOUTS
           ),
           m = (0, x.default)(s),
           g = (0, R.getMessageAriaLabelledBy)(s),
@@ -10486,7 +10488,7 @@
                 replyReference: l,
                 author: m,
               }),
-              childrenSystemMessage: (0, V.default)(e),
+              childrenSystemMessage: (0, w.default)(e),
               childrenMessageContent: null,
               "aria-labelledby": g,
               "aria-describedby": S,
@@ -10517,7 +10519,7 @@
             popouts: K,
             selected: Y,
             setPopout: X,
-          } = (0, D.default)(r.id, w.DEFAULT_POPOUTS),
+          } = (0, D.default)(r.id, V.DEFAULT_POPOUTS),
           q = S.InlineEmbedMedia.useSetting(),
           J = S.RenderEmbeds.useSetting(),
           Q = (0, d.useStateFromStores)([E.default], () =>
@@ -10606,7 +10608,7 @@
                 renderComponentAccessory: !1,
                 renderSuppressEmbeds: !1,
               }),
-              childrenSystemMessage: (0, V.default)(e),
+              childrenSystemMessage: (0, w.default)(e),
               childrenMessageContent: ef,
               onMouseMove: ee,
               onMouseLeave: et,
@@ -10651,7 +10653,7 @@
             popouts: ei,
             selected: er,
             setPopout: eo,
-          } = (0, D.default)(g.id, w.DEFAULT_POPOUTS),
+          } = (0, D.default)(g.id, V.DEFAULT_POPOUTS),
           eu = (0, y.useContextMenuMessage)(g, K, eo),
           ed = (0, y.useClickMessage)(g, K),
           {
@@ -10799,7 +10801,7 @@
                         isFocused: eC || ep,
                       })
                     : void 0,
-                childrenSystemMessage: (0, V.default)(e),
+                childrenSystemMessage: (0, w.default)(e),
                 childrenMessageContent: l,
                 onMouseMove: ec,
                 onMouseLeave: ef,
@@ -11391,8 +11393,8 @@
         U = n("566998"),
         G = n("516358"),
         B = n("550515"),
-        V = n("959097"),
-        w = n("228220"),
+        w = n("959097"),
+        V = n("228220"),
         W = n("149279"),
         Z = n("599110"),
         z = n("306160"),
@@ -11588,19 +11590,19 @@
                 isGuest: b,
                 isActiveChannelOrUnarchivableThread: h,
               }),
-              V =
+              w =
                 t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT &&
                 null != d &&
                 d.hasFeature(et.GuildFeatures.NEWS) &&
                 (k || R) &&
                 n.type === et.MessageTypes.DEFAULT,
-              w = t.getGuildId(),
+              V = t.getGuildId(),
               W =
-                null != w &&
+                null != V &&
                 (n.type === et.MessageTypes.USER_JOIN ||
                   n.type === et.MessageTypes.GUILD_INVITE_REMINDER) &&
                 L.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
-                  guildId: w,
+                  guildId: V,
                 }),
               { showReminders: Z } = p.default.useExperiment(
                 { location: "9bfedc_1" },
@@ -11632,7 +11634,7 @@
               canCopy: z.SUPPORTS_COPY,
               hasDeveloperMode: S,
               canReact: !B && g,
-              canPublish: V,
+              canPublish: w,
               canConfigureJoin: W,
               isExpanded: Q && !$ && !a && !s && !l,
               showEmojiPicker: a,
@@ -11780,7 +11782,7 @@
                   channel: t,
                   message: n,
                   label: en.default.Messages.CREATE_THREAD,
-                  icon: V.default,
+                  icon: w.default,
                   onClick: J.createThread,
                 })
               : null,
@@ -11790,7 +11792,7 @@
                   channel: t,
                   message: n,
                   label: en.default.Messages.VIEW_THREAD,
-                  icon: V.default,
+                  icon: w.default,
                   onClick: J.goToThread,
                 })
               : null,
@@ -11813,7 +11815,7 @@
                   channel: t,
                   message: n,
                   label: en.default.Messages.DELETE,
-                  icon: w.default,
+                  icon: V.default,
                   onClick: J.deleteMessage,
                   dangerous: !0,
                   separator: !B,
@@ -11881,7 +11883,7 @@
             ei({
               key: "delete-usent",
               label: en.default.Messages.DELETE,
-              icon: w.default,
+              icon: V.default,
               channel: t,
               message: n,
               onClick: J.deleteMessage,
@@ -12065,7 +12067,7 @@
               keyboardModeEnabled: v,
               hasMoreAfter: m.hasMoreAfter,
             });
-          let V =
+          let w =
               ((n = C),
               (0, o.useStateFromStores)([p.default], () => {
                 let e = A.default.can(j.Permissions.READ_MESSAGE_HISTORY, n);
@@ -12074,7 +12076,7 @@
                   : p.default.getViewingRolesTimestamp(n.getGuildId());
               })),
             {
-              channelStreamMarkup: w,
+              channelStreamMarkup: V,
               newMessagesBar: W,
               jumpToPresentBar: Z,
               forumPostActionBar: z,
@@ -12090,7 +12092,7 @@
               loadMore: G.loadMore,
               scrollManager: G,
               specs: U,
-              filterAfterTimestamp: null != L ? L : V,
+              filterAfterTimestamp: null != L ? L : w,
               showingQuarantineBanner: R,
               isAtBottom: F,
               jumpToPresent: () => {
@@ -12182,7 +12184,7 @@
                             b.default.Messages
                               .CHANNEL_MESSAGES_A11Y_DESCRIPTION,
                         }),
-                        w,
+                        V,
                         (0, a.jsx)("div", {
                           className: i({
                             [k.scrollerSpacer]: !R,
@@ -13772,8 +13774,8 @@
         U = n("556118"),
         G = n("342009"),
         B = n("97810"),
-        V = n("933629"),
-        w = n("88243"),
+        w = n("933629"),
+        V = n("88243"),
         W = n("753089"),
         Z = n("210062"),
         z = n("321933"),
@@ -14002,7 +14004,7 @@
           let { useReducedMotion: e } = u.default;
           ((e && eu()) || !e) &&
             e_.unshift(
-              (0, a.jsx)(w.default, { compact: et, ...el }, "has-more")
+              (0, a.jsx)(V.default, { compact: et, ...el }, "has-more")
             );
         }
         if (
@@ -14016,7 +14018,7 @@
             ),
           H.hasMoreAfter &&
             e_.push(
-              (0, a.jsx)(w.default, { compact: et, ...el }, "has-more-after")
+              (0, a.jsx)(V.default, { compact: et, ...el }, "has-more-after")
             ),
           !er && ed && eu() && e_.push((0, a.jsx)(W.default, { channel: R })),
           $ > 0 && ee && eu())
@@ -14093,7 +14095,7 @@
                         },
                         children: n,
                       });
-                s = (0, a.jsx)(V.NewTopicsBar, {
+                s = (0, a.jsx)(w.NewTopicsBar, {
                   scrollManager: es,
                   content: e,
                   channel: R,
@@ -14122,7 +14124,7 @@
                         })
                       : (0, a.jsx)(a.Fragment, { children: n }),
                 });
-                s = (0, a.jsx)(V.NewMessagesBar, {
+                s = (0, a.jsx)(w.NewMessagesBar, {
                   content: e,
                   channelId: R.id,
                 });
@@ -14130,7 +14132,7 @@
             }
           } else
             em.includes(z.ChatOverlays.NEW_MESSAGES) &&
-              (s = (0, a.jsx)(V.NewMessagesBar, {
+              (s = (0, a.jsx)(w.NewMessagesBar, {
                 content: e.format({ count: $, timestamp: l }),
                 channelId: R.id,
               }));
@@ -14140,10 +14142,10 @@
             (0, o.canSeeChannelSummaries)(R) &&
             eh &&
             em.includes(z.ChatOverlays.SUMMARIES) &&
-            (s = (0, a.jsx)(V.TopicsPill, { channel: R, scrollManager: es })),
+            (s = (0, a.jsx)(w.TopicsPill, { channel: R, scrollManager: es })),
           H.error)
         )
-          r = (0, a.jsx)(V.ErrorLoadingBar, {
+          r = (0, a.jsx)(w.ErrorLoadingBar, {
             loading: H.loadingMore,
             onClick: () => {
               var e;
@@ -14161,10 +14163,10 @@
           let { jumpReturnTargetId: e } = H;
           r =
             H.loadingMore && H.jumpedToPresent
-              ? (0, a.jsx)(V.JumpToPresentBar, {})
+              ? (0, a.jsx)(w.JumpToPresentBar, {})
               : null != e
-                ? (0, a.jsx)(V.JumpToPresentBar, {
-                    type: V.JumpBarType.REPLY,
+                ? (0, a.jsx)(w.JumpToPresentBar, {
+                    type: w.JumpBarType.REPLY,
                     onClick: () => {
                       var t, n;
                       return (
@@ -14178,7 +14180,7 @@
                       );
                     },
                   })
-                : (0, a.jsx)(V.JumpToPresentBar, {
+                : (0, a.jsx)(w.JumpToPresentBar, {
                     onClick: () =>
                       (function (e) {
                         i.default.jumpToPresent(
@@ -19785,4 +19787,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12321c4aca9fa733c34c.js.map
+//# sourceMappingURL=3cbafff41e07ff51b1e1.js.map

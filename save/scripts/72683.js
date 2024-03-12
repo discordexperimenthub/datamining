@@ -5086,7 +5086,7 @@
               minHeight: M,
             }),
             B = 0 !== F.width ? F.width / F.height : 1;
-          null != l && r !== I.ImageReadyStates.ERROR
+          "" !== l && r !== I.ImageReadyStates.ERROR
             ? (e = A({
                 src: l,
                 size: F,
@@ -5706,4 +5706,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.20dc6dfdb3bc491ddf3c.js.map
+//# sourceMappingURL=72683.5470259b22720bca7f36.js.map

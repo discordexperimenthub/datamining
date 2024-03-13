@@ -6406,6 +6406,7 @@
         (e5[(e5.USER_GIFT = 6)] = "USER_GIFT"),
         (e5[(e5.PREMIUM_PURCHASE = 7)] = "PREMIUM_PURCHASE"),
         (e5[(e5.APPLICATION_SUBSCRIPTION = 8)] = "APPLICATION_SUBSCRIPTION"),
+        (e5[(e5.FREE_STAFF_PURCHASE = 9)] = "FREE_STAFF_PURCHASE"),
         ((e2 = EC || (EC = {})).ESRB = "1"),
         (e2.PEGI = "2"),
         ((e6 = El || (El = {}))[(e6.DURABLE_PRIMARY = 1)] = "DURABLE_PRIMARY"),
@@ -17296,4 +17297,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.17d228138a53ff89ed5a.js.map
+//# sourceMappingURL=7273.0cbb7c688475b25c3c57.js.map

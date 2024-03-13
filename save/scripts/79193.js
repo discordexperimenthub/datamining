@@ -501,6 +501,10 @@
       "use strict";
       e.exports = s.p + "4921ad19ed994b1ec7ec.svg";
     },
+    583973: function (e, t, s) {
+      "use strict";
+      e.exports = s.p + "327708d27e57df5af589.svg";
+    },
     759308: function (e, t, s) {
       "use strict";
       e.exports = s.p + "da36d35ea2fe40dfb112.svg";
@@ -4018,13 +4022,14 @@
             title: (0, a.getRewardingTenureTitle)(e.nitroTenureStatus),
             subtitle: (0, a.getRewardingTenureSubtitle)(
               e.nitroTenureStatus,
-              e.tenureRewardSkuId
+              null == e ? void 0 : e.tenureRewardSkuId
             ),
             description: (0, a.getRewardingTenureDescription)(
               e.nitroTenureStatus
             ),
             ctaDescription: (0, a.getRewardingTenureCtaDescription)(
-              e.nitroTenureStatus
+              e.nitroTenureStatus,
+              e.redeemableInDays
             ),
             pillText:
               e.nitroTenureStatus === n.NitroRewardStatus.PENDING
@@ -5332,7 +5337,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return c;
+            return T;
           },
         });
       var a = s("37983");
@@ -5340,68 +5345,79 @@
       var r = s("414456"),
         n = s.n(r),
         i = s("77078"),
-        l = s("598739"),
-        u = s("449881"),
-        o = s("635650"),
-        d = s("270443"),
-        c = e => {
+        l = s("359499"),
+        u = s("598739"),
+        o = s("449881"),
+        d = s("511143"),
+        c = s("635650"),
+        _ = s("270443"),
+        E = s("583973"),
+        T = e => {
           var t;
           let {
               title: s,
               titleClassName: r,
-              perkImage: c,
-              isCarousel: _,
-              onCtaClick: E,
-              perkComponent: T,
-              subtitle: I = "",
-              descriptionCta: f = "",
-              cardVariant: S,
-              subtitleClassName: R,
+              perkImage: T,
+              isCarousel: I,
+              onCtaClick: f,
+              perkComponent: S,
+              subtitle: R = "",
+              descriptionCta: m = "",
+              cardVariant: N,
+              subtitleClassName: A,
             } = e,
-            m = null != S ? l.CardVariantsInfo[S] : void 0;
+            p = null != N ? u.CardVariantsInfo[N] : void 0,
+            g = (0, l.useFreeBoostUserTenureReward)(),
+            C =
+              (null == g ? void 0 : g.nitroTenureStatus) ===
+              d.NitroRewardStatus.REDEEMABLE;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)("div", { className: n(o.cover, o.below) }),
-              (0, a.jsx)(u.default, {
+              (0, a.jsx)("div", { className: n(c.cover, c.below) }),
+              (0, a.jsx)(o.default, {
                 title: s,
                 shouldShowElement: e =>
                   (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: m,
+                cardVariantStyleInfo: p,
                 titleClassName: r,
-                subtitle: I,
-                subtitleClassName: R,
+                subtitle: R,
+                subtitleClassName: A,
               }),
-              null != c &&
-                (0, a.jsx)("img", {
-                  src: c,
-                  alt: "",
-                  className: n({ [o.cardImage]: !_, [o.carouselCardImage]: _ }),
-                }),
               null != T &&
+                (0, a.jsx)("img", {
+                  src: T,
+                  alt: "",
+                  className: n({ [c.cardImage]: !I, [c.carouselCardImage]: I }),
+                }),
+              null != S &&
                 (0, a.jsx)(a.Fragment, {
                   children: (0, a.jsxs)("div", {
-                    className: o.cardIllustrationNoHover,
+                    className: c.cardIllustrationNoHover,
                     children: [
                       (0, a.jsx)("div", {
-                        className: o.cardComponent,
-                        children: T,
+                        className: c.cardComponent,
+                        children: S,
                       }),
-                      0 !== f.length &&
-                        null != E &&
+                      0 !== m.length &&
+                        null != f &&
                         (0, a.jsx)(i.Button, {
+                          disabled: !C,
                           fullWidth: !0,
-                          onClick: E,
+                          onClick: f,
                           children: (0, a.jsxs)("div", {
                             className:
-                              null == m
+                              null == p
                                 ? void 0
-                                : null === (t = m.descriptionCta) ||
+                                : null === (t = p.descriptionCta) ||
                                     void 0 === t
                                   ? void 0
                                   : t.className,
                             children: [
-                              (0, a.jsx)("img", { alt: "", src: d }),
-                              f,
+                              (0, a.jsx)("img", {
+                                alt: C ? "unlocked icon" : "locked icon",
+                                src: C ? E : _,
+                              }),
+                              m,
                             ],
                           }),
                         }),
@@ -9835,4 +9851,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c6d671057dc1d0d27918.js.map
+//# sourceMappingURL=997b002bba8fd5cd3050.js.map

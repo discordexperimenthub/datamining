@@ -5187,6 +5187,8 @@
           "application_command_load_timing"),
         (el.APPLICATION_COMMAND_SEARCH_OPEN_TIMING =
           "application_command_search_open_timing"),
+        (el.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE =
+          "application_command_option_string_autocomplete_performance"),
         (el.APPLICATION_COMMAND_PERFORMANCE =
           "application_command_performance"),
         (el.APPLICATION_COMMAND_CACHE_FETCH =
@@ -17299,4 +17301,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.5192b69a56a32b22cee9.js.map
+//# sourceMappingURL=7273.062d4c56747a7573117b.js.map

@@ -90,8 +90,6 @@
           nav_experiment_you_bar_messages_new_header:
             "[NavI] Use updated header in messages panel",
           force_channel_list_v2: "Force channel list V2",
-          render_native_message_previews:
-            "Render native message previews in search",
         },
         a = {};
       class r extends i.default.DeviceSettingsStore {
@@ -1799,4 +1797,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d01de68ad482483f0202.js.map
+//# sourceMappingURL=53726ebc3385ffde3d51.js.map

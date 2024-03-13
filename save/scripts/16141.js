@@ -9181,6 +9181,7 @@
         let h = l.useMemo(() => (0, u.formatEntryTimestamp)(t, o), [t, o]);
         return (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
+          tabularNumbers: !0,
           color: n,
           children: h,
         });
@@ -9282,7 +9283,7 @@
         c = n("356980"),
         f = n("998268"),
         h = n("709377");
-      let m = 80;
+      let m = 72;
       function p(e) {
         return m;
       }
@@ -9349,16 +9350,16 @@
       n.r(t),
         n.d(t, {
           useGamingContentData: function () {
-            return _;
-          },
-          GamingContentImage: function () {
-            return I;
-          },
-          ContentRowBadges: function () {
             return T;
           },
-          default: function () {
+          GamingContentImage: function () {
             return v;
+          },
+          ContentRowBadges: function () {
+            return x;
+          },
+          default: function () {
+            return N;
           },
         });
       var a = n("37983"),
@@ -9371,26 +9372,51 @@
         d = n("77078"),
         c = n("841098"),
         f = n("442939"),
-        h = n("697218"),
-        m = n("547620"),
-        p = n("387111"),
-        E = n("476774"),
-        S = n("418882"),
-        g = n("782340"),
-        C = n("654852");
-      let _ = e => {
-          let t = (0, f.useGetOrFetchApplication)(e.extra.application_id),
-            n = null == t ? void 0 : t.getIconURL(128),
-            a = (0, r.useStateFromStores)([h.default], () =>
-              h.default.getUser(e.author_id)
-            );
-          return { user: a, applicationImageSrc: n };
+        h = n("26989"),
+        m = n("305961"),
+        p = n("697218"),
+        E = n("547620"),
+        S = n("387111"),
+        g = n("476774"),
+        C = n("418882"),
+        _ = n("782340"),
+        I = n("654852");
+      let T = (e, t) => {
+          let n = (0, f.useGetOrFetchApplication)(e.extra.application_id),
+            a = null == n ? void 0 : n.getIconURL(128),
+            l = (0, r.useStateFromStores)([p.default], () =>
+              p.default.getUser(e.author_id)
+            ),
+            s = (0, r.useStateFromStores)([h.default], () =>
+              h.default.getMember(t.guild_id, e.author_id)
+            ),
+            i = (0, r.useStateFromStores)(
+              [m.default],
+              () => {
+                var e;
+                return (null == s ? void 0 : s.colorRoleId) != null
+                  ? null ===
+                      (e = m.default.getRole(t.guild_id, s.colorRoleId)) ||
+                    void 0 === e
+                    ? void 0
+                    : e.name
+                  : void 0;
+              },
+              [t.guild_id, s]
+            ),
+            u = null == s ? void 0 : s.colorString;
+          return {
+            user: l,
+            applicationImageSrc: a,
+            colorRoleName: i,
+            colorString: u,
+          };
         },
-        I = e => {
+        v = e => {
           let { src: t, size: n, className: l } = e,
             s = (0, c.default)();
           return null == t
-            ? (0, a.jsx)(m.default, {
+            ? (0, a.jsx)(E.default, {
                 width: n,
                 height: n,
                 color: "dark" === s ? "white" : "black",
@@ -9406,7 +9432,7 @@
                 alt: "icon",
               });
         },
-        T = e => {
+        x = e => {
           let {
             entry: t,
             textColor: n = "text-secondary",
@@ -9414,12 +9440,12 @@
             className: s,
           } = e;
           return (0, a.jsxs)("div", {
-            className: i(C.badgesContainer, s),
+            className: i(I.badgesContainer, s),
             children: [
               (() => {
-                let e = (0, E.isEntryActive)(t);
+                let e = (0, g.isEntryActive)(t);
                 return (0, a.jsxs)("div", {
-                  className: C.badgeContainer,
+                  className: I.badgeContainer,
                   children: [
                     (0, a.jsx)(u.GameControllerIcon, {
                       width: 12,
@@ -9432,13 +9458,13 @@
                                 .REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT
                             : void 0,
                     }),
-                    (0, a.jsx)(S.default, { entry: t, textColor: n }),
+                    (0, a.jsx)(C.default, { entry: t, textColor: n }),
                   ],
                 });
               })(),
-              (0, E.isEntryNew)(t)
+              (0, g.isEntryNew)(t)
                 ? (0, a.jsxs)("div", {
-                    className: C.badgeContainer,
+                    className: I.badgeContainer,
                     children: [
                       (0, a.jsx)(o.NewUserIcon, {
                         width: 12,
@@ -9449,7 +9475,7 @@
                         variant: "text-xs/normal",
                         color: n,
                         children:
-                          g.default.Messages
+                          _.default.Messages
                             .MEMBER_LIST_CONTENT_FEED_FIRST_TIME,
                       }),
                     ],
@@ -9458,58 +9484,63 @@
             ],
           });
         };
-      var v = l.memo(e => {
+      var N = l.memo(e => {
         let { entry: t, channel: n, selected: l } = e,
-          { user: s, applicationImageSrc: r } = _(t);
-        return null == s
-          ? null
-          : (0, a.jsxs)("div", {
-              className: i(C.container, { [C.selected]: l }),
+          {
+            user: s,
+            applicationImageSrc: r,
+            colorRoleName: u,
+            colorString: o,
+          } = T(t, n);
+        if (null == s) return null;
+        let c = S.default.getName(n.guild_id, n.id, s);
+        return (0, a.jsxs)("div", {
+          className: i(I.container, { [I.selected]: l }),
+          children: [
+            (0, a.jsxs)("div", {
+              className: I.textSection,
               children: [
                 (0, a.jsxs)("div", {
-                  className: C.textSection,
+                  className: I.userSection,
                   children: [
-                    (0, a.jsxs)("div", {
-                      className: C.userSection,
-                      children: [
-                        (0, a.jsx)(d.Avatar, {
-                          src: s.getAvatarURL(n.guild_id, 80),
-                          size: d.AvatarSizes.SIZE_16,
-                          "aria-label": "avatar",
-                        }),
-                        (0, a.jsx)(d.Text, {
-                          variant: "text-xs/medium",
-                          color: "text-secondary",
-                          lineClamp: 1,
-                          children: p.default.getName(n.guild_id, n.id, s),
-                        }),
-                      ],
+                    (0, a.jsx)(d.Avatar, {
+                      src: s.getAvatarURL(n.guild_id, 80),
+                      size: d.AvatarSizes.SIZE_16,
+                      "aria-label": "avatar",
                     }),
-                    (0, a.jsxs)("div", {
-                      children: [
-                        (0, a.jsx)(d.Text, {
-                          variant: "text-sm/normal",
-                          className: C.contentDescription,
-                          lineClamp: 1,
-                          children: (function (e) {
-                            let t = (0, E.isEntryActive)(e);
-                            return t
-                              ? g.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format(
-                                  { gameName: e.extra.game_name }
-                                )
-                              : g.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format(
-                                  { gameName: e.extra.game_name }
-                                );
-                          })(t),
-                        }),
-                        (0, a.jsx)(T, { entry: t }),
-                      ],
+                    (0, a.jsx)(d.NameWithRole, {
+                      color: null != o ? o : void 0,
+                      roleName: u,
+                      name: c,
+                      className: I.userName,
                     }),
                   ],
                 }),
-                (0, a.jsx)(I, { src: r, size: 56, className: C.contentImage }),
+                (0, a.jsxs)("div", {
+                  children: [
+                    (0, a.jsx)(d.Heading, {
+                      variant: "heading-sm/semibold",
+                      className: I.contentDescription,
+                      lineClamp: 1,
+                      children: (function (e) {
+                        let t = (0, g.isEntryActive)(e);
+                        return t
+                          ? _.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format(
+                              { gameName: e.extra.game_name }
+                            )
+                          : _.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format(
+                              { gameName: e.extra.game_name }
+                            );
+                      })(t),
+                    }),
+                    (0, a.jsx)(x, { entry: t }),
+                  ],
+                }),
               ],
-            });
+            }),
+            (0, a.jsx)(v, { src: r, size: 48, className: I.contentImage }),
+          ],
+        });
       });
     },
     998268: function (e, t, n) {
@@ -9625,7 +9656,10 @@
           });
       var j = e => {
         let { closePopout: t, channel: n, entry: l, requestId: s } = e,
-          { user: i, applicationImageSrc: u } = (0, g.useGamingContentData)(l),
+          { user: i, applicationImageSrc: u } = (0, g.useGamingContentData)(
+            l,
+            n
+          ),
           { primaryColor: o, secondaryColor: c } = v(u);
         if (null == i) return null;
         let f = i.getAvatarURL(n.guild_id, 128),
@@ -9687,7 +9721,7 @@
                         }),
                         (0, a.jsx)(r.Heading, {
                           className: T.popoutDescription,
-                          variant: "heading-sm/normal",
+                          variant: "heading-md/normal",
                           color: "always-white",
                           lineClamp: 3,
                           children: M(l, n, i),
@@ -9695,7 +9729,7 @@
                       ],
                     }),
                     (0, a.jsx)(g.GamingContentImage, {
-                      size: 96,
+                      size: 80,
                       src: u,
                       className: T.contentImage,
                     }),
@@ -42376,4 +42410,4 @@
     },
   },
 ]);
-//# sourceMappingURL=aeeb35a1cbf195282b8e.js.map
+//# sourceMappingURL=9563e98a792ec1dd7f4e.js.map

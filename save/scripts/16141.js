@@ -9090,29 +9090,16 @@
           sendContentImageReply: function () {
             return i;
           },
-          sendContentImageReact: function () {
-            return r;
-          },
         });
       var a = n("901803"),
         l = n("526409"),
         s = n("868875");
       let i = async e => {
           let { reply: t, user: n, altText: a, ...s } = e,
-            i = await u(s);
+            i = await r(s);
           return (0, l.sendReply)({ file: i, altText: a, user: n, reply: t });
         },
-        r = async e => {
-          let { reaction: t, user: n, altText: a, ...s } = e,
-            i = await u(s);
-          return (0, l.sendReaction)({
-            file: i,
-            altText: a,
-            user: n,
-            reaction: t,
-          });
-        },
-        u = e => {
+        r = e => {
           if (e.entry.content_type === a.ContentInventoryEntryType.PLAYED_GAME)
             return (0, s.generateGamingContentImage)(e);
         };
@@ -9548,51 +9535,51 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return j;
+            return L;
           },
         }),
         n("222007"),
         n("686130"),
         n("781738");
-      var a = n("37983");
-      n("884691");
-      var l = n("10371"),
-        s = n.n(l),
-        i = n("65597"),
-        r = n("77078"),
-        u = n("509043"),
-        o = n("206230"),
-        d = n("945701"),
-        c = n("462274"),
-        f = n("788506"),
-        h = n("315102"),
-        m = n("387111"),
-        p = n("476774"),
-        E = n("773808"),
-        S = n("909346"),
-        g = n("356980"),
-        C = n("709377"),
-        _ = n("49111"),
-        I = n("782340"),
-        T = n("150827");
-      let v = e => {
-          let t = (0, i.default)([o.default], () => o.default.saturation),
-            [n, a] = (0, c.useAvatarColors)(
+      var a = n("37983"),
+        l = n("884691"),
+        s = n("10371"),
+        i = n.n(s),
+        r = n("65597"),
+        u = n("77078"),
+        o = n("509043"),
+        d = n("206230"),
+        c = n("945701"),
+        f = n("462274"),
+        h = n("788506"),
+        m = n("315102"),
+        p = n("387111"),
+        E = n("476774"),
+        S = n("773808"),
+        g = n("909346"),
+        C = n("356980"),
+        _ = n("709377"),
+        I = n("49111"),
+        T = n("782340"),
+        v = n("150827");
+      let x = e => {
+          let t = (0, r.default)([d.default], () => d.default.saturation),
+            [n, a] = (0, f.useAvatarColors)(
               e,
-              r.tokens.colors.BACKGROUND_FLOATING.resolve({
-                theme: _.ThemeTypes.DARK,
+              u.tokens.colors.BACKGROUND_FLOATING.resolve({
+                theme: I.ThemeTypes.DARK,
                 saturation: t,
               }).hex()
             ),
-            l = (0, u.hex2int)(n),
-            d = (0, u.hex2int)(a),
-            f = (0, u.getDarkness)(l) > 0.5 ? n : s(n).darken(2).hex(),
-            h = (0, u.getDarkness)(d) > 0.5 ? a : s(a).darken(2).hex();
-          return { primaryColor: f, secondaryColor: h };
+            l = (0, o.hex2int)(n),
+            s = (0, o.hex2int)(a),
+            c = (0, o.getDarkness)(l) > 0.5 ? n : i(n).darken(2).hex(),
+            h = (0, o.getDarkness)(s) > 0.5 ? a : i(a).darken(2).hex();
+          return { primaryColor: c, secondaryColor: h };
         },
-        x = e => {
+        N = e => {
           let { channel: t, onClickSuggestion: n } = e,
-            l = (0, f.useFrequentlyUsedEmojis)(t.guild_id),
+            l = (0, h.useFrequentlyUsedEmojis)(t.guild_id),
             s = l
               .slice(0, 5)
               .map(e =>
@@ -9600,7 +9587,7 @@
                   ? { emoji: e, url: e.url }
                   : {
                       emoji: e,
-                      url: (0, h.getEmojiURL)({
+                      url: (0, m.getEmojiURL)({
                         id: e.id,
                         animated: e.animated,
                         size: 58,
@@ -9611,153 +9598,145 @@
             children: s.map(e => {
               let { emoji: t, url: l } = e;
               return null != l
-                ? (0, a.jsx)(r.Clickable, {
+                ? (0, a.jsx)(u.Clickable, {
                     onClick: () => n(t),
-                    className: T.emojiSuggestionButton,
+                    className: v.emojiSuggestionButton,
                     children: (0, a.jsx)("img", {
                       alt: t.name,
                       src: l,
-                      className: T.emoji,
+                      className: v.emoji,
                     }),
                   })
                 : null;
             }),
           });
         },
-        N = e => {
-          let t = (0, p.isEntryActive)(e),
-            n = (0, p.isEntryNew)(e);
+        A = e => {
+          let t = (0, E.isEntryActive)(e),
+            n = (0, E.isEntryNew)(e);
           return n
             ? t
-              ? I.default.Messages
+              ? T.default.Messages
                   .MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME
-              : I.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
+              : T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
             : t
-              ? I.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
-              : I.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+              ? T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
+              : T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
         },
-        A = (e, t, n) => {
-          let a = N(e),
-            l = m.default.getName(t.guild_id, t.id, n),
+        M = (e, t, n) => {
+          let a = A(e),
+            l = p.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name,
             i = a.plainFormat({ gameName: s, userName: l });
           return i.replaceAll("*", "");
         },
-        M = (e, t, n) => {
-          let a = N(e),
-            l = m.default.getName(t.guild_id, t.id, n),
+        R = (e, t, n) => {
+          let a = A(e),
+            l = p.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name;
           return a.format({ userName: l, gameName: s });
         },
-        R = (e, t) =>
-          I.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        j = (e, t) =>
+          T.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name,
           });
-      var j = e => {
-        let { closePopout: t, channel: n, entry: l, requestId: s } = e,
-          { user: i, applicationImageSrc: u } = (0, g.useGamingContentData)(
-            l,
+      var L = e => {
+        let { closePopout: t, channel: n, entry: s, requestId: i } = e,
+          { user: r, applicationImageSrc: o } = (0, C.useGamingContentData)(
+            s,
             n
           ),
-          { primaryColor: o, secondaryColor: c } = v(u);
-        if (null == i) return null;
-        let f = i.getAvatarURL(n.guild_id, 128),
-          h = {
-            entry: l,
-            user: i,
-            applicationImageSrc: u,
-            avatarSrc: f,
-            altText: R(l, i),
-            description: A(l, n, i),
-            timestamp: (0, p.formatEntryTimestamp)(l, Date.now()),
-            colors: [o, c],
+          { primaryColor: d, secondaryColor: f } = x(o),
+          [h, m] = l.useState(null);
+        if (null == r) return null;
+        let p = r.getAvatarURL(n.guild_id, 128),
+          I = {
+            entry: s,
+            user: r,
+            applicationImageSrc: o,
+            avatarSrc: p,
+            altText: j(s, r),
+            description: M(s, n, r),
+            timestamp: (0, E.formatEntryTimestamp)(s, Date.now()),
+            colors: [d, f],
           },
-          m = { entry: l, channelId: n.id, guildId: n.guild_id, requestId: s },
-          _ = async e => {
-            if (null != e)
-              try {
-                await (0, S.sendContentImageReact)({ ...h, reaction: e }),
-                  (0, E.trackInteraction)(
-                    C.ContentInventoryInteractionTypes
-                      .REACTION_EMOJI_REACT_SENT,
-                    m
-                  );
-              } finally {
-                t();
-              }
+          A = { entry: s, channelId: n.id, guildId: n.guild_id, requestId: i },
+          L = e => {
+            null != e && null != h && (h.insertEmoji(e, !1, !0), h.focus());
           },
-          N = async e => {
+          y = async e => {
             try {
-              await (0, S.sendContentImageReply)({ ...h, reply: e }),
-                (0, E.trackInteraction)(
-                  C.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
-                  m
+              await (0, g.sendContentImageReply)({ ...I, reply: e }),
+                (0, S.trackInteraction)(
+                  _.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
+                  A
                 );
             } finally {
               t();
             }
           };
         return (0, a.jsxs)("div", {
-          className: T.popout,
+          className: v.popout,
           children: [
             (0, a.jsxs)("div", {
-              className: T.hero,
+              className: v.hero,
               style: {
                 background: "linear-gradient(45deg, "
-                  .concat(o, ", ")
-                  .concat(c, ")"),
+                  .concat(d, ", ")
+                  .concat(f, ")"),
               },
               children: [
                 (0, a.jsxs)("div", {
-                  className: T.heroDetails,
+                  className: v.heroDetails,
                   children: [
                     (0, a.jsxs)("div", {
                       children: [
-                        (0, a.jsx)(r.Avatar, {
-                          src: f,
-                          size: r.AvatarSizes.SIZE_40,
+                        (0, a.jsx)(u.Avatar, {
+                          src: p,
+                          size: u.AvatarSizes.SIZE_40,
                           "aria-label": "avatar",
                         }),
-                        (0, a.jsx)(r.Heading, {
-                          className: T.popoutDescription,
+                        (0, a.jsx)(u.Heading, {
+                          className: v.popoutDescription,
                           variant: "heading-md/normal",
                           color: "always-white",
                           lineClamp: 3,
-                          children: M(l, n, i),
+                          children: R(s, n, r),
                         }),
                       ],
                     }),
-                    (0, a.jsx)(g.GamingContentImage, {
+                    (0, a.jsx)(C.GamingContentImage, {
                       size: 80,
-                      src: u,
-                      className: T.contentImage,
+                      src: o,
+                      className: v.contentImage,
                     }),
                   ],
                 }),
-                (0, a.jsx)(g.ContentRowBadges, {
-                  className: T.badgeContainer,
-                  entry: l,
+                (0, a.jsx)(C.ContentRowBadges, {
+                  className: v.badgeContainer,
+                  entry: s,
                   textColor: "always-white",
-                  iconColor: r.tokens.colors.WHITE,
+                  iconColor: u.tokens.colors.WHITE,
                 }),
               ],
             }),
             (0, a.jsxs)("div", {
-              className: T.reactions,
+              className: v.reactions,
               children: [
                 (0, a.jsxs)("div", {
-                  className: T.emojiHotrail,
+                  className: v.emojiHotrail,
                   children: [
-                    (0, a.jsx)(x, { channel: n, onClickSuggestion: _ }),
-                    (0, a.jsx)(d.ReactionPickerButton, { onSelectEmoji: _ }),
+                    (0, a.jsx)(N, { channel: n, onClickSuggestion: L }),
+                    (0, a.jsx)(c.ReactionPickerButton, { onSelectEmoji: L }),
                   ],
                 }),
-                (0, a.jsx)(d.ReplyInput, {
-                  placeholder: I.default.Messages.TEXTAREA_PLACEHOLDER.format({
-                    channel: "@".concat(i.globalName),
+                (0, a.jsx)(c.ReplyInput, {
+                  placeholder: T.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                    channel: "@".concat(r.globalName),
                   }),
-                  onEnter: N,
+                  onEnter: y,
+                  setEditorRef: e => m(e),
                 }),
               ],
             }),
@@ -42410,4 +42389,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9563e98a792ec1dd7f4e.js.map
+//# sourceMappingURL=e7d81feea238b714038f.js.map

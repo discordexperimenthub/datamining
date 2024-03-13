@@ -24861,9 +24861,9 @@
           });
         }),
         I = e => {
-          let { placeholder: t, onEnter: n } = e,
-            [a, s] = l.useState(""),
-            [r, o] = l.useState((0, c.toRichValue)(""));
+          let { placeholder: t, onEnter: n, setEditorRef: a } = e,
+            [s, r] = l.useState(""),
+            [o, u] = l.useState((0, c.toRichValue)(""));
           return (0, i.jsx)(f.default, {
             placeholder: t,
             className: g.replyInput,
@@ -24872,11 +24872,11 @@
             maxCharacterCount: x.MAX_CHAR_COUNT,
             channel: S,
             onChange: (e, t, n) => {
-              s(t), o(n);
+              r(t), u(n);
             },
             type: d.ChatInputTypes.ATOMIC_REACTOR_REPLY_INPUT,
-            textValue: a,
-            richValue: r,
+            textValue: s,
+            richValue: o,
             onSubmit: e => {
               let { value: t } = e;
               return t.length > x.MAX_CHAR_COUNT
@@ -24884,6 +24884,7 @@
                 : (n(t),
                   Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
             },
+            setEditorRef: a,
             focused: !0,
             disableThemedBackground: !0,
             emojiPickerCloseOnModalOuterClick: !0,
@@ -73139,7 +73140,8 @@
             (this.seekCount = 0),
             (this.seekWaitingMs = 0),
             (this.playbackStartTime = void 0),
-            (this.lastPlayingTime = void 0);
+            (this.lastPlayingTime = void 0),
+            this.moveToState("not_started");
         }
         updatePlayTime(e) {
           var t, n;
@@ -73285,6 +73287,9 @@
                 default:
                   this.assertUnreachable(this.currentState);
               }
+            }),
+            (this.onDragStart = e => {
+              null != e && (this.lastPlayingTime = e);
             }),
             (this.onLoadedMetadata = e => {
               this.metadata.fileDurationSec = e.currentTarget.duration;
@@ -73804,7 +73809,17 @@
                   : this.setState({ playing: !1, hideControls: !1 }));
             }),
             (this.handleDragStart = e => {
-              this.setState({ dragging: e });
+              var t, n;
+              this.setState({ dragging: e }),
+                this._analytics.onDragStart(
+                  null !==
+                    (n =
+                      null === (t = this.mediaRef.current) || void 0 === t
+                        ? void 0
+                        : t.currentTime) && void 0 !== n
+                    ? n
+                    : null
+                );
             }),
             (this.handleDragEnd = () => {
               this.setState({ dragging: null }), (this._lastMove = Date.now());
@@ -82766,4 +82781,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59196.ec60b5c36c9257adedc7.js.map
+//# sourceMappingURL=59196.99f354d26f0ff4d8e612.js.map

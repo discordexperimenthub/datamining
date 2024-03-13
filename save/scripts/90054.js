@@ -273,43 +273,96 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return _;
+            return E;
           },
-        });
+        }),
+        s("222007");
       var n = s("37983"),
         a = s("884691"),
         l = s("77078"),
         r = s("79112"),
         o = s("701909"),
-        i = s("514914"),
-        T = s("49111"),
-        u = s("782340"),
-        S = s("821054"),
-        _ = function (e) {
-          let { onClose: t } = e,
-            s = a.useCallback(() => {
-              r.default.open(T.UserSettingsSections.PRIVACY_AND_SAFETY), t();
-            }, [t]);
-          return (0, n.jsxs)(i.default, {
-            style: S.wrapperStyle,
+        i = s("277734"),
+        T = s("153327"),
+        u = s("514914"),
+        S = s("49111"),
+        _ = s("782340"),
+        d = s("821054"),
+        E = function (e) {
+          let { onClose: t, channelId: s } = e,
+            [E, c] = a.useState(!1),
+            O = a.useCallback(() => {
+              r.default.open(S.UserSettingsSections.PRIVACY_AND_SAFETY), t();
+            }, [t]),
+            A = a.useCallback(() => {
+              !E &&
+                (c(!0),
+                (0, i.reportFalsePositive)(s)
+                  .then(() => {
+                    t(),
+                      (0, T.showSafetyToast)({
+                        text: _.default.Messages
+                          .SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
+                        id: "safety-tools-report-false-positive",
+                      });
+                  })
+                  .catch(() => {
+                    c(!1),
+                      (0, l.showToast)(
+                        (0, l.createToast)(
+                          _.default.Messages.ERROR_GENERIC_TITLE,
+                          l.ToastType.FAILURE
+                        )
+                      );
+                  }));
+            }, [s, t, E]);
+          return (0, n.jsxs)(u.default, {
+            style: d.wrapperStyle,
             children: [
               (0, n.jsx)(l.Text, {
                 variant: "text-md/medium",
                 children:
-                  u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format(
+                  _.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format(
                     {
                       learnMoreLink: o.default.getArticleURL(
-                        T.HelpdeskArticles.SAFETY_ALERTS
+                        S.HelpdeskArticles.SAFETY_ALERTS
                       ),
                     }
                   ),
               }),
               (0, n.jsx)(l.Button, {
-                className: S.settingsButton,
-                onClick: s,
+                className: d.settingsButton,
+                onClick: O,
                 children:
-                  u.default.Messages
+                  _.default.Messages
                     .SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS,
+              }),
+              (0, n.jsx)("div", {
+                className: d.reportFalsePositive,
+                children: (0, n.jsx)(l.Text, {
+                  variant: "text-sm/normal",
+                  color: "text-muted",
+                  className: d.reportFalsePositiveText,
+                  children:
+                    _.default.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format(
+                      {
+                        reportFalsePositiveHook: (e, t) =>
+                          (0, n.jsx)(
+                            l.Button,
+                            {
+                              className: d.reportFalsePositiveButton,
+                              size: l.Button.Sizes.NONE,
+                              color: l.Button.Colors.LINK,
+                              look: l.Button.Looks.LINK,
+                              disabled: E,
+                              onClick: A,
+                              children: e,
+                            },
+                            t
+                          ),
+                      }
+                    ),
+                }),
               }),
             ],
           });
@@ -320,7 +373,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return m;
+            return g;
           },
         });
       var n = s("37983"),
@@ -384,7 +437,7 @@
           ],
         });
       }
-      function g(e) {
+      function m(e) {
         let { title: t, onPress: s } = e;
         return (0, n.jsxs)(u.Clickable, {
           className: r(N.actionRow, N.clickableActionRow),
@@ -403,7 +456,7 @@
           ],
         });
       }
-      var m = function (e) {
+      var g = function (e) {
         let {
             otherUserId: t,
             channelId: l,
@@ -412,7 +465,7 @@
             transitionToSlide: T,
           } = e,
           N = (0, E.useShouldShowHelplineLink)(),
-          m = (0, O.useLastChannelMessage)(l),
+          g = (0, O.useLastChannelMessage)(l),
           v = null != (0, A.useSafetyToolsButtonTooltipForChannel)(l),
           x = (0, o.useStateFromStores)([c.default], () =>
             c.default.isBlocked(t)
@@ -522,7 +575,7 @@
                   (0, u.closeModal)(p.SAFETY_TOOLS_MODAL_KEY),
                     (0,
                     d.showReportModalForInappropriateConversationSafetyAlert)(
-                      m
+                      g
                     ),
                     M(I.CtaEventTypes.USER_SAFETY_TOOLS_REPORT);
                 },
@@ -541,7 +594,7 @@
                 },
               },
             ];
-          }, [x, N, M, y, Y, B, t, l, m]),
+          }, [x, N, M, y, Y, B, t, l, g]),
           b = a.useMemo(
             () => [
               {
@@ -590,7 +643,7 @@
             (0, n.jsx)(h, {
               children: b.map(e => {
                 let { title: t, onPress: s } = e;
-                return (0, n.jsx)(g, { title: t, onPress: s }, t);
+                return (0, n.jsx)(m, { title: t, onPress: s }, t);
               }),
             }),
           ],
@@ -719,6 +772,7 @@
                   (0, l.jsx)(o.Slide, {
                     id: "ABOUT_SAFETY_ALERTS",
                     children: (0, l.jsx)(u.default, {
+                      channelId: s,
                       onClose: () => {
                         t(),
                           C(
@@ -800,4 +854,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e14ea00a4c937166117d.js.map
+//# sourceMappingURL=052d176da61c17e1baf2.js.map

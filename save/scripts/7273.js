@@ -2854,6 +2854,8 @@
             "/channels/".concat(_, "/add-safety-warning"),
           DELETE_SAFETY_WARNINGS: _ =>
             "/channels/".concat(_, "/safety-warnings"),
+          SAFETY_WARNING_FALSE_POSITIVE: _ =>
+            "/channels/".concat(_, "/safety-warning/report-false-positive"),
           MY_CONTENT_INVENTORY: "/content-inventory/users/@me",
           USER_LOOTBOX_DATA: "/users/@me/lootboxes",
           USER_LOOTBOX_OPEN_ITEM: "/users/@me/lootboxes/open",
@@ -17297,4 +17299,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.a4c60a764be5b3f90624.js.map
+//# sourceMappingURL=7273.5192b69a56a32b22cee9.js.map

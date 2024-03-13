@@ -84,21 +84,21 @@
         E = n("408062"),
         f = n("619443"),
         c = n("582713"),
-        A = n("233069"),
-        S = n("982108"),
-        C = n("42203"),
-        T = n("305961"),
+        S = n("233069"),
+        A = n("982108"),
+        T = n("42203"),
+        C = n("305961"),
         N = n("660478"),
         p = n("18494"),
-        g = n("162771"),
-        O = n("718517"),
-        m = n("519841"),
-        I = n("787336"),
+        O = n("162771"),
+        g = n("718517"),
+        I = n("519841"),
+        m = n("787336"),
         R = n("49111"),
         L = n("724210"),
         h = n("782340");
       let v = new i.default("MessageManager");
-      function b(e) {
+      function y(e) {
         let {
           guildId: t,
           channelId: n,
@@ -117,43 +117,43 @@
           c && v.log("Skipping fetch because channelId is a static route");
           return;
         }
-        let A = C.default.getChannel(n);
+        let S = T.default.getChannel(n);
         if (
-          (null == A ? void 0 : A.type) === R.ChannelTypes.GUILD_STORE ||
-          ((null == A ? void 0 : A.type) != null &&
-            R.ChannelTypesSets.GUILD_THREADS_ONLY.has(A.type))
+          (null == S ? void 0 : S.type) === R.ChannelTypes.GUILD_STORE ||
+          ((null == S ? void 0 : S.type) != null &&
+            R.ChannelTypesSets.GUILD_THREADS_ONLY.has(S.type))
         ) {
           c && v.log("Skipping fetch because channel is a forum/store");
           return;
         }
-        let S = E.default.getOrCreate(n);
-        m.AttachmentLinkRefreshExperiment.getCurrentConfig({
+        let A = E.default.getOrCreate(n);
+        I.AttachmentLinkRefreshExperiment.getCurrentConfig({
           location: "fetch_messages",
         }).enabled &&
-          S.some(I.messageHasExpiredAttachmentUrl) &&
+          A.some(m.messageHasExpiredAttachmentUrl) &&
           (v.log("Found expired attachment link, clearing messages"),
           E.default.clear(n),
-          (S = E.default.getOrCreate(n))),
-          null != S.jumpTargetId &&
+          (A = E.default.getOrCreate(n))),
+          null != A.jumpTargetId &&
             null == l &&
-            ((S = S.mutate({
+            ((A = A.mutate({
               jumpTargetId: null,
               jumped: !1,
               jumpType: o.JumpTypes.ANIMATED,
             })),
-            E.default.commit(S)),
-          null != S.focusTargetId &&
+            E.default.commit(A)),
+          null != A.focusTargetId &&
             null == l &&
-            ((S = S.mutate({ focusTargetId: null })), E.default.commit(S));
+            ((A = A.mutate({ focusTargetId: null })), E.default.commit(A));
         let p = i;
         if (
-          (!r || f.default.isConnected() || S.loadingMore
-            ? S.loadingMore || (S.ready && !S.cached)
+          (!r || f.default.isConnected() || A.loadingMore
+            ? A.loadingMore || (A.ready && !A.cached)
               ? null != l
                 ? (p = !0)
                 : c &&
                   v.log("Skipping fetch because no other conditions matched")
-              : null == t || null != T.default.getGuild(t)
+              : null == t || null != C.default.getGuild(t)
                 ? (p = !0)
                 : c &&
                   v.log(
@@ -162,7 +162,7 @@
             : (p = !0),
           p)
         ) {
-          if ((E.default.commit(S.mutate({ loadingMore: !0 })), null != l))
+          if ((E.default.commit(A.mutate({ loadingMore: !0 })), null != l))
             u.default.jumpToMessage({
               channelId: n,
               messageId: l,
@@ -172,7 +172,7 @@
               jumpType: s,
             });
           else if (
-            (null == A ? void 0 : A.isThread()) &&
+            (null == S ? void 0 : S.isThread()) &&
             (function (e) {
               if (N.default.hasOpenedThread(e)) return !1;
               if (null == a) {
@@ -182,12 +182,12 @@
               }
               if (e in a) return !1;
               a[e] = Date.now();
-              let n = Date.now() - y;
+              let n = Date.now() - b;
               for (let e in a) a[e] < n && delete a[e];
               return _.default.set(M, a), !0;
             })(n)
           )
-            v.log("Jumping to start of thread ".concat(A.id)),
+            v.log("Jumping to start of thread ".concat(S.id)),
               u.default.fetchMessages({
                 channelId: n,
                 limit: R.MAX_MESSAGES_PER_CHANNEL,
@@ -196,14 +196,14 @@
                 skipLocalFetch: d,
               });
           else if (
-            (null == A ? void 0 : A.isThread()) &&
-            N.default.hasTrackedUnread(A.id) &&
-            !S.ready
+            (null == S ? void 0 : S.isThread()) &&
+            N.default.hasTrackedUnread(S.id) &&
+            !A.ready
           ) {
-            let e = N.default.getTrackedAckMessageId(A.id);
+            let e = N.default.getTrackedAckMessageId(S.id);
             v.log(
               "Jumping to most recent message in thread "
-                .concat(A.id, " - ")
+                .concat(S.id, " - ")
                 .concat(e)
             ),
               u.default.fetchMessages({
@@ -223,19 +223,19 @@
             });
         }
       }
-      let y = 90 * O.default.Millis.DAY,
+      let b = 90 * g.default.Millis.DAY,
         M = "viewedThreadIds";
       function D() {
         let e = p.default.getChannelId();
         if (null != e) {
-          let n = C.default.getChannel(e);
+          let n = T.default.getChannel(e);
           if (null != n) {
             var t;
             let e = (0, l.matchPath)(location.pathname, {
               path: R.Routes.CHANNEL(":guild", ":channel", ":message"),
               exact: !0,
             });
-            b({
+            y({
               guildId: n.getGuildId(),
               channelId: n.id,
               messageId:
@@ -259,10 +259,10 @@
             : {},
           a = p.default.getChannelId();
         if (null != a) {
-          let l = C.default.getChannel(a);
+          let l = T.default.getChannel(a);
           null != l
-            ? ((0, A.isTextChannel)(l.type)
-                ? b({
+            ? ((0, S.isTextChannel)(l.type)
+                ? y({
                     guildId: l.getGuildId(),
                     channelId: l.id,
                     isPreload: e,
@@ -278,38 +278,38 @@
         } else
           n && v.log("Skipping fetch because there is no selected channel");
       }
-      function k(e) {
-        let { guildId: t, channelId: n, messageId: a, jumpType: l } = e;
-        b({ guildId: t, channelId: n, messageId: a, jumpType: l }), P(t, n);
-      }
       function F(e) {
+        let { guildId: t, channelId: n, messageId: a, jumpType: l } = e;
+        y({ guildId: t, channelId: n, messageId: a, jumpType: l }), P(t, n);
+      }
+      function k(e) {
         let { guildId: t, channelId: n } = e;
-        b({ guildId: t, channelId: n });
+        y({ guildId: t, channelId: n });
       }
       function P(e, t) {
-        let n = S.default.getCurrentSidebarChannelId(t);
+        let n = A.default.getCurrentSidebarChannelId(t);
         if (null == n) return;
-        let a = S.default.getCurrentSidebarMessageId(t);
-        b({ guildId: e, channelId: n, messageId: a });
+        let a = A.default.getCurrentSidebarMessageId(t);
+        y({ guildId: e, channelId: n, messageId: a });
       }
       function w() {
         let e = p.default.getChannelId(),
-          t = g.default.getGuildId();
+          t = O.default.getGuildId();
         if (null == t || null == e) return;
-        let n = S.default.getSidebarState(e);
+        let n = A.default.getSidebarState(e);
         (null == n ? void 0 : n.type) !== c.SidebarType.VIEW_CHANNEL && P(t, e);
       }
       function G(e) {
         let { guildId: t, channelId: n, context: a } = e;
         a === R.CURRENT_APP_CONTEXT &&
-          (b({ guildId: t, channelId: n }), P(t, n));
+          (y({ guildId: t, channelId: n }), P(t, n));
       }
       function Y(e) {
         let { channel: t, messageId: n } = e,
           a = t.guild_id;
         null != a &&
           p.default.getChannelId(a) === t.id &&
-          b({ guildId: a, channelId: t.id, messageId: n });
+          y({ guildId: a, channelId: t.id, messageId: n });
       }
       function W(e) {
         let { channelId: t } = e;
@@ -338,10 +338,10 @@
         let { channelId: n, jump: a, isStale: l, isPreview: i = !1 } = e;
         if (i) return;
         let _ = null !== (t = V[n]) && void 0 !== t ? t : 0;
-        if (Date.now() - _ < 10 * O.default.Millis.SECOND) return;
+        if (Date.now() - _ < 10 * g.default.Millis.SECOND) return;
         V[n] = Date.now();
         let r = p.default.getChannelId(),
-          s = S.default.getCurrentSidebarChannelId(r),
+          s = A.default.getCurrentSidebarChannelId(r),
           o = n === r || n === s;
         l &&
           f.default.isConnected() &&
@@ -377,14 +377,14 @@
         }
         constructor(...e) {
           super(...e),
-            (this.fetchMessages = b),
+            (this.fetchMessages = y),
             (this.loadSelectedChannelIfNecessary = U),
-            (this.stores = new Map().set(S.default, w)),
+            (this.stores = new Map().set(A.default, w)),
             (this.actions = {
               APP_STATE_UPDATE: x,
               OVERLAY_INITIALIZE: D,
-              CHANNEL_SELECT: k,
-              VOICE_CHANNEL_SELECT: F,
+              CHANNEL_SELECT: F,
+              VOICE_CHANNEL_SELECT: k,
               THREAD_CREATE: Y,
               THREAD_LIST_SYNC: () => U(),
               CHANNEL_CREATE: Y,
@@ -416,6 +416,9 @@
           },
           acknowledgeChannelSafetyWarningTooltip: function () {
             return u;
+          },
+          reportFalsePositive: function () {
+            return o;
           },
         });
       var a = n("872717"),
@@ -455,6 +458,11 @@
           channelId: e,
         });
       }
+      function o(e) {
+        return a.default.post({
+          url: i.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e),
+        });
+      }
     },
     764828: function (e, t, n) {
       "use strict";
@@ -467,7 +475,7 @@
             return l;
           },
           default: function () {
-            return T;
+            return C;
           },
         }),
         n("222007");
@@ -490,7 +498,7 @@
       let E = [],
         f = {},
         c = new Set();
-      function A(e) {
+      function S(e) {
         let { safetyWarnings: t } = e;
         null != t &&
           ((f[e.id] = t),
@@ -508,13 +516,13 @@
             : c.delete(e.id)),
           null == t && (null != f[e.id] && delete f[e.id], c.delete(e.id));
       }
-      function S() {
+      function A() {
         (f = {}),
           Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
-            A(e);
+            S(e);
           });
       }
-      class C extends r.default.Store {
+      class T extends r.default.Store {
         initialize() {
           this.waitFor(u.default);
         }
@@ -532,9 +540,9 @@
           return c.has(e);
         }
       }
-      var T = new C(s.default, {
+      var C = new T(s.default, {
         CHANNEL_CREATE: function (e) {
-          A(e.channel);
+          S(e.channel);
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
@@ -542,11 +550,11 @@
         },
         CHANNEL_UPDATES: function (e) {
           e.channels.forEach(e => {
-            A(e);
+            S(e);
           });
         },
-        CONNECTION_OPEN: S,
-        CONNECTION_OPEN_SUPPLEMENTAL: S,
+        CONNECTION_OPEN: A,
+        CONNECTION_OPEN_SUPPLEMENTAL: A,
         CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
           let { channelId: t, warningId: n, feedbackType: a } = e,
             l = f[t];
@@ -793,6 +801,8 @@
         (l.USER_SAFETY_TOOLS_REPORT = "user_safety_tools_report"),
         (l.USER_SAFETY_TOOLS_NO_FILTR = "user_safety_tools_no_filtr"),
         (l.USER_SAFETY_TOOLS_CTL = "user_safety_tools_ctl"),
+        (l.USER_SAFETY_TOOLS_CTL_SMS = "user_safety_tools_ctl_sms"),
+        (l.USER_SAFETY_TOOLS_CTL_WEB = "user_safety_tools_ctl_web"),
         (l.USER_SAFETY_TOOLS_VIBING_WUMPUS = "user_safety_tools_vibing_wumpus"),
         (l.USER_SAFETY_TOOLS_SAFETY_TIPS = "user_safety_tools_safety_tips"),
         (l.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS =
@@ -843,4 +853,4 @@
     },
   },
 ]);
-//# sourceMappingURL=12973.64cae7893fb829e40fc0.js.map
+//# sourceMappingURL=12973.8b125ca56633acce00bf.js.map

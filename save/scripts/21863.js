@@ -423,7 +423,7 @@
             return h;
           },
           default: function () {
-            return v;
+            return S;
           },
         }),
         n("222007");
@@ -475,14 +475,14 @@
             mute_config: { selected_time_window: e, end_time: t },
           };
         };
-      function v(e, t) {
+      function S(e, t) {
         let [n, a] = (0, s.useStateFromStoresArray)([c.default], () => [
             c.default.isChannelMuted(e.guild_id, e.id),
             c.default.getChannelMuteConfig(e.guild_id, e.id),
           ]),
           r = (0, d.useMutedUntilText)(a),
           p = (0, E.default)(e, !0);
-        function v(t) {
+        function S(t) {
           t &&
             e.type === C.ChannelTypes.GUILD_CATEGORY &&
             (0, u.categoryCollapse)(e.id),
@@ -493,23 +493,23 @@
               f.NotificationLabel.muted(t)
             );
         }
-        let S = _.default.Messages.MUTE_CHANNEL_GENERIC,
+        let v = _.default.Messages.MUTE_CHANNEL_GENERIC,
           N = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
         switch (e.type) {
           case C.ChannelTypes.GUILD_CATEGORY:
-            (S = _.default.Messages.MUTE_CATEGORY),
+            (v = _.default.Messages.MUTE_CATEGORY),
               (N = _.default.Messages.UNMUTE_CATEGORY);
             break;
           case C.ChannelTypes.GROUP_DM:
-            (S = _.default.Messages.MUTE_CONVERSATION),
+            (v = _.default.Messages.MUTE_CONVERSATION),
               (N = _.default.Messages.UNMUTE_CONVERSATION);
             break;
           case C.ChannelTypes.DM:
-            (S = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
+            (v = _.default.Messages.MUTE_CHANNEL.format({ name: p })),
               (N = _.default.Messages.UNMUTE_CHANNEL.format({ name: p }));
             break;
           default:
-            (S = _.default.Messages.MUTE_CHANNEL_GENERIC),
+            (v = _.default.Messages.MUTE_CHANNEL_GENERIC),
               (N = _.default.Messages.UNMUTE_CHANNEL_GENERIC);
         }
         return n
@@ -517,12 +517,12 @@
               id: "unmute-channel",
               label: N,
               subtext: r,
-              action: () => v(!1),
+              action: () => S(!1),
             })
           : (0, i.jsx)(l.MenuItem, {
               id: "mute-channel",
-              label: S,
-              action: () => v(!0),
+              label: v,
+              action: () => S(!0),
               children: h().map(n => {
                 let { value: a, label: r } = n;
                 return (0, i.jsx)(
@@ -576,7 +576,7 @@
             return g;
           },
           toggleFavoriteServerMuted: function () {
-            return v;
+            return S;
           },
         }),
         n("222007");
@@ -702,7 +702,7 @@
           a.UserSettingsDelay.FREQUENT_USER_ACTION
         );
       }
-      function v() {
+      function S() {
         a.PreloadedUserSettingsActionCreators.updateAsync(
           "favorites",
           e => {
@@ -1588,8 +1588,8 @@
             onClose: _,
             onComplete: h,
             onSubscriptionConfirmation: g,
-            analyticsLocations: v,
-            analyticsObject: S,
+            analyticsLocations: S,
+            analyticsObject: v,
             analyticsLocation: N,
             analyticsSourceLocation: A,
             isGift: I = !1,
@@ -1642,8 +1642,8 @@
                     !I && (0, u.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: g,
-                analyticsLocations: v,
-                analyticsObject: S,
+                analyticsLocations: S,
+                analyticsObject: v,
                 analyticsLocation: N,
                 analyticsSourceLocation: A,
                 trialId: R,
@@ -1667,13 +1667,13 @@
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != N ? N : S,
+                  location: null != N ? N : v,
                   source: A,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
                   is_gift: I,
                   eligible_for_trial: null != R,
                   application_id: O,
-                  location_stack: v,
+                  location_stack: S,
                 }),
                 (0, s.clearError)(),
                 (0, l.clearPurchaseTokenAuthState)(),
@@ -1875,6 +1875,9 @@
           acknowledgeChannelSafetyWarningTooltip: function () {
             return o;
           },
+          reportFalsePositive: function () {
+            return d;
+          },
         });
       var i = n("872717"),
         a = n("913144"),
@@ -1911,6 +1914,11 @@
         a.default.dispatch({
           type: "ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP",
           channelId: e,
+        });
+      }
+      function d(e) {
+        return i.default.post({
+          url: r.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e),
         });
       }
     },
@@ -2370,8 +2378,8 @@
         _ = n("861370"),
         h = n("972701"),
         g = n("390008"),
-        v = n("936947"),
-        S = n("918034"),
+        S = n("936947"),
+        v = n("918034"),
         N = n("976127"),
         A = n("856030"),
         I = n("726750"),
@@ -2445,10 +2453,10 @@
                 eC = (0, h.useAddToFavoritesItem)(n),
                 ep = (0, h.useRemoveFromFavoritesItem)(n),
                 e_ = (0, g.default)(n),
-                eh = (0, v.default)(n),
+                eh = (0, S.default)(n),
                 eg = (0, N.useMessageRequestItem)(n),
-                ev = (0, S.useInappropriateConversationItem)(n),
-                eS = (0, A.useSafetyWarningsItem)(n),
+                eS = (0, v.useInappropriateConversationItem)(n),
+                ev = (0, A.useSafetyWarningsItem)(n),
                 eN = n.isManaged(),
                 eA = t.isNonUserBot();
               return (0, i.jsxs)(a.Menu, {
@@ -2459,8 +2467,8 @@
                 children: [
                   (0, i.jsx)(a.MenuGroup, { children: !eA && eu }),
                   (0, i.jsx)(a.MenuGroup, { children: eg }),
-                  (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsx)(a.MenuGroup, { children: ev }),
+                  (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsxs)(a.MenuGroup, { children: [eC, e_, eh] }),
                   (0, i.jsx)(a.MenuGroup, { children: !eA && ec }),
                   (0, i.jsxs)(a.MenuGroup, {
@@ -2861,8 +2869,8 @@
             ...h
           } = e,
           g = s.createRef(),
-          v = (0, c.default)(g),
-          S = !i && !a && !0 !== l && (!p || v);
+          S = (0, c.default)(g),
+          v = !i && !a && !0 !== l && (!p || S);
         return (0, r.jsxs)(d.Button, {
           buttonRef: g,
           ...h,
@@ -2871,7 +2879,7 @@
           submitting: a,
           children: [
             t,
-            S
+            v
               ? (0, r.jsx)(_, {
                   shinePaused: f,
                   className: u(
@@ -2978,11 +2986,11 @@
               className: _,
               foreground: h,
               expanded: g,
-              ...v
+              ...S
             } = e,
-            { enabled: S } = (0, d.useRedesignIconContext)(),
+            { enabled: v } = (0, d.useRedesignIconContext)(),
             N = t;
-          if ((!0 === g ? (N = E.DOWN) : !1 === g && (N = E.RIGHT), S)) {
+          if ((!0 === g ? (N = E.DOWN) : !1 === g && (N = E.RIGHT), v)) {
             let e = {
               [E.UP]: o.ChevronSmallUpIcon,
               [E.DOWN]: s.ChevronSmallDownIcon,
@@ -2990,7 +2998,7 @@
               [E.RIGHT]: u.ChevronSmallRightIcon,
             }[N];
             return (0, i.jsx)(e, {
-              ...v,
+              ...S,
               className: _,
               width: n,
               height: a,
@@ -3003,7 +3011,7 @@
             width: n,
             height: a,
             viewBox: "0 0 24 24",
-            ...(0, c.default)(v),
+            ...(0, c.default)(S),
             children: (0, i.jsx)("path", {
               className: h,
               fill: "none",
@@ -3855,4 +3863,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7cc1599a85a822e27d77.js.map
+//# sourceMappingURL=513c62490fa28f5acaa0.js.map

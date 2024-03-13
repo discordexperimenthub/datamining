@@ -4908,7 +4908,7 @@
             return E;
           },
           analyticsTrackingStoreMaker: function () {
-            return g;
+            return h;
           },
         }),
         n("860677"),
@@ -4934,28 +4934,29 @@
           handleTrack: () => {},
         },
         S = [],
-        g = e => {
+        g = () => Promise.resolve({ sessionId: void 0 }),
+        h = e => {
           let {
             dispatcher: t,
             actionHandler: n,
             getFingerprint: s,
-            getSessionId: c = () => new Promise(() => ({ sessionId: void 0 })),
-            TRACKING_URL: g,
-            drainTimeoutOverride: h,
-            waitFor: m,
+            getSessionId: c = g,
+            TRACKING_URL: h,
+            drainTimeoutOverride: m,
+            waitFor: p,
           } = e;
-          d = null != h ? h : 1500;
-          function p() {
+          d = null != m ? m : 1500;
+          function I() {
             return 0 !== S.length && (null != r ? null != i : null != s());
           }
-          function I() {
-            null == o && p() && (o = _(T, { timeout: d }));
-          }
           function T() {
-            if (((o = null), !p())) return;
+            null == o && I() && (o = _(v, { timeout: d }));
+          }
+          function v() {
+            if (((o = null), !I())) return;
             let e = S.slice();
             S = [];
-            let t = v(e);
+            let t = A(e);
             t.then(
               () => {
                 e.forEach(e => {
@@ -4970,27 +4971,27 @@
               }
             );
           }
-          function v(e) {
+          function A(e) {
             let t = Date.now(),
               n = e.map(e => ({
                 ...e,
                 properties: { ...e.properties, client_send_timestamp: t },
               }));
             return u.default.post({
-              url: g,
+              url: h,
               body: { token: i, events: n },
               retries: 3,
             });
           }
           (E.handleConnectionOpen = function (e) {
             let { analyticsToken: t, user: n } = e;
-            return null != t && (i = t), null != n.id && (r = n.id), I(), !1;
+            return null != t && (i = t), null != n.id && (r = n.id), T(), !1;
           }),
             (E.handleConnectionClosed = function () {
-              return T(), (i = null), (r = null), !1;
+              return v(), (i = null), (r = null), !1;
             }),
             (E.handleFingerprint = function () {
-              return T(), !1;
+              return v(), !1;
             }),
             (E.handleTrack = function (e) {
               let {
@@ -5021,20 +5022,20 @@
                   null != d && (c.properties.client_uuid = f.generate(d)),
                     S.push(c),
                     S.length > 1e4 && (S = S.slice(-1e4)),
-                    i ? T() : I();
+                    i ? v() : T();
                 }),
                 !1
               );
             });
-          class A extends a.default.Store {
+          class N extends a.default.Store {
             initialize() {
-              null != m && this.waitFor(...m);
+              null != p && this.waitFor(...p);
             }
             constructor(...e) {
-              super(...e), (this.submitEventsImmediately = v);
+              super(...e), (this.submitEventsImmediately = A);
             }
           }
-          return (A.displayName = "AnalyticsTrackingStore"), new A(t, n);
+          return (N.displayName = "AnalyticsTrackingStore"), new N(t, n);
         };
     },
     759843: function (e, t, n) {
@@ -5310,7 +5311,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "274979"), "274979"), 10);
+          let o = parseInt(((n = "274992"), "274992"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7087,4 +7088,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.d2db639f3e591fc63cf1.js.map
+//# sourceMappingURL=87475.f4f78f0837df8ef23df7.js.map

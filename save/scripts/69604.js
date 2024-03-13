@@ -218,8 +218,8 @@
             d = ((i >> 12) & 63) / 31.5 - 1,
             f = i >> 23,
             m = l >> 15,
-            p = n(3, m ? (f ? 5 : 7) : 7 & l),
-            S = n(3, m ? 7 & l : f ? 5 : 7),
+            S = n(3, m ? (f ? 5 : 7) : 7 & l),
+            p = n(3, m ? 7 & l : f ? 5 : 7),
             E = f ? (15 & e[5]) / 15 : 1,
             h = (e[5] >> 4) / 15,
             _ = f ? 6 : 5,
@@ -233,30 +233,30 @@
                   );
               return n;
             },
-            g = C(p, S, ((i >> 18) & 31) / 31),
+            g = C(S, p, ((i >> 18) & 31) / 31),
             T = C(3, 3, 1.25 * (((l >> 3) & 63) / 63)),
             A = C(3, 3, 1.25 * (((l >> 9) & 63) / 63)),
             v = f && C(5, 5, h),
             P = a(e),
             N = s(P > 1 ? 32 : 32 * P),
-            R = s(P > 1 ? 32 / P : 32),
-            L = new Uint8Array(N * R * 4),
+            L = s(P > 1 ? 32 / P : 32),
+            R = new Uint8Array(N * L * 4),
             y = [],
             b = [];
-          for (let e = 0, a = 0; e < R; e++)
+          for (let e = 0, a = 0; e < L; e++)
             for (let s = 0; s < N; s++, a += 4) {
               let i = o,
                 l = c,
                 m = d,
                 h = E;
-              for (let e = 0, r = n(p, f ? 5 : 3); e < r; e++)
+              for (let e = 0, r = n(S, f ? 5 : 3); e < r; e++)
                 y[e] = u((t / N) * (s + 0.5) * e);
-              for (let r = 0, a = n(S, f ? 5 : 3); r < a; r++)
-                b[r] = u((t / R) * (e + 0.5) * r);
-              for (let e = 0, t = 0; e < S; e++)
+              for (let r = 0, a = n(p, f ? 5 : 3); r < a; r++)
+                b[r] = u((t / L) * (e + 0.5) * r);
+              for (let e = 0, t = 0; e < p; e++)
                 for (
                   let r = e ? 0 : 1, a = 2 * b[e];
-                  r * S < p * (S - e);
+                  r * p < S * (p - e);
                   r++, t++
                 )
                   i += g[t] * y[r] * a;
@@ -272,12 +272,12 @@
               let _ = i - (2 / 3) * l,
                 I = (3 * i - _ + m) / 2,
                 C = I - m;
-              (L[a] = n(0, 255 * r(1, I))),
-                (L[a + 1] = n(0, 255 * r(1, C))),
-                (L[a + 2] = n(0, 255 * r(1, _))),
-                (L[a + 3] = n(0, 255 * r(1, h)));
+              (R[a] = n(0, 255 * r(1, I))),
+                (R[a + 1] = n(0, 255 * r(1, C))),
+                (R[a + 2] = n(0, 255 * r(1, _))),
+                (R[a + 3] = n(0, 255 * r(1, h)));
             }
-          return { w: N, h: R, rgba: L };
+          return { w: N, h: L, rgba: R };
         })(e);
         return n(t.w, t.h, t.rgba);
       }
@@ -386,10 +386,10 @@
             return m;
           },
           SHOP_ITEM: function () {
-            return p;
+            return S;
           },
           default: function () {
-            return S;
+            return p;
           },
         }),
         r("222007"),
@@ -410,8 +410,8 @@
         (n.PREVIEW = "preview"),
         (n.PREMIUM_PREVIEW = "premium_preview");
       let m = { id: "None" },
-        p = { id: "Shop" };
-      var S = () => {
+        S = { id: "Shop" };
+      var p = () => {
         let e = (0, s.default)([c.default], () => c.default.getCurrentUser()),
           t = d.default.canUseCollectibles(e),
           r = (0, s.default)([l.default], () => l.default.purchases),
@@ -453,7 +453,7 @@
           return [
             {
               section: "purchase",
-              items: [m, p, ...u.purchase],
+              items: [m, S, ...u.purchase],
               height: 12,
               header:
                 f.default.Messages.CHANGE_DECORATION_MODAL_PURCHASE_HEADER,
@@ -491,7 +491,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return L;
+            return R;
           },
         }),
         r("222007");
@@ -506,8 +506,8 @@
         d = r("491232"),
         f = r("984002"),
         m = r("235898"),
-        p = r("170313"),
-        S = r("635956"),
+        S = r("170313"),
+        p = r("635956"),
         E = r("91653"),
         h = r("697218"),
         _ = r("599110"),
@@ -519,7 +519,7 @@
         v = r("646718"),
         P = r("782340"),
         N = r("446812");
-      function R(e) {
+      function L(e) {
         let {
             user: t,
             categories: r,
@@ -532,8 +532,8 @@
           } = e,
           {
             pendingAvatarDecoration: A,
-            setPendingAvatarDecoration: R,
-            savedAvatarDecoration: L,
+            setPendingAvatarDecoration: L,
+            savedAvatarDecoration: R,
           } = (0, E.default)({
             analyticsLocations: s,
             isTryItOut: h,
@@ -543,10 +543,10 @@
             var e;
             if (null != m) return m;
             if (void 0 !== A) return A;
-            if (null == L || 0 === r.size) return null;
+            if (null == R || 0 === r.size) return null;
             let t = (0, d.getAvatarDecorations)(u, r);
             return null !==
-              (e = t.find(e => (0, C.isEqualAvatarDecoration)(e, L))) &&
+              (e = t.find(e => (0, C.isEqualAvatarDecoration)(e, R))) &&
               void 0 !== e
               ? e
               : null;
@@ -556,10 +556,10 @@
           ),
           U = I.default.canUseCollectibles(t),
           O = n.useRef(null),
-          F = (0, p.default)(s),
-          k = (0, C.isEqualAvatarDecoration)(y, void 0 === A ? L : A),
+          F = (0, S.default)(s),
+          k = (0, C.isEqualAvatarDecoration)(y, void 0 === A ? R : A),
           D = () => {
-            R(y), o();
+            L(y), o();
           },
           H = n.useCallback(() => {
             o(),
@@ -629,7 +629,7 @@
                         children:
                           P.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                       })
-                    : (0, a.jsx)(S.default, {
+                    : (0, a.jsx)(p.default, {
                         subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
                         buttonText: I.default.isPremium(t)
                           ? P.default.Messages
@@ -649,14 +649,14 @@
           ],
         });
       }
-      function L(e) {
+      function R(e) {
         let {
             transitionState: t,
             analyticsLocations: r,
             onClose: d,
             initialSelectedDecoration: f,
-            isTryItOutFlow: p,
-            guild: S,
+            isTryItOutFlow: S,
+            guild: p,
           } = e,
           E = (0, s.useStateFromStores)([h.default], () =>
             h.default.getCurrentUser()
@@ -669,7 +669,7 @@
             isFetchingCategories: v,
             isFetchingPurchases: P,
           } = (0, m.default)(),
-          L = v || (P && 0 === T.size);
+          R = v || (P && 0 === T.size);
         return (
           n.useEffect(() => {
             _.default.track(A.AnalyticEvents.OPEN_MODAL, {
@@ -692,21 +692,21 @@
                 children: (0, a.jsx)(i.ModalRoot, {
                   transitionState: t,
                   className: N.modal,
-                  size: L ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
-                  children: L
+                  size: R ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
+                  children: R
                     ? (0, a.jsx)(i.Spinner, {
                         className: N.spinner,
                         type: i.Spinner.Type.SPINNING_CIRCLE,
                       })
-                    : (0, a.jsx)(R, {
+                    : (0, a.jsx)(L, {
                         user: E,
-                        guild: S,
+                        guild: p,
                         categories: g,
                         purchases: T,
                         analyticsLocations: C,
                         initialSelectedDecoration: f,
                         onClose: d,
-                        isTryItOutFlow: p,
+                        isTryItOutFlow: S,
                       }),
                 }),
               })
@@ -734,8 +734,8 @@
         d = r("716120"),
         f = r("915639"),
         m = r("824563"),
-        p = r("719923"),
-        S = r("795158"),
+        S = r("719923"),
+        p = r("795158"),
         E = r("782340"),
         h = r("295166");
       let _ = [
@@ -792,7 +792,7 @@
             product: g,
             purchase: T,
           } = (0, c.default)(null == r ? void 0 : r.skuId),
-          A = p.default.canUseCollectibles(t),
+          A = S.default.canUseCollectibles(t),
           v = (0, o.isPremiumCollectiblesPurchase)(T),
           P = (0, o.isPremiumCollectiblesProduct)(g),
           N = !A && v;
@@ -803,7 +803,7 @@
                 (0, a.jsx)(d.default, {
                   asset: null == C ? void 0 : C.banner,
                   className: h.shopPreviewBanner,
-                  children: (0, a.jsx)(S.default, {
+                  children: (0, a.jsx)(p.default, {
                     user: t,
                     avatarDecorationOverride: r,
                   }),
@@ -851,7 +851,7 @@
                   children: [
                     (0, a.jsx)("div", {
                       className: h.decorationPreview,
-                      children: (0, a.jsx)(S.default, {
+                      children: (0, a.jsx)(p.default, {
                         user: t,
                         avatarDecorationOverride: r,
                       }),
@@ -864,7 +864,7 @@
                           "div",
                           {
                             className: h.smallDecorationPreview,
-                            children: (0, a.jsx)(S.default, {
+                            children: (0, a.jsx)(p.default, {
                               user: t,
                               avatarSize: n,
                               avatarDecorationOverride: r,
@@ -950,8 +950,8 @@
         d = r("252744"),
         f = r("853987"),
         m = r("426497"),
-        p = r("491232"),
-        S = r("743826"),
+        S = r("491232"),
+        p = r("743826"),
         E = r("216422"),
         h = r("468759"),
         _ = r("600785"),
@@ -963,7 +963,7 @@
         v = r("782340"),
         P = r("585872");
       let N = () => 80,
-        R = e => {
+        L = e => {
           let {
             children: t,
             className: r,
@@ -978,7 +978,7 @@
             children: t,
           });
         },
-        L = e => {
+        R = e => {
           let {
               user: t,
               avatarDecoration: r,
@@ -987,14 +987,14 @@
               isSelected: i = !1,
               ...c
             } = e,
-            S = (0, o.default)([f.default], () => {
+            p = (0, o.default)([f.default], () => {
               let e = f.default.getProduct(r.skuId);
-              return (0, p.isPremiumCollectiblesProduct)(e);
+              return (0, S.isPremiumCollectiblesProduct)(e);
             }),
             h = (0, o.default)([m.default], () => m.default.isItemViewed(r)),
             g = C.default.canUseCollectibles(t),
             N = s === T.Section.PREMIUM_PURCHASE && !g,
-            [L, y] = n.useState(i);
+            [R, y] = n.useState(i);
           n.useEffect(() => {
             i && y(!0);
           }, [i]);
@@ -1006,7 +1006,7 @@
               size: 80,
               animateOnHover: !x,
             });
-          return (0, a.jsxs)(R, {
+          return (0, a.jsxs)(L, {
             className: N ? P.decorationGridItemChurned : void 0,
             innerRef: null != u ? u : b,
             isSelected: i,
@@ -1022,7 +1022,7 @@
                   s === T.Section.PURCHASE ||
                   (s === T.Section.PREMIUM_PURCHASE && g);
                 if (e) return null;
-                let t = !h && !i && !L;
+                let t = !h && !i && !R;
                 return t
                   ? (0, a.jsx)(I.PremiumBadge, {
                       className: P.newBadge,
@@ -1035,7 +1035,7 @@
                       }),
                     })
                   : (0, a.jsx)(I.IconBadge, {
-                      icon: S
+                      icon: p
                         ? () => (0, a.jsx)(E.default, { width: 14, height: 14 })
                         : () =>
                             (0, a.jsx)(_.default, { width: 12, height: 12 }),
@@ -1070,11 +1070,11 @@
           paddingVertical: 0,
           removeEdgeItemGutters: !0,
           renderItem: (e, d, f, m) => {
-            let { section: p, items: E } = o[e];
+            let { section: S, items: E } = o[e];
             return (0, i.match)(E[d])
               .with(T.NONE_ITEM, () =>
                 (0, a.jsxs)(
-                  R,
+                  L,
                   {
                     style: { ...f },
                     isSelected: null === n,
@@ -1096,12 +1096,12 @@
               )
               .with(T.SHOP_ITEM, () =>
                 (0, a.jsxs)(
-                  R,
+                  L,
                   {
                     style: f,
                     onSelect: l,
                     children: [
-                      (0, a.jsx)(S.default, { className: P.shopIcon }),
+                      (0, a.jsx)(p.default, { className: P.shopIcon }),
                       (0, a.jsx)(c.Text, {
                         variant: "text-xs/normal",
                         color: "header-primary",
@@ -1115,12 +1115,12 @@
               .otherwise(e => {
                 let r = (null == n ? void 0 : n.id) === e.id;
                 return (0, a.jsx)(
-                  L,
+                  R,
                   {
                     style: { ...f },
                     user: t,
                     avatarDecoration: e,
-                    section: p,
+                    section: S,
                     innerRef: r ? u : void 0,
                     isSelected: r,
                     onSelect: () => s(e),
@@ -1299,19 +1299,19 @@
               assetUrlOverride: r,
               size: n = d.MAX_CONTENT_WIDTH,
               addGradient: m = !0,
-              className: p,
-              style: S,
+              className: S,
+              style: p,
               children: E,
             } = e,
             h = (0, s.default)([l.default], () => l.default.saturation);
           return (0, a.jsx)("div", {
-            className: u(f.banner, p),
+            className: u(f.banner, S),
             style: (() => {
-              if (null == t) return S;
+              if (null == t) return p;
               if (1 === h)
                 return null != r
                   ? {
-                      ...S,
+                      ...p,
                       backgroundImage: m
                         ? "url(".concat(
                             r,
@@ -1322,7 +1322,7 @@
                       backgroundSize: "cover",
                     }
                   : {
-                      ...S,
+                      ...p,
                       backgroundImage: "url(".concat(
                         (0, c.getCollectiblesAssetURL)(t, {
                           size: n,
@@ -1337,7 +1337,7 @@
                 1 - h
               );
               return {
-                ...S,
+                ...p,
                 backgroundImage: "linear-gradient("
                   .concat(e, ", ")
                   .concat(e, "), url(")
@@ -1453,7 +1453,7 @@
             return e.length > 0 ? n.default.get(e[0]) : null;
           }),
           m = null == f ? [] : (0, u.getCurrencies)(f.id, c, d),
-          p =
+          S =
             null !==
               (r =
                 null !==
@@ -1465,7 +1465,7 @@
               : i.CurrencyCodes.USD;
         return {
           ...(0, u.useCurrencyWithPaymentSourceChange)(
-            p,
+            S,
             null == f ? void 0 : f.id,
             c,
             d,
@@ -1523,7 +1523,7 @@
       r.r(t),
         r.d(t, {
           NON_SUBSCRIBER_SENTINEL: function () {
-            return S;
+            return p;
           },
           maybeFetchPremiumLikelihood: function () {
             return h;
@@ -1543,19 +1543,19 @@
         d = r("719923"),
         f = r("676572"),
         m = r("646718"),
-        p = r("49111");
-      let S = "nonSubscriber";
+        S = r("49111");
+      let p = "nonSubscriber";
       async function E() {
         try {
           s.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
           let { body: e } = await u.default.get({
-            url: p.Endpoints.USER_PREMIUM_LIKELIHOOD,
+            url: S.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           s.default.dispatch({
             type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
             premiumLikelihood: (function (e) {
               return {
-                [S]: e.non_subscriber,
+                [p]: e.non_subscriber,
                 [m.PremiumSubscriptionSKUs.TIER_0]:
                   e[m.PremiumSubscriptionSKUs.TIER_0],
                 [m.PremiumSubscriptionSKUs.TIER_2]:
@@ -1792,10 +1792,10 @@
             return m;
           },
           getCurrencies: function () {
-            return p;
+            return S;
           },
           planHasCurrency: function () {
-            return S;
+            return p;
           },
           useCurrencyWithPaymentSourceChange: function () {
             return E;
@@ -1825,7 +1825,7 @@
               });
             });
       }
-      function p(e, t, r) {
+      function S(e, t, r) {
         let a,
           n = [],
           s = [],
@@ -1847,10 +1847,10 @@
           n
         );
       }
-      function S(e, t, r) {
+      function p(e, t, r) {
         let a = o.default.get(e);
         u(null != a, "plan is undefined");
-        let n = p(a, r, !1);
+        let n = S(a, r, !1);
         return n.includes(t);
       }
       function E(e, t, r, n, u) {
@@ -1865,7 +1865,7 @@
           let e = async () => {
             await m(r, u);
             let e = [];
-            null != t && null != o.default.get(t) && (e = p(t, r, n)),
+            null != t && null != o.default.get(t) && (e = S(t, r, n)),
               e.length > 0
                 ? i({ paymentSourceId: r, currency: e[0], loaded: !0 })
                 : i({ paymentSourceId: r, loaded: !1 });
@@ -1953,8 +1953,9 @@
         (n.CYBERPUNK = "1197342727608746044"),
         (n.LUNAR_NEW_YEAR = "1202069709281828935"),
         (n.ELEMENTS = "1207046915880124426"),
-        (n.ANIME_V2 = "1212565175790473246");
+        (n.ANIME_V2 = "1212565175790473246"),
+        (n.SPECIAL_EVENTS = "1217175518781243583");
     },
   },
 ]);
-//# sourceMappingURL=891242848c7768179195.js.map
+//# sourceMappingURL=54f0c7c6bcaaecd029c9.js.map

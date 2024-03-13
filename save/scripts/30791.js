@@ -882,8 +882,9 @@
         (u.CYBERPUNK = "1197342727608746044"),
         (u.LUNAR_NEW_YEAR = "1202069709281828935"),
         (u.ELEMENTS = "1207046915880124426"),
-        (u.ANIME_V2 = "1212565175790473246");
+        (u.ANIME_V2 = "1212565175790473246"),
+        (u.SPECIAL_EVENTS = "1217175518781243583");
     },
   },
 ]);
-//# sourceMappingURL=30791.71fd9c1881ea468e2a8d.js.map
+//# sourceMappingURL=30791.62506550f5c252b9bca2.js.map

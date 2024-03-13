@@ -26330,8 +26330,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274638", ", Version Hash: ")
-          .concat("d7a2e3012f84df71695d4a18e7b965630d97d555")
+          .concat("274642", ", Version Hash: ")
+          .concat("8bad4b8179e0cf6def9242565e8b574ba13c37b0")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29433,12 +29433,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274638"), "274638"));
+        let _ = parseInt(((e = "274642"), "274642"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274638"
+                "274642"
               )
             ),
             (_ = 0)),
@@ -41209,7 +41209,7 @@
       E.r(_),
         E.d(_, {
           Dispatcher: function () {
-            return A;
+            return O;
           },
         }),
         E("222007"),
@@ -41225,8 +41225,7 @@
         I = E("805833"),
         s = E("377678"),
         T = E("120082");
-      let S = void 0,
-        N = new Set([
+      let S = new Set([
           "APP_STATE_UPDATE",
           "CLEAR_CACHES",
           "CONNECTION_CLOSED",
@@ -41242,8 +41241,8 @@
           "UPLOAD_FAIL",
           "WRITE_CACHES",
         ]),
-        O = new a.default("Flux");
-      class A {
+        N = new a.default("Flux");
+      class O {
         isDispatching() {
           return null != this._currentDispatchActionType;
         }
@@ -41254,7 +41253,7 @@
                 null == this.functionCache[e.type] &&
                   ((this.functionCache[e.type] = e =>
                     this._dispatchWithDevtools(e)),
-                  l(this.functionCache[e.type], "dispatch_" + e.type)),
+                  R(this.functionCache[e.type], "dispatch_" + e.type)),
                   this.functionCache[e.type](e),
                   _();
               } catch (e) {
@@ -41274,7 +41273,7 @@
                   var e;
                   let _ = s.serialize();
                   throw (
-                    (O.error("LastFewActions", _),
+                    (N.error("LastFewActions", _),
                     null === (e = this._sentryUtils) ||
                       void 0 === e ||
                       e.addBreadcrumb({
@@ -41291,9 +41290,7 @@
                 I.default.emit();
               }
             } finally {
-              (this._processingWaitQueue = !1),
-                (I.default.isDispatching = !1),
-                null == S || S();
+              (this._processingWaitQueue = !1), (I.default.isDispatching = !1);
             }
         }
         _dispatchWithDevtools(e) {
@@ -41307,7 +41304,7 @@
               .concat(this._currentDispatchActionType)
           ),
             n(e.type, "Dispatch.dispatch(...) called without an action type"),
-            N.has(e.type) && O.log("Dispatching ".concat(e.type)),
+            S.has(e.type) && N.log("Dispatching ".concat(e.type)),
             (0, i.mark)(e.type),
             s.add(e.type);
           let _ = this.actionLogger.log(e, _ => {
@@ -41318,7 +41315,7 @@
             }
           });
           _.totalTime > 100 &&
-            O.verbose(
+            N.verbose(
               "Slow dispatch on ".concat(e.type, ": ").concat(_.totalTime, "ms")
             );
           try {
@@ -41374,7 +41371,7 @@
             (this._waitQueue = []),
             (this._processingWaitQueue = !1),
             (this._currentDispatchActionType = null),
-            (this._actionHandlers = new R()),
+            (this._actionHandlers = new A()),
             (this._sentryUtils = void 0),
             (this.functionCache = {}),
             (this._defaultBand = e),
@@ -41389,7 +41386,7 @@
             });
         }
       }
-      class R {
+      class A {
         getOrderedActionHandlers(e) {
           var _;
           return null !== (_ = this._orderedActionHandlers[e.type]) &&
@@ -41410,7 +41407,7 @@
           for (let E in _) {
             let t = _[E],
               o = e => t(e);
-            l(o, "".concat(e, "_").concat(E)), (r[E] = o);
+            R(o, "".concat(e, "_").concat(E)), (r[E] = o);
           }
           return (
             this._dependencyGraph.addNode(o, {
@@ -41499,7 +41496,7 @@
             (this._dependencyGraph = new t.DepGraph());
         }
       }
-      function l(e, _) {
+      function R(e, _) {
         Object.defineProperty(e, "name", { value: _ });
       }
     },
@@ -41508,7 +41505,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return a;
+            return i;
           },
         }),
         E("860677"),
@@ -41517,16 +41514,17 @@
         E("704744");
       var t = E("811022"),
         o = E("377678");
-      let n = new t.default("Flux"),
-        r = e => e();
-      var a = new (class e {
+      let n = void 0,
+        r = new t.default("Flux"),
+        a = e => e();
+      var i = new (class e {
         destroy() {
           this.changedStores.clear(),
             this.reactChangedStores.clear(),
-            (r = e => e());
+            (a = e => e());
         }
         injectBatchEmitChanges(e) {
-          r = e;
+          a = e;
         }
         pause() {
           let e =
@@ -41562,14 +41560,14 @@
         emit() {
           !this.isBatchEmitting &&
             !this.isPaused &&
-            r(() => {
+            a(() => {
               try {
                 (this.isBatchEmitting = !0), this.changeSentinel++;
                 let e = 0;
                 for (; this.changedStores.size > 0; ) {
                   if (++e > 100)
                     throw (
-                      (n.error("LastFewActions", o.serialize()),
+                      (r.error("LastFewActions", o.serialize()),
                       Error("change emit loop detected, aborting"))
                     );
                   this.emitNonReactOnce();
@@ -41577,13 +41575,13 @@
                 for (; this.reactChangedStores.size > 0; ) {
                   if (++e > 100)
                     throw (
-                      (n.error("LastFewActions", o.serialize()),
+                      (r.error("LastFewActions", o.serialize()),
                       Error("react change emit loop detected, aborting"))
                     );
                   this.emitReactOnce();
                 }
               } finally {
-                this.isBatchEmitting = !1;
+                null == n || n(), (this.isBatchEmitting = !1);
               }
             });
         }
@@ -41610,7 +41608,7 @@
             });
           let E = Date.now();
           E - e > 100 &&
-            n.verbose(
+            r.verbose(
               "Slow batch emitChanges took ".concat(E - e, "ms recentActions:"),
               o.serialize()
             );
@@ -41625,7 +41623,7 @@
             });
           let E = Date.now();
           E - e > 100 &&
-            n.verbose(
+            r.verbose(
               "Slow batch emitReactChanges took ".concat(
                 E - e,
                 "ms recentActions:"
@@ -51979,4 +51977,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.865dbdbcb267b66115f8.js.map
+//# sourceMappingURL=76039.3b65326f45260ecd302f.js.map

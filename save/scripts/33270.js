@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "274972",
+                  buildNumber: "274979",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -2698,7 +2698,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return tl;
+            return ti;
           },
         }),
         n("222007");
@@ -2737,78 +2737,79 @@
         U = n("697316"),
         G = n("587233"),
         j = n("683716"),
-        w = n("132943"),
-        k = n("319769"),
-        F = n("506377"),
-        B = n("318915"),
-        H = n("619443"),
-        V = n("263901"),
-        Y = n("643130"),
-        W = n("802896"),
-        K = n("374021"),
-        z = n("592407"),
-        q = n("468560"),
-        Q = n("73968"),
-        Z = n("236199"),
-        X = n("353983"),
-        J = n("940035"),
-        $ = n("831773"),
-        ee = n("397039"),
-        et = n("628805"),
-        en = n("165926"),
-        ea = n("946522"),
-        es = n("880185"),
-        el = n("624043"),
-        ei = n("263065"),
-        er = n("204025"),
-        eo = n("684641"),
-        eu = n("176372"),
-        ed = n("929479"),
-        ec = n("630140"),
-        ef = n("91990"),
-        eE = n("359477"),
-        eh = n("1501"),
-        e_ = n("838857"),
-        eC = n("393414"),
-        eI = n("828309"),
-        eS = n("29322"),
-        em = n("208021"),
-        ep = n("582713"),
-        eT = n("949000"),
-        eg = n("987285"),
-        eA = n("686551"),
-        eN = n("793237"),
-        eR = n("120252"),
-        eO = n("481395"),
-        ev = n("401642"),
-        eL = n("542789"),
-        eM = n("84124"),
-        eP = n("392011"),
-        eD = n("777523"),
-        ey = n("470885"),
-        ex = n("868558"),
-        eb = n("271938"),
-        eU = n("982108"),
-        eG = n("42203"),
-        ej = n("476108"),
-        ew = n("305961"),
-        ek = n("778588"),
-        eF = n("686470"),
-        eB = n("18494"),
-        eH = n("162771"),
-        eV = n("167726"),
-        eY = n("552067"),
-        eW = n("866681"),
-        eK = n("428773"),
-        ez = n("535974"),
-        eq = n("43093"),
-        eQ = n("773336"),
-        eZ = n("50885"),
-        eX = n("780009"),
-        eJ = n("49111"),
-        e$ = n("750947"),
-        e0 = n("724210"),
-        e1 = n("56235");
+        w = n("34226"),
+        k = n("132943"),
+        F = n("319769"),
+        B = n("506377"),
+        H = n("318915"),
+        V = n("619443"),
+        Y = n("263901"),
+        W = n("643130"),
+        K = n("802896"),
+        z = n("374021"),
+        q = n("592407"),
+        Q = n("468560"),
+        Z = n("73968"),
+        X = n("236199"),
+        J = n("353983"),
+        $ = n("940035"),
+        ee = n("831773"),
+        et = n("397039"),
+        en = n("628805"),
+        ea = n("165926"),
+        es = n("946522"),
+        el = n("880185"),
+        ei = n("624043"),
+        er = n("263065"),
+        eo = n("204025"),
+        eu = n("684641"),
+        ed = n("176372"),
+        ec = n("929479"),
+        ef = n("630140"),
+        eE = n("91990"),
+        eh = n("359477"),
+        e_ = n("1501"),
+        eC = n("838857"),
+        eI = n("393414"),
+        eS = n("828309"),
+        em = n("29322"),
+        ep = n("208021"),
+        eT = n("582713"),
+        eg = n("949000"),
+        eA = n("987285"),
+        eN = n("686551"),
+        eR = n("793237"),
+        eO = n("120252"),
+        ev = n("481395"),
+        eL = n("401642"),
+        eM = n("542789"),
+        eP = n("84124"),
+        eD = n("392011"),
+        ey = n("777523"),
+        ex = n("470885"),
+        eb = n("868558"),
+        eU = n("271938"),
+        eG = n("982108"),
+        ej = n("42203"),
+        ew = n("476108"),
+        ek = n("305961"),
+        eF = n("778588"),
+        eB = n("686470"),
+        eH = n("18494"),
+        eV = n("162771"),
+        eY = n("167726"),
+        eW = n("552067"),
+        eK = n("866681"),
+        ez = n("428773"),
+        eq = n("535974"),
+        eQ = n("43093"),
+        eZ = n("773336"),
+        eX = n("50885"),
+        eJ = n("780009"),
+        e$ = n("49111"),
+        e0 = n("750947"),
+        e1 = n("724210"),
+        e2 = n("56235");
       n("72177"),
         n("392453"),
         n("366679"),
@@ -2832,33 +2833,33 @@
         n("799286"),
         n("470055"),
         n("140596");
-      let e2 = !1;
+      let e4 = !1;
       (0, A.initSessionHeartbeatScheduler)(),
         o.default.initialize(),
-        eI.default.loadServer(),
-        eQ.isPlatformEmbedded &&
-          (eZ.default.on("USER_SETTINGS_OPEN", () => {
-            !ek.default.getLayers().includes(eJ.Layers.USER_SETTINGS) &&
-              _.default.open(eJ.UserSettingsSections.ACCOUNT);
+        eS.default.loadServer(),
+        eZ.isPlatformEmbedded &&
+          (eX.default.on("USER_SETTINGS_OPEN", () => {
+            !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) &&
+              _.default.open(e$.UserSettingsSections.ACCOUNT);
           }),
-          eZ.default.on("LAUNCH_APPLICATION", (e, t) => {
-            let n = eF.default.getActiveLibraryApplication(t);
-            eX.playApplication(t, n, {
+          eX.default.on("LAUNCH_APPLICATION", (e, t) => {
+            let n = eB.default.getActiveLibraryApplication(t);
+            eJ.playApplication(t, n, {
               analyticsParams: {
                 location: {
-                  page: eJ.AnalyticsPages.DIRECT,
-                  object: eJ.AnalyticsObjects.WEB_URL,
+                  page: e$.AnalyticsPages.DIRECT,
+                  object: e$.AnalyticsObjects.WEB_URL,
                 },
               },
             });
           }));
-      let e4 = o.default.connectStores(
-          [H.default, ej.default, eb.default],
+      let e9 = o.default.connectStores(
+          [V.default, ew.default, eU.default],
           () => ({
-            isConnected: H.default.isConnected(),
-            defaultRoute: ej.default.defaultRoute,
-            defaultRouteFallback: ej.default.fallbackRoute,
-            token: eb.default.getToken(),
+            isConnected: V.default.isConnected(),
+            defaultRoute: ew.default.defaultRoute,
+            defaultRouteFallback: ew.default.fallbackRoute,
+            token: eU.default.getToken(),
           })
         )(
           class extends s.Component {
@@ -2866,7 +2867,7 @@
               let { match: e } = this.props;
               null != e &&
                 null != e.params.inviteCode &&
-                (0, W.doGuildOnboardingForPostAuthInvite)({
+                (0, K.doGuildOnboardingForPostAuthInvite)({
                   code: e.params.inviteCode,
                 });
             }
@@ -2879,14 +2880,14 @@
               } = this.props;
               if (null == n)
                 return (0, a.jsx)(r.Redirect, {
-                  to: eJ.Routes.DEFAULT_LOGGED_OUT,
+                  to: e$.Routes.DEFAULT_LOGGED_OUT,
                 });
               if (e) {
-                let e = tn(t);
+                let e = ta(t);
                 return null == e ||
-                  ((e.params.guildId === eJ.ME ||
-                    null != ew.default.getGuild(e.params.guildId)) &&
-                    null != eG.default.getChannel(e.params.channelId))
+                  ((e.params.guildId === e$.ME ||
+                    null != ek.default.getGuild(e.params.guildId)) &&
+                    null != ej.default.getChannel(e.params.channelId))
                   ? (0, a.jsx)(r.Redirect, { to: t })
                   : (0, a.jsx)(r.Redirect, { to: s });
               }
@@ -2894,26 +2895,26 @@
             }
           }
         ),
-        e9 = (0, v.makeAuthenticated)(M.default, null, { passProps: !1 }),
-        e7 = (0, v.makeAuthenticated)(function () {
+        e7 = (0, v.makeAuthenticated)(M.default, null, { passProps: !1 }),
+        e8 = (0, v.makeAuthenticated)(function () {
           return (0, a.jsx)(N.default, {});
         }),
-        e8 = (0, v.makeAuthenticated)(function (e) {
+        e3 = (0, v.makeAuthenticated)(function (e) {
           let { match: t } = e,
             { applicationId: n, section: s } = t.params,
-            l = (0, q.default)(e$.ApplicationDirectoryProfileSections, s);
+            l = (0, Q.default)(e0.ApplicationDirectoryProfileSections, s);
           return (0, a.jsx)(R.default, { applicationId: n, initialSection: l });
         }),
-        e3 = (0, v.makeAuthenticated)(function () {
+        e6 = (0, v.makeAuthenticated)(function () {
           return (0, a.jsx)(O.default, {});
         }),
-        e6 = [
-          eJ.Routes.GUILD_BOOSTING_MARKETING(":guildId"),
-          ...Array.from(e0.StaticChannelRoutes).map(e =>
-            eJ.Routes.CHANNEL(":guildId", e)
+        e5 = [
+          e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"),
+          ...Array.from(e1.StaticChannelRoutes).map(e =>
+            e$.Routes.CHANNEL(":guildId", e)
           ),
         ];
-      function e5(e) {
+      function te(e) {
         let {
           guildId: t,
           channelId: n = null,
@@ -2921,170 +2922,170 @@
           threadId: s = null,
         } = e.params;
         return {
-          guildId: null != t ? t : eJ.ME,
+          guildId: null != t ? t : e$.ME,
           channelId: n,
           messageId: a,
           threadId: s,
         };
       }
-      let te = [
+      let tt = [
           {
-            path: [eJ.Routes.APPLICATION_DIRECTORY_SEARCH],
-            render: e3,
+            path: [e$.Routes.APPLICATION_DIRECTORY_SEARCH],
+            render: e6,
             isSessionRequired: !0,
           },
           {
             path: [
-              eJ.Routes.APPLICATION_DIRECTORY_PROFILE(
+              e$.Routes.APPLICATION_DIRECTORY_PROFILE(
                 ":applicationId",
                 ":section?"
               ),
             ],
+            render: e3,
+            isSessionRequired: !0,
+          },
+          {
+            path: [e$.Routes.APPLICATION_DIRECTORY],
             render: e8,
             isSessionRequired: !0,
           },
-          {
-            path: [eJ.Routes.APPLICATION_DIRECTORY],
-            render: e7,
-            isSessionRequired: !0,
-          },
         ],
-        tt = [
+        tn = [
           {
             path: [
-              eJ.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
+              e$.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode"),
             ],
             render(e) {
               let { match: t } = e;
-              return (0, a.jsx)(e4, { match: t });
+              return (0, a.jsx)(e9, { match: t });
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.APP],
-            render: () => (0, a.jsx)(e4, {}),
+            path: [e$.Routes.APP],
+            render: () => (0, a.jsx)(e9, {}),
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.USERS(":id")],
+            path: [e$.Routes.USERS(":id")],
             render: function (e) {
               let { match: t, location: n } = e,
                 { friend_token: s } = (0, l.parse)(n.search),
                 { id: i } = t.params;
               return (
-                (0, V.addPostConnectionCallback)(() =>
-                  (0, ev.openUserProfileModal)({
+                (0, Y.addPostConnectionCallback)(() =>
+                  (0, eL.openUserProfileModal)({
                     userId: i,
-                    guildId: eJ.ME,
+                    guildId: e$.ME,
                     friendToken: s,
                     analyticsLocation: {
-                      section: eJ.AnalyticsSections.DIRECT_ROUTE_ACCESS,
+                      section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS,
                     },
                   })
                 ),
-                (0, a.jsx)(r.Redirect, { to: ej.default.defaultRoute })
+                (0, a.jsx)(r.Redirect, { to: ew.default.defaultRoute })
               );
             },
           },
           {
-            path: [eJ.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
+            path: [e$.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
             render: function (e) {
               let { match: t } = e,
                 { gameId: n, action: s } = t.params;
               return (
-                ez.default.whenInitialized(() => {
-                  eF.default.whenInitialized(() => {
+                eq.default.whenInitialized(() => {
+                  eB.default.whenInitialized(() => {
                     switch (s) {
                       case "launch": {
-                        let e = eF.default.getActiveLibraryApplication(n);
+                        let e = eB.default.getActiveLibraryApplication(n);
                         if (null == e) return;
-                        eX.playApplication(e.id, e, {
+                        eJ.playApplication(e.id, e, {
                           analyticsParams: {
                             location: {
-                              page: eJ.AnalyticsPages.DIRECT,
-                              object: eJ.AnalyticsObjects.WEB_URL,
+                              page: e$.AnalyticsPages.DIRECT,
+                              object: e$.AnalyticsObjects.WEB_URL,
                             },
                           },
                         });
                         break;
                       }
                       case "test-mode":
-                        eV.default.whenInitialized(() =>
+                        eY.default.whenInitialized(() =>
                           h.authorizeAndSetTestModeApplication(n)
                         );
                         break;
                       case "uninstall": {
-                        let e = eF.default.getActiveLibraryApplication(n);
+                        let e = eB.default.getActiveLibraryApplication(n);
                         if (null == e) return;
                         (0, c.uninstallBranchPrompt)(
                           e.id,
                           e.branchId,
-                          eJ.AnalyticsLocations.URI_SCHEME
+                          e$.AnalyticsLocations.URI_SCHEME
                         );
                       }
                     }
                   });
                 }),
-                (0, a.jsx)(r.Redirect, { to: eJ.Routes.APPLICATION_LIBRARY })
+                (0, a.jsx)(r.Redirect, { to: e$.Routes.APPLICATION_LIBRARY })
               );
             },
           },
           {
-            path: [eJ.Routes.GUILD_CREATE],
+            path: [e$.Routes.GUILD_CREATE],
             render: function () {
               return (
-                (0, V.addPostConnectionCallback)(() =>
+                (0, Y.addPostConnectionCallback)(() =>
                   x.default.openCreateGuildModal({ location: "External link" })
                 ),
-                (0, a.jsx)(r.Redirect, { to: ej.default.defaultRoute })
+                (0, a.jsx)(r.Redirect, { to: ew.default.defaultRoute })
               );
             },
           },
           {
-            path: [eJ.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
+            path: [e$.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
             render: function (e) {
               let { match: t } = e,
                 { section: n, subsection: s } = t.params,
                 i = (0, l.parse)(location.search),
                 o = i.feature;
               return (
-                (0, V.addPostConnectionCallback)(() =>
-                  Q.openGuildSettingsPickerModal({
-                    section: (0, q.default)(eJ.GuildSettingsSections, n),
-                    subsection: (0, q.default)(eJ.GuildSettingsSubsections, s),
+                (0, Y.addPostConnectionCallback)(() =>
+                  Z.openGuildSettingsPickerModal({
+                    section: (0, Q.default)(e$.GuildSettingsSections, n),
+                    subsection: (0, Q.default)(e$.GuildSettingsSubsections, s),
                     feature: o,
                   })
                 ),
-                (0, a.jsx)(r.Redirect, { to: ej.default.defaultRoute })
+                (0, a.jsx)(r.Redirect, { to: ew.default.defaultRoute })
               );
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.SETTINGS(":section", ":subsection?")],
+            path: [e$.Routes.SETTINGS(":section", ":subsection?")],
             render: function (e) {
               let { location: t } = e,
-                n = (0, eD.default)(t.pathname);
+                n = (0, ey.default)(t.pathname);
               return (
                 null != n &&
-                  (0, V.addPostConnectionCallback)(() =>
+                  (0, Y.addPostConnectionCallback)(() =>
                     _.default.open(n.section, n.subsection, {
                       openWithoutBackstack: !1,
                       impressionSource: n.source,
                     })
                   ),
-                (0, a.jsx)(r.Redirect, { to: ej.default.defaultRoute })
+                (0, a.jsx)(r.Redirect, { to: ew.default.defaultRoute })
               );
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
+            path: [e$.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
             render: function (e) {
               let { match: t } = e,
                 { guildId: s } = t.params;
               return (
-                (0, V.addPostConnectionCallback)(() => {
+                (0, Y.addPostConnectionCallback)(() => {
                   (0, u.openModalLazy)(async () => {
                     let { default: e } = await n
                       .el("747593")
@@ -3092,65 +3093,65 @@
                     return t => (0, a.jsx)(e, { ...t, guildId: s });
                   });
                 }),
-                (0, a.jsx)(r.Redirect, { to: eJ.Routes.CHANNEL(s) })
+                (0, a.jsx)(r.Redirect, { to: e$.Routes.CHANNEL(s) })
               );
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.APPLICATION_LIBRARY_INVENTORY],
+            path: [e$.Routes.APPLICATION_LIBRARY_INVENTORY],
             render: function () {
               return (
-                (0, V.addPostConnectionCallback)(() =>
-                  _.default.open(eJ.UserSettingsSections.INVENTORY)
+                (0, Y.addPostConnectionCallback)(() =>
+                  _.default.open(e$.UserSettingsSections.INVENTORY)
                 ),
-                (0, a.jsx)(r.Redirect, { to: ej.default.defaultRoute })
+                (0, a.jsx)(r.Redirect, { to: ew.default.defaultRoute })
               );
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.WELCOME(":guildId?", ":channelId?")],
+            path: [e$.Routes.WELCOME(":guildId?", ":channelId?")],
             render: function (e) {
               let { match: t } = e,
                 { guildId: n, channelId: s } = t.params;
-              (0, en.setNewUser)(e1.NewUserTypes.MARKETING_UNCLAIMED);
-              let l = eJ.Routes.CHANNEL(n, s);
+              (0, ea.setNewUser)(e2.NewUserTypes.MARKETING_UNCLAIMED);
+              let l = e$.Routes.CHANNEL(n, s);
               return (0, a.jsx)(r.Redirect, { to: l });
             },
             isSessionRequired: !0,
           },
           {
-            path: [eJ.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
+            path: [e$.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
             render: function (e) {
               let { match: t } = e,
                 { guildId: n, guildEventId: s } = t.params;
               return (
-                (0, V.addPostConnectionCallback)(() => {
-                  (0, K.openGuildEventDetails)({ eventId: s });
+                (0, Y.addPostConnectionCallback)(() => {
+                  (0, z.openGuildEventDetails)({ eventId: s });
                 }),
-                (0, a.jsx)(r.Redirect, { to: eJ.Routes.CHANNEL(n) })
+                (0, a.jsx)(r.Redirect, { to: e$.Routes.CHANNEL(n) })
               );
             },
             isSessionRequired: !0,
           },
           {
             path: [
-              eJ.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?"),
+              e$.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?"),
             ],
             render: function (e) {
               let { match: t } = e,
                 { guildId: n, section: s, subsection: l } = t.params;
               return (
-                (0, V.addPostConnectionCallback)(() => {
-                  z.default.open(
+                (0, Y.addPostConnectionCallback)(() => {
+                  q.default.open(
                     n,
-                    (0, q.default)(eJ.GuildSettingsSections, s),
+                    (0, Q.default)(e$.GuildSettingsSections, s),
                     void 0,
-                    (0, q.default)(eJ.GuildSettingsSubsections, l)
+                    (0, Q.default)(e$.GuildSettingsSubsections, l)
                   );
                 }),
-                (0, a.jsx)(r.Redirect, { to: eJ.Routes.CHANNEL(n) })
+                (0, a.jsx)(r.Redirect, { to: e$.Routes.CHANNEL(n) })
               );
             },
             isSessionRequired: !0,
@@ -3158,102 +3159,102 @@
           },
           {
             path: [
-              eJ.Routes.CHANNEL_THREAD_VIEW(
+              e$.Routes.CHANNEL_THREAD_VIEW(
                 ":guildId",
                 ":channelId",
                 ":threadId",
                 ":messageId?"
               ),
-              eJ.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
-              eJ.Routes.ACTIVITY,
-              eJ.Routes.ACTIVITIES,
-              eJ.Routes.ACTIVITIES_HAPPENING_NOW,
-              eJ.Routes.ACTIVITY_DETAILS(":applicationId"),
-              eJ.Routes.APPLICATION_LIBRARY,
-              eJ.Routes.APPLICATION_STORE,
-              eJ.Routes.MESSAGE_REQUESTS,
-              eJ.Routes.COLLECTIBLES_SHOP,
-              eJ.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
-              eJ.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
-              eJ.Routes.GUILD_DISCOVERY,
-              eJ.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
-              eJ.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(
+              e$.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+              e$.Routes.ACTIVITY,
+              e$.Routes.ACTIVITIES,
+              e$.Routes.ACTIVITIES_HAPPENING_NOW,
+              e$.Routes.ACTIVITY_DETAILS(":applicationId"),
+              e$.Routes.APPLICATION_LIBRARY,
+              e$.Routes.APPLICATION_STORE,
+              e$.Routes.MESSAGE_REQUESTS,
+              e$.Routes.COLLECTIBLES_SHOP,
+              e$.Routes.COLLECTIBLES_SHOP_FULLSCREEN,
+              e$.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"),
+              e$.Routes.GUILD_DISCOVERY,
+              e$.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"),
+              e$.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(
                 ":guildId",
                 ":inviteCode?"
               ),
-              eJ.Routes.GUILD_BOOSTING_MARKETING(":guildId"),
-              eJ.Routes.FEATURE(":feature"),
-              eJ.Routes.FAMILY_CENTER,
+              e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"),
+              e$.Routes.FEATURE(":feature"),
+              e$.Routes.FAMILY_CENTER,
             ],
-            render: e9,
+            render: e7,
             isSessionRequired: !0,
             isChatRoute: !0,
           },
-          ...te,
+          ...tt,
         ];
-      function tn(e) {
-        for (let { path: t, isChatRoute: n } of tt) {
+      function ta(e) {
+        for (let { path: t, isChatRoute: n } of tn) {
           if (!n) continue;
           let a = (0, i.matchPath)(e, { path: t });
           if (null != a) return a;
         }
         return null;
       }
-      function ta(e) {
+      function ts(e) {
         let { channelId: t, guildId: n, pathname: a } = e;
-        if (!H.default.isConnected()) return;
-        let { location: s } = (0, eC.getHistory)();
+        if (!V.default.isConnected()) return;
+        let { location: s } = (0, eI.getHistory)();
         s.pathname === a &&
-          (null == eG.default.getChannel(t)
-            ? (0, eC.replaceWith)(eJ.Routes.CHANNEL(n))
-            : (0, eC.replaceWith)(a));
+          (null == ej.default.getChannel(t)
+            ? (0, eI.replaceWith)(e$.Routes.CHANNEL(n))
+            : (0, eI.replaceWith)(a));
       }
-      class ts extends s.PureComponent {
+      class tl extends s.PureComponent {
         componentDidMount() {
           P.default.initialize(),
-            eZ.default.setZoomFactor(C.default.zoom),
-            eI.default.init(),
+            eX.default.setZoomFactor(C.default.zoom),
+            eS.default.init(),
             L.default.initialize(),
-            eo.default.initialize(),
-            w.default.initialize(),
-            ex.default.initialize(),
+            eu.default.initialize(),
             k.default.initialize(),
-            ed.default.initialize(),
-            J.default.initialize(),
+            eb.default.initialize(),
+            F.default.initialize(),
+            ec.default.initialize(),
+            $.default.initialize(),
             I.default.init(),
+            H.default.init(),
             B.default.init(),
-            F.default.init(),
-            ea.default.initialize(),
+            es.default.initialize(),
             g.default.initialize(),
             j.default.initialize(),
-            ec.default.initialize(),
+            ef.default.initialize(),
             T.default.initialize(),
-            ey.default.initialize(),
-            er.default.initialize(),
+            ex.default.initialize(),
+            eo.default.initialize(),
             p.default.initialize(),
-            Y.default.init(),
-            Z.default.init(),
-            eK.default.init(),
-            eq.default.init(),
+            W.default.init(),
+            X.default.init(),
+            ez.default.init(),
+            eQ.default.init(),
             m.default.initialize(),
-            eO.default.init(),
+            ev.default.init(),
+            eK.default.init(),
             eW.default.init(),
-            eY.default.init(),
-            eM.default.init(),
-            eg.default.initialize(),
-            eA.default.initialize(),
-            eL.default.initialize(),
             eP.default.init(),
+            eA.default.initialize(),
+            eN.default.initialize(),
+            eM.default.initialize(),
+            eD.default.init(),
             G.default.initialize(),
             S.default.initialize(),
-            eS.default.initialize(),
-            eT.default.initialize(),
-            el.default.initialize(),
-            es.default.initialize(),
+            em.default.initialize(),
+            eg.default.initialize(),
             ei.default.initialize(),
+            el.default.initialize(),
+            er.default.initialize(),
             D.default.initialize(),
-            ef.default.initialize(),
-            X.default.init({
+            eE.default.initialize(),
+            J.default.init({
               hasModalOpen: u.hasAnyModalOpen,
               openModal: () =>
                 (0, u.openModalLazy)(async () => {
@@ -3264,54 +3265,55 @@
                 }),
             }),
             U.default.init(),
-            $.default.initialize(),
-            eE.default.initialize(),
-            eu.default.initialize(),
+            ee.default.initialize(),
+            eh.default.initialize(),
+            ed.default.initialize(),
             b.default.initialize(),
-            (this.rewriterUnlisten = eh.default.addRouteRewriter(
+            (this.rewriterUnlisten = e_.default.addRouteRewriter(
               this.ensureChannelMatchesGuild
             )),
-            (this.historyUnlisten = eh.default.addRouteChangeListener(
+            (this.historyUnlisten = e_.default.addRouteChangeListener(
               this.handleHistoryChange
             ));
         }
         componentWillUnmount() {
           P.default.terminate(),
-            ex.default.terminate(),
-            ed.default.terminate(),
-            eo.default.terminate(),
+            eb.default.terminate(),
+            ec.default.terminate(),
+            eu.default.terminate(),
             L.default.terminate(),
             T.default.terminate(),
-            ey.default.terminate(),
+            ex.default.terminate(),
             p.default.terminate(),
-            ec.default.terminate(),
-            er.default.terminate(),
-            eL.default.terminate(),
+            ef.default.terminate(),
+            eo.default.terminate(),
+            eM.default.terminate(),
             m.default.terminate(),
             G.default.terminate(),
-            $.default.terminate(),
+            ee.default.terminate(),
             S.default.terminate(),
-            eE.default.terminate(),
-            eS.default.terminate(),
-            eT.default.terminate(),
-            el.default.terminate(),
-            es.default.terminate(),
+            eh.default.terminate(),
+            em.default.terminate(),
+            eg.default.terminate(),
             ei.default.terminate(),
+            el.default.terminate(),
+            er.default.terminate(),
             D.default.terminate(),
-            eu.default.terminate(),
+            ed.default.terminate(),
             b.default.terminate(),
+            w.default.terminate(),
             this.historyUnlisten(),
             this.rewriterUnlisten();
         }
         handleHistoryChange(e) {
           let { pathname: t, search: n } = e;
           !(function (e) {
-            if (H.default.isConnected() || H.default.isTryingToConnect())
+            if (V.default.isConnected() || V.default.isTryingToConnect())
               return;
-            let t = eb.default.getToken();
+            let t = eU.default.getToken();
             if (null == t) return;
             let n = (function (e) {
-              for (let { path: t, isSessionRequired: n } of tt) {
+              for (let { path: t, isSessionRequired: n } of tn) {
                 if (!n) continue;
                 let a = (0, i.matchPath)(e, { path: t });
                 if (null != a) return a;
@@ -3321,42 +3323,42 @@
             null != n && d.default.startSession(t);
           })(t),
             !(function (e, t) {
-              let n = tn(e);
+              let n = ta(e);
               if (null == n) return;
               let {
                   guildId: a,
                   channelId: s,
                   messageId: r,
                   threadId: o,
-                } = e5(n),
-                u = (0, e_.isValidGuildId)(a),
-                d = (0, e_.isValidChannelId)(s),
-                c = (0, e_.isValidChannelId)(o),
-                h = eH.default.getGuildId(),
+                } = te(n),
+                u = (0, eC.isValidGuildId)(a),
+                d = (0, eC.isValidChannelId)(s),
+                c = (0, eC.isValidChannelId)(o),
+                h = eV.default.getGuildId(),
                 _ = h !== a;
               if ((u && _ && f.default.selectGuild(a), u && d)) {
-                let n = eB.default.getChannelId(h),
+                let n = eH.default.getChannelId(h),
                   i = n !== s;
-                if (!e2 || _ || i || null != r) {
-                  (e2 = !0),
+                if (!e4 || _ || i || null != r) {
+                  (e4 = !0),
                     E.default.selectChannel({
                       guildId: a,
                       channelId: s,
                       messageId: r,
                     });
                   let { summaryId: e } = (0, l.parse)(t);
-                  null != e && eN.default.setSelectedSummary(s, e);
+                  null != e && eR.default.setSelectedSummary(s, e);
                 }
                 if (null != o && c) {
-                  let e = eU.default.getCurrentSidebarChannelId(n),
+                  let e = eG.default.getCurrentSidebarChannelId(n),
                     t = e !== o,
-                    l = null != eU.default.getGuildSidebarState(a);
+                    l = null != eG.default.getGuildSidebarState(a);
                   if (null != s && null != o && t) {
-                    if (l) (0, eC.replaceWith)(eJ.Routes.CHANNEL(a, o, r));
+                    if (l) (0, eI.replaceWith)(e$.Routes.CHANNEL(a, o, r));
                     else {
-                      let e = { type: ep.SidebarOpenDetailsType.THREAD };
+                      let e = { type: eT.SidebarOpenDetailsType.THREAD };
                       null != r && (e.initialMessageId = r),
-                        em.default.openThreadAsSidebar({
+                        ep.default.openThreadAsSidebar({
                           guildId: a,
                           baseChannelId: s,
                           channelId: o,
@@ -3364,20 +3366,20 @@
                         });
                     }
                   }
-                } else null != s && !i && em.default.closeChannelSidebar(s);
-                let u = et.default.getIsOpen();
-                if (s === e0.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
-                  ee.default.closeSidebar();
+                } else null != s && !i && ep.default.closeChannelSidebar(s);
+                let u = en.default.getIsOpen();
+                if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+                  et.default.closeSidebar();
                 else if (_ && u) {
-                  let t = null == h && a === eJ.ME,
-                    n = e === eJ.Routes.GUILD_DISCOVERY;
-                  t || n ? ee.default.closeSidebar() : ee.default.openSidebar();
-                } else ((i && u) || (!_ && !i)) && ee.default.closeSidebar();
+                  let t = null == h && a === e$.ME,
+                    n = e === e$.Routes.GUILD_DISCOVERY;
+                  t || n ? et.default.closeSidebar() : et.default.openSidebar();
+                } else ((i && u) || (!_ && !i)) && et.default.closeSidebar();
               } else {
                 var C;
                 if (
                   ((C = e),
-                  !e6.some(e => {
+                  !e5.some(e => {
                     var t;
                     return (
                       (null === (t = (0, i.matchPath)(C, e)) || void 0 === t
@@ -3386,42 +3388,42 @@
                     );
                   }))
                 )
-                  (0, eC.replaceWith)(ej.default.fallbackRoute);
+                  (0, eI.replaceWith)(ew.default.fallbackRoute);
               }
             })(t, n);
         }
         ensureChannelMatchesGuild(e) {
-          if (!H.default.isConnected()) return null;
+          if (!V.default.isConnected()) return null;
           let { pathname: t } = e,
-            n = tn(t);
+            n = ta(t);
           if (null == n) return null;
-          let { guildId: a, channelId: s, threadId: l } = e5(n),
-            i = (0, e_.isValidGuildId)(a) && a !== eJ.ME && a !== eJ.FAVORITES,
+          let { guildId: a, channelId: s, threadId: l } = te(n),
+            i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES,
             r =
               null != s &&
-              (0, e_.isValidChannelId)(s) &&
-              !(0, e0.isStaticChannelRoute)(s);
+              (0, eC.isValidChannelId)(s) &&
+              !(0, e1.isStaticChannelRoute)(s);
           if (r && i) {
-            let n = eG.default.getChannel(s);
+            let n = ej.default.getChannel(s);
             if (null == n)
-              eR.default
+              eO.default
                 .loadThread(s)
-                .then(() => ta({ channelId: s, guildId: a, pathname: t }));
+                .then(() => ts({ channelId: s, guildId: a, pathname: t }));
             else if (n.guild_id !== a)
-              return { path: eJ.Routes.CHANNEL(a), state: e.state };
+              return { path: e$.Routes.CHANNEL(a), state: e.state };
             if (null != l) {
               let n =
-                (0, e_.isValidChannelId)(l) && !(0, e0.isStaticChannelRoute)(s);
+                (0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s);
               if (!n) return null;
-              let i = eG.default.getChannel(l);
+              let i = ej.default.getChannel(l);
               if (null == i)
-                eR.default
+                eO.default
                   .loadThread(l)
-                  .then(() => ta({ channelId: l, guildId: a, pathname: t }));
+                  .then(() => ts({ channelId: l, guildId: a, pathname: t }));
               else if ((null == i ? void 0 : i.parent_id) !== s)
                 return (
-                  em.default.closeChannelSidebar(s),
-                  { path: eJ.Routes.CHANNEL(a, s), state: e.state }
+                  ep.default.closeChannelSidebar(s),
+                  { path: e$.Routes.CHANNEL(a, s), state: e.state }
                 );
             }
           }
@@ -3437,7 +3439,7 @@
                     from: "/channels",
                     to: "/",
                   }),
-                  tt.map(e => {
+                  tn.map(e => {
                     let { path: t, render: n } = e;
                     return (0, a.jsx)(r.Route, { path: t, render: n }, t[0]);
                   }),
@@ -3454,7 +3456,7 @@
             (this.rewriterUnlisten = () => {});
         }
       }
-      var tl = ts;
+      var ti = tl;
     },
     543155: function (e, t, n) {
       "use strict";
@@ -17278,22 +17280,6 @@
             }),
           ],
         });
-      }
-    },
-    963990: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          removeExecutablePathPrefix: function () {
-            return a;
-          },
-        });
-      function a(e) {
-        var t;
-        let n =
-          ((t = (t = e).toLowerCase()).endsWith("/") && (t = t.slice(0, -1)),
-          t);
-        return n.split("/").slice(-2).join("/");
       }
     },
     132943: function (e, t, n) {
@@ -52799,4 +52785,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a09f6f885c0f5ada5ebb.js.map
+//# sourceMappingURL=6789eae060fbf6526619.js.map

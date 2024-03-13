@@ -4773,6 +4773,7 @@
         (el.GAME_NEWS_OPENED = "game_news_opened"),
         (el.APPLICATION_OPENED = "application_opened"),
         (el.LAUNCH_GAME = "launch_game"),
+        (el.RUNNING_GAME_HEARTBEAT = "running_game_heartbeat"),
         (el.ACTIVITY_UPDATED = "activity_updated"),
         (el.ACTIVITY_SESSION_JOINED = "activity_session_joined"),
         (el.ACTIVITY_SESSION_LEFT = "activity_session_left"),
@@ -17301,4 +17302,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.062d4c56747a7573117b.js.map
+//# sourceMappingURL=7273.d778291c93d164e4f495.js.map

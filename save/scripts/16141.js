@@ -9260,10 +9260,10 @@
       n.r(t),
         n.d(t, {
           isContentGroup: function () {
-            return h;
+            return m;
           },
           default: function () {
-            return m;
+            return p;
           },
         });
       var a = n("37983"),
@@ -9272,41 +9272,47 @@
         i = n("748802"),
         r = n("77078"),
         u = n("826684"),
-        o = n("447313"),
-        d = n("782340"),
-        c = n("611800"),
-        f = n("559571");
-      function h(e) {
-        return (null == e ? void 0 : e.id) === o.MEMBER_LIST_CONTENT_GROUP_ID;
+        o = n("523215"),
+        d = n("447313"),
+        c = n("782340"),
+        f = n("611800"),
+        h = n("559571");
+      function m(e) {
+        return (null == e ? void 0 : e.id) === d.MEMBER_LIST_CONTENT_GROUP_ID;
       }
-      var m = l.memo(function (e) {
-        let { title: t, onToggleExpand: n, expanded: l, expandedCount: o } = e;
+      var p = l.memo(function (e) {
+        let { title: t, onToggleExpand: n, expanded: l, expandedCount: d } = e;
         return (0, a.jsxs)(u.default, {
-          className: f.membersGroup,
+          className: h.membersGroup,
           children: [
             (0, a.jsx)(r.HiddenVisually, {
-              children: d.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+              children: c.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                 title: t,
-                count: o,
+                count: d,
               }),
             }),
-            (0, a.jsxs)("span", {
+            (0, a.jsxs)("div", {
               "aria-hidden": !0,
+              className: f.headerContainer,
               children: [
-                t,
-                " — ",
-                o,
-                o > 3 &&
+                (0, a.jsxs)("div", {
+                  className: f.header,
+                  children: [
+                    (0, a.jsxs)("span", { children: [t, " — ", d] }),
+                    (0, a.jsx)(o.default, {}),
+                  ],
+                }),
+                d > 3 &&
                   (0, a.jsx)(r.Clickable, {
                     onClick: n,
                     tag: "span",
-                    className: c.toggleExpandButton,
+                    className: f.toggleExpandButton,
                     children: l
                       ? (0, a.jsx)(s.ChevronSmallDownIcon, {
-                          className: c.toggleExpandIcon,
+                          className: f.toggleExpandIcon,
                         })
                       : (0, a.jsx)(i.ChevronSmallRightIcon, {
-                          className: c.toggleExpandIcon,
+                          className: f.toggleExpandIcon,
                         }),
                   }),
               ],
@@ -9314,6 +9320,35 @@
           ],
         });
       });
+    },
+    523215: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return r;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("225389"),
+        s = n("77078"),
+        i = n("782340"),
+        r = () =>
+          (0, a.jsx)(s.Tooltip, {
+            text: i.default.Messages.LEARN_MORE,
+            position: "top",
+            children: e =>
+              (0, a.jsx)(s.Anchor, {
+                ...e,
+                href: "https://support.discord.com/hc/articles/22045487931799-Recent-Activity-in-Members-List",
+                style: { height: "12px" },
+                children: (0, a.jsx)(l.CircleInformationIcon, {
+                  width: 12,
+                  height: 12,
+                }),
+              }),
+          });
     },
     346967: function (e, t, n) {
       "use strict";
@@ -42459,4 +42494,4 @@
     },
   },
 ]);
-//# sourceMappingURL=df633bff80401868ff25.js.map
+//# sourceMappingURL=0a53d4a8f3f8660bcf7f.js.map

@@ -18981,27 +18981,47 @@
         });
       }
       function m(e) {
-        let { className: t, children: n } = e;
-        return (0, s.jsx)(u.Text, {
-          variant: "text-sm/normal",
-          color: "text-muted",
-          className: t,
-          children: n,
+        let {
+          children: t,
+          onClick: n,
+          variant: l = "text-sm/medium",
+          color: a = "interactive-active",
+          className: r,
+          buttonRef: o,
+        } = e;
+        return (0, s.jsx)(u.Button, {
+          onClick: n,
+          className: i(T.textButton, r),
+          look: u.Button.Looks.BLANK,
+          size: u.Button.Sizes.NONE,
+          buttonRef: o,
+          children: (0, s.jsx)(u.Text, { variant: l, color: a, children: t }),
         });
       }
       function N(e) {
-        let { children: t, onClick: n, className: l, buttonRef: a } = e;
-        return (0, s.jsx)(u.Button, {
-          onClick: n,
-          className: i(l, T.textButton),
-          look: u.Button.Looks.BLANK,
-          size: u.Button.Sizes.NONE,
-          buttonRef: a,
-          children: (0, s.jsx)(u.Text, {
-            variant: "text-sm/medium",
-            color: "none",
-            children: t,
-          }),
+        let {
+          buttonLabel: t,
+          secondaryLabel: n,
+          handleClick: l,
+          className: a,
+        } = e;
+        return (0, s.jsxs)("div", {
+          className: i(T.detailsText, a),
+          children: [
+            (0, s.jsx)(m, {
+              onClick: l,
+              variant: "text-sm/normal",
+              color: "none",
+              className: T.detailsTextButton,
+              children: t,
+            }),
+            null != n &&
+              (0, s.jsx)(u.Text, {
+                variant: "text-sm/normal",
+                color: "text-muted",
+                children: n,
+              }),
+          ],
         });
       }
       function p(e) {
@@ -19033,13 +19053,18 @@
                 children: t.label,
               })
             : "textButton" === t.presentation
-              ? (0, s.jsx)(N, {
+              ? (0, s.jsx)(m, {
                   buttonRef: r,
                   onClick: c,
                   className: i,
                   children: t.label,
                 })
-              : (0, s.jsx)(m, { className: i, children: t.label });
+              : (0, s.jsx)(N, {
+                  buttonLabel: t.label,
+                  secondaryLabel: t.secondaryLabel,
+                  handleClick: c,
+                  className: i,
+                });
       }
       function S(e) {
         let { message: t, poll: n, className: l } = e,
@@ -19092,6 +19117,7 @@
                         channelId: t.getChannelId(),
                         messageId: t.id,
                         action: n.tertiaryAction,
+                        className: T.tertiaryAction,
                       }),
                       (0, s.jsx)(p, {
                         channelId: t.getChannelId(),
@@ -32177,4 +32203,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9f43f3d11da7370a5c97.js.map
+//# sourceMappingURL=8837493737294a4aa803.js.map

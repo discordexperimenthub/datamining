@@ -9211,7 +9211,7 @@
       var a = n("37983"),
         l = n("884691"),
         s = n("384737"),
-        i = n("260792"),
+        i = n("748802"),
         r = n("77078"),
         u = n("826684"),
         o = n("447313"),
@@ -9238,18 +9238,19 @@
                 t,
                 " — ",
                 o,
-                (0, a.jsx)(r.Clickable, {
-                  onClick: n,
-                  tag: "span",
-                  className: c.toggleExpandButton,
-                  children: l
-                    ? (0, a.jsx)(i.ChevronSmallUpIcon, {
-                        className: c.toggleExpandIcon,
-                      })
-                    : (0, a.jsx)(s.ChevronSmallDownIcon, {
-                        className: c.toggleExpandIcon,
-                      }),
-                }),
+                o > 3 &&
+                  (0, a.jsx)(r.Clickable, {
+                    onClick: n,
+                    tag: "span",
+                    className: c.toggleExpandButton,
+                    children: l
+                      ? (0, a.jsx)(s.ChevronSmallDownIcon, {
+                          className: c.toggleExpandIcon,
+                        })
+                      : (0, a.jsx)(i.ChevronSmallRightIcon, {
+                          className: c.toggleExpandIcon,
+                        }),
+                  }),
               ],
             }),
           ],
@@ -42360,4 +42361,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b1e531b6fe7200955d7d.js.map
+//# sourceMappingURL=d7251d29ca8fc17738f9.js.map

@@ -21980,6 +21980,8 @@
                               questContent: T,
                               quest: o,
                               shouldShowDisclosure: !0,
+                              hideLearnMore:
+                                T === N.QuestContent.QUEST_INVENTORY_CARD,
                             });
                         });
                     },
@@ -32203,4 +32205,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8837493737294a4aa803.js.map
+//# sourceMappingURL=cc1125fb71aabd398e2d.js.map

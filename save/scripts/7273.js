@@ -10262,7 +10262,7 @@
         I("70102");
       var e = I("10371"),
         a = I.n(e),
-        o = I("773179"),
+        o = I("91423"),
         R = I.n(o),
         t = I("58539"),
         A = I("891600"),
@@ -10277,9 +10277,9 @@
         S = Symbol("semanticColor"),
         C = {
           themes: c,
-          colors: R.mapValues(O, (_, E) => ({ [S]: E })),
+          colors: R(O, (_, E) => ({ [S]: E })),
           unsafe_rawColors: n,
-          shadows: R.mapValues(L, _ => {
+          shadows: R(L, _ => {
             function E(E) {
               return { resolve: (I, e) => E(_[I].nativeStyles, e) };
             }
@@ -17297,4 +17297,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.0cbb7c688475b25c3c57.js.map
+//# sourceMappingURL=7273.a4c60a764be5b3f90624.js.map

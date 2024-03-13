@@ -65188,7 +65188,8 @@ input::-webkit-inner-spin-button {
   height: 28px;
   width: 28px;
 }
-.questProgressBar__991b3 {
+.questProgressBar__991b3,
+.questProgressHint__16d7e {
   flex: 1 1 auto;
 }
 .shine_ddcd6f {
@@ -110630,4 +110631,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.163241ff06865bfc4ff5.css.map*/
+/*# sourceMappingURL=app.e4546dda8e38ef0ad527.css.map*/

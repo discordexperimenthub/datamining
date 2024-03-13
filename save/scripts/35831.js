@@ -8947,7 +8947,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return _;
+            return g;
           },
         });
       var a = s("37983"),
@@ -8958,76 +8958,103 @@
         o = s("685665"),
         d = s("234251"),
         u = s("606292"),
-        c = s("181114"),
-        S = s("906932"),
-        E = s("570697"),
-        T = s("782340"),
-        f = s("572540");
-      function _(e) {
+        c = s("890503"),
+        S = s("181114"),
+        E = s("950603"),
+        T = s("906932"),
+        f = s("570697"),
+        _ = s("782340"),
+        m = s("572540");
+      function g(e) {
         let {
             user: t,
             guild: s,
             className: l,
-            forcedDivider: _ = !1,
-            withTutorial: m = !1,
-            isTryItOutFlow: g = !1,
+            forcedDivider: E = !1,
+            withTutorial: g = !1,
+            isTryItOutFlow: h = !1,
           } = e,
-          { analyticsLocations: N } = (0, o.default)(),
-          h = null != s,
+          { analyticsLocations: I } = (0, o.default)(),
+          p = null != s,
           {
-            userAvatarDecoration: I,
-            guildAvatarDecoration: p,
-            pendingAvatarDecoration: C,
-            pendingErrors: A,
-          } = (0, S.useGuildMemberAndUserPendingAvatarDecoration)(t, s),
-          O = n.useCallback(
+            userAvatarDecoration: C,
+            guildAvatarDecoration: A,
+            pendingAvatarDecoration: O,
+            pendingErrors: x,
+          } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s),
+          R = (0, c.default)("enable_avatar_decoration_uploads"),
+          M = n.useCallback(
             () =>
               (0, u.openAvatarDecorationModal)({
-                analyticsLocations: N,
-                isTryItOutFlow: g,
+                analyticsLocations: I,
+                isTryItOutFlow: h,
                 guild: s,
               }),
-            [N, g, s]
+            [I, h, s]
           ),
-          x = g || void 0 !== C ? null != C : (h ? p : I) != null,
-          R = m ? c.default : r.Button;
-        return (0, a.jsx)(E.default, {
+          D = h || void 0 !== O ? null != O : (p ? A : C) != null,
+          v = g ? S.default : r.Button;
+        return (0, a.jsxs)(f.default, {
           className: l,
-          forcedDivider: _,
+          forcedDivider: E,
           hasBackground: !0,
-          title: T.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
-          errors: A,
-          children: (0, a.jsxs)("div", {
-            className: f.buttonsContainer,
-            children: [
-              (0, a.jsx)(R, {
-                size: r.Button.Sizes.SMALL,
-                onClick: O,
-                className: i({ [f.buttonHighlighted]: m }),
-                children:
-                  T.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION,
-              }),
-              x &&
-                (0, a.jsx)(r.Button, {
-                  className: f.removeButton,
-                  color: r.Button.Colors.PRIMARY,
-                  look: r.Button.Looks.LINK,
+          title: _.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
+          errors: x,
+          children: [
+            (0, a.jsxs)("div", {
+              className: m.buttonsContainer,
+              children: [
+                (0, a.jsx)(v, {
                   size: r.Button.Sizes.SMALL,
-                  onClick: function () {
-                    (0, S.setNewPendingAvatarDecoration)(
-                      null == s ? void 0 : s.id,
-                      null
-                    );
-                  },
-                  children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s)
-                    ? T.default.Messages
-                        .USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION
-                    : T.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION,
+                  onClick: M,
+                  className: i({ [m.buttonHighlighted]: g }),
+                  children:
+                    _.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION,
                 }),
-            ],
-          }),
+                D &&
+                  (0, a.jsx)(r.Button, {
+                    className: m.removeButton,
+                    color: r.Button.Colors.PRIMARY,
+                    look: r.Button.Looks.LINK,
+                    size: r.Button.Sizes.SMALL,
+                    onClick: function () {
+                      (0, T.setNewPendingAvatarDecoration)(
+                        null == s ? void 0 : s.id,
+                        null
+                      );
+                    },
+                    children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s)
+                      ? _.default.Messages
+                          .USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION
+                      : _.default.Messages
+                          .USER_SETTINGS_REMOVE_AVATAR_DECORATION,
+                  }),
+              ],
+            }),
+            t.isStaff() && R && (0, a.jsx)(N, { user: t }),
+          ],
         });
       }
+      let N = e => {
+        let { user: t } = e;
+        return (0, a.jsxs)("div", {
+          className: m.overrideButtonsContainer,
+          children: [
+            (0, a.jsx)(r.Text, {
+              variant: "text-xs/bold",
+              children:
+                "STAFF ONLY and Experimental. Upload a decoration to view throughout the app.",
+            }),
+            (0, a.jsx)(E.default, {
+              onChange: e => {
+                null != e &&
+                  (t.avatarDecoration = { asset: e, skuID: "PALUE000000001" });
+              },
+              buttonCTA: "Upload Override",
+            }),
+          ],
+        });
+      };
     },
     447645: function (e, t, s) {
       "use strict";
@@ -11555,9 +11582,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "274650",
+          E = "274661",
           T =
-            ((e = "007c372f7c500b0e42f55898758476b0c290ffad"),
+            ((e = "0d84ec0c23015e9fd3497f50b3001ce4a125a46e"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -31679,4 +31706,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3a3ceb171cdc3aa37dd4.js.map
+//# sourceMappingURL=39a06a5836ec81faf4a6.js.map

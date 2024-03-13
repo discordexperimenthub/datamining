@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275005",
+                  buildNumber: "275016",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -10066,7 +10066,6 @@
               color: "green",
               centerButton: !0,
               className: i(j.actionButton, j.last),
-              onClick: () => f.default.selectVoiceChannel(n.id),
             }),
           ],
         });
@@ -52604,4 +52603,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e982b54f10a0b8512099.js.map
+//# sourceMappingURL=1e90ef4e99304dae472f.js.map

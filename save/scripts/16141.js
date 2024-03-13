@@ -34015,12 +34015,9 @@
             (0, eE.default)(() => p.default.selectVoiceChannel(t.id, !0), r);
           }, [t.id, r]),
           h = i.useCallback(() => {
-            p.default.selectVoiceChannel(t.id, !1);
-          }, [t.id]),
-          m = i.useCallback(() => {
             n ? (0, eh.default)() : c();
           }, [n, c]),
-          E = (0, f.useStateFromStores)([ee.default], () => {
+          m = (0, f.useStateFromStores)([ee.default], () => {
             let e = ee.default.getCall(t.id);
             return (null == e ? void 0 : e.ringing.includes(l.id)) === !0;
           });
@@ -34036,7 +34033,7 @@
               channel: t,
               cameraUnavailable: n,
               hasPermission: a,
-              onCameraUnavailable: m,
+              onCameraUnavailable: h,
               className: eC.controlButton,
               iconClassName: eC.joinIcon,
               onChange: c,
@@ -34046,9 +34043,8 @@
               color: "green",
               channel: t,
               className: u(eC.controlButton, eC.lastButton),
-              onClick: h,
             }),
-            E
+            m
               ? (0, s.jsx)(Y.default, {
                   color: "red",
                   channel: t,
@@ -37326,20 +37322,43 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return c;
           },
         });
-      var a = n("37983");
-      n("884691");
-      var l = n("887657"),
-        s = n("981913"),
-        i = n("782340");
-      function r(e) {
-        let { channel: t, centerButton: n = !1, ...r } = e,
-          u = n ? s.CenterControlButton : s.default,
-          o = t.isManaged() || !t.isPrivate(),
-          d = o ? i.default.Messages.CONNECT : i.default.Messages.JOIN_CALL;
-        return (0, a.jsx)(u, { ...r, iconComponent: l.default, label: d });
+      var a = n("37983"),
+        l = n("884691"),
+        s = n("987317"),
+        i = n("887657"),
+        r = n("659500"),
+        u = n("981913"),
+        o = n("49111"),
+        d = n("782340");
+      function c(e) {
+        let { channel: t, centerButton: n = !1, ...c } = e,
+          f = n ? u.CenterControlButton : u.default,
+          h = t.isManaged() || !t.isPrivate(),
+          m = h ? d.default.Messages.CONNECT : d.default.Messages.JOIN_CALL,
+          p = l.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
+        return (
+          l.useEffect(
+            () => (
+              r.ComponentDispatch.subscribe(o.ComponentActions.CALL_ACCEPT, p),
+              () => {
+                r.ComponentDispatch.unsubscribe(
+                  o.ComponentActions.CALL_ACCEPT,
+                  p
+                );
+              }
+            ),
+            [p]
+          ),
+          (0, a.jsx)(f, {
+            ...c,
+            iconComponent: i.default,
+            label: m,
+            onClick: p,
+          })
+        );
       }
     },
     785344: function (e, t, n) {
@@ -42494,4 +42513,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0a53d4a8f3f8660bcf7f.js.map
+//# sourceMappingURL=1487a4b6681af84ed0b5.js.map

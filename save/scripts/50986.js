@@ -3737,123 +3737,6 @@
         return l;
       }
     },
-    413266: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          openReportRaidModal: function () {
-            return n;
-          },
-          openSafetyChannelSetupModal: function () {
-            return i;
-          },
-        });
-      var a = s("37983");
-      s("884691");
-      var l = s("77078");
-      function n(e) {
-        (0, l.openModalLazy)(async () => {
-          let { default: t } = await s.el("423588").then(s.bind(s, "423588"));
-          return s => (0, a.jsx)(t, { ...s, guildId: e });
-        });
-      }
-      function i(e) {
-        (0, l.openModalLazy)(async () => {
-          let { default: t } = await s.el("982537").then(s.bind(s, "982537"));
-          return s => (0, a.jsx)(t, { ...s, guildId: e });
-        });
-      }
-    },
-    701203: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          useCanReportRaid: function () {
-            return c;
-          },
-          useCanEnableRaidAlerts: function () {
-            return E;
-          },
-        });
-      var a = s("884691"),
-        l = s("446674");
-      s("926809");
-      var n = s("957255"),
-        i = s("610174"),
-        r = s("413476"),
-        o = s("311161"),
-        d = s("54346"),
-        u = s("49111");
-      function c(e) {
-        var t;
-        let s =
-            null !== (t = null == e ? void 0 : e.id) && void 0 !== t
-              ? t
-              : u.EMPTY_STRING_SNOWFLAKE_ID,
-          { enableRaidReporting: i } = r.ReportRaidExperiment.useExperiment(
-            { guildId: s, location: "4467c7_1" },
-            { autoTrackExposure: !1 }
-          ),
-          c = (0, l.useStateFromStores)(
-            [n.default],
-            () =>
-              (function (e) {
-                let t =
-                  arguments.length > 1 && void 0 !== arguments[1]
-                    ? arguments[1]
-                    : n.default;
-                return (
-                  t.can(u.Permissions.BAN_MEMBERS, e) ||
-                  t.can(u.Permissions.KICK_MEMBERS, e) ||
-                  t.can(u.Permissions.MANAGE_GUILD, e)
-                );
-              })(e, n.default),
-            [e]
-          ),
-          E = (0, l.useStateFromStores)(
-            [d.default],
-            () => (null != e ? d.default.getGuildIncident(e.id) : null),
-            [e]
-          ),
-          _ = null != E && (0, o.hasDetectedActivity)(E);
-        return (
-          a.useEffect(() => {
-            !_ &&
-              c &&
-              r.ReportRaidExperiment.trackExposure({
-                guildId: s,
-                location: "4467c7_2",
-              });
-          }, [_, c, s]),
-          !_ && c && i
-        );
-      }
-      function E(e) {
-        var t;
-        let s =
-            null !== (t = null == e ? void 0 : e.id) && void 0 !== t
-              ? t
-              : u.EMPTY_STRING_SNOWFLAKE_ID,
-          a = (0, l.useStateFromStores)(
-            [n.default],
-            () =>
-              (function (e) {
-                let t =
-                  arguments.length > 1 && void 0 !== arguments[1]
-                    ? arguments[1]
-                    : n.default;
-                return t.can(u.Permissions.MANAGE_GUILD, e);
-              })(e, n.default),
-            [e]
-          ),
-          { enableRaidAlerts: o } = r.RaidAlertExperiment.useExperiment(
-            { guildId: s, location: "4467c7_3" },
-            { autoTrackExposure: a }
-          ),
-          { showAlertMode: d } = (0, i.useGuildAlertModeEnabled)(s);
-        return a && (o || d);
-      }
-    },
     184890: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -18807,64 +18690,6 @@
             .concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/")
             .concat(e);
         }
-      }
-    },
-    199938: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          staffOnlyGuildSettingsAccess: function () {
-            return o;
-          },
-          useGuildAccessRateInsightExperiment: function () {
-            return d;
-          },
-        });
-      var a = s("884691"),
-        l = s("862205"),
-        n = s("697218"),
-        i = s("49111");
-      let r = (0, l.createExperiment)({
-        kind: "guild",
-        id: "2022-03_guild_access_rate_insight_experiment",
-        label: "Guild Access Rate Insight Experiment",
-        defaultConfig: { showAccessRate: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Show guild access rate in insights",
-            config: { showAccessRate: !0 },
-          },
-        ],
-      });
-      function o(e) {
-        var t;
-        let s =
-          null === (t = n.default.getCurrentUser()) || void 0 === t
-            ? void 0
-            : t.isStaff();
-        return (
-          s &&
-          r.getCurrentConfig({ guildId: e, location: "77b4b2_1" })
-            .showAccessRate
-        );
-      }
-      function d(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return (
-          a.useEffect(() => {
-            !t &&
-              null != e &&
-              r.trackExposure({ guildId: e, location: "77b4b2_2" });
-          }, [e, t]),
-          r.useExperiment(
-            {
-              guildId: null != e ? e : i.EMPTY_STRING_SNOWFLAKE_ID,
-              location: "77b4b2_3",
-            },
-            { autoTrackExposure: !1, disable: t || null == e }
-          )
-        );
       }
     },
     961394: function (e, t, s) {
@@ -46395,62 +46220,6 @@
           });
         };
     },
-    756609: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return r;
-          },
-        });
-      var a = s("37983");
-      s("884691");
-      var l = s("469563"),
-        n = s("308472"),
-        i = s("75196"),
-        r = (0, l.replaceIcon)(
-          function (e) {
-            let {
-              width: t = 18,
-              height: s = 18,
-              color: l = "currentColor",
-              foreground: n,
-              ...r
-            } = e;
-            return (0, a.jsxs)("svg", {
-              ...(0, i.default)(r),
-              width: t,
-              height: s,
-              viewBox: "0 0 18 18",
-              children: [
-                (0, a.jsx)("path", {
-                  fill: l,
-                  className: n,
-                  d: "M4.5,16.5v-3H3A1.5,1.5,0,0,1,1.5,12V3A1.5,1.5,0,0,1,3,1.5H15A1.5,1.5,0,0,1,16.5,3v9A1.5,1.5,0,0,1,15,13.5H8.5ZM3,3v9H6v1.5L8,12h7V3Z",
-                }),
-                (0, a.jsx)("path", {
-                  fill: l,
-                  className: n,
-                  d: "M6.75,4.5H5.25v6h1.5Z",
-                }),
-                (0, a.jsx)("path", {
-                  fill: l,
-                  className: n,
-                  d: "M9.75,7.5H8.25v3h1.5Z",
-                }),
-                (0, a.jsx)("path", {
-                  fill: l,
-                  className: n,
-                  d: "M12.75,6h-1.5v4.5h1.5Z",
-                }),
-              ],
-            });
-          },
-          n.AnalyticsIcon,
-          void 0,
-          { size: 18 }
-        );
-    },
     695197: function (e, t, s) {
       "use strict";
       s.r(t),
@@ -47790,4 +47559,4 @@
     },
   },
 ]);
-//# sourceMappingURL=68799eaefad9406f4c6a.js.map
+//# sourceMappingURL=f180a4abddc59b8923c6.js.map

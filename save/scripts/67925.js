@@ -279,10 +279,10 @@
           h = null != _ ? i().diff(_, "days") : null,
           C = T.indexOf(t);
         if (-1 === C) return !1;
-        let g = null == h || h > p[C];
-        if (!g) return !1;
-        let A = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+        let A = null == h || h > p[C];
         if (!A) return !1;
+        let g = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+        if (!g) return !1;
         let { showLifecycleUpsells: I } = E.default.getCurrentConfig(
           { guildId: e, location: "7f5b67_1" },
           {
@@ -670,7 +670,7 @@
             return C;
           },
           optimisticallyUpdateQuestProgress: function () {
-            return g;
+            return A;
           },
         });
       var s = n("872717"),
@@ -898,7 +898,7 @@
           });
         }
       }
-      function g(e) {
+      function A(e) {
         i.default.dispatch({
           type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
           userStatus: e,
@@ -927,7 +927,8 @@
         (s.QUESTS_MANAGER = "quests_manager"),
         (s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
         (s.USE_QUESTS = "use_quests"),
-        (s.STREAM_SOURCE_SELECT = "stream_source_select");
+        (s.STREAM_SOURCE_SELECT = "stream_source_select"),
+        (s.QUESTS_BAR = "quests_bar");
       let l = {
           [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
           [a.QuestContent.QUEST_BAR]: 2,
@@ -1016,10 +1017,10 @@
             return C;
           },
           getGameLogotypeAssetUrl: function () {
-            return g;
+            return A;
           },
           getQuestUrl: function () {
-            return A;
+            return g;
           },
           getQuestForTargetedContent: function () {
             return I;
@@ -1132,9 +1133,9 @@
         p = e => "".concat(u).concat(e).concat("/quests_bar_hero.png"),
         h = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
         C = e => "".concat(u).concat(e).concat("/game_tile.png"),
-        g = (e, t) =>
+        A = (e, t) =>
           "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
-        A = e =>
+        g = e =>
           ""
             .concat(location.protocol, "//")
             .concat(location.host, "/quests/")
@@ -1420,4 +1421,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67925.013a45b8f9e1f05cab39.js.map
+//# sourceMappingURL=67925.40f1e21e8a6238766758.js.map

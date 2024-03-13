@@ -21462,6 +21462,7 @@
         lottieAnimationForegroundHidden:
           "lottieAnimationForegroundHidden_e989e2",
         wrapper: "wrapper_d895e9",
+        wrapperAssetsLoading: "wrapperAssetsLoading__4c5ba",
         wrapperVisible: "wrapperVisible__3ba8b",
       };
     },

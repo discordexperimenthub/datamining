@@ -6066,69 +6066,78 @@
             : (0, a.jsx)(p, { ...x.upcomingDropUntimed, forceShadow: f });
         },
         g = e => {
+          var t;
           let {
-              title: t,
-              titleClassName: s = "",
-              subtitle: r = "",
-              description: n = "",
-              descriptionCta: l = "",
-              isPremiumGetCta: u,
-              onCtaClick: d,
-              onMouseEnter: c,
-              className: _,
-              perkComponent: E,
-              cardVariant: T,
-              cardType: R,
-              onClick: m,
-              backgroundImage: N,
-              pillText: p,
-              perkImage: g,
+              title: s,
+              titleClassName: r = "",
+              subtitle: n = "",
+              description: l = "",
+              descriptionCta: u = "",
+              isPremiumGetCta: d,
+              onCtaClick: c,
+              onMouseEnter: _,
+              className: E,
+              perkComponent: T,
+              cardVariant: R,
+              cardType: m,
+              onClick: N,
+              backgroundImage: p,
+              pillText: g,
+              perkImage: C,
             } = e,
-            C =
-              R === I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW ||
-              R ===
+            O =
+              m === I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW ||
+              m ===
                 I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW ||
-              R === I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW;
+              m === I.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
+            P =
+              null != R
+                ? I.CardVariantsInfo[R]
+                : I.CardVariantsInfo[I.CardVariants.DEFAULT];
           return (0, a.jsxs)(o.Clickable, {
-            className: i(A.card, _, {
-              [A.clickable]: null != m,
-              [A.hideOverflow]: C,
-            }),
-            onMouseEnter: c,
+            className: i(
+              A.card,
+              E,
+              null === (t = P.cardContainer) || void 0 === t
+                ? void 0
+                : t.className,
+              { [A.clickable]: null != N, [A.hideOverflow]: O }
+            ),
+            onMouseEnter: _,
             style: {
-              backgroundImage: null != N ? "url(".concat(N, ")") : void 0,
+              backgroundImage: null != p ? "url(".concat(p, ")") : void 0,
             },
-            onClick: m,
+            onClick: N,
             children: [
-              null != p &&
+              null != g &&
                 (0, a.jsx)(o.Text, {
                   variant: "text-xs/semibold",
                   className: A.pill,
-                  children: p,
+                  children: g,
                 }),
               (0, a.jsx)(f.default, {
-                title: t,
-                titleClassName: s,
-                subtitle: r,
-                perkImage: g,
-                isCarousel: C,
-                descriptionCta: l,
-                onCtaClick: d,
-                perkComponent: E,
+                title: s,
+                titleClassName: r,
+                subtitle: n,
+                perkImage: C,
+                isCarousel: O,
+                descriptionCta: u,
+                onCtaClick: c,
+                perkComponent: T,
                 subtitleClassName: A.cardSubtitle,
-                cardVariant: T,
+                cardVariant: R,
               }),
-              0 !== n.length &&
+              0 !== l.length &&
                 (0, a.jsx)(S.default, {
-                  title: t,
-                  titleClassName: s,
-                  subtitle: r,
-                  description: n,
-                  descriptionCta: l,
-                  isPremiumGetCta: u,
-                  onCtaClick: d,
-                  cardVariant: T,
-                  perkComponent: E,
+                  title: s,
+                  titleClassName: r,
+                  subtitle: n,
+                  description: l,
+                  descriptionCta: u,
+                  isPremiumGetCta: d,
+                  onCtaClick: c,
+                  cardVariant: R,
+                  perkComponent: T,
                 }),
               (0, a.jsx)("div", { className: i(A.cover, A.above) }),
             ],
@@ -9094,6 +9103,7 @@
               hideOnHoverComponent: !0,
               className: S.descriptionCTATenureReward,
             },
+            cardContainer: { className: S.glowingCardContainer },
           },
         },
         C = (e, t, s) => ((0, d.isThemeDark)(e) ? t : s),
@@ -9825,4 +9835,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9e4e3d012f4df698e1ab.js.map
+//# sourceMappingURL=c6d671057dc1d0d27918.js.map

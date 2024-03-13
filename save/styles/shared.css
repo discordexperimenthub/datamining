@@ -10167,6 +10167,9 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 .constrainedObscureContent__2b3c7 {
   min-width: 146px;
   min-height: 212px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .explicitContentWarning__3f1a4 {
   text-align: center;
@@ -24012,4 +24015,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.3c1d0f74633945e54f2d.css.map*/
+/*# sourceMappingURL=shared.407347d19adf66fa9e9a.css.map*/

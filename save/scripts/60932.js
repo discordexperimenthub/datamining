@@ -224,8 +224,8 @@
         C = n("85336"),
         R = n("286350"),
         O = n("359371"),
-        g = n("176108"),
-        v = n("254350"),
+        v = n("176108"),
+        g = n("254350"),
         L = n("622271"),
         k = n("628738"),
         x = n("650484"),
@@ -244,8 +244,8 @@
             transitionState: f,
             initialPlanId: E,
             subscriptionTier: M,
-            onClose: g,
-            trialId: v,
+            onClose: v,
+            trialId: g,
             trialFooterMessageOverride: k,
             reviewWarningMessage: Y,
             planGroup: j = b.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -299,7 +299,7 @@
           } = (0, y.useGiftContext)(),
           eC = (0, p.usePremiumDiscountOffer)(),
           eR = null != M && !eA && (0, p.discountOfferHasTier)(eC, M),
-          [eO, eg] = u.useState({
+          [eO, ev] = u.useState({
             load_id: ed.loadId,
             payment_type: U.PurchaseTypeToAnalyticsPaymentType[eP],
             location: null != n ? n : a,
@@ -307,7 +307,7 @@
             subscription_type: c,
             subscription_plan_id: null == ea ? void 0 : ea.id,
             is_gift: eA,
-            eligible_for_trial: null != v,
+            eligible_for_trial: null != g,
             location_stack: t,
             sku_id: X,
             application_id: V,
@@ -316,9 +316,9 @@
             activity_session_id: ee,
             eligible_for_discount: eR,
           }),
-          ev = null != em ? eS[em] : null;
+          eg = null != em ? eS[em] : null;
         u.useEffect(() => {
-          eg(e => {
+          ev(e => {
             let t = null != ea ? (0, N.getPrice)(ea.id, !1, eA, eE) : void 0,
               n = {
                 ...e,
@@ -363,9 +363,9 @@
                 eA && t ? (null == ey ? void 0 : ey.surrogates) : void 0,
               sound_id: eA && t ? (null == eh ? void 0 : eh.soundId) : void 0,
               duration_ms: n - ed.startTime,
-              payment_source_type: null == ev ? void 0 : ev.type,
+              payment_source_type: null == eg ? void 0 : eg.type,
             });
-          }, [eO, ey, eN, eI, eA, eh, ed.startTime, ev]),
+          }, [eO, ey, eN, eI, eA, eh, ed.startTime, eg]),
           ek = (0, s.useStableMemo)(() => Date.now(), [ec]),
           ex = u.useCallback(
             function (e) {
@@ -405,8 +405,8 @@
           ),
           eU = u.useMemo(
             () => () =>
-              null == g ? void 0 : g(et === R.PurchaseState.COMPLETED, el),
-            [g, et, el]
+              null == v ? void 0 : v(et === R.PurchaseState.COMPLETED, el),
+            [v, et, el]
           );
         (0, m.usePaymentStepForAuthentication)(ec, eo, ex),
           (0, C.usePurchaseStateForStep)(ec, et, en),
@@ -414,7 +414,7 @@
           (0, _.default)(eU),
           (0, P.useUnsupportedExternalSubscriptionModalHandler)(
             e_,
-            () => g(!1),
+            () => v(!1),
             eA
           ),
           (0, m.usePaymentAuthenticationPoller)(eo);
@@ -441,8 +441,8 @@
               handleStepChange: ex,
               handleClose: eU,
               analyticsData: eO,
-              setAnalyticsData: eg,
-              trialId: v,
+              setAnalyticsData: ev,
+              trialId: g,
               trialFooterMessageOverride: k,
               reviewWarningMessage: Y,
               planGroup: j,
@@ -478,7 +478,7 @@
           } = (0, h.usePaymentContext)(),
           { isGift: N } = (0, y.useGiftContext)(),
           R = I.current,
-          O = (0, v.default)({ isGift: N, skuId: P, referralTrialOfferId: i }),
+          O = (0, g.default)({ isGift: N, skuId: P, referralTrialOfferId: i }),
           { defaultToMonthlyPlan: L } =
             E.TrialRedemptionDefaultPlanExperiment.getCurrentConfig(
               { location: "055ec5_1" },
@@ -513,7 +513,7 @@
             x || _)
           )
             return;
-          let e = (0, g.inOneStepSubscriptionCheckout)({
+          let e = (0, v.inOneStepSubscriptionCheckout)({
             isTrial: O,
             isGift: N,
             selectedSkuId: P,
@@ -521,7 +521,7 @@
           });
           if (null != n) a(C.Step.REVIEW);
           else if (e) {
-            let e = (0, g.getDefaultPlanOneStepCheckout)(P, o, A);
+            let e = (0, v.getDefaultPlanOneStepCheckout)(P, o, A);
             T(e), a(C.Step.REVIEW);
           } else null != t ? a(C.Step.PLAN_SELECT) : a(C.Step.SKU_SELECT);
         }, [o, _, D, n, x, a, t, P, T, L, O, A, N, R]),
@@ -569,24 +569,25 @@
             selectedPlan: C,
             purchaseState: R,
             purchaseType: O,
-            productLine: g,
+            selectedSku: v,
           } = (0, S.usePaymentContext)(),
           {
-            isGift: v,
+            isGift: g,
             selectedGiftStyle: L,
             giftRecipient: k,
           } = (0, m.useGiftContext)(),
           x =
-            v &&
+            g &&
             (0, p.shouldShowCustomGiftExperience)(k) &&
             h === P.Step.CONFIRM &&
             null != L &&
-            g !== T.SKUProductLines.COLLECTIBLES,
+            (null == v ? void 0 : v.productLine) !==
+              T.SKUProductLines.COLLECTIBLES,
           U = null != n && null != h,
           b = h !== P.Step.SKU_SELECT && null != y,
           D = (0, d.usePremiumTrialOffer)(a),
           G =
-            !v &&
+            !g &&
             null != D &&
             null != y &&
             (0, M.SubscriptionTrials)[D.trial_id].skus.includes(y),
@@ -597,7 +598,7 @@
               : null === (t = Y.discount) || void 0 === t
                 ? void 0
                 : t.plan_ids.some(e => M.SubscriptionPlanInfo[e].skuId === y),
-          H = !v && null != Y && null != y && j,
+          H = !g && null != Y && null != y && j,
           { enabled: B } = o.default.useExperiment(
             { location: "PaymentModalHeader" },
             { autoTrackExposure: !1 }
@@ -637,12 +638,12 @@
                   onClose: N,
                   showTrialBadge: G,
                   showDiscountBadge: H,
-                  isGift: v,
+                  isGift: g,
                   giftRecipient: k,
                   useWinterTheme: K,
                 }));
             return e;
-          }, [L, N, R, n, C, y, h, G, H, x, b, U, O, v, k, K]);
+          }, [L, N, R, n, C, y, h, G, H, x, b, U, O, g, k, K]);
         return F;
       }
     },
@@ -864,4 +865,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60932.9ea19722f8e4dedbd9df.js.map
+//# sourceMappingURL=60932.5c4044bde0eb6357bbd4.js.map

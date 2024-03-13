@@ -313,11 +313,12 @@
         (i.GUILD_EVENT_RSVP_BUTTON = "guild event rsvp button"),
         (i.GIFT_CODE_MODAL = "gift code modal"),
         (i.APP_STOREFRONT = "app storefront"),
-        (i.SHOP_PRODUCT_DETAILS = "shop product details");
+        (i.SHOP_PRODUCT_DETAILS = "shop product details"),
+        (i.PACKAGES = "packages");
       var i,
         I,
         T = I;
     },
   },
 ]);
-//# sourceMappingURL=14875.fa5adb0ff687e0964d44.js.map
+//# sourceMappingURL=14875.61385e4f0ca6f221ddc8.js.map

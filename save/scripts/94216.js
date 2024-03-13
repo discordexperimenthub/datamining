@@ -233,14 +233,14 @@
               finePrint: m,
               showPricingLink: g,
               showWithdrawalWaiver: S,
-              isTrial: T,
-              isDiscount: E,
-              subscriptionPlan: N,
+              isTrial: N,
+              isDiscount: T,
+              subscriptionPlan: E,
               finePrintClassname: v,
             } = this.props,
-            { hasAcceptedEULA: M, hasAcceptedWithdrawalWaiver: C } = this.state;
+            { hasAcceptedEULA: C, hasAcceptedWithdrawalWaiver: M } = this.state;
           return (c(
-            !T || null != N,
+            !N || null != E,
             "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"
           ),
           n || (null != e && !s) || S)
@@ -256,7 +256,7 @@
                   null != e && (n || !s)
                     ? (0, a.jsx)(o.Checkbox, {
                         type: o.Checkbox.Types.INVERTED,
-                        value: M,
+                        value: C,
                         onChange: this.handleToggleEULAAcceptance,
                         disabled: r,
                         className: L.checkbox,
@@ -293,7 +293,7 @@
                         children: [
                           (0, a.jsx)(o.Checkbox, {
                             type: o.Checkbox.Types.INVERTED,
-                            value: C,
+                            value: M,
                             onChange:
                               this.handleToggleEUWithdralWaiverAcceptance,
                             disabled: r,
@@ -326,16 +326,16 @@
                         }),
                       ],
                     }),
-                  T &&
-                    null != N &&
+                  N &&
+                    null != E &&
                     (0, a.jsx)(o.Text, {
                       variant: "text-xs/medium",
                       color: "interactive-normal",
                       children:
                         A.default.Messages.BILLING_TRIAL_LEGAL_COPY_V2.format({
-                          buttonText: (0, f.getBillingReviewSubheader)(null, N),
+                          buttonText: (0, f.getBillingReviewSubheader)(null, E),
                           interval: this.formatInterval(
-                            null == N ? void 0 : N.interval
+                            null == E ? void 0 : E.interval
                           ),
                           cancelSubscriptionArticle: h.default.getArticleURL(
                             p.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB
@@ -345,16 +345,16 @@
                           ),
                         }),
                     }),
-                  E &&
-                    null != N &&
+                  T &&
+                    null != E &&
                     (0, a.jsx)(o.Text, {
                       variant: "text-xs/medium",
                       color: "interactive-normal",
                       children:
                         A.default.Messages.BILLING_DISCOUNT_LEGAL_COPY.format({
-                          buttonText: (0, f.getBillingReviewSubheader)(null, N),
+                          buttonText: (0, f.getBillingReviewSubheader)(null, E),
                           interval: this.formatInterval(
-                            null == N ? void 0 : N.interval
+                            null == E ? void 0 : E.interval
                           ),
                           cancelSubscriptionArticle: h.default.getArticleURL(
                             p.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB
@@ -395,7 +395,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return C;
+            return M;
           },
         }),
         l("222007"),
@@ -418,11 +418,11 @@
         m = l("145131"),
         g = l("953109"),
         S = l("993105"),
-        T = l("391820"),
-        E = l("49111"),
-        N = l("782340"),
+        N = l("391820"),
+        T = l("49111"),
+        E = l("782340"),
         v = l("842277");
-      class M extends s.Component {
+      class C extends s.Component {
         fetchInstallSize() {
           let {
             applicationId: e,
@@ -464,7 +464,7 @@
             disabled: t || null == e || !l,
             color: i.Button.Colors.GREEN,
             onClick: this.handleInstall,
-            children: N.default.Messages.GAME_ACTION_BUTTON_INSTALL,
+            children: E.default.Messages.GAME_ACTION_BUTTON_INSTALL,
           });
         }
         render() {
@@ -479,7 +479,7 @@
             transitionState: l,
             size: i.ModalSize.SMALL,
             "aria-label":
-              N.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
+              E.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
             children: [
               null != r
                 ? (0, a.jsx)("div", {
@@ -495,7 +495,7 @@
                     children: (0, a.jsx)(i.Heading, {
                       variant: "heading-lg/semibold",
                       children:
-                        N.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
+                        E.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
                     }),
                   }),
                   (0, a.jsx)(m.default.Child, {
@@ -531,7 +531,7 @@
                     ],
                   }),
                   (0, a.jsx)("div", { className: v.divider }),
-                  (0, a.jsx)(T.default, {
+                  (0, a.jsx)(N.default, {
                     autoFocus: !0,
                     className: v.selector,
                     value: s,
@@ -578,7 +578,7 @@
                 installationPath: this.state.selectedInstallationPath,
                 analyticsLocation: s,
               }),
-                (0, p.transitionTo)(E.Routes.APPLICATION_LIBRARY),
+                (0, p.transitionTo)(T.Routes.APPLICATION_LIBRARY),
                 this.close();
             }),
             (this.handleInstall = () => {
@@ -605,7 +605,7 @@
             });
         }
       }
-      var C = n.default.connectStores(
+      var M = n.default.connectStores(
         [I.default, L.default, A.default, f.default],
         e => {
           let { applicationId: t, branchId: l } = e,
@@ -619,7 +619,7 @@
             hasPreviouslyAcceptedStoreTerms: A.default.hasAcceptedStoreTerms,
           };
         }
-      )(M);
+      )(C);
     },
     391820: function (e, t, l) {
       "use strict";
@@ -939,7 +939,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return f;
+            return p;
           },
         });
       var a = l("37983");
@@ -950,28 +950,28 @@
         r = l("476263"),
         c = l("547620"),
         u = l("646718"),
-        o = l("877670");
-      let d = {
-          XXSMALL: o.xxsmall,
-          XSMALL: o.xsmall,
-          SMALL: o.small,
-          MEDIUM: o.medium,
-          LARGE: o.large,
+        o = l("782340"),
+        d = l("877670");
+      let h = {
+          XXSMALL: d.xxsmall,
+          XSMALL: d.xsmall,
+          SMALL: d.small,
+          MEDIUM: d.medium,
+          LARGE: d.large,
         },
-        h = e => {
+        f = e => {
           let t,
             {
               game: s,
-              guild: h,
-              skuId: f,
-              pid: p,
-              className: I,
-              guildClassName: A,
-              size: L = d.MEDIUM,
-              ...m
+              guild: f,
+              skuId: p,
+              pid: I,
+              className: A,
+              guildClassName: L,
+              size: m = h.MEDIUM,
             } = e;
           if (
-            (null != f &&
+            (null != p &&
               (t = (function (e) {
                 if (null == e) return null;
                 switch (e) {
@@ -987,65 +987,72 @@
                   default:
                     return null;
                 }
-              })(f)),
+              })(p)),
             null != s &&
               null == t &&
               (t = s.getIconURL(
                 (function (e) {
                   switch (e) {
-                    case d.XXSMALL:
+                    case h.XXSMALL:
                       return 16;
-                    case d.XSMALL:
+                    case h.XSMALL:
                       return 24;
-                    case d.SMALL:
+                    case h.SMALL:
                       return 30;
-                    case d.MEDIUM:
+                    case h.MEDIUM:
                       return 40;
-                    case d.LARGE:
+                    case h.LARGE:
                       return 60;
                     default:
                       return 80;
                   }
-                })(L)
+                })(m)
               )),
-            null == (t = (0, i.default)(p, t)) && null != h)
+            null == (t = (0, i.default)(I, t)) && null != f)
           ) {
             let e = (function (e) {
               switch (e) {
-                case d.XSMALL:
+                case h.XSMALL:
                   return r.default.Sizes.SMALLER;
-                case d.SMALL:
+                case h.SMALL:
                   return r.default.Sizes.SMALL;
-                case d.LARGE:
+                case h.LARGE:
                   return r.default.Sizes.LARGE;
                 default:
-                case d.MEDIUM:
+                case h.MEDIUM:
                   return r.default.Sizes.MEDIUM;
               }
-            })(L);
+            })(m);
             return (0, a.jsx)(r.default, {
-              className: n(o.gameIcon, A, I),
-              guild: h,
+              className: n(d.gameIcon, L, A),
+              guild: f,
               size: e,
             });
           }
-          return null == t
-            ? (0, a.jsx)(c.default, { className: n(o.gameIcon, L, I) })
-            : (0, a.jsx)("div", {
-                ...m,
-                className: n(o.gameIcon, L, I),
-                style: { backgroundImage: "url('".concat(t, "')") },
-              });
+          if (null == t)
+            return (0, a.jsx)(c.default, { className: n(d.gameIcon, m, A) });
+          let g = null == s ? void 0 : s.name,
+            S =
+              null != g && "" !== g
+                ? o.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+                    applicationName: g,
+                  })
+                : o.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+          return (0, a.jsx)("img", {
+            alt: S,
+            src: t,
+            className: n(d.gameIcon, m, A),
+          });
         };
-      h.Sizes = d;
-      var f = h;
+      f.Sizes = h;
+      var p = f;
     },
     476263: function (e, t, l) {
       "use strict";
       l.r(t),
         l.d(t, {
           default: function () {
-            return N;
+            return E;
           },
         });
       var a = l("37983"),
@@ -1125,14 +1132,14 @@
               to: L,
               badgeStrokeColor: m,
               animate: S,
-              tabIndex: T,
-              iconSrc: E,
-              "aria-hidden": N,
+              tabIndex: N,
+              iconSrc: T,
+              "aria-hidden": E,
               ...v
             } = this.props,
-            M = g[c],
-            C = null != I ? o.Clickable : "div";
-          return (0, a.jsxs)(C, {
+            C = g[c],
+            M = null != I ? o.Clickable : "div";
+          return (0, a.jsxs)(M, {
             className: i(A.icon, s, (0, p.getClass)(A, "iconSize", c), {
               [null !== (e = (0, p.getClass)(A, "iconActive", c)) &&
               void 0 !== e
@@ -1141,19 +1148,19 @@
               [A.iconInactive]: !r,
               [A.noIcon]: null == l.icon,
             }),
-            "aria-hidden": N,
+            "aria-hidden": E,
             style:
               null == l.icon
                 ? {
                     fontSize:
-                      (null !== (t = M[l.acronym.length]) && void 0 !== t
+                      (null !== (t = C[l.acronym.length]) && void 0 !== t
                         ? t
-                        : M[M.length - 1]) * d,
+                        : C[C.length - 1]) * d,
                     ...u,
                   }
                 : u,
             onClick: null != L || null == I ? void 0 : I,
-            tabIndex: T,
+            tabIndex: N,
             ...v,
             children: [this.renderAcronym(), this.renderBadge()],
           });
@@ -1192,7 +1199,7 @@
             : this.renderTooltip();
         }
       }
-      let T = c.default.connectStores([h.default], e => {
+      let N = c.default.connectStores([h.default], e => {
         let { guild: t, animate: l, iconSrc: a, style: s, size: n } = e;
         return {
           style: {
@@ -1203,13 +1210,13 @@
           },
         };
       })((0, d.backgroundImagePreloader)(e => (0, a.jsx)(S, { ...e })));
-      class E extends s.PureComponent {
+      class T extends s.PureComponent {
         render() {
-          return (0, a.jsx)(T, { ...this.props });
+          return (0, a.jsx)(N, { ...this.props });
         }
       }
-      (E.Sizes = L),
-        (E.defaultProps = {
+      (T.Sizes = L),
+        (T.defaultProps = {
           size: L.LARGE,
           textScale: 1,
           showBadge: !1,
@@ -1219,7 +1226,7 @@
           badgeStrokeColor: u.default.unsafe_rawColors.WHITE_500.css,
           animate: !1,
         });
-      var N = E;
+      var E = T;
     },
     547620: function (e, t, l) {
       "use strict";
@@ -1405,4 +1412,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cf38b3dec1892bd04512.js.map
+//# sourceMappingURL=aef1b409e2711c4cbe02.js.map

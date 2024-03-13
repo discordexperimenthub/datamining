@@ -1276,6 +1276,8 @@
           "This app is not made by Discord. Only test apps from developers you trust.",
         EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
           "Learn more about private apps.",
+        APPLICATION_ICON_A11Y_LABEL: "App icon for {applicationName}",
+        APPLICATION_ICON_NO_NAME_A11Y_LABEL: "App icon",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) started an activity",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -24884,6 +24886,11 @@
         PACKAGES_ENTRYPOINT_TITLE: "Your mail has arrived!",
         PACKAGES_ENTRYPOINT_DESCRIPTION: "See what you got...",
         PACKAGES_ENTRYPOINT_CLOSE: "Didn't ask",
+        PACKAGES_CLAIM_HEADER: "You got mail!",
+        PACKAGES_CLAIM_BODY:
+          "Your package has safely arrived at your doorstep. Please thank your mail delivery person when you get a chance.",
+        PACKAGES_CLAIM_CONTINUE: "Give Thanks",
+        PACKAGES_CLAIM_CANCEL: "Cancel",
         PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_YES: "Yes",
         PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_NO: "No",
         PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_1: "Is this a joke?",
@@ -26333,8 +26340,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("274911", ", Version Hash: ")
-          .concat("c1351fbd445fc777a0b3b8977cb6be9d314a012d")
+          .concat("274917", ", Version Hash: ")
+          .concat("0730afca8b01558533dc73ea6ff28d693b0d6ea4")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29436,12 +29443,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "274911"), "274911"));
+        let _ = parseInt(((e = "274917"), "274917"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "274911"
+                "274917"
               )
             ),
             (_ = 0)),
@@ -30725,7 +30732,7 @@
         p = E("36773"),
         g = E("374036"),
         y = E("384997"),
-        B = E("881889"),
+        B = E("528703"),
         f = E("234819"),
         H = E("182033"),
         v = E("928741"),
@@ -35083,7 +35090,7 @@
         }
       }
     },
-    881889: function (e, _, E) {
+    528703: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
@@ -35102,12 +35109,12 @@
         s = E("79112"),
         T = E("10641"),
         S = E("447845"),
-        N = E("809094"),
-        O = E("108250"),
+        N = E("724001"),
+        O = E("638131"),
         A = E("49111"),
         R = E("994428"),
         l = E("782340"),
-        u = E("543178");
+        u = E("61701");
       function L() {
         let { allowOpeningLootboxes: e } = S.default.useExperiment({
             location: "lootbox_entrypoint",
@@ -51980,4 +51987,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.a45066a401e91813030b.js.map
+//# sourceMappingURL=76039.a94f7527e885c0c24562.js.map

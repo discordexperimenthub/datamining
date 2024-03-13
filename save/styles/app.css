@@ -32841,7 +32841,7 @@ html .progress__4ef76 {
   margin-top: 16px;
   font-weight: 600;
   color: var(--interactive-active);
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .tierPeriod__90c6f {
   font-family: var(--font-display);
@@ -33080,8 +33080,8 @@ html .progress__4ef76 {
   display: flex;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.75rem;
+  line-height: 1rem;
   text-transform: uppercase;
 }
 .tierInfoContainer__80b01 {
@@ -110631,4 +110631,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.e4546dda8e38ef0ad527.css.map*/
+/*# sourceMappingURL=app.cb85ef40df561a0f1711.css.map*/

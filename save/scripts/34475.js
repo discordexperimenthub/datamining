@@ -1621,22 +1621,20 @@
           let {
             selectedGuild: t,
             selectedChannel: n,
-            isNSFWChannel: i,
-            isMemberPending: a,
-            hasPreviewEnabled: l,
-            postableChannelCount: u,
+            isMemberPending: i,
+            hasPreviewEnabled: a,
+            postableChannelCount: l,
           } = this.props;
           if (
-            ((t !== e.selectedGuild || (a && !e.isMemberPending)) &&
+            ((t !== e.selectedGuild || (i && !e.isMemberPending)) &&
               (0, r.trackWithOverlayMetadata)(v.AnalyticEvents.GUILD_VIEWED, {
-                ...(a ? { is_pending: a, preview_enabled: l } : {}),
-                postable_channels: u,
+                ...(i ? { is_pending: i, preview_enabled: a } : {}),
+                postable_channels: l,
               }),
             null != n && n !== e.selectedChannel)
           ) {
             let e = (0, o.collectThreadMetadata)(d.default.getChannel(n), !0);
             (0, r.trackWithOverlayMetadata)(v.AnalyticEvents.CHANNEL_OPENED, {
-              channel_is_nsfw: i,
               ...e,
               ...(0, s.getChannelOpenedMetadata)(n),
             });
@@ -1650,31 +1648,29 @@
         [
           E.default,
           p.default,
-          d.default,
           f.default,
           g.default,
           m.default,
-          c.default,
           u.default,
           h.default,
+          c.default,
         ],
         () => {
           var e, t, n;
           let i = E.default.getGuildId(),
             l = p.default.getChannelId(i),
-            s = d.default.getChannel(l),
-            o = f.default.getGuild(i),
-            r = g.default.getCurrentUser(),
-            I =
+            s = f.default.getGuild(i),
+            o = g.default.getCurrentUser(),
+            r =
               null !==
-                (t = u.default.getChannels(null == o ? void 0 : o.id)[
+                (t = u.default.getChannels(null == s ? void 0 : s.id)[
                   u.GUILD_SELECTABLE_CHANNELS_KEY
                 ]) && void 0 !== t
                 ? t
                 : [],
-            y =
-              I.length > 0
-                ? I.filter(e => {
+            d =
+              r.length > 0
+                ? r.filter(e => {
                     let { channel: t } = e;
                     return h.default.can(
                       a.default.combine(
@@ -1685,12 +1681,12 @@
                     );
                   }).length
                 : 0,
-            _ =
-              null != r &&
+            I =
+              null != o &&
               null != i &&
               null !==
                 (n =
-                  null === (e = c.default.getMember(i, r.id)) || void 0 === e
+                  null === (e = c.default.getMember(i, o.id)) || void 0 === e
                     ? void 0
                     : e.isPending) &&
               void 0 !== n &&
@@ -1698,14 +1694,13 @@
           return {
             selectedGuild: i,
             selectedChannel: l,
-            isNSFWChannel: null == s ? void 0 : s.nsfw,
             locked: m.default.isUILocked((0, S.getPID)()),
             hasPreviewEnabled:
-              null == o
+              null == s
                 ? void 0
-                : o.features.has(v.GuildFeatures.PREVIEW_ENABLED),
-            isMemberPending: _,
-            postableChannelCount: y,
+                : s.features.has(v.GuildFeatures.PREVIEW_ENABLED),
+            isMemberPending: I,
+            postableChannelCount: d,
           };
         }
       )(I);
@@ -7787,4 +7782,4 @@
     },
   },
 ]);
-//# sourceMappingURL=279a3f6dc1638ffd3355.js.map
+//# sourceMappingURL=887b84e485f5ae6d8fe2.js.map

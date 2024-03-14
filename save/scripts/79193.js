@@ -1382,8 +1382,8 @@
         k = s("145131"),
         y = s("519311"),
         H = s("83900"),
-        F = s("216422"),
-        w = s("547896"),
+        w = s("216422"),
+        F = s("547896"),
         K = s("599110"),
         W = s("306160"),
         V = s("568734"),
@@ -1522,7 +1522,7 @@
                 ? (0, a.jsxs)(r.Fragment, {
                     children: [
                       (0, a.jsx)(O.default.Icon, {
-                        icon: w.default,
+                        icon: F.default,
                         "aria-label": ed.default.Messages.STORE_CHANNEL,
                       }),
                       (0, a.jsx)(O.default.Title, { children: s.name }),
@@ -1532,7 +1532,7 @@
                   ? (0, a.jsxs)(r.Fragment, {
                       children: [
                         (0, a.jsx)(O.default.Icon, {
-                          icon: F.default,
+                          icon: w.default,
                           "aria-label": ed.default.Messages.PREMIUM,
                         }),
                         (0, a.jsx)(ea.default, { sku: t }),
@@ -1542,7 +1542,7 @@
                     ? (0, a.jsxs)(r.Fragment, {
                         children: [
                           (0, a.jsx)(O.default.Icon, {
-                            icon: w.default,
+                            icon: F.default,
                             "aria-label": ed.default.Messages.STORE_CHANNEL,
                           }),
                           (0, a.jsx)(O.default.Title, { children: t.name }),
@@ -3533,7 +3533,7 @@
               s !== o.PremiumTypes.TIER_0
                 ? _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE
                 : _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED,
-            F = {
+            w = {
               badge: {
                 title: _.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
                 description:
@@ -3715,7 +3715,7 @@
                 imageClassName: t.videoBackgroundImage,
               },
             };
-          return F;
+          return w;
         };
     },
     460680: function (e, t, s) {
@@ -3817,8 +3817,8 @@
             return r;
           },
         }),
-        ((n = a || (a = {})).FREE_GUILD_BOOST_1_MONTH = ""),
-        (n.FREE_GUILD_BOOST_3_MONTHS = ""),
+        ((n = a || (a = {})).FREE_GUILD_BOOST_1_MONTH = "1215584796672000000"),
+        (n.FREE_GUILD_BOOST_3_MONTHS = "1215585048330240000"),
         ((i = r || (r = {}))[(i.PENDING = 0)] = "PENDING"),
         (i[(i.REDEEMABLE = 1)] = "REDEEMABLE"),
         (i[(i.REDEEMED = 2)] = "REDEEMED");
@@ -3828,16 +3828,16 @@
       s.r(t),
         s.d(t, {
           useFreeBoostUserTenureReward: function () {
-            return f;
-          },
-          useFreeBoostTenureRewardEntitlement: function () {
             return R;
           },
-          useShouldShowTenureRewardBadge: function () {
+          useFreeBoostTenureRewardEntitlement: function () {
             return m;
           },
+          useShouldShowTenureRewardBadge: function () {
+            return A;
+          },
           useClearTenureBadge: function () {
-            return N;
+            return p;
           },
         }),
         s("222007");
@@ -3850,80 +3850,93 @@
         o = s("235145"),
         d = s("384997"),
         c = s("437712"),
-        _ = s("53641"),
-        E = s("485426"),
-        T = s("646718"),
-        I = s("511143");
-      function f() {
+        _ = s("449008"),
+        E = s("53641"),
+        T = s("485426"),
+        I = s("646718"),
+        f = s("511143");
+      function R() {
         let e = (function () {
             var e;
-            let t = (0, i.useStateFromStoresObject)([_.default], () =>
-              _.default.getState()
+            let t = (0, i.useStateFromStoresObject)([E.default], () =>
+              E.default.getState()
             );
-            if (null != t && t.fetchState === _.FetchState.FETCHED)
+            if (null != t && t.fetchState === E.FetchState.FETCHED)
               return null !==
                 (e =
                   t.userTenureRewardStatusByRewardId[
-                    I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
+                    f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
                   ]) && void 0 !== e
                 ? e
                 : t.userTenureRewardStatusByRewardId[
-                    I.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
+                    f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
                   ];
           })(),
-          t = R();
+          t = m();
         if (null != t)
           return {
-            nitroTenureStatus: I.NitroRewardStatus.REDEEMABLE,
+            nitroTenureStatus: f.NitroRewardStatus.REDEEMABLE,
             tenureRewardSkuId: t.skuId,
           };
-        if (!(null != e && (0, E.isUserTenureRewardStatusActive)(e)))
+        if (!(null != e && (0, T.isUserTenureRewardStatusActive)(e)))
           return null;
         {
           if (null == e.redeemable_at || null == e.next_tenure_reward_id)
             return null;
-          let t = n.utc().diff(e.redeemable_at, "days");
+          let t = n(e.redeemable_at).diff(n.utc(), "days");
           return t < 0
             ? null
             : {
-                nitroTenureStatus: I.NitroRewardStatus.PENDING,
+                nitroTenureStatus: f.NitroRewardStatus.PENDING,
                 tenureRewardSkuId: e.next_tenure_reward_id,
                 redeemableInDays: 0 === t ? 1 : t,
               };
         }
       }
-      function R() {
-        let e = (0, i.useStateFromStores)([c.default], () =>
-            c.default.getForApplication(T.PREMIUM_SUBSCRIPTION_APPLICATION)
+      let S = new Set();
+      function m() {
+        let e = (0, i.useStateFromStores)(
+            [c.default],
+            () => {
+              var e;
+              return null !==
+                (e = c.default.getForApplication(
+                  I.PREMIUM_SUBSCRIPTION_APPLICATION
+                )) && void 0 !== e
+                ? e
+                : S;
+            },
+            [],
+            _.areSetsEqual
           ),
-          t = (0, E.getPremiumTier2Entitlement)(e);
+          t = (0, T.getPremiumTier2Entitlement)(e);
         if (null == t) return;
-        let s = (0, E.getTenureRewardEntitlement)(
+        let s = (0, T.getTenureRewardEntitlement)(
           [
-            I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
-            I.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
+            f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
+            f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
           ],
           e
         );
         return s;
       }
-      let S = e => {
+      let N = e => {
           switch (e) {
-            case I.NitroRewardStatus.PENDING:
+            case f.NitroRewardStatus.PENDING:
               return [l.DismissibleContent.TENURE_REWARD_PENDING];
-            case I.NitroRewardStatus.REDEEMABLE:
+            case f.NitroRewardStatus.REDEEMABLE:
               return [l.DismissibleContent.TENURE_REWARD_REDEEMABLE];
             default:
               return [];
           }
         },
-        m = () => {
+        A = () => {
           var e;
           let t =
-              null === (e = f()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            [s, r] = (0, a.useState)(S(t));
+              null === (e = R()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            [s, r] = (0, a.useState)(N(t));
           (0, a.useEffect)(() => {
-            r(S(t));
+            r(N(t));
           }, [t]);
           let [n] = (0, d.useSelectedDismissibleContent)(s);
           return (
@@ -3932,11 +3945,11 @@
               n === l.DismissibleContent.TENURE_REWARD_PENDING)
           );
         },
-        N = () => {
+        p = () => {
           var e;
           let t =
-              null === (e = f()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            s = S(t),
+              null === (e = R()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            s = N(t),
             [r] = (0, o.useGetDismissibleContent)(s);
           (0, a.useEffect)(() => {
             null != t &&
@@ -3954,56 +3967,62 @@
             return r;
           },
           default: function () {
-            return _;
+            return d;
           },
         });
       var a,
         r,
-        n = s("917351"),
-        i = s.n(n),
-        l = s("446674"),
-        u = s("913144");
+        n = s("446674"),
+        i = s("913144");
       ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (a[(a.FETCHING = 1)] = "FETCHING"),
         (a[(a.FETCHED = 2)] = "FETCHED");
-      let o = {
+      let l = {
           userTenureRewardStatusByRewardId: {},
           lastFetchTimeMs: null,
           fetchState: 0,
         },
-        d = o;
-      class c extends l.default.PersistedStore {
+        u = l;
+      class o extends n.default.PersistedStore {
         initialize(e) {
-          d = { ...d, ...(null != e ? e : {}) };
+          u = { ...u, ...(null != e ? e : {}) };
         }
         getState() {
-          return d;
+          return u;
         }
         getFetchState() {
-          return d.fetchState;
+          return u.fetchState;
         }
         getTenureRewardStatusForRewardId(e) {
-          return d.userTenureRewardStatusByRewardId[e];
-        }
-        reset() {
-          d = o;
+          return u.userTenureRewardStatusByRewardId[e];
         }
       }
-      (c.displayName = "TenureRewardStore"),
-        (c.persistKey = "TenureRewardStore");
-      var _ = new c(u.default, {
+      (o.displayName = "TenureRewardStore"),
+        (o.persistKey = "TenureRewardStore");
+      var d = new o(i.default, {
         USER_TENURE_REWARD_SYNC_START: function () {
-          d.fetchState = 1;
+          u.fetchState = 1;
         },
         USER_TENURE_REWARD_SYNC_SUCCESS: function (e) {
           let { userTenureRewardStatus: t } = e;
-          (d.userTenureRewardStatusByRewardId = i.keyBy(t, "user_id")),
-            (d.lastFetchTimeMs = Date.now()),
-            (d.fetchState = 2);
+          if (null != t) {
+            let e = {};
+            t.forEach(t => {
+              null != t.next_tenure_reward_id &&
+                (e[t.next_tenure_reward_id] = t);
+            }),
+              (u.userTenureRewardStatusByRewardId = e);
+          } else
+            u.userTenureRewardStatusByRewardId =
+              l.userTenureRewardStatusByRewardId;
+          (u.lastFetchTimeMs = Date.now()), (u.fetchState = 2);
         },
         USER_TENURE_REWARD_STATUS_RESET: function () {
-          d.userTenureRewardStatusByRewardId =
-            o.userTenureRewardStatusByRewardId;
+          u.userTenureRewardStatusByRewardId =
+            l.userTenureRewardStatusByRewardId;
+        },
+        LOGOUT: function () {
+          u = l;
         },
       });
     },
@@ -4028,24 +4047,25 @@
       var n = s("49111");
       function i(e) {
         if (null == e) return;
-        let t = Array.from(e).find(
-          e => (
-            e.type === n.EntitlementTypes.PURCHASE &&
-              (e.skuId, r.PremiumSubscriptionSKUs.TIER_2),
-            e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION &&
-              e.isValid(null, a.default)
-          )
-        );
+        let t = Array.from(e).find(e => {
+          var t;
+          return (
+            (t = e).type === n.EntitlementTypes.PURCHASE &&
+            t.skuId === r.PremiumSubscriptionSKUs.TIER_2 &&
+            t.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION &&
+            t.isValid(null, a.default)
+          );
+        });
         return t;
       }
       function l(e, t) {
         if (null == t) return;
         let s = Array.from(t).find(
-          e => (
-            e.type === n.EntitlementTypes.PREMIUM_PURCHASE && e.skuId,
-            e.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION &&
-              e.isValid(null, a.default)
-          )
+          t =>
+            t.type === n.EntitlementTypes.PREMIUM_PURCHASE &&
+            t.skuId in e &&
+            t.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION &&
+            t.isValid(null, a.default)
         );
         return s;
       }
@@ -4587,8 +4607,8 @@
             H = (0, l.useStateFromStores)([N.default], () =>
               N.default.getCurrentUser()
             ),
-            F = (0, x.usePremiumTrialOffer)(),
-            w = (0, L.usePremiumDiscountOffer)(),
+            w = (0, x.usePremiumTrialOffer)(),
+            F = (0, L.usePremiumDiscountOffer)(),
             K = (0, R.useSubscriptionPlansLoaded)(),
             [W, V] = r.useState(!0),
             Y = r.useRef(0),
@@ -4620,17 +4640,17 @@
               });
             }, [X]),
             r.useEffect(() => {
-              if (s && (null != F || null != w)) {
+              if (s && (null != w || null != F)) {
                 let e = (0, v.shouldHitUserOfferEndPoints)(
                   "PremiumMarketingPage"
                 );
                 e
-                  ? (0, O.acknowledgeUserOffer)(F, w)
-                  : null != F &&
-                    null == F.expires_at &&
-                    P.default.acknowledgeUserTrialOffer(F);
+                  ? (0, O.acknowledgeUserOffer)(w, F)
+                  : null != w &&
+                    null == w.expires_at &&
+                    P.default.acknowledgeUserTrialOffer(w);
               }
-            }, [s, F, w]),
+            }, [s, w, F]),
             r.useEffect(() => {
               !W &&
                 p.default.track(
@@ -6601,10 +6621,10 @@
             selectedPlanColumnClassName: b,
             selectedPlanTier: H = h.PremiumTypes.TIER_2,
           } = e,
-          { AnalyticsLocationProvider: F } = (0, E.default)(
+          { AnalyticsLocationProvider: w } = (0, E.default)(
             _.default.PREMIUM_MARKETING_PLAN_COMPARISON
           ),
-          w = (0, m.useMarketingOptimizationExperiment)({
+          F = (0, m.useMarketingOptimizationExperiment)({
             autoTrackExposure: !1,
           }),
           K = (0, l.useStateFromStores)([f.default], () =>
@@ -6764,7 +6784,7 @@
           J === h.PremiumSubscriptionSKUs.TIER_0 ||
           q === h.PremiumTypes.TIER_0 ||
           H === h.PremiumTypes.TIER_0;
-        return (0, a.jsx)(F, {
+        return (0, a.jsx)(w, {
           children: (0, a.jsxs)("div", {
             className: i(x.root, n),
             "data-testid": "v2-marketing-page-comparison-table",
@@ -6783,14 +6803,14 @@
                 children: [
                   (0, a.jsx)("div", {
                     className: i(b, {
-                      [x.tier0ColumnOuter]: eu && !w,
-                      [x.tier2ColumnOuter]: !eu && !w,
-                      [x.tier0ColumnOuterBackground]: eu && w,
-                      [x.tier2ColumnOuterBackground]: !eu && w,
+                      [x.tier0ColumnOuter]: eu && !F,
+                      [x.tier2ColumnOuter]: !eu && !F,
+                      [x.tier0ColumnOuterBackground]: eu && F,
+                      [x.tier2ColumnOuterBackground]: !eu && F,
                     }),
                     children: !eu && s,
                   }),
-                  w &&
+                  F &&
                     eu &&
                     (0, a.jsx)("div", { className: x.tier2Pill, children: s }),
                   (0, a.jsxs)("table", {
@@ -7107,8 +7127,8 @@
         k = s("904871"),
         y = s("360776"),
         H = s("525505"),
-        F = s("881155"),
-        w = s("598739"),
+        w = s("881155"),
+        F = s("598739"),
         K = s("326881"),
         W = s("228967"),
         V = s("646718"),
@@ -7179,7 +7199,7 @@
                 children: [
                   (0, a.jsx)(B.default, {
                     headerClassname: n ? z.stackedHeader : void 0,
-                    variant: w.PerksDiscoverabilityCardSection.WHATS_NEW,
+                    variant: F.PerksDiscoverabilityCardSection.WHATS_NEW,
                     isFullScreen: t,
                   }),
                   (0, a.jsx)(B.default, {
@@ -7188,7 +7208,7 @@
                     showAllPerksButton: t
                       ? (0, a.jsx)(W.default, {
                           setIsAllPerksVisible: u,
-                          previousComponent: w.NitroLandingPages.MARKETING,
+                          previousComponent: F.NitroLandingPages.MARKETING,
                         })
                       : void 0,
                   }),
@@ -7341,7 +7361,7 @@
                         eR === V.PremiumSubscriptionSKUs.TIER_2 ||
                         em ||
                         null != eI
-                          ? (0, a.jsx)(F.default, {
+                          ? (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7355,7 +7375,7 @@
                               color: d.ButtonColors.WHITE,
                               buttonShineClassName: n ? z.buttonShine : void 0,
                             })
-                          : (0, a.jsx)(F.default, {
+                          : (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7369,7 +7389,7 @@
                             }),
                       tier2CTAButton:
                         eR === V.PremiumSubscriptionSKUs.TIER_0
-                          ? (0, a.jsx)(F.default, {
+                          ? (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7383,7 +7403,7 @@
                               color: d.ButtonColors.WHITE,
                               buttonShineClassName: n ? z.buttonShine : void 0,
                             })
-                          : (0, a.jsx)(F.default, {
+                          : (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               style: eg,
                               showIcon: !1,
@@ -7499,7 +7519,7 @@
                 }),
                 (en === V.PremiumTypes.TIER_2 || null == en) &&
                   (0, a.jsx)(K.default, {
-                    previousComponent: w.NitroLandingPages.MARKETING,
+                    previousComponent: F.NitroLandingPages.MARKETING,
                     isAllPerksVisible: eE,
                     setIsAllPerksVisible: eT,
                   }),
@@ -8362,8 +8382,8 @@
         k = s("198326"),
         y = s("761708"),
         H = s("174433"),
-        F = s("828015"),
-        w = s("62414"),
+        w = s("828015"),
+        F = s("62414"),
         K = s("613697"),
         W = s("907511"),
         V = s("165870"),
@@ -8630,7 +8650,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                   descriptionCta: P.default.Messages.TAKE_ME_THERE,
                   onCtaClick: en,
-                  perkImage: F,
+                  perkImage: w,
                 }
               : {
                   name: "entranceSoundsSeeAllVariation",
@@ -8643,7 +8663,7 @@
                   description:
                     P.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-                  perkImage: F,
+                  perkImage: w,
                 },
             profileEffects: $
               ? {
@@ -8882,7 +8902,7 @@
               name: "upcomingDropUntimed",
               title: P.default.Messages.NEW_DROP,
               pillText: P.default.Messages.COMING_SOON,
-              backgroundImage: w,
+              backgroundImage: F,
             },
             badge: {
               name: "badge",
@@ -9902,4 +9922,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5bcb4f7decd0a74778c9.js.map
+//# sourceMappingURL=a8bbfd2bacea2d37ee30.js.map

@@ -200,7 +200,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return b;
+            return R;
           },
         }),
         a("424973");
@@ -225,103 +225,95 @@
         C = a("247013"),
         S = a("305961"),
         N = a("377253"),
-        p = a("957255"),
-        T = a("697218"),
-        A = a("945330"),
-        j = a("664336"),
-        M = a("679653"),
-        D = a("176347"),
-        F = a("49111"),
-        L = a("782340"),
-        R = a("264594");
-      function b(e) {
+        p = a("697218"),
+        T = a("945330"),
+        A = a("664336"),
+        j = a("679653"),
+        M = a("176347"),
+        D = a("49111"),
+        F = a("782340"),
+        L = a("264594");
+      function R(e) {
         let {
             channelId: t,
-            baseChannelId: b,
-            channelViewSource: G = "Split View",
-            isResourceChannelView: y,
+            baseChannelId: R,
+            channelViewSource: b = "Split View",
+            isResourceChannelView: G,
           } = e,
-          O = (0, s.useStateFromStores)([x.default], () =>
+          y = (0, s.useStateFromStores)([x.default], () =>
             x.default.getChannel(t)
           ),
-          H = (0, s.useStateFromStores)([S.default], () =>
-            S.default.getGuild(null == O ? void 0 : O.getGuildId())
+          O = (0, s.useStateFromStores)([S.default], () =>
+            S.default.getGuild(null == y ? void 0 : y.getGuildId())
           ),
-          k = (0, s.useStateFromStores)([T.default], () =>
-            T.default.getCurrentUser()
+          H = (0, s.useStateFromStores)([p.default], () =>
+            p.default.getCurrentUser()
           ),
-          U = (0, s.useStateFromStores)([C.default], () =>
-            C.default.didAgree(null == O ? void 0 : O.guild_id)
+          k = (0, s.useStateFromStores)([C.default], () =>
+            C.default.didAgree(null == y ? void 0 : y.guild_id)
           ),
-          w = (null == k ? void 0 : k.nsfwAllowed) === !0,
-          B = (0, M.default)(O),
-          P = (0, s.useStateFromStores)(
+          U = (null == H ? void 0 : H.nsfwAllowed) === !0,
+          w = (0, j.default)(y),
+          B = (0, s.useStateFromStores)(
             [g.default],
             () =>
-              (null == H ? void 0 : H.id) != null && g.default.isLurking(H.id),
-            [H]
+              (null == O ? void 0 : O.id) != null && g.default.isLurking(O.id),
+            [O]
           ),
-          V = (0, s.useStateFromStores)([p.default], () =>
-            p.default.can(F.Permissions.SEND_MESSAGES, O)
-          ),
-          W = (0, m.default)(t),
-          K = (0, s.useStateFromStores)([f.default], () => {
+          P = (0, m.default)(t),
+          V = (0, s.useStateFromStores)([f.default], () => {
             var e;
             return null ===
               (e = f.default.getResourceForChannel(
-                null == H ? void 0 : H.id,
+                null == O ? void 0 : O.id,
                 t
               )) || void 0 === e
               ? void 0
               : e.title;
           }),
-          z = n.useRef(!1);
+          W = n.useRef(!1);
         if (
           (n.useEffect(() => {
-            null != O &&
-              !z.current &&
-              ((z.current = !0),
-              (0, u.trackWithMetadata)(F.AnalyticEvents.CHANNEL_OPENED, {
-                ...(0, u.getChannelOpenedMetadata)(O.id),
-                channel_id: O.id,
-                guild_id: O.guild_id,
-                parent_id: O.parent_id,
-                channel_view: G,
-                can_send_message: V,
+            null != y &&
+              !W.current &&
+              ((W.current = !0),
+              (0, u.trackWithMetadata)(D.AnalyticEvents.CHANNEL_OPENED, {
+                ...(0, u.getChannelOpenedMetadata)(y.id),
+                channel_view: b,
               }));
-          }, [O, G, V]),
-          null == O || null == H)
+          }, [y, b]),
+          null == y || null == O)
         )
           return null;
-        let Y = [];
-        return (!P &&
-          Y.push((0, l.jsx)(h.default, { channel: O }, "notifications")),
-        Y.push(
+        let K = [];
+        return (!B &&
+          K.push((0, l.jsx)(h.default, { channel: y }, "notifications")),
+        K.push(
           (0, l.jsx)(
-            j.default.Icon,
+            A.default.Icon,
             {
-              icon: A.default,
-              tooltip: L.default.Messages.CLOSE,
-              onClick: () => _.default.closeChannelSidebar(b),
+              icon: T.default,
+              tooltip: F.default.Messages.CLOSE,
+              onClick: () => _.default.closeChannelSidebar(R),
             },
             "close"
           )
         ),
-        !O.isNSFW() || (w && U))
+        !y.isNSFW() || (U && k))
           ? (0, l.jsxs)(l.Fragment, {
               children: [
                 (0, l.jsx)(d.default, {
-                  channel: O,
+                  channel: y,
                   draftType: v.DraftType.ChannelMessage,
                 }),
-                (0, l.jsx)(j.default, {
-                  toolbar: Y,
+                (0, l.jsx)(A.default, {
+                  toolbar: K,
                   "aria-label":
-                    L.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
+                    F.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                   children: (0, E.renderTitle)({
-                    channel: O,
-                    channelName: W ? K : B,
-                    guild: H,
+                    channel: y,
+                    channelName: P ? V : w,
+                    guild: O,
                     inSidebar: !0,
                     handleContextMenu: e => {
                       (0, i.openContextMenuLazy)(e, async () => {
@@ -329,31 +321,31 @@
                           .el("229233")
                           .then(a.bind(a, "229233"));
                         return t =>
-                          (0, l.jsx)(e, { ...t, channel: O, guild: H });
+                          (0, l.jsx)(e, { ...t, channel: y, guild: O });
                       });
                     },
                     handleClick: () => {
-                      let e = N.default.getMessages(O.id);
-                      if (y) {
-                        (0, I.transitionTo)(F.Routes.CHANNEL(O.guild_id, O.id)),
-                          (0, c.selectHomeResourceChannel)(O.guild_id, null);
+                      let e = N.default.getMessages(y.id);
+                      if (G) {
+                        (0, I.transitionTo)(D.Routes.CHANNEL(y.guild_id, y.id)),
+                          (0, c.selectHomeResourceChannel)(y.guild_id, null);
                         return;
                       }
                       (0, I.transitionToGuild)(
-                        O.guild_id,
-                        O.id,
+                        y.guild_id,
+                        y.id,
                         e.jumpTargetId
                       );
                     },
                   }),
                 }),
                 (0, l.jsx)("div", {
-                  className: R.chat,
+                  className: L.chat,
                   children: (0, l.jsx)(
-                    D.default,
+                    M.default,
                     {
-                      channel: O,
-                      guild: H,
+                      channel: y,
+                      guild: O,
                       chatInputType: o.ChatInputTypes.SIDEBAR,
                     },
                     t
@@ -361,7 +353,7 @@
                 }),
               ],
             })
-          : (0, l.jsx)(r.default, { guild: H });
+          : (0, l.jsx)(r.default, { guild: O });
       }
     },
     404103: function (e, t, a) {
@@ -8367,4 +8359,4 @@
     },
   },
 ]);
-//# sourceMappingURL=94b5e8a3685086ad8916.js.map
+//# sourceMappingURL=704e6b950d8f69ff6913.js.map

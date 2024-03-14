@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275056",
+                  buildNumber: "275074",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -11862,7 +11862,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return q;
+            return K;
           },
         }),
         n("702976"),
@@ -11895,42 +11895,36 @@
         L = n("305961"),
         M = n("42887"),
         P = n("377253"),
-        D = n("957255"),
-        y = n("945956"),
-        x = n("18494"),
-        b = n("162771"),
-        U = n("101125"),
-        G = n("282109"),
-        j = n("697218"),
-        w = n("330338"),
-        k = n("545429"),
-        F = n("860957"),
-        B = n("599110"),
-        H = n("568734"),
-        V = n("449008"),
-        Y = n("50885"),
-        W = n("49111"),
-        z = n("6791");
-      class K extends s.PureComponent {
+        D = n("945956"),
+        y = n("18494"),
+        x = n("162771"),
+        b = n("101125"),
+        U = n("282109"),
+        G = n("697218"),
+        j = n("330338"),
+        w = n("545429"),
+        k = n("860957"),
+        F = n("599110"),
+        B = n("568734"),
+        H = n("449008"),
+        V = n("50885"),
+        Y = n("49111"),
+        W = n("6791");
+      class z extends s.PureComponent {
         componentDidMount() {
           let {
             selectedChannelId: e,
             connected: t,
             isNSFWChannel: n,
-            channelParentId: a,
-            isTextInVoice: s,
-            canSendMessage: l,
+            isTextInVoice: a,
           } = this.props;
           t &&
             null != e &&
-            ((0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
+            ((0, u.trackWithMetadata)(Y.AnalyticEvents.CHANNEL_OPENED, {
               ...(0, u.getChannelOpenedMetadata)(e),
-              channel_is_nsfw: n,
-              parent_id: a,
-              can_send_message: l,
             }),
-            s &&
-              (0, u.trackWithMetadata)(W.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
+            a &&
+              (0, u.trackWithMetadata)(Y.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
                 channel_is_nsfw: n,
               }));
         }
@@ -11945,36 +11939,34 @@
             isScreenSharing: g,
             runningGame: v,
             runningGamePid: M,
-            selectedChannelId: D,
-            selectedGuildId: x,
-            channelParentId: j,
-            connected: w,
-            homeLink: k,
-            friendsTabSection: K,
-            isNSFWChannel: q,
-            isMemberPending: Q,
-            hasPreviewEnabled: Z,
-            postableChannelCount: X,
-            isTextInVoice: J,
-            canSendMessage: $,
-            numMessageRequests: ee,
+            selectedChannelId: y,
+            selectedGuildId: G,
+            connected: j,
+            homeLink: w,
+            friendsTabSection: z,
+            isNSFWChannel: K,
+            isMemberPending: q,
+            hasPreviewEnabled: Q,
+            postableChannelCount: Z,
+            isTextInVoice: X,
+            numMessageRequests: J,
           } = this.props;
           if (e.voiceChannelId !== s && null != e.voiceChannelId) {
             let t = I.default.getCurrentGameForAnalytics(),
               n = null != t ? t.name : "",
               a = A.default.getStageInstanceByChannel(e.voiceChannelId),
               s = p.default.getActiveEventByChannel(e.voiceChannelId);
-            B.default.track(W.AnalyticEvents.LEAVE_VOICE_CHANNEL, {
+            F.default.track(Y.AnalyticEvents.LEAVE_VOICE_CHANNEL, {
               channel_id: e.voiceChannelId,
               channel_type: e.voiceChannelType,
               channel_bitrate: e.voiceChannelBitrate,
               guild_id: e.voiceChannelGuildId,
-              rtc_connection_id: y.default.getRTCConnectionId(),
+              rtc_connection_id: D.default.getRTCConnectionId(),
               game_name: n,
-              duration: y.default.getDuration(),
+              duration: D.default.getDuration(),
               game_platform: this.props.gamePlatform,
               game_id: this.props.gameId,
-              media_session_id: y.default.getMediaSessionId(),
+              media_session_id: D.default.getMediaSessionId(),
               stage_instance_id: null == a ? void 0 : a.id,
               guild_scheduled_event_id: null == s ? void 0 : s.id,
               ...(0, u.getVoiceStateMetadata)(
@@ -11982,7 +11974,7 @@
                 e.voiceChannelId,
                 e.videoEnabled
               ),
-              ...y.default.getVoiceStateStats(),
+              ...D.default.getVoiceStateStats(),
               ...h.default.getSelectedParticipantStats(e.voiceChannelId),
             });
           }
@@ -11991,14 +11983,10 @@
               t = null != e ? e.name : "",
               n = A.default.getStageInstanceByChannel(s),
               a = p.default.getActiveEventByChannel(s);
-            (0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
+            (0, u.trackWithMetadata)(Y.AnalyticEvents.CHANNEL_OPENED, {
               ...(0, u.getChannelOpenedMetadata)(s),
-              channel_id: s,
-              channel_is_nsfw: q,
-              parent_id: j,
-              can_send_message: $,
             }),
-              B.default.track(W.AnalyticEvents.JOIN_VOICE_CHANNEL, {
+              F.default.track(Y.AnalyticEvents.JOIN_VOICE_CHANNEL, {
                 channel_id: s,
                 channel_type: o,
                 channel_bitrate: S,
@@ -12029,12 +12017,12 @@
             if (
               (setTimeout(() => {
                 var t;
-                let n = Y.default.GetWindowFullscreenTypeByPid(
+                let n = V.default.GetWindowFullscreenTypeByPid(
                   v.pid,
                   v.name,
                   v.fullscreenType
                 );
-                B.default.track(W.AnalyticEvents.LAUNCH_GAME, {
+                F.default.track(Y.AnalyticEvents.LAUNCH_GAME, {
                   game: v.name,
                   game_id: null == e ? null : e.id,
                   verified: null != e,
@@ -12043,17 +12031,17 @@
                     null !== (t = null == v ? void 0 : v.isLauncher) &&
                     void 0 !== t &&
                     t,
-                  game_platform: W.ActivityGamePlatforms.DESKTOP,
+                  game_platform: Y.ActivityGamePlatforms.DESKTOP,
                   detection_method: l,
                   distributor: v.distributor,
-                  is_overlay_enabled: F.default.enabled,
+                  is_overlay_enabled: k.default.enabled,
                   is_overlay_game_enabled: o.enabled,
                   is_overlay_game_source: o.source,
                   fullscreen_type: r.RunningProcessFullscreenType[n],
-                  overlay_method: z.OverlayMethod[o.overlayMethod],
+                  overlay_method: W.OverlayMethod[o.overlayMethod],
                   activity_status_enabled: N.ShowCurrentGame.getSetting(),
                   activity_status_shared_guilds: s,
-                  current_user_status: U.default.getStatus(),
+                  current_user_status: b.default.getStatus(),
                   game_detection_enabled: (0, I.isDetectionEnabled)(v),
                   executable_path: (0, C.removeExecutablePathPrefix)(v.exePath),
                 });
@@ -12075,13 +12063,13 @@
           if ((e.videoEnabled !== m || e.isScreenSharing !== g) && null != s) {
             let e = "none",
               t = [g ? "screen" : null, m ? "camera" : null].filter(
-                V.isNotNullish
+                H.isNotNullish
               ),
               n = null;
             g
               ? ((e = "screen"), (n = (0, f.getDesktopSourceMetadata)()))
               : m && (e = "camera"),
-              B.default.track(W.AnalyticEvents.VIDEO_INPUT_TOGGLED, {
+              F.default.track(Y.AnalyticEvents.VIDEO_INPUT_TOGGLED, {
                 video_input_type: e,
                 video_toggle_source: __OVERLAY__ ? "overlay" : "app",
                 enabled_inputs: t,
@@ -12092,53 +12080,53 @@
               });
           }
           if (
-            w &&
-            null != x &&
-            (x !== e.selectedGuildId ||
+            j &&
+            null != G &&
+            (G !== e.selectedGuildId ||
               !e.connected ||
-              (Q && !e.isMemberPending))
+              (q && !e.isMemberPending))
           ) {
             let e = {
-              ...(Q ? { is_pending: Q, preview_enabled: Z } : {}),
-              postable_channels: X,
+              ...(q ? { is_pending: q, preview_enabled: Q } : {}),
+              postable_channels: Z,
               premium_progress_bar_enabled:
                 null !==
                   (n =
-                    null === (t = L.default.getGuild(b.default.getGuildId())) ||
+                    null === (t = L.default.getGuild(x.default.getGuildId())) ||
                     void 0 === t
                       ? void 0
                       : t.premiumProgressBarEnabled) &&
                 void 0 !== n &&
                 n,
-              viewing_all_channels: !G.default.isOptInEnabled(x),
-              num_recent_channels: T.default.recentsChannelCount(x),
+              viewing_all_channels: !U.default.isOptInEnabled(G),
+              num_recent_channels: T.default.recentsChannelCount(G),
             };
-            (0, u.trackWithMetadata)(W.AnalyticEvents.GUILD_VIEWED, e);
+            (0, u.trackWithMetadata)(Y.AnalyticEvents.GUILD_VIEWED, e);
           } else
-            w &&
-            null == x &&
-            k === W.Routes.FRIENDS &&
-            (!e.connected || K !== e.friendsTabSection || k !== e.homeLink)
-              ? B.default.track(W.AnalyticEvents.FRIENDS_LIST_VIEWED, {
-                  tab_opened: K,
+            j &&
+            null == G &&
+            w === Y.Routes.FRIENDS &&
+            (!e.connected || z !== e.friendsTabSection || w !== e.homeLink)
+              ? F.default.track(Y.AnalyticEvents.FRIENDS_LIST_VIEWED, {
+                  tab_opened: z,
                   ...(0, d.default)(),
                   ...(0, E.getNowPlayingAnalytics)(),
                 })
-              : w &&
-                null == x &&
-                k === W.Routes.MESSAGE_REQUESTS &&
-                (!e.connected || k !== e.homeLink) &&
+              : j &&
+                null == G &&
+                w === Y.Routes.MESSAGE_REQUESTS &&
+                (!e.connected || w !== e.homeLink) &&
                 !this.isMessageRequestsInitialized &&
                 ((this.isMessageRequestsInitialized = !0),
-                B.default.track(W.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
-                  num_message_requests: ee,
+                F.default.track(Y.AnalyticEvents.MESSAGE_REQUESTS_INITIALIZED, {
+                  num_message_requests: J,
                 }));
           if (
-            w &&
-            null != D &&
+            j &&
+            null != y &&
             (!e.connected ||
-              D !== e.selectedChannelId ||
-              x !== e.selectedGuildId)
+              y !== e.selectedChannelId ||
+              G !== e.selectedGuildId)
           ) {
             let t = e.selectedChannelId,
               n = R.default.getChannel(t),
@@ -12154,13 +12142,13 @@
                 i = l.find(e => {
                   var t;
                   return (
-                    (0, H.hasFlag)(e.flags, W.MessageFlags.IS_CROSSPOST) &&
+                    (0, B.hasFlag)(e.flags, Y.MessageFlags.IS_CROSSPOST) &&
                     (null === (t = e.messageReference) || void 0 === t
                       ? void 0
                       : t.guild_id) === "667560445975986187"
                   );
                 });
-              B.default.track(W.AnalyticEvents.ACK_COMMUNITY_MESSAGES, {
+              F.default.track(Y.AnalyticEvents.ACK_COMMUNITY_MESSAGES, {
                 last_message_id: null == i ? void 0 : i.id,
                 last_message_reference_message_id:
                   null == i
@@ -12173,18 +12161,15 @@
                 ...(0, u.collectGuildAnalyticsMetadata)(s.id),
               });
             }
-            let l = (0, c.collectThreadMetadata)(R.default.getChannel(D), !0);
-            (0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
-              channel_is_nsfw: q,
-              parent_id: j,
-              can_send_message: $,
+            let l = (0, c.collectThreadMetadata)(R.default.getChannel(y), !0);
+            (0, u.trackWithMetadata)(Y.AnalyticEvents.CHANNEL_OPENED, {
               ...l,
-              ...(0, u.getChannelOpenedMetadata)(D),
+              ...(0, u.getChannelOpenedMetadata)(y),
             }),
-              J &&
+              X &&
                 (0, u.trackWithMetadata)(
-                  W.AnalyticEvents.TEXT_IN_VOICE_OPENED,
-                  { channel_is_nsfw: q }
+                  Y.AnalyticEvents.TEXT_IN_VOICE_OPENED,
+                  { channel_is_nsfw: K }
                 );
           }
         }
@@ -12203,138 +12188,128 @@
           super(...e), (this.isMessageRequestsInitialized = !1);
         }
       }
-      function q() {
-        var e;
-        let [t, n] = (0, l.useStateFromStoresArray)(
-            [x.default],
-            () => [x.default.getVoiceChannelId(), x.default.getChannelId()],
+      function K() {
+        let [e, t] = (0, l.useStateFromStoresArray)(
+            [y.default],
+            () => [y.default.getVoiceChannelId(), y.default.getChannelId()],
             []
           ),
-          s = (0, l.useStateFromStores)(
-            [R.default],
-            () => R.default.getChannel(n),
-            [n]
-          ),
-          i = (0, l.useStateFromStores)(
-            [h.default],
-            () =>
-              (null == s ? void 0 : s.id) != null &&
-              h.default.getChatOpen(s.id),
-            [s]
-          ),
-          r = null == s ? void 0 : s.nsfw,
-          u =
-            null !== (e = null == s ? void 0 : s.parent_id) && void 0 !== e
-              ? e
-              : void 0,
-          d = (0, l.useStateFromStores)(
+          n = (0, l.useStateFromStores)(
             [R.default],
             () => R.default.getChannel(t),
             [t]
           ),
+          s = (0, l.useStateFromStores)(
+            [h.default],
+            () =>
+              (null == n ? void 0 : n.id) != null &&
+              h.default.getChatOpen(n.id),
+            [n]
+          ),
+          i = null == n ? void 0 : n.nsfw,
+          r = (0, l.useStateFromStores)(
+            [R.default],
+            () => R.default.getChannel(e),
+            [e]
+          ),
+          u = (0, l.useStateFromStores)(
+            [x.default],
+            () => x.default.getGuildId(),
+            []
+          ),
+          d = (0, l.useStateFromStores)(
+            [L.default],
+            () => L.default.getGuild(u),
+            [u]
+          ),
           c = (0, l.useStateFromStores)(
-            [b.default],
-            () => b.default.getGuildId(),
+            [G.default],
+            () => G.default.getCurrentUser(),
             []
           ),
           f = (0, l.useStateFromStores)(
-            [L.default],
-            () => L.default.getGuild(c),
-            [c]
-          ),
-          E = (0, l.useStateFromStores)(
-            [j.default],
-            () => j.default.getCurrentUser(),
-            []
-          ),
-          _ = (0, l.useStateFromStores)(
             [v.default],
             () => {
               var e, t;
               return (
-                null != E &&
                 null != c &&
+                null != u &&
                 null !==
                   (t =
-                    null === (e = v.default.getMember(c, E.id)) || void 0 === e
+                    null === (e = v.default.getMember(u, c.id)) || void 0 === e
                       ? void 0
                       : e.isPending) &&
                 void 0 !== t &&
                 t
               );
             },
-            [E, c]
+            [c, u]
+          ),
+          E = (0, l.useStateFromStores)(
+            [w.default],
+            () => w.default.getState().section,
+            []
+          ),
+          _ = (0, l.useStateFromStores)(
+            [j.default],
+            () => j.default.getHomeLink(),
+            []
           ),
           C = (0, l.useStateFromStores)(
-            [k.default],
-            () => k.default.getState().section,
-            []
-          ),
-          p = (0, l.useStateFromStores)(
-            [w.default],
-            () => w.default.getHomeLink(),
-            []
-          ),
-          T = (0, l.useStateFromStores)(
             [S.default],
             () => S.default.isConnected(),
             []
           ),
-          [A, N] = (0, l.useStateFromStoresArray)(
+          [p, T] = (0, l.useStateFromStoresArray)(
             [M.default],
             () => [M.default.isVideoEnabled(), M.default.isScreenSharing()],
             []
           ),
-          O = (0, l.useStateFromStores)(
-            [U.default],
-            () => U.default.getPrimaryActivity(),
+          A = (0, l.useStateFromStores)(
+            [b.default],
+            () => b.default.getPrimaryActivity(),
             []
           ),
-          P = (0, l.useStateFromStores)(
+          N = (0, l.useStateFromStores)(
             [I.default],
             () => I.default.getCurrentGameForAnalytics(),
             []
           ),
-          y = (0, m.default)(c),
-          G = (0, l.useStateFromStores)([D.default], () =>
-            D.default.can(W.Permissions.SEND_MESSAGES, s)
-          ),
-          F = (0, l.useStateFromStores)(
+          O = (0, m.default)(u),
+          P = (0, l.useStateFromStores)(
             [g.default],
             () => g.default.getMessageRequestsCount(),
             []
           ),
-          B = {
-            selectedChannelId: n,
-            channelParentId: u,
-            isNSFWChannel: r,
-            selectedGuildId: c,
-            friendsTabSection: C,
-            homeLink: p,
-            connected: T,
-            videoEnabled: A,
-            isScreenSharing: N,
-            voiceChannelId: null == d ? void 0 : d.id,
-            voiceChannelGuildId: null == d ? void 0 : d.getGuildId(),
-            voiceChannelType: null == d ? void 0 : d.type,
-            voiceChannelBitrate: null == d ? void 0 : d.bitrate,
-            runningGame: P,
-            runningGamePid: null != P ? P.pid : null,
-            gamePlatform: (0, o.default)(O),
-            gameName: null != O ? O.name : null,
-            gameId: null != O ? O.application_id : null,
-            gameExeName: null != P ? P.exeName : null,
+          D = {
+            selectedChannelId: t,
+            isNSFWChannel: i,
+            selectedGuildId: u,
+            friendsTabSection: E,
+            homeLink: _,
+            connected: C,
+            videoEnabled: p,
+            isScreenSharing: T,
+            voiceChannelId: null == r ? void 0 : r.id,
+            voiceChannelGuildId: null == r ? void 0 : r.getGuildId(),
+            voiceChannelType: null == r ? void 0 : r.type,
+            voiceChannelBitrate: null == r ? void 0 : r.bitrate,
+            runningGame: N,
+            runningGamePid: null != N ? N.pid : null,
+            gamePlatform: (0, o.default)(A),
+            gameName: null != A ? A.name : null,
+            gameId: null != A ? A.application_id : null,
+            gameExeName: null != N ? N.exeName : null,
             hasPreviewEnabled:
-              null == f
+              null == d
                 ? void 0
-                : f.features.has(W.GuildFeatures.PREVIEW_ENABLED),
-            isMemberPending: _,
-            postableChannelCount: y,
-            isTextInVoice: i,
-            canSendMessage: G,
-            numMessageRequests: F,
+                : d.features.has(Y.GuildFeatures.PREVIEW_ENABLED),
+            isMemberPending: f,
+            postableChannelCount: O,
+            isTextInVoice: s,
+            numMessageRequests: P,
           };
-        return (0, a.jsx)(K, { ...B });
+        return (0, a.jsx)(z, { ...D });
       }
     },
     223415: function (e, t, n) {
@@ -52594,4 +52569,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ac343c3967cd9d68208e.js.map
+//# sourceMappingURL=5170beb0551f251e6475.js.map

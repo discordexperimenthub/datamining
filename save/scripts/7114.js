@@ -27,18 +27,18 @@
           },
         }),
         n("70102");
-      var o = n("968194"),
-        i = n("773336"),
-        r = n("155815"),
+      var o = n("773336"),
+        i = n("155815"),
+        r = n("884385"),
         s = n("450484");
       function u(e, t, n) {
         let u;
-        !(0, i.isDesktop)() && (u = window.open("", "_blank")),
-          (0, o.getMetadata)(e, t)
+        !(0, o.isDesktop)() && (u = window.open("", "_blank")),
+          (0, r.getSpotifyMetadataFromActivity)(e, t)
             .then(e => n(e))
             .then(e => {
               let { resourceType: t, resourceId: n } = e,
-                o = r.default.isProtocolRegistered()
+                o = i.default.isProtocolRegistered()
                   ? s.SpotifyEndpoints.PLAYER_OPEN(t, n)
                   : s.SpotifyEndpoints.WEB_OPEN(t, n);
               null != u ? (u.location.href = o) : window.open(o);
@@ -54,15 +54,15 @@
         var t;
         let { sync_id: n, metadata: o } = e;
         if (null == n) return;
-        let i = (0, s.getSpotifyResourceType)(
+        let r = (0, s.getSpotifyResourceType)(
           null !== (t = null == o ? void 0 : o.type) && void 0 !== t
             ? t
             : s.SpotifyResourceTypes.TRACK
         );
-        if (null == i) return;
-        let u = r.default.isProtocolRegistered()
-          ? s.SpotifyEndpoints.PLAYER_OPEN(i, n)
-          : s.SpotifyEndpoints.WEB_OPEN(i, n);
+        if (null == r) return;
+        let u = i.default.isProtocolRegistered()
+          ? s.SpotifyEndpoints.PLAYER_OPEN(r, n)
+          : s.SpotifyEndpoints.WEB_OPEN(r, n);
         window.open(u);
       }
       function d(e, t) {
@@ -188,4 +188,4 @@
     },
   },
 ]);
-//# sourceMappingURL=56a1eabec65c7099303d.js.map
+//# sourceMappingURL=d0f0984f497caa75724b.js.map

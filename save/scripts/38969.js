@@ -50,8 +50,8 @@
         d = n("446674"),
         o = n("77078"),
         u = n("206230"),
-        N = n("246053"),
-        c = n("782340"),
+        c = n("246053"),
+        N = n("782340"),
         _ = n("148143");
       function I(e) {
         let {
@@ -194,12 +194,12 @@
                   size: o.Button.Sizes.MIN,
                   color: o.Button.Colors.PRIMARY,
                   children: [
-                    (0, a.jsx)(N.default, {
+                    (0, a.jsx)(c.default, {
                       className: _.testimonialControlIcon,
-                      direction: N.default.Directions.LEFT,
+                      direction: c.default.Directions.LEFT,
                     }),
                     (0, a.jsx)(o.HiddenVisually, {
-                      children: c.default.Messages.BACK,
+                      children: N.default.Messages.BACK,
                     }),
                   ],
                 }),
@@ -210,12 +210,12 @@
                   size: o.Button.Sizes.MIN,
                   color: o.Button.Colors.PRIMARY,
                   children: [
-                    (0, a.jsx)(N.default, {
+                    (0, a.jsx)(c.default, {
                       className: _.testimonialControlIcon,
-                      direction: N.default.Directions.RIGHT,
+                      direction: c.default.Directions.RIGHT,
                     }),
                     (0, a.jsx)(o.HiddenVisually, {
-                      children: c.default.Messages.NEXT,
+                      children: N.default.Messages.NEXT,
                     }),
                   ],
                 }),
@@ -230,7 +230,7 @@
             [u.default],
             () => u.default.useReducedMotion
           ),
-          [N] = (0, r.useSpring)(() => {
+          [c] = (0, r.useSpring)(() => {
             switch (n) {
               case o.TransitionStates.ENTERED:
                 return {
@@ -256,7 +256,7 @@
             }
           }, [n]);
         return (0, a.jsx)(r.animated.div, {
-          style: N,
+          style: c,
           children: (0, a.jsx)(E, { className: _.testimonial, testimonial: t }),
         });
       }
@@ -281,8 +281,8 @@
         d = n("419830"),
         o = n("42203"),
         u = n("26989"),
-        N = n("305961"),
-        c = n("957255"),
+        c = n("305961"),
+        N = n("957255"),
         _ = n("593195"),
         I = n("578706"),
         E = n("904276"),
@@ -308,17 +308,17 @@
             ...o
           } = e,
           u = "channel" === o.variant ? o.channelId : null,
-          N = "static" === o.variant ? o.subtitle : o.channelName,
-          c =
+          c = "static" === o.variant ? o.subtitle : o.channelName,
+          N =
             null != u
               ? O.default.getNewMemberActionIconURL({ channelId: u, icon: s })
               : null;
         return (0, a.jsxs)("div", {
           className: L.action,
           children: [
-            null != c
+            null != N
               ? (0, a.jsx)("img", {
-                  src: c,
+                  src: N,
                   className: L.icon,
                   width: 32,
                   height: 32,
@@ -342,11 +342,11 @@
                   color: "header-primary",
                   children: t,
                 }),
-                null != N
+                null != c
                   ? (0, a.jsx)(i.Text, {
                       variant: "text-xs/normal",
                       color: "text-muted",
-                      children: N,
+                      children: c,
                     })
                   : null,
               ],
@@ -369,14 +369,14 @@
       function p(e) {
         var t;
         let { action: n, completed: u } = e,
-          { channelId: N, title: I, emoji: E, icon: f } = n,
+          { channelId: c, title: I, emoji: E, icon: f } = n,
           { id: O, name: S } = null != E ? E : {},
           m = (0, s.useStateFromStores)([o.default], () =>
-            o.default.getChannel(N)
+            o.default.getChannel(c)
           ),
           D = (0, r.default)(m, !0),
-          A = (0, s.useStateFromStores)([c.default], () =>
-            c.default.can(g.Permissions.VIEW_CHANNEL, m)
+          A = (0, s.useStateFromStores)([N.default], () =>
+            N.default.can(g.Permissions.VIEW_CHANNEL, m)
           ),
           G = l.useCallback(() => {
             if (null == m) return null;
@@ -392,7 +392,7 @@
           onClick: G,
           children: (0, a.jsx)(R, {
             variant: "channel",
-            channelId: N,
+            channelId: c,
             title: I,
             channelName: D,
             emojiId: O,
@@ -416,8 +416,8 @@
           d = (0, s.useStateFromStores)([u.default], () =>
             u.default.getSelfMember(t)
           ),
-          o = (0, s.useStateFromStores)([N.default], () =>
-            N.default.getGuild(t)
+          o = (0, s.useStateFromStores)([c.default], () =>
+            c.default.getGuild(t)
           );
         l.useEffect(() => {
           var e;
@@ -429,7 +429,7 @@
             ) &&
             (0, T.fetchNewMemberActions)(t);
         }, [r, t, null == d ? void 0 : d.flags]);
-        let c = l.useCallback(() => {
+        let N = l.useCallback(() => {
           null != o &&
             null != o.rulesChannelId &&
             (0, T.selectNewMemberActionChannel)(o.id, o.rulesChannelId);
@@ -458,7 +458,7 @@
                 (null == o ? void 0 : o.rulesChannelId) != null &&
                   (0, a.jsxs)(i.Clickable, {
                     className: L.action,
-                    onClick: c,
+                    onClick: N,
                     children: [
                       (0, a.jsx)("div", {
                         className: L.rulesIconContainer,
@@ -499,8 +499,8 @@
         d = n("65597"),
         o = n("77078"),
         u = n("851387"),
-        N = n("841098"),
-        c = n("206230"),
+        c = n("841098"),
+        N = n("206230"),
         _ = n("388491"),
         I = n("506885"),
         E = n("217513"),
@@ -516,22 +516,22 @@
       function h(e) {
         var t;
         let { guildId: n, welcomeMessage: s, className: h } = e,
-          L = (0, N.default)(),
+          L = (0, c.default)(),
           R = (0, d.default)([S.default], () => S.default.getGuild(n)),
           p = (0, d.default)(
-            [c.default],
-            () => c.default.syncProfileThemeWithUserTheme
+            [N.default],
+            () => N.default.syncProfileThemeWithUserTheme
           ),
-          x = (0, d.default)([c.default], () => c.default.useReducedMotion),
+          x = (0, d.default)([N.default], () => N.default.useReducedMotion),
           P = (0, d.default)([T.default], () =>
             T.default.getUser(null == s ? void 0 : s.authorIds[0])
           ),
           M = (0, d.default)([T.default], () => T.default.getCurrentUser()),
-          U = (0, E.default)(null == P ? void 0 : P.id, n),
-          [v] = (0, f.default)(P, U),
+          v = (0, E.default)(null == P ? void 0 : P.id, n),
+          [U] = (0, f.default)(P, v),
           C = p
             ? L
-            : null !== (t = (0, _.getProfileTheme)(v)) && void 0 !== t
+            : null !== (t = (0, _.getProfileTheme)(U)) && void 0 !== t
               ? t
               : L,
           B = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, C).hex(),
@@ -579,7 +579,7 @@
               (0, a.jsx)("div", {
                 className: G.avatarBorder,
                 style: {
-                  backgroundColor: null != v ? (0, r.int2rgba)(v, 1) : B,
+                  backgroundColor: null != U ? (0, r.int2rgba)(U, 1) : B,
                 },
               }),
               (0, a.jsxs)("div", {
@@ -646,34 +646,34 @@
         d = n("900938"),
         o = n("49111");
       let u = !1,
-        N = null,
-        c = new Set();
+        c = null,
+        N = new Set();
       function _() {
         (function () {
-          (u = !1), (N = null);
+          (u = !1), (c = null);
         })(),
-          null != (N = d.default.getGuildId()) &&
+          null != (c = d.default.getGuildId()) &&
             d.default.getSection() === o.GuildSettingsSections.ONBOARDING &&
-            (c = new Set(r.default.getDefaultChannelIds(N)));
+            (N = new Set(r.default.getDefaultChannelIds(c)));
       }
       class I extends s.default.Store {
         initialize() {
           this.waitFor(d.default, r.default);
         }
         hasChanges() {
-          if (null == N) return !1;
-          let e = r.default.getDefaultChannelIds(N).sort(),
-            t = Array.from(c).sort();
+          if (null == c) return !1;
+          let e = r.default.getDefaultChannelIds(c).sort(),
+            t = Array.from(N).sort();
           return !l.isEqual(e, t);
         }
         get guildId() {
-          return N;
+          return c;
         }
         get submitting() {
           return u;
         }
         get editedDefaultChannelIds() {
-          return c;
+          return N;
         }
       }
       I.displayName = "GuildSettingsDefaultChannelsStore";
@@ -688,7 +688,7 @@
         },
         GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
           let { channelId: t } = e;
-          (c = new Set(c)).has(t) ? c.delete(t) : c.add(t);
+          (N = new Set(N)).has(t) ? N.delete(t) : N.add(t);
         },
         GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
           u = !0;
@@ -727,8 +727,8 @@
         d = n("380710"),
         o = n("937692"),
         u = n("233706"),
-        N = n("479756"),
-        c = n("507950"),
+        c = n("479756"),
+        N = n("507950"),
         _ = n("42203"),
         I = n("305961"),
         E = n("449008"),
@@ -771,11 +771,11 @@
         try {
           await (0, S.editOnboarding)(e, { mode: t });
         } catch (n) {
-          var N;
+          var c;
           let { fieldName: e, error: t } =
-            null !== (N = new (0, s.default)(n).getAnyErrorMessageAndField()) &&
-            void 0 !== N
-              ? N
+            null !== (c = new (0, s.default)(n).getAnyErrorMessageAndField()) &&
+            void 0 !== c
+              ? c
               : {};
           l.default.show({
             title: A.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
@@ -824,8 +824,8 @@
         let t = I.default.getGuild(e);
         null != t &&
           (f.default.close(),
-          (0, N.startImpersonating)(t.id, {
-            type: c.ImpersonateType.NEW_MEMBER,
+          (0, c.startImpersonating)(t.id, {
+            type: N.ImpersonateType.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,
@@ -881,8 +881,8 @@
         d = n("837648"),
         o = n("42203"),
         u = n("305961"),
-        N = n("449008"),
-        c = n("136278"),
+        c = n("449008"),
+        N = n("136278"),
         _ = n("49111"),
         I = n("653138"),
         E = n("782340");
@@ -892,7 +892,7 @@
       function O(e, t, n) {
         T(
           e,
-          c.default.editedOnboardingPrompts.map(e =>
+          N.default.editedOnboardingPrompts.map(e =>
             e.id === t ? { ...e, ...n } : e
           )
         );
@@ -900,7 +900,7 @@
       function S(e, t) {
         T(
           e,
-          c.default.editedOnboardingPrompts.filter(e => e.id !== t)
+          N.default.editedOnboardingPrompts.filter(e => e.id !== t)
         );
       }
       function T(e, t) {
@@ -924,8 +924,8 @@
         let { dropdownsAllowed: n } = (0, d.getOnboardingDropdownExperiment)(
           e.id
         );
-        if (!c.default.hasChanges()) return;
-        let a = c.default.editedOnboardingPrompts;
+        if (!N.default.hasChanges()) return;
+        let a = N.default.editedOnboardingPrompts;
         null != t &&
           t.ignoreDefaultPrompt &&
           1 === a.length &&
@@ -965,7 +965,7 @@
           f = _.filter(e => e.inOnboarding),
           O = _.filter(e => !0 !== e.inOnboarding),
           S = _.map(t => g(e, _, t));
-        if (S.filter(N.isNotNullish).length > 0)
+        if (S.filter(c.isNotNullish).length > 0)
           throw (
             (l.default.dispatch({
               type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
@@ -1012,7 +1012,7 @@
           throw (
             (s.default.show({
               title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-              body: [e, t].filter(N.isNotNullish).join(": "),
+              body: [e, t].filter(c.isNotNullish).join(": "),
             }),
             l.default.dispatch({
               type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
@@ -1039,7 +1039,7 @@
               : {};
           s.default.show({
             title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-            body: [e, t].filter(N.isNotNullish).join(": "),
+            body: [e, t].filter(c.isNotNullish).join(": "),
           });
         }
       }
@@ -1110,32 +1110,32 @@
         d = n("900938"),
         o = n("49111"),
         u = n("653138");
-      let N = !1,
-        c = null,
+      let c = !1,
+        N = null,
         _ = [],
         I = !1,
         E = [];
       function f() {
         (function () {
-          (N = !1), (c = null), (E = []), (I = !1);
+          (c = !1), (N = null), (E = []), (I = !1);
         })(),
-          null != (c = d.default.getGuildId()) &&
+          null != (N = d.default.getGuildId()) &&
             d.default.getSection() === o.GuildSettingsSections.ONBOARDING &&
-            ((_ = r.default.getOnboardingPrompts(c)),
-            (I = r.default.isAdvancedMode(c)));
+            ((_ = r.default.getOnboardingPrompts(N)),
+            (I = r.default.isAdvancedMode(N)));
       }
       class O extends s.default.Store {
         initialize() {
           this.waitFor(d.default, r.default);
         }
         hasChanges() {
-          return null != c && !l.isEqual(r.default.getOnboardingPrompts(c), _);
+          return null != N && !l.isEqual(r.default.getOnboardingPrompts(N), _);
         }
         get guildId() {
-          return c;
+          return N;
         }
         get submitting() {
-          return N;
+          return c;
         }
         get errors() {
           return E;
@@ -1157,14 +1157,14 @@
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: f,
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
           var t;
-          (E = null !== (t = e.errors) && void 0 !== t ? t : []), (N = !1);
+          (E = null !== (t = e.errors) && void 0 !== t ? t : []), (c = !1);
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
           let { prompts: t } = e;
           _ = t;
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-          (N = !0), (E = []);
+          (c = !0), (E = []);
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
           var t;
@@ -1248,8 +1248,8 @@
         d = n("716241"),
         o = n("798796"),
         u = n("75061"),
-        N = n("233706"),
-        c = n("749623"),
+        c = n("233706"),
+        N = n("749623"),
         _ = n("768596"),
         I = n("305961"),
         E = n("697218"),
@@ -1446,7 +1446,7 @@
           n = (0, i.useStateFromStores)([E.default], () =>
             E.default.getCurrentUser()
           ),
-          { homeSettingsEnabled: l } = (0, N.useOnboardingHomeAdminExperiment)(
+          { homeSettingsEnabled: l } = (0, c.useOnboardingHomeAdminExperiment)(
             null != e ? e : G.EMPTY_STRING_SNOWFLAKE_ID
           );
         return null == e || null == t || null == n
@@ -1577,7 +1577,7 @@
                                       .GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE,
                                 },
                               }),
-                              (0, a.jsx)(c.NewMemberAction, {
+                              (0, a.jsx)(N.NewMemberAction, {
                                 title:
                                   h.default.Messages
                                     .GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
@@ -1588,7 +1588,7 @@
                                 Icon: f.default,
                                 variant: "static",
                               }),
-                              (0, a.jsx)(c.NewMemberAction, {
+                              (0, a.jsx)(N.NewMemberAction, {
                                 title:
                                   h.default.Messages
                                     .GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
@@ -1671,6 +1671,48 @@
             });
       }
     },
+    641892: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("469563"),
+        s = n("797350"),
+        i = (0, l.replaceIcon)(
+          function (e) {
+            let {
+              width: t = 16,
+              height: n = 16,
+              color: l = "currentColor",
+              className: s,
+              foreground: i,
+            } = e;
+            return (0, a.jsx)("svg", {
+              className: s,
+              width: t,
+              height: n,
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0, a.jsx)("path", {
+                className: i,
+                fill: l,
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.5 17.2916V3.74996H17.5V18.3333H4.5C3.3955 18.3333 2.5 17.4005 2.5 16.25V3.74996C2.5 2.59944 3.3955 1.66663 4.5 1.66663H15.5V15.2083H4.5C3.94775 15.2083 3.5 15.6742 3.5 16.25C3.5 16.8257 3.94775 17.2916 4.5 17.2916H16.5ZM11.9859 4.99996L7.94446 8.9957L6.35432 7.42204L5 8.75288L7.94427 11.6666L13.3333 6.33344L11.9859 4.99996Z",
+              }),
+            });
+          },
+          s.BookCheckIcon,
+          void 0,
+          { size: 16 }
+        );
+    },
   },
 ]);
-//# sourceMappingURL=7b59eeacfe2dbd0a9f20.js.map
+//# sourceMappingURL=3bb8c84a5ebe2d4c8080.js.map

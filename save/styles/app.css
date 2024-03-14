@@ -33344,8 +33344,8 @@ html .progress__4ef76 {
 .errorState_b806b1 {
   padding: 20px 20px 40px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-align: center;
 }
 .errorState_b806b1.noResults_c69767 {
@@ -33395,14 +33395,14 @@ html .progress__4ef76 {
 }
 .confirmChannelName_c49514 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-left: 8px;
   color: var(--header-primary);
 }
 .lastActiveTimestamp__56cd7 {
   margin-left: 8px;
   color: var(--text-muted);
-  font-size: 12px;
+  font-size: 0.75rem;
   margin-top: 2px;
 }
 .confirmInviteScroller__11391 {
@@ -110741,4 +110741,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.9eb7a60df06c26480ab7.css.map*/
+/*# sourceMappingURL=app.6f9c6f5fba0e9bfb36af.css.map*/

@@ -26351,8 +26351,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275378", ", Version Hash: ")
-          .concat("4b91553d5a1931b5abc6e25de1aec4dddbff6ede")
+          .concat("275392", ", Version Hash: ")
+          .concat("b450ca0cacb803d07b26f35e8c878f1a0756c2f2")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29464,12 +29464,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275378"), "275378"));
+        let _ = parseInt(((e = "275392"), "275392"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275378"
+                "275392"
               )
             ),
             (_ = 0)),
@@ -30443,11 +30443,7 @@
         id: "2024-02_v1_content_inventory_feed",
         label: "V1 Feed of the content inventory",
         defaultConfig: { enabled: !1 },
-        treatments: [
-          { id: 1, label: "Staff Test", config: { enabled: !0 } },
-          { id: 2, label: "Show feed by affinity", config: { enabled: !0 } },
-          { id: 3, label: "Show feed by heuristics", config: { enabled: !0 } },
-        ],
+        treatments: [{ id: 1, label: "Show feed", config: { enabled: !0 } }],
       });
       function n(e) {
         let { enabled: _ } = o.getCurrentConfig(
@@ -52122,4 +52118,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.a6ba1f4a05927155fc43.js.map
+//# sourceMappingURL=76039.b81d6990c46e7af4339a.js.map

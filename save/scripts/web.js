@@ -16,12 +16,12 @@
           var r = -1,
             o = a.length;
           for (n || (n = d), i || (i = []); ++r < o; ) {
-            var f = a[r];
-            t > 0 && n(f)
+            var l = a[r];
+            t > 0 && n(l)
               ? t > 1
-                ? e(f, t - 1, n, c, i)
-                : s(i, f)
-              : !c && (i[i.length] = f);
+                ? e(l, t - 1, n, c, i)
+                : s(i, l)
+              : !c && (i[i.length] = l);
           }
           return i;
         };
@@ -104,7 +104,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return l;
+              return f;
             },
           });
         var s = t("37983"),
@@ -114,7 +114,7 @@
           i = t("474557"),
           r = t("793932"),
           o = t("125047");
-        class f extends d.Component {
+        class l extends d.Component {
           render() {
             return (0, s.jsx)("div", {
               className: c(r.app, o.vertical),
@@ -122,7 +122,7 @@
             });
           }
         }
-        var l = f;
+        var f = l;
       },
       474557: function (e, a, t) {
         "use strict";
@@ -156,8 +156,8 @@
           i = t("90915"),
           r = t("759843"),
           o = t("817792"),
-          f = t("815157"),
-          l = t("391679"),
+          l = t("815157"),
+          f = t("391679"),
           u = t("446674"),
           b = t("95410"),
           p = t("795137"),
@@ -527,12 +527,12 @@
                                       t,
                                       d.mobile
                                     ),
-                                    a = (0, f.parseDynamicLink)(e);
+                                    a = (0, l.parseDynamicLink)(e);
                                   null != a &&
                                     O.default.track(
                                       S.AnalyticEvents.DEEP_LINK_CLICKED,
                                       {
-                                        fingerprint: (0, l.maybeExtractId)(
+                                        fingerprint: (0, f.maybeExtractId)(
                                           a.fingerprint
                                         ),
                                         attempt_id: a.attemptId,
@@ -636,8 +636,8 @@
           r = t("37983");
         t("320777"), t("884691");
         var o = t("288661"),
-          f = t("627445"),
-          l = t.n(f),
+          l = t("627445"),
+          f = t.n(l),
           u = t("521143"),
           b = t("938460"),
           p = t("156820"),
@@ -664,7 +664,7 @@
           y = t("718517");
         let M = 5 * y.default.Millis.MINUTE,
           k = document.getElementById("app-mount");
-        l(null != k, "Could not find app-mount"),
+        f(null != k, "Could not find app-mount"),
           (k.className = __OVERLAY__ ? "" : D.appMount);
         let x = (0, o.createRoot)(k),
           U = e =>
@@ -854,8 +854,8 @@
           i = t.n(c),
           r = t("703809"),
           o = t("446674"),
-          f = t("895547"),
-          l = t("77078"),
+          l = t("895547"),
+          f = t("77078"),
           u = t("430568"),
           b = t("471671"),
           p = t("90404"),
@@ -899,7 +899,7 @@
                     " ",
                     (0, d.jsx)(u.default, {
                       src: h.default.getURL(
-                        f.default.convert.fromCodePoint("1f44c")
+                        l.default.convert.fromCodePoint("1f44c")
                       ),
                       emojiName: ":ok_hand:",
                       animated: !1,
@@ -907,8 +907,8 @@
                   ],
                 }),
               }),
-              a = (0, d.jsx)(l.Button, {
-                size: l.ButtonSizes.LARGE,
+              a = (0, d.jsx)(f.Button, {
+                size: f.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
                 children: T.default.Messages.DOWNLOAD,
               });
@@ -1056,8 +1056,8 @@
           i = t("599110"),
           r = t("50885"),
           o = t("50361"),
-          f = t("49111");
-        function l(e) {
+          l = t("49111");
+        function f(e) {
           var a;
           return null == e
             ? void 0
@@ -1071,13 +1071,13 @@
               window.location.origin ===
                 window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN &&
                 !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) &&
-                r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) &&
+                r.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) &&
                 (o.migrate(),
                 c.default.userDataCache.getCached().then(e => {
                   if (null == e) {
                     o.failMigration(),
                       i.default.track(
-                        f.AnalyticEvents.DOMAIN_MIGRATED,
+                        l.AnalyticEvents.DOMAIN_MIGRATED,
                         { success: !1, has_data: !1 },
                         { flush: !0 }
                       );
@@ -1092,8 +1092,8 @@
                         : JSON.parse(e.RTCRegionStore),
                     u =
                       null == r ||
-                      null == l(r) ||
-                      l(r) <= l(n.default.get("RTCRegionStore"));
+                      null == f(r) ||
+                      f(r) <= f(n.default.get("RTCRegionStore"));
                   t &&
                     s &&
                     !u &&
@@ -1105,7 +1105,7 @@
                       } catch (e) {}
                     })),
                     i.default.track(
-                      f.AnalyticEvents.DOMAIN_MIGRATED,
+                      l.AnalyticEvents.DOMAIN_MIGRATED,
                       { success: !0, current_is_newer: u, has_data: t },
                       { flush: !0 }
                     ),
@@ -1145,8 +1145,8 @@
           i = t.n(c),
           r = t("872717"),
           o = t("784063"),
-          f = t("625454"),
-          l = t("441822"),
+          l = t("625454"),
+          f = t("441822"),
           u = t("862337"),
           b = t("913144"),
           p = t("605250"),
@@ -1164,7 +1164,7 @@
         (v.width = 512), (v.height = 288);
         let w = v.getContext("2d");
         function A() {
-          O.stop(), null != s && (f.default.removeSink(s, T), (s = null));
+          O.stop(), null != s && (l.default.removeSink(s, T), (s = null));
         }
         let S = i.debounce((e, a, t, s) => {
           N(
@@ -1203,13 +1203,13 @@
                             ? t.getNextVideoOutputFrame(e).then(i, a => {
                                 if (s === e) throw a;
                               })
-                            : f.default.addSink(e, T, i);
+                            : l.default.addSink(e, T, i);
                         }).finally(() => {
-                          !d && f.default.removeSink(e, T);
+                          !d && l.default.removeSink(e, T);
                         });
                       }
                     : function (e, a) {
-                        let t = (0, l.getVideoStream)(e);
+                        let t = (0, f.getVideoStream)(e);
                         if (null == t)
                           return Promise.resolve(new ImageData(0, 0));
                         let { width: s, height: d } = t
@@ -1350,8 +1350,8 @@
           i = t("660078"),
           r = t("268491"),
           o = t("373469"),
-          f = t("271938"),
-          l = t("374014"),
+          l = t("271938"),
+          f = t("374014"),
           u = t("16916"),
           b = t("49111"),
           p = t("353927");
@@ -1509,8 +1509,8 @@
                     audioSourceId: i,
                     sound: r,
                   } = e,
-                  o = f.default.getId(),
-                  u = (0, l.encodeStreamKey)({
+                  o = l.default.getId(),
+                  u = (0, f.encodeStreamKey)({
                     streamType: a,
                     guildId: t,
                     channelId: s,
@@ -1629,8 +1629,8 @@
           i = t("913144"),
           r = t("135230"),
           o = t("316272"),
-          f = t("701909"),
-          l = t("49111"),
+          l = t("701909"),
+          f = t("49111"),
           u = t("782340");
         class b extends o.default {
           _initialize() {
@@ -1651,8 +1651,8 @@
                 let { kind: a, granted: t } = e,
                   d =
                     "Firefox" === n.name
-                      ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX
-                      : l.HelpdeskArticles.ENABLE_MIC_CHROME;
+                      ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX
+                      : f.HelpdeskArticles.ENABLE_MIC_CHROME;
                 if (!t) {
                   let e = "audio" !== a;
                   (0, c.openModal)(a =>
@@ -1664,7 +1664,7 @@
                         ? u.default.Messages.NO_CAMERA_BODY
                         : u.default.Messages.NO_MIC_BODY,
                       onConfirm: () =>
-                        window.open(f.default.getArticleURL(d), "_blank"),
+                        window.open(l.default.getArticleURL(d), "_blank"),
                       confirmText: u.default.Messages.HELP_DESK,
                       ...a,
                     })
@@ -1680,7 +1680,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return f;
+              return l;
             },
           });
         var s = t("37983");
@@ -1691,7 +1691,7 @@
           i = t("216422"),
           r = t("782340"),
           o = t("321562");
-        function f(e) {
+        function l(e) {
           let {
             text: a = r.default.Messages
               .PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
@@ -1770,8 +1770,8 @@
           i = t("99317"),
           r = t("693051"),
           o = t("607542"),
-          f = t("153498"),
-          l = t("934306"),
+          l = t("153498"),
+          f = t("934306"),
           u = t("742171"),
           b = t("393027"),
           p = t("393414"),
@@ -1800,12 +1800,12 @@
               if (null == p || !p.isReady()) return;
               let _ = e.navigationReplace,
                 E = null !== (t = e.useScreen) && void 0 !== t && t;
-              if (j && (0, l.isSplitMessagesTab)() && b === h.Routes.ME) {
-                (0, f.navigateToRootTab)({ screen: "messages", resetRoot: _ });
+              if (j && (0, f.isSplitMessagesTab)() && b === h.Routes.ME) {
+                (0, l.navigateToRootTab)({ screen: "messages", resetRoot: _ });
                 return;
               }
               if (j && b === h.Routes.NOTIFICATIONS) {
-                (0, f.navigateToRootTab)({
+                (0, l.navigateToRootTab)({
                   screen: "notifications",
                   resetRoot: _,
                 });
@@ -1838,7 +1838,7 @@
                       ? void 0
                       : null === (s = n[0]) || void 0 === s
                         ? void 0
-                        : s.name) !== "panels" && (0, f.resetToPanelsUI)();
+                        : s.name) !== "panels" && (0, l.resetToPanelsUI)();
                   return;
                 }
                 if (null != a) {
@@ -1848,7 +1848,7 @@
                     voiceMessageId: s,
                   } = a.params;
                   (0, u.isOldVoiceUIEnabled)() &&
-                    (0, f.navigateToChannel)({
+                    (0, l.navigateToChannel)({
                       channelId: t,
                       guildId: e,
                       messageId: s,
@@ -1859,33 +1859,33 @@
                 }
                 if (null != e) {
                   let { channelId: a, guildId: t, messageId: s } = e.params;
-                  if (!(0, l.isSplitMessagesTab)() && !m) {
-                    (0, f.navigateToRootTab)({
+                  if (!(0, f.isSplitMessagesTab)() && !m) {
+                    (0, l.navigateToRootTab)({
                       screen: "guilds",
                       guildId: t,
                       resetRoot: _,
                     });
                     return;
                   }
-                  if ((0, l.isOnNewPanels)()) {
+                  if ((0, f.isOnNewPanels)()) {
                     let [e, s] = (0, o.default)(p.getCurrentRoute());
                     if (e === t && s === a) return;
                   }
                   null == a ||
-                  ((0, l.shouldHandleNewPanelsRoute)(t) && !1 !== _)
+                  ((0, f.shouldHandleNewPanelsRoute)(t) && !1 !== _)
                     ? t !== h.ME || m
-                      ? (0, f.navigateToRootTab)({
+                      ? (0, l.navigateToRootTab)({
                           screen: "guilds",
                           guildId: t,
-                          channelId: (0, l.isOnNewPanels)() ? a : void 0,
+                          channelId: (0, f.isOnNewPanels)() ? a : void 0,
                           resetRoot: _,
                         })
-                      : (0, f.navigateToRootTab)({
+                      : (0, l.navigateToRootTab)({
                           screen: "messages",
                           resetRoot: _,
                         })
                     : null != t &&
-                      (0, f.navigateToChannel)({
+                      (0, l.navigateToChannel)({
                         channelId: a,
                         guildId: t,
                         messageId: s,
@@ -1903,14 +1903,14 @@
                   ),
                 });
                 null != e &&
-                  (0, f.navigateToMemberVerification)(
+                  (0, l.navigateToMemberVerification)(
                     e.params.guildId,
                     e.params.inviteCode
                   );
                 return;
               }
               if (b.startsWith("/login") || b.startsWith("/register")) {
-                (0, f.resetToAuthRoute)();
+                (0, l.resetToAuthRoute)();
                 return;
               }
               if (b.startsWith("/account-standing")) {
@@ -1918,7 +1918,7 @@
                 return;
               }
               j &&
-                (0, f.navigateToRootTab)({ screen: "messages", resetRoot: _ });
+                (0, l.navigateToRootTab)({ screen: "messages", resetRoot: _ });
             }
             executeRouteRewrites(e, a) {
               if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
@@ -2225,8 +2225,8 @@
           i = t("913144"),
           r = t("629109"),
           o = t("987317"),
-          f = t("316272"),
-          l = t("830210"),
+          l = t("316272"),
+          f = t("830210"),
           u = t("289180"),
           b = t("289656"),
           p = t("727284"),
@@ -2237,7 +2237,7 @@
           E = t("50885"),
           g = t("49111"),
           I = t("782340");
-        class T extends f.default {
+        class T extends l.default {
           _initialize() {
             this.isSupported &&
               (i.default.subscribe("AUDIO_SET_MODE", this.handleViewUpdate),
@@ -2356,7 +2356,7 @@
                   c = null == n || (0, u.getVideoPermission)(n),
                   { reachedLimit: i, limit: r } =
                     null != n
-                      ? (0, l.getChannelVideoLimit)(n)
+                      ? (0, f.getChannelVideoLimit)(n)
                       : { reachedLimit: void 0, limit: void 0 },
                   o = (0, b.getVideoButtonLabel)({
                     enabled: s,
@@ -2595,7 +2595,7 @@
         t.r(a),
           t.d(a, {
             default: function () {
-              return f;
+              return l;
             },
           }),
           t("222007");
@@ -2649,7 +2649,7 @@
             super(...e), (this._tracker = new i.default());
           }
         }
-        var f = new o();
+        var l = new o();
       },
       830210: function (e, a, t) {
         "use strict";
@@ -2748,7 +2748,7 @@
               return o;
             },
             getPlatformReadableName: function () {
-              return l;
+              return f;
             },
             getCurrentPlatformDownloadURL: function () {
               return u;
@@ -2773,7 +2773,7 @@
             .concat(e)
             .concat(null != t ? "&format=".concat(t) : "");
         }
-        function f() {
+        function l() {
           var e;
           let a =
             arguments.length > 0 && void 0 !== arguments[0]
@@ -2794,11 +2794,11 @@
                 ? "osx"
                 : "win";
         }
-        function l(e) {
-          return { win: "Windows", osx: "Mac", [r]: "Linux" }[f(e)];
+        function f(e) {
+          return { win: "Windows", osx: "Mac", [r]: "Linux" }[l(e)];
         }
         function u() {
-          let e = f();
+          let e = l();
           return o(e, !1, e === r ? "tar.gz" : null);
         }
         function b(e, a, t) {
@@ -2945,16 +2945,16 @@
         }
       },
     },
-    f = {};
-  function l(e) {
-    var a = f[e];
+    l = {};
+  function f(e) {
+    var a = l[e];
     if (void 0 !== a) return a.exports;
-    var t = (f[e] = { id: e, loaded: !1, exports: {} });
-    return o[e](t, t.exports, l), (t.loaded = !0), t.exports;
+    var t = (l[e] = { id: e, loaded: !1, exports: {} });
+    return o[e](t, t.exports, f), (t.loaded = !0), t.exports;
   }
-  (l.m = o),
-    (l.c = f),
-    (l.es = function (e, a) {
+  (f.m = o),
+    (f.c = l),
+    (f.es = function (e, a) {
       return (
         Object.keys(e).forEach(function (t) {
           "default" !== t &&
@@ -2985,8 +2985,8 @@
         "49578",
         "11960",
         "84537",
-        "58418",
         "66473",
+        "58418",
         "49590",
         "79423",
       ],
@@ -3045,8 +3045,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -3071,7 +3071,7 @@
         "31897",
         "63229",
         "23065",
-        "29062",
+        "67229",
         "10716",
         "27230",
       ],
@@ -3117,8 +3117,8 @@
         "66473",
         "67714",
         "3021",
-        "74515",
         "49590",
+        "74515",
         "78894",
       ],
       168984: ["shared", "app", "31669"],
@@ -3163,8 +3163,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -3240,7 +3240,7 @@
         "4359",
         "3021",
         "16141",
-        "16263",
+        "90624",
       ],
       229798: ["app", "11048"],
       232006: ["15128"],
@@ -3306,8 +3306,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -3390,22 +3390,22 @@
         "40958",
         "23992",
         "67925",
-        "69667",
         "14694",
+        "69667",
+        "72640",
         "46072",
         "12896",
         "20388",
         "93714",
         "47007",
         "4359",
-        "72640",
         "3021",
-        "16141",
-        "12973",
         "64072",
+        "12973",
+        "16141",
         "83678",
         "74515",
-        "59421",
+        "71177",
       ],
       328770: ["26427"],
       330230: ["app", "53561"],
@@ -3419,8 +3419,8 @@
         "88081",
         "49578",
         "11960",
-        "58418",
         "66473",
+        "58418",
         "91294",
         "92872",
       ],
@@ -3513,11 +3513,11 @@
         "23694",
         "21209",
         "222",
-        "38969",
         "50525",
+        "38969",
         "25094",
-        "28516",
         "50986",
+        "77576",
         "68984",
       ],
       377531: ["shared", "app", "98106", "36891"],
@@ -3545,7 +3545,7 @@
         "63229",
         "92967",
         "23065",
-        "29062",
+        "67229",
         "87475",
         "44214",
       ],
@@ -3583,7 +3583,7 @@
         "81423",
         "11626",
         "79193",
-        "27170",
+        "45470",
       ],
       404567: ["18868"],
       405314: [
@@ -3693,7 +3693,7 @@
         "63229",
         "92967",
         "23065",
-        "29062",
+        "67229",
         "87475",
         "56164",
       ],
@@ -3725,8 +3725,8 @@
         "98281",
         "83257",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "60053",
         "30791",
@@ -3776,8 +3776,8 @@
         "69933",
         "64228",
         "69667",
-        "12896",
         "72640",
+        "12896",
         "86706",
       ],
       475800: ["92951"],
@@ -3795,8 +3795,8 @@
         "11960",
         "28411",
         "84537",
-        "58418",
         "66473",
+        "58418",
         "18120",
         "77951",
         "53181",
@@ -3817,20 +3817,20 @@
         "35876",
         "40958",
         "23992",
+        "14694",
         "69933",
         "69667",
-        "14694",
+        "72640",
         "93510",
         "20388",
         "93714",
         "47007",
         "4359",
-        "72640",
         "3021",
-        "16141",
         "81423",
-        "38519",
         "64072",
+        "38519",
+        "16141",
         "83678",
         "25923",
         "55402",
@@ -3890,7 +3890,7 @@
       533844: ["48559"],
       534178: ["35354"],
       534278: ["15181"],
-      534702: ["shared", "app", "98106", "23694", "38969", "47185", "71780"],
+      534702: ["shared", "app", "98106", "23694", "38969", "47185", "8700"],
       536071: ["app", "26567"],
       538969: ["app", "22032"],
       539593: ["app", "70201", "6291", "41737"],
@@ -3923,8 +3923,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "86416",
         "60053",
         "30791",
@@ -3943,8 +3943,8 @@
         "49578",
         "51077",
         "11960",
-        "58418",
         "66473",
+        "58418",
         "98176",
         "3045",
         "23992",
@@ -4028,8 +4028,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4065,8 +4065,8 @@
         "98281",
         "83257",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "60053",
         "30791",
@@ -4083,7 +4083,7 @@
       596631: ["63499"],
       597035: ["26594"],
       59709: ["app", "64960"],
-      597235: ["app", "50525", "27363"],
+      597235: ["app", "50525", "913"],
       59833: ["app", "84968", "34345"],
       599943: ["81239"],
       601745: ["shared", "app", "43426", "45608"],
@@ -4094,7 +4094,7 @@
         "63229",
         "92967",
         "23065",
-        "29062",
+        "67229",
         "87475",
         "60796",
       ],
@@ -4119,7 +4119,7 @@
         "63229",
         "92967",
         "23065",
-        "29062",
+        "67229",
         "87475",
         "90594",
       ],
@@ -4187,8 +4187,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4317,8 +4317,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4352,11 +4352,11 @@
         "23694",
         "21209",
         "222",
-        "38969",
         "50525",
+        "38969",
         "25094",
         "50986",
-        "68314",
+        "79084",
       ],
       726871: ["53292"],
       727212: [
@@ -4425,7 +4425,7 @@
         "81423",
         "11626",
         "46743",
-        "96285",
+        "14732",
       ],
       765821: ["89911"],
       770332: ["52719"],
@@ -4449,8 +4449,8 @@
         "11960",
         "28411",
         "84537",
-        "58418",
         "66473",
+        "58418",
         "18120",
         "77951",
         "53181",
@@ -4471,20 +4471,20 @@
         "35876",
         "40958",
         "23992",
+        "14694",
         "69933",
         "69667",
-        "14694",
+        "72640",
         "93510",
         "20388",
         "93714",
         "47007",
         "4359",
-        "72640",
         "3021",
-        "16141",
         "81423",
-        "38519",
         "64072",
+        "38519",
+        "16141",
         "83678",
         "21209",
         "11626",
@@ -4567,8 +4567,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4608,8 +4608,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4628,7 +4628,7 @@
         "31897",
         "63229",
         "23065",
-        "29062",
+        "67229",
         "10716",
         "64486",
       ],
@@ -4664,8 +4664,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4774,8 +4774,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4849,8 +4849,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4898,8 +4898,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -4973,8 +4973,8 @@
         "83257",
         "44504",
         "58533",
-        "60499",
         "94726",
+        "60499",
         "64509",
         "86416",
         "60053",
@@ -5023,7 +5023,7 @@
       987034: ["app", "94255"],
       990599: ["48659"],
       991878: ["17859"],
-      992996: ["app", "28516", "20833"],
+      992996: ["app", "77576", "20833"],
       994509: ["app", "88461"],
       994827: ["app", "26737", "28411", "64612", "20388", "10236"],
       995494: ["42236"],
@@ -5048,24 +5048,24 @@
       ],
       999391: ["app", "88934"],
     }),
-    (l.el = function (a) {
+    (f.el = function (a) {
       var t = e[a];
       return void 0 === t
         ? Promise.resolve()
         : t.length > 1
-          ? Promise.all(t.map(l.e))
-          : l.e(t[0]);
+          ? Promise.all(t.map(f.e))
+          : f.e(t[0]);
     }),
-    (l.f = {}),
-    (l.e = function (e) {
+    (f.f = {}),
+    (f.e = function (e) {
       return Promise.all(
-        Object.keys(l.f).reduce(function (a, t) {
-          return l.f[t](e, a), a;
+        Object.keys(f.f).reduce(function (a, t) {
+          return f.f[t](e, a), a;
         }, [])
       );
     }),
-    (l.p = "/assets/"),
-    (l.u = function (e) {
+    (f.p = "/assets/"),
+    (f.u = function (e) {
       return {
         10093: "14609b11a998600fc9a0.js",
         10094: "4ed4378717d1538b0b73.js",
@@ -5106,6 +5106,7 @@
         14511: "bef18ae2497dd3a9d995.js",
         14566: "e3c0398b1492da391481.js",
         14694: "271e5a01a2b03fbd5efc.js",
+        14732: "ff7ff03f46a8a755218c.js",
         14914: "e3bbc8a9d4328b53c038.js",
         15128: "a1661db937921bad2edc.js",
         15181: "6f9ca9da7fe714865d68.js",
@@ -5115,8 +5116,7 @@
         15995: "2aa9e78163590ea6cd91.js",
         16132: "9ae3d8233e8f4caa4269.js",
         16134: "2a697063d658b9fa4e70.js",
-        16141: "a44480e04980c8b217e9.js",
-        16263: "4188291e827401d8c8e0.js",
+        16141: "4e219ad382509901f29e.js",
         1639: "323036d8f4480c92a605.js",
         16567: "8428418e1fad005f093c.js",
         16657: "5fe482d5425e9bd03bc5.js",
@@ -5152,7 +5152,7 @@
         20153: "2169826cf9d7e6d2885c.js",
         20388: "fa3ec0a26afeae5b2d3e.js",
         20644: "9800072a04fcc3764f7e.js",
-        20833: "ee5a7cd3552fdf5187df.js",
+        20833: "6fb39c8e75c8d9493485.js",
         20883: "f5dc9e2e6640c425e5dc.js",
         21209: "b6e7a129b0578fa18306.js",
         21356: "1dc95adc7b80e79284af.js",
@@ -5221,11 +5221,9 @@
         27083: "27083.fe83b26ed2f80769a7af.js",
         27119: "58680740b7e91352eb21.js",
         2712: "01b1357d547fa29a888d.js",
-        27170: "032e0121b418cad1d88d.js",
         27230: "19a802a77b60d5e8f47a.js",
-        27363: "623b5b149668f8fc0c6c.js",
         27470: "95262f7381011e51dc49.js",
-        27545: "fe05c5f261e0e3d68803.js",
+        27545: "4f38d5ccaac22e179853.js",
         27665: "7da2fe8fdd0387ef5543.js",
         27949: "3fe51ac337cf11b050dd.js",
         28040: "fe4c37140b0f994720c6.js",
@@ -5233,7 +5231,6 @@
         28189: "3f3bd79a6e3a95bcb6d1.js",
         28411: "a279867d08ebbeeb824d.js",
         28463: "d418ab712bb2150df6d4.js",
-        28516: "dffa6e385cf504bcead5.js",
         2862: "84c300945ece432cd727.js",
         28649: "7e184c86c1f0fbb15bd1.js",
         28711: "5d5892b6e5131d145624.js",
@@ -5280,7 +5277,7 @@
         33036: "1eabd501543f0d1cf970.js",
         33057: "09a892836baddc5bb770.js",
         33226: "5a444592878f3e19cd9e.js",
-        33270: "b0f3d3f944504d38ce50.js",
+        33270: "a23eb755fbe2b340d5e1.js",
         3328: "c0cfe33232d48a99494b.js",
         33753: "028757993e953faf634e.js",
         3383: "7a7ae988bdd5ad3b9e4b.js",
@@ -5290,7 +5287,7 @@
         34667: "402efd6b5ac1113bce97.js",
         3471: "95225ea8e5fa422477c5.js",
         35354: "9f43c1928e062e4189a2.js",
-        35831: "a376c2b740ccb178426d.js",
+        35831: "55727d36d953837269cf.js",
         35854: "d964927eabd1c27990bf.js",
         35858: "3ed8ea3f2d58c01001ce.js",
         35876: "502652b77f0db0c4492c.js",
@@ -5321,7 +5318,7 @@
         38712: "4897247efd5c7d2f8f91.js",
         38833: "f8efed81d842a497be39.js",
         38867: "b2683f417b08f389c3aa.js",
-        38969: "3bb8c84a5ebe2d4c8080.js",
+        38969: "7b59eeacfe2dbd0a9f20.js",
         3903: "e186978c79580fa8b7fd.js",
         39101: "f8ac6442b5fb99ad9708.js",
         39377: "b24489ec4f756b6e86ad.js",
@@ -5369,6 +5366,7 @@
         44986: "477ad5132558a4de3fcc.js",
         45164: "8954ada6fd8959b58a4b.js",
         45370: "6ef394955b8792b824b1.js",
+        45470: "6b8619b40b892aff3722.js",
         45549: "fbcf321ea0a4741bdbe2.js",
         45608: "643fc11a4e6641903ad7.js",
         45891: "6cc0d4a2def0d63dece2.js",
@@ -5411,11 +5409,11 @@
         50274: "da099a28f4ea842acdd8.js",
         50293: "33dbc97b8d79e5a85a2c.js",
         50454: "0297802d1d7346237698.js",
-        50525: "cd01080dfe9d56c44a49.js",
+        50525: "c37b45ccfc03c3bcf450.js",
         50549: "71c9d74707d37a98a846.js",
         50550: "37681ce68c26e3cd5b94.js",
         50659: "2a124e6e2dc0fbbb57eb.js",
-        50986: "f180a4abddc59b8923c6.js",
+        50986: "68799eaefad9406f4c6a.js",
         51077: "7a3aa330654099684dfb.js",
         51146: "8fb89efbdecd7b54ce58.js",
         51572: "191bc232050ff3c27c2d.js",
@@ -5478,7 +5476,6 @@
         59143: "b2f07b9df9fa47551cf4.js",
         59300: "a5287c7a80d272f21faa.js",
         59308: "b216c39766e45b779269.js",
-        59421: "d52a211330f78369b71b.js",
         59715: "91f70172d12e3d8fecbd.js",
         60291: "f015e670e56809f3ed55.js",
         60405: "704389b2e6cfbeb795d1.js",
@@ -5551,7 +5548,6 @@
         68269: "11e329d23ac7859b8d44.js",
         68291: "68291.687557b9b660607399a3.js",
         68309: "0007b0a547bbe65487e2.js",
-        68314: "8f9ecf4a2eb5c0d1961a.js",
         68462: "d203565d96a9dd6557ba.js",
         68560: "68560.e27fd85667a295676749.js",
         68638: "70b034076725d7023745.js",
@@ -5581,9 +5577,9 @@
         70897: "4d07f8a041ee25396886.js",
         70917: "0e5ef0468a5bed767363.js",
         7114: "d0f0984f497caa75724b.js",
+        71177: "c24a01e148df3402c273.js",
         71238: "dcd18ad29ea6b15affe4.js",
         71314: "8b3b37f3f7c1638e8b92.js",
-        71780: "826f348d5b688b3a4f5a.js",
         71879: "48c0bfbf51142a6eee4f.js",
         72013: "032295a18b4a91466111.js",
         72059: "5fc6b702fab2a0944242.js",
@@ -5593,7 +5589,7 @@
         72579: "104697dda5ca45c2ade3.js",
         72592: "dc21d3e6cef65e31576d.js",
         72618: "f49f17adead84be83dd4.js",
-        72640: "ad35170e18b8a6f4f200.js",
+        72640: "b65969557c25ecea0e4f.js",
         72655: "6839f7f5522dd3f58b1b.js",
         72871: "624926aac2329496bfe6.js",
         72952: "91f8103c477e4ae580d7.js",
@@ -5635,6 +5631,7 @@
         77326: "d35c7dd365cf97c19d96.js",
         77428: "8f3e71e2228c4e024208.js",
         77561: "b05dd3735e231b1b89a6.js",
+        77576: "188e1a56e5bff3b2d960.js",
         77655: "77655.f7ee822fbaa3cd69980f.js",
         77935: "1d928ced8930cc8c7074.js",
         77951: "f8ca92ef6a53cb72b35e.js",
@@ -5647,6 +5644,7 @@
         7884: "0885a0f905062af035a6.js",
         78894: "41c113de8007480b2f93.js",
         79017: "5804c8157f5346811bb1.js",
+        79084: "517547d5a896e293a8a3.js",
         79193: "a8bbfd2bacea2d37ee30.js",
         79326: "a091aa17800635599066.js",
         79423: "6392a9795022066fe884.js",
@@ -5658,7 +5656,7 @@
         81121: "99e51538b0838f3d6500.js",
         81203: "65e17696a3ab1b283938.js",
         81239: "9bf3452c38598198d33e.js",
-        81423: "0644ca28b9b104f05845.js",
+        81423: "932f0f87770d058f8c76.js",
         81467: "8d2aff0db1f7e1f848e3.js",
         81480: "af8c27c73fcb22700737.js",
         81814: "4f000041c5aec0cbde73.js",
@@ -5699,6 +5697,7 @@
         86612: "1a9e9462f807e1589314.js",
         86706: "3d4ab9bb13eb38046985.js",
         86837: "f021e3418dfa4a97eeb1.js",
+        8700: "1c5865a229c0aa7eb901.js",
         8704: "0717df03cc2b1b252bb3.js",
         87183: "a634043a642a06e08101.js",
         87431: "28dde8ad0f719185f324.js",
@@ -5732,6 +5731,7 @@
         90208: "eae334e0d86462c1a3ae.js",
         90416: "718e21e39a4562423315.js",
         90594: "536c52a6d51c4883cfc5.js",
+        90624: "3f1386366a6f20ecb1ac.js",
         90823: "b06866c877e9001c2796.js",
         90960: "92e11a5a26ab70e82c99.js",
         91031: "aa2080559aef29a01b01.js",
@@ -5739,6 +5739,7 @@
         91138: "d9ba6f009ba8b0f4619e.js",
         91288: "292f9ca61a24afd45792.js",
         91294: "37b2689845f2079524d7.js",
+        913: "a9d504ae13a3556af8c0.js",
         91315: "d0821299ae936bcc093b.js",
         91434: "ee7e749682f195036302.js",
         91467: "5236e4b3e37e7b7d9816.js",
@@ -5778,7 +5779,6 @@
         95814: "999599593ec86e3bcf96.js",
         95832: "fc53a1d4a4b9888f8393.js",
         96163: "0cc97ac4aafee9ae9a98.js",
-        96285: "b796edca763cbb08f489.js",
         96390: "d1267998fda95d57bd1c.js",
         96796: "1deb95b613c9391afa54.js",
         970: "dacef3feb35d84699884.js",
@@ -5818,11 +5818,11 @@
         "krisp-sdk": "5bf048a73e6b1187a119.js",
       }[e];
     }),
-    (l.k = function (e) {
+    (f.k = function (e) {
       return "" + e + ".css";
     }),
     (a = {}),
-    (l.l = function (e, t, s, d) {
+    (f.l = function (e, t, s, d) {
       if (a[e]) {
         a[e].push(t);
         return;
@@ -5844,10 +5844,10 @@
         ((c = !0),
         ((n = document.createElement("script")).charset = "utf-8"),
         (n.timeout = 120),
-        l.nc && n.setAttribute("nonce", l.nc),
+        f.nc && n.setAttribute("nonce", f.nc),
         (n.src = e)),
         (a[e] = [t]);
-      var f = function (t, s) {
+      var l = function (t, s) {
           (n.onerror = n.onload = null), clearTimeout(u);
           var d = a[e];
           if (
@@ -5862,18 +5862,18 @@
             return t(s);
         },
         u = setTimeout(
-          f.bind(null, void 0, { type: "timeout", target: n }),
+          l.bind(null, void 0, { type: "timeout", target: n }),
           12e4
         );
-      (n.onerror = f.bind(null, n.onerror)),
-        (n.onload = f.bind(null, n.onload)),
+      (n.onerror = l.bind(null, n.onerror)),
+        (n.onload = l.bind(null, n.onload)),
         c && document.head.appendChild(n);
     }),
-    (l.o = function (e, a) {
+    (f.o = function (e, a) {
       return Object.prototype.hasOwnProperty.call(e, a);
     }),
     (t = []),
-    (l.O = function (e, a, s, d) {
+    (f.O = function (e, a, s, d) {
       if (a) {
         d = d || 0;
         for (var n = t.length; n > 0 && t[n - 1][2] > d; n--) t[n] = t[n - 1];
@@ -5887,8 +5887,8 @@
           r++
         )
           c >= d &&
-          Object.keys(l.O).every(function (e) {
-            return l.O[e](a[r]);
+          Object.keys(f.O).every(function (e) {
+            return f.O[e](a[r]);
           })
             ? a.splice(r--, 1)
             : ((i = !1), d < c && (c = d));
@@ -5900,7 +5900,7 @@
       }
       return e;
     }),
-    (l.g = (function () {
+    (f.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || Function("return this")();
@@ -5931,20 +5931,20 @@
           e.r-- ? e.r++ : e();
         }));
     }),
-    (l.a = function (e, a, t) {
+    (f.a = function (e, a, t) {
       t && ((i = []).d = -1);
       var i,
         r,
         o,
-        f,
-        l = new Set(),
+        l,
+        f = new Set(),
         u = e.exports,
         b = new Promise(function (e, a) {
-          (f = a), (o = e);
+          (l = a), (o = e);
         });
       (b[d] = u),
         (b[s] = function (e) {
-          i && e(i), l.forEach(e), b.catch(function () {});
+          i && e(i), f.forEach(e), b.catch(function () {});
         }),
         (e.exports = b),
         a(
@@ -5988,8 +5988,8 @@
                 }).r = 0;
                 var d = function (e) {
                   e === i ||
-                    l.has(e) ||
-                    (l.add(e), e && !e.d && (a.r++, e.push(a)));
+                    f.has(e) ||
+                    (f.add(e), e && !e.d && (a.r++, e.push(a)));
                 };
                 r.map(function (e) {
                   e[s](d);
@@ -5998,24 +5998,24 @@
             return a.r ? o : t();
           },
           function (e) {
-            e ? f((b[n] = e)) : o(u), c(i);
+            e ? l((b[n] = e)) : o(u), c(i);
           }
         ),
         i && i.d < 0 && (i.d = 0);
     }),
-    (l.d = function (e, a) {
+    (f.d = function (e, a) {
       for (var t in a)
-        l.o(a, t) &&
-          !l.o(e, t) &&
+        f.o(a, t) &&
+          !f.o(e, t) &&
           Object.defineProperty(e, t, { enumerable: !0, get: a[t] });
     }),
-    (l.r = function (e) {
+    (f.r = function (e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (l.n = function (e) {
+    (f.n = function (e) {
       return e && e.__esModule ? e.default : e;
     }),
     (r = Object.getPrototypeOf
@@ -6025,7 +6025,7 @@
       : function (e) {
           return e.__proto__;
         }),
-    (l.t = function (e, a) {
+    (f.t = function (e, a) {
       if (
         (1 & a && (e = this(e)),
         8 & a ||
@@ -6036,7 +6036,7 @@
       )
         return e;
       var t = Object.create(null);
-      l.r(t);
+      f.r(t);
       var s = {};
       i = i || [null, r({}), r([]), r(r)];
       for (var d = 2 & a && e; "object" == typeof d && !~i.indexOf(d); d = r(d))
@@ -6049,14 +6049,14 @@
         (s.default = function () {
           return e;
         }),
-        l.d(t, s),
+        f.d(t, s),
         t
       );
     }),
-    (l.nmd = function (e) {
+    (f.nmd = function (e) {
       return (e.paths = []), !e.children && (e.children = []), e;
     }),
-    (l.hmd = function (e) {
+    (f.hmd = function (e) {
       return (
         !(e = Object.create(e)).children && (e.children = []),
         Object.defineProperty(e, "exports", {
@@ -6089,7 +6089,6 @@
           23777: 0,
           26737: 0,
           28727: 0,
-          29062: 0,
           30791: 0,
           30798: 0,
           31337: 0,
@@ -6122,6 +6121,7 @@
           64509: 0,
           64612: 0,
           65800: 0,
+          67229: 0,
           67925: 0,
           72683: 0,
           7273: 0,
@@ -6153,16 +6153,16 @@
             r = "chunk-" + e;
           if (!n) {
             for (
-              var o = document.getElementsByTagName("link"), f = 0;
-              f < o.length;
-              f++
+              var o = document.getElementsByTagName("link"), l = 0;
+              l < o.length;
+              l++
             ) {
-              var u = o[f],
+              var u = o[l],
                 b = u.getAttribute("href") || u.href;
               if (
                 (b &&
-                  !b.startsWith(l.p) &&
-                  (b = l.p + (b.startsWith("/") ? b.slice(1) : b)),
+                  !b.startsWith(f.p) &&
+                  (b = f.p + (b.startsWith("/") ? b.slice(1) : b)),
                 "stylesheet" == u.rel &&
                   ((b && b.startsWith(s)) ||
                     u.getAttribute("data-webpack") == a + ":" + r))
@@ -6208,8 +6208,8 @@
             c
           );
         };
-      l.f.css = function (a, t) {
-        var d = l.o(e, a) ? e[a] : void 0;
+      f.f.css = function (a, t) {
+        var d = f.o(e, a) ? e[a] : void 0;
         if (0 !== d) {
           if (d) t.push(d[2]);
           else if (["app", "shared"].indexOf(a) > -1) {
@@ -6217,10 +6217,10 @@
               d = e[a] = [t, s];
             });
             t.push((d[2] = n));
-            var c = l.p + l.k(a),
+            var c = f.p + f.k(a),
               i = Error();
             s(a, c, function (t) {
-              if (l.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
+              if (f.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
                 if ("load" !== t.type) {
                   var s = t && t.type,
                     n = t && t.target && t.target.src;
@@ -6252,10 +6252,10 @@
       n.forEach(d.bind(null, 0)), (n.push = d.bind(null, n.push.bind(n)));
     })(),
     !(function () {
-      l.b = document.baseURI || self.location.href;
+      f.b = document.baseURI || self.location.href;
       var e = { web: 0 };
-      (l.f.j = function (a, t) {
-        var s = l.o(e, a) ? e[a] : void 0;
+      (f.f.j = function (a, t) {
+        var s = f.o(e, a) ? e[a] : void 0;
         if (0 !== s) {
           if (s) t.push(s[2]);
           else {
@@ -6263,12 +6263,12 @@
               s = e[a] = [t, d];
             });
             t.push((s[2] = d));
-            var n = l.p + l.u(a),
+            var n = f.p + f.u(a),
               c = Error();
-            l.l(
+            f.l(
               n,
               function (t) {
-                if (l.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+                if (f.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
                   var d = t && ("load" === t.type ? "missing" : t.type),
                     n = t && t.target && t.target.src;
                   (c.message =
@@ -6285,7 +6285,7 @@
           }
         }
       }),
-        (l.O.j = function (a) {
+        (f.O.j = function (a) {
           return 0 === e[a];
         });
       var a = function (a, t) {
@@ -6300,18 +6300,18 @@
               return 0 !== e[a];
             })
           ) {
-            for (c in d) l.o(d, c) && (l.m[c] = d[c]);
-            if (n) var o = n(l);
+            for (c in d) f.o(d, c) && (f.m[c] = d[c]);
+            if (n) var o = n(f);
           }
           for (a && a(t); r < s.length; r++)
-            (i = s[r]), l.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
-          return l.O(o);
+            (i = s[r]), f.o(e, i) && e[i] && e[i][0](), (e[i] = 0);
+          return f.O(o);
         },
         t = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
       t.forEach(a.bind(null, 0)), (t.push = a.bind(null, t.push.bind(t)));
     })(),
-    (l.v = (e, a, t, s) => {
-      var d = fetch(l.p + t);
+    (f.v = (e, a, t, s) => {
+      var d = fetch(f.p + t);
       return "function" == typeof WebAssembly.instantiateStreaming
         ? WebAssembly.instantiateStreaming(d, s).then(a =>
             Object.assign(e, a.instance.exports)
@@ -6321,7 +6321,7 @@
             .then(e => WebAssembly.instantiate(e, s))
             .then(a => Object.assign(e, a.instance.exports));
     });
-  var u = l.O(
+  var u = f.O(
     void 0,
     [
       "shared",
@@ -6365,8 +6365,8 @@
       "83257",
       "44504",
       "58533",
-      "60499",
       "94726",
+      "60499",
       "64509",
       "86416",
       "60053",
@@ -6376,7 +6376,7 @@
       "26737",
       "81161",
       "23065",
-      "29062",
+      "67229",
       "6086",
       "87475",
       "55639",
@@ -6398,9 +6398,9 @@
       "76039",
     ],
     function () {
-      return l("20423");
+      return f("20423");
     }
   );
-  l.O(u);
+  f.O(u);
 })();
-//# sourceMappingURL=web.f9963b42df47527abd68.js.map
+//# sourceMappingURL=web.396020643e24868de4ec.js.map

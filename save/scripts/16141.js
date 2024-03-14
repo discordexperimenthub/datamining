@@ -205,27 +205,6 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
-    289867: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return l;
-          },
-        });
-      var a = n("913144"),
-        l = {
-          toggleMembersSection() {
-            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
-          },
-          toggleProfilePanelSection() {
-            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
-          },
-          toggleSummariesSection() {
-            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
-          },
-        };
-    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -9644,7 +9623,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return y;
           },
         }),
         n("222007"),
@@ -9661,32 +9640,62 @@
         c = n("945701"),
         f = n("462274"),
         h = n("788506"),
-        m = n("315102"),
-        p = n("387111"),
-        E = n("476774"),
-        S = n("773808"),
-        g = n("909346"),
-        C = n("356980"),
-        _ = n("709377"),
-        I = n("49111"),
-        T = n("782340"),
-        v = n("150827");
-      let x = e => {
+        m = n("388491"),
+        p = n("315102"),
+        E = n("387111"),
+        S = n("476774"),
+        g = n("773808"),
+        C = n("909346"),
+        _ = n("356980"),
+        I = n("709377"),
+        T = n("49111"),
+        v = n("782340"),
+        x = n("150827");
+      let N = e => {
           let t = (0, r.default)([d.default], () => d.default.saturation),
             [n, a] = (0, f.useAvatarColors)(
               e,
               u.tokens.colors.BACKGROUND_FLOATING.resolve({
-                theme: I.ThemeTypes.DARK,
+                theme: T.ThemeTypes.DARK,
                 saturation: t,
               }).hex()
-            ),
-            l = (0, o.hex2int)(n),
-            s = (0, o.hex2int)(a),
-            c = (0, o.getDarkness)(l) > 0.5 ? n : i(n).darken(2).hex(),
-            h = (0, o.getDarkness)(s) > 0.5 ? a : i(a).darken(2).hex();
-          return { primaryColor: c, secondaryColor: h };
+            );
+          return l.useMemo(() => {
+            let e = (0, o.hex2int)(n),
+              t = (0, o.hex2int)(a),
+              l = (0, o.getDarkness)(e) > 0.5 ? n : i(n).darken(2).hex(),
+              s = (0, o.getDarkness)(t) > 0.5 ? a : i(a).darken(2).hex(),
+              r = 1;
+            for (
+              ;
+              (0, m.getProfileTheme)((0, o.hex2int)(l)) ===
+                T.ThemeTypes.LIGHT && r < 8;
+
+            )
+              (l =
+                (0, o.getDarkness)(e) > 0.5
+                  ? n
+                  : i(n)
+                      .darken(2 + r)
+                      .hex()),
+                (r += 1);
+            for (
+              r = 1;
+              (0, m.getProfileTheme)((0, o.hex2int)(s)) ===
+                T.ThemeTypes.LIGHT && r < 8;
+
+            )
+              (s =
+                (0, o.getDarkness)(t) > 0.5
+                  ? a
+                  : i(a)
+                      .darken(2 + r)
+                      .hex()),
+                (r += 1);
+            return { primaryColor: l, secondaryColor: s };
+          }, [n, a]);
         },
-        N = e => {
+        A = e => {
           let { channel: t, onClickSuggestion: n } = e,
             l = (0, h.useFrequentlyUsedEmojis)(t.guild_id),
             s = l
@@ -9696,7 +9705,7 @@
                   ? { emoji: e, url: e.url }
                   : {
                       emoji: e,
-                      url: (0, m.getEmojiURL)({
+                      url: (0, p.getEmojiURL)({
                         id: e.id,
                         animated: e.animated,
                         size: 58,
@@ -9709,87 +9718,87 @@
               return null != l
                 ? (0, a.jsx)(u.Clickable, {
                     onClick: () => n(t),
-                    className: v.emojiSuggestionButton,
+                    className: x.emojiSuggestionButton,
                     children: (0, a.jsx)("img", {
                       alt: t.name,
                       src: l,
-                      className: v.emoji,
+                      className: x.emoji,
                     }),
                   })
                 : null;
             }),
           });
         },
-        A = e => {
-          let t = (0, E.isEntryActive)(e),
-            n = (0, E.isEntryNew)(e);
+        M = e => {
+          let t = (0, S.isEntryActive)(e),
+            n = (0, S.isEntryNew)(e);
           return n
             ? t
-              ? T.default.Messages
+              ? v.default.Messages
                   .MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME
-              : T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
+              : v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
             : t
-              ? T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
-              : T.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+              ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
+              : v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
         },
-        M = (e, t, n) => {
-          let a = A(e),
-            l = p.default.getName(t.guild_id, t.id, n),
+        R = (e, t, n) => {
+          let a = M(e),
+            l = E.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name,
             i = a.plainFormat({ gameName: s, userName: l });
           return i.replaceAll("*", "");
         },
-        R = (e, t, n) => {
-          let a = A(e),
-            l = p.default.getName(t.guild_id, t.id, n),
+        j = (e, t, n) => {
+          let a = M(e),
+            l = E.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name;
           return a.format({ userName: l, gameName: s });
         },
-        j = (e, t) =>
-          T.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        L = (e, t) =>
+          v.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name,
           });
-      var L = e => {
+      var y = e => {
         let { closePopout: t, channel: n, entry: s, requestId: i } = e,
-          { user: r, applicationImageSrc: o } = (0, C.useGamingContentData)(
+          { user: r, applicationImageSrc: o } = (0, _.useGamingContentData)(
             s,
             n
           ),
-          { primaryColor: d, secondaryColor: f } = x(o),
+          { primaryColor: d, secondaryColor: f } = N(o),
           [h, m] = l.useState(null);
         if (null == r) return null;
         let p = r.getAvatarURL(n.guild_id, 128),
-          I = {
+          E = {
             entry: s,
             user: r,
             applicationImageSrc: o,
             avatarSrc: p,
-            altText: j(s, r),
-            description: M(s, n, r),
-            timestamp: (0, E.formatEntryTimestamp)(s, Date.now()),
+            altText: L(s, r),
+            description: R(s, n, r),
+            timestamp: (0, S.formatEntryTimestamp)(s, Date.now()),
             colors: [d, f],
           },
-          A = { entry: s, channelId: n.id, guildId: n.guild_id, requestId: i },
-          L = e => {
+          T = { entry: s, channelId: n.id, guildId: n.guild_id, requestId: i },
+          M = e => {
             null != e && null != h && (h.insertEmoji(e, !1, !0), h.focus());
           },
           y = async e => {
             try {
-              await (0, g.sendContentImageReply)({ ...I, reply: e }),
-                (0, S.trackInteraction)(
-                  _.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
-                  A
+              await (0, C.sendContentImageReply)({ ...E, reply: e }),
+                (0, g.trackInteraction)(
+                  I.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
+                  T
                 );
             } finally {
               t();
             }
           };
         return (0, a.jsxs)("div", {
-          className: v.popout,
+          className: x.popout,
           children: [
             (0, a.jsxs)("div", {
-              className: v.hero,
+              className: x.hero,
               style: {
                 background: "linear-gradient(45deg, "
                   .concat(d, ", ")
@@ -9797,7 +9806,7 @@
               },
               children: [
                 (0, a.jsxs)("div", {
-                  className: v.heroDetails,
+                  className: x.heroDetails,
                   children: [
                     (0, a.jsxs)("div", {
                       children: [
@@ -9807,23 +9816,23 @@
                           "aria-label": "avatar",
                         }),
                         (0, a.jsx)(u.Heading, {
-                          className: v.popoutDescription,
+                          className: x.popoutDescription,
                           variant: "heading-md/normal",
                           color: "always-white",
                           lineClamp: 3,
-                          children: R(s, n, r),
+                          children: j(s, n, r),
                         }),
                       ],
                     }),
-                    (0, a.jsx)(C.GamingContentImage, {
+                    (0, a.jsx)(_.GamingContentImage, {
                       size: 80,
                       src: o,
-                      className: v.contentImage,
+                      className: x.contentImage,
                     }),
                   ],
                 }),
-                (0, a.jsx)(C.ContentRowBadges, {
-                  className: v.badgeContainer,
+                (0, a.jsx)(_.ContentRowBadges, {
+                  className: x.badgeContainer,
                   entry: s,
                   textColor: "always-white",
                   iconColor: u.tokens.colors.WHITE,
@@ -9831,17 +9840,17 @@
               ],
             }),
             (0, a.jsxs)("div", {
-              className: v.reactions,
+              className: x.reactions,
               children: [
                 (0, a.jsxs)("div", {
-                  className: v.emojiHotrail,
+                  className: x.emojiHotrail,
                   children: [
-                    (0, a.jsx)(N, { channel: n, onClickSuggestion: L }),
-                    (0, a.jsx)(c.ReactionPickerButton, { onSelectEmoji: L }),
+                    (0, a.jsx)(A, { channel: n, onClickSuggestion: M }),
+                    (0, a.jsx)(c.ReactionPickerButton, { onSelectEmoji: M }),
                   ],
                 }),
                 (0, a.jsx)(c.ReplyInput, {
-                  placeholder: T.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                  placeholder: v.default.Messages.TEXTAREA_PLACEHOLDER.format({
                     channel: "@".concat(r.globalName),
                   }),
                   onEnter: y,
@@ -30826,79 +30835,6 @@
         });
       }
     },
-    893980: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          trackProfilePanelViewed: function () {
-            return u;
-          },
-          trackProfilePanelToggled: function () {
-            return o;
-          },
-        });
-      var a = n("373469"),
-        l = n("824563"),
-        s = n("27618"),
-        i = n("599110"),
-        r = n("49111");
-      let u = e => {
-          let {
-            displayProfile: t,
-            isMobile: n,
-            loadDurationMs: a,
-            activity: l,
-            customStatusActivity: s,
-            status: u,
-          } = e;
-          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
-            has_mobile_indicator: n,
-            has_activity:
-              null != l &&
-              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
-            has_game_activity:
-              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
-            load_duration_ms: a,
-            profile_user_status: u,
-            has_custom_status: null != s,
-            has_profile_effect: null != t.profileEffectId,
-            ...d(t),
-          });
-        },
-        o = (e, t) => {
-          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
-            is_profile_open: t,
-            ...d(e),
-          });
-        },
-        d = e => {
-          var t;
-          if (null == e) return {};
-          let n = e.userId,
-            i = null != a.default.getAnyStreamForUser(n),
-            u = l.default.findActivity(n, e => {
-              let { type: t } = e;
-              return i
-                ? t === r.ActivityTypes.PLAYING
-                : t !== r.ActivityTypes.CUSTOM_STATUS;
-            }),
-            o = null == u ? void 0 : u.assets,
-            d = s.default.isFriend(n);
-          return {
-            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
-            void 0 !== t
-              ? t
-              : null == o
-                ? void 0
-                : o.small_image),
-            is_friend: d,
-            viewed_profile_user_id: n,
-            profile_has_nitro_customization: e.hasPremiumCustomization(),
-            profile_has_theme_color_customized: e.hasThemeColors(),
-            profile_has_theme_animation: null != e.popoutAnimationParticleType,
-          };
-        };
-    },
     69682: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -42519,4 +42455,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c8dd96ffc49e3c63b3ca.js.map
+//# sourceMappingURL=4e219ad382509901f29e.js.map

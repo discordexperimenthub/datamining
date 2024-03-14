@@ -26340,8 +26340,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275207", ", Version Hash: ")
-          .concat("dc4de68ecb42808ebb2ecc67924b4518cc56d3c7")
+          .concat("275208", ", Version Hash: ")
+          .concat("91d45873bc7bd573879973cd130bc221e7511d2d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29453,12 +29453,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275207"), "275207"));
+        let _ = parseInt(((e = "275208"), "275208"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275207"
+                "275208"
               )
             ),
             (_ = 0)),
@@ -30473,7 +30473,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return L;
+            return C;
           },
         }),
         E("222007");
@@ -30488,17 +30488,20 @@
         T = !1,
         S = 0;
       function N() {
-        R();
+        l();
       }
       function O() {
-        A();
+        R();
       }
-      function A() {
-        clearTimeout(s), (s = null);
+      function A(e) {
+        e.idle ? R() : l();
       }
       function R() {
+        clearTimeout(s), (s = null);
+      }
+      function l() {
         if (
-          (A(),
+          (R(),
           !(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") ||
             T)
         )
@@ -30506,9 +30509,9 @@
         let e = a.default.getFeed(I),
           _ = null == e ? void 0 : e.expired_at,
           E = null == _ ? 0 : new Date(_).getTime() - Date.now();
-        s = setTimeout(() => l(), E);
+        s = setTimeout(() => u(), E);
       }
-      async function l() {
+      async function u() {
         if (!T)
           try {
             T = !0;
@@ -30520,22 +30523,26 @@
             }),
               (S = 0),
               (T = !1),
-              R();
+              l();
           } catch (e) {
             if (S < 3) {
               let e = 1e3 * Math.pow(5, S);
-              (s = setTimeout(() => l(), e)), (S += 1);
+              (s = setTimeout(() => u(), e)), (S += 1);
             }
             T = !1;
           }
       }
-      class u extends o.default {
+      class L extends o.default {
         constructor(...e) {
           super(...e),
-            (this.actions = { POST_CONNECTION_OPEN: N, CONNECTION_CLOSED: O });
+            (this.actions = {
+              POST_CONNECTION_OPEN: N,
+              CONNECTION_CLOSED: O,
+              IDLE: A,
+            });
         }
       }
-      var L = new u();
+      var C = new L();
     },
     302537: function (e, _, E) {
       "use strict";
@@ -52104,4 +52111,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.1f87caf85bdaa5517080.js.map
+//# sourceMappingURL=76039.a415989270d5e3928d40.js.map

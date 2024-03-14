@@ -5211,6 +5211,7 @@
           "app_launcher_empty_state_encountered"),
         (el.APP_LAUNCHER_CLOSED = "app_launcher_closed"),
         (el.APP_LAUNCHER_COMMAND_CLOSED = "app_launcher_command_closed"),
+        (el.APP_LAUNCHER_FRECENTS_SEEN = "app_launcher_frecents_seen"),
         (el.COMMANDS_MIGRATION_TOOLTIP_DISMISSED =
           "commands_migration_tooltip_dismissed"),
         (el.COMMANDS_MIGRATION_TOOLTIP_VIEWED =
@@ -17303,4 +17304,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.afab92e16ebe8052366d.js.map
+//# sourceMappingURL=7273.6de581dc7131796da7ca.js.map

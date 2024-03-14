@@ -1,70 +1,60 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["28463"],
   {
-    657437: function (e, t, a) {
+    657437: function (e, s, t) {
       "use strict";
-      a.r(t),
-        a.d(t, {
+      t.r(s),
+        t.d(s, {
           default: function () {
-            return A;
+            return i;
           },
         });
-      var o = a("37983");
-      a("884691");
-      var s = a("77078"),
-        n = a("685665"),
-        l = a("606292"),
-        r = a("476765"),
-        i = a("724001"),
-        d = a("630615"),
-        c = a("782340"),
-        u = a("528085");
-      function A(e) {
-        let { transitionState: t, onClose: a } = e,
-          A = (0, r.useUID)(),
-          { analyticsLocations: C } = (0, n.default)();
-        return (0, o.jsxs)(s.ModalRoot, {
-          transitionState: t,
-          "aria-labelledby": A,
+      var a = t("37983");
+      t("884691");
+      var o = t("77078"),
+        n = t("476765"),
+        l = t("724001"),
+        r = t("782340"),
+        d = t("528085");
+      function i(e) {
+        let { transitionState: s, onClose: t } = e,
+          i = (0, n.useUID)();
+        return (0, a.jsxs)(o.ModalRoot, {
+          transitionState: s,
+          "aria-labelledby": i,
           children: [
-            (0, o.jsxs)(s.ModalContent, {
-              className: u.content,
+            (0, a.jsxs)(o.ModalContent, {
+              className: d.content,
               children: [
-                (0, o.jsx)(i.default, {
-                  className: u.image,
-                  color: s.tokens.colors.TEXT_PRIMARY,
+                (0, a.jsx)(l.default, {
+                  className: d.image,
+                  color: o.tokens.colors.TEXT_PRIMARY,
                 }),
-                (0, o.jsx)(s.Heading, {
-                  className: u.title,
+                (0, a.jsx)(o.Heading, {
+                  className: d.title,
                   variant: "heading-xl/extrabold",
-                  children: c.default.Messages.PACKAGES_CLAIM_HEADER,
+                  children: r.default.Messages.PACKAGES_CLAIM_HEADER,
                 }),
-                (0, o.jsx)(s.Text, {
+                (0, a.jsx)(o.Text, {
                   variant: "text-md/medium",
                   color: "header-secondary",
-                  children: c.default.Messages.PACKAGES_CLAIM_BODY,
+                  children: r.default.Messages.PACKAGES_CLAIM_BODY,
                 }),
               ],
             }),
-            (0, o.jsxs)(s.ModalFooter, {
+            (0, a.jsxs)(o.ModalFooter, {
               children: [
-                (0, o.jsx)(s.Button, {
+                (0, a.jsx)(o.Button, {
                   onClick: () => {
-                    a(),
-                      d.IS_LOOTBOXES_READY &&
-                        (0, l.openAvatarDecorationModal)({
-                          analyticsLocations: C,
-                          initialSelectedDecoration: (0,
-                          d.getLootboxPrizeAvatarDecoration)(),
-                        });
+                    t();
                   },
-                  children: c.default.Messages.PACKAGES_CLAIM_CONTINUE,
+                  children: r.default.Messages.PACKAGES_CLAIM_CONTINUE,
                 }),
-                (0, o.jsx)(s.Button, {
-                  look: s.Button.Looks.LINK,
-                  color: s.Button.Colors.PRIMARY,
-                  onClick: a,
-                  children: c.default.Messages.PACKAGES_CLAIM_CANCEL,
+                (0, a.jsx)(o.Button, {
+                  look: o.Button.Looks.LINK,
+                  color: o.Button.Colors.PRIMARY,
+                  onClick: t,
+                  children: r.default.Messages.PACKAGES_CLAIM_CANCEL,
                 }),
               ],
             }),
@@ -74,4 +64,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d418ab712bb2150df6d4.js.map
+//# sourceMappingURL=193adfa6adff186038e1.js.map

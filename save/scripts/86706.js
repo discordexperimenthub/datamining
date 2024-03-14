@@ -244,7 +244,7 @@
               : S.test(e) && (e = e.substr(0, e.length - 1)),
             (n = j.exec(e))
               ? o.test(n[1]) && (e = e.substr(0, e.length - 1))
-              : (n = v.exec(e)) &&
+              : (n = p.exec(e)) &&
                 u.test(n[1]) &&
                 ((e = n[1]),
                 x.test(e)
@@ -257,7 +257,7 @@
             (n = R.exec(e)) && o.test(n[1]) && (e = n[1] + s[n[2]]),
             (n = I.exec(e))
               ? d.test(n[1]) && (e = n[1])
-              : (n = p.exec(e)) && d.test(n[1]) && (e = n[1]),
+              : (n = v.exec(e)) && d.test(n[1]) && (e = n[1]),
             (n = m.exec(e)) &&
               (d.test(n[1]) || (c.test(n[1]) && !f.test(n[1]))) &&
               (e = n[1]),
@@ -308,8 +308,8 @@
         h = /ll$/,
         m = /^(.+?)e$/,
         g = /^(.+?)y$/,
-        p = /^(.+?(s|t))(ion)$/,
-        v = /^(.+?)(ed|ing)$/,
+        v = /^(.+?(s|t))(ion)$/,
+        p = /^(.+?)(ed|ing)$/,
         x = /(at|bl|iz)$/,
         j = /^(.+?)eed$/,
         S = /^.+?[^s]s$/,
@@ -413,8 +413,8 @@
         h = n("446674"),
         m = n("333693"),
         g = n("618991"),
-        p = n("77078"),
-        v = n("812204"),
+        v = n("77078"),
+        p = n("812204"),
         x = n("685665"),
         j = n("509167"),
         S = n("129408"),
@@ -456,7 +456,7 @@
               }
             }
           }, [n]),
-          p = a.useMemo(() => {
+          v = a.useMemo(() => {
             var e;
             let t = n.getCoverImageURL(800);
             return null != t &&
@@ -465,7 +465,7 @@
               ? e
               : void 0;
           }, [n]),
-          v = d.length > 0 && o.length > 0;
+          p = d.length > 0 && o.length > 0;
         return (0, r.jsxs)("div", {
           className: B.wrapper,
           children: [
@@ -474,12 +474,12 @@
               subtitle:
                 null !== (t = n.description) && void 0 !== t ? t : void 0,
               iconSrc: h,
-              backgroundSrc: p,
+              backgroundSrc: v,
             }),
             (0, r.jsx)("br", {}),
             (0, r.jsx)("div", {
               className: B.tabs,
-              children: v
+              children: p
                 ? (0, r.jsxs)(r.Fragment, {
                     children: [
                       (0, r.jsx)(c.default, {
@@ -581,7 +581,7 @@
           }, [t, s.image_asset]),
           h = s.subscription_plans.length > 0 ? s.subscription_plans[0] : null;
         if (null === h) return null;
-        let m = (0, r.jsx)(p.Button, {
+        let m = (0, r.jsx)(v.Button, {
           onClick: c,
           children: O.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
             rate: (0, R.formatRate)(
@@ -598,7 +598,7 @@
           subscriptionType: l,
           onPurchase: c,
           PurchaseButton: e =>
-            (0, r.jsx)(p.Button, {
+            (0, r.jsx)(v.Button, {
               ...e,
               children: O.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
                 rate: (0, R.formatRate)(
@@ -621,11 +621,11 @@
           onDetails:
             null != d
               ? () => {
-                  (0, p.openModal)(e => {
+                  (0, v.openModal)(e => {
                     let { onClose: t, transitionState: n } = e;
-                    return (0, r.jsxs)(p.ModalRoot, {
+                    return (0, r.jsxs)(v.ModalRoot, {
                       transitionState: n,
-                      size: p.ModalSize.DYNAMIC,
+                      size: v.ModalSize.DYNAMIC,
                       className: B.subDetailsModal,
                       children: [
                         (0, r.jsx)(o.CardDetails, {
@@ -646,14 +646,14 @@
                           subscriptionType: l,
                           onClose: t,
                         }),
-                        (0, r.jsxs)(p.ModalFooter, {
+                        (0, r.jsxs)(v.ModalFooter, {
                           className: B.footer,
                           children: [
-                            (0, r.jsx)(p.Button, {
+                            (0, r.jsx)(v.Button, {
                               className: B.backButton,
                               onClick: t,
-                              look: p.ButtonLooks.BLANK,
-                              children: (0, r.jsx)(p.Text, {
+                              look: v.ButtonLooks.BLANK,
+                              children: (0, r.jsx)(v.Text, {
                                 color: "header-primary",
                                 tag: "p",
                                 variant: "heading-md/semibold",
@@ -673,7 +673,7 @@
       function k(e) {
         var t, n;
         let { sku: i, appId: s } = e,
-          { analyticsLocations: a } = (0, x.default)(v.default.APP_STOREFRONT),
+          { analyticsLocations: a } = (0, x.default)(p.default.APP_STOREFRONT),
           l = (0, h.useStateFromStores)(
             [T.default],
             () => T.default.getForSKU(i.id),
@@ -681,7 +681,7 @@
           ),
           { price: o } = i;
         if (null == o) return null;
-        let c = (0, r.jsx)(p.Button, {
+        let c = (0, r.jsx)(v.Button, {
           onClick: () => {
             (0, j.default)({
               applicationId: s,
@@ -708,10 +708,10 @@
               ? n
               : void 0,
           onDetails: () => {
-            (0, p.openModal)(e => {
+            (0, v.openModal)(e => {
               var t, n;
               let { onClose: a, transitionState: o } = e;
-              return (0, r.jsxs)(p.ModalRoot, {
+              return (0, r.jsxs)(v.ModalRoot, {
                 transitionState: o,
                 children: [
                   (0, r.jsx)(u.ProductDetails, {
@@ -731,13 +731,13 @@
                         : void 0,
                     title: i.name,
                   }),
-                  (0, r.jsxs)(p.ModalFooter, {
+                  (0, r.jsxs)(v.ModalFooter, {
                     className: B.footer,
                     children: [
                       (0, r.jsx)("button", {
                         className: B.backButton,
                         onClick: a,
-                        children: (0, r.jsx)(p.Text, {
+                        children: (0, r.jsx)(v.Text, {
                           color: "header-primary",
                           tag: "p",
                           variant: "heading-md/semibold",
@@ -761,7 +761,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return b;
+            return S;
           },
         }),
         n("222007");
@@ -777,46 +777,45 @@
         f = n("20606"),
         h = n("907038"),
         m = n("539938"),
-        g = n("653047"),
-        p = n("552712"),
+        g = n("552712"),
         v = n("131233"),
-        x = n("49111"),
-        j = n("782340"),
-        S = n("454436");
-      function b(e) {
+        p = n("49111"),
+        x = n("782340"),
+        j = n("454436");
+      function S(e) {
         let {
             onClose: t,
             transitionState: n,
             appId: i,
             guildId: s,
-            subscriptionGroupListing: b,
+            subscriptionGroupListing: S,
           } = e,
+          b = (0, l.useStateFromStores)([u.default], () =>
+            u.default.getApplication(i)
+          ),
           [N, T] = a.useState(() => {
-            let e = u.default.getApplication(i);
-            if (null != e) return { status: 2, app: e };
-            let t = u.default.isFetchingApplication(i);
-            return t ? { status: 1 } : { status: 0 };
-          }),
-          R = 2 === N.status ? N.app : null;
+            let e = u.default.isFetchingApplication(i);
+            return e ? { status: 1 } : { status: 0 };
+          });
         a.useEffect(() => {
           0 === N.status &&
             (T({ status: 1 }),
             d.default
               .fetchApplication(i)
-              .then(e => {
-                T({ status: 2, app: g.default.createFromServer(e) });
+              .then(() => {
+                T({ status: 2 });
               })
               .catch(e => {
                 T({ status: 3, error: e.message });
               }));
         }, [i, N.status]);
-        let I = (0, l.useStateFromStoresArray)(
-          [p.default],
+        let R = (0, l.useStateFromStoresArray)(
+          [g.default],
           () =>
-            p.default.getForApplication(i).filter(e => {
+            g.default.getForApplication(i).filter(e => {
               switch (e.type) {
-                case x.SKUTypes.DURABLE:
-                case x.SKUTypes.CONSUMABLE:
+                case p.SKUTypes.DURABLE:
+                case p.SKUTypes.CONSUMABLE:
                   return !0;
                 default:
                   return !1;
@@ -828,13 +827,13 @@
           (a.useEffect(() => {
             (0, c.fetchAllStoreListingsForApplication)(i);
           }, [i]),
-          null == R)
+          null == b)
         )
           return null;
-        let E = j.default.Messages.STOREFRONT_TITLE.format({ appName: R.name });
+        let I = x.default.Messages.STOREFRONT_TITLE.format({ appName: b.name });
         return (0, r.jsxs)(o.ModalRoot, {
           transitionState: n,
-          "aria-label": E,
+          "aria-label": I,
           size: o.ModalSize.LARGE,
           children: [
             (0, r.jsx)(o.ModalHeader, {
@@ -845,20 +844,20 @@
                     "aria-hidden": !0,
                     color: f.default.INTERACTIVE_ACTIVE,
                   }),
-                  (0, r.jsx)(m.default.Title, { children: E }),
+                  (0, r.jsx)(m.default.Title, { children: I }),
                   (0, r.jsx)(o.ModalCloseButton, {
                     onClick: t,
-                    className: S.modalCloseButton,
+                    className: j.modalCloseButton,
                   }),
                 ],
               }),
             }),
             (0, r.jsx)(o.ModalContent, {
               children: (0, r.jsx)(v.default, {
-                app: R,
-                subscriptionGroupListing: b,
+                app: b,
+                subscriptionGroupListing: S,
                 guildId: s,
-                products: I,
+                products: R,
               }),
             }),
           ],
@@ -1144,8 +1143,8 @@
             description: n,
             imgSrc: h,
             subscriptionType: g,
-            title: p,
-            onClose: v,
+            title: v,
+            onClose: p,
           } = e,
           x = s.useRef(null),
           [j, S] = s.useState(!0),
@@ -1175,7 +1174,7 @@
                       (0, i.jsx)(d.default, { tagType: g }),
                       (0, i.jsx)(r.FocusRing, {
                         children: (0, i.jsx)("button", {
-                          onClick: v,
+                          onClick: p,
                           className: f.closeBtn,
                           type: "button",
                           children: (0, i.jsx)(a.CloseSmallIcon, {
@@ -1215,7 +1214,7 @@
                       color: "header-primary",
                       tag: "div",
                       variant: "heading-xl/semibold",
-                      children: p,
+                      children: v,
                     }),
                     (0, i.jsxs)("div", {
                       className: f.details,
@@ -1639,4 +1638,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9137d1b0d6328d244f29.js.map
+//# sourceMappingURL=3d4ab9bb13eb38046985.js.map

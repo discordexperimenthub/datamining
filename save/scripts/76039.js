@@ -26340,8 +26340,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275114", ", Version Hash: ")
-          .concat("3ab19b25581894aa1e0813df199e4a024fc17312")
+          .concat("275115", ", Version Hash: ")
+          .concat("90f5abdd17e16f8fa7aeef5cc2f39f28a2c9bf28")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29453,12 +29453,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275114"), "275114"));
+        let _ = parseInt(((e = "275115"), "275115"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275114"
+                "275115"
               )
             ),
             (_ = 0)),
@@ -36551,7 +36551,7 @@
         D = E("706530");
       let c = 12 * S.default.Millis.HOUR,
         d = 1 * S.default.Millis.MINUTE,
-        U = 30 * S.default.Millis.SECOND,
+        U = 1 * S.default.Millis.SECOND,
         M = 5 * S.default.Millis.SECOND,
         h = 1 * S.default.Millis.SECOND,
         P = e =>
@@ -36678,8 +36678,9 @@
               if (null == _ || null == _.config || null == _.userStatus)
                 return d;
               let { streamProgressSeconds: E } = _.userStatus,
-                t = 60 * _.config.streamDurationRequirementMinutes;
-              return t - E <= 0.1 * t ? U : d;
+                t = 60 * _.config.streamDurationRequirementMinutes,
+                o = (t - E) * S.default.Millis.SECOND;
+              return o <= d ? o + U : d;
             }),
             (this.terminateHeartbeat = e => {
               let { streamKey: _, sendTerminalHeartbeat: E } = e;
@@ -52103,4 +52104,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.5cc4547dd16a089a81d9.js.map
+//# sourceMappingURL=76039.459bf5ae2826a2b4c111.js.map

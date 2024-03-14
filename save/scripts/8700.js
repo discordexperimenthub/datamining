@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["71780"],
+  ["8700"],
   {
     652720: function (e, t, l) {
       "use strict";
@@ -54,40 +54,40 @@
           w = (0, s.useStateFromStores)([S.default], () =>
             S.default.getChannel(t)
           ),
-          F = (0, s.useStateFromStores)([_.default], () =>
+          H = (0, s.useStateFromStores)([_.default], () =>
             _.default.getGuild(null == w ? void 0 : w.getGuildId())
           ),
-          H = (0, s.useStateFromStores)([v.default], () =>
+          F = (0, s.useStateFromStores)([v.default], () =>
             v.default.getCurrentUser()
           ),
           U = (0, s.useStateFromStores)([I.default], () =>
             I.default.didAgree(null == w ? void 0 : w.guild_id)
           ),
-          k = (null == H ? void 0 : H.nsfwAllowed) === !0,
+          k = (null == F ? void 0 : F.nsfwAllowed) === !0,
           P = (0, R.default)(w),
           G = (0, s.useStateFromStores)(
             [x.default],
             () =>
-              (null == F ? void 0 : F.id) != null && x.default.isLurking(F.id),
-            [F]
+              (null == H ? void 0 : H.id) != null && x.default.isLurking(H.id),
+            [H]
           ),
           W = (0, m.default)(t),
           z = (0, s.useStateFromStores)([f.default], () => {
             var e;
             return null ===
               (e = f.default.getResourceForChannel(
-                null == F ? void 0 : F.id,
+                null == H ? void 0 : H.id,
                 t
               )) || void 0 === e
               ? void 0
               : e.title;
           }),
-          Y = a.useRef(!1);
+          V = a.useRef(!1);
         if (
           (a.useEffect(() => {
             null != w &&
-              !Y.current &&
-              ((Y.current = !0),
+              !V.current &&
+              ((V.current = !0),
               (0, o.trackWithMetadata)(b.AnalyticEvents.CHANNEL_OPENED, {
                 ...(0, o.getChannelOpenedMetadata)(w.id),
                 channel_view: y,
@@ -97,13 +97,13 @@
                 { channelId: w.id }
               ));
           }, [w, y]),
-          null == w || null == F)
+          null == w || null == H)
         )
           return null;
-        let V = [];
+        let Y = [];
         return (!G &&
-          V.push((0, n.jsx)(C.default, { channel: w }, "notifications")),
-        V.push(
+          Y.push((0, n.jsx)(C.default, { channel: w }, "notifications")),
+        Y.push(
           (0, n.jsx)(
             O.default.Icon,
             {
@@ -122,13 +122,13 @@
                   draftType: E.DraftType.ChannelMessage,
                 }),
                 (0, n.jsx)(O.default, {
-                  toolbar: V,
+                  toolbar: Y,
                   "aria-label":
                     L.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                   children: (0, N.renderTitle)({
                     channel: w,
                     channelName: W ? z : P,
-                    guild: F,
+                    guild: H,
                     inSidebar: !0,
                     handleContextMenu: e => {
                       (0, i.openContextMenuLazy)(e, async () => {
@@ -136,7 +136,7 @@
                           .el("229233")
                           .then(l.bind(l, "229233"));
                         return t =>
-                          (0, n.jsx)(e, { ...t, channel: w, guild: F });
+                          (0, n.jsx)(e, { ...t, channel: w, guild: H });
                       });
                     },
                     handleClick: () => {
@@ -160,7 +160,7 @@
                     j.default,
                     {
                       channel: w,
-                      guild: F,
+                      guild: H,
                       chatInputType: c.ChatInputTypes.SIDEBAR,
                     },
                     t
@@ -168,7 +168,7 @@
                 }),
               ],
             })
-          : (0, n.jsx)(d.default, { guild: F });
+          : (0, n.jsx)(d.default, { guild: H });
       }
     },
     469421: function (e, t, l) {
@@ -664,16 +664,16 @@
         y = l("50885"),
         B = l("921031"),
         w = l("685829"),
-        F = l("863636"),
-        H = l("380710"),
+        H = l("863636"),
+        F = l("380710"),
         U = l("469421"),
         k = l("126623"),
         P = l("15015"),
         G = l("771311"),
         W = l("667712"),
         z = l("469242"),
-        Y = l("653138"),
-        V = l("49111"),
+        V = l("653138"),
+        Y = l("49111"),
         Z = l("724210"),
         X = l("133335"),
         q = l("782340"),
@@ -793,7 +793,7 @@
                                           void 0 !== t
                                             ? t
                                             : (0, u.int2hex)(
-                                                V.DEFAULT_ROLE_COLOR
+                                                Y.DEFAULT_ROLE_COLOR
                                               ),
                                         className: K.roleDot,
                                       }),
@@ -826,10 +826,10 @@
               : null === (t = l.options) || void 0 === t
                 ? void 0
                 : t.filter(e => u.has(e.id)),
-          N = (0, H.getSelectedRoleIds)(C),
-          x = (0, H.getSelectedChannelIds)(C),
-          g = (0, c.useStateFromStoresArray)([F.default], () =>
-            F.default.getOnboardingResponsesForPrompt(s.id, l.id)
+          N = (0, F.getSelectedRoleIds)(C),
+          x = (0, F.getSelectedChannelIds)(C),
+          g = (0, c.useStateFromStoresArray)([H.default], () =>
+            H.default.getOnboardingResponsesForPrompt(s.id, l.id)
           ),
           { helpText: p, helpTextAdditional: E } = (0,
           k.useCustomizeCommunityPromptHelpText)({
@@ -867,7 +867,7 @@
             children: [
               l.isNew &&
                 (0, n.jsx)(L.TextBadge, {
-                  color: (0, S.getColor)(V.Color.BRAND_260),
+                  color: (0, S.getColor)(Y.Color.BRAND_260),
                   text: q.default.Messages.NEW,
                   className: K.newBadge,
                 }),
@@ -934,10 +934,10 @@
               : null === (t = l.options) || void 0 === t
                 ? void 0
                 : t.filter(e => u.has(e.id)),
-          N = (0, H.getSelectedRoleIds)(C),
-          x = (0, H.getSelectedChannelIds)(C),
-          g = (0, c.useStateFromStoresArray)([F.default], () =>
-            F.default.getOnboardingResponsesForPrompt(s.id, l.id)
+          N = (0, F.getSelectedRoleIds)(C),
+          x = (0, F.getSelectedChannelIds)(C),
+          g = (0, c.useStateFromStoresArray)([H.default], () =>
+            H.default.getOnboardingResponsesForPrompt(s.id, l.id)
           ),
           { helpText: p, helpTextAdditional: E } = (0,
           k.useCustomizeCommunityPromptHelpText)({
@@ -984,7 +984,7 @@
             children: [
               l.isNew &&
                 (0, n.jsx)(L.TextBadge, {
-                  color: (0, S.getColor)(V.Color.BRAND_260),
+                  color: (0, S.getColor)(Y.Color.BRAND_260),
                   text: q.default.Messages.NEW,
                   className: K.newBadge,
                 }),
@@ -1043,7 +1043,7 @@
           o = (0, N.default)("(min-width: 1344px)") && null != d,
           u = a.useCallback(() => {
             (0, _.transitionTo)(
-              V.Routes.CHANNEL(t, Z.StaticChannelRoute.CHANNEL_BROWSER)
+              Y.Routes.CHANNEL(t, Z.StaticChannelRoute.CHANNEL_BROWSER)
             ),
               null == l || l();
           }, [t, l]),
@@ -1060,7 +1060,7 @@
         a.useEffect(() => {
           if ((null == r ? void 0 : r.id) != null)
             !E.default.isFullServerPreview(r.id) &&
-              (F.default.shouldFetchPrompts(r.id) || h) &&
+              (H.default.shouldFetchPrompts(r.id) || h) &&
               (0, w.fetchOnboardingPrompts)(r.id);
         }, [null == r ? void 0 : r.id, h]),
           a.useEffect(() => {
@@ -1070,7 +1070,7 @@
                   (0, C.ackGuildFeature)(
                     r.id,
                     X.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
-                    F.default.ackIdForGuild(r.id)
+                    H.default.ackIdForGuild(r.id)
                   ),
                     B.default.updateOnboardingResponses(r.id);
                 };
@@ -1080,9 +1080,9 @@
           e => {
             if (null == r) return null;
             switch (e.type) {
-              case Y.OnboardingPromptType.MULTIPLE_CHOICE:
+              case V.OnboardingPromptType.MULTIPLE_CHOICE:
                 return (0, n.jsx)(en, { prompt: e, guild: r }, e.id);
-              case Y.OnboardingPromptType.DROPDOWN:
+              case V.OnboardingPromptType.DROPDOWN:
                 return (0, n.jsx)(el, { prompt: e, guild: r }, e.id);
               default:
                 (0, M.assertNever)(e.type);
@@ -1093,9 +1093,9 @@
         if (null == r) return null;
         if (0 === g.length) {
           let e = (0, S.getColor)(
-              s ? V.Color.PRIMARY_300 : V.Color.PRIMARY_500
+              s ? Y.Color.PRIMARY_300 : Y.Color.PRIMARY_500
             ),
-            t = (0, S.getColor)(s ? V.Color.PRIMARY_700 : V.Color.PRIMARY_230);
+            t = (0, S.getColor)(s ? Y.Color.PRIMARY_700 : Y.Color.PRIMARY_230);
           return (0, n.jsx)("div", {
             className: Q.chat,
             children: (0, n.jsx)("div", {
@@ -1558,7 +1558,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return H;
+            return F;
           },
         }),
         l("222007"),
@@ -1661,7 +1661,7 @@
             "separator-".concat(t)
           );
         }),
-        F = a.memo(function (e) {
+        H = a.memo(function (e) {
           let {
               channel: t,
               category: a,
@@ -1672,8 +1672,8 @@
               tooltipDirection: O = "right",
             } = e,
             { isSubscriptionGated: y } = (0, f.default)(t.id),
-            F = (0, A.useIsChecked)(s.id, t.id, a.id),
-            H = (0, A.useIsDisabled)(s.id, t.id, a.id),
+            H = (0, A.useIsChecked)(s.id, t.id, a.id),
+            F = (0, A.useIsDisabled)(s.id, t.id, a.id),
             U = (0, A.useDisabledTooltip)(s.id, a.id),
             k = (0, r.useStateFromStores)([E.default], () =>
               E.default.getActiveThreadCount(s.id, t.id)
@@ -1682,7 +1682,7 @@
               x.default.shouldIndicateNewChannel(s.id, t.id)
             ),
             G = e => {
-              if (!H) return e.stopPropagation(), v(s.id, t.id, a.id), !0;
+              if (!F) return e.stopPropagation(), v(s.id, t.id, a.id), !0;
             },
             W = e => {
               t.isGuildVocal()
@@ -1761,7 +1761,7 @@
                   .slice(0, -1)
               );
             })(t, k),
-            Y = e =>
+            V = e =>
               (e.stopPropagation(), M.has(t.type) || e.shiftKey)
                 ? ((0, g.transitionToGuild)(s.id, t.id), !0)
                 : t.isGuildStageVoice() || t.isGuildVoice()
@@ -1772,13 +1772,13 @@
                       baseChannelId: j.StaticChannelRoute.CHANNEL_BROWSER,
                     }),
                     !0),
-            V = b.default.Messages.CHANNEL_BROWSER_VIEW;
+            Y = b.default.Messages.CHANNEL_BROWSER_VIEW;
           t.isGuildStageVoice() || t.isGuildVoice()
-            ? (V = b.default.Messages.JOIN)
-            : t.isForumLikeChannel() && (V = b.default.Messages.OPEN);
-          let Z = H ? "text-muted" : "text-normal",
+            ? (Y = b.default.Messages.JOIN)
+            : t.isForumLikeChannel() && (Y = b.default.Messages.OPEN);
+          let Z = F ? "text-muted" : "text-normal",
             X = (0, u.useToken)(
-              H ? o.default.colors.TEXT_MUTED : o.default.colors.TEXT_NORMAL
+              F ? o.default.colors.TEXT_MUTED : o.default.colors.TEXT_NORMAL
             ).hex();
           return (0, n.jsxs)(n.Fragment, {
             children: [
@@ -1791,7 +1791,7 @@
                     className: i(L.channelRow, {
                       [L.firstChannel]: d,
                       [L.lastChannel]: h,
-                      [L.disabled]: H,
+                      [L.disabled]: F,
                     }),
                     ...e,
                     onClick: G,
@@ -1847,14 +1847,14 @@
                             color: u.ButtonColors.PRIMARY,
                             size: u.ButtonSizes.SMALL,
                             className: L.viewChannelButton,
-                            onClick: Y,
-                            children: V,
+                            onClick: V,
+                            children: Y,
                           }),
                           (0, n.jsx)(u.Checkbox, {
-                            "aria-checked": F,
-                            value: F,
+                            "aria-checked": H,
+                            value: H,
                             type: u.Checkbox.Types.INVERTED,
-                            disabled: H,
+                            disabled: F,
                             innerClassName: L.checkboxInner,
                             displayOnly: !0,
                           }),
@@ -1867,7 +1867,7 @@
             ],
           });
         });
-      function H(e) {
+      function F(e) {
         let {
             categories: t,
             guild: l,
@@ -1903,7 +1903,7 @@
               return null == r
                 ? null
                 : (0, n.jsx)(
-                    F,
+                    H,
                     {
                       category: i.channel,
                       channel: r.channel,
@@ -2073,6 +2073,48 @@
         });
       }
     },
+    641892: function (e, t, l) {
+      "use strict";
+      l.r(t),
+        l.d(t, {
+          default: function () {
+            return i;
+          },
+        });
+      var n = l("37983");
+      l("884691");
+      var a = l("469563"),
+        s = l("797350"),
+        i = (0, a.replaceIcon)(
+          function (e) {
+            let {
+              width: t = 16,
+              height: l = 16,
+              color: a = "currentColor",
+              className: s,
+              foreground: i,
+            } = e;
+            return (0, n.jsx)("svg", {
+              className: s,
+              width: t,
+              height: l,
+              viewBox: "0 0 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0, n.jsx)("path", {
+                className: i,
+                fill: a,
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.5 17.2916V3.74996H17.5V18.3333H4.5C3.3955 18.3333 2.5 17.4005 2.5 16.25V3.74996C2.5 2.59944 3.3955 1.66663 4.5 1.66663H15.5V15.2083H4.5C3.94775 15.2083 3.5 15.6742 3.5 16.25C3.5 16.8257 3.94775 17.2916 4.5 17.2916H16.5ZM11.9859 4.99996L7.94446 8.9957L6.35432 7.42204L5 8.75288L7.94427 11.6666L13.3333 6.33344L11.9859 4.99996Z",
+              }),
+            });
+          },
+          s.BookCheckIcon,
+          void 0,
+          { size: 16 }
+        );
+    },
   },
 ]);
-//# sourceMappingURL=826f348d5b688b3a4f5a.js.map
+//# sourceMappingURL=1c5865a229c0aa7eb901.js.map

@@ -4882,6 +4882,7 @@
         (el.PREMIUM_UPGRADE_STARTED = "premium_upgrade_started"),
         (el.CHANNEL_MEMBER_KICKED = "channel_member_kicked"),
         (el.CHANNEL_OPENED = "channel_opened"),
+        (el.CHANNEL_OPENED_CLICKSTREAM = "channel_opened_clickstream"),
         (el.NUO_TRANSITION = "nuo_transition"),
         (el.NUO_GUILD_DATA = "nuo_guild_info"),
         (el.SOUNDSHARE_ATTACHED = "soundshare_attached"),
@@ -17302,4 +17303,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.d778291c93d164e4f495.js.map
+//# sourceMappingURL=7273.afab92e16ebe8052366d.js.map

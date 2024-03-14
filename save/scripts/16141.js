@@ -30586,7 +30586,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return R;
+            return j;
           },
         });
       var a = n("37983"),
@@ -30599,39 +30599,40 @@
         d = n("264732"),
         c = n("716241"),
         f = n("701916"),
-        h = n("679653"),
-        m = n("176347"),
-        p = n("850391"),
-        E = n("557809"),
-        S = n("144491"),
-        g = n("42203"),
-        C = n("474643"),
-        _ = n("305961"),
-        I = n("800762"),
-        T = n("664336"),
-        v = n("503220"),
-        x = n("648564"),
-        N = n("49111"),
-        A = n("782340"),
-        M = n("370835");
-      function R(e) {
+        h = n("918105"),
+        m = n("679653"),
+        p = n("176347"),
+        E = n("850391"),
+        S = n("557809"),
+        g = n("144491"),
+        C = n("42203"),
+        _ = n("474643"),
+        I = n("305961"),
+        T = n("800762"),
+        v = n("664336"),
+        x = n("503220"),
+        N = n("648564"),
+        A = n("49111"),
+        M = n("782340"),
+        R = n("370835");
+      function j(e) {
         let {
             channelId: t,
             baseChannelId: s,
-            channelViewSource: R = "Split View",
+            channelViewSource: j = "Split View",
           } = e,
-          j = (0, r.useStateFromStores)([g.default], () =>
-            g.default.getChannel(t)
+          L = (0, r.useStateFromStores)([C.default], () =>
+            C.default.getChannel(t)
           ),
-          L = (0, r.useStateFromStores)([_.default], () =>
-            _.default.getGuild(null == j ? void 0 : j.getGuildId())
+          y = (0, r.useStateFromStores)([I.default], () =>
+            I.default.getGuild(null == L ? void 0 : L.getGuildId())
           ),
-          y = (0, h.default)(j);
+          O = (0, m.default)(L);
         (function (e) {
           let t = (0, r.useStateFromStores)(
-            [I.default],
+            [T.default],
             () =>
-              null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id))
+              null != e && !i.isEmpty(T.default.getVoiceStatesForChannel(e.id))
           );
           l.useEffect(() => {
             t &&
@@ -30640,66 +30641,70 @@
                 type: "SIDEBAR_CLOSE",
                 baseChannelId: e.parent_id,
               }),
-              (0, S.transitionToThread)(
+              (0, g.transitionToThread)(
                 e,
-                x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN
+                N.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN
               ));
           }, [t, e]);
-        })(j);
-        let O = l.useRef(!1);
+        })(L);
+        let P = l.useRef(!1);
         if (
           (l.useEffect(() => {
-            if (null == j || O.current) return;
-            O.current = !0;
+            if (null == L || P.current) return;
+            P.current = !0;
             let e = (0, f.collectThreadMetadata)(
-              g.default.getChannel(j.id),
+              C.default.getChannel(L.id),
               !0
             );
-            (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
+            (0, c.trackWithMetadata)(A.AnalyticEvents.CHANNEL_OPENED, {
               ...e,
-              ...(0, c.getChannelOpenedMetadata)(j.id),
-              channel_view: R,
-            });
-          }, [j, R]),
-          null == j || null == L)
+              ...(0, c.getChannelOpenedMetadata)(L.id),
+              channel_view: j,
+            }),
+              (0, h.trackClickstream)(
+                A.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM,
+                { channelId: L.id }
+              );
+          }, [L, j]),
+          null == L || null == y)
         )
           return null;
-        let P = (0, a.jsx)(v.default, { channel: j, baseChannelId: s });
+        let D = (0, a.jsx)(x.default, { channel: L, baseChannelId: s });
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsx)(d.default, {
-              channel: j,
-              draftType: C.DraftType.ChannelMessage,
+              channel: L,
+              draftType: _.DraftType.ChannelMessage,
             }),
-            (0, a.jsx)(T.default, {
-              toolbar: P,
-              "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-              children: (0, E.renderTitle)({
-                channel: j,
-                channelName: y,
-                guild: L,
+            (0, a.jsx)(v.default, {
+              toolbar: D,
+              "aria-label": M.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+              children: (0, S.renderTitle)({
+                channel: L,
+                channelName: O,
+                guild: y,
                 inSidebar: !0,
                 handleContextMenu: function (e) {
                   (0, o.openContextMenuLazy)(e, async () => {
                     let { default: e } = await n
                       .el("994827")
                       .then(n.bind(n, "994827"));
-                    return t => (0, a.jsx)(e, { ...t, channel: j });
+                    return t => (0, a.jsx)(e, { ...t, channel: L });
                   });
                 },
                 handleClick: function () {
-                  null != j && (0, S.transitionToChannel)(j.id);
+                  null != L && (0, g.transitionToChannel)(L.id);
                 },
               }),
             }),
             (0, a.jsx)("div", {
-              className: M.chat,
+              className: R.chat,
               children: (0, a.jsx)(
-                m.default,
+                p.default,
                 {
-                  channel: j,
-                  guild: L,
-                  chatInputType: p.ChatInputTypes.SIDEBAR,
+                  channel: L,
+                  guild: y,
+                  chatInputType: E.ChatInputTypes.SIDEBAR,
                 },
                 t
               ),
@@ -42510,4 +42515,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14bdae3ec4ff145baa81.js.map
+//# sourceMappingURL=a6107959b1956d86ce10.js.map

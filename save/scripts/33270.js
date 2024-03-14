@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275319",
+                  buildNumber: "275335",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -42685,6 +42685,7 @@
           },
         }),
         n("222007"),
+        n("70102"),
         n("702976");
       var a = n("37983");
       n("884691");
@@ -42967,12 +42968,15 @@
                       ? e({ image_url: l.url })
                       : t(l);
                   },
-                  () => t()
+                  () => t(Error("Upload canceled"))
                 );
               }).catch(e => {
+                var t;
                 throw new N.default(
                   { errorCode: D.RPCErrors.UNKNOWN_ERROR },
-                  "Failed to upload image"
+                  null !== (t = null == e ? void 0 : e.message) && void 0 !== t
+                    ? t
+                    : "Failed to upload image"
                 );
               });
             },
@@ -52781,4 +52785,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f85d5c3fd1bda34a8020.js.map
+//# sourceMappingURL=14e93da5e28d19a66ab9.js.map

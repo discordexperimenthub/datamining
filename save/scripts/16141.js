@@ -205,27 +205,6 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
-    289867: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return l;
-          },
-        });
-      var a = n("913144"),
-        l = {
-          toggleMembersSection() {
-            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
-          },
-          toggleProfilePanelSection() {
-            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
-          },
-          toggleSummariesSection() {
-            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
-          },
-        };
-    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -9260,10 +9239,10 @@
       n.r(t),
         n.d(t, {
           isContentGroup: function () {
-            return m;
+            return p;
           },
           default: function () {
-            return p;
+            return E;
           },
         });
       var a = n("37983"),
@@ -9274,48 +9253,51 @@
         u = n("826684"),
         o = n("523215"),
         d = n("447313"),
-        c = n("782340"),
-        f = n("611800"),
-        h = n("559571");
-      function m(e) {
+        c = n("49111"),
+        f = n("782340"),
+        h = n("611800"),
+        m = n("559571");
+      function p(e) {
         return (null == e ? void 0 : e.id) === d.MEMBER_LIST_CONTENT_GROUP_ID;
       }
-      var p = l.memo(function (e) {
+      var E = l.memo(function (e) {
         let { title: t, onToggleExpand: n, expanded: l, expandedCount: d } = e;
         return (0, a.jsxs)(u.default, {
-          className: h.membersGroup,
+          className: m.membersGroup,
           children: [
             (0, a.jsx)(r.HiddenVisually, {
-              children: c.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+              children: f.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                 title: t,
                 count: d,
               }),
             }),
-            (0, a.jsxs)("div", {
-              "aria-hidden": !0,
-              className: f.headerContainer,
-              children: [
-                (0, a.jsxs)("div", {
-                  className: f.header,
-                  children: [
-                    (0, a.jsxs)("span", { children: [t, " — ", d] }),
-                    (0, a.jsx)(o.default, {}),
-                  ],
-                }),
-                d > 3 &&
-                  (0, a.jsx)(r.Clickable, {
-                    onClick: n,
-                    tag: "span",
-                    className: f.toggleExpandButton,
-                    children: l
-                      ? (0, a.jsx)(s.ChevronSmallDownIcon, {
-                          className: f.toggleExpandIcon,
-                        })
-                      : (0, a.jsx)(i.ChevronSmallRightIcon, {
-                          className: f.toggleExpandIcon,
-                        }),
+            (0, a.jsx)(r.Clickable, {
+              onClick: d > 3 ? n : c.NOOP,
+              tag: "span",
+              className: h.toggleExpandButton,
+              children: (0, a.jsxs)("div", {
+                "aria-hidden": !0,
+                className: h.headerContainer,
+                children: [
+                  (0, a.jsxs)("div", {
+                    className: h.header,
+                    children: [
+                      (0, a.jsxs)("span", { children: [t, " — ", d] }),
+                      (0, a.jsx)(o.default, {}),
+                    ],
                   }),
-              ],
+                  d > 3 &&
+                    (0, a.jsx)(a.Fragment, {
+                      children: l
+                        ? (0, a.jsx)(s.ChevronSmallDownIcon, {
+                            className: h.toggleExpandIcon,
+                          })
+                        : (0, a.jsx)(i.ChevronSmallRightIcon, {
+                            className: h.toggleExpandIcon,
+                          }),
+                    }),
+                ],
+              }),
             }),
           ],
         });
@@ -9341,6 +9323,7 @@
             children: e =>
               (0, a.jsx)(s.Anchor, {
                 ...e,
+                onClick: e => e.stopPropagation(),
                 href: "https://support.discord.com/hc/articles/22045487931799-Recent-Activity-in-Members-List",
                 style: { height: "12px" },
                 children: (0, a.jsx)(l.CircleInformationIcon, {
@@ -30822,79 +30805,6 @@
         });
       }
     },
-    893980: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          trackProfilePanelViewed: function () {
-            return u;
-          },
-          trackProfilePanelToggled: function () {
-            return o;
-          },
-        });
-      var a = n("373469"),
-        l = n("824563"),
-        s = n("27618"),
-        i = n("599110"),
-        r = n("49111");
-      let u = e => {
-          let {
-            displayProfile: t,
-            isMobile: n,
-            loadDurationMs: a,
-            activity: l,
-            customStatusActivity: s,
-            status: u,
-          } = e;
-          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
-            has_mobile_indicator: n,
-            has_activity:
-              null != l &&
-              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
-            has_game_activity:
-              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
-            load_duration_ms: a,
-            profile_user_status: u,
-            has_custom_status: null != s,
-            has_profile_effect: null != t.profileEffectId,
-            ...d(t),
-          });
-        },
-        o = (e, t) => {
-          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
-            is_profile_open: t,
-            ...d(e),
-          });
-        },
-        d = e => {
-          var t;
-          if (null == e) return {};
-          let n = e.userId,
-            i = null != a.default.getAnyStreamForUser(n),
-            u = l.default.findActivity(n, e => {
-              let { type: t } = e;
-              return i
-                ? t === r.ActivityTypes.PLAYING
-                : t !== r.ActivityTypes.CUSTOM_STATUS;
-            }),
-            o = null == u ? void 0 : u.assets,
-            d = s.default.isFriend(n);
-          return {
-            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
-            void 0 !== t
-              ? t
-              : null == o
-                ? void 0
-                : o.small_image),
-            is_friend: d,
-            viewed_profile_user_id: n,
-            profile_has_nitro_customization: e.hasPremiumCustomization(),
-            profile_has_theme_color_customized: e.hasThemeColors(),
-            profile_has_theme_animation: null != e.popoutAnimationParticleType,
-          };
-        };
-    },
     69682: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -42515,4 +42425,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a6107959b1956d86ce10.js.map
+//# sourceMappingURL=90af406648e1423bf9ea.js.map

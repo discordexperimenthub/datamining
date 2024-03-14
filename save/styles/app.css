@@ -31385,6 +31385,7 @@ html .progress__4ef76 {
 }
 .toggleExpandButton__22eac {
   height: 16px;
+  cursor: pointer;
 }
 .toggleExpandIcon_ab767d {
   width: 16px;
@@ -40194,8 +40195,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -110707,4 +110708,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ef9e956ed7597543c7be.css.map*/
+/*# sourceMappingURL=app.a6461e3ffddcc7114ad1.css.map*/

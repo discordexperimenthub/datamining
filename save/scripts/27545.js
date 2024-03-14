@@ -274,7 +274,7 @@
         "Mac OS X",
       ].map(e => ({ label: e, value: e }));
       function O(e) {
-        var t, O, j, b, L;
+        var t, O, b, j, L;
         let { transitionState: C, onClose: P } = e,
           U = l.useRef(null),
           y = l.useRef(null),
@@ -505,15 +505,15 @@
                                 (L =
                                   null == (t = H)
                                     ? void 0
-                                    : null === (b = t.features) || void 0 === b
+                                    : null === (j = t.features) || void 0 === j
                                       ? void 0
                                       : null ===
-                                            (j = b.filter(
+                                            (b = j.filter(
                                               e => "" !== (0, E.getFeatureId)(e)
-                                            )) || void 0 === j
+                                            )) || void 0 === b
                                         ? void 0
                                         : null ===
-                                              (O = j.map(e => {
+                                              (O = b.map(e => {
                                                 var t;
                                                 return {
                                                   label:
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "275237",
-          versionHash: "35e730aee071825e55a52410c69022d6df505120",
+          buildNumber: "275259",
+          versionHash: "6dc5740f92bfde36cbbb9447ad9eff22c309a085",
         };
       }
       a.r(t),
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1a47d33f6bbc52c9bd18.js.map
+//# sourceMappingURL=162cbebc8da23a1693bc.js.map

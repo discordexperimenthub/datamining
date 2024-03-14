@@ -16162,6 +16162,10 @@
         wrapper: "wrapper__7a5c1",
       };
     },
+    904620: function (e, t, n) {
+      "use strict";
+      e.exports = { clickable: "clickable__69e24", icon: "icon__07bff" };
+    },
     114602: function (e, t, n) {
       "use strict";
       e.exports = {
@@ -24682,6 +24686,7 @@
         innerButton: "innerButton__2a740",
         inventoryContainer: "inventoryContainer_f4883b",
         inventoryHeader: "inventoryHeader_de1495",
+        inventoryHelpIcon: "inventoryHelpIcon_d2b3ca",
         inventoryItems: "inventoryItems__62cfb",
         noTextToSpeech: "noTextToSpeech__377ed",
         noTextToSpeechButton: "noTextToSpeechButton__999af",

@@ -76,8 +76,8 @@
           ]);
         let [m, L] = l.useState(_.current),
           [f, R] = l.useState(""),
-          [C, T] = l.useState(n.PollLayoutTypes.DEFAULT),
-          [N, O] = l.useState(!1),
+          [C, N] = l.useState(n.PollLayoutTypes.DEFAULT),
+          [T, O] = l.useState(!1),
           [h, I] = l.useState(c.PollDurations.ONE_DAY),
           [P, x] = l.useState({}),
           [p, g] = l.useState(!1),
@@ -223,12 +223,12 @@
               channel: e,
               question: f,
               answers: M,
-              allowMultiSelect: N,
+              allowMultiSelect: T,
               duration: h,
               layout: C,
               onClose: t,
             });
-          }, [f, M, N, h, v, e, C, t]),
+          }, [f, M, T, h, v, e, C, t]),
           q = l.useCallback(() => {
             K() && X();
           }, [X, K]);
@@ -237,8 +237,8 @@
           question: f,
           setQuestion: R,
           selectedLayoutType: C,
-          setSelectedLayoutType: T,
-          allowMultiSelect: N,
+          setSelectedLayoutType: N,
+          allowMultiSelect: T,
           setAllowMultiSelect: O,
           duration: h,
           setDuration: I,
@@ -374,8 +374,8 @@
         f = a("476765"),
         R = a("832132"),
         C = a("46829"),
-        T = a("228220"),
-        N = a("562228"),
+        N = a("228220"),
+        T = a("562228"),
         O = a("714411"),
         h = a("356581"),
         I = a("491096"),
@@ -452,7 +452,7 @@
           {
             emoji: L,
             isLoadingMedia: f,
-            hasUpload: T,
+            hasUpload: N,
             mediaUrl: O,
             mediaFilename: I,
           } = (0, h.default)({
@@ -461,7 +461,7 @@
             image: s,
           }),
           M = i === o.PollLayoutTypes.DEFAULT,
-          v = T || null != L,
+          v = N || null != L,
           D = n.useCallback(() => {
             c(E);
           }, [c, E]),
@@ -470,9 +470,9 @@
           }, []),
           b = n.useMemo(
             () =>
-              T
+              N
                 ? p.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
-                    imageName: (0, N.filterOutUUID)(I),
+                    imageName: (0, T.filterOutUUID)(I),
                     answerNumber: E + 1,
                   })
                 : null != L
@@ -483,7 +483,7 @@
                   : p.default.Messages.CREATE_POLL_ADD_EMOJI_ARIA.format({
                       answerNumber: E + 1,
                     }),
-            [T, L, E, I]
+            [N, L, E, I]
           ),
           w = n.useCallback(
             e => {
@@ -521,7 +521,7 @@
                   : g.spinnerWrapperImageOnly,
               })
             : (0, l.jsx)(j, {
-                hasUpload: T,
+                hasUpload: N,
                 mediaUrl: O,
                 mediaFilename: I,
                 imageClassName: r(g.media, M ? g.gifDefault : g.gifJumbo),
@@ -629,7 +629,7 @@
             onAnswerTextChange: A,
             onEmojiSelect: R,
             onEmojiRemove: C,
-            canRemoveAnswer: N,
+            canRemoveAnswer: T,
             onRemoveAnswer: h,
             error: P,
             inputRef: x,
@@ -666,7 +666,7 @@
           children:
             _ === o.PollLayoutTypes.DEFAULT
               ? (0, l.jsxs)("div", {
-                  className: r(g.answerRow, { [g.hasDeleteButton]: N }),
+                  className: r(g.answerRow, { [g.hasDeleteButton]: T }),
                   children: [
                     (0, l.jsxs)("div", {
                       className: r(g.defaultTextInputWrapper, {
@@ -700,7 +700,7 @@
                         (0, l.jsx)(D, { value: s.text, id: S }),
                       ],
                     }),
-                    N &&
+                    T &&
                       (0, l.jsx)(u.Clickable, {
                         onClick: () => h(c),
                         className: g.removeAnswerButtonDefault,
@@ -708,7 +708,7 @@
                           p.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format(
                             { answerNumber: c + 1 }
                           ),
-                        children: (0, l.jsx)(T.default, {
+                        children: (0, l.jsx)(N.default, {
                           className: g.trashIcon,
                           "aria-hidden": !0,
                         }),
@@ -788,7 +788,7 @@
                             ),
                           onClick: () => h(c),
                           dangerous: !0,
-                          children: (0, l.jsx)(T.default, {
+                          children: (0, l.jsx)(N.default, {
                             "aria-hidden": !0,
                           }),
                         }),
@@ -825,8 +825,8 @@
         f = a("741138"),
         R = a("362415"),
         C = a("418298"),
-        T = a("612805"),
-        N = a("233365"),
+        N = a("612805"),
+        T = a("233365"),
         O = a("491096"),
         h = a("660516"),
         I = a("782340"),
@@ -947,7 +947,7 @@
           el = n.useCallback(() => {
             if ((0, m.isPollCreationEmpty)(p, f, S)) ea();
             else {
-              (0, N.default)({
+              (0, T.default)({
                 title: I.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
                 body: I.default.Messages
                   .CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
@@ -1012,6 +1012,7 @@
               children: [
                 null != V &&
                   (0, l.jsx)(u.FormErrorBlock, {
+                    className: P.apiErrorBlock,
                     children: V.getAnyErrorMessage(),
                   }),
                 (0, l.jsx)(g, {
@@ -1021,7 +1022,7 @@
                   inputRef: Z,
                 }),
                 _ &&
-                  (0, l.jsx)(T.default, {
+                  (0, l.jsx)(N.default, {
                     selectedLayoutType: S,
                     onSelectedLayoutType: v,
                   }),
@@ -1343,4 +1344,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e3500278f7ce317a5398.js.map
+//# sourceMappingURL=c0cfe33232d48a99494b.js.map

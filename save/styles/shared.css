@@ -21936,14 +21936,14 @@ span.button__4f306.disabled_dc5630 {
 }
 .emailVerificationModal_e48dfa .title__78b45 {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
   margin-top: 100px;
   color: var(--header-primary);
 }
 .emailVerificationModal_e48dfa .body_b7d0a4 {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   text-align: center;
   color: var(--header-secondary);
 }
@@ -24015,4 +24015,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.04ad4dca30644dc3b812.css.map*/
+/*# sourceMappingURL=shared.9be530552aae3d5f240a.css.map*/

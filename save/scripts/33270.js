@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275230",
+                  buildNumber: "275237",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -7878,7 +7878,14 @@
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         null != I && (clearTimeout(I), (I = null)),
           null != C && (clearInterval(C), (C = null)),
-          null != S && e && (clearTimeout(S), (S = null));
+          null != S &&
+            e &&
+            (f.default.addBreadcrumb({
+              message:
+                "Heartbeat correctly scheduled. Clearing 10s check timeout",
+            }),
+            clearTimeout(S),
+            (S = null));
       }
       async function g() {
         let e = Date.now(),
@@ -52774,4 +52781,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21e61db6c150baa21c6e.js.map
+//# sourceMappingURL=93b24c2295fc6ccbca51.js.map

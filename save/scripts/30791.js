@@ -409,9 +409,9 @@
               introDelay: I = c.ENTRY_DELAY,
             } = e,
             _ = u.useRef(null),
-            [S, h] = u.useState([]);
+            [S, N] = u.useState([]);
           (0, A.default)(p);
-          let [N, O] = u.useState(0),
+          let [h, O] = u.useState(0),
             [C, y] = u.useState(0),
             { accessibilityLabel: F } = p,
             [g, L] = u.useState(-I),
@@ -423,7 +423,7 @@
               L(t => t + e);
             });
           u.useEffect(() => {
-            L(-I), h((0, E.sortEffectLayers)(p.effects));
+            L(-I), N((0, E.sortEffectLayers)(p.effects));
           }, [p]),
             u.useEffect(() => {
               let e = 0,
@@ -445,9 +445,9 @@
                   !x.current &&
                   (D(),
                   p.animationType === f.AnimationTypes.PERSISTENT
-                    ? L(T === f.RestartMethod.FromStart ? 0 : N)
+                    ? L(T === f.RestartMethod.FromStart ? 0 : h)
                     : L(0));
-            }, [i, M, N, o, P, D, x, p.animationType, s, T]),
+            }, [i, M, h, o, P, D, x, p.animationType, s, T]),
             (0, n.jsx)("div", {
               ref: _,
               className: l(m.profileEffects, { [m.hovered]: i && a }),
@@ -883,8 +883,9 @@
         (u.LUNAR_NEW_YEAR = "1202069709281828935"),
         (u.ELEMENTS = "1207046915880124426"),
         (u.ANIME_V2 = "1212565175790473246"),
-        (u.SPECIAL_EVENTS = "1217175518781243583");
+        (u.SPECIAL_EVENTS = "1217175518781243583"),
+        (u.SPRINGTOONS = "1217622942175727736");
     },
   },
 ]);
-//# sourceMappingURL=30791.62506550f5c252b9bca2.js.map
+//# sourceMappingURL=30791.3330a7487a797de2909a.js.map

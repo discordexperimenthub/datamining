@@ -239,11 +239,11 @@
             v = f && C(5, 5, h),
             P = a(e),
             N = s(P > 1 ? 32 : 32 * P),
-            L = s(P > 1 ? 32 / P : 32),
-            R = new Uint8Array(N * L * 4),
+            R = s(P > 1 ? 32 / P : 32),
+            L = new Uint8Array(N * R * 4),
             y = [],
             b = [];
-          for (let e = 0, a = 0; e < L; e++)
+          for (let e = 0, a = 0; e < R; e++)
             for (let s = 0; s < N; s++, a += 4) {
               let i = o,
                 l = c,
@@ -252,7 +252,7 @@
               for (let e = 0, r = n(S, f ? 5 : 3); e < r; e++)
                 y[e] = u((t / N) * (s + 0.5) * e);
               for (let r = 0, a = n(p, f ? 5 : 3); r < a; r++)
-                b[r] = u((t / L) * (e + 0.5) * r);
+                b[r] = u((t / R) * (e + 0.5) * r);
               for (let e = 0, t = 0; e < p; e++)
                 for (
                   let r = e ? 0 : 1, a = 2 * b[e];
@@ -272,12 +272,12 @@
               let _ = i - (2 / 3) * l,
                 I = (3 * i - _ + m) / 2,
                 C = I - m;
-              (R[a] = n(0, 255 * r(1, I))),
-                (R[a + 1] = n(0, 255 * r(1, C))),
-                (R[a + 2] = n(0, 255 * r(1, _))),
-                (R[a + 3] = n(0, 255 * r(1, h)));
+              (L[a] = n(0, 255 * r(1, I))),
+                (L[a + 1] = n(0, 255 * r(1, C))),
+                (L[a + 2] = n(0, 255 * r(1, _))),
+                (L[a + 3] = n(0, 255 * r(1, h)));
             }
-          return { w: N, h: L, rgba: R };
+          return { w: N, h: R, rgba: L };
         })(e);
         return n(t.w, t.h, t.rgba);
       }
@@ -491,7 +491,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return R;
+            return L;
           },
         }),
         r("222007");
@@ -519,7 +519,7 @@
         v = r("646718"),
         P = r("782340"),
         N = r("446812");
-      function L(e) {
+      function R(e) {
         let {
             user: t,
             categories: r,
@@ -532,8 +532,8 @@
           } = e,
           {
             pendingAvatarDecoration: A,
-            setPendingAvatarDecoration: L,
-            savedAvatarDecoration: R,
+            setPendingAvatarDecoration: R,
+            savedAvatarDecoration: L,
           } = (0, E.default)({
             analyticsLocations: s,
             isTryItOut: h,
@@ -543,10 +543,10 @@
             var e;
             if (null != m) return m;
             if (void 0 !== A) return A;
-            if (null == R || 0 === r.size) return null;
+            if (null == L || 0 === r.size) return null;
             let t = (0, d.getAvatarDecorations)(u, r);
             return null !==
-              (e = t.find(e => (0, C.isEqualAvatarDecoration)(e, R))) &&
+              (e = t.find(e => (0, C.isEqualAvatarDecoration)(e, L))) &&
               void 0 !== e
               ? e
               : null;
@@ -557,9 +557,9 @@
           U = I.default.canUseCollectibles(t),
           O = n.useRef(null),
           F = (0, S.default)(s),
-          k = (0, C.isEqualAvatarDecoration)(y, void 0 === A ? R : A),
+          k = (0, C.isEqualAvatarDecoration)(y, void 0 === A ? L : A),
           D = () => {
-            L(y), o();
+            R(y), o();
           },
           H = n.useCallback(() => {
             o(),
@@ -649,7 +649,7 @@
           ],
         });
       }
-      function R(e) {
+      function L(e) {
         let {
             transitionState: t,
             analyticsLocations: r,
@@ -669,7 +669,7 @@
             isFetchingCategories: v,
             isFetchingPurchases: P,
           } = (0, m.default)(),
-          R = v || (P && 0 === T.size);
+          L = v || (P && 0 === T.size);
         return (
           n.useEffect(() => {
             _.default.track(A.AnalyticEvents.OPEN_MODAL, {
@@ -692,13 +692,13 @@
                 children: (0, a.jsx)(i.ModalRoot, {
                   transitionState: t,
                   className: N.modal,
-                  size: R ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
-                  children: R
+                  size: L ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
+                  children: L
                     ? (0, a.jsx)(i.Spinner, {
                         className: N.spinner,
                         type: i.Spinner.Type.SPINNING_CIRCLE,
                       })
-                    : (0, a.jsx)(L, {
+                    : (0, a.jsx)(R, {
                         user: E,
                         guild: p,
                         categories: g,
@@ -963,7 +963,7 @@
         v = r("782340"),
         P = r("585872");
       let N = () => 80,
-        L = e => {
+        R = e => {
           let {
             children: t,
             className: r,
@@ -978,7 +978,7 @@
             children: t,
           });
         },
-        R = e => {
+        L = e => {
           let {
               user: t,
               avatarDecoration: r,
@@ -994,7 +994,7 @@
             h = (0, o.default)([m.default], () => m.default.isItemViewed(r)),
             g = C.default.canUseCollectibles(t),
             N = s === T.Section.PREMIUM_PURCHASE && !g,
-            [R, y] = n.useState(i);
+            [L, y] = n.useState(i);
           n.useEffect(() => {
             i && y(!0);
           }, [i]);
@@ -1006,7 +1006,7 @@
               size: 80,
               animateOnHover: !x,
             });
-          return (0, a.jsxs)(L, {
+          return (0, a.jsxs)(R, {
             className: N ? P.decorationGridItemChurned : void 0,
             innerRef: null != u ? u : b,
             isSelected: i,
@@ -1022,7 +1022,7 @@
                   s === T.Section.PURCHASE ||
                   (s === T.Section.PREMIUM_PURCHASE && g);
                 if (e) return null;
-                let t = !h && !i && !R;
+                let t = !h && !i && !L;
                 return t
                   ? (0, a.jsx)(I.PremiumBadge, {
                       className: P.newBadge,
@@ -1074,7 +1074,7 @@
             return (0, i.match)(E[d])
               .with(T.NONE_ITEM, () =>
                 (0, a.jsxs)(
-                  L,
+                  R,
                   {
                     style: { ...f },
                     isSelected: null === n,
@@ -1096,7 +1096,7 @@
               )
               .with(T.SHOP_ITEM, () =>
                 (0, a.jsxs)(
-                  L,
+                  R,
                   {
                     style: f,
                     onSelect: l,
@@ -1115,7 +1115,7 @@
               .otherwise(e => {
                 let r = (null == n ? void 0 : n.id) === e.id;
                 return (0, a.jsx)(
-                  R,
+                  L,
                   {
                     style: { ...f },
                     user: t,
@@ -1954,8 +1954,9 @@
         (n.LUNAR_NEW_YEAR = "1202069709281828935"),
         (n.ELEMENTS = "1207046915880124426"),
         (n.ANIME_V2 = "1212565175790473246"),
-        (n.SPECIAL_EVENTS = "1217175518781243583");
+        (n.SPECIAL_EVENTS = "1217175518781243583"),
+        (n.SPRINGTOONS = "1217622942175727736");
     },
   },
 ]);
-//# sourceMappingURL=54f0c7c6bcaaecd029c9.js.map
+//# sourceMappingURL=387232b63fdf35b0f9df.js.map

@@ -7497,12 +7497,15 @@
             [P.AuditLogChangeKeys.AUTO_MODERATION_ACTIONS]:
               v.default.Messages
                 .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ACTIONS_UPDATE,
-            [P.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: {
-              true: v.default.Messages
-                .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE,
-              false:
-                v.default.Messages
-                  .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE,
+            [P.AuditLogChangeKeys.AUTO_MODERATION_ENABLED]: e => {
+              var t;
+              let E =
+                null !== (t = e.newValue) && void 0 !== t ? t : e.oldValue;
+              return !0 === E
+                ? v.default.Messages
+                    .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_ENABLED_UPDATE
+                : v.default.Messages
+                    .GUILD_SETTINGS_AUDIT_LOG_AUTOMOD_RULE_DISABLED_UPDATE;
             },
             [P.AuditLogChangeKeys.AUTO_MODERATION_EXEMPT_ROLES]:
               v.default.Messages
@@ -9182,4 +9185,4 @@
     },
   },
 ]);
-//# sourceMappingURL=502652b77f0db0c4492c.js.map
+//# sourceMappingURL=3b02d519d5bc746a001a.js.map

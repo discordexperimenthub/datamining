@@ -174,7 +174,9 @@
         PAGINATION_PAGE_LABEL: "Page {pageNumber}",
         PAGINATION_SLIDE_LABEL: "Slide {pageNumber}",
         MUTE: "Mute",
+        MUTE_ALT: "Turn Off Microphone",
         UNMUTE: "Unmute",
+        UNMUTE_ALT: "Turn On Microphone",
         DEAFEN: "Deafen",
         UNDEAFEN: "Undeafen",
         SEARCH: "Search",
@@ -26364,8 +26366,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275662", ", Version Hash: ")
-          .concat("7818ed69ceb9a0f1e13a57b7e42dedfc1c5829e3")
+          .concat("275679", ", Version Hash: ")
+          .concat("6533d3a5c5d012265eee82c2b86c1f81a770e00c")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29477,12 +29479,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275662"), "275662"));
+        let _ = parseInt(((e = "275679"), "275679"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275662"
+                "275679"
               )
             ),
             (_ = 0)),
@@ -52133,4 +52135,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.8d8865a5f1f13fd3355b.js.map
+//# sourceMappingURL=76039.8d45610024e3aabf2849.js.map

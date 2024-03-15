@@ -3770,10 +3770,52 @@
                   "avatar"
                 ),
                 $
-                  ? (0, a.jsx)(c.default, { user: b, guild: V }, "decoration")
+                  ? (0, a.jsx)(
+                      c.default,
+                      {
+                        sectionTitle: (0, a.jsxs)(a.Fragment, {
+                          children: [
+                            v.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
+                            (0, a.jsx)(r.Tooltip, {
+                              text: v.default.Messages
+                                .PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                              children: e =>
+                                (0, a.jsx)(I.default, {
+                                  ...e,
+                                  className: L.nitroWheel,
+                                }),
+                            }),
+                          ],
+                        }),
+                        user: b,
+                        guild: V,
+                      },
+                      "decoration"
+                    )
                   : null,
                 $
-                  ? (0, a.jsx)(T.default, { user: b, guild: V }, "effect")
+                  ? (0, a.jsx)(
+                      T.default,
+                      {
+                        sectionTitle: (0, a.jsxs)(a.Fragment, {
+                          children: [
+                            v.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                            (0, a.jsx)(r.Tooltip, {
+                              text: v.default.Messages
+                                .PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                              children: e =>
+                                (0, a.jsx)(I.default, {
+                                  ...e,
+                                  className: L.nitroWheel,
+                                }),
+                            }),
+                          ],
+                        }),
+                        user: b,
+                        guild: V,
+                      },
+                      "effect"
+                    )
                   : null,
                 (0, a.jsx)(
                   E.default,
@@ -9278,48 +9320,49 @@
             user: t,
             guild: s,
             className: l,
-            forcedDivider: E = !1,
-            withTutorial: g = !1,
-            isTryItOutFlow: N = !1,
+            sectionTitle: E,
+            forcedDivider: g = !1,
+            withTutorial: N = !1,
+            isTryItOutFlow: I = !1,
           } = e,
-          { analyticsLocations: I } = (0, o.default)(),
-          p = null != s,
+          { analyticsLocations: p } = (0, o.default)(),
+          C = null != s,
           {
-            userAvatarDecoration: C,
-            guildAvatarDecoration: A,
-            pendingAvatarDecoration: O,
-            pendingErrors: x,
+            userAvatarDecoration: A,
+            guildAvatarDecoration: O,
+            pendingAvatarDecoration: x,
+            pendingErrors: M,
           } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s),
-          M = (0, c.default)("enable_avatar_decoration_uploads"),
-          R = n.useCallback(
+          R = (0, c.default)("enable_avatar_decoration_uploads"),
+          D = n.useCallback(
             () =>
               (0, u.openAvatarDecorationModal)({
-                analyticsLocations: I,
-                isTryItOutFlow: N,
+                analyticsLocations: p,
+                isTryItOutFlow: I,
                 guild: s,
               }),
-            [I, N, s]
+            [p, I, s]
           ),
-          D = N || void 0 !== O ? null != O : (p ? A : C) != null,
-          v = g ? S.default : r.Button;
+          v = I || void 0 !== x ? null != x : (C ? O : A) != null,
+          L = N ? S.default : r.Button;
         return (0, a.jsxs)(f.default, {
           className: l,
-          forcedDivider: E,
+          forcedDivider: g,
           hasBackground: !0,
-          title: _.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
-          errors: x,
+          title: E,
+          errors: M,
           children: [
             (0, a.jsxs)("div", {
               className: m.buttonsContainer,
               children: [
-                (0, a.jsx)(v, {
+                (0, a.jsx)(L, {
                   size: r.Button.Sizes.SMALL,
-                  onClick: R,
-                  className: i({ [m.buttonHighlighted]: g }),
+                  onClick: D,
+                  className: i({ [m.buttonHighlighted]: N }),
                   children:
                     _.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION,
                 }),
-                D &&
+                v &&
                   (0, a.jsx)(r.Button, {
                     className: m.removeButton,
                     color: r.Button.Colors.PRIMARY,
@@ -9339,7 +9382,7 @@
                   }),
               ],
             }),
-            t.isStaff() && M && (0, a.jsx)(h, { user: t }),
+            t.isStaff() && R && (0, a.jsx)(h, { user: t }),
           ],
         });
       }
@@ -9736,64 +9779,65 @@
             user: t,
             guild: s,
             className: l,
-            forcedDivider: N = !1,
-            withTutorial: I = !1,
-            showBorder: p = !1,
-            isTryItOutFlow: C = !1,
-            initialSelectedEffectId: A,
+            sectionTitle: N,
+            forcedDivider: I = !1,
+            withTutorial: p = !1,
+            showBorder: C = !1,
+            isTryItOutFlow: A = !1,
+            initialSelectedEffectId: O,
           } = e,
-          O = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s),
-          x = S.default.canUsePremiumProfileCustomization(t),
-          { analyticsLocations: M } = (0, o.default)(),
-          { pendingProfileEffectId: R, errors: D } = (0,
+          x = (0, E.useGlobalOrGuildIdentityProfileEffect)(t, s),
+          M = S.default.canUsePremiumProfileCustomization(t),
+          { analyticsLocations: R } = (0, o.default)(),
+          { pendingProfileEffectId: D, errors: v } = (0,
           E.useGlobalOrGuildIdentityPendingProfileEffect)(s),
-          v = n.useCallback(
+          L = n.useCallback(
             () =>
               (0, d.openProfileEffectModal)({
-                analyticsLocations: M,
-                initialSelectedEffectId: A,
+                analyticsLocations: R,
+                initialSelectedEffectId: O,
                 guild: s,
               }),
-            [M, A, s]
+            [R, O, s]
           );
         n.useEffect(() => {
-          x &&
+          M &&
             c.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
               type: m.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-              location_stack: M,
+              location_stack: R,
             });
-        }, [x, M]);
-        let L = null != s,
-          P = C || void 0 !== R ? null != R : null != O,
-          j = I ? u.default : r.Button;
+        }, [M, R]);
+        let P = null != s,
+          j = A || void 0 !== D ? null != D : null != x,
+          b = p ? u.default : r.Button;
         return (0, a.jsx)(T.default, {
-          forcedDivider: N,
+          forcedDivider: I,
           borderType: f.FeatureBorderTypes.PREMIUM,
           hasBackground: !0,
-          title: g.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
-          showBorder: p,
-          errors: D,
+          title: N,
+          showBorder: C,
+          errors: v,
           className: l,
           children: (0, a.jsxs)("div", {
             className: h.buttonsContainer,
             children: [
-              (0, a.jsx)(j, {
+              (0, a.jsx)(b, {
                 size: r.Button.Sizes.SMALL,
-                onClick: v,
-                className: i({ [h.buttonHighlighted]: I }),
+                onClick: L,
+                className: i({ [h.buttonHighlighted]: p }),
                 children:
                   g.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT,
               }),
-              P &&
+              j &&
                 (0, a.jsx)(r.Button, {
                   className: h.removeButton,
                   color: r.Button.Colors.PRIMARY,
                   look: r.Button.Looks.LINK,
                   size: r.Button.Sizes.SMALL,
                   onClick: function () {
-                    (0, E.setNewPendingProfileEffectId)(null, O, s);
+                    (0, E.setNewPendingProfileEffectId)(null, x, s);
                   },
-                  children: L
+                  children: P
                     ? g.default.Messages
                         .USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT
                     : g.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT,
@@ -10149,6 +10193,8 @@
                           isTryItOutFlow: !0,
                           className: y.customizationSection,
                           user: G,
+                          sectionTitle:
+                            U.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
                         },
                         "decoration"
                       ),
@@ -10159,6 +10205,8 @@
                           isTryItOutFlow: !0,
                           initialSelectedEffectId: $,
                           user: G,
+                          sectionTitle:
+                            U.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
                         },
                         "effect"
                       ),
@@ -11890,9 +11938,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "275472",
+          E = "275476",
           T =
-            ((e = "0849a1a12f87b060549b2f685800ed4c328fa6cb"),
+            ((e = "a6610c38e8e5a391b715f9211e83c3760f398209"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -27413,8 +27461,23 @@
               },
               "avatar"
             ),
-            (0, a.jsx)(S.default, { user: b }, "decoration"),
-            (0, a.jsx)(g.default, { user: b }, "effect"),
+            (0, a.jsx)(
+              S.default,
+              {
+                user: b,
+                sectionTitle:
+                  R.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
+              },
+              "decoration"
+            ),
+            (0, a.jsx)(
+              g.default,
+              {
+                user: b,
+                sectionTitle: R.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+              },
+              "effect"
+            ),
             K
               ? (0, a.jsxs)(a.Fragment, {
                   children: [
@@ -32002,4 +32065,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1bc8e100c11c86ca89fc.js.map
+//# sourceMappingURL=99a7e85e646c3dd4d921.js.map

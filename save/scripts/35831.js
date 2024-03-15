@@ -11978,9 +11978,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "275679",
+          E = "275686",
           T =
-            ((e = "6533d3a5c5d012265eee82c2b86c1f81a770e00c"),
+            ((e = "7e0c975dfebccc7b83fd4a22da39424d6b727bca"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -22686,7 +22686,7 @@
                 note: Y.default.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format(
                   {
                     helpdeskArticle: y.default.getArticleURL(
-                      w.HelpdeskArticles.DATA_PRIVACY_CONTROLS
+                      w.HelpdeskArticles.DATA_USED_TO_IMPROVE_DISCORD
                     ),
                   }
                 ),
@@ -22700,7 +22700,7 @@
                 note: Y.default.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format(
                   {
                     helpdeskArticle: y.default.getArticleURL(
-                      w.HelpdeskArticles.DATA_PRIVACY_CONTROLS
+                      w.HelpdeskArticles.DATA_USED_FOR_RECOMMENDED
                     ),
                   }
                 ),
@@ -22711,35 +22711,18 @@
                     .DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE,
               }),
               (0, a.jsx)(E.FormSwitch, {
-                value: !s && t,
-                note: (0, a.jsxs)("div", {
-                  className: K.dependentSetting,
-                  children: [
-                    Y.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE,
-                    s
-                      ? (0, a.jsx)("div", {
-                          className: i(W.marginTop8, K.feedback),
-                          children:
-                            Y.default.Messages.DROPS_REQUEST_FEEDBACK_OPT_OUT.format(
-                              {
-                                feedbackURL:
-                                  "https://survey.alchemer.com/s3/7043738/Discord-Drops-Opt-Out-Survey?user_id=".concat(
-                                    this.props.currentUser.id
-                                  ),
-                              }
-                            ),
-                        })
-                      : null,
-                  ],
-                }),
-                disabled: !t,
+                value: !s,
+                note: Y.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format(
+                  {
+                    helpdeskArticle: y.default.getArticleURL(
+                      w.HelpdeskArticles.DATA_PRIVACY_CONTROLS
+                    ),
+                  }
+                ),
                 onChange: this.handleChangeDropsOptedOut,
-                children: (0, a.jsxs)("div", {
-                  className: i(K.betaTagContainer, K.dependentSetting),
-                  children: [
+                children: (0, a.jsx)("div", {
+                  children:
                     Y.default.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT,
-                    (0, a.jsx)(I.default, { className: K.betaTagIcon }),
-                  ],
                 }),
               }),
               (0, a.jsx)(E.FormTitle, {
@@ -22972,8 +22955,7 @@
               );
             }),
             (this.handleChangeDropsOptedOut = () => {
-              this.props.personalization &&
-                k.DropsOptedOut.updateSetting(!this.props.dropsOptedOut);
+              k.DropsOptedOut.updateSetting(!this.props.dropsOptedOut);
             }),
             (this.handleChangeDefaultMessageRequestRestricted = e => {
               this.setState({ defaultMessageRequestRestricted: !e }, () =>
@@ -23015,8 +22997,7 @@
                       (0, f.setConsents)(
                         [],
                         [w.Consents.PERSONALIZATION]
-                      ).catch(Q),
-                        k.DropsOptedOut.updateSetting(!0);
+                      ).catch(Q);
                     },
                     body: Y.default.Messages.PERSONALIZATION_DISABLE_MODAL_BODY,
                   });
@@ -32125,4 +32106,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0ad628f239fb12de0610.js.map
+//# sourceMappingURL=511dc32b39df834c3dc0.js.map

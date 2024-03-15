@@ -6312,7 +6312,9 @@
           "19580873036695#h_01HGXEYG130EZKGQQ03A3ZHFEY"),
         (eK.WIN7_8_DEPRECATE = "20470973046295"),
         (eK.MACOS_17_18_DEPRECATE = "20900540446231"),
-        (eK.QUESTS_LEARN_MORE = "9146392276375");
+        (eK.QUESTS_LEARN_MORE = "9146392276375"),
+        (eK.DATA_USED_TO_IMPROVE_DISCORD = "21864805694999"),
+        (eK.DATA_USED_FOR_RECOMMENDED = "21864004415511");
       let RL = _ => "https://www.youtube.com/embed/".concat(_),
         RD = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
         RS = "https://discordapp.com/mweb-handoff";
@@ -17309,4 +17311,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.0a973858eba12b3cd376.js.map
+//# sourceMappingURL=7273.bf4f7cba6929299d2f34.js.map

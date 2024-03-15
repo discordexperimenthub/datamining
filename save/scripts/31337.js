@@ -1558,19 +1558,19 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return z;
+            return K;
           },
           useContextIndexState: function () {
-            return q;
+            return z;
           },
           useGuildIndexState: function () {
-            return X;
+            return q;
           },
           useUserIndexState: function () {
-            return Q;
+            return X;
           },
           useDiscoveryState: function () {
-            return Z;
+            return Q;
           },
         }),
         n("222007"),
@@ -1592,154 +1592,151 @@
         _ = n("872173"),
         I = n("42203"),
         T = n("305961"),
-        A = n("162771"),
-        E = n("697218"),
-        C = n("599110"),
-        N = n("589777"),
-        g = n("369010"),
-        M = n("342564"),
-        O = n("9566"),
-        S = n("972620"),
-        h = n("524768"),
-        y = n("389153"),
-        v = n("123373"),
-        D = n("217946"),
-        R = n("317041"),
-        L = n("49111");
-      let P = new r.default("ApplicationCommandIndexStore"),
-        U = Symbol("currentUser"),
-        b = Symbol("stale"),
-        B = Symbol("current"),
-        x = Object.freeze({
+        A = n("697218"),
+        E = n("599110"),
+        C = n("589777"),
+        N = n("369010"),
+        g = n("342564"),
+        M = n("9566"),
+        O = n("972620"),
+        S = n("524768"),
+        h = n("389153"),
+        y = n("123373"),
+        v = n("217946"),
+        D = n("317041"),
+        R = n("49111");
+      let L = new r.default("ApplicationCommandIndexStore"),
+        P = Symbol("currentUser"),
+        U = Symbol("stale"),
+        b = Symbol("current"),
+        B = Object.freeze({
           descriptors: [],
           commands: [],
           sectionedCommands: [],
           loading: !0,
         }),
-        F = Object.freeze({
-          serverVersion: B,
+        x = Object.freeze({
+          serverVersion: b,
           fetchState: { fetching: !1 },
-          result: { sections: {}, sectionIdsByBotId: {}, version: B },
+          result: { sections: {}, sectionIdsByBotId: {}, version: b },
         }),
-        H = Object.freeze({ serverVersion: b, fetchState: { fetching: !1 } }),
-        w = { sensitivity: "accent", numeric: !0 };
-      function G(e) {
+        F = Object.freeze({ serverVersion: U, fetchState: { fetching: !1 } }),
+        H = { sensitivity: "accent", numeric: !0 };
+      function w(e) {
         switch (e.type) {
           case "guild":
             return e.guildId;
           case "channel":
             return e.channelId;
           case "user":
-            return U;
+            return P;
         }
       }
-      function k(e, t) {
+      function G(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          i = G(e),
-          l = K.indices[i];
+          i = w(e),
+          l = j.indices[i];
         return (
           null != l
             ? ("fetchState" in t &&
                 l.fetchState.fetching &&
                 l.fetchState.abort.abort(),
-              (K.indices[i] = { ...l, ...t }))
+              (j.indices[i] = { ...l, ...t }))
             : n &&
-              (K.indices[i] = {
-                serverVersion: b,
+              (j.indices[i] = {
+                serverVersion: U,
                 fetchState: { fetching: !1 },
                 ...t,
               }),
           l
         );
       }
-      function Y(e) {
-        let t = G(e),
-          n = K.indices[t];
+      function k(e) {
+        let t = w(e),
+          n = j.indices[t];
         (null == n ? void 0 : n.fetchState.fetching) &&
           n.fetchState.abort.abort(),
-          delete K.indices[t];
+          delete j.indices[t];
+      }
+      function Y() {
+        for (let e of Object.values(j.indices))
+          e.fetchState.fetching && e.fetchState.abort.abort();
+        j.indices = {};
       }
       function W() {
-        for (let e of Object.values(K.indices))
-          e.fetchState.fetching && e.fetchState.abort.abort();
-        K.indices = {};
+        G({ type: "user" }, { serverVersion: U });
       }
-      function V() {
-        k({ type: "user" }, { serverVersion: b });
-      }
-      class j extends u.default.Store {
+      class V extends u.default.Store {
         initialize() {
           this.waitFor(m.default),
             this.syncWith([m.default], () => {
               !(function () {
                 let e = m.default.locale;
-                e !== K.oldLocale &&
-                  (W(),
-                  (K.collator = new Intl.Collator(e, {
+                e !== j.oldLocale &&
+                  (Y(),
+                  (j.collator = new Intl.Collator(e, {
                     sensitivity: "accent",
                     numeric: !0,
                   })),
-                  (K.oldLocale = e));
+                  (j.oldLocale = e));
               })();
             });
         }
         getContextState(e) {
           var t, n;
-          return null != e && et(e)
+          return null != e && ee(e)
             ? null !==
                 (n =
                   this.indices[
                     null !== (t = e.guild_id) && void 0 !== t ? t : e.id
                   ]) && void 0 !== n
               ? n
-              : H
-            : F;
+              : F
+            : x;
         }
         getUserState() {
           var e;
-          let t = A.default.getGuildId();
-          return (0, y.isInUserAppExperiment)(
-            t,
+          return (0, h.isUserInUserAppExperiment)(
             { location: "getUserState" },
             { autoTrackExposure: !1 }
           )
-            ? null !== (e = this.indices[U]) && void 0 !== e
+            ? null !== (e = this.indices[P]) && void 0 !== e
               ? e
-              : H
-            : F;
+              : F
+            : x;
         }
         query(e, t, n) {
-          let i = E.default.getCurrentUser();
-          if (null == i) return x;
+          let i = A.default.getCurrentUser();
+          if (null == i) return B;
           let l = this.getContextState(e),
             a = this.getUserState(),
-            o = (0, v.buildPermissionContext)(e, t.commandType),
+            o = (0, y.buildPermissionContext)(e, t.commandType),
             s = !1 !== t.applicationCommands && o.hasBaseAccessPermissions,
             r = !1;
           if (n.allowFetch) {
-            let t = s && et(e);
+            let t = s && ee(e);
             t &&
-              (C.default.track(
-                L.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
-                { miss: null == l.result, size: Object.keys(K.indices).length }
+              (E.default.track(
+                R.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
+                { miss: null == l.result, size: Object.keys(j.indices).length }
               ),
-              en(l) &&
+              et(l) &&
                 (null != e.guild_id
-                  ? (0, O.requestApplicationCommandIndex)({
+                  ? (0, M.requestApplicationCommandIndex)({
                       type: "guild",
                       guildId: e.guild_id,
                     })
-                  : (0, O.requestApplicationCommandIndex)({
+                  : (0, M.requestApplicationCommandIndex)({
                       type: "channel",
                       channelId: e.id,
                     }),
                 (r = !0))),
-              (0, y.isInUserAppExperiment)(e.guild_id, { location: "query" }) &&
-                en(a) &&
-                ((0, O.requestApplicationCommandIndex)({ type: "user" }),
+              (0, h.isUserInUserAppExperiment)({ location: "query" }) &&
+                et(a) &&
+                ((0, M.requestApplicationCommandIndex)({ type: "user" }),
                 (r = !0));
           }
-          let u = $({
+          let u = J({
             permissionContext: o,
             text: t.text,
             allowApplicationCommands: s,
@@ -1755,29 +1752,29 @@
           super(...e),
             (this.indices = {}),
             (this.oldLocale = m.default.locale),
-            (this.collator = new Intl.Collator(m.default.locale, w));
+            (this.collator = new Intl.Collator(m.default.locale, H));
         }
       }
-      j.displayName = "ApplicationCommandIndexStore";
-      let K = new j(d.default, {
-        LOGOUT: W,
+      V.displayName = "ApplicationCommandIndexStore";
+      let j = new V(d.default, {
+        LOGOUT: Y,
         CONNECTION_OPEN: function () {
-          for (let e of Object.values(K.indices)) e.serverVersion = b;
+          for (let e of Object.values(j.indices)) e.serverVersion = U;
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
           var t;
           let { target: n, start: i } = e;
-          if (en(null !== (t = K.indices[G(n)]) && void 0 !== t ? t : H)) {
+          if (et(null !== (t = j.indices[w(n)]) && void 0 !== t ? t : F)) {
             let e = new AbortController();
-            k(n, { fetchState: { fetching: !0, abort: e } }, !0),
-              (0, O.fetchApplicationCommandIndex)(n, i, e);
+            G(n, { fetchState: { fetching: !0, abort: e } }, !0),
+              (0, M.fetchApplicationCommandIndex)(n, i, e);
           }
         },
         APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: function (e) {
           var t, n;
           let { target: i, index: l } = e,
             a =
-              null === (t = E.default.getCurrentUser()) || void 0 === t
+              null === (t = A.default.getCurrentUser()) || void 0 === t
                 ? void 0
                 : t.id;
           if (null == a) return !1;
@@ -1787,12 +1784,12 @@
           for (let e of l.applications) {
             if (null == e.bot && null != e.bot_id) {
               s[e.bot_id] = e.id;
-              let t = E.default.getUser(e.bot_id);
+              let t = A.default.getUser(e.bot_id);
               null != t ? (e.bot = t) : r.add(e.bot_id);
             } else null != e.bot && (s[e.bot.id] = e.id);
             let t = {
               descriptor: {
-                ...(0, y.getApplicationCommandSection)(
+                ...(0, h.getApplicationCommandSection)(
                   (function (e) {
                     return {
                       description: e.description,
@@ -1805,7 +1802,7 @@
                 ),
                 permissions:
                   null != e.permissions
-                    ? (0, f.keyPermissions)(ea(e.permissions, a))
+                    ? (0, f.keyPermissions)(el(e.permissions, a))
                     : void 0,
                 botId: e.bot_id,
               },
@@ -1816,7 +1813,7 @@
           for (let e of ("guild" === i.type &&
             r.size > 0 &&
             c.default.requestMembersById(i.guildId, [...r]),
-          (0, y.buildApplicationCommands)(
+          (0, h.buildApplicationCommands)(
             l.application_commands.map(e =>
               (function (e, t) {
                 var n, i, l, a, o;
@@ -1838,11 +1835,11 @@
                       (o =
                         null === (n = e.options) || void 0 === n
                           ? void 0
-                          : n.map(ei)) && void 0 !== o
+                          : n.map(en)) && void 0 !== o
                       ? o
                       : [],
                   permissions:
-                    null != e.permissions ? ea(e.permissions, t) : void 0,
+                    null != e.permissions ? el(e.permissions, t) : void 0,
                 };
                 return (
                   e.description !== e.description_default &&
@@ -1856,13 +1853,13 @@
           ))) {
             let t = o[e.applicationId];
             if (null == t) {
-              P.error("Command has no matching application");
+              L.error("Command has no matching application");
               continue;
             }
             t.commands[e.id] = e;
           }
-          let u = null !== (n = l.version) && void 0 !== n ? n : B;
-          k(i, {
+          let u = null !== (n = l.version) && void 0 !== n ? n : b;
+          G(i, {
             serverVersion: u,
             result: { sections: o, sectionIdsByBotId: s, version: u },
             fetchState: { fetching: !1 },
@@ -1870,33 +1867,33 @@
         },
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
           let { target: t } = e;
-          k(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });
+          G(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });
         },
         APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function (e) {
           let t,
             { channelId: n, guildId: i } = e;
-          k(
+          G(
             (t =
               null != i
                 ? { type: "guild", guildId: i }
                 : { type: "channel", channelId: n }),
-            { serverVersion: b }
+            { serverVersion: U }
           );
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          Y({ type: "channel", channelId: t.id });
+          k({ type: "channel", channelId: t.id });
         },
         GUILD_DELETE: function (e) {
           let { guild: t } = e;
-          Y({ type: "guild", guildId: t.id });
+          k({ type: "guild", guildId: t.id });
         },
         GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function (e) {
           var t;
           let { guildId: n, version: i } = e,
-            l = k(
+            l = G(
               { type: "guild", guildId: n },
-              { serverVersion: null != i ? i : b }
+              { serverVersion: null != i ? i : U }
             ),
             a =
               null == l
@@ -1908,16 +1905,16 @@
             for (let e in a) {
               let t = I.default.getDMFromUserId(e);
               null != t &&
-                k({ type: "channel", channelId: t }, { serverVersion: b });
+                G({ type: "channel", channelId: t }, { serverVersion: U });
             }
         },
         GUILD_MEMBERS_CHUNK: function (e) {
           let { guildId: t, members: n } = e;
           return (function (e, t) {
             var n;
-            let i = G({ type: "guild", guildId: e }),
+            let i = w({ type: "guild", guildId: e }),
               l =
-                null === (n = K.indices[i]) || void 0 === n ? void 0 : n.result;
+                null === (n = j.indices[i]) || void 0 === n ? void 0 : n.result;
             if (null == l) return !1;
             let a = !1;
             return (
@@ -1932,7 +1929,7 @@
                     null != i.descriptor.application,
                     "Bot's index section has no application info"
                   );
-                let o = (0, y.getApplicationCommandSection)({
+                let o = (0, h.getApplicationCommandSection)({
                   ...i.descriptor.application,
                   bot: t,
                 });
@@ -1942,33 +1939,33 @@
             );
           })(t, n);
         },
-        USER_APPLICATION_UPDATE: V,
-        USER_APPLICATION_REMOVE: V,
+        USER_APPLICATION_UPDATE: W,
+        USER_APPLICATION_REMOVE: W,
       });
-      var z = K;
-      function q(e, t, n) {
+      var K = j;
+      function z(e, t, n) {
         let [i, l] = a.useState(!0),
-          o = (0, u.useStateFromStoresObject)([K], () => K.getContextState(e));
+          o = (0, u.useStateFromStoresObject)([j], () => j.getContextState(e));
         return (
           a.useEffect(() => {
             if (i && null != e) {
               if (n) {
-                let n = t && et(e);
+                let n = t && ee(e);
                 n &&
-                  (C.default.track(
-                    L.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
+                  (E.default.track(
+                    R.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
                     {
                       miss: null == o.result,
-                      size: Object.keys(K.indices).length,
+                      size: Object.keys(j.indices).length,
                     }
                   ),
-                  en(o) &&
+                  et(o) &&
                     (null != e.guild_id
-                      ? (0, O.requestApplicationCommandIndex)({
+                      ? (0, M.requestApplicationCommandIndex)({
                           type: "guild",
                           guildId: e.guild_id,
                         })
-                      : (0, O.requestApplicationCommandIndex)({
+                      : (0, M.requestApplicationCommandIndex)({
                           type: "channel",
                           channelId: e.id,
                         })));
@@ -1979,26 +1976,26 @@
           o
         );
       }
-      function X(e, t) {
+      function q(e, t) {
         let [n, i] = a.useState(!0),
-          l = (0, u.useStateFromStoresObject)([K], () => {
+          l = (0, u.useStateFromStoresObject)([j], () => {
             var t;
-            return null !== (t = K.indices[e]) && void 0 !== t ? t : H;
+            return null !== (t = j.indices[e]) && void 0 !== t ? t : F;
           });
         return (
           a.useEffect(() => {
             n &&
               null != e &&
               (t &&
-                (C.default.track(
-                  L.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
+                (E.default.track(
+                  R.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH,
                   {
                     miss: null == l.result,
-                    size: Object.keys(K.indices).length,
+                    size: Object.keys(j.indices).length,
                   }
                 ),
-                en(l) &&
-                  (0, O.requestApplicationCommandIndex)({
+                et(l) &&
+                  (0, M.requestApplicationCommandIndex)({
                     type: "guild",
                     guildId: e,
                   })),
@@ -2007,40 +2004,39 @@
           l
         );
       }
-      function Q(e, t) {
+      function X(e, t) {
         let [n, i] = a.useState(!0),
-          l = (0, u.useStateFromStoresObject)([K], () => K.getUserState()),
-          o = (0, u.useStateFromStores)([A.default], A.default.getGuildId),
-          s = (0, y.useIsInUserAppExperiment)(o, {
+          l = (0, u.useStateFromStoresObject)([j], () => j.getUserState()),
+          o = (0, h.useIsUserInUserAppExperiment)({
             location: "useUserIndexState",
           });
         return (
           a.useEffect(() => {
             n &&
               (t &&
-                en(l) &&
+                et(l) &&
                 e &&
-                s &&
-                (0, O.requestApplicationCommandIndex)({ type: "user" }),
+                o &&
+                (0, M.requestApplicationCommandIndex)({ type: "user" }),
               i(!1));
-          }, [l, t, e, s, n]),
+          }, [l, t, e, o, n]),
           l
         );
       }
-      function Z(e, t, n, i) {
+      function Q(e, t, n, i) {
         let {
             descriptors: l,
             commands: o,
             sectionedCommands: s,
             loading: r,
           } = (function (e, t, n) {
-            let i = (0, v.usePermissionContext)(e, t.commandType),
+            let i = (0, y.usePermissionContext)(e, t.commandType),
               l = !1 !== t.applicationCommands && i.hasBaseAccessPermissions,
-              o = q(e, l, n.allowFetch),
-              s = Q(l, n.allowFetch);
+              o = z(e, l, n.allowFetch),
+              s = X(l, n.allowFetch);
             return a.useMemo(
               () =>
-                $({
+                J({
                   permissionContext: i,
                   text: t.text,
                   allowApplicationCommands: l,
@@ -2064,7 +2060,7 @@
               ]
             );
           })(e, n, i),
-          u = (0, g.useTopCommands)({ channel: e, guild: t });
+          u = (0, N.useTopCommands)({ channel: e, guild: t });
         return a.useMemo(() => {
           if (!i.includeFrecency || 0 === u.length)
             return {
@@ -2077,22 +2073,22 @@
             a = o
               .filter(e => u.includes(e.id))
               .sort((e, t) => {
-                let i = M.default.getScoreWithoutLoadingLatest(n, e),
-                  l = M.default.getScoreWithoutLoadingLatest(n, t);
+                let i = g.default.getScoreWithoutLoadingLatest(n, e),
+                  l = g.default.getScoreWithoutLoadingLatest(n, t);
                 return l - i;
               })
-              .splice(0, R.DISCOVERY_COMMANDS_FRECENCY_LIMIT);
+              .splice(0, D.DISCOVERY_COMMANDS_FRECENCY_LIMIT);
           return 0 === a.length
             ? { descriptors: l, commands: o, sectionedCommands: s, loading: r }
             : {
                 descriptors: [
-                  N.BUILT_IN_SECTIONS[R.BuiltInSectionId.FRECENCY],
+                  C.BUILT_IN_SECTIONS[D.BuiltInSectionId.FRECENCY],
                   ...l,
                 ],
                 commands: a.concat(o),
                 sectionedCommands: [
                   {
-                    section: N.BUILT_IN_SECTIONS[R.BuiltInSectionId.FRECENCY],
+                    section: C.BUILT_IN_SECTIONS[D.BuiltInSectionId.FRECENCY],
                     data: a,
                   },
                   ...s,
@@ -2101,32 +2097,32 @@
               };
         }, [r, i.includeFrecency, u, e, t, o, l, s]);
       }
-      let J = Object.freeze({
+      let Z = Object.freeze({
         applications: { useFrecency: !1, useScore: !1 },
         commands: { useFrecency: !0, useScore: !0 },
       });
-      function $(e) {
+      function J(e) {
         let {
             permissionContext: t,
             contextState: n,
             userState: i,
             text: l,
-            builtIns: a = S.BuiltInCommandFilter.ALLOW,
+            builtIns: a = O.BuiltInCommandFilter.ALLOW,
             allowApplicationCommands: o = !0,
             allowEmptySections: r = !1,
-            scoreMethod: u = S.ScoreMethod.NONE,
-            sortOptions: d = J,
+            scoreMethod: u = O.ScoreMethod.NONE,
+            sortOptions: d = Z,
           } = e,
           { commandType: c } = t,
           f = null == l ? void 0 : l.toLowerCase(),
           m = null == f ? void 0 : f.split(" "),
-          I = a === S.BuiltInCommandFilter.ONLY_TEXT,
+          I = a === O.BuiltInCommandFilter.ONLY_TEXT,
           A =
-            a !== S.BuiltInCommandFilter.DENY
-              ? (0, N.getBuiltInCommands)(c, !0, I)
+            a !== O.BuiltInCommandFilter.DENY
+              ? (0, C.getBuiltInCommands)(c, !0, I)
               : [],
           E = [],
-          C = {
+          N = {
             permissionContext: t,
             query: f,
             splitQuery: m,
@@ -2134,21 +2130,21 @@
             scoreMethod: u,
           };
         if (o) {
-          var g, O, h, y;
+          var M, S, h, y;
           let e =
               null !==
                 (h =
-                  null === (g = n.result) || void 0 === g
+                  null === (M = n.result) || void 0 === M
                     ? void 0
-                    : g.sections) && void 0 !== h
+                    : M.sections) && void 0 !== h
                 ? h
                 : {},
             t =
               null !==
                 (y =
-                  null === (O = i.result) || void 0 === O
+                  null === (S = i.result) || void 0 === S
                     ? void 0
-                    : O.sections) && void 0 !== y
+                    : S.sections) && void 0 !== y
                 ? y
                 : {},
             l = [...Object.keys(e), ...Object.keys(t).filter(t => !(t in e))];
@@ -2173,7 +2169,7 @@
                   ((i = o.descriptor), (l = Object.values(o.commands)));
             s(null != i, "Failed to select application descriptor"),
               s(null != l, "Failed to select list of application commands");
-            let r = ee(i, l, C);
+            let r = $(i, l, N);
             null != r && E.push(r);
           }
           d.applications.useFrecency &&
@@ -2181,7 +2177,7 @@
             E.sort((e, t) => {
               if (
                 d.applications.useScore &&
-                u === S.ScoreMethod.APPLICATION_ONLY
+                u === O.ScoreMethod.APPLICATION_ONLY
               ) {
                 var n, i, l, a;
                 let o =
@@ -2207,17 +2203,17 @@
                   i = p.default.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== i) return i - n;
               }
-              return eo(e.section.name, t.section.name);
+              return ea(e.section.name, t.section.name);
             });
         }
         if (A.length > 0 || !0 === r) {
-          let e = ee(N.BUILT_IN_SECTIONS[R.BuiltInSectionId.BUILT_IN], A, C);
+          let e = $(C.BUILT_IN_SECTIONS[D.BuiltInSectionId.BUILT_IN], A, N);
           null != e && E.push(e);
         }
         let v = E.flatMap(e => e.data.map(t => ({ ...t, section: e.section })));
         if (
-          u === S.ScoreMethod.COMMAND_ONLY ||
-          u === S.ScoreMethod.COMMAND_OR_APPLICATION
+          u === O.ScoreMethod.COMMAND_ONLY ||
+          u === O.ScoreMethod.COMMAND_OR_APPLICATION
         ) {
           let e = t.context,
             n = T.default.getGuild(t.context.guild_id);
@@ -2231,17 +2227,17 @@
                 if (e !== n) return e - n;
               }
               if (d.commands.useFrecency) {
-                let l = M.default.getScoreWithoutLoadingLatest(
+                let l = g.default.getScoreWithoutLoadingLatest(
                     { channel: e, guild: n },
                     t
                   ),
-                  a = M.default.getScoreWithoutLoadingLatest(
+                  a = g.default.getScoreWithoutLoadingLatest(
                     { channel: e, guild: n },
                     i
                   );
                 if (l !== a) return a - l;
               }
-              return eo(t.displayName, i.displayName);
+              return ea(t.displayName, i.displayName);
             });
         }
         return {
@@ -2253,7 +2249,7 @@
             (null == i ? void 0 : i.fetchState.fetching) === !0,
         };
       }
-      function ee(e, t, n) {
+      function $(e, t, n) {
         let i,
           {
             query: l,
@@ -2265,26 +2261,26 @@
           { context: u, userId: d, roleIds: c, isImpersonating: p } = r,
           f =
             null != u.guild_id
-              ? D.computeAllowedForUser(e.permissions, u.guild_id, d, c, p)
+              ? v.computeAllowedForUser(e.permissions, u.guild_id, d, c, p)
               : null,
           m =
             null != u.guild_id
-              ? D.computeAllowedForChannel(e.permissions, u, u.guild_id)
+              ? v.computeAllowedForChannel(e.permissions, u, u.guild_id)
               : null,
           _ = [];
         for (let n of t) {
-          let t = D.hasAccess(n, r, f, m, e.botId);
-          t === D.HasAccessResult.ALLOWED && _.push(n);
+          let t = v.hasAccess(n, r, f, m, e.botId);
+          t === v.HasAccessResult.ALLOWED && _.push(n);
         }
         return 0 !==
           (i =
-            s !== S.ScoreMethod.NONE && null != l && null != a
+            s !== O.ScoreMethod.NONE && null != l && null != a
               ? (function (e, t, n, i, l) {
                   let a;
                   let o = [];
                   if (
-                    l === S.ScoreMethod.APPLICATION_ONLY ||
-                    l === S.ScoreMethod.COMMAND_OR_APPLICATION
+                    l === O.ScoreMethod.APPLICATION_ONLY ||
+                    l === O.ScoreMethod.COMMAND_OR_APPLICATION
                   ) {
                     let t = i.name.toLocaleLowerCase();
                     t.startsWith(e) ? (a = 5) : t.includes(e) && (a = 6);
@@ -2294,8 +2290,8 @@
                   for (let t of n) {
                     let n;
                     if (
-                      l === S.ScoreMethod.COMMAND_ONLY ||
-                      l === S.ScoreMethod.COMMAND_OR_APPLICATION
+                      l === O.ScoreMethod.COMMAND_ONLY ||
+                      l === O.ScoreMethod.COMMAND_OR_APPLICATION
                     ) {
                       var u;
                       n =
@@ -2354,24 +2350,24 @@
                   return o;
                 })(l, a, _, e, s)
               : _).length || o
-          ? ((s === S.ScoreMethod.NONE ||
-              s === S.ScoreMethod.APPLICATION_ONLY) &&
-              i.sort((e, t) => eo(e.displayName, t.displayName)),
+          ? ((s === O.ScoreMethod.NONE ||
+              s === O.ScoreMethod.APPLICATION_ONLY) &&
+              i.sort((e, t) => ea(e.displayName, t.displayName)),
             { section: e, data: i })
           : null;
       }
-      function et(e) {
+      function ee(e) {
         var t;
         return (
           null != e.guild_id ||
-          (e.type === L.ChannelTypes.DM &&
-            (null === (t = E.default.getUser(e.getRecipientId())) ||
+          (e.type === R.ChannelTypes.DM &&
+            (null === (t = A.default.getUser(e.getRecipientId())) ||
             void 0 === t
               ? void 0
               : t.bot) === !0)
         );
       }
-      function en(e) {
+      function et(e) {
         return (
           !!(function (e) {
             var t;
@@ -2385,19 +2381,19 @@
             Date.now() >= e.fetchState.retryAfter)
         );
       }
-      function ei(e) {
+      function en(e) {
         var t, n, i, l;
         let a = {
           ...e,
           choices:
-            null === (t = e.choices) || void 0 === t ? void 0 : t.map(el),
+            null === (t = e.choices) || void 0 === t ? void 0 : t.map(ei),
           description:
             null !== (i = e.description_default) && void 0 !== i
               ? i
               : e.description,
           name: null !== (l = e.name_default) && void 0 !== l ? l : e.name,
           options:
-            null === (n = e.options) || void 0 === n ? void 0 : n.map(ei),
+            null === (n = e.options) || void 0 === n ? void 0 : n.map(en),
         };
         return (
           e.description !== e.description_default &&
@@ -2406,7 +2402,7 @@
           a
         );
       }
-      function el(e) {
+      function ei(e) {
         var t;
         let n = {
           ...e,
@@ -2414,12 +2410,12 @@
         };
         return e.name !== e.name_default && (n.name_localized = e.name), n;
       }
-      function ea(e, t) {
+      function el(e, t) {
         let n = [];
         if (
           (null != e.user &&
             n.push({
-              type: h.ApplicationCommandPermissionType.USER,
+              type: S.ApplicationCommandPermissionType.USER,
               id: t,
               permission: e.user,
             }),
@@ -2427,14 +2423,14 @@
         )
           for (let [t, i] of Object.entries(e.channels))
             n.push({
-              type: h.ApplicationCommandPermissionType.CHANNEL,
+              type: S.ApplicationCommandPermissionType.CHANNEL,
               id: t,
               permission: i,
             });
         if (null != e.roles)
           for (let [t, i] of Object.entries(e.roles))
             n.push({
-              type: h.ApplicationCommandPermissionType.ROLE,
+              type: S.ApplicationCommandPermissionType.ROLE,
               id: t,
               permission: i,
             });
@@ -2449,8 +2445,8 @@
         (l[(l.OPTION_NAME_CONTAINS = 4)] = "OPTION_NAME_CONTAINS"),
         (l[(l.SECTION_NAME_STARTS_WITH = 5)] = "SECTION_NAME_STARTS_WITH"),
         (l[(l.SECTION_NAME_CONTAINS = 6)] = "SECTION_NAME_CONTAINS");
-      function eo(e, t) {
-        return K.collator.compare(e, t);
+      function ea(e, t) {
+        return j.collator.compare(e, t);
       }
     },
     118200: function (e, t, n) {
@@ -5102,4 +5098,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31337.3a4e405a603570d1cac3.js.map
+//# sourceMappingURL=31337.f76503dfae48dd5b337a.js.map

@@ -11978,9 +11978,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "275698",
+          E = "275708",
           T =
-            ((e = "8e188a098f11b7d48ab9e08392f74bf4816c0e1b"),
+            ((e = "573bc6b6e7d25fc4d3c8004f95efe2090afeb96a"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -17177,7 +17177,7 @@
                 for (let s of t)
                   e.push((0, m.getScopeName)(s, t)),
                     s === D.OAuth2Scopes.APPLICATIONS_COMMANDS &&
-                      e.push(v.default.Messages.SCOPE_DM_SELF);
+                      e.push(v.default.Messages.SCOPE_DM_YOU);
                 if (e.length > 0)
                   return (0, a.jsx)(u.FormItem, {
                     faded: !0,
@@ -32106,4 +32106,4 @@
     },
   },
 ]);
-//# sourceMappingURL=821f96be693a7ab48891.js.map
+//# sourceMappingURL=9b8254ccdc516ba18014.js.map

@@ -150,10 +150,10 @@
           u = (0, a.getAssetImage)(t, r, l);
         return (
           i.useEffect(() => {
-            (0, a.fetchAssetIds)(t, s).then(e => {
-              for (let t of (d(!1), e))
-                if (null != t && "" !== t) {
-                  c(t);
+            (0, a.getAssets)(t).then(e => {
+              for (let [t, l] of (d(!1), Object.entries(e)))
+                if (null != l && "" !== l.id && s.includes(l.name)) {
+                  c(l.id);
                   return;
                 }
             });
@@ -2874,4 +2874,4 @@
     },
   },
 ]);
-//# sourceMappingURL=92e11a5a26ab70e82c99.js.map
+//# sourceMappingURL=c6c1c1c7ef52dd15e6b6.js.map

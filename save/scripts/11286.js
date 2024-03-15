@@ -211,7 +211,7 @@
                   onHeightUpdate: B,
                 }),
                 es = (0, S.default)(n, u),
-                eo = (0, f.useIsInUserAppExperiment)(null, {
+                eo = (0, f.useIsUserInUserAppExperiment)({
                   location: "GroupDMUserContextMenu",
                 }),
                 ed = n.isNonUserBot(),
@@ -940,4 +940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fcbce70c3f8b1405c821.js.map
+//# sourceMappingURL=e51b1ca32c8182a51727.js.map

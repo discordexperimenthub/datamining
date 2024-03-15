@@ -5122,6 +5122,7 @@
         SUB_ENABLED_SERVERS: "Sub Enabled Servers",
         AUTHORIZATION: "Authorization",
         AUTHORIZED_APPS: "Authorized Apps",
+        MANAGE_AUTHORIZED_APP: "Manage Authorized App",
         DEAUTHORIZE: "Deauthorize",
         DEAUTHORIZE_APP: "Deauthorize Application",
         ABOUT_THIS_APP: "About this App",
@@ -6376,6 +6377,13 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Select a server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "This requires you to have **Manage Server** permission in the server.",
+        OAUTH2_INTEGRATION_SELECT_USER: "Try it Now",
+        OAUTH2_INTEGRATION_SELECT_USER_SUBTITLE: "Use this app everywhere!",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Add to Server",
+        OAUTH2_INTEGRATION_SELECT_GUILD_SUBTITLE:
+          "Customize your server by adding this app",
+        OAUTH2_INTEGRATION_SELECT_DETAILS:
+          "This app can be used anywhere on Discord. During beta, responses are visible only to you in servers with over {betaUserLimit} people. [Learn more]({learnMoreUrl}).",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Invalid request. Missing param **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Invalid scope **{scope}**",
@@ -6419,6 +6427,7 @@
           "Connect to voice on your behalf and see others who are in any voice channel or call",
         SCOPE_DM_CHANNELS_READ:
           "See information about the DMs and GDMs you are in",
+        SCOPE_DM_YOU: "Send you direct messages",
         SCOPE_ROLE_CONNECTIONS_WRITE:
           "Update your connection and metadata for this application",
         SCOPE_WEBHOOK_INCOMING: "Adds a webhook to a channel",
@@ -14674,6 +14683,10 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Clear message?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Looks like you've already written something. Do you want to clear it and use a command?",
+        APPLICATION_COMMAND_USER_INSTALL_EDUCATION:
+          "You can use this app anywhere on Discord. Responses are visible only to you in servers with over {betaUserLimit} people. [Learn more]({learnMoreUrl}).",
+        APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL:
+          "Only you can see this message during beta.\n\n[Why am I seeing this?]({learnMoreUrl}) • [Dismiss](handleDelete)",
         MJ_CHATBAR_BODY:
           "Type “$[command](commandHook)” to use Midjourney. Tip: Create a server to try it with just friends.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -24850,14 +24863,6 @@
           "Now you can see your keybind for toggling mute in the overlay.",
         PROBLEMATIC_GPU_DRIVER_DETECTED:
           "There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).",
-        MANAGE_AUTHORIZED_APP: "Manage Authorized App",
-        ADD_TO_USER: "Add to my apps",
-        ADD_TO_USER_SUBTITLE: "Add app to your account to use anywhere",
-        ADD_TO_GUILD: "Add to server",
-        ADD_TO_GUILD_SUBTITLE: "Customize your server by adding this app",
-        USER_APPS_LEARN_MORE:
-          "To learn more about apps on Discord, visit our [Help Center]({helpUrl}).",
-        SCOPE_DM_SELF: "Send you direct messages",
         MFA_REQUIRED_FOR_STAFF:
           "Multi-factor authentication is required for staff.",
         INAPPROPRIATE_CONVERSATION_CONTACT_CRISIS_TEXT_LINE_HEADER:
@@ -26367,8 +26372,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275698", ", Version Hash: ")
-          .concat("8e188a098f11b7d48ab9e08392f74bf4816c0e1b")
+          .concat("275708", ", Version Hash: ")
+          .concat("573bc6b6e7d25fc4d3c8004f95efe2090afeb96a")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29480,12 +29485,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275698"), "275698"));
+        let _ = parseInt(((e = "275708"), "275708"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275698"
+                "275708"
               )
             ),
             (_ = 0)),
@@ -52136,4 +52141,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.278da78ab8cd2c168c0c.js.map
+//# sourceMappingURL=76039.96ce7670135f0e6617a5.js.map

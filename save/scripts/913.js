@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["27363"],
+  ["913"],
   {
     138219: function (e, t, s) {
       "use strict";
@@ -348,7 +348,7 @@
                 null === (e = s.current) || void 0 === e || e.scrollToTop();
             }
           }, [t, g, x]);
-        let v = l.useCallback(
+        let O = l.useCallback(
             async e => {
               if ("REVIEW_APPLICATION" !== A)
                 h !== e &&
@@ -356,7 +356,7 @@
             },
             [A, h, t, P]
           ),
-          O = l.useCallback(
+          v = l.useCallback(
             async e => {
               if (A !== e)
                 p(e),
@@ -378,14 +378,14 @@
             let a = t.scrollHeight - t.scrollTop - t.offsetHeight;
             a < 200 && (await P(h, A));
           }, [A, h, P]),
-          L = (0, i.useStateFromStores)([u.default], () =>
+          b = (0, i.useStateFromStores)([u.default], () =>
             u.default.getGuild(t)
           );
         return (0, a.jsxs)(a.Fragment, {
           children: [
             (0, a.jsx)(_.default, {
               currentTab: A,
-              onTabItemSelect: O,
+              onTabItemSelect: v,
               pendingGuildJoinRequestsTotal: C,
               showSetupTab: !0,
             }),
@@ -393,8 +393,8 @@
               className: M.content,
               children:
                 "REVIEW_APPLICATION" === A
-                  ? null != L
-                    ? (0, a.jsx)(r.default, { guild: L })
+                  ? null != b
+                    ? (0, a.jsx)(r.default, { guild: b })
                     : null
                   : (0, a.jsxs)(a.Fragment, {
                       children: [
@@ -403,7 +403,7 @@
                           children: (0, a.jsx)(S.default, {
                             className: M.sortSelect,
                             sortOrder: h,
-                            onSortChange: v,
+                            onSortChange: O,
                           }),
                         }),
                         (0, a.jsx)(n.Text, {
@@ -793,10 +793,10 @@
             },
             [p]
           ),
-          v = async () => {
+          O = async () => {
             await G(r, S.GuildJoinRequestApplicationStatuses.APPROVED);
           },
-          O = async () => {
+          v = async () => {
             await G(r, S.GuildJoinRequestApplicationStatuses.REJECTED);
           };
         return (0, a.jsxs)(o.Clickable, {
@@ -828,7 +828,7 @@
             j &&
               (0, a.jsx)(N, {
                 icon: E.default,
-                onClick: v,
+                onClick: O,
                 submitting:
                   p === S.GuildJoinRequestApplicationStatuses.APPROVED,
                 disabled:
@@ -838,7 +838,7 @@
             j &&
               (0, a.jsx)(N, {
                 icon: I.default,
-                onClick: O,
+                onClick: v,
                 submitting:
                   p === S.GuildJoinRequestApplicationStatuses.REJECTED,
                 disabled:
@@ -932,17 +932,17 @@
         var t;
         let { guildJoinRequest: i, guild: h, guildJoinRequestUser: x } = e,
           [C, g] = l.useState(!1),
-          { createdAt: P, actionedAt: j, guildId: G, userId: v } = i,
-          O = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id,
+          { createdAt: P, actionedAt: j, guildId: G, userId: O } = i,
+          v = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id,
           D = (0, r.useStateFromStores)([I.default], () =>
-            I.default.getUser(O)
+            I.default.getUser(v)
           ),
-          L = (0, r.useStateFromStores)(
+          b = (0, r.useStateFromStores)(
             [E.default],
-            () => (null != O ? E.default.getMember(G, O) : null),
-            [O, G]
+            () => (null != v ? E.default.getMember(G, v) : null),
+            [v, G]
           ),
-          b = l.useCallback(() => {
+          L = l.useCallback(() => {
             (0, o.showToast)(
               (0, o.createToast)(
                 A.default.Messages.ERROR_GENERIC_TITLE,
@@ -956,11 +956,11 @@
               try {
                 await m.default.updateGuildJoinRequest(
                   G,
-                  v,
+                  O,
                   N.GuildJoinRequestApplicationStatuses.APPROVED
                 );
               } catch {
-                b();
+                L();
               } finally {
                 g(!1);
               }
@@ -1019,7 +1019,7 @@
                           variant: "text-xs/normal",
                           color: "header-primary",
                           children:
-                            null !== (e = null == L ? void 0 : L.nick) &&
+                            null !== (e = null == b ? void 0 : b.nick) &&
                             void 0 !== e
                               ? e
                               : D.username,
@@ -1084,8 +1084,8 @@
                                   (0, a.jsx)(e, {
                                     modalProps: t,
                                     guildId: G,
-                                    userId: v,
-                                    onError: b,
+                                    userId: O,
+                                    onError: L,
                                   });
                               });
                             },
@@ -1376,48 +1376,6 @@
           { size: 24 }
         );
     },
-    641892: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return n;
-          },
-        });
-      var a = s("37983");
-      s("884691");
-      var l = s("469563"),
-        i = s("797350"),
-        n = (0, l.replaceIcon)(
-          function (e) {
-            let {
-              width: t = 16,
-              height: s = 16,
-              color: l = "currentColor",
-              className: i,
-              foreground: n,
-            } = e;
-            return (0, a.jsx)("svg", {
-              className: i,
-              width: t,
-              height: s,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              children: (0, a.jsx)("path", {
-                className: n,
-                fill: l,
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M16.5 17.2916V3.74996H17.5V18.3333H4.5C3.3955 18.3333 2.5 17.4005 2.5 16.25V3.74996C2.5 2.59944 3.3955 1.66663 4.5 1.66663H15.5V15.2083H4.5C3.94775 15.2083 3.5 15.6742 3.5 16.25C3.5 16.8257 3.94775 17.2916 4.5 17.2916H16.5ZM11.9859 4.99996L7.94446 8.9957L6.35432 7.42204L5 8.75288L7.94427 11.6666L13.3333 6.33344L11.9859 4.99996Z",
-              }),
-            });
-          },
-          i.BookCheckIcon,
-          void 0,
-          { size: 16 }
-        );
-    },
   },
 ]);
-//# sourceMappingURL=623b5b149668f8fc0c6c.js.map
+//# sourceMappingURL=a9d504ae13a3556af8c0.js.map

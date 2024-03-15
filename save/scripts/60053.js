@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["59196"],
+  ["60053"],
   {
     777483: function (e, t, n) {
       var i = {
@@ -22766,6 +22766,49 @@
             });
       }
     },
+    656015: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          useIsMessageInteractionForcedEphemeral: function () {
+            return s;
+          },
+          useShouldShowUserAppBetaBar: function () {
+            return r;
+          },
+        });
+      var i = n("891189"),
+        l = n("988721"),
+        a = n("389153");
+      function s(e, t, n) {
+        let l = (0, a.useIsGuildInUserAppExperiment)(
+          null == t ? void 0 : t.guild_id,
+          n
+        );
+        if (null == e.interactionMetadata || l) return !1;
+        let s = e.interactionMetadata.authorizing_integration_owners;
+        return (
+          1 === Object.keys(s).length &&
+          i.ApplicationIntegrationType.USER_INSTALL in s
+        );
+      }
+      function r(e, t, n) {
+        var i, s;
+        let r = (0, l.useUserIndexState)(!0, !1),
+          o = (0, a.isGuildInUserAppExperiment)(
+            null == t ? void 0 : t.guild_id,
+            n
+          );
+        if (null == e || o) return !1;
+        let u =
+          null === (s = r.result) || void 0 === s
+            ? void 0
+            : null === (i = s.sections[e.applicationId]) || void 0 === i
+              ? void 0
+              : i.commands;
+        return null != u && e.id in u;
+      }
+    },
     343952: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -23921,6 +23964,87 @@
           });
         };
     },
+    568658: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return h;
+          },
+        });
+      var i = n("37983"),
+        l = n("884691"),
+        a = n("414456"),
+        s = n.n(a),
+        r = n("77078"),
+        o = n("272030"),
+        u = n("298878"),
+        d = n("701909"),
+        c = n("317041"),
+        f = n("49111"),
+        p = n("782340"),
+        m = n("485700");
+      function h(e) {
+        var t;
+        let { className: a, activeCommand: h } = e,
+          x = l.useCallback(
+            e => {
+              var t;
+              let l =
+                null == h
+                  ? void 0
+                  : null === (t = h.rootCommand) || void 0 === t
+                    ? void 0
+                    : t.id;
+              if (null == l) {
+                e.preventDefault();
+                return;
+              }
+              (0, o.openContextMenuLazy)(e, async () => {
+                let { default: e } = await n
+                  .el("443070")
+                  .then(n.bind(n, "443070"));
+                return t =>
+                  (0, i.jsx)(e, {
+                    ...t,
+                    id: l,
+                    label: p.default.Messages.COPY_ID_COMMAND,
+                  });
+              });
+            },
+            [
+              null == h
+                ? void 0
+                : null === (t = h.rootCommand) || void 0 === t
+                  ? void 0
+                  : t.id,
+            ]
+          );
+        return null == h
+          ? null
+          : (0, i.jsxs)("div", {
+              className: s(a, m.bar),
+              onContextMenu: x,
+              children: [
+                (0, i.jsx)(u.default, {}),
+                (0, i.jsx)(r.Text, {
+                  variant: "text-sm/normal",
+                  color: "text-muted",
+                  children:
+                    p.default.Messages.APPLICATION_COMMAND_USER_INSTALL_EDUCATION.format(
+                      {
+                        betaUserLimit:
+                          c.APPLICATION_USER_INSTALL_BETA_USER_LIMIT,
+                        learnMoreUrl: d.default.getArticleURL(
+                          f.HelpdeskArticles.USING_APPS_FAQ
+                        ),
+                      }
+                    ),
+                }),
+              ],
+            });
+      }
+    },
     721698: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -24684,47 +24808,47 @@
       n.r(t),
         n.d(t, {
           getApplicationInstallURL: function () {
-            return s;
+            return a;
           },
         }),
         n("222007");
-      var i = n("872717"),
-        l = n("389153"),
-        a = n("49111");
-      function s(e) {
+      var i = n("389153"),
+        l = n("49111");
+      function a(e) {
         let {
           id: t,
           customInstallUrl: n,
-          installParams: s,
-          integrationTypesConfig: r,
+          installParams: a,
+          integrationTypesConfig: s,
         } = e;
         if (null != n) return n;
-        let o = {};
-        o.client_id = t;
-        let u = (0, l.isInUserAppExperiment)(null, {
+        let r = {};
+        r.client_id = t;
+        let o = (0, i.isUserInUserAppExperiment)({
             location: "getApplicationInstallURL",
           }),
-          d =
-            u &&
-            null != r &&
-            Object.values(r).some(
+          u =
+            o &&
+            null != s &&
+            Object.values(s).some(
               e => (null == e ? void 0 : e.oauth2_install_params) != null
             );
-        if (null != s && !d) {
-          let { permissions: e, scopes: t } = s;
-          null != e && (o.permissions = e),
-            null != t && (o.scope = t.join(" "));
+        if (null != a && !u) {
+          let { permissions: e, scopes: t } = a;
+          null != e && (r.permissions = e),
+            null != t && (r.scope = t.join(" "));
         }
-        let c = Object.entries(o)
+        let d = Object.entries(r)
           .map(e => {
             let [t, n] = e;
             return "".concat(t, "=").concat(encodeURIComponent(n));
           })
           .join("&");
         return ""
-          .concat(i.default.getAPIBaseURL(!1))
-          .concat(a.Endpoints.OAUTH2_AUTHORIZE, "?")
-          .concat(c);
+          .concat(location.protocol, "//")
+          .concat(location.host)
+          .concat(l.Routes.OAUTH2_AUTHORIZE, "?")
+          .concat(d);
       }
     },
     227422: function (e, t, n) {
@@ -31515,7 +31639,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return p;
+            return h;
           },
         }),
         n("424973");
@@ -31525,41 +31649,47 @@
         s = n.n(a),
         r = n("446674"),
         o = n("383018"),
-        u = n("228226"),
-        d = n("829290"),
-        c = n("503063"),
-        f = n("350583"),
-        p = l.memo(e => {
+        u = n("656015"),
+        d = n("228226"),
+        c = n("568658"),
+        f = n("829290"),
+        p = n("503063"),
+        m = n("350583"),
+        h = l.memo(e => {
           let { channel: t, type: n, activeCommand: l, pendingReply: a } = e,
-            { activeCommandOption: p, activeCommandOptionStates: m } = (0,
+            { activeCommandOption: h, activeCommandOptionStates: x } = (0,
             r.useStateFromStoresObject)([o.default], () => ({
               activeCommandOption: o.default.getActiveOption(t.id),
               activeCommandOptionStates: o.default.getOptionStates(t.id),
             })),
-            h = (0, d.useShouldShowPTONotice)(t),
-            x = [];
+            E = (0, f.useShouldShowPTONotice)(t),
+            y = (0, u.useShouldShowUserAppBetaBar)(l, t, {
+              location: "ChannelTextAreaBars",
+            }),
+            g = [];
           return (null != l &&
-            x.push(
-              (0, i.jsx)(u.default, {
+            (y && g.push((0, i.jsx)(c.default, { activeCommand: l })),
+            g.push(
+              (0, i.jsx)(d.default, {
                 activeCommand: l,
-                activeOption: null != p ? p : null,
-                optionStates: m,
+                activeOption: null != h ? h : null,
+                optionStates: x,
               })
-            ),
+            )),
           null != a &&
-            x.push((0, i.jsx)(c.default, { reply: a, chatInputType: n })),
-          h && x.push((0, i.jsx)(d.StaffPTOBar, {})),
+            g.push((0, i.jsx)(p.default, { reply: a, chatInputType: n })),
+          E && g.push((0, i.jsx)(f.StaffPTOBar, {})),
           0 ===
-            (x = x.map((e, t) => {
-              let n = t === x.length - 1;
+            (g = g.map((e, t) => {
+              let n = t === g.length - 1;
               return (0, i.jsx)(
                 "div",
-                { className: s({ [f.stackedAttachedBar]: !n }), children: e },
+                { className: s({ [m.stackedAttachedBar]: !n }), children: e },
                 t
               );
             })).length)
             ? null
-            : (0, i.jsx)("div", { className: f.attachedBars, children: x });
+            : (0, i.jsx)("div", { className: m.attachedBars, children: g });
         });
     },
     912823: function (e, t, n) {
@@ -49016,33 +49146,6 @@
           }),
         });
       });
-    },
-    298878: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return r;
-          },
-        });
-      var i = n("37983");
-      n("884691");
-      var l = n("669491"),
-        a = n("956089"),
-        s = n("782340");
-      function r(e) {
-        let {
-          className: t,
-          color: n = l.default.unsafe_rawColors.BRAND_500.css,
-          ...r
-        } = e;
-        return (0, i.jsx)(a.TextBadge, {
-          ...r,
-          text: s.default.Messages.BETA,
-          color: n,
-          className: t,
-        });
-      }
     },
     200521: function (e, t, n) {
       "use strict";
@@ -81189,7 +81292,7 @@
             Object.values(i).some(
               e => null != e && null != e.oauth2_install_params
             ) &&
-            (0, a.isInUserAppExperiment)(null, {
+            (0, a.isUserInUserAppExperiment)({
               location: "canInstallApplication",
             }))
         );
@@ -81221,7 +81324,7 @@
           Object.values(c).some(
             e => null != e && null != e.oauth2_install_params
           ) &&
-          (0, a.isInUserAppExperiment)(null, { location: "installApplication" })
+          (0, a.isUserInUserAppExperiment)({ location: "installApplication" })
         ) {
           r.default.track(u.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
             application_id: t,
@@ -82950,4 +83053,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59196.c5120b1e78e636d8f61a.js.map
+//# sourceMappingURL=60053.ca1bca47a92637894dff.js.map

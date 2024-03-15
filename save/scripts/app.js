@@ -3192,6 +3192,10 @@
         wrapper: "wrapper__82630",
       };
     },
+    485700: function (e, t, n) {
+      "use strict";
+      e.exports = { bar: "bar_c374f6" };
+    },
     175339: function (e, t, n) {
       "use strict";
       e.exports = {
@@ -17619,6 +17623,9 @@
         leftIcon: "leftIcon_f180e1",
         rightIcon: "rightIcon__53ec6",
         row: "row_eb598a",
+        rowDetails: "rowDetails__4f215",
+        rowInner: "rowInner__465aa",
+        rows: "rows__4923b",
       };
     },
     720016: function (e, t, n) {

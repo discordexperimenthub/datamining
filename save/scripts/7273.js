@@ -6314,7 +6314,8 @@
         (eK.MACOS_17_18_DEPRECATE = "20900540446231"),
         (eK.QUESTS_LEARN_MORE = "9146392276375"),
         (eK.DATA_USED_TO_IMPROVE_DISCORD = "21864805694999"),
-        (eK.DATA_USED_FOR_RECOMMENDED = "21864004415511");
+        (eK.DATA_USED_FOR_RECOMMENDED = "21864004415511"),
+        (eK.USING_APPS_FAQ = "21334461140375#h_01HRQSA6C8H2XBF34NSSQH7ZFH");
       let RL = _ => "https://www.youtube.com/embed/".concat(_),
         RD = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
         RS = "https://discordapp.com/mweb-handoff";
@@ -17311,4 +17312,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.bf4f7cba6929299d2f34.js.map
+//# sourceMappingURL=7273.77349bc590c943a8a53f.js.map

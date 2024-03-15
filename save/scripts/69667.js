@@ -4950,10 +4950,10 @@
           c = (0, l.getAssetImage)(t, r, n);
         return (
           s.useEffect(() => {
-            (0, l.fetchAssetIds)(t, i).then(e => {
-              for (let t of (d(!1), e))
-                if (null != t && "" !== t) {
-                  o(t);
+            (0, l.getAssets)(t).then(e => {
+              for (let [t, n] of (d(!1), Object.entries(e)))
+                if (null != n && "" !== n.id && i.includes(n.name)) {
+                  o(n.id);
                   return;
                 }
             });
@@ -13628,10 +13628,11 @@
                 messageId: e.id,
               });
         }
-        renderEphemeralAccessories(e) {
+        renderEphemeralAccessories(e, t) {
           return (0, ed.hasFlag)(e.flags, eR.MessageFlags.EPHEMERAL)
             ? (0, s.jsx)(el.default, {
                 message: e,
+                channel: t,
                 onDeleteMessage: () => {
                   E.default.dismissAutomatedMessage(e);
                 },
@@ -13822,7 +13823,7 @@
             T = this.renderActivityInvite(t),
             I = this.renderReactions(t),
             m = this.renderPublishBump(t),
-            N = this.renderEphemeralAccessories(t),
+            N = this.renderEphemeralAccessories(t, n),
             p = this.renderStickersAccessories(t),
             S = this.renderThreadAccessories(t),
             C = this.renderComponentAccessories(t),
@@ -27905,40 +27906,61 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return d;
           },
         });
       var s = n("37983");
       n("884691");
-      var l = n("462579"),
-        a = n("49111"),
-        i = n("782340"),
-        r = n("498126");
-      function o(e) {
-        let { message: t, onDeleteMessage: n, children: o } = e;
-        return (0, s.jsxs)("div", {
-          className: r.ephemeralMessage,
-          onClick: e => e.stopPropagation(),
-          children: [
-            (0, s.jsx)(l.default, { className: r.icon, width: 16, height: 16 }),
-            (null == t ? void 0 : t.type) === a.MessageTypes.STAGE_RAISE_HAND
-              ? i.default.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format(
-                  {
-                    handleDelete() {
-                      n(t, !0);
-                    },
-                  }
+      var l = n("656015"),
+        a = n("462579"),
+        i = n("701909"),
+        r = n("49111"),
+        o = n("782340"),
+        u = n("498126");
+      function d(e) {
+        let t,
+          { message: n, channel: d, onDeleteMessage: c, children: E } = e,
+          f = (0, l.useIsMessageInteractionForcedEphemeral)(n, d, {
+            location: "EphemeralAccessories",
+          }),
+          _ = () => c(n, !0);
+        return (
+          (t = f
+            ? (0, s.jsx)("div", {
+                className: u.userAppsBetaContent,
+                children:
+                  o.default.Messages.APPLICATION_COMMAND_USER_INSTALL_BETA_EPHEMERAL.format(
+                    {
+                      learnMoreUrl: i.default.getArticleURL(
+                        r.HelpdeskArticles.USING_APPS_FAQ
+                      ),
+                      handleDelete: _,
+                    }
+                  ),
+              })
+            : n.type === r.MessageTypes.STAGE_RAISE_HAND
+              ? o.default.Messages.STAGE_SYSTEM_MESSAGE_MODERATOR_VISIBILITY_MESSAGE.format(
+                  { handleDelete: _ }
                 )
-              : i.default.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
+              : o.default.Messages.ONLY_YOU_CAN_SEE_AND_DELETE_THESE.format({
                   count: 1,
                   countMessages: 1,
-                  handleDelete() {
-                    n(t, !0);
-                  },
-                }),
-            o,
-          ],
-        });
+                  handleDelete: _,
+                })),
+          (0, s.jsxs)("div", {
+            className: u.ephemeralMessage,
+            onClick: e => e.stopPropagation(),
+            children: [
+              (0, s.jsx)(a.default, {
+                className: u.icon,
+                width: 16,
+                height: 16,
+              }),
+              t,
+              E,
+            ],
+          })
+        );
       }
     },
     341716: function (e, t, n) {
@@ -32250,4 +32272,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a632fec8feb290149a37.js.map
+//# sourceMappingURL=8d532201c7be3a2bddb1.js.map

@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275800",
+                  buildNumber: "275807",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -24499,119 +24499,6 @@
         ],
       });
     },
-    694787: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          validateMultiAccountTokens: function () {
-            return f;
-          },
-          switchAccount: function () {
-            return E;
-          },
-          removeAccount: function () {
-            return h;
-          },
-        });
-      var a = n("171718"),
-        s = n("872717"),
-        l = n("913144"),
-        i = n("437822"),
-        r = n("605250"),
-        o = n("271938"),
-        u = n("770032"),
-        d = n("49111");
-      let c = new r.default("MultiAccountActionCreators");
-      function f() {
-        let e = o.default.getId(),
-          t = u.default.getUsers();
-        t.forEach(async t => {
-          let n,
-            { id: i } = t,
-            r = a.default.getToken(i);
-          if (null == r || "" === r) {
-            l.default.dispatch({
-              type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-              userId: i,
-            });
-            return;
-          }
-          l.default.dispatch({
-            type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST",
-            userId: i,
-          });
-          try {
-            n = await s.default.get({
-              url: d.Endpoints.ME,
-              headers: { authorization: r },
-              retries: 3,
-            });
-          } catch (t) {
-            let e =
-              (null == t ? void 0 : t.status) === 401 ||
-              (null == t ? void 0 : t.status) === 403;
-            l.default.dispatch({
-              type: e
-                ? "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE"
-                : "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-              userId: i,
-            });
-            return;
-          }
-          l.default.dispatch({
-            type: e === i ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
-            user: n.body,
-          }),
-            l.default.dispatch({
-              type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-              userId: i,
-            });
-        });
-      }
-      function E(e, t) {
-        c.log("Switching account to ".concat(e), { switchSynchronously: t });
-        let n = a.default.getToken(e);
-        return null == n
-          ? (c.log("Switching accounts failed because there was no token"),
-            l.default.dispatch({
-              type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-              userId: e,
-            }),
-            Promise.resolve())
-          : i.default.switchAccountToken(n, t);
-      }
-      function h(e) {
-        l.default.dispatch({ type: "MULTI_ACCOUNT_REMOVE_ACCOUNT", userId: e });
-      }
-    },
-    927101: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          useMultiAccountUsers: function () {
-            return o;
-          },
-        });
-      var a = n("884691"),
-        s = n("446674"),
-        l = n("913144"),
-        i = n("694787"),
-        r = n("770032");
-      function o() {
-        let e = (0, s.useStateFromStoresObject)([r.default], () => ({
-          isLoading: r.default.getIsValidatingUsers(),
-          multiAccountUsers: r.default.getUsers(),
-        }));
-        return (
-          a.useEffect(() => {
-            l.default.wait(() => {
-              i.validateMultiAccountTokens();
-            });
-          }, []),
-          e
-        );
-      }
-    },
     337328: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -27558,43 +27445,6 @@
           }
         );
       }
-    },
-    165926: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          setNewUser: function () {
-            return s;
-          },
-          setNewUserFlowCompleted: function () {
-            return l;
-          },
-        });
-      var a = n("913144");
-      function s(e) {
-        a.default.wait(() =>
-          a.default.dispatch({ type: "NUF_NEW_USER", newUserType: e })
-        );
-      }
-      function l() {
-        a.default.wait(() => a.default.dispatch({ type: "NUF_COMPLETE" }));
-      }
-    },
-    56235: function (e, t, n) {
-      "use strict";
-      var a, s;
-      n.r(t),
-        n.d(t, {
-          NewUserTypes: function () {
-            return a;
-          },
-        }),
-        ((s = a || (a = {}))[(s.MARKETING_UNCLAIMED = 0)] =
-          "MARKETING_UNCLAIMED"),
-        (s[(s.INVITE_UNCLAIMED = 1)] = "INVITE_UNCLAIMED"),
-        (s[(s.ORGANIC_REGISTERED = 2)] = "ORGANIC_REGISTERED"),
-        (s[(s.ORGANIC_REGISTERED_GUILD_TEMPLATE = 3)] =
-          "ORGANIC_REGISTERED_GUILD_TEMPLATE");
     },
     527441: function (e, t, n) {
       "use strict";
@@ -34970,49 +34820,6 @@
             ],
           });
         };
-    },
-    25033: function (e, t, n) {
-      "use strict";
-      let a;
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return d;
-          },
-        });
-      var s = n("446674"),
-        l = n("913144"),
-        i = n("988415");
-      let r = (0, i.getDefaultCountryCode)();
-      function o(e) {
-        var t;
-        let { countryCode: n } = e;
-        null != n &&
-          (r =
-            null !== (t = (0, i.getCountryCodeByAlpha2)(n)) && void 0 !== t
-              ? t
-              : (0, i.getDefaultCountryCode)());
-      }
-      class u extends s.default.DeviceSettingsStore {
-        initialize(e) {
-          null != e && (a = e.selectedCountryCode);
-        }
-        getUserAgnosticState() {
-          return { selectedCountryCode: a };
-        }
-        getCountryCode() {
-          return null != a ? a : r;
-        }
-      }
-      (u.displayName = "PhoneStore"), (u.persistKey = "PhoneStore");
-      var d = new u(l.default, {
-        PHONE_SET_COUNTRY_CODE: function (e) {
-          let { countryCode: t } = e;
-          a = t;
-        },
-        CONNECTION_OPEN: o,
-        SET_LOCATION_METADATA: o,
-      });
     },
     356702: function (e, t, n) {
       "use strict";
@@ -53038,4 +52845,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a12b837e094de4c4000f.js.map
+//# sourceMappingURL=212f40f21e5b6177c47b.js.map

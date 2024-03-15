@@ -2193,7 +2193,6 @@
                         return (0, a.jsx)(o.default, {
                           message: t,
                           content: v,
-                          asPartialPreview: !0,
                         });
                       })(),
                       childrenHeader: (0, a.jsx)(c.default, {
@@ -2475,4 +2474,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a6007ebef43751be6367.js.map
+//# sourceMappingURL=ec5944d91f6b5b4cdaf8.js.map

@@ -2994,12 +2994,8 @@
       n("884691");
       var r = n("497880");
       function l(e, t) {
-        let { message: n, asPartialPreview: l } = e;
-        return (0, i.jsx)(r.default, {
-          message: n,
-          asPartialPreview: l,
-          content: t,
-        });
+        let { message: n } = e;
+        return (0, i.jsx)(r.default, { message: n, content: t });
       }
     },
     227439: function (e, t, n) {
@@ -4022,4 +4018,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3cfa7a752ac5762abf2d.js.map
+//# sourceMappingURL=1be530d26fa2eac7b987.js.map

@@ -12699,46 +12699,45 @@
               subscribeToComponentDispatch: G,
               renderThreadAccessory: B,
               trackAnnouncementViews: k = !1,
-              asPartialPreview: F = !0,
-              ...w
+              ...F
             } = e,
-            H = n.isFirstMessageInForumPost(U),
-            V = (0, d.isMessageNewerThanImprovedMarkdownEpoch)(
+            w = n.isFirstMessageInForumPost(U),
+            H = (0, d.isMessageNewerThanImprovedMarkdownEpoch)(
               (null !== (t = n.editedTimestamp) && void 0 !== t
                 ? t
                 : n.timestamp
               ).valueOf()
             ),
-            { content: Y, hasSpoilerEmbeds: W } = (0, S.default)(n, {
+            { content: V, hasSpoilerEmbeds: Y } = (0, S.default)(n, {
               hideSimpleEmbedContent: y,
-              allowList: H || V,
-              allowHeading: H || V,
+              allowList: w || H,
+              allowHeading: w || H,
               allowLinks: !0,
               previewLinkTarget: !0,
             }),
-            K = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0,
-            z = (0, o.useStateFromStores)([c.default], () =>
-              c.default.getMessageByReference(K)
+            W = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0,
+            K = (0, o.useStateFromStores)([c.default], () =>
+              c.default.getMessageByReference(W)
             ),
-            Q = (0, r.useListItem)(n.id),
-            Z = (0, N.default)(n),
-            J = (0, o.useStateFromStores)(
+            z = (0, r.useListItem)(n.id),
+            Q = (0, N.default)(n),
+            Z = (0, o.useStateFromStores)(
               [E.default],
               () =>
                 n.hasFlag(v.MessageFlags.HAS_THREAD) &&
                 E.default.getChannel(I.default.castMessageIdAsChannelId(n.id))
             ),
-            X = (0, u.useRoleIcon)({
+            J = (0, u.useRoleIcon)({
               guildId: U.guild_id,
-              roleId: Z.iconRoleId,
+              roleId: Q.iconRoleId,
             }),
-            q = (0, o.useStateFromStores)([f.default], () =>
+            X = (0, o.useStateFromStores)([f.default], () =>
               f.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)
             ),
-            $ = (0, C.default)({ message: n, channel: U, enabled: k });
-          if ((0, m.default)(n, q)) return null;
-          let ee = (0, p.getMessageAriaLabelledBy)(n),
-            et = (0, p.getMessageAriaDescribedBy)(n);
+            q = (0, C.default)({ message: n, channel: U, enabled: k });
+          if ((0, m.default)(n, X)) return null;
+          let $ = (0, p.getMessageAriaLabelledBy)(n),
+            ee = (0, p.getMessageAriaDescribedBy)(n);
           return (0, s.jsx)(_.default, {
             compact: l,
             className: i(a, {
@@ -12746,31 +12745,28 @@
               [L.disableInteraction]: x,
             }),
             disableInteraction: x,
-            childrenRepliedMessage: (0, R.default)(n, U, K, z, l),
+            childrenRepliedMessage: (0, R.default)(n, U, W, K, l),
             childrenExecutedCommand: (0, O.default)(n, U, l),
             childrenHeader: (0, g.default)({
               ...e,
               guildId: U.guild_id,
-              author: Z,
-              roleIcon: X,
+              author: Q,
+              roleIcon: J,
             }),
             childrenAccessories: e.hideAccessories
               ? void 0
-              : (0, A.renderSimpleAccessories)(e, W),
-            childrenMessageContent: (0, h.default)(
-              { ...e, asPartialPreview: F },
-              Y
-            ),
+              : (0, A.renderSimpleAccessories)(e, Y),
+            childrenMessageContent: (0, h.default)(e, V),
             childrenSystemMessage: (0, M.default)(e),
             onContextMenu: P,
             onClick: D,
-            hasThread: B && null != J && n.hasFlag(v.MessageFlags.HAS_THREAD),
+            hasThread: B && null != Z && n.hasFlag(v.MessageFlags.HAS_THREAD),
             hasReply: n.type === v.MessageTypes.REPLY,
-            "aria-labelledby": ee,
-            "aria-describedby": et,
-            messageRef: $,
-            ...Q,
-            ...w,
+            "aria-labelledby": $,
+            "aria-describedby": ee,
+            messageRef: q,
+            ...z,
+            ...F,
           });
         });
     },
@@ -32272,4 +32268,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8d532201c7be3a2bddb1.js.map
+//# sourceMappingURL=c6fae97429257d1444c8.js.map

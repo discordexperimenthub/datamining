@@ -5736,6 +5736,10 @@
         (el.ACTIVITY_REACTOR_INTERACTED = "activity_reactor_interacted"),
         (el.RANKING_ITEMS_SEEN = "ranking_items_seen"),
         (el.RANKING_ITEM_INTERACTED = "ranking_item_interacted"),
+        (el.MEMBERLIST_CONTENT_FEED_TOGGLED =
+          "memberlist_content_feed_expander_toggled"),
+        (el.CONTENT_POPOUT_EMOJI_CLICKED =
+          "content_inventory_reaction_popout_emoji_clicked"),
         ((es = _k || (_k = {})).CANARY = "canary"),
         (es.PTB = "ptb"),
         (es.STABLE = "stable"),
@@ -17304,4 +17308,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.541c0a7b2afe055896ff.js.map
+//# sourceMappingURL=7273.bc95d43b83141d62a232.js.map

@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275484",
+                  buildNumber: "275491",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -42970,7 +42970,7 @@
               return new Promise((e, t) => {
                 !(function (e, t) {
                   var n;
-                  let a = m.default.getFocusedWindowId(),
+                  let a = m.default.getLastFocusedWindowId(),
                     s =
                       null == a
                         ? null
@@ -52829,4 +52829,4 @@
     },
   },
 ]);
-//# sourceMappingURL=761895d9095e28a5457c.js.map
+//# sourceMappingURL=7310dae1cc7a23268557.js.map

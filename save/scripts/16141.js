@@ -9605,7 +9605,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return y;
+            return O;
           },
         }),
         n("222007"),
@@ -9623,22 +9623,23 @@
         f = n("462274"),
         h = n("788506"),
         m = n("388491"),
-        p = n("315102"),
-        E = n("387111"),
-        S = n("476774"),
-        g = n("773808"),
-        C = n("909346"),
-        _ = n("356980"),
-        I = n("709377"),
-        T = n("49111"),
-        v = n("782340"),
-        x = n("150827");
-      let N = e => {
+        p = n("599110"),
+        E = n("315102"),
+        S = n("387111"),
+        g = n("476774"),
+        C = n("773808"),
+        _ = n("909346"),
+        I = n("356980"),
+        T = n("709377"),
+        v = n("49111"),
+        x = n("782340"),
+        N = n("150827");
+      let A = e => {
           let t = (0, r.default)([d.default], () => d.default.saturation),
             [n, a] = (0, f.useAvatarColors)(
               e,
               u.tokens.colors.BACKGROUND_FLOATING.resolve({
-                theme: T.ThemeTypes.DARK,
+                theme: v.ThemeTypes.DARK,
                 saturation: t,
               }).hex()
             );
@@ -9651,7 +9652,7 @@
             for (
               ;
               (0, m.getProfileTheme)((0, o.hex2int)(l)) ===
-                T.ThemeTypes.LIGHT && r < 8;
+                v.ThemeTypes.LIGHT && r < 8;
 
             )
               (l =
@@ -9664,7 +9665,7 @@
             for (
               r = 1;
               (0, m.getProfileTheme)((0, o.hex2int)(s)) ===
-                T.ThemeTypes.LIGHT && r < 8;
+                v.ThemeTypes.LIGHT && r < 8;
 
             )
               (s =
@@ -9677,7 +9678,7 @@
             return { primaryColor: l, secondaryColor: s };
           }, [n, a]);
         },
-        A = e => {
+        M = e => {
           let { channel: t, onClickSuggestion: n } = e,
             l = (0, h.useFrequentlyUsedEmojis)(t.guild_id),
             s = l
@@ -9687,7 +9688,7 @@
                   ? { emoji: e, url: e.url }
                   : {
                       emoji: e,
-                      url: (0, p.getEmojiURL)({
+                      url: (0, E.getEmojiURL)({
                         id: e.id,
                         animated: e.animated,
                         size: 58,
@@ -9700,87 +9701,95 @@
               return null != l
                 ? (0, a.jsx)(u.Clickable, {
                     onClick: () => n(t),
-                    className: x.emojiSuggestionButton,
+                    className: N.emojiSuggestionButton,
                     children: (0, a.jsx)("img", {
                       alt: t.name,
                       src: l,
-                      className: x.emoji,
+                      className: N.emoji,
                     }),
                   })
                 : null;
             }),
           });
         },
-        M = e => {
-          let t = (0, S.isEntryActive)(e),
-            n = (0, S.isEntryNew)(e);
+        R = e => {
+          let t = (0, g.isEntryActive)(e),
+            n = (0, g.isEntryNew)(e);
           return n
             ? t
-              ? v.default.Messages
+              ? x.default.Messages
                   .MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME
-              : v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
+              : x.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
             : t
-              ? v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
-              : v.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+              ? x.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
+              : x.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
         },
-        R = (e, t, n) => {
-          let a = M(e),
-            l = E.default.getName(t.guild_id, t.id, n),
+        j = (e, t, n) => {
+          let a = R(e),
+            l = S.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name,
             i = a.plainFormat({ gameName: s, userName: l });
           return i.replaceAll("*", "");
         },
-        j = (e, t, n) => {
-          let a = M(e),
-            l = E.default.getName(t.guild_id, t.id, n),
+        L = (e, t, n) => {
+          let a = R(e),
+            l = S.default.getName(t.guild_id, t.id, n),
             s = e.extra.game_name;
           return a.format({ userName: l, gameName: s });
         },
-        L = (e, t) =>
-          v.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        y = (e, t) =>
+          x.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name,
           });
-      var y = e => {
+      var O = e => {
         let { closePopout: t, channel: n, entry: s, requestId: i } = e,
-          { user: r, applicationImageSrc: o } = (0, _.useGamingContentData)(
+          { user: r, applicationImageSrc: o } = (0, I.useGamingContentData)(
             s,
             n
           ),
-          { primaryColor: d, secondaryColor: f } = N(o),
+          { primaryColor: d, secondaryColor: f } = A(o),
           [h, m] = l.useState(null);
         if (null == r) return null;
-        let p = r.getAvatarURL(n.guild_id, 128),
-          E = {
+        let E = r.getAvatarURL(n.guild_id, 128),
+          S = {
             entry: s,
             user: r,
             applicationImageSrc: o,
-            avatarSrc: p,
-            altText: L(s, r),
-            description: R(s, n, r),
-            timestamp: (0, S.formatEntryTimestamp)(s, Date.now()),
+            avatarSrc: E,
+            altText: y(s, r),
+            description: j(s, n, r),
+            timestamp: (0, g.formatEntryTimestamp)(s, Date.now()),
             colors: [d, f],
           },
-          T = { entry: s, channelId: n.id, guildId: n.guild_id, requestId: i },
-          M = e => {
-            null != e && null != h && (h.insertEmoji(e, !1, !0), h.focus());
+          R = { entry: s, channelId: n.id, guildId: n.guild_id, requestId: i },
+          O = e => {
+            null != e &&
+              null != h &&
+              (p.default.track(v.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+                surface_type: T.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+                channel_id: n.id,
+                guild_id: n.guild_id,
+              }),
+              h.insertEmoji(e, !1, !0),
+              h.focus());
           },
-          y = async e => {
+          P = async e => {
             try {
-              await (0, C.sendContentImageReply)({ ...E, reply: e }),
-                (0, g.trackInteraction)(
-                  I.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
-                  T
+              await (0, _.sendContentImageReply)({ ...S, reply: e }),
+                (0, C.trackInteraction)(
+                  T.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
+                  R
                 );
             } finally {
               t();
             }
           };
         return (0, a.jsxs)("div", {
-          className: x.popout,
+          className: N.popout,
           children: [
             (0, a.jsxs)("div", {
-              className: x.hero,
+              className: N.hero,
               style: {
                 background: "linear-gradient(45deg, "
                   .concat(d, ", ")
@@ -9788,33 +9797,33 @@
               },
               children: [
                 (0, a.jsxs)("div", {
-                  className: x.heroDetails,
+                  className: N.heroDetails,
                   children: [
                     (0, a.jsxs)("div", {
                       children: [
                         (0, a.jsx)(u.Avatar, {
-                          src: p,
+                          src: E,
                           size: u.AvatarSizes.SIZE_40,
                           "aria-label": "avatar",
                         }),
                         (0, a.jsx)(u.Heading, {
-                          className: x.popoutDescription,
+                          className: N.popoutDescription,
                           variant: "heading-md/normal",
                           color: "always-white",
                           lineClamp: 3,
-                          children: j(s, n, r),
+                          children: L(s, n, r),
                         }),
                       ],
                     }),
-                    (0, a.jsx)(_.GamingContentImage, {
+                    (0, a.jsx)(I.GamingContentImage, {
                       size: 80,
                       src: o,
-                      className: x.contentImage,
+                      className: N.contentImage,
                     }),
                   ],
                 }),
-                (0, a.jsx)(_.ContentRowBadges, {
-                  className: x.badgeContainer,
+                (0, a.jsx)(I.ContentRowBadges, {
+                  className: N.badgeContainer,
                   entry: s,
                   textColor: "always-white",
                   iconColor: u.tokens.colors.WHITE,
@@ -9822,20 +9831,20 @@
               ],
             }),
             (0, a.jsxs)("div", {
-              className: x.reactions,
+              className: N.reactions,
               children: [
                 (0, a.jsxs)("div", {
-                  className: x.emojiHotrail,
+                  className: N.emojiHotrail,
                   children: [
-                    (0, a.jsx)(A, { channel: n, onClickSuggestion: M }),
-                    (0, a.jsx)(c.ReactionPickerButton, { onSelectEmoji: M }),
+                    (0, a.jsx)(M, { channel: n, onClickSuggestion: O }),
+                    (0, a.jsx)(c.ReactionPickerButton, { onSelectEmoji: O }),
                   ],
                 }),
                 (0, a.jsx)(c.ReplyInput, {
-                  placeholder: v.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                  placeholder: x.default.Messages.TEXTAREA_PLACEHOLDER.format({
                     channel: "@".concat(r.globalName),
                   }),
-                  onEnter: y,
+                  onEnter: P,
                   setEditorRef: e => m(e),
                 }),
               ],
@@ -9879,30 +9888,41 @@
             if (null == g || 0 === g.length || null == S) return [t, n, f];
             let e = p ? g.length : 3,
               a = g.slice(0, e),
-              s = a.map(e => ({
+              i = a.map(e => ({
                 type: l.MemberListRowTypes.CONTENT_INVENTORY,
                 entry: e,
                 requestId: S,
               })),
-              i = {
+              u = {
                 id: o.MEMBER_LIST_CONTENT_GROUP_ID,
                 type: l.MemberListRowTypes.CONTENT_INVENTORY_GROUP,
                 key: o.MEMBER_LIST_CONTENT_GROUP_ID,
-                count: s.length,
+                count: i.length,
                 index: n.length,
                 title:
                   c.default.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
-                onToggleExpand: () => E(e => !e),
+                onToggleExpand: () => {
+                  E(e => {
+                    let t = !e;
+                    return (
+                      s.default.track(
+                        d.AnalyticEvents.MEMBERLIST_CONTENT_FEED_TOGGLED,
+                        { channel_id: h, guild_id: m, expanded: t }
+                      ),
+                      t
+                    );
+                  });
+                },
                 expanded: p,
                 expandedCount: g.length,
-                feedHeight: s
+                feedHeight: i
                   .map(r.getContentRowHeight)
                   .reduce((e, t) => e + t, 0),
               },
-              u = [i, ...t],
-              d = [...n, i, ...s];
-            return [u, d, Math.random(), s];
-          }, [g, p, t, S, n, f]),
+              C = [u, ...t],
+              _ = [...n, u, ...i];
+            return [C, _, Math.random(), i];
+          }, [h, g, p, t, m, S, n, f]),
           v = a.useRef(0),
           x = a.useRef(g),
           N = a.useRef(),
@@ -42510,4 +42530,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1df6d745a90d7f84f005.js.map
+//# sourceMappingURL=e610e7db44d82ef7e513.js.map

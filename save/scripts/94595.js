@@ -169,14 +169,14 @@
         T = s("355033"),
         E = s("264579"),
         _ = s("526887"),
-        O = s("393414"),
-        v = s("235004"),
-        M = s("55411"),
+        v = s("393414"),
+        M = s("235004"),
+        O = s("55411"),
         x = s("686470"),
         N = s("697218"),
         A = s("10514"),
-        R = s("552712"),
-        y = s("953109"),
+        y = s("552712"),
+        R = s("953109"),
         F = s("476765"),
         b = s("599110"),
         G = s("402671"),
@@ -185,7 +185,7 @@
         P = s("158998"),
         D = s("895737"),
         k = s("210721"),
-        U = s("845149"),
+        U = s("357722"),
         w = s("65324"),
         H = s("646718"),
         B = s("49111"),
@@ -211,7 +211,7 @@
             l.useEffect(() => {
               var t;
               if (e !== B.GiftCodeModalStates.CONFIRM) return;
-              let i = v.default.getSoundById(s);
+              let i = M.default.getSoundById(s);
               (0, D.playGiftSound)(
                 s,
                 null !== (t = null == i ? void 0 : i.volume) && void 0 !== t
@@ -404,8 +404,8 @@
               emojiURL: E,
             } = this.state,
             _ = N.default.getCurrentUser(),
-            O = this.step === B.GiftCodeModalStates.ERROR,
-            v =
+            v = this.step === B.GiftCodeModalStates.ERROR,
+            M =
               (null == l ? void 0 : l.userId) != null &&
               null != _ &&
               (null == _ ? void 0 : _.id) != null &&
@@ -446,12 +446,12 @@
                         }),
                       !S &&
                         (null == l.giftStyle || (C && g)) &&
-                        (0, i.jsx)(y.default, {
-                          size: y.default.Sizes.LARGE,
+                        (0, i.jsx)(R.default, {
+                          size: R.default.Sizes.LARGE,
                           game: t,
                           skuId: l.skuId,
                         }),
-                      O && (0, i.jsx)("img", { alt: "", src: h ? Y : Z }),
+                      v && (0, i.jsx)("img", { alt: "", src: h ? Y : Z }),
                       (0, i.jsxs)(d.Heading, {
                         id: a,
                         className: n({
@@ -487,9 +487,9 @@
                           giftStyle: l.giftStyle,
                         }),
                       this.state.opened &&
-                        !O &&
+                        !v &&
                         (0, i.jsx)(T.default, { giftCode: l }),
-                      O &&
+                      v &&
                         (0, i.jsx)(d.Text, {
                           className: V.body,
                           variant: "text-md/normal",
@@ -498,10 +498,10 @@
                       C &&
                         this.state.opened &&
                         !this.state.accepted &&
-                        !O &&
+                        !v &&
                         null != c &&
                         "" !== c &&
-                        !v &&
+                        !M &&
                         (0, i.jsxs)(i.Fragment, {
                           children: [
                             (0, i.jsx)(d.FormTitle, {
@@ -583,7 +583,7 @@
             }),
             (this.handleGoToLibrary = () => {
               let { onClose: t, libraryApplication: e } = this.props;
-              (0, O.transitionTo)(B.Routes.APPLICATION_LIBRARY, {
+              (0, v.transitionTo)(B.Routes.APPLICATION_LIBRARY, {
                 state: { applicationId: null != e ? e.id : null },
               }),
                 t();
@@ -600,10 +600,10 @@
         }
       }
       let q = o.default.connectStores(
-        [x.default, R.default, S.default, M.default, A.default, p.default],
+        [x.default, y.default, S.default, O.default, A.default, p.default],
         t => {
           let { giftCode: e } = t,
-            s = R.default.get(e.skuId),
+            s = y.default.get(e.skuId),
             i = null != s ? S.default.getApplication(s.applicationId) : null,
             l = p.default.useReducedMotion;
           return {
@@ -621,7 +621,7 @@
               null != e.subscriptionPlanId
                 ? (0, L.getOrFetchSubscriptionPlan)(e.subscriptionPlanId)
                 : null,
-            accepting: M.default.getIsAccepting(e.code),
+            accepting: O.default.getIsAccepting(e.code),
             useReducedMotion: l,
           };
         }
@@ -638,7 +638,7 @@
             ...c
           } = t,
           p = (0, F.useUID)(),
-          C = (0, o.useStateFromStores)([M.default], () => M.default.get(l)),
+          C = (0, o.useStateFromStores)([O.default], () => O.default.get(l)),
           S = (0, f.default)(),
           { analyticsLocations: g } = (0, m.default)(h.default.GIFT_CODE_MODAL),
           { product: T } = (0, I.useFetchCollectiblesProduct)(
@@ -673,12 +673,12 @@
             });
       };
     },
-    845149: function (t, e, s) {
+    357722: function (t, e, s) {
       "use strict";
       s.r(e),
         s.d(e, {
           default: function () {
-            return o;
+            return d;
           },
         }),
         s("222007");
@@ -686,60 +686,90 @@
         l = s("884691"),
         a = s("516555"),
         n = s("526887"),
-        r = s("172858"),
-        o = function (t) {
-          let { confettiTarget: e, colors: s, emojiURL: o } = t,
-            [u, d] = l.useState(null),
-            { confettiCanvas: c } = l.useContext(n.ConfettiCannonContext),
-            f = (0, a.useConfettiCannon)(c, u),
-            p = l.useMemo(() => [{ src: o, colorize: !1 }], [o]);
-          return (
-            l.useEffect(() => {
-              let t = [, , , ,].fill(0);
-              return (
-                null != e &&
-                  (t = t.map((t, s) =>
-                    setTimeout(() => {
-                      var t;
-                      f.createMultipleConfetti(
-                        ((t = e.getBoundingClientRect()),
-                        {
-                          ...r.COMMON_CONFETTI_BASE_CONFIG,
-                          position: {
-                            type: "static-random",
-                            minValue: { x: t.left + 100, y: t.top + 75 },
-                            maxValue: { x: t.left + 350, y: t.top + 150 },
-                          },
-                          velocity: {
-                            type: "static-random",
-                            minValue: { x: -40, y: -40 },
-                            maxValue: { x: 40, y: -70 },
-                          },
-                          size: {
-                            type: "static-random",
-                            minValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-                            maxValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-                          },
-                          dragCoefficient: { type: "static", value: 0.001 },
-                        }),
-                        50
-                      );
-                    }, 60 * s)
-                  )),
-                () => {
-                  for (let e of t) clearTimeout(e);
-                }
-              );
-            }, [f, e]),
-            (0, i.jsx)(a.SpriteCanvas, {
-              ref: d,
-              sprites: null != p ? p : r.COMMON_CONFETTI_SPRITES,
-              colors: null != s ? s : r.COMMON_CONFETTI_COLORS,
-              spriteWidth: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-              spriteHeight: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-            })
-          );
-        };
+        r = s("172858");
+      let o = { xMin: -40, xMax: 40, yMin: -40, yMax: -70 },
+        u = (t, e, s) => (null == s ? e : (t * s) / 100);
+      var d = function (t) {
+        let {
+            confettiTarget: e,
+            colors: s,
+            emojiURL: d,
+            numBursts: c,
+            particlesPerBurst: f,
+            offsetXPercentageMax: p,
+            offsetXPercentageMin: h,
+            offsetYPercentageMax: m,
+            offsetYPercentageMin: C,
+            customConfettiCanvas: S,
+            speedValues: g = o,
+            dragCoefficientValue: I = 0.001,
+          } = t,
+          [T, E] = l.useState(null),
+          { confettiCanvas: _ } = l.useContext(n.ConfettiCannonContext),
+          v = (0, a.useConfettiCannon)(null != S ? S : _, T),
+          M = l.useMemo(() => {
+            if (null != d) return [{ src: d, colorize: !1 }];
+          }, [d]);
+        return (
+          l.useEffect(() => {
+            if (null == e) return;
+            let t = Array(null != c ? c : 4).fill(0);
+            return (
+              (t = t.map((t, s) =>
+                setTimeout(() => {
+                  v.createMultipleConfetti(
+                    (function (t, e, s, i, l) {
+                      let a =
+                          arguments.length > 5 && void 0 !== arguments[5]
+                            ? arguments[5]
+                            : o,
+                        n =
+                          arguments.length > 6 && void 0 !== arguments[6]
+                            ? arguments[6]
+                            : 0.001,
+                        d = u(t.width, 100, s),
+                        c = u(t.height, 75, l),
+                        f = u(t.width, 350, e),
+                        p = u(t.height, 75, i),
+                        { xMin: h, xMax: m, yMin: C, yMax: S } = a;
+                      return {
+                        ...r.COMMON_CONFETTI_BASE_CONFIG,
+                        position: {
+                          type: "static-random",
+                          minValue: { x: t.left + d, y: t.top + c },
+                          maxValue: { x: t.left + f, y: t.top + p },
+                        },
+                        velocity: {
+                          type: "static-random",
+                          minValue: { x: h, y: C },
+                          maxValue: { x: m, y: S },
+                        },
+                        size: {
+                          type: "static-random",
+                          minValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+                          maxValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+                        },
+                        dragCoefficient: { type: "static", value: n },
+                      };
+                    })(e.getBoundingClientRect(), p, h, m, C, g, I),
+                    null != f ? f : 50
+                  );
+                }, 60 * s)
+              )),
+              () => {
+                for (let e of t) clearTimeout(e);
+              }
+            );
+          }, [v, e, c, f, p, h, m, C, g, I]),
+          (0, i.jsx)(a.SpriteCanvas, {
+            ref: E,
+            sprites: null != M ? M : r.COMMON_CONFETTI_SPRITES,
+            colors: null != s ? s : r.COMMON_CONFETTI_COLORS,
+            spriteWidth: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+            spriteHeight: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+          })
+        );
+      };
     },
     601095: function (t, e, s) {
       "use strict";
@@ -814,4 +844,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8b62f9a39b82b7c040bd.js.map
+//# sourceMappingURL=601300405dad682e3bb7.js.map

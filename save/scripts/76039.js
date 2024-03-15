@@ -10153,7 +10153,7 @@
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "New Subscription Total",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} Canceled",
         PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "This adjustment includes prorations, discounts, and refunds.",
+          "This adjustment includes prorations, discounts, applicable taxes, and refunds.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Why am I seeing this?**\n\nYou are purchasing a plan change. Your Server Boosts are being updated accordingly.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -26362,8 +26362,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275645", ", Version Hash: ")
-          .concat("8e77fd7e3358d6bb49818f53206c4ecd22cc76c9")
+          .concat("275648", ", Version Hash: ")
+          .concat("64aea75cebf9326610da161c7630765278030cf3")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29475,12 +29475,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275645"), "275645"));
+        let _ = parseInt(((e = "275648"), "275648"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275645"
+                "275648"
               )
             ),
             (_ = 0)),
@@ -52131,4 +52131,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.9e0a0b18afe86dd12367.js.map
+//# sourceMappingURL=76039.001e4d3463a94098efaa.js.map

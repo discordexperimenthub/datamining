@@ -40207,8 +40207,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -59494,6 +59494,14 @@ html .invoiceCancelRow_c1bfe7 {
     min-width: 350px;
   }
 }
+.confettiCanvas__5f200 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
 .flipCardContainer__314ea {
   perspective: 1e3px;
 }
@@ -59831,6 +59839,14 @@ html .invoiceCancelRow_c1bfe7 {
 .sectionHeaderSeeAll_d4277d {
   text-align: center;
   flex-grow: 1;
+}
+.confettiCanvas_e46a8e {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 .container__5980c {
   display: flex;
@@ -110753,4 +110769,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ddcefae7709a5727f0f1.css.map*/
+/*# sourceMappingURL=app.1b37dfe6090c7da7c599.css.map*/

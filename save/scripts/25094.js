@@ -637,7 +637,7 @@
             ],
           });
         return p
-          ? (0, a.jsx)(i.default, {
+          ? (0, a.jsx)(i.TransitionGroup, {
               component: "div",
               className: A.saveNoticeContainer,
               children:
@@ -4272,4 +4272,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7d764850d1b409513192.js.map
+//# sourceMappingURL=7dce4e1cd769151865dd.js.map

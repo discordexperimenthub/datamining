@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275618",
+                  buildNumber: "275627",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -12652,7 +12652,7 @@
           return (0, a.jsxs)(a.Fragment, {
             children: [
               this.renderArtisanalHack(),
-              (0, a.jsx)(u.default, {
+              (0, a.jsx)(u.TransitionGroup, {
                 component: "div",
                 className: i(T.layers, this.props.className),
                 children: this.renderLayers(),
@@ -34265,7 +34265,7 @@
               I
                 ? (0, a.jsx)("div", { children: e.map(n) }, t)
                 : (0, a.jsx)(
-                    i.default,
+                    i.TransitionGroup,
                     {
                       transitionAppear: !1,
                       component: "div",
@@ -52822,4 +52822,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fe5ca2fa57e91bee5934.js.map
+//# sourceMappingURL=054c6fe985c523f677cc.js.map

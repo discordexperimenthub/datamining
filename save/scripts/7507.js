@@ -2787,7 +2787,7 @@
                 ],
               }),
             }),
-            (0, n.jsx)(f.default, {
+            (0, n.jsx)(f.TransitionGroup, {
               component: "div",
               className: k.successNoticeContainer,
               children: e3,
@@ -4490,4 +4490,4 @@
     },
   },
 ]);
-//# sourceMappingURL=561d41f323ff5232f94e.js.map
+//# sourceMappingURL=ebe466089f537a17920d.js.map

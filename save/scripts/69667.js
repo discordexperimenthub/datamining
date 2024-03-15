@@ -14316,7 +14316,7 @@
             L = h ? I : T,
             P = R > 0;
           return P || C
-            ? (0, s.jsxs)(r.default, {
+            ? (0, s.jsxs)(r.TransitionGroup, {
                 component: "div",
                 className: i(L.reactions, S),
                 transitionAppear: !v,
@@ -26731,7 +26731,7 @@
                 interval: 2e3,
                 className: I.slideshowWrapper,
                 disable: !e,
-                children: (0, s.jsx)(d.default, {
+                children: (0, s.jsx)(d.TransitionGroup, {
                   children: this.renderSlideItem(t),
                 }),
               });
@@ -26808,7 +26808,7 @@
                           type: "video/mp4",
                         }),
                       }),
-                  (0, s.jsx)(d.default, {
+                  (0, s.jsx)(d.TransitionGroup, {
                     children:
                       r && e
                         ? null
@@ -32240,4 +32240,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9c9e5addfab6a3344d0a.js.map
+//# sourceMappingURL=4956775bcebb2335765d.js.map

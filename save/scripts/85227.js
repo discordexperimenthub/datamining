@@ -165,7 +165,7 @@
           children: [
             (0, s.jsx)("div", { className: l(h.image, t) }),
             n,
-            (0, s.jsx)(o.default, {
+            (0, s.jsx)(o.TransitionGroup, {
               children:
                 null != a
                   ? (0, s.jsx)(m.default, {
@@ -446,7 +446,7 @@
           [v, A] = l.useState(""),
           [O, P] = l.useState(T[0]),
           [B, j] = l.useState(!1),
-          [y, G] = l.useState(a),
+          [G, y] = l.useState(a),
           [w, b] = l.useState(null != s ? s : M.slice(0, 1)),
           F = l.useMemo(
             () =>
@@ -554,7 +554,7 @@
                 (0, r.jsx)(S.GuildSelectModalBody, {
                   onClose: V,
                   onSelectGuild: e => {
-                    G(e), P("CONFIRM");
+                    y(e), P("CONFIRM");
                   },
                   isTransfer: H,
                   selectedSlotGuilds: F,
@@ -563,7 +563,7 @@
             },
             CONFIRM: {
               body() {
-                if (null == y) return null;
+                if (null == G) return null;
                 let e = w.filter(e =>
                     (0, h.isGuildBoostSlotCanceled)(e)
                   ).length,
@@ -572,7 +572,7 @@
                 return H
                   ? (0, r.jsx)(I.default.TransferBody, {
                       fromGuilds: F,
-                      toGuild: y,
+                      toGuild: G,
                       blurb:
                         N.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_BLURB.format(
                           { slotCount: t, guildCount: n }
@@ -584,7 +584,7 @@
                       canceledCount: e,
                     })
                   : (0, r.jsx)(I.default.ApplyBody, {
-                      guild: y,
+                      guild: G,
                       blurb:
                         N.default.Messages
                           .PREMIUM_GUILD_SUBSCRIBE_CONFIRM_BLURB,
@@ -606,7 +606,7 @@
                 let e = w.length,
                   t = "CONFIRM" === T[0] ? V : () => P(T[T.indexOf(O) - 1]),
                   n = async () => {
-                    if (null != y && (null == w ? void 0 : w.length) !== 0) {
+                    if (null != G && (null == w ? void 0 : w.length) !== 0) {
                       o(
                         !w.some(e => e.isOnCooldown()),
                         "Cannot use a premium guild subscription slot while on cooldown"
@@ -621,7 +621,7 @@
                           })
                         ),
                           await (0, c.applyToGuild)(
-                            y.id,
+                            G.id,
                             w.map(e => {
                               let { id: t } = e;
                               return t;
@@ -657,7 +657,7 @@
             SUCCESS: {
               body: () =>
                 (0, r.jsx)(C.GuildBoostingConfirmation, {
-                  guild: y,
+                  guild: G,
                   isTransfer: H,
                   guildBoostQuantity: w.length,
                   onClose: V,
@@ -2539,4 +2539,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3a4d5bffc4258c6341b5.js.map
+//# sourceMappingURL=2efb9fc493b6425004c0.js.map

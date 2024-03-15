@@ -28,8 +28,8 @@
         o = n("77078"),
         a = n("428958"),
         c = n("69927"),
-        d = n("384997"),
-        u = n("674574"),
+        u = n("384997"),
+        d = n("674574"),
         h = n("304386"),
         m = n("423487"),
         p = n("956089"),
@@ -60,14 +60,14 @@
             null !== (t = null == s ? void 0 : s.element) && void 0 !== t
               ? t
               : v.NOOP_NULL,
-          d =
+          u =
             null !== (n = null == s ? void 0 : s.elementProps) && void 0 !== n
               ? n
               : {};
         return (0, i.jsx)(b.default, {
           section: s.section,
           children: (0, i.jsx)(c, {
-            ...d,
+            ...u,
             setPreventNavigation: r,
             refToScroller: o,
           }),
@@ -136,7 +136,7 @@
               .flatMap(e => e.newIndicatorDismissibleContentTypes)
               .filter(e => null != e),
             l = null != t ? t : e[0].section;
-          return (0, i.jsx)(d.default, {
+          return (0, i.jsx)(u.default, {
             contentTypes: s,
             children: t => {
               let { visibleContent: s } = t;
@@ -194,14 +194,14 @@
             o = this.getPredicateSections(),
             a = o.find(e => e.section === n);
           if (null == a || null == n) return null;
-          let d =
+          let u =
             null !== (e = "string" == typeof a.label ? a.label : a.ariaLabel) &&
             void 0 !== e
               ? e
               : s;
           return (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(c.AppPageTitle, { location: s, subsection: d }),
+              (0, i.jsx)(c.AppPageTitle, { location: s, subsection: u }),
               (0, i.jsx)(g.default, {
                 sidebarTheme: t,
                 scrollerRef: this.scrollerRef,
@@ -286,7 +286,7 @@
                   label: l = null,
                   ariaLabel: a,
                   onClick: c,
-                  color: d,
+                  color: u,
                   icon: f,
                   className: S,
                   newIndicator: b,
@@ -302,7 +302,7 @@
                 : s === v.UserSettingsSections.INVENTORY &&
                     null != this.props.shouldShowSettingBadgeForQuests &&
                     this.props.shouldShowSettingBadgeForQuests.length > 0
-                  ? (j = (0, i.jsx)(u.QuestUserSettingsBadge, {
+                  ? (j = (0, i.jsx)(d.QuestUserSettingsBadge, {
                       questIds: this.props.shouldShowSettingBadgeForQuests,
                     }))
                   : null != e.decoration
@@ -339,7 +339,7 @@
               return (0, i.jsx)(
                 o.TabBar.Item,
                 {
-                  color: d,
+                  color: u,
                   id: s,
                   onClick: c,
                   className: S,
@@ -380,8 +380,8 @@
         o = n("414456"),
         a = n.n(o),
         c = n("907002"),
-        d = n("353386"),
-        u = n("394846"),
+        u = n("353386"),
+        d = n("394846"),
         h = n("266491"),
         m = n("77078"),
         p = n("84339"),
@@ -494,7 +494,7 @@
           null != P.current && y !== s && P.current.scrollTo({ to: 0 });
         }, [s, y, P]);
         let O = (0, l.jsx)(E, {
-          isMobile: u.isMobile,
+          isMobile: d.isMobile,
           mobileSidebarOpen: T,
           closeAction: o,
         });
@@ -523,18 +523,18 @@
                     ? null
                     : (0, l.jsx)("div", {
                         className: a(v.sidebarRegion, (0, b.getThemeClass)(S), {
-                          [v.flexFullWidth]: u.isMobile,
-                          [v.hidden]: u.isMobile && !1 === T,
+                          [v.flexFullWidth]: d.isMobile,
+                          [v.hidden]: d.isMobile && !1 === T,
                         }),
                         children: (0, l.jsx)(m.AdvancedScrollerThin, {
                           className: v.sidebarRegionScroller,
                           fade: !0,
                           children: (0, l.jsxs)("nav", {
                             className: a(v.sidebar, {
-                              [v.mobileSidebar]: u.isMobile,
+                              [v.mobileSidebar]: d.isMobile,
                             }),
                             children: [
-                              u.isMobile &&
+                              d.isMobile &&
                                 (0, l.jsx)("div", {
                                   className: v.mobileSidebarHeader,
                                   children: O,
@@ -547,27 +547,27 @@
                 (function () {
                   let e = null != j && null != o && T,
                     t =
-                      u.isMobile &&
+                      d.isMobile &&
                       (0, l.jsxs)("div", {
                         className: a(v.mobileContentHeader, {
                           [v.hideHamburger]: !e,
                         }),
                         children: [
-                          e && (0, l.jsx)(d.default, { onClick: j }),
+                          e && (0, l.jsx)(u.default, { onClick: j }),
                           O,
                         ],
                       });
                   if ("custom" === g)
-                    return (0, l.jsxs)(h.default, {
+                    return (0, l.jsxs)(h.TransitionGroup, {
                       component: "div",
                       className: v.contentRegion,
-                      children: [t, n, !u.isMobile && O, _()],
+                      children: [t, n, !d.isMobile && O, _()],
                     });
                   let i = C[null != g ? g : "default"];
-                  return (0, l.jsxs)(h.default, {
+                  return (0, l.jsxs)(h.TransitionGroup, {
                     component: "div",
                     className: a(v.contentRegion, {
-                      [v.hidden]: u.isMobile && !0 === T,
+                      [v.hidden]: d.isMobile && !0 === T,
                     }),
                     children: [
                       (0, l.jsxs)("div", {
@@ -588,10 +588,10 @@
                                 children: (0, l.jsx)(m.TabBar.Panel, {
                                   id: s,
                                   className: a(v.contentColumn, v[i], {
-                                    [v.mobileContent]: u.isMobile,
+                                    [v.mobileContent]: d.isMobile,
                                   }),
                                   ref: R,
-                                  style: u.isMobile
+                                  style: d.isMobile
                                     ? { maxWidth: window.innerWidth }
                                     : void 0,
                                   children: I
@@ -602,7 +602,7 @@
                                       }),
                                 }),
                               }),
-                              !u.isMobile && O,
+                              !d.isMobile && O,
                             ],
                           }),
                         ],
@@ -661,8 +661,8 @@
         o = n("154889"),
         a = n("917247"),
         c = n("801388"),
-        d = n("770469"),
-        u = n("641078"),
+        u = n("770469"),
+        d = n("641078"),
         h = n("773367"),
         m = n("160299"),
         p = n("324929"),
@@ -672,7 +672,7 @@
           { decoration: n, label: s, isSelected: S } = e,
           b = (0, a.usePremiumTrialOffer)(),
           g = (0, o.usePremiumDiscountOffer)(),
-          v = (0, u.useIsEligibleForBogoPromotion)(),
+          v = (0, d.useIsEligibleForBogoPromotion)(),
           x = (0, r.useStateFromStores)(
             [m.default],
             () => m.default.isLocalizedPromoEnabled
@@ -695,8 +695,8 @@
                 : null != n
                   ? n
                   : N
-                    ? (0, i.jsx)(d.LocalizedPricingBadgeIcon, {
-                        entryPoint: d.BadgeEntryPoint.SettingsMenu,
+                    ? (0, i.jsx)(u.LocalizedPricingBadgeIcon, {
+                        entryPoint: u.BadgeEntryPoint.SettingsMenu,
                       })
                     : (0, i.jsx)(p.default, { isSelected: S })),
           (0, i.jsxs)(i.Fragment, {
@@ -733,8 +733,8 @@
         o = n("458960"),
         a = n("77078"),
         c = n("899284");
-      let d = { friction: 7, tension: 60 };
-      class u extends s.Component {
+      let u = { friction: 7, tension: 60 };
+      class d extends s.Component {
         componentWillAppear(e) {
           this.animateTo(1).start(e);
         }
@@ -750,7 +750,7 @@
                 .start(e);
         }
         animateTo(e) {
-          return o.default.spring(this.animation, { ...d, toValue: e });
+          return o.default.spring(this.animation, { ...u, toValue: e });
         }
         getAnimatedStyle() {
           let { reducedMotion: e } = this.context;
@@ -780,9 +780,9 @@
           super(...e), (this.animation = new o.default.Value(0));
         }
       }
-      u.contextType = a.AccessibilityPreferencesContext;
-      var h = u;
+      d.contextType = a.AccessibilityPreferencesContext;
+      var h = d;
     },
   },
 ]);
-//# sourceMappingURL=7cb4da74ae5b0bec4837.js.map
+//# sourceMappingURL=aac62e7ff98722898a02.js.map

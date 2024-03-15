@@ -153,7 +153,7 @@
             { modalCarouselItemClassName: o } = this.props,
             r = this.props.items[n],
             a = this.props.items;
-          return (0, i.jsxs)(p.default, {
+          return (0, i.jsxs)(p.TransitionGroup, {
             component: "div",
             className: l(L.wrapper, e),
             children: [
@@ -636,4 +636,4 @@
     },
   },
 ]);
-//# sourceMappingURL=10371417908550b991a2.js.map
+//# sourceMappingURL=4b2c75ab4f1da0ad21dd.js.map

@@ -3133,7 +3133,7 @@
                     : null != l && (c = l(o)));
               }
             }),
-            (0, s.jsx)(l.default, { ...u, children: c })
+            (0, s.jsx)(l.TransitionGroup, { ...u, children: c })
           );
         }
       }
@@ -5308,4 +5308,4 @@
     },
   },
 ]);
-//# sourceMappingURL=81726.fd218f2db8ffabddf299.js.map
+//# sourceMappingURL=81726.3053856823576302a31c.js.map

@@ -672,7 +672,7 @@
                     }),
                   ],
                 }),
-                (0, r.jsx)(l.default, {
+                (0, r.jsx)(l.TransitionGroup, {
                   children:
                     !0 === C &&
                     (0, r.jsx)(u.default, {
@@ -3255,4 +3255,4 @@
     },
   },
 ]);
-//# sourceMappingURL=38a949de605b0e6dbc6d.js.map
+//# sourceMappingURL=e9ced5cf59a0578971af.js.map

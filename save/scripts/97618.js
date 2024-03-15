@@ -376,7 +376,7 @@
               }),
               (0, n.jsx)("div", {
                 className: H.outerContentWrapper,
-                children: (0, n.jsx)(i.default, {
+                children: (0, n.jsx)(i.TransitionGroup, {
                   component: g,
                   children: this.renderContent(),
                 }),
@@ -497,4 +497,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3abd8d758e280ba7e0bb.js.map
+//# sourceMappingURL=084848d90400a0a30880.js.map

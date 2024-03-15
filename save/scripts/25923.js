@@ -2324,7 +2324,7 @@
       })(e => {
         let { determineOwnVisibility: t = !0, ...n } = e;
         return t
-          ? (0, l.jsx)(d.default, {
+          ? (0, l.jsx)(d.TransitionGroup, {
               component: a.Fragment,
               children:
                 n.percent > 0 && n.percent < 100
@@ -14289,7 +14289,7 @@
           null != C &&
             !p &&
             h.unshift((0, l.jsx)(c.default, { channel: C }, C.id)),
-          (0, l.jsx)(i.default, { component: a.Fragment, children: h })
+          (0, l.jsx)(i.TransitionGroup, { component: a.Fragment, children: h })
         );
       }
     },
@@ -16784,7 +16784,7 @@
           size: m.ModalSize.DYNAMIC,
           "aria-label": L.default.Messages.KEYBINDS,
           transitionState: t,
-          children: (0, s.jsx)(p.default, {
+          children: (0, s.jsx)(p.TransitionGroup, {
             component: "div",
             children: l
               ? (0, s.jsx)(T.default, { onClose: n }, "raging-demo")
@@ -23286,4 +23286,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9bd26f9ec2ab07495260.js.map
+//# sourceMappingURL=0babe875f172df6f6cc9.js.map

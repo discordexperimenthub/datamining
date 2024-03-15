@@ -5609,7 +5609,7 @@
               l.id
             );
           });
-        return (0, a.jsx)(o.default, {
+        return (0, a.jsx)(o.TransitionGroup, {
           component: "div",
           className: i(E.root, r),
           children: v,
@@ -42583,4 +42583,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b539c25ea027406ebca9.js.map
+//# sourceMappingURL=e4c822dc8dc706e188bb.js.map

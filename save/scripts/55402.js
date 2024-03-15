@@ -2502,7 +2502,7 @@
           } = this.props;
           if (n === f.OverlayNotificationPositions.DISABLED) return null;
           let l = -1;
-          return (0, i.jsx)(r.default, {
+          return (0, i.jsx)(r.TransitionGroup, {
             component: "div",
             className: s(h.container, h[n]),
             children: t.map(t =>
@@ -7375,4 +7375,4 @@
     },
   },
 ]);
-//# sourceMappingURL=13300abc03b0bda05f90.js.map
+//# sourceMappingURL=88d1f4e92e1f28330e0c.js.map

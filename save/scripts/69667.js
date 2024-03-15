@@ -21519,28 +21519,26 @@
           questId: t.id,
           questContent: n,
           children: e =>
-            (0, s.jsxs)(s.Fragment, {
-              children: [
-                (0, s.jsxs)("div", {
-                  ref: t => {
-                    e.current = t;
-                  },
-                  className: u.questsCard,
-                  onFocus: E,
-                  onMouseEnter: E,
-                  onBlur: f,
-                  onMouseLeave: f,
-                  children: [
-                    (0, s.jsx)(r.default, {
-                      isFocused: d,
-                      quest: t,
-                      location: n,
-                    }),
-                    (0, s.jsx)(i.default, { quest: t, location: n }),
-                  ],
-                }),
-                (0, s.jsx)(o.default, { quest: t, location: n }),
-              ],
+            (0, s.jsx)(s.Fragment, {
+              children: (0, s.jsxs)("div", {
+                ref: t => {
+                  e.current = t;
+                },
+                className: u.questsCard,
+                onFocus: E,
+                onMouseEnter: E,
+                onBlur: f,
+                onMouseLeave: f,
+                children: [
+                  (0, s.jsx)(r.default, {
+                    isFocused: d,
+                    quest: t,
+                    location: n,
+                  }),
+                  (0, s.jsx)(i.default, { quest: t, location: n }),
+                  (0, s.jsx)(o.default, { quest: t, location: n }),
+                ],
+              }),
             }),
         });
       };
@@ -32269,4 +32267,4 @@
     },
   },
 ]);
-//# sourceMappingURL=622e203629555271c8b4.js.map
+//# sourceMappingURL=e0e72d1a73fe53450aea.js.map

@@ -1,6 +1,27 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["81423"],
   {
+    289867: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var i = n("913144"),
+        l = {
+          toggleMembersSection() {
+            i.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+          },
+          toggleProfilePanelSection() {
+            i.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
+          },
+          toggleSummariesSection() {
+            i.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+          },
+        };
+    },
     102457: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -240,8 +261,8 @@
         S = n("474643"),
         I = n("836417"),
         f = n("377253"),
-        N = n("660478"),
-        p = n("18494"),
+        p = n("660478"),
+        N = n("18494"),
         O = n("162771"),
         R = n("144747"),
         L = n("471671"),
@@ -306,7 +327,7 @@
               !1
             );
           let t = O.default.getGuildId(),
-            n = p.default.getChannelId(t),
+            n = N.default.getChannelId(t),
             o = T.default.getChannel(n),
             a = C.default.getSection(n, null == o ? void 0 : o.isDM()),
             d =
@@ -356,7 +377,7 @@
         return (
           n.hasMoreAfter &&
             (o.default.jumpToPresent(e, h.MAX_MESSAGES_PER_CHANNEL), (t = !0)),
-          N.default.hasUnread(e) && ((0, a.ack)(e), (t = !0)),
+          p.default.hasUnread(e) && ((0, a.ack)(e), (t = !0)),
           (0, a.localAck)(e),
           t
         );
@@ -1193,7 +1214,7 @@
             return i;
           },
           getNameForKeybindGroup: function () {
-            return v;
+            return B;
           },
           getDescriptionForKeybindGroup: function () {
             return V;
@@ -1226,8 +1247,8 @@
         S = n("242149"),
         I = n("714208"),
         f = n("24312"),
-        N = n("30269"),
-        p = n("709079"),
+        p = n("30269"),
+        N = n("709079"),
         O = n("616903"),
         R = n("271524"),
         L = n("333949"),
@@ -1239,38 +1260,38 @@
         m = n("347445"),
         M = n("992642"),
         y = n("200431"),
-        U = n("493334"),
-        P = n("809392"),
+        P = n("493334"),
+        U = n("809392"),
         K = n("202035"),
         H = n("49111"),
-        B = n("782340");
-      function v(e) {
+        v = n("782340");
+      function B(e) {
         switch (e) {
           case "NAVIGATION":
-            return B.default.Messages
+            return v.default.Messages
               .USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
           case "VOICE_AND_VIDEO":
-            return B.default.Messages
+            return v.default.Messages
               .USER_SETTINGS_KEYBINDS_VOICE_AND_VIDEO_SECTION_TITLE;
           case "CHAT":
-            return B.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
+            return v.default.Messages.USER_SETTINGS_KEYBINDS_CHAT_SECTION_TITLE;
           case "MISCELLANEOUS":
-            return B.default.Messages
+            return v.default.Messages
               .USER_SETTINGS_KEYBINDS_MISCELLANEOUS_SECTION_TITLE;
           case "MESSAGE":
-            return B.default.Messages
+            return v.default.Messages
               .USER_SETTINGS_KEYBINDS_MESSAGE_SECTION_TITLE;
           case "DND":
-            return B.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE;
+            return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_SECTION_TITLE;
         }
       }
       function V(e) {
         switch (e) {
           case "MESSAGE":
-            return B.default.Messages
+            return v.default.Messages
               .USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
           case "DND":
-            return B.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
+            return v.default.Messages.USER_SETTINGS_KEYBINDS_DND_DESCRIPTION;
           default:
             return null;
         }
@@ -1298,10 +1319,10 @@
         [H.KeybindActions.CHANNEL_PREV]: a.CHANNEL_PREV,
         [H.KeybindActions.NAVIGATE_BACK]: a.NAVIGATE_BACK,
         [H.KeybindActions.NAVIGATE_FORWARD]: a.NAVIGATE_FORWARD,
-        [H.KeybindActions.UNREAD_NEXT]: U.UNREAD_NEXT,
-        [H.KeybindActions.UNREAD_PREV]: U.UNREAD_PREV,
-        [H.KeybindActions.MENTION_CHANNEL_NEXT]: U.MENTION_NEXT,
-        [H.KeybindActions.MENTION_CHANNEL_PREV]: U.MENTION_PREV,
+        [H.KeybindActions.UNREAD_NEXT]: P.UNREAD_NEXT,
+        [H.KeybindActions.UNREAD_PREV]: P.UNREAD_PREV,
+        [H.KeybindActions.MENTION_CHANNEL_NEXT]: P.MENTION_NEXT,
+        [H.KeybindActions.MENTION_CHANNEL_PREV]: P.MENTION_PREV,
         [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: a.TOGGLE_PREVIOUS_GUILD,
         [H.KeybindActions.JUMP_TO_GUILD]: c.JUMP_TO_GUILD,
         [H.KeybindActions.SUBMIT]: L.SUBMIT,
@@ -1322,13 +1343,13 @@
         [H.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
         [H.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
         [H.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
-        [H.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
-        [H.KeybindActions.SEARCH_GIFS]: p.SEARCH_GIFS,
+        [H.KeybindActions.SEARCH_EMOJIS]: p.SEARCH_EMOJIS,
+        [H.KeybindActions.SEARCH_GIFS]: N.SEARCH_GIFS,
         [H.KeybindActions.SEARCH_STICKERS]: O.SEARCH_STICKERS,
         [H.KeybindActions.TOGGLE_HOTKEYS]: m.TOGGLE_HOTKEYS,
         [H.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
         [H.KeybindActions.CREATE_GUILD]: s.CREATE_GUILD,
-        [H.KeybindActions.UPLOAD_FILE]: P.UPLOAD_FILE,
+        [H.KeybindActions.UPLOAD_FILE]: U.UPLOAD_FILE,
         [H.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
         [H.KeybindActions.CALL_ACCEPT]: o.CALL_ACCEPT,
         [H.KeybindActions.CALL_START]: o.CALL_START,
@@ -1344,7 +1365,7 @@
         return [
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_SERVERS,
             binds: F(
               H.KeybindActions.SERVER_PREV,
               H.KeybindActions.SERVER_NEXT
@@ -1353,7 +1374,7 @@
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_CHANNELS,
             binds: F(
               H.KeybindActions.CHANNEL_PREV,
               H.KeybindActions.CHANNEL_NEXT
@@ -1362,7 +1383,7 @@
           },
           {
             description:
-              B.default.Messages
+              v.default.Messages
                 .KEYBIND_DESCRIPTION_MODAL_NAVIGATE_BACK_FORWARD,
             binds: F(
               H.KeybindActions.NAVIGATE_BACK,
@@ -1372,7 +1393,7 @@
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UNREAD_CHANNELS,
             binds: F(
               H.KeybindActions.UNREAD_PREV,
               H.KeybindActions.UNREAD_NEXT
@@ -1381,7 +1402,7 @@
           },
           {
             description:
-              B.default.Messages
+              v.default.Messages
                 .KEYBIND_DESCRIPTION_MODAL_UNREAD_MENTION_CHANNELS,
             binds: F(
               H.KeybindActions.MENTION_CHANNEL_PREV,
@@ -1391,224 +1412,224 @@
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_NAVIGATE_TO_CALL,
             binds: F(H.KeybindActions.JUMP_TO_CURRENT_CALL),
             group: "NAVIGATION",
           },
           {
             description:
-              B.default.Messages
+              v.default.Messages
                 .KEYBIND_DESCRIPTION_MODAL_TOGGLE_PREVIOUS_GUILD,
             binds: F(H.KeybindActions.TOGGLE_PREVIOUS_GUILD),
             group: "NAVIGATION",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_QUICKSWITCHER,
             binds: F(H.KeybindActions.QUICKSWITCHER_SHOW),
             group: "NAVIGATION",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_GUILD,
             binds: F(H.KeybindActions.CREATE_GUILD),
             group: "NAVIGATION",
             groupEnd: !0,
           },
           {
-            description: B.default.Messages.DND_OPERATION_LABEL_START,
+            description: v.default.Messages.DND_OPERATION_LABEL_START,
             binds: ["mod+d"],
             group: "DND",
           },
           {
-            description: B.default.Messages.DND_OPERATION_LABEL_MOVE,
+            description: v.default.Messages.DND_OPERATION_LABEL_MOVE,
             binds: ["up", "down"],
             group: "DND",
           },
           {
-            description: B.default.Messages.DND_OPERATION_LABEL_DROP,
+            description: v.default.Messages.DND_OPERATION_LABEL_DROP,
             binds: ["spacebar", "enter"],
             group: "DND",
           },
           {
-            description: B.default.Messages.DND_OPERATION_LABEL_CANCEL,
+            description: v.default.Messages.DND_OPERATION_LABEL_CANCEL,
             binds: ["esc"],
             group: "DND",
             groupEnd: !0,
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_SERVER_READ,
             binds: F(H.KeybindActions.MARK_SERVER_READ),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_MARK_CHANNEL_READ,
             binds: F(H.KeybindActions.MARK_CHANNEL_READ),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CREATE_DM_GROUP,
             binds: F(H.KeybindActions.CREATE_DM_GROUP),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_PINS,
             binds: F(H.KeybindActions.TOGGLE_CHANNEL_PINS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_INBOX,
             binds: F(H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages
+              v.default.Messages
                 .KEYBIND_DESCRIPTION_MODAL_MARK_TOP_INBOX_CHANNEL_READ,
             binds: F(H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_USERS,
             binds: F(H.KeybindActions.TOGGLE_USERS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_EMOJIS,
             binds: F(H.KeybindActions.SEARCH_EMOJIS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_GIFS,
             binds: F(H.KeybindActions.SEARCH_GIFS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH_STICKERS,
             binds: F(H.KeybindActions.SEARCH_STICKERS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SCROLL_CHAT,
             binds: F(H.KeybindActions.SCROLL_UP, H.KeybindActions.SCROLL_DOWN),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_JUMP_TO_FIRST_UNREAD,
             binds: F(H.KeybindActions.JUMP_TO_FIRST_UNREAD),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
             binds: F(H.KeybindActions.TEXTAREA_FOCUS),
             group: "CHAT",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_UPLOAD_FILE,
             binds: F(H.KeybindActions.UPLOAD_FILE),
             group: "CHAT",
             groupEnd: !0,
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_MUTE,
             binds: F(H.KeybindActions.TOGGLE_MUTE),
             group: "VOICE_AND_VIDEO",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_DEAFEN,
             binds: F(H.KeybindActions.TOGGLE_DEAFEN),
             group: "VOICE_AND_VIDEO",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT,
             binds: F(H.KeybindActions.CALL_ACCEPT),
             group: "VOICE_AND_VIDEO",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE,
             binds: F(H.KeybindActions.MARK_CHANNEL_READ),
             group: "VOICE_AND_VIDEO",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_CALL_START,
             binds: F(H.KeybindActions.CALL_START),
             group: "VOICE_AND_VIDEO",
             groupEnd: !0,
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_TOGGLE_HELP,
             binds: F(H.KeybindActions.TOGGLE_HELP),
             group: "MISCELLANEOUS",
           },
           {
-            description: B.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
+            description: v.default.Messages.KEYBIND_DESCRIPTION_MODAL_SEARCH,
             binds: F(H.KeybindActions.FOCUS_SEARCH),
             group: "MISCELLANEOUS",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG,
             binds: ["h+h+right+n+k"],
             group: "MISCELLANEOUS",
             groupEnd: !0,
           },
           {
-            description: B.default.Messages.EDIT_MESSAGE,
+            description: v.default.Messages.EDIT_MESSAGE,
             binds: ["e"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.DELETE_MESSAGE,
+            description: v.default.Messages.DELETE_MESSAGE,
             binds: ["backspace"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.PIN_MESSAGE,
+            description: v.default.Messages.PIN_MESSAGE,
             binds: ["p"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.ADD_REACTION,
+            description: v.default.Messages.ADD_REACTION,
             binds: ["plus"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.MESSAGE_ACTION_REPLY,
+            description: v.default.Messages.MESSAGE_ACTION_REPLY,
             binds: ["r"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.COPY_TEXT,
+            description: v.default.Messages.COPY_TEXT,
             binds: ["mod+c"],
             group: "MESSAGE",
           },
           {
-            description: B.default.Messages.MARK_UNREAD,
+            description: v.default.Messages.MARK_UNREAD,
             binds: ["alt+enter"],
             group: "MESSAGE",
           },
           {
             description:
-              B.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
+              v.default.Messages.KEYBIND_DESCRIPTION_MODAL_FOCUS_TEXT_AREA,
             binds: ["escape"],
             group: "MESSAGE",
             groupEnd: !0,
@@ -1797,32 +1818,32 @@
             guildFeaturePredicate: I = (e, t) => !1,
             withVoiceChannels: f = !1,
           } = t,
-          N =
+          p =
             null !== (l = s.default.getState().guildId) && void 0 !== l
               ? l
               : C.ME,
-          p = s.default.getState().channelId,
+          N = s.default.getState().channelId,
           O = (function (e, t) {
             let n = [C.ME, ...E.default.getFlattenedGuildIds()],
               i = n.indexOf(e);
             return t > 0
               ? n.slice(i).concat(n.slice(0, i), e)
               : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
-          })(N, e),
+          })(p, e),
           R = e > 0 ? 0 : O.length - 1,
-          L = S(N, f),
-          D = L.indexOf(p) + e;
-        for (; null != N && "" !== N; ) {
-          if (((u = L[D]), T(N)))
+          L = S(p, f),
+          D = L.indexOf(N) + e;
+        for (; null != p && "" !== p; ) {
+          if (((u = L[D]), T(p)))
             for (; null != u && "" !== u; ) {
               if ("string" == typeof u) {
-                if (c(N, u)) return (0, A.transitionToChannel)(N, u, !1, f);
+                if (c(p, u)) return (0, A.transitionToChannel)(p, u, !1, f);
               } else if ("object" == typeof u && I(u.resourceId, u.type))
                 return (
-                  N !== r.default.getGuildId() &&
+                  p !== r.default.getGuildId() &&
                     (0, A.transitionToChannel)(
-                      N,
-                      null === (o = d.default.getDefaultChannel(N)) ||
+                      p,
+                      null === (o = d.default.getDefaultChannel(p)) ||
                         void 0 === o
                         ? void 0
                         : o.id
@@ -1831,13 +1852,13 @@
                     let { default: e } = await n
                       .el("659707")
                       .then(n.bind(n, "659707"));
-                    return t => (0, i.jsx)(e, { ...t, guildId: N });
+                    return t => (0, i.jsx)(e, { ...t, guildId: p });
                   })
                 );
               (D += e), (u = L[D]);
             }
-          if (((R += e), null == (N = O[R]) || "" === N)) break;
-          (L = S(N, f)), (D = e < 0 ? L.length - 1 : 0);
+          if (((R += e), null == (p = O[R]) || "" === p)) break;
+          (L = S(p, f)), (D = e < 0 ? L.length - 1 : 0);
         }
         _.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
           duration: 200,
@@ -1937,8 +1958,8 @@
         S = n("546463"),
         I = n("957255"),
         f = n("660478"),
-        N = n("18494"),
-        p = n("282109"),
+        p = n("18494"),
+        N = n("282109"),
         O = n("449008"),
         R = n("299039"),
         L = n("319839"),
@@ -1947,8 +1968,8 @@
         g = null,
         b = new L.default();
       function G() {
-        let e = N.default.getChannelId(),
-          t = N.default.getVoiceChannelId();
+        let e = p.default.getChannelId(),
+          t = p.default.getVoiceChannelId();
         return (h = e), (g = t), b.clear();
       }
       function m(e) {
@@ -1967,11 +1988,11 @@
         let { guildId: t } = e;
         return b.clearGuildId(t);
       }
-      function U(e) {
+      function P(e) {
         let { channelId: t } = e;
         return b.nonPositionalChannelIdUpdate(t);
       }
-      function P() {
+      function U() {
         return null != h && b.nonPositionalChannelIdUpdate(h);
       }
       function K(e) {
@@ -1982,9 +2003,9 @@
         let { id: t } = e;
         return b.nonPositionalChannelIdUpdate(t);
       }
-      function B() {
-        let e = N.default.getChannelId(),
-          t = N.default.getVoiceChannelId(),
+      function v() {
+        let e = p.default.getChannelId(),
+          t = p.default.getVoiceChannelId(),
           n = h !== e || g !== t;
         return (
           !!n &&
@@ -1998,7 +2019,7 @@
           !0)
         );
       }
-      function v(e) {
+      function B(e) {
         let { id: t } = e,
           n = C.default.getChannel(t);
         return null == n ? b.clearGuildId(t) : b.clearGuildId(n.guild_id);
@@ -2029,8 +2050,8 @@
             E.default,
             I.default,
             f.default,
-            N.default,
             p.default,
+            N.default,
             c.default
           );
         }
@@ -2081,10 +2102,10 @@
         BULK_CLEAR_RECENTS: y,
         CACHE_LOADED_LAZY: G,
         CATEGORY_COLLAPSE_ALL: y,
-        CATEGORY_COLLAPSE: v,
+        CATEGORY_COLLAPSE: B,
         CATEGORY_EXPAND_ALL: y,
-        CATEGORY_EXPAND: v,
-        CHANNEL_ACK: U,
+        CATEGORY_EXPAND: B,
+        CHANNEL_ACK: P,
         CHANNEL_COLLAPSE: function (e) {
           var t;
           let { channelId: n } = e;
@@ -2096,10 +2117,10 @@
         },
         CHANNEL_CREATE: M,
         CHANNEL_DELETE: M,
-        CHANNEL_LOCAL_ACK: U,
+        CHANNEL_LOCAL_ACK: P,
         CHANNEL_MUTE_EXPIRED: y,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: U,
-        CHANNEL_SELECT: B,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: P,
+        CHANNEL_SELECT: v,
         CHANNEL_STATUSES: function (e) {
           return b.clearGuildId(e.guildId);
         },
@@ -2121,13 +2142,13 @@
         CURRENT_USER_UPDATE: G,
         DECAY_READ_STATES: G,
         DEV_TOOLS_DESIGN_TOGGLE_SET: G,
-        DISABLE_AUTOMATIC_ACK: U,
+        DISABLE_AUTOMATIC_ACK: P,
         DISMISS_FAVORITE_SUGGESTION: function (e) {
           let { channelId: t } = e;
           return b.nonPositionalChannelIdUpdate(t);
         },
-        DRAWER_CLOSE: P,
-        DRAWER_OPEN: P,
+        DRAWER_CLOSE: U,
+        DRAWER_OPEN: U,
         EMBEDDED_ACTIVITY_INBOUND_UPDATE: function (e) {
           let { guildId: t, channelId: n } = e;
           return b.updateSubtitles(t, n);
@@ -2136,7 +2157,7 @@
           F();
         },
         EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: F,
-        ENABLE_AUTOMATIC_ACK: U,
+        ENABLE_AUTOMATIC_ACK: P,
         FETCH_GUILD_EVENTS_FOR_GUILD: function (e) {
           let { guildId: t } = e;
           return b.updateSubtitles(t);
@@ -2171,21 +2192,21 @@
             return b.clearGuildId(t);
           });
         },
-        LOAD_MESSAGES_SUCCESS: U,
-        MESSAGE_ACK: U,
+        LOAD_MESSAGES_SUCCESS: P,
+        MESSAGE_ACK: P,
         MESSAGE_CREATE: function (e) {
           let { channelId: t } = e;
           return b.nonPositionalChannelIdUpdate(t);
         },
-        MESSAGE_DELETE_BULK: U,
-        MESSAGE_DELETE: U,
+        MESSAGE_DELETE_BULK: P,
+        MESSAGE_DELETE: P,
         NOTIFICATION_SETTINGS_UPDATE: G,
         OVERLAY_INITIALIZE: G,
         PASSIVE_UPDATE_V1: function (e) {
           return null != e.channels && (b.clearGuildId(e.guildId), !0);
         },
         RECOMPUTE_READ_STATES: G,
-        RESORT_THREADS: U,
+        RESORT_THREADS: P,
         SET_RECENTLY_ACTIVE_COLLAPSED: G,
         THREAD_CREATE: K,
         THREAD_DELETE: function (e) {
@@ -2196,8 +2217,8 @@
         THREAD_MEMBER_UPDATE: H,
         THREAD_MEMBERS_UPDATE: H,
         THREAD_UPDATE: K,
-        TRY_ACK: U,
-        UPDATE_CHANNEL_DIMENSIONS: U,
+        TRY_ACK: P,
+        UPDATE_CHANNEL_DIMENSIONS: P,
         UPDATE_CHANNEL_LIST_SUBTITLES: function (e) {
           let { guildId: t } = e;
           b.updateSubtitles(t);
@@ -2231,13 +2252,13 @@
         },
         VOICE_CATEGORY_COLLAPSE: V,
         VOICE_CATEGORY_EXPAND: V,
-        VOICE_CHANNEL_SELECT: B,
+        VOICE_CHANNEL_SELECT: v,
         VOICE_CHANNEL_STATUS_UPDATE: function (e) {
           return b.nonPositionalChannelIdUpdate(e.id);
         },
         VOICE_STATE_UPDATES: function (e) {
           let { voiceStates: t } = e,
-            n = B(),
+            n = v(),
             i = new Set();
           for (let { channelId: e, oldChannelId: l } of t)
             null != l &&
@@ -2248,7 +2269,7 @@
                 (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
           return n;
         },
-        WINDOW_FOCUS: P,
+        WINDOW_FOCUS: U,
       });
     },
     829072: function (e, t, n) {
@@ -2281,8 +2302,8 @@
         S = n("546463"),
         I = n("957255"),
         f = n("660478"),
-        N = n("18494"),
-        p = n("282109"),
+        p = n("18494"),
+        N = n("282109"),
         O = n("449008"),
         R = n("319839"),
         L = n("695838"),
@@ -2298,8 +2319,8 @@
         S.default,
         I.default,
         f.default,
-        N.default,
         p.default,
+        N.default,
       ];
       function g() {
         let [e, t] = i.useState(() => b());
@@ -2316,10 +2337,10 @@
       }
       function b() {
         let e = s.default.getFavoriteChannels(),
-          t = p.default.isGuildCollapsed(L.FAVORITES_RAW_GUILD_ID),
-          n = N.default.getChannelId(),
+          t = N.default.isGuildCollapsed(L.FAVORITES_RAW_GUILD_ID),
+          n = p.default.getChannelId(),
           i = C.default.getChannel(n),
-          l = N.default.getVoiceChannelId(),
+          l = p.default.getVoiceChannelId(),
           u = [],
           r = {};
         for (let t in e) {
@@ -2361,7 +2382,7 @@
                     : {},
                 C = (0, R.computeThreadIds)(n, A, i, l, t),
                 S = T.default.isCollapsed(n.id),
-                N = p.default.isChannelMuted(n.guild_id, n.id),
+                p = N.default.isChannelMuted(n.guild_id, n.id),
                 O = {
                   id: n.id,
                   record: n,
@@ -2370,15 +2391,15 @@
                   threadIds: C,
                   threadCount: o.size(C),
                   isCollapsed: S,
-                  isMuted: N,
+                  isMuted: p,
                   isFirstVoiceChannel: !1,
                   subtitle: (0, R.computeSubtitle)(n, S, !1),
                 };
               return r || c || f.default.getMentionCount(n.id) > 0
                 ? O
-                : (t && N) ||
+                : (t && p) ||
                     (u &&
-                      (N ||
+                      (p ||
                         s ||
                         (0, _.isVoiceChannel)(n.type) ||
                         ((0, _.isGuildReadableType)(n.type) &&
@@ -2415,7 +2436,7 @@
               let { id: n, order: i } = e,
                 l = s.default.getCategoryRecord(n),
                 o = null !== (t = r[n]) && void 0 !== t ? t : [],
-                a = p.default.isChannelMuted(L.FAVORITES_RAW_GUILD_ID, n),
+                a = N.default.isChannelMuted(L.FAVORITES_RAW_GUILD_ID, n),
                 u = A.default.isCollapsed(n),
                 d = null;
               return {
@@ -2568,8 +2589,8 @@
         S = n("599110"),
         I = n("340454"),
         f = n("116460"),
-        N = n("49111"),
-        p = n("724210");
+        p = n("49111"),
+        N = n("724210");
       let O = () => Promise.resolve();
       {
         let e = n("780009");
@@ -2618,10 +2639,10 @@
           r = I.default.isEmail(l),
           E = I.default.isPhoneNumber(l),
           A = I.default.isUserTagLike(l),
-          N = null != u && (0, p.isStaticChannelRoute)(u),
+          p = null != u && (0, N.isStaticChannelRoute)(u),
           O = {
-            current_channel_id: N ? void 0 : u,
-            current_channel_static_route: N ? u : void 0,
+            current_channel_id: p ? void 0 : u,
+            current_channel_static_route: p ? u : void 0,
             current_guild_id: a,
             query_mode: null != i ? i : "GENERAL",
             query_length: l.length,
@@ -2698,7 +2719,7 @@
             let e = _.default.getChannel(i);
             t = null != e ? e.type : null;
           }
-          S.default.track(N.AnalyticEvents.QUICKSWITCHER_OPENED, {
+          S.default.track(p.AnalyticEvents.QUICKSWITCHER_OPENED, {
             source: e,
             current_guild_id: n,
             current_channel_id: i,
@@ -2708,7 +2729,7 @@
           i.default.dispatch({ type: "QUICKSWITCHER_SHOW", ...D(t) });
       }
       function G() {
-        h(N.AnalyticEvents.QUICKSWITCHER_CLOSED), g();
+        h(p.AnalyticEvents.QUICKSWITCHER_CLOSED), g();
       }
       function m(e) {
         i.default.dispatch({ type: "QUICKSWITCHER_SEARCH", ...D(e) });
@@ -2719,9 +2740,9 @@
       function y(e) {
         let t,
           n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        g(), h(N.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
+        g(), h(p.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, e);
         let { type: c, record: C } = e,
-          T = { page: N.AnalyticsPages.QUICK_SWITCHER };
+          T = { page: p.AnalyticsPages.QUICK_SWITCHER };
         switch (c) {
           case s.AutocompleterResultTypes.GUILD:
             (0, E.transitionToGuild)(C.id, { navigationReplace: !0 });
@@ -2746,20 +2767,20 @@
           case s.AutocompleterResultTypes.USER:
             l.default.openPrivateChannel([C.id], !1, !1, "Quickswitcher"),
               a.default.channelListScrollTo(
-                N.ME,
+                p.ME,
                 _.default.getDMFromUserId(C.id)
               );
             break;
           case s.AutocompleterResultTypes.GROUP_DM:
             (0, r.transitionToChannel)(C.id, { navigationReplace: !0 }),
-              a.default.channelListScrollTo(N.ME, C.id);
+              a.default.channelListScrollTo(p.ME, C.id);
             break;
           case s.AutocompleterResultTypes.APPLICATION:
             let S = A.default.getActiveLibraryApplication(C.id);
             O(C.id, S, {
               analyticsParams: {
-                source: N.AnalyticsLocations.QUICK_SWITCHER,
-                location: N.AnalyticsLocations.QUICK_SWITCHER,
+                source: p.AnalyticsLocations.QUICK_SWITCHER,
+                location: p.AnalyticsLocations.QUICK_SWITCHER,
               },
             });
             break;
@@ -2895,6 +2916,79 @@
           },
         };
     },
+    893980: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          trackProfilePanelViewed: function () {
+            return s;
+          },
+          trackProfilePanelToggled: function () {
+            return d;
+          },
+        });
+      var i = n("373469"),
+        l = n("824563"),
+        o = n("27618"),
+        a = n("599110"),
+        u = n("49111");
+      let s = e => {
+          let {
+            displayProfile: t,
+            isMobile: n,
+            loadDurationMs: i,
+            activity: l,
+            customStatusActivity: o,
+            status: s,
+          } = e;
+          a.default.track(u.AnalyticEvents.DM_PROFILE_VIEWED, {
+            has_mobile_indicator: n,
+            has_activity:
+              null != l &&
+              (null == l ? void 0 : l.type) !== u.ActivityTypes.CUSTOM_STATUS,
+            has_game_activity:
+              (null == l ? void 0 : l.type) === u.ActivityTypes.PLAYING,
+            load_duration_ms: i,
+            profile_user_status: s,
+            has_custom_status: null != o,
+            has_profile_effect: null != t.profileEffectId,
+            ...r(t),
+          });
+        },
+        d = (e, t) => {
+          a.default.track(u.AnalyticEvents.DM_PROFILE_TOGGLED, {
+            is_profile_open: t,
+            ...r(e),
+          });
+        },
+        r = e => {
+          var t;
+          if (null == e) return {};
+          let n = e.userId,
+            a = null != i.default.getAnyStreamForUser(n),
+            s = l.default.findActivity(n, e => {
+              let { type: t } = e;
+              return a
+                ? t === u.ActivityTypes.PLAYING
+                : t !== u.ActivityTypes.CUSTOM_STATUS;
+            }),
+            d = null == s ? void 0 : s.assets,
+            r = o.default.isFriend(n);
+          return {
+            has_images: !!(null !== (t = null == d ? void 0 : d.large_image) &&
+            void 0 !== t
+              ? t
+              : null == d
+                ? void 0
+                : d.small_image),
+            is_friend: r,
+            viewed_profile_user_id: n,
+            profile_has_nitro_customization: e.hasPremiumCustomization(),
+            profile_has_theme_color_customized: e.hasThemeColors(),
+            profile_has_theme_animation: null != e.popoutAnimationParticleType,
+          };
+        };
+    },
     791823: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -3015,4 +3109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4b0b02bbc00badab354d.js.map
+//# sourceMappingURL=4059f4e4c2f18d41dc03.js.map

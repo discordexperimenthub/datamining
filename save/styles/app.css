@@ -23092,9 +23092,15 @@ html .progress__4ef76 {
   margin-top: 10px;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
 .questControlsTitle_f61d46 {
   margin-right: 10px;
+}
+@media (max-width: 960px) {
+  .questControls__9f18c {
+    display: none;
+  }
 }
 .questsCard_a68cbc {
   width: 660px;
@@ -40260,8 +40266,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -110828,4 +110834,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.0335f53d7439069b9668.css.map*/
+/*# sourceMappingURL=app.78fab4b8f1abc6b13cc7.css.map*/

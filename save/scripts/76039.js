@@ -13639,18 +13639,29 @@
           "{count, plural, =0 {0 Mutual Friends} one {1 Mutual Friend} other {{count} Mutual Friends}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 Mutual Servers} one {1 Mutual Server} other {{count} Mutual Servers}}",
+        USER_PROFILE_MUTUAL_FRIENDS_SHORT:
+          "{count, plural, =0 {0 Friends} one {1 Friend} other {{count} Friends}}",
+        USER_PROFILE_MUTUAL_GUILDS_SHORT:
+          "{count, plural, =0 {0 Servers} one {1 Server} other {{count} Servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_ONE: "friends with **{usernameOne}**",
         USER_PROFILE_MUTUAL_FRIENDS_TWO:
           "friends with **{usernameOne}** and **{usernameTwo}**",
         USER_PROFILE_MUTUAL_FRIENDS_MANY:
-          "friends with **{usernameOne}**, **{usernameTwo}**, and **{count} more**",
+          "friends with **{usernameOne}**, **{usernameTwo}**, and {count} more",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY_SHORT:
+          "friends with **{usernameOne}** and {count} more",
+        USER_PROFILE_MUTUAL_FRIENDS_COUNT:
+          "friends with {count, plural, =0 {0 people} one {1 person} other {{count} people}}",
         USER_PROFILE_MUTUAL_GUILDS_ONE: "member of **{guildNameOne}**",
         USER_PROFILE_MUTUAL_GUILDS_TWO:
           "member of **{guildNameOne}** and **{guildNameTwo}**",
         USER_PROFILE_MUTUAL_GUILDS_MANY:
-          "member of **{guildNameOne}**, **{guildNameTwo}**, and **{count} more**",
+          "member of **{guildNameOne}**, **{guildNameTwo}**, and {count} more",
+        USER_PROFILE_MUTUAL_GUILDS_COUNT:
+          "member of {count, plural, =0 {0 servers} one {1 server} other {{count} servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Mutual Friends",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Mutual Servers",
+        USER_PROFILE_MUTUALS_TITLE: "Mutuals",
         PROFILE_JOIN_VOICE_CHANNEL: "Join Voice Channel",
         PROFILE_IN_VOICE_CALL: "In a voice call",
         PROFILE_OPEN_VOICE_CHANNEL: "Open Voice Channel",
@@ -26351,8 +26362,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275519", ", Version Hash: ")
-          .concat("ceb81a4d3022b03e188537192083cf80f9636c49")
+          .concat("275539", ", Version Hash: ")
+          .concat("058fadece066984d93e982a22dc0c9aaadc321b4")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29464,12 +29475,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275519"), "275519"));
+        let _ = parseInt(((e = "275539"), "275539"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275519"
+                "275539"
               )
             ),
             (_ = 0)),
@@ -52120,4 +52131,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.177b9301c8562fad8110.js.map
+//# sourceMappingURL=76039.44d8f601a52bb1ef4b25.js.map

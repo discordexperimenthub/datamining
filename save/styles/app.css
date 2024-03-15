@@ -7287,7 +7287,22 @@
   justify-content: flex-start;
   gap: 8px;
   overflow: hidden;
+  flex-wrap: wrap;
   max-width: 100%;
+}
+.compactItemContainer_fea2b8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  vertical-align: middle;
+  gap: 8px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: 19px;
+}
+.hideElement__0e94b {
+  opacity: 0;
 }
 .avatarAndTextContainer__394c8 {
   display: flex;
@@ -7296,8 +7311,7 @@
   justify-content: flex-start;
   gap: 4px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
   cursor: pointer;
 }
 .serverContainer__0bbd1 {
@@ -7306,7 +7320,7 @@
 .itemizedListText_b91012 {
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: wrap;
 }
 .itemizedListText_b91012 strong {
   color: var(--interactive-active);
@@ -14668,8 +14682,6 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
 }
 .profileMutuals__5a6ff {
   padding-top: 12px;
-  padding-right: 12px;
-  padding-left: 12px;
   flex: 1;
 }
 .lastEditedByContainer__2d0f6 {
@@ -110741,4 +110753,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.9eb7a60df06c26480ab7.css.map*/
+/*# sourceMappingURL=app.ddcefae7709a5727f0f1.css.map*/

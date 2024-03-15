@@ -31715,11 +31715,6 @@
                               customStatusActivity: e_,
                               animate: es,
                             }),
-                            eq &&
-                              (0, a.jsx)(w.default, {
-                                className: el.profileMutuals,
-                                user: eo,
-                              }),
                             (0, a.jsx)(k.default, {}),
                             (0, a.jsx)(G.default, {
                               bio: null == ec ? void 0 : ec.bio,
@@ -31727,6 +31722,11 @@
                               animateOnHover: !0,
                               isHovering: es,
                             }),
+                            eq &&
+                              (0, a.jsx)(w.default, {
+                                className: el.profileMutuals,
+                                user: eo,
+                              }),
                             !eo.isSystemUser() &&
                               (0, a.jsxs)(a.Fragment, {
                                 children: [
@@ -42530,4 +42530,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e610e7db44d82ef7e513.js.map
+//# sourceMappingURL=2abaf857f85ec2e15211.js.map

@@ -9397,7 +9397,7 @@
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Pirmuosius **3 mėnesius** mokėsi **{discountedPrice}**. Paskui – {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Your next **{numMonths, plural, one {month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that you'll be charged {regularPrice}/month.",
+          "Tavo **{numMonths, plural, one {kitas mėnuo} few {kiti {numMonths} mėnesiai} other {kitų {numMonths} mėnesių}}** {numMonths, plural, one {is} other {are}} kainuos **{discountedPrice}**. Paskui mokėsi {regularPrice}/mėn.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "nuolaida pritaikyta",
         CHURN_DISCOUNT_DESCRIPTION:
           "Prieš atšaukdamas (-a), pasimėgauk **{percent, number} % nuolaida savo Nitro prenumeratai** {numMonths, plural, one {1 mėnesį} few {{numMonths} mėnesius} other {{numMonths} mėnesių}}.",

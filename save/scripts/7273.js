@@ -5734,6 +5734,7 @@
         (el.GUILD_BAN_REMOVED = "guild_ban_removed"),
         (el.POLL_CREATION_CANCELLED = "poll_creation_cancelled"),
         (el.POLL_SHOW_RESULTS_CLICKED = "poll_show_results_clicked"),
+        (el.POLL_VOTE_SELECTED = "poll_vote_selected"),
         (el.ACTIVITY_REACTOR_INTERACTED = "activity_reactor_interacted"),
         (el.RANKING_ITEMS_SEEN = "ranking_items_seen"),
         (el.RANKING_ITEM_INTERACTED = "ranking_item_interacted"),
@@ -17312,4 +17313,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.9411848bf7b9dc10056a.js.map
+//# sourceMappingURL=7273.a6a968eeb4dfcc1e8f4e.js.map

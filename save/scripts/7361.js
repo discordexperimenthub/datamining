@@ -482,6 +482,80 @@
         );
       }
     },
+    697157: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return f;
+          },
+        }),
+        n("222007");
+      var a = n("37983"),
+        l = n("884691"),
+        r = n("245187"),
+        s = n("10514"),
+        i = n("599110"),
+        u = n("719923"),
+        o = n("635357"),
+        d = n("642906"),
+        c = n("628738"),
+        I = n("49111");
+      function f(e) {
+        let {
+            initialStep: t,
+            initialPlanId: n,
+            guildId: f,
+            setAnalyticsData: S,
+            handleClose: _,
+          } = e,
+          {
+            blockedPayments: E,
+            setStep: T,
+            hasFetchedSubscriptions: P,
+            hasFetchedSubscriptionPlans: A,
+            currencyLoading: m,
+            selectedSkuId: N,
+            setSelectedSkuId: C,
+            setSelectedPlanId: O,
+            priceOptions: p,
+            setSubscriptionMetadataRequest: L,
+          } = (0, d.usePaymentContext)(),
+          { isGift: h } = (0, o.useGiftContext)(),
+          [R, M] = l.useState(!P || !A || m);
+        return (l.useEffect(() => {
+          M(!P || !A || m);
+        }, [m, A, P]),
+        l.useEffect(() => {
+          null != f && L({ guild_id: f });
+        }, [f, L]),
+        l.useEffect(() => {
+          O(n);
+          let e = null != n ? s.default.get(n) : null;
+          !R &&
+            !E &&
+            (S(t => {
+              let n = null != e ? (0, u.getPrice)(e.id, !1, h, p) : void 0,
+                a = {
+                  ...t,
+                  subscription_plan_id: null == e ? void 0 : e.id,
+                  price: null == n ? void 0 : n.amount,
+                  regular_price: null == e ? void 0 : e.price,
+                  currency: p.currency,
+                };
+              return (
+                i.default.track(I.AnalyticEvents.PAYMENT_FLOW_STARTED, a), a
+              );
+            }),
+            null != e && (C(null == e ? void 0 : e.skuId), T(t)));
+        }, [E, n, h, R, p, N, S, O, C, T, t]),
+        R)
+          ? (0, a.jsx)(c.default, {})
+          : E
+            ? (0, a.jsx)(r.BlockedPaymentsContentModal, { onClose: _ })
+            : null;
+      }
+    },
     473878: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -944,10 +1018,10 @@
       var l = n("85336"),
         r = n("262683"),
         s = n("292215"),
-        i = n("473878"),
-        u = n("179387"),
-        o = n("104559"),
-        d = n("542515"),
+        i = n("697157"),
+        u = n("473878"),
+        o = n("179387"),
+        d = n("104559"),
         c = n("782340");
       function I(e) {
         let {
@@ -961,7 +1035,7 @@
             {
               key: null,
               renderStep: e =>
-                (0, a.jsx)(d.default, {
+                (0, a.jsx)(i.default, {
                   initialStep: S ? l.Step.BENEFITS : l.Step.REVIEW,
                   guildId: t,
                   ...e,
@@ -970,7 +1044,7 @@
             {
               key: l.Step.BENEFITS,
               renderStep: e =>
-                (0, a.jsx)(u.default, { application: I, listing: f, ...e }),
+                (0, a.jsx)(o.default, { application: I, listing: f, ...e }),
               options: {
                 useBreadcrumbLabel: () =>
                   c.default.Messages
@@ -996,7 +1070,7 @@
             {
               key: l.Step.REVIEW,
               renderStep: e =>
-                (0, a.jsx)(i.default, {
+                (0, a.jsx)(u.default, {
                   backButtonEligible: !!S || void 0,
                   prevStep: S ? l.Step.BENEFITS : void 0,
                   showGuildPicker: null == t,
@@ -1012,7 +1086,7 @@
             {
               key: l.Step.CONFIRM,
               renderStep: e =>
-                (0, a.jsx)(o.default, {
+                (0, a.jsx)(d.default, {
                   application: I,
                   listing: f,
                   showBenefits: !S,
@@ -1021,80 +1095,6 @@
             },
           ];
         return _;
-      }
-    },
-    542515: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return f;
-          },
-        }),
-        n("222007");
-      var a = n("37983"),
-        l = n("884691"),
-        r = n("245187"),
-        s = n("10514"),
-        i = n("599110"),
-        u = n("719923"),
-        o = n("635357"),
-        d = n("642906"),
-        c = n("628738"),
-        I = n("49111");
-      function f(e) {
-        let {
-            initialStep: t,
-            initialPlanId: n,
-            guildId: f,
-            setAnalyticsData: S,
-            handleClose: _,
-          } = e,
-          {
-            blockedPayments: E,
-            setStep: T,
-            hasFetchedSubscriptions: P,
-            hasFetchedSubscriptionPlans: A,
-            currencyLoading: m,
-            selectedSkuId: N,
-            setSelectedSkuId: C,
-            setSelectedPlanId: O,
-            priceOptions: p,
-            setSubscriptionMetadataRequest: L,
-          } = (0, d.usePaymentContext)(),
-          { isGift: h } = (0, o.useGiftContext)(),
-          [R, M] = l.useState(!P || !A || m);
-        return (l.useEffect(() => {
-          M(!P || !A || m);
-        }, [m, A, P]),
-        l.useEffect(() => {
-          null != f && L({ guild_id: f });
-        }, [f, L]),
-        l.useEffect(() => {
-          O(n);
-          let e = null != n ? s.default.get(n) : null;
-          !R &&
-            !E &&
-            (S(t => {
-              let n = null != e ? (0, u.getPrice)(e.id, !1, h, p) : void 0,
-                a = {
-                  ...t,
-                  subscription_plan_id: null == e ? void 0 : e.id,
-                  price: null == n ? void 0 : n.amount,
-                  regular_price: null == e ? void 0 : e.price,
-                  currency: p.currency,
-                };
-              return (
-                i.default.track(I.AnalyticEvents.PAYMENT_FLOW_STARTED, a), a
-              );
-            }),
-            null != e && (C(null == e ? void 0 : e.skuId), T(t)));
-        }, [E, n, h, R, p, N, S, O, C, T, t]),
-        R)
-          ? (0, a.jsx)(c.default, {})
-          : E
-            ? (0, a.jsx)(r.BlockedPaymentsContentModal, { onClose: _ })
-            : null;
       }
     },
     680439: function (e, t, n) {
@@ -1831,4 +1831,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0b533fda6f2012ddb637.js.map
+//# sourceMappingURL=246967f3590b0b09a73b.js.map

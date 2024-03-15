@@ -12,10 +12,10 @@
       n.r(t),
         n.d(t, {
           QuestsEntryContextMenu: function () {
-            return p;
+            return S;
           },
           QuestsEntryContextMenuPopout: function () {
-            return x;
+            return p;
           },
         });
       var s = n("37983"),
@@ -26,18 +26,17 @@
         a = n("77078"),
         r = n("272030"),
         c = n("79112"),
-        C = n("545158"),
-        d = n("124824"),
+        d = n("545158"),
+        C = n("124824"),
         E = n("306160"),
         _ = n("128259"),
         f = n("815496"),
         M = n("448881"),
-        T = n("588025"),
         N = n("227231"),
-        q = n("49111"),
-        S = n("843455"),
-        h = n("782340");
-      function p(e) {
+        T = n("49111"),
+        h = n("843455"),
+        q = n("782340");
+      function S(e) {
         var t;
         let u = (0, N.isDismissible)(e.questContent);
         return (0, s.jsxs)(a.Menu, {
@@ -46,11 +45,11 @@
             null != e.onSelect ? e.onSelect() : (0, r.closeContextMenu)();
           },
           navId: "quests-entry",
-          "aria-label": h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+          "aria-label": q.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
           onClose:
             null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t
               ? t
-              : S.NOOP,
+              : h.NOOP,
           children: [
             (0, s.jsxs)(
               a.MenuGroup,
@@ -58,7 +57,7 @@
                 children: [
                   (0, s.jsx)(a.MenuItem, {
                     id: "get-game",
-                    label: h.default.Messages.QUESTS_GET_THIS_GAME,
+                    label: q.default.Messages.QUESTS_GET_THIS_GAME,
                     action: () => {
                       (0, _.handleClick)({
                         href: e.quest.config.getGameLink,
@@ -68,16 +67,16 @@
                             e.questContent,
                             f.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
                           ),
-                            (0, C.default)(e.quest.config.getGameLink);
+                            (0, d.default)(e.quest.config.getGameLink);
                         },
                       });
                     },
                     icon: i.LinkExternalMediumIcon,
                   }),
-                  e.questContent === T.QuestContent.QUESTS_EMBED &&
+                  !0 === e.showShareLink &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "share-link",
-                      label: h.default.Messages.QUESTS_SHARE_LINK,
+                      label: q.default.Messages.QUESTS_SHARE_LINK,
                       action: () => {
                         (0, f.trackQuestContentClicked)(
                           e.quest.id,
@@ -99,20 +98,20 @@
                   !e.hideLearnMore &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "learn-more",
-                      label: h.default.Messages.QUESTS_LEARN_MORE_V2,
+                      label: q.default.Messages.QUESTS_LEARN_MORE_V2,
                       action: () => {
                         (0, f.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
                           f.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
                         ),
-                          c.default.open(q.UserSettingsSections.INVENTORY);
+                          c.default.open(T.UserSettingsSections.INVENTORY);
                       },
                     }),
                   e.shouldShowDisclosure &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "display-disclosure",
-                      label: h.default.Messages.QUESTS_DISCLOSURE_LABEL,
+                      label: q.default.Messages.QUESTS_DISCLOSURE_LABEL,
                       action: () => {
                         (0, f.trackQuestContentClicked)(
                           e.quest.id,
@@ -135,7 +134,7 @@
                   u &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "hide-entrypoint",
-                      label: h.default.Messages.QUESTS_HIDE_THIS,
+                      label: q.default.Messages.QUESTS_HIDE_THIS,
                       action: () => {
                         (0, f.trackQuestContentClicked)(
                           e.quest.id,
@@ -148,7 +147,7 @@
                               e.questContent
                             );
                       },
-                      subtext: h.default.Messages.QUESTS_FIND_QUEST,
+                      subtext: q.default.Messages.QUESTS_FIND_QUEST,
                     }),
                 ],
               },
@@ -157,7 +156,7 @@
           ],
         });
       }
-      function x(e) {
+      function p(e) {
         let {
             children: t,
             onOpen: n,
@@ -167,7 +166,7 @@
             questContent: r,
             ...c
           } = e,
-          C = u.useCallback(() => {
+          d = u.useCallback(() => {
             (0, f.trackQuestContentClicked)(
               l.id,
               r,
@@ -176,20 +175,20 @@
               null != n && n();
           }, [n, l, r]);
         return (0, s.jsx)(a.Popout, {
-          onRequestOpen: C,
+          onRequestOpen: d,
           onRequestClose: o,
           renderPopout: e => {
             let { closePopout: t } = e;
             return i
-              ? (0, s.jsx)(d.default, {
-                  children: (0, s.jsx)(p, {
+              ? (0, s.jsx)(C.default, {
+                  children: (0, s.jsx)(S, {
                     ...c,
                     quest: l,
                     questContent: r,
                     onClose: t,
                   }),
                 })
-              : (0, s.jsx)(p, { ...c, quest: l, questContent: r, onClose: t });
+              : (0, s.jsx)(S, { ...c, quest: l, questContent: r, onClose: t });
           },
           animation: a.Popout.Animation.NONE,
           children: e => t(e),
@@ -253,4 +252,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ceb38fa47527c0de9a5e.js.map
+//# sourceMappingURL=0a8c2558633421da4c57.js.map

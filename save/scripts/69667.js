@@ -21961,6 +21961,7 @@
                               shouldShowDisclosure: !0,
                               hideLearnMore:
                                 T === N.QuestContent.QUEST_INVENTORY_CARD,
+                              showShareLink: T === N.QuestContent.QUESTS_EMBED,
                             });
                         });
                     },
@@ -32268,4 +32269,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c6fae97429257d1444c8.js.map
+//# sourceMappingURL=622e203629555271c8b4.js.map

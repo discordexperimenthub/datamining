@@ -41144,7 +41144,8 @@
         a = n("862205");
       ((i = l || (l = {}))[(i.DEFAULT = 0)] = "DEFAULT"),
         (i[(i.WINTER_2023_DROP = 1)] = "WINTER_2023_DROP"),
-        (i[(i.MONSTER_DROP = 2)] = "MONSTER_DROP");
+        (i[(i.MONSTER_DROP = 2)] = "MONSTER_DROP"),
+        (i[(i.SPRINGTOONS = 4)] = "SPRINGTOONS");
       let s = (0, a.createExperiment)({
         kind: "user",
         id: "2023-12_collectibles_shop_marketing",
@@ -41153,6 +41154,7 @@
         treatments: [
           { id: 1, label: "Winter 2023", config: { variant: 1 } },
           { id: 2, label: "Jan 2024", config: { variant: 2 } },
+          { id: 4, label: "Springtoons 2024", config: { variant: 4 } },
         ],
       });
       var r = e => s.useExperiment({ location: e }).variant;
@@ -82784,4 +82786,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.c258d95ecbd96f2002ad.js.map
+//# sourceMappingURL=60053.f22b0949cc1b579b219a.js.map

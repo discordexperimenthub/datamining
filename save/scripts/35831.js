@@ -189,6 +189,10 @@
       "use strict";
       e.exports = s.p + "e62a3b5f49dad09eea9d.png";
     },
+    43980: function (e, t, s) {
+      "use strict";
+      e.exports = s.p + "656b71fbb77a9b4e278b.png";
+    },
     156465: function (e, t, s) {
       "use strict";
       e.exports = s.p + "42b086ee3d9863ea45bc.svg";
@@ -2667,7 +2671,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return I;
+            return p;
           },
         }),
         s("794252");
@@ -2753,15 +2757,51 @@
               }),
             ],
           }),
-        N = e => {
+        N = () =>
+          (0, a.jsxs)(a.Fragment, {
+            children: [
+              (0, a.jsx)("div", {
+                className: m.artContainer,
+                "aria-hidden": !0,
+                role: "presentation",
+                children: (0, a.jsx)("img", {
+                  src: s("43980"),
+                  className: m.art,
+                  alt: " ",
+                }),
+              }),
+              (0, a.jsxs)("div", {
+                className: m.mainColumn,
+                children: [
+                  (0, a.jsx)(o.Heading, {
+                    variant: "heading-lg/extrabold",
+                    color: "always-white",
+                    className: m.title,
+                    children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024,
+                  }),
+                  (0, a.jsx)(o.Text, {
+                    className: m.textBody,
+                    variant: "text-sm/normal",
+                    color: "always-white",
+                    children:
+                      _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024,
+                  }),
+                ],
+              }),
+            ],
+          }),
+        I = e => {
           let { variation: t } = e;
           return (0, r.match)(t)
             .with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () =>
               (0, a.jsx)(h, {})
             )
+            .with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () =>
+              (0, a.jsx)(N, {})
+            )
             .otherwise(() => (0, a.jsx)(g, {}));
         };
-      var I = () => {
+      var p = () => {
         let { analyticsLocations: e } = (0, u.default)(
             d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
           ),
@@ -2778,7 +2818,7 @@
             ref: t,
             className: i(m.container, m.shopForAllBackgroundImage),
             children: [
-              (0, a.jsx)(N, { variation: s }),
+              (0, a.jsx)(I, { variation: s }),
               (0, a.jsx)(o.Button, {
                 onClick: () => {
                   (0, S.openCollectiblesShop)({
@@ -11938,9 +11978,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "275476",
+          E = "275484",
           T =
-            ((e = "a6610c38e8e5a391b715f9211e83c3760f398209"),
+            ((e = "d11a1273b0898bc39cd9ee3fbc1723e24e9146a5"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32065,4 +32105,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99a7e85e646c3dd4d921.js.map
+//# sourceMappingURL=474c6e31ebfbe9fc397f.js.map

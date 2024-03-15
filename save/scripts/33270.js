@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275476",
+                  buildNumber: "275484",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -13089,6 +13089,19 @@
             "a_51d3bb502109eec26c76386ec980bc8b",
           ],
         },
+        [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
+          type: 2,
+          title: () =>
+            i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
+          body: () =>
+            i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
+          imageSrc: r,
+          assetIds: [
+            "a_ab95c78401ce4ec85c25a6d308db9d85",
+            "a_4cd9ae5a8d103c219eacd3674d7730cd",
+            "a_27bbf0b53b1054cf61e9a4c0e8d4027f",
+          ],
+        },
       };
     },
     476863: function (e, t, n) {
@@ -13104,6 +13117,29 @@
         kind: "user",
         id: "2024-02_collectibles_anime_v2_marketing",
         label: "Anime V2 marketing Experiment",
+        defaultConfig: { coachtipEnabled: !1 },
+        treatments: [
+          { id: 1, label: "Enables coachtip", config: { coachtipEnabled: !0 } },
+        ],
+      });
+      var l = e => {
+        let { location: t } = e;
+        return s.useExperiment({ location: t });
+      };
+    },
+    222408: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var a = n("862205");
+      let s = (0, a.createExperiment)({
+        kind: "user",
+        id: "2024-03_collectibles_springtoons_marketing",
+        label: "Springtoons marketing experiment",
         defaultConfig: { coachtipEnabled: !1 },
         treatments: [
           { id: 1, label: "Enables coachtip", config: { coachtipEnabled: !0 } },
@@ -13342,7 +13378,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return h;
+            return _;
           },
         }),
         n("222007");
@@ -13355,53 +13391,61 @@
         u = n("543557"),
         d = n("801894"),
         c = n("476863"),
-        f = n("819852"),
-        E = n("994428"),
-        h = () => {
+        f = n("222408"),
+        E = n("819852"),
+        h = n("994428"),
+        _ = () => {
           let e = (0, s.useStateFromStores)([r.default], () =>
               r.default.getCurrentUser()
             ),
-            { coachtipEnabled: t } = (0, c.default)({
+            { coachtipEnabled: t } = (0, f.default)({
               location: "useCollectiblesShopTabNewBadge",
             }),
-            { marketingEnabled: n, variant: h } = (0, u.default)({
+            { coachtipEnabled: n } = (0, c.default)({
               location: "useCollectiblesShopTabNewBadge",
             }),
-            { newBadgeEnabled: _ } = (0, d.default)({
+            { marketingEnabled: _, variant: C } = (0, u.default)({
               location: "useCollectiblesShopTabNewBadge",
             }),
-            C = a.useMemo(() => {
+            { newBadgeEnabled: I } = (0, d.default)({
+              location: "useCollectiblesShopTabNewBadge",
+            }),
+            S = a.useMemo(() => {
               if ((0, o.ageEligibleForPremiumUpsell)(e)) {
                 if (t)
                   return [
-                    l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP,
+                    l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP,
                   ];
                 if (n)
-                  switch (h) {
-                    case f.CollectiblesMarketingVariant.TOOLTIP:
+                  return [
+                    l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP,
+                  ];
+                else if (_)
+                  switch (C) {
+                    case E.CollectiblesMarketingVariant.TOOLTIP:
                       return [
                         l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP,
                       ];
-                    case f.CollectiblesMarketingVariant.COACHTIP:
+                    case E.CollectiblesMarketingVariant.COACHTIP:
                       return [
                         l.DismissibleContent
                           .COLLECTIBLES_SHOP_ELEMENTS_COACHTIP,
                       ];
                   }
-                else if (_)
+                else if (I)
                   return [
                     l.DismissibleContent
                       .COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE,
                   ];
               }
               return [];
-            }, [_, n, h, e, t]),
-            [I, S] = (0, i.useSelectedDismissibleContent)(C, void 0, !0),
-            m = null != I ? f.CollectiblesDCToDisplayOptions[I] : null;
+            }, [I, _, C, e, n, t]),
+            [m, p] = (0, i.useSelectedDismissibleContent)(S, void 0, !0),
+            T = null != m ? E.CollectiblesDCToDisplayOptions[m] : null;
           return {
-            collectiblesShopTabNewBadgeDisplayOptions: m,
+            collectiblesShopTabNewBadgeDisplayOptions: T,
             dismissCollectiblesShopTabNewBadge: () => {
-              null != m && S(E.ContentDismissActionType.AUTO);
+              null != T && p(h.ContentDismissActionType.AUTO);
             },
           };
         };
@@ -52785,4 +52829,4 @@
     },
   },
 ]);
-//# sourceMappingURL=25a999650007a677ef9d.js.map
+//# sourceMappingURL=761895d9095e28a5457c.js.map

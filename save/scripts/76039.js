@@ -26351,8 +26351,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275476", ", Version Hash: ")
-          .concat("a6610c38e8e5a391b715f9211e83c3760f398209")
+          .concat("275484", ", Version Hash: ")
+          .concat("d11a1273b0898bc39cd9ee3fbc1723e24e9146a5")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29464,12 +29464,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275476"), "275476"));
+        let _ = parseInt(((e = "275484"), "275484"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275476"
+                "275484"
               )
             ),
             (_ = 0)),
@@ -45722,6 +45722,8 @@
           "ACTIVITIES_CHAT_BUTTON_NUX"),
         (u[(u.TENURE_REWARD_PENDING = 360)] = "TENURE_REWARD_PENDING"),
         (u[(u.TENURE_REWARD_REDEEMABLE = 361)] = "TENURE_REWARD_REDEEMABLE"),
+        (u[(u.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP = 362)] =
+          "COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -52118,4 +52120,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.e921505669c3688d7441.js.map
+//# sourceMappingURL=76039.dd10ac5016aa2d709d9b.js.map

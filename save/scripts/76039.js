@@ -24200,6 +24200,8 @@
         POLL_COACHMARK_TITLE: "NEW! Polls are here.",
         POLL_COACHMARK_SUBTITLE:
           "Plan events, gather opinions, or drop a silly question in the chat.",
+        POLL_COACHMARK_CTA: "Start a poll now!",
+        POLL_COACHMARK_DISMISS: "Maybe later.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -26362,8 +26364,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("275656", ", Version Hash: ")
-          .concat("44f6fa92ad7f09d48500e848c7a510211f0ed2f4")
+          .concat("275662", ", Version Hash: ")
+          .concat("7818ed69ceb9a0f1e13a57b7e42dedfc1c5829e3")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29475,12 +29477,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "275656"), "275656"));
+        let _ = parseInt(((e = "275662"), "275662"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "275656"
+                "275662"
               )
             ),
             (_ = 0)),
@@ -52131,4 +52133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.32ad651087c2f7527554.js.map
+//# sourceMappingURL=76039.8d8865a5f1f13fd3355b.js.map

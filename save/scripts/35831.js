@@ -5618,7 +5618,8 @@
         let e = await a.default.get({ url: l.Endpoints.LOOTBOX_COUNT });
         n.default.dispatch({
           type: "LOOTBOX_COUNT_STAT_FETCHED",
-          count: e.body.count,
+          currentCount: e.body.current_count,
+          previousCount: e.body.previous_count,
         });
       }
     },
@@ -5629,14 +5630,11 @@
           getLootboxes: function () {
             return d;
           },
-          LOOTBOX_COUNT_INTERPOLATE_START: function () {
+          LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN: function () {
             return u;
           },
-          LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN: function () {
-            return c;
-          },
           LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX: function () {
-            return S;
+            return c;
           },
         });
       var a,
@@ -5701,9 +5699,8 @@
             sound: o,
           },
         }),
-        u = l.default.Millis.SECOND,
-        c = l.default.Millis.MINUTE,
-        S = l.default.Millis.MINUTE + 10 * l.default.Millis.SECOND;
+        u = l.default.Millis.MINUTE,
+        c = l.default.Millis.MINUTE + 10 * l.default.Millis.SECOND;
     },
     204062: function (e, t, s) {
       "use strict";
@@ -5780,14 +5777,9 @@
           (S = { ...t.openedItems }), (E = t.redeemedPrize), (a = s), f++, T++;
         },
         LOOTBOX_COUNT_STAT_FETCHED: function (e) {
-          let { count: t } = e;
-          (T =
-            0 === f
-              ? t <= 2 * d.LOOTBOX_COUNT_INTERPOLATE_START
-                ? t
-                : t - d.LOOTBOX_COUNT_INTERPOLATE_START
-              : f),
-            (f = t),
+          let { currentCount: t, previousCount: s } = e;
+          (f = t),
+            (T = s),
             (_ = Date.now()),
             (m = (0, o.randomBetween)(
               d.LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN,
@@ -11898,9 +11890,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "275416",
+          E = "275441",
           T =
-            ((e = "25c1ce700d78b5cdd3007f095229cbdb37bb6a92"),
+            ((e = "3cfe92e547e64bb1f838a52c3648eef62a54fd7c"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32010,4 +32002,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4d947e15a800ce61363a.js.map
+//# sourceMappingURL=5b882518ec42891f0611.js.map

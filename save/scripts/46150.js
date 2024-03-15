@@ -539,8 +539,8 @@
         y = n("168973"),
         C = n("491605"),
         O = n("476765"),
-        b = n("599110"),
-        A = n("32531"),
+        A = n("599110"),
+        b = n("32531"),
         M = n("714657"),
         P = n("164546"),
         w = n("941719"),
@@ -559,7 +559,7 @@
         F = s.createContext({}),
         H = e => {
           let { isPersisted: t, themeName: n, analyticsLocations: i } = e;
-          b.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
+          A.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
             feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
@@ -669,7 +669,7 @@
             ]
           ),
           c = e => {
-            (0, A.resetBackgroundGradientPreset)(),
+            (0, b.resetBackgroundGradientPreset)(),
               H({
                 isPersisted: !0,
                 analyticsLocations: i,
@@ -715,7 +715,7 @@
                   : e.id,
               ];
             }),
-            [O, b] = s.useState(!1),
+            [O, A] = s.useState(!1),
             [R, x] = s.useState(-1),
             G = (0, d.useStateFromStores)(
               [h.default],
@@ -731,11 +731,11 @@
             ((R === w.BACKGROUND_GRADIENT_PRESETS.length - 2 &&
               "EDITOR" === u) ||
               y === c.BackgroundGradientPresetId.EASTER_EGG) &&
-              b(!0);
+              A(!0);
           }, [R, u, y]);
           let K = (e, t) => {
             if (
-              ((0, A.updateBackgroundGradientPreset)(e.id),
+              ((0, b.updateBackgroundGradientPreset)(e.id),
               H({
                 isPersisted: !T,
                 analyticsLocations: g,
@@ -753,7 +753,7 @@
               ),
               null != t)
             ) {
-              if ((O && b(!1), t <= R || 0 === t)) {
+              if ((O && A(!1), t <= R || 0 === t)) {
                 x(0);
                 return;
               }
@@ -962,8 +962,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "275416",
-          versionHash: "25c1ce700d78b5cdd3007f095229cbdb37bb6a92",
+          buildNumber: "275441",
+          versionHash: "3cfe92e547e64bb1f838a52c3648eef62a54fd7c",
         };
       }
       n.r(t),
@@ -1444,8 +1444,8 @@
         y = n("299039"),
         C = n("649649"),
         O = n("845868"),
-        b = n("287223"),
-        A = n("76618"),
+        A = n("287223"),
+        b = n("76618"),
         M = n("380353"),
         P = n("49111"),
         w = n("133335"),
@@ -1466,8 +1466,8 @@
                 let [s, o, r] = m.default.hasConsented(
                     P.Consents.PERSONALIZATION
                   )
-                    ? (0, b.guessGuildModeWithRemoteData)(e, t, n, i, !0)
-                    : (0, b.guessGuildModeWithLocalData)(e, n),
+                    ? (0, A.guessGuildModeWithRemoteData)(e, t, n, i, !0)
+                    : (0, A.guessGuildModeWithLocalData)(e, n),
                   u =
                     null !== (l = n.filter(t => t.guild_id === e.id)[0]) &&
                     void 0 !== l
@@ -1565,14 +1565,14 @@
       function x(e, t) {
         return Object.values(p.default.getGuilds()).some(n => {
           let [i] = m.default.hasConsented(P.Consents.PERSONALIZATION)
-            ? (0, b.guessGuildModeWithRemoteData)(
+            ? (0, A.guessGuildModeWithRemoteData)(
                 n,
                 M.defaultThresholds,
                 e,
                 t,
                 !1
               )
-            : (0, b.guessGuildModeWithLocalData)(n, e);
+            : (0, A.guessGuildModeWithLocalData)(n, e);
           return i === M.Mode.UseGreyDot;
         });
       }
@@ -1736,7 +1736,7 @@
         await F(() => H()),
           await F(() =>
             d.default.setAccountFlag(
-              A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+              b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
               !0
             )
           );
@@ -1807,12 +1807,12 @@
           ),
             await (0, C.restoreSnapshot)(e.id),
             await d.default.setAccountFlag(
-              A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+              b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
               !1
             );
         } else
           await d.default.setAccountFlag(
-            A.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
+            b.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
             !1
           );
       }
@@ -2622,4 +2622,4 @@
     },
   },
 ]);
-//# sourceMappingURL=46150.c4efad8610d768728f3f.js.map
+//# sourceMappingURL=46150.14ab2fbc50370326e20e.js.map

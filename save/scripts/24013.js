@@ -140,13 +140,14 @@
             s.el("280201").then(s.t.bind(s, "280201", 19)),
             s.el("865981").then(s.t.bind(s, "865981", 23)),
           ]);
-          this._animItem = t.loadAnimation({
-            container: this._lottieRef,
-            renderer: "svg",
-            loop: !0,
-            autoplay: !0,
-            animationData: e,
-          });
+          null != this._lottieRef &&
+            (this._animItem = t.loadAnimation({
+              container: this._lottieRef,
+              renderer: "svg",
+              loop: !0,
+              autoplay: !0,
+              animationData: e,
+            }));
         }
         componentWillUnmount() {
           this._timeout.stop(),
@@ -319,4 +320,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6195f8a449da31eb63d5.js.map
+//# sourceMappingURL=87c05453f1a52f50285f.js.map

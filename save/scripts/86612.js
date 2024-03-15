@@ -9,16 +9,6 @@
       "use strict";
       e.exports = l.p + "792a9ed858431240f0e6.svg";
     },
-    185370: function (e, t, l) {
-      "use strict";
-      l.r(t),
-        l.d(t, {
-          ICON_SIZE: function () {
-            return a;
-          },
-        });
-      let a = { xxs: 12, xs: 16, sm: 18, md: 24, lg: 32, custom: void 0 };
-    },
     743087: function (e, t, l) {
       "use strict";
       l.r(t);
@@ -1418,4 +1408,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1a9e9462f807e1589314.js.map
+//# sourceMappingURL=19feab4ce3002e014303.js.map

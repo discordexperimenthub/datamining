@@ -205,6 +205,27 @@
       "use strict";
       e.exports = n.p + "30c5d0b920e7f142a6c6.svg";
     },
+    289867: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var a = n("913144"),
+        l = {
+          toggleMembersSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_MEMBERS_SECTION" });
+          },
+          toggleProfilePanelSection() {
+            a.default.dispatch({ type: "PROFILE_PANEL_TOGGLE_SECTION" });
+          },
+          toggleSummariesSection() {
+            a.default.dispatch({ type: "CHANNEL_TOGGLE_SUMMARIES_SECTION" });
+          },
+        };
+    },
     369008: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -22963,10 +22984,10 @@
       n.r(t),
         n.d(t, {
           QuestsEntryContextMenu: function () {
-            return I;
+            return T;
           },
           QuestsEntryContextMenuPopout: function () {
-            return T;
+            return v;
           },
         });
       var a = n("37983"),
@@ -22980,27 +23001,28 @@
         c = n("545158"),
         f = n("124824"),
         h = n("306160"),
-        m = n("815496"),
-        p = n("448881"),
-        E = n("588025"),
-        S = n("227231"),
-        g = n("49111"),
-        C = n("843455"),
-        _ = n("782340");
-      function I(e) {
+        m = n("128259"),
+        p = n("815496"),
+        E = n("448881"),
+        S = n("588025"),
+        g = n("227231"),
+        C = n("49111"),
+        _ = n("843455"),
+        I = n("782340");
+      function T(e) {
         var t;
-        let l = (0, S.isDismissible)(e.questContent);
+        let l = (0, g.isDismissible)(e.questContent);
         return (0, a.jsxs)(u.Menu, {
           variant: "fixed",
           onSelect: () => {
             null != e.onSelect ? e.onSelect() : (0, o.closeContextMenu)();
           },
           navId: "quests-entry",
-          "aria-label": _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+          "aria-label": I.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
           onClose:
             null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t
               ? t
-              : C.NOOP,
+              : _.NOOP,
           children: [
             (0, a.jsxs)(
               u.MenuGroup,
@@ -23008,28 +23030,33 @@
                 children: [
                   (0, a.jsx)(u.MenuItem, {
                     id: "get-game",
-                    label: _.default.Messages.QUESTS_GET_THIS_GAME,
+                    label: I.default.Messages.QUESTS_GET_THIS_GAME,
                     action: () => {
-                      (0, m.trackQuestContentClicked)(
-                        e.quest.id,
-                        e.questContent,
-                        m.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
-                      ),
-                        (0, c.default)(e.quest.config.getGameLink);
+                      (0, m.handleClick)({
+                        href: e.quest.config.getGameLink,
+                        onConfirm: () => {
+                          (0, p.trackQuestContentClicked)(
+                            e.quest.id,
+                            e.questContent,
+                            p.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+                          ),
+                            (0, c.default)(e.quest.config.getGameLink);
+                        },
+                      });
                     },
                     icon: i.LinkExternalMediumIcon,
                   }),
-                  e.questContent === E.QuestContent.QUESTS_EMBED &&
+                  e.questContent === S.QuestContent.QUESTS_EMBED &&
                     (0, a.jsx)(u.MenuItem, {
                       id: "share-link",
-                      label: _.default.Messages.QUESTS_SHARE_LINK,
+                      label: I.default.Messages.QUESTS_SHARE_LINK,
                       action: () => {
-                        (0, m.trackQuestContentClicked)(
+                        (0, p.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          m.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+                          p.QuestContentCTA.CONTEXT_MENU_COPY_LINK
                         ),
-                          (0, h.copy)((0, S.getQuestUrl)(e.quest.id));
+                          (0, h.copy)((0, g.getQuestUrl)(e.quest.id));
                       },
                       icon: s.CopyIcon,
                     }),
@@ -23044,25 +23071,25 @@
                   !e.hideLearnMore &&
                     (0, a.jsx)(u.MenuItem, {
                       id: "learn-more",
-                      label: _.default.Messages.QUESTS_LEARN_MORE_V2,
+                      label: I.default.Messages.QUESTS_LEARN_MORE_V2,
                       action: () => {
-                        (0, m.trackQuestContentClicked)(
+                        (0, p.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          m.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+                          p.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
                         ),
-                          d.default.open(g.UserSettingsSections.INVENTORY);
+                          d.default.open(C.UserSettingsSections.INVENTORY);
                       },
                     }),
                   e.shouldShowDisclosure &&
                     (0, a.jsx)(u.MenuItem, {
                       id: "display-disclosure",
-                      label: _.default.Messages.QUESTS_DISCLOSURE_LABEL,
+                      label: I.default.Messages.QUESTS_DISCLOSURE_LABEL,
                       action: () => {
-                        (0, m.trackQuestContentClicked)(
+                        (0, p.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          m.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
+                          p.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
                         ),
                           (0, r.openModalLazy)(async () => {
                             let { default: t } = await n
@@ -23080,20 +23107,20 @@
                   l &&
                     (0, a.jsx)(u.MenuItem, {
                       id: "hide-entrypoint",
-                      label: _.default.Messages.QUESTS_HIDE_THIS,
+                      label: I.default.Messages.QUESTS_HIDE_THIS,
                       action: () => {
-                        (0, m.trackQuestContentClicked)(
+                        (0, p.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          m.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+                          p.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
                         ),
-                          (0, S.isDismissible)(e.questContent) &&
-                            (0, p.dismissQuestContent)(
+                          (0, g.isDismissible)(e.questContent) &&
+                            (0, E.dismissQuestContent)(
                               e.quest.id,
                               e.questContent
                             );
                       },
-                      subtext: _.default.Messages.QUESTS_FIND_QUEST,
+                      subtext: I.default.Messages.QUESTS_FIND_QUEST,
                     }),
                 ],
               },
@@ -23102,7 +23129,7 @@
           ],
         });
       }
-      function T(e) {
+      function v(e) {
         let {
             children: t,
             onOpen: n,
@@ -23113,10 +23140,10 @@
             ...d
           } = e,
           c = l.useCallback(() => {
-            (0, m.trackQuestContentClicked)(
+            (0, p.trackQuestContentClicked)(
               r.id,
               o,
-              m.QuestContentCTA.OPEN_CONTEXT_MENU
+              p.QuestContentCTA.OPEN_CONTEXT_MENU
             ),
               null != n && n();
           }, [n, r, o]);
@@ -23127,14 +23154,14 @@
             let { closePopout: t } = e;
             return i
               ? (0, a.jsx)(f.default, {
-                  children: (0, a.jsx)(I, {
+                  children: (0, a.jsx)(T, {
                     ...d,
                     quest: r,
                     questContent: o,
                     onClose: t,
                   }),
                 })
-              : (0, a.jsx)(I, { ...d, quest: r, questContent: o, onClose: t });
+              : (0, a.jsx)(T, { ...d, quest: r, questContent: o, onClose: t });
           },
           animation: u.Popout.Animation.NONE,
           children: e => t(e),
@@ -30815,6 +30842,79 @@
           },
         });
       }
+    },
+    893980: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          trackProfilePanelViewed: function () {
+            return u;
+          },
+          trackProfilePanelToggled: function () {
+            return o;
+          },
+        });
+      var a = n("373469"),
+        l = n("824563"),
+        s = n("27618"),
+        i = n("599110"),
+        r = n("49111");
+      let u = e => {
+          let {
+            displayProfile: t,
+            isMobile: n,
+            loadDurationMs: a,
+            activity: l,
+            customStatusActivity: s,
+            status: u,
+          } = e;
+          i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+            has_mobile_indicator: n,
+            has_activity:
+              null != l &&
+              (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+            has_game_activity:
+              (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+            load_duration_ms: a,
+            profile_user_status: u,
+            has_custom_status: null != s,
+            has_profile_effect: null != t.profileEffectId,
+            ...d(t),
+          });
+        },
+        o = (e, t) => {
+          i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+            is_profile_open: t,
+            ...d(e),
+          });
+        },
+        d = e => {
+          var t;
+          if (null == e) return {};
+          let n = e.userId,
+            i = null != a.default.getAnyStreamForUser(n),
+            u = l.default.findActivity(n, e => {
+              let { type: t } = e;
+              return i
+                ? t === r.ActivityTypes.PLAYING
+                : t !== r.ActivityTypes.CUSTOM_STATUS;
+            }),
+            o = null == u ? void 0 : u.assets,
+            d = s.default.isFriend(n);
+          return {
+            has_images: !!(null !== (t = null == o ? void 0 : o.large_image) &&
+            void 0 !== t
+              ? t
+              : null == o
+                ? void 0
+                : o.small_image),
+            is_friend: d,
+            viewed_profile_user_id: n,
+            profile_has_nitro_customization: e.hasPremiumCustomization(),
+            profile_has_theme_color_customized: e.hasThemeColors(),
+            profile_has_theme_animation: null != e.popoutAnimationParticleType,
+          };
+        };
     },
     69682: function (e, t, n) {
       "use strict";
@@ -42436,4 +42536,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a9cf0756e209b8007d0a.js.map
+//# sourceMappingURL=3060212a071520d58113.js.map

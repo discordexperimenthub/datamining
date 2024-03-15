@@ -26,26 +26,27 @@
         a = n("77078"),
         r = n("272030"),
         c = n("79112"),
-        d = n("545158"),
-        C = n("124824"),
+        C = n("545158"),
+        d = n("124824"),
         E = n("306160"),
-        _ = n("815496"),
+        _ = n("128259"),
+        f = n("815496"),
         M = n("448881"),
         T = n("588025"),
-        f = n("227231"),
-        N = n("49111"),
+        N = n("227231"),
+        q = n("49111"),
         S = n("843455"),
-        q = n("782340");
+        h = n("782340");
       function p(e) {
         var t;
-        let u = (0, f.isDismissible)(e.questContent);
+        let u = (0, N.isDismissible)(e.questContent);
         return (0, s.jsxs)(a.Menu, {
           variant: "fixed",
           onSelect: () => {
             null != e.onSelect ? e.onSelect() : (0, r.closeContextMenu)();
           },
           navId: "quests-entry",
-          "aria-label": q.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+          "aria-label": h.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
           onClose:
             null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t
               ? t
@@ -57,28 +58,33 @@
                 children: [
                   (0, s.jsx)(a.MenuItem, {
                     id: "get-game",
-                    label: q.default.Messages.QUESTS_GET_THIS_GAME,
+                    label: h.default.Messages.QUESTS_GET_THIS_GAME,
                     action: () => {
-                      (0, _.trackQuestContentClicked)(
-                        e.quest.id,
-                        e.questContent,
-                        _.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
-                      ),
-                        (0, d.default)(e.quest.config.getGameLink);
+                      (0, _.handleClick)({
+                        href: e.quest.config.getGameLink,
+                        onConfirm: () => {
+                          (0, f.trackQuestContentClicked)(
+                            e.quest.id,
+                            e.questContent,
+                            f.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+                          ),
+                            (0, C.default)(e.quest.config.getGameLink);
+                        },
+                      });
                     },
                     icon: i.LinkExternalMediumIcon,
                   }),
                   e.questContent === T.QuestContent.QUESTS_EMBED &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "share-link",
-                      label: q.default.Messages.QUESTS_SHARE_LINK,
+                      label: h.default.Messages.QUESTS_SHARE_LINK,
                       action: () => {
-                        (0, _.trackQuestContentClicked)(
+                        (0, f.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          _.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+                          f.QuestContentCTA.CONTEXT_MENU_COPY_LINK
                         ),
-                          (0, E.copy)((0, f.getQuestUrl)(e.quest.id));
+                          (0, E.copy)((0, N.getQuestUrl)(e.quest.id));
                       },
                       icon: o.CopyIcon,
                     }),
@@ -93,25 +99,25 @@
                   !e.hideLearnMore &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "learn-more",
-                      label: q.default.Messages.QUESTS_LEARN_MORE_V2,
+                      label: h.default.Messages.QUESTS_LEARN_MORE_V2,
                       action: () => {
-                        (0, _.trackQuestContentClicked)(
+                        (0, f.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          _.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+                          f.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
                         ),
-                          c.default.open(N.UserSettingsSections.INVENTORY);
+                          c.default.open(q.UserSettingsSections.INVENTORY);
                       },
                     }),
                   e.shouldShowDisclosure &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "display-disclosure",
-                      label: q.default.Messages.QUESTS_DISCLOSURE_LABEL,
+                      label: h.default.Messages.QUESTS_DISCLOSURE_LABEL,
                       action: () => {
-                        (0, _.trackQuestContentClicked)(
+                        (0, f.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          _.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
+                          f.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
                         ),
                           (0, l.openModalLazy)(async () => {
                             let { default: t } = await n
@@ -129,20 +135,20 @@
                   u &&
                     (0, s.jsx)(a.MenuItem, {
                       id: "hide-entrypoint",
-                      label: q.default.Messages.QUESTS_HIDE_THIS,
+                      label: h.default.Messages.QUESTS_HIDE_THIS,
                       action: () => {
-                        (0, _.trackQuestContentClicked)(
+                        (0, f.trackQuestContentClicked)(
                           e.quest.id,
                           e.questContent,
-                          _.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+                          f.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
                         ),
-                          (0, f.isDismissible)(e.questContent) &&
+                          (0, N.isDismissible)(e.questContent) &&
                             (0, M.dismissQuestContent)(
                               e.quest.id,
                               e.questContent
                             );
                       },
-                      subtext: q.default.Messages.QUESTS_FIND_QUEST,
+                      subtext: h.default.Messages.QUESTS_FIND_QUEST,
                     }),
                 ],
               },
@@ -161,21 +167,21 @@
             questContent: r,
             ...c
           } = e,
-          d = u.useCallback(() => {
-            (0, _.trackQuestContentClicked)(
+          C = u.useCallback(() => {
+            (0, f.trackQuestContentClicked)(
               l.id,
               r,
-              _.QuestContentCTA.OPEN_CONTEXT_MENU
+              f.QuestContentCTA.OPEN_CONTEXT_MENU
             ),
               null != n && n();
           }, [n, l, r]);
         return (0, s.jsx)(a.Popout, {
-          onRequestOpen: d,
+          onRequestOpen: C,
           onRequestClose: o,
           renderPopout: e => {
             let { closePopout: t } = e;
             return i
-              ? (0, s.jsx)(C.default, {
+              ? (0, s.jsx)(d.default, {
                   children: (0, s.jsx)(p, {
                     ...c,
                     quest: l,
@@ -247,4 +253,4 @@
     },
   },
 ]);
-//# sourceMappingURL=045fcdb1812bea666b56.js.map
+//# sourceMappingURL=ceb38fa47527c0de9a5e.js.map

@@ -1014,6 +1014,8 @@
           "Prikaži kontrole za glasovno",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Otvori Policu s aktivnostima",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Napusti aktivnost",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Ova značajka trenutačno nije dostupna u ovom operativnom sustavu",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Ova aktivnost u ovom trenutku nije dostupna za ovaj OS",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "ova aktivnost",
@@ -1240,6 +1242,9 @@
           "Aktivnost je počela.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Ovu aktivnost ne možeš pokrenuti na serveru koji ima preko 25 članova",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Vanjska aplikacija",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Spremaš se pokrenuti vanjsku aplikaciju. Želiš li nastaviti?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Aktivnost je završila. Želiš li pokrenuti neku drugu?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1248,6 +1253,15 @@
           "Nemaš dozvolu za pridruživanje ovom glasovnom kanalu.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Ne možeš se pridružiti aktivnostima na ovom kanalu.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Ptica s megafonom umjesto glave",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Važna najava!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Spremaš se prvi put isprobati {activityName}.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Tu aplikaciju nije izradio Discord. Isprobavaj samo aplikacije developera u koje imaš povjerenja.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Doznaj više o privatnim aplikacijama.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) je započeo/la aktivnost",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4806,12 +4820,8 @@
           "Odaberi glasovni kanal kojemu se želiš pridružiti ili na koji se želiš prebaciti",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Omogući ili onemogući prečac",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Rezultati",
-        SHOW_CURRENT_ACTIVITY:
-          "Prikaži trenutnu aktivnost kao statusnu poruku.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord će automatski ažurirati tvoj status ako ideš na javnu pozornicu.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord će automatski ažurirati tvoj status na temelju igre koju igraš (ako je prepoznatljiva), aktivnosti koju radiš ako ona podržava Rich Presence ili ako gledaš neku javnu pozornicu.",
         GAME_DETECTION_SERVICE: "Usluga prepoznavanja igre",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Mjesta instalacije",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Dodaj mjesto instalacije",
@@ -9393,10 +9403,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % popusta",
         PREMIUM_DISCOUNT_CTA: "Uštedi !!{percent, number}!! % na Nitru",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Uštedi na Nitru",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Tvoj popust od !!{percent, number}!! % završit će {numMonths, plural, one {1 mjesec} few {{numMonths} mjeseca} other {{numMonths} mjeseci}} nakon kupnje. Nakon toga će ti se naplaćivati {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Cijena za tvoja prva **3 mjeseca** iznosi **{discountedPrice}**. Nakon toga će ti se naplaćivati {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {1 sljedeći mjesec} few {{numMonths} sljedeća mjeseca} other {{numMonths} sljedećih mjeseci}}** {numMonths, plural, one {koštat će te} other {koštat će te}} **{discountedPrice}**. Nakon toga će ti se naplaćivati {regularPrice}.",
+          "**{numMonths, plural, one {Tvoj sljedeći mjesec} few {Tvoja {numMonths} sljedeća mjeseca} other {Tvojih {numMonths} sljedećih mjeseci}}** {numMonths, plural, one {koštat će te} other {koštat će te}} **{discountedPrice}**. Nakon toga će ti se naplaćivati {regularPrice} mjesečno.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "popust primijenjen",
         CHURN_DISCOUNT_DESCRIPTION:
           "Prije otkazivanja, uživaj u **{percent, number} % popusta na Nitro pretplatu ** tijekom {numMonths, plural, one {1 mjeseca} few {{numMonths} mjeseca} other {{numMonths} mjeseci}}.",
@@ -10842,8 +10854,6 @@
           "Maločas smo ti poslali e-poštu. U njoj je link za verifikaciju na kojeg trebaš kliknuti da bi tvoja kupnja bila autorizirana.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Nastavi",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Ništa ti nije stiglo?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Ponovno e-poštu",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11676,7 +11686,50 @@
           "Uzmi za sebe ovaj cool badge jer si Nitro pretplatnik.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Za kolekcionare. Uhvati ovu ekskluzivnu Nitro-only značku.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {Besplatan Boost} few {Besplatna Boosta} other {Besplatnih Boostova}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Čestitamo na prvih mjeseca dana Nitra.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro nagrada",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Tvoj dodatni Boost možeš koristiti sve dok je tvoja trenutačna Nitro pretplata aktivna.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "Uzmi svoju nagradu!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Iskoristi",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Iskorišteno",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Hvala što si Nitro član.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Zadrži svoj Boost uz aktivnu Nitro pretplatu. Otkazivanjem se poništava napredak i uklanja se Boost.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Dobit ćeš Boost kada prođe jedan mjesec otkako imaš Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Iskoristi za {days} {days, plural, =1 {dan} other {dana}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Iskoristi za {numDays} {numDays, plural, =1 {dan} other {dana}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro nagrada",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Dobit ćeš Boost kada prođe jedan mjesec otkako imaš Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Dobit ćeš Boost kada prođe tri mjeseca otkako imaš Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Tvoj dodatni Boost možeš koristiti sve dok je tvoja trenutačna Nitro pretplata aktivna.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Uzmi svoju nagradu!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Čestitamo na prvih mjeseca dana Nitra.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Čestitamo na 3 mjeseca Nitra.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Hvala što si Nitro član.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Zadrži svoj Boost uz aktivnu Nitro pretplatu. Otkazivanjem se poništava napredak i uklanja se Boost.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Iskorišteno",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Zaradio/la si dodatni Boost, svaka čast.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Tvoj te Boost čeka!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Hvala ti što si član Nitro član. Evo ti dodatni Boost zato što si Nitro član već mjesec dana.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Hvala ti što si Nitro član. Evo ti dodatni Boost zato što si već tri mjeseca Nitro član.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Podigni svoj Discord na super razinu",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11770,6 +11823,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Besplatno probno razdoblje ({days, plural, =1 {preostao # dan} other {preostalo # dana}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Besplatno probno razdoblje",
+        POWERED_BY_NITRO: "Omogućio: Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Igra",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Uživo na !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -14222,8 +14276,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Ovaj emoji je od",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Ovaj emoji je s ovog servera. Možeš ga koristiti svugdje.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Taj emoji potječe s ovog servera. Uz Nitro ga možeš koristiti gdje god poželiš.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Ovaj emoji je s jednog od tvojih servera. Upišite njegovo ime u traku za chat da bi ga koristio.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Ovaj emoji potječe s jednog od tvojih servera. Uz Nitro ga možeš iskoristiti gdje god poželiš.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Želiš li koristiti ovaj emoji svugdje? Pridruži se serveru.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14238,6 +14296,8 @@
           "Želiš koristiti ovaj emoji svugdje? Nabavi Nitro i pridruži se poslužitelju.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Ovaj emoji je sa servera kojemu se pristupa samo uz pozivnicu ili je nedostupan. [Doznaj više](openPremiumSettings) o korištenju prilagođenog emojija.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Ovaj prilagođeni emoji potječe sa servera koji je dostupan samo uz pozivnicu. Uz Nitro možeš koristiti prilagođene emojije s bilo kojeg servera kojem si se pridružio/la.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Uzmi ovu naljepnicu od",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Ova naljepnica je od",
@@ -16153,12 +16213,8 @@
           "Sigurno želiš urediti ovaj događaj?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Uređivanjem ovog događaja **ažuriraju se i svih događaji** u seriji.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Isprobaj",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NOVO! Ponavljajući događaji",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Sada možeš jednostavno ponavljati događaje",
-        COPY_RECURRENCE_LINK: "Kopiraj ovaj link događaja",
-        COPY_SERIES_LINK: "Kopiraj link serije događaja",
+        COPY_RECURRENCE_LINK: "Kopiraj link samo za ovaj događaj",
+        COPY_SERIES_LINK: "Kopiraj link za sve događaje",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Napravi događaj",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17441,6 +17497,8 @@
           "Ako sada ponovo uđeš u Nitro Classic svijet, nastavit ćemo naplaćivati **{price}** preko tvojeg načina plaćanja **mjesečno** sve dok ne otkažeš pretplatu. Pretplatu možeš otkazati na svojoj stranici Korisničkih postavki.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Ako sada ponovo uđeš u Nitro Classic svijet, nastavit ćemo naplaćivati **{price}** preko tvojeg načina plaćanja **godišnje** sve dok ne otkažeš pretplatu. Pretplatu možeš otkazati na svojoj stranici Korisničkih postavki.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Ako ponovno aktiviraš Nitro, nastavit ćemo teretiti tvoj način plaćanja s **{discountPrice}** mjesečno do isteka popusta, a zatim ćemo ti naplaćivati ***{defaultPrice}*** mjesečno dok ne otkažeš pretplatu. Otkazati je možeš u svakom trenutku na stranici Postavke.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Zadrži Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -18968,6 +19026,9 @@
           "Filtriraj na temelju sigurnosnih informacija, kao što je vrijeme isteka ili sudjelovanje u neuobičajenoj aktivnosti u direktnoj poruci.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Bananje članova",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Nepoznato",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Skriveno",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Aktiviran je način rada Streamer, kodovi pozivnica su skriveni",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Otkrivanje servera",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Učenički Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Ostale metode pridruživanja",
@@ -19039,8 +19100,7 @@
           "Sve dodijeljene dozvole",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Nema dozvola moderatora",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Dodijelio/la:",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskantno) Dodijelio/la:",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Dozvolu dodijelile sljedeće uloge",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Najviša uloga",
@@ -20158,6 +20218,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Uređivanje medija i stvaranje memeova brzinom Discorda.",
         EARLY_ACCESS: "Rani pristup",
+        REWARD: "Nagrada",
         REMIXING_POST_CTA: "Pošalji",
         REMIXING_CROP: "Oreži medij",
         REMIXING_BACKDROP_EDITOR_TITLE: "Prilagodi i oreži",
@@ -21515,6 +21576,10 @@
           "Serveri na koje si slao/la poruke u posljednjih tjedan dana. To nisu linkovi pozivnica, tvoji roditelji neće ih moći kliknuti.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Serveri na kojima je vaš tinejdžer slao poruke u posljednjih tjedan dana.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Serveri na kojima si bio/la aktivan/na (slao/la poruke ili na kojima si se pridruživao/la glasovnom chatu) u posljednjih tjedan dana. To nisu linkovi s pozivnicom, tvoji ih roditelji neće moći kliknuti.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Serveri na kojima je vaš tinejdžer bio aktivan (slao poruke ili na kojima se pridruživao glasovnom chatu) u posljednjih tjedan dana.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktivni serveri – {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21656,6 +21721,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Pretplatnici na Nitro dobivaju popust na ovaj ukras",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} s Nitrom",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} uz Nitro $[pretplati se sada](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Jesi li spreman/na za novi izgled?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Ups, ovo je neugodno.",
@@ -21672,6 +21739,9 @@
           "Nakon što ga kupiš, ovaj će efekt biti dodan u tvoju kolekciju i moći ćeš ga koristiti kada god poželiš",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Ovaj je efekt sada dio tvoje kolekcije i možeš ga koristiti kada god poželiš!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Inače bi te koštalo {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Klikneš li „{buyButtonLabel}”, to znači da prihvaćaš [Uvjete komercijalno pruženih usluga]({paidServiceTermURL}). Kada dovršiš kupnju, predmet će biti dodan u tvoju kolekciju i moći ćeš ga koristiti kad poželiš. Imaj na umu da više nije moguće izdati povrat za Nitro pretplatu nakon kupnje nekog predmeta.",
         COLLECTIBLES_DAYS_LEFT: "Preostali broj dana: {days}",
         COLLECTIBLES_LAST_DAY: "Posljednji dan za kupnju",
         COLLECTIBLES_SHOP_VIEW_ALL: "Prikaži sve",
@@ -21693,9 +21763,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Ovladaj elementima",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Vatra. Vjetar. Voda. Zemlja. Koji ćeš osloboditi?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Stigli su nove anime predmeti!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: novi stilovi",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Baci pogled na najnovije stilove uz koje će te senpai definitivno primijetiti.",
+          "Senpai će te sada definitivno primijetiti.",
         COLLECTIBLES_NEW_BADGE: "NOVO",
         INVENTORY_EMOJI_DETAILS_V2: "Pogledaj pojedinosti o emojiju",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23017,6 +23087,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# minuta} few {# minute} other {# minuta}}",
         CLIPS_SAVE: "Spremi isječak",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Omogući isječke želiš li snimiti ovaj stream.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Omogući gledateljima snimanje isječaka",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23390,6 +23462,7 @@
           "Sigurnost tinejdžera nama na Discordu je vrlo važna. Kada u razgovoru otkrijemo mogući sigurnosni rizik, obavijestit ćemo te o tome. [Doznaj više o sigurnosnim upozorenjima.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Idi u postavke",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Odbaci",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Hvala na informacijama!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokiraj",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Zatvori",
         STRANGER_DANGER_MORE_HEADER: "Više opcija koje su ti na raspolaganju",
@@ -23437,9 +23510,19 @@
           "Ovaj razgovor možda nije siguran.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Poduzmi odgovarajuće radnje da se zaštitiš.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Poduzmi odgovarajuće radnje da se zaštitiš - otvori sigurnosne alate.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Ovaj razgovor možda nije siguran. Otvori sigurnosne alate i poduzmi odgovarajuće radnje.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blokiraj tu osobu",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Odblokiraj",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Račun je blokiran",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Račun je deblokiran",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Račun je prijavljen",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Nešto je pošlo krivo! Pokušaj ponovo kasnije.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Neće ti moći poslati poruku. Ako smatraš da ponašanje te osobe može naštetiti nekome, podnesi prijavu Discordu.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blokiraj",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blokiraj i prijavi",
@@ -23556,6 +23639,8 @@
         POLL_SUBMIT_VOTE: "Glasaj",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} glas} few {{count} glasa} other {{count} glasova}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} glas} few {{count} glasa} other {{count} glasova}}",
         POLL_ALREADY_VOTED: "Glasao/la",
         POLL_EDIT_VOTE: "Promijeni glas",
         POLL_REMOVE_VOTE: "Ukloni glas",
@@ -23570,9 +23655,15 @@
         POLL_EXPIRED: "Anketa završena",
         POLL_SELECT_ONE_ANSWER: "Odaberi jedan odgovor",
         POLL_SELECT_MULTIPLE_ANSWERS: "Odaberi jedan ili više odgovora",
-        POLL_SHOW_VOTES: "Prikaži glasove",
-        POLL_HIDE_VOTES: "Sakrij glasove",
+        POLL_SHOW_VOTES: "Prikaži rezultate",
+        POLL_HIDE_VOTES: "Povratak na glasanje",
+        POLL_VOTES_NO_RESULTS_TITLE: "Ovdje nema ništa za vidjeti",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Ovaj odgovor nije dobio glasove",
+        POLL_COACHMARK_TITLE: "NOVO! Stigle su ankete.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planiraj događaje, prikupljaj mišljenja i postavi šašavo pitanje u chatu.",
         POLL_NOT_INTERACTIVE: "Pogledajte originalnu poruku za interakciju",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Ovdje nema ništa za vidjeti",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Za ovaj odgovor nema glasova.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Glasovi",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Otkrij glasače",
@@ -23599,8 +23690,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Dodaj još jedan odgovor",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anketa će biti aktivna",
         CREATE_POLL_DURATION_LABEL: "Trajanje",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 sat",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 sata",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dana",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tjedan",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23627,6 +23716,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Opis slike (Alt tekst)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt tekst:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Odaberi medijski sadržaj",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Ups, nešto si zaboravio/la. Moraš dodati pitanje.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ups, nešto si zaboravio/la. Moraš dodati barem jedan odgovor.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Nemoj da polje za odgovore bude prazno! Dodaj nešto teksta.",
         POLL_END_EARLY: "Završi anketu sada",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Završiti ankete sada?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23659,10 +23754,16 @@
         QUESTS_COMPLETE_TOOLTIP:
           "Klikni na Zatraži da bi dobio k\xf4d za nagradu!",
         QUESTS_ACCEPT_TOOLTIP:
-          "Prihvati izazov i dovrši zadatak da bi otključao nagradu",
+          "Prihvati Quest i dovrši zadatak da bi otključao nagradu",
         QUESTS_IN_PROGRESS_TOOLTIP: "Dovrši zadatak kako bi otključao nagradu",
         QUESTS_STREAM_TASK:
           "Streamaj {gameTitle} prijatelju u trajanju od {minutes} minuta",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Potvrdi svoj račun da možeš uzeti nagrade!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Poslali smo e-mail za potvrdu na: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "A joj! Nismo ti uspjeli poslati e-mail za potvrdu.",
         QUEST_REWARD: "Osvoji {reward}",
         QUESTS_REWARD_CODE_HEADER: "Tvoj k\xf4d nagrade",
         QUESTS_REWARD_CODE_CONGRATS: "Čestitamo!",
@@ -23685,8 +23786,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponzorirano",
+        QUESTS_PROMOTED: "Unaprijeđeno",
         QUESTS_LEARN_MORE_V2: "Doznaj više",
         QUESTS_LEARN_MORE_STACKED: "Doznaj\n\nviše",
+        QUESTS_LEARN_MORE_LINK: "[Doznaj više]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Prihvati zadatak",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamaj {gameTitle} prijatelju {streamingDurationRequirement, number} minuta i osvoji {questReward}.",
@@ -23696,11 +23799,11 @@
         QUESTS_TITLE: "Zadatak {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Zadaci nisu dostupni na mobilnom uređaju... barem ne još. Žao nam je! U svojoj Discord aplikaciji na desktopu ili u pregledniku uđi u izbornik **Korisničke postavke > Popis darova** i tamo prihvati zadatak.",
+          "Questovi nisu dostupni na mobilnim uređajima... barem ne još. Žao nam je! U aplikaciji Discord na desktopu ili u pregledniku uđi u izbornik **Korisničke postavke > Popis darova** i tamo prihvati quest.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Zadaci nisu dostupni na mobilnim uređajiima... za sada.",
         QUESTS_MOBILE_EMBED_BODY:
-          "U svojoj Discord aplikaciji na desktopu ili u pregledniku uđi u izbornik \nKorisničke postavke > Popis darova i tamo prihvati zadatak.",
+          "U aplikaciji Discord na desktopu ili u pregledniku uđi u izbornik \nKorisničke postavke > Popis darova i tamo prihvati quest.",
         QUESTS_GET_THIS_GAME: "Nabavi ovu igru",
         QUESTS_DISCLOSURE_LABEL: "Zašto se ovo meni prikazuje?",
         QUESTS_SHARE_LINK: "Kopiraj poveznicu za dijeljenje",
@@ -23721,7 +23824,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} pokušava pristupiti određenim vrstama korisnika Discorda. Vodeći se onime što si nam sam kazao/la ili na temelju drugih prikupljenih informacija, smatramo da upadaš u neke od sljedećih skupina:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Ovdje]({privacySettingsUrl}) možeš doznati više o zadacima na Discordu i načinu upravljanja postavkama privatnosti.",
+          "[Doznaj više]({privacySettingsUrl}) o questovima na Discordu i načinu upravljanja postavkama privatnosti.",
         QUESTS_DISCLOSURE_LOCATION: "Mjesto",
         QUESTS_DISCLOSURE_AGE: "Dob",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivnost: relevantno igranje",
@@ -23729,7 +23832,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "Nešto je pošlo krivo. Baci oko na popis darova ako te zanima koji su još zadaci dostupni!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "Postoji problem u praćenju napretka tvojeg zadatka.",
+          "Postoji problem u praćenju napretka tvojeg questa.",
+        QUESTS_SHARE_QUEST: "Podijeli Quest",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Odaberi {gameTitle} da možeš napredovati u svojem questu!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Moraš odabrati aplikaciju, ne cijeli zaslon.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Potakni članove na chat nakon što je ovaj kanal neko vrijeme bio neaktivan.",
         PROMPT_CAMERA_LOADING_TITLE: "Što gledaš?",
@@ -23781,10 +23889,23 @@
           "Kartica aktivnosti prikazuje @{username} kako sluša pjesmu {song} izvođača {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Kartica aktivnosti prikazuje @{username} kako streama {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Igra **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Igrao/la je **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} igra **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} igrao/la je **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} igra novu igru: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} igrao/la je novu igru: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "Prije {count} tj",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "prije {count} d",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "prije {count} h",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "prije {count} m",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prije {count} s",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prvi put",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivnost",
       };
     },
   },

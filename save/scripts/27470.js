@@ -4905,11 +4905,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Ativar/desativar atalho do teclado",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultados",
-        SHOW_CURRENT_ACTIVITY: "Mostrar atividade atual como seu status.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "O Discord atualizar\xe1 seu status automaticamente se voc\xea estiver participando de um palco.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "O Discord atualizar\xe1 seu status automaticamente para o jogo que voc\xea estiver jogando (se for detect\xe1vel), uma atividade que suporta Rich Presence, ou se voc\xea estiver participando de um palco p\xfablico.",
         GAME_DETECTION_SERVICE: "Servi\xe7o de Detec\xe7\xe3o de Jogos",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locais de instala\xe7\xe3o",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5564,7 +5561,7 @@
         LOGOUT: "Sair",
         SOUNDS: "Sons",
         PREMIUM: "Nitro",
-        BASIC: "B\xe1sico",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Mensagem",
         SOUND_DEAFEN: "Desativar \xe1udio",
         SOUND_UNDEAFEN: "Reativar \xe1udio",
@@ -11053,8 +11050,6 @@
           "Acabamos de enviar um e-mail para voc\xea. Clique no link de verifica\xe7\xe3o na mensagem para autorizar esta compra.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continuar",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "N\xe3o recebeu nada?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Reenviar e-mail",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11946,7 +11941,7 @@
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 impulsos de servidor, envios de 500 MB e muito mais!",
         NITRO_MARKETING_JUST_THE_BASICS: "Apenas o b\xe1sico",
-        NITRO_MARKETING_BASIC_PERKS: "Vantagens do Nitro B\xe1sico",
+        NITRO_MARKETING_BASIC_PERKS: "Vantagens do Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "Deixe o Discord do seu jeito",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Escolha seu Nitro",
         MARKETING_PAGE_CHOOSE_PLAN_SUBTITLE:
@@ -16509,10 +16504,6 @@
           "Voc\xea tem certeza de que quer editar este evento?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Ao editar este evento, voc\xea tamb\xe9m vai **atualizar todos os eventos** desta s\xe9rie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Experimente",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NOVIDADE! Eventos Recorrentes",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Agora, voc\xea pode repetir eventos facilmente.",
         COPY_RECURRENCE_LINK: "Copiar link deste evento apenas",
         COPY_SERIES_LINK: "Copiar link de todos os eventos",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
@@ -19461,8 +19452,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Sem permiss\xf5es do mod",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Concedida por",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Arriscado) Concedida por",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderador",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permiss\xe3o concedida por estes cargos",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Cargo mais elevado",
@@ -23822,6 +23812,7 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "Ir para as configura\xe7\xf5es",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Ignorar",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Obrigado pelo feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Bloquear",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Fechar",
         STRANGER_DANGER_MORE_HEADER:
@@ -24056,8 +24047,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "A enquete estar\xe1 ativa por",
         CREATE_POLL_DURATION_LABEL: "Dura\xe7\xe3o",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 hora",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 horas",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dias",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 semana",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24264,6 +24253,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "H\xe1 {count}min",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s atr\xe1s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pela primeira vez",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Atividade",
       };
     },
   },

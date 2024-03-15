@@ -990,6 +990,8 @@
           "Show Voice Controls",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Open Activity Shelf",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Leave Activity",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "This feature is not available on this OS at this time",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "This Activity is not currently available on this OS",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "this Activity",
@@ -1209,6 +1211,9 @@
           "Activity has started.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "You cannot launch this activity in a server with more than 25 members",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "External Application",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "You’re about to launch an external app. Do you want to continue?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Activity ended. Start a new one?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activity started",
@@ -1216,6 +1221,15 @@
           "You do not have permissions to join this Voice Channel.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "You cannot join Activities in this channel.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "A bird with a megaphone for a head",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Heads Up!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "You’re about to test {activityName} for the first time.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "This app is not made by Discord. Only test apps from developers you trust.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Learn more about private apps.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) started an activity",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4694,11 +4708,8 @@
           "Select the voice channel to join or switch to",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Enable or disable keybind",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Results",
-        SHOW_CURRENT_ACTIVITY: "Display current activity as a status message.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord will automatically update your status if you're attending a public Stage.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord will automatically update your status based on the game you're playing (if detectable), an activity you're doing that supports Rich Presence or if you're attending a public Stage.",
         GAME_DETECTION_SERVICE: "Game Detection Service",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Install locations",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Add Install Location",
@@ -9170,10 +9181,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% discount",
         PREMIUM_DISCOUNT_CTA: "Save !!{percent, number}!!% on Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Save on Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Your !!{percent, number}!!% discount will end {numMonths, plural, one {1 month} other {{numMonths} months}} after purchase. After that, you’ll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Your first **3 months** are **{discountedPrice}**. After that, you’ll be charged {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Your next **{numMonths, plural, one {1 month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that, you’ll be charged {regularPrice}.",
+          "Your next **{numMonths, plural, one {month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that, you’ll be charged {regularPrice}/month.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
         CHURN_DISCOUNT_DESCRIPTION:
           "Before cancelling, enjoy **{percent, number}% off your Nitro subscription** for {numMonths, plural, one {1 month} other {{numMonths} months}}.",
@@ -10586,8 +10599,6 @@
           "We just sent you an email. Click the verification link in the email to authorise this purchase.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continue",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Haven’t received anything?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Resend email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11396,7 +11407,50 @@
           "Get this cool badge for being a Nitro subscriber.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For the collectors. Grab this exclusive Nitro-only badge.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} Free {numFreeBoosts, plural, =1 {Boost} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Congratulations on your first month of Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro Reward",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Your extra Boost is yours to use as long as your current Nitro subscription remains active.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "Redeem Your Reward!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Redeem",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Redeemed",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Thanks for being a Nitro member.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Keep your Boost with an active Nitro subscription. Cancelling resets progress and removes the Boost.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Earn a Boost when you hit your first month of Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Redeem in {days} {days, plural, =1 {day} other {days}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Redeem in {numDays} {numDays, plural, =1 {day} other {days}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro Reward",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Earn a Boost when you hit your first month of Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Earn a Boost when you hit 3 months of Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Your extra Boost is yours to use as long as your current Nitro subscription remains active.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Redeem Your Reward!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Congratulations on your first month of Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Congratulations on 3 months of Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Thanks for being a Nitro member.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Keep your Boost with an active Nitro subscription. Cancelling resets progress and removes the Boost.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Redeemed",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "You earned an extra Boost, nice work.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Your Boost awaits!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Thanks for being a Nitro member. Here’s an extra Boost for reaching your first month of Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Thanks for being a Nitro member. Here’s an extra Boost for reaching 3 months of Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Supercharge your Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11487,6 +11541,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Free Trial ({days, plural, =1 {# day left} other {# days left}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Free Trial",
+        POWERED_BY_NITRO: "Powered by Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Playing a game",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live on !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Playing on !!{platform}!!",
@@ -13861,8 +13916,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "This emoji is from",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "This emoji is from this server. You can use it everywhere.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "This emoji is from this server. Use it anywhere with Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "This emoji is from one of your servers. Type its name in the chat bar to use it.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "This emoji is from one of your servers. You can use it anywhere with Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Want to use this emoji everywhere? Join the server.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -13877,6 +13936,8 @@
           "Want to use this emoji everywhere? Get Nitro and join the server.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "This emoji is from a server that is either invite-only or unavailable. [Learn more](openPremiumSettings) about using custom emojis.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "This custom emoji is from a server that is invite-only. Use custom emojis from any joined servers with Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Get this sticker from",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "This sticker is from",
@@ -15769,12 +15830,8 @@
           "Are you sure you want to edit this event?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Editing this event will also **update all events** in this series.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Try it",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NEW! Repeating Events",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "You can now easily repeat events.",
-        COPY_RECURRENCE_LINK: "Copy this Event Link",
-        COPY_SERIES_LINK: "Copy Event Series Link",
+        COPY_RECURRENCE_LINK: "Copy Link for Only this Event",
+        COPY_SERIES_LINK: "Copy Link for All Events",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Create Event",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17041,6 +17098,8 @@
           "If you reinstate Nitro Classic, we'll resume charging your payment method **{price}** and continue to charge you **monthly** until you cancel the subscription. You can cancel at any time from your Settings page.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "If you reinstate Nitro Classic, we'll resume charging your payment method **{price}** and continue to charge you **yearly** until you cancel the subscription. You can cancel at any time from your Settings page.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "If you reinstate Nitro, we’ll resume charging your payment method **{discountPrice}** a month until your discounted rate ends, then charge ***{defaultPrice}*** a month until you cancel your subscription. You can cancel at any time from your Settings page.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Keep Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -18514,6 +18573,9 @@
           "Filter based on safety info, such as timed out or engaging in unusual DM activity.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Ban Members",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Unknown",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Hidden",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Streamer mode is active, invite codes are hidden",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Server Discovery",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Student Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Other Join Methods",
@@ -18580,8 +18642,7 @@
           "All Granted Permissions",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "No Mod Permissions",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Granted By",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Risky) Granted By",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permission Granted by These Roles",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Highest Role",
@@ -19669,6 +19730,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Media editing and meme creation, at the speed of Discord.",
         EARLY_ACCESS: "Early Access",
+        REWARD: "Reward",
         REMIXING_POST_CTA: "Send",
         REMIXING_CROP: "Crop media",
         REMIXING_BACKDROP_EDITOR_TITLE: "Adjust & Crop",
@@ -20992,6 +21054,10 @@
           "Servers that you have sent messages in within the last week. These are not invite links. Your parents will not be able to click on them.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servers that your teen has sent messages in within the last week.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servers that you have been active in (sent messages or joined voice chat) within the last week. These are not invite links, your parents will not be able to click on them.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servers that your teen has been active in (sent messages or joined voice chat) within the last week.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Active Servers – {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21130,6 +21196,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro subscribers get a discount on this decoration",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} with Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} with Nitro $[subscribe now](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Ready for a new look?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Well, this is awkward.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21145,6 +21213,9 @@
           "Once purchased, this effect will be added to your collection and can be used at any time",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "This effect is now part of your collection and can be used at any time!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Usually {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "By Clicking ‘{buyButtonLabel}’, you agree to the [Paid Service Terms]({paidServiceTermURL}). Once you complete your purchase, the item will be added to your collection and can be used ay any time. Note that Nitro subscriptions become non-refundable once you’ve purchased an item.",
         COLLECTIBLES_DAYS_LEFT: "{days} days left",
         COLLECTIBLES_LAST_DAY: "Last day to buy",
         COLLECTIBLES_SHOP_VIEW_ALL: "View all",
@@ -21165,9 +21236,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Harness the Elements",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Fire. Wind. Water. Earth. Which will you unleash?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "New Anime items are here!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: New styles",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Check out the latest styles that will definitely make senpai notice you.",
+          "Senpai will definitely notice you now.",
         COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "See emoji details",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22454,6 +22525,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# Minute} other {# Minutes}}",
         CLIPS_SAVE: "Save Clip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Enable clips to capture this stream.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Allow viewers to capture clips",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Enable the creation of clips from your Go Live stream",
@@ -22818,6 +22891,7 @@
           "We take teen safety seriously at Discord. When we detect a possible safety risk in a conversation, we’ll let you know. [Learn more about safety alerts.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Go to settings",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Dismiss",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Thanks for your feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Block",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Close",
         STRANGER_DANGER_MORE_HEADER: "More you can do",
@@ -22861,9 +22935,19 @@
           "This conversation may not be safe.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Take action to protect yourself.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Take action to protect yourself by opening safety tools.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "This conversation may not be safe. Open safety tools to take action.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Block them",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Unblock",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Account blocked",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Account unblocked",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Account reported",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Something went wrong! Please try again later.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "They won’t be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Block",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Block and report",
@@ -22977,6 +23061,8 @@
         POLL_SUBMIT_VOTE: "Vote",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} vote} other {{count} votes}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} Vote} other {{count} Votes}}",
         POLL_ALREADY_VOTED: "Voted",
         POLL_EDIT_VOTE: "Change Vote",
         POLL_REMOVE_VOTE: "Remove Vote",
@@ -22991,9 +23077,15 @@
         POLL_EXPIRED: "Poll closed",
         POLL_SELECT_ONE_ANSWER: "Select one answer",
         POLL_SELECT_MULTIPLE_ANSWERS: "Select one or more answers",
-        POLL_SHOW_VOTES: "Show votes",
-        POLL_HIDE_VOTES: "Hide votes",
+        POLL_SHOW_VOTES: "Show results",
+        POLL_HIDE_VOTES: "Go back to vote",
+        POLL_VOTES_NO_RESULTS_TITLE: "Nothing to see here",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "There are no votes for this answer",
+        POLL_COACHMARK_TITLE: "NEW! Polls are here.",
+        POLL_COACHMARK_SUBTITLE:
+          "Plan events, gather opinions or drop a silly question in the chat.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Votes",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Reveal voters",
@@ -23018,8 +23110,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Add another answer",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Poll will be live for",
         CREATE_POLL_DURATION_LABEL: "Duration",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 hour",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 hours",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 days",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23043,6 +23133,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Image Description (Alt Text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt text:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Select media",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Oops, you forgot something. Please add a question.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Oops, you forgot something. Please add at least one answer.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Don’t leave the answer field hanging! Please add some text.",
         POLL_END_EARLY: "End Poll Now",
         POLL_END_EARLY_CONFIRMATION_TITLE: "End Poll Now?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23073,10 +23169,16 @@
         QUESTS_ACCEPT: "Accept Quest",
         QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
         QUESTS_ACCEPT_TOOLTIP:
-          "Accept the quest and complete the task to unlock the reward",
+          "Accept the Quest and complete the task to unlock the reward",
         QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} to a friend for {minutes} minutes",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Verify your account to claim rewards!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "We have sent a verification email to: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Uh-oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
         QUESTS_REWARD_CODE_HEADER: "Your reward code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
@@ -23098,8 +23200,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsored",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Learn more",
         QUESTS_LEARN_MORE_STACKED: "Learn\n\nmore",
+        QUESTS_LEARN_MORE_LINK: "[Learn more]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accept Quest",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
@@ -23109,10 +23213,10 @@
         QUESTS_TITLE: "{questName} Quest",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser you can go to **User Settings > Gift Inventory** and accept the quest there.",
+          "Quests aren’t available on mobile...yet. Sorry about that! From your desktop Discord app or browser, you can go to **User Settings > Gift Inventory** and accept the Quest there.",
         QUESTS_MOBILE_EMBED_TITLE: "Quests aren’t available on mobile...yet.",
         QUESTS_MOBILE_EMBED_BODY:
-          "From your desktop Discord app or browser you can go to \nUser Settings > Gift Inventory and accept the quest there.",
+          "From your desktop Discord app or browser, you can go to \nUser Settings > Gift Inventory and accept the Quest there.",
         QUESTS_GET_THIS_GAME: "Get this game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
         QUESTS_SHARE_LINK: "Copy share link",
@@ -23133,7 +23237,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, we think you fit some of these groups:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Learn more about Quests on Discord and how to manage your Privacy Settings [here]({privacySettingsUrl}).",
+          "[Learn more]({privacySettingsUrl}) about Quests on Discord and how to manage your Privacy Settings.",
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
@@ -23141,7 +23245,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "Something went wrong here. Check the Gift Inventory for more available Quests!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "There’s an issue tracking your quest progress.",
+          "There’s an issue tracking your Quest progress.",
+        QUESTS_SHARE_QUEST: "Share Quest",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Select {gameTitle} to make progress on your Quest!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "You must select the application, not the whole screen.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Prompt members to chat after this channel has been inactive for a while.",
         PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
@@ -23193,10 +23302,23 @@
           "An activity card showing @{username} listening to {song} by {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "An activity card showing @{username} streaming {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Playing **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} is playing **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} played **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} is playing a new game: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} played a new game: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}w ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}h ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m ago",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
       };
     },
   },

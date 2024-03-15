@@ -917,6 +917,7 @@
         EMBEDDED_ACTIVITIES_VOICE_CONTROLS_BUTTON_A11Y_LABEL: "显示语音控制",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "打开小活动目录",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "离开小活动",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS: "此特性在该操作系统上暂不可用",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "此小活动目前在该操作系统下不可用",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "此小活动",
@@ -1112,6 +1113,9 @@
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "小活动已开始。",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "如果服务器中有超过 25 名成员，则您将不能在该服务器中启用这一小活动",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "外部应用程序",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "您即将启动一个外部应用。想要继续吗？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "小活动结束了。要开启新的小活动吗？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "小活动已开始",
@@ -1119,6 +1123,15 @@
           "您没有权限加入该语音频道。",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "您无法在此频道中参与游玩小活动。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "一只头部是扩音器的鸟",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "注意啦！",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "您即将首次测试 {activityName}。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "该 APP 并非 Discord 出品。请只测试您所信任的开发者的产品。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "了解更多关于私人 APP 的信息。",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook)开始了一个小活动",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4414,11 +4427,8 @@
           "选择要加入或切换至的语音频道",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "启用或禁用热键",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "结果",
-        SHOW_CURRENT_ACTIVITY: "将当前活动显示为个人状态。",
         SHOW_CURRENT_ACTIVITY_DESC:
           "如果您参与了一个公开讲堂，Discord 会自动更新您的状态。",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord 会根据您正在玩的游戏（如果可检测到的话）、正在进行的支持 Rich Presence 的活动或者正在参加的公开讲堂，自动更新您的状态。",
         GAME_DETECTION_SERVICE: "游戏检测服务",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "安装位置",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "添加安装位置",
@@ -5006,7 +5016,7 @@
         LOGOUT: "登出",
         SOUNDS: "声音",
         PREMIUM: "Nitro",
-        BASIC: "基本",
+        BASIC: "Basic",
         SOUND_MESSAGE: "消息",
         SOUND_DEAFEN: "耳机静音",
         SOUND_UNDEAFEN: "取消耳机静音",
@@ -8639,10 +8649,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA: "订阅 Nitro 立省 !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "订阅 Nitro 立省",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "您的 !!{percent, number}!!% 折扣将于购买后 {numMonths, plural, one { 1 个月} other {{numMonths} 个月}}结束。之后，您的价格为 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "您的前**3 月**折扣价格为 **{discountedPrice}**。之后我们将向您收取 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "您接下来 **{numMonths, plural, one {1 个月} other {{numMonths} 个月}}**的订阅价格{numMonths, plural, one {是} other {是}} **{discountedPrice}**。之后，您的订阅价格是 {regularPrice}。",
+          "您接下来 **{numMonths, plural, one {1 个月} other {{numMonths} 个月}}**的订阅价格{numMonths, plural, one {为} other {为}} **{discountedPrice}**。之后，您每月的订阅价格是 {regularPrice}。",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "已应用折扣",
         CHURN_DISCOUNT_DESCRIPTION:
           "在取消之前，享受 **{percent, number}% 的 Nitro 订阅**优惠，为期{numMonths, plural, one {1 个月} other {{numMonths} 个月}}。",
@@ -8753,7 +8765,7 @@
         PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION:
           "加入多达 200 个您喜爱的服务器。",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE: "超级反应",
-        PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2: "无限量尽享超级反应",
+        PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_V2: "尽享无限量超级反应",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE_UNLIMITED:
           "无限量尽享超级反应",
         PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION:
@@ -9994,8 +10006,6 @@
           "我们已经给您发送了一封邮件，请点击邮件中的验证链接以授权本次购买。",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "继续",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "没有收到？",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "重新发送电子邮件",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -10741,15 +10751,58 @@
           "订阅 Nitro 即可获得这枚超酷徽章。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "专为收藏家设计。获取这枚 Nitro 用户独占的徽章吧。",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} 免费 {numFreeBoosts, plural, =1 {助力} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "恭喜您使用 Nitro 满一个月。",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro 奖励",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "只要当前 Nitro 订阅仍处于有效状态，您就可以随时使用这些额外助力。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "兑换您的奖励！",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "兑换",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "已兑换",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "感谢您成为 Nitro 大家庭中的一员。",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "保持 Nitro 订阅，获取助力。取消订阅将会重置进度，助力也将被移除。",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "当您使用 Nitro 满一个月时，即可获得一个助力。",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "在 {days}{days, plural, =1 { 天} other { 天}}内兑换",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "在 {numDays}{numDays, plural, =1 { 天} other { 天}}内兑换",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro 奖励",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "当您使用 Nitro 满一个月时，即可获得一个助力。",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "当您使用 Nitro 满三个月时，即可获得一个助力。",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "只要当前 Nitro 订阅仍处于有效状态，您就可以随时使用这些额外助力。",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "兑换您的奖励！",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "恭喜您使用 Nitro 满一个月。",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "恭喜您使用 Nitro 满三个月。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "感谢您成为 Nitro 大家庭中的一员。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "保持 Nitro 订阅，获取助力。取消订阅将会重置进度，助力也将被移除。",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "已兑换",
+        GUILD_BOOST_NITRO_REWARD_BANNER: "您获得了一个额外助力，干得漂亮。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "您的助力正等着大显身手呢！",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "感谢您成为 Nitro 大家庭中的一员。这是您订阅 Nitro 满一个月所获得的额外助力。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "感谢您成为 Nitro 大家庭中的一员。这是您订阅 Nitro 满三个月所获得的额外助力。",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "为您的 Discord 进行氮气增压",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "在所有服务器上自定义个人资料",
         NITRO_MARKETING_CARDS_UNLIMITED_SUPER_REACTIONS:
-          "畅享每周无限量超级反应",
+          "Unlimited Super Reactions per week",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 个服务器助力、500MB 上传容量，以及更多特权！",
-        NITRO_MARKETING_JUST_THE_BASICS: "这还只是基础版",
+        NITRO_MARKETING_JUST_THE_BASICS: "仅 Basic 就能畅享",
         NITRO_MARKETING_BASIC_PERKS: "Nitro Basic 特权",
         MARKETING_PAGE_CAROUSEL_TITLE: "定制您的专属 Discord",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "选择您的 Nitro",
@@ -10830,6 +10883,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "免费试用（{days, plural, =1 {# 天剩余} other {# 天剩余}}）",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "免费试用",
+        POWERED_BY_NITRO: "由 Nitro 提供动力",
         USER_ACTIVITY_HEADER_PLAYING: "正在玩游戏",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "在 !!{platform}!! 直播",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "正在 !!{platform}!! 上游戏",
@@ -13083,8 +13137,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "该表情符号来自",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "该表情符号来自于此服务器。您可以随时随地使用它。",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "该表情符号来自此服务器。有了 Nitro，您就可以在任何地方使用它。",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "该表情符号来自于您的服务器之一。在聊天框内键入它的名称来使用。",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "该表情符号来自您的某个服务器。有了 Nitro，您就可以在任何地方使用它。",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "想要随时随地使用该表情符号吗？加入对应服务器吧。",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -13099,6 +13157,8 @@
           "想要随时随地使用这个表情符号？那就获取 Nitro 并加入服务器吧。",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "该表情符号来自于一个仅限受邀者或不可加入的服务器。[了解更多](openPremiumSettings)关于自定义表情符号的使用。",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "该自定义表情符号来自一个仅受邀者可以加入的服务器。使用 Nitro，您就可以随心使用任何已加入服务器中的自定义表情符号。",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION: "获得该贴纸之处为",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "该贴纸来自",
         STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
@@ -14683,7 +14743,7 @@
         SEE_DETAIL: "活动详情",
         EVENT_MARK_INTERESTED: "标记为感兴趣",
         EVENT_MARK_NOT_INTERESTED: "标记为不感兴趣",
-        EVENT_DETAILS_A11Y_HINT: "双击以查看活动详情",
+        EVENT_DETAILS_A11Y_HINT: "连点两次以查看活动详情",
         SCHEDULE_EVENT_DESCRIPTION: "安排未来的讲堂活动。",
         GO_TO_CHANNEL: "前往频道",
         STARTING_SOON: "即将开始",
@@ -14860,11 +14920,8 @@
         GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM: "您确定要编辑此活动吗？",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "编辑此活动也将**更新**此系列中的**所有活动**。",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "试试看",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "新功能！定期活动",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY: "您现在可以轻松地设置定期活动。",
-        COPY_RECURRENCE_LINK: "复制活动链接",
-        COPY_SERIES_LINK: "复制活动系列的链接",
+        COPY_RECURRENCE_LINK: "仅复制此活动的链接",
+        COPY_SERIES_LINK: "复制所有活动的链接",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE: "创建活动",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE: "更新活动",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE: "取消活动",
@@ -16050,6 +16107,8 @@
           "如果您恢复 Nitro Classic，我们将继续从您的付款方式中扣除**{price}**，且依旧**按月**扣除，直至您取消订阅。不过别担心，在“用户设置”页面，您可以随时取消订阅。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "如果您恢复 Nitro Classic，我们将继续从您的付款方式中扣除**{price}**，且依旧**按年**扣除，直至您取消订阅。不过别担心，在“用户设置”页面，您可以随时取消订阅。",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "如果您续订 Nitro，我们将每月从您的付款方式中扣除 **{discountPrice}**，直至优惠结束。随后，在您取消订阅前，我们每月将收取 ***{defaultPrice}***。您可以在设置页面随时取消订阅。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "保留 Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "忽略",
@@ -17415,6 +17474,9 @@
           "根据安全信息进行筛选，例如暂时禁言或参与不正常的私信活动。",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "封锁成员",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "不明",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "隐藏",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "直播模式已激活，邀请码已被隐藏",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "发现服务器",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Student Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "其他加入方式",
@@ -17478,8 +17540,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "所有已获得的权限",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "无管理员权限",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "授权给",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "（有风险）授权给",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "管理员",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "这些身份组已被授予权限",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "权限最高的身份组",
@@ -18441,7 +18502,7 @@
         Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2:
           "在商店购买任意（或全部）商品，都能获得超值折扣！",
         Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE:
-          "无限量尽享超级反应",
+          "尽享无限量超级反应",
         Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE:
           "我们为您带来超级反应无限量，让您在聊天中尽情释放。",
         INTERACTION_PREMIUM_UPSELL_CTA: "升级",
@@ -18497,6 +18558,7 @@
         REMIXING_PERKS_CARD_TITLE: "拼图",
         REMIXING_PERKS_CARD_DESCRIPTION: "Discord 速度的媒体拼图和梗图创造。",
         EARLY_ACCESS: "抢先体验",
+        REWARD: "奖励",
         REMIXING_POST_CTA: "发送",
         REMIXING_CROP: "裁剪媒体",
         REMIXING_BACKDROP_EDITOR_TITLE: "调整和裁剪",
@@ -19722,6 +19784,10 @@
           "您上周在这些服务器中发送过消息。这些不是邀请链接，您的家长无法点击它们。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "您的孩子上周在这些服务器中发送过消息。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "您上周活跃过的服务器（发过消息或加入过语音聊天）。这些不是邀请链接，您的家长无法点击它们。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "您的孩子上周活跃过的服务器（发过消息或加入过语音聊天）。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "活跃服务器 — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN: "轻松关联您的家长！",
@@ -19845,6 +19911,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro 订阅用户购买此装饰可享受折扣",
         COLLECTIBLES_NON_PREMIUM_PRICE: "在 Nitro 中的价格：{price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "Nitro 订阅价为 {price}$[立即订阅](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "准备好变身新形象了吗？",
         COLLECTIBLES_SHOP_ERROR_HEADING: "呃，这就尴尬了。",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -19860,6 +19928,9 @@
           "购买后，该特效将立刻进入您的收藏，可以随时使用",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "该特效已加入您的收藏，可以随时使用！",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "正价 {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "点击“{buyButtonLabel}”即表示您同意[付费服务条款]({paidServiceTermURL})。一旦您完成购买，该物品将被添加到您的收藏中，并可随时使用。请注意，一旦您购买了物品，Nitro 订阅将无法退款。",
         COLLECTIBLES_DAYS_LEFT: "最后 {days} 天",
         COLLECTIBLES_LAST_DAY: "最后一天可供购买",
         COLLECTIBLES_SHOP_VIEW_ALL: "查看所有",
@@ -19879,9 +19950,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "驾驭元素",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "火。风。水。土。你将释放哪种元素？",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "全新动态装饰已上架！",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "动漫二次元：新风格",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "想让暗恋的人注意到你吗？来看看最新上架的物品吧！",
+          "暗恋的前辈现在一定会注意到你。",
         COLLECTIBLES_NEW_BADGE: "新内容",
         INVENTORY_EMOJI_DETAILS_V2: "查看表情符号详情",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -21081,6 +21152,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {# 秒} other {# 秒}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# 分钟} other {# 分钟}}",
         CLIPS_SAVE: "保存剪辑片段",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "启用剪辑功能以录制此次直播。",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "允许观众捕捉剪辑片段",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "允许观众使用您的 Go Live 直播创建剪辑片段",
@@ -21417,6 +21490,7 @@
           "我们非常重视青少年在 Discord 上的安全。当在会话中检测到可能的安全风险时，我们会通知您。[了解关于安全警报的详情]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "前往设置",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "忽略",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "感谢您的反馈！",
         STRANGER_DANGER_BANNER_BLOCK: "屏蔽",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "关闭",
         STRANGER_DANGER_MORE_HEADER: "您还能做什么",
@@ -21454,9 +21528,19 @@
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL: "联系 Crisis Text Line",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP: "此次会话可能不安全。",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP: "采取行动来保护自己。",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "使用安全工具，采取行动保护自己。",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "此次会话可能并不安全。请打开安全工具进行处理。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "将其屏蔽",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "解除屏蔽",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "账号已屏蔽",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "账号已解除屏蔽",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "账号已举报",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "哪里出错了！请稍后重试。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "他们将无法向您发送任何消息。如果您认为他们的行为可能会伤害他人，请向 Discord 提交举报。",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "屏蔽",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "屏蔽并举报",
@@ -21565,6 +21649,8 @@
         POLL_SUBMIT_VOTE: "投票",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} 票} other {{count} 票}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} 票} other {{count} 票}}",
         POLL_ALREADY_VOTED: "已投票",
         POLL_EDIT_VOTE: "更改投票",
         POLL_REMOVE_VOTE: "移除投票",
@@ -21579,9 +21665,15 @@
         POLL_EXPIRED: "投票已关闭",
         POLL_SELECT_ONE_ANSWER: "请选择一个答案",
         POLL_SELECT_MULTIPLE_ANSWERS: "选择一个或多个答案",
-        POLL_SHOW_VOTES: "显示投票",
-        POLL_HIDE_VOTES: "隐藏投票",
+        POLL_SHOW_VOTES: "显示结果",
+        POLL_HIDE_VOTES: "返回投票",
+        POLL_VOTES_NO_RESULTS_TITLE: "空空如也",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "该答案无人投票",
+        POLL_COACHMARK_TITLE: "新特性！投票功能已上线。",
+        POLL_COACHMARK_SUBTITLE:
+          "策划活动，收集意见，或者聊天时丢出一个愚蠢的问题。",
         POLL_NOT_INTERACTIVE: "查看原始消息以进行互动",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "空空如也",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "该答案无人投票。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "票数",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "显示投票人",
@@ -21606,8 +21698,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "添加另一个答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票将持续",
         CREATE_POLL_DURATION_LABEL: "持续时间",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 小时",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 小时",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票将持续 {duration}",
@@ -21630,6 +21720,11 @@
         CREATE_POLL_ALT_TEXT_LABEL: "图片描述（Alt 文本）",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt 文本：",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "选择媒体",
+        CREATE_POLL_QUESTION_REQUIRED: "哎呀，您忘了点什么。请添加一个问题。",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "哎呀，您忘了点什么。请至少添加一个答案。",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "不要空置答案栏！请添加一些文字。",
         POLL_END_EARLY: "立即结束投票",
         POLL_END_EARLY_CONFIRMATION_TITLE: "现在就结束投票吗？",
         POLL_END_EARLY_CONFIRMATION_TEXT: "将立即结束投票并显示结果。",
@@ -21657,9 +21752,13 @@
         QUESTS_CLAIM_YOUR_REWARD: "领取您的奖励",
         QUESTS_ACCEPT: "接受任务",
         QUESTS_COMPLETE_TOOLTIP: "点击领取以获取您的奖励代码！",
-        QUESTS_ACCEPT_TOOLTIP: "接受任务且完成后，可以解锁奖励",
+        QUESTS_ACCEPT_TOOLTIP: "接受并完成任务后，可以解锁奖励",
         QUESTS_IN_PROGRESS_TOOLTIP: "完成任务以解锁奖励",
         QUESTS_STREAM_TASK: "向一名好友直播{gameTitle}，持续 {minutes} 分钟",
+        QUESTS_REWARD_VERIFICATION_TITLE: "验证您的账号以领取奖励！",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "我们已经向 [{emailAddress}]({emailAddressLink}) 发送了一封验证电子邮件",
+        QUESTS_REWARD_VERIFICATION_ERROR: "哎呀！我们未能向您发送验证邮件。",
         QUEST_REWARD: "赢得 {reward}",
         QUESTS_REWARD_CODE_HEADER: "您的奖励代码",
         QUESTS_REWARD_CODE_CONGRATS: "恭喜！",
@@ -21679,8 +21778,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "已赞助",
+        QUESTS_PROMOTED: "推广",
         QUESTS_LEARN_MORE_V2: "了解更多",
         QUESTS_LEARN_MORE_STACKED: "了解\n\n更多",
+        QUESTS_LEARN_MORE_LINK: "[了解更多]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "接受任务",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "向一名好友直播{gameTitle}，持续 {streamingDurationRequirement, number} 分钟，赢取 {questReward}。",
@@ -21691,7 +21792,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "啊哦！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "十分抱歉，我们尚未在移动端开放任务！您可以通过使用桌面版 Discord APP 或浏览器，前往**用户设置 > 礼物库**处接受任务。",
-        QUESTS_MOBILE_EMBED_TITLE: "任务目前在手机端……暂不可用。",
+        QUESTS_MOBILE_EMBED_TITLE: "任务目前在移动端……暂不可用。",
         QUESTS_MOBILE_EMBED_BODY:
           "您可以通过使用桌面版 Discord APP 或浏览器，前往\n用户设置 > 礼物库处接受任务。",
         QUESTS_GET_THIS_GAME: "购买这款游戏",
@@ -21713,7 +21814,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} 正在尝试接触特定的 Discord 用户。根据您告诉我们的情况或我们收集到的其他信息，我们认为您属于其中的部分群组：",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "在[此处]({privacySettingsUrl})进一步了解 Discord 上的任务，以及如何管理您的隐私设置。",
+          "[进一步了解]({privacySettingsUrl}) Discord 上的任务，以及如何管理您的隐私设置。",
         QUESTS_DISCLOSURE_LOCATION: "位置",
         QUESTS_DISCLOSURE_AGE: "年龄",
         QUESTS_DISCLOSURE_ACTIVITY: "动态：游戏相关",
@@ -21721,7 +21822,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "这里出了些问题。检查礼物库以获取更多可用的任务！",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "在跟踪任务进度方面出现了问题。",
+          "在任务进度跟踪方面出现了问题。",
+        QUESTS_SHARE_QUEST: "分享任务",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "选择 {gameTitle}，推进任务进度！",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "您必须选择应用程序，而非整个屏幕。",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "在此频道不活跃一段时间后，提示成员交流聊天。",
         PROMPT_CAMERA_LOADING_TITLE: "您瞅啥？",
@@ -21772,10 +21878,23 @@
           "显示 @{username}正在收听 {artist} 的《{song}》的动态卡片",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "显示 @{username} 直播 {activity} 的动态卡片",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "正在玩 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "玩了 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} 正在玩 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} 玩了 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName}正在玩一款新游戏：**{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} 玩了一款新游戏：**{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count} 周前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} 天前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 小时前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分钟前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "首次直播",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "动态",
       };
     },
   },

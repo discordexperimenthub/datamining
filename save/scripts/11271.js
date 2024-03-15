@@ -917,6 +917,8 @@
         EMBEDDED_ACTIVITIES_VOICE_CONTROLS_BUTTON_A11Y_LABEL: "顯示語音控制",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "打開活動架",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "離開活動",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "此功能目前在此作業系統上無法使用",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "目前在此作業系統上無法使用此活動",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "此活動",
@@ -1111,6 +1113,9 @@
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "活動已開始。",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "無法在超過 25 名成員的伺服器推行此活動",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "外部應用程式",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "您即將啟動一個外部應用程式。確定要繼續嗎？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "活動已結束。要開始新的活動嗎？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "活動已開始",
@@ -1118,6 +1123,15 @@
           "您沒有加入此語音頻道的權限。",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "您無法在此頻道中參與活動。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "一隻頭部是擴音器的鳥",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "注意！",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "您即將首次測試 {activityName}。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "這款應用程式並非由 Discord 製作。請只對您信任的開發者推出的應用程式進行測試。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "瞭解更多有關私人應用程式的資訊。",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) 開始了一項活動",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4416,11 +4430,8 @@
           "選擇要加入或切換至的語音頻道",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "啟用或停用快速鍵",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "結果",
-        SHOW_CURRENT_ACTIVITY: "顯示目前的動態作為狀態訊息。",
         SHOW_CURRENT_ACTIVITY_DESC:
           "如果您正在參加公開舞台，Discord 將自動更新您的狀態。",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord 將根據您正在玩的遊戲 (如果可以偵測到)、有支援 Rich Presence 的動態，或者如果您正在參加的公開舞台，自動更新您的狀態。",
         GAME_DETECTION_SERVICE: "遊戲偵測服務",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "安裝位置",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "新增安裝位置",
@@ -8643,10 +8654,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA: "訂閱 Nitro 可享 !!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "訂閱 Nitro 可享折扣",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "您的 !!{percent, number}!!% 折扣將於購買後的 {numMonths, plural, one {1 個月} other {{numMonths} 個月}}結束。之後每個月收費為 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "前 **3 個月**優惠價為 **{discountedPrice}**，優惠結束後每個月收費為 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "您接下來 **{numMonths, plural, one {1 個月} other {{numMonths} 個月}}**的費用{numMonths, plural, one {為} other {為}} **{discountedPrice}**。優惠結束後每個月收費為 {regularPrice}。",
+          "您接下來的 **{numMonths, plural, one {1 個月} other {{numMonths} 個月}}**{numMonths, plural, one {是} other {是}}**{discountedPrice}**。優惠結束後，每個月收費為 {regularPrice}。",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "已折扣",
         CHURN_DISCOUNT_DESCRIPTION:
           "在取消訂閱前，您可以享有為期 {numMonths, plural, one {1 個月} other {{numMonths} 個月}}的 **Nitro 訂閱 {percent, number}% 折扣**。",
@@ -9997,8 +10010,6 @@
           "我們剛傳送了一封電子郵件給您。請點選電子郵件中的驗證連結，授權此次購買。",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "繼續",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "沒有收到電子郵件嗎？",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "重新傳送電子郵件",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -10745,7 +10756,49 @@
           "成為 Nitro 訂閱者，即可獲得這個酷徽章。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "收藏家們，快來收集這個 Nitro 專屬的獨家徽章吧。",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} 次免費{numFreeBoosts, plural, =1 {加成} other {加成}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "恭喜您完成第一個月的 Nitro 訂閱。",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro 獎勵",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "只要您目前的 Nitro 訂閱保持活躍，就可以使用額外加成。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "換取您的獎勵！",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "換取",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "已換取",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "感謝您成為 Nitro 訂閱成員。",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "只要持續活躍使用您的 Nitro 訂閱，即可保有加成。取消訂閱會重置進度並移除加成。",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "當您完成第一個月的 Nitro 訂閱時，可獲得一次「加成」。",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "請在 {days} {days, plural, =1 {天} other {天}}內換取",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "請在 {numDays} {numDays, plural, =1 {天} other {天}}內換取",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro 獎勵",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "當您完成第一個月的 Nitro 訂閱時，可獲得一次「加成」。",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "當您完成 3 個月的 Nitro 時，可獲得一次「加成」。",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "只要您目前的 Nitro 訂閱保持活躍，就可以使用額外加成。",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "換取您的獎勵！",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "恭喜您完成第一個月的 Nitro 訂閱。",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "恭喜您完成 3 個月的 Nitro 訂閱。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "感謝您成為 Nitro 訂閱成員。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "只要持續活躍使用您的 Nitro 訂閱，即可保有加成。取消訂閱會重置進度並移除加成。",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "已換取",
+        GUILD_BOOST_NITRO_REWARD_BANNER: "您獲得了額外的加成，做得好。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "您的加成正在等著您！",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "感謝您成為 Nitro 訂閱成員。這是您完成 Nitro 訂閱的第一個月所獲得的額外加成。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "感謝您成為 Nitro 訂閱成員。這是您完成 Nitro 訂閱 3 個月所獲得的額外加成。",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD: "充實您的 Discord 體驗",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "在所有伺服器中自訂個人資料",
         NITRO_MARKETING_CARDS_UNLIMITED_SUPER_REACTIONS: "每週無限量的超級反應",
@@ -10832,6 +10885,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "免費試用 ({days, plural, =1 {剩下 # 天} other {剩下 # 天}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "免費試用",
+        POWERED_BY_NITRO: "由 Nitro 提供",
         USER_ACTIVITY_HEADER_PLAYING: "正在玩遊戲",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "在 !!{platform}!! 實況",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "正在 !!{platform}!! 上遊玩",
@@ -13085,8 +13139,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "這個表情符號來自",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "這個表情符號屬於這台伺服器，可以在任何地方使用。",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "這個表情符號來自這個伺服器。有了 Nitro，您就可以在任何地方使用。",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "這個表情符號屬於您其中一台伺服器。在聊天室中打出名稱即可使用。",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "這個表情符號來自您的一個伺服器。有了 Nitro，您就可以在任何地方使用。",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "想要在任何地方使用這個表情符號嗎？那就加入伺服器吧。",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -13101,6 +13159,8 @@
           "想要在任何地方使用這個表情符號嗎？那就取得 Nitro 並加入伺服器吧。",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "這個表情符號來自邀請制或尚未啟用的伺服器。[瞭解更多](openPremiumSettings)關於自訂表情符號的使用事項。",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "這個自訂的表情符號來自一個邀請制伺服器。只要使用 Nitro，就能在任何已加入的伺服器使用自訂表情符號。",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION: "此貼圖取自",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "此貼圖來自",
         STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
@@ -14869,12 +14929,8 @@
         GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM: "您確定要編輯此活動嗎？",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "編輯此活動之後，此系列中的**所有活動也會一併更新**。",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "快來試試",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "新功能！活動自動重複",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "現在起，您可以輕鬆將活動設定為自動重複。",
-        COPY_RECURRENCE_LINK: "複製此活動連結",
-        COPY_SERIES_LINK: "複製活動系列連結",
+        COPY_RECURRENCE_LINK: "僅複製此活動的連結",
+        COPY_SERIES_LINK: "複製所有活動的連結",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE: "建立活動",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE: "更新活動",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_DELETE: "取消活動",
@@ -16056,6 +16112,8 @@
           "如果您恢復訂閱 Nitro Classic，我們將繼續以您的付款方式收取 **{price}** 的費用，並持續 **每月** 向您收費，直到您選擇取消訂閱為止。您可以隨時在「設定」頁面取消訂閱。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "如果您恢復訂閱 Nitro Classic，我們將繼續以您的付款方式收取 **{price}** 的費用，並持續 **每年** 向您收費，直到您選擇取消訂閱為止。您可以隨時在「設定」頁面取消訂閱。",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "如果您恢復訂閱 Nitro，我們將繼續使用您的付款方式，每月收費 **{discountPrice}**，直到您的折扣費率期間結束，然後每月會收取 ***{defaultPrice}*** 的費用，直到您取消訂閱。您可以隨時在「設定」頁面取消訂閱。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "保留 Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "關閉",
@@ -17425,6 +17483,9 @@
           "根據安全資訊篩選，例如禁言或涉及異常私訊活動。",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "對成員停權",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "不明",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "已隱藏",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "「直播模式」已啟用，邀請碼已隱藏",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "探索伺服器",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "學生中心",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "其他加入方法",
@@ -17487,8 +17548,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "所有已授予的權限",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "無版主權限",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "授予者：",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(高風險) 授予者：",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "版主",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "這些身分組授予的權限",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "最高身分",
@@ -18516,6 +18576,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "用 Discord 的飛快速度，編輯媒體並創作迷因。",
         EARLY_ACCESS: "先睹為快",
+        REWARD: "獎勵",
         REMIXING_POST_CTA: "傳送",
         REMIXING_CROP: "裁切媒體",
         REMIXING_BACKDROP_EDITOR_TITLE: "調整與裁切",
@@ -19743,6 +19804,10 @@
           "您上週傳送過訊息的伺服器。這並非邀請連結，因此您的家長無法點選。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "家中青少年上週傳送過訊息的伺服器。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "你上週積極參與的伺服器 (曾傳送訊息或加入語音聊天)。這不是邀請連結，所以你的家長無法點選。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "家中青少年上週積極參與的伺服器 (曾傳送訊息或加入語音聊天)。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "活躍的伺服器 — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN: "輕鬆與家長連接！",
@@ -19871,6 +19936,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro 訂閱者購買此裝飾可享折扣",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro 訂閱為 {price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "只要 {price} 即可享有 Nitro。$[立即訂閱](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "準備嘗試新造型了嗎？",
         COLLECTIBLES_SHOP_ERROR_HEADING: "哇，這下有點小尷尬。",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -19886,6 +19953,9 @@
           "購買後，此效果將新增至您的收藏且可隨時使用",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "此效果目前已成為您收藏的一部分，可以隨時使用！",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "通常為 {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "按下「{buyButtonLabel}」即表示您同意 [付費服務條款]({paidServiceTermURL})。在您完成購買後，該物品將會新增至您的收藏中，可隨時使用。請注意，只要購買了物品，Nitro 訂閱就無法退款。",
         COLLECTIBLES_DAYS_LEFT: "剩下 {days} 天",
         COLLECTIBLES_LAST_DAY: "剩下一天可以購買",
         COLLECTIBLES_SHOP_VIEW_ALL: "檢視全部",
@@ -19905,9 +19975,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "駕馭元素",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "火、風、水、土，您要釋放哪種力量？",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "全新動畫道具登場！",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "動畫：新風格",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "查看絕對會吸引學長目光的最新風格。",
+          "現在，學長一定會注意到你。",
         COLLECTIBLES_NEW_BADGE: "新內容",
         INVENTORY_EMOJI_DETAILS_V2: "查看表情符號詳細資料",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -21113,6 +21183,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {# 秒} other {# 秒}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# 分鐘} other {# 分鐘}}",
         CLIPS_SAVE: "儲存剪輯影片",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "啟用剪輯影片功能來擷取此直播的內容。",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "允許觀眾擷取剪輯影片",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "從「Go Live」直播啟用建立剪輯影片功能",
@@ -21453,6 +21525,7 @@
           "Discord 非常重視青少年的安全。只要我們在對話中偵測到可能的安全風險，我們就會通知您。[進一步瞭解安全警報。]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "前往設定",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "關閉",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "感謝您的意見反應！",
         STRANGER_DANGER_BANNER_BLOCK: "封鎖",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "關閉",
         STRANGER_DANGER_MORE_HEADER: "更多您可以採取的行動",
@@ -21490,9 +21563,19 @@
         INAPPROPRIATE_CONVERSATION_ACTION_CONTACT_CTL: "聯絡危機簡訊專線",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP: "這段對話可能不安全。",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP: "採取行動來保護自己。",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "透過開啟安全工具來保護自己。",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "此對話可能不安全。請開啟「安全工具」以採取行動來對應。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "封鎖對方",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "解除封鎖",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "帳號已封鎖",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "帳號已解除封鎖",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "帳號已遭檢舉",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "出問題了！請稍後再試。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "他們無法再向您傳送訊息。如果您認為他們的行為可能傷害他人，請向 Discord 檢舉。",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "封鎖",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "封鎖並檢舉",
@@ -21601,6 +21684,8 @@
         POLL_SUBMIT_VOTE: "投票",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} 票} other {{count} 票}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} 票} other {{count} 票}}",
         POLL_ALREADY_VOTED: "已投票",
         POLL_EDIT_VOTE: "變更投票",
         POLL_REMOVE_VOTE: "移除投票",
@@ -21615,9 +21700,14 @@
         POLL_EXPIRED: "投票已結束",
         POLL_SELECT_ONE_ANSWER: "選擇一個答案",
         POLL_SELECT_MULTIPLE_ANSWERS: "選擇一個或多個答案",
-        POLL_SHOW_VOTES: "顯示投票數",
-        POLL_HIDE_VOTES: "隱藏投票數",
+        POLL_SHOW_VOTES: "顯示結果",
+        POLL_HIDE_VOTES: "回到投票",
+        POLL_VOTES_NO_RESULTS_TITLE: "此處沒有內容",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "此回答未獲任何票數",
+        POLL_COACHMARK_TITLE: "新功能！投票功能已推出。",
+        POLL_COACHMARK_SUBTITLE: "規劃活動、收集意見，或在聊天中直接提問。",
         POLL_NOT_INTERACTIVE: "查看原始訊息以進行互動",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "此處沒有內容",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "此答案未獲任何投票。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "投票數",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "顯示投票者",
@@ -21642,8 +21732,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "新增另一個答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票持續時間：",
         CREATE_POLL_DURATION_LABEL: "期間",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 小時",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 小時",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票持續時間：{duration}",
@@ -21666,6 +21754,11 @@
         CREATE_POLL_ALT_TEXT_LABEL: "圖片簡介 (替代文字)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "替代文字：",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "選擇媒體",
+        CREATE_POLL_QUESTION_REQUIRED: "哎呀，您忘了一件事。請新增一個問題。",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "哎呀，您忘了一件事。請新增至少一個回答。",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "請不要讓答案欄位空白！請加入一些文字。",
         POLL_END_EARLY: "立即結束投票",
         POLL_END_EARLY_CONFIRMATION_TITLE: "要立即結束投票嗎？",
         POLL_END_EARLY_CONFIRMATION_TEXT: "這麼做會立刻結束投票並顯示結果。",
@@ -21693,9 +21786,14 @@
         QUESTS_CLAIM_YOUR_REWARD: "領取您的獎勵",
         QUESTS_ACCEPT: "接受任務",
         QUESTS_COMPLETE_TOOLTIP: "點擊領取以獲得您的獎勵代碼！",
-        QUESTS_ACCEPT_TOOLTIP: "接受任務並完成來解鎖獎勵",
+        QUESTS_ACCEPT_TOOLTIP: "接受並完成任務，即可解鎖獎勵",
         QUESTS_IN_PROGRESS_TOOLTIP: "完成任務以解鎖獎勵",
         QUESTS_STREAM_TASK: "將 {gameTitle} 直播給好友，持續 {minutes} 分鐘",
+        QUESTS_REWARD_VERIFICATION_TITLE: "認證您的帳號，即可領取獎勵！",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "我們已經寄出一封驗證電子郵件至：[{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "糟糕！我們無法傳送驗證電子郵件給您。",
         QUEST_REWARD: "獲得 {reward}",
         QUESTS_REWARD_CODE_HEADER: "您的獎勵兌換碼",
         QUESTS_REWARD_CODE_CONGRATS: "恭喜！",
@@ -21715,8 +21813,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "已贊助",
+        QUESTS_PROMOTED: "廣告",
         QUESTS_LEARN_MORE_V2: "了解更多",
         QUESTS_LEARN_MORE_STACKED: "瞭解\n\n更多",
+        QUESTS_LEARN_MORE_LINK: "[瞭解更多]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "接受任務",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "持續向好友直播「{gameTitle}」{streamingDurationRequirement, number}分鐘，並贏得「{questReward}」。",
@@ -21726,10 +21826,10 @@
         QUESTS_TITLE: "「{questName}」任務",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "哎呀！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "手機目前還沒辦法接受任務，非常抱歉！您可以透過桌面版 Discord 應用程式或瀏覽器前往**「使用者設定」>「禮物庫存」**執行該操作。",
+          "手機版目前還無法進行任務……暫時如此，對此我們深感抱歉！您可以透過桌面版的 Discord 應用程式或瀏覽器，前往**「使用者設定」>「禮物庫存」**，並在那裡接受任務。",
         QUESTS_MOBILE_EMBED_TITLE: "手機目前還沒辦法接受任務。",
         QUESTS_MOBILE_EMBED_BODY:
-          "您可以透過桌面版 Discord 應用程式或瀏覽器前往\n「使用者設定」>「禮物庫存」執行該操作。",
+          "您可以透過桌面版 Discord 應用程式或瀏覽器前往\n「使用者設定」>「禮物庫存」，並在那裡接受任務。",
         QUESTS_GET_THIS_GAME: "取得這款遊戲",
         QUESTS_DISCLOSURE_LABEL: "為什麼我會看到這個？",
         QUESTS_SHARE_LINK: "複製分享連結",
@@ -21750,14 +21850,20 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} 正在嘗試接觸特定類型的 Discord 使用者。根據您提供給的資訊或我們收集到的其他資訊，我們認為這些群組應該很適合您：",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "請在[這裡]({privacySettingsUrl})進一步瞭解 Discord 上的任務，以及如何管理您的「隱私設定」。",
+          "[進一步瞭解]({privacySettingsUrl}) Discord 上的任務，以及如何管理您的「隱私設定」。",
         QUESTS_DISCLOSURE_LOCATION: "位置",
         QUESTS_DISCLOSURE_AGE: "年齡",
         QUESTS_DISCLOSURE_ACTIVITY: "活動：相關遊戲",
         QUESTS_EMBED_INVALID_HEADING: "這原本是一項任務，但是...",
         QUESTS_EMBED_INVALID_BODY:
           "出了一點問題。請查看「禮物庫存」中是否有更多可進行的任務！",
-        QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE: "追蹤您的任務進度時發生問題。",
+        QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
+          "追蹤您的「任務」進度時發生問題。",
+        QUESTS_SHARE_QUEST: "分享任務",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "選擇 {gameTitle}，以在您的「任務」中取得進展！",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "您必須選擇申請，而非整個畫面。",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "此頻道不活躍一段時間後，提醒成員開始聊天。",
         PROMPT_CAMERA_LOADING_TITLE: "您在看什麼？",
@@ -21808,10 +21914,23 @@
           "顯示 @{username} 正在聆聽 {artist} 的 {song} 的活動卡片",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "顯示 @{username} 正在直播 {activity} 的活動卡片",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "正在玩 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "已玩過 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} 正在玩 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} 已玩過 **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} 正在玩一款新遊戲：**{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} 已玩過一款新遊戲：**{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count} 星期前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} 天以前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 小時以前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分鐘以前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "第一次",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "動態",
       };
     },
   },

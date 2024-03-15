@@ -4912,12 +4912,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Hotkey aktivieren oder deaktivieren",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Ergebnisse",
-        SHOW_CURRENT_ACTIVITY:
-          "Aktuelle Aktivit\xe4t als Statusmeldung anzeigen.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord aktualisiert automatisch deinen Status, wenn du an einer Stage teilnimmst.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord aktualisiert automatisch deinen Status, basierend auf dem derzeit von dir gespielten Spiel (falls erkennbar), einer Aktivit\xe4t, die Rich Presence unterst\xfctzt oder wenn du an einer Stage teilnimmst.",
         GAME_DETECTION_SERVICE: "Spielerkennungsdienst",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Installationsverzeichnisse",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -11058,8 +11054,6 @@
           "Wir haben dir eine E-Mail geschickt. Klick auf den Verifizierungslink in der E-Mail, um den Kauf abzuschlie\xdfen.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Weiter",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Du hast nichts erhalten?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "E-Mail erneut senden",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -16542,10 +16536,6 @@
           "Bist du sicher, dass du das Event bearbeiten m\xf6chtest?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Durch die Bearbeitung dieses Events werden auch **alle Events** dieser Reihe aktualisiert.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Probiere es aus",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NEU! Wiederkehrende Events",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Du kannst jetzt ganz einfach Events wiederholen.",
         COPY_RECURRENCE_LINK: "Link nur f\xfcr dieses Event kopieren",
         COPY_SERIES_LINK: "Link f\xfcr alle Events kopieren",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
@@ -19499,8 +19489,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Keine Mod-Berechtigungen",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Gew\xe4hrt von",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskant) Gew\xe4hrt von",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Berechtigung durch diese Rollen gew\xe4hrt",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "H\xf6chste Rolle",
@@ -23835,6 +23824,8 @@
           "Hier bei Discord nehmen wir die Sicherheit von Teenagern sehr ernst. Wenn wir ein m\xf6gliches Sicherheitsrisiko in einer Unterhaltung feststellen, werden wir dich informieren. [Erfahre mehr \xfcber Sicherheitshinweise.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Zu den Einstellungen",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Verwerfen",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Danke f\xfcr das Feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blockieren",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Schlie\xdfen",
         STRANGER_DANGER_MORE_HEADER: "Was du noch tun kannst",
@@ -24070,8 +24061,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Die Umfrage wird live sein f\xfcr",
         CREATE_POLL_DURATION_LABEL: "Dauer",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1\xa0Stunde",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24\xa0Stunden",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3\xa0Tage",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0Woche",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24275,6 +24264,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "Vor {count} Minute(n)",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Vor {count}\xa0Sek.",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Erstes Mal",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe4t",
       };
     },
   },

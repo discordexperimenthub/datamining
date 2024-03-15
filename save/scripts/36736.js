@@ -4939,12 +4939,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Habilitar o deshabilitar el atajo de teclado",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultados",
-        SHOW_CURRENT_ACTIVITY:
-          "Mostrar la actividad actual como mensaje de estado.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Si est\xe1s en un escenario p\xfablico, Discord actualizar\xe1 autom\xe1ticamente tu estado.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord actualizar\xe1 autom\xe1ticamente tu estado seg\xfan el juego al que est\xe9s jugando (si puede detectarlo), si realizas una actividad compatible con Rich Presence o si est\xe1s en un escenario p\xfablico.",
         GAME_DETECTION_SERVICE: "Servicio de detecci\xf3n de juegos",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Ubicaciones de instalaci\xf3n",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -11093,8 +11089,6 @@
           "Acabamos de enviarte un correo electr\xf3nico. Haz clic en el enlace de verificaci\xf3n que hay en el correo para autorizar la compra.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continuar",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "\xbfNo te ha llegado nada?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Reenviar correo electr\xf3nico",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -16573,10 +16567,6 @@
           "\xbfSeguro que quieres editar este evento?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Al editar este evento, tambi\xe9n **se actualizar\xe1n todos los eventos** de esta serie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Pru\xe9balo",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "\xa1NUEVO! Repetir eventos",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Ya puedes repetir los eventos con facilidad.",
         COPY_RECURRENCE_LINK: "Copiar enlace solo para este evento",
         COPY_SERIES_LINK: "Copiar enlace para todos los eventos",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
@@ -19554,8 +19544,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "No hay permisos de moderaci\xf3n",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Concedido por",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Arriesgado) Concedido por",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderador",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permiso concedido por estos roles",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Rol m\xe1s alto",
@@ -23948,6 +23937,8 @@
           "Nos tomamos muy en serio la seguridad de los adolescentes en Discord. Cuando detectemos un posible riesgo de seguridad en una conversaci\xf3n, te avisaremos. [M\xe1s informaci\xf3n sobre las alertas de seguridad.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Ir a Ajustes",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Rechazar",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "\xa1Gracias por tus comentarios!",
         STRANGER_DANGER_BANNER_BLOCK: "Bloquear",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Cerrar",
         STRANGER_DANGER_MORE_HEADER: "Qu\xe9 m\xe1s puedes hacer",
@@ -24181,8 +24172,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "La encuesta estar\xe1 activa durante",
         CREATE_POLL_DURATION_LABEL: "Duraci\xf3n",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1\xa0hora",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 horas",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 d\xedas",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 semana",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24391,6 +24380,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "hace {count} min",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Hace {count} segundos",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Por primera vez",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Actividad",
       };
     },
   },

@@ -1027,6 +1027,8 @@
           "Показать голосовое управление",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Открыть полку активностей",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Покинуть активность",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Для этой ОС функция сейчас недоступна",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Для этой ОС выбранная активность сейчас недоступна",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "эта активность",
@@ -1254,6 +1256,9 @@
           "Активность началась.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Вы не можете запустить эту активность на сервере с более чем 25 участниками",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Стороннее приложение",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Вы собираетесь запустить стороннее приложение. Продолжить?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Активность завершилась. Начать новую?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Активность началась",
@@ -1261,6 +1266,16 @@
           "У вас недостаточно прав для подключения к этому голосовому каналу.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Вы не можете присоединиться к активностям на этом канале.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Птица с головой в виде мегафона",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP:
+          "Внимание, внимание!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Вы собираетесь впервые протестировать {activityName}.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Это приложение не создано Discord. Тестируйте приложения только тех разработчиков, которым доверяете.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Подробнее о частных приложениях.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "Пользователь $[](userHook) начал активность",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4840,11 +4855,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Включить или отключить горячие клавиши",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Результаты",
-        SHOW_CURRENT_ACTIVITY: "Отображать текущую активность в статусе.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "При посещении публичной трибуны ваш статус в Discord автоматически обновится.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord автоматически обновляет ваш статус, когда вы играете в игру (если игру возможно определить), выполняете действия, которые поддерживают использование Rich Presence, или посещаете публичную трибуну.",
         GAME_DETECTION_SERVICE: "Служба обнаружения игр",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Места для установки",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -9441,10 +9453,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "Скидка !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "-!!{percent, number}!!% на подписку Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Скидка на Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Ваша скидка в\xa0!!{percent, number}!!% перестанет действовать спустя {numMonths, plural, one {{numMonths}\xa0месяц} few {{numMonths}\xa0месяца} other {{numMonths}\xa0месяцев}} после покупки. После этого цена составит {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Первые **3\xa0месяца** обойдутся вам всего в **{discountedPrice}**. После этого цена составит {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Your next **{numMonths, plural, one {month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that you'll be charged {regularPrice}/month.",
+          "В течение **{numMonths, plural, one {следующего месяца} other {следующих {numMonths}\xa0месяцев}}** ваша подписка будет стоить {numMonths, plural, one {is} other {are}} **{discountedPrice}**. После этого цена составит {regularPrice} в месяц.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "скидка активирована",
         CHURN_DISCOUNT_DESCRIPTION:
           "Если вы решите не отменять подписку на Nitro, мы подарим вам скидку на неё в **{percent, number}%** на {numMonths, plural, one {1 месяц} few {{numMonths} месяца} other {{numMonths} месяцев}}.",
@@ -10890,8 +10904,6 @@
           "Мы отправили вам электронное письмо со ссылкой для подтверждения покупки. Перейдите по ней, чтобы продолжить.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Продолжить",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Вы ничего не получили?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Отправить письмо ещё раз",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11730,7 +11742,50 @@
           "Получите этот прикольный значок за то, что у вас подписка Discord Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Для коллекционеров. Получите эксклюзивный значок подписчика Nitro.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {бесплатный буст} few {бесплатных буста} other {бесплатных бустов}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Поздравляем с использованием Nitro в течение месяца!",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Награда Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Буст можно будет использовать, пока действует ваша текущая подписка Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "Получите награду!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Активировать",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Активирован",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Спасибо, что пользуетесь Nitro!",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Буст действует только во время подписки на Nitro. При отмене подписки прогресс сбрасывается, а буст удаляется.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Получите буст за использование Nitro в течение месяца.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Активируется через {days} {days, plural, =1 {день} few {дня} other {дней}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Активируется через {numDays} {numDays, plural, =1 {день} few {дня} other {дней}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Награда Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Получите буст за использование Nitro в течение месяца.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Получите буст за использование Nitro в течение трёх месяцев.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Буст можно будет использовать, пока действует ваша текущая подписка Nitro.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Получите награду!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Поздравляем с использованием Nitro в течение месяца!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Поздравляем с использованием Nitro в течение трёх месяцев!",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Спасибо, что пользуетесь Nitro!",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Буст действует только во время подписки на Nitro. При отмене подписки прогресс сбрасывается, а буст удаляется.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Активирован",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Отлично, вы заработали дополнительный буст!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Ваш буст ждёт вас!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Спасибо за подписку на Nitro! Мы дарим вам буст за то, что вы использовали Nitro в течение месяца.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Спасибо за подписку на Nitro! Мы дарим вам буст за то, что вы использовали Nitro в течение трёх месяцев.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Сделайте Discord ещё круче!",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11739,7 +11794,7 @@
           "Неограниченное число суперреакций в неделю",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 буста сервера, загрузка файлов до 500 МБ и многое другое!",
-        NITRO_MARKETING_JUST_THE_BASICS: "База",
+        NITRO_MARKETING_JUST_THE_BASICS: "Базовые преимущества",
         NITRO_MARKETING_BASIC_PERKS: "Бонусы Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "Настройте Discord под себя",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Выберите свой тариф Nitro",
@@ -11824,6 +11879,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Бесплатный пробный период активен ещё ({days, plural, =1 {# день} few {# дня} other {# дней}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Бесплатный пробный период",
+        POWERED_BY_NITRO: "Преимущество Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Играет в игру",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Стримит на !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Играет в/на !!{platform}!!",
@@ -14293,8 +14349,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Этот эмодзи с",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Этот эмодзи с этого сервера. Вы можете использовать его где хотите.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Это эмодзи с данного сервера. Вы можете использовать его где угодно благодаря подписке Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Этот эмодзи с одного из ваших серверов. Чтобы использовать его, введите его название в строке чата.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Это эмодзи с одного из ваших серверов. Вы можете использовать его где угодно благодаря подписке Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Хотите использовать этот эмодзи где угодно? Присоединитесь к серверу.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14309,6 +14369,8 @@
           "Хотите использовать этот эмодзи где угодно? Оформите подписку Nitro и присоединитесь к серверу.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Этот эмодзи с недоступного сервера или сервера с доступом только по приглашению. [Узнайте больше](openPremiumSettings) об использовании пользовательских эмодзи.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Это пользовательский эмодзи с сервера, доступного только по приглашению. Вы можете использовать пользовательские эмодзи любых доступных вам серверов благодаря подписке Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Получите этот стикер с",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Этот стикер с",
@@ -16256,12 +16318,8 @@
           "Вы точно хотите изменить это событие?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "После изменения этого события **все события в серии также будут изменены**.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Попробуйте",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "НОВИНКА! Повторяющиеся события",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Теперь вы можете без труда повторять события.",
-        COPY_RECURRENCE_LINK: "Копировать ссылку на событие",
-        COPY_SERIES_LINK: "Копировать ссылку на серию событий",
+        COPY_RECURRENCE_LINK: "Скопировать ссылку только на это событие",
+        COPY_SERIES_LINK: "Скопировать ссылку на все события",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Создать событие",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17578,6 +17636,8 @@
           "Если вы восстановите подписку Nitro Classic, мы возобновим использование вашего способа оплаты (**{price}**) и будем взимать плату **ежемесячно**, пока вы не отмените подписку. Отменить её можно в любое время в \xabНастройках пользователя\xbb.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Если вы восстановите подписку Nitro Classic, мы возобновим использование вашего способа оплаты (**{price}**) и будем взимать плату **ежегодно**, пока вы не отмените подписку. Отменить её можно в любое время в \xabНастройках пользователя\xbb.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Если вы восстановите подписку на Nitro, мы возобновим списания с указанного вами счёта в размере **{discountPrice}** в месяц до окончания скидочного периода, а затем будем взимать плату в размере ***{defaultPrice}*** в месяц, пока вы не отмените подписку. Подписку можно отменить в настройках в любое время.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Не отменять Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19129,6 +19189,9 @@
           "Фильтр для безопасности\xa0— например, по отстранению или по подозрительным сообщениям.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Банить участников",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Неизвестно",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Скрытые",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Режим стримера активирован, коды для приглашения скрыты",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Путешествие по серверам",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Студенческий центр",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Другие способы подключения",
@@ -19200,8 +19263,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Нет права на модификацию",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Предоставлено:",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Рискованно) Предоставлено:",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Модератор",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Право предоставлено этими ролями",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Самая высокая роль",
@@ -20324,6 +20386,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Редактирование медиа-файлов и создание мемов со скоростью Discord.",
         EARLY_ACCESS: "Ранний доступ",
+        REWARD: "Награда",
         REMIXING_POST_CTA: "Отправить",
         REMIXING_CROP: "Обрезать медиафайл",
         REMIXING_BACKDROP_EDITOR_TITLE: "Изменить и обрезать",
@@ -21698,6 +21761,10 @@
           "Серверы, на которых вы отправляли сообщения в течение недели. Это не ссылки-приглашения\xa0— ваши родители не смогут перейти по ним.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Серверы, на которых ваш ребенок активно отправлял сообщения в течение недели.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Серверы, на которых вы активно проводили время (отправляли сообщения или участвовали в голосовых чатах) в течение недели. Это не ссылки-приглашения\xa0— ваши родители не смогут перейти по ним.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Серверы, на которых ваш ребёнок активно проводил время (отправлял сообщения или участвовал в голосовых чатах) в течение недели.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Активные серверы\xa0— {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21838,6 +21905,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "На это украшение действует скидка для подписчиков Nitro",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} с подпиской Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} с подпиской Nitro. $[Подписаться](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Готовы сменить образ?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Как-то неловко получается.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21854,6 +21923,9 @@
           "После покупки этот эффект будет добавлен в вашу коллекцию, и вы сможете использовать его, когда захотите",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Теперь этот эффект есть в вашей коллекции, и вы можете использовать его, когда захотите!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Обычная цена: {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Нажимая \xab{buyButtonLabel}\xbb, вы соглашаетесь с [Условиями предоставления платных услуг]({paidServiceTermURL}). После совершения покупки предмет будет добавлен в вашу коллекцию и может быть использован в любое время. Обратите внимание, что после покупки предмета вы не сможете оформить возврат средств за подписку Nitro.",
         COLLECTIBLES_DAYS_LEFT: "Осталось {days}\xa0д.",
         COLLECTIBLES_LAST_DAY: "Последний день в продаже",
         COLLECTIBLES_SHOP_VIEW_ALL: "Посмотреть все",
@@ -21874,9 +21946,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Повелевайте стихиями",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Огонь. Ветер. Вода. Земля. Какую стихию выберете вы?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Новые аниме-предметы ждут вас!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Аниме: новые стили",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Если вы хотите привлечь внимание сенпая, то вам просто необходимо ознакомиться с этими новыми элементами стиля!",
+          "Теперь сэмпай вас точно заметит.",
         COLLECTIBLES_NEW_BADGE: "НОВОЕ",
         INVENTORY_EMOJI_DETAILS_V2: "Подробнее об эмодзи",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23207,6 +23279,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {# сек.} other {# сек.}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# мин.} other {# мин.}}",
         CLIPS_SAVE: "Сохранить клип",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Включите функцию \xabКлипы\xbb, чтобы записать этот стрим.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Разрешить зрителям создавать клипы",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Включите создание клипов для вашего стрима Go Live",
@@ -23585,6 +23659,7 @@
           "В Discord серьёзно относятся к безопасности подростков. Если мы заподозрим, что в беседе таится возможная угроза, то уведомим вас. [Узнайте больше об оповещениях об угрозах.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Перейти к настройкам",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Закрыть",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Спасибо за ваш отзыв!",
         STRANGER_DANGER_BANNER_BLOCK: "Заблокировать",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Закрыть",
         STRANGER_DANGER_MORE_HEADER: "Что ещё вы можете сделать",
@@ -23631,9 +23706,21 @@
           "Эта беседа может быть небезопасной",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Примите меры, чтобы защитить себя.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Откройте инструменты безопасности, чтобы защитить себя.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Эта беседа может быть небезопасной. Откройте инструменты безопасности, чтобы принять меры.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Заблокировать пользователя",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Разблокировать",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Учётная запись заблокирована",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST:
+          "Учётная запись разблокирована",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST:
+          "Отправлена жалоба на учётную запись",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Что-то пошло не так! Повторите попытку позже.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Этот пользователь не сможет вам больше написать. Если вы полагаете, что его действия могут нанести кому-либо вред, пожалуйста, отправьте жалобу в Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Заблокировать",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Заблокировать и пожаловаться",
@@ -23757,6 +23844,8 @@
         POLL_SUBMIT_VOTE: "Проголосовать",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} голос} few {{count} голоса} other {{count} голосов}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count}\xa0голос} few {{count}\xa0голоса} other {{count}\xa0голосов}}",
         POLL_ALREADY_VOTED: "Вы уже проголосовали",
         POLL_EDIT_VOTE: "Изменить ответ",
         POLL_REMOVE_VOTE: "Удалить голос",
@@ -23771,10 +23860,16 @@
         POLL_EXPIRED: "Опрос завершён",
         POLL_SELECT_ONE_ANSWER: "Выберите один ответ",
         POLL_SELECT_MULTIPLE_ANSWERS: "Выберите один или несколько ответов",
-        POLL_SHOW_VOTES: "Показать голоса",
-        POLL_HIDE_VOTES: "Скрыть голоса",
+        POLL_SHOW_VOTES: "Показать итоги",
+        POLL_HIDE_VOTES: "Вернуться к голосованию",
+        POLL_VOTES_NO_RESULTS_TITLE: "Тут ничего нет",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Никто не проголосовал за этот ответ",
+        POLL_COACHMARK_TITLE: "НОВИНКА: опросы!",
+        POLL_COACHMARK_SUBTITLE:
+          "Организовывайте мероприятия, узнавайте мнения или просто задавайте смешные вопросы в чате.",
         POLL_NOT_INTERACTIVE:
           "Посмотрите оригинальное сообщение, чтобы поучаствовать",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Тут ничего нет",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Никто не проголосовал за этот ответ.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Голоса",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Показать участников",
@@ -23801,8 +23896,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Добавить ещё один ответ",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Опрос будет длиться",
         CREATE_POLL_DURATION_LABEL: "Срок",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1\xa0час",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 часа",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дня",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0неделю",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23831,6 +23924,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Описание изображения (alt-текст)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Замещающий текст:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Выбрать медиафайл",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Ой, вы кое-что забыли. Добавьте вопрос.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ой, вы кое-что забыли. Добавьте хотя бы один ответ.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Не оставляйте поле ответа пустым! Напишите что-нибудь.",
         POLL_END_EARLY: "Завершить опрос сейчас",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Завершить опрос сейчас?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23866,6 +23965,12 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "Выполните задание, чтобы открыть награду.",
         QUESTS_STREAM_TASK:
           "Проведите стрим игры {gameTitle} для друга в течение {minutes}\xa0мин.",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Подтвердите свою учётную запись, чтобы забрать награды.",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Мы отправили письмо с подтверждением на [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Ой-ой! У нас не получилось отправить вам письмо с подтверждением.",
         QUEST_REWARD: "Выиграйте: {reward}",
         QUESTS_REWARD_CODE_HEADER: "Код вашей награды",
         QUESTS_REWARD_CODE_CONGRATS: "Поздравляем!",
@@ -23887,8 +23992,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Спонсируется",
+        QUESTS_PROMOTED: "Продвигается",
         QUESTS_LEARN_MORE_V2: "Подробнее",
         QUESTS_LEARN_MORE_STACKED: "Узнать\n\nбольше",
+        QUESTS_LEARN_MORE_LINK: "[Подробнее]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Принять задание",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Проведите стрим игры {gameTitle} для друга в течение {streamingDurationRequirement, number}\xa0мин. и получите награду: {questReward}.",
@@ -23923,7 +24030,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "Издатель {gamePublisher} хочет охватить определённую категорию пользователей Discord. Исходя из информации, которой вы с нами поделились, а также собранных нами данных, мы пришли к выводу, что вы входите в следующие группы:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Узнать подробности о заданиях в Discord и о том, как управлять вашими настройками конфиденциальности, можно [здесь]({privacySettingsUrl}).",
+          "[Узнайте больше]({privacySettingsUrl}) о заданиях в Discord и о том, как управлять вашими настройками конфиденциальности.",
         QUESTS_DISCLOSURE_LOCATION: "Место",
         QUESTS_DISCLOSURE_AGE: "Возраст",
         QUESTS_DISCLOSURE_ACTIVITY: "Деятельность: актуальные игры",
@@ -23932,6 +24039,11 @@
           "Что-то пошло не так. Проверьте склад подарков на наличие доступных заданий!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Возникла проблема с отслеживанием вашего прогресса в задании.",
+        QUESTS_SHARE_QUEST: "Поделиться заданием",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Выберите {gameTitle}, чтобы продвинуться в задании!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Необходимо выделить приложение, а не весь экран.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Зовите участников общаться, если на канале долго ничего не происходит.",
         PROMPT_CAMERA_LOADING_TITLE: "Улыбочку!",
@@ -23983,10 +24095,23 @@
           "Карта активности, на которой отображается пользователь @{username}, слушающий композицию {song} (исполнитель {artist})",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Карта активности, на которой отображается пользователь @{username}, ведущий трансляцию {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Играют в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Играли в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "Пользователь {userName} играет в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "Пользователь {userName} играл в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "Пользователь {userName} играет в новую игру **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "Пользователь {userName} играл в новую игру **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}\xa0нед. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}\xa0д. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}\xa0ч. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}\xa0мин. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} сек. назад",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Впервые",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Активность",
       };
     },
   },

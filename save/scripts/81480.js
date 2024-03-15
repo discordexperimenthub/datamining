@@ -1005,6 +1005,8 @@
           "音声コントロールを表示",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "アクティビティシェルフを開く",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "アクティビティを退出",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "この機能は現在、このOSでは利用できません",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "このアクティビティは現在、このOSでは利用できません",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "このアクティビティ",
@@ -1232,6 +1234,9 @@
           "アクティビティが始まりました。",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "メンバーが25人を超えるサーバーではこのアクティビティを起動できません",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "外部アプリケーション",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "外部アプリを起動しようとしています。続行しますか？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "アクティビティが終了しました。新しいアクティビティを開始しますか？",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1240,6 +1245,15 @@
           "このボイスチャンネルに参加する権限を持っていません。",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "このチャンネルのアクティビティに参加できません。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "頭部がメガホンになっている鳥",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "注目！",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "あなたは初めて{activityName}をテストしようとしています。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "このアプリはDiscordによって作られていません。信頼できる開発者からのアプリのみをテストしてください。",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "プライベートアプリについて詳しくご覧ください。",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook)がアクティビティを開始しました",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4757,11 +4771,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "キー割り当てを有効または無効にする",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "結果",
-        SHOW_CURRENT_ACTIVITY: "現在のアクティビティをステータスに表示する",
         SHOW_CURRENT_ACTIVITY_DESC:
           "公開ステージに参加している場合、Discord が自動的にステータスをアップデートします。",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "ゲームをプレイしていたり（検出可能な場合のみ）、Rich Presence をサポートするアクティビティを行っていたり、公開ステージに参加したりしている場合、Discord が自動的にステータスをアップデートします。",
         GAME_DETECTION_SERVICE: "ゲーム検出サービス",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "インストールする場所",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "インストール場所を追加する",
@@ -9283,10 +9294,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!%割引",
         PREMIUM_DISCOUNT_CTA: "Nitroで!!{percent, number}!!%割引",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitroで割引",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "!!{percent, number}!!%割引は購入後{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}で終了します。その後は{regularPrice}が請求されます。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "最初の**3ヵ月**は**{discountedPrice}**です。その後は{regularPrice}が請求されます。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {次の1ヵ月} other {次の{numMonths}ヵ月}}**{numMonths, plural, one {は} other {は}}**{discountedPrice}**です。それ以降は{regularPrice}が請求されます。",
+          "次の**{numMonths, plural, one {ヵ月} other {{numMonths}ヵ月}}**{numMonths, plural, one {は} other {は}}**{discountedPrice}**です。それ以降は{regularPrice}/月が請求されます。",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "割引適用済み",
         CHURN_DISCOUNT_DESCRIPTION:
           "キャンセルの前に、**{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}間**{percent, number}%オフのNitroサブスクリプションをご検討ください。",
@@ -10709,8 +10722,6 @@
           "先ほどメールをお送りいたしました。メールに記載されているリンクをクリックし、購入を承認してください。",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "続行",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "受け取れませんでしたか？",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "メールを再送信する",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11524,7 +11535,51 @@
           "Nitroサブスクライバーになってこのクールなバッジをゲット。",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "コレクター向け。Nitro限定バッジをゲットしよう。",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts}個の無料{numFreeBoosts, plural, =1 {ブースト} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Nitroの初月1ヵ月間のご利用、誠におめでとうございます。",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitroの報酬",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "現在のNitroサブスクリプションが有効な間、追加のブーストを自由に使用できます。",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "報酬を引換えよう！",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "交換する",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "引換え済み",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Nitroメンバーになっていただき、ありがとうございます。",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "有効なNitroサブスクリプションでブーストを維持しましょう。解約すると進捗がリセットされ、ブーストが削除されます。",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Nitroを初月1ヵ月利用すると、ブーストを獲得できます。",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "{days}{days, plural, =1 {日} other {日}}以内に引換え",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "{numDays}{numDays, plural, =1 {日} other {日}}以内に引換え",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitroの報酬",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitroを初月1ヵ月利用すると、ブーストを獲得できます。",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitroを3ヵ月利用すると、ブーストを獲得できます。",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "現在のNitroサブスクリプションが有効な間、追加のブーストを自由に使用できます。",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "報酬を引換えよう！",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitroの初月1ヵ月間のご利用、誠におめでとうございます。",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitroの3ヵ月間のご利用、誠におめでとうございます。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Nitroメンバーになっていただき、ありがとうございます。",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "有効なNitroサブスクリプションでブーストを維持しましょう。解約すると進捗がリセットされ、ブーストが削除されます。",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "引換え済み",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "さらなるブーストの獲得、おめでとうございます。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "ブーストが待っています！",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Nitroメンバーになっていただき、ありがとうございます。Nitroを初月1ヵ月ご利用いただいたので、追加のブーストを差し上げます。",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitroメンバーになっていただき、ありがとうございます。Nitroを3ヵ月ご利用いただいたので、追加のブーストを差し上げます。",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Discordをスーパーチャージ",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11615,6 +11670,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "無料トライアル（{days, plural, =1 {残り#日間} other {残り#日間}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "無料トライアル",
+        POWERED_BY_NITRO: "提供：Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "ゲームのプレイ",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "!!{platform}!!でライブ",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "!!{platform}!!でプレイ中",
@@ -14038,8 +14094,12 @@
           "この絵文字が作られたサーバー：",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "このサーバーで作られた絵文字です。どこでも使用可能です。",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "この絵文字はこのサーバーから来ています。Nitroを使ってあらゆる場所で使用しましょう。",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "この絵文字はあなたの所属しているサーバーで作られたものです。チャットバーに絵文字名を打ち込んで使用できます。",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "この絵文字はあなたのサーバーの1つから来ています。Nitroを使ってあらゆる場所で使用できます。",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "この絵文字をどこでも使いたい？ サーバーに参加すれば叶います！",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14054,6 +14114,8 @@
           "この絵文字をどこでも使いたい？ Discord Nitroに登録してサーバーに参加すれば叶います！",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "招待限定または利用不可のサーバーで作られた絵文字です。カスタム絵文字の利用について、[詳しくはこちら](openPremiumSettings)をご覧ください。",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "このカスタム絵文字は招待限定のサーバーから来ています。Nitroを使って、参加した全てのサーバーからのカスタム絵文字を使用しましょう。",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "このスタンプをゲットできるサーバー：",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -15961,12 +16023,8 @@
         GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM: "このイベントを編集しますか？",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "このイベントを編集すると、このシリーズ内の**全てのイベントが更新**されます。",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "試してみる",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NEW！繰り返しイベント",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "イベントの繰り返しが簡単になりました。",
-        COPY_RECURRENCE_LINK: "このイベントリンクをコピー",
-        COPY_SERIES_LINK: "イベントシリーズのリンクをコピー",
+        COPY_RECURRENCE_LINK: "このイベントのみのリンクをコピー",
+        COPY_SERIES_LINK: "全イベントのリンクをコピー",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "イベントを作成",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17231,6 +17289,8 @@
           "Nitro Classic を再開すると、お客様のお支払い方法への**{price}**のご請求が再開し、サブスクリプションをキャンセルされるまで**毎月**のご請求が継続します。キャンセルは設定ページからいつでもできます。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Nitro Classic を再開すると、お客様のお支払い方法への**{price}**のご請求が再開し、サブスクリプションをキャンセルされるまで**毎年**のご請求が継続します。キャンセルは設定ページからいつでもできます。",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Nitroを再開すると、割引が終了するまで毎月、あなたの支払い方法に**{discountPrice}**を請求し続けます。その後は、サブスクリプションを解約するまで毎月***{defaultPrice}***を請求します。設定ページからいつでも解約できます。",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Nitro を継続",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -18746,6 +18806,9 @@
           "タイムアウトや異常なDMアクティビティへの関与などの安全情報に基づいてフィルターします。",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "メンバーをBAN",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "不明",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "非表示",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "配信モードは有効で、招待コードは非表示になっています",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "サーバー発見",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Student Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "他の参加方法",
@@ -18815,8 +18878,7 @@
           "すべての付与された権限",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "モデレーター権限なし",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "付与者：",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "（危険）付与者：",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "モデレーター",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "これらのロールによって許可された権限",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "最高位のロール",
@@ -19912,6 +19974,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "メディア編集とミームづくりがDiscordのスピードでできる。",
         EARLY_ACCESS: "早期アクセス",
+        REWARD: "報酬",
         REMIXING_POST_CTA: "送信",
         REMIXING_CROP: "コンテンツの切り取り",
         REMIXING_BACKDROP_EDITOR_TITLE: "調整＆切り取り",
@@ -21254,6 +21317,10 @@
           "あなたが先週メッセージを送信したサーバー。これらは招待リンクではなく、保護者がクリックすることはできません。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "10代のユーザーが先週メッセージの送信を行ったサーバー。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "あなたが先週活動（メッセージの送信やボイスチャットへの参加）を行ったサーバー。これらは招待リンクではなく、保護者がクリックすることはできません。",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "10代のお子様が先週活動（メッセージの送信やボイスチャットへの参加）を行ったサーバー。",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "アクティブサーバー — {count, number}件",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21395,6 +21462,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitroサブスクライバーはこのデコレーションが割引になります",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro特価：{price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "Nitroユーザーは{price}。$[今すぐ登録](subscribeNowHook)しよう",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "イメチェンしたい？",
         COLLECTIBLES_SHOP_ERROR_HEADING: "あー... これは大変ですね。",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21410,6 +21479,9 @@
           "購入後、このエフェクトはあなたのコレクションに追加され、いつでも使えるようになります",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "このエフェクトがあなたのコレクションに加わりました。いつでも使えます！",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "通常は{price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "「{buyButtonLabel}」をクリックすることで、[有料サービス利用規約]({paidServiceTermURL})に同意したとみなされます。購入が完了次第、そのアイテムはあなたのコレクションに追加され、いつでも利用できるようになります。なお、アイテムを一度購入すると、Nitroサブスクリプションは返金不可能となりますのでご注意ください。",
         COLLECTIBLES_DAYS_LEFT: "残り{days}日",
         COLLECTIBLES_LAST_DAY: "購入は本日まで",
         COLLECTIBLES_SHOP_VIEW_ALL: "全て表示",
@@ -21430,9 +21502,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "エレメントの力よ…",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "火。風。水。地。どれを解き放つ？",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "新アニメアイテムが登場！",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "アニメ：新たなスタイル",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "先輩に注目されること間違いなしの最新スタイルをチェックしよう。",
+          "きっと先輩にすぐ気づいてもらえるはず。",
         COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "絵文字の詳細を見る",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22716,6 +22788,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {#秒} other {#秒}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {#分} other {#分}}",
         CLIPS_SAVE: "クリップを保存",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "この配信をキャプチャするクリップを有効にします。",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "視聴者にクリップのキャプチャを許可する",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23090,6 +23164,8 @@
           "Discordは、10代の若者の安全を真剣に考慮しています。Discordが会話の中に安全性に関するリスクを検出した場合はお知らせが届きます。[セーフティアラートについて詳しくはこちら。]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "設定を開く",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "閉じる",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "フィードバックをいただき、ありがとうございます！",
         STRANGER_DANGER_BANNER_BLOCK: "ブロック",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "閉じる",
         STRANGER_DANGER_MORE_HEADER: "さらにできること",
@@ -23136,9 +23212,21 @@
           "この会話は安全でない可能性があります。",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "自己防衛のために措置を取りましょう。",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "セーフティツールを開き、自己防衛のために措置を講じましょう。",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "この会話は安全でないかもしれません。セーフティツールを開き、措置を講じましょう。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "彼らをブロックする",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "ブロックを解除",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST:
+          "アカウントがブロックされました",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST:
+          "アカウントがブロック解除されました",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "アカウントが通報されました",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "何か問題があるようです！しばらくしてからもう一度お試しください。",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "彼らはあなたにメッセージを送ることができません。彼らの行動が誰かに害を及ぼす可能性があると感じた場合は、Discordに通報を送信してください。",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "ブロック",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "ブロックして通報",
@@ -23257,6 +23345,8 @@
         POLL_CHOOSE_SINGLE_ANSWER_PROMPT: "回答を選択",
         POLL_SUBMIT_VOTE: "投票",
         POLL_VOTES_COUNT: "{count, plural, one {{count}票} other {{count}票}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count}票} other {{count}票}}",
         POLL_ALREADY_VOTED: "投票済み",
         POLL_EDIT_VOTE: "票を変更",
         POLL_REMOVE_VOTE: "投票を削除",
@@ -23271,10 +23361,16 @@
         POLL_EXPIRED: "投票終了",
         POLL_SELECT_ONE_ANSWER: "回答を1件選択",
         POLL_SELECT_MULTIPLE_ANSWERS: "回答を1件または複数選択",
-        POLL_SHOW_VOTES: "投票を表示",
-        POLL_HIDE_VOTES: "投票を非表示",
+        POLL_SHOW_VOTES: "結果を表示",
+        POLL_HIDE_VOTES: "投票に戻る",
+        POLL_VOTES_NO_RESULTS_TITLE: "ここには何もありません",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "この回答には票が入っていません",
+        POLL_COACHMARK_TITLE: "新着！投票はこちら。",
+        POLL_COACHMARK_SUBTITLE:
+          "チャットでイベントを計画したり、意見を集めたり、馬鹿げた質問を投げかけたりしましょう。",
         POLL_NOT_INTERACTIVE:
           "インタラクトするにはもとのメッセージを表示してください",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "ここには何もありません",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "この回答には票が入っていません。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "投票",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "投票者を表示",
@@ -23299,8 +23395,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "別の回答を追加",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票有効期間：",
         CREATE_POLL_DURATION_LABEL: "期間",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1時間",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24時間",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3日間",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 週間",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票有効期間：{duration}",
@@ -23325,6 +23419,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "画像の概要（代替テキスト）",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "代替テキスト",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "メディアを選択",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "おっと、何か忘れてしまったようですね。質問を追加してください。",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "おっと、何か忘れてしまったようですね。少なくとも1つの回答を追加してください。",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "回答欄を放置しないで！何かテキストを追加してください。",
         POLL_END_EARLY: "投票を終了する",
         POLL_END_EARLY_CONFIRMATION_TITLE: "投票を終了しますか？",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23354,9 +23454,16 @@
         QUESTS_CLAIM_YOUR_REWARD: "報酬を入手",
         QUESTS_ACCEPT: "クエストを承認",
         QUESTS_COMPLETE_TOOLTIP: "「獲得」を押して報酬コードをゲット！",
-        QUESTS_ACCEPT_TOOLTIP: "クエストを受けてタスクをこなし報酬をアンロック",
+        QUESTS_ACCEPT_TOOLTIP:
+          "クエストに参加してタスクをこなし、報酬をアンロック",
         QUESTS_IN_PROGRESS_TOOLTIP: "タスクをこなし報酬をアンロック",
         QUESTS_STREAM_TASK: "{gameTitle}をフレンド1人に{minutes}分間配信",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "アカウントを認証して、報酬を受け取りましょう！",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "[{emailAddress}]({emailAddressLink})に認証メールを送信しました",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "あれっ！認証メールを送信できませんでした。",
         QUEST_REWARD: "{reward}をゲット",
         QUESTS_REWARD_CODE_HEADER: "あなたの報酬コード",
         QUESTS_REWARD_CODE_CONGRATS: "おめでとう！",
@@ -23379,8 +23486,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "スポンサード",
+        QUESTS_PROMOTED: "昇格済み",
         QUESTS_LEARN_MORE_V2: "もっと詳しく",
         QUESTS_LEARN_MORE_STACKED: "詳しくは\n\nこちら",
+        QUESTS_LEARN_MORE_LINK: "[詳細はこちら]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "クエストを承認",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "{gameTitle}をフレンド1人に{streamingDurationRequirement, number}分間配信して、{questReward}を獲得しましょう。",
@@ -23390,11 +23499,11 @@
         QUESTS_TITLE: "{questName}クエスト",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "おっと！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "クエストはモバイル版ではまだ利用できません…残念！デスクトップのDiscordアプリまたはブラウザから**「ユーザー設定」→「ギフトインベントリ」**からクエストを承諾できます。",
+          "クエストはモバイル版ではまだ利用できません…申し訳ありません！デスクトップ版のDiscordアプリまたはブラウザから**「ユーザー設定」>「ギフトインベントリ」**に移動して、クエストに参加できます。",
         QUESTS_MOBILE_EMBED_TITLE:
           "今のところは...クエストはモバイルでは利用できません。",
         QUESTS_MOBILE_EMBED_BODY:
-          "デスクトップのDiscordアプリまたはブラウザから、\n「ユーザー設定」>「ギフトインベントリ」へ移動し、そこでクエストを承諾できます。",
+          "デスクトップ版のDiscordアプリまたはブラウザから\n「ユーザー設定」>「ギフトインベントリ」に移動して、クエストに参加できます。",
         QUESTS_GET_THIS_GAME: "このゲームをゲット",
         QUESTS_DISCLOSURE_LABEL: "これが表示される理由",
         QUESTS_SHARE_LINK: "共有リンクをコピー",
@@ -23414,7 +23523,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher}のプロモーションは所定の性向のDiscordユーザーをターゲットとしたものです。あなたがDiscordに提供した情報やDiscordが収集した情報に基づき、Discordはあなたがこれらのグループに適合すると判断しました：",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discordのクエストについて、またプライバシー設定の管理について詳しくは[こちら]({privacySettingsUrl})。",
+          "Discordのクエスト、およびプライバシー設定の管理方法について、[詳細はこちら]({privacySettingsUrl})。",
         QUESTS_DISCLOSURE_LOCATION: "場所",
         QUESTS_DISCLOSURE_AGE: "年齢",
         QUESTS_DISCLOSURE_ACTIVITY: "アクティビティ：関連ゲーム",
@@ -23422,7 +23531,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "問題が発生しました。他に利用可能なクエストがあるかもしれません。ギフトインベントリをチェック！",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "クエストの進捗トラッキング中に問題が発生しました。",
+          "クエストの進捗の追跡中に問題が発生しました。",
+        QUESTS_SHARE_QUEST: "クエストを共有",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "{gameTitle}を選択してクエストを進めましょう！",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "画面全体ではなく、アプリケーションを選択する必要があります。",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "このチャンネルが一定期間休止したあとメンバーにチャットするよう促す",
         PROMPT_CAMERA_LOADING_TITLE: "何見てるの？",
@@ -23475,10 +23589,23 @@
           "@{username}が{artist}の{song}を再生中のアクティビティカード",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "@{username}が{activity}を配信中のアクティビティカード",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "**{gameName}**をプレイ中",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "**{gameName}**をプレイしました",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName}が**{gameName}**をプレイしています",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName}が**{gameName}**をプレイしました",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName}が新しいゲーム「**{gameName}**」をプレイしています",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName}が新しいゲーム「**{gameName}**」をプレイしました",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}週間前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} 日前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 時間前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}秒前",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "初めて",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "アクティビティ",
       };
     },
   },

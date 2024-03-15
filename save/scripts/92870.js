@@ -1029,6 +1029,8 @@
           "Spraakbesturing tonen",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Activiteitenplank openen",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Stoppen met activiteit",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Deze feature is nog niet beschikbaar op dit besturingssysteem",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Deze activiteit is momenteel niet beschikbaar op dit besturingssysteem",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "deze activiteit",
@@ -1255,6 +1257,9 @@
           "Activiteit is begonnen.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Je kunt deze activiteit niet starten op een server met meer dan 25 leden",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Externe applicatie",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Je staat op het punt een externe app op te starten. Wil je doorgaan?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Activiteit afgelopen. Een nieuwe starten?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activiteit gestart",
@@ -1262,6 +1267,15 @@
           "Je hebt geen toestemming om naar dit spraakkanaal te gaan.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Je kunt niet meedoen aan Activiteiten in dit kanaal.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Een vogel met een megafoon als kop",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Let op!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Je staat op het punt om {activityName} voor het eerst te testen.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Deze app is niet gemaakt door Discord. Test alleen apps van ontwikkelaars die je vertrouwt.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Kom meer te weten over apps van derden.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) heeft een activiteit gestart",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4816,12 +4830,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Toetsencombinatie in- of uitschakelen",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultaten",
-        SHOW_CURRENT_ACTIVITY:
-          "Geef huidige activiteit als een statusbericht weer.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord werkt automatisch je status bij wanneer je een openbaar podium bijwoont.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord werkt automatisch je status bij op basis van de game die je speelt (indien deze gedetecteerd kan worden), de activiteit die je uitvoert die Rich Presence ondersteunt of wanneer je een openbaar podium bijwoont.",
         GAME_DETECTION_SERVICE: "Gamedetectieservice",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locaties installeren",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5462,7 +5472,7 @@
         LOGOUT: "Afmelden",
         SOUNDS: "Geluiden",
         PREMIUM: "Nitro",
-        BASIC: "Basis",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Bericht",
         SOUND_DEAFEN: "Onhoorbaar maken",
         SOUND_UNDEAFEN: "Hoorbaar maken",
@@ -5508,7 +5518,7 @@
         USER_SETTINGS_BLOCKED_USERS: "Geblokkeerde gebruikers",
         USER_SETTINGS_BLOCKED_USERS_HEADER:
           "{numberOfBlockedUsers} geblokkeerde gebruikers",
-        USER_SETTINGS_BLOCKED_USERS_UNBLOCKBUTTON: "Niet meer blokkeren",
+        USER_SETTINGS_BLOCKED_USERS_UNBLOCKBUTTON: "Deblokkeren",
         USER_SETTINGS_BLOCKED_USERS_EMPTY:
           "Je hebt nog geen gebruikers geblokkeerd",
         OVERLAY_LAUNCH_TITLE: "Gebruik Discord-overlay in-game",
@@ -5610,7 +5620,7 @@
         EXPAND: "Uitvouwen",
         UNBLOCK_TO_JUMP_TITLE: "Je hebt dus deze persoon geblokkeerd",
         UNBLOCK_TO_JUMP_BODY:
-          "Hef deze blokkade van '!!{name}!!' op en dan kun je zijn bericht zien.",
+          "Deblokkeer !!{name}!! om zijn of haar bericht te zien.",
         PIN_MESSAGE_TITLE: "Pin hem goed vast.",
         PIN_MESSAGE_BODY:
           "\nH\xe9, dit is even om te checken of je dit bericht wilt vastpinnen op #!!{channelName}!! voor het nageslacht en eeuwige roem?",
@@ -9414,10 +9424,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% korting",
         PREMIUM_DISCOUNT_CTA: "Bespaar !!{percent, number}!!% op Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Bespaar op Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Je korting van !!{percent, number}!!% eindigt {numMonths, plural, one {1 maand} other {{numMonths} maanden}} na aankoop. Daarna wordt er {regularPrice} in rekening gebracht.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Je eerste **3 maanden** kosten **{discountedPrice}**. Daarna wordt er {regularPrice} in rekening gebracht.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Je volgende **{numMonths, plural, one {maand} other {{numMonths} maanden}}** {numMonths, plural, one {kost} other {kosten}} **{discountedPrice}**. Daarna kost het {regularPrice}.",
+          "Je volgende **{numMonths, plural, one {maand} other {{numMonths} maanden}}** {numMonths, plural, one {kost} other {kosten}} **{discountedPrice}**. Daarna wordt er {regularPrice} in rekening gebracht.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "Korting toegepast",
         CHURN_DISCOUNT_DESCRIPTION:
           "Je kunt opzeggen, maar je kunt ook kiezen voor {numMonths, plural, one {1 maand} other {{numMonths} maanden}} **{percent, number}% korting op je Nitro-abonnement**.",
@@ -10853,8 +10865,6 @@
           "We hebben je net gemaild. Klik op de verificatielink in de e-mail om deze aankoop goed te keuren.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Doorgaan",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Heb je niets ontvangen?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "E-mail opnieuw sturen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11680,7 +11690,51 @@
           "Als Nitro-abonnee krijg je deze coole badge.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Voor de verzamelaars. Een exclusieve Nitro-badge.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Gefeliciteerd, je bent al \xe9\xe9n maand lid van Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-beloning",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Je kunt je extra boost gebruiken zolang je huidige Nitro-abonnement loopt.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Verzilver je beloning!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Verzilveren",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Verzilverd",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Fijn dat je een Nitro-abonnement hebt.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Je behoudt je boost zolang je Nitro-abonnement loopt. Als je je abonnement opzegt, wordt je voortgang gereset en de boost verwijderd.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Je verdient een boost als je een maand lid bent van Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Verzilver binnen {days} {days, plural, =1 {dag} other {dagen}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Verzilver binnen {numDays} {numDays, plural, =1 {dag} other {dagen}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro-beloning",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Je verdient een boost als je een maand lid bent van Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Je verdient een boost als je 3 maanden lid bent van Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Je kunt je extra boost gebruiken zolang je huidige Nitro-abonnement loopt.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Verzilver je beloning!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Gefeliciteerd, je bent al \xe9\xe9n maand lid van Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Gefeliciteerd, je bent al 3 maanden lid van Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Fijn dat je een Nitro-abonnement hebt.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Je behoudt je boost zolang je Nitro-abonnement loopt. Als je je abonnement opzegt, wordt je voortgang gereset en de boost verwijderd.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Verzilverd",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Netjes, je hebt een extra boost verdiend.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Je boost staat klaar!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Fijn dat je een Nitro-abonnement hebt. Alsjeblieft, een extra boost omdat je al een maand lid bent van Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Fijn dat je een Nitro-abonnement hebt. Alsjeblieft, een extra boost omdat je al 3 maanden lid bent van Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Supercharge je Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11772,6 +11826,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Gratis proefperiode (nog {days, plural, =1 {# dag} other {# dagen}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Gratis proefperiode",
+        POWERED_BY_NITRO: "Mogelijk gemaakt door Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Speelt een game",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live op !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Speelt op !!{platform}!!",
@@ -14216,8 +14271,12 @@
           "Deze emoji is afkomstig van",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Deze emoji is afkomstig van deze server. Je kunt hem overal gebruiken.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Deze emoji is afkomstig van deze server. Met Nitro kun je hem overal gebruiken.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Deze emoji is afkomstig van een van je servers. Typ de naam in de chatbalk om hem te gebruiken.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Deze emoji is afkomstig van een van je servers. Met Nitro kun je hem overal gebruiken.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Wil je deze emoji overal gebruiken? Word dan lid van de server.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14232,6 +14291,8 @@
           "Wil je deze emoji overal gebruiken? Schaf Nitro aan en word lid van de server.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Deze emoji is afkomstig van een server die niet beschikbaar of alleen op uitnodiging is. [Meer informatie](openPremiumSettings) over het gebruik van aangepaste emoji.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Deze gepersonaliseerde emoji is afkomstig van een server die alleen op uitnodiging toegankelijk is. Met Nitro heb je de beschikking over de gepersonaliseerde emoji van alle servers waar je bent geweest.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Deze sticker krijg je via",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16172,13 +16233,8 @@
           "Weet je zeker dat je dit evenement wilt bewerken?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Als je dit evenement bewerkt, worden ook **alle andere evenementen in deze serie** ge\xfcpdatet.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Uitproberen",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE:
-          "NIEUW! Terugkerende evenementen",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Je kunt evenementen nu makkelijk herhalen.",
-        COPY_RECURRENCE_LINK: "Deze evenementlink kopi\xebren",
-        COPY_SERIES_LINK: "Link evenementserie kopi\xebren",
+        COPY_RECURRENCE_LINK: "Link alleen voor dit evenement kopi\xebren",
+        COPY_SERIES_LINK: "Link voor alle evenementen kopi\xebren",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Evenement aanmaken",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17484,6 +17540,8 @@
           "Als je opnieuw voor Nitro Classic kiest, zullen we weer **maandelijks** **{price}** afschrijven via de door jou opgegeven betalingsmethode tot je het abonnement opzegt. Je kunt op elk moment opzeggen via je instellingenpagina.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Als je opnieuw voor Nitro Classic kiest, zullen we weer **jaarlijks** **{price}** afschrijven via de door jou opgegeven betalingsmethode tot je het abonnement opzegt. Je kunt op elk moment opzeggen via je instellingenpagina.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Als je opnieuw lid wordt van Nitro, brengen we weer **{discountPrice}** in rekening op je betalingsmethode tot je kortingsperiode afloopt, waarna we ***{defaultPrice}*** per maand in rekening brengen tot je je abonnement opzegt. Je kunt je abonnement altijd opzeggen via de pagina Instellingen.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Nitro behouden",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -17538,10 +17596,11 @@
         PREMIUM_TIER_2_FEATURE_BOOSTS: "{numBoosts} serverboosts",
         PREMIUM_TIER_2_FEATURE_MORE: "Persoonlijke profielen en meer!",
         AFFINITIES_MARKETING_HEADER_V2_3:
-          "Doe mee met {username} en andere vrienden op Nitro",
+          "Word net als {username} en andere vrienden lid van Nitro",
         AFFINITIES_MARKETING_HEADER_V2_2:
-          "Doe mee met {username} en {otherUsername} op Nitro",
-        AFFINITIES_MARKETING_HEADER_V2_1: "Doe mee met {username} op Nitro",
+          "Word net als {username} en {otherUsername} lid van Nitro",
+        AFFINITIES_MARKETING_HEADER_V2_1:
+          "Word net als {username} lid van Nitro",
         PICK_YOUR_PLAN: "Kies je abonnement",
         AND_MORE: "en meer!",
         PREMIUM_TIER_0_MARKETING_COMPARISON_TABLE_ROW_LABEL_MONTHLY_PRICE:
@@ -18725,7 +18784,7 @@
           "Kanalen invoeren...",
         GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER: "Rollen invoeren...",
         GUILD_AUTOMOD_EXEMPTION_HEADER:
-          "Bepaalde rollen of kanalen toevoegen (optioneel)",
+          "Bepaalde rollen of kanalen toestaan (optioneel)",
         GUILD_AUTOMOD_ROLES_EXEMPTION_HEADER:
           "Bepaalde rollen toestaan (optioneel)",
         GUILD_AUTOMOD_EXEMPTION_HINT:
@@ -19016,6 +19075,9 @@
           "Filter op basis van veiligheidsinfo, zoals time-outs of ongebruikelijke pb-activiteit.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Leden verbannen",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Onbekend",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Verborgen",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "De streamerstand is actief, dus uitnodigingscodes zijn verborgen",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Server Discovery",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Studentenhub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Andere manieren om deel te nemen",
@@ -19086,8 +19148,7 @@
           "Alle verleende machtigingen",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Geen modmachtigingen",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Verleend door",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskant) Verleend door",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Machtiging verleend door deze rollen",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Hoogste rol",
@@ -20211,6 +20272,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Het bewerken van media en cre\xebren van memes, op Discord-snelheid.",
         EARLY_ACCESS: "Vroegtijdige toegang",
+        REWARD: "Beloning",
         REMIXING_POST_CTA: "Versturen",
         REMIXING_CROP: "Media bewerken",
         REMIXING_BACKDROP_EDITOR_TITLE: "Aanpassen en bijsnijden",
@@ -21559,6 +21621,10 @@
           "Servers waarin je de afgelopen week berichten hebt verstuurd. Dit zijn geen uitnodigingslinks. Je ouders kunnen er niet op klikken.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servers waarin je tiener de laatste week berichten heeft verstuurd.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servers waarop je de afgelopen week actief bent geweest (verstuurde berichten of deelgenomen voicechats). Dit zijn geen uitnodigingslinks. Je ouders kunnen er niet op klikken.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servers waarop je tiener de laatste week actief is geweest (verstuurde berichten of deelgenomen voicechats).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Actieve servers — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21700,6 +21766,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro-abonnees krijgen korting op deze versiering",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} met Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} met Nitro. $[Abonneer je nu](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Toe aan een nieuwe look?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Nou, dit is een beetje g\xeanant.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21715,6 +21783,9 @@
           "Na aankoop maakt dit effect deel uit van je collectie en is altijd beschikbaar",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Dit effect maakt nu deel uit van je collectie en is altijd beschikbaar!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Normale prijs: {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Door op '{buyButtonLabel}' te klikken, ga je akkoord met de [Voorwaarden betaaldiensten]({paidServiceTermURL}). Zodra de aankoop is afgerond, wordt het item toegevoegd aan je collectie en kun je het wanneer je wilt gebruiken. Let op: als je een item hebt gekocht, kun je geen restitutie meer krijgen voor je Nitro-abonnement.",
         COLLECTIBLES_DAYS_LEFT: "Nog {days} dagen",
         COLLECTIBLES_LAST_DAY: "Laatste dag om te kopen",
         COLLECTIBLES_SHOP_VIEW_ALL: "Alles bekijken",
@@ -21735,10 +21806,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Hanteer de elementen",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Vuur. Wind. Water. Aarde. Welk element ontketen jij?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "De nieuwe anime-items zijn binnen!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: nieuwe stijlen",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Check de nieuwste stijlen waardoor senpai je eindelijk zal zien staan.",
+          "Senpai zal je nu zeker zien staan.",
         COLLECTIBLES_NEW_BADGE: "NIEUW",
         INVENTORY_EMOJI_DETAILS_V2: "Emoji-info bekijken",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23059,6 +23129,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# minuut} other {# minuten}}",
         CLIPS_SAVE: "Clip opslaan",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Schakel clips in om deze stream vast te leggen.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Hiermee kunnen kijkers clips opnemen",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23429,6 +23501,7 @@
           "We nemen de veiligheid van tieners heel serieus bij Discord. Als we een mogelijk veiligheidsrisico ontdekken in een chat, laten we het je weten. [Meer informatie over veiligheidswaarschuwingen.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Naar instellingen",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Afwijzen",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Bedankt voor je feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokkeren",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Sluiten",
         STRANGER_DANGER_MORE_HEADER: "Dit kun je verder nog doen",
@@ -23474,9 +23547,19 @@
           "Deze chat is mogelijk niet veilig.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Grijp in om jezelf te beschermen.",
-        INAPPROPRIATE_CONVERSATION_UNBLOCK: "Niet meer blokkeren",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Grijp in om jezelf te beschermen door veiligheidstools te gebruiken.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Dit gesprek is mogelijk niet veilig. Gebruik veiligheidstools om in te grijpen.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Gebruiker blokkeren",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK: "Deblokkeren",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Account geblokkeerd",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Account gedeblokkeerd",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Account gemeld",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Er is iets fout gegaan. Probeer het later nog eens.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Deze gebruiker kan je geen berichten meer sturen. Als je vermoedt dat de acties van deze gebruiker iemand kunnen schaden, verstuur dan een melding naar Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blokkeren",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blokkeren en melden",
@@ -23601,6 +23684,8 @@
         POLL_SUBMIT_VOTE: "Stemmen",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} stem} other {{count} stemmen}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} Stem} other {{count} Stemmen}}",
         POLL_ALREADY_VOTED: "Gestemd",
         POLL_EDIT_VOTE: "Stem wijzigen",
         POLL_REMOVE_VOTE: "Stem verwijderen",
@@ -23615,10 +23700,16 @@
         POLL_EXPIRED: "Peiling gesloten",
         POLL_SELECT_ONE_ANSWER: "Kies \xe9\xe9n antwoord",
         POLL_SELECT_MULTIPLE_ANSWERS: "Kies een of meerdere antwoorden",
-        POLL_SHOW_VOTES: "Stemmen tonen",
-        POLL_HIDE_VOTES: "Stemmen verbergen",
+        POLL_SHOW_VOTES: "Uitslag tonen",
+        POLL_HIDE_VOTES: "Terug naar stemmen",
+        POLL_VOTES_NO_RESULTS_TITLE: "Hier is niets te zien",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Dit antwoord heeft geen stemmen",
+        POLL_COACHMARK_TITLE: "NIEUW! Je kunt nu peilingen opstellen.",
+        POLL_COACHMARK_SUBTITLE:
+          "Plan evenementen, verzamel meningen of verblijd de chat met een maffe vraag.",
         POLL_NOT_INTERACTIVE:
           "Bekijk het oorspronkelijke bericht voor interactie",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Hier is niets te zien",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Dit antwoord heeft geen stemmen.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Stemmen",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Stemmers onthullen",
@@ -23643,8 +23734,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Voeg nog een antwoord toe",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "De peiling duurt:",
         CREATE_POLL_DURATION_LABEL: "Duur",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 uur",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 uur",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagen",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23672,6 +23761,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Beschrijving afbeelding (alt. tekst)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt. tekst:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Media selecteren",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Zul je altijd zien: je bent iets vergeten. Voeg een vraag toe.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Zul je altijd zien: je bent iets vergeten. Voeg minstens \xe9\xe9n antwoord toe.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Kijk dat arme, lege antwoordenveld nou! Typ er wat in.",
         POLL_END_EARLY: "Peiling nu be\xebindigen",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Peiling nu be\xebindigen?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23708,6 +23803,12 @@
           "Volbreng de taak om de beloning te ontgrendelen",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} {minutes} minuten voor een vriend(in)",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Verifieer je account om beloningen op te halen!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "We hebben een verificatiemail gestuurd naar: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Och, mensen! We hebben je geen verificatiemail gestuurd.",
         QUEST_REWARD: "Win {reward}",
         QUESTS_REWARD_CODE_HEADER: "Je beloningscode",
         QUESTS_REWARD_CODE_CONGRATS: "Gefeliciteerd!",
@@ -23730,8 +23831,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Gesponsord",
+        QUESTS_PROMOTED: "Gepromoveerd",
         QUESTS_LEARN_MORE_V2: "Meer informatie",
         QUESTS_LEARN_MORE_STACKED: "Meer\n\ninformatie",
+        QUESTS_LEARN_MORE_LINK: "[Meer informatie]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Missie accepteren",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} {streamingDurationRequirement, number} minuten voor een vriend(in) en win {questReward}.",
@@ -23741,7 +23844,7 @@
         QUESTS_TITLE: "Missie: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oeps!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Missies zijn (nog) niet beschikbaar op mobiele apparaten. Sorry daarvoor! Ga in de Discord-app of browser op je pc naar **Gebruikersinstellingen > Cadeau-Inventaris** en accepteer de missie daar.",
+          "Missies zijn (nog) niet beschikbaar op mobiele apparaten. Sorry daarvoor! Ga in de Discord-app of browser op je pc naar **Gebruikersinstellingen > Cadeau-inventaris** en accepteer de missie daar.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Missies zijn (nog) niet beschikbaar op mobiele apparaten.",
         QUESTS_MOBILE_EMBED_BODY:
@@ -23766,7 +23869,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} probeert een bepaald soort Discord-gebruiker te bereiken. Afgaande op wat je ons hebt verteld of andere informatie die we hebben verzameld, denken dat we dat deze groepen bij je passen:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Meer informatie over missies op Discord en hoe je je privacy-instellingen kunt beheren, lees je [hier]({privacySettingsUrl}).",
+          "[Meer informatie]({privacySettingsUrl}) over missies op Discord en hoe je je privacy-instellingen kunt beheren.",
         QUESTS_DISCLOSURE_LOCATION: "Locatie",
         QUESTS_DISCLOSURE_AGE: "Leeftijd",
         QUESTS_DISCLOSURE_ACTIVITY: "Activiteit: relevante game-ervaring",
@@ -23775,6 +23878,11 @@
           "Er is iets fout gegaan. Check de cadeau-inventaris voor meer beschikbare missies!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Er is een probleem opgetreden bij het volgen van je missievoortgang.",
+        QUESTS_SHARE_QUEST: "Missie delen",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Selecteer {gameTitle} om verder te gaan met je missie!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Je moet de applicatie selecteren, niet het hele scherm.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Spoor leden aan om te chatten omdat er in dit kanaal al een tijdje geen activiteit is.",
         PROMPT_CAMERA_LOADING_TITLE: "Waar kijk je naar?",
@@ -23826,10 +23934,23 @@
           "Een activiteitenkaart met '@{username} luistert naar {song} van {artist}' erop",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Een activiteitenkaart met '@{username} streamt {activity}' erop",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Speelt **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Heeft **{gameName}** gespeeld",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} is **{gameName}** aan het spelen",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} heeft **{gameName}** gespeeld",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} speelt een nieuwe game: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} heeft een nieuwe game gespeeld: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}w geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}u geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} s geleden",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Eerste keer",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activiteiten",
       };
     },
   },

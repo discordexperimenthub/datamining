@@ -1040,6 +1040,8 @@
           "Άνοιγμα ραφιού δραστηριοτήτων",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL:
           "Αποχώρηση από τη δραστηριότητα",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Αυτή η λειτουργία δεν είναι διαθέσιμη σε αυτό το OS αυτή τη στιγμή",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Αυτή η δραστηριότητα δεν είναι διαθέσιμη αυτή τη στιγμή σε αυτό το OS",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "αυτή η δραστηριότητα",
@@ -1277,6 +1279,9 @@
           "Η δραστηριότητα έχει ξεκινήσει.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Δεν μπορείς να ξεκινήσεις αυτή τη δραστηριότητα σε έναν διακομιστή με περισσότερα από 25 μέλη",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Εξωτερική εφαρμογή",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Πρόκειται να εκκινήσεις μια εξωτερική εφαρμογή. Θέλεις να συνεχίσεις;",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Η δραστηριότητα τελείωσε. Έναρξη νέας;",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1285,6 +1290,15 @@
           "Δεν έχεις άδεια να συνδεθείς σε αυτό το Κανάλι ομιλίας.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Δεν μπορείς να συμμετάσχεις σε Δραστηριότητες σε αυτό το κανάλι.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Ένα πουλί με μεγάφωνο για κεφάλι",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Προσοχή!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Πρόκειται να δοκιμάσεις τη δραστηριότητα {activityName} για πρώτη φορά.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Αυτή η εφαρμογή δεν δημιουργήθηκε από το Discord. Να δοκιμάζεις εφαρμογές μόνο από προγραμματιστές τους οποίους εμπιστεύεσαι.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Μάθε περισσότερα για τις ιδιωτικές εφαρμογές.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "Ο χρήστης $[](userHook) ξεκίνησε μια δραστηριότητα",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4934,12 +4948,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Ενεργοποίηση ή απενεργοποίηση συντόμευσης",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Αποτελέσματα",
-        SHOW_CURRENT_ACTIVITY:
-          "Προβολή της τρέχουσας δραστηριότητας ως μήνυμα κατάστασης.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Το Discord θα ενημερώσει αυτόματα την κατάστασή σου εάν παρακολουθείς μια δημόσια Σκηνή.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Το Discord θα ενημερώσει αυτόματα την κατάστασή σου βάσει του παιχνιδιού που παίζεις (εάν μπορεί να εντοπιστεί), κάποιας δραστηριότητάς σου που υποστηρίζει Rich Presence ή εάν παρακολουθείς κάποια δημόσια Σκηνή.",
         GAME_DETECTION_SERVICE: "Υπηρεσία Ανίχνευσης Παιχνιδιών",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Εγκατάσταση τοποθεσιών",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -9630,10 +9640,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% έκπτωση",
         PREMIUM_DISCOUNT_CTA: "Εξοικονόμησε !!{percent, number}!!% στο Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Εξοικονόμησε στο Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Η έκπτωση !!{percent, number}!!% θα τελειώσει {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}} μετά την αγορά. Στη συνέχεια, θα χρεώνεσαι {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Οι πρώτοι **3 μήνες** κοστίζουν **{discountedPrice}**. Μετά θα χρεώνεσαι {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {Ο επόμενος 1 μήνας} other {Οι επόμενοι {numMonths} μήνες}}** {numMonths, plural, one {κοστίζει} other {κοστίζουν}} **{discountedPrice}**. Μετά από αυτό θα χρεωθείς {regularPrice}.",
+          "**{numMonths, plural, one {Ο επόμενος μήνας} other {Οι επόμενοι {numMonths} μήνες}}** {numMonths, plural, one {κοστίζει} other {κοστίζουν}} **{discountedPrice}**. Μετά από αυτό θα χρεώνεσαι {regularPrice}/μήνα.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "η έκπτωση εφαρμόστηκε",
         CHURN_DISCOUNT_DESCRIPTION:
           "Πριν από την ακύρωση, απόλαυσε **{percent, number}% έκπτωση στη συνδρομή Nitro** για {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}}.",
@@ -11098,8 +11110,6 @@
           "Μόλις σου στείλαμε email. Κάνε κλικ στον σύνδεσμο επαλήθευσης που θα βρεις στο email για να ολοκληρώσεις την αγορά.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Συνέχεια",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Δεν έλαβες τίποτα;",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Επαναποστολή email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11939,13 +11949,59 @@
           "Πάρε αυτό το φοβερό έμβλημα ως συνδρομητής Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Για τους συλλέκτες. Απόκτησε αυτό το αποκλειστικό έμβλημα Nitro.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} Δωρεάν {numFreeBoosts, plural, =1 {Ενίσχυση} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Συγχαρητήρια για τον πρώτο σου μήνα στο Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Ανταμοιβή Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Η επιπλέον Ενίσχυση είναι δική σου και μπορείς να τη χρησιμοποιήσεις αρκεί να παραμένει ενεργή η τρέχουσα συνδρομή σου στο Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Εξαργύρωσε την ανταμοιβή σου!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Εξαργύρωση",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Εξαργυρώθηκε",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Σε ευχαριστούμε που είσαι μέλος του Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Διατήρησε την Ενίσχυσή σου με μια ενεργή συνδρομή στο Nitro. Εάν ακυρώσεις, θα γίνει επαναφορά της προόδου και θα καταργηθεί η Ενίσχυση.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Απόκτησε μια Ενίσχυση μόλις φτάσεις τον πρώτο μήνα σου στο Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Εξαργύρωση σε {days} {days, plural, =1 {μέρα} other {μέρες}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Εξαργύρωση σε {numDays} {numDays, plural, =1 {μέρα} other {μέρες}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Ανταμοιβή Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Απόκτησε μια Ενίσχυση μόλις φτάσεις τον πρώτο μήνα σου στο Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Απόκτησε μια Ενίσχυση μόλις φτάσεις τους πρώτους 3 μήνες σου στο Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Η επιπλέον Ενίσχυση είναι δική σου και μπορείς να τη χρησιμοποιήσεις αρκεί να παραμένει ενεργή η τρέχουσα συνδρομή σου στο Nitro.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "Εξαργύρωσε την ανταμοιβή σου!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Συγχαρητήρια για τον πρώτο σου μήνα στο Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Συγχαρητήρια για τους 3 μήνες σου στο Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Σε ευχαριστούμε που είσαι μέλος του Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Διατήρησε την Ενίσχυσή σου με μια ενεργή συνδρομή στο Nitro. Εάν ακυρώσεις, θα γίνει επαναφορά της προόδου και θα καταργηθεί η Ενίσχυση.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Εξαργυρώθηκε",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Απόκτησες μια επιπλέον Ενίσχυση, μπράβο σου.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "Η Ενίσχυσή σου σε περιμένει!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Σε ευχαριστούμε που είσαι μέλος του Nitro. Ορίστε μια επιπλέον Ενίσχυση για τον πρώτο μήνα σου στο Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Σε ευχαριστούμε που είσαι μέλος του Nitro. Ορίστε μια επιπλέον Ενίσχυση για τους 3 μήνες σου στο Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Ενίσχυσε το Discord σου",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
           "Προσαρμοσμένα προφίλ σε όλους τους διακομιστές",
         NITRO_MARKETING_CARDS_UNLIMITED_SUPER_REACTIONS:
-          "Απεριόριστες Σούπερ αντιδράσεις κάθε εβδομάδα",
+          "Unlimited Super Reactions per week",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 Ενισχύσεις διακομιστή, μεταφορτώσεις 500 MB και πολλά άλλα!",
         NITRO_MARKETING_JUST_THE_BASICS: "Μόνο τα βασικά",
@@ -12032,6 +12088,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Δωρεάν δοκιμή ({days, plural, =1 {# μέρα απομένει} other {# μέρες απομένουν}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Δωρεάν δοκιμή",
+        POWERED_BY_NITRO: "Παρέχεται από το Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Παίζει ένα παιχνίδι",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Ζωντανά στο !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Παίζει σε !!{platform}!!",
@@ -14527,8 +14584,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Αυτό το emoji είναι από",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Αυτό το emoji είναι από αυτόν τον διακομιστή. Μπορείς να το χρησιμοποιείς παντού.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Αυτό το emoji είναι από αυτόν τον διακομιστή. Χρησιμοποίησέ το παντού με το Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Αυτό το emoji είναι από έναν από τους διακομιστές σου. Γράψτε το όνομά σου στην μπάρα συνομιλίας για να το χρησιμοποιήσεις.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Αυτό το emoji είναι από κάποιον διακομιστή σου. Μπορείς να το χρησιμοποιήσεις παντού με το Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Θέλεις να χρησιμοποιείς αυτό το emoji παντού; Μπες στον διακομιστή.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14543,6 +14604,8 @@
           "Θέλεις να χρησιμοποιείς αυτό το emoji παντού; Πάρε το Nitro και μπες στον διακομιστή.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Αυτό το emoji είναι από έναν διακομιστή που είτε είναι διαθέσιμος μόνο με πρόσκληση είτε δεν είναι διαθέσιμος. [Μάθε περισσότερα](openPremiumSettings) σχετικά με τη χρήση προσαρμοσμένων emoji.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Αυτό το προσαρμοσμένο emoji είναι από κάποιον διακομιστή που είναι προσβάσιμος μόνο με πρόσκληση. Χρησιμοποίησε προσαρμοσμένα emoji από οποιονδήποτε διακομιστή στον οποίο έχεις εγγραφεί με το Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Πάρε αυτό το αυτοκόλλητο από",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16525,13 +16588,8 @@
           "Θέλεις σίγουρα να επεξεργαστείς αυτή την εκδήλωση;",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Η επεξεργασία αυτής της εκδήλωσης θα **ενημερώσει επίσης όλες τις εκδηλώσεις** αυτής της σειράς.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Δοκίμασέ το",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE:
-          "ΝΕΟ! Επαναλαμβανόμενες εκδηλώσεις",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Τώρα μπορείς να επαναλαμβάνεις εκδηλώσεις εύκολα.",
-        COPY_RECURRENCE_LINK: "Αντιγραφή του συνδέσμου αυτής της εκδήλωσης",
-        COPY_SERIES_LINK: "Αντιγραφή του συνδέσμου εκδηλώσεων αυτής της σειράς",
+        COPY_RECURRENCE_LINK: "Αντιγραφή συνδέσμου μόνο για αυτή την εκδήλωση",
+        COPY_SERIES_LINK: "Αντιγραφή συνδέσμου για όλες τις εκδηλώσεις",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Δημιουργία εκδήλωσης",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17845,6 +17903,8 @@
           "Αν επαναφέρεις το Nitro Classic, θα συνεχίσεις να χρεώνεσαι με το ποσό των **{price}** με τον τρόπο πληρωμής που έχεις επιλέξει σε **μηνιαία βάση** μέχρι να ακυρώσεις τη συνδρομή. Μπορείς να την ακυρώσεις οποιαδήποτε στιγμή από τη σελίδα των Ρυθμίσεων.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Αν επαναφέρεις το Nitro Classic, θα συνεχίσεις να χρεώνεσαι με το ποσό των **{price}** με τον τρόπο πληρωμής που έχεις επιλέξει σε **ετήσια βάση** μέχρι να ακυρώσεις τη συνδρομή. Μπορείς να την ακυρώσεις οποιαδήποτε στιγμή από τη σελίδα των Ρυθμίσεων.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Αν επαναφέρεις το Nitro, θα συνεχίσουμε να χρεώνουμε τον τρόπο πληρωμής σου **{discountPrice}** τον μήνα μέχρι τη λήξη της μειωμένης τιμής σου, και μετά θα χρεώνεσαι ***{defaultPrice}*** τον μήνα μέχρι να ακυρώσεις τη συνδρομή σου. Μπορείς να ακυρώσεις ανά πάσα στιγμή από τη σελίδα των Ρυθμίσεών σου.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Διατήρηση Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19409,6 +19469,9 @@
           "Φίλτρο με βάση τις πληροφορίες ασφαλείας, όπως το διάλειμμα ή η ενασχόληση με ασυνήθιστη δραστηριότητα ΑΜ.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Αποκλεισμός Μελών",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Άγνωστο",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Κρυμμένο",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Η λειτουργία ζωντανής ροής είναι ενεργή, οι κωδικοί πρόσκλησης είναι κρυμμένοι",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Ανακάλυψη διακομιστή",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Φοιτητικό Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Άλλοι μέθοδοι εγγραφής",
@@ -19486,8 +19549,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Χωρίς άδειες συντονισμού",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Παραχώρηση από",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Ριψοκίνδυνο) Παραχώρηση από",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Συντονιστής",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Παραχώρηση άδειας από αυτούς τους ρόλους",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Ανώτατος ρόλος",
@@ -20625,6 +20687,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Επεξεργασία πολυμέσων και δημιουργία meme, με την ταχύτητα του Discord.",
         EARLY_ACCESS: "Πρώιμη Πρόσβαση",
+        REWARD: "Ανταμοιβή",
         REMIXING_POST_CTA: "Αποστολή",
         REMIXING_CROP: "Περικοπή πολυμέσου",
         REMIXING_BACKDROP_EDITOR_TITLE: "Προσαρμογή και Αποκοπή",
@@ -21999,6 +22062,10 @@
           "Διακομιστές στους οποίους έστειλες μηνύματα την τελευταία εβδομάδα. Αυτοί δεν είναι σύνδεσμοι πρόσκλησης, οι γονείς σου δεν θα μπορούν να κάνουν κλικ σε αυτούς.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Διακομιστές στους οποίους έστειλε μηνύματα ο έφηβός σας την τελευταία εβδομάδα.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Διακομιστές στους οποίους ήσουν ενεργός (έστειλες μηνύματα ή πήρες μέρος σε φωνητική συνομιλία) την τελευταία εβδομάδα. Αυτοί δεν είναι σύνδεσμοι πρόσκλησης, οι γονείς σου δεν θα μπορούν να κάνουν κλικ σε αυτούς.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Διακομιστές στους οποίους ήταν ενεργός ο έφηβός σας (έστειλε μηνύματα ή πήρε μέρος σε φωνητική συνομιλία) την τελευταία εβδομάδα.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Ενεργοί διακομιστές — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -22138,6 +22205,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Οι συνδρομητές Nitro έχουν έκπτωση σε αυτή τη διακόσμηση",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} με το Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} με Nitro $[κάνε εγγραφή τώρα](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Θες νέο λουκ;",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Μμμμ, περίεργο αυτό.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -22154,6 +22223,9 @@
           "Μόλις αγοραστεί, αυτό το εφέ θα προστεθεί στη συλλογή σου και θα μπορεί να χρησιμοποιηθεί ανά πάσα στιγμή",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Αυτό το εφέ είναι τώρα μέρος της συλλογής σου και μπορεί να χρησιμοποιηθεί ανά πάσα στιγμή!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Συνήθως {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Κάνοντας κλικ στο '{buyButtonLabel}' συμφωνείς με τους [Όρους Παροχής Υπηρεσιών επί Πληρωμή]({paidServiceTermURL}). Μόλις ολοκληρώσεις την αγορά σου, το στοιχείο θα προστεθεί στη συλλογή σου και θα μπορείς να το χρησιμοποιήσεις ανά πάσα στιγμή. Να θυμάσαι πως δεν γίνονται επιστροφές χρημάτων σε συνδρομές Nitro από τη στιγμή που έχεις αγοράσει κάποιο στοιχείο.",
         COLLECTIBLES_DAYS_LEFT: "{days} μέρες ακόμη",
         COLLECTIBLES_LAST_DAY: "Τελευταία μέρα για αγορά",
         COLLECTIBLES_SHOP_VIEW_ALL: "Προβολή όλων",
@@ -22174,9 +22246,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Δάμασε τα Στοιχεία",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Φωτιά. Αέρας. Νερό. Γη. Ποιο θα απελευθερώσεις;",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Έφτασαν τα νέα στοιχεία Anime!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Νέα στυλ",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Τσέκαρε τα τελευταία στυλ που σίγουρα θα κάνουν τον senpai να σε προσέξει.",
+          "Ο Senpai σίγουρα θα σε προσέξει τώρα.",
         COLLECTIBLES_NEW_BADGE: "ΝΕΟ",
         INVENTORY_EMOJI_DETAILS_V2: "Προβολή λεπτομερειών emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23518,6 +23590,8 @@
           "{count, plural, =1 {# δευτερόλεπτο} other {# δευτερόλεπτα}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# λεπτό} other {# λεπτά}}",
         CLIPS_SAVE: "Αποθήκευση κλιπ",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Ενεργοποίησε τα κλιπ για να καταγράψεις αυτή τη ζωντανή μετάδοση.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Να επιτρέπεται στους θεατές να καταγράφουν κλιπ",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23896,6 +23970,8 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "Μετάβαση στις ρυθμίσεις",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Απόρριψη",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Ευχαριστούμε για τα σχόλια!",
         STRANGER_DANGER_BANNER_BLOCK: "Αποκλεισμός",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Κλείσιμο",
         STRANGER_DANGER_MORE_HEADER: "Τι άλλο μπορείς να κάνεις",
@@ -23943,9 +24019,20 @@
           "Αυτή η συζήτηση ίσως να μην είναι ασφαλής.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Ανάλαβε δράση για να προστατεύσεις τον εαυτό σου.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Ανάλαβε δράση για να προστατεύσεις τον εαυτό σου ανοίγοντας τα εργαλεία ασφαλείας.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Αυτή η συζήτηση ίσως να μην είναι ασφαλής. Άνοιξε τα εργαλεία ασφαλείας για να αναλάβεις δράση.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Αποκλεισμός αυτού του χρήστη",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Κατάργηση αποκλεισμού",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Ο λογαριασμός αποκλείστηκε",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST:
+          "Καταργήθηκε ο αποκλεισμός του λογαριασμού",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Ο λογαριασμός αναφέρθηκε",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Κάτι πήγε στραβά! Προσπάθησε ξανά αργότερα.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Δεν θα μπορεί να σου στείλει μήνυμα. Εάν πιστεύεις πως οι ενέργειες αυτού του χρήστη θα μπορούσαν να βλάψουν κάποιον, παρακαλούμε να το αναφέρεις στο Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Αποκλεισμός",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Αποκλεισμός και αναφορά",
@@ -24071,6 +24158,8 @@
         POLL_SUBMIT_VOTE: "Ψήφος",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} ψήφος} other {{count} ψήφοι}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} Ψήφος} other {{count} Ψήφοι}}",
         POLL_ALREADY_VOTED: "Ψήφισες",
         POLL_EDIT_VOTE: "Αλλαγή ψήφου",
         POLL_REMOVE_VOTE: "Αφαίρεση ψήφου",
@@ -24085,9 +24174,16 @@
         POLL_EXPIRED: "Η ψηφοφορία έκλεισε",
         POLL_SELECT_ONE_ANSWER: "Επίλεξε μια απάντηση",
         POLL_SELECT_MULTIPLE_ANSWERS: "Επίλεξε μία ή περισσότερες απαντήσεις",
-        POLL_SHOW_VOTES: "Εμφάνιση ψήφων",
-        POLL_HIDE_VOTES: "Απόκρυψη ψήφων",
+        POLL_SHOW_VOTES: "Εμφάνιση αποτελεσμάτων",
+        POLL_HIDE_VOTES: "Επιστροφή στην ψηφοφορία",
+        POLL_VOTES_NO_RESULTS_TITLE: "Δεν υπάρχει τίποτα εδώ",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "Δεν υπάρχουν ψήφοι για αυτή την απάντηση",
+        POLL_COACHMARK_TITLE: "ΝΕΟ! Έφτασαν οι ψηφοφορίες.",
+        POLL_COACHMARK_SUBTITLE:
+          "Διοργάνωσε εκδηλώσεις, σύλλεξε απόψεις ή κάνε μια χαζή ερώτηση στη συνομιλία.",
         POLL_NOT_INTERACTIVE: "Δες το αρχικό μήνυμα για να αλληλεπιδράσεις",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Δεν υπάρχει τίποτα εδώ",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Δεν υπάρχουν ψήφοι για αυτή την απάντηση.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Ψήφοι",
@@ -24116,8 +24212,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Η ψηφοφορία θα διαρκέσει",
         CREATE_POLL_DURATION_LABEL: "Διάρκεια",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 ώρα",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 ώρες",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ημέρες",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 εβδομάδα",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24145,6 +24239,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Περιγραφή εικόνας (Κείμενο Alt)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Εναλλακτικό κείμενο:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Επιλογή πολυμέσων",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Ωχ, κάτι ξέχασες. Πρόσθεσε μια ερώτηση.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ωχ, κάτι ξέχασες. Πρόσθεσε τουλάχιστον μία απάντηση.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Μην αφήσεις το πεδίο των απαντήσεων κενό! Πρόσθεσε λίγο κείμενο.",
         POLL_END_EARLY: "Λήξη ψηφοφορίας τώρα",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Λήξη ψηφοφορίας τώρα;",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -24177,11 +24277,17 @@
         QUESTS_COMPLETE_TOOLTIP:
           "Πάτησε διεκδίκηση για να πάρεις τον κωδικό ανταμοιβής σου!",
         QUESTS_ACCEPT_TOOLTIP:
-          "Αποδέξου την αποστολή και ολοκλήρωσε την επιμέρους αποστολή για να ξεκλειδώσεις την ανταμοιβή",
+          "Αποδέξου την Αποστολή και ολοκλήρωσε την επιμέρους αποστολή για να ξεκλειδώσεις την ανταμοιβή",
         QUESTS_IN_PROGRESS_TOOLTIP:
           "Ολοκλήρωσε την επιμέρους αποστολή για να ξεκλειδώσεις την ανταμοιβή",
         QUESTS_STREAM_TASK:
           "Κάνε ζωντανή μετάδοση του {gameTitle} σε έναν φίλο για {minutes} λεπτά",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Επαλήθευσε τον λογαριασμό σου για να διεκδικήσεις ανταμοιβές!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Στείλαμε ένα email επαλήθευσης στη διεύθυνση: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Ωχ! Δεν καταφέραμε να σου στείλουμε ένα email επαλήθευσης.",
         QUEST_REWARD: "Κέρδισε {reward}",
         QUESTS_REWARD_CODE_HEADER: "Ο κωδικός ανταμοιβής σου",
         QUESTS_REWARD_CODE_CONGRATS: "Συγχαρητήρια!",
@@ -24203,8 +24309,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Χορηγούμενο",
+        QUESTS_PROMOTED: "Διαφημιζόμενο",
         QUESTS_LEARN_MORE_V2: "Μάθε περισσότερα",
         QUESTS_LEARN_MORE_STACKED: "Μάθε\n\nπερισσότερα",
+        QUESTS_LEARN_MORE_LINK: "[Μάθε περισσότερα]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Αποδοχή αποστολής",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Κάνε ζωντανή μετάδοση του {gameTitle} σε έναν φίλο για {streamingDurationRequirement, number} λεπτά και κέρδισε {questReward}.",
@@ -24214,11 +24322,11 @@
         QUESTS_TITLE: "Αποστολή {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ουπς!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Οι αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα. Συγγνώμη για αυτό! Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις **Ρυθμίσεις χρήστη > Απόθεμα δώρων** και να αποδεχτείς την αποστολή εκεί.",
+          "Οι Αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα. Συγγνώμη για αυτό! Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις **Ρυθμίσεις χρήστη > Απόθεμα δώρων** και να αποδεχτείς την Αποστολή εκεί.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Οι αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα.",
         QUESTS_MOBILE_EMBED_BODY:
-          "Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις \nΡυθμίσεις χρήστη > Απόθεμα δώρων και να αποδεχτείς την αποστολή εκεί.",
+          "Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις \nΡυθμίσεις χρήστη > Απόθεμα δώρων και να αποδεχτείς την Αποστολή εκεί.",
         QUESTS_GET_THIS_GAME: "Απόκτησε αυτό το παιχνίδι",
         QUESTS_DISCLOSURE_LABEL: "Γιατί το βλέπω αυτό;",
         QUESTS_SHARE_LINK: "Αντιγραφή συνδέσμου κοινοποίησης",
@@ -24239,7 +24347,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "Η {gamePublisher} προσπαθεί να προσεγγίσει ορισμένους τύπους χρηστών του Discord. Με βάση αυτά που μας είπες ή άλλες πληροφορίες που συλλέξαμε, πιστεύουμε ότι ταιριάζεις σε κάποιες από αυτές τις ομάδες:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Μάθε περισσότερα σχετικά με τις Αποστολές στο Discord και το πώς να διαχειρίζεσαι τις Ρυθμίσεις Απορρήτου [εδώ]({privacySettingsUrl}).",
+          "[Μάθε περισσότερα]({privacySettingsUrl}) σχετικά με τις Αποστολές στο Discord και το πώς να διαχειρίζεσαι τις Ρυθμίσεις Απορρήτου σου.",
         QUESTS_DISCLOSURE_LOCATION: "Τοποθεσία",
         QUESTS_DISCLOSURE_AGE: "Ηλικία",
         QUESTS_DISCLOSURE_ACTIVITY: "Δραστηριότητα: Σχετική με το gaming",
@@ -24247,7 +24355,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "Κάτι πήγε στραβά εδώ. Τσέκαρε το Απόθεμα δώρων για περισσότερες διαθέσιμες Αποστολές!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "Υπάρχει ένα πρόβλημα με την παρακολούθηση της προόδου των αποστολών σου.",
+          "Υπάρχει ένα πρόβλημα με την παρακολούθηση της προόδου των Αποστολών σου.",
+        QUESTS_SHARE_QUEST: "Κοινοποίηση Αποστολής",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Επίλεξε {gameTitle} για να σημειώσεις πρόοδο στην Αποστολή σου!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Πρέπει να επιλέξεις την εφαρμογή, όχι ολόκληρη την οθόνη.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Παρακίνησε τα μέλη να συνομιλήσουν αφού αυτό το κανάλι είναι ανενεργό εδώ και λίγο καιρό.",
         PROMPT_CAMERA_LOADING_TITLE: "Τι κοιτάς;",
@@ -24302,10 +24415,23 @@
           "Μια κάρτα δραστηριότητας εμφανίζει τον χρήστη @{username} να ακούει το τραγούδι {song} του καλλιτέχνη {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Μια κάρτα δραστηριότητας εμφανίζει τον χρήστη @{username} να κάνει ζωντανή μετάδοση της δραστηριότητας {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Παίζει **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Έπαιξε **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "Ο χρήστης {userName} παίζει **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "Ο χρήστης {userName} έπαιξε **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "Ο χρήστης {userName} παίζει ένα νέο παιχνίδι: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "Ο χρήστης {userName} έπαιξε ένα νέο παιχνίδι: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}εβδ πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}η πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}ώ πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}λ πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}δευτ. πριν",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Πρώτη φορά",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Δραστηριότητα",
       };
     },
   },

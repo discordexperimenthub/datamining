@@ -1003,6 +1003,8 @@
           "वॉइस कंट्रोल दिखाएं",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "एक्टिविटी शेल्फ़ ओपन करें",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "एक्टिविटी छोड़ें",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "अभी इस OS पर ये फ़ीचर उपलब्ध नहीं है",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "यह एक्टिविटी इस समय इस OS पर उपलब्ध नहीं है",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "यह एक्टिविटी",
@@ -1226,6 +1228,9 @@
           "एक्टिविटी शुरू हुई.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "आप इस ऐप को 25 से ज़्यादा मेंबर वाले सर्वर में लॉन्च नहीं कर सकते",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "बाहरी ऐप्लिकेशन",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "आप बाहरी ऐप लॉन्च कर रहे हैं. क्या आप इसे जारी रखना चाहते हैं?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "एक्टिविटी खत्म हो गई. नई शुरू करें?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "एक्टिविटी शुरू हो गई",
@@ -1233,6 +1238,15 @@
           "इस वॉयस चैनल को जॉइन करने के लिए आपके पास परमिशन नहीं है.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "आप इस चैनल की एक्टिविटी को जॉइन नहीं कर सकते.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "सिर पर मेगाफ़ोन लगाए एक चिड़िया",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "सावधान!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "आप पहली बार {activityName} को टेस्ट कर रहे हैं.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "इस ऐप को Discord ने नहीं बनाया है. सिर्फ़ अपने भरोसेमंद डिवेलपर्स के ऐप्स को टेस्ट करें.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "प्राइवेट ऐप्स के बारे में ज़्यादा जानें.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) ने एक्टिविटी शुरू की",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4787,12 +4801,8 @@
           "जॉइन या स्विच करने के लिए वॉयस चैनल सलेक्ट करें",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "कीबाइंड इनेबल या डिसेबल करें",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "रिज़ल्ट्स",
-        SHOW_CURRENT_ACTIVITY:
-          "स्टेटस मैसेज में फिलहाल चल रही एक्टिविटी को डिस्प्ले करें.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "अगर आप पब्लिक स्टेज पर हैं, तो Discord अपने आप आपका स्टेटस अपडेट कर देगा.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "आपके जो गेम खेल रहे हैं (अगर डिटेक्ट किए जाने वाला हो), Rich Presence को सपोर्ट करने वाली एक्टिविटी जो आप कर रहे हैं या अगर आप पब्लिक स्टेज पर हैं, के आधार पर Discord अपने आप आपका स्टेटस अपडेट कर देगा.",
         GAME_DETECTION_SERVICE: "गेम डिटेक्शन सर्विस",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "इंस्टॉल होने की लोकेशन",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "इन्स्टॉल लोकेशन ऐड करें",
@@ -5430,7 +5440,7 @@
         LOGOUT: "लॉग आउट करें",
         SOUNDS: "साउंड",
         PREMIUM: "Nitro",
-        BASIC: "बेसिक",
+        BASIC: "Basic",
         SOUND_MESSAGE: "मैसेज",
         SOUND_DEAFEN: "आवाज़ बंद करना",
         SOUND_UNDEAFEN: "आवाज़ ऑन करना",
@@ -9369,10 +9379,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% डिस्काउंट",
         PREMIUM_DISCOUNT_CTA: "Nitro पर !!{percent, number}!!% सेव करें",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro पर सेव करें",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "आपका !!{percent, number}!!% डिस्काउंट खरीदारी के {numMonths, plural, one {1 महीने} other {{numMonths} महीनों}} बाद खत्म हो जाएगा. उसके बाद आपसे {regularPrice} का शुल्क लिया जाएगा.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "आपके पहले **3 महीने**, **{discountedPrice}** पर हैं. उसके बाद आपसे {regularPrice} शुल्क लिया जाएगा.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "अगले **{numMonths, plural, one {1 महीने} other {{numMonths} महीनों}}** तक इसकी कीमत {numMonths, plural, one {है} other {हैं}} **{discountedPrice}**. इसके बाद आपसे {regularPrice} का शुल्क लिया जाएगा.",
+          "अगले **{numMonths, plural, one {महीने} other {{numMonths} महीनों}}** तक इसकी कीमत {numMonths, plural, one {है} other {हैं}} **{discountedPrice}**. इसके बाद आपसे हर महीने {regularPrice}का शुल्क लिया जाएगा.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "डिस्काउंट अप्लाई किए गए",
         CHURN_DISCOUNT_DESCRIPTION:
           "कैंसल करने से पहले, अपने Nitro सब्सक्रिप्शन पर **{percent, number}% का डिस्काउंट पाएं. इस डिस्काउंट का** {numMonths, plural, one {1 महीने} other {{numMonths} महीनों}} तक मज़ा लें.",
@@ -10798,8 +10810,6 @@
           "हमने आपको अभी एक ईमेल भेजा है. इस खरीदारी को ऑथराइज़ करने के लिए ईमेल में दिए गए वेरिफिकेशन लिंक पर क्लिक करें.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "जारी रखें",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "कुछ नहीं मिला?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "ईमेल फिर से भेजें",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11619,7 +11629,52 @@
           "Nitro के सब्सक्राइबर होने की खुशी में यह कूल बैज पाएं.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "कलेक्टर के लिए. ये खास Nitro बैज हासिल करें.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} फ़्री {numFreeBoosts, plural, =1 {बूस्ट} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Nitro के पहले महीने के लिए बधाई.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro रिवॉर्ड",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "आपके मौजूदा Nitro सब्सक्रिप्शन एक्टिव रहने तक आप अपने एक्स्ट्रा बूस्ट का इस्तेमाल कर सकते हैं.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "अपना रिवॉर्ड रिडीम करें!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "रिडीम करें",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "रिडीम किया गया",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Nitro मेंबर बने रहने के लिए धन्यवाद!",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "एक्टिव Nitro सब्सक्रिप्शन के साथ अपना बूस्ट बनाए रखें. इसे कैंसल करने से प्रोग्रेस रीसेट होती है और बूस्ट रिमूव हो जाता है.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Nitro के पहले महीने में बूस्ट कमाएं.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "{days} {days, plural, =1 {दिन} other {दिनों}}में रिडीम करें",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "{numDays} {numDays, plural, =1 {दिन} other {दिनों}}में रिडीम करें",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro रिवॉर्ड",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro के पहले महीने में बूस्ट कमाएं.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro के 3 महीने होने पर बूस्ट कमाएं.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "आपके मौजूदा Nitro सब्सक्रिप्शन एक्टिव रहने तक आप अपने एक्स्ट्रा बूस्ट का इस्तेमाल कर सकते हैं.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "अपना रिवॉर्ड रिडीम करें!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro के पहले महीने के लिए बधाई.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro के 3 महीनों के लिए बधाई.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Nitro मेंबर बने रहने के लिए धन्यवाद!",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "एक्टिव Nitro सब्सक्रिप्शन के साथ अपना बूस्ट बनाए रखें. इसे कैंसल करने से प्रोग्रेस रीसेट होती है और बूस्ट रिमूव हो जाता है.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "रिडीम किया गया",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "आपने एक्स्ट्रा बूस्ट कमाया है, बहुत बढ़िया.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "आपका बूस्ट इंतज़ार कर रहा है!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro मेंबर बने रहने के लिए धन्यवाद. Nitro का पहला महीना पूरा करने के लिए ये रहा एक्स्ट्रा बूस्ट.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro मेंबर बने रहने के लिए धन्यवाद. Nitro के तीन महीने पूरे करने के लिए ये रहा एक्स्ट्रा बूस्ट.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "अपने Discord को सुपरचार्ज करें",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES: "सभी सर्वर पर कस्टम प्रोफ़ाइल्स",
@@ -11627,8 +11682,8 @@
           "हर हफ़्ते अनलिमिटेड सुपर रिएक्शन",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 सर्वर बूस्ट, 500 MB अपलोड और बहुत कुछ!",
-        NITRO_MARKETING_JUST_THE_BASICS: "बस बेसिक चीज़ें",
-        NITRO_MARKETING_BASIC_PERKS: "Nitro Basic पर्क्स",
+        NITRO_MARKETING_JUST_THE_BASICS: "Basic पर्क्स",
+        NITRO_MARKETING_BASIC_PERKS: "Nitro Basic के पर्क्स",
         MARKETING_PAGE_CAROUSEL_TITLE: "Discord को अपनाएं",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "अपना Nitro चुनें",
         MARKETING_PAGE_CHOOSE_PLAN_SUBTITLE:
@@ -11710,6 +11765,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "फ़्री ट्रायल ({days, plural, =1 {# दिन बचा है} other {# दिन बचे हैं}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "फ़्री ट्रायल",
+        POWERED_BY_NITRO: "Nitro द्वारा संचालित",
         USER_ACTIVITY_HEADER_PLAYING: "गेम खेल रहे हैं",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "!!{platform}!! पर लाइव",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -14138,8 +14194,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "यह इमोजी को यहां से है",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "यह इमोजी इस सर्वर का है. आप इसका इस्तेमाल कहीं भी कर सकते हैं.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "ये इमोजी इस सर्वर की है. इसे Nitro के साथ कहीं भी इस्तेमाल करें.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "यह इमोजी आपके ही किसी सर्वर का है. इस्तेमाल करने के लिए इसका नाम चैट बार में टाइप करें.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "ये इमोजी आपके किसी एक सर्वर से है. आप Nitro के साथ इसे कहीं भी इस्तेमाल कर सकते हैं.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "इस इमोजी को सभी जगह इस्तेमाल करना चाहते हैं? सर्वर से जुड़िये.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14154,6 +14214,8 @@
           "क्या आप सभी जगहों पर इस इमोजी का इस्तेमाल करना चाहते हैं? सर्वर से जुड़िये और Nitro को अपनाइए.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "ये इमोजी ऐसे सर्वर से है जो या तो इनवाइट-ओन्ली या उपलब्ध नहीं है. कस्टम इमोजी का इस्तेमाल करने के बारे में [और ज़्यादा जानें](openPremiumSettings).",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "ये इमोजी इनवाइट-ओन्ली सर्वर से है. Nitro से जुड़े किसी भी सर्वर से कस्टम इमोजी का इस्तेमाल करें.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "यह स्टिकर यहां से पाएं",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "यह स्टिकर यहां से है",
@@ -16082,12 +16144,8 @@
           "क्या आप वाकई इस इवेंट को एडिट करना चाहते हैं?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "इस इवेंट को एडिट करने से इस सीरीज़ के **सभी इवेंट अपडेट हो जाएंगे**.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "इसे आज़माएं",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "नया! रिपीट होने वाले इवेंट",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "अब आप आसानी से इवेंट रिपीट कर सकते हैं.",
-        COPY_RECURRENCE_LINK: "इस इवेंट लिंक को कॉपी करें",
-        COPY_SERIES_LINK: "इवेंट सीरीज़ लिंक को कॉपी करें",
+        COPY_RECURRENCE_LINK: "सिर्फ़ इसी इवेंट के लिए लिंक कॉपी करें",
+        COPY_SERIES_LINK: "सभी इवेंट्स के लिए लिंक कॉपी करें",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "इवेंट क्रिएट करें",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17387,6 +17445,8 @@
           "अगर आप Nitro Classic को फिर से शुरू करते हैं, तो हम आपके पेमेंट के तरीके से आपको **{price}** चार्ज करना फिर से शुरू कर देंगे और **मासिक** आधार पर तब तक चार्ज करना जारी रखेंगे जब तक आप सब्सक्रिप्शन को कैंसल नहीं करते. आप अपने सेटिंग्स पेज से कभी भी कैंसल कर सकते हैं.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "अगर आप Nitro Classic को फिर से शुरू करते हैं, तो हम आपके पेमेंट के तरीके से आपको **{price}** चार्ज करना फिर से शुरू कर देंगे और **वार्षिक** आधार पर तब तक चार्ज करना जारी रखेंगे जब तक आप सब्सक्रिप्शन को कैंसल नहीं करते. आप अपने सेटिंग्स पेज से कभी भी कैंसल कर सकते हैं.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "अगर आप Nitro को बहाल करते हैं, तो हम आपकी डिस्काउंट दर खत्म होने तक आपके पेमेंट के तरीके से हर महीने **{discountPrice}** चार्ज करना जारी रखेंगे, फिर जब तक आप अपना सब्सक्रिप्शन कैंसल नहीं कर देते, तब तक हर महीने ***{defaultPrice}*** चार्ज किए जाएंगे. आप अपने सेटिंग पेज से किसी भी समय इसे कैंसल कर सकते हैं.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Nitro को बनाए रखें",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -18898,6 +18958,9 @@
           "समय खत्म होना या असामान्य DM एक्टिविटी में शामिल होना, जैसी सुरक्षा जानकारी के आधार पर फ़िल्टर करें.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "मेम्बर बैन करें",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "अनजान",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "छिपे हुए",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "स्ट्रीमर मोड एक्टिव है, इनवाइट कोड छिपे हुए हैं",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "सर्वर डिस्कवरी",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "स्टूडेंट हब",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "जॉइन करने के दूसरे तरीके",
@@ -18964,8 +19027,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "दी हुई सभी परमिशन",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "कोई मॉड परमिशन नहीं",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "किसने दी",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(जोखिम) द्वारा दी गई",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "मॉडरेटर",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "इन रोल के द्वारा दी गई परमिशन",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "सबसे ऊंचा रोल",
@@ -20075,6 +20137,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Discord की स्पीड में मीडिया एडिटिंग और मीम क्रिएशन करें.",
         EARLY_ACCESS: "अर्ली ऐक्सेस",
+        REWARD: "रिवॉर्ड",
         REMIXING_POST_CTA: "भेजें",
         REMIXING_CROP: "मीडिया क्रॉप करें",
         REMIXING_BACKDROP_EDITOR_TITLE: "एडजस्ट और क्रॉप करें",
@@ -21422,6 +21485,10 @@
           "वे सर्वर जिनमें आपने पिछले हफ़्ते मैसेज भेजे थे. ये इनवाइट लिंक नहीं हैं, आपके पेरेंट्स इन पर क्लिक नहीं कर पाएंगे.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "वे सर्वर जिनमें आपके टीनेजर बच्चे ने पिछले हफ़्ते मैसेज भेजे थे.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "वे सर्वर जिनमें आप पिछले हफ़्ते एक्टिव थे (मैसेज भेजे या वॉयस चैट को जॉइन किया). ये इनवाइट लिंक नहीं हैं, आपके पेरेंट्स इन पर क्लिक नहीं कर पाएंगे.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "वे सर्वर जिनमें आपका टीनेजर बच्चा पिछले हफ़्ते एक्टिव था (मैसेज भेजे या वॉयस चैट को जॉइन किया).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "एक्टिव सर्वर — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21563,6 +21630,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro के सबस्क्राइबर्स को इस डेकोरेशन पर डिस्काउंट मिलती है",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro के साथ {price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "Nitro के साथ {price} में $[अभी सब्सक्राइब करें](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "नए लुक के लिए तैयार हैं?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "खैर, ये बहुत अजीब है.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21579,6 +21648,9 @@
           "एक बार खरीदारी करने के बाद, इस इफ़ेक्ट को आपके कलेक्शन में ऐड कर दिया जाएगा और कभी भी इसका इस्तेमाल किया जा सकेगा",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "ये इफ़ेक्ट अब आपकी कलेक्शन का हिस्सा है और इसे कभी भी इस्तेमाल किया जा सकता है!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "आमतौर पर {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "'{buyButtonLabel}' पर क्लिक करके आप [पेड सेवा की शर्तों]({paidServiceTermURL}) से सहमत होते हैं. एक बार जब आप अपनी खरीदारी पूरी कर लेते हैं, तो आइटम आपके कलेक्शन में जोड़ दिया जाएगा और आप उसे किसी भी समय इस्तेमाल कर सकते हैं. ध्यान दें कि एक बार आइटम खरीदने के बाद Nitro सब्सक्रिप्शन का रिफ़ंड नहीं किया जाएगा.",
         COLLECTIBLES_DAYS_LEFT: "{days} दिन बचे हैं",
         COLLECTIBLES_LAST_DAY: "खरीदने का आखिरी दिन",
         COLLECTIBLES_SHOP_VIEW_ALL: "सब देखें",
@@ -21599,9 +21671,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "इन एलिमेंट्स का इस्तेमाल करें",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "फ़ायर. विंड. वॉटर. अर्थ. आप कौन-से एलिमेंट को सामने लाना चाहते हैं?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "नए एनीमे आइटम आ गए हैं!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "एनीमे: नए स्टाइल",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "लेटेस्ट स्टाइल्स पर नज़र डालें, जिनसे आप यकीनन सेनपाई की नज़रों में आ जाएंगे.",
+          "सेंपाई अब आपको ज़रूर नोटिस करेंगे.",
         COLLECTIBLES_NEW_BADGE: "नया",
         INVENTORY_EMOJI_DETAILS_V2: "इमोजी की जानकारी देखें",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22917,6 +22989,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {# सेकंड} other {#सेकंड}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# मिनट} other {# मिनट}}",
         CLIPS_SAVE: "क्लिप सेव करें",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "इस स्ट्रीम को कैप्चर करने के लिए क्लिप्स इनेबल करें.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "व्यूअर्स को क्लिप्स कैप्चर करने की अनुमति दें",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23287,6 +23361,8 @@
           "हम Discord में टीनेजर की सुरक्षा को गंभीरता से लेते हैं. अगर हमें किसी बातचीत में सुरक्षा से जुड़ा कोई संभावित खतरा नज़र आता है, तो हम आपको बता देंगे. [सुरक्षा अलर्ट के बारे में और जानें.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "सेटिंग पर जाएं",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "खारिज कर दें",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "आपके फ़ीडबैक के लिए धन्यवाद!",
         STRANGER_DANGER_BANNER_BLOCK: "ब्लॉक करें",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "बंद करे",
         STRANGER_DANGER_MORE_HEADER: "जितना ज़्यादा से ज़्यादा आप कर सकते हैं",
@@ -23332,9 +23408,19 @@
           "शायद ये बातचीत सुरक्षित नहीं है.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "अपनी सुरक्षा के लिए एक्शन लें.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "सेफ़्टी टूल्स खोलकर अपनी सुरक्षा के लिए एक्शन लें.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "ये बातचीत असुरक्षित हो सकती है. एक्शन लेने के लिए सेफ़्टी टूल्स खोलें.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "इन्हें ब्लॉक करें",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "ब्लॉक न करें",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "अकाउंट ब्लॉक किया गया",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "अकाउंट अनब्लॉक किया गया",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "अकाउंट रिपोर्ट किया गया",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "कुछ गड़बड़ी हुई है. कृपया कुछ देर बाद फिर से कोशिश करें.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "वो आपको मैसेज नहीं कर सकेंगे. अगर आपको लगता है कि उनकी वजह से किसी को नुकसान हो सकता है, तो कृपया Discord को रिपोर्ट सबमिट करें.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "ब्लॉक करें",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "ब्लॉक और रिपोर्ट करें",
@@ -23453,6 +23539,8 @@
         POLL_SUBMIT_VOTE: "वोट",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} वोट} other {{count} वोट}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} वोट} other {{count} वोट}}",
         POLL_ALREADY_VOTED: "वोट किया गया",
         POLL_EDIT_VOTE: "वोट बदलें",
         POLL_REMOVE_VOTE: "वोट हटाएं",
@@ -23467,9 +23555,15 @@
         POLL_EXPIRED: "पोल बंद हुआ",
         POLL_SELECT_ONE_ANSWER: "एक जवाब चुनें",
         POLL_SELECT_MULTIPLE_ANSWERS: "एक या ज़्यादा जवाब चुनें",
-        POLL_SHOW_VOTES: "वोट दिखाएं",
-        POLL_HIDE_VOTES: "वोट छिपाएं",
+        POLL_SHOW_VOTES: "नतीजे दिखाएं",
+        POLL_HIDE_VOTES: "वोट करने के लिए वापस जाएं",
+        POLL_VOTES_NO_RESULTS_TITLE: "यहां देखने के लिए कुछ नहीं है",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "इस जवाब के लिए कोई वोट नहीं है",
+        POLL_COACHMARK_TITLE: "नए! पोल शुरू हो गए हैं.",
+        POLL_COACHMARK_SUBTITLE:
+          "इवेंट प्लान करें, राय बटोरें, या चैट में बेतुके सवाल पूछें.",
         POLL_NOT_INTERACTIVE: "बातचीत करने के लिए ओरिजिनल मैसेज देखें",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "यहां देखने के लिए कुछ नहीं है",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "इस जवाब के लिए कोई वोट नहीं है.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "वोट",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "वोटर बताएं",
@@ -23494,8 +23588,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "एक और जवाब ऐड करें",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "के लिए पोल लाइव होगा",
         CREATE_POLL_DURATION_LABEL: "अवधि",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 घंटा",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 घंटे",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 दिन",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 हफ्ता",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23522,6 +23614,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "इमेज डिस्क्रिप्शन (Alt टेक्स्ट)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "वैकल्पिक टेक्स्ट:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "मीडिया सलेक्ट करें",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "ओह, आप कुछ भूल गए हैं. कृपया सवाल ऐड करें.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "ओह, आप कुछ भूल गए हैं. कृपया कम से कम एक जवाब ऐड करें.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "जवाब की जगह ऐसे न छोड़ें! कृपया कोई टेक्स्ट ऐड करें.",
         POLL_END_EARLY: "पोल खत्म करें",
         POLL_END_EARLY_CONFIRMATION_TITLE: "पोल खत्म करें?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23559,6 +23657,12 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "रिवॉर्ड अनलॉक करने के लिए टास्क पूरा करें",
         QUESTS_STREAM_TASK:
           "फ़्रेंड को {minutes} मिनट के लिए {gameTitle} स्ट्रीम करें",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "रिवॉर्ड क्लेम करने के लिए अपना अकाउंट वेरीफ़ाई करें!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "हमने [{emailAddress}]({emailAddressLink}) पर वेरीफ़िकेशन ईमेल भेजा है",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "ओफ्फ़ोह! हम आपको एक वेरीफ़िकेशन ईमेल नहीं भेज सके.",
         QUEST_REWARD: "{reward} जीतें",
         QUESTS_REWARD_CODE_HEADER: "आपका रिवॉर्ड कोड",
         QUESTS_REWARD_CODE_CONGRATS: "बधाई हो!",
@@ -23582,8 +23686,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "स्पॉन्सर किया गया",
+        QUESTS_PROMOTED: "प्रमोट किया गया",
         QUESTS_LEARN_MORE_V2: "ज़्यादा जानें",
         QUESTS_LEARN_MORE_STACKED: "और ज़्यादा\n\nजानें",
+        QUESTS_LEARN_MORE_LINK: "[और ज़्यादा जानें]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "क्वेस्ट एक्सेप्ट करें",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "फ़्रेंड को {streamingDurationRequirement, number} मिनट के लिए {gameTitle} स्ट्रीम करें और {questReward} जीतें.",
@@ -23596,7 +23702,7 @@
           "माफ़ करें.. क्वेस्ट अभी तक मोबाइल पर उपलब्ध नहीं हैं! अपने डेस्कटॉप Discord ऐप या ब्राउज़र से आप **यूज़र सेटिंग > गिफ़्ट इन्वेंटरी** पर जाकर क्वेस्ट स्वीकार कर सकते हैं.",
         QUESTS_MOBILE_EMBED_TITLE: "फ़िलहाल क्वेस्ट मोबाइल पर उपलब्ध नहीं हैं.",
         QUESTS_MOBILE_EMBED_BODY:
-          "अपने डेस्कटॉप Discord ऐप या ब्राउज़र से \nयूज़र सेटिंग > गिफ़्ट सूची पर जाएं और वहां पर क्वेस्ट स्वीकार करें.",
+          "अपने डेस्कटॉप Discord ऐप या ब्राउज़र से \nयूज़र सेटिंग > गिफ़्ट इन्वेंटरी पर जाकर आप क्वेस्ट स्वीकार कर सकते हैं.",
         QUESTS_GET_THIS_GAME: "ये गेम खरीदें",
         QUESTS_DISCLOSURE_LABEL: "मुझे ये क्यों दिख रहा है?",
         QUESTS_SHARE_LINK: "शेयर लिंक कॉपी करें",
@@ -23618,7 +23724,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} कुछ खास तरह के Discord यूज़र से संपर्क करना चाहते हैं. आपने हमें जो कुछ बताया है या हमने जो जानकारी इकट्ठा की है, उसके आधार पर हमें लगता है कि आप इनमें से कुछ ग्रुप में फ़िट बैठते हैं :",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord पर क्वेस्ट के बारे में और अपनी प्राइवेसी सेटिंग को मैनेज करने के बारे में ज़्यादा जानकारी [यहां]({privacySettingsUrl}) पाएं.",
+          "Discord पर क्वेस्ट के बारे में और अपनी प्राइवेसी सेटिंग को मैनेज करने के बारे में [ज़्यादा जानकारी]({privacySettingsUrl}) पाएं.",
         QUESTS_DISCLOSURE_LOCATION: "लोकेशन",
         QUESTS_DISCLOSURE_AGE: "उम्र",
         QUESTS_DISCLOSURE_ACTIVITY: "एक्टिविटी : गेमिंग-संबंधी",
@@ -23627,6 +23733,11 @@
           "कुछ गड़बड़ी हुई है. अन्य उपलब्ध क्वेस्ट के लिए गिफ़्ट इन्वेंटरी पर जाएं!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "आपके क्वेस्ट की प्रोग्रेस देखने में समस्या आ रही है.",
+        QUESTS_SHARE_QUEST: "क्वेस्ट शेयर करें",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "अपनी क्वेस्ट में प्रोग्रेस करने के लिए {gameTitle} सलेक्ट करें!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "आपको पूरी स्क्रीन के बजाय ऐप्लिकेशन सलेक्ट करनी चाहिए.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "इस चैनल के कुछ समय तक एक्टिव न रहने के बाद मेंबर्स को चैट करने के लिए प्रेरित करें.",
         PROMPT_CAMERA_LOADING_TITLE: "आप क्या देखना चाहते हैं?",
@@ -23677,10 +23788,23 @@
           "@{username} को {artist} का {song} सुनते दिखाता एक एक्टिविटी कार्ड",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "@{username} को {activity} स्ट्रीम करते हुए दिखाता एक एक्टिविटी कार्ड",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "**{gameName}** खेल रहे हैं",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "ने **{gameName}** खेला",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} **{gameName}** खेल रहा है",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} **{gameName}** ने खेला",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} नया गेम खेल रहा है: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} ने नया गेम खेला: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}हफ़्ते पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}दिन पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}घंटे पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}मिनट पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}पहले",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "पहली बार",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "एक्टिविटी",
       };
     },
   },

@@ -5027,12 +5027,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Activer ou d\xe9sactiver le raccourci clavier",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "R\xe9sultats",
-        SHOW_CURRENT_ACTIVITY:
-          "Affiche l'activit\xe9 en cours en tant que message de statut.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord mettra automatiquement ton statut \xe0 jour si tu participes \xe0 une conf\xe9rence publique.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord mettra automatiquement ton statut \xe0 jour en fonction du jeu auquel tu joues (s'il est d\xe9tectable), de tes activit\xe9s soutenant Rich Presence, ou si tu participes \xe0 une conf\xe9rence publique.",
         GAME_DETECTION_SERVICE: "Service de d\xe9tection de jeu",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Emplacements d'installation",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5701,7 +5697,7 @@
         LOGOUT: "D\xe9connexion",
         SOUNDS: "Sons",
         PREMIUM: "Nitro",
-        BASIC: "De base",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Message",
         SOUND_DEAFEN: "Mettre en sourdine",
         SOUND_UNDEAFEN: "R\xe9tablir le son",
@@ -11282,8 +11278,6 @@
           "On vient de t'envoyer un e-mail. Clique sur le lien de v\xe9rification dans l'e-mail pour autoriser cet achat.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continuer",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Tu n'as rien re\xe7u\xa0?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Renvoyer l'e-mail",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -12197,7 +12191,7 @@
           "Super r\xe9actions illimit\xe9es par semaine",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2\xa0boosts de serveur, 500\xa0Mo d'uploads et bien plus encore\xa0!",
-        NITRO_MARKETING_JUST_THE_BASICS: "Simples. Basiques.",
+        NITRO_MARKETING_JUST_THE_BASICS: "Les basiques",
         NITRO_MARKETING_BASIC_PERKS: "Avantages de Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "Prends le contr\xf4le de Discord",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Choisis ton abonnement Nitro",
@@ -16666,7 +16660,7 @@
         EVENT_MARK_INTERESTED: "Dire que tu es int\xe9ress\xe9(e)",
         EVENT_MARK_NOT_INTERESTED: "Dire que tu n'es pas int\xe9ress\xe9(e)",
         EVENT_DETAILS_A11Y_HINT:
-          "Double-clique pour afficher les d\xe9tails de l'\xe9v\xe9nement",
+          "Touche deux fois pour afficher les d\xe9tails de l'\xe9v\xe9nement",
         SCHEDULE_EVENT_DESCRIPTION:
           "Programmer une conf\xe9rence \xe0 une date ult\xe9rieure.",
         GO_TO_CHANNEL: "Aller dans le salon",
@@ -16885,11 +16879,6 @@
           "Veux-tu vraiment modifier cet \xe9v\xe9nement\xa0?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Modifier cet \xe9v\xe9nement **mettra \xe9galement \xe0 jour tous les \xe9v\xe9nements** de cette s\xe9rie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Essayer",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE:
-          "NOUVEAU\xa0! \xc9v\xe9nements r\xe9currents",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Tu peux maintenant r\xe9p\xe9ter facilement les \xe9v\xe9nements.",
         COPY_RECURRENCE_LINK:
           "Copier le lien uniquement pour cet \xe9v\xe9nement",
         COPY_SERIES_LINK: "Copier le lien pour tous les \xc9v\xe9nements",
@@ -19915,8 +19904,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Aucune permission de mod\xe9rateur",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Accord\xe9e par",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Risqu\xe9) Accord\xe9e par",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Mod\xe9rateur",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permission accord\xe9e par ces r\xf4les",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "R\xf4le le plus \xe9lev\xe9",
@@ -24365,6 +24353,8 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "Aller dans les param\xe8tres",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Ignorer",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Merci pour tes commentaires\xa0!",
         STRANGER_DANGER_BANNER_BLOCK: "Bloquer",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Fermer",
         STRANGER_DANGER_MORE_HEADER: "Davantage de choses que tu peux faire",
@@ -24606,8 +24596,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Le sondage sera disponible pendant",
         CREATE_POLL_DURATION_LABEL: "Dur\xe9e",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1\xa0heure",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24\xa0heures",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3\xa0jours",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0semaine",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24819,6 +24807,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "Il y a {count}\xa0min",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Il y a {count}\xa0s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Premi\xe8re fois",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activit\xe9",
       };
     },
   },

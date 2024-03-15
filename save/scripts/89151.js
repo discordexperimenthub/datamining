@@ -1008,6 +1008,8 @@
           "Ses Kontrollerini G\xf6ster",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Etkinlik B\xf6lme'sini A\xe7",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Etkinlikten Ayrıl",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Bu \xf6zellik şu an bu işletim sisteminde mevcut değil",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Bu Etkinlik şu an bu işletim sisteminde mevcut değil",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "bu Etkinlik",
@@ -1240,6 +1242,9 @@
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "Etkinlik başladı.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Bu etkinliği i\xe7inde 25'ten fazla \xfcye bulunan bir sunucuda başlatamazsın",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Harici Uygulama",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Harici bir uygulama başlatmak \xfczeresin. Devam etmek istiyor musun?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Etkinlik bitirildi. Yeni bir taneye başlamak ister misin?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Etkinlik başlatıldı",
@@ -1247,6 +1252,15 @@
           "Bu ses kanalına katılma iznin yok.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Bu kanaldaki etkinliklere katılamazsın.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Kafasının yerinde megafon olan bir kuş",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Dikkat!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "{activityName} etkinliğini ilk kez test edeceksin.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Bu uygulama Discord tarafından \xfcretilmedi. Sadece g\xfcvendiğin geliştiricilerin uygulamalarını test et.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "\xd6zel uygulamalar hakkında daha fazla bilgi al.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) bir etkinlik başlattı",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4827,12 +4841,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Tuş atamasını etkinleştir ya da devre dışı bırak",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Sonu\xe7lar",
-        SHOW_CURRENT_ACTIVITY:
-          "Mevcut etkinliği durum mesajı olarak g\xf6ster.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Herkese a\xe7ık bir Sahne'ye katıldığında Discord durumunu otomatik olarak g\xfcnceller.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord, durumunu oynadığın oyuna (algılanabilirse), Rich Presence'ı destekleyen bir etkinliğe veya katıldığın herkese a\xe7ık Sahne'ye g\xf6re otomatik olarak g\xfcnceller.",
         GAME_DETECTION_SERVICE: "Oyun Tespit Hizmeti",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Kurulum konumları",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Kurulum Yeri ekle",
@@ -9435,10 +9445,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "%!!{percent, number}!! indirim",
         PREMIUM_DISCOUNT_CTA: "Nitro'dan %!!{percent, number}!! tasarruf et",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro'dan tasarruf et",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "%!!{percent, number}!! indirimin satın alımdan {numMonths, plural, one {1 ay} other {{numMonths} ay}} sonra sona erecek. Sonrasında hesabından {regularPrice} kesilecek.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "İlk **3 ayının** \xfccreti **{discountedPrice}**. Sonrası i\xe7in hesabından {regularPrice} kesilecek.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Sonraki **{numMonths, plural, one {1 ay} other {{numMonths} ay}}** {numMonths, plural, one {} other {}} i\xe7in hesabından **{discountedPrice}** kesilecek. Sonrasında ise hesabından {regularPrice} kesilecek.",
+          "Sonraki **{numMonths, plural, one {ay} other {{numMonths} ay}}** {numMonths, plural, one {} other {}} i\xe7in hesabından **{discountedPrice}** kesilecek. Sonrasında ise hesabından her ay {regularPrice} kesilecek.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "indirim uygulandı",
         CHURN_DISCOUNT_DESCRIPTION:
           "İptal etmeden \xf6nce {numMonths, plural, one {1 aylık} other {{numMonths} aylık}} **%{percent, number} Nitro aboneliği indiriminin** tadını \xe7ıkar.",
@@ -10884,8 +10896,6 @@
           "Az \xf6nce sana bir e-posta g\xf6nderdik. Bu satın alma işlemini onaylamak i\xe7in e-postadaki doğrulama bağlantısına tıkla.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Devam Et",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Sana bir şey ulaşmadı mı?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "E-postayı yeniden g\xf6nder",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11724,7 +11734,50 @@
           "Nitro abonesi olarak bu havalı rozeti kazan.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Koleksiyonculara \xf6zel. Bu Nitro'ya \xf6zel sınırlı rozeti ka\xe7ırma.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} \xdccretsiz {numFreeBoosts, plural, =1 {Takviye} other {Takviye}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Nitro \xfcyeliğinin ilk ayı kutlu olsun.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro \xd6d\xfcl\xfc",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Mevcut Nitro aboneliğini devam ettirdiğin s\xfcrece sahip olduğun ek Takviye de s\xfcrecek.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "\xd6d\xfcl\xfcn\xfc Al!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Al",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Alındı",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Bir Nitro \xfcyesi olduğun i\xe7in teşekk\xfcrler.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Etkin bir Nitro aboneliğiyle Takviyeni devam ettir. Aboneliğini iptal ettirirsen ilerlemen sıfırlanır ve Takviye kaldırılır.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Nitro aboneliğinin ilk ayında bir Takviye kazan.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "{days} {days, plural, =1 {g\xfcn} other {g\xfcn}} i\xe7inde al",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "{numDays} {numDays, plural, =1 {g\xfcn} other {g\xfcn}} i\xe7inde al",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro \xd6d\xfcl\xfc",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro aboneliğinin ilk ayında bir Takviye kazan.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro aboneliğinin \xfc\xe7\xfcnc\xfc ayında bir Takviye kazan.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Mevcut Nitro aboneliğini devam ettirdiğin s\xfcrece sahip olduğun ek Takviye de s\xfcrecek.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "\xd6d\xfcl\xfcn\xfc Al!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro \xfcyeliğinin ilk ayı kutlu olsun.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro \xfcyeliğinin \xfc\xe7\xfcnc\xfc ayı kutlu olsun.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Bir Nitro \xfcyesi olduğun i\xe7in teşekk\xfcrler.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Etkin bir Nitro aboneliğiyle Takviyeni devam ettir. Aboneliğini iptal ettirirsen ilerlemen sıfırlanır ve Takviye kaldırılır.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Alındı",
+        GUILD_BOOST_NITRO_REWARD_BANNER: "Tebrikler, ek bir Takviye kazandın.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Takviyen seni bekliyor!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Bir Nitro \xfcyesi olduğun i\xe7in teşekk\xfcrler. Nitro aboneliğinin birinci ayını ek bir Takviye ile kutluyoruz.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Bir Nitro \xfcyesi olduğun i\xe7in teşekk\xfcrler. Nitro aboneliğinin \xfc\xe7\xfcnc\xfc ayını ek bir Takviye ile kutluyoruz.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Discord'una s\xfcper g\xfc\xe7ler ekle",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11820,6 +11873,7 @@
           "\xdccretsiz Deneme S\xfcr\xfcm\xfc ({days, plural, =1 {# g\xfcn kaldı} other {# g\xfcn kaldı}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE:
           "\xdccretsiz Deneme S\xfcr\xfcm\xfc",
+        POWERED_BY_NITRO: "Nitro sayesinde",
         USER_ACTIVITY_HEADER_PLAYING: "Bir oyun oynuyor",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM:
           "!!{platform}!! platformunda canlı",
@@ -14273,8 +14327,12 @@
           "Bu emoji şuradan geliyor:",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Bu emoji bu sunucudan geliyor. Onu her yerde kullanabilirsin.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Bu emoji, bu sunucudan geliyor. Nitro ile dilediğin yerde kullanabilirsin.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Bu emoji sunucularından birinden geliyor. Emojiyi kullanmak i\xe7in sohbet \xe7ubuğuna adını yaz.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Bu emoji, sunucularından birinden geliyor. Nitro ile dilediğin yerde kullanabilirsin.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Bu emojiyi her yerde kullanmak ister misin? Sunucuya katıl.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14289,6 +14347,8 @@
           "Bu emojiyi her yerde kullanmak ister misin? Nitro aboneliği al ve sunucuya katıl.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Bu emoji yalnızca davetle girilebilen veya kullanım dışı olan bir sunucudan geliyor. \xd6zel emoji kullanımı hakkında [daha fazla bilgi edin.](openPremiumSettings)",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Bu \xf6zel emoji, yalnızca davetle girilebilen bir sunucudan geliyor. Nitro ile katıldığın t\xfcm sunuculardaki \xf6zel emojileri kullanabilirsin.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Bu \xe7ıkartmayı şuradan al:",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16225,12 +16285,8 @@
           "Bu etkinliği d\xfczenlemek istediğine emin misin?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Bu etkinliği d\xfczenlemek aynı zamanda bu serideki **t\xfcm etkinlikleri g\xfcnceller**.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Hemen dene",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "YENİ! Tekrarlanan Etkinlikler",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Artık etkinlikleri kolaylıkla tekrarlayabilirsin.",
-        COPY_RECURRENCE_LINK: "Bu Etkinlik Bağlantısını Kopyala",
-        COPY_SERIES_LINK: "Etkinlik Serisi Bağlantısını Kopyala",
+        COPY_RECURRENCE_LINK: "Sadece Bu Etkinlik i\xe7in Bağlantıyı Kopyala",
+        COPY_SERIES_LINK: "T\xfcm Etkinlikler i\xe7in Bağlantıyı Kopyala",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Etkinlik Oluştur",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17535,6 +17591,8 @@
           "Nitro Classic'i yeniden etkinleştirirsen \xf6deme y\xf6nteminden **{price}** \xfccret almaya ve sen aboneliğini iptal edene kadar da **aylık** \xfccret almaya devam edeceğiz. Ayarlar sayfasından istediğin zaman iptal edebilirsin.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Nitro Classic'i yeniden etkinleştirirsen \xf6deme y\xf6nteminden **{price}** \xfccret almaya ve sen aboneliğini iptal edene kadar da **yıllık** \xfccret almaya devam edeceğiz. Ayarlar sayfasından istediğin zaman iptal edebilirsin.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Nitro'yu yeniden etkinleştirirsen indirimli tarifen bitene kadar \xf6deme y\xf6nteminden her ay **{discountPrice}** keseceğiz, sonrasında ise sen aboneliğini iptal edene kadar her ay ***{defaultPrice}*** kesmeye devam edeceğiz. Ayarlar sayfasından istediğin zaman iptal edebilirsin.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Nitro'yu Bırakma",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "Kapat",
@@ -19069,6 +19127,9 @@
           "Zaman aşımı veya sıra dışı DM etkinliğinde bulunma gibi g\xfcvenlik bilgilerine g\xf6re filtrele.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "\xdcyeleri Engelle",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Bilinmeyen",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Gizli",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Yayıncı modu etkin, davet kodları gizlendi",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Sunucu Keşfi",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "\xd6ğrenci Merkezi",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Diğer Katılma Y\xf6ntemleri",
@@ -19142,8 +19203,7 @@
           "Verilen B\xfct\xfcn İzinler",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Mod İzni Yok",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "İzni sağlayan:",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskli) İzni sağlayan:",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderat\xf6r",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Bu Roller Tarafından Sağlanan İzinler",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "En Y\xfcksek Rol",
@@ -20275,6 +20335,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Discord hızında medya d\xfczenleme ve meme'ler oluşturma.",
         EARLY_ACCESS: "Erken Erişim",
+        REWARD: "\xd6d\xfcl",
         REMIXING_POST_CTA: "G\xf6nder",
         REMIXING_CROP: "Medyayı kırp",
         REMIXING_BACKDROP_EDITOR_TITLE: "Ayarla ve Kırp",
@@ -21636,6 +21697,10 @@
           "Son bir hafta i\xe7erisinde mesaj g\xf6nderdiğin sunucular. Bunlar davet bağlantıları değil, ebeveynlerin bunlara tıklayamayacak.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "\xc7ocuğunun son bir hafta i\xe7inde mesaj g\xf6nderdiği sunucular.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Ge\xe7en hafta i\xe7inde aktif olduğun (mesaj g\xf6nderdiğin veya sesli sohbete katıldığın) sunucular. Bunlar davet bağlantıları değil, ebeveynlerin bunlara tıklayamayacak.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "\xc7ocuğunun son bir hafta i\xe7inde aktif olduğu (mesaj g\xf6nderdiği veya sesli sohbete katıldığı) sunucular.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktif Olunan Sunucu Sayısı: {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21781,6 +21846,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro aboneleri i\xe7in bu dekorasyon indirimli",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro ile {price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "Nitro ile {price} $[hemen abone ol](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Yeni bir g\xf6r\xfcn\xfcme hazır mısın?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Hmm, bu biraz garip.",
@@ -21797,6 +21864,9 @@
           "Bu efekt satın alındıktan sonra koleksiyonuna eklenecek ve dilediğin zaman kullanabileceksin",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Bu efekt artık koleksiyonunun bir par\xe7ası oldu ve dilediğin zaman kullanabilirsin!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Genelde {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          '"{buyButtonLabel}" butonuna tıklayarak [\xdccretli Hizmet Koşullarını]({paidServiceTermURL}) onaylamış olursun. \xd6ğe, satın alım tamamlandıktan sonra koleksiyonuna eklenir ve istediğin zaman kullanabilirsin. Bir \xf6ğe satın aldıktan sonra Nitro aboneliğini iade edemeyeceğini hatırlatırız.',
         COLLECTIBLES_DAYS_LEFT: "son {days} g\xfcn",
         COLLECTIBLES_LAST_DAY: "Satın almak i\xe7in son g\xfcn",
         COLLECTIBLES_SHOP_VIEW_ALL: "T\xfcm\xfcn\xfc g\xf6ster",
@@ -21819,9 +21889,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Elementleri Kontrol Et",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Ateş. R\xfczg\xe2r. Su. Toprak. Hangisini a\xe7ığa \xe7ıkaracaksın?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Yeni Anime \xf6ğeleri geldi!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Yeni tarzlar",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Senpai'nin seni kesinlikle fark etmesini sağlayacak yeni tarzlara g\xf6z at.",
+          "Senpai sonunda senin farkına varacak.",
         COLLECTIBLES_NEW_BADGE: "YENİ",
         INVENTORY_EMOJI_DETAILS_V2: "Emoji ayrıntılarına g\xf6z at",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23146,6 +23216,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {# Saniye} other {# Saniye}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# Dakika} other {# Dakika}}",
         CLIPS_SAVE: "Klip Kaydet",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Bu yayını kaydetmek i\xe7in klipleri etkinleştir.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "İzleyicilerin klip kaydetmelerine izin ver",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23515,6 +23587,8 @@
           "Discord'da \xe7ocuk g\xfcvenliğine \xf6nem veriyoruz. Konuşmada olası bir g\xfcvenlik ihlali tespit ettiğimizde sana bildireceğiz. [G\xfcvenlik uyarıları hakkında daha fazla bilgi edin.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Ayarlara git",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Kapat",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Geri bildirimin i\xe7in teşekk\xfcrler!",
         STRANGER_DANGER_BANNER_BLOCK: "Engelle",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Kapat",
         STRANGER_DANGER_MORE_HEADER: "Daha fazla yapabileceklerin",
@@ -23563,9 +23637,19 @@
           "Bu konuşma g\xfcvenli olmayabilir.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Kendini korumak i\xe7in aksiyon al.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "G\xfcvenlik ara\xe7larını a\xe7arak kendini korumak i\xe7in aksiyon al.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Bu konuşma g\xfcvenli olmayabilir. Aksiyon almak i\xe7in g\xfcvenlik ara\xe7larını a\xe7.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Engelle",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Engeli kaldır",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Hesap engellendi",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Hesabın engeli kaldırıldı",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Hesap bildirildi",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Bir şeyler ters gitti! L\xfctfen daha sonra tekrar dene.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Sana mesaj atamayacaklar. Eylemlerinin birilerine zarar verebileceğini d\xfcş\xfcn\xfcyorsan l\xfctfen Discord'a bildir.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Engelle",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Engelle ve bildir",
@@ -23686,6 +23770,8 @@
         POLL_SUBMIT_VOTE: "Oyla",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} oy} other {{count} oy}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} Oy} other {{count} Oy}}",
         POLL_ALREADY_VOTED: "Oylandı",
         POLL_EDIT_VOTE: "Oyunu Değiştir",
         POLL_REMOVE_VOTE: "Oyu Kaldır",
@@ -23700,10 +23786,16 @@
         POLL_EXPIRED: "Anket kapandı.",
         POLL_SELECT_ONE_ANSWER: "Bir yanıt se\xe7",
         POLL_SELECT_MULTIPLE_ANSWERS: "Bir veya birden fazla yanıt se\xe7",
-        POLL_SHOW_VOTES: "Oyları g\xf6ster",
-        POLL_HIDE_VOTES: "Oyları gizle",
+        POLL_SHOW_VOTES: "Sonu\xe7ları g\xf6ster",
+        POLL_HIDE_VOTES: "Oy vermeye geri d\xf6n",
+        POLL_VOTES_NO_RESULTS_TITLE: "Burada bir şey yok",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Bu yanıta oy verilmemiş",
+        POLL_COACHMARK_TITLE: "YENİ! Anketler geldi.",
+        POLL_COACHMARK_SUBTITLE:
+          "Etkinlikler d\xfczenle, g\xf6r\xfcş alışverişi yap veya sohbete sa\xe7ma bir soru bırak.",
         POLL_NOT_INTERACTIVE:
           "Etkileşime girmek i\xe7in asıl mesajı g\xf6r\xfcnt\xfcle",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Burada bir şey yok",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Bu yanıta oy verilmemiş.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Oylar",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Oy verenleri g\xf6r\xfcnt\xfcle",
@@ -23729,8 +23821,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Başka bir yanıt ekle",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anket s\xfcresi",
         CREATE_POLL_DURATION_LABEL: "S\xfcre",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 saat",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 saat",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 g\xfcn",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 hafta",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23759,6 +23849,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "G\xf6rsel A\xe7ıklaması (Alt. Metin)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt. metin:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Medya se\xe7",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "T\xfch, bir şeyi unuttun. L\xfctfen bir soru ekle.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "T\xfch, bir şeyi unuttun. L\xfctfen en az bir cevap ekle.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Cevap kısmını boş bırakma! L\xfctfen bir metin ekle.",
         POLL_END_EARLY: "Anketi Hemen Sonlandır",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Anket Hemen Sonlandırılsın mı?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23791,11 +23887,17 @@
         QUESTS_COMPLETE_TOOLTIP:
           "\xd6d\xfcl kodunu almak i\xe7in butona tıkla!",
         QUESTS_ACCEPT_TOOLTIP:
-          "\xd6d\xfcl\xfc a\xe7mak i\xe7in g\xf6revi kabul edip tamamla.",
+          "\xd6d\xfcl\xfc a\xe7mak i\xe7in G\xf6revi kabul edip tamamla",
         QUESTS_IN_PROGRESS_TOOLTIP:
           "\xd6d\xfcl\xfc a\xe7mak i\xe7in g\xf6revi tamamla.",
         QUESTS_STREAM_TASK:
           "{gameTitle} oyununu bir arkadaşına {minutes} dakika boyunca yayınla.",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "\xd6d\xfclleri almak i\xe7in hesabını doğrula!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Şu adrese bir doğrulama e-postası g\xf6nderdik: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Hayda! Sana bir doğrulama e-postası g\xf6ndermeyi başaramadık.",
         QUEST_REWARD: "{reward} kazan.",
         QUESTS_REWARD_CODE_HEADER: "\xd6d\xfcl kodun",
         QUESTS_REWARD_CODE_CONGRATS: "Tebrikler!",
@@ -23817,8 +23919,11 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsorlu",
+        QUESTS_PROMOTED: "Tanıtımda",
         QUESTS_LEARN_MORE_V2: "Daha fazla bilgi edin",
         QUESTS_LEARN_MORE_STACKED: "Daha fazla\n\nbilgi edin",
+        QUESTS_LEARN_MORE_LINK:
+          "[Daha Fazla Bilgi Edin]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "G\xf6revi Kabul Et",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Bir arkadaşına {streamingDurationRequirement, number} dakika boyunca {gameTitle} yayını yap ve {questReward} kazan.",
@@ -23852,7 +23957,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} bazı belirli Discord kullanıcılarına ulaşmaya \xe7alışıyor. Senin bize s\xf6ylediklerine veya topladığımız diğer bilgilere g\xf6re bu gruplardan bazılarına uyduğunu d\xfcş\xfcn\xfcyoruz:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord'daki G\xf6revler ve Gizlilik Ayarlarını nasıl y\xf6neteceğin hakkında daha fazla bilgiyi [buradan]({privacySettingsUrl}) \xf6ğrenebilirsin.",
+          "Discord'daki G\xf6revler ve Gizlilik Ayarlarını nasıl y\xf6neteceğin hakkında [daha fazla bilgi al]({privacySettingsUrl}).",
         QUESTS_DISCLOSURE_LOCATION: "Konum",
         QUESTS_DISCLOSURE_AGE: "Yaş",
         QUESTS_DISCLOSURE_ACTIVITY: "Etkinlik: Alakalı oyun",
@@ -23861,6 +23966,11 @@
           "Burada bir hata oluştu. Daha fazla mevcut G\xf6revi g\xf6rmek i\xe7in Hediye Envanterini kontrol et!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "G\xf6rev ilerlemeni takip ederken bir sorun oluştu.",
+        QUESTS_SHARE_QUEST: "G\xf6revi Paylaş",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "G\xf6revinde ilerlemek i\xe7in bir {gameTitle} se\xe7!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "T\xfcm ekranı değil, yalnızca uygulamayı se\xe7men gerekiyor.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Bu kanal belirli bir s\xfcreliğine aktif olmazsa \xfcyeleri sohbet etmeye \xe7ağır.",
         PROMPT_CAMERA_LOADING_TITLE: "Neye bakıyorsun?",
@@ -23914,11 +24024,24 @@
           "@{username} kullanıcısının {artist} tarafından {song} dinlediğini g\xf6steren etkinlik kartı",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "@{username} kullanıcısının {activity} yayını yaptığını g\xf6steren etkinlik kartı",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "**{gameName}** oynuyor",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "**{gameName}** oynadı",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName}, **{gameName}** oynuyor",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName}, **{gameName}** oynadı",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} yeni bir oyun oynuyor: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} yeni bir oyun oynadı: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count} hafta \xf6nce",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} g\xfcn \xf6nce",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} saat \xf6nce",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO:
           "{count} dakika \xf6nce",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sn \xf6nce",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "İlk defa",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Etkinlik",
       };
     },
   },

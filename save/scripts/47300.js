@@ -1039,6 +1039,8 @@
           "N\xe4yt\xe4 puheen hallintaobjektit",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Avaa toimintaosio",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Poistu toiminnasta",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "T\xe4m\xe4 ominaisuus ei t\xe4ll\xe4 hetkell\xe4 ole k\xe4ytett\xe4viss\xe4 t\xe4ll\xe4 k\xe4ytt\xf6j\xe4rjestelm\xe4ll\xe4",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "T\xe4m\xe4 toiminto ei t\xe4ll\xe4 hetkell\xe4 ole k\xe4ytett\xe4viss\xe4 t\xe4ll\xe4 k\xe4ytt\xf6j\xe4rjestelm\xe4ll\xe4",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "t\xe4m\xe4 toiminta",
@@ -1269,6 +1271,9 @@
           "Toiminta on aloitettu.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "T\xe4t\xe4 toimintaa ei voi k\xe4ynnist\xe4\xe4 palvelimella, jossa on yli 25 j\xe4sent\xe4",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Ulkoinen sovellus",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Olet k\xe4ynnist\xe4m\xe4ss\xe4 ulkoisen sovelluksen. Haluatko jatkaa?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Toiminta p\xe4\xe4ttyi. Aloitetaanko uusi?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Toiminta aloitettu",
@@ -1276,6 +1281,15 @@
           "Sinulla ei ole oikeutta liitty\xe4 t\xe4lle puhekanavalle.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Et voi liitty\xe4 toimintaan t\xe4ll\xe4 kanavalla.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Lintu, jolla on megafoni p\xe4\xe4n\xe4",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Nyt kuulolle!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Olet testaamassa toimintoa {activityName} ensimm\xe4ist\xe4 kertaa.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "T\xe4m\xe4 sovellus ei ole Discordin valmistama. Testaa vain sellaisten kehitt\xe4jien sovelluksia, joihin luotat.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Lis\xe4tietoja yksityisist\xe4 sovelluksista.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) aloitti toiminnan",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4925,12 +4939,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Ota n\xe4pp\xe4inkomento k\xe4ytt\xf6\xf6n tai poista se k\xe4yt\xf6st\xe4",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Tulokset",
-        SHOW_CURRENT_ACTIVITY:
-          "N\xe4yt\xe4 k\xe4ynniss\xe4 oleva toiminta tilaviestin\xe4.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord p\xe4ivitt\xe4\xe4 tilasi automaattisesti, jos olet mukana julkisessa esityksess\xe4.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord p\xe4ivitt\xe4\xe4 tilasi automaattisesti, kun pelaat peli\xe4 (jos peli tunnistetaan), k\xe4yt\xe4t Rich Presence\xe4 tukevaa toimintoa tai olet mukana julkisessa esityksess\xe4.",
         GAME_DETECTION_SERVICE: "Pelintunnistuspalvelu",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Asennussijainnit",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Lis\xe4\xe4 asennussijainti",
@@ -9622,10 +9632,12 @@
         PREMIUM_DISCOUNT_CTA:
           "S\xe4\xe4st\xe4 !!{percent, number}!! % Nitrosta",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "S\xe4\xe4st\xe4 Nitrosta",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "!!{percent, number}!!\xa0%:n alennuksesi p\xe4\xe4ttyy {numMonths, plural, one {kuukausi} other {{numMonths} kuukautta}} oston j\xe4lkeen. T\xe4m\xe4n j\xe4lkeen sinulta veloitetaan {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Ensimm\xe4isen **kolmen kuukauden** hinta on **{discountedPrice}**. T\xe4m\xe4n j\xe4lkeen sinulta veloitetaan {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Saat **{numMonths, plural, one {seuraavan kuukauden} other {seuraavat {numMonths} kuukautta}}** {numMonths, plural, one {hintaan} other {hintaan}} **{discountedPrice}**. Sen j\xe4lkeen sinulta veloitetaan {regularPrice}.",
+          "Saat **{numMonths, plural, one {seuraavan kuukauden} other {seuraavat {numMonths} kuukautta}}** {numMonths, plural, one {hintaan} other {hintaan}} **{discountedPrice}**. Sen j\xe4lkeen sinulta veloitetaan {regularPrice}\xa0/\xa0kk.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "alennus otettu k\xe4ytt\xf6\xf6n",
         CHURN_DISCOUNT_DESCRIPTION:
           "Hy\xf6dynn\xe4 ennen peruuttamista **{percent, number}\xa0%:n alennus Nitro-tilauksestasi** {numMonths, plural, one {yhdeksi kuukaudeksi} other {{numMonths} kuukaudeksi}}.",
@@ -11086,8 +11098,6 @@
           "Olemme l\xe4hett\xe4neet s\xe4hk\xf6postiisi viestin. Valtuuta ostos napsauttamalla siin\xe4 olevaa linkki\xe4.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Jatka",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Etk\xf6 saanut mit\xe4\xe4n?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "L\xe4het\xe4 s\xe4hk\xf6posti uudelleen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11933,7 +11943,50 @@
           "Hanki t\xe4m\xe4 siisti merkki ryhtym\xe4ll\xe4 Nitro-tilaajaksi.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Ker\xe4ilij\xf6ille. Hanki t\xe4m\xe4 eksklusiivinen vain Nitro-tilaajille annettava merkki.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {ilmainen nostatus} other {ilmaista nostatusta}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Onneksi olkoon ensimm\xe4isest\xe4 Nitro-kuukaudestasi.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-palkinto",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Lis\xe4nostatuksesi on k\xe4ytett\xe4viss\xe4 niin pitk\xe4\xe4n kuin pid\xe4t Nitro-tilauksen voimassa.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "Lunasta palkintosi!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Lunasta",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Lunastettu",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Kiitos, ett\xe4 olet Nitro-j\xe4sen.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Nostatus pystyy k\xe4yt\xf6ss\xe4si, kun pid\xe4t Nitro-tilauksen aktiivisena. Tilauksen peruuttaminen nollaa j\xe4senyyden kestolaskurin ja poistaa nostatuksen.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Saat nostatuksen, kun sinulla on ollut Nitro kuukauden.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Lunasta {days} {days, plural, =1 {p\xe4iv\xe4n} other {p\xe4iv\xe4n}} kuluessa",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Lunasta {numDays} {numDays, plural, =1 {p\xe4iv\xe4n} other {p\xe4iv\xe4n}} kuluessa",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro-palkinto",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Saat nostatuksen, kun sinulla on ollut Nitro kuukauden.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Saat nostatuksen, kun sinulla on ollut Nitro 3 kuukautta.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Lis\xe4nostatuksesi on k\xe4ytett\xe4viss\xe4 niin pitk\xe4\xe4n kuin pid\xe4t Nitro-tilauksen voimassa.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Lunasta palkintosi!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Onneksi olkoon ensimm\xe4isest\xe4 Nitro-kuukaudestasi.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Onneksi olkoon kolmesta Nitro-kuukaudestasi.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Kiitos, ett\xe4 olet Nitro-j\xe4sen.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Nostatus pystyy k\xe4yt\xf6ss\xe4si, kun pid\xe4t Nitro-tilauksen aktiivisena. Tilauksen peruuttaminen nollaa j\xe4senyyden kestolaskurin ja poistaa nostatuksen.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Lunastettu",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Ansaitsit lis\xe4nostatuksen, hienoa.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Nostatuksesi odottaa!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Kiitos, ett\xe4 olet Nitro-j\xe4sen. T\xe4ss\xe4 on lis\xe4nostatus palkintona ensimm\xe4isen Nitro-kuukautesi t\xe4yttymisest\xe4.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Kiitos, ett\xe4 olet Nitro-j\xe4sen. T\xe4ss\xe4 on lis\xe4nostatus palkintona ensimm\xe4isen kolmen Nitro-kuukautesi t\xe4yttymisest\xe4.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Pist\xe4 Discordisi turbovaihteelle",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -12027,6 +12080,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Ilmaiskokeilu ({days, plural, =1 {# p\xe4iv\xe4 j\xe4ljell\xe4} other {# p\xe4iv\xe4\xe4 j\xe4ljell\xe4}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Ilmaiskokeilu",
+        POWERED_BY_NITRO: "T\xe4m\xe4n tarjoaa Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Pelaa peli\xe4",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM:
           "Liven\xe4 alustalla !!{platform}!!",
@@ -14530,8 +14584,12 @@
           "Emoji on per\xe4isin t\xe4\xe4lt\xe4:",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Emoji on per\xe4isin t\xe4lt\xe4 palvelimelta. Voit k\xe4ytt\xe4\xe4 sit\xe4 kaikkialla.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "T\xe4m\xe4 emoji on per\xe4isin t\xe4lt\xe4 palvelimelta. Nitrolla voit k\xe4ytt\xe4\xe4 sit\xe4 kaikkialla.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Emoji on per\xe4isin joltakin sinun palvelimeltasi. Voit k\xe4ytt\xe4\xe4 sit\xe4 kirjoittamalla sen nimen keskustelupalkkiin.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "T\xe4m\xe4 emoji on per\xe4isin yhdelt\xe4 palvelimistasi. Nitrolla voit k\xe4ytt\xe4\xe4 sit\xe4 kaikkialla.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Haluatko k\xe4ytt\xe4\xe4 t\xe4t\xe4 emojia kaikkialla? Liity palvelimelle.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14546,6 +14604,8 @@
           "Haluatko k\xe4ytt\xe4\xe4 t\xe4m\xe4 emojia kaikkialla? Hanki Nitro-tilaus ja liity palvelimelle.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Emoji on per\xe4isin palvelimelta, johon voi liitty\xe4 vain kutsusta tai joka ei ole k\xe4ytett\xe4viss\xe4. [Lis\xe4tietoja](openPremiumSettings) mukautettujen emojien k\xe4ytt\xe4misest\xe4.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "T\xe4m\xe4 mukautettu emoji on palvelimelta, johon voi liitty\xe4 vain kutsusta. Nitrolla voit k\xe4ytt\xe4\xe4 mukautettuja emojeja kaikilta palvelimilta, joille olet liittynyt.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "T\xe4m\xe4n tarran saa t\xe4\xe4lt\xe4:",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16540,12 +16600,8 @@
           "Haluatko varmasti muokata t\xe4t\xe4 tapahtumaa?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "T\xe4m\xe4n tapahtuman muokkaus p\xe4ivitt\xe4\xe4 samalla **kaikki t\xe4m\xe4n sarjan tapahtumat**.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Kokeile sit\xe4",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "UUTTA! Toistuvat tapahtumat",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Voit nyt helposti m\xe4\xe4ritt\xe4\xe4 tapahtumia toistuviksi.",
-        COPY_RECURRENCE_LINK: "Kopioi t\xe4m\xe4 tapahtumalinkki",
-        COPY_SERIES_LINK: "Kopioi tapahtumasarjan linkki",
+        COPY_RECURRENCE_LINK: "Kopioi vain t\xe4m\xe4n tapahtuman linkki",
+        COPY_SERIES_LINK: "Kopioi kaikkien tapahtumien linkki",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Luo tapahtuma",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17875,6 +17931,8 @@
           "Jos otat Nitro Classicin j\xe4lleen k\xe4ytt\xf6\xf6n, veloitamme **{price}** maksutapaasi k\xe4ytt\xe4en ja teemme veloituksen jatkossa **kuukausittain**, kunnes perut tilauksesi. Voit kuitenkin perua tilauksen koska tahansa asetussivulta.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Jos otat Nitro Classicin j\xe4lleen k\xe4ytt\xf6\xf6n, veloitamme **{price}** maksutapaasi k\xe4ytt\xe4en ja teemme veloituksen jatkossa **vuosittain**, kunnes perut tilauksesi. Voit kuitenkin perua tilauksen koska tahansa asetussivulta.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Jos tilaat Nitron uudelleen, laskutamme sinulta valitsemasi maksutavan mukaisesti **{discountPrice}** kuukaudessa alennushintaisen jaksosi loppuun asti. Sen j\xe4lkeen maksat ***{defaultPrice}*** kuukaudessa, kunnes peruutat tilauksen. Tilauksen voi peruuttaa koska tahansa omalta Asetukset-sivultasi.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Pid\xe4 Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "Sulje",
@@ -19448,6 +19506,9 @@
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION:
           "Anna porttikieltoja j\xe4senille",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Tuntematon",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Piilotettu",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Striimaajatila on aktiivinen, kutsukoodit on piilotettu",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Palvelinhaku",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Oppilaskeskus",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Muut liittymistavat",
@@ -19525,8 +19586,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Ei valvonnan k\xe4ytt\xf6oikeuksia",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "My\xf6nt\xe4j\xe4",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskialtis) My\xf6nt\xe4j\xe4",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Valvoja",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "N\xe4iden roolien antamat k\xe4ytt\xf6oikeudet",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Korkeimman tason rooli",
@@ -20677,6 +20737,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Mediasis\xe4ll\xf6n muokkausta ja meemien luontia Discordin nopeudella.",
         EARLY_ACCESS: "Ennakkojulkaisu",
+        REWARD: "Palkinto",
         REMIXING_POST_CTA: "L\xe4het\xe4",
         REMIXING_CROP: "Rajaa mediasis\xe4lt\xf6",
         REMIXING_BACKDROP_EDITOR_TITLE: "S\xe4\xe4d\xe4 ja rajaa",
@@ -22074,6 +22135,10 @@
           "Palvelimet, joilla olet l\xe4hett\xe4nyt viestej\xe4 viime viikon aikana. N\xe4m\xe4 eiv\xe4t ole kutsulinkkej\xe4, joten vanhempasi eiv\xe4t voi liitty\xe4 palvelimille n\xe4it\xe4 klikkaamalla.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Palvelimet, joilla teinisi on l\xe4hett\xe4nyt viestej\xe4 viime viikon aikana.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Palvelimet, joilla olet ollut aktiivinen (l\xe4hett\xe4m\xe4ll\xe4 viestej\xe4 tai osallistumalla puhekeskusteluihin) viime viikon aikana. N\xe4m\xe4 eiv\xe4t ole kutsulinkkej\xe4, joten vanhempasi eiv\xe4t voi liitty\xe4 palvelimille n\xe4it\xe4 klikkaamalla.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Palvelimet, joilla teinisi on ollut aktiivinen (l\xe4hett\xe4m\xe4ll\xe4 viestej\xe4 tai osallistumalla puhekeskusteluihin) viime viikon aikana.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktiiviset palvelimet – {count, number} kpl",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -22218,6 +22283,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro-tilaajat saavat alennuksen t\xe4st\xe4 koristeesta",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} Nitro-tilauksella",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} Nitrolla. $[Tilaa nyt](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Oletko valmis uuteen ilmeeseen?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "T\xe4m\xe4p\xe4 kiusallista.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -22233,6 +22300,9 @@
           "Kun ostat tehosteen, se lis\xe4t\xe4\xe4n kokoelmaasi ja voit k\xe4ytt\xe4\xe4 sit\xe4 milloin tahansa",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "T\xe4m\xe4 tehoste on nyt osa kokoelmaasi, ja sit\xe4 voi k\xe4ytt\xe4\xe4 milloin tahansa!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Normaalisti {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Klikkaamalla {buyButtonLabel} vahvistat hyv\xe4ksyv\xe4si [maksullisten palvelujen ehdot]({paidServiceTermURL}). Kun olet viimeistellyt oston, tuote lis\xe4t\xe4\xe4n kokoelmaasi ja voit k\xe4ytt\xe4\xe4 sit\xe4 milloin tahansa halutessasi. Huomaa, ett\xe4 Nitro-tilauksia ei hyvitet\xe4 niiden ostamisen j\xe4lkeen.",
         COLLECTIBLES_DAYS_LEFT: "{days} p\xe4iv\xe4\xe4 j\xe4ljell\xe4",
         COLLECTIBLES_LAST_DAY: "Viimeinen p\xe4iv\xe4 ostaa",
         COLLECTIBLES_SHOP_VIEW_ALL: "N\xe4yt\xe4 kaikki",
@@ -22254,10 +22324,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Ota elementit hallintaasi",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Tuli. Tuuli. Vesi. Maa. Mink\xe4 niist\xe4 p\xe4\xe4st\xe4t valloilleen?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "Uudet anime-tuotteet ovat t\xe4\xe4ll\xe4!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: uusia tyylej\xe4",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Tutustu uusimpiin tyyleihin, jotka saavat senpain varmasti huomaamaan sinut.",
+          "Senpai huomaa sinut nyt varmasti.",
         COLLECTIBLES_NEW_BADGE: "UUTTA",
         INVENTORY_EMOJI_DETAILS_V2: "N\xe4yt\xe4 emojin tiedot",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23573,6 +23642,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# minuutti} other {# minuuttia}}",
         CLIPS_SAVE: "Tallenna leike",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Ota leikkeet k\xe4ytt\xf6\xf6n, jotta voit tallentaa t\xe4t\xe4 striimi\xe4.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Salli katselijoiden kaapata leikkeit\xe4",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23953,6 +24024,7 @@
           "Discord ottaa teinien turvallisuuden vakavissaan. Ilmoitamme sinulle, jos havaitsemme mahdollisen turvallisuusriskin keskustelussa. [Katso lis\xe4tietoja turvallisuush\xe4lytyksist\xe4.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Siirry asetuksiin",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Sulje",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Kiitos palautteesta!",
         STRANGER_DANGER_BANNER_BLOCK: "Est\xe4",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Sulje",
         STRANGER_DANGER_MORE_HEADER: "Lis\xe4\xe4 mahdollisuuksia",
@@ -23999,9 +24071,19 @@
           "T\xe4m\xe4 keskustelu ei ole ehk\xe4 turvallinen.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Ryhdy toimiin itsesi suojaamiseksi.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Ryhdy toimiin itsesi suojaamiseksi avaamalla turvallisuusty\xf6kalut.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "T\xe4m\xe4 keskustelu ei ole ehk\xe4 turvallinen. Ryhdy toimiin avaamalla turvallisuusty\xf6kalut.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Est\xe4 h\xe4net",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Poista esto",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Tili estetty",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Tilin esto poistettu",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Tilist\xe4 tehty ilmoitus",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Jokin meni pieleen. Yrit\xe4 uudelleen my\xf6hemmin.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "K\xe4ytt\xe4j\xe4 ei voi l\xe4hett\xe4\xe4 sinulle viestej\xe4. Jos uskot, ett\xe4 k\xe4ytt\xe4j\xe4n toiminta voi aiheuttaa vahinkoa muille, tee ilmianto Discordille.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Est\xe4",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Est\xe4 ja tee ilmianto",
@@ -24125,6 +24207,8 @@
         POLL_SUBMIT_VOTE: "\xc4\xe4nest\xe4",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} \xe4\xe4ni} other {{count} \xe4\xe4nt\xe4}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} \xe4\xe4ni} other {{count} \xe4\xe4nt\xe4}}",
         POLL_ALREADY_VOTED: "\xc4\xe4nestetty",
         POLL_EDIT_VOTE: "Vaihda \xe4\xe4ni",
         POLL_REMOVE_VOTE: "Poista \xe4\xe4ni",
@@ -24139,10 +24223,19 @@
         POLL_EXPIRED: "Kysely suljettu",
         POLL_SELECT_ONE_ANSWER: "Valitse yksi vastaus",
         POLL_SELECT_MULTIPLE_ANSWERS: "Valitse yksi tai useampi vastaus",
-        POLL_SHOW_VOTES: "N\xe4yt\xe4 \xe4\xe4net",
-        POLL_HIDE_VOTES: "Piilota \xe4\xe4net",
+        POLL_SHOW_VOTES: "N\xe4yt\xe4 tulokset",
+        POLL_HIDE_VOTES: "Palaa \xe4\xe4nestykseen",
+        POLL_VOTES_NO_RESULTS_TITLE:
+          "T\xe4\xe4ll\xe4 ei ole mit\xe4\xe4n n\xe4ht\xe4v\xe4\xe4",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "T\xe4m\xe4 vastaus ei ole saanut \xe4\xe4ni\xe4",
+        POLL_COACHMARK_TITLE: "UUTTA! Kyselyt ovat t\xe4\xe4ll\xe4.",
+        POLL_COACHMARK_SUBTITLE:
+          "Suunnittele tapahtumia, kartoita mielipiteet tai esit\xe4 vain hassu kysymys chatissa.",
         POLL_NOT_INTERACTIVE:
           "K\xe4sittelem\xe4ll\xe4 katsomalla alkuper\xe4inen viesti",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE:
+          "T\xe4\xe4ll\xe4 ei ole mit\xe4\xe4n n\xe4ht\xe4v\xe4\xe4",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "T\xe4m\xe4 vastaus ei ole saanut \xe4\xe4ni\xe4.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "\xc4\xe4net",
@@ -24172,8 +24265,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Kyselyn voimassaoloaika",
         CREATE_POLL_DURATION_LABEL: "Kesto",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 tunti",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 tuntia",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 p\xe4iv\xe4\xe4",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 viikko",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24200,6 +24291,11 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Kuvan kuvaus (ALT-teksti)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "ALT-teksti:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Valitse mediatiedosto",
+        CREATE_POLL_QUESTION_REQUIRED: "Unohdit jotakin. Lis\xe4\xe4 kysymys.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Unohdit jotakin. Lis\xe4\xe4 v\xe4hint\xe4\xe4n yksi vastausvaihtoehto.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "\xc4l\xe4 j\xe4t\xe4 vastauskentt\xe4\xe4 tyhj\xe4ksi! Kirjoita siihen jotain.",
         POLL_END_EARLY: "Sulje kysely nyt",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Suljetaanko kysely nyt?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -24238,6 +24334,12 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "Avaa palkinto suorittamalla teht\xe4v\xe4",
         QUESTS_STREAM_TASK:
           "Striimaa peli\xe4 {gameTitle} kaverille {minutes} minuutin ajan",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Vahvista tilisi, jotta voit lunastaa palkintoja!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "L\xe4hetimme vahvistuss\xe4hk\xf6postin t\xe4nne: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Vahvistuss\xe4hk\xf6postin l\xe4hett\xe4minen ep\xe4onnistui.",
         QUEST_REWARD: "Voita {reward}",
         QUESTS_REWARD_CODE_HEADER: "Palkintokoodisi",
         QUESTS_REWARD_CODE_CONGRATS: "Onnittelut!",
@@ -24263,8 +24365,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsoroitu",
+        QUESTS_PROMOTED: "Tuettu",
         QUESTS_LEARN_MORE_V2: "Lis\xe4tietoja",
         QUESTS_LEARN_MORE_STACKED: "Lue\n\nlis\xe4\xe4",
+        QUESTS_LEARN_MORE_LINK: "[Lis\xe4tietoja]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Hyv\xe4ksy teht\xe4v\xe4",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Striimaa peli\xe4 {gameTitle} kaverille {streamingDurationRequirement, number} minuutin ajan, niin {questReward} on sinun.",
@@ -24300,7 +24404,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} yritt\xe4\xe4 tavoittaa tiettyj\xe4 Discord-k\xe4ytt\xe4ji\xe4. Kertomasi ja muiden ker\xe4\xe4miemme tietojen perusteella uskomme, ett\xe4 kuulut johonkin n\xe4ist\xe4 ryhmist\xe4:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Katso lis\xe4tietoja Discordin teht\xe4vist\xe4 ja yksityisyysasetustesi k\xe4yt\xf6st\xe4 [t\xe4\xe4lt\xe4]({privacySettingsUrl}).",
+          "[Katso lis\xe4tietoja]({privacySettingsUrl}) Discordin teht\xe4vist\xe4 ja yksityisyysasetustesi k\xe4yt\xf6st\xe4.",
         QUESTS_DISCLOSURE_LOCATION: "Sijainti",
         QUESTS_DISCLOSURE_AGE: "Ik\xe4",
         QUESTS_DISCLOSURE_ACTIVITY: "Toiminta: Pelaamiseen liittyv\xe4",
@@ -24309,6 +24413,11 @@
           "Jokin meni vikaan. Katso muut tarjolla olevat teht\xe4v\xe4t lahjaluettelosta.",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Teht\xe4v\xe4ss\xe4 edistymisesi seurannassa on ongelma.",
+        QUESTS_SHARE_QUEST: "Jaa teht\xe4v\xe4",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Valitse {gameTitle}, jotta edistyt teht\xe4v\xe4ss\xe4si!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Sinun on valittava sovellus, ei koko n\xe4ytt\xf6\xe4.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Kannusta j\xe4seni\xe4 keskustelemaan, kun t\xe4m\xe4 kanava on ollut hiljainen jonkin aikaa.",
         PROMPT_CAMERA_LOADING_TITLE: "Mit\xe4 etsit?",
@@ -24364,11 +24473,24 @@
           "Toimintakortti, jossa n\xe4kyy @{username} kuuntelemassa kappaletta {song} esitt\xe4j\xe4lt\xe4 {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Toimintakortti, jossa n\xe4kyy @{username} striimaamassa toimintaa {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Pelaa: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Pelasi: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} pelaa parhaillaan: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} pelasi: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} pelaa uutta peli\xe4: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} pelasi uutta peli\xe4: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}\xa0vko sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO:
           "{count} p\xe4iv\xe4\xe4 sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} t sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} min sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}\xa0s sitten",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Ensimm\xe4inen kerta",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Toiminta",
       };
     },
   },

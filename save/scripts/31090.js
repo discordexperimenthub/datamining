@@ -1047,6 +1047,8 @@
           "Hiển thị Điều khiển bằng giọng n\xf3i",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Mở ngăn hoạt động",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Rời Hoạt động",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "T\xednh năng n\xe0y hiện tại kh\xf4ng khả dụng tr\xean Hệ điều h\xe0nh n\xe0y",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Hoạt động n\xe0y hiện kh\xf4ng khả dụng tr\xean Hệ điều h\xe0nh n\xe0y",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "hoạt động n\xe0y",
@@ -1281,6 +1283,10 @@
           "Hoạt động đ\xe3 bắt đầu.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Bạn kh\xf4ng thể chạy hoạt động n\xe0y trong một m\xe1y chủ với hơn 25 th\xe0nh vi\xean",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE:
+          "Ứng dụng b\xean ngo\xe0i",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Bạn sắp khởi chạy một ứng dụng b\xean ngo\xe0i. Bạn muốn tiếp tục chứ?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Hoạt động đ\xe3 kết th\xfac. Bắt đầu một hoạt động mới?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1289,6 +1295,15 @@
           "Bạn kh\xf4ng c\xf3 quyền tham gia K\xeanh Thoại n\xe0y.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Bạn kh\xf4ng thể tham gia Hoạt Động trong k\xeanh n\xe0y.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Một con chim c\xf3 đầu l\xe0 chiếc điện thoại khổng lồ",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Cảnh B\xe1o!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Bạn sắp thử nghiệm {activityName} lần đầu ti\xean.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Ứng dụng n\xe0y kh\xf4ng phải l\xe0 sản phẩm của Discord. Chỉ thử nghiệm những ứng dụng từ nh\xe0 ph\xe1t triển m\xe0 bạn tin tưởng.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "T\xecm hiểu th\xeam về c\xe1c ứng dụng c\xe1 nh\xe2n.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) đ\xe3 bắt đầu một hoạt động",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4950,12 +4965,8 @@
           "Chọn k\xeanh thoại để tham gia hoặc chuyển sang",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Bật hoặc tắt ph\xedm n\xf3ng",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Kết quả",
-        SHOW_CURRENT_ACTIVITY:
-          "Hiển thị hoạt động hiện tại trong tin nhắn trạng th\xe1i.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord sẽ tự động cập nhật trạng th\xe1i của bạn nếu bạn đang tham gia S\xe2n khấu c\xf4ng khai.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord sẽ tự động cập nhật trạng th\xe1i của bạn dựa tr\xean tr\xf2 chơi bạn đang chơi (nếu c\xf3 thể ph\xe1t hiện được), hoạt động bạn đang thực hiện c\xf3 hỗ trợ Rich Presence, hoặc nếu bạn đang tham gia S\xe2n Khấu c\xf4ng khai.",
         GAME_DETECTION_SERVICE: "Dịch Vụ T\xecm Tr\xf2 Chơi",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Thư mục c\xe0i đặt",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Th\xeam Thư Mục C\xe0i Đặt",
@@ -9687,10 +9698,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "Ưu đ\xe3i !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "Mua Nitro rẻ hơn !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Mua Nitro rẻ hơn",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Ưu đ\xe3i !!{percent, number}!!% của bạn sẽ kết th\xfac {numMonths, plural, one {1 th\xe1ng} other {{numMonths} th\xe1ng}} sau khi mua. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "**3 th\xe1ng** đầu ti\xean của bạn c\xf3 mức ph\xed **{discountedPrice}**. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "G\xf3i **{numMonths, plural, one {1 th\xe1ng} other {{numMonths} th\xe1ng}}** {numMonths, plural, one {tiếp theo} other {tiếp theo}} của bạn sẽ c\xf3 gi\xe1 **{discountedPrice}**. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}.",
+          "G\xf3i **{numMonths, plural, one {th\xe1ng} other {{numMonths} th\xe1ng}}** {numMonths, plural, one {tiếp theo} other {tiếp theo}} của bạn sẽ c\xf3 gi\xe1 **{discountedPrice}**. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}/th\xe1ng.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "đ\xe3 \xe1p dụng ưu đ\xe3i",
         CHURN_DISCOUNT_DESCRIPTION:
           "Trước khi hủy, h\xe3y tận hưởng mức giảm gi\xe1 **{percent, number}% cho g\xf3i đăng k\xfd Nitro của bạn** trong {numMonths, plural, one {1 th\xe1ng} other {{numMonths} th\xe1ng}}.",
@@ -11167,8 +11180,6 @@
           "Ch\xfang t\xf4i vừa gửi cho bạn một email. Nhấp v\xe0o li\xean kết x\xe1c thực trong email để ph\xea duyệt thao t\xe1c mua h\xe0ng.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Tiếp tục",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Kh\xf4ng nhận được g\xec sao?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Gửi lại email",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -12028,7 +12039,53 @@
           "Nhận huy hiệu cực ngầu n\xe0y khi trở th\xe0nh người đăng k\xfd Nitro.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Nếu bạn th\xedch sưu tầm, h\xe3y nhận ngay huy hiệu Nitro độc quyền n\xe0y.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {N\xe2ng Cấp} other {numFreeBoosts}} Miễn Ph\xed",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Ch\xfac mừng th\xe1ng Nitro đầu ti\xean của bạn.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Phần Thưởng Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Bạn c\xf3 thể t\xf9y \xfd sử dụng N\xe2ng Cấp tặng th\xeam n\xe0y, miễn l\xe0 g\xf3i đăng k\xfd Nitro của bạn đang k\xedch hoạt.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Quy Đổi Phần Thưởng Của Bạn!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Lấy lại",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Đ\xe3 quy đổi",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Cảm ơn bạn đ\xe3 chọn trở th\xe0nh một th\xe0nh vi\xean của g\xf3i đăng k\xfd Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Giữ lại N\xe2ng Cấp khi duy tr\xec g\xf3i đăng k\xfd Nitro. Hủy g\xf3i sẽ đặt lại tiến tr\xecnh v\xe0 loại bỏ N\xe2ng Cấp.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Nhận một N\xe2ng Cấp khi bạn mua xong Nitro th\xe1ng đầu ti\xean.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Quy đổi trong {days} {days, plural, =1 {ng\xe0y} other {ng\xe0y}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Quy đổi trong {numDays} {numDays, plural, =1 {ng\xe0y} other {ng\xe0y}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Phần Thưởng Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nhận một N\xe2ng Cấp khi bạn mua xong Nitro th\xe1ng đầu ti\xean.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nhận một N\xe2ng Cấp khi bạn mua xong Nitro 3 th\xe1ng.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Bạn c\xf3 thể t\xf9y \xfd sử dụng N\xe2ng Cấp tặng th\xeam n\xe0y, miễn l\xe0 g\xf3i đăng k\xfd Nitro của bạn đang k\xedch hoạt.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "Quy Đổi Phần Thưởng Của Bạn!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Ch\xfac mừng th\xe1ng Nitro đầu ti\xean của bạn.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Ch\xfac mừng 3 th\xe1ng sử dụng Nitro của bạn.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Cảm ơn bạn đ\xe3 chọn trở th\xe0nh một th\xe0nh vi\xean của g\xf3i đăng k\xfd Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Giữ lại N\xe2ng Cấp khi duy tr\xec g\xf3i đăng k\xfd Nitro. Hủy g\xf3i sẽ đặt lại tiến tr\xecnh v\xe0 loại bỏ N\xe2ng Cấp.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Đ\xe3 quy đổi",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Bạn đ\xe3 nhận được một N\xe2ng Cấp tặng th\xeam, tuyệt vời.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "N\xe2ng Cấp đang chờ bạn!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Cảm ơn bạn đ\xe3 l\xe0 th\xe0nh vi\xean đăng k\xfd Nitro. Đ\xe2y l\xe0 một N\xe2ng Cấp tặng th\xeam sau khi ho\xe0n th\xe0nh th\xe1ng Nitro đầu ti\xean.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Cảm ơn bạn đ\xe3 l\xe0 th\xe0nh vi\xean đăng k\xfd Nitro. Đ\xe2y l\xe0 một N\xe2ng Cấp tặng th\xeam sau khi ho\xe0n th\xe0nh 3 th\xe1ng Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Tăng cường Discord của bạn",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -12037,7 +12094,7 @@
           "Biểu Cảm Si\xeau Cấp kh\xf4ng giới hạn mỗi tuần",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 lượt N\xe2ng Cấp M\xe1y Chủ, 500 MB dung lượng tải l\xean v\xe0 nhiều t\xednh năng kh\xe1c!",
-        NITRO_MARKETING_JUST_THE_BASICS: "Chỉ l\xe0 những tt\xednh năng cơ bản",
+        NITRO_MARKETING_JUST_THE_BASICS: "Chỉ chứa những tt\xednh năng cơ bản",
         NITRO_MARKETING_BASIC_PERKS: "Đặc quyền Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "C\xe1 nh\xe2n h\xf3a Discord",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Chọn g\xf3i Nitro của bạn",
@@ -12125,6 +12182,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "D\xf9ng thử miễn ph\xed ({days, plural, =1 {c\xf2n # ng\xe0y} other {c\xf2n # ng\xe0y}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "D\xf9ng thử miễn ph\xed",
+        POWERED_BY_NITRO: "T\xe0i trợ bởi Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Chơi game",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "H\xe3y tiếp tục !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -14648,8 +14706,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Emoji n\xe0y của",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Emoji n\xe0y thuộc m\xe1y chủ n\xe0y. Bạn c\xf3 thể sử dụng n\xf3 ở bất cứ đ\xe2u.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Emoji n\xe0y đến từ m\xe1y chủ n\xe0y. Sử dụng n\xf3 ở bất kỳ đ\xe2u trong thời gian đăng k\xfd Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Emoji n\xe0y thuộc một trong những m\xe1y chủ của bạn. Nhập t\xean emoji v\xe0o khung tr\xf2 chuyện để sử dụng.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Emoji n\xe0y đến từ trong một trong những m\xe1y chủ của bạn. Sử dụng n\xf3 ở bất kỳ đ\xe2u trong thời gian đăng k\xfd Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Bạn muốn t\xf9y \xfd sử dụng emoji n\xe0y? H\xe3y tham gia m\xe1y chủ.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14664,6 +14726,8 @@
           "Bạn muốn t\xf9y \xfd sử dụng emoji n\xe0y? H\xe3y đăng k\xfd Nitro v\xe0 tham gia m\xe1y chủ.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Emoji n\xe0y của một m\xe1y chủ chỉ mở cho người được mời hoặc kh\xf4ng khả dụng. [T\xecm hiểu th\xeam](openPremiumSettings) về việc sử dụng emoji t\xf9y chỉnh.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Emoji t\xf9y chỉnh n\xe0y đến từ một m\xe1y chủ chỉ d\xe0nh cho người được mời. Sử dụng emoji t\xf9y chỉnh từ mọi m\xe1y chủ đ\xe3 tham gia trong thời gian đăng k\xfd Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Nhận sticker n\xe0y từ",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16440,7 +16504,7 @@
         SEE_DETAIL: "Chi Tiết Sự Kiện",
         EVENT_MARK_INTERESTED: "Đ\xe1nh dấu Đ\xe3 quan t\xe2m",
         EVENT_MARK_NOT_INTERESTED: "Đ\xe1nh dấu Kh\xf4ng quan t\xe2m",
-        EVENT_DETAILS_A11Y_HINT: "Nhấn đ\xfap để xem chi tiết sự kiện",
+        EVENT_DETAILS_A11Y_HINT: "Chạm hai lần để xem chi tiết sự kiện",
         SCHEDULE_EVENT_DESCRIPTION: "L\xean lịch S\xe2n khấu cho tương lai.",
         GO_TO_CHANNEL: "Truy cập k\xeanh",
         STARTING_SOON: "Sắp Bắt Đầu",
@@ -16656,12 +16720,9 @@
           "Bạn c\xf3 chắc chắn muốn chỉnh sửa sự kiện n\xe0y kh\xf4ng?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Chỉnh sửa sự kiện n\xe0y cũng sẽ **cập nhật tất cả sự kiện** trong chuỗi n\xe0y.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Thử ngay",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "MỚI! Sự kiện lặp lại",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Bạn giờ c\xf3 thể dễ d\xe0ng đặt v\xf2ng lặp cho c\xe1c sự kiện.",
-        COPY_RECURRENCE_LINK: "Sao ch\xe9p Đường Dẫn Sự Kiện n\xe0y",
-        COPY_SERIES_LINK: "Sao ch\xe9p Đường Dẫn Chuỗi Sự Kiện n\xe0y",
+        COPY_RECURRENCE_LINK:
+          "Sao ch\xe9p đường dẫn cho duy nhất sự kiện n\xe0y",
+        COPY_SERIES_LINK: "Sao ch\xe9p đường dẫn cho tất cả sự kiện",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Tạo Sự kiện",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17990,6 +18051,8 @@
           "Nếu bạn kh\xf4i phục Nitro Classic, ch\xfang t\xf4i sẽ tiếp tục t\xednh ph\xed **{price}** theo phương thức thanh to\xe1n của bạn v\xe0 tiếp tục t\xednh ph\xed **hằng th\xe1ng** cho đến khi bạn hủy g\xf3i đăng k\xfd. Bạn c\xf3 thể hủy bất kỳ l\xfac n\xe0o trong trang C\xe0i Đặt.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Nếu bạn kh\xf4i phục Nitro Classic, ch\xfang t\xf4i sẽ tiếp tục t\xednh ph\xed **{price}** theo phương thức thanh to\xe1n của bạn v\xe0 tiếp tục t\xednh ph\xed **hằng năm** cho đến khi bạn hủy g\xf3i đăng k\xfd. Bạn c\xf3 thể hủy bất kỳ l\xfac n\xe0o trong trang C\xe0i Đặt.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Nếu bạn kh\xf4i phục Nitro, ch\xfang t\xf4i sẽ tiếp tục t\xednh ph\xed theo phương thức thanh to\xe1n của bạn với mức gi\xe1 **{discountPrice}** một th\xe1ng cho đến khi gi\xe1 ưu đ\xe3i kết th\xfac, sau đ\xf3 t\xednh ph\xed ***{defaultPrice}*** một th\xe1ng cho đến khi bạn hủy g\xf3i đăng k\xfd. Bạn c\xf3 thể hủy bất kỳ l\xfac n\xe0o từ trang C\xe0i đặt của m\xecnh.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Giữ lại g\xf3i Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19577,6 +19640,9 @@
           "Lọc dựa tr\xean th\xf4ng tin an to\xe0n, v\xed dụ như bị hạn chế hoặc tham gia c\xe1c hoạt động DM bất thường.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Cấm Th\xe0nh Vi\xean",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Kh\xf4ng x\xe1c định",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Ẩn",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Chế độ streamer đ\xe3 bật, m\xe3 mời đ\xe3 được ẩn đi",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Kh\xe1m Ph\xe1 M\xe1y Chủ",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Student Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME:
@@ -19654,8 +19720,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Kh\xf4ng c\xf3 quyền hạn điều phối vi\xean",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Được cấp bởi",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Rủi ro) Được cấp bởi",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Điều phối vi\xean",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Quyền hạn được cấp từ những vai tr\xf2 n\xe0y",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Vai tr\xf2 cao nhất",
@@ -20812,6 +20877,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Chỉnh sửa tệp tin đa phương tiện v\xe0 tạo meme, với tốc độ Discord.",
         EARLY_ACCESS: "Truy Cập Sớm",
+        REWARD: "Phần Thưởng",
         REMIXING_POST_CTA: "Gửi",
         REMIXING_CROP: "Cắt tệp tin đa phương tiện",
         REMIXING_BACKDROP_EDITOR_TITLE: "Điều chỉnh & Cắt",
@@ -22208,6 +22274,10 @@
           "Những m\xe1y chủ m\xe0 bạn đ\xe3 gửi tin nhắn trong tuần vừa rồi. Đ\xf3 kh\xf4ng phải l\xe0 li\xean kết mời, cha/mẹ của bạn sẽ kh\xf4ng thể nhấp v\xe0o những li\xean kết n\xe0y.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Những m\xe1y chủ m\xe0 con/em của bạn đ\xe3 gửi tin nhắn ở trong đ\xf3 tuần vừa rồi.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Những m\xe1y chủ m\xe0 bạn c\xf3 tương t\xe1c (gửi tin nhắn hoặc tham gia tr\xf2 chuyện thoại) trong tuần vừa rồi. Đ\xf3 kh\xf4ng phải l\xe0 li\xean kết mời, cha/mẹ của bạn sẽ kh\xf4ng thể nhấp v\xe0o những li\xean kết n\xe0y.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Những m\xe1y chủ m\xe0 con/em của bạn c\xf3 tương t\xe1c (gửi tin nhắn hoặc tham gia tr\xf2 chuyện thoại) trong tuần vừa rồi.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "M\xe1y chủ c\xf3 tương t\xe1c - {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -22353,6 +22423,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Th\xe0nh vi\xean đăng k\xfd Nitro được giảm gi\xe1 khi mua trang tr\xed n\xe0y",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} khi c\xf3 đăng k\xfd Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} khi c\xf3 đăng k\xfd Nitro $[đăng k\xfd ngay](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Sẵn s\xe0ng cho diện mạo mới chưa?",
         COLLECTIBLES_SHOP_ERROR_HEADING:
@@ -22372,6 +22444,9 @@
           "Sau khi mua, hiệu ứng n\xe0y sẽ được th\xeam v\xe0o bộ sưu tập của bạn v\xe0 c\xf3 thể được sử dụng bất kỳ l\xfac n\xe0o",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Hiệu ứng n\xe0y hiện đ\xe3 nằm trong bộ sưu tập của bạn v\xe0 c\xf3 thể được sử dụng bất kỳ l\xfac n\xe0o!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Gi\xe1 gốc {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Khi nhấn v\xe0o '{buyButtonLabel}', bạn đồng \xfd với [Điều Khoản Dịch Vụ Trả Ph\xed]({paidServiceTermURL}). Sau khi giao dịch đ\xe3 ho\xe0n th\xe0nh, vật phẩm sẽ được th\xeam v\xe0o bộ sưu tập của bạn v\xe0 c\xf3 thể được sử dụng bất kỳ l\xfac n\xe0o. Xin lưu \xfd rằng g\xf3i đăng k\xfd Nitro sẽ chuyển sang thể thức kh\xf4ng ho\xe0n tiền sau khi bạn đ\xe3 mua một vật phẩm.",
         COLLECTIBLES_DAYS_LEFT: "{days} ng\xe0y c\xf2n lại",
         COLLECTIBLES_LAST_DAY: "Ng\xe0y cuối c\xf3 thể mua",
         COLLECTIBLES_SHOP_VIEW_ALL: "Xem tất cả",
@@ -22395,10 +22470,9 @@
           "Khai th\xe1c c\xe1c Nguy\xean Tố",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Lửa. Gi\xf3. Nước. Đất. Đ\xe2u sẽ l\xe0 lựa chọn của bạn?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "C\xe1c vật phẩm Anime mới đ\xe3 c\xf3 mặt!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Phong c\xe1ch mới",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "H\xe3y tới xem c\xe1c phong c\xe1ch mới nhất n\xe0y, c\xe1c so\xe1i ca nhất định sẽ để \xfd bạn đ\xf3.",
+          "Giờ th\xec senpai chắc chắn sẽ ch\xfa \xfd đến bạn.",
         COLLECTIBLES_NEW_BADGE: "MỚI",
         INVENTORY_EMOJI_DETAILS_V2: "Xem chi tiết emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23741,6 +23815,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# ph\xfat} other {# ph\xfat}}",
         CLIPS_SAVE: "Lưu lại Clip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Bật clip để thu lại stream n\xe0y.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Cho ph\xe9p người xem thu lại clip",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Cho ph\xe9p tạo clip từ stream Go Live của bạn",
@@ -24122,6 +24198,8 @@
           "Ch\xfang t\xf4i rất coi trọng sự an to\xe0n của thanh thiếu ni\xean tại Discord. Khi ph\xe1t hiện rủi ro an to\xe0n c\xf3 thể xảy ra trong cuộc tr\xf2 chuyện, ch\xfang t\xf4i sẽ th\xf4ng b\xe1o cho bạn biết. [T\xecm hiểu th\xeam về cảnh b\xe1o an to\xe0n.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Tới c\xe0i đặt",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Bỏ qua",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Cảm ơn c\xe1c phản hồi của bạn!",
         STRANGER_DANGER_BANNER_BLOCK: "Chặn",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Tắt",
         STRANGER_DANGER_MORE_HEADER: "Những việc kh\xe1c bạn c\xf3 thể l\xe0m",
@@ -24169,9 +24247,20 @@
           "Cuộc tr\xf2 chuyện n\xe0y c\xf3 thể kh\xf4ng an to\xe0n.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "H\xe3y c\xf3 h\xe0nh động xử l\xfd để bảo vệ bản th\xe2n.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "H\xe3y c\xf3 h\xe0nh động xử l\xfd để bảo vệ bản th\xe2n bằng c\xe1ch mở c\xe1c c\xf4ng cụ an to\xe0n.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Cuộc tr\xf2 chuyện n\xe0y c\xf3 thể kh\xf4ng an to\xe0n. H\xe3y mở c\xe1c c\xf4ng cụ an to\xe0n để xử l\xfd.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Chặn người n\xe0y",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Bỏ chặn",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Đ\xe3 chặn t\xe0i khoản",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Đ\xe3 hủy chặn t\xe0i khoản",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST:
+          "Đ\xe3 b\xe1o c\xe1o t\xe0i khoản",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Đ\xe3 c\xf3 lỗi! Vui l\xf2ng thử lại sau.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Người n\xe0y sẽ kh\xf4ng thể gửi tin nhắn cho bạn. Nếu bạn cảm thấy h\xe0nh động của họ c\xf3 thể g\xe2y hại cho người kh\xe1c, vui l\xf2ng gửi b\xe1o c\xe1o cho Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Chặn",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Chặn v\xe0 b\xe1o c\xe1o",
@@ -24298,6 +24387,8 @@
         POLL_SUBMIT_VOTE: "Bỏ phiếu",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} phiếu} other {{count} phiếu}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} Phiếu} other {{count} Phiếu}}",
         POLL_ALREADY_VOTED: "Đ\xe3 bỏ phiếu",
         POLL_EDIT_VOTE: "Thay đổi lựa chọn",
         POLL_REMOVE_VOTE: "X\xf3a phiếu bầu",
@@ -24312,9 +24403,16 @@
         POLL_EXPIRED: "Bảng thăm d\xf2 \xfd kiến đ\xe3 đ\xf3ng",
         POLL_SELECT_ONE_ANSWER: "Chọn một c\xe2u trả lời",
         POLL_SELECT_MULTIPLE_ANSWERS: "Chọn một hoặc nhiều c\xe2u trả lời",
-        POLL_SHOW_VOTES: "Hiển thị phiếu bầu",
-        POLL_HIDE_VOTES: "Ẩn phiếu bầu",
+        POLL_SHOW_VOTES: "Hiện kết quả",
+        POLL_HIDE_VOTES: "Trở lại bỏ phiếu",
+        POLL_VOTES_NO_RESULTS_TITLE: "Ở đ\xe2y chẳng c\xf3 g\xec để xem cả",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "Kh\xf4ng ai bỏ phiếu cho c\xe2u trả lời n\xe0y",
+        POLL_COACHMARK_TITLE: "MỚI! Bảng thăm d\xf2 \xfd kiến đ\xe3 ra mắt.",
+        POLL_COACHMARK_SUBTITLE:
+          "L\xean kế hoạch cho sự kiện, thu thập \xfd kiến hoặc hỏi những c\xe2u hỏi vu vơ trong khi tr\xf2 chuyện.",
         POLL_NOT_INTERACTIVE: "Xem tin nhắn gốc để tương t\xe1c",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Ở đ\xe2y chẳng c\xf3 g\xec để xem cả",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Kh\xf4ng ai bỏ phiếu cho c\xe2u trả lời n\xe0y.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Bỏ phiếu",
@@ -24347,8 +24445,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Bảng thăm d\xf2 \xfd kiến sẽ duy tr\xec trong",
         CREATE_POLL_DURATION_LABEL: "Khoảng thời gian",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 giờ",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 giờ",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ng\xe0y",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tuần",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24377,6 +24473,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "M\xf4 tả H\xecnh ảnh (Văn bản Thay thế)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Văn bản thay thế:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Chọn nội dung đa phương tiện",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Ối, bạn bỏ s\xf3t rồi. Vui l\xf2ng th\xeam một c\xe2u hỏi.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ối, bạn bỏ s\xf3t rồi. Vui l\xf2ng th\xeam \xedt nhất một c\xe2u trả lời.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Đừng bỏ trống trường c\xe2u hỏi! H\xe3y nhập nội dung v\xe0o đ\xe2y.",
         POLL_END_EARLY: "Kết th\xfac khảo s\xe1t ngay",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Kết th\xfac khảo s\xe1t ngay?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -24409,11 +24511,17 @@
         QUESTS_ACCEPT: "Chấp nhận nhiệm vụ",
         QUESTS_COMPLETE_TOOLTIP: "Nhấn nhận để lấy m\xe3 phần thưởng của bạn!",
         QUESTS_ACCEPT_TOOLTIP:
-          "Chấp nhận nhiệm vụ v\xe0 ho\xe0n th\xe0nh y\xeau cầu để mở kh\xf3a phần thưởng",
+          "Chấp nhận Nhiệm Vụ v\xe0 ho\xe0n th\xe0nh y\xeau cầu để mở kh\xf3a phần thưởng",
         QUESTS_IN_PROGRESS_TOOLTIP:
           "Ho\xe0n th\xe0nh y\xeau cầu để mở kh\xf3a phần thưởng",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} cho một người bạn trong {minutes} ph\xfat",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "X\xe1c minh t\xe0i khoản của bạn để nhận thưởng!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Ch\xfang t\xf4i đ\xe3 gửi một email x\xe1c minh tới: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "\xd4i kh\xf4ng! Ch\xfang t\xf4i kh\xf4ng thể gửi email x\xe1c minh cho bạn.",
         QUEST_REWARD: "Thắng {reward}",
         QUESTS_REWARD_CODE_HEADER: "M\xe3 phần thưởng của bạn",
         QUESTS_REWARD_CODE_CONGRATS: "Ch\xfac mừng!",
@@ -24435,8 +24543,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Được t\xe0i trợ",
+        QUESTS_PROMOTED: "Được quảng c\xe1o",
         QUESTS_LEARN_MORE_V2: "T\xecm hiểu th\xeam",
         QUESTS_LEARN_MORE_STACKED: "T\xecm hiểu\n\nth\xeam",
+        QUESTS_LEARN_MORE_LINK: "[T\xecm hiểu th\xeam]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Chấp nhận nhiệm vụ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} cho một người bạn trong {streamingDurationRequirement, number} ph\xfat v\xe0 nhận thưởng {questReward}.",
@@ -24446,11 +24556,11 @@
         QUESTS_TITLE: "Nhiệm Vụ {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ui ch\xe0!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Nhiệm vụ vẫn chưa mở tr\xean di động... Xin lỗi v\xec sự bất tiện n\xe0y! Tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt, bạn c\xf3 thể v\xe0o **Thiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng** v\xe0 nhận nhiệm vụ tại đ\xf3.",
+          "Nhiệm vụ vẫn chưa mở tr\xean di động... Xin lỗi v\xec sự bất tiện n\xe0y! Bạn c\xf3 thể v\xe0o **Thiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng** v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Nhiệm Vụ vẫn chưa khả dụng tr\xean di động.",
         QUESTS_MOBILE_EMBED_BODY:
-          "Tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt, bạn c\xf3 thể v\xe0o \nThiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng v\xe0 nhận nhiệm vụ tại đ\xf3.",
+          "Bạn c\xf3 thể v\xe0o \nThiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
         QUESTS_GET_THIS_GAME: "Tải tr\xf2 chơi n\xe0y",
         QUESTS_DISCLOSURE_LABEL: "Tại sao t\xf4i thấy nội dung n\xe0y?",
         QUESTS_SHARE_LINK: "Sao ch\xe9p đường link chia sẻ",
@@ -24472,7 +24582,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} đang muốn hướng đến một số đối tượng người d\xf9ng Discord nhất định. Dựa tr\xean những th\xf4ng tin m\xe0 bạn đ\xe3 cung cấp cho ch\xfang t\xf4i hoặc những th\xf4ng tin kh\xe1c m\xe0 ch\xfang t\xf4i đ\xe3 thu thập được, ch\xfang t\xf4i cho rằng bạn ph\xf9 hợp với những nh\xf3m sau:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "T\xecm hiểu th\xeam về Nhiệm Vụ tr\xean Discord v\xe0 c\xe1ch để quản l\xfd C\xe0i Đặt Bảo Mật của bạn [tại đ\xe2y]({privacySettingsUrl}).",
+          "[T\xecm hiểu th\xeam]({privacySettingsUrl}) về Nhiệm Vụ tr\xean Discord v\xe0 c\xe1ch để quản l\xfd C\xe0i Đặt Bảo Mật của bạn.",
         QUESTS_DISCLOSURE_LOCATION: "Thư mục",
         QUESTS_DISCLOSURE_AGE: "Tuổi",
         QUESTS_DISCLOSURE_ACTIVITY: "Hoạt động: Chơi game li\xean quan",
@@ -24480,7 +24590,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "C\xf3 g\xec đ\xf3 kh\xf4ng ổn. Kiểm tra Kho Qu\xe0 Tặng để nhận th\xeam Nhiệm Vụ!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "Đ\xe3 xảy ra lỗi khi theo d\xf5i tiến tr\xecnh nhiệm vụ của bạn.",
+          "Đ\xe3 xảy ra lỗi khi theo d\xf5i tiến tr\xecnh Nhiệm Vụ của bạn.",
+        QUESTS_SHARE_QUEST: "Chia sẻ Nhiệm Vụ",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Chọn {gameTitle} để tăng tiến tr\xecnh cho Nhiệm Vụ của bạn!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Bạn phải chọn ứng dụng, chứ kh\xf4ng phải to\xe0n bộ m\xe0n h\xecnh.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Gi\xfap th\xe0nh vi\xean tr\xf2 chuyện sau khi k\xeanh n\xe0y đ\xe3 kh\xf4ng hoạt động trong một thời gian.",
         PROMPT_CAMERA_LOADING_TITLE: "Bạn đang nh\xecn g\xec vậy?",
@@ -24533,10 +24648,23 @@
           "Một thẻ hoạt động hiển thị @{username} đang nghe {song} của {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Một thẻ hoạt động hiển thị @{username} đang stream {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Đang chơi **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Đ\xe3 chơi **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} đang chơi **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} đ\xe3 chơi **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} đang chơi một tr\xf2 chơi mới: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} đ\xe3 chơi một tr\xf2 chơi mới: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count} tuần trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} ng\xe0y trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} giờ trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} ph\xfat trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} gi\xe2y trước",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
       };
     },
   },

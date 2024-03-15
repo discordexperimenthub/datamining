@@ -1007,6 +1007,8 @@
           "Rodyti balso valdiklius",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Atidaryti veiklų lentyną",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Palikti veiklą",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Šiuo metu šioje OS ši funkcija neprieinama",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Šiuo metu ši veikla šioje OS nepasiekiama",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "ši veikla",
@@ -1230,6 +1232,9 @@
         EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "Veikla pradėta.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Šios veiklos negali pradėti serveryje, kuris turi daugiau nei 25 narius",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Išorinė programėlė",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Ruošiesi paleisti išorinę programėlę. Ar nori tęsti?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Veikla baigėsi. Pradėti naują?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Veikla pradėta",
@@ -1237,6 +1242,15 @@
           "Tu neturi leidimo prisijungti prie šio balso kanalo.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Tu negali prisijungti prie veiklų šiame kanale.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Paukštis su garsiakalbiu vietoje galvos",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Atkreipk dėmesį!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Ruošiesi pirmą kartą išbandyti {activityName}.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Ši programėlė sukurta ne Discord. Išbandyk programėles tik iš tų programuotojų, kuriais pasitiki.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Sužinoti daugiau apie privačias programėles.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) pradėjo veiklą",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4801,11 +4815,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Įgalinti arba išjungti greituosius klavišus",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Rezultatai",
-        SHOW_CURRENT_ACTIVITY: "Rodyti esamą veiklą kaip būsenos pranešimą.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord automatiškai atnaujins tavo būseną, kai dalyvausi viešame scenos kanale.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord automatiškai atnaujins tavo būseną pagal žaidimą, kurį žaidi (jei įmanoma aptikti), atliekamą veiklą, palaikančią funkciją Rich Presence, arba viešą scenos kanalą, kuriame dalyvauji.",
         GAME_DETECTION_SERVICE: "Žaidimų Nustatymo Paslauga",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Diegimo vietos",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Pridėti Diegimo Vietą",
@@ -9381,10 +9392,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % nuolaida",
         PREMIUM_DISCOUNT_CTA: "Sutaupyti !!{percent, number}!! % su Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Sutaupyti su Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Tavo !!{percent, number}!! % nuolaida baigs galioti po {numMonths, plural, one {1 mėnesio} other {{numMonths} mėnesių}} nuo įsigijimo. Paskui mokėsi {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Pirmuosius **3 mėnesius** mokėsi **{discountedPrice}**. Paskui – {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Tavo **{numMonths, plural, one {kitas {numMonths} mėnuo} few {kiti {numMonths} mėnesiai} other {kitų {numMonths} mėnesių}}** {numMonths, plural, one {kainuos} other {kainuos}} **{discountedPrice}**. Paskui mokėsi {regularPrice}.",
+          "Your next **{numMonths, plural, one {month} other {{numMonths} months}}** {numMonths, plural, one {is} other {are}} **{discountedPrice}**. After that you'll be charged {regularPrice}/month.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "nuolaida pritaikyta",
         CHURN_DISCOUNT_DESCRIPTION:
           "Prieš atšaukdamas (-a), pasimėgauk **{percent, number} % nuolaida savo Nitro prenumeratai** {numMonths, plural, one {1 mėnesį} few {{numMonths} mėnesius} other {{numMonths} mėnesių}}.",
@@ -10832,8 +10845,6 @@
           "Ką tik išsiuntėme tau el. laišką. Norėdamas (-a) patvirtinti pirkimą, spustelėk el. laiške esančią patvirtinimo nuorodą.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Tęsti",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Nieko negavai?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Dar kartą siųsti el. laišką",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11659,7 +11670,53 @@
           "Tapk Nitro prenumeratoriumi (-e) ir gauk šį šaunų ženklelį.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Kolekcionieriams. Griebk šį išskirtinį ženklelį, prieinamą tik su Nitro.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {nemokamas stiprinimas} few {nemokami stiprinimai} other {nemokamų stiprinimų}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Sveikiname praleidus pirmą mėnesį su Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro apdovanojimai",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Savo papildomą stiprinimą gali naudoti tol, kol tavo dabartinė Nitro prenumerata išlieka aktyvi.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Panaudok savo apdovanojimą!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Panaudok",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Panaudotas",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Dėkojame, kad esi Nitro nariu (-e).",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Stiprinimą turėsi tol, kol bus aktyvi tavo Nitro prenumerata. Ją atšaukus, pažanga panaikinama, o stiprinimas pašalinamas.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Gauk stiprinimą po pirmo Nitro naudojimo mėnesio.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Panaudoti po {days} {days, plural, =1 {dienos} other {dienų}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Panaudoti po {numDays} {numDays, plural, =1 {dienos} other {dienų}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro apdovanojimai",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Gauk stiprinimą po pirmo Nitro naudojimo mėnesio.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Gauk stiprinimą po 3 Nitro naudojimo mėnesių.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Savo papildomą stiprinimą gali naudoti tol, kol tavo dabartinė Nitro prenumerata išlieka aktyvi.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "Panaudok savo apdovanojimą!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Sveikiname praleidus pirmą mėnesį su Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Sveikiname praleidus 3 mėnesius su Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Dėkojame, kad esi Nitro nariu (-e).",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Stiprinimą turėsi tol, kol bus aktyvi tavo Nitro prenumerata. Ją atšaukus, pažanga panaikinama, o stiprinimas pašalinamas.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Panaudotas",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Užsidirbai papildomą stiprinimą, puikiai padirbėta.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "Stiprinimas tavęs jau laukia!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Dėkojame, kad esi Nitro nariu (-e). Štai papildomas stiprinimas, kurį gauni už pirmą su Nitro praleistą mėnesį.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Dėkojame, kad esi Nitro nariu (-e). Štai papildomas stiprinimas, kurį gauni už 3 su Nitro praleistus mėnesius.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Pakelk savo Discord į naują lygį",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11755,6 +11812,7 @@
           "Nemokamas bandomasis laikotarpis ({days, plural, =1 {liko # diena} few {liko # dienos} other {liko # dienų}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE:
           "Nemokamas bandomasis laikotarpis",
+        POWERED_BY_NITRO: "Teikiama Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Žaidžia žaidimą",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Tiesiogiai per !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Žaidžia !!{platform}!!",
@@ -14210,8 +14268,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Šis emoji yra iš",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Šis jaustukas priklauso tavo serveriui. Gali naudoti jį visur.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Šis jaustukas yra iš šio serverio. Naudok jį bet kur su Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Šis jaustukas priklauso vienam iš tavo serverių. Įvesk jo pavadinimą pokalbių juostoje ir galėsi naudoti.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Šis jaustukas yra iš vieno iš tavo serverių. Jį gali naudoti bet kur su Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Nori šį jaustuką naudoti visur? Prisijunk prie šio serverio.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14226,6 +14288,8 @@
           "Nori šį jaustuką naudoti visur? Gauk Nitro ir prisijunk prie šio serverio.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Šis jaustukas priklauso tik su kvietimu pasiekiamam arba apskritai nepasiekiamam serveriui. [Sužinoti daugiau](openPremiumSettings) apie tinkinto jaustuko naudojimą.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Šis tinkintas jaustukas yra iš serverio, į kurį galima patekti tik su kvietimu. Su Nitro gali naudoti tinkintus jaustukus iš visų serverių, prie kurių prisijungi.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION: "Gauk šį lipduką iš",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Šis lipdukas yra iš",
         STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
@@ -16172,13 +16236,8 @@
           "Ar tikrai nori redaguoti šį renginį?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Redaguojant šį renginį taip pat bus **atnaujinti visi šios sekos renginiai**.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Išbandyti",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE:
-          "NAUJA! Pasikartojantys renginiai",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Nuo šiol gali lengvai pakartoti renginius.",
-        COPY_RECURRENCE_LINK: "Kopijuoti šio renginio nuorodą",
-        COPY_SERIES_LINK: "Kopijuoti renginių sekos nuorodą",
+        COPY_RECURRENCE_LINK: "Kopijuoti tik šio renginio nuorodą",
+        COPY_SERIES_LINK: "Kopijuoti nuorodą visiems renginiams",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Sukurti renginį",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17489,6 +17548,8 @@
           "Jei atkursi Nitro Classic prenumeratą, nuskaičiuosime **{price}** tavo mokėjimo būdu ir šį mokestį nuskaitysime **kas mėnesį**, kol atšauksi prenumeratą. Tačiau gali ją bet kada atšaukti Nustatymų puslapyje.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Jei atkursi Nitro Classic prenumeratą, nuskaičiuosime **{price}** tavo mokėjimo būdu ir šį mokestį nuskaitysime **kasmet**, kol atšauksi prenumeratą. Tačiau gali ją bet kada atšaukti Nustatymų puslapyje.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Jei atkursi Nitro, tavo pasirinktu mokėjimo būdu nuskaičiuosime **{discountPrice}** kas mėnesį, kol nuolaida baigsis, o paskui mokėsi ***{defaultPrice}*** kas mėnesį, kol prenumeratą atšauksi. Ją gali bet kada atšaukti savo nustatymų puslapyje.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Pasilikti Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19018,6 +19079,9 @@
           "Filtruojama pagal saugumo informaciją, tokią kaip laikinas nutildymas ar neįprastas AŽ aktyvumas.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Užblokuoti Narius",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Nežinoma",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Paslėpti",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Transliuotojo režimas įjungtas, pakvietimo kodai paslėpti",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Serveris „Discovery“",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Student Hub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Kiti prisijungimo būdai",
@@ -19093,8 +19157,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Jokių leidimų moderatoriams nėra",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Suteikė",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Rizikingas) Suteikė",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderatorius",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Leidimą suteikė šie vaidmenys",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Aukščiausias vaidmuo",
@@ -20218,6 +20281,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Medijų redagavimas ir memų kūrimas Discord greičiu.",
         EARLY_ACCESS: "Išankstinė prieiga",
+        REWARD: "Apdovanojimas",
         REMIXING_POST_CTA: "Siųsti",
         REMIXING_CROP: "Apkarpyti mediją",
         REMIXING_BACKDROP_EDITOR_TITLE: "Redaguoti ir apkarpyti",
@@ -21583,6 +21647,10 @@
           "Serveriai, kuriuose pastarąją savaitę siuntei žinutes. Tai nėra pakvietimo nuorodos, tavo tėvai negalės jų paspausti.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Serveriai, kuriuose jūsų paauglys (-ė) pastarąją savaitę siuntė žinutes.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Serveriai, kuriuose buvai aktyvus (-i) pastarąją savaitę (siuntei žinutes, prisijungei prie pokalbių balsu). Tai nėra pakvietimo nuorodos, tavo tėvai negalės jų paspausti.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Serveriai, kuriuose jūsų paauglys (-ė) buvo aktyvus (-i) pastarąją savaitę (siuntė žinutes, prisijungė prie pokalbių balsu).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktyvūs serveriai – {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21722,6 +21790,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro prenumeratoriai šiam papuošimui gauna nuolaidą",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} su Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} su Nitro, $[prenumeruoti dabar](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Atėjo laikas naujai išvaizdai?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Tikrai nesmagu dėl šito.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21737,6 +21807,9 @@
           "Kai jį įsigysi, šis efektas papildys tavo kolekciją, jį galėsi naudoti bet kada",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Šis efektas papildė tavo kolekciją, jį gali naudoti bet kada!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Įprasta kaina – {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Spausdamas (-a) „{buyButtonLabel}“ sutinki su [Mokamų paslaugų teikimo sąlygomis]({paidServiceTermURL}). Kai užbaigsi mokėjimą, prekė papildys tavo kolekciją, ją galėsi naudoti bet kada. Atkreipk dėmesį, kad įsigijus prekę, lėšos už Nitro prenumeratą nebegali būti grąžintos.",
         COLLECTIBLES_DAYS_LEFT: "Liko {days} d.",
         COLLECTIBLES_LAST_DAY: "Paskutinė diena, kai gali įsigyti",
         COLLECTIBLES_SHOP_VIEW_ALL: "Peržiūrėti viską",
@@ -21758,9 +21831,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Pažabok stichijas",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Ugnis. Vėjas. Vanduo. Žemė. Kurią išlaisvinsi?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Pasirodė nauji anime stiliai!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: nauji stiliai",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Peržvelk naujausius stilius, kurie tau neabejotinai padės pritraukti senpai dėmesį.",
+          "Senpai dabar tave tikrai pastebės.",
         COLLECTIBLES_NEW_BADGE: "NAUJI",
         INVENTORY_EMOJI_DETAILS_V2: "Žiūrėti išsamius jaustuko duomenis",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23084,6 +23157,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# minutė} few {# minutės} other {# minučių}}",
         CLIPS_SAVE: "Išsaugoti klipą",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Įjungti iškarpas šiai transliacijai užfiksuoti.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Leisti žiūrovams iškirpti klipus",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Įjungti klipų kūrimą Go Live transliacijoje",
@@ -23457,6 +23532,7 @@
           "Paauglių saugą Discord vertina rimtai. Kai aptinkame galimą riziką tavo saugai, apie tai pranešime. [Sužinoti daugiau apie įspėjimus dėl saugos.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Eiti į nustatymus",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Atmesti",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Ačiū už atsiliepimą!",
         STRANGER_DANGER_BANNER_BLOCK: "Blokuoti",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Uždaryti",
         STRANGER_DANGER_MORE_HEADER: "Ką dar gali padaryti",
@@ -23503,9 +23579,19 @@
           "Šis pokalbis gali būti nesaugus.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Imkis veiksmų, kad save apsaugotum.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Imkis veiksmų, kad save apsaugotum: atidaryk saugos įrankius.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Šis pokalbis gali būti nesaugus. Atidaryk saugos įrankius ir imkis veiksmų.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Užblokuoti naudotoją",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Atblokuoti",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Paskyra užblokuota",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Paskyra atblokuota",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Apie paskyrą pranešta",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Kažkas nepavyko! Pabandyk dar kartą vėliau.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Šis naudotojas negalės tau siųsti žinučių. Jei manai, kad jo veiksmai gali kam nors padaryti žalą, pateik pranešimą Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blokuoti",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blokuoti ir pranešti",
@@ -23627,6 +23713,8 @@
         POLL_SUBMIT_VOTE: "Balsuoti",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} balsas} few {{count} balsai} other {{count} balsų}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} balsas} few {{count} balsai} other {{count} balsų}}",
         POLL_ALREADY_VOTED: "Balsuota",
         POLL_EDIT_VOTE: "Pakeisti balsą",
         POLL_REMOVE_VOTE: "Pašalinti balsą",
@@ -23641,10 +23729,16 @@
         POLL_EXPIRED: "Apklausa uždaryta",
         POLL_SELECT_ONE_ANSWER: "Pasirink vieną atsakymą",
         POLL_SELECT_MULTIPLE_ANSWERS: "Pasirink vieną ar daugiau atsakymus",
-        POLL_SHOW_VOTES: "Rodyti balsus",
-        POLL_HIDE_VOTES: "Slėpti balsus",
+        POLL_SHOW_VOTES: "Rodyti rezultatus",
+        POLL_HIDE_VOTES: "Grįžti į balsavimą",
+        POLL_VOTES_NO_RESULTS_TITLE: "Čia nieko nėra",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Už šį atsakymą balsų negauta",
+        POLL_COACHMARK_TITLE: "NAUJA! Apklausos jau čia.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planuok renginius, sužinok nuomones arba užduok smagiai kvailą klausimą pokalbyje.",
         POLL_NOT_INTERACTIVE:
           "Norėdamas (-a) sąveikauti, peržiūrėk pradinę žinutę",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Čia nieko nėra",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Už šį atsakymą balsų negauta.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Balsai",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Atskleisti balsus",
@@ -23671,8 +23765,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Apklausa veikimo laikas",
         CREATE_POLL_DURATION_LABEL: "Trukmė",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 val.",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 val.",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dienos",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 sav.",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23700,6 +23792,11 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Vaizdo aprašas (alternatyvus tekstas)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alternatyvus tekstas:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Pasirinkti mediją",
+        CREATE_POLL_QUESTION_REQUIRED: "Ups, šį tą pamiršai. Pridėk klausimą.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ups, šį tą pamiršai. Pridėk bent vieną atsakymą.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Nepalik atsakymo laukelio tuščio! Parašyk ką nors.",
         POLL_END_EARLY: "Užbaigti apklausą dabar",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Užbaigti apklausą dabar?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23734,6 +23831,12 @@
           "Priimk misiją ir atlik užduotį, kad gautum apdovanojimą",
         QUESTS_IN_PROGRESS_TOOLTIP: "Atlik užduotį, kad gautum apdovanojimą",
         QUESTS_STREAM_TASK: "Transliuoti {gameTitle} draugui {minutes} min.",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Patvirtink savo paskyrą, kad galėtum atsiimti apdovanojimus!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Patvirtinimo el. laišką išsiuntėme adresu: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "O ne! Mums nepavyko tau išsiųsti patvirtinimo el. laiško.",
         QUEST_REWARD: "Laimėjimas: {reward}",
         QUESTS_REWARD_CODE_HEADER: "Tavo apdovanojimo kodas",
         QUESTS_REWARD_CODE_CONGRATS: "Sveikiname!",
@@ -23756,8 +23859,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Remiama",
+        QUESTS_PROMOTED: "Paaukštintas",
         QUESTS_LEARN_MORE_V2: "Sužinoti daugiau",
         QUESTS_LEARN_MORE_STACKED: "Sužinoti\n\ndaugiau",
+        QUESTS_LEARN_MORE_LINK: "[Sužinoti daugiau]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Priimti misiją",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Transliuok {gameTitle} draugui {streamingDurationRequirement, number} min. ir laimėk {questReward}.",
@@ -23767,7 +23872,7 @@
         QUESTS_TITLE: "{questName} misija",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Gaila, bet misijos mobiliojoje versijoje nepasiekiamos... kol kas. Norėdamas (-a) priimti misiją gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: **Naudotojo nustatymai > Dovanų atsargos**.",
+          "Gaila, bet misijos mobiliojoje versijoje nepasiekiamos... kol kas. Norėdamas (-a) priimti misiją, gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: **Naudotojo nustatymai > Dovanų atsargos**.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Mobiliosiose programėlėse misijos neprieinamos... kol kas.",
         QUESTS_MOBILE_EMBED_BODY:
@@ -23792,7 +23897,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} stengiasi pasiekti tam tikrų tipų Discord naudotojus. Atsižvelgdami į tai, ką mums sakei ir kitą mūsų surinktą informaciją, manome, kad tinki į keletą šių grupių:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Sužinoti daugiau apie misijas Discord platformoje ir kaip valdyti savo privatumo nustatymus gali [čia]({privacySettingsUrl}).",
+          "[Sužinoti daugiau]({privacySettingsUrl}) apie misijas Discord platformoje ir kaip valdyti savo privatumo nustatymus.",
         QUESTS_DISCLOSURE_LOCATION: "Vieta",
         QUESTS_DISCLOSURE_AGE: "Amžius",
         QUESTS_DISCLOSURE_ACTIVITY: "Veikla: aktualūs žaidimai",
@@ -23801,6 +23906,11 @@
           "Kažkas nepavyko. Peržiūrėk dovanų atsargas, kur rasi daugiau misijų!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Kilo problemų sekant tavo misijos pažangą.",
+        QUESTS_SHARE_QUEST: "Bendrinti misiją",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Pasirink {gameTitle}, kad tavo misijos pažanga didėtų!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Turi pasirinkti programėlę, o ne visą ekraną.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Paskatink narius bendrauti, nes šis kanalas kurį laiką yra neaktyvus.",
         PROMPT_CAMERA_LOADING_TITLE: "Ką gero matai?",
@@ -23852,10 +23962,23 @@
           "Veiklos kortelė rodo @{username}, kuris (-i) klausosi {song}, dainą atlieka {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Veiklos kortelė rodo @{username}, kuris (-i) transliuoja {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Žaidžia **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Žaidė **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} žaidžia **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} žaidė **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} žaidžia naują žaidimą: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} žaidė naują žaidimą: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "prieš {count} sav.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "prieš {count} d.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "prieš {count} val.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "prieš {count} min.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prieš {count} sek.",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pirmą kartą",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Veikla",
       };
     },
   },

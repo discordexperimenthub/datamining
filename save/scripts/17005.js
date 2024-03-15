@@ -1030,6 +1030,8 @@
           "Visa r\xf6stkontroller",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "\xd6ppna Aktivitetshylla",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "L\xe4mna aktivitet",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Den h\xe4r funktionen \xe4r inte tillg\xe4nglig p\xe5 det h\xe4r operativsystemet just nu",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Den h\xe4r aktiviteten \xe4r inte tillg\xe4nglig p\xe5 det h\xe4r operativsystemet f\xf6r n\xe4rvarande",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "denna aktivitet",
@@ -1261,6 +1263,9 @@
           "Aktiviteten har startat.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Du kan inte starta den h\xe4r aktiviteten p\xe5 en server med fler \xe4n 25 medlemmar",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Extern app",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Du startar nu en extern app. Vill du forts\xe4tta?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Aktivitet avslutad. Starta en ny?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Aktivitet startad",
@@ -1268,6 +1273,15 @@
           "Du har inte beh\xf6righet att g\xe5 med i den h\xe4r r\xf6stkanalen.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Du kan inte g\xe5 med i Aktiviteter i den h\xe4r kanalen.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "En f\xe5gel med megafon ist\xe4llet f\xf6r huvud",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Obs!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Du provar nu {activityName} f\xf6r f\xf6rsta g\xe5ngen.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Den h\xe4r appen kommer inte fr\xe5n Discord. Prova bara appar fr\xe5n betrodda utgivare.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "L\xe4s mer om privata appar.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) startade en aktivitet",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4866,12 +4880,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Aktivera eller inaktivera kortkommando",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultat",
-        SHOW_CURRENT_ACTIVITY:
-          "Visa aktuell aktivitet som ett statusmeddelande.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord uppdaterar automatiskt din status om du medverkar p\xe5 ett offentligt podium.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord uppdaterar automatiskt din status baserat p\xe5 det spel du spelar (om det kan identifieras), en aktivitet du h\xe5ller p\xe5 med som st\xf6der Rich Presence eller om du medverkar p\xe5 ett offentligt podium.",
         GAME_DETECTION_SERVICE: "Spelidentifieringstj\xe4nst",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Installationsplatser",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -5518,7 +5528,7 @@
         LOGOUT: "Logga ut",
         SOUNDS: "Ljud",
         PREMIUM: "Nitro",
-        BASIC: "Grundl\xe4ggande",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Meddelande",
         SOUND_DEAFEN: "Ljud av",
         SOUND_UNDEAFEN: "Ljud p\xe5",
@@ -9517,10 +9527,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % rabatt",
         PREMIUM_DISCOUNT_CTA: "Spara !!{percent, number}!! % p\xe5 Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Spara p\xe5 Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Din rabatt p\xe5 !!{percent, number}!! % g\xe5r ut {numMonths, plural, one {1 m\xe5nad} other {{numMonths} m\xe5nader}} efter k\xf6pet. Efter det debiteras du {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Dina f\xf6rsta **tre m\xe5nader** kostar **{discountedPrice}**. Efter det debiteras du {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "F\xf6ljande **{numMonths, plural, one {m\xe5nad} other {{numMonths} m\xe5nader}}** {numMonths, plural, one {kostar} other {kostar}} **{discountedPrice}**. Efter det debiteras du {regularPrice}.",
+          "F\xf6ljande **{numMonths, plural, one {m\xe5nad} other {{numMonths} m\xe5nader}}** {numMonths, plural, one {kostar} other {kostar}} **{discountedPrice}**. Efter det debiteras du {regularPrice}/m\xe5nad.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "rabatt till\xe4mpad",
         CHURN_DISCOUNT_DESCRIPTION:
           "F\xe5 **{percent, number} % rabatt p\xe5 din Nitro-prenumeration** i {numMonths, plural, one {en m\xe5nad} other {{numMonths} m\xe5nader}} innan du s\xe4ger upp den.",
@@ -10967,8 +10979,6 @@
           "Vi har just skickat ett mejl till dig. Klicka p\xe5 verifieringsl\xe4nken i mejlet f\xf6r att auktorisera k\xf6pet.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Forts\xe4tt",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Fick du inget?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Skicka e-post igen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11800,13 +11810,59 @@
           "F\xe5 det h\xe4r coola m\xe4rket som Nitro-prenumerant.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "F\xf6r samlaren. Ett exklusivt endast-f\xf6r-Nitro-m\xe4rke.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {numFreeBoosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Grattis till din f\xf6rsta m\xe5nad med Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-bel\xf6ning",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Du kan anv\xe4nda din extra boost s\xe5 l\xe4nge din nuvarande Nitro-prenumeration \xe4r aktiv.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "L\xf6s in din bel\xf6ning!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "L\xf6s in",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Inl\xf6st",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Tack f\xf6r att du \xe4r Nitro-medlem!",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Beh\xe5ll din boost med en aktiv Nitro-prenumeration. Om du avslutar \xe5terst\xe4lls f\xf6rloppet och din boost tas bort.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "F\xe5 en boost efter din f\xf6rsta m\xe5nad med Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "L\xf6s in inom {days} {days, plural, =1 {dag} other {dagar}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "L\xf6s in inom {numDays} {numDays, plural, =1 {dag} other {dagar}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro-bel\xf6ning",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "F\xe5 en boost efter din f\xf6rsta m\xe5nad med Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "F\xe5 en boost efter tre m\xe5nader med Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Du kan anv\xe4nda din extra boost s\xe5 l\xe4nge din nuvarande Nitro-prenumeration \xe4r aktiv.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "L\xf6s in din bel\xf6ning!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Grattis till din f\xf6rsta m\xe5nad med Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Grattis till tre m\xe5nader med Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Tack f\xf6r att du \xe4r Nitro-medlem!",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Beh\xe5ll din boost med en aktiv Nitro-prenumeration. Om du avslutar \xe5terst\xe4lls f\xf6rloppet och din boost tas bort.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Inl\xf6st",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Du har f\xe5tt en extra boost. H\xe4rligt!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "Din boost v\xe4ntar p\xe5 dig!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Tack f\xf6r att du \xe4r Nitro-medlem. H\xe4r f\xe5r du en extra boost f\xf6r att du har haft Nitro i en m\xe5nad.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Tack f\xf6r att du \xe4r Nitro-medlem. H\xe4r f\xe5r du en extra boost f\xf6r att du har haft Nitro i tre m\xe5nader.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Superladda din Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
           "Anpassade profiler p\xe5 alla servrar",
         NITRO_MARKETING_CARDS_UNLIMITED_SUPER_REACTIONS:
-          "Obegr\xe4nsat med superreaktioner per vecka",
+          "Unlimited Super Reactions per week",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 serverboostar, 500 MB uppladdningar och mycket mer!",
         NITRO_MARKETING_JUST_THE_BASICS: "Bara grunderna",
@@ -11892,6 +11948,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Gratis provperiod ({days, plural, =1 {# dag kvar} other {# dagar kvar}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Gratis provperiod",
+        POWERED_BY_NITRO: "Fr\xe5n Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Spelar ett spel",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live p\xe5 !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Spelar p\xe5 !!{platform}!!",
@@ -14363,8 +14420,12 @@
           "Den h\xe4r emojin \xe4r fr\xe5n",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Den h\xe4r emojin kommer fr\xe5n den h\xe4r servern. Du kan anv\xe4nda den \xf6verallt.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Den h\xe4r emojin \xe4r fr\xe5n denna server. Anv\xe4nd den var som helst med Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Den h\xe4r emojin kommer fr\xe5n en av dina servrar. Skriv in dess namn i chattf\xe4ltet f\xf6r att anv\xe4nda den.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Den h\xe4r emojin \xe4r fr\xe5n en av dina servrar. Du kan anv\xe4nda den var som helst med Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Vill du anv\xe4nda den h\xe4r emojin \xf6verallt? G\xe5 med i servern.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14379,6 +14440,8 @@
           "Vill du anv\xe4nda den h\xe4r emojin \xf6verallt? Skaffa Nitro och g\xe5 med i servern.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Den h\xe4r emojin kommer fr\xe5n en server med inbjudningskrav eller \xe4r otillg\xe4nglig. [L\xe4s mer](openPremiumSettings) om att anv\xe4nda personliga emojier.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Den h\xe4r personliga emojin \xe4r fr\xe5n en server som har inbjudningskrav. Anv\xe4nd personliga emojier fr\xe5n valfri server som du g\xe5tt med i med Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "H\xe4mta den h\xe4r dekalen fr\xe5n",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16333,12 +16396,9 @@
           "\xc4r du s\xe4ker p\xe5 att du vill \xe4ndra det h\xe4r eventet?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Om du \xe4ndrar det h\xe4r eventet **uppdateras \xe4ven alla event** i den h\xe4r serien.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Testa",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NYTT! Upprepande event",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Nu \xe4r det enkelt att upprepa event.",
-        COPY_RECURRENCE_LINK: "Kopiera den h\xe4r eventl\xe4nken",
-        COPY_SERIES_LINK: "Kopiera eventseriel\xe4nk",
+        COPY_RECURRENCE_LINK:
+          "Kopiera l\xe4nk endast f\xf6r det h\xe4r eventet",
+        COPY_SERIES_LINK: "Kopiera l\xe4nk f\xf6r alla event",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Skapa event",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17639,6 +17699,8 @@
           "Om du \xe5teraktiverar Nitro Classic kommer vi att \xe5teruppta debiteringen av din betalningsmetod **{price}** och forts\xe4tta att debitera dig **varje m\xe5nad** tills du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r som helst fr\xe5n dina inst\xe4llningar.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Om du \xe5teraktiverar Nitro Classic kommer vi att \xe5teruppta debiteringen av din betalningsmetod **{price}** och forts\xe4tta att debitera dig **varje \xe5r** tills du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r som helst fr\xe5n dina inst\xe4llningar.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Om du startar Nitro igen forts\xe4tter vi att debitera din betalningsmetod **{discountPrice}** per m\xe5nad tills din rabatt inte g\xe4ller l\xe4ngre, sedan kommer du att debiteras ***{defaultPrice}*** per m\xe5nad tills du avslutar din prenumeration. Du kan n\xe4r som helst avsluta prenumerationen p\xe5 sidan Inst\xe4llningar.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Beh\xe5ll Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19179,6 +19241,9 @@
           "Filter baserat p\xe5 s\xe4kerhetsinformation som t.ex. timeout eller inblandning i ovanlig DM-aktivitet.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "St\xe4nga av medlemmar",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Ok\xe4nd",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Dold",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Streamerl\xe4get \xe4r aktivt, inbjudningskoder \xe4r dolda",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Serveridentifiering",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Studenthubb",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Andra anslutningsmetoder",
@@ -19254,8 +19319,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Inga moderatorbeh\xf6righeter",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Beviljade av",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riskabla) Beviljade av",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Beh\xf6righet beviljad av dessa roller",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "H\xf6gsta roll",
@@ -20390,6 +20454,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Mediaredigering och meme-skapande med Discord-snabbhet.",
         EARLY_ACCESS: "Tidig tillg\xe5ng",
+        REWARD: "Bel\xf6ning",
         REMIXING_POST_CTA: "Skicka",
         REMIXING_CROP: "Besk\xe4r objektet",
         REMIXING_BACKDROP_EDITOR_TITLE: "Justera och besk\xe4r",
@@ -21762,6 +21827,10 @@
           "Servrar som du har skickat meddelanden till under den senaste veckan. Detta \xe4r inte inbjudningsl\xe4nkar. Dina f\xf6r\xe4ldrar kommer inte att kunna klicka p\xe5 dem.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servrar som din ton\xe5ring har skickat meddelanden till under den senaste veckan.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servrar som du var aktiv i (skickade meddelanden eller deltog i r\xf6stchattar) f\xf6rra veckan. Det h\xe4r \xe4r inga inbjudningsl\xe4nkar, dina f\xf6r\xe4ldrar kan inte klicka p\xe5 dem.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servrar som din ton\xe5ring var aktiv i (skickade meddelanden eller deltog i r\xf6stchattar) f\xf6rra veckan.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktiva servrar: {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21903,6 +21972,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro-prenumeranter f\xe5r rabatt p\xe5 den h\xe4r dekorationen",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} med Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} med Nitro. $[Prenumerera nu](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Dags f\xf6r en ny look?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Okej, det h\xe4r blev knasigt.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21918,6 +21989,9 @@
           "N\xe4r du har k\xf6pt den l\xe4ggs effekten till i din samling och du kan anv\xe4nda den n\xe4r som helst",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Den h\xe4r effekten ing\xe5r nu i din samling och kan anv\xe4ndas n\xe4r som helst!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Vanligtvis {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Genom att klicka p\xe5 ”{buyButtonLabel}” godk\xe4nner du [Villkoren f\xf6r betaltj\xe4nster]({paidServiceTermURL}). N\xe4r du har slutf\xf6rt ditt k\xf6p l\xe4ggs f\xf6rem\xe5let till i din samling och kan anv\xe4ndas n\xe4r som helst. Observera att Nitro-prenumerationer inte \xe5terbetalas n\xe4r du har k\xf6pt ett f\xf6rem\xe5l.",
         COLLECTIBLES_DAYS_LEFT: "{days} dagar kvar",
         COLLECTIBLES_LAST_DAY: "Sista dagen f\xf6r k\xf6p",
         COLLECTIBLES_SHOP_VIEW_ALL: "Visa allt",
@@ -21939,10 +22013,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Tygla elementen",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Eld. Vind. Vatten. Jord. Vad vill du sl\xe4ppa l\xf6s?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "Nu har det kommit nya anime-f\xf6rem\xe5l!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Nya stilar",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Kolla in de senaste stilarna som helt s\xe4kert kommer f\xe5 senpai att l\xe4gga m\xe4rke till dig.",
+          "Senpai kommer helt klart att l\xe4gga m\xe4rke till dig nu.",
         COLLECTIBLES_NEW_BADGE: "NYTT",
         INVENTORY_EMOJI_DETAILS_V2: "Se emoji-detaljinfo",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23271,6 +23344,8 @@
           "{count, plural, =1 {# sekund} other {# sekunder}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# minut} other {# minuter}}",
         CLIPS_SAVE: "Spara klipp",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Aktivera klipp f\xf6r att spela in den h\xe4r streamen.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "L\xe5t tittarna spela in egna klipp",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23650,6 +23725,7 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "G\xe5 till Inst\xe4llningar",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Avvisa",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Tack f\xf6r din feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blockera",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "St\xe4ng",
         STRANGER_DANGER_MORE_HEADER: "Mer som du kan g\xf6ra",
@@ -23696,9 +23772,19 @@
           "Den h\xe4r konversationen \xe4r kanske inte s\xe4ker.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Vidta \xe5tg\xe4rder f\xf6r att skydda dig sj\xe4lv.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Vidta \xe5tg\xe4rder f\xf6r att skydda dig sj\xe4lv genom att \xf6ppna s\xe4kerhetsverktyg.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Den h\xe4r konversationen \xe4r kanske inte s\xe4ker. \xd6ppna s\xe4kerhetsverktyg f\xf6r att vidta \xe5tg\xe4rder.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blockera",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Avblockera",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Konto blockerat",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Konto avblockerat",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Konto anm\xe4lt",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "N\xe5got gick fel! F\xf6rs\xf6k igen senare.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Hen kommer inte att kunna skicka meddelanden till dig. Om du tror att hens handlingar kan skada n\xe5gon b\xf6r du anm\xe4la detta till Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blockera",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blockera och anm\xe4l",
@@ -23823,6 +23909,8 @@
         POLL_SUBMIT_VOTE: "R\xf6sta",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} r\xf6st} other {{count} r\xf6ster}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} r\xf6st} other {{count} r\xf6ster}}",
         POLL_ALREADY_VOTED: "R\xf6stat",
         POLL_EDIT_VOTE: "\xc4ndra r\xf6st",
         POLL_REMOVE_VOTE: "Ta bort r\xf6st",
@@ -23837,9 +23925,16 @@
         POLL_EXPIRED: "Unders\xf6kning st\xe4ngd",
         POLL_SELECT_ONE_ANSWER: "V\xe4lj ett svar",
         POLL_SELECT_MULTIPLE_ANSWERS: "V\xe4lj ett eller fler svar",
-        POLL_SHOW_VOTES: "Visa r\xf6ster",
-        POLL_HIDE_VOTES: "D\xf6lj r\xf6ster",
+        POLL_SHOW_VOTES: "Visa resultat",
+        POLL_HIDE_VOTES: "G\xe5 tillbaka till r\xf6stning",
+        POLL_VOTES_NO_RESULTS_TITLE: "Det finns inget att se h\xe4r",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "Ingen har r\xf6stat p\xe5 det h\xe4r svaret",
+        POLL_COACHMARK_TITLE: "NYHET! Nu kan du g\xf6ra enk\xe4ter.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planera event, kolla vad folk tycker om n\xe5got eller st\xe4ll en l\xf6jlig fr\xe5ga i chatten.",
         POLL_NOT_INTERACTIVE: "Visa originalmeddelande f\xf6r att interagera",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Det finns inget att se h\xe4r",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Det finns inga r\xf6ster f\xf6r det h\xe4r svaret.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "R\xf6ster",
@@ -23869,8 +23964,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Unders\xf6kningen p\xe5g\xe5r i",
         CREATE_POLL_DURATION_LABEL: "Varaktighet",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 timme",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 timmar",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagar",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 vecka",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23897,6 +23990,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Bildbeskrivning (alt. text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt. text:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "V\xe4lj medieinneh\xe5ll",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Hoppsan, du gl\xf6mde visst en grej. L\xe4gg till en fr\xe5ga.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Hoppsan, du gl\xf6mde visst en grej. L\xe4gg till minst ett svar.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Svik inte svarsf\xe4ltet! Skriv in lite text.",
         POLL_END_EARLY: "Avsluta unders\xf6kningen nu",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Avsluta unders\xf6kningen nu?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23934,6 +24033,12 @@
           "Slutf\xf6r uppgiften f\xf6r att l\xe5sa upp bel\xf6ningen",
         QUESTS_STREAM_TASK:
           "Streama {gameTitle} f\xf6r en v\xe4n i {minutes} minuter",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Verifiera ditt konto f\xf6r att h\xe4mta bel\xf6ningar!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Vi har skickat ett verifieringsmejl till: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "\xc5h nej! Det gick inte att skicka ett verifieringsmejl till dig.",
         QUEST_REWARD: "Vinn {reward}",
         QUESTS_REWARD_CODE_HEADER: "Din bel\xf6ningskod",
         QUESTS_REWARD_CODE_CONGRATS: "Grattis!",
@@ -23957,8 +24062,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsrad",
+        QUESTS_PROMOTED: "Uppflyttad",
         QUESTS_LEARN_MORE_V2: "L\xe4s mer",
         QUESTS_LEARN_MORE_STACKED: "L\xe4s\n\nmer",
+        QUESTS_LEARN_MORE_LINK: "[L\xe4s mer]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Anta uppdrag",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streama {gameTitle} f\xf6r en v\xe4n i {streamingDurationRequirement, number} minuter och vinn {questReward}.",
@@ -23993,7 +24100,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} f\xf6rs\xf6ker n\xe5 ut till en viss typ av Discord-anv\xe4ndare. Baserat p\xe5 vad du har ber\xe4ttat f\xf6r oss eller annan information vi har samlat in, tror vi att du passar in i n\xe5gra av de h\xe4r grupperna:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "L\xe4s mer om uppdrag p\xe5 Discord och hur man anv\xe4nder sekretessinst\xe4llningar [h\xe4r]({privacySettingsUrl}).",
+          "[L\xe4s mer]({privacySettingsUrl}) om uppdrag p\xe5 Discord och hur man anv\xe4nder sekretessinst\xe4llningar.",
         QUESTS_DISCLOSURE_LOCATION: "Plats",
         QUESTS_DISCLOSURE_AGE: "\xc5lder",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivitet: Relevant gaming",
@@ -24002,6 +24109,11 @@
           "N\xe5got gick snett h\xe4r. Kolla g\xe5volagret f\xf6r fler uppdrag!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Ett problem har uppst\xe5tt med att sp\xe5ra dina uppdragsframsteg.",
+        QUESTS_SHARE_QUEST: "Dela uppdraget",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "V\xe4lj {gameTitle} f\xf6r att g\xf6ra framsteg p\xe5 ditt uppdrag!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Du m\xe5ste v\xe4lja applikationen, inte hela sk\xe4rmen.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Uppmana medlemmar att chatta n\xe4r den h\xe4r kanalen har varit inaktiv ett tag.",
         PROMPT_CAMERA_LOADING_TITLE: "Vad tittar du p\xe5?",
@@ -24055,10 +24167,23 @@
           "Ett aktivitetskort som visar @{username} som lyssnar p\xe5 {song} av {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Ett aktivitetskort som visar @{username} som streamar {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Spelar **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Spelade **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} spelar **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} spelade **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} spelar ett nytt spel: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} spelade ett nytt spel: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count} veckor sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} dagar sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} timmar sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} minuter sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}er sedan",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf6rsta g\xe5ngen",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
       };
     },
   },

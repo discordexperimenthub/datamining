@@ -1028,6 +1028,8 @@
           "Zobrazit ovl\xe1d\xe1n\xed hlasu",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "Otevř\xedt poličku aktivity",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Opustit aktivitu",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Tato funkce nen\xed v\xa0tomto operačn\xedm syst\xe9mu moment\xe1lně dostupn\xe1",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Tato aktivita nen\xed moment\xe1lně v tomto operačn\xedm syst\xe9mu dostupn\xe1",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "tato aktivita",
@@ -1263,6 +1265,9 @@
           "Aktivita byla zah\xe1jena.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Tuto aktivitu nemůžeš spustit na serveru s\xa0v\xedce než 25\xa0členy",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Extern\xed aplikace",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Chyst\xe1š se spustit extern\xed aplikaci. Opravdu chceš pokračovat?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Aktivita skončila. Chceš zah\xe1jit novou?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1271,6 +1276,15 @@
           "Nem\xe1š opr\xe1vněn\xed připojovat se k\xa0tomuto hlasov\xe9mu kan\xe1lu.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Nemůžeš se připojovat k\xa0aktivit\xe1m v\xa0tomto hlasov\xe9m kan\xe1lu.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "Pt\xe1k s\xa0megafonem m\xedsto hlavy",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Pozor, pozor!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Chyst\xe1š se poprv\xe9 vyzkoušet aktivitu {activityName}.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Tato aplikace nepoch\xe1z\xed z\xa0d\xedlny Discordu. Testuj jenom aplikace od v\xfdvoj\xe1řů, kter\xfdm věř\xedš.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Dalš\xed informace o\xa0soukrom\xfdch aplikac\xedch.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) zah\xe1jil/a aktivitu",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4905,12 +4919,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Povolit nebo zak\xe1zat kl\xe1vesov\xe9 zkratky",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "V\xfdsledky",
-        SHOW_CURRENT_ACTIVITY:
-          "Zobrazit aktu\xe1ln\xed aktivitu jako stavovou zpr\xe1vu.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Když se budeš pohybovat na veřejn\xe9m p\xf3diu, Discord automaticky aktualizuje tvůj stav.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord automaticky aktualizuje tvůj stav podle hry, kterou pr\xe1vě hraješ (pokud ji rozpozn\xe1), podle pr\xe1vě vykon\xe1van\xe9 aktivity podporuj\xedc\xed Rich Presence, nebo pokud se budeš pohybovat na veřejn\xe9m p\xf3diu.",
         GAME_DETECTION_SERVICE: "Služba zjištěn\xed her",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Um\xedstěn\xed instalace",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -9594,10 +9604,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% sleva",
         PREMIUM_DISCOUNT_CTA: "Ušetři !!{percent, number}!!\xa0% na Nitru",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Ušetři na Nitru",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Tvoje !!{percent, number}!!% sleva vyprš\xed {numMonths, plural, one {1\xa0měs\xedc} few {{numMonths}\xa0měs\xedce} other {{numMonths}\xa0měs\xedců}} po zakoupen\xed. Pot\xe9 ti budeme \xfačtovat {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Prvn\xed **3\xa0měs\xedce** m\xe1š za pouh\xfdch **{discountedPrice}**. Pot\xe9 ti budeme \xfačtovat {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {Př\xedšt\xed 1\xa0měs\xedc} few {Př\xedšt\xed {numMonths}\xa0měs\xedce} other {Př\xedšt\xedch {numMonths}\xa0měs\xedců}}** {numMonths, plural, one {m\xe1š za} other {m\xe1š za}} **{discountedPrice}**. Potom ti budeme \xfačtovat {regularPrice}.",
+          "**{numMonths, plural, one {Př\xedšt\xed měs\xedc} few {Př\xedšt\xed {numMonths}\xa0měs\xedce} other {Př\xedšt\xedch {numMonths}\xa0měs\xedců}}** {numMonths, plural, one {m\xe1š za} other {m\xe1š za}} **{discountedPrice}**. Potom ti budeme měs\xedčně \xfačtovat {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "Sleva byla použita",
         CHURN_DISCOUNT_DESCRIPTION:
           "Před zrušen\xedm si můžeš vychutnat **{percent, number}% slevu na sv\xe9 předplatn\xe9 Nitro** na {numMonths, plural, one {1\xa0měs\xedc} few {{numMonths}\xa0měs\xedce} other {{numMonths}\xa0měs\xedců}}.",
@@ -11059,8 +11071,6 @@
           "Pr\xe1vě jsme ti poslali e-mail. Autorizuj svůj n\xe1kup kliknut\xedm na ověřovac\xed odkaz v zaslan\xe9 zpr\xe1vě.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Pokračovat",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Nic ti nepřišlo?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Odeslat e-mail znovu",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11906,7 +11916,52 @@
           "Z\xedskej tento skvěl\xfd odznak za předplatn\xe9 Nitra.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pro sběratele. Z\xedskej tento exkluzivn\xed odznak vyhrazen\xfd pouze předplatitelům Nitra.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {vylepšen\xed} other {vylepšen\xed}} zdarma",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Blahopřejeme ti k\xa0tv\xe9mu prvn\xedmu měs\xedci s\xa0Nitrem.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Odměna Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Sv\xe9 extra vylepšen\xed můžeš využ\xedt kdykoli, dokud tv\xe9 aktu\xe1ln\xed předplatn\xe9 Nitro zůstane aktivn\xed.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Vyzvedni si svou odměnu!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Uplatnit",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Uplatněno",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Děkujeme ti, že patř\xedš mezi členy s\xa0Nitrem.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Vylepšen\xed budeš m\xedt k\xa0dispozici, dokud tv\xe9 předplatn\xe9 Nitro zůstane aktivn\xed. Pokud předplatn\xe9 zruš\xedš, tvůj postup se resetuje a\xa0o\xa0vylepšen\xed přijdeš.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Z\xedskej vylepšen\xed při dokončen\xed sv\xe9ho prvn\xedho měs\xedce předplatn\xe9ho Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Využij do {days}\xa0{days, plural, =1 {dne} other {dnů}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Využij do {numDays}\xa0{numDays, plural, =1 {dne} other {dnů}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Odměna Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Z\xedskej vylepšen\xed při dokončen\xed sv\xe9ho prvn\xedho měs\xedce předplatn\xe9ho Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Z\xedskej vylepšen\xed při dokončen\xed 3\xa0měs\xedců předplatn\xe9ho Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Sv\xe9 extra vylepšen\xed můžeš využ\xedt kdykoli, dokud tv\xe9 aktu\xe1ln\xed předplatn\xe9 Nitro zůstane aktivn\xed.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "Vyzvedni si svou odměnu!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Blahopřejeme ti k\xa0tv\xe9mu prvn\xedmu měs\xedci s\xa0Nitrem.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Blahopřejeme ti ke 3\xa0měs\xedcům s\xa0Nitrem.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Děkujeme ti, že patř\xedš mezi členy s\xa0Nitrem.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Vylepšen\xed budeš m\xedt k\xa0dispozici, dokud tv\xe9 předplatn\xe9 Nitro zůstane aktivn\xed. Pokud předplatn\xe9 zruš\xedš, tvůj postup se resetuje a\xa0o\xa0vylepšen\xed přijdeš.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Uplatněno",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Z\xedsk\xe1v\xe1š extra vylepšen\xed, kr\xe1sn\xe1 pr\xe1ce.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "Tvoje vylepšen\xed ček\xe1!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Děkujeme ti, že patř\xedš mezi členy s\xa0Nitrem. Tady m\xe1š od n\xe1s extra vylepšen\xed za završen\xed prvn\xedho měs\xedce s\xa0předplatn\xfdm Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Děkujeme ti, že patř\xedš mezi členy s\xa0Nitrem. Tady m\xe1š od n\xe1s extra vylepšen\xed za 3\xa0měs\xedce s\xa0předplatn\xfdm Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Vyšperkuj svůj Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11915,7 +11970,7 @@
           "Neomezen\xfd počet super reakc\xed za t\xfdden",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2\xa0vylepšen\xed serveru, nahr\xe1v\xe1n\xed souborů o\xa0velikosti až 500\xa0MB a\xa0dalš\xed v\xfdhody!",
-        NITRO_MARKETING_JUST_THE_BASICS: "Stač\xed mi z\xe1klad",
+        NITRO_MARKETING_JUST_THE_BASICS: "Jenom z\xe1klad",
         NITRO_MARKETING_BASIC_PERKS: "V\xfdhody Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "Uprav si Discord po sv\xe9m",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Zvol si sv\xe9 Nitro",
@@ -12003,6 +12058,7 @@
           "Bezplatn\xe9 zkušebn\xed obdob\xed (zb\xfdv\xe1 {days, plural, =1 {# den} few {# dny} other {# dnů}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE:
           "Bezplatn\xe9 zkušebn\xed obdob\xed",
+        POWERED_BY_NITRO: "V\xfdhody s\xa0předplatn\xfdm Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Hraje hru",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Živě na !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -14509,8 +14565,12 @@
           "Tento smajl\xedk je ze serveru",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Tenhle smajl\xedk je z tohoto serveru. Můžeš ho použ\xedvat všude.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Tento smajl\xedk poch\xe1z\xed z\xa0tohoto serveru. S\xa0Nitrem ho můžeš použ\xedvat kdekoli.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Tenhle smajl\xedk je z jednoho z tv\xfdch serverů. Když ho budeš cht\xedt použ\xedt, napiš jeho n\xe1zev do panelu chatu.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Tento smajl\xedk poch\xe1z\xed z\xa0jednoho z\xa0tv\xfdch serverů. S\xa0Nitrem ho můžeš použ\xedvat kdekoli.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Chceš tohoto smajl\xedka použ\xedvat všude? Přidej se k serveru.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14525,6 +14585,8 @@
           "Chceš tohoto smajl\xedka použ\xedvat všude? Pořiď si Nitro a přidej se k serveru.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Tenhle smajl\xedk je ze serveru, kter\xfd je pouze pro pozvan\xe9 nebo je nedostupn\xfd. [Zjisti v\xedc](openPremiumSettings) o\xa0použ\xedv\xe1n\xed vlastn\xedch smajl\xedků.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Tento vlastn\xed smajl\xedk poch\xe1z\xed ze serveru, kter\xfd je pouze pro pozvan\xe9. S\xa0Nitrem můžeš použ\xedvat vlastn\xed smajl\xedky ze všech serverů, kter\xfdch jsi členem.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Z\xedskat tuto samolepku z",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Tato samolepka je z",
@@ -16518,13 +16580,8 @@
           "Opravdu chceš upravit tuto ud\xe1lost?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Při upraven\xed t\xe9to ud\xe1losti se **aktualizuj\xed všechny ud\xe1losti** v\xa0t\xe9to s\xe9rii.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Vyzkoušej to",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE:
-          "NOVINKA! Opakuj\xedc\xed se ud\xe1losti",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Ud\xe1losti můžeš jednoduše opakovat.",
-        COPY_RECURRENCE_LINK: "Kop\xedrovat odkaz t\xe9to ud\xe1losti",
-        COPY_SERIES_LINK: "Kop\xedrovat odkaz s\xe9rie ud\xe1lost\xed",
+        COPY_RECURRENCE_LINK: "Kop\xedrovat odkaz pouze pro tuto ud\xe1lost",
+        COPY_SERIES_LINK: "Kop\xedrovat odkaz pro všechny ud\xe1losti",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Vytvořit ud\xe1lost",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17833,6 +17890,8 @@
           "Pokud Nitro Classic obnov\xedš, začneme ti opět strh\xe1vat **{price}** prostřednictv\xedm nastaven\xe9 platebn\xed metody a to **každ\xfd měs\xedc**, dokud předplatn\xe9 nezruš\xedš. Zrušit jej můžeš kdykoliv na str\xe1nce Nastaven\xed.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Pokud Nitro Classic obnov\xedš, začneme ti opět strh\xe1vat **{price}** prostřednictv\xedm nastaven\xe9 platebn\xed metody a to **každ\xfd rok**, dokud předplatn\xe9 nezruš\xedš. Zrušit jej můžeš kdykoliv na str\xe1nce Nastaven\xed.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Pokud Nitro obnov\xedš, začneme ti opět měs\xedčně strh\xe1vat **{discountPrice}** prostřednictv\xedm nastaven\xe9 platebn\xed metody, dokud nevyprš\xed platnost tvoj\xed slevy. Pot\xe9 ti budeme každ\xfd měs\xedc strh\xe1vat ***{defaultPrice}***, dokud sv\xe9 předplatn\xe9 nezruš\xedš. Zrušit jej můžeš kdykoliv na str\xe1nce Nastaven\xed.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Zachovat Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19408,6 +19467,9 @@
           "Filtr vych\xe1zej\xedc\xed z\xa0bezpečnostn\xedch informac\xed, jako jsou např\xedklad dočasn\xe9 zablokov\xe1n\xed nebo zapojen\xed do neobvykl\xe9 aktivity PZ.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Zabanovat členy",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Nezn\xe1m\xfd",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Skryt\xe9",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Streamovac\xed režim je aktivn\xed, zvac\xed k\xf3dy jsou skryt\xe9",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Vyhled\xe1v\xe1n\xed serverů",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Studentsk\xe9 centrum",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Dalš\xed způsoby připojen\xed",
@@ -19485,8 +19547,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Ž\xe1dn\xe1 opr\xe1vněn\xed moder\xe1tora",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Udělil/a",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Rizikov\xe9) Udělil/a",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moder\xe1tor",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Opr\xe1vněn\xed udělen\xe1 těmito rolemi",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Nejvyšš\xed role",
@@ -20639,6 +20700,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "\xdaprava m\xe9di\xed a\xa0vytv\xe1řen\xed memů rychlost\xed Discordu.",
         EARLY_ACCESS: "Předběžn\xfd př\xedstup",
+        REWARD: "Odměna",
         REMIXING_POST_CTA: "Odeslat",
         REMIXING_CROP: "Oř\xedznout",
         REMIXING_BACKDROP_EDITOR_TITLE: "Upravit a\xa0oř\xedznout",
@@ -22028,6 +22090,10 @@
           "Servery, na kter\xfdch jsi pos\xedlal/a zpr\xe1vy za posledn\xed t\xfdden. Nejedn\xe1 se o\xa0zvac\xed odkazy, tv\xed rodiče na ně tedy nebudou moct kliknout.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servery, na kter\xfdch v\xe1š teenager za minul\xfd t\xfdden pos\xedlal zpr\xe1vy.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servery, na kter\xfdch jsi byl/a za minul\xfd t\xfdden aktivn\xed (poslal/a jsi textovou zpr\xe1vu nebo se připojil/a k\xa0hlasov\xe9mu chatu). Nejedn\xe1 se o\xa0zvac\xed odkazy, tv\xed rodiče na ně tedy nebudou moct kliknout.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servery, na kter\xfdch byl tvůj teenager za minul\xfd t\xfdden aktivn\xed (poslal textovou zpr\xe1vu nebo se připojil k\xa0hlasov\xe9mu chatu).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktivn\xed servery – {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -22171,6 +22237,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Předplatitel\xe9 Nitra dostanou na tento vzhled slevu",
         COLLECTIBLES_NON_PREMIUM_PRICE: "S\xa0Nitrem za {price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} s\xa0předplatn\xfdm Nitro. $[Chci předplatn\xe9](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE:
           "Tak co, nasad\xedme nov\xfd look?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Ale tohle je nepř\xedjemn\xe9.",
@@ -22189,6 +22257,9 @@
           "Po zakoupen\xed bude tento efekt souč\xe1st\xed tvoj\xed sb\xedrky a\xa0budeš ho moct kdykoli použ\xedt",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Tento efekt je odteď souč\xe1st\xed tvoj\xed sb\xedrky a\xa0můžeš ho kdykoli použ\xedt!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Běžn\xe1 cena {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Kliknut\xedm na tlač\xedtko „{buyButtonLabel}“ vyjadřuješ svůj souhlas s\xa0[podm\xednkami placen\xfdch služeb]({paidServiceTermURL}). Po dokončen\xed n\xe1kupu danou položku přid\xe1me do tv\xe9 sb\xedrky a\xa0budeš ji moct kdykoli použ\xedt. Pamatuj, že jakmile si zakoup\xedš jakoukoli položku, tvoje předplatn\xe1 Nitro nebude možn\xe9 refundovat.",
         COLLECTIBLES_DAYS_LEFT:
           "Zb\xfdv\xe1 už jen p\xe1r dn\xed – přesně {days}",
         COLLECTIBLES_LAST_DAY: "Dnes m\xe1š posledn\xed možnost n\xe1kupu",
@@ -22211,10 +22282,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Ovl\xe1dni živly",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Oheň. V\xedtr. Voda. Země. Kter\xe9mu z\xa0nich d\xe1š průchod?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "Jsou tady nov\xe9 položky s\xa0motivy Anime!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Nov\xe9 styly",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Omrkni nejžhavějš\xed styly, d\xedky kter\xfdm si tě senpai zaručeně všimne.",
+          "Teď si tě Senpai bezpochyby všimne.",
         COLLECTIBLES_NEW_BADGE: "NOV\xc9",
         INVENTORY_EMOJI_DETAILS_V2: "Detaily smajl\xedka",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23566,6 +23636,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {#\xa0minuta} few {#\xa0minuty} other {#\xa0minut}}",
         CLIPS_SAVE: "Uložit klip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Povolit klipy k\xa0zachycen\xed tohoto streamu.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Povolit div\xe1kům pořizovat klipy",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Povolit vytv\xe1řen\xed klipů z\xa0tv\xfdch Go Live streamů",
@@ -23946,6 +24018,8 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "Přej\xedt do nastaven\xed",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Zrušit",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Děkujeme ti za zpětnou vazbu!",
         STRANGER_DANGER_BANNER_BLOCK: "Zablokovat",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Zavř\xedt‏",
         STRANGER_DANGER_MORE_HEADER: "Co ještě můžeš dělat",
@@ -23993,9 +24067,19 @@
           "Tato konverzace může b\xfdt nebezpečn\xe1.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Nenechej nic n\xe1hodě a\xa0chraň se.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Nenechej nic n\xe1hodě, otevři n\xe1stroje zabezpečen\xed a\xa0chraň se.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Tato konverzace může b\xfdt nebezpečn\xe1. Otevři n\xe1stroje zabezpečen\xed a\xa0přijmi opatřen\xed.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Zablokovat",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Odblokovat",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "\xdačet byl zablokov\xe1n",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "\xdačet byl odblokov\xe1n",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "\xdačet byl nahl\xe1šen",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Něco se pokazilo. Zkus to pros\xedm znovu později.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Už ti nebudou moct pos\xedlat zpr\xe1vy. Pokud m\xe1š dojem, že by dan\xe9 chov\xe1n\xed mohlo někoho ohrozit nebo mu uškodit, nahlas to pros\xedm Discordu.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Zablokovat",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Zablokovat a\xa0nahl\xe1sit",
@@ -24114,6 +24198,8 @@
         POLL_SUBMIT_VOTE: "Hlasovat",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count}\xa0hlas} few {{count}\xa0hlasy} other {{count}\xa0hlasů}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count}\xa0hlas} few {{count}\xa0hlasy} other {{count}\xa0hlasů}}",
         POLL_ALREADY_VOTED: "Odhlasov\xe1no",
         POLL_EDIT_VOTE: "Změnit hlasov\xe1n\xed",
         POLL_REMOVE_VOTE: "Odebrat hlas",
@@ -24128,10 +24214,17 @@
         POLL_EXPIRED: "Průzkum uzavřen",
         POLL_SELECT_ONE_ANSWER: "Vyber jednu odpověď",
         POLL_SELECT_MULTIPLE_ANSWERS: "Vyber nejm\xe9ně jednu odpověď",
-        POLL_SHOW_VOTES: "Zobrazit hlasy",
-        POLL_HIDE_VOTES: "Skr\xfdt hlasy",
+        POLL_SHOW_VOTES: "Zobrazit v\xfdsledky",
+        POLL_HIDE_VOTES: "Zpět k\xa0hlasov\xe1n\xed",
+        POLL_VOTES_NO_RESULTS_TITLE: "Nen\xed tu nic zaj\xedmav\xe9ho",
+        POLL_VOTES_NO_RESULTS_SUBTITLE:
+          "Tato odpověď nem\xe1 ž\xe1dn\xe9 hlasy",
+        POLL_COACHMARK_TITLE: "NOV\xc9! Jsou tady průzkumy.",
+        POLL_COACHMARK_SUBTITLE:
+          "Pl\xe1nuj ud\xe1losti, zjišťuj n\xe1zory nebo pokl\xe1dej bl\xe1zniv\xe9 ot\xe1zky př\xedmo v\xa0chatu.",
         POLL_NOT_INTERACTIVE:
           "Jestli chceš interagovat, zobraz původn\xed zpr\xe1vu",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nen\xed tu nic zaj\xedmav\xe9ho",
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Tato odpověď nem\xe1 ž\xe1dn\xe9 hlasy.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Hlasy",
@@ -24160,8 +24253,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Doba dostupnosti průzkumu:",
         CREATE_POLL_DURATION_LABEL: "Trv\xe1n\xed",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1\xa0hodina",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24\xa0hodin",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dny",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0t\xfdden",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24189,6 +24280,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Popis obr\xe1zku (alternativn\xed text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alternativn\xed text:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Vybrat m\xe9dia",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Jejda, něco ti uniklo. Přidej ot\xe1zku.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Jejda, něco ti uniklo. Přidej alespoň jednu odpověď.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Nenechej pole pro odpověď smutnit! Napiš nějak\xfd text.",
         POLL_END_EARLY: "Ukončit průzkum",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Chceš ukončit průzkum hned teď?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -24226,6 +24323,12 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "Splň \xfakol a\xa0odemkni svou odměnu",
         QUESTS_STREAM_TASK:
           "Streamuj hru {gameTitle} př\xedteli po dobu {minutes} minut",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Ověř svůj \xfačet a\xa0z\xedskej odměny!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Poslali jsme ověřovac\xed e-mail na adresu: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Ale ne! Ověřovac\xed e-mail se n\xe1m nepodařilo odeslat.",
         QUEST_REWARD: "Vyhraj {reward}",
         QUESTS_REWARD_CODE_HEADER: "Tvůj k\xf3d odměny",
         QUESTS_REWARD_CODE_CONGRATS: "Blahopřejeme!",
@@ -24248,8 +24351,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponzorov\xe1no",
+        QUESTS_PROMOTED: "Doporučujeme",
         QUESTS_LEARN_MORE_V2: "Zjistit v\xedc",
         QUESTS_LEARN_MORE_STACKED: "Dalš\xed\n\ninformace",
+        QUESTS_LEARN_MORE_LINK: "[Dalš\xed informace]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Přijmout \xfakol",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamuj hru {gameTitle} př\xedteli po dobu {streamingDurationRequirement, number} minut a\xa0z\xedskej {questReward}.",
@@ -24285,7 +24390,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} c\xedl\xed na určitou sortu uživatelů Discordu. Na z\xe1kladě informac\xed, kter\xe9 jsi n\xe1m sdělil/a nebo kter\xe9 jsme shrom\xe1ždili, si mysl\xedme, že někter\xe1 z\xa0n\xe1sleduj\xedc\xedch skupin by pro tebe mohla b\xfdt ta prav\xe1:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Dalš\xed informace o\xa0\xfakolech na Discordu a\xa0o\xa0nastaven\xed soukrom\xed najdeš [zde]({privacySettingsUrl}).",
+          "[Dalš\xed informace]({privacySettingsUrl}) o\xa0\xfakolech na Discordu a\xa0o\xa0nastaven\xed soukrom\xed.",
         QUESTS_DISCLOSURE_LOCATION: "Um\xedstěn\xed",
         QUESTS_DISCLOSURE_AGE: "Věk",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivita: Relevantn\xed hry",
@@ -24294,6 +24399,11 @@
           "Něco se n\xe1m tu pokazilo. Mrkni do invent\xe1ře d\xe1rků, kde najdeš dalš\xed dostupn\xe9 \xfakoly!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Při sledov\xe1n\xed postupu plněn\xed tv\xe9ho \xfakolu došlo k\xa0probl\xe9mu.",
+        QUESTS_SHARE_QUEST: "Sd\xedlet \xfakol",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Zvol {gameTitle} a\xa0dostaň se bl\xedže ke splněn\xed sv\xe9ho \xfakolu!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Mus\xedš vybrat aplikaci, ne celou obrazovku.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Pož\xe1dat členy, aby začali chatovat, když bude tento kan\xe1l nějakou dobu neaktivn\xed.",
         PROMPT_CAMERA_LOADING_TITLE: "Na co kouk\xe1š?",
@@ -24347,11 +24457,24 @@
           "Karta aktivity zobrazuj\xedc\xed, jak @{username} poslouch\xe1 {song} od {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Karta aktivity zobrazuj\xedc\xed, jak @{username} streamuje {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Hraje **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Hr\xe1l/a **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} hraje **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} hr\xe1l/a **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} hraje novou hru: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} hr\xe1l/a novou hru: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}\xa0t nazpět",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count} d nazpět",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} h nazpět",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} min nazpět",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO:
           "{count}\xa0s\xa0nazpět",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Poprv\xe9",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivita",
       };
     },
   },

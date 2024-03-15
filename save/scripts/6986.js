@@ -970,6 +970,8 @@
           "음성 컨트롤 표시",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "활동 선반 열기",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "활동 나가기",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "이 OS에서는 현재 이 기능을 사용할 수 없어요",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "이 OS는 현재 이 활동을 지원하지 않습니다",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "이 활동",
@@ -1181,6 +1183,9 @@
           "활동이 시작되었어요.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "멤버 수가 25명 이상인 서버에서는 해당 활동을 진행할 수 없어요",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "외부 애플리케이션",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "외부 앱을 실행하려 해요. 계속할까요?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "활동이 종료되었어요. 새로운 활동을 시작할까요?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "활동 시작됨",
@@ -1188,6 +1193,15 @@
           "이 음성 채널에 참여할 권한이 없어요.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "이 채널의 활동에 참여할 수 없어요.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "메가폰으로 된 머리를 가진 새",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "알립니다!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "처음으로 {activityName} 테스트를 시작하려 하시는군요.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "이 앱은 Discord가 만든 것이 아니에요. 오직 신뢰할 수 있는 개발자들이 만든 테스트 앱만 사용하세요.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "비공개 앱에 대해 더 자세히 알아보세요.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) 님이 활동을 시작했어요",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4619,11 +4633,8 @@
           "참여 또는 전환할 음성 채널 선택하기",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "단축키 활성화 또는 비활성화",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "결과",
-        SHOW_CURRENT_ACTIVITY: "현재 활동을 상태 메시지로 표시해요.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "공개 스테이지에 참가 중이라면 Discord가 상태를 자동으로 업데이트할 거예요.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "(탐지 가능하다면) 플레이 중인 게임, Rich Presence를 지원하는 활동, 참가 중인 공개 스테이지를 기반으로 Discord가 상태를 자동으로 업데이트할 거예요.",
         GAME_DETECTION_SERVICE: "게임 감지 서비스",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "설치 위치하기",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "설치 위치 추가하기",
@@ -5233,7 +5244,7 @@
         LOGOUT: "로그아웃",
         SOUNDS: "소리",
         PREMIUM: "Nitro",
-        BASIC: "기본",
+        BASIC: "Basic",
         SOUND_MESSAGE: "메시지",
         SOUND_DEAFEN: "음소거",
         SOUND_UNDEAFEN: "음소거 해제하기",
@@ -9020,10 +9031,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 할인",
         PREMIUM_DISCOUNT_CTA: "Nitro 구독료 !!{percent, number}!!% 절약하기",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro 구독료 절약하기",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "!!{percent, number}!!% 할인은 구매 후 {numMonths, plural, one {1개월} other {{numMonths}개월}} 뒤에 종료돼요. 이후에는 {regularPrice}의 금액이 청구돼요.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "첫 **3개월**간은 **{discountedPrice}**의 가격으로 이용할 수 있으며, 이후에는 {regularPrice}의 금액이 청구돼요.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "다음 **{numMonths, plural, one {1개월} other {{numMonths}개월}}** {numMonths, plural, one {동안은} other {동안은}} **{discountedPrice}**이며 그 후에는 {regularPrice}이 청구될 예정이에요.",
+          "다음 **{numMonths, plural, one {개월} other {{numMonths}개월}}** {numMonths, plural, one {동안은} other {동안은}} **{discountedPrice}**이며 그 후에는 매월 {regularPrice}의 금액이 청구될 예정이에요.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "할인 적용됨",
         CHURN_DISCOUNT_DESCRIPTION:
           "취소하기 전에, {numMonths, plural, one {1개월} other {{numMonths}개월}} 동안 **{percent, number}% 할인가에 Nitro 구독**을 이용하세요.",
@@ -10429,8 +10442,6 @@
           "방금 이메일을 전송해 드렸어요. 이메일에서 인증 링크를 클릭해 구매를 인증하세요.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "계속하기",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "못 받으셨나요?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "이메일 재전송",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11218,7 +11229,51 @@
           "Nitro 구독자에게 드리는 멋진 배지를 받으세요.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "수집가 여러분, 이 특별한 Nitro 전용 배지를 놓치지 마세요.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "무료 부스트 {numFreeBoosts}{numFreeBoosts, plural, =1 {개} other {개}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Nitro 사용 첫 달을 축하드려요.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro 보상",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "현재 구독 중인 Nitro의 활성 기간에 추가 부스트를 사용할 수 있어요.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD: "보상을 받으세요!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "적용하기",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "사용했어요",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Nitro 멤버가 되어 주셔서 감사해요.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Nitro 구독을 활성화해 부스트를 유지하세요. 취소하면 진행 상태가 초기화되고 부스트가 제거돼요.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Nitro를 한 달 동안 사용하면 부스트를 드려요.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "{days}{days, plural, =1 {일} other {일}} 후 받기",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "{numDays}{numDays, plural, =1 {일} other {일}} 후 받기",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro 보상",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro를 한 달 동안 사용하면 부스트를 드려요.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro를 3개월 동안 사용하면 부스트를 드려요.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "현재 구독 중인 Nitro의 활성 기간에 추가 부스트를 사용할 수 있어요.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE: "보상을 받으세요!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro 사용 첫 달을 축하드려요.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro 3개월 사용을 축하드려요.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Nitro 멤버가 되어 주셔서 감사해요.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Nitro 구독을 활성화해 부스트를 유지하세요. 취소하면 진행 상태가 초기화되고 부스트가 제거돼요.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "사용했어요",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "추가 부스트를 획득하셨네요. 잘하셨어요.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "부스트가 기다리고 있어요!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Nitro 멤버가 되어 주셔서 감사드려요. Nitro를 첫 달 동안 이용하신 것을 축하하며, 추가 부스트를 드릴게요.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Nitro 멤버가 되어 주셔서 감사드려요. Nitro를 3개월 동안 이용하신 것을 축하하며, 추가 부스트를 드릴게요.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD: "Discord를 강화하세요",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
           "모든 서버에서 사용 가능한 사용자 지정 프로필",
@@ -11226,7 +11281,7 @@
           "매주 무제한 슈퍼 반응",
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "서버 부스트 2회, 500MB 업로드 등!",
-        NITRO_MARKETING_JUST_THE_BASICS: "기본 사항만 제공",
+        NITRO_MARKETING_JUST_THE_BASICS: "기본에 충슬해요",
         NITRO_MARKETING_BASIC_PERKS: "Nitro Basic 특전",
         MARKETING_PAGE_CAROUSEL_TITLE: "Discord를 맞춤 설정하세요",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "Nitro를 선택하세요",
@@ -11310,6 +11365,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "무료 체험({days, plural, =1 {#일 남음} other {#일 남음}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "무료 체험",
+        POWERED_BY_NITRO: "Nitro 제공",
         USER_ACTIVITY_HEADER_PLAYING: "게임 하는 중",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "!!{platform}!! 방송 중",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -13668,8 +13724,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "이모지 출처:",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "이 서버의 이모지예요. 어디서나 사용할 수 있어요.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "이 서버의 이모지예요. Nitro를 이용하면 어디서든 사용할 수 있어요.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "당신의 서버의 이모지예요. 입력바에 이름을 입력하면 이용할 수 있어요.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "내 서버 중 하나의 이모지예요. Nitro를 이용하면 어디서든 사용할 수 있어요.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "이 이모지를 어디서나 사용하고 싶으신가요? 서버에 참가하세요.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -13684,6 +13744,8 @@
           "이 이모지를 어디서나 사용하고 싶으신가요? Nitro에 구독하고 서버에 참가하세요.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "초대 전용 또는 사용할 수 없는 서버의 이모지예요. 사용자 지정 이모지 사용법에 대해 [자세히 알아보세요](openPremiumSettings).",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "초대 전용 서버의 사용자 지정 이모지예요. Nitro를 이용하면 가입한 모든 서버의 사용자 지정 이모지를 사용할 수 있어요.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION: "스티커 가져오기:",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "스티커 출처:",
         STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
@@ -15549,12 +15611,8 @@
           "정말 이 이벤트를 수정하시겠어요?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "이 이벤트를 수정하면 이 시리즈의 **모든 이벤트**도 함께 업데이트됩니다.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "직접 해보기",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "신규! 반복 이벤트",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "이제 이벤트를 쉽게 반복할 수 있어요.",
-        COPY_RECURRENCE_LINK: "이 이벤트 링크 복사하기",
-        COPY_SERIES_LINK: "이벤트 시리즈 링크 복사하기",
+        COPY_RECURRENCE_LINK: "이 이벤트의 링크만 복사",
+        COPY_SERIES_LINK: "모든 이벤트의 링크 복사",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "이벤트 만들기",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -16792,6 +16850,8 @@
           "Nitro Classic을 다시 이용하시면 구독을 취소하기 전까지는 결제 수단에 **매월** 구독료 **{price}**(이)가 청구될 거예요. 취소는 설정 페이지에서 언제든지 하실 수 있답니다.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Nitro Classic을 다시 이용하시면 구독을 취소하기 전까지는 결제 수단에 **매년** 구독료 **{price}**(이)가 청구될 거예요. 취소는 설정 페이지에서 언제든지 하실 수 있답니다.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Nitro를 다시 이용하시면 선택하신 결제 방식으로 할인율이 끝날 때까지 매월 **{discountPrice}**, 이후부터는 구독을 취소할 때까지 매월 ***{defaultPrice}***의 구독료가 청구될 거예요. 설정 페이지에서 언제든지 취소하실 수 있답니다.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Nitro 유지하기",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "닫기",
@@ -18250,6 +18310,9 @@
           "타임아웃 또는 비정상적인 DM 활동 참여 등 보안 정보를 기반으로 필터링합니다.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "멤버 차단하기",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "알 수 없음",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "숨김",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "방송 모드가 활성화되어, 초대 코드가 숨김 처리되었어요",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "서버 찾기",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "학생 허브",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "기타 참가 방법",
@@ -18314,8 +18377,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_PERMSSISONS_PANEL_TITLE: "모든 부여된 권한",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "관리자 권한 없음",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "부여한 사람:",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(위험) 부여한 사람:",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "관리자",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "이 역할들에 의해 부여된 권한",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "가장 높은 역할",
@@ -19384,6 +19446,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Discord의 속도로 미디어 편집 및 밈 생성.",
         EARLY_ACCESS: "얼리 액세스",
+        REWARD: "보상",
         REMIXING_POST_CTA: "보내기",
         REMIXING_CROP: "미디어 자르기",
         REMIXING_BACKDROP_EDITOR_TITLE: "조정 및 자르기",
@@ -20679,6 +20742,10 @@
           "지난주에 메시지를 보낸 서버. 이는 초대 링크가 아니며, 보호자는 링크를 클릭할 수 없습니다.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "지난주에 자녀가 메시지를 보낸 서버.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "지난주에 활동한 서버(메시지 전송 또는 음성 채팅 참여). 이는 초대 링크가 아니며, 보호자는 초대 링크를 클릭할 수 없습니다.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "지난주에 자녀가 활동한 서버(메시지 전송 또는 음성 채팅 참여).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "활성 서버 — {count, number}개",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -20815,6 +20882,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro 구독자는 이 장식을 구매할 때 할인받을 수 있어요",
         COLLECTIBLES_NON_PREMIUM_PRICE: "Nitro 구독 시 {price}",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "Nitro 구독 시 {price} $[지금 구독하기](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "스타일을 바꿀 준비가 되셨나요?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "아, 이걸 어쩌죠.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -20830,6 +20899,9 @@
           "이 장식은 한번 구매하면 컬렉션에 추가되어 언제든 사용할 수 있어요",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "이 효과는 이제 컬렉션에 추가돼서 언제든 사용할 수 있어요!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "보통 {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "'{buyButtonLabel}' 클릭 시 [유료 서비스 약관]({paidServiceTermURL})에 동의하는 것으로 간주합니다. 구매를 완료하면 해당 아이템이 컬렉션에 추가되며 언제든지 사용할 수 있습니다. 아이템을 구매한 경우 Nitro 구독 환불이 불가능하다는 점에 유의하시기 바랍니다.",
         COLLECTIBLES_DAYS_LEFT: "{days}일 남음",
         COLLECTIBLES_LAST_DAY: "구매할 수 있는 마지막 날",
         COLLECTIBLES_SHOP_VIEW_ALL: "모두 보기",
@@ -20850,10 +20922,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "원소를 활용해보세요",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "불. 바람. 물. 땅. 이 중 무엇을 해방하시겠습니까?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "새로운 애니메이션 아이템이 도착했어요!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "애니: 새로운 스타일",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "선배가 확실히 당신을 주목하게 만들 최신 스타일을 확인해 보세요.",
+          "이제 분명 선배가 알아봐 줄 거야.",
         COLLECTIBLES_NEW_BADGE: "신규",
         INVENTORY_EMOJI_DETAILS_V2: "이모지 자세히 보기",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22099,6 +22170,8 @@
         CLIPS_LENGTH_SECONDS: "{count, plural, =1 {#초} other {#초}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {#분} other {#분}}",
         CLIPS_SAVE: "클립 저장하기",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "클립을 활성화해 이 방송을 캡처하세요.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "시청자가 클립을 캡처할 수 있게 허용하기",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -22464,6 +22537,7 @@
           "Discord에서는 청소년의 안전을 매우 중요하게 생각합니다. 대화에서 안전 위험이 감지되면 알려 드릴게요. [안전 알림에 대해 자세히 알아보세요.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "설정으로 가기",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "닫기",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "피드백 감사합니다!",
         STRANGER_DANGER_BANNER_BLOCK: "차단하기",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "닫기",
         STRANGER_DANGER_MORE_HEADER: "더 할 수 있는 것들",
@@ -22508,9 +22582,19 @@
           "이 대화는 위험할 수 있어요.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "회원님의 안전을 위해 조처하세요.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "안전 도구를 열어 회원님의 안전을 위해 조처하세요.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "이 대화는 안전하지 않을 수 있어요. 안전 도구를 열어 조처하세요.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "차단",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "차단 해제하기",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "계정 차단됨",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "계정 차단 해제됨",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "계정 신고됨",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "오류가 발생했습니다! 나중에 다시 시도해주세요.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "상대는 회원님에게 메시지를 보낼 수 없을 거예요. 만약 해당 사용자의 행동이 누군가에게 해를 끼칠 수 있다고 느끼신다면, Discord에 신고를 제출해주세요.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "차단하기",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "차단하고 신고",
@@ -22623,6 +22707,8 @@
         POLL_CHOOSE_SINGLE_ANSWER_PROMPT: "응답 선택하기",
         POLL_SUBMIT_VOTE: "투표하기",
         POLL_VOTES_COUNT: "{count, plural, one {{count}표} other {{count}표}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count}표} other {{count}표}}",
         POLL_ALREADY_VOTED: "투표 완료",
         POLL_EDIT_VOTE: "투표 변경하기",
         POLL_REMOVE_VOTE: "투표 삭제",
@@ -22637,9 +22723,15 @@
         POLL_EXPIRED: "투표 종료됨",
         POLL_SELECT_ONE_ANSWER: "한 가지 답변을 선택해주세요",
         POLL_SELECT_MULTIPLE_ANSWERS: "하나 이상의 답변을 선택해주세요",
-        POLL_SHOW_VOTES: "투표 결과 보여주기",
-        POLL_HIDE_VOTES: "투표 결과 숨기기",
+        POLL_SHOW_VOTES: "결과 표시",
+        POLL_HIDE_VOTES: "투표로 돌아가기",
+        POLL_VOTES_NO_RESULTS_TITLE: "여긴 아무것도 없어요",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "이 응답은 표가 없어요",
+        POLL_COACHMARK_TITLE: "신규! 투표 기능이 도입됐어요.",
+        POLL_COACHMARK_SUBTITLE:
+          "이벤트를 계획하거나, 의견을 수집하거나, 채팅에서 재미있는 질문을 던져보세요.",
         POLL_NOT_INTERACTIVE: "상호작용하려면 원본 메시지를 보세요",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "여긴 아무것도 없어요",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "이 응답은 표가 없어요.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "투표",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "투표자 공개",
@@ -22664,8 +22756,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "다른 응답 추가하기",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "투표 진행 기간:",
         CREATE_POLL_DURATION_LABEL: "지속 시간",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1시간",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24시간",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3일",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1주일",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "투표 진행 기간: {duration}",
@@ -22690,6 +22780,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "이미지 설명(대체 텍스트)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "대체 텍스트:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "미디어 선택하기",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "이런, 뭔가를 잊으신 것 같아요. 질문을 추가해주세요.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "이런, 뭔가를 잊으신 것 같아요. 답변은 하나 이상 추가해주세요.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "답변 필드를 비워두지 마세요! 텍스트를 추가해주세요.",
         POLL_END_EARLY: "지금 투표 종료",
         POLL_END_EARLY_CONFIRMATION_TITLE: "지금 투표를 종료할까요?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -22724,6 +22820,11 @@
         QUESTS_IN_PROGRESS_TOOLTIP: "임무를 완료해서 보상을 잠금 해제하세요",
         QUESTS_STREAM_TASK:
           "친구에게 {gameTitle} 게임을 {minutes}분 동안 방송하세요",
+        QUESTS_REWARD_VERIFICATION_TITLE: "보상을 받으려면 계정을 인증하세요!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "[{emailAddress}]({emailAddressLink})에 인증 이메일을 보냈습니다",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "이런! 인증 이메일을 보내지 못했어요.",
         QUEST_REWARD: "{reward} 받기",
         QUESTS_REWARD_CODE_HEADER: "내 보상 코드",
         QUESTS_REWARD_CODE_CONGRATS: "축하드려요!",
@@ -22745,8 +22846,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "후원:",
+        QUESTS_PROMOTED: "광고",
         QUESTS_LEARN_MORE_V2: "자세히 알아보기",
         QUESTS_LEARN_MORE_STACKED: "자세히\n\n알아보기",
+        QUESTS_LEARN_MORE_LINK: "[자세히 알아보기]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "퀘스트 수락하기",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "친구에게 {gameTitle} 게임을 {streamingDurationRequirement, number}분 동안 방송하고 {questReward} 보상을 받으세요.",
@@ -22781,7 +22884,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher}에서 특정 유형의 Discord 사용자들에게 접근하려고 하고 있어요. 회원님께서 알려주신 사항 또는 당사가 수집한 다른 정보를 바탕으로, 회원님이 다음 그룹에 적합하다고 생각합니다.",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Discord 퀘스트와 개인정보 보호 설정 관리법에 대해 [여기]({privacySettingsUrl})에서 자세히 알아보세요.",
+          "Discord 퀘스트와 개인정보 보호 설정 관리법에 대해 여기에서 [자세히 알아보세요.]({privacySettingsUrl})",
         QUESTS_DISCLOSURE_LOCATION: "위치",
         QUESTS_DISCLOSURE_AGE: "나이",
         QUESTS_DISCLOSURE_ACTIVITY: "활동: 관련 게임",
@@ -22790,6 +22893,11 @@
           "뭔가 잘못되었어요. 선물 인벤토리에서 더 많은 퀘스트를 찾을 수 있어요!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "퀘스트 진행 상황을 추적하는 데 문제가 발생했어요.",
+        QUESTS_SHARE_QUEST: "퀘스트 공유",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "{gameTitle}을(를) 선택해서 퀘스트를 진행하세요!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "화면 전체가 아닌, 애플리케이션을 선택해야 해요.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "채널이 오랫동안 비활성화되면 멤버들에게 채팅하라는 메시지가 표시돼요.",
         PROMPT_CAMERA_LOADING_TITLE: "무엇을 보고 있나요?",
@@ -22841,10 +22949,24 @@
           "@{username} 님의 {artist} - {song} 청취 모습 활동 카드",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "@{username} 님의 {activity} 스트리밍 모습 활동 카드",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "**{gameName}** 플레이 중",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME:
+          "**{gameName}**을(를) 플레이했어요",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} 님이**{gameName}**을(를) 플레이 중이에요",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} 님이 **{gameName}**을(를) 플레이했어요",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} 님이 새 게임 **{gameName}**을(를) 플레이 중이에요",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} 님이 새 게임 **{gameName}**을(를) 플레이했어요",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "{count}주 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}일 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}시간 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}분 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}초 전",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "처음",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "활동",
       };
     },
   },

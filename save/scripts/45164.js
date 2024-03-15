@@ -1014,6 +1014,8 @@
           "Vis stemmebetjeningsfunktioner",
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF: "\xc5bn aktivitetshylde",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Forlad aktivitet",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Denne funktion er p\xe5 nuv\xe6rende tidspunkt ikke tilg\xe6ngelig p\xe5 dette operativsystem",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Denne aktivitet er p\xe5 nuv\xe6rende tidspunkt ikke tilg\xe6ngelig p\xe5 dette operativsystem",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "denne aktivitet",
@@ -1242,6 +1244,9 @@
           "Aktiviteten er begyndt.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Du kan ikke lancere denne aktivitet p\xe5 en server med mere end 25 medlemmer",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Ekstern applikation",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Du er ved at \xe5bne en ekstern app. Vil du forts\xe6tte?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Aktiviteten er slut. Vil du starte en ny aktivitet?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Aktivitet startet",
@@ -1249,6 +1254,15 @@
           "Du har ikke tilladelse til at deltage i denne talekanal.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Du kan ikke deltage i aktiviteter i denne kanal.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "En fugl med en megafon som hoved",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Pas p\xe5!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Du skal til at teste {activityName} for f\xf8rste gang.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Denne app er ikke udviklet af Discord. Test kun apps fra udviklere, du har tillid til.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "F\xe5 mere at vide om private apps.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) startede en aktivitet",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4808,12 +4822,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Aktiv\xe9r eller deaktiv\xe9r tast-tilknytning",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Resultater",
-        SHOW_CURRENT_ACTIVITY:
-          "Vis din nuv\xe6rende aktivitet som en statusbesked.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord opdaterer automatisk din status, hvis du deltager p\xe5 et offentligt podie.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord opdaterer automatisk din status baseret p\xe5 det spil, du spiller (hvis det kan registreres), en aktivitet, du udf\xf8rer, der underst\xf8tter Rich Presence, eller hvis du deltager p\xe5 et offentligt podie.",
         GAME_DETECTION_SERVICE: "Spilsporingstjeneste",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Installer steder",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Tilf\xf8j Installer sted",
@@ -5455,7 +5465,7 @@
         LOGOUT: "Log ud",
         SOUNDS: "Lyde",
         PREMIUM: "Nitro",
-        BASIC: "Grundl\xe6ggende",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Besked",
         SOUND_DEAFEN: "G\xf8r d\xf8v",
         SOUND_UNDEAFEN: "Oph\xe6v d\xf8vhed",
@@ -9399,10 +9409,12 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % rabat",
         PREMIUM_DISCOUNT_CTA: "Spar !!{percent, number}!! % p\xe5 Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Spar p\xe5 Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Din !!{percent, number}!! % rabat oph\xf8rer {numMonths, plural, one {1 m\xe5ned} other {{numMonths} m\xe5neder}} efter k\xf8bet. Derefter vil du blive opkr\xe6vet {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "De f\xf8rste **3 m\xe5neder** koster **{discountedPrice}**. Derefter bliver du opkr\xe6vet {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "I den/de n\xe6ste **{numMonths, plural, one {1 m\xe5ned} other {{numMonths} m\xe5neder}}** {numMonths, plural, one {vil du blive opkr\xe6vet} other {vil du blive opkr\xe6vet}} **{discountedPrice}**. Du vil derefter blive opkr\xe6vet {regularPrice}.",
+          "I den/de n\xe6ste **{numMonths, plural, one {m\xe5ned} other {{numMonths} m\xe5neder}}** {numMonths, plural, one {vil du blive opkr\xe6vet} other {vil du blive opkr\xe6vet}} **{discountedPrice}**. Du vil derefter blive opkr\xe6vet {regularPrice}/m\xe5ned.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "rabat tilf\xf8jet",
         CHURN_DISCOUNT_DESCRIPTION:
           "F\xf8r du opsiger dit abonnement, vil vi gerne tilbyde dig **{percent, number} % rabat p\xe5 dit Nitro-abonnement** i {numMonths, plural, one {1 m\xe5ned} other {{numMonths} m\xe5neder}}.",
@@ -10843,8 +10855,6 @@
           "Vi har netop sendt dig en e-mail. Klik p\xe5 bekr\xe6ftelseslinket i e-mailen for at godkende dette k\xf8b.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Forts\xe6t",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Modtog du ikke noget?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Send e-mail igen",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11671,7 +11681,53 @@
           "F\xe5 dette seje emblem for at v\xe6re Nitro-abonnement.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Til samlerne. F\xe5 dette eksklusive Nitro-badge.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} gratis {numFreeBoosts, plural, =1 {boost} other {boosts}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Tillykke med din f\xf8rste m\xe5ned med Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-bel\xf8nning",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Du kan bruge dit ekstra boost, s\xe5 l\xe6nge dit nuv\xe6rende Nitro-abonnement er aktivt.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Indl\xf8s din bel\xf8nning!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Indl\xf8s",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Indl\xf8st",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "Tak fordi du er medlem af Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Hold dit Nitro-abonnement aktivt for at beholde dit boost. Dit boost vil blive fjernet og nulstiller dine fremskridt, hvis du opsiger abonnementet.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "F\xe5 et boost, n\xe5r du n\xe5r din f\xf8rste m\xe5ned med Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Indl\xf8s om {days} {days, plural, =1 {dag} other {dage}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Indl\xf8s om {numDays} {numDays, plural, =1 {dag} other {dage}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Nitro-bel\xf8nning",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "F\xe5 et boost, n\xe5r du n\xe5r din f\xf8rste m\xe5ned med Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "F\xe5 et boost, n\xe5r du n\xe5r 3 m\xe5neder med Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Du kan bruge dit ekstra boost, s\xe5 l\xe6nge dit nuv\xe6rende Nitro-abonnement er aktivt.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "Indl\xf8s din bel\xf8nning!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Tillykke med din f\xf8rste m\xe5ned med Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Tillykke med dine f\xf8rste 3 m\xe5neder med Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "Tak fordi du er medlem af Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Hold dit Nitro-abonnement aktivt for at beholde dit boost. Dit boost vil blive fjernet og nulstiller dine fremskridt, hvis du opsiger abonnementet.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Indl\xf8st",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Tillykke, du har optjent et ekstra boost.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "Dit boost venter p\xe5 dig!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "Tak fordi du er medlem af Nitro. V\xe6rsgo, her er et ekstra boost for din f\xf8rste m\xe5ned som medlem af Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "Tak fordi du er medlem af Nitro. V\xe6rsgo, her er et ekstra boost som tak, fordi du har v\xe6ret medlem af Nitro i 3 m\xe5neder.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "S\xe6t turbo p\xe5 din Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11681,8 +11737,7 @@
         NITRO_MARKETING_CARDS_BOOSTS_UPLOADS_AND_MORE:
           "2 serverboosts, 500 MB uploads og mere!",
         NITRO_MARKETING_JUST_THE_BASICS: "Bare det grundl\xe6ggende",
-        NITRO_MARKETING_BASIC_PERKS:
-          "Grundl\xe6ggende ekstra fordele med Nitro",
+        NITRO_MARKETING_BASIC_PERKS: "Ekstra fordele med Nitro Basic",
         MARKETING_PAGE_CAROUSEL_TITLE: "G\xf8r Discord til dit",
         MARKETING_PAGE_CHOOSE_PLAN_TITLE: "V\xe6lg dit Nitro",
         MARKETING_PAGE_CHOOSE_PLAN_SUBTITLE:
@@ -11763,6 +11818,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Gratis pr\xf8veperiode ({days, plural, =1 {# dag tilbage} other {# dage tilbage}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Gratis pr\xf8veperiode",
+        POWERED_BY_NITRO: "Drevet af Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Spiller et spil",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM:
           "Live sl\xe5et til !!{platform}!!",
@@ -14202,8 +14258,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Denne emoji er fra",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Denne emoji er fra denne server. Du kan anvende den alle steder.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Denne emoji er fra denne server. Brug den overalt med Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Denne emoji er fra en af dine servere. Indtast dens navn i chat-ruden for at anvende den.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Denne emoji er fra en af dine servere. Du kan bruge den overalt med Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "\xd8nsker du at kunne anvende denne emoji alle steder? Tilslut dig serveren.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14218,6 +14278,8 @@
           "\xd8nsker du at kunne anvende denne emoji alle steder? F\xe5 Nitro og tilslut dig serveren.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Denne emoji er fra en server, der enten kr\xe6ver invitation eller ikke er tilg\xe6ngelig. [F\xe5 mere at vide](openPremiumSettings) om, hvordan du anvender brugertilpassede emojis.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Denne brugerdefinerede emoji er fra en server, der kun optager medlemmer mod invitation. Brug brugerdefinerede emojis fra alle servere med Nitro, hvor du er medlem.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "F\xe5 denne sticker fra",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16151,12 +16213,8 @@
           "Er du sikker p\xe5, at du vil redigere denne begivenhed?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Redigering af denne begivenhed vil ogs\xe5 **opdatere alle begivenheder** i denne serie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Pr\xf8v det",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NYHED! Gentagne begiveheder",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Du kan nu nemt gentage begivenheder.",
-        COPY_RECURRENCE_LINK: "Kopi\xe9r dette link til begivenhed",
-        COPY_SERIES_LINK: "Kopier link til serie af begivenheder",
+        COPY_RECURRENCE_LINK: "Kopier kun link for denne begivenhed",
+        COPY_SERIES_LINK: "Kopier link for alle begivenheder",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Opret event",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17464,6 +17522,8 @@
           "Hvis du starter op med Nitro Classic igen, genoptager vi opkr\xe6vningen af din betalingsmetode **{price}** og forts\xe6tter med at opkr\xe6ve **m\xe5nedligt**, indtil du annullerer abonnementet. Du kan annullere det n\xe5r som helst fra din side med Indstillinger.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Hvis du starter op med Nitro Classic igen, genoptager vi opkr\xe6vningen af din betalingsmetode **{price}** og forts\xe6tter med at opkr\xe6ve **\xe5rligt**, indtil du annullerer abonnementet. Du kan annullere det n\xe5r som helst fra din side med Indstillinger.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Hvis du genaktiverer Nitro, genoptager vi opkr\xe6vningen af **{discountPrice}** pr. m\xe5ned via din valgte betalingsmetode, indtil din rabatperiode slutter. Derefter opkr\xe6ver vi ***{defaultPrice}*** pr. m\xe5ned, indtil du opsiger dit abonnement. Du kan til enhver tid opsige abonnementet fra siden Indstillinger.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Behold Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL: "Afvis",
@@ -18984,6 +19044,9 @@
           "Filtrer baseret p\xe5 sikkerhedsoplysninger, s\xe5som timeout eller deltagelse i us\xe6dvanlig DM-aktivitet.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Udeluk medlemmer",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Ukendt",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Skjult",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Streamer-tilstand er aktiv. Invitationskoder er skjulte",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Serveropdagelse",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Elevhub",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Andre deltagelsesmetoder",
@@ -19055,8 +19118,7 @@
           "Alle tildelte tilladelser",
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND: "Ingen Mod-tilladelser",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Tildelt af",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Risikabelt) Tildelt af",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Tilladelse tildelt af disse roller",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "H\xf8jeste rolle",
@@ -20175,6 +20237,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Medieredigering og skabelse af memes i Discord-hastighed.",
         EARLY_ACCESS: "Tidlig adgang",
+        REWARD: "Bel\xf8nning",
         REMIXING_POST_CTA: "Send",
         REMIXING_CROP: "Besk\xe6r medier",
         REMIXING_BACKDROP_EDITOR_TITLE: "Just\xe9r og besk\xe6r",
@@ -21532,6 +21595,10 @@
           "Servere, som du har sendt beskeder p\xe5 inden for den sidste uge. Disse er ikke invitationslinks, dine for\xe6ldre vil ikke kunne klikke p\xe5 dem.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servere, som din teenager har sendt beskeder p\xe5 inden for den seneste uge.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servere, du har v\xe6ret aktiv p\xe5 (sendt beskeder eller deltaget i stemmechat) inden for den seneste uge. Disse er ikke invitationslinks; dine for\xe6ldre kan ikke klikke p\xe5 dem.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servere, din teenager har v\xe6ret aktiv p\xe5 (sendt beskeder eller deltaget i stemmechat) inden for den seneste uge.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Aktive servere – {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21673,6 +21740,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Nitro-abonnenter f\xe5r rabat p\xe5 denne dekoration",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} med Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} med Nitro $[Tegn abonnement nu](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Klar til et nyt look?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "\xd8hm, det her er akavet.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21688,6 +21757,9 @@
           "N\xe5r du har k\xf8bt effekten, bliver den f\xf8jet til din samling og kan bruges n\xe5r som helst",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Denne effekt er nu en del af din samling og kan bruges n\xe5r som helst!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "Normalpris {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "Ved at klikke p\xe5 '{buyButtonLabel}' accepterer du vores [vilk\xe5r for betalte tjenester]({paidServiceTermURL}). N\xe5r du har gennemf\xf8rt dit k\xf8b, vil varen blive f\xf8jet til din samling og kan bruges n\xe5r som helst. Bem\xe6rk, at Nitro-abonnementer ikke kan refunderes, n\xe5r du har k\xf8bt en vare.",
         COLLECTIBLES_DAYS_LEFT: "{days} dage tilbage",
         COLLECTIBLES_LAST_DAY: "Sidste dag for at k\xf8be",
         COLLECTIBLES_SHOP_VIEW_ALL: "Se alt",
@@ -21708,10 +21780,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Udnyt elementerne",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Ild. Vind. Vand. Jord. Hvilket vil du slippe l\xf8s?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE:
-          "Der er kommet nye anime-elementer!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: nye stilarter",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Tjek de nyeste stilarter, der helt sikkert vil f\xe5 senpai til at bem\xe6rke dig.",
+          "Senpai vil helt sikkert bem\xe6rke dig nu.",
         COLLECTIBLES_NEW_BADGE: "NYT",
         INVENTORY_EMOJI_DETAILS_V2: "Se emoji-detaljer",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23028,6 +23099,8 @@
         CLIPS_LENGTH_MINUTES:
           "{count, plural, =1 {# minut} other {# minutter}}",
         CLIPS_SAVE: "Gem klip",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Aktiv\xe9r klip for at optage denne stream.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Tillad seere at optage klip",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
           "Aktiver oprettelsen af klip fra din Go Live-stream",
@@ -23399,6 +23472,7 @@
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS:
           "G\xe5 til Indstillinger",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Afvis",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS: "Tak for din feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Bloker",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Luk",
         STRANGER_DANGER_MORE_HEADER: "Flere ting du kan g\xf8re",
@@ -23444,9 +23518,19 @@
           "Denne samtale er muligvis ikke sikker.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Tag handling for at beskytte dig selv.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Tr\xe6f foranstaltninger for at beskytte dig selv ved at \xe5bne sikkerhedsv\xe6rkt\xf8jer.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Denne samtale er muligvis ikke sikker. \xc5bn sikkerhedsv\xe6rkt\xf8jer for at tr\xe6ffe foranstaltninger.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blok\xe9r personen",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Fjern blokering",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Konto blokeret",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Blokering af konto fjernet",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Konto anmeldt",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Noget gik galt. Pr\xf8v igen senere.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Personen vil ikke kunne sende dig beskeder. Hvis du f\xf8ler, at personens handlinger kan v\xe6re til skade for nogen, bedes du anmelde det til Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Bloker",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blok\xe9r og anmeld",
@@ -23566,6 +23650,8 @@
         POLL_SUBMIT_VOTE: "Stem",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} stemme} other {{count} stemmer}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} stemme} other {{count} stemmer}}",
         POLL_ALREADY_VOTED: "Har stemt",
         POLL_EDIT_VOTE: "Skift stemme",
         POLL_REMOVE_VOTE: "Fjern stemme",
@@ -23580,9 +23666,15 @@
         POLL_EXPIRED: "Afstemning lukket",
         POLL_SELECT_ONE_ANSWER: "V\xe6lg \xe9t svar",
         POLL_SELECT_MULTIPLE_ANSWERS: "V\xe6lg et eller flere svar",
-        POLL_SHOW_VOTES: "Vis stemmer",
-        POLL_HIDE_VOTES: "Skjul stemmer",
+        POLL_SHOW_VOTES: "Vis resultater",
+        POLL_HIDE_VOTES: "G\xe5 tilbage for at stemme",
+        POLL_VOTES_NO_RESULTS_TITLE: "Intet at se her",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Der er ingen stemmer for dette svar",
+        POLL_COACHMARK_TITLE: "NYHED! Afstemninger er her.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planl\xe6g begivenheder, indsaml meninger, eller stil et dumt sp\xf8rgsm\xe5l i chatten.",
         POLL_NOT_INTERACTIVE: "Se den originale besked for at interagere",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Intet at se her",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Der er ingen stemmer p\xe5 dette svar.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Stemmer",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Afsl\xf8r v\xe6lgere",
@@ -23609,8 +23701,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Afstemningen l\xf8ber i",
         CREATE_POLL_DURATION_LABEL: "Varighed",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 time",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 timer",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dage",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 uge",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23637,6 +23727,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Billedbeskrivelse (Alt Text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Alt. tekst:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "V\xe6lg medie",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Hovsa, du glemte noget. Tilf\xf8j venligst et sp\xf8rgsm\xe5l.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Hovsa, du glemte noget. Tilf\xf8j venligst mindst \xe9t svar.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Svarfeltet bliver ked af det! Skriv venligst et svar.",
         POLL_END_EARLY: "Afslut afstemning nu",
         POLL_END_EARLY_CONFIRMATION_TITLE: "Skal afstemningen afsluttes nu?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23669,11 +23765,17 @@
         QUESTS_COMPLETE_TOOLTIP:
           "Tryk p\xe5 modtag for at f\xe5 din bel\xf8nningskode!",
         QUESTS_ACCEPT_TOOLTIP:
-          "Accept\xe9r missionen og gennemf\xf8r den for at l\xe5se op for bel\xf8nningen",
+          "Accept\xe9r missionen, og gennemf\xf8r den for at l\xe5se op for bel\xf8nningen",
         QUESTS_IN_PROGRESS_TOOLTIP:
           "Gennemf\xf8r opgaven for at l\xe5se op for bel\xf8nningen",
         QUESTS_STREAM_TASK:
           "Stream {gameTitle} til en ven i {minutes} minutter",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Bekr\xe6ft din konto for at hente dine bel\xf8nninger!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Vi har sendt en bekr\xe6ftelses-e-mail til: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "\xc5h nej! Vi kunne ikke sende dig en bekr\xe6ftelses-e-mail.",
         QUEST_REWARD: "Vind {reward}",
         QUESTS_REWARD_CODE_HEADER: "Din bel\xf8nningskode",
         QUESTS_REWARD_CODE_CONGRATS: "Tillykke!",
@@ -23696,8 +23798,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponseret",
+        QUESTS_PROMOTED: "Forfremmet",
         QUESTS_LEARN_MORE_V2: "F\xe5 mere at vide",
         QUESTS_LEARN_MORE_STACKED: "F\xe5 mere\n\nat vide",
+        QUESTS_LEARN_MORE_LINK: "[F\xe5 mere at vide]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accept\xe9r mission",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} til en ven i {streamingDurationRequirement, number} minutter, og vind {questReward}.",
@@ -23707,7 +23811,7 @@
         QUESTS_TITLE: "{questName} Mission",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hovsa!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
-          "Missioner er ikke tilg\xe6ngelige p\xe5 mobilen ... endnu. Det er vi kede af! Du kan fra din Discord-app eller browser g\xe5 til **Brugerindstillinger > Gaveinventar** og acceptere missionen der.",
+          "Missioner er ikke tilg\xe6ngelige p\xe5 mobilen ... endnu. Det er vi kede af! Du kan dog fra din Discord-app eller browser g\xe5 til **Brugerindstillinger > Gaveinventar** og acceptere missionen der.",
         QUESTS_MOBILE_EMBED_TITLE:
           "Missioner er ikke tilg\xe6ngelige til mobil ... endnu.",
         QUESTS_MOBILE_EMBED_BODY:
@@ -23732,7 +23836,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} fors\xf8ger at n\xe5 ud til visse typer Discord-brugere. Baseret p\xe5 det, du har fortalt os, eller andre oplysninger, vi har indsamlet, tror vi, at du passer til nogle af disse grupper:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "F\xe5 mere at vide om missioner p\xe5 Discord, og hvordan du administrerer dine privatlivsindstillinger [her]({privacySettingsUrl}).",
+          "[F\xe5 mere at vide]({privacySettingsUrl}) om missioner p\xe5 Discord, og hvordan du administrerer dine privatlivsindstillinger.",
         QUESTS_DISCLOSURE_LOCATION: "Sted",
         QUESTS_DISCLOSURE_AGE: "Alder",
         QUESTS_DISCLOSURE_ACTIVITY: "Aktivitet: relevant gaming",
@@ -23741,6 +23845,11 @@
           "Noget gik galt her. Tjek, om der er flere missioner i dit gaveinventar!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
           "Der opstod et problem med at spore din missions fremskridt.",
+        QUESTS_SHARE_QUEST: "Del mission",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "V\xe6lg {gameTitle} for at komme i gang med din mission!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Du skal v\xe6lge applikationen, ikke hele sk\xe6rmen.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Du kan opfordre medlemmerne til at chatte, n\xe5r denne kanal har v\xe6ret inaktiv i et stykke tid.",
         PROMPT_CAMERA_LOADING_TITLE: "Hvad ser du p\xe5?",
@@ -23792,10 +23901,23 @@
           "Et aktivitetskort, der viser, at @{username} lytter til {song} af {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Et aktivitetskort, der viser, at @{username} streamer {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Spiller **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Spillede **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} spiller **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} spillede **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} spiller et nyt spil: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} spillede et nyt spil: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "for {count}uger siden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "{count}d siden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}t siden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m siden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sek. siden",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "for f\xf8rste gang",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
       };
     },
   },

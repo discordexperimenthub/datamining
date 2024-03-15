@@ -4868,12 +4868,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Attiva o disattiva l'associazione tasti",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Risultati",
-        SHOW_CURRENT_ACTIVITY:
-          "Mostra le attivit\xe0 in corso come messaggio di stato.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord aggiorner\xe0 automaticamente il tuo stato quando parteciperai a un palco pubblico.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord aggiorner\xe0 automaticamente il tuo stato in base al gioco in esecuzione (se rilevabile), all'attivit\xe0 in corso che supporta Rich Presence o se stai partecipando a un palco pubblico.",
         GAME_DETECTION_SERVICE: "Servizio Rilevazione dei giochi",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Posizioni di installazione",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD:
@@ -9517,7 +9513,7 @@
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "I tuoi primi **3 mesi** sono scontati a **{discountedPrice}**. A seguire, ti saranno addebitati {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "Il tuo prossimo **{numMonths, plural, one {mese} other {{numMonths} mesi}}** {numMonths, plural, one {costa} other {costano}} **{discountedPrice}**. Dopo di che, ti saranno addebitati {regularPrice}/mese.",
+          "**{numMonths, plural, one {Il tuo prossimo mese} other {I tuoi prossimi {numMonths} mesi}}** {numMonths, plural, one {costa} other {costano}} **{discountedPrice}**. Dopo di che, ti saranno addebitati {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "sconto applicato",
         CHURN_DISCOUNT_DESCRIPTION:
           "Prima di annullare, approfitta di questo sconto del **{percent, number}% sul tuo abbonamento Nitro** per {numMonths, plural, one {1 mese} other {{numMonths} mesi}}.",
@@ -10964,8 +10960,6 @@
           "Ti abbiamo inviato un'e-mail. Clicca sul link per la verifica nell'e-mail per autorizzare questo acquisto.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continua",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Non hai ricevuto niente?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Invia di nuovo l'e-mail",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -16376,10 +16370,6 @@
           "Vuoi davvero modificare questo evento?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Modificando questo evento **aggiornerai anche tutti gli eventi** in questa serie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "Prova",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NOVIT\xc0! Eventi ripetibili",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Ora puoi ripetere facilmente gli eventi.",
         COPY_RECURRENCE_LINK: "Copia il link solo per questo evento",
         COPY_SERIES_LINK: "Copia il link per tutti gli eventi",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
@@ -19293,8 +19283,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Nessun permesso per moderatori",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Concesso da",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Rischioso) Concesso da",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderatore",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permesso concesso da questi ruoli",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Ruolo pi\xf9 elevato",
@@ -23616,6 +23605,8 @@
           "Prendiamo molto sul serio la sicurezza degli adolescenti su Discord. Se dovessimo rilevare un possibile rischio per la sicurezza in una conversazione, ti avviseremo. [Scopri di pi\xf9 sulle notifiche di sicurezza.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Vai alle impostazioni",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Chiudi",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "Grazie per il tuo feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blocca",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "Chiudi",
         STRANGER_DANGER_MORE_HEADER: "Cos'altro puoi fare",
@@ -23851,8 +23842,6 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Il sondaggio sar\xe0 attivo per",
         CREATE_POLL_DURATION_LABEL: "Durata",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 ora",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 ore",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 giorni",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 settimana",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24057,6 +24046,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m fa",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sec. fa",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima volta",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Attivit\xe0",
       };
     },
   },

@@ -1029,6 +1029,8 @@
         EMBEDDED_ACTIVITIES_OPEN_ACTIVITY_SHELF:
           "Deschide raftul de activități",
         EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY_A11Y_LABEL: "Părăsește activitatea",
+        EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS:
+          "Această caracteristică nu e disponibilă \xeen prezent pe acest OS",
         EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS:
           "Această activitate nu este momentan disponibilă pe acest OS",
         EMBEDDED_ACTIVITIES_THIS_ACTIVITY: "această activitate",
@@ -1259,6 +1261,9 @@
           "Activitatea a \xeenceput.",
         EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE:
           "Nu poți lansa această activitate \xeentr-un server care are peste 25 de membri",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_TITLE: "Aplicație externă",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LAUNCH_DESCRIPTION:
+          "Ești pe cale să lansezi o aplicație externă. Vrei să continui?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED:
           "Activitatea s-a \xeencheiat. Vrei să \xeencepi o nouă activitate?",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE:
@@ -1267,6 +1272,15 @@
           "Nu ai permisiunea să te alături acestui canal de voce.",
         EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL:
           "Nu te poți alătura activităților din acest canal.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_ANNOUNCEMENT_BIRD_A11Y_LABEL:
+          "O pasăre cu un megafon \xeen loc de cap",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_HEADS_UP: "Atenție!",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_TITLE:
+          "Ești pe cale să testezi {activityName} pentru prima dată.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_CONFIRM_SUBTITLE:
+          "Această aplicație nu este creată de Discord. Testează numai aplicații de la dezvoltatori \xeen care ai \xeencredere.",
+        EMBEDDED_ACTIVITIES_EXTERNAL_APP_LEARN_MORE:
+          "Află mai multe despre aplicațiile private.",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH:
           "$[](userHook) a \xeenceput o activitate",
         APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED:
@@ -4867,12 +4881,8 @@
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE:
           "Activează sau dezactivează o scurtătură",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Rezultate",
-        SHOW_CURRENT_ACTIVITY:
-          "Afișează activitatea actuală ca mesaj de status.",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord \xeeți va actualiza automat statusul dacă participi la un podium public.",
-        SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "Discord \xeeți va actualiza automat statusul \xeen funcție de jocul pe care \xeel joci (dacă \xeel putem detecta), de activitatea actuală compatibilă cu Rich Presence sau de participarea la un podium public.",
         GAME_DETECTION_SERVICE: "Serviciu de detectare jocuri",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Locații de instalare",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Adaugă locație de instalare",
@@ -5522,7 +5532,7 @@
         LOGOUT: "Deconectează-te",
         SOUNDS: "Sunete",
         PREMIUM: "Nitro",
-        BASIC: "Funcții de bază",
+        BASIC: "Basic",
         SOUND_MESSAGE: "Trimite mesaj",
         SOUND_DEAFEN: "Dezactivează sunetul",
         SOUND_UNDEAFEN: "Reactivează sunetul",
@@ -9522,10 +9532,12 @@
           "Economisește !!{percent, number}!!% c\xe2nd cumperi Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT:
           "Economisește c\xe2nd cumperi Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
+          "Reducerea ta de !!{percent, number}!!% se va \xeencheia la {numMonths, plural, one {1 lună} other {{numMonths} luni}} de la achiziție. După aceea, vei plăti {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
           "Primele **3 luni** costă **{discountedPrice}**. După aceea, vei plăti {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB:
-          "**{numMonths, plural, one {\xcen următoarea lună} other {\xcen următoarele {numMonths} luni}}** {numMonths, plural, one {abonamentul costă} other {abonamentul costă}} **{discountedPrice}**. După aceea, vei plăti {regularPrice}.",
+          "**{numMonths, plural, one {\xcen următoarea lună} other {\xcen următoarele {numMonths} luni}}** {numMonths, plural, one {abonamentul costă} other {abonamentul costă}} **{discountedPrice}**. După aceea, vei plăti {regularPrice}/lună.",
         PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "reducere aplicată",
         CHURN_DISCOUNT_DESCRIPTION:
           "\xcenainte să finalizezi anularea, te poți bucura de **o reducere de {percent, number}% la abonamentul Nitro** timp de {numMonths, plural, one {o lună} other {{numMonths} luni}}.",
@@ -10981,8 +10993,6 @@
           "Tocmai ți-am trimis un e-mail. Dă clic pe linkul de verificare din e-mail pentru a autoriza achiziția.",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_NEXT_BUTTON:
           "Continuă",
-        PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_PROMPT:
-          "Nu ai primit nimic?",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_ACTION:
           "Retrimite e-mail-ul",
         PAYMENT_WAITING_FOR_PURCHASE_TOKEN_AUTHORIZATION_MODAL_RESEND_SENT:
@@ -11817,7 +11827,53 @@
           "\xcen calitate de abonat Nitro, primești această insignă grozavă.",
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pentru colecționari. Obține această insignă exclusivă Nitro.",
+        NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {Boost gratuit} other {numBoost-uri gratuite}}",
+        NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
+          "Felicitări pentru \xeemplinirea primei luni de Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REWARD: "Recompensă Nitro",
+        NITRO_HOME_REWARDING_TENURE_DISCLAIMER:
+          "Poți folosi cu \xeencredere boost-ul suplimentar c\xe2t timp abonamentul tău Nitro actual răm\xe2ne activ.",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_YOUR_REWARD:
+          "Valorifică-ți recompensa!",
         NITRO_HOME_REWARDING_TENURE_REDEEM_ACTION: "Valorifică",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD: "Valorificat",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_GRATITUDE:
+          "\xceți mulțumim că ești membru Nitro.",
+        NITRO_HOME_REWARDING_TENURE_REDEEMED_REWARD_DISLAIMER:
+          "Păstrează boost-ul mențin\xe2ndu-ți activ abonamentul Nitro. Anularea abonamentului resetează progresul și elimină boost-ul.",
+        NITRO_HOME_REWARDING_TENURE_DESCRIPTION:
+          "Primește un boost la \xeemplinirea primei luni de Nitro.",
+        NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE:
+          "Valorifică \xeen {days} {days, plural, =1 {zi} other {zile}}",
+        NITRO_HOME_REWARDING_TENURE_REDEEM_BOOST:
+          "Valorifică \xeen {numDays} {numDays, plural, =1 {zi} other {zile}}",
+        NITRO_HOME_REWARDING_LOCKED_STATE_TITLE: "Recompensă Nitro",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Primește un boost la \xeemplinirea primei luni de Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Primește un boost la \xeemplinirea a 3 luni de Nitro.",
+        NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION:
+          "Poți folosi cu \xeencredere boost-ul suplimentar c\xe2t timp abonamentul tău Nitro actual răm\xe2ne activ.",
+        NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE:
+          "Valorifică-ți recompensa!",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT:
+          "Felicitări pentru \xeemplinirea primei luni de Nitro.",
+        NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT:
+          "Felicitări pentru \xeemplinirea a 3 luni de Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE:
+          "\xceți mulțumim că ești membru Nitro.",
+        NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
+          "Păstrează boost-ul mențin\xe2ndu-ți activ abonamentul Nitro. Anularea abonamentului resetează progresul și elimină boost-ul.",
+        NITRO_HOME_REWARDING_REDEEMED_LABEL: "Valorificat",
+        GUILD_BOOST_NITRO_REWARD_BANNER:
+          "Bine lucrat, ai primit un boost suplimentar.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE:
+          "\xceți facem cadou un boost!",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT:
+          "\xcen semn de mulțumire că ești membru Nitro, \xeeți oferim un boost suplimentar pentru \xeemplinirea primei luni de Nitro.",
+        SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT:
+          "\xcen semn de mulțumire că ești membru Nitro, \xeeți oferim un boost suplimentar pentru \xeemplinirea a 3 luni de Nitro.",
         NITRO_MARKETING_CARDS_SUPERCHARGE_YOUR_DISCORD:
           "Energizează-ți experiența Discord",
         NITRO_MARKETING_CARDS_CUSTOM_PROFILES:
@@ -11911,6 +11967,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Perioadă de probă gratuită ({days, plural, =1 {# zi rămasă} other {# zile rămase}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Perioadă de probă gratuită",
+        POWERED_BY_NITRO: "Oferit de Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Joacă un joc",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "\xcen direct pe !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Joacă pe !!{platform}!!",
@@ -14388,8 +14445,12 @@
         EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION: "Acest emoji este din",
         EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION:
           "Acest emoji este de pe acest server. \xcel poți folosi oriunde.",
+        EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2:
+          "Acest emoji este de pe acest server. Folosește-l oriunde cu Nitro.",
         EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION:
           "Acest emoji este de pe unul dintre serverele tale. Introdu-i numele \xeen bara de chat pentru a-l folosi.",
+        EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2:
+          "Acest emoji este de pe unul dintre serverele tale. \xcel poți folosi oriunde cu Nitro.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION:
           "Vrei să folosești acest emoji oriunde? Alătură-te serverului.",
         EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
@@ -14404,6 +14465,8 @@
           "Vrei să folosești acest emoji oriunde? Abonează-te la Nitro și alătură-te serverului.",
         EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION:
           "Acest emoji provine de pe un server care este fie pe bază de invitație, fie indisponibil. [Află mai multe](openPremiumSettings) despre folosirea emojiurilor personalizate.",
+        EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2:
+          "Acest emoji personalizat este de pe un server pe bază de invitație. Folosește emojiuri personalizate de pe orice server din care faci parte, cu Nitro.",
         STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION:
           "Primește acest sticker de pe",
         STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION:
@@ -16358,12 +16421,8 @@
           "Sigur vrei să editezi acest eveniment?",
         GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT:
           "Editarea acestui eveniment va **actualiza toate evenimentele** din această serie.",
-        GUILD_EVENT_RECURRING_COACHMARK_CTA: "\xcencearcă și tu",
-        GUILD_EVENT_RECURRING_COACHMARK_TITLE: "NOU! Evenimente recurente",
-        GUILD_EVENT_RECURRING_COACHMARK_BODY:
-          "Acum poți repeta evenimentele \xeen mod simplu.",
-        COPY_RECURRENCE_LINK: "Copiază linkul acestui eveniment",
-        COPY_SERIES_LINK: "Copiază linkul seriei de evenimente",
+        COPY_RECURRENCE_LINK: "Copiază doar linkul acestui eveniment",
+        COPY_SERIES_LINK: "Copiază linkul pentru toate evenimentele",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_CREATE:
           "Creează un eveniment",
         GUILD_SETTINGS_ACTION_FILTER_GUILD_SCHEDULED_EVENT_UPDATE:
@@ -17675,6 +17734,8 @@
           "Dacă reiei abonamentul Nitro Classic, vom \xeencepe din nou să percepem **lunar** suma de **{price}** folosindu-ți metoda de plată, p\xe2nă c\xe2nd anulezi abonamentul. \xcel poți anula oric\xe2nd, acces\xe2nd pagina Setări.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_YEARLY_TIER_1:
           "Dacă reiei abonamentul Nitro Classic, vom \xeencepe din nou să percepem **anual** suma de **{price}** folosindu-ți metoda de plată, p\xe2nă c\xe2nd anulezi abonamentul. \xcel poți anula oric\xe2nd, acces\xe2nd pagina Setări.",
+        PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_DISCOUNT_PRICE_FOOTER:
+          "Dacă reiei abonamentul Nitro, vom \xeencepe din nou să percepem lunar suma de **{discountPrice}** folosindu-ți metoda de plată p\xe2nă la \xeencheierea perioadei de aplicare a tarifului redus, iar apoi \xeeți vom percepe lunar suma de ***{defaultPrice}*** p\xe2nă c\xe2nd anulezi abonamentul. \xcel poți anula oric\xe2nd, acces\xe2nd pagina Setări.",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_KEEP_NITRO:
           "Păstrează Nitro",
         PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_FOOTER_BUTTON_CANCEL:
@@ -19217,6 +19278,9 @@
           "Filtrează \xeen funcție de informațiile de securitate, cum ar fi pusul pe pauză sau implicarea \xeen activități neobișnuite legate de mesajele directe.",
         MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION: "Interzice accesul membrilor",
         MEMBER_SAFETY_JOIN_TYPE_UNKNOWN: "Necunoscută",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN: "Ascunse",
+        MEMBER_SAFETY_JOIN_TYPE_HIDDEN_TOOLTIP:
+          "Modul Streamer este activ, codurile de invitație sunt ascunse",
         MEMBER_SAFETY_JOIN_TYPE_DISCOVERY: "Descoperire server",
         MEMBER_SAFETY_JOIN_TYPE_HUB: "Hub studențesc",
         MEMBER_SAFETY_JOIN_TYPE_FILTER_NAME: "Alte metode de alăturare",
@@ -19291,8 +19355,7 @@
         GUILD_MEMBER_MOD_VIEW_MOD_NO_MOD_PERMS_FOUND:
           "Nu există permisiuni pentru moderatori",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY: "Oferită de",
-        GUILD_MEMBER_MOD_VIEW_ELEVATED_PERMISSION_GRANTED_BY:
-          "(Riscantă) Oferită de",
+        GUILD_MEMBER_MOD_VIEW_MOD_PERMISSION: "Moderator",
         GUILD_MEMBER_MOD_VIEW_PERMISSION_GRANTED_BY_ARIA_LABEL:
           "Permisiune oferită de aceste roluri",
         GUILD_MEMBER_MOD_VIEW_HIGHEST_ROLE: "Cel mai important rol",
@@ -20421,6 +20484,7 @@
         REMIXING_PERKS_CARD_DESCRIPTION:
           "Editare media și creare de meme la viteza Discord.",
         EARLY_ACCESS: "Acces timpuriu",
+        REWARD: "Recompensă",
         REMIXING_POST_CTA: "Trimite",
         REMIXING_CROP: "Decupează fișierul media",
         REMIXING_BACKDROP_EDITOR_TITLE: "Ajustează și decupează",
@@ -21792,6 +21856,10 @@
           "Servere pe care ai trimis mesaje \xeen ultima săptăm\xe2nă. Acestea nu sunt linkuri de invitație și părinții tăi nu vor putea da clic pe ele.",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT:
           "Servere pe care adolescentul dvs. a trimis mesaje \xeen ultima săptăm\xe2nă.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN_WITH_VC:
+          "Servere pe care ai avut activitate \xeen ultima săptăm\xe2nă (ai trimis mesaje sau te-ai alăturat chatului vocal). Acestea nu sunt linkuri de invitație și părinții tăi nu vor putea da clic pe ele.",
+        FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_PARENT_WITH_VC:
+          "Servere pe care adolescentul dvs. a avut activitate \xeen ultima săptăm\xe2nă (a trimis mesaje sau s-a alăturat chatului vocal).",
         FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_SECTION_HEADER:
           "Servere active — {count, number}",
         FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN:
@@ -21934,6 +22002,8 @@
         COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT:
           "Abonații la Nitro beneficiază de o reducere la această decorațiune",
         COLLECTIBLES_NON_PREMIUM_PRICE: "{price} cu Nitro",
+        COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW_MOBILE:
+          "{price} dacă ai Nitro. $[Abonează-te acum](subscribeNowHook)",
         COLLECTIBLES_SHOP_HERO_BANNER_TITLE: "Ești gata pentru un look nou?",
         COLLECTIBLES_SHOP_ERROR_HEADING: "Ei bine, e cam jenant.",
         COLLECTIBLES_SHOP_ERROR_SHOP_LOAD:
@@ -21949,6 +22019,9 @@
           "Odată achiziționat, acest efect va fi adăugat la colecția ta și \xeel vei putea folosi oric\xe2nd",
         COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION:
           "Acest efect face acum parte din colecția ta și poate fi folosit oric\xe2nd!",
+        COLLECTIBLES_MOBILE_SHOP_USUAL_PRICE: "De obicei {price}",
+        COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT_MOBILE:
+          "D\xe2nd clic pe „{buyButtonLabel}”, ești de acord cu [Condițiile de prestare a serviciilor plătite]({paidServiceTermURL}). După finalizarea achiziției, articolul va fi adăugat la colecția ta și poate fi folosit oric\xe2nd. Te rugăm să reții că abonamentele Nitro devin nerambursabile după ce cumperi un articol.",
         COLLECTIBLES_DAYS_LEFT: "{days} zile rămase",
         COLLECTIBLES_LAST_DAY: "Ultima zi \xeen care poți cumpăra",
         COLLECTIBLES_SHOP_VIEW_ALL: "Vezi toate",
@@ -21970,9 +22043,9 @@
         COLLECTIBLES_ELEMENTS_COACHTIP_TITLE: "Dezlănțuie puterea elementelor",
         COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION:
           "Foc. V\xe2nt. Apă. Păm\xe2nt. Tu pe care-l vei dezlănțui?",
-        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Au sosit noile articole anime!",
+        COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: stiluri noi",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
-          "Descoperă cele mai noi stiluri care sigur vor atrage atenția lui senpai.",
+          "Acum senpai te va observa cu siguranță.",
         COLLECTIBLES_NEW_BADGE: "NOU",
         INVENTORY_EMOJI_DETAILS_V2: "Vezi detaliile emojiurilor",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23309,6 +23382,8 @@
           "{count, plural, =1 {# secundă} other {# secunde}}",
         CLIPS_LENGTH_MINUTES: "{count, plural, =1 {# minut} other {# minute}}",
         CLIPS_SAVE: "Salvează clipul",
+        CLIPS_VIEWERSIDE_BUTTON_ENABLE_CLIPS_TOOLTIP:
+          "Activează clipurile pentru a \xeenregistra acest stream.",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS:
           "Le permite spectatorilor să \xeenregistreze clipuri",
         CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP:
@@ -23685,6 +23760,8 @@
           "Discord ia \xeen serios siguranța adolescenților. C\xe2nd detectăm un posibil risc la adresa siguranței \xeentr-o conversație, \xeeți dăm de știre. [Află mai multe despre alertele de siguranță.]({learnMoreLink})",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS: "Accesează Setările",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DISMISS: "Ignoră",
+        SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS:
+          "\xceți mulțumim pentru feedback!",
         STRANGER_DANGER_BANNER_BLOCK: "Blochează",
         STRANGER_DANGER_BANNER_CLOSE_A11Y: "\xcenchide",
         STRANGER_DANGER_MORE_HEADER: "Ce mai poți face",
@@ -23732,9 +23809,19 @@
           "Această conversație s-ar putea să nu fie sigură.",
         INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP:
           "Ia măsuri pentru a te proteja.",
+        INAPPROPRIATE_CONVERSATION_INITIAL_TOOLTIP_ANNOUNCEMENT:
+          "Ia măsuri pentru a te proteja deschiz\xe2nd instrumentele de siguranță.",
+        INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
+          "Această conversație s-ar putea să nu fie sigură. Deschide instrumentele de siguranță pentru a lua măsuri.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blochează utilizatorul",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Deblochează",
+        INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Cont blocat",
+        INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Cont deblocat",
+        INAPPROPRIATE_CONVERSATION_REPORT_TOAST: "Cont raportat",
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Ceva nu a mers bine! \xcencearcă din nou mai t\xe2rziu.",
+        INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
+          "Nu va putea să \xeeți trimită mesaje. Dacă simți că acțiunile sale i-ar putea face rău cuiva, trimite un raport către Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blochează",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blochează și raportează",
@@ -23857,6 +23944,8 @@
         POLL_SUBMIT_VOTE: "Votează",
         POLL_VOTES_COUNT:
           "{count, plural, one {{count} vot} other {{count} voturi}}",
+        POLL_VOTES_COUNT_CAPTIAL:
+          "{count, plural, one {{count} vot} other {{count} voturi}}",
         POLL_ALREADY_VOTED: "Ai votat",
         POLL_EDIT_VOTE: "Schimbă-ți votul",
         POLL_REMOVE_VOTE: "Elimină votul",
@@ -23872,9 +23961,15 @@
         POLL_SELECT_ONE_ANSWER: "Selectează un răspuns",
         POLL_SELECT_MULTIPLE_ANSWERS:
           "Selectează unul sau mai multe răspunsuri",
-        POLL_SHOW_VOTES: "Afișează voturile",
-        POLL_HIDE_VOTES: "Ascunde voturile",
+        POLL_SHOW_VOTES: "Arată rezultatele",
+        POLL_HIDE_VOTES: "Mergi \xeenapoi la vot",
+        POLL_VOTES_NO_RESULTS_TITLE: "Nimic interesant",
+        POLL_VOTES_NO_RESULTS_SUBTITLE: "Nu există voturi pentru acest răspuns",
+        POLL_COACHMARK_TITLE: "NOU! Au sosit sondajele.",
+        POLL_COACHMARK_SUBTITLE:
+          "Planifică evenimente, adună opinii sau pune o \xeentrebare năstrușnică pe chat.",
         POLL_NOT_INTERACTIVE: "Vezi mesajul original pentru a interacționa",
+        POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nimic interesant",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Nu există voturi pentru acest răspuns.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Voturi",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Dezvăluie votanții",
@@ -23902,8 +23997,6 @@
         CREATE_POLL_ADD_ANSWER_BUTTON: "Adaugă alt răspuns",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Sondajul va fi deschis",
         CREATE_POLL_DURATION_LABEL: "Durată",
-        CREATE_POLL_DURATION_OPTION_LABEL_1_HOUR: "1 oră",
-        CREATE_POLL_DURATION_OPTION_LABEL_24_HOURS: "24 de ore",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 zile",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 săptăm\xe2nă",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23931,6 +24024,12 @@
         CREATE_POLL_ALT_TEXT_LABEL: "Descriere imagine (Alt Text)",
         CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT: "Text alternativ:",
         POLL_EXPRESSION_PICKER_BUTTON_ARIA: "Selectare conținut media",
+        CREATE_POLL_QUESTION_REQUIRED:
+          "Ups, ai uitat ceva! Adaugă o \xeentrebare.",
+        CREATE_POLL_MINIMUM_ANSWERS_REQUIRED:
+          "Ups, ai uitat ceva! Adaugă cel puțin un răspuns.",
+        CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT:
+          "Nu lăsa \xeen suspans c\xe2mpul cu răspunsuri! Adaugă un text.",
         POLL_END_EARLY: "\xcencheie sondajul acum",
         POLL_END_EARLY_CONFIRMATION_TITLE: "\xcenchei sondajul acum?",
         POLL_END_EARLY_CONFIRMATION_TEXT:
@@ -23968,6 +24067,12 @@
           "\xcencheie misiunea pentru a debloca recompensa",
         QUESTS_STREAM_TASK:
           "Fă streaming la {gameTitle} pentru un prieten timp de {minutes} minute",
+        QUESTS_REWARD_VERIFICATION_TITLE:
+          "Verifică-ți contul pentru a revendica recompense!",
+        QUESTS_REWARD_VERIFICATION_BODY:
+          "Ți-am trimis un e-mail de verificare pe: [{emailAddress}]({emailAddressLink})",
+        QUESTS_REWARD_VERIFICATION_ERROR:
+          "Hopa! N-am reușit să-ți trimitem e-mailul de verificare.",
         QUEST_REWARD: "Primește {reward}",
         QUESTS_REWARD_CODE_HEADER: "Codul tău de recompensă",
         QUESTS_REWARD_CODE_CONGRATS: "Felicitări!",
@@ -23989,8 +24094,10 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsorizare",
+        QUESTS_PROMOTED: "Promovate",
         QUESTS_LEARN_MORE_V2: "Află mai multe",
         QUESTS_LEARN_MORE_STACKED: "Află\n\nmai multe",
+        QUESTS_LEARN_MORE_LINK: "[Află mai multe]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Acceptă misiunea",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Fă streaming la {gameTitle} pentru un prieten timp de {streamingDurationRequirement, number} minute și c\xe2știgă {questReward}.",
@@ -24026,7 +24133,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} \xeencearcă să abordeze anumite tipuri de utilizatori Discord. \xcen funcție de ce ne-ai spus tu sau de alte informații pe care le-am colectat, credem că faci parte din unele dintre aceste grupuri:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "Află mai multe despre misiunile de pe Discord și despre cum să-ți gestionezi setările de confidențialitate de [aici]({privacySettingsUrl}).",
+          "[Află mai multe]({privacySettingsUrl}) despre misiunile de pe Discord și despre cum să-ți gestionezi setările de confidențialitate.",
         QUESTS_DISCLOSURE_LOCATION: "Locație",
         QUESTS_DISCLOSURE_AGE: "V\xe2rstă",
         QUESTS_DISCLOSURE_ACTIVITY: "Activitate: gaming relevant",
@@ -24034,7 +24141,12 @@
         QUESTS_EMBED_INVALID_BODY:
           "Ceva nu a mers bine. Verifică-ți inventarul de cadouri pentru a vedea alte misiuni disponibile!",
         QUESTS_PROGRESS_TRACKING_FAILURE_NOTICE:
-          "A apărut o problemă la urmărirea progresului misiunii.",
+          "A apărut o problemă la urmărirea progresului \xeen misiune.",
+        QUESTS_SHARE_QUEST: "Partajează misiunea",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING:
+          "Selectează {gameTitle} pentru a progresa \xeen cadrul misiunii!",
+        QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING:
+          "Trebuie să selectezi aplicația, nu \xeentregul ecran.",
         FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE:
           "Invită membrii să discute după ce canalul a fost inactiv o vreme.",
         PROMPT_CAMERA_LOADING_TITLE: "La ce te uiți?",
@@ -24085,10 +24197,23 @@
           "O carte de activitate cu @{username} ascult\xe2nd {song} de {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "O carte de activitate cu @{username} făc\xe2nd streaming la {activity}",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Joacă **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Au jucat **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
+          "{userName} joacă **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:
+          "{userName} a jucat **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME:
+          "{userName} joacă un joc nou: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME:
+          "{userName} a jucat un joc nou: **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_WEEKS_AGO: "acum {count} săpt",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_DAYS_AGO: "acum {count} z",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "acum {count} o",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "acum {count} m",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "acum {count}s",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima dată",
+        CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activitate",
       };
     },
   },

@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275491",
+                  buildNumber: "275507",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -17014,39 +17014,32 @@
             return l;
           },
         }),
-        n("222007"),
         n("65597");
       var a = n("862205");
-      n("47319"), n("697218"), n("49111");
-      (0, a.createExperiment)({
-        kind: "user",
-        id: "2023-10_friend_finder_launch",
-        label: "Friend Finder Launch Experiment",
-        defaultConfig: { enabled: !1 },
-        treatments: [
-          { id: 1, label: "Enable Friend Finder", config: { enabled: !0 } },
-        ],
-      }),
+      n("47319"),
+        n("697218"),
+        n("49111"),
         (0, a.createExperiment)({
           kind: "user",
-          id: "2023-03_friend_finder",
-          label: "Friend Finder User Experiment",
-          defaultConfig: { enabled: !1 },
-          treatments: [
-            { id: 1, label: "Enable Friend Finder", config: { enabled: !0 } },
-          ],
-        }),
-        (0, a.createExperiment)({
-          kind: "user",
-          id: "2023-10_friend_finder_virginia",
-          label: "Friend Finder User Experiment for Virginia",
+          id: "2024-03_friend_finder_selected_states",
+          label: "Friend Finder State Experiment",
           defaultConfig: { enabled: !1 },
           treatments: [
             {
               id: 1,
-              label: "Enable Friend Finder in Virginia",
+              label:
+                "Enable Friend Finder on select states configurable in exp config",
               config: { enabled: !0 },
             },
+          ],
+        }),
+        (0, a.createExperiment)({
+          kind: "user",
+          id: "2023-10_friend_finder_launch",
+          label: "Friend Finder Launch Experiment",
+          defaultConfig: { enabled: !1 },
+          treatments: [
+            { id: 1, label: "Enable Friend Finder", config: { enabled: !0 } },
           ],
         }),
         (0, a.createExperiment)({
@@ -52829,4 +52822,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7310dae1cc7a23268557.js.map
+//# sourceMappingURL=7cb962aee794f95076f4.js.map

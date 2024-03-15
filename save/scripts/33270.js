@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "275648",
+                  buildNumber: "275656",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -48011,107 +48011,112 @@
         i = n("862337"),
         r = n("913144"),
         o = n("260365"),
-        u = n("161454"),
-        d = n("374363"),
-        c = n("718517"),
-        f = n("964889"),
-        E = n("546463"),
-        h = n("686470"),
-        _ = n("49111");
-      let C = "ActivityTrackingStore",
-        I = 30 * c.default.Millis.MINUTE,
-        S = 5 * c.default.Millis.MINUTE,
-        m = null !== (a = l.default.get(C)) && void 0 !== a ? a : {},
-        p = {},
-        T = !1;
-      function g(e) {
+        u = n("963990"),
+        d = n("161454"),
+        c = n("374363"),
+        f = n("718517"),
+        E = n("964889"),
+        h = n("546463"),
+        _ = n("686470"),
+        C = n("49111");
+      let I = "ActivityTrackingStore",
+        S = 30 * f.default.Millis.MINUTE,
+        m = 5 * f.default.Millis.MINUTE,
+        p = null !== (a = l.default.get(I)) && void 0 !== a ? a : {},
+        T = {},
+        g = !1;
+      function A(e) {
         let t =
           !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        t && A(e, !0);
-        let n = p[e.applicationId];
-        null != n && (n.stop(), delete p[e.applicationId]),
-          delete m[e.applicationId],
-          l.default.set(C, m);
+        t && N(e, !0);
+        let n = T[e.applicationId];
+        null != n && (n.stop(), delete T[e.applicationId]),
+          delete p[e.applicationId],
+          l.default.set(I, p);
       }
-      function A(e) {
+      function N(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           n = Date.now(),
           a = null != e.updatedAt ? n - e.updatedAt : 0;
-        a > I + S && (a = 0),
+        a > S + m && (a = 0),
           o.default.updateActivity({
             applicationId: e.applicationId,
             distributor: e.isDiscordApplication
-              ? _.Distributors.DISCORD
+              ? C.Distributors.DISCORD
               : e.distributor,
-            shareActivity: (0, f.shouldShareApplicationActivity)(
+            shareActivity: (0, E.shouldShareApplicationActivity)(
               e.applicationId,
-              h.default
+              _.default
             ),
             token: e.token,
             duration: Math.floor(a / 1e3),
             closed: t,
+            exePath: e.exePath,
           }),
           (e.updatedAt = n);
-        let s = p[e.applicationId];
+        let s = T[e.applicationId];
         null == s &&
-          (s = p[e.applicationId] = new i.Interval()).start(I, () => A(e)),
-          !t && ((m[e.applicationId] = e), l.default.set(C, m));
+          (s = T[e.applicationId] = new i.Interval()).start(S, () => N(e)),
+          !t && ((p[e.applicationId] = e), l.default.set(I, p));
       }
-      function N() {
+      function R() {
         let e =
             !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-          t = u.default.getVisibleRunningGames(),
+          t = d.default.getVisibleRunningGames(),
           n = new Set();
-        for (let { name: e, distributor: a } of t) {
-          let t = E.default.getGameByName(e);
+        for (let { name: e, distributor: a, exePath: s } of t) {
+          let t = h.default.getGameByName(e);
           if (null != t)
             n.add(t.id),
-              !(t.id in m) &&
-                A({
+              !(t.id in p) &&
+                N({
                   applicationId: t.id,
                   updatedAt: Date.now(),
                   distributor: a,
+                  exePath: (0, u.removeExecutablePathPrefix)(
+                    null != s ? s : ""
+                  ),
                 });
         }
-        for (let t of Object.keys(m)) !n.has(t) && g(m[t], e);
+        for (let t of Object.keys(p)) !n.has(t) && A(p[t], e);
       }
-      function R() {
-        for (let e of Object.keys(m)) g(m[e]);
-        T = !1;
+      function O() {
+        for (let e of Object.keys(p)) A(p[e]);
+        g = !1;
       }
-      class O extends s.default.Store {
+      class v extends s.default.Store {
         initialize() {
-          this.waitFor(u.default, d.default, h.default),
-            this.syncWith([d.default], N);
+          this.waitFor(d.default, c.default, _.default),
+            this.syncWith([c.default], R);
         }
         getActivities() {
-          return m;
+          return p;
         }
       }
-      (O.displayName = "ActivityTrackingStore"),
-        new O(r.default, {
-          RUNNING_GAMES_CHANGE: () => N(),
+      (v.displayName = "ActivityTrackingStore"),
+        new v(r.default, {
+          RUNNING_GAMES_CHANGE: () => R(),
           CONNECTION_OPEN: function () {
-            if (T) return !1;
-            for (let e of Object.keys(m)) A(m[e]);
-            N(!1), (T = !0);
+            if (g) return !1;
+            for (let e of Object.keys(p)) N(p[e]);
+            R(!1), (g = !0);
           },
           CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
-            4004 === t && R();
+            4004 === t && O();
           },
-          LOGOUT: R,
+          LOGOUT: O,
           ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
-              a = m[t];
+              a = p[t];
             if (null == a) return !1;
-            (a.token = n), l.default.set(C, m);
+            (a.token = n), l.default.set(I, p);
           },
           ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
-              n = m[t];
+              n = p[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), l.default.set(C, m);
+            (n.token = null), (n.updatedAt = null), l.default.set(I, p);
           },
         });
     },
@@ -52822,4 +52827,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31b53292e0c411b3cf63.js.map
+//# sourceMappingURL=140daa34b7a51e2a567e.js.map

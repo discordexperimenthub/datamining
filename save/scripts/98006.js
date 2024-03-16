@@ -7223,6 +7223,7 @@
             midnight: { color: "plum.19" },
             dark: { color: "black.500" },
           },
+          "coachmark-bg": { name: "bg-surface-overlay" },
           "toast-bg": { name: "bg-surface-overlay" },
           "alert-bg": { name: "bg-base-primary" },
           "chat-banner-bg": { name: "bg-base-secondary" },
@@ -7277,4 +7278,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a642b849b87ae1549717.js.map
+//# sourceMappingURL=521960f377225001a0d4.js.map

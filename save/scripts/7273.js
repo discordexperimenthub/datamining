@@ -8347,6 +8347,13 @@
             [a.MIDNIGHT]: { raw: "BLACK_500", opacity: 0.1 },
             [a.DARKER]: { raw: "BLACK_500", opacity: 0.1 },
           },
+          COACHMARK_BG: {
+            category: "background",
+            [a.DARK]: { raw: "PRIMARY_800", opacity: 1 },
+            [a.LIGHT]: { raw: "WHITE_500", opacity: 1 },
+            [a.MIDNIGHT]: { raw: "PLUM_19", opacity: 1 },
+            [a.DARKER]: { raw: "PLUM_17", opacity: 1 },
+          },
           CONTEXT_MENU_BACKDROP_BACKGROUND: {
             category: "generic",
             [a.DARK]: { raw: "BLACK_500", opacity: 0.7 },
@@ -13858,6 +13865,7 @@
         (e.CHAT_SWIPE_TO_REPLY_BACKGROUND = "chat-swipe-to-reply-background"),
         (e.CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND =
           "chat-swipe-to-reply-gradient-background"),
+        (e.COACHMARK_BG = "coachmark-bg"),
         (e.CONTEXT_MENU_BACKDROP_BACKGROUND =
           "context-menu-backdrop-background"),
         (e.CONTROL_BRAND_FOREGROUND = "control-brand-foreground"),
@@ -14808,6 +14816,12 @@
           o.Color.WHITE_500,
           o.Color.BLACK_500,
           o.Color.BLACK_500,
+        ],
+        "coachmark-bg": [
+          o.Color.PRIMARY_800,
+          o.Color.WHITE_500,
+          o.Color.PLUM_19,
+          o.Color.PLUM_17,
         ],
         "context-menu-backdrop-background": [
           o.Color.BLACK_500,
@@ -17313,4 +17327,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.a6a968eeb4dfcc1e8f4e.js.map
+//# sourceMappingURL=7273.d9bb21ddb5e0acf698c6.js.map

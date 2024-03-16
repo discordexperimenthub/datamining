@@ -203,7 +203,7 @@
               { sections: n, sectionCounts: s }
             );
           }, [x, a, l]),
-          Z = u.useCallback(
+          P = u.useCallback(
             e => {
               let t = Object.values(e),
                 l = t
@@ -222,7 +222,7 @@
             },
             [i]
           ),
-          P = () => {
+          Z = () => {
             H(!1), g(!1);
           };
         u.useEffect(() => {
@@ -242,9 +242,9 @@
             e => {
               let t = { ..._ };
               O(e) ? (t[e.id] = V(e.record)) : b(e) && (t[e.id] = B(e.record)),
-                Z(t),
+                P(t),
                 S(""),
-                P(),
+                Z(),
                 setTimeout(() => {
                   var e;
                   let t =
@@ -256,7 +256,7 @@
                     l.scrollTo({ top: l.scrollHeight, behavior: "smooth" });
                 }, 16);
             },
-            [Z, _]
+            [P, _]
           ),
           J = u.useCallback(
             e => {
@@ -306,7 +306,7 @@
                   onRemoveTag: e => {
                     let t = T[e],
                       { [t]: l, ...a } = _;
-                    Z(a), S(""), P();
+                    P(a), S(""), Z();
                   },
                   onQueryChange: e => {
                     S(e.trim().toLocaleLowerCase());
@@ -1590,9 +1590,9 @@
             "" !== s.selectedSourceInviteCode,
           F = null != s.selectedJoinSourceType,
           w = U || F,
-          [k, Z] = n.useState(null == u.default.get(R, null)),
-          P = n.useCallback(() => {
-            u.default.set(R, Date.now()), Z(!1);
+          [k, P] = n.useState(null == u.default.get(R, null)),
+          Z = n.useCallback(() => {
+            u.default.set(R, Date.now()), P(!1);
           }, []),
           Y = (0, M.useCanAccessBulkBanningFeature)(t),
           G = n.useMemo(
@@ -1772,7 +1772,7 @@
                           H.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                         onFilter: l => {
                           var a, n;
-                          P(),
+                          Z(),
                             null === (a = t.onClick) ||
                               void 0 === a ||
                               a.call(t, l),
@@ -1784,7 +1784,7 @@
                         className: i(g.smallCol),
                         onMouseEnter: () => {
                           var l, a;
-                          P(),
+                          Z(),
                             null === (l = e.onMouseEnter) ||
                               void 0 === l ||
                               l.call(e),
@@ -2569,8 +2569,8 @@
         F = l("150162"),
         w = l("290491"),
         k = l("624663"),
-        Z = l("553275"),
-        P = l("412013"),
+        P = l("553275"),
+        Z = l("412013"),
         Y = l("49111"),
         G = l("782340"),
         J = l("615319");
@@ -2703,7 +2703,7 @@
               className: J.roleTooltipItemContainer,
               children: s.map(e =>
                 (0, a.jsx)(
-                  P.default,
+                  Z.default,
                   {
                     className: i(J.roleTooltipItem),
                     role: l[e],
@@ -2727,7 +2727,7 @@
               () => new Intl.NumberFormat(G.default.getLocale()).format(r),
               [r]
             ),
-            f = (0, Z.useContextMenuModerateRoles)(t),
+            f = (0, P.useContextMenuModerateRoles)(t),
             E = (0, u.default)(
               [S.default],
               () => S.default.can(Y.Permissions.MANAGE_ROLES, s),
@@ -2751,7 +2751,7 @@
                 className: i(J.roleContainer),
                 children: [
                   null != l &&
-                    (0, a.jsx)(P.default, {
+                    (0, a.jsx)(Z.default, {
                       className: i(J.roleTooltipItem, J.highestRole),
                       role: l,
                       guildId: t.guildId,
@@ -2812,7 +2812,7 @@
                 null != l &&
                   (e.stopPropagation(),
                   e.preventDefault(),
-                  (0, Z.openMemberProfile)(l));
+                  (0, P.openMemberProfile)(l));
               },
               [l]
             );
@@ -3139,9 +3139,9 @@
             () => U.default.getEnhancedMember(l, t),
             [l, t]
           ),
-          _ = (0, Z.useHighestRole)(h),
+          _ = (0, P.useHighestRole)(h),
           x = (0, u.default)([A.default], () => A.default.getUser(t), [t]),
-          S = (0, Z.useContextMenuModerateUser)(null != h ? h : void 0),
+          S = (0, P.useContextMenuModerateUser)(null != h ? h : void 0),
           p = n.useCallback(
             e => {
               e.stopPropagation(), e.preventDefault(), S(e);
@@ -3201,7 +3201,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return g;
+            return I;
           },
         }),
         l("222007");
@@ -3213,106 +3213,113 @@
         d = l.n(o),
         r = l("969176"),
         u = l.n(r),
-        C = l("65597"),
-        c = l("620000"),
-        f = l("819855"),
-        E = l("77078"),
-        m = l("161778"),
-        M = l("957255"),
-        h = l("810567"),
-        _ = l("130037"),
-        T = l("490931"),
-        x = l("178406"),
-        S = l("645266"),
-        A = l("248793"),
-        p = l("843455"),
-        L = l("782340"),
-        H = l("791006");
-      let N = n.forwardRef(function (e, t) {
+        C = l("316693"),
+        c = l("65597"),
+        f = l("620000"),
+        E = l("819855"),
+        m = l("77078"),
+        M = l("161778"),
+        h = l("957255"),
+        _ = l("810567"),
+        T = l("130037"),
+        x = l("490931"),
+        S = l("178406"),
+        A = l("645266"),
+        p = l("248793"),
+        L = l("843455"),
+        H = l("782340"),
+        N = l("791006");
+      let g = n.forwardRef(function (e, t) {
         let { guild: s } = e,
-          o = (0, C.default)(
-            [x.default],
-            () => x.default.hasDefaultSearchStateByGuildId(s.id),
+          o = (0, c.default)(
+            [S.default],
+            () => S.default.hasDefaultSearchStateByGuildId(s.id),
             [s.id]
           ),
-          r = (0, C.default)([m.default], () =>
-            (0, f.isThemeDark)(m.default.theme)
+          r = (0, c.default)([M.default], () =>
+            (0, E.isThemeDark)(M.default.theme)
           ),
-          N = (0, C.default)([M.default], () =>
-            M.default.can(p.Permissions.KICK_MEMBERS, s)
+          g = (0, c.default)([h.default], () =>
+            h.default.can(
+              C.default.combine(
+                L.Permissions.MANAGE_GUILD,
+                L.Permissions.KICK_MEMBERS
+              ),
+              s
+            )
           ),
-          g = n.useCallback(() => {
+          I = n.useCallback(() => {
             null != s &&
-              N &&
-              (0, E.openModalLazy)(async () => {
+              g &&
+              (0, m.openModalLazy)(async () => {
                 let { default: e } = await l
                   .el("494440")
                   .then(l.bind(l, "494440"));
                 return t => (0, a.jsx)(e, { ...t, guild: s });
               });
-          }, [s, N]),
-          I = (0, C.default)(
-            [x.default],
-            () => x.default.getSearchStateByGuildId(s.id),
+          }, [s, g]),
+          R = (0, c.default)(
+            [S.default],
+            () => S.default.getSearchStateByGuildId(s.id),
             [s.id],
             u
           ),
-          R = (0, _.useTrackMemberSearchUsed)(s.id),
-          [j, v] = n.useState(I.query),
-          D =
-            null != I.selectedSort &&
-            I.selectedSort !== T.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC &&
-            I.selectedSort !== T.OrderBy.ORDER_BY_UNSPECIFIED,
-          b = n.useCallback(
+          j = (0, T.useTrackMemberSearchUsed)(s.id),
+          [v, D] = n.useState(R.query),
+          b =
+            null != R.selectedSort &&
+            R.selectedSort !== x.OrderBy.ORDER_BY_GUILD_JOINED_AT_DESC &&
+            R.selectedSort !== x.OrderBy.ORDER_BY_UNSPECIFIED,
+          O = n.useCallback(
             e => {
               let t = e.trim();
-              t.length > 0 && R(), (0, S.updateSearchState)(s.id, { query: t });
+              t.length > 0 && j(), (0, A.updateSearchState)(s.id, { query: t });
             },
-            [s.id, R]
+            [s.id, j]
           ),
-          O = n.useCallback(d(b, 300), [b]),
-          B = n.useCallback(
+          B = n.useCallback(d(O, 300), [O]),
+          V = n.useCallback(
             e => {
-              v(e), O(e);
+              D(e), B(e);
             },
-            [O]
+            [B]
           ),
-          V = n.useCallback(() => {
-            v(""), b("");
-          }, [b]);
+          y = n.useCallback(() => {
+            D(""), O("");
+          }, [O]);
         return (
           n.useImperativeHandle(t, () => ({
             resetSearchText() {
-              v("");
+              D("");
             },
           })),
           (0, a.jsxs)("div", {
-            className: i(H.searchHeaderContainer),
+            className: i(N.searchHeaderContainer),
             children: [
               (0, a.jsx)("div", {
-                className: i(H.searchHeader),
+                className: i(N.searchHeader),
                 children: o
-                  ? (0, a.jsx)(E.Heading, {
+                  ? (0, a.jsx)(m.Heading, {
                       variant: "heading-md/medium",
-                      children: L.default.Messages.MEMBER_SAFETY_TABLE_TITLE,
+                      children: H.default.Messages.MEMBER_SAFETY_TABLE_TITLE,
                     })
-                  : (0, a.jsx)(E.Heading, {
+                  : (0, a.jsx)(m.Heading, {
                       variant: "heading-md/medium",
                       children:
-                        L.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH,
+                        H.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH,
                     }),
               }),
               (0, a.jsx)("div", {
-                className: i(H.searchInput),
+                className: i(N.searchInput),
                 children: (0, a.jsx)("div", {
-                  className: i(H.searchHeader),
-                  children: (0, a.jsx)(h.default, {
-                    className: H.searchBar,
-                    query: j,
+                  className: i(N.searchHeader),
+                  children: (0, a.jsx)(_.default, {
+                    className: N.searchBar,
+                    query: v,
                     placeholder:
-                      L.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
-                    onChange: B,
-                    onClear: V,
+                      H.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
+                    onChange: V,
+                    onClear: y,
                     autoComplete: "off",
                     inputProps: {
                       autoCapitalize: "none",
@@ -3323,41 +3330,41 @@
                 }),
               }),
               (0, a.jsx)("div", {
-                children: (0, a.jsx)(E.Popout, {
-                  animation: E.Popout.Animation.FADE,
+                children: (0, a.jsx)(m.Popout, {
+                  animation: m.Popout.Animation.FADE,
                   position: "bottom",
                   spacing: 4,
                   align: "left",
                   renderPopout: () =>
-                    (0, a.jsx)(A.default, { guildId: s.id, onClose: void 0 }),
+                    (0, a.jsx)(p.default, { guildId: s.id, onClose: void 0 }),
                   children: e => {
                     let { onClick: t, ...l } = e;
-                    return (0, a.jsx)(E.Button, {
+                    return (0, a.jsx)(m.Button, {
                       ...l,
                       onClick: t,
-                      "aria-label": L.default.Messages.SORT,
+                      "aria-label": H.default.Messages.SORT,
                       color: r
-                        ? E.Button.Colors.PRIMARY
-                        : E.Button.Colors.TRANSPARENT,
-                      look: r ? E.Button.Looks.FILLED : E.Button.Looks.OUTLINED,
-                      size: E.Button.Sizes.SMALL,
+                        ? m.Button.Colors.PRIMARY
+                        : m.Button.Colors.TRANSPARENT,
+                      look: r ? m.Button.Looks.FILLED : m.Button.Looks.OUTLINED,
+                      size: m.Button.Sizes.SMALL,
                       children: (0, a.jsxs)("div", {
-                        className: H.sortButton,
+                        className: N.sortButton,
                         children: [
-                          (0, a.jsx)(c.ArrowsUpDownIcon, {
+                          (0, a.jsx)(f.ArrowsUpDownIcon, {
                             height: 16,
                             width: 16,
-                            color: D
-                              ? E.tokens.colors.INTERACTIVE_ACTIVE.css
-                              : E.tokens.colors.HEADER_SECONDARY.css,
+                            color: b
+                              ? m.tokens.colors.INTERACTIVE_ACTIVE.css
+                              : m.tokens.colors.HEADER_SECONDARY.css,
                           }),
-                          (0, a.jsx)(E.Text, {
+                          (0, a.jsx)(m.Text, {
                             variant: "text-sm/medium",
-                            color: D
+                            color: b
                               ? "interactive-active"
                               : "header-secondary",
-                            className: H.sortText,
-                            children: L.default.Messages.SORT,
+                            className: N.sortText,
+                            children: H.default.Messages.SORT,
                           }),
                         ],
                       }),
@@ -3366,24 +3373,24 @@
                 }),
               }),
               (0, a.jsx)("div", {
-                className: i(H.tableOptions),
+                className: i(N.tableOptions),
                 children:
-                  N &&
-                  (0, a.jsx)(E.Button, {
-                    className: i(H.pruneButton),
-                    onClick: g,
-                    "aria-label": L.default.Messages.PRUNE_MEMBERS,
-                    color: E.Button.Colors.RED,
-                    look: E.Button.Looks.OUTLINED,
-                    size: E.Button.Sizes.SMALL,
-                    children: L.default.Messages.PRUNE,
+                  g &&
+                  (0, a.jsx)(m.Button, {
+                    className: i(N.pruneButton),
+                    onClick: I,
+                    "aria-label": H.default.Messages.PRUNE_MEMBERS,
+                    color: m.Button.Colors.RED,
+                    look: m.Button.Looks.OUTLINED,
+                    size: m.Button.Sizes.SMALL,
+                    children: H.default.Messages.PRUNE,
                   }),
               }),
             ],
           })
         );
       });
-      var g = N;
+      var I = g;
     },
     248793: function (e, t, l) {
       "use strict";
@@ -4272,4 +4279,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7dce4e1cd769151865dd.js.map
+//# sourceMappingURL=454c3be733bacb29cbe8.js.map

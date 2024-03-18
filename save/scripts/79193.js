@@ -4194,7 +4194,7 @@
             ),
             pillText:
               e.nitroTenureStatus === l.NitroRewardStatus.PENDING
-                ? u.default.Messages.REWARD
+                ? u.default.Messages.REWARD.toLocaleUpperCase()
                 : void 0,
           };
       }
@@ -6271,7 +6271,7 @@
         p = s("994428"),
         g = s("782340"),
         C = s("635650");
-      let O = { xMin: -80, xMax: 80, yMin: -75, yMax: -20 },
+      let O = { xMin: -80, xMax: 80, yMin: -150, yMax: -20 },
         M = e => {
           let {
               name: t,
@@ -6376,7 +6376,7 @@
                           (0, a.jsx)(T.default, {
                             speedValues: O,
                             numBursts: 3,
-                            particlesPerBurst: 10,
+                            particlesPerBurst: 15,
                             confettiTarget: K.current,
                             offsetXPercentageMax: -30,
                             offsetXPercentageMin: -70,
@@ -10215,4 +10215,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6db689392a1a87cd4b7f.js.map
+//# sourceMappingURL=64b49d0c2c0dd5cc6ab6.js.map

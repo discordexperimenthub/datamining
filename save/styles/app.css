@@ -59406,15 +59406,15 @@ html .invoiceCancelRow_c1bfe7 {
     box-shadow: var(--elevation-medium);
   }
   50% {
-    box-shadow: 0 0 10px 10px
-      hsl(var(--premium-tier-2-pink-for-gradients-2-hsl) / 0.5);
+    box-shadow: 0 0 16px 16px
+      hsl(var(--premium-tier-2-pink-for-gradients-2-hsl) / 0.3);
   }
   to {
     box-shadow: var(--elevation-medium);
   }
 }
 .glowingCardContainer__7d35d {
-  animation: glowEffect_a3ec8f 3s ease-out 2s 1 forwards;
+  animation: glowEffect_a3ec8f 3s ease-out 1s 1 forwards;
   border-radius: 4px;
 }
 .glowingCardContainer__7d35d:hover:after,
@@ -110858,4 +110858,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.624a9de78160b53f64c5.css.map*/
+/*# sourceMappingURL=app.621c00f6567e2c1e4842.css.map*/

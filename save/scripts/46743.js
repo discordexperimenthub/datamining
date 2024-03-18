@@ -3280,7 +3280,7 @@
                               className: em.detailedDescription,
                               parser: ef,
                               output: eh,
-                              state: { allowLinks: !1 },
+                              state: { allowLinks: !0 },
                               children: n,
                             }),
                           }),
@@ -5280,4 +5280,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ec4eaeceb1acefaffd25.js.map
+//# sourceMappingURL=fa7758d455921c2586c1.js.map

@@ -1382,8 +1382,8 @@
         y = s("145131"),
         k = s("519311"),
         H = s("83900"),
-        F = s("216422"),
-        w = s("547896"),
+        w = s("216422"),
+        F = s("547896"),
         K = s("599110"),
         W = s("306160"),
         V = s("568734"),
@@ -1522,7 +1522,7 @@
                 ? (0, a.jsxs)(r.Fragment, {
                     children: [
                       (0, a.jsx)(O.default.Icon, {
-                        icon: w.default,
+                        icon: F.default,
                         "aria-label": ed.default.Messages.STORE_CHANNEL,
                       }),
                       (0, a.jsx)(O.default.Title, { children: s.name }),
@@ -1532,7 +1532,7 @@
                   ? (0, a.jsxs)(r.Fragment, {
                       children: [
                         (0, a.jsx)(O.default.Icon, {
-                          icon: F.default,
+                          icon: w.default,
                           "aria-label": ed.default.Messages.PREMIUM,
                         }),
                         (0, a.jsx)(ea.default, { sku: t }),
@@ -1542,7 +1542,7 @@
                     ? (0, a.jsxs)(r.Fragment, {
                         children: [
                           (0, a.jsx)(O.default.Icon, {
-                            icon: w.default,
+                            icon: F.default,
                             "aria-label": ed.default.Messages.STORE_CHANNEL,
                           }),
                           (0, a.jsx)(O.default.Title, { children: t.name }),
@@ -3533,7 +3533,7 @@
               s !== o.PremiumTypes.TIER_0
                 ? _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE
                 : _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED,
-            F = {
+            w = {
               badge: {
                 title: _.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
                 description:
@@ -3715,7 +3715,7 @@
                 imageClassName: t.videoBackgroundImage,
               },
             };
-          return F;
+          return w;
         };
     },
     460680: function (e, t, s) {
@@ -3823,21 +3823,63 @@
         (i[(i.REDEEMABLE = 1)] = "REDEEMABLE"),
         (i[(i.REDEEMED = 2)] = "REDEEMED");
     },
+    908309: function (e, t, s) {
+      "use strict";
+      s.r(t),
+        s.d(t, {
+          useUserEligibleForNitroTenureRewardCard: function () {
+            return r;
+          },
+        });
+      var a = s("719962");
+      function r(e) {
+        let { location: t } = e,
+          { enableNitroTenureRewardCard: s } =
+            a.NitroTenureRewardCardExperiment.useExperiment(
+              { location: t },
+              { autoTrackExposure: !1 }
+            );
+        return s;
+      }
+    },
+    719962: function (e, t, s) {
+      "use strict";
+      s.r(t),
+        s.d(t, {
+          NitroTenureRewardCardExperiment: function () {
+            return r;
+          },
+        });
+      var a = s("862205");
+      let r = (0, a.createExperiment)({
+        kind: "user",
+        id: "2024-03_nitro_tenure_reward_card",
+        label: "Nitro Tenure Reward Card",
+        defaultConfig: { enableNitroTenureRewardCard: !1 },
+        treatments: [
+          {
+            id: 1,
+            label: "Enables the nitro tenure reward card for users",
+            config: { enableNitroTenureRewardCard: !0 },
+          },
+        ],
+      });
+    },
     359499: function (e, t, s) {
       "use strict";
       s.r(t),
         s.d(t, {
           useFreeBoostUserTenureReward: function () {
-            return R;
-          },
-          useFreeBoostTenureRewardEntitlement: function () {
             return m;
           },
-          useShouldShowTenureRewardBadge: function () {
+          useFreeBoostTenureRewardEntitlement: function () {
             return A;
           },
+          useShouldShowTenureRewardBadge: function () {
+            return g;
+          },
           useClearTenureBadge: function () {
-            return p;
+            return C;
           },
         }),
         s("222007");
@@ -3849,109 +3891,129 @@
         u = s("10641"),
         o = s("235145"),
         d = s("384997"),
-        c = s("437712"),
-        _ = s("449008"),
-        E = s("53641"),
-        T = s("485426"),
-        I = s("646718"),
-        f = s("511143");
-      function R() {
+        c = s("625634"),
+        _ = s("437712"),
+        E = s("449008"),
+        T = s("908309"),
+        I = s("53641"),
+        f = s("485426"),
+        R = s("646718"),
+        S = s("511143");
+      function m() {
         let e = (function () {
             var e;
-            let t = (0, i.useStateFromStoresObject)([E.default], () =>
-              E.default.getState()
+            let t = (0, i.useStateFromStoresObject)([I.default], () =>
+              I.default.getState()
             );
-            if (null != t && t.fetchState === E.FetchState.FETCHED)
+            if (null != t && t.fetchState === I.FetchState.FETCHED)
               return null !==
                 (e =
                   t.userTenureRewardStatusByRewardId[
-                    f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
+                    S.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
                   ]) && void 0 !== e
                 ? e
                 : t.userTenureRewardStatusByRewardId[
-                    f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
+                    S.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
                   ];
           })(),
-          t = m();
-        if (null != t)
+          t = A(),
+          s = (0, i.useStateFromStores)(
+            [c.default],
+            () => c.default.boostSlots
+          ),
+          r = a.useMemo(() => {
+            let e = Object.values(s);
+            return e.some(e => null == e.premiumGuildSubscription);
+          }, [s]),
+          l = null != t;
+        if (l && !1 === r)
           return {
-            nitroTenureStatus: f.NitroRewardStatus.REDEEMABLE,
+            nitroTenureStatus: S.NitroRewardStatus.REDEEMED,
             tenureRewardSkuId: t.skuId,
           };
-        if (!(null != e && (0, T.isUserTenureRewardStatusActive)(e)))
+        if (l)
+          return {
+            nitroTenureStatus: S.NitroRewardStatus.REDEEMABLE,
+            tenureRewardSkuId: t.skuId,
+          };
+        if (!(null != e && (0, f.isUserTenureRewardStatusActive)(e)))
           return null;
-        {
+        else {
           if (null == e.redeemable_at || null == e.next_tenure_reward_id)
             return null;
           let t = n(e.redeemable_at).diff(n.utc(), "days");
           return t < 0
             ? null
             : {
-                nitroTenureStatus: f.NitroRewardStatus.PENDING,
+                nitroTenureStatus: S.NitroRewardStatus.PENDING,
                 tenureRewardSkuId: e.next_tenure_reward_id,
                 redeemableInDays: 0 === t ? 1 : t,
               };
         }
       }
-      let S = new Set();
-      function m() {
+      let N = new Set();
+      function A() {
         let e = (0, i.useStateFromStores)(
-            [c.default],
+            [_.default],
             () => {
               var e;
               return null !==
-                (e = c.default.getForApplication(
-                  I.PREMIUM_SUBSCRIPTION_APPLICATION
+                (e = _.default.getForApplication(
+                  R.PREMIUM_SUBSCRIPTION_APPLICATION
                 )) && void 0 !== e
                 ? e
-                : S;
+                : N;
             },
             [],
-            _.areSetsEqual
+            E.areSetsEqual
           ),
-          t = (0, T.getPremiumTier2Entitlement)(e);
+          t = (0, f.getPremiumTier2Entitlement)(e);
         if (null == t) return;
-        let s = (0, T.getTenureRewardEntitlement)(
+        let s = (0, f.getTenureRewardEntitlement)(
           [
-            f.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
-            f.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
+            S.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
+            S.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
           ],
           e
         );
         return s;
       }
-      let N = e => {
+      let p = e => {
           switch (e) {
-            case f.NitroRewardStatus.PENDING:
+            case S.NitroRewardStatus.PENDING:
               return [l.DismissibleContent.TENURE_REWARD_PENDING];
-            case f.NitroRewardStatus.REDEEMABLE:
+            case S.NitroRewardStatus.REDEEMABLE:
               return [l.DismissibleContent.TENURE_REWARD_REDEEMABLE];
             default:
               return [];
           }
         },
-        A = () => {
+        g = () => {
           var e;
           let t =
-              null === (e = R()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            [s, r] = (0, a.useState)(N(t));
-          (0, a.useEffect)(() => {
-            r(N(t));
+              null === (e = m()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            [s, r] = a.useState(p(t)),
+            n = (0, T.useUserEligibleForNitroTenureRewardCard)({
+              location: "Home",
+            });
+          a.useEffect(() => {
+            r(p(t));
           }, [t]);
-          let [n] = (0, d.useSelectedDismissibleContent)(s);
+          let [i] = (0, d.useSelectedDismissibleContent)(s);
           return (
+            !!n &&
             null != t &&
-            (n === l.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
-              n === l.DismissibleContent.TENURE_REWARD_PENDING)
+            (i === l.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
+              i === l.DismissibleContent.TENURE_REWARD_PENDING)
           );
         },
-        p = () => {
+        C = () => {
           var e;
           let t =
-              null === (e = R()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            s = N(t),
+              null === (e = m()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            s = p(t),
             [r] = (0, o.useGetDismissibleContent)(s);
-          (0, a.useEffect)(() => {
+          a.useEffect(() => {
             null != t &&
               (r === l.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
                 r === l.DismissibleContent.TENURE_REWARD_PENDING) &&
@@ -4063,7 +4125,7 @@
         let s = Array.from(t).find(
           t =>
             t.type === n.EntitlementTypes.PREMIUM_PURCHASE &&
-            t.skuId in e &&
+            e.includes(t.skuId) &&
             t.applicationId === r.PREMIUM_SUBSCRIPTION_APPLICATION &&
             t.isValid(null, a.default)
         );
@@ -4078,16 +4140,20 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return l;
+            return u;
           },
         });
       var a = s("598739"),
-        r = s("359499"),
-        n = s("511143"),
-        i = s("782340");
-      function l() {
-        let e = (0, r.useFreeBoostUserTenureReward)();
-        if (null != e)
+        r = s("908309"),
+        n = s("359499"),
+        i = s("511143"),
+        l = s("782340");
+      function u() {
+        let e = (0, n.useFreeBoostUserTenureReward)(),
+          t = (0, r.useUserEligibleForNitroTenureRewardCard)({
+            location: a.NitroLandingPages.HOME,
+          });
+        if (null != e && t)
           return {
             title: (0, a.getRewardingTenureTitle)(e.nitroTenureStatus),
             subtitle: (0, a.getRewardingTenureSubtitle)(
@@ -4102,8 +4168,8 @@
               e.redeemableInDays
             ),
             pillText:
-              e.nitroTenureStatus === n.NitroRewardStatus.PENDING
-                ? i.default.Messages.REWARD
+              e.nitroTenureStatus === i.NitroRewardStatus.PENDING
+                ? l.default.Messages.REWARD
                 : void 0,
           };
       }
@@ -4705,8 +4771,8 @@
             H = (0, l.useStateFromStores)([N.default], () =>
               N.default.getCurrentUser()
             ),
-            F = (0, x.usePremiumTrialOffer)(),
-            w = (0, L.usePremiumDiscountOffer)(),
+            w = (0, x.usePremiumTrialOffer)(),
+            F = (0, L.usePremiumDiscountOffer)(),
             K = (0, R.useSubscriptionPlansLoaded)(),
             [W, V] = r.useState(!0),
             Y = r.useRef(0),
@@ -4738,17 +4804,17 @@
               });
             }, [Q]),
             r.useEffect(() => {
-              if (s && (null != F || null != w)) {
+              if (s && (null != w || null != F)) {
                 let e = (0, v.shouldHitUserOfferEndPoints)(
                   "PremiumMarketingPage"
                 );
                 e
-                  ? (0, O.acknowledgeUserOffer)(F, w)
-                  : null != F &&
-                    null == F.expires_at &&
-                    P.default.acknowledgeUserTrialOffer(F);
+                  ? (0, O.acknowledgeUserOffer)(w, F)
+                  : null != w &&
+                    null == w.expires_at &&
+                    P.default.acknowledgeUserTrialOffer(w);
               }
-            }, [s, F, w]),
+            }, [s, w, F]),
             r.useEffect(() => {
               !W &&
                 p.default.track(
@@ -6173,9 +6239,9 @@
                 { card_type: (0, l.snakeCase)(t) }
               );
             }, 800),
-            F = r.useRef(null);
+            w = r.useRef(null);
           e = { onMouseEnter: H, ...e };
-          let w = b !== n || null == n || x;
+          let F = b !== n || null == n || x;
           return (r.useEffect(() => {
             M &&
               h &&
@@ -6219,7 +6285,7 @@
                     ],
                   }),
                 })
-              : w
+              : F
                 ? (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                       className: i({
@@ -6233,7 +6299,7 @@
                           ...e,
                           ref:
                             t === I.PerksDiscoverabilityCardTypes.FREE_BOOST
-                              ? F
+                              ? w
                               : void 0,
                         }),
                         t === I.PerksDiscoverabilityCardTypes.FREE_BOOST &&
@@ -6241,7 +6307,7 @@
                             speedValues: g,
                             numBursts: 3,
                             particlesPerBurst: 10,
-                            confettiTarget: F.current,
+                            confettiTarget: w.current,
                             offsetXPercentageMax: -30,
                             offsetXPercentageMin: -70,
                             offsetYPercentageMax: 40,
@@ -6773,10 +6839,10 @@
             selectedPlanColumnClassName: b,
             selectedPlanTier: H = h.PremiumTypes.TIER_2,
           } = e,
-          { AnalyticsLocationProvider: F } = (0, E.default)(
+          { AnalyticsLocationProvider: w } = (0, E.default)(
             _.default.PREMIUM_MARKETING_PLAN_COMPARISON
           ),
-          w = (0, m.useMarketingOptimizationExperiment)({
+          F = (0, m.useMarketingOptimizationExperiment)({
             autoTrackExposure: !1,
           }),
           K = (0, l.useStateFromStores)([f.default], () =>
@@ -6936,7 +7002,7 @@
           J === h.PremiumSubscriptionSKUs.TIER_0 ||
           q === h.PremiumTypes.TIER_0 ||
           H === h.PremiumTypes.TIER_0;
-        return (0, a.jsx)(F, {
+        return (0, a.jsx)(w, {
           children: (0, a.jsxs)("div", {
             className: i(x.root, n),
             "data-testid": "v2-marketing-page-comparison-table",
@@ -6955,14 +7021,14 @@
                 children: [
                   (0, a.jsx)("div", {
                     className: i(b, {
-                      [x.tier0ColumnOuter]: eu && !w,
-                      [x.tier2ColumnOuter]: !eu && !w,
-                      [x.tier0ColumnOuterBackground]: eu && w,
-                      [x.tier2ColumnOuterBackground]: !eu && w,
+                      [x.tier0ColumnOuter]: eu && !F,
+                      [x.tier2ColumnOuter]: !eu && !F,
+                      [x.tier0ColumnOuterBackground]: eu && F,
+                      [x.tier2ColumnOuterBackground]: !eu && F,
                     }),
                     children: !eu && s,
                   }),
-                  w &&
+                  F &&
                     eu &&
                     (0, a.jsx)("div", { className: x.tier2Pill, children: s }),
                   (0, a.jsxs)("table", {
@@ -7279,8 +7345,8 @@
         y = s("904871"),
         k = s("360776"),
         H = s("525505"),
-        F = s("881155"),
-        w = s("598739"),
+        w = s("881155"),
+        F = s("598739"),
         K = s("326881"),
         W = s("228967"),
         V = s("646718"),
@@ -7351,7 +7417,7 @@
                 children: [
                   (0, a.jsx)(B.default, {
                     headerClassname: n ? z.stackedHeader : void 0,
-                    variant: w.PerksDiscoverabilityCardSection.WHATS_NEW,
+                    variant: F.PerksDiscoverabilityCardSection.WHATS_NEW,
                     isFullScreen: t,
                   }),
                   (0, a.jsx)(B.default, {
@@ -7360,7 +7426,7 @@
                     showAllPerksButton: t
                       ? (0, a.jsx)(W.default, {
                           setIsAllPerksVisible: u,
-                          previousComponent: w.NitroLandingPages.MARKETING,
+                          previousComponent: F.NitroLandingPages.MARKETING,
                         })
                       : void 0,
                   }),
@@ -7513,7 +7579,7 @@
                         eR === V.PremiumSubscriptionSKUs.TIER_2 ||
                         em ||
                         null != eI
-                          ? (0, a.jsx)(F.default, {
+                          ? (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7527,7 +7593,7 @@
                               color: d.ButtonColors.WHITE,
                               buttonShineClassName: n ? z.buttonShine : void 0,
                             })
-                          : (0, a.jsx)(F.default, {
+                          : (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7541,7 +7607,7 @@
                             }),
                       tier2CTAButton:
                         eR === V.PremiumSubscriptionSKUs.TIER_0
-                          ? (0, a.jsx)(F.default, {
+                          ? (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               showIcon: !1,
                               subscriptionTier:
@@ -7555,7 +7621,7 @@
                               color: d.ButtonColors.WHITE,
                               buttonShineClassName: n ? z.buttonShine : void 0,
                             })
-                          : (0, a.jsx)(F.default, {
+                          : (0, a.jsx)(w.default, {
                               forceInverted: !0,
                               style: eg,
                               showIcon: !1,
@@ -7671,7 +7737,7 @@
                 }),
                 (en === V.PremiumTypes.TIER_2 || null == en) &&
                   (0, a.jsx)(K.default, {
-                    previousComponent: w.NitroLandingPages.MARKETING,
+                    previousComponent: F.NitroLandingPages.MARKETING,
                     isAllPerksVisible: eE,
                     setIsAllPerksVisible: eT,
                   }),
@@ -8534,8 +8600,8 @@
         y = s("198326"),
         k = s("761708"),
         H = s("174433"),
-        F = s("828015"),
-        w = s("62414"),
+        w = s("828015"),
+        F = s("62414"),
         K = s("613697"),
         W = s("907511"),
         V = s("165870"),
@@ -8802,7 +8868,7 @@
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                   descriptionCta: P.default.Messages.TAKE_ME_THERE,
                   onCtaClick: en,
-                  perkImage: F,
+                  perkImage: w,
                 }
               : {
                   name: "entranceSoundsSeeAllVariation",
@@ -8815,7 +8881,7 @@
                   description:
                     P.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-                  perkImage: F,
+                  perkImage: w,
                 },
             profileEffects: $
               ? {
@@ -9054,7 +9120,7 @@
               name: "upcomingDropUntimed",
               title: P.default.Messages.NEW_DROP,
               pillText: P.default.Messages.COMING_SOON,
-              backgroundImage: w,
+              backgroundImage: F,
             },
             badge: {
               name: "badge",
@@ -10074,4 +10140,4 @@
     },
   },
 ]);
-//# sourceMappingURL=32bc0db90264d0932d1c.js.map
+//# sourceMappingURL=c7d0a70e58a7c3cafa12.js.map

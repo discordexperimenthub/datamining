@@ -33,31 +33,31 @@
           ),
           p = i.map(e => e.application_id),
           v = null != f ? [f, ...p] : p,
-          A = (0, a.default)(v),
-          E = l.useMemo(() => A.filter(r.isNotNullish), [A]),
-          m = l.useMemo(
+          m = (0, a.default)(v),
+          A = l.useMemo(() => m.filter(r.isNotNullish), [m]),
+          E = l.useMemo(
             () =>
               null != f &&
-              E.length > 0 &&
-              E[0].id === f &&
-              null != E[0].embeddedActivityConfig
-                ? [{ activity: E[0].embeddedActivityConfig, application: E[0] }]
+              A.length > 0 &&
+              A[0].id === f &&
+              null != A[0].embeddedActivityConfig
+                ? [{ activity: A[0].embeddedActivityConfig, application: A[0] }]
                 : [],
-            [E, f]
+            [A, f]
           ),
           y = l.useMemo(
             () =>
               i
                 .map(e => {
-                  let t = E.find(t => t.id === e.application_id);
+                  let t = A.find(t => t.id === e.application_id);
                   return null == t ? null : { activity: e, application: t };
                 })
                 .filter(r.isNotNullish),
-            [i, E]
+            [i, A]
           );
         return l.useMemo(
           () =>
-            [...m, ...y]
+            [...E, ...y]
               .filter(e => {
                 var t;
                 let { activity: i } = e;
@@ -73,7 +73,7 @@
                   (null == t ? void 0 : t.nsfwAllowed) == null
                 );
               }),
-          [null == t ? void 0 : t.nsfwAllowed, y, m]
+          [null == t ? void 0 : t.nsfwAllowed, y, E]
         );
       }
     },
@@ -449,9 +449,9 @@
         f = i("334368"),
         p = i("525167"),
         v = i("577261"),
-        A = i("698372"),
-        E = i("969380"),
-        m = i("954016");
+        m = i("698372"),
+        A = i("969380"),
+        E = i("954016");
       ((n = l || (l = {})).START = "START"),
         (n.JOIN = "JOIN"),
         (n.LEAVE = "LEAVE");
@@ -463,20 +463,20 @@
             locationObject: n,
             onActivityItemSelected: y,
             embeddedActivitiesManager: S,
-            assetNames: b,
+            assetNames: b = ["embedded_cover"],
             backgroundResolution: _ = 250,
           } = e,
           { analyticsLocations: h } = (0, d.default)(),
           { application: I, activity: g } = t,
           T = g.client_platform_config[(0, f.default)((0, u.getOS)())],
           N = null != T.label_until && Date.now() < Date.parse(T.label_until),
-          C = (0, E.default)({ applicationId: I.id, size: _, names: b }),
+          C = (0, A.default)({ applicationId: I.id, size: _, names: b }),
           L =
             null != g.activity_preview_video_asset_id
               ? (0, p.default)(I.id, g.activity_preview_video_asset_id)
               : null,
           w = (0, v.default)(),
-          D = (0, A.default)(),
+          D = (0, m.default)(),
           O = (0, s.default)(i),
           M = O.find(e => {
             let { embeddedActivity: t } = e;
@@ -523,7 +523,7 @@
         let W =
             t.activity.client_platform_config[(0, f.default)((0, u.getOS)())]
               .release_phase,
-          x = m.STAFF_RELEASE_PHASES.includes(W),
+          x = E.STAFF_RELEASE_PHASES.includes(W),
           P = x
             ? W.replace("_", " ").replace(/(^\w|\s\w)/g, e => e.toUpperCase())
             : void 0;
@@ -569,36 +569,36 @@
             i === d.EmbeddedActivityLabelTypes.NEW
               ? o.activityNewBadge
               : o.activityUpdatedBadge,
-          [v, A] = n.useState(c ? "" : f);
+          [v, m] = n.useState(c ? "" : f);
         if (
           (n.useEffect(() => {
             c
-              ? A("")
+              ? m("")
               : i === d.EmbeddedActivityLabelTypes.NEW
-                ? A(r.default.Messages.NEW)
+                ? m(r.default.Messages.NEW)
                 : i === d.EmbeddedActivityLabelTypes.UPDATED &&
-                  A(r.default.Messages.UPDATED);
+                  m(r.default.Messages.UPDATED);
           }, [c, i]),
           i === d.EmbeddedActivityLabelTypes.NONE)
         )
           return null;
-        let E = (0, l.jsx)(u.TextBadge, {
+        let A = (0, l.jsx)(u.TextBadge, {
           className: p,
           disableColor: !0,
           text: (0, l.jsx)("span", { children: v }),
         });
-        if (!s) return E;
-        let m =
+        if (!s) return A;
+        let E =
           r.default.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({
             activity: t,
           });
         return (0, l.jsx)(a.TooltipContainer, {
-          text: m,
+          text: E,
           tooltipContentClassName: o.tooltip,
-          children: E,
+          children: A,
         });
       }
     },
   },
 ]);
-//# sourceMappingURL=6145827c9f0ea386eef8.js.map
+//# sourceMappingURL=93c645d9c419b4384a74.js.map

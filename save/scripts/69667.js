@@ -17269,11 +17269,12 @@
       function i(e) {
         let { channelId: t, messageId: i, answerId: r } = e,
           o = a.default.getMessage(t, i);
-        null != o &&
-          (0, l.openModalLazy)(async () => {
-            let { default: e } = await n.el("915299").then(n.bind(n, "915299"));
-            return t => (0, s.jsx)(e, { ...t, message: o, initialAnswerId: r });
-          });
+        if (null == o || null == o.poll || 0 === o.poll.answers.length) return;
+        let u = null != r ? r : String(o.poll.answers[0].answer_id);
+        (0, l.openModalLazy)(async () => {
+          let { default: e } = await n.el("915299").then(n.bind(n, "915299"));
+          return t => (0, s.jsx)(e, { ...t, message: o, initialAnswerId: u });
+        });
       }
     },
     914271: function (e, t, n) {
@@ -17589,7 +17590,7 @@
             })({ channelId: t, messageId: n });
             break;
           case "showVoterDetails":
-            C.showVotesForAnswer({ channelId: t, messageId: n, answerId: "1" });
+            C.showVotesForAnswer({ channelId: t, messageId: n });
             break;
           default:
             l(!1, "Unknown poll action type: ".concat(s));
@@ -32329,4 +32330,4 @@
     },
   },
 ]);
-//# sourceMappingURL=feb2e3f765ca8036b950.js.map
+//# sourceMappingURL=2fd002d0b179ce0375bd.js.map

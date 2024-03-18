@@ -9467,7 +9467,7 @@
             drawImage: e => {
               let t = h.map((e, t) => ({ color: e, stop: t }));
               e.setSize({ w: r.imageWidth, h: r.imageHeight }, 4),
-                e.drawGradientRoundedRect(
+                e.drawRoundedGradientRect(
                   t,
                   { x: 0, y: r.imageHeight },
                   { x: r.imageWidth, y: 0 },
@@ -43428,4 +43428,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dbab1eb011b9a907121b.js.map
+//# sourceMappingURL=b72078b586f85f33a29e.js.map

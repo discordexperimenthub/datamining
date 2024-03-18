@@ -1,10 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["35831"],
   {
-    262228: function (e, t, s) {
-      "use strict";
-      e.exports = s.p + "a826e445dff97cf15335.svg";
-    },
     337695: function (e, t, s) {
       "use strict";
       e.exports = s.p + "d29a5e9ac3e2efa42e40.svg";
@@ -208,10 +204,6 @@
     269863: function (e, t, s) {
       "use strict";
       e.exports = s.p + "e9dc9eab2d472da0d6f4.svg";
-    },
-    22247: function (e, t, s) {
-      "use strict";
-      e.exports = s.p + "a8321094b63c5b722adb.mp3";
     },
     226992: function (e, t, s) {
       "use strict";
@@ -5704,85 +5696,6 @@
           previousCount: e.body.previous_count,
         });
       }
-    },
-    630615: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          getLootboxes: function () {
-            return d;
-          },
-          LOOTBOX_COUNT_STAT_FETCH_DELAY_MIN: function () {
-            return u;
-          },
-          LOOTBOX_COUNT_STAT_FETCH_DELAY_MAX: function () {
-            return c;
-          },
-        });
-      var a,
-        n,
-        l = s("718517"),
-        i = s("782340"),
-        r = s("262228");
-      let o = s("22247");
-      ((a = n || (n = {})).ITEM_1 = "1214340999644446720"),
-        (a.ITEM_2 = "1214340999644446721"),
-        (a.ITEM_3 = "1214340999644446722"),
-        (a.ITEM_4 = "1214340999644446723"),
-        (a.ITEM_5 = "1214340999644446724"),
-        (a.ITEM_6 = "1214340999644446725"),
-        (a.ITEM_7 = "1214340999644446726"),
-        (a.ITEM_8 = "1214340999644446727"),
-        (a.ITEM_9 = "1214340999644446728");
-      let d = () => ({
-          "1214340999644446720": {
-            name: i.default.Messages.PACKAGE_ITEM_1_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446721": {
-            name: i.default.Messages.PACKAGE_ITEM_2_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446722": {
-            name: i.default.Messages.PACKAGE_ITEM_3_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446723": {
-            name: i.default.Messages.PACKAGE_ITEM_4_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446724": {
-            name: i.default.Messages.PACKAGE_ITEM_5_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446725": {
-            name: i.default.Messages.PACKAGE_ITEM_6_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446726": {
-            name: i.default.Messages.PACKAGE_ITEM_7_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446727": {
-            name: i.default.Messages.PACKAGE_ITEM_8_NAME,
-            image: r,
-            sound: o,
-          },
-          "1214340999644446728": {
-            name: i.default.Messages.PACKAGE_ITEM_9_NAME,
-            image: r,
-            sound: o,
-          },
-        }),
-        u = l.default.Millis.MINUTE,
-        c = l.default.Millis.MINUTE + 10 * l.default.Millis.SECOND;
     },
     204062: function (e, t, s) {
       "use strict";
@@ -11978,9 +11891,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "276162",
+          E = "276180",
           T =
-            ((e = "8de3fc156802023b5c21646b8be8b11b442649b8"),
+            ((e = "55927eed8b0a7e79c9aae6641b328a00ec0a05d5"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20818,7 +20731,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return w;
+            return Y;
           },
         }),
         s("222007"),
@@ -20829,84 +20742,85 @@
         i = s("884691"),
         r = s("414456"),
         o = s.n(r),
-        d = s("768961"),
-        u = s("300036"),
-        c = s("446674"),
-        S = s("862337"),
-        E = s("225389"),
-        T = s("998460"),
-        f = s("77078"),
-        _ = s("206230"),
-        m = s("812204"),
-        g = s("685665"),
-        h = s("841026"),
-        N = s("204062"),
-        I = s("976028"),
-        p = s("4452"),
-        C = s("724001"),
-        A = s("193694"),
-        O = s("508577"),
-        x = s("638131"),
-        R = s("471671"),
-        M = s("181114"),
-        D = s("703712"),
-        v = s("718517"),
-        L = s("630615"),
-        P = s("782340"),
-        j = s("449617");
-      function b() {
-        let e = (0, c.useStateFromStores)([R.default], () =>
-            R.default.isFocused()
+        d = s("166432"),
+        u = s("768961"),
+        c = s("300036"),
+        S = s("446674"),
+        E = s("862337"),
+        T = s("225389"),
+        f = s("998460"),
+        _ = s("77078"),
+        m = s("206230"),
+        g = s("812204"),
+        h = s("685665"),
+        N = s("841026"),
+        I = s("204062"),
+        p = s("976028"),
+        C = s("4452"),
+        A = s("724001"),
+        O = s("193694"),
+        x = s("508577"),
+        R = s("638131"),
+        M = s("471671"),
+        D = s("181114"),
+        v = s("703712"),
+        L = s("718517"),
+        P = s("630615"),
+        j = s("782340"),
+        b = s("449617");
+      function U() {
+        let e = (0, S.useStateFromStores)([M.default], () =>
+            M.default.isFocused()
           ),
-          t = (0, c.useStateFromStores)(
-            [_.default],
-            () => _.default.useReducedMotion
+          t = (0, S.useStateFromStores)(
+            [m.default],
+            () => m.default.useReducedMotion
           ),
           [s, a] = i.useState(0),
           n = -1 === s;
-        return (0, l.jsxs)(f.Clickable, {
-          className: j.headerContainer,
+        return (0, l.jsxs)(_.Clickable, {
+          className: b.headerContainer,
           onClick: n
             ? void 0
             : () => {
                 s > 0 && (s + 1) % 5 == 0 ? a(-1) : a(s + 1);
               },
           children: [
-            (0, l.jsx)(x.default, {
-              className: j.headerBackground,
+            (0, l.jsx)(R.default, {
+              className: b.headerBackground,
               pageMultiplier: 10,
             }),
-            (0, l.jsx)(f.Heading, {
+            (0, l.jsx)(_.Heading, {
               variant: "display-md",
-              className: j.header,
+              className: b.header,
               color: "always-white",
-              children: P.default.Messages.PACKAGES,
+              children: j.default.Messages.PACKAGES,
             }),
             (0, l.jsx)("div", {
-              className: j.headerCTA,
-              children: (0, l.jsxs)(M.default, {
-                className: j.headerButton,
-                innerClassName: j.innerButton,
+              className: b.headerCTA,
+              children: (0, l.jsxs)(D.default, {
+                className: b.headerButton,
+                innerClassName: b.innerButton,
                 pauseAnimation: !e || t,
                 onClick: e => {
-                  e.stopPropagation(), (0, h.openLootbox)();
+                  e.stopPropagation(), (0, N.openLootbox)();
                 },
-                size: f.ButtonSizes.SMALL,
-                color: f.ButtonColors.CUSTOM,
+                size: _.ButtonSizes.SMALL,
+                color: _.ButtonColors.CUSTOM,
                 children: [
-                  (0, l.jsx)(C.default, {
-                    className: j.buttonIconLarge,
-                    color: f.tokens.colors.WHITE,
+                  (0, l.jsx)(A.default, {
+                    className: b.buttonIconLarge,
+                    color: _.tokens.colors.WHITE,
                   }),
-                  P.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                  j.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
                 ],
               }),
             }),
             n
               ? (0, l.jsx)("div", {
-                  className: j.headerEasterEgg,
-                  children: (0, l.jsx)(D.EasterEggAnimation, {
-                    position: D.EasterEggPosition.BOTTOM_LEFT,
+                  className: b.headerEasterEgg,
+                  children: (0, l.jsx)(v.EasterEggAnimation, {
+                    position: v.EasterEggPosition.BOTTOM_LEFT,
                     onAnimationComplete: () => {
                       a(0);
                     },
@@ -20917,86 +20831,86 @@
           ],
         });
       }
-      function U(e) {
+      function y(e) {
         let { icon: t, text: s, count: a, fetchState: n } = e;
         return (0, l.jsxs)("div", {
-          className: j.stat,
+          className: b.stat,
           children: [
-            (0, l.jsx)(t, { color: f.tokens.colors.TEXT_MUTED }),
-            (0, l.jsx)(f.Text, {
-              className: j.statText,
+            (0, l.jsx)(t, { color: _.tokens.colors.TEXT_MUTED }),
+            (0, l.jsx)(_.Text, {
+              className: b.statText,
               variant: "text-xs/bold",
               color: "text-muted",
               children: s,
             }),
-            (0, l.jsx)(f.Text, {
+            (0, l.jsx)(_.Text, {
               variant: "text-lg/bold",
               color: "text-primary",
               children:
-                n === N.FetchState.FETCHED
+                n === I.FetchState.FETCHED
                   ? a.toLocaleString()
-                  : (0, l.jsx)(f.Spinner, {}),
+                  : (0, l.jsx)(_.Spinner, {}),
             }),
           ],
         });
       }
-      let y = v.default.Millis.SECOND,
-        B = 2 * v.default.Millis.SECOND;
-      function F() {
-        let e = (0, L.getLootboxes)(),
-          [t, s, a, n, r, o, E] = (0, c.useStateFromStoresArray)(
-            [N.default],
+      let B = L.default.Millis.SECOND,
+        F = 2 * L.default.Millis.SECOND;
+      function G() {
+        let e = (0, P.getLootboxes)(),
+          [t, s, a, n, r, o, d] = (0, S.useStateFromStoresArray)(
+            [I.default],
             () => [
-              N.default.userDataFetchState,
-              N.default.globalOpenedCountFetchState,
-              N.default.openedItems,
-              N.default.globalOpenedCount,
-              N.default.lastGlobalOpenedCount,
-              N.default.globalOpenedCountFetchTime,
-              N.default.nextGlobalOpenedCountFetchDelay,
+              I.default.userDataFetchState,
+              I.default.globalOpenedCountFetchState,
+              I.default.openedItems,
+              I.default.globalOpenedCount,
+              I.default.lastGlobalOpenedCount,
+              I.default.globalOpenedCountFetchTime,
+              I.default.nextGlobalOpenedCountFetchDelay,
             ]
           ),
           T = i.useMemo(() => Object.values(a).reduce((e, t) => e + t, 0), [a]),
-          [f] = i.useState(() => new S.Timeout()),
+          [f] = i.useState(() => new E.Timeout()),
           [_, m] = i.useState(0),
-          g = Math.floor((0, p.default)(r, n, _));
+          g = Math.floor((0, C.default)(r, n, _));
         return (
           i.useEffect(() => {
             m(0);
           }, [n, r]),
           i.useEffect(
             () => (
-              f.start((0, I.randomBetween)(y, B), () => {
+              f.start((0, p.randomBetween)(B, F), () => {
                 if (_ < 1) {
-                  let e = Math.min((Date.now() - o) / E, 1);
+                  let e = Math.min((Date.now() - o) / d, 1);
                   m(e);
                 }
               }),
               () => f.stop()
             ),
-            [r, E, n, o, f, _]
+            [r, d, n, o, f, _]
           ),
           (0, l.jsxs)("div", {
-            className: j.stats,
+            className: b.stats,
             children: [
-              (0, l.jsx)(U, {
-                icon: u.TicketIcon,
-                text: P.default.Messages.PACKAGES_PACKAGES_OPENED,
+              (0, l.jsx)(y, {
+                icon: c.TicketIcon,
+                text: j.default.Messages.PACKAGES_PACKAGES_OPENED,
                 count: T,
                 fetchState: t,
               }),
-              (0, l.jsx)(U, {
-                icon: C.default,
-                text: P.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
-                count: P.default.Messages.PACKAGES_OPENED_OUT_OF.format({
+              (0, l.jsx)(y, {
+                icon: A.default,
+                text: j.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
+                count: j.default.Messages.PACKAGES_OPENED_OUT_OF.format({
                   count: Object.keys(a).filter(e => a[e] > 0).length,
                   total: Object.keys(e).length,
                 }),
                 fetchState: t,
               }),
-              (0, l.jsx)(U, {
-                icon: d.GlobeEarthIcon,
-                text: P.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
+              (0, l.jsx)(y, {
+                icon: u.GlobeEarthIcon,
+                text: j.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
                 count: g,
                 fetchState: s,
               }),
@@ -21004,13 +20918,13 @@
           })
         );
       }
-      function G() {
-        let [e, t, a] = (0, c.useStateFromStoresArray)([N.default], () => [
-            N.default.openedItems,
-            N.default.redeemedPrize,
-            N.default.userDataFetchState,
+      function k() {
+        let [e, t, a] = (0, S.useStateFromStoresArray)([I.default], () => [
+            I.default.openedItems,
+            I.default.redeemedPrize,
+            I.default.userDataFetchState,
           ]),
-          n = (0, L.getLootboxes)(),
+          n = (0, P.getLootboxes)(),
           r = i.useMemo(
             () =>
               Object.keys(e).length === Object.keys(n).length &&
@@ -21018,8 +20932,8 @@
             [e, n]
           ),
           o = async () => {
-            await (0, h.redeemPrize)(),
-              (0, f.openModalLazy)(async () => {
+            await (0, N.redeemPrize)(),
+              (0, _.openModalLazy)(async () => {
                 let { default: e } = await s
                   .el("657437")
                   .then(s.bind(s, "657437"));
@@ -21027,55 +20941,55 @@
               });
           },
           d =
-            a === N.FetchState.FETCHED
+            a === I.FetchState.FETCHED
               ? (0, l.jsxs)(l.Fragment, {
                   children: [
                     !t &&
                       r &&
                       (0, l.jsxs)("div", {
-                        className: j.banner,
+                        className: b.banner,
                         children: [
                           (0, l.jsxs)("div", {
-                            className: j.inline,
+                            className: b.inline,
                             children: [
-                              (0, l.jsx)(E.CircleInformationIcon, {
+                              (0, l.jsx)(T.CircleInformationIcon, {
                                 width: 16,
                                 height: 16,
-                                color: f.tokens.colors.WHITE,
+                                color: _.tokens.colors.WHITE,
                               }),
-                              (0, l.jsx)(f.Text, {
+                              (0, l.jsx)(_.Text, {
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children:
-                                  P.default.Messages
+                                  j.default.Messages
                                     .USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
                               }),
                             ],
                           }),
-                          (0, l.jsxs)(f.Button, {
-                            className: j.headerButton,
-                            innerClassName: j.innerButton,
+                          (0, l.jsxs)(_.Button, {
+                            className: b.headerButton,
+                            innerClassName: b.innerButton,
                             onClick: o,
-                            size: f.ButtonSizes.TINY,
-                            color: f.ButtonColors.CUSTOM,
+                            size: _.ButtonSizes.TINY,
+                            color: _.ButtonColors.CUSTOM,
                             children: [
-                              (0, l.jsx)(T.GiftIcon, {
-                                className: j.buttonIconSmall,
-                                color: f.tokens.colors.WHITE,
+                              (0, l.jsx)(f.GiftIcon, {
+                                className: b.buttonIconSmall,
+                                color: _.tokens.colors.WHITE,
                               }),
-                              P.default.Messages
+                              j.default.Messages
                                 .USER_SETTINGS_PACKAGE_BANNER_CTA,
                             ],
                           }),
                         ],
                       }),
                     (0, l.jsx)("div", {
-                      className: j.inventoryItems,
+                      className: b.inventoryItems,
                       children: Object.keys(n).map(t => {
                         var s;
                         let a = n[t];
                         return (0, l.jsx)(
-                          O.default,
+                          x.default,
                           {
                             image: a.image,
                             name: a.name,
@@ -21092,71 +21006,71 @@
                     }),
                   ],
                 })
-              : (0, l.jsx)(f.Spinner, {});
+              : (0, l.jsx)(_.Spinner, {});
         return (0, l.jsxs)(l.Fragment, {
           children: [
-            (0, l.jsxs)(f.Heading, {
+            (0, l.jsxs)(_.Heading, {
               variant: "heading-md/semibold",
-              className: j.inventoryHeader,
+              className: b.inventoryHeader,
               children: [
-                P.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
-                (0, l.jsx)(A.default, { className: j.inventoryHelpIcon }),
+                j.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
+                (0, l.jsx)(O.default, { className: b.inventoryHelpIcon }),
               ],
             }),
-            (0, l.jsx)("div", { className: j.inventoryContainer, children: d }),
+            (0, l.jsx)("div", { className: b.inventoryContainer, children: d }),
           ],
         });
       }
-      function k(e) {
+      function H(e) {
         let { children: t, className: s, onClick: a } = e;
-        return (0, l.jsx)(f.Clickable, {
-          className: o(j.noTextToSpeechButton, s),
+        return (0, l.jsx)(_.Clickable, {
+          className: o(b.noTextToSpeechButton, s),
           onClick: a,
           children: t,
         });
       }
-      function H() {
+      function w() {
         let [e, t] = i.useState(1),
           [s, a] = i.useState(!1),
-          [n] = i.useState(new S.Timeout()),
+          [n] = i.useState(new E.Timeout()),
           r = () => {
             a(!0),
-              n.start((0, I.randomBetween)(200, 1e3), () => {
+              n.start((0, p.randomBetween)(200, 1e3), () => {
                 t(e + 1), a(!1);
               });
           };
         return (
           i.useEffect(() => n.stop(), [n]),
           (0, l.jsx)("div", {
-            className: j.noTextToSpeech,
+            className: b.noTextToSpeech,
             children: s
-              ? (0, l.jsx)(f.Spinner, { className: j.noTextToSpeechSpinner })
+              ? (0, l.jsx)(_.Spinner, { className: b.noTextToSpeechSpinner })
               : (0, l.jsxs)(l.Fragment, {
                   children: [
-                    (0, l.jsx)(f.Text, {
+                    (0, l.jsx)(_.Text, {
                       variant: "text-sm/bold",
                       children: (() => {
                         switch (e) {
                           case 1:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_1;
                           case 2:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2;
                           case 3:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3;
                           case 4:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_4;
                           case 5:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_5;
                           case 6:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6;
                           case 7:
-                            return P.default.Messages
+                            return j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7;
                         }
                       })(),
@@ -21167,28 +21081,28 @@
                         case 4:
                         case 5:
                           return [
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_YES,
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_NO,
                           ];
                         case 2:
                           return [
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_1,
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_2,
                           ];
                         case 3:
                           return [
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_1,
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_2,
                           ];
                         case 6:
                           return [
-                            P.default.Messages
+                            j.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6_ANSWER_1,
                           ];
                         case 7:
@@ -21196,10 +21110,10 @@
                       }
                     })().map((e, t) =>
                       (0, l.jsx)(
-                        k,
+                        H,
                         {
                           className:
-                            0 === t ? j.noTextToSpeechButtonFirst : null,
+                            0 === t ? b.noTextToSpeechButtonFirst : null,
                           onClick: r,
                           children: e,
                         },
@@ -21211,29 +21125,45 @@
           })
         );
       }
-      function w() {
-        let { AnalyticsLocationProvider: e } = (0, g.default)(
-            m.default.PACKAGES
+      function V() {
+        return (0, l.jsxs)("div", {
+          className: b.footer,
+          children: [
+            (0, l.jsx)(d.ClipsIcon, {}),
+            (0, l.jsx)(_.Text, {
+              variant: "text-xs/bold",
+              color: "text-muted",
+              children: j.default.Messages.PACKAGES_FOOTER_NOTE.format({
+                url: P.LOOTBOX_VIDEO_URL,
+              }),
+            }),
+          ],
+        });
+      }
+      function Y() {
+        let { AnalyticsLocationProvider: e } = (0, h.default)(
+            g.default.PACKAGES
           ),
-          t = (0, c.useStateFromStores)(
-            [N.default],
-            () => N.default.nextGlobalOpenedCountFetchDelay
+          t = (0, S.useStateFromStores)(
+            [I.default],
+            () => I.default.nextGlobalOpenedCountFetchDelay
           ),
-          [s] = i.useState(() => new S.Timeout());
+          [s] = i.useState(() => new E.Timeout());
         return (
           i.useEffect(() => {
-            (0, h.fetchUserLootboxData)();
+            (0, N.fetchUserLootboxData)();
           }, []),
           i.useEffect(
-            () => (s.start(t, h.fetchCountStat), () => s.stop()),
+            () => (s.start(t, N.fetchCountStat), () => s.stop()),
             [t, s]
           ),
           (0, l.jsxs)(e, {
             children: [
-              (0, l.jsx)(b, {}),
-              (0, l.jsx)(F, {}),
+              (0, l.jsx)(U, {}),
               (0, l.jsx)(G, {}),
-              (0, l.jsx)(H, {}),
+              (0, l.jsx)(k, {}),
+              (0, l.jsx)(w, {}),
+              (0, l.jsx)(V, {}),
             ],
           })
         );
@@ -32139,4 +32069,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7496178a1b2aaa6540bc.js.map
+//# sourceMappingURL=5c1b393db597bc7c8bbe.js.map

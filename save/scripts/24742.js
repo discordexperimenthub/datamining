@@ -739,19 +739,21 @@
             isLoading: f = !1,
             churnUserDiscountOffer: C = null,
             isDowngrade: _ = !1,
+            subtitleIcon: E,
+            subtitleClassName: I,
           } = e,
-          E = (0, m.useStateFromStores)([v.default], () => {
+          h = (0, m.useStateFromStores)([v.default], () => {
             let e = v.default.getCurrentUser();
             return (
               o(null != e, "ProfileItem: currentUser cannot be undefined"), e
             );
           });
         r.useEffect(() => {
-          (0, j.default)(E.id, E.getAvatarURL(null, 80));
-        }, [E]);
-        let I = null != C && !f;
+          (0, j.default)(h.id, h.getAvatarURL(null, 80));
+        }, [h]);
+        let x = null != C && !f;
         return (r.useEffect(() => {
-          I &&
+          x &&
             F.default.track(
               Y.AnalyticEvents.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED,
               {
@@ -759,7 +761,7 @@
                 discount_id: null == C ? void 0 : C.discount_id,
               }
             );
-        }, [I, d, C]),
+        }, [x, d, C]),
         f)
           ? (0, a.jsxs)(a.Fragment, {
               children: [
@@ -781,21 +783,27 @@
                       className: q.title,
                       children: t,
                     }),
-                    (0, a.jsx)(p.Text, {
-                      variant: "text-md/normal",
-                      className: q.subtitle,
-                      children: l,
+                    (0, a.jsxs)("div", {
+                      className: I,
+                      children: [
+                        E,
+                        (0, a.jsx)(p.Text, {
+                          variant: "text-md/normal",
+                          className: q.subtitle,
+                          children: l,
+                        }),
+                      ],
                     }),
                     (0, a.jsx)(eh, {
-                      currentUser: E,
+                      currentUser: h,
                       premiumType: s,
                       onClose: i,
                       isDowngrade: _,
                     }),
                   ],
                 }),
-                !I && (0, a.jsx)(p.ModalFooter, { children: n }),
-                I &&
+                !x && (0, a.jsx)(p.ModalFooter, { children: n }),
+                x &&
                   (0, a.jsx)(z.default, {
                     churnUserDiscountOffer: C,
                     onDiscountClaim: u,
@@ -936,4 +944,4 @@
     },
   },
 ]);
-//# sourceMappingURL=24742.fc1366962ab40a42d24c.js.map
+//# sourceMappingURL=24742.d2705f6965d758513e52.js.map

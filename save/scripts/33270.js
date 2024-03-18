@@ -129,6 +129,10 @@
       "use strict";
       e.exports = n.p + "5a3b92133c4628808365.png";
     },
+    177493: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "e3a5ebfc9bccae2f1c98.png";
+    },
     66453: function (e, t, n) {
       "use strict";
       e.exports = n.p + "cbd858b47004ef0de565.png";
@@ -1705,7 +1709,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "276303",
+                  buildNumber: "276307",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -13244,7 +13248,7 @@
             return s;
           },
           CollectiblesDCToDisplayOptions: function () {
-            return u;
+            return d;
           },
         });
       var a,
@@ -13252,11 +13256,12 @@
         l = n("151426"),
         i = n("782340"),
         r = n("577151"),
-        o = n("66453");
+        o = n("177493"),
+        u = n("66453");
       ((a = s || (s = {}))[(a.NONE = 0)] = "NONE"),
         (a[(a.TOOLTIP = 1)] = "TOOLTIP"),
         (a[(a.COACHTIP = 2)] = "COACHTIP");
-      let u = {
+      let d = {
         [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
           type: 1,
           title: () =>
@@ -13286,7 +13291,7 @@
           title: () => i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
           body: () =>
             i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
-          imageSrc: o,
+          imageSrc: u,
           assetIds: [
             "a_c3cffc19e9784f7d0b005eecdf1b566e",
             "a_f3af281c65cf0cf590e9e1f59e9c6cf6",
@@ -13299,7 +13304,7 @@
             i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
           body: () =>
             i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
-          imageSrc: r,
+          imageSrc: o,
           assetIds: [
             "a_ab95c78401ce4ec85c25a6d308db9d85",
             "a_4cd9ae5a8d103c219eacd3674d7730cd",
@@ -13387,6 +13392,7 @@
       let N = e => {
           let { color: t } = e;
           return (0, a.jsx)(I.TextBadge, {
+            className: A.newBadge,
             color: null != t ? t : h.default.STATUS_DANGER_BACKGROUND,
             text: g.default.Messages.NEW,
           });
@@ -53060,4 +53066,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fe51c3b8c3354d899fa0.js.map
+//# sourceMappingURL=752fb4ecadc980ef2388.js.map

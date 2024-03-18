@@ -40266,8 +40266,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -66716,6 +66716,9 @@ input::-webkit-inner-spin-button {
   position: absolute;
   top: -40px;
   left: 0;
+}
+.newBadge__4b940 {
+  margin-right: 8px;
 }
 .empty__086ba {
   fill: var(--background-primary);
@@ -110903,4 +110906,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.7527333221cd49df7263.css.map*/
+/*# sourceMappingURL=app.650b6dc8979299cf6cdd.css.map*/

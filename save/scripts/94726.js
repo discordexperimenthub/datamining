@@ -35,23 +35,26 @@
           productDetailsOpened: function () {
             return _;
           },
-          fetchCollectiblesCategories: function () {
+          productDetailsClosed: function () {
             return d;
           },
-          fetchCollectiblesPurchases: function () {
+          fetchCollectiblesCategories: function () {
             return I;
           },
-          fetchCollectiblesProduct: function () {
+          fetchCollectiblesPurchases: function () {
             return A;
+          },
+          fetchCollectiblesProduct: function () {
+            return L;
           },
           claimPremiumCollectiblesProduct: function () {
             return S;
           },
           validateCollectiblesRecipient: function () {
-            return L;
+            return T;
           },
           setCollectiblesCategoryItemsViewed: function () {
-            return T;
+            return p;
           },
         });
       var u = r("872717"),
@@ -78,7 +81,13 @@
             item: e,
           });
         },
-        d = async e => {
+        d = e => {
+          n.default.dispatch({
+            type: "COLLECTIBLES_PRODUCT_DETAILS_CLOSE",
+            item: e,
+          });
+        },
+        I = async e => {
           n.default.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH" });
           let t = {};
           null != e &&
@@ -104,7 +113,7 @@
             );
           }
         },
-        I = async () => {
+        A = async () => {
           n.default.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
           try {
             let e = await u.default.get(o.Endpoints.COLLECTIBLES_PURCHASES);
@@ -122,7 +131,7 @@
             );
           }
         },
-        A = async (e, t) => {
+        L = async (e, t) => {
           n.default.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH" });
           try {
             let r = await u.default.get({
@@ -170,7 +179,7 @@
             );
           }
         },
-        L = async (e, t) => {
+        T = async (e, t) => {
           try {
             let r = await u.default.get({
               url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
@@ -181,7 +190,7 @@
             throw new s.APIError(e);
           }
         },
-        T = e => {
+        p = e => {
           n.default.dispatch({
             type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
             ...e,
@@ -619,10 +628,10 @@
             return A;
           },
           BANNER_ASPECT_RATIO: function () {
-            return S;
+            return L;
           },
           GUILD_BANNER_ASPECT_RATIO: function () {
-            return L;
+            return S;
           },
           SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function () {
             return T;
@@ -673,12 +682,12 @@
         d = 960,
         I = 2400,
         A = 600,
-        S = 17 / 6,
-        L = 16 / 9,
+        L = 17 / 6,
+        S = 16 / 9,
         T = 2.5,
         p = 4,
-        f = l / S,
-        O = l / L,
+        f = l / L,
+        O = l / S,
         h = l / T,
         R = l / p,
         y =
@@ -760,4 +769,4 @@
     },
   },
 ]);
-//# sourceMappingURL=94726.cda5b20b3985d8a72e71.js.map
+//# sourceMappingURL=94726.9a78a6b3d8db1da3b2c6.js.map

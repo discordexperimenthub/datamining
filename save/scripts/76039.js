@@ -24326,10 +24326,9 @@
           "**{serverName}** is not available in your region.",
         QUESTS: "Quests",
         QUEST: "{questName} Quest",
-        QUESTS_AVAILABLE_THROUGH: "Available through {date}",
-        QUESTS_SHOW_CODE: "Show code",
-        QUESTS_CLAIM_REWARD: "Claim reward",
-        QUESTS_CLAIM_YOUR_REWARD: "Claim your reward",
+        QUESTS_SEE_CODE: "See Code",
+        QUESTS_CLAIM_REWARD: "Claim Reward",
+        QUESTS_CLAIM_YOUR_REWARD: "Claim Your Reward",
         QUESTS_ACCEPT: "Accept Quest",
         QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24345,21 +24344,21 @@
           "Uh oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
         QUEST_REWARD_COMPLETED: "You unlocked {reward} on {date}",
-        QUESTS_REWARD_CODE_HEADER: "Your reward code",
+        QUESTS_REWARD_CODE_HEADER: "Your Reward Code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "What is your preferred platform?",
         QUESTS_REWARD_CODE_ERROR:
           "Uh oh! Something went wrong, please try again later",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Choose a platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Select platform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Choose a Platform",
+        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Select Platform",
         QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "We will generate a platform-specific code for your {rewardName}. **You will not be able to change your selection after hitting Get code.**",
+          "We will generate a platform-specific code for your {rewardName}. **You will not be able to change your selection after hitting Get Code.**",
         QUESTS_REWARD_CODE_DONE: "Done",
-        QUESTS_REWARD_CODE_GET_CODE: "Get code",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Try again",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim this",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "You claimed this",
+        QUESTS_REWARD_CODE_GET_CODE: "Get Code",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Try Again",
+        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim This",
+        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "You Claimed This",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Cross-platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24367,15 +24366,15 @@
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsored",
         QUESTS_PROMOTED: "Promoted",
-        QUESTS_LEARN_MORE_V2: "Learn more",
-        QUESTS_LEARN_MORE_STACKED: "Learn\n\nmore",
-        QUESTS_LEARN_MORE_LINK: "[Learn more]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Learn More",
+        QUESTS_LEARN_MORE_STACKED: "Learn\n\nMore",
+        QUESTS_LEARN_MORE_LINK: "[Learn More]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accept Quest",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Quest accepted!** Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Track your progress",
+        QUESTS_TRACK_YOUR_PROGRESS: "Track Your Progress",
         QUESTS_TITLE: "{questName} Quest",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24383,10 +24382,10 @@
         QUESTS_MOBILE_EMBED_TITLE: "Quests aren’t available on mobile",
         QUESTS_MOBILE_EMBED_BODY:
           "From your desktop Discord app or browser you can go to \nUser Settings > Gift Inventory and accept the Quest there.",
-        QUESTS_GET_THIS_GAME: "Get this game",
+        QUESTS_GET_THIS_GAME: "Get Game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
-        QUESTS_SHARE_LINK: "Copy share link",
-        QUESTS_HIDE_THIS: "Hide this",
+        QUESTS_SHARE_LINK: "Copy Share Link",
+        QUESTS_HIDE_THIS: "Hide This",
         QUESTS_FIND_QUEST:
           "You can find this again in User Settings > Gift Inventory",
         QUESTS_CLAIM_BY: "Claim by {expirationDate}.",
@@ -24428,8 +24427,8 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, and !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!!, and {count, plural, one {1 other} other {{count} others}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Store",
+        STOREFRONT_TITLE: "{appName} Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "App Subscriptions",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Purchase subscriptions from {appName}",
@@ -26382,8 +26381,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276064", ", Version Hash: ")
-          .concat("61aa23c47b1b479ee1ed1dff20db4282ff21119e")
+          .concat("276093", ", Version Hash: ")
+          .concat("e6807d4bd593870e56ae12f44f1e29373ea4f62f")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29495,12 +29494,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276064"), "276064"));
+        let _ = parseInt(((e = "276093"), "276093"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276064"
+                "276093"
               )
             ),
             (_ = 0)),
@@ -52171,4 +52170,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.7d135dd4cbc09e00aa3c.js.map
+//# sourceMappingURL=76039.85fd99498fd3c86ded2b.js.map

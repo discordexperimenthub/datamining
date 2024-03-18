@@ -21634,7 +21634,7 @@
         S = n("199890");
       let C = (e, t, n) =>
           n
-            ? p.default.Messages.QUESTS_SHOW_CODE
+            ? p.default.Messages.QUESTS_SEE_CODE
             : e || t
               ? p.default.Messages.QUESTS_CLAIM_REWARD
               : p.default.Messages.QUESTS_ACCEPT,
@@ -32329,4 +32329,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d7a459ad7f2cf2d34714.js.map
+//# sourceMappingURL=feb2e3f765ca8036b950.js.map

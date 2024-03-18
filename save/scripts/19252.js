@@ -144,7 +144,13 @@
           confettiColors: t.confettiColors,
         };
         return 1 === r
-          ? n
+          ? {
+              ...n,
+              isDarkText: !!(
+                null != n.backgroundColors &&
+                n.backgroundColors.secondary.isLight()
+              ),
+            }
           : {
               backgroundColors:
                 null != n.backgroundColors
@@ -164,6 +170,10 @@
                     }
                   : void 0,
               confettiColors: n.confettiColors.map(e => d(e, r)),
+              isDarkText: !!(
+                null != n.backgroundColors &&
+                n.backgroundColors.secondary.isLight()
+              ),
             };
       };
     },
@@ -211,18 +221,18 @@
             } = e,
             [u, d] = a.useState(null),
             f = (0, o.useConfettiCannon)(r, u),
-            [C, g] = a.useState(!1);
+            [g, C] = a.useState(!1);
           return (
             a.useEffect(() => {
               let e = Array(10).fill(0);
               return (
                 null != t &&
                   f.isReady &&
-                  !C &&
+                  !g &&
                   (e = e.map((r, n) =>
                     setTimeout(() => {
                       var r, a;
-                      n === e.length - 1 && g(!0),
+                      n === e.length - 1 && C(!0),
                         f.createMultipleConfetti(
                           ((r = t.getBoundingClientRect()),
                           (a = null != (a = i) ? a : 1),
@@ -251,7 +261,7 @@
                   for (let t of e) clearTimeout(t);
                 }
               );
-            }, [f, t, C, i]),
+            }, [f, t, g, i]),
             (0, n.jsx)(o.SpriteCanvas, {
               ref: d,
               sprites: null != s ? s : l.COMMON_CONFETTI_SPRITES,
@@ -267,7 +277,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return C;
+            return g;
           },
         });
       var n = r("37983");
@@ -281,26 +291,26 @@
         u = r("491232"),
         d = r("408381"),
         f = r("467618"),
-        C = e => {
+        g = e => {
           let {
               asset: t,
               assetUrlOverride: r,
               size: a = d.MAX_CONTENT_WIDTH,
-              addGradient: C = !0,
-              className: g,
+              addGradient: g = !0,
+              className: C,
               style: p,
               children: b,
             } = e,
             v = (0, l.default)([s.default], () => s.default.saturation);
           return (0, n.jsx)("div", {
-            className: o(f.banner, g),
+            className: o(f.banner, C),
             style: (() => {
               if (null == t) return p;
               if (1 === v)
                 return null != r
                   ? {
                       ...p,
-                      backgroundImage: C
+                      backgroundImage: g
                         ? "url(".concat(
                             r,
                             "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)"
@@ -349,7 +359,7 @@
       r.r(t),
         r.d(t, {
           CollectiblesCollectedModalInner: function () {
-            return L;
+            return A;
           },
           default: function () {
             return M;
@@ -366,8 +376,8 @@
         u = r("265586"),
         d = r("65597"),
         f = r("77078"),
-        C = r("54239"),
-        g = r("206230"),
+        g = r("54239"),
+        C = r("206230"),
         p = r("812204"),
         b = r("685665"),
         v = r("606292"),
@@ -375,30 +385,32 @@
         E = r("38766"),
         m = r("601095"),
         x = r("493390"),
-        I = r("697218"),
-        S = r("677257"),
-        h = r("923702"),
-        T = r("716120"),
+        T = r("697218"),
+        I = r("677257"),
+        S = r("923702"),
+        h = r("716120"),
         O = r("408381"),
-        N = r("380171"),
-        k = r("782340"),
+        k = r("380171"),
+        N = r("782340"),
         _ = r("580864"),
-        A = r("53708");
-      let L = e => {
+        L = r("53708");
+      let A = e => {
         var t, r;
         let {
             product: o,
             onClose: i,
             confettiTarget: s,
-            confettiCanvas: L,
+            confettiCanvas: A,
             analyticsLocations: M,
           } = e,
           {
             confettiColors: R,
             backgroundColors: j,
             buttonColors: B,
-          } = (0, S.default)(o.styles),
-          F =
+            isDarkText: F,
+          } = (0, I.default)(o.styles),
+          D = !0 === F ? _.darkText : _.lightText,
+          H =
             null != B
               ? {
                   background: (0, O.getBackgroundGradient)(B, 90),
@@ -409,30 +421,30 @@
             null != j
               ? { background: (0, O.getBackgroundGradient)(j, 135) }
               : { backgroundColor: "var(--modal-background)" },
-          H = (0, d.default)([I.default], () => {
-            let e = I.default.getCurrentUser();
+          P = (0, d.default)([T.default], () => {
+            let e = T.default.getCurrentUser();
             return c(null != e, "User cannot be undefined"), e;
           }),
-          D = (0, d.default)([g.default], () => g.default.useReducedMotion),
-          [P] = o.items,
-          { avatarDecorationSrc: z } = (0, y.default)({
-            user: H,
+          z = (0, d.default)([C.default], () => C.default.useReducedMotion),
+          [U] = o.items,
+          { avatarDecorationSrc: G } = (0, y.default)({
+            user: P,
             avatarDecorationOverride:
-              (null == P ? void 0 : P.type) ===
+              (null == U ? void 0 : U.type) ===
               u.CollectiblesItemType.AVATAR_DECORATION
-                ? P
+                ? U
                 : null,
             size: (0, v.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_120),
           }),
-          U = a.useRef(null),
-          { analyticsLocations: G, AnalyticsLocationProvider: V } = (0,
+          V = a.useRef(null),
+          { analyticsLocations: W, AnalyticsLocationProvider: Y } = (0,
           b.default)([...M, p.default.COLLECTIBLES_COLLECTED_MODAL]),
-          W = (0, E.default)({ analyticsLocations: G });
-        return (0, n.jsxs)(V, {
+          K = (0, E.default)({ analyticsLocations: W });
+        return (0, n.jsxs)(Y, {
           children: [
             (0, n.jsxs)("div", {
               className: _.modalInner,
-              ref: U,
+              ref: V,
               style: w,
               children: [
                 (0, n.jsxs)("div", {
@@ -440,39 +452,39 @@
                     [_.bannerBackgroundFallback]: null == j,
                   }),
                   children: [
-                    (0, n.jsx)(T.default, {
+                    (0, n.jsx)(h.default, {
                       assetUrlOverride:
                         null ===
-                          (t = N.categoryBannerOverrides[o.categorySkuId]) ||
+                          (t = k.categoryBannerOverrides[o.categorySkuId]) ||
                         void 0 === t
                           ? void 0
                           : t.assetUrlOverride,
                       asset: o.banner,
                       addGradient:
                         null ===
-                          (r = N.categoryBannerOverrides[o.categorySkuId]) ||
+                          (r = k.categoryBannerOverrides[o.categorySkuId]) ||
                         void 0 === r
                           ? void 0
                           : r.addGradient,
                       size: (0, O.getAssetSizeByHeight)(440),
                       className: _.decorationBanner,
                     }),
-                    (null == P ? void 0 : P.type) ===
+                    (null == U ? void 0 : U.type) ===
                       u.CollectiblesItemType.AVATAR_DECORATION &&
                       (0, n.jsx)(f.Avatar, {
                         size: f.AvatarSizes.SIZE_120,
-                        src: A,
-                        avatarDecoration: z,
+                        src: L,
+                        avatarDecoration: G,
                         className: _.avatarDecoration,
                         "aria-label": o.name,
                       }),
-                    (null == P ? void 0 : P.type) ===
+                    (null == U ? void 0 : U.type) ===
                       u.CollectiblesItemType.PROFILE_EFFECT &&
                       (0, n.jsx)("div", {
                         className: _.profileEffectShopPreview,
                         children: (0, n.jsx)(m.default, {
                           forCollectedModal: !0,
-                          profileEffectId: P.id,
+                          profileEffectId: U.id,
                         }),
                       }),
                   ],
@@ -487,21 +499,21 @@
                       children: [
                         (0, n.jsx)(f.Heading, {
                           variant: "heading-lg/bold",
-                          color: "always-white",
+                          className: D,
                           children:
-                            k.default.Messages.COLLECTIBLES_YOU_COLLECTED.format(
+                            N.default.Messages.COLLECTIBLES_YOU_COLLECTED.format(
                               { itemName: o.name }
                             ),
                         }),
                         (0, n.jsx)(f.Text, {
-                          color: "always-white",
                           variant: "text-sm/normal",
+                          className: D,
                           children:
-                            (null == P ? void 0 : P.type) ===
+                            (null == U ? void 0 : U.type) ===
                             u.CollectiblesItemType.PROFILE_EFFECT
-                              ? k.default.Messages
+                              ? N.default.Messages
                                   .COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION
-                              : k.default.Messages
+                              : N.default.Messages
                                   .COLLECTIBLES_PERMANENT_COLLECTION,
                         }),
                       ],
@@ -510,26 +522,26 @@
                       onClick: () => {
                         if (
                           (i(),
-                          (0, C.popLayer)(),
-                          W(),
-                          (null == P ? void 0 : P.type) ===
+                          (0, g.popLayer)(),
+                          K(),
+                          (null == U ? void 0 : U.type) ===
                             u.CollectiblesItemType.AVATAR_DECORATION)
                         ) {
                           (0, v.openAvatarDecorationModal)({
-                            initialSelectedDecoration: P,
-                            analyticsLocations: G,
+                            initialSelectedDecoration: U,
+                            analyticsLocations: W,
                           });
                           return;
                         }
-                        (null == P ? void 0 : P.type) ===
+                        (null == U ? void 0 : U.type) ===
                           u.CollectiblesItemType.PROFILE_EFFECT &&
                           (0, x.openProfileEffectModal)({
-                            initialSelectedEffectId: P.id,
-                            analyticsLocations: G,
+                            initialSelectedEffectId: U.id,
+                            analyticsLocations: W,
                           });
                       },
-                      style: F,
-                      children: k.default.Messages.COLLECTIBLES_USE_NOW,
+                      style: H,
+                      children: N.default.Messages.COLLECTIBLES_USE_NOW,
                     }),
                   ],
                 }),
@@ -540,10 +552,10 @@
                 }),
               ],
             }),
-            !D &&
-              (0, n.jsx)(h.default, {
-                confettiTarget: null != s ? s : U.current,
-                confettiCanvas: L,
+            !z &&
+              (0, n.jsx)(S.default, {
+                confettiTarget: null != s ? s : V.current,
+                confettiCanvas: A,
                 sprites: (0, O.getConfettiSprites)(o.categorySkuId),
                 colors: null == R ? void 0 : R.map(e => e.toHexString()),
               }),
@@ -573,7 +585,7 @@
               className: _.modalRoot,
               children: (0, n.jsx)(f.ModalContent, {
                 className: _.modalContent,
-                children: (0, n.jsx)(L, {
+                children: (0, n.jsx)(A, {
                   product: r,
                   onClose: o,
                   confettiCanvas: c,
@@ -706,19 +718,19 @@
               isPurchased: d,
               removeSetHeight: f = !1,
             } = e,
-            C = o ? 250 : 0.1,
-            [g, p] = a.useState(!0);
+            g = o ? 250 : 0.1,
+            [C, p] = a.useState(!0);
           return (a.useEffect(() => {
             if (!0 !== o) p(!1);
             else {
               let e = setTimeout(() => {
                 p(!1);
-              }, C);
+              }, g);
               return () => {
                 clearTimeout(e);
               };
             }
-          }, [C, o]),
+          }, [g, o]),
           null != t)
             ? (0, n.jsxs)("div", {
                 className: l(c.previewContainer, {
@@ -732,7 +744,7 @@
                     className: o ? c.previewForCollected : c.preview,
                     "aria-hidden": !0,
                   }),
-                  !g &&
+                  !C &&
                     (0, n.jsx)("div", {
                       className: d ? c.purchasedEffect : void 0,
                       children: (0, n.jsx)(s.default, {
@@ -742,7 +754,7 @@
                         restartMethod: i.RestartMethod.FromStart,
                         resetOnHover: !0,
                         isHovering: r,
-                        introDelay: C,
+                        introDelay: g,
                         useOpacityOnHover: !1,
                         shopPreview: !0,
                       }),
@@ -754,4 +766,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8a0bdc42fbeaa362651b.js.map
+//# sourceMappingURL=23674b64e38ea8f87180.js.map

@@ -289,7 +289,7 @@
                 A(!0);
             }
           }, [p, b, y, C, _, x, s]),
-          w = l.useCallback(
+          L = l.useCallback(
             e => {
               D(e),
                 null == N ||
@@ -297,7 +297,7 @@
             },
             [N]
           ),
-          L = l.useCallback(
+          w = l.useCallback(
             e => {
               null != p && (p.currentTime = e);
             },
@@ -334,9 +334,9 @@
             }),
             (0, a.jsx)(h.default, {
               playing: _,
-              onPlaybackChange: L,
+              onPlaybackChange: w,
               onPausePlayback: y,
-              onChangePosition: w,
+              onChangePosition: L,
               disabled: S,
             }),
           ],
@@ -470,10 +470,10 @@
           [b, x] = i.useState(0),
           [M, I] = i.useState(!1),
           [T, y] = i.useState(!1),
-          [R, w] = i.useState(!1),
-          [L, U] = i.useState(0),
+          [R, L] = i.useState(!1),
+          [w, U] = i.useState(0),
           [P, j] = i.useState(-1),
-          V = i.useMemo(() => L / E.fineTuningScale, [E.fineTuningScale, L]);
+          V = i.useMemo(() => w / E.fineTuningScale, [E.fineTuningScale, w]);
         i.useEffect(() => {
           if (null == S) return;
           let e = S.duration * d.default.Millis.SECOND;
@@ -490,7 +490,7 @@
                     y(!0);
                     break;
                   case 2:
-                    w(!0);
+                    L(!0);
                 }
             },
             [n]
@@ -504,7 +504,7 @@
                 y(!1);
                 break;
               case 2:
-                w(!1);
+                L(!1);
             }
             j(-1);
           }, []),
@@ -590,8 +590,8 @@
                         ref: N,
                         className: u(g.rangeHandle, g.rangeHandleStart),
                         type: "range",
-                        min: (0, f.getMinValue)(P, V, L),
-                        max: (0, f.getMaxValue)(P, V, L),
+                        min: (0, f.getMinValue)(P, V, w),
+                        max: (0, f.getMaxValue)(P, V, w),
                         value: A,
                         onChange: k,
                         onMouseDown: e => F(e, 0),
@@ -602,8 +602,8 @@
                         ref: _,
                         className: u(g.rangeHandle, g.rangeHandleEnd),
                         type: "range",
-                        min: (0, f.getMinValue)(P, V, L),
-                        max: (0, f.getMaxValue)(P, V, L),
+                        min: (0, f.getMinValue)(P, V, w),
+                        max: (0, f.getMaxValue)(P, V, w),
                         value: b,
                         onChange: H,
                         onMouseDown: e => F(e, 2),
@@ -618,8 +618,8 @@
                       ref: p,
                       className: u(g.rangeHandle, g.rangeHandlePlayhead),
                       type: "range",
-                      min: (0, f.getMinValue)(P, V, L),
-                      max: (0, f.getMaxValue)(P, V, L),
+                      min: (0, f.getMinValue)(P, V, w),
+                      max: (0, f.getMaxValue)(P, V, w),
                       value: D,
                       onChange: G,
                       onMouseDown: e => F(e, 1),
@@ -639,11 +639,11 @@
                     }),
                     style: {
                       left: "".concat(
-                        (0, f.getStartHandleValue)(A, P, V, L),
+                        (0, f.getStartHandleValue)(A, P, V, w),
                         "%"
                       ),
                       right: "".concat(
-                        (0, f.getEndHandleValue)(b, P, V, L),
+                        (0, f.getEndHandleValue)(b, P, V, w),
                         "%"
                       ),
                     },
@@ -682,7 +682,7 @@
                       }),
                       style: {
                         left: "".concat(
-                          (0, f.getStartHandleValue)(D, P, V, L),
+                          (0, f.getStartHandleValue)(D, P, V, w),
                           "%"
                         ),
                       },
@@ -695,7 +695,7 @@
                 children: (0, s.jsx)(h.default, {
                   fineTuning: P,
                   fineTuningResolution: V,
-                  duration: L,
+                  duration: w,
                 }),
               }),
             ],
@@ -792,13 +792,13 @@
       n.r(t),
         n.d(t, {
           getDataUrlFromFile: function () {
-            return d;
-          },
-          uploadFileReadPromise: function () {
             return c;
           },
+          uploadFileReadPromise: function () {
+            return f;
+          },
           trimAndEncodeAudio: function () {
-            return h;
+            return m;
           },
         }),
         n("70102"),
@@ -816,19 +816,20 @@
         n("311790");
       var a = n("627445"),
         l = n.n(a),
-        s = n("718517"),
-        i = n("305122"),
-        r = n("108391");
-      let u = new AudioContext({
-        sampleRate: Math.min(new AudioContext().sampleRate, 48e3),
+        s = n("804998"),
+        i = n("718517"),
+        r = n("305122"),
+        u = n("108391");
+      let o = new AudioContext({
+        sampleRate: Math.min((0, s.getOrCreateAudioContext)().sampleRate, 48e3),
       });
-      async function o(e) {
+      async function d(e) {
         let t = await e.arrayBuffer(),
           n = t instanceof ArrayBuffer;
         if (!n) throw Error("Unexpected file type");
-        return u.decodeAudioData(t);
+        return o.decodeAudioData(t);
       }
-      async function d(e) {
+      async function c(e) {
         var t;
         let n = await ((t = t => {
           t.readAsDataURL(e);
@@ -845,25 +846,25 @@
         if ("string" != typeof n) throw Error("Unexpected file type");
         return n;
       }
-      async function c(e) {
+      async function f(e) {
         let {
           readPromise: t,
           guildId: n,
           name: a,
           volume: l,
           emojiId: s,
-          emojiName: r,
+          emojiName: i,
         } = e;
-        return (0, i.uploadSound)({
+        return (0, r.uploadSound)({
           guildId: n,
           name: a,
           sound: await t,
           volume: l,
           emojiId: s,
-          emojiName: r,
+          emojiName: i,
         });
       }
-      async function f(e) {
+      async function h(e) {
         let t = [],
           n = (function (e) {
             let { numberOfChannels: t } = e,
@@ -909,26 +910,26 @@
         }),
           i.encode(s),
           await i.flush();
-        let u = (0, r.default)(t, {
+        let r = (0, u.default)(t, {
           channelCount: e.numberOfChannels,
           inputSampleRate: e.sampleRate,
           outputGain: 0,
           channelMappingFamily: 0,
         });
-        return new Blob([u], { type: "audio/ogg" });
+        return new Blob([r], { type: "audio/ogg" });
       }
-      async function h(e, t) {
-        let n = await o(e),
+      async function m(e, t) {
+        let n = await d(e),
           a = (function (e, t) {
             let { startMs: n, endMs: a } = t,
-              { sampleRate: l, numberOfChannels: i, duration: r } = e,
-              o = r * s.default.Millis.SECOND,
-              d = Math.min(a, o);
-            if (0 === n && d === o) return e;
-            let c = Math.floor((n / o) * e.length),
-              f = Math.floor((d / o) * e.length),
-              h = u.createBuffer(i, f - c, l);
-            for (let t = 0; t < i; t++) {
+              { sampleRate: l, numberOfChannels: s, duration: r } = e,
+              u = r * i.default.Millis.SECOND,
+              d = Math.min(a, u);
+            if (0 === n && d === u) return e;
+            let c = Math.floor((n / u) * e.length),
+              f = Math.floor((d / u) * e.length),
+              h = o.createBuffer(s, f - c, l);
+            for (let t = 0; t < s; t++) {
               let n = h.getChannelData(t),
                 a = e.getChannelData(t),
                 l = 0;
@@ -936,7 +937,7 @@
             }
             return h;
           })(n, t),
-          l = await f(a);
+          l = await h(a);
         return new File([l], "sound.ogg", { type: "audio/ogg" });
       }
     },
@@ -1083,10 +1084,10 @@
       n.r(t),
         n.d(t, {
           useAudioBufferData: function () {
-            return d;
+            return c;
           },
           useAudioWaveformData: function () {
-            return f;
+            return h;
           },
         }),
         n("511434"),
@@ -1097,41 +1098,42 @@
         n("222007");
       var a = n("884691"),
         l = n("748820"),
-        s = n("129722"),
-        i = n("89050");
-      let r = new Worker(new URL(n.p + n.u("21401"), n.b)),
-        u = new AudioContext();
-      async function o(e) {
+        s = n("804998"),
+        i = n("129722"),
+        r = n("89050");
+      let u = new Worker(new URL(n.p + n.u("21401"), n.b)),
+        o = (0, s.getOrCreateAudioContext)();
+      async function d(e) {
         let t = await e.arrayBuffer(),
-          n = await u.decodeAudioData(t);
+          n = await o.decodeAudioData(t);
         return n.getChannelData(0);
       }
-      function d(e) {
+      function c(e) {
         let [t, n] = a.useState(null),
           [l, s] = a.useState(null);
         return (
           a.useEffect(() => {
             if (null == e) return;
-            let t = (0, i.getAudioFileId)(e);
-            t !== l && (s(t), n(null), o(e).then(n));
+            let t = (0, r.getAudioFileId)(e);
+            t !== l && (s(t), n(null), d(e).then(n));
           }, [l, e]),
           t
         );
       }
-      let c = { ...i.defaultWaveformConfig };
-      function f(e, t, n) {
-        let [u, o] = a.useState(null),
-          [d, f] = a.useState(null),
+      let f = { ...r.defaultWaveformConfig };
+      function h(e, t, n) {
+        let [s, o] = a.useState(null),
+          [d, c] = a.useState(null),
           [h, m] = a.useState(1),
-          { setMaxVolume: g } = (0, s.useAudioTrimmerStore)(),
+          { setMaxVolume: g } = (0, i.useAudioTrimmerStore)(),
           E = a.useCallback(
             (e, t) => {
-              var a, s, i, u, o;
-              f(null),
+              var a, s, i, r, o;
+              c(null),
                 ((a = e),
                 (s = t.offsetWidth),
                 (i = n),
-                (u = c),
+                (r = f),
                 (o = m),
                 new Promise(e => {
                   let t = (0, l.v4)(),
@@ -1144,27 +1146,27 @@
                         },
                       } = a;
                       t === s && (e(l), o(i)),
-                        null == r || r.removeEventListener("message", n);
+                        null == u || u.removeEventListener("message", n);
                     };
-                  null == r || r.addEventListener("message", n),
-                    null == r ||
-                      r.postMessage({
+                  null == u || u.addEventListener("message", n),
+                    null == u ||
+                      u.postMessage({
                         id: t,
                         options: i,
-                        config: u,
+                        config: r,
                         width: s,
                         rawBufferData: a,
                       });
-                })).then(f);
+                })).then(c);
             },
             [n]
           );
         return (
           a.useEffect(() => {
             if (null == e || null == t) return;
-            let a = (0, i.getWaveformId)(e, n);
-            u !== a && (o(a), E(e, t));
-          }, [e, E, t, n, u]),
+            let a = (0, r.getWaveformId)(e, n);
+            s !== a && (o(a), E(e, t));
+          }, [e, E, t, n, s]),
           a.useEffect(() => {
             g(h);
           }, [h, g]),
@@ -1499,10 +1501,10 @@
               ? n
               : ""
           ),
-          [R, w] = i.useState(
+          [R, L] = i.useState(
             null !== (a = null == b ? void 0 : b.volume) && void 0 !== a ? a : 1
           ),
-          [L, U] = i.useState(null == b ? void 0 : b.emojiId),
+          [w, U] = i.useState(null == b ? void 0 : b.emojiId),
           [P, j] = i.useState(null == b ? void 0 : b.emojiName),
           {
             file: V,
@@ -1589,14 +1591,14 @@
                 guildId: J,
                 name: T,
                 volume: R,
-                emojiId: L,
+                emojiId: w,
                 emojiName: P,
               }),
                 Z("ready");
             } catch (e) {
               throw new f.default(e);
             }
-          }, [V, J, T, el, Y, R, L, P]),
+          }, [V, J, T, el, Y, R, w, P]),
           ei = i.useCallback(async () => {
             d(null != J, "Cannot submit soundboard sound with no guildId"),
               H(!0),
@@ -1608,7 +1610,7 @@
                     soundId: b.soundId,
                     name: T,
                     volume: R,
-                    emojiId: L,
+                    emojiId: w,
                     emojiName: P,
                   })
                 : await es(),
@@ -1616,9 +1618,9 @@
             } catch (e) {
               $(e);
             } finally {
-              Z("ready"), H(!1), w(1), k(1);
+              Z("ready"), H(!1), L(1), k(1);
             }
-          }, [en, x, J, b, T, R, L, P, es, k]);
+          }, [en, x, J, b, T, R, w, P, es, k]);
         i.useEffect(() => {
           F(null),
             g.default.track(A.AnalyticEvents.OPEN_MODAL, {
@@ -1627,11 +1629,11 @@
             });
         }, []),
           i.useEffect(() => {
-            w(Math.min(R, B));
-          }, [R, w, B]);
+            L(Math.min(R, B));
+          }, [R, L, B]);
         let er = (0, s.jsx)(h.default, {
           guildId: J,
-          emojiId: L,
+          emojiId: w,
           emojiName: P,
           setEmojiId: U,
           setEmojiName: j,
@@ -1745,7 +1747,7 @@
                       .SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
                   children: (0, s.jsx)(c.Slider, {
                     initialValue: R,
-                    onValueChange: e => w(e),
+                    onValueChange: e => L(e),
                     minValue: 0,
                     maxValue: B,
                   }),
@@ -2419,4 +2421,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2beea2c3bf7eaa7de359.js.map
+//# sourceMappingURL=3b572d494abd9068fb75.js.map

@@ -23621,7 +23621,7 @@
                                   onClick: H,
                                   size: u.Button.Sizes.SMALL,
                                   children:
-                                    L.default.Messages.QUESTS_CLAIM_YOUR_REWARD,
+                                    L.default.Messages.QUESTS_CLAIM_REWARD,
                                 }),
                             ],
                           }),
@@ -43428,4 +43428,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b72078b586f85f33a29e.js.map
+//# sourceMappingURL=216cfbea3cb9bfea5ca8.js.map

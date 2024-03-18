@@ -1705,7 +1705,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "276234",
+                  buildNumber: "276242",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -37450,8 +37450,7 @@
                             fullWidth: !0,
                             onClick: b,
                             size: o.Button.Sizes.SMALL,
-                            children:
-                              A.default.Messages.QUESTS_CLAIM_YOUR_REWARD,
+                            children: A.default.Messages.QUESTS_CLAIM_REWARD,
                           }),
                       ],
                     }),
@@ -38070,7 +38069,7 @@
                         fullWidth: !0,
                         onClick: k,
                         size: u.Button.Sizes.NONE,
-                        children: A.default.Messages.QUESTS_CLAIM_YOUR_REWARD,
+                        children: A.default.Messages.QUESTS_CLAIM_REWARD,
                       })
                     : (0, a.jsx)(u.Text, {
                         className: N.description,
@@ -45806,43 +45805,44 @@
       n.r(t),
         n.d(t, {
           playDesktopSound: function () {
-            return c;
+            return f;
           },
           playWebSound: function () {
-            return f;
+            return E;
           },
         }),
         n("222007");
       var a = n("627445"),
         s = n.n(a),
         l = n("773364"),
-        i = n("42887"),
-        r = n("812809");
-      let o = null;
+        i = n("804998"),
+        r = n("42887"),
+        o = n("812809");
+      let u = null;
       try {
-        o = new AudioContext();
+        u = (0, i.getOrCreateAudioContext)();
       } catch {}
-      let u = new Map();
-      async function d(e) {
-        let t = u.get(e);
+      let d = new Map();
+      async function c(e) {
+        let t = d.get(e);
         if (null != t) return t;
         let n = await (await fetch(e)).arrayBuffer(),
-          a = await (null == o ? void 0 : o.decodeAudioData(n));
-        return null != a && u.set(e, a), a;
+          a = await (null == u ? void 0 : u.decodeAudioData(n));
+        return null != a && d.set(e, a), a;
       }
-      function c(e) {
+      function f(e) {
         let {
           soundKey: t,
           soundURL: n,
           soundVolume: a,
-          reportSoundStartedPlaying: r,
+          reportSoundStartedPlaying: i,
         } = e;
         return new Promise(async e => {
-          let o = await d(n);
+          let o = await c(n);
           null == o && e(),
-            i.default.getMediaEngine().eachConnection(n => {
+            r.default.getMediaEngine().eachConnection(n => {
               n.context === l.MediaEngineContextTypes.DEFAULT &&
-                (r(),
+                (i(),
                 s(null != o, "audioBuffer cannot be null here"),
                 n.startSamplesLocalPlayback(t, o, a, () => {
                   e();
@@ -45850,7 +45850,7 @@
             });
         });
       }
-      function f(e, t) {
+      function E(e, t) {
         let {
             soundKey: n,
             soundURL: a,
@@ -45864,7 +45864,7 @@
         }
         return new Promise(e => {
           let i = new Audio(a);
-          (i.volume = (0, r.default)(s)),
+          (i.volume = (0, o.default)(s)),
             i.addEventListener("canplaythrough", () => {
               l(), t.set(n, i), i.play();
             }),
@@ -53060,4 +53060,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18dd4143182b8303dadf.js.map
+//# sourceMappingURL=2f4f9c43e0a13e8496d4.js.map

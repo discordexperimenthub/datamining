@@ -77,7 +77,6 @@
           cozy_header: "Cozy header",
           mobile_profile_effect_debug_controls:
             "mobile_profile_effect_debug_controls",
-          enable_new_search_filters: "Enables new search filters behavior",
           nav_experiment_server_drawer_enabled:
             "[NavI] Enable expandable server drawer",
           nav_experiment_server_drawer_no_activity:
@@ -205,8 +204,8 @@
         L = n("870691"),
         T = n("42203"),
         R = n("816092"),
-        b = n("305961"),
-        A = n("957255"),
+        A = n("305961"),
+        b = n("957255"),
         O = n("660478"),
         D = n("18494"),
         G = n("282109"),
@@ -610,7 +609,7 @@
             )),
             (this.collapsedCategoryIds = L.default.getCollapsedCategories());
           let s = T.default.getMutableGuildChannelsForGuild(this.id),
-            l = b.default.getGuild(this.id),
+            l = A.default.getGuild(this.id),
             a = {},
             d = [],
             o = {};
@@ -743,8 +742,8 @@
           return (
             !!(
               super.shouldShowEmptyCategory() ||
-              (A.default.can(Y.Permissions.MANAGE_CHANNELS, this.record) &&
-                A.default.can(Y.Permissions.VIEW_CHANNEL, this.record) &&
+              (b.default.can(Y.Permissions.MANAGE_CHANNELS, this.record) &&
+                b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) &&
                 h.isEmpty(this.channels) &&
                 (!this.guild.optInEnabled ||
                   this.guild.optedInChannels.has(this.id)))
@@ -1168,7 +1167,7 @@
               activeJoinedUnreadThreads: l,
             } = e,
             a = [];
-          if (!A.default.can(Y.Permissions.VIEW_CHANNEL, this.record)) {
+          if (!b.default.can(Y.Permissions.VIEW_CHANNEL, this.record)) {
             if (this.id === i) return { renderLevel: 4, threadIds: a };
             if (
               !C.default.isChannelGatedAndVisible(
@@ -1226,7 +1225,7 @@
             selectedVoiceChannelId: i,
             activeJoinedRelevantThreads: s,
           } = e;
-          return A.default.can(Y.Permissions.VIEW_CHANNEL, this.record)
+          return b.default.can(Y.Permissions.VIEW_CHANNEL, this.record)
             ? {
                 renderLevel: 4,
                 threadIds: eC(
@@ -1248,7 +1247,7 @@
             selectedVoiceChannelId: i,
             activeJoinedRelevantThreads: s,
           } = e;
-          return A.default.can(Y.Permissions.VIEW_CHANNEL, this.record)
+          return b.default.can(Y.Permissions.VIEW_CHANNEL, this.record)
             ? {
                 renderLevel: ep(this, e) ? 4 : 3,
                 threadIds: eC(
@@ -1283,7 +1282,7 @@
       class eu extends er {
         getRenderLevel(e) {
           let t = this.category.guild;
-          return !A.default.can(Y.Permissions.VIEW_CHANNEL, this.record) ||
+          return !b.default.can(Y.Permissions.VIEW_CHANNEL, this.record) ||
             4 === e ||
             3 === e ||
             ef(t, this.record)
@@ -1797,4 +1796,4 @@
     },
   },
 ]);
-//# sourceMappingURL=53726ebc3385ffde3d51.js.map
+//# sourceMappingURL=08aa4ed98572b8b6abe8.js.map

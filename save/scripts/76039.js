@@ -13673,8 +13673,8 @@
           "member of {count, plural, =0 {0 servers} one {1 server} other {{count} servers}}",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Mutual Friends",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Mutual Servers",
-        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "Click to see all mutual friends",
-        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "Click to see all mutual servers",
+        USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP: "See all mutual friends",
+        USER_PROFILE_MUTUAL_GUILDS_TOOLTIP: "See all mutual servers",
         USER_PROFILE_MUTUALS_TITLE: "Mutuals",
         PROFILE_JOIN_VOICE_CHANNEL: "Join Voice Channel",
         PROFILE_IN_VOICE_CALL: "In a voice call",
@@ -26387,8 +26387,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276320", ", Version Hash: ")
-          .concat("9d0f215eab86d9f2b5a4ed333addb2825b108c64")
+          .concat("276338", ", Version Hash: ")
+          .concat("62b08bd1f76e44d2315082c9e4169fd74a977562")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29500,12 +29500,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276320"), "276320"));
+        let _ = parseInt(((e = "276338"), "276338"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276320"
+                "276338"
               )
             ),
             (_ = 0)),
@@ -52201,4 +52201,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.a7a91d0d3c01a17d7231.js.map
+//# sourceMappingURL=76039.cd62239919240cb93bf8.js.map

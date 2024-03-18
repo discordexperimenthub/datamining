@@ -213,7 +213,7 @@
         r = l("884691"),
         s = l("414456"),
         o = l.n(s),
-        u = l("907002"),
+        u = l("146606"),
         d = l("77078"),
         c = l("206230"),
         f = l("777003"),
@@ -494,8 +494,8 @@
             L.default.isFocused()
           ),
           e1 = null == eL ? void 0 : eL.getPreviewBanner(ec, eB ? e0 : ek),
-          e2 = null != e1 || null != eY,
-          e5 = eR || null != eY,
+          e5 = null != e1 || null != eY,
+          e2 = eR || null != eY,
           e8 =
             null !==
               (Z = (0, q.getPreviewNickname)(
@@ -511,8 +511,8 @@
             ),
             z.default.getStatus(ei.id),
           ]),
-          e7 = (0, d.useStatusFillColor)(e4),
-          e6 = (0, o.useStateFromStores)(
+          e6 = (0, d.useStatusFillColor)(e4),
+          e7 = (0, o.useStateFromStores)(
             [F.default],
             () => F.default.hidePersonalInformation
           ),
@@ -594,7 +594,7 @@
                 children: (0, t.jsx)("rect", {
                   height: "100%",
                   width: "100%",
-                  fill: e7,
+                  fill: e6,
                   mask: "url(#".concat((0, d.getStatusMask)(e4, !1), ")"),
                 }),
               }),
@@ -642,11 +642,11 @@
               children: [
                 (0, t.jsx)(E.default, {
                   profileType: Q.UserProfileTypes.POPOUT,
-                  hasBanner: e2,
+                  hasBanner: e5,
                   isPremium: er,
                   hasThemeColors: e9,
                   forProfileEffectModal: eC,
-                  hasProfileEffect: e5,
+                  hasProfileEffect: e2,
                   children: er
                     ? (0, t.jsxs)("div", {
                         onMouseMove: () => ew(!0),
@@ -661,7 +661,7 @@
                             onChange: al,
                             imageStyle: { backgroundColor: e$ },
                             imageClassName: r(
-                              e2
+                              e5
                                 ? ee.bannerUploaderInnerSquare
                                 : ee.bannerUploaderInnerSquareEmpty
                             ),
@@ -683,7 +683,7 @@
                         ],
                       })
                     : (0, t.jsx)("div", {
-                        className: e5
+                        className: e2
                           ? ee.bannerUploaderInnerSquare
                           : ee.bannerNormal,
                         style: { backgroundColor: e$ },
@@ -742,8 +742,8 @@
                         className: r(
                           et({
                             isPremium: er,
-                            hasBanner: e2,
-                            hasProfileEffect: e5,
+                            hasBanner: e5,
+                            hasProfileEffect: e2,
                           }),
                           { [ee.defaultCursor]: eE }
                         ),
@@ -790,8 +790,8 @@
                         a = (0, t.jsxs)("div", {
                           className: et({
                             isPremium: er,
-                            hasBanner: e2,
-                            hasProfileEffect: e5,
+                            hasBanner: e5,
+                            hasProfileEffect: e2,
                           }),
                           children: [
                             (0, t.jsx)(S.default, {
@@ -877,7 +877,7 @@
                             null == e ? void 0 : e.isUsingGuildValue,
                           guild: en,
                           bio: null == e ? void 0 : e.value,
-                          hidePersonalInformation: e6,
+                          hidePersonalInformation: e7,
                           lastSection: ej,
                           lineClamp: eC ? 3 : void 0,
                         }),
@@ -912,7 +912,7 @@
         });
       var t = l("37983");
       l("884691");
-      var i = l("907002"),
+      var i = l("146606"),
         n = l("65597"),
         r = l("206230"),
         s = e => {
@@ -928,4 +928,4 @@
     },
   },
 ]);
-//# sourceMappingURL=caf571f386f73399585d.js.map
+//# sourceMappingURL=ff8819b4ffb1470cbc55.js.map

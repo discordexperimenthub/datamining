@@ -22610,8 +22610,10 @@ html .progress__4ef76 {
   padding: 4px 6px;
 }
 .answersContainer__97393 {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 8px;
   gap: 8px;
   margin: 8px 0 16px;
 }
@@ -22619,18 +22621,21 @@ html .progress__4ef76 {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  display: flex;
 }
 .answerInner_a3bc8e {
   position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
+  width: 100%;
   min-height: 50px;
   padding: 8px 16px;
   box-sizing: border-box;
   background-color: var(--bg-mod-faint);
   border-radius: var(--radius-sm);
   color: var(--text-normal);
+  word-break: break-word;
   overflow: hidden;
   outline: 1px solid var(--custom-poll-style-border);
   z-index: 1;
@@ -22679,6 +22684,7 @@ html .progress__4ef76 {
   flex-direction: row;
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
 }
 .voteCount__9e7ee {
   padding: 2px 4px;
@@ -22694,9 +22700,8 @@ html .progress__4ef76 {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
-.voterTooltip__04695 {
-  color: var(--text-muted);
-  font-weight: 400;
+.answerSelectionIcon__5bf65 {
+  flex-shrink: 0;
 }
 .container__3ca24 {
   display: flex;
@@ -22715,6 +22720,7 @@ html .progress__4ef76 {
 }
 .detailsText__5f51b {
   display: flex;
+  white-space: nowrap;
 }
 .detailsText__5f51b > :not(:first-child):before {
   content: "•";
@@ -22733,6 +22739,7 @@ html .progress__4ef76 {
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .secondaryAction__6fd41 {
@@ -110920,4 +110927,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.a14a2d8e3e58772f798a.css.map*/
+/*# sourceMappingURL=app.a66cbf0457cec8313d9e.css.map*/

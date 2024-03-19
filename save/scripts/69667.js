@@ -18856,29 +18856,33 @@
         });
       }
       function V(e) {
-        let { isSelected: t, size: n } = e,
-          s = {
+        let { isSelected: t, size: n, className: s } = e,
+          l = {
             width: n,
             height: n,
             background: P.radioBackground,
             "aria-hidden": !0,
           };
         return t
-          ? (0, a.jsx)(C.default, { ...s, foreground: P.radioForeground })
-          : (0, a.jsx)(S.default, { ...s });
+          ? (0, a.jsx)(C.default, {
+              ...l,
+              foreground: P.radioForeground,
+              className: s,
+            })
+          : (0, a.jsx)(S.default, { ...l, className: s });
       }
       function Y(e) {
-        let { isSelected: t, size: n } = e,
-          s = 0.85 * n;
+        let { isSelected: t, size: n, className: s } = e,
+          l = 0.85 * n;
         return (0, a.jsx)("div", {
-          className: o(P.checkbox, { [P.checkboxSelected]: t }),
+          className: o(P.checkbox, { [P.checkboxSelected]: t }, s),
           style: { width: n, height: n },
           "aria-hidden": !0,
           children:
             t &&
             (0, a.jsx)(N.default, {
-              width: s,
-              height: s,
+              width: l,
+              height: l,
               color: (0, f.getColor)(v.Color.WHITE_500),
             }),
         });
@@ -19075,6 +19079,7 @@
         let { media: t } = e;
         return (0, s.jsx)(u.Heading, {
           variant: "text-md/medium",
+          scaleFontToUserSetting: !0,
           children: t.text,
         });
       }
@@ -19093,7 +19098,12 @@
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           buttonRef: o,
-          children: (0, s.jsx)(u.Text, { variant: l, color: a, children: t }),
+          children: (0, s.jsx)(u.Text, {
+            variant: l,
+            color: a,
+            scaleFontToUserSetting: !0,
+            children: t,
+          }),
         });
       }
       function N(e) {
@@ -19117,6 +19127,7 @@
               (0, s.jsx)(u.Text, {
                 variant: "text-sm/normal",
                 color: "text-muted",
+                scaleFontToUserSetting: !0,
                 children: n,
               }),
           ],
@@ -19148,7 +19159,12 @@
                     : u.Button.Colors.BRAND,
                 size: u.Button.Sizes.SMALL,
                 className: i,
-                children: t.label,
+                children: (0, s.jsx)(u.Text, {
+                  variant: "text-sm/medium",
+                  color: "interactive-active",
+                  scaleFontToUserSetting: !0,
+                  children: t.label,
+                }),
               })
             : "textButton" === t.presentation
               ? (0, s.jsx)(m, {
@@ -19199,6 +19215,7 @@
                       variant: "text-sm/normal",
                       color: "text-muted",
                       className: T.prompt,
+                      scaleFontToUserSetting: !0,
                       children: n.promptLabel,
                     }),
                   d,
@@ -19396,6 +19413,7 @@
           variant: "text-xs/semibold",
           color: "none",
           className: C.voteCount,
+          scaleFontToUserSetting: !0,
           children: n,
         });
         return (0, s.jsxs)("div", {
@@ -19405,9 +19423,13 @@
               ? (0, s.jsxs)(s.Fragment, {
                   children: [
                     (0, s.jsx)(c.Tooltip, {
-                      text: E,
+                      text: (0, s.jsx)(c.Text, {
+                        variant: "text-sm/normal",
+                        color: "text-muted",
+                        scaleFontToUserSetting: !0,
+                        children: E,
+                      }),
                       forceOpen: A,
-                      tooltipContentClassName: C.voterTooltip,
                       "aria-label": !1,
                       children: e =>
                         (0, s.jsx)(c.Button, {
@@ -19421,11 +19443,7 @@
                           "aria-describedby": A ? o : void 0,
                           look: c.Button.Looks.BLANK,
                           size: c.Button.Sizes.NONE,
-                          children: (0, s.jsx)(c.Text, {
-                            variant: "text-sm/medium",
-                            color: "none",
-                            children: R,
-                          }),
+                          children: R,
                         }),
                     }),
                     A && (0, s.jsx)(r.VisuallyHidden, { id: o, children: E }),
@@ -19435,6 +19453,7 @@
             (0, s.jsxs)(c.Text, {
               variant: "text-md/bold",
               color: "none",
+              scaleFontToUserSetting: !0,
               children: [t, "%"],
             }),
           ],
@@ -19465,18 +19484,28 @@
           didSelfVote: l,
           isVictor: a,
           isExpired: i,
+          className: r,
         } = e;
         return (0, u.match)({ answersInteraction: t, didSelfVote: l })
           .with(
             {
               answersInteraction: m.PollChatAnswerInteractionType.RADIO_BUTTONS,
             },
-            () => (0, s.jsx)(N.PollAnswerRadioIcon, { isSelected: n, size: 24 })
+            () =>
+              (0, s.jsx)(N.PollAnswerRadioIcon, {
+                isSelected: n,
+                size: 24,
+                className: r,
+              })
           )
           .with(
             { answersInteraction: m.PollChatAnswerInteractionType.CHECKBOXES },
             () =>
-              (0, s.jsx)(N.PollAnswerCheckboxIcon, { isSelected: n, size: 20 })
+              (0, s.jsx)(N.PollAnswerCheckboxIcon, {
+                isSelected: n,
+                size: 20,
+                className: r,
+              })
           )
           .with(
             {
@@ -19488,6 +19517,7 @@
                 isVictor: a,
                 isExpired: i,
                 size: 24,
+                className: r,
               })
           )
           .otherwise(() => null);
@@ -19520,6 +19550,7 @@
                 className: C.label,
                 variant: "text-sm/semibold",
                 color: "none",
+                scaleFontToUserSetting: !0,
                 children: t.pollMedia.text,
               }),
               t.didSelfVote &&
@@ -19539,6 +19570,7 @@
                 didSelfVote: d,
                 isVictor: E,
                 isExpired: n,
+                className: C.answerSelectionIcon,
               }),
             ],
           }),
@@ -32389,4 +32421,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4c99f6623067ba8c9bac.js.map
+//# sourceMappingURL=019801ab72c6deb579ba.js.map

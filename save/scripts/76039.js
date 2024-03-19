@@ -26429,8 +26429,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276425", ", Version Hash: ")
-          .concat("b73e3031f4528262a3f088bdf66fdc8c6452ce5a")
+          .concat("276436", ", Version Hash: ")
+          .concat("a72ae699709796dc4e0c61ae14d0046a796c00bb")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29542,12 +29542,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276425"), "276425"));
+        let _ = parseInt(((e = "276436"), "276436"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276425"
+                "276436"
               )
             ),
             (_ = 0)),
@@ -30512,18 +30512,26 @@
       E.r(_),
         E.d(_, {
           isEligibleForContentInventoryV1: function () {
-            return n;
+            return r;
           },
         });
       var t = E("862205");
       let o = (0, t.createExperiment)({
-        kind: "user",
-        id: "2024-02_v1_content_inventory_feed",
-        label: "V1 Feed of the content inventory",
-        defaultConfig: { enabled: !1 },
-        treatments: [{ id: 1, label: "Show feed", config: { enabled: !0 } }],
-      });
-      function n(e) {
+          kind: "user",
+          id: "2024-02_v1_content_inventory_feed",
+          label: "V1 Feed of the content inventory",
+          defaultConfig: { enabled: !1 },
+          treatments: [{ id: 1, label: "Show feed", config: { enabled: !0 } }],
+        }),
+        n = (0, t.createExperiment)({
+          kind: "user",
+          id: "2024-03_content_inventory_surface_holdout",
+          label: "Content Inventory Surface Holdout",
+          defaultConfig: {},
+          treatments: [],
+        });
+      function r(e) {
+        n.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
         let { enabled: _ } = o.getCurrentConfig(
           { location: e },
           { autoTrackExposure: !0 }
@@ -52242,4 +52250,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.600454ad2b67f295c7e5.js.map
+//# sourceMappingURL=76039.adab6c4209b4167caf41.js.map

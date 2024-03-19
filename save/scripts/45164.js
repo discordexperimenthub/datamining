@@ -6384,6 +6384,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "V\xe6lg en server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Dette kr\xe6ver, at du har tilladelsen **Administrer server** p\xe5 serveren.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "F\xf8j til server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Ugyldig anmodning. Manglende parametre **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ugyldigt omfang **{scope}**",
@@ -6836,12 +6837,6 @@
         DATA_PRIVACY_CONTROLS: "S\xe5dan bruger vi dine data",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Brug data til forbedring af Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Disse indstilinger tillader os at anvende og bearbejde information om, hvordan du navigerer og anvender Discord til analytiske form\xe5l. F.eks. tillader det os at inkludere dig i forhold til nye funktioner, som vi tester. [Dette kan du l\xe6se mere om her.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Brug data til at tilpasse min Discord-oplevelse",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Denne indstilling giver os mulighed for at anvende information, s\xe5som hvem du taler med, og hvilke spil du spiller, s\xe5 vi bedre kan tilpasse Discord til dig. [L\xe6s mere om dette her.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Brug data for at f\xe5 Discord til at virke",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Anmod om alle mine data",
@@ -6875,17 +6870,9 @@
           "Vil du ogs\xe5 anvende denne \xe6ndring p\xe5 alle dine eksisterende servere?",
         NEW_GUILDS_DM_ALLOWED: "Tillad direkte beskeder fra servermedlemmer",
         USER_DROPS_SETTINGS: "Promo-indstillinger",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Ingame-bel\xf8nninger (aka drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Bruger oplysningerne om, hvilke spil du spiller, for at fort\xe6lle dig om drops-muligheder og gennemf\xf8re drops-missioner.",
         USER_DM_SETTINGS_TITLE: "Servers privatlivsindstillinger",
         USER_DM_SETTINGS_DESCRIPTION:
           "\xd8nsker du ogs\xe5 at anvende denne \xe6ndring p\xe5 alle dine nuv\xe6rende servere? Du kan ogs\xe5 deaktivere direkte beskeder p\xe5 individuelle servere ved at g\xe5 ind p\xe5 siden for den p\xe5g\xe6ldende servers indstillinger.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drops k\xf8rer for tiden i beta. Vi vil gerne vide mere om, hvorfor du slog det fra. [Feedbackunders\xf8gelse]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drops k\xf8rer for tiden i beta. Tak, fordi du deltog. Nu vil vi gerne h\xf8re fra dig! [Feedbackunders\xf8gelse]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Det lader til, at du s\xf8ger efter Discord-missioner! Hvis du ser denne besked, skal vi justere nogle indstillinger. For at g\xf8re dette skal du g\xe5 til Indstillinger -> Privatliv og sikkerhed og aktivere indstillingerne "Brug data til at tilpasse min Discord-oplevelse" og "In-game-bel\xf8nninger (aka missioner)".\n\n[L\xe6s mere i Ofte stillede sp\xf8rgsm\xe5l]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Registrer dig nu",
@@ -10106,8 +10093,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Nuv\xe6rende abonnement",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nyt abonnement totalt",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} Annulleret",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Denne justering inkluderer forholdsm\xe6ssige beregninger, rabatter og refusioner.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Hvorfor f\xe5r jeg vist dette?**\n\nDu k\xf8ber et \xe6ndret abonnement. Dine Serverboosts opdateres tilsvarende.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13239,13 +13224,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Du kan ogs\xe5 [oprette din egen](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Beklager",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Sl\xe5 nogle af anvendelsesstatistikkerne fra?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Hvis du sl\xe5r dette fra, oph\xf8rer vi med behandlingen af nye data til analysebrug. Du mister adgangen til nye, eksperimenterende funktioner og anvendelsesbaserede forbedringer af funktioner s\xe5som talechat. Dine gamle data vil ikke l\xe6ngere v\xe6re direkte knyttet til dig. Hvis du \xf8nsker at g\xf8re yderligere brug af din ret til at g\xf8re indsigelse mod vores behandling af dine data, skal du sende en e-mail til privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ja, jeg er sikker",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nej, tag mig tilbage.",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Sl\xe5 tilpasning fra?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Ved at sl\xe5 dette fra mister du adgang til ting som personlige anbefalinger og forslag. Du kan ikke gendanne dem fremover.",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ja, jeg er sikker",

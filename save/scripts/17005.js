@@ -6472,6 +6472,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "V\xe4lj en server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Det h\xe4r kr\xe4ver att du har **hantera server**-beh\xf6righet p\xe5 servern.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "L\xe4gg till p\xe5 server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Ogiltig beg\xe4ran. Saknar param. **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE:
@@ -6928,12 +6929,6 @@
         DATA_PRIVACY_CONTROLS: "Hur vi anv\xe4nder din data",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Anv\xe4nd data f\xf6r att f\xf6rb\xe4ttra Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Den h\xe4r inst\xe4llningen till\xe5ter oss att anv\xe4nda information om hur du navigerar och anv\xe4nder Discord f\xf6r olika analys\xe4ndam\xe5l. Till exempel till\xe5ter den oss att inkludera dig i nya funktionsexperiment som vi testar. [L\xe4s mer h\xe4r.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Anv\xe4nd data f\xf6r att anpassa min Discord-upplevelse",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Denna inst\xe4llning ger oss till\xe5telse att anv\xe4nda information, t.ex. vem du pratar med och vilka spel du spelar, f\xf6r att anpassa Discord \xe5t dig. [L\xe4s mer h\xe4r.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Anv\xe4nd data f\xf6r att Discord ska fungera",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Beg\xe4r all min data",
@@ -6968,17 +6963,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Till\xe5t direktmeddelanden fr\xe5n servermedlemmar",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Bel\xf6ningar i spelet (s.k. drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Anv\xe4nd information om de spel du spelar f\xf6r att ber\xe4tta om drop-m\xf6jligheter och hur man klarar drop-uppdrag.",
         USER_DM_SETTINGS_TITLE: "Serversekretess",
         USER_DM_SETTINGS_DESCRIPTION:
           "Vill du till\xe4mpa den h\xe4r \xe4ndringen f\xf6r alla dina existerande servrar? Du kan \xe4ven inaktivera direktmeddelanden p\xe5 enskilda servrar p\xe5 serverns inst\xe4llningssida.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drops \xe4r f\xf6r n\xe4rvarande i beta – vi vill g\xe4rna veta mer om varf\xf6r du st\xe4ngde av det. [Feedbackunders\xf6kning]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drops \xe4r f\xf6r n\xe4rvarande i beta – tack f\xf6r att du deltar. Nu vill vi g\xe4rna veta vad du tycker! [Feedbackunders\xf6kning]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           '\xc4r det Discords uppdrag du letar efter? Om du kan se det h\xe4r meddelandet m\xe5ste vi fixa n\xe5gra inst\xe4llningar. F\xf6r att aktivera det g\xe5r du till Inst\xe4llningar -> Sekretess och s\xe4kerhet och aktiverar b\xe5de "Anv\xe4nd data f\xf6r att anpassa min Discord-upplevelse" och "Bel\xf6ningar i spelet (s.k. uppdrag)".\n\n[L\xe4s mer i Vanliga fr\xe5gor]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "G\xe5 med nu",
@@ -10221,8 +10208,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Nuvarande prenumeration",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Ny prenumeration sammanlagt",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} annullerad",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Den h\xe4r justeringen inneh\xe5ller proportionella ber\xe4kningar, rabatter och \xe5terbetalningar.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Varf\xf6r ser jag det h\xe4r?**\n\nDu h\xe5ller p\xe5 att k\xf6pa en plan-\xe4ndring. Dina serverboostar uppdateras d\xe4refter.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13393,13 +13378,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Du kan ocks\xe5 [skapa din egen server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Vi beklagar",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "St\xe4ng av lite anv\xe4ndarstatistik?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Om du st\xe4nger av detta, slutar vi att behandla nya data f\xf6r analys. Du f\xf6rlorar tillg\xe5ng till nya experimentella funktioner och anv\xe4ndarbaserade f\xf6rb\xe4ttringar till funktioner som r\xf6stchatten. Dina gamla data kommer inte l\xe4ngre att vara direkt knutna till dig. Om du vill h\xe4vda din r\xe4tt att inv\xe4nda mot v\xe5r behandling av dina data ytterligare, kan du meddela oss via e-post p\xe5 privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ja, jag \xe4r s\xe4ker",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nej, ta mig tillbaka!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "St\xe4ng av anpassning?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Genom att st\xe4nga av detta f\xf6rlorar du tillg\xe5ng till saker som personliga rekommendationer och f\xf6rslag. Du kommer inte heller kunna \xe5terf\xe5 dem i framtiden!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ja, jag \xe4r s\xe4ker",

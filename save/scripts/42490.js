@@ -6458,6 +6458,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Selectează un server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Pentru a putea face asta, trebuie să ai permisiunea **Gestionează server-ul** pe server.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Adaugă pe server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Solicitare nevalidă. Lipsește parametrul **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Domeniu nevalid **{scope}**",
@@ -6918,12 +6919,6 @@
         DATA_PRIVACY_CONTROLS: "Cum \xeeți folosim datele",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Folosește date pentru a \xeembunătăți Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Această setare ne permite să folosim și să procesăm informații despre cum folosești și navighezi \xeen Discord, \xeen scopuri analitice. De exemplu, ne permite să te includem \xeen experimente cu funcții noi pe care le testăm. [Află mai multe aici.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Folosește date pentru a personaliza experiența mea pe Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Această setare ne permite să utilizăm informații, de exemplu persoanele cu care vorbești și jocurile pe care le joci, cu scopul de a-ți personaliza Discord. [Află mai multe aici.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Folosește date pentru a face ca Discord să funcționeze",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Solicită toate datele mele",
@@ -6960,17 +6955,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Permite mesaje directe de la membrii serverului",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Recompense \xeen joc (adică drop-uri)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Folosește informațiile despre jocurile pe care le joci ca să-ți spună despre oportunitățile de drop-uri și pentru finalizarea misiunilor recompensate cu drop-uri.",
         USER_DM_SETTINGS_TITLE: "Confidențialitate server",
         USER_DM_SETTINGS_DESCRIPTION:
           "Vrei să aplici schimbarea pentru toate celelalte servere? Poți dezactiva mesajele directe și pentru servere individuale, vizit\xe2nd pagina de setări a serverului respectiv.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drop-urile sunt disponibile momentan \xeen varianta beta – vrem să aflăm mai multe despre motivele pentru care le-ai dezactivat. [Sondaj pentru feedback]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drop-urile sunt disponibile momentan \xeen varianta beta – mulțumim pentru participare, așteptăm vești de la tine! [Sondaj pentru feedback]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Probabil cauți misiunile Discord! Dacă vezi acest mesaj, trebuie să ajustăm niște setări. Pentru a le activa, trebuie să accesezi Setări -> Confidențialitate și securitate, apoi să activezi at\xe2t „Folosește date pentru a personaliza experiența mea pe Discord”, c\xe2t și „Recompense \xeen joc (adică misiuni)”.\n\n[Citește mai multe \xeen \xcentrebările frecvente]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "\xcenscrie-te acum",
@@ -10241,8 +10228,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Abonament actual",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Total nou abonament",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Abonament {planName} anulat",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Ajustarea include tarifele fracționare, reducerile și rambursările.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**De ce văd asta?**\n\nEști pe cale să achiziționezi o modificare a abonamentului. Boost-urile tale pentru server se actualizează \xeen consecință.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13412,14 +13397,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Sau \xeeți poți [crea propriul server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Ne pare rău pentru asta",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Dorești să dezactivezi unele statistici de utilizare?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Dacă dezactivezi asta, nu vom mai prelucra date noi pentru analiză. Vei pierde accesul la funcțiile noi experimentale și la \xeembunătățirile bazate pe utilizare aduse funcțiilor precum chat-ul vocal. Datele tale vechi nu vor mai fi asociate direct cu tine. Dacă vrei să \xeeți exerciți \xeen continuare dreptul de a obiecta la prelucrarea de către noi a datelor tale cu caracter personal, trimite un e-mail la privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Da, sunt sigur",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nu, du-mă \xeenapoi!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE:
-          "Dorești să dezactivezi personalizarea?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Dezactiv\xe2nd asta vei pierde accesul la unele lucruri, cum ar fi sugestiile și recomandările personalizate. Nu vei mai putea să le recuperezi \xeen viitor!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Da, sunt sigur",

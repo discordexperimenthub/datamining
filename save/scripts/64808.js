@@ -6788,6 +6788,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "V\xe1lassz szervert",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Ehhez **szerver kezel\xe9se** jogosults\xe1g sz\xfcks\xe9ges a szerveren.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Hozz\xe1ad\xe1s szerverhez",
         OAUTH2_REQUEST_MISSING_PARAM:
           "\xc9rv\xe9nytelen k\xe9r\xe9s. Hi\xe1nyz\xf3 param\xe9ter **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE:
@@ -7276,12 +7277,6 @@
         DATA_PRIVACY_CONTROLS: "Mik\xe9nt hasznos\xedtjuk az adataidat",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Adatok felhaszn\xe1l\xe1sa a Discord t\xf6k\xe9letes\xedt\xe9s\xe9re",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Ez a be\xe1ll\xedt\xe1s lehetőv\xe9 teszi sz\xe1munkra, hogy inform\xe1ci\xf3t haszn\xe1ljunk fel arr\xf3l, hogyan haszn\xe1lod \xe9s mik\xe9nt navig\xe1lsz Discordon bel\xfcl. P\xe9ld\xe1ul lehetőv\xe9 teszi, hogy ti is r\xe9szt vehessetek \xfaj funkci\xf3k tesztel\xe9s\xe9ben. [Tov\xe1bbi inform\xe1ci\xf3kat itt tal\xe1lhatsz.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Adatok felhaszn\xe1l\xe1sa a Discord-\xe9lm\xe9nyem testreszab\xe1s\xe1ra",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Ez a be\xe1ll\xedt\xe1s lehetőv\xe9 teszi sz\xe1munkra, hogy a Discordot szem\xe9lyre szabhassuk neked bizonyos adatok, \xedgy annak felhaszn\xe1l\xe1s\xe1val, hogy kivel besz\xe9lsz \xe9s milyen j\xe1t\xe9kokkal j\xe1tszol. [Tov\xe1bbi inform\xe1ci\xf3t itt tal\xe1lsz.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Adatok felhaszn\xe1l\xe1sa a Discord műk\xf6d\xe9s\xe9hez",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7319,17 +7314,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "K\xf6zvetlen \xfczenetek enged\xe9lyez\xe9se a szerver tagjait\xf3l",
         USER_DROPS_SETTINGS: "Prom\xf3ci\xf3s be\xe1ll\xedt\xe1sok",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "J\xe1t\xe9kon bel\xfcli jutalmak (vagyis szerzem\xe9nyek)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Haszn\xe1ld fel az inform\xe1ci\xf3kat arr\xf3l, hogy milyen j\xe1t\xe9kokkal j\xe1tszol a szerzem\xe9nylehetős\xe9gekről val\xf3 t\xe1j\xe9koz\xf3d\xe1sra \xe9s a szerzem\xe9nyfeladatok teljes\xedt\xe9s\xe9re.",
         USER_DM_SETTINGS_TITLE: "Adatv\xe9delem a szerveren",
         USER_DM_SETTINGS_DESCRIPTION:
           "Szeretn\xe9d, hogy ez a v\xe1ltoztat\xe1s a m\xe1r megl\xe9vő szervereidre is \xe9rv\xe9nyes legyen? Emellett ha ell\xe1togatsz az adott szerverek be\xe1ll\xedt\xe1si oldal\xe1ra, ott le is tilthatod a k\xf6zvetlen \xfczeneteket.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "A Szerzem\xe9nyek funkci\xf3 jelenleg b\xe9ta \xe1llapotban van - szeretn\xe9nk, ha el\xe1ruln\xe1d, mi\xe9rt kapcsoltad ki. [Visszajelz\xe9s k\xe9rdő\xedve]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "A Szerzem\xe9nyek funkci\xf3 jelenleg b\xe9ta \xe1llapotban van - k\xf6sz\xf6nj\xfck a r\xe9szv\xe9telt, k\xedv\xe1ncsiak vagyunk a v\xe9lem\xe9nyedre. [Visszajelz\xe9s k\xe9rdő\xedve]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Bizony\xe1ra Discord-k\xfcldet\xe9seket keresel. Ha l\xe1tod ezt az \xfczenetet, meg kell v\xe1ltoztatnunk n\xe9h\xe1ny be\xe1ll\xedt\xe1st. Az enged\xe9lyez\xe9shez l\xe9pj a Be\xe1ll\xedt\xe1sok -> Adatv\xe9delem \xe9s biztons\xe1g men\xfcpontra, majd enged\xe9lyezd az „Adatok felhaszn\xe1l\xe1sa a Discord-\xe9lm\xe9nyem testreszab\xe1s\xe1ra” \xe9s a „J\xe1t\xe9kon bel\xfcli jutalmak (vagyis k\xfcldet\xe9sek)” be\xe1ll\xedt\xe1st egyar\xe1nt.\n\n[Mindezekről t\xf6bbet is megtudhatsz a GYIK-ben]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Feliratkoz\xe1s most",
@@ -10730,8 +10717,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Aktu\xe1lis előfizet\xe9s",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "\xdaj előfizet\xe9s \xf6sszesen",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} lemondva",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Ez a be\xe1ll\xedt\xe1s ar\xe1nyos\xedt\xe1sokat, kedvezm\xe9nyeket \xe9s visszat\xe9r\xedt\xe9seket is tartalmaz.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Mi\xe9rt l\xe1tom ezt?**\n\nCsomagv\xe1lt\xe1st v\xe1s\xe1rolsz, \xe9s a szervergyors\xedt\xe1said ennek megfelelően friss\xfclnek.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -14053,13 +14038,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Emellett [saj\xe1t szervert is l\xe9trehozhatsz](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Bocs\xe1ss meg",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Kikapcsolod a haszn\xe1lati statisztik\xe1kat?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "A kikapcsol\xe1s\xe1val a tov\xe1bbiakban nem dolgozunk fel \xfaj adatokat elemz\xe9sre. Ezzel elvesz\xedted a hozz\xe1f\xe9r\xe9st az \xfaj, k\xeds\xe9rleti funkci\xf3khoz \xe9s adott funkci\xf3k haszn\xe1lat alap\xfa jav\xedt\xe1s\xe1hoz, mint p\xe9ld\xe1ul a hangcseveg\xe9s. A r\xe9gi adataidat n\xe9vtelenn\xe9 tessz\xfck. Ha tov\xe1bbi t\xe1j\xe9koztat\xe1st szeretn\xe9l az adataid feldolgoz\xe1s\xe1val kapcsolatos jogod gyakorl\xe1s\xe1r\xf3l, \xedrje egy e-mailt ide: privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Igen, tuti",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nem, maradjon ahogy volt!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Kikapcsolod a testreszab\xe1st?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "A kikapcsol\xe1s\xe1val elvesz\xedted a hozz\xe1f\xe9r\xe9st a szem\xe9lyre szabott aj\xe1nl\xe1sokhoz. Ezt nem tudod vissza\xe1ll\xedtani a j\xf6vőben!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Igen, tuti",

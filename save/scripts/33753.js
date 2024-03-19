@@ -6222,6 +6222,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "เลือกเซิร์ฟเวอร์",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "คุณต้องมีสิทธิ์การอนุญาตให้**จัดการเซิร์ฟเวอร์**ในเซิร์ฟเวอร์",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "เพิ่มไปยังเซิร์ฟเวอร์",
         OAUTH2_REQUEST_MISSING_PARAM:
           "การร้องขอไม่ถูกต้อง ค่าที่หายไป **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "สโคปไม่ถูกต้อง **{scope}**",
@@ -6650,12 +6651,6 @@
         DATA_PRIVACY_CONTROLS: "วิธีการที่เราใช้ข้อมูลของคุณ",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "การใช้ข้อมูลเพื่อพัฒนา Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "การตั้งค่านี้จะอนุญาตให้เราใช้และประมวลข้อมูลการนำทางและใช้ Discord เพื่อประโยชน์แห่งการวิเคราะห์ ตัวอย่างเช่น เราจะสามารถให้คุณเข้าร่วมทดสอบฟังก์ชั่นใหม่ๆ ของเราได้ [เรียนรู้เพิ่มเติมได้ที่นี่]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "ใช้ข้อมูลนี้เพื่อเพิ่มคุณภาพการใช้งานของ Discord ของฉัน",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "การตั้งค่านี้ช่วยให้เราใช้ข้อมูลอย่างบุคคลที่คุณคุยด้วยและเกมที่คุณเล่นเพื่อปรับแต่ง Discord ให้เหมาะกับคุณได้ [เรียนรู้เพิ่มเติมเกี่ยวกับหัวข้อดังกล่าวได้ที่นี่]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "ใช้ข้อมูลเพื่อให้ Discord ทำงาน",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -6690,16 +6685,9 @@
           "คุณต้องการให้การตั้งค่านี้มีผลกับ server ที่คุณเป็นสมาชิกอยู่ในขณะนี้ด้วยหรือไม่",
         NEW_GUILDS_DM_ALLOWED: "อนุญาตข้อความส่วนตัวจากสมาชิกเซิร์ฟเวอร์",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "รางวัลในเกม (aka ดรอป)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "ใช้ข้อมูลเกี่ยวกับเกมที่คุณเล่นเพื่อบอกคุณเกี่ยวกับโอกาสของดรอปและเพื่อทำภารกิจดรอปให้สำเร็จ",
         USER_DM_SETTINGS_TITLE: "ความเป็นส่วนตัวของเซิร์ฟเวอร์",
         USER_DM_SETTINGS_DESCRIPTION:
           "คุณต้องการให้การเปลี่ยนแปลงนี้มีผลกับเซิร์ฟเวอร์ที่คุณเป็นสมาชิกอยู่ในขณะนี้ด้วยหรือไม่ คุณยังสามารถปิดการใช้งานข้อความส่วนตัวในแต่ละเซิร์ฟเวอร์ได้เช่นกันโดยไปที่หน้าการตั้งค่าของเซิร์ฟเวอร์",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "ดรอปกำลังอยู่ในช่วงเบต้า เราอยากทราบว่าทำไมคุณถึงปิดระบบการใช้งาน [แบบสอบถามคำติชม]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "ดรอปกำลังอยู่ในช่วงเบต้า ขอขอบคุณที่ร่วมใช้งาน เราอยากรับฟังความคิดเห็นจากคุณ! [แบบสอบถามคำติชม]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'คุณกำลังมองหาภารกิจ Discord อยู่แน่เลย! หากคุณเห็นข้อความนี้ เราต้องเปลี่ยนการตั้งค่าบางอย่าง เพื่อเปิดใช้ คุณจะต้องไปที่ การตั้งค่า -> ความเป็นส่วนตัวและความปลอดภัย และเปิดใช้งานการตั้งค่าทั้ง "ใช้ข้อมูลนี้เพื่อกหนดการใช้งานของ Discord ของฉันเอง" และ "รางวัลในเกม (aka ภารกิจ)"\n\n[อ่านเพิ่มเติมในคำถามที่พบบ่อย]({blogURL})ของเรา',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "เข้าร่วมเดี๋ยวนี้",
@@ -9838,8 +9826,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "การสมัครสมาชิกปัจจุบัน",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "การสมัครสมาชิกใหม่ทั้งหมด",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} ยกเลิกแล้ว",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "การปรับเปลี่ยนนี้รวมถึงการแบ่งส่วน, ส่วนลดและการคืนเงิน",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**ทำไมฉันจึงเห็นสิ่งนี้**\n\nคุณกำลังซื้อการเปลี่ยนแปลงแผน การบูสต์เซิร์ฟเวอร์ของคุณจะได้รับการอัปเดตให้สอดคล้องกัน",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -12897,12 +12883,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "คุณสามารถ [สร้างเซิร์ฟเวอร์ของตัวเอง](onClick)ได้เช่นกัน",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "ขอโทษทีนะ",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "ปิดการเก็บสถิติการใช้บางอย่าง",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "หากคุณปิดสิ่งนี้ เราจะหยุดการประมวลผลข้อมูลใหม่สำหรับการวิเคราะห์ คุณจะเสียสิทธิ์การเข้าถึงฟีเจอร์ทดลองใหม่ ๆ และการปรับปรุงตามการใช้งานของฟีเจอร์ต่าง ๆ เช่น แชทเสียง ข้อมูลเก่าของคุณจะไม่เชื่อมโยงกับคุณโดยตรงอีกต่อไป หากคุณต้องการยืนยันสิทธิ์เพื่อคัดค้านการประมวลผลข้อมูลของคุณเพิ่มเติม โปรดส่งอีเมลมาที่ privacy@discord.com",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "ใช่ ฉันแน่ใจ",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "ไม่ ฉันอยากถอยกลับ",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "ปิดการปรับเฉพาะตัวคุณ",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "การปิดโหมดนี้จะทำให้คุณเสียคำแนะนำหรือข้อเสนอแนะที่ออกแบบมาปรับให้เหมาะกับคุณ คุณจะเสียคำแนะนำหรือข้อเสนอแนะนั้น ๆ ไปตลอดนะ",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "ใช่ ฉันแน่ใจ",

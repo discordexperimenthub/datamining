@@ -6399,6 +6399,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Selecteer een server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Dit vereist dat je de machtiging **Server beheren** hebt op de server.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Toevoegen aan server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Ongeldig verzoek. Ontbrekende parameter **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ongeldig bereik **{scope}**",
@@ -6849,12 +6850,6 @@
         DATA_PRIVACY_CONTROLS: "Hoe wij jouw gegevens gebruiken",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Gegevens gebruiken om Discord te verbeteren",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Met deze instelling kunnen we informatie over de manier waarop je navigeert gebruiken en verwerken en Discord voor analytische doeleinden gebruiken. Het stelt ons bijvoorbeeld in staat om je op te nemen in nieuwe functie-experimenten die we testen. [Lees hier meer informatie.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Gegevens gebruiken om mijn Discord-ervaring aan te passen",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Met deze instelling kunnen we informatie, zoals met wie je praat en welke games je speelt, gebruiken om Discord voor jou aan te passen. [Lees hier meer informatie.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Gegevens gebruiken om Discord te doen werken",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Al mijn gegevens aanvragen",
@@ -6890,17 +6885,9 @@
           "Wil je deze wijziging ook toepassen op al je bestaande servers?",
         NEW_GUILDS_DM_ALLOWED: "Priv\xe9berichten van serverleden toestaan",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Beloningen in de game (oftewel drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "De gegevens over welke games je speelt gebruiken om je te informeren over drop-kansen en het voltooien van drop-missies.",
         USER_DM_SETTINGS_TITLE: "Serverprivacy",
         USER_DM_SETTINGS_DESCRIPTION:
           "Wil je deze wijziging ook toepassen op al je bestaande servers? Je kunt priv\xe9berichten ook op individuele servers uitschakelen via de instellingenpagina van de betreffende server.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drops zit momenteel in de b\xe8tafase. We willen graag weten waarom je het hebt uitgeschakeld. [Feedbackenqu\xeate]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drops zit momenteel in de b\xe8tafase. Bedankt voor het deelnemen, nu willen we graag wat meer horen over je ervaringen! [Feedbackenqu\xeate]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Jij bent vast op zoek naar Discord-missies! Als je dit bericht ziet, moeten er wat instellingen bijgewerkt worden. Om dit te doen ga je naar Instellingen > Privacy en veiligheid, en daar schakel je zowel 'Gegevens gebruiken om mijn Discord-ervaring aan te passen' en 'Beloningen in de game (oftewel missies)' in.\n\n[Lees meer in onze FAQ's]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Nu inschrijven",
@@ -10116,8 +10103,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Huidig abonnement",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nieuw abonnementstotaal",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} geannuleerd",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Deze wijziging is van toepassing op verrekening, korting en terugbetaling.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Waarom zie ik dit?**\n\nJe koopt een abonnementwijziging. Je serverboosts worden hieraan aangepast.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13252,13 +13237,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Je kunt ook [je eigen server beginnen](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Sorry daarvoor",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Enkele gebruiksstatistieken uitschakelen?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Als je deze optie uitschakelt, stoppen we met het verwerken van gegevens voor analyse. Je verliest toegang tot nieuwe experimentele functies en op gebruik gebaseerde verbeteringen aan functies zoals voicechat. Je oude gegevens worden niet langer direct aan jou gekoppeld. Als je je recht om bezwaar te maken tegen de verwerking van je gegevens op nog meer manieren wilt laten gelden, stuur dan een e-mail naar privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ja, ik weet het zeker",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Nee, ik wil terug!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Aanpassing uitschakelen?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Door dit uit te schakelen, verlies je de toegang tot zaken zoals gepersonaliseerde aanbevelingen en suggesties. Je kunt ze in de toekomst niet meer terughalen!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ja, ik weet het zeker",

@@ -6512,6 +6512,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Vybrat server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Aby bylo možn\xe9 server přev\xe9st, mus\xedš na něm m\xedt opr\xe1vněn\xed **spravovat server**.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Přidat na server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Neplatn\xfd požadavek. Chyb\xed parametr **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Neplatn\xfd rozsah **{scope}**",
@@ -6985,12 +6986,6 @@
         DATA_PRIVACY_CONTROLS: "Jak nakl\xe1d\xe1me s tv\xfdmi \xfadaji",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Použ\xedvat \xfadaje k vylepšov\xe1n\xed Discordu",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Toto nastaven\xed n\xe1m povoluje analyticky využ\xedvat a zpracov\xe1vat informace o tom, jak Discord použ\xedv\xe1š. Např\xedklad tě můžeme zahrnout do testov\xe1n\xed nov\xfdch funkc\xed. [V\xedc se dozv\xedš tady.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Použ\xedvat \xfadaje k přizpůsoben\xed Discordu",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Toto nastaven\xed n\xe1m umožňuje využ\xedvat informace (např\xedklad s k\xfdm se bav\xedš a jak\xe9 hry hraješ) k tomu, abychom Discord uzpůsobili tobě na m\xedru. [V\xedc informac\xed zjist\xedš zde.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Použ\xedvat \xfadaje k provozu Discordu",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7028,17 +7023,9 @@
           "Chceš tyto změny použ\xedt taky na všechny sv\xe9 st\xe1vaj\xedc\xed servery?",
         NEW_GUILDS_DM_ALLOWED: "Povolit př\xedm\xe9 zpr\xe1vy od členů serveru",
         USER_DROPS_SETTINGS: "Nastaven\xed propagace",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Odměny ve hře (označovan\xe9 tak\xe9 jako Drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Využij informace o hr\xe1ch, kter\xe9 hraješ, aby ti uk\xe1zaly cestu k odměn\xe1m a pomohly dokončit k nim vedouc\xed \xfakoly.",
         USER_DM_SETTINGS_TITLE: "Ochrana osobn\xedch \xfadajů na serveru",
         USER_DM_SETTINGS_DESCRIPTION:
           "Chceš tyto změny použ\xedt taky na všechny sv\xe9 st\xe1vaj\xedc\xed servery? Na str\xe1nce nastaven\xed př\xedslušn\xfdch serverů můžeš zak\xe1zat př\xedm\xe9 zpr\xe1vy na jednotliv\xfdch serverech.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Odměny ve hře jsou aktu\xe1lně v beta verzi. Řekneš n\xe1m pros\xedm, proč je vyp\xedn\xe1š? [Průzkum n\xe1zorů]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Odměny ve hře jsou aktu\xe1lně v beta verzi. Děkujeme za tvou \xfačast! Teď bychom r\xe1di znali tvůj n\xe1zor! [Průzkum n\xe1zorů]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Určitě hled\xe1š \xfakoly od Discordu! Pokud vid\xedš tuto zpr\xe1vu, pak ještě mus\xedme zapracovat na někter\xfdch nastaven\xedch. Jestliže chceš \xfakoly povolit, přejdi do č\xe1sti Nastaven\xed -> Soukrom\xed a\xa0zabezpečen\xed a\xa0povol možnosti „Použ\xedvat \xfadaje k\xa0přizpůsoben\xed Discordu“ a\xa0„Odměny ve hře (aka \xfakoly)“.\n\n[V\xedce se dozv\xedš v\xa0čast\xfdch dotazech]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Zapsat se nyn\xed",
@@ -10316,8 +10303,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "St\xe1vaj\xedc\xed předplatn\xe9",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nov\xe9 předplatn\xe9 celkem",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} – zrušeno",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Tato \xfaprava zahrnuje poměrn\xe9 rozdělen\xed, slevy a n\xe1hrady.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Proč se mi tohle zobrazuje?**\n\nKupuješ si změnu pl\xe1nu. Tv\xe1 vylepšen\xed serveru se patřičně aktualizuj\xed.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13521,13 +13506,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Tak\xe9 můžeš [vytvořit svůj vlastn\xed server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Omlouv\xe1me se",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Vypnout někter\xe9 uživatelsk\xe9 statistiky?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Pokud tuto možnost vypneš, přestaneme zpracov\xe1vat nov\xe1 data pro analytick\xe9 \xfačely. Přijdeš o př\xedstup k experiment\xe1ln\xedm funkc\xedm a vylepšen\xedm založen\xfdm na použ\xedv\xe1n\xed, jako je např\xedklad hlasov\xfd chat. Tv\xe1 star\xe1 data s tebou již nebudou př\xedmo sv\xe1z\xe1na. Pokud budeš cht\xedt d\xe1le uplatnit sv\xe9 pr\xe1vo na n\xe1mitku vůči zpracov\xe1n\xed sv\xfdch \xfadajů, pošli n\xe1m e-mail na adresu privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ano, nem\xe1m pochyb!",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ne, chci zp\xe1tky!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Vypnout přizpůsobov\xe1n\xed?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Pokud tuto možnost vypneš, přijdeš o př\xedstup k takov\xfdm věcem, jako jsou doporučen\xed a n\xe1vrhy tobě na m\xedru. Nebudeš je moct později obnovit!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ano, nem\xe1m pochyb!",

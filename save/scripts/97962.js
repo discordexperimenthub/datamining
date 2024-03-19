@@ -6365,6 +6365,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "सर्वर को सलेक्ट करें",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "इसके लिए आपके पास सर्वर में **सर्वर मैनेज करने की** परमिशन होनी चाहिए.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "सर्वर में ऐड करें",
         OAUTH2_REQUEST_MISSING_PARAM:
           "रिक्वेस्ट इनवैलिड है. परम **{param}** मिसिंग है",
         OAUTH2_REQUEST_INVALID_SCOPE: "इनवैलिड स्कोप **{scope}**",
@@ -6812,12 +6813,6 @@
         DATA_PRIVACY_CONTROLS: "हम आपके डेटा को कैसे इस्तेमाल करते है",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discord को बेहतर बनाने के लिए डेटा का इस्तेमाल करें",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "यह सेटिंग हमें इस बारे में जानकारी के इस्तेमाल और प्रोसेस करने की अनुमति देती है कि आप एनालिटिकल उद्देश्य के लिए Discord को कैसे नेविगेट और इस्तेमाल करते हैं. उदाहरण के लिए, यह हमें आपको हमारे टेस्ट किए गए न्यू फ़ीचर एक्सपेरिमेंट को शामिल करने की अनुमति देता है.[इसके बारे में और ज़्यादा यहां जानें.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "मेरे Discord एक्सपीरियंस को कस्टमाइज़ करने के लिए डेटा का इस्तेमाल करें",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "यह सेटिंग हमें आपके लिए Discord को अनुकूलित बनाने के लिए सूचना जैसे कि आप किससे बात करते हैं और आप कौन से गेम खेलते हैं, का उपयोग करने की अनुमति देती है। [इसके बारे में और जानें यहाँ.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discord वर्क करने के लिए डेटा का इस्तेमाल करें",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -6857,16 +6852,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "सर्वर मेम्बर से डायरेक्ट मैसेज के लिए अनुमति दें",
         USER_DROPS_SETTINGS: "प्रोमो सेटिंग्स",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "गेम के रिवॉर्ड (यानी, ड्रॉप्स)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "आपको ड्रॉप के मौकों की जानकारी देने और ड्रॉप क्वेस्ट पूरा करने के लिए आपके द्वारा खेले जाने वाले गेम की जानकारी का इस्तेमाल करना.",
         USER_DM_SETTINGS_TITLE: "सर्वर प्राइवेसी",
         USER_DM_SETTINGS_DESCRIPTION:
           "क्या आप इस बदलाव को अपने सभी मौजूदा सर्वर पर भी लागू करना चाहते हैं? आप हर सर्वर के सेटिंग पेज पर जाकर उस सर्वर के लिए DM को बंद भी कर सकते हैं.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "ड्रॉप्स फ़िलहाल बीटा में है - आपने इसे बंद क्यों कर दिया इसके बारे में हमें थोड़ी और जानकारी चाहिए. [फ़ीडबैक सर्वे]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "ड्रॉप्स फ़िलहाल बीटा में है - आपका इसमें हिस्सा लेने के लिए धन्यवाद, अब हमें आपका फ़ीडबैक चाहिए! [फ़ीडबैक सर्वे]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'आप ज़रूर Discord क्वेस्ट की तलाश में होंगे! अगर आपको ये मैसेज मिला है, तो इसका मतलब है कि हमें सेटिंग्स में कुछ बदलाव करने होंगे. इसे चालू करने के लिए आपको सेटिंग्स -> गोपनीयता एवं सुरक्षा में जाकर "मेरे Discord अनुभव को कस्टमाइज़ करने के लिए डेटा का इस्तेमाल करें" और "गेम के रिवॉर्ड (यानी, क्वेस्ट)" सेटिंग को इनेबल करना होगा.\n\n[हमारे FAQ पर और ज़्यादा जानकारी पाएं]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "अभी एनरोल करें",
@@ -10070,8 +10058,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "मौजूदा सब्सक्रिप्शन",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "नए सब्सक्रिप्शन का जोड़",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} कैंसल किया गया",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "इस एडजस्टमेंट में प्रोरेशन, डिस्काउंट और रीफंड शामिल हैं.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**मुझे यह क्यों दिखाई दे रहा है?**\n\nआप एक प्लान बदलाव खरीद रहे हैं. आपके सर्वर बूस्ट्स उसी के मुताबिक अपडेट किए जा रहे हैं.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13185,12 +13171,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "आप भी [अपना खुद का सर्वर स्टार्ट](onClick) कर सकते हैं",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "उसके लिए माफी चाहते हैं",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "कुछ इस्तेमाल डेटा बंद करें?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "अगर आप इसे बंद कर देते हैं, तो हम एनालिटिक्स के लिए नया डेटा प्रोसेस करना बंद कर देंगे. आप नए एक्सपेरिमेंटल फ़ीचर और वॉइस चैट जैसे फ़ीचर में इस्तेमाल-आधारित सुधारों का इस्तेमाल नहीं कर पाएंगे. आपका पुराना डेटा सीधा आपसे जुड़ा नहीं रह पाएगा. अगर आप अपने डेटा को हमारे ज़रिए प्रोसेस करने से जुड़े आपत्ति करने के अपने अधिकार पर और भी ज़ोर देना चाहते हैं, तो privacy@discord.com पर ईमेल भेजें.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "हां, मुझे यकीन है",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "नहीं, मुझे वापस ले जाएं!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "कस्टमाइज़ करना बंद करें?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "इसे बंद करके आप पर्सनलाइज़ की गई सलाहों और सुझावों जैसी चीज़ों का एक्सेस खो देंगे. भविष्य में आप इन्हें वापस नहीं पा सकेंगे!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "हां, मुझे यकीन है",

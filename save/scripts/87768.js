@@ -6542,6 +6542,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Επίλεξε έναν διακομιστή",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Αυτό απαιτεί να έχεις άδεια **Διαχείρισης διακομιστή** στον διακομιστή.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Προσθήκη στον διακομιστή",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Μη έγκυρο αίτημα. Μη υπάρχουσα παράμετρος **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Μη έγκυρο εύρος **{scope}**",
@@ -7009,12 +7010,6 @@
         DATA_PRIVACY_CONTROLS: "Πώς χρησιμοποιούμε τα δεδομένα σου",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Χρήση δεδομένων για τη βελτίωση του Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Αυτή η ρύθμιση μάς επιτρέπει να χρησιμοποιούμε και να επεξεργαζόμαστε, για σκοπούς ανάλυσης, πληροφορίες σχετικά με τον τρόπο που πλοηγείσαι στο Discord και το χρησιμοποιείς. Για παράδειγμα, μας επιτρέπει να σε συμπεριλαμβάνουμε σε νέες πειραματικές λειτουργίες που δοκιμάζουμε. [Μάθε περισσότερα εδώ.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Χρήση δεδομένων για τη διαμόρφωση της εμπειρίας μου με το Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Αυτή η ρύθμιση μάς επιτρέπει να χρησιμοποιούμε πληροφορίες, όπως τα άτομα που συνομιλείς και τα παιχνίδια που παίζεις, για να προσαρμόσουμε το Discord στα μέτρα σου. [Μάθε περισσότερα εδώ.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Χρήση δεδομένων για τη λειτουργία του Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7052,17 +7047,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Να επιτρέπονται άμεσα μηνύματα από μέλη του διακομιστή",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Ανταμοιβές εντός παιχνιδιού (γνωστές και ως Drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Χρήση των πληροφοριών σχετικά με τα παιχνίδια που παίζεις για να ενημερώνεσαι σχετικά με τις ευκαιρίες για Drops και για να ολοκληρώνεις Αποστολές για Drops.",
         USER_DM_SETTINGS_TITLE: "Απόρρητο διακομιστή",
         USER_DM_SETTINGS_DESCRIPTION:
           "Θέλεις να εφαρμόσεις αυτή την αλλαγή και σε όλους τους υπάρχοντες διακομιστές σου; Μπορείς επίσης να απενεργοποιήσεις τα άμεσα μηνύματα σε μεμονωμένους διακομιστές μεταβαίνοντας στη σελίδα ρυθμίσεων του κάθε διακομιστή.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Τα Drops είναι ακόμα σε δοκιμαστική έκδοση (Beta) - θα θέλαμε να μάθουμε περισσότερες λεπτομέρειες για τον λόγο για τον οποίο τα απενεργοποίησες. [Έρευνα σχολίων]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Τα Drops είναι ακόμα σε δοκιμαστική έκδοση (Beta) - σε ευχαριστούμε για τη συμμετοχή σου. Τώρα θα θέλαμε να ακούσουμε τη γνώμη σου! [Έρευνα σχολίων]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Μάλλον ψάχνεις για τις Αποστολές του Discord! Αν βλέπεις αυτό το μήνυμα, τότε πρέπει να διορθώσουμε λιγάκι κάποιες ρυθμίσεις. Για να γίνει αυτό, θα πρέπει να μεταβείς στις Ρυθμίσεις -> Απόρρητο & Ασφάλεια και να ενεργοποιήσεις τις ρυθμίσεις "Χρήση δεδομένων για την προσαρμογή της εμπειρίας μου με το Discord" και "Ανταμοιβές εντός παιχνιδιού (γνωστές και ως Αποστολές)".\n\n[Διάβασε περισσότερα στις Συχνές ερωτήσεις μας]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Εγγραφή τώρα",
@@ -10354,8 +10341,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Τρέχουσα συνδρομή",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Σύνολο Νέας Συνδρομής",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Το πρόγραμμα {planName} ακυρώθηκε",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Αυτή η προσαρμογή περιλαμβάνει παραχωρήσεις, εκπτώσεις και επιστροφές χρημάτων.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Γιατί το βλέπω αυτό;**\n\nΑγοράζεις αλλαγή προγράμματος. Οι ενισχύσεις διακομιστή σου ενημερώνονται αναλόγως.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13545,13 +13530,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Μπορείς επίσης να [δημιουργήσεις τον δικό σου διακομιστή](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Λυπούμαστε γι’ αυτό",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Απενεργοποίηση ορισμένων στατιστικών χρήσης;",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Απενεργοποιώντας αυτή τη λειτουργία, θα σταματήσουμε την επεξεργασία νέων δεδομένων για αναλυτικά στοιχεία. Δεν θα έχεις πια πρόσβαση σε νέες πειραματικές λειτουργίες και βελτιώσεις με βάση τη χρήση σε λειτουργίες όπως η φωνητική συνομιλία. Τα παλιά σου δεδομένα δεν θα συνδέονται πια άμεσα μαζί σου. Αν θέλεις να ασκήσεις περαιτέρω το δικαίωμά σου στο να αρνηθείς την επεξεργασία των δεδομένων σου, στείλε ένα email στο privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Ναι, είμαι σίγουρος",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Όχι, πάμε πίσω!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Απενεργοποίηση προσαρμογής;",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Απενεργοποιώντας αυτήν τη λειτουργία, δεν θα έχεις πια πρόσβαση σε εξατομικευμένες προτάσεις και συμβουλές. Δεν θα μπορέσεις να τις επαναφέρεις στο μέλλον!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Ναι, είμαι σίγουρος",

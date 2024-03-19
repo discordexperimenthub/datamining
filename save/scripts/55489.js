@@ -5884,6 +5884,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "选择一个服务器",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "这需要您拥有该服务器上的**管理服务器**权限。",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "添加至服务器",
         OAUTH2_REQUEST_MISSING_PARAM: "无效请求。缺失参数 **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "无效的范围 **{scope}**",
         OAUTH2_CONFIRM_BOT_PERMISSIONS:
@@ -6286,12 +6287,6 @@
         SETTINGS_DATA_PRIVACY_CONTROLS: "我们如何使用您的数据",
         DATA_PRIVACY_CONTROLS: "我们如何使用您的数据",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE: "使用数据改善 Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "该设置可以让我们使用和处理关于您是如何使用 Discord 的相关信息，作分析用。例如，通过它我们可以使您参与新功能的测试。[在此获取更多信息。]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "使用数据自定义我的 Discord 体验",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "这项设置可以使用信息(如您平时的聊天对象和您玩的游戏)为您量身定制 Discord。[在此处了解更多信息。]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "使用数据让 Discord 正常工作",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "请求我的全部数据",
@@ -6322,16 +6317,9 @@
         USER_DM_SETTINGS_QUESTION: "您想要也将此更改应用到所有现有的服务器吗？",
         NEW_GUILDS_DM_ALLOWED: "允许服务器成员直接向您发起私聊",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "游戏中奖励（又称掉落）",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "通过使用您游玩哪些游戏的信息，通知您掉落机会，来完成掉落任务。",
         USER_DM_SETTINGS_TITLE: "服务器隐私",
         USER_DM_SETTINGS_DESCRIPTION:
           "您也想将此更改应用到所有现有的服务器吗？您还可以访问该服务器的设置页面，以在个别服务器上禁用私信。",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "掉宝正在测试中——我们想知道您为什么关闭该功能。[反馈问卷]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "掉宝正在测试中——感谢您的参与，我们想了解您的使用感受！[反馈问卷]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "您一定在寻找 Discord 的任务吧！如果您看到了这条消息，说明我们需要调整一些设置。如想启用掉宝，您要前往“设置 -> 隐私与安全”，同时开启“使用数据自定义我的 Discord 体验”与“游戏内奖励（也就是任务）”设置。\n\n[前往我们的“常见问题”了解详情]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "立刻加入",
@@ -9306,8 +9294,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "当前订阅",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "新订阅总计",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} 已取消",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "该调整包括费用分摊、折扣以及退款。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**为什么给我看这个？**\n\n您正在购买一份方案更改。您的服务器助力也正在随之更新。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -12208,12 +12194,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "您也可以[开启属于自己的服务器](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "抱歉",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "关闭一些使用统计？",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "关闭此功能后，我们将停止处理新数据用于分析。您将无法继续体验实验性功能，语音聊天等功能也会停止根据您的使用情况作出改善。您以往的数据将不再直接跟您本人绑定。如果您想进一步主张权利，反对我们处理您的数据，请发邮件至 privacy@discord.com。",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "是的，我确定",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "不，保持原样！",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "关闭自定义？",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "关闭此功能后，您将无法再收到个性化推荐与建议等信息，并且将来也无法恢复！",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "是的，我确定",

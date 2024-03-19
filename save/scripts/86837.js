@@ -6654,6 +6654,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "S\xe9lectionner un serveur",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Tu dois avoir la permission **G\xe9rer le serveur** sur ce serveur.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Ajouter au serveur",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Demande non valide. Param\xe8tres manquants\xa0: **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Champ invalide\xa0: **{scope}**",
@@ -7125,12 +7126,6 @@
         DATA_PRIVACY_CONTROLS: "Comment nous utilisons tes donn\xe9es",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Utiliser les donn\xe9es pour am\xe9liorer Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Ce param\xe8tre nous autorise \xe0 utiliser et traiter des informations sur la fa\xe7on dont tu navigues et utilises Discord \xe0 des fins analytiques. Il nous permet, entre autres, de t'inclure dans certaines fonctionnalit\xe9s exp\xe9rimentales que nous testons. [En savoir plus.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Utiliser les donn\xe9es pour personnaliser mon exp\xe9rience Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Ce param\xe8tre nous autorise \xe0 utiliser tes informations (comme tes interlocuteurs ou les jeux auxquels tu joues) afin de personnaliser Discord rien que pour toi. [Clique ici pour en savoir plus.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Utiliser les donn\xe9es pour que Discord fonctionne",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7170,18 +7165,10 @@
         NEW_GUILDS_DM_ALLOWED:
           "Autoriser les messages priv\xe9s venant des membres du serveur",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "R\xe9compenses en jeu (alias les Drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Gr\xe2ce aux informations collect\xe9es sur les jeux auxquels tu joues, nous pourrons t'informer des opportunit\xe9s de Drops et te confier des qu\xeates.",
         USER_DM_SETTINGS_TITLE:
           "Param\xe8tres de confidentialit\xe9 du serveur",
         USER_DM_SETTINGS_DESCRIPTION:
           "Veux-tu \xe9galement appliquer cette modification \xe0 tous tes serveurs\xa0? Tu as \xe9galement la possibilit\xe9 de d\xe9sactiver les messages priv\xe9s pour chaque serveur en allant dans les param\xe8tres du serveur en question.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Les Drops sont actuellement en b\xeata. Nous aimerions savoir pourquoi tu les as d\xe9sactiv\xe9s. [Participer \xe0 l'enqu\xeate]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Les Drops sont actuellement en b\xeata. Merci d'y avoir particip\xe9, nous aimerions conna\xeetre ton avis\xa0! [Participer \xe0 l'enqu\xeate]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Tu cherches sans doute les qu\xeates Discord\xa0! Si tu vois ce message, c'est que tu dois d'abord aller modifier quelques param\xe8tres. Pour y avoir acc\xe8s, rends-toi dans Param\xe8tres -> Confidentialit\xe9 & S\xe9curit\xe9 et autorise ces deux param\xe8tres\xa0: \xab\xa0Utiliser les donn\xe9es pour personnaliser mon exp\xe9rience Discord\xa0\xbb et \xab\xa0R\xe9compenses en jeu (alias les qu\xeates)\xa0\xbb.\n\n[Tu peux en savoir plus en consultant nos FAQ]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Participer",
@@ -10507,8 +10494,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Abonnement actuel",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Total du nouvel abonnement",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} annul\xe9",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Cet ajustement inclut le prorata, les rabais et les remboursements.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Pourquoi est-ce que je vois \xe7a\xa0?**\n\nTu es en train d'acheter un changement d'abonnement. Tes boosts de serveur sont mis \xe0 jour en cons\xe9quence.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13764,16 +13749,10 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Tu peux \xe9galement [cr\xe9er ton propre serveur](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "D\xe9sol\xe9\xa0!",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "D\xe9sactiver quelques statistiques d'utilisation\xa0?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Si tu d\xe9sactives ceci, nous arr\xeaterons de traiter de nouvelles donn\xe9es \xe0 des fins d'analyse. Tu perdras l'acc\xe8s aux nouvelles fonctionnalit\xe9s exp\xe9rimentales et aux am\xe9liorations des fonctionnalit\xe9s bas\xe9es sur l'utilisation, telles que le chat vocal. Tes anciennes donn\xe9es ne seront plus directement li\xe9es \xe0 toi. Si tu souhaites poursuivre ton droit d'opposition \xe0 notre traitement de tes donn\xe9es, merci d'envoyer un e-mail \xe0 l'adresse privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM:
           "Oui, je suis s\xfbr(e) de mon coup\xa0!",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL:
           "Non, je veux revenir en arri\xe8re\xa0!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE:
-          "D\xe9sactiver la personnalisation\xa0?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "En d\xe9sactivant cette option, tu perdras l'acc\xe8s \xe0 certaines choses comme les recommandations et les suggestions personnalis\xe9es. Tu ne seras pas en mesure de les r\xe9cup\xe9rer \xe0 l'avenir\xa0!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM:

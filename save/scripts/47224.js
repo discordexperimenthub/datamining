@@ -6421,6 +6421,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Избери сървър",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "За тази цел е необходимо да имаш разрешение за **управление на сървър** в сървъра.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Добави към сървър",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Невалидна заявка. Липсващи параметри **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Невалиден обхват **{scope}**",
@@ -6876,12 +6877,6 @@
         DATA_PRIVACY_CONTROLS: "Как използваме данните ти",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Използване на данни за подобряване на Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Тази настройка ни позволява да използваме и обработваме информация за това как навигирате и използвате Discord за аналитични цели. Например, това ни позволява да те включим в експерименти с нови функции, които тестваме. [Научи повече за това тук.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Използване на данни за персонализиране на моето изживяване в Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Тази настройка ни позволява да използваме информация, като това какви игри играеш и с кого си говориш, за да персонализираме Discord за теб. [Научи повече за това тук.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Използване на данни, за да работи Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Заявка за всички мои данни",
@@ -6917,16 +6912,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Позволи директни съобщения от членовете на сървъра",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "Награди в играта (AKA „дропове“)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Използва информацията относно това какви игри играеш, за да ти казва за възможностите за дропове и за изпълнение на куестове за дропове.",
         USER_DM_SETTINGS_TITLE: "Поверителност на сървъра",
         USER_DM_SETTINGS_DESCRIPTION:
           "Искаш ли да приложиш тази промяна за всичките си съществуващи сървъри? Можеш също така да деактивираш директните съобщения на индивидуални сървъри, като отвориш страницата с настройки на съответния сървър.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Дроповете в момента са в бета-версия – бихме искали да разберем защо ги изключи. [Анкета за обратна връзка]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Дроповете в момента са в бета-версия – благодарим ти за участието. А сега бихме искали да чуем мнението ти! [Анкета за обратна връзка]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Сигурно търсиш куестове в Discord! Ако виждаш това съобщение, ще трябва да коригираме някои настройки. За да ги активираш, ще трябва да отидеш в „Настройки -> Поверителност и безопасност“ и да активираш както „Използване на данни за персонализиране на моето изживяване в Discord“, така и настройките за „Награди в играта“ (AKA „куестове“).\n\n[Прочети повече в нашите ЧЗВ]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Записване сега",
@@ -10158,8 +10146,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Настоящ абонамент",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Сума за нов абонамент",
         PREMIUM_SUBSCRIPTION_CANCELLED: "План {planName} е анулиран",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Тази корекция включва разпределяния, отстъпки и възстановени суми.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Защо виждам това?**\n\nКупуваш промяна на план. Твоите усилвания на сървъри се актуализират в съответствие с това.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13302,13 +13288,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Ти също можеш да [стартираш свой собствен сървър](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Извиняваме се за това",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Изключи някои статистики за използване?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Ако изключиш това, ще спрем да обработваме нови данни за анализ. Ще загубиш достъп до нови експериментални функции и базирани на употреба подобрения на функции като гласов чат. Старите ти данни вече няма да бъдат пряко свързани с теб. Ако искаш допълнително да използваш правото си да възразиш срещу нашата обработка на твоите данни, изпрати имейл на privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Да, сигурен/на съм",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Не, върни ме назад!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Изключи персонализацията?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Изключвайки това, губите достъп до неща като персонализирани препоръки и предложения. Няма да можеш да ги възстановиш в бъдеще!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Да, сигурен/на съм",

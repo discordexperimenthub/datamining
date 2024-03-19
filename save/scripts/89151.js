@@ -6420,6 +6420,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Bir sunucu se\xe7",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Bunun i\xe7in sunucuda **Sunucu Y\xf6netme** iznine sahip olmalısın.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Sunucuya ekle",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Talep ge\xe7ersiz. **{param}** parametresi eksik",
         OAUTH2_REQUEST_INVALID_SCOPE: "Ge\xe7ersiz kapsam **{scope}**",
@@ -6869,12 +6870,6 @@
         DATA_PRIVACY_CONTROLS: "Verilerini kullanma pratiklerimiz",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discord'u iyileştirmek i\xe7in verileri kullan",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Bu ayar sayesinde senin Discord i\xe7inde dolaşma ve uygulamayı kullanma şeklin hakkındaki bilgileri işliyor ve analiz amacıyla kullanıyoruz. \xd6rneğin, bu sayede seni test ettiğimiz yeni \xf6zellik denemelerine dahil ediyoruz. [Buradan daha fazla bilgi al.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Discord deneyimimi kişiselleştirmek i\xe7in verileri kullan",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Bu ayar sayesinde Discord'u sana \xf6zel hale getirmek i\xe7in konuştuğun kişiler veya oynadığın oyunlar gibi bilgileri kullanıyoruz. [Buradan daha fazla bilgi edin.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discord'un \xe7alışması i\xe7in verileri kullan",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "T\xfcm Verilerimi iste",
@@ -6909,17 +6904,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Sunucu \xfcyelerinden gelen direkt mesajlara izin ver.",
         USER_DROPS_SETTINGS: "Reklam Ayarları",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Oyun i\xe7i \xf6d\xfcller (yani Drop'lar)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Hangi oyunları oynadığının bilgisini kullanarak sana Drop fırsatları ve Drop G\xf6revlerini tamamlamanı s\xf6yler.",
         USER_DM_SETTINGS_TITLE: "Sunucu Gizliliği",
         USER_DM_SETTINGS_DESCRIPTION:
           "Bu değişikliği ayrıca b\xfct\xfcn mevcut sunucularına uygulamak istiyor musun? Buna ek olarak, birbirinden bağımsız olarak her sunucunun kendi Gizlilik Ayarları sekmesinden o sunucu i\xe7in direkt mesajları devre dışı bırakabilirsin.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drop'lar şu an betada. Neden devre dışı bıraktığın hakkında g\xf6r\xfcşlerini \xf6ğrenmek isteriz. [Geri Bildirim Anketi]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drop'lar şu an betada. Katıldığın i\xe7in teşekk\xfcr ederiz ve g\xf6r\xfcşlerini \xf6ğrenmek isteriz! [Geri Bildirim Anketi]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Discord G\xf6revlerini arıyor olmalısın! Bu mesajı g\xf6r\xfcyorsan bazı ayarlarda değişiklikler yapmalıyız. Etkinleştirmek i\xe7in Ayarlar -> Gizlilik ve G\xfcvenlik sekmesine gidip "Discord deneyimimi kişiselleştirmek i\xe7in verileri kullan" ve "Oyun i\xe7i \xf6d\xfcller (yani G\xf6revler)" ayarlarını etkinleştir.\n\n[Daha fazla bilgiye SSS kısmından ulaşabilirsin.]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Şimdi Katıl",
@@ -10150,8 +10137,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Mevcut Abonelik",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Yeni Abonelik Toplamı",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} İptal Edildi",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Bu ayarlamaya eşit olarak paylaştırma, indirimler ve iadeler de dahildir.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Bunu neden g\xf6r\xfcyorum?**\n\nBir plan değişikliği satın alıyorsun. Sunucu Takviyelerin de buna uygun olarak g\xfcncelleniyor.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13304,13 +13289,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Ayrıca [kendi sunucunu da oluşturabilirsin](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Kusura bakma",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Bazı kullanım istatistiklerini kapat?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Bunu kapatırsan analiz i\xe7in yeni verileri işlemeyi durduracağız. Yeni deneysel \xf6zelliklere ve sesli sohbet gibi kullanım temelli iyileştirmelere erişim imk\xe2nını kaybedeceksin. Eski verilerin artık doğrudan sana bağlanamayacak. Verilerini işlememiz konusundaki itiraz hakkını daha ileri aşamalarda uygulamak istiyorsan privacy@discord.com adresine e-posta g\xf6nderebilirsin.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Evet, eminim",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Hayır, beni geri alın!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Kişiselleştirmeyi kapat?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Bunu kapatırsan kişiselleştirilmiş \xf6neriler ve tavsiyeler gibi şeylere erişim imkanını kaybedeceksin. Bunları gelecekte geri alamayacaksın!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Evet, eminim",

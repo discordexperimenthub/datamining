@@ -5887,6 +5887,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "選擇伺服器",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "您必須擁有伺服器的**管理伺服器**權限才能執行此動作。",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "新增至伺服器",
         OAUTH2_REQUEST_MISSING_PARAM: "無效的請求。缺少參數 **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "無效的範圍 **{scope}**",
         OAUTH2_CONFIRM_BOT_PERMISSIONS:
@@ -6292,12 +6293,6 @@
         DATA_PRIVACY_CONTROLS: "我們如何使用您的資料",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "善用資料提升 Discord 表現",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "這項設定讓我們可使用並處理您瀏覽與使用 Discord 的狀況，好讓我們進行分析。舉例來說，我們得以將您加入我們新功能的測試中。[點擊此處來了解更多。]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "善用資料自訂 Discord 體驗",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "這項設定讓我們可運用資訊，像是與你對話的對象，或者你遊玩的遊戲，來為你量身打造 Discord。[在此了解更多詳細資訊。]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE: "善用資料運作 Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "請求我的全部資料",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE:
@@ -6329,16 +6324,9 @@
           "您想要也將此變更套用到所有現有的伺服器上嗎？",
         NEW_GUILDS_DM_ALLOWED: "允許來自伺服器成員的私人訊息",
         USER_DROPS_SETTINGS: "優惠設定",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "遊戲內獎勵 (亦稱掉寶)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "透過您所玩遊戲的相關資訊，可以知道有哪些掉寶並有助於完成掉寶任務。",
         USER_DM_SETTINGS_TITLE: "伺服器隱私",
         USER_DM_SETTINGS_DESCRIPTION:
           "您想將此變更也套用到所有現有伺服器上嗎？您也可以造訪伺服器設定頁面，停用該伺服器上的私人訊息。",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "掉寶為測試版功能，我們想詳細瞭解您關掉此功能的原因。[意見回饋問卷調查]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "掉寶為測試版功能，感謝您的參與，現在我們想聽聽您的意見！[意見回饋問卷調查]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "您一定是在找 Discord 任務功能！如果您看到此訊息，則需調整一些設定。若要啟用這項功能，您需要前往「設定」>「隱私權與安全性」，並開啟「善用資料自訂 Discord 體驗」和「遊戲內獎勵 (亦即任務)」設定。\n\n[若要瞭解更多資訊，請造訪我們的常見問答]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "馬上註冊",
@@ -9314,8 +9302,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "目前訂閱",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "新訂閱總計",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} 已取消",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "此調整包含比例分配、折扣和退款。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**為何我會看到此內容？**\n\n因為您正在購買方案變更。您的伺服器加成正在進行相應的更新。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -12205,12 +12191,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "您也可以 [建立自己的伺服器](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "我們很抱歉",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "要關閉一些用量統計嗎？",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "若您關閉這項功能，我們將停止進行新資料的分析。您將無法使用實驗中的新功能，與基於用量的功能改善，如語音聊天。您的舊資料將不再直接與您綁定。如果您想進一步主張反對我們處理您資料的權利，請寄電子郵件至 privacy@discord.com。",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "是的，我確定",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "不，帶我回上一步！",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "關閉自訂功能？",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "若關閉這項功能，將使您無法再存取如個人化的建議項目等功能。您也無法在未來恢復使用！",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "是的，我確定",

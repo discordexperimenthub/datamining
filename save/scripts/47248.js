@@ -6365,6 +6365,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Pasirink serverį",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Tam reikia turėti **serverio tvarkymo** leidimą šiame serveryje.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Pridėti į serverį",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Netinkama užklausa. Trūksta parametro **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Netinkama sritis **{scope}**",
@@ -6818,12 +6819,6 @@
         DATA_PRIVACY_CONTROLS: "Kaip mes naudojame tavo duomenis",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Naudoti duomenis, kad pagerintume Discordą",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Šis nustatymas leidžia mums naudoti ir apdoroti informaciją apie tai, kaip naršai ir naudoji Discord, siekiant ją analizuoti. Pavyzdžiui, jis leidžia įtraukti tave į naujų funkcijų eksperimentus, kuriuos vykdome. [Sužinok daugiau apie tai čia.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Naudokis duomenimis, kad pasirinktum savo Discord patirtį",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Šis nustatymas mums leidžia naudoti informaciją, pvz., su kuo kalbi ir kokius žaidimus žaidi, kad galėtume tau pritaikyti Discord. [Sužinok daugiau apie jį čia.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Naudokis duomenimis, kad pradėtų Discord dirbti",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Prašyti visų mano duomenų",
@@ -6859,17 +6854,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Leisti gauti asmenines žinutes iš serverio narių",
         USER_DROPS_SETTINGS: "Reklamos nustatymai",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Apdovanojimai žaidime (aka dropai)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Naudoti informaciją apie tavo žaidžiamus žaidimus, kad tau būtų pranešta apie galimybes gauti Drops ir užbaigti Drops rinkimą.",
         USER_DM_SETTINGS_TITLE: "Serverio privatumas",
         USER_DM_SETTINGS_DESCRIPTION:
           "Ar nori ši pakeitimą taikyti visiems savo esamiems serveriams? Taip pat gali išjungti asmenines žinutes atskiruose serveriuose, apsilankydamas (-a) to serverio nustatymų puslapyje.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Dropai šiuo metu yra Beta versijos – norėtume sužinoti daugiau apie tai, kodėl juos išjungei. [Atsiliepimų apklausa]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Dropai šiuo metu yra Beta versijos – dėkojame, kad dalyvauji, o dabar norėtume sužinoti tavo nuomonę! [Atsiliepimų apklausa]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Tikriausiai ieškai Discord misijos! Jei matai šią žinutę, reikėtų pakoreguoti keletą nustatymų. Kad juos įjungtum, nueik į Nustatymai -> Privatumas ir sauga, tada įjunk tiek „Naudoti duomenis Discord patirčiai tinkinti“, tiek „Apdovanojimai žaidime (aka misijos)“ nustatymus.\n\n[Skaityti daugiau mūsų DUK]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Pradėti dalyvauti dabar",
@@ -10095,8 +10082,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Dabartinė prenumerata",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Bendra naujos prenumeratos suma",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} atšaukta",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Šis koregavimas apima mokesčio perskaičiavimą, nuolaidas ir lėšų grąžinimą.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Kodėl tai matau?**\n\nTu perki plano keitimą. Atitinkamai atnaujinami serverio stiprinimai.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13247,13 +13232,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Taip pat gali [susikurti savo serverį](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Apgailestaujame",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Išjungti kai kuriuos naudojimo statistinius duomenis?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Jei išjungsi šią parinktį, nebeapdorosime naujų duomenų analizės tikslais. Neteksi prieigos prie naujų eksperimentinių funkcijų ir naudojimo duomenimis grindžiamų funkcijų patobulinimų – pavyzdžiui, pokalbių balsu. Tavo seni duomenys nebebus su tavimi tiesiogiai susieti. Jei pageidauji dar platesnio savo teisės prieštarauti tavo duomenų tvarkymui taikymo, parašyk el. laišką adresu privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Taip, esu tikras",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ne, grąžinkite mane atgal!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Išjungti pritaikymą?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Jei išjungsi šią parinktį, prarasi prieigą prie tam tikrų dalykų, pavyzdžiui, asmeniškai pritaikytų rekomendacijų ir pasiūlymų. Ateityje negalėsi jų susigrąžinti!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Taip, esu tikras",

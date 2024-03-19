@@ -6321,6 +6321,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "サーバーを選択",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "サーバーの**サーバー管理**権限が必要です。",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "サーバーに追加",
         OAUTH2_REQUEST_MISSING_PARAM:
           "無効なリクエストです。不足したパラメータ **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "無効な範囲**{scope}**",
@@ -6765,12 +6766,6 @@
         DATA_PRIVACY_CONTROLS: "当方でのあなたのデータの使い方",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Discordを改善するためにデータを使用",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "設定すると、あなたがDiscordをどのように操作、利用しているかについて、情報を分析目的で使用、処理させていただきます。 例えば、新機能のテストにあなたを含めることができるようになります。 [詳しくはこちらをご覧ください]({helpdeskArticle})。",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Discord体験をカスタマイズするためにデータを使用",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "この設定では、あなたが話す相手やプレイするゲームなどの情報を使い、Discordをお好みにカスタマイズできます。[詳しくはこちらをご覧ください。]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Discordを機能させるためにデータを使用",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "データすべてをリクエスト",
@@ -6807,16 +6802,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "サーバーにいるメンバーからのダイレクトメッセージを許可する",
         USER_DROPS_SETTINGS: "プロモ設定",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "ゲーム内リワード（AKAドロップ）",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "あなたがプレイしているゲームの情報を使って、ドロップチャンスについて知ったり、ドロップクエストをクリアしたりできます。",
         USER_DM_SETTINGS_TITLE: "サーバープライバシー",
         USER_DM_SETTINGS_DESCRIPTION:
           "この変更を参加中の全てのサーバーにも適用しますか？各サーバーの設定ページから、サーバー別にダイレクトメッセージを無効にすることもできます。",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "ドロップは現在ベータ版です。オフにした理由をお聞かせいただけますと幸いです。[フィードバックアンケート]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "ドロップは現在ベータ版です。参加していただきありがとうございます。ぜひご意見をお聞かせください！[フィードバックアンケート]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Discordクエストをご希望ですね！　このメッセージが表示されたということは、少し設定をいじる必用があります。有効にするには、「設定」→「プライバシー・安全」を開き、「Discord体験をカスタマイズするためにデータを使用」と「ゲーム内リワード（AKAクエスト）」の設定を有効にしてください。\n\n[詳細はFAQでご確認ください]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "今すぐ参加",
@@ -9983,8 +9971,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "現在の購読",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "新しい購読合計",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName}をキャンセルしました",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "この調整には、配分、割引、返金が含まれます。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**これが表示される理由**\n\nプラン変更を購入しています。 これに応じてサーバーブーストが更新されます。",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13089,12 +13075,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "自分のサーバーを[立ち上げることもできます](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "残念です",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "利用状況統計をオフにしますか？",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "これをオフにすると、Discord は今後、分析を目的としたデータの処理を停止します。テスト中の新機能や、ボイスチャットなどの機能の使用状況に基づく改善がご利用いただけなくなります。過去のデータがお客様と紐付けされることはなくなります。Discord による個人データ処理に反対する権利をさらに行使されたい場合は、privacy@discord.com までメールでご連絡ください。",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "はい、わかっています",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "いいえ、やっぱりやめます！",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "カスタマイズをオフにしますか？",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "これをオフにすると、パーソナライズされたアドバイスや推奨事項などへのアクセスを失います。一旦オフにすると、元に戻すことはできなくなります！",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "はい、わかっています",

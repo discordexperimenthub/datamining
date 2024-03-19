@@ -6243,6 +6243,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Select a server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "This requires you to have **Manage Server** permission in the server.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Add to Server",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Invalid request. Missing param **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Invalid scope **{scope}**",
@@ -6678,12 +6679,6 @@
         DATA_PRIVACY_CONTROLS: "How we use your data",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Use data to improve Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "This setting allows us to use and process information about how you navigate and use Discord for analytical purposes. For example, it allows us to include you in new feature experiments we test. [Learn more about it here.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Use data to customise my Discord experience",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "This setting allows us to use information, such as who you talk to and what games you play, to customise Discord for you. [Learn more about it here.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Use data to make Discord work",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Request all of my data",
@@ -6716,16 +6711,9 @@
           "Do you want to also apply this change to all your existing servers?",
         NEW_GUILDS_DM_ALLOWED: "Allow direct messages from server members",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "In-game rewards (aka Drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Use the information about what games you play to tell you about Drops opportunities and to complete Drops Quests.",
         USER_DM_SETTINGS_TITLE: "Server Privacy",
         USER_DM_SETTINGS_DESCRIPTION:
           "Do you want to also apply this change to all your existing servers? You can also disable direct messages on individual servers by visiting that server’s settings page.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drops is currently in beta – we’d like to learn more about why you turned it off. [Feedback Survey]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drops is currently in beta – thanks for participating, now we’d like to hear from you! [Feedback Survey]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "You must be looking for Discord Quests! If you’re seeing this message, we need to tweak some settings. To enable it, you’ll need to go to Settings -> Privacy & Safety and enable both ‘Use data to customise my Discord experience’ and ‘In-game rewards (aka Quests)’ settings.\n\n[Read more in our FAQs]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Enrol Now",
@@ -9865,8 +9853,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Current Subscription",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "New Subscription Total",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} Cancelled",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "This adjustment includes prorations, discounts and refunds.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Why am I seeing this?**\n\nYou are purchasing a plan change. Your Server Boosts are being updated accordingly.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -12929,12 +12915,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "You can also [start your own server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Sorry about that",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "Turn off some usage statistics?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "If you turn this off, we’ll stop processing new data for analytics. You will lose access to new experimental features and usage-based improvements to features like voice chat. Your old data will no longer be directly tied to you. If you'd like to further assert your right to object to our processing of your data, email privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Yes, I'm sure",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "No, take me back!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Turn off customisation?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "By turning this off you lose access to things like personalised recommendations and suggestions. You won't be able to recover them in the future!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Yes, I'm sure",

@@ -6548,6 +6548,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Valitse palvelin",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "T\xe4m\xe4 edellytt\xe4\xe4, ett\xe4 sinulla on **hallintaoikeudet** palvelimelle.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Lis\xe4\xe4 palvelimelle",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Virheellinen pyynt\xf6. Parametri **{param}** puuttuu",
         OAUTH2_REQUEST_INVALID_SCOPE: "Virheellinen laajuus **{scope}**",
@@ -7009,12 +7010,6 @@
         DATA_PRIVACY_CONTROLS: "Kuinka k\xe4yt\xe4mme tietojasi",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Datan k\xe4ytt\xf6 Discordin parantamiseen",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "T\xe4m\xe4 asetus sallii meid\xe4n k\xe4ytt\xe4\xe4 ja k\xe4sitell\xe4 tilastollisiin tarkoituksiin tietoja siit\xe4, miten selaat ja k\xe4yt\xe4t Discordia. Se esimerkiksi sallii meid\xe4n sis\xe4llytt\xe4\xe4 sinut uusien ominaisuuksien kokeiluihin. [Lue siit\xe4 lis\xe4\xe4 t\xe4\xe4lt\xe4.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Datan k\xe4ytt\xf6 Discord-kokemuksen mukauttamiseen",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "T\xe4m\xe4 asetus sallii meid\xe4n k\xe4ytt\xe4\xe4 erilaisia tietoja, kuten tietoa keskustelukumppaneistasi ja pelaamistasi peleist\xe4, Discordin mukauttamiseen sinulle sopivaksi. [Lue lis\xe4\xe4 t\xe4\xe4lt\xe4.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Datan k\xe4ytt\xf6 Discordin yll\xe4pit\xe4miseen",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7051,17 +7046,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Salli yksityisviestit palvelimen j\xe4senilt\xe4",
         USER_DROPS_SETTINGS: "Promoasetukset",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Pelinsis\xe4iset palkinnot (eli dropit)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Anna k\xe4ytt\xe4\xe4 tietoja pelaamistasi peleist\xe4 droppimahdollisuuksista ja droppiteht\xe4vist\xe4 kertomiseen sinulle.",
         USER_DM_SETTINGS_TITLE: "Palvelimen tietoturva",
         USER_DM_SETTINGS_DESCRIPTION:
           "Haluatko t\xe4m\xe4n muutoksen vaikuttavan my\xf6s kaikkiin olemassa oleviin palvelimiisi? Voit poistaa yksityisviestipyynn\xf6t k\xe4yt\xf6st\xe4 yksitt\xe4iselt\xe4 palvelimelta palvelinkohtaisella asetussivulla.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Dropit ovat parhaillaan beetaominaisuus. Kuulisimme mielell\xe4mme, miksi p\xe4\xe4tit ottaa sen k\xe4ytt\xf6\xf6n. [Palautekysely]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Dropit ovat t\xe4ll\xe4 hetkell\xe4 beetaominaisuus – kiitos sen k\xe4ytt\xe4misest\xe4! Kuulisimme mielell\xe4mme, mit\xe4 mielt\xe4 olet siit\xe4. [Palautekysely]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Etsit varmasti Discord-teht\xe4vi\xe4! Jos n\xe4et t\xe4m\xe4n viestin, joitakin asetuksiasi on muutettava. Jos haluat ottaa sen k\xe4ytt\xf6\xf6n, valitse Asetukset -> Yksityisyys ja turvallisuus ja ota sek\xe4 Datan k\xe4ytt\xf6 Discord-kokemuksen mukauttamiseen- ett\xe4 Pelinsis\xe4iset palkinnot (eli teht\xe4v\xe4t) ‑asetus k\xe4ytt\xf6\xf6n.\n\n[Katso lis\xe4tietoja usein kysytyist\xe4 kysymyksist\xe4mme]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Rekister\xf6idy nyt",
@@ -10339,8 +10326,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Nykyinen tilaus",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Uuden tilauksen summa",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} peruttu",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "T\xe4h\xe4n muutokseen sis\xe4ltyy arvonsiirtoja, alennuksia ja hyvityksi\xe4.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Miksi t\xe4m\xe4 n\xe4kyy minulle?**\n\nOlet ostamassa tilausmallin muutoksen. Palvelimen nostatukset p\xe4ivitet\xe4\xe4n sen mukaisesti.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13536,14 +13521,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Voit my\xf6s [pist\xe4\xe4 pystyyn oman palvelimesi](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Valitan",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Poistetaanko k\xe4ytt\xf6tilastoja k\xe4yt\xf6st\xe4?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Jos poistat t\xe4m\xe4n k\xe4yt\xf6st\xe4, lopetamme uusien tietojesi k\xe4sittelyn analyysitarkoituksessa. Menet\xe4t p\xe4\xe4syn uusiin kokeellisiin toimintoihin ja puhekeskustelun kaltaisten toimintojen k\xe4ytt\xf6pohjaisiin parannuksiin. Vanhojen tietojesi suorat yhteydet itseesi poistetaan. Jos haluat k\xe4ytt\xe4\xe4 muita tietojesi k\xe4sittelyyn liittyvi\xe4 oikeuksiasi, l\xe4het\xe4 s\xe4hk\xf6postia osoitteeseen privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Kyll\xe4, haluan niin",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ei, vie minut takaisin!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE:
-          "Poistetaanko mukauttaminen k\xe4yt\xf6st\xe4?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Poistamalla t\xe4m\xe4n k\xe4yt\xf6st\xe4 menet\xe4t p\xe4\xe4syn mukautettujen ehdotusten kaltaisiin toimintoihin. Et voi saada niit\xe4 takaisin my\xf6hemmin!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Kyll\xe4, haluan niin",

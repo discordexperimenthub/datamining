@@ -6575,6 +6575,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Chọn m\xe1y chủ",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Thao t\xe1c n\xe0y y\xeau cầu bạn phải c\xf3 quyền **Quản L\xfd M\xe1y Chủ** của m\xe1y chủ n\xe0y.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Th\xeam v\xe0o M\xe1y Chủ",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Y\xeau cầu kh\xf4ng hợp lệ. Thiếu th\xf4ng số **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Phạm vi kh\xf4ng hợp lệ **{scope}**",
@@ -7044,12 +7045,6 @@
           "C\xe1ch ch\xfang t\xf4i sử dụng dữ liệu của bạn",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Sử dụng dữ liệu để cải thiện Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "C\xe0i đặt n\xe0y cho ph\xe9p ch\xfang t\xf4i sử dụng v\xe0 xử l\xfd th\xf4ng tin với mục đ\xedch ph\xe2n t\xedch về c\xe1ch m\xe0 bạn điều hướng v\xe0 d\xf9ng Discord. V\xed dụ, ch\xfang t\xf4i c\xf3 thể cung cấp cho bạn c\xe1c t\xednh năng mới để sử dụng với mục đ\xedch thử nghiệm. [T\xecm hiểu th\xeam ở đ\xe2y.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Sử dụng dữ liệu để t\xf9y chỉnh trải nghiệm tr\xean Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "C\xe0i đặt n\xe0y cho ph\xe9p ch\xfang t\xf4i sử dụng c\xe1c th\xf4ng tin, v\xed dụ như người m\xe0 bạn n\xf3i chuyện hay tr\xf2 chơi m\xe0 bạn chơi, để t\xf9y biến Discord d\xe0nh ri\xeang cho bạn. [T\xecm hiểu th\xeam tại đ\xe2y.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Sử dụng dữ liệu để cải thiện Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE:
@@ -7088,17 +7083,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Cho ph\xe9p th\xe0nh vi\xean trong m\xe1y chủ gửi tin nhắn trực tiếp",
         USER_DROPS_SETTINGS: "C\xe0i đặt quảng b\xe1",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Phần thưởng trong game (c\xf2n gọi l\xe0 Drop)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Sử dụng th\xf4ng tin về những game m\xe0 bạn chơi để t\xednh to\xe1n cơ hội nhận Drop của bạn v\xe0 ho\xe0n th\xe0nh c\xe1c Nhiệm vụ Drop.",
         USER_DM_SETTINGS_TITLE: "Bảo Mật M\xe1y Chủ",
         USER_DM_SETTINGS_DESCRIPTION:
           "Bạn c\xf3 muốn \xe1p dụng thay đổi n\xe0y cho tất cả c\xe1c m\xe1y chủ hiện tại của m\xecnh kh\xf4ng? Bạn cũng c\xf3 thể tắt tin nhắn trực tiếp cho từng m\xe1y chủ bằng c\xe1ch truy cập v\xe0o trang c\xe0i đặt của m\xe1y chủ đ\xf3.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drop hiện vẫn đang trong giai đoạn thử nghiệm - ch\xfang t\xf4i muốn hiểu r\xf5 hơn tại sao bạn lại tắt t\xednh năng n\xe0y. [Khảo S\xe1t Phản Hồi]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drop hiện vẫn đang trong giai đoạn thử nghiệm, giờ ch\xfang t\xf4i muốn nghe \xfd kiến của bạn. [Khảo S\xe1t Phản Hồi]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'C\xf3 vẻ bạn đang t\xecm kiếm Nhiệm Vụ Discord! Nếu bạn thấy tin nhắn n\xe0y th\xec ch\xfang ta sẽ cần phải t\xf9y chỉnh c\xe0i đặt một ch\xfat đấy. Để bật t\xednh năng n\xe0y, bạn sẽ phải tới C\xe0i đặt -> Bảo Mật & An To\xe0n v\xe0 bật cả hai c\xe0i đặt "Sử dụng dữ liệu để t\xf9y chỉnh trải nghiệm Discord" v\xe0 "Phần thưởng trong game (c\xf2n gọi l\xe0 Nhiệm Vụ)".\n\n[Đọc th\xeam tại FAQ của ch\xfang t\xf4i]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Đăng K\xfd Ngay",
@@ -10414,8 +10401,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "G\xf3i Đăng K\xfd Hiện Tại",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Tổng G\xf3i Đăng K\xfd Mới",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Đ\xe3 hủy bỏ {planName}",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "T\xf9y chỉnh n\xe0y gồm c\xf3 chia tỉ lệ, giảm gi\xe1, v\xe0 ho\xe0n tiền.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Sao t\xf4i lại thấy c\xe1i n\xe0y thế?**\n\nBạn đang thay đổi g\xf3i đăng k\xfd. N\xe2ng Cấp M\xe1y Chủ của bạn hiện đang được cập nhật tương ứng.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13649,13 +13634,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Bạn cũng c\xf3 thể [tạo m\xe1y chủ cho ri\xeang m\xecnh](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Xin lỗi về điều đ\xf3",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Tắt một v\xe0i thống k\xea về việc sử dụng?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Nếu bạn tắt t\xednh năng n\xe0y, ch\xfang t\xf4i sẽ dừng xử l\xfd dữ liệu mới trong việc ph\xe2n t\xedch. Bạn sẽ mất quyền truy cập v\xe0o c\xe1c t\xednh năng thử nghiệm mới v\xe0 c\xe1c cải tiến dựa tr\xean mức độ sử dụng c\xe1c t\xednh năng như tr\xf2 chuyện thoại. Dữ liệu cũ của bạn sẽ kh\xf4ng c\xf2n bị r\xe0ng buộc trực tiếp với bạn nữa. Nếu bạn muốn phản đối việc ch\xfang t\xf4i xử l\xfd dữ liệu của bạn, h\xe3y gửi email tới privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "V\xe2ng t\xf4i chắc chắn",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Kh\xf4ng, đưa t\xf4i trở lại!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Tắt t\xf9y chọn?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Khi tắt t\xednh năng n\xe0y, bạn sẽ mất quyền truy cập v\xe0o những thứ như khuyến nghị c\xe1 nh\xe2n v\xe0 đề xuất. Bạn sẽ kh\xf4ng thể kh\xf4i phục ch\xfang trong tương lai!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "V\xe2ng t\xf4i chắc chắn",

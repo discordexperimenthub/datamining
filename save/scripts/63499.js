@@ -6429,6 +6429,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Выберите сервер",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "У вас должны быть права на **управление сервером**.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Добавить на сервер",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Некорректный запрос. Отсутствует параметр **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE:
@@ -6881,12 +6882,6 @@
         DATA_PRIVACY_CONTROLS: "Как мы используем ваши данные",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Использование данных для улучшения Discord",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Эта настройка позволяет нам в аналитических целях использовать и обрабатывать информацию о том, как вы перемещаетесь по Discord и используете его. Это позволяет, к примеру, давать вам доступ к тестированию новых функций. [Узнать больше об этом можно тут.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Использование данных для персонализации опыта использования Discord",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Этот параметр позволяет нам использовать информацию (например, о том, с кем вы общаетесь или во что играете), чтобы настроить Discord лично для вас. [Узнать больше об этом можно тут]({helpdeskArticle}).",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Использование данных для работы Discord",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Запросить все мои данные",
@@ -6923,17 +6918,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Разрешить личные сообщения от участников сервера",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Внутриигровые награды (они же Drops)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Использовать сведения о том, в какие игры вы играете, чтобы сообщать вам о возможностях получить награды Drops и выполнить задания Drops.",
         USER_DM_SETTINGS_TITLE: "Конфиденциальность сервера",
         USER_DM_SETTINGS_DESCRIPTION:
           "Применить эти изменения ко всем серверам? Вы также можете отключить личные сообщения в\xa0настройках конкретного сервера.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Награды Drops пока в бета-версии. Нам интересно узнать, почему вы их отключили. [Пройти опрос]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Награды Drops пока в бета-версии. Спасибо за участие! Мы будем рады узнать ваше мнение! [Пройти опрос]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Похоже, вы искали задания Discord! Если вы видите это сообщение, значит, вам нужно изменить кое-какие настройки. Чтобы включить награды, перейдите в\xa0раздел \xabНастройки\xbb > \xabКонфиденциальность\xbb, а\xa0затем включите параметры \xabИспользование данных для персонализации опыта использования Discord\xbb и\xa0\xabВнутриигровые награды (они же задания)\xbb.\n\n[Подробности\xa0— в ответах на вопросы.]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Принять участие",
@@ -10152,8 +10139,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Текущая подписка",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Новый итог по подпискам",
         PREMIUM_SUBSCRIPTION_CANCELLED: "Отменено: {planName}",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "Изменение учитывает пересчёт, скидки и возврат средств.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Почему я это вижу?**\n\nВы меняете тариф подписки. Бусты сервера будут изменены соответствующим образом.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13324,13 +13309,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Вы также можете [создать свой собственный сервер](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Нам очень жаль",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Отключить некоторую статистику использования?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Если вы отключите эту опцию, мы перестанем обрабатывать новые аналитические данные, а\xa0вы потеряете доступ к\xa0экспериментальным функциям и\xa0различным улучшениям\xa0— например, для голосового чата. Ваши старые данные больше не будут напрямую связаны с\xa0вами. Если вы хотите воспользоваться своим правом на ограничение обработки персональных данных, напишите об этом на почту privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Да, давайте!",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Нет, верните меня обратно!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Отключить персонализацию?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Отключив эту опцию, вы больше не будете получать персональные рекомендации и предложения. Вы не сможете восстановить их в будущем!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Да, давайте!",

@@ -6145,6 +6145,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "서버 선택하기",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "**서버 관리** 권한이 있어야만 수행 가능한 작업이에요.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "서버에 추가",
         OAUTH2_REQUEST_MISSING_PARAM:
           "올바르지 않은 요청. **{param}** 파라미터 없음",
         OAUTH2_REQUEST_INVALID_SCOPE: "올바르지 않은 스코프 **{scope}**",
@@ -6567,12 +6568,6 @@
         DATA_PRIVACY_CONTROLS: "데이터 사용처",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "데이터를 사용해 Discord 향상하기",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "분석 목적으로 Discord 사용 정보를 사용해요. 예를 들어 새로운 기능 테스트에 포함될 수도 있어요. [여기에서 자세히 알아보세요.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "데이터를 사용해 내 Discord 사용 경험 바꾸기",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Discord가 당신의 정보(이야기하는 사람, 플레이하는 게임 등)를 사용해 맞춤 서비스를 제공할 수 있어요. [자세히 알아보기.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "데이터를 사용해 Discord 작동을 수월하게 만들기",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "내 모든 데이터 요청하기",
@@ -6605,16 +6600,9 @@
           "기존에 접속해 있던 서버에도 변경 사항을 적용하시겠어요?",
         NEW_GUILDS_DM_ALLOWED: "서버 멤버가 보내는 다이렉트 메시지 허용하기",
         USER_DROPS_SETTINGS: "Promo Settings",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT: "게임 내 보상(드롭스)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "내가 플레이하는 게임 정보를 이용해 드롭스 기회와 드롭스 퀘스트 완료 알림을 보냅니다.",
         USER_DM_SETTINGS_TITLE: "서버 개인정보 보호 정책",
         USER_DM_SETTINGS_DESCRIPTION:
           "기존에 접속해 있던 서버에도 변경 사항을 적용하시겠어요? 서버의 설정 페이지를 열어서 서버별로 다이렉트 메시지를 비활성화할 수도 있어요.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "드롭스는 현재 베타예요. 드롭스를 끈 이유를 알려주세요. [피드백 설문 조사]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "드롭스는 현재 베타예요. 참여해주셔서 감사하고, 의견을 들려주세요! [피드백 설문 조사]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           'Discord 퀘스트를 찾고 계시는군요! 이 메시지가 나왔다면 설정을 조정해야 해요. 활성화하려면 설정 -> 개인 정보 보호 및 보안을 열고 "데이터를 사용해 내 Discord 사용 경험 바꾸기"와 "게임 내 보상(퀘스트)" 설정을 모두 활성화해주세요.\n\n[자주 묻는 질문에서 자세히 알아보기]({blogURL})',
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "지금 등록하기",
@@ -9716,8 +9704,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "현재 구독",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "새 구독 합계",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} 취소됨",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "이 조정에는 비례 배분, 할인, 환불이 포함돼요.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**왜 이게 보이는 거죠?**\n\n플랜 변경을 변경하고 있어요. 서버 부스트가 이에 따라 업데이트돼요.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -12739,12 +12725,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "나도 직접 [서버를 만들 수 있어요](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "죄송해요.",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE: "사용량 통계를 끄시겠어요?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "이 설정을 끄면 분석을 위해 새 데이터를 처리하는 것이 중단되어 새로운 실험 기능과 음성 채팅 등 기능의 사용량 기반 향상 기능을 사용할 수 없게 돼요. 기존 데이터는 회원님과 직접 연결되어 있지 않게 되고요. 본인 데이터의 처리에 관한 이의신청권을 더 주장하고 싶으시다면, privacy@discord.com에 문의해주세요.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "네, 확실해요",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "아니요, 돌아갈래요!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "사용자 맞춤을 끄시겠어요?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "이 설정을 끄면 사용자 맞춤형 추천 및 제안 등을 사용할 수 없게 돼요. 나중에도 복구할 수 없어요!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "네, 확실해요",

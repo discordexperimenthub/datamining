@@ -6370,6 +6370,7 @@
         OAUTH2_ADD_TO_GUILD_PLACEHOLDER: "Odaberi server",
         OAUTH2_ADD_TO_GUILD_DESCRIPTION:
           "Za to moraš imati dozvolu za **upravljanje serverom** koja vrijedi za ovaj server.",
+        OAUTH2_INTEGRATION_SELECT_GUILD: "Dodaj serveru",
         OAUTH2_REQUEST_MISSING_PARAM:
           "Neispravan zahtjev. Nedostaje parametar **{param}**",
         OAUTH2_REQUEST_INVALID_SCOPE: "Nevažeći opseg **{scope}**",
@@ -6827,12 +6828,6 @@
         DATA_PRIVACY_CONTROLS: "Kako upotrebljavamo tvoje podatke",
         DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE:
           "Koristi podatke za poboljšanje Discorda",
-        DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE:
-          "Ova postavka omogućuje nam da koristimo i obradimo informacije o načinu kretanja i upotrebi Discorda u analitičke svrhe. Na primjer, omogućuje nam da te uključimo u nova testiranja značajki koje iskušavamo. [Više o tome možeš doznati ovdje.]({helpdeskArticle})",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE:
-          "Upotrijebite podatke kako biste meni prilagodili način na koji mi se Discord predstavlja",
-        DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE:
-          "Ova postavka omogućuje nam da upotrijebimo informacije o tome s kime pričaš i koje igre igraš kako bismo Discord prilagodili tebi. [Saznaj više o tome ovdje.]({helpdeskArticle})",
         DATA_PRIVACY_CONTROLS_BASIC_SERVICE_TITLE:
           "Koristi podatke kako bi Discord radio",
         DATA_PRIVACY_CONTROLS_PERSONAL_DATA_TITLE: "Zatraži sve moje podatke",
@@ -6870,17 +6865,9 @@
         NEW_GUILDS_DM_ALLOWED:
           "Omogući izravne poruke od strane korisnika servera",
         USER_DROPS_SETTINGS: "Postavke promocije",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT:
-          "Nagrade unutar igre (t.j. dropovi)",
-        USER_DROPS_SETTINGS_DROPS_OPTED_OUT_NOTE:
-          "Koristiti se informacijama o igrama koje igraš kako bismo ti pružili obavijesti o mogućim dropovima i da se završi Drops Quest.",
         USER_DM_SETTINGS_TITLE: "Privatnost servera",
         USER_DM_SETTINGS_DESCRIPTION:
           "Želiš li primijeniti ovu promjenu i na sve svoje postojeće servere? Također, možeš onemogućiti direktne poruke na pojedinim serverima ako odeš na stranicu s postavkama servera.",
-        DROPS_REQUEST_FEEDBACK_OPT_OUT:
-          "Drops je trenutačno u beta verziji - željeli bismo saznati više o tome zašto si ga isključio/la. [Istraživanje povratnih informacija]({feedbackURL})",
-        DROPS_REQUEST_FEEDBACK_SUCCESS:
-          "Drops je trenutačno u beta verziji - hvala ti na sudjelovanju, rado bismo čuli što misliš o tome! [Istraživanje povratnih informacija]({feedbackURL})",
         DROPS_READ_BLOG_TO_ENABLE:
           "Sigurno tražiš Discord questove! Ako ti se prikazuje ova poruka, moramo prilagoditi neke postavke. Za omogućavanje moraš otvoriti Postavke -> Privatnost i sigurnost i omogućiti postavke „Upotrijebite podatke kako biste meni prilagodili način na koji mi se Discord predstavlja“ i „Nagrade unutar igre (tj. dropovi)“.\n\n[Pročitaj više u našim čestim pitanjima]({blogURL})",
         DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA: "Upiši se odmah",
@@ -10105,8 +10092,6 @@
         PREMIUM_SUBSCRIPTION_CURRENT_LABEL: "Trenutačna pretplata",
         PREMIUM_SUBSCRIPTION_NEW_TOTAL: "Nova pretplata ukupno",
         PREMIUM_SUBSCRIPTION_CANCELLED: "{planName} – otkazano",
-        PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
-          "U ovoj korekciji sadržane su naplate razmjerne korištenju, popusti i povrati.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TOOLTIP:
           "**Zašto mi se ovo prikazuje?**\n\nKupuješ promjenu modela pretplate. Tvoji boostovi servera će biti ažurirani na odgovarajući način.",
         PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT_TEXT:
@@ -13260,13 +13245,8 @@
         NUF_CREATE_GUILD_CTA_DESCRIPTION:
           "Osim toga, možeš i [pokrenuti svoj vlastiti server](onClick)",
         DATA_PRIVACY_RATE_LIMIT_TITLE: "Žao nam je",
-        USAGE_STATISTICS_DISABLE_MODAL_TITLE:
-          "Isključiti ponešto od statistiku korištenja?",
-        USAGE_STATISTICS_DISABLE_MODAL_BODY:
-          "Ako to isključiš, mi više nećemo obrađivati nove podatke za potrebe analitike. Izgubit ćeš pristup novim eksperimentalnim značajkama i poboljšanjima koja se temelje na korištenju, kao što je glasovni chat. Tvoji stari podatci više neće biti povezani s tobom. Ako želiš dodatno ustrajati na svojim pravima da se usprotiviš obradi svojih podataka, pošalji e-poštu na privacy@discord.com.",
         USAGE_STATISTICS_DISABLE_MODAL_CONFIRM: "Da, siguran/na sam",
         USAGE_STATISTICS_DISABLE_MODAL_CANCEL: "Ne! Hoću nazad!",
-        PERSONALIZATION_DISABLE_MODAL_TITLE: "Ugasi prilagođavanje?",
         PERSONALIZATION_DISABLE_MODAL_BODY:
           "Ako ovo isključiš, gubiš pristup stvarima kao što su osobno prilagođene preporuke i savjeti. Gubitak je trajan i nećeš ih moći vratiti nikad više!",
         PERSONALIZATION_DISABLE_MODAL_CONFIRM: "Da, siguran/na sam",

@@ -4281,6 +4281,7 @@
         (I6.MOBILE_GUILD_DISCOVERY = "iOS Guild Discovery - Lurker"),
         (I6.DIRECTORY_ENTRY = "Directory Channel Entry"),
         (I6.DIRECTORY_EVENTS = "Directory Channel Events"),
+        (I6.POLL_ALERT = "Poll Alert"),
         ((I4 = _C || (_C = {})).QR_CODE = "QR Code Login"),
         (I4.MOBILE_WEB_HANDOFF = "Mobile Web Handoff"),
         (I4.DEFAULT = "The default username password Login"),
@@ -17330,4 +17331,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.add5c998a065bfe7dd87.js.map
+//# sourceMappingURL=7273.2200f1c2ab9b41f32299.js.map

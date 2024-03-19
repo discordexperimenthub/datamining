@@ -24238,6 +24238,14 @@
           "Plan events, gather opinions, or drop a silly question in the chat.",
         POLL_COACHMARK_CTA: "Start a poll now!",
         POLL_COACHMARK_DISMISS: "Maybe later.",
+        POLL_LURKING_VOTE_TITLE: "You can't vote on this poll yet!",
+        POLL_LURKING_VOTE_SUBTITLE:
+          "You have to join the community before you can use polls.",
+        POLL_LURKING_SEE_VOTES_TITLE: "You can't see votes on this poll yet!",
+        POLL_LURKING_UNVOTE_TITLE:
+          "You can't remove your vote unless you're a member.",
+        POLL_LURKING_UNVOTE_SUBTITLE:
+          "You have to re-join the community before you can use polls again.",
         POLL_NOT_INTERACTIVE: "View original message to interact",
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nothing to see here",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "There are no votes for this answer.",
@@ -26421,8 +26429,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276402", ", Version Hash: ")
-          .concat("c31a80fbb1e64adc3581228c9f835b2804ad3010")
+          .concat("276409", ", Version Hash: ")
+          .concat("8357860522493315619b62da07883a39254e6f2d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29534,12 +29542,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276402"), "276402"));
+        let _ = parseInt(((e = "276409"), "276409"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276402"
+                "276409"
               )
             ),
             (_ = 0)),
@@ -52234,4 +52242,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.24762c3739f024629fcf.js.map
+//# sourceMappingURL=76039.2ea9172d1049eb9ec346.js.map

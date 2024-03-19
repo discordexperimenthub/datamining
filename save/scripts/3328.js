@@ -66,40 +66,40 @@
         d = a("562228"),
         c = a("491096"),
         E = a("782340");
-      function _(e, t) {
-        let a = e.id,
-          _ = l.useRef();
-        null == _.current &&
-          (_.current = [
+      function _(e, t, a) {
+        let _ = e.id,
+          m = l.useRef();
+        null == m.current &&
+          (m.current = [
             (0, d.generateEmptyPollAnswer)(),
             (0, d.generateEmptyPollAnswer)(),
           ]);
-        let [m, L] = l.useState(_.current),
-          [f, C] = l.useState(""),
-          [R, N] = l.useState(n.PollLayoutTypes.DEFAULT),
-          [T, O] = l.useState(!1),
-          [h, I] = l.useState(c.PollDurations.ONE_DAY),
-          [P, x] = l.useState({}),
-          [p, g] = l.useState(!1),
-          M = m.filter(e => (0, d.isAnswerFilled)(e, R)),
-          S = m.filter(e => (0, d.isIncompleteAnswer)(e, R)),
+        let [f, L] = l.useState(m.current),
+          [R, C] = l.useState(""),
+          [N, T] = l.useState(n.PollLayoutTypes.DEFAULT),
+          [O, h] = l.useState(!1),
+          [I, P] = l.useState(c.PollDurations.ONE_DAY),
+          [x, g] = l.useState({}),
+          [p, M] = l.useState(!1),
+          S = f.filter(e => (0, d.isAnswerFilled)(e, N)),
+          v = f.filter(e => (0, d.isIncompleteAnswer)(e, N)),
           j =
-            f.length > 0 &&
-            M.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL &&
-            0 === S.length,
-          [v, { error: D, loading: U }] = (0, s.default)(u.default.createPoll),
-          b = m.length < c.MAX_NUMBER_OF_ANSWERS_PER_POLL,
-          w = m.length > c.MIN_NUMBER_OF_ANSWERS_PER_POLL,
-          y = l.useCallback(e => {
-            x(e => {
+            R.length > 0 &&
+            S.length >= c.MIN_NUMBER_OF_ANSWERS_PER_POLL &&
+            0 === v.length,
+          [D, { error: U, loading: b }] = (0, s.default)(u.default.createPoll),
+          w = f.length < c.MAX_NUMBER_OF_ANSWERS_PER_POLL,
+          y = f.length > c.MIN_NUMBER_OF_ANSWERS_PER_POLL,
+          k = l.useCallback(e => {
+            g(e => {
               let t = { ...e };
               return delete t.question, t;
             }),
               C(e);
           }, []),
-          k = l.useCallback(e => {
+          B = l.useCallback(e => {
             let { text: t, index: a, localCreationAnswerId: l } = e;
-            x(e => {
+            g(e => {
               let t = { ...e };
               return delete t["answer-".concat(l)], t;
             }),
@@ -108,7 +108,7 @@
                 return (l[a] = { ...l[a], text: t }), l;
               });
           }, []),
-          B = l.useCallback((e, t) => {
+          F = l.useCallback((e, t) => {
             L(a => {
               let l = [...a];
               return (l[t] = { ...l[t], image: e }), l;
@@ -117,7 +117,7 @@
           H = l.useCallback(
             (e, t, a) => {
               var l;
-              let n = m[t],
+              let n = f[t],
                 s =
                   null === (l = n.image) || void 0 === l
                     ? void 0
@@ -133,133 +133,135 @@
                   )
                 );
             },
-            [m]
-          ),
-          F = l.useCallback(
-            async (e, t, a) => {
-              let l = m[t].localCreationAnswerId;
-              H(e, t), B(A(a, o.PollMediaUploadAttachmentStatus.PREPARING), t);
-              let n = await i.handlePollGifAttachmentAdd(e, l, a);
-              if (null == n) {
-                B(A(a, o.PollMediaUploadAttachmentStatus.ERROR), t);
-                return;
-              }
-              B(A(a, o.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t);
-            },
-            [m, B, H]
+            [f]
           ),
           G = l.useCallback(
-            (e, t, a) => {
-              let l = m[t].localCreationAnswerId,
-                n = URL.createObjectURL(a);
-              H(e, t),
-                B(A(n, o.PollMediaUploadAttachmentStatus.PREPARING), t),
-                i.handlePollMediaAttachmentAdd(e, l, a),
-                B(A(n, o.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t);
+            async (e, t, a) => {
+              let l = f[t].localCreationAnswerId;
+              H(e, t), F(A(a, o.PollMediaUploadAttachmentStatus.PREPARING), t);
+              let n = await i.handlePollGifAttachmentAdd(e, l, a);
+              if (null == n) {
+                F(A(a, o.PollMediaUploadAttachmentStatus.ERROR), t);
+                return;
+              }
+              F(A(a, o.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t);
             },
-            [m, B, H]
+            [f, F, H]
           ),
           W = l.useCallback(
+            (e, t, a) => {
+              let l = f[t].localCreationAnswerId,
+                n = URL.createObjectURL(a);
+              H(e, t),
+                F(A(n, o.PollMediaUploadAttachmentStatus.PREPARING), t),
+                i.handlePollMediaAttachmentAdd(e, l, a),
+                F(A(n, o.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD), t);
+            },
+            [f, F, H]
+          ),
+          Y = l.useCallback(
             (e, t) => {
-              H(a, t),
-                B(
+              H(_, t),
+                F(
                   { emoji: e, stickerId: void 0, mediaAttachmentState: void 0 },
                   t
                 );
             },
-            [a, B, H]
+            [_, F, H]
           ),
-          Y = l.useCallback(e => {
+          V = l.useCallback(e => {
             L(t => {
               let a = [...t];
               return (a[e] = { ...a[e], image: void 0 }), a;
             });
           }, []),
-          V = l.useCallback(() => {
-            b && L(e => [...e, (0, d.generateEmptyPollAnswer)()]);
-          }, [b]),
-          z = l.useCallback(
+          z = l.useCallback(() => {
+            w && L(e => [...e, (0, d.generateEmptyPollAnswer)()]);
+          }, [w]),
+          K = l.useCallback(
             e => {
-              w &&
-                (H(a, e),
+              if (!y) return;
+              let t = f.length;
+              H(_, e),
                 L(t => {
                   let a = [...t];
                   return a.splice(e, 1), a;
-                }));
+                }),
+                null == a || a({ indexToRemove: e, numberOfAnswers: t });
             },
-            [w, a, H]
+            [f.length, y, _, a, H]
           );
         l.useEffect(
           () => () => {
-            i.removeAllPollUploadAttachments(a);
+            i.removeAllPollUploadAttachments(_);
           },
-          [a]
+          [_]
         );
-        let K = l.useCallback(() => {
+        let X = l.useCallback(() => {
             let e = !0,
               t = {};
-            0 === f.trim().length &&
+            0 === R.trim().length &&
               ((e = !1),
               (t.question = E.default.Messages.CREATE_POLL_QUESTION_REQUIRED));
-            let a = m.filter(e => (0, d.isAnswerFilled)(e, R));
+            let a = f.filter(e => (0, d.isAnswerFilled)(e, N));
             return (
               a.length < c.MIN_NUMBER_OF_ANSWERS_PER_POLL &&
                 ((e = !1),
-                (t["answer-".concat(m[0].localCreationAnswerId)] =
+                (t["answer-".concat(f[0].localCreationAnswerId)] =
                   E.default.Messages.CREATE_POLL_MINIMUM_ANSWERS_REQUIRED)),
-              m.forEach(a => {
-                (0, d.isIncompleteAnswer)(a, R) &&
+              f.forEach(a => {
+                (0, d.isIncompleteAnswer)(a, N) &&
                   ((e = !1),
                   (t["answer-".concat(a.localCreationAnswerId)] =
                     E.default.Messages.CREATE_POLL_ANSWER_MUST_CONTAIN_TEXT));
               }),
-              x(t),
-              g(!e),
+              g(t),
+              M(!e),
               e
             );
-          }, [m, f, R]),
-          X = l.useCallback(async () => {
-            await v({
+          }, [f, R, N]),
+          q = l.useCallback(async () => {
+            await D({
               channel: e,
-              question: f,
-              answers: M,
-              allowMultiSelect: T,
-              duration: h,
-              layout: R,
+              question: R,
+              answers: S,
+              allowMultiSelect: O,
+              duration: I,
+              layout: N,
               onClose: t,
             });
-          }, [f, M, T, h, v, e, R, t]),
-          q = l.useCallback(() => {
-            K() && X();
-          }, [X, K]);
+          }, [R, S, O, I, D, e, N, t]),
+          J = l.useCallback(() => {
+            X() && q();
+          }, [q, X]);
         return {
-          answers: m,
-          question: f,
+          answers: f,
+          question: R,
           setQuestion: C,
-          selectedLayoutType: R,
-          setSelectedLayoutType: N,
-          allowMultiSelect: T,
-          setAllowMultiSelect: O,
-          duration: h,
-          setDuration: I,
+          selectedLayoutType: N,
+          setSelectedLayoutType: T,
+          allowMultiSelect: O,
+          setAllowMultiSelect: h,
+          duration: I,
+          setDuration: P,
           canPost: j,
-          canAddMoreAnswers: b,
-          canRemoveMoreAnswers: w,
-          handleQuestionChange: y,
-          handleAnswerTextChange: k,
-          handleGifSelect: F,
-          handleEmojiSelect: W,
-          handleCustomUpload: G,
-          handleAddAnswer: V,
-          handleRemoveAnswer: z,
-          handleRemoveAnswerImage: Y,
-          fieldErrors: P,
-          createPoll: X,
-          handleSubmitPoll: q,
-          submitting: U,
-          createPollError: D,
+          canAddMoreAnswers: w,
+          canRemoveMoreAnswers: y,
+          handleQuestionChange: k,
+          handleAnswerTextChange: B,
+          handleGifSelect: G,
+          handleEmojiSelect: Y,
+          handleCustomUpload: W,
+          handleAddAnswer: z,
+          handleRemoveAnswer: K,
+          handleRemoveAnswerImage: V,
+          fieldErrors: x,
+          createPoll: q,
+          handleSubmitPoll: J,
+          submitting: b,
+          createPollError: U,
           shouldFocusOnInvalidField: p,
-          setShouldFocusOnInvalidField: g,
+          setShouldFocusOnInvalidField: M,
         };
       }
       function A(e, t) {
@@ -350,7 +352,7 @@
       a.r(t),
         a.d(t, {
           PollCreationMediaPreview: function () {
-            return j;
+            return v;
           },
           default: function () {
             return b;
@@ -370,10 +372,10 @@
         _ = a("86678"),
         A = a("858619"),
         m = a("42203"),
-        L = a("474643"),
-        f = a("585722"),
-        C = a("476765"),
-        R = a("832132"),
+        f = a("474643"),
+        L = a("585722"),
+        R = a("476765"),
+        C = a("832132"),
         N = a("46829"),
         T = a("228220"),
         O = a("562228"),
@@ -381,11 +383,11 @@
         I = a("356581"),
         P = a("491096"),
         x = a("958706"),
-        p = a("13030"),
-        g = a("782340"),
+        g = a("13030"),
+        p = a("782340"),
         M = a("345379");
       let S = { offset: { top: -4, bottom: -4, left: 0, right: -8 } };
-      function j(e) {
+      function v(e) {
         let {
           hasUpload: t,
           mediaUrl: a,
@@ -407,7 +409,7 @@
               })
             : (0, l.jsx)(l.Fragment, { children: i });
       }
-      function v(e) {
+      function j(e) {
         let {
           onSelect: t,
           onEditMedia: a,
@@ -419,18 +421,18 @@
           children: (0, l.jsx)(u.Menu, {
             navId: "poll-media-edit-menu",
             onClose: s,
-            "aria-label": g.default.Messages.CREATE_POLL_UPDATE_EMOJI_MENU_ARIA,
+            "aria-label": p.default.Messages.CREATE_POLL_UPDATE_EMOJI_MENU_ARIA,
             onSelect: t,
             children: (0, l.jsxs)(u.MenuGroup, {
               children: [
                 (0, l.jsx)(u.MenuItem, {
                   id: "poll-media-replace",
-                  label: g.default.Messages.CREATE_POLL_REPLACE_EMOJI,
+                  label: p.default.Messages.CREATE_POLL_REPLACE_EMOJI,
                   action: a,
                 }),
                 (0, l.jsx)(u.MenuItem, {
                   id: "poll-media-delete",
-                  label: g.default.Messages.CREATE_POLL_REMOVE_EMOJI,
+                  label: p.default.Messages.CREATE_POLL_REMOVE_EMOJI,
                   action: n,
                   color: "danger",
                 }),
@@ -449,10 +451,10 @@
             onEmojiRemove: E,
             answerIndex: A,
           } = e,
-          L = (0, i.useStateFromStores)([m.default], () =>
+          f = (0, i.useStateFromStores)([m.default], () =>
             m.default.getChannel(t)
           ),
-          [f, C] = n.useState(!1),
+          [L, R] = n.useState(!1),
           {
             emoji: T,
             isLoadingMedia: h,
@@ -470,21 +472,21 @@
             E(A);
           }, [E, A]),
           y = n.useCallback(() => {
-            C(e => !e);
+            R(e => !e);
           }, []),
           k = n.useMemo(
             () =>
               P
-                ? g.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
+                ? p.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
                     imageName: (0, O.filterOutUUID)(D),
                     answerNumber: A + 1,
                   })
                 : null != T
-                  ? g.default.Messages.CREATE_POLL_EDIT_EMOJI_ARIA.format({
+                  ? p.default.Messages.CREATE_POLL_EDIT_EMOJI_ARIA.format({
                       emojiName: T.name,
                       answerNumber: A + 1,
                     })
-                  : g.default.Messages.CREATE_POLL_ADD_EMOJI_ARIA.format({
+                  : p.default.Messages.CREATE_POLL_ADD_EMOJI_ARIA.format({
                       answerNumber: A + 1,
                     }),
             [P, T, A, D]
@@ -495,7 +497,7 @@
               return (0, l.jsx)("div", {
                 className: M.emojiPicker,
                 children: (0, l.jsx)(_.default, {
-                  channel: L,
+                  channel: f,
                   pickerIntention: x.EmojiIntention.POLLS,
                   closePopout: t,
                   onNavigateAway: t,
@@ -505,12 +507,12 @@
                 }),
               });
             },
-            [L, c, A]
+            [f, c, A]
           ),
-          H = n.useCallback(
+          F = n.useCallback(
             e => {
               let { closePopout: t } = e;
-              return (0, l.jsx)(v, {
+              return (0, l.jsx)(j, {
                 onSelect: t,
                 onEditMedia: y,
                 onDeleteMedia: w,
@@ -519,13 +521,13 @@
             },
             [w, y]
           ),
-          F = h
+          H = h
             ? (0, l.jsx)(u.Spinner, {
                 className: U
                   ? M.spinnerWrapperDefault
                   : M.spinnerWrapperImageOnly,
               })
-            : (0, l.jsx)(j, {
+            : (0, l.jsx)(v, {
                 hasUpload: P,
                 mediaUrl: S,
                 mediaFilename: D,
@@ -539,7 +541,7 @@
                 }),
               }),
           G = r(
-            p.CHAT_INPUT_BUTTON_CLASSNAME,
+            g.CHAT_INPUT_BUTTON_CLASSNAME,
             d === o.PollLayoutTypes.IMAGE_ONLY_ANSWERS
               ? M.expressionPickerButtonImageOnly
               : M.expressionPickerButtonDefault,
@@ -547,7 +549,7 @@
           );
         return (0, l.jsx)(u.Popout, {
           renderPopout: B,
-          shouldShow: f,
+          shouldShow: L,
           onRequestClose: y,
           animation: u.Popout.Animation.NONE,
           position: "bottom",
@@ -557,7 +559,7 @@
             return (0, l.jsx)(u.Popout, {
               animation: u.Popout.Animation.NONE,
               position: "bottom",
-              renderPopout: H,
+              renderPopout: F,
               children: e => {
                 let {
                   onClick: n,
@@ -568,14 +570,14 @@
                 return (0, l.jsxs)(u.Clickable, {
                   ...o,
                   className: G,
-                  onClick: b && !f ? n : y,
+                  onClick: b && !L ? n : y,
                   "aria-label": k,
                   "aria-controls": null != t ? t : s,
                   "aria-expanded": a || r,
                   children: [
-                    F,
+                    H,
                     b &&
-                      (0, l.jsx)(R.default, {
+                      (0, l.jsx)(C.default, {
                         className: M.editIcon,
                         "aria-hidden": !0,
                       }),
@@ -613,11 +615,11 @@
             (0, l.jsxs)(u.HiddenVisually, {
               id: n,
               children: [
-                g.default.Messages.CHARACTER_COUNT_A11Y_LABEL.format({
+                p.default.Messages.CHARACTER_COUNT_A11Y_LABEL.format({
                   remainingCharacters: s,
                 }),
                 " ",
-                g.default.Messages.MAXIMUM_LENGTH.format({
+                p.default.Messages.MAXIMUM_LENGTH.format({
                   maxLength: P.MAX_POLL_ANSWER_LENGTH,
                 }),
               ],
@@ -633,21 +635,22 @@
             layout: _,
             onAnswerTextChange: A,
             onEmojiSelect: m,
-            onEmojiRemove: R,
+            onEmojiRemove: C,
             canRemoveAnswer: N,
             onRemoveAnswer: O,
             error: I,
             inputRef: x,
+            deleteButtonRef: g,
           } = e,
-          p = (0, C.useUID)(),
-          j = (0, C.useUID)(),
-          v = null != I && I.length > 0,
-          b = (0, i.useStateFromStores)([f.default], () =>
-            f.default.getUpload(n, s.localCreationAnswerId, L.DraftType.Poll)
+          v = (0, R.useUID)(),
+          j = (0, R.useUID)(),
+          b = null != I && I.length > 0,
+          w = (0, i.useStateFromStores)([L.default], () =>
+            L.default.getUpload(n, s.localCreationAnswerId, f.DraftType.Poll)
           ),
-          w = () => {
+          y = () => {
             function e(e) {
-              d.default.update(n, s.localCreationAnswerId, L.DraftType.Poll, {
+              d.default.update(n, s.localCreationAnswerId, f.DraftType.Poll, {
                 description: e,
               });
             }
@@ -657,16 +660,16 @@
                 (0, l.jsx)(t, { channelId: n, answer: s, onSave: e, ...a });
             });
           },
-          y = (0, l.jsx)(D, {
+          k = (0, l.jsx)(D, {
             channelId: n,
             buttonImage: s.image,
             layout: _,
             onEmojiSelect: m,
-            onEmojiRemove: R,
+            onEmojiRemove: C,
             localCreationAnswerId: s.localCreationAnswerId,
             answerIndex: c,
           }),
-          k = null != b && null != b.description && b.description.length > 0;
+          B = null != w && null != w.description && w.description.length > 0;
         return (0, l.jsx)(l.Fragment, {
           children:
             _ === o.PollLayoutTypes.DEFAULT
@@ -675,18 +678,18 @@
                   children: [
                     (0, l.jsxs)("div", {
                       className: r(M.defaultTextInputWrapper, {
-                        [M.hasError]: v,
+                        [M.hasError]: b,
                       }),
                       ref: t,
                       children: [
-                        y,
+                        k,
                         (0, l.jsx)(u.TextInput, {
                           "aria-label":
-                            g.default.Messages.CREATE_POLL_ANSWER_INPUT_LABEL.format(
+                            p.default.Messages.CREATE_POLL_ANSWER_INPUT_LABEL.format(
                               { answerNumber: c + 1 }
                             ),
                           placeholder:
-                            g.default.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
+                            p.default.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
                           value: s.text,
                           className: M.defaultTextInput,
                           inputClassName: M.defaultTextInput,
@@ -697,8 +700,8 @@
                               localCreationAnswerId: s.localCreationAnswerId,
                             }),
                           maxLength: P.MAX_POLL_ANSWER_LENGTH,
-                          "aria-invalid": v,
-                          "aria-describedby": v ? p : j,
+                          "aria-invalid": b,
+                          "aria-describedby": b ? v : j,
                           focusProps: S,
                           inputRef: x,
                         }),
@@ -710,17 +713,18 @@
                         onClick: () => O(c),
                         className: M.removeAnswerButtonDefault,
                         "aria-label":
-                          g.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format(
+                          p.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format(
                             { answerNumber: c + 1 }
                           ),
+                        ref: g,
                         children: (0, l.jsx)(T.default, {
                           className: M.trashIcon,
                           "aria-hidden": !0,
                         }),
                       }),
-                    v &&
+                    b &&
                       (0, l.jsx)(u.Text, {
-                        id: p,
+                        id: v,
                         variant: "text-xs/medium",
                         color: "text-danger",
                         className: M.errorText,
@@ -735,28 +739,28 @@
                     (0, l.jsxs)("div", {
                       className: M.imagePreviewContainer,
                       children: [
-                        y,
-                        k &&
+                        k,
+                        B &&
                           (0, l.jsxs)(l.Fragment, {
                             children: [
                               (0, l.jsx)(u.Text, {
                                 variant: "text-xs/semibold",
                                 className: M.altBadge,
                                 "aria-hidden": !0,
-                                children: g.default.Messages.IMAGE_ALT,
+                                children: p.default.Messages.IMAGE_ALT,
                               }),
                               (0, l.jsxs)("div", {
-                                onClick: w,
+                                onClick: y,
                                 children: [
                                   (0, l.jsx)(u.HiddenVisually, {
                                     children:
-                                      g.default.Messages
+                                      p.default.Messages
                                         .CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT,
                                   }),
                                   (0, l.jsx)(u.Text, {
                                     variant: "text-xxs/medium",
                                     className: M.altTextPreview,
-                                    children: b.description,
+                                    children: w.description,
                                   }),
                                 ],
                               }),
@@ -767,28 +771,28 @@
                     (0, l.jsxs)("div", {
                       className: M.imageOnlyAnswerActionBar,
                       children: [
-                        null != b
+                        null != w
                           ? (0, l.jsx)(E.default, {
                               tooltip:
-                                g.default.Messages
+                                p.default.Messages
                                   .CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
-                              "aria-label": k
-                                ? g.default.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format(
+                              "aria-label": B
+                                ? p.default.Messages.CREATE_POLL_EDIT_ALT_ARIA_LABEL.format(
                                     { answerNumber: c + 1 }
                                   )
-                                : g.default.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format(
+                                : p.default.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format(
                                     { answerNumber: c + 1 }
                                   ),
-                              onClick: w,
+                              onClick: y,
                               children: (0, l.jsx)(h.ImageAltIcon, {
                                 "aria-hidden": !0,
                               }),
                             })
                           : null,
                         (0, l.jsx)(E.default, {
-                          tooltip: g.default.Messages.CREATE_POLL_REMOVE_ANSWER,
+                          tooltip: p.default.Messages.CREATE_POLL_REMOVE_ANSWER,
                           "aria-label":
-                            g.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format(
+                            p.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format(
                               { answerNumber: c + 1 }
                             ),
                           onClick: () => O(c),
@@ -826,10 +830,10 @@
         _ = a("476765"),
         A = a("151185"),
         m = a("562228"),
-        L = a("104182"),
-        f = a("741138"),
-        C = a("362415"),
-        R = a("418298"),
+        f = a("104182"),
+        L = a("741138"),
+        R = a("362415"),
+        C = a("418298"),
         N = a("612805"),
         T = a("233365"),
         O = a("491096"),
@@ -837,20 +841,20 @@
         I = a("782340"),
         P = a("149753");
       let x = (0, _.uid)(),
-        p = (0, _.uid)();
-      function g(e) {
+        g = (0, _.uid)();
+      function p(e) {
         let { question: t, onChange: a, error: s, inputRef: o } = e,
           [i, d] = n.useState(!1);
         return (0, l.jsxs)(l.Fragment, {
           children: [
             (0, l.jsx)(u.FormTitle, {
               tag: u.FormTitleTags.LABEL,
-              htmlFor: p,
+              htmlFor: g,
               children: I.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
             }),
             (0, l.jsx)(u.TextArea, {
               inputRef: o,
-              id: p,
+              id: g,
               placeholder: I.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
               value: t,
               className: r(P.questionInput, { [P.hasError]: null != s }),
@@ -871,7 +875,7 @@
       }
       function M(e) {
         let { selectedDuration: t, onSelect: a } = e,
-          n = (0, f.default)(),
+          n = (0, L.default)(),
           s = n[t];
         return (0, l.jsxs)("div", {
           className: P.duration,
@@ -913,44 +917,60 @@
           type: h.ImpressionTypes.MODAL,
           name: o.ImpressionNames.POLL_EDITOR_VIEWED,
         });
-        let {
-            answers: f,
-            question: p,
-            selectedLayoutType: j,
-            setSelectedLayoutType: v,
-            allowMultiSelect: D,
-            setAllowMultiSelect: U,
-            duration: b,
-            setDuration: w,
-            handleQuestionChange: y,
-            handleAnswerTextChange: k,
-            handleEmojiSelect: B,
-            canAddMoreAnswers: H,
-            handleRemoveAnswerImage: F,
-            canRemoveMoreAnswers: G,
-            handleAddAnswer: W,
-            handleRemoveAnswer: Y,
-            createPollError: V,
-            handleSubmitPoll: z,
-            fieldErrors: K,
-            submitting: X,
-            shouldFocusOnInvalidField: q,
-            setShouldFocusOnInvalidField: J,
-          } = (0, L.default)(t, s),
-          { trackPollCreationCancelled: Q } = (0, C.useTrackPollCreationEvents)(
-            f,
-            D,
-            j
-          ),
-          Z = n.useRef(null),
-          $ = n.useRef([]),
-          ee = n.useRef([]),
-          et = j === i.PollLayoutTypes.DEFAULT,
-          ea = n.useCallback(() => {
-            Q(), s();
-          }, [s, Q]),
-          el = n.useCallback(() => {
-            if ((0, m.isPollCreationEmpty)(p, f, j)) ea();
+        let L = n.useRef(null),
+          g = n.useRef([]),
+          v = n.useRef([]),
+          j = n.useRef(null),
+          D = n.useRef([]),
+          U = n.useCallback(e => {
+            var t, a, l, n;
+            let { indexToRemove: s, numberOfAnswers: r } = e,
+              o = r === O.MIN_NUMBER_OF_ANSWERS_PER_POLL + 1;
+            o
+              ? null === (a = j.current) ||
+                void 0 === a ||
+                null === (t = a.ref) ||
+                void 0 === t ||
+                t.focus()
+              : null === (n = D.current[s === r - 1 ? s - 1 : s + 1]) ||
+                void 0 === n ||
+                null === (l = n.ref) ||
+                void 0 === l ||
+                l.focus();
+          }, []),
+          {
+            answers: b,
+            question: w,
+            selectedLayoutType: y,
+            setSelectedLayoutType: k,
+            allowMultiSelect: B,
+            setAllowMultiSelect: F,
+            duration: H,
+            setDuration: G,
+            handleQuestionChange: W,
+            handleAnswerTextChange: Y,
+            handleEmojiSelect: V,
+            canAddMoreAnswers: z,
+            handleRemoveAnswerImage: K,
+            canRemoveMoreAnswers: X,
+            handleAddAnswer: q,
+            handleRemoveAnswer: J,
+            createPollError: Q,
+            handleSubmitPoll: Z,
+            fieldErrors: $,
+            submitting: ee,
+            shouldFocusOnInvalidField: et,
+            setShouldFocusOnInvalidField: ea,
+          } = (0, f.default)(t, s, U),
+          { trackPollCreationCancelled: el } = (0,
+          R.useTrackPollCreationEvents)(b, B, y),
+          en = n.useRef(b.length),
+          es = y === i.PollLayoutTypes.DEFAULT,
+          er = n.useCallback(() => {
+            el(), s();
+          }, [s, el]),
+          eo = n.useCallback(() => {
+            if ((0, m.isPollCreationEmpty)(w, b, y)) er();
             else {
               (0, T.default)({
                 title: I.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
@@ -962,35 +982,44 @@
                   I.default.Messages
                     .CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
                 onConfirm: () => {
-                  ea();
+                  er();
                 },
               });
               return;
             }
-          }, [ea, f, p, j]);
+          }, [er, b, w, y]);
         n.useEffect(() => {
           (0, u.updateModal)(
             O.POLL_CREATION_MODAL_KEY,
             e => (0, l.jsx)(S, { ...e, channel: t }),
-            el
+            eo
           );
-        }, [el, t]),
+        }, [eo, t]),
           n.useEffect(() => {
-            if (q) {
+            if (b.length > en.current) {
+              var e;
+              null === (e = v.current[b.length - 1]) ||
+                void 0 === e ||
+                e.focus();
+            }
+            en.current = b.length;
+          }, [b.length]),
+          n.useEffect(() => {
+            if (et) {
               var e, t;
-              if ((null == K ? void 0 : K.question) != null)
-                null === (e = Z.current) || void 0 === e || e.focus();
+              if ((null == $ ? void 0 : $.question) != null)
+                null === (e = L.current) || void 0 === e || e.focus();
               else {
-                let e = f.findIndex(
-                  e => K["answer-".concat(e.localCreationAnswerId)]
+                let e = b.findIndex(
+                  e => $["answer-".concat(e.localCreationAnswerId)]
                 );
                 -1 !== e &&
-                  (null === (t = ee.current[e]) || void 0 === t || t.focus());
+                  (null === (t = v.current[e]) || void 0 === t || t.focus());
               }
-              J(!1);
+              ea(!1);
             }
-          }, [K, f, q, J, ee, $]);
-        let en = (0, c.default)({ disabled: X, onSubmit: z });
+          }, [$, b, et, ea, v, g]);
+        let ei = (0, c.default)({ disabled: ee, onSubmit: Z });
         return (0, l.jsxs)(u.ModalRoot, {
           size: u.ModalSize.MEDIUM,
           className: P.container,
@@ -1008,34 +1037,34 @@
                   id: x,
                   children: I.default.Messages.CREATE_POLL_HEADING,
                 }),
-                (0, l.jsx)(u.ModalCloseButton, { onClick: el }),
+                (0, l.jsx)(u.ModalCloseButton, { onClick: eo }),
               ],
             }),
             (0, l.jsxs)(u.ModalContent, {
               className: P.content,
-              onKeyDown: en,
+              onKeyDown: ei,
               children: [
-                null != V &&
+                null != Q &&
                   (0, l.jsx)(u.FormErrorBlock, {
                     className: P.apiErrorBlock,
-                    children: V.getAnyErrorMessage(),
+                    children: Q.getAnyErrorMessage(),
                   }),
-                (0, l.jsx)(g, {
-                  question: p,
-                  onChange: y,
-                  error: null == K ? void 0 : K.question,
-                  inputRef: Z,
+                (0, l.jsx)(p, {
+                  question: w,
+                  onChange: W,
+                  error: null == $ ? void 0 : $.question,
+                  inputRef: L,
                 }),
                 _ &&
                   (0, l.jsx)(N.default, {
-                    selectedLayoutType: j,
-                    onSelectedLayoutType: v,
+                    selectedLayoutType: y,
+                    onSelectedLayoutType: k,
                   }),
                 (0, l.jsx)(E.default, { size: 26 }),
                 (0, l.jsxs)("fieldset", {
                   className: r(
                     P.answerInputsContainer,
-                    et ? P.defaultContainer : P.imageOnlyContainer
+                    es ? P.defaultContainer : P.imageOnlyContainer
                   ),
                   children: [
                     (0, l.jsx)(u.FormTitle, {
@@ -1043,47 +1072,49 @@
                       children:
                         I.default.Messages.CREATE_POLL_ANSWERS_FIELDSET_LABEL,
                     }),
-                    f.map((e, a) =>
+                    b.map((e, a) =>
                       (0, l.jsx)(
-                        R.default,
+                        C.default,
                         {
                           answer: e,
                           channelId: t.id,
                           index: a,
-                          onEmojiSelect: B,
-                          onEmojiRemove: F,
-                          ref: e => ($.current[a] = e),
-                          inputRef: e => (ee.current[a] = e),
-                          layout: j,
-                          onAnswerTextChange: k,
-                          onRemoveAnswer: Y,
+                          onEmojiSelect: V,
+                          onEmojiRemove: K,
+                          layout: y,
+                          onAnswerTextChange: Y,
+                          onRemoveAnswer: J,
                           error:
-                            null == K
+                            null == $
                               ? void 0
-                              : K["answer-".concat(e.localCreationAnswerId)],
-                          canRemoveAnswer: G,
+                              : $["answer-".concat(e.localCreationAnswerId)],
+                          canRemoveAnswer: X,
+                          ref: e => (g.current[a] = e),
+                          inputRef: e => (v.current[a] = e),
+                          deleteButtonRef: e => (D.current[a] = e),
                         },
                         e.localCreationAnswerId
                       )
                     ),
-                    H &&
+                    z &&
                       (0, l.jsxs)(u.Clickable, {
                         className: r(
-                          et
+                          es
                             ? P.addAnswerButtonDefault
                             : P.addAnswerButtonImageOnly,
-                          { [P.canRemoveMoreAnswers]: G }
+                          { [P.canRemoveMoreAnswers]: X }
                         ),
-                        onClick: H ? W : void 0,
+                        onClick: z ? q : void 0,
                         "aria-label":
                           I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
+                        ref: j,
                         children: [
                           (0, l.jsx)(A.default, {
-                            className: et
+                            className: es
                               ? P.addAnswerIconDefault
                               : P.addAnswerIconImageOnly,
                           }),
-                          et &&
+                          es &&
                             (0, l.jsx)(u.Text, {
                               variant: "text-md/normal",
                               color: "text-muted",
@@ -1097,7 +1128,7 @@
                   ],
                 }),
                 (0, l.jsx)(E.default, { size: 18 }),
-                (0, l.jsx)(M, { selectedDuration: b, onSelect: w }),
+                (0, l.jsx)(M, { selectedDuration: H, onSelect: G }),
               ],
             }),
             (0, l.jsxs)(u.ModalFooter, {
@@ -1107,11 +1138,11 @@
                   className: P.checkbox,
                   type: u.Checkbox.Types.INVERTED,
                   size: 24,
-                  value: D,
+                  value: B,
                   checkboxColor: (0, u.useToken)(
                     u.tokens.colors.INTERACTIVE_NORMAL
                   ).hex(),
-                  onChange: (e, t) => U(t),
+                  onChange: (e, t) => F(t),
                   children: (0, l.jsx)(u.Text, {
                     variant: "text-md/medium",
                     color: "interactive-active",
@@ -1122,8 +1153,8 @@
                   look: u.ButtonLooks.FILLED,
                   size: u.Button.Sizes.MEDIUM,
                   className: P.postButton,
-                  onClick: z,
-                  submitting: X,
+                  onClick: Z,
+                  submitting: ee,
                   children: (0, l.jsx)(u.Text, {
                     variant: "text-md/semibold",
                     className: P.postButtonText,
@@ -1309,7 +1340,7 @@
             r.default.getUpload(i, u, s.DraftType.Poll)
           ),
           [A, m] = l.useState(),
-          [L, f] = l.useState("");
+          [f, L] = l.useState("");
         return (
           l.useEffect(() => {
             var e;
@@ -1324,7 +1355,7 @@
             let t = URL.createObjectURL(_.item.file);
             return (
               m(t),
-              f(_.item.file.name),
+              L(_.item.file.name),
               () => {
                 URL.revokeObjectURL(t);
               }
@@ -1342,11 +1373,11 @@
             hasUpload: null != _,
             upload: _,
             mediaUrl: A,
-            mediaFilename: L,
+            mediaFilename: f,
           }
         );
       }
     },
   },
 ]);
-//# sourceMappingURL=67929136656e134290db.js.map
+//# sourceMappingURL=309665c0eda200608b08.js.map

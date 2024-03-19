@@ -4936,7 +4936,6 @@
         (el.IMAGE_VIDEO_DATA_SETTINGS_UPDATED =
           "image_video_data_settings_updated"),
         (el.QUEST_HOVER = "quest_hover"),
-        (el.QUEST_STREAMING_STARTED = "quest_streaming_started"),
         (el.QUEST_CONTENT_CLICKED = "quest_content_clicked"),
         (el.QUEST_LINK_SHARED = "quest_link_shared"),
         (el.QUEST_CONTENT_LOADED = "quest_content_loaded"),
@@ -17336,4 +17335,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.f7390a6388684827d854.js.map
+//# sourceMappingURL=7273.54c98b960ec7ee21979c.js.map

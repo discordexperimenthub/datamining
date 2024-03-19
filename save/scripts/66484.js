@@ -190,34 +190,12 @@
         ).enabled;
       }
     },
-    238055: function (e, t, n) {
-      "use strict";
-      var a, s;
-      n.r(t),
-        n.d(t, {
-          HubEmailConnectionSteps: function () {
-            return a;
-          },
-          INVITE_ROUTING_HUB_GUILD_ID: function () {
-            return l;
-          },
-        }),
-        ((s = a || (a = {})).STUDENT_PROMPT = "STUDENT_PROMPT"),
-        (s.VERIFY_EMAIL = "VERIFY_EMAIL"),
-        (s.VERIFY_PIN = "VERIFY_PIN"),
-        (s.SELECT_SCHOOL = "SELECT_SCHOOL"),
-        (s.SELECT_SCHOOL_SEARCH = "SELECT_SCHOOL_SEARCH"),
-        (s.SUBMIT_SCHOOL = "SUBMIT_SCHOOL"),
-        (s.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
-        (s.EMAIL_WAITLIST = "EMAIL_WAITLIST");
-      let l = "884924873015689226";
-    },
     353983: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return m;
+            return f;
           },
         });
       var a = n("866227"),
@@ -230,10 +208,10 @@
         d = n("697218"),
         u = n("197881"),
         _ = n("299039"),
-        E = n("229929"),
-        N = n("49111"),
-        I = n("994428"),
-        m = {
+        N = n("229929"),
+        E = n("49111"),
+        m = n("994428"),
+        f = {
           init(e) {
             let { hasModalOpen: t, openModal: n } = e;
             !u.ProcessArgs.isDisallowPopupsSet() &&
@@ -244,14 +222,14 @@
                     null != e &&
                     7 > s().diff(s(_.default.extractTimestamp(e.id)), "days"),
                   o = Object.values(c.default.getGuilds()),
-                  u = null != o.find(e => e.hasFeature(N.GuildFeatures.HUB)),
-                  I = !(0, r.isDismissibleContentDismissed)(
+                  u = null != o.find(e => e.hasFeature(E.GuildFeatures.HUB)),
+                  m = !(0, r.isDismissibleContentDismissed)(
                     l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL
                   ),
-                  m = a || t() || u || !I;
-                !m &&
-                  (0, E.backToSchoolEnabled)() &&
-                  (E.default.trackExposure({ location: "8b792a_1" }),
+                  f = a || t() || u || !m;
+                !f &&
+                  (0, N.backToSchoolEnabled)() &&
+                  (N.default.trackExposure({ location: "8b792a_1" }),
                   n(),
                   (0, r.requestMarkDismissibleContentAsShown)(
                     l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL
@@ -261,7 +239,7 @@
           hideHubUpsell() {
             (0, r.markDismissibleContentAsDismissed)(
               l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL,
-              { dismissAction: I.ContentDismissActionType.AUTO }
+              { dismissAction: m.ContentDismissActionType.AUTO }
             );
           },
         };
@@ -271,7 +249,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return I;
           },
         }),
         n("222007");
@@ -285,25 +263,25 @@
         d = n("42203"),
         u = n("476765"),
         _ = n("238055"),
-        E = n("49111"),
-        N = n("782340"),
-        I = n("406742");
-      let m = (0, u.uid)();
-      var f = e => {
+        N = n("49111"),
+        E = n("782340"),
+        m = n("406742");
+      let f = (0, u.uid)();
+      var I = e => {
         let {
             setStep: t,
             setGuildsInfo: n,
             email: l,
             setEmail: u,
-            setGuildId: f,
+            setGuildId: I,
             invite: C,
             onClose: T,
             isNUXFlow: S,
           } = e,
           [h, g] = s.useState(null),
-          [A, p] = s.useState(!1),
-          x = async e => {
-            e.preventDefault(), g(null), p(!0);
+          [p, x] = s.useState(!1),
+          v = async e => {
+            e.preventDefault(), g(null), x(!0);
             try {
               var a, s, i, r, u;
               let e =
@@ -331,108 +309,108 @@
                   : void 0;
               e === _.INVITE_ROUTING_HUB_GUILD_ID && (e = void 0);
               let c = await o.default.sendVerificationEmail(l, !0, e),
-                E = c.guilds_info,
-                N = c.has_matching_guild;
-              N
-                ? (f(e), t(_.HubEmailConnectionSteps.VERIFY_PIN))
-                : 0 === E.length
+                N = c.guilds_info,
+                E = c.has_matching_guild;
+              E
+                ? (I(e), t(_.HubEmailConnectionSteps.VERIFY_PIN))
+                : 0 === N.length
                   ? t(_.HubEmailConnectionSteps.SUBMIT_SCHOOL)
-                  : 1 === E.length
-                    ? (f(E[0].id),
-                      await o.default.sendVerificationEmail(l, !0, E[0].id),
+                  : 1 === N.length
+                    ? (I(N[0].id),
+                      await o.default.sendVerificationEmail(l, !0, N[0].id),
                       t(_.HubEmailConnectionSteps.VERIFY_PIN))
-                    : (n(E), t(_.HubEmailConnectionSteps.SELECT_SCHOOL));
+                    : (n(N), t(_.HubEmailConnectionSteps.SELECT_SCHOOL));
             } catch (e) {
               g(new c.APIError(e));
             } finally {
-              p(!1);
+              x(!1);
             }
           },
-          v = N.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_HEADER,
-          O = N.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_DESCRIPTION;
+          A = E.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_HEADER,
+          O = E.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_DESCRIPTION;
         if (S)
-          (v = N.default.Messages.HUB_EMAIL_CONNECTION_NUX_HEADER),
+          (A = E.default.Messages.HUB_EMAIL_CONNECTION_NUX_HEADER),
             (O =
-              N.default.Messages.HUB_EMAIL_CONNECTION_NUX_CONTENT_DESCRIPTION);
+              E.default.Messages.HUB_EMAIL_CONNECTION_NUX_CONTENT_DESCRIPTION);
         else if (
           (null == C ? void 0 : C.guild) != null &&
           C.guild.id !== _.INVITE_ROUTING_HUB_GUILD_ID &&
           (null == C ? void 0 : C.approximate_member_count) != null
         ) {
           let { name: e } = C.guild;
-          v = N.default.Messages.HUB_EMAIL_CONNECTION_INVITE_HEADER.format({
+          A = E.default.Messages.HUB_EMAIL_CONNECTION_INVITE_HEADER.format({
             guildName: e,
             count: C.approximate_member_count,
           });
         }
         return (0, a.jsxs)("div", {
-          className: I.container,
+          className: m.container,
           children: [
-            (0, a.jsx)("div", { className: I.topImage }),
+            (0, a.jsx)("div", { className: m.topImage }),
             (0, a.jsx)(r.Heading, {
-              className: i(I.centerText, I.header),
+              className: i(m.centerText, m.header),
               variant: "heading-xl/semibold",
-              children: v,
+              children: A,
             }),
             (0, a.jsx)("div", {
-              className: I.descriptionWidth,
+              className: m.descriptionWidth,
               children: (0, a.jsx)(r.Text, {
-                className: I.centerText,
+                className: m.centerText,
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: O,
               }),
             }),
             (0, a.jsxs)("form", {
-              className: I.formContent,
-              onSubmit: x,
+              className: m.formContent,
+              onSubmit: v,
               children: [
                 (0, a.jsxs)(r.FormItem, {
                   children: [
                     (0, a.jsx)(r.FormTitle, {
-                      id: m,
+                      id: f,
                       children:
-                        N.default.Messages
+                        E.default.Messages
                           .HUB_EMAIL_CONNECTION_CONTENT_INPUT_HEADER,
                     }),
                     (0, a.jsx)(r.TextInput, {
                       placeholder:
-                        N.default.Messages
+                        E.default.Messages
                           .HUB_EMAIL_CONNECTION_CONTENT_INPUT_PLACEHOLDER,
                       onChange: e => {
                         u(e);
                       },
                       error: null == h ? void 0 : h.getAnyErrorMessage(),
-                      "aria-labelledby": m,
+                      "aria-labelledby": f,
                     }),
                   ],
                 }),
                 (0, a.jsx)(r.Text, {
                   color: "header-secondary",
-                  className: I.formDescription,
+                  className: m.formDescription,
                   variant: "text-sm/normal",
                   children:
-                    N.default.Messages
+                    E.default.Messages
                       .HUB_EMAIL_CONNECTION_CONTENT_INPUT_DESCRIPTION,
                 }),
                 (0, a.jsx)(r.Button, {
                   type: "submit",
                   size: r.Button.Sizes.LARGE,
                   color: r.Button.Colors.BRAND,
-                  className: I.submitButton,
-                  submitting: A,
+                  className: m.submitButton,
+                  submitting: p,
                   children:
-                    N.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_BUTTON,
+                    E.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_BUTTON,
                 }),
                 (0, a.jsx)(r.Text, {
-                  className: I.termsPhrase,
+                  className: m.termsPhrase,
                   color: "header-secondary",
                   variant: "text-xs/normal",
                   children:
-                    N.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_TOS_AND_PP.format(
+                    E.default.Messages.HUB_EMAIL_CONNECTION_CONTENT_TOS_AND_PP.format(
                       {
-                        termsURL: E.MarketingURLs.TERMS,
-                        privacyURL: E.MarketingURLs.PRIVACY,
+                        termsURL: N.MarketingURLs.TERMS,
+                        privacyURL: N.MarketingURLs.PRIVACY,
                       }
                     ),
                 }),
@@ -440,8 +418,8 @@
                   (0, a.jsx)(r.Button, {
                     look: r.Button.Looks.LINK,
                     onClick: T,
-                    className: I.cancelButton,
-                    children: N.default.Messages.HUB_EMAIL_CONNECTION_CANCEL,
+                    className: m.cancelButton,
+                    children: E.default.Messages.HUB_EMAIL_CONNECTION_CANCEL,
                   }),
               ],
             }),
@@ -473,23 +451,23 @@
               forceGuildScrollHeight: u = !0,
               isNUXFlow: _,
             } = e,
-            [E, N] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]),
-            [I, m] = s.useState(""),
-            [f, C] = s.useState(""),
+            [N, E] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]),
+            [m, f] = s.useState(""),
+            [I, C] = s.useState(""),
             [T, S] = s.useState(void 0),
             [h, g] = s.useState([]),
-            A = e => {
-              let t = E.concat(e);
-              N(t.slice(-4));
+            p = e => {
+              let t = N.concat(e);
+              E(t.slice(-4));
             },
-            p = E[E.length - 1];
-          switch (p) {
+            x = N[N.length - 1];
+          switch (x) {
             case d.HubEmailConnectionSteps.VERIFY_EMAIL:
               return (0, a.jsx)(l.default, {
                 setGuildsInfo: g,
-                setStep: A,
-                email: I,
-                setEmail: m,
+                setStep: p,
+                email: m,
+                setEmail: f,
                 setGuildId: S,
                 invite: n,
                 onClose: t,
@@ -498,32 +476,32 @@
             case d.HubEmailConnectionSteps.SELECT_SCHOOL:
               return (0, a.jsx)(i.default, {
                 guildsInfo: h,
-                setStep: A,
-                email: I,
+                setStep: p,
+                email: m,
                 setGuildId: S,
                 forceGuildScrollHeight: u,
               });
             case d.HubEmailConnectionSteps.SUBMIT_SCHOOL:
               return (0, a.jsx)(r.default, {
                 onBack: () => {
-                  if (E.length > 1) {
-                    let e = E.slice(0, -1);
-                    N(e.slice(-4));
+                  if (N.length > 1) {
+                    let e = N.slice(0, -1);
+                    E(e.slice(-4));
                   }
                 },
-                setStep: A,
-                email: I,
-                school: f,
+                setStep: p,
+                email: m,
+                school: I,
                 setSchool: C,
               });
             case d.HubEmailConnectionSteps.VERIFY_PIN:
               return (0, a.jsx)(o.default, {
-                email: I,
+                email: m,
                 onClose: t,
                 guildId: T,
               });
             case d.HubEmailConnectionSteps.EMAIL_WAITLIST:
-              return (0, a.jsx)(c.default, { setStep: A, school: f });
+              return (0, a.jsx)(c.default, { setStep: p, school: I });
             default:
               return null;
           }
@@ -548,11 +526,11 @@
         d = n("142833"),
         u = n("448993"),
         _ = n("813006"),
-        E = n("476263"),
-        N = n("466857"),
-        I = n("587974"),
-        m = n("315102"),
-        f = n("238055"),
+        N = n("476263"),
+        E = n("466857"),
+        m = n("587974"),
+        f = n("315102"),
+        I = n("238055"),
         C = n("782340"),
         T = n("69012"),
         S = n("529861");
@@ -561,7 +539,7 @@
         let { guildInfo: n, onClick: s, submitting: l } = e,
           i =
             null !==
-              (t = m.default.getGuildIconURL({
+              (t = f.default.getGuildIconURL({
                 id: n.id,
                 icon: n.icon,
                 size: 40,
@@ -572,15 +550,15 @@
           className: T.clickableGuildInfoRow,
           onClick: s,
           children: [
-            (0, a.jsx)(I.default, {
-              mask: I.default.Masks.AVATAR_DEFAULT,
+            (0, a.jsx)(m.default, {
+              mask: m.default.Masks.AVATAR_DEFAULT,
               width: 40,
               height: 40,
-              children: (0, a.jsx)(E.default, {
+              children: (0, a.jsx)(N.default, {
                 className: T.guildIcon,
                 iconSrc: i,
                 guild: new _.default(n),
-                size: E.default.Sizes.MEDIUM,
+                size: N.default.Sizes.MEDIUM,
               }),
             }),
             (0, a.jsx)(c.Text, {
@@ -602,26 +580,26 @@
             setGuildId: r,
             forceGuildScrollHeight: _,
           } = e,
-          [E, I] = s.useState(null),
-          [m, S] = s.useState(void 0),
-          [g, A] = s.useState(null),
-          p = e => async () => {
-            I(null), r(e), A(e);
+          [N, m] = s.useState(null),
+          [f, S] = s.useState(void 0),
+          [g, p] = s.useState(null),
+          x = e => async () => {
+            m(null), r(e), p(e);
             try {
               await d.default.sendVerificationEmail(n, !0, e),
-                t(f.HubEmailConnectionSteps.VERIFY_PIN);
+                t(I.HubEmailConnectionSteps.VERIFY_PIN);
             } catch (e) {
-              I(new u.APIError(e));
+              m(new u.APIError(e));
             } finally {
-              A(null);
+              p(null);
             }
           },
-          x = () => t(f.HubEmailConnectionSteps.SUBMIT_SCHOOL),
-          v = l;
+          v = () => t(I.HubEmailConnectionSteps.SUBMIT_SCHOOL),
+          A = l;
         return (
-          null != m &&
-            "" !== m &&
-            (v = l.filter(e => o(m.toLowerCase(), e.name.toLowerCase()))),
+          null != f &&
+            "" !== f &&
+            (A = l.filter(e => o(f.toLowerCase(), e.name.toLowerCase()))),
           (0, a.jsxs)("div", {
             className: T.container,
             children: [
@@ -639,7 +617,7 @@
                   color: "header-secondary",
                   children:
                     C.default.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_SUBHEADER.format(
-                      { onJoinWaitlist: x }
+                      { onJoinWaitlist: v }
                     ),
                 }),
               }),
@@ -649,7 +627,7 @@
                   (0, a.jsxs)("div", {
                     className: T.searchContainer,
                     children: [
-                      (0, a.jsx)(N.default, {
+                      (0, a.jsx)(E.default, {
                         placeholder: C.default.Messages.SEARCH,
                         className: T.searchBox,
                         inputClassName: T.searchBoxInput,
@@ -659,7 +637,7 @@
                           S(e);
                         },
                         label: C.default.Messages.SEARCH,
-                        searchTerm: m,
+                        searchTerm: f,
                         onClear: () => {
                           S(void 0);
                         },
@@ -667,21 +645,21 @@
                       (0, a.jsx)(c.Text, {
                         color: "text-danger",
                         variant: "text-xs/normal",
-                        children: null == E ? void 0 : E.getAnyErrorMessage(),
+                        children: null == N ? void 0 : N.getAnyErrorMessage(),
                       }),
                     ],
                   }),
-                  v.length > 0
+                  A.length > 0
                     ? (0, a.jsx)(c.ScrollerThin, {
                         className: T.scroller,
-                        children: v.map(e =>
+                        children: A.map(e =>
                           void 0 === e
                             ? null
                             : (0, a.jsx)(
                                 h,
                                 {
                                   guildInfo: e,
-                                  onClick: p(e.id),
+                                  onClick: x(e.id),
                                   submitting: g === e.id,
                                 },
                                 e.id
@@ -706,7 +684,7 @@
                               variant: "text-md/normal",
                               children:
                                 C.default.Messages.HUB_EMAIL_CONNECTION_GUILD_SELECT_NO_RESULTS_SUBHEADER.format(
-                                  { onJoinWaitlist: x }
+                                  { onJoinWaitlist: v }
                                 ),
                             }),
                           ],
@@ -724,10 +702,10 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return N;
+            return E;
           },
           HubEmailConnectionModalView: function () {
-            return I;
+            return m;
           },
         });
       var a = n("37983"),
@@ -740,42 +718,42 @@
         d = n("21873"),
         u = n("149806"),
         _ = n("782340"),
-        E = n("353990");
-      function N(e) {
-        let { transitionState: t, onClose: n, isNUXFlow: N } = e;
+        N = n("353990");
+      function E(e) {
+        let { transitionState: t, onClose: n, isNUXFlow: E } = e;
         return (
           s.useEffect(() => {
             o.default.hideHubUpsell(),
-              N &&
+              E &&
                 r.default.flowStep(
                   u.FlowType.ORGANIC,
                   u.RegistrationSteps.HUB_CONNECTION
                 );
-          }, [N]),
+          }, [E]),
           (0, a.jsx)(i.ModalRoot, {
-            className: E.modalRoot,
+            className: N.modalRoot,
             transitionState: t,
             "aria-label": _.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
             impression: { impressionName: l.ImpressionNames.HUB_EMAIL_SIGNUP },
             children: (0, a.jsx)(i.ModalContent, {
               style: { overflow: "hidden", paddingRight: "0px" },
               paddingFix: !1,
-              className: E.modalContent,
+              className: N.modalContent,
               children: (0, a.jsxs)("div", {
-                className: E.container,
+                className: N.container,
                 children: [
                   (0, a.jsx)("div", {
-                    className: E.sidebarContainer,
+                    className: N.sidebarContainer,
                     children: (0, a.jsx)(d.default, {}),
                   }),
                   (0, a.jsxs)("div", {
-                    className: E.contentContainer,
+                    className: N.contentContainer,
                     children: [
                       (0, a.jsx)(i.ModalCloseButton, {
                         onClick: n,
-                        className: E.closeButton,
+                        className: N.closeButton,
                       }),
-                      (0, a.jsx)(c.default, { isNUXFlow: N, onClose: n }),
+                      (0, a.jsx)(c.default, { isNUXFlow: E, onClose: n }),
                     ],
                   }),
                 ],
@@ -784,17 +762,17 @@
           })
         );
       }
-      let I = e => {
+      let m = e => {
         let { invite: t } = e;
         return (0, a.jsxs)("div", {
-          className: E.container,
+          className: N.container,
           children: [
             (0, a.jsx)("div", {
-              className: E.sidebarContainer,
+              className: N.sidebarContainer,
               children: (0, a.jsx)(d.default, {}),
             }),
             (0, a.jsx)("div", {
-              className: E.contentContainer,
+              className: N.contentContainer,
               children: (0, a.jsx)(c.default, { invite: t }),
             }),
           ],
@@ -844,7 +822,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return m;
+            return f;
           },
         }),
         n("222007");
@@ -858,12 +836,12 @@
         d = n("476765"),
         u = n("238055"),
         _ = n("49111"),
-        E = n("782340"),
-        N = n("291115");
-      let I = (0, d.uid)();
-      var m = e => {
-        let { email: t, setStep: n, onBack: l, school: d, setSchool: m } = e,
-          [f, C] = s.useState(null),
+        N = n("782340"),
+        E = n("291115");
+      let m = (0, d.uid)();
+      var f = e => {
+        let { email: t, setStep: n, onBack: l, school: d, setSchool: f } = e,
+          [I, C] = s.useState(null),
           [T, S] = s.useState(!1),
           h = async () => {
             C(null), S(!0);
@@ -883,66 +861,66 @@
               (await h());
           };
         return (0, a.jsxs)("div", {
-          className: N.container,
+          className: E.container,
           children: [
-            (0, a.jsx)("div", { className: N.topImage }),
+            (0, a.jsx)("div", { className: E.topImage }),
             (0, a.jsx)(r.Heading, {
-              className: i(N.centerText, N.header),
+              className: i(E.centerText, E.header),
               variant: "heading-xl/semibold",
               children:
-                E.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER,
+                N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER,
             }),
             (0, a.jsx)("div", {
-              className: N.descriptionWidth,
+              className: E.descriptionWidth,
               children: (0, a.jsx)(r.Text, {
-                className: N.centerText,
+                className: E.centerText,
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children:
-                  E.default.Messages
+                  N.default.Messages
                     .HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION,
               }),
             }),
             (0, a.jsxs)(r.FormItem, {
-              className: N.formItem,
+              className: E.formItem,
               children: [
                 (0, a.jsx)(r.FormTitle, {
-                  id: I,
+                  id: m,
                   children:
-                    E.default.Messages
+                    N.default.Messages
                       .HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER,
                 }),
                 (0, a.jsx)(r.TextInput, {
                   onKeyPress: g,
                   placeholder:
-                    E.default.Messages
+                    N.default.Messages
                       .HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
                   onChange: e => {
-                    m(e);
+                    f(e);
                   },
-                  error: null == f ? void 0 : f.getAnyErrorMessage(),
-                  "aria-labelledby": I,
+                  error: null == I ? void 0 : I.getAnyErrorMessage(),
+                  "aria-labelledby": m,
                 }),
               ],
             }),
             (0, a.jsxs)("div", {
-              className: N.footer,
+              className: E.footer,
               children: [
                 (0, a.jsx)(r.Button, {
-                  className: N.backButton,
+                  className: E.backButton,
                   onClick: l,
                   look: r.Button.Looks.LINK,
                   size: r.Button.Sizes.NONE,
                   color: r.Button.Colors.PRIMARY,
-                  children: E.default.Messages.BACK,
+                  children: N.default.Messages.BACK,
                 }),
                 (0, a.jsx)(r.Button, {
                   onClick: h,
                   size: r.Button.Sizes.MEDIUM,
                   color: r.Button.Colors.BRAND,
-                  className: N.submitButton,
+                  className: E.submitButton,
                   submitting: T,
-                  children: E.default.Messages.JOIN_WAITLIST,
+                  children: N.default.Messages.JOIN_WAITLIST,
                 }),
               ],
             }),
@@ -969,14 +947,14 @@
         d = n("142833"),
         u = n("448993"),
         _ = n("393414"),
-        E = n("476765"),
-        N = n("49111"),
-        I = n("782340"),
-        m = n("398096");
-      let f = (0, E.uid)();
+        N = n("476765"),
+        E = n("49111"),
+        m = n("782340"),
+        f = n("398096");
+      let I = (0, N.uid)();
       var C = e => {
         let { email: t, guildId: n, onClose: l } = e,
-          [r, E] = s.useState(""),
+          [r, N] = s.useState(""),
           [C, T] = s.useState(null),
           S = s.useCallback(async () => {
             if (null != n)
@@ -984,7 +962,7 @@
                 let e = await d.default.verifyCode(r, n, t);
                 e.guild &&
                   (null == l || l(),
-                  (0, _.transitionTo)(N.Routes.CHANNEL(e.guild.id)));
+                  (0, _.transitionTo)(E.Routes.CHANNEL(e.guild.id)));
               } catch (e) {
                 T(new u.APIError(e));
               }
@@ -995,44 +973,44 @@
           g = async e => {
             null != r &&
               "" !== r &&
-              e.charCode === N.KeyboardKeys.ENTER &&
+              e.charCode === E.KeyboardKeys.ENTER &&
               (await S());
           };
         return (0, a.jsxs)("div", {
-          className: m.container,
+          className: f.container,
           children: [
-            (0, a.jsx)("div", { className: m.topImage }),
+            (0, a.jsx)("div", { className: f.topImage }),
             (0, a.jsx)(c.Heading, {
-              className: i(m.centerText, m.header),
+              className: i(f.centerText, f.header),
               variant: "heading-xl/semibold",
-              children: I.default.Messages.HUB_VERIFY_EMAIL_ADDRESS,
+              children: m.default.Messages.HUB_VERIFY_EMAIL_ADDRESS,
             }),
             (0, a.jsx)("div", {
-              className: m.descriptionWidth,
+              className: f.descriptionWidth,
               children: (0, a.jsx)(c.Text, {
-                className: m.centerText,
+                className: f.centerText,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: I.default.Messages.HUB_PIN_DESCRIPTION.format({
+                children: m.default.Messages.HUB_PIN_DESCRIPTION.format({
                   email: t,
                   onClick: h,
                 }),
               }),
             }),
             (0, a.jsxs)(c.FormItem, {
-              className: m.formItem,
+              className: f.formItem,
               children: [
                 (0, a.jsx)(c.FormTitle, {
-                  id: f,
-                  children: I.default.Messages.HUB_ENTER_PIN,
+                  id: I,
+                  children: m.default.Messages.HUB_ENTER_PIN,
                 }),
                 (0, a.jsx)(c.TextInput, {
                   onKeyPress: g,
                   onChange: e => {
-                    null != e && "" !== e && E(e);
+                    null != e && "" !== e && N(e);
                   },
                   error: null == C ? void 0 : C.getAnyErrorMessage(),
-                  "aria-labelledby": f,
+                  "aria-labelledby": I,
                 }),
               ],
             }),
@@ -1042,9 +1020,9 @@
               size: c.Button.Sizes.LARGE,
               color: c.Button.Colors.BRAND,
               children: (0, a.jsx)(c.Text, {
-                className: m.submitText,
+                className: f.submitText,
                 variant: "text-sm/normal",
-                children: I.default.Messages.SUBMIT,
+                children: m.default.Messages.SUBMIT,
               }),
             }),
           ],
@@ -1153,7 +1131,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return m;
+            return f;
           },
         });
       var a = n("308503"),
@@ -1187,7 +1165,7 @@
           return (null == l ? void 0 : l.currentStep) != null ? n : null;
         },
       }));
-      function E(e, t) {
+      function N(e, t) {
         let { [e]: n, ...a } = _.getState().flows,
           s = null != n ? n : u(e);
         if ((null == s ? void 0 : s.currentStep) == null || s.currentStep !== t)
@@ -1206,7 +1184,7 @@
             currentFlow: e,
           });
       }
-      function N(e, t) {
+      function E(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           a = e;
         if (e === r.FlowType.ANY) {
@@ -1277,18 +1255,18 @@
         },
         e => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0)
       );
-      function I() {
+      function m() {
         return null != _.getState().activeFlow();
       }
-      var m = {
-        flowStart: E,
+      var f = {
+        flowStart: N,
         flowStepOrStart: function (e, t) {
-          I() ? N(e, t) : E(e, t);
+          m() ? E(e, t) : N(e, t);
         },
-        flowStep: N,
-        hasActiveFlow: I,
+        flowStep: E,
+        hasActiveFlow: m,
       };
     },
   },
 ]);
-//# sourceMappingURL=5b9a230644739803bb50.js.map
+//# sourceMappingURL=0bfd328b1d0ffb72c805.js.map

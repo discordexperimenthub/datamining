@@ -24,8 +24,8 @@
         s = a("42887"),
         r = a("254490"),
         i = a("49671"),
-        u = a("49111");
-      let c = new n.default("uploadRtcLogFiles");
+        c = a("49111");
+      let u = new n.default("uploadRtcLogFiles");
       async function d(e, t) {
         let a;
         if (null == i.default.fileManager.readLogFiles)
@@ -37,7 +37,7 @@
           );
         } catch (e) {
           throw (
-            (c.error("uploadDebugFiles: read error '".concat(e, "'")),
+            (u.error("uploadDebugFiles: read error '".concat(e, "'")),
             new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.READ))
           );
         }
@@ -46,7 +46,7 @@
         try {
           let e = { extraInfo: t, mediaEngineState: s.default.getState() };
           a = await l.default.post({
-            url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
+            url: c.Endpoints.DEBUG_LOGS(c.DebugLogCategory.RTC),
             attachments: [
               ...n.map(e => ({ name: e.name, file: e, filename: e.name })),
               {
@@ -60,7 +60,7 @@
           if (429 === e.status)
             throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.PROGRESS);
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload error: status: "
                 .concat(e.status, ", message: ")
                 .concat(e.message)
@@ -71,7 +71,7 @@
         let d = n.length + 1;
         if ("success_count" in a.body && a.body.success_count !== d)
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: stored files "
                 .concat(a.body.success_count, " !== ")
                 .concat(d)
@@ -84,7 +84,7 @@
           ("all_success" in a.body && !a.body.all_success)
         )
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: store_success: ".concat(
                 a.body.store_success,
                 " / "
@@ -101,10 +101,10 @@
       a.r(t),
         a.d(t, {
           fetchBugReportConfig: function () {
-            return u;
+            return c;
           },
           getFeatureId: function () {
-            return c;
+            return u;
           },
           getPriorities: function () {
             return d;
@@ -121,11 +121,11 @@
       var s = a("840707"),
         r = a("49111"),
         i = a("782340");
-      async function u() {
+      async function c() {
         let e = await l.default.get({ url: r.Endpoints.BUG_REPORTS });
         return e.body;
       }
-      function c(e) {
+      function u(e) {
         var t, a;
         return null !==
           (a =
@@ -169,7 +169,7 @@
       }
       async function m(e, t, a) {
         var l, i;
-        let u = [
+        let c = [
           { name: "name", value: e.name },
           { name: "priority", value: "".concat(e.priority) },
           {
@@ -178,35 +178,35 @@
           },
         ];
         "" !== e.description &&
-          u.push({ name: "description", value: e.description }),
-          "" !== e.url && u.push({ name: "external_url", value: e.url });
-        let c =
+          c.push({ name: "description", value: e.description }),
+          "" !== e.url && c.push({ name: "external_url", value: e.url });
+        let u =
           null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
-        null != c &&
-          "" !== c &&
-          u.push({ name: "asana_inbox_id", value: "".concat(c) });
+        null != u &&
+          "" !== u &&
+          c.push({ name: "asana_inbox_id", value: "".concat(u) });
         let d = null === (i = e.feature) || void 0 === i ? void 0 : i.name;
-        null != d && "" !== d && u.push({ name: "feature_name", value: d }),
+        null != d && "" !== d && c.push({ name: "feature_name", value: d }),
           t.overridePlatformInformation &&
-            (u.push({ name: "device", value: t.device }),
-            u.push({ name: "os", value: t.operatingSystem }),
-            u.push({ name: "os_version", value: t.operatingSystemVersion }),
-            u.push({ name: "client_version", value: t.clientVersion }),
-            u.push({ name: "client_build_number", value: t.clientBuildNumber }),
-            u.push({
+            (c.push({ name: "device", value: t.device }),
+            c.push({ name: "os", value: t.operatingSystem }),
+            c.push({ name: "os_version", value: t.operatingSystemVersion }),
+            c.push({ name: "client_version", value: t.clientVersion }),
+            c.push({ name: "client_build_number", value: t.clientBuildNumber }),
+            c.push({
               name: "release_channel",
               value: window.GLOBAL_ENV.RELEASE_CHANNEL,
             }),
-            u.push({ name: "locale", value: t.locale })),
+            c.push({ name: "locale", value: t.locale })),
           (0, o.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
         try {
           return await s.default.post({
             url: r.Endpoints.BUG_REPORTS,
             attachments: a,
-            fields: u,
+            fields: c,
             trackedActionData: {
               event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
-              properties: { priority: e.priority, asana_inbox_id: c },
+              properties: { priority: e.priority, asana_inbox_id: u },
             },
           });
         } catch (e) {
@@ -249,8 +249,8 @@
         s = a("446674"),
         r = a("819855"),
         i = a("77078"),
-        u = a("371642"),
-        c = a("966724"),
+        c = a("371642"),
+        u = a("966724"),
         d = a("9560"),
         m = a("761354"),
         f = a("161778"),
@@ -304,8 +304,8 @@
           [ea, en] = l.useState(""),
           [el, eo] = l.useState(""),
           [es, er] = l.useState(""),
-          [ei, eu] = l.useState(!1),
-          [ec, ed] = l.useState(!1),
+          [ei, ec] = l.useState(!1),
+          [eu, ed] = l.useState(!1),
           [em, ef] = l.useState(!1),
           eg = () => {
             null == P || P();
@@ -316,7 +316,7 @@
         async function eh() {
           var e;
           if ((ef(!1), "" === B || null == F)) {
-            eu(!0);
+            ec(!0);
             return;
           }
           let t =
@@ -325,7 +325,7 @@
               : null === (e = H.features) || void 0 === e
                 ? void 0
                 : e.find(e => (0, E.getFeatureId)(e) === K);
-          ed(!0), eu(!1);
+          ed(!0), ec(!1);
           let l = (0, R.getAttachments)(
               k.map(e => {
                 let { item: t } = e;
@@ -629,7 +629,7 @@
                           className: I.uploadButton,
                           children: [
                             x.default.Messages.BUG_REPORT_ADD_ATTACHMENTS,
-                            (0, n.jsx)(u.default, {
+                            (0, n.jsx)(c.default, {
                               ref: U,
                               onChange: e => {
                                 var t, a;
@@ -643,10 +643,10 @@
                                 ) {
                                   let t = Array.from(e.currentTarget.files).map(
                                     e =>
-                                      new c.default({
+                                      new u.default({
                                         id: (0, o.v4)(),
                                         file: e,
-                                        platform: c.UploadPlatform.WEB,
+                                        platform: u.UploadPlatform.WEB,
                                       })
                                   );
                                   Y([...k, ...t]);
@@ -742,7 +742,7 @@
                           }),
                         }),
                         (0, n.jsx)(i.Button, {
-                          submitting: ec,
+                          submitting: eu,
                           className: I.formButton,
                           onClick: eh,
                           children: "Submit and Open Report",
@@ -771,8 +771,8 @@
         s = a("821316"),
         r = a("605250"),
         i = a("836403"),
-        u = a("825287"),
-        c = a("929331"),
+        c = a("825287"),
+        u = a("929331"),
         d = a("49111");
       let m = new r.default("DebugUploadManager");
       async function f(e, t) {
@@ -794,9 +794,9 @@
           }
           let m = null,
             f = "\n    "
-              .concat((0, c.default)(m), "\n\n    Metadata:\n    ")
+              .concat((0, u.default)(m), "\n\n    Metadata:\n    ")
               .concat(
-                JSON.stringify((0, u.default)(), void 0, 2),
+                JSON.stringify((0, c.default)(), void 0, 2),
                 "\n\n    ChannelStore:\n    "
               )
               .concat(
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "276503",
-          versionHash: "2fa521ca051b18c2884f964a841feecfab59fe1b",
+          buildNumber: "276506",
+          versionHash: "183964764c6330f24ed778cd4571cb8b9e52fc7f",
         };
       }
       a.r(t),
@@ -905,14 +905,14 @@
           .map(n => {
             var o, r;
             let {
-                index: u,
-                timestamp: c,
+                index: c,
+                timestamp: u,
                 logs: d,
                 nativeLogs: m,
                 serverTrace: f,
               } = n,
               g =
-                0 === u
+                0 === c
                   ? null !==
                       (r =
                         null ===
@@ -924,7 +924,7 @@
                           : o.timestamp) && void 0 !== r
                     ? r
                     : e
-                  : c,
+                  : u,
               p = (function (e, t) {
                 var a, n;
                 let o = (function (e) {
@@ -984,8 +984,8 @@
                   t.forEach(t => {
                     let n = i(t),
                       r = 0,
-                      u = a || !t.autoGenerated,
-                      c =
+                      c = a || !t.autoGenerated,
+                      u =
                         n.startsWith("Start ") &&
                         !n.includes("RUN_JS_BUNDLE") &&
                         l.has(n.replace("Start ", "Finish ")),
@@ -998,8 +998,8 @@
                       let e = s.pop();
                       null != e &&
                         ((r = t.timestamp - e.timestamp),
-                        (u =
-                          u ||
+                        (c =
+                          c ||
                           (r > 5 &&
                             !(function (e) {
                               return [
@@ -1007,7 +1007,7 @@
                                 "CONVERT_CONSTANTS",
                               ].some(t => e.includes(t));
                             })(n))),
-                        (e.shouldKeep = e.shouldKeep || u));
+                        (e.shouldKeep = e.shouldKeep || c));
                     }
                     let m = {
                       emoji: "☕",
@@ -1015,7 +1015,7 @@
                       delta: r > 0 ? r : void 0,
                       prefix: o,
                       log: n,
-                      shouldKeep: u,
+                      shouldKeep: c,
                     };
                     (function (e, t) {
                       let a = 0;
@@ -1025,7 +1025,7 @@
                       }
                       e.splice(a, 0, t);
                     })(e, m),
-                      c && ((o += "| "), s.push(m));
+                      u && ((o += "| "), s.push(m));
                   });
                   let r = !1;
                   return e.filter(
@@ -1039,12 +1039,12 @@
                 g
               ),
               h = "Trace #"
-                .concat(u + 1, " started ")
-                .concat((0, s.getTimestampString)(c), "\n")
+                .concat(c + 1, " started ")
+                .concat((0, s.getTimestampString)(u), "\n")
                 .concat(p);
             return (
               null != f &&
-                (h += "\n Server trace for trace #".concat(u + 1).concat(f)),
+                (h += "\n Server trace for trace #".concat(c + 1).concat(f)),
               h
             );
           })
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6044c6b3fd51ce820475.js.map
+//# sourceMappingURL=04f5d33c37419857578c.js.map

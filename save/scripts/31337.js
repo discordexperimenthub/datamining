@@ -533,7 +533,7 @@
             return L;
           },
           getBuiltInCommands: function () {
-            return x;
+            return B;
           },
         }),
         n("222007"),
@@ -1308,7 +1308,7 @@
             "nick",
           ].includes(e.name)
         ),
-        x = (e, t, n) => {
+        B = (e, t, n) => {
           let i = t ? P : b;
           return (i = i.filter(
             t =>
@@ -1609,13 +1609,13 @@
         P = Symbol("currentUser"),
         U = Symbol("stale"),
         b = Symbol("current"),
-        x = Object.freeze({
+        B = Object.freeze({
           descriptors: [],
           commands: [],
           sectionedCommands: [],
           loading: !0,
         }),
-        B = Object.freeze({
+        x = Object.freeze({
           serverVersion: b,
           fetchState: { fetching: !1 },
           result: { sections: {}, sectionIdsByBotId: {}, version: b },
@@ -1692,7 +1692,7 @@
                   ]) && void 0 !== n
               ? n
               : F
-            : B;
+            : x;
         }
         getUserState() {
           var e;
@@ -1703,11 +1703,11 @@
             ? null !== (e = this.indices[P]) && void 0 !== e
               ? e
               : F
-            : B;
+            : x;
         }
         query(e, t, n) {
           let i = A.default.getCurrentUser();
-          if (null == i) return x;
+          if (null == i) return B;
           let l = this.getContextState(e),
             a = this.getUserState(),
             o = (0, y.buildPermissionContext)(e, t.commandType),
@@ -3052,21 +3052,22 @@
         let {
           context: a,
           commandType: u,
-          allowNsfw: p,
-          computedPermissions: T,
-          userId: A,
-          roleIds: E,
-          isImpersonating: g,
-          hasBaseAccessPermissions: M,
+          allowNsfw: T,
+          computedPermissions: A,
+          userId: E,
+          roleIds: g,
+          isImpersonating: M,
+          hasBaseAccessPermissions: O,
         } = t;
         if (e.type !== u) return 2;
-        if (e.nsfw && !p) return 1;
-        let O = (0, m.computeCommandContextType)(a, l);
+        if (e.nsfw && !T) return 1;
+        let S = (0, m.computeCommandContextType)(a, l);
         if (null != e.contexts) {
-          if (!e.contexts.includes(O)) return 4;
+          if (!e.contexts.includes(S)) return 4;
         } else if (
-          (!1 === e.dmPermission && O === r.InteractionContextType.BOT_DM) ||
-          O === r.InteractionContextType.PRIVATE_CHANNEL
+          e.inputType === p.ApplicationCommandInputType.BOT &&
+          ((!1 === e.dmPermission && S === r.InteractionContextType.BOT_DM) ||
+            S === r.InteractionContextType.PRIVATE_CHANNEL)
         )
           return 4;
         if (null != e.predicate && a instanceof d.ChannelRecordBase) {
@@ -3074,13 +3075,13 @@
           if (!e.predicate({ channel: a, guild: t })) return 3;
         }
         if (e.applicationId === _.BuiltInSectionId.BUILT_IN) return 0;
-        let S = (0, m.getContextGuildId)(a);
-        if (null == S || s.default.has(T, I.Permissions.ADMINISTRATOR))
+        let h = (0, m.getContextGuildId)(a);
+        if (null == h || s.default.has(A, I.Permissions.ADMINISTRATOR))
           return 0;
-        if (!M) return 5;
+        if (!O) return 5;
         if (a instanceof d.ChannelRecordBase) {
           o(void 0 !== i, "missing applicationAllowedForChannel");
-          let t = C(e.permissions, a, S);
+          let t = C(e.permissions, a, h);
           if (
             (function (e) {
               return !1 === e;
@@ -3094,14 +3095,14 @@
           )
             return 6;
         }
-        let h = N(e.permissions, S, A, E, g);
+        let y = N(e.permissions, h, E, g, M);
         return (function (e) {
           return !0 === e;
-        })(h)
+        })(y)
           ? 0
           : (function (e) {
                 return !1 === e;
-              })(h)
+              })(y)
             ? 7
             : (function (e) {
                   return !1 === e;
@@ -3111,7 +3112,7 @@
                     !s.default.equals(
                       e.defaultMemberPermissions,
                       f.DISABLED_BY_DEFAULT_PERMISSION_FLAG
-                    ) && s.default.has(T, e.defaultMemberPermissions)
+                    ) && s.default.has(A, e.defaultMemberPermissions)
                   ))
               ? 7
               : 0;
@@ -3228,8 +3229,8 @@
         P = n("317041"),
         U = n("49111"),
         b = n("894488"),
-        x = n("782340");
-      let B = (e, t) => {
+        B = n("782340");
+      let x = (e, t) => {
           var n;
           return null == e
             ? void 0
@@ -3250,7 +3251,7 @@
           if ("" === t) return null;
           let s = y.default.getAutocompleteLastChoices(n.channel.id, e.name);
           return null != s
-            ? null !== (l = B(s, t)) && void 0 !== l
+            ? null !== (l = x(s, t)) && void 0 !== l
               ? l
               : a(t)
             : a(t);
@@ -3268,7 +3269,7 @@
           context: D,
           commandTargetId: P,
           maxSizeCallback: b,
-          commandOrigin: x = R.CommandOrigin.CHAT,
+          commandOrigin: B = R.CommandOrigin.CHAT,
         } = e;
         null == D.autocomplete &&
           a.default.dispatch({
@@ -3279,7 +3280,7 @@
           await A.default.unarchiveThreadIfNecessary(D.channel.id);
         let w = [],
           k = [],
-          W = (0, L.getCommandAttachmentDraftType)(x);
+          W = (0, L.getCommandAttachmentDraftType)(B);
         if (null != S.options)
           for (let e of S.options) {
             if (
@@ -3305,7 +3306,7 @@
                   : "";
               (n =
                 null != e.choices
-                  ? B(e.choices, i)
+                  ? x(e.choices, i)
                   : e.autocomplete
                     ? F(e, i, D)
                     : i),
@@ -3438,7 +3439,7 @@
                   let t = s.text.trim();
                   n =
                     null != e.choices
-                      ? Number(B(e.choices, t))
+                      ? Number(x(e.choices, t))
                       : e.autocomplete
                         ? F(e, t, D, Number)
                         : Number(v.normalizeNumericString(E.default.locale, t));
@@ -3449,7 +3450,7 @@
                   let t = s.text.trim();
                   n =
                     null != e.choices
-                      ? Number(B(e.choices, t))
+                      ? Number(x(e.choices, t))
                       : e.autocomplete
                         ? F(e, t, D, Number)
                         : Number(v.normalizeNumericString(E.default.locale, t));
@@ -3480,7 +3481,7 @@
                 application_id: S.applicationId,
                 command_type: S.type,
                 location:
-                  x === R.CommandOrigin.APPLICATION_LAUNCHER
+                  B === R.CommandOrigin.APPLICATION_LAUNCHER
                     ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER
                     : R.ApplicationCommandTriggerLocations.SLASH_UI,
               }
@@ -3530,7 +3531,7 @@
                 },
                 commandDisplayName: S.displayName,
                 analytics_location:
-                  x === R.CommandOrigin.APPLICATION_LAUNCHER
+                  B === R.CommandOrigin.APPLICATION_LAUNCHER
                     ? R.ApplicationCommandTriggerLocations.APP_LAUNCHER
                     : R.ApplicationCommandTriggerLocations.SLASH_UI,
               }));
@@ -3688,7 +3689,7 @@
               _.setFailed(
                 t,
                 U.AbortCodes.ENTITY_TOO_LARGE,
-                x.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+                B.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
                   maxSize: (0, M.sizeString)(l),
                 })
               );
@@ -3706,7 +3707,7 @@
           _.setFailed(
             t,
             void 0,
-            x.default.Messages.UPLOADING_FILES_FAILED.format({
+            B.default.Messages.UPLOADING_FILES_FAILED.format({
               count: e.length,
             })
           );
@@ -4318,7 +4319,7 @@
       n.r(t),
         n.d(t, {
           computeThreadIdsSnapshot: function () {
-            return x;
+            return B;
           },
           default: function () {
             return H;
@@ -4390,9 +4391,9 @@
             : e.isForumLikeChannel())
         )
           return U(), !1;
-        B({ refreshThreadIds: !0 });
+        x({ refreshThreadIds: !0 });
       }
-      function x(e) {
+      function B(e) {
         let t = p.default.getChannel(e);
         return null == t
           ? []
@@ -4403,7 +4404,7 @@
               })
               .sort(P(g));
       }
-      function B(e) {
+      function x(e) {
         var t;
         let n = p.default.getChannel(C);
         if (null == n) return;
@@ -4465,10 +4466,10 @@
             (N = n),
             (g = t),
             i
-              ? B({ refreshThreadIds: !0 })
+              ? x({ refreshThreadIds: !0 })
               : a
-                ? B({ sortThreadIds: !0 })
-                : l && B(),
+                ? x({ sortThreadIds: !0 })
+                : l && x(),
             O
           );
         }
@@ -4505,7 +4506,7 @@
                 : t.guild_id)
           )
             return !1;
-          B({ refreshThreadIds: !0 });
+          x({ refreshThreadIds: !0 });
         },
         THREAD_CREATE: function (e) {
           let { channel: t, isNewlyCreated: n } = e;
@@ -4517,21 +4518,21 @@
           if (null == t.parent_id || t.parent_id !== C) return !1;
           let n = (0, T.isForumPostPinned)(t.id),
             i = R.has(t.id);
-          if (n && !i) R.add(t.id), B({ sortThreadIds: !0 });
+          if (n && !i) R.add(t.id), x({ sortThreadIds: !0 });
           else {
             if (n || !i) return !1;
-            R.delete(t.id), B({ sortThreadIds: !0 });
+            R.delete(t.id), x({ sortThreadIds: !0 });
           }
         },
         THREAD_DELETE: function (e) {
           let { channel: t } = e;
           if (null == t.parent_id || t.parent_id !== C) return !1;
-          D.add(t.id), B({ sortThreadIds: !0 });
+          D.add(t.id), x({ sortThreadIds: !0 });
         },
         RESORT_THREADS: function (e) {
           let { channelId: t } = e;
           if (null == t || t !== C) return !1;
-          B({ refreshThreadIds: !0 });
+          x({ refreshThreadIds: !0 });
         },
         CHANNEL_ACK: function (e) {
           let { channelId: t } = e;
@@ -4764,7 +4765,7 @@
             }
             let O = (0, M.getAutoArchiveDuration)(t),
               S = I.default.getChannel(g.default.castMessageIdAsChannelId(n)),
-              h = await x(t, () => {
+              h = await B(t, () => {
                 let e =
                   null != n
                     ? y.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n)
@@ -4803,7 +4804,7 @@
         );
       }
       function U(e, t, n, i, l) {
-        return x(e, () =>
+        return B(e, () =>
           o.default.post({
             url: y.Endpoints.CHANNEL_THREADS(e.id),
             body: { name: t, type: n, auto_archive_duration: i, location: l },
@@ -4837,7 +4838,7 @@
                   flags: 0 !== d ? d : void 0,
                 },
               },
-              C = await x(t, () =>
+              C = await B(t, () =>
                 null != r && r.length > 0
                   ? s(A, E, r)
                   : o.default.post({ url: A, body: E })
@@ -4861,7 +4862,7 @@
       ((l = i || (i = {}))[(l.Disabled = 1)] = "Disabled"),
         (l[(l.Enabled = 2)] = "Enabled"),
         (l[(l.PrivateOnly = 3)] = "PrivateOnly");
-      async function x(e, t) {
+      async function B(e, t) {
         let n;
         let i = e.isForumLikeChannel();
         try {
@@ -5105,4 +5106,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31337.7f437fc715576ca37528.js.map
+//# sourceMappingURL=31337.3475034a12db03a1ca68.js.map

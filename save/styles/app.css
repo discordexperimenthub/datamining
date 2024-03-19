@@ -22709,8 +22709,25 @@ html .progress__4ef76 {
   position: relative;
   overflow: hidden;
 }
+.header__0420f {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  grid-template-areas: "question infoIcon" "prompt infoIcon";
+  grid-gap: 0 8px;
+  gap: 0 8px;
+}
+.question_ebf72e {
+  grid-area: question;
+  word-break: break-word;
+}
 .prompt__75afd {
+  grid-area: prompt;
   margin: 4px 0 0;
+}
+.infoButton__66908 {
+  grid-area: infoIcon;
+  align-self: flex-start;
+  cursor: pointer;
 }
 .detailsText__5f51b {
   display: flex;
@@ -110924,4 +110941,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3c17788defc9bc6669bc.css.map*/
+/*# sourceMappingURL=app.43aa0942a0106ab4763c.css.map*/

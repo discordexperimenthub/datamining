@@ -5607,6 +5607,9 @@
           "media_picker_infinite_scroll_paged"),
         (el.MESSAGE_MENU_GOOGLE_SEARCHED = "message_menu_google_searched"),
         (el.EVENT_RINGTONE_TOGGLED = "event_ringtone_toggled"),
+        (el.USER_PROFILE_ACTION = "user_profile_action"),
+        (el.USER_PROFILE_ACTIVITY_JOINED = "user_profile_activity_joined"),
+        (el.USER_PROFILE_BADGE_PRESSED = "user_profile_badge_pressed"),
         (el.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
         (el.DM_PROFILE_VIEWED = "dm_profile_viewed"),
         (el.PREMIUM_WOW_MOMENT_VIEWED = "premium_wow_moment_viewed"),
@@ -17331,4 +17334,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.2200f1c2ab9b41f32299.js.map
+//# sourceMappingURL=7273.54d61f48486efc771b91.js.map

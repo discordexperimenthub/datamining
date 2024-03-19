@@ -1,26 +1,26 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["19893"],
   {
-    743087: function (e, t, n) {
+    743087: function (e, t, l) {
       "use strict";
-      n.r(t);
-      var l = n("161213");
-      n.es(l, t);
+      l.r(t);
+      var n = l("161213");
+      l.es(n, t);
     },
-    933326: function (e, t, n) {
+    933326: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return E;
           },
         }),
-        n("222007");
-      var l = n("689988"),
-        s = n("21121"),
-        u = n("162771"),
-        a = n("398604"),
-        i = n("322224");
+        l("222007");
+      var n = l("689988"),
+        s = l("21121"),
+        u = l("162771"),
+        a = l("398604"),
+        i = l("322224");
       let o = {},
         r = new Set(),
         d = async e => {
@@ -32,29 +32,29 @@
               } catch (e) {}
           }
         };
-      class c extends l.default {
-        async getGuildEventUserCounts(e, t, n) {
-          let l = n.filter(
-            n =>
-              null == o["".concat(e, "-").concat(t, "-").concat(n)] ||
-              Date.now() - o["".concat(e, "-").concat(t, "-").concat(n)] > 18e5
+      class c extends n.default {
+        async getGuildEventUserCounts(e, t, l) {
+          let n = l.filter(
+            l =>
+              null == o["".concat(e, "-").concat(t, "-").concat(l)] ||
+              Date.now() - o["".concat(e, "-").concat(t, "-").concat(l)] > 18e5
           );
           if (
             !(Date.now() - o["".concat(e, "-").concat(t)] < 18e5) ||
-            0 !== l.length
+            0 !== n.length
           ) {
             (o["".concat(e, "-").concat(t)] = Date.now()),
-              l.forEach(
-                n =>
-                  (o["".concat(e, "-").concat(t, "-").concat(n)] = Date.now())
+              n.forEach(
+                l =>
+                  (o["".concat(e, "-").concat(t, "-").concat(l)] = Date.now())
               );
             try {
-              await i.default.fetchGuildEventUserCounts(e, t, l);
+              await i.default.fetchGuildEventUserCounts(e, t, n);
             } catch (e) {}
           }
         }
-        getGuildEventUsers(e, t, n) {
-          return i.default.fetchUsersForGuildEvent(e, t, n);
+        getGuildEventUsers(e, t, l) {
+          return i.default.fetchUsersForGuildEvent(e, t, l);
         }
         getGuildEventsForCurrentUser(e) {
           return d(e);
@@ -74,21 +74,21 @@
         }
         handleGuildDelete(e) {
           let { guild: t } = e,
-            n = t.id;
-          r.delete(n), delete o[n];
+            l = t.id;
+          r.delete(l), delete o[l];
         }
         handleInviteResolveSuccess(e) {
           var t;
-          let { invite: n } = e,
-            l = n.guild_scheduled_event,
-            s = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-          null != l && null != s && d(s);
+          let { invite: l } = e,
+            n = l.guild_scheduled_event,
+            s = null === (t = l.guild) || void 0 === t ? void 0 : t.id;
+          null != n && null != s && d(s);
         }
         handleChannelSelect(e) {
           let { guildId: t } = e;
           if (null == t) return;
-          let n = a.default.getGuildScheduledEventsForGuild(t);
-          n.forEach(e => this.getGuildEventUserCounts(t, e.id, []));
+          let l = a.default.getGuildScheduledEventsForGuild(t);
+          l.forEach(e => this.getGuildEventUserCounts(t, e.id, []));
         }
         constructor(...e) {
           super(...e),
@@ -103,42 +103,42 @@
       }
       var E = new c();
     },
-    276676: function (e, t, n) {
+    276676: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return f;
           },
         }),
-        n("222007");
-      var l = n("884691"),
-        s = n("917351"),
-        u = n.n(s),
-        a = n("446674"),
-        i = n("634634"),
-        o = n("718517"),
-        r = n("299039"),
-        d = n("933326"),
-        c = n("398604"),
-        E = n("822516");
-      function f(e, t, n) {
+        l("222007");
+      var n = l("884691"),
+        s = l("917351"),
+        u = l.n(s),
+        a = l("446674"),
+        i = l("634634"),
+        o = l("718517"),
+        r = l("299039"),
+        d = l("933326"),
+        c = l("398604"),
+        E = l("822516");
+      function f(e, t, l) {
         let s = (0, a.useStateFromStores)([c.default], () =>
             c.default.getGuildScheduledEvent(e)
           ),
-          f = (0, i.default)(n),
-          [h, C] = l.useState(
-            null != n && null != s
+          f = (0, i.default)(l),
+          [h, C] = n.useState(
+            null != l && null != s
               ? (0, E.generateNextRecurrences)(
                   4,
-                  (0, E.getRRule)(n),
+                  (0, E.getRRule)(l),
                   new Date(s.scheduled_start_time)
                 )
               : []
           );
-        l.useEffect(() => {
-          if (null == f || null == n || null == s || u.isEqual(f, n)) return;
-          let e = (0, E.getRRule)(n);
+        n.useEffect(() => {
+          if (null == f || null == l || null == s || u.isEqual(f, l)) return;
+          let e = (0, E.getRRule)(l);
           C(
             (0, E.generateNextRecurrences)(
               h.length,
@@ -146,20 +146,20 @@
               new Date(s.scheduled_start_time)
             )
           );
-        }, [n, h.length, s, f]),
-          l.useEffect(() => {
+        }, [l, h.length, s, f]),
+          n.useEffect(() => {
             if (null == t) return;
-            let n = h.map(e =>
+            let l = h.map(e =>
               r.default.fromTimestamp(
                 Math.floor(e.getTime() / o.default.Millis.SECOND) *
                   o.default.Millis.SECOND
               )
             );
-            d.default.getGuildEventUserCounts(t, e, n);
+            d.default.getGuildEventUserCounts(t, e, l);
           }, [e, t, h]);
-        let g = l.useMemo(() => {
+        let g = n.useMemo(() => {
           if (
-            null == n ||
+            null == l ||
             0 === h.length ||
             (null == s ? void 0 : s.scheduled_start_time) == null
           )
@@ -167,26 +167,26 @@
           let e = new Date();
           e.setFullYear(e.getFullYear() + E.MAX_YEARS_AHEAD_RECURRING_EVENT);
           let t = h[h.length - 1],
-            l = (0, E.getRRule)(n),
-            u = l.after(t);
+            n = (0, E.getRRule)(l),
+            u = n.after(t);
           return null != u && u <= e;
-        }, [n, h, null == s ? void 0 : s.scheduled_start_time]);
+        }, [l, h, null == s ? void 0 : s.scheduled_start_time]);
         return {
           recurrenceStartTimes: h,
           canViewMoreRecurrences: g,
           updateRecurrenceStartTimes: () => {
-            if (null == n || null == s) return;
-            let e = (0, E.getRRule)(n),
+            if (null == l || null == s) return;
+            let e = (0, E.getRRule)(l),
               t = h[h.length - 1];
             C([...h, ...(0, E.generateNextRecurrences)(4, e, t, !0)]);
           },
         };
       }
     },
-    613767: function (e, t, n) {
+    613767: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           isChannelPublic: function () {
             return r;
           },
@@ -194,12 +194,12 @@
             return d;
           },
         });
-      var l = n("446674"),
-        s = n("42203"),
-        u = n("991170"),
-        a = n("398604"),
-        i = n("745049"),
-        o = n("49111");
+      var n = l("446674"),
+        s = l("42203"),
+        u = l("991170"),
+        a = l("398604"),
+        i = l("745049"),
+        o = l("49111");
       function r(e, t) {
         return (
           u.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e) ||
@@ -207,60 +207,60 @@
         );
       }
       function d(e, t) {
-        return (0, l.useStateFromStores)(
+        return (0, n.useStateFromStores)(
           [s.default, a.default],
           () => {
-            let n = s.default.getChannel(e),
-              l = a.default.getGuildScheduledEvent(t);
-            return r(n, null == l ? void 0 : l.entity_type);
+            let l = s.default.getChannel(e),
+              n = a.default.getGuildScheduledEvent(t);
+            return r(l, null == n ? void 0 : n.entity_type);
           },
           [e, t]
         );
       }
     },
-    707916: function (e, t, n) {
+    707916: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           GuildEventShareButton: function () {
             return g;
           },
           GuildEventInterestedButton: function () {
-            return N;
-          },
-          GuildEventLurkerInterestedButton: function () {
             return v;
           },
+          GuildEventLurkerInterestedButton: function () {
+            return N;
+          },
           default: function () {
-            return L;
+            return I;
           },
         }),
-        n("222007");
-      var l = n("37983"),
-        s = n("884691"),
-        u = n("862337"),
-        a = n("77078"),
-        i = n("660279"),
-        o = n("36694"),
-        r = n("83900"),
-        d = n("433487"),
-        c = n("491920"),
-        E = n("745049"),
-        f = n("782340"),
-        h = n("169199");
+        l("222007");
+      var n = l("37983"),
+        s = l("884691"),
+        u = l("862337"),
+        a = l("77078"),
+        i = l("660279"),
+        o = l("36694"),
+        r = l("83900"),
+        d = l("433487"),
+        c = l("491920"),
+        E = l("745049"),
+        f = l("782340"),
+        h = l("169199");
       function C(e) {
-        let { text: t, disabled: n, onJoinClick: s } = e;
-        return (0, l.jsx)(a.Button, {
+        let { text: t, disabled: l, onJoinClick: s } = e;
+        return (0, n.jsx)(a.Button, {
           className: h.button,
           size: a.Button.Sizes.SMALL,
           onClick: s,
           color: a.Button.Colors.GREEN,
-          disabled: n,
+          disabled: l,
           children: t,
         });
       }
       function g(e) {
-        let { onInviteClick: t, canInvite: n, isChannelPublic: i } = e,
+        let { onInviteClick: t, canInvite: l, isChannelPublic: i } = e,
           d = new u.Timeout(),
           [E, C] = s.useState(!1);
         s.useEffect(
@@ -274,14 +274,14 @@
         };
         return null == t
           ? null
-          : (0, l.jsx)(a.Tooltip, {
-              text: I(n, i),
+          : (0, n.jsx)(a.Tooltip, {
+              text: _(l, i),
               position: "top",
               tooltipClassName: h.tooltips,
               "aria-label": f.default.Messages.SHARE_LINK,
               children: e =>
-                n && i
-                  ? (0, l.jsxs)(a.Button, {
+                l && i
+                  ? (0, n.jsxs)(a.Button, {
                       ...e,
                       className: h.button,
                       innerClassName: h.innerButton,
@@ -289,11 +289,11 @@
                       size: a.Button.Sizes.SMALL,
                       onClick: t,
                       children: [
-                        (0, l.jsx)(c.default, { width: 16, height: 16 }),
+                        (0, n.jsx)(c.default, { width: 16, height: 16 }),
                         f.default.Messages.SHARE,
                       ],
                     })
-                  : (0, l.jsxs)(a.Button, {
+                  : (0, n.jsxs)(a.Button, {
                       ...e,
                       className: h.button,
                       innerClassName: h.innerButton,
@@ -304,8 +304,8 @@
                       onClick: g,
                       children: [
                         E
-                          ? (0, l.jsx)(o.default, { width: 16, height: 16 })
-                          : (0, l.jsx)(r.default, { width: 16, height: 16 }),
+                          ? (0, n.jsx)(o.default, { width: 16, height: 16 })
+                          : (0, n.jsx)(r.default, { width: 16, height: 16 }),
                         E
                           ? f.default.Messages.COPIED
                           : f.default.Messages.SHARE,
@@ -313,10 +313,10 @@
                     }),
             });
       }
-      function N(e) {
-        let { isUserRsvped: t, isUserLurking: n, onRsvpClick: s, ...u } = e,
-          r = t && !n;
-        return (0, l.jsxs)(a.Button, {
+      function v(e) {
+        let { isUserRsvped: t, isUserLurking: l, onRsvpClick: s, ...u } = e,
+          r = t && !l;
+        return (0, n.jsxs)(a.Button, {
           ...u,
           className: h.button,
           innerClassName: h.innerButton,
@@ -324,26 +324,26 @@
           onClick: s,
           color: a.Button.Colors.PRIMARY,
           look: r ? a.Button.Looks.OUTLINED : a.Button.Looks.FILLED,
-          disabled: n,
+          disabled: l,
           children: [
             r
-              ? (0, l.jsx)(o.default, { width: 16, height: 16 })
-              : (0, l.jsx)(i.default, { width: 16, height: 16 }),
+              ? (0, n.jsx)(o.default, { width: 16, height: 16 })
+              : (0, n.jsx)(i.default, { width: 16, height: 16 }),
             f.default.Messages.INDICATE_RSVP,
           ],
         });
       }
-      function v(e) {
-        return (0, l.jsx)(a.Tooltip, {
+      function N(e) {
+        return (0, n.jsx)(a.Tooltip, {
           text: f.default.Messages.GUILD_MEMBER_REQUIRED_FOR_EVENT,
           position: "top",
           tooltipClassName: h.tooltips,
           "aria-label": f.default.Messages.SHARE_LINK,
-          children: t => (0, l.jsx)(N, { ...t, ...e }),
+          children: t => (0, n.jsx)(v, { ...t, ...e }),
         });
       }
       let S = e => null == e || e,
-        I = (e, t) =>
+        _ = (e, t) =>
           S(e)
             ? f.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE
             : S(t)
@@ -351,10 +351,10 @@
                   .GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION
               : f.default.Messages
                   .GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
-      function L(e) {
+      function I(e) {
         let {
             isActive: t,
-            isUserLurking: n,
+            isUserLurking: l,
             rsvped: s,
             canInvite: u,
             isChannelPublic: i = !0,
@@ -362,26 +362,26 @@
             onContextMenu: r,
             onJoinClick: c,
             onRsvpClick: S,
-            onStartClick: I,
-            onInviteClick: L,
-            onEndClick: _,
+            onStartClick: _,
+            onInviteClick: I,
+            onEndClick: L,
             isJoined: m = !1,
           } = e,
           x = void 0 !== c;
-        return (0, l.jsxs)("div", {
+        return (0, n.jsxs)("div", {
           className: h.container,
           children: [
             null != r
-              ? (0, l.jsx)(a.Tooltip, {
+              ? (0, n.jsx)(a.Tooltip, {
                   text: f.default.Messages.MORE,
                   position: "top",
                   "aria-label": f.default.Messages.EDIT,
                   children: e =>
-                    (0, l.jsx)(a.Clickable, {
+                    (0, n.jsx)(a.Clickable, {
                       ...e,
                       onClick: r,
                       className: h.iconButton,
-                      children: (0, l.jsx)(d.default, {
+                      children: (0, n.jsx)(d.default, {
                         width: 20,
                         height: 20,
                         className: h.icon,
@@ -389,19 +389,19 @@
                     }),
                 })
               : null,
-            (0, l.jsx)(g, {
-              onInviteClick: L,
+            (0, n.jsx)(g, {
+              onInviteClick: I,
               canInvite: u,
               isChannelPublic: i,
             }),
             t && o !== E.GuildScheduledEventEntityTypes.EXTERNAL
-              ? (0, l.jsx)(C, {
+              ? (0, n.jsx)(C, {
                   text: (function (e) {
-                    let { isJoined: t, canJoin: n, isVoiceChannel: l } = e;
-                    return n
+                    let { isJoined: t, canJoin: l, isVoiceChannel: n } = e;
+                    return l
                       ? t
                         ? f.default.Messages.GO_TO_CHANNEL
-                        : l
+                        : n
                           ? f.default.Messages.GUILD_EVENT_JOIN
                           : f.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
                       : f.default.Messages.CHANNEL_LOCKED_SHORT;
@@ -415,31 +415,31 @@
                   onJoinClick: c,
                 })
               : null,
-            n && !t && (0, l.jsx)(v, { isUserRsvped: s, isUserLurking: n }),
-            !n &&
+            l && !t && (0, n.jsx)(N, { isUserRsvped: s, isUserLurking: l }),
+            !l &&
               !t &&
               null != S &&
-              (0, l.jsx)(N, {
+              (0, n.jsx)(v, {
                 isUserRsvped: s,
-                isUserLurking: n,
+                isUserLurking: l,
                 onRsvpClick: S,
               }),
-            t || null == I
+            t || null == _
               ? null
-              : (0, l.jsx)(a.Button, {
-                  className: h.button,
-                  innerClassName: h.innerButton,
-                  size: a.Button.Sizes.SMALL,
-                  onClick: I,
-                  color: a.Button.Colors.GREEN,
-                  children: f.default.Messages.START,
-                }),
-            t && null != _
-              ? (0, l.jsx)(a.Button, {
+              : (0, n.jsx)(a.Button, {
                   className: h.button,
                   innerClassName: h.innerButton,
                   size: a.Button.Sizes.SMALL,
                   onClick: _,
+                  color: a.Button.Colors.GREEN,
+                  children: f.default.Messages.START,
+                }),
+            t && null != L
+              ? (0, n.jsx)(a.Button, {
+                  className: h.button,
+                  innerClassName: h.innerButton,
+                  size: a.Button.Sizes.SMALL,
+                  onClick: L,
                   color: a.Button.Colors.PRIMARY,
                   children: f.default.Messages.END_EVENT,
                 })
@@ -448,118 +448,126 @@
         });
       }
     },
-    123030: function (e, t, n) {
+    123030: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return S;
           },
         });
-      var l = n("37983");
-      n("884691");
-      var s = n("414456"),
-        u = n.n(s),
-        a = n("446674"),
-        i = n("77078"),
-        o = n("272030"),
-        r = n("42203"),
-        d = n("305961"),
-        c = n("433487"),
-        E = n("398604"),
-        f = n("397680"),
-        h = n("822516"),
-        C = n("393745"),
-        g = n("745049"),
-        N = n("782340"),
-        v = n("964385");
+      var n = l("37983");
+      l("884691");
+      var s = l("414456"),
+        u = l.n(s),
+        a = l("446674"),
+        i = l("77078"),
+        o = l("272030"),
+        r = l("42203"),
+        d = l("305961"),
+        c = l("433487"),
+        E = l("398604"),
+        f = l("397680"),
+        h = l("822516"),
+        C = l("393745"),
+        g = l("745049"),
+        v = l("782340"),
+        N = l("964385");
       function S(e) {
         let {
             recurrenceId: t,
             originalScheduledStartTime: s,
             guildEventId: S,
-            onClick: I,
-            isActive: L,
+            onClick: _,
+            isActive: I,
           } = e,
-          _ = (0, a.useStateFromStores)([E.default], () =>
+          L = (0, a.useStateFromStores)([E.default], () =>
             E.default.getGuildScheduledEvent(S)
           ),
-          m = (0, f.default)(t, null == _ ? void 0 : _.id),
+          m = (0, f.default)(t, null == L ? void 0 : L.id),
           x = (0, a.useStateFromStores)([d.default], () =>
-            d.default.getGuild(null == _ ? void 0 : _.guild_id)
+            d.default.getGuild(null == L ? void 0 : L.guild_id)
           ),
-          T = (0, a.useStateFromStores)([r.default], () =>
-            r.default.getChannel(null == _ ? void 0 : _.channel_id)
+          R = (0, a.useStateFromStores)([r.default], () =>
+            r.default.getChannel(null == L ? void 0 : L.channel_id)
           );
-        if (null == _) return null;
-        let { is_canceled: R = !1 } = null != m ? m : {},
+        if (null == L) return null;
+        let { is_canceled: T = !1 } = null != m ? m : {},
           p =
             (null == m ? void 0 : m.scheduled_start_time) != null
               ? new Date(null == m ? void 0 : m.scheduled_start_time)
               : s,
-          M = (0, h.getNextRecurrenceIdInEvent)(_),
-          B = R
+          M = (0, h.getNextRecurrenceIdInEvent)(L),
+          B = T
             ? g.GuildScheduledEventStatus.CANCELED
             : g.GuildScheduledEventStatus.SCHEDULED;
-        M === t && (B = _.status);
-        let G = e => {
-          e.stopPropagation(),
-            null != x &&
-              (0, o.openContextMenuLazy)(e, async () => {
-                let { default: e } = await n
-                  .el("110374")
-                  .then(n.bind(n, "110374"));
-                return n =>
-                  (0, l.jsx)(e, {
-                    guildEventId: _.id,
-                    recurrenceId: t,
-                    channel: T,
-                    guild: x,
-                    isRecurrenceItem: !0,
-                    ...n,
-                  });
-              });
-        };
-        return (0, l.jsxs)(i.ClickableContainer, {
-          className: u(v.container, {
-            [v.canceled]: R,
-            [v.clickable]: null != I,
-            [v.active]: L,
+        M === t && (B = L.status);
+        let G =
+            (null == L ? void 0 : L.scheduled_start_time) != null
+              ? (0, h.getRecurrenceStatus)(
+                  m,
+                  p,
+                  new Date(null == L ? void 0 : L.scheduled_start_time)
+                )
+              : null,
+          j = e => {
+            e.stopPropagation(),
+              null != x &&
+                (0, o.openContextMenuLazy)(e, async () => {
+                  let { default: e } = await l
+                    .el("110374")
+                    .then(l.bind(l, "110374"));
+                  return l =>
+                    (0, n.jsx)(e, {
+                      guildEventId: L.id,
+                      recurrenceId: t,
+                      channel: R,
+                      guild: x,
+                      isRecurrenceItem: !0,
+                      ...l,
+                    });
+                });
+          };
+        return (0, n.jsxs)(i.ClickableContainer, {
+          className: u(N.container, {
+            [N.canceled]: T,
+            [N.clickable]: null != _,
+            [N.active]: I,
           }),
           onClick: e => {
-            e.stopPropagation(), !R && (null == I || I(t));
+            e.stopPropagation(), !T && (null == _ || _(t));
           },
-          onContextMenu: G,
+          onContextMenu: j,
           "aria-label": "",
           children: [
-            (0, l.jsx)(C.GuildEventTimeStatus, {
+            (0, n.jsx)(C.GuildEventTimeStatus, {
               startTime: p.toISOString(),
-              status: B,
-              eventType: _.entity_type,
-              guildEventId: _.id,
+              status: null != G ? G : B,
+              eventType: L.entity_type,
+              guildEventId: L.id,
               recurrenceId: t,
-              className: v.timeStatus,
+              className: N.timeStatus,
             }),
-            R &&
-              (0, l.jsx)(i.Text, {
+            T &&
+              (0, n.jsx)(i.Text, {
                 variant: "text-sm/semibold",
                 color: "text-danger",
-                className: v.canceledStatus,
-                children: N.default.Messages.EVENT_CANCELED,
+                className: N.canceledStatus,
+                children: v.default.Messages.EVENT_CANCELED,
               }),
-            (0, l.jsx)(i.Tooltip, {
-              text: N.default.Messages.MORE,
+            (0, n.jsx)(i.Tooltip, {
+              text: v.default.Messages.MORE,
               position: "top",
-              "aria-label": N.default.Messages.EDIT,
+              "aria-label": v.default.Messages.EDIT,
               children: e =>
-                (0, l.jsx)(i.Clickable, {
+                (0, n.jsx)(i.Clickable, {
                   ...e,
-                  onClick: G,
-                  className: v.iconButton,
-                  children: (0, l.jsx)(c.default, {
+                  onClick: j,
+                  className: N.iconButton,
+                  children: (0, n.jsx)(c.default, {
                     width: 20,
                     height: 20,
-                    className: v.icon,
+                    className: N.icon,
                   }),
                 }),
             }),
@@ -567,28 +575,28 @@
         });
       }
     },
-    427554: function (e, t, n) {
+    427554: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return E;
           },
         });
-      var l = n("37983");
-      n("884691");
-      var s = n("414456"),
-        u = n.n(s),
-        a = n("77078"),
-        i = n("299039"),
-        o = n("276676"),
-        r = n("123030"),
-        d = n("782340"),
-        c = n("912215");
+      var n = l("37983");
+      l("884691");
+      var s = l("414456"),
+        u = l.n(s),
+        a = l("77078"),
+        i = l("299039"),
+        o = l("276676"),
+        r = l("123030"),
+        d = l("782340"),
+        c = l("912215");
       function E(e) {
         let {
             guildId: t,
-            recurrenceRule: n,
+            recurrenceRule: l,
             guildEventId: s,
             onRecurrenceClick: E,
             hideScroller: f = !1,
@@ -597,22 +605,22 @@
           {
             recurrenceStartTimes: C,
             canViewMoreRecurrences: g,
-            updateRecurrenceStartTimes: N,
-          } = (0, o.default)(s, t, n);
-        return (0, l.jsxs)("div", {
+            updateRecurrenceStartTimes: v,
+          } = (0, o.default)(s, t, l);
+        return (0, n.jsxs)("div", {
           className: c.recurrences,
           children: [
-            (0, l.jsx)(a.Heading, {
+            (0, n.jsx)(a.Heading, {
               variant: "heading-sm/medium",
               className: c.heading,
               children: d.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS,
             }),
-            (0, l.jsxs)(a.Scroller, {
+            (0, n.jsxs)(a.Scroller, {
               className: u(c.scroller, { [c.showScroller]: !f }),
               children: [
                 C.map(e => {
                   let t = i.default.fromTimestamp(e.getTime());
-                  return (0, l.jsx)(
+                  return (0, n.jsx)(
                     r.default,
                     {
                       recurrenceId: t,
@@ -625,10 +633,10 @@
                   );
                 }),
                 g &&
-                  (0, l.jsx)(a.Button, {
+                  (0, n.jsx)(a.Button, {
                     grow: !1,
                     onClick: e => {
-                      e.stopPropagation(), N();
+                      e.stopPropagation(), v();
                     },
                     look: a.Button.Looks.LINK,
                     size: a.Button.Sizes.MIN,
@@ -644,25 +652,25 @@
         });
       }
     },
-    644189: function (e, t, n) {
+    644189: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return r;
           },
         });
-      var l = n("37983");
-      n("884691");
-      var s = n("77078"),
-        u = n("433487"),
-        a = n("707916"),
-        i = n("782340"),
-        o = n("136275");
+      var n = l("37983");
+      l("884691");
+      var s = l("77078"),
+        u = l("433487"),
+        a = l("707916"),
+        i = l("782340"),
+        o = l("136275");
       function r(e) {
         let {
           isActive: t,
-          isUserLurking: n,
+          isUserLurking: l,
           rsvped: r,
           onContextMenu: d,
           onRsvpClick: c,
@@ -671,24 +679,24 @@
           isMember: h,
           onJoinGuildClick: C,
           guildName: g,
-          onInviteClick: N,
-          canInvite: v,
+          onInviteClick: v,
+          canInvite: N,
           isChannelPublic: S,
         } = e;
-        return (0, l.jsxs)("div", {
+        return (0, n.jsxs)("div", {
           className: o.container,
           children: [
             null != d
-              ? (0, l.jsx)(s.Tooltip, {
+              ? (0, n.jsx)(s.Tooltip, {
                   text: i.default.Messages.MORE,
                   position: "top",
                   "aria-label": i.default.Messages.EDIT,
                   children: e =>
-                    (0, l.jsx)(s.Clickable, {
+                    (0, n.jsx)(s.Clickable, {
                       ...e,
                       onClick: d,
                       className: o.iconButton,
-                      children: (0, l.jsx)(u.default, {
+                      children: (0, n.jsx)(u.default, {
                         width: 20,
                         height: 20,
                         className: o.icon,
@@ -697,28 +705,28 @@
                 })
               : null,
             h &&
-              (0, l.jsx)(a.GuildEventShareButton, {
-                onInviteClick: N,
-                canInvite: v,
+              (0, n.jsx)(a.GuildEventShareButton, {
+                onInviteClick: v,
+                canInvite: N,
                 isChannelPublic: S,
               }),
-            n &&
+            l &&
               !t &&
-              (0, l.jsx)(a.GuildEventLurkerInterestedButton, {
+              (0, n.jsx)(a.GuildEventLurkerInterestedButton, {
                 isUserRsvped: r,
-                isUserLurking: n,
+                isUserLurking: l,
               }),
             h &&
-              !n &&
+              !l &&
               !t &&
               null != c &&
-              (0, l.jsx)(a.GuildEventInterestedButton, {
+              (0, n.jsx)(a.GuildEventInterestedButton, {
                 isUserRsvped: r,
-                isUserLurking: n,
+                isUserLurking: l,
                 onRsvpClick: c,
               }),
-            h && !n && (!f || t)
-              ? (0, l.jsx)(s.Button, {
+            h && !l && (!f || t)
+              ? (0, n.jsx)(s.Button, {
                   className: o.button,
                   innerClassName: o.innerButton,
                   size: s.Button.Sizes.SMALL,
@@ -729,7 +737,7 @@
               : null,
             h
               ? null
-              : (0, l.jsx)(s.Button, {
+              : (0, n.jsx)(s.Button, {
                   className: o.button,
                   innerClassName: o.innerButton,
                   size: s.Button.Sizes.SMALL,
@@ -743,34 +751,34 @@
         });
       }
     },
-    491920: function (e, t, n) {
+    491920: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           default: function () {
             return i;
           },
         });
-      var l = n("37983");
-      n("884691");
-      var s = n("469563"),
-        u = n("743087"),
-        a = n("75196"),
+      var n = l("37983");
+      l("884691");
+      var s = l("469563"),
+        u = l("743087"),
+        a = l("75196"),
         i = (0, s.replaceIcon)(
           function (e) {
             let {
               width: t = 32,
-              height: n = 32,
+              height: l = 32,
               color: s = "currentColor",
               ...u
             } = e;
-            return (0, l.jsx)("svg", {
+            return (0, n.jsx)("svg", {
               ...(0, a.default)(u),
               width: t,
-              height: n,
+              height: l,
               viewBox: "0 0 24 24",
               fill: "none",
-              children: (0, l.jsx)("path", {
+              children: (0, n.jsx)("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M8.4866 7.91647L7 6.54308L12 2L17 6.54308L15.5134 7.91647L13.0513 5.71805L13.0513 16H10.9487V5.71805L8.4866 7.91647ZM16.9997 9H19C20.1044 9 20.9997 9.89532 20.9997 10.9997V19C20.9997 20.1044 20.1043 20.9997 19 20.9997H4.99998C3.8956 20.9997 3.00031 20.1044 3.00031 19V10.9997C3.00031 9.8953 3.89562 9 4.99998 9H7.00031C7.00031 9 6.99969 9.44813 6.99969 10.0003C6.99969 10.5525 7.00031 10.9997 7.00031 10.9997H4.99998V19H19V10.9997H16.9997L17.0003 10.0003L16.9997 9Z",
@@ -783,40 +791,40 @@
           { size: 32 }
         );
     },
-    161213: function (e, t, n) {
+    161213: function (e, t, l) {
       "use strict";
-      n.r(t),
-        n.d(t, {
+      l.r(t),
+        l.d(t, {
           ShareIcon: function () {
             return a;
           },
         });
-      var l = n("37983");
-      n("884691");
-      var s = n("669491"),
-        u = n("82169");
+      var n = l("37983");
+      l("884691");
+      var s = l("669491"),
+        u = l("82169");
       let a = e => {
         let {
           width: t = 24,
-          height: n = 24,
+          height: l = 24,
           color: a = s.default.colors.INTERACTIVE_NORMAL,
           colorClass: i = "",
           ...o
         } = e;
-        return (0, l.jsxs)("svg", {
+        return (0, n.jsxs)("svg", {
           ...(0, u.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
-          height: n,
+          height: l,
           fill: "none",
           viewBox: "0 0 24 24",
           children: [
-            (0, l.jsx)("path", {
+            (0, n.jsx)("path", {
               fill: "string" == typeof a ? a : a.css,
               d: "M13 16V5.41l3.3 3.3a1 1 0 1 0 1.4-1.42l-5-5a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.42L11 5.4V16a1 1 0 1 0 2 0Z",
               className: i,
             }),
-            (0, l.jsx)("path", {
+            (0, n.jsx)("path", {
               fill: "string" == typeof a ? a : a.css,
               d: "M4 15a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2H5a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-4a3 3 0 0 0-3-3h-2a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-4Z",
               className: i,
@@ -827,4 +835,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8871989bf4de59b87517.js.map
+//# sourceMappingURL=9bc38c2e3f6f162604c6.js.map

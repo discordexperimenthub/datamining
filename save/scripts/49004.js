@@ -14,12 +14,12 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return N;
+            return v;
           },
         }),
         n("222007");
-      var u = n("917351"),
-        l = n.n(u),
+      var l = n("917351"),
+        u = n.n(l),
         i = n("446674"),
         d = n("913144"),
         r = n("398604"),
@@ -29,7 +29,7 @@
         o = {},
         E = {},
         f = {},
-        v = e => (
+        _ = e => (
           (f[e.guild_scheduled_event.id] = new a.default(
             e.guild_scheduled_event.guild
           )),
@@ -42,7 +42,7 @@
             createdAt: e.created_at,
           }
         );
-      class _ extends i.default.Store {
+      class N extends i.default.Store {
         isFetching() {
           return c;
         }
@@ -58,15 +58,15 @@
           return null !== (t = E[e]) && void 0 !== t ? t : void 0;
         }
       }
-      _.displayName = "EventDirectoryStore";
-      var N = new _(d.default, {
+      N.displayName = "EventDirectoryStore";
+      var v = new N(d.default, {
         EVENT_DIRECTORY_FETCH_START: function () {
           c = !0;
         },
         EVENT_DIRECTORY_FETCH_SUCCESS: function (e) {
           let { channelId: t, entries: n } = e;
           c = !1;
-          let u = l.sortBy(
+          let l = u.sortBy(
               [...n],
               [
                 function (e) {
@@ -74,7 +74,7 @@
                 },
               ]
             ),
-            i = l.map(u, v);
+            i = u.map(l, _);
           o[t] = i;
         },
         EVENT_DIRECTORY_FETCH_FAILURE: function () {
@@ -90,23 +90,23 @@
             return r;
           },
         });
-      var u = n("866227"),
-        l = n.n(u),
+      var l = n("866227"),
+        u = n.n(l),
         i = n("299039"),
         d = n("745049");
-      function r(e, t, n, u) {
-        let r = l(),
+      function r(e, t, n, l) {
+        let r = u(),
           a = new Date(e.scheduled_start_time).getTime(),
           s = { start: a - d.EVENT_STARTING_SOON_WINDOW_MILLISECONDS, end: a };
         if (r.isBetween(s.start, s.end)) {
           if (null != t) {
-            let e = l(t),
+            let e = u(t),
               n = e.isBetween(s.start, s.end),
               i = e.isBetween(
-                l(a).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"),
+                u(a).subtract(d.ACKED_RECENTLY_WINDOW_DAYS, "days"),
                 a
               );
-            return n || (i && !u)
+            return n || (i && !l)
               ? void 0
               : d.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON;
           }
@@ -118,7 +118,7 @@
             a
           ),
           E = r.isBetween(c, o);
-        if (E && null == t && !u)
+        if (E && null == t && !l)
           return d.UpcomingGuildEventNoticeTypes.NEW_EVENT;
       }
     },
@@ -130,8 +130,8 @@
             return f;
           },
         });
-      var u = n("446674"),
-        l = n("913144"),
+      var l = n("446674"),
+        u = n("913144"),
         i = n("271938"),
         d = n("398604"),
         r = n("49129"),
@@ -144,7 +144,7 @@
         let n = { ...c };
         delete n[e], (c = n);
       }
-      class E extends u.default.PersistedStore {
+      class E extends l.default.PersistedStore {
         initialize(e) {
           if (null != e) {
             var t, n;
@@ -176,7 +176,7 @@
       }
       (E.displayName = "UpcomingEventNoticesStore"),
         (E.persistKey = "UpcomingEventNotices");
-      var f = new E(l.default, {
+      var f = new E(u.default, {
         UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
           let { eventId: t } = e,
             n = { ...s };
@@ -194,15 +194,15 @@
         },
         GUILD_SCHEDULED_EVENT_USER_ADD: function (e) {
           let { userId: t, guildEventId: n } = e,
-            u = i.default.getId();
-          if (t !== u) return;
-          let l = d.default.getGuildScheduledEvent(n);
-          if (null == l || l.status !== a.GuildScheduledEventStatus.SCHEDULED)
+            l = i.default.getId();
+          if (t !== l) return;
+          let u = d.default.getGuildScheduledEvent(n);
+          if (null == u || u.status !== a.GuildScheduledEventStatus.SCHEDULED)
             return;
           let o = s[n];
           if (null != o) return;
           let E = c[n],
-            f = (0, r.getNextShownUpcomingEventNoticeType)(l, void 0, E, !1);
+            f = (0, r.getNextShownUpcomingEventNoticeType)(u, void 0, E, !1);
           if (f === a.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
             let e = { ...s };
             (e[n] = Date.now()), (s = e);
@@ -215,102 +215,6 @@
         },
       });
     },
-    397680: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return i;
-          },
-          getEventException: function () {
-            return d;
-          },
-        });
-      var u = n("446674"),
-        l = n("398604");
-      function i(e, t) {
-        let n = (0, u.useStateFromStoresArray)([l.default], () => {
-          var e, n;
-          return null !==
-            (n =
-              null === (e = l.default.getGuildScheduledEvent(t)) || void 0 === e
-                ? void 0
-                : e.guild_scheduled_event_exceptions) && void 0 !== n
-            ? n
-            : [];
-        });
-        return r(n, e);
-      }
-      function d(e, t) {
-        var n, u;
-        let i =
-          null !==
-            (u =
-              null === (n = l.default.getGuildScheduledEvent(t)) || void 0 === n
-                ? void 0
-                : n.guild_scheduled_event_exceptions) && void 0 !== u
-            ? u
-            : [];
-        return r(i, e);
-      }
-      function r(e, t) {
-        let n = null == e ? void 0 : e.find(e => e.event_exception_id === t);
-        return n;
-      }
-    },
-    466148: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return s;
-          },
-          getEventSchedule: function () {
-            return c;
-          },
-        });
-      var u = n("627445"),
-        l = n.n(u),
-        i = n("446674"),
-        d = n("398604"),
-        r = n("397680"),
-        a = n("822516");
-      function s(e, t, n) {
-        var u;
-        let s =
-          null !==
-            (u = (0, i.useStateFromStores)([d.default], () =>
-              d.default.getGuildScheduledEvent(e)
-            )) && void 0 !== u
-            ? u
-            : n;
-        l(null != s, "Event must be defined"),
-          (t = null != t ? t : (0, a.getNextRecurrenceIdInEvent)(s));
-        let c = (0, r.default)(t, e);
-        return o(s, c, t);
-      }
-      function c(e, t) {
-        let n = (0, r.getEventException)(t, e.id);
-        return o(e, n, t);
-      }
-      function o(e, t, n) {
-        if (null == e.recurrence_rule || null == n)
-          return {
-            startTime: new Date(e.scheduled_start_time),
-            endTime:
-              null != e.scheduled_end_time
-                ? new Date(e.scheduled_end_time)
-                : null,
-          };
-        let u = (0, a.getBaseScheduleForRecurrence)(n, e),
-          { startDate: l, endDate: i } = (0,
-          a.getScheduleForRecurrenceWithException)(u, t);
-        return {
-          startTime: l.toDate(),
-          endTime: null == i ? void 0 : i.toDate(),
-        };
-      }
-    },
     534222: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -322,10 +226,10 @@
             return m;
           },
           useActiveEventsByChannel: function () {
-            return D;
+            return C;
           },
           useGuildUpcomingEventsNotice: function () {
-            return C;
+            return D;
           },
           useGuildActiveEvent: function () {
             return G;
@@ -342,8 +246,8 @@
         }),
         n("222007"),
         n("808653");
-      var u = n("884691"),
-        l = n("446674"),
+      var l = n("884691"),
+        u = n("446674"),
         i = n("962199"),
         d = n("42203"),
         r = n("923959"),
@@ -353,27 +257,27 @@
         o = n("449008"),
         E = n("398604"),
         f = n("49129"),
-        v = n("431934"),
-        _ = n("466148"),
-        N = n("822516"),
+        _ = n("431934"),
+        N = n("466148"),
+        v = n("822516"),
         S = n("745049"),
-        h = n("49111");
-      let I = [],
+        I = n("49111");
+      let h = [],
         g = 15 * c.default.Millis.MINUTE;
       function T(e, t) {
-        return (0, l.useStateFromStoresArray)(
+        return (0, u.useStateFromStoresArray)(
           [a.default, i.default, E.default, s.default, d.default, r.default],
           () => {
             let n = a.default.getGuild(e);
-            if (null == n) return I;
-            let u = n.hasFeature(h.GuildFeatures.HUB);
-            if (u) {
-              var l, c;
+            if (null == n) return h;
+            let l = n.hasFeature(I.GuildFeatures.HUB);
+            if (l) {
+              var u, c;
               let e =
-                  null === (l = r.default.getDefaultChannel(n.id)) ||
-                  void 0 === l
+                  null === (u = r.default.getDefaultChannel(n.id)) ||
+                  void 0 === u
                     ? void 0
-                    : l.id,
+                    : u.id,
                 t =
                   null !== (c = i.default.getEventDirectoryEntries(e)) &&
                   void 0 !== c
@@ -398,35 +302,35 @@
               let t = e.channel_id;
               if (null == t) return !0;
               let n = d.default.getChannel(t);
-              return s.default.can(h.Permissions.VIEW_CHANNEL, n);
+              return s.default.can(I.Permissions.VIEW_CHANNEL, n);
             });
           },
           [t, e]
         );
       }
       function m(e) {
-        return (0, l.useStateFromStores)(
+        return (0, u.useStateFromStores)(
           [E.default, d.default, s.default],
           () => {
             let t = d.default.getChannel(e);
-            if (!s.default.can(h.Permissions.VIEW_CHANNEL, t)) return null;
+            if (!s.default.can(I.Permissions.VIEW_CHANNEL, t)) return null;
             let n = null == t ? void 0 : t.guild_id;
             if (null == n) return null;
-            let u = E.default.getGuildScheduledEventsByIndex(
+            let l = E.default.getGuildScheduledEventsByIndex(
               E.StaticGuildEventIndexes.CHANNEL_EVENT_ACTIVE(e)
             );
-            return u.length > 0 ? u[0] : null;
+            return l.length > 0 ? l[0] : null;
           },
           [e]
         );
       }
-      function D(e) {
-        let t = (0, l.useStateFromStoresArray)(
+      function C(e) {
+        let t = (0, u.useStateFromStoresArray)(
             [E.default],
             () => E.default.getGuildScheduledEventsForGuild(e),
             [e]
           ),
-          n = u.useMemo(() => {
+          n = l.useMemo(() => {
             let e = new Map();
             return (
               t.forEach(t => {
@@ -438,11 +342,11 @@
           }, [t]);
         return n;
       }
-      function C(e) {
+      function D(e) {
         var t, n;
-        let u =
+        let l =
             ((t = e),
-            (0, l.useStateFromStoresArray)(
+            (0, u.useStateFromStoresArray)(
               [E.default, d.default, s.default],
               () => {
                 let e = E.default.getGuildScheduledEventsByIndex(
@@ -456,43 +360,43 @@
                     return !1;
                   if (null == e.channel_id) return !0;
                   let t = d.default.getChannel(e.channel_id);
-                  return s.default.can(h.Permissions.VIEW_CHANNEL, t);
+                  return s.default.can(I.Permissions.VIEW_CHANNEL, t);
                 });
               },
               [t]
             )),
-          i = (0, l.useStateFromStoresObject)([v.default], () =>
-            v.default.getAllEventDismissals()
+          i = (0, u.useStateFromStoresObject)([_.default], () =>
+            _.default.getAllEventDismissals()
           ),
-          r = (0, l.useStateFromStoresObject)([v.default], () =>
-            v.default.getAllUpcomingNoticeSeenTimes()
+          r = (0, u.useStateFromStoresObject)([_.default], () =>
+            _.default.getAllUpcomingNoticeSeenTimes()
           ),
-          a = (0, l.useStateFromStoresObject)(
+          a = (0, u.useStateFromStoresObject)(
             [E.default],
             () =>
-              null == u
+              null == l
                 ? {}
-                : u.reduce((e, t) => {
-                    let n = (0, N.getNextRecurrenceIdInEvent)(t);
+                : l.reduce((e, t) => {
+                    let n = (0, v.getNextRecurrenceIdInEvent)(t);
                     return {
                       ...e,
                       [t.id]: E.default.isInterestedInEventRecurrence(t.id, n),
                     };
                   }, {}),
-            [u]
+            [l]
           );
-        if (null != u && null != a)
-          for (let e = 0; e < u.length; e++) {
-            let t = u[e],
-              l = i[t.id],
+        if (null != l && null != a)
+          for (let e = 0; e < l.length; e++) {
+            let t = l[e],
+              u = i[t.id],
               d = r[t.id],
               s = null !== (n = a[t.id]) && void 0 !== n && n,
-              c = (0, f.getNextShownUpcomingEventNoticeType)(t, l, d, s);
+              c = (0, f.getNextShownUpcomingEventNoticeType)(t, u, d, s);
             if (null != c) return { upcomingEvent: t, noticeType: c };
           }
       }
       function G(e) {
-        return (0, l.useStateFromStores)(
+        return (0, u.useStateFromStores)(
           [E.default, d.default, s.default],
           () => {
             let t = E.default.getGuildScheduledEventsByIndex(
@@ -506,14 +410,14 @@
                 return !1;
               if (null == e.channel_id) return !0;
               let t = d.default.getChannel(e.channel_id);
-              return s.default.can(h.Permissions.VIEW_CHANNEL, t);
+              return s.default.can(I.Permissions.VIEW_CHANNEL, t);
             });
           },
           [e]
         );
       }
       function p(e) {
-        return (0, l.useStateFromStores)(
+        return (0, u.useStateFromStores)(
           [E.default],
           () =>
             E.default.getGuildScheduledEventsByIndex(
@@ -523,7 +427,7 @@
         );
       }
       function U(e) {
-        return (0, l.useStateFromStores)(
+        return (0, u.useStateFromStores)(
           [d.default, E.default],
           () => {
             let t = E.default
@@ -540,14 +444,14 @@
         );
       }
       function y(e) {
-        let [t, n] = u.useState(() => Date.now());
-        u.useEffect(() => {
+        let [t, n] = l.useState(() => Date.now());
+        l.useEffect(() => {
           let e = setInterval(() => {
             n(Date.now());
           }, g);
           return () => clearInterval(e);
         }, []);
-        let i = (0, l.useStateFromStores)(
+        let i = (0, u.useStateFromStores)(
             [E.default],
             () =>
               null == e
@@ -557,17 +461,17 @@
                   ),
             [e, t]
           ),
-          d = u.useMemo(
+          d = l.useMemo(
             () =>
               i.filter(e => {
-                let { startTime: t, endTime: n } = (0, _.getEventSchedule)(e),
-                  { withinStartWindow: u, diffMinutes: l } = (0,
-                  N.getEventTimeData)(
+                let { startTime: t, endTime: n } = (0, N.getEventSchedule)(e),
+                  { withinStartWindow: l, diffMinutes: u } = (0,
+                  v.getEventTimeData)(
                     t.toISOString(),
                     null == n ? void 0 : n.toISOString()
                   );
                 return (
-                  e.status !== S.GuildScheduledEventStatus.ACTIVE && u && l < 15
+                  e.status !== S.GuildScheduledEventStatus.ACTIVE && l && u < 15
                 );
               }),
             [i]
@@ -583,9 +487,9 @@
             return f;
           },
         });
-      var u = n("37983");
+      var l = n("37983");
       n("884691");
-      var l = n("77078"),
+      var u = n("77078"),
         i = n("987317"),
         d = n("119184"),
         r = n("476765"),
@@ -596,38 +500,38 @@
         E = n("999009");
       function f(e) {
         let { channel: t, transitionState: n, onClose: f } = e,
-          v = (0, r.useUID)(),
-          _ = (0, c.useActiveEvent)(t.id);
-        if (null == _) return null;
-        let N = () => {
+          _ = (0, r.useUID)(),
+          N = (0, c.useActiveEvent)(t.id);
+        if (null == N) return null;
+        let v = () => {
           i.default.selectVoiceChannel(null), f();
         };
-        return (0, u.jsxs)(l.ModalRoot, {
+        return (0, l.jsxs)(u.ModalRoot, {
           transitionState: n,
-          "aria-labelledby": v,
-          size: l.ModalSize.SMALL,
+          "aria-labelledby": _,
+          size: u.ModalSize.SMALL,
           children: [
-            (0, u.jsxs)(l.ModalContent, {
+            (0, l.jsxs)(u.ModalContent, {
               className: E.content,
               children: [
-                (0, u.jsx)(d.default, {
-                  children: (0, u.jsx)("div", {
+                (0, l.jsx)(d.default, {
+                  children: (0, l.jsx)("div", {
                     className: E.iconBackground,
-                    children: (0, u.jsx)(a.default, {
+                    children: (0, l.jsx)(a.default, {
                       height: 40,
                       width: 40,
                       className: E.icon,
                     }),
                   }),
                 }),
-                (0, u.jsx)(l.Heading, {
-                  id: v,
+                (0, l.jsx)(u.Heading, {
+                  id: _,
                   variant: "heading-xl/semibold",
                   color: "header-primary",
                   className: E.title,
                   children: o.default.Messages.GUILD_EVENT_END_PROMPT_TITLE,
                 }),
-                (0, u.jsx)(l.Text, {
+                (0, l.jsx)(u.Text, {
                   variant: "text-md/normal",
                   color: "header-secondary",
                   className: E.subtitle,
@@ -635,19 +539,19 @@
                 }),
               ],
             }),
-            (0, u.jsxs)(l.ModalFooter, {
+            (0, l.jsxs)(u.ModalFooter, {
               children: [
-                (0, u.jsx)(l.Button, {
-                  color: l.Button.Colors.RED,
+                (0, l.jsx)(u.Button, {
+                  color: u.Button.Colors.RED,
                   onClick: () => {
-                    s.default.endEvent(_.id, _.guild_id), N();
+                    s.default.endEvent(N.id, N.guild_id), v();
                   },
                   children: o.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
                 }),
-                (0, u.jsx)(l.Button, {
-                  color: l.Button.Colors.PRIMARY,
+                (0, l.jsx)(u.Button, {
+                  color: u.Button.Colors.PRIMARY,
                   className: E.cancelButton,
-                  onClick: N,
+                  onClick: v,
                   children: o.default.Messages.GUILD_EVENT_END_PROMPT_CANCEL,
                 }),
               ],
@@ -664,26 +568,26 @@
             return c;
           },
         });
-      var u = n("37983");
+      var l = n("37983");
       n("884691");
-      var l = n("414456"),
-        i = n.n(l),
+      var u = n("414456"),
+        i = n.n(u),
         d = n("782340"),
         r = n("662190"),
         a = n("284434"),
         s = n("315956");
       function c(e) {
         let { className: t, children: n } = e;
-        return (0, u.jsxs)("div", {
+        return (0, l.jsxs)("div", {
           className: i(r.container, t),
           children: [
-            (0, u.jsx)("img", {
+            (0, l.jsx)("img", {
               alt: d.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
               src: s,
               className: i(r.sparkleIcon, r.sparkleBottom),
             }),
             n,
-            (0, u.jsx)("img", {
+            (0, l.jsx)("img", {
               alt: d.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
               src: a,
               className: i(r.sparkleIcon, r.sparkleTop),
@@ -706,15 +610,15 @@
             return a;
           },
         });
-      var u = n("995008"),
-        l = n.n(u),
+      var l = n("995008"),
+        u = n.n(l),
         i = n("775560");
       let d = function () {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : "uid_";
-          return l(e);
+          return u(e);
         },
         r = () => (0, i.useLazyValue)(() => d()),
         a = e => {
@@ -724,4 +628,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ad4e4a393efd9b8c02f4.js.map
+//# sourceMappingURL=168af23617ed4f890621.js.map

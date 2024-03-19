@@ -224,58 +224,61 @@
       n.r(t),
         n.d(t, {
           MAX_DAYS_AHEAD_AN_EVENT_CAN_START: function () {
-            return d;
-          },
-          MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function () {
             return f;
           },
-          MAX_YEARS_AHEAD_RECURRING_EVENT: function () {
+          MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function () {
             return E;
           },
-          getRecurrenceOptions: function () {
-            return m;
+          MAX_YEARS_AHEAD_RECURRING_EVENT: function () {
+            return h;
           },
-          getInitialEventStartDate: function () {
+          getRecurrenceOptions: function () {
             return R;
           },
+          getInitialEventStartDate: function () {
+            return C;
+          },
           getEventTimeData: function () {
-            return T;
+            return p;
           },
           getBaseScheduleForRecurrence: function () {
-            return I;
-          },
-          getScheduleForRecurrenceWithException: function () {
             return L;
           },
-          getScheduleFromEventData: function () {
+          getScheduleForRecurrenceWithException: function () {
             return A;
           },
-          areDatesIdentical: function () {
+          getScheduleFromEventData: function () {
             return y;
           },
-          areSchedulesIdentical: function () {
+          areDatesIdentical: function () {
             return D;
           },
-          getRRule: function () {
+          areSchedulesIdentical: function () {
             return M;
           },
-          generateNextRecurrences: function () {
+          getRRule: function () {
             return j;
           },
-          getNextRecurrenceIdInEvent: function () {
+          generateNextRecurrences: function () {
             return O;
           },
-          isValidRecurrence: function () {
+          getNextRecurrenceIdInEvent: function () {
             return w;
           },
-          recurrenceOptionToRecurrenceRule: function () {
-            return G;
+          isValidRecurrence: function () {
+            return k;
           },
-          recurrenceRuleToOption: function () {
+          recurrenceOptionToRecurrenceRule: function () {
             return U;
           },
-          hasScheduleChanges: function () {
+          recurrenceRuleToOption: function () {
             return B;
+          },
+          hasScheduleChanges: function () {
+            return P;
+          },
+          getRecurrenceStatus: function () {
+            return V;
           },
         }),
         n("222007"),
@@ -286,27 +289,27 @@
         s = n("614137"),
         i = n("718517"),
         u = n("299039"),
-        o = n("757767");
-      n("745049");
-      var c = n("782340");
-      let d = 365,
-        f = d + 1,
-        E = 4,
-        h = [
+        o = n("757767"),
+        c = n("745049"),
+        d = n("782340");
+      let f = 365,
+        E = f + 1,
+        h = 4,
+        g = [
           s.RRule.MO.weekday,
           s.RRule.TU.weekday,
           s.RRule.WE.weekday,
           s.RRule.TH.weekday,
           s.RRule.FR.weekday,
         ],
-        g = [
+        _ = [
           s.RRule.SU.weekday,
           s.RRule.MO.weekday,
           s.RRule.TU.weekday,
           s.RRule.WE.weekday,
           s.RRule.TH.weekday,
         ],
-        _ = [
+        S = [
           s.RRule.TU.weekday,
           s.RRule.WE.weekday,
           s.RRule.TH.weekday,
@@ -322,39 +325,39 @@
           s.RRule.FR.weekday,
           s.RRule.SA.weekday,
         ],
-        S = new Set([0, 6]);
-      function m(e) {
+        m = new Set([0, 6]);
+      function R(e) {
         let t = e.toDate(),
           n = Math.ceil(t.getDate() / 7),
           l = e.format("dddd"),
           a = [
             {
               value: o.RecurrenceOptions.NONE,
-              label: c.default.Messages.CREATE_EVENT_RECUR_NONE,
+              label: d.default.Messages.CREATE_EVENT_RECUR_NONE,
             },
             {
               value: o.RecurrenceOptions.WEEKLY,
-              label: c.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
+              label: d.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
                 weekday: l,
               }),
             },
             {
               value: o.RecurrenceOptions.BIWEEKLY,
-              label: c.default.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
+              label: d.default.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
                 weekday: l,
               }),
             },
             {
               value: o.RecurrenceOptions.MONTHLY,
-              label: c.default.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
+              label: d.default.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
                 nth: n,
                 weekday: l,
               }),
             },
             {
               value: o.RecurrenceOptions.YEARLY,
-              label: c.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
-                date: t.toLocaleString(c.default.getLocale(), {
+              label: d.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
+                date: t.toLocaleString(d.default.getLocale(), {
                   month: "short",
                   day: "2-digit",
                 }),
@@ -362,48 +365,48 @@
             },
           ];
         return (
-          !S.has(t.getDay()) &&
+          !m.has(t.getDay()) &&
             a.push({
               value: o.RecurrenceOptions.WEEKDAY_ONLY,
-              label: c.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS,
+              label: d.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS,
             }),
           a
         );
       }
-      let R = () => {
+      let C = () => {
           let e = r().add(1, "hour"),
             t = e.hour();
           return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
         },
-        C = (e, t) =>
+        N = (e, t) =>
           e.format(
             e.get("years") === t.get("years")
               ? "ddd MMM Do \xb7 LT"
               : "ddd MMM Do, YYYY \xb7 LT"
           ),
-        N = (e, t) => {
+        T = (e, t) => {
           let n = e.diff(t, "days");
-          return n > 1 ? C(e, t) : e.calendar(t);
+          return n > 1 ? N(e, t) : e.calendar(t);
         };
-      function T(e, t, n) {
+      function p(e, t, n) {
         null == n && (n = r());
         let l = r(e),
           a = null != t && "" !== t ? r(t) : void 0,
           s = null != t && l.isSame(a, "day");
         return {
-          startDateTimeString: N(l, n),
+          startDateTimeString: T(l, n),
           endDateTimeString:
-            null != a ? (s ? a.format("LT") : C(a, n)) : void 0,
+            null != a ? (s ? a.format("LT") : N(a, n)) : void 0,
           currentOrPastEvent: l <= n,
           upcomingEvent: l <= r().add(1, "hour"),
           withinStartWindow: l <= r().add(15, "minute"),
           diffMinutes: l.diff(n, "minutes"),
         };
       }
-      function p(e) {
+      function x(e) {
         return new s.Weekday(v[e]);
       }
-      function x(e, t) {
+      function I(e, t) {
         let n;
         return (
           null != e &&
@@ -412,9 +415,9 @@
           n
         );
       }
-      function I(e, t) {
+      function L(e, t) {
         let n = (function (e) {
-            return x(e.scheduled_start_time, e.scheduled_end_time);
+            return I(e.scheduled_start_time, e.scheduled_end_time);
           })(t),
           l = r(u.default.extractTimestamp(e)),
           a =
@@ -423,7 +426,7 @@
               : void 0;
         return { startDate: l, endDate: a };
       }
-      function L(e, t) {
+      function A(e, t) {
         var n;
         if (null == t) return e;
         let l =
@@ -436,18 +439,18 @@
           endDate: null != l ? r(l) : void 0,
         };
       }
-      function A(e) {
-        return x(e.scheduledStartTime, e.scheduledEndTime);
-      }
-      function y(e, t) {
-        return null == e || null == t ? null == e && null == t : e.isSame(t);
+      function y(e) {
+        return I(e.scheduledStartTime, e.scheduledEndTime);
       }
       function D(e, t) {
+        return null == e || null == t ? null == e && null == t : e.isSame(t);
+      }
+      function M(e, t) {
         return null == e || null == t
           ? null == e && null == t
-          : y(e.startDate, t.startDate) && y(e.endDate, t.endDate);
+          : D(e.startDate, t.startDate) && D(e.endDate, t.endDate);
       }
-      function M(e) {
+      function j(e) {
         var t;
         let n = null != e.byWeekday ? [...e.byWeekday] : null,
           l =
@@ -470,13 +473,13 @@
           })
         );
       }
-      function j(e, t, n) {
+      function O(e, t, n) {
         let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
           a = [],
           r = n;
         r.setMilliseconds(0);
         let s = new Date();
-        s.setFullYear(s.getFullYear() + E);
+        s.setFullYear(s.getFullYear() + h);
         for (let n = 0; n < e && r < s; n++) {
           let e = t.after(r, 0 === n && !l);
           if (null == e) break;
@@ -484,7 +487,7 @@
         }
         return a;
       }
-      function O(e) {
+      function w(e) {
         var t;
         if (null == e) return null;
         let n =
@@ -498,7 +501,7 @@
             )
           : null;
       }
-      function w(e, t) {
+      function k(e, t) {
         if (null == t || null == e) return !1;
         let n = new Date(e.start),
           l = u.default.extractTimestamp(t),
@@ -518,19 +521,19 @@
             return !0;
         }
       }
-      function k(e) {
-        let t = p(e.toDate().getDay()),
-          n = p(e.toDate().getUTCDay());
+      function G(e) {
+        let t = x(e.toDate().getDay()),
+          n = x(e.toDate().getUTCDay());
         return n.weekday - t.weekday > 0
-          ? _
+          ? S
           : n.weekday - t.weekday < 0
-            ? g
-            : h;
+            ? _
+            : g;
       }
-      function G(e, t) {
+      function U(e, t) {
         let n = (function (e, t) {
-          let n = k(t),
-            l = p(t.toDate().getUTCDay()),
+          let n = G(t),
+            l = x(t.toDate().getUTCDay()),
             a = Math.ceil(t.toDate().getUTCDate() / 7),
             r = t.toDate();
           switch ((r.setMilliseconds(0), e)) {
@@ -587,9 +590,9 @@
           count: h,
         };
       }
-      function U(e, t) {
+      function B(e, t) {
         if (null == t) return o.RecurrenceOptions.NONE;
-        let n = M(t);
+        let n = j(t);
         switch (n.options.freq) {
           case s.RRule.WEEKLY:
             if (n.options.interval < 1 || n.options.interval > 2)
@@ -602,20 +605,29 @@
           case s.RRule.MONTHLY:
             return o.RecurrenceOptions.MONTHLY;
           case s.RRule.DAILY:
-            if (!(0, l.isEqual)(n.options.byweekday, k(e)))
+            if (!(0, l.isEqual)(n.options.byweekday, G(e)))
               return o.RecurrenceOptions.NONE;
             return o.RecurrenceOptions.WEEKDAY_ONLY;
           default:
             return o.RecurrenceOptions.NONE;
         }
       }
-      function B(e, t) {
+      function P(e, t) {
         return (
           (null == e ? void 0 : e.scheduled_start_time) !==
             t.scheduledStartTime ||
           e.scheduled_end_time !== t.scheduledEndTime ||
           !(0, l.isEqual)(e.recurrence_rule, t.recurrenceRule)
         );
+      }
+      function V(e, t, n) {
+        return (null == e ? void 0 : e.is_canceled)
+          ? c.GuildScheduledEventStatus.CANCELED
+          : t < n
+            ? c.GuildScheduledEventStatus.COMPLETED
+            : null != e
+              ? c.GuildScheduledEventStatus.SCHEDULED
+              : null;
       }
     },
     124163: function (e, t, n) {
@@ -734,8 +746,8 @@
           timeSelected: h = !0,
           schedule: g,
           recurrenceRule: _,
-          showEndDate: v = !1,
-          requireEndDate: S = !1,
+          showEndDate: S = !1,
+          requireEndDate: v = !1,
           disableStartDateTime: m = !1,
         } = e;
         if (null == g) return null;
@@ -751,9 +763,9 @@
           n({ ...g, endDate: e });
         };
         return (
-          v &&
+          S &&
             (R =
-              null != g.endDate || S
+              null != g.endDate || v
                 ? (0, l.jsxs)(l.Fragment, {
                     children: [
                       (0, l.jsxs)("div", {
@@ -762,7 +774,7 @@
                           (0, l.jsx)(s.FormItem, {
                             title:
                               d.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-                            required: S,
+                            required: v,
                             children: (0, l.jsx)(s.DateInput, {
                               value: g.endDate,
                               onSelect: x,
@@ -773,7 +785,7 @@
                           (0, l.jsx)(s.FormItem, {
                             title:
                               d.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-                            required: S,
+                            required: v,
                             children: (0, l.jsx)(s.TimeInput, {
                               value: g.endDate,
                               onChange: x,
@@ -781,7 +793,7 @@
                           }),
                         ],
                       }),
-                      S
+                      v
                         ? null
                         : (0, l.jsx)(s.Button, {
                             onClick: () => {
@@ -1273,8 +1285,8 @@
             setShowGuildPopout: a,
             handleGuildNameClick: s,
             source: _,
-            speakers: v,
-            speakerCount: S,
+            speakers: S,
+            speakerCount: v,
             audienceCount: m,
             channelName: R,
           } = e,
@@ -1352,8 +1364,8 @@
               }),
               (0, r.jsx)(c.default, {
                 guild: t,
-                speakers: v,
-                speakerCount: S,
+                speakers: S,
+                speakerCount: v,
                 className: g.speakers,
               }),
               null != R &&
@@ -1414,8 +1426,8 @@
         h = n("998716"),
         g = n("911457"),
         _ = n("49111"),
-        v = n("745049"),
-        S = n("782340"),
+        S = n("745049"),
+        v = n("782340"),
         m = n("290145");
       function R(e) {
         let { icon: t } = e;
@@ -1459,7 +1471,7 @@
             privacy_level:
               null !== (t = i.privacyLevel) && void 0 !== t
                 ? t
-                : v.GuildScheduledEventPrivacyLevel.PUBLIC,
+                : S.GuildScheduledEventPrivacyLevel.PUBLIC,
           },
           c = (0, E.useStageParticipants)(
             r.id,
@@ -1526,14 +1538,14 @@
                           className: m.title,
                           variant: "heading-xl/semibold",
                           children:
-                            S.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE,
+                            v.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE,
                         }),
                         (0, l.jsx)(r.Text, {
                           className: m.subtitle,
                           color: "header-secondary",
                           variant: "text-sm/normal",
                           children:
-                            S.default.Messages
+                            v.default.Messages
                               .START_STAGE_PUBLIC_PREVIEW_SUBTITLE,
                         }),
                       ],
@@ -1543,17 +1555,17 @@
                       children: [
                         (0, l.jsx)(C, {
                           icon: (0, l.jsx)(R, { icon: i.default }),
-                          text: S.default.Messages
+                          text: v.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_ONE,
                         }),
                         (0, l.jsx)(C, {
                           icon: (0, l.jsx)(R, { icon: o.default }),
-                          text: S.default.Messages
+                          text: v.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_TWO,
                         }),
                         (0, l.jsx)(C, {
                           icon: (0, l.jsx)(R, { icon: u.default }),
-                          text: S.default.Messages
+                          text: v.default.Messages
                             .START_STAGE_PUBLIC_PREVIEW_SECTION_THREE,
                         }),
                         (0, l.jsx)(C, {
@@ -1563,7 +1575,7 @@
                             width: 40,
                             height: 40,
                           }),
-                          text: S.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format(
+                          text: v.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_FOUR.format(
                             {
                               articleURL: d.default.getArticleURL(
                                 _.HelpdeskArticles.STAGE_CHANNEL_GUIDELINES
@@ -1582,14 +1594,14 @@
                       onClick: E,
                       submitting: f,
                       children:
-                        S.default.Messages
+                        v.default.Messages
                           .START_STAGE_CHANNEL_EVENT_MODAL_BUTTON,
                     }),
                     (0, l.jsx)(r.Button, {
                       color: r.Button.Colors.PRIMARY,
                       className: m.cancelButton,
                       onClick: h,
-                      children: S.default.Messages.CANCEL,
+                      children: v.default.Messages.CANCEL,
                     }),
                     (0, l.jsx)(r.Button, {
                       look: r.Button.Looks.LINK,
@@ -1597,7 +1609,7 @@
                       className: m.backButton,
                       onClick: g,
                       size: r.Button.Sizes.MIN,
-                      children: S.default.Messages.BACK,
+                      children: v.default.Messages.BACK,
                     }),
                   ],
                 }),
@@ -1628,8 +1640,8 @@
         h = n("269596"),
         g = n("27618"),
         _ = n("697218"),
-        v = n("228427"),
-        S = n("599110"),
+        S = n("228427"),
+        v = n("599110"),
         m = n("887143"),
         R = n("834052"),
         C = n("151642"),
@@ -1667,13 +1679,13 @@
                     null != n && a(n);
                   },
                   renderOptionPrefix: () =>
-                    (0, l.jsx)(v.default, { height: 24 }),
+                    (0, l.jsx)(S.default, { height: 24 }),
                 }),
               }),
             });
       }
       function D(e) {
-        var t, n, r, g, _, v, D, M;
+        var t, n, r, g, _, S, D, M;
         let {
             channel: j,
             guild: O,
@@ -1684,8 +1696,8 @@
             onEventSave: B,
             onClose: P,
             onSelectChannel: V,
-            isEvent: b = !1,
-            defaultOptions: H,
+            isEvent: H = !1,
+            defaultOptions: b,
             isSlideReady: Y = !0,
           } = e,
           F = a.useMemo(
@@ -1695,7 +1707,7 @@
           [W, Z] = a.useState(
             null !==
               (n =
-                null !== (t = null == H ? void 0 : H.topic) && void 0 !== t
+                null !== (t = null == b ? void 0 : b.topic) && void 0 !== t
                   ? t
                   : null == F
                     ? void 0
@@ -1704,17 +1716,17 @@
               : ""
           ),
           [K, z] = a.useState(
-            null !== (r = null == H ? void 0 : H.description) && void 0 !== r
+            null !== (r = null == b ? void 0 : b.description) && void 0 !== r
               ? r
               : ""
           ),
-          [q] = a.useState(b),
+          [q] = a.useState(H),
           [X, J] = a.useState(
-            null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g
+            null !== (g = null == b ? void 0 : b.schedule) && void 0 !== g
               ? g
               : { startDate: (0, d.getInitialEventStartDate)() }
           ),
-          [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null),
+          [Q, $] = a.useState(q && (null == b ? void 0 : b.schedule) != null),
           ee = (0, m.useCanSendStageStartNotification)(j),
           et = (0, m.useDefaultSendStartStageNotificationToggle)(j),
           en = null == F && ee && !q,
@@ -1727,17 +1739,17 @@
           es = x.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
           [ei] = a.useState(
             null !==
-              (v =
-                null !== (_ = null == H ? void 0 : H.privacyLevel) &&
+              (S =
+                null !== (_ = null == b ? void 0 : b.privacyLevel) &&
                 void 0 !== _
                   ? _
                   : null == F
                     ? void 0
-                    : F.privacy_level) && void 0 !== v
-              ? v
+                    : F.privacy_level) && void 0 !== S
+              ? S
               : es
           ),
-          [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule),
+          [eu, eo] = a.useState(null == b ? void 0 : b.recurrenceRule),
           ec = (0, C.useStageBlockedUsersCount)(j.id),
           [ed, ef] = a.useState(!1),
           eE = (0, o.default)(j),
@@ -1745,13 +1757,13 @@
           eg = null != V,
           e_ = eh.length > 1;
         a.useEffect(() => {
-          S.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
+          v.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
             stage_instance_id: null == F ? void 0 : F.id,
             can_start_public_stage: !1,
             guild_id: j.guild_id,
           });
         }, []);
-        let ev = e => {
+        let eS = e => {
           if (
             (e.preventDefault(),
             ei === x.GuildScheduledEventPrivacyLevel.PUBLIC &&
@@ -1775,7 +1787,7 @@
           }
           null == U || U(t);
         };
-        let { color: eS, text: em } =
+        let { color: ev, text: em } =
             ((D = F),
             (M = ei),
             q
@@ -1820,11 +1832,11 @@
                     (0, l.jsx)(N.BlockedUsersNotice, { channelId: j.id }),
                 }),
                 (0, l.jsxs)("form", {
-                  onSubmit: ev,
+                  onSubmit: eS,
                   className: A.form,
                   children: [
                     (0, l.jsxs)(u.FormItem, {
-                      title: b
+                      title: H
                         ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL
                         : L.default.Messages
                             .START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
@@ -1900,7 +1912,7 @@
                             : null,
                         ],
                       }),
-                    b &&
+                    H &&
                       (0, l.jsx)(u.FormItem, {
                         title:
                           L.default.Messages
@@ -1951,9 +1963,9 @@
             (0, l.jsxs)(u.ModalFooter, {
               children: [
                 (0, l.jsx)(u.Button, {
-                  color: eS,
-                  onClick: ev,
-                  disabled: "" === W || null == ei || (b && !eC),
+                  color: ev,
+                  onClick: eS,
+                  disabled: "" === W || null == ei || (H && !eC),
                   submitting: G,
                   children: em,
                 }),
@@ -1991,8 +2003,8 @@
         h = n("767680"),
         g = n("249873"),
         _ = n("837979"),
-        v = n("782340"),
-        S = n("652809");
+        S = n("782340"),
+        v = n("652809");
       function m(e) {
         let {
           guild: t,
@@ -2009,15 +2021,15 @@
         return (0, l.jsxs)(l.Fragment, {
           children: [
             (0, l.jsxs)("div", {
-              className: S.content,
+              className: v.content,
               children: [
                 (0, l.jsx)(d.default, {
                   children: (0, l.jsx)("div", {
-                    className: S.stageIconBackground,
+                    className: v.stageIconBackground,
                     children: (0, l.jsx)(o.default, {
                       width: 32,
                       height: 32,
-                      className: S.stageIcon,
+                      className: v.stageIcon,
                     }),
                   }),
                 }),
@@ -2025,21 +2037,21 @@
                   id: r,
                   variant: "heading-xl/semibold",
                   color: "header-primary",
-                  className: S.headerTitle,
+                  className: v.headerTitle,
                   children:
                     null == a
-                      ? v.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE
-                      : v.default.Messages.EDIT_STAGE_CHANNEL_TITLE,
+                      ? S.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TITLE
+                      : S.default.Messages.EDIT_STAGE_CHANNEL_TITLE,
                 }),
                 (0, l.jsx)(s.Text, {
                   variant: "text-sm/normal",
                   color: "header-secondary",
-                  className: S.headerSubtitle,
+                  className: v.headerSubtitle,
                   children:
                     null == a
-                      ? v.default.Messages
+                      ? S.default.Messages
                           .START_STAGE_CHANNEL_EVENT_MODAL_SUBTITLE
-                      : v.default.Messages.EDIT_STAGE_SUBTITLE,
+                      : S.default.Messages.EDIT_STAGE_SUBTITLE,
                 }),
               ],
             }),
@@ -2059,7 +2071,7 @@
       function R(e) {
         let { channel: t, onClose: n, transitionState: o, ...d } = e,
           E = (0, u.useUID)(),
-          v = (0, r.useStateFromStores)([i.default], () =>
+          S = (0, r.useStateFromStores)([i.default], () =>
             i.default.getGuild(t.guild_id)
           ),
           R = a.useMemo(
@@ -2082,9 +2094,9 @@
             onSave: T,
           });
         return (a.useEffect(() => {
-          null == v && n();
-        }, [v, n]),
-        null == v)
+          null == S && n();
+        }, [S, n]),
+        null == S)
           ? null
           : (0, l.jsx)(s.ModalRoot, {
               transitionState: o,
@@ -2099,9 +2111,9 @@
                   (0, l.jsx)(s.Slide, {
                     id: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                     children: (0, l.jsx)("div", {
-                      className: S.slideContainer,
+                      className: v.slideContainer,
                       children: (0, l.jsx)(m, {
-                        guild: v,
+                        guild: S,
                         channel: t,
                         stageInstance: R,
                         headerId: E,
@@ -2118,10 +2130,10 @@
                   (0, l.jsx)(s.Slide, {
                     id: _.StartStageSteps.PUBLIC_STAGE_PREVIEW,
                     children: (0, l.jsx)("div", {
-                      className: S.slideContainer,
+                      className: v.slideContainer,
                       children: (0, l.jsx)(f.default, {
                         headerId: E,
-                        guild: v,
+                        guild: S,
                         channel: t,
                         stageData: A,
                         loading: C,
@@ -2167,8 +2179,8 @@
               c.default.getStageInstanceByChannel(null == e ? void 0 : e.id),
             [null == e ? void 0 : e.id]
           ),
-          v = (0, u.useCanSendStageStartNotification)(e),
-          S = async l => {
+          S = (0, u.useCanSendStageStartNotification)(e),
+          v = async l => {
             let { topic: u, privacyLevel: c, sendStartNotification: f } = l;
             if (null != e && "" !== u && null != c) {
               E(!0),
@@ -2181,7 +2193,7 @@
                 null != _
                   ? (n = await o.editStage(e, u, c))
                   : ((n = await o.startStage(e, u, c, null != f && f)),
-                    v &&
+                    S &&
                       i.hideHotspot(
                         d.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE
                       )),
@@ -2192,7 +2204,7 @@
               }
             }
           };
-        return { loading: f, error: h, onSave: S };
+        return { loading: f, error: h, onSave: v };
       }
     },
     249873: function (e, t, n) {
@@ -2307,7 +2319,7 @@
         h = n("474293"),
         g = n("580357"),
         _ = n("356659");
-      let v = {
+      let S = {
           SMOL: "Smol",
           MINI: "Mini",
           SMALLER: "Smaller",
@@ -2317,25 +2329,25 @@
           LARGER: "Larger",
           XLARGE: "XLarge",
         },
-        S = {
-          [v.SMOL]: 16,
-          [v.MINI]: 20,
-          [v.SMALLER]: 24,
-          [v.SMALL]: 30,
-          [v.MEDIUM]: 40,
-          [v.LARGE]: 50,
-          [v.LARGER]: 64,
-          [v.XLARGE]: 100,
+        v = {
+          [S.SMOL]: 16,
+          [S.MINI]: 20,
+          [S.SMALLER]: 24,
+          [S.SMALL]: 30,
+          [S.MEDIUM]: 40,
+          [S.LARGE]: 50,
+          [S.LARGER]: 64,
+          [S.XLARGE]: 100,
         },
         m = {
-          [v.SMOL]: [10, 10, 8, 6, 6, 4],
-          [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
-          [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-          [v.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-          [v.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-          [v.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-          [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-          [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
+          [S.SMOL]: [10, 10, 8, 6, 6, 4],
+          [S.MINI]: [12, 12, 10, 10, 8, 6, 4],
+          [S.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+          [S.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+          [S.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+          [S.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+          [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+          [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
         };
       class R extends a.PureComponent {
         renderAcronym() {
@@ -2367,8 +2379,8 @@
               showTooltip: f,
               tooltipPosition: E,
               onClick: g,
-              to: v,
-              badgeStrokeColor: S,
+              to: S,
+              badgeStrokeColor: v,
               animate: R,
               tabIndex: C,
               iconSrc: N,
@@ -2397,7 +2409,7 @@
                     ...o,
                   }
                 : o,
-            onClick: null != v || null == g ? void 0 : g,
+            onClick: null != S || null == g ? void 0 : g,
             tabIndex: C,
             ...p,
             children: [this.renderAcronym(), this.renderBadge()],
@@ -2443,7 +2455,7 @@
           style: {
             ...a,
             backgroundImage: (0, E.makeCssUrlString)(
-              null != l ? l : t.getIconURL(S[r], n && f.default.isFocused())
+              null != l ? l : t.getIconURL(v[r], n && f.default.isFocused())
             ),
           },
         };
@@ -2453,9 +2465,9 @@
           return (0, l.jsx)(C, { ...this.props });
         }
       }
-      (N.Sizes = v),
+      (N.Sizes = S),
         (N.defaultProps = {
-          size: v.LARGE,
+          size: S.LARGE,
           textScale: 1,
           showBadge: !1,
           showTooltip: !1,
@@ -2851,10 +2863,10 @@
             return _;
           },
           viewGuild: function () {
-            return v;
+            return S;
           },
           makeDiscoverableGuild: function () {
-            return S;
+            return v;
           },
           trackDiscoveryViewed: function () {
             return m;
@@ -2929,7 +2941,7 @@
             )),
           null == a || a();
       }
-      async function v(e) {
+      async function S(e) {
         let t,
           {
             loadId: n,
@@ -2971,7 +2983,7 @@
             categoryId: i,
           });
       }
-      function S(e) {
+      function v(e) {
         return {
           id: e.id,
           name: e.name,
@@ -3089,7 +3101,7 @@
                   ? void 0
                   : t[0];
           if (null == a) return a;
-          return S(a);
+          return v(a);
         } catch (e) {
           return null;
         }
@@ -3434,4 +3446,4 @@
     },
   },
 ]);
-//# sourceMappingURL=999599593ec86e3bcf96.js.map
+//# sourceMappingURL=d524dc2443bf39173050.js.map

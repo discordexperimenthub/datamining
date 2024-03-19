@@ -9240,12 +9240,22 @@
       n.r(t),
         n.d(t, {
           toggleMemberListContentFeedHidden: function () {
-            return l;
+            return o;
           },
         });
-      var a = n("913144");
-      let l = () => {
-        a.default.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
+      var a = n("913144"),
+        l = n("18494"),
+        s = n("162771"),
+        i = n("599110"),
+        r = n("265596"),
+        u = n("49111");
+      let o = () => {
+        a.default.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" }),
+          i.default.track(u.AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, {
+            channel_id: l.default.getChannelId(),
+            guild_id: s.default.getGuildId(),
+            hidden: r.default.hidden,
+          });
       };
     },
     86097: function (e, t, n) {
@@ -10244,12 +10254,14 @@
         c = n("265596"),
         f = n("49111"),
         h = n("782340");
-      let m = (e, t) =>
-        (0, a.jsx)(r.Menu, {
+      let m = e => {
+        let { closePopout: t } = e,
+          n = (0, l.useStateFromStores)([c.default], () => c.default.hidden);
+        return (0, a.jsx)(r.Menu, {
           onSelect: () => {},
           navId: "member-list-settings-menu",
           variant: "fixed",
-          onClose: e,
+          onClose: null != t ? t : f.NOOP,
           "aria-label":
             h.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
           children: (0, a.jsxs)(r.MenuGroup, {
@@ -10266,30 +10278,30 @@
                       f.HelpdeskArticles.MEMBER_LIST_ACTIVITY_FEED
                     )
                   ),
-                    e();
+                    null == t || t();
                 },
               }),
               (0, a.jsx)(r.MenuCheckboxItem, {
                 id: "hide",
                 label:
                   h.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
-                checked: t,
+                checked: n,
                 action: () => {
-                  (0, d.toggleMemberListContentFeedHidden)(), e();
+                  (0, d.toggleMemberListContentFeedHidden)(), null == t || t();
                 },
               }),
             ],
           }),
         });
-      var p = () => {
-        let e = (0, l.useStateFromStores)([c.default], () => c.default.hidden);
-        return (0, a.jsx)(r.Popout, {
+      };
+      var p = () =>
+        (0, a.jsx)(r.Popout, {
           animation: r.Popout.Animation.NONE,
           position: "bottom",
           align: "right",
-          renderPopout: t => {
-            let { closePopout: n } = t;
-            return m(n, e);
+          renderPopout: e => {
+            let { closePopout: t } = e;
+            return (0, a.jsx)(m, { closePopout: t });
           },
           children: e =>
             (0, a.jsx)(r.Clickable, {
@@ -10301,7 +10313,6 @@
               children: (0, a.jsx)(i.SettingsIcon, { width: 12, height: 12 }),
             }),
         });
-      };
     },
     356980: function (e, t, n) {
       "use strict";
@@ -44218,4 +44229,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37599932ca5f3d3b1227.js.map
+//# sourceMappingURL=ccee98890ad36852e0a8.js.map

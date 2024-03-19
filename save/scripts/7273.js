@@ -5748,6 +5748,8 @@
         (el.RANKING_ITEM_INTERACTED = "ranking_item_interacted"),
         (el.MEMBERLIST_CONTENT_FEED_TOGGLED =
           "memberlist_content_feed_expander_toggled"),
+        (el.MEMBERLIST_CONTENT_FEED_HIDDEN =
+          "memberlist_content_feed_hidden_toggled"),
         (el.CONTENT_POPOUT_EMOJI_CLICKED =
           "content_inventory_reaction_popout_emoji_clicked"),
         ((es = _k || (_k = {})).CANARY = "canary"),
@@ -17337,4 +17339,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.96474d5edbf376fae351.js.map
+//# sourceMappingURL=7273.149ad48f23fc4104e400.js.map

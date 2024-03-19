@@ -3842,6 +3842,7 @@
         (I1.DESIGN_SYSTEM = "Design System"),
         (I1.DESIGN_SYSTEM_TEXT = "Design System (Text)"),
         (I1.DESIGN_SYSTEM_BUTTON = "Design System (Button)"),
+        (I1.DESIGN_SYSTEM_ROW_BUTTON = "Design System (Row Button)"),
         (I1.DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS =
           "Design System (Experimental Buttons)"),
         (I1.DESIGN_SYSTEM_TABLE_ROW = "Design System (Table Row)"),
@@ -4234,6 +4235,7 @@
           DESIGN_SYSTEM: "Design System",
           DESIGN_SYSTEM_TEXT: "Design System (Text)",
           DESIGN_SYSTEM_BUTTON: "Design System (Button)",
+          DESIGN_SYSTEM_ROW_BUTTON: "Design System (Row Button)",
           DESIGN_SYSTEM_EXPERIMENTAL_BUTTONS:
             "Design System (Experimental Buttons)",
           DESIGN_SYSTEM_TABLE_ROW: "Design System (Table Row)",
@@ -17334,4 +17336,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.54d61f48486efc771b91.js.map
+//# sourceMappingURL=7273.f7390a6388684827d854.js.map

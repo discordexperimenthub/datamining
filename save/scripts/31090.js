@@ -14989,6 +14989,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "X\xf3a tin nhắn?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "C\xf3 vẻ như bạn đ\xe3 viết một nội dung n\xe0o đ\xf3. Bạn c\xf3 muốn x\xf3a nội dung n\xe0y v\xe0 sử dụng một lệnh kh\xf4ng?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "Xem Mục Hỗ Trợ",
         MJ_CHATBAR_BODY:
           "Nhập “$[command](commandHook)” để sử dụng Midjourney. Mẹo: Tạo một m\xe1y chủ để d\xf9ng thử t\xednh năng với bạn b\xe8.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "Xảy ra lỗi khi tải ứng dụng.",
@@ -19595,8 +19596,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "vừa n\xe3y",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {ph\xfat} other {ph\xfat}} trước",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {giờ} other {giờ}} trước",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24484,10 +24483,7 @@
           "**{serverName}** kh\xf4ng khả dụng tại khu vực của bạn.",
         QUESTS: "Nhiệm Vụ",
         QUEST: "Nhiệm Vụ {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Khả dụng tới {date}",
-        QUESTS_SHOW_CODE: "Hiển thị m\xe3",
-        QUESTS_CLAIM_REWARD: "Nhận phần thưởng",
-        QUESTS_CLAIM_YOUR_REWARD: "Nhận phần thưởng của bạn",
+        QUESTS_SEE_CODE: "Xem M\xe3",
         QUESTS_ACCEPT: "Chấp nhận nhiệm vụ",
         QUESTS_COMPLETE_TOOLTIP: "Nhấn nhận để lấy m\xe3 phần thưởng của bạn!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24503,21 +24499,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "\xd4i kh\xf4ng! Ch\xfang t\xf4i kh\xf4ng thể gửi email x\xe1c minh cho bạn.",
         QUEST_REWARD: "Thắng {reward}",
-        QUESTS_REWARD_CODE_HEADER: "M\xe3 phần thưởng của bạn",
         QUESTS_REWARD_CODE_CONGRATS: "Ch\xfac mừng!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Nền tảng bạn y\xeau th\xedch l\xe0 g\xec?",
         QUESTS_REWARD_CODE_ERROR:
           "\xd4i kh\xf4ng! C\xf3 g\xec đ\xf3 kh\xf4ng ổn, vui l\xf2ng thử lại sau",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Chọn một nền tảng",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Chọn nền tảng",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Ch\xfang t\xf4i sẽ tạo một m\xe3 nền tảng duy nhất cho {rewardName} của bạn. **Bạn sẽ kh\xf4ng thể thay đổi lựa chọn của m\xecnh sau khi nhấn v\xe0o Nhận m\xe3.**",
         QUESTS_REWARD_CODE_DONE: "Xong",
-        QUESTS_REWARD_CODE_GET_CODE: "Nhận m\xe3",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Thử lại",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Nhận ngay",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Bạn đ\xe3 nhận rồi",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Đa nền tảng",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24525,14 +24513,11 @@
         QUESTS_SPONSORED: "Được t\xe0i trợ",
         QUESTS_PROMOTED: "Được quảng c\xe1o",
         QUESTS_LEARN_MORE_V2: "T\xecm hiểu th\xeam",
-        QUESTS_LEARN_MORE_STACKED: "T\xecm hiểu\n\nth\xeam",
-        QUESTS_LEARN_MORE_LINK: "[T\xecm hiểu th\xeam]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Chấp nhận nhiệm vụ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} cho một người bạn trong {streamingDurationRequirement, number} ph\xfat v\xe0 nhận thưởng {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Đ\xe3 chấp nhận nhiệm vụ!** Stream {gameTitle} cho một người bạn trong {streamingDurationRequirement, number} ph\xfat v\xe0 nhận thưởng {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Theo d\xf5i tiến tr\xecnh của bạn",
         QUESTS_TITLE: "Nhiệm Vụ {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ui ch\xe0!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24541,10 +24526,8 @@
           "Nhiệm Vụ vẫn chưa khả dụng tr\xean di động.",
         QUESTS_MOBILE_EMBED_BODY:
           "Bạn c\xf3 thể v\xe0o \nThiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
-        QUESTS_GET_THIS_GAME: "Tải tr\xf2 chơi n\xe0y",
+        QUESTS_GET_THIS_GAME: "Nhận tr\xf2 chơi",
         QUESTS_DISCLOSURE_LABEL: "Tại sao t\xf4i thấy nội dung n\xe0y?",
-        QUESTS_SHARE_LINK: "Sao ch\xe9p đường link chia sẻ",
-        QUESTS_HIDE_THIS: "Ẩn đi",
         QUESTS_FIND_QUEST:
           "Bạn c\xf3 thể mở lại nhiệm vụ trong Thiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng",
         QUESTS_CLAIM_BY: "Nhận trước {expirationDate}.",
@@ -24589,8 +24572,7 @@
           "!!{first}!!, !!{second}!!, v\xe0 !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! v\xe0 {count, plural, one {1 người kh\xe1c} other {{count} người kh\xe1c}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Cửa h\xe0ng",
         STOREFRONT_APP_SUBSCRIPTIONS: "C\xe1c G\xf3i Đăng K\xfd trong Ứng Dụng",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Mua g\xf3i đăng k\xfd từ {appName}",
         STOREFRONT_APP_PRODUCTS: "Sản Phẩm Ứng Dụng",
@@ -24645,6 +24627,15 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} gi\xe2y trước",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tuần trước",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} ng\xe0y trước",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} giờ trước",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "{count} ph\xfat trước",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
+          "{count} gi\xe2y trước",
       };
     },
   },

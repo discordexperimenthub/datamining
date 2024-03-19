@@ -14860,6 +14860,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Διαγραφή μηνύματος;",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Φαίνεται ότι έχεις ήδη γράψει κάτι. Θέλεις να το διαγράψεις και να χρησιμοποιήσεις κάποια εντολή;",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Προβολή άρθρου βοήθειας",
         MJ_CHATBAR_BODY:
           "Πληκτρολόγησε “$[command](commandHook)” για να χρησιμοποιήσεις το Midjourney. Συμβουλή: Δημιούργησε έναν διακομιστή για να το δοκιμάσεις μόνο με φίλους.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19425,8 +19427,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "μόλις τώρα",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {λεπτό} other {λεπτά}} πριν",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {ώρα} other {ώρες}} πριν",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {ημέρα} other {ημέρες}} πριν",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24249,10 +24249,7 @@
           "Ο διακομιστής **{serverName}** δεν είναι διαθέσιμος στην περιοχή σου.",
         QUESTS: "Αποστολές",
         QUEST: "Αποστολή {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Διαθέσιμο μέχρι τις {date}",
-        QUESTS_SHOW_CODE: "Εμφάνιση κωδικού",
-        QUESTS_CLAIM_REWARD: "Διεκδίκηση ανταμοιβής",
-        QUESTS_CLAIM_YOUR_REWARD: "Διεκδίκησε την ανταμοιβή σου",
+        QUESTS_SEE_CODE: "Προβολή κωδικού",
         QUESTS_ACCEPT: "Αποδοχή αποστολής",
         QUESTS_COMPLETE_TOOLTIP:
           "Πάτησε διεκδίκηση για να πάρεις τον κωδικό ανταμοιβής σου!",
@@ -24269,21 +24266,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ωχ! Δεν καταφέραμε να σου στείλουμε ένα email επαλήθευσης.",
         QUEST_REWARD: "Κέρδισε {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Ο κωδικός ανταμοιβής σου",
         QUESTS_REWARD_CODE_CONGRATS: "Συγχαρητήρια!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Ποια πλατφόρμα προτιμάς;",
         QUESTS_REWARD_CODE_ERROR:
           "Ωχ! Κάτι πήγε στραβά. Προσπάθησε ξανά αργότερα",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Διάλεξε πλατφόρμα",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Επίλεξε πλατφόρμα",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Θα δημιουργήσουμε έναν συγκεκριμένο κωδικό για την πλατφόρμα σου για το {rewardName}. **Δεν θα μπορείς να αλλάξεις την επιλογή σου αφού πατήσεις Απόκτηση κωδικού.**",
         QUESTS_REWARD_CODE_DONE: "Έγινε",
-        QUESTS_REWARD_CODE_GET_CODE: "Απόκτηση κωδικού",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Προσπάθησε ξανά",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Διεκδίκησε αυτό",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Το διεκδίκησες",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Διαπλατφορμική",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24291,14 +24280,11 @@
         QUESTS_SPONSORED: "Χορηγούμενο",
         QUESTS_PROMOTED: "Διαφημιζόμενο",
         QUESTS_LEARN_MORE_V2: "Μάθε περισσότερα",
-        QUESTS_LEARN_MORE_STACKED: "Μάθε\n\nπερισσότερα",
-        QUESTS_LEARN_MORE_LINK: "[Μάθε περισσότερα]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Αποδοχή αποστολής",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Κάνε ζωντανή μετάδοση του {gameTitle} σε έναν φίλο για {streamingDurationRequirement, number} λεπτά και κέρδισε {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Η αποστολή έγινε αποδεκτή!** Κάνε ζωντανή μετάδοση του {gameTitle} σε έναν φίλο για {streamingDurationRequirement, number} λεπτά και κέρδισε {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Παρακολούθησε την πρόοδό σου",
         QUESTS_TITLE: "Αποστολή {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ουπς!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24307,10 +24293,8 @@
           "Οι αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα.",
         QUESTS_MOBILE_EMBED_BODY:
           "Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις \nΡυθμίσεις χρήστη > Απόθεμα δώρων και να αποδεχτείς την Αποστολή εκεί.",
-        QUESTS_GET_THIS_GAME: "Απόκτησε αυτό το παιχνίδι",
+        QUESTS_GET_THIS_GAME: "Απόκτησε Παιχνίδι",
         QUESTS_DISCLOSURE_LABEL: "Γιατί το βλέπω αυτό;",
-        QUESTS_SHARE_LINK: "Αντιγραφή συνδέσμου κοινοποίησης",
-        QUESTS_HIDE_THIS: "Απόκρυψη",
         QUESTS_FIND_QUEST:
           "Μπορείς να το βρεις ξανά στις Ρυθμίσεις χρήστη > Απόθεμα δώρων",
         QUESTS_CLAIM_BY: "Διεκδίκησε έως τις {expirationDate}.",
@@ -24353,8 +24337,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! και !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! και {count, plural, one {1 ακόμη} other {{count} ακόμη}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Κατάστημα",
         STOREFRONT_APP_SUBSCRIPTIONS: "Συνδρομές εφαρμογής",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Αγόρασε συνδρομές από την εφαρμογή {appName}",
@@ -24412,6 +24395,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}δευτ. πριν",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Πρώτη φορά",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Δραστηριότητα",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {ημέρα} other {ημέρες}} πριν",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}εβδ πριν",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}η πριν",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}ώ πριν",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}λ πριν",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}δευτ. πριν",
       };
     },
   },

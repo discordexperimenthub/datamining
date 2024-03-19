@@ -13979,6 +13979,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "메시지를 지울까요?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "이미 내용을 입력하신 것 같네요. 지우고 명령어를 사용할까요?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "도움말 보기",
         MJ_CHATBAR_BODY:
           "Midjourney를 사용하려면 “$[명령어](commandHook)”를 입력하세요. 팁: 친구하고 시도해볼 서버를 만들어보세요.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18268,8 +18269,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "방금",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count}{count, plural, =1 {분} other {분}} 전",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count}{count, plural, =1 {시간} other {시간}} 전",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count}{count, plural, =1 {일} other {일}} 전",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -22791,10 +22790,7 @@
           "**{serverName}**은 내 지역에서 사용할 수 없음.",
         QUESTS: "퀘스트",
         QUEST: "{questName} 퀘스트",
-        QUESTS_AVAILABLE_THROUGH: "{date}까지 이용 가능",
-        QUESTS_SHOW_CODE: "코드 보기",
-        QUESTS_CLAIM_REWARD: "보상 받기",
-        QUESTS_CLAIM_YOUR_REWARD: "보상을 받으세요",
+        QUESTS_SEE_CODE: "코드 보기",
         QUESTS_ACCEPT: "퀘스트 수락하기",
         QUESTS_COMPLETE_TOOLTIP: "받기를 눌러 보상 코드를 획득하세요!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -22808,21 +22804,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "이런! 인증 이메일을 보내지 못했어요.",
         QUEST_REWARD: "{reward} 받기",
-        QUESTS_REWARD_CODE_HEADER: "내 보상 코드",
         QUESTS_REWARD_CODE_CONGRATS: "축하드려요!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "선호하는 플랫폼은 무엇인가요?",
         QUESTS_REWARD_CODE_ERROR:
           "이런! 뭔가 잘못됐어요. 나중에 다시 시도해 주세요.",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "플랫폼 선택하기",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "플랫폼 선택",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "{rewardName}에 대한 플랫폼별 코드를 생성합니다. **코드 받기를 누른 후에는 선택을 변경할 수 없어요.**",
         QUESTS_REWARD_CODE_DONE: "완료",
-        QUESTS_REWARD_CODE_GET_CODE: "코드 받기",
         QUESTS_REWARD_CODE_TRY_AGAIN: "다시 시도하기",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "이걸 받으세요",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "이걸 받았어요",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "크로스 플랫폼",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -22830,14 +22818,11 @@
         QUESTS_SPONSORED: "후원:",
         QUESTS_PROMOTED: "광고",
         QUESTS_LEARN_MORE_V2: "자세히 알아보기",
-        QUESTS_LEARN_MORE_STACKED: "자세히\n\n알아보기",
-        QUESTS_LEARN_MORE_LINK: "[자세히 알아보기]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "퀘스트 수락하기",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "친구에게 {gameTitle} 게임을 {streamingDurationRequirement, number}분 동안 방송하고 {questReward} 보상을 받으세요.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**퀘스트를 수령했어요!** 친구에게 {gameTitle} 게임을 {streamingDurationRequirement, number}분 동안 방송하고 {questReward} 보상을 받으세요.",
-        QUESTS_TRACK_YOUR_PROGRESS: "진행 상황 확인하기",
         QUESTS_TITLE: "{questName} 퀘스트",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "이런!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -22846,10 +22831,8 @@
           "모바일에서는 아직 퀘스트를 이용할 수 없어요.",
         QUESTS_MOBILE_EMBED_BODY:
           "PC의 Discord 앱이나 브라우저에서\n사용자 설정 > 선물 인벤토리로 이동해 퀘스트를 수락하실 수 있어요.",
-        QUESTS_GET_THIS_GAME: "이 게임 구입하기",
+        QUESTS_GET_THIS_GAME: "게임 받기",
         QUESTS_DISCLOSURE_LABEL: "왜 그런 거죠?",
-        QUESTS_SHARE_LINK: "공유 링크 복사",
-        QUESTS_HIDE_THIS: "숨기기",
         QUESTS_FIND_QUEST:
           "사용자 설정 > 선물 인벤토리에서 다시 찾을 수 있어요",
         QUESTS_CLAIM_BY: "{expirationDate}까지 받으세요.",
@@ -22892,8 +22875,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! 외 {count, plural, one {1명} other {{count}명}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "스토어",
         STOREFRONT_APP_SUBSCRIPTIONS: "앱 구독",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName}에서 구독 구매",
         STOREFRONT_APP_PRODUCTS: "앱 제품",
@@ -22949,6 +22931,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}초 전",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "처음",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "활동",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count}{count, plural, =1 {일} other {일}} 전",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}주 전",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}일 전",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}시간 전",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}분 전",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}초 전",
       };
     },
   },

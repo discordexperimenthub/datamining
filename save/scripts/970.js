@@ -14822,6 +14822,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Nachricht l\xf6schen?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Du hast bereits etwas geschrieben. M\xf6chtest du es l\xf6schen und einen Befehl verwenden?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "Artikel anzeigen",
         MJ_CHATBAR_BODY:
           "Tippe „$[command](commandHook)“, um Midjourney zu verwenden. Tipp: Erstelle einen Server, um es mit Freunden auszuprobieren.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19380,8 +19381,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "Gerade gespielt",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {mins}} ago",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {hr} other {hrs}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "vor {count} {count, plural, =1 {Tag} other {Tagen}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24097,10 +24096,7 @@
           "**{serverName}** ist in deiner Region nicht verf\xfcgbar.",
         QUESTS: "Quests",
         QUEST: "{questName} Quest",
-        QUESTS_AVAILABLE_THROUGH: "Verf\xfcgbar \xfcber {date}",
-        QUESTS_SHOW_CODE: "Code anzeigen",
-        QUESTS_CLAIM_REWARD: "Belohnung beanspruchen",
-        QUESTS_CLAIM_YOUR_REWARD: "Beanspruche deine Belohnung",
+        QUESTS_SEE_CODE: "Code anzeigen",
         QUESTS_ACCEPT: "Quest annehmen",
         QUESTS_COMPLETE_TOOLTIP:
           "Erhalte deinen Belohnungscode, indem du auf „Beanspruchen“ klickst!",
@@ -24119,10 +24115,7 @@
         QUEST_REWARD: "{reward} gewinnen",
         QUESTS_REWARD_CODE_CONGRATS: "Gl\xfcckwunsch!",
         QUESTS_REWARD_CODE_DONE: "Fertig",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER:
-          "Beanspruche diese Belohnung",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Du hast diese Belohnung beansprucht",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Erneut versuchen",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Plattform\xfcbergreifend",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24130,14 +24123,11 @@
         QUESTS_SPONSORED: "Gesponsert",
         QUESTS_PROMOTED: "Beworben",
         QUESTS_LEARN_MORE_V2: "Mehr erfahren",
-        QUESTS_LEARN_MORE_STACKED: "Mehr\n\nerfahren",
-        QUESTS_LEARN_MORE_LINK: "[Mehr erfahren]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Quest annehmen",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streame {gameTitle} f\xfcr {streamingDurationRequirement, number} Minuten an einen Freund und erhalte {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Quest angenommen!** Streame {gameTitle} f\xfcr {streamingDurationRequirement, number} Minuten an einen Freund und erhalte {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Verfolge deinen Fortschritt",
         QUESTS_TITLE: "{questName} Quest",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hoppla!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24146,10 +24136,8 @@
           "Quests sind auf Mobilger\xe4ten (noch) nicht verf\xfcgbar\xa0…",
         QUESTS_MOBILE_EMBED_BODY:
           "Von deiner Desktop-Discord-App oder deinem Browser kannst du zu \nBenutzereinstellungen > Geschenkinventar gehen und die Quest dort annehmen.",
-        QUESTS_GET_THIS_GAME: "Hol dir dieses Spiel",
+        QUESTS_GET_THIS_GAME: "Spiel holen",
         QUESTS_DISCLOSURE_LABEL: "Warum wird mir das angezeigt?",
-        QUESTS_SHARE_LINK: "Link zum Teilen kopieren",
-        QUESTS_HIDE_THIS: "Ausblenden",
         QUESTS_FIND_QUEST:
           "Du kannst dies in den Benutzereinstellungen > Geschenkinventar wiederfinden",
         QUESTS_CLAIM_BY: "Bis {expirationDate} beanspruchen.",
@@ -24192,6 +24180,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! und !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! und {count, plural, one {1\xa0weiterer} other {{count}\xa0weitere}}",
+        STOREFRONT: "Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "App-Abonnements",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Kaufe Abonnements von {appName}",
         STOREFRONT_APP_PRODUCTS: "App-Produkte",
@@ -24245,6 +24234,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Vor {count}\xa0Sek.",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Erstes Mal",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe4t",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "vor {count} {count, plural, =1 {Tag} other {Tagen}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "Vor {count} Woche(n)",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "Vor {count} Tag(en)",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "Vor {count} Stunde(n)",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "Vor {count} Minute(n)",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Vor {count}\xa0Sek.",
       };
     },
   },

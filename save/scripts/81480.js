@@ -14358,6 +14358,7 @@
           "メッセージを削除しますか？",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "既に何かが書いてあるようです。すべて削除してコマンドを使用しますか？",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "ヘルプ記事を見る",
         MJ_CHATBAR_BODY:
           "「$[command](commandHook)」と入力するとMidjourneyを利用できます。アドバイス：サーバーを作成すれば友達と内々で遊べます。",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18763,8 +18764,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ちょうど今",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count}{count, plural, =1 {分} other {分}}前",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count}{count, plural, =1 {時間} other {時間}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count}{count, plural, =1 {日} other {日}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23430,10 +23429,7 @@
           "**{serverName}**はお住まいの地域では利用できません。",
         QUESTS: "クエスト",
         QUEST: "{questName}クエスト",
-        QUESTS_AVAILABLE_THROUGH: "利用可能日：{date}",
-        QUESTS_SHOW_CODE: "コードを表示",
-        QUESTS_CLAIM_REWARD: "報酬を獲得",
-        QUESTS_CLAIM_YOUR_REWARD: "報酬を入手",
+        QUESTS_SEE_CODE: "コードを表示",
         QUESTS_ACCEPT: "クエストを承認",
         QUESTS_COMPLETE_TOOLTIP: "「獲得」を押して報酬コードをゲット！",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23447,37 +23443,25 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "あれっ！認証メールを送信できませんでした。",
         QUEST_REWARD: "{reward}をゲット",
-        QUESTS_REWARD_CODE_HEADER: "あなたの報酬コード",
         QUESTS_REWARD_CODE_CONGRATS: "おめでとう！",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "お好みのプラットフォームは何ですか？",
         QUESTS_REWARD_CODE_ERROR:
           "おっと、エラーが発生したようです。しばらく待ってから再度お試しください",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "プラットフォームを選ぶ",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
-          "プラットフォームを選択",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "あなたの{rewardName}にプラットフォーム固有のコードを生成します。**「コードを取得」を押した後は、選択の変更はできません。**",
         QUESTS_REWARD_CODE_DONE: "完了",
-        QUESTS_REWARD_CODE_GET_CODE: "コードを取得",
         QUESTS_REWARD_CODE_TRY_AGAIN: "やり直す",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "これを入手",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "入手済",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "クロスプラットフォーム",
         QUESTS_REWARD_CODE_PLATFORM_PC: "パソコン",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "スポンサード",
         QUESTS_PROMOTED: "昇格済み",
-        QUESTS_LEARN_MORE_V2: "もっと詳しく",
-        QUESTS_LEARN_MORE_STACKED: "詳しくは\n\nこちら",
-        QUESTS_LEARN_MORE_LINK: "[詳細はこちら]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "詳細",
         QUESTS_ACCEPT_QUEST: "クエストを承認",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "{gameTitle}をフレンド1人に{streamingDurationRequirement, number}分間配信して、{questReward}を獲得しましょう。",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**クエストが承認されました！**{gameTitle}をフレンド1人に{streamingDurationRequirement, number}分間配信して、{questReward}を獲得しましょう。",
-        QUESTS_TRACK_YOUR_PROGRESS: "進捗状況を追跡",
         QUESTS_TITLE: "{questName}クエスト",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "おっと！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23486,10 +23470,8 @@
           "今のところは...クエストはモバイルでは利用できません。",
         QUESTS_MOBILE_EMBED_BODY:
           "デスクトップ版のDiscordアプリまたはブラウザから\n「ユーザー設定」>「ギフトインベントリ」に移動して、クエストに参加できます。",
-        QUESTS_GET_THIS_GAME: "このゲームをゲット",
+        QUESTS_GET_THIS_GAME: "ゲームを入手",
         QUESTS_DISCLOSURE_LABEL: "これが表示される理由",
-        QUESTS_SHARE_LINK: "共有リンクをコピー",
-        QUESTS_HIDE_THIS: "これを非表示",
         QUESTS_FIND_QUEST:
           "これは「ユーザー設定」→「ギフトインベントリ」から再度表示できます。",
         QUESTS_CLAIM_BY: "{expirationDate}までに受け取ろう。",
@@ -23531,8 +23513,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!と!!{second}!!と!!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!!、!!{third}!!と他{count, plural, one {1人} other {{count}人}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "ストア",
         STOREFRONT_APP_SUBSCRIPTIONS: "アプリのサブスクリプション",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName}からサブスクリプションを購入",
@@ -23588,6 +23569,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}秒前",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "初めて",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "アクティビティ",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count}{count, plural, =1 {日} other {日}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}週間前",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} 日前",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} 時間前",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} 分前",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}秒前",
       };
     },
   },

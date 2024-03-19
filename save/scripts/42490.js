@@ -14720,6 +14720,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Elimini mesajul?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Se pare că ai scris deja ceva. Vrei să elimini ce ai scris și să folosești o comandă?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Vezi articolul de ajutor",
         MJ_CHATBAR_BODY:
           "Tastează „$[command](commandHook)” pentru a folosi Midjourney. Sfat: Creează un server ca să-l testezi doar cu prietenii.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19233,8 +19235,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "chiar \xeen momentul ăsta",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "acum {count} {count, plural, =1 {minut} other {minute}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "acum {count} {count, plural, =1 {oră} other {ore}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "cu {count} {count, plural, =1 {zi} other {zile}} \xeen urmă",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24033,10 +24033,7 @@
           "Serverul **{serverName}** este indisponibil \xeen regiunea ta.",
         QUESTS: "Misiuni",
         QUEST: "Misiune {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Disponibil p\xe2nă pe {date}",
-        QUESTS_SHOW_CODE: "Arată codul",
-        QUESTS_CLAIM_REWARD: "Revendică recompensa",
-        QUESTS_CLAIM_YOUR_REWARD: "Revendică recompensa",
+        QUESTS_SEE_CODE: "Vezi codul",
         QUESTS_ACCEPT: "Acceptă misiunea",
         QUESTS_COMPLETE_TOOLTIP:
           "Revendică pentru a-ți primi codul de recompensă!",
@@ -24053,21 +24050,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Hopa! N-am reușit să-ți trimitem e-mailul de verificare.",
         QUEST_REWARD: "Primește {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Codul tău de recompensă",
         QUESTS_REWARD_CODE_CONGRATS: "Felicitări!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Care este platforma ta favorită?",
         QUESTS_REWARD_CODE_ERROR:
           "Hopa! Ceva nu a mers bine. \xcencearcă din nou mai t\xe2rziu",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Alege o platformă",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Selectează platforma",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Vom genera un cod specific unei anumite platforme pentru {rewardName}. **Nu-ți vei putea schimba selecția după ce apeși Obține codul.**",
         QUESTS_REWARD_CODE_DONE: "Gata",
-        QUESTS_REWARD_CODE_GET_CODE: "Obține codul",
         QUESTS_REWARD_CODE_TRY_AGAIN: "\xcencearcă din nou",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Revendică asta",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Ai revendicat asta",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multi-platformă",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24075,14 +24064,11 @@
         QUESTS_SPONSORED: "Sponsorizare",
         QUESTS_PROMOTED: "Promovate",
         QUESTS_LEARN_MORE_V2: "Află mai multe",
-        QUESTS_LEARN_MORE_STACKED: "Află\n\nmai multe",
-        QUESTS_LEARN_MORE_LINK: "[Află mai multe]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Acceptă misiunea",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Fă streaming la {gameTitle} pentru un prieten timp de {streamingDurationRequirement, number} minute și c\xe2știgă {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Misiune acceptată!** Fă streaming la {gameTitle} pentru un prieten timp de {streamingDurationRequirement, number} minute și c\xe2știgă {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Urmărește-ți progresul",
         QUESTS_TITLE: "Misiune {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hopa!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24091,10 +24077,8 @@
           "Misiunile nu sunt \xeencă disponibile pe mobil.",
         QUESTS_MOBILE_EMBED_BODY:
           "Intră \xeen aplicația Discord pentru desktop sau \xeen browser, mergi la \nSetări utilizator > Inventar cadouri și acceptă misiunea de acolo.",
-        QUESTS_GET_THIS_GAME: "Ia-ți acest joc",
+        QUESTS_GET_THIS_GAME: "Obține joc",
         QUESTS_DISCLOSURE_LABEL: "De ce văd asta?",
-        QUESTS_SHARE_LINK: "Copiază link-ul de partajare",
-        QUESTS_HIDE_THIS: "Ascunde asta",
         QUESTS_FIND_QUEST:
           "O poți găsi din nou \xeen Setări utilizator > Inventar cadouri",
         QUESTS_CLAIM_BY: "Revendică p\xe2nă pe {expirationDate}.",
@@ -24137,8 +24121,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! și !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! și {count, plural, one {\xeencă 1} other {\xeencă {count}}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "App Store {appName}",
+        STOREFRONT: "Magazin",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonamente aplicații",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Cumpără abonamente de la {appName}",
         STOREFRONT_APP_PRODUCTS: "Produse aplicații",
@@ -24193,6 +24176,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "acum {count}s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima dată",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activitate",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "cu {count} {count, plural, =1 {zi} other {zile}} \xeen urmă",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "acum {count} săpt",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "acum {count} z",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "acum {count} o",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "acum {count} m",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "acum {count}s",
       };
     },
   },

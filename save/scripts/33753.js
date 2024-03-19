@@ -14158,6 +14158,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "ล้างข้อความหรือไม่",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "ดูเหมือนว่าคุณได้เขียนอะไรบางอย่างแล้ว คุณต้องการล้างข้อมูลและใช้คำสั่งหรือไม่",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "อ่านบทความช่วยเหลือ",
         MJ_CHATBAR_BODY:
           "พิมพ์ “$[command](commandHook)” เพื่อใช้ Midjourney เคล็ดลับ: สร้างเซิร์ฟเวอร์เพื่อลองใช้แค่ในหมู่เพื่อน",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18485,8 +18487,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ตอนนี้เลย",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {นาที} other {นาที}} ที่ผ่านมา",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {ชั่วโมง} other {ชั่วโมง}} ที่ผ่านมา",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {วัน} other {วัน}} ที่ผ่านมา",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23120,10 +23120,7 @@
           "**{serverName}** ไม่พร้อมใช้งานในภูมิภาคของคุณ",
         QUESTS: "ภารกิจ",
         QUEST: "ภารกิจ {questName}",
-        QUESTS_AVAILABLE_THROUGH: "ทำได้จนถึง {date}",
-        QUESTS_SHOW_CODE: "แสดงรหัส",
-        QUESTS_CLAIM_REWARD: "รับรางวัล",
-        QUESTS_CLAIM_YOUR_REWARD: "รับรางวัล",
+        QUESTS_SEE_CODE: "ดูโค้ด",
         QUESTS_ACCEPT: "ยอมรับภารกิจ",
         QUESTS_COMPLETE_TOOLTIP: "กดรับเพื่อรับรหัสรางวัลของคุณ!",
         QUESTS_ACCEPT_TOOLTIP: "ยอมรับภารกิจและทำให้สำเร็จเพื่อปลดล็อกรางวัล",
@@ -23135,21 +23132,12 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "โอ๊ะโอ! เราไม่สามารถส่งอีเมลยืนยันให้กับคุณได้",
         QUEST_REWARD: "รับ {reward}",
-        QUESTS_REWARD_CODE_HEADER: "รหัสรางวัลของคุณ",
         QUESTS_REWARD_CODE_CONGRATS: "ยินดีด้วย!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER: "คุณชอบแพลตฟอร์มอะไร",
         QUESTS_REWARD_CODE_ERROR:
           "โอ๊ะโอ! มีบางอย่างผิดปกติ โปรดลองอีกครั้งในภายหลัง",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "เลือกแพลตฟอร์ม",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "เลือกแพลตฟอร์ม",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          'เราจะสร้างรหัสเฉพาะแพลตฟอร์มให้ {rewardName} ของคุณ **คุณจะไม่สามารถเปลี่ยนคำตอบที่เลือกได้หลังกด "รับรหัส"**',
         QUESTS_REWARD_CODE_DONE: "เสร็จสิ้น",
-        QUESTS_REWARD_CODE_GET_CODE: "รับรหัส",
         QUESTS_REWARD_CODE_TRY_AGAIN: "ลองอีกครั้ง",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "รับรายการนี้",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "คุณรับรายการนี้ไปแล้ว",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "ข้ามแพลตฟอร์ม",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
@@ -23157,14 +23145,11 @@
         QUESTS_SPONSORED: "ได้รับการสนับสนุน",
         QUESTS_PROMOTED: "โปรโมตแล้ว",
         QUESTS_LEARN_MORE_V2: "เรียนรู้เพิ่มเติม",
-        QUESTS_LEARN_MORE_STACKED: "เรียนรู้\n\nเพิ่มเติม",
-        QUESTS_LEARN_MORE_LINK: "[เรียนรู้เพิ่มเติม]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "ยอมรับภารกิจ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "สตรีม {gameTitle} ให้เพื่อนดูเป็นเวลา {streamingDurationRequirement, number} นาทีแล้วรับ {questReward} ไปเลย",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**ตอบรับภารกิจแล้ว!** สตรีม {gameTitle} ให้เพื่อนดูเป็นเวลา {streamingDurationRequirement, number} นาทีแล้วรับ {questReward} ไปเลย",
-        QUESTS_TRACK_YOUR_PROGRESS: "ติดตามความคืบหน้า",
         QUESTS_TITLE: "ภารกิจ {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "อ๊ะ!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23173,10 +23158,8 @@
           "ภารกิจยังไม่พร้อมใช้งานบนมือถือ... ในตอนนี้",
         QUESTS_MOBILE_EMBED_BODY:
           "จากแอป Discord บนเดสก์ท็อปหรือเบราว์เซอร์ของคุณ ให้ไปที่\nการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ และรับภารกิจได้จากที่นั่น",
-        QUESTS_GET_THIS_GAME: "ดาวน์โหลดเกมนี้",
+        QUESTS_GET_THIS_GAME: "รับเกม",
         QUESTS_DISCLOSURE_LABEL: "ทำไมฉันถึงเห็นสิ่งนี้",
-        QUESTS_SHARE_LINK: "คัดลอกลิงก์แชร์",
-        QUESTS_HIDE_THIS: "ซ่อนสิ่งนี้",
         QUESTS_FIND_QUEST:
           "คุณสามารถดูสิ่งนี้ได้อีกครั้งในการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ",
         QUESTS_CLAIM_BY: "รับภายใน {expirationDate}",
@@ -23218,8 +23201,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! และ !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! และอีก {count, plural, one {1 คน} other {{count} คน}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "ร้านค้า",
         STOREFRONT_APP_SUBSCRIPTIONS: "การสมัครสมาชิกแอป",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "ซื้อการสมัครสมาชิกจาก {appName}",
         STOREFRONT_APP_PRODUCTS: "ผลิตภัณฑ์แอป",
@@ -23274,6 +23256,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} วินาทีที่แล้ว",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "ครั้งแรก",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "กิจกรรม",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {วัน} other {วัน}} ที่ผ่านมา",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} สัปดาห์ที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} วันที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} ชั่วโมงที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} นาทีที่แล้ว",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
+          "{count} วินาทีที่แล้ว",
       };
     },
   },

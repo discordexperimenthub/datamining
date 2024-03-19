@@ -14666,6 +14666,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Cancellare il messaggio?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Sembra che tu abbia gi\xe0 scritto qualcosa. Vuoi cancellarlo e usare un comando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Consulta l'articolo di supporto",
         MJ_CHATBAR_BODY:
           'Digita "$[comando](commandHook)" per usare Midjourney. Suggerimento: crea un server per provarlo solo insieme ai tuoi amici.',
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19173,8 +19175,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "poco fa",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {minuto} other {minuti}} fa",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {ora} other {ore}} fa",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {giorno} other {giorni}} fa",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23880,10 +23880,7 @@
           "**{serverName}** non \xe8 disponibile nella tua regione.",
         QUESTS: "Missioni",
         QUEST: "Missione {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Disponibile fino al giorno {date}",
-        QUESTS_SHOW_CODE: "Mostra codice",
-        QUESTS_CLAIM_REWARD: "Riscatta ricompensa",
-        QUESTS_CLAIM_YOUR_REWARD: "Riscatta la ricompensa",
+        QUESTS_SEE_CODE: "Mostra codice",
         QUESTS_ACCEPT: "Accetta missione",
         QUESTS_COMPLETE_TOOLTIP:
           'Clicca su "riscatta" per ottenere il tuo codice ricompensa!',
@@ -23902,8 +23899,7 @@
         QUEST_REWARD: "Vinci {reward}",
         QUESTS_REWARD_CODE_CONGRATS: "Complimenti!",
         QUESTS_REWARD_CODE_DONE: "Fatto",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Riscatta",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Hai riscattato",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Riprova",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multipiattaforma",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23911,14 +23907,11 @@
         QUESTS_SPONSORED: "Sponsorizzato",
         QUESTS_PROMOTED: "Promosso",
         QUESTS_LEARN_MORE_V2: "Scopri di pi\xf9",
-        QUESTS_LEARN_MORE_STACKED: "Scopri\n\ndi pi\xf9",
-        QUESTS_LEARN_MORE_LINK: "[Scopri di pi\xf9]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accetta missione",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Trasmetti in streaming {gameTitle} a un amico per {streamingDurationRequirement, number} minuti e vinci {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Missione accettata!** Trasmetti in streaming {gameTitle} a un amico per {streamingDurationRequirement, number} minuti e vinci {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Monitora i tuoi progressi",
         QUESTS_TITLE: "Missione {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23927,10 +23920,8 @@
           "Le missioni non sono ancora disponibili su dispositivi mobili... per ora.",
         QUESTS_MOBILE_EMBED_BODY:
           "Dalla tua app Discord sul desktop o dal browser, puoi andare a \nImpostazioni utente > Inventario regali e accettare la missione l\xec.",
-        QUESTS_GET_THIS_GAME: "Acquista questo gioco",
+        QUESTS_GET_THIS_GAME: "Ottieni il gioco",
         QUESTS_DISCLOSURE_LABEL: "Perch\xe9 vedo questo messaggio?",
-        QUESTS_SHARE_LINK: "Copia link di condivisione",
-        QUESTS_HIDE_THIS: "Nascondi",
         QUESTS_FIND_QUEST:
           "Puoi ritrovarlo nelle Impostazioni utente > Inventario regali",
         QUESTS_CLAIM_BY: "Riscatta entro la data {expirationDate}.",
@@ -23973,6 +23964,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! e!!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! e {count, plural, one {1 altro} other {{count} altri}}",
+        STOREFRONT: "Negozio",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abbonamenti all'app",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Acquista abbonamenti da {appName}",
         STOREFRONT_APP_PRODUCTS: "Prodotti di app",
@@ -24026,6 +24018,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sec. fa",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima volta",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Attivit\xe0",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {giorno} other {giorni}} fa",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} sett. fa",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}g fa",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}h fa",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m fa",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} sec. fa",
       };
     },
   },

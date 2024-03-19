@@ -14624,6 +14624,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Стереть сообщение?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Похоже, вы уже ввели какой-то текст. Хотите удалить его и использовать команду?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "Посмотреть статью",
         MJ_CHATBAR_BODY:
           "Введите $[command](commandHook), чтобы использовать Midjourney. Совет: если хотите попробовать нейросеть только с\xa0друзьями, создайте отдельный сервер.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19145,8 +19146,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "только что",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {мин.} other {мин.}} назад",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {ч.} other {ч.}} назад",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {день} few {дня} other {дней}} назад",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23933,10 +23932,7 @@
           "**{serverName}** недоступен в вашем регионе.",
         QUESTS: "Задания",
         QUEST: "Задание \xab{questName}\xbb",
-        QUESTS_AVAILABLE_THROUGH: "Доступно до {date}",
-        QUESTS_SHOW_CODE: "Показать код",
-        QUESTS_CLAIM_REWARD: "Получить награду",
-        QUESTS_CLAIM_YOUR_REWARD: "Получите свою награду",
+        QUESTS_SEE_CODE: "Просмотреть код",
         QUESTS_ACCEPT: "Принять задание",
         QUESTS_COMPLETE_TOOLTIP:
           "Нажмите \xabПолучить\xbb, чтобы узнать код награды!",
@@ -23952,21 +23948,12 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ой-ой! У нас не получилось отправить вам письмо с подтверждением.",
         QUEST_REWARD: "Выиграйте: {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Код вашей награды",
         QUESTS_REWARD_CODE_CONGRATS: "Поздравляем!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "На какой платформе вы хотите получить награду?",
         QUESTS_REWARD_CODE_ERROR: "Ой, что-то пошло не так. Попробуйте позже.",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Выберите платформу",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Выберите платформу",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Мы создадим код награды {rewardName} для выбранной вами платформы. **Вы не сможете изменить свой выбор после нажатия на кнопку \xabПолучить код\xbb.**",
         QUESTS_REWARD_CODE_DONE: "Готово",
-        QUESTS_REWARD_CODE_GET_CODE: "Получить код",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Попробовать снова",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Получить награду",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Вы получили эту награду",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Для разных платформ",
         QUESTS_REWARD_CODE_PLATFORM_PC: "Windows",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23974,14 +23961,11 @@
         QUESTS_SPONSORED: "Спонсируется",
         QUESTS_PROMOTED: "Продвигается",
         QUESTS_LEARN_MORE_V2: "Подробнее",
-        QUESTS_LEARN_MORE_STACKED: "Узнать\n\nбольше",
-        QUESTS_LEARN_MORE_LINK: "[Подробнее]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Принять задание",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Проведите стрим игры {gameTitle} для друга в течение {streamingDurationRequirement, number}\xa0мин. и получите награду: {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Задание принято!** Проведите стрим игры {gameTitle} для друга в течение {streamingDurationRequirement, number}\xa0мин. и получите награду: {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Отслеживайте свой прогресс",
         QUESTS_TITLE: "Задание \xab{questName}\xbb",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Упс!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23990,10 +23974,8 @@
           "Задания не доступны на мобильных устройствах... пока.",
         QUESTS_MOBILE_EMBED_BODY:
           "Вы можете перейти в \nНастройки пользователя > Склад подарков из компьютерного приложения Discord или в браузере и принять задание там.",
-        QUESTS_GET_THIS_GAME: "Приобрести эту игру",
+        QUESTS_GET_THIS_GAME: "Получить игру",
         QUESTS_DISCLOSURE_LABEL: "Почему я вижу это задание?",
-        QUESTS_SHARE_LINK: "Поделиться ссылкой",
-        QUESTS_HIDE_THIS: "Скрыть",
         QUESTS_FIND_QUEST:
           "Вы можете найти его снова, открыв \xabНастройки пользователя\xbb > \xabСклад подарков\xbb",
         QUESTS_CLAIM_BY: "Заберите до {expirationDate}.",
@@ -24035,8 +24017,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! и !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! и ещё {count, plural, one {1\xa0человек} few {{count}\xa0человека} other {{count}\xa0человек}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} (App Store)",
+        STOREFRONT: "Магазин",
         STOREFRONT_APP_SUBSCRIPTIONS: "Подписки в приложении",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Покупайте подписки в {appName}",
         STOREFRONT_APP_PRODUCTS: "Продукты в приложении",
@@ -24092,6 +24073,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} сек. назад",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Впервые",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Активность",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {день} few {дня} other {дней}} назад",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0нед. назад",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}\xa0д. назад",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}\xa0ч. назад",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "{count}\xa0мин. назад",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} сек. назад",
       };
     },
   },

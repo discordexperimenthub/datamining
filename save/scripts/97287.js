@@ -14844,6 +14844,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Vymazat zpr\xe1vu?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Vypad\xe1 to, že už m\xe1š něco naps\xe1no. Chceš napsan\xfd text smazat a\xa0použ\xedt př\xedkaz?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Zobrazit čl\xe1nek n\xe1povědy",
         MJ_CHATBAR_BODY:
           "Jestli chceš zač\xedt použ\xedvat Midjourney, napiš „$[command](commandHook)“. Tip: Vytvoř server a\xa0vyzkoušej tuto funkci jenom s\xa0př\xe1teli.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19423,8 +19425,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "pr\xe1vě teď",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "před {count} {count, plural, =1 {minutou} other {minutami}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "před {count} {count, plural, =1 {hodinou} other {hodinami}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {den} few {dny} other {dnů}} nazpět",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24291,10 +24291,7 @@
           "**{serverName}** ve tv\xe9 oblasti nen\xed dostupn\xfd.",
         QUESTS: "\xdakoly",
         QUEST: "\xdakol {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Dostupn\xfd do {date}",
-        QUESTS_SHOW_CODE: "Zobrazit k\xf3d",
-        QUESTS_CLAIM_REWARD: "Vyzvednout odměnu",
-        QUESTS_CLAIM_YOUR_REWARD: "Vyzvedni si svou odměnu",
+        QUESTS_SEE_CODE: "Zobrazit k\xf3d",
         QUESTS_ACCEPT: "Přijmout \xfakol",
         QUESTS_COMPLETE_TOOLTIP:
           "Klepnut\xedm na Vyzvednout z\xedskej k\xf3d sv\xe9 odměny!",
@@ -24310,37 +24307,25 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ale ne! Ověřovac\xed e-mail se n\xe1m nepodařilo odeslat.",
         QUEST_REWARD: "Vyhraj {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Tvůj k\xf3d odměny",
         QUESTS_REWARD_CODE_CONGRATS: "Blahopřejeme!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Jak\xe9 platformě d\xe1v\xe1š přednost?",
         QUESTS_REWARD_CODE_ERROR:
           "Ajaj! Něco se pokazilo. Zkus to pros\xedm znovu později.",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Vyber si platformu",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Vybrat platformu",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Vygenerujeme ti k\xf3d odměny speci\xe1lně pro platformu {rewardName}. **Po použit\xed tlač\xedtka „Z\xedskat k\xf3d“ už nebudeš moct v\xfdběr platformy změnit.**",
         QUESTS_REWARD_CODE_DONE: "Hotovo",
-        QUESTS_REWARD_CODE_GET_CODE: "Z\xedskat k\xf3d",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Zkusit znovu",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Vyzvednout",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "\xdaspěšně vyzvednuto",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "V\xedce platforem",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponzorov\xe1no",
         QUESTS_PROMOTED: "Doporučujeme",
-        QUESTS_LEARN_MORE_V2: "Zjistit v\xedc",
-        QUESTS_LEARN_MORE_STACKED: "Dalš\xed\n\ninformace",
-        QUESTS_LEARN_MORE_LINK: "[Dalš\xed informace]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Zjistit v\xedce",
         QUESTS_ACCEPT_QUEST: "Přijmout \xfakol",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamuj hru {gameTitle} př\xedteli po dobu {streamingDurationRequirement, number} minut a\xa0z\xedskej {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**\xdakol přijat!** Streamuj hru {gameTitle} př\xedteli po dobu {streamingDurationRequirement, number} minut a\xa0z\xedskej {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Sleduj svůj pokrok",
         QUESTS_TITLE: "\xdakol {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Jejda!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24349,10 +24334,8 @@
           "\xdakoly nejsou na mobilu dostupn\xe9… zat\xedm.",
         QUESTS_MOBILE_EMBED_BODY:
           "Moc n\xe1s to mrz\xed! Ve sv\xe9m prohl\xedžeči nebo poč\xedtačov\xe9 aplikaci Discord však můžeš přej\xedt do sekce \nUživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků a\xa0přijmout \xfakol tam.",
-        QUESTS_GET_THIS_GAME: "Z\xedskej tuhle hru",
+        QUESTS_GET_THIS_GAME: "Z\xedskat hru",
         QUESTS_DISCLOSURE_LABEL: "Proč tohle vid\xedm?",
-        QUESTS_SHARE_LINK: "Kop\xedrovat odkaz pro sd\xedlen\xed",
-        QUESTS_HIDE_THIS: "Chci to skr\xfdt",
         QUESTS_FIND_QUEST:
           "Později to najdeš v\xa0č\xe1sti Uživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků",
         QUESTS_CLAIM_BY: "Vyzvedni do {expirationDate}.",
@@ -24396,8 +24379,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! a\xa0!!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! a\xa0{count, plural, one {1\xa0dalš\xed} few {{count}\xa0dalš\xed} other {{count}\xa0dalš\xedch}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Obchod",
         STOREFRONT_APP_SUBSCRIPTIONS: "Předplatn\xe1 aplikace",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koupit předplatn\xe9 od {appName}",
         STOREFRONT_APP_PRODUCTS: "Produkty – aplikace",
@@ -24455,6 +24437,14 @@
           "{count}\xa0s\xa0nazpět",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Poprv\xe9",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivita",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {den} few {dny} other {dnů}} nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0t nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} d nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} h nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min nazpět",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
+          "{count}\xa0s\xa0nazpět",
       };
     },
   },

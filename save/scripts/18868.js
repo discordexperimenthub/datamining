@@ -14696,6 +14696,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Wyczyścić wiadomość?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Wygląda na to, że już coś napisano. Czy chcesz wyczyścić tekst i użyć polecenia?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Wyświetl artykuł pomocy",
         MJ_CHATBAR_BODY:
           "Wprowadź „$[command](commandHook)”, aby użyć Midjourney. Wskaz\xf3wka: utw\xf3rz serwer, aby wypr\xf3bować funkcję ze znajomymi.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19215,8 +19217,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "przed chwilą",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} few {min} other {min}} temu",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {godz.} few {godz.} other {godz.}} temu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dzień} other {dni}} temu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24003,10 +24003,7 @@
           "Serwer **{serverName}** nie jest dostępny w Twoim regionie.",
         QUESTS: "Zadania",
         QUEST: "Zadanie {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Dostępne do {date}",
-        QUESTS_SHOW_CODE: "Pokaż kod",
-        QUESTS_CLAIM_REWARD: "Odbierz nagrodę",
-        QUESTS_CLAIM_YOUR_REWARD: "Odbierz nagrodę",
+        QUESTS_SEE_CODE: "Zobacz kod",
         QUESTS_ACCEPT: "Zaakceptuj zadanie",
         QUESTS_COMPLETE_TOOLTIP: "Wybierz Odbierz, aby odebrać kod nagrody!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24021,21 +24018,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ups! Przy wysyłaniu Ci e-maila weryfikacyjnego coś nam nie wyszło.",
         QUEST_REWARD: "Wygraj nagrodę: {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Tw\xf3j kod nagrody",
         QUESTS_REWARD_CODE_CONGRATS: "Gratulacje!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Jaka jest Twoja preferowana platforma?",
         QUESTS_REWARD_CODE_ERROR:
           "O nie! Coś poszło nie tak. Spr\xf3buj ponownie p\xf3źniej.",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Wybierz platformę",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Wybierz platformę",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Wygenerujemy kod Twojej nagrody ({rewardName}) dla danej platformy. **Po wybraniu opcji Uzyskaj kod nie będzie można zmienić wyboru.**",
         QUESTS_REWARD_CODE_DONE: "Gotowe",
-        QUESTS_REWARD_CODE_GET_CODE: "Uzyskaj kod",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Spr\xf3buj ponownie",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Odbierz to",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Odebrano to",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Międzyplatformowa",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24043,14 +24032,11 @@
         QUESTS_SPONSORED: "Sponsorowane",
         QUESTS_PROMOTED: "Promowane",
         QUESTS_LEARN_MORE_V2: "Dowiedz się więcej",
-        QUESTS_LEARN_MORE_STACKED: "Dowiedz się\n\nwięcej",
-        QUESTS_LEARN_MORE_LINK: "[Dowiedz się więcej]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Zaakceptuj zadanie",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamuj {gameTitle} dla znajomego przez {streamingDurationRequirement, number} min i wygraj nagrodę: {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Przyjęto zadanie!** Streamuj {gameTitle} dla znajomego przez {streamingDurationRequirement, number} min i wygraj nagrodę: {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Śledź swoje postępy",
         QUESTS_TITLE: "Zadanie {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ojojoj!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24059,10 +24045,8 @@
           "Zadania nie są dostępne na urządzeniach mobilnych… jeszcze.",
         QUESTS_MOBILE_EMBED_BODY:
           "Aby przyjąć zadanie, z desktopowej lub przeglądarkowej aplikacji Discorda przejdź do sekcji \nUstawienia użytkownika > Ekwipunek prezent\xf3w.",
-        QUESTS_GET_THIS_GAME: "Zdobądź tę grę",
+        QUESTS_GET_THIS_GAME: "Pobierz grę",
         QUESTS_DISCLOSURE_LABEL: "Dlaczego wyświetlany jest ten komunikat?",
-        QUESTS_SHARE_LINK: "Kopiuj link udostępniania",
-        QUESTS_HIDE_THIS: "Ukryj",
         QUESTS_FIND_QUEST:
           "W razie potrzeby znajdziesz go w sekcji Ustawienia użytkownika > Ekwipunek Prezent\xf3w.",
         QUESTS_CLAIM_BY: "Odbierz do {expirationDate}.",
@@ -24105,8 +24089,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! i !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! i {count, plural, one {1 inna osoba} few {{count} inne osoby} other {{count} innych os\xf3b}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Sklep",
         STOREFRONT_APP_SUBSCRIPTIONS: "Subskrypcje aplikacji",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Kup subskrypcje aplikacji {appName}",
@@ -24163,6 +24146,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} s temu",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pierwszy raz",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktywność",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {dzień} other {dni}} temu",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tyg. temu",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} d. temu",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} godz. temu",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min temu",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s temu",
       };
     },
   },

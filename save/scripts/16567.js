@@ -14550,6 +14550,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Izbrisati poruke?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Čini se da si već napisao/la nešto. Želiš li to izbrisati i poslužiti se naredbom?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Pogledaj članak pomoći",
         MJ_CHATBAR_BODY:
           "Utipkaj „$[naredba](commandHook)“ da koristiš Midjourney. Savjet: napravi server koji ćeš isprobati samo s prijateljima.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18982,8 +18984,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "upravo sad",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "prije {count} {count, plural, =1 {minute} few {minute} other {minuta}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "prije {count} {count, plural, =1 {sat} few {sata} other {sati}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "prije {count} {count, plural, =1 {dan} other {dana}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23726,10 +23726,7 @@
           "**{serverName}** – nije dostupno u tvojoj regiji.",
         QUESTS: "Questovi",
         QUEST: "Zadatak {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Dostupno do {date}",
-        QUESTS_SHOW_CODE: "Prikaži k\xf4d",
-        QUESTS_CLAIM_REWARD: "Zatraži nagradu",
-        QUESTS_CLAIM_YOUR_REWARD: "Uzmi svoju nagradu",
+        QUESTS_SEE_CODE: "Vidi k\xf4d",
         QUESTS_ACCEPT: "Prihvati zadatak",
         QUESTS_COMPLETE_TOOLTIP:
           "Klikni na Zatraži da bi dobio k\xf4d za nagradu!",
@@ -23745,21 +23742,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "A joj! Nismo ti uspjeli poslati e-mail za potvrdu.",
         QUEST_REWARD: "Osvoji {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Tvoj k\xf4d nagrade",
         QUESTS_REWARD_CODE_CONGRATS: "Čestitamo!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Koju platformu preferiraš?",
         QUESTS_REWARD_CODE_ERROR:
           "Oh, ne! Nešto je pošlo krivo, molimo te da pokušaš ponovo, ali malo kasnije",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Odaberi platformu",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Odaberi platformu",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Generirat ćemo k\xf4d koji je usko vezan uz platformu i koji vrijedi za tvoju nagradu {rewardName}. **Nećeš moći promijeniti svoj odabir nakon pritiska na gumb Dohvati k\xf4d.**",
         QUESTS_REWARD_CODE_DONE: "Gotovo",
-        QUESTS_REWARD_CODE_GET_CODE: "Dohvati k\xf4d",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Pokušaj ponovno",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Uzmi ovo",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Uzeo/la si ovo",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Dostupno na različitim platformama",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -23767,15 +23756,12 @@
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponzorirano",
         QUESTS_PROMOTED: "Unaprijeđeno",
-        QUESTS_LEARN_MORE_V2: "Doznaj više",
-        QUESTS_LEARN_MORE_STACKED: "Doznaj\n\nviše",
-        QUESTS_LEARN_MORE_LINK: "[Doznaj više]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Saznaj više",
         QUESTS_ACCEPT_QUEST: "Prihvati zadatak",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streamaj {gameTitle} prijatelju {streamingDurationRequirement, number} minuta i osvoji {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Zadatak je prihvaćen!** Streamaj {gameTitle} prijatelju {streamingDurationRequirement, number} minuta i osvoji {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Prati svoj napredak",
         QUESTS_TITLE: "Zadatak {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23784,10 +23770,8 @@
           "Zadaci nisu dostupni na mobilnim uređajiima... za sada.",
         QUESTS_MOBILE_EMBED_BODY:
           "U aplikaciji Discord na desktopu ili u pregledniku uđi u izbornik \nKorisničke postavke > Popis darova i tamo prihvati quest.",
-        QUESTS_GET_THIS_GAME: "Nabavi ovu igru",
+        QUESTS_GET_THIS_GAME: "Nabavi igru",
         QUESTS_DISCLOSURE_LABEL: "Zašto se ovo meni prikazuje?",
-        QUESTS_SHARE_LINK: "Kopiraj poveznicu za dijeljenje",
-        QUESTS_HIDE_THIS: "Sakrij ovo",
         QUESTS_FIND_QUEST:
           "Želiš li to ponovno vidjeti, idi u izbornik Korisničke postavke > Popis darova",
         QUESTS_CLAIM_BY: "Uzmi do {expirationDate}.",
@@ -23830,8 +23814,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! i !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! i {count, plural, one {još 1} few {{count} druga} other {{count} drugih}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Trgovina",
         STOREFRONT_APP_SUBSCRIPTIONS: "Pretplate aplikacije",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Kupi pretplate u {appName}",
         STOREFRONT_APP_PRODUCTS: "Proizvodi aplikacije",
@@ -23886,6 +23869,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prije {count} s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prvi put",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivnost",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "prije {count} {count, plural, =1 {dan} other {dana}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "Prije {count} tj",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "prije {count} d",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "prije {count} h",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "prije {count} m",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Prije {count} s",
       };
     },
   },

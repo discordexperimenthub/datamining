@@ -14865,6 +14865,8 @@
           "Tyhjennet\xe4\xe4nk\xf6 viesti?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Olet n\xe4ht\xe4v\xe4sti kirjoittanut jo jotain. Haluatko tyhjent\xe4\xe4 sen ja k\xe4ytt\xe4\xe4 komentoa?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "N\xe4yt\xe4 ohjeartikkeli",
         MJ_CHATBAR_BODY:
           "K\xe4yt\xe4 Midjourneyta kirjoittamalla ”$[komento](commandHook)”. Vinkki: Luo palvelin, jossa voit kokeilla sit\xe4 kavereiden kesken.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19459,8 +19461,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "juuri nyt",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {min}} sitten",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {h} other {h}} sitten",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {p\xe4iv\xe4} other {p\xe4iv\xe4\xe4}} sitten",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24302,10 +24302,7 @@
           "**{serverName}** ei ole k\xe4ytett\xe4viss\xe4 omalla alueellasi.",
         QUESTS: "Teht\xe4v\xe4t",
         QUEST: "Teht\xe4v\xe4: {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Tarjolla {date} asti",
-        QUESTS_SHOW_CODE: "N\xe4yt\xe4 koodi",
-        QUESTS_CLAIM_REWARD: "Lunasta palkinto",
-        QUESTS_CLAIM_YOUR_REWARD: "Lunasta palkintosi",
+        QUESTS_SEE_CODE: "Katso koodi",
         QUESTS_ACCEPT: "Hyv\xe4ksy teht\xe4v\xe4",
         QUESTS_COMPLETE_TOOLTIP: "Hanki palkintokoodisi valitsemalla lunastus!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -24320,24 +24317,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Vahvistuss\xe4hk\xf6postin l\xe4hett\xe4minen ep\xe4onnistui.",
         QUEST_REWARD: "Voita {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Palkintokoodisi",
         QUESTS_REWARD_CODE_CONGRATS: "Onnittelut!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Mik\xe4 on ensisijainen j\xe4rjestelm\xe4si?",
         QUESTS_REWARD_CODE_ERROR:
           "Jokin meni pieleen. Yrit\xe4 uudelleen my\xf6hemmin",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Valitse j\xe4rjestelm\xe4",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
-          "Valitse j\xe4rjestelm\xe4",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Luomme palkintosi {rewardName} lunastamista varten j\xe4rjestelm\xe4kohtaisen koodin. **Et voi muuttaa en\xe4\xe4 valintaasi, kun olet valinnut Hanki koodi.**",
         QUESTS_REWARD_CODE_DONE: "Valmis",
-        QUESTS_REWARD_CODE_GET_CODE: "Hanki koodi",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Yrit\xe4 uudelleen",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER:
-          "Lunasta t\xe4m\xe4",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Olet lunastanut t\xe4m\xe4n",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Eri j\xe4rjestelmien v\xe4linen",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -24345,15 +24331,12 @@
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsoroitu",
         QUESTS_PROMOTED: "Tuettu",
-        QUESTS_LEARN_MORE_V2: "Lis\xe4tietoja",
-        QUESTS_LEARN_MORE_STACKED: "Lue\n\nlis\xe4\xe4",
-        QUESTS_LEARN_MORE_LINK: "[Lis\xe4tietoja]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Lue lis\xe4\xe4",
         QUESTS_ACCEPT_QUEST: "Hyv\xe4ksy teht\xe4v\xe4",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Striimaa peli\xe4 {gameTitle} kaverille {streamingDurationRequirement, number} minuutin ajan, niin {questReward} on sinun.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Teht\xe4v\xe4 hyv\xe4ksytty!** Striimaa peli\xe4 {gameTitle} kaverille {streamingDurationRequirement, number} minuutin ajan, niin {questReward} on sinun.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Seuraa edistymist\xe4si",
         QUESTS_TITLE: "Teht\xe4v\xe4: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hups",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24362,10 +24345,8 @@
           "Teht\xe4v\xe4t eiv\xe4t ole k\xe4ytett\xe4viss\xe4 mobiililaitteilla – viel\xe4.",
         QUESTS_MOBILE_EMBED_BODY:
           "Voit ottaa teht\xe4vi\xe4 vastaan Discordin ty\xf6p\xf6yt\xe4- tai selainsovelluksessa \nvalitsemalla K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo.",
-        QUESTS_GET_THIS_GAME: "Hanki t\xe4m\xe4 peli",
+        QUESTS_GET_THIS_GAME: "Hanki peli",
         QUESTS_DISCLOSURE_LABEL: "Miksi n\xe4en t\xe4m\xe4n?",
-        QUESTS_SHARE_LINK: "Kopioi jakolinkki",
-        QUESTS_HIDE_THIS: "Piilota t\xe4m\xe4",
         QUESTS_FIND_QUEST:
           "Voit palata t\xe4nne uudelleen valitsemalla K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo",
         QUESTS_CLAIM_BY: "Lunasta {expirationDate} menness\xe4.",
@@ -24409,8 +24390,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! ja !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ja {count, plural, one {1 muu} other {{count} muuta}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} – sovelluskauppa",
+        STOREFRONT: "Kauppa",
         STOREFRONT_APP_SUBSCRIPTIONS: "Sovellustilaukset",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Osta tilauksia sovelluksessa {appName}",
@@ -24470,6 +24450,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}\xa0s sitten",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Ensimm\xe4inen kerta",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Toiminta",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {p\xe4iv\xe4} other {p\xe4iv\xe4\xe4}} sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0vko sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT:
+          "{count} p\xe4iv\xe4\xe4 sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} t sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} min sitten",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}\xa0s sitten",
       };
     },
   },

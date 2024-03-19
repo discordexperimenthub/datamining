@@ -14913,6 +14913,8 @@
           "\xbfDeseas borrar el mensaje?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Parece que ya has escrito algo. \xbfQuieres borrarlo y usar un comando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Ver art\xedculo de ayuda",
         MJ_CHATBAR_BODY:
           'Escribe "$[comando](commandHook)" para usar Midjourney. Consejo: Crea un servidor para probarlo solo con tus amigos.',
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19487,8 +19489,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "justo ahora",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "Hace {count}\xa0{count, plural, =1 {minuto} other {minutos}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "Hace {count}\xa0{count, plural, =1 {hora} other {horas}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "hace {count} {count, plural, =1 {d\xeda} other {d\xedas}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24335,10 +24335,7 @@
           "**{serverName}** no se encuentra disponible en tu regi\xf3n.",
         QUESTS: "Misiones",
         QUEST: "Misi\xf3n {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Disponible hasta el {date}",
-        QUESTS_SHOW_CODE: "Mostrar c\xf3digo",
-        QUESTS_CLAIM_REWARD: "Reclamar recompensa",
-        QUESTS_CLAIM_YOUR_REWARD: "Reclama tu premio",
+        QUESTS_SEE_CODE: "Ver c\xf3digo",
         QUESTS_ACCEPT: "Aceptar misi\xf3n",
         QUESTS_COMPLETE_TOOLTIP:
           "\xa1Haz clic en reclamar para obtener tu c\xf3digo de recompensa!",
@@ -24355,22 +24352,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "\xa1Ups! No logramos enviarte un correo de verificaci\xf3n.",
         QUEST_REWARD: "Gana {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Tu c\xf3digo de recompensa",
         QUESTS_REWARD_CODE_CONGRATS: "\xa1Felicidades!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "\xbfCu\xe1l es tu plataforma preferida?",
         QUESTS_REWARD_CODE_ERROR:
           "\xa1Ups! Algo sali\xf3 mal, int\xe9ntalo de nuevo m\xe1s tarde",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Elige una plataforma",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
-          "Selecciona una plataforma",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Generaremos un c\xf3digo espec\xedfico de plataforma para tu {rewardName}. **No podr\xe1s cambiar tu elecci\xf3n una vez que presiones Obtener c\xf3digo.**",
         QUESTS_REWARD_CODE_DONE: "Listo",
-        QUESTS_REWARD_CODE_GET_CODE: "Obt\xe9n c\xf3digo",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Int\xe9ntalo de nuevo",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Reclama esto",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Reclamaste esto",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Intenta de nuevo",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multiplataforma",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24379,15 +24367,11 @@
         QUESTS_SPONSORED: "Patrocinado",
         QUESTS_PROMOTED: "Promovido",
         QUESTS_LEARN_MORE_V2: "M\xe1s informaci\xf3n",
-        QUESTS_LEARN_MORE_STACKED: "M\xe1s\n\ninformaci\xf3n",
-        QUESTS_LEARN_MORE_LINK:
-          "[M\xe1s informaci\xf3n]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Aceptar misi\xf3n",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Transmite {gameTitle} a un amigo durante {streamingDurationRequirement, number} minutos y gana {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**\xa1Misi\xf3n aceptada!** Transmite {gameTitle} a un amigo durante {streamingDurationRequirement, number} minutos y gana {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Controla tu progreso",
         QUESTS_TITLE: "Misi\xf3n {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "\xa1Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24396,10 +24380,8 @@
           "Las misiones a\xfan no est\xe1n disponibles en dispositivos m\xf3viles...",
         QUESTS_MOBILE_EMBED_BODY:
           "Desde la aplicaci\xf3n de escritorio de Discord o desde el navegador, puedes ir a \nAjustes de usuario > Inventario de regalos, y aceptar la misi\xf3n all\xed.",
-        QUESTS_GET_THIS_GAME: "Obt\xe9n este juego",
+        QUESTS_GET_THIS_GAME: "Obtener juego",
         QUESTS_DISCLOSURE_LABEL: "\xbfPor qu\xe9 estoy viendo esto?",
-        QUESTS_SHARE_LINK: "Copiar enlace para compartir",
-        QUESTS_HIDE_THIS: "Ocultar esto",
         QUESTS_FIND_QUEST:
           "Puedes encontrar esto de nuevo en ajustes de usuario > inventario de regalos",
         QUESTS_CLAIM_BY: "Reclama antes del {expirationDate}.",
@@ -24443,8 +24425,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! y !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! y {count, plural, one {1 m\xe1s} other {{count} m\xe1s}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} (App Store)",
+        STOREFRONT: "Tienda",
         STOREFRONT_APP_SUBSCRIPTIONS: "Suscripciones de la aplicaci\xf3n",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Compra suscripciones de {appName}",
         STOREFRONT_APP_PRODUCTS: "Productos de la aplicaci\xf3n",
@@ -24500,6 +24481,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "hace {count}\xa0s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Por primera vez",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Actividad",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "hace {count} {count, plural, =1 {d\xeda} other {d\xedas}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT:
+          "hace {count}\xa0semanas",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "hace {count}\xa0d",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "hace {count}\xa0h",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "hace {count}\xa0min",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "hace {count}\xa0s",
       };
     },
   },

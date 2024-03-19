@@ -14539,6 +14539,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Pašalinti pranešimą?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Panašu, kad jau kažką parašei. Ar nori tekstą pašalinti ir naudoti komandą?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Žiūrėti pagalbos straipsnį",
         MJ_CHATBAR_BODY:
           "Kad galėtum naudoti Midjourney, įvesk „$[komandą](commandHook)“. Patarimas: sukurk serverį, kad išbandytum šią funkciją tik su draugais.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19035,8 +19037,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "ką tik",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "Prieš {count} {count, plural, =1 {min.} other {min.}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "Prieš {count} {count, plural, =1 {val.} other {val.}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "Prieš {count} {count, plural, =1 {d.} other {d.}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23800,10 +23800,7 @@
           "**{serverName}** nepasiekiamas tavo regione.",
         QUESTS: "Misijos",
         QUEST: "{questName} misija",
-        QUESTS_AVAILABLE_THROUGH: "Pasiekiama iki {date}",
-        QUESTS_SHOW_CODE: "Rodyti kodą",
-        QUESTS_CLAIM_REWARD: "Atsiimti apdovanojimą",
-        QUESTS_CLAIM_YOUR_REWARD: "Panaudok savo apdovanojimą",
+        QUESTS_SEE_CODE: "Žiūrėti kodą",
         QUESTS_ACCEPT: "Priimti misiją",
         QUESTS_COMPLETE_TOOLTIP:
           "Paspausk atsiėmimo mygtuką kad gautum apdovanojimo kodą!",
@@ -23818,21 +23815,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "O ne! Mums nepavyko tau išsiųsti patvirtinimo el. laiško.",
         QUEST_REWARD: "Laimėjimas: {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Tavo apdovanojimo kodas",
         QUESTS_REWARD_CODE_CONGRATS: "Sveikiname!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Kokia tavo pageidaujama platforma?",
         QUESTS_REWARD_CODE_ERROR:
           "O ne! Kažkas nepavyko, pabandyk dar kartą vėliau",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Pasirink platformą",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Rinkis platformą",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Sukursime specialiai tai platformai skirtą {rewardName} kodą. **Kai paspausi Gauti kodą, platformos pasirinkimo nebegalėsi pakeisti.**",
         QUESTS_REWARD_CODE_DONE: "Atlikta",
-        QUESTS_REWARD_CODE_GET_CODE: "Gauti kodą",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Bandyti dar kartą",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Panaudok šį",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Panaudojai šį",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Bandyk Dar Kartą",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Veikia įvairiose platformose",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -23841,14 +23830,11 @@
         QUESTS_SPONSORED: "Remiama",
         QUESTS_PROMOTED: "Paaukštintas",
         QUESTS_LEARN_MORE_V2: "Sužinoti daugiau",
-        QUESTS_LEARN_MORE_STACKED: "Sužinoti\n\ndaugiau",
-        QUESTS_LEARN_MORE_LINK: "[Sužinoti daugiau]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Priimti misiją",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Transliuok {gameTitle} draugui {streamingDurationRequirement, number} min. ir laimėk {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Misija patvirtinta!** Transliuok {gameTitle} draugui {streamingDurationRequirement, number} min. ir laimėk {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Sek savo progresą",
         QUESTS_TITLE: "{questName} misija",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ups!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23857,10 +23843,8 @@
           "Mobiliosiose programėlėse misijos neprieinamos... kol kas.",
         QUESTS_MOBILE_EMBED_BODY:
           "Norėdamas (-a) priimti misiją, gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: \nNaudotojo nustatymai > Dovanų atsargos.",
-        QUESTS_GET_THIS_GAME: "Gauti šį žaidimą",
+        QUESTS_GET_THIS_GAME: "Gauti Žaidimą",
         QUESTS_DISCLOSURE_LABEL: "Kodėl man tai rodoma?",
-        QUESTS_SHARE_LINK: "Kopijuoti bendrinimo nuorodą",
-        QUESTS_HIDE_THIS: "Paslėpti",
         QUESTS_FIND_QUEST:
           "Visa tai rasi čia: Naudotojo nustatymai > Dovanų atsargos",
         QUESTS_CLAIM_BY: "Panaudok iki {expirationDate}.",
@@ -23903,8 +23887,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! ir !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ir {count, plural, one {{count} kitas} few {{count} kiti} other {{count} kitų}}",
-        STOREFRONT: "Programėlių Parduotuvė",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Parduotuvė",
         STOREFRONT_APP_SUBSCRIPTIONS: "Programėlės prenumeratos",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Įsigyk prenumeratas iš {appName}",
         STOREFRONT_APP_PRODUCTS: "Programėlės produktai",
@@ -23959,6 +23942,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prieš {count} sek.",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pirmą kartą",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Veikla",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "Prieš {count} {count, plural, =1 {d.} other {d.}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "prieš {count} sav.",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "prieš {count} d.",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "prieš {count} val.",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "prieš {count} min.",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Prieš {count} sek.",
       };
     },
   },

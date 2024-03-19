@@ -14698,6 +14698,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Radera meddelande?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Det verkar som om du redan har skrivit n\xe5got. Vill du radera det och anv\xe4nda ett kommando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Visa hj\xe4lpartikel",
         MJ_CHATBAR_BODY:
           'Skriv "$[command](commandHook)" f\xf6r att anv\xe4nda Midjourney. Tips: Skapa en server f\xf6r att endast testa den med v\xe4nner.',
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19197,8 +19199,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "just nu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {minut} other {minuter}} sedan",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {timme} other {timmar}} sedan",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dag} other {dagar}} sedan",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24000,10 +24000,7 @@
           "**{serverName}** \xe4r inte tillg\xe4nglig i din region.",
         QUESTS: "Uppdrag",
         QUEST: "Uppdraget {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Tillg\xe4nglig till {date}",
-        QUESTS_SHOW_CODE: "Visa kod",
-        QUESTS_CLAIM_REWARD: "H\xe4mta bel\xf6ning",
-        QUESTS_CLAIM_YOUR_REWARD: "H\xe4mta din bel\xf6ning",
+        QUESTS_SEE_CODE: "Se kod",
         QUESTS_ACCEPT: "Anta uppdrag",
         QUESTS_COMPLETE_TOOLTIP:
           "Tryck p\xe5 h\xe4mta f\xf6r att f\xe5 din presentkod!",
@@ -24020,23 +24017,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "\xc5h nej! Det gick inte att skicka ett verifieringsmejl till dig.",
         QUEST_REWARD: "Vinn {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Din bel\xf6ningskod",
         QUESTS_REWARD_CODE_CONGRATS: "Grattis!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Vilken plattform f\xf6redrar du?",
         QUESTS_REWARD_CODE_ERROR:
           "Aj d\xe5, n\xe5got gick snett. F\xf6rs\xf6k igen senare",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "V\xe4lj en plattform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "V\xe4lj plattform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Vi kommer att skapa en plattformsspecifik kod f\xf6r din {rewardName}. **Du kan inte \xe4ndra ditt val n\xe4r du v\xe4l har tryckt p\xe5 H\xe4mta kod.**",
         QUESTS_REWARD_CODE_DONE: "Klar",
-        QUESTS_REWARD_CODE_GET_CODE: "H\xe4mta kod",
         QUESTS_REWARD_CODE_TRY_AGAIN: "F\xf6rs\xf6k igen",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER:
-          "H\xe4mta det h\xe4r",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Du h\xe4mtade det h\xe4r",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Plattformsoberoende",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24044,14 +24031,11 @@
         QUESTS_SPONSORED: "Sponsrad",
         QUESTS_PROMOTED: "Uppflyttad",
         QUESTS_LEARN_MORE_V2: "L\xe4s mer",
-        QUESTS_LEARN_MORE_STACKED: "L\xe4s\n\nmer",
-        QUESTS_LEARN_MORE_LINK: "[L\xe4s mer]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Anta uppdrag",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streama {gameTitle} f\xf6r en v\xe4n i {streamingDurationRequirement, number} minuter och vinn {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Uppdrag antaget!** Streama {gameTitle} f\xf6r en v\xe4n i {streamingDurationRequirement, number} minuter och vinn {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Sp\xe5ra dina framsteg",
         QUESTS_TITLE: "Uppdraget {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hoppsan!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24060,10 +24044,8 @@
           "Uppdrag finns inte p\xe5 mobil ... \xe4nnu.",
         QUESTS_MOBILE_EMBED_BODY:
           "Du kan g\xe5 fr\xe5n din Discord-app p\xe5 datorn eller webbl\xe4saren till \nAnv\xe4ndarinst\xe4llningar > G\xe5volager och acceptera uppdraget d\xe4r.",
-        QUESTS_GET_THIS_GAME: "Skaffa det h\xe4r spelet",
+        QUESTS_GET_THIS_GAME: "Skaffa spel",
         QUESTS_DISCLOSURE_LABEL: "Varf\xf6r ser jag det h\xe4r?",
-        QUESTS_SHARE_LINK: "Kopiera delningsl\xe4nk",
-        QUESTS_HIDE_THIS: "D\xf6lj det h\xe4r",
         QUESTS_FIND_QUEST:
           "Du kan hitta det h\xe4r igen i Anv\xe4ndarinst\xe4llningar > G\xe5volager",
         QUESTS_CLAIM_BY: "H\xe4mta innan {expirationDate}.",
@@ -24106,8 +24088,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! och !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! och {count, plural, one {en till} other {{count} andra}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Butik",
         STOREFRONT_APP_SUBSCRIPTIONS: "App-prenumerationer",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "K\xf6p prenumerationer fr\xe5n {appName}",
@@ -24164,6 +24145,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}er sedan",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf6rsta g\xe5ngen",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {dag} other {dagar}} sedan",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} veckor sedan",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} dagar sedan",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} timmar sedan",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "{count} minuter sedan",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}er sedan",
       };
     },
   },

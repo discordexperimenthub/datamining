@@ -14603,6 +14603,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Mesaj temizlensin mi?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "G\xf6r\xfcn\xfcşe g\xf6re \xe7oktan bir şeyler yazmışsın. Mesajı temizlemek ve bir komut kullanmak ister misin?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Yardım Yazısını G\xf6r\xfcnt\xfcle",
         MJ_CHATBAR_BODY:
           'Midjourney kullanmak i\xe7in "$[command](commandHook)" yaz. İpucu: Yalnızca arkadaşlarınla denemek i\xe7in bir sunucu oluştur.',
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19083,8 +19085,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "az \xf6nce",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {dakika} other {dakika}} \xf6nce",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {saat} other {saat}} \xf6nce",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {g\xfcn} other {g\xfcn}} \xf6nce",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23859,10 +23859,7 @@
           "**{serverName}** sunucusuna bulunduğun b\xf6lgeden ulaşılamıyor.",
         QUESTS: "G\xf6revler",
         QUEST: "{questName} G\xf6revi",
-        QUESTS_AVAILABLE_THROUGH: "{date} tarihine kadar ge\xe7erli.",
-        QUESTS_SHOW_CODE: "Kodu g\xf6ster",
-        QUESTS_CLAIM_REWARD: "\xd6d\xfcl\xfc al",
-        QUESTS_CLAIM_YOUR_REWARD: "\xd6d\xfcl\xfcn\xfc al",
+        QUESTS_SEE_CODE: "Kodu G\xf6r",
         QUESTS_ACCEPT: "G\xf6revi Kabul Et",
         QUESTS_COMPLETE_TOOLTIP:
           "\xd6d\xfcl kodunu almak i\xe7in butona tıkla!",
@@ -23879,37 +23876,25 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Hayda! Sana bir doğrulama e-postası g\xf6ndermeyi başaramadık.",
         QUEST_REWARD: "{reward} kazan.",
-        QUESTS_REWARD_CODE_HEADER: "\xd6d\xfcl kodun",
         QUESTS_REWARD_CODE_CONGRATS: "Tebrikler!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Hangi platformu tercih ediyorsun?",
         QUESTS_REWARD_CODE_ERROR:
           "T\xfch! Bir şeyler ters gitti, l\xfctfen daha sonra tekrar dene",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Bir platform se\xe7",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Platform se\xe7",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "{rewardName} i\xe7in platforma \xf6zel sana ait bir kod oluşturacağız. **Kodu al tuşuna bastıktan sonra yaptığın se\xe7imi değiştiremeyeceksin.**",
         QUESTS_REWARD_CODE_DONE: "Bitti",
-        QUESTS_REWARD_CODE_GET_CODE: "Kodu al",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Tekrar dene",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Bunu al",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Bunu aldın",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Tekrar Dene",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "\xc7apraz platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsorlu",
         QUESTS_PROMOTED: "Tanıtımda",
-        QUESTS_LEARN_MORE_V2: "Daha fazla bilgi edin",
-        QUESTS_LEARN_MORE_STACKED: "Daha fazla\n\nbilgi edin",
-        QUESTS_LEARN_MORE_LINK:
-          "[Daha Fazla Bilgi Edin]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Daha Fazla Bilgi Edin",
         QUESTS_ACCEPT_QUEST: "G\xf6revi Kabul Et",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Bir arkadaşına {streamingDurationRequirement, number} dakika boyunca {gameTitle} yayını yap ve {questReward} kazan.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**G\xf6rev kabul edildi!** Bir arkadaşına {streamingDurationRequirement, number} dakika boyunca {gameTitle} yayını yap ve {questReward} kazan.",
-        QUESTS_TRACK_YOUR_PROGRESS: "İlerlemeni takip et",
         QUESTS_TITLE: "{questName} G\xf6revi",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "T\xfch!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23917,10 +23902,8 @@
         QUESTS_MOBILE_EMBED_TITLE: "G\xf6revler hen\xfcz mobilde mevcut değil.",
         QUESTS_MOBILE_EMBED_BODY:
           "G\xf6revini kabul etmek i\xe7in masa\xfcst\xfc Discord uygulamasından veya tarayıcı \xfczerinden \nKullanıcı Ayarları > Hediye Envanteri b\xf6l\xfcm\xfcne gidebilirsin.",
-        QUESTS_GET_THIS_GAME: "Bu oyunu al",
+        QUESTS_GET_THIS_GAME: "Oyunu al",
         QUESTS_DISCLOSURE_LABEL: "Bunu neden g\xf6r\xfcyorum?",
-        QUESTS_SHARE_LINK: "Paylaşım bağlantısını kopyala",
-        QUESTS_HIDE_THIS: "Bunu gizle",
         QUESTS_FIND_QUEST:
           "Bunu yeniden Kullanıcı Ayarları > Hediye Envanteri \xfczerinden bulabilirsin",
         QUESTS_CLAIM_BY: "{expirationDate} tarihinden \xf6nce al.",
@@ -23963,8 +23946,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! ve !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ve {count, plural, one {1 kişi daha} other {{count} kişi daha}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Mağaza",
         STOREFRONT_APP_SUBSCRIPTIONS: "Uygulama Abonelikleri",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName} \xfczerinden abonelik satın al",
@@ -24022,6 +24004,14 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sn \xf6nce",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "İlk defa",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Etkinlik",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {g\xfcn} other {g\xfcn}} \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} hafta \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} g\xfcn \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} saat \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "{count} dakika \xf6nce",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} sn \xf6nce",
       };
     },
   },

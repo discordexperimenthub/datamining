@@ -14465,6 +14465,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "मैसेज क्लियर करें?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "लगता है आपने पहले ही कुछ लिख रखा है. क्या आप उसे मिटाकर कोई कमांड देना चाहते हैं?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "हेल्प आर्टिकल को देखें",
         MJ_CHATBAR_BODY:
           "मिडजर्नी का इस्तेमाल करने के लिए “$[कमांड](commandHook)” टाइप करें. टिप: इसे सिर्फ़ फ़्रेंड्स के साथ आज़माने के लिए एक सर्वर क्रिएट करें.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18916,8 +18918,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "अभी-अभी",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {मिनट} other {मिनट}} पहले",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {घंटा} other {घंटे}} पहले",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {दिन} other {दिन}} पहले",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23627,10 +23627,7 @@
           "आपके क्षेत्र में **{serverName}** उपलब्ध नहीं है.",
         QUESTS: "क्वेस्ट",
         QUEST: "{questName} क्वेस्ट",
-        QUESTS_AVAILABLE_THROUGH: "{date} से उपलब्ध है",
-        QUESTS_SHOW_CODE: "कोड दिखाएं",
-        QUESTS_CLAIM_REWARD: "रिवॉर्ड क्लेम करें",
-        QUESTS_CLAIM_YOUR_REWARD: "अपना रिवॉर्ड क्लेम करें",
+        QUESTS_SEE_CODE: "कोड देखें",
         QUESTS_ACCEPT: "क्वेस्ट एक्सेप्ट करें",
         QUESTS_COMPLETE_TOOLTIP:
           "अपना रिवॉर्ड कोड पाने के लिए क्लेम पर क्लिक करें!",
@@ -23646,23 +23643,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "ओफ्फ़ोह! हम आपको एक वेरीफ़िकेशन ईमेल नहीं भेज सके.",
         QUEST_REWARD: "{reward} जीतें",
-        QUESTS_REWARD_CODE_HEADER: "आपका रिवॉर्ड कोड",
         QUESTS_REWARD_CODE_CONGRATS: "बधाई हो!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "आपका पसंदीदा प्लैटफ़ॉर्म कौन-सा है?",
         QUESTS_REWARD_CODE_ERROR:
           "ओह हो, कुछ गड़बड़ हुई है. कृपया कुछ देर बाद फिर से कोशिश करें",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "प्लैटफ़ॉर्म चुनें",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
-          "प्लैटफ़ॉर्म सलेक्ट करें",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "हम आपके {rewardName} के लिए एक खास प्लैटफ़ॉर्म कोड जेनरेट करेंगे. **कोड पाएं पर क्लिक करने के बाद आप अपने सलेक्शन को बदल नहीं सकेंगे.**",
         QUESTS_REWARD_CODE_DONE: "हो गया",
-        QUESTS_REWARD_CODE_GET_CODE: "कोड पाएं",
         QUESTS_REWARD_CODE_TRY_AGAIN: "फिर से कोशिश करें",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "इसे क्लेम करें",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "आपने इसे क्लेम कर लिया",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "क्रॉस-प्लैटफ़ॉर्म",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23670,14 +23657,11 @@
         QUESTS_SPONSORED: "स्पॉन्सर किया गया",
         QUESTS_PROMOTED: "प्रमोट किया गया",
         QUESTS_LEARN_MORE_V2: "ज़्यादा जानें",
-        QUESTS_LEARN_MORE_STACKED: "और ज़्यादा\n\nजानें",
-        QUESTS_LEARN_MORE_LINK: "[और ज़्यादा जानें]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "क्वेस्ट एक्सेप्ट करें",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "फ़्रेंड को {streamingDurationRequirement, number} मिनट के लिए {gameTitle} स्ट्रीम करें और {questReward} जीतें.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**क्वेस्ट स्वीकार किया गया!** फ़्रेंड को {streamingDurationRequirement, number} मिनट के लिए {gameTitle} स्ट्रीम करें और {questReward} जीतें.",
-        QUESTS_TRACK_YOUR_PROGRESS: "अपनी प्रोग्रेस ट्रैक करें",
         QUESTS_TITLE: "{questName} क्वेस्ट",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "ओह!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23685,10 +23669,8 @@
         QUESTS_MOBILE_EMBED_TITLE: "फ़िलहाल क्वेस्ट मोबाइल पर उपलब्ध नहीं हैं.",
         QUESTS_MOBILE_EMBED_BODY:
           "अपने डेस्कटॉप Discord ऐप या ब्राउज़र से \nयूज़र सेटिंग > गिफ़्ट इन्वेंटरी पर जाकर आप क्वेस्ट स्वीकार कर सकते हैं.",
-        QUESTS_GET_THIS_GAME: "ये गेम खरीदें",
+        QUESTS_GET_THIS_GAME: "गेम पाएं",
         QUESTS_DISCLOSURE_LABEL: "मुझे ये क्यों दिख रहा है?",
-        QUESTS_SHARE_LINK: "शेयर लिंक कॉपी करें",
-        QUESTS_HIDE_THIS: "इसे छिपाएं",
         QUESTS_FIND_QUEST:
           "आप इसे यूज़र सेटिंग > गिफ़्ट इन्वेंटरी में फिर से पा सकते हैं",
         QUESTS_CLAIM_BY: "{expirationDate} तक क्लेम करें.",
@@ -23731,8 +23713,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, और !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!!, और {count, plural, one {1 और} other {{count} और}}",
-        STOREFRONT: "ऐप स्टोर",
-        STOREFRONT_TITLE: "{appName} ऐप स्टोर",
+        STOREFRONT: "स्टोर",
         STOREFRONT_APP_SUBSCRIPTIONS: "ऐप के सब्सक्रिप्शन",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName} से सब्सक्रिप्शन खरीदें",
         STOREFRONT_APP_PRODUCTS: "ऐप प्रोडक्ट",
@@ -23787,6 +23768,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}पहले",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "पहली बार",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "एक्टिविटी",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {दिन} other {दिन}} पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}हफ़्ते पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}दिन पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}घंटे पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}मिनट पहले",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}पहले",
       };
     },
   },

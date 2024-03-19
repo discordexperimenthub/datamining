@@ -14542,6 +14542,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Bericht verwijderen?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Het lijkt erop dat je al iets getypt hebt. Wil je dat verwijderen en in plaats daarvan een opdracht gebruiken?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Help-artikel bekijken",
         MJ_CHATBAR_BODY:
           "Typ '$[command](commandHook)' om Midjourney te gebruiken. Tip: Cre\xeber een server om hem alleen met vrienden uit te proberen.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19031,8 +19033,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "zojuist",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min.} other {min.}} geleden",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {uur} other {uur}} geleden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dag} other {dagen}} geleden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23771,10 +23771,7 @@
           "**{serverName}** is niet beschikbaar in jouw regio.",
         QUESTS: "Missies",
         QUEST: "Missie: {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Beschikbaar tot {date}",
-        QUESTS_SHOW_CODE: "Code tonen",
-        QUESTS_CLAIM_REWARD: "Beloning claimen",
-        QUESTS_CLAIM_YOUR_REWARD: "Claim je beloning",
+        QUESTS_SEE_CODE: "Code bekijken",
         QUESTS_ACCEPT: "Missie accepteren",
         QUESTS_COMPLETE_TOOLTIP: "Accepteer om je beloningscode te ontvangen!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23790,22 +23787,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Och, mensen! We hebben je geen verificatiemail gestuurd.",
         QUEST_REWARD: "Win {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Je beloningscode",
         QUESTS_REWARD_CODE_CONGRATS: "Gefeliciteerd!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Aan welk platform geef je de voorkeur?",
         QUESTS_REWARD_CODE_ERROR:
           "O-oh, er is iets fout gegaan, probeer het later nog eens",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Kies een platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Platform selecteren",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "We genereren een platformspecifieke code voor je {rewardName}.**Als je 'Code ontvangen' gebruikt, kun je je keuze niet meer wijzigen.**",
         QUESTS_REWARD_CODE_DONE: "Klaar",
-        QUESTS_REWARD_CODE_GET_CODE: "Code ontvangen",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Probeer het opnieuw",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim dit",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Je hebt dit al geclaimd",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Cross-platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "Pc",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23813,14 +23801,11 @@
         QUESTS_SPONSORED: "Gesponsord",
         QUESTS_PROMOTED: "Gepromoveerd",
         QUESTS_LEARN_MORE_V2: "Meer informatie",
-        QUESTS_LEARN_MORE_STACKED: "Meer\n\ninformatie",
-        QUESTS_LEARN_MORE_LINK: "[Meer informatie]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Missie accepteren",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} {streamingDurationRequirement, number} minuten voor een vriend(in) en win {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Missie aanvaard!** Stream {gameTitle} {streamingDurationRequirement, number} minuten voor een vriend(in) en win {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Hou je voortgang bij",
         QUESTS_TITLE: "Missie: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oeps!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23829,10 +23814,8 @@
           "Missies zijn (nog) niet beschikbaar op mobiele apparaten.",
         QUESTS_MOBILE_EMBED_BODY:
           "Ga in de Discord-app of browser op je pc naar \nGebruikersinstellingen > Cadeau-inventaris en accepteer de missie daar.",
-        QUESTS_GET_THIS_GAME: "Koop deze game",
+        QUESTS_GET_THIS_GAME: "Game halen",
         QUESTS_DISCLOSURE_LABEL: "Waarom zie ik dit?",
-        QUESTS_SHARE_LINK: "Deellink kopi\xebren",
-        QUESTS_HIDE_THIS: "Dit verbergen",
         QUESTS_FIND_QUEST:
           "Je kunt dit terugvinden onder Gebruikersinstellingen > Cadeau-inventaris",
         QUESTS_CLAIM_BY: "Claim dit voor {expirationDate}.",
@@ -23875,8 +23858,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, en !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! en {count, plural, one {1 andere persoon} other {{count} anderen}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "App-abonnementen",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koop abonnementen via {appName}",
         STOREFRONT_APP_PRODUCTS: "App-producten",
@@ -23931,6 +23913,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} s geleden",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Eerste keer",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activiteiten",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {dag} other {dagen}} geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}u geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m geleden",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s geleden",
       };
     },
   },

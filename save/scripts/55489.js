@@ -13359,6 +13359,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "清除消息？",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "您好像写了一些内容。你想清除它并使用命令吗？",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "查看帮助文章",
         MJ_CHATBAR_BODY:
           "输入“$[command](commandHook)”使用 Midjourney。小提示：创建一个服务器，仅与好友一起尝试。",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "尝试加载此 APP 时出错。",
@@ -17432,8 +17433,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "现在",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {分钟} other {分钟}}前",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {小时} other {小时}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {天} other {天}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -21728,10 +21727,7 @@
         GEO_RESTRICTED_MODAL_BODY: "**{serverName}**在您的地区不可用。",
         QUESTS: "任务",
         QUEST: "{questName} 任务",
-        QUESTS_AVAILABLE_THROUGH: "通过 {date} 可用",
-        QUESTS_SHOW_CODE: "显示代码",
-        QUESTS_CLAIM_REWARD: "领取奖励",
-        QUESTS_CLAIM_YOUR_REWARD: "领取您的奖励",
+        QUESTS_SEE_CODE: "查看代码",
         QUESTS_ACCEPT: "接受任务",
         QUESTS_COMPLETE_TOOLTIP: "点击领取以获取您的奖励代码！",
         QUESTS_ACCEPT_TOOLTIP: "接受并完成任务后，可以解锁奖励",
@@ -21742,19 +21738,11 @@
           "我们已经向 [{emailAddress}]({emailAddressLink}) 发送了一封验证电子邮件",
         QUESTS_REWARD_VERIFICATION_ERROR: "哎呀！我们未能向您发送验证邮件。",
         QUEST_REWARD: "赢得 {reward}",
-        QUESTS_REWARD_CODE_HEADER: "您的奖励代码",
         QUESTS_REWARD_CODE_CONGRATS: "恭喜！",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER: "您更偏好哪个平台？",
         QUESTS_REWARD_CODE_ERROR: "糟糕！出现错误，请稍后重试",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "请选择一个平台",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "选择平台",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "我们将为您的 {rewardName} 生成一个平台专属代码。**一旦点击“获取代码”后，您将无法更改您的选择。**",
         QUESTS_REWARD_CODE_DONE: "完成",
-        QUESTS_REWARD_CODE_GET_CODE: "获取代码",
         QUESTS_REWARD_CODE_TRY_AGAIN: "重试",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "领取这个",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "您已领取这个",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "跨平台",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
@@ -21762,14 +21750,11 @@
         QUESTS_SPONSORED: "已赞助",
         QUESTS_PROMOTED: "推广",
         QUESTS_LEARN_MORE_V2: "了解更多",
-        QUESTS_LEARN_MORE_STACKED: "了解\n\n更多",
-        QUESTS_LEARN_MORE_LINK: "[了解更多]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "接受任务",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "向一名好友直播{gameTitle}，持续 {streamingDurationRequirement, number} 分钟，赢取 {questReward}。",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**任务已接受！**向一名好友直播{gameTitle}，持续 {streamingDurationRequirement, number} 分钟，赢取 {questReward}。",
-        QUESTS_TRACK_YOUR_PROGRESS: "追踪您的进度",
         QUESTS_TITLE: "{questName} 任务",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "啊哦！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -21777,10 +21762,8 @@
         QUESTS_MOBILE_EMBED_TITLE: "任务目前在移动端……暂不可用。",
         QUESTS_MOBILE_EMBED_BODY:
           "您可以通过使用桌面版 Discord APP 或浏览器，前往\n用户设置 > 礼物库处接受任务。",
-        QUESTS_GET_THIS_GAME: "购买这款游戏",
+        QUESTS_GET_THIS_GAME: "获取游戏",
         QUESTS_DISCLOSURE_LABEL: "我为什么会看到这个？",
-        QUESTS_SHARE_LINK: "复制分享链接",
-        QUESTS_HIDE_THIS: "隐藏",
         QUESTS_FIND_QUEST: "您可以在用户设置 > 礼物库中再次找到",
         QUESTS_CLAIM_BY: "请在 {expirationDate} 前领取。",
         QUESTS_AVAILABLE_UNTIL: "过期时间：{expirationDate}。",
@@ -21821,8 +21804,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!、 !!{second}!! 和 !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!! 、!!{third}!!和其他 {count, plural, one {1 位用户} other {{count} 位用户}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "商店",
         STOREFRONT_APP_SUBSCRIPTIONS: "APP 订阅",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "从 {appName} 购买订阅",
         STOREFRONT_APP_PRODUCTS: "APP 产品",
@@ -21877,6 +21859,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "首次直播",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "动态",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {天} other {天}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} 周前",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} 天前",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} 小时前",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} 分钟前",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} 秒前",
       };
     },
   },

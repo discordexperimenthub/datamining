@@ -14529,6 +14529,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Ryd besked?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Det ser ud til, at du allerede har skrevet noget. \xd8nsker du at rydde det og bruge en kommando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "L\xe6s hj\xe6lpeartikel",
         MJ_CHATBAR_BODY:
           "Skriv “$[command](commandHook)” for at bruge Midjourney. Tip: Opret en server for at pr\xf8ve den kun med venner.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19000,8 +19002,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "lige nu",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min.} other {min.}} siden",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {t.} other {t.}} siden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dag} other {dage}} siden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23737,10 +23737,7 @@
           "**{serverName}** er ikke tilg\xe6ngelig i dit omr\xe5de.",
         QUESTS: "Missioner",
         QUEST: "{questName} Mission",
-        QUESTS_AVAILABLE_THROUGH: "Tilg\xe6ngelig til og med {date}",
-        QUESTS_SHOW_CODE: "Vis kode",
-        QUESTS_CLAIM_REWARD: "Modtag bel\xf8nning",
-        QUESTS_CLAIM_YOUR_REWARD: "Indl\xf8s din bel\xf8nning",
+        QUESTS_SEE_CODE: "Se kode",
         QUESTS_ACCEPT: "Accept\xe9r mission",
         QUESTS_COMPLETE_TOOLTIP:
           "Tryk p\xe5 modtag for at f\xe5 din bel\xf8nningskode!",
@@ -23757,21 +23754,12 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "\xc5h nej! Vi kunne ikke sende dig en bekr\xe6ftelses-e-mail.",
         QUEST_REWARD: "Vind {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Din bel\xf8nningskode",
         QUESTS_REWARD_CODE_CONGRATS: "Tillykke!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Hvad er din foretrukne platform?",
         QUESTS_REWARD_CODE_ERROR: "Hovsa! Noget gik galt. Pr\xf8v igen senere",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "V\xe6lg en platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "V\xe6lg platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Vi genererer en platformsbestemt kode til din {rewardName}. **Du vil ikke v\xe6re i stand til at \xe6ndre dit valg efter at have trykket p\xe5 Hent kode.**",
         QUESTS_REWARD_CODE_DONE: "F\xe6rdig",
-        QUESTS_REWARD_CODE_GET_CODE: "Hent kode",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Pr\xf8v igen",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Indl\xf8s dette",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Du har indl\xf8st dette",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "P\xe5 tv\xe6rs af platforme",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -23780,14 +23768,11 @@
         QUESTS_SPONSORED: "Sponseret",
         QUESTS_PROMOTED: "Forfremmet",
         QUESTS_LEARN_MORE_V2: "F\xe5 mere at vide",
-        QUESTS_LEARN_MORE_STACKED: "F\xe5 mere\n\nat vide",
-        QUESTS_LEARN_MORE_LINK: "[F\xe5 mere at vide]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accept\xe9r mission",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} til en ven i {streamingDurationRequirement, number} minutter, og vind {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Mission accepteret!** Stream {gameTitle} til en ven i {streamingDurationRequirement, number} minutter, og vind {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "F\xf8lg dine fremskridt",
         QUESTS_TITLE: "{questName} Mission",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hovsa!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23796,10 +23781,8 @@
           "Missioner er ikke tilg\xe6ngelige til mobil ... endnu.",
         QUESTS_MOBILE_EMBED_BODY:
           "Du kan fra din Discord-app eller browser g\xe5 til \nBrugerindstillinger > Gaveinventar og acceptere missionen der.",
-        QUESTS_GET_THIS_GAME: "Hent dette spil",
+        QUESTS_GET_THIS_GAME: "Hent spil",
         QUESTS_DISCLOSURE_LABEL: "Hvorfor f\xe5r jeg vist dette?",
-        QUESTS_SHARE_LINK: "Kopier delings-link",
-        QUESTS_HIDE_THIS: "Skjul",
         QUESTS_FIND_QUEST:
           "Du finder det igen i Brugerindstillinger > Gaveinventar",
         QUESTS_CLAIM_BY: "Indl\xf8s senest {expirationDate}.",
@@ -23842,8 +23825,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, og !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! og {count, plural, one {1 anden} other {{count} andre}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Butik",
         STOREFRONT_APP_SUBSCRIPTIONS: "App-abonnementer",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "K\xf8b abonnementer fra {appName}",
         STOREFRONT_APP_PRODUCTS: "App-produkter",
@@ -23898,6 +23880,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sek. siden",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "for f\xf8rste gang",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {dag} other {dage}} siden",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "for {count}uger siden",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d siden",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}t siden",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m siden",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} sek. siden",
       };
     },
   },

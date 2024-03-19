@@ -14603,6 +14603,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Видалити повідомлення?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Схоже що ви вже ввели якийсь текст. Бажаєте видалити його та використати команду?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Дивитися статтю довідки",
         MJ_CHATBAR_BODY:
           "Введіть \xab$[command](commandHook)\xbb, щоб скористатися Midjourney. Підказка: створіть сервер, щоб випробувати це лише з друзями.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19110,8 +19112,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "щойно",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {хв.} other {хв.}} тому",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {год.} other {год.}} тому",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {день} few {дні} other {днів}} тому",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23892,10 +23892,7 @@
           "Сервер **{serverName}** недоступний у вашому регіоні.",
         QUESTS: "Завдання",
         QUEST: "Квест: {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Доступно до {date}",
-        QUESTS_SHOW_CODE: "Показати код",
-        QUESTS_CLAIM_REWARD: "Отримати винагороду",
-        QUESTS_CLAIM_YOUR_REWARD: "Отримайте нагороду",
+        QUESTS_SEE_CODE: "Переглянути код",
         QUESTS_ACCEPT: "Прийняти запит",
         QUESTS_COMPLETE_TOOLTIP:
           "Натисніть \xabОтримати\xbb, щоб побачити код винагороди!",
@@ -23911,20 +23908,12 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Лишенько! Не вдалося надіслати листа з підтвердженням.",
         QUEST_REWARD: "Отримайте {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Ваш код нагороди",
         QUESTS_REWARD_CODE_CONGRATS: "Вітаємо!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Якій платформі ви надаєте перевагу?",
         QUESTS_REWARD_CODE_ERROR: "Ой! Щось пішло не так. Спробуйте пізніше",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Оберіть платформу",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Виберіть платформу",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Ми згенеруємо код платформи для: {rewardName}. **Ви не зможете змінити вибір після натискання \xabОтримати код\xbb.**",
         QUESTS_REWARD_CODE_DONE: "Готово",
-        QUESTS_REWARD_CODE_GET_CODE: "Отримати код",
         QUESTS_REWARD_CODE_TRY_AGAIN: "Спробувати знову",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Забрати",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Вже отримано",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Для різних платформ",
         QUESTS_REWARD_CODE_PLATFORM_PC: "ПК",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23932,14 +23921,11 @@
         QUESTS_SPONSORED: "Спонсор",
         QUESTS_PROMOTED: "Рекламується",
         QUESTS_LEARN_MORE_V2: "Дізнатися більше",
-        QUESTS_LEARN_MORE_STACKED: "Дізнатися\n\nбільше",
-        QUESTS_LEARN_MORE_LINK: "[Дізнатися більше]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Прийняти запит",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Транслюйте другові гру {gameTitle} упродовж {streamingDurationRequirement, number} хв. й отримайте {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Квест узято!** Транслюйте другові гру {gameTitle} упродовж {streamingDurationRequirement, number} хв. й отримайте {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Відстежуйте свій прогрес",
         QUESTS_TITLE: "Квест: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Упс!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23948,10 +23934,8 @@
           "Завдання недоступні на мобільних пристроях... поки що.",
         QUESTS_MOBILE_EMBED_BODY:
           "Можна перейти в \n\xabКористувацькі налаштування\xbb > \xabПерелік подарунків\xbb у комп'ютерній версії програми Discord або в браузері й прийняти завдання там.",
-        QUESTS_GET_THIS_GAME: "Придбати цю гру",
+        QUESTS_GET_THIS_GAME: "Отримати гру",
         QUESTS_DISCLOSURE_LABEL: "Чому я бачу це повідомлення?",
-        QUESTS_SHARE_LINK: "Скопіювати посилання",
-        QUESTS_HIDE_THIS: "Приховати",
         QUESTS_FIND_QUEST:
           "Ви зможете переглянути це знову, якщо перейдете в Користувацькі налаштування > Склад подарунків",
         QUESTS_CLAIM_BY: "Отримайте до {expirationDate}.",
@@ -23994,8 +23978,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! та !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!!, та ще {count, plural, one {1 учасник} few {{count} учасника} other {{count} учасників}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "App Store {appName}",
+        STOREFRONT: "Магазин",
         STOREFRONT_APP_SUBSCRIPTIONS: "Передплати програми",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Придбайте передплату на {appName}",
         STOREFRONT_APP_PRODUCTS: "Програми",
@@ -24052,6 +24035,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} сек. тому",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Вперше",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Активність",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {день} few {дні} other {днів}} тому",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} тиж. тому",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} дн. тому",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} год. тому",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} хв. тому",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} сек. тому",
       };
     },
   },

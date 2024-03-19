@@ -14184,6 +14184,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Clear message?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Looks like you’ve already written something. Do you want to clear it and use a command?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "View Help Article",
         MJ_CHATBAR_BODY:
           "Type ‘$[command](commandHook)’ to use Midjourney. Tip: Create a server to try it with just friends.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18531,8 +18532,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "just now",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {mins}} ago",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {hr} other {hrs}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {day} other {days}} ago",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23144,10 +23143,7 @@
           "**{serverName}** is not available in your region.",
         QUESTS: "Quests",
         QUEST: "{questName} Quest",
-        QUESTS_AVAILABLE_THROUGH: "Available through {date}",
-        QUESTS_SHOW_CODE: "Show code",
-        QUESTS_CLAIM_REWARD: "Claim reward",
-        QUESTS_CLAIM_YOUR_REWARD: "Claim your reward",
+        QUESTS_SEE_CODE: "See Code",
         QUESTS_ACCEPT: "Accept Quest",
         QUESTS_COMPLETE_TOOLTIP: "Hit claim to get your reward code!",
         QUESTS_ACCEPT_TOOLTIP:
@@ -23162,36 +23158,25 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Uh-oh! We failed to send you a verification email.",
         QUEST_REWARD: "Win {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Your reward code",
         QUESTS_REWARD_CODE_CONGRATS: "Congrats!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "What is your preferred platform?",
         QUESTS_REWARD_CODE_ERROR:
           "Uh-oh! Something went wrong. Please try again later",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Choose a platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Select platform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "We will generate a platform-specific code for your {rewardName}. **You will not be able to change your selection after hitting Get code.**",
         QUESTS_REWARD_CODE_DONE: "Done",
-        QUESTS_REWARD_CODE_GET_CODE: "Get code",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Try again",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Claim this",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "You claimed this",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Try Again",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Cross-platform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsored",
         QUESTS_PROMOTED: "Promoted",
-        QUESTS_LEARN_MORE_V2: "Learn more",
-        QUESTS_LEARN_MORE_STACKED: "Learn\n\nmore",
-        QUESTS_LEARN_MORE_LINK: "[Learn more]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Learn More",
         QUESTS_ACCEPT_QUEST: "Accept Quest",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Quest accepted!** Stream {gameTitle} to a friend for {streamingDurationRequirement, number} minutes and win {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Track your progress",
         QUESTS_TITLE: "{questName} Quest",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Whoops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23199,10 +23184,8 @@
         QUESTS_MOBILE_EMBED_TITLE: "Quests aren’t available on mobile...yet.",
         QUESTS_MOBILE_EMBED_BODY:
           "From your desktop Discord app or browser, you can go to \nUser Settings > Gift Inventory and accept the Quest there.",
-        QUESTS_GET_THIS_GAME: "Get this game",
+        QUESTS_GET_THIS_GAME: "Get Game",
         QUESTS_DISCLOSURE_LABEL: "Why am I seeing this?",
-        QUESTS_SHARE_LINK: "Copy share link",
-        QUESTS_HIDE_THIS: "Hide this",
         QUESTS_FIND_QUEST:
           "You can find this again in User Settings > Gift Inventory",
         QUESTS_CLAIM_BY: "Claim by {expirationDate}.",
@@ -23244,8 +23227,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! and !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! and {count, plural, one {1 other} other {{count} others}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Store",
         STOREFRONT_APP_SUBSCRIPTIONS: "App Subscriptions",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Purchase subscriptions from {appName}",
@@ -23301,6 +23283,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s ago",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {day} other {days}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w ago",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d ago",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}h ago",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m ago",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}s ago",
       };
     },
   },

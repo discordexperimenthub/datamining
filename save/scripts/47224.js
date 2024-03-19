@@ -14597,6 +14597,8 @@
           "Изчистване на съобщението?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Вече има нещо написано. Искаш ли да го изчистиш и да използваш команда?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Виж помощната статия",
         MJ_CHATBAR_BODY:
           "Напиши $[command](commandHook), за да използваш Midjourney. Съвет: създай сървър, за да го изпробваш с приятели.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19121,8 +19123,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "току-що",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "преди {count} {count, plural, =1 {мин} other {мин}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "преди {count} {count, plural, =1 {час} other {часа}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "преди {count} {count, plural, =1 {ден} other {дни}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23940,10 +23940,7 @@
           "**{serverName}** не е наличен в твоя регион.",
         QUESTS: "Куестове",
         QUEST: "Куест {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Наличен до {date}",
-        QUESTS_SHOW_CODE: "Показване на код",
-        QUESTS_CLAIM_REWARD: "Вземи награда",
-        QUESTS_CLAIM_YOUR_REWARD: "Вземи своята награда",
+        QUESTS_SEE_CODE: "Виж кода",
         QUESTS_ACCEPT: "Приемане на куест",
         QUESTS_COMPLETE_TOOLTIP:
           "Натисни бутона за взимане, за да си получиш кода за наградата!",
@@ -23960,21 +23957,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "О, не! Не успяхме да ти изпратим имейл за потвърждение.",
         QUEST_REWARD: "Спечели {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Твоят код за награда",
         QUESTS_REWARD_CODE_CONGRATS: "Честито!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Коя е твоята предпочитана платформа?",
         QUESTS_REWARD_CODE_ERROR:
           "О, не! Нещо се обърка! Моля, опитай отново по-късно",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Избиране на платформа",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Избиране на платформа",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Ще ти генерираме код специално за тази платформа за {rewardName}. **Няма да можеш да промениш избраното от теб, след като натиснеш „Взимане на код“.**",
         QUESTS_REWARD_CODE_DONE: "Готово",
-        QUESTS_REWARD_CODE_GET_CODE: "Взимане на код",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Опитай пак",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Вземи това",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Ти взе това",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Опитай отново",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Между платформи",
         QUESTS_REWARD_CODE_PLATFORM_PC: "Компютър",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -23982,14 +23971,11 @@
         QUESTS_SPONSORED: "Спонсорирано",
         QUESTS_PROMOTED: "Промотирани",
         QUESTS_LEARN_MORE_V2: "Научи повече",
-        QUESTS_LEARN_MORE_STACKED: "Научи\n\nповече",
-        QUESTS_LEARN_MORE_LINK: "[Научи повече]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Приемане на куест",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Стриймвай {gameTitle} към приятел за {streamingDurationRequirement, number} минути и спечели {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Куестът е приет!** Стриймвай {gameTitle} към приятел за {streamingDurationRequirement, number} минути и спечели {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Следи напредъка си",
         QUESTS_TITLE: "Куест {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ами сега!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23998,10 +23984,8 @@
           "Куестовете не са достъпни през мобилни устройства... засега.",
         QUESTS_MOBILE_EMBED_BODY:
           "От приложение на Discord на настолен компютър или браузър можеш да отидеш в \n„Потребителски настройки > Инвентар с подаръци“ и да приемеш куеста там.",
-        QUESTS_GET_THIS_GAME: "Вземи тази игра",
+        QUESTS_GET_THIS_GAME: "Вземане на игра",
         QUESTS_DISCLOSURE_LABEL: "Защо виждам това?",
-        QUESTS_SHARE_LINK: "Копирай връзка за споделяне",
-        QUESTS_HIDE_THIS: "Скриване на това",
         QUESTS_FIND_QUEST:
           "Можеш да намериш това отново в „Потребителски настройки > Инвентар с подаръци“",
         QUESTS_CLAIM_BY: "Вземи до {expirationDate}.",
@@ -24043,8 +24027,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! и !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! и още {count, plural, one {1} other {{count}}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "Магазин",
         STOREFRONT_APP_SUBSCRIPTIONS: "Абонаменти за приложения",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Купи абонаменти от {appName}",
         STOREFRONT_APP_PRODUCTS: "Продукти в приложението",
@@ -24099,6 +24082,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Преди {count}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "За първи път",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Дейност",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "преди {count} {count, plural, =1 {ден} other {дни}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "преди {count} седм.",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "преди {count} ден(ни)",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "преди {count} час(а)",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "преди {count} мин",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Преди {count}",
       };
     },
   },

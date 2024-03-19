@@ -15116,6 +15116,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Effacer le message\xa0?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "On dirait que tu as d\xe9j\xe0 \xe9crit quelque chose. Veux-tu l'effacer pour utiliser une commande\xa0?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Consulter l'article d'assistance",
         MJ_CHATBAR_BODY:
           "Saisis \xab\xa0$[command](commandHook)\xa0\xbb pour utiliser Midjourney. Astuce\xa0: cr\xe9e un serveur pour l'essayer entre amis.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19786,8 +19788,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "\xe0 l'instant",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "Il y a {count}\xa0{count, plural, =1 {min} other {min}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "Il y a {count}\xa0{count, plural, =1 {h} other {h}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "Il y a {count}\xa0{count, plural, =1 {jour} other {jours}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24636,10 +24636,7 @@
           "**{serverName}** n'est pas disponible dans ta r\xe9gion.",
         QUESTS: "Qu\xeates",
         QUEST: "Qu\xeate\xa0: {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Disponible pendant\xa0: {date}",
-        QUESTS_SHOW_CODE: "Afficher le code",
-        QUESTS_CLAIM_REWARD: "R\xe9cup\xe9rer la r\xe9compense",
-        QUESTS_CLAIM_YOUR_REWARD: "R\xe9cup\xe8re ta r\xe9compense",
+        QUESTS_SEE_CODE: "Voir le code",
         QUESTS_ACCEPT: "Accepter la qu\xeate",
         QUESTS_COMPLETE_TOOLTIP:
           "Clique sur \xab\xa0R\xe9cup\xe9rer\xa0\xbb pour obtenir ton code de r\xe9compense\xa0!",
@@ -24658,10 +24655,7 @@
         QUEST_REWARD: "Gagne ceci\xa0: {reward}",
         QUESTS_REWARD_CODE_CONGRATS: "F\xe9licitations\xa0!",
         QUESTS_REWARD_CODE_DONE: "Termin\xe9",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER:
-          "R\xe9cup\xe8re \xe7a",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Tu as r\xe9cup\xe9r\xe9 \xe7a",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "R\xe9essayer",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multiplateforme",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24669,14 +24663,11 @@
         QUESTS_SPONSORED: "Sponsoris\xe9e",
         QUESTS_PROMOTED: "\xc0 la une",
         QUESTS_LEARN_MORE_V2: "En savoir plus",
-        QUESTS_LEARN_MORE_STACKED: "En savoir\n\nplus",
-        QUESTS_LEARN_MORE_LINK: "[En savoir plus]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Accepter la qu\xeate",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Streame {gameTitle} \xe0 un(e) ami(e) pendant {streamingDurationRequirement, number}\xa0minutes et gagne ceci\xa0: {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Qu\xeate accept\xe9e\xa0!** Streame {gameTitle} \xe0 un(e) ami(e) pendant {streamingDurationRequirement, number}\xa0minutes et gagne ceci\xa0: {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Suivre la progression",
         QUESTS_TITLE: "Qu\xeate\xa0: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oups\xa0!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24685,10 +24676,8 @@
           "Les qu\xeates ne sont pas disponibles sur mobile… pour l'instant.",
         QUESTS_MOBILE_EMBED_BODY:
           "Depuis ton application Discord sur ordinateur ou ton navigateur, tu peux te rendre dans \nParam\xe8tres utilisateur > Inventaire des cadeaux et y accepter la qu\xeate.",
-        QUESTS_GET_THIS_GAME: "Obtenir ce jeu",
+        QUESTS_GET_THIS_GAME: "Obtenir le jeu",
         QUESTS_DISCLOSURE_LABEL: "Pourquoi est-ce que je vois \xe7a\xa0?",
-        QUESTS_SHARE_LINK: "Copier le lien de partage",
-        QUESTS_HIDE_THIS: "Masquer cela",
         QUESTS_FIND_QUEST:
           "Tu peux retrouver cela dans les Param\xe8tres utilisateur > Inventaire des cadeaux",
         QUESTS_CLAIM_BY: "\xc0 r\xe9cup\xe9rer avant le {expirationDate}.",
@@ -24731,6 +24720,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!!, et !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! et {count, plural, one {1\xa0autre} other {{count}\xa0autres}}",
+        STOREFRONT: "Boutique",
         STOREFRONT_APP_SUBSCRIPTIONS: "Abonnements de l'application",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Ach\xe8te des abonnements de {appName}",
@@ -24787,6 +24777,15 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Il y a {count}\xa0s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Premi\xe8re fois",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activit\xe9",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "Il y a {count}\xa0{count, plural, =1 {jour} other {jours}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT:
+          "Il y a {count}\xa0semaines",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "Il y a {count}\xa0j",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "Il y a {count}\xa0h",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "Il y a {count}\xa0min",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "Il y a {count}\xa0s",
       };
     },
   },

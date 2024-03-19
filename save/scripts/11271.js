@@ -13360,6 +13360,7 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "要清除訊息嗎？",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "您似乎已經寫了一些東西。您想將其清除並使用指令嗎？",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE: "查看說明文章",
         MJ_CHATBAR_BODY:
           "輸入「$[command](commandHook)」以使用 Midjourney。提示：建立伺服器即可與好友一起試用。",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "嘗試載入應用程式時發生錯誤。",
@@ -17441,8 +17442,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "剛啟動",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {分} other {分}}前",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {小時} other {小時}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {天} other {天}}前",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -21762,10 +21761,7 @@
         GEO_RESTRICTED_MODAL_BODY: "您的地區無法使用 **{serverName}**。",
         QUESTS: "任務",
         QUEST: "「{questName}」任務",
-        QUESTS_AVAILABLE_THROUGH: "到 {date} 為止可用",
-        QUESTS_SHOW_CODE: "顯示程式碼",
-        QUESTS_CLAIM_REWARD: "領取獎勵",
-        QUESTS_CLAIM_YOUR_REWARD: "領取您的獎勵",
+        QUESTS_SEE_CODE: "查看代碼",
         QUESTS_ACCEPT: "接受任務",
         QUESTS_COMPLETE_TOOLTIP: "點擊領取以獲得您的獎勵代碼！",
         QUESTS_ACCEPT_TOOLTIP: "接受並完成任務，即可解鎖獎勵",
@@ -21777,19 +21773,11 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "糟糕！我們無法傳送驗證電子郵件給您。",
         QUEST_REWARD: "獲得 {reward}",
-        QUESTS_REWARD_CODE_HEADER: "您的獎勵兌換碼",
         QUESTS_REWARD_CODE_CONGRATS: "恭喜！",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER: "您偏好使用哪個平台？",
         QUESTS_REWARD_CODE_ERROR: "糟糕！出問題了，請稍後再試。",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "選擇平台",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "選取平台",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "我們將為您產生一組 {rewardName} 的平台專屬兌換碼。**按下「取得兌換碼」後，就無法再變更您的選擇。**",
         QUESTS_REWARD_CODE_DONE: "完成",
-        QUESTS_REWARD_CODE_GET_CODE: "取得兌換碼",
         QUESTS_REWARD_CODE_TRY_AGAIN: "再試一次",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "領取這個",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "您領取了這個",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "跨平台",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -21797,14 +21785,11 @@
         QUESTS_SPONSORED: "已贊助",
         QUESTS_PROMOTED: "廣告",
         QUESTS_LEARN_MORE_V2: "了解更多",
-        QUESTS_LEARN_MORE_STACKED: "瞭解\n\n更多",
-        QUESTS_LEARN_MORE_LINK: "[瞭解更多]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "接受任務",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "持續向好友直播「{gameTitle}」{streamingDurationRequirement, number}分鐘，並贏得「{questReward}」。",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**已接受任務！**持續向好友直播「{gameTitle}」{streamingDurationRequirement, number}分鐘，並贏得「{questReward}」。",
-        QUESTS_TRACK_YOUR_PROGRESS: "追蹤您的進度",
         QUESTS_TITLE: "「{questName}」任務",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "哎呀！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -21812,10 +21797,8 @@
         QUESTS_MOBILE_EMBED_TITLE: "手機目前還沒辦法接受任務。",
         QUESTS_MOBILE_EMBED_BODY:
           "您可以透過桌面版 Discord 應用程式或瀏覽器前往\n「使用者設定」>「禮物庫存」，並在那裡接受任務。",
-        QUESTS_GET_THIS_GAME: "取得這款遊戲",
+        QUESTS_GET_THIS_GAME: "取得遊戲",
         QUESTS_DISCLOSURE_LABEL: "為什麼我會看到這個？",
-        QUESTS_SHARE_LINK: "複製分享連結",
-        QUESTS_HIDE_THIS: "隱藏",
         QUESTS_FIND_QUEST:
           "您可以在「使用者設定」>「禮物庫存」中再次找到此選項",
         QUESTS_CLAIM_BY: "{expirationDate} 前領取。",
@@ -21857,8 +21840,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!、!!{second}!! 和 !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!!、!!{third}!! 和另外 {count, plural, one {1 人} other {{count} 人}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "商店",
         STOREFRONT_APP_SUBSCRIPTIONS: "App 訂閱",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "從「{appName}」購買訂閱",
         STOREFRONT_APP_PRODUCTS: "應用程式產品",
@@ -21913,6 +21895,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "第一次",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "動態",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {天} other {天}}前",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} 星期前",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} 天以前",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count} 小時以前",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count} 分鐘以前",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} 秒前",
       };
     },
   },

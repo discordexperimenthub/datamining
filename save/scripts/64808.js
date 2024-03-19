@@ -15426,6 +15426,8 @@
           "T\xf6rl\xf6d az \xfczenetet?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "\xdagy tűnik, m\xe1r be\xedrt\xe1l valamit. Szeretn\xe9d t\xf6r\xf6lni \xe9s egy parancsot haszn\xe1lni?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "S\xfag\xf3cikk megtekint\xe9se",
         MJ_CHATBAR_BODY:
           "A Midjourney haszn\xe1lat\xe1hoz \xedrd be a „$[command](commandHook)” parancsot. Tipp: Hozz l\xe9tre egy szervert, hogy kipr\xf3b\xe1lhasd kiz\xe1r\xf3lag a bar\xe1taiddal.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -20184,8 +20186,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "\xe9pp most",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {perce} other {perce}}",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {\xf3r\xe1ja} other {\xf3r\xe1ja}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {napja} other {napja}}",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -25243,10 +25243,7 @@
           "A(z) **{serverName}** nem \xe9rhető el a r\xe9gi\xf3dban.",
         QUESTS: "K\xfcldet\xe9sek",
         QUEST: "{questName} k\xfcldet\xe9s",
-        QUESTS_AVAILABLE_THROUGH: "Eddig \xe9rhető el: {date}",
-        QUESTS_SHOW_CODE: "K\xf3d megjelen\xedt\xe9se",
-        QUESTS_CLAIM_REWARD: "Jutalom bev\xe1lt\xe1sa",
-        QUESTS_CLAIM_YOUR_REWARD: "Jutalom bev\xe1lt\xe1sa",
+        QUESTS_SEE_CODE: "K\xf3d megjelen\xedt\xe9se",
         QUESTS_ACCEPT: "K\xfcldet\xe9s elfogad\xe1sa",
         QUESTS_COMPLETE_TOOLTIP:
           "A „Bev\xe1lt\xe1s” gombbal megszerezheted a jutalomk\xf3dot!",
@@ -25263,22 +25260,13 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Ajjaj! Nem siker\xfclt elk\xfcldeni a hiteles\xedtő e-mailt.",
         QUEST_REWARD: "Elnyerhető jutalom: {reward}",
-        QUESTS_REWARD_CODE_HEADER: "A jutalomk\xf3dod",
         QUESTS_REWARD_CODE_CONGRATS: "Gratul\xe1lunk!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Melyik az \xe1ltalad előnyben r\xe9szes\xedtett platform?",
         QUESTS_REWARD_CODE_ERROR:
           "Hopp\xe1! Hiba t\xf6rt\xe9nt. Pr\xf3b\xe1ld \xfajra k\xe9sőbb",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "V\xe1lassz platformot",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER:
-          "Platformv\xe1laszt\xe1s",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Platformspecifikus k\xf3dot hozunk l\xe9tre a k\xf6vetkezőh\xf6z: {rewardName}. **Miut\xe1n megnyomod a K\xf3d lek\xe9r\xe9se lehetős\xe9get, nem fogod tudni m\xf3dos\xedtani a v\xe1laszt\xe1sodat.**",
         QUESTS_REWARD_CODE_DONE: "K\xe9sz",
-        QUESTS_REWARD_CODE_GET_CODE: "K\xf3d lek\xe9r\xe9se",
         QUESTS_REWARD_CODE_TRY_AGAIN: "\xdajrapr\xf3b\xe1lkoz\xe1s",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Bev\xe1lt\xe1s",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Bev\xe1ltottad ezt",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM:
           "Platformokon \xe1t\xedvelő",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
@@ -25287,15 +25275,11 @@
         QUESTS_SPONSORED: "Szponzor\xe1lt",
         QUESTS_PROMOTED: "Rekl\xe1mozott",
         QUESTS_LEARN_MORE_V2: "Tov\xe1bbi t\xe1j\xe9koztat\xe1s",
-        QUESTS_LEARN_MORE_STACKED: "Tov\xe1bbi\n\nt\xe1j\xe9koztat\xe1s",
-        QUESTS_LEARN_MORE_LINK:
-          "[Tov\xe1bbi t\xe1j\xe9koztat\xe1s]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "K\xfcldet\xe9s elfogad\xe1sa",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Ha k\xf6zvet\xedted a(z) {gameTitle} j\xe1t\xe9kot egy bar\xe1todnak {streamingDurationRequirement, number} percig, megnyerheted a k\xf6vetkezőt: {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**K\xfcldet\xe9s elfogadva!** Ha k\xf6zvet\xedted a(z) {gameTitle} j\xe1t\xe9kot egy bar\xe1todnak {streamingDurationRequirement, number} percig, megnyerheted a k\xf6vetkezőt: {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "K\xf6vesd nyomon a halad\xe1st",
         QUESTS_TITLE: "{questName} k\xfcldet\xe9s",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hopp\xe1!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -25304,10 +25288,8 @@
           "A k\xfcldet\xe9sek nem \xe9rhetők el mobilon… egyelőre.",
         QUESTS_MOBILE_EMBED_BODY:
           "A k\xfcldet\xe9s elfogad\xe1s\xe1hoz k\xf6vesd a k\xf6vetkező \xfatvonalat a Discord alkalmaz\xe1sban vagy a b\xf6ng\xe9sződben: \nFelhaszn\xe1l\xf3i be\xe1ll\xedt\xe1sok > Aj\xe1nd\xe9klelt\xe1r.",
-        QUESTS_GET_THIS_GAME: "J\xe1t\xe9k beszerz\xe9se",
+        QUESTS_GET_THIS_GAME: "J\xe1t\xe9k megszerz\xe9se",
         QUESTS_DISCLOSURE_LABEL: "Mi\xe9rt l\xe1tom ezt?",
-        QUESTS_SHARE_LINK: "Megoszt\xe1si hivatkoz\xe1s m\xe1sol\xe1sa",
-        QUESTS_HIDE_THIS: "Elrejt\xe9s",
         QUESTS_FIND_QUEST:
           "\xdajra megtal\xe1lhatod a Felhaszn\xe1l\xf3i be\xe1ll\xedt\xe1sok > Aj\xe1nd\xe9klelt\xe1r men\xfcpontban",
         QUESTS_CLAIM_BY:
@@ -25352,8 +25334,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! \xe9s !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! \xe9s {count, plural, one {1 tov\xe1bbi szem\xe9ly} other {{count} tov\xe1bbi szem\xe9ly}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} App Store",
+        STOREFRONT: "\xc1ruh\xe1z",
         STOREFRONT_APP_SUBSCRIPTIONS: "Alkalmaz\xe1s-előfizet\xe9sek",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Előfizet\xe9sek v\xe1s\xe1rl\xe1sa a k\xf6vetkezőtől: {appName}",
@@ -25418,6 +25399,17 @@
           "{count}\xa0m\xe1sodperccel ezelőtt",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Első alkalom",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe1s",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {napja} other {napja}}",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT:
+          "{count}\xa0h\xe9ttel ezelőtt",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count} nappal ezelőtt",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT:
+          "{count} \xf3r\xe1val ezelőtt",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT:
+          "{count} perccel ezelőtt",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT:
+          "{count}\xa0m\xe1sodperccel ezelőtt",
       };
     },
   },

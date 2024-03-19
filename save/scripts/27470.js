@@ -14795,6 +14795,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Excluir mensagem?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Parece que voc\xea j\xe1 escreveu alguma coisa. Voc\xea quer excluir isso e usar um comando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Ver artigo de ajuda",
         MJ_CHATBAR_BODY:
           "Digite “$[command](commandHook)” para usar Midjourney. Dica: crie um servidor para experimentar esse recurso com seus amigos.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -19342,8 +19344,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "agora",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "{count} {count, plural, =1 {min} other {mins}} atr\xe1s",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "{count} {count, plural, =1 {hr} other {hrs}} atr\xe1s",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "{count} {count, plural, =1 {dia} other {dias}} atr\xe1s",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -24085,10 +24085,7 @@
           "**{serverName}** n\xe3o est\xe1 dispon\xedvel na sua regi\xe3o.",
         QUESTS: "Miss\xf5es",
         QUEST: "Miss\xe3o: {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Dispon\xedvel at\xe9 {date}",
-        QUESTS_SHOW_CODE: "Exibir c\xf3digo",
-        QUESTS_CLAIM_REWARD: "Reivindicar recompensa",
-        QUESTS_CLAIM_YOUR_REWARD: "Resgate sua recompensa",
+        QUESTS_SEE_CODE: "Ver c\xf3digo",
         QUESTS_ACCEPT: "Aceitar miss\xe3o",
         QUESTS_COMPLETE_TOOLTIP:
           "Clique em reivindicar para obter seu c\xf3digo de recompensa!",
@@ -24107,9 +24104,7 @@
         QUEST_REWARD: "Ven\xe7a {reward}",
         QUESTS_REWARD_CODE_CONGRATS: "Parab\xe9ns!",
         QUESTS_REWARD_CODE_DONE: "Pronto",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Resgatar",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER:
-          "Voc\xea resgatou isso",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Tente novamente",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Multiplataforma",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
@@ -24117,14 +24112,11 @@
         QUESTS_SPONSORED: "Patrocinado",
         QUESTS_PROMOTED: "Promovido(a)",
         QUESTS_LEARN_MORE_V2: "Saiba mais",
-        QUESTS_LEARN_MORE_STACKED: "Saiba\n\nmais",
-        QUESTS_LEARN_MORE_LINK: "[Saiba mais]({questsLearnMoreLink})",
         QUESTS_ACCEPT_QUEST: "Aceitar miss\xe3o",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Transmita {gameTitle} a um amigo por {streamingDurationRequirement, number} minutos e ganhe {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Miss\xe3o aceita!** Transmita {gameTitle} para um amigo durante {streamingDurationRequirement, number} minutos e ganhe {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "Acompanhar seu progresso",
         QUESTS_TITLE: "Miss\xe3o: {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -24133,10 +24125,8 @@
           "Miss\xf5es n\xe3o est\xe3o dispon\xedveis para celular... ainda.",
         QUESTS_MOBILE_EMBED_BODY:
           "Voc\xea pode ir para \nConfigura\xe7\xf5es de Usu\xe1rio > Invent\xe1rio de Presentes e aceitar a miss\xe3o a partir do seu navegador ou aplicativo Discord no computador.",
-        QUESTS_GET_THIS_GAME: "Adquirir este jogo",
+        QUESTS_GET_THIS_GAME: "Obter jogo",
         QUESTS_DISCLOSURE_LABEL: "Por que estou vendo isso?",
-        QUESTS_SHARE_LINK: "Copiar link de compartilhamento",
-        QUESTS_HIDE_THIS: "Ocultar isso",
         QUESTS_FIND_QUEST:
           "Voc\xea pode encontrar isso novamente em Configura\xe7\xf5es de Usu\xe1rio > Invent\xe1rio de Presentes",
         QUESTS_CLAIM_BY: "Resgate at\xe9 {expirationDate}.",
@@ -24181,6 +24171,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! e !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! e {count, plural, one {1 outro} other {{count} outros}}",
+        STOREFRONT: "Loja",
         STOREFRONT_APP_SUBSCRIPTIONS: "Assinaturas do aplicativo",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Comprar assinaturas de {appName}",
         STOREFRONT_APP_PRODUCTS: "Produtos do aplicativo",
@@ -24234,6 +24225,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s atr\xe1s",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pela primeira vez",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Atividade",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {dia} other {dias}} atr\xe1s",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "H\xe1 {count} sem.",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "H\xe1 {count}d",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "H\xe1 {count}h",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "H\xe1 {count}min",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}s atr\xe1s",
       };
     },
   },

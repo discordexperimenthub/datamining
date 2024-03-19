@@ -14503,6 +14503,8 @@
         APPLICATION_COMMAND_MENTION_CONFIRM_HEADER: "Vil du fjerne meldingen?",
         APPLICATION_COMMAND_MENTION_CONFIRM_BODY:
           "Det ser ut til at du allerede har skrevet noe. Vil du fjerne dette og bruke en kommando?",
+        APPLICATION_COMMAND_USER_INSTALL_VIEW_HELP_ARTICLE:
+          "Se hjelpeartikkelen",
         MJ_CHATBAR_BODY:
           "Skriv \xab$[command](commandHook)\xbb for \xe5 bruke Midjourney. Tips: Opprett en server hvis du vil pr\xf8ve sammen med venner.",
         APPLICATION_IFRAME_MODAL_LOAD_ERROR:
@@ -18936,8 +18938,6 @@
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS: "n\xe5 nettopp",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
           "For {count} {count, plural, =1 {min} other {min}} siden",
-        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
-          "For {count} {count, plural, =1 {t} other {t}} siden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_DAYS:
           "For {count} {count, plural, =1 {dag} other {dager}} siden",
         MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH:
@@ -23665,10 +23665,7 @@
           "**{serverName}** er ikke tilgjengelig i omr\xe5det ditt.",
         QUESTS: "Oppdrag",
         QUEST: "Oppdraget {questName}",
-        QUESTS_AVAILABLE_THROUGH: "Tilgjengelig til og med {date}",
-        QUESTS_SHOW_CODE: "Vis kode",
-        QUESTS_CLAIM_REWARD: "Hent bel\xf8nning",
-        QUESTS_CLAIM_YOUR_REWARD: "Hent bel\xf8nningen din",
+        QUESTS_SEE_CODE: "Se kode",
         QUESTS_ACCEPT: "Godta oppgave",
         QUESTS_COMPLETE_TOOLTIP:
           "Trykk p\xe5 \xabHent\xbb for \xe5 f\xe5 bel\xf8nningskoden din!",
@@ -23685,35 +23682,24 @@
         QUESTS_REWARD_VERIFICATION_ERROR:
           "Oi da! Vi sendte deg ikke en e-postbekreftelse.",
         QUEST_REWARD: "Vinn {reward}",
-        QUESTS_REWARD_CODE_HEADER: "Premiekoden din",
         QUESTS_REWARD_CODE_CONGRATS: "Gratulerer!",
         QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER:
           "Hvilken plattform foretrekker du?",
         QUESTS_REWARD_CODE_ERROR: "Oi da. Noe gikk galt. Pr\xf8v igjen senere",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL: "Velg en plattform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER: "Velg plattform",
-        QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS:
-          "Vi genererer en plattformspesifikk kode for {rewardName}. **N\xe5r du har trykket p\xe5 Hent kode, kan du ikke lenger forandre valget.**",
         QUESTS_REWARD_CODE_DONE: "Ferdig",
-        QUESTS_REWARD_CODE_GET_CODE: "Hent kode",
-        QUESTS_REWARD_CODE_TRY_AGAIN: "Pr\xf8v igjen",
-        QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER: "Hent denne",
-        QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER: "Du hentet denne",
+        QUESTS_REWARD_CODE_TRY_AGAIN: "Pr\xf8v p\xe5 nytt",
         QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM: "Kryss-plattform",
         QUESTS_REWARD_CODE_PLATFORM_PC: "PC",
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponset",
         QUESTS_PROMOTED: "Forfremmet",
-        QUESTS_LEARN_MORE_V2: "Mer info",
-        QUESTS_LEARN_MORE_STACKED: "Finn ut\n\nmer",
-        QUESTS_LEARN_MORE_LINK: "[Mer info]({questsLearnMoreLink})",
+        QUESTS_LEARN_MORE_V2: "Finn ut mer",
         QUESTS_ACCEPT_QUEST: "Godta oppgave",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
           "Str\xf8m {gameTitle} til en venn i {streamingDurationRequirement, number} minutter, og vinn {questReward}.",
         QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD:
           "**Oppdrag akseptert!** Str\xf8m {gameTitle} til en venn i {streamingDurationRequirement, number} minutter, og vinn {questReward}.",
-        QUESTS_TRACK_YOUR_PROGRESS: "F\xf8lg med p\xe5 fremdriften din",
         QUESTS_TITLE: "Oppdraget {questName}",
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Oops!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
@@ -23722,10 +23708,8 @@
           "Oppdrag er ikke tilgjengelig p\xe5 mobil\xa0… forel\xf8pig.",
         QUESTS_MOBILE_EMBED_BODY:
           "Bruk Discord-appen p\xe5 skrivebordet eller i nettleseren, og g\xe5 til \nBrukerinnstillinger\xa0> Gavebeholdning og godta oppdraget der.",
-        QUESTS_GET_THIS_GAME: "Skaff deg spillet",
+        QUESTS_GET_THIS_GAME: "F\xe5 spill",
         QUESTS_DISCLOSURE_LABEL: "Hvorfor ser jeg dette?",
-        QUESTS_SHARE_LINK: "Kopier delingslenke",
-        QUESTS_HIDE_THIS: "Skjul dette",
         QUESTS_FIND_QUEST:
           "Du finner tilbake til dette i Brukerinnstillinger\xa0> Gavebeholdning",
         QUESTS_CLAIM_BY: "M\xe5 hentes innen {expirationDate}.",
@@ -23768,8 +23752,7 @@
         LIST_SUMMARY_LABEL_THREE: "!!{first}!!, !!{second}!! og !!{third}!!",
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! og {count, plural, one {1 annen} other {{count} andre}}",
-        STOREFRONT: "App Store",
-        STOREFRONT_TITLE: "{appName} i App\xa0Store",
+        STOREFRONT: "Butikk",
         STOREFRONT_APP_SUBSCRIPTIONS: "App-abonnementer",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Kj\xf8p abonnementer fra {appName}",
         STOREFRONT_APP_PRODUCTS: "App-produkter",
@@ -23824,6 +23807,13 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} s siden",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf8rste gang",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "For {count} {count, plural, =1 {dag} other {dager}} siden",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}u siden",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d siden",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}t siden",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m siden",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count} s siden",
       };
     },
   },

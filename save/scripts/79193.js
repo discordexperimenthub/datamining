@@ -5938,7 +5938,9 @@
             h =
               null != f
                 ? R.CardVariantsInfo[f]
-                : R.CardVariantsInfo[S.CardVariants.DEFAULT];
+                : R.CardVariantsInfo[S.CardVariants.DEFAULT],
+            L =
+              0 !== o.length || (0 !== l.length && f === S.CardVariants.REWARD);
           return (0, a.jsxs)(u.Clickable, {
             className: i(
               C.card,
@@ -5973,7 +5975,7 @@
                 subtitleClassName: C.cardSubtitle,
                 cardVariant: f,
               }),
-              0 !== o.length &&
+              L &&
                 (0, a.jsx)(N.default, {
                   title: r,
                   titleClassName: n,
@@ -9690,4 +9692,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5f95fa6b8f8710eb7aac.js.map
+//# sourceMappingURL=0b272f5d759f4032808f.js.map

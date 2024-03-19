@@ -258,8 +258,8 @@
         L = i("986214"),
         P = i("126939"),
         g = i("837707"),
-        m = i("334368"),
-        R = i("803353"),
+        R = i("334368"),
+        m = i("803353"),
         M = i("420444"),
         U = i("954016"),
         V = i("49111"),
@@ -273,7 +273,7 @@
             ? void 0
             : null === (e = t.activity) || void 0 === e
               ? void 0
-              : e.client_platform_config[(0, m.default)((0, v.getOS)())]
+              : e.client_platform_config[(0, R.default)((0, v.getOS)())]
                   .release_phase;
         return { releasePhase: i };
       }
@@ -605,7 +605,7 @@
                 return;
               }
               if (
-                !(0, R.default)(
+                !(0, m.default)(
                   null == E
                     ? void 0
                     : null === (e = E.embedded_activity_config) || void 0 === e
@@ -928,10 +928,10 @@
             GuildStore: s.default,
           }),
           g = _.default.getSelfEmbeddedActivityForChannel(i),
-          m = null == g ? void 0 : g.applicationId,
-          R =
-            null != m &&
-            null !== (e = a.default.getApplication(m)) &&
+          R = null == g ? void 0 : g.applicationId,
+          m =
+            null != R &&
+            null !== (e = a.default.getApplication(R)) &&
             void 0 !== e
               ? e
               : void 0;
@@ -987,7 +987,7 @@
             null != p &&
               (await (0, f.default)({
                 applicationId: p.applicationId,
-                currentEmbeddedApplication: R,
+                currentEmbeddedApplication: m,
                 activityChannelId: i,
                 locationObject: {},
                 embeddedActivitiesManager: O,
@@ -1052,9 +1052,9 @@
             ),
             !1
           );
-        let m = a.default.getChannel(p);
-        if (null == m) return !1;
-        let R =
+        let R = a.default.getChannel(p);
+        if (null == R) return !1;
+        let m =
           null != p
             ? (0, f.getEmbeddedActivityLaunchability)({
                 channelId: p,
@@ -1063,13 +1063,13 @@
                 PermissionStore: u.default,
               })
             : f.EmbeddedActivityLaunchability.NO_CHANNEL;
-        if (R !== f.EmbeddedActivityLaunchability.CAN_LAUNCH)
+        if (m !== f.EmbeddedActivityLaunchability.CAN_LAUNCH)
           return (
-            R ===
+            m ===
             f.EmbeddedActivityLaunchability
               .NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
               ? (0, l.showActivitiesInvalidPermissionsAlert)()
-              : R ===
+              : m ===
                   f.EmbeddedActivityLaunchability
                     .ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                 n.default.show({
@@ -1084,14 +1084,14 @@
         let M = await (0, _.confirmActivityLaunchChecks)({
           applicationId: e.application.id,
           application: e.application,
-          channel: m,
+          channel: R,
           currentEmbeddedApplication: i,
           embeddedActivitiesManager: h,
           user: g,
         });
         if (!M) return !1;
         let U = (0, I.default)(p),
-          V = N.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(m.type);
+          V = N.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(R.type);
         if (U) {
           let t = await (0, A.default)({
             channelId: p,
@@ -1099,7 +1099,7 @@
           });
           if (!t) return !1;
         } else if (
-          !(0, o.isActivitiesInTextEnabled)(m, "handleStartEmbeddedActivity") ||
+          !(0, o.isActivitiesInTextEnabled)(R, "handleStartEmbeddedActivity") ||
           !V
         )
           return !1;
@@ -2432,12 +2432,12 @@
         (u.PRESS_BADGE = "PRESS_BADGE"),
         (u.PRESS_SECTION = "PRESS_SECTION"),
         (u.PRESS_PREMIUM_UPSELL = "PRESS_PREMIUM_UPSELL"),
+        (u.PRESS_SET_STATUS = "PRESS_SET_STATUS"),
+        (u.PRESS_SET_CUSTOM_STATUS = "PRESS_SET_CUSTOM_STATUS"),
+        (u.PRESS_SWITCH_ACCOUNTS = "PRESS_SWITCH_ACCOUNTS"),
         (u.JOIN_ACTIVITY = "JOIN_ACTIVITY"),
         (u.SET_NOTE = "SET_NOTE"),
-        (u.SET_STATUS = "SET_STATUS"),
-        (u.SET_CUSTOM_STATUS = "SET_CUSTOM_STATUS"),
         (u.SET_FRIEND_NICKNAME = "SET_FRIEND_NICKNAME"),
-        (u.SWITCH_ACCOUNTS = "SWITCH_ACCOUNTS"),
         (u.EDIT_PROFILE = "EDIT_PROFILE"),
         (u.EDIT_GUILD_PROFILE = "EDIT_GUILD_PROFILE"),
         (u.GIFT_PREMIUM = "GIFT_PREMIUM"),
@@ -2687,4 +2687,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47146.8a940d4b2218e6076b47.js.map
+//# sourceMappingURL=47146.1957974345049216ce70.js.map

@@ -1709,7 +1709,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "276690",
+                  buildNumber: "276698",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -14475,7 +14475,7 @@
       n.r(t),
         n.d(t, {
           useCustomStatusMenuItem: function () {
-            return E;
+            return h;
           },
         });
       var a = n("37983");
@@ -14485,20 +14485,26 @@
         i = n("77078"),
         r = n("943722"),
         o = n("997289"),
-        u = n("845579"),
-        d = n("381546"),
-        c = n("782340"),
-        f = n("416476");
-      function E(e, t) {
-        let s = (0, o.useAnalyticsContext)();
-        function E(e) {
-          e.stopPropagation(), u.CustomStatusSetting.updateSetting(void 0);
+        u = n("756507"),
+        d = n("845579"),
+        c = n("381546"),
+        f = n("782340"),
+        E = n("416476");
+      function h(e, t) {
+        let s = (0, o.useAnalyticsContext)(),
+          { trackUserProfileAction: h } = (0,
+          u.useUserProfileAnalyticsContext)();
+        function _(e) {
+          e.stopPropagation(), d.CustomStatusSetting.updateSetting(void 0);
         }
-        function h() {
-          (0, i.openModalLazy)(async () => {
-            let { default: e } = await n.el("711438").then(n.bind(n, "711438"));
-            return t => (0, a.jsx)(e, { sourceAnalyticsContext: s, ...t });
-          });
+        function C() {
+          h({ action: "PRESS_SET_CUSTOM_STATUS" }),
+            (0, i.openModalLazy)(async () => {
+              let { default: e } = await n
+                .el("711438")
+                .then(n.bind(n, "711438"));
+              return t => (0, a.jsx)(e, { sourceAnalyticsContext: s, ...t });
+            });
         }
         if (null != e) {
           let n =
@@ -14516,27 +14522,27 @@
           return (0, a.jsx)(i.MenuItem, {
             id: "edit-custom-status",
             label:
-              c.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+              f.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
             icon: n,
             focusedClassName: t,
             showIconFirst: !0,
             hint: e =>
               (0, a.jsx)(i.Clickable, {
                 ...e,
-                onClick: E,
+                onClick: _,
                 tabIndex: -1,
-                children: (0, a.jsx)(d.default, { width: 18, height: 18 }),
+                children: (0, a.jsx)(c.default, { width: 18, height: 18 }),
               }),
-            action: h,
+            action: C,
           });
         }
         return (0, a.jsx)(i.MenuItem, {
           id: "set-custom-status",
           focusedClassName: t,
-          label: c.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
+          label: f.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
           icon: e =>
-            (0, a.jsx)("div", { className: l(f.customEmojiPlaceholder, e) }),
-          action: h,
+            (0, a.jsx)("div", { className: l(E.customEmojiPlaceholder, e) }),
+          action: C,
           showIconFirst: !0,
         });
       }
@@ -24665,12 +24671,12 @@
         I = n("252744"),
         S = n("502651"),
         m = n("812204"),
-        p = n("685665"),
-        T = n("106803"),
-        g = n("861370"),
-        A = n("91639"),
-        N = n("726778"),
-        R = n("128887"),
+        p = n("106803"),
+        T = n("861370"),
+        g = n("91639"),
+        A = n("726778"),
+        N = n("128887"),
+        R = n("756507"),
         O = n("217513"),
         v = n("430312"),
         L = n("763866"),
@@ -24801,11 +24807,15 @@
             closePopout: D,
           } = e,
           x = (0, _.useAnalyticsContext)(),
-          { AnalyticsLocationProvider: U } = (0, p.default)(
-            m.default.ACCOUNT_PROFILE_POPOUT
-          ),
-          k = (0, O.default)(t.id, l),
-          [B, X, J, $] = (0, c.useStateFromStoresArray)([b.default], () => {
+          U = (0, O.default)(t.id, l),
+          { UserProfileAnalyticsProvider: k, trackUserProfileAction: B } = (0,
+          R.useUserProfileAnalyticsProvider)({
+            layout: "ACCOUNT_POPOUT",
+            analyticsLocations: [m.default.ACCOUNT_PROFILE_POPOUT],
+            userId: t.id,
+            guildId: l,
+          }),
+          [X, J, $, ee] = (0, c.useStateFromStoresArray)([b.default], () => {
             var e;
             let n = t.id;
             return "string" != typeof n
@@ -24826,14 +24836,14 @@
                   b.default.isMobileOnline(n),
                 ];
           }),
-          ee = (function (e, t) {
-            let n = A.ExpiringStatusExperiment.useExperiment({
+          et = (function (e, t) {
+            let n = g.ExpiringStatusExperiment.useExperiment({
                 location: "account popout",
               }).expiringStatus,
               s = y.StatusExpiresAtSetting.useSetting(),
-              l = (0, N.useFocusModeEnabled)(),
+              l = (0, A.useFocusModeEnabled)(),
               i =
-                R.QuietModeExperiment.useExperiment({
+                N.QuietModeExperiment.useExperiment({
                   location: "account popout",
                 }).allowQuietMode || l,
               r = y.FocusModeExpiresAtSetting.useSetting(),
@@ -24874,7 +24884,7 @@
                       id: "".concat(e, "-").concat(n),
                       label: s(),
                       action: () => {
-                        (0, N.setFocusMode)(!0, n);
+                        (0, A.setFocusMode)(!0, n);
                       },
                       dontCloseOnAction: !0,
                     },
@@ -24962,7 +24972,7 @@
                             ],
                           }),
                         action: () => {
-                          (0, N.setFocusMode)(!l);
+                          (0, A.setFocusMode)(!l);
                         },
                         dontCloseOnAction: !0,
                         children: c,
@@ -24972,62 +24982,62 @@
                   : null,
               ],
             });
-          })(J, x),
-          { ref: et } = (0, C.default)(),
-          en = (0, I.default)(et);
+          })($, x),
+          { ref: en } = (0, C.default)(),
+          ea = (0, I.default)(en);
         s.useEffect(() => {
           w.default.track(Y.AnalyticEvents.OPEN_POPOUT, {
             type: "User Status Menu",
             has_custom_status: null != n,
             other_user_id: t.id,
-            application_id: null != B ? B.application_id : void 0,
+            application_id: null != X ? X.application_id : void 0,
             is_streaming: r,
-            application_name: null != B ? B.name : void 0,
+            application_name: null != X ? X.name : void 0,
             profile_has_nitro_customization:
-              (null == k ? void 0 : k.banner) != null,
+              (null == U ? void 0 : U.banner) != null,
             location: x.location,
             has_profile_effect:
-              (null == k ? void 0 : k.profileEffectId) != null,
+              (null == U ? void 0 : U.profileEffectId) != null,
           });
         }, []);
-        let ea = (0, N.useFocusModeEnabled)(),
-          es = J === Y.StatusTypes.DND,
-          el = (0, H.useMultiAccountMenuItems)(),
-          ei = (0, T.useCustomStatusMenuItem)(
+        let es = (0, A.useFocusModeEnabled)(),
+          el = $ === Y.StatusTypes.DND,
+          ei = (0, H.useMultiAccountMenuItems)(),
+          er = (0, p.useCustomStatusMenuItem)(
             null != n ? n : void 0,
             K.menuItemFocused
           ),
-          er = (0, g.default)({
+          eo = (0, T.default)({
             id: t.id,
             label: z.default.Messages.COPY_ID_USER,
             showIconFirst: !0,
           });
-        return (0, a.jsx)(U, {
+        return (0, a.jsx)(k, {
           children: (0, a.jsx)("div", {
             className: K.popoutContainer,
             children: (0, a.jsx)("div", {
-              ref: et,
+              ref: en,
               children: (0, a.jsxs)(v.default, {
                 user: t,
                 profileType: W.UserProfileTypes.POPOUT,
                 children: [
                   (0, a.jsx)(P.default, {
                     user: t,
-                    displayProfile: k,
+                    displayProfile: U,
                     onClose: () => (null == D ? void 0 : D()),
-                    isMobile: $,
-                    isStreaming: (0, S.default)(B),
-                    status: J,
+                    isMobile: ee,
+                    isStreaming: (0, S.default)(X),
+                    status: $,
                     disableUserProfileLink: __OVERLAY__,
-                    isHovering: en,
+                    isHovering: ea,
                     showPremiumBadgeUpsell: !1,
                   }),
                   (0, a.jsxs)(v.default.Inner, {
                     children: [
                       (0, a.jsx)(L.default, {
-                        activity: B,
-                        customStatusActivity: X,
-                        displayProfile: k,
+                        activity: X,
+                        customStatusActivity: J,
+                        displayProfile: U,
                         user: t,
                         onClose: o,
                         setNote: !1,
@@ -25057,8 +25067,8 @@
                                       justifyContent: "space-between",
                                     },
                                     children: [
-                                      (0, F.humanizeStatus)(J),
-                                      ea || es
+                                      (0, F.humanizeStatus)($),
+                                      es || el
                                         ? (0, a.jsx)(f.BellSlashIcon, {
                                             width: 12,
                                             height: 12,
@@ -25070,51 +25080,55 @@
                                   subMenuIconClassName: K.subMenuIcon,
                                   action: d.isMobile
                                     ? function () {
-                                        (0, E.openModalLazy)(
-                                          () =>
-                                            new Promise(e => {
-                                              e(e =>
-                                                (0, a.jsx)(E.ModalRoot, {
-                                                  ...e,
-                                                  size: E.ModalSize.SMALL,
-                                                  className: K.modal,
-                                                  "aria-label":
-                                                    z.default.Messages
-                                                      .SET_STATUS,
-                                                  children: (0, a.jsx)(E.Menu, {
-                                                    navId: "account",
-                                                    variant: "fixed",
+                                        B({ action: "PRESS_SET_STATUS" }),
+                                          (0, E.openModalLazy)(
+                                            () =>
+                                              new Promise(e => {
+                                                e(e =>
+                                                  (0, a.jsx)(E.ModalRoot, {
+                                                    ...e,
+                                                    size: E.ModalSize.SMALL,
+                                                    className: K.modal,
                                                     "aria-label":
                                                       z.default.Messages
                                                         .SET_STATUS,
-                                                    hideScroller: !0,
-                                                    className:
-                                                      K.statusPickerModalMenu,
-                                                    onClose: e.onClose,
-                                                    onSelect: e.onClose,
-                                                    children: ee,
-                                                  }),
-                                                })
-                                              );
-                                            })
-                                        );
+                                                    children: (0, a.jsx)(
+                                                      E.Menu,
+                                                      {
+                                                        navId: "account",
+                                                        variant: "fixed",
+                                                        "aria-label":
+                                                          z.default.Messages
+                                                            .SET_STATUS,
+                                                        hideScroller: !0,
+                                                        className:
+                                                          K.statusPickerModalMenu,
+                                                        onClose: e.onClose,
+                                                        onSelect: e.onClose,
+                                                        children: et,
+                                                      }
+                                                    ),
+                                                  })
+                                                );
+                                              })
+                                          );
                                       }
                                     : void 0,
                                   showIconFirst: !0,
                                   icon: e => {
                                     let { className: t, isFocused: n } = e;
                                     return (0, a.jsx)(E.Status, {
-                                      status: J,
+                                      status: $,
                                       size: 12,
                                       className: i(t, K.mainStatusIcon),
                                       color: n ? "currentColor" : void 0,
                                     });
                                   },
-                                  children: d.isMobile ? void 0 : ee,
+                                  children: d.isMobile ? void 0 : et,
                                 },
                                 "status-picker"
                               ),
-                              ei,
+                              er,
                             ],
                           }),
                           (0, a.jsx)(E.MenuGroup, {
@@ -25129,13 +25143,16 @@
                                     .SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
                                 icon: G.default,
                                 showIconFirst: !0,
-                                action: V.default,
-                                children: el,
+                                action: () => {
+                                  B({ action: "PRESS_SWITCH_ACCOUNTS" }),
+                                    (0, V.default)();
+                                },
+                                children: ei,
                               },
                               "switch-account"
                             ),
                           }),
-                          (0, a.jsx)(E.MenuGroup, { children: er }),
+                          (0, a.jsx)(E.MenuGroup, { children: eo }),
                         ],
                       }),
                     ],
@@ -53064,4 +53081,4 @@
     },
   },
 ]);
-//# sourceMappingURL=704b7e143399ac69c8f5.js.map
+//# sourceMappingURL=0bc39eadb936609a08cf.js.map

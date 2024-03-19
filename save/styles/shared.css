@@ -17674,6 +17674,7 @@ h6.title__7a3bb {
   align-items: center;
   background-color: var(--modal-background);
   padding: 0 16px 24px;
+  border-radius: 4px;
 }
 .giftCodeSection__8806e {
   flex-direction: column;
@@ -24032,4 +24033,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.e02734ad6e90e387d8be.css.map*/
+/*# sourceMappingURL=shared.bf9cf3921ed99af9b828.css.map*/

@@ -258,6 +258,8 @@
         (i.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON =
           "collectibles shop card preview button"),
         (i.COLLECTIBLES_SHOP_DETAILS_MODAL = "collectibles shop details modal"),
+        (i.COLLECTIBLES_SHOP_PROFILE_PREVIEW =
+          "collectibles shop long form profile preview"),
         (i.COLLECTIBLES_PROFILE_SETTINGS_UPSELL =
           "collectibles profile settings upsell"),
         (i.COLLECTIBLES_PAYMENT_MODAL = "collectibles payment modal"),
@@ -321,4 +323,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.61385e4f0ca6f221ddc8.js.map
+//# sourceMappingURL=14875.7c768bbed3861ac685ea.js.map

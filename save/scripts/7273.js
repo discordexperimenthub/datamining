@@ -6325,6 +6325,7 @@
         (eK.DATA_USED_TO_IMPROVE_DISCORD = "21864805694999"),
         (eK.DATA_USED_FOR_RECOMMENDED = "21865322754327"),
         (eK.USING_APPS_FAQ = "21334461140375#h_01HRQSA6C8H2XBF34NSSQH7ZFH"),
+        (eK.MEMBER_LIST_ACTIVITY_FEED = "22045487931799"),
         (eK.POLLS_FAQ = "22163184112407");
       let RL = _ => "https://www.youtube.com/embed/".concat(_),
         RD = _ => "https://img.youtube.com/vi/".concat(_, "/maxresdefault.jpg"),
@@ -17336,4 +17337,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.e0c2b13fefc8fd9016ee.js.map
+//# sourceMappingURL=7273.96474d5edbf376fae351.js.map

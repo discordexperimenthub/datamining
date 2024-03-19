@@ -24519,6 +24519,10 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} watched **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
+        CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE: "Hide Activity Cards",
+        CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT: "About Recent Activity",
+        CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT:
+          "Member List Recent Activity Settings",
         RECENT_GAMES: "Recent Games",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "{count} {count, plural, =1 {week} other {weeks}} ago",
@@ -26433,8 +26437,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276747", ", Version Hash: ")
-          .concat("50dd0ed75707f62e5385efa81b580e841ec703bd")
+          .concat("276757", ", Version Hash: ")
+          .concat("be73f1d14e17728f9baac64d9723ae25e219d663")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29546,12 +29550,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276747"), "276747"));
+        let _ = parseInt(((e = "276757"), "276757"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276747"
+                "276757"
               )
             ),
             (_ = 0)),
@@ -30570,7 +30574,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return C;
+            return D;
           },
         }),
         E("222007");
@@ -30585,31 +30589,34 @@
         T = !1,
         S = 0;
       function N() {
-        l();
+        u();
       }
       function O() {
-        R();
+        l();
       }
       function A(e) {
-        e.idle ? R() : l();
+        e.idle ? l() : u();
       }
       function R() {
-        clearTimeout(s), (s = null);
+        return (
+          !!(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") &&
+          !T &&
+          !a.default.hidden &&
+          !0
+        );
       }
       function l() {
-        if (
-          (R(),
-          !(0, n.isEligibleForContentInventoryV1)("ContentInventoryManager") ||
-            T)
-        )
-          return;
+        clearTimeout(s), (s = null);
+      }
+      function u() {
+        if ((l(), !R())) return;
         let e = a.default.getFeed(I),
           _ = null == e ? void 0 : e.expired_at,
           E = null == _ ? 0 : new Date(_).getTime() - Date.now();
-        s = setTimeout(() => u(), E);
+        s = setTimeout(() => L(), E);
       }
-      async function u() {
-        if (!T)
+      async function L() {
+        if (R())
           try {
             T = !0;
             let e = await (0, r.getMyContentInventory)();
@@ -30620,16 +30627,16 @@
             }),
               (S = 0),
               (T = !1),
-              l();
+              u();
           } catch (e) {
             if (S < 3) {
               let e = 1e3 * Math.pow(5, S);
-              (s = setTimeout(() => u(), e)), (S += 1);
+              (s = setTimeout(() => L(), e)), (S += 1);
             }
             T = !1;
           }
       }
-      class L extends o.default {
+      class C extends o.default {
         constructor(...e) {
           super(...e),
             (this.actions = {
@@ -30639,7 +30646,7 @@
             });
         }
       }
-      var C = new L();
+      var D = new C();
     },
     302537: function (e, _, E) {
       "use strict";
@@ -52240,4 +52247,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.4e312cad32d01f97a95e.js.map
+//# sourceMappingURL=76039.f96a0154c5a493a4a57f.js.map

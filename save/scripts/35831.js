@@ -11891,9 +11891,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "276359",
+          E = "276381",
           T =
-            ((e = "a5cae5992e62a3b3e30e1ec4d14bd38e892a781b"),
+            ((e = "7f802b8ac931262b9d48d1a57fe23b6837ec5524"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20022,7 +20022,6 @@
       function g() {
         let e = (0, c.useIsEligibleForQuests)({
             location: _.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY,
-            autoTrackExposure: !0,
           }),
           { enabled: t } = d.default.useExperiment(
             { location: "UserSettingsInventory" },
@@ -22061,7 +22060,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return h;
+            return N;
           },
         });
       var a = s("37983"),
@@ -22075,12 +22074,13 @@
         c = s("583367"),
         S = s("775433"),
         E = s("308592"),
-        T = s("357957"),
-        f = s("521012"),
-        _ = s("889285"),
-        m = s("49111"),
-        g = s("263689");
-      function h() {
+        T = s("359499"),
+        f = s("357957"),
+        _ = s("521012"),
+        m = s("889285"),
+        g = s("49111"),
+        h = s("263689");
+      function N() {
         n.useEffect(() => {
           d.default.wait(() => {
             u.fetchSubscriptions(),
@@ -22089,33 +22089,33 @@
               (0, S.fetchPremiumSubscriptionPlans)(
                 null,
                 null,
-                m.RevenueSurfaces.DISCOVERY
+                g.RevenueSurfaces.DISCOVERY
               );
           });
         }, []);
         let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0,
-          r.useStateFromStoresObject)([f.default], () => ({
-            hasFetchedSubscriptions: f.default.hasFetchedSubscriptions(),
-            premiumSubscription: f.default.getPremiumTypeSubscription(),
+          r.useStateFromStoresObject)([_.default], () => ({
+            hasFetchedSubscriptions: _.default.hasFetchedSubscriptions(),
+            premiumSubscription: _.default.getPremiumTypeSubscription(),
           })),
           s = (0, E.useSubscriptionPlansLoaded)(),
           l = (0, r.useStateFromStores)(
-            [T.default],
-            () => T.default.hasFetchedPaymentSources
+            [f.default],
+            () => f.default.hasFetchedPaymentSources
           );
-        return e && s && l
+        return ((0, T.useFetchEntitlementsForTenureReward)(), e && s && l)
           ? (0, a.jsxs)("div", {
-              className: g.container,
+              className: h.container,
               children: [
-                (0, a.jsx)("div", { className: g.background }),
+                (0, a.jsx)("div", { className: h.background }),
                 (0, a.jsx)("div", {
-                  className: g.content,
-                  children: (0, a.jsx)(_.default, { premiumSubscription: t }),
+                  className: h.content,
+                  children: (0, a.jsx)(m.default, { premiumSubscription: t }),
                 }),
               ],
             })
           : (0, a.jsx)("div", {
-              className: i(g.container, g.loading),
+              className: i(h.container, h.loading),
               children: (0, a.jsx)(o.Spinner, {}),
             });
       }
@@ -32069,4 +32069,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0672c07145790ac02eec.js.map
+//# sourceMappingURL=0dc25f0276497be8d518.js.map

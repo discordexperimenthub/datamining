@@ -2862,6 +2862,7 @@
           USER_LOOTBOX_REDEEM_PRIZE: "/users/@me/lootboxes/redeem-prize",
           LOOTBOX_COUNT: "/lootboxes/count",
           TENURE_REWARD_SYNC: "/users/@me/tenure-reward/sync",
+          USER_RECENT_GAMES: _ => "/users/".concat(_, "/profile/recent-games"),
         }),
         a2 = Object.freeze({
           INDEX: "/",
@@ -17329,4 +17330,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.8c6929b800b6f9c77189.js.map
+//# sourceMappingURL=7273.add5c998a065bfe7dd87.js.map

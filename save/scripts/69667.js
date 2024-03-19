@@ -21347,7 +21347,6 @@
           })),
           f = (0, o.getIsEligibleForQuests)({
             location: E.QuestsExperimentLocations.USE_QUESTS,
-            autoTrackExposure: !1,
           });
         s.useEffect(() => {
           !0 === t.fetch &&
@@ -32330,4 +32329,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2fd002d0b179ce0375bd.js.map
+//# sourceMappingURL=66d74e65ce5b860a668c.js.map

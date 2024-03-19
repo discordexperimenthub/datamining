@@ -2333,7 +2333,6 @@
           z = (function (e, t, l) {
             let n = (0, C.useIsEligibleForQuests)({
               location: M.QuestsExperimentLocations.STREAM_SOURCE_SELECT,
-              autoTrackExposure: !1,
             });
             return a.useMemo(() => {
               if (null == l || !n) return null;
@@ -3561,4 +3560,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d0ee71ac1439600ed55d.js.map
+//# sourceMappingURL=4eebc617baac0cbf7ec8.js.map

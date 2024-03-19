@@ -3,7 +3,7 @@
   {
     511143: function (e, t, r) {
       "use strict";
-      var n, u, a, i;
+      var n, u, i, a;
       r.r(t),
         r.d(t, {
           TenureRewardSKUs: function () {
@@ -25,11 +25,12 @@
             return o;
           },
         }),
-        ((a = n || (n = {})).FREE_GUILD_BOOST_1_MONTH = "1215584796672000000"),
-        (a.FREE_GUILD_BOOST_3_MONTHS = "1215585048330240000"),
-        ((i = u || (u = {}))[(i.PENDING = 0)] = "PENDING"),
-        (i[(i.REDEEMABLE = 1)] = "REDEEMABLE"),
-        (i[(i.REDEEMED = 2)] = "REDEEMED");
+        r("222007"),
+        ((i = n || (n = {})).FREE_GUILD_BOOST_1_MONTH = "1215584796672000000"),
+        (i.FREE_GUILD_BOOST_3_MONTHS = "1215585048330240000"),
+        ((a = u || (u = {}))[(a.PENDING = 0)] = "PENDING"),
+        (a[(a.REDEEMABLE = 1)] = "REDEEMABLE"),
+        (a[(a.REDEEMED = 2)] = "REDEEMED");
       let s = 10,
         l = 45,
         d = 30,
@@ -82,56 +83,62 @@
       r.r(t),
         r.d(t, {
           useFreeBoostUserTenureReward: function () {
-            return w;
-          },
-          useFreeBoostTenureRewardEntitlement: function () {
-            return m;
-          },
-          useShouldShowTenureRewardBadge: function () {
             return A;
           },
-          useClearTenureBadge: function () {
+          useFreeBoostTenureRewardEntitlement: function () {
             return U;
+          },
+          useShouldShowTenureRewardBadge: function () {
+            return O;
+          },
+          useClearTenureBadge: function () {
+            return F;
+          },
+          useFetchEntitlementsForTenureReward: function () {
+            return M;
           },
         }),
         r("222007");
       var n = r("884691"),
         u = r("866227"),
-        a = r.n(u),
-        i = r("446674"),
+        i = r.n(u),
+        a = r("446674"),
         s = r("151426"),
-        l = r("10641"),
-        d = r("235145"),
-        o = r("384997"),
-        E = r("625634"),
-        _ = r("437712"),
-        c = r("449008"),
-        R = r("908309"),
-        T = r("53641"),
-        S = r("485426"),
-        f = r("646718"),
-        N = r("511143");
-      function w() {
+        l = r("316718"),
+        d = r("10641"),
+        o = r("235145"),
+        c = r("384997"),
+        E = r("697218"),
+        _ = r("625634"),
+        R = r("437712"),
+        T = r("449008"),
+        S = r("764364"),
+        f = r("908309"),
+        N = r("53641"),
+        w = r("485426"),
+        I = r("646718"),
+        m = r("511143");
+      function A() {
         let e = (function () {
             var e;
-            let t = (0, i.useStateFromStoresObject)([T.default], () =>
-              T.default.getState()
+            let t = (0, a.useStateFromStoresObject)([N.default], () =>
+              N.default.getState()
             );
-            if (null != t && t.fetchState === T.FetchState.FETCHED)
+            if (null != t && t.fetchState === N.FetchState.FETCHED)
               return null !==
                 (e =
                   t.userTenureRewardStatusByRewardId[
-                    N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
+                    m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
                   ]) && void 0 !== e
                 ? e
                 : t.userTenureRewardStatusByRewardId[
-                    N.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
+                    m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
                   ];
           })(),
-          t = m(),
-          r = (0, i.useStateFromStores)(
-            [E.default],
-            () => E.default.boostSlots
+          t = U(),
+          r = (0, a.useStateFromStores)(
+            [_.default],
+            () => _.default.boostSlots
           ),
           u = n.useMemo(() => {
             let e = Object.values(r);
@@ -140,31 +147,33 @@
           s = null != t;
         if (s && !1 === u)
           return {
-            nitroTenureStatus: N.NitroRewardStatus.REDEEMED,
+            nitroTenureStatus: m.NitroRewardStatus.REDEEMED,
             tenureRewardSkuId: t.skuId,
+            showNotification: !0,
           };
         if (s)
           return {
-            nitroTenureStatus: N.NitroRewardStatus.REDEEMABLE,
+            nitroTenureStatus: m.NitroRewardStatus.REDEEMABLE,
             tenureRewardSkuId: t.skuId,
+            showNotification: !0,
           };
-        if (!(null != e && (0, S.isUserTenureRewardStatusActive)(e)))
+        if (!(null != e && (0, w.isUserTenureRewardStatusActive)(e)))
           return null;
         else {
           if (null == e.redeemable_at || null == e.next_tenure_reward_id)
             return null;
-          let t = a(e.redeemable_at).diff(a.utc(), "days");
+          let t = i(e.redeemable_at).diff(i.utc(), "days");
           if (t < 0) return null;
           let r =
               e.next_tenure_reward_id ===
-                N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH &&
-              t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
+                m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH &&
+              t <= m.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
             n =
               e.next_tenure_reward_id ===
-                N.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS &&
-              t <= N.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
+                m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS &&
+              t <= m.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
           return {
-            nitroTenureStatus: N.NitroRewardStatus.PENDING,
+            nitroTenureStatus: m.NitroRewardStatus.PENDING,
             tenureRewardSkuId: e.next_tenure_reward_id,
             redeemableInDays: 0 === t ? 1 : t,
             showNotification: n || r,
@@ -172,74 +181,106 @@
         }
       }
       let D = new Set();
-      function m() {
-        let e = (0, i.useStateFromStores)(
-            [_.default],
+      function U() {
+        let e = (0, a.useStateFromStores)(
+            [R.default],
             () => {
               var e;
               return null !==
-                (e = _.default.getForApplication(
-                  f.PREMIUM_SUBSCRIPTION_APPLICATION
+                (e = R.default.getForApplication(
+                  I.PREMIUM_SUBSCRIPTION_APPLICATION
                 )) && void 0 !== e
                 ? e
                 : D;
             },
             [],
-            c.areSetsEqual
+            T.areSetsEqual
           ),
-          t = (0, S.getPremiumTier2Entitlement)(e);
+          t = (0, w.getPremiumTier2Entitlement)(e);
         if (null == t) return;
-        let r = (0, S.getTenureRewardEntitlement)(
+        let r = (0, w.getTenureRewardEntitlement)(
           [
-            N.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
-            N.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
+            m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
+            m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
           ],
           e
         );
         return r;
       }
-      let I = e => {
+      let C = e => {
           switch (e) {
-            case N.NitroRewardStatus.PENDING:
+            case m.NitroRewardStatus.PENDING:
               return [s.DismissibleContent.TENURE_REWARD_PENDING];
-            case N.NitroRewardStatus.REDEEMABLE:
+            case m.NitroRewardStatus.REDEEMABLE:
               return [s.DismissibleContent.TENURE_REWARD_REDEEMABLE];
             default:
               return [];
           }
         },
-        A = () => {
+        O = () => {
           var e;
           let t =
-              null === (e = w()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            [r, u] = n.useState(I(t)),
-            a = (0, R.useUserEligibleForNitroTenureRewardCard)({
+              null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            [r, u] = n.useState(C(t)),
+            i = (0, f.useUserEligibleForNitroTenureRewardCard)({
               location: "Home",
             });
           n.useEffect(() => {
-            u(I(t));
+            u(C(t));
           }, [t]);
-          let [i] = (0, o.useSelectedDismissibleContent)(r);
+          let [a] = (0, c.useSelectedDismissibleContent)(r);
           return (
-            !!a &&
+            !!i &&
             null != t &&
-            (i === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
-              i === s.DismissibleContent.TENURE_REWARD_PENDING)
+            (a === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
+              a === s.DismissibleContent.TENURE_REWARD_PENDING)
           );
         },
-        U = () => {
+        F = () => {
           var e;
           let t =
-              null === (e = w()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            r = I(t),
-            [u] = (0, d.useGetDismissibleContent)(r);
+              null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
+            r = C(t),
+            [u] = (0, o.useGetDismissibleContent)(r);
           n.useEffect(() => {
             null != t &&
               (u === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
                 u === s.DismissibleContent.TENURE_REWARD_PENDING) &&
-              (0, l.markDismissibleContentAsDismissed)(u);
+              (0, d.markDismissibleContentAsDismissed)(u);
           }, [t, u]);
         };
+      function M() {
+        let {
+            hasFetchedPremiumApplicationEntitlements: e,
+            isFetchingPremiumApplicationEntitlements: t,
+          } = (0, a.useStateFromStoresObject)([R.default], () => ({
+            hasFetchedPremiumApplicationEntitlements:
+              R.default.isFetchedForApplication(
+                I.PREMIUM_SUBSCRIPTION_APPLICATION
+              ),
+            isFetchingPremiumApplicationEntitlements:
+              R.default.isFetchingForApplication(
+                I.PREMIUM_SUBSCRIPTION_APPLICATION
+              ),
+          })),
+          r = (0, a.useStateFromStores)([E.default], () => {
+            let e = E.default.getCurrentUser();
+            return (
+              null != e && (0, S.isPremiumExactly)(e, I.PremiumTypes.TIER_2)
+            );
+          }),
+          u = n.useRef(!1);
+        n.useEffect(() => {
+          !1 === e &&
+            !1 === t &&
+            !0 === r &&
+            !1 === u.current &&
+            (l.fetchUserEntitlementsForApplication(
+              I.PREMIUM_SUBSCRIPTION_APPLICATION
+            ),
+            (u.current = !0));
+        }, [e, t, r]);
+      }
     },
     53641: function (e, t, r) {
       "use strict";
@@ -254,8 +295,8 @@
         });
       var n,
         u,
-        a = r("446674"),
-        i = r("913144");
+        i = r("446674"),
+        a = r("913144");
       ((n = u || (u = {}))[(n.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (n[(n.FETCHING = 1)] = "FETCHING"),
         (n[(n.FETCHED = 2)] = "FETCHED");
@@ -265,7 +306,7 @@
           fetchState: 0,
         },
         l = s;
-      class d extends a.default.PersistedStore {
+      class d extends i.default.PersistedStore {
         initialize(e) {
           l = { ...l, ...(null != e ? e : {}) };
         }
@@ -281,7 +322,7 @@
       }
       (d.displayName = "TenureRewardStore"),
         (d.persistKey = "TenureRewardStore");
-      var o = new d(i.default, {
+      var o = new d(a.default, {
         USER_TENURE_REWARD_SYNC_START: function () {
           l.fetchState = 1;
         },
@@ -303,6 +344,12 @@
           l.userTenureRewardStatusByRewardId =
             s.userTenureRewardStatusByRewardId;
         },
+        USER_TENURE_REWARD_STATUS_DELETE: function (e) {
+          let { tenureRewardIds: t } = e;
+          t.forEach(e => {
+            delete l.userTenureRewardStatusByRewardId[e];
+          });
+        },
         LOGOUT: function () {
           l = s;
         },
@@ -313,7 +360,7 @@
       r.r(t),
         r.d(t, {
           getPremiumTier2Entitlement: function () {
-            return i;
+            return a;
           },
           getTenureRewardEntitlement: function () {
             return s;
@@ -326,13 +373,13 @@
       var n = r("552712"),
         u = r("646718");
       r("511143");
-      var a = r("49111");
-      function i(e) {
+      var i = r("49111");
+      function a(e) {
         if (null == e) return;
         let t = Array.from(e).find(e => {
           var t;
           return (
-            (t = e).type === a.EntitlementTypes.PURCHASE &&
+            (t = e).type === i.EntitlementTypes.PURCHASE &&
             t.skuId === u.PremiumSubscriptionSKUs.TIER_2 &&
             t.applicationId === u.PREMIUM_SUBSCRIPTION_APPLICATION &&
             t.isValid(null, n.default)
@@ -344,7 +391,7 @@
         if (null == t) return;
         let r = Array.from(t).find(
           t =>
-            t.type === a.EntitlementTypes.PREMIUM_PURCHASE &&
+            t.type === i.EntitlementTypes.PREMIUM_PURCHASE &&
             e.includes(t.skuId) &&
             t.applicationId === u.PREMIUM_SUBSCRIPTION_APPLICATION &&
             t.isValid(null, n.default)
@@ -360,18 +407,18 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return a;
+            return i;
           },
         });
       var n = r("37983");
       r("884691");
       var u = r("75196"),
-        a = e => {
+        i = e => {
           let {
             className: t,
             backgroundColor: r,
-            backgroundCircleSize: a,
-            ...i
+            backgroundCircleSize: i,
+            ...a
           } = e;
           return (0, n.jsxs)("svg", {
             width: "100%",
@@ -380,10 +427,10 @@
             fill: "none",
             style: { overflow: "visible" },
             xmlns: "http://www.w3.org/2000/svg",
-            ...(0, u.default)({ ...i }),
+            ...(0, u.default)({ ...a }),
             children: [
               (0, n.jsx)("circle", {
-                r: null != a ? a : "40%",
+                r: null != i ? i : "40%",
                 cx: "50%",
                 cy: "50%",
                 className: r,
@@ -415,28 +462,28 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return E;
+            return c;
           },
         });
       var n = r("37983");
       r("884691");
       var u = r("414456"),
-        a = r.n(u),
-        i = r("359499"),
+        i = r.n(u),
+        a = r("359499"),
         s = r("672950"),
         l = r("594455"),
         d = r("511143"),
         o = r("627887"),
-        E = e => {
+        c = e => {
           let {
               showAnimations: t = !0,
               iconClassName: r,
               staticPercentage: u,
-              innerCircleClassName: E,
-              progressCircleStrokeSize: _,
-              gemBackgroundCircleSize: c,
+              innerCircleClassName: c,
+              progressCircleStrokeSize: E,
+              gemBackgroundCircleSize: _,
             } = e,
-            R = (0, i.useFreeBoostUserTenureReward)();
+            R = (0, a.useFreeBoostUserTenureReward)();
           if (null == R) return null;
           let { redeemableInDays: T = 0, tenureRewardSkuId: S } = R,
             f =
@@ -445,19 +492,19 @@
                 : d.NUM_DAYS_3_REQUIRED_MONTH_VARIANT,
             N = Math.min(f, Math.max(f - T, 0));
           return (0, n.jsx)("div", {
-            className: a(o.gemProgressCircle, r),
+            className: i(o.gemProgressCircle, r),
             children: (0, n.jsx)(l.default, {
-              animationClassName: a(o.activeProgressCircle, {
+              animationClassName: i(o.activeProgressCircle, {
                 [o.activeProgressCircleAnimation]: t,
               }),
-              progressCircleStrokeSize: _,
+              progressCircleStrokeSize: E,
               percentage: null != u ? u : (100 * N) / f,
               initialPercentage:
                 null != u ? u : (100 * Math.max(N - 0.25 * f, 0)) / f,
               children: (0, n.jsx)(s.default, {
                 className: t ? o.nitroGemAnimation : void 0,
-                backgroundColor: a(o.gemBackgroundFill, E),
-                backgroundCircleSize: c,
+                backgroundColor: i(o.gemBackgroundFill, c),
+                backgroundCircleSize: _,
               }),
             }),
           });
@@ -468,40 +515,40 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return i;
+            return a;
           },
         }),
         r("222007");
       var n = r("37983"),
         u = r("884691"),
-        a = r("43837"),
-        i = e => {
+        i = r("43837"),
+        a = e => {
           let {
               percentage: t = 0,
               children: r,
-              animationClassName: i,
+              animationClassName: a,
               initialPercentage: s = 0,
               progressCircleStrokeSize: l = 2,
             } = e,
             d = 43 + l / 2,
             o = 2 * Math.PI * d,
-            [E, _] = u.useState(s);
+            [c, E] = u.useState(s);
           return (
             u.useEffect(() => {
               let e = setTimeout(() => {
-                _(t);
+                E(t);
               }, 200);
               return () => clearTimeout(e);
             }, [t]),
             (0, n.jsxs)("div", {
-              className: a.circleContainer,
+              className: i.circleContainer,
               children: [
                 (0, n.jsxs)("svg", {
                   viewBox: "0 0 100 100",
-                  className: a.circleSVG,
+                  className: i.circleSVG,
                   children: [
                     (0, n.jsx)("circle", {
-                      className: a.baseProgressCircle,
+                      className: i.baseProgressCircle,
                       fill: "transparent",
                       strokeWidth: l,
                       r: "".concat(d),
@@ -513,8 +560,8 @@
                       strokeWidth: l,
                       strokeLinecap: "round",
                       strokeDasharray: "".concat(o, " ").concat(o),
-                      className: i,
-                      style: { strokeDashoffset: (1 - E / 100) * o },
+                      className: a,
+                      style: { strokeDashoffset: (1 - c / 100) * o },
                       r: "".concat(d),
                       cx: "50%",
                       cy: "50%",
@@ -543,7 +590,7 @@
                   }),
                 }),
                 (0, n.jsx)("div", {
-                  className: a.childrenContainer,
+                  className: i.childrenContainer,
                   children: r,
                 }),
               ],
@@ -553,4 +600,4 @@
     },
   },
 ]);
-//# sourceMappingURL=95180.1e1cb88d43b8e625fe00.js.map
+//# sourceMappingURL=95180.f76deb9189ba83c91f88.js.map

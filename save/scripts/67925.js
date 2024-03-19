@@ -67,7 +67,7 @@
       n.r(t),
         n.d(t, {
           fetchLibrary: function () {
-            return u;
+            return l;
           },
           createTestModeLibraryApplications: function () {
             return o;
@@ -80,11 +80,11 @@
         i = n("913144"),
         r = n("370999"),
         a = n("271560"),
-        l = n("49111");
-      async function u() {
+        u = n("49111");
+      async function l() {
         try {
           let e = await (0, a.httpGetWithCountryCodeQuery)(
-            { url: l.Endpoints.LIBRARY, oldFormErrors: !0 },
+            { url: u.Endpoints.LIBRARY, oldFormErrors: !0 },
             !1
           );
           i.default.dispatch({
@@ -100,7 +100,7 @@
         if (null == t) return;
         let n = await s.default
             .get({
-              url: l.Endpoints.APPLICATION_BRANCH_LIST(e.id),
+              url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
               oldFormErrors: !0,
             })
             .then(e => e.body),
@@ -148,8 +148,8 @@
         i = n("295426"),
         r = n("819689"),
         a = n("529805"),
-        l = n("42203"),
-        u = n("474643"),
+        u = n("42203"),
+        l = n("474643"),
         o = n("377253"),
         d = n("659500"),
         c = n("49111");
@@ -183,7 +183,7 @@
           url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id),
         });
         if (null != t.text && "" !== t.text) {
-          let n = l.default.getChannel(e.channel_id);
+          let n = u.default.getChannel(e.channel_id);
           null != n &&
             ((0, a.createPendingReply)({
               channel: n,
@@ -195,7 +195,7 @@
             i.default.saveDraft(
               e.channel_id,
               t.text,
-              u.DraftType.ChannelMessage
+              l.DraftType.ChannelMessage
             );
         }
       }
@@ -246,8 +246,8 @@
         i = n.n(s),
         r = n("151426"),
         a = n("801340"),
-        l = n("10641"),
-        u = n("872173"),
+        u = n("10641"),
+        l = n("872173"),
         o = n("374363"),
         d = n("305961"),
         c = n("299039"),
@@ -271,17 +271,17 @@
             return s && i;
           });
         if (r || !(0, f.isGuildOnboardingSettingsAvailable)(e)) return !1;
-        let u =
+        let l =
             null === (n = o.default.settings.userContent) || void 0 === n
               ? void 0
               : n.guildOnboardingUpsellDismissedAt,
-          _ = null != u ? a.Timestamp.toDate(u) : void 0,
+          _ = null != l ? a.Timestamp.toDate(l) : void 0,
           h = null != _ ? i().diff(_, "days") : null,
           C = T.indexOf(t);
         if (-1 === C) return !1;
         let g = null == h || h > p[C];
         if (!g) return !1;
-        let A = T.find(e => !(0, l.isDismissibleContentDismissed)(e)) === t;
+        let A = T.find(e => !(0, u.isDismissibleContentDismissed)(e)) === t;
         if (!A) return !1;
         let { showLifecycleUpsells: I } = E.default.getCurrentConfig(
           { guildId: e, location: "7f5b67_1" },
@@ -294,15 +294,15 @@
       }
       function C(e, t) {
         let n = a.Timestamp.now();
-        u.PreloadedUserSettingsActionCreators.updateAsync(
+        l.PreloadedUserSettingsActionCreators.updateAsync(
           "userContent",
           e => {
             e.guildOnboardingUpsellDismissedAt = n;
           },
-          u.UserSettingsDelay.INFREQUENT_USER_ACTION
+          l.UserSettingsDelay.INFREQUENT_USER_ACTION
         ),
           null != t &&
-            (0, l.markDismissibleContentAsDismissed)(t, {
+            (0, u.markDismissibleContentAsDismissed)(t, {
               forceTrack: !0,
               dismissAction: _.ContentDismissActionType.AUTO,
               guildId: e,
@@ -322,15 +322,15 @@
         i = n("21121"),
         r = n("162771"),
         a = n("398604"),
-        l = n("322224");
-      let u = {},
+        u = n("322224");
+      let l = {},
         o = new Set(),
         d = async e => {
           let t = a.default.getGuildScheduledEventsForGuild(e);
           if (0 !== t.length) {
             if (!o.has(e))
               try {
-                await l.default.getGuildEventsForCurrentUser(e), o.add(e);
+                await u.default.getGuildEventsForCurrentUser(e), o.add(e);
               } catch (e) {}
           }
         };
@@ -338,31 +338,31 @@
         async getGuildEventUserCounts(e, t, n) {
           let s = n.filter(
             n =>
-              null == u["".concat(e, "-").concat(t, "-").concat(n)] ||
-              Date.now() - u["".concat(e, "-").concat(t, "-").concat(n)] > 18e5
+              null == l["".concat(e, "-").concat(t, "-").concat(n)] ||
+              Date.now() - l["".concat(e, "-").concat(t, "-").concat(n)] > 18e5
           );
           if (
-            !(Date.now() - u["".concat(e, "-").concat(t)] < 18e5) ||
+            !(Date.now() - l["".concat(e, "-").concat(t)] < 18e5) ||
             0 !== s.length
           ) {
-            (u["".concat(e, "-").concat(t)] = Date.now()),
+            (l["".concat(e, "-").concat(t)] = Date.now()),
               s.forEach(
                 n =>
-                  (u["".concat(e, "-").concat(t, "-").concat(n)] = Date.now())
+                  (l["".concat(e, "-").concat(t, "-").concat(n)] = Date.now())
               );
             try {
-              await l.default.fetchGuildEventUserCounts(e, t, s);
+              await u.default.fetchGuildEventUserCounts(e, t, s);
             } catch (e) {}
           }
         }
         getGuildEventUsers(e, t, n) {
-          return l.default.fetchUsersForGuildEvent(e, t, n);
+          return u.default.fetchUsersForGuildEvent(e, t, n);
         }
         getGuildEventsForCurrentUser(e) {
           return d(e);
         }
         handleConnectionOpen() {
-          o.clear(), (u = {});
+          o.clear(), (l = {});
           let e = (0, i.isInMainTabsExperiment)(),
             t = r.default.getLastSelectedGuildId();
           if (e && null != t) {
@@ -372,12 +372,12 @@
         }
         handleGuildUnavailable(e) {
           let { guildId: t } = e;
-          o.delete(t), delete u[t];
+          o.delete(t), delete l[t];
         }
         handleGuildDelete(e) {
           let { guild: t } = e,
             n = t.id;
-          o.delete(n), delete u[n];
+          o.delete(n), delete l[n];
         }
         handleInviteResolveSuccess(e) {
           var t;
@@ -419,8 +419,8 @@
         i = n.n(s),
         r = n("689988"),
         a = n("599110"),
-        l = n("299039"),
-        u = n("49111");
+        u = n("299039"),
+        l = n("49111");
       class o extends r.default {
         handleMessageBecameVisible(e) {
           let { messageId: t } = e;
@@ -447,7 +447,7 @@
         handleMessageListVisibilityChange(e) {
           for (let t of e) this.handleMessageBecameVisible(t);
           let t = new Set(e.map(e => e.messageId));
-          for (let e of l.default.keys(this.currentlyVisibleMessageTimers))
+          for (let e of u.default.keys(this.currentlyVisibleMessageTimers))
             !t.has(e) && this.handleMessageLostVisibility(e);
         }
         handleChannelSelect() {
@@ -459,7 +459,7 @@
         }
         drainBuffer() {
           for (let e of this.batchBuffer)
-            a.default.track(u.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+            a.default.track(l.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
               message_id: e.messageId,
               channel_id: e.channelId,
               guild_id: e.guildId,
@@ -496,10 +496,10 @@
       n.r(t),
         n.d(t, {
           dirtyChars: function () {
-            return l;
+            return u;
           },
           coalescePeriods: function () {
-            return u;
+            return l;
           },
           EditState: function () {
             return s;
@@ -520,8 +520,8 @@
             return E;
           },
         });
-      let l = /([^A-Za-z0-9_.]+)/g,
-        u = /\.+/g;
+      let u = /([^A-Za-z0-9_.]+)/g,
+        l = /\.+/g;
       ((r = s || (s = {})).NONE = "none"),
         (r.EDIT_DISPLAY_NAME = "display-name"),
         (r.EDIT_USERNAME = "username"),
@@ -677,18 +677,18 @@
         i = n("913144"),
         r = n("599417"),
         a = n("815496"),
-        l = n("2973"),
-        u = n("227231"),
+        u = n("2973"),
+        l = n("227231"),
         o = n("49111");
       async function d() {
-        if (!l.default.isFetchingCurrentQuests) {
+        if (!u.default.isFetchingCurrentQuests) {
           i.default.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
           try {
             let e = await s.default.get({
                 url: o.Endpoints.QUESTS_CURRENT_QUESTS,
               }),
               t = e.body.quests.map(e =>
-                (0, u.questWithUserStatusFromServer)(e)
+                (0, l.questWithUserStatusFromServer)(e)
               ),
               n = t.filter(e => {
                 var t;
@@ -720,7 +720,7 @@
           });
           i.default.dispatch({
             type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-            userStatus: (0, u.questUserStatusFromServer)(e.body),
+            userStatus: (0, l.questUserStatusFromServer)(e.body),
             questId: t,
             streamKey: n,
           });
@@ -736,7 +736,7 @@
       async function E(e, t) {
         null != t.questContentCTA &&
           (0, a.trackQuestContentClicked)(e, t.questContent, t.questContentCTA);
-        let n = l.default.isEnrolling(e);
+        let n = u.default.isEnrolling(e);
         if (!n) {
           i.default.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
           try {
@@ -746,7 +746,7 @@
             });
             i.default.dispatch({
               type: "QUESTS_ENROLL_SUCCESS",
-              enrolledQuestUserStatus: (0, u.questUserStatusFromServer)(n.body),
+              enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(n.body),
             });
           } catch (t) {
             i.default.dispatch({ type: "QUESTS_ENROLL_FAILURE", questId: e });
@@ -754,7 +754,7 @@
         }
       }
       async function f(e, t, n) {
-        let a = l.default.isClaimingRewardCode(e);
+        let a = u.default.isClaimingRewardCode(e);
         if (!a) {
           i.default.dispatch({
             type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
@@ -768,7 +768,7 @@
             i.default.dispatch({
               type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
               questId: e,
-              rewardCode: (0, u.questsRewardCodeFromServer)(r.body),
+              rewardCode: (0, l.questsRewardCodeFromServer)(r.body),
             });
           } catch (t) {
             throw (
@@ -783,7 +783,7 @@
         }
       }
       async function S(e) {
-        let t = l.default.isFetchingRewardCode(e);
+        let t = u.default.isFetchingRewardCode(e);
         if (!t) {
           i.default.dispatch({
             type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
@@ -796,7 +796,7 @@
             i.default.dispatch({
               type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
               questId: e,
-              rewardCode: (0, u.questsRewardCodeFromServer)(t.body),
+              rewardCode: (0, l.questsRewardCodeFromServer)(t.body),
             });
           } catch (t) {
             throw (
@@ -811,7 +811,7 @@
         }
       }
       async function _(e, t) {
-        let n = l.default.isDismissingContent(e);
+        let n = u.default.isDismissingContent(e);
         if (!n) {
           i.default.dispatch({
             type: "QUESTS_DISMISS_CONTENT_BEGIN",
@@ -825,7 +825,7 @@
             });
             i.default.dispatch({
               type: "QUESTS_DISMISS_CONTENT_SUCCESS",
-              dismissedQuestUserStatus: (0, u.questUserStatusFromServer)(
+              dismissedQuestUserStatus: (0, l.questUserStatusFromServer)(
                 n.body
               ),
             });
@@ -852,7 +852,7 @@
           });
           i.default.dispatch({
             type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, u.questUserStatusFromServer)(t.body),
+            previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body),
           });
         } catch (t) {
           i.default.dispatch({
@@ -870,7 +870,7 @@
           });
           i.default.dispatch({
             type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, u.questUserStatusFromServer)(t.body),
+            previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body),
           });
         } catch (t) {
           i.default.dispatch({
@@ -888,7 +888,7 @@
           });
           i.default.dispatch({
             type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
-            previewQuestUserStatus: (0, u.questUserStatusFromServer)(t.body),
+            previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body),
           });
         } catch (t) {
           i.default.dispatch({
@@ -913,10 +913,10 @@
             return i;
           },
           DismissibleQuestContentFlags: function () {
-            return l;
+            return u;
           },
           CONSECUTIVE_HEARTBEAT_PERIOD_MS: function () {
-            return u;
+            return l;
           },
         });
       var s,
@@ -928,13 +928,13 @@
         (s.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
         (s.USE_QUESTS = "use_quests"),
         (s.STREAM_SOURCE_SELECT = "stream_source_select");
-      let l = {
+      let u = {
           [a.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE]: 1,
           [a.QuestContent.QUEST_BAR]: 2,
           [a.QuestContent.ACTIVITY_PANEL]: 4,
           [a.QuestContent.QUEST_LIVE_STREAM]: 8,
         },
-        u = 2 * r.default.Millis.MINUTE;
+        l = 2 * r.default.Millis.MINUTE;
     },
     374023: function (e, t, n) {
       "use strict";
@@ -944,7 +944,7 @@
             return a;
           },
           useIsEligibleForQuests: function () {
-            return l;
+            return u;
           },
         });
       var s = n("619935"),
@@ -960,22 +960,22 @@
           ],
         }),
         a = e => {
-          let { location: t, autoTrackExposure: n } = e,
-            i = r.getCurrentConfig({ location: t }, { autoTrackExposure: n }),
-            a = s.default.getCurrentConfig(
+          let { location: t } = e,
+            n = r.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }),
+            i = s.default.getCurrentConfig(
               { location: t },
-              { autoTrackExposure: n }
+              { autoTrackExposure: !1 }
             );
-          return i.enabled && !a.paymentsBlocked;
+          return n.enabled && !i.paymentsBlocked;
         },
-        l = e => {
-          let { location: t, autoTrackExposure: n } = e,
-            i = r.useExperiment({ location: t }, { autoTrackExposure: n }),
-            a = s.default.useExperiment(
+        u = e => {
+          let { location: t } = e,
+            n = r.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+            i = s.default.useExperiment(
               { location: t },
-              { autoTrackExposure: n }
+              { autoTrackExposure: !1 }
             );
-          return i.enabled && !a.paymentsBlocked;
+          return n.enabled && !i.paymentsBlocked;
         };
     },
     227231: function (e, t, n) {
@@ -1051,8 +1051,8 @@
         i = n("286235"),
         r = n("588025"),
         a = n("166604"),
-        l = n("782340");
-      let u = "https://cdn.discordapp.com/assets/quests/";
+        u = n("782340");
+      let l = "https://cdn.discordapp.com/assets/quests/";
       function o(e, t) {
         let n;
         for (let [s, i] of e)
@@ -1126,14 +1126,14 @@
           claimedAt: e.claimed_at,
         };
       }
-      let S = e => "".concat(u).concat(e).concat("/reward.png"),
-        _ = e => "".concat(u).concat(e).concat("/hero.png"),
-        T = e => "".concat(u).concat(e).concat("/hero.webm"),
-        p = e => "".concat(u).concat(e).concat("/quests_bar_hero.png"),
-        h = e => "".concat(u).concat(e).concat("/quests_bar_hero.webm"),
-        C = e => "".concat(u).concat(e).concat("/game_tile.png"),
+      let S = e => "".concat(l).concat(e).concat("/reward.png"),
+        _ = e => "".concat(l).concat(e).concat("/hero.png"),
+        T = e => "".concat(l).concat(e).concat("/hero.webm"),
+        p = e => "".concat(l).concat(e).concat("/quests_bar_hero.png"),
+        h = e => "".concat(l).concat(e).concat("/quests_bar_hero.webm"),
+        C = e => "".concat(l).concat(e).concat("/game_tile.png"),
         g = (e, t) =>
-          "".concat(u).concat(e, "/").concat(t).concat("/game_logotype.png"),
+          "".concat(l).concat(e, "/").concat(t).concat("/game_logotype.png"),
         A = e =>
           ""
             .concat(location.protocol, "//")
@@ -1146,15 +1146,15 @@
       let m = e => {
         switch (e) {
           case r.QuestRewardCodePlatforms.XBOX:
-            return l.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
+            return u.default.Messages.QUESTS_REWARD_CODE_PLATFORM_XBOX;
           case r.QuestRewardCodePlatforms.PLAYSTATION:
-            return l.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
+            return u.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION;
           case r.QuestRewardCodePlatforms.SWITCH:
-            return l.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
+            return u.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SWITCH;
           case r.QuestRewardCodePlatforms.PC:
-            return l.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
+            return u.default.Messages.QUESTS_REWARD_CODE_PLATFORM_PC;
           case r.QuestRewardCodePlatforms.CROSS_PLATFORM:
-            return l.default.Messages
+            return u.default.Messages
               .QUESTS_REWARD_CODE_PLATFORM_CROSS_PLATFORM;
         }
       };
@@ -1172,7 +1172,7 @@
             ? void 0
             : t.completedAt) != null
         )
-          return l.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
+          return u.default.Messages.QUESTS_COMPLETION_PROGRESS_COMPLETE;
         if (
           (null === (n = e.userStatus) || void 0 === n
             ? void 0
@@ -1180,14 +1180,14 @@
         ) {
           let t = N(e);
           return t >= 0.75
-            ? l.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE
+            ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_ALMOST_COMPLETE
             : t >= 0.45 && t <= 0.55
-              ? l.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY
+              ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_HALFWAY
               : t > 0
-                ? l.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED
-                : l.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
+                ? u.default.Messages.QUESTS_COMPLETION_PROGRESS_STARTED
+                : u.default.Messages.QUESTS_COMPLETION_PROGRESS_NOT_STARTED;
         }
-        return l.default.Messages.QUESTS_TITLE.format({
+        return u.default.Messages.QUESTS_TITLE.format({
           questName: e.config.messages.questName,
         });
       }
@@ -1222,32 +1222,32 @@
         i = n("913144"),
         r = n("599110"),
         a = n("773336"),
-        l = n("49111");
-      let u = {
+        u = n("49111");
+      let l = {
           desktopType: a.isPlatformEmbedded
-            ? l.DesktopNotificationTypes.ALL
-            : l.DesktopNotificationTypes.NEVER,
+            ? u.DesktopNotificationTypes.ALL
+            : u.DesktopNotificationTypes.NEVER,
           disableAllSounds: !1,
           disabledSounds: [],
-          ttsType: l.TTSNotificationTypes.NEVER,
+          ttsType: u.TTSNotificationTypes.NEVER,
           disableUnreadBadge: !1,
           taskbarFlash: !0,
           notifyMessagesInSelectedChannel: !1,
         },
-        o = u;
+        o = l;
       function d(e, t) {
         !__OVERLAY__ && r.default.track(e, t);
       }
       function c(e) {
         let { desktopType: t } = e;
         (o.desktopType = t),
-          d(l.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
-            notifications_enabled: t === l.DesktopNotificationTypes.ALL,
+          d(u.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+            notifications_enabled: t === u.DesktopNotificationTypes.ALL,
           });
       }
       class E extends s.default.DeviceSettingsStore {
         initialize(e) {
-          o = { ...u, ...e };
+          o = { ...l, ...e };
         }
         getUserAgnosticState() {
           return o;
@@ -1286,11 +1286,11 @@
               (t.disabledSounds = t.disabledSounds || []),
               (t.disableUnreadBadge = t.disableUnreadBadge || !1),
               (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash),
-              (t.ttsType = t.ttsType || l.TTSNotificationTypes.NEVER),
+              (t.ttsType = t.ttsType || u.TTSNotificationTypes.NEVER),
               null == t.desktopType &&
                 (t.desktopType = a.isPlatformEmbedded
-                  ? l.DesktopNotificationTypes.ALL
-                  : l.DesktopNotificationTypes.NEVER),
+                  ? u.DesktopNotificationTypes.ALL
+                  : u.DesktopNotificationTypes.NEVER),
               t
             );
           },
@@ -1310,14 +1310,14 @@
         },
         NOTIFICATIONS_SET_PERMISSION_STATE: function (e) {
           let { enabled: t, source: n } = e;
-          d(l.AnalyticEvents.ENABLE_NOTIFICATIONS, {
-            enabled: t === l.NotificationPermissionTypes.ENABLED,
+          d(u.AnalyticEvents.ENABLE_NOTIFICATIONS, {
+            enabled: t === u.NotificationPermissionTypes.ENABLED,
             source: n,
           }),
-            t === l.NotificationPermissionTypes.BLOCKED
-              ? c({ desktopType: l.DesktopNotificationTypes.NEVER })
-              : t === l.NotificationPermissionTypes.ENABLED &&
-                c({ desktopType: l.DesktopNotificationTypes.ALL });
+            t === u.NotificationPermissionTypes.BLOCKED
+              ? c({ desktopType: u.DesktopNotificationTypes.NEVER })
+              : t === u.NotificationPermissionTypes.ENABLED &&
+                c({ desktopType: u.DesktopNotificationTypes.ALL });
         },
         NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: function (e) {
           let { disableUnreadBadge: t } = e;
@@ -1338,7 +1338,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return u;
           },
         });
       var s = n("37983");
@@ -1346,17 +1346,17 @@
       var i = n("469563"),
         r = n("671306"),
         a = n("75196"),
-        l = (0, i.replaceIcon)(
+        u = (0, i.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
               color: i = "currentColor",
               foreground: r,
-              ...l
+              ...u
             } = e;
             return (0, s.jsx)("svg", {
-              ...(0, a.default)(l),
+              ...(0, a.default)(u),
               width: t,
               height: n,
               viewBox: "0 0 24 24",
@@ -1391,11 +1391,11 @@
           width: t = 24,
           height: n = 24,
           color: a = i.default.colors.INTERACTIVE_NORMAL,
-          colorClass: l = "",
-          ...u
+          colorClass: u = "",
+          ...l
         } = e;
         return (0, s.jsxs)("svg", {
-          ...(0, r.default)(u),
+          ...(0, r.default)(l),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -1407,12 +1407,12 @@
               fillRule: "evenodd",
               d: "M2 5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5Zm6.3.3a1 1 0 0 1 1.4 0L12 7.58l2.3-2.3a1 1 0 1 1 1.4 1.42L13.42 9l2.3 2.3a1 1 0 0 1-1.42 1.4L12 10.42l-2.3 2.3a1 1 0 0 1-1.4-1.42L10.58 9l-2.3-2.3a1 1 0 0 1 0-1.4Z",
               clipRule: "evenodd",
-              className: l,
+              className: u,
             }),
             (0, s.jsx)("path", {
               fill: "string" == typeof a ? a : a.css,
               d: "M13 19.5c0 .28.22.5.5.5H15a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h1.5a.5.5 0 0 0 .5-.5v-2c0-.28.22-.5.5-.5h1c.28 0 .5.22.5.5v2Z",
-              className: l,
+              className: u,
             }),
           ],
         });
@@ -1420,4 +1420,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67925.013a45b8f9e1f05cab39.js.map
+//# sourceMappingURL=67925.56fedf3952b48bc5e52d.js.map

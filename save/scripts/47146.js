@@ -249,8 +249,8 @@
         C = i("18494"),
         v = i("697218"),
         S = i("599110"),
-        p = i("773336"),
-        N = i("289732"),
+        N = i("773336"),
+        p = i("289732"),
         y = i("550766"),
         h = i("191225"),
         D = i("602718"),
@@ -273,7 +273,7 @@
             ? void 0
             : null === (e = t.activity) || void 0 === e
               ? void 0
-              : e.client_platform_config[(0, P.default)((0, p.getOS)())]
+              : e.client_platform_config[(0, P.default)((0, N.getOS)())]
                   .release_phase;
         return { releasePhase: i };
       }
@@ -284,7 +284,7 @@
           u = v.default.getCurrentUser();
         if (null == l || null == u) return;
         let r = h.default.getShelfActivities(a),
-          d = N.default.getState().shelfOrder,
+          d = p.default.getState().shelfOrder,
           s =
             0 ===
             h.default
@@ -630,24 +630,24 @@
                     : void 0,
                 { activityConfigs: v, applications: S } = await (0,
                 y.fetchShelf)({ guildId: T }),
-                p = (0, D.default)({
+                N = (0, D.default)({
                   applicationId: u,
                   activityConfigs: v,
                   applications: S,
                 });
-              if (null == p) {
+              if (null == N) {
                 let t = await (0, y.fetchShelf)({ guildId: T, force: !0 });
-                p = (0, D.default)({
+                N = (0, D.default)({
                   applicationId: u,
                   activityConfigs: t.activityConfigs,
                   applications: t.applications,
                 });
               }
-              let N = h.default
+              let p = h.default
                   .getEmbeddedActivitiesForChannel(a)
                   .find(t => t.applicationId === u),
                 m =
-                  null !== (n = null == N ? void 0 : N.userIds.size) &&
+                  null !== (n = null == p ? void 0 : p.userIds.size) &&
                   void 0 !== n
                     ? n
                     : 0;
@@ -655,13 +655,13 @@
                 ? (0, O.maybeJoinEmbeddedActivity)({
                     channelId: a,
                     applicationId: u,
-                    instanceId: null == N ? void 0 : N.instanceId,
+                    instanceId: null == p ? void 0 : p.instanceId,
                     inputApplication: null,
                     analyticsLocations: r,
                     embeddedActivitiesManager: this,
                   })
                 : await (0, L.default)({
-                    activityItem: p,
+                    activityItem: N,
                     currentEmbeddedApplication: l,
                     channelId: a,
                     guildId: T,
@@ -824,16 +824,16 @@
             analyticsLocations: v,
           } = t,
           S = l.default.getChannel(A),
-          p = null == S ? void 0 : S.getGuildId(),
-          N = null == p || "" === p,
+          N = null == S ? void 0 : S.getGuildId(),
+          p = null == N || "" === N,
           y = u.default.getCurrentUser();
-        if (null == S || (N && !S.isPrivate()) || null == A || null == y)
+        if (null == S || (p && !S.isPrivate()) || null == A || null == y)
           return Promise.resolve(!1);
         if (
           a.default.getVoiceChannelId() === A &&
           (null == i ? void 0 : i.id) === e
         )
-          return (0, _.default)(p, A), Promise.resolve(!0);
+          return (0, _.default)(N, A), Promise.resolve(!0);
         let h = await (0, s.confirmActivityLaunchChecks)({
           applicationId: e,
           application: n.default.getApplication(e),
@@ -857,7 +857,7 @@
         )
           return !1;
         return (
-          (0, _.default)(p, A),
+          (0, _.default)(N, A),
           (0, d.startEmbeddedActivity)(A, e, v),
           (0, f.default)({
             type: I.AnalyticsGameOpenTypes.JOIN,
@@ -900,8 +900,8 @@
             applicationId: C,
             instanceId: v,
             inputApplication: S,
-            analyticsLocations: p,
-            embeddedActivitiesManager: N,
+            analyticsLocations: N,
+            embeddedActivitiesManager: p,
           } = t,
           y = _.default.getEmbeddedActivitiesForChannel(i),
           h = y.find(
@@ -990,8 +990,8 @@
                 currentEmbeddedApplication: M,
                 activityChannelId: i,
                 locationObject: {},
-                embeddedActivitiesManager: N,
-                analyticsLocations: p,
+                embeddedActivitiesManager: p,
+                analyticsLocations: N,
               }));
           },
         });
@@ -1023,8 +1023,8 @@
         C = i("578708"),
         v = i("702173"),
         S = i("954016"),
-        p = i("49111"),
-        N = i("782340");
+        N = i("49111"),
+        p = i("782340");
       async function y(t) {
         let {
             activityItem: e,
@@ -1047,7 +1047,7 @@
         if (null == h)
           return (
             s.ComponentDispatch.dispatch(
-              p.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR,
+              N.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR,
               { applicationId: e.application.id }
             ),
             !1
@@ -1074,8 +1074,8 @@
                     .ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                 n.default.show({
                   title:
-                    N.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-                  body: N.default.Messages
+                    p.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+                  body: p.default.Messages
                     .EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
                   hideActionSheet: !1,
                 }),
@@ -1107,7 +1107,7 @@
           f.startEmbeddedActivity(h, e.application.id, L),
           (0, C.default)(D, h),
           (0, T.default)({
-            type: p.AnalyticsGameOpenTypes.LAUNCH,
+            type: N.AnalyticsGameOpenTypes.LAUNCH,
             userId: m.id,
             applicationId: e.application.id,
             locationObject: y,
@@ -1912,9 +1912,9 @@
               (await s.default.unarchiveThreadIfNecessary(e.id),
               !d.default.hasJoined(e.id) &&
                 (await s.default.joinThread(e, "Join Voice")));
-            let p = u.default.getRemoteSessionId(),
-              N = f.default.getVoiceStateForSession(o.default.getId(), p),
-              y = (null == N ? void 0 : N.channelId) === e.id,
+            let N = u.default.getRemoteSessionId(),
+              p = f.default.getVoiceStateForSession(o.default.getId(), N),
+              y = (null == p ? void 0 : p.channelId) === e.id,
               h =
                 y ||
                 c.default.getChannelId() ===
@@ -2380,6 +2380,7 @@
         (n.MUTUAL_GUILDS = "MUTUAL_GUILDS"),
         (n.MUTUAL_FRIENDS = "MUTUAL_FRIENDS"),
         (n.BOT_DATA_ACCESS = "BOT_DATA_ACCESS"),
+        (n.RECENT_GAMES = "RECENT_GAMES"),
         ((l = u || (u = {})).POPOUT = "POPOUT"),
         (l.MODAL = "MODAL"),
         (l.SETTINGS = "SETTINGS"),
@@ -2617,4 +2618,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47146.bb1e157b1815307904c3.js.map
+//# sourceMappingURL=47146.8cb33ce31208dff12203.js.map

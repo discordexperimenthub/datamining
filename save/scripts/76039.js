@@ -21914,6 +21914,14 @@
         COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER: "Review your gift",
         COLLECTIBLES_GIFT_CODE_MODAL_UPSELL:
           "You can also send gifts to your friends from the Shop! $[Check it out](checkItOut).",
+        COLLECTIBLES_MOBILE_SHOP_IAP_TITLE: "Shop anywhere, anytime",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_1:
+          "Buy Avatar Decorations and Profile Effects to personalize your profile.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_2:
+          "Popular styles include Anime, Fantasy, Cyberpunk, and more.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_DESCRIPTION_3:
+          "Nitro members get discounts on everything in the Shop.",
+        COLLECTIBLES_MOBILE_SHOP_IAP_CONFIRMATION: "Visit Shop",
         DIRECTORY_CATEGORY_TOWN_HALL_1: "Staff Picks",
         DIRECTORY_CATEGORY_TOWN_HALL_2: "Gaming",
         DIRECTORY_CATEGORY_TOWN_HALL_3: "Indie Spotlight",
@@ -24499,6 +24507,32 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} watched **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
+        RECENT_GAMES: "Recent Games",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
+          "{count} {count, plural, =1 {week} other {weeks}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
+          "{count} {count, plural, =1 {day} other {days}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO:
+          "{count} {count, plural, =1 {hour} other {hours}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO:
+          "{count} {count, plural, =1 {minute} other {minutes}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO:
+          "{count} {count, plural, =1 {second} other {seconds}} ago",
+        USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w ago",
+        USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO_SHORT: "{count}d ago",
+        USER_RECENT_GAMES_LAST_PLAYED_HOURS_AGO_SHORT: "{count}h ago",
+        USER_RECENT_GAMES_LAST_PLAYED_MINUTES_AGO_SHORT: "{count}m ago",
+        USER_RECENT_GAMES_LAST_PLAYED_SECONDS_AGO_SHORT: "{count}s ago",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES:
+          "{count} {count, plural, =1 {min} other {mins}} ago",
+        MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS:
+          "{count} {count, plural, =1 {hr} other {hrs}} this week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_HOURS:
+          "{count} {count, plural, =1 {hr} other {hrs}} this week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_MINUTES:
+          "{count} {count, plural, =1 {min} other {mins}} this week",
+        USER_RECENT_GAMES_PLAYED_LAST_WEEK_SECONDS:
+          "{count} {count, plural, =1 {sec} other {secs}} this week",
       });
     },
     444051: function (e, _, E) {
@@ -26387,8 +26421,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276359", ", Version Hash: ")
-          .concat("a5cae5992e62a3b3e30e1ec4d14bd38e892a781b")
+          .concat("276381", ", Version Hash: ")
+          .concat("7f802b8ac931262b9d48d1a57fe23b6837ec5524")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29500,12 +29534,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276359"), "276359"));
+        let _ = parseInt(((e = "276381"), "276381"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276359"
+                "276381"
               )
             ),
             (_ = 0)),
@@ -36717,7 +36751,6 @@
         maybeFetchCurrentQuests() {
           (0, R.getIsEligibleForQuests)({
             location: L.QuestsExperimentLocations.QUESTS_MANAGER,
-            autoTrackExposure: !1,
           }) &&
             !l.default.isFetchingCurrentQuests &&
             (0, O.fetchCurrentQuests)();
@@ -52201,4 +52234,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76039.364d5d5cf700d4a49098.js.map
+//# sourceMappingURL=76039.50bd9d5c7d15947ed7b7.js.map

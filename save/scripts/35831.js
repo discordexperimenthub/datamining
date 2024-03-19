@@ -11897,9 +11897,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "276782",
+          E = "276805",
           T =
-            ((e = "f1c3525102b4204d336c0725c1bf44a776531487"),
+            ((e = "a5948231eded4de8ee7b338e18e03321bfd4910f"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20975,7 +20975,7 @@
                             className: b.headerButton,
                             innerClassName: b.innerButton,
                             onClick: o,
-                            size: _.ButtonSizes.TINY,
+                            size: _.ButtonSizes.SMALL,
                             color: _.ButtonColors.CUSTOM,
                             children: [
                               (0, l.jsx)(f.GiftIcon, {
@@ -32081,4 +32081,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0f2515029f973c8d7617.js.map
+//# sourceMappingURL=edb8d6f307e466709f9c.js.map

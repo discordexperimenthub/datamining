@@ -20268,6 +20268,7 @@
         invoiceItemLabelIcon: "invoiceItemLabelIcon__184bf",
         invoiceItemLabelWithIcon: "invoiceItemLabelWithIcon__777e5",
         invoiceItemTooltip: "invoiceItemTooltip__7b304",
+        purchaseDetailsHeaderText: "purchaseDetailsHeaderText_f1f816",
         subscriptionAddedInvoiceItem: "subscriptionAddedInvoiceItem__5877e",
         subscriptionCostRow: "subscriptionCostRow__0e30d",
         subscriptionCostRowAmount: "subscriptionCostRowAmount__2386c",

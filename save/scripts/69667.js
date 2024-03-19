@@ -8385,7 +8385,47 @@
         });
       };
     },
-    29212: function (e, t, n) {
+    686538: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          handleSenderFalsePositiveFlow: function () {
+            return d;
+          },
+        });
+      var s = n("37983");
+      n("884691");
+      var l = n("77078"),
+        a = n("477566"),
+        i = n("290226"),
+        r = n("447435"),
+        o = n("817892"),
+        u = n("782340");
+      function d(e, t) {
+        (0, r.trackMediaRedactionAction)({
+          action:
+            r.TrackMediaRedactionActionType
+              .EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
+          messageId: t,
+          channelId: e,
+        });
+        let d = o.default.canSubmitFpReport(t);
+        if (!d) {
+          a.default.show({
+            title: u.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
+            body: u.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
+            confirmText: u.default.Messages.OKAY,
+          }),
+            i.default.disableFalsePositiveButton(e, t);
+          return;
+        }
+        (0, l.openModalLazy)(async () => {
+          let { default: l } = await n("492996");
+          return n => (0, s.jsx)(l, { channelId: e, messageId: t, ...n });
+        });
+      }
+    },
+    290226: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -8620,55 +8660,30 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return E;
+            return d;
           },
         });
       var s = n("37983"),
         l = n("884691"),
         a = n("446674"),
         i = n("77078"),
-        r = n("477566"),
-        o = n("29212"),
-        u = n("447435"),
-        d = n("817892"),
-        c = n("782340");
-      function E(e) {
-        let { messageId: t, channelId: E } = e,
-          f = (0, a.useStateFromStores)([d.default], () =>
-            d.default.canSubmitFpReport(t)
+        r = n("686538"),
+        o = n("817892"),
+        u = n("782340");
+      function d(e) {
+        let { messageId: t, channelId: n } = e,
+          d = (0, a.useStateFromStores)([o.default], () =>
+            o.default.canSubmitFpReport(t)
           ),
-          _ = l.useCallback(() => {
-            if (
-              ((0, u.trackMediaRedactionAction)({
-                action:
-                  u.TrackMediaRedactionActionType
-                    .EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
-                messageId: t,
-                channelId: E,
-              }),
-              !f)
-            ) {
-              r.default.show({
-                title:
-                  c.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
-                body: c.default.Messages
-                  .SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
-                confirmText: c.default.Messages.OKAY,
-              }),
-                o.default.disableFalsePositiveButton(E, t);
-              return;
-            }
-            (0, i.openModalLazy)(async () => {
-              let { default: e } = await n("492996");
-              return n => (0, s.jsx)(e, { channelId: E, messageId: t, ...n });
-            });
-          }, [E, t, f]);
+          c = l.useCallback(() => {
+            (0, r.handleSenderFalsePositiveFlow)(n, t);
+          }, [n, t]);
         return (0, s.jsx)(i.Button, {
           size: i.Button.Sizes.MEDIUM,
           color: i.Button.Colors.PRIMARY,
-          onClick: _,
-          disabled: !f,
-          children: c.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE,
+          onClick: c,
+          disabled: !d,
+          children: u.default.Messages.SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE,
         });
       }
     },
@@ -8864,7 +8879,7 @@
       n("884691");
       var l = n("65597"),
         a = n("77078"),
-        i = n("29212"),
+        i = n("290226"),
         r = n("695681"),
         o = n("447435"),
         u = n("290723"),
@@ -32421,4 +32436,4 @@
     },
   },
 ]);
-//# sourceMappingURL=019801ab72c6deb579ba.js.map
+//# sourceMappingURL=b840d6e284b53c68fc1c.js.map

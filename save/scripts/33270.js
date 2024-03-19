@@ -1709,7 +1709,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "276539",
+                  buildNumber: "276551",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -2102,7 +2102,7 @@
             C = _ && null == E,
             I = (0, U.useIsEligibleForBogoPromotion)(),
             S = (0, w.default)(),
-            m = (0, x.useShouldShowTenureRewardBadge)(),
+            m = (0, x.useTenureRewardBadgeDescription)(),
             { enabled: p } = (0, M.default)(),
             T =
               s ||
@@ -2110,16 +2110,14 @@
               null != h ||
               I ||
               S ||
-              m ||
+              null != m ||
               (null != u && Date.now() - u.createdAt.getTime() > 2592e6) ||
               (0, ei.hasPremiumSubscriptionToDisplay)(u, c);
           return T && (!p || s)
             ? (I
                 ? (n = (0, a.jsx)(D.default, { isNitroTab: !0 }))
-                : m
-                  ? (n = (0, a.jsx)(j.default, {
-                      copy: ef.default.Messages.REDEEM,
-                    }))
+                : null != m
+                  ? (n = (0, a.jsx)(j.default, { copy: m }))
                   : S
                     ? (n = (0, a.jsx)(j.default, {}))
                     : null != h
@@ -53066,4 +53064,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9315945fe19ab4c6cc9c.js.map
+//# sourceMappingURL=fa38de3edffdea725f87.js.map

@@ -55742,6 +55742,9 @@ html .progress__4ef76 {
 .subscriptionAddedInvoiceItem__5877e {
   color: var(--text-positive);
 }
+.purchaseDetailsHeaderText_f1f816 {
+  margin-bottom: 8px;
+}
 .upsellFooter__9e85b {
   background-color: var(--background-secondary);
   border-radius: 8px;
@@ -110927,4 +110930,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.a66cbf0457cec8313d9e.css.map*/
+/*# sourceMappingURL=app.198e2dd462aa3a676c90.css.map*/

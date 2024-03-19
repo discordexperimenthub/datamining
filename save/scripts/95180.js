@@ -83,19 +83,19 @@
       r.r(t),
         r.d(t, {
           useFreeBoostUserTenureReward: function () {
-            return A;
+            return m;
           },
           useFreeBoostTenureRewardEntitlement: function () {
             return U;
           },
-          useShouldShowTenureRewardBadge: function () {
-            return O;
+          useTenureRewardBadgeDescription: function () {
+            return C;
           },
           useClearTenureBadge: function () {
-            return F;
+            return O;
           },
           useFetchEntitlementsForTenureReward: function () {
-            return M;
+            return h;
           },
         }),
         r("222007");
@@ -107,8 +107,8 @@
         l = r("316718"),
         d = r("10641"),
         o = r("235145"),
-        c = r("384997"),
-        E = r("697218"),
+        E = r("384997"),
+        c = r("697218"),
         _ = r("625634"),
         R = r("437712"),
         T = r("449008"),
@@ -116,9 +116,9 @@
         f = r("908309"),
         N = r("53641"),
         w = r("485426"),
-        I = r("646718"),
-        m = r("511143");
-      function A() {
+        D = r("646718"),
+        I = r("511143");
+      function m() {
         let e = (function () {
             var e;
             let t = (0, a.useStateFromStoresObject)([N.default], () =>
@@ -128,11 +128,11 @@
               return null !==
                 (e =
                   t.userTenureRewardStatusByRewardId[
-                    m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
+                    I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH
                   ]) && void 0 !== e
                 ? e
                 : t.userTenureRewardStatusByRewardId[
-                    m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
+                    I.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS
                   ];
           })(),
           t = U(),
@@ -147,13 +147,13 @@
           s = null != t;
         if (s && !1 === u)
           return {
-            nitroTenureStatus: m.NitroRewardStatus.REDEEMED,
+            nitroTenureStatus: I.NitroRewardStatus.REDEEMED,
             tenureRewardSkuId: t.skuId,
             showNotification: !0,
           };
         if (s)
           return {
-            nitroTenureStatus: m.NitroRewardStatus.REDEEMABLE,
+            nitroTenureStatus: I.NitroRewardStatus.REDEEMABLE,
             tenureRewardSkuId: t.skuId,
             showNotification: !0,
           };
@@ -166,21 +166,21 @@
           if (t < 0) return null;
           let r =
               e.next_tenure_reward_id ===
-                m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH &&
-              t <= m.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
+                I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH &&
+              t <= I.MAX_DAYS_LEFT_TO_SHOW_CARD_1_MONTH_VARIANT,
             n =
               e.next_tenure_reward_id ===
-                m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS &&
-              t <= m.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
+                I.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS &&
+              t <= I.MAX_DAYS_LEFT_TO_SHOW_CARD_3_MONTH_VARIANT;
           return {
-            nitroTenureStatus: m.NitroRewardStatus.PENDING,
+            nitroTenureStatus: I.NitroRewardStatus.PENDING,
             tenureRewardSkuId: e.next_tenure_reward_id,
             redeemableInDays: 0 === t ? 1 : t,
             showNotification: n || r,
           };
         }
       }
-      let D = new Set();
+      let A = new Set();
       function U() {
         let e = (0, a.useStateFromStores)(
             [R.default],
@@ -188,10 +188,10 @@
               var e;
               return null !==
                 (e = R.default.getForApplication(
-                  I.PREMIUM_SUBSCRIPTION_APPLICATION
+                  D.PREMIUM_SUBSCRIPTION_APPLICATION
                 )) && void 0 !== e
                 ? e
-                : D;
+                : A;
             },
             [],
             T.areSetsEqual
@@ -200,73 +200,74 @@
         if (null == t) return;
         let r = (0, w.getTenureRewardEntitlement)(
           [
-            m.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
-            m.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
+            I.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH,
+            I.TenureRewardSKUs.FREE_GUILD_BOOST_3_MONTHS,
           ],
           e
         );
         return r;
       }
-      let C = e => {
+      let M = e => {
           switch (e) {
-            case m.NitroRewardStatus.PENDING:
+            case I.NitroRewardStatus.PENDING:
               return [s.DismissibleContent.TENURE_REWARD_PENDING];
-            case m.NitroRewardStatus.REDEEMABLE:
+            case I.NitroRewardStatus.REDEEMABLE:
               return [s.DismissibleContent.TENURE_REWARD_REDEEMABLE];
             default:
               return [];
           }
         },
-        O = () => {
-          var e;
-          let t =
-              null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            [r, u] = n.useState(C(t)),
+        C = () => {
+          let e = m(),
+            t = null == e ? void 0 : e.nitroTenureStatus,
+            [r, u] = n.useState(M(t)),
             i = (0, f.useUserEligibleForNitroTenureRewardCard)({
               location: "Home",
             });
           n.useEffect(() => {
-            u(C(t));
+            u(M(t));
           }, [t]);
-          let [a] = (0, c.useSelectedDismissibleContent)(r);
-          return (
-            !!i &&
-            null != t &&
-            (a === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
-              a === s.DismissibleContent.TENURE_REWARD_PENDING)
-          );
+          let [a] = (0, E.useSelectedDismissibleContent)(r);
+          return i
+            ? null != e &&
+              !0 === e.showNotification &&
+              (a === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
+                a === s.DismissibleContent.TENURE_REWARD_PENDING)
+              ? (0, w.getTenureRewardBadgeDescription)(e.nitroTenureStatus)
+              : null
+            : null;
         },
-        F = () => {
-          var e;
-          let t =
-              null === (e = A()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            r = C(t),
+        O = () => {
+          let e = m(),
+            t = null == e ? void 0 : e.nitroTenureStatus,
+            r = M(t),
             [u] = (0, o.useGetDismissibleContent)(r);
           n.useEffect(() => {
-            null != t &&
+            null != e &&
+              !0 === e.showNotification &&
               (u === s.DismissibleContent.TENURE_REWARD_REDEEMABLE ||
                 u === s.DismissibleContent.TENURE_REWARD_PENDING) &&
               (0, d.markDismissibleContentAsDismissed)(u);
-          }, [t, u]);
+          }, [e, u]);
         };
-      function M() {
+      function h() {
         let {
             hasFetchedPremiumApplicationEntitlements: e,
             isFetchingPremiumApplicationEntitlements: t,
           } = (0, a.useStateFromStoresObject)([R.default], () => ({
             hasFetchedPremiumApplicationEntitlements:
               R.default.isFetchedForApplication(
-                I.PREMIUM_SUBSCRIPTION_APPLICATION
+                D.PREMIUM_SUBSCRIPTION_APPLICATION
               ),
             isFetchingPremiumApplicationEntitlements:
               R.default.isFetchingForApplication(
-                I.PREMIUM_SUBSCRIPTION_APPLICATION
+                D.PREMIUM_SUBSCRIPTION_APPLICATION
               ),
           })),
-          r = (0, a.useStateFromStores)([E.default], () => {
-            let e = E.default.getCurrentUser();
+          r = (0, a.useStateFromStores)([c.default], () => {
+            let e = c.default.getCurrentUser();
             return (
-              null != e && (0, S.isPremiumExactly)(e, I.PremiumTypes.TIER_2)
+              null != e && (0, S.isPremiumExactly)(e, D.PremiumTypes.TIER_2)
             );
           }),
           u = n.useRef(!1);
@@ -276,7 +277,7 @@
             !0 === r &&
             !1 === u.current &&
             (l.fetchUserEntitlementsForApplication(
-              I.PREMIUM_SUBSCRIPTION_APPLICATION
+              D.PREMIUM_SUBSCRIPTION_APPLICATION
             ),
             (u.current = !0));
         }, [e, t, r]);
@@ -360,26 +361,30 @@
       r.r(t),
         r.d(t, {
           getPremiumTier2Entitlement: function () {
-            return a;
+            return l;
           },
           getTenureRewardEntitlement: function () {
-            return s;
+            return d;
           },
           isUserTenureRewardStatusActive: function () {
-            return l;
+            return o;
+          },
+          getTenureRewardBadgeDescription: function () {
+            return E;
           },
         }),
         r("437712");
       var n = r("552712"),
-        u = r("646718");
-      r("511143");
-      var i = r("49111");
-      function a(e) {
+        u = r("646718"),
+        i = r("511143"),
+        a = r("49111"),
+        s = r("782340");
+      function l(e) {
         if (null == e) return;
         let t = Array.from(e).find(e => {
           var t;
           return (
-            (t = e).type === i.EntitlementTypes.PURCHASE &&
+            (t = e).type === a.EntitlementTypes.PURCHASE &&
             t.skuId === u.PremiumSubscriptionSKUs.TIER_2 &&
             t.applicationId === u.PREMIUM_SUBSCRIPTION_APPLICATION &&
             t.isValid(null, n.default)
@@ -387,19 +392,30 @@
         });
         return t;
       }
-      function s(e, t) {
+      function d(e, t) {
         if (null == t) return;
         let r = Array.from(t).find(
           t =>
-            t.type === i.EntitlementTypes.PREMIUM_PURCHASE &&
+            t.type === a.EntitlementTypes.PREMIUM_PURCHASE &&
             e.includes(t.skuId) &&
             t.applicationId === u.PREMIUM_SUBSCRIPTION_APPLICATION &&
             t.isValid(null, n.default)
         );
         return r;
       }
-      function l(e) {
+      function o(e) {
         return null != e.redeemable_at && null != e.next_tenure_reward_id;
+      }
+      function E(e) {
+        switch (e) {
+          case i.NitroRewardStatus.PENDING:
+            return s.default.Messages.REWARD;
+          case i.NitroRewardStatus.REDEEMABLE:
+            return s.default.Messages.REDEEM;
+          case i.NitroRewardStatus.REDEEMED:
+          default:
+            return null;
+        }
       }
     },
     672950: function (e, t, r) {
@@ -462,7 +478,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return c;
+            return E;
           },
         });
       var n = r("37983");
@@ -474,13 +490,13 @@
         l = r("594455"),
         d = r("511143"),
         o = r("627887"),
-        c = e => {
+        E = e => {
           let {
               showAnimations: t = !0,
               iconClassName: r,
               staticPercentage: u,
-              innerCircleClassName: c,
-              progressCircleStrokeSize: E,
+              innerCircleClassName: E,
+              progressCircleStrokeSize: c,
               gemBackgroundCircleSize: _,
             } = e,
             R = (0, a.useFreeBoostUserTenureReward)();
@@ -497,13 +513,13 @@
               animationClassName: i(o.activeProgressCircle, {
                 [o.activeProgressCircleAnimation]: t,
               }),
-              progressCircleStrokeSize: E,
+              progressCircleStrokeSize: c,
               percentage: null != u ? u : (100 * N) / f,
               initialPercentage:
                 null != u ? u : (100 * Math.max(N - 0.25 * f, 0)) / f,
               children: (0, n.jsx)(s.default, {
                 className: t ? o.nitroGemAnimation : void 0,
-                backgroundColor: i(o.gemBackgroundFill, c),
+                backgroundColor: i(o.gemBackgroundFill, E),
                 backgroundCircleSize: _,
               }),
             }),
@@ -532,11 +548,11 @@
             } = e,
             d = 43 + l / 2,
             o = 2 * Math.PI * d,
-            [c, E] = u.useState(s);
+            [E, c] = u.useState(s);
           return (
             u.useEffect(() => {
               let e = setTimeout(() => {
-                E(t);
+                c(t);
               }, 200);
               return () => clearTimeout(e);
             }, [t]),
@@ -561,7 +577,7 @@
                       strokeLinecap: "round",
                       strokeDasharray: "".concat(o, " ").concat(o),
                       className: a,
-                      style: { strokeDashoffset: (1 - c / 100) * o },
+                      style: { strokeDashoffset: (1 - E / 100) * o },
                       r: "".concat(d),
                       cx: "50%",
                       cy: "50%",
@@ -600,4 +616,4 @@
     },
   },
 ]);
-//# sourceMappingURL=95180.f76deb9189ba83c91f88.js.map
+//# sourceMappingURL=95180.cfba9803c7104d72b16d.js.map

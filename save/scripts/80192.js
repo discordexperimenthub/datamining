@@ -113,17 +113,18 @@
                 onBlock: a,
                 onReport: f,
                 onMessage: p,
-                onSelect: h,
+                onCopyId: h,
+                onSelect: M,
               } = e,
-              M = t.isNonUserBot(),
-              E = [],
-              C = (0, o.useIsIarUserReportingEnabled)(
+              E = t.isNonUserBot(),
+              C = [],
+              I = (0, o.useIsIarUserReportingEnabled)(
                 "User Profile Actions Menu"
               );
-            if (!M)
+            if (!E)
               switch (n) {
                 case c.RelationshipTypes.BLOCKED:
-                  E.push(
+                  C.push(
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-unblock",
                       label: d.default.Messages.UNBLOCK,
@@ -132,7 +133,7 @@
                   );
                   break;
                 case c.RelationshipTypes.FRIEND:
-                  E.push(
+                  C.push(
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-remove",
                       label: d.default.Messages.REMOVE_FRIEND,
@@ -140,7 +141,7 @@
                       color: "danger",
                     })
                   ),
-                    E.push(
+                    C.push(
                       (0, s.jsx)(l.MenuItem, {
                         id: "user-block",
                         label: d.default.Messages.BLOCK,
@@ -148,8 +149,8 @@
                         color: "danger",
                       })
                     ),
-                    C &&
-                      E.push(
+                    I &&
+                      C.push(
                         (0, s.jsx)(l.MenuItem, {
                           id: "user-report",
                           label: d.default.Messages.REPORTS_USER_BUTTON_TITLE,
@@ -161,7 +162,7 @@
                 case c.RelationshipTypes.NONE:
                 case c.RelationshipTypes.PENDING_INCOMING:
                 default:
-                  E.push(
+                  C.push(
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-block",
                       label: d.default.Messages.BLOCK,
@@ -169,8 +170,8 @@
                       color: "danger",
                     })
                   ),
-                    C &&
-                      E.push(
+                    I &&
+                      C.push(
                         (0, s.jsx)(l.MenuItem, {
                           id: "user-report",
                           label: d.default.Messages.REPORTS_USER_BUTTON_TITLE,
@@ -179,28 +180,30 @@
                         })
                       );
               }
-            !M &&
+            !E &&
               n !== c.RelationshipTypes.BLOCKED &&
-              E.push(
+              C.push(
                 (0, s.jsx)(l.MenuItem, {
                   id: "user-message",
                   label: d.default.Messages.USER_POPOUT_MESSAGE,
                   action: p,
                 })
               );
-            let I = (0, i.default)({
+            let R = (0, i.default)({
               id: t.id,
               label: d.default.Messages.COPY_ID_USER,
-              onSuccess: r.closeContextMenu,
+              onSuccess: () => {
+                h(), (0, r.closeContextMenu)();
+              },
             });
             return (0, s.jsxs)(l.Menu, {
               navId: "user-profile-actions",
               "aria-label": d.default.Messages.USER_ACTIONS_MENU_LABEL,
               onClose: r.closeContextMenu,
-              onSelect: h,
+              onSelect: M,
               children: [
-                (0, s.jsx)(l.MenuGroup, { children: E }),
-                null != I ? (0, s.jsx)(l.MenuGroup, { children: I }) : null,
+                (0, s.jsx)(l.MenuGroup, { children: C }),
+                null != R ? (0, s.jsx)(l.MenuGroup, { children: R }) : null,
               ],
             });
           },
@@ -294,4 +297,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ab8a7ebdfd8180e45a3d.js.map
+//# sourceMappingURL=3d6d2e0fe62841bea437.js.map

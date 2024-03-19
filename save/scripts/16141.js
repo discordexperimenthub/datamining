@@ -33005,11 +33005,7 @@
                                   (0, a.jsx)(k.default, {}),
                                 ],
                               }),
-                            (0, a.jsx)(Y.default, {
-                              user: eo,
-                              setNote: !1,
-                              hideNote: !1,
-                            }),
+                            (0, a.jsx)(Y.default, { user: eo, setNote: !1 }),
                           ],
                         }),
                         eU && eb
@@ -44074,4 +44070,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b9d75c485c5fb6bd95fc.js.map
+//# sourceMappingURL=6603f479866f0b778dc6.js.map

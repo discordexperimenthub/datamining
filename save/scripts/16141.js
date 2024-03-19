@@ -1474,10 +1474,22 @@
       var a = n("824718");
       n.es(a, t);
     },
+    447289: function (e, t, n) {
+      "use strict";
+      n.r(t);
+      var a = n("522180");
+      n.es(a, t);
+    },
     426383: function (e, t, n) {
       "use strict";
       n.r(t);
       var a = n("364991");
+      n.es(a, t);
+    },
+    950019: function (e, t, n) {
+      "use strict";
+      n.r(t);
+      var a = n("980944");
       n.es(a, t);
     },
     352567: function (e, t, n) {
@@ -2139,29 +2151,22 @@
                           (0, a.jsxs)("div", {
                             className: L.footerButtons,
                             children: [
-                              (0, a.jsx)(A.default, {
-                                className: L.circularButton,
-                                channelId: et,
-                              }),
+                              (0, a.jsx)(A.default, { channelId: et }),
                               (0, a.jsx)("div", {
                                 className: L.leaveButtonContainer,
                                 children: (0, a.jsx)(h.default, {
                                   applicationId: b.id,
                                   channelId: P,
-                                  className: L.leaveActivityButton,
-                                  iconClassName: L.leaveActivityIcon,
                                   centerButton: !0,
                                   color: "red",
                                 }),
                               }),
-                              (0, a.jsx)(f.default, {
+                              (0, a.jsx)(f.CenterControlButton, {
                                 label:
                                   j.default.Messages
                                     .EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
                                 onClick: V,
-                                className: L.circularButton,
                                 iconComponent: E.default,
-                                iconClassName: L.minimizeIcon,
                                 themeable: !0,
                               }),
                             ],
@@ -2266,51 +2271,50 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return _;
           },
         }),
         n("424973");
       var a = n("37983"),
         l = n("884691"),
-        s = n("414456"),
-        i = n.n(s),
-        r = n("917351"),
-        u = n("446674"),
+        s = n("917351"),
+        i = n("446674"),
+        r = n("447289"),
+        u = n("950019"),
         o = n("996496"),
         d = n("981913"),
         c = n("660478"),
         f = n("191542"),
-        h = n("256170"),
-        m = n("378765"),
-        p = n("550766"),
-        E = n("191225"),
-        g = n("272505"),
-        S = n("49111"),
-        C = n("782340"),
-        _ = n("518958");
-      function I(e) {
-        let { channelId: t, className: n, ...s } = e,
+        h = n("378765"),
+        m = n("550766"),
+        p = n("191225"),
+        E = n("272505"),
+        g = n("49111"),
+        S = n("782340"),
+        C = n("518958");
+      function _(e) {
+        let { channelId: t, className: n, ..._ } = e,
           I = l.useRef(null),
-          T = (0, u.useStateFromStores)(
-            [E.default],
+          T = (0, i.useStateFromStores)(
+            [p.default],
             () =>
-              E.default.getFocusedLayout() ===
-              g.FocusedActivityLayouts.RESIZABLE
+              p.default.getFocusedLayout() ===
+              E.FocusedActivityLayouts.RESIZABLE
           ),
           v = l.useCallback(() => {
             let e = T
-              ? g.FocusedActivityLayouts.NO_CHAT
-              : g.FocusedActivityLayouts.RESIZABLE;
-            (0, p.updateFocusedActivityLayout)(e);
+              ? E.FocusedActivityLayouts.NO_CHAT
+              : E.FocusedActivityLayouts.RESIZABLE;
+            (0, m.updateFocusedActivityLayout)(e);
           }, [T]),
           { unreadCount: x, mentionCount: N } = (function (e) {
-            let t = (0, u.useStateFromStores)(
+            let t = (0, i.useStateFromStores)(
                 [f.default],
-                () => !(0, r.isEmpty)(f.default.getTypingUsers(e)),
+                () => !(0, s.isEmpty)(f.default.getTypingUsers(e)),
                 [e]
               ),
               { unreadCount: n, mentionCount: a } = (0,
-              u.useStateFromStoresObject)(
+              i.useStateFromStoresObject)(
                 [c.default],
                 () => ({
                   unreadCount: c.default.getUnreadCount(e),
@@ -2324,48 +2328,47 @@
             var e;
             null === (e = I.current) || void 0 === e || e.focus();
           }, []);
-        (0, m.useComponentAction)({
-          event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+        (0, h.useComponentAction)({
+          event: g.ComponentActions.FOCUS_CHAT_BUTTON,
           handler: A,
         });
-        let M = T ? C.default.Messages.HIDE_CHAT : C.default.Messages.SHOW_CHAT,
+        let M = T ? S.default.Messages.HIDE_CHAT : S.default.Messages.SHOW_CHAT,
           R = [M];
         N > 0 &&
           R.push(
-            C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format(
+            S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format(
               { mentionCount: N }
             )
           ),
           x > 0 &&
-            R.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
-        let j = (0, u.useStateFromStores)([E.default], () =>
-            E.default.getFocusedLayout()
+            R.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+        let j = (0, i.useStateFromStores)([p.default], () =>
+            p.default.getFocusedLayout()
           ),
           L = N > 0 ? N : x,
           y = L > 0;
         return (0, a.jsxs)("div", {
-          className: _.wrapper,
+          className: C.wrapper,
           children: [
-            (0, a.jsx)(d.default, {
+            (0, a.jsx)(d.CenterControlButton, {
               buttonRef: I,
               onClick: v,
               label: M,
               "aria-label": R.join(", "),
               tooltipPosition: "top",
-              iconComponent: h.default,
+              iconComponent:
+                j === E.FocusedActivityLayouts.NO_CHAT
+                  ? u.ChevronLargeUpIcon
+                  : r.ChevronLargeDownIcon,
               themeable: !0,
-              className: i(
-                n,
-                _.circularButton,
-                j === g.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow
-              ),
-              ...s,
+              className: n,
+              ..._,
             }),
             y
               ? (0, a.jsx)(o.default, {
                   hasMentions: N > 0,
                   truncatedCount: L > 99 ? "99+" : L,
-                  className: _.badge,
+                  className: C.badge,
                 })
               : null,
           ],
@@ -42950,6 +42953,41 @@
         });
       };
     },
+    522180: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ChevronLargeDownIcon: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("669491"),
+        s = n("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: i = l.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            d: "M3.3 8.3a1 1 0 0 1 1.4 0l7.3 7.29 7.3-7.3a1 1 0 1 1 1.4 1.42l-8 8a1 1 0 0 1-1.4 0l-8-8a1 1 0 0 1 0-1.42Z",
+            className: r,
+          }),
+        });
+      };
+    },
     364991: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -42980,6 +43018,41 @@
           children: (0, a.jsx)("path", {
             fill: "string" == typeof i ? i : i.css,
             d: "M8.3 3.3a1 1 0 0 0 0 1.4l7.29 7.3-7.3 7.3a1 1 0 1 0 1.42 1.4l8-8a1 1 0 0 0 0-1.4l-8-8a1 1 0 0 0-1.42 0Z",
+            className: r,
+          }),
+        });
+      };
+    },
+    980944: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ChevronLargeUpIcon: function () {
+            return i;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("669491"),
+        s = n("82169");
+      let i = e => {
+        let {
+          width: t = 24,
+          height: n = 24,
+          color: i = l.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
+        } = e;
+        return (0, a.jsx)("svg", {
+          ...(0, s.default)(u),
+          xmlns: "http://www.w3.org/2000/svg",
+          width: t,
+          height: n,
+          fill: "none",
+          viewBox: "0 0 24 24",
+          children: (0, a.jsx)("path", {
+            fill: "string" == typeof i ? i : i.css,
+            d: "M3.3 15.7a1 1 0 0 0 1.4 0L12 8.42l7.3 7.3a1 1 0 0 0 1.4-1.42l-8-8a1 1 0 0 0-1.4 0l-8 8a1 1 0 0 0 0 1.42Z",
             className: r,
           }),
         });
@@ -44001,4 +44074,4 @@
     },
   },
 ]);
-//# sourceMappingURL=340157e7d8c64f35d333.js.map
+//# sourceMappingURL=b9d75c485c5fb6bd95fc.js.map

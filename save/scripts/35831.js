@@ -11897,9 +11897,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277265",
+          E = "277267",
           T =
-            ((e = "aa1ee187372bc7bd0a7a02dc6736af2aadcb1a54"),
+            ((e = "57a077c965715539bd16d03e5666f0e0a43c7b0c"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -29783,7 +29783,7 @@
                 I.default.getCurrentConfig(
                   { location: "user_settings" },
                   { autoTrackExposure: !1 }
-                ).allowOpeningLootboxes,
+                ).showMainEntrypoints,
             },
             {
               section: eC.UserSettingsSections.FRIEND_REQUESTS,
@@ -32092,4 +32092,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c31381fc8129e1fcb2e5.js.map
+//# sourceMappingURL=8fdbaaaebebbd79dc1cb.js.map

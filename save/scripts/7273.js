@@ -2832,7 +2832,7 @@
           POLL_ANSWERS: (_, E) =>
             "/channels/".concat(_, "/polls/").concat(E, "/answers/@me"),
           POLL_EXPIRE: (_, E) =>
-            "/channels/".concat(_, "/messages/").concat(E, "/expire"),
+            "/channels/".concat(_, "/polls/").concat(E, "/expire"),
           POLL_ANSWER_VOTERS: (_, E, I) =>
             "/channels/".concat(_, "/polls/").concat(E, "/answers/").concat(I),
           PREMIUM_MARKETING: "/premium-marketing",
@@ -17339,4 +17339,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.149ad48f23fc4104e400.js.map
+//# sourceMappingURL=7273.66432abf2ec836fa0707.js.map

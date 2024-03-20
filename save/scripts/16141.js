@@ -9417,13 +9417,13 @@
                   ) {
                     let t = s.default.getActivities(e.author_id),
                       n = t.find(t => {
-                        var n;
+                        if (t.type !== r.ActivityTypes.PLAYING) return !1;
+                        let n = e.extra;
                         return (
-                          t.type === r.ActivityTypes.PLAYING &&
-                          t.application_id ===
-                            (null === (n = e.extra) || void 0 === n
-                              ? void 0
-                              : n.application_id)
+                          null != n &&
+                          (("application_id" in t &&
+                            t.application_id === n.application_id) ||
+                            ("game_name" in n && t.name === n.game_name))
                         );
                       });
                     return null != n;
@@ -44229,4 +44229,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ccee98890ad36852e0a8.js.map
+//# sourceMappingURL=fec61dd4ca5e28eb58cc.js.map

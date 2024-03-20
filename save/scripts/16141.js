@@ -32138,105 +32138,112 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return E;
+            return C;
           },
           useCreateForumPost: function () {
-            return g;
+            return _;
           },
         });
-      var a = n("884691"),
-        l = n("16470"),
-        s = n("404118"),
-        i = n("783480"),
-        r = n("681736"),
-        u = n("578198"),
-        o = n("884351"),
-        d = n("474643"),
-        c = n("305961"),
-        f = n("254490"),
-        h = n("730498"),
-        m = n("49111"),
-        p = n("782340");
-      function E(e) {
+      var a = n("37983"),
+        l = n("884691"),
+        s = n("16470"),
+        i = n("77078"),
+        r = n("913144"),
+        u = n("404118"),
+        o = n("783480"),
+        d = n("681736"),
+        c = n("578198"),
+        f = n("884351"),
+        h = n("815297"),
+        m = n("474643"),
+        p = n("254490"),
+        E = n("730498"),
+        g = n("49111"),
+        S = n("782340");
+      function C(e) {
         let {
             parentChannel: t,
             parentMessageId: n,
-            threadSettings: l,
+            threadSettings: a,
             privateThreadMode: s,
-            location: r,
-            onThreadCreated: u,
-            useDefaultThreadName: c,
+            location: i,
+            onThreadCreated: r,
+            useDefaultThreadName: u,
           } = e,
-          f = a.useCallback((e, t, n, a) => {
-            i.default.uploadFiles({
+          d = l.useCallback((e, t, n, a) => {
+            o.default.uploadFiles({
               channelId: e.id,
               uploads: t,
-              draftType: d.DraftType.FirstThreadMessage,
+              draftType: m.DraftType.FirstThreadMessage,
               options: { stickerIds: a },
-              parsedMessage: o.default.parse(e, n),
+              parsedMessage: f.default.parse(e, n),
             });
           }, []);
-        return (0, h.useCreateThreadCommon)({
+        return (0, E.useCreateThreadCommon)({
           parentChannel: t,
           parentMessageId: n,
-          threadSettings: l,
+          threadSettings: a,
           privateThreadMode: s,
-          location: r,
-          onThreadCreated: u,
-          useDefaultThreadName: c,
-          uploadHandler: f,
+          location: i,
+          onThreadCreated: r,
+          useDefaultThreadName: u,
+          uploadHandler: d,
         });
       }
-      function g(e) {
+      function _(e) {
         let { parentChannel: t } = e,
-          { name: n, appliedTags: a } = (0, u.useForumPostComposerStore)(e => {
+          { name: l, appliedTags: o } = (0, c.useForumPostComposerStore)(e => {
             let { name: t, appliedTags: n } = e;
             return { name: t, appliedTags: n };
-          }, l.default);
-        return (0, h.useCreateForumPostCommon)({
+          }, s.default);
+        return (0, E.useCreateForumPostCommon)({
           parentChannel: t,
-          name: n,
-          appliedTags: a,
-          upload: function (e, n, a) {
-            return new Promise((l, i) => {
-              let u = new r.default(e);
-              u.on("error", (e, n, a) => {
-                if (n === m.AbortCodes.EXPLICIT_CONTENT) {
-                  var l;
-                  let e = c.default.getGuild(
-                    null !== (l = t.getGuildId()) && void 0 !== l
-                      ? l
-                      : m.EMPTY_STRING_SNOWFLAKE_ID
-                  );
-                  null != e &&
-                    s.default.show({
-                      title: p.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                      body: p.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format(
-                        { name: e.toString() }
-                      ),
-                    });
-                } else if (n === m.AbortCodes.ENTITY_TOO_LARGE) {
-                  let e = (0, f.maxFileSize)(t.getGuildId());
-                  s.default.show({
-                    title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    body: p.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                      maxSize: (0, f.sizeString)(e),
+          name: l,
+          appliedTags: o,
+          upload: function (e, l, s) {
+            return new Promise((o, c) => {
+              let f = new d.default(e);
+              f.on("error", (e, l, s) => {
+                if (l === g.AbortCodes.EXPLICIT_CONTENT) {
+                  let e = (0, h.createNonce)();
+                  null != s &&
+                    null != s.attachments &&
+                    s.attachments.length > 0 &&
+                    (r.default.dispatch({
+                      type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE",
+                      messageId: e,
+                      channelId: t.id,
+                      attachments: s.attachments,
+                    }),
+                    (0, i.openModalLazy)(async () => {
+                      let { default: l } = await n
+                        .el("234235")
+                        .then(n.bind(n, "234235"));
+                      return n =>
+                        (0, a.jsx)(l, { ...n, channelId: t.id, messageId: e });
+                    }));
+                } else if (l === g.AbortCodes.ENTITY_TOO_LARGE) {
+                  let e = (0, p.maxFileSize)(t.getGuildId());
+                  u.default.show({
+                    title: S.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                    body: S.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+                      maxSize: (0, p.sizeString)(e),
                     }),
                   });
                 } else
-                  n === m.AbortCodes.TOO_MANY_ATTACHMENTS &&
-                    s.default.show({
-                      title: p.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-                      body: p.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format(
-                        { limit: m.MAX_UPLOAD_COUNT }
+                  l === g.AbortCodes.TOO_MANY_ATTACHMENTS &&
+                    u.default.show({
+                      title: S.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+                      body: S.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format(
+                        { limit: g.MAX_UPLOAD_COUNT }
                       ),
                     });
-                i({ body: a });
+                c({ body: s });
               }),
-                u.on("complete", (e, t) => {
-                  l({ body: t });
+                f.on("complete", (e, t) => {
+                  o({ body: t });
                 }),
-                u.uploadFiles(a, n, { addFilesTo: "message.attachments" });
+                f.uploadFiles(s, l, { addFilesTo: "message.attachments" });
             });
           },
         });
@@ -44229,4 +44236,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fec61dd4ca5e28eb58cc.js.map
+//# sourceMappingURL=b253b03e055efe967e21.js.map

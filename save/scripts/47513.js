@@ -26440,8 +26440,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("276895", ", Version Hash: ")
-          .concat("c67f314d1ea04fc5b3d37dbf32d67b2cfc4e6a9a")
+          .concat("276905", ", Version Hash: ")
+          .concat("e1c208ee834e1029d8d58513e81175c7a7ebbe5f")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29553,12 +29553,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "276895"), "276895"));
+        let _ = parseInt(((e = "276905"), "276905"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "276895"
+                "276905"
               )
             ),
             (_ = 0)),
@@ -32622,7 +32622,7 @@
         s = E("161454"),
         T = E("161454"),
         S = E("49111");
-      let N = 15 * i.default.Millis.MINUTE;
+      let N = 5 * i.default.Millis.MINUTE;
       class O extends o.default {
         _terminate() {
           this.stopHeartbeat();
@@ -32636,8 +32636,7 @@
           this.heartbeatInterval.stop(), this.runningGameKeys.clear();
         }
         handlePostConnectionOpen() {
-          s.default.getVisibleRunningGames().length > 0 &&
-            this.maybeStartHeartbeat();
+          s.default.getRunningGames().length > 0 && this.maybeStartHeartbeat();
         }
         constructor(...e) {
           super(...e),
@@ -32658,7 +32657,7 @@
               this.maybeStartHeartbeat();
             }),
             (this.logRunningGameHeartbeats = () => {
-              let e = s.default.getVisibleRunningGames(),
+              let e = s.default.getRunningGames(),
                 _ = {
                   rtc_connection_id: r.default.getRTCConnectionId(),
                   media_session_id: r.default.getMediaSessionId(),
@@ -32680,6 +32679,7 @@
                   game_name: e.name,
                   game_distributor: e.distributor,
                   game_executable: (0, I.removeExecutablePathPrefix)(e.exePath),
+                  game_detection_enabled: (0, T.isDetectionEnabled)(e),
                   initial_heartbeat: i,
                   ..._,
                 }),
@@ -52342,4 +52342,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.9162dc82029645d82ae5.js.map
+//# sourceMappingURL=47513.c445ddffbc0e0b1bf6f4.js.map

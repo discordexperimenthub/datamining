@@ -305,7 +305,11 @@
       }
       (d.displayName = "CollectiblesProductFreshnessStore"),
         (d.persistKey = "CollectiblesProductFreshnessStore"),
-        (d.migrations = [() => r(c, i), () => r(u, o)]);
+        (d.migrations = [
+          () => r(c, i),
+          () => r(u, o),
+          e => ({ ...e, "1217626219651006495": o }),
+        ]);
       var f = new d(s.default, {
         COLLECTIBLES_PRODUCT_DETAILS_CLOSE: function (e) {
           delete n[e.item.skuId];
@@ -3221,4 +3225,4 @@
     },
   },
 ]);
-//# sourceMappingURL=57edc9f3a0a59cba6381.js.map
+//# sourceMappingURL=f00fa1d74fea62a883bb.js.map

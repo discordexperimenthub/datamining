@@ -61,9 +61,9 @@
       "use strict";
       e.exports = n.p + "0a3a4d76bddeb746b3ae.png";
     },
-    145680: function (e, t, n) {
+    907765: function (e, t, n) {
       "use strict";
-      e.exports = n.p + "5b1b278764be59a15315.png";
+      e.exports = n.p + "be7e191bc228df793ab9.svg";
     },
     984467: function (e, t, n) {
       "use strict";
@@ -16091,7 +16091,7 @@
         u = n("217736"),
         d = n("782340"),
         c = n("860657"),
-        f = n("145680");
+        f = n("907765");
       function h(e) {
         let {
           channelId: t,
@@ -19752,4 +19752,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dc857e503ea6b394266f.js.map
+//# sourceMappingURL=8f2b7fe312a3dfe212b0.js.map

@@ -21522,7 +21522,11 @@
             if (t) return;
             let n = [];
             for (let t of e)
-              if (null != t && !(0, c.isQuestExpired)(t)) {
+              if (null == t || (0, c.isQuestExpired)(t))
+                null != t &&
+                  (0, c.isQuestExpired)(t) &&
+                  a(e => (e.has(t.id) ? e : new Map(e).set(t.id, !0)));
+              else {
                 let e = new l.Timeout(),
                   s = () => {
                     let l = Date.parse(t.config.expiresAt) - Date.now();
@@ -32527,4 +32531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=330218226e09a0c2da7c.js.map
+//# sourceMappingURL=1e25079aa7b20096bb19.js.map

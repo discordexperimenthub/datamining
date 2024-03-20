@@ -5033,6 +5033,7 @@
         OVERLAY_EXPLANATION:
           "\nEnabling the overlay will probably trigger a false positive in your anti-virus.\nAlso, the overlay may not work for everyone. If you have trouble or questions check out\n[this fancy help article!]({supportURL})\n",
         ENABLE_INGAME_OVERLAY: "Enable in-game overlay.",
+        ENABLE_LEGACY_OVERLAY: "Enable legacy overlay.",
         OVERLAY_DISABLED_OLD_CLIENT:
           "Overlay is disabled because your client is out of date.",
         KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK: "Toggle Overlay Lock",
@@ -26440,8 +26441,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277241", ", Version Hash: ")
-          .concat("7d6ab4734047b9524692c86b8a91b5adb974ab73")
+          .concat("277261", ", Version Hash: ")
+          .concat("d1d170d24989c62a2c14a0831f398174a7cdbabb")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29566,12 +29567,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277241"), "277241"));
+        let _ = parseInt(((e = "277261"), "277261"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277241"
+                "277261"
               )
             ),
             (_ = 0)),
@@ -52776,4 +52777,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.5d2a643c0fa269dcab5e.js.map
+//# sourceMappingURL=47513.d01f4d207b7e47bc0a86.js.map

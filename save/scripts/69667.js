@@ -19197,23 +19197,27 @@
         return null == t
           ? null
           : "button" === t.presentation || "secondaryButton" === t.presentation
-            ? (0, s.jsx)(u.Button, {
-                buttonRef: r,
-                onClick: d,
-                disabled: !t.enabled,
-                color:
-                  "secondaryButton" === t.presentation
-                    ? u.Button.Colors.PRIMARY
-                    : u.Button.Colors.BRAND,
-                size: u.Button.Sizes.SMALL,
-                className: i,
-                children: (0, s.jsx)(u.Text, {
-                  variant: "text-sm/medium",
-                  color: "interactive-active",
-                  scaleFontToUserSetting: !0,
-                  children: t.label,
-                }),
-              })
+            ? (0, s.jsx)(
+                u.Button,
+                {
+                  buttonRef: r,
+                  onClick: d,
+                  disabled: !t.enabled,
+                  color:
+                    "secondaryButton" === t.presentation
+                      ? u.Button.Colors.PRIMARY
+                      : u.Button.Colors.BRAND,
+                  size: u.Button.Sizes.SMALL,
+                  className: i,
+                  children: (0, s.jsx)(u.Text, {
+                    variant: "text-sm/medium",
+                    color: "interactive-active",
+                    scaleFontToUserSetting: !0,
+                    children: t.label,
+                  }),
+                },
+                t.presentation
+              )
             : "textButton" === t.presentation
               ? (0, s.jsx)(h, {
                   buttonRef: r,
@@ -32523,4 +32527,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d24e089cd250b095c33d.js.map
+//# sourceMappingURL=330218226e09a0c2da7c.js.map

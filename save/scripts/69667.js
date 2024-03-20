@@ -21706,45 +21706,59 @@
       "use strict";
       n.r(t),
         n.d(t, {
+          useQuestCardSize: function () {
+            return c;
+          },
           QuestsCard: function () {
-            return d;
+            return E;
           },
         }),
         n("222007");
       var s = n("37983"),
         l = n("884691"),
-        a = n("534801"),
-        i = n("775725"),
-        r = n("749332"),
-        o = n("419292"),
-        u = n("896451");
-      let d = e => {
+        a = n("731898"),
+        i = n("534801"),
+        r = n("775725"),
+        o = n("749332"),
+        u = n("419292"),
+        d = n("896451");
+      function c() {
+        let { ref: e, width: t } = (0, a.default)(),
+          n = l.useMemo(
+            () => (null == t || t > 460 ? "lg" : t > 280 ? "sm" : "xs"),
+            [t]
+          );
+        return { containerRef: e, size: n };
+      }
+      let E = e => {
         let { quest: t, location: n } = e,
-          [d, c] = l.useState(!1),
-          E = l.useCallback(() => c(!0), []),
-          f = l.useCallback(() => c(!1), []);
-        return (0, s.jsx)(a.QuestContentImpressionTracker, {
+          [a, E] = l.useState(!1),
+          f = l.useCallback(() => E(!0), []),
+          _ = l.useCallback(() => E(!1), []),
+          { containerRef: T, size: I } = c();
+        return (0, s.jsx)(i.QuestContentImpressionTracker, {
           questId: t.id,
           questContent: n,
           children: e =>
             (0, s.jsx)(s.Fragment, {
               children: (0, s.jsxs)("div", {
                 ref: t => {
-                  e.current = t;
+                  (e.current = t), (T.current = t);
                 },
-                className: u.questsCard,
-                onFocus: E,
-                onMouseEnter: E,
-                onBlur: f,
-                onMouseLeave: f,
+                className: d.questsCard,
+                onFocus: f,
+                onMouseEnter: f,
+                onBlur: _,
+                onMouseLeave: _,
                 children: [
-                  (0, s.jsx)(r.default, {
-                    isFocused: d,
+                  (0, s.jsx)(o.default, {
+                    isFocused: a,
                     quest: t,
                     location: n,
+                    size: I,
                   }),
-                  (0, s.jsx)(i.default, { quest: t, location: n }),
-                  (0, s.jsx)(o.default, { quest: t, location: n }),
+                  (0, s.jsx)(r.default, { quest: t, location: n, size: I }),
+                  (0, s.jsx)(u.default, { quest: t, location: n }),
                 ],
               }),
             }),
@@ -21756,7 +21770,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return g;
+            return O;
           },
         });
       var s = n("37983");
@@ -21825,150 +21839,169 @@
                   questContentCTA: c.QuestContentCTA.ACCEPT_QUEST,
                 });
               };
+        },
+        g = (e, t, n) => {
+          let s = e === T.QuestContent.QUEST_INVENTORY_CARD;
+          return s && !n && "lg" === t
+            ? "text-lg/medium"
+            : "lg" === t
+              ? "text-md/medium"
+              : "sm" === t
+                ? "text-sm/medium"
+                : "text-xs/medium";
         };
-      var g = e => {
+      function M(e) {
+        let {
+          location: t,
+          isQuestAccepted: n,
+          containerSize: l,
+          onClick: a,
+          children: i,
+        } = e;
+        return t !== T.QuestContent.QUESTS_EMBED || n
+          ? null
+          : "xs" === l
+            ? (0, s.jsx)(r.Clickable, {
+                className: S.learnMoreLink,
+                tag: "span",
+                onClick: a,
+                children: (0, s.jsx)(r.Text, {
+                  variant: "text-sm/medium",
+                  color: "text-link",
+                  children: i,
+                }),
+              })
+            : (0, s.jsx)(r.Button, {
+                wrapperClassName: S.ctaButtonWrapper,
+                color: r.ButtonColors.PRIMARY,
+                onClick: a,
+                children: i,
+              });
+      }
+      var O = e => {
         var t, n, l, c;
-        let { quest: E, location: g } = e,
-          M =
+        let { quest: E, location: O, size: R } = e,
+          v =
             (null === (t = E.userStatus) || void 0 === t
               ? void 0
               : t.completedAt) != null,
-          O =
+          L =
             (null === (n = E.userStatus) || void 0 === n
               ? void 0
               : n.enrolledAt) != null,
-          R =
+          P =
             (null === (l = E.userStatus) || void 0 === l
               ? void 0
               : l.claimedAt) != null,
-          v = O && !R && g !== T.QuestContent.QUESTS_EMBED,
-          L = (0, i.useStateFromStores)(
+          D = L && !P && O !== T.QuestContent.QUESTS_EMBED,
+          x = (0, i.useStateFromStores)(
             [o.default],
             () => o.default.useReducedMotion
           ),
-          P = O ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
-          D = C(M, O, R),
-          x = A(M, O),
-          y = h(E, g),
-          U = O && !M,
-          j = (0, f.useQuestFormattedDate)(
+          y = L ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN,
+          U = C(v, L, P),
+          j = A(v, L),
+          b = h(E, O),
+          G = L && !v,
+          B = (0, f.useQuestFormattedDate)(
             null === (c = E.userStatus) || void 0 === c
               ? void 0
               : c.completedAt,
             { year: "numeric", month: "long", day: "numeric" }
           ),
-          b = (0, i.useStateFromStores)([_.default], () =>
+          k = (0, i.useStateFromStores)([_.default], () =>
             _.default.isEnrolling(E.id)
-          );
+          ),
+          F = O === T.QuestContent.QUESTS_EMBED,
+          w = O === T.QuestContent.QUEST_INVENTORY_CARD;
         return (0, s.jsxs)("div", {
           className: a(S.outerContainer, {
-            [S.outerContainerGiftInventory]:
-              g === T.QuestContent.QUEST_INVENTORY_CARD,
-            [S.outerContainerEmbed]: g === T.QuestContent.QUESTS_EMBED,
+            [S.outerContainerSm]: "sm" === R,
+            [S.outerContainerXs]: "xs" === R,
           }),
           children: [
             (0, s.jsx)("img", {
               src: (0, I.getRewardAssetUrl)(E.id),
               alt: "",
-              className: a(S.questReward, {
-                [S.questRewardGiftInventory]:
-                  g === T.QuestContent.QUEST_INVENTORY_CARD,
-                [S.questRewardEmbed]: g === T.QuestContent.QUESTS_EMBED,
+              className: a(S.questReward, S.gridImg, {
+                [S.questRewardGiftInventory]: w && "lg" === R,
+                [S.questRewardEmbed]: F && "lg" === R,
+                [S.questRewardEmbedSm]: "sm" === R,
+                [S.questRewardEmbedXs]: "xs" === R,
               }),
             }),
             (0, s.jsxs)("div", {
-              className: S.innerContainer,
+              className: a(S.gridText, S.taskDetails),
               children: [
-                (0, s.jsxs)("div", {
-                  className: S.questCopyCta,
-                  children: [
-                    (0, s.jsxs)("div", {
-                      children: [
-                        (0, s.jsx)(r.Text, {
-                          variant: "text-lg/medium",
-                          className: S.taskInstructions,
-                          children:
-                            p.default.Messages.QUESTS_STREAM_TASK.format({
-                              minutes:
-                                E.config.streamDurationRequirementMinutes,
-                              gameTitle: E.config.messages.gameTitle,
-                            }),
-                        }),
-                        M
-                          ? (0, s.jsx)(r.Text, {
-                              variant: "text-sm/medium",
-                              color: "text-muted",
-                              children:
-                                p.default.Messages.QUEST_REWARD_COMPLETED.format(
-                                  {
-                                    reward:
-                                      E.config.messages.rewardNameWithArticle,
-                                    date: j,
-                                  }
-                                ),
-                            })
-                          : (0, s.jsx)(r.Text, {
-                              variant: "text-sm/medium",
-                              color: "text-muted",
-                              children: p.default.Messages.QUEST_REWARD.format({
-                                reward: E.config.messages.rewardNameWithArticle,
-                              }),
-                            }),
-                      ],
-                    }),
-                    (0, s.jsxs)("div", {
-                      className: S.ctaButtonContainer,
-                      children: [
-                        g === T.QuestContent.QUESTS_EMBED &&
-                          !O &&
-                          (0, s.jsx)(r.Button, {
-                            wrapperClassName: S.ctaButtonWrapper,
-                            color: r.ButtonColors.PRIMARY,
-                            onClick: () => {
-                              (0, u.transitionTo)(
-                                N.Routes.SETTINGS("inventory")
-                              );
-                            },
-                            children: p.default.Messages.QUESTS_LEARN_MORE_V2,
-                          }),
-                        (0, s.jsx)(r.Tooltip, {
-                          text: x,
-                          tooltipContentClassName: S.ctaTooltipCopy,
-                          shouldShow: !R,
-                          children: e =>
-                            M && !L
-                              ? (0, s.jsx)(d.default, {
-                                  ...e,
-                                  wrapperClassName: S.ctaButtonWrapper,
-                                  color: P,
-                                  disabled: U,
-                                  submitting: b,
-                                  onClick: y,
-                                  children: D,
-                                })
-                              : (0, s.jsx)(r.Button, {
-                                  ...e,
-                                  wrapperClassName: S.ctaButtonWrapper,
-                                  color: P,
-                                  disabled: U,
-                                  submitting: b,
-                                  onClick: y,
-                                  children: D,
-                                }),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                v &&
-                  (0, s.jsx)(m.default, {
-                    color: M
-                      ? r.tokens.colors.TEXT_POSITIVE
-                      : r.tokens.colors.BG_BRAND,
-                    quest: E,
+                (0, s.jsx)(r.Text, {
+                  variant: g(O, R, L),
+                  className: S.taskInstructions,
+                  children: p.default.Messages.QUESTS_STREAM_TASK.format({
+                    minutes: E.config.streamDurationRequirementMinutes,
+                    gameTitle: E.config.messages.gameTitle,
                   }),
+                }),
+                (0, s.jsx)(r.Text, {
+                  variant: "lg" === R ? "text-sm/medium" : "text-xs/medium",
+                  color: "text-muted",
+                  children: v
+                    ? p.default.Messages.QUEST_REWARD_COMPLETED.format({
+                        reward: E.config.messages.rewardNameWithArticle,
+                        date: B,
+                      })
+                    : p.default.Messages.QUEST_REWARD.format({
+                        reward: E.config.messages.rewardNameWithArticle,
+                      }),
+                }),
               ],
             }),
+            (0, s.jsxs)("div", {
+              className: a(S.ctaButtonContainer, S.gridCtaButtons),
+              children: [
+                (0, s.jsx)(M, {
+                  location: O,
+                  isQuestAccepted: L,
+                  containerSize: R,
+                  onClick: () => {
+                    (0, u.transitionTo)(N.Routes.SETTINGS("inventory"));
+                  },
+                  children: p.default.Messages.QUESTS_LEARN_MORE_V2,
+                }),
+                (0, s.jsx)(r.Tooltip, {
+                  text: j,
+                  tooltipContentClassName: S.ctaTooltipCopy,
+                  shouldShow: !P,
+                  children: e =>
+                    v && !x
+                      ? (0, s.jsx)(d.default, {
+                          ...e,
+                          wrapperClassName: S.ctaButtonWrapper,
+                          color: y,
+                          disabled: G,
+                          submitting: k,
+                          onClick: b,
+                          children: U,
+                        })
+                      : (0, s.jsx)(r.Button, {
+                          ...e,
+                          wrapperClassName: S.ctaButtonWrapper,
+                          color: y,
+                          disabled: G,
+                          submitting: k,
+                          onClick: b,
+                          children: U,
+                        }),
+                }),
+              ],
+            }),
+            D &&
+              (0, s.jsx)(m.default, {
+                className: S.gridProgressBar,
+                color: v
+                  ? r.tokens.colors.TEXT_POSITIVE
+                  : r.tokens.colors.BG_BRAND,
+                quest: E,
+              }),
           ],
         });
       };
@@ -22038,38 +22071,38 @@
       };
       var g = e => {
         var t;
-        let { isFocused: a, quest: o, location: T } = e,
-          g = (0, r.useStateFromStores)(
+        let { isFocused: a, quest: o, location: T, size: g } = e,
+          M = (0, r.useStateFromStores)(
             [E.default],
             () => E.default.getState().theme
           ),
-          M = (0, r.useStateFromStores)(
+          O = (0, r.useStateFromStores)(
             [c.default],
             () => c.default.useReducedMotion
           ),
-          O = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]),
-          R = l.useRef(null),
-          v = (0, m.useIsQuestExpired)(o),
-          L =
+          R = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]),
+          v = l.useRef(null),
+          L = (0, m.useIsQuestExpired)(o),
+          P =
             (null === (t = o.userStatus) || void 0 === t
               ? void 0
               : t.completedAt) != null,
-          P = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
+          D = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
           }),
-          D = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
+          x = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
           });
         return (
           l.useEffect(() => {
-            null != R.current &&
+            null != v.current &&
               (a
-                ? R.current.play()
-                : (R.current.pause(), (R.current.currentTime = 0)));
+                ? v.current.play()
+                : (v.current.pause(), (v.current.currentTime = 0)));
           }, [a]),
           (0, s.jsxs)("div", {
             className: i(A.outerContainer, {
@@ -22086,10 +22119,10 @@
                 className: A.questSplash,
                 controls: !1,
                 poster: (0, p.getHeroStaticAssetUrl)(o.id),
-                ref: R,
+                ref: v,
                 children:
-                  !M &&
-                  O &&
+                  !O &&
+                  R &&
                   (0, s.jsx)("source", {
                     src: (0, p.getHeroAnimatedAssetUrl)(o.id),
                     type: "video/webm",
@@ -22106,15 +22139,21 @@
                           (0, s.jsxs)("div", {
                             className: A.iconLogotypeContainer,
                             children: [
-                              (0, s.jsx)("img", {
-                                src: (0, p.getGameTileAssetUrl)(o.id),
-                                alt: "",
+                              (0, s.jsx)("div", {
                                 className: A.questIcon,
+                                children: (0, s.jsx)("img", {
+                                  src: (0, p.getGameTileAssetUrl)(o.id),
+                                  alt: "",
+                                  className: A.img,
+                                }),
                               }),
-                              (0, s.jsx)("img", {
-                                src: (0, p.getGameLogotypeAssetUrl)(o.id, g),
-                                alt: "",
+                              (0, s.jsx)("div", {
                                 className: A.questLogotype,
+                                children: (0, s.jsx)("img", {
+                                  src: (0, p.getGameLogotypeAssetUrl)(o.id, M),
+                                  alt: "",
+                                  className: A.img,
+                                }),
                               }),
                               (0, s.jsx)(S.default, { color: "always-white" }),
                             ],
@@ -22123,26 +22162,31 @@
                             className: A.questInfo,
                             children: [
                               (0, s.jsx)(u.Heading, {
-                                variant: "heading-xxl/bold",
+                                variant:
+                                  "lg" === g
+                                    ? "heading-xxl/bold"
+                                    : "sm" === g
+                                      ? "heading-xl/bold"
+                                      : "heading-lg/bold",
                                 children: C.default.Messages.QUEST.format({
                                   questName: o.config.messages.questName,
                                 }),
                               }),
                               (0, s.jsx)(u.Text, {
                                 variant: "text-xs/normal",
-                                children: L
+                                children: P
                                   ? C.default.Messages.QUESTS_CLAIM_BY.format({
-                                      expirationDate: D,
+                                      expirationDate: x,
                                     })
                                   : C.default.Messages.QUESTS_AVAILABLE_UNTIL.format(
-                                      { expirationDate: P }
+                                      { expirationDate: D }
                                     ),
                               }),
                             ],
                           }),
                         ],
                       }),
-                      !v &&
+                      !L &&
                         T === N.QuestContent.QUEST_INVENTORY_CARD &&
                         (0, s.jsx)(h, { quest: o, location: T }),
                     ],
@@ -22237,63 +22281,67 @@
       n.r(t),
         n.d(t, {
           InvalidQuestsEmbed: function () {
-            return c;
+            return _;
           },
         });
       var s = n("37983");
       n("884691");
-      var l = n("77078"),
-        a = n("79112"),
-        i = n("49111"),
-        r = n("782340"),
-        o = n("567782"),
-        u = n("238554");
-      function d() {
-        return (0, s.jsx)(l.TooltipContainer, {
-          text: r.default.Messages.GIFT_INVENTORY,
-          className: o.giftInventoryButton,
-          tooltipContentClassName: o.giftInventoryButtonTooltipCopy,
-          children: (0, s.jsx)(l.Button, {
-            color: l.ButtonColors.BRAND_NEW,
+      var l = n("414456"),
+        a = n.n(l),
+        i = n("77078"),
+        r = n("79112"),
+        o = n("301259"),
+        u = n("49111"),
+        d = n("782340"),
+        c = n("567782"),
+        E = n("238554");
+      function f() {
+        return (0, s.jsx)(i.TooltipContainer, {
+          text: d.default.Messages.GIFT_INVENTORY,
+          className: c.buttonContainer,
+          tooltipContentClassName: c.giftInventoryButtonTooltipCopy,
+          children: (0, s.jsx)(i.Button, {
+            className: c.button,
+            color: i.ButtonColors.BRAND_NEW,
             onClick: () => {
-              a.default.open(i.UserSettingsSections.INVENTORY);
+              r.default.open(u.UserSettingsSections.INVENTORY);
             },
-            children: r.default.Messages.GIFT_INVENTORY,
+            children: d.default.Messages.GIFT_INVENTORY,
           }),
         });
       }
-      function c() {
+      function _() {
+        let { containerRef: e, size: t } = (0, o.useQuestCardSize)();
         return (0, s.jsxs)("div", {
-          className: o.invalidContainer,
+          ref: t => (e.current = t),
+          className: a(c.container, {
+            [c.wide]: "lg" === t,
+            [c.tall]: "lg" !== t,
+          }),
           children: [
             (0, s.jsxs)("div", {
-              className: o.invalidLeftSideOuterContainer,
+              className: c.contentContainer,
               children: [
-                (0, s.jsxs)("div", {
-                  className: o.invalidLeftSideInnerContainer,
-                  children: [
-                    (0, s.jsx)(l.Heading, {
-                      variant: "heading-xl/bold",
-                      color: "header-primary",
-                      children: r.default.Messages.QUESTS_EMBED_INVALID_HEADING,
-                    }),
-                    (0, s.jsx)(l.Text, {
-                      variant: "text-sm/medium",
-                      color: "text-normal",
-                      className: o.mobileWebCopy,
-                      children: r.default.Messages.QUESTS_EMBED_INVALID_BODY,
-                    }),
-                  ],
+                (0, s.jsx)(i.Heading, {
+                  variant: "lg" === t ? "heading-xl/bold" : "heading-lg/bold",
+                  color: "header-primary",
+                  children: d.default.Messages.QUESTS_EMBED_INVALID_HEADING,
                 }),
-                (0, s.jsx)(d, {}),
+                (0, s.jsx)(i.Text, {
+                  variant: "lg" === t ? "text-sm/medium" : "text-xs/medium",
+                  color: "text-normal",
+                  className: c.mobileWebCopy,
+                  children: d.default.Messages.QUESTS_EMBED_INVALID_BODY,
+                }),
+                (0, s.jsx)(f, {}),
               ],
             }),
             (0, s.jsx)("div", {
-              className: o.invalidRightSideOuterContainer,
+              className: c.imgContainer,
               children: (0, s.jsx)("img", {
-                src: u,
+                src: E,
                 alt: "",
-                className: o.missingQuestImage,
+                className: c.missingQuestImage,
               }),
             }),
           ],
@@ -32475,4 +32523,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5ddf1210125daaf85c5d.js.map
+//# sourceMappingURL=d24e089cd250b095c33d.js.map

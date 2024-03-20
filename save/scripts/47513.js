@@ -26441,8 +26441,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277261", ", Version Hash: ")
-          .concat("d1d170d24989c62a2c14a0831f398174a7cdbabb")
+          .concat("277265", ", Version Hash: ")
+          .concat("aa1ee187372bc7bd0a7a02dc6736af2aadcb1a54")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29567,12 +29567,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277261"), "277261"));
+        let _ = parseInt(((e = "277265"), "277265"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277261"
+                "277265"
               )
             ),
             (_ = 0)),
@@ -48872,6 +48872,14 @@
                     o.inappropriateConversationWarnings
                   );
                 break;
+              case 24:
+                o.recentGamesEnabled = h.BoolValue.internalBinaryRead(
+                  e,
+                  e.uint32(),
+                  E,
+                  o.recentGamesEnabled
+                );
+                break;
               default:
                 let n = E.readUnknownField;
                 if ("throw" === n)
@@ -49016,6 +49024,12 @@
                 e.inappropriateConversationWarnings,
                 _.tag(23, M.WireType.LengthDelimited).fork(),
                 E
+              ).join(),
+            e.recentGamesEnabled &&
+              h.BoolValue.internalBinaryWrite(
+                e.recentGamesEnabled,
+                _.tag(24, M.WireType.LengthDelimited).fork(),
+                E
               ).join();
           let t = E.writeUnknownFields;
           return (
@@ -49155,6 +49169,12 @@
             {
               no: 23,
               name: "inappropriate_conversation_warnings",
+              kind: "message",
+              T: () => h.BoolValue,
+            },
+            {
+              no: 24,
+              name: "recent_games_enabled",
               kind: "message",
               T: () => h.BoolValue,
             },
@@ -52777,4 +52797,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.d01f4d207b7e47bc0a86.js.map
+//# sourceMappingURL=47513.1130a988020eca2d26e7.js.map

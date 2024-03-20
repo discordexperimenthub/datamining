@@ -10034,10 +10034,10 @@
       n.r(t),
         n.d(t, {
           isContentGroup: function () {
-            return C;
+            return _;
           },
           default: function () {
-            return _;
+            return I;
           },
         });
       var a = n("37983"),
@@ -10047,29 +10047,38 @@
         r = n("748802"),
         u = n("260792"),
         o = n("77078"),
-        d = n("826684"),
-        c = n("650509"),
-        f = n("265596"),
-        h = n("17"),
-        m = n("447313"),
-        p = n("49111"),
-        E = n("782340"),
-        g = n("611800"),
-        S = n("559571");
-      function C(e) {
-        return (null == e ? void 0 : e.id) === m.MEMBER_LIST_CONTENT_GROUP_ID;
+        d = n("272030"),
+        c = n("826684"),
+        f = n("650509"),
+        h = n("265596"),
+        m = n("17"),
+        p = n("447313"),
+        E = n("49111"),
+        g = n("782340"),
+        S = n("611800"),
+        C = n("559571");
+      function _(e) {
+        return (null == e ? void 0 : e.id) === p.MEMBER_LIST_CONTENT_GROUP_ID;
       }
-      var _ = l.memo(function (e) {
+      var I = l.memo(function (e) {
         let t,
-          { title: n, onToggleExpand: l, expanded: m, expandedCount: C } = e,
-          _ = (0, s.useStateFromStores)([f.default], () => f.default.hidden);
-        return (0, a.jsxs)(d.default, {
-          className: S.membersGroup,
+          { title: p, onToggleExpand: _, expanded: I, expandedCount: T } = e,
+          v = (0, s.useStateFromStores)([h.default], () => h.default.hidden),
+          x = l.useCallback(e => {
+            (0, d.openContextMenuLazy)(e, async () => {
+              let { MemberListContentSettingsMenu: e } = await n
+                .el("17")
+                .then(n.bind(n, "17"));
+              return () => (0, a.jsx)(e, { closePopout: d.closeContextMenu });
+            });
+          }, []);
+        return (0, a.jsxs)(c.default, {
+          className: C.membersGroup,
           children: [
             (0, a.jsx)(o.HiddenVisually, {
-              children: E.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
-                title: n,
-                count: C,
+              children: g.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
+                title: p,
+                count: T,
               }),
             }),
             (0, a.jsxs)(o.Clickable, {
@@ -10078,40 +10087,41 @@
                   e.currentTarget === e.target ||
                   e.currentTarget.contains(e.target)
                 )
-                  return _
-                    ? (0, c.toggleMemberListContentFeedHidden)()
-                    : C > 3
-                      ? l()
-                      : (0, p.NOOP)();
+                  return v
+                    ? (0, f.toggleMemberListContentFeedHidden)()
+                    : T > 3
+                      ? _()
+                      : (0, E.NOOP)();
               },
+              onContextMenu: x,
               tag: "span",
               "aria-hidden": !0,
-              className: g.headerContainer,
+              className: S.headerContainer,
               children: [
                 (0, a.jsxs)("div", {
-                  className: g.header,
+                  className: S.header,
                   children: [
-                    (0, a.jsxs)("span", { children: [n, " — ", C] }),
-                    (0, a.jsx)(h.default, {}),
+                    (0, a.jsxs)("span", { children: [p, " — ", T] }),
+                    (0, a.jsx)(m.default, {}),
                   ],
                 }),
-                C <= 3 && !_
+                T <= 3 && !v
                   ? null
-                  : ((t = _
+                  : ((t = v
                       ? (0, a.jsx)(u.ChevronSmallUpIcon, {
-                          className: g.toggleExpandIcon,
+                          className: S.toggleExpandIcon,
                         })
-                      : m
+                      : I
                         ? (0, a.jsx)(i.ChevronSmallDownIcon, {
-                            className: g.toggleExpandIcon,
+                            className: S.toggleExpandIcon,
                           })
                         : (0, a.jsx)(r.ChevronSmallRightIcon, {
-                            className: g.toggleExpandIcon,
+                            className: S.toggleExpandIcon,
                           })),
                     (0, a.jsx)(o.FocusRing, {
                       children: (0, a.jsx)("div", {
                         tabIndex: 0,
-                        className: g.toggleExpandIcon,
+                        className: S.toggleExpandIcon,
                         children: t,
                       }),
                     })),
@@ -10238,6 +10248,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
+          MemberListContentSettingsMenu: function () {
+            return m;
+          },
           default: function () {
             return p;
           },
@@ -44236,4 +44249,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ffb461fe1720d57d70dd.js.map
+//# sourceMappingURL=8470ad7dabbab5bad360.js.map

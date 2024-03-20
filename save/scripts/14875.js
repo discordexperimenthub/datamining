@@ -117,6 +117,7 @@
         (i.PROFILE = "profile"),
         (i.PROFILE_MODAL = "profile modal"),
         (i.PROFILE_POPOUT = "profile popout"),
+        (i.BITE_SIZE_PROFILE_POPOUT = "bite size profile popout"),
         (i.GUILD_PROFILE = "guild profile"),
         (i.EDIT_AVATAR = "edit avatar"),
         (i.EDIT_BANNER = "edit banner"),
@@ -323,4 +324,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.7c768bbed3861ac685ea.js.map
+//# sourceMappingURL=14875.f108e57f51b368d5ff0c.js.map

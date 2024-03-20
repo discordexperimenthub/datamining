@@ -21613,6 +21613,68 @@
         }, [e, t]);
       }
     },
+    555226: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          GameTileSizes: function () {
+            return l;
+          },
+          default: function () {
+            return E;
+          },
+        });
+      var s,
+        l,
+        a = n("37983");
+      n("884691");
+      var i = n("414456"),
+        r = n.n(i),
+        o = n("819855"),
+        u = n("227231"),
+        d = n("49111"),
+        c = n("194829");
+      ((s = l || (l = {}))[(s.SMALL = 24)] = "SMALL"),
+        (s[(s.MEDIUM = 32)] = "MEDIUM");
+      var E = function (e) {
+        let {
+          className: t,
+          gameTileSize: n = 24,
+          quest: s,
+          theme: l = d.ThemeTypes.DARK,
+        } = e;
+        return (0, a.jsxs)("div", {
+          className: r(c.partnerBranding, t),
+          children: [
+            (0, a.jsx)("img", {
+              className: c.partnerBrandingGameTile,
+              alt: "",
+              src: (0, u.getGameTileAssetUrl)(s.id),
+              style: {
+                borderRadius: (function (e) {
+                  switch (e) {
+                    case 24:
+                      return 3;
+                    case 32:
+                      return 4;
+                  }
+                })(n),
+                width: n,
+                height: n,
+              },
+            }),
+            (0, a.jsx)("img", {
+              className: c.partnerBrandingLogotype,
+              alt: s.config.messages.gameTitle,
+              src: (0, u.getGameLogotypeAssetUrl)(
+                s.id,
+                (0, o.isThemeDark)(l) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT
+              ),
+            }),
+          ],
+        });
+      };
+    },
     315130: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -22019,7 +22081,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return g;
+            return M;
           },
         }),
         n("222007");
@@ -22040,10 +22102,11 @@
         m = n("879364"),
         N = n("588025"),
         p = n("227231"),
-        S = n("762985"),
-        C = n("782340"),
-        A = n("444092");
-      let h = e => {
+        S = n("555226"),
+        C = n("762985"),
+        A = n("782340"),
+        h = n("444092");
+      let g = e => {
         let { quest: t, location: n } = e,
           [a, i] = l.useState(!1),
           r = l.useRef(new o.Timeout());
@@ -22067,56 +22130,56 @@
           forceOpen: a,
           shouldShow: a,
           color: u.Tooltip.Colors.GREEN,
-          text: C.default.Messages.COPY_SUCCESS_1,
+          text: A.default.Messages.COPY_SUCCESS_1,
           children: () =>
             (0, s.jsx)(u.Button, {
               color: u.Button.Colors.PRIMARY,
               size: u.Button.Sizes.SMALL,
               onClick: () => d(),
-              children: C.default.Messages.QUESTS_SHARE_QUEST,
+              children: A.default.Messages.QUESTS_SHARE_QUEST,
             }),
         });
       };
-      var g = e => {
+      var M = e => {
         var t;
-        let { isFocused: a, quest: o, location: T, size: g } = e,
-          M = (0, r.useStateFromStores)(
+        let { isFocused: a, quest: o, location: T, size: M } = e,
+          O = (0, r.useStateFromStores)(
             [E.default],
             () => E.default.getState().theme
           ),
-          O = (0, r.useStateFromStores)(
+          R = (0, r.useStateFromStores)(
             [c.default],
             () => c.default.useReducedMotion
           ),
-          R = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]),
-          v = l.useRef(null),
-          L = (0, m.useIsQuestExpired)(o),
-          P =
+          v = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]),
+          L = l.useRef(null),
+          P = (0, m.useIsQuestExpired)(o),
+          D =
             (null === (t = o.userStatus) || void 0 === t
               ? void 0
               : t.completedAt) != null,
-          D = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
+          x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
           }),
-          x = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
+          y = (0, m.useQuestFormattedDate)(o.config.rewardCodeExpiresAt, {
             year: "numeric",
             month: "long",
             day: "numeric",
           });
         return (
           l.useEffect(() => {
-            null != v.current &&
+            null != L.current &&
               (a
-                ? v.current.play()
-                : (v.current.pause(), (v.current.currentTime = 0)));
+                ? L.current.play()
+                : (L.current.pause(), (L.current.currentTime = 0)));
           }, [a]),
           (0, s.jsxs)("div", {
-            className: i(A.outerContainer, {
-              [A.outerContainerGiftInventory]:
+            className: i(h.outerContainer, {
+              [h.outerContainerGiftInventory]:
                 T === N.QuestContent.QUEST_INVENTORY_CARD,
-              [A.outerContainerEmbed]: T === N.QuestContent.QUESTS_EMBED,
+              [h.outerContainerEmbed]: T === N.QuestContent.QUESTS_EMBED,
             }),
             children: [
               (0, s.jsx)(_.default, {
@@ -22124,83 +22187,73 @@
                 loop: !1,
                 muted: !0,
                 playsInline: !0,
-                className: A.questSplash,
+                className: h.questSplash,
                 controls: !1,
                 poster: (0, p.getHeroStaticAssetUrl)(o.id),
-                ref: v,
+                ref: L,
                 children:
-                  !O &&
-                  R &&
+                  !R &&
+                  v &&
                   (0, s.jsx)("source", {
                     src: (0, p.getHeroAnimatedAssetUrl)(o.id),
                     type: "video/webm",
                   }),
               }),
               (0, s.jsxs)("div", {
-                className: A.header,
+                className: h.header,
                 children: [
                   (0, s.jsxs)("div", {
-                    className: A.headerContent,
+                    className: h.headerContent,
                     children: [
                       (0, s.jsxs)("div", {
                         children: [
                           (0, s.jsxs)("div", {
-                            className: A.iconLogotypeContainer,
+                            className: h.iconLogotypeContainer,
                             children: [
-                              (0, s.jsx)("div", {
-                                className: A.questIcon,
-                                children: (0, s.jsx)("img", {
-                                  src: (0, p.getGameTileAssetUrl)(o.id),
-                                  alt: "",
-                                  className: A.img,
-                                }),
+                              (0, s.jsx)(S.default, {
+                                className: h.partnerBranding,
+                                gameTileSize: S.GameTileSizes.MEDIUM,
+                                quest: o,
+                                theme: O,
                               }),
-                              (0, s.jsx)("div", {
-                                className: A.questLogotype,
-                                children: (0, s.jsx)("img", {
-                                  src: (0, p.getGameLogotypeAssetUrl)(o.id, M),
-                                  alt: "",
-                                  className: A.img,
-                                }),
-                              }),
-                              (0, s.jsx)(S.default, { color: "always-white" }),
+                              (0, s.jsx)(C.default, { color: "always-white" }),
                             ],
                           }),
                           (0, s.jsxs)("div", {
-                            className: A.questInfo,
+                            className: h.questInfo,
                             children: [
                               (0, s.jsx)(u.Heading, {
                                 variant:
-                                  "lg" === g
+                                  "lg" === M
                                     ? "heading-xxl/bold"
-                                    : "sm" === g
+                                    : "sm" === M
                                       ? "heading-xl/bold"
                                       : "heading-lg/bold",
-                                children: C.default.Messages.QUEST.format({
+                                children: A.default.Messages.QUEST.format({
                                   questName: o.config.messages.questName,
                                 }),
                               }),
                               (0, s.jsx)(u.Text, {
                                 variant: "text-xs/normal",
-                                children: P
-                                  ? C.default.Messages.QUESTS_CLAIM_BY.format({
-                                      expirationDate: x,
+                                children: D
+                                  ? A.default.Messages.QUESTS_CLAIM_BY.format({
+                                      expirationDate: y,
                                     })
-                                  : C.default.Messages.QUESTS_AVAILABLE_UNTIL.format(
-                                      { expirationDate: D }
+                                  : A.default.Messages.QUESTS_AVAILABLE_UNTIL.format(
+                                      { expirationDate: x }
                                     ),
                               }),
                             ],
                           }),
                         ],
                       }),
-                      !L &&
+                      !P &&
                         T === N.QuestContent.QUEST_INVENTORY_CARD &&
-                        (0, s.jsx)(h, { quest: o, location: T }),
+                        (0, s.jsx)(g, { quest: o, location: T }),
                     ],
                   }),
                   (0, s.jsx)(u.Clickable, {
-                    className: A.submenuWrapper,
+                    className: h.submenuWrapper,
                     onClick: e => {
                       (0, I.trackQuestContentClicked)(
                         o.id,
@@ -22224,7 +22277,7 @@
                         });
                     },
                     children: (0, s.jsx)(f.default, {
-                      className: A.submenuIcon,
+                      className: h.submenuIcon,
                     }),
                   }),
                 ],
@@ -32531,4 +32584,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1e25079aa7b20096bb19.js.map
+//# sourceMappingURL=36311bc91157db2412df.js.map

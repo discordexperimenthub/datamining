@@ -262,7 +262,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return b;
+            return P;
           },
         }),
         n("222007"),
@@ -293,9 +293,9 @@
         R = n("49111"),
         y = n("782340"),
         x = n("431480"),
-        P = n("856614"),
-        b = function (e) {
-          let { guildId: t, transitionState: s, onClose: b } = e,
+        b = n("856614"),
+        P = function (e) {
+          let { guildId: t, transitionState: s, onClose: P } = e,
             L = (0, a.useStateFromStores)([S.default], () =>
               S.default.getRoles(t)
             ),
@@ -303,9 +303,9 @@
             O = (0, a.useStateFromStores)([p.default], () =>
               p.default.getMember(t, M)
             ),
-            [j, D] = r.useState([]),
-            w = (0, f.default)(),
-            V = (0, C.useUID)();
+            [j, V] = r.useState([]),
+            D = (0, f.default)(),
+            w = (0, C.useUID)();
           if (
             (r.useEffect(() => {
               0 !== j.length &&
@@ -320,7 +320,7 @@
             r.useEffect(() => {
               d.default
                 .getGuildRoleConnectionsConfigurations(t)
-                .then(e => D(e));
+                .then(e => V(e));
             }, [t]),
             null == O)
           )
@@ -335,7 +335,7 @@
           });
           return (0, i.jsxs)(u.ModalRoot, {
             transitionState: s,
-            "aria-labelledby": V,
+            "aria-labelledby": w,
             className: x.modal,
             children: [
               (0, i.jsxs)(u.ModalHeader, {
@@ -349,7 +349,7 @@
                   }),
                   (0, i.jsx)(u.ModalCloseButton, {
                     className: x.modalCloseButton,
-                    onClick: b,
+                    onClick: P,
                   }),
                 ],
               }),
@@ -394,17 +394,17 @@
                                         r.bot
                                       ).getAvatarURL(t, 24),
                                       alt: "",
-                                      className: l(x.botAvatar, P.avatar),
+                                      className: l(x.botAvatar, b.avatar),
                                     })
                                   : null;
                             } else {
                               let t = h.default.get(e.connection_type);
                               a = (0, i.jsx)("img", {
-                                src: (0, o.isThemeLight)(w)
+                                src: (0, o.isThemeLight)(D)
                                   ? t.icon.lightSVG
                                   : t.icon.darkSVG,
                                 alt: "",
-                                className: P.avatar,
+                                className: b.avatar,
                               });
                             }
                             null != a &&
@@ -857,16 +857,16 @@
             trialId: R,
             postSuccessGuild: y,
             openInvoiceId: x,
-            applicationId: P,
-            referralTrialOfferId: b,
+            applicationId: b,
+            referralTrialOfferId: P,
             giftRecipient: L,
             returnRef: M,
             subscription: O,
           } = null != e ? e : {},
           j = !1,
-          D = (0, r.v4)(),
-          w = u.default.getCurrentUser(),
-          V = (0, f.isPremiumExactly)(w, E.PremiumTypes.TIER_2);
+          V = (0, r.v4)(),
+          D = u.default.getCurrentUser(),
+          w = (0, f.isPremiumExactly)(D, E.PremiumTypes.TIER_2);
         (0, s.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -874,7 +874,7 @@
               let { onClose: r, ...s } = n;
               return (0, i.jsx)(e, {
                 ...s,
-                loadId: D,
+                loadId: V,
                 subscriptionTier: I,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(I),
                 isGift: A,
@@ -890,7 +890,7 @@
                       !A &&
                         null != t &&
                         t === E.PremiumSubscriptionSKUs.TIER_2 &&
-                        !V &&
+                        !w &&
                         d.ComponentDispatch.dispatch(
                           h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
@@ -909,8 +909,8 @@
                 postSuccessGuild: y,
                 planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                 openInvoiceId: x,
-                applicationId: P,
-                referralTrialOfferId: b,
+                applicationId: b,
+                referralTrialOfferId: P,
                 returnRef: M,
                 subscription: O,
               });
@@ -921,7 +921,7 @@
             onCloseCallback: () => {
               !j &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: D,
+                  load_id: V,
                   payment_type:
                     h.PurchaseTypeToAnalyticsPaymentType[
                       h.PurchaseTypes.SUBSCRIPTION
@@ -931,7 +931,7 @@
                   subscription_type: h.SubscriptionTypes.PREMIUM,
                   is_gift: A,
                   eligible_for_trial: null != R,
-                  application_id: P,
+                  application_id: b,
                   location_stack: C,
                 }),
                 (0, l.clearError)(),
@@ -1150,10 +1150,10 @@
             return x;
           },
           canUnarchiveThread: function () {
-            return P;
+            return b;
           },
           useIsActiveChannelOrUnarchivableThread: function () {
-            return b;
+            return P;
           },
           getIsActiveChannelOrUnarchivableThread: function () {
             return L;
@@ -1165,10 +1165,10 @@
             return j;
           },
           useCanJoinThreadVoice: function () {
-            return D;
+            return V;
           },
           useIsNonModInLockedThread: function () {
-            return w;
+            return D;
           },
         });
       var i = n("917351"),
@@ -1319,14 +1319,14 @@
           n = j(e);
         return y(e, t, n);
       }
-      function P(e) {
+      function b(e) {
         let t = R(e, h.default),
           n = (function (e) {
             return O(e, h.default);
           })(e);
         return y(e, t, n);
       }
-      function b(e) {
+      function P(e) {
         var t;
         let n = (0, l.useStateFromStores)(
           [h.default],
@@ -1368,19 +1368,19 @@
       function j(e) {
         return (0, l.useStateFromStores)([h.default], () => O(e, h.default));
       }
-      function D(e) {
+      function V(e) {
         let t = (0, o.default)(),
           n = (0, l.useStateFromStores)([h.default], () =>
             h.default.can(m.Permissions.CONNECT, e)
           ),
-          i = b(e),
+          i = P(e),
           r = p.useExperiment(
             { guildId: e.guild_id, location: "e791ea_1" },
             { autoTrackExposure: !1 }
           ).enabled;
         return !t && e.isVocalThread() && r && n && i;
       }
-      function w(e) {
+      function D(e) {
         let t = j(e);
         return e.isLockedThread() && !t;
       }
@@ -2070,16 +2070,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return l;
           },
         }),
         n("222007");
-      var i,
-        r = n("817736"),
-        s = n("118810");
-      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        r = n("118810");
+      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class l {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2087,8 +2086,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, r.findDOMNode)(e);
-          (0, s.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, r.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2101,7 +2100,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = l) {
+        constructor(e = s) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2137,14 +2136,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -2200,7 +2199,10 @@
             : (this.elementId = l);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new s.default({ root: t, rootMargin: n, threshold: i }));
+            o.set(
+              u,
+              new s.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       u.defaultProps = {
@@ -2210,17 +2212,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return r.default;
+            return r.VisibilitySensor;
           },
         }),
         n("6268");
@@ -2260,4 +2261,4 @@
     },
   },
 ]);
-//# sourceMappingURL=22c9ebc683d9b453049f.js.map
+//# sourceMappingURL=1165eec094113ad0ab06.js.map

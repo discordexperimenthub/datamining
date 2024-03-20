@@ -110,68 +110,68 @@
             setBodyNode: p,
             setFooterNode: N,
             setModalOverlayNode: _,
-            setReadySlideId: A,
+            setReadySlideId: O,
           } = (0, f.usePaymentContext)(),
-          O = E.find(e => e.key === S);
+          A = E.find(e => e.key === S);
         a.useEffect(() => {
           _(null);
         }, [S, _]),
-          u(null != O, "Unknown step for current payment flow.");
+          u(null != A, "Unknown step for current payment flow.");
         let D =
             null !==
               (o =
-                null == O
+                null == A
                   ? void 0
-                  : null === (t = O.options) || void 0 === t
+                  : null === (t = A.options) || void 0 === t
                     ? void 0
                     : t.hideSlider) &&
             void 0 !== o &&
             o,
-          C =
-            null == O
+          b =
+            null == A
               ? void 0
-              : null === (n = O.options) || void 0 === n
+              : null === (n = A.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
-          x =
+          C =
             void 0 !== g && g
               ? h.sliderBodyLarge
-              : null == O
+              : null == A
                 ? void 0
-                : null === (i = O.options) || void 0 === i
+                : null === (i = A.options) || void 0 === i
                   ? void 0
                   : i.sliderBodyClassName;
         return (0, l.jsxs)(l.Fragment, {
           children: [
             null ===
               (d =
-                null == O
+                null == A
                   ? void 0
-                  : null === (r = O.options) || void 0 === r
+                  : null === (r = A.options) || void 0 === r
                     ? void 0
                     : r.renderHeader) ||
             void 0 === d ||
             d
               ? m
               : null,
-            O.renderStep(v),
+            A.renderStep(v),
             null == S || D
               ? null
               : (0, l.jsxs)(l.Fragment, {
                   children: [
                     (0, l.jsx)(c.ModalContent, {
-                      className: s(h.body, C),
+                      className: s(h.body, b),
                       children: (0, l.jsx)(c.Slides, {
                         activeSlide: S,
                         centered: !1,
-                        onSlideReady: e => A(e),
+                        onSlideReady: e => O(e),
                         children: E.filter(e => null != e.key).map(e =>
                           (0, l.jsx)(
                             c.Slide,
                             {
                               id: e.key,
                               children: (0, l.jsx)("form", {
-                                className: s(h.sliderBody, x),
+                                className: s(h.sliderBody, C),
                                 ref: e => p(e),
                                 onSubmit: e => e.preventDefault(),
                               }),
@@ -385,11 +385,11 @@
         var t;
         let { className: n, volume: i, disabled: S = !1, onChange: p } = e,
           { audio: N } = (0, f.useAudioTrimmerStore)(),
-          [_, A] = a.useState(!1),
-          [O, D] = a.useState(E),
-          { playheadPositionMs: C, endPositionMs: x, startPositionMs: b } = O,
+          [_, O] = a.useState(!1),
+          [A, D] = a.useState(E),
+          { playheadPositionMs: b, endPositionMs: C, startPositionMs: x } = A,
           M = null != N,
-          I = x - b,
+          I = C - x,
           y = I > g.MAX_SOUND_LENGTH_SECONDS * d.default.Millis.SECOND;
         a.useEffect(() => {
           null != N &&
@@ -401,7 +401,7 @@
         }, [N]);
         let T = a.useCallback(
             e => {
-              null != N && (N.pause(), null != e && (N.currentTime = e), A(!1));
+              null != N && (N.pause(), null != e && (N.currentTime = e), O(!1));
             },
             [N]
           ),
@@ -411,14 +411,14 @@
                 T();
                 return;
               }
-              C >= x
-                ? (N.currentTime = (0, m.toSeconds)(b))
-                : (N.currentTime = (0, m.toSeconds)(C)),
+              b >= C
+                ? (N.currentTime = (0, m.toSeconds)(x))
+                : (N.currentTime = (0, m.toSeconds)(b)),
                 (N.volume = (0, c.default)(i)),
                 N.play(),
-                A(!0);
+                O(!0);
             }
-          }, [N, x, T, C, _, b, i]),
+          }, [N, C, T, b, _, x, i]),
           w = a.useCallback(
             e => {
               D(e),
@@ -595,9 +595,9 @@
           p = s.useRef(null),
           N = s.useRef(null),
           _ = s.useRef(null),
-          [A, O] = s.useState(0),
-          [D, C] = s.useState(0),
-          [x, b] = s.useState(0),
+          [O, A] = s.useState(0),
+          [D, b] = s.useState(0),
+          [C, x] = s.useState(0),
           [M, I] = s.useState(!1),
           [y, T] = s.useState(!1),
           [R, w] = s.useState(!1),
@@ -607,7 +607,7 @@
         s.useEffect(() => {
           if (null == S) return;
           let e = S.duration * d.default.Millis.SECOND;
-          O(0), C(0), b(e), P(e);
+          A(0), b(0), x(e), P(e);
         }, [S]);
         let V = s.useCallback(
             (e, t) => {
@@ -642,71 +642,71 @@
             e => {
               if (null == S || !M) return;
               let t = parseInt(e.target.value),
-                n = t > x ? x : t;
-              l((0, f.toSeconds)(n)), O(n), C(n);
+                n = t > C ? C : t;
+              l((0, f.toSeconds)(n)), A(n), b(n);
             },
-            [S, l, x, M]
+            [S, l, C, M]
           ),
           G = s.useCallback(
             e => {
               if (null == S || !y) return;
               let t = parseInt(e.target.value);
-              t < A
-                ? (l((0, f.toSeconds)(A)), C(A))
-                : t > x
-                  ? (l((0, f.toSeconds)(x)), C(x))
-                  : (l((0, f.toSeconds)(t)), C(t));
+              t < O
+                ? (l((0, f.toSeconds)(O)), b(O))
+                : t > C
+                  ? (l((0, f.toSeconds)(C)), b(C))
+                  : (l((0, f.toSeconds)(t)), b(t));
             },
-            [S, l, x, y, A]
+            [S, l, C, y, O]
           ),
           H = s.useCallback(
             e => {
               if (null == S || !R) return;
               let t = parseInt(e.target.value),
-                n = t > A ? t : A;
-              l((0, f.toSeconds)(A)), C(A), b(n);
+                n = t > O ? t : O;
+              l((0, f.toSeconds)(O)), b(O), x(n);
             },
-            [S, l, R, A]
+            [S, l, R, O]
           );
         return (
           s.useEffect(() => {
             null != a &&
               E &&
               a({
-                startPositionMs: A,
-                endPositionMs: x,
+                startPositionMs: O,
+                endPositionMs: C,
                 playheadPositionMs: D,
               });
-          }, [A, x, a, E, D]),
+          }, [O, C, a, E, D]),
           s.useEffect(() => {
             let e;
             if (null != S)
               return (
                 t &&
                   (e = setInterval(() => {
-                    S.currentTime < (0, f.toSeconds)(x)
+                    S.currentTime < (0, f.toSeconds)(C)
                       ? S.currentTime >= (0, f.toSeconds)(D) &&
-                        C(S.currentTime * d.default.Millis.SECOND)
-                      : (n((0, f.toSeconds)(A)), C(A));
+                        b(S.currentTime * d.default.Millis.SECOND)
+                      : (n((0, f.toSeconds)(O)), b(O));
                   }, 16)),
                 () => {
                   clearInterval(e);
                 }
               );
-          }, [S, x, n, D, t, A]),
+          }, [S, C, n, D, t, O]),
           s.useEffect(() => {
             if (v.fineTuningDelay <= 0) return;
             let e = setTimeout(() => {
-              M && A == A && -1 === U
-                ? j(A)
-                : R && x == x && -1 === U
-                  ? j(x)
+              M && O == O && -1 === U
+                ? j(O)
+                : R && C == C && -1 === U
+                  ? j(C)
                   : y && D == D && -1 === U && j(D);
             }, v.fineTuningDelay);
             return () => {
               clearTimeout(e);
             };
-          }, [v.fineTuningDelay, R, x, U, y, D, M, A]),
+          }, [v.fineTuningDelay, R, C, U, y, D, M, O]),
           (0, i.jsxs)("div", {
             className: u(g.timeline, { [g.initialized]: E }),
             children: [
@@ -722,7 +722,7 @@
                         type: "range",
                         min: (0, f.getMinValue)(U, F, L),
                         max: (0, f.getMaxValue)(U, F, L),
-                        value: A,
+                        value: O,
                         onChange: k,
                         onMouseDown: e => V(e, 0),
                         onMouseUp: () => B(0),
@@ -734,7 +734,7 @@
                         type: "range",
                         min: (0, f.getMinValue)(U, F, L),
                         max: (0, f.getMaxValue)(U, F, L),
-                        value: x,
+                        value: C,
                         onChange: H,
                         onMouseDown: e => V(e, 2),
                         onMouseUp: () => B(2),
@@ -769,11 +769,11 @@
                     }),
                     style: {
                       left: "".concat(
-                        (0, f.getStartHandleValue)(A, U, F, L),
+                        (0, f.getStartHandleValue)(O, U, F, L),
                         "%"
                       ),
                       right: "".concat(
-                        (0, f.getEndHandleValue)(x, U, F, L),
+                        (0, f.getEndHandleValue)(C, U, F, L),
                         "%"
                       ),
                     },
@@ -1138,14 +1138,14 @@
               };
             }, [n, v]),
             _ = (0, f.useAudioBufferData)(t),
-            A = (0, f.useAudioWaveformData)(_, p.current, N),
-            O = (0, d.default)(),
+            O = (0, f.useAudioWaveformData)(_, p.current, N),
+            A = (0, d.default)(),
             D = (0, c.useColorValue)(
-              (0, u.isThemeDark)(O) ? m.Color.PRIMARY_300 : m.Color.PRIMARY_700
+              (0, u.isThemeDark)(A) ? m.Color.PRIMARY_300 : m.Color.PRIMARY_700
             ),
-            C = null == _ || null == A,
-            x = 0 === S.width || 0 === S.height,
-            b = (x || C) && null != t,
+            b = null == _ || null == O,
+            C = 0 === S.width || 0 === S.height,
+            x = (C || b) && null != t,
             M = a.useCallback(() => {
               null != p.current &&
                 E({
@@ -1174,20 +1174,20 @@
               if (
                 0 !== S.width &&
                 0 !== S.height &&
-                null != A &&
-                A.length > 0
+                null != O &&
+                O.length > 0
               ) {
-                let e = n / A.length,
+                let e = n / O.length,
                   a = -(e * (h.defaultWaveformConfig.waveformBarWidth - 1));
                 t.clearRect(0, 0, n, l), (t.fillStyle = D.hex);
-                for (let n = 0; n < A.length; n++) {
-                  let i = A[n] * l,
+                for (let n = 0; n < O.length; n++) {
+                  let i = O[n] * l,
                     s = n * e + a,
                     r = l / 2 - i / 2;
                   t.fillRect(s, r, e - a, i);
                 }
               }
-            }, [D, S, O, A]),
+            }, [D, S, A, O]),
             (0, l.jsxs)("div", {
               className: s(g.container, i),
               children: [
@@ -1197,7 +1197,7 @@
                   width: 4 * S.width,
                   height: 4 * S.height,
                 }),
-                b &&
+                x &&
                   (0, l.jsx)("div", {
                     className: g.loading,
                     children: (0, l.jsx)(o.Spinner, {
@@ -1334,12 +1334,12 @@
               audio: N,
               loadAudioFromFile: _,
             } = (0, d.useAudioTrimmerStore)(),
-            A = a.useMemo(() => (0, u.default)(t.soundId), [t]);
+            O = a.useMemo(() => (0, u.default)(t.soundId), [t]);
           return (
             a.useEffect(() => {
               null == E.current &&
-                (E.current = (0, c.loadAudioFileFromUrl)(A, t.name).then(_));
-            }, [A, _, t.name]),
+                (E.current = (0, c.loadAudioFileFromUrl)(O, t.name).then(_));
+            }, [O, _, t.name]),
             (0, l.jsxs)("div", {
               className: m.previewContainer,
               children: [
@@ -1576,7 +1576,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return x;
+            return C;
           },
         }),
         n("222007"),
@@ -1600,23 +1600,23 @@
         p = n("102432"),
         N = n("876189"),
         _ = n("846325"),
-        A = n("49111"),
-        O = n("782340"),
+        O = n("49111"),
+        A = n("782340"),
         D = n("509252");
       ((a = l || (l = {})).READY = "ready"),
         (a.ENCODING_FAILED = "encoding-failed"),
         (a.ENCODING = "encoding"),
         (a.UPLOADING = "uploading");
-      let C = [
+      let b = [
         { name: "audio", extensions: ["mp3", "wav", "ogg", "x-wav", "mp4"] },
       ];
-      function x(e) {
+      function C(e) {
         var t, n, l, a;
         let {
             guildId: r,
             sourceFile: o,
-            existingSound: x,
-            onClose: b,
+            existingSound: C,
+            onClose: x,
             transitionState: M,
             showGuildPicker: I = !1,
           } = e,
@@ -1625,17 +1625,17 @@
               (n =
                 null !== (t = null == o ? void 0 : o.name) && void 0 !== t
                   ? t
-                  : null == x
+                  : null == C
                     ? void 0
-                    : x.name) && void 0 !== n
+                    : C.name) && void 0 !== n
               ? n
               : ""
           ),
           [R, w] = s.useState(
-            null !== (l = null == x ? void 0 : x.volume) && void 0 !== l ? l : 1
+            null !== (l = null == C ? void 0 : C.volume) && void 0 !== l ? l : 1
           ),
-          [L, P] = s.useState(null == x ? void 0 : x.emojiId),
-          [U, j] = s.useState(null == x ? void 0 : x.emojiName),
+          [L, P] = s.useState(null == C ? void 0 : C.emojiId),
+          [U, j] = s.useState(null == C ? void 0 : C.emojiName),
           {
             file: F,
             loadAudioFromFile: V,
@@ -1674,18 +1674,18 @@
         let ee = (function (e) {
             switch (e) {
               case "encoding":
-                return O.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING;
+                return A.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING;
               case "encoding-failed":
-                return O.default.Messages
+                return A.default.Messages
                   .SOUNDBOARD_MODAL_AUDIO_STATE_ENCODING_FAILED;
               case "uploading":
-                return O.default.Messages
+                return A.default.Messages
                   .SOUNDBOARD_MODAL_AUDIO_STATE_UPLOADING;
             }
             return null;
           })(X),
           et = "uploading" === X || "encoding" === X,
-          en = null != x,
+          en = null != C,
           el =
             y.length >= 2 &&
             (en || null != F) &&
@@ -1737,23 +1737,23 @@
               en
                 ? await (0, v.updateSound)({
                     guildId: J,
-                    soundId: x.soundId,
+                    soundId: C.soundId,
                     name: y,
                     volume: R,
                     emojiId: L,
                     emojiName: U,
                   })
                 : await ei(),
-                b();
+                x();
             } catch (e) {
               $(e);
             } finally {
               Z("ready"), H(!1), w(1), k(1);
             }
-          }, [en, b, J, x, y, R, L, U, ei, k]);
+          }, [en, x, J, C, y, R, L, U, ei, k]);
         s.useEffect(() => {
           V(null),
-            g.default.track(A.AnalyticEvents.OPEN_MODAL, {
+            g.default.track(O.AnalyticEvents.OPEN_MODAL, {
               type: "Soundboard Upload Sound",
               guild_id: J,
             });
@@ -1774,7 +1774,7 @@
           transitionState: M,
           children: [
             (0, i.jsx)(c.ModalCloseButton, {
-              onClick: b,
+              onClick: x,
               className: D.modalClose,
             }),
             (0, i.jsx)(c.ModalHeader, {
@@ -1784,8 +1784,8 @@
                 className: D.header,
                 variant: "heading-xl/extrabold",
                 children: en
-                  ? O.default.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER
-                  : O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER,
+                  ? A.default.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER
+                  : A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER,
               }),
             }),
             (0, i.jsxs)(c.ModalContent, {
@@ -1802,7 +1802,7 @@
                       required: !0,
                       className: D.section,
                       title:
-                        O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
+                        A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
                       children: (0, i.jsx)(N.default, {
                         value: J,
                         onChange: K,
@@ -1811,7 +1811,7 @@
                   : null,
                 (en || null != F) &&
                   (0, i.jsx)(S.default, {
-                    sound: x,
+                    sound: C,
                     volume: R,
                     disabled: et,
                     onChange: q,
@@ -1826,7 +1826,7 @@
                           : W.getFirstFieldErrorMessage("sound"),
                       className: D.section,
                       title:
-                        O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
+                        A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
                       children: (0, i.jsx)(m.default, {
                         filename:
                           null !== (a = null == F ? void 0 : F.name) &&
@@ -1834,13 +1834,13 @@
                             ? a
                             : "",
                         buttonText:
-                          O.default.Messages
+                          A.default.Messages
                             .SOUNDBOARD_SOUND_UPLOAD_MODAL_BROWSE,
                         placeholder:
-                          O.default.Messages
+                          A.default.Messages
                             .SOUNDBOARD_SOUND_UPLOAD_MODAL_INPUT_PLACEHOLDER,
                         onFileSelect: Q,
-                        filters: C,
+                        filters: b,
                       }),
                     }),
                 (0, i.jsxs)("div", {
@@ -1854,11 +1854,11 @@
                           : W.getFirstFieldErrorMessage("name"),
                       className: u(D.section, D.halfInput),
                       title:
-                        O.default.Messages
+                        A.default.Messages
                           .SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
                       children: (0, i.jsx)(c.TextInput, {
                         placeholder:
-                          O.default.Messages
+                          A.default.Messages
                             .SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
                         value: y,
                         onChange: T,
@@ -1873,7 +1873,7 @@
                     null == W ? void 0 : W.getFirstFieldErrorMessage("volume"),
                   className: D.section,
                   title:
-                    O.default.Messages
+                    A.default.Messages
                       .SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
                   children: (0, i.jsx)(c.Slider, {
                     initialValue: R,
@@ -1892,17 +1892,17 @@
                   size: c.Button.Sizes.SMALL,
                   onClick: es,
                   children: en
-                    ? O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE
-                    : O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD,
+                    ? A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE
+                    : A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD,
                 }),
                 (0, i.jsx)(c.Button, {
                   disabled: G,
-                  onClick: b,
+                  onClick: x,
                   size: c.Button.Sizes.SMALL,
                   look: c.Button.Looks.LINK,
                   color: c.Button.Colors.PRIMARY,
                   children:
-                    O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_CANCEL,
+                    A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_CANCEL,
                 }),
                 null != ee &&
                   (0, i.jsx)("div", {
@@ -1924,7 +1924,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return C;
+            return b;
           },
         }),
         n("222007");
@@ -1947,23 +1947,23 @@
         p = n("235004"),
         N = n("846325"),
         _ = n("49111"),
-        A = n("782340"),
-        O = n("216445");
+        O = n("782340"),
+        A = n("216445");
       function D(e) {
         let { availableSlots: t, className: n } = e;
         return (0, l.jsxs)(u.Text, {
-          className: s(O.suffixNode, n),
+          className: s(A.suffixNode, n),
           variant: "text-sm/medium",
           color: "text-primary",
           children: [
-            (0, l.jsx)(g.default, { className: O.speakerIcon }),
-            A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_AVAILABLE_COUNT.format(
+            (0, l.jsx)(g.default, { className: A.speakerIcon }),
+            O.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_AVAILABLE_COUNT.format(
               { slots: t }
             ),
           ],
         });
       }
-      function C(e) {
+      function b(e) {
         let { value: t, className: n, onChange: i } = e,
           g = (0, r.useStateFromStoresObject)(
             [f.default, c.default, h.default, d.default],
@@ -1982,7 +1982,7 @@
               return e;
             }
           ),
-          C = (0, r.useStateFromStoresObject)(
+          b = (0, r.useStateFromStoresObject)(
             [p.default],
             () => {
               let e = {};
@@ -2003,21 +2003,21 @@
         a.useEffect(() => {
           (0, E.maybeFetchSoundboardSounds)();
         }, []);
-        let x = a.useMemo(
+        let C = a.useMemo(
             () =>
               Object.values(g).map(e => {
                 let { name: t, id: n } = e;
-                return { label: t, value: n, disabled: C[n] <= 0 };
+                return { label: t, value: n, disabled: b[n] <= 0 };
               }),
-            [g, C]
+            [g, b]
           ),
-          b = a.useCallback(
+          x = a.useCallback(
             e =>
               null == e || "" === e.value
                 ? null
                 : (0, l.jsx)(m.default, {
-                    className: s(O.guildSelectOptionIcon, {
-                      [O.disabledOption]: e.disabled,
+                    className: s(A.guildSelectOptionIcon, {
+                      [A.disabledOption]: e.disabled,
                     }),
                     guild: g[e.value],
                     size: m.default.Sizes.SMOL,
@@ -2032,29 +2032,29 @@
                 ? null
                 : (0, l.jsx)(D, {
                     className: s({
-                      [O.disabledOption]: null == e ? void 0 : e.disabled,
+                      [A.disabledOption]: null == e ? void 0 : e.disabled,
                     }),
-                    availableSlots: C[t],
+                    availableSlots: b[t],
                   });
             },
-            [C]
+            [b]
           ),
           I = a.useCallback(
             e =>
               (0, l.jsx)("div", {
-                className: s({ [O.disabledOption]: e.disabled }),
+                className: s({ [A.disabledOption]: e.disabled }),
                 children: e.label,
               }),
             []
           ),
           y = a.useCallback(
             e => {
-              !(C[e] <= 0) && i(e);
+              !(b[e] <= 0) && i(e);
             },
-            [C, i]
+            [b, i]
           ),
           T = (() => {
-            let e = C[null != t ? t : _.EMPTY_STRING_SNOWFLAKE_ID];
+            let e = b[null != t ? t : _.EMPTY_STRING_SNOWFLAKE_ID];
             return null == e || e > 0 ? t : void 0;
           })();
         return (0, l.jsx)(u.SearchableSelect, {
@@ -2062,15 +2062,15 @@
           onChange: y,
           value: T,
           multi: !1,
-          options: x,
-          renderOptionPrefix: b,
+          options: C,
+          renderOptionPrefix: x,
           renderOptionSuffix: M,
           renderOptionLabel: I,
           placeholder:
-            0 === x.length
-              ? A.default.Messages
+            0 === C.length
+              ? O.default.Messages
                   .SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE
-              : A.default.Messages
+              : O.default.Messages
                   .SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER,
         });
       }
@@ -2413,16 +2413,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return l;
+          VisibilityObserver: function () {
+            return s;
           },
         }),
         n("222007");
-      var l,
-        a = n("817736"),
-        i = n("118810");
-      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
-      l = class {
+      var l = n("817736"),
+        a = n("118810");
+      let i = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2430,8 +2429,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, a.findDOMNode)(e);
-          (0, i.isElement)(n, HTMLElement) &&
+          let n = (0, l.findDOMNode)(e);
+          (0, a.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2444,7 +2443,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = s) {
+        constructor(e = i) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2480,14 +2479,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return d;
+          VisibilitySensor: function () {
+            return o;
           },
         }),
         n("222007"),
@@ -2543,7 +2542,10 @@
             : (this.elementId = s);
           let o = this.getVisibilityObserverId();
           !u.has(o) &&
-            u.set(o, new i.default({ root: t, rootMargin: n, threshold: l }));
+            u.set(
+              o,
+              new i.VisibilityObserver({ root: t, rootMargin: n, threshold: l })
+            );
         }
       }
       o.defaultProps = {
@@ -2553,17 +2555,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var d = o;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return l.default;
+            return l.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return a.default;
+            return a.VisibilitySensor;
           },
         }),
         n("6268");
@@ -2572,4 +2573,4 @@
     },
   },
 ]);
-//# sourceMappingURL=25914a99db82d014e5c7.js.map
+//# sourceMappingURL=a15de76578ff7ca8b2de.js.map

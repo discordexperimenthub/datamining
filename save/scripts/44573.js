@@ -181,14 +181,14 @@
             trialId: L,
             postSuccessGuild: N,
             openInvoiceId: x,
-            applicationId: y,
-            referralTrialOfferId: R,
-            giftRecipient: b,
+            applicationId: b,
+            referralTrialOfferId: y,
+            giftRecipient: R,
             returnRef: w,
             subscription: O,
           } = null != e ? e : {},
-          P = !1,
-          V = (0, s.v4)(),
+          V = !1,
+          P = (0, s.v4)(),
           j = u.default.getCurrentUser(),
           U = (0, f.isPremiumExactly)(j, v.PremiumTypes.TIER_2);
         (0, l.openModalLazy)(
@@ -198,12 +198,12 @@
               let { onClose: s, ...l } = i;
               return (0, n.jsx)(e, {
                 ...l,
-                loadId: V,
+                loadId: P,
                 subscriptionTier: A,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(A),
                 isGift: T,
                 giftMessage: M,
-                giftRecipient: b,
+                giftRecipient: R,
                 initialPlanId: t,
                 followupSKUInfo: p,
                 onClose: (e, t) => {
@@ -220,7 +220,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (P = !0),
+                  (V = !0),
                     null == C || C(),
                     !T && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -233,8 +233,8 @@
                 postSuccessGuild: N,
                 planGroup: v.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                 openInvoiceId: x,
-                applicationId: y,
-                referralTrialOfferId: R,
+                applicationId: b,
+                referralTrialOfferId: y,
                 returnRef: w,
                 subscription: O,
               });
@@ -243,9 +243,9 @@
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !P &&
+              !V &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: V,
+                  load_id: P,
                   payment_type:
                     h.PurchaseTypeToAnalyticsPaymentType[
                       h.PurchaseTypes.SUBSCRIPTION
@@ -255,13 +255,13 @@
                   subscription_type: h.SubscriptionTypes.PREMIUM,
                   is_gift: T,
                   eligible_for_trial: null != L,
-                  application_id: y,
+                  application_id: b,
                   location_stack: m,
                 }),
                 (0, r.clearError)(),
                 (0, a.clearPurchaseTokenAuthState)(),
-                null == _ || _(P),
-                P && (null == E || E());
+                null == _ || _(V),
+                V && (null == E || E());
             },
           }
         );
@@ -347,9 +347,9 @@
             E.id,
             f.StageChannelParticipantNamedIndex.SPEAKER
           ),
-          y = x.filter(e => e.type === f.StageChannelParticipantTypes.VOICE),
-          R = y.length,
-          b = d.default.getParticipantCount(
+          b = x.filter(e => e.type === f.StageChannelParticipantTypes.VOICE),
+          y = b.length,
+          R = d.default.getParticipantCount(
             E.id,
             f.StageChannelParticipantNamedIndex.AUDIENCE
           );
@@ -358,7 +358,7 @@
             guild_id: E.guild_id,
             type: p.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
             is_moderator: L,
-            listener_count: R + b,
+            listener_count: y + R,
           }),
           (0, n.jsxs)(s.ModalRoot, {
             size: s.ModalSize.SMALL,
@@ -1021,16 +1021,15 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          default: function () {
-            return n;
+          VisibilityObserver: function () {
+            return r;
           },
         }),
         i("222007");
-      var n,
-        s = i("817736"),
-        l = i("118810");
-      let r = { root: null, rootMargin: "0px", threshold: 0.5 };
-      n = class {
+      var n = i("817736"),
+        s = i("118810");
+      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class r {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -1038,8 +1037,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let i = (0, s.findDOMNode)(e);
-          (0, l.isElement)(i, HTMLElement) &&
+          let i = (0, n.findDOMNode)(e);
+          (0, s.isElement)(i, HTMLElement) &&
             (this._nodes.set(i, e), this._components.set(e, i), t.observe(i));
         }
         unobserve(e) {
@@ -1052,7 +1051,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(i));
         }
-        constructor(e = r) {
+        constructor(e = l) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -1088,14 +1087,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, i) {
       "use strict";
       i.r(t),
         i.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         i("222007"),
@@ -1151,7 +1150,10 @@
             : (this.elementId = r);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new l.default({ root: t, rootMargin: i, threshold: n }));
+            o.set(
+              u,
+              new l.VisibilityObserver({ root: t, rootMargin: i, threshold: n })
+            );
         }
       }
       u.defaultProps = {
@@ -1161,17 +1163,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, i) {
       "use strict";
       i.r(t),
         i.d(t, {
           VisibilityObserver: function () {
-            return n.default;
+            return n.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return s.default;
+            return s.VisibilitySensor;
           },
         }),
         i("6268");
@@ -1180,4 +1181,4 @@
     },
   },
 ]);
-//# sourceMappingURL=79ea24edb58005c8ac6c.js.map
+//# sourceMappingURL=e5bb48c973e82a5159ac.js.map

@@ -879,8 +879,8 @@
           ),
           L = i.useRef(null),
           y = p.default.canUseCollectibles(t),
-          w = _ === (void 0 === E ? (null != c ? c : null) : E),
-          j = i.useCallback(
+          b = _ === (void 0 === E ? (null != c ? c : null) : E),
+          w = i.useCallback(
             e => {
               I(e);
             },
@@ -910,7 +910,7 @@
                   guild: n,
                   pendingProfileEffect: _,
                   selectedProfileEffectRef: L,
-                  onSelect: j,
+                  onSelect: w,
                   onClose: o,
                 }),
                 (0, r.jsx)(g.default, {
@@ -934,7 +934,7 @@
               canUseCollectibles: y,
               selectedProfileEffectId: _,
               selectedProfileEffectItem: x,
-              disableApplyButton: w,
+              disableApplyButton: b,
               analyticsLocations: h,
             }),
           ],
@@ -1136,13 +1136,13 @@
               ? c.default.getAllPending()
               : p.default.getAllPending()),
           })),
-          w = S.default.isPremium(n),
-          j = (0, E.default)(n.id),
-          b = !!(null == j ? void 0 : j.getPreviewBio(x).value),
+          b = S.default.isPremium(n),
+          w = (0, E.default)(n.id),
+          j = !!(null == w ? void 0 : w.getPreviewBio(x).value),
           O = C.UseLegacyChatInput.useSetting(),
           F = O && null != x ? d.default.parse(void 0, x).content : x,
           V = S.default.canUsePremiumProfileCustomization(n),
-          H = (null == j ? void 0 : j.canUsePremiumProfileCustomization) || V,
+          H = (null == w ? void 0 : w.canUsePremiumProfileCustomization) || V,
           D = {
             user: n,
             guild: g,
@@ -1160,7 +1160,7 @@
               null !== (t = null == s ? void 0 : s.id) && void 0 !== t
                 ? t
                 : null,
-            hideFakeActivity: b,
+            hideFakeActivity: j,
             canUsePremiumCustomization: V,
             onUpsellClick: m.default,
             onAvatarChange: null != g ? u.setPendingAvatar : l.setPendingAvatar,
@@ -1182,7 +1182,7 @@
               pendingProfileEffectRecord: s,
               product: o,
               purchase: v,
-              userIsPremium: w,
+              userIsPremium: b,
             }),
           ],
         });
@@ -1258,15 +1258,15 @@
             } = null !== (t = null == v ? void 0 : v.config) && void 0 !== t
               ? t
               : {},
-            w = S.default.canUseCollectibles(n),
-            j = a === I.Section.PREMIUM_PURCHASE && !w,
-            [b, O] = i.useState(c);
+            b = S.default.canUseCollectibles(n),
+            w = a === I.Section.PREMIUM_PURCHASE && !b,
+            [j, O] = i.useState(c);
           return (
             i.useEffect(() => {
               c && O(!0);
             }, [c]),
             (0, r.jsxs)(R, {
-              className: j && !c ? A.decorationGridItemChurned : void 0,
+              className: w && !c ? A.decorationGridItemChurned : void 0,
               innerRef: null != l ? l : P,
               isSelected: c,
               ...d,
@@ -1284,9 +1284,9 @@
                 (() => {
                   let e =
                     a === I.Section.PURCHASE ||
-                    (a === I.Section.PREMIUM_PURCHASE && w);
+                    (a === I.Section.PREMIUM_PURCHASE && b);
                   if (e) return null;
-                  let t = !N && !c && !b;
+                  let t = !N && !c && !j;
                   return t
                     ? (0, r.jsx)(g.PremiumBadge, {
                         className: A.newBadge,
@@ -1465,10 +1465,10 @@
             return y;
           },
           computeIsReadOnlyThread: function () {
-            return w;
+            return b;
           },
           useIsThreadModerator: function () {
-            return b;
+            return j;
           },
           useCanJoinThreadVoice: function () {
             return O;
@@ -1622,13 +1622,13 @@
       }
       function R(e) {
         let t = (0, l.useStateFromStores)([h.default], () => x(e, h.default)),
-          n = b(e);
+          n = j(e);
         return P(e, t, n);
       }
       function M(e) {
         let t = x(e, h.default),
           n = (function (e) {
-            return j(e, h.default);
+            return w(e, h.default);
           })(e);
         return P(e, t, n);
       }
@@ -1664,15 +1664,15 @@
               h.default.can(C.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function w(e) {
+      function b(e) {
         let t = h.default.can(C.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function j(e, t) {
+      function w(e, t) {
         return null != e && t.can(C.Permissions.MANAGE_THREADS, e);
       }
-      function b(e) {
-        return (0, l.useStateFromStores)([h.default], () => j(e, h.default));
+      function j(e) {
+        return (0, l.useStateFromStores)([h.default], () => w(e, h.default));
       }
       function O(e) {
         let t = (0, o.default)(),
@@ -1687,7 +1687,7 @@
         return !t && e.isVocalThread() && i && n && r;
       }
       function F(e) {
-        let t = b(e);
+        let t = j(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -2721,16 +2721,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return r;
+          VisibilityObserver: function () {
+            return l;
           },
         }),
         n("222007");
-      var r,
-        i = n("817736"),
-        s = n("118810");
-      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
-      r = class {
+      var r = n("817736"),
+        i = n("118810");
+      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class l {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2738,8 +2737,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, i.findDOMNode)(e);
-          (0, s.isElement)(n, HTMLElement) &&
+          let n = (0, r.findDOMNode)(e);
+          (0, i.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2752,7 +2751,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = l) {
+        constructor(e = s) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2788,14 +2787,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -2851,7 +2850,10 @@
             : (this.elementId = l);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new s.default({ root: t, rootMargin: n, threshold: r }));
+            o.set(
+              u,
+              new s.VisibilityObserver({ root: t, rootMargin: n, threshold: r })
+            );
         }
       }
       u.defaultProps = {
@@ -2861,17 +2863,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return r.default;
+            return r.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return i.default;
+            return i.VisibilitySensor;
           },
         }),
         n("6268");
@@ -2911,4 +2912,4 @@
     },
   },
 ]);
-//# sourceMappingURL=aa6aa8c469d8d96c3267.js.map
+//# sourceMappingURL=cb433c2185ec474d1ae6.js.map

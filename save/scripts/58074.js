@@ -1734,10 +1734,10 @@
             referralTrialOfferId: U,
             giftRecipient: L,
             returnRef: P,
-            subscription: F,
+            subscription: b,
           } = null != e ? e : {},
-          G = !1,
-          b = (0, a.v4)(),
+          F = !1,
+          G = (0, a.v4)(),
           x = o.default.getCurrentUser(),
           D = (0, f.isPremiumExactly)(x, C.PremiumTypes.TIER_2);
         (0, r.openModalLazy)(
@@ -1747,7 +1747,7 @@
               let { onClose: a, ...r } = n;
               return (0, i.jsx)(e, {
                 ...r,
-                loadId: b,
+                loadId: G,
                 subscriptionTier: m,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(m),
                 isGift: A,
@@ -1769,7 +1769,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (G = !0),
+                  (F = !0),
                     null == h || h(),
                     !A && (0, u.setCanPlayWowMoment)(!0);
                 },
@@ -1785,16 +1785,16 @@
                 applicationId: O,
                 referralTrialOfferId: U,
                 returnRef: P,
-                subscription: F,
+                subscription: b,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !G &&
+              !F &&
                 d.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: b,
+                  load_id: G,
                   payment_type:
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
@@ -1809,8 +1809,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, l.clearPurchaseTokenAuthState)(),
-                null == _ || _(G),
-                G && (null == v || v());
+                null == _ || _(F),
+                F && (null == v || v());
             },
           }
         );
@@ -2490,7 +2490,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return V;
+            return j;
           },
         });
       var i = n("37983");
@@ -2524,14 +2524,14 @@
         U = n("126710"),
         L = n("502533"),
         P = n("314838"),
-        F = n("151200"),
-        G = n("692986"),
-        b = n("806179"),
+        b = n("151200"),
+        F = n("692986"),
+        G = n("806179"),
         x = n("816106"),
         D = n("623879"),
         w = n("49111"),
-        j = n("782340"),
-        V = (0, l.default)(
+        V = n("782340"),
+        j = (0, l.default)(
           (0, s.default)(
             function (e) {
               let {
@@ -2541,13 +2541,13 @@
                   showMute: l = !0,
                   showMediaItems: d = !1,
                   showChannelCallItems: w = !1,
-                  showModalItems: V = !0,
+                  showModalItems: j = !0,
                   targetIsUser: H = !1,
                   context: W,
                   onSelect: k,
                   onHeightUpdate: Y,
                 } = e,
-                B = (0, b.default)(t.id, null),
+                B = (0, G.default)(t.id, null),
                 Z = (0, O.default)(t, W),
                 z = (0, R.default)({ user: t, context: W }),
                 q = (0, m.default)(t),
@@ -2556,19 +2556,19 @@
                 Q = (0, P.default)(t),
                 J = (0, o.default)(null, t),
                 $ = (0, x.default)(t.id),
-                ee = (0, F.default)(t.id, n.id),
+                ee = (0, b.default)(t.id, n.id),
                 et = (0, T.default)(t),
-                en = (0, G.default)(t.id),
+                en = (0, F.default)(t.id),
                 ei = (0, L.default)(t.id, n.id),
                 ea = (0, M.default)(t),
                 er = (0, p.default)(n),
                 es = (0, _.default)({
                   id: t.id,
-                  label: j.default.Messages.COPY_ID_USER,
+                  label: V.default.Messages.COPY_ID_USER,
                 }),
                 el = (0, _.default)({
                   id: n.id,
-                  label: j.default.Messages.COPY_ID_CHANNEL,
+                  label: V.default.Messages.COPY_ID_CHANNEL,
                 }),
                 eu = (0, C.default)(n),
                 eo = (0, f.default)(t.id),
@@ -2594,7 +2594,7 @@
               return (0, i.jsxs)(a.Menu, {
                 navId: "user-context",
                 onClose: r.closeContextMenu,
-                "aria-label": j.default.Messages.USER_ACTIONS_MENU_LABEL,
+                "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: k,
                 children: [
                   (0, i.jsx)(a.MenuGroup, { children: !eI && eu }),
@@ -2607,7 +2607,7 @@
                     children: [
                       !eI &&
                         (0, i.jsxs)(i.Fragment, {
-                          children: [V && B, Z, !eN && ee, V && z, V && q, K],
+                          children: [j && B, Z, !eN && ee, j && z, j && q, K],
                         }),
                       X,
                     ],
@@ -2616,15 +2616,15 @@
                     (0, i.jsxs)(i.Fragment, {
                       children: [
                         (0, i.jsx)(a.MenuGroup, { children: d && $ }),
-                        (0, i.jsx)(a.MenuGroup, { children: V && J }),
+                        (0, i.jsx)(a.MenuGroup, { children: j && J }),
                         (0, i.jsxs)(a.MenuGroup, {
                           children: [
                             d && en,
                             d && ei,
                             eE,
-                            V && Q,
+                            j && Q,
                             et,
-                            V && ea,
+                            j && ea,
                             d && ef,
                           ],
                         }),
@@ -3857,16 +3857,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return s;
           },
         }),
         n("222007");
-      var i,
-        a = n("817736"),
-        r = n("118810");
-      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        a = n("118810");
+      let r = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -3874,8 +3873,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, a.findDOMNode)(e);
-          (0, r.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, a.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -3888,7 +3887,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = s) {
+        constructor(e = r) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -3924,14 +3923,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return d;
+          VisibilitySensor: function () {
+            return o;
           },
         }),
         n("222007"),
@@ -3987,7 +3986,10 @@
             : (this.elementId = s);
           let o = this.getVisibilityObserverId();
           !u.has(o) &&
-            u.set(o, new r.default({ root: t, rootMargin: n, threshold: i }));
+            u.set(
+              o,
+              new r.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       o.defaultProps = {
@@ -3997,17 +3999,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var d = o;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return a.default;
+            return a.VisibilitySensor;
           },
         }),
         n("6268");
@@ -4016,4 +4017,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d075bd9205c8509a237c.js.map
+//# sourceMappingURL=8f2466de959be5684407.js.map

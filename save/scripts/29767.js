@@ -105,13 +105,13 @@
         o = i("206453"),
         a = i("49111"),
         u = i("666703");
-      let d = {
+      let c = {
           [a.BoostedGuildTiers.NONE]: u.iconBackgroundTierNone,
           [a.BoostedGuildTiers.TIER_1]: u.iconBackgroundTierOne,
           [a.BoostedGuildTiers.TIER_2]: u.iconBackgroundTierTwo,
           [a.BoostedGuildTiers.TIER_3]: u.iconBackgroundTierThree,
         },
-        c = {
+        d = {
           [a.BoostedGuildTiers.NONE]: u.iconTierNone,
           [a.BoostedGuildTiers.TIER_1]: u.iconTierOne,
           [a.BoostedGuildTiers.TIER_2]: u.iconTierTwo,
@@ -125,11 +125,11 @@
           size: a,
         } = e;
         return (0, s.jsx)(r.default, {
-          className: l(i, d[t]),
+          className: l(i, c[t]),
           size: a,
           children: (0, s.jsx)(o.default, {
             tier: t,
-            className: l(n, u.boostedGuildIconGem, c[t]),
+            className: l(n, u.boostedGuildIconGem, d[t]),
           }),
         });
       }
@@ -150,8 +150,8 @@
         o = i("427459"),
         a = i("379532"),
         u = i("944305"),
-        d = i("49111"),
-        c = i("782340"),
+        c = i("49111"),
+        d = i("782340"),
         f = i("538977");
       function h(e) {
         let { guild: t, banner: i } = e;
@@ -182,29 +182,29 @@
           } = e,
           f = l
             ? (0, o.minimumRequiredTierForGuildFeature)(
-                d.GuildFeatures.ANIMATED_BANNER
+                c.GuildFeatures.ANIMATED_BANNER
               )
-            : (0, o.minimumRequiredTierForGuildFeature)(d.GuildFeatures.BANNER);
+            : (0, o.minimumRequiredTierForGuildFeature)(c.GuildFeatures.BANNER);
         null != f &&
           (0, a.default)({
             analyticsLocations: t,
             analyticsSourceLocation: i,
             guild: n,
             headerProps: {
-              title: c.default.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
+              title: d.default.Messages.GUILD_BANNER_UPSELL_MODAL_TITLE,
               subtitle: (function (e, t) {
                 let i = (0, o.getTierName)(e);
                 return t
-                  ? c.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format(
+                  ? d.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_ANIMATED.format(
                       { targetLevelOrPlan: i }
                     )
-                  : c.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format(
+                  : d.default.Messages.GUILD_BANNER_UPSELL_MODAL_SUBTITLE_STATIC.format(
                       { targetLevelOrPlan: i }
                     );
               })(f, l),
               image: (0, s.jsx)(h, { guild: n, banner: r }),
             },
-            perkIntro: c.default.Messages.GUILD_BANNER_UPSELL_MODAL_PERK_INTRO,
+            perkIntro: d.default.Messages.GUILD_BANNER_UPSELL_MODAL_PERK_INTRO,
             perks: l
               ? (0, u.animatedGuildBannerUpsellPerks)()
               : (0, u.guildBannerUpsellPerks)(),
@@ -227,8 +227,8 @@
         o = i("77078"),
         a = i("51565"),
         u = i("95039"),
-        d = i("863921"),
-        c = i("26989"),
+        c = i("863921"),
+        d = i("26989"),
         f = i("697218"),
         h = i("580357"),
         v = i("40469"),
@@ -238,9 +238,9 @@
         C = i("543385");
       function I(e) {
         let { guild: t, isBannerVisible: i, disableBoostClick: n } = e,
-          l = (0, r.useStateFromStores)([f.default, c.default], () => {
+          l = (0, r.useStateFromStores)([f.default, d.default], () => {
             let e = f.default.getCurrentUser();
-            return c.default.isMember(t.id, null == e ? void 0 : e.id);
+            return d.default.isMember(t.id, null == e ? void 0 : e.id);
           }),
           { premiumTier: a, premiumSubscriberCount: h } = t;
         if (0 === h && a === g.BoostedGuildTiers.NONE) return null;
@@ -283,7 +283,7 @@
                 ...e,
                 className: C.premiumGuildIcon,
                 onClick: v,
-                children: (0, s.jsx)(d.default, {
+                children: (0, s.jsx)(c.default, {
                   premiumTier: a,
                   iconBackgroundClassName: i
                     ? C.boostedGuildTierIconBackgroundWithVisibleBanner
@@ -358,16 +358,16 @@
         o = i("836275"),
         a = i("379532"),
         u = i("305961"),
-        d = i("162771"),
-        c = i("118503"),
+        c = i("162771"),
+        d = i("118503"),
         f = i("49111"),
         h = i("944305"),
         v = i("782340"),
         p = i("78935");
       function g(e) {
         let { analyticsSection: t, analyticsPage: i, isGIF: g, banner: m } = e,
-          C = (0, n.useStateFromStores)([d.default], () =>
-            d.default.getGuildId()
+          C = (0, n.useStateFromStores)([c.default], () =>
+            c.default.getGuildId()
           ),
           I = (0, n.useStateFromStores)([u.default], () =>
             u.default.getGuild(C)
@@ -380,7 +380,7 @@
           : (0, s.jsxs)("div", {
               className: p.container,
               children: [
-                (0, s.jsx)(c.default, { className: p.guildBoostingIcon }),
+                (0, s.jsx)(d.default, { className: p.guildBoostingIcon }),
                 (0, s.jsx)(l.Text, {
                   color: "header-primary",
                   variant: "text-sm/semibold",
@@ -435,8 +435,8 @@
         o = i("812204"),
         a = i("685665"),
         u = i("67069"),
-        d = i("635956"),
-        c = i("697218"),
+        c = i("635956"),
+        d = i("697218"),
         f = i("258078"),
         h = i("599110"),
         v = i("719923"),
@@ -447,29 +447,29 @@
         I = i("931720");
       function N(e) {
         let { analyticsSection: t, type: i } = e,
-          N = (0, l.useStateFromStores)([c.default], () =>
-            c.default.getCurrentUser()
+          N = (0, l.useStateFromStores)([d.default], () =>
+            d.default.getCurrentUser()
           ),
           x = v.default.canUseAnimatedAvatar(N),
-          E = v.default.canUsePremiumProfileCustomization(N),
-          _ =
-            (i === g.UploadTypes.BANNER && E) ||
+          b = v.default.canUsePremiumProfileCustomization(N),
+          E =
+            (i === g.UploadTypes.BANNER && b) ||
             (i === g.UploadTypes.AVATAR && x),
-          { sourceAnalyticsLocations: b } = (0, a.default)(
+          { sourceAnalyticsLocations: _ } = (0, a.default)(
             o.default.PREMIUM_PREVIEW_UPSELL_HEADER
           );
         if (
           (n.useEffect(() => {
-            !_ &&
+            !E &&
               h.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: t,
-                location_stack: b,
+                location_stack: _,
               });
-          }, [_, t, b]),
-          _)
+          }, [E, t, _]),
+          E)
         )
           return null;
-        let T = (0, s.jsx)(d.default, {
+        let T = (0, s.jsx)(c.default, {
           className: I.getNitroLink,
           size: r.Button.Sizes.SMALL,
           look: r.Button.Looks.LINK,
@@ -560,7 +560,7 @@
       i.r(t),
         i.d(t, {
           default: function () {
-            return d;
+            return c;
           },
         });
       var s = i("37983");
@@ -571,19 +571,19 @@
         o = i("216422"),
         a = i("258078"),
         u = i("916834");
-      function d(e) {
+      function c(e) {
         let {
           text: t,
           textSize: i = a.default.Sizes.SIZE_12,
           textColor: n = a.default.Colors.STANDARD,
-          className: d,
-          button: c,
+          className: c,
+          button: d,
           reducedRightPadding: f = !1,
         } = e;
         return (0, s.jsxs)("div", {
           className: l(
             f ? u.noticeWithoutRightPadding : u.noticeWithRightPadding,
-            d
+            c
           ),
           children: [
             (0, s.jsxs)("div", {
@@ -601,7 +601,7 @@
                 }),
               ],
             }),
-            c,
+            d,
           ],
         });
       }
@@ -611,7 +611,7 @@
       i.r(t),
         i.d(t, {
           default: function () {
-            return d;
+            return c;
           },
         });
       var s = i("37983"),
@@ -621,13 +621,13 @@
         o = i("77078"),
         a = i("760607"),
         u = i("684133");
-      function d(e) {
+      function c(e) {
         let {
             children: t,
             size: i = 16,
             className: l,
-            flowerStarClassName: d,
-            ...c
+            flowerStarClassName: c,
+            ...d
           } = e,
           f = n.Children.only(t),
           h = (0, o.useRedesignIconContext)().enabled;
@@ -635,7 +635,7 @@
           className: r(u.flowerStarContainer, l),
           style: { width: i, height: i },
           children: [
-            (0, s.jsx)(a.default, { ...c, className: r(d, u.flowerStar) }),
+            (0, s.jsx)(a.default, { ...d, className: r(c, u.flowerStar) }),
             (0, s.jsx)("div", {
               className: r(u.childContainer, {
                 [u.redesignIconChildContainer]: h,
@@ -865,10 +865,10 @@
           secondaryColorClass: o = "",
           color: a = n.default.colors.INTERACTIVE_NORMAL,
           colorClass: u = "",
-          ...d
+          ...c
         } = e;
         return (0, s.jsxs)("svg", {
-          ...(0, l.default)(d),
+          ...(0, l.default)(c),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: i,
@@ -1056,16 +1056,15 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          default: function () {
-            return s;
+          VisibilityObserver: function () {
+            return r;
           },
         }),
         i("222007");
-      var s,
-        n = i("817736"),
-        l = i("118810");
-      let r = { root: null, rootMargin: "0px", threshold: 0.5 };
-      s = class {
+      var s = i("817736"),
+        n = i("118810");
+      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class r {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -1073,8 +1072,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let i = (0, n.findDOMNode)(e);
-          (0, l.isElement)(i, HTMLElement) &&
+          let i = (0, s.findDOMNode)(e);
+          (0, n.isElement)(i, HTMLElement) &&
             (this._nodes.set(i, e), this._components.set(e, i), t.observe(i));
         }
         unobserve(e) {
@@ -1087,7 +1086,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(i));
         }
-        constructor(e = r) {
+        constructor(e = l) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -1123,14 +1122,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, i) {
       "use strict";
       i.r(t),
         i.d(t, {
-          default: function () {
-            return d;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         i("222007"),
@@ -1186,7 +1185,10 @@
             : (this.elementId = r);
           let u = this.getVisibilityObserverId();
           !a.has(u) &&
-            a.set(u, new l.default({ root: t, rootMargin: i, threshold: s }));
+            a.set(
+              u,
+              new l.VisibilityObserver({ root: t, rootMargin: i, threshold: s })
+            );
         }
       }
       u.defaultProps = {
@@ -1196,17 +1198,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var d = u;
     },
     290381: function (e, t, i) {
       "use strict";
       i.r(t),
         i.d(t, {
           VisibilityObserver: function () {
-            return s.default;
+            return s.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return n.default;
+            return n.VisibilitySensor;
           },
         }),
         i("6268");
@@ -1215,4 +1216,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e04f338127a0aefb1f2d.js.map
+//# sourceMappingURL=61e3be906eeca077b02a.js.map

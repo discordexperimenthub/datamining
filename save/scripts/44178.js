@@ -675,13 +675,13 @@
             return M;
           },
           useIsActiveChannelOrUnarchivableThread: function () {
-            return L;
+            return y;
           },
           getIsActiveChannelOrUnarchivableThread: function () {
-            return w;
+            return L;
           },
           computeIsReadOnlyThread: function () {
-            return y;
+            return w;
           },
           useIsThreadModerator: function () {
             return V;
@@ -848,7 +848,7 @@
           })(e);
         return b(e, t, n);
       }
-      function L(e) {
+      function y(e) {
         var t;
         let n = (0, l.useStateFromStores)(
           [h.default],
@@ -867,7 +867,7 @@
               n))
         );
       }
-      function w(e) {
+      function L(e) {
         var t;
         return (
           null != e &&
@@ -880,7 +880,7 @@
               h.default.can(m.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function y(e) {
+      function w(e) {
         let t = h.default.can(m.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
@@ -895,7 +895,7 @@
           n = (0, l.useStateFromStores)([h.default], () =>
             h.default.can(m.Permissions.CONNECT, e)
           ),
-          i = L(e),
+          i = y(e),
           r = E.useExperiment(
             { guildId: e.guild_id, location: "e791ea_1" },
             { autoTrackExposure: !1 }
@@ -1998,16 +1998,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return l;
           },
         }),
         n("222007");
-      var i,
-        r = n("817736"),
-        s = n("118810");
-      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        r = n("118810");
+      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class l {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2015,8 +2014,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, r.findDOMNode)(e);
-          (0, s.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, r.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2029,7 +2028,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = l) {
+        constructor(e = s) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2065,14 +2064,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -2128,7 +2127,10 @@
             : (this.elementId = l);
           let u = this.getVisibilityObserverId();
           !a.has(u) &&
-            a.set(u, new s.default({ root: t, rootMargin: n, threshold: i }));
+            a.set(
+              u,
+              new s.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       u.defaultProps = {
@@ -2138,17 +2140,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return r.default;
+            return r.VisibilitySensor;
           },
         }),
         n("6268");
@@ -2188,4 +2189,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d80d11b47b32d7a39997.js.map
+//# sourceMappingURL=5975541cc31c801ce9c3.js.map

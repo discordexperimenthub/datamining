@@ -731,8 +731,8 @@
             subscriptionTier: N,
             trialId: x,
             postSuccessGuild: y,
-            openInvoiceId: L,
-            applicationId: b,
+            openInvoiceId: b,
+            applicationId: L,
             referralTrialOfferId: R,
             giftRecipient: M,
             returnRef: F,
@@ -783,8 +783,8 @@
                 trialId: x,
                 postSuccessGuild: y,
                 planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                openInvoiceId: L,
-                applicationId: b,
+                openInvoiceId: b,
+                applicationId: L,
                 referralTrialOfferId: R,
                 returnRef: F,
                 subscription: P,
@@ -806,7 +806,7 @@
                   subscription_type: E.SubscriptionTypes.PREMIUM,
                   is_gift: g,
                   eligible_for_trial: null != x,
-                  application_id: b,
+                  application_id: L,
                   location_stack: v,
                 }),
                 (0, s.clearError)(),
@@ -1665,7 +1665,7 @@
             children:
               C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS,
           }),
-        L = e =>
+        b = e =>
           (0, i.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-muted",
@@ -1685,12 +1685,12 @@
                 }
               ),
           }),
-        b = e =>
+        L = e =>
           (0, i.jsx)("div", {
             className: T.classificationLetUsKnowContainer,
             children: e.hasBeenAppealed
               ? (0, i.jsx)(y, {})
-              : (0, i.jsx)(L, {
+              : (0, i.jsx)(b, {
                   appealLink: v.SafetyHubLinks.APPEALS_LINK,
                   letUsKnowClick: e.onLetUsKnowClick,
                   isAppealEligible: e.isAppealEligible,
@@ -1744,9 +1744,9 @@
             null != u &&
             null != u.flagged_content &&
             u.flagged_content.length > 0,
-          L = (0, S.useSafetyHubInitialized)();
+          b = (0, S.useSafetyHubInitialized)();
         return (a.useEffect(() => {
-          L &&
+          b &&
             d.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
               action: v.SafetyHubAnalyticsActions.ViewViolationDetail,
               account_standing: x.state,
@@ -1755,7 +1755,7 @@
               is_violative_content_shown: y,
               is_dsa_eligible: N,
             });
-        }, [L]),
+        }, [b]),
         null == u && f === E.ClassificationRequestState.FAILED)
           ? (o(), null)
           : null == u
@@ -1785,7 +1785,7 @@
                     communityGuidelinesLink:
                       v.SafetyHubLinks.COMMUNITY_GUIDELINES,
                     policyExplainerLink: u.explainer_link,
-                    appealComponent: (0, i.jsx)(b, {
+                    appealComponent: (0, i.jsx)(L, {
                       hasBeenAppealed: null != u.appeal_status,
                       onLetUsKnowClick: () => {
                         d.default.track(A.AnalyticEvents.SAFETY_HUB_ACTION, {
@@ -1983,7 +1983,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return L;
+            return b;
           },
         }),
         n("222007"),
@@ -2139,7 +2139,7 @@
             }),
           });
         };
-      function L(e) {
+      function b(e) {
         var t;
         let { flaggedContent: n } = e,
           l = (0, s.useStateFromStores)([h.default], () =>
@@ -2259,10 +2259,10 @@
             return N;
           },
           useCanUnarchiveThread: function () {
-            return L;
+            return b;
           },
           canUnarchiveThread: function () {
-            return b;
+            return L;
           },
           useIsActiveChannelOrUnarchivableThread: function () {
             return R;
@@ -2426,12 +2426,12 @@
             : t)
         );
       }
-      function L(e) {
+      function b(e) {
         let t = (0, s.useStateFromStores)([E.default], () => x(e, E.default)),
           n = U(e);
         return y(e, t, n);
       }
-      function b(e) {
+      function L(e) {
         let t = x(e, E.default),
           n = (function (e) {
             return P(e, E.default);
@@ -3351,16 +3351,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return s;
           },
         }),
         n("222007");
-      var i,
-        a = n("817736"),
-        l = n("118810");
-      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        a = n("118810");
+      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -3368,8 +3367,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, a.findDOMNode)(e);
-          (0, l.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, a.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -3382,7 +3381,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = s) {
+        constructor(e = l) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -3418,14 +3417,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -3481,7 +3480,10 @@
             : (this.elementId = s);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new l.default({ root: t, rootMargin: n, threshold: i }));
+            o.set(
+              u,
+              new l.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       u.defaultProps = {
@@ -3491,17 +3493,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return a.default;
+            return a.VisibilitySensor;
           },
         }),
         n("6268");
@@ -3541,4 +3542,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8929097d7905dbdbfce0.js.map
+//# sourceMappingURL=2b5e512d017ae9354666.js.map

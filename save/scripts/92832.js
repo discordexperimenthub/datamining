@@ -2832,16 +2832,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return r;
+          VisibilityObserver: function () {
+            return o;
           },
         }),
         n("222007");
-      var r,
-        i = n("817736"),
-        s = n("118810");
-      let o = { root: null, rootMargin: "0px", threshold: 0.5 };
-      r = class {
+      var r = n("817736"),
+        i = n("118810");
+      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class o {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2849,8 +2848,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, i.findDOMNode)(e);
-          (0, s.isElement)(n, HTMLElement) &&
+          let n = (0, r.findDOMNode)(e);
+          (0, i.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2863,7 +2862,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = o) {
+        constructor(e = s) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2899,14 +2898,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return d;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -2962,7 +2961,10 @@
             : (this.elementId = o);
           let u = this.getVisibilityObserverId();
           !l.has(u) &&
-            l.set(u, new s.default({ root: t, rootMargin: n, threshold: r }));
+            l.set(
+              u,
+              new s.VisibilityObserver({ root: t, rootMargin: n, threshold: r })
+            );
         }
       }
       u.defaultProps = {
@@ -2972,17 +2974,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var d = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return r.default;
+            return r.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return i.default;
+            return i.VisibilitySensor;
           },
         }),
         n("6268");
@@ -3022,4 +3023,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f802b9bf20bc967d7400.js.map
+//# sourceMappingURL=81029169bd0d59e71d12.js.map

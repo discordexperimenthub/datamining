@@ -1283,13 +1283,13 @@
             applicationId: y,
             referralTrialOfferId: P,
             giftRecipient: b,
-            returnRef: L,
-            subscription: O,
+            returnRef: O,
+            subscription: L,
           } = null != e ? e : {},
           j = !1,
           w = (0, i.v4)(),
-          F = u.default.getCurrentUser(),
-          V = (0, f.isPremiumExactly)(F, E.PremiumTypes.TIER_2);
+          V = u.default.getCurrentUser(),
+          F = (0, f.isPremiumExactly)(V, E.PremiumTypes.TIER_2);
         (0, s.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -1313,7 +1313,7 @@
                       !T &&
                         null != t &&
                         t === E.PremiumSubscriptionSKUs.TIER_2 &&
-                        !V &&
+                        !F &&
                         d.ComponentDispatch.dispatch(
                           h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
@@ -1334,8 +1334,8 @@
                 openInvoiceId: M,
                 applicationId: y,
                 referralTrialOfferId: P,
-                returnRef: L,
-                subscription: O,
+                returnRef: O,
+                subscription: L,
               });
             };
           },
@@ -1709,7 +1709,7 @@
             return b;
           },
           computeIsReadOnlyThread: function () {
-            return L;
+            return O;
           },
           useIsThreadModerator: function () {
             return j;
@@ -1718,7 +1718,7 @@
             return w;
           },
           useIsNonModInLockedThread: function () {
-            return F;
+            return V;
           },
         });
       var r = n("917351"),
@@ -1872,7 +1872,7 @@
       function y(e) {
         let t = x(e, h.default),
           n = (function (e) {
-            return O(e, h.default);
+            return L(e, h.default);
           })(e);
         return A(e, t, n);
       }
@@ -1908,15 +1908,15 @@
               h.default.can(v.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function L(e) {
+      function O(e) {
         let t = h.default.can(v.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function O(e, t) {
+      function L(e, t) {
         return null != e && t.can(v.Permissions.MANAGE_THREADS, e);
       }
       function j(e) {
-        return (0, l.useStateFromStores)([h.default], () => O(e, h.default));
+        return (0, l.useStateFromStores)([h.default], () => L(e, h.default));
       }
       function w(e) {
         let t = (0, a.default)(),
@@ -1930,7 +1930,7 @@
           ).enabled;
         return !t && e.isVocalThread() && i && n && r;
       }
-      function F(e) {
+      function V(e) {
         let t = j(e);
         return e.isLockedThread() && !t;
       }
@@ -3216,16 +3216,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return r;
+          VisibilityObserver: function () {
+            return l;
           },
         }),
         n("222007");
-      var r,
-        i = n("817736"),
-        s = n("118810");
-      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
-      r = class {
+      var r = n("817736"),
+        i = n("118810");
+      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class l {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -3233,8 +3232,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, i.findDOMNode)(e);
-          (0, s.isElement)(n, HTMLElement) &&
+          let n = (0, r.findDOMNode)(e);
+          (0, i.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -3247,7 +3246,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = l) {
+        constructor(e = s) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -3283,14 +3282,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -3346,7 +3345,10 @@
             : (this.elementId = l);
           let u = this.getVisibilityObserverId();
           !a.has(u) &&
-            a.set(u, new s.default({ root: t, rootMargin: n, threshold: r }));
+            a.set(
+              u,
+              new s.VisibilityObserver({ root: t, rootMargin: n, threshold: r })
+            );
         }
       }
       u.defaultProps = {
@@ -3356,17 +3358,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return r.default;
+            return r.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return i.default;
+            return i.VisibilitySensor;
           },
         }),
         n("6268");
@@ -3406,4 +3407,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59158aa884088578d212.js.map
+//# sourceMappingURL=d5cfe429331c6de0209e.js.map

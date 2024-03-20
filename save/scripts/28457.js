@@ -1076,11 +1076,11 @@
             openInvoiceId: L,
             applicationId: M,
             referralTrialOfferId: x,
-            giftRecipient: w,
-            returnRef: P,
+            giftRecipient: b,
+            returnRef: w,
             subscription: O,
           } = null != e ? e : {},
-          b = !1,
+          P = !1,
           U = (0, r.v4)(),
           D = u.default.getCurrentUser(),
           G = (0, f.isPremiumExactly)(D, E.PremiumTypes.TIER_2);
@@ -1096,7 +1096,7 @@
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(I),
                 isGift: T,
                 giftMessage: A,
-                giftRecipient: w,
+                giftRecipient: b,
                 initialPlanId: t,
                 followupSKUInfo: v,
                 onClose: (e, t) => {
@@ -1113,7 +1113,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (b = !0),
+                  (P = !0),
                     null == C || C(),
                     !T && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -1128,7 +1128,7 @@
                 openInvoiceId: L,
                 applicationId: M,
                 referralTrialOfferId: x,
-                returnRef: P,
+                returnRef: w,
                 subscription: O,
               });
             };
@@ -1136,7 +1136,7 @@
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !b &&
+              !P &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: U,
                   payment_type:
@@ -1153,8 +1153,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, a.clearPurchaseTokenAuthState)(),
-                null == p || p(b),
-                b && (null == _ || _());
+                null == p || p(P),
+                P && (null == _ || _());
             },
           }
         );
@@ -1404,13 +1404,13 @@
             return x;
           },
           getIsActiveChannelOrUnarchivableThread: function () {
-            return w;
+            return b;
           },
           computeIsReadOnlyThread: function () {
-            return P;
+            return w;
           },
           useIsThreadModerator: function () {
-            return b;
+            return P;
           },
           useCanJoinThreadVoice: function () {
             return U;
@@ -1564,7 +1564,7 @@
       }
       function L(e) {
         let t = (0, s.useStateFromStores)([h.default], () => y(e, h.default)),
-          n = b(e);
+          n = P(e);
         return R(e, t, n);
       }
       function M(e) {
@@ -1593,7 +1593,7 @@
               n))
         );
       }
-      function w(e) {
+      function b(e) {
         var t;
         return (
           null != e &&
@@ -1606,14 +1606,14 @@
               h.default.can(p.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function P(e) {
+      function w(e) {
         let t = h.default.can(p.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
       function O(e, t) {
         return null != e && t.can(p.Permissions.MANAGE_THREADS, e);
       }
-      function b(e) {
+      function P(e) {
         return (0, s.useStateFromStores)([h.default], () => O(e, h.default));
       }
       function U(e) {
@@ -1629,7 +1629,7 @@
         return !t && e.isVocalThread() && r && n && i;
       }
       function D(e) {
-        let t = b(e);
+        let t = P(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -3020,16 +3020,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return s;
           },
         }),
         n("222007");
-      var i,
-        r = n("817736"),
-        l = n("118810");
-      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        r = n("118810");
+      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -3037,8 +3036,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, r.findDOMNode)(e);
-          (0, l.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, r.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -3051,7 +3050,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = s) {
+        constructor(e = l) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -3087,14 +3086,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -3150,7 +3149,10 @@
             : (this.elementId = s);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new l.default({ root: t, rootMargin: n, threshold: i }));
+            o.set(
+              u,
+              new l.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       u.defaultProps = {
@@ -3160,17 +3162,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return r.default;
+            return r.VisibilitySensor;
           },
         }),
         n("6268");
@@ -3210,4 +3211,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67a19fa5da513f69c153.js.map
+//# sourceMappingURL=f4d0dcc9af8dfc39c296.js.map

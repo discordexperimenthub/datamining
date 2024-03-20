@@ -664,13 +664,13 @@
             applicationId: R,
             referralTrialOfferId: P,
             giftRecipient: y,
-            returnRef: O,
-            subscription: j,
+            returnRef: b,
+            subscription: O,
           } = null != e ? e : {},
-          b = !1,
+          j = !1,
           w = (0, l.v4)(),
-          D = u.default.getCurrentUser(),
-          V = (0, f.isPremiumExactly)(D, E.PremiumTypes.TIER_2);
+          V = u.default.getCurrentUser(),
+          D = (0, f.isPremiumExactly)(V, E.PremiumTypes.TIER_2);
         (0, r.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -694,13 +694,13 @@
                       !T &&
                         null != t &&
                         t === E.PremiumSubscriptionSKUs.TIER_2 &&
-                        !V &&
+                        !D &&
                         d.ComponentDispatch.dispatch(
                           h.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
                 },
                 onComplete: () => {
-                  (b = !0),
+                  (j = !0),
                     null == m || m(),
                     !T && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -715,15 +715,15 @@
                 openInvoiceId: M,
                 applicationId: R,
                 referralTrialOfferId: P,
-                returnRef: O,
-                subscription: j,
+                returnRef: b,
+                subscription: O,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !b &&
+              !j &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: w,
                   payment_type:
@@ -740,8 +740,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, a.clearPurchaseTokenAuthState)(),
-                null == v || v(b),
-                b && (null == _ || _());
+                null == v || v(j),
+                j && (null == _ || _());
             },
           }
         );
@@ -963,16 +963,16 @@
             return y;
           },
           computeIsReadOnlyThread: function () {
-            return O;
+            return b;
           },
           useIsThreadModerator: function () {
-            return b;
+            return j;
           },
           useCanJoinThreadVoice: function () {
             return w;
           },
           useIsNonModInLockedThread: function () {
-            return D;
+            return V;
           },
         });
       var i = n("917351"),
@@ -1120,13 +1120,13 @@
       }
       function M(e) {
         let t = (0, s.useStateFromStores)([h.default], () => x(e, h.default)),
-          n = b(e);
+          n = j(e);
         return L(e, t, n);
       }
       function R(e) {
         let t = x(e, h.default),
           n = (function (e) {
-            return j(e, h.default);
+            return O(e, h.default);
           })(e);
         return L(e, t, n);
       }
@@ -1162,15 +1162,15 @@
               h.default.can(v.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function O(e) {
+      function b(e) {
         let t = h.default.can(v.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function j(e, t) {
+      function O(e, t) {
         return null != e && t.can(v.Permissions.MANAGE_THREADS, e);
       }
-      function b(e) {
-        return (0, s.useStateFromStores)([h.default], () => j(e, h.default));
+      function j(e) {
+        return (0, s.useStateFromStores)([h.default], () => O(e, h.default));
       }
       function w(e) {
         let t = (0, o.default)(),
@@ -1184,8 +1184,8 @@
           ).enabled;
         return !t && e.isVocalThread() && l && n && i;
       }
-      function D(e) {
-        let t = b(e);
+      function V(e) {
+        let t = j(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -1245,16 +1245,16 @@
           var t, n;
           let {
               guildId: y,
-              welcomeChannel: O,
-              transitionState: j,
-              onSave: b,
+              welcomeChannel: b,
+              transitionState: O,
+              onSave: j,
               onClose: w,
             } = e,
-            D = (0, N.useUID)(),
-            [V, U] = l.useState(null != O ? O.channel_id : null),
-            [H, G] = l.useState(null != O ? O.description : ""),
+            V = (0, N.useUID)(),
+            [D, U] = l.useState(null != b ? b.channel_id : null),
+            [H, G] = l.useState(null != b ? b.description : ""),
             [B, F] = l.useState(
-              null != O ? { id: O.emoji_id, name: O.emoji_name } : null
+              null != b ? { id: b.emoji_id, name: b.emoji_name } : null
             ),
             [k, W] = l.useState(!1),
             Z = (0, r.useStateFromStores)([E.default], () =>
@@ -1287,7 +1287,7 @@
           z.forEach(e => {
             let { channel: t } = e;
             T.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) &&
-              ((null == O ? void 0 : O.channel_id) === t.id ||
+              ((null == b ? void 0 : b.channel_id) === t.id ||
                 !K.includes(t.id)) &&
               q.push({
                 value: t.id,
@@ -1326,8 +1326,8 @@
           return (0, i.jsx)(u.default, {
             page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,
             children: (0, i.jsxs)(a.ModalRoot, {
-              transitionState: j,
-              "aria-labelledby": D,
+              transitionState: O,
+              "aria-labelledby": V,
               children: [
                 (0, i.jsxs)("div", {
                   className: P.modalContents,
@@ -1339,7 +1339,7 @@
                     (0, i.jsx)(a.Heading, {
                       variant: "heading-md/semibold",
                       className: P.headerText,
-                      id: D,
+                      id: V,
                       children:
                         R.default.Messages
                           .GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL,
@@ -1350,7 +1350,7 @@
                         (0, i.jsx)(a.SearchableSelect, {
                           options: q,
                           onChange: e => U(e),
-                          value: V,
+                          value: D,
                           renderOptionPrefix: e => {
                             var t;
                             if (null === e) return null;
@@ -1508,22 +1508,22 @@
                         }),
                         (0, i.jsx)(a.Button, {
                           onClick: () => {
-                            null != V &&
+                            null != D &&
                               H.length > 0 &&
-                              b({
-                                channel_id: V,
+                              j({
+                                channel_id: D,
                                 description: H,
                                 emoji_id: null == B ? void 0 : B.id,
                                 emoji_name: null == B ? void 0 : B.name,
                               }),
                               Q();
                           },
-                          disabled: null == V || 0 === H.length,
+                          disabled: null == D || 0 === H.length,
                           children: R.default.Messages.SAVE,
                         }),
                       ],
                     }),
-                    null != O &&
+                    null != b &&
                       (0, i.jsx)(a.Button, {
                         onClick: () => {
                           W(!0);
@@ -1538,10 +1538,10 @@
                 k &&
                   (0, i.jsx)(A.default, {
                     onConfirm: () => {
-                      b(), Q();
+                      j(), Q();
                     },
                     onCancel: () => W(!1),
-                    channelId: V,
+                    channelId: D,
                   }),
               ],
             }),
@@ -2637,16 +2637,15 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          VisibilityObserver: function () {
+            return s;
           },
         }),
         n("222007");
-      var i,
-        l = n("817736"),
-        r = n("118810");
-      let s = { root: null, rootMargin: "0px", threshold: 0.5 };
-      i = class {
+      var i = n("817736"),
+        l = n("118810");
+      let r = { root: null, rootMargin: "0px", threshold: 0.5 };
+      class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
         }
@@ -2654,8 +2653,8 @@
           let t = this._observer;
           if (null == t) return;
           this.unobserve(e);
-          let n = (0, l.findDOMNode)(e);
-          (0, r.isElement)(n, HTMLElement) &&
+          let n = (0, i.findDOMNode)(e);
+          (0, l.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2668,7 +2667,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = s) {
+        constructor(e = r) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2704,14 +2703,14 @@
                 e
               ));
         }
-      };
+      }
     },
     235855: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return c;
+          VisibilitySensor: function () {
+            return u;
           },
         }),
         n("222007"),
@@ -2767,7 +2766,10 @@
             : (this.elementId = s);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
-            o.set(u, new r.default({ root: t, rootMargin: n, threshold: i }));
+            o.set(
+              u,
+              new r.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+            );
         }
       }
       u.defaultProps = {
@@ -2777,17 +2779,16 @@
         rootMargin: "0px 0px 0px 0px",
         threshold: [0, Number.MIN_VALUE],
       };
-      var c = u;
     },
     290381: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           VisibilityObserver: function () {
-            return i.default;
+            return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return l.default;
+            return l.VisibilitySensor;
           },
         }),
         n("6268");
@@ -2827,4 +2828,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0b190085844153db065c.js.map
+//# sourceMappingURL=44315eae21937d594241.js.map

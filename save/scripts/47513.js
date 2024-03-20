@@ -26440,8 +26440,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277235", ", Version Hash: ")
-          .concat("b19f0df0ab7b980da173843d8a8298996d4def5f")
+          .concat("277241", ", Version Hash: ")
+          .concat("7d6ab4734047b9524692c86b8a91b5adb974ab73")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29566,12 +29566,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277235"), "277235"));
+        let _ = parseInt(((e = "277241"), "277241"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277235"
+                "277241"
               )
             ),
             (_ = 0)),
@@ -32598,22 +32598,6 @@
             null != o.default.getRemoteSessionId() ||
             null != o.default.getAwaitingRemoteSessionInfo()
         );
-      }
-    },
-    963990: function (e, _, E) {
-      "use strict";
-      E.r(_),
-        E.d(_, {
-          removeExecutablePathPrefix: function () {
-            return t;
-          },
-        });
-      function t(e) {
-        var _;
-        let E =
-          ((_ = (_ = e).toLowerCase()).endsWith("/") && (_ = _.slice(0, -1)),
-          _);
-        return E.split("/").slice(-2).join("/");
       }
     },
     34226: function (e, _, E) {
@@ -52792,4 +52776,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.e8fe9f3455ca364d4d93.js.map
+//# sourceMappingURL=47513.5d2a643c0fa269dcab5e.js.map

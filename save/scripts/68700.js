@@ -167,94 +167,92 @@
         return (
           l.default.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
           await u.default.unarchiveThreadIfNecessary(e),
-          a.default
-            .patch({
-              url: d.Endpoints.CHANNEL(e),
-              body: {
-                name: n,
-                type: s,
-                position: o,
-                topic: f,
-                bitrate: c,
-                user_limit: _,
-                nsfw: E,
-                flags: T,
-                permission_overwrites: S,
-                rate_limit_per_user: h,
-                default_thread_rate_limit_per_user: C,
-                default_auto_archive_duration: g,
-                template: N,
-                rtc_region: I,
-                video_quality_mode: M,
-                auto_archive_duration: v,
-                locked: m,
-                invitable: p,
-                default_reaction_emoji:
-                  null != A
-                    ? {
-                        emoji_id: null == A ? void 0 : A.emojiId,
-                        emoji_name: null == A ? void 0 : A.emojiName,
-                      }
-                    : null === A
-                      ? null
-                      : void 0,
-                available_tags:
-                  null == O
-                    ? void 0
-                    : O.map(e => ({
-                        id: e.id,
-                        name: e.name,
-                        emoji_id: e.emojiId,
-                        emoji_name: e.emojiName,
-                        moderated: e.moderated,
-                      })),
-                default_sort_order: U,
-                default_forum_layout: F,
-                icon_emoji:
-                  null != L
-                    ? { id: L.id, name: L.name }
-                    : null === L
-                      ? null
-                      : void 0,
-                theme_color: R,
-              },
-              oldFormErrors: !0,
-            })
-            .then(
-              t => {
-                l.default.dispatch({
-                  type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
-                  channelId: e,
-                });
-                let n = null == G ? void 0 : G.getGuildId();
-                return (
-                  null != n &&
-                    !(null == G ? void 0 : G.isThread()) &&
-                    i.default.checkGuildTemplateDirty(n),
-                  t
-                );
-              },
-              e => (
-                l.default.dispatch({
-                  type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
-                  errors: e.body,
-                }),
-                e
-              )
+          a.HTTP.patch({
+            url: d.Endpoints.CHANNEL(e),
+            body: {
+              name: n,
+              type: s,
+              position: o,
+              topic: f,
+              bitrate: c,
+              user_limit: _,
+              nsfw: E,
+              flags: T,
+              permission_overwrites: S,
+              rate_limit_per_user: h,
+              default_thread_rate_limit_per_user: C,
+              default_auto_archive_duration: g,
+              template: N,
+              rtc_region: I,
+              video_quality_mode: M,
+              auto_archive_duration: v,
+              locked: m,
+              invitable: p,
+              default_reaction_emoji:
+                null != A
+                  ? {
+                      emoji_id: null == A ? void 0 : A.emojiId,
+                      emoji_name: null == A ? void 0 : A.emojiName,
+                    }
+                  : null === A
+                    ? null
+                    : void 0,
+              available_tags:
+                null == O
+                  ? void 0
+                  : O.map(e => ({
+                      id: e.id,
+                      name: e.name,
+                      emoji_id: e.emojiId,
+                      emoji_name: e.emojiName,
+                      moderated: e.moderated,
+                    })),
+              default_sort_order: U,
+              default_forum_layout: F,
+              icon_emoji:
+                null != L
+                  ? { id: L.id, name: L.name }
+                  : null === L
+                    ? null
+                    : void 0,
+              theme_color: R,
+            },
+            oldFormErrors: !0,
+          }).then(
+            t => {
+              l.default.dispatch({
+                type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
+                channelId: e,
+              });
+              let n = null == G ? void 0 : G.getGuildId();
+              return (
+                null != n &&
+                  !(null == G ? void 0 : G.isThread()) &&
+                  i.default.checkGuildTemplateDirty(n),
+                t
+              );
+            },
+            e => (
+              l.default.dispatch({
+                type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
+                errors: e.body,
+              }),
+              e
             )
+          )
         );
       }
       function T(e) {
         let t = r.default.getChannel(e);
-        a.default
-          .delete({ url: d.Endpoints.CHANNEL(e), oldFormErrors: !0 })
-          .then(() => {
+        a.HTTP.del({ url: d.Endpoints.CHANNEL(e), oldFormErrors: !0 }).then(
+          () => {
             let e = null == t ? void 0 : t.getGuildId();
             null != e &&
               !(null == t ? void 0 : t.isThread()) &&
               i.default.checkGuildTemplateDirty(e),
               f();
-          });
+          }
+        );
       }
       var S = {
         init: o,
@@ -273,7 +271,7 @@
         saveChannel: E,
         deleteChannel: T,
         updateVoiceChannelStatus: function (e, t) {
-          return a.default.put({
+          return a.HTTP.put({
             url: d.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(e),
             body: { status: t },
           });
@@ -415,7 +413,7 @@
           async setAccountFlag(e, t) {
             let n = r.default.accountNotificationSettings.flags,
               l = (0, s.setFlag)(n, e, t);
-            await a.default.patch({
+            await a.HTTP.patch({
               url: f.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
               body: { flags: l },
             }),
@@ -2013,7 +2011,7 @@
       }
       async function E(e, t) {
         null == e || e === s.ME
-          ? await a.default.patch({
+          ? await a.HTTP.patch({
               url: s.Endpoints.USER_GUILD_SETTINGS(s.ME),
               body: t,
             })
@@ -2047,7 +2045,7 @@
           ? ((d = { ...n }),
             delete e[s.FAVORITES],
             (
-              await a.default.patch({
+              await a.HTTP.patch({
                 url: s.Endpoints.USER_GUILD_SETTINGS_BULK,
                 body: { guilds: e },
               })
@@ -2251,21 +2249,19 @@
           null != u &&
             a === A.ChannelSettingsSections.INSTANT_INVITES &&
             ((m = !0),
-            E.default
-              .get({
-                url: A.Endpoints.INSTANT_INVITES(u.id),
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  (m = !1),
-                    T.default.dispatch({
-                      type: "CHANNEL_SETTINGS_LOADED_INVITES",
-                      invites: e.body,
-                    });
-                },
-                () => (m = !1)
-              ));
+            E.HTTP.get({
+              url: A.Endpoints.INSTANT_INVITES(u.id),
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                (m = !1),
+                  T.default.dispatch({
+                    type: "CHANNEL_SETTINGS_LOADED_INVITES",
+                    invites: e.body,
+                  });
+              },
+              () => (m = !1)
+            ));
       }
       function R() {
         (p = !1),
@@ -2566,4 +2562,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7a3631c62b4e30ecdc65.js.map
+//# sourceMappingURL=e06719c3ddf28b1bebc3.js.map

@@ -26,7 +26,7 @@
         let { autoRetry: c = !0, signal: _ } = r;
         try {
           var E;
-          let l = await n.default.post({
+          let l = await n.HTTP.post({
             url: o.Endpoints.GUILD_MEMBER_SEARCH(e),
             body: t,
             signal: _,
@@ -118,10 +118,10 @@
             return A;
           },
           useIsMakingRequest: function () {
-            return w;
+            return P;
           },
           useIsStillIndexing: function () {
-            return P;
+            return w;
           },
           default: function () {
             return q;
@@ -431,7 +431,7 @@
         }
         await U(d);
       }
-      function w(e) {
+      function P(e) {
         return p(t => {
           var r;
           let n = I(e);
@@ -441,7 +441,7 @@
           );
         });
       }
-      function P(e) {
+      function w(e) {
         return p(t => {
           var r;
           let n = I(e);
@@ -508,4 +508,4 @@
     },
   },
 ]);
-//# sourceMappingURL=78891.ce18a4638e53d286858d.js.map
+//# sourceMappingURL=78891.08cd8fae8100b1309197.js.map

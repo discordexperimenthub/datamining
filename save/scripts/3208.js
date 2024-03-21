@@ -200,12 +200,11 @@
                 );
               (e._navigateFrameToAuth = function (e) {
                 let t = this._formatPaymentResourceData(e);
-                return n.default
-                  .post({
-                    url: c.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
-                    oldFormErrors: !0,
-                    body: { return_url: t.returnUrl, cancel_url: t.cancelUrl },
-                  })
+                return n.HTTP.post({
+                  url: c.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
+                  oldFormErrors: !0,
+                  body: { return_url: t.returnUrl, cancel_url: t.cancelUrl },
+                })
                   .then(e => {
                     let {
                       body: { token: t },
@@ -1896,4 +1895,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3208.dc055ee636dc7a01b289.js.map
+//# sourceMappingURL=3208.16b9abe6dfec24cd7390.js.map

@@ -142,22 +142,20 @@
       }
       function M(e, t) {
         (0 !== e.length || 0 !== t.length) &&
-          n.default
-            .post({
-              url: g.Endpoints.SAVED_MESSAGES,
-              body: {
-                added: e.map(m.savedMessageToServer),
-                removed: t.map(m.savedMessageToServer),
-              },
-            })
-            .then(e => {
-              I(e.body.saved_messages.map(m.savedMessageToClient));
-            });
+          n.HTTP.post({
+            url: g.Endpoints.SAVED_MESSAGES,
+            body: {
+              added: e.map(m.savedMessageToServer),
+              removed: t.map(m.savedMessageToServer),
+            },
+          }).then(e => {
+            I(e.body.saved_messages.map(m.savedMessageToClient));
+          });
       }
       function v() {
         return o.default.recentlyFetched()
           ? Promise.resolve()
-          : n.default.get({ url: g.Endpoints.SAVED_MESSAGES }).then(e => {
+          : n.HTTP.get({ url: g.Endpoints.SAVED_MESSAGES }).then(e => {
               let t = e.body.saved_messages,
                 a = t.map(m.savedMessageToClient);
               I(a);
@@ -501,4 +499,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1ed4b4edd79a81ad161a.js.map
+//# sourceMappingURL=18de364a87e98952c853.js.map

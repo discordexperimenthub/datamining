@@ -188,7 +188,7 @@
         a = n("49111"),
         i = {
           createChannelFollower: (e, t) =>
-            s.default.post({
+            s.HTTP.post({
               url: a.Endpoints.CHANNEL_FOLLOWERS(t),
               body: { webhook_channel_id: e },
               oldFormErrors: !0,
@@ -196,7 +196,7 @@
           async fetchChannelFollowerStats(e) {
             l.default.dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_START" });
             try {
-              let t = await s.default.get({
+              let t = await s.HTTP.get({
                 url: a.Endpoints.CHANNEL_FOLLOWER_STATS(e),
                 body: { channel_id: e },
                 oldFormErrors: !0,
@@ -359,8 +359,8 @@
       var o = {
         checkIncidents() {
           Promise.all([
-            s.default.get("".concat(i, "/active.json")),
-            s.default.get(r),
+            s.HTTP.get("".concat(i, "/active.json")),
+            s.HTTP.get(r),
           ]).then(e => {
             let [t, n] = e,
               [s] = t.body.scheduled_maintenances,
@@ -372,7 +372,7 @@
           });
         },
         checkScheduledMaintenances() {
-          s.default.get("".concat(i, "/upcoming.json")).then(e => {
+          s.HTTP.get("".concat(i, "/upcoming.json")).then(e => {
             let [t] = e.body.scheduled_maintenances;
             l.default.dispatch({
               type: "STATUS_PAGE_SCHEDULED_MAINTENANCE",
@@ -7425,7 +7425,7 @@
       let r = async e => {
           let t = !1;
           try {
-            let n = await s.default.get({
+            let n = await s.HTTP.get({
               url: i.Endpoints.DROPS_ELIGIBILITY,
               query: { drops_quest_id: e },
             });
@@ -7442,7 +7442,7 @@
         o = async e => {
           let t = [];
           try {
-            let n = await s.default.get({
+            let n = await s.HTTP.get({
               url: i.Endpoints.DROPS_PLATFORM_AVAILABILITY,
               query: { drops_quest_id: e },
             });
@@ -7457,7 +7457,7 @@
         },
         u = async (e, t) => {
           try {
-            let n = await s.default.post({
+            let n = await s.HTTP.post({
               url: i.Endpoints.DROPS_CLAIM_REWARD_CODE,
               query: { drops_quest_id: e, platform: t },
             });
@@ -7474,7 +7474,7 @@
         },
         d = async () => {
           try {
-            let e = await s.default.get({ url: i.Endpoints.DROPS_USER_STATUS });
+            let e = await s.HTTP.get({ url: i.Endpoints.DROPS_USER_STATUS });
             l.default.dispatch({
               type: "DROPS_USER_STATUS_FETCH_SUCCESS",
               codes: e.body,
@@ -7484,7 +7484,7 @@
           }
         },
         c = async e => {
-          await s.default.delete({
+          await s.HTTP.del({
             url: i.Endpoints.DROPS_ENROLL_USER,
             query: { drops_quest_id: e },
           }),
@@ -7495,7 +7495,7 @@
             await d();
         },
         E = async e => {
-          let t = await s.default.get({
+          let t = await s.HTTP.get({
             url: i.Endpoints.DROPS_ENROLL_USER,
             query: { drops_quest_id: e },
           });
@@ -7507,7 +7507,7 @@
           });
         },
         f = async e => {
-          await s.default.post({
+          await s.HTTP.post({
             url: i.Endpoints.DROPS_ENROLL_USER,
             query: { drops_quest_id: e },
           }),
@@ -7516,7 +7516,7 @@
         _ = async (e, t, n) => {
           let r = a.default.getViewerIds(t);
           try {
-            let a = await s.default.post({
+            let a = await s.HTTP.post({
               url: i.Endpoints.DROPS_HEARTBEAT(e),
               query: {
                 stream_key: t,
@@ -7541,7 +7541,7 @@
         },
         T = async e => {
           try {
-            let t = await s.default.get({ url: i.Endpoints.DROPS_PROGRESS(e) });
+            let t = await s.HTTP.get({ url: i.Endpoints.DROPS_PROGRESS(e) });
             l.default.dispatch({
               type: "DROPS_FETCH_PROGRESS_SUCCESS",
               dropsQuestId: e,
@@ -9268,7 +9268,7 @@
           l.default.dispatch({ type: "GUILD_JOIN_REQUESTS_FETCH_START" });
           try {
             var c;
-            let e = await s.default.get({
+            let e = await s.HTTP.get({
                 url: r.Endpoints.GUILD_JOIN_REQUESTS(t),
                 query: { status: n, limit: d, before: o, after: u },
               }),
@@ -9300,7 +9300,7 @@
         },
         u = async e => {
           try {
-            let t = await s.default.delete({
+            let t = await s.HTTP.del({
               url: r.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
             });
             return (
@@ -9317,7 +9317,7 @@
         },
         d = async (e, t) => {
           try {
-            let n = await s.default.post({
+            let n = await s.HTTP.post({
               url: r.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t),
             });
             return n;
@@ -9336,7 +9336,7 @@
                 ? arguments[2]
                 : a.GuildJoinRequestApplicationStatuses.APPROVED,
             i = arguments.length > 3 ? arguments[3] : void 0,
-            o = await s.default.patch({
+            o = await s.HTTP.patch({
               url: r.Endpoints.GUILD_JOIN_REQUEST(e, t),
               body: { action: n, rejection_reason: i },
             });
@@ -9348,7 +9348,7 @@
           });
         },
         E = async (e, t) => {
-          let n = await s.default.patch({
+          let n = await s.HTTP.patch({
             url: r.Endpoints.GUILD_JOIN_REQUESTS(e),
             body: { action: t },
           });
@@ -9363,7 +9363,7 @@
         },
         f = async e => {
           try {
-            let t = await s.default.post({
+            let t = await s.HTTP.post({
                 url: r.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
               }),
               { body: n } = t;
@@ -9380,7 +9380,7 @@
           }
         },
         _ = async () => {
-          let e = await s.default.get({
+          let e = await s.HTTP.get({
             url: r.Endpoints.USER_JOIN_REQUEST_GUILDS,
           });
           l.default.dispatch({
@@ -11509,7 +11509,7 @@
       async function o(e) {
         l.default.dispatch({ type: "MEDIA_POST_EMBED_FETCH", threadId: e });
         try {
-          let t = await s.default.get({
+          let t = await s.HTTP.get({
               url: i.Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(e),
             }),
             n = t.body;
@@ -11527,7 +11527,7 @@
       }
       async function u(e) {
         try {
-          let t = await s.default.post({
+          let t = await s.HTTP.post({
             url: i.Endpoints.UNFURL_EMBED_URLS,
             body: { urls: e },
           });
@@ -12343,8 +12343,10 @@
         l = n("794818"),
         a = n("49111"),
         i = e =>
-          s.default
-            .get({ url: a.Endpoints.STICKER_GUILD_DATA(e), oldFormErrors: !0 })
+          s.HTTP.get({
+            url: a.Endpoints.STICKER_GUILD_DATA(e),
+            oldFormErrors: !0,
+          })
             .then(e =>
               (null == e ? void 0 : e.body) != null
                 ? (0, l.makeDiscoverableGuild)(e.body)
@@ -12403,7 +12405,7 @@
           (I.isArchivedThread() && (await a.default.unarchiveThread(I, !1)),
           !l.default.hasJoined(e) &&
             (await a.default.joinThread(I, "Mark Unread"))),
-          s.default.post({
+          s.HTTP.post({
             url: c.Endpoints.MESSAGE_ACK(e, _),
             body: { manual: !0, mention_count: T },
             oldFormErrors: !0,
@@ -17931,7 +17933,7 @@
       async function i(e) {
         let { channelId: t, messageId: n, answerIds: i } = e;
         try {
-          await s.default.put({
+          await s.HTTP.put({
             url: a.Endpoints.POLL_ANSWERS(t, n),
             body: { answer_ids: i },
           });
@@ -17942,7 +17944,7 @@
       async function r(e) {
         let { channelId: t, messageId: n } = e;
         try {
-          await s.default.post({ url: a.Endpoints.POLL_EXPIRE(t, n) });
+          await s.HTTP.post({ url: a.Endpoints.POLL_EXPIRE(t, n) });
         } catch (e) {
           throw new l.APIError(e);
         }
@@ -20320,7 +20322,7 @@
         a.default.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
         try {
           var e, t, n;
-          let u = await s.default.post({ url: o.Endpoints.USER_OFFER }),
+          let u = await s.HTTP.post({ url: o.Endpoints.USER_OFFER }),
             d =
               null !== (e = u.body.user_trial_offer) && void 0 !== e ? e : null,
             c = null !== (t = u.body.user_discount) && void 0 !== t ? t : null,
@@ -20352,12 +20354,11 @@
         let n = null != e && null == e.expires_at ? e.id : void 0,
           l = null != t && null == t.expires_at ? t.id : void 0;
         if (void 0 !== n || void 0 !== l)
-          return s.default
-            .post({
-              url: o.Endpoints.USER_OFFER_ACKNOWLEDGED,
-              body: { user_trial_offer_id: n, user_discount_offer_id: l },
-              oldFormErrors: !0,
-            })
+          return s.HTTP.post({
+            url: o.Endpoints.USER_OFFER_ACKNOWLEDGED,
+            body: { user_trial_offer_id: n, user_discount_offer_id: l },
+            oldFormErrors: !0,
+          })
             .then(e => {
               var t, n, s;
               a.default.dispatch({
@@ -32878,4 +32879,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d2be6865af09d350768b.js.map
+//# sourceMappingURL=15a7a2d7a24e453ff14d.js.map

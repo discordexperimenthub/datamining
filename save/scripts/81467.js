@@ -72,7 +72,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return M;
+            return T;
           },
         }),
         s("222007");
@@ -144,12 +144,11 @@
             l.locale(
               window.navigator.userLanguage || window.navigator.language
             ),
-            o.default
-              .post({
-                url: p.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION("xbox"),
-                body: { code: t, state: s },
-                oldFormErrors: !0,
-              })
+            o.HTTP.post({
+              url: p.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION("xbox"),
+              body: { code: t, state: s },
+              oldFormErrors: !0,
+            })
               .then(e => {
                 this.setState({
                   pin: e.body.short_code,
@@ -306,7 +305,7 @@
             });
         }
       }
-      var M = L;
+      var T = L;
     },
     57641: function (e, t, s) {
       "use strict";
@@ -623,4 +622,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8d2aff0db1f7e1f848e3.js.map
+//# sourceMappingURL=055a0bcab7a97b7e2b03.js.map

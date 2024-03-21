@@ -190,8 +190,9 @@
         s = l("895026"),
         i = l("49111");
       function r(e, t) {
-        n.default
-          .get({ url: i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t) })
+        n.HTTP.get({
+          url: i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+        })
           .then(e => {
             let l = [];
             e.body.length > 0 &&
@@ -222,28 +223,26 @@
               value: e.value,
             }))
           ),
-          o = await n.default
-            .put({
-              url: i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-              body: 0 === r.length ? [] : r,
-              oldFormErrors: !0,
-            })
-            .then(e => {
-              let t = [];
-              return (
-                e.body.length > 0 &&
-                  (t = e.body.map(e =>
-                    e.map(e => ({
-                      connectionType: e.connection_type,
-                      connectionMetadataField: e.connection_metadata_field,
-                      applicationId: e.application_id,
-                      operator: e.operator,
-                      value: e.value,
-                    }))
-                  )),
-                t
-              );
-            }),
+          o = await n.HTTP.put({
+            url: i.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+            body: 0 === r.length ? [] : r,
+            oldFormErrors: !0,
+          }).then(e => {
+            let t = [];
+            return (
+              e.body.length > 0 &&
+                (t = e.body.map(e =>
+                  e.map(e => ({
+                    connectionType: e.connection_type,
+                    connectionMetadataField: e.connection_metadata_field,
+                    applicationId: e.application_id,
+                    operator: e.operator,
+                    value: e.value,
+                  }))
+                )),
+              t
+            );
+          }),
           d = await (0, s.requestMembersForRole)(e, t, !1);
         null != d &&
           a.default.dispatch({
@@ -259,7 +258,7 @@
           });
       }
       async function d() {
-        let e = await n.default.get({
+        let e = await n.HTTP.get({
           url: i.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS,
         });
         return e.body;
@@ -2293,8 +2292,8 @@
             },
             [p, y, b, P]
           ),
-          k = null != s ? s : t,
-          [H, U] = a.useMemo(() => {
+          H = null != s ? s : t,
+          [k, U] = a.useMemo(() => {
             let e = {},
               t = {};
             for (let [l, n] of Object.entries(v))
@@ -2379,12 +2378,12 @@
                 w(e, l);
                 return;
               }
-              h.editPermissions(t, k, n);
+              h.editPermissions(t, H, n);
             },
-            [t, v, k, F, w]
+            [t, v, H, F, w]
           ),
           V = a.useCallback(() => {
-            let e = Object.keys(H);
+            let e = Object.keys(k);
             return (0, d.openModalLazy)(async () => {
               let { default: t } = await l
                 .el("609789")
@@ -2406,7 +2405,7 @@
                   ...l,
                 });
             });
-          }, [W, H, p, D]),
+          }, [W, k, p, D]),
           Y = a.useCallback(() => {
             let e = Object.keys(U);
             return (0, d.openModalLazy)(async () => {
@@ -2473,7 +2472,7 @@
               noneSelectedText:
                 R.default.Messages
                   .INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
-              overwrites: H,
+              overwrites: k,
               title:
                 null == s
                   ? R.default.Messages.CHANNELS
@@ -2827,7 +2826,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return k;
+            return H;
           },
         }),
         l("222007");
@@ -2969,7 +2968,7 @@
           })
         );
       }
-      function k(e) {
+      function H(e) {
         let {
           invites: t,
           guild: s,
@@ -2999,8 +2998,8 @@
               location: "5c23b0_1",
             });
         }, [N, h, s.id]);
-        let k = (0, g.default)(),
-          H = a.useMemo(
+        let H = (0, g.default)(),
+          k = a.useMemo(
             () =>
               null == t || I
                 ? []
@@ -3068,12 +3067,12 @@
                   });
           };
         return (0, n.jsx)(E.ListContentScroller, {
-          sections: [Math.max(1, H.length)],
+          sections: [Math.max(1, k.length)],
           renderSection: () => {
             let e;
             return (
               (e =
-                0 !== H.length || I
+                0 !== k.length || I
                   ? (0, n.jsxs)(M.default, {
                       children: [
                         (0, n.jsx)(M.default.Child, {
@@ -3112,7 +3111,7 @@
                       ],
                     })
                   : (0, n.jsxs)(R.default, {
-                      theme: k,
+                      theme: H,
                       children: [
                         (0, n.jsx)(R.EmptyStateImage, {
                           darkSrc: l("553021"),
@@ -3190,7 +3189,7 @@
           },
           renderRow: e => {
             let { section: t, row: l } = e;
-            if (0 === H.length && 0 === l && I)
+            if (0 === k.length && 0 === l && I)
               return (0, n.jsx)(
                 m.Spinner,
                 {
@@ -3200,7 +3199,7 @@
                 "spinner"
               );
             if (t > 0) return null;
-            let a = H[l];
+            let a = k[l];
             return null == a
               ? null
               : (0, n.jsx)(
@@ -3212,12 +3211,12 @@
           rowHeight: (e, t) =>
             e > 0
               ? 0
-              : 0 === H.length && 0 === t && I
+              : 0 === k.length && 0 === t && I
                 ? 62
-                : null != H[t]
+                : null != k[t]
                   ? 62
                   : 0,
-          sectionHeight: () => (0 !== H.length || I ? 120 : 344),
+          sectionHeight: () => (0 !== k.length || I ? 120 : 344),
         });
       }
     },
@@ -3668,7 +3667,7 @@
             canNavigate: P,
           } = e,
           { application: D, integration: y, webhooks: G } = r,
-          [B, k] = (0, s.useStateFromStoresArray)(
+          [B, H] = (0, s.useStateFromStoresArray)(
             [m.default],
             () => [
               m.default.can(R.Permissions.MANAGE_ROLES, l),
@@ -3681,7 +3680,7 @@
             ],
             [D.bot, l]
           ),
-          H = (0, s.useStateFromStores)(
+          k = (0, s.useStateFromStores)(
             [m.default],
             () => m.default.can(R.Permissions.MANAGE_WEBHOOKS, l),
             [l]
@@ -3814,7 +3813,7 @@
                       children: (0, n.jsx)(i.Text, {
                         color: "text-muted",
                         variant: "text-sm/normal",
-                        children: H
+                        children: k
                           ? M.default.Messages
                               .INTEGRATIONS_APPLICATION_NO_WEBHOOKS
                           : M.default.Messages
@@ -3832,7 +3831,7 @@
                 (0, n.jsx)(i.Text, {
                   color: "header-secondary",
                   variant: "text-sm/normal",
-                  children: k
+                  children: H
                     ? M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_SUMMARY
                     : M.default.Messages
                         .INTEGRATIONS_APPLICATION_REMOVE_NO_PERMISSIONS,
@@ -3844,7 +3843,7 @@
                     size: i.Button.Sizes.SMALL,
                     color: i.Button.Colors.RED,
                     look: i.Button.Looks.FILLED,
-                    disabled: !k,
+                    disabled: !H,
                     onClick: U,
                     children:
                       M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE,
@@ -4081,10 +4080,10 @@
         y = l("390494"),
         G = l("449638"),
         B = l("117809");
-      function k(e, t) {
+      function H(e, t) {
         return t.includes(e);
       }
-      function H(e) {
+      function k(e) {
         let { query: t, setQuery: l } = e,
           s = a.useCallback(
             e => {
@@ -4200,7 +4199,7 @@
           }, [J, $, t, X, ee, et]),
           ei = Object.values(s).length,
           er = a.useMemo(() => {
-            let e = ei > 100 ? k : o;
+            let e = ei > 100 ? H : o;
             return Object.values(s).filter(t => {
               var l, n, a;
               let { application: s } = t;
@@ -4574,7 +4573,7 @@
                                     .INTEGRATIONS_APPLICATION_SECTION,
                               }),
                               ei > 4
-                                ? (0, n.jsx)(H, { query: Z, setQuery: q })
+                                ? (0, n.jsx)(k, { query: Z, setQuery: q })
                                 : null,
                               eT,
                             ],
@@ -4801,15 +4800,15 @@
             errors: G,
             hasChanges: B,
           } = e,
-          k = (0, r.useStateFromStores)([I.default], () =>
+          H = (0, r.useStateFromStores)([I.default], () =>
             null != s ? I.default.getDefaultChannel(s.id) : null
           ),
-          H = (0, r.useStateFromStoresObject)([I.default], () =>
+          k = (0, r.useStateFromStoresObject)([I.default], () =>
             I.default.getChannels(null == s ? void 0 : s.id)
           ),
           U = (0, r.useStateFromStoresObject)([T.default], () =>
             i.keyBy(
-              H.SELECTABLE.map(e => e.channel).filter(e =>
+              k.SELECTABLE.map(e => e.channel).filter(e =>
                 T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)
               ),
               "id"
@@ -4817,7 +4816,7 @@
           ),
           F = (0, r.useStateFromStoresObject)([T.default], () =>
             i.keyBy(
-              H.VOCAL.map(e => e.channel).filter(
+              k.VOCAL.map(e => e.channel).filter(
                 e =>
                   e.isGuildVocal() &&
                   T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)
@@ -4825,7 +4824,7 @@
               "id"
             )
           ),
-          w = null != v ? v : k,
+          w = null != v ? v : H,
           W = t === C.IntegrationSettingsSections.APPLICATION ? l : null,
           [V, Y] = a.useState(u.SHAKE_INTENSITY_DEFAULT),
           K = a.useCallback(
@@ -5283,7 +5282,7 @@
           B = a.useCallback(() => {
             y(!0), b(s);
           }, [s, b]),
-          k = a.useCallback(() => {
+          H = a.useCallback(() => {
             !s.syncing &&
               (0, u.openModal)(e => {
                 let t =
@@ -5306,7 +5305,7 @@
                 });
               });
           }, [s, j]),
-          H = a.useCallback(() => {
+          k = a.useCallback(() => {
             I.default.syncIntegration(l.id, s.id);
           }, [l.id, s.id]),
           U = a.useCallback(() => {
@@ -5553,7 +5552,7 @@
                   subscribersText: Y,
                   descriptionText: z,
                   roleLink: K,
-                  onSync: H,
+                  onSync: k,
                 }),
                 (0, n.jsx)(u.FormDivider, { className: R.midDivider }),
                 (function (e) {
@@ -5698,7 +5697,7 @@
                     size: u.Button.Sizes.SMALL,
                     color: u.Button.Colors.RED,
                     look: u.Button.Looks.LINK,
-                    onClick: k,
+                    onClick: H,
                     children: x.default.Messages.INTEGRATIONS_DISABLE,
                   }),
                 }),
@@ -5971,8 +5970,8 @@
             details: y,
             integration: G,
             buttonText: B,
-            buttonDisabled: k,
-            hasNextSection: H,
+            buttonDisabled: H,
+            hasNextSection: k,
             onButtonClick: U,
             guildId: F,
             isScrolling: w,
@@ -5982,8 +5981,8 @@
           [K, z] = a.useState(!1);
         let Z =
             ((x = B),
-            (R = k),
-            (M = H),
+            (R = H),
+            (M = k),
             (v = U),
             null == x || null == v
               ? null
@@ -6170,7 +6169,7 @@
               }),
             ],
           });
-        return H
+        return k
           ? (0, n.jsx)(o.Clickable, {
               onClick: () => {
                 W &&
@@ -6258,7 +6257,7 @@
         let P = a.useMemo(() => R(l, l.avatar), [l]),
           D = a.useCallback(() => {
             let e = ""
-              .concat(r.default.getAPIBaseURL(!1))
+              .concat((0, r.getAPIBaseURL)(!1))
               .concat(_.Endpoints.WEBHOOK_INTEGRATION(l.id, l.token));
             (0, g.copy)(e);
           }, [l]),
@@ -7084,4 +7083,4 @@
     },
   },
 ]);
-//# sourceMappingURL=91fee5f238b92a783976.js.map
+//# sourceMappingURL=b5ebb8b04247235d8e4f.js.map

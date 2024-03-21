@@ -1,20 +1,20 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["56312"],
   {
-    87657: function (t, e, u) {
+    87657: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           default: function () {
             return o;
           },
         });
-      var r = u("37983"),
-        n = u("884691"),
-        i = u("77078"),
-        l = u("390236"),
+      var u = r("37983"),
+        n = r("884691"),
+        i = r("77078"),
+        l = r("390236"),
         o = n.memo(function (t) {
-          var e, u, o, c;
+          var e, r, o, c;
           let {
               user: a,
               size: d = i.AvatarSizes.SIZE_32,
@@ -23,13 +23,13 @@
               ..._
             } = t,
             E = n.useContext(l.default);
-          return (0, r.jsx)(i.Avatar, {
+          return (0, u.jsx)(i.Avatar, {
             src:
               ((e = a),
-              (u = (0, i.getAvatarSize)(d)),
+              (r = (0, i.getAvatarSize)(d)),
               (o = s),
               (c = E),
-              e.getAvatarURL(c, u, o)),
+              e.getAvatarURL(c, r, o)),
             size: d,
             "aria-label": f ? void 0 : a.username,
             "aria-hidden": f,
@@ -37,32 +37,32 @@
           });
         });
     },
-    162426: function (t, e, u) {
+    162426: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           default: function () {
             return l;
           },
         }),
-        u("222007");
-      var r = u("884691"),
-        n = u("599417"),
-        i = u("782340");
+        r("222007");
+      var u = r("884691"),
+        n = r("599417"),
+        i = r("782340");
       function l(t) {
-        let [e, u] = r.useState(!1),
-          [l, o] = r.useState(null),
-          c = r.useCallback(
+        let [e, r] = u.useState(!1),
+          [l, o] = u.useState(null),
+          c = u.useCallback(
             async function () {
-              for (var e = arguments.length, r = Array(e), l = 0; l < e; l++)
-                r[l] = arguments[l];
+              for (var e = arguments.length, u = Array(e), l = 0; l < e; l++)
+                u[l] = arguments[l];
               try {
-                return o(null), u(!0), await t(...r);
+                return o(null), r(!0), await t(...u);
               } catch (t) {
                 t.message !== i.default.Messages.MFA_V2_CANCELED &&
                   o(t instanceof n.default ? t : new n.default(t));
               } finally {
-                u(!1);
+                r(!1);
               }
             },
             [t]
@@ -70,30 +70,30 @@
         return [c, { loading: e, error: l }];
       }
     },
-    843962: function (t, e, u) {
+    843962: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           getChannelIconURL: function () {
             return o;
           },
         }),
-        u("222007");
-      var r = u("697218"),
-        n = u("315102"),
-        i = u("449008"),
-        l = u("49111");
+        r("222007");
+      var u = r("697218"),
+        n = r("315102"),
+        i = r("449008"),
+        l = r("49111");
       function o(t) {
         let e =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
-          u = arguments.length > 2 ? arguments[2] : void 0;
+          r = arguments.length > 2 ? arguments[2] : void 0;
         switch (t.type) {
           case l.ChannelTypes.DM:
             let [o] = t.recipients
-              .map(r.default.getUser)
+              .map(u.default.getUser)
               .filter(i.isNotNullish);
             if (null == o) return null;
-            return o.getAvatarURL(void 0, e, u);
+            return o.getAvatarURL(void 0, e, r);
           case l.ChannelTypes.GROUP_DM:
             return n.default.getChannelIconURL({
               id: t.id,
@@ -104,10 +104,10 @@
         }
       }
     },
-    359366: function (t, e, u) {
+    359366: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           fetchGuildProductsForGuild: function () {
             return l;
           },
@@ -121,39 +121,39 @@
             return a;
           },
         });
-      var r = u("913144"),
-        n = u("448993"),
-        i = u("242278");
+      var u = r("913144"),
+        n = r("448993"),
+        i = r("242278");
       let l = async t => {
-          r.default.dispatch({ type: "GUILD_PRODUCTS_FETCH", guildId: t });
+          u.default.dispatch({ type: "GUILD_PRODUCTS_FETCH", guildId: t });
           try {
             let e = await i.getGuildProductListingsForGuild(t);
-            r.default.dispatch({
+            u.default.dispatch({
               type: "GUILD_PRODUCTS_FETCH_SUCCESS",
               guildId: t,
               products: e,
             });
           } catch (e) {
-            r.default.dispatch({
+            u.default.dispatch({
               type: "GUILD_PRODUCTS_FETCH_FAILURE",
               guildId: t,
             });
           }
         },
         o = async (t, e) => {
-          r.default.dispatch({ type: "GUILD_PRODUCT_FETCH", productId: e });
+          u.default.dispatch({ type: "GUILD_PRODUCT_FETCH", productId: e });
           try {
-            let u = await i.getGuildProductListing(t, e);
+            let r = await i.getGuildProductListing(t, e);
             return (
-              r.default.dispatch({
+              u.default.dispatch({
                 type: "GUILD_PRODUCT_FETCH_SUCCESS",
-                product: u,
+                product: r,
               }),
-              u
+              r
             );
           } catch (t) {
             throw (
-              (r.default.dispatch({
+              (u.default.dispatch({
                 type: "GUILD_PRODUCT_FETCH_FAILURE",
                 productId: e,
                 error: new n.APIError(t),
@@ -162,24 +162,24 @@
             );
           }
         };
-      async function c(t, e, u) {
-        let n = await i.updateGuildProductListing(t, e, u);
+      async function c(t, e, r) {
+        let n = await i.updateGuildProductListing(t, e, r);
         return (
-          r.default.dispatch({ type: "GUILD_PRODUCT_UPDATE", product: n }), n
+          u.default.dispatch({ type: "GUILD_PRODUCT_UPDATE", product: n }), n
         );
       }
       async function a(t, e) {
         return (
           await i.deleteGuildProductListing(t, e),
-          r.default.dispatch({ type: "GUILD_PRODUCT_DELETE", productId: e }),
+          u.default.dispatch({ type: "GUILD_PRODUCT_DELETE", productId: e }),
           !0
         );
       }
     },
-    442379: function (t, e, u) {
+    442379: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           useFetchGuildProductListingsForGuild: function () {
             return f;
           },
@@ -190,23 +190,23 @@
             return E;
           },
           useGuildProductListingById: function () {
-            return C;
-          },
-          useCanManageGuildProduct: function () {
             return T;
           },
+          useCanManageGuildProduct: function () {
+            return C;
+          },
         }),
-        u("222007");
-      var r = u("884691"),
-        n = u("446674");
-      u("162426");
-      var i = u("619443"),
-        l = u("38654"),
-        o = u("957255"),
-        c = u("162771"),
-        a = u("359366"),
-        d = u("565559"),
-        s = u("49111");
+        r("222007");
+      var u = r("884691"),
+        n = r("446674");
+      r("162426");
+      var i = r("619443"),
+        l = r("38654"),
+        o = r("957255"),
+        c = r("162771"),
+        a = r("359366"),
+        d = r("565559"),
+        s = r("49111");
       let f = t => {
           let e = (0, n.useStateFromStores)(
               [d.default],
@@ -216,25 +216,25 @@
                   : d.FetchState.FETCHED,
               [t]
             ),
-            u = (0, n.useStateFromStores)([i.default], () =>
+            r = (0, n.useStateFromStores)([i.default], () =>
               i.default.isConnected()
             ),
-            [l, o] = r.useState(!0);
+            [l, o] = u.useState(!0);
           return (
-            r.useEffect(() => {
+            u.useEffect(() => {
               l &&
                 (e === d.FetchState.NOT_FETCHED ||
                   (e === d.FetchState.FETCHED &&
                     d.default.isGuildProductsCacheExpired(t))) &&
-                u &&
+                r &&
                 a.fetchGuildProductsForGuild(t),
-                o(!u);
-            }, [t, u, e, l]),
+                o(!r);
+            }, [t, r, e, l]),
             { listingsLoaded: e === d.FetchState.FETCHED && !l }
           );
         },
         _ = function (t, e) {
-          let { requireCurrentGuild: u } =
+          let { requireCurrentGuild: r } =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : { requireCurrentGuild: !0 },
@@ -245,13 +245,13 @@
               c.default.getGuildId()
             );
           return (
-            r.useEffect(() => {
-              let r = d.default.getGuildProductFetchState(e);
-              if ((!u || o === t) && l && r === d.FetchState.NOT_FETCHED)
+            u.useEffect(() => {
+              let u = d.default.getGuildProductFetchState(e);
+              if ((!r || o === t) && l && u === d.FetchState.NOT_FETCHED)
                 try {
                   a.fetchGuildProduct(t, e);
                 } catch (t) {}
-            }, [t, e, l, o, u]),
+            }, [t, e, l, o, r]),
             (0, n.useStateFromStores)([d.default], () =>
               d.default.getGuildProduct(e)
             )
@@ -266,20 +266,20 @@
             })
           );
         },
-        C = t =>
+        T = t =>
           (0, n.useStateFromStores)([d.default], () =>
             null == t ? void 0 : d.default.getGuildProduct(t)
           ),
-        T = t =>
+        C = t =>
           (0, n.useStateFromStores)(
             [o.default],
             () => null != t && o.default.can(s.Permissions.ADMINISTRATOR, t)
           );
     },
-    242278: function (t, e, u) {
+    242278: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           updateGuildProductListing: function () {
             return o;
           },
@@ -296,20 +296,20 @@
             return s;
           },
         });
-      var r = u("872717"),
-        n = u("448993"),
-        i = u("271560"),
-        l = u("49111");
-      let o = async (t, e, u) => {
+      var u = r("872717"),
+        n = r("448993"),
+        i = r("271560"),
+        l = r("49111");
+      let o = async (t, e, r) => {
           let {
             priceTier: i,
             imageName: o,
             createNewRole: c,
             unlinkRole: a,
             ...d
-          } = u;
+          } = r;
           try {
-            let u = await r.default.patch({
+            let r = await u.HTTP.patch({
               url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
               body: {
                 ...d,
@@ -319,16 +319,14 @@
                 unlink_role: a,
               },
             });
-            return u.body;
+            return r.body;
           } catch (t) {
             throw new n.APIError(t);
           }
         },
         c = async (t, e) => {
           try {
-            await r.default.delete({
-              url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
-            });
+            await u.HTTP.del({ url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e) });
           } catch (t) {
             throw new n.APIError(t);
           }
@@ -345,19 +343,19 @@
         },
         d = async (t, e) => {
           try {
-            let u = await (0, i.httpGetWithCountryCodeQuery)({
+            let r = await (0, i.httpGetWithCountryCodeQuery)({
               url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
             });
-            return u.body;
+            return r.body;
           } catch (t) {
             throw new n.APIError(t);
           }
         },
         s = async t => {
-          let { guildId: e, productId: u, attachmentId: i } = t;
+          let { guildId: e, productId: r, attachmentId: i } = t;
           try {
-            let t = await r.default.post({
-              url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, u, i),
+            let t = await u.HTTP.post({
+              url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, r, i),
             });
             return t.body;
           } catch (t) {
@@ -365,27 +363,27 @@
           }
         };
     },
-    565559: function (t, e, u) {
+    565559: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           FetchState: function () {
-            return r;
+            return u;
           },
           default: function () {
             return h;
           },
         }),
-        u("424973"),
-        u("222007");
-      var r,
+        r("424973"),
+        r("222007");
+      var u,
         n,
-        i = u("446674"),
-        l = u("407846"),
-        o = u("913144"),
-        c = u("718517"),
-        a = u("299039");
-      ((n = r || (r = {}))[(n.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        i = r("446674"),
+        l = r("407846"),
+        o = r("913144"),
+        c = r("718517"),
+        a = r("299039");
+      ((n = u || (u = {}))[(n.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (n[(n.FETCHING = 1)] = "FETCHING"),
         (n[(n.FETCHED = 2)] = "FETCHED");
       let d = {},
@@ -395,13 +393,13 @@
       function E(t) {
         return "guild:".concat(t);
       }
-      function C(t) {
+      function T(t) {
         return "guild:".concat(t, ":published");
       }
-      let T = new l.default(
+      let C = new l.default(
           t => {
             let e = [E(t.guild_id)];
-            return t.published && e.push(C(t.guild_id)), e;
+            return t.published && e.push(T(t.guild_id)), e;
           },
           t =>
             (function (t) {
@@ -409,18 +407,18 @@
               return t.published ? -e : -e + 1e12;
             })(t)
         ),
-        D = [];
-      class P extends i.default.Store {
+        P = [];
+      class D extends i.default.Store {
         getGuildProductsForGuildFetchState(t) {
           var e;
           return null !== (e = d[t]) && void 0 !== e ? e : 0;
         }
         getGuildProduct(t) {
-          return T.get(t);
+          return C.get(t);
         }
         getGuildProductsForGuild(t, e) {
-          let { publishedOnly: u } = e;
-          return null == t ? D : T.values(u ? C(t) : E(t));
+          let { publishedOnly: r } = e;
+          return null == t ? P : C.values(r ? T(t) : E(t));
         }
         getGuildProductFetchState(t) {
           var e;
@@ -431,25 +429,25 @@
           return Date.now() - (null !== (e = f[t]) && void 0 !== e ? e : 0) > _;
         }
       }
-      P.displayName = "GuildProductsStore";
-      var h = new P(o.default, {
+      D.displayName = "GuildProductsStore";
+      var h = new D(o.default, {
         CONNECTION_OPEN: function () {
-          T.clear(), (d = {}), (s = {}), (f = {});
+          C.clear(), (d = {}), (s = {}), (f = {});
         },
         GUILD_PRODUCTS_FETCH: function (t) {
           let { guildId: e } = t;
           d[e] = 1;
-          let u = [...T.values(E(e))];
-          u.forEach(t => {
-            T.delete(t.id);
+          let r = [...C.values(E(e))];
+          r.forEach(t => {
+            C.delete(t.id);
           });
         },
         GUILD_PRODUCTS_FETCH_SUCCESS: function (t) {
-          let { guildId: e, products: u } = t;
+          let { guildId: e, products: r } = t;
           (d[e] = 2),
             (f[e] = Date.now()),
-            u.forEach(t => {
-              T.set(t.id, t), (s[t.id] = 2);
+            r.forEach(t => {
+              C.set(t.id, t), (s[t.id] = 2);
             });
         },
         GUILD_PRODUCTS_FETCH_FAILURE: function (t) {
@@ -458,15 +456,15 @@
         },
         GUILD_PRODUCT_CREATE: function (t) {
           let { product: e } = t;
-          T.set(e.id, e);
+          C.set(e.id, e);
         },
         GUILD_PRODUCT_UPDATE: function (t) {
           let { product: e } = t;
-          T.set(e.id, e);
+          C.set(e.id, e);
         },
         GUILD_PRODUCT_DELETE: function (t) {
           let { productId: e } = t;
-          T.delete(e);
+          C.delete(e);
         },
         GUILD_PRODUCT_FETCH: function (t) {
           let { productId: e } = t;
@@ -474,18 +472,18 @@
         },
         GUILD_PRODUCT_FETCH_SUCCESS: function (t) {
           let { product: e } = t;
-          (s[e.id] = 2), T.set(e.id, e);
+          (s[e.id] = 2), C.set(e.id, e);
         },
         GUILD_PRODUCT_FETCH_FAILURE: function (t) {
-          let { productId: e, error: u } = t;
-          (s[e] = 2), 404 === u.status && T.delete(e);
+          let { productId: e, error: r } = t;
+          (s[e] = 2), 404 === r.status && C.delete(e);
         },
       });
     },
-    928576: function (t, e, u) {
+    928576: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           useProductType: function () {
             return l;
           },
@@ -493,55 +491,55 @@
             return o;
           },
         });
-      var r = u("884691"),
-        n = u("153160"),
-        i = u("782340");
+      var u = r("884691"),
+        n = r("153160"),
+        i = r("782340");
       function l(t) {
-        return r.useMemo(() => {
+        return u.useMemo(() => {
           if (null == t) return;
           let e = null != t.role_id,
-            u = t.attachments_count > 0;
-          if (e && u)
+            r = t.attachments_count > 0;
+          if (e && r)
             return i.default.Messages
               .GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
           if (e) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-          if (u) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
+          if (r) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE;
         }, [t]);
       }
       function o(t) {
-        return r.useMemo(() => {
+        return u.useMemo(() => {
           if ((null == t ? void 0 : t.price) == null) return;
-          let { amount: e, currency: u } = t.price;
-          return (0, n.formatPrice)(e, u);
+          let { amount: e, currency: r } = t.price;
+          return (0, n.formatPrice)(e, r);
         }, [t]);
       }
     },
-    35018: function (t, e, u) {
+    35018: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           default: function () {
             return i;
           },
         });
-      var r = u("37983");
-      u("884691");
-      var n = u("77078"),
+      var u = r("37983");
+      r("884691");
+      var n = r("77078"),
         i = {
           open: function (t) {
             (0, n.openModalLazy)(async () => {
-              let { default: e } = await u
+              let { default: e } = await r
                 .el("560057")
-                .then(u.bind(u, "560057"));
-              return u => (0, r.jsx)(e, { ...t, ...u });
+                .then(r.bind(r, "560057"));
+              return r => (0, u.jsx)(e, { ...t, ...r });
             });
           },
         };
     },
-    489622: function (t, e, u) {
+    489622: function (t, e, r) {
       "use strict";
-      u.r(e),
-        u.d(e, {
+      r.r(e),
+        r.d(e, {
           NoticeColors: function () {
             return _;
           },
@@ -549,29 +547,29 @@
             return E;
           },
           PrimaryCTANoticeButton: function () {
-            return C;
-          },
-          NoticeButtonAnchor: function () {
             return T;
           },
-          NoticeCloseButton: function () {
-            return D;
+          NoticeButtonAnchor: function () {
+            return C;
           },
-          default: function () {
+          NoticeCloseButton: function () {
             return P;
           },
+          default: function () {
+            return D;
+          },
         });
-      var r = u("37983");
-      u("884691");
-      var n = u("414456"),
-        i = u.n(n),
-        l = u("394846"),
-        o = u("77078"),
-        c = u("945330"),
-        a = u("599110"),
-        d = u("49111"),
-        s = u("782340"),
-        f = u("125792");
+      var u = r("37983");
+      r("884691");
+      var n = r("414456"),
+        i = r.n(n),
+        l = r("394846"),
+        o = r("77078"),
+        c = r("945330"),
+        a = r("599110"),
+        d = r("49111"),
+        s = r("782340"),
+        f = r("125792");
       let _ = Object.freeze({
         DEFAULT: f.colorDefault,
         NEUTRAL: f.colorNeutral,
@@ -588,72 +586,72 @@
         PREMIUM_TIER_2: f.colorPremiumTier2,
       });
       function E(t) {
-        let { children: e, className: u, minor: n = !1, ...l } = t;
-        return (0, r.jsx)(o.FocusRing, {
-          children: (0, r.jsx)("button", {
-            className: i(f.button, u, { [f.buttonMinor]: n }),
+        let { children: e, className: r, minor: n = !1, ...l } = t;
+        return (0, u.jsx)(o.FocusRing, {
+          children: (0, u.jsx)("button", {
+            className: i(f.button, r, { [f.buttonMinor]: n }),
             ...l,
             children: e,
           }),
         });
       }
-      function C(t) {
+      function T(t) {
         let {
           children: e,
-          noticeType: u,
+          noticeType: r,
           additionalTrackingProps: n,
           ...i
         } = t;
-        return (0, r.jsx)(E, {
+        return (0, u.jsx)(E, {
           ...i,
           onClick: t => {
-            var e, r;
+            var e, u;
             null != i.onClick && i.onClick(t),
-              (e = u),
-              (r = n),
+              (e = r),
+              (u = n),
               null != e &&
                 a.default.track(
                   d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED,
-                  { notice_type: e, ...r }
+                  { notice_type: e, ...u }
                 );
           },
           children: e,
         });
       }
-      function T(t) {
-        let { children: e, href: u, ...n } = t;
-        return (0, r.jsx)(o.Anchor, {
+      function C(t) {
+        let { children: e, href: r, ...n } = t;
+        return (0, u.jsx)(o.Anchor, {
           ...n,
           className: f.button,
-          href: u,
+          href: r,
           children: e,
         });
       }
-      function D(t) {
-        let { onClick: e, noticeType: u } = t;
-        return (0, r.jsx)(o.Clickable, {
+      function P(t) {
+        let { onClick: e, noticeType: r } = t;
+        return (0, u.jsx)(o.Clickable, {
           focusProps: { offset: 6 },
           className: f.closeButton,
           onClick: () => {
             var t;
             e(),
-              null != (t = u) &&
+              null != (t = r) &&
                 a.default.track(d.AnalyticEvents.APP_NOTICE_CLOSED, {
                   notice_type: t,
                 });
           },
           "aria-label": s.default.Messages.DISMISS,
-          children: (0, r.jsx)(c.default, {
+          children: (0, u.jsx)(c.default, {
             className: f.closeIcon,
             width: 18,
             height: 18,
           }),
         });
       }
-      function P(t) {
-        let { color: e = _.DEFAULT, className: u, style: n, children: o } = t;
-        return (0, r.jsx)("div", {
-          className: i(f.notice, { [f.isMobile]: l.isMobile }, u, e),
+      function D(t) {
+        let { color: e = _.DEFAULT, className: r, style: n, children: o } = t;
+        return (0, u.jsx)("div", {
+          className: i(f.notice, { [f.isMobile]: l.isMobile }, r, e),
           style: null != n ? n : void 0,
           children: o,
         });
@@ -661,4 +659,4 @@
     },
   },
 ]);
-//# sourceMappingURL=56312.2df706d81dcb2c8ab314.js.map
+//# sourceMappingURL=56312.de5e10995d461bc7f27e.js.map

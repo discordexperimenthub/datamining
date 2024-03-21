@@ -1835,7 +1835,7 @@
           ),
           C = a.useCallback(async () => {
             d(!0);
-            let t = await n.default.get(s.Endpoints.GUILD_INSTANT_INVITES(e)),
+            let t = await n.HTTP.get(s.Endpoints.GUILD_INSTANT_INVITES(e)),
               a = t.body.sort(
                 (e, t) =>
                   new Date(t.created_at).getTime() -
@@ -4276,4 +4276,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6a3fead98e7f2de12236.js.map
+//# sourceMappingURL=4a8a8f112604c4d5e7e8.js.map

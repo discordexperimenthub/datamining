@@ -180,13 +180,13 @@
           p = v || t || n.isNonUserBot(),
           C = n.toString(),
           _ = d.default.getName(n),
-          N = s ? C : null != i ? i : _,
-          g = n.isPomelo() || f;
-        if (g || N !== C) {
+          T = s ? C : null != i ? i : _,
+          N = n.isPomelo() || f;
+        if (N || T !== C) {
           let e =
-              N === C && g && s
+              T === C && N && s
                 ? d.default.getUserTag(n, { forcePomelo: f })
-                : N,
+                : T,
             t = o && e !== "@".concat(C) ? d.default.getUserTag(n) : void 0;
           return (0, r.jsx)(m, {
             primary: e,
@@ -198,10 +198,10 @@
           });
         }
         return (0, r.jsx)(c.default, {
-          name: N,
+          name: T,
           botType: E(n),
           botVerified: n.isVerifiedBot(),
-          discriminator: p || N !== C ? null : null != u ? u : n.discriminator,
+          discriminator: p || T !== C ? null : null != u ? u : n.discriminator,
           ...h,
         });
       };
@@ -236,14 +236,14 @@
               onResetText: p,
               onSaveButtonColor: C,
               disabled: _,
-              saveButtonTooltip: N,
+              saveButtonTooltip: T,
             } = e,
-            g = i.useRef(null),
-            [{ spring: S }, T] = (0, s.useSpring)(() => ({ spring: 0 }));
+            N = i.useRef(null),
+            [{ spring: g }, S] = (0, s.useSpring)(() => ({ spring: 0 }));
           i.useEffect(() => {
             function e() {
-              T({ spring: 1, config: s.config.gentle }),
-                T({ spring: 0, config: s.config.gentle, delay: 1e3 });
+              S({ spring: 1, config: s.config.gentle }),
+                S({ spring: 0, config: s.config.gentle, delay: 1e3 });
             }
             return (
               a.ComponentDispatch.subscribe(
@@ -257,22 +257,22 @@
                 );
               }
             );
-          }, [T]);
-          let I = S.to({
+          }, [S]);
+          let I = g.to({
               range: [0, 1],
               output: [
                 (0, o.useToken)(l.default.colors.TEXT_NORMAL).hex(),
                 (0, o.useToken)(l.default.unsafe_rawColors.WHITE_500).hex(),
               ],
             }),
-            R = S.to({
+            R = g.to({
               range: [0, 1],
               output: [
                 (0, o.useToken)(l.default.colors.BACKGROUND_FLOATING).hex(),
                 (0, o.useToken)(l.default.colors.STATUS_DANGER).hex(),
               ],
             }),
-            x = S.to({
+            x = g.to({
               range: [0, 1],
               output: [
                 (0, o.useToken)(l.default.colors.TEXT_DANGER).hex(),
@@ -284,9 +284,9 @@
             style: { backgroundColor: R },
             children: (0, r.jsx)("div", {
               className: d.flexContainer,
-              ref: g,
+              ref: N,
               children: (0, r.jsxs)(o.FocusRingScope, {
-                containerRef: g,
+                containerRef: N,
                 children: [
                   (0, r.jsx)("div", {
                     className: d.shrinkingContainer,
@@ -316,7 +316,7 @@
                         }),
                       null != m
                         ? (0, r.jsx)(o.Tooltip, {
-                            text: N,
+                            text: T,
                             children: e =>
                               (0, r.jsx)(o.Button, {
                                 size: o.Button.Sizes.SMALL,
@@ -645,7 +645,7 @@
             e => e.shouldShowWarning
           ),
           _ = (0, s.useStateFromStores)([d.default], () => d.default.get(t)),
-          N = (0, c.useUID)();
+          T = (0, c.useUID)();
         return (i.useEffect(() => {
           _ === d.NO_MEMBER_VERIFICATION_FORM && a();
         }, [a, _]),
@@ -657,14 +657,14 @@
                   size: o.ModalSize.MEDIUM,
                   className: v.container,
                   transitionState: n,
-                  "aria-labelledby": N,
+                  "aria-labelledby": T,
                   children: [
                     (0, r.jsx)(o.ModalCloseButton, {
                       onClick: () => a(!1),
                       className: v.closeButton,
                     }),
                     (0, r.jsx)(h.default, {
-                      headerId: N,
+                      headerId: T,
                       guildId: t,
                       onClose: a,
                       onComplete: E,
@@ -1151,53 +1151,53 @@
             step: p,
             stepConfigs: C,
             setBodyNode: _,
-            setFooterNode: N,
-            setModalOverlayNode: g,
-            setReadySlideId: S,
+            setFooterNode: T,
+            setModalOverlayNode: N,
+            setReadySlideId: g,
           } = (0, f.usePaymentContext)(),
-          T = C.find(e => e.key === p);
+          S = C.find(e => e.key === p);
         i.useEffect(() => {
-          g(null);
-        }, [p, g]),
-          a(null != T, "Unknown step for current payment flow.");
+          N(null);
+        }, [p, N]),
+          a(null != S, "Unknown step for current payment flow.");
         let I =
             null !==
               (u =
-                null == T
+                null == S
                   ? void 0
-                  : null === (t = T.options) || void 0 === t
+                  : null === (t = S.options) || void 0 === t
                     ? void 0
                     : t.hideSlider) &&
             void 0 !== u &&
             u,
           R =
-            null == T
+            null == S
               ? void 0
-              : null === (n = T.options) || void 0 === n
+              : null === (n = S.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
           x =
             void 0 !== m && m
               ? h.sliderBodyLarge
-              : null == T
+              : null == S
                 ? void 0
-                : null === (s = T.options) || void 0 === s
+                : null === (s = S.options) || void 0 === s
                   ? void 0
                   : s.sliderBodyClassName;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             null ===
               (c =
-                null == T
+                null == S
                   ? void 0
-                  : null === (o = T.options) || void 0 === o
+                  : null === (o = S.options) || void 0 === o
                     ? void 0
                     : o.renderHeader) ||
             void 0 === c ||
             c
               ? E
               : null,
-            T.renderStep(v),
+            S.renderStep(v),
             null == p || I
               ? null
               : (0, r.jsxs)(r.Fragment, {
@@ -1207,7 +1207,7 @@
                       children: (0, r.jsx)(d.Slides, {
                         activeSlide: p,
                         centered: !1,
-                        onSlideReady: e => S(e),
+                        onSlideReady: e => g(e),
                         children: C.filter(e => null != e.key).map(e =>
                           (0, r.jsx)(
                             d.Slide,
@@ -1224,8 +1224,8 @@
                         ),
                       }),
                     }),
+                    (0, r.jsx)("div", { ref: e => T(e) }),
                     (0, r.jsx)("div", { ref: e => N(e) }),
-                    (0, r.jsx)("div", { ref: e => g(e) }),
                   ],
                 }),
           ],
@@ -1271,17 +1271,17 @@
             onComplete: p,
             onSubscriptionConfirmation: C,
             analyticsLocations: _,
-            analyticsObject: N,
-            analyticsLocation: g,
-            analyticsSourceLocation: S,
-            isGift: T = !1,
+            analyticsObject: T,
+            analyticsLocation: N,
+            analyticsSourceLocation: g,
+            isGift: S = !1,
             giftMessage: I,
             subscriptionTier: R,
             trialId: x,
             postSuccessGuild: A,
             openInvoiceId: M,
-            applicationId: y,
-            referralTrialOfferId: P,
+            applicationId: P,
+            referralTrialOfferId: y,
             giftRecipient: b,
             returnRef: O,
             subscription: L,
@@ -1300,7 +1300,7 @@
                 loadId: w,
                 subscriptionTier: R,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(R),
-                isGift: T,
+                isGift: S,
                 giftMessage: I,
                 giftRecipient: b,
                 initialPlanId: t,
@@ -1310,7 +1310,7 @@
                     null == v || v(e),
                     e &&
                       (null == C || C(),
-                      !T &&
+                      !S &&
                         null != t &&
                         t === E.PremiumSubscriptionSKUs.TIER_2 &&
                         !F &&
@@ -1321,19 +1321,19 @@
                 onComplete: () => {
                   (j = !0),
                     null == p || p(),
-                    !T && (0, a.setCanPlayWowMoment)(!0);
+                    !S && (0, a.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: C,
                 analyticsLocations: _,
-                analyticsObject: N,
-                analyticsLocation: g,
-                analyticsSourceLocation: S,
+                analyticsObject: T,
+                analyticsLocation: N,
+                analyticsSourceLocation: g,
                 trialId: x,
                 postSuccessGuild: A,
                 planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                 openInvoiceId: M,
-                applicationId: y,
-                referralTrialOfferId: P,
+                applicationId: P,
+                referralTrialOfferId: y,
                 returnRef: O,
                 subscription: L,
               });
@@ -1349,12 +1349,12 @@
                     h.PurchaseTypeToAnalyticsPaymentType[
                       h.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != g ? g : N,
-                  source: S,
+                  location: null != N ? N : T,
+                  source: g,
                   subscription_type: h.SubscriptionTypes.PREMIUM,
-                  is_gift: T,
+                  is_gift: S,
                   eligible_for_trial: null != x,
-                  application_id: y,
+                  application_id: P,
                   location_stack: _,
                 }),
                 (0, l.clearError)(),
@@ -1516,7 +1516,7 @@
           });
         },
         removePhone: (e, t) =>
-          l.default.delete({
+          l.HTTP.del({
             url: d.Endpoints.PHONE,
             body: { password: e, change_phone_reason: t },
             oldFormErrors: !0,
@@ -1526,7 +1526,7 @@
             n = a.default.getFingerprint();
           return (
             null != n && "" !== n && (t["X-Fingerprint"] = n),
-            l.default.post({
+            l.HTTP.post({
               url: d.Endpoints.RESEND_PHONE,
               headers: t,
               body: { phone: e },
@@ -1534,34 +1534,34 @@
           );
         },
         beginAddPhone: (e, t) =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.PHONE,
             body: { phone: e, change_phone_reason: t },
           }),
         addPhone: (e, t, n) =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.PHONE,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         addPhoneWithoutPassword: e =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.PHONE_VERIFY_NO_PASSWORD,
             body: { code: e },
           }),
         beginReverifyPhone: (e, t) =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.PHONE_REVERIFY,
             body: { phone: e, change_phone_reason: t },
           }),
         reverifyPhone: (e, t, n) =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.PHONE_REVERIFY,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         validatePhoneForSupport: e =>
-          l.default.post({
+          l.HTTP.post({
             url: d.Endpoints.VERIFY_PHONE_FOR_TICKET,
             body: { token: e },
             oldFormErrors: !0,
@@ -1682,13 +1682,13 @@
             return _;
           },
           useCanStartPrivateThread: function () {
-            return N;
+            return T;
           },
           useCanStartThread: function () {
-            return g;
+            return N;
           },
           useCanViewThreadForMessage: function () {
-            return T;
+            return S;
           },
           useHasActiveThreads: function () {
             return I;
@@ -1700,10 +1700,10 @@
             return M;
           },
           canUnarchiveThread: function () {
-            return y;
+            return P;
           },
           useIsActiveChannelOrUnarchivableThread: function () {
-            return P;
+            return y;
           },
           getIsActiveChannelOrUnarchivableThread: function () {
             return b;
@@ -1756,7 +1756,7 @@
           },
           [e]
         );
-        return S(n, e, t);
+        return g(n, e, t);
       }
       function _(e, t) {
         let n = e.isForumLikeChannel()
@@ -1766,23 +1766,23 @@
                 v.Permissions.READ_MESSAGE_HISTORY
               ),
           r = h.default.can(n, e);
-        return S(r, e, t);
+        return g(r, e, t);
       }
-      function N(e) {
+      function T(e) {
         let t = (0, l.useStateFromStores)(
           [h.default],
           () =>
             h.default.can(s.combine(v.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
-        return e.type === v.ChannelTypes.GUILD_TEXT && S(t, e);
+        return e.type === v.ChannelTypes.GUILD_TEXT && g(t, e);
       }
-      function g(e) {
+      function N(e) {
         let t = C(e),
-          n = N(e);
+          n = T(e);
         return t || n;
       }
-      function S(e, t, n) {
+      function g(e, t, n) {
         return (
           !(
             __OVERLAY__ ||
@@ -1793,7 +1793,7 @@
           ) && !0
         );
       }
-      function T(e) {
+      function S(e) {
         let t = (0, l.useStateFromStores)(
             [f.default],
             () =>
@@ -1866,14 +1866,14 @@
           n = j(e);
         return A(e, t, n);
       }
-      function y(e) {
+      function P(e) {
         let t = x(e, h.default),
           n = (function (e) {
             return L(e, h.default);
           })(e);
         return A(e, t, n);
       }
-      function P(e) {
+      function y(e) {
         var t;
         let n = (0, l.useStateFromStores)(
           [h.default],
@@ -1920,7 +1920,7 @@
           n = (0, l.useStateFromStores)([h.default], () =>
             h.default.can(v.Permissions.CONNECT, e)
           ),
-          r = P(e),
+          r = y(e),
           i = p.useExperiment(
             { guildId: e.guild_id, location: "e791ea_1" },
             { autoTrackExposure: !1 }
@@ -2093,7 +2093,7 @@
           } = e,
           C = l.createRef(),
           _ = (0, d.default)(C),
-          N = !r && !i && !0 !== o && (!m || _);
+          T = !r && !i && !0 !== o && (!m || _);
         return (0, s.jsxs)(c.Button, {
           buttonRef: C,
           ...p,
@@ -2102,7 +2102,7 @@
           submitting: i,
           children: [
             t,
-            N
+            T
               ? (0, s.jsx)(v, {
                   shinePaused: f,
                   className: a(
@@ -2277,15 +2277,15 @@
               expanded: C,
               ..._
             } = e,
-            { enabled: N } = (0, c.useRedesignIconContext)(),
-            g = t;
-          if ((!0 === C ? (g = h.DOWN) : !1 === C && (g = h.RIGHT), N)) {
+            { enabled: T } = (0, c.useRedesignIconContext)(),
+            N = t;
+          if ((!0 === C ? (N = h.DOWN) : !1 === C && (N = h.RIGHT), T)) {
             let e = {
               [h.UP]: u.ChevronSmallUpIcon,
               [h.DOWN]: l.ChevronSmallDownIcon,
               [h.LEFT]: o.ChevronSmallLeftIcon,
               [h.RIGHT]: a.ChevronSmallRightIcon,
-            }[g];
+            }[N];
             return (0, r.jsx)(e, {
               ..._,
               className: v,
@@ -2296,7 +2296,7 @@
             });
           }
           return (0, r.jsx)("svg", {
-            className: s(v, m, g),
+            className: s(v, m, N),
             width: n,
             height: i,
             viewBox: "0 0 24 24",
@@ -3404,4 +3404,4 @@
     },
   },
 ]);
-//# sourceMappingURL=54680a56269c508f95d1.js.map
+//# sourceMappingURL=3ea2f597879981ca79ff.js.map

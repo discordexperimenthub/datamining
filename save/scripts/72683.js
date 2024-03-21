@@ -531,7 +531,7 @@
           metadata: f,
         };
         try {
-          let e = await s.default.post({
+          let e = await s.HTTP.post({
             url: m.Endpoints.BILLING_SUBSCRIPTIONS_PREVIEW,
             body: _,
             oldFormErrors: !0,
@@ -569,7 +569,7 @@
           user_discount_offer_id: _,
         };
         try {
-          let e = await s.default.patch({
+          let e = await s.HTTP.patch({
             url: m.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
             query: { location: f, location_stack: c },
             body: E,
@@ -601,7 +601,7 @@
       async function T(e) {
         let { subscriptionId: t, preventFetch: n } = e;
         if (n) return null;
-        let r = await s.default.get({
+        let r = await s.HTTP.get({
           url: m.Endpoints.BILLING_SUBSCRIPTION_INVOICE(t),
           oldFormErrors: !0,
         });
@@ -748,7 +748,7 @@
           let e = null;
           try {
             var t;
-            let n = await s.default.post({ url: _.Endpoints.CHURN_USER_OFFER });
+            let n = await s.HTTP.post({ url: _.Endpoints.CHURN_USER_OFFER });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
           } catch (e) {}
           return e;
@@ -874,7 +874,7 @@
         u = {
           async fetchUserTrialOffer() {
             try {
-              let { body: e } = await r.default.get({
+              let { body: e } = await r.HTTP.get({
                 url: o.Endpoints.USER_TRIAL_OFFER,
                 oldFormErrors: !0,
               });
@@ -900,7 +900,7 @@
           async acknowledgeUserTrialOffer(e) {
             if (null == e.expires_at)
               try {
-                let { body: t } = await r.default.post({
+                let { body: t } = await r.HTTP.post({
                   url: o.Endpoints.USER_TRIAL_OFFER_ACKNOWLEDGED(e.id),
                 });
                 l.default.dispatch({
@@ -1258,7 +1258,7 @@
         };
       }
       async function I() {
-        let e = await r.default.get({
+        let e = await r.HTTP.get({
             url: d.Endpoints.CLAIMED_OUTBOUND_PROMOTION_CODES,
             query: { locale: l.default.locale },
             oldFormErrors: !0,
@@ -1267,7 +1267,7 @@
         return t.map(E);
       }
       async function T(e) {
-        let t = await r.default.post({
+        let t = await r.HTTP.post({
             url: d.Endpoints.CLAIM_OUTBOUND_PROMOTION_CODE(e),
           }),
           n = t.body;
@@ -1363,7 +1363,7 @@
               ).previewEnabled
                 ? m.Endpoints.OUTBOUND_PROMOTIONS_PREVIEW
                 : m.Endpoints.OUTBOUND_PROMOTIONS,
-              n = await r.default.get({
+              n = await r.HTTP.get({
                 url: t,
                 query: { locale: s.default.locale },
                 oldFormErrors: !0,
@@ -1400,7 +1400,7 @@
         if (!d.default.isFetchingActiveBogoPromotion)
           try {
             l.default.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
-            let e = await r.default.get({
+            let e = await r.HTTP.get({
                 url: m.Endpoints.BOGO_PROMOTIONS,
                 query: { locale: s.default.locale },
               }),
@@ -5719,4 +5719,4 @@
     },
   },
 ]);
-//# sourceMappingURL=72683.f9e63aef39f45e516e1c.js.map
+//# sourceMappingURL=72683.d4b8ae69526b2041f9ed.js.map

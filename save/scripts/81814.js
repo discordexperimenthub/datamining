@@ -129,7 +129,7 @@
         n.default.dispatch({ type: "ACTIVE_CHANNELS_FETCH_START", guildId: e });
         try {
           var a, d;
-          let s = await l.default.get({
+          let s = await l.HTTP.get({
               url: i.Endpoints.ACTIVE_CHANNELS(e),
               query: { channel_limit: t },
             }),
@@ -8364,4 +8364,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a178a7550e0b6188f7b8.js.map
+//# sourceMappingURL=83140177a05c805a0eb8.js.map

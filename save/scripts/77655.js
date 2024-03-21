@@ -1653,7 +1653,7 @@
         c = a("295583"),
         d = a("49111");
       async function p() {
-        let e = await r.default.get({
+        let e = await r.HTTP.get({
           url: d.Endpoints.BILLING_ADYEN_PAYMENT_METHODS,
           oldFormErrors: !0,
         });
@@ -2133,4 +2133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=77655.f7ee822fbaa3cd69980f.js.map
+//# sourceMappingURL=77655.00c1a11296719af0d3b8.js.map

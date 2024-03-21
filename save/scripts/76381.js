@@ -83,11 +83,10 @@
           g = () => {
             v(!0),
               p(null),
-              a.default
-                .post({
-                  url: h.Endpoints.CONNECTION(h.PlatformTypes.DOMAIN, n),
-                  body: {},
-                })
+              a.HTTP.post({
+                url: h.Endpoints.CONNECTION(h.PlatformTypes.DOMAIN, n),
+                body: {},
+              })
                 .then(() => {
                   t();
                 })
@@ -850,4 +849,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7e643d2a2478cc3d24a9.js.map
+//# sourceMappingURL=76deb9b9472af5c59145.js.map

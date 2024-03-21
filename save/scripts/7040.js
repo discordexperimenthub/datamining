@@ -240,10 +240,10 @@
             return k;
           },
           saveClip: function () {
-            return W;
+            return H;
           },
           dismissSaveClipAnimation: function () {
-            return H;
+            return W;
           },
           updateClipMetadata: function () {
             return K;
@@ -288,8 +288,8 @@
         A = n("555035"),
         h = n("599110"),
         C = n("773336"),
-        I = n("709681"),
-        T = n("386045"),
+        T = n("709681"),
+        I = n("386045"),
         v = n("13136"),
         N = n("881095"),
         y = n("997942"),
@@ -423,7 +423,7 @@
           frames_encoded_during_clip: t.framesEncodedDuringClip,
           frames_dropped: t.framesDropped,
           frames_dropped_during_clip: t.framesDroppedDuringClip,
-          clip_duration_setting: T.default.getSettings().clipsLength,
+          clip_duration_setting: I.default.getSettings().clipsLength,
           clip_duration: t.clipDuration,
           clip_resolution_width: t.clipResolutionWidth,
           clip_resolution_height: t.clipResolutionHeight,
@@ -436,7 +436,7 @@
         };
       }
       async function x(e) {
-        let t = T.default.getSettings(),
+        let t = I.default.getSettings(),
           n = t.storageLocation,
           a = (0, N.default)(e),
           i = ""
@@ -537,7 +537,7 @@
           );
         }
       }
-      async function W(e) {
+      async function H(e) {
         var t;
         let { enableDecoupledGameClipping: n } = c.default.getCurrentConfig(
             { location: "8ac9d1_1" },
@@ -547,13 +547,13 @@
             { location: "SaveClip" },
             { autoTrackExposure: !1 }
           );
-        if (T.default.getIsAtMaxSaveClipOperations()) return;
+        if (I.default.getIsAtMaxSaveClipOperations()) return;
         let s =
-            T.default.getSettings().clipsEnabled &&
+            I.default.getSettings().clipsEnabled &&
             null != g.default.getCurrentUserActiveStream(),
           u =
             n &&
-            T.default.getSettings().decoupledClipsEnabled &&
+            I.default.getSettings().decoupledClipsEnabled &&
             (null === (t = d.default.getVisibleGame()) || void 0 === t
               ? void 0
               : t.windowHandle) != null &&
@@ -591,7 +591,7 @@
           streamKey: h,
           thumbnail: v,
         });
-        let N = (0, I.playSound)("clip_save", 0.5),
+        let N = (0, T.playSound)("clip_save", 0.5),
           y = performance.now();
         try {
           let e = await x(h);
@@ -599,19 +599,19 @@
         } catch (e) {
           D.ClipsLogger.error("Clip Failed to Save", e),
             null == N || N.stop(),
-            (0, I.playSound)("clip_error", 0.5),
+            (0, T.playSound)("clip_error", 0.5),
             r.default.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" });
         }
         D.ClipsLogger.info(
           ""
             .concat(
-              T.default.getSettings().clipsLength / 1e3,
+              I.default.getSettings().clipsLength / 1e3,
               "s clip save took "
             )
             .concat(Math.round(performance.now() - y), "ms")
         );
       }
-      function H(e, t) {
+      function W(e, t) {
         r.default.dispatch({
           type: "CLIPS_SAVE_ANIMATION_END",
           streamKey: e,
@@ -619,7 +619,7 @@
         });
       }
       async function K(e, t) {
-        let n = T.default.getClips().find(t => t.id === e);
+        let n = I.default.getClips().find(t => t.id === e);
         if (null == n) return;
         let a = { ...n, ...t },
           i = await (0, y.validateClipMetadata)(a);
@@ -861,7 +861,7 @@
             return C;
           },
           preloadForumThreads: function () {
-            return T;
+            return I;
           },
         }),
         n("222007");
@@ -962,7 +962,7 @@
           { loaded: n, mostRecentMessage: a }
         );
       }
-      function I(e, t) {
+      function T(e, t) {
         let n = !1;
         t.forEach(t => {
           var a, i;
@@ -972,15 +972,15 @@
         }),
           n && null == S && (S = setTimeout(N, 0));
       }
-      function T(e) {
-        I(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10));
+      function I(e) {
+        T(e, (0, o.computeThreadIdsSnapshot)(e.id).slice(0, 10));
       }
       function v(e, t) {
         if (p.hasRequested(e.id, t)) return;
         let n = (0, o.computeThreadIdsSnapshot)(e.id),
           a = n.findIndex(e => e === t),
           i = n.slice(a, a + 5).filter(t => !p.hasRequested(e.id, t));
-        I(e, i);
+        T(e, i);
       }
       async function N() {
         try {
@@ -1001,7 +1001,7 @@
           if (null == a) return;
           let {
             body: { threads: i },
-          } = await r.default.post({
+          } = await r.HTTP.post({
             url: E.Endpoints.FORUM_POSTS(e),
             body: { thread_ids: t },
           });
@@ -1381,22 +1381,20 @@
       }
       function h(e, t) {
         (0 !== e.length || 0 !== t.length) &&
-          a.default
-            .post({
-              url: f.Endpoints.SAVED_MESSAGES,
-              body: {
-                added: e.map(_.savedMessageToServer),
-                removed: t.map(_.savedMessageToServer),
-              },
-            })
-            .then(e => {
-              A(e.body.saved_messages.map(_.savedMessageToClient));
-            });
+          a.HTTP.post({
+            url: f.Endpoints.SAVED_MESSAGES,
+            body: {
+              added: e.map(_.savedMessageToServer),
+              removed: t.map(_.savedMessageToServer),
+            },
+          }).then(e => {
+            A(e.body.saved_messages.map(_.savedMessageToClient));
+          });
       }
       function C() {
         return c.default.recentlyFetched()
           ? Promise.resolve()
-          : a.default.get({ url: f.Endpoints.SAVED_MESSAGES }).then(e => {
+          : a.HTTP.get({ url: f.Endpoints.SAVED_MESSAGES }).then(e => {
               let t = e.body.saved_messages,
                 n = t.map(_.savedMessageToClient);
               A(n);
@@ -1603,8 +1601,8 @@
         A = n("660478"),
         h = n("18494"),
         C = n("162771"),
-        I = n("718517"),
-        T = n("519841"),
+        T = n("718517"),
+        I = n("519841"),
         v = n("787336"),
         N = n("49111"),
         y = n("724210"),
@@ -1639,7 +1637,7 @@
           return;
         }
         let p = _.default.getOrCreate(n);
-        T.AttachmentLinkRefreshExperiment.getCurrentConfig({
+        I.AttachmentLinkRefreshExperiment.getCurrentConfig({
           location: "fetch_messages",
         }).enabled &&
           p.some(v.messageHasExpiredAttachmentUrl) &&
@@ -1735,7 +1733,7 @@
             });
         }
       }
-      let L = 90 * I.default.Millis.DAY,
+      let L = 90 * T.default.Millis.DAY,
         M = "viewedThreadIds";
       function b() {
         let e = h.default.getChannelId();
@@ -1830,7 +1828,7 @@
           limit: N.MAX_MESSAGES_PER_CHANNEL,
         });
       }
-      function W(e) {
+      function H(e) {
         let { response: t } = e;
         if (null == t || null == t.body) return null;
         if (t.body.code === N.AbortCodes.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
@@ -1844,14 +1842,14 @@
             });
         }
       }
-      let H = {};
+      let W = {};
       function K(e) {
         var t;
         let { channelId: n, jump: a, isStale: i, isPreview: l = !1 } = e;
         if (l) return;
-        let r = null !== (t = H[n]) && void 0 !== t ? t : 0;
-        if (Date.now() - r < 10 * I.default.Millis.SECOND) return;
-        H[n] = Date.now();
+        let r = null !== (t = W[n]) && void 0 !== t ? t : 0;
+        if (Date.now() - r < 10 * T.default.Millis.SECOND) return;
+        W[n] = Date.now();
         let s = h.default.getChannelId(),
           u = p.default.getCurrentSidebarChannelId(s),
           o = n === s || n === u;
@@ -1903,7 +1901,7 @@
               CHANNEL_PRELOAD: k,
               THREAD_CREATE_LOCAL: x,
               GUILD_CREATE: () => U(),
-              MESSAGE_END_EDIT: W,
+              MESSAGE_END_EDIT: H,
               LOAD_MESSAGES_SUCCESS: K,
               UPLOAD_FAIL: B,
               CHANNEL_DELETE: () => U(),
@@ -2031,7 +2029,7 @@
             channelId: e,
             warningIds: t,
           }),
-          a.default.post({
+          a.HTTP.post({
             url: l.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: { warning_ids: t },
             oldFormErrors: !0,
@@ -2059,7 +2057,7 @@
         });
       }
       function o(e) {
-        return a.default.post({
+        return a.HTTP.post({
           url: l.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e),
         });
       }
@@ -2453,4 +2451,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7040.c1f29630b59d6e4854cd.js.map
+//# sourceMappingURL=7040.240b7cd594222d8995df.js.map

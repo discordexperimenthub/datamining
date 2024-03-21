@@ -756,7 +756,7 @@
           b = null != P ? (0, g.getRRule)(P) : null,
           w = null !== (D = i(A)) && void 0 !== D ? D : x,
           F = null !== (R = i(null != L ? L : A)) && void 0 !== R ? R : x,
-          j = () => {
+          H = () => {
             let e = a();
             e.createEvent({
               start: x,
@@ -776,7 +776,7 @@
         return (0, l.jsxs)(o.MenuItem, {
           id: m.default.Messages.ADD_TO_CALENDAR,
           label: m.default.Messages.ADD_TO_CALENDAR,
-          action: j,
+          action: H,
           children: [
             (0, l.jsx)(o.MenuItem, {
               id: m.default.Messages.ADD_TO_GOOGLE_CALENDAR,
@@ -806,7 +806,7 @@
             (0, l.jsx)(o.MenuItem, {
               id: m.default.Messages.DOWNLOAD_ICS,
               label: m.default.Messages.DOWNLOAD_ICS,
-              action: j,
+              action: H,
             }),
             (0, l.jsx)(o.MenuItem, {
               id: m.default.Messages.ADD_TO_YAHOO,
@@ -1544,7 +1544,7 @@
               v.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -1557,7 +1557,7 @@
         let n = e.getGuildId();
         return (
           u(null != n, "This channel cannot be guildless."),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
@@ -1580,7 +1580,7 @@
             (0, r.trackWithMetadata)(v.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(l),
             body: {
               suppress: t,
@@ -1595,7 +1595,7 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           u(null != t, "This channel cannot be guildless."),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
@@ -1610,7 +1610,7 @@
         let l = e.getGuildId();
         return (
           u(null != l, "This channel cannot be guildless."),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(l, t),
             body: { suppress: n, channel_id: e.id },
           })
@@ -1622,7 +1622,7 @@
         return (
           u(null != n, "This channel cannot be guildless."),
           M(t, e.id, !0),
-          d.default.patch({
+          d.HTTP.patch({
             url: v.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
@@ -1754,7 +1754,7 @@
       var l = n("872717"),
         u = n("49111");
       async function a(e, t, n, a, d) {
-        let i = await l.default.post({
+        let i = await l.HTTP.post({
           url: u.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
@@ -1767,14 +1767,14 @@
         return i.body;
       }
       async function d(e, t, n) {
-        let a = await l.default.patch({
+        let a = await l.HTTP.patch({
           url: u.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
         return a.body;
       }
       function i(e) {
-        return l.default.delete(u.Endpoints.STAGE_INSTANCE(e));
+        return l.HTTP.del(u.Endpoints.STAGE_INSTANCE(e));
       }
     },
     555158: function (e, t, n) {
@@ -1940,4 +1940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d7f9778bbe02413196e7.js.map
+//# sourceMappingURL=b57d662dfd1888edfd06.js.map

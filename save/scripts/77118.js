@@ -57,13 +57,13 @@
         r = n("450911");
       n("851387");
       var u = n("798609"),
-        d = n("716241"),
-        o = n("18494"),
+        o = n("716241"),
+        d = n("18494"),
         c = n("800762"),
-        f = n("991170"),
+        T = n("991170"),
         E = n("716214"),
         _ = n("230324"),
-        T = n("738983"),
+        f = n("738983"),
         p = n("808422"),
         S = n("49111");
       function g(e, t) {
@@ -71,11 +71,11 @@
         return (
           s(null != n, "This channel cannot be guildless."),
           t &&
-            (0, d.trackWithMetadata)(
+            (0, o.trackWithMetadata)(
               S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -88,7 +88,7 @@
         let n = e.getGuildId();
         return (
           s(null != n, "This channel cannot be guildless."),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
@@ -108,10 +108,10 @@
           r ===
             p.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
             !t &&
-            (0, d.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+            (0, o.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a),
             body: {
               suppress: t,
@@ -126,7 +126,7 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           s(null != t, "This channel cannot be guildless."),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
@@ -141,7 +141,7 @@
         let a = e.getGuildId();
         return (
           s(null != a, "This channel cannot be guildless."),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
             body: { suppress: n, channel_id: e.id },
           })
@@ -153,7 +153,7 @@
         return (
           s(null != n, "This channel cannot be guildless."),
           A(t, e.id, !0),
-          l.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
@@ -168,32 +168,32 @@
         let a = e.getGuildId();
         s(null != a, "Channel cannot be guildless");
         let l = e.permissionOverwrites[a],
-          d = {
+          o = {
             id: a,
             type: u.PermissionOverwriteType.ROLE,
-            allow: f.NONE,
-            deny: f.NONE,
+            allow: T.NONE,
+            deny: T.NONE,
             ...l,
           };
         n
-          ? ((d.allow = i.add(d.allow, t)), (d.deny = i.remove(d.deny, t)))
-          : ((d.allow = i.remove(d.allow, t)), (d.deny = i.add(d.deny, t))),
-          r.default.updatePermissionOverwrite(e.id, d);
+          ? ((o.allow = i.add(o.allow, t)), (o.deny = i.remove(o.deny, t)))
+          : ((o.allow = i.remove(o.allow, t)), (o.deny = i.add(o.deny, t))),
+          r.default.updatePermissionOverwrite(e.id, o);
       }
       async function M(e, t, n, a) {
         if ("" === t) return;
-        let s = o.default.getVoiceChannelId() === e.id;
+        let s = d.default.getVoiceChannelId() === e.id;
         !s && (0, E.connectToStage)(e);
-        let i = await (0, T.startStageInstance)(e.id, t, n, a);
+        let i = await (0, f.startStageInstance)(e.id, t, n, a);
         return h(e, !1, !0), i;
       }
       async function O(e, t, n) {
         if ("" === t) return;
-        let a = await (0, T.updateStageInstance)(e.id, t, n);
+        let a = await (0, f.updateStageInstance)(e.id, t, n);
         return a;
       }
       async function v(e) {
-        await (0, T.endStageInstance)(e.id);
+        await (0, f.endStageInstance)(e.id);
       }
     },
     230324: function (e, t, n) {
@@ -204,7 +204,7 @@
             return c;
           },
           getRemoveModeratorTooltipHint: function () {
-            return f;
+            return T;
           },
           getStageChannelMetadata: function () {
             return E;
@@ -219,8 +219,8 @@
         l = n("834052"),
         r = n("837979"),
         u = n("49111"),
-        d = n("606762"),
-        o = n("782340");
+        o = n("606762"),
+        d = n("782340");
       function c(e, t, n, a) {
         let i = t[0],
           l = s.default.getName(e, n, i),
@@ -228,26 +228,26 @@
         return 1 === r && null != i
           ? l
           : null == i
-            ? o.default.Messages.SPEAKING_COUNT.format({ count: r })
-            : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
+            ? d.default.Messages.SPEAKING_COUNT.format({ count: r })
+            : d.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
                 name: l,
                 count: r - 1,
               });
       }
-      function f(e, t) {
+      function T(e, t) {
         switch (e) {
-          case d.RowType.OWNER:
-            return o.default.Messages
+          case o.RowType.OWNER:
+            return d.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-          case d.RowType.ADMINISTRATOR:
-            return o.default.Messages
+          case o.RowType.ADMINISTRATOR:
+            return d.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-          case d.RowType.MEMBER:
-          case d.RowType.ROLE:
+          case o.RowType.MEMBER:
+          case o.RowType.ROLE:
             return t
-              ? o.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
-              : o.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-          case d.RowType.EMPTY_STATE:
+              ? d.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
+              : d.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+          case o.RowType.EMPTY_STATE:
         }
         return null;
       }
@@ -285,7 +285,7 @@
       var a = n("872717"),
         s = n("49111");
       async function i(e, t, n, i, l) {
-        let r = await a.default.post({
+        let r = await a.HTTP.post({
           url: s.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
@@ -298,14 +298,14 @@
         return r.body;
       }
       async function l(e, t, n) {
-        let i = await a.default.patch({
+        let i = await a.HTTP.patch({
           url: s.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
         return i.body;
       }
       function r(e) {
-        return a.default.delete(s.Endpoints.STAGE_INSTANCE(e));
+        return a.HTTP.del(s.Endpoints.STAGE_INSTANCE(e));
       }
     },
     312953: function (e, t, n) {
@@ -313,7 +313,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return T;
           },
         });
       var a = n("37983");
@@ -323,15 +323,15 @@
         l = n("476765"),
         r = n("674083"),
         u = n("244480"),
-        d = n("119184"),
-        o = n("782340"),
+        o = n("119184"),
+        d = n("782340"),
         c = n("905430"),
-        f = e => {
+        T = e => {
           let { channel: t, ...n } = e,
-            f = (0, l.useUID)();
+            T = (0, l.useUID)();
           return (0, a.jsxs)(s.ConfirmModal, {
-            confirmText: o.default.Messages.END_STAGE,
-            cancelText: o.default.Messages.CANCEL,
+            confirmText: d.default.Messages.END_STAGE,
+            cancelText: d.default.Messages.CANCEL,
             onConfirm: () => {
               (0, u.endStage)(t), i.default.disconnect();
             },
@@ -339,7 +339,7 @@
             bodyClassName: c.body,
             ...n,
             children: [
-              (0, a.jsx)(d.default, {
+              (0, a.jsx)(o.default, {
                 className: c.headerIconContainer,
                 children: (0, a.jsx)("div", {
                   className: c.iconBackground,
@@ -351,18 +351,18 @@
                 }),
               }),
               (0, a.jsx)(s.Heading, {
-                id: f,
+                id: T,
                 variant: "heading-xl/semibold",
                 color: "header-primary",
                 className: c.title,
-                children: o.default.Messages.END_EVENT_STAGE_CONFIRMATION_TITLE,
+                children: d.default.Messages.END_EVENT_STAGE_CONFIRMATION_TITLE,
               }),
               (0, a.jsx)(s.Text, {
                 variant: "text-md/normal",
                 color: "header-secondary",
                 className: c.subtitle,
                 children:
-                  o.default.Messages.END_EVENT_STAGE_CONFIRMATION_SUBTITLE,
+                  d.default.Messages.END_EVENT_STAGE_CONFIRMATION_SUBTITLE,
               }),
             ],
           });
@@ -373,7 +373,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return d;
           },
         });
       var a = n("37983");
@@ -383,15 +383,15 @@
         l = n("782340"),
         r = n("662190"),
         u = n("284434"),
-        d = n("315956");
-      function o(e) {
+        o = n("315956");
+      function d(e) {
         let { className: t, children: n } = e;
         return (0, a.jsxs)("div", {
           className: i(r.container, t),
           children: [
             (0, a.jsx)("img", {
               alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-              src: d,
+              src: o,
               className: i(r.sparkleIcon, r.sparkleBottom),
             }),
             n,
@@ -531,4 +531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9702ef287e230a342153.js.map
+//# sourceMappingURL=e017b6b74b56120e27b2.js.map

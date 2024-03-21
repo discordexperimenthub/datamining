@@ -141,38 +141,34 @@
                 void 0 === arguments[4] ||
                 arguments[4];
             l.default.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId: n }),
-              a.default
-                .get({
-                  url: s.Endpoints.MENTIONS,
-                  query: {
-                    before: e,
-                    limit: t,
-                    guild_id: n,
-                    roles: i,
-                    everyone: r,
-                  },
-                  retries: 2,
-                  oldFormErrors: !0,
-                })
-                .then(
-                  t => {
-                    let { body: n } = t;
-                    l.default.dispatch({
-                      type: "LOAD_RECENT_MENTIONS_SUCCESS",
-                      messages: n,
-                      isAfter: null != e,
-                      hasMoreAfter: n.length >= s.MAX_MENTIONS_PER_FETCH,
-                    });
-                  },
-                  () => {
-                    l.default.dispatch({
-                      type: "LOAD_RECENT_MENTIONS_FAILURE",
-                    });
-                  }
-                );
+              a.HTTP.get({
+                url: s.Endpoints.MENTIONS,
+                query: {
+                  before: e,
+                  limit: t,
+                  guild_id: n,
+                  roles: i,
+                  everyone: r,
+                },
+                retries: 2,
+                oldFormErrors: !0,
+              }).then(
+                t => {
+                  let { body: n } = t;
+                  l.default.dispatch({
+                    type: "LOAD_RECENT_MENTIONS_SUCCESS",
+                    messages: n,
+                    isAfter: null != e,
+                    hasMoreAfter: n.length >= s.MAX_MENTIONS_PER_FETCH,
+                  });
+                },
+                () => {
+                  l.default.dispatch({ type: "LOAD_RECENT_MENTIONS_FAILURE" });
+                }
+              );
           },
           deleteRecentMention(e) {
-            a.default.delete({
+            a.HTTP.del({
               url: s.Endpoints.MENTIONS_MESSAGE_ID(e),
               retries: 2,
               oldFormErrors: !0,
@@ -1050,39 +1046,33 @@
             }),
             (this._handleNativeUpdateNotAvailable = () => {
               this._handleCheckingForUpdates(),
-                l.default
-                  .get({
-                    url: ""
-                      .concat(location.protocol, "//")
-                      .concat(location.host)
-                      .concat("/assets/", "version.")
-                      .concat(window.GLOBAL_ENV.RELEASE_CHANNEL, ".json"),
-                    query: { _: (Date.now() / 1e3 / 60 / 5) | 0 },
-                    oldFormErrors: !0,
-                  })
-                  .then(
-                    e => {
-                      if (
-                        null == e.body ||
-                        "058e3c8b88d1507a81f7bdd6463038665d60356c" ===
-                          e.body.hash
-                      )
-                        return this._handleUpdateNotAvailable();
-                      if (e.body.required || (0, r.probablyHasBuildOverride)())
-                        return this._handleUpdateDownloaded(!1);
-                      let t =
-                        "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
-                      if (Date.now() - p > t)
-                        return (
-                          s.default.set(
-                            "lastNonRequiredUpdateShown",
-                            Date.now()
-                          ),
-                          this._handleUpdateDownloaded(!1)
-                        );
-                    },
-                    () => this._handleUpdateError()
-                  );
+                l.HTTP.get({
+                  url: ""
+                    .concat(location.protocol, "//")
+                    .concat(location.host)
+                    .concat("/assets/", "version.")
+                    .concat(window.GLOBAL_ENV.RELEASE_CHANNEL, ".json"),
+                  query: { _: (Date.now() / 1e3 / 60 / 5) | 0 },
+                  oldFormErrors: !0,
+                }).then(
+                  e => {
+                    if (
+                      null == e.body ||
+                      "06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed" === e.body.hash
+                    )
+                      return this._handleUpdateNotAvailable();
+                    if (e.body.required || (0, r.probablyHasBuildOverride)())
+                      return this._handleUpdateDownloaded(!1);
+                    let t =
+                      "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
+                    if (Date.now() - p > t)
+                      return (
+                        s.default.set("lastNonRequiredUpdateShown", Date.now()),
+                        this._handleUpdateDownloaded(!1)
+                      );
+                  },
+                  () => this._handleUpdateError()
+                );
             }),
             (this._handleUpdateNotAvailable = () => {
               i.default.dispatch({ type: "UPDATE_NOT_AVAILABLE" }),
@@ -2039,10 +2029,10 @@
         l.default.dispatch({ type: "GAME_INVITE_CLEAR_UNSEEN" });
       }
       async function f(e) {
-        await a.default.delete({ url: r.Endpoints.GAME_INVITE(e.invite_id) });
+        await a.HTTP.del({ url: r.Endpoints.GAME_INVITE(e.invite_id) });
       }
       async function h() {
-        await a.default.delete({ url: r.Endpoints.GAME_INVITES });
+        await a.HTTP.del({ url: r.Endpoints.GAME_INVITES });
       }
       async function E(e, t) {
         if (!(0, i.isWindows)()) return !1;
@@ -3132,9 +3122,7 @@
             optimistic: !0,
             ids: [e],
           }),
-            await l.default.post({
-              url: c.Endpoints.NOTIF_CENTER_ITEMS_ACK(e),
-            });
+            await l.HTTP.post({ url: c.Endpoints.NOTIF_CENTER_ITEMS_ACK(e) });
         } catch (t) {
           i.default.dispatch({
             type: "NOTIFICATION_CENTER_ITEMS_ACK_FAILURE",
@@ -10381,4 +10369,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cf592e02f73ef4d0c74f.js.map
+//# sourceMappingURL=f9ff8e79baa4d661c6c6.js.map

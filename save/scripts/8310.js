@@ -177,20 +177,20 @@
             C = m(3, 3, 1.25 * (((s >> 3) & 63) / 63)),
             R = m(3, 3, 1.25 * (((s >> 9) & 63) / 63)),
             L = f && m(5, 5, p),
-            y = u(e),
-            P = a(y > 1 ? 32 : 32 * y),
-            N = a(y > 1 ? 32 / y : 32),
-            U = new Uint8Array(P * N * 4),
+            P = u(e),
+            y = a(P > 1 ? 32 : 32 * P),
+            N = a(P > 1 ? 32 / P : 32),
+            U = new Uint8Array(y * N * 4),
             M = [],
             O = [];
           for (let e = 0, u = 0; e < N; e++)
-            for (let a = 0; a < P; a++, u += 4) {
+            for (let a = 0; a < y; a++, u += 4) {
               let o = l,
                 s = c,
                 E = d,
                 p = I;
               for (let e = 0, n = r(_, f ? 5 : 3); e < n; e++)
-                M[e] = i((t / P) * (a + 0.5) * e);
+                M[e] = i((t / y) * (a + 0.5) * e);
               for (let n = 0, u = r(S, f ? 5 : 3); n < u; n++)
                 O[n] = i((t / N) * (e + 0.5) * n);
               for (let e = 0, t = 0; e < S; e++)
@@ -217,7 +217,7 @@
                 (U[u + 2] = r(0, 255 * n(1, T))),
                 (U[u + 3] = r(0, 255 * n(1, p)));
             }
-          return { w: P, h: N, rgba: U };
+          return { w: y, h: N, rgba: U };
         })(e);
         return r(t.w, t.h, t.rgba);
       }
@@ -250,12 +250,11 @@
               applicationId: e,
             });
           }),
-          u.default
-            .get({
-              url: a.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
-              oldFormErrors: !0,
-              query: { exclude_consumed: t },
-            })
+          u.HTTP.get({
+            url: a.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+            oldFormErrors: !0,
+            query: { exclude_consumed: t },
+          })
             .then(
               t => (
                 r.default.dispatch({
@@ -282,7 +281,7 @@
         } = e;
         r.default.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
         try {
-          let e = await u.default.get({
+          let e = await u.HTTP.get({
             url: a.Endpoints.ENTITLEMENTS_FOR_USER,
             query: { with_sku: t, with_application: n, entitlement_type: i },
           });
@@ -653,10 +652,10 @@
             return L;
           },
           VIDEO_BACKGROUND_ASPECT_RATIO: function () {
-            return y;
+            return P;
           },
           MAX_VIDEO_OVERLAY_HEIGHT: function () {
-            return P;
+            return y;
           },
           MessageTypes: function () {
             return a;
@@ -691,10 +690,10 @@
         C = s / T,
         R = s / h,
         L = s / m,
-        y =
+        P =
           o.BACKGROUND_REPLACEMENT_SIZE.width /
           o.BACKGROUND_REPLACEMENT_SIZE.height,
-        P = s / y;
+        y = s / P;
       ((r = a || (a = {}))[(r.CROP_GIF_START = 0)] = "CROP_GIF_START"),
         (r[(r.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
         (r[(r.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR");
@@ -827,8 +826,8 @@
             analyticsSourceLocation: C,
             isGift: R = !1,
             giftMessage: L,
-            subscriptionTier: y,
-            trialId: P,
+            subscriptionTier: P,
+            trialId: y,
             postSuccessGuild: N,
             openInvoiceId: U,
             applicationId: M,
@@ -849,8 +848,8 @@
               return (0, u.jsx)(e, {
                 ...i,
                 loadId: F,
-                subscriptionTier: y,
-                skuId: (0, f.castPremiumSubscriptionAsSkuId)(y),
+                subscriptionTier: P,
+                skuId: (0, f.castPremiumSubscriptionAsSkuId)(P),
                 isGift: R,
                 giftMessage: L,
                 giftRecipient: g,
@@ -879,7 +878,7 @@
                 analyticsObject: m,
                 analyticsLocation: A,
                 analyticsSourceLocation: C,
-                trialId: P,
+                trialId: y,
                 postSuccessGuild: N,
                 planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                 openInvoiceId: U,
@@ -904,7 +903,7 @@
                   source: C,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
                   is_gift: R,
-                  eligible_for_trial: null != P,
+                  eligible_for_trial: null != y,
                   application_id: M,
                   location_stack: h,
                 }),
@@ -963,7 +962,7 @@
       async function I() {
         try {
           a.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
-          let { body: e } = await i.default.get({
+          let { body: e } = await i.HTTP.get({
             url: _.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           a.default.dispatch({
@@ -1537,4 +1536,4 @@
     },
   },
 ]);
-//# sourceMappingURL=63637af7d5c5941149b8.js.map
+//# sourceMappingURL=ec298e615891f7ca463e.js.map

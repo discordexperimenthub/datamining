@@ -30,10 +30,10 @@
         i("424973");
       var r = i("917351"),
         n = i.n(r),
-        a = i("872717"),
-        s = i("750028"),
-        u = i("913144"),
-        o = i("599417"),
+        s = i("872717"),
+        a = i("750028"),
+        o = i("913144"),
+        u = i("599417"),
         c = i("385976"),
         l = i("867805"),
         d = i("619443"),
@@ -47,66 +47,61 @@
         E.PreloadedUserSettingsActionCreators.updateAsync(
           "textAndImages",
           t => {
-            (t.diversitySurrogate = s.StringValue.create()),
+            (t.diversitySurrogate = a.StringValue.create()),
               (t.diversitySurrogate.value = e);
           },
           p.UserSettingsDelay.FREQUENT_USER_ACTION
         );
       }
       function y(e) {
-        u.default.dispatch({ type: "EMOJI_FETCH", guildId: e }),
-          a.default
-            .get({ url: S.Endpoints.GUILD_EMOJIS(e), oldFormErrors: !0 })
-            .then(
-              t =>
-                u.default.dispatch({
-                  type: "EMOJI_FETCH_SUCCESS",
-                  guildId: e,
-                  emojis: t.body,
-                }),
-              () =>
-                u.default.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e })
-            );
+        o.default.dispatch({ type: "EMOJI_FETCH", guildId: e }),
+          s.HTTP.get({
+            url: S.Endpoints.GUILD_EMOJIS(e),
+            oldFormErrors: !0,
+          }).then(
+            t =>
+              o.default.dispatch({
+                type: "EMOJI_FETCH_SUCCESS",
+                guildId: e,
+                emojis: t.body,
+              }),
+            () =>
+              o.default.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e })
+          );
       }
       function T(e) {
         let { guildId: t, image: i, name: r, roles: n } = e;
         return (
-          u.default.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
-          a.default
-            .post({
-              url: S.Endpoints.GUILD_EMOJIS(t),
-              body: { image: i, name: r, roles: n },
-              oldFormErrors: !0,
-            })
-            .then(
-              () =>
-                u.default.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }),
-              e => (
-                u.default.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }),
-                Promise.reject(e)
-              )
+          o.default.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
+          s.HTTP.post({
+            url: S.Endpoints.GUILD_EMOJIS(t),
+            body: { image: i, name: r, roles: n },
+            oldFormErrors: !0,
+          }).then(
+            () => o.default.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }),
+            e => (
+              o.default.dispatch({ type: "EMOJI_UPLOAD_STOP", guildId: t }),
+              Promise.reject(e)
             )
+          )
         );
       }
       function k(e, t) {
         return (
-          u.default.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
-          a.default.delete({
-            url: S.Endpoints.GUILD_EMOJI(e, t),
-            oldFormErrors: !0,
-          })
+          o.default.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
+          s.HTTP.del({ url: S.Endpoints.GUILD_EMOJI(e, t), oldFormErrors: !0 })
         );
       }
       async function C(e) {
         let { guildId: t, emojiId: i, name: r, roles: n } = e;
         try {
-          return await a.default.patch({
+          return await s.HTTP.patch({
             url: S.Endpoints.GUILD_EMOJI(t, i),
             body: { name: r, roles: n },
             oldFormErrors: !0,
           });
         } catch (e) {
-          throw new o.default(e);
+          throw new u.default(e);
         }
       }
       function A(e) {
@@ -162,18 +157,18 @@
       i.r(t),
         i.d(t, {
           default: function () {
-            return o;
+            return u;
           },
         });
       var r = i("37983");
       i("884691");
       var n = i("77078"),
-        a = i("272030"),
-        s = i("702495"),
-        u = i("782340");
-      function o(e) {
+        s = i("272030"),
+        a = i("702495"),
+        o = i("782340");
+      function u(e) {
         let { target: t, onSelect: i } = e,
-          o = (0, s.default)({
+          u = (0, a.default)({
             type: t.getAttribute("data-type"),
             id: t.getAttribute("data-id"),
             name: t.getAttribute("data-name"),
@@ -181,11 +176,11 @@
           });
         return (0, r.jsx)(n.Menu, {
           navId: "expression-picker",
-          onClose: a.closeContextMenu,
-          "aria-label": u.default.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
+          onClose: s.closeContextMenu,
+          "aria-label": o.default.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
           onSelect: i,
           className: "context-menu",
-          children: (0, r.jsx)(n.MenuGroup, { children: o }),
+          children: (0, r.jsx)(n.MenuGroup, { children: u }),
         });
       }
     },
@@ -200,10 +195,10 @@
         i("781738");
       var r = i("37983"),
         n = i("884691"),
-        a = i("446674"),
-        s = i("77078"),
-        u = i("150021"),
-        o = i("997289"),
+        s = i("446674"),
+        a = i("77078"),
+        o = i("150021"),
+        u = i("997289"),
         c = i("788506"),
         l = i("385976"),
         d = i("867805"),
@@ -220,7 +215,7 @@
       }
       function k(e) {
         let { type: t, id: i, name: k, isInExpressionPicker: C = !1 } = e,
-          { location: A } = (0, o.useAnalyticsContext)(),
+          { location: A } = (0, u.useAnalyticsContext)(),
           M = n.useMemo(
             () => ({
               ...A,
@@ -231,13 +226,13 @@
             [A, C]
           ),
           v = (0, S.useFavoriteStickerIds)(),
-          h = (0, a.useStateFromStores)([p.default], () =>
+          h = (0, s.useStateFromStores)([p.default], () =>
             t === E.PickerContextMenuDataTypes.STICKER && null != i
               ? p.default.getStickerById(i)
               : null
           ),
           g = null != h && v.includes(h.id),
-          R = (0, a.useStateFromStores)([l.default], () => {
+          R = (0, s.useStateFromStores)([l.default], () => {
             if (t === E.PickerContextMenuDataTypes.EMOJI) {
               if (null != i)
                 return l.default.getDisambiguatedEmojiContext().getById(i);
@@ -254,12 +249,12 @@
           return (0, m.isGuildSticker)(h) && !(0, m.isAvailableGuildSticker)(h)
             ? null
             : g
-              ? (0, r.jsx)(s.MenuItem, {
+              ? (0, r.jsx)(a.MenuItem, {
                   id: "unfavorite",
                   action: () => (0, _.unfavoriteSticker)(h.id),
                   label: y.default.Messages.UNFAVORITE_ITEM,
                 })
-              : (0, r.jsx)(s.MenuItem, {
+              : (0, r.jsx)(a.MenuItem, {
                   id: "favorite",
                   action: () => {
                     (0, f.trackStickerFavorited)({
@@ -272,19 +267,19 @@
                 });
         if (null != R && t === E.PickerContextMenuDataTypes.EMOJI)
           return O
-            ? (0, r.jsx)(s.MenuItem, {
+            ? (0, r.jsx)(a.MenuItem, {
                 id: "unfavorite",
-                action: () => (0, u.unfavoriteEmoji)(R),
+                action: () => (0, o.unfavoriteEmoji)(R),
                 label: y.default.Messages.UNFAVORITE_ITEM,
               })
-            : (0, r.jsx)(s.MenuItem, {
+            : (0, r.jsx)(a.MenuItem, {
                 id: "favorite",
                 action: () => {
                   (0, c.trackEmojiFavorited)({
                     emoji: R,
                     location: { ...M, object: I.AnalyticsObjects.EMOJI },
                   }),
-                    (0, u.favoriteEmoji)(R);
+                    (0, o.favoriteEmoji)(R);
                 },
                 label: y.default.Messages.FAVORITE_ITEM,
               });
@@ -318,45 +313,45 @@
         });
       var r = i("716241"),
         n = i("599110"),
-        a = i("161585"),
-        s = i("49111"),
-        u = i("13030"),
-        o = i("646718");
+        s = i("161585"),
+        a = i("49111"),
+        o = i("13030"),
+        u = i("646718");
       let c = e => {
           let {
             containerWidth: t,
             favoriteStickers: i,
             frequentlyUsedStickers: n,
-            guildStickers: o,
+            guildStickers: u,
             stickersTotal: c,
           } = e;
           r.default.trackWithMetadata(
-            s.AnalyticEvents.EXPRESSION_PICKER_OPENED,
+            a.AnalyticEvents.EXPRESSION_PICKER_OPENED,
             {
               width: t,
-              tab: u.ExpressionPickerViewType.STICKER,
+              tab: o.ExpressionPickerViewType.STICKER,
               badged: !1,
               num_expressions_favorites: i.length,
               num_animated_expressions_favorites: i.filter(e =>
-                (0, a.isAnimatedSticker)(e.format_type)
+                (0, s.isAnimatedSticker)(e.format_type)
               ).length,
               num_custom_expressions_favorites: i.filter(e =>
-                (0, a.isCustomSticker)(e.type)
+                (0, s.isCustomSticker)(e.type)
               ).length,
               num_standard_expressions_favorites: i.filter(
-                e => !(0, a.isCustomSticker)(e.type)
+                e => !(0, s.isCustomSticker)(e.type)
               ).length,
               num_expressions_frecent: n.length,
               num_custom_expressions_frecent: n.filter(e =>
-                (0, a.isCustomSticker)(e.type)
+                (0, s.isCustomSticker)(e.type)
               ).length,
               num_animated_expressions_frecent: n.filter(e =>
-                (0, a.isAnimatedSticker)(e.format_type)
+                (0, s.isAnimatedSticker)(e.format_type)
               ).length,
               num_standard_expressions_frecent: n.filter(
-                e => !(0, a.isCustomSticker)(e.type)
+                e => !(0, s.isCustomSticker)(e.type)
               ).length,
-              num_current_guild_expressions: o.length,
+              num_current_guild_expressions: u.length,
               num_custom_expressions_total: c,
             }
           );
@@ -364,25 +359,25 @@
         l = e => {
           let t,
             { sticker: i, location: n } = e;
-          i.type === a.MetaStickerType.GUILD && (t = i.guild_id),
-            r.default.trackWithMetadata(s.AnalyticEvents.EXPRESSION_FAVORITED, {
+          i.type === s.MetaStickerType.GUILD && (t = i.guild_id),
+            r.default.trackWithMetadata(a.AnalyticEvents.EXPRESSION_FAVORITED, {
               location: n,
-              expression_type: u.ExpressionPickerViewType.STICKER,
+              expression_type: o.ExpressionPickerViewType.STICKER,
               expression_id: i.id,
               expression_name: i.name,
               expression_guild_id: t,
-              is_animated: (0, a.isAnimatedSticker)(i.format_type),
-              is_custom: (0, a.isCustomSticker)(i.type),
+              is_animated: (0, s.isAnimatedSticker)(i.format_type),
+              is_custom: (0, s.isCustomSticker)(i.type),
             });
         },
         d = () => {
-          n.default.track(s.AnalyticEvents.SEARCH_STARTED, {
-            search_type: s.SearchTypes.STICKER,
+          n.default.track(a.AnalyticEvents.SEARCH_STARTED, {
+            search_type: a.SearchTypes.STICKER,
           });
         },
         E = (e, t, i) => {
-          r.default.trackWithMetadata(s.AnalyticEvents.SEARCH_RESULT_VIEWED, {
-            search_type: s.SearchTypes.STICKER,
+          r.default.trackWithMetadata(a.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+            search_type: a.SearchTypes.STICKER,
             total_results: t,
             query: e,
             is_suggestion: i,
@@ -390,17 +385,17 @@
         },
         _ = (e, t, i) => {
           let n;
-          let { sticker: u } = e;
-          u.type === a.MetaStickerType.GUILD && (n = u.guild_id),
+          let { sticker: o } = e;
+          o.type === s.MetaStickerType.GUILD && (n = o.guild_id),
             r.default.trackWithMetadata(
-              s.AnalyticEvents.SEARCH_RESULT_SELECTED,
+              a.AnalyticEvents.SEARCH_RESULT_SELECTED,
               {
-                load_id: u.id,
-                search_type: s.SearchTypes.STICKER,
+                load_id: o.id,
+                search_type: a.SearchTypes.STICKER,
                 source_object: "Sticker Picker",
                 total_results: i,
                 expression_guild_id: n,
-                sticker_id: u.id,
+                sticker_id: o.id,
                 query: t,
               }
             );
@@ -408,30 +403,30 @@
         f = e => {
           let t;
           let { sticker: i, category: n } = e;
-          i.type === a.MetaStickerType.GUILD && (t = i.guild_id),
+          i.type === s.MetaStickerType.GUILD && (t = i.guild_id),
             r.default.trackWithMetadata(
-              s.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED,
+              a.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED,
               {
-                type: o.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
+                type: u.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
                 expression_id: i.id,
                 expression_name: i.name,
                 expression_picker_section: n,
                 expression_guild_id: t,
-                is_animated: (0, a.isAnimatedSticker)(i.format_type),
-                is_custom: (0, a.isCustomSticker)(i.type),
+                is_animated: (0, s.isAnimatedSticker)(i.format_type),
+                is_custom: (0, s.isCustomSticker)(i.type),
               }
             );
         },
         S = e => {
           null != e &&
             "" !== e &&
-            r.default.trackWithMetadata(s.AnalyticEvents.SEARCH_RESULT_EMPTY, {
+            r.default.trackWithMetadata(a.AnalyticEvents.SEARCH_RESULT_EMPTY, {
               query: e,
-              search_type: s.SearchTypes.STICKER,
+              search_type: a.SearchTypes.STICKER,
               source_object: "Sticker Picker",
             });
         };
     },
   },
 ]);
-//# sourceMappingURL=d58d9239f7c0585839fb.js.map
+//# sourceMappingURL=7057669e16257b08aa1a.js.map

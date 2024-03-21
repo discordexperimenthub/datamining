@@ -85,7 +85,7 @@
             i.default.dispatch({ type: "POMELO_SUGGESTIONS_RESET" });
             try {
               var a;
-              let s = await n.default.get({
+              let s = await n.HTTP.get({
                 url: E.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
                 query: null == e ? void 0 : { global_name: e },
                 timeout: t,
@@ -113,7 +113,7 @@
                 type: "POMELO_SUGGESTIONS_FETCH",
                 usernameSuggestionLoading: !0,
               });
-              let a = await n.default.get({
+              let a = await n.HTTP.get({
                 url: E.Endpoints.POMELO_SUGGESTIONS,
                 timeout: e,
               });
@@ -449,10 +449,10 @@
             return _;
           },
           formatPomeloForEditing: function () {
-            return I;
+            return T;
           },
           getMemberSince: function () {
-            return T;
+            return I;
           },
           formatUsernameLiveCheckValidation: function () {
             return h;
@@ -525,10 +525,10 @@
         for (let e of S) if (s.includes(e.toLowerCase())) return !0;
         return !1;
       }
-      function I(e) {
+      function T(e) {
         return e.toLowerCase().replace(/\s/g, "").replace("@", "");
       }
-      function T(e) {
+      function I(e) {
         let t = r.default.extractTimestamp(e);
         try {
           return n(new Date(t)).format("MMM DD, YYYY");
@@ -820,8 +820,8 @@
         S = a("945330"),
         g = a("599110"),
         _ = a("158998"),
-        I = a("255403"),
-        T = a("2581"),
+        T = a("255403"),
+        I = a("2581"),
         h = a("415133"),
         O = a("42060"),
         N = a("22658"),
@@ -850,8 +850,8 @@
           [H, V] = n.useState(!1),
           [W, X] = n.useState(!1),
           z = n.useRef(null),
-          Y = (0, o.default)([T.default], () =>
-            T.default.isCurrentUsernameInvalid()
+          Y = (0, o.default)([I.default], () =>
+            I.default.isCurrentUsernameInvalid()
           ),
           Z = (0, o.default)([m.default], () => {
             let e = m.default.getCurrentUser();
@@ -957,7 +957,7 @@
             try {
               F(null),
                 j(!0),
-                await I.default.createPomelo(
+                await T.default.createPomelo(
                   { username: (0, h.formatPomeloForEditing)($.username) },
                   U
                 ),
@@ -1325,8 +1325,8 @@
             oneClickFlow: g = !1,
             ..._
           } = e,
-          { user: I, editState: T, onClose: h } = _,
-          O = (0, o.default)(I.id),
+          { user: T, editState: I, onClose: h } = _,
+          O = (0, o.default)(T.id),
           N = (function (e, t, a) {
             switch (e) {
               case E.EditState.EDIT_USERNAME:
@@ -1376,12 +1376,12 @@
                     m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE,
                 };
             }
-          })(T, u.default.getName(I), h),
+          })(I, u.default.getName(T), h),
           [M, L] = (0, i.useSpring)(() => ({ opacity: 0, y: 10 }));
         return (
           n.useEffect(() => {
             L({ y: 0, opacity: 1, from: { y: 10, opacity: 0 } });
-          }, [L, T]),
+          }, [L, I]),
           (0, s.jsxs)("div", {
             className: S.displayNameContainer,
             children: [
@@ -1450,8 +1450,8 @@
         S = a("415133"),
         g = a("500645"),
         _ = a("925922"),
-        I = a("935583"),
-        T = a("590456"),
+        T = a("935583"),
+        I = a("590456"),
         h = a("782340"),
         O = a("250727"),
         N = a("107681");
@@ -1542,8 +1542,8 @@
           H = null == R ? void 0 : R.getLegacyUsername();
         return (
           n.useEffect(() => {
-            if (!w && x === I.EditState.PREVIEW)
-              a.username.includes(I.POMELO_KEYWORD) &&
+            if (!w && x === T.EditState.PREVIEW)
+              a.username.includes(T.POMELO_KEYWORD) &&
                 (B(
                   window.innerWidth / 2 + 150,
                   0,
@@ -1571,7 +1571,7 @@
           }, [B, x, a, w]),
           (0, s.jsxs)("div", {
             className: l(O.userCardContainer, {
-              [O.shinyCard]: x === I.EditState.PREVIEW,
+              [O.shinyCard]: x === T.EditState.PREVIEW,
             }),
             children: [
               (0, s.jsxs)("div", {
@@ -1582,7 +1582,7 @@
                     user: j,
                     allowEdit: !1,
                     guildId: void 0,
-                    profileType: T.UserProfileTypes.POMELO_POPOUT,
+                    profileType: I.UserProfileTypes.POMELO_POPOUT,
                     showPremiumBadgeUpsell: !1,
                   }),
                   (0, s.jsx)(f.UserPopoutAvatar, {
@@ -1593,10 +1593,10 @@
                     onClose: void 0,
                     disableUserProfileLink: !0,
                     hasBanner: !1,
-                    profileType: T.UserProfileTypes.POMELO_POPOUT,
+                    profileType: I.UserProfileTypes.POMELO_POPOUT,
                     animateOnHover: !1,
                   }),
-                  x === I.EditState.PREVIEW &&
+                  x === T.EditState.PREVIEW &&
                     null != H &&
                     (0, s.jsx)("div", {
                       className: O.legacyUsernameBadgeContainer,
@@ -1620,12 +1620,12 @@
                     }),
                 ],
               }),
-              x !== I.EditState.PREVIEW &&
+              x !== T.EditState.PREVIEW &&
                 (0, s.jsxs)(r.animated.div, {
                   style: { opacity: k.opacity, y: k.y },
                   className: O.inputContainer,
                   children: [
-                    x === I.EditState.EDIT_DISPLAY_NAME &&
+                    x === T.EditState.EDIT_DISPLAY_NAME &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
                           (0, s.jsx)(d.Text, {
@@ -1638,15 +1638,15 @@
                             style: l(O.displayNameHeight, O["heading-xl/bold"]),
                             value: null != G ? G : "",
                             placeholder: m.default.getName(a),
-                            maxLength: I.MAX_DISPLAY_NAME_LENGTH,
+                            maxLength: T.MAX_DISPLAY_NAME_LENGTH,
                             onChange: e => P({ globalName: e }),
                             onFocus: v,
                             ref: b,
                           }),
                         ],
                       }),
-                    (x === I.EditState.EDIT_USERNAME ||
-                      x === I.EditState.SUGGESTION) &&
+                    (x === T.EditState.EDIT_USERNAME ||
+                      x === T.EditState.SUGGESTION) &&
                       (0, s.jsxs)(s.Fragment, {
                         children: [
                           (0, s.jsx)(d.Text, {
@@ -1663,7 +1663,7 @@
                             ),
                             value: null != U ? U : "",
                             placeholder: a.username,
-                            maxLength: I.MAX_DISPLAY_NAME_LENGTH,
+                            maxLength: T.MAX_DISPLAY_NAME_LENGTH,
                             onChange: e => P({ username: e.replace("@", "") }),
                             onFocus: C,
                             ref: D,
@@ -1679,7 +1679,7 @@
                             children: i,
                           });
                         if (null != p) {
-                          if (x !== I.EditState.SUGGESTION)
+                          if (x !== T.EditState.SUGGESTION)
                             return (0, s.jsx)(d.Text, {
                               variant: "text-sm/normal",
                               children: p,
@@ -1692,8 +1692,8 @@
                         }
                         return null == p &&
                           null == i &&
-                          (x === I.EditState.EDIT_USERNAME ||
-                            x === I.EditState.SUGGESTION)
+                          (x === T.EditState.EDIT_USERNAME ||
+                            x === T.EditState.SUGGESTION)
                           ? (0, s.jsx)(_.default, {
                               username: U,
                               oneClickFlow: y,
@@ -1703,7 +1703,7 @@
                     }),
                   ],
                 }),
-              x === I.EditState.PREVIEW &&
+              x === T.EditState.PREVIEW &&
                 (0, s.jsxs)("div", {
                   className: O.userCard,
                   children: [
@@ -2055,4 +2055,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5341d38148eedd3a5c3f.js.map
+//# sourceMappingURL=4ed51084d982cb2c1d6d.js.map

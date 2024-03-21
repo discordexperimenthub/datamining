@@ -7448,6 +7448,8 @@
         STREAM_SINGLE_PERSON_INVITE: "Invite people to join you!",
         STREAM_SINGLE_PERSON_NO_INVITE: "You're alone in this call.",
         STREAM_NO_PERMISSION_CTA: "No permission",
+        STREAM_PREMIUM_AFFINITY_UPSELL:
+          "{numFriends, plural, =1 {1 friend has} =2 {2 friends have} other {{numFriends}+ friends have}} HD streaming with Nitro",
         DISPLAY_NAME: "Display Name",
         PICTURE_IN_PICTURE_COLLAPSE: "Collapse",
         PICTURE_IN_PICTURE_EXPAND: "Expand",
@@ -26047,7 +26049,7 @@
         },
         fetchChangelogConfig() {
           let e = r.ChangelogPlatforms.DESKTOP;
-          return t.default.get({
+          return t.HTTP.get({
             url: "https://cdn.discordapp.com/changelogs/config_"
               .concat(e, ".json?")
               .concat(a()),
@@ -26057,7 +26059,7 @@
           if (null != n.default.getChangelog(e, _)) return null;
           let E = r.ChangelogPlatforms.DESKTOP;
           try {
-            let n = await t.default.get({
+            let n = await t.HTTP.get({
               url: "https://cdn.discordapp.com/changelogs/"
                 .concat(E, "/")
                 .concat(e, "/")
@@ -26102,7 +26104,7 @@
         o = E("913144");
       function n() {
         var e;
-        return t.default.get(
+        return t.HTTP.get(
           ""
             .concat(((e = "https:"), "https:"))
             .concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT)
@@ -26462,8 +26464,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277613", ", Version Hash: ")
-          .concat("058e3c8b88d1507a81f7bdd6463038665d60356c")
+          .concat("277632", ", Version Hash: ")
+          .concat("06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -26838,7 +26840,7 @@
             { isPlatformEmbedded: T } = E("773336");
           if ("/" === e.url[0]) {
             var S, R;
-            (e.url = t.default.getAPIBaseURL() + e.url),
+            (e.url = (0, t.getAPIBaseURL)() + e.url),
               !("Authorization" in e.header) &&
                 !("authorization" in e.header) &&
                 e.set("Authorization", _.getToken());
@@ -27274,7 +27276,7 @@
         o.default.dispatch({ type: "ACTIVE_CHANNELS_FETCH_START", guildId: e });
         try {
           var E, a;
-          let n = await t.default.get({
+          let n = await t.HTTP.get({
               url: r.Endpoints.ACTIVE_CHANNELS(e),
               query: { channel_limit: _ },
             }),
@@ -28957,7 +28959,7 @@
           let e;
           let _ = parseInt(
               (
-                await o.default.get(
+                await o.HTTP.get(
                   "https://cdn.discordapp.com/bad-domains/current_revision.txt"
                 )
               ).text
@@ -28982,7 +28984,7 @@
                     " behind the server revision number"
                   )
                 );
-              let n = (await o.default.get({ url: s, query: { revision: E } }))
+              let n = (await o.HTTP.get({ url: s, query: { revision: E } }))
                 .body;
               if (0 === n.ADDED.length && 0 === n.REMOVED.length) {
                 T.verbose("No changes to blocked domains list.");
@@ -29034,7 +29036,7 @@
               }
               T.verbose("Downloading the full bad domains file"),
                 (e = (
-                  await o.default.get({
+                  await o.HTTP.get({
                     url: "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
                   })
                 ).body);
@@ -29588,12 +29590,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277613"), "277613"));
+        let _ = parseInt(((e = "277632"), "277632"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277613"
+                "277632"
               )
             ),
             (_ = 0)),
@@ -30598,9 +30600,7 @@
         n = E("49111");
       let r = async () => {
         try {
-          let e = await t.default.get({
-            url: n.Endpoints.MY_CONTENT_INVENTORY,
-          });
+          let e = await t.HTTP.get({ url: n.Endpoints.MY_CONTENT_INVENTORY });
           return e.body;
         } catch (e) {
           throw new o.APIError(e);
@@ -36741,7 +36741,7 @@
       async function r() {
         o.default.dispatch({ type: "USER_TENURE_REWARD_SYNC_START" });
         try {
-          let e = await t.default.post({ url: n.Endpoints.TENURE_REWARD_SYNC });
+          let e = await t.HTTP.post({ url: n.Endpoints.TENURE_REWARD_SYNC });
           o.default.dispatch({
             type: "USER_TENURE_REWARD_SYNC_SUCCESS",
             userTenureRewardStatus: e.body.tenure_reward_status,
@@ -39621,7 +39621,7 @@
       var t = E("872717"),
         o = E("49111");
       function n(e, _) {
-        t.default.post({
+        t.HTTP.post({
           url: o.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),
           query: { first_user: _ },
         });
@@ -41358,7 +41358,7 @@
             c.remoteApp.relaunch();
         },
         makeChunkedRequest(e, _, E) {
-          let t = "".concat(O.default.getAPIBaseURL()).concat(e);
+          let t = "".concat((0, O.getAPIBaseURL)()).concat(e);
           if (!l.isPlatformEmbedded)
             return Promise.reject(Error("Not embedded!"));
           if (null == c.http)
@@ -43324,14 +43324,29 @@
       "use strict";
       E.r(_),
         E.d(_, {
-          default: function () {
+          V6OrEarlierAPIError: function () {
+            return I.APIError;
+          },
+          V8APIError: function () {
+            return a.APIError;
+          },
+          INVALID_FORM_BODY_ERROR_CODE: function () {
+            return a.INVALID_FORM_BODY_ERROR_CODE;
+          },
+          convertSkemaError: function () {
+            return i.convertSkemaError;
+          },
+          HTTP: function () {
             return d;
           },
+          getAPIBaseURL: function () {
+            return U;
+          },
           setRequestPatch: function () {
-            return M;
+            return h;
           },
           setAwaitOnline: function () {
-            return P;
+            return m;
           },
         }),
         E("222007"),
@@ -43341,14 +43356,15 @@
         n = E("981980");
       E("704744");
       var r = E("811022"),
-        a = E("644642"),
-        i = E("486196"),
-        I = E("614247"),
+        a = E("486196"),
+        i = E("614247");
+      E("353015");
+      var I = E("644642"),
         s = E("446825").Buffer;
       let T = new r.default("HTTPUtils"),
         S = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
       function N(e, _, E, t, r) {
-        var a, T, O, A, l;
+        var I, T, O, A, l;
         let u = o[e](_.url);
         if (
           (null != _.onRequestCreated && _.onRequestCreated(u), null != _.query)
@@ -43368,9 +43384,9 @@
           null != _.headers && u.set(_.headers),
           null != _.reason &&
             u.set("X-Audit-Log-Reason", encodeURIComponent(_.reason)),
-          null === (a = _.attachments) ||
-            void 0 === a ||
-            a.forEach(e => {
+          null === (I = _.attachments) ||
+            void 0 === I ||
+            I.forEach(e => {
               u.attach(e.name, e.file, e.filename);
             }),
           null === (T = _.fields) ||
@@ -43404,16 +43420,16 @@
         let L = () => {
           (_.backoff = null != _.backoff ? _.backoff : new n.default()),
             (_.retried = (null != _.retried ? _.retried : 0) + 1),
-            _.backoff.fail(() => h(_.url).then(() => N(e, _, E, t, r)));
+            _.backoff.fail(() => P(_.url).then(() => N(e, _, E, t, r)));
         };
-        null == U ||
-          null === (O = U.prepareRequest) ||
+        null == M ||
+          null === (O = M.prepareRequest) ||
           void 0 === O ||
-          O.call(U, u),
+          O.call(M, u),
           u.ok(e => null != e.status),
           u.then(
             o => {
-              var n, a, s;
+              var n, I, s;
               if (null != _.retries && _.retries-- > 0 && S.has(o.status))
                 return L();
               let T = {
@@ -43444,11 +43460,11 @@
                     : n.call(_, o, A, l)) !== !0
               ) {
                 if (
-                  (null == U
+                  (null == M
                     ? void 0
-                    : null === (a = U.interceptResponse) || void 0 === a
+                    : null === (I = M.interceptResponse) || void 0 === I
                       ? void 0
-                      : a.call(U, o, A, l)) !== !0
+                      : I.call(M, o, A, l)) !== !0
                 ) {
                   if (o.ok) E(T);
                   else {
@@ -43458,10 +43474,10 @@
                         ? void 0
                         : null === (s = T.body) || void 0 === s
                           ? void 0
-                          : s.code) === i.INVALID_FORM_BODY_ERROR_CODE
+                          : s.code) === a.INVALID_FORM_BODY_ERROR_CODE
                     ) {
                       let { errors: e } = T.body;
-                      null != e && (T.body = (0, I.default)(e));
+                      null != e && (T.body = (0, i.convertSkemaError)(e));
                     }
                     t(T);
                   }
@@ -43563,7 +43579,8 @@
         L = l.bind(null, "post"),
         C = l.bind(null, "put"),
         c = l.bind(null, "patch"),
-        D = l.bind(null, "del");
+        D = l.bind(null, "del"),
+        d = { get: u, post: L, put: C, patch: c, del: D };
       if (E.g.isServerRendering) {
         let e = (e, _) =>
           Promise.resolve({
@@ -43575,44 +43592,34 @@
           });
         (u = e), (L = e), (C = e), (c = e), (D = e);
       }
-      var d = {
-        get: u,
-        post: L,
-        put: C,
-        patch: c,
-        delete: D,
-        V6OrEarlierAPIError: a.default,
-        V8APIError: i.default,
-        getAPIBaseURL() {
-          let e =
-            !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-          return (
-            "https:" +
-            window.GLOBAL_ENV.API_ENDPOINT +
-            (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")
-          );
-        },
-      };
-      let U = null;
-      function M(e) {
-        U = e;
+      function U() {
+        let e =
+          !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return (
+          "https:" +
+          window.GLOBAL_ENV.API_ENDPOINT +
+          (e ? "/v".concat(window.GLOBAL_ENV.API_VERSION) : "")
+        );
       }
-      let h = () => Promise.resolve();
-      function P(e) {
-        h = e;
+      let M = null;
+      function h(e) {
+        M = e;
+      }
+      let P = () => Promise.resolve();
+      function m(e) {
+        P = e;
       }
     },
     644642: function (e, _, E) {
       "use strict";
-      var t;
       E.r(_),
         E.d(_, {
-          default: function () {
+          APIError: function () {
             return t;
           },
         }),
         E("70102");
-      t = class {
+      class t {
         getFieldMessage(e) {
           return null != this.fields[e] ? this.fields[e][0] : null;
         }
@@ -43656,30 +43663,30 @@
             (this.status = a),
             (this.error = Error(t));
         }
-      };
+      }
     },
     486196: function (e, _, E) {
       "use strict";
-      var t, o, n;
+      var t, o;
       E.r(_),
         E.d(_, {
           INVALID_FORM_BODY_ERROR_CODE: function () {
-            return r;
+            return n;
           },
           CaptchaTypes: function () {
             return t;
           },
-          default: function () {
-            return o;
+          APIError: function () {
+            return a;
           },
         }),
         E("222007");
-      let r = 50035;
-      function a(e) {
+      let n = 50035;
+      function r(e) {
         return e.map(e => ({ code: "UNKNOWN", message: e }));
       }
-      ((n = t || (t = {})).HCAPTCHA = "hcaptcha"), (n.RECAPTCHA = "recaptcha");
-      o = class {
+      ((o = t || (t = {})).HCAPTCHA = "hcaptcha"), (o.RECAPTCHA = "recaptcha");
+      class a {
         hasFieldErrors() {
           return null != this.errors && Object.keys(this.errors).length > 0;
         }
@@ -43717,7 +43724,7 @@
           let {
             message: t,
             code: o,
-            retryAfter: n,
+            retryAfter: a,
             errors: i,
             status: I,
             captchaFields: s,
@@ -43738,16 +43745,16 @@
                   }
                 : {
                     status: e.status,
-                    code: r,
+                    code: n,
                     errors: (function (e) {
                       let _ = {};
                       for (let [E, t] of Object.entries(e)) {
                         if ("_misc" === E) {
-                          _._errors = a(t);
+                          _._errors = r(t);
                           continue;
                         }
                         let e = {};
-                        (e._errors = a(t)), (_[E] = e);
+                        (e._errors = r(t)), (_[E] = e);
                       }
                       return _;
                     })(E),
@@ -43762,18 +43769,18 @@
           })(e, _);
           (this.message = null != t ? t : E),
             (this.code = null != o ? o : -1),
-            (this.retryAfter = n),
+            (this.retryAfter = a),
             (this.errors = i),
             (this.status = I),
             (this.captchaFields = null != s ? s : {});
         }
-      };
+      }
     },
     614247: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
-          default: function () {
+          convertSkemaError: function () {
             return o;
           },
         });
@@ -43794,6 +43801,10 @@
         }
         return _;
       }
+    },
+    353015: function (e, _, E) {
+      "use strict";
+      E.r(_), E("808653");
     },
     853812: function (e, _, E) {
       "use strict";
@@ -52818,4 +52829,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.8c78459467db2e6aa263.js.map
+//# sourceMappingURL=47513.9dd500e4046e5382a7f1.js.map

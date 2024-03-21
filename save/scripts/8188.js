@@ -121,7 +121,7 @@
             return E;
           },
           handleReportRaid: function () {
-            return f;
+            return I;
           },
         }),
         a("222007");
@@ -157,7 +157,7 @@
       }
       async function A(e, t, a, l) {
         let n = o().add(l, "hours").toISOString(),
-          r = await s.default.put({
+          r = await s.HTTP.put({
             url: _.Endpoints.GUILD_INCIDENT_ACTIONS(e),
             body: {
               invites_disabled_until: t ? n : null,
@@ -171,18 +171,18 @@
           o = i.default.getGuild(e),
           n = null == o ? void 0 : o.getSafetyAlertsChannelId();
         if (!l || null == n) return null;
-        let r = await s.default.post({
+        let r = await s.HTTP.post({
           url: _.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
           body: { alert_message_id: t, reason: a },
         });
         return r;
       }
-      async function f(e) {
+      async function I(e) {
         let { showAlertMode: t } = (0, u.getGuildAlertModeEnabled)(e),
           a = i.default.getGuild(e),
           l = null == a ? void 0 : a.getSafetyAlertsChannelId();
         if (!t || null == l) return null;
-        let o = await s.default.post({
+        let o = await s.HTTP.post({
           url: _.Endpoints.GUILD_INCIDENT_REPORT_RAID(e),
         });
         return o;
@@ -266,13 +266,13 @@
         R = a("341695");
       function A(e) {
         let { guildId: t, messageId: s, transitionState: A, onClose: E } = e,
-          [f, I] = o.useState([]),
+          [I, f] = o.useState([]),
           [M, S] = o.useState(),
-          D = o.useCallback(() => {
+          T = o.useCallback(() => {
             let e = {
               raid_alert_type: u.RaidAlertType.JOIN_RAID,
               raid_alert_id: s,
-              false_alarm_type: f.map(e => e.toString()),
+              false_alarm_type: I.map(e => e.toString()),
               false_alarm_other_reason: M,
               guild_id: t,
             };
@@ -280,7 +280,7 @@
               (0, d.handleResolveRaid)(
                 t,
                 s,
-                (0, u.getMostImportantRaidResolutionType)(f)
+                (0, u.getMostImportantRaidResolutionType)(I)
               ),
               E(),
               (0, r.openModalLazy)(async () => {
@@ -289,8 +289,8 @@
                   .then(a.bind(a, "938899"));
                 return t => (0, l.jsx)(e, { ...t });
               });
-          }, [E, s, t, M, f]),
-          h = [
+          }, [E, s, t, M, I]),
+          D = [
             {
               text: c.default.Messages
                 .GUILD_ANTIRAID_RESOLVE_REASON_LEGITIMATE_ACTIVITY,
@@ -309,9 +309,9 @@
               value: u.RaidResolutionType.OTHER,
             },
           ];
-        function T(e) {
-          let t = f.includes(e);
-          t ? I(t => t.filter(t => t !== e)) : I(t => [...t, e]);
+        function h(e) {
+          let t = I.includes(e);
+          t ? f(t => t.filter(t => t !== e)) : f(t => [...t, e]);
         }
         return (0, l.jsxs)(r.ModalRoot, {
           transitionState: A,
@@ -338,7 +338,7 @@
                 }),
                 (0, l.jsx)("div", {
                   className: R.options,
-                  children: h.map(e => {
+                  children: D.map(e => {
                     let { text: t, value: a } = e;
                     return (0, l.jsxs)(
                       "div",
@@ -350,14 +350,14 @@
                         children: [
                           (0, l.jsxs)(r.Clickable, {
                             className: R.optionText,
-                            onClick: () => T(a),
+                            onClick: () => h(a),
                             children: [
                               (0, l.jsx)("div", {
                                 children: (0, l.jsx)(r.Checkbox, {
                                   type: r.Checkbox.Types.INVERTED,
                                   size: 20,
-                                  value: f.includes(a),
-                                  onChange: () => T(a),
+                                  value: I.includes(a),
+                                  onChange: () => h(a),
                                 }),
                               }),
                               (0, l.jsx)(r.Text, {
@@ -368,7 +368,7 @@
                             ],
                           }),
                           a === u.RaidResolutionType.OTHER &&
-                            f.includes(u.RaidResolutionType.OTHER) &&
+                            I.includes(u.RaidResolutionType.OTHER) &&
                             (0, l.jsx)("div", {
                               className: R.textboxContainer,
                               children: (0, l.jsx)(r.TextArea, {
@@ -397,7 +397,7 @@
                 (0, l.jsx)("div", {
                   className: R.button,
                   children: (0, l.jsx)(r.Button, {
-                    onClick: D,
+                    onClick: T,
                     color: r.Button.Colors.BRAND_NEW,
                     look: r.Button.Looks.FILLED,
                     children:
@@ -419,4 +419,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0f228cdcbf8f18dc70b2.js.map
+//# sourceMappingURL=19e461c25b57031d376c.js.map

@@ -269,7 +269,7 @@
             return R;
           },
           default: function () {
-            return x;
+            return P;
           },
         }),
         n("702976");
@@ -403,7 +403,7 @@
           }),
         });
       }
-      function x(e) {
+      function P(e) {
         let { guildId: t } = e,
           n = (0, s.useStateFromStores)(
             [m.default],
@@ -522,13 +522,13 @@
             [c.default],
             () => c.default.syncProfileThemeWithUserTheme
           ),
-          x = (0, d.default)([c.default], () => c.default.useReducedMotion),
-          P = (0, d.default)([T.default], () =>
+          P = (0, d.default)([c.default], () => c.default.useReducedMotion),
+          x = (0, d.default)([T.default], () =>
             T.default.getUser(null == s ? void 0 : s.authorIds[0])
           ),
           M = (0, d.default)([T.default], () => T.default.getCurrentUser()),
-          U = (0, E.default)(null == P ? void 0 : P.id, n),
-          [v] = (0, f.default)(P, U),
+          U = (0, E.default)(null == x ? void 0 : x.id, n),
+          [v] = (0, f.default)(x, U),
           C = p
             ? L
             : null !== (t = (0, _.getProfileTheme)(v)) && void 0 !== t
@@ -546,35 +546,35 @@
           u.default.requestMembersById(n, j);
         }, [n, j]),
           l.useEffect(() => {
-            null != P &&
-              (0, I.default)(P.id, P.getAvatarURL(n, 48), { guildId: n });
-          }, [P, n]);
+            null != x &&
+              (0, I.default)(x.id, x.getAvatarURL(n, 48), { guildId: n });
+          }, [x, n]);
         let b = (0, A.useName)(M);
-        if (null == P || null == M || null == s) return null;
-        let w = null != R && R.ownerId === P.id;
+        if (null == x || null == M || null == s) return null;
+        let w = null != R && R.ownerId === x.id;
         return (0, a.jsx)("div", {
           className: i(G.welcomeMessageContainer, h),
           children: (0, a.jsxs)(O.default, {
             className: G.welcomeMessageProfileContainer,
-            user: P,
+            user: x,
             guildId: n,
             profileType: g.UserProfileTypes.CARD,
             forceShowPremium: !0,
             useDefaultClientTheme: !0,
             children: [
               (0, a.jsx)("div", { className: G.avatarBackground }),
-              x
+              P
                 ? (0, a.jsx)(o.Avatar, {
-                    src: P.getAvatarURL(n, 48),
+                    src: x.getAvatarURL(n, 48),
                     size: o.AvatarSizes.SIZE_48,
                     className: G.avatar,
-                    "aria-label": P.username,
+                    "aria-label": x.username,
                   })
                 : (0, a.jsx)(o.AnimatedAvatar, {
-                    src: P.getAvatarURL(n, 48),
+                    src: x.getAvatarURL(n, 48),
                     size: o.AvatarSizes.SIZE_48,
                     className: G.avatar,
-                    "aria-label": P.username,
+                    "aria-label": x.username,
                   }),
               (0, a.jsx)("div", {
                 className: G.avatarBorder,
@@ -590,7 +590,7 @@
                     children: [
                       (0, a.jsx)(o.Text, {
                         variant: "text-sm/semibold",
-                        children: D.default.getName(n, null, P),
+                        children: D.default.getName(n, null, x),
                       }),
                       w
                         ? (0, a.jsx)(m.default, { className: G.ownerIcon })
@@ -1044,7 +1044,7 @@
         }
       }
       async function A(e, t) {
-        await a.default.put({ url: _.Endpoints.GUILD_ONBOARDING(e), body: t });
+        await a.HTTP.put({ url: _.Endpoints.GUILD_ONBOARDING(e), body: t });
       }
       function g(e, t, n) {
         let a = { optionErrors: [] },
@@ -1233,7 +1233,7 @@
       n.r(t),
         n.d(t, {
           OnboardingPreview: function () {
-            return x;
+            return P;
           },
           default: function () {
             return M;
@@ -1323,7 +1323,7 @@
             selected: !0,
           },
         ];
-      function x(e) {
+      function P(e) {
         let { isTooltip: t = !1 } = e,
           n = R();
         t && n.pop();
@@ -1397,7 +1397,7 @@
           ],
         });
       }
-      function P() {
+      function x() {
         let e = [
           {
             message:
@@ -1516,7 +1516,7 @@
                   ],
                 }),
                 (0, a.jsx)(r.FormDivider, {}),
-                (0, a.jsx)(P, {}),
+                (0, a.jsx)(x, {}),
                 (0, a.jsx)(r.FormDivider, {}),
                 (0, a.jsxs)("div", {
                   className: L.valuesContainer,
@@ -1524,7 +1524,7 @@
                     (0, a.jsxs)("div", {
                       className: L.valueContainer,
                       children: [
-                        (0, a.jsx)(x, {}),
+                        (0, a.jsx)(P, {}),
                         (0, a.jsxs)("div", {
                           className: L.valueText,
                           children: [
@@ -1673,4 +1673,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ebe77e6486e1322029d7.js.map
+//# sourceMappingURL=2d7e087cfb7595d619ea.js.map

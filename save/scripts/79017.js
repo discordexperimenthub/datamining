@@ -22,24 +22,22 @@
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         return a.default.needsRefresh()
           ? (r.default.dispatch({ type: "LOAD_USER_AFFINITIES" }),
-            n.default
-              .get({
-                url: l.Endpoints.USER_AFFINITIES,
-                retries: e ? 3 : 0,
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  let { body: t } = e;
-                  r.default.dispatch({
-                    type: "LOAD_USER_AFFINITIES_SUCCESS",
-                    affinities: t,
-                  });
-                },
-                () => {
-                  r.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
-                }
-              ))
+            n.HTTP.get({
+              url: l.Endpoints.USER_AFFINITIES,
+              retries: e ? 3 : 0,
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                let { body: t } = e;
+                r.default.dispatch({
+                  type: "LOAD_USER_AFFINITIES_SUCCESS",
+                  affinities: t,
+                });
+              },
+              () => {
+                r.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
+              }
+            ))
           : Promise.resolve();
       }
     },
@@ -2700,4 +2698,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5804c8157f5346811bb1.js.map
+//# sourceMappingURL=77654b26298133342c32.js.map

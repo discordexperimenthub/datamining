@@ -24,8 +24,9 @@
         i = n("895026"),
         o = n("49111");
       function l(e, t) {
-        s.default
-          .get({ url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t) })
+        s.HTTP.get({
+          url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+        })
           .then(e => {
             let n = [];
             e.body.length > 0 &&
@@ -56,28 +57,26 @@
               value: e.value,
             }))
           ),
-          r = await s.default
-            .put({
-              url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
-              body: 0 === l.length ? [] : l,
-              oldFormErrors: !0,
-            })
-            .then(e => {
-              let t = [];
-              return (
-                e.body.length > 0 &&
-                  (t = e.body.map(e =>
-                    e.map(e => ({
-                      connectionType: e.connection_type,
-                      connectionMetadataField: e.connection_metadata_field,
-                      applicationId: e.application_id,
-                      operator: e.operator,
-                      value: e.value,
-                    }))
-                  )),
-                t
-              );
-            }),
+          r = await s.HTTP.put({
+            url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
+            body: 0 === l.length ? [] : l,
+            oldFormErrors: !0,
+          }).then(e => {
+            let t = [];
+            return (
+              e.body.length > 0 &&
+                (t = e.body.map(e =>
+                  e.map(e => ({
+                    connectionType: e.connection_type,
+                    connectionMetadataField: e.connection_metadata_field,
+                    applicationId: e.application_id,
+                    operator: e.operator,
+                    value: e.value,
+                  }))
+                )),
+              t
+            );
+          }),
           c = await (0, i.requestMembersForRole)(e, t, !1);
         null != c &&
           a.default.dispatch({
@@ -93,7 +92,7 @@
           });
       }
       async function c() {
-        let e = await s.default.get({
+        let e = await s.HTTP.get({
           url: o.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS,
         });
         return e.body;
@@ -104,7 +103,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return G;
+            return j;
           },
         }),
         n("222007"),
@@ -387,7 +386,7 @@
           }),
         });
       }
-      function j(e) {
+      function P(e) {
         let { onConfirm: t, onDismiss: n, canEveryoneModerate: s, step: a } = e;
         return (0, i.jsxs)(u.ModalFooter, {
           className: L.footer,
@@ -422,7 +421,7 @@
           ],
         });
       }
-      function G(e) {
+      function j(e) {
         let {
             guild: t,
             canEveryoneModerate: n,
@@ -487,7 +486,7 @@
               canEveryoneModerate: n,
               isDefaultNotificationsAllMessages: s,
             }),
-            (0, i.jsx)(j, {
+            (0, i.jsx)(P, {
               onConfirm: () => {
                 var e, s;
                 !n &&
@@ -686,4 +685,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dc105552e487f0ce873b.js.map
+//# sourceMappingURL=420cd7db6454ddcd30cd.js.map

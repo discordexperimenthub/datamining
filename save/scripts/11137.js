@@ -15,10 +15,10 @@
             return _;
           },
           updateChannel: function () {
-            return f;
+            return E;
           },
           saveChannel: function () {
-            return E;
+            return f;
           },
           deleteChannel: function () {
             return N;
@@ -54,7 +54,7 @@
           section: e,
         });
       }
-      function f(e) {
+      function E(e) {
         let {
           name: t,
           type: n,
@@ -67,8 +67,8 @@
           defaultThreadRateLimitPerUser: s,
           defaultAutoArchiveDuration: c,
           template: _,
-          defaultReactionEmoji: f,
-          rtcRegion: E,
+          defaultReactionEmoji: E,
+          rtcRegion: f,
           videoQualityMode: N,
           autoArchiveDuration: S,
           locked: T,
@@ -92,8 +92,8 @@
           defaultThreadRateLimitPerUser: s,
           defaultAutoArchiveDuration: c,
           template: _,
-          defaultReactionEmoji: f,
-          rtcRegion: E,
+          defaultReactionEmoji: E,
+          rtcRegion: f,
           videoQualityMode: N,
           autoArchiveDuration: S,
           locked: T,
@@ -105,15 +105,15 @@
           themeColor: A,
         });
       }
-      async function E(e, t) {
+      async function f(e, t) {
         let {
             name: n,
             type: o,
             position: s,
             topic: c,
             bitrate: _,
-            userLimit: f,
-            nsfw: E,
+            userLimit: E,
+            nsfw: f,
             flags: N,
             permissionOverwrites: S,
             rateLimitPerUser: T,
@@ -136,94 +136,92 @@
         return (
           a.default.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
           await i.default.unarchiveThreadIfNecessary(e),
-          l.default
-            .patch({
-              url: d.Endpoints.CHANNEL(e),
-              body: {
-                name: n,
-                type: o,
-                position: s,
-                topic: c,
-                bitrate: _,
-                user_limit: f,
-                nsfw: E,
-                flags: N,
-                permission_overwrites: S,
-                rate_limit_per_user: T,
-                default_thread_rate_limit_per_user: C,
-                default_auto_archive_duration: h,
-                template: m,
-                rtc_region: p,
-                video_quality_mode: A,
-                auto_archive_duration: L,
-                locked: v,
-                invitable: g,
-                default_reaction_emoji:
-                  null != I
-                    ? {
-                        emoji_id: null == I ? void 0 : I.emojiId,
-                        emoji_name: null == I ? void 0 : I.emojiName,
-                      }
-                    : null === I
-                      ? null
-                      : void 0,
-                available_tags:
-                  null == y
-                    ? void 0
-                    : y.map(e => ({
-                        id: e.id,
-                        name: e.name,
-                        emoji_id: e.emojiId,
-                        emoji_name: e.emojiName,
-                        moderated: e.moderated,
-                      })),
-                default_sort_order: O,
-                default_forum_layout: G,
-                icon_emoji:
-                  null != M
-                    ? { id: M.id, name: M.name }
-                    : null === M
-                      ? null
-                      : void 0,
-                theme_color: H,
-              },
-              oldFormErrors: !0,
-            })
-            .then(
-              t => {
-                a.default.dispatch({
-                  type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
-                  channelId: e,
-                });
-                let n = null == U ? void 0 : U.getGuildId();
-                return (
-                  null != n &&
-                    !(null == U ? void 0 : U.isThread()) &&
-                    u.default.checkGuildTemplateDirty(n),
-                  t
-                );
-              },
-              e => (
-                a.default.dispatch({
-                  type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
-                  errors: e.body,
-                }),
-                e
-              )
+          l.HTTP.patch({
+            url: d.Endpoints.CHANNEL(e),
+            body: {
+              name: n,
+              type: o,
+              position: s,
+              topic: c,
+              bitrate: _,
+              user_limit: E,
+              nsfw: f,
+              flags: N,
+              permission_overwrites: S,
+              rate_limit_per_user: T,
+              default_thread_rate_limit_per_user: C,
+              default_auto_archive_duration: h,
+              template: m,
+              rtc_region: p,
+              video_quality_mode: A,
+              auto_archive_duration: L,
+              locked: v,
+              invitable: g,
+              default_reaction_emoji:
+                null != I
+                  ? {
+                      emoji_id: null == I ? void 0 : I.emojiId,
+                      emoji_name: null == I ? void 0 : I.emojiName,
+                    }
+                  : null === I
+                    ? null
+                    : void 0,
+              available_tags:
+                null == y
+                  ? void 0
+                  : y.map(e => ({
+                      id: e.id,
+                      name: e.name,
+                      emoji_id: e.emojiId,
+                      emoji_name: e.emojiName,
+                      moderated: e.moderated,
+                    })),
+              default_sort_order: O,
+              default_forum_layout: G,
+              icon_emoji:
+                null != M
+                  ? { id: M.id, name: M.name }
+                  : null === M
+                    ? null
+                    : void 0,
+              theme_color: H,
+            },
+            oldFormErrors: !0,
+          }).then(
+            t => {
+              a.default.dispatch({
+                type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
+                channelId: e,
+              });
+              let n = null == U ? void 0 : U.getGuildId();
+              return (
+                null != n &&
+                  !(null == U ? void 0 : U.isThread()) &&
+                  u.default.checkGuildTemplateDirty(n),
+                t
+              );
+            },
+            e => (
+              a.default.dispatch({
+                type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
+                errors: e.body,
+              }),
+              e
             )
+          )
         );
       }
       function N(e) {
         let t = r.default.getChannel(e);
-        l.default
-          .delete({ url: d.Endpoints.CHANNEL(e), oldFormErrors: !0 })
-          .then(() => {
+        l.HTTP.del({ url: d.Endpoints.CHANNEL(e), oldFormErrors: !0 }).then(
+          () => {
             let e = null == t ? void 0 : t.getGuildId();
             null != e &&
               !(null == t ? void 0 : t.isThread()) &&
               u.default.checkGuildTemplateDirty(e),
               c();
-          });
+          }
+        );
       }
       var S = {
         init: s,
@@ -238,11 +236,11 @@
             overwriteId: e,
           });
         },
-        updateChannel: f,
-        saveChannel: E,
+        updateChannel: E,
+        saveChannel: f,
         deleteChannel: N,
         updateVoiceChannelStatus: function (e, t) {
-          return l.default.put({
+          return l.HTTP.put({
             url: d.Endpoints.UPDATE_VOICE_CHANNEL_STATUS(e),
             body: { status: t },
           });
@@ -272,7 +270,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return E;
           },
         });
       var l = n("37983");
@@ -286,7 +284,7 @@
         s = n("393414"),
         c = n("47006"),
         _ = n("782340"),
-        f = (0, r.default)(
+        E = (0, r.default)(
           function (e) {
             let { channel: t, onSelect: n } = e,
               r = (0, c.default)(t),
@@ -372,7 +370,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return R;
+            return D;
           },
         }),
         n("808653"),
@@ -382,8 +380,8 @@
         s = n.n(d),
         c = n("866227"),
         _ = n.n(c),
-        f = n("446674"),
-        E = n("872717"),
+        E = n("446674"),
+        f = n("872717"),
         N = n("913144"),
         S = n("233069"),
         T = n("813006"),
@@ -443,21 +441,19 @@
           null != i &&
             l === I.ChannelSettingsSections.INSTANT_INVITES &&
             ((v = !0),
-            E.default
-              .get({
-                url: I.Endpoints.INSTANT_INVITES(i.id),
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  (v = !1),
-                    N.default.dispatch({
-                      type: "CHANNEL_SETTINGS_LOADED_INVITES",
-                      invites: e.body,
-                    });
-                },
-                () => (v = !1)
-              ));
+            f.HTTP.get({
+              url: I.Endpoints.INSTANT_INVITES(i.id),
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                (v = !1),
+                  N.default.dispatch({
+                    type: "CHANNEL_SETTINGS_LOADED_INVITES",
+                    invites: e.body,
+                  });
+              },
+              () => (v = !1)
+            ));
       }
       function H() {
         (g = !1),
@@ -472,7 +468,7 @@
         let e = i.toJS(),
           t = u.toJS(),
           n = O.every(n => e[n] === t[n]);
-        n && i !== u && ((i = u), D.emitChange());
+        n && i !== u && ((i = u), P.emitChange());
       }, 500);
       function b(e) {
         return new C.default({
@@ -489,7 +485,7 @@
           type: e.type,
         });
       }
-      class j extends f.default.Store {
+      class j extends E.default.Store {
         initialize() {
           this.waitFor(m.default);
         }
@@ -532,7 +528,7 @@
         }
       }
       j.displayName = "ChannelSettingsStore";
-      let D = new j(N.default, {
+      let P = new j(N.default, {
         CHANNEL_SETTINGS_INIT: G,
         CHANNEL_SETTINGS_OPEN: function (e) {
           (g = !0), G(e);
@@ -571,8 +567,8 @@
             defaultThreadRateLimitPerUser: s,
             autoArchiveDuration: c,
             locked: _,
-            invitable: f,
-            defaultAutoArchiveDuration: E,
+            invitable: E,
+            defaultAutoArchiveDuration: f,
             template: N,
             defaultReactionEmoji: S,
             rtcRegion: T,
@@ -599,12 +595,12 @@
               })),
             null != _ &&
               (i = i.set("threadMetadata", { ...i.threadMetadata, locked: _ })),
-            null != f &&
+            null != E &&
               (i = i.set("threadMetadata", {
                 ...i.threadMetadata,
-                invitable: f,
+                invitable: E,
               })),
-            null != E && (i = i.set("defaultAutoArchiveDuration", E)),
+            null != f && (i = i.set("defaultAutoArchiveDuration", f)),
             null != N && (i = i.set("template", N)),
             null != n && (i = i.set("type", n)),
             void 0 !== T && (i = i.set("rtcRegion", T)),
@@ -669,8 +665,8 @@
           L = { ...L, [e.invite.code]: b(e.invite) };
         },
       });
-      var R = D;
+      var D = P;
     },
   },
 ]);
-//# sourceMappingURL=ebe668bd5afdd1e56695.js.map
+//# sourceMappingURL=09cd5b0a039901e943c0.js.map

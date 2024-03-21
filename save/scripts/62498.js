@@ -30,8 +30,8 @@
               : r.Endpoints.SAFETY_HUB,
           a =
             null != t
-              ? n.default.post({ url: e, body: { token: t } })
-              : n.default.get({ url: e });
+              ? n.HTTP.post({ url: e, body: { token: t } })
+              : n.HTTP.get({ url: e });
         await a
           .then(t => {
             let { body: e } = t,
@@ -78,8 +78,8 @@
               : r.Endpoints.SAFETY_HUB,
           s =
             null != e
-              ? n.default.post({ url: a, body: { token: e } })
-              : n.default.get({ url: a });
+              ? n.HTTP.post({ url: a, body: { token: e } })
+              : n.HTTP.get({ url: a });
         await s
           .then(e => {
             let { body: a } = e,
@@ -139,11 +139,11 @@
               : r.Endpoints.SAFETY_HUB_REQUEST_REVIEW(t),
           o =
             null != s
-              ? n.default.put({
+              ? n.HTTP.put({
                   url: u,
                   body: { signal: e, user_input: a, token: s },
                 })
-              : n.default.put({ url: u, body: { signal: e, user_input: a } });
+              : n.HTTP.put({ url: u, body: { signal: e, user_input: a } });
         i.default.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
           await o
             .then(() => {
@@ -248,8 +248,8 @@
         _ = !1,
         S = !1,
         E = null,
-        f = null,
-        T = !1,
+        T = null,
+        f = !1,
         A = !1,
         I = null,
         g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY,
@@ -277,10 +277,10 @@
           return c[t];
         }
         getAppealClassificationId() {
-          return f;
+          return T;
         }
         getIsDsaEligible() {
-          return T;
+          return f;
         }
         getAppealSignal() {
           return g;
@@ -302,7 +302,7 @@
         },
         SAFETY_HUB_FETCH_SUCCESS: function (t) {
           let { classifications: e, accountStanding: a, isDsaEligible: n } = t;
-          (o = i(e, "id")), (d = a), (T = n), (_ = !1), (S = !0), (E = null);
+          (o = i(e, "id")), (d = a), (f = n), (_ = !1), (S = !0), (E = null);
         },
         SAFETY_HUB_FETCH_FAILURE: function (t) {
           let { error: e } = t;
@@ -319,7 +319,7 @@
             (d = a),
             (_ = !1),
             (E = null),
-            (T = n),
+            (f = n),
             (S = !0);
         },
         SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (t) {
@@ -331,10 +331,10 @@
         },
         SAFETY_HUB_APPEAL_OPEN: function (t) {
           let { classificationId: e } = t;
-          f = e;
+          T = e;
         },
         SAFETY_HUB_APPEAL_CLOSE: function () {
-          (f = null),
+          (T = null),
             (g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY),
             (N = "");
         },
@@ -366,7 +366,7 @@
           (_ = !1),
             (o = {}),
             (d = { state: u.AccountStandingState.ALL_GOOD }),
-            (f = null),
+            (T = null),
             (g = r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY),
             (N = "");
         },
@@ -549,8 +549,8 @@
         _ = a("697218"),
         S = a("908539"),
         E = a("132206"),
-        f = a("260883"),
-        T = a("170213"),
+        T = a("260883"),
+        f = a("170213"),
         A = a("782340"),
         I = a("948707");
       function g() {
@@ -592,8 +592,8 @@
               description:
                 A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION_V2.format(
                   {
-                    termsOfService: T.SafetyHubLinks.TOS_LINK,
-                    communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES,
+                    termsOfService: f.SafetyHubLinks.TOS_LINK,
+                    communityGuidelines: f.SafetyHubLinks.COMMUNITY_GUIDELINES,
                   }
                 ),
               status:
@@ -649,15 +649,15 @@
               color: u.default.colors.ICON_MUTED,
             },
           },
-          { title: m, description: U, color: h, Icon: x } = p[t.state],
-          H = Object.keys(p).length;
+          { title: m, description: U, color: h, Icon: H } = p[t.state],
+          x = Object.keys(p).length;
         return (0, n.jsxs)(d.Card, {
           className: I.container,
           outline: !1,
           children: [
             (0, n.jsx)("div", {
               className: I.profile,
-              children: (0, n.jsx)(f.default, {
+              children: (0, n.jsx)(T.default, {
                 user: e,
                 size: d.AvatarSizes.SIZE_80,
               }),
@@ -703,7 +703,7 @@
                           ref: t => (N.current[parseInt(i)] = t),
                           children: [
                             l
-                              ? (0, n.jsx)(x, {
+                              ? (0, n.jsx)(H, {
                                   className: I.marker,
                                   color: s.color,
                                 })
@@ -711,7 +711,7 @@
                                   className: I.marker,
                                   style: {
                                     marginLeft: 0 === a ? -6 : 0,
-                                    marginRight: a === H - 1 ? -6 : 0,
+                                    marginRight: a === x - 1 ? -6 : 0,
                                   },
                                   children: (0, n.jsx)("div", {
                                     className: I.empty,
@@ -790,8 +790,8 @@
         _ = a("333781"),
         S = a("422671"),
         E = a("792105"),
-        f = a("133479"),
-        T = a("966677"),
+        T = a("133479"),
+        f = a("966677"),
         A = a("49111"),
         I = a("782340"),
         g = a("743911");
@@ -827,8 +827,8 @@
             : (0, n.jsxs)("div", {
                 className: g.container,
                 children: [
-                  (0, n.jsx)(f.default, {}),
-                  (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {}),
+                  (0, n.jsx)(T.default, {}),
+                  (0, n.jsx)(f.ConnectedSafetyHubViolationsContainer, {}),
                 ],
               });
       }
@@ -854,8 +854,8 @@
         _ = a("300113"),
         S = a("599110"),
         E = a("299039"),
-        f = a("667963"),
-        T = a("646356"),
+        T = a("667963"),
+        f = a("646356"),
         A = a("736393"),
         I = a("310888"),
         g = a("132206"),
@@ -921,7 +921,7 @@
             ],
           });
         },
-        x = () =>
+        H = () =>
           (0, n.jsxs)("div", {
             className: U.emptyState,
             children: [
@@ -951,7 +951,7 @@
               }),
             ],
           }),
-        H = () =>
+        x = () =>
           (0, n.jsx)("div", {
             className: U.emptyState,
             children: (0, n.jsx)(o.Text, {
@@ -982,11 +982,11 @@
             { id: s, description: u, max_expiration_time: r } = i,
             c = E.default.extractTimestamp(s),
             d = (0, I.useIsNewClassification)(i),
-            _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)(
+            _ = (0, T.useIsSafetyHubDisplayGuildViolationsEnabled)(
               "violations_container"
             ),
             S = new Date(r),
-            T = S.toDateString();
+            f = S.toDateString();
           return (0, n.jsx)(
             o.Clickable,
             {
@@ -1048,10 +1048,10 @@
                     children:
                       S > new Date()
                         ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format(
-                            { expirationDate: T }
+                            { expirationDate: f }
                           )
                         : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format(
-                            { expirationDate: T }
+                            { expirationDate: f }
                           ),
                   }),
                 ],
@@ -1065,8 +1065,8 @@
             [s, l] = i.useState(!1),
             [r, c] = i.useState(3),
             d = (0, g.useSafetyHubAccountStanding)(),
-            _ = (0, u.useStateFromStores)([T.default], () =>
-              T.default.getIsDsaEligible()
+            _ = (0, u.useStateFromStores)([f.default], () =>
+              f.default.getIsDsaEligible()
             ),
             E = i.useMemo(() => a.slice(0, r), [a, r]);
           i.useEffect(() => {
@@ -1080,7 +1080,7 @@
                 is_dsa_eligible: _,
               });
           }, [s, d.state, E, _]);
-          let f = a.length - E.length > 3 ? 3 : a.length - E.length;
+          let T = a.length - E.length > 3 ? 3 : a.length - E.length;
           return (0, n.jsxs)("div", {
             className: U.dropdown,
             children: [
@@ -1107,16 +1107,16 @@
                           }),
                           (0, n.jsx)("button", {
                             className: U.paginationButton,
-                            onClick: () => c(t => t + f),
+                            onClick: () => c(t => t + T),
                             children:
                               m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format(
-                                { nextPageSize: f }
+                                { nextPageSize: T }
                               ),
                           }),
                         ],
                       }),
-                    0 === E.length && "active" === e && (0, n.jsx)(x, {}),
-                    0 === E.length && "expired" === e && (0, n.jsx)(H, {}),
+                    0 === E.length && "active" === e && (0, n.jsx)(H, {}),
+                    0 === E.length && "expired" === e && (0, n.jsx)(x, {}),
                   ],
                 }),
             ],
@@ -1137,4 +1137,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8de320c72cab43d7f56f.js.map
+//# sourceMappingURL=9152ef3b4231d4a32ee8.js.map

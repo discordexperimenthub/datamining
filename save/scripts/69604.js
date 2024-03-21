@@ -310,12 +310,11 @@
               applicationId: e,
             });
           }),
-          a.default
-            .get({
-              url: i.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
-              oldFormErrors: !0,
-              query: { exclude_consumed: t },
-            })
+          a.HTTP.get({
+            url: i.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+            oldFormErrors: !0,
+            query: { exclude_consumed: t },
+          })
             .then(
               t => (
                 n.default.dispatch({
@@ -342,7 +341,7 @@
         } = e;
         n.default.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
         try {
-          let e = await a.default.get({
+          let e = await a.HTTP.get({
             url: i.Endpoints.ENTITLEMENTS_FOR_USER,
             query: { with_sku: t, with_application: r, entitlement_type: u },
           });
@@ -558,10 +557,10 @@
           O = n.useRef(null),
           F = (0, S.default)(i),
           k = (0, I.isEqualAvatarDecoration)(y, void 0 === v ? R : v),
-          D = () => {
+          H = () => {
             L(y), o();
           },
-          H = n.useCallback(() => {
+          D = n.useCallback(() => {
             o(),
               (0, c.openCollectiblesShop)({
                 analyticsLocations: i,
@@ -598,7 +597,7 @@
                   onSelect: e => {
                     b(e), null != e && F(e);
                   },
-                  onOpenShop: H,
+                  onOpenShop: D,
                 }),
                 (0, a.jsx)(g.default, {
                   className: N.modalPreview,
@@ -616,7 +615,7 @@
                     (!(0, d.isPremiumCollectiblesPurchase)(M) || U);
                   if (e || null === y)
                     return (0, a.jsx)(s.Button, {
-                      onClick: D,
+                      onClick: H,
                       disabled: k,
                       children:
                         P.default.Messages.AVATAR_DECORATION_MODAL_APPLY,
@@ -625,7 +624,7 @@
                   return r
                     ? (0, a.jsx)(s.Button, {
                         className: N.modalFooterShopButton,
-                        onClick: H,
+                        onClick: D,
                         children:
                           P.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                       })
@@ -1548,7 +1547,7 @@
       async function E() {
         try {
           i.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
-          let { body: e } = await u.default.get({
+          let { body: e } = await u.HTTP.get({
             url: S.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           i.default.dispatch({
@@ -1999,4 +1998,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4bae547187a04b1bb361.js.map
+//# sourceMappingURL=d336429540a858bf25dc.js.map

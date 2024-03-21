@@ -1081,8 +1081,8 @@
           } = null != e ? e : {},
           D = !1,
           G = (0, s.v4)(),
-          B = u.default.getCurrentUser(),
-          H = (0, f.isPremiumExactly)(B, _.PremiumTypes.TIER_2);
+          H = u.default.getCurrentUser(),
+          B = (0, f.isPremiumExactly)(H, _.PremiumTypes.TIER_2);
         (0, i.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
@@ -1106,7 +1106,7 @@
                       !P &&
                         null != t &&
                         t === _.PremiumSubscriptionSKUs.TIER_2 &&
-                        !H &&
+                        !B &&
                         d.ComponentDispatch.dispatch(
                           E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED
                         ));
@@ -1433,7 +1433,7 @@
       async function I() {
         try {
           l.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
-          let { body: e } = await i.default.get({
+          let { body: e } = await i.HTTP.get({
             url: _.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           l.default.dispatch({
@@ -2778,4 +2778,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cb6142cb0cce567a278a.js.map
+//# sourceMappingURL=a8cb0ef44696ededf6b1.js.map

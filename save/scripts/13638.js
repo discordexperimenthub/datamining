@@ -20,7 +20,7 @@
             buildId: a,
           });
           try {
-            let n = await s.default.post({
+            let n = await s.HTTP.post({
               url: r.Endpoints.APPLICATION_BUILD_SIZE(e, t, a),
               body: { manifest_ids: i },
               oldFormErrors: !0,
@@ -612,4 +612,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d4eecab0279f7bb92894.js.map
+//# sourceMappingURL=6b1515a40f704b32cf87.js.map

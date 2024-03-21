@@ -531,10 +531,10 @@
             return p;
           },
           completeNewMemberAction: function () {
-            return A;
+            return T;
           },
           getBlockForChannelDeletion: function () {
-            return g;
+            return A;
           },
         }),
         n("222007"),
@@ -559,7 +559,7 @@
             guildId: e,
           });
           try {
-            let t = await l.default.get({
+            let t = await l.HTTP.get({
                 url: h.Endpoints.GUILD_HOME_SETTINGS(e),
                 oldFormErrors: !0,
               }),
@@ -586,7 +586,7 @@
               guildId: e,
             });
             try {
-              let t = await l.default.get({
+              let t = await l.HTTP.get({
                   url: h.Endpoints.GUILD_MEMBER_ACTIONS(e),
                   oldFormErrors: !0,
                 }),
@@ -659,7 +659,7 @@
             }),
             (0, a.transitionToChannel)(t);
         },
-        A = (e, t) => {
+        T = (e, t) => {
           if (
             (i.default.dispatch({
               type: "COMPLETE_NEW_MEMBER_ACTION",
@@ -692,9 +692,9 @@
               ),
             });
           }
-          l.default.post({ url: h.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
+          l.HTTP.post({ url: h.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
         };
-      async function g(e, t) {
+      async function A(e, t) {
         if (null == e) return !1;
         let n = (0, m.canSeeOnboardingHome)(e);
         if (!n) return !1;
@@ -756,16 +756,16 @@
             return p;
           },
           settingsToServer: function () {
-            return A;
+            return T;
           },
           actionsFromServer: function () {
-            return g;
+            return A;
           },
           isWelcomeMessageEmpty: function () {
-            return S;
+            return g;
           },
           isSettingsEmpty: function () {
-            return T;
+            return S;
           },
           isSettingsValid: function () {
             return I;
@@ -853,7 +853,7 @@
           enabled: i,
         };
       }
-      function A(e, t) {
+      function T(e, t) {
         var n, l;
         if (null == t) return null;
         let {
@@ -956,13 +956,13 @@
         };
       }
       ((l = i || (i = {}))[(l.VIEW = 0)] = "VIEW"), (l[(l.CHAT = 1)] = "CHAT");
-      let g = e => {
+      let A = e => {
         if (null == e) return null;
         let t = {};
         for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
         return t;
       };
-      function S(e) {
+      function g(e) {
         return (
           null == e ||
           ((null == e.message || !(e.message.length > 0)) &&
@@ -970,10 +970,10 @@
             !0)
         );
       }
-      function T(e) {
+      function S(e) {
         return (
           null == e ||
-          (!!S(e.welcomeMessage) &&
+          (!!g(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)) &&
             !0)
@@ -983,7 +983,7 @@
         var t, n;
         return (
           null != e &&
-          (!!T(e) ||
+          (!!S(e) ||
             ((null === (t = e.welcomeMessage) || void 0 === t
               ? void 0
               : t.message) != null &&
@@ -1111,7 +1111,7 @@
         return e.attachments.some(m) || e.embeds.some(M);
       }
       async function v(e) {
-        let t = await i.default.post({
+        let t = await i.HTTP.post({
           url: a.Endpoints.ATTACHMENTS_REFRESH_URLS,
           body: { attachment_urls: [e] },
         });
@@ -1198,10 +1198,10 @@
         C = n("300925"),
         v = n("489836"),
         p = n("421602"),
-        A = n("459870"),
-        g = n("325882"),
-        S = n("625187"),
-        T = n("806179"),
+        T = n("459870"),
+        A = n("325882"),
+        g = n("625187"),
+        S = n("806179"),
         I = n("97508"),
         N = n("49111"),
         y = n("782340"),
@@ -1224,13 +1224,13 @@
                 { analyticsLocations: x } = (0, f.default)(
                   c.default.CONTEXT_MENU
                 ),
-                G = (0, s.useAnalyticsContext)(),
-                P =
+                P = (0, s.useAnalyticsContext)(),
+                G =
                   null !== (t = null == U ? void 0 : U[0]) && void 0 !== t
                     ? t
                     : x[0],
                 w = (0, m.useTrackModerationAction)(a, {
-                  location: P,
+                  location: G,
                   targetUserId: n.id,
                 }),
                 F = (0, u.useStateFromStores)(
@@ -1253,26 +1253,26 @@
                   () => h.default.isMember(a, n.id),
                   [a, n.id]
                 ),
-                k = (0, T.default)(n.id, a),
+                k = (0, S.default)(n.id, a),
                 V = (0, p.default)(n.id, N),
                 B = (0, _.default)({
                   guildId: a,
                   userId: n.id,
-                  analyticsLocation: null != R ? R : G.location,
-                  analyticsLocations: [P],
+                  analyticsLocation: null != R ? R : P.location,
+                  analyticsLocations: [G],
                   context: N,
                 }),
-                W = (0, v.default)(n, P),
-                Y = (0, C.default)(n, a, null != d ? d : F, P),
-                X = (0, g.default)(d, L),
-                K = (0, S.default)(n, a),
-                Z = (0, I.default)(n.id, a, !1, P),
+                W = (0, v.default)(n, G),
+                Y = (0, C.default)(n, a, null != d ? d : F, G),
+                X = (0, A.default)(d, L),
+                K = (0, g.default)(n, a),
+                Z = (0, I.default)(n.id, a, !1, G),
                 z = (0, E.default)({
                   id: n.id,
                   label: y.default.Messages.COPY_ID_USER,
                   onSuccess: j,
                 }),
-                q = (0, A.default)(n, a),
+                q = (0, T.default)(n, a),
                 J = !!(null == n ? void 0 : n.isNonUserBot());
               return (0, l.jsxs)(r.Menu, {
                 navId: "user-context",
@@ -1738,4 +1738,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4711e217304b35c23a07.js.map
+//# sourceMappingURL=e4ee946beb2e1fab85a6.js.map

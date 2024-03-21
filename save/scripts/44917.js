@@ -303,10 +303,10 @@
             return r;
           },
           getJoinSourceTypeLabel: function () {
-            return g;
+            return T;
           },
           getIntegrationLabel: function () {
-            return T;
+            return g;
           },
           useGetIntegrationIconString: function () {
             return S;
@@ -363,7 +363,7 @@
         (a[(a.HUB = 4)] = "HUB"),
         (a[(a.INVITE = 5)] = "INVITE"),
         (a[(a.VANITY_URL = 6)] = "VANITY_URL");
-      let g = function (e) {
+      let T = function (e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -394,7 +394,7 @@
         (o.TWITCH = "twitch"),
         (o.YOUTUBE = "youtube"),
         (o.GUILD_SUBSCRIPTION = "guild_subscription");
-      let T = e => {
+      let g = e => {
           switch (e) {
             case "twitch":
               return v.default.Messages
@@ -431,7 +431,7 @@
         if (0 === i.length) return [];
         m(n, 2);
         try {
-          let t = await u.default.post({
+          let t = await u.HTTP.post({
             url: E.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
           });
@@ -589,51 +589,51 @@
             setBodyNode: I,
             setFooterNode: m,
             setModalOverlayNode: N,
-            setReadySlideId: g,
+            setReadySlideId: T,
           } = (0, f.usePaymentContext)(),
-          T = _.find(e => e.key === p);
+          g = _.find(e => e.key === p);
         r.useEffect(() => {
           N(null);
         }, [p, N]),
-          o(null != T, "Unknown step for current payment flow.");
+          o(null != g, "Unknown step for current payment flow.");
         let S =
             null !==
               (u =
-                null == T
+                null == g
                   ? void 0
-                  : null === (t = T.options) || void 0 === t
+                  : null === (t = g.options) || void 0 === t
                     ? void 0
                     : t.hideSlider) &&
             void 0 !== u &&
             u,
           M =
-            null == T
+            null == g
               ? void 0
-              : null === (n = T.options) || void 0 === n
+              : null === (n = g.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
           R =
             void 0 !== v && v
               ? h.sliderBodyLarge
-              : null == T
+              : null == g
                 ? void 0
-                : null === (s = T.options) || void 0 === s
+                : null === (s = g.options) || void 0 === s
                   ? void 0
                   : s.sliderBodyClassName;
         return (0, i.jsxs)(i.Fragment, {
           children: [
             null ===
               (c =
-                null == T
+                null == g
                   ? void 0
-                  : null === (a = T.options) || void 0 === a
+                  : null === (a = g.options) || void 0 === a
                     ? void 0
                     : a.renderHeader) ||
             void 0 === c ||
             c
               ? E
               : null,
-            T.renderStep(C),
+            g.renderStep(C),
             null == p || S
               ? null
               : (0, i.jsxs)(i.Fragment, {
@@ -643,7 +643,7 @@
                       children: (0, i.jsx)(d.Slides, {
                         activeSlide: p,
                         centered: !1,
-                        onSlideReady: e => g(e),
+                        onSlideReady: e => T(e),
                         children: _.filter(e => null != e.key).map(e =>
                           (0, i.jsx)(
                             d.Slide,
@@ -709,8 +709,8 @@
             analyticsLocations: I,
             analyticsObject: m,
             analyticsLocation: N,
-            analyticsSourceLocation: g,
-            isGift: T = !1,
+            analyticsSourceLocation: T,
+            isGift: g = !1,
             giftMessage: S,
             subscriptionTier: M,
             trialId: R,
@@ -736,7 +736,7 @@
                 loadId: O,
                 subscriptionTier: M,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(M),
-                isGift: T,
+                isGift: g,
                 giftMessage: S,
                 giftRecipient: w,
                 initialPlanId: t,
@@ -746,7 +746,7 @@
                     null == C || C(e),
                     e &&
                       (null == _ || _(),
-                      !T &&
+                      !g &&
                         null != t &&
                         t === E.PremiumSubscriptionSKUs.TIER_2 &&
                         !U &&
@@ -757,13 +757,13 @@
                 onComplete: () => {
                   (P = !0),
                     null == p || p(),
-                    !T && (0, o.setCanPlayWowMoment)(!0);
+                    !g && (0, o.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: _,
                 analyticsLocations: I,
                 analyticsObject: m,
                 analyticsLocation: N,
-                analyticsSourceLocation: g,
+                analyticsSourceLocation: T,
                 trialId: R,
                 postSuccessGuild: x,
                 planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -786,9 +786,9 @@
                       h.PurchaseTypes.SUBSCRIPTION
                     ],
                   location: null != N ? N : m,
-                  source: g,
+                  source: T,
                   subscription_type: h.SubscriptionTypes.PREMIUM,
-                  is_gift: T,
+                  is_gift: g,
                   eligible_for_trial: null != R,
                   application_id: y,
                   location_stack: I,
@@ -2366,4 +2366,4 @@
     },
   },
 ]);
-//# sourceMappingURL=44917.810effa1ef52b183d6ad.js.map
+//# sourceMappingURL=44917.6b9a8cd8dcbc5ffb5f49.js.map

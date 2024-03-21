@@ -264,7 +264,7 @@
       async function h() {
         try {
           s.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
-          let { body: e } = await u.default.get({
+          let { body: e } = await u.HTTP.get({
             url: _.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           s.default.dispatch({
@@ -1103,4 +1103,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f348109ae9c36d3bb1c3.js.map
+//# sourceMappingURL=5433dfcc5f90b305be59.js.map

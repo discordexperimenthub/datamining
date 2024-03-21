@@ -3086,7 +3086,7 @@
           guildId: e,
         });
         try {
-          let t = await a.default.get({
+          let t = await a.HTTP.get({
             url: n.Endpoints.GUILD_DISCOVERY_REQUIREMENTS(e),
             oldFormErrors: !0,
           });
@@ -3231,7 +3231,7 @@
           guildIds: e,
         });
         try {
-          let t = await l.default.get({
+          let t = await l.HTTP.get({
               url: i.Endpoints.GUILD_DISCOVERY,
               query: a.stringify({ guild_ids: e }),
               oldFormErrors: !0,
@@ -3706,7 +3706,7 @@
       }
       async function I(e, t, s, a) {
         let i = l().add(a, "hours").toISOString(),
-          r = await n.default.put({
+          r = await n.HTTP.put({
             url: c.Endpoints.GUILD_INCIDENT_ACTIONS(e),
             body: {
               invites_disabled_until: t ? i : null,
@@ -3720,7 +3720,7 @@
           l = o.default.getGuild(e),
           i = null == l ? void 0 : l.getSafetyAlertsChannelId();
         if (!a || null == i) return null;
-        let r = await n.default.post({
+        let r = await n.HTTP.post({
           url: c.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
           body: { alert_message_id: t, reason: s },
         });
@@ -3731,7 +3731,7 @@
           s = o.default.getGuild(e),
           a = null == s ? void 0 : s.getSafetyAlertsChannelId();
         if (!t || null == a) return null;
-        let l = await n.default.post({
+        let l = await n.HTTP.post({
           url: c.Endpoints.GUILD_INCIDENT_REPORT_RAID(e),
         });
         return l;
@@ -18919,7 +18919,7 @@
       function r(e, t) {
         let s = new Date(),
           l = new Date(s.getTime() - (s.getDay() + 1) * 864e5 - i);
-        return a.default.get({
+        return a.HTTP.get({
           url: t(e),
           query: { start: l.toISOString(), end: s.toISOString(), interval: 2 },
           oldFormErrors: !0,
@@ -18996,19 +18996,19 @@
         );
       }
       function c(e) {
-        return a.default
-          .get({ url: n.Endpoints.GUILD_ANALYTICS_MEMBER_INSIGHTS(e) })
-          .then(
-            t => {
-              l.default.dispatch({
-                type: "GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS",
-                guildId: e,
-                hasAccessRate: t.body.has_access_rate,
-                accessRate: t.body.access_rate,
-              });
-            },
-            () => {}
-          );
+        return a.HTTP.get({
+          url: n.Endpoints.GUILD_ANALYTICS_MEMBER_INSIGHTS(e),
+        }).then(
+          t => {
+            l.default.dispatch({
+              type: "GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS",
+              guildId: e,
+              hasAccessRate: t.body.has_access_rate,
+              accessRate: t.body.access_rate,
+            });
+          },
+          () => {}
+        );
       }
     },
     692541: function (e, t, s) {
@@ -19719,31 +19719,29 @@
         l.default.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code: e });
       }
       function d(e, t) {
-        return a.default
-          .patch({
-            url: n.Endpoints.GUILD_VANITY_URL(e),
-            body: { code: t },
-            oldFormErrors: !0,
-          })
-          .then(
-            e => {
-              let {
-                body: { code: t, uses: s },
-              } = e;
-              l.default.dispatch({
-                type: "GUILD_SETTINGS_SET_VANITY_URL",
-                code: t,
-                uses: s,
-              });
-            },
-            e => (
-              l.default.dispatch({
-                type: "GUILD_SETTINGS_VANITY_URL_ERROR",
-                error: e.body,
-              }),
-              e
-            )
-          );
+        return a.HTTP.patch({
+          url: n.Endpoints.GUILD_VANITY_URL(e),
+          body: { code: t },
+          oldFormErrors: !0,
+        }).then(
+          e => {
+            let {
+              body: { code: t, uses: s },
+            } = e;
+            l.default.dispatch({
+              type: "GUILD_SETTINGS_SET_VANITY_URL",
+              code: t,
+              uses: s,
+            });
+          },
+          e => (
+            l.default.dispatch({
+              type: "GUILD_SETTINGS_VANITY_URL_ERROR",
+              error: e.body,
+            }),
+            e
+          )
+        );
       }
     },
     914581: function (e, t, s) {
@@ -20997,7 +20995,7 @@
       async function h(e, t, s, a) {
         if (!a) return Promise.resolve();
         try {
-          let a = await n.default.patch({
+          let a = await n.HTTP.patch({
               url: _.Endpoints.NEW_MEMBER_ACTION(e, t),
               body: { icon: s },
               oldFormErrors: !0,
@@ -21056,7 +21054,7 @@
       }
       async function O(e, t, s) {
         try {
-          let a = await n.default.put({
+          let a = await n.HTTP.put({
               url: _.Endpoints.RESOURCE_CHANNEL(e, t),
               body: { icon: s },
               oldFormErrors: !0,
@@ -21125,7 +21123,7 @@
         var s, a, o, u, E, T, f, S, m;
         i.default.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_START" });
         try {
-          let l = await n.default.put({
+          let l = await n.HTTP.put({
               url: _.Endpoints.GUILD_HOME_SETTINGS(e),
               body: (0, d.settingsToServer)(e, t),
               oldFormErrors: !0,
@@ -32870,23 +32868,21 @@
               ? A.RelativeMarketingURLs.DEVELOPER_PORTAL
               : A.RelativeMarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
           s = (0, n.v4)();
-        return o.default
-          .post({
-            url: A.Endpoints.HANDOFF,
-            body: { key: s },
-            oldFormErrors: !0,
-          })
-          .then(
-            e => {
-              let a = e.body.handoff_token;
-              window.open(
-                A.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t)
-              );
-            },
-            () => {
-              window.open(t);
-            }
-          );
+        return o.HTTP.post({
+          url: A.Endpoints.HANDOFF,
+          body: { key: s },
+          oldFormErrors: !0,
+        }).then(
+          e => {
+            let a = e.body.handoff_token;
+            window.open(
+              A.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t)
+            );
+          },
+          () => {
+            window.open(t);
+          }
+        );
       }
       let Y = () => {
         let [e, t] = l.useState(!1),
@@ -34298,8 +34294,7 @@
             }),
             [_, T] = l.useState(!1);
           l.useEffect(() => {
-            o.default
-              .get(L.Endpoints.GUILD_ADMIN_SERVER_ELIGIBILITY(n.id))
+            o.HTTP.get(L.Endpoints.GUILD_ADMIN_SERVER_ELIGIBILITY(n.id))
               .then(e => {
                 T(e.body.eligible_for_admin_server);
               })
@@ -34312,7 +34307,7 @@
           if (t && s && !N) return null;
           let g = async () => {
             try {
-              let e = await o.default.post({
+              let e = await o.HTTP.post({
                 url: L.Endpoints.JOIN_ADMIN_SERVER(n.id),
                 oldFormErrors: !0,
               });
@@ -43880,7 +43875,7 @@
           createHandoffToken: async function e(e) {
             let {
               body: { handoff_token: t },
-            } = await l.default.post({
+            } = await l.HTTP.post({
               url: n.Endpoints.HANDOFF,
               body: { key: e },
               oldFormErrors: !0,
@@ -43903,19 +43898,17 @@
         l = s("913144"),
         n = s("49111");
       function i(e) {
-        return a.default
-          .get({
-            url: n.Endpoints.GUILD_TOP_READ_CHANNELS(e),
-            oldFormErrors: !0,
-          })
-          .then(t => {
-            let { body: s } = t;
-            l.default.dispatch({
-              type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
-              guildId: e,
-              topChannelIds: s,
-            });
+        return a.HTTP.get({
+          url: n.Endpoints.GUILD_TOP_READ_CHANNELS(e),
+          oldFormErrors: !0,
+        }).then(t => {
+          let { body: s } = t;
+          l.default.dispatch({
+            type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
+            guildId: e,
+            topChannelIds: s,
           });
+        });
       }
     },
     161188: function (e, t, s) {
@@ -43961,7 +43954,7 @@
       var a = s("872717"),
         l = s("49111");
       let n = async (e, t) => {
-        let s = await a.default.get({
+        let s = await a.HTTP.get({
           url: l.Endpoints.PAYMENT_PAYOUT_GROUPS(e),
           query: t,
         });
@@ -45107,7 +45100,7 @@
           fetchTeams() {
             let e =
               arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return a.default.get({
+            return a.HTTP.get({
               url: l.Endpoints.TEAMS,
               query: { include_payout_account_status: e },
             });
@@ -47791,4 +47784,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e16510e1f775e7e60649.js.map
+//# sourceMappingURL=3292f24a926411bbdba6.js.map

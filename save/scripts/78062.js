@@ -23,7 +23,7 @@
         });
       }
       async function r(e) {
-        let t = await s.default.get({
+        let t = await s.HTTP.get({
             url: n.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e),
           }),
           a = t.body;
@@ -40,7 +40,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return D;
+            return U;
           },
         }),
         a("222007");
@@ -136,7 +136,7 @@
                   ),
                 });
       }
-      function U(e) {
+      function P(e) {
         var t, a;
         let {
             guildId: n,
@@ -178,7 +178,7 @@
                 handleSelectTemplate: _,
               });
       }
-      function D(e) {
+      function U(e) {
         let {
             transitionState: t,
             onClose: a,
@@ -205,7 +205,7 @@
               );
           }, [t, n, p]);
         let [S, v] = l.useState(0),
-          [D, P] = l.useState(!1),
+          [U, D] = l.useState(!1),
           B = l.useCallback(
             e => {
               (p.current = "template_selected"),
@@ -216,8 +216,8 @@
             [n, i, a]
           ),
           y = l.useCallback(() => {
-            D ? P(!1) : a();
-          }, [D, a]),
+            U ? D(!1) : a();
+          }, [U, a]),
           k = (0, L.useShowCreatorPortalLinkForTierTemplates)(n);
         return (
           (0, m.default)({
@@ -241,11 +241,11 @@
                   (0, s.jsxs)("div", {
                     className: M.templatesContainer,
                     children: [
-                      D &&
+                      U &&
                         (0, s.jsx)(o.Clickable, {
                           className: M.blackoutOverlay,
                           onClick: () => {
-                            D && P(!1);
+                            U && D(!1);
                           },
                           "aria-label": "overlay",
                         }),
@@ -319,13 +319,13 @@
                       }),
                     ],
                   }),
-                  (0, s.jsx)(U, {
+                  (0, s.jsx)(P, {
                     guildId: n,
                     templates: E,
                     selectedTemplateIndex: S,
                     priceTiers: _,
-                    showPriceReselection: D,
-                    setShowPriceReselection: P,
+                    showPriceReselection: U,
+                    setShowPriceReselection: D,
                     handleCreateTierFromTemplate: B,
                   }),
                 ],
@@ -644,4 +644,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0eac9cd855b3d3c52692.js.map
+//# sourceMappingURL=7ab7541e81226499b746.js.map

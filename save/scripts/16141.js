@@ -302,29 +302,27 @@
         s = n("49111"),
         i = {
           fetchRegions(e) {
-            a.default
-              .get({
-                url: s.Endpoints.REGIONS(e),
-                retries: 1,
-                oldFormErrors: !0,
-              })
-              .then(
-                t =>
-                  l.default.dispatch({
-                    type: "LOAD_REGIONS",
-                    regions: t.body,
-                    guildId: e,
-                  }),
-                () =>
-                  l.default.dispatch({
-                    type: "LOAD_REGIONS",
-                    regions: [],
-                    guildId: e,
-                  })
-              );
+            a.HTTP.get({
+              url: s.Endpoints.REGIONS(e),
+              retries: 1,
+              oldFormErrors: !0,
+            }).then(
+              t =>
+                l.default.dispatch({
+                  type: "LOAD_REGIONS",
+                  regions: t.body,
+                  guildId: e,
+                }),
+              () =>
+                l.default.dispatch({
+                  type: "LOAD_REGIONS",
+                  regions: [],
+                  guildId: e,
+                })
+            );
           },
           changeCallRegion(e, t) {
-            a.default.patch({
+            a.HTTP.patch({
               url: s.Endpoints.CALL(e),
               body: { region: t },
               oldFormErrors: !0,
@@ -11407,7 +11405,7 @@
       let o = l(async e => {
         try {
           i.default.dispatch({ type: "EVENT_DIRECTORY_FETCH_START" });
-          let t = await s.default.get({
+          let t = await s.HTTP.get({
             url: u.Endpoints.DIRECTORY_CHANNEL_ENTRIES(e),
             query: { type: r.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT },
           });
@@ -11465,7 +11463,7 @@
       let f = l(async (e, t) => {
           try {
             r.default.dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-            let n = await i.default.get({
+            let n = await i.HTTP.get({
               url: c.Endpoints.DIRECTORY_CHANNEL_ENTRIES(e),
               query: { category_id: t },
             });
@@ -11480,7 +11478,7 @@
         }, 200),
         h = l(async e => {
           try {
-            let t = await i.default.get({
+            let t = await i.HTTP.get({
               url: c.Endpoints.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e),
             });
             r.default.dispatch({
@@ -11543,7 +11541,7 @@
               channelId: e,
               query: t,
             });
-            let n = await i.default.get({
+            let n = await i.HTTP.get({
               url: c.Endpoints.DIRECTORY_ENTRIES_SEARCH(e),
               query: { query: t },
             });
@@ -11568,7 +11566,7 @@
               arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : d.DirectoryEntryCategories.UNCATEGORIZED,
-            l = await i.default.patch({
+            l = await i.HTTP.patch({
               url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
               body: { description: n, primary_category_id: a },
             });
@@ -11587,7 +11585,7 @@
         },
         _ = async (e, t) => {
           try {
-            let n = await i.default.get({
+            let n = await i.HTTP.get({
               url: c.Endpoints.DIRECTORY_CHANNEL_LIST_BY_ID(e),
               query: { entity_ids: t },
             });
@@ -25815,7 +25813,7 @@
         });
       }
       function o(e, t, n, a) {
-        return l.default.post({
+        return l.HTTP.post({
           url: r.Endpoints.SHARED_CANVAS_LINES(e, n),
           body: { line_id: t, points: a },
         });
@@ -25830,13 +25828,13 @@
         });
       }
       function c(e, t, n) {
-        return l.default.post({
+        return l.HTTP.post({
           url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSES(e, t),
           body: { emoji_hose: n },
         });
       }
       function f(e, t, n) {
-        l.default.delete({
+        l.HTTP.del({
           url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
           backoff: new a.default(),
         });
@@ -44275,4 +44273,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b3eff9f4454cb24c6c65.js.map
+//# sourceMappingURL=8d0fc710f71f80bb74af.js.map

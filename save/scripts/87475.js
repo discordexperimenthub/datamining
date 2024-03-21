@@ -4145,7 +4145,7 @@
             try {
               let {
                   body: { settings: t },
-                } = await s.default.get({
+                } = await s.HTTP.get({
                   url: m.Endpoints.USER_SETTINGS_PROTO(this.type),
                 }),
                 n = (0, S.b64ToProto)(this.ProtoClass, t);
@@ -4242,7 +4242,7 @@
               }
               try {
                 this.saveLastSendTime();
-                let { body: n } = await s.default.patch({
+                let { body: n } = await s.HTTP.patch({
                   url: m.Endpoints.USER_SETTINGS_PROTO(this.type),
                   body: {
                     settings: t,
@@ -4991,7 +4991,7 @@
                 ...e,
                 properties: { ...e.properties, client_send_timestamp: t },
               }));
-            return u.default.post({
+            return u.HTTP.post({
               url: m,
               body: { token: i, events: n },
               retries: 3,
@@ -5361,7 +5361,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "277613"), "277613"), 10);
+          let o = parseInt(((n = "277632"), "277632"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7137,4 +7137,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.2bf9b4453ea9e5b61291.js.map
+//# sourceMappingURL=87475.dae0009a4e67dc4c8e0c.js.map

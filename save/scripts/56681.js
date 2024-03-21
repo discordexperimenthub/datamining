@@ -12,8 +12,8 @@
       var s = i("872717"),
         n = i("913144"),
         l = i("651057"),
-        a = i("299285"),
-        r = i("523086"),
+        r = i("299285"),
+        a = i("523086"),
         u = i("21526"),
         d = i("659632"),
         o = i("49111"),
@@ -31,7 +31,7 @@
                 null != s.application_id &&
                 s.application_id !== c.PREMIUM_SUBSCRIPTION_APPLICATION
               ) {
-                let e = a.default.getApplication(s.application_id);
+                let e = r.default.getApplication(s.application_id);
                 if (null == e)
                   try {
                     await l.default.fetchApplication(s.application_id);
@@ -70,7 +70,7 @@
               subscriptionPlanId: t,
             });
             try {
-              let i = await s.default.get({
+              let i = await s.HTTP.get({
                 url: o.Endpoints.USER_GIFT_CODES,
                 query: { sku_id: e, subscription_plan_id: t },
                 oldFormErrors: !0,
@@ -104,7 +104,7 @@
               subscriptionPlanId: t,
             });
             try {
-              let l = await s.default.post({
+              let l = await s.HTTP.post({
                 url: o.Endpoints.USER_GIFT_CODE_CREATE,
                 body: { sku_id: e, subscription_plan_id: t, gift_style: i },
                 oldFormErrors: !0,
@@ -127,7 +127,7 @@
           async revokeGiftCode(e) {
             n.default.dispatch({ type: "GIFT_CODE_REVOKE", code: e });
             try {
-              await s.default.delete({
+              await s.HTTP.del({
                 url: o.Endpoints.USER_GIFT_CODE_REVOKE(e),
                 oldFormErrors: !0,
               }),
@@ -140,7 +140,7 @@
             }
           },
           openNativeGiftCodeModal(e) {
-            r.default.openNativeAppModal(e, o.RPCCommands.GIFT_CODE_BROWSER);
+            a.default.openNativeAppModal(e, o.RPCCommands.GIFT_CODE_BROWSER);
           },
           ...i("812495").default,
         };
@@ -159,21 +159,21 @@
       var s = i("872717"),
         n = i("913144"),
         l = i("448993"),
-        a = i("745279"),
-        r = i("49111");
+        r = i("745279"),
+        a = i("49111");
       let u = Object.freeze({});
       async function d(e) {
         let { code: t, options: i = u, onRedeemed: d, onError: o } = e,
           { channelId: c = null, paymentSource: E = null } = i;
         n.default.dispatch({ type: "GIFT_CODE_REDEEM", code: t });
         try {
-          let e = await s.default.post({
-            url: r.Endpoints.GIFT_CODE_REDEEM(t),
+          let e = await s.HTTP.post({
+            url: a.Endpoints.GIFT_CODE_REDEEM(t),
             body: {
               channel_id: c,
               payment_source_id: null == E ? void 0 : E.id,
               gateway_checkout_context: await (0,
-              a.createGatewayCheckoutContext)(E),
+              r.createGatewayCheckoutContext)(E),
             },
             oldFormErrors: !0,
           });
@@ -215,8 +215,8 @@
       var s = i("37983"),
         n = i("884691"),
         l = i("414456"),
-        a = i.n(l),
-        r = i("77078"),
+        r = i.n(l),
+        a = i("77078"),
         u = i("813006"),
         d = i("766274"),
         o = i("476263"),
@@ -231,13 +231,13 @@
       let p = e => {
           var t;
           let { speaker: i, guildId: n, isEmbed: l } = e,
-            a = new d.default(i.user);
+            r = new d.default(i.user);
           return (0, s.jsxs)("div", {
             className: m.speaker,
             children: [
-              (0, s.jsx)(r.Avatar, {
-                src: a.getAvatarURL(n, l ? 16 : 24),
-                size: l ? r.AvatarSizes.SIZE_16 : r.AvatarSizes.SIZE_24,
+              (0, s.jsx)(a.Avatar, {
+                src: r.getAvatarURL(n, l ? 16 : 24),
+                size: l ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
                 "aria-label": "".concat(i.nick, "-avatar"),
                 className: l ? null : m.avatar,
               }),
@@ -246,7 +246,7 @@
                 color: C.default.Colors.HEADER_SECONDARY,
                 className: m.username,
                 children:
-                  null !== (t = i.nick) && void 0 !== t ? t : a.username,
+                  null !== (t = i.nick) && void 0 !== t ? t : r.username,
               }),
             ],
           });
@@ -255,7 +255,7 @@
           let { guild: t, onlineCount: i } = e;
           if (null == t) return null;
           let n = new u.default(t),
-            { name: l, description: a } = n;
+            { name: l, description: r } = n;
           return (0, s.jsxs)("div", {
             children: [
               (0, s.jsx)(f.default, {
@@ -280,7 +280,7 @@
                   (0, s.jsxs)("div", {
                     className: m.guildInfo,
                     children: [
-                      (0, s.jsx)(r.Heading, {
+                      (0, s.jsx)(a.Heading, {
                         variant: "heading-sm/semibold",
                         children: l,
                       }),
@@ -289,7 +289,7 @@
                         children: [
                           (0, s.jsx)("div", { className: m.dot }),
                           null != i && i > 0
-                            ? (0, s.jsx)(r.Text, {
+                            ? (0, s.jsx)(a.Text, {
                                 variant: "text-sm/normal",
                                 children:
                                   S.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format(
@@ -303,13 +303,13 @@
                   }),
                 ],
               }),
-              null != a &&
-                "" !== a &&
-                (0, s.jsx)(r.Text, {
+              null != r &&
+                "" !== r &&
+                (0, s.jsx)(a.Text, {
                   color: "header-secondary",
                   className: m.alignStart,
                   variant: "text-sm/normal",
-                  children: a,
+                  children: r,
                 }),
             ],
           });
@@ -323,13 +323,13 @@
             isEmbed: I = !1,
             onClick: g,
           } = e,
-          R = n.useMemo(
+          T = n.useMemo(
             () =>
               null == l ? null : l instanceof u.default ? l : new u.default(l),
             [l]
           );
-        if (null == i || null == R) return null;
-        let { topic: T, speaker_count: A, participant_count: O } = i,
+        if (null == i || null == T) return null;
+        let { topic: R, speaker_count: A, participant_count: O } = i,
           v = null !== (t = i.members) && void 0 !== t ? t : [],
           N = I ? v.slice(0, 3) : v,
           L = A - N.length;
@@ -348,9 +348,9 @@
                         width: 24,
                         className: m.live,
                       }),
-                      (0, s.jsx)(r.Heading, {
+                      (0, s.jsx)(a.Heading, {
                         variant: "eyebrow",
-                        className: a(m.label, m.live),
+                        className: r(m.label, m.live),
                         children: S.default.Messages.STAGE_CHANNEL_LIVE_NOW,
                       }),
                     ],
@@ -363,8 +363,8 @@
                         width: 16,
                         className: m.listeners,
                       }),
-                      (0, s.jsx)(r.Heading, {
-                        className: a(m.label, m.listeners),
+                      (0, s.jsx)(a.Heading, {
+                        className: r(m.label, m.listeners),
                         variant: "heading-sm/semibold",
                         children: O,
                       }),
@@ -374,34 +374,34 @@
               }),
               I &&
                 (0, s.jsxs)("div", {
-                  className: a(m.guild, { [m.embed]: I }),
+                  className: r(m.guild, { [m.embed]: I }),
                   children: [
                     (0, s.jsx)(h.default, {
                       mask: h.default.Masks.SQUIRCLE,
                       width: 20,
                       height: 20,
                       children: (0, s.jsx)(o.default, {
-                        guild: R,
+                        guild: T,
                         size: o.default.Sizes.MINI,
                         active: !0,
                       }),
                     }),
-                    (0, s.jsx)(r.Text, {
+                    (0, s.jsx)(a.Text, {
                       color: "header-secondary",
                       className: m.label,
                       variant: "text-sm/normal",
-                      children: R.name,
+                      children: T.name,
                     }),
                   ],
                 }),
               (0, s.jsx)(f.default, {
                 size:
                   d || I ? f.default.Sizes.SIZE_16 : f.default.Sizes.SIZE_20,
-                className: a(m.header, { [m.embed]: I }),
-                children: T,
+                className: r(m.header, { [m.embed]: I }),
+                children: R,
               }),
               (0, s.jsxs)("div", {
-                className: a(m.members, { [m.embed]: I }),
+                className: r(m.members, { [m.embed]: I }),
                 children: [
                   N.length > 0 &&
                     (0, s.jsxs)("div", {
@@ -410,7 +410,7 @@
                         N.map(e =>
                           (0, s.jsx)(
                             p,
-                            { speaker: e, guildId: R.id, isEmbed: I },
+                            { speaker: e, guildId: T.id, isEmbed: I },
                             e.user.id
                           )
                         ),
@@ -419,7 +419,7 @@
                               className: m.speaker,
                               children: [
                                 (0, s.jsx)("div", {
-                                  className: a(m.icon, { [m.embed]: I }),
+                                  className: r(m.icon, { [m.embed]: I }),
                                   children: (0, s.jsx)(E.default, {
                                     height: I ? 12 : 14,
                                     className: m.listeners,
@@ -443,8 +443,8 @@
                       ],
                     }),
                   I &&
-                    (0, s.jsx)(r.Button, {
-                      color: r.Button.Colors.GREEN,
+                    (0, s.jsx)(a.Button, {
+                      color: a.Button.Colors.GREEN,
                       onClick: g,
                       className: m.joinButton,
                       children: S.default.Messages.STAGE_CHANNEL_JOIN_BUTTON,
@@ -502,8 +502,8 @@
       var s = i("866227"),
         n = i.n(s),
         l = i("506838"),
-        a = i("315102"),
-        r = i("299039"),
+        r = i("315102"),
+        a = i("299039"),
         u = i("159885"),
         d = i("644417"),
         o = i("935583"),
@@ -511,7 +511,7 @@
       function E(e) {
         let t =
           !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return a.default.getUserAvatarURL(
+        return r.default.getUserAvatarURL(
           { id: e.id, avatar: e.avatar, bot: e.bot, discriminator: "0000" },
           t,
           80
@@ -564,7 +564,7 @@
         return e.toLowerCase().replace(/\s/g, "").replace("@", "");
       }
       function p(e) {
-        let t = r.default.extractTimestamp(e);
+        let t = a.default.extractTimestamp(e);
         try {
           return n(new Date(t)).format("MMM DD, YYYY");
         } catch (e) {}
@@ -617,8 +617,8 @@
       var s,
         n = i("866227"),
         l = i.n(n),
-        a = i("666038"),
-        r = i("568734"),
+        r = i("666038"),
+        a = i("568734"),
         u = i("797647"),
         d = i("646718");
       let o = Object.freeze({
@@ -626,7 +626,7 @@
         EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
         NOT_SELF_REDEEMABLE: 4,
       });
-      s = class e extends a.default {
+      s = class e extends r.default {
         static createFromServer(t) {
           return new e({
             userId: null != t.user ? t.user.id : null,
@@ -697,10 +697,10 @@
           );
         }
         get isSelfRedeemable() {
-          return !(0, r.hasFlag)(this.flags, o.NOT_SELF_REDEEMABLE);
+          return !(0, a.hasFlag)(this.flags, o.NOT_SELF_REDEEMABLE);
         }
         get isExistingPremiumSubscriptionDisallowed() {
-          return (0, r.hasFlag)(
+          return (0, a.hasFlag)(
             this.flags,
             o.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED
           );
@@ -745,8 +745,8 @@
       var s = i("917351"),
         n = i.n(s),
         l = i("866227"),
-        a = i.n(l),
-        r = i("446674"),
+        r = i.n(l),
+        a = i("446674"),
         u = i("862337"),
         d = i("913144"),
         o = i("569272"),
@@ -761,8 +761,8 @@
         p = [],
         I = new Set(),
         g = {},
-        R = {},
-        T = new Set();
+        T = {},
+        R = new Set();
       function A(e) {
         let t = E.default.createFromServer(e),
           i = t.code;
@@ -773,7 +773,7 @@
             (function e(t) {
               let i = h[t];
               if (null == i || null == i.expiresAt) return;
-              let s = i.expiresAt.valueOf() - a().valueOf();
+              let s = i.expiresAt.valueOf() - r().valueOf();
               if (s <= 0) delete h[t], delete C[t], x.emitChange();
               else {
                 let i = C[t];
@@ -785,7 +785,7 @@
       }
       function O(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (t && !T.has(e.channel_id)) return !1;
+        if (t && !R.has(e.channel_id)) return !1;
         let i = (0, _.isGiftCodeEmbed)(e)
           ? (0, _.findGiftCodes)(
               (null == e ? void 0 : e.embeds) != null
@@ -818,20 +818,20 @@
       }
       function L(e) {
         let { channelId: t, messages: i } = e;
-        T.add(t), i.forEach(e => O(e, !0));
+        R.add(t), i.forEach(e => O(e, !0));
       }
       function D(e) {
         let { firstMessages: t } = e;
         if (null == t) return !1;
         null == t || t.forEach(e => O(e));
       }
-      class b extends r.default.Store {
+      class b extends a.default.Store {
         get(e) {
           let t = h[e];
           return null == t || t.isExpired() ? null : t;
         }
         getError(e) {
-          return null != e ? R[e] : null;
+          return null != e ? T[e] : null;
         }
         getForGifterSKUAndPlan(e, t, i) {
           return n
@@ -872,11 +872,11 @@
       b.displayName = "GiftCodeStore";
       let x = new b(d.default, {
         CONNECTION_OPEN: function () {
-          return T.clear(), !1;
+          return R.clear(), !1;
         },
         CHANNEL_SELECT: function (e) {
           let { channelId: t } = e;
-          return null != t && T.add(t), !1;
+          return null != t && R.add(t), !1;
         },
         GIFT_CODE_RESOLVE: v,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
@@ -905,7 +905,7 @@
           let { code: t, error: i } = e;
           m = m.filter(e => e !== t);
           let s = h[t];
-          if (((R[t] = i), null != s))
+          if (((T[t] = i), null != s))
             switch (i.code) {
               case f.AbortCodes.UNKNOWN_GIFT_CODE:
                 h[t] = s.set("revoked", !0);
@@ -983,25 +983,25 @@
       i.r(t),
         i.d(t, {
           default: function () {
-            return r;
+            return a;
           },
         });
       var s = i("37983");
       i("884691");
       var n = i("469563"),
         l = i("696675"),
-        a = i("75196"),
-        r = (0, n.replaceIcon)(
+        r = i("75196"),
+        a = (0, n.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: i = 24,
               color: n = "currentColor",
               foreground: l,
-              ...r
+              ...a
             } = e;
             return (0, s.jsxs)("svg", {
-              ...(0, a.default)(r),
+              ...(0, r.default)(a),
               width: t,
               height: i,
               viewBox: "0 0 24 24",
@@ -1030,4 +1030,4 @@
     },
   },
 ]);
-//# sourceMappingURL=56681.9561c071e9c95dc60410.js.map
+//# sourceMappingURL=56681.b93ff32af9614dda68a8.js.map

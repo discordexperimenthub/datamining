@@ -441,10 +441,10 @@
             return E;
           },
           acceptNewTermsDemonetized: function () {
-            return m;
+            return T;
           },
           removeMonetization: function () {
-            return T;
+            return I;
           },
         });
       var r = n("872717"),
@@ -453,35 +453,35 @@
         a = n("49111"),
         l = n("988268");
       async function o(e) {
-        await r.default.post({
+        await r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e),
         });
       }
       async function u(e) {
-        let t = await r.default.get({
+        let t = await r.HTTP.get({
           url: a.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e),
         });
         return t.body;
       }
       async function c(e, t) {
-        await r.default.post({
+        await r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t),
         });
       }
       async function d(e) {
-        await r.default.post({
+        await r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e),
         });
       }
       async function f(e) {
-        let t = await r.default.get({
+        let t = await r.HTTP.get({
           url: a.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e),
         });
         return t.body;
       }
       async function p(e) {
         try {
-          let t = await r.default.get({
+          let t = await r.HTTP.get({
             url: a.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
             query: { nag_guild_ids: e },
           });
@@ -492,7 +492,7 @@
         } catch (e) {}
       }
       async function _(e, t) {
-        let n = await r.default.post({
+        let n = await r.HTTP.post({
             url: a.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
             body: { team_id: t },
           }),
@@ -507,24 +507,24 @@
         );
       }
       function E(e) {
-        return r.default.post({
+        return r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e),
         });
       }
-      function m(e) {
-        return r.default.post({
+      function T(e) {
+        return r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e),
         });
       }
-      async function I(e) {
-        await r.default.post({
+      async function m(e) {
+        await r.HTTP.post({
           url: a.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
           body: {},
         });
       }
-      async function T(e) {
+      async function I(e) {
         return (
-          await I(e),
+          await m(e),
           await s.default.getApplicationsForGuild(e, {
             type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
             includeTeam: !0,
@@ -705,13 +705,13 @@
             return E;
           },
           updateGuildDiscoveryMetadataReasonsToJoin: function () {
-            return m;
+            return T;
           },
           updateGuildDiscoveryMetadataSocialLinks: function () {
-            return I;
+            return m;
           },
           saveGuildMetadata: function () {
-            return T;
+            return I;
           },
           addGuildCategory: function () {
             return h;
@@ -729,7 +729,7 @@
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
           t = s.default.locale;
         if (t === a.default.getFetchedLocale()) return;
-        let n = await r.default.get({
+        let n = await r.HTTP.get({
           url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
           query: { locale: t, primary_only: e },
           oldFormErrors: !0,
@@ -742,7 +742,7 @@
       }
       async function u(e) {
         try {
-          let t = await r.default.get({
+          let t = await r.HTTP.get({
               url: l.Endpoints.GUILD_DISCOVERY_METADATA(e),
               oldFormErrors: !0,
             }),
@@ -784,7 +784,7 @@
       }
       async function c(e) {
         try {
-          let t = await r.default.get({
+          let t = await r.HTTP.get({
               url: l.Endpoints.GUILD_DISCOVERY_SLUG(e),
             }),
             n = t.body.slug;
@@ -834,21 +834,21 @@
           about: t,
         });
       }
-      function m(e, t) {
+      function T(e, t) {
         i.default.dispatch({
           type: "GUILD_UPDATE_DISCOVERY_METADATA",
           guildId: e,
           reasonsToJoin: t,
         });
       }
-      function I(e, t) {
+      function m(e, t) {
         i.default.dispatch({
           type: "GUILD_UPDATE_DISCOVERY_METADATA",
           guildId: e,
           socialLinks: t,
         });
       }
-      async function T(e) {
+      async function I(e) {
         let {
           guildId: t,
           primaryCategoryId: n,
@@ -862,7 +862,7 @@
           about: p,
         } = e;
         try {
-          let e = await r.default.patch({
+          let e = await r.HTTP.patch({
               url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
               body: {
                 primary_category_id: n,
@@ -880,9 +880,9 @@
             {
               primary_category_id: _,
               category_ids: E,
-              keywords: m,
-              emoji_discoverability_enabled: I,
-              partner_actioned_timestamp: T,
+              keywords: T,
+              emoji_discoverability_enabled: m,
+              partner_actioned_timestamp: I,
               partner_application_timestamp: h,
               is_published: g,
               reasons_to_join: C,
@@ -895,9 +895,9 @@
             metadata: {
               primaryCategoryId: _,
               secondaryCategoryIds: E,
-              keywords: m,
-              emojiDiscoverabilityEnabled: I,
-              partnerActionedTimestamp: T,
+              keywords: T,
+              emojiDiscoverabilityEnabled: m,
+              partnerActionedTimestamp: I,
               partnerApplicationTimestamp: h,
               isPublished: g,
               reasonsToJoin: C,
@@ -917,11 +917,10 @@
         }
       }
       function h(e, t) {
-        r.default
-          .put({
-            url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
-            oldFormErrors: !0,
-          })
+        r.HTTP.put({
+          url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+          oldFormErrors: !0,
+        })
           .then(() => {
             i.default.dispatch({
               type: "GUILD_DISCOVERY_CATEGORY_ADD",
@@ -938,11 +937,10 @@
           });
       }
       function g(e, t) {
-        r.default
-          .delete({
-            url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
-            oldFormErrors: !0,
-          })
+        r.HTTP.del({
+          url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+          oldFormErrors: !0,
+        })
           .then(() => {
             i.default.dispatch({
               type: "GUILD_DISCOVERY_CATEGORY_DELETE",
@@ -967,7 +965,7 @@
             return c;
           },
           default: function () {
-            return m;
+            return T;
           },
         }),
         n("424973"),
@@ -1019,7 +1017,7 @@
         }
       }
       E.displayName = "GuildDiscoveryCategoryStore";
-      var m = new E(a.default, {
+      var T = new E(a.default, {
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
           let t,
             { categories: n, locale: r } = e,
@@ -1505,7 +1503,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return m;
+            return T;
           },
         }),
         n("222007");
@@ -1522,7 +1520,7 @@
         p = n("49111");
       let _ = 1 * d.default.Millis.DAY,
         E = new Map();
-      var m = {
+      var T = {
         useShouldShowChannelNotice(e) {
           let t = (0, i.default)([o.default, u.default], () => {
             let t = o.default.getGuild(e);
@@ -1536,29 +1534,29 @@
                   r = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
                 !(n < r + _) &&
                   (E.set(e, n),
-                  s.default
-                    .post({ url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e) })
-                    .then(
-                      t => {
-                        var n, r;
-                        a.default.dispatch({
-                          type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
-                          guildId: e,
-                          integrationIdsWithAppCommands:
-                            null !==
-                              (r =
-                                null === (n = t.body) || void 0 === n
-                                  ? void 0
-                                  : n.integration_ids_with_app_commands) &&
-                            void 0 !== r
-                              ? r
-                              : [],
-                        });
-                      },
-                      () => {
-                        E.set(e, r);
-                      }
-                    ));
+                  s.HTTP.post({
+                    url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e),
+                  }).then(
+                    t => {
+                      var n, r;
+                      a.default.dispatch({
+                        type: "COMMANDS_MIGRATION_UPDATE_SUCCESS",
+                        guildId: e,
+                        integrationIdsWithAppCommands:
+                          null !==
+                            (r =
+                              null === (n = t.body) || void 0 === n
+                                ? void 0
+                                : n.integration_ids_with_app_commands) &&
+                          void 0 !== r
+                            ? r
+                            : [],
+                      });
+                    },
+                    () => {
+                      E.set(e, r);
+                    }
+                  ));
               })(e);
           }, [e, t]);
           let n = (0, i.default)([f.default], () =>
@@ -1729,9 +1727,9 @@
         p = n("194675"),
         _ = n("479490"),
         E = n("492689"),
-        m = n("621231"),
-        I = n("80371"),
-        T = n("445908"),
+        T = n("621231"),
+        m = n("80371"),
+        I = n("445908"),
         h = n("31581"),
         g = n("176261"),
         C = n("6618"),
@@ -1755,8 +1753,8 @@
         B = n("948574"),
         w = n("193776"),
         k = n("876884"),
-        V = n("990988"),
-        H = n("69548"),
+        H = n("990988"),
+        V = n("69548"),
         Y = n("177364"),
         W = n("325478"),
         q = n("84816"),
@@ -1781,10 +1779,10 @@
         ["VN", et],
         ["TH", ee],
         ["ID", M],
-        ["MY", H],
-        ["MX", V],
+        ["MY", V],
+        ["MX", H],
         ["KR", U],
-        ["BG", I],
+        ["BG", m],
         ["CZ", S],
         ["HU", b],
         ["RO", Q],
@@ -1804,9 +1802,9 @@
         ["FI", x],
         ["PT", K],
         ["NO", W],
-        ["BE", m],
+        ["BE", T],
         ["AT", E],
-        ["CH", T],
+        ["CH", I],
         ["FR", R],
         ["DE", A],
         ["ES", N],
@@ -1832,9 +1830,9 @@
         )
           return null;
         let E = en.get(_),
-          m = "badgeIcon" + r[t];
+          T = "badgeIcon" + r[t];
         return (0, s.jsx)("img", {
-          className: l(n, p[m]),
+          className: l(n, p[T]),
           "aria-hidden": !0,
           alt: "Wumpus holding a country-specific flag",
           src: E,
@@ -1846,10 +1844,10 @@
       n.r(t),
         n.d(t, {
           PremiumTrialOfferTabBadge: function () {
-            return I;
+            return m;
           },
           PremiumDiscountOfferTabBadge: function () {
-            return T;
+            return I;
           },
         });
       var r = n("37983"),
@@ -1865,7 +1863,7 @@
         p = n("646718"),
         _ = n("782340"),
         E = n("637356");
-      function m(e) {
+      function T(e) {
         let { isTabSelected: t, expiresAt: n, trialDuration: s } = e,
           d = i.useMemo(() => Date.parse(n), [n]),
           f = (0, o.default)(d, 6e4);
@@ -1898,7 +1896,7 @@
                 }),
             });
       }
-      function I(e) {
+      function m(e) {
         var t;
         let { isTabSelected: n, trialOffer: i } = e,
           s =
@@ -1919,7 +1917,7 @@
               : E.premiumTrialTier0UnacknowledgedBadge,
         });
       }
-      function T(e) {
+      function I(e) {
         let { isTabSelected: t, userDiscount: n, includesAmountOff: i } = e,
           s = _.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
             percent: n.discount.amount,
@@ -1939,7 +1937,7 @@
           className: s,
         } = e;
         return null != i
-          ? (0, r.jsx)(m, { expiresAt: i, isTabSelected: t, trialDuration: n })
+          ? (0, r.jsx)(T, { expiresAt: i, isTabSelected: t, trialDuration: n })
           : (0, r.jsx)("div", {
               className: a(E.premiumTrialBadge, s),
               children: n,
@@ -2030,9 +2028,9 @@
         p = n("160299"),
         _ = n("153160"),
         E = n("271560"),
-        m = n("991254"),
-        I = n("777053"),
-        T = n("139737"),
+        T = n("991254"),
+        m = n("777053"),
+        I = n("139737"),
         h = n("375010"),
         g = n("49111"),
         C = n("782340"),
@@ -2075,7 +2073,7 @@
           } = e,
           R = (0, a.useStateFromStores)([p.default], () => p.default.isSyncing),
           { activeSubscription: O, activeSubscriptionListing: D } = (0,
-          m.useActiveSubscriptionListingForApplication)(t.application_id, s),
+          T.useActiveSubscriptionListingForApplication)(t.application_id, s),
           {
             openModal: b,
             canOpenModal: M,
@@ -2159,7 +2157,7 @@
                           "aria-label":
                             null !== (e = !M && L) && void 0 !== e && e,
                           children: e =>
-                            (0, r.jsx)(I.default, {
+                            (0, r.jsx)(m.default, {
                               ...e,
                               disabled: j,
                               submitting: !1,
@@ -2176,7 +2174,7 @@
               }),
               (0, r.jsx)("div", {
                 className: S.benefitsContainer,
-                children: (0, r.jsx)(T.SubscriptionListingBenefits, {
+                children: (0, r.jsx)(I.SubscriptionListingBenefits, {
                   applicationId: t.application_id,
                   storeListingBenefits: t.store_listing_benefits,
                   skuBenefits: t.sku_benefits.benefits,
@@ -2244,10 +2242,10 @@
             applicationPrimarySkuId: d,
             analyticsLocation: _,
             onComplete: E,
-            forcesTransitionToGuild: m,
+            forcesTransitionToGuild: T,
           } = e,
-          { listingsLoaded: I } = (0, o.useFetchListingsForApplication)(u, d),
-          { entitlementsLoaded: T } = (0, o.useFetchEntitlementsForGuild)({
+          { listingsLoaded: m } = (0, o.useFetchListingsForApplication)(u, d),
+          { entitlementsLoaded: I } = (0, o.useFetchEntitlementsForGuild)({
             guildId: n,
           }),
           { subscriptionGroupListing: h } = (0,
@@ -2263,7 +2261,7 @@
               : null === (t = h.subscription_listings) || void 0 === t
                 ? void 0
                 : t.filter(e => e.published);
-        return I && (null == n || T)
+        return m && (null == n || I)
           ? null == C || null == S || 0 === S.length
             ? null
             : (0, r.jsx)("div", {
@@ -2280,7 +2278,7 @@
                           groupListingId: C,
                           analyticsLocation: _,
                           onComplete: E,
-                          forcesTransitionToGuild: m,
+                          forcesTransitionToGuild: T,
                         }),
                       ],
                     },
@@ -2610,7 +2608,7 @@
               sortedHeaderCellClassName: _,
               stickyHeader: E,
             } = this.props,
-            m = e.map(e => {
+            T = e.map(e => {
               let f = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
                 p =
                   n === c.TableSortDirections.ASCENDING ? u.default : o.default;
@@ -2643,7 +2641,7 @@
             });
           return (0, r.jsx)(f, {
             className: a(p, d.row, { [d.stickyHeader]: E }),
-            children: m,
+            children: T,
           });
         }
         renderBody() {
@@ -2887,4 +2885,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b6e7a129b0578fa18306.js.map
+//# sourceMappingURL=52b44ad3f67bc11e4a7e.js.map

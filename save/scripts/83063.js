@@ -18,7 +18,7 @@
                   ? arguments[1]
                   : 7,
               r = arguments.length > 2 ? arguments[2] : void 0,
-              n = await o.default.get({
+              n = await o.HTTP.get({
                 url: a.Endpoints.GUILD_PRUNE(e),
                 query: { days: t, include_roles: r },
                 oldFormErrors: !0,
@@ -26,7 +26,7 @@
             return n.body.pruned;
           },
           prune: (e, t, r) =>
-            o.default.post({
+            o.HTTP.post({
               url: a.Endpoints.GUILD_PRUNE(e),
               body: { days: t, compute_prune_count: !1, include_roles: r },
               oldFormErrors: !0,
@@ -460,4 +460,4 @@
     },
   },
 ]);
-//# sourceMappingURL=73b8bcca02be95d1db64.js.map
+//# sourceMappingURL=9b8134da9bda7fa9c047.js.map

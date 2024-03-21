@@ -57,18 +57,18 @@
         I = n("913144"),
         p = n("819689"),
         m = n("798609"),
-        C = n("274800"),
-        h = n("718517");
+        T = n("274800"),
+        C = n("718517");
       ((s = i || (i = {}))[(s.IN_FLIGHT = 0)] = "IN_FLIGHT"),
         (s[(s.ERRORED = 1)] = "ERRORED"),
         (s[(s.SUCCEEDED = 2)] = "SUCCEEDED");
-      class T extends f.default.Store {
+      class h extends f.default.Store {
         getModalState(e) {
           return e !== l ? null : a;
         }
       }
-      T.displayName = "InteractionModalStore";
-      var M = new T(I.default, {
+      h.displayName = "InteractionModalStore";
+      var M = new h(I.default, {
         LOGOUT: function () {
           return (l = null), (a = null), (u = null), (o = null), (r = null), !0;
         },
@@ -108,8 +108,8 @@
                 (l = n),
                 (a = 0),
                 setTimeout(() => {
-                  l === n && 0 === a && (0, C.setFailed)(n);
-                }, 10 * h.default.Millis.SECOND),
+                  l === n && 0 === a && (0, T.setFailed)(n);
+                }, 10 * C.default.Millis.SECOND),
                 !0
               );
             default:
@@ -156,9 +156,9 @@
         I = n("271938"),
         p = n("42203"),
         m = n("26989"),
-        C = n("162771"),
-        h = n("315102"),
-        T = n("718517"),
+        T = n("162771"),
+        C = n("315102"),
+        h = n("718517"),
         M = n("299039"),
         E = n("812684"),
         N = n("470055"),
@@ -176,12 +176,12 @@
       };
       function g(e) {
         return l.useMemo(() => {
-          let t = C.default.getGuildId(),
+          let t = T.default.getGuildId(),
             n =
               null != t && null != e.bot
                 ? m.default.getMember(t, e.bot.id)
                 : void 0,
-            l = h.default.getApplicationIconURL({
+            l = C.default.getApplicationIconURL({
               id: e.id,
               icon: e.icon,
               botIconFirst: !0,
@@ -198,9 +198,9 @@
       }
       function A(e, t) {
         var n;
-        let { application: a, customId: d, components: m, channelId: C } = e,
-          h =
-            null === (n = p.default.getChannel(C)) || void 0 === n
+        let { application: a, customId: d, components: m, channelId: T } = e,
+          C =
+            null === (n = p.default.getChannel(T)) || void 0 === n
               ? void 0
               : n.guild_id,
           S = (0, c.default)(),
@@ -212,8 +212,8 @@
             [y]
           ),
           j = l.useMemo(
-            () => (0, E.createComponents)(m, a.id, h),
-            [m, a.id, h]
+            () => (0, E.createComponents)(m, a.id, C),
+            [m, a.id, C]
           ),
           L = l.useRef(new Set()),
           w = l.useCallback(() => {
@@ -234,32 +234,30 @@
                     });
                     let s = () => {
                       (null == t || !t.aborted) &&
-                        r.default
-                          .post({
-                            url: R.Endpoints.INTERACTIONS,
-                            body: {
-                              type: i.InteractionTypes.MODAL_SUBMIT,
-                              application_id: e.application.id,
-                              channel_id: a.id,
-                              guild_id: a.guild_id,
-                              data: {
-                                id: e.id,
-                                custom_id: e.customId,
-                                components: o,
-                              },
-                              session_id: I.default.getSessionId(),
-                              nonce: n,
+                        r.HTTP.post({
+                          url: R.Endpoints.INTERACTIONS,
+                          body: {
+                            type: i.InteractionTypes.MODAL_SUBMIT,
+                            application_id: e.application.id,
+                            channel_id: a.id,
+                            guild_id: a.guild_id,
+                            data: {
+                              id: e.id,
+                              custom_id: e.customId,
+                              components: o,
                             },
-                            signal: t,
-                          })
-                          .catch(e => {
-                            429 === e.status
-                              ? setTimeout(
-                                  s,
-                                  e.body.retry_after * T.default.Millis.SECOND
-                                )
-                              : (0, f.setFailed)(n);
-                          });
+                            session_id: I.default.getSessionId(),
+                            nonce: n,
+                          },
+                          signal: t,
+                        }).catch(e => {
+                          429 === e.status
+                            ? setTimeout(
+                                s,
+                                e.body.retry_after * h.default.Millis.SECOND
+                              )
+                            : (0, f.setFailed)(n);
+                        });
                     };
                     return s(), n;
                   })(e, S)
@@ -372,9 +370,9 @@
         let { customId: t, title: n, onClose: I, transitionState: p } = e,
           {
             components: m,
-            applicationIconURL: C,
-            applicationName: h,
-            submissionState: T,
+            applicationIconURL: T,
+            applicationName: C,
+            submissionState: h,
             error: M,
             validators: E,
             onSubmit: N,
@@ -390,9 +388,9 @@
                 separator: !1,
                 children: [
                   (0, l.jsx)(a.Avatar, {
-                    src: C,
+                    src: T,
                     size: a.AvatarSizes.SIZE_24,
-                    "aria-label": h,
+                    "aria-label": C,
                     className: f.applicationIcon,
                   }),
                   (0, l.jsx)(o.default, {
@@ -420,7 +418,7 @@
                     className: f.submissionWarning,
                     children:
                       d.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format(
-                        { applicationName: h }
+                        { applicationName: C }
                       ),
                   }),
                   (0, l.jsx)(a.FormSection, {
@@ -438,7 +436,7 @@
                     type: "submit",
                     color: a.Button.Colors.BRAND,
                     size: a.Button.Sizes.MEDIUM,
-                    submitting: T === s.InteractionModalState.IN_FLIGHT,
+                    submitting: h === s.InteractionModalState.IN_FLIGHT,
                     children: d.default.Messages.SUBMIT,
                   }),
                   (0, l.jsx)(a.Button, {
@@ -611,4 +609,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fa2f82e065aebd2a1bac.js.map
+//# sourceMappingURL=e3b71802190a2f73c071.js.map

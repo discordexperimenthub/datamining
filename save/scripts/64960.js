@@ -6,7 +6,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return g;
+            return T;
           },
         }),
         l("222007");
@@ -92,7 +92,7 @@
           ],
         });
       }
-      var g = function (e) {
+      var T = function (e) {
         var t;
         let {
             transitionState: l,
@@ -100,9 +100,9 @@
             guildId: u,
             onClose: c,
             analyticsSource: f,
-            analyticsLocations: g,
+            analyticsLocations: T,
           } = e,
-          T = (0, s.useStateFromStores)([_.default], () =>
+          g = (0, s.useStateFromStores)([_.default], () =>
             null != u ? _.default.getMember(u, i.id) : null
           ),
           k = (0, s.useStateFromStores)(
@@ -127,7 +127,7 @@
           ),
           [S, R] = a.useState(!1),
           [D, h] = a.useState(
-            null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : ""
+            null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : ""
           ),
           [y, L] = a.useState({});
         a.useEffect(() => {
@@ -138,7 +138,7 @@
           });
         }, []);
         let O = (0, d.useTrackModerationAction)(u, {
-            location: null == g ? void 0 : g[0],
+            location: null == T ? void 0 : T[0],
             targetUserId: i.id,
           }),
           b = a.useCallback(
@@ -148,7 +148,7 @@
               let N = null;
               if (
                 (D !==
-                  (null !== (t = null == T ? void 0 : T.nick) && void 0 !== t
+                  (null !== (t = null == g ? void 0 : g.nick) && void 0 !== t
                     ? t
                     : "") && ((N = null != N ? N : {}).nick = D),
                 null == N)
@@ -158,7 +158,7 @@
               }
               try {
                 R(!0),
-                  await r.default.patch({
+                  await r.HTTP.patch({
                     url: v.Endpoints.GUILD_MEMBER(u, i.id),
                     body: N,
                   }),
@@ -198,7 +198,7 @@
                   L({ nick: e });
               }
             },
-            [u, D, c, i, T, O]
+            [u, D, c, i, g, O]
           );
         return (0, n.jsx)(o.ModalRoot, {
           "aria-label": C.default.Messages.CHANGE_IDENTITY,
@@ -221,7 +221,7 @@
                   error: y.nick,
                   nickname: D,
                   setNickname: h,
-                  hasNick: (null == T ? void 0 : T.nick) != null,
+                  hasNick: (null == g ? void 0 : g.nick) != null,
                 }),
               }),
               (0, n.jsxs)(o.ModalFooter, {
@@ -374,4 +374,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f3ce377fa2f3a1eb266a.js.map
+//# sourceMappingURL=f93bcff912712eb9e85e.js.map

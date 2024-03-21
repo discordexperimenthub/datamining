@@ -15190,6 +15190,9 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
   background-color: ButtonFace;
   color: ButtonText;
 }
+.biteSizeHeaderContainer__8cc75 {
+  padding-bottom: 12px;
+}
 .roleDot_ee4aa4 {
   margin-right: 2px;
   margin-left: -2px;
@@ -40473,8 +40476,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -111230,4 +111233,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.3202a851fcc4297c4db5.css.map*/
+/*# sourceMappingURL=app.5517d8d632c603c0ae5b.css.map*/

@@ -176,7 +176,7 @@
       s.r(t),
         s.d(t, {
           MFAModal: function () {
-            return T;
+            return y;
           },
           MFASlides: function () {
             return b;
@@ -363,7 +363,7 @@
           ],
         });
       }
-      function v(e) {
+      function T(e) {
         let {
             request: t,
             finish: s,
@@ -377,7 +377,7 @@
           p = l.useRef(null),
           A = E.default.Messages.TWO_FA_ENTER_BACKUP_LABEL,
           M = E.default.Messages.TWO_FA_BACKUP_CODE,
-          v = l.useCallback(
+          T = l.useCallback(
             e => {
               m(e), h(null);
             },
@@ -417,7 +417,7 @@
                   children: [
                     (0, n.jsx)(o.TextInput, {
                       inputRef: p,
-                      onChange: v,
+                      onChange: T,
                       placeholder: M,
                       maxLength: r.BACKUP_CODE_MAX_LENGTH,
                       minLength: r.BACKUP_CODE_MIN_LENGTH,
@@ -440,7 +440,7 @@
           })
         );
       }
-      function j(e) {
+      function v(e) {
         let {
             request: t,
             finish: s,
@@ -511,7 +511,7 @@
           })
         );
       }
-      function N(e) {
+      function j(e) {
         let {
             request: t,
             finish: s,
@@ -522,23 +522,22 @@
           [c, f] = l.useState(!1),
           [h, _] = l.useState(null),
           [A, M] = l.useState(!1),
-          [v, j] = l.useState(null),
-          [N, y] = l.useState(""),
-          T = l.useRef(null);
+          [T, v] = l.useState(null),
+          [j, N] = l.useState(""),
+          y = l.useRef(null);
         l.useEffect(() => {
           f(!0),
-            i.default
-              .post({
-                url: m.Endpoints.LOGIN_SMS_SEND,
-                body: { ticket: t.ticket },
-                oldFormErrors: !0,
-              })
+            i.HTTP.post({
+              url: m.Endpoints.LOGIN_SMS_SEND,
+              body: { ticket: t.ticket },
+              oldFormErrors: !0,
+            })
               .then(e => {
                 _(e.body.phone);
               })
               .catch(e => {
                 var t;
-                j(
+                v(
                   e.message ||
                     (null === (t = e.body) || void 0 === t ? void 0 : t.message)
                 );
@@ -550,7 +549,7 @@
           l.useEffect(() => {
             if (d) {
               var e;
-              null === (e = T.current) || void 0 === e || e.focus();
+              null === (e = y.current) || void 0 === e || e.focus();
             }
           }, [d]);
         let b =
@@ -563,10 +562,10 @@
           onSubmit: e => {
             e.preventDefault(),
               M(!0),
-              s({ mfaType: "sms", data: N })
+              s({ mfaType: "sms", data: j })
                 .catch(e => {
                   var t, s;
-                  j(
+                  v(
                     null !== (s = e.message) && void 0 !== s
                       ? s
                       : null === (t = e.body) || void 0 === t
@@ -589,12 +588,12 @@
                     children: [
                       (0, n.jsx)(o.TextInput, {
                         className: p.smsInput,
-                        inputRef: T,
-                        onChange: y,
+                        inputRef: y,
+                        onChange: N,
                         placeholder:
                           E.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP,
                         maxLength: 10,
-                        value: N,
+                        value: j,
                         autoComplete: "one-time-code",
                         spellCheck: "false",
                         disabled: A,
@@ -603,18 +602,17 @@
                         size: o.Button.Sizes.MEDIUM,
                         submitting: c,
                         onClick: () => {
-                          i.default
-                            .post({
-                              url: m.Endpoints.LOGIN_SMS_SEND,
-                              body: { ticket: t.ticket },
-                              oldFormErrors: !0,
-                            })
+                          i.HTTP.post({
+                            url: m.Endpoints.LOGIN_SMS_SEND,
+                            body: { ticket: t.ticket },
+                            oldFormErrors: !0,
+                          })
                             .then(e => {
                               _(e.body.phone);
                             })
                             .catch(e => {
                               var t;
-                              j(
+                              v(
                                 e.message ||
                                   (null === (t = e.body) || void 0 === t
                                     ? void 0
@@ -626,7 +624,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(S, { error: v }),
+                  (0, n.jsx)(S, { error: T }),
                 ],
               }),
             }),
@@ -634,13 +632,13 @@
               request: t,
               setSlide: a,
               showConfirm: !0,
-              disabled: N.length !== r.SMS_CODE_LENGTH,
+              disabled: j.length !== r.SMS_CODE_LENGTH,
               submitting: A,
             }),
           ],
         });
       }
-      function y(e) {
+      function N(e) {
         let {
             request: t,
             finish: s,
@@ -708,7 +706,7 @@
           })
         );
       }
-      function T(e) {
+      function y(e) {
         let { transitionState: t, request: s, finish: l, onClose: a } = e;
         return (0, n.jsx)(o.ModalRoot, {
           transitionState: t,
@@ -762,25 +760,25 @@
             }),
             (0, n.jsx)(o.Slide, {
               id: "totp",
-              children: (0, n.jsx)(j, { ...E, isSlideReady: "totp" === h }),
+              children: (0, n.jsx)(v, { ...E, isSlideReady: "totp" === h }),
             }),
             (0, n.jsx)(o.Slide, {
               id: "sms",
-              children: (0, n.jsx)(N, { ...E, isSlideReady: "sms" === h }),
+              children: (0, n.jsx)(j, { ...E, isSlideReady: "sms" === h }),
             }),
             (0, n.jsx)(o.Slide, {
               id: "backup",
-              children: (0, n.jsx)(v, { ...E, isSlideReady: "backup" === h }),
+              children: (0, n.jsx)(T, { ...E, isSlideReady: "backup" === h }),
             }),
             (0, n.jsx)(o.Slide, {
               id: "password",
-              children: (0, n.jsx)(y, { ...E, isSlideReady: "password" === h }),
+              children: (0, n.jsx)(N, { ...E, isSlideReady: "password" === h }),
             }),
           ],
         });
       }
       function O(e, t, s) {
-        (0, o.openModal)(s => (0, n.jsx)(T, { finish: t, request: e, ...s }), {
+        (0, o.openModal)(s => (0, n.jsx)(y, { finish: t, request: e, ...s }), {
           onCloseCallback: () => {
             s(Error(E.default.Messages.MFA_V2_CANCELED));
           },
@@ -818,7 +816,7 @@
           a =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
         try {
-          let e = await n.default.post({
+          let e = await n.HTTP.post({
             url: "/mfa/finish",
             body: { ticket: t, mfa_type: s, data: l },
             retries: a,
@@ -848,4 +846,4 @@
     },
   },
 ]);
-//# sourceMappingURL=28791.9924a4f56d9f5012809e.js.map
+//# sourceMappingURL=28791.921bc259879592e2d526.js.map

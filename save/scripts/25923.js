@@ -241,7 +241,7 @@
                       "vanity_url_code",
                     ],
                   }),
-                  o = r.default.get({
+                  o = r.HTTP.get({
                     url: h.Endpoints.GUILD_DISCOVERY_VALID_TERM,
                     query: { term: t },
                     oldFormErrors: !0,
@@ -357,7 +357,7 @@
               filters: s.join(" AND "),
               facets: ["categories.id"],
             }),
-            l = r.default.get({
+            l = r.HTTP.get({
               url: h.Endpoints.GUILD_DISCOVERY_VALID_TERM,
               query: { term: e },
               oldFormErrors: !0,
@@ -389,7 +389,7 @@
           categoryId: e,
         });
         try {
-          let t = await r.default.get({
+          let t = await r.HTTP.get({
               url: h.Endpoints.GUILD_DISCOVERY,
               query: i.stringify({ categories: [e] }),
               oldFormErrors: !0,
@@ -413,7 +413,7 @@
           section: h.GuildDiscoverySections.FEATURED,
         });
         try {
-          let n = await r.default.get({
+          let n = await r.HTTP.get({
             url: h.Endpoints.GUILD_DISCOVERY,
             query: i.stringify({ offset: e, limit: t }),
             oldFormErrors: !0,
@@ -434,7 +434,7 @@
           section: h.GuildDiscoverySections.GAMES_YOU_PLAY,
         });
         try {
-          let e = await r.default.get({
+          let e = await r.HTTP.get({
             url: h.Endpoints.GUILD_DISCOVERY,
             query: i.stringify({ application_ids: t }),
             oldFormErrors: !0,
@@ -23350,4 +23350,4 @@
     },
   },
 ]);
-//# sourceMappingURL=05807858a085025d6978.js.map
+//# sourceMappingURL=6b6818b43b301f67a421.js.map

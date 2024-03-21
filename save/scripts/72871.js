@@ -905,32 +905,30 @@
         componentDidMount() {
           let e = (0, o.default)(this.props.location),
             t = (0, l.parse)(this.props.location.search);
-          i.default
-            .post({
-              url: _.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
-              body: {
-                token: e,
-                pixel_uuid: t.hash,
+          i.HTTP.post({
+            url: _.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
+            body: {
+              token: e,
+              pixel_uuid: t.hash,
+              category: t.category,
+              email_type: t.email_type,
+            },
+            oldFormErrors: !0,
+          }).then(
+            e => {
+              let {
+                  body: { user: n },
+                } = e,
+                s = new c.default(n);
+              this.setState({
+                success: !0,
+                busy: !1,
+                user: s,
                 category: t.category,
-                email_type: t.email_type,
-              },
-              oldFormErrors: !0,
-            })
-            .then(
-              e => {
-                let {
-                    body: { user: n },
-                  } = e,
-                  s = new c.default(n);
-                this.setState({
-                  success: !0,
-                  busy: !1,
-                  user: s,
-                  category: t.category,
-                });
-              },
-              () => this.setState({ success: !1, busy: !1 })
-            ),
+              });
+            },
+            () => this.setState({ success: !1, busy: !1 })
+          ),
             (0, d.trackAppUIViewed)("disable_email_notifications");
         }
         renderBusy() {
@@ -3112,22 +3110,20 @@
         componentDidMount() {
           let e = (0, f.default)(this.props.location),
             t = (0, l.parse)(this.props.location.search);
-          i.default
-            .post({
-              url: E.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-              body: { token: e, pixel_uuid: t.hash, guild_id: t.guild_id },
-              oldFormErrors: !0,
-            })
-            .then(
-              e => {
-                let {
-                    body: { guild: t },
-                  } = e,
-                  n = new o.default(t);
-                this.setState({ success: !0, busy: !1, guild: n });
-              },
-              () => this.setState({ success: !1, busy: !1 })
-            ),
+          i.HTTP.post({
+            url: E.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+            body: { token: e, pixel_uuid: t.hash, guild_id: t.guild_id },
+            oldFormErrors: !0,
+          }).then(
+            e => {
+              let {
+                  body: { guild: t },
+                } = e,
+                n = new o.default(t);
+              this.setState({ success: !0, busy: !1, guild: n });
+            },
+            () => this.setState({ success: !1, busy: !1 })
+          ),
             (0, u.trackAppUIViewed)("disable_server_highlight_notifications");
         }
         renderBusy() {
@@ -3475,35 +3471,33 @@
           acceptGuildTemplate: (e, t, n) => (
             a.default.dispatch({ type: "GUILD_TEMPLATE_ACCEPT", code: e }),
             new Promise((o, d) => {
-              s.default
-                .post({
-                  url: u.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
-                  body: { name: t, icon: n },
-                  oldFormErrors: !0,
-                })
-                .then(
-                  t => {
-                    let n = t.body;
-                    a.default.dispatch({
-                      type: "GUILD_TEMPLATE_ACCEPT_SUCCESS",
-                      code: e,
-                      guild: n,
-                    }),
-                      l.default.isConnected()
-                        ? i.default.addConditionalChangeListener(() => {
-                            if (null != i.default.getGuild(n.id))
-                              return (0, r.transitionToGuild)(n.id), o(n), !1;
-                          })
-                        : ((0, r.transitionToGuild)(n.id), o(n));
-                  },
-                  t => {
-                    a.default.dispatch({
-                      type: "GUILD_TEMPLATE_ACCEPT_FAILURE",
-                      code: e,
-                    }),
-                      d(t.body);
-                  }
-                );
+              s.HTTP.post({
+                url: u.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
+                body: { name: t, icon: n },
+                oldFormErrors: !0,
+              }).then(
+                t => {
+                  let n = t.body;
+                  a.default.dispatch({
+                    type: "GUILD_TEMPLATE_ACCEPT_SUCCESS",
+                    code: e,
+                    guild: n,
+                  }),
+                    l.default.isConnected()
+                      ? i.default.addConditionalChangeListener(() => {
+                          if (null != i.default.getGuild(n.id))
+                            return (0, r.transitionToGuild)(n.id), o(n), !1;
+                        })
+                      : ((0, r.transitionToGuild)(n.id), o(n));
+                },
+                t => {
+                  a.default.dispatch({
+                    type: "GUILD_TEMPLATE_ACCEPT_FAILURE",
+                    code: e,
+                  }),
+                    d(t.body);
+                }
+              );
             })
           ),
         };
@@ -6014,4 +6008,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3e045b6210c63ecb1e5b.js.map
+//# sourceMappingURL=db0dff2035bd5748e830.js.map

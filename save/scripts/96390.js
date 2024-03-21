@@ -54,7 +54,7 @@
       }
       async function I(e, t, n, a) {
         let s = l().add(a, "hours").toISOString(),
-          i = await r.default.put({
+          i = await r.HTTP.put({
             url: _.Endpoints.GUILD_INCIDENT_ACTIONS(e),
             body: {
               invites_disabled_until: t ? s : null,
@@ -68,7 +68,7 @@
           l = d.default.getGuild(e),
           s = null == l ? void 0 : l.getSafetyAlertsChannelId();
         if (!a || null == s) return null;
-        let i = await r.default.post({
+        let i = await r.HTTP.post({
           url: _.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
           body: { alert_message_id: t, reason: n },
         });
@@ -79,7 +79,7 @@
           n = d.default.getGuild(e),
           a = null == n ? void 0 : n.getSafetyAlertsChannelId();
         if (!t || null == a) return null;
-        let l = await r.default.post({
+        let l = await r.HTTP.post({
           url: _.Endpoints.GUILD_INCIDENT_REPORT_RAID(e),
         });
         return l;
@@ -237,4 +237,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d1267998fda95d57bd1c.js.map
+//# sourceMappingURL=d1aad15fda7a2facc2f3.js.map

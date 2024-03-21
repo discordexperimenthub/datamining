@@ -98,12 +98,10 @@
       async function o(e) {
         let t = e.primarySkuId;
         if (null == t) return;
-        let n = await s.default
-            .get({
-              url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
-              oldFormErrors: !0,
-            })
-            .then(e => e.body),
+        let n = await s.HTTP.get({
+            url: u.Endpoints.APPLICATION_BRANCH_LIST(e.id),
+            oldFormErrors: !0,
+          }).then(e => e.body),
           a = n.map(n =>
             r.default.createForTestMode({ id: e.id, skuId: t, branch: n })
           );
@@ -154,7 +152,7 @@
         d = n("659500"),
         c = n("49111");
       function E(e) {
-        s.default.post({
+        s.HTTP.post({
           url: c.Endpoints.INITIATE_CHANNEL_PROMPTS,
           body: { guild_ids: e },
         });
@@ -164,13 +162,13 @@
           arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
             : c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;
-        s.default.post({
+        s.HTTP.post({
           url: c.Endpoints.FORCE_SEND_PROMPT(e),
           body: { prompt_type: t },
         });
       }
       async function S(e, t, n) {
-        await s.default.post({
+        await s.HTTP.post({
           url: c.Endpoints.SEND_GAMING_STATS(t),
           body: {
             message_reference: { guild_id: e, channel_id: t, message_id: n },
@@ -179,7 +177,7 @@
           T(t);
       }
       async function _(e) {
-        let t = await s.default.patch({
+        let t = await s.HTTP.patch({
           url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id),
         });
         if (null != t.text && "" !== t.text) {
@@ -684,7 +682,7 @@
         if (!u.default.isFetchingCurrentQuests) {
           i.default.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
           try {
-            let e = await s.default.get({
+            let e = await s.HTTP.get({
                 url: o.Endpoints.QUESTS_CURRENT_QUESTS,
               }),
               t = e.body.quests.map(e =>
@@ -714,7 +712,7 @@
       async function c(e) {
         let { questId: t, streamKey: n, terminal: a = !1 } = e;
         try {
-          let e = await s.default.post({
+          let e = await s.HTTP.post({
             url: o.Endpoints.QUESTS_HEARTBEAT(t),
             body: { stream_key: n, terminal: a },
           });
@@ -740,7 +738,7 @@
         if (!n) {
           i.default.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
           try {
-            let n = await s.default.post({
+            let n = await s.HTTP.post({
               url: o.Endpoints.QUESTS_ENROLL(e),
               body: { location: t.questContent },
             });
@@ -761,7 +759,7 @@
             questId: e,
           });
           try {
-            let r = await s.default.post({
+            let r = await s.HTTP.post({
               url: o.Endpoints.QUESTS_REWARD_CODE(e),
               body: { platform: t, location: n },
             });
@@ -790,7 +788,7 @@
             questId: e,
           });
           try {
-            let t = await s.default.get({
+            let t = await s.HTTP.get({
               url: o.Endpoints.QUESTS_REWARD_CODE(e),
             });
             i.default.dispatch({
@@ -820,7 +818,7 @@
             content: t,
           });
           try {
-            let n = await s.default.post({
+            let n = await s.HTTP.post({
               url: o.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
               body: {},
             });
@@ -847,7 +845,7 @@
       }
       async function p(e) {
         try {
-          let t = await s.default.post({
+          let t = await s.HTTP.post({
             url: o.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
             body: {},
           });
@@ -865,7 +863,7 @@
       }
       async function C(e) {
         try {
-          let t = await s.default.delete({
+          let t = await s.HTTP.del({
             url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
             body: {},
           });
@@ -883,7 +881,7 @@
       }
       async function h(e) {
         try {
-          let t = await s.default.delete({
+          let t = await s.HTTP.del({
             url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
             body: {},
           });
@@ -1449,4 +1447,4 @@
     },
   },
 ]);
-//# sourceMappingURL=67925.1c5ac86efbb48cb6e4a7.js.map
+//# sourceMappingURL=67925.5d12d0e7c082823e1e3a.js.map

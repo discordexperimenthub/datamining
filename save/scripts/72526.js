@@ -312,7 +312,7 @@
         l = n("49111");
       let s = async (e, t) => {
         try {
-          let n = await i.default.get({
+          let n = await i.HTTP.get({
             url: l.Endpoints.PRICE_TIERS,
             query: { price_tier_type: t, guild_id: e },
           });
@@ -4014,4 +4014,4 @@
     },
   },
 ]);
-//# sourceMappingURL=066c095ba0ffa895ef42.js.map
+//# sourceMappingURL=6070f85d9e27f4ad1f40.js.map

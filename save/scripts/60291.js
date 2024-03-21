@@ -52,18 +52,18 @@
         });
       var a = n("627445"),
         s = n.n(a),
-        l = n("316693"),
-        i = n("872717"),
-        u = n("450911");
+        i = n("316693"),
+        l = n("872717"),
+        r = n("450911");
       n("851387");
-      var r = n("798609"),
+      var u = n("798609"),
         o = n("716241"),
-        d = n("18494"),
-        c = n("800762"),
-        f = n("991170"),
+        c = n("18494"),
+        d = n("800762"),
+        T = n("991170"),
         E = n("716214"),
         _ = n("230324"),
-        T = n("738983"),
+        f = n("738983"),
         I = n("808422"),
         S = n("49111");
       function p(e, t) {
@@ -75,7 +75,7 @@
               S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -88,7 +88,7 @@
         let n = e.getGuildId();
         return (
           s(null != n, "This channel cannot be guildless."),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
@@ -102,16 +102,16 @@
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           a = null == e ? void 0 : e.getGuildId();
         s(null != a, "This channel cannot be guildless.");
-        let l = c.default.getVoiceStateForChannel(e.id),
-          u = (0, I.getAudienceRequestToSpeakState)(l);
+        let i = d.default.getVoiceStateForChannel(e.id),
+          r = (0, I.getAudienceRequestToSpeakState)(i);
         return (
-          u ===
+          r ===
             I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
             !t &&
             (0, o.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a),
             body: {
               suppress: t,
@@ -126,7 +126,7 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           s(null != t, "This channel cannot be guildless."),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
@@ -141,7 +141,7 @@
         let a = e.getGuildId();
         return (
           s(null != a, "This channel cannot be guildless."),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
             body: { suppress: n, channel_id: e.id },
           })
@@ -153,7 +153,7 @@
         return (
           s(null != n, "This channel cannot be guildless."),
           N(t, e.id, !0),
-          i.default.patch({
+          l.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
@@ -167,33 +167,33 @@
       function R(e, t, n) {
         let a = e.getGuildId();
         s(null != a, "Channel cannot be guildless");
-        let i = e.permissionOverwrites[a],
+        let l = e.permissionOverwrites[a],
           o = {
             id: a,
-            type: r.PermissionOverwriteType.ROLE,
-            allow: f.NONE,
-            deny: f.NONE,
-            ...i,
+            type: u.PermissionOverwriteType.ROLE,
+            allow: T.NONE,
+            deny: T.NONE,
+            ...l,
           };
         n
-          ? ((o.allow = l.add(o.allow, t)), (o.deny = l.remove(o.deny, t)))
-          : ((o.allow = l.remove(o.allow, t)), (o.deny = l.add(o.deny, t))),
-          u.default.updatePermissionOverwrite(e.id, o);
+          ? ((o.allow = i.add(o.allow, t)), (o.deny = i.remove(o.deny, t)))
+          : ((o.allow = i.remove(o.allow, t)), (o.deny = i.add(o.deny, t))),
+          r.default.updatePermissionOverwrite(e.id, o);
       }
       async function M(e, t, n, a) {
         if ("" === t) return;
-        let s = d.default.getVoiceChannelId() === e.id;
+        let s = c.default.getVoiceChannelId() === e.id;
         !s && (0, E.connectToStage)(e);
-        let l = await (0, T.startStageInstance)(e.id, t, n, a);
-        return h(e, !1, !0), l;
+        let i = await (0, f.startStageInstance)(e.id, t, n, a);
+        return h(e, !1, !0), i;
       }
       async function v(e, t, n) {
         if ("" === t) return;
-        let a = await (0, T.updateStageInstance)(e.id, t, n);
+        let a = await (0, f.updateStageInstance)(e.id, t, n);
         return a;
       }
       async function O(e) {
-        await (0, T.endStageInstance)(e.id);
+        await (0, f.endStageInstance)(e.id);
       }
     },
     230324: function (e, t, n) {
@@ -201,10 +201,10 @@
       n.r(t),
         n.d(t, {
           summarizeUsernamesParticipating: function () {
-            return c;
+            return d;
           },
           getRemoveModeratorTooltipHint: function () {
-            return f;
+            return T;
           },
           getStageChannelMetadata: function () {
             return E;
@@ -215,55 +215,55 @@
         n("917351");
       var a = n("945956"),
         s = n("387111"),
-        l = n("991170"),
-        i = n("834052"),
-        u = n("837979"),
-        r = n("49111"),
+        i = n("991170"),
+        l = n("834052"),
+        r = n("837979"),
+        u = n("49111"),
         o = n("606762"),
-        d = n("782340");
-      function c(e, t, n, a) {
-        let l = t[0],
-          i = s.default.getName(e, n, l),
-          u = null != a ? a : t.length;
-        return 1 === u && null != l
-          ? i
-          : null == l
-            ? d.default.Messages.SPEAKING_COUNT.format({ count: u })
-            : d.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-                name: i,
-                count: u - 1,
+        c = n("782340");
+      function d(e, t, n, a) {
+        let i = t[0],
+          l = s.default.getName(e, n, i),
+          r = null != a ? a : t.length;
+        return 1 === r && null != i
+          ? l
+          : null == i
+            ? c.default.Messages.SPEAKING_COUNT.format({ count: r })
+            : c.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
+                name: l,
+                count: r - 1,
               });
       }
-      function f(e, t) {
+      function T(e, t) {
         switch (e) {
           case o.RowType.OWNER:
-            return d.default.Messages
+            return c.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
           case o.RowType.ADMINISTRATOR:
-            return d.default.Messages
+            return c.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
           case o.RowType.MEMBER:
           case o.RowType.ROLE:
             return t
-              ? d.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
-              : d.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+              ? c.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
+              : c.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
           case o.RowType.EMPTY_STATE:
         }
         return null;
       }
       function E(e) {
-        let t = i.default.getStageInstanceByChannel(e.id);
+        let t = l.default.getStageInstanceByChannel(e.id);
         return {
           channel_id: e.id,
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: l.canEveryoneRole(
-            r.Permissions.REQUEST_TO_SPEAK,
+          request_to_speak_state: i.canEveryoneRole(
+            u.Permissions.REQUEST_TO_SPEAK,
             e
           )
-            ? u.RequestToSpeakPermissionStates.EVERYONE
-            : u.RequestToSpeakPermissionStates.NO_ONE,
+            ? r.RequestToSpeakPermissionStates.EVERYONE
+            : r.RequestToSpeakPermissionStates.NO_ONE,
           stage_instance_id: null == t ? void 0 : t.id,
         };
       }
@@ -273,39 +273,39 @@
       n.r(t),
         n.d(t, {
           startStageInstance: function () {
-            return l;
-          },
-          updateStageInstance: function () {
             return i;
           },
+          updateStageInstance: function () {
+            return l;
+          },
           endStageInstance: function () {
-            return u;
+            return r;
           },
         });
       var a = n("872717"),
         s = n("49111");
-      async function l(e, t, n, l, i) {
-        let u = await a.default.post({
+      async function i(e, t, n, i, l) {
+        let r = await a.HTTP.post({
           url: s.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
             topic: t,
             privacy_level: n,
-            guild_scheduled_event_id: i,
-            send_start_notification: l,
+            guild_scheduled_event_id: l,
+            send_start_notification: i,
           },
         });
-        return u.body;
+        return r.body;
       }
-      async function i(e, t, n) {
-        let l = await a.default.patch({
+      async function l(e, t, n) {
+        let i = await a.HTTP.patch({
           url: s.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
-        return l.body;
+        return i.body;
       }
-      function u(e) {
-        return a.default.delete(s.Endpoints.STAGE_INSTANCE(e));
+      function r(e) {
+        return a.HTTP.del(s.Endpoints.STAGE_INSTANCE(e));
       }
     },
     281645: function (e, t, n) {
@@ -313,39 +313,39 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return T;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("77078"),
-        l = n("987317"),
-        i = n("476765"),
-        u = n("674083"),
-        r = n("244480"),
+        i = n("987317"),
+        l = n("476765"),
+        r = n("674083"),
+        u = n("244480"),
         o = n("119184"),
-        d = n("782340"),
-        c = n("549797");
-      function f(e) {
-        let { channel: t, transitionState: n, onClose: f } = e,
-          E = (0, i.useUID)();
+        c = n("782340"),
+        d = n("549797");
+      function T(e) {
+        let { channel: t, transitionState: n, onClose: T } = e,
+          E = (0, l.useUID)();
         function _() {
-          l.default.disconnect(), f();
+          i.default.disconnect(), T();
         }
         return (0, a.jsxs)(s.ModalRoot, {
           transitionState: n,
           "aria-labelledby": E,
           children: [
             (0, a.jsxs)(s.ModalContent, {
-              className: c.content,
+              className: d.content,
               children: [
                 (0, a.jsx)(o.default, {
                   children: (0, a.jsx)("div", {
-                    className: c.iconBackground,
-                    children: (0, a.jsx)(u.default, {
+                    className: d.iconBackground,
+                    children: (0, a.jsx)(r.default, {
                       width: 40,
                       height: 40,
-                      className: c.headerIcon,
+                      className: d.headerIcon,
                     }),
                   }),
                 }),
@@ -353,14 +353,14 @@
                   id: E,
                   variant: "heading-xl/semibold",
                   color: "header-primary",
-                  className: c.title,
-                  children: d.default.Messages.EXPLICIT_END_STAGE_TITLE,
+                  className: d.title,
+                  children: c.default.Messages.EXPLICIT_END_STAGE_TITLE,
                 }),
                 (0, a.jsx)(s.Text, {
                   variant: "text-md/normal",
                   color: "header-secondary",
-                  className: c.subtitle,
-                  children: d.default.Messages.EXPLICIT_END_STAGE_SUBTITLE,
+                  className: d.subtitle,
+                  children: c.default.Messages.EXPLICIT_END_STAGE_SUBTITLE,
                 }),
               ],
             }),
@@ -369,15 +369,15 @@
                 (0, a.jsx)(s.Button, {
                   color: s.Button.Colors.RED,
                   onClick: function () {
-                    (0, r.endStage)(t), _();
+                    (0, u.endStage)(t), _();
                   },
-                  children: d.default.Messages.EXPLICIT_END_STAGE_CONFIRM,
+                  children: c.default.Messages.EXPLICIT_END_STAGE_CONFIRM,
                 }),
                 (0, a.jsx)(s.Button, {
                   color: s.Button.Colors.PRIMARY,
-                  className: c.cancelButton,
+                  className: d.cancelButton,
                   onClick: _,
-                  children: d.default.Messages.EXPLICIT_END_STAGE_CANCEL,
+                  children: c.default.Messages.EXPLICIT_END_STAGE_CANCEL,
                 }),
               ],
             }),
@@ -390,32 +390,32 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return c;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("414456"),
-        l = n.n(s),
-        i = n("782340"),
-        u = n("662190"),
-        r = n("284434"),
+        i = n.n(s),
+        l = n("782340"),
+        r = n("662190"),
+        u = n("284434"),
         o = n("315956");
-      function d(e) {
+      function c(e) {
         let { className: t, children: n } = e;
         return (0, a.jsxs)("div", {
-          className: l(u.container, t),
+          className: i(r.container, t),
           children: [
             (0, a.jsx)("img", {
-              alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+              alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
               src: o,
-              className: l(u.sparkleIcon, u.sparkleBottom),
+              className: i(r.sparkleIcon, r.sparkleBottom),
             }),
             n,
             (0, a.jsx)("img", {
-              alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-              src: r,
-              className: l(u.sparkleIcon, u.sparkleTop),
+              alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+              src: u,
+              className: i(r.sparkleIcon, r.sparkleTop),
             }),
           ],
         });
@@ -426,29 +426,29 @@
       n.r(t),
         n.d(t, {
           uid: function () {
-            return i;
+            return l;
           },
           useUID: function () {
-            return u;
+            return r;
           },
           UID: function () {
-            return r;
+            return u;
           },
         });
       var a = n("995008"),
         s = n.n(a),
-        l = n("775560");
-      let i = function () {
+        i = n("775560");
+      let l = function () {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : "uid_";
           return s(e);
         },
-        u = () => (0, l.useLazyValue)(() => i()),
-        r = e => {
+        r = () => (0, i.useLazyValue)(() => l()),
+        u = e => {
           let { children: t } = e;
-          return t(u());
+          return t(r());
         };
     },
     674083: function (e, t, n) {
@@ -456,24 +456,24 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return u;
+            return r;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("469563"),
-        l = n("340126"),
-        i = n("75196"),
-        u = (0, s.replaceIcon)(
+        i = n("340126"),
+        l = n("75196"),
+        r = (0, s.replaceIcon)(
           function (e) {
             let {
               width: t = 40,
               height: n = 40,
               color: s = "currentColor",
-              ...l
+              ...i
             } = e;
             return (0, a.jsxs)("svg", {
-              ...(0, i.default)(l),
+              ...(0, l.default)(i),
               width: t,
               height: n,
               viewBox: "0 0 40 40",
@@ -494,7 +494,7 @@
               ],
             });
           },
-          l.StageXIcon,
+          i.StageXIcon,
           void 0,
           { size: 40 }
         );
@@ -504,23 +504,23 @@
       n.r(t),
         n.d(t, {
           StageXIcon: function () {
-            return i;
+            return l;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("669491"),
-        l = n("82169");
-      let i = e => {
+        i = n("82169");
+      let l = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: i = s.default.colors.INTERACTIVE_NORMAL,
-          colorClass: u = "",
-          ...r
+          color: l = s.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, l.default)(r),
+          ...(0, i.default)(u),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -528,19 +528,19 @@
           viewBox: "0 0 24 24",
           children: [
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M22.34 13.02c.31.03.63-.17.65-.49L23 12a11 11 0 1 0-20.09 6.2c.34.5 1.05.51 1.46.07l.02-.02c.33-.36.34-.91.07-1.33A9 9 0 1 1 21 12.36c-.01.38.37.68.75.65.2-.02.4-.01.6 0Z",
-              className: u,
+              className: r,
             }),
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M12.6 16.03c.23.02.4.23.44.46.1.6.38 1.17.84 1.63l.52.53c.2.2.2.5 0 .7l-.52.53a3 3 0 0 0-.86 2.46c.03.31-.17.63-.49.65a11.16 11.16 0 0 1-5.4-1.12 1.52 1.52 0 0 1-.8-1.84 6 6 0 0 1 6.26-4ZM13.13 14.78A3 3 0 0 1 9 12a3 3 0 1 1 4.13 2.78Z",
-              className: u,
+              className: r,
             }),
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M18.79 13.71c-.08.3-.45.39-.67.17a3 3 0 0 0-.81-.58.62.62 0 0 1-.35-.63c.02-.22.04-.44.04-.67a5 5 0 1 0-9.6 1.94c.17.42.13.9-.18 1.23l-.05.06c-.43.47-1.18.42-1.45-.14a7 7 0 1 1 13.07-1.38ZM16.7 15.3a1 1 0 0 0-1.4 1.4l2.29 2.3-2.3 2.3a1 1 0 0 0 1.42 1.4L19 20.42l2.3 2.3a1 1 0 0 0 1.4-1.42L20.42 19l2.3-2.3a1 1 0 0 0-1.42-1.4L19 17.58l-2.3-2.3Z",
-              className: u,
+              className: r,
             }),
           ],
         });
@@ -548,4 +548,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5984c5b71a01e9803517.js.map
+//# sourceMappingURL=1ca7d6bf79f3c90ff86c.js.map

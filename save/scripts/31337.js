@@ -15,36 +15,34 @@
         o = n("782340"),
         s = {
           changeNickname: (e, t, n, s) =>
-            i.default
-              .patch({
-                url: a.Endpoints.GUILD_MEMBER_NICK(e, n),
-                body: { nick: s },
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  (s = e.body.nick),
-                    l.default.sendBotMessage(
+            i.HTTP.patch({
+              url: a.Endpoints.GUILD_MEMBER_NICK(e, n),
+              body: { nick: s },
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                (s = e.body.nick),
+                  l.default.sendBotMessage(
+                    t,
+                    null != s && "" !== s
+                      ? o.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({
+                          nick: s,
+                        })
+                      : o.default.Messages.COMMAND_NICK_RESET
+                  );
+              },
+              e => {
+                403 === e.status
+                  ? l.default.sendBotMessage(
                       t,
-                      null != s && "" !== s
-                        ? o.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({
-                            nick: s,
-                          })
-                        : o.default.Messages.COMMAND_NICK_RESET
+                      o.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()
+                    )
+                  : l.default.sendBotMessage(
+                      t,
+                      o.default.Messages.COMMAND_NICK_FAILURE
                     );
-                },
-                e => {
-                  403 === e.status
-                    ? l.default.sendBotMessage(
-                        t,
-                        o.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()
-                      )
-                    : l.default.sendBotMessage(
-                        t,
-                        o.default.Messages.COMMAND_NICK_FAILURE
-                      );
-                }
-              ),
+              }
+            ),
         };
     },
     81594: function (e, t, n) {
@@ -1500,37 +1498,35 @@
                 }))
               : (await new Promise(e => setTimeout(e, t)), c()),
           c = () =>
-            i.default
-              .get({
-                url: r,
-                retries: 3 - u - 1,
-                signal: n.signal,
-                onRequestCreated: () => u++,
-              })
-              .then(
-                t =>
-                  202 === t.status
-                    ? d(5e3)
-                    : (p(!1),
-                      l.default.dispatch({
-                        type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS",
-                        target: e,
-                        index: t.body,
-                      })),
-                t => {
-                  if (n.signal.aborted) {
-                    p(!0);
-                    return;
-                  }
-                  return 429 === t.status
-                    ? d(t.body.retry_after * o.default.Millis.SECOND)
-                    : (p(!0),
-                      l.default.dispatch({
-                        type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
-                        target: e,
-                      }));
+            i.HTTP.get({
+              url: r,
+              retries: 3 - u - 1,
+              signal: n.signal,
+              onRequestCreated: () => u++,
+            }).then(
+              t =>
+                202 === t.status
+                  ? d(5e3)
+                  : (p(!1),
+                    l.default.dispatch({
+                      type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS",
+                      target: e,
+                      index: t.body,
+                    })),
+              t => {
+                if (n.signal.aborted) {
+                  p(!0);
+                  return;
                 }
-              ),
+                return 429 === t.status
+                  ? d(t.body.retry_after * o.default.Millis.SECOND)
+                  : (p(!0),
+                    l.default.dispatch({
+                      type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
+                      target: e,
+                    }));
+              }
+            ),
           p = e => {
             let i = performance.now() - t;
             a.default.track(s.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
@@ -4769,7 +4765,7 @@
                   null != n
                     ? y.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n)
                     : y.Endpoints.CHANNEL_THREADS(t.id);
-                return o.default.post({
+                return o.HTTP.post({
                   url: e,
                   body: {
                     name: N,
@@ -4804,7 +4800,7 @@
       }
       function U(e, t, n, i, l) {
         return B(e, () =>
-          o.default.post({
+          o.HTTP.post({
             url: y.Endpoints.CHANNEL_THREADS(e.id),
             body: { name: t, type: n, auto_archive_duration: i, location: l },
           })
@@ -4840,7 +4836,7 @@
               C = await B(t, () =>
                 null != r && r.length > 0
                   ? s(A, E, r)
-                  : o.default.post({ url: A, body: E })
+                  : o.HTTP.post({ url: A, body: E })
               );
             return (
               u.default.clearDraft(t.id, T.DraftType.ThreadSettings),
@@ -5105,4 +5101,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31337.c62cd04bc097da90c46a.js.map
+//# sourceMappingURL=31337.51b247b7a1e212f12ae0.js.map

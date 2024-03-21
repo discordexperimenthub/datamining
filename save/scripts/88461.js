@@ -59,13 +59,12 @@
           });
         }
         handleLinkAccountPressed() {
-          l.default
-            .get({
-              url: d.Endpoints.CONNECTIONS_AUTHORIZE_CONTINUATION(
-                d.PlatformTypes.XBOX
-              ),
-              oldFormErrors: !0,
-            })
+          l.HTTP.get({
+            url: d.Endpoints.CONNECTIONS_AUTHORIZE_CONTINUATION(
+              d.PlatformTypes.XBOX
+            ),
+            oldFormErrors: !0,
+          })
             .then(e => {
               window.location.href = e.body.url;
             })
@@ -532,4 +531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a1c4f0068d0ac5eee98f.js.map
+//# sourceMappingURL=4dbaa4d684979dc7b647.js.map

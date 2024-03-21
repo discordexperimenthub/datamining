@@ -2558,7 +2558,7 @@
               try {
                 L(!0),
                   M(!1),
-                  await r.default.post({
+                  await r.HTTP.post({
                     url: I.Endpoints.USER_OFFER_REDEEM,
                     body: { user_discount_offer_id: e },
                   }),
@@ -4973,4 +4973,4 @@
     },
   },
 ]);
-//# sourceMappingURL=25505.1e9baf3146b2fad1f636.js.map
+//# sourceMappingURL=25505.fbe29e2ea5e36ed48091.js.map

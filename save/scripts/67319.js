@@ -422,9 +422,9 @@
             selectedGuild: r,
             locationSection: i,
             transitionState: g,
-            onClose: x,
+            onClose: T,
           } = e,
-          T = (0, _.getAvailableGuildBoostSlots)(E.default.boostSlots);
+          x = (0, _.getAvailableGuildBoostSlots)(E.default.boostSlots);
         o(
           null != s || null != r,
           "Must either provide slots or an initial selected guild"
@@ -447,7 +447,7 @@
           [P, O] = l.useState(M[0]),
           [y, B] = l.useState(!1),
           [j, G] = l.useState(r),
-          [w, b] = l.useState(null != s ? s : T.slice(0, 1)),
+          [w, b] = l.useState(null != s ? s : x.slice(0, 1)),
           F = l.useMemo(
             () =>
               null == w
@@ -471,7 +471,7 @@
             );
           }, [w]),
           V = () => {
-            x("SUCCESS" === P),
+            T("SUCCESS" === P),
               I.default.track(R.AnalyticEvents.MODAL_DISMISSED, {
                 type: R.AnalyticsSections.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                 location_section: i,
@@ -481,7 +481,7 @@
             UNUSED_QUANTITY_SELECT: {
               body: () => (
                 o(
-                  !(null == s && 0 === T.length),
+                  !(null == s && 0 === x.length),
                   "Cannot provide no slots if there are no other available slots"
                 ),
                 (0, a.jsxs)("div", {
@@ -506,9 +506,9 @@
                       children: [
                         (0, a.jsx)(p.default, {
                           value: w.length,
-                          onChange: e => b(T.slice(0, e)),
+                          onChange: e => b(x.slice(0, e)),
                           minValue: 1,
-                          maxValue: T.length,
+                          maxValue: x.length,
                         }),
                         (0, a.jsx)(d.Text, {
                           className: L.quantitySelectorLabel,
@@ -938,7 +938,7 @@
           metadata: f,
         };
         try {
-          let e = await i.default.post({
+          let e = await i.HTTP.post({
             url: m.Endpoints.BILLING_SUBSCRIPTIONS_PREVIEW,
             body: E,
             oldFormErrors: !0,
@@ -976,7 +976,7 @@
           user_discount_offer_id: E,
         };
         try {
-          let e = await i.default.patch({
+          let e = await i.HTTP.patch({
             url: m.Endpoints.BILLING_SUBSCRIPTION_PREVIEW(t),
             query: { location: f, location_stack: d },
             body: p,
@@ -1008,7 +1008,7 @@
       async function _(e) {
         let { subscriptionId: t, preventFetch: n } = e;
         if (n) return null;
-        let s = await i.default.get({
+        let s = await i.HTTP.get({
           url: m.Endpoints.BILLING_SUBSCRIPTION_INVOICE(t),
           oldFormErrors: !0,
         });
@@ -1556,7 +1556,7 @@
             return N;
           },
           PremiumPaymentAnimationTier2: function () {
-            return T;
+            return x;
           },
           PremiumPaymentGuildAnimation: function () {
             return P;
@@ -1740,7 +1740,7 @@
           });
         }
       }
-      let x = Object.freeze({
+      let T = Object.freeze({
         IDLE_ENTRY: { toValue: 1, duration: 1500 },
         IDLE_LOOP: {
           toValue: 1,
@@ -1750,19 +1750,19 @@
         BOOST_START: { toValue: 0, duration: 2e3, delay: 500 },
         ERROR: { toValue: 1, duration: 1500, delay: 1e3 },
       });
-      class T extends f.PureComponent {
+      class x extends f.PureComponent {
         static getNextScene(e) {
           switch (e) {
-            case T.Scenes.IDLE_ENTRY:
-              return T.Scenes.IDLE_LOOP;
-            case T.Scenes.BOOST_START:
-              return T.Scenes.BOOST_LOOP;
-            case T.Scenes.BOOST_END:
-              return T.Scenes.VICTORY;
-            case T.Scenes.VICTORY:
-              return T.Scenes.IDLE_ENTRY;
-            case T.Scenes.ERROR:
-              return T.Scenes.IDLE_LOOP;
+            case x.Scenes.IDLE_ENTRY:
+              return x.Scenes.IDLE_LOOP;
+            case x.Scenes.BOOST_START:
+              return x.Scenes.BOOST_LOOP;
+            case x.Scenes.BOOST_END:
+              return x.Scenes.VICTORY;
+            case x.Scenes.VICTORY:
+              return x.Scenes.IDLE_ENTRY;
+            case x.Scenes.ERROR:
+              return x.Scenes.IDLE_LOOP;
             default:
               return e;
           }
@@ -1796,10 +1796,10 @@
             .start();
         }
         animateIdleEntry() {
-          this.animateEntry(x.IDLE_ENTRY);
+          this.animateEntry(T.IDLE_ENTRY);
         }
         animateError() {
-          this.animateEntry(x.ERROR);
+          this.animateEntry(T.ERROR);
         }
         animateIdleLoop() {
           this.animateIdleLoopBackground(), this.animateIdleLoopForeground();
@@ -1808,14 +1808,14 @@
           I.default
             .parallel([
               I.default.timing(this.foregroundAnimation.y, {
-                toValue: x.BOOST_START.toValue,
-                duration: x.BOOST_START.duration,
-                delay: x.BOOST_START.delay,
+                toValue: T.BOOST_START.toValue,
+                duration: T.BOOST_START.duration,
+                delay: T.BOOST_START.delay,
               }),
               I.default.timing(this.backgroundAnimation.y, {
-                toValue: x.BOOST_START.toValue,
-                duration: 1.2 * x.BOOST_START.duration,
-                delay: x.BOOST_START.delay,
+                toValue: T.BOOST_START.toValue,
+                duration: 1.2 * T.BOOST_START.duration,
+                delay: T.BOOST_START.delay,
               }),
             ])
             .start();
@@ -1875,8 +1875,8 @@
                 (this.backgroundAnimation.x.setValue(0),
                 I.default
                   .timing(this.backgroundAnimation.x, {
-                    toValue: x.IDLE_LOOP.toValue,
-                    duration: 1.2 * x.IDLE_LOOP.duration,
+                    toValue: T.IDLE_LOOP.toValue,
+                    duration: 1.2 * T.IDLE_LOOP.duration,
                     easing: I.default.Easing.linear,
                   })
                   .start(this.animateIdleLoopBackground));
@@ -1886,9 +1886,9 @@
                 (this.foregroundAnimation.x.setValue(0),
                 I.default
                   .timing(this.foregroundAnimation.x, {
-                    toValue: x.IDLE_LOOP.toValue,
-                    duration: x.IDLE_LOOP.duration,
-                    easing: x.IDLE_LOOP.easing,
+                    toValue: T.IDLE_LOOP.toValue,
+                    duration: T.IDLE_LOOP.duration,
+                    easing: T.IDLE_LOOP.easing,
                   })
                   .start(this.animateIdleLoopForeground));
             }),
@@ -1908,7 +1908,7 @@
             });
         }
       }
-      (T.Scenes = a),
+      (x.Scenes = a),
         ((d = l || (l = {})).ENTRY = "entry"),
         (d.IDLE = "idle"),
         (d.STARS = "stars"),
@@ -2776,4 +2776,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31fb48c3d16683e13dd0.js.map
+//# sourceMappingURL=5856deb41a8933a181aa.js.map

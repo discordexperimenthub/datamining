@@ -197,10 +197,10 @@
             return A;
           },
           editStage: function () {
-            return b;
+            return P;
           },
           endStage: function () {
-            return P;
+            return b;
           },
         });
       var l = n("627445"),
@@ -228,7 +228,7 @@
               S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -241,7 +241,7 @@
         let n = e.getGuildId();
         return (
           i(null != n, "This channel cannot be guildless."),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
@@ -264,7 +264,7 @@
             (0, s.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(l),
             body: {
               suppress: t,
@@ -279,7 +279,7 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           i(null != t, "This channel cannot be guildless."),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
@@ -294,7 +294,7 @@
         let l = e.getGuildId();
         return (
           i(null != l, "This channel cannot be guildless."),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(l, t),
             body: { suppress: n, channel_id: e.id },
           })
@@ -306,7 +306,7 @@
         return (
           i(null != n, "This channel cannot be guildless."),
           M(t, e.id, !0),
-          r.default.patch({
+          r.HTTP.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
@@ -340,12 +340,12 @@
         let u = await (0, h.startStageInstance)(e.id, t, n, l);
         return p(e, !1, !0), u;
       }
-      async function b(e, t, n) {
+      async function P(e, t, n) {
         if ("" === t) return;
         let l = await (0, h.updateStageInstance)(e.id, t, n);
         return l;
       }
-      async function P(e) {
+      async function b(e) {
         await (0, h.endStageInstance)(e.id);
       }
     },
@@ -438,7 +438,7 @@
       var l = n("872717"),
         i = n("49111");
       async function u(e, t, n, u, r) {
-        let a = await l.default.post({
+        let a = await l.HTTP.post({
           url: i.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
@@ -451,14 +451,14 @@
         return a.body;
       }
       async function r(e, t, n) {
-        let u = await l.default.patch({
+        let u = await l.HTTP.patch({
           url: i.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
         return u.body;
       }
       function a(e) {
-        return l.default.delete(i.Endpoints.STAGE_INSTANCE(e));
+        return l.HTTP.del(i.Endpoints.STAGE_INSTANCE(e));
       }
     },
     77445: function (e, t, n) {
@@ -621,8 +621,8 @@
                 s = (0, p.default)(t.id),
                 C = (0, m.default)(t.id),
                 A = (0, E.default)(t),
-                b = (0, _.default)({ user: t }),
-                P = (0, g.default)(t),
+                P = (0, _.default)({ user: t }),
+                b = (0, g.default)(t),
                 y = (0, M.default)(t.id),
                 N = (0, T.default)(t.id),
                 O = (0, v.default)(t.id, r),
@@ -647,7 +647,7 @@
                       children: [
                         (0, l.jsx)(i.MenuGroup, { children: V }),
                         (0, l.jsxs)(i.MenuGroup, {
-                          children: [s, C, A, b, P, y],
+                          children: [s, C, A, P, b, y],
                         }),
                         n && (0, l.jsx)(i.MenuGroup, { children: N }),
                         (0, l.jsx)(i.MenuGroup, { children: U }),
@@ -1191,15 +1191,15 @@
           A =
             (null == T ? void 0 : T.profileFetchFailed) ||
             (!I && ((!Array.isArray(M) && _) || (null == C && h))),
-          b = S ? d.default : void 0,
-          P = !1;
+          P = S ? d.default : void 0,
+          b = !1;
         if (null != v) {
           let t = s.default.getGuildMemberProfile(e, v);
-          P = null == t;
+          b = null == t;
         }
         !(
           !A &&
-          !P &&
+          !b &&
           (I ||
             Date.now() -
               (null !== (f = null == T ? void 0 : T.lastFetched) && void 0 !== f
@@ -1218,7 +1218,7 @@
                     guildId: v,
                     connectionsRoleId: g,
                   },
-                  b
+                  P
                 )
               )
             : await (0, i.fetchProfile)(
@@ -1230,7 +1230,7 @@
                   guildId: v,
                   connectionsRoleId: g,
                 },
-                b
+                P
               ));
       }
     },
@@ -1439,4 +1439,4 @@
     },
   },
 ]);
-//# sourceMappingURL=839326a3ce548edef4f4.js.map
+//# sourceMappingURL=6fcd36f98baa6376256a.js.map

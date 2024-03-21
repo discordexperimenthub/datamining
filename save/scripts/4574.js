@@ -49,7 +49,7 @@
           throw new s.UploadVoiceDebugLogsError(s.UploadErrorCodes.NO_FILE);
         try {
           let e = { extraInfo: t, mediaEngineState: l.default.getState() };
-          n = await a.default.post({
+          n = await a.HTTP.post({
             url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
             attachments: [
               ...i.map(e => ({ name: e.name, file: e, filename: e.name })),
@@ -515,7 +515,7 @@
             return i;
           },
           trackClientThemeUpdated: function () {
-            return H;
+            return F;
           },
           default: function () {
             return W;
@@ -564,8 +564,8 @@
           EDITOR: x.UserSettingsDelay.SLOW_USER_ACTION,
           SETTINGS: x.UserSettingsDelay.INFREQUENT_USER_ACTION,
         }),
-        F = l.createContext({}),
-        H = e => {
+        H = l.createContext({}),
+        F = e => {
           let { isPersisted: t, themeName: n, analyticsLocations: i } = e;
           A.default.track(R.AnalyticEvents.CLIENT_THEME_UPDATED, {
             feature_name: D.AnalyticsPremiumFeatureNames.CLIENT_THEME,
@@ -653,7 +653,7 @@
               labelledBy: i,
             }),
             o = l.useMemo(() => ({ type: t, delay: k[t] }), [t]);
-          return (0, s.jsx)(F.Provider, {
+          return (0, s.jsx)(H.Provider, {
             value: o,
             children: (0, s.jsx)("div", {
               ...a,
@@ -664,7 +664,7 @@
         };
       (K.Basic = e => {
         let { className: t } = e,
-          { delay: n } = l.useContext(F),
+          { delay: n } = l.useContext(H),
           { analyticsLocations: i } = (0, p.default)(
             _.default.CLIENT_THEMES_THEME_SELECTOR
           ),
@@ -678,7 +678,7 @@
           ),
           c = e => {
             (0, O.resetBackgroundGradientPreset)(),
-              H({
+              F({
                 isPersisted: !0,
                 analyticsLocations: i,
                 themeName: "default ".concat(e),
@@ -709,7 +709,7 @@
         (K.Gradient = e => {
           var t, i;
           let { className: a, renderCTAButtons: o, disabled: r = !1 } = e,
-            { type: u, delay: f } = l.useContext(F),
+            { type: u, delay: f } = l.useContext(H),
             { analyticsLocations: g } = (0, p.default)(
               _.default.CLIENT_THEMES_THEME_SELECTOR
             ),
@@ -744,7 +744,7 @@
           let K = (e, t) => {
             if (
               ((0, O.updateBackgroundGradientPreset)(e.id),
-              H({
+              F({
                 isPersisted: !v,
                 analyticsLocations: g,
                 themeName: c.BackgroundGradientPresetId[e.id],
@@ -908,7 +908,7 @@
               .concat(a, "\n    ");
           l.clear();
           let m = c.Endpoints.DEBUG_LOG(e, "discord_app_logs");
-          await i.default.post({
+          await i.HTTP.post({
             url: m,
             body: g,
             retries: 3,
@@ -970,8 +970,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "277613",
-          versionHash: "058e3c8b88d1507a81f7bdd6463038665d60356c",
+          buildNumber: "277632",
+          versionHash: "06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed",
         };
       }
       n.r(t),
@@ -1416,24 +1416,22 @@
         s = n("872717"),
         l = n("49111");
       async function o() {
-        return (await s.default.get(l.Endpoints.NOTIFICATION_SNAPSHOTS)).body;
+        return (await s.HTTP.get(l.Endpoints.NOTIFICATION_SNAPSHOTS)).body;
       }
       async function r(e) {
         return (
-          await s.default.post({
+          await s.HTTP.post({
             url: l.Endpoints.NOTIFICATION_SNAPSHOTS,
             body: { label: e },
           })
         ).body;
       }
       async function u(e) {
-        return (
-          await s.default.post(l.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))
-        ).body;
+        return (await s.HTTP.post(l.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e)))
+          .body;
       }
       async function d(e) {
-        return (await s.default.delete(l.Endpoints.NOTIFICATION_SNAPSHOT(e)))
-          .body;
+        return (await s.HTTP.del(l.Endpoints.NOTIFICATION_SNAPSHOT(e))).body;
       }
       async function c(e) {
         if (e.length > 0) {
@@ -1833,21 +1831,21 @@
         }
       }
       async function k(e) {
-        await F(() => H()),
-          await F(() =>
+        await H(() => F()),
+          await H(() =>
             d.default.setAccountFlag(
               O.AccountNotificationFlags.USE_NEW_NOTIFICATIONS,
               !0
             )
           );
-        let t = await F(() => f.default.saveUserGuildSettingsBulk(e));
+        let t = await H(() => f.default.saveUserGuildSettingsBulk(e));
         r.default.dispatch({
           type: "USER_GUILD_SETTINGS_FULL_UPDATE",
           userGuildSettings: t,
         }),
           r.default.dispatch({ type: "RECOMPUTE_READ_STATES" });
       }
-      async function F(e) {
+      async function H(e) {
         for (let e = 0; e < 3; e++)
           try {
             break;
@@ -1856,7 +1854,7 @@
           }
         return await e();
       }
-      async function H() {
+      async function F() {
         let e = await (0, C.listSnapshots)();
         if (e.length > 0) {
           let t = await (function () {
@@ -2613,7 +2611,7 @@
           if (!e) return;
           let {
               body: { guild_noise: o, usage: g },
-            } = await a.default.get("/users/@me/notification-migration-data2"),
+            } = await a.HTTP.get("/users/@me/notification-migration-data2"),
             m = (0, c.transformUsageData)(g),
             { default: h } = await n.el("923660").then(n.bind(n, "923660"));
           if (!(0, l.hasAnyModalOpen)())
@@ -2644,7 +2642,7 @@
       async function m(e) {
         let {
             body: { guild_noise: t, usage: s },
-          } = await a.default.get("/users/@me/notification-migration-data2"),
+          } = await a.HTTP.get("/users/@me/notification-migration-data2"),
           o = (0, c.transformUsageData)(s);
         (0, l.openModalLazy)(async () => {
           let { default: a } = await n.el("923660").then(n.bind(n, "923660"));
@@ -2722,4 +2720,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4574.d58a596acf569fc00eb7.js.map
+//# sourceMappingURL=4574.e291d263e4f0b8c6b969.js.map

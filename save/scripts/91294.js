@@ -15,7 +15,7 @@
             return i;
           },
           default: function () {
-            return u;
+            return r;
           },
         });
       var _ = E("872717"),
@@ -24,44 +24,39 @@
         I = E("922832"),
         s = E("49111");
       async function a(e, t) {
-        await _.default
-          .patch({
-            url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
-            body: { linked_user_id: e, link_status: t },
-          })
-          .then(e => {
-            let { body: t } = e;
-            return (
-              T.default.dispatch({
-                type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS",
-                linkedUsers: t,
-              }),
-              t
-            );
-          });
+        await _.HTTP.patch({
+          url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
+          body: { linked_user_id: e, link_status: t },
+        }).then(e => {
+          let { body: t } = e;
+          return (
+            T.default.dispatch({
+              type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS",
+              linkedUsers: t,
+            }),
+            t
+          );
+        });
       }
       async function A(e) {
-        await _.default
-          .delete({
-            url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
-            body: { linked_user_id: e },
-          })
-          .then(t => {
-            let { body: E } = t;
-            return (
-              T.default.dispatch({
-                type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS",
-                linkedUsers: E,
-                deletedUserId: e,
-              }),
-              E
-            );
-          });
+        await _.HTTP.del({
+          url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
+          body: { linked_user_id: e },
+        }).then(t => {
+          let { body: E } = t;
+          return (
+            T.default.dispatch({
+              type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS",
+              linkedUsers: E,
+              deletedUserId: e,
+            }),
+            E
+          );
+        });
       }
       async function i() {
-        await _.default
-          .get({ url: s.Endpoints.FAMILY_CENTER_LINK_CODE })
-          .then(e => {
+        await _.HTTP.get({ url: s.Endpoints.FAMILY_CENTER_LINK_CODE }).then(
+          e => {
             let { body: t } = e,
               E = t.link_code;
             return (
@@ -71,17 +66,18 @@
               }),
               E
             );
-          });
+          }
+        );
       }
-      var u = {
+      var r = {
         async initialPageLoad() {
           var e, t, E, n;
           T.default.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-          let { body: I } = await _.default.get({
+          let { body: I } = await _.HTTP.get({
               url: s.Endpoints.FAMILY_CENTER_TEEN_ACTIVITY_ME,
             }),
             { teen_audit_log: a, linked_users: A, users: i } = I,
-            u = {
+            r = {
               teenId: null == a ? void 0 : a.teen_user_id,
               rangeStartId: null == a ? void 0 : a.range_start_id,
               totals:
@@ -104,15 +100,15 @@
           return (
             T.default.dispatch({
               type: "FAMILY_CENTER_INITIAL_LOAD",
-              familyCenterTeenActivity: u,
+              familyCenterTeenActivity: r,
               linkedUsers: A,
               users: i,
             }),
-            u
+            r
           );
         },
         async fetchLinkedUsers() {
-          let { body: e } = await _.default.get({
+          let { body: e } = await _.HTTP.get({
               url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
             }),
             t = { linkedUsers: e.linked_users, users: e.users };
@@ -125,7 +121,7 @@
           );
         },
         async requestLink(e, t) {
-          let { body: E } = await _.default.post({
+          let { body: E } = await _.HTTP.post({
               url: s.Endpoints.FAMILY_CENTER_LINKED_USERS,
               body: { recipient_id: e, code: t },
             }),
@@ -141,7 +137,7 @@
         async fetchTeenActivity(e) {
           T.default.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
           let t = s.Endpoints.FAMILY_CENTER_TEEN_ACTIVITY(e),
-            { body: E } = await _.default.get({ url: t }),
+            { body: E } = await _.HTTP.get({ url: t }),
             n = E.teen_audit_log,
             I = {
               teenId: n.teen_user_id,
@@ -160,11 +156,11 @@
           );
         },
         async fetchMoreTeenActivity(e, t, E, a) {
-          let { body: A } = await _.default.get({
+          let { body: A } = await _.HTTP.get({
               url: s.Endpoints.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, E, a),
             }),
             { teen_audit_log: i } = A,
-            u = {
+            r = {
               teenId: i.teen_user_id,
               rangeStartId: i.range_start_id,
               actions: i.actions,
@@ -179,7 +175,7 @@
             }),
             T.default.dispatch({
               type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS",
-              familyCenterTeenActivity: u,
+              familyCenterTeenActivity: r,
             }),
             i
           );
@@ -224,7 +220,7 @@
             return v;
           },
           FAMILY_CENTER_SUB_ROUTES: function () {
-            return h;
+            return H;
           },
           UserLinkStatus: function () {
             return n;
@@ -245,10 +241,10 @@
             return i;
           },
           FamilyCenterAction: function () {
-            return u;
+            return r;
           },
           ACTION_TO_TEXT: function () {
-            return H;
+            return h;
           },
           PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER: function () {
             return w;
@@ -266,10 +262,10 @@
         a,
         A,
         i,
-        u,
         r,
-        l,
+        u,
         C,
+        l,
         d,
         o,
         N,
@@ -295,22 +291,22 @@
         m = 4,
         G = 5 * O.default.Millis.MINUTE,
         v = "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        h = (0, Y.wrapPaths)(
+        H = (0, Y.wrapPaths)(
           Object.freeze({
             FAMILY_CENTER_SETTINGS: "/family-center/settings",
             FAMILY_CENTER_MY_FAMILY: "/family-center/my-family",
           }),
           [":", "?", "@"]
         );
-      ((C = _ || (_ = {}))[(C.DM_MESSAGE_SEND = 1)] = "DM_MESSAGE_SEND"),
-        (C[(C.GDM_MESSAGE_SEND = 2)] = "GDM_MESSAGE_SEND"),
-        (C[(C.MESSAGE_REACT = 3)] = "MESSAGE_REACT"),
-        (C[(C.ADD_FRIEND = 4)] = "ADD_FRIEND"),
-        (C[(C.SEND_CALL = 5)] = "SEND_CALL"),
-        (C[(C.CALL_JOIN = 6)] = "CALL_JOIN"),
-        (C[(C.GUILD_JOIN = 7)] = "GUILD_JOIN"),
-        (C[(C.GUILD_MESSAGE_SEND = 8)] = "GUILD_MESSAGE_SEND"),
-        (C[(C.GUILD_VC_JOIN = 9)] = "GUILD_VC_JOIN"),
+      ((l = _ || (_ = {}))[(l.DM_MESSAGE_SEND = 1)] = "DM_MESSAGE_SEND"),
+        (l[(l.GDM_MESSAGE_SEND = 2)] = "GDM_MESSAGE_SEND"),
+        (l[(l.MESSAGE_REACT = 3)] = "MESSAGE_REACT"),
+        (l[(l.ADD_FRIEND = 4)] = "ADD_FRIEND"),
+        (l[(l.SEND_CALL = 5)] = "SEND_CALL"),
+        (l[(l.CALL_JOIN = 6)] = "CALL_JOIN"),
+        (l[(l.GUILD_JOIN = 7)] = "GUILD_JOIN"),
+        (l[(l.GUILD_MESSAGE_SEND = 8)] = "GUILD_MESSAGE_SEND"),
+        (l[(l.GUILD_VC_JOIN = 9)] = "GUILD_VC_JOIN"),
         ((d = T || (T = {}))[(d.PARENT = 1)] = "PARENT"),
         (d[(d.CHILD = 2)] = "CHILD"),
         ((o = n || (n = {}))[(o.PENDING = 1)] = "PENDING"),
@@ -333,7 +329,7 @@
         (M.SETTINGS = "SETTINGS"),
         ((L = i || (i = {}))[(L.SIDENAV = 0)] = "SIDENAV"),
         (L[(L.SETTINGS = 1)] = "SETTINGS"),
-        ((D = u || (u = {}))[(D.TabChange = 0)] = "TabChange"),
+        ((D = r || (r = {}))[(D.TabChange = 0)] = "TabChange"),
         (D[(D.ShowQRCodeModal = 1)] = "ShowQRCodeModal"),
         (D[(D.RevealQRCode = 2)] = "RevealQRCode"),
         (D[(D.ScanQRCodeButton = 3)] = "ScanQRCodeButton"),
@@ -341,7 +337,7 @@
         (D[(D.LoadMore = 5)] = "LoadMore"),
         (D[(D.SelectTeen = 6)] = "SelectTeen"),
         (D[(D.HideQRCode = 7)] = "HideQRCode");
-      let H = new Map([
+      let h = new Map([
         [
           3,
           {
@@ -492,9 +488,9 @@
             : y.default.Messages
                 .FAMILY_CENTER_ACTIVITY_GUILD_INTERACTION_TOOLTIP_TEEN;
       }
-      ((c = r || (r = {}))[(c.CHECK = 0)] = "CHECK"),
+      ((c = u || (u = {}))[(c.CHECK = 0)] = "CHECK"),
         (c[(c.X = 1)] = "X"),
-        ((f = l || (l = {}))[(f.GENERIC_ERROR = 0)] = "GENERIC_ERROR"),
+        ((f = C || (C = {}))[(f.GENERIC_ERROR = 0)] = "GENERIC_ERROR"),
         (f[(f.INELIGIBLE_FOR_FAMILY_CENTER = 1)] =
           "INELIGIBLE_FOR_FAMILY_CENTER"),
         (f[(f.PENDING_REQUEST_EXISTS = 2)] = "PENDING_REQUEST_EXISTS"),
@@ -552,10 +548,10 @@
         a = E("138505"),
         A = E("117933"),
         i = E("922832");
-      let u = null,
-        r = null,
-        l = {},
-        C = c(),
+      let r = null,
+        u = null,
+        C = {},
+        l = c(),
         d = f(),
         o = null,
         N = (function () {
@@ -603,7 +599,7 @@
         let e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
           t = arguments.length > 1 ? arguments[1] : void 0;
-        return (l =
+        return (C =
           e.length > 0
             ? e.reduce((e, t) => ({ ...e, [t.user_id]: t }), {})
             : {});
@@ -612,8 +608,8 @@
         void 0 !== e && (d = e);
       }
       function y(e, t) {
-        let E = t ? C : c();
-        return (C = e.reduce((e, t) => {
+        let E = t ? l : c();
+        return (l = e.reduce((e, t) => {
           let _ = t.display_type;
           return (
             void 0 !== E[_] &&
@@ -635,8 +631,8 @@
       function U(e) {
         let { linkedUsers: t, familyCenterTeenActivity: E } = e,
           { actions: _, guilds: T, totals: n, teenId: s, rangeStartId: a } = E;
-        (u = s),
-          (r = a),
+        (r = s),
+          (u = a),
           y(_),
           O(n),
           F(T),
@@ -663,8 +659,8 @@
           teenId: n,
           rangeStartId: s,
         } = t;
-        (u = n),
-          (r = s),
+        (r = n),
+          (u = s),
           y(E),
           O(_),
           F(T),
@@ -684,11 +680,11 @@
         let { linkedUsers: t } = e;
         Y(t, !0);
       }
-      function h(e) {
+      function H(e) {
         let { linkCode: t } = e;
         o = t;
       }
-      function H(e) {
+      function h(e) {
         let { tab: t } = e;
         N = t;
       }
@@ -700,7 +696,7 @@
             let { user_id: t } = e;
             return void 0 === E[t];
           });
-        _ && t.linked_users.length > Object.keys(l).length
+        _ && t.linked_users.length > Object.keys(C).length
           ? s.default.fetchLinkedUsers()
           : Y(t.linked_users);
       }
@@ -714,10 +710,10 @@
               : null);
       }
       function Q() {
-        (u = null),
-          (r = null),
-          (l = {}),
-          (C = c()),
+        (r = null),
+          (u = null),
+          (C = {}),
+          (l = c()),
           (d = f()),
           (D = {}),
           (R = !1),
@@ -743,7 +739,7 @@
           return {
             version: b.LATEST_SNAPSHOT_VERSION,
             data: {
-              linkedUsers: Object.values(l),
+              linkedUsers: Object.values(C),
               teenActivityTotals: Object.entries(d).map(e => {
                 let [t, E] = e;
                 return "".concat(t, ":").concat(E);
@@ -751,7 +747,7 @@
               teenActivity: (function () {
                 let e = [];
                 return (
-                  Object.entries(C).forEach(t => {
+                  Object.entries(l).forEach(t => {
                     let [E, _] = t;
                     e.push(...Object.values(_));
                   }),
@@ -763,14 +759,14 @@
           };
         }
         getSelectedTeenId() {
-          return u;
+          return r;
         }
         getLinkedUsers() {
-          return l;
+          return C;
         }
         getLinkTimestamp(e) {
           var t;
-          let E = l[e];
+          let E = C[e];
           return null == E
             ? null
             : null !== (t = E.updated_at) && void 0 !== t
@@ -778,10 +774,10 @@
               : E.created_at;
         }
         getRangeStartTimestamp() {
-          return null == r ? null : I.default.extractTimestamp(r);
+          return null == u ? null : I.default.extractTimestamp(u);
         }
         getActionsForDisplayType(e) {
-          return Object.values(C[e]);
+          return Object.values(l[e]);
         }
         getTotalForDisplayType(e) {
           return d[e];
@@ -796,7 +792,7 @@
           return N;
         }
         getStartId() {
-          return r;
+          return u;
         }
         getIsInitialized() {
           return S;
@@ -824,8 +820,8 @@
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: P,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: G,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: v,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: h,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: H,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: H,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: h,
             SET_LOCATION_METADATA: w,
             LOGOUT: Q,
           });
@@ -839,16 +835,16 @@
       E.r(t),
         E.d(t, {
           getEmptyActivityFormatter: function () {
-            return u;
-          },
-          getActivityWindowTimestampFormatter: function () {
             return r;
           },
+          getActivityWindowTimestampFormatter: function () {
+            return u;
+          },
           formatUserActivityTimestamp: function () {
-            return l;
+            return C;
           },
           formatLinkTimestamp: function () {
-            return C;
+            return l;
           },
           isUserAction: function () {
             return d;
@@ -869,12 +865,12 @@
         a = 24 * s,
         A = 2 * a,
         i = 7 * a,
-        u = () => ({
+        r = () => ({
           today: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_TODAY,
           yesterday: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_YESTERDAY,
           days: I.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_DAYS,
         }),
-        r = e =>
+        u = e =>
           e
             ? {
                 today:
@@ -896,7 +892,7 @@
                 days: I.default.Messages
                   .FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_DAYS,
               },
-        l = (e, t, E) => {
+        C = (e, t, E) => {
           let _ = T().diff(T(e), "s"),
             n = t(),
             I = T(e).format("LL");
@@ -909,7 +905,7 @@
                     days: Math.min(Math.floor(_ / a), null != E ? E : 999),
                   }));
         },
-        C = (e, t) => {
+        l = (e, t) => {
           let E = T().diff(T(e), "s"),
             _ = t(),
             n = T(e).format("LL");
@@ -943,7 +939,7 @@
       E.r(t),
         E.d(t, {
           useShouldShowHelplineLink: function () {
-            return u;
+            return r;
           },
         }),
         E("222007");
@@ -955,7 +951,7 @@
         a = E("775032");
       let A = new Set(["US"]),
         i = new Set(["en-US", "es-ES"]),
-        u = () => {
+        r = () => {
           let e = (0, a.default)(),
             t = (0, T.default)([s.default], () => s.default.getUserCountry()),
             E = (0, T.default)([I.default], () => I.default.locale);
@@ -989,4 +985,4 @@
     },
   },
 ]);
-//# sourceMappingURL=37b2689845f2079524d7.js.map
+//# sourceMappingURL=f99cd294f39300902ebd.js.map

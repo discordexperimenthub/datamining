@@ -277,7 +277,7 @@
       }
       async function A(e, t, n, i) {
         let a = l().add(i, "hours").toISOString(),
-          r = await u.default.put({
+          r = await u.HTTP.put({
             url: c.Endpoints.GUILD_INCIDENT_ACTIONS(e),
             body: {
               invites_disabled_until: t ? a : null,
@@ -291,7 +291,7 @@
           l = d.default.getGuild(e),
           a = null == l ? void 0 : l.getSafetyAlertsChannelId();
         if (!i || null == a) return null;
-        let r = await u.default.post({
+        let r = await u.HTTP.post({
           url: c.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
           body: { alert_message_id: t, reason: n },
         });
@@ -302,7 +302,7 @@
           n = d.default.getGuild(e),
           i = null == n ? void 0 : n.getSafetyAlertsChannelId();
         if (!t || null == i) return null;
-        let l = await u.default.post({
+        let l = await u.HTTP.post({
           url: c.Endpoints.GUILD_INCIDENT_REPORT_RAID(e),
         });
         return l;
@@ -858,12 +858,12 @@
             (h &&
               (null == p ? void 0 : p.invitesDisabledUntil) != null &&
               new Date(p.invitesDisabledUntil) > new Date()),
-          [b, v] = l.useState(R),
-          g = async t => {
+          [b, T] = l.useState(R),
+          v = async t => {
             if (!m && null != S) {
               M(!0);
               try {
-                if ((v(t), h)) {
+                if ((T(t), h)) {
                   if (t) {
                     let t = {
                       source: o.GuildIncidentActionSources.MESSAGE,
@@ -879,7 +879,7 @@
                   } else await (0, s.setGuildIncidentActions)(S.id, !1, !1);
                 } else await (0, _.setInvitesDisabled)(S, t);
               } catch (e) {
-                v(!t);
+                T(!t);
               } finally {
                 M(!1), (0, r.closeContextMenu)();
               }
@@ -891,7 +891,7 @@
               id: "pause-invites",
               label: I.default.Messages.DISABLE_INVITES,
               action: () => {
-                g(!b);
+                v(!b);
               },
               checked: b,
             });
@@ -962,4 +962,4 @@
     },
   },
 ]);
-//# sourceMappingURL=519054d7bf9cdae9a566.js.map
+//# sourceMappingURL=51f4346c1fc980acee3b.js.map

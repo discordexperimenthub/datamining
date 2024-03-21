@@ -192,7 +192,7 @@
       var l = n("872717"),
         a = n("49111");
       async function s(e, t, n) {
-        let s = await l.default.get({
+        let s = await l.HTTP.get({
           url: a.Endpoints.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
           query: { type: t, entity_id: n },
         });
@@ -4213,4 +4213,4 @@
     },
   },
 ]);
-//# sourceMappingURL=59879c8c76e354b01dd9.js.map
+//# sourceMappingURL=325b1936da62a5dc6f4f.js.map

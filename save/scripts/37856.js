@@ -63,8 +63,8 @@
           },
         });
       var l = n("872717"),
-        a = n("95410"),
-        o = n("819855"),
+        o = n("95410"),
+        a = n("819855"),
         r = n("913144"),
         s = n("393414"),
         u = n("599110"),
@@ -84,11 +84,11 @@
         let n = e
             ? E.default.Messages.DELETE_ACCOUNT
             : E.default.Messages.DISABLE_ACCOUNT,
-          a = e ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
+          o = e ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
         return (0, c.default)(
           e =>
-            l.default.post({
-              url: a,
+            l.HTTP.post({
+              url: o,
               body: { password: t, ...e },
               oldFormErrors: !0,
             }),
@@ -99,7 +99,7 @@
         });
       }
       async function S(t) {
-        let e = await l.default.patch({
+        let e = await l.HTTP.patch({
             url: _.Endpoints.ME,
             oldFormErrors: !0,
             body: t,
@@ -124,7 +124,7 @@
           username: e,
           discriminator: n,
           email: l,
-          emailToken: o,
+          emailToken: a,
           password: s,
           avatar: d,
           avatarDecoration: T,
@@ -138,7 +138,7 @@
               let r = {
                 username: e,
                 email: l,
-                email_token: o,
+                email_token: a,
                 password: s,
                 avatar: d,
                 discriminator: n,
@@ -150,12 +150,12 @@
                 null != T &&
                   ((r.avatar_decoration_id = T.id),
                   (r.avatar_decoration_sku_id = T.skuId));
-              let u = a.default.get(_.DEVICE_TOKEN),
+              let u = o.default.get(_.DEVICE_TOKEN),
                 i = (0, f.getDevicePushProvider)();
               null != i &&
                 null != u &&
                 ((r.push_provider = i), (r.push_token = u));
-              let c = a.default.get(_.DEVICE_VOIP_TOKEN);
+              let c = o.default.get(_.DEVICE_VOIP_TOKEN);
               return (
                 null != f.DEVICE_PUSH_VOIP_PROVIDER &&
                   null != c &&
@@ -199,13 +199,10 @@
         );
       }
       function C() {
-        return l.default.get({
-          url: _.Endpoints.USER_HARVEST,
-          oldFormErrors: !0,
-        });
+        return l.HTTP.get({ url: _.Endpoints.USER_HARVEST, oldFormErrors: !0 });
       }
       function m() {
-        return l.default.post({
+        return l.HTTP.post({
           url: _.Endpoints.USER_HARVEST,
           oldFormErrors: !0,
         });
@@ -216,10 +213,10 @@
           avatar: t,
         }),
           null == t
-            ? o.AccessibilityAnnouncer.announce(
+            ? a.AccessibilityAnnouncer.announce(
                 E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE
               )
-            : o.AccessibilityAnnouncer.announce(
+            : a.AccessibilityAnnouncer.announce(
                 E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED
               );
       }
@@ -274,9 +271,9 @@
         }),
         n("222007");
       var l = n("37983"),
-        a = n("884691"),
-        o = n("414456"),
-        r = n.n(o),
+        o = n("884691"),
+        a = n("414456"),
+        r = n.n(a),
         s = n("77078"),
         u = n("437822"),
         i = n("152584"),
@@ -293,15 +290,15 @@
         let {
             email: e,
             setEmail: n,
-            claimRequired: o,
+            claimRequired: a,
             onSuccess: _,
             onClose: f,
           } = t,
-          [N, C] = a.useState(),
-          [m, I] = a.useState(""),
-          [g, U] = a.useState(""),
-          [O, R] = a.useState(!1);
-        a.useEffect(
+          [N, C] = o.useState(),
+          [m, I] = o.useState(""),
+          [g, U] = o.useState(""),
+          [O, R] = o.useState(!1);
+        o.useEffect(
           () =>
             c.default.flowStep(
               p.FlowType.ANY,
@@ -348,7 +345,7 @@
                   className: S.formBody,
                   variant: "text-md/normal",
                   color: "header-secondary",
-                  children: o
+                  children: a
                     ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY
                     : A.default.Messages.CLAIM_ACCOUNT_BODY_2,
                 }),
@@ -391,7 +388,7 @@
                     disabled: 0 === e.length || 0 === m.length,
                     children: A.default.Messages.CLAIM_ACCOUNT,
                   }),
-                  o &&
+                  a &&
                     (0, l.jsx)(s.Button, {
                       className: S.logoutButton,
                       color: s.Button.Colors.PRIMARY,
@@ -409,7 +406,7 @@
         });
       }
       function C(t) {
-        let { email: e, claimRequired: n, onClose: o } = t,
+        let { email: e, claimRequired: n, onClose: a } = t,
           u = n
             ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO
             : A.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
@@ -425,7 +422,7 @@
             });
         }
         return (
-          a.useEffect(
+          o.useEffect(
             () =>
               c.default.flowStep(
                 p.FlowType.ANY,
@@ -445,7 +442,7 @@
                   !n &&
                     (0, l.jsx)(s.ModalCloseButton, {
                       className: S.closeButton,
-                      onClick: o,
+                      onClick: a,
                     }),
                   (0, l.jsx)("div", { className: S.successImage }),
                   (0, l.jsx)(s.Text, {
@@ -466,7 +463,7 @@
                     direction: d.default.Direction.VERTICAL,
                     children: (0, l.jsx)(s.Button, {
                       size: s.Button.Sizes.LARGE,
-                      onClick: o,
+                      onClick: a,
                       children: A.default.Messages.OKAY,
                     }),
                   })
@@ -484,15 +481,15 @@
         );
       }
       function m(t) {
-        let { onClose: e, transitionState: n, claimRequired: o = !1 } = t,
-          [r, u] = a.useState(""),
-          [i, c] = a.useState(!1);
+        let { onClose: e, transitionState: n, claimRequired: a = !1 } = t,
+          [r, u] = o.useState(""),
+          [i, c] = o.useState(!1);
         return i
           ? (0, l.jsx)(s.ModalRoot, {
               transitionState: n,
               children: (0, l.jsx)(C, {
                 email: r,
-                claimRequired: o,
+                claimRequired: a,
                 onClose: e,
               }),
             })
@@ -501,7 +498,7 @@
               children: (0, l.jsx)(N, {
                 email: r,
                 setEmail: u,
-                claimRequired: o,
+                claimRequired: a,
                 onSuccess: () => c(!0),
                 onClose: e,
               }),
@@ -510,17 +507,17 @@
     },
     149806: function (t, e, n) {
       "use strict";
-      var l, a, o, r, s, u, i, c, d, _;
+      var l, o, a, r, s, u, i, c, d, _;
       n.r(e),
         n.d(e, {
           FlowType: function () {
             return l;
           },
           AgeGateSteps: function () {
-            return a;
+            return o;
           },
           ClaimAccountSteps: function () {
-            return o;
+            return a;
           },
           CreateGuildSteps: function () {
             return r;
@@ -536,9 +533,9 @@
         (u.ORGANIC_MARKETING = "organic_marketing"),
         (u.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
         (u.CREATE_GUILD = "create_guild"),
-        ((i = a || (a = {})).AGE_GATE = "age_gate"),
+        ((i = o || (o = {})).AGE_GATE = "age_gate"),
         (i.AGE_GATE_UNDERAGE = "age_gate_underage"),
-        ((c = o || (o = {})).CLAIM_ACCOUNT = "claim_account"),
+        ((c = a || (a = {})).CLAIM_ACCOUNT = "claim_account"),
         (c.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"),
         ((d = r || (r = {})).GUILD_TEMPLATES = "guild_templates"),
         (d.GUILD_CREATE = "guild_create"),
@@ -560,8 +557,8 @@
           },
         });
       var l = n("308503"),
-        a = n("95410"),
-        o = n("605250"),
+        o = n("95410"),
+        a = n("605250"),
         r = n("599110"),
         s = n("149806"),
         u = n("49111");
@@ -569,12 +566,12 @@
         c = "UserFlowAnalyticsStore";
       function d(t) {
         if (t === s.FlowType.UNKNOWN) return null;
-        let e = a.default.get("".concat(c, "-").concat(t));
+        let e = o.default.get("".concat(c, "-").concat(t));
         if (null == e) return null;
         let { version: n, ...l } = e;
         return 1 !== n ? null : l;
       }
-      new o.default("UserFlowAnalytics");
+      new a.default("UserFlowAnalytics");
       let _ = (0, l.default)((t, e) => ({
         flows: {},
         currentFlow: null,
@@ -583,17 +580,17 @@
           let n =
             null !== (t = e().currentFlow) && void 0 !== t
               ? t
-              : a.default.get(i);
+              : o.default.get(i);
           if (null == n) return null;
           let { [n]: l } = e().flows,
-            o = null != l ? l : d(n);
-          return (null == o ? void 0 : o.currentStep) != null ? n : null;
+            a = null != l ? l : d(n);
+          return (null == a ? void 0 : a.currentStep) != null ? n : null;
         },
       }));
       function f(t, e) {
         let { [t]: n, ...l } = _.getState().flows,
-          a = null != n ? n : d(t);
-        if ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== e)
+          o = null != n ? n : d(t);
+        if ((null == o ? void 0 : o.currentStep) == null || o.currentStep !== e)
           _.setState({
             flows: {
               ...l,
@@ -613,14 +610,14 @@
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           l = t;
         if (t === s.FlowType.ANY) {
-          var a;
+          var o;
           l =
-            null !== (a = _.getState().activeFlow()) && void 0 !== a
-              ? a
+            null !== (o = _.getState().activeFlow()) && void 0 !== o
+              ? o
               : s.FlowType.UNKNOWN;
         }
-        let { [l]: o, ...r } = _.getState().flows,
-          u = null != o ? o : d(l);
+        let { [l]: a, ...r } = _.getState().flows,
+          u = null != a ? a : d(l);
         if (null != u && null != u.currentStep)
           u.currentStep !== e &&
             _.setState({
@@ -647,12 +644,12 @@
               if (t.type === s.FlowType.UNKNOWN) return;
               let e = "".concat(c, "-").concat(t.type);
               t.ended
-                ? (a.default.remove(e), a.default.remove(i))
-                : (a.default.set("".concat(c, "-").concat(t.type), {
+                ? (o.default.remove(e), o.default.remove(i))
+                : (o.default.set("".concat(c, "-").concat(t.type), {
                     ...t,
                     version: 1,
                   }),
-                  a.default.set(i, t.type));
+                  o.default.set(i, t.type));
             })(t),
             r.default.track(
               u.AnalyticEvents.NUO_TRANSITION,
@@ -710,8 +707,8 @@
           },
         });
       var l = n("597755"),
-        a = n.n(l),
-        o = n("815157"),
+        o = n.n(l),
+        a = n("815157"),
         r = n("271938"),
         s = n("49111");
       let u = "linux";
@@ -729,7 +726,7 @@
         let e =
           arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
-            : null === (t = a.os) || void 0 === t
+            : null === (t = o.os) || void 0 === t
               ? void 0
               : t.family;
         return null == e
@@ -756,24 +753,24 @@
         let l = null != n ? n.toString() : null;
         switch (e) {
           case "iOS":
-            return (0, o.default)(
+            return (0, a.default)(
               null != l
                 ? l
                 : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746",
               {
                 utmSource: t,
                 fingerprint: r.default.getFingerprint(),
-                attemptId: (0, o.generateAttemptId)(),
+                attemptId: (0, a.generateAttemptId)(),
               }
             );
           case "Android":
-            return (0, o.default)(
+            return (0, a.default)(
               null != l ? l : "https://play.google.com/store/apps/details",
               {
                 utmSource: t,
                 id: "com.discord",
                 fingerprint: r.default.getFingerprint(),
-                attemptId: (0, o.generateAttemptId)(),
+                attemptId: (0, a.generateAttemptId)(),
               }
             );
           default:
@@ -783,4 +780,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3d66aa846c3f07b138e7.js.map
+//# sourceMappingURL=c4c1f9639d0540dcdac1.js.map

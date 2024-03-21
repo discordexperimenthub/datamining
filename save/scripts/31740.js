@@ -398,50 +398,50 @@
             setModalOverlayNode: _,
             setReadySlideId: I,
           } = (0, f.usePaymentContext)(),
-          N = p.find(e => e.key === m);
+          T = p.find(e => e.key === m);
         i.useEffect(() => {
           _(null);
         }, [m, _]),
-          o(null != N, "Unknown step for current payment flow.");
-        let T =
+          o(null != T, "Unknown step for current payment flow.");
+        let N =
             null !==
               (u =
-                null == N
+                null == T
                   ? void 0
-                  : null === (t = N.options) || void 0 === t
+                  : null === (t = T.options) || void 0 === t
                     ? void 0
                     : t.hideSlider) &&
             void 0 !== u &&
             u,
           A =
-            null == N
+            null == T
               ? void 0
-              : null === (n = N.options) || void 0 === n
+              : null === (n = T.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
           x =
             void 0 !== v && v
               ? h.sliderBodyLarge
-              : null == N
+              : null == T
                 ? void 0
-                : null === (s = N.options) || void 0 === s
+                : null === (s = T.options) || void 0 === s
                   ? void 0
                   : s.sliderBodyClassName;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             null ===
               (c =
-                null == N
+                null == T
                   ? void 0
-                  : null === (a = N.options) || void 0 === a
+                  : null === (a = T.options) || void 0 === a
                     ? void 0
                     : a.renderHeader) ||
             void 0 === c ||
             c
               ? E
               : null,
-            N.renderStep(C),
-            null == m || T
+            T.renderStep(C),
+            null == m || N
               ? null
               : (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -624,7 +624,7 @@
         o = async () => {
           i.default.dispatch({ type: "USER_PROFILE_EFFECTS_FETCH" });
           try {
-            let { body: e } = await r.default.get(
+            let { body: e } = await r.HTTP.get(
                 l.Endpoints.USER_PROFILE_EFFECTS
               ),
               t = null == e ? void 0 : e.profile_effect_configs,
@@ -769,8 +769,8 @@
         S = n("598854"),
         _ = n("49111"),
         I = n("646718"),
-        N = n("782340"),
-        T = n("810473");
+        T = n("782340"),
+        N = n("810473");
       function A(e) {
         let {
             user: t,
@@ -793,15 +793,15 @@
               });
           }, [u, m, C]);
         return (0, r.jsx)(a.ModalFooter, {
-          className: T.modalFooter,
+          className: N.modalFooter,
           children: (0, r.jsxs)("div", {
-            className: T.buttonsRight,
+            className: N.buttonsRight,
             children: [
               (0, r.jsx)(a.Button, {
                 look: a.Button.Looks.LINK,
                 color: a.Button.Colors.PRIMARY,
                 onClick: u,
-                children: N.default.Messages.CANCEL,
+                children: T.default.Messages.CANCEL,
               }),
               (() => {
                 let e =
@@ -810,21 +810,21 @@
                   return (0, r.jsx)(a.Button, {
                     onClick: l,
                     disabled: f,
-                    children: N.default.Messages.AVATAR_DECORATION_MODAL_APPLY,
+                    children: T.default.Messages.AVATAR_DECORATION_MODAL_APPLY,
                   });
                 let i = h || !(0, d.isPremiumCollectiblesProduct)(n);
                 return i
                   ? (0, r.jsx)(a.Button, {
-                      className: T.modalFooterShopButton,
+                      className: N.modalFooterShopButton,
                       onClick: g,
-                      children: N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+                      children: T.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                     })
                   : (0, r.jsx)(E.default, {
                       subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
                       buttonText: p.default.isPremium(t)
-                        ? N.default.Messages
+                        ? T.default.Messages
                             .USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL
-                        : N.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+                        : T.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                     });
               })(),
             ],
@@ -890,20 +890,20 @@
           children: [
             (0, r.jsxs)(a.ModalHeader, {
               separator: !1,
-              className: T.modalHeader,
+              className: N.modalHeader,
               children: [
                 (0, r.jsx)(a.Heading, {
                   variant: "heading-lg/semibold",
-                  children: N.default.Messages.PROFILE_EFFECT_MODAL_HEADER,
+                  children: T.default.Messages.PROFILE_EFFECT_MODAL_HEADER,
                 }),
                 (0, r.jsx)(a.ModalCloseButton, {
-                  className: T.modalCloseButton,
+                  className: N.modalCloseButton,
                   onClick: o,
                 }),
               ],
             }),
             (0, r.jsxs)(a.ModalContent, {
-              className: T.modalContent,
+              className: N.modalContent,
               children: [
                 (0, r.jsx)(S.default, {
                   user: t,
@@ -952,7 +952,7 @@
           I = (0, l.useStateFromStores)([C.default], () =>
             C.default.getCurrentUser()
           ),
-          { AnalyticsLocationProvider: N, analyticsLocations: A } = (0,
+          { AnalyticsLocationProvider: T, analyticsLocations: A } = (0,
           u.default)(n, o.default.EDIT_PROFILE_EFFECT_MODAL),
           P = (0, v.useGlobalOrGuildIdentityProfileEffect)(I, f);
         return (
@@ -971,14 +971,14 @@
             },
             [g]
           ),
-          (0, r.jsx)(N, {
+          (0, r.jsx)(T, {
             children: (0, r.jsx)(a.ModalRoot, {
               transitionState: t,
               size: a.ModalSize.DYNAMIC,
-              className: T.modal,
+              className: N.modal,
               children: p
                 ? (0, r.jsx)(a.Spinner, {
-                    className: T.spinner,
+                    className: N.spinner,
                     type: a.Spinner.Type.SPINNING_CIRCLE,
                   })
                 : (0, r.jsx)(x, {
@@ -1026,7 +1026,7 @@
       var S = n("719923"),
         _ = n("782340"),
         I = n("619986");
-      let N = e => {
+      let T = e => {
           var t;
           let {
               effectIsOwned: n,
@@ -1044,7 +1044,7 @@
             E = S.default.canUseCollectibles(d),
             C = (0, o.isPremiumCollectiblesPurchase)(c),
             m = (0, o.isPremiumCollectiblesProduct)(u),
-            p = T(!E && C, m, E);
+            p = N(!E && C, m, E);
           return null != l
             ? (0, r.jsx)("div", {
                 className: n
@@ -1098,7 +1098,7 @@
               })
             : null;
         },
-        T = (e, t, n) =>
+        N = (e, t, n) =>
           e
             ? _.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED
             : t && n
@@ -1120,7 +1120,7 @@
           } = e,
           {
             pendingGlobalName: _,
-            pendingNickname: T,
+            pendingNickname: N,
             pendingPronouns: A,
             pendingBio: x,
             pendingBanner: P,
@@ -1147,7 +1147,7 @@
             user: n,
             guild: g,
             pendingGlobalName: _,
-            pendingNickname: T,
+            pendingNickname: N,
             pendingPronouns: A,
             pendingBio: F,
             pendingBanner: P,
@@ -1177,7 +1177,7 @@
               forProfileEffectModal: !0,
             }),
             !1,
-            (0, r.jsx)(N, {
+            (0, r.jsx)(T, {
               effectIsOwned: a,
               pendingProfileEffectRecord: s,
               product: o,
@@ -1218,8 +1218,8 @@
         S = n("719923"),
         _ = n("845962"),
         I = n("831308"),
-        N = n("49111"),
-        T = n("782340"),
+        T = n("49111"),
+        N = n("782340"),
         A = n("971864"),
         x = n("513002");
       let P = () => 80,
@@ -1249,7 +1249,7 @@
               let e = f.default.getProduct(s.skuId);
               return (0, E.isPremiumCollectiblesProduct)(e);
             }),
-            N = (0, u.default)([h.default], () => h.default.isItemViewed(s)),
+            T = (0, u.default)([h.default], () => h.default.isItemViewed(s)),
             P = i.useRef(null),
             {
               accessibilityLabel: M,
@@ -1286,7 +1286,7 @@
                     a === I.Section.PURCHASE ||
                     (a === I.Section.PREMIUM_PURCHASE && b);
                   if (e) return null;
-                  let t = !N && !c && !j;
+                  let t = !T && !c && !j;
                   return t
                     ? (0, r.jsx)(g.PremiumBadge, {
                         className: A.newBadge,
@@ -1294,7 +1294,7 @@
                           className: A.newBadgeText,
                           children: [
                             (0, r.jsx)(p.default, { width: 12, height: 12 }),
-                            T.default.Messages.NEW,
+                            N.default.Messages.NEW,
                           ],
                         }),
                       })
@@ -1322,7 +1322,7 @@
             onClose: o,
           } = e,
           u = () => {
-            o(), (0, d.pushLayer)(N.Layers.COLLECTIBLES_SHOP);
+            o(), (0, d.pushLayer)(T.Layers.COLLECTIBLES_SHOP);
           },
           f = (0, I.default)(),
           h = null != i;
@@ -1356,9 +1356,9 @@
                           color: "header-primary",
                           children:
                             null != n
-                              ? T.default.Messages
+                              ? N.default.Messages
                                   .USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT
-                              : T.default.Messages.NONE,
+                              : N.default.Messages.NONE,
                         }),
                       ],
                     },
@@ -1376,7 +1376,7 @@
                         (0, r.jsx)(c.Text, {
                           variant: "text-xs/normal",
                           color: "header-primary",
-                          children: T.default.Messages.COLLECTIBLES_SHOP,
+                          children: N.default.Messages.COLLECTIBLES_SHOP,
                         }),
                       ],
                     },
@@ -1444,10 +1444,10 @@
             return _;
           },
           useCanViewThreadForMessage: function () {
-            return N;
+            return T;
           },
           useHasActiveThreads: function () {
-            return T;
+            return N;
           },
           useCanManageThread: function () {
             return A;
@@ -1549,7 +1549,7 @@
           ) && !0
         );
       }
-      function N(e) {
+      function T(e) {
         let t = (0, l.useStateFromStores)(
             [f.default],
             () =>
@@ -1567,7 +1567,7 @@
           );
         })(n, e, t);
       }
-      function T(e) {
+      function N(e) {
         return (0, l.useStateFromStoresObject)([v.default, h.default], () => {
           let t = v.default.getActiveJoinedThreadsForParent(e.guild_id, e.id),
             n = v.default.getActiveJoinedRelevantThreadsForParent(
@@ -2909,4 +2909,4 @@
     },
   },
 ]);
-//# sourceMappingURL=97735247b694b6fdadbc.js.map
+//# sourceMappingURL=9f0748a38f184c0b897c.js.map

@@ -735,11 +735,11 @@
             applicationId: L,
             referralTrialOfferId: R,
             giftRecipient: M,
-            returnRef: F,
-            subscription: P,
+            returnRef: P,
+            subscription: F,
           } = null != e ? e : {},
-          U = !1,
-          H = (0, a.v4)(),
+          H = !1,
+          U = (0, a.v4)(),
           D = u.default.getCurrentUser(),
           w = (0, f.isPremiumExactly)(D, _.PremiumTypes.TIER_2);
         (0, l.openModalLazy)(
@@ -749,7 +749,7 @@
               let { onClose: a, ...l } = n;
               return (0, i.jsx)(e, {
                 ...l,
-                loadId: H,
+                loadId: U,
                 subscriptionTier: N,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(N),
                 isGift: g,
@@ -771,7 +771,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (U = !0),
+                  (H = !0),
                     null == m || m(),
                     !g && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -786,17 +786,17 @@
                 openInvoiceId: b,
                 applicationId: L,
                 referralTrialOfferId: R,
-                returnRef: F,
-                subscription: P,
+                returnRef: P,
+                subscription: F,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !U &&
+              !H &&
                 c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: H,
+                  load_id: U,
                   payment_type:
                     E.PurchaseTypeToAnalyticsPaymentType[
                       E.PurchaseTypes.SUBSCRIPTION
@@ -811,8 +811,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, r.clearPurchaseTokenAuthState)(),
-                null == S || S(U),
-                U && (null == p || p());
+                null == S || S(H),
+                H && (null == p || p());
             },
           }
         );
@@ -1022,8 +1022,8 @@
               : o.Endpoints.SAFETY_HUB,
           n =
             null != e
-              ? i.default.post({ url: t, body: { token: e } })
-              : i.default.get({ url: t });
+              ? i.HTTP.post({ url: t, body: { token: e } })
+              : i.HTTP.get({ url: t });
         await n
           .then(e => {
             let { body: t } = e,
@@ -1070,8 +1070,8 @@
               : o.Endpoints.SAFETY_HUB,
           l =
             null != t
-              ? i.default.post({ url: n, body: { token: t } })
-              : i.default.get({ url: n });
+              ? i.HTTP.post({ url: n, body: { token: t } })
+              : i.HTTP.get({ url: n });
         await l
           .then(t => {
             let { body: n } = t,
@@ -1131,11 +1131,11 @@
               : o.Endpoints.SAFETY_HUB_REQUEST_REVIEW(e),
           u =
             null != l
-              ? i.default.put({
+              ? i.HTTP.put({
                   url: r,
                   body: { signal: t, user_input: n, token: l },
                 })
-              : i.default.put({ url: r, body: { signal: t, user_input: n } });
+              : i.HTTP.put({ url: r, body: { signal: t, user_input: n } });
         a.default.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
           await u
             .then(() => {
@@ -2271,13 +2271,13 @@
             return M;
           },
           computeIsReadOnlyThread: function () {
-            return F;
+            return P;
           },
           useIsThreadModerator: function () {
-            return U;
+            return H;
           },
           useCanJoinThreadVoice: function () {
-            return H;
+            return U;
           },
           useIsNonModInLockedThread: function () {
             return D;
@@ -2425,13 +2425,13 @@
       }
       function b(e) {
         let t = (0, s.useStateFromStores)([E.default], () => x(e, E.default)),
-          n = U(e);
+          n = H(e);
         return y(e, t, n);
       }
       function L(e) {
         let t = x(e, E.default),
           n = (function (e) {
-            return P(e, E.default);
+            return F(e, E.default);
           })(e);
         return y(e, t, n);
       }
@@ -2467,17 +2467,17 @@
               E.default.can(S.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function F(e) {
+      function P(e) {
         let t = E.default.can(S.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function P(e, t) {
+      function F(e, t) {
         return null != e && t.can(S.Permissions.MANAGE_THREADS, e);
       }
-      function U(e) {
-        return (0, s.useStateFromStores)([E.default], () => P(e, E.default));
-      }
       function H(e) {
+        return (0, s.useStateFromStores)([E.default], () => F(e, E.default));
+      }
+      function U(e) {
         let t = (0, o.default)(),
           n = (0, s.useStateFromStores)([E.default], () =>
             E.default.can(S.Permissions.CONNECT, e)
@@ -2490,7 +2490,7 @@
         return !t && e.isVocalThread() && a && n && i;
       }
       function D(e) {
-        let t = U(e);
+        let t = H(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -3539,4 +3539,4 @@
     },
   },
 ]);
-//# sourceMappingURL=99592ea5836415504298.js.map
+//# sourceMappingURL=1eeabec1b45cc094936c.js.map

@@ -70,24 +70,22 @@
                   o = (0, s.v4)();
                 u.searchParams.append("handoff_key", o),
                   u.searchParams.append("redirect_to", i),
-                  l.default
-                    .post({
-                      url: P.Endpoints.HANDOFF,
-                      body: { key: o },
-                      oldFormErrors: !0,
-                    })
-                    .then(
-                      e => {
-                        u.searchParams.append(
-                          "handoff_token",
-                          e.body.handoff_token
-                        ),
-                          window.open(u.href);
-                      },
-                      () => {
-                        r();
-                      }
-                    );
+                  l.HTTP.post({
+                    url: P.Endpoints.HANDOFF,
+                    body: { key: o },
+                    oldFormErrors: !0,
+                  }).then(
+                    e => {
+                      u.searchParams.append(
+                        "handoff_token",
+                        e.body.handoff_token
+                      ),
+                        window.open(u.href);
+                    },
+                    () => {
+                      r();
+                    }
+                  );
               })(
                 null !== (e = null == n ? void 0 : n.id) && void 0 !== e
                   ? e
@@ -1146,4 +1144,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15262.bf1a2fc39c05f55d25ac.js.map
+//# sourceMappingURL=15262.50cf409f62d39c99c339.js.map

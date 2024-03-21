@@ -130,7 +130,7 @@
             ...o
           } = n;
           try {
-            let n = await a.default.patch({
+            let n = await a.HTTP.patch({
               url: i.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
               body: {
                 ...o,
@@ -147,9 +147,7 @@
         },
         u = async (t, e) => {
           try {
-            await a.default.delete({
-              url: i.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
-            });
+            await a.HTTP.del({ url: i.Endpoints.GUILD_PRODUCT_LISTINGS(t, e) });
           } catch (t) {
             throw new r.APIError(t);
           }
@@ -177,7 +175,7 @@
         c = async t => {
           let { guildId: e, productId: n, attachmentId: l } = t;
           try {
-            let t = await a.default.post({
+            let t = await a.HTTP.post({
               url: i.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, n, l),
             });
             return t.body;
@@ -400,22 +398,22 @@
         _ = n("116834");
       function m(t) {
         var e, n, r, m;
-        let { guildId: D, productId: I } = t,
-          T = (0, i.default)([c.default], () => c.default.getGuildProduct(I)),
+        let { guildId: T, productId: D } = t,
+          I = (0, i.default)([c.default], () => c.default.getGuildProduct(D)),
           C =
             (null !==
               (m =
-                null == T
+                null == I
                   ? void 0
-                  : null === (e = T.attachments) || void 0 === e
+                  : null === (e = I.attachments) || void 0 === e
                     ? void 0
                     : e.length) && void 0 !== m
               ? m
               : 0) > 1,
           L =
-            null == T
+            null == I
               ? void 0
-              : null === (r = T.attachments) || void 0 === r
+              : null === (r = I.attachments) || void 0 === r
                 ? void 0
                 : null === (n = r[0]) || void 0 === n
                   ? void 0
@@ -423,7 +421,7 @@
         return C
           ? (0, a.jsxs)(s.Button, {
               onClick: function () {
-                f.default.open({ guildId: D, productId: I });
+                f.default.open({ guildId: T, productId: D });
               },
               innerClassName: _.textWithIcon,
               children: [
@@ -442,8 +440,8 @@
             })
           : (l(null != L, "No attachment"),
             (0, a.jsxs)(h.default, {
-              guildId: D,
-              productId: I,
+              guildId: T,
+              productId: D,
               attachmentId: L,
               innerClassName: _.textWithIcon,
               children: [
@@ -538,7 +536,7 @@
       n.r(e),
         n.d(e, {
           default: function () {
-            return P;
+            return p;
           },
         }),
         n("222007");
@@ -556,9 +554,9 @@
         x = n("305961"),
         _ = n("191814"),
         m = n("945330"),
-        D = n("153160"),
-        I = n("359366"),
-        T = n("565559"),
+        T = n("153160"),
+        D = n("359366"),
+        I = n("565559"),
         C = n("928576"),
         L = n("911029"),
         O = n("856246"),
@@ -569,7 +567,7 @@
       function N(t) {
         let { guildProductListing: e, guildId: n, skuPricePreview: r } = t,
           l = (0, C.useProductType)(e),
-          i = (0, D.formatPrice)(r.amount, r.currency),
+          i = (0, T.formatPrice)(r.amount, r.currency),
           s = (0, d.useStateFromStores)([x.default], () =>
             x.default.getGuild(n)
           );
@@ -666,7 +664,7 @@
               }),
             });
       }
-      function E(t) {
+      function P(t) {
         let { role: e } = t;
         return null == e
           ? null
@@ -677,7 +675,7 @@
               children: (0, a.jsx)(g.default, { role: e }),
             });
       }
-      function p(t) {
+      function E(t) {
         return (0, a.jsx)(c.Text, {
           tag: "span",
           variant: "text-md/semibold",
@@ -685,7 +683,7 @@
           children: t,
         });
       }
-      function P(t) {
+      function p(t) {
         var e;
         let {
             onClose: n,
@@ -694,15 +692,15 @@
             guildId: s,
             skuPricePreview: f,
           } = t,
-          D = (0, d.useStateFromStores)([T.default], () =>
-            T.default.getGuildProduct(i)
+          T = (0, d.useStateFromStores)([I.default], () =>
+            I.default.getGuildProduct(i)
           );
-        u(null != D, "guildProductListing cannot be null");
+        u(null != T, "guildProductListing cannot be null");
         let [C, L] = r.useState(!1);
         r.useEffect(() => {
           (async function t() {
             try {
-              L(!0), await (0, I.fetchGuildProduct)(s, i), L(!1);
+              L(!0), await (0, D.fetchGuildProduct)(s, i), L(!1);
             } catch (t) {
               n(),
                 (0, h.default)({
@@ -718,8 +716,8 @@
           })();
         }, [s, i, n]);
         let O =
-            (null !== (e = D.attachments) && void 0 !== e ? e : []).length > 0,
-          v = D.role_id,
+            (null !== (e = T.attachments) && void 0 !== e ? e : []).length > 0,
+          v = T.role_id,
           g = (0, d.useStateFromStores)([x.default], () =>
             null != v ? x.default.getRole(s, v) : void 0
           );
@@ -727,7 +725,7 @@
           className: j.modal,
           size: c.ModalSize.DYNAMIC,
           transitionState: l,
-          "aria-label": D.name,
+          "aria-label": T.name,
           children: (0, a.jsx)(c.ModalContent, {
             children: (0, a.jsx)("div", {
               className: j.container,
@@ -761,7 +759,7 @@
                         color: "text-normal",
                         children:
                           R.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_INTRO.format(
-                            { productName: D.name, emphasisHook: p }
+                            { productName: T.name, emphasisHook: E }
                           ),
                       }),
                       (0, a.jsx)(_.default, { size: 12 }),
@@ -776,7 +774,7 @@
                             : "",
                           null != g
                             ? R.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_BODY_ROLE.format(
-                                { roleName: g.name, emphasisHook: p }
+                                { roleName: g.name, emphasisHook: E }
                               )
                             : "",
                         ],
@@ -791,7 +789,7 @@
                       }),
                       (0, a.jsx)(_.default, { size: 24 }),
                       (0, a.jsx)(N, {
-                        guildProductListing: D,
+                        guildProductListing: T,
                         guildId: s,
                         skuPricePreview: f,
                       }),
@@ -801,8 +799,8 @@
                       (0, a.jsxs)("ul", {
                         className: j.benefitsContainer,
                         children: [
-                          (0, a.jsx)(U, { guildProductListing: D, guildId: s }),
-                          (0, a.jsx)(E, { role: g }),
+                          (0, a.jsx)(U, { guildProductListing: T, guildId: s }),
+                          (0, a.jsx)(P, { role: g }),
                         ],
                       }),
                     ],
@@ -898,4 +896,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c89b881a0ca7c17f6556.js.map
+//# sourceMappingURL=16579149ea1812c10083.js.map

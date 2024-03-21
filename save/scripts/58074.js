@@ -238,7 +238,7 @@
           async setAccountFlag(e, t) {
             let n = l.default.accountNotificationSettings.flags,
               a = (0, u.setFlag)(n, e, t);
-            await i.default.patch({
+            await i.HTTP.patch({
               url: c.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
               body: { flags: a },
             }),
@@ -1322,7 +1322,7 @@
         s = n("773163"),
         l = n("49111");
       async function u(e) {
-        await i.default.put({
+        await i.HTTP.put({
           url: l.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: { consent_status: s.MessageRequestConsentStatusTypes.ACCEPTED },
         }),
@@ -1332,7 +1332,7 @@
           });
       }
       function o(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: l.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: {
             consent_status: s.MessageRequestConsentStatusTypes.UNSPECIFIED,
@@ -1340,18 +1340,16 @@
         });
       }
       function d(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: l.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: { consent_status: s.MessageRequestConsentStatusTypes.PENDING },
         });
       }
       function c(e) {
-        return i.default.delete({
-          url: l.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
-        });
+        return i.HTTP.del({ url: l.Endpoints.CHANNEL_RECIPIENT_CONSENT(e) });
       }
       function f(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: l.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
           body: { channel_ids: e },
         });
@@ -1601,52 +1599,52 @@
             setBodyNode: S,
             setFooterNode: g,
             setModalOverlayNode: N,
-            setReadySlideId: I,
+            setReadySlideId: T,
           } = (0, f.usePaymentContext)(),
-          A = v.find(e => e.key === h);
+          I = v.find(e => e.key === h);
         a.useEffect(() => {
           N(null);
         }, [h, N]),
-          u(null != A, "Unknown step for current payment flow.");
-        let T =
+          u(null != I, "Unknown step for current payment flow.");
+        let A =
             null !==
               (o =
-                null == A
+                null == I
                   ? void 0
-                  : null === (t = A.options) || void 0 === t
+                  : null === (t = I.options) || void 0 === t
                     ? void 0
                     : t.hideSlider) &&
             void 0 !== o &&
             o,
           m =
-            null == A
+            null == I
               ? void 0
-              : null === (n = A.options) || void 0 === n
+              : null === (n = I.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
           R =
             void 0 !== p && p
               ? E.sliderBodyLarge
-              : null == A
+              : null == I
                 ? void 0
-                : null === (r = A.options) || void 0 === r
+                : null === (r = I.options) || void 0 === r
                   ? void 0
                   : r.sliderBodyClassName;
         return (0, i.jsxs)(i.Fragment, {
           children: [
             null ===
               (d =
-                null == A
+                null == I
                   ? void 0
-                  : null === (l = A.options) || void 0 === l
+                  : null === (l = I.options) || void 0 === l
                     ? void 0
                     : l.renderHeader) ||
             void 0 === d ||
             d
               ? C
               : null,
-            A.renderStep(_),
-            null == h || T
+            I.renderStep(_),
+            null == h || A
               ? null
               : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -1655,7 +1653,7 @@
                       children: (0, i.jsx)(c.Slides, {
                         activeSlide: h,
                         centered: !1,
-                        onSlideReady: e => I(e),
+                        onSlideReady: e => T(e),
                         children: v
                           .filter(e => null != e.key)
                           .map(e =>
@@ -1723,9 +1721,9 @@
             analyticsLocations: S,
             analyticsObject: g,
             analyticsLocation: N,
-            analyticsSourceLocation: I,
-            isGift: A = !1,
-            giftMessage: T,
+            analyticsSourceLocation: T,
+            isGift: I = !1,
+            giftMessage: A,
             subscriptionTier: m,
             trialId: R,
             postSuccessGuild: y,
@@ -1750,8 +1748,8 @@
                 loadId: G,
                 subscriptionTier: m,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(m),
-                isGift: A,
-                giftMessage: T,
+                isGift: I,
+                giftMessage: A,
                 giftRecipient: L,
                 initialPlanId: t,
                 followupSKUInfo: p,
@@ -1760,7 +1758,7 @@
                     null == _ || _(e),
                     e &&
                       (null == v || v(),
-                      !A &&
+                      !I &&
                         null != t &&
                         t === C.PremiumSubscriptionSKUs.TIER_2 &&
                         !D &&
@@ -1771,13 +1769,13 @@
                 onComplete: () => {
                   (F = !0),
                     null == h || h(),
-                    !A && (0, u.setCanPlayWowMoment)(!0);
+                    !I && (0, u.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: v,
                 analyticsLocations: S,
                 analyticsObject: g,
                 analyticsLocation: N,
-                analyticsSourceLocation: I,
+                analyticsSourceLocation: T,
                 trialId: R,
                 postSuccessGuild: y,
                 planGroup: C.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -1800,9 +1798,9 @@
                       E.PurchaseTypes.SUBSCRIPTION
                     ],
                   location: null != N ? N : g,
-                  source: I,
+                  source: T,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
-                  is_gift: A,
+                  is_gift: I,
                   eligible_for_trial: null != R,
                   application_id: O,
                   location_stack: S,
@@ -2021,7 +2019,7 @@
             channelId: e,
             warningIds: t,
           }),
-          i.default.post({
+          i.HTTP.post({
             url: r.Endpoints.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: { warning_ids: t },
             oldFormErrors: !0,
@@ -2049,7 +2047,7 @@
         });
       }
       function d(e) {
-        return i.default.post({
+        return i.HTTP.post({
           url: r.Endpoints.SAFETY_WARNING_FALSE_POSITIVE(e),
         });
       }
@@ -2286,10 +2284,10 @@
         a.default.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
       }
       function o(e) {
-        return i.default.delete({ url: r.Endpoints.DELETE_SAFETY_WARNINGS(e) });
+        return i.HTTP.del({ url: r.Endpoints.DELETE_SAFETY_WARNINGS(e) });
       }
       function d(e, t) {
-        return i.default.post({
+        return i.HTTP.post({
           url: r.Endpoints.ADD_SAFETY_WARNING(e),
           body: { safety_warning_type: t },
         });
@@ -2513,9 +2511,9 @@
         S = n("936947"),
         g = n("918034"),
         N = n("976127"),
-        I = n("856030"),
-        A = n("726750"),
-        T = n("170990"),
+        T = n("856030"),
+        I = n("726750"),
+        A = n("170990"),
         m = n("304582"),
         R = n("72057"),
         y = n("563816"),
@@ -2557,7 +2555,7 @@
                 J = (0, o.default)(null, t),
                 $ = (0, x.default)(t.id),
                 ee = (0, b.default)(t.id, n.id),
-                et = (0, T.default)(t),
+                et = (0, A.default)(t),
                 en = (0, F.default)(t.id),
                 ei = (0, L.default)(t.id, n.id),
                 ea = (0, M.default)(t),
@@ -2573,7 +2571,7 @@
                 eu = (0, C.default)(n),
                 eo = (0, f.default)(t.id),
                 ed = (0, c.default)(n.id),
-                ec = (0, A.default)(t),
+                ec = (0, I.default)(t),
                 ef = (0, E.default)(t.id),
                 eE = (0, y.default)({
                   commandType: u.ApplicationCommandType.USER,
@@ -2588,31 +2586,31 @@
                 eh = (0, S.default)(n),
                 ev = (0, N.useMessageRequestItem)(n),
                 eS = (0, g.useInappropriateConversationItem)(n),
-                eg = (0, I.useSafetyWarningsItem)(n),
+                eg = (0, T.useSafetyWarningsItem)(n),
                 eN = n.isManaged(),
-                eI = t.isNonUserBot();
+                eT = t.isNonUserBot();
               return (0, i.jsxs)(a.Menu, {
                 navId: "user-context",
                 onClose: r.closeContextMenu,
                 "aria-label": V.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: k,
                 children: [
-                  (0, i.jsx)(a.MenuGroup, { children: !eI && eu }),
+                  (0, i.jsx)(a.MenuGroup, { children: !eT && eu }),
                   (0, i.jsx)(a.MenuGroup, { children: ev }),
                   (0, i.jsx)(a.MenuGroup, { children: eg }),
                   (0, i.jsx)(a.MenuGroup, { children: eS }),
                   (0, i.jsxs)(a.MenuGroup, { children: [eC, e_, eh] }),
-                  (0, i.jsx)(a.MenuGroup, { children: !eI && ec }),
+                  (0, i.jsx)(a.MenuGroup, { children: !eT && ec }),
                   (0, i.jsxs)(a.MenuGroup, {
                     children: [
-                      !eI &&
+                      !eT &&
                         (0, i.jsxs)(i.Fragment, {
                           children: [j && B, Z, !eN && ee, j && z, j && q, K],
                         }),
                       X,
                     ],
                   }),
-                  !eI &&
+                  !eT &&
                     (0, i.jsxs)(i.Fragment, {
                       children: [
                         (0, i.jsx)(a.MenuGroup, { children: d && $ }),
@@ -2742,7 +2740,7 @@
       }
       async function C(e, t) {
         null == e || e === u.ME
-          ? await i.default.patch({
+          ? await i.HTTP.patch({
               url: u.Endpoints.USER_GUILD_SETTINGS(u.ME),
               body: t,
             })
@@ -2776,7 +2774,7 @@
           ? ((o = { ...n }),
             delete e[u.FAVORITES],
             (
-              await i.default.patch({
+              await i.HTTP.patch({
                 url: u.Endpoints.USER_GUILD_SETTINGS_BULK,
                 body: { guilds: e },
               })
@@ -4017,4 +4015,4 @@
     },
   },
 ]);
-//# sourceMappingURL=736b7141cde5b9cad05b.js.map
+//# sourceMappingURL=cc787dddfca36e4401a6.js.map

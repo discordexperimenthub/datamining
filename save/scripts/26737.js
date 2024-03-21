@@ -34,7 +34,7 @@
           n.default.dispatch({ type: "RESORT_THREADS", channelId: e });
         },
         createForumTag: (e, t) =>
-          i.default.post({
+          i.HTTP.post({
             url: o.Endpoints.FORUM_TAGS(t),
             body: {
               name: e.name,
@@ -44,7 +44,7 @@
             },
           }),
         updateForumTag(e, t) {
-          let s = i.default.put({
+          let s = i.HTTP.put({
             url: o.Endpoints.FORUM_TAG(t, e.id),
             body: {
               name: e.name,
@@ -60,7 +60,7 @@
           );
         },
         deleteForumTag(e, t) {
-          let s = i.default.delete({ url: o.Endpoints.FORUM_TAG(e, t) });
+          let s = i.HTTP.del({ url: o.Endpoints.FORUM_TAG(e, t) });
           m(
             () => s,
             c.default.Messages.FORUM_TAG_REMOVE_ERROR,
@@ -69,7 +69,7 @@
         },
         updateForumPostTags: async (e, t) => (
           await d.default.unarchiveThreadIfNecessary(e),
-          i.default.patch({
+          i.HTTP.patch({
             url: o.Endpoints.CHANNEL(e),
             body: { applied_tags: t },
           })
@@ -507,4 +507,4 @@
     },
   },
 ]);
-//# sourceMappingURL=26737.36ed5a81390b304d18a5.js.map
+//# sourceMappingURL=26737.59db27efa7286c2148a9.js.map

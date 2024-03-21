@@ -23,7 +23,7 @@
       async function i(e) {
         a.default.dispatch({ type: "GUILD_POPOUT_FETCH_START", guildId: e });
         try {
-          let t = await l.default.get({
+          let t = await l.HTTP.get({
             url: s.Endpoints.GUILD_PREVIEW(e),
             oldFormErrors: !0,
           });
@@ -117,51 +117,51 @@
         r = n("819855"),
         o = n("77078"),
         c = n("841098"),
-        f = n("407063"),
-        h = n("393414"),
+        h = n("407063"),
+        f = n("393414"),
         g = n("271938"),
         m = n("26989"),
-        _ = n("580357"),
-        E = n("587974"),
-        T = n("315102"),
+        T = n("580357"),
+        _ = n("587974"),
+        E = n("315102"),
         S = n("794818"),
         p = n("503021"),
         I = n("757414"),
         N = n("49111"),
         v = n("782340"),
-        x = n("574569"),
-        A = n("653711"),
-        O = n("570459");
-      function P() {
+        P = n("574569"),
+        x = n("653711"),
+        A = n("570459");
+      function O() {
         return (0, l.jsxs)(l.Fragment, {
           children: [
-            (0, l.jsx)("div", { className: x.splashPlaceholder }),
+            (0, l.jsx)("div", { className: P.splashPlaceholder }),
             (0, l.jsxs)("div", {
-              className: i(x.body, x.hasSplash),
+              className: i(P.body, P.hasSplash),
               children: [
-                (0, l.jsx)("div", { className: x.iconPlaceholder }),
+                (0, l.jsx)("div", { className: P.iconPlaceholder }),
                 (0, l.jsx)("div", {
-                  className: x.headerText,
-                  children: (0, l.jsx)("div", { className: x.namePlaceholder }),
+                  className: P.headerText,
+                  children: (0, l.jsx)("div", { className: P.namePlaceholder }),
                 }),
                 (0, l.jsxs)("div", {
-                  className: x.memberInfo,
+                  className: P.memberInfo,
                   children: [
                     (0, l.jsx)("div", {
-                      className: x.memberCount,
+                      className: P.memberCount,
                       children: (0, l.jsx)("div", {
-                        className: x.memberInfoPlaceholder,
+                        className: P.memberInfoPlaceholder,
                       }),
                     }),
                     (0, l.jsx)("div", {
-                      className: x.memberCount,
+                      className: P.memberCount,
                       children: (0, l.jsx)("div", {
-                        className: x.memberInfoPlaceholder,
+                        className: P.memberInfoPlaceholder,
                       }),
                     }),
                   ],
                 }),
-                (0, l.jsx)("div", { className: x.viewButtonPlaceholder }),
+                (0, l.jsx)("div", { className: P.viewButtonPlaceholder }),
               ],
             }),
           ],
@@ -171,19 +171,19 @@
         let e = (0, c.default)();
         return (0, l.jsx)(o.Dialog, {
           "aria-label": v.default.Messages.GUILD_UNAVAILABLE_HEADER,
-          className: x.guildPopout,
+          className: P.guildPopout,
           children: (0, l.jsxs)("div", {
-            className: x.body,
+            className: P.body,
             children: [
               (0, l.jsx)("img", {
-                src: (0, r.isThemeDark)(e) ? A : O,
-                className: x.unavailableIcon,
+                src: (0, r.isThemeDark)(e) ? x : A,
+                className: P.unavailableIcon,
                 width: 80,
                 height: 80,
                 alt: "",
               }),
               (0, l.jsx)(o.Heading, {
-                className: x.unavailableHeader,
+                className: P.unavailableHeader,
                 variant: "heading-md/semibold",
                 children: v.default.Messages.GUILD_POPOUT_UNAVAILABLE_HEADER,
               }),
@@ -201,9 +201,9 @@
           {
             name: p,
             id: I,
-            discoverySplash: A,
-            icon: O,
-            description: P,
+            discoverySplash: x,
+            icon: A,
+            description: O,
             presenceCount: R,
             memberCount: j,
             emojis: b,
@@ -216,7 +216,7 @@
           ),
           [D, y] = a.useState(!1),
           M = e => {
-            if ((e.stopPropagation(), U)) (0, h.transitionToGuild)(I, r, c);
+            if ((e.stopPropagation(), U)) (0, f.transitionToGuild)(I, r, c);
             else {
               let e = {
                 page: N.AnalyticsPages.GUILD_CHANNEL,
@@ -227,14 +227,14 @@
             }
             y(!0);
           },
-          L = T.default.getGuildDiscoverySplashURL({
+          L = E.default.getGuildDiscoverySplashURL({
             id: I,
-            splash: A,
-            size: 250 * (0, f.getDevicePixelRatio)(),
+            splash: x,
+            size: 250 * (0, h.getDevicePixelRatio)(),
           }),
           G =
             null !==
-              (t = T.default.getGuildIconURL({ id: I, icon: O, size: 80 })) &&
+              (t = E.default.getGuildIconURL({ id: I, icon: A, size: 80 })) &&
             void 0 !== t
               ? t
               : void 0,
@@ -257,36 +257,36 @@
             (F = b.length - 6)),
           (0, l.jsxs)(o.Dialog, {
             "aria-label": p,
-            className: x.guildPopout,
+            className: P.guildPopout,
             children: [
               null != L
                 ? (0, l.jsx)("img", {
                     src: L,
                     alt: "",
-                    className: x.splashImage,
+                    className: P.splashImage,
                   })
                 : null,
               (0, l.jsxs)("div", {
-                className: i(x.body, { [x.hasSplash]: null != L }),
+                className: i(P.body, { [P.hasSplash]: null != L }),
                 children: [
                   (0, l.jsx)("div", {
-                    className: i({ [x.iconWithSplash]: null != L }),
+                    className: i({ [P.iconWithSplash]: null != L }),
                     children: (0, l.jsx)(o.Clickable, {
                       onClick: M,
-                      children: (0, l.jsx)(E.default, {
-                        mask: E.default.Masks.SQUIRCLE,
+                      children: (0, l.jsx)(_.default, {
+                        mask: _.default.Masks.SQUIRCLE,
                         width: 88,
                         height: 88,
                         children: (0, l.jsx)("div", {
-                          className: x.iconMask,
-                          children: (0, l.jsx)(E.default, {
-                            mask: E.default.Masks.SQUIRCLE,
+                          className: P.iconMask,
+                          children: (0, l.jsx)(_.default, {
+                            mask: _.default.Masks.SQUIRCLE,
                             width: 80,
                             height: 80,
                             children: (0, l.jsx)("img", {
                               src: G,
                               alt: "",
-                              className: x.avatar,
+                              className: P.avatar,
                             }),
                           }),
                         }),
@@ -295,10 +295,10 @@
                   }),
                   null != p
                     ? (0, l.jsxs)("div", {
-                        className: x.guildNameWrapper,
+                        className: P.guildNameWrapper,
                         children: [
-                          (0, l.jsx)(_.default, {
-                            className: x.badge,
+                          (0, l.jsx)(T.default, {
+                            className: P.badge,
                             guild: s,
                             tooltipPosition: "top",
                             tooltipColor: o.Tooltip.Colors.PRIMARY,
@@ -307,31 +307,31 @@
                           }),
                           (0, l.jsx)(o.Text, {
                             variant: "text-md/semibold",
-                            className: x.guildName,
+                            className: P.guildName,
                             children: p,
                           }),
                         ],
                       })
                     : null,
-                  null != P
+                  null != O
                     ? (0, l.jsx)(o.Text, {
                         color: "header-secondary",
-                        className: x.description,
+                        className: P.description,
                         variant: "text-sm/normal",
-                        children: P,
+                        children: O,
                       })
                     : null,
                   (0, l.jsxs)("div", {
-                    className: x.memberInfo,
+                    className: P.memberInfo,
                     children: [
                       null != R
                         ? (0, l.jsxs)("div", {
-                            className: x.memberCount,
+                            className: P.memberCount,
                             children: [
-                              (0, l.jsx)("div", { className: x.dotOnline }),
+                              (0, l.jsx)("div", { className: P.dotOnline }),
                               (0, l.jsx)(o.Text, {
                                 variant: "text-xs/normal",
-                                className: x.memberText,
+                                className: P.memberText,
                                 children:
                                   v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format(
                                     { membersOnline: R }
@@ -342,12 +342,12 @@
                         : null,
                       null != j
                         ? (0, l.jsxs)("div", {
-                            className: x.memberCount,
+                            className: P.memberCount,
                             children: [
-                              (0, l.jsx)("div", { className: x.dotOffline }),
+                              (0, l.jsx)("div", { className: P.dotOffline }),
                               (0, l.jsx)(o.Text, {
                                 variant: "text-xs/normal",
-                                className: x.memberText,
+                                className: P.memberText,
                                 children:
                                   v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format(
                                     { count: j }
@@ -361,24 +361,24 @@
                 ],
               }),
               (0, l.jsxs)("div", {
-                className: x.footer,
+                className: P.footer,
                 children: [
                   null != w && w.length > 0
                     ? (0, l.jsxs)(l.Fragment, {
                         children: [
                           (0, l.jsx)(o.Heading, {
                             variant: "heading-deprecated-12/semibold",
-                            className: x.emojiHeader,
+                            className: P.emojiHeader,
                             color: "header-secondary",
                             children: v.default.Messages.SERVER_EMOJI,
                           }),
                           (0, l.jsxs)("div", {
-                            className: i(x.emojiContainer, {
-                              [x.withCounter]: null != F,
+                            className: i(P.emojiContainer, {
+                              [P.withCounter]: null != F,
                             }),
                             children: [
                               w.map(e => {
-                                let t = T.default.getEmojiURL({
+                                let t = E.default.getEmojiURL({
                                   id: e.id,
                                   animated: !1,
                                   size: 24,
@@ -393,7 +393,7 @@
                                         width: 24,
                                         height: 24,
                                         src: t,
-                                        className: i({ [x.emoji]: null == F }),
+                                        className: i({ [P.emoji]: null == F }),
                                         alt: "",
                                       }),
                                   },
@@ -403,7 +403,7 @@
                               null != F
                                 ? (0, l.jsx)(o.Heading, {
                                     variant: "heading-deprecated-12/semibold",
-                                    className: x.emojiCounter,
+                                    className: P.emojiCounter,
                                     color: "header-secondary",
                                     children: "+".concat(F),
                                   })
@@ -450,8 +450,8 @@
         i)
           ? (0, l.jsx)(o.Dialog, {
               "aria-label": v.default.Messages.LOADING,
-              className: x.guildPopout,
-              children: (0, l.jsx)(P, {}),
+              className: P.guildPopout,
+              children: (0, l.jsx)(O, {}),
             })
           : null == r || d
             ? (0, l.jsx)(R, {})
@@ -475,7 +475,7 @@
         r = n("246060");
       function o(e) {
         let { guildId: t, channelId: n, messageId: o, ...c } = e,
-          { unavailable: f, guild: h } = (0, s.useStateFromStoresObject)(
+          { unavailable: h, guild: f } = (0, s.useStateFromStoresObject)(
             [d.default],
             () => ({
               guild: d.default.getGuild(t),
@@ -483,13 +483,13 @@
             }),
             [t]
           ),
-          g = null != h,
+          g = null != f,
           m = a.useCallback(async () => {
             try {
               !g && (await (0, u.fetchGuildForPopout)(t));
             } catch {}
           }, [g, t]);
-        return f
+        return h
           ? (0, l.jsx)(i.Popout, {
               position: "right",
               renderPopout: e => (0, l.jsx)(r.GuildUnavilableDialog, {}),
@@ -499,11 +499,11 @@
               position: "right",
               preload: m,
               renderPopout: e =>
-                null == h
+                null == f
                   ? (0, l.jsx)(l.Fragment, {})
                   : (0, l.jsx)(r.GuildDialog, {
                       ...e,
-                      guild: h,
+                      guild: f,
                       channelId: n,
                       messageId: o,
                     }),
@@ -516,7 +516,7 @@
       n.r(t),
         n.d(t, {
           toggleRequestToSpeak: function () {
-            return T;
+            return E;
           },
           inviteUserToStage: function () {
             return S;
@@ -534,16 +534,16 @@
             return v;
           },
           setEveryoneRolePermissionAllowed: function () {
-            return x;
+            return P;
           },
           startStage: function () {
-            return A;
+            return x;
           },
           editStage: function () {
-            return O;
+            return A;
           },
           endStage: function () {
-            return P;
+            return O;
           },
         });
       var l = n("627445"),
@@ -556,23 +556,23 @@
         r = n("716241"),
         o = n("18494"),
         c = n("800762"),
-        f = n("991170"),
-        h = n("716214"),
+        h = n("991170"),
+        f = n("716214"),
         g = n("230324"),
         m = n("738983"),
-        _ = n("808422"),
-        E = n("49111");
-      function T(e, t) {
+        T = n("808422"),
+        _ = n("49111");
+      function E(e, t) {
         let n = e.getGuildId();
         return (
           a(null != n, "This channel cannot be guildless."),
           t &&
             (0, r.trackWithMetadata)(
-              E.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
+              _.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, g.getStageChannelMetadata)(e) }
             ),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(n),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
               channel_id: e.id,
@@ -584,8 +584,8 @@
         let n = e.getGuildId();
         return (
           a(null != n, "This channel cannot be guildless."),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(n, t),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
               request_to_speak_timestamp: new Date().toISOString(),
@@ -599,16 +599,16 @@
           l = null == e ? void 0 : e.getGuildId();
         a(null != l, "This channel cannot be guildless.");
         let s = c.default.getVoiceStateForChannel(e.id),
-          u = (0, _.getAudienceRequestToSpeakState)(s);
+          u = (0, T.getAudienceRequestToSpeakState)(s);
         return (
           u ===
-            _.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
+            T.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
             !t &&
-            (0, r.trackWithMetadata)(E.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+            (0, r.trackWithMetadata)(_.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, g.getStageChannelMetadata)(e),
             }),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(l),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(l),
             body: {
               suppress: t,
               request_to_speak_timestamp: null,
@@ -622,8 +622,8 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           a(null != t, "This channel cannot be guildless."),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(t),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
               channel_id: e.id,
@@ -637,8 +637,8 @@
         let l = e.getGuildId();
         return (
           a(null != l, "This channel cannot be guildless."),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(l, t),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(l, t),
             body: { suppress: n, channel_id: e.id },
           })
         );
@@ -649,8 +649,8 @@
         return (
           a(null != n, "This channel cannot be guildless."),
           N(t, e.id, !0),
-          i.default.patch({
-            url: E.Endpoints.UPDATE_VOICE_STATE(n, e.id),
+          i.HTTP.patch({
+            url: _.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
               channel_id: t.id,
@@ -660,15 +660,15 @@
           })
         );
       }
-      function x(e, t, n) {
+      function P(e, t, n) {
         let l = e.getGuildId();
         a(null != l, "Channel cannot be guildless");
         let i = e.permissionOverwrites[l],
           r = {
             id: l,
             type: d.PermissionOverwriteType.ROLE,
-            allow: f.NONE,
-            deny: f.NONE,
+            allow: h.NONE,
+            deny: h.NONE,
             ...i,
           };
         n
@@ -676,19 +676,19 @@
           : ((r.allow = s.remove(r.allow, t)), (r.deny = s.add(r.deny, t))),
           u.default.updatePermissionOverwrite(e.id, r);
       }
-      async function A(e, t, n, l) {
+      async function x(e, t, n, l) {
         if ("" === t) return;
         let a = o.default.getVoiceChannelId() === e.id;
-        !a && (0, h.connectToStage)(e);
+        !a && (0, f.connectToStage)(e);
         let s = await (0, m.startStageInstance)(e.id, t, n, l);
         return p(e, !1, !0), s;
       }
-      async function O(e, t, n) {
+      async function A(e, t, n) {
         if ("" === t) return;
         let l = await (0, m.updateStageInstance)(e.id, t, n);
         return l;
       }
-      async function P(e) {
+      async function O(e) {
         await (0, m.endStageInstance)(e.id);
       }
     },
@@ -700,10 +700,10 @@
             return c;
           },
           getRemoveModeratorTooltipHint: function () {
-            return f;
+            return h;
           },
           getStageChannelMetadata: function () {
-            return h;
+            return f;
           },
         }),
         n("808653"),
@@ -730,7 +730,7 @@
                 count: u - 1,
               });
       }
-      function f(e, t) {
+      function h(e, t) {
         switch (e) {
           case r.RowType.OWNER:
             return o.default.Messages
@@ -747,7 +747,7 @@
         }
         return null;
       }
-      function h(e) {
+      function f(e) {
         let t = i.default.getStageInstanceByChannel(e.id);
         return {
           channel_id: e.id,
@@ -781,7 +781,7 @@
       var l = n("872717"),
         a = n("49111");
       async function s(e, t, n, s, i) {
-        let u = await l.default.post({
+        let u = await l.HTTP.post({
           url: a.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
@@ -794,14 +794,14 @@
         return u.body;
       }
       async function i(e, t, n) {
-        let s = await l.default.patch({
+        let s = await l.HTTP.patch({
           url: a.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
         return s.body;
       }
       function u(e) {
-        return l.default.delete(a.Endpoints.STAGE_INSTANCE(e));
+        return l.HTTP.del(a.Endpoints.STAGE_INSTANCE(e));
       }
     },
     328275: function (e, t, n) {
@@ -852,4 +852,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3ef44efd8b86e9226116.js.map
+//# sourceMappingURL=a6a1f0e377ce83020777.js.map

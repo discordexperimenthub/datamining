@@ -892,7 +892,7 @@
       async function S() {
         let e = f.default.getUserIdsToValidate();
         try {
-          let t = await a.default.get({
+          let t = await a.HTTP.get({
             url: h.Endpoints.USER_BROADCASTS,
             query: { user_ids: e },
           });
@@ -916,7 +916,7 @@
           t = e.filter(e => null == e.viewers).map(e => e.channelId);
         if (0 !== t.length)
           try {
-            let e = await a.default.get({
+            let e = await a.HTTP.get({
               url: h.Endpoints.BROADCAST_CHANNELS,
               query: { channel_ids: t },
             });
@@ -2470,7 +2470,7 @@
           dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
           autoSessionTracking: !1,
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          release: "discord_web-058e3c8b88d1507a81f7bdd6463038665d60356c",
+          release: "discord_web-06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed",
           beforeSend: e => {
             var t, n;
             return !(
@@ -2540,8 +2540,8 @@
           ],
           denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
         }),
-          a.setTag("buildNumber", ((e = "277613"), "277613")),
-          a.setTag("builtAt", String("1711058099091"));
+          a.setTag("buildNumber", ((e = "277632"), "277632")),
+          a.setTag("builtAt", String("1711058897878"));
         let t = window.GLOBAL_ENV.SENTRY_TAGS;
         if (null != t && "object" == typeof t)
           for (let e in t) a.setTag(e, t[e]);
@@ -5366,4 +5366,4 @@
     },
   },
 ]);
-//# sourceMappingURL=25949.a7985619b691bb7699ac.js.map
+//# sourceMappingURL=25949.19eeab2564ba1b8f4906.js.map

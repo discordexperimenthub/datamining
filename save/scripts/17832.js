@@ -297,7 +297,7 @@
           (y =
             p.default.Messages
               .GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
-        let v = O
+        let P = O
           ? p.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA
           : p.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
         return (r.useEffect(() => {
@@ -370,7 +370,7 @@
                       },
                       color: i.Button.Colors.BRAND_NEW,
                       look: i.Button.Looks.FILLED,
-                      children: v,
+                      children: P,
                     }),
                     (0, l.jsx)(i.Button, {
                       onClick: n,
@@ -460,7 +460,7 @@
             null === s ? null : null == s ? void 0 : s.skuId,
         };
         try {
-          let t = await l.default.patch({
+          let t = await l.HTTP.patch({
             url: i.Endpoints.SET_GUILD_MEMBER(e),
             body: u,
             oldFormErrors: !0,
@@ -952,4 +952,4 @@
     },
   },
 ]);
-//# sourceMappingURL=74572abc94e171f9fc9b.js.map
+//# sourceMappingURL=13ac2ad45b5bcfb0475a.js.map

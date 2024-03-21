@@ -20,8 +20,8 @@
         o = n("848848"),
         E = n("735251"),
         c = n("534222"),
-        f = n("592407"),
-        _ = n("610730"),
+        _ = n("592407"),
+        f = n("610730"),
         N = n("271938"),
         T = n("305961"),
         h = n("957255"),
@@ -57,10 +57,10 @@
               [t]
             ),
             H = (0, i.useStateFromStores)(
-              [_.default],
+              [f.default],
               () => {
                 var e;
-                return null !== (e = _.default.getCount(t.id)) && void 0 !== e
+                return null !== (e = f.default.getCount(t.id)) && void 0 !== e
                   ? e
                   : 0;
               },
@@ -126,7 +126,7 @@
                         children: e.format({
                           onClick: () => {
                             null != L &&
-                              (f.default.open(
+                              (_.default.open(
                                 L.id,
                                 S.GuildSettingsSections.ONBOARDING
                               ),
@@ -179,7 +179,7 @@
                       children:
                         C.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                           onClick: () => {
-                            f.default.open(
+                            _.default.open(
                               L.id,
                               S.GuildSettingsSections.COMMUNITY
                             ),
@@ -317,9 +317,9 @@
       let o = !1,
         E = {},
         c = {},
-        f = {},
-        _ = e => (
-          (f[e.guild_scheduled_event.id] = new a.default(
+        _ = {},
+        f = e => (
+          (_[e.guild_scheduled_event.id] = new a.default(
             e.guild_scheduled_event.guild
           )),
           (c[e.guild_scheduled_event.id] = e.guild_scheduled_event),
@@ -340,7 +340,7 @@
         }
         getCachedGuildByEventId(e) {
           var t;
-          return null !== (t = f[e]) && void 0 !== t ? t : void 0;
+          return null !== (t = _[e]) && void 0 !== t ? t : void 0;
         }
         getCachedGuildScheduledEventById(e) {
           var t;
@@ -363,7 +363,7 @@
                 },
               ]
             ),
-            i = u.map(l, _);
+            i = u.map(l, f);
           E[t] = i;
         },
         EVENT_DIRECTORY_FETCH_FAILURE: function () {
@@ -406,8 +406,8 @@
         o = n("599110"),
         E = n("299039"),
         c = n("698882"),
-        f = n("129092"),
-        _ = n("675305"),
+        _ = n("129092"),
+        f = n("675305"),
         N = n("290886"),
         T = n("49111");
       let h = async e => {
@@ -416,11 +416,11 @@
             guildId: e,
           });
           try {
-            let t = await l.default.get({
+            let t = await l.HTTP.get({
                 url: T.Endpoints.GUILD_HOME_SETTINGS(e),
                 oldFormErrors: !0,
               }),
-              n = (0, f.settingsFromServer)(t.body);
+              n = (0, _.settingsFromServer)(t.body);
             return (
               u.default.dispatch({
                 type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
@@ -443,11 +443,11 @@
               guildId: e,
             });
             try {
-              let t = await l.default.get({
+              let t = await l.HTTP.get({
                   url: T.Endpoints.GUILD_MEMBER_ACTIONS(e),
                   oldFormErrors: !0,
                 }),
-                n = (0, f.actionsFromServer)(t.body);
+                n = (0, _.actionsFromServer)(t.body);
               return (
                 u.default.dispatch({
                   type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
@@ -477,11 +477,11 @@
           )
             return;
           let l = s.default.getChannel(t),
-            f = c.default.getResourceForChannel(e, t);
+            _ = c.default.getResourceForChannel(e, t);
           null != e &&
             !d.default.isFullServerPreview(e) &&
             null != l &&
-            null != f &&
+            null != _ &&
             o.default.track(T.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
               guild_id: e,
               channel_id: l.id,
@@ -531,7 +531,7 @@
           if (null != n && null != i) {
             var r, a;
             let t = E.default.keys(
-                null !== (r = _.default.getCompletedActions(e)) && void 0 !== r
+                null !== (r = f.default.getCompletedActions(e)) && void 0 !== r
                   ? r
                   : {}
               ),
@@ -549,7 +549,7 @@
               ),
             });
           }
-          l.default.post({ url: T.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
+          l.HTTP.post({ url: T.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t) });
         };
       async function I(e, t) {
         if (null == e) return !1;
@@ -586,10 +586,10 @@
             return c;
           },
           NEW_MEMBER_ACTION_MAX: function () {
-            return f;
+            return _;
           },
           RESOURCE_CHANNEL_TITLE_MIN_LENGTH: function () {
-            return _;
+            return f;
           },
           RESOURCE_CHANNEL_TITLE_MAX_LENGTH: function () {
             return N;
@@ -644,8 +644,8 @@
         o = 300,
         E = 7,
         c = 60,
-        f = 5,
-        _ = 1,
+        _ = 5,
+        f = 1,
         N = 30,
         T = 200,
         h = 7;
@@ -1010,7 +1010,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return _;
           },
         });
       var l = n("446674"),
@@ -1059,7 +1059,7 @@
       }
       (c.displayName = "UpcomingEventNoticesStore"),
         (c.persistKey = "UpcomingEventNotices");
-      var f = new c(u.default, {
+      var _ = new c(u.default, {
         UPCOMING_GUILD_EVENT_NOTICE_HIDE: function (e) {
           let { eventId: t } = e,
             n = { ...s };
@@ -1085,8 +1085,8 @@
           let E = s[n];
           if (null != E) return;
           let c = o[n],
-            f = (0, d.getNextShownUpcomingEventNoticeType)(u, void 0, c, !1);
-          if (f === a.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+            _ = (0, d.getNextShownUpcomingEventNoticeType)(u, void 0, c, !1);
+          if (_ === a.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
             let e = { ...s };
             (e[n] = Date.now()), (s = e);
           }
@@ -1139,8 +1139,8 @@
         o = n("718517"),
         E = n("449008"),
         c = n("398604"),
-        f = n("49129"),
-        _ = n("431934"),
+        _ = n("49129"),
+        f = n("431934"),
         N = n("466148"),
         T = n("822516"),
         h = n("745049"),
@@ -1176,12 +1176,12 @@
                 })
                 .filter(E.isNotNullish);
             }
-            let f = c.default.getGuildScheduledEventsByIndex(
+            let _ = c.default.getGuildScheduledEventsByIndex(
               null != t
                 ? t
                 : c.StaticGuildEventIndexes.GUILD_EVENT_UPCOMING(n.id)
             );
-            return f.filter(e => {
+            return _.filter(e => {
               let t = e.channel_id;
               if (null == t) return !0;
               let n = r.default.getChannel(t);
@@ -1248,11 +1248,11 @@
               },
               [t]
             )),
-          i = (0, u.useStateFromStoresObject)([_.default], () =>
-            _.default.getAllEventDismissals()
+          i = (0, u.useStateFromStoresObject)([f.default], () =>
+            f.default.getAllEventDismissals()
           ),
-          d = (0, u.useStateFromStoresObject)([_.default], () =>
-            _.default.getAllUpcomingNoticeSeenTimes()
+          d = (0, u.useStateFromStoresObject)([f.default], () =>
+            f.default.getAllUpcomingNoticeSeenTimes()
           ),
           a = (0, u.useStateFromStoresObject)(
             [c.default],
@@ -1274,7 +1274,7 @@
               u = i[t.id],
               r = d[t.id],
               s = null !== (n = a[t.id]) && void 0 !== n && n,
-              o = (0, f.getNextShownUpcomingEventNoticeType)(t, u, r, s);
+              o = (0, _.getNextShownUpcomingEventNoticeType)(t, u, r, s);
             if (null != o) return { upcomingEvent: t, noticeType: o };
           }
       }
@@ -1370,7 +1370,7 @@
             return E;
           },
           requestMembersForRole: function () {
-            return f;
+            return _;
           },
         });
       var l = n("693566"),
@@ -1386,7 +1386,7 @@
             type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START",
             guildId: e,
           });
-          let t = await i.default.get({
+          let t = await i.HTTP.get({
               url: s.Endpoints.GUILD_ROLE_MEMBER_COUNTS(e),
             }),
             n = t.body;
@@ -1406,7 +1406,7 @@
         a.default.shouldFetch(e) && (await o(e));
       }
       let c = new u({ maxAge: 1e4 });
-      function f(e, t) {
+      function _(e, t) {
         let n =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
           l = "".concat(e, "-").concat(t);
@@ -1416,13 +1416,9 @@
             c.set(l, !0),
             (u = e),
             (r = t),
-            i.default
-              .get({ url: s.Endpoints.GUILD_ROLE_MEMBER_IDS(u, r) })
-              .then(
-                e => (
-                  d.default.requestMembersById(u, e.body, !1), e.body.length
-                )
-              )
+            i.HTTP.get({ url: s.Endpoints.GUILD_ROLE_MEMBER_IDS(u, r) }).then(
+              e => (d.default.requestMembersById(u, e.body, !1), e.body.length)
+            )
           );
         }
         return Promise.resolve(null);
@@ -1493,4 +1489,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31ce6e9f956356a646c1.js.map
+//# sourceMappingURL=4ebcdb143dac8945798d.js.map

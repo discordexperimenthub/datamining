@@ -106,8 +106,8 @@
         f = s("133403"),
         m = s("145079"),
         p = s("87657"),
-        x = s("716241"),
-        T = s("161778"),
+        T = s("716241"),
+        x = s("161778"),
         N = s("517763"),
         I = s("766274"),
         g = s("42203"),
@@ -197,26 +197,24 @@
       class b extends n.PureComponent {
         componentDidMount() {
           let { channelId: e } = this.props;
-          u.default
-            .get({
-              url: _.Endpoints.INSTANT_INVITES(e),
-              retries: 3,
-              oldFormErrors: !0,
-            })
-            .then(e => {
-              let t = e.body.map(
-                e =>
-                  new N.default({
-                    ...e,
-                    maxUses: e.max_uses,
-                    maxAge: e.max_age,
-                    createdAt: e.created_at,
-                  })
-              );
-              this.setState({ loading: !1, invites: t });
-            }),
+          u.HTTP.get({
+            url: _.Endpoints.INSTANT_INVITES(e),
+            retries: 3,
+            oldFormErrors: !0,
+          }).then(e => {
+            let t = e.body.map(
+              e =>
+                new N.default({
+                  ...e,
+                  maxUses: e.max_uses,
+                  maxAge: e.max_age,
+                  createdAt: e.created_at,
+                })
+            );
+            this.setState({ loading: !1, invites: t });
+          }),
             S.default.track(_.AnalyticEvents.OPEN_MODAL, {
-              ...(0, x.collectChannelAnalyticsMetadata)(
+              ...(0, T.collectChannelAnalyticsMetadata)(
                 g.default.getChannel(e)
               ),
               type: "Group DM Invites",
@@ -356,10 +354,10 @@
             });
         }
       }
-      var k = o.default.connectStores([v.default, T.default], () => ({
+      var k = o.default.connectStores([v.default, x.default], () => ({
         hideDiscriminators: v.default.hidePersonalInformation,
         hideInviteCodes: v.default.hideInstantInvites,
-        theme: T.default.theme,
+        theme: x.default.theme,
       }))(b);
     },
     91551: function (e, t, s) {
@@ -447,7 +445,7 @@
       s.r(t),
         s.d(t, {
           EmptyStateImage: function () {
-            return T;
+            return x;
           },
           EmptyStateText: function () {
             return N;
@@ -468,8 +466,8 @@
         h = s("49111"),
         f = s("177914"),
         m = s("890957");
-      let { Provider: p, Consumer: x } = i.createContext(h.ThemeTypes.DARK);
-      class T extends i.PureComponent {
+      let { Provider: p, Consumer: T } = i.createContext(h.ThemeTypes.DARK);
+      class x extends i.PureComponent {
         render() {
           let {
             lightSrc: e,
@@ -480,7 +478,7 @@
             offsetY: i,
             style: l,
           } = this.props;
-          return (0, r.jsx)(x, {
+          return (0, r.jsx)(T, {
             children: u =>
               (0, r.jsx)(c.default.Child, {
                 grow: 0,
@@ -540,9 +538,9 @@
           });
         }
       }).Text = N),
-        (a.Image = T),
+        (a.Image = x),
         (n = a);
     },
   },
 ]);
-//# sourceMappingURL=36572ad38511ce9889eb.js.map
+//# sourceMappingURL=7c2730f9ec8a0d5cd3a7.js.map

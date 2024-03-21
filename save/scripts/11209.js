@@ -76,20 +76,18 @@
             source: t,
             action: o.AgeGateAnalyticAction.AGE_GATE_SUBMITTED,
           }),
-          a.default
-            .patch({
-              url: i.Endpoints.ME,
-              oldFormErrors: !0,
-              body: { date_of_birth: e.format("YYYY-MM-DD") },
-            })
-            .then(e => {
-              let s = e.body;
-              l.default.dispatch({ type: "CURRENT_USER_UPDATE", user: s }),
-                r.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
-                  source: t,
-                  action: o.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
-                });
-            })
+          a.HTTP.patch({
+            url: i.Endpoints.ME,
+            oldFormErrors: !0,
+            body: { date_of_birth: e.format("YYYY-MM-DD") },
+          }).then(e => {
+            let s = e.body;
+            l.default.dispatch({ type: "CURRENT_USER_UPDATE", user: s }),
+              r.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
+                source: t,
+                action: o.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
+              });
+          })
         );
       }
       function u(e) {
@@ -1326,4 +1324,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f8233e8956e485de5463.js.map
+//# sourceMappingURL=4e964a0dd734ef92c6ee.js.map

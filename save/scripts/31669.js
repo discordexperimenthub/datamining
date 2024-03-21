@@ -769,32 +769,30 @@
                     });
                     let s = () => {
                       (null == t || !t.aborted) &&
-                        o.default
-                          .post({
-                            url: v.Endpoints.INTERACTIONS,
-                            body: {
-                              type: r.InteractionTypes.MODAL_SUBMIT,
-                              application_id: e.application.id,
-                              channel_id: a.id,
-                              guild_id: a.guild_id,
-                              data: {
-                                id: e.id,
-                                custom_id: e.customId,
-                                components: i,
-                              },
-                              session_id: E.default.getSessionId(),
-                              nonce: n,
+                        o.HTTP.post({
+                          url: v.Endpoints.INTERACTIONS,
+                          body: {
+                            type: r.InteractionTypes.MODAL_SUBMIT,
+                            application_id: e.application.id,
+                            channel_id: a.id,
+                            guild_id: a.guild_id,
+                            data: {
+                              id: e.id,
+                              custom_id: e.customId,
+                              components: i,
                             },
-                            signal: t,
-                          })
-                          .catch(e => {
-                            429 === e.status
-                              ? setTimeout(
-                                  s,
-                                  e.body.retry_after * _.default.Millis.SECOND
-                                )
-                              : (0, f.setFailed)(n);
-                          });
+                            session_id: E.default.getSessionId(),
+                            nonce: n,
+                          },
+                          signal: t,
+                        }).catch(e => {
+                          429 === e.status
+                            ? setTimeout(
+                                s,
+                                e.body.retry_after * _.default.Millis.SECOND
+                              )
+                            : (0, f.setFailed)(n);
+                        });
                     };
                     return s(), n;
                   })(e, O)
@@ -1303,4 +1301,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d45647d17ff79cca3108.js.map
+//# sourceMappingURL=34ccb430e1f145250df5.js.map

@@ -255,7 +255,7 @@
             I
           );
         })(t);
-        return _.default.get({
+        return _.HTTP.get({
           url: a.Endpoints.GUILD_AUDIT_LOG(e),
           query: E,
           oldFormErrors: !0,
@@ -5345,7 +5345,7 @@
         n = async e => {
           s.default.dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
           try {
-            let t = await _.default.get({
+            let t = await _.HTTP.get({
               url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
               oldFormErrors: !0,
             });
@@ -5376,7 +5376,7 @@
         i = async (e, t) => {
           s.default.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
           try {
-            let E = await _.default.patch({
+            let E = await _.HTTP.patch({
               url: T.Endpoints.GUILD_WELCOME_SCREEN(e),
               body: {
                 description: t.description,
@@ -9177,4 +9177,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9dd09b0dea42f53eb8a0.js.map
+//# sourceMappingURL=b181bb5920b85a38bce9.js.map

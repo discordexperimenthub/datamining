@@ -16,8 +16,8 @@
       var a = t("872717"),
         r = t("679653"),
         l = t("305961"),
-        d = t("42887"),
-        n = t("27618"),
+        n = t("42887"),
+        d = t("27618"),
         i = t("697218"),
         o = t("171644"),
         c = t("49111"),
@@ -30,18 +30,18 @@
           N = (0, o.XBOX_HANDOFF_SEARCH_PARAMS)({
             guildId: null != x ? x : c.ZERO_STRING_GUILD_ID,
             channelId: e.id,
-            channelName: (0, r.computeChannelName)(e, i.default, n.default),
+            channelName: (0, r.computeChannelName)(e, i.default, d.default),
             guildName:
               null !== (t = null == h ? void 0 : h.name) && void 0 !== t
                 ? t
                 : u.default.Messages.UNNAMED,
-            muted: d.default.isSelfMute(),
-            deafened: d.default.isSelfDeaf(),
+            muted: n.default.isSelfMute(),
+            deafened: n.default.isSelfDeaf(),
             nonce: f,
           });
         return m
           ? ""
-              .concat(a.default.getAPIBaseURL())
+              .concat((0, a.getAPIBaseURL)())
               .concat(c.Endpoints.XBOX_HANDOFF, "?")
               .concat(N.toString())
           : "".concat(o.XBOX_URL_BASE, "?").concat(N.toString());
@@ -58,8 +58,8 @@
       var a = t("37983"),
         r = t("884691"),
         l = t("446674"),
-        d = t("77078"),
-        n = t("671278"),
+        n = t("77078"),
+        d = t("671278"),
         i = t("420145"),
         o = t("701909"),
         c = t("76393"),
@@ -76,13 +76,13 @@
           children: [
             (0, a.jsx)("div", {
               className: N.stepNumberContainer,
-              children: (0, a.jsx)(d.Text, {
+              children: (0, a.jsx)(n.Text, {
                 variant: "text-sm/semibold",
                 className: N.stepNumber,
                 children: s,
               }),
             }),
-            (0, a.jsx)(d.Text, {
+            (0, a.jsx)(n.Text, {
               variant: "text-sm/normal",
               color: "header-primary",
               className: N.instructions,
@@ -105,28 +105,28 @@
           r.useEffect(() => {
             (0, f.default)(s.id, m.GameConsoleTypes.XBOX);
           }, [s.id]),
-          (0, a.jsxs)(d.ModalRoot, {
-            size: d.ModalSize.DYNAMIC,
+          (0, a.jsxs)(n.ModalRoot, {
+            size: n.ModalSize.DYNAMIC,
             className: N.modalRoot,
             transitionState: t,
             children: [
-              (0, a.jsxs)(d.ModalHeader, {
+              (0, a.jsxs)(n.ModalHeader, {
                 separator: !1,
                 className: N.modalHeaderContainer,
                 children: [
-                  (0, a.jsx)(d.Heading, {
+                  (0, a.jsx)(n.Heading, {
                     className: N.modalHeader,
                     variant: "heading-xl/extrabold",
                     children: h.default.Messages.TRANSFER_VOICE_TO_XBOX,
                   }),
-                  (0, a.jsx)(d.Text, {
+                  (0, a.jsx)(n.Text, {
                     variant: "text-md/medium",
                     color: "header-secondary",
                     children: h.default.Messages.XBOX_APP_REQUIRED_SUBHEADER,
                   }),
                 ],
               }),
-              (0, a.jsx)(d.ModalContent, {
+              (0, a.jsx)(n.ModalContent, {
                 className: N.content,
                 children: (0, a.jsxs)("div", {
                   className: N.card,
@@ -134,7 +134,7 @@
                     (0, a.jsxs)("div", {
                       className: N.cardText,
                       children: [
-                        (0, a.jsxs)(d.Text, {
+                        (0, a.jsxs)(n.Text, {
                           variant: "text-lg/semibold",
                           color: "header-primary",
                           className: N.cardRow,
@@ -153,9 +153,9 @@
                           step: 2,
                           instructions: h.default.Messages.XBOX_APP_STEP_TWO,
                         }),
-                        (0, a.jsx)(d.Text, {
+                        (0, a.jsx)(n.Text, {
                           variant: "text-sm/medium",
-                          children: (0, a.jsx)(d.Anchor, {
+                          children: (0, a.jsx)(n.Anchor, {
                             className: N.learnMore,
                             href: o.default.getArticleURL(
                               x.HelpdeskArticles.XBOX_CONNECTION
@@ -165,7 +165,7 @@
                         }),
                       ],
                     }),
-                    (0, a.jsx)(n.default, {
+                    (0, a.jsx)(d.default, {
                       className: N.qrCode,
                       size: 120,
                       text: C,
@@ -173,7 +173,7 @@
                   ],
                 }),
               }),
-              (0, a.jsx)(d.ModalCloseButton, {
+              (0, a.jsx)(n.ModalCloseButton, {
                 className: N.closeButton,
                 onClick: p,
               }),
@@ -199,13 +199,13 @@
       var a,
         r,
         l = t("37983"),
-        d = t("884691"),
-        n = t("82697"),
+        n = t("884691"),
+        d = t("82697"),
         i = t("679001");
       ((a = r || (r = {})).SIZE_40 = "SIZE_40"), (a.SIZE_60 = "SIZE_60");
       let o = Object.freeze({ SIZE_40: "size-40", SIZE_60: "size-60" }),
         c = t("527826");
-      class u extends d.PureComponent {
+      class u extends n.PureComponent {
         render() {
           let { className: e, text: s, ...t } = this.props;
           return (0, l.jsx)("div", {
@@ -217,12 +217,12 @@
               backgroundColor: t.bgColor,
             },
             className: e,
-            children: (0, l.jsx)(n.default, { value: s, level: "M", ...t }),
+            children: (0, l.jsx)(d.default, { value: s, level: "M", ...t }),
           });
         }
       }
       u.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
-      class f extends d.PureComponent {
+      class f extends n.PureComponent {
         render() {
           let { overlaySize: e } = this.props,
             s = o[null != e ? e : "SIZE_40"];
@@ -247,4 +247,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9758983cdf6434bc8d3d.js.map
+//# sourceMappingURL=e2778b49f593f51d7972.js.map

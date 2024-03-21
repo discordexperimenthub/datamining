@@ -148,8 +148,10 @@
       var s = {
         fetchForGuild(e) {
           i.default.dispatch({ type: "WEBHOOKS_FETCHING", guildId: e }),
-            u.default
-              .get({ url: a.Endpoints.GUILD_WEBHOOKS(e), oldFormErrors: !0 })
+            u.HTTP.get({
+              url: a.Endpoints.GUILD_WEBHOOKS(e),
+              oldFormErrors: !0,
+            })
               .then(t => {
                 let { body: n } = t;
                 return i.default.dispatch({
@@ -173,62 +175,63 @@
             guildId: e,
             channelId: t,
           }),
-            u.default
-              .get({ url: a.Endpoints.CHANNEL_WEBHOOKS(t), oldFormErrors: !0 })
-              .then(n => {
-                let { body: r } = n;
-                return i.default.dispatch({
-                  type: "WEBHOOKS_UPDATE",
-                  guildId: e,
-                  channelId: t,
-                  webhooks: r,
-                });
+            u.HTTP.get({
+              url: a.Endpoints.CHANNEL_WEBHOOKS(t),
+              oldFormErrors: !0,
+            }).then(n => {
+              let { body: r } = n;
+              return i.default.dispatch({
+                type: "WEBHOOKS_UPDATE",
+                guildId: e,
+                channelId: t,
+                webhooks: r,
               });
+            });
         },
         create: (e, t, n) => (
           null == n && (n = l[o.random(0, l.length - 1)]),
-          u.default
-            .post({
-              url: a.Endpoints.CHANNEL_WEBHOOKS(t),
-              body: { name: n },
-              oldFormErrors: !0,
-            })
-            .then(t => {
-              let { body: n } = t;
-              return (
-                i.default.dispatch({
-                  type: "WEBHOOK_CREATE",
-                  guildId: e,
-                  webhook: n,
-                }),
-                n
-              );
-            })
+          u.HTTP.post({
+            url: a.Endpoints.CHANNEL_WEBHOOKS(t),
+            body: { name: n },
+            oldFormErrors: !0,
+          }).then(t => {
+            let { body: n } = t;
+            return (
+              i.default.dispatch({
+                type: "WEBHOOK_CREATE",
+                guildId: e,
+                webhook: n,
+              }),
+              n
+            );
+          })
         ),
         delete: (e, t) =>
-          u.default
-            .delete({ url: a.Endpoints.WEBHOOK(t), oldFormErrors: !0 })
-            .then(() => {
+          u.HTTP.del({ url: a.Endpoints.WEBHOOK(t), oldFormErrors: !0 }).then(
+            () => {
               i.default.dispatch({
                 type: "WEBHOOK_DELETE",
                 guildId: e,
                 webhookId: t,
               });
-            }),
+            }
+          ),
         update: (e, t, n) =>
-          u.default
-            .patch({ url: a.Endpoints.WEBHOOK(t), body: n, oldFormErrors: !0 })
-            .then(t => {
-              let { body: n } = t;
-              return (
-                i.default.dispatch({
-                  type: "WEBHOOK_UPDATE",
-                  guildId: e,
-                  webhook: n,
-                }),
-                n
-              );
-            }),
+          u.HTTP.patch({
+            url: a.Endpoints.WEBHOOK(t),
+            body: n,
+            oldFormErrors: !0,
+          }).then(t => {
+            let { body: n } = t;
+            return (
+              i.default.dispatch({
+                type: "WEBHOOK_UPDATE",
+                guildId: e,
+                webhook: n,
+              }),
+              n
+            );
+          }),
       };
     },
     646074: function (e, t, n) {
@@ -1491,7 +1494,7 @@
         });
       }
       function d(e, t) {
-        r.default.get(a.Endpoints.GUILD_COMMANDS_FOR_APPLICATION(e, t)).then(
+        r.HTTP.get(a.Endpoints.GUILD_COMMANDS_FOR_APPLICATION(e, t)).then(
           n => {
             o.default.dispatch({
               type: "INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS",
@@ -1512,7 +1515,7 @@
       async function T(e, t, n) {
         let u = [];
         try {
-          let o = await r.default.get(
+          let o = await r.HTTP.get(
             a.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
           );
           o.ok && (u = o.body.permissions);
@@ -1756,4 +1759,4 @@
     },
   },
 ]);
-//# sourceMappingURL=27152a4c3ad721985e0c.js.map
+//# sourceMappingURL=b56555d1348e0673357e.js.map

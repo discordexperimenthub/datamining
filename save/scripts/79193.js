@@ -531,7 +531,7 @@
           applicationId: e,
         });
         try {
-          let t = await a.default.get({
+          let t = await a.HTTP.get({
               url: i.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
               oldFormErrors: !0,
             }),
@@ -10203,4 +10203,4 @@
     },
   },
 ]);
-//# sourceMappingURL=64e3f826ce87d783994f.js.map
+//# sourceMappingURL=397c80afc12c2a117410.js.map

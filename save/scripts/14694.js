@@ -9,8 +9,8 @@
             return c;
           },
         });
-      var a = s("872717"),
-        n = s("913144"),
+      var n = s("872717"),
+        a = s("913144"),
         l = s("263024"),
         i = s("508229"),
         d = s("404118"),
@@ -18,11 +18,10 @@
         u = s("782340");
       let o = {
         async pinMessage(e, t) {
-          let { id: s, name: n } = e;
+          let { id: s, name: a } = e;
           await l.default.unarchiveThreadIfNecessary(e.id),
-            a.default
-              .put({ url: r.Endpoints.PIN(s, t), oldFormErrors: !0 })
-              .catch(() => {
+            n.HTTP.put({ url: r.Endpoints.PIN(s, t), oldFormErrors: !0 }).catch(
+              () => {
                 let t;
                 (t = e.isPrivate()
                   ? u.default.Messages.PIN_MESSAGE_TOO_MANY_BODY_PRIVATE_CHANNEL.format(
@@ -30,55 +29,59 @@
                     )
                   : u.default.Messages.PIN_MESSAGE_TOO_MANY_BODY.format({
                       maxPins: r.MAX_PINS_PER_CHANNEL,
-                      channelName: n,
+                      channelName: a,
                     })),
                   d.default.show({
                     title: u.default.Messages.PIN_MESSAGE_TOO_MANY_TITLE,
                     body: t,
                     confirmText: u.default.Messages.OKAY,
                   });
-              });
+              }
+            );
         },
         async unpinMessage(e, t) {
           await l.default.unarchiveThreadIfNecessary(e.id),
-            a.default
-              .delete({ url: r.Endpoints.PIN(e.id, t), oldFormErrors: !0 })
-              .catch(() =>
-                d.default.show({
-                  title: u.default.Messages.UNPIN_MESSAGE_FAILED_TITLE,
-                  body: u.default.Messages.UNPIN_MESSAGE_FAILED_BODY,
-                  confirmText: u.default.Messages.TRY_AGAIN,
-                  cancelText: u.default.Messages.CANCEL,
-                  onConfirm: o.unpinMessage.bind(o, e, t),
-                })
-              );
+            n.HTTP.del({
+              url: r.Endpoints.PIN(e.id, t),
+              oldFormErrors: !0,
+            }).catch(() =>
+              d.default.show({
+                title: u.default.Messages.UNPIN_MESSAGE_FAILED_TITLE,
+                body: u.default.Messages.UNPIN_MESSAGE_FAILED_BODY,
+                confirmText: u.default.Messages.TRY_AGAIN,
+                cancelText: u.default.Messages.CANCEL,
+                onConfirm: o.unpinMessage.bind(o, e, t),
+              })
+            );
         },
         ackPins(e) {
-          n.default.dispatch({ type: "CHANNEL_PINS_ACK", channelId: e });
+          a.default.dispatch({ type: "CHANNEL_PINS_ACK", channelId: e });
         },
         fetchPins(e) {
           let t =
               arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             s = i.default.getPinnedMessages(e);
           (t || null == s || (!s.loaded && !s.loading)) &&
-            (n.default.dispatch({ type: "LOAD_PINNED_MESSAGES", channelId: e }),
-            a.default
-              .get({ url: r.Endpoints.PINS(e), retries: 2, oldFormErrors: !0 })
-              .then(
-                t => {
-                  n.default.dispatch({
-                    type: "LOAD_PINNED_MESSAGES_SUCCESS",
-                    messages: t.body,
-                    channelId: e,
-                  });
-                },
-                () => {
-                  n.default.dispatch({
-                    type: "LOAD_PINNED_MESSAGES_FAILURE",
-                    channelId: e,
-                  });
-                }
-              ));
+            (a.default.dispatch({ type: "LOAD_PINNED_MESSAGES", channelId: e }),
+            n.HTTP.get({
+              url: r.Endpoints.PINS(e),
+              retries: 2,
+              oldFormErrors: !0,
+            }).then(
+              t => {
+                a.default.dispatch({
+                  type: "LOAD_PINNED_MESSAGES_SUCCESS",
+                  messages: t.body,
+                  channelId: e,
+                });
+              },
+              () => {
+                a.default.dispatch({
+                  type: "LOAD_PINNED_MESSAGES_FAILURE",
+                  channelId: e,
+                });
+              }
+            ));
         },
       };
       var c = o;
@@ -93,8 +96,8 @@
         }),
         s("702976"),
         s("222007");
-      var a = s("37983"),
-        n = s("884691"),
+      var n = s("37983"),
+        a = s("884691"),
         l = s("414456"),
         i = s.n(l),
         d = s("77078"),
@@ -112,37 +115,37 @@
         N = s("49111"),
         S = s("782340"),
         A = s("618537");
-      class I extends n.PureComponent {
+      class I extends a.PureComponent {
         render() {
           let e, t;
           let { report: s } = this.state,
             {
-              channel: n,
+              channel: a,
               message: l,
               showContextMenuHint: i,
               ...r
             } = this.props,
             u =
-              n.type === N.ChannelTypes.GUILD_ANNOUNCEMENT &&
+              a.type === N.ChannelTypes.GUILD_ANNOUNCEMENT &&
               (0, h.hasFlag)(l.flags, N.MessageFlags.CROSSPOSTED);
           return (
             i &&
-              (e = (0, a.jsx)(_.default, {
+              (e = (0, n.jsx)(_.default, {
                 className: A.spacingTop,
                 children:
                   S.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format(),
               })),
             (0, m.canDeleteAndReportMessage)(l) &&
-              (t = (0, a.jsx)(d.FormSwitch, {
+              (t = (0, n.jsx)(d.FormSwitch, {
                 value: s,
                 onChange: this.handleToggleReport,
                 hideBorder: !0,
                 className: A.spacingTop,
                 children: S.default.Messages.DELETE_MESSAGE_REPORT,
               })),
-            (0, a.jsx)(c.default.Provider, {
-              value: n.guild_id,
-              children: (0, a.jsxs)(d.ConfirmModal, {
+            (0, n.jsx)(c.default.Provider, {
+              value: a.guild_id,
+              children: (0, n.jsxs)(d.ConfirmModal, {
                 header: u
                   ? S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER
                   : S.default.Messages.DELETE_MESSAGE_TITLE,
@@ -151,17 +154,17 @@
                 onConfirm: this.handleDelete,
                 ...r,
                 children: [
-                  (0, a.jsx)(d.Text, {
+                  (0, n.jsx)(d.Text, {
                     variant: "text-md/normal",
                     className: A.spacing,
                     children: u
                       ? S.default.Messages.DELETE_FOLLOWED_NEWS_BODY
                       : S.default.Messages.DELETE_MESSAGE_BODY,
                   }),
-                  (0, a.jsx)("div", {
+                  (0, n.jsx)("div", {
                     className: A.message,
-                    children: (0, a.jsx)(E.default, {
-                      channel: n,
+                    children: (0, n.jsx)(E.default, {
+                      channel: a,
                       message: l,
                       disableInteraction: !0,
                     }),
@@ -193,17 +196,17 @@
       var C = {
         confirmPin: function (e, t) {
           (0, d.openModal)(s => {
-            let n;
+            let a;
             let l = (0, o.computeChannelName)(e, M.default, g.default);
             return (
-              (n = e.isPrivate()
+              (a = e.isPrivate()
                 ? S.default.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL
                 : S.default.Messages.PIN_MESSAGE_BODY.format({
                     channelName: l,
                   })),
-              (0, a.jsx)(c.default.Provider, {
+              (0, n.jsx)(c.default.Provider, {
                 value: e.guild_id,
-                children: (0, a.jsxs)(d.ConfirmModal, {
+                children: (0, n.jsxs)(d.ConfirmModal, {
                   header: S.default.Messages.PIN_MESSAGE_TITLE,
                   confirmText: S.default.Messages.PIN_CONFIRM,
                   cancelText: S.default.Messages.CANCEL,
@@ -211,14 +214,14 @@
                   onConfirm: () => r.default.pinMessage(e, t.id),
                   ...s,
                   children: [
-                    (0, a.jsx)(d.Text, {
+                    (0, n.jsx)(d.Text, {
                       variant: "text-md/normal",
                       className: A.spacing,
-                      children: n,
+                      children: a,
                     }),
-                    (0, a.jsx)("div", {
+                    (0, n.jsx)("div", {
                       className: A.message,
-                      children: (0, a.jsx)(E.default, {
+                      children: (0, n.jsx)(E.default, {
                         channel: e,
                         message: t,
                         animateAvatar: !1,
@@ -233,29 +236,29 @@
         },
         confirmUnpin: function (e, t) {
           (0, d.openModal)(s =>
-            (0, a.jsx)(c.default.Provider, {
+            (0, n.jsx)(c.default.Provider, {
               value: e.guild_id,
-              children: (0, a.jsxs)(d.ConfirmModal, {
+              children: (0, n.jsxs)(d.ConfirmModal, {
                 header: S.default.Messages.UNPIN_MESSAGE_TITLE,
                 confirmText: S.default.Messages.UNPIN_CONFIRM,
                 cancelText: S.default.Messages.CANCEL,
                 onConfirm: () => r.default.unpinMessage(e, t.id),
                 ...s,
                 children: [
-                  (0, a.jsx)(d.Text, {
+                  (0, n.jsx)(d.Text, {
                     variant: "text-md/normal",
                     className: A.spacing,
                     children: S.default.Messages.UNPIN_MESSAGE_BODY,
                   }),
-                  (0, a.jsx)("div", {
+                  (0, n.jsx)("div", {
                     className: i(A.message, A.spacing),
-                    children: (0, a.jsx)(E.default, {
+                    children: (0, n.jsx)(E.default, {
                       channel: e,
                       message: t,
                       disableInteraction: !0,
                     }),
                   }),
-                  (0, a.jsx)(_.default, {
+                  (0, n.jsx)(_.default, {
                     children:
                       S.default.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format(),
                   }),
@@ -267,25 +270,25 @@
         confirmDelete: function (e, t) {
           let s =
             arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          (0, d.openModal)(n =>
-            (0, a.jsx)(I, {
+          (0, d.openModal)(a =>
+            (0, n.jsx)(I, {
               channel: e,
               message: t,
               showContextMenuHint: s,
-              ...n,
+              ...a,
             })
           );
         },
         confirmEdit: function (e, t, s) {
-          (0, d.openModal)(n =>
-            (0, a.jsx)(d.ConfirmModal, {
+          (0, d.openModal)(a =>
+            (0, n.jsx)(d.ConfirmModal, {
               header: S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
               confirmText: S.default.Messages.CONFIRM,
               cancelText: S.default.Messages.CANCEL,
               confirmButtonColor: d.Button.Colors.BRAND,
               onConfirm: () => u.default.editMessage(e, t, { content: s }),
-              ...n,
-              children: (0, a.jsx)(d.Text, {
+              ...a,
+              children: (0, n.jsx)(d.Text, {
                 variant: "text-md/normal",
                 className: A.spacing,
                 children: S.default.Messages.EDIT_FOLLOWED_NEWS_BODY,
@@ -298,8 +301,8 @@
     601248: function (e, t, s) {
       "use strict";
       s.r(t);
-      var a = s("169276");
-      s.es(a, t);
+      var n = s("169276");
+      s.es(n, t);
     },
     518155: function (e, t, s) {
       "use strict";
@@ -309,9 +312,9 @@
             return c;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("281071"),
+      var a = s("281071"),
         l = s("77078"),
         i = s("83900"),
         d = s("599110"),
@@ -321,12 +324,12 @@
       function c(e, t) {
         return r.SUPPORTS_COPY &&
           e.type !== u.MessageTypes.GUILD_INVITE_REMINDER
-          ? (0, a.jsx)(l.MenuItem, {
+          ? (0, n.jsx)(l.MenuItem, {
               id: "copy-link",
               label: o.default.Messages.COPY_MESSAGE_LINK,
               icon: i.default,
               action: () => {
-                (0, n.copy)(
+                (0, a.copy)(
                   ""
                     .concat(location.protocol, "//")
                     .concat(location.host)
@@ -349,9 +352,9 @@
             return g;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("446674"),
+      var a = s("446674"),
         l = s("77078"),
         i = s("819689"),
         d = s("249561"),
@@ -362,11 +365,11 @@
         f = s("49111"),
         E = s("782340");
       function g(e, t) {
-        let s = (0, n.useStateFromStores)([o.default], () =>
+        let s = (0, a.useStateFromStores)([o.default], () =>
             o.default.getCurrentUser()
           ),
           g = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
-          M = (0, n.useStateFromStores)(
+          M = (0, a.useStateFromStores)(
             [u.default],
             () => u.default.can(f.Permissions.MANAGE_MESSAGES, t),
             [t]
@@ -377,7 +380,7 @@
           f.MessageTypesSets.UNDELETABLE.has(e.type) ||
           !g
           ? null
-          : (0, a.jsx)(l.MenuItem, {
+          : (0, n.jsx)(l.MenuItem, {
               id: "delete",
               label: E.default.Messages.DELETE_MESSAGE,
               action: function (s) {
@@ -400,9 +403,9 @@
             return u;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("77078"),
+      var a = s("77078"),
         l = s("300322"),
         i = s("993477"),
         d = s("456936"),
@@ -410,7 +413,7 @@
       function u(e, t) {
         let s = (0, l.useIsActiveChannelOrUnarchivableThread)(t);
         return s
-          ? (0, a.jsx)(n.MenuItem, {
+          ? (0, n.jsx)(a.MenuItem, {
               id: "mark-unread",
               label: r.default.Messages.MARK_UNREAD,
               action: () => (0, d.default)(t.id, e.id),
@@ -427,16 +430,16 @@
             return l;
           },
         });
-      var a = s("18494"),
-        n = s("724210");
+      var n = s("18494"),
+        a = s("724210");
       function l() {
         var e;
         let t =
-          null !== (e = a.default.getCurrentlySelectedChannelId()) &&
+          null !== (e = n.default.getCurrentlySelectedChannelId()) &&
           void 0 !== e
             ? e
             : void 0;
-        return null != t && (0, n.isStaticChannelRoute)(t)
+        return null != t && (0, a.isStaticChannelRoute)(t)
           ? { channel_static_route: t }
           : { channel_id: t };
       }
@@ -449,15 +452,15 @@
             return r;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("77078"),
+      var a = s("77078"),
         l = s("773336"),
         i = s("50885"),
         d = s("782340");
       function r(e, t) {
         return l.isPlatformEmbedded && (null == e ? void 0 : e.length) !== 0
-          ? (0, a.jsx)(n.MenuItem, {
+          ? (0, n.jsx)(a.MenuItem, {
               id: "copy",
               label: d.default.Messages.COPY,
               hint: (0, l.isMac)() ? "⌘C" : "Ctrl+C",
@@ -476,9 +479,9 @@
             return _;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("77078"),
+      var a = s("77078"),
         l = s("689226"),
         i = s("467475"),
         d = s("24373"),
@@ -518,8 +521,8 @@
               );
           };
         return [
-          (0, a.jsx)(
-            n.MenuItem,
+          (0, n.jsx)(
+            a.MenuItem,
             {
               id: "copy-native-link",
               label: M.default.Messages.COPY_LINK,
@@ -533,8 +536,8 @@
             },
             "copy-native-link"
           ),
-          (0, a.jsx)(
-            n.MenuItem,
+          (0, n.jsx)(
+            a.MenuItem,
             {
               id: "open-native-link",
               label: M.default.Messages.OPEN_LINK,
@@ -553,8 +556,8 @@
             return f;
           },
         });
-      var a = s("37983"),
-        n = s("884691"),
+      var n = s("37983"),
+        a = s("884691"),
         l = s("627445"),
         i = s.n(l),
         d = s("77078"),
@@ -563,7 +566,7 @@
         o = s("49111"),
         c = s("782340");
       function f(e) {
-        let t = n.useCallback(() => {
+        let t = a.useCallback(() => {
           i(null != e, "text cannot be null"),
             r.default.track(o.AnalyticEvents.MESSAGE_MENU_GOOGLE_SEARCHED),
             window.open(
@@ -575,7 +578,7 @@
           null != e &&
           (null == e ? void 0 : e.length) !== 0
           ? [
-              (0, a.jsx)(
+              (0, n.jsx)(
                 d.MenuItem,
                 {
                   id: "search-google",
@@ -597,8 +600,8 @@
           },
         }),
         s("843762");
-      var a = s("917351"),
-        n = s.n(a),
+      var n = s("917351"),
+        a = s.n(n),
         l = s("446674"),
         i = s("913144"),
         d = s("447435"),
@@ -615,15 +618,15 @@
         let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
           s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          n = o.default.getChannel(e),
-          l = null != n ? n.getGuildId() : null;
+          n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          a = o.default.getChannel(e),
+          l = null != a ? a.getGuildId() : null;
         return {
           id: e,
           messages: t.map(e => (0, r.createMessageRecord)(e)),
           guildId: l,
           loaded: s,
-          loading: a,
+          loading: n,
         };
       }
       function m(e) {
@@ -631,7 +634,7 @@
         delete _[t.id];
       }
       function N() {
-        n.forEach(_, e => {
+        a.forEach(_, e => {
           e.messages = e.messages.map(e =>
             e.set("blocked", g.default.isBlocked(e.author.id))
           );
@@ -663,7 +666,7 @@
         },
         GUILD_DELETE: function (e) {
           let { guild: t } = e;
-          _ = n(_)
+          _ = a(_)
             .filter(e => e.guildId !== t.id)
             .keyBy("id")
             .value();
@@ -672,58 +675,58 @@
           let t = e.message.id,
             s = e.message.channel_id;
           if (null == s) return !1;
-          let a = _[s];
-          if (null == a && !e.message.pinned) return !1;
+          let n = _[s];
+          if (null == n && !e.message.pinned) return !1;
           if (null == e.message.author) {
-            if (null != a) {
-              let l = n.findIndex(a.messages, e => e.id === t);
+            if (null != n) {
+              let l = a.findIndex(n.messages, e => e.id === t);
               if (l >= 0) {
-                let t = a.messages[l],
-                  n = (0, r.updateMessageRecord)(t, e.message);
-                if (n !== t) {
-                  let e = a.messages.slice();
-                  (e[l] = n), (_[s].messages = e);
+                let t = n.messages[l],
+                  a = (0, r.updateMessageRecord)(t, e.message);
+                if (a !== t) {
+                  let e = n.messages.slice();
+                  (e[l] = a), (_[s].messages = e);
                 }
               }
             }
             return;
           }
           if (e.message.pinned) {
-            if (null == a) {
-              (a = h(s, [e.message], !1)), (_[s] = a);
+            if (null == n) {
+              (n = h(s, [e.message], !1)), (_[s] = n);
               return;
             }
-            a.messages = a.messages.slice();
-            let l = n.findIndex(a.messages, e => e.id === t);
+            n.messages = n.messages.slice();
+            let l = a.findIndex(n.messages, e => e.id === t);
             -1 === l
-              ? a.messages.unshift((0, r.createMessageRecord)(e.message))
-              : (a.messages[l] = (0, r.updateMessageRecord)(
-                  a.messages[l],
+              ? n.messages.unshift((0, r.createMessageRecord)(e.message))
+              : (n.messages[l] = (0, r.updateMessageRecord)(
+                  n.messages[l],
                   e.message
                 )),
-              (_[s] = a);
+              (_[s] = n);
           } else {
-            if (null == a) return;
-            let e = n.findIndex(a.messages, e => e.id === t);
+            if (null == n) return;
+            let e = a.findIndex(n.messages, e => e.id === t);
             if (-1 === e) return;
-            (a.messages = a.messages.slice()),
-              a.messages.splice(e, 1),
-              (_[s] = a);
+            (n.messages = n.messages.slice()),
+              n.messages.splice(e, 1),
+              (_[s] = n);
           }
         },
         MESSAGE_DELETE: function (e) {
           let { id: t, channelId: s } = e,
-            a = _[s];
-          if (null == a) return !1;
-          let l = n.remove(a.messages, e => e.id === t);
+            n = _[s];
+          if (null == n) return !1;
+          let l = a.remove(n.messages, e => e.id === t);
           if (0 === l.length) return !1;
-          (a.messages = a.messages.slice()), (_[s] = a);
+          (n.messages = n.messages.slice()), (_[s] = n);
         },
         MESSAGE_DELETE_BULK: function (e) {
           let { ids: t, channelId: s } = e,
-            a = _[s];
-          null != a &&
-            (a.messages = a.messages.filter(e => -1 === t.indexOf(e.id)));
+            n = _[s];
+          null != n &&
+            (n.messages = n.messages.filter(e => -1 === t.indexOf(e.id)));
         },
         LOAD_PINNED_MESSAGES: function (e) {
           let { channelId: t } = e;
@@ -743,15 +746,15 @@
         RELATIONSHIP_REMOVE: N,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
           let { messageId: t, channelId: s } = e,
-            a = _[s];
-          if (null == a) return;
-          let l = n.findIndex(a.messages, e => e.id === t);
+            n = _[s];
+          if (null == n) return;
+          let l = a.findIndex(n.messages, e => e.id === t);
           -1 !== l &&
-            ((a.messages = a.messages.slice()),
-            (a.messages[l] = (0, d.handleExplicitMediaScanTimeoutForMessage)(
-              a.messages[l]
+            ((n.messages = n.messages.slice()),
+            (n.messages[l] = (0, d.handleExplicitMediaScanTimeoutForMessage)(
+              n.messages[l]
             )),
-            (_[s] = a));
+            (_[s] = n));
         },
       });
     },
@@ -763,28 +766,28 @@
             return d;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("469563"),
+      var a = s("469563"),
         l = s("601248"),
         i = s("75196"),
-        d = (0, n.replaceIcon)(
+        d = (0, a.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: s = 24,
-              color: n = "currentColor",
+              color: a = "currentColor",
               foreground: l,
               ...d
             } = e;
-            return (0, a.jsx)("svg", {
+            return (0, n.jsx)("svg", {
               ...(0, i.default)(d),
               width: t,
               height: s,
               viewBox: "0 0 24 24",
-              children: (0, a.jsx)("path", {
+              children: (0, n.jsx)("path", {
                 className: l,
-                fill: n,
+                fill: a,
                 d: "M14 3H20C21 3 22.0001 4 22.0001 5V19.0003C22.0001 20 21 21 20 21H14C13 21 6 13 6 13H2V11H6C6 11 13 3 14 3Z",
               }),
             });
@@ -805,8 +808,8 @@
             return u;
           },
         });
-      var a = s("42203"),
-        n = s("525065"),
+      var n = s("42203"),
+        a = s("525065"),
         l = s("957255"),
         i = s("697218"),
         d = s("49111");
@@ -826,7 +829,7 @@
           null != e &&
           r(e) &&
           (function (e) {
-            let t = a.default.getChannel(e);
+            let t = n.default.getChannel(e);
             if (null == t) return !1;
             if (
               t.type === d.ChannelTypes.DM ||
@@ -838,7 +841,7 @@
                 channelId: e,
               })
             ) {
-              let e = n.default.getMemberCount(t.getGuildId());
+              let e = a.default.getMemberCount(t.getGuildId());
               return null != e && e >= 50;
             }
             return !1;
@@ -854,19 +857,19 @@
             return i;
           },
         });
-      var a = s("37983");
+      var n = s("37983");
       s("884691");
-      var n = s("669491"),
+      var a = s("669491"),
         l = s("82169");
       let i = e => {
         let {
           width: t = 24,
           height: s = 24,
-          color: i = n.default.colors.INTERACTIVE_NORMAL,
+          color: i = a.default.colors.INTERACTIVE_NORMAL,
           colorClass: d = "",
           ...r
         } = e;
-        return (0, a.jsxs)("svg", {
+        return (0, n.jsxs)("svg", {
           ...(0, l.default)(r),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
@@ -874,12 +877,12 @@
           fill: "none",
           viewBox: "0 0 24 24",
           children: [
-            (0, a.jsx)("path", {
+            (0, n.jsx)("path", {
               d: "M12.93 21.96c.25-.03.43-.23.47-.47a3 3 0 0 1 .08-.35.66.66 0 0 0-.24-.71A3 3 0 0 1 12 18v-3a3 3 0 0 1 4.35-2.68c.14.07.3.09.44.04a7 7 0 0 1 4.58.05c.3.1.63-.1.63-.41a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12c.32 0 .63-.01.93-.04Z",
               fill: "string" == typeof i ? i : i.css,
               className: d,
             }),
-            (0, a.jsx)("path", {
+            (0, n.jsx)("path", {
               d: "M18 17h-1.24a3 3 0 1 1 .26 4.25 1 1 0 1 0-1.33 1.5A4.98 4.98 0 0 0 24 19a5 5 0 0 0-8-4 1 1 0 0 0-2 0v3a1 1 0 0 0 1 1h3a1 1 0 1 0 0-2Z",
               fill: "string" == typeof i ? i : i.css,
               className: d,
@@ -890,4 +893,4 @@
     },
   },
 ]);
-//# sourceMappingURL=271e5a01a2b03fbd5efc.js.map
+//# sourceMappingURL=5d5de717e4a99fc9d45b.js.map

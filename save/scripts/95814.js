@@ -378,15 +378,15 @@
             t = e.hour();
           return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
         },
-        N = (e, t) =>
+        T = (e, t) =>
           e.format(
             e.get("years") === t.get("years")
               ? "ddd MMM Do \xb7 LT"
               : "ddd MMM Do, YYYY \xb7 LT"
           ),
-        T = (e, t) => {
+        N = (e, t) => {
           let n = e.diff(t, "days");
-          return n > 1 ? N(e, t) : e.calendar(t);
+          return n > 1 ? T(e, t) : e.calendar(t);
         };
       function p(e, t, n) {
         null == n && (n = r());
@@ -394,9 +394,9 @@
           a = null != t && "" !== t ? r(t) : void 0,
           s = null != t && l.isSame(a, "day");
         return {
-          startDateTimeString: T(l, n),
+          startDateTimeString: N(l, n),
           endDateTimeString:
-            null != a ? (s ? a.format("LT") : N(a, n)) : void 0,
+            null != a ? (s ? a.format("LT") : T(a, n)) : void 0,
           currentOrPastEvent: l <= n,
           upcomingEvent: l <= r().add(1, "hour"),
           withinStartWindow: l <= r().add(15, "minute"),
@@ -753,11 +753,11 @@
         if (null == g) return null;
         let R = null,
           C = g.startDate,
-          N = r(),
-          T = r().add(o.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+          T = r(),
+          N = r().add(o.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
           p = r().add(o.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
         null != _ &&
-          (T.add(o.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"),
+          (N.add(o.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"),
           p.add(o.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
         let x = e => {
           n({ ...g, endDate: e });
@@ -856,8 +856,8 @@
                       onSelect: e => {
                         n({ ...g, startDate: e });
                       },
-                      minDate: N,
-                      maxDate: T,
+                      minDate: T,
+                      maxDate: N,
                       disabled: m,
                     }),
                   }),
@@ -1407,7 +1407,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return N;
           },
         }),
         n("424973");
@@ -1454,7 +1454,7 @@
           ],
         });
       }
-      function N(e) {
+      function T(e) {
         var t;
         let { guild: n, channel: r, stageData: i } = e,
           u = (0, a.useStateFromStores)(
@@ -1511,7 +1511,7 @@
           })
         );
       }
-      function T(e) {
+      function N(e) {
         let {
           guild: t,
           channel: n,
@@ -1526,7 +1526,7 @@
           ? null
           : (0, l.jsxs)(l.Fragment, {
               children: [
-                (0, l.jsx)(N, { guild: t, channel: n, stageData: a }),
+                (0, l.jsx)(T, { guild: t, channel: n, stageData: a }),
                 (0, l.jsxs)(r.ModalContent, {
                   className: m.container,
                   children: [
@@ -1645,8 +1645,8 @@
         m = n("887143"),
         R = n("834052"),
         C = n("151642"),
-        N = n("29846"),
-        T = n("837979"),
+        T = n("29846"),
+        N = n("837979"),
         p = n("49111"),
         x = n("745049"),
         I = n("533613"),
@@ -1829,7 +1829,7 @@
                   children:
                     null == F &&
                     ec > 0 &&
-                    (0, l.jsx)(N.BlockedUsersNotice, { channelId: j.id }),
+                    (0, l.jsx)(T.BlockedUsersNotice, { channelId: j.id }),
                 }),
                 (0, l.jsxs)("form", {
                   onSubmit: eS,
@@ -1849,7 +1849,7 @@
                           placeholder:
                             L.default.Messages
                               .START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
-                          maxLength: T.MAX_STAGE_TOPIC_LENGTH,
+                          maxLength: N.MAX_STAGE_TOPIC_LENGTH,
                           value: W,
                           autoComplete: "off",
                           inputRef: eR,
@@ -2078,7 +2078,7 @@
             () => c.default.getStageInstanceByChannel(t.id),
             [t.id]
           ),
-          { loading: C, error: N, onSave: T } = (0, h.default)(t, n),
+          { loading: C, error: T, onSave: N } = (0, h.default)(t, n),
           {
             modalStep: p,
             setModalStep: x,
@@ -2090,8 +2090,8 @@
           } = (0, g.default)({
             stageInstance: R,
             defaultStep: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
-            error: N,
-            onSave: T,
+            error: T,
+            onSave: N,
           });
         return (a.useEffect(() => {
           null == S && n();
@@ -2119,7 +2119,7 @@
                         headerId: E,
                         onClose: n,
                         loading: C,
-                        error: N,
+                        error: T,
                         onSave: y,
                         defaultOptions: A,
                         isSlideReady:
@@ -2302,7 +2302,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return N;
           },
         });
       var l = n("37983"),
@@ -2383,8 +2383,8 @@
               badgeStrokeColor: v,
               animate: R,
               tabIndex: C,
-              iconSrc: N,
-              "aria-hidden": T,
+              iconSrc: T,
+              "aria-hidden": N,
               ...p
             } = this.props,
             x = m[u],
@@ -2398,7 +2398,7 @@
               [_.iconInactive]: !i,
               [_.noIcon]: null == n.icon,
             }),
-            "aria-hidden": T,
+            "aria-hidden": N,
             style:
               null == n.icon
                 ? {
@@ -2460,13 +2460,13 @@
           },
         };
       })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(R, { ...e })));
-      class N extends a.PureComponent {
+      class T extends a.PureComponent {
         render() {
           return (0, l.jsx)(C, { ...this.props });
         }
       }
-      (N.Sizes = S),
-        (N.defaultProps = {
+      (T.Sizes = S),
+        (T.defaultProps = {
           size: S.LARGE,
           textScale: 1,
           showBadge: !1,
@@ -2476,7 +2476,7 @@
           badgeStrokeColor: o.default.unsafe_rawColors.WHITE_500.css,
           animate: !1,
         });
-      var T = N;
+      var N = T;
     },
     381546: function (e, t, n) {
       "use strict";
@@ -2878,10 +2878,10 @@
             return C;
           },
           trackSearchStarted: function () {
-            return N;
+            return T;
           },
           trackTagSearchStarted: function () {
-            return T;
+            return N;
           },
           trackSearchResultsViewed: function () {
             return p;
@@ -3036,7 +3036,7 @@
       function C(e) {
         E.default.track(h.AnalyticEvents.SEARCH_CLOSED, { load_id: e });
       }
-      function N(e, t) {
+      function T(e, t) {
         let n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
@@ -3046,7 +3046,7 @@
           category_id: t,
         });
       }
-      function T(e, t, n, l) {
+      function N(e, t, n, l) {
         E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
           search_type: h.SearchTypes.GUILD_DISCOVERY_TAG,
           load_id: e,
@@ -3089,7 +3089,7 @@
       async function I(e) {
         try {
           var t, n;
-          let l = await s.default.get({
+          let l = await s.HTTP.get({
               url: h.Endpoints.GUILD_DISCOVERY,
               query: r.stringify({ guild_ids: e }),
               oldFormErrors: !0,
@@ -3446,4 +3446,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d524dc2443bf39173050.js.map
+//# sourceMappingURL=2677aa01733eeaee17f4.js.map

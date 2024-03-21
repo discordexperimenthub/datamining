@@ -6,7 +6,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return T;
+            return E;
           },
         }),
         s("222007");
@@ -20,15 +20,15 @@
         c = s("49111"),
         S = s("782340"),
         o = s("168245");
-      function E(e) {
+      function T(e) {
         let {
             isGuildRestricted: t,
             handleRestrictedGuildChange: s,
             isGuildActivityRestricted: n,
             handleActivityRestrictedGuildChange: u,
             isGuildActivityJoiningRestricted: r,
-            handleActivityJoiningRestrictedGuildChange: E,
-            isGuildMessageRequestRestricted: T,
+            handleActivityJoiningRestrictedGuildChange: T,
+            isGuildMessageRequestRestricted: E,
             handleMessageRequestRestrictedGuildChange: I,
             guild: _,
             transitionState: N,
@@ -38,7 +38,7 @@
           A = ""
             .concat(S.default.Messages.PRIVACY_SETTINGS, "—")
             .concat(null != _ ? _.toString() : "??"),
-          f = _.hasFeature(c.GuildFeatures.HUB);
+          C = _.hasFeature(c.GuildFeatures.HUB);
         return (0, i.jsxs)(a.ModalRoot, {
           transitionState: N,
           size: a.ModalSize.SMALL,
@@ -56,7 +56,7 @@
                 (0, i.jsx)(a.FormItem, {
                   children: (0, i.jsx)(a.FormSwitch, {
                     value: !t,
-                    note: f
+                    note: C
                       ? S.default.Messages
                           .PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB
                       : S.default.Messages
@@ -73,8 +73,8 @@
                     children: [
                       (0, i.jsx)(a.FormItem, {
                         children: (0, i.jsx)(a.FormSwitch, {
-                          value: !T,
-                          note: f
+                          value: !E,
+                          note: C
                             ? S.default.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format(
                                 {
                                   helpdeskArticle: l.default.getArticleURL(
@@ -120,7 +120,7 @@
                 (0, i.jsx)(a.FormItem, {
                   children: (0, i.jsx)(a.FormSwitch, {
                     value: !r,
-                    onChange: E,
+                    onChange: T,
                     hideBorder: !0,
                     note: S.default.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format(
                       {
@@ -161,14 +161,14 @@
           ],
         });
       }
-      function T(e) {
+      function E(e) {
         let { guild: t, transitionState: s, onClose: a } = e,
           d = t.id,
           l = u.RestrictedGuildIds.useSetting().includes(d),
           c = u.MessageRequestRestrictedGuildIds.useSetting().includes(d),
           S = u.ActivityRestrictedGuilds.useSetting().includes(d),
           o = u.ActivityJoiningRestrictedGuilds.useSetting().includes(d),
-          T = n.useCallback(
+          E = n.useCallback(
             e => {
               let t = new Set((0, r.getSanitizedRestrictedGuilds)());
               e ? t.delete(d) : t.add(d),
@@ -204,9 +204,9 @@
             },
             [d]
           );
-        return (0, i.jsx)(E, {
+        return (0, i.jsx)(T, {
           isGuildRestricted: l,
-          handleRestrictedGuildChange: T,
+          handleRestrictedGuildChange: E,
           isGuildActivityRestricted: S,
           handleActivityRestrictedGuildChange: I,
           isGuildActivityJoiningRestricted: o,
@@ -239,7 +239,7 @@
             return o;
           },
           fetchUserCountryCode: function () {
-            return E;
+            return T;
           },
         });
       var i = s("872717"),
@@ -248,7 +248,7 @@
         d = s("773163"),
         u = s("49111");
       async function l(e) {
-        await i.default.put({
+        await i.HTTP.put({
           url: u.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: { consent_status: d.MessageRequestConsentStatusTypes.ACCEPTED },
         }),
@@ -258,7 +258,7 @@
           });
       }
       function r(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: u.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: {
             consent_status: d.MessageRequestConsentStatusTypes.UNSPECIFIED,
@@ -266,23 +266,21 @@
         });
       }
       function c(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: u.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
           body: { consent_status: d.MessageRequestConsentStatusTypes.PENDING },
         });
       }
       function S(e) {
-        return i.default.delete({
-          url: u.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
-        });
+        return i.HTTP.del({ url: u.Endpoints.CHANNEL_RECIPIENT_CONSENT(e) });
       }
       function o(e) {
-        return i.default.put({
+        return i.HTTP.put({
           url: u.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
           body: { channel_ids: e },
         });
       }
-      function E() {
+      function T() {
         a.default.getLocationMetadata();
       }
     },
@@ -346,10 +344,10 @@
             return o;
           },
           getSanitizedActivityRestrictedGuilds: function () {
-            return E;
+            return T;
           },
           getSanitizedActivityJoiningRestrictedGuilds: function () {
-            return T;
+            return E;
           },
           computeFlags: function () {
             return I;
@@ -392,7 +390,7 @@
           e
         );
       }
-      function E() {
+      function T() {
         let e = a.ActivityRestrictedGuilds.getSetting();
         return (
           0 === d.default.totalUnavailableGuilds &&
@@ -400,7 +398,7 @@
           e
         );
       }
-      function T() {
+      function E() {
         let e = a.ActivityJoiningRestrictedGuilds.getSetting();
         return (
           0 === d.default.totalUnavailableGuilds &&
@@ -459,4 +457,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6cc0d4a2def0d63dece2.js.map
+//# sourceMappingURL=c4b09ce2ae8d704fee97.js.map

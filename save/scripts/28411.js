@@ -744,37 +744,38 @@
                       return t === S ? 0 : Object.keys(t).length;
                     })(t) > 5
                   ) &&
-                    l.default
-                      .post({ url: s.Endpoints.TYPING(t), oldFormErrors: !0 })
-                      .then(e => {
-                        if (200 === e.status) {
-                          var u, n;
-                          let r =
-                              null !== (u = e.body.message_send_cooldown_ms) &&
-                              void 0 !== u
-                                ? u
-                                : 0,
-                            l =
-                              null !== (n = e.body.thread_create_cooldown_ms) &&
-                              void 0 !== n
-                                ? n
-                                : 0;
-                          r > 0 &&
+                    l.HTTP.post({
+                      url: s.Endpoints.TYPING(t),
+                      oldFormErrors: !0,
+                    }).then(e => {
+                      if (200 === e.status) {
+                        var u, n;
+                        let r =
+                            null !== (u = e.body.message_send_cooldown_ms) &&
+                            void 0 !== u
+                              ? u
+                              : 0,
+                          l =
+                            null !== (n = e.body.thread_create_cooldown_ms) &&
+                            void 0 !== n
+                              ? n
+                              : 0;
+                        r > 0 &&
+                          a.default.dispatch({
+                            type: "SLOWMODE_SET_COOLDOWN",
+                            channelId: t,
+                            slowmodeType: d.SlowmodeType.SendMessage,
+                            cooldownMs: r,
+                          }),
+                          l > 0 &&
                             a.default.dispatch({
                               type: "SLOWMODE_SET_COOLDOWN",
                               channelId: t,
-                              slowmodeType: d.SlowmodeType.SendMessage,
-                              cooldownMs: r,
-                            }),
-                            l > 0 &&
-                              a.default.dispatch({
-                                type: "SLOWMODE_SET_COOLDOWN",
-                                channelId: t,
-                                slowmodeType: d.SlowmodeType.CreateThread,
-                                cooldownMs: l,
-                              });
-                        }
-                      });
+                              slowmodeType: d.SlowmodeType.CreateThread,
+                              cooldownMs: l,
+                            });
+                      }
+                    });
             }, g);
           return (
             (n = { channelId: t, timeout: h, prevSend: r }),
@@ -815,4 +816,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a279867d08ebbeeb824d.js.map
+//# sourceMappingURL=616b44050af5951432c4.js.map

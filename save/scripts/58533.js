@@ -102,34 +102,29 @@
       function F(e, t, r) {
         let s = Date.now();
         y(t),
-          i.default
-            .get({
-              url: _.Endpoints.GIFS_SEARCH,
-              query: {
-                q: e,
-                media_format: f.default.getSelectedFormat(),
-                provider: "tenor",
-                locale: d.default.locale,
-                limit: r,
-              },
-              oldFormErrors: !0,
-            })
-            .then(
-              n => {
-                let l = n.body;
-                v(l, t, { startTime: s, limit: r }),
-                  o.default.dispatch({
-                    type: "GIF_PICKER_QUERY_SUCCESS",
-                    query: e,
-                    items: l,
-                  });
-              },
-              () =>
+          i.HTTP.get({
+            url: _.Endpoints.GIFS_SEARCH,
+            query: {
+              q: e,
+              media_format: f.default.getSelectedFormat(),
+              provider: "tenor",
+              locale: d.default.locale,
+              limit: r,
+            },
+            oldFormErrors: !0,
+          }).then(
+            n => {
+              let l = n.body;
+              v(l, t, { startTime: s, limit: r }),
                 o.default.dispatch({
-                  type: "GIF_PICKER_QUERY_FAILURE",
+                  type: "GIF_PICKER_QUERY_SUCCESS",
                   query: e,
-                })
-            );
+                  items: l,
+                });
+            },
+            () =>
+              o.default.dispatch({ type: "GIF_PICKER_QUERY_FAILURE", query: e })
+          );
       }
       let T = n.debounce(F, 250);
       function C(e, t) {
@@ -143,25 +138,23 @@
       function A(e) {
         "" !== e &&
           null != e &&
-          i.default
-            .get({
-              url: _.Endpoints.GIFS_SUGGEST,
-              query: {
-                q: e,
-                provider: "tenor",
-                limit: 5,
-                locale: d.default.locale,
-              },
-              oldFormErrors: !0,
-            })
-            .then(t => {
-              let r = t.body;
-              o.default.dispatch({
-                type: "GIF_PICKER_SUGGESTIONS_SUCCESS",
-                query: e,
-                items: r,
-              });
+          i.HTTP.get({
+            url: _.Endpoints.GIFS_SUGGEST,
+            query: {
+              q: e,
+              provider: "tenor",
+              limit: 5,
+              locale: d.default.locale,
+            },
+            oldFormErrors: !0,
+          }).then(t => {
+            let r = t.body;
+            o.default.dispatch({
+              type: "GIF_PICKER_SUGGESTIONS_SUCCESS",
+              query: e,
+              items: r,
             });
+          });
       }
       function G() {
         o.default.dispatch({ type: "GIF_PICKER_QUERY", query: "" });
@@ -190,7 +183,7 @@
           query: o,
         }),
           null != c &&
-            i.default.post({
+            i.HTTP.post({
               url: _.Endpoints.GIFS_SELECT,
               body: { id: c, q: o },
               oldFormErrors: !0,
@@ -210,56 +203,52 @@
           });
       }
       function P() {
-        i.default
-          .get({
-            url: _.Endpoints.GIFS_TRENDING,
-            query: {
-              provider: "tenor",
-              locale: d.default.locale,
-              media_format: f.default.getSelectedFormat(),
-            },
-            oldFormErrors: !0,
-          })
-          .then(e => {
-            let { body: t } = e,
-              { categories: r, gifs: s } = t;
-            o.default.dispatch({
-              type: "GIF_PICKER_TRENDING_FETCH_SUCCESS",
-              trendingCategories: r,
-              trendingGIFPreview: s[0],
-            });
+        i.HTTP.get({
+          url: _.Endpoints.GIFS_TRENDING,
+          query: {
+            provider: "tenor",
+            locale: d.default.locale,
+            media_format: f.default.getSelectedFormat(),
+          },
+          oldFormErrors: !0,
+        }).then(e => {
+          let { body: t } = e,
+            { categories: r, gifs: s } = t;
+          o.default.dispatch({
+            type: "GIF_PICKER_TRENDING_FETCH_SUCCESS",
+            trendingCategories: r,
+            trendingGIFPreview: s[0],
           });
+        });
       }
       function M(e) {
         let t = Date.now();
         y(_.GIFPickerResultTypes.TRENDING_GIFS),
-          i.default
-            .get({
-              url: _.Endpoints.GIFS_TRENDING_GIFS,
-              query: {
-                media_format: f.default.getSelectedFormat(),
-                provider: "tenor",
-                locale: d.default.locale,
+          i.HTTP.get({
+            url: _.Endpoints.GIFS_TRENDING_GIFS,
+            query: {
+              media_format: f.default.getSelectedFormat(),
+              provider: "tenor",
+              locale: d.default.locale,
+              limit: e,
+            },
+            oldFormErrors: !0,
+          }).then(
+            r => {
+              let { body: s } = r;
+              v(s, _.GIFPickerResultTypes.TRENDING_GIFS, {
+                startTime: t,
                 limit: e,
-              },
-              oldFormErrors: !0,
-            })
-            .then(
-              r => {
-                let { body: s } = r;
-                v(s, _.GIFPickerResultTypes.TRENDING_GIFS, {
-                  startTime: t,
-                  limit: e,
-                }),
-                  o.default.dispatch({
-                    type: "GIF_PICKER_QUERY_SUCCESS",
-                    items: s,
-                  });
-              },
-              () => {
-                o.default.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
-              }
-            );
+              }),
+                o.default.dispatch({
+                  type: "GIF_PICKER_QUERY_SUCCESS",
+                  items: s,
+                });
+            },
+            () => {
+              o.default.dispatch({ type: "GIF_PICKER_QUERY_FAILURE" });
+            }
+          );
       }
       function w(e) {
         let t = I.default.toURLSafe(e);
@@ -1869,7 +1858,7 @@
         return e.attachments.some(p) || e.embeds.some(g);
       }
       async function E(e) {
-        let t = await n.default.post({
+        let t = await n.HTTP.post({
           url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
           body: { attachment_urls: [e] },
         });
@@ -2423,4 +2412,4 @@
     },
   },
 ]);
-//# sourceMappingURL=58533.905dede5cdbbedf50fce.js.map
+//# sourceMappingURL=58533.22d2a9594538cb34206b.js.map

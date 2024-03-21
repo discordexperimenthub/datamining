@@ -1366,7 +1366,7 @@
         if (0 === i.length) return [];
         T(n, 2);
         try {
-          let t = await d.default.post({
+          let t = await d.HTTP.post({
             url: S.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
           });
@@ -2119,4 +2119,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5f6d7931b05f45916ba9.js.map
+//# sourceMappingURL=f4a2d91dfd77c56c1d9a.js.map

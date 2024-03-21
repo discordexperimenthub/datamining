@@ -67,8 +67,8 @@
         E = n("315102"),
         _ = n("730622"),
         u = n("437822"),
-        d = n("49111"),
-        T = n("191349"),
+        T = n("49111"),
+        d = n("191349"),
         S = n("782340");
       function N() {
         r.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
@@ -80,10 +80,10 @@
         let n = t
             ? S.default.Messages.DELETE_ACCOUNT
             : S.default.Messages.DISABLE_ACCOUNT,
-          o = t ? d.Endpoints.DELETE_ACCOUNT : d.Endpoints.DISABLE_ACCOUNT;
+          o = t ? T.Endpoints.DELETE_ACCOUNT : T.Endpoints.DISABLE_ACCOUNT;
         return (0, _.default)(
           t =>
-            s.default.post({
+            s.HTTP.post({
               url: o,
               body: { password: e, ...t },
               oldFormErrors: !0,
@@ -91,12 +91,12 @@
           { modalProps: { title: n }, checkEnabled: !1 }
         ).then(() => {
           u.default.logoutInternal(),
-            (0, l.transitionTo)(d.Routes.DEFAULT_LOGGED_OUT);
+            (0, l.transitionTo)(T.Routes.DEFAULT_LOGGED_OUT);
         });
       }
       async function A(e) {
-        let t = await s.default.patch({
-            url: d.Endpoints.ME,
+        let t = await s.HTTP.patch({
+            url: T.Endpoints.ME,
             oldFormErrors: !0,
             body: e,
           }),
@@ -146,16 +146,16 @@
                 null != N &&
                   ((r.avatar_decoration_id = N.id),
                   (r.avatar_decoration_sku_id = N.skuId));
-              let i = o.default.get(d.DEVICE_TOKEN),
-                E = (0, T.getDevicePushProvider)();
+              let i = o.default.get(T.DEVICE_TOKEN),
+                E = (0, d.getDevicePushProvider)();
               null != E &&
                 null != i &&
                 ((r.push_provider = E), (r.push_token = i));
-              let _ = o.default.get(d.DEVICE_VOIP_TOKEN);
+              let _ = o.default.get(T.DEVICE_VOIP_TOKEN);
               return (
-                null != T.DEVICE_PUSH_VOIP_PROVIDER &&
+                null != d.DEVICE_PUSH_VOIP_PROVIDER &&
                   null != _ &&
-                  ((r.push_voip_provider = T.DEVICE_PUSH_VOIP_PROVIDER),
+                  ((r.push_voip_provider = d.DEVICE_PUSH_VOIP_PROVIDER),
                   (r.push_voip_token = _)),
                 A(r)
               );
@@ -175,7 +175,7 @@
             e => {
               let t = e.body;
               return (
-                i.default.track(d.AnalyticEvents.USER_AVATAR_UPDATED, {
+                i.default.track(T.AnalyticEvents.USER_AVATAR_UPDATED, {
                   animated: (0, E.isAnimatedIconHash)(t.avatar),
                 }),
                 r.default.dispatch({
@@ -195,14 +195,11 @@
         );
       }
       function f() {
-        return s.default.get({
-          url: d.Endpoints.USER_HARVEST,
-          oldFormErrors: !0,
-        });
+        return s.HTTP.get({ url: T.Endpoints.USER_HARVEST, oldFormErrors: !0 });
       }
       function R() {
-        return s.default.post({
-          url: d.Endpoints.USER_HARVEST,
+        return s.HTTP.post({
+          url: T.Endpoints.USER_HARVEST,
           oldFormErrors: !0,
         });
       }
@@ -334,7 +331,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return T;
           },
         }),
         n("222007");
@@ -347,12 +344,12 @@
         E = n("790618"),
         _ = n("782340"),
         u = n("917908");
-      function d(e) {
+      function T(e) {
         var t;
         let {
             isSlideReady: n,
-            error: d,
-            setEmailToken: T,
+            error: T,
+            setEmailToken: d,
             setError: S,
             onNext: N,
             onClose: c,
@@ -374,7 +371,7 @@
             e.preventDefault(), S(null), A(!0);
             try {
               let { token: e } = await (0, i.confirmEmailChange)(I);
-              T(e), N();
+              d(e), N();
             } catch (t) {
               let e = new l.default(t);
               S(e.getAnyErrorMessage());
@@ -440,8 +437,8 @@
                     _.default.Messages
                       .USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
                   error:
-                    null != d
-                      ? d
+                    null != T
+                      ? T
                       : null == O
                         ? void 0
                         : null === (t = O.email_token) || void 0 === t
@@ -481,7 +478,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return T;
           },
         }),
         n("222007");
@@ -494,14 +491,14 @@
         E = n("697218"),
         _ = n("782340"),
         u = n("917908");
-      function d(e) {
+      function T(e) {
         let { onNext: t, onClose: n } = e,
-          [d, T] = o.useState(!1),
+          [T, d] = o.useState(!1),
           S = (0, a.useStateFromStores)([E.default], () =>
             E.default.getCurrentUser()
           ),
           N = async e => {
-            e.preventDefault(), T(!0);
+            e.preventDefault(), d(!0);
             try {
               await (0, i.sendConfirmationCode)(), t();
             } catch (n) {
@@ -510,7 +507,7 @@
               null != t &&
                 (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE));
             } finally {
-              T(!1);
+              d(!1);
             }
           };
         return (0, s.jsxs)("form", {
@@ -551,7 +548,7 @@
                   type: "submit",
                   color: r.Button.Colors.BRAND,
                   size: r.Button.Sizes.MEDIUM,
-                  submitting: d,
+                  submitting: T,
                   className: u.submit,
                   children:
                     _.default.Messages
@@ -588,8 +585,8 @@
         E = n("697218"),
         _ = n("330355"),
         u = n("893044"),
-        d = n("509943"),
-        T = n("457818"),
+        T = n("509943"),
+        d = n("457818"),
         S = n("397336"),
         N = n("917908"),
         c = n("92693");
@@ -630,7 +627,7 @@
                   impressionName:
                     a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
                   impressionProperties: L,
-                  children: (0, s.jsx)(d.default, {
+                  children: (0, s.jsx)(T.default, {
                     onNext: () => O(S.ChangeEmailSteps.CONFIRM_CODE),
                     onClose: C,
                   }),
@@ -654,7 +651,7 @@
                   impressionName:
                     a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
                   impressionProperties: { ...L, email_verified: I.current },
-                  children: (0, s.jsx)(T.default, {
+                  children: (0, s.jsx)(d.default, {
                     emailToken: M,
                     isSlideReady: m === S.ChangeEmailSteps.EMAIL_AND_PASSWORD,
                     onBack: f ? () => O(S.ChangeEmailSteps.CONFIRM_CODE) : null,
@@ -682,7 +679,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return T;
           },
         }),
         n("222007");
@@ -695,11 +692,11 @@
         E = n("648661"),
         _ = n("782340"),
         u = n("917908");
-      function d(e) {
+      function T(e) {
         var t, n;
         let {
-            emailToken: d,
-            isSlideReady: T,
+            emailToken: T,
+            isSlideReady: d,
             onClose: S,
             onBack: N,
             onNext: c,
@@ -715,7 +712,7 @@
           e.preventDefault(), U(!0);
           let t = await (0, l.saveAccountChanges)({
             email: C,
-            emailToken: d,
+            emailToken: T,
             password: I,
           });
           if ((U(!1), null == t ? void 0 : t.ok)) c(C);
@@ -737,11 +734,11 @@
         }
         return (
           o.useEffect(() => {
-            if (T) {
+            if (d) {
               var e;
               null === (e = m.current) || void 0 === e || e.focus();
             }
-          }, [T]),
+          }, [d]),
           (0, s.jsxs)("form", {
             onSubmit: p,
             children: [
@@ -893,7 +890,7 @@
     },
     790618: function (e, t, n) {
       "use strict";
-      let s, o, a, r, l, i, E, _, u, d, T, S, N, c;
+      let s, o, a, r, l, i, E, _, u, T, d, S, N, c;
       n.r(t),
         n.d(t, {
           default: function () {
@@ -928,7 +925,7 @@
           (r = void 0);
       }
       function g() {
-        (T = void 0), (S = void 0), (N = void 0), (c = void 0), (d = void 0);
+        (d = void 0), (S = void 0), (N = void 0), (c = void 0), (T = void 0);
       }
       class G extends A.default.Store {
         getFormState() {
@@ -991,10 +988,10 @@
           };
         }
         getTryItOutThemeColors() {
-          return d;
+          return T;
         }
         getTryItOutAvatar() {
-          return T;
+          return d;
         }
         getTryItOutAvatarDecoration() {
           return S;
@@ -1007,8 +1004,8 @@
         }
         getAllTryItOut() {
           return {
-            tryItOutThemeColors: d,
-            tryItOutAvatar: T,
+            tryItOutThemeColors: T,
+            tryItOutAvatar: d,
             tryItOutAvatarDecoration: S,
             tryItOutProfileEffectId: N,
             tryItOutBanner: c,
@@ -1042,7 +1039,7 @@
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function (e) {
           let { avatar: t } = e;
-          (s = t), (T = void 0);
+          (s = t), (d = void 0);
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function (e) {
           let { globalName: t } = e;
@@ -1086,7 +1083,7 @@
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function (e) {
           let { avatar: t } = e;
-          T = t;
+          d = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
           let { avatarDecoration: t } = e;
@@ -1102,7 +1099,7 @@
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function (e) {
           let { themeColors: t } = e;
-          d = t;
+          T = t;
         },
         USER_SETTINGS_CLEAR_ERRORS: function () {
           U = {};
@@ -1138,4 +1135,4 @@
     },
   },
 ]);
-//# sourceMappingURL=29e377bd55dcce6d7df2.js.map
+//# sourceMappingURL=03098f578c966d1619df.js.map

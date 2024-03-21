@@ -164,8 +164,8 @@
             p = l >> 15,
             E = u(3, p ? (f ? 5 : 7) : 7 & l),
             S = u(3, p ? 7 & l : f ? 5 : 7),
-            _ = f ? (15 & e[5]) / 15 : 1,
-            T = (e[5] >> 4) / 15,
+            T = f ? (15 & e[5]) / 15 : 1,
+            _ = (e[5] >> 4) / 15,
             y = f ? 6 : 5,
             m = 0,
             h = (t, n, r) => {
@@ -177,10 +177,10 @@
                   );
               return u;
             },
-            I = h(E, S, ((i >> 18) & 31) / 31),
-            P = h(3, 3, 1.25 * (((l >> 3) & 63) / 63)),
+            P = h(E, S, ((i >> 18) & 31) / 31),
+            I = h(3, 3, 1.25 * (((l >> 3) & 63) / 63)),
             C = h(3, 3, 1.25 * (((l >> 9) & 63) / 63)),
-            A = f && h(5, 5, T),
+            A = f && h(5, 5, _),
             R = r(e),
             L = o(R > 1 ? 32 : 32 * R),
             N = o(R > 1 ? 32 / R : 32),
@@ -192,7 +192,7 @@
               let i = s,
                 l = c,
                 p = d,
-                T = _;
+                _ = T;
               for (let e = 0, n = u(E, f ? 5 : 3); e < n; e++)
                 U[e] = a((t / L) * (o + 0.5) * e);
               for (let n = 0, r = u(S, f ? 5 : 3); n < r; n++)
@@ -203,23 +203,23 @@
                   n * S < E * (S - e);
                   n++, t++
                 )
-                  i += I[t] * U[n] * r;
+                  i += P[t] * U[n] * r;
               for (let e = 0, t = 0; e < 3; e++)
                 for (let n = e ? 0 : 1, r = 2 * v[e]; n < 3 - e; n++, t++) {
                   let e = U[n] * r;
-                  (l += P[t] * e), (p += C[t] * e);
+                  (l += I[t] * e), (p += C[t] * e);
                 }
               if (f)
                 for (let e = 0, t = 0; e < 5; e++)
                   for (let n = e ? 0 : 1, r = 2 * v[e]; n < 5 - e; n++, t++)
-                    T += A[t] * U[n] * r;
+                    _ += A[t] * U[n] * r;
               let y = i - (2 / 3) * l,
                 m = (3 * i - y + p) / 2,
                 h = m - p;
               (g[r] = u(0, 255 * n(1, m))),
                 (g[r + 1] = u(0, 255 * n(1, h))),
                 (g[r + 2] = u(0, 255 * n(1, y))),
-                (g[r + 3] = u(0, 255 * n(1, T)));
+                (g[r + 3] = u(0, 255 * n(1, _)));
             }
           return { w: L, h: N, rgba: g };
         })(e);
@@ -254,12 +254,11 @@
               applicationId: e,
             });
           }),
-          r.default
-            .get({
-              url: o.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
-              oldFormErrors: !0,
-              query: { exclude_consumed: t },
-            })
+          r.HTTP.get({
+            url: o.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+            oldFormErrors: !0,
+            query: { exclude_consumed: t },
+          })
             .then(
               t => (
                 u.default.dispatch({
@@ -286,7 +285,7 @@
         } = e;
         u.default.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_START" });
         try {
-          let e = await r.default.get({
+          let e = await r.HTTP.get({
             url: o.Endpoints.ENTITLEMENTS_FOR_USER,
             query: { with_sku: t, with_application: n, entitlement_type: a },
           });
@@ -711,13 +710,13 @@
         let {
             initialPlanId: t,
             followupSKUInfo: S,
-            onClose: _,
-            onComplete: T,
+            onClose: T,
+            onComplete: _,
             onSubscriptionConfirmation: y,
             analyticsLocations: m,
             analyticsObject: h,
-            analyticsLocation: I,
-            analyticsSourceLocation: P,
+            analyticsLocation: P,
+            analyticsSourceLocation: I,
             isGift: C = !1,
             giftMessage: A,
             subscriptionTier: R,
@@ -751,7 +750,7 @@
                 followupSKUInfo: S,
                 onClose: (e, t) => {
                   u(),
-                    null == _ || _(e),
+                    null == T || T(e),
                     e &&
                       (null == y || y(),
                       !C &&
@@ -764,14 +763,14 @@
                 },
                 onComplete: () => {
                   (F = !0),
-                    null == T || T(),
+                    null == _ || _(),
                     !C && (0, l.setCanPlayWowMoment)(!0);
                 },
                 onSubscriptionConfirmation: y,
                 analyticsLocations: m,
                 analyticsObject: h,
-                analyticsLocation: I,
-                analyticsSourceLocation: P,
+                analyticsLocation: P,
+                analyticsSourceLocation: I,
                 trialId: L,
                 postSuccessGuild: N,
                 planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -793,8 +792,8 @@
                     p.PurchaseTypeToAnalyticsPaymentType[
                       p.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != I ? I : h,
-                  source: P,
+                  location: null != P ? P : h,
+                  source: I,
                   subscription_type: p.SubscriptionTypes.PREMIUM,
                   is_gift: C,
                   eligible_for_trial: null != L,
@@ -803,7 +802,7 @@
                 }),
                 (0, o.clearError)(),
                 (0, i.clearPurchaseTokenAuthState)(),
-                null == _ || _(F),
+                null == T || T(F),
                 F && (null == y || y());
             },
           }
@@ -892,13 +891,13 @@
         function S() {
           null == p || p(), t(), (0, u.navigateToPremiumMarketingPage)();
         }
-        let { isLoading: _, suggestedPremiumType: T } = (0, o.default)({
+        let { isLoading: T, suggestedPremiumType: _ } = (0, o.default)({
             autoTrackExposure: !0,
             experiment: a.default,
             location: "video_backgrounds_upsell",
           }),
           y =
-            T === l.PremiumTypes.TIER_0
+            _ === l.PremiumTypes.TIER_0
               ? l.PremiumSubscriptionSKUs.TIER_0
               : l.PremiumSubscriptionSKUs.TIER_2,
           m =
@@ -923,7 +922,7 @@
           },
           onClose: t,
           subscriptionTier: y,
-          isLoading: _,
+          isLoading: T,
           ...E,
         });
       }
@@ -936,7 +935,7 @@
             return u;
           },
           Shine: function () {
-            return _;
+            return T;
           },
           default: function () {
             return y;
@@ -956,7 +955,7 @@
       ((r = u || (u = {})).DEFAULT = "default"), (r.SMALL = "small");
       let E = { default: p.shineDefault, small: p.shineSmall },
         S = { default: p.shineInnerDefault, small: p.shineInnerSmall };
-      class _ extends o.PureComponent {
+      class T extends o.PureComponent {
         render() {
           let { className: e, shineSize: t, shinePaused: n, ...r } = this.props;
           return (0, a.jsx)(s.default.div, {
@@ -971,8 +970,8 @@
           });
         }
       }
-      _.defaultProps = { shineSize: "default" };
-      let T = e => {
+      T.defaultProps = { shineSize: "default" };
+      let _ = e => {
         let {
             children: t,
             className: n,
@@ -983,21 +982,21 @@
             shinePaused: f,
             buttonShineClassName: E,
             onlyShineOnHover: S,
-            ...T
+            ..._
           } = e,
           y = o.createRef(),
           m = (0, d.default)(y),
           h = !r && !u && !0 !== i && (!S || m);
         return (0, a.jsxs)(c.Button, {
           buttonRef: y,
-          ...T,
+          ..._,
           className: l(p.shinyButton, n),
           disabled: r,
           submitting: u,
           children: [
             t,
             h
-              ? (0, a.jsx)(_, {
+              ? (0, a.jsx)(T, {
                   shinePaused: f,
                   className: l(
                     p.buttonShine,
@@ -1010,8 +1009,8 @@
           ],
         });
       };
-      T.ShineSizes = u;
-      var y = T;
+      _.ShineSizes = u;
+      var y = _;
     },
     713518: function (e, t, n) {
       "use strict";
@@ -1027,7 +1026,7 @@
             return S;
           },
           useCurrencyWithPaymentSourceChange: function () {
-            return _;
+            return T;
           },
         }),
         n("222007");
@@ -1082,7 +1081,7 @@
         let u = E(r, n, !1);
         return u.includes(t);
       }
-      function _(e, t, n, u, a) {
+      function T(e, t, n, u, a) {
         let [o, i] = r.useReducer(
             (e, t) => ({ ...e, ...t }),
             null != n
@@ -1158,4 +1157,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5abf12f5235310e5c4a7.js.map
+//# sourceMappingURL=96198731c0e584267ee2.js.map

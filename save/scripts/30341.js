@@ -500,20 +500,20 @@
             null != g.target_application
               ? new o.default(g.target_application)
               : null,
-          y = R || null == g.inviter ? null : new c.default(g.inviter),
-          G =
+          P = R || null == g.inviter ? null : new c.default(g.inviter),
+          y =
             (null != g.approximate_member_count &&
               g.approximate_member_count > 100) ||
             (null != D && D.hasFeature(T.GuildFeatures.COMMUNITY)),
-          P = !G && null != y,
+          G = !y && null != P,
           b = null,
           F = !1;
         if (null != D)
           (b =
-            null == y
+            null == P
               ? A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN
               : A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
-                  username: m.default.getFormattedName(y),
+                  username: m.default.getFormattedName(P),
                 })),
             g.target_type === I.InviteTargetTypes.STREAM &&
               null != g.target_user &&
@@ -523,12 +523,12 @@
             g.target_type === I.InviteTargetTypes.EMBEDDED_APPLICATION &&
               null != g.target_application &&
               (b =
-                null != y
+                null != P
                   ? A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format(
-                      { username: m.default.getFormattedName(y) }
+                      { username: m.default.getFormattedName(P) }
                     )
                   : A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY),
-            P &&
+            G &&
               null == x &&
               (n = (0, s.jsx)(h.GuildIcon, {
                 className: S.icon,
@@ -563,8 +563,8 @@
                 ],
               })));
         else if (null != U) {
-          if (null == y) throw Error("no inviter in group DM invite");
-          let e = m.default.getFormattedName(y);
+          if (null == P) throw Error("no inviter in group DM invite");
+          let e = m.default.getFormattedName(P);
           null != U.name && "" !== U.name
             ? ((b = A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
                 username: e,
@@ -579,8 +579,8 @@
                 A.default.Messages
                   .INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM),
               (a = e));
-        } else if (null != y) {
-          let e = m.default.getFormattedName(y, !0);
+        } else if (null != P) {
+          let e = m.default.getFormattedName(P, !0);
           (a =
             A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format(
               { username: e }
@@ -606,7 +606,7 @@
             (0, s.jsx)(N, {
               application: x,
               guild: D,
-              user: P ? y : null,
+              user: G ? P : null,
               compact: F,
             }),
             null != C
@@ -698,9 +698,9 @@
         D = n("124969"),
         U = n("980428"),
         x = n("599110"),
-        y = n("659500"),
-        G = n("773336"),
-        P = n("404432"),
+        P = n("659500"),
+        y = n("773336"),
+        G = n("404432"),
         b = n("719451"),
         F = n("331085"),
         B = n("598489"),
@@ -992,7 +992,7 @@
             (n =
               null == a || f
                 ? null != l
-                  ? (0, s.jsx)(P.default, { giftCode: l })
+                  ? (0, s.jsx)(G.default, { giftCode: l })
                   : (0, s.jsxs)("div", {
                       className: H.header,
                       children: [
@@ -1004,7 +1004,7 @@
                           },
                           "title"
                         ),
-                        !1 === (0, G.isAndroidWeb)()
+                        !1 === (0, y.isAndroidWeb)()
                           ? (0, s.jsx)(
                               D.SubTitle,
                               { children: w.default.Messages.AUTH_LOGIN_BODY },
@@ -1317,7 +1317,7 @@
                   giftCodeSKUId: this.giftCodeSKUId,
                   invite: this.props.invite,
                 }),
-                y.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE);
+                P.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE);
             }),
             (this.handleIPAuthorize = async e => {
               let { password: t, undelete: n } = this.state,
@@ -1332,7 +1332,7 @@
                     source: this.loginSource,
                     giftCodeSKUId: this.giftCodeSKUId,
                   }),
-                  y.ComponentDispatch.dispatch(
+                  P.ComponentDispatch.dispatch(
                     j.ComponentActions.WAVE_EMPHASIZE
                   );
               } catch (e) {
@@ -1362,7 +1362,7 @@
             (this.handleTokenSubmitMFA = e => {
               let { mfaType: t, data: n, ticket: s } = e;
               return (
-                y.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE),
+                P.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE),
                 E.default.loginMFAv2({
                   code: n,
                   ticket: s,
@@ -1377,7 +1377,7 @@
                 null != this.loginRef && this.loginRef.focus();
               let t = this.getFullLogin();
               try {
-                y.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE),
+                P.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE),
                   await E.default.forgotPassword(t),
                   (0, d.openModal)(e =>
                     (0, s.jsx)(d.ConfirmModal, {
@@ -1443,7 +1443,7 @@
                         : (e = j.Routes.REGISTER),
                 E.default.loginReset(),
                 r(e, { search: (0, i.stringify)(u) }),
-                y.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE);
+                P.ComponentDispatch.dispatch(j.ComponentActions.WAVE_EMPHASIZE);
             });
           let a = null != e.location ? (0, i.parse)(e.location.search) : {};
           this.state = {
@@ -1951,12 +1951,11 @@
           o.useEffect(() => {
             4 === n.step &&
               null != n.ticket &&
-              d.default
-                .post({
-                  url: I.Endpoints.REMOTE_AUTH_LOGIN,
-                  body: { ticket: n.ticket },
-                  oldFormErrors: !0,
-                })
+              d.HTTP.post({
+                url: I.Endpoints.REMOTE_AUTH_LOGIN,
+                body: { ticket: n.ticket },
+                oldFormErrors: !0,
+              })
                 .then(async e => {
                   if (null != s)
                     try {
@@ -2068,9 +2067,9 @@
         D = n("25033"),
         U = n("255403"),
         x = n("2581"),
-        y = n("644417"),
-        G = n("697543"),
-        P = n("79345"),
+        P = n("644417"),
+        y = n("697543"),
+        G = n("79345"),
         b = n("447997"),
         F = n("970366"),
         B = n("271938"),
@@ -2514,8 +2513,8 @@
               hasLoggedInAccounts: v,
               registrationCopyExperimentConfig: { hasCopyAboveButton: D },
             } = this.props,
-            { subText: y, consentText: G } = this.renderConsentComponents(),
-            P = this.renderErrorMessage(),
+            { subText: P, consentText: y } = this.renderConsentComponents(),
+            G = this.renderErrorMessage(),
             F = (0, s.jsx)(E.Tooltip, {
               text:
                 !u && p
@@ -2650,12 +2649,12 @@
                   value: d,
                   required: !0,
                 }),
-                D && y,
+                D && P,
                 (0, s.jsx)(R.default, {}),
                 F,
-                P,
                 G,
-                !D && y,
+                y,
+                !D && P,
                 J.CONFERENCE_MODE_ENABLED
                   ? null
                   : (0, s.jsx)(w.Button, {
@@ -2886,7 +2885,7 @@
               hasLoggedInAccounts: M.default.getHasLoggedInAccounts(),
             })
           ),
-          n = (0, G.useUURegistrationExperiment)(),
+          n = (0, y.useUURegistrationExperiment)(),
           l = (0, d.useStateFromStores)([x.default], () =>
             x.default.registrationUsernameSuggestion()
           ),
@@ -2927,13 +2926,13 @@
             isUsernameFocused: i,
             onClickSuggestion: u,
           } = e,
-          d = (0, P.useUsernameStatus)(n, r, !0),
+          d = (0, G.useUsernameStatus)(n, r, !0),
           c = r && n.length > 0;
         return (
           (t = c
             ? (0, o.match)(d)
                 .with(
-                  { type: y.NameValidationState.ERROR, message: o.P.select() },
+                  { type: P.NameValidationState.ERROR, message: o.P.select() },
                   e =>
                     (0, s.jsx)(E.Text, {
                       className: en.messageNegative,
@@ -2943,7 +2942,7 @@
                 )
                 .with(
                   {
-                    type: y.NameValidationState.AVAILABLE,
+                    type: P.NameValidationState.AVAILABLE,
                     message: o.P.select(),
                   },
                   e =>
@@ -2980,7 +2979,7 @@
             show:
               (c &&
                 (null == d ? void 0 : d.type) ===
-                  y.NameValidationState.ERROR) ||
+                  P.NameValidationState.ERROR) ||
               i,
             top: -12,
             bottom: 20,
@@ -3071,39 +3070,35 @@
             handoffSource: o,
           } = e;
           null != n
-            ? s.default
-                .post({
-                  url: c.Endpoints.HANDOFF_EXCHANGE,
-                  body: { key: t, handoff_token: n },
-                })
-                .then(
-                  e => {
-                    let { body: t } = e;
-                    (0, r.handoffSetUser)(t.user),
-                      l.default.loginToken(t.token, !1),
-                      E(!0, o);
-                  },
-                  e => {
-                    if (
-                      (null != a && E(!1, o),
-                      l.default.setFingerprint(a),
-                      (0, r.handoffEnd)(),
-                      o === i.LoginHandoffSource.ROLE_SUBSCRIPTION)
-                    ) {
-                      var t;
-                      u.default.track(
-                        c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE,
-                        {
-                          reason:
-                            null !== (t = e.message) && void 0 !== t
-                              ? t
-                              : e.text,
-                          handoff_source: o,
-                        }
-                      );
-                    }
+            ? s.HTTP.post({
+                url: c.Endpoints.HANDOFF_EXCHANGE,
+                body: { key: t, handoff_token: n },
+              }).then(
+                e => {
+                  let { body: t } = e;
+                  (0, r.handoffSetUser)(t.user),
+                    l.default.loginToken(t.token, !1),
+                    E(!0, o);
+                },
+                e => {
+                  if (
+                    (null != a && E(!1, o),
+                    l.default.setFingerprint(a),
+                    (0, r.handoffEnd)(),
+                    o === i.LoginHandoffSource.ROLE_SUBSCRIPTION)
+                  ) {
+                    var t;
+                    u.default.track(
+                      c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE,
+                      {
+                        reason:
+                          null !== (t = e.message) && void 0 !== t ? t : e.text,
+                        handoff_source: o,
+                      }
+                    );
                   }
-                )
+                }
+              )
             : null != a
               ? (l.default.setFingerprint(a), E(!1, o), (0, r.handoffEnd)())
               : (l.default.setFingerprint(a), (0, r.handoffUnavailable)());
@@ -3206,20 +3201,18 @@
             source: t,
             action: i.AgeGateAnalyticAction.AGE_GATE_SUBMITTED,
           }),
-          s.default
-            .patch({
-              url: o.Endpoints.ME,
-              oldFormErrors: !0,
-              body: { date_of_birth: e.format("YYYY-MM-DD") },
-            })
-            .then(e => {
-              let n = e.body;
-              a.default.dispatch({ type: "CURRENT_USER_UPDATE", user: n }),
-                r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
-                  source: t,
-                  action: i.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
-                });
-            })
+          s.HTTP.patch({
+            url: o.Endpoints.ME,
+            oldFormErrors: !0,
+            body: { date_of_birth: e.format("YYYY-MM-DD") },
+          }).then(e => {
+            let n = e.body;
+            a.default.dispatch({ type: "CURRENT_USER_UPDATE", user: n }),
+              r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+                source: t,
+                action: i.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
+              });
+          })
         );
       }
       function d(e) {
@@ -3456,27 +3449,27 @@
           })(),
           [D, U] = a.useState(p ? 0 : -1),
           x = a.useRef(null),
+          P = a.useRef(null),
           y = a.useRef(null),
-          G = a.useRef(null),
-          P = a.useMemo(T, []),
+          G = a.useMemo(T, []),
           b = a.useCallback(() => {
             var e, t, n, s;
-            switch (null === (e = P[D]) || void 0 === e ? void 0 : e.type) {
+            switch (null === (e = G[D]) || void 0 === e ? void 0 : e.type) {
               case "day":
                 null === (t = x.current) || void 0 === t || t.focus();
                 break;
               case "month":
-                null === (n = y.current) || void 0 === n || n.focus();
+                null === (n = P.current) || void 0 === n || n.focus();
                 break;
               case "year":
-                null === (s = G.current) || void 0 === s || s.focus();
+                null === (s = y.current) || void 0 === s || s.focus();
             }
-          }, [D, x, y, G, P]);
+          }, [D, x, P, y, G]);
         a.useEffect(() => {
           setTimeout(b, 500);
         }, []),
           a.useEffect(() => {
-            if (D >= P.length) {
+            if (D >= G.length) {
               null == f || f();
               return;
             }
@@ -3484,7 +3477,7 @@
           }, [D, b]);
         let F = [];
         for (let e = 0; e < 3; e++) {
-          let { type: t } = P[e];
+          let { type: t } = G[e];
           switch (t) {
             case "day":
               F.push({
@@ -3519,7 +3512,7 @@
                   options: h,
                   selectOption: N,
                   children: (0, s.jsx)(d.default, {
-                    ref: y,
+                    ref: P,
                     className: E.inputMonth,
                     "aria-label": c.default.Messages.AGE_GATE_DOB_MONTH,
                     menuPlacement: d.default.MenuPlacements.TOP,
@@ -3545,7 +3538,7 @@
                   options: v,
                   selectOption: O,
                   children: (0, s.jsx)(d.default, {
-                    ref: G,
+                    ref: y,
                     className: E.inputYear,
                     "aria-label": c.default.Messages.AGE_GATE_DOB_YEAR,
                     menuPlacement: d.default.MenuPlacements.TOP,
@@ -4386,7 +4379,7 @@
           createHandoffToken: async function e(e) {
             let {
               body: { handoff_token: t },
-            } = await a.default.post({
+            } = await a.HTTP.post({
               url: l.Endpoints.HANDOFF,
               body: { key: e },
               oldFormErrors: !0,
@@ -4488,11 +4481,10 @@
               "null" !== n &&
               null != D &&
               null == T &&
-              d.default
-                .post({
-                  url: I.Endpoints.HANDOFF_EXCHANGE,
-                  body: { key: D, handoff_token: n },
-                })
+              d.HTTP.post({
+                url: I.Endpoints.HANDOFF_EXCHANGE,
+                body: { key: D, handoff_token: n },
+              })
                 .then(e => _.default.loginToken(e.body.token, !1))
                 .then(() => {
                   m.default.track(I.AnalyticEvents.LOGIN_SUCCESSFUL, {
@@ -4628,7 +4620,7 @@
             userId: r,
           });
           try {
-            n = await a.default.get({
+            n = await a.HTTP.get({
               url: d.Endpoints.ME,
               headers: { authorization: i },
               retries: 3,
@@ -4832,7 +4824,7 @@
           });
         },
         removePhone: (e, t) =>
-          r.default.delete({
+          r.HTTP.del({
             url: c.Endpoints.PHONE,
             body: { password: e, change_phone_reason: t },
             oldFormErrors: !0,
@@ -4842,7 +4834,7 @@
             n = o.default.getFingerprint();
           return (
             null != n && "" !== n && (t["X-Fingerprint"] = n),
-            r.default.post({
+            r.HTTP.post({
               url: c.Endpoints.RESEND_PHONE,
               headers: t,
               body: { phone: e },
@@ -4850,34 +4842,34 @@
           );
         },
         beginAddPhone: (e, t) =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.PHONE,
             body: { phone: e, change_phone_reason: t },
           }),
         addPhone: (e, t, n) =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.PHONE,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         addPhoneWithoutPassword: e =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
             body: { code: e },
           }),
         beginReverifyPhone: (e, t) =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.PHONE_REVERIFY,
             body: { phone: e, change_phone_reason: t },
           }),
         reverifyPhone: (e, t, n) =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.PHONE_REVERIFY,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         validatePhoneForSupport: e =>
-          r.default.post({
+          r.HTTP.post({
             url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
             body: { token: e },
             oldFormErrors: !0,
@@ -5001,7 +4993,7 @@
             l.default.dispatch({ type: "POMELO_SUGGESTIONS_RESET" });
             try {
               var n;
-              let s = await a.default.get({
+              let s = await a.HTTP.get({
                 url: E.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
                 query: null == e ? void 0 : { global_name: e },
                 timeout: t,
@@ -5029,7 +5021,7 @@
                 type: "POMELO_SUGGESTIONS_FETCH",
                 usernameSuggestionLoading: !0,
               });
-              let n = await a.default.get({
+              let n = await a.HTTP.get({
                 url: E.Endpoints.POMELO_SUGGESTIONS,
                 timeout: e,
               });
@@ -5798,4 +5790,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30341.0b984850414a472a2649.js.map
+//# sourceMappingURL=30341.c1fb650c508a8128fd78.js.map

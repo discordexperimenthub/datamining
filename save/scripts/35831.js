@@ -254,27 +254,29 @@
         l = s("49111"),
         i = {
           fetch() {
-            a.default
-              .get({ url: l.Endpoints.OAUTH2_TOKENS, oldFormErrors: !0 })
-              .then(
-                e =>
-                  n.default.dispatch({
-                    type: "USER_AUTHORIZED_APPS_UPDATE",
-                    apps: e.body,
-                  }),
-                () =>
-                  n.default.dispatch({
-                    type: "USER_AUTHORIZED_APPS_UPDATE",
-                    apps: [],
-                  })
-              );
+            a.HTTP.get({
+              url: l.Endpoints.OAUTH2_TOKENS,
+              oldFormErrors: !0,
+            }).then(
+              e =>
+                n.default.dispatch({
+                  type: "USER_AUTHORIZED_APPS_UPDATE",
+                  apps: e.body,
+                }),
+              () =>
+                n.default.dispatch({
+                  type: "USER_AUTHORIZED_APPS_UPDATE",
+                  apps: [],
+                })
+            );
           },
           delete(e) {
-            a.default
-              .delete({ url: l.Endpoints.OAUTH2_TOKEN(e), oldFormErrors: !0 })
-              .then(() => {
-                this.fetch();
-              });
+            a.HTTP.del({
+              url: l.Endpoints.OAUTH2_TOKEN(e),
+              oldFormErrors: !0,
+            }).then(() => {
+              this.fetch();
+            });
           },
         };
     },
@@ -297,12 +299,11 @@
       };
       var o = {
         joinHypeSquadOnline: e =>
-          a.default
-            .post({
-              url: i.Endpoints.HYPESQUAD_ONLINE,
-              body: { house_id: r[e.houseID] },
-              oldFormErrors: !0,
-            })
+          a.HTTP.post({
+            url: i.Endpoints.HYPESQUAD_ONLINE,
+            body: { house_id: r[e.houseID] },
+            oldFormErrors: !0,
+          })
             .then(() =>
               n.default.dispatch({
                 type: "HYPESQUAD_ONLINE_MEMBERSHIP_JOIN_SUCCESS",
@@ -313,8 +314,7 @@
               throw new l.V6OrEarlierAPIError(e);
             }),
         leaveHypeSquadOnline: () =>
-          a.default
-            .delete({ url: i.Endpoints.HYPESQUAD_ONLINE, oldFormErrors: !0 })
+          a.HTTP.del({ url: i.Endpoints.HYPESQUAD_ONLINE, oldFormErrors: !0 })
             .then(() =>
               n.default.dispatch({
                 type: "HYPESQUAD_ONLINE_MEMBERSHIP_LEAVE_SUCCESS",
@@ -367,21 +367,23 @@
       function r(e, t) {
         return (
           n.default.dispatch({ type: "MFA_SMS_TOGGLE" }),
-          a.default
-            .post({ url: e, body: { password: t }, oldFormErrors: !0 })
-            .then(
-              e => (n.default.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
-              e => {
-                throw (
-                  (n.default.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e)
-                );
-              }
-            )
+          a.HTTP.post({
+            url: e,
+            body: { password: t },
+            oldFormErrors: !0,
+          }).then(
+            e => (n.default.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
+            e => {
+              throw (
+                (n.default.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e)
+              );
+            }
+          )
         );
       }
       var o = {
         async enableMFAStart(e) {
-          let t = await a.default.post({
+          let t = await a.HTTP.post({
             url: i.Endpoints.MFA_TOTP_ENABLE,
             body: { password: e },
             oldFormErrors: !0,
@@ -389,14 +391,14 @@
           return t.body;
         },
         async verifyEmailCode(e) {
-          let t = await a.default.post({
+          let t = await a.HTTP.post({
             url: i.Endpoints.MFA_TOTP_ENABLE_VERIFY,
             body: { code: e },
           });
           return t.body;
         },
         resendEmailCode: e =>
-          a.default.post({
+          a.HTTP.post({
             url: i.Endpoints.MFA_TOTP_ENABLE_RESEND,
             body: { password: e },
           }),
@@ -405,74 +407,69 @@
         },
         enable(e) {
           let { password: t, code: s, secret: l, emailToken: r } = e;
-          return a.default
-            .post({
-              url: i.Endpoints.MFA_TOTP_ENABLE,
-              body: { code: s, secret: l, password: t, email_token: r },
-              oldFormErrors: !0,
+          return a.HTTP.post({
+            url: i.Endpoints.MFA_TOTP_ENABLE,
+            body: { code: s, secret: l, password: t, email_token: r },
+            oldFormErrors: !0,
+          }).then(e =>
+            n.default.dispatch({
+              type: "MFA_ENABLE_SUCCESS",
+              token: e.body.token,
+              codes: e.body.backup_codes,
             })
-            .then(e =>
-              n.default.dispatch({
-                type: "MFA_ENABLE_SUCCESS",
-                token: e.body.token,
-                codes: e.body.backup_codes,
-              })
-            );
+          );
         },
         disable() {
-          a.default
-            .post({ url: i.Endpoints.MFA_TOTP_DISABLE, oldFormErrors: !0 })
-            .then(e => {
-              let {
-                body: { token: t },
-              } = e;
-              return n.default.dispatch({
-                type: "MFA_DISABLE_SUCCESS",
-                token: t,
-              });
+          a.HTTP.post({
+            url: i.Endpoints.MFA_TOTP_DISABLE,
+            oldFormErrors: !0,
+          }).then(e => {
+            let {
+              body: { token: t },
+            } = e;
+            return n.default.dispatch({
+              type: "MFA_DISABLE_SUCCESS",
+              token: t,
             });
+          });
         },
         enableSMS: e => r(i.Endpoints.MFA_SMS_ENABLE, e),
         disableSMS: e => r(i.Endpoints.MFA_SMS_DISABLE, e),
         sendMFABackupCodesVerificationKeyEmail: e =>
-          a.default
-            .post({
-              url: i.Endpoints.MFA_SEND_VERIFICATION_KEY,
-              body: { password: e },
-              oldFormErrors: !0,
-            })
-            .then(
-              e =>
-                n.default.dispatch({
-                  type: "MFA_SEND_VERIFICATION_KEY",
-                  nonces: {
-                    viewNonce: e.body.nonce,
-                    regenerateNonce: e.body.regenerate_nonce,
-                  },
-                }),
-              e => {
-                throw e;
-              }
-            ),
+          a.HTTP.post({
+            url: i.Endpoints.MFA_SEND_VERIFICATION_KEY,
+            body: { password: e },
+            oldFormErrors: !0,
+          }).then(
+            e =>
+              n.default.dispatch({
+                type: "MFA_SEND_VERIFICATION_KEY",
+                nonces: {
+                  viewNonce: e.body.nonce,
+                  regenerateNonce: e.body.regenerate_nonce,
+                },
+              }),
+            e => {
+              throw e;
+            }
+          ),
         confirmViewBackupCodes(e, t) {
           let { viewNonce: s, regenerateNonce: r } = l.default.getNonces();
-          return a.default
-            .post({
-              url: i.Endpoints.MFA_CODES_VERIFICATION,
-              body: { key: e, nonce: t ? r : s, regenerate: t },
-              oldFormErrors: !0,
-            })
-            .then(
-              t =>
-                n.default.dispatch({
-                  type: "MFA_VIEW_BACKUP_CODES",
-                  codes: t.body.backup_codes,
-                  key: e,
-                }),
-              e => {
-                throw e;
-              }
-            );
+          return a.HTTP.post({
+            url: i.Endpoints.MFA_CODES_VERIFICATION,
+            body: { key: e, nonce: t ? r : s, regenerate: t },
+            oldFormErrors: !0,
+          }).then(
+            t =>
+              n.default.dispatch({
+                type: "MFA_VIEW_BACKUP_CODES",
+                codes: t.body.backup_codes,
+                key: e,
+              }),
+            e => {
+              throw e;
+            }
+          );
         },
         clearBackupCodes() {
           n.default.dispatch({ type: "MFA_CLEAR_BACKUP_CODES" });
@@ -1609,7 +1606,7 @@
         l = s("49111");
       async function i() {
         var e;
-        let t = await a.default.get({ url: l.Endpoints.AUTH_SESSIONS });
+        let t = await a.HTTP.get({ url: l.Endpoints.AUTH_SESSIONS });
         return (
           (null == t ? void 0 : t.ok) &&
             (null === (e = t.body) || void 0 === e
@@ -1632,7 +1629,7 @@
         if (Array.isArray(e)) {
           if (0 === e.length) return;
         } else e = [e];
-        let t = await a.default.post({
+        let t = await a.HTTP.post({
           url: l.Endpoints.AUTH_SESSIONS_LOGOUT,
           body: { session_id_hashes: e },
         });
@@ -5645,7 +5642,7 @@
       async function i() {
         n.default.dispatch({ type: "USER_LOOTBOX_DATA_FETCH" });
         try {
-          let e = await a.default.get({ url: l.Endpoints.USER_LOOTBOX_DATA });
+          let e = await a.HTTP.get({ url: l.Endpoints.USER_LOOTBOX_DATA });
           if (e.ok && null != e.body) {
             let { user_id: t, opened_items: s, redeemed_prize: a } = e.body;
             n.default.dispatch({
@@ -5661,9 +5658,7 @@
         }
       }
       async function r() {
-        let e = await a.default.post({
-          url: l.Endpoints.USER_LOOTBOX_OPEN_ITEM,
-        });
+        let e = await a.HTTP.post({ url: l.Endpoints.USER_LOOTBOX_OPEN_ITEM });
         if (e.ok && null != e.body) {
           let { user_lootbox_data: t, opened_item: s } = e.body,
             { user_id: a, opened_items: l, redeemed_prize: i } = t;
@@ -5675,7 +5670,7 @@
         }
       }
       async function o() {
-        let e = await a.default.post({
+        let e = await a.HTTP.post({
           url: l.Endpoints.USER_LOOTBOX_REDEEM_PRIZE,
         });
         if (e.ok && null != e.body) {
@@ -5689,7 +5684,7 @@
         }
       }
       async function d() {
-        let e = await a.default.get({ url: l.Endpoints.LOOTBOX_COUNT });
+        let e = await a.HTTP.get({ url: l.Endpoints.LOOTBOX_COUNT });
         n.default.dispatch({
           type: "LOOTBOX_COUNT_STAT_FETCHED",
           currentCount: e.body.current_count,
@@ -11141,7 +11136,7 @@
             i.tests.push(s);
         }
         await Promise.all([
-          n.default.post({
+          n.HTTP.post({
             url: _.Endpoints.DEBUG_LOG(
               _.DebugLogCategory.SPEED_TEST,
               "speed_test_summary_".concat(s, ".json")
@@ -11150,7 +11145,7 @@
             retries: 3,
             headers: { "Content-Type": "text/plain" },
           }),
-          n.default.post({
+          n.HTTP.post({
             url: _.Endpoints.DEBUG_LOG(
               _.DebugLogCategory.SPEED_TEST,
               "speed_test_results_".concat(s, ".json")
@@ -11955,9 +11950,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277613",
+          E = "277632",
           T =
-            ((e = "058e3c8b88d1507a81f7bdd6463038665d60356c"),
+            ((e = "06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -23182,9 +23177,7 @@
           };
         }, []);
         let h = () => {
-            o.default.post({
-              url: C.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG,
-            });
+            o.HTTP.post({ url: C.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG });
           },
           [N, I] = n.useState(new Set());
         return l
@@ -30397,7 +30390,7 @@
         l = s("49111");
       function i() {
         n.default.dispatch({ type: "MFA_WEBAUTHN_CREDENTIALS_LOADING" }),
-          a.default.get(l.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
+          a.HTTP.get(l.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
             n.default.dispatch({
               type: "MFA_WEBAUTHN_CREDENTIALS_LOADED",
               credentials: e.body,
@@ -30405,12 +30398,12 @@
           });
       }
       function r(e) {
-        a.default.delete(l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
+        a.HTTP.del(l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e.id)).then(() => {
           n.default.dispatch({ type: "AUTHENTICATOR_DELETE", credential: e });
         });
       }
       async function o(e, t) {
-        let s = await a.default.patch({
+        let s = await a.HTTP.patch({
           url: l.Endpoints.MFA_WEBAUTHN_CREDENTIAL(e),
           body: { name: t },
         });
@@ -30422,14 +30415,14 @@
       async function d() {
         let {
           body: { ticket: e, challenge: t },
-        } = await a.default.post({
+        } = await a.HTTP.post({
           url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
           body: {},
         });
         return { ticket: e, challenge: t };
       }
       async function u(e, t, s) {
-        let i = await a.default.post({
+        let i = await a.HTTP.post({
           url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
           body: { name: e, ticket: t, credential: s },
         });
@@ -32162,4 +32155,4 @@
     },
   },
 ]);
-//# sourceMappingURL=485c0db5e71874d89586.js.map
+//# sourceMappingURL=fe476f4b5c7a291bdf45.js.map

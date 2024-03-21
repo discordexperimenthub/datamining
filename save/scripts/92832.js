@@ -1378,7 +1378,7 @@
           });
         },
         removePhone: (e, t) =>
-          o.default.delete({
+          o.HTTP.del({
             url: c.Endpoints.PHONE,
             body: { password: e, change_phone_reason: t },
             oldFormErrors: !0,
@@ -1388,7 +1388,7 @@
             n = l.default.getFingerprint();
           return (
             null != n && "" !== n && (t["X-Fingerprint"] = n),
-            o.default.post({
+            o.HTTP.post({
               url: c.Endpoints.RESEND_PHONE,
               headers: t,
               body: { phone: e },
@@ -1396,34 +1396,34 @@
           );
         },
         beginAddPhone: (e, t) =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.PHONE,
             body: { phone: e, change_phone_reason: t },
           }),
         addPhone: (e, t, n) =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.PHONE,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         addPhoneWithoutPassword: e =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
             body: { code: e },
           }),
         beginReverifyPhone: (e, t) =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.PHONE_REVERIFY,
             body: { phone: e, change_phone_reason: t },
           }),
         reverifyPhone: (e, t, n) =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.PHONE_REVERIFY,
             body: { phone_token: e, password: t, change_phone_reason: n },
             oldFormErrors: !0,
           }),
         validatePhoneForSupport: e =>
-          o.default.post({
+          o.HTTP.post({
             url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
             body: { token: e },
             oldFormErrors: !0,
@@ -3020,4 +3020,4 @@
     },
   },
 ]);
-//# sourceMappingURL=70fd20b6e868ef89519c.js.map
+//# sourceMappingURL=e05c51f84a0bb85bb5d3.js.map

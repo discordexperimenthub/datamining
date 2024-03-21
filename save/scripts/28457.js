@@ -340,7 +340,7 @@
           async setAccountFlag(e, t) {
             let n = a.default.accountNotificationSettings.flags,
               r = (0, o.setFlag)(n, e, t);
-            await i.default.patch({
+            await i.HTTP.patch({
               url: d.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
               body: { flags: r },
             }),
@@ -1078,9 +1078,9 @@
             referralTrialOfferId: x,
             giftRecipient: b,
             returnRef: w,
-            subscription: O,
+            subscription: P,
           } = null != e ? e : {},
-          P = !1,
+          O = !1,
           U = (0, r.v4)(),
           D = u.default.getCurrentUser(),
           G = (0, f.isPremiumExactly)(D, E.PremiumTypes.TIER_2);
@@ -1113,7 +1113,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (P = !0),
+                  (O = !0),
                     null == C || C(),
                     !T && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -1129,14 +1129,14 @@
                 applicationId: M,
                 referralTrialOfferId: x,
                 returnRef: w,
-                subscription: O,
+                subscription: P,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !P &&
+              !O &&
                 c.default.track(h.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: U,
                   payment_type:
@@ -1153,8 +1153,8 @@
                 }),
                 (0, s.clearError)(),
                 (0, a.clearPurchaseTokenAuthState)(),
-                null == p || p(P),
-                P && (null == _ || _());
+                null == p || p(O),
+                O && (null == _ || _());
             },
           }
         );
@@ -1410,7 +1410,7 @@
             return w;
           },
           useIsThreadModerator: function () {
-            return P;
+            return O;
           },
           useCanJoinThreadVoice: function () {
             return U;
@@ -1561,13 +1561,13 @@
       }
       function L(e) {
         let t = (0, s.useStateFromStores)([h.default], () => y(e, h.default)),
-          n = P(e);
+          n = O(e);
         return R(e, t, n);
       }
       function M(e) {
         let t = y(e, h.default),
           n = (function (e) {
-            return O(e, h.default);
+            return P(e, h.default);
           })(e);
         return R(e, t, n);
       }
@@ -1607,11 +1607,11 @@
         let t = h.default.can(p.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function O(e, t) {
+      function P(e, t) {
         return null != e && t.can(p.Permissions.MANAGE_THREADS, e);
       }
-      function P(e) {
-        return (0, s.useStateFromStores)([h.default], () => O(e, h.default));
+      function O(e) {
+        return (0, s.useStateFromStores)([h.default], () => P(e, h.default));
       }
       function U(e) {
         let t = (0, o.default)(),
@@ -1626,7 +1626,7 @@
         return !t && e.isVocalThread() && r && n && i;
       }
       function D(e) {
-        let t = P(e);
+        let t = O(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -1656,7 +1656,7 @@
       }
       async function E(e, t) {
         null == e || e === o.ME
-          ? await i.default.patch({
+          ? await i.HTTP.patch({
               url: o.Endpoints.USER_GUILD_SETTINGS(o.ME),
               body: t,
             })
@@ -1690,7 +1690,7 @@
           ? ((u = { ...n }),
             delete e[o.FAVORITES],
             (
-              await i.default.patch({
+              await i.HTTP.patch({
                 url: o.Endpoints.USER_GUILD_SETTINGS_BULK,
                 body: { guilds: e },
               })
@@ -3208,4 +3208,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e3746c780289181f0a01.js.map
+//# sourceMappingURL=c497f40a08ace83f4758.js.map

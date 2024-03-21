@@ -24,8 +24,8 @@
         s = a("42887"),
         r = a("254490"),
         i = a("49671"),
-        u = a("49111");
-      let c = new n.default("uploadRtcLogFiles");
+        c = a("49111");
+      let u = new n.default("uploadRtcLogFiles");
       async function d(e, t) {
         let a;
         if (null == i.default.fileManager.readLogFiles)
@@ -37,7 +37,7 @@
           );
         } catch (e) {
           throw (
-            (c.error("uploadDebugFiles: read error '".concat(e, "'")),
+            (u.error("uploadDebugFiles: read error '".concat(e, "'")),
             new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.READ))
           );
         }
@@ -45,8 +45,8 @@
           throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.NO_FILE);
         try {
           let e = { extraInfo: t, mediaEngineState: s.default.getState() };
-          a = await l.default.post({
-            url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
+          a = await l.HTTP.post({
+            url: c.Endpoints.DEBUG_LOGS(c.DebugLogCategory.RTC),
             attachments: [
               ...n.map(e => ({ name: e.name, file: e, filename: e.name })),
               {
@@ -60,7 +60,7 @@
           if (429 === e.status)
             throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.PROGRESS);
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload error: status: "
                 .concat(e.status, ", message: ")
                 .concat(e.message)
@@ -71,7 +71,7 @@
         let d = n.length + 1;
         if ("success_count" in a.body && a.body.success_count !== d)
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: stored files "
                 .concat(a.body.success_count, " !== ")
                 .concat(d)
@@ -84,7 +84,7 @@
           ("all_success" in a.body && !a.body.all_success)
         )
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: store_success: ".concat(
                 a.body.store_success,
                 " / "
@@ -101,10 +101,10 @@
       a.r(t),
         a.d(t, {
           fetchBugReportConfig: function () {
-            return u;
+            return c;
           },
           getFeatureId: function () {
-            return c;
+            return u;
           },
           getPriorities: function () {
             return d;
@@ -121,11 +121,11 @@
       var s = a("840707"),
         r = a("49111"),
         i = a("782340");
-      async function u() {
-        let e = await l.default.get({ url: r.Endpoints.BUG_REPORTS });
+      async function c() {
+        let e = await l.HTTP.get({ url: r.Endpoints.BUG_REPORTS });
         return e.body;
       }
-      function c(e) {
+      function u(e) {
         var t, a;
         return null !==
           (a =
@@ -169,7 +169,7 @@
       }
       async function m(e, t, a) {
         var l, i;
-        let u = [
+        let c = [
           { name: "name", value: e.name },
           { name: "priority", value: "".concat(e.priority) },
           {
@@ -178,35 +178,35 @@
           },
         ];
         "" !== e.description &&
-          u.push({ name: "description", value: e.description }),
-          "" !== e.url && u.push({ name: "external_url", value: e.url });
-        let c =
+          c.push({ name: "description", value: e.description }),
+          "" !== e.url && c.push({ name: "external_url", value: e.url });
+        let u =
           null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
-        null != c &&
-          "" !== c &&
-          u.push({ name: "asana_inbox_id", value: "".concat(c) });
+        null != u &&
+          "" !== u &&
+          c.push({ name: "asana_inbox_id", value: "".concat(u) });
         let d = null === (i = e.feature) || void 0 === i ? void 0 : i.name;
-        null != d && "" !== d && u.push({ name: "feature_name", value: d }),
+        null != d && "" !== d && c.push({ name: "feature_name", value: d }),
           t.overridePlatformInformation &&
-            (u.push({ name: "device", value: t.device }),
-            u.push({ name: "os", value: t.operatingSystem }),
-            u.push({ name: "os_version", value: t.operatingSystemVersion }),
-            u.push({ name: "client_version", value: t.clientVersion }),
-            u.push({ name: "client_build_number", value: t.clientBuildNumber }),
-            u.push({
+            (c.push({ name: "device", value: t.device }),
+            c.push({ name: "os", value: t.operatingSystem }),
+            c.push({ name: "os_version", value: t.operatingSystemVersion }),
+            c.push({ name: "client_version", value: t.clientVersion }),
+            c.push({ name: "client_build_number", value: t.clientBuildNumber }),
+            c.push({
               name: "release_channel",
               value: window.GLOBAL_ENV.RELEASE_CHANNEL,
             }),
-            u.push({ name: "locale", value: t.locale })),
+            c.push({ name: "locale", value: t.locale })),
           (0, o.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
         try {
           return await s.default.post({
             url: r.Endpoints.BUG_REPORTS,
             attachments: a,
-            fields: u,
+            fields: c,
             trackedActionData: {
               event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
-              properties: { priority: e.priority, asana_inbox_id: c },
+              properties: { priority: e.priority, asana_inbox_id: u },
             },
           });
         } catch (e) {
@@ -249,8 +249,8 @@
         s = a("446674"),
         r = a("819855"),
         i = a("77078"),
-        u = a("371642"),
-        c = a("966724"),
+        c = a("371642"),
+        u = a("966724"),
         d = a("9560"),
         m = a("761354"),
         f = a("161778"),
@@ -261,9 +261,9 @@
         v = a("773336"),
         E = a("367632"),
         R = a("374159"),
-        x = a("782340"),
-        I = a("521870"),
-        T = a("741161"),
+        T = a("782340"),
+        x = a("521870"),
+        I = a("741161"),
         S = a("687444");
       let N = [
         "Android",
@@ -282,8 +282,8 @@
           [w, D] = l.useState(""),
           [F, G] = l.useState(),
           [A, V] = l.useState(""),
-          [k, Y] = l.useState([]),
-          [H, W] = l.useState(),
+          [k, H] = l.useState([]),
+          [Y, W] = l.useState(),
           [K, z] = l.useState(),
           [J, X] = l.useState(!1),
           [Q, q] = l.useState(""),
@@ -304,28 +304,28 @@
           [ea, en] = l.useState(""),
           [el, eo] = l.useState(""),
           [es, er] = l.useState(""),
-          [ei, eu] = l.useState(!1),
-          [ec, ed] = l.useState(!1),
+          [ei, ec] = l.useState(!1),
+          [eu, ed] = l.useState(!1),
           [em, ef] = l.useState(!1),
           eg = () => {
             null == P || P();
           },
           ep = e => {
-            Y(k.filter(t => t.id !== e));
+            H(k.filter(t => t.id !== e));
           };
         async function eh() {
           var e;
           if ((ef(!1), "" === B || null == F)) {
-            eu(!0);
+            ec(!0);
             return;
           }
           let t =
-            null == H
+            null == Y
               ? void 0
-              : null === (e = H.features) || void 0 === e
+              : null === (e = Y.features) || void 0 === e
                 ? void 0
                 : e.find(e => (0, E.getFeatureId)(e) === K);
-          ed(!0), eu(!1);
+          ed(!0), ec(!1);
           let l = (0, R.getAttachments)(
               k.map(e => {
                 let { item: t } = e;
@@ -376,46 +376,46 @@
             }
           }, [k]);
         let e_ = (0, s.useStateFromStores)([f.default], () => f.default.theme),
-          ev = (0, r.isThemeDark)(e_) ? T : S;
+          ev = (0, r.isThemeDark)(e_) ? I : S;
         return (0, n.jsx)(i.ModalRoot, {
-          className: I.modalRoot,
+          className: x.modalRoot,
           transitionState: C,
-          "aria-label": x.default.Messages.SUBMIT_BUG,
+          "aria-label": T.default.Messages.SUBMIT_BUG,
           children: (0, n.jsx)(i.ModalContent, {
-            className: I.modalContent,
+            className: x.modalContent,
             paddingFix: !1,
             children: (0, n.jsx)("div", {
-              className: I.container,
+              className: x.container,
               children: (0, n.jsx)(i.HeadingLevel, {
                 forceLevel: 1,
                 component: (0, n.jsx)("div", {
-                  className: I.sidebarContainer,
+                  className: x.sidebarContainer,
                   children: (0, n.jsx)(p.default, {
                     strong: !0,
                     color: p.default.Colors.HEADER_PRIMARY,
                     size: p.default.Sizes.SIZE_24,
                     children: (0, n.jsx)(i.H, {
-                      children: x.default.Messages.BUG_REPORT_TITLE,
+                      children: T.default.Messages.BUG_REPORT_TITLE,
                     }),
                   }),
                 }),
                 children: (0, n.jsxs)("div", {
-                  className: I.contentContainer,
+                  className: x.contentContainer,
                   children: [
                     (0, n.jsx)("img", {
-                      className: I.contentIcon,
+                      className: x.contentIcon,
                       alt: "",
                       src: ev,
                     }),
                     (0, n.jsxs)("form", {
-                      className: I.form,
+                      className: x.form,
                       onSubmit: eh,
                       children: [
                         (0, n.jsx)(i.FormItem, {
                           error:
-                            ei && "" === B ? x.default.Messages.REQUIRED : null,
-                          title: x.default.Messages.BUG_REPORT_NAME,
-                          className: I.formInput,
+                            ei && "" === B ? T.default.Messages.REQUIRED : null,
+                          title: T.default.Messages.BUG_REPORT_NAME,
+                          className: x.formInput,
                           children: (0, n.jsx)(i.TextInput, {
                             placeholder: "Something is broken on this screen.",
                             type: "text",
@@ -425,8 +425,8 @@
                           }),
                         }),
                         (0, n.jsxs)(i.FormItem, {
-                          title: x.default.Messages.BUG_REPORT_DESCRIPTION,
-                          className: I.formInput,
+                          title: T.default.Messages.BUG_REPORT_DESCRIPTION,
+                          className: x.formInput,
                           children: [
                             (0, n.jsx)(i.TextArea, {
                               placeholder: "What did you expect to see?",
@@ -444,23 +444,23 @@
                         (0, n.jsx)(i.FormItem, {
                           error:
                             ei && void 0 === F
-                              ? x.default.Messages.REQUIRED
+                              ? T.default.Messages.REQUIRED
                               : null,
-                          title: x.default.Messages.BUG_REPORT_PRIORITY,
-                          className: I.formInput,
+                          title: T.default.Messages.BUG_REPORT_PRIORITY,
+                          className: x.formInput,
                           children: (0, n.jsx)(i.SingleSelect, {
                             renderOptionLabel: e =>
                               (function (e) {
                                 let t = e.priority;
                                 return (0, n.jsxs)("div", {
-                                  className: I.formPriorityImageContainer,
+                                  className: x.formPriorityImageContainer,
                                   children: [
                                     (0, n.jsxs)("div", {
-                                      className: I.formPriorityTitleContainer,
+                                      className: x.formPriorityTitleContainer,
                                       children: [
                                         (0, n.jsx)("img", {
                                           alt: "",
-                                          className: I.formPriorityImage,
+                                          className: x.formPriorityImage,
                                           src: (0, _.getEmojiURL)({
                                             id: t.emoji,
                                             animated: !0,
@@ -470,7 +470,7 @@
                                         (0, n.jsx)(i.Text, {
                                           color: "header-primary",
                                           variant: "text-sm/semibold",
-                                          className: I.formPriorityTitle,
+                                          className: x.formPriorityTitle,
                                           children: t.title,
                                         }),
                                       ],
@@ -478,7 +478,7 @@
                                     (0, n.jsx)(i.Text, {
                                       color: "header-secondary",
                                       variant: "text-xs/normal",
-                                      className: I.formPriorityDescription,
+                                      className: x.formPriorityDescription,
                                       children: t.description,
                                     }),
                                   ],
@@ -496,14 +496,14 @@
                           }),
                         }),
                         (0, n.jsx)(i.FormItem, {
-                          title: x.default.Messages.BUG_REPORT_FEATURE_AREA,
-                          className: I.formInput,
+                          title: T.default.Messages.BUG_REPORT_FEATURE_AREA,
+                          className: x.formInput,
                           children: (0, n.jsx)(i.SearchableSelect, {
                             value: K,
                             options:
                               null !==
                                 (L =
-                                  null == (t = H)
+                                  null == (t = Y)
                                     ? void 0
                                     : null === (j = t.features) || void 0 === j
                                       ? void 0
@@ -530,16 +530,16 @@
                                             )) && void 0 !== L
                                 ? L
                                 : [],
-                            isDisabled: null == H,
+                            isDisabled: null == Y,
                             onChange: e => z(e),
                           }),
                         }),
                         (0, n.jsx)(i.FormItem, {
-                          title: x.default.Messages.BUG_REPORT_URL,
-                          className: I.formInput,
+                          title: T.default.Messages.BUG_REPORT_URL,
+                          className: x.formInput,
                           children: (0, n.jsx)(i.TextInput, {
                             placeholder:
-                              x.default.Messages.BUG_REPORT_EXTERNAL_SOURCE,
+                              T.default.Messages.BUG_REPORT_EXTERNAL_SOURCE,
                             type: "text",
                             value: A,
                             maxLength: 5e3,
@@ -547,7 +547,7 @@
                           }),
                         }),
                         (0, n.jsx)(i.FormItem, {
-                          className: I.formInput,
+                          className: x.formInput,
                           children: (0, n.jsx)(i.Checkbox, {
                             value: J,
                             onChange: (e, t) => X(t),
@@ -555,7 +555,7 @@
                               variant: "text-sm/normal",
                               color: "info-help-text",
                               children:
-                                x.default.Messages
+                                T.default.Messages
                                   .BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION,
                             }),
                           }),
@@ -564,8 +564,8 @@
                           ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                 (0, n.jsx)(i.FormItem, {
-                                  title: x.default.Messages.BUG_REPORT_DEVICE,
-                                  className: I.formInput,
+                                  title: T.default.Messages.BUG_REPORT_DEVICE,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Device",
                                     value: Q,
@@ -573,8 +573,8 @@
                                   }),
                                 }),
                                 (0, n.jsx)(i.FormItem, {
-                                  title: x.default.Messages.BUG_REPORT_OS,
-                                  className: I.formInput,
+                                  title: T.default.Messages.BUG_REPORT_OS,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.SingleSelect, {
                                     value: Z,
                                     options: N,
@@ -583,8 +583,8 @@
                                 }),
                                 (0, n.jsx)(i.FormItem, {
                                   title:
-                                    x.default.Messages.BUG_REPORT_OS_VERSION,
-                                  className: I.formInput,
+                                    T.default.Messages.BUG_REPORT_OS_VERSION,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Operating System Version",
                                     value: ee,
@@ -593,9 +593,9 @@
                                 }),
                                 (0, n.jsx)(i.FormItem, {
                                   title:
-                                    x.default.Messages
+                                    T.default.Messages
                                       .BUG_REPORT_CLIENT_VERSION,
-                                  className: I.formInput,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Client Version",
                                     value: ea,
@@ -604,9 +604,9 @@
                                 }),
                                 (0, n.jsx)(i.FormItem, {
                                   title:
-                                    x.default.Messages
+                                    T.default.Messages
                                       .BUG_REPORT_CLIENT_BUILD_NUMBER,
-                                  className: I.formInput,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Client Build Number",
                                     value: el,
@@ -614,8 +614,8 @@
                                   }),
                                 }),
                                 (0, n.jsx)(i.FormItem, {
-                                  title: x.default.Messages.BUG_REPORT_LOCALE,
-                                  className: I.formInput,
+                                  title: T.default.Messages.BUG_REPORT_LOCALE,
+                                  className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Locale",
                                     value: es,
@@ -626,10 +626,10 @@
                             })
                           : null,
                         (0, n.jsxs)(i.Button, {
-                          className: I.uploadButton,
+                          className: x.uploadButton,
                           children: [
-                            x.default.Messages.BUG_REPORT_ADD_ATTACHMENTS,
-                            (0, n.jsx)(u.default, {
+                            T.default.Messages.BUG_REPORT_ADD_ATTACHMENTS,
+                            (0, n.jsx)(c.default, {
                               ref: U,
                               onChange: e => {
                                 var t, a;
@@ -643,13 +643,13 @@
                                 ) {
                                   let t = Array.from(e.currentTarget.files).map(
                                     e =>
-                                      new c.default({
+                                      new u.default({
                                         id: (0, o.v4)(),
                                         file: e,
-                                        platform: c.UploadPlatform.WEB,
+                                        platform: u.UploadPlatform.WEB,
                                       })
                                   );
-                                  Y([...k, ...t]);
+                                  H([...k, ...t]);
                                 }
                               },
                               multiple: !0,
@@ -660,34 +660,34 @@
                           ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: I.imageOptionsContainer,
+                                  className: x.imageOptionsContainer,
                                   children: (0, n.jsx)(i.FormTitle, {
                                     children: "Preview",
                                   }),
                                 }),
                                 (0, n.jsx)("div", {
                                   ref: y,
-                                  className: I.attachmentsGrid,
+                                  className: x.attachmentsGrid,
                                   children:
                                     k.length > 0 &&
                                     k.map(e =>
                                       (0, n.jsxs)(
                                         "div",
                                         {
-                                          className: I.attachmentsGridItem,
+                                          className: x.attachmentsGridItem,
                                           children: [
                                             (0, n.jsx)(i.Text, {
                                               variant: "text-sm/normal",
                                               children: e.filename,
                                             }),
                                             (0, n.jsxs)("div", {
-                                              className: I.attachmentContainer,
+                                              className: x.attachmentContainer,
                                               children: [
                                                 (0, n.jsx)(m.UploadIcon, {
                                                   upload: e,
                                                 }),
                                                 (0, n.jsx)("div", {
-                                                  className: I.toolBar,
+                                                  className: x.toolBar,
                                                   children: (0, n.jsx)(
                                                     h.default,
                                                     {
@@ -695,7 +695,7 @@
                                                         d.default,
                                                         {
                                                           tooltip:
-                                                            x.default.Messages
+                                                            T.default.Messages
                                                               .ATTACHMENT_UTILITIES_REMOVE,
                                                           onClick: () =>
                                                             ep(e.id),
@@ -730,20 +730,20 @@
                       ],
                     }),
                     (0, n.jsxs)(i.ModalFooter, {
-                      className: I.submitContainer,
+                      className: x.submitContainer,
                       children: [
                         (0, n.jsx)(i.Button, {
-                          className: I.formButton,
+                          className: x.formButton,
                           look: i.ButtonLooks.BLANK,
                           onClick: eg,
                           children: (0, n.jsx)(i.Text, {
                             variant: "text-sm/normal",
-                            children: x.default.Messages.CANCEL,
+                            children: T.default.Messages.CANCEL,
                           }),
                         }),
                         (0, n.jsx)(i.Button, {
-                          submitting: ec,
-                          className: I.formButton,
+                          submitting: eu,
+                          className: x.formButton,
                           onClick: eh,
                           children: "Submit and Open Report",
                         }),
@@ -771,8 +771,8 @@
         s = a("821316"),
         r = a("605250"),
         i = a("836403"),
-        u = a("825287"),
-        c = a("929331"),
+        c = a("825287"),
+        u = a("929331"),
         d = a("49111");
       let m = new r.default("DebugUploadManager");
       async function f(e, t) {
@@ -794,9 +794,9 @@
           }
           let m = null,
             f = "\n    "
-              .concat((0, c.default)(m), "\n\n    Metadata:\n    ")
+              .concat((0, u.default)(m), "\n\n    Metadata:\n    ")
               .concat(
-                JSON.stringify((0, u.default)(), void 0, 2),
+                JSON.stringify((0, c.default)(), void 0, 2),
                 "\n\n    ChannelStore:\n    "
               )
               .concat(
@@ -808,7 +808,7 @@
               .concat(l, "\n    ");
           s.clear();
           let g = d.Endpoints.DEBUG_LOG(e, "discord_app_logs");
-          await n.default.post({
+          await n.HTTP.post({
             url: g,
             body: f,
             retries: 3,
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "277613",
-          versionHash: "058e3c8b88d1507a81f7bdd6463038665d60356c",
+          buildNumber: "277632",
+          versionHash: "06bbf2ed3276fe1a5ec559b9c4d75e49a2ab4bed",
         };
       }
       a.r(t),
@@ -905,14 +905,14 @@
           .map(n => {
             var o, r;
             let {
-                index: u,
-                timestamp: c,
+                index: c,
+                timestamp: u,
                 logs: d,
                 nativeLogs: m,
                 serverTrace: f,
               } = n,
               g =
-                0 === u
+                0 === c
                   ? null !==
                       (r =
                         null ===
@@ -924,7 +924,7 @@
                           : o.timestamp) && void 0 !== r
                     ? r
                     : e
-                  : c,
+                  : u,
               p = (function (e, t) {
                 var a, n;
                 let o = (function (e) {
@@ -984,8 +984,8 @@
                   t.forEach(t => {
                     let n = i(t),
                       r = 0,
-                      u = a || !t.autoGenerated,
-                      c =
+                      c = a || !t.autoGenerated,
+                      u =
                         n.startsWith("Start ") &&
                         !n.includes("RUN_JS_BUNDLE") &&
                         l.has(n.replace("Start ", "Finish ")),
@@ -998,8 +998,8 @@
                       let e = s.pop();
                       null != e &&
                         ((r = t.timestamp - e.timestamp),
-                        (u =
-                          u ||
+                        (c =
+                          c ||
                           (r > 5 &&
                             !(function (e) {
                               return [
@@ -1007,7 +1007,7 @@
                                 "CONVERT_CONSTANTS",
                               ].some(t => e.includes(t));
                             })(n))),
-                        (e.shouldKeep = e.shouldKeep || u));
+                        (e.shouldKeep = e.shouldKeep || c));
                     }
                     let m = {
                       emoji: "☕",
@@ -1015,7 +1015,7 @@
                       delta: r > 0 ? r : void 0,
                       prefix: o,
                       log: n,
-                      shouldKeep: u,
+                      shouldKeep: c,
                     };
                     (function (e, t) {
                       let a = 0;
@@ -1025,7 +1025,7 @@
                       }
                       e.splice(a, 0, t);
                     })(e, m),
-                      c && ((o += "| "), s.push(m));
+                      u && ((o += "| "), s.push(m));
                   });
                   let r = !1;
                   return e.filter(
@@ -1039,12 +1039,12 @@
                 g
               ),
               h = "Trace #"
-                .concat(u + 1, " started ")
-                .concat((0, s.getTimestampString)(c), "\n")
+                .concat(c + 1, " started ")
+                .concat((0, s.getTimestampString)(u), "\n")
                 .concat(p);
             return (
               null != f &&
-                (h += "\n Server trace for trace #".concat(u + 1).concat(f)),
+                (h += "\n Server trace for trace #".concat(c + 1).concat(f)),
               h
             );
           })
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7e3721c961191c39cff2.js.map
+//# sourceMappingURL=2cf5516b1e80f4afeb33.js.map

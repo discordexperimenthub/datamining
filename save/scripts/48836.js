@@ -32,20 +32,18 @@
             source: t,
             action: s.AgeGateAnalyticAction.AGE_GATE_SUBMITTED,
           }),
-          n.default
-            .patch({
-              url: i.Endpoints.ME,
-              oldFormErrors: !0,
-              body: { date_of_birth: e.format("YYYY-MM-DD") },
-            })
-            .then(e => {
-              let a = e.body;
-              l.default.dispatch({ type: "CURRENT_USER_UPDATE", user: a }),
-                o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
-                  source: t,
-                  action: s.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
-                });
-            })
+          n.HTTP.patch({
+            url: i.Endpoints.ME,
+            oldFormErrors: !0,
+            body: { date_of_birth: e.format("YYYY-MM-DD") },
+          }).then(e => {
+            let a = e.body;
+            l.default.dispatch({ type: "CURRENT_USER_UPDATE", user: a }),
+              o.default.track(i.AnalyticEvents.AGE_GATE_ACTION, {
+                source: t,
+                action: s.AgeGateAnalyticAction.AGE_GATE_SUCCESS,
+              });
+          })
         );
       }
       function c(e) {
@@ -140,8 +138,8 @@
             required: v,
           } = e,
           {
-            day: G,
-            setDay: T,
+            day: T,
+            setDay: G,
             month: b,
             setMonth: y,
             year: M,
@@ -165,10 +163,10 @@
           })(a),
           R = l.useMemo(
             () =>
-              null != G && null != b && null != M
-                ? i("".concat(G, "/").concat(b, "/").concat(M), "DD/MM/YYYY")
+              null != T && null != b && null != M
+                ? i("".concat(T, "/").concat(b, "/").concat(M), "DD/MM/YYYY")
                 : null,
-            [G, b, M]
+            [T, b, M]
           );
         l.useEffect(() => {
           s((null == R ? void 0 : R.isValid()) ? R : null);
@@ -232,7 +230,7 @@
                 key: "day",
                 input: (0, n.jsx)(_, {
                   options: A,
-                  selectOption: T,
+                  selectOption: G,
                   children: (0, n.jsx)(c.default, {
                     ref: k,
                     className: f.inputDay,
@@ -243,10 +241,10 @@
                       children: d.default.Messages.AGE_GATE_DOB_DAY,
                     }),
                     options: A,
-                    value: G,
+                    value: T,
                     onChange: t => {
                       let { value: a } = t;
-                      T(a), N(e + 1);
+                      G(a), N(e + 1);
                     },
                     maxMenuHeight: 215,
                   }),
@@ -358,8 +356,8 @@
         m = a("476765"),
         g = a("599110"),
         v = a("701909"),
-        G = a("731109"),
-        T = a("669499"),
+        T = a("731109"),
+        G = a("669499"),
         b = a("208266"),
         y = a("586391"),
         M = a("49111"),
@@ -383,15 +381,15 @@
           L = null != u ? c().diff(u, "years") : null;
         function U() {
           let e = null == s ? void 0 : s.getGuildId();
-          E.default.nsfwReturnToSafety(e), (0, T.closeAgeGateModal)(n);
+          E.default.nsfwReturnToSafety(e), (0, G.closeAgeGateModal)(n);
         }
         async function w() {
           i(null != u, "Cannot submit null birthday.");
           try {
-            return S(null), k(!0), await (0, G.submitDateOfBirth)(u, n);
+            return S(null), k(!0), await (0, T.submitDateOfBirth)(u, n);
           } catch (t) {
             if (null != t.body && null != t.body.date_of_birth)
-              (0, T.openFailureAgeGateModal)(n, t.body.date_of_birth);
+              (0, G.openFailureAgeGateModal)(n, t.body.date_of_birth);
             else {
               var e;
               (null == t
@@ -428,7 +426,7 @@
         o.useEffect(() => {
           null != l &&
             null != l.nsfwAllowed &&
-            (0, T.openSuccessAgeGateModal)(n);
+            (0, G.openSuccessAgeGateModal)(n);
         }),
           o.useEffect(() => {
             g.default.track(M.AnalyticEvents.AGE_GATE_ACTION, {
@@ -779,8 +777,8 @@
               clearable: m,
               searchable: g,
               styleOverrides: v,
-              isMulti: G,
-              placeholder: T,
+              isMulti: T,
+              placeholder: G,
               filterOption: b,
               closeMenuOnSelect: y = !0,
               ...M
@@ -802,7 +800,7 @@
                 })),
             null != o && (R.MultiValue = e => o(e.data));
           let C = null != v ? v : p;
-          if (G && Array.isArray(u)) {
+          if (T && Array.isArray(u)) {
             let t = {};
             i.forEach(e => {
               t[String(e.value)] = e;
@@ -820,7 +818,7 @@
                   ...x,
                   className: a,
                   ref: this._selectRef,
-                  isMulti: G,
+                  isMulti: T,
                   components: R,
                   options: i,
                   styles: C,
@@ -831,7 +829,7 @@
                   closeMenuOnSelect: y,
                   value: e,
                   onKeyDown: this.handleKeyDown,
-                  placeholder: null != T ? T : A.default.Messages.SELECT,
+                  placeholder: null != G ? G : A.default.Messages.SELECT,
                   noOptionsMessage: () => A.default.Messages.NO_RESULTS_FOUND,
                   filterOption: b,
                 }),
@@ -881,4 +879,4 @@
     },
   },
 ]);
-//# sourceMappingURL=10900a2df408c8600ec0.js.map
+//# sourceMappingURL=b0b5df9c4b315e74c6d2.js.map

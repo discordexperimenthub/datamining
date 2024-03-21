@@ -85,16 +85,14 @@
           e === N.DONE
             ? T()
             : c.default.isAuthenticated()
-              ? u.default
-                  .post({
-                    url: m.Endpoints.HANDOFF,
-                    body: { key: t },
-                    oldFormErrors: !0,
-                  })
-                  .then(
-                    e => this.handoff(e.body.handoff_token),
-                    () => this.handoff()
-                  )
+              ? u.HTTP.post({
+                  url: m.Endpoints.HANDOFF,
+                  body: { key: t },
+                  oldFormErrors: !0,
+                }).then(
+                  e => this.handoff(e.body.handoff_token),
+                  () => this.handoff()
+                )
               : this.handoff();
         }
         handoff(e) {
@@ -848,4 +846,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fe7fd74eaa71e8171aa7.js.map
+//# sourceMappingURL=98a509a7ec775ebbcf91.js.map

@@ -70,7 +70,7 @@
             buildId: l,
           });
           try {
-            let n = await a.default.post({
+            let n = await a.HTTP.post({
               url: i.Endpoints.APPLICATION_BUILD_SIZE(e, t, l),
               body: { manifest_ids: r },
               oldFormErrors: !0,
@@ -233,14 +233,14 @@
               finePrint: m,
               showPricingLink: g,
               showWithdrawalWaiver: S,
-              isTrial: N,
-              isDiscount: T,
+              isTrial: T,
+              isDiscount: N,
               subscriptionPlan: E,
               finePrintClassname: v,
             } = this.props,
             { hasAcceptedEULA: C, hasAcceptedWithdrawalWaiver: M } = this.state;
           return (c(
-            !N || null != E,
+            !T || null != E,
             "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"
           ),
           n || (null != e && !s) || S)
@@ -326,7 +326,7 @@
                         }),
                       ],
                     }),
-                  N &&
+                  T &&
                     null != E &&
                     (0, a.jsx)(o.Text, {
                       variant: "text-xs/medium",
@@ -345,7 +345,7 @@
                           ),
                         }),
                     }),
-                  T &&
+                  N &&
                     null != E &&
                     (0, a.jsx)(o.Text, {
                       variant: "text-xs/medium",
@@ -418,8 +418,8 @@
         m = l("145131"),
         g = l("953109"),
         S = l("993105"),
-        N = l("391820"),
-        T = l("49111"),
+        T = l("391820"),
+        N = l("49111"),
         E = l("782340"),
         v = l("842277");
       class C extends s.Component {
@@ -531,7 +531,7 @@
                     ],
                   }),
                   (0, a.jsx)("div", { className: v.divider }),
-                  (0, a.jsx)(N.default, {
+                  (0, a.jsx)(T.default, {
                     autoFocus: !0,
                     className: v.selector,
                     value: s,
@@ -578,7 +578,7 @@
                 installationPath: this.state.selectedInstallationPath,
                 analyticsLocation: s,
               }),
-                (0, p.transitionTo)(T.Routes.APPLICATION_LIBRARY),
+                (0, p.transitionTo)(N.Routes.APPLICATION_LIBRARY),
                 this.close();
             }),
             (this.handleInstall = () => {
@@ -1132,8 +1132,8 @@
               to: L,
               badgeStrokeColor: m,
               animate: S,
-              tabIndex: N,
-              iconSrc: T,
+              tabIndex: T,
+              iconSrc: N,
               "aria-hidden": E,
               ...v
             } = this.props,
@@ -1160,7 +1160,7 @@
                   }
                 : u,
             onClick: null != L || null == I ? void 0 : I,
-            tabIndex: N,
+            tabIndex: T,
             ...v,
             children: [this.renderAcronym(), this.renderBadge()],
           });
@@ -1199,7 +1199,7 @@
             : this.renderTooltip();
         }
       }
-      let N = c.default.connectStores([h.default], e => {
+      let T = c.default.connectStores([h.default], e => {
         let { guild: t, animate: l, iconSrc: a, style: s, size: n } = e;
         return {
           style: {
@@ -1210,13 +1210,13 @@
           },
         };
       })((0, d.backgroundImagePreloader)(e => (0, a.jsx)(S, { ...e })));
-      class T extends s.PureComponent {
+      class N extends s.PureComponent {
         render() {
-          return (0, a.jsx)(N, { ...this.props });
+          return (0, a.jsx)(T, { ...this.props });
         }
       }
-      (T.Sizes = L),
-        (T.defaultProps = {
+      (N.Sizes = L),
+        (N.defaultProps = {
           size: L.LARGE,
           textScale: 1,
           showBadge: !1,
@@ -1226,7 +1226,7 @@
           badgeStrokeColor: u.default.unsafe_rawColors.WHITE_500.css,
           animate: !1,
         });
-      var E = T;
+      var E = N;
     },
     547620: function (e, t, l) {
       "use strict";
@@ -1412,4 +1412,4 @@
     },
   },
 ]);
-//# sourceMappingURL=aef1b409e2711c4cbe02.js.map
+//# sourceMappingURL=f6ef75f9de12625e7f02.js.map

@@ -55,24 +55,22 @@
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         return i.default.needsRefresh()
           ? (l.default.dispatch({ type: "LOAD_USER_AFFINITIES" }),
-            a.default
-              .get({
-                url: s.Endpoints.USER_AFFINITIES,
-                retries: e ? 3 : 0,
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  let { body: t } = e;
-                  l.default.dispatch({
-                    type: "LOAD_USER_AFFINITIES_SUCCESS",
-                    affinities: t,
-                  });
-                },
-                () => {
-                  l.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
-                }
-              ))
+            a.HTTP.get({
+              url: s.Endpoints.USER_AFFINITIES,
+              retries: e ? 3 : 0,
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                let { body: t } = e;
+                l.default.dispatch({
+                  type: "LOAD_USER_AFFINITIES_SUCCESS",
+                  affinities: t,
+                });
+              },
+              () => {
+                l.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
+              }
+            ))
           : Promise.resolve();
       }
     },
@@ -98,8 +96,8 @@
         s = n("446674"),
         r = n("77078"),
         o = n("450911"),
-        u = n("685073"),
-        c = n("819689"),
+        c = n("685073"),
+        u = n("819689"),
         d = n("812204"),
         f = n("685665"),
         p = n("428958"),
@@ -109,8 +107,8 @@
         g = n("705955"),
         v = n("27618"),
         C = n("697218"),
-        y = n("466857"),
-        T = n("578706"),
+        T = n("466857"),
+        y = n("578706"),
         x = n("83900"),
         E = n("599110"),
         N = n("315102"),
@@ -134,7 +132,7 @@
           name: i.ImpressionNames.ACTIVITY_BOOKMARK_SHARE_MODAL,
           properties: { application_id: t.application.id, location_stack: I },
         });
-        let [v, T] = l.useState(""),
+        let [v, y] = l.useState(""),
           [x, N] = l.useState([]),
           A = (0, w.default)({ applicationId: t.application.id, size: 256 }),
           S = ""
@@ -144,13 +142,13 @@
             g.default.getInviteSuggestionRows()
           );
         l.useEffect(() => {
-          (0, u.loadInviteSuggestions)({
+          (0, c.loadInviteSuggestions)({
             omitUserIds: new Set(),
             applicationId: t.application.id,
             inviteTargetType: j.InviteTargetTypes.EMBEDDED_APPLICATION,
           });
         }, [t.application.id]),
-          l.useEffect(() => (0, u.searchInviteSuggestions)(v), [v]);
+          l.useEffect(() => (0, c.searchInviteSuggestions)(v), [v]);
         let k = l.useCallback(async () => {
           let e = 0,
             n = 0,
@@ -173,7 +171,7 @@
                   }
                   return t.type === R.RowTypes.GROUP_DM ||
                     t.type === R.RowTypes.CHANNEL
-                    ? c.default.sendActivityBookmark(
+                    ? u.default.sendActivityBookmark(
                         t.item.id,
                         l,
                         d.default.ACTIVITY_DETAIL_PAGE,
@@ -183,7 +181,7 @@
                       ? o.default
                           .ensurePrivateChannel(t.item.id)
                           .then(e =>
-                            c.default.sendActivityBookmark(
+                            u.default.sendActivityBookmark(
                               e,
                               S,
                               d.default.ACTIVITY_DETAIL_PAGE,
@@ -223,13 +221,13 @@
             (0, a.jsxs)(r.ModalContent, {
               className: M.modalContent,
               children: [
-                (0, a.jsx)(y.default, {
+                (0, a.jsx)(T.default, {
                   className: M.searchBar,
                   placeholder: D.default.Messages.SEARCH,
                   label: D.default.Messages.SEARCH,
                   searchTerm: v,
-                  onChange: e => T(e),
-                  onClear: () => T(""),
+                  onChange: e => y(e),
+                  onClear: () => y(""),
                 }),
                 _.map((e, t) =>
                   (0, a.jsxs)(
@@ -410,14 +408,14 @@
           i = (0, s.useStateFromStores)([C.default], () =>
             C.default.getCurrentUser()
           ),
-          [o, u] = l.useState(!1);
+          [o, c] = l.useState(!1);
         return (
           l.useEffect(() => {
             let e;
             return (
               o &&
                 (e = setTimeout(() => {
-                  u(!1);
+                  c(!1);
                 }, 1e3)),
               () => {
                 null != e && clearTimeout(e);
@@ -433,11 +431,11 @@
                 application_id: t,
               }),
                 (0, A.copy)(n),
-                u(!0);
+                c(!0);
             },
             innerClassName: M.copyButton,
             children: [
-              o ? (0, a.jsx)(T.default, {}) : (0, a.jsx)(x.default, {}),
+              o ? (0, a.jsx)(y.default, {}) : (0, a.jsx)(x.default, {}),
               o ? D.default.Messages.COPIED : D.default.Messages.COPY_LINK,
             ],
           })
@@ -458,8 +456,8 @@
         s = n("995008"),
         r = n.n(s),
         o = n("759843"),
-        u = n("913144"),
-        c = n("42203"),
+        c = n("913144"),
+        u = n("42203"),
         d = n("18494"),
         f = n("162771"),
         p = n("599110"),
@@ -467,7 +465,7 @@
         h = n("939011");
       let I = (0, o.trackMaker)({
         analyticEventConfigs: p.AnalyticEventConfigs,
-        dispatcher: u.default,
+        dispatcher: c.default,
         TRACK_ACTION_NAME: "TRACK",
       });
       function g(e) {
@@ -482,8 +480,8 @@
           () => {
             let a = !i(l.current, e);
             a && (l.current = e);
-            let u = !i(s.current, n);
-            if ((u && (s.current = n), !a && !u)) return;
+            let c = !i(s.current, n);
+            if ((c && (s.current = n), !a && !c)) return;
             let g = { ...e, sequenceId: r("impression_") };
             return (
               !(function (e) {
@@ -510,7 +508,7 @@
                     void 0 !== t
                       ? t
                       : f.default.getGuildId(),
-                  u =
+                  c =
                     null !== (n = null == s ? void 0 : s.channel_id) &&
                     void 0 !== n
                       ? n
@@ -520,7 +518,7 @@
                     location: (0, h.getLocation)(),
                     ...(0, m.collectGuildAnalyticsMetadata)(r),
                     ...(0, m.collectChannelAnalyticsMetadata)(
-                      c.default.getChannel(u)
+                      u.default.getChannel(c)
                     ),
                     ...s,
                   });
@@ -576,7 +574,7 @@
     },
     705955: function (e, t, n) {
       "use strict";
-      let a, l, i, s, r, o, u;
+      let a, l, i, s, r, o, c;
       n.r(t),
         n.d(t, {
           default: function () {
@@ -584,7 +582,7 @@
           },
         }),
         n("222007");
-      var c = n("446674"),
+      var u = n("446674"),
         d = n("913144"),
         f = n("116460"),
         p = n("449008"),
@@ -594,15 +592,15 @@
         g = n("957255"),
         v = n("27618"),
         C = n("843823"),
-        y = n("49111"),
-        T = n("91366");
+        T = n("49111"),
+        y = n("91366");
       let x = new Set(),
         E = [],
         N = new Map();
       function A(e) {
         let t = new Set(),
           n =
-            null == s || u === T.InviteTargetTypes.EMBEDDED_APPLICATION
+            null == s || c === y.InviteTargetTypes.EMBEDDED_APPLICATION
               ? void 0
               : s.id,
           a = (0, m.getMostRecentDMedUser)(x, n);
@@ -610,12 +608,12 @@
         C.default.getUserAffinitiesUserIds()))
           t.add(e);
         let l = new Set();
-        if (u === T.InviteTargetTypes.EMBEDDED_APPLICATION) {
+        if (c === y.InviteTargetTypes.EMBEDDED_APPLICATION) {
           let e = f.default.getChannelHistory();
           e.map(e => I.default.getChannel(e))
             .filter(p.isNotNullish)
-            .filter(e => e.type === y.ChannelTypes.GUILD_TEXT)
-            .filter(e => g.default.can(y.Permissions.SEND_MESSAGES, e))
+            .filter(e => e.type === T.ChannelTypes.GUILD_TEXT)
+            .filter(e => g.default.can(T.Permissions.SEND_MESSAGES, e))
             .slice(0, 3)
             .forEach(e => l.add(e.id));
         }
@@ -626,7 +624,7 @@
           maxRowsWithoutQuery: 100,
           omitGuildId: n,
           suggestedChannelIds: l,
-          inviteTargetType: u,
+          inviteTargetType: c,
         });
       }
       function R(e) {
@@ -636,7 +634,7 @@
             N.set(e, { index: t });
           });
       }
-      class S extends c.default.Store {
+      class S extends u.default.Store {
         initialize() {
           this.waitFor(v.default, C.default);
         }
@@ -669,23 +667,23 @@
           let {
             omitUserIds: t,
             guild: n,
-            channel: c,
+            channel: u,
             applicationId: d,
             inviteTargetType: f,
           } = e;
-          (s = null != c ? n : null), (r = c), (o = d), (u = f);
+          (s = null != u ? n : null), (r = u), (o = d), (c = f);
           let p = v.default.getRelationships(),
             I = h.default
               .keys(p)
-              .filter(e => p[e] === y.RelationshipTypes.BLOCKED),
+              .filter(e => p[e] === T.RelationshipTypes.BLOCKED),
             g = (0, m.getUsersAlreadyJoined)({
               channel: r,
               applicationId: o,
               inviteTargetType: f,
             });
           (x = new Set([...t, ...I, ...g])), (i = !1);
-          let { rows: C, counts: T } = A("");
-          R(C), (a = T), (l = E.length);
+          let { rows: C, counts: y } = A("");
+          R(C), (a = y), (l = E.length);
         },
         INVITE_SUGGESTIONS_SEARCH: function (e) {
           let { query: t } = e;
@@ -710,8 +708,8 @@
         s = n.n(i),
         r = n("77078"),
         o = n("381546"),
-        u = n("229915"),
-        c = n("782340"),
+        c = n("229915"),
+        u = n("782340"),
         d = n("717386");
       class f extends l.Component {
         render() {
@@ -729,8 +727,8 @@
               autoComplete: g,
               forwardedRef: v,
               closeIconClassName: C,
-              searchIconClassName: y,
-              cta: T,
+              searchIconClassName: T,
+              cta: y,
             } = this.props,
             x = null != l && l.length > 0,
             E = null != v ? v : this._textInputRef;
@@ -758,26 +756,26 @@
                   "aria-label": t,
                   autoComplete: g ? "on" : "off",
                 }),
-                null != T
+                null != y
                   ? (0, a.jsx)(r.Text, {
                       color: "text-muted",
                       variant: "text-xs/normal",
                       className: d.cta,
-                      children: T,
+                      children: y,
                     })
                   : null,
                 x
                   ? (0, a.jsx)(r.Clickable, {
                       onClick: this.handleClear,
                       className: d.clear,
-                      "aria-label": c.default.Messages.SEARCH_CLEAR,
+                      "aria-label": u.default.Messages.SEARCH_CLEAR,
                       children: (0, a.jsx)(o.default, {
                         className: s(d.clearIcon, C),
                       }),
                     })
-                  : (0, a.jsx)(u.default, {
-                      className: s(d.searchIcon, y),
-                      "aria-label": c.default.Messages.SEARCH,
+                  : (0, a.jsx)(c.default, {
+                      className: s(d.searchIcon, T),
+                      "aria-label": u.default.Messages.SEARCH,
                     }),
               ],
             }),
@@ -893,11 +891,11 @@
           secondaryColor: s = "transparent",
           secondaryColorClass: r = "",
           color: o = l.default.colors.INTERACTIVE_NORMAL,
-          colorClass: u = "",
-          ...c
+          colorClass: c = "",
+          ...u
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, i.default)(c),
+          ...(0, i.default)(u),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -916,7 +914,7 @@
               fillRule: "evenodd",
               d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22Zm4.7-15.7a1 1 0 0 0-1.4 0L12 10.58l-3.3-3.3a1 1 0 0 0-1.4 1.42L10.58 12l-3.3 3.3a1 1 0 1 0 1.42 1.4L12 13.42l3.3 3.3a1 1 0 0 0 1.4-1.42L13.42 12l3.3-3.3a1 1 0 0 0 0-1.4Z",
               clipRule: "evenodd",
-              className: u,
+              className: c,
             }),
           ],
         });
@@ -955,4 +953,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8577db2748c32bed515a.js.map
+//# sourceMappingURL=a09557926cac89be1636.js.map

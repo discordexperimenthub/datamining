@@ -567,7 +567,7 @@
                   ],
             storage: {
               baseURL: ""
-                .concat(a.default.getAPIBaseURL())
+                .concat((0, a.getAPIBaseURL)())
                 .concat(f.Endpoints.APPLICATION_STORAGE(t, e)),
               token: h,
             },
@@ -692,4 +692,4 @@
     },
   },
 ]);
-//# sourceMappingURL=182cade6124662ace718.js.map
+//# sourceMappingURL=b93c4a1ade9f1deb111a.js.map

@@ -18,24 +18,22 @@
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         return l.default.needsRefresh()
           ? (_.default.dispatch({ type: "LOAD_USER_AFFINITIES" }),
-            a.default
-              .get({
-                url: I.Endpoints.USER_AFFINITIES,
-                retries: e ? 3 : 0,
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  let { body: s } = e;
-                  _.default.dispatch({
-                    type: "LOAD_USER_AFFINITIES_SUCCESS",
-                    affinities: s,
-                  });
-                },
-                () => {
-                  _.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
-                }
-              ))
+            a.HTTP.get({
+              url: I.Endpoints.USER_AFFINITIES,
+              retries: e ? 3 : 0,
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                let { body: s } = e;
+                _.default.dispatch({
+                  type: "LOAD_USER_AFFINITIES_SUCCESS",
+                  affinities: s,
+                });
+              },
+              () => {
+                _.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
+              }
+            ))
           : Promise.resolve();
       }
     },
@@ -64,8 +62,8 @@
         R = t("671484"),
         f = t("27618"),
         A = t("102985"),
-        o = t("843823"),
-        P = t("697218"),
+        P = t("843823"),
+        o = t("697218"),
         c = t("920700"),
         M = t("953109"),
         L = t("306160"),
@@ -89,7 +87,7 @@
             giftMessageError: S,
             isSendingMessage: f,
           } = e,
-          [o, P] = _.useState(c.default.Modes.DEFAULT),
+          [P, o] = _.useState(c.default.Modes.DEFAULT),
           G = (0, i.useStateFromStores)([A.default], () => A.default.enabled),
           D = E || (null != n && null != T),
           H = () => (null != u ? u.skuId : null != l ? l.id : null),
@@ -132,18 +130,18 @@
                 l
               );
             try {
-              (0, L.copy)(e), P(c.default.Modes.SUCCESS);
+              (0, L.copy)(e), o(c.default.Modes.SUCCESS);
             } catch (e) {
-              P(c.default.Modes.ERROR);
+              o(c.default.Modes.ERROR);
             }
             setTimeout(() => {
-              P(c.default.Modes.DEFAULT);
+              o(c.default.Modes.DEFAULT);
             }, 1500);
           },
           B = () => {
             let e;
             if (null == s) return null;
-            switch (o) {
+            switch (P) {
               case c.default.Modes.SUCCESS:
                 e = p.default.Messages.BILLING_GIFT_COPIED;
                 break;
@@ -167,7 +165,7 @@
                       ? p.default.Messages.GIFT_INVENTORY_HIDDEN
                       : null,
                     value: (0, O.getGiftCodeURL)(s),
-                    mode: o,
+                    mode: P,
                     text: e,
                     onCopy: e => b(e, s),
                     supportsCopy: L.SUPPORTS_COPY,
@@ -272,10 +270,10 @@
           [u, R] = _.useState(!1),
           [A, c] = _.useState(!1),
           { userAffinities: M, isLoading: L } = (0, i.useStateFromStoresObject)(
-            [o.default],
+            [P.default],
             () => ({
-              userAffinities: o.default.getUserAffinitiesUserIds(),
-              isLoading: o.default.getFetching(),
+              userAffinities: P.default.getUserAffinitiesUserIds(),
+              isLoading: P.default.getFetching(),
             })
           ),
           O = Array.from(M.values()),
@@ -285,8 +283,8 @@
           g = n.difference(C, O),
           U = [...O, ...g],
           G = (0, i.useStateFromStores)(
-            [P.default],
-            () => P.default.filter(e => U.includes(e.id) && !e.bot),
+            [o.default],
+            () => o.default.filter(e => U.includes(e.id) && !e.bot),
             [U]
           ),
           h = null == G || 0 === G.length;
@@ -392,8 +390,8 @@
         R = t("977934"),
         f = t("646718"),
         A = t("49111"),
-        o = t("782340"),
-        P = t("766593");
+        P = t("782340"),
+        o = t("766593");
       function c(e) {
         var s, t;
         let _,
@@ -415,36 +413,36 @@
         )
           switch (l) {
             case f.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
-              (_ = o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1),
+              (_ = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1),
                 A.DELAYED_PAYMENTS.has(
                   null != i ? i : A.PaymentSourceTypes.UNKNOWN
                 ) &&
                   (_ =
-                    o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
+                    P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
               break;
             case f.SubscriptionPlans.PREMIUM_MONTH_TIER_2:
               (_ =
-                o.default.Messages
+                P.default.Messages
                   .BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH),
                 A.DELAYED_PAYMENTS.has(
                   null != i ? i : A.PaymentSourceTypes.UNKNOWN
                 ) &&
                   (_ =
-                    o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
+                    P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
               break;
             case f.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
               (_ =
-                o.default.Messages
+                P.default.Messages
                   .BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR),
                 A.DELAYED_PAYMENTS.has(
                   null != i ? i : A.PaymentSourceTypes.UNKNOWN
                 ) &&
                   (_ =
-                    o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
+                    P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
               break;
             case f.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
               (_ =
-                o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format(
+                P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format(
                   {
                     numFreeGuildSubscriptions:
                       f.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
@@ -454,7 +452,7 @@
                   null != i ? i : A.PaymentSourceTypes.UNKNOWN
                 ) &&
                   (_ =
-                    o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format(
+                    P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format(
                       {
                         numFreeGuildSubscriptions:
                           f.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
@@ -464,12 +462,12 @@
             case f.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
             case f.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
               _ =
-                o.default.Messages
+                P.default.Messages
                   .BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
               break;
             case f.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
             case f.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-              _ = o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+              _ = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
               break;
             default:
               throw Error("Unexpected planId: ".concat(l));
@@ -478,29 +476,29 @@
           r.skuId === f.PremiumSubscriptionSKUs.TIER_2 &&
           N.skuId === f.PremiumSubscriptionSKUs.TIER_1
         )
-          _ = o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
+          _ = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
         else
           switch (N.skuId) {
             case f.PremiumSubscriptionSKUs.TIER_0:
-              _ = o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+              _ = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
               break;
             case f.PremiumSubscriptionSKUs.TIER_1:
               _ =
-                o.default.Messages
+                P.default.Messages
                   .BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
               break;
             case f.PremiumSubscriptionSKUs.TIER_2:
               _ =
                 1 !== r.intervalCount
-                  ? o.default.Messages
+                  ? P.default.Messages
                       .BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH
-                  : o.default.Messages
+                  : P.default.Messages
                       .BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
               break;
             default:
               throw Error("Unexpected skuId: ".concat(N.skuId));
           }
-        return (0, a.jsx)("div", { className: P.text, children: _ });
+        return (0, a.jsx)("div", { className: o.text, children: _ });
       }
       function M(e) {
         let s,
@@ -530,28 +528,28 @@
             return A.DELAYED_PAYMENTS.has(
               null != m ? m : A.PaymentSourceTypes.UNKNOWN
             )
-              ? o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format()
-              : o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
+              ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format()
+              : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
           if (e.skuId === f.PremiumSubscriptionSKUs.TIER_1)
             return A.DELAYED_PAYMENTS.has(
               null != m ? m : A.PaymentSourceTypes.UNKNOWN
             )
-              ? o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format()
-              : o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
+              ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format()
+              : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
           return A.DELAYED_PAYMENTS.has(
             null != m ? m : A.PaymentSourceTypes.UNKNOWN
           )
-            ? o.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format()
+            ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format()
             : r
-              ? o.default.Messages
+              ? P.default.Messages
                   .BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL
-              : o.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2;
+              : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2;
         };
         if (null != U)
           s = (0, a.jsx)("div", {
-            className: P.text,
+            className: o.text,
             children:
-              o.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
+              P.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
                 skuName: U.name,
               }),
           });
@@ -565,11 +563,11 @@
           I(null != e, "Missing plan"),
             (s = (0, a.jsxs)(a.Fragment, {
               children: [
-                (0, a.jsx)("div", { className: P.text, children: p(e) }),
+                (0, a.jsx)("div", { className: o.text, children: p(e) }),
                 (0, a.jsx)("div", {
-                  className: P.text,
+                  className: o.text,
                   children:
-                    o.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format(
+                    P.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format(
                       { guildName: C.name }
                     ),
                 }),
@@ -578,7 +576,7 @@
         } else {
           let e = T.default.get(l);
           I(null != e, "Missing plan"),
-            (s = (0, a.jsx)("div", { className: P.text, children: p(e) }));
+            (s = (0, a.jsx)("div", { className: o.text, children: p(e) }));
         }
         let F = S.default.getPremiumType(l);
         return (
@@ -588,20 +586,20 @@
           ),
           (t =
             null != U
-              ? o.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format(
+              ? P.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format(
                   { skuName: U.name }
                 )
               : L
-                ? o.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON
+                ? P.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON
                 : null != C
-                  ? o.default.Messages
+                  ? P.default.Messages
                       .BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA
-                  : o.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON),
+                  : P.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON),
           (0, a.jsxs)("div", {
-            className: P.confirmation,
+            className: o.confirmation,
             children: [
               (0, a.jsx)(R.default, {
-                className: P.banner,
+                className: o.banner,
                 theme: g,
                 premiumType: F,
                 type: A.DELAYED_PAYMENTS.has(
@@ -646,4 +644,4 @@
     },
   },
 ]);
-//# sourceMappingURL=40092.9d05889151a76244d67f.js.map
+//# sourceMappingURL=40092.22773290ed0dd20e9d27.js.map

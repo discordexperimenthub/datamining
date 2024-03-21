@@ -21,69 +21,65 @@
       var l = r("872717"),
         i = r("913144"),
         n = r("819689"),
-        u = r("18494"),
-        s = r("49111");
+        s = r("18494"),
+        u = r("49111");
       let f = () => (
           i.default.dispatch({
             type: "BILLING_REFERRALS_REMAINING_FETCH_START",
           }),
-          l.default
-            .get({
-              url: s.Endpoints.GET_REFERRALS_REMAINING,
-              oldFormErrors: !0,
-            })
-            .then(
-              e => {
-                i.default.dispatch({
-                  type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
-                  referrals_remaining:
-                    null != e.body && null != e.body.referrals_remaining
-                      ? e.body.referrals_remaining
-                      : 0,
-                  sent_user_ids:
-                    null != e.body && null != e.body.sent_user_ids
-                      ? e.body.sent_user_ids
-                      : [],
-                });
-              },
-              () => {
-                i.default.dispatch({
-                  type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL",
-                });
-              }
-            )
+          l.HTTP.get({
+            url: u.Endpoints.GET_REFERRALS_REMAINING,
+            oldFormErrors: !0,
+          }).then(
+            e => {
+              i.default.dispatch({
+                type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
+                referrals_remaining:
+                  null != e.body && null != e.body.referrals_remaining
+                    ? e.body.referrals_remaining
+                    : 0,
+                sent_user_ids:
+                  null != e.body && null != e.body.sent_user_ids
+                    ? e.body.sent_user_ids
+                    : [],
+              });
+            },
+            () => {
+              i.default.dispatch({
+                type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL",
+              });
+            }
+          )
         ),
         a = e => (
           i.default.dispatch({
             type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
             recipientId: e,
           }),
-          l.default
-            .post({
-              url: s.Endpoints.CREATE_REFERRAL_PREVIEW(e),
-              oldFormErrors: !0,
-            })
-            .then(
-              t => {
-                i.default.dispatch({
-                  type: "BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS",
-                  recipientId: e,
-                  is_eligible: null != t.body && t.body.is_eligible,
-                });
-              },
-              () => {
-                i.default.dispatch({
-                  type: "BILLING_CREATE_REFERRAL_PREVIEW_FAIL",
-                  recipientId: e,
-                });
-              }
-            )
+          l.HTTP.post({
+            url: u.Endpoints.CREATE_REFERRAL_PREVIEW(e),
+            oldFormErrors: !0,
+          }).then(
+            t => {
+              i.default.dispatch({
+                type: "BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS",
+                recipientId: e,
+                is_eligible: null != t.body && t.body.is_eligible,
+              });
+            },
+            () => {
+              i.default.dispatch({
+                type: "BILLING_CREATE_REFERRAL_PREVIEW_FAIL",
+                recipientId: e,
+              });
+            }
+          )
         );
       async function _(e) {
         try {
           var t;
-          let r = await l.default.post({
-              url: s.Endpoints.CREATE_REFERRAL(e),
+          let r = await l.HTTP.post({
+              url: u.Endpoints.CREATE_REFERRAL(e),
               oldFormErrors: !0,
             }),
             n = null !== (t = r.body) && void 0 !== t ? t : null;
@@ -97,9 +93,9 @@
         } catch (e) {
           if (
             (i.default.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" }),
-            e.body.code === s.AbortCodes.INVALID_MESSAGE_SEND_USER)
+            e.body.code === u.AbortCodes.INVALID_MESSAGE_SEND_USER)
           ) {
-            let t = u.default.getCurrentlySelectedChannelId();
+            let t = s.default.getCurrentlySelectedChannelId();
             null != t && n.default.sendClydeError(t, e.body.code);
           }
         }
@@ -107,8 +103,8 @@
       async function E(e) {
         try {
           var t;
-          let r = await l.default.get({
-              url: s.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
+          let r = await l.HTTP.get({
+              url: u.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
               oldFormErrors: !0,
             }),
             n = null !== (t = r.body) && void 0 !== t ? t : null;
@@ -139,8 +135,8 @@
       var l = r("637612"),
         i = r("446674"),
         n = r("913144"),
-        u = r("697218"),
-        s = r("179935"),
+        s = r("697218"),
+        u = r("179935"),
         f = r("49111");
       let a = null,
         _ = {},
@@ -168,20 +164,20 @@
           (r = t),
             c.add(r),
             n.default.wait(() =>
-              (0, s.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
+              (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
             );
         }
       }
       class h extends i.default.Store {
         initialize() {
-          this.waitFor(u.default), this.syncWith([u.default], T);
+          this.waitFor(s.default), this.syncWith([s.default], T);
         }
         checkAndFetchReferralsRemaining() {
           null == a &&
             !d &&
             L < 5 &&
             (null == O || O < Date.now()) &&
-            (0, s.fetchReferralsRemaining)();
+            (0, u.fetchReferralsRemaining)();
         }
         getReferralsRemaining() {
           return this.checkAndFetchReferralsRemaining(), a;
@@ -197,7 +193,7 @@
         }
         getRecipientEligibility(e) {
           return (
-            void 0 === _[e] && !R.has(e) && (0, s.checkRecipientEligibility)(e),
+            void 0 === _[e] && !R.has(e) && (0, u.checkRecipientEligibility)(e),
             _[e]
           );
         }
@@ -213,15 +209,15 @@
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
           let { userTrialOfferId: t, recipientId: r } = e;
           if (
-            (!d && (0, s.fetchReferralsRemaining)(),
-            !R.has(r) && (0, s.checkRecipientEligibility)(r),
+            (!d && (0, u.fetchReferralsRemaining)(),
+            !R.has(r) && (0, u.checkRecipientEligibility)(r),
             !c.has(t))
           ) {
             var l;
             (l = t),
               c.add(l),
               n.default.wait(() =>
-                (0, s.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
+                (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
               );
           }
         },
@@ -251,7 +247,7 @@
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
-          (0, s.fetchReferralsRemaining)(),
+          (0, u.fetchReferralsRemaining)(),
             (I[t.id] = t),
             (E = [...E, t.user_id]);
         },
@@ -294,21 +290,21 @@
       var l = r("65597"),
         i = r("340412"),
         n = r("540692"),
-        u = r("833516"),
-        s = r("646718");
+        s = r("833516"),
+        u = r("646718");
       function f(e) {
         var t, r, f;
-        let a = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
-          _ = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
-          E = (0, u.useTrialOffer)(
+        let a = (0, s.useTrialOffer)(u.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
+          _ = (0, s.useTrialOffer)(u.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
+          E = (0, s.useTrialOffer)(
             i.default.getAnyOfUserTrialOfferId([
-              s.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID,
-              s.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
-              s.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID,
-              s.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
+              u.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID,
+              u.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
+              u.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID,
+              u.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
             ])
           ),
-          R = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
+          R = (0, s.useTrialOffer)(u.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
           d = (0, l.default)([n.default], () =>
             void 0 === e ? null : n.default.getRelevantUserTrialOffer(e)
           );
@@ -338,8 +334,8 @@
       var l = r("884691"),
         i = r("446674"),
         n = r("862337"),
-        u = r("697218"),
-        s = r("340412"),
+        s = r("697218"),
+        u = r("340412"),
         f = r("719923");
       function a(e) {
         return (
@@ -349,12 +345,12 @@
         );
       }
       function _(e) {
-        let t = (0, i.useStateFromStores)([s.default], () =>
-            s.default.getUserTrialOffer(e)
+        let t = (0, i.useStateFromStores)([u.default], () =>
+            u.default.getUserTrialOffer(e)
           ),
           [r, _] = l.useState(a(t)),
-          E = (0, i.useStateFromStores)([u.default], () =>
-            (0, f.isPremium)(u.default.getCurrentUser())
+          E = (0, i.useStateFromStores)([s.default], () =>
+            (0, f.isPremium)(s.default.getCurrentUser())
           );
         return (
           l.useEffect(() => {
@@ -389,8 +385,8 @@
       var l = r("446674"),
         i = r("913144"),
         n = r("697218"),
-        u = r("719923"),
-        s = r("521012"),
+        s = r("719923"),
+        u = r("521012"),
         f = r("646718");
       let a = {
           userOffersLastFetchedAtDate: void 0,
@@ -406,7 +402,7 @@
       }
       let R = () => !0;
       function d() {
-        let e = s.default.getPremiumTypeSubscription();
+        let e = u.default.getPremiumTypeSubscription();
         return (
           null != e &&
           ((_.userTrialOffers = {}), (_.userDiscountOffers = {}), !0)
@@ -417,7 +413,7 @@
           (_ = null != e ? e : a),
             this.waitFor(n.default),
             this.syncWith([n.default], R),
-            this.syncWith([s.default], d);
+            this.syncWith([u.default], d);
         }
         getUserTrialOffer(e) {
           if (null !== e) return _.userTrialOffers[e];
@@ -439,7 +435,7 @@
         getAlmostExpiringTrialOffers(e) {
           let t = Object.values(f.SubscriptionTrials).map(e => e.id),
             r = n.default.getCurrentUser();
-          return (0, u.isPremium)(r)
+          return (0, s.isPremium)(r)
             ? []
             : Object.values(_.userTrialOffers).filter(
                 r =>
@@ -454,7 +450,7 @@
         }
         getAcknowledgedOffers(e) {
           let t = n.default.getCurrentUser();
-          return (0, u.isPremium)(t)
+          return (0, s.isPremium)(t)
             ? []
             : Object.values(_.userTrialOffers).filter(
                 t => e.includes(t.trial_id) && null != t.expires_at
@@ -463,7 +459,7 @@
         getUnacknowledgedDiscountOffers() {
           var e;
           let t = n.default.getCurrentUser();
-          return (0, u.isPremium)(t)
+          return (0, s.isPremium)(t)
             ? []
             : Object.values(
                 null !== (e = _.userDiscountOffers) && void 0 !== e ? e : {}
@@ -471,7 +467,7 @@
         }
         getUnacknowledgedOffers(e) {
           let t = n.default.getCurrentUser();
-          return (0, u.isPremium)(t)
+          return (0, s.isPremium)(t)
             ? []
             : Object.values(_.userTrialOffers).filter(
                 t => e.includes(t.trial_id) && null == t.expires_at
@@ -544,4 +540,4 @@
     },
   },
 ]);
-//# sourceMappingURL=75851.02da4194faf0dc899904.js.map
+//# sourceMappingURL=75851.5e7ac03e1cfa45c7753b.js.map

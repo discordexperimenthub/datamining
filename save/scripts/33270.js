@@ -340,18 +340,17 @@
         );
       }
       function u() {
-        return a.default
-          .get({ url: l.Endpoints.SETTINGS_CONSENT, oldFormErrors: !0 })
-          .then(r, e => Promise.reject(Error(e.body.message)));
+        return a.HTTP.get({
+          url: l.Endpoints.SETTINGS_CONSENT,
+          oldFormErrors: !0,
+        }).then(r, e => Promise.reject(Error(e.body.message)));
       }
       function d(e, t) {
-        return a.default
-          .post({
-            url: l.Endpoints.SETTINGS_CONSENT,
-            body: { grant: e, revoke: t },
-            oldFormErrors: !0,
-          })
-          .then(r, o);
+        return a.HTTP.post({
+          url: l.Endpoints.SETTINGS_CONSENT,
+          body: { grant: e, revoke: t },
+          oldFormErrors: !0,
+        }).then(r, o);
       }
     },
     711115: function (e, t, n) {
@@ -431,22 +430,23 @@
         s = n("913144"),
         l = n("49111");
       let i = () =>
-        a.default
-          .get({ url: l.Endpoints.GUILD_AFFINITIES, oldFormErrors: !0 })
-          .then(
-            e => {
-              let {
-                body: { guild_affinities: t },
-              } = e;
-              s.default.dispatch({
-                type: "LOAD_GUILD_AFFINITIES_SUCCESS",
-                guildAffinities: t,
-              });
-            },
-            () => {
-              s.default.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
-            }
-          );
+        a.HTTP.get({
+          url: l.Endpoints.GUILD_AFFINITIES,
+          oldFormErrors: !0,
+        }).then(
+          e => {
+            let {
+              body: { guild_affinities: t },
+            } = e;
+            s.default.dispatch({
+              type: "LOAD_GUILD_AFFINITIES_SUCCESS",
+              guildAffinities: t,
+            });
+          },
+          () => {
+            s.default.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+          }
+        );
     },
     228157: function (e, t, n) {
       "use strict";
@@ -541,7 +541,7 @@
         let e = l.default.lastFetched;
         if (!(null != e && Date.now() - e < o))
           try {
-            let e = await a.default.get({
+            let e = await a.HTTP.get({
               url: r.Endpoints.USER_ACTIVITY_STATISTICS,
               oldFormErrors: !0,
             });
@@ -608,64 +608,56 @@
         s.default.dispatch({ type: "LOBBY_DISCONNECT", lobbyId: e });
       }
       function o(e, t, n) {
-        return a.default
-          .post({
-            url: l.Endpoints.LOBBIES,
-            body: { application_id: t, ...n },
-            retries: 1,
-            oldFormErrors: !0,
-          })
-          .then(t => {
-            let { body: n } = t;
-            return i(e, n.id, n.secret);
-          });
+        return a.HTTP.post({
+          url: l.Endpoints.LOBBIES,
+          body: { application_id: t, ...n },
+          retries: 1,
+          oldFormErrors: !0,
+        }).then(t => {
+          let { body: n } = t;
+          return i(e, n.id, n.secret);
+        });
       }
       function u(e, t) {
-        return a.default
-          .patch({
-            url: l.Endpoints.LOBBY(e),
-            body: { ...t },
-            retries: 1,
-            oldFormErrors: !0,
-          })
-          .then(l.NOOP);
+        return a.HTTP.patch({
+          url: l.Endpoints.LOBBY(e),
+          body: { ...t },
+          retries: 1,
+          oldFormErrors: !0,
+        }).then(l.NOOP);
       }
       function d(e, t, n) {
-        return a.default
-          .patch({
-            url: l.Endpoints.LOBBY_MEMBER(e, t),
-            body: { ...n },
-            retries: 1,
-            oldFormErrors: !0,
-          })
-          .then(l.NOOP);
+        return a.HTTP.patch({
+          url: l.Endpoints.LOBBY_MEMBER(e, t),
+          body: { ...n },
+          retries: 1,
+          oldFormErrors: !0,
+        }).then(l.NOOP);
       }
       function c(e) {
-        return a.default
-          .delete({
-            url: l.Endpoints.LOBBY(e),
-            body: {},
-            retries: 1,
-            oldFormErrors: !0,
-          })
-          .then(l.NOOP);
+        return a.HTTP.del({
+          url: l.Endpoints.LOBBY(e),
+          body: {},
+          retries: 1,
+          oldFormErrors: !0,
+        }).then(l.NOOP);
       }
       function f(e, t) {
-        return a.default
-          .post({
-            url: l.Endpoints.LOBBY_SEND(e),
-            body: { data: t },
-            oldFormErrors: !0,
-          })
-          .then(l.NOOP);
+        return a.HTTP.post({
+          url: l.Endpoints.LOBBY_SEND(e),
+          body: { data: t },
+          oldFormErrors: !0,
+        }).then(l.NOOP);
       }
       function E(e) {
-        return a.default
-          .post({ url: l.Endpoints.LOBBY_SEARCH, body: e, oldFormErrors: !0 })
-          .then(e => {
-            let { body: t } = e;
-            return t;
-          });
+        return a.HTTP.post({
+          url: l.Endpoints.LOBBY_SEARCH,
+          body: e,
+          oldFormErrors: !0,
+        }).then(e => {
+          let { body: t } = e;
+          return t;
+        });
       }
       function h(e) {
         s.default.dispatch({ type: "LOBBY_VOICE_CONNECT", lobbyId: e });
@@ -688,23 +680,21 @@
         i = {
           setUserAchievement(e, t, n) {
             let i = s.default.getId();
-            return a.default.put({
+            return a.HTTP.put({
               url: l.Endpoints.USER_ACHIEVEMENTS_FOR_USER(i, e, t),
               body: { percent_complete: n },
               oldFormErrors: !0,
             });
           },
           fetchForApplication: e =>
-            a.default
-              .get({
-                url: l.Endpoints.USER_ACHIEVEMENTS(e),
-                retries: 1,
-                oldFormErrors: !0,
-              })
-              .then(e => {
-                let { body: t } = e;
-                return t;
-              }),
+            a.HTTP.get({
+              url: l.Endpoints.USER_ACHIEVEMENTS(e),
+              retries: 1,
+              oldFormErrors: !0,
+            }).then(e => {
+              let { body: t } = e;
+              return t;
+            }),
         };
     },
     777273: function (e, t, n) {
@@ -724,24 +714,22 @@
           !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         return l.default.needsRefresh()
           ? (s.default.dispatch({ type: "LOAD_USER_AFFINITIES" }),
-            a.default
-              .get({
-                url: i.Endpoints.USER_AFFINITIES,
-                retries: e ? 3 : 0,
-                oldFormErrors: !0,
-              })
-              .then(
-                e => {
-                  let { body: t } = e;
-                  s.default.dispatch({
-                    type: "LOAD_USER_AFFINITIES_SUCCESS",
-                    affinities: t,
-                  });
-                },
-                () => {
-                  s.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
-                }
-              ))
+            a.HTTP.get({
+              url: i.Endpoints.USER_AFFINITIES,
+              retries: e ? 3 : 0,
+              oldFormErrors: !0,
+            }).then(
+              e => {
+                let { body: t } = e;
+                s.default.dispatch({
+                  type: "LOAD_USER_AFFINITIES_SUCCESS",
+                  affinities: t,
+                });
+              },
+              () => {
+                s.default.dispatch({ type: "LOAD_USER_AFFINITIES_FAILURE" });
+              }
+            ))
           : Promise.resolve();
       }
     },
@@ -1709,7 +1697,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "277613",
+                  buildNumber: "277632",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -17353,9 +17341,7 @@
         r = {
           async fetch() {
             try {
-              let e = await a.default.get({
-                url: i.Endpoints.FRIEND_SUGGESTIONS,
-              });
+              let e = await a.HTTP.get({ url: i.Endpoints.FRIEND_SUGGESTIONS });
               s.default.dispatch({
                 type: "LOAD_FRIEND_SUGGESTIONS_SUCCESS",
                 suggestions: e.body,
@@ -17365,12 +17351,12 @@
             }
           },
           ignore(e) {
-            a.default.delete(i.Endpoints.FRIEND_SUGGESTION(e));
+            a.HTTP.del(i.Endpoints.FRIEND_SUGGESTION(e));
           },
           async viewSuggestions(e) {
             if ((0, l.isInFriendSuggestionSeenStateExperiment)())
               try {
-                await a.default.post({
+                await a.HTTP.post({
                   url: i.Endpoints.FRIEND_FINDER_VIEWED_SUGGESTIONS,
                   body: { viewed_user_ids: e },
                   retries: 1,
@@ -24583,7 +24569,7 @@
             userId: i,
           });
           try {
-            n = await s.default.get({
+            n = await s.HTTP.get({
               url: d.Endpoints.ME,
               headers: { authorization: r },
               retries: 3,
@@ -36359,7 +36345,7 @@
         s = n("49111");
       async function l() {
         try {
-          let e = await a.default.get({ url: s.Endpoints.PREMIUM_MARKETING });
+          let e = await a.HTTP.get({ url: s.Endpoints.PREMIUM_MARKETING });
           if (e.ok) return e.body;
           return [];
         } catch (e) {
@@ -37006,7 +36992,7 @@
         o = async () => {
           s.default.dispatch({ type: "USER_PROFILE_EFFECTS_FETCH" });
           try {
-            let { body: e } = await a.default.get(
+            let { body: e } = await a.HTTP.get(
                 i.Endpoints.USER_PROFILE_EFFECTS
               ),
               t = null == e ? void 0 : e.profile_effect_configs,
@@ -38483,53 +38469,51 @@
         return !1;
       }
       function K(e, t, n) {
-        return i.default
-          .get({
-            url: M.Endpoints.APPLICATION_RPC(t),
-            oldFormErrors: !0,
-            retries: 3,
-          })
-          .then(
-            a => {
-              let {
-                body: {
-                  rpc_origins: s,
-                  id: l,
-                  name: i,
-                  icon: r,
-                  cover_image: o,
-                  flags: u,
-                },
-              } = a;
-              if ("string" == typeof n) {
-                if (e.transport === L.TransportTypes.POST_MESSAGE) {
-                  let e = (0, d.default)(t);
-                  if (null == e || !j(n, [e]))
-                    throw new O.default(
-                      { closeCode: M.RPCCloseCodes.INVALID_ORIGIN },
-                      "Invalid Origin"
-                    );
-                } else if (!j(n, s))
+        return i.HTTP.get({
+          url: M.Endpoints.APPLICATION_RPC(t),
+          oldFormErrors: !0,
+          retries: 3,
+        }).then(
+          a => {
+            let {
+              body: {
+                rpc_origins: s,
+                id: l,
+                name: i,
+                icon: r,
+                cover_image: o,
+                flags: u,
+              },
+            } = a;
+            if ("string" == typeof n) {
+              if (e.transport === L.TransportTypes.POST_MESSAGE) {
+                let e = (0, d.default)(t);
+                if (null == e || !j(n, [e]))
                   throw new O.default(
                     { closeCode: M.RPCCloseCodes.INVALID_ORIGIN },
                     "Invalid Origin"
                   );
-              }
-              e.application = {
-                id: l,
-                name: i,
-                icon: r,
-                coverImage: o,
-                flags: u,
-              };
-            },
-            () => {
-              throw new O.default(
-                { closeCode: M.RPCCloseCodes.INVALID_CLIENTID },
-                "Invalid Client ID"
-              );
+              } else if (!j(n, s))
+                throw new O.default(
+                  { closeCode: M.RPCCloseCodes.INVALID_ORIGIN },
+                  "Invalid Origin"
+                );
             }
-          );
+            e.application = {
+              id: l,
+              name: i,
+              icon: r,
+              coverImage: o,
+              flags: u,
+            };
+          },
+          () => {
+            throw new O.default(
+              { closeCode: M.RPCCloseCodes.INVALID_CLIENTID },
+              "Invalid Client ID"
+            );
+          }
+        );
       }
       async function q(e, t) {
         let n = b[e];
@@ -39464,12 +39448,11 @@
           );
         return (
           (e.authorization.authing = !0),
-          i.default
-            .get({
-              url: C.Endpoints.OAUTH2_CURRENT_AUTH,
-              headers: { Authorization: "Bearer ".concat(t) },
-              oldFormErrors: !0,
-            })
+          i.HTTP.get({
+            url: C.Endpoints.OAUTH2_CURRENT_AUTH,
+            headers: { Authorization: "Bearer ".concat(t) },
+            oldFormErrors: !0,
+          })
             .then(
               n => {
                 e.authorization.authing = !1;
@@ -39630,11 +39613,10 @@
                 );
               return (
                 (s.authorization.authing = !0),
-                i.default
-                  .get({
-                    url: C.Endpoints.APPLICATION_RPC(r),
-                    oldFormErrors: !0,
-                  })
+                i.HTTP.get({
+                  url: C.Endpoints.APPLICATION_RPC(r),
+                  oldFormErrors: !0,
+                })
                   .then(
                     n => {
                       let a = n.body;
@@ -39958,21 +39940,19 @@
                   { errorCode: _.RPCErrors.INVALID_COMMAND },
                   "No application."
                 );
-              return a.default
-                .post({
-                  url: _.Endpoints.APPLICATION_TICKET(n),
-                  body: {
-                    test_mode:
-                      r.default.inTestModeForApplication(n) ||
-                      s.default.inDevModeForApplication(n),
-                  },
-                  retries: 3,
-                  oldFormErrors: !0,
-                })
-                .then(e => {
-                  let { body: t } = e;
-                  return t;
-                });
+              return a.HTTP.post({
+                url: _.Endpoints.APPLICATION_TICKET(n),
+                body: {
+                  test_mode:
+                    r.default.inTestModeForApplication(n) ||
+                    s.default.inDevModeForApplication(n),
+                },
+                retries: 3,
+                oldFormErrors: !0,
+              }).then(e => {
+                let { body: t } = e;
+                return t;
+              });
             },
           },
         };
@@ -40975,30 +40955,26 @@
             scope: l.RPC_LOCAL_SCOPE,
             handler: () =>
               Promise.all([
-                a.default
-                  .get({
-                    url:
-                      location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
-                    retries: 3,
-                  })
-                  .then(e => {
-                    let {
-                      body: { address: t },
-                    } = e;
-                    return t;
-                  }),
-                a.default
-                  .post({
-                    url: i.Endpoints.NETWORKING_TOKEN,
-                    retries: 3,
-                    oldFormErrors: !0,
-                  })
-                  .then(e => {
-                    let {
-                      body: { token: t },
-                    } = e;
-                    return t;
-                  }),
+                a.HTTP.get({
+                  url:
+                    location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
+                  retries: 3,
+                }).then(e => {
+                  let {
+                    body: { address: t },
+                  } = e;
+                  return t;
+                }),
+                a.HTTP.post({
+                  url: i.Endpoints.NETWORKING_TOKEN,
+                  retries: 3,
+                  oldFormErrors: !0,
+                }).then(e => {
+                  let {
+                    body: { token: t },
+                  } = e;
+                  return t;
+                }),
               ]).then(e => {
                 let [t, n] = e;
                 return { address: t, token: n };
@@ -41023,13 +40999,11 @@
           [i.RPCCommands.NETWORKING_CREATE_TOKEN]: {
             scope: l.RPC_LOCAL_SCOPE,
             handler: () =>
-              a.default
-                .post({
-                  url: i.Endpoints.NETWORKING_TOKEN,
-                  retries: 1,
-                  oldFormErrors: !0,
-                })
-                .then(e => e.body),
+              a.HTTP.post({
+                url: i.Endpoints.NETWORKING_TOKEN,
+                retries: 1,
+                oldFormErrors: !0,
+              }).then(e => e.body),
           },
         };
     },
@@ -43461,17 +43435,16 @@
                 { errorCode: I.RPCErrors.INVALID_COMMAND },
                 "No application."
               );
-            return s.default
-              .post({
-                url: I.Endpoints.ENTITLEMENT_TICKET(l),
-                body: {
-                  test_mode:
-                    f.default.inTestModeForApplication(l) ||
-                    o.default.inDevModeForApplication(l),
-                },
-                retries: 3,
-                oldFormErrors: !0,
-              })
+            return s.HTTP.post({
+              url: I.Endpoints.ENTITLEMENT_TICKET(l),
+              body: {
+                test_mode:
+                  f.default.inTestModeForApplication(l) ||
+                  o.default.inDevModeForApplication(l),
+              },
+              retries: 3,
+              oldFormErrors: !0,
+            })
               .then(e => {
                 let { body: t } = e;
                 return t;
@@ -48050,15 +48023,13 @@
             types: R,
             captchaKey: O,
             onCaptchaVerify: e => {
-              r.default
-                .post({
-                  url: T.Endpoints.CAPTCHA,
-                  body: { captcha_key: e },
-                  oldFormErrors: !0,
-                })
-                .then(d.popLayer, () => {
-                  v(e => e + 1);
-                });
+              r.HTTP.post({
+                url: T.Endpoints.CAPTCHA,
+                body: { captcha_key: e },
+                oldFormErrors: !0,
+              }).then(d.popLayer, () => {
+                v(e => e + 1);
+              });
             },
             theme: t,
             onClick: e => {
@@ -53046,4 +53017,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3bd8de7e341b0c64f256.js.map
+//# sourceMappingURL=f53e4705e9168731229a.js.map

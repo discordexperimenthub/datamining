@@ -33,7 +33,7 @@
             s.default.dispatch({ type: "POMELO_SUGGESTIONS_RESET" });
             try {
               var n;
-              let a = await i.default.get({
+              let a = await i.HTTP.get({
                 url: g.Endpoints.POMELO_SUGGESTIONS_UNAUTHED,
                 query: null == e ? void 0 : { global_name: e },
                 timeout: t,
@@ -61,7 +61,7 @@
                 type: "POMELO_SUGGESTIONS_FETCH",
                 usernameSuggestionLoading: !0,
               });
-              let n = await i.default.get({
+              let n = await i.HTTP.get({
                 url: g.Endpoints.POMELO_SUGGESTIONS,
                 timeout: e,
               });
@@ -678,8 +678,8 @@
             [r]
           ),
           [c, x] = i.useState(!1),
-          [I, A] = i.useState(r.username),
-          [C, P] = i.useState(r.discriminator),
+          [I, P] = i.useState(r.username),
+          [A, C] = i.useState(r.discriminator),
           [b, y] = i.useState(""),
           [k, G] = i.useState(!1),
           w = (0, g.useStateFromStores)([h.default], () =>
@@ -711,12 +711,12 @@
             null === (e = B.current) || void 0 === e || e.focus();
           }
         }, [n]);
-        let q = C !== r.discriminator;
+        let q = A !== r.discriminator;
         async function V(e) {
           e.preventDefault(), G(!0);
           let t = await (0, E.saveAccountChanges)({
             username: I,
-            discriminator: u ? C : void 0,
+            discriminator: u ? A : void 0,
             password: b,
           });
           G(!1), (null == t ? void 0 : t.ok) && s();
@@ -772,7 +772,7 @@
                               M.default.Messages.USER_SETTINGS_LABEL_USERNAME,
                             value: I,
                             maxLength: R.USERNAME_MAX_LENGTH,
-                            onChange: A,
+                            onChange: P,
                             onFocus: () => W(!0),
                             onBlur: () => W(!1),
                             inputRef: B,
@@ -788,8 +788,8 @@
                                 M.default.Messages
                                   .USER_SETTINGS_LABEL_DISCRIMINATOR,
                               maxLength: 4,
-                              value: C,
-                              onChange: P,
+                              value: A,
+                              onChange: C,
                               onFocus: () => W(!0),
                               onBlur: () => W(!1),
                               inputPrefix: "#",
@@ -867,4 +867,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b10bc4103b00c89cdab0.js.map
+//# sourceMappingURL=6ddb23569f05d99e1c55.js.map

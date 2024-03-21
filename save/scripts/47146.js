@@ -48,7 +48,7 @@
         let a = r.default.getActivityMetadata(e);
         if (null != a) return a;
         if (null == t.session_id) throw Error("null/undefined session_id");
-        let { body: d } = await n.default.get({
+        let { body: d } = await n.HTTP.get({
           url: u.Endpoints.USER_ACTIVITY_METADATA(
             e,
             t.session_id,
@@ -2488,7 +2488,7 @@
       async function o(t) {
         r.default.dispatch({ type: "USER_NOTE_LOAD_START", userId: t });
         try {
-          let { body: e } = await a.default.get({
+          let { body: e } = await a.HTTP.get({
             url: d.Endpoints.NOTE(t),
             oldFormErrors: !0,
           });
@@ -2689,4 +2689,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47146.b567557ab407c311dd12.js.map
+//# sourceMappingURL=47146.98f8f89c914f5ae3d2fa.js.map

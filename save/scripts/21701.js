@@ -13,7 +13,7 @@
         l = n("913144"),
         a = n("49111");
       async function u(e) {
-        let t = await r.default.get({
+        let t = await r.HTTP.get({
           url: a.Endpoints.STORE_EULA(e),
           oldFormErrors: !0,
         });
@@ -356,4 +356,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e63332475577e237da16.js.map
+//# sourceMappingURL=8e85ef9efaab5be1b361.js.map

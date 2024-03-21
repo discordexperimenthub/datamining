@@ -232,10 +232,10 @@
             return r;
           },
           useTrackModerationAction: function () {
-            return h;
+            return T;
           },
           trackMembersPageViewed: function () {
-            return T;
+            return h;
           },
         });
       var i,
@@ -306,7 +306,7 @@
         );
         return n;
       }
-      function h(e, n) {
+      function T(e, n) {
         let { location: t, targetUserId: i, targets: l, locations: u } = n,
           r = a.useCallback(
             n => {
@@ -325,7 +325,7 @@
           );
         return r;
       }
-      function T(e, n) {
+      function h(e, n) {
         E(f.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
           guild_id: e,
           location: n,
@@ -345,10 +345,10 @@
       t.r(n),
         t.d(n, {
           fetchGuildHomeSettings: function () {
-            return h;
+            return T;
           },
           fetchNewMemberActions: function () {
-            return T;
+            return h;
           },
           selectHomeResourceChannel: function () {
             return C;
@@ -379,13 +379,13 @@
         _ = t("675305"),
         m = t("290886"),
         M = t("49111");
-      let h = async e => {
+      let T = async e => {
           l.default.dispatch({
             type: "GUILD_HOME_SETTINGS_FETCH_START",
             guildId: e,
           });
           try {
-            let n = await i.default.get({
+            let n = await i.HTTP.get({
                 url: M.Endpoints.GUILD_HOME_SETTINGS(e),
                 oldFormErrors: !0,
               }),
@@ -405,14 +405,14 @@
             });
           }
         },
-        T = async e => {
+        h = async e => {
           if (!a.default.isFullServerPreview(e)) {
             l.default.dispatch({
               type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
               guildId: e,
             });
             try {
-              let n = await i.default.get({
+              let n = await i.HTTP.get({
                   url: M.Endpoints.GUILD_MEMBER_ACTIONS(e),
                   oldFormErrors: !0,
                 }),
@@ -518,7 +518,7 @@
               ),
             });
           }
-          i.default.post({ url: M.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, n) });
+          i.HTTP.post({ url: M.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, n) });
         };
       async function v(e, n) {
         if (null == e) return !1;
@@ -526,7 +526,7 @@
         if (!t) return !1;
         let i = f.default.getSettings(e);
         return (
-          i === f.NO_SETTINGS && (await h(e), (i = f.default.getSettings(e))),
+          i === f.NO_SETTINGS && (await T(e), (i = f.default.getSettings(e))),
           i !== f.NO_SETTINGS &&
             null != i &&
             (null != i.newMemberActions &&
@@ -567,13 +567,13 @@
             return M;
           },
           RESOURCE_CHANNEL_MAX: function () {
-            return h;
+            return T;
           },
           NewMemberActionTypes: function () {
             return l;
           },
           newMemberActionFromServer: function () {
-            return T;
+            return h;
           },
           resourceChannelFromServer: function () {
             return C;
@@ -617,8 +617,8 @@
         _ = 1,
         m = 30,
         M = 200,
-        h = 7;
-      function T(e) {
+        T = 7;
+      function h(e) {
         var n;
         return {
           channelId: e.channel_id,
@@ -666,7 +666,7 @@
             .filter(e =>
               (0, r.isNotNullish)(u.default.getChannel(e.channel_id))
             )
-            .map(T),
+            .map(h),
           d = i
             .filter(e =>
               (0, r.isNotNullish)(u.default.getChannel(e.channel_id))
@@ -876,7 +876,7 @@
             return E;
           },
           messageHasExpiredAttachmentUrl: function () {
-            return T;
+            return h;
           },
           maybeRefreshAttachmentUrl: function () {
             return A;
@@ -925,7 +925,7 @@
         let n = r.default.toURLSafe(e.url);
         return !!(null != n && f(n)) && _(n);
       }
-      function h(e) {
+      function T(e) {
         var n;
         return (
           M(e.image) ||
@@ -933,11 +933,11 @@
           M(e.video)
         );
       }
-      function T(e) {
-        return e.attachments.some(m) || e.embeds.some(h);
+      function h(e) {
+        return e.attachments.some(m) || e.embeds.some(T);
       }
       async function C(e) {
-        let n = await l.default.post({
+        let n = await l.HTTP.post({
           url: o.Endpoints.ATTACHMENTS_REFRESH_URLS,
           body: { attachment_urls: [e] },
         });
@@ -1026,12 +1026,12 @@
             () => a.default.getGuild(n),
             [n]
           ),
-          h = (0, l.useStateFromStores)(
+          T = (0, l.useStateFromStores)(
             [c.default],
             () => c.default.getPermissionsForUser(e.id, t),
             [t, e.id]
           ),
-          T =
+          h =
             (null === (_ = d.default.getCurrentUser()) || void 0 === _
               ? void 0
               : _.id) === e.id,
@@ -1044,14 +1044,14 @@
               }),
             [t]
           );
-        return null != m && null != M && (C || T) && h.speaker
+        return null != m && null != M && (C || h) && T.speaker
           ? (0, i.jsx)(u.MenuItem, {
               id: "audience",
-              label: T
+              label: h
                 ? E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE
                 : E.default.Messages.STAGE_CHANNEL_USER_MOVE_TO_AUDIENCE_OTHER,
               action: () => {
-                T
+                h
                   ? (0, s.moveSelfToAudience)(m)
                   : (0, s.moveUserToAudience)(e, m);
               },
@@ -1082,8 +1082,8 @@
         _ = t("861370"),
         m = t("230947"),
         M = t("726750"),
-        h = t("85166"),
-        T = t("170990"),
+        T = t("85166"),
+        h = t("170990"),
         C = t("304582"),
         A = t("72057"),
         S = t("300925"),
@@ -1100,8 +1100,8 @@
         b = t("97508"),
         G = t("816106"),
         D = t("623879"),
-        F = t("49111"),
-        H = t("782340"),
+        H = t("49111"),
+        F = t("782340"),
         w = (0, a.default)(
           (0, r.default)(
             function (e) {
@@ -1119,9 +1119,9 @@
                   onHeightUpdate: V,
                 } = e,
                 B = {
-                  page: F.AnalyticsPages.GUILD_CHANNEL,
-                  section: F.AnalyticsSections.CHAT_USERNAME,
-                  object: F.AnalyticsObjects.CONTEXT_MENU_ITEM,
+                  page: H.AnalyticsPages.GUILD_CHANNEL,
+                  section: H.AnalyticsSections.CHAT_USERNAME,
+                  object: H.AnalyticsObjects.CONTEXT_MENU_ITEM,
                 },
                 W = (0, O.default)(n.id, t, r.id),
                 X = (0, y.default)(n, t, x),
@@ -1140,20 +1140,20 @@
                 }),
                 ee = (0, I.default)(n, t),
                 en = (0, d.default)(null, n),
-                et = (0, T.default)(n),
+                et = (0, h.default)(n),
                 ei = (0, N.default)(n),
                 el = (0, S.default)(n, t, r.id),
                 eu = (0, b.default)(n.id, t),
                 er = (0, L.default)(n, t),
                 ea = (0, _.default)({
                   id: n.id,
-                  label: H.default.Messages.COPY_ID_USER,
+                  label: F.default.Messages.COPY_ID_USER,
                 }),
                 eo = (0, g.default)(n.id, r.id),
                 ed = (0, f.default)(n.id),
                 es = (0, c.default)(r.id),
                 ec = (0, M.default)(n),
-                ef = (0, h.default)(n, t, r.id),
+                ef = (0, T.default)(n, t, r.id),
                 eE = (0, v.default)({
                   commandType: o.ApplicationCommandType.USER,
                   commandTargetId: n.id,
@@ -1167,7 +1167,7 @@
               return (0, i.jsxs)(l.Menu, {
                 navId: "user-context",
                 onClose: u.closeContextMenu,
-                "aria-label": H.default.Messages.USER_ACTIONS_MENU_LABEL,
+                "aria-label": F.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: k,
                 children: [
                   !em &&
@@ -1200,7 +1200,7 @@
                 ],
               });
             },
-            { object: F.AnalyticsObjects.CONTEXT_MENU }
+            { object: H.AnalyticsObjects.CONTEXT_MENU }
           ),
           [s.default.CONTEXT_MENU, s.default.GUILD_CHANNEL_USER_MENU]
         );
@@ -1266,4 +1266,4 @@
     },
   },
 ]);
-//# sourceMappingURL=718dda62aa1c66834728.js.map
+//# sourceMappingURL=8709dbafef5f25ab5345.js.map

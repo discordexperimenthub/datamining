@@ -328,11 +328,12 @@
         (i.GIFT_CODE_MODAL = "gift code modal"),
         (i.APP_STOREFRONT = "app storefront"),
         (i.SHOP_PRODUCT_DETAILS = "shop product details"),
-        (i.PACKAGES = "packages");
+        (i.PACKAGES = "packages"),
+        (i.MESSAGE_ATTACHMENT = "message attachment");
       var i,
         I,
         T = I;
     },
   },
 ]);
-//# sourceMappingURL=14875.53367468d3f465315e61.js.map
+//# sourceMappingURL=14875.0ffbbf293ae985e2e0b0.js.map

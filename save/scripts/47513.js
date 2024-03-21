@@ -11919,6 +11919,9 @@
           "Free Trial ({days, plural, =1 {# day left} other {# days left}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Free Trial",
         POWERED_BY_NITRO: "Powered by Nitro",
+        PREMIUM_ATTACHMENT_HOVER_NON_SUBSCRIBER:
+          "Unlock 500MB uploads with Nitro",
+        PREMIUM_ATTACHMENT_HOVER_SUBSCRIBER: "500MB uploads unlocked!",
         USER_ACTIVITY_HEADER_PLAYING: "Playing a game",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live on !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Playing on !!{platform}!!",
@@ -26443,8 +26446,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277415", ", Version Hash: ")
-          .concat("f711304275ccd3f4eb0a72dc52883e82978023c0")
+          .concat("277430", ", Version Hash: ")
+          .concat("757d0968826448bfc4fc21fc1f5fd000aafc922a")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29569,12 +29572,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277415"), "277415"));
+        let _ = parseInt(((e = "277430"), "277430"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277415"
+                "277430"
               )
             ),
             (_ = 0)),
@@ -52797,4 +52800,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.70a93bc1b1bc36c88bef.js.map
+//# sourceMappingURL=47513.8e577a3ba20cfdacdcf7.js.map

@@ -2335,66 +2335,73 @@
         u = i("981601"),
         c = i("42203"),
         d = i("441823");
-      function h(e, t, i) {
-        var h, m;
-        let f = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          p = arguments.length > 4 ? arguments[4] : void 0,
-          { AnalyticsLocationProvider: T } = (0, s.default)(o.default.USERNAME);
-        let R =
-          ((h = e),
-          (m = t),
+      function h(e) {
+        var t, i;
+        let {
+            user: h,
+            channelId: m,
+            guildId: f,
+            messageId: p,
+            stopPropagation: T = !1,
+            ariaLabel: R,
+          } = e,
+          { AnalyticsLocationProvider: g } = (0, s.default)(o.default.USERNAME);
+        let E =
+          ((t = h),
+          (i = m),
           a.useCallback(
             e => {
-              let t = c.default.getChannel(m);
-              null != t && null != h && (0, d.openUserContextMenu)(e, h, t);
+              let n = c.default.getChannel(i);
+              null != n && null != t && (0, d.openUserContextMenu)(e, t, n);
             },
-            [h, m]
+            [t, i]
           ));
         return a.useCallback(
-          o => (s, c) => {
-            let d = (e, t) =>
+          e => (t, i) => {
+            let o = (i, n) =>
                 (0, a.createElement)(l.NameWithRoleAnchor, {
-                  ...(null != e ? e : {}),
-                  key: t,
-                  onContextMenu: R,
-                  name: s,
-                  color: null == o ? void 0 : o.colorString,
-                  roleName: null == o ? void 0 : o.colorRoleName,
-                  "aria-label": p,
+                  ...(null != i ? i : {}),
+                  key: n,
+                  onContextMenu: E,
+                  name: t,
+                  color: null == e ? void 0 : e.colorString,
+                  roleName: null == e ? void 0 : e.colorRoleName,
+                  "aria-label": R,
                 }),
-              h = e => t => {
-                f && t.stopPropagation(), e(t);
+              s = e => t => {
+                T && t.stopPropagation(), e(t);
               };
-            return (0, n.jsx)(T, {
+            return (0, n.jsx)(g, {
               children:
-                null != e
+                null != h
                   ? (0, n.jsx)(
                       l.Popout,
                       {
                         position: "right",
                         preload: () =>
-                          (0, r.default)(e.id, e.getAvatarURL(i, 80), {
-                            guildId: i,
-                            channelId: t,
+                          (0, r.default)(h.id, h.getAvatarURL(f, 80), {
+                            guildId: f,
+                            channelId: m,
                           }),
-                        renderPopout: a =>
+                        renderPopout: e =>
                           (0, n.jsx)(u.default, {
-                            ...a,
-                            userId: e.id,
-                            guildId: i,
-                            channelId: t,
+                            ...e,
+                            userId: h.id,
+                            guildId: f,
+                            channelId: m,
+                            messageId: p,
                           }),
                         children: e => {
                           let { onClick: t, ...i } = e;
-                          return d({ onClick: h(t), ...i });
+                          return o({ onClick: s(t), ...i });
                         },
                       },
-                      c
+                      i
                     )
-                  : d(void 0, c),
+                  : o(void 0, i),
             });
           },
-          [e, t, i, R, f, p, T]
+          [h, m, f, p, E, T, R, g]
         );
       }
     },
@@ -2715,4 +2722,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b1080af4c2278f715d1c.js.map
+//# sourceMappingURL=debc104a975509573ab4.js.map

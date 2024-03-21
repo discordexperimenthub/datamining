@@ -50,16 +50,16 @@
         l = s("414456"),
         i = s.n(l),
         r = s("917351"),
-        u = s.n(r),
-        o = s("866227"),
-        d = s.n(o),
+        o = s.n(r),
+        u = s("866227"),
+        d = s.n(u),
         c = s("458960"),
         h = s("509043"),
         f = s("446674"),
         m = s("669491"),
         g = s("77078"),
-        S = s("642995"),
-        p = s("656723"),
+        p = s("642995"),
+        S = s("656723"),
         v = s("299285"),
         x = s("384997"),
         C = s("943551"),
@@ -74,8 +74,8 @@
         j = s("191542"),
         O = s("697218"),
         w = s("471671"),
-        y = s("32238"),
-        L = s("599110"),
+        L = s("32238"),
+        y = s("599110"),
         R = s("659500"),
         b = s("718517"),
         P = s("449008"),
@@ -99,7 +99,7 @@
           let e = this.props.activity.application_id;
           null != e &&
             -1 === B.indexOf(e) &&
-            (L.default.track(U.AnalyticEvents.SHOW_TUTORIAL, {
+            (y.default.track(U.AnalyticEvents.SHOW_TUTORIAL, {
               tutorial: "activity-invite-nux-inline",
               application_id: e,
             }),
@@ -136,7 +136,7 @@
               let { activity: e } = this.props;
               null != e &&
                 null != e.application_id &&
-                S.default.dismissForApplicationId(e.application_id);
+                p.default.dismissForApplicationId(e.application_id);
             });
         }
       }
@@ -182,12 +182,12 @@
               showInviteEducation: a,
               isFocused: l,
               typingUsers: r,
-              className: o,
+              className: u,
               slowmodeCooldownGuess: h,
               isBypassSlowmode: f,
               channel: m,
-              isThreadCreation: S,
-              renderDots: p,
+              isThreadCreation: p,
+              renderDots: S,
               poggermodeEnabled: v,
               isComboing: x,
             } = this.props,
@@ -195,9 +195,9 @@
             N = O.default.getCurrentUser(),
             E = I.default.getGuild(t),
             _ = C > 0,
-            M = S
+            M = p
               ? []
-              : u(r)
+              : o(r)
                   .keys()
                   .filter(e => e !== (null == N ? void 0 : N.id))
                   .reject(e => A.default.isBlocked(e))
@@ -214,7 +214,7 @@
             w = "";
           if (_) {
             if (
-              ((j = (0, n.jsx)(y.default, {
+              ((j = (0, n.jsx)(L.default, {
                 className: k.slowModeIcon,
                 width: 16,
                 height: 16,
@@ -258,18 +258,18 @@
                   ? H.default.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE
                   : H.default.Messages.CHANNEL_SLOWMODE_DESC_SHORT);
           }
-          let [L, R, U] = M;
+          let [y, R, U] = M;
           return (
             (e =
               0 === M.length
                 ? ""
                 : 1 === M.length
-                  ? H.default.Messages.ONE_USER_TYPING.format({ a: L })
+                  ? H.default.Messages.ONE_USER_TYPING.format({ a: y })
                   : 2 === M.length
-                    ? H.default.Messages.TWO_USERS_TYPING.format({ a: L, b: R })
+                    ? H.default.Messages.TWO_USERS_TYPING.format({ a: y, b: R })
                     : 3 === M.length
                       ? H.default.Messages.THREE_USERS_TYPING.format({
-                          a: L,
+                          a: y,
                           b: R,
                           c: U,
                         })
@@ -278,14 +278,14 @@
               className: i(
                 k.typing,
                 { "stop-animation": !l, [k.isComboing]: v && x },
-                o
+                u
               ),
               children: [
                 (0, n.jsxs)("div", {
                   className: k.typingDots,
                   children: [
                     M.length > 0 &&
-                      !1 !== p &&
+                      !1 !== S &&
                       (0, n.jsx)(g.Dots, {
                         className: k.ellipsis,
                         dotRadius: 3.5,
@@ -347,15 +347,15 @@
             C.default.getUserCombo(E.default.getId(), t.id)
           ),
           r = (0, f.useStateFromStores)([N.default, v.default], () =>
-            (0, p.default)(t, l, N.default, v.default)
+            (0, S.default)(t, l, N.default, v.default)
           ),
-          u = (0, f.useStateFromStores)([F.default], () =>
+          o = (0, f.useStateFromStores)([F.default], () =>
             F.default.getSlowmodeCooldownGuess(
               t.id,
               s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage
             )
           ),
-          o = (0, f.useStateFromStores)([_.default], () =>
+          u = (0, f.useStateFromStores)([_.default], () =>
             s
               ? _.default.can(U.Permissions.MANAGE_THREADS, t)
               : _.default.can(U.Permissions.MANAGE_CHANNELS, t) ||
@@ -378,9 +378,9 @@
               w.default.isFocused()
             ),
             guildId: t.guild_id,
-            slowmodeCooldownGuess: u,
+            slowmodeCooldownGuess: o,
             isComboing: null != i,
-            isBypassSlowmode: o,
+            isBypassSlowmode: u,
             channel: t,
             isThreadCreation: s,
           };
@@ -443,10 +443,10 @@
         "will",
         "with",
       ]);
-      function u(e) {
+      function o(e) {
         return e.replace(/('|\u2019|\uFF07)(s|S)$/, "");
       }
-      function o(e) {
+      function u(e) {
         return e.toLowerCase();
       }
       function d(e) {
@@ -457,7 +457,7 @@
       }
       function h(e) {
         let t = new Set(
-          a(e.split(/\W+/)).map(u).reject(c).map(o).reject(d).map(i).value()
+          a(e.split(/\W+/)).map(o).reject(c).map(u).reject(d).map(i).value()
         );
         return e =>
           (function e(t, s) {
@@ -468,7 +468,7 @@
               t.content.split(/(\W+)/g).forEach(t => {
                 var a, l;
                 if (
-                  ((a = t), (l = s), !c((a = o(u(a)))) && !d(a) && l.has(i(a)))
+                  ((a = t), (l = s), !c((a = u(o(a)))) && !d(a) && l.has(i(a)))
                 )
                   n.length > 0 && e.push({ type: "text", content: n }),
                     e.push({ type: "highlight", content: t }),
@@ -506,10 +506,10 @@
           null == r
         )
           return !1;
-        let u = i.getApplication(r);
+        let o = i.getApplication(r);
         return (
           !(
-            null == u || (0, n.hasFlag)(u.flags, l.ApplicationFlags.EMBEDDED)
+            null == o || (0, n.hasFlag)(o.flags, l.ApplicationFlags.EMBEDDED)
           ) && s.shouldShowEducation(r)
         );
       }
@@ -522,7 +522,7 @@
             return g;
           },
           useForumChannelStoreApi: function () {
-            return S;
+            return p;
           },
         }),
         s("222007");
@@ -531,8 +531,8 @@
         l = s("308503"),
         i = s("482402"),
         r = s("335710"),
-        u = s("446674"),
-        o = s("42203"),
+        o = s("446674"),
+        u = s("42203"),
         d = s("446480");
       let c = new Set(),
         h = {
@@ -557,7 +557,7 @@
               let { channelStates: t } = this.get(),
                 s = t[e];
               if (null == s) {
-                let t = o.default.getChannel(e);
+                let t = u.default.getChannel(e);
                 a(
                   null != t,
                   "[Forum Channel Store] The channel should not be missing."
@@ -596,12 +596,12 @@
       let m = (0, l.default)((e, t) => new f(e, t)),
         g = e => {
           let t = m(),
-            s = (0, u.useStateFromStores)([o.default], () =>
-              o.default.getChannel(e)
+            s = (0, o.useStateFromStores)([u.default], () =>
+              u.default.getChannel(e)
             );
           return null == s ? h : t.getChannelState(e);
         },
-        S = () => m;
+        p = () => m;
     },
     512630: function (e, t, s) {
       "use strict";
@@ -618,20 +618,20 @@
         l = s.n(a),
         i = s("506838"),
         r = s("681187"),
-        u = s("605160"),
-        o = s("265363"),
+        o = s("605160"),
+        u = s("265363"),
         d = s("902558"),
         c = e => {
           let { obscureReason: t, iconClassname: s } = e;
           return (0, i.match)(t)
-            .with(u.ObscureReason.EXPLICIT_CONTENT, () =>
+            .with(o.ObscureReason.EXPLICIT_CONTENT, () =>
               (0, n.jsx)(r.ImageWarningIcon, {
                 className: l(s, d.obscuredIcon),
                 color: "white",
               })
             )
-            .with(u.ObscureReason.SPOILER, () =>
-              (0, n.jsx)(o.default, { className: s })
+            .with(o.ObscureReason.SPOILER, () =>
+              (0, n.jsx)(u.default, { className: s })
             )
             .otherwise(() => null);
         };
@@ -671,16 +671,16 @@
         l = s("414456"),
         i = s.n(l),
         r = s("627445"),
-        u = s.n(r),
-        o = s("866227"),
-        d = s.n(o),
+        o = s.n(r),
+        u = s("866227"),
+        d = s.n(u),
         c = s("974667"),
         h = s("446674"),
         f = s("669491"),
         m = s("77078"),
         g = s("125667"),
-        S = s("731898"),
-        p = s("419135"),
+        p = s("731898"),
+        S = s("419135"),
         v = s("651693"),
         x = s("605160"),
         C = s("875978"),
@@ -695,8 +695,8 @@
         j = s("957255"),
         O = s("27618"),
         w = s("471671"),
-        y = s("738107"),
-        L = s("594098"),
+        L = s("738107"),
+        y = s("594098"),
         R = s("505684"),
         b = s("109264"),
         P = s("93427"),
@@ -728,13 +728,13 @@
             goToThread: s,
             observePostVisibilityAnalytics: l,
             overrideMedia: r,
-            className: o,
+            className: u,
             containerWidth: d,
           } = e,
           {
             channel: f,
             isOpen: g,
-            messageCount: p,
+            messageCount: S,
             firstMessage: v,
             content: x,
             media: C,
@@ -743,7 +743,7 @@
               n = (0, h.useStateFromStores)([F.default], () =>
                 F.default.getChannel(t)
               );
-            u(
+            o(
               null != n,
               "the thread should not be null here, a store must have missed an update"
             );
@@ -754,17 +754,17 @@
               { firstMessage: l } = (0, z.useFirstForumPostMessage)(n),
               { content: i, firstMedia: r } = (0,
               B.useForumPostFirstMessageMarkup)({ firstMessage: l }),
-              { messageCountText: o } = (0, B.useMessageCount)(n);
+              { messageCountText: u } = (0, B.useMessageCount)(n);
             return {
               channel: n,
               isOpen: a,
-              messageCount: o,
+              messageCount: u,
               firstMessage: l,
               content: i,
               media: null != s ? s : r,
             };
           })({ threadId: t, overrideMedia: r }),
-          { ref: T, height: N } = (0, S.default)(),
+          { ref: T, height: N } = (0, p.default)(),
           E = (0, Y.useForumPostComposerStore)(e => e.setCardHeight);
         a.useEffect(() => {
           null != N && E(t, N);
@@ -779,13 +779,13 @@
             channel: f,
           }),
           { role: j, onFocus: O, ...w } = (0, c.useListItem)(t),
-          { isFocused: y, handleFocus: L, handleBlur: R } = (0, K.default)(O);
+          { isFocused: L, handleFocus: y, handleBlur: R } = (0, K.default)(O);
         return (0, n.jsxs)("div", {
           ref: T,
           "data-item-id": t,
           onClick: _,
           onContextMenu: A,
-          className: i(et.container, o, { [et.isOpen]: g }),
+          className: i(et.container, u, { [et.isOpen]: g }),
           children: [
             (0, n.jsx)(m.Clickable, {
               onClick: _,
@@ -793,10 +793,10 @@
               onContextMenu: A,
               "aria-label": ee.default.Messages.FORUM_POST_ARIA_LABEL.format({
                 title: f.name,
-                count: p,
+                count: S,
               }),
               className: et.focusTarget,
-              onFocus: L,
+              onFocus: y,
               onBlur: R,
               ...w,
             }),
@@ -813,8 +813,8 @@
                   }),
                 }),
                 (0, n.jsx)(m.FocusBlock, {
-                  enabled: !y,
-                  children: (0, n.jsx)(eo, {
+                  enabled: !L,
+                  children: (0, n.jsx)(eu, {
                     channel: f,
                     firstMessage: v,
                     facepileRef: I,
@@ -836,10 +836,10 @@
             hasMediaAttachment: l,
             containerWidth: r,
           } = e,
-          { isNew: u, hasUnreads: o } = (0, B.useForumPostReadStates)(t),
+          { isNew: o, hasUnreads: u } = (0, B.useForumPostReadStates)(t),
           d = er(t),
           { postTitleRef: c, isNewBadgeOverflow: h } = (0,
-          X.useNewBadgeOverflowAware)(u, 24, r);
+          X.useNewBadgeOverflowAware)(o, 24, r);
         return (0, n.jsxs)("div", {
           className: et.body,
           children: [
@@ -851,14 +851,14 @@
                 children: [
                   (0, n.jsx)(m.Heading, {
                     variant: "heading-lg/semibold",
-                    color: o ? "header-primary" : "text-muted",
+                    color: u ? "header-primary" : "text-muted",
                     lineClamp: 2,
                     className: et.postTitleText,
                     children: (0, n.jsxs)("span", {
                       ref: c,
                       children: [
                         d,
-                        u &&
+                        o &&
                           (0, n.jsx)("span", {
                             className: et.newBadgeWrapper,
                             children: (0, n.jsx)(D.TextBadge, {
@@ -870,7 +870,7 @@
                       ],
                     }),
                   }),
-                  u &&
+                  o &&
                     h &&
                     (0, n.jsx)(D.TextBadge, {
                       className: et.newBadge,
@@ -882,12 +882,12 @@
             }),
             (0, n.jsx)("div", {
               className: et.message,
-              children: (0, n.jsx)(eu, {
+              children: (0, n.jsx)(eo, {
                 channel: t,
                 message: s,
                 content: a,
                 hasMediaAttachment: l,
-                hasUnreads: o,
+                hasUnreads: u,
               }),
             }),
           ],
@@ -901,7 +901,7 @@
             W.default.getSearchQuery(e.parent_id)
           ),
           n = a.useMemo(
-            () => (0, p.createASTHighlighter)(t && null != s ? s : ""),
+            () => (0, S.createASTHighlighter)(t && null != s ? s : ""),
             [t, s]
           ),
           l = a.useMemo(
@@ -914,7 +914,7 @@
           );
         return l;
       }
-      let eu = a.memo(function (e) {
+      let eo = a.memo(function (e) {
         let {
             message: t,
             channel: s,
@@ -922,11 +922,11 @@
             hasMediaAttachment: l,
             hasUnreads: r,
           } = e,
-          u = (0, h.useStateFromStores)(
+          o = (0, h.useStateFromStores)(
             [O.default],
             () => null != t && O.default.isBlocked(t.author.id)
           ),
-          o = (0, h.useStateFromStores)([G.default], () =>
+          u = (0, h.useStateFromStores)([G.default], () =>
             G.default.isLoading(s.id)
           ),
           d = (0, h.useStateFromStores)([j.default], () =>
@@ -934,7 +934,7 @@
           ),
           c = A.RenderSpoilers.useSetting(),
           f = null;
-        if (u)
+        if (o)
           f = (0, n.jsx)(m.Text, {
             className: et.blockedMessage,
             variant: "text-sm/medium",
@@ -948,7 +948,7 @@
               : (0, P.renderSingleLineMessage)(
                   t,
                   a,
-                  u,
+                  o,
                   i(et.messageContent, es.inlineFormat, es.smallFontSize),
                   {
                     iconClass: et.messageContentIcon,
@@ -971,7 +971,7 @@
                     className: et.messageContent,
                     children:
                       null == t
-                        ? o
+                        ? u
                           ? null
                           : ee.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
                         : e,
@@ -980,7 +980,7 @@
         return (0, n.jsxs)(R.ObscuredDisplayContext.Provider, {
           value: (0, T.default)(c, d),
           children: [
-            !u &&
+            !o &&
               (0, n.jsx)(Z.default, {
                 channel: s,
                 message: t,
@@ -994,7 +994,7 @@
           ],
         });
       });
-      function eo(e) {
+      function eu(e) {
         let { channel: t, facepileRef: s, firstMessage: a } = e,
           l = (0, B.useTypingUserIds)(t),
           i =
@@ -1043,7 +1043,7 @@
               children: (0, n.jsx)(b.default, { width: s, height: s }),
             }),
             "number" == typeof l
-              ? (0, n.jsx)(y.default, {
+              ? (0, n.jsx)(L.default, {
                   value: l,
                   digitWidth: 9,
                   className: et.messageCountText,
@@ -1078,7 +1078,7 @@
           {
             disableReactionCreates: i,
             isLurking: r,
-            isPendingMember: u,
+            isPendingMember: o,
           } = (0, E.default)(s);
         return null == l || i
           ? null
@@ -1088,7 +1088,7 @@
               readOnly: s.isArchivedLockedThread(),
               useChatFontScaling: !1,
               isLurking: r,
-              isPendingMember: u,
+              isPendingMember: o,
               emoji: l,
               hideCount: !0,
               count: 0,
@@ -1106,7 +1106,7 @@
           {
             disableReactionUpdates: i,
             isLurking: r,
-            isPendingMember: u,
+            isPendingMember: o,
           } = (0, E.default)(a);
         return null == l
           ? null
@@ -1117,7 +1117,7 @@
                 message: s,
                 readOnly: i || a.isArchivedLockedThread(),
                 isLurking: r,
-                isPendingMember: u,
+                isPendingMember: o,
                 useChatFontScaling: !1,
                 type:
                   l.burst_count >= l.count
@@ -1183,13 +1183,13 @@
           r = (0, h.useStateFromStores)([w.default], () =>
             w.default.isFocused()
           ),
-          u = (0, v.isAnimatedImageUrl)(l.src),
-          o = A.GifAutoPlay.useSetting(),
+          o = (0, v.isAnimatedImageUrl)(l.src),
+          u = A.GifAutoPlay.useSetting(),
           [d, c] = (0, x.useShouldObscure)({ media: l, channel: a }),
           f = (0, x.getObscuredAlt)(c),
-          { src: g, width: S, height: p, alt: C } = l;
+          { src: g, width: p, height: S, alt: C } = l;
         return (
-          p > S ? (s = ea) : (t = en),
+          S > p ? (s = ea) : (t = en),
           (0, n.jsx)(m.FocusBlock, {
             enabled: !0,
             children: (0, n.jsxs)("div", {
@@ -1197,12 +1197,12 @@
               onClick: e => e.stopPropagation(),
               children: [
                 g.startsWith("data:")
-                  ? (0, n.jsx)(L.default, {
+                  ? (0, n.jsx)(y.default, {
                       src: g,
                       maxHeight: t,
                       maxWidth: s,
-                      width: S,
-                      height: p,
+                      width: p,
+                      height: S,
                       alt: null != C && d ? f : C,
                       className: et.thumbnailContainer,
                       imageClassName: i({
@@ -1214,11 +1214,11 @@
                       src: g,
                       maxHeight: t,
                       maxWidth: s,
-                      width: S,
-                      height: p,
+                      width: p,
+                      height: S,
                       alt: null != C && d ? f : C,
-                      autoPlay: o,
-                      animated: u && !d && r,
+                      autoPlay: u,
+                      animated: o && !d && r,
                       containerClassName: et.thumbnailContainer,
                       imageClassName: i({ [et.obscured]: d }),
                     }),
@@ -1256,8 +1256,8 @@
         l = s("295426"),
         i = s("149022"),
         r = s("42203"),
-        u = s("474643"),
-        o = s("404607"),
+        o = s("474643"),
+        u = s("404607"),
         d = s("867965");
       class c {
         constructor(e, t, s) {
@@ -1322,7 +1322,7 @@
             }),
             (this.setFormOpen = e => {
               this.set({ formOpen: e }),
-                o.default.clearForumSearch(this.channelId);
+                u.default.clearForumSearch(this.channelId);
             }),
             (this.setOnboardingExpanded = e => {
               this.set({ onboardingExpanded: e });
@@ -1342,7 +1342,7 @@
                 l.default.saveDraft(
                   this.channelId,
                   e.textValue,
-                  u.DraftType.FirstThreadMessage
+                  o.DraftType.FirstThreadMessage
                 );
             }),
             (this.setHasClickedForm = e => {
@@ -1358,7 +1358,7 @@
                 appliedTags: new Set(),
                 hasClickedForm: !1,
               }),
-                o.default.clearForumSearch(this.channelId);
+                u.default.clearForumSearch(this.channelId);
             }),
             (this.setFormOpenFromUserAction = () => {
               if (this.hasClickedForm) return;
@@ -1369,22 +1369,22 @@
                   channelId: this.channelId,
                 }),
                 this.set({ hasClickedForm: !0, formOpen: !0 }),
-                o.default.clearForumSearch(this.channelId);
+                u.default.clearForumSearch(this.channelId);
             });
           let h = r.default.getChannel(e);
           if (null == h) return;
           let f =
-              null !== (n = u.default.getThreadSettings(h.id)) && void 0 !== n
+              null !== (n = o.default.getThreadSettings(h.id)) && void 0 !== n
                 ? n
                 : {},
             m = null == h.template ? "" : h.template.trim(),
-            g = u.default.getDraft(h.id, u.DraftType.FirstThreadMessage),
-            S = (0, i.createState)(null != g && "" !== g.trim() ? g : m);
+            g = o.default.getDraft(h.id, o.DraftType.FirstThreadMessage),
+            p = (0, i.createState)(null != g && "" !== g.trim() ? g : m);
           (this.name = null !== (a = f.name) && void 0 !== a ? a : ""),
             (c = new Set(f.appliedTags)),
             (this.appliedTags = void 0 !== c ? c : new Set()),
             (this.formOpen = this.name.length > 0),
-            (this.textAreaState = S);
+            (this.textAreaState = p);
         }
       }
       let { Provider: h, useStore: f, useStoreApi: m } = (0, a.default)();
@@ -1406,14 +1406,14 @@
         l = s.n(a),
         i = s("77078"),
         r = s("232259"),
-        u = s("680986"),
-        o = s("782340"),
+        o = s("680986"),
+        u = s("782340"),
         d = s("159177"),
         c = e => {
           var t, s;
           let { message: a, channel: c, renderColon: h, hasUnreads: f } = e,
-            { user: m, author: g } = (0, u.useForumPostAuthor)(c),
-            S =
+            { user: m, author: g } = (0, o.useForumPostAuthor)(c),
+            p =
               null !==
                 (s =
                   null !== (t = null == g ? void 0 : g.nick) && void 0 !== t
@@ -1423,23 +1423,24 @@
                       : m.username) && void 0 !== s
                 ? s
                 : "",
-            p = (0, r.useUsernameHook)(
-              null == a ? void 0 : a.author,
-              c.id,
-              c.guild_id,
-              !0,
-              o.default.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format({
-                name: S,
-              })
-            )(null != g ? g : void 0)(
-              (0, n.jsx)(n.Fragment, { children: S }),
+            S = (0, r.useUsernameHook)({
+              user: null == a ? void 0 : a.author,
+              channelId: c.id,
+              guildId: c.guild_id,
+              messageId: null == a ? void 0 : a.id,
+              stopPropagation: !0,
+              ariaLabel: u.default.Messages.FORUM_POST_AUTHOR_A11Y_LABEL.format(
+                { name: p }
+              ),
+            })(null != g ? g : void 0)(
+              (0, n.jsx)(n.Fragment, { children: p }),
               c.id
             );
           return (0, n.jsxs)(i.Text, {
             tag: "span",
             className: l(d.author, { [d.hasUnreads]: f }),
             variant: "text-sm/semibold",
-            children: [p, !0 === h ? ": " : null],
+            children: [S, !0 === h ? ": " : null],
           });
         };
     },
@@ -1465,16 +1466,16 @@
         l = s("414456"),
         i = s.n(l),
         r = s("669491"),
-        u = s("77078"),
-        o = s("120027"),
+        o = s("77078"),
+        u = s("120027"),
         d = s("566998"),
         c = s("956089"),
         h = s("339792"),
         f = s("680986"),
         m = s("90625"),
         g = s("724210"),
-        S = s("782340"),
-        p = s("304696"),
+        p = s("782340"),
+        S = s("304696"),
         v = s("38050"),
         x = s("258791");
       let C = 16;
@@ -1485,15 +1486,15 @@
           l = n.slice(3),
           i = n.length > 3 ? n.length - 3 : 0,
           r = t.hasFlag(g.ChannelFlags.PINNED),
-          u = a.length > 0 || r || s,
-          o = n.length > 0;
+          o = a.length > 0 || r || s,
+          u = n.length > 0;
         return {
           shownTags: a,
           remainingTags: l,
           moreTagsCount: i,
           isPinned: r,
-          shouldRenderTagsRow: u,
-          forumPostContainsTags: o,
+          shouldRenderTagsRow: o,
+          forumPostContainsTags: u,
         };
       }
       function N(e) {
@@ -1502,7 +1503,7 @@
             shownTags: c,
             remainingTags: f,
             moreTagsCount: g,
-            isPinned: p,
+            isPinned: S,
             shouldRenderTagsRow: N,
           } = T({ channel: t, isNew: s }),
           { tagFilter: E } = (0, h.useForumChannelStore)(t.id);
@@ -1510,11 +1511,11 @@
           ? (0, n.jsxs)("div", {
               className: i(x.increasedActivityTags, r),
               children: [
-                p &&
+                S &&
                   (0, n.jsx)("div", {
                     className: v.pinIcon,
-                    children: (0, n.jsx)(u.Tooltip, {
-                      text: S.default.Messages.PINNED_POST,
+                    children: (0, n.jsx)(o.Tooltip, {
+                      text: p.default.Messages.PINNED_POST,
                       children: e =>
                         (0, n.jsx)(d.default, {
                           ...e,
@@ -1536,7 +1537,7 @@
                         }),
                         (t < c.length - 1 || g > 0) &&
                           (0, n.jsx)(
-                            o.default,
+                            u.default,
                             {
                               height: 4,
                               width: 4,
@@ -1564,7 +1565,7 @@
       function E(e) {
         let { channel: t, isNew: s, tagsClassName: a, className: l } = e,
           {
-            shownTags: o,
+            shownTags: u,
             remainingTags: f,
             moreTagsCount: g,
             isPinned: v,
@@ -1577,16 +1578,16 @@
               children: [
                 s
                   ? (0, n.jsx)(c.TextBadge, {
-                      className: i(p.newBadge, p.inTagsRow),
+                      className: i(S.newBadge, S.inTagsRow),
                       color: r.default.unsafe_rawColors.BRAND_260.css,
-                      text: S.default.Messages.NEW,
+                      text: p.default.Messages.NEW,
                     })
                   : null,
                 v &&
                   (0, n.jsx)("div", {
                     className: x.pinIcon,
-                    children: (0, n.jsx)(u.Tooltip, {
-                      text: S.default.Messages.PINNED_POST,
+                    children: (0, n.jsx)(o.Tooltip, {
+                      text: p.default.Messages.PINNED_POST,
                       children: e =>
                         (0, n.jsx)(d.default, {
                           ...e,
@@ -1596,7 +1597,7 @@
                         }),
                     }),
                   }),
-                o.map(e =>
+                u.map(e =>
                   (0, n.jsx)(
                     m.default,
                     {
@@ -1726,16 +1727,16 @@
         l = s("267567"),
         i = s("300322"),
         r = s("26989"),
-        u = s("88093"),
-        o = s("957255"),
+        o = s("88093"),
+        u = s("957255"),
         d = s("583022"),
         c = s("49111");
       function h(e) {
         let t = (0, n.useStateFromStores)(
-            [u.default],
+            [o.default],
             () =>
               (null == e ? void 0 : e.guild_id) == null ||
-              u.default.canChatInGuild(e.guild_id),
+              o.default.canChatInGuild(e.guild_id),
             [e]
           ),
           s = (0, n.useStateFromStores)(
@@ -1753,8 +1754,8 @@
             [e]
           ),
           f = (0, n.useStateFromStores)(
-            [o.default],
-            () => t && o.default.can(c.Permissions.ADD_REACTIONS, e),
+            [u.default],
+            () => t && u.default.can(c.Permissions.ADD_REACTIONS, e),
             [t, e]
           ),
           [, m] = (0, a.useCurrentUserCommunicationDisabled)(
@@ -1770,7 +1771,7 @@
             isGuest: !1,
             isPendingMember: !1,
           };
-        let S = (0, d.default)({
+        let p = (0, d.default)({
           channel: e,
           canChat: t,
           renderReactions: !0,
@@ -1780,7 +1781,7 @@
           communicationDisabled: m,
           isActiveChannelOrUnarchivableThread: g,
         });
-        return { ...S, isLurking: s, isGuest: h, isPendingMember: !1 };
+        return { ...p, isLurking: s, isGuest: h, isPendingMember: !1 };
       }
     },
     65626: function (e, t, s) {
@@ -1788,7 +1789,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return u;
+            return o;
           },
         });
       var n = s("446674"),
@@ -1806,7 +1807,7 @@
             !0)
         );
       }
-      function u(e) {
+      function o(e) {
         let t = (0, n.useStateFromStores)(
           [l.default],
           () => !!l.default.isEnabled() && l.default.combosEnabled
@@ -1833,8 +1834,8 @@
         l = s("449918"),
         i = s("119035"),
         r = s("65626"),
-        u = s("782340"),
-        o = s("608980");
+        o = s("782340"),
+        u = s("608980");
       function d(e) {
         let { channelId: t } = e,
           s = (0, r.default)(t),
@@ -1845,15 +1846,15 @@
         let { multiplier: c } = s,
           { color: h } = (0, i.getComboStyles)(c);
         return (0, n.jsxs)("div", {
-          className: o.container,
+          className: u.container,
           children: [
             (0, n.jsx)(a.Text, {
               variant: "text-xs/normal",
-              children: u.default.Messages.POGGERMODE_COMBO_BAR,
+              children: o.default.Messages.POGGERMODE_COMBO_BAR,
             }),
             (0, n.jsx)(a.Progress, {
               foregroundColor: (0, l.getColor)(h),
-              className: o.progress,
+              className: u.progress,
               size: a.Progress.Sizes.LARGE,
               percent: 100 * (0, i.getComboPercentage)(s),
               animate: !0,
@@ -1993,10 +1994,10 @@
           height: s = 24,
           color: i = a.default.colors.INTERACTIVE_NORMAL,
           colorClass: r = "",
-          ...u
+          ...o
         } = e;
         return (0, n.jsx)("svg", {
-          ...(0, l.default)(u),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: s,
@@ -2014,4 +2015,4 @@
     },
   },
 ]);
-//# sourceMappingURL=53ecabefb57dbc284221.js.map
+//# sourceMappingURL=c68f22034dfd5225fc74.js.map

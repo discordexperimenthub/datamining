@@ -5477,12 +5477,13 @@
                 ? t
                 : ep.default.Messages.UNKNOWN_USER
               : null,
-          _ = (0, b.useUsernameHook)(
-            null == l ? void 0 : l.author,
-            a.id,
-            a.guild_id,
-            !0
-          )(null != o ? o : void 0)(
+          _ = (0, b.useUsernameHook)({
+            user: null == l ? void 0 : l.author,
+            channelId: a.id,
+            guildId: a.guild_id,
+            messageId: null == l ? void 0 : l.id,
+            stopPropagation: !0,
+          })(null != o ? o : void 0)(
             (0, s.jsxs)(s.Fragment, {
               children: [null != S ? S : "", null != l ? ":" : ""],
             }),
@@ -7736,4 +7737,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2378a49f2092dcc1788e.js.map
+//# sourceMappingURL=21bc08a0f66d400010b7.js.map

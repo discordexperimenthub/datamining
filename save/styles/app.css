@@ -23038,6 +23038,16 @@ html .progress__4ef76 {
 .progressBarFill_e448b3 {
   transition: width.3s ease-in-out;
 }
+.desktopTooltip__33fd1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 4px 0;
+}
+.infoIcon_d5bdac {
+  color: var(--white-500);
+  margin-right: 4px;
+}
 .outerContainer_b1a8db {
   padding: 16px;
   display: grid;
@@ -111220,4 +111230,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.20057784fbc5671879ed.css.map*/
+/*# sourceMappingURL=app.3202a851fcc4297c4db5.css.map*/

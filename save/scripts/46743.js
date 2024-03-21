@@ -3034,7 +3034,7 @@
                   : e.permissions;
             if (null != t)
               return y.OrderedPermissions.filter(e =>
-                p.default.has(p.default.deserialize(t), e)
+                p.has(p.deserialize(t), e)
               );
           }, [
             null == eY
@@ -5280,4 +5280,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fa7758d455921c2586c1.js.map
+//# sourceMappingURL=ae6874c80342cb2688e4.js.map

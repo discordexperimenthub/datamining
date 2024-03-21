@@ -1116,7 +1116,7 @@
         )
           return (0, a.jsx)(Q, { channel: t });
         let g = u.omit(h.containerProps, ["ref"]),
-          C = U.default.getGuildVisualOwnerId(n);
+          C = U.getGuildVisualOwnerId(n);
         return (0, a.jsx)(o.ListNavigatorProvider, {
           navigator: h,
           children: (0, a.jsx)(f.FocusJumpSection, {
@@ -6783,7 +6783,7 @@
           M = (0, r.default)(f.default);
         if (null == t || null != x) return null;
         let R = (0, c.default)(t),
-          j = m.default.can({
+          j = m.can({
             permission: I.Permissions.ADD_REACTIONS,
             user: v,
             context: t,
@@ -9338,8 +9338,8 @@
             if (null == p || 0 === _.length) return h;
             let e = new Set();
             for (let t of _) {
-              let n = d.default.computePermissions({ user: t, context: p });
-              l.default.has(n, c.Permissions.VIEW_CHANNEL) && e.add(t);
+              let n = d.computePermissions({ user: t, context: p });
+              l.has(n, c.Permissions.VIEW_CHANNEL) && e.add(t);
             }
             return e;
           }, [_, p]),
@@ -17146,25 +17146,19 @@
               f = r.default.getUser(e);
             if (null == d || null == c || null == f) return l;
             let h = i.default.getRole(d.id, d.getEveryoneRoleId()),
-              m = u.default.computePermissions({ user: f, context: d });
+              m = u.computePermissions({ user: f, context: d });
             for (let e of n) {
               let t = o.Permissions[e];
-              if (a.default.has(m, t)) {
+              if (a.has(m, t)) {
                 for (let n of ((l[e] = []), c.roles)) {
                   let s = i.default.getRole(d.id, n);
                   if (null == s) continue;
-                  let r = a.default.has(
-                    s.permissions,
-                    o.Permissions.ADMINISTRATOR
-                  );
-                  (r || a.default.hasAny(s.permissions, t)) && l[e].push(s.id);
+                  let r = a.has(s.permissions, o.Permissions.ADMINISTRATOR);
+                  (r || a.hasAny(s.permissions, t)) && l[e].push(s.id);
                 }
                 if (null != h) {
-                  let n = a.default.has(
-                    h.permissions,
-                    o.Permissions.ADMINISTRATOR
-                  );
-                  (n || a.default.hasAny(h.permissions, t)) && l[e].push(h.id);
+                  let n = a.has(h.permissions, o.Permissions.ADMINISTRATOR);
+                  (n || a.hasAny(h.permissions, t)) && l[e].push(h.id);
                 }
                 d.isOwner(f) && l[e].push(f.id);
               }
@@ -17834,10 +17828,7 @@
                     let i = r.default.getRole(t.id, t.getEveryoneRoleId()),
                       u =
                         null != i &&
-                        !a.default.has(
-                          i.permissions,
-                          d.Permissions.VIEW_CHANNEL
-                        ),
+                        !a.has(i.permissions, d.Permissions.VIEW_CHANNEL),
                       c = (0, o.isChannelAccessDeniedBy)(
                         n,
                         n.permissionOverwrites[t.id]
@@ -19439,7 +19430,7 @@
         for (let t of o)
           if (
             t !== d &&
-            i.default.can({
+            i.can({
               permission: u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS,
               user: t,
               context: e,
@@ -20058,10 +20049,7 @@
             (this.handleJoinVoice = () => {
               let { user: e, channel: t, hidePreview: n } = this.props;
               N.default.can(
-                r.default.combine(
-                  j.Permissions.CONNECT,
-                  j.Permissions.VIEW_CHANNEL
-                ),
+                r.combine(j.Permissions.CONNECT, j.Permissions.VIEW_CHANNEL),
                 t
               ) && (c.default.selectVoiceChannel(t.id), null == n || n(e.id));
             }),
@@ -20351,7 +20339,7 @@
             guildId: i.guild_id,
             location: "VoiceUsers",
           }),
-          J = M.default.can({
+          J = M.can({
             permission: y.Permissions.SET_VOICE_CHANNEL_STATUS,
             user: s,
             context: i,
@@ -27142,7 +27130,7 @@
             () => s.default.getChannel(e),
             [e]
           ),
-          n = i.default.canEveryoneRole(u.Permissions.REQUEST_TO_SPEAK, t),
+          n = i.canEveryoneRole(u.Permissions.REQUEST_TO_SPEAK, t),
           [o, d] = a.useState(n);
         return (
           a.useEffect(() => {
@@ -30909,7 +30897,7 @@
             h =
               null != s &&
               null != t &&
-              m.default.can({
+              m.can({
                 permission: g.Permissions.VIEW_CHANNEL,
                 user: s,
                 context: t,
@@ -35566,7 +35554,7 @@
             }),
           });
         let F =
-          el.default.can({
+          el.can({
             permission: eE.Permissions.ADD_REACTIONS,
             user: i,
             context: t,
@@ -44249,4 +44237,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8470ad7dabbab5bad360.js.map
+//# sourceMappingURL=7920466fe6a77cbdb94c.js.map

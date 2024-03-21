@@ -465,7 +465,7 @@
         r = n("305961"),
         s = n("957255"),
         d = n("49111");
-      let o = a.default.combine(
+      let o = a.combine(
         d.Permissions.VIEW_CHANNEL,
         d.Permissions.MANAGE_MESSAGES,
         d.Permissions.READ_MESSAGE_HISTORY
@@ -2566,4 +2566,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a03285344aaec26a4789.js.map
+//# sourceMappingURL=7a3631c62b4e30ecdc65.js.map

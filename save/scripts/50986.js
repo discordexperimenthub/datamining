@@ -10542,14 +10542,11 @@
       function i(e, t) {
         let s = { [t.id]: t };
         return e.filter(e => {
-          let t = l.default.computePermissionsForRoles({
-              forceRoles: s,
-              context: e,
-            }),
+          let t = l.computePermissionsForRoles({ forceRoles: s, context: e }),
             i = n.Permissions.VIEW_CHANNEL;
           return (
-            e.isGuildVocal() && (i = a.default.add(i, n.Permissions.CONNECT)),
-            a.default.has(t, i) && !l.default.canEveryoneRole(i, e)
+            e.isGuildVocal() && (i = a.add(i, n.Permissions.CONNECT)),
+            a.has(t, i) && !l.canEveryoneRole(i, e)
           );
         });
       }
@@ -10992,7 +10989,7 @@
           }),
           s = a.useMemo(() => {
             if (null == t) return r.GuildRoleSubscriptionFormat.SOME_CHANNELS;
-            let e = l.default.has(t.permissions, d);
+            let e = l.has(t.permissions, d);
             return e
               ? r.GuildRoleSubscriptionFormat.SOME_CHANNELS
               : r.GuildRoleSubscriptionFormat.ALL_CHANNELS;
@@ -11021,7 +11018,7 @@
           let s = i.default.getGuildPermissions(t);
           return (
             null != s &&
-            a.default.has(s, r.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS)
+            a.has(s, r.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS)
           );
         });
         return t;
@@ -14215,7 +14212,7 @@
                   (null === (s = e.tags) || void 0 === s
                     ? void 0
                     : s.subscription_listing_id) != null ||
-                  u.default.hasAny(e.permissions, b.ElevatedPermissions)
+                  u.hasAny(e.permissions, b.ElevatedPermissions)
                 )
                   return [];
                 let a = (0, j.default)(r, e).length;
@@ -19550,9 +19547,7 @@
                 if (null == l) return !1;
                 let { permissions: n } = l;
                 return P(l, {
-                  permissions: (n = a
-                    ? o.default.add(n, s)
-                    : o.default.remove(n, s)),
+                  permissions: (n = a ? o.add(n, s) : o.remove(n, s)),
                 });
               },
               GUILD_SETTINGS_ROLES_UPDATE_PERMISSION_SET: function (e) {
@@ -19563,7 +19558,7 @@
               GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS: function (e) {
                 let { id: t } = e,
                   s = b(t);
-                return null != s && P(s, { permissions: f.default.NONE });
+                return null != s && P(s, { permissions: f.NONE });
               },
               GUILD_SETTINGS_ROLES_UPDATE_NAME: function (e) {
                 let { id: t, name: s } = e,
@@ -19677,13 +19672,13 @@
         l = s("465305"),
         n = s("49111");
       function i(e) {
-        return a.default.hasAny(e.permissions, n.ElevatedPermissions);
+        return a.hasAny(e.permissions, n.ElevatedPermissions);
       }
       function r(e, t) {
         let s = [],
           i = l.default.getGuildPermissionSpecMap(e);
         for (let e of n.ElevatedPermissionsList)
-          a.default.has(t.permissions, e) && s.push(i[e.toString()].title);
+          a.has(t.permissions, e) && s.push(i[e.toString()].title);
         return s;
       }
     },
@@ -20851,7 +20846,7 @@
         return (0, a.useStateFromStores)([r.default, l.default], () =>
           null != t && r.default.editedDefaultChannelIds.has(t)
             ? d.default.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY
-            : i.default.canEveryoneRole(
+            : i.canEveryoneRole(
                   o.Permissions.VIEW_CHANNEL,
                   l.default.getChannel(e)
                 )
@@ -23750,14 +23745,8 @@
                 !i.includes(e.channel.id) &&
                 !n.includes(e.channel.id) &&
                 e.channel.type === V.ChannelTypes.GUILD_TEXT &&
-                y.default.canEveryoneRole(
-                  V.Permissions.VIEW_CHANNEL,
-                  e.channel
-                ) &&
-                !y.default.canEveryoneRole(
-                  V.Permissions.SEND_MESSAGES,
-                  e.channel
-                ) &&
+                y.canEveryoneRole(V.Permissions.VIEW_CHANNEL, e.channel) &&
+                !y.canEveryoneRole(V.Permissions.SEND_MESSAGES, e.channel) &&
                 e.channel.id !== (null == s ? void 0 : s.rulesChannelId)
             )
             .slice(0, 5),
@@ -26286,9 +26275,9 @@
         (a[(a.MEMBER = 1)] = "MEMBER"),
         (a[(a.MODERATOR = 2)] = "MODERATOR"),
         (a[(a.MANAGER = 3)] = "MANAGER");
-      let c = r.default.DEFAULT;
-      n.default.remove(c, o.Permissions.MENTION_EVERYONE);
-      let E = n.default.combine(
+      let c = r.DEFAULT;
+      n.remove(c, o.Permissions.MENTION_EVERYONE);
+      let E = n.combine(
           c,
           o.Permissions.VIEW_AUDIT_LOG,
           o.Permissions.MANAGE_NICKNAMES,
@@ -26301,7 +26290,7 @@
           o.Permissions.PRIORITY_SPEAKER,
           o.Permissions.MODERATE_MEMBERS
         ),
-        _ = n.default.combine(
+        _ = n.combine(
           E,
           o.Permissions.MANAGE_CHANNELS,
           o.Permissions.MANAGE_THREADS,
@@ -26311,9 +26300,9 @@
           o.Permissions.MANAGE_WEBHOOKS,
           o.Permissions.SEND_TTS_MESSAGES
         );
-      n.default.add(_, o.Permissions.VIEW_GUILD_ANALYTICS),
+      n.add(_, o.Permissions.VIEW_GUILD_ANALYTICS),
         i.default.unsafe_rawColors.BRAND_500.css,
-        r.default.NONE,
+        r.NONE,
         i.default.unsafe_rawColors.GREEN_360.css,
         i.default.unsafe_rawColors.YELLOW_300.css,
         i.default.unsafe_rawColors.RED_400.css,
@@ -29807,19 +29796,15 @@
             E.default.getCurrentUser()
           ),
           u = l.useMemo(
-            () => f.default.computePermissions({ user: i, context: t }),
+            () => f.computePermissions({ user: i, context: t }),
             [i, t]
           ),
-          c = l.useMemo(
-            () => ({ [s.id]: { ...s, permissions: f.default.NONE } }),
-            [s]
-          ),
+          c = l.useMemo(() => ({ [s.id]: { ...s, permissions: f.NONE } }), [s]),
           _ = l.useMemo(
-            () =>
-              f.default.computePermissions({ user: i, context: t, roles: c }),
+            () => f.computePermissions({ user: i, context: t, roles: c }),
             [i, t, c]
           ),
-          I = !r.default.equals(u, _);
+          I = !r.equals(u, _);
         return (0, a.jsx)("div", {
           className: L.clearButtonWrapper,
           children: (0, a.jsx)(d.Tooltip, {
@@ -29836,8 +29821,7 @@
                 onClick: () => (0, S.clearRolePermissions)(s.id),
                 onMouseEnter: t,
                 onMouseLeave: l,
-                disabled:
-                  r.default.equals(s.permissions, f.default.NONE) || I || n,
+                disabled: r.equals(s.permissions, f.NONE) || I || n,
                 children: x.default.Messages.ROLE_PERMISSIONS_CLEAR_PERMISSIONS,
               });
             },
@@ -29860,10 +29844,7 @@
         function i(e) {
           return c.default.can(e, t)
             ? !c.default.can(e, t, null, {
-                [s.id]: {
-                  ...s,
-                  permissions: r.default.remove(s.permissions, e),
-                },
+                [s.id]: { ...s, permissions: r.remove(s.permissions, e) },
               }) && x.default.Messages.HELP_SINGULAR_PERMISSION
             : x.default.Messages.HELP_MISSING_PERMISSION;
         }
@@ -31143,7 +31124,7 @@
         return T.MODERATOR_PERMISSIONS.filter(
           t =>
             (null == e ? void 0 : e.id) !== I.FAVORITES_RAW_GUILD_ID &&
-            _.default.canEveryone(t, e)
+            _.canEveryone(t, e)
         );
       }
       function N(e) {
@@ -31156,10 +31137,7 @@
           N = T.MODERATOR_PERMISSIONS.some(
             e =>
               !u.default.can(e, t, null, {
-                [l.id]: {
-                  ...l,
-                  permissions: i.default.remove(l.permissions, e),
-                },
+                [l.id]: { ...l, permissions: i.remove(l.permissions, e) },
               })
           ),
           g = (0, a.jsxs)(a.Fragment, {
@@ -35334,9 +35312,7 @@
                 ? S.default.getUsableCustomEmojiById(o.emoji_id)
                 : null
             ),
-            B =
-              null != D &&
-              M.default.canEveryoneRole(G.Permissions.VIEW_CHANNEL, D),
+            B = null != D && M.canEveryoneRole(G.Permissions.VIEW_CHANNEL, D),
             y =
               null !== (t = (0, f.getChannelIconComponent)(D)) && void 0 !== t
                 ? t
@@ -41910,7 +41886,7 @@
         h = s("782340"),
         C = s("927253");
       let R = "NO_INSTANT_INVITE",
-        x = r.default.combine(
+        x = r.combine(
           g.Permissions.VIEW_CHANNEL,
           g.Permissions.CREATE_INSTANT_INVITE
         );
@@ -47790,4 +47766,4 @@
     },
   },
 ]);
-//# sourceMappingURL=89de7782883781479e56.js.map
+//# sourceMappingURL=db40f782ecbbea7a3038.js.map

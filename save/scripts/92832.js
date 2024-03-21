@@ -969,8 +969,8 @@
         i = n("923510"),
         s = n("49111");
       let o = s.Permissions.VIEW_CHANNEL,
-        a = r.default.combine(o, s.Permissions.CONNECT),
-        l = r.default.combine(o, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        a = r.combine(o, s.Permissions.CONNECT),
+        l = r.combine(o, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     650484: function (e, t, n) {
       "use strict";
@@ -1283,8 +1283,8 @@
               : e.isGuildVoice() &&
                 (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              i.default.combine(t, d.Permissions.CREATE_EVENTS),
-              i.default.combine(t, d.Permissions.MANAGE_EVENTS),
+              i.combine(t, d.Permissions.CREATE_EVENTS),
+              i.combine(t, d.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -1610,7 +1610,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? p.Permissions.SEND_MESSAGES
-              : s.default.combine(
+              : s.combine(
                   p.Permissions.CREATE_PUBLIC_THREADS,
                   p.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -1623,7 +1623,7 @@
       function S(e, t) {
         let n = e.isForumLikeChannel()
             ? p.Permissions.SEND_MESSAGES
-            : s.default.combine(
+            : s.combine(
                 p.Permissions.CREATE_PUBLIC_THREADS,
                 p.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -1634,10 +1634,7 @@
         let t = (0, o.useStateFromStores)(
           [E.default],
           () =>
-            E.default.can(
-              s.default.combine(p.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            E.default.can(s.combine(p.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === p.ChannelTypes.GUILD_TEXT && I(t, e);
@@ -3023,4 +3020,4 @@
     },
   },
 ]);
-//# sourceMappingURL=81029169bd0d59e71d12.js.map
+//# sourceMappingURL=70fd20b6e868ef89519c.js.map

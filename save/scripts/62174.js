@@ -1109,8 +1109,8 @@
         i = n("923510"),
         s = n("49111");
       let l = s.Permissions.VIEW_CHANNEL,
-        o = r.default.combine(l, s.Permissions.CONNECT),
-        a = r.default.combine(l, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        o = r.combine(l, s.Permissions.CONNECT),
+        a = r.combine(l, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     650484: function (e, t, n) {
       "use strict";
@@ -1421,8 +1421,8 @@
               : e.isGuildVoice() &&
                 (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              i.default.combine(t, c.Permissions.CREATE_EVENTS),
-              i.default.combine(t, c.Permissions.MANAGE_EVENTS),
+              i.combine(t, c.Permissions.CREATE_EVENTS),
+              i.combine(t, c.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -1748,7 +1748,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? v.Permissions.SEND_MESSAGES
-              : s.default.combine(
+              : s.combine(
                   v.Permissions.CREATE_PUBLIC_THREADS,
                   v.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -1761,7 +1761,7 @@
       function _(e, t) {
         let n = e.isForumLikeChannel()
             ? v.Permissions.SEND_MESSAGES
-            : s.default.combine(
+            : s.combine(
                 v.Permissions.CREATE_PUBLIC_THREADS,
                 v.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -1772,10 +1772,7 @@
         let t = (0, l.useStateFromStores)(
           [h.default],
           () =>
-            h.default.can(
-              s.default.combine(v.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            h.default.can(s.combine(v.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === v.ChannelTypes.GUILD_TEXT && S(t, e);
@@ -3407,4 +3404,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d5cfe429331c6de0209e.js.map
+//# sourceMappingURL=54680a56269c508f95d1.js.map

@@ -2470,8 +2470,8 @@
                           E.default.can(_.Permissions.MANAGE_ROLES, c) &&
                           E.default.can(_.Permissions.MANAGE_ROLES, t);
                       if (!l) return !0;
-                      let a = S.default.areChannelsLocked(c, t),
-                        s = S.default.areChannelsLocked(
+                      let a = S.areChannelsLocked(c, t),
+                        s = S.areChannelsLocked(
                           c,
                           h.default.getChannel(c.parent_id)
                         );
@@ -16132,28 +16132,6 @@
       }
       n("716175");
     },
-    238055: function (e, t, n) {
-      "use strict";
-      var l, a;
-      n.r(t),
-        n.d(t, {
-          HubEmailConnectionSteps: function () {
-            return l;
-          },
-          INVITE_ROUTING_HUB_GUILD_ID: function () {
-            return s;
-          },
-        }),
-        ((a = l || (l = {})).STUDENT_PROMPT = "STUDENT_PROMPT"),
-        (a.VERIFY_EMAIL = "VERIFY_EMAIL"),
-        (a.VERIFY_PIN = "VERIFY_PIN"),
-        (a.SELECT_SCHOOL = "SELECT_SCHOOL"),
-        (a.SELECT_SCHOOL_SEARCH = "SELECT_SCHOOL_SEARCH"),
-        (a.SUBMIT_SCHOOL = "SUBMIT_SCHOOL"),
-        (a.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
-        (a.EMAIL_WAITLIST = "EMAIL_WAITLIST");
-      let s = "884924873015689226";
-    },
     64657: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -20706,7 +20684,7 @@
                     null == i ||
                     !(0, j.shouldNotifyBase)(n, i, s) ||
                     !v.default.can(
-                      l.default.combine(
+                      l.combine(
                         F.Permissions.CONNECT,
                         F.Permissions.VIEW_CHANNEL
                       ),
@@ -20759,7 +20737,7 @@
                             null == a ||
                             null == i ||
                             !v.default.can(
-                              l.default.combine(
+                              l.combine(
                                 F.Permissions.CONNECT,
                                 F.Permissions.VIEW_CHANNEL
                               ),
@@ -23301,4 +23279,4 @@
     },
   },
 ]);
-//# sourceMappingURL=97fc0618eac3a697715a.js.map
+//# sourceMappingURL=0c3cccf9d5c4e2a059da.js.map

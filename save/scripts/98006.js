@@ -2533,12 +2533,12 @@
           j = null != n ? y.default.getGuildPermissionSpecMap(n) : null,
           T = Object.values(null != S ? S : {}).map(e => {
             let { title: t, flag: r } = e,
-              n = l.default.has(f, r);
+              n = l.has(f, r);
             return (0, a.jsx)(v, { title: t, can: n }, t);
           }),
           w = Object.values(null != j ? j : {}).map(e => {
             let { title: t, flag: r } = e,
-              n = l.default.has(g, r);
+              n = l.has(g, r);
             return (0, a.jsx)(v, { title: t, can: n }, t);
           });
         return (0, a.jsx)("div", {
@@ -7279,4 +7279,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5e5c175a69f587483cc5.js.map
+//# sourceMappingURL=f729724a9a80552ad3b1.js.map

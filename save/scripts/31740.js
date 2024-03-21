@@ -352,8 +352,8 @@
         i = n("923510"),
         s = n("49111");
       let l = s.Permissions.VIEW_CHANNEL,
-        a = r.default.combine(l, s.Permissions.CONNECT),
-        o = r.default.combine(l, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        a = r.combine(l, s.Permissions.CONNECT),
+        o = r.combine(l, i.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     650484: function (e, t, n) {
       "use strict";
@@ -542,8 +542,8 @@
               : e.isGuildVoice() &&
                 (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              i.default.combine(t, c.Permissions.CREATE_EVENTS),
-              i.default.combine(t, c.Permissions.MANAGE_EVENTS),
+              i.combine(t, c.Permissions.CREATE_EVENTS),
+              i.combine(t, c.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -1504,7 +1504,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? C.Permissions.SEND_MESSAGES
-              : s.default.combine(
+              : s.combine(
                   C.Permissions.CREATE_PUBLIC_THREADS,
                   C.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -1517,7 +1517,7 @@
       function g(e, t) {
         let n = e.isForumLikeChannel()
             ? C.Permissions.SEND_MESSAGES
-            : s.default.combine(
+            : s.combine(
                 C.Permissions.CREATE_PUBLIC_THREADS,
                 C.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -1528,10 +1528,7 @@
         let t = (0, l.useStateFromStores)(
           [h.default],
           () =>
-            h.default.can(
-              s.default.combine(C.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            h.default.can(s.combine(C.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === C.ChannelTypes.GUILD_TEXT && I(t, e);
@@ -2912,4 +2909,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cb433c2185ec474d1ae6.js.map
+//# sourceMappingURL=97735247b694b6fdadbc.js.map

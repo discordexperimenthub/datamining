@@ -668,14 +668,14 @@
               },
             ],
             roles: [
-              { id: "00", name: "@everyone", permissions: E.default.DEFAULT },
+              { id: "00", name: "@everyone", permissions: E.DEFAULT },
               {
                 id: "01",
                 name: "officers (example)",
                 mentionable: !0,
                 hoist: !0,
-                permissions: l.default.combine(
-                  E.default.DEFAULT,
+                permissions: l.combine(
+                  E.DEFAULT,
                   _.Permissions.MANAGE_ROLES,
                   _.Permissions.MANAGE_CHANNELS,
                   _.Permissions.KICK_MEMBERS,
@@ -1415,4 +1415,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0cc97ac4aafee9ae9a98.js.map
+//# sourceMappingURL=2ab7fdac991b9f5a28af.js.map

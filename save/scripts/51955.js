@@ -3956,7 +3956,7 @@
             showLurkerModeUpsellPopout:
               h &&
               null != o &&
-              P.default.canEveryoneRole(b.Permissions.SEND_MESSAGES, s),
+              P.canEveryoneRole(b.Permissions.SEND_MESSAGES, s),
             theme: v.default.theme,
             canSendMessages: I,
             channelFollowingUsersSeen: null != c ? c.usersSeenEver : null,
@@ -6086,13 +6086,13 @@
               o(H)
                 .filter(e => {
                   if (null == b) return !1;
-                  let n = x.default.computePermissionsForRoles({
+                  let n = x.computePermissionsForRoles({
                     forceRoles: { [e.id]: e },
                     context: t,
                   });
                   return (
-                    u.default.has(n, D.Permissions.ADMINISTRATOR) ||
-                    u.default.has(n, D.Permissions.VIEW_CHANNEL)
+                    u.has(n, D.Permissions.ADMINISTRATOR) ||
+                    u.has(n, D.Permissions.VIEW_CHANNEL)
                   );
                 })
                 .value(),
@@ -6115,7 +6115,7 @@
               return o(e)
                 .filter(e => {
                   var n;
-                  let a = x.default.can({
+                  let a = x.can({
                       permission: D.Permissions.ADMINISTRATOR,
                       user: e,
                       context: t,
@@ -6124,8 +6124,8 @@
                       null !== (n = t.permissionOverwrites[e.id]) &&
                       void 0 !== n
                         ? n
-                        : x.default.NONE,
-                    l = u.default.has(s.allow, D.Permissions.VIEW_CHANNEL);
+                        : x.NONE,
+                    l = u.has(s.allow, D.Permissions.VIEW_CHANNEL);
                   return a || l;
                 })
                 .value();
@@ -19752,4 +19752,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8f2b7fe312a3dfe212b0.js.map
+//# sourceMappingURL=ca8f6400bf786e765ef8.js.map

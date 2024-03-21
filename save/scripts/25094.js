@@ -3241,10 +3241,7 @@
           ),
           g = (0, c.default)([h.default], () =>
             h.default.can(
-              C.default.combine(
-                L.Permissions.MANAGE_GUILD,
-                L.Permissions.KICK_MEMBERS
-              ),
+              C.combine(L.Permissions.MANAGE_GUILD, L.Permissions.KICK_MEMBERS),
               s
             )
           ),
@@ -4279,4 +4276,4 @@
     },
   },
 ]);
-//# sourceMappingURL=594033a7bc6835aac78f.js.map
+//# sourceMappingURL=6a3fead98e7f2de12236.js.map

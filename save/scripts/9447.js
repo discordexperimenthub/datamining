@@ -1443,15 +1443,13 @@
           o = {
             id: a,
             type: d.PermissionOverwriteType.ROLE,
-            allow: f.default.NONE,
-            deny: f.default.NONE,
+            allow: f.NONE,
+            deny: f.NONE,
             ...u,
           };
         n
-          ? ((o.allow = l.default.add(o.allow, t)),
-            (o.deny = l.default.remove(o.deny, t)))
-          : ((o.allow = l.default.remove(o.allow, t)),
-            (o.deny = l.default.add(o.deny, t))),
+          ? ((o.allow = l.add(o.allow, t)), (o.deny = l.remove(o.deny, t)))
+          : ((o.allow = l.remove(o.allow, t)), (o.deny = l.add(o.deny, t))),
           s.default.updatePermissionOverwrite(e.id, o);
       }
       async function p(e, t, n, a) {
@@ -1532,7 +1530,7 @@
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: l.default.canEveryoneRole(
+          request_to_speak_state: l.canEveryoneRole(
             d.Permissions.REQUEST_TO_SPEAK,
             e
           )
@@ -1973,4 +1971,4 @@
     },
   },
 ]);
-//# sourceMappingURL=18443cb7ecfc3e7aca4c.js.map
+//# sourceMappingURL=0026f249f45ab325b8f1.js.map

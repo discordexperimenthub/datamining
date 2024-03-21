@@ -65,14 +65,14 @@
             throw Error(
               "PermissionsForm.getOverwriteValue: Invalid allow or deny props"
             );
-          return r.default.has(t, e)
+          return r.has(t, e)
             ? u.PermissionOverrideType.ALLOW
-            : r.default.has(l, e)
+            : r.has(l, e)
               ? u.PermissionOverrideType.DENY
               : u.PermissionOverrideType.PASSTHROUGH;
         }
         getPermissionValue(e, t) {
-          return r.default.has(t, e);
+          return r.has(t, e);
         }
         handleChange(e, t) {
           let { onChange: l } = this.props;
@@ -1128,7 +1128,7 @@
               if (null == n || n.bot) continue;
               let a =
                 n.id !== t.ownerId &&
-                !f.default.can({
+                !f.can({
                   permission: I.Permissions.ADMINISTRATOR,
                   user: n,
                   context: t,
@@ -1160,7 +1160,7 @@
             for (let a of h) {
               if (p(a)) continue;
               let s =
-                  !i.default.has(a.permissions, I.Permissions.ADMINISTRATOR) &&
+                  !i.has(a.permissions, I.Permissions.ADMINISTRATOR) &&
                   u.default.isRoleHigher(t, l, a),
                 r = { id: a.id, name: a.name, canManage: s };
               a.id === e ? n.unshift(r) : n.push(r);
@@ -2439,7 +2439,7 @@
                     .then(l.bind(l, "317671")),
                   t = y.defaultMemberPermissions;
                 return (
-                  r.default.equals(t, c.DISABLED_BY_DEFAULT_PERMISSION_FLAG) &&
+                  r.equals(t, c.DISABLED_BY_DEFAULT_PERMISSION_FLAG) &&
                     (t = C.Permissions.ADMINISTRATOR),
                   l => (0, n.jsx)(e, { ...l, defaultMemberPermissions: t })
                 );
@@ -5130,8 +5130,8 @@
             r =
               null !== (n = null == a ? void 0 : a.permissions) && void 0 !== n
                 ? n
-                : h.default.NONE;
-          for (let e of i) r = s.default.add(r, e.permissions);
+                : h.NONE;
+          for (let e of i) r = s.add(r, e.permissions);
           return r;
         }, [l, O, C]);
         return null == A
@@ -5168,7 +5168,7 @@
                     let i = [],
                       o = [];
                     for (let e of c.OrderedPermissions)
-                      s.default.has(a, e) ? i.push(e) : o.push(e);
+                      s.has(a, e) ? i.push(e) : o.push(e);
                     return (0, n.jsxs)(n.Fragment, {
                       children: [
                         (0, n.jsx)(r.FormDivider, { className: p.divider }),
@@ -7084,4 +7084,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f14fc03cfbe5983afdb4.js.map
+//# sourceMappingURL=91fee5f238b92a783976.js.map

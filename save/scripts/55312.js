@@ -121,18 +121,18 @@
             onPrevPressed: I,
             onComplete: m,
             sequencerClassName: L,
-            initialStep: f = 0,
-            forceStep: x,
+            initialStep: x = 0,
+            forceStep: f,
             submitting: O = !1,
             autoCloseOnComplete: C = !0,
           } = e,
           [S, A] = l.useState([]),
-          [p, h] = l.useState(f),
+          [p, h] = l.useState(x),
           v = (0, o.useUID)();
         l.useEffect(() => {
           A([...Array(i.length).keys()]);
         }, [i.length]);
-        let g = null != x ? x : p,
+        let g = null != f ? f : p,
           D = i[g],
           R = 0 === g,
           j = g === i.length - 1,
@@ -246,8 +246,8 @@
         I = t("610903"),
         m = t("978970"),
         L = t("161778"),
-        f = t("923959"),
-        x = t("305961"),
+        x = t("923959"),
+        f = t("305961"),
         O = t("27618"),
         C = t("697218"),
         S = t("476765"),
@@ -279,8 +279,8 @@
               theme: d,
             } = e,
             u = (0, o.useStateFromStores)(
-              [x.default],
-              () => x.default.getGuild(s.id),
+              [f.default],
+              () => f.default.getGuild(s.id),
               [s.id]
             ),
             _ = null != u && u.verificationLevel > j.VerificationLevels.NONE,
@@ -638,8 +638,8 @@
         };
       function W(e) {
         let { guild: s } = e,
-          t = (0, o.useStateFromStores)([x.default], () =>
-            x.default.getRole(s.id, s.getEveryoneRoleId())
+          t = (0, o.useStateFromStores)([f.default], () =>
+            f.default.getRole(s.id, s.getEveryoneRoleId())
           );
         if (null == t) return null;
         let { name: l, color: i } = t;
@@ -791,7 +791,7 @@
             t = [];
           return (
             R.MODERATOR_PERMISSIONS.map(a => {
-              let l = g.default.canEveryone(a, s);
+              let l = g.canEveryone(a, s);
               l ? e.push(a) : t.push(a);
             }),
             { enabledPermissions: e, disabledPermissions: t }
@@ -927,7 +927,7 @@
           d = (0, o.useStateFromStores)([L.default], () => L.default.theme),
           [c, E] = l.useState(!1),
           [m, A] = l.useState(
-            !R.MODERATOR_PERMISSIONS.some(e => g.default.canEveryone(e, n))
+            !R.MODERATOR_PERMISSIONS.some(e => g.canEveryone(e, n))
           ),
           [p, v] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
           [D, P] = l.useState(R.CREATE_NEW_CHANNEL_VALUE),
@@ -935,11 +935,11 @@
           [B] = l.useState(null == n ? void 0 : n.verificationLevel),
           [Y] = l.useState(null == n ? void 0 : n.explicitContentFilter),
           [y] = l.useState(m),
-          G = (0, o.useStateFromStores)([x.default], () =>
-            null != n ? x.default.getRole(n.id, n.getEveryoneRoleId()) : void 0
+          G = (0, o.useStateFromStores)([f.default], () =>
+            null != n ? f.default.getRole(n.id, n.getEveryoneRoleId()) : void 0
           ),
-          W = (0, o.useStateFromStores)([f.default], () =>
-            null != n ? f.default.getChannels(n.id) : null
+          W = (0, o.useStateFromStores)([x.default], () =>
+            null != n ? x.default.getChannels(n.id) : null
           ),
           K = (0, S.useUID)(),
           { enabled: X } = (0, u.useIsMassMentionsDefaultDisabledExperiment)(
@@ -954,7 +954,7 @@
             label: U.default.Messages.ENABLE_PUBLIC_MODAL_CREATE_CHANNEL,
           },
         ];
-        W[(0, f.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(e => {
+        W[(0, x.GUILD_SELECTABLE_CHANNELS_KEY)].forEach(e => {
           let { channel: s } = e;
           s.type === j.ChannelTypes.GUILD_TEXT &&
             q.push({
@@ -970,7 +970,7 @@
             let e = new Set(n.features);
             e.add(j.GuildFeatures.COMMUNITY);
             let s = m
-                ? r.default.remove(G.permissions, R.MODERATOR_PERMISSIONS_FLAG)
+                ? r.remove(G.permissions, R.MODERATOR_PERMISSIONS_FLAG)
                 : G.permissions,
               t = { ...G, permissions: s };
             s !== G.permissions && (await (0, M.saveRoleSettings)(n.id, [t])),
@@ -1133,4 +1133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=94f174f8128130baa560.js.map
+//# sourceMappingURL=4b2b6b645cfb857214ed.js.map

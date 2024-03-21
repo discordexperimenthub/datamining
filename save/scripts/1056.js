@@ -226,7 +226,7 @@
             })()
           );
         function w(e) {
-          (null != f.default.getToken() || null != i) &&
+          (null != f.getToken() || null != i) &&
             h.default.track(A.AnalyticEvents.DOWNLOAD_APP, {
               platform: e,
               ptb: !1,
@@ -457,4 +457,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c46d271483bcef8d4b1b.js.map
+//# sourceMappingURL=8d361d23252cc0f9832b.js.map

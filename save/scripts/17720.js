@@ -188,7 +188,7 @@
                 {
                   id: H,
                   type: r.PermissionOverwriteType.ROLE,
-                  allow: g.default.NONE,
+                  allow: g.NONE,
                   deny: y.Permissions.VIEW_CHANNEL,
                 },
               ],
@@ -333,4 +333,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f2dbdb78a09e467bfc81.js.map
+//# sourceMappingURL=6d77ee0b6cf4fed5dce2.js.map

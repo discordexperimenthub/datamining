@@ -857,8 +857,8 @@
       function L(e) {
         return (
           e.type === a.ChannelTypes.GUILD_TEXT &&
-          !d.default.canEveryoneRole(a.Permissions.SEND_MESSAGES, e) &&
-          d.default.canEveryoneRole(a.Permissions.VIEW_CHANNEL, e)
+          !d.canEveryoneRole(a.Permissions.SEND_MESSAGES, e) &&
+          d.canEveryoneRole(a.Permissions.VIEW_CHANNEL, e)
         );
       }
       function A(e) {
@@ -867,7 +867,7 @@
           case a.ChannelTypes.GUILD_ANNOUNCEMENT:
           case a.ChannelTypes.GUILD_FORUM:
           case a.ChannelTypes.GUILD_MEDIA:
-            return d.default.canEveryoneRole(a.Permissions.VIEW_CHANNEL, e);
+            return d.canEveryoneRole(a.Permissions.VIEW_CHANNEL, e);
           default:
             return !1;
         }
@@ -940,10 +940,7 @@
                     let i = t[e.getEveryoneRoleId()],
                       r =
                         null != i &&
-                        !u.default.has(
-                          i.permissions,
-                          o.Permissions.VIEW_CHANNEL
-                        ),
+                        !u.has(i.permissions, o.Permissions.VIEW_CHANNEL),
                       s = (0, a.isChannelAccessDeniedBy)(
                         n,
                         n.permissionOverwrites[e.id]
@@ -1496,4 +1493,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cbd5e66edb0bb68abbf4.js.map
+//# sourceMappingURL=31ce6e9f956356a646c1.js.map

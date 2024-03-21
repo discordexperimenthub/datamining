@@ -517,7 +517,7 @@
                 !(0, A.isChannelFull)(l, m.default, E.default)
               : _.default.can(R.Permissions.MOVE_MEMBERS, l) &&
                 (_.default.can(R.Permissions.CONNECT, l) ||
-                  g.default.can({
+                  g.can({
                     permission: R.Permissions.CONNECT,
                     user: e,
                     context: l,
@@ -807,4 +807,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c4bb6755cb67c75ed97f.js.map
+//# sourceMappingURL=b909f08afa929f10765d.js.map

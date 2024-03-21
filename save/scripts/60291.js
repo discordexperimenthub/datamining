@@ -51,14 +51,14 @@
           },
         });
       var a = n("627445"),
-        l = n.n(a),
-        s = n("316693"),
+        s = n.n(a),
+        l = n("316693"),
         i = n("872717"),
         u = n("450911");
       n("851387");
       var r = n("798609"),
-        d = n("716241"),
-        o = n("18494"),
+        o = n("716241"),
+        d = n("18494"),
         c = n("800762"),
         f = n("991170"),
         E = n("716214"),
@@ -69,9 +69,9 @@
       function p(e, t) {
         let n = e.getGuildId();
         return (
-          l(null != n, "This channel cannot be guildless."),
+          s(null != n, "This channel cannot be guildless."),
           t &&
-            (0, d.trackWithMetadata)(
+            (0, o.trackWithMetadata)(
               S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
@@ -87,7 +87,7 @@
       function g(e, t) {
         let n = e.getGuildId();
         return (
-          l(null != n, "This channel cannot be guildless."),
+          s(null != n, "This channel cannot be guildless."),
           i.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
@@ -101,14 +101,14 @@
       function h(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           a = null == e ? void 0 : e.getGuildId();
-        l(null != a, "This channel cannot be guildless.");
-        let s = c.default.getVoiceStateForChannel(e.id),
-          u = (0, I.getAudienceRequestToSpeakState)(s);
+        s(null != a, "This channel cannot be guildless.");
+        let l = c.default.getVoiceStateForChannel(e.id),
+          u = (0, I.getAudienceRequestToSpeakState)(l);
         return (
           u ===
             I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
             !t &&
-            (0, d.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+            (0, o.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
           i.default.patch({
@@ -125,7 +125,7 @@
       function C(e) {
         let t = null == e ? void 0 : e.getGuildId();
         return (
-          l(null != t, "This channel cannot be guildless."),
+          s(null != t, "This channel cannot be guildless."),
           i.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
@@ -140,7 +140,7 @@
       function N(e, t, n) {
         let a = e.getGuildId();
         return (
-          l(null != a, "This channel cannot be guildless."),
+          s(null != a, "This channel cannot be guildless."),
           i.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
             body: { suppress: n, channel_id: e.id },
@@ -151,7 +151,7 @@
         if (null == t || null == e) return;
         let n = t.getGuildId();
         return (
-          l(null != n, "This channel cannot be guildless."),
+          s(null != n, "This channel cannot be guildless."),
           N(t, e.id, !0),
           i.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
@@ -166,28 +166,26 @@
       }
       function R(e, t, n) {
         let a = e.getGuildId();
-        l(null != a, "Channel cannot be guildless");
+        s(null != a, "Channel cannot be guildless");
         let i = e.permissionOverwrites[a],
-          d = {
+          o = {
             id: a,
             type: r.PermissionOverwriteType.ROLE,
-            allow: f.default.NONE,
-            deny: f.default.NONE,
+            allow: f.NONE,
+            deny: f.NONE,
             ...i,
           };
         n
-          ? ((d.allow = s.default.add(d.allow, t)),
-            (d.deny = s.default.remove(d.deny, t)))
-          : ((d.allow = s.default.remove(d.allow, t)),
-            (d.deny = s.default.add(d.deny, t))),
-          u.default.updatePermissionOverwrite(e.id, d);
+          ? ((o.allow = l.add(o.allow, t)), (o.deny = l.remove(o.deny, t)))
+          : ((o.allow = l.remove(o.allow, t)), (o.deny = l.add(o.deny, t))),
+          u.default.updatePermissionOverwrite(e.id, o);
       }
       async function M(e, t, n, a) {
         if ("" === t) return;
-        let l = o.default.getVoiceChannelId() === e.id;
-        !l && (0, E.connectToStage)(e);
-        let s = await (0, T.startStageInstance)(e.id, t, n, a);
-        return h(e, !1, !0), s;
+        let s = d.default.getVoiceChannelId() === e.id;
+        !s && (0, E.connectToStage)(e);
+        let l = await (0, T.startStageInstance)(e.id, t, n, a);
+        return h(e, !1, !0), l;
       }
       async function v(e, t, n) {
         if ("" === t) return;
@@ -216,40 +214,40 @@
         n("222007"),
         n("917351");
       var a = n("945956"),
-        l = n("387111"),
-        s = n("991170"),
+        s = n("387111"),
+        l = n("991170"),
         i = n("834052"),
         u = n("837979"),
         r = n("49111"),
-        d = n("606762"),
-        o = n("782340");
+        o = n("606762"),
+        d = n("782340");
       function c(e, t, n, a) {
-        let s = t[0],
-          i = l.default.getName(e, n, s),
+        let l = t[0],
+          i = s.default.getName(e, n, l),
           u = null != a ? a : t.length;
-        return 1 === u && null != s
+        return 1 === u && null != l
           ? i
-          : null == s
-            ? o.default.Messages.SPEAKING_COUNT.format({ count: u })
-            : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
+          : null == l
+            ? d.default.Messages.SPEAKING_COUNT.format({ count: u })
+            : d.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
                 name: i,
                 count: u - 1,
               });
       }
       function f(e, t) {
         switch (e) {
-          case d.RowType.OWNER:
-            return o.default.Messages
+          case o.RowType.OWNER:
+            return d.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-          case d.RowType.ADMINISTRATOR:
-            return o.default.Messages
+          case o.RowType.ADMINISTRATOR:
+            return d.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-          case d.RowType.MEMBER:
-          case d.RowType.ROLE:
+          case o.RowType.MEMBER:
+          case o.RowType.ROLE:
             return t
-              ? o.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
-              : o.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-          case d.RowType.EMPTY_STATE:
+              ? d.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
+              : d.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+          case o.RowType.EMPTY_STATE:
         }
         return null;
       }
@@ -260,7 +258,7 @@
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: s.default.canEveryoneRole(
+          request_to_speak_state: l.canEveryoneRole(
             r.Permissions.REQUEST_TO_SPEAK,
             e
           )
@@ -275,7 +273,7 @@
       n.r(t),
         n.d(t, {
           startStageInstance: function () {
-            return s;
+            return l;
           },
           updateStageInstance: function () {
             return i;
@@ -285,29 +283,29 @@
           },
         });
       var a = n("872717"),
-        l = n("49111");
-      async function s(e, t, n, s, i) {
+        s = n("49111");
+      async function l(e, t, n, l, i) {
         let u = await a.default.post({
-          url: l.Endpoints.STAGE_INSTANCES,
+          url: s.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
             topic: t,
             privacy_level: n,
             guild_scheduled_event_id: i,
-            send_start_notification: s,
+            send_start_notification: l,
           },
         });
         return u.body;
       }
       async function i(e, t, n) {
-        let s = await a.default.patch({
-          url: l.Endpoints.STAGE_INSTANCE(e),
+        let l = await a.default.patch({
+          url: s.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
-        return s.body;
+        return l.body;
       }
       function u(e) {
-        return a.default.delete(l.Endpoints.STAGE_INSTANCE(e));
+        return a.default.delete(s.Endpoints.STAGE_INSTANCE(e));
       }
     },
     281645: function (e, t, n) {
@@ -320,28 +318,28 @@
         });
       var a = n("37983");
       n("884691");
-      var l = n("77078"),
-        s = n("987317"),
+      var s = n("77078"),
+        l = n("987317"),
         i = n("476765"),
         u = n("674083"),
         r = n("244480"),
-        d = n("119184"),
-        o = n("782340"),
+        o = n("119184"),
+        d = n("782340"),
         c = n("549797");
       function f(e) {
         let { channel: t, transitionState: n, onClose: f } = e,
           E = (0, i.useUID)();
         function _() {
-          s.default.disconnect(), f();
+          l.default.disconnect(), f();
         }
-        return (0, a.jsxs)(l.ModalRoot, {
+        return (0, a.jsxs)(s.ModalRoot, {
           transitionState: n,
           "aria-labelledby": E,
           children: [
-            (0, a.jsxs)(l.ModalContent, {
+            (0, a.jsxs)(s.ModalContent, {
               className: c.content,
               children: [
-                (0, a.jsx)(d.default, {
+                (0, a.jsx)(o.default, {
                   children: (0, a.jsx)("div", {
                     className: c.iconBackground,
                     children: (0, a.jsx)(u.default, {
@@ -351,35 +349,35 @@
                     }),
                   }),
                 }),
-                (0, a.jsx)(l.Heading, {
+                (0, a.jsx)(s.Heading, {
                   id: E,
                   variant: "heading-xl/semibold",
                   color: "header-primary",
                   className: c.title,
-                  children: o.default.Messages.EXPLICIT_END_STAGE_TITLE,
+                  children: d.default.Messages.EXPLICIT_END_STAGE_TITLE,
                 }),
-                (0, a.jsx)(l.Text, {
+                (0, a.jsx)(s.Text, {
                   variant: "text-md/normal",
                   color: "header-secondary",
                   className: c.subtitle,
-                  children: o.default.Messages.EXPLICIT_END_STAGE_SUBTITLE,
+                  children: d.default.Messages.EXPLICIT_END_STAGE_SUBTITLE,
                 }),
               ],
             }),
-            (0, a.jsxs)(l.ModalFooter, {
+            (0, a.jsxs)(s.ModalFooter, {
               children: [
-                (0, a.jsx)(l.Button, {
-                  color: l.Button.Colors.RED,
+                (0, a.jsx)(s.Button, {
+                  color: s.Button.Colors.RED,
                   onClick: function () {
                     (0, r.endStage)(t), _();
                   },
-                  children: o.default.Messages.EXPLICIT_END_STAGE_CONFIRM,
+                  children: d.default.Messages.EXPLICIT_END_STAGE_CONFIRM,
                 }),
-                (0, a.jsx)(l.Button, {
-                  color: l.Button.Colors.PRIMARY,
+                (0, a.jsx)(s.Button, {
+                  color: s.Button.Colors.PRIMARY,
                   className: c.cancelButton,
                   onClick: _,
-                  children: o.default.Messages.EXPLICIT_END_STAGE_CANCEL,
+                  children: d.default.Messages.EXPLICIT_END_STAGE_CANCEL,
                 }),
               ],
             }),
@@ -392,32 +390,32 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return d;
           },
         });
       var a = n("37983");
       n("884691");
-      var l = n("414456"),
-        s = n.n(l),
+      var s = n("414456"),
+        l = n.n(s),
         i = n("782340"),
         u = n("662190"),
         r = n("284434"),
-        d = n("315956");
-      function o(e) {
+        o = n("315956");
+      function d(e) {
         let { className: t, children: n } = e;
         return (0, a.jsxs)("div", {
-          className: s(u.container, t),
+          className: l(u.container, t),
           children: [
             (0, a.jsx)("img", {
               alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-              src: d,
-              className: s(u.sparkleIcon, u.sparkleBottom),
+              src: o,
+              className: l(u.sparkleIcon, u.sparkleBottom),
             }),
             n,
             (0, a.jsx)("img", {
               alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
               src: r,
-              className: s(u.sparkleIcon, u.sparkleTop),
+              className: l(u.sparkleIcon, u.sparkleTop),
             }),
           ],
         });
@@ -438,16 +436,16 @@
           },
         });
       var a = n("995008"),
-        l = n.n(a),
-        s = n("775560");
+        s = n.n(a),
+        l = n("775560");
       let i = function () {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : "uid_";
-          return l(e);
+          return s(e);
         },
-        u = () => (0, s.useLazyValue)(() => i()),
+        u = () => (0, l.useLazyValue)(() => i()),
         r = e => {
           let { children: t } = e;
           return t(u());
@@ -463,19 +461,19 @@
         });
       var a = n("37983");
       n("884691");
-      var l = n("469563"),
-        s = n("340126"),
+      var s = n("469563"),
+        l = n("340126"),
         i = n("75196"),
-        u = (0, l.replaceIcon)(
+        u = (0, s.replaceIcon)(
           function (e) {
             let {
               width: t = 40,
               height: n = 40,
-              color: l = "currentColor",
-              ...s
+              color: s = "currentColor",
+              ...l
             } = e;
             return (0, a.jsxs)("svg", {
-              ...(0, i.default)(s),
+              ...(0, i.default)(l),
               width: t,
               height: n,
               viewBox: "0 0 40 40",
@@ -485,18 +483,18 @@
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   d: "M37.581 26.6667L40 29.0857L35.7524 33.3333L40 37.581L37.581 40L33.3334 35.7524L29.0857 40L26.6667 37.581L30.9143 33.3333L26.6667 29.0857L29.0857 26.6667L33.3334 30.9143L37.581 26.6667Z",
-                  fill: l,
+                  fill: s,
                 }),
                 (0, a.jsx)("path", {
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   d: "M23.3294 21.5042C22.1286 22.3692 21.1773 23.5589 20.6041 24.9448C20.4081 24.981 20.2062 25 20 25C18.1667 25 16.6667 23.5 16.6667 21.6667C16.6667 19.8333 18.1667 18.3333 20 18.3333C21.7789 18.3333 23.244 19.7456 23.3294 21.5042ZM28.1664 20C27.3936 16.1977 24.0293 13.3333 20 13.3333C15.4 13.3333 11.6667 17.0667 11.6667 21.6667C11.6667 23.1833 12.1 24.5833 12.8167 25.8167L10.6334 27.0833C9.70002 25.4833 9.16669 23.6333 9.16669 21.6667C9.16669 15.7 14.0334 10.8333 20 10.8333C25.4001 10.8333 29.8992 14.8197 30.7049 20H28.1664ZM35.7468 20C34.915 12.0346 28.1871 5.83333 20 5.83333C11.25 5.83333 4.16669 12.9167 4.16669 21.6667C4.16669 24.55 4.95002 27.25 6.28335 29.5667L4.13335 30.8167C2.58335 28.1333 1.66669 25 1.66669 21.6667C1.66669 11.55 9.88335 3.33333 20 3.33333C29.5549 3.33333 37.415 10.6628 38.2584 20H35.7468ZM20.0154 27.5C20.0052 27.6654 20 27.8321 20 28V33.3333H14.1667V32.5C14.1667 29.6667 16.5667 27.5 20 27.5C20.0051 27.5 20.0103 27.5 20.0154 27.5Z",
-                  fill: l,
+                  fill: s,
                 }),
               ],
             });
           },
-          s.StageXIcon,
+          l.StageXIcon,
           void 0,
           { size: 40 }
         );
@@ -511,18 +509,18 @@
         });
       var a = n("37983");
       n("884691");
-      var l = n("669491"),
-        s = n("82169");
+      var s = n("669491"),
+        l = n("82169");
       let i = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: i = l.default.colors.INTERACTIVE_NORMAL,
+          color: i = s.default.colors.INTERACTIVE_NORMAL,
           colorClass: u = "",
           ...r
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, s.default)(r),
+          ...(0, l.default)(r),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -550,4 +548,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f015e670e56809f3ed55.js.map
+//# sourceMappingURL=5984c5b71a01e9803517.js.map

@@ -346,9 +346,7 @@
           i = l === f.GuildScheduledEventEntityTypes.EXTERNAL;
         if (i) return !0;
         let r = n.getChannel(u);
-        return (
-          null != r && o.default.canEveryoneRole(E.Permissions.VIEW_CHANNEL, r)
-        );
+        return null != r && o.canEveryoneRole(E.Permissions.VIEW_CHANNEL, r);
       }
       function g(e) {
         let [t, n, l, o] =
@@ -2111,4 +2109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=28b5356844ef8a7cff72.js.map
+//# sourceMappingURL=f2fce9ca68c9019bee4f.js.map

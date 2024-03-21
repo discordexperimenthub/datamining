@@ -1301,7 +1301,7 @@
         return {
           id: e,
           type: t,
-          deny: p.default.NONE,
+          deny: p.NONE,
           allow: _.MODERATE_STAGE_CHANNEL_PERMISSIONS,
         };
       }
@@ -1437,4 +1437,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8ad6e2469a3e4e220ad6.js.map
+//# sourceMappingURL=a43a7b87890d682c8765.js.map

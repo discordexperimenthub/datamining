@@ -168,11 +168,11 @@
         l = a("991170");
       let r = (e, t, a) => {
         if (null == e.id) return !1;
-        let n = l.default.computePermissionsForRoles({
+        let n = l.computePermissionsForRoles({
           forceRoles: { [e.id]: e },
           context: a,
         });
-        return s.default.has(n, t);
+        return s.has(n, t);
       };
       function i(e, t) {
         return Object.values(t)
@@ -2097,7 +2097,7 @@
                     n.addStep(
                       (function (e, t, n, l) {
                         let r = (0, C.default)(n)
-                            ? c.default.combine(
+                            ? c.combine(
                                 V.Permissions.VIEW_CHANNEL,
                                 V.Permissions.SEND_MESSAGES
                               )
@@ -7736,4 +7736,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1035e7ce6858353383a0.js.map
+//# sourceMappingURL=2378a49f2092dcc1788e.js.map

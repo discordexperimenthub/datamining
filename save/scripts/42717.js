@@ -541,8 +541,8 @@
         l = n("923510"),
         r = n("49111");
       let s = r.Permissions.VIEW_CHANNEL,
-        a = i.default.combine(s, r.Permissions.CONNECT),
-        u = i.default.combine(s, l.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        a = i.combine(s, r.Permissions.CONNECT),
+        u = i.combine(s, l.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     152475: function (e, t, n) {
       "use strict";
@@ -583,9 +583,7 @@
           r = i === f.GuildScheduledEventEntityTypes.EXTERNAL;
         if (r) return !0;
         let a = n.getChannel(l);
-        return (
-          null != a && d.default.canEveryoneRole(h.Permissions.VIEW_CHANNEL, a)
-        );
+        return null != a && d.canEveryoneRole(h.Permissions.VIEW_CHANNEL, a);
       }
       function E(e) {
         let [t, n, i, d] =
@@ -2135,8 +2133,8 @@
               : e.isGuildVoice() &&
                 (t = o.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              l.default.combine(t, d.Permissions.CREATE_EVENTS),
-              l.default.combine(t, d.Permissions.MANAGE_EVENTS),
+              l.combine(t, d.Permissions.CREATE_EVENTS),
+              l.combine(t, d.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -2371,7 +2369,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? m.Permissions.SEND_MESSAGES
-              : r.default.combine(
+              : r.combine(
                   m.Permissions.CREATE_PUBLIC_THREADS,
                   m.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -2384,7 +2382,7 @@
       function p(e, t) {
         let n = e.isForumLikeChannel()
             ? m.Permissions.SEND_MESSAGES
-            : r.default.combine(
+            : r.combine(
                 m.Permissions.CREATE_PUBLIC_THREADS,
                 m.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -2395,10 +2393,7 @@
         let t = (0, s.useStateFromStores)(
           [h.default],
           () =>
-            h.default.can(
-              r.default.combine(m.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            h.default.can(r.combine(m.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === m.ChannelTypes.GUILD_TEXT && I(t, e);
@@ -3997,4 +3992,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2f1dca7b18cbc9417cc2.js.map
+//# sourceMappingURL=2f46ff4aae09c87c5539.js.map

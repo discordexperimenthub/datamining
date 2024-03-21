@@ -44,16 +44,14 @@
       function R(e, l) {
         switch (e) {
           case N.NewMemberActionTypes.VIEW:
-            return C.default.canEveryoneRole(M.Permissions.VIEW_CHANNEL, l);
+            return C.canEveryoneRole(M.Permissions.VIEW_CHANNEL, l);
           case N.NewMemberActionTypes.CHAT:
             if (M.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type))
               return (
-                C.default.canEveryoneRole(
-                  M.Permissions.SEND_MESSAGES_IN_THREADS,
-                  l
-                ) || C.default.canEveryoneRole(M.Permissions.SEND_MESSAGES, l)
+                C.canEveryoneRole(M.Permissions.SEND_MESSAGES_IN_THREADS, l) ||
+                C.canEveryoneRole(M.Permissions.SEND_MESSAGES, l)
               );
-            return C.default.canEveryoneRole(M.Permissions.SEND_MESSAGES, l);
+            return C.canEveryoneRole(M.Permissions.SEND_MESSAGES, l);
           default:
             return !1;
         }
@@ -665,4 +663,4 @@
     },
   },
 ]);
-//# sourceMappingURL=425dcababb81725abd45.js.map
+//# sourceMappingURL=e6fd1f050796a4739cce.js.map

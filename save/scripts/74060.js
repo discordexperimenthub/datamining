@@ -31,10 +31,10 @@
       n.r(t),
         n.d(t, {
           updateStripePaymentRequest: function () {
-            return l;
+            return r;
           },
           updateCardInfo: function () {
-            return r;
+            return l;
           },
           clearCardInfo: function () {
             return s;
@@ -47,13 +47,13 @@
           },
         });
       var i = n("913144");
-      function l(e) {
+      function r(e) {
         i.default.dispatch({
           type: "NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE",
           stripePaymentMethod: e,
         });
       }
-      function r(e, t) {
+      function l(e, t) {
         i.default.dispatch({
           type: "NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE",
           info: e,
@@ -85,11 +85,11 @@
       n.r(t),
         n.d(t, {
           clearPurchaseTokenAuthState: function () {
-            return l;
+            return r;
           },
         });
       var i = n("913144");
-      function l() {
+      function r() {
         i.default.dispatch({ type: "BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE" });
       }
     },
@@ -103,8 +103,8 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("414456"),
-        r = n.n(l),
+      var r = n("414456"),
+        l = n.n(r),
         s = n("77078"),
         a = n("782340"),
         o = n("518377");
@@ -113,12 +113,12 @@
         let {
           className: t,
           onClick: n,
-          "aria-label": l,
+          "aria-label": r,
           look: c = u.DEFAULT,
         } = e;
         return (0, i.jsx)(s.Clickable, {
-          "aria-label": null != l ? l : a.default.Messages.REMOVE,
-          className: r(o.button, c, t),
+          "aria-label": null != r ? r : a.default.Messages.REMOVE,
+          className: l(o.button, c, t),
           onClick: n,
         });
       }
@@ -134,8 +134,8 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("414456"),
-        r = n.n(l),
+      var r = n("414456"),
+        l = n.n(r),
         s = n("446674"),
         a = n("77078"),
         o = n("102985"),
@@ -154,7 +154,7 @@
         let {
           primary: t,
           secondary: n,
-          botType: l,
+          botType: r,
           botVerified: s,
           discriminatorClass: o,
           className: c,
@@ -164,7 +164,7 @@
           showStreamerModeTooltip: v,
         } = e;
         return (0, i.jsxs)("div", {
-          className: r(h.info, c),
+          className: l(h.info, c),
           children: [
             (0, i.jsx)(a.Tooltip, {
               text: f.default.Messages.STREAMER_MODE_ENABLED,
@@ -173,21 +173,21 @@
               children: e =>
                 (0, i.jsx)("span", {
                   ...e,
-                  className: r(h.username, d),
+                  className: l(h.username, d),
                   style: null != E ? { color: E } : void 0,
                   children: t,
                 }),
             }),
             null != n
               ? (0, i.jsx)("span", {
-                  className: r(h.infoSpacing, o),
+                  className: l(h.infoSpacing, o),
                   children: n,
                 })
               : void 0,
-            null != l &&
+            null != r &&
               (0, i.jsx)(u.default, {
-                type: l,
-                className: r(h.infoSpacing, C),
+                type: r,
+                className: l(h.infoSpacing, C),
                 verified: s,
               }),
           ],
@@ -197,8 +197,8 @@
         let {
             hideDiscriminator: t = !1,
             user: n,
-            nick: l,
-            forceUsername: r,
+            nick: r,
+            forceUsername: l,
             showAccountIdentifier: a,
             overrideDiscriminator: u,
             forcePomelo: f,
@@ -211,11 +211,11 @@
           m = v || t || n.isNonUserBot(),
           _ = n.toString(),
           p = d.default.getName(n),
-          S = r ? _ : null != l ? l : p,
+          S = l ? _ : null != r ? r : p,
           N = n.isPomelo() || f;
         if (N || S !== _) {
           let e =
-              S === _ && N && r
+              S === _ && N && l
                 ? d.default.getUserTag(n, { forcePomelo: f })
                 : S,
             t = a && e !== "@".concat(_) ? d.default.getUserTag(n) : void 0;
@@ -290,20 +290,20 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return r;
           },
         }),
         n("222007");
       var i = n("884691");
-      function l(e) {
+      function r(e) {
         let [t, n] = (0, i.useState)(!1),
-          l = (0, i.useRef)(e.current);
+          r = (0, i.useRef)(e.current);
         return (
           (0, i.useEffect)(() => {
-            l.current = e.current;
+            r.current = e.current;
           }, [e]),
           (0, i.useEffect)(() => {
-            let e = l.current;
+            let e = r.current;
             if (null == e) return;
             let t = () => n(!0),
               i = () => n(!1);
@@ -315,7 +315,7 @@
                   e.removeEventListener("mouseleave", i);
               }
             );
-          }, [l]),
+          }, [r]),
           t
         );
       }
@@ -330,12 +330,12 @@
         }),
         n("222007");
       var i = n("37983"),
-        l = n("884691"),
-        r = n("133403"),
+        r = n("884691"),
+        l = n("133403"),
         s = n("164527");
       function a(e) {
         let { hasSetEmoji: t, onClick: n, children: a } = e,
-          [o, u] = l.useState(!1);
+          [o, u] = r.useState(!1);
         return (0, i.jsxs)("div", {
           className: s.container,
           onMouseEnter: () => {
@@ -352,7 +352,7 @@
             a,
             t &&
               o &&
-              (0, i.jsx)(r.default, { onClick: n, className: s.removeButton }),
+              (0, i.jsx)(l.default, { onClick: n, className: s.removeButton }),
           ],
         });
       }
@@ -362,17 +362,17 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return l;
           },
         });
       var i = n("446674"),
-        l = n("76393");
-      function r() {
+        r = n("76393");
+      function l() {
         return (0, i.useStateFromStores)(
-          [l.default],
+          [r.default],
           () =>
-            null != l.default.getRemoteSessionId() ||
-            null != l.default.getAwaitingRemoteSessionInfo()
+            null != r.default.getRemoteSessionId() ||
+            null != r.default.getAwaitingRemoteSessionInfo()
         );
       }
     },
@@ -381,12 +381,12 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return l;
           },
         });
       var i = n("884691");
-      let l = i.createContext(void 0);
-      var r = l;
+      let r = i.createContext(void 0);
+      var l = r;
     },
     689226: function (e, t, n) {
       "use strict";
@@ -407,8 +407,8 @@
         }),
         n("781738");
       var i = n("867805"),
-        l = n("407063"),
-        r = n("315102"),
+        r = n("407063"),
+        l = n("315102"),
         s = n("773336"),
         a = n("49111");
       let o = ""
@@ -433,20 +433,20 @@
           e.replace(
             /size=[0-9]+/g,
             "size=".concat(
-              (0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)())
+              (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)())
             )
           ),
         h = (e, t) => {
           let { id: n, icon: i } = e;
           if (null == i) return;
           if (i.startsWith("data:")) return i;
-          let s = r.SUPPORTS_WEBP ? "webp" : "png",
+          let s = l.SUPPORTS_WEBP ? "webp" : "png",
             d = "",
             f = "quality=lossless";
           return (null != t &&
             ((d =
               "size=" +
-              (0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)())),
+              (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)())),
             (f = c ? "" : "&" + f)),
           null != window.GLOBAL_ENV.CDN_HOST)
             ? ""
@@ -487,11 +487,11 @@
           },
         });
       var i = n("316693"),
-        l = n("923510"),
-        r = n("49111");
-      let s = r.Permissions.VIEW_CHANNEL,
-        a = i.default.combine(s, r.Permissions.CONNECT),
-        o = i.default.combine(s, l.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        r = n("923510"),
+        l = n("49111");
+      let s = l.Permissions.VIEW_CHANNEL,
+        a = i.combine(s, l.Permissions.CONNECT),
+        o = i.combine(s, r.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     650484: function (e, t, n) {
       "use strict";
@@ -508,9 +508,9 @@
           },
         });
       var i = n("37983"),
-        l = n("884691"),
-        r = n("414456"),
-        s = n.n(r),
+        r = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
         a = n("627445"),
         o = n.n(a),
         u = n("817736"),
@@ -519,7 +519,7 @@
         f = n("642906"),
         h = n("304006");
       function E(e) {
-        var t, n, r, a, u, c;
+        var t, n, l, a, u, c;
         let {
             header: E,
             isLargeModal: C,
@@ -537,7 +537,7 @@
             setReadySlideId: I,
           } = (0, f.usePaymentContext)(),
           T = _.find(e => e.key === m);
-        l.useEffect(() => {
+        r.useEffect(() => {
           N(null);
         }, [m, N]),
           o(null != T, "Unknown step for current payment flow.");
@@ -562,9 +562,9 @@
               ? h.sliderBodyLarge
               : null == T
                 ? void 0
-                : null === (r = T.options) || void 0 === r
+                : null === (l = T.options) || void 0 === l
                   ? void 0
-                  : r.sliderBodyClassName;
+                  : l.sliderBodyClassName;
         return (0, i.jsxs)(i.Fragment, {
           children: [
             null ===
@@ -633,8 +633,8 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("748820"),
-        r = n("77078"),
+      var r = n("748820"),
+        l = n("77078"),
         s = n("112679"),
         a = n("55689"),
         o = n("676379"),
@@ -668,16 +668,16 @@
             subscription: O,
           } = null != e ? e : {},
           j = !1,
-          w = (0, l.v4)(),
+          w = (0, r.v4)(),
           V = u.default.getCurrentUser(),
           D = (0, f.isPremiumExactly)(V, E.PremiumTypes.TIER_2);
-        (0, r.openModalLazy)(
+        (0, l.openModalLazy)(
           async () => {
             let { default: e } = await n.el("646139").then(n.bind(n, "646139"));
             return n => {
-              let { onClose: l, ...r } = n;
+              let { onClose: r, ...l } = n;
               return (0, i.jsx)(e, {
-                ...r,
+                ...l,
                 loadId: w,
                 subscriptionTier: A,
                 skuId: (0, f.castPremiumSubscriptionAsSkuId)(A),
@@ -687,7 +687,7 @@
                 initialPlanId: t,
                 followupSKUInfo: C,
                 onClose: (e, t) => {
-                  l(),
+                  r(),
                     null == v || v(e),
                     e &&
                       (null == _ || _(),
@@ -760,8 +760,8 @@
         }),
         n("222007");
       var i = n("884691"),
-        l = n("316693"),
-        r = n("446674"),
+        r = n("316693"),
+        l = n("446674"),
         s = n("813006");
       n("923959");
       var a = n("957255"),
@@ -783,11 +783,11 @@
           if ("creator_id" in e) return i && null != t && e.creator_id === t.id;
           if ("userId" in e) return i && null != t && e.userId === t.id;
           if ("user" in e) {
-            var l;
+            var r;
             return (
               i &&
               null != t &&
-              (null === (l = e.user) || void 0 === l ? void 0 : l.id) === t.id
+              (null === (r = e.user) || void 0 === r ? void 0 : r.id) === t.id
             );
           }
           return !1;
@@ -802,8 +802,8 @@
               : e.isGuildVoice() &&
                 (t = u.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              l.default.combine(t, c.Permissions.CREATE_EVENTS),
-              l.default.combine(t, c.Permissions.MANAGE_EVENTS),
+              r.combine(t, c.Permissions.CREATE_EVENTS),
+              r.combine(t, c.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -812,21 +812,21 @@
               e instanceof s.default
                 ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS]
                 : h(e),
-            [l, u, E, C] = (0, r.useStateFromStoresArray)([a.default], () => [
+            [r, u, E, C] = (0, l.useStateFromStoresArray)([a.default], () => [
               a.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e),
               a.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
               a.default.can(t, e),
               a.default.can(n, e),
             ]),
-            v = (0, r.useStateFromStores)([o.default], () =>
+            v = (0, l.useStateFromStores)([o.default], () =>
               o.default.getCurrentUser()
             ),
-            m = i.useCallback(e => f(e, v, u, l), [l, u, v]),
+            m = i.useCallback(e => f(e, v, u, r), [r, u, v]),
             _ = i.useCallback(e => f(e, v, C, E), [C, E, v]);
           return null == e
             ? d
             : {
-                canCreateExpressions: l,
+                canCreateExpressions: r,
                 canCreateGuildEvent: E,
                 canManageAllExpressions: u,
                 canManageAllEvents: C,
@@ -843,23 +843,23 @@
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : o.default,
-            [i, l] =
+            [i, r] =
               e instanceof s.default
                 ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS]
                 : h(e),
-            r = t.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e),
+            l = t.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e),
             u = t.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
             E = t.can(i, e),
-            C = t.can(l, e),
+            C = t.can(r, e),
             v = n.getCurrentUser();
           return null == e
             ? d
             : {
-                canCreateExpressions: r,
+                canCreateExpressions: l,
                 canCreateGuildEvent: E,
                 canManageAllExpressions: u,
                 canManageAllEvents: C,
-                canManageGuildExpression: e => f(e, v, u, r),
+                canManageGuildExpression: e => f(e, v, u, l),
                 canManageGuildEvent: e => f(e, v, C, E),
               };
         };
@@ -869,11 +869,11 @@
       n.r(t),
         n.d(t, {
           setCanPlayWowMoment: function () {
-            return l;
+            return r;
           },
         });
       var i = n("913144");
-      let l = e => {
+      let r = e => {
         i.default.dispatch({
           type: "PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT",
           value: e,
@@ -889,8 +889,8 @@
           },
         });
       var i = n("884691"),
-        l = n("79112"),
-        r = n("685665"),
+        r = n("79112"),
+        l = n("685665"),
         s = n("929423");
       n("424562");
       var a = n("49111"),
@@ -903,10 +903,10 @@
             analyticsLocations: c,
             openWithoutBackstack: d = !1,
           } = e,
-          { analyticsLocations: f } = (0, r.default)(),
+          { analyticsLocations: f } = (0, l.default)(),
           h = (0, i.useCallback)(() => {
             null != t && (0, s.initGuildIdentitySettings)(t, null != c ? c : f),
-              l.default.open(
+              r.default.open(
                 a.UserSettingsSections.PROFILE_CUSTOMIZATION,
                 null != t
                   ? o.ProfileCustomizationSubsection.GUILD
@@ -976,8 +976,8 @@
           },
         });
       var i = n("917351"),
-        l = n.n(i),
-        r = n("316693"),
+        r = n.n(i),
+        l = n("316693"),
         s = n("446674"),
         a = n("296892"),
         o = n("889014"),
@@ -1002,7 +1002,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? v.Permissions.SEND_MESSAGES
-              : r.default.combine(
+              : l.combine(
                   v.Permissions.CREATE_PUBLIC_THREADS,
                   v.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -1015,7 +1015,7 @@
       function p(e, t) {
         let n = e.isForumLikeChannel()
             ? v.Permissions.SEND_MESSAGES
-            : r.default.combine(
+            : l.combine(
                 v.Permissions.CREATE_PUBLIC_THREADS,
                 v.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -1026,10 +1026,7 @@
         let t = (0, s.useStateFromStores)(
           [h.default],
           () =>
-            h.default.can(
-              r.default.combine(v.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            h.default.can(l.combine(v.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === v.ChannelTypes.GUILD_TEXT && I(t, e);
@@ -1076,17 +1073,17 @@
               e.id
             ),
             i = C.default.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
-            r = l(n).some(e =>
+            l = r(n).some(e =>
               h.default.can(v.Permissions.VIEW_CHANNEL, e.channel)
             ),
-            s = l(t).some(
+            s = r(t).some(
               e =>
                 !(e.channel.id in n) &&
                 h.default.can(v.Permissions.VIEW_CHANNEL, e.channel)
             ),
-            a = l(i).some(e => h.default.can(v.Permissions.VIEW_CHANNEL, e));
+            a = r(i).some(e => h.default.can(v.Permissions.VIEW_CHANNEL, e));
           return {
-            hasActiveThreads: r || s || a,
+            hasActiveThreads: l || s || a,
             hasMoreActiveThreads: a || s,
           };
         });
@@ -1178,11 +1175,11 @@
             h.default.can(v.Permissions.CONNECT, e)
           ),
           i = P(e),
-          l = m.useExperiment(
+          r = m.useExperiment(
             { guildId: e.guild_id, location: "e791ea_1" },
             { autoTrackExposure: !1 }
           ).enabled;
-        return !t && e.isVocalThread() && l && n && i;
+        return !t && e.isVocalThread() && r && n && i;
       }
       function V(e) {
         let t = j(e);
@@ -1197,11 +1194,11 @@
             return i;
           },
           WELCOME_EMOJI_TOOLTIP_STORAGE_KEY: function () {
-            return l;
+            return r;
           },
         });
       let i = "Guild Welcome Screen",
-        l = "hasClickedWelcomeEmojiPicker";
+        r = "hasClickedWelcomeEmojiPicker";
     },
     277432: function (e, t, n) {
       "use strict";
@@ -1214,8 +1211,8 @@
         n("222007"),
         n("424973");
       var i = n("37983"),
-        l = n("884691"),
-        r = n("446674"),
+        r = n("884691"),
+        l = n("446674"),
         s = n("95410"),
         a = n("77078"),
         o = n("430568"),
@@ -1251,23 +1248,23 @@
               onClose: w,
             } = e,
             V = (0, N.useUID)(),
-            [D, U] = l.useState(null != b ? b.channel_id : null),
-            [H, G] = l.useState(null != b ? b.description : ""),
-            [B, F] = l.useState(
+            [D, U] = r.useState(null != b ? b.channel_id : null),
+            [H, G] = r.useState(null != b ? b.description : ""),
+            [B, F] = r.useState(
               null != b ? { id: b.emoji_id, name: b.emoji_name } : null
             ),
-            [k, W] = l.useState(!1),
-            Z = (0, r.useStateFromStores)([E.default], () =>
+            [k, W] = r.useState(!1),
+            Z = (0, l.useStateFromStores)([E.default], () =>
               (null == B ? void 0 : B.id) != null
                 ? E.default.getUsableCustomEmojiById(B.id)
                 : null
             ),
-            z = (0, r.useStateFromStores)(
+            z = (0, l.useStateFromStores)(
               [v.default],
               () => v.default.getChannels(y)[v.GUILD_SELECTABLE_CHANNELS_KEY],
               [y]
             ),
-            Y = (0, r.useStateFromStores)([g.default], () => g.default.get(y)),
+            Y = (0, l.useStateFromStores)([g.default], () => g.default.get(y)),
             K =
               null !==
                 (n =
@@ -1278,15 +1275,15 @@
                       : t.map(e => e.channel_id)) && void 0 !== n
                 ? n
                 : [],
-            [J, X] = l.useState(!1);
-          l.useEffect(() => {
+            [J, X] = r.useState(!1);
+          r.useEffect(() => {
             !s.default.get(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) &&
               setTimeout(() => X(!0), 300);
           }, []);
           let q = [];
           z.forEach(e => {
             let { channel: t } = e;
-            T.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) &&
+            T.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) &&
               ((null == b ? void 0 : b.channel_id) === t.id ||
                 !K.includes(t.id)) &&
               q.push({
@@ -1297,7 +1294,7 @@
           let Q = () => {
               X(!1), w();
             },
-            $ = l.useCallback(e => G(e), []),
+            $ = r.useCallback(e => G(e), []),
             ee = e => {
               var t, n, i;
               if (null == e) {
@@ -1320,7 +1317,7 @@
                     }
               );
             },
-            et = l.useCallback(() => {
+            et = r.useCallback(() => {
               s.default.set(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1);
             }, []);
           return (0, i.jsx)(u.default, {
@@ -1355,14 +1352,14 @@
                             var t;
                             if (null === e) return null;
                             let n = e.value,
-                              l = C.default.getChannel(n),
-                              r =
+                              r = C.default.getChannel(n),
+                              l =
                                 null !==
-                                  (t = (0, d.getChannelIconComponent)(l)) &&
+                                  (t = (0, d.getChannelIconComponent)(r)) &&
                                 void 0 !== t
                                   ? t
                                   : I.default;
-                            return (0, i.jsx)(r, {
+                            return (0, i.jsx)(l, {
                               className: P.channelTitleIcon,
                               width: 16,
                               height: 16,
@@ -1558,25 +1555,25 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("446674"),
-        r = n("77078"),
+      var r = n("446674"),
+        l = n("77078"),
         s = n("679653"),
         a = n("42203"),
         o = n("782340");
       function u(e) {
         let { onConfirm: t, onCancel: n, channelId: u } = e,
-          c = (0, l.useStateFromStores)([a.default], () =>
+          c = (0, r.useStateFromStores)([a.default], () =>
             null != u ? a.default.getChannel(u) : null
           ),
           d = (0, s.default)(c, !0);
-        return (0, i.jsx)(r.DeclarativeConfirmModal, {
+        return (0, i.jsx)(l.DeclarativeConfirmModal, {
           dismissable: !0,
           header: o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
           confirmText: o.default.Messages.REMOVE,
           cancelText: o.default.Messages.CANCEL,
           onConfirm: t,
           onCancel: n,
-          children: (0, i.jsx)(r.Text, {
+          children: (0, i.jsx)(l.Text, {
             variant: "text-sm/normal",
             children:
               null != c
@@ -1598,9 +1595,9 @@
           },
         });
       var i = n("37983"),
-        l = n("884691"),
-        r = n("414456"),
-        s = n.n(r),
+        r = n("884691"),
+        l = n("414456"),
+        s = n.n(l),
         a = n("77078"),
         o = n("760607"),
         u = n("684133");
@@ -1608,14 +1605,14 @@
         let {
             children: t,
             size: n = 16,
-            className: r,
+            className: l,
             flowerStarClassName: c,
             ...d
           } = e,
-          f = l.Children.only(t),
+          f = r.Children.only(t),
           h = (0, a.useRedesignIconContext)().enabled;
         return (0, i.jsxs)("div", {
-          className: s(u.flowerStarContainer, r),
+          className: s(u.flowerStarContainer, l),
           style: { width: n, height: n },
           children: [
             (0, i.jsx)(o.default, { ...d, className: s(c, u.flowerStar) }),
@@ -1642,8 +1639,8 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("414456"),
-        r = n.n(l),
+      var r = n("414456"),
+        l = n.n(r),
         s = n("79798"),
         a = n("988268"),
         o = n("293005"),
@@ -1651,7 +1648,7 @@
           let {
             name: t,
             discriminator: n,
-            invertBotTagColor: l,
+            invertBotTagColor: r,
             nameColor: a,
             className: u,
             botType: c,
@@ -1664,11 +1661,11 @@
             usernameIcon: m,
           } = e;
           return (0, i.jsxs)("div", {
-            className: r(u, o.nameTag),
+            className: l(u, o.nameTag),
             style: C,
             children: [
               (0, i.jsxs)("span", {
-                className: r(o.username, d),
+                className: l(o.username, d),
                 style: null != a ? { color: a } : void 0,
                 children: [m, t],
               }),
@@ -1681,8 +1678,8 @@
               null != c
                 ? (0, i.jsx)(s.default, {
                     type: c,
-                    invertColor: l,
-                    className: r(h, o.bot),
+                    invertColor: r,
+                    className: l(h, o.bot),
                     verified: E,
                     useRemSizes: v,
                   })
@@ -1696,7 +1693,7 @@
       n.r(t),
         n.d(t, {
           ShineSizes: function () {
-            return l;
+            return r;
           },
           Shine: function () {
             return v;
@@ -1706,8 +1703,8 @@
           },
         });
       var i,
-        l,
-        r = n("37983"),
+        r,
+        l = n("37983"),
         s = n("884691"),
         a = n("414456"),
         o = n.n(a),
@@ -1716,20 +1713,20 @@
         d = n("252744"),
         f = n("145131"),
         h = n("61435");
-      ((i = l || (l = {})).DEFAULT = "default"), (i.SMALL = "small");
+      ((i = r || (r = {})).DEFAULT = "default"), (i.SMALL = "small");
       let E = { default: h.shineDefault, small: h.shineSmall },
         C = { default: h.shineInnerDefault, small: h.shineInnerSmall };
       class v extends s.PureComponent {
         render() {
           let { className: e, shineSize: t, shinePaused: n, ...i } = this.props;
-          return (0, r.jsx)(u.default.div, {
+          return (0, l.jsx)(u.default.div, {
             ...i,
             className: o(h.shineContainer, e, { [h.shinePaused]: n }),
-            children: (0, r.jsx)(f.default, {
+            children: (0, l.jsx)(f.default, {
               align: f.default.Align.CENTER,
               justify: f.default.Justify.CENTER,
               className: E[t],
-              children: (0, r.jsx)("div", { className: C[t] }),
+              children: (0, l.jsx)("div", { className: C[t] }),
             }),
           });
         }
@@ -1740,7 +1737,7 @@
             children: t,
             className: n,
             disabled: i,
-            submitting: l,
+            submitting: r,
             pauseAnimation: a,
             shineSize: u = "default",
             shinePaused: f,
@@ -1750,17 +1747,17 @@
           } = e,
           _ = s.createRef(),
           p = (0, d.default)(_),
-          S = !i && !l && !0 !== a && (!C || p);
-        return (0, r.jsxs)(c.Button, {
+          S = !i && !r && !0 !== a && (!C || p);
+        return (0, l.jsxs)(c.Button, {
           buttonRef: _,
           ...m,
           className: o(h.shinyButton, n),
           disabled: i,
-          submitting: l,
+          submitting: r,
           children: [
             t,
             S
-              ? (0, r.jsx)(v, {
+              ? (0, l.jsx)(v, {
                   shinePaused: f,
                   className: o(
                     h.buttonShine,
@@ -1773,7 +1770,7 @@
           ],
         });
       };
-      m.ShineSizes = l;
+      m.ShineSizes = r;
       var _ = m;
     },
     191814: function (e, t, n) {
@@ -1781,21 +1778,21 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return l;
+            return r;
           },
         });
       var i = n("37983");
-      function l(e) {
+      function r(e) {
         let { size: t, horizontal: n = !1 } = e,
-          l = n ? t : 1,
-          r = n ? 1 : t;
+          r = n ? t : 1,
+          l = n ? 1 : t;
         return (0, i.jsx)("span", {
           style: {
             display: "block",
-            width: l,
-            minWidth: l,
-            height: r,
-            minHeight: r,
+            width: r,
+            minWidth: r,
+            height: l,
+            minHeight: l,
           },
         });
       }
@@ -1816,16 +1813,16 @@
           },
         });
       var i = n("995008"),
-        l = n.n(i),
-        r = n("775560");
+        r = n.n(i),
+        l = n("775560");
       let s = function () {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : "uid_";
-          return l(e);
+          return r(e);
         },
-        a = () => (0, r.useLazyValue)(() => s()),
+        a = () => (0, l.useLazyValue)(() => s()),
         o = e => {
           let { children: t } = e;
           return t(a());
@@ -1841,8 +1838,8 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("414456"),
-        r = n.n(l),
+      var r = n("414456"),
+        l = n.n(r),
         s = n("384737"),
         a = n("448052"),
         o = n("748802"),
@@ -1860,7 +1857,7 @@
           let {
               direction: t = h.DOWN,
               width: n = 24,
-              height: l = 24,
+              height: r = 24,
               color: E = "currentColor",
               transition: C = f.transition,
               className: v,
@@ -1881,15 +1878,15 @@
               ...p,
               className: v,
               width: n,
-              height: l,
+              height: r,
               color: E,
               colorClass: m,
             });
           }
           return (0, i.jsx)("svg", {
-            className: r(v, C, N),
+            className: l(v, C, N),
             width: n,
-            height: l,
+            height: r,
             viewBox: "0 0 24 24",
             ...(0, d.default)(p),
             children: (0, i.jsx)("path", {
@@ -1917,16 +1914,16 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("469563"),
-        r = n("733154"),
+      var r = n("469563"),
+        l = n("733154"),
         s = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
-              color: l = "currentColor",
-              foreground: r,
+              color: r = "currentColor",
+              foreground: l,
               ...a
             } = e;
             return (0, i.jsx)("svg", {
@@ -1936,13 +1933,13 @@
               viewBox: "0 0 24 24",
               fill: "none",
               children: (0, i.jsx)("path", {
-                className: r,
-                fill: l,
+                className: l,
+                fill: r,
                 d: "M4.79805 3C3.80445 3 2.99805 3.8055 2.99805 4.8V15.6C2.99805 16.5936 3.80445 17.4 4.79805 17.4H7.49805V21L11.098 17.4H19.198C20.1925 17.4 20.998 16.5936 20.998 15.6V4.8C20.998 3.8055 20.1925 3 19.198 3H4.79805Z",
               }),
             });
           },
-          r.ChatIcon,
+          l.ChatIcon,
           void 0,
           { size: 24 }
         );
@@ -1957,16 +1954,16 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("469563"),
-        r = n("505088"),
+      var r = n("469563"),
+        l = n("505088"),
         s = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
-              color: l = "currentColor",
-              foreground: r,
+              color: r = "currentColor",
+              foreground: l,
               backgroundColor: a,
               ...o
             } = e;
@@ -1980,14 +1977,14 @@
                   ? (0, i.jsx)("circle", { r: 5, cx: 7, cy: 7, fill: a })
                   : null,
                 (0, i.jsx)("path", {
-                  fill: l,
-                  className: r,
+                  fill: r,
+                  className: l,
                   d: "M7.02799 0.333252C3.346 0.333252 0.361328 3.31792 0.361328 6.99992C0.361328 10.6819 3.346 13.6666 7.02799 13.6666C10.71 13.6666 13.6947 10.6819 13.6947 6.99992C13.6947 3.31792 10.7093 0.333252 7.02799 0.333252ZM10.166 9.19525L9.22333 10.1379L7.02799 7.94325L4.83266 10.1379L3.89 9.19525L6.08466 6.99992L3.88933 4.80459L4.832 3.86259L7.02733 6.05792L9.22266 3.86259L10.1653 4.80459L7.97066 6.99992L10.166 9.19525Z",
                 }),
               ],
             });
           },
-          r.CircleXIcon,
+          l.CircleXIcon,
           void 0,
           { size: 24 }
         );
@@ -2002,17 +1999,17 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("469563"),
+      var r = n("669491"),
+        l = n("469563"),
         s = n("163725"),
         a = n("75196"),
-        o = (0, r.replaceIcon)(
+        o = (0, l.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
-              color: r = "currentColor",
-              foregroundColor: s = l.default.unsafe_rawColors.RED_400.css,
+              color: l = "currentColor",
+              foregroundColor: s = r.default.unsafe_rawColors.RED_400.css,
               foreground: o,
               background: u,
               ...c
@@ -2033,7 +2030,7 @@
                   transform: "rotate(-45 2 21.2154)",
                 }),
                 (0, i.jsx)("path", {
-                  fill: r,
+                  fill: l,
                   className: u,
                   fillRule: "evenodd",
                   clipRule: "evenodd",
@@ -2052,28 +2049,28 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return l;
           },
         });
       var i = n("37983");
       n("884691");
-      var l = n("75196"),
-        r = function (e) {
+      var r = n("75196"),
+        l = function (e) {
           let {
             width: t = 16,
             height: n = 16,
-            color: r = "currentColor",
+            color: l = "currentColor",
             foreground: s,
             ...a
           } = e;
           return (0, i.jsx)("svg", {
-            ...(0, l.default)(a),
+            ...(0, r.default)(a),
             width: t,
             height: n,
             viewBox: "0 0 16 15.2",
             children: (0, i.jsx)("path", {
               className: s,
-              fill: r,
+              fill: l,
               fillRule: "evenodd",
               d: "m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z",
             }),
@@ -2085,16 +2082,16 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return r;
+            return l;
           },
         });
       var i = n("37983");
       n("884691");
-      var l = n("75196");
-      function r(e) {
-        let { width: t = 104, height: n = 80, ...r } = e;
+      var r = n("75196");
+      function l(e) {
+        let { width: t = 104, height: n = 80, ...l } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, l.default)(r),
+          ...(0, r.default)(l),
           width: t,
           height: n,
           viewBox: "0 0 104 80",
@@ -2134,16 +2131,16 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("469563"),
-        r = n("424823"),
+      var r = n("469563"),
+        l = n("424823"),
         s = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
-              color: l = "currentColor",
-              foreground: r,
+              color: r = "currentColor",
+              foreground: l,
               ...a
             } = e;
             return (0, i.jsx)("svg", {
@@ -2152,13 +2149,13 @@
               height: n,
               viewBox: "0 0 24 24",
               children: (0, i.jsx)("path", {
-                fill: l,
-                className: r,
+                fill: r,
+                className: l,
                 d: "M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z",
               }),
             });
           },
-          r.PlusSmallIcon,
+          l.PlusSmallIcon,
           void 0,
           { size: 24 }
         );
@@ -2173,16 +2170,16 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("469563"),
-        r = n("390300"),
+      var r = n("469563"),
+        l = n("390300"),
         s = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
-              color: l = "currentColor",
-              foreground: r,
+              color: r = "currentColor",
+              foreground: l,
               ...a
             } = e;
             return (0, i.jsx)("svg", {
@@ -2191,8 +2188,8 @@
               height: n,
               viewBox: "0 0 24 24",
               children: (0, i.jsx)("path", {
-                className: r,
-                fill: l,
+                className: l,
+                fill: r,
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M11.383 3.07904C11.009 2.92504 10.579 3.01004 10.293 3.29604L6 8.00204H3C2.45 8.00204 2 8.45304 2 9.00204V15.002C2 15.552 2.45 16.002 3 16.002H6L10.293 20.71C10.579 20.996 11.009 21.082 11.383 20.927C11.757 20.772 12 20.407 12 20.002V4.00204C12 3.59904 11.757 3.23204 11.383 3.07904ZM14 5.00195V7.00195C16.757 7.00195 19 9.24595 19 12.002C19 14.759 16.757 17.002 14 17.002V19.002C17.86 19.002 21 15.863 21 12.002C21 8.14295 17.86 5.00195 14 5.00195ZM14 9.00195C15.654 9.00195 17 10.349 17 12.002C17 13.657 15.654 15.002 14 15.002V13.002C14.551 13.002 15 12.553 15 12.002C15 11.451 14.551 11.002 14 11.002V9.00195Z",
@@ -2200,7 +2197,7 @@
               }),
             });
           },
-          r.VoiceNormalIcon,
+          l.VoiceNormalIcon,
           void 0,
           { size: 24 }
         );
@@ -2215,19 +2212,19 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("469563"),
-        r = n("287083"),
+      var r = n("469563"),
+        l = n("287083"),
         s = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = (0, r.replaceIcon)(
           function (e) {
             let {
               width: t = 32,
               height: n = 32,
-              color: l = "currentColor",
-              ...r
+              color: r = "currentColor",
+              ...l
             } = e;
             return (0, i.jsx)("svg", {
-              ...(0, s.default)(r),
+              ...(0, s.default)(l),
               width: t,
               height: n,
               viewBox: "0 0 24 24",
@@ -2236,11 +2233,11 @@
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M14 13C14 14.1 13.1 15 12 15C10.9 15 10 14.1 10 13C10 11.9 10.9 11 12 11C13.1 11 14 11.9 14 13ZM8.5 20V19.5C8.5 17.8 9.94 16.5 12 16.5C14.06 16.5 15.5 17.8 15.5 19.5V20H8.5ZM7 13C7 10.24 9.24 8 12 8C14.76 8 17 10.24 17 13C17 13.91 16.74 14.75 16.31 15.49L17.62 16.25C18.17 15.29 18.5 14.19 18.5 13C18.5 9.42 15.58 6.5 12 6.5C8.42 6.5 5.5 9.42 5.5 13C5.5 14.18 5.82 15.29 6.38 16.25L7.69 15.49C7.26 14.75 7 13.91 7 13ZM2.5 13C2.5 7.75 6.75 3.5 12 3.5C17.25 3.5 21.5 7.75 21.5 13C21.5 14.73 21.03 16.35 20.22 17.75L21.51 18.5C22.45 16.88 23 15 23 13C23 6.93 18.07 2 12 2C5.93 2 1 6.93 1 13C1 15 1.55 16.88 2.48 18.49L3.77 17.74C2.97 16.35 2.5 14.73 2.5 13Z",
-                fill: l,
+                fill: r,
               }),
             });
           },
-          r.StageIcon,
+          l.StageIcon,
           void 0,
           { size: 32 }
         );
@@ -2258,10 +2255,10 @@
         }),
         n("70102");
       var i = n("281071"),
-        l = n("773336"),
-        r = n("50885");
+        r = n("773336"),
+        l = n("50885");
       let s = (() => {
-        if (l.isPlatformEmbedded) return null != r.default.copy;
+        if (r.isPlatformEmbedded) return null != l.default.copy;
         try {
           return (
             document.queryCommandEnabled("copy") ||
@@ -2273,7 +2270,7 @@
       })();
       function a(e) {
         return (
-          !!s && (l.isPlatformEmbedded ? (r.default.copy(e), !0) : i.copy(e))
+          !!s && (r.isPlatformEmbedded ? (l.default.copy(e), !0) : i.copy(e))
         );
       }
     },
@@ -2286,12 +2283,12 @@
           },
         });
       var i = n("884691"),
-        l = n("446674"),
-        r = n("244201"),
+        r = n("446674"),
+        l = n("244201"),
         s = n("471671");
       function a() {
-        let { windowId: e } = i.useContext(r.default);
-        return (0, l.useStateFromStores)(
+        let { windowId: e } = i.useContext(l.default);
+        return (0, r.useStateFromStores)(
           [s.default],
           () => s.default.isFocused(e),
           [e]
@@ -2308,18 +2305,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsx)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2343,20 +2340,20 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
           secondaryColor: s = "transparent",
           secondaryColorClass: a = "",
-          color: o = l.default.colors.INTERACTIVE_NORMAL,
+          color: o = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: u = "",
           ...c
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, r.default)(c),
+          ...(0, l.default)(c),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2391,18 +2388,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2438,18 +2435,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsx)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2473,18 +2470,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2517,18 +2514,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2564,18 +2561,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsx)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2601,18 +2598,18 @@
         });
       var i = n("37983");
       n("884691");
-      var l = n("669491"),
-        r = n("82169");
+      var r = n("669491"),
+        l = n("82169");
       let s = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = r.default.colors.INTERACTIVE_NORMAL,
           colorClass: a = "",
           ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, r.default)(o),
+          ...(0, l.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -2643,8 +2640,8 @@
         }),
         n("222007");
       var i = n("817736"),
-        l = n("118810");
-      let r = { root: null, rootMargin: "0px", threshold: 0.5 };
+        r = n("118810");
+      let l = { root: null, rootMargin: "0px", threshold: 0.5 };
       class s {
         isVisible(e) {
           return null == this._observer || this._visibleComponents.has(e);
@@ -2654,7 +2651,7 @@
           if (null == t) return;
           this.unobserve(e);
           let n = (0, i.findDOMNode)(e);
-          (0, l.isElement)(n, HTMLElement) &&
+          (0, r.isElement)(n, HTMLElement) &&
             (this._nodes.set(n, e), this._components.set(e, n), t.observe(n));
         }
         unobserve(e) {
@@ -2667,7 +2664,7 @@
             this._visibleComponents.delete(e),
             t.unobserve(n));
         }
-        constructor(e = r) {
+        constructor(e = l) {
           (this._nodes = new WeakMap()),
             (this._components = new WeakMap()),
             (this._visibleComponents = new WeakSet()),
@@ -2716,9 +2713,9 @@
         n("222007"),
         n("70102");
       var i = n("884691"),
-        l = n("748820"),
-        r = n("157590");
-      let s = (0, l.v4)(),
+        r = n("748820"),
+        l = n("157590");
+      let s = (0, r.v4)(),
         a = new Map(),
         o = new Map();
       class u extends i.Component {
@@ -2762,13 +2759,13 @@
           t
             ? a.has(t)
               ? (this.elementId = a.get(t) || "")
-              : a.set(t, (0, l.v4)())
+              : a.set(t, (0, r.v4)())
             : (this.elementId = s);
           let u = this.getVisibilityObserverId();
           !o.has(u) &&
             o.set(
               u,
-              new r.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
+              new l.VisibilityObserver({ root: t, rootMargin: n, threshold: i })
             );
         }
       }
@@ -2788,12 +2785,12 @@
             return i.VisibilityObserver;
           },
           VisibilitySensor: function () {
-            return l.VisibilitySensor;
+            return r.VisibilitySensor;
           },
         }),
         n("6268");
       var i = n("157590"),
-        l = n("235855");
+        r = n("235855");
     },
     281071: function (e, t, n) {
       "use strict";
@@ -2805,18 +2802,18 @@
           );
         let n = document.createRange(),
           i = window.getSelection(),
-          l = document.createElement("textarea");
-        (l.value = e),
-          (l.contentEditable = "true"),
-          (l.style.visibility = "none"),
-          t.appendChild(l),
-          n.selectNodeContents(l),
+          r = document.createElement("textarea");
+        (r.value = e),
+          (r.contentEditable = "true"),
+          (r.style.visibility = "none"),
+          t.appendChild(r),
+          n.selectNodeContents(r),
           null == i || i.removeAllRanges(),
           null == i || i.addRange(n),
-          l.focus(),
-          l.setSelectionRange(0, e.length);
-        let r = document.execCommand("copy");
-        return t.removeChild(l), r;
+          r.focus(),
+          r.setSelectionRange(0, e.length);
+        let l = document.execCommand("copy");
+        return t.removeChild(r), l;
       }
       n.r(t),
         n.d(t, {
@@ -2828,4 +2825,4 @@
     },
   },
 ]);
-//# sourceMappingURL=44315eae21937d594241.js.map
+//# sourceMappingURL=454b63b62e93d7259908.js.map

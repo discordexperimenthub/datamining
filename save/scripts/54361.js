@@ -372,7 +372,7 @@
       class x extends a.PureComponent {
         componentDidMount() {
           this.setState({
-            token: c.default.getToken(),
+            token: c.getToken(),
             isAppCompatible: N.IS_APP_COMPATIBLE_BROWSER,
           });
         }
@@ -825,7 +825,7 @@
       let N = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
       ((n = class extends i.PureComponent {
         render() {
-          let e = c.default.isActiveCreator(this.context.router),
+          let e = c.isActiveCreator(this.context.router),
             {
               isOpen: t,
               dropdownLinks: s,
@@ -1146,7 +1146,7 @@
         ];
       ((n = class extends i.PureComponent {
         render() {
-          let e = r.default.isActiveCreator(this.context.router),
+          let e = r.isActiveCreator(this.context.router),
             {
               isMobile: t,
               isVisible: s,
@@ -1482,7 +1482,7 @@
             }),
             (this.renderMobileSubMenu = () => {
               let { links: e, TrackClick: t, avoidRouter: s } = this.props,
-                n = c.default.isActiveCreator(this.context.router);
+                n = c.isActiveCreator(this.context.router);
               return e.map(e =>
                 e.external
                   ? (0, a.jsx)(
@@ -1918,7 +1918,7 @@
       let n;
       s.r(t),
         s.d(t, {
-          default: function () {
+          isActiveCreator: function () {
             return o;
           },
         }),
@@ -1928,20 +1928,13 @@
         a = s.n(l),
         i = s("736671"),
         r = s.n(i);
-      n = a();
-      var o = {
-        transitionTo(e) {
-          n.push(e);
-        },
-        replaceWith(e) {
-          n.replace(e);
-        },
-        getHistory: () => n,
-        isActiveCreator: e => t => {
+      function o(e) {
+        return t => {
           if (null != e)
             return null != r(t, { end: !1 }).exec(e.history.location.pathname);
-        },
-      };
+        };
+      }
+      a();
     },
     141631: function (e, t, s) {
       "use strict";
@@ -1968,4 +1961,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e6d07380287b32d9aef3.js.map
+//# sourceMappingURL=70156891e4d922e5294b.js.map

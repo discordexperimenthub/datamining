@@ -1039,8 +1039,8 @@
           c = (0, r.useStateFromStores)([p.default], () =>
             p.default.can(B.Permissions.ADMINISTRATOR, t)
           ),
-          h = y.default.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t),
-          E = y.default.canEveryoneRole(B.Permissions.ADMINISTRATOR, t),
+          h = y.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t),
+          E = y.canEveryoneRole(B.Permissions.ADMINISTRATOR, t),
           f = {
             title: G.default.Messages.PRIVATE_CHANNEL,
             subtitle:
@@ -1219,7 +1219,7 @@
             permissionUpdates: f,
           } = e,
           [g, T] = a.useState(
-            !y.default.canEveryoneRole(B.Permissions.SEND_MESSAGES, i)
+            !y.canEveryoneRole(B.Permissions.SEND_MESSAGES, i)
           );
         if (null == i || null == u) return null;
         function S() {
@@ -1240,7 +1240,7 @@
                       t = { ...n.permissionOverwrites };
                     null != e &&
                       null == t[e] &&
-                      (t[e] = y.default.makeEveryoneOverwrite(e));
+                      (t[e] = y.makeEveryoneOverwrite(e));
                     let s = await (0,
                     m.checkDefaultChannelThresholdMetAfterChannelPermissionDeny)(
                       i,
@@ -3306,14 +3306,12 @@
           S = (e, l) => {
             if ("boolean" == typeof l) throw Error("Unexpected boolean action");
             let { allow: a, deny: n } = t;
-            switch (
-              ((n = r.default.remove(n, e)), (a = r.default.remove(a, e)), l)
-            ) {
+            switch (((n = r.remove(n, e)), (a = r.remove(a, e)), l)) {
               case "ALLOW":
-                a = r.default.add(a, e);
+                a = r.add(a, e);
                 break;
               case "DENY":
-                n = r.default.add(n, e);
+                n = r.add(n, e);
             }
             if (I.default.can(e, s, { [f]: { ...t, allow: a, deny: n } }))
               (0, E.updatePermission)(s, f, a, n);
@@ -3351,16 +3349,16 @@
               C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e)
               ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION
               : !(
-                  (!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) &&
+                  (!r.equals(e, w.Permissions.MANAGE_ROLES) || t) &&
                   (null == e || I.default.can(e, a) || t)
                 ) && U.default.Messages.HELP_MISSING_PERMISSION;
           },
           M = f === i,
           x =
             s.isForumLikeChannel() &&
-            r.default.has(t.deny, w.Permissions.SEND_MESSAGES),
-          O = r.default.has(t.deny, w.Permissions.SEND_MESSAGES),
-          v = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY),
+            r.has(t.deny, w.Permissions.SEND_MESSAGES),
+          O = r.has(t.deny, w.Permissions.SEND_MESSAGES),
+          v = r.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY),
           j = F.default.generateChannelPermissionSpec(i, s, M, {
             createPostsDisabled: x,
             sendMessagesDisabled: O,
@@ -3546,14 +3544,14 @@
               .updatePermissionOverwrite(e.id, {
                 id: t,
                 type: s,
-                allow: b.default.NONE,
-                deny: b.default.NONE,
+                allow: b.NONE,
+                deny: b.NONE,
               })
               .then(() => (0, E.selectPermission)(t));
           };
         null != t &&
           null == t[c.id] &&
-          (t[c.id] = b.default.makeEveryoneOverwrite(c.id));
+          (t[c.id] = b.makeEveryoneOverwrite(c.id));
         let x = i(t)
             .filter(e => e.type === T.PermissionOverwriteType.ROLE)
             .map(e => m[e.id])
@@ -4261,10 +4259,7 @@
                     let n = t[e.getEveryoneRoleId()],
                       i =
                         null != n &&
-                        !a.default.has(
-                          n.permissions,
-                          u.Permissions.VIEW_CHANNEL
-                        ),
+                        !a.has(n.permissions, u.Permissions.VIEW_CHANNEL),
                       d = (0, o.isChannelAccessDeniedBy)(
                         s,
                         s.permissionOverwrites[e.id]
@@ -4714,4 +4709,4 @@
     },
   },
 ]);
-//# sourceMappingURL=bff6014e529e8f8b8e0d.js.map
+//# sourceMappingURL=f9220974f2a4aa06f9d2.js.map

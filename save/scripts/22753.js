@@ -6,7 +6,7 @@
       a.r(s),
         a.d(s, {
           default: function () {
-            return u;
+            return h;
           },
         });
       var n = a("37983");
@@ -18,16 +18,16 @@
         d = a("36694"),
         o = a("945330"),
         c = a("434106");
-      function u(e) {
+      function h(e) {
         let {
           grantedPermissions: s,
           disabledPermissions: a,
           grantedPermissionsHeader: i,
-          disabledPermissionsHeader: u,
-          className: h,
+          disabledPermissionsHeader: h,
+          className: u,
         } = e;
         return (0, n.jsxs)("div", {
-          className: l(c.list, h),
+          className: l(c.list, u),
           children: [
             null != s && s.length > 0
               ? (0, n.jsxs)(n.Fragment, {
@@ -67,10 +67,10 @@
             null != a && a.length > 0
               ? (0, n.jsxs)(n.Fragment, {
                   children: [
-                    null != u
+                    null != h
                       ? (0, n.jsx)(r.FormTitle, {
                           className: c.permissionHeader,
-                          children: u,
+                          children: h,
                         })
                       : null,
                     (0, n.jsx)("div", {
@@ -123,8 +123,8 @@
         o = a("703459");
       function c(e) {
         let { defaultMemberPermissions: s, onClose: a, transitionState: c } = e,
-          u = [];
-        for (let e of t.OrderedPermissions) i.default.has(s, e) && u.push(e);
+          h = [];
+        for (let e of t.OrderedPermissions) i.has(s, e) && h.push(e);
         return (0, n.jsxs)(l.ModalRoot, {
           size: l.ModalSize.DYNAMIC,
           "aria-label":
@@ -145,7 +145,7 @@
             (0, n.jsx)(l.ModalContent, {
               children: (0, n.jsx)(r.default, {
                 className: o.permissionList,
-                grantedPermissions: u,
+                grantedPermissions: h,
               }),
             }),
             (0, n.jsx)(l.ModalFooter, {
@@ -163,4 +163,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ff05b00c1981c069a216.js.map
+//# sourceMappingURL=64dbcd7f54dc77056f61.js.map

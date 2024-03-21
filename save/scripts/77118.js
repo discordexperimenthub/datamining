@@ -52,11 +52,11 @@
         });
       var a = n("627445"),
         s = n.n(a),
-        l = n("316693"),
-        i = n("872717"),
-        u = n("450911");
+        i = n("316693"),
+        l = n("872717"),
+        r = n("450911");
       n("851387");
-      var r = n("798609"),
+      var u = n("798609"),
         d = n("716241"),
         o = n("18494"),
         c = n("800762"),
@@ -75,7 +75,7 @@
               S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED,
               { ...(0, _.getStageChannelMetadata)(e) }
             ),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n),
             body: {
               request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -88,7 +88,7 @@
         let n = e.getGuildId();
         return (
           s(null != n, "This channel cannot be guildless."),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
             body: {
               suppress: !1,
@@ -102,16 +102,16 @@
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           a = null == e ? void 0 : e.getGuildId();
         s(null != a, "This channel cannot be guildless.");
-        let l = c.default.getVoiceStateForChannel(e.id),
-          u = (0, p.getAudienceRequestToSpeakState)(l);
+        let i = c.default.getVoiceStateForChannel(e.id),
+          r = (0, p.getAudienceRequestToSpeakState)(i);
         return (
-          u ===
+          r ===
             p.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK &&
             !t &&
             (0, d.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
               ...(0, _.getStageChannelMetadata)(e),
             }),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a),
             body: {
               suppress: t,
@@ -126,7 +126,7 @@
         let t = null == e ? void 0 : e.getGuildId();
         return (
           s(null != t, "This channel cannot be guildless."),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(t),
             body: {
               suppress: !0,
@@ -141,7 +141,7 @@
         let a = e.getGuildId();
         return (
           s(null != a, "This channel cannot be guildless."),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
             body: { suppress: n, channel_id: e.id },
           })
@@ -153,7 +153,7 @@
         return (
           s(null != n, "This channel cannot be guildless."),
           A(t, e.id, !0),
-          i.default.patch({
+          l.default.patch({
             url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
             body: {
               suppress: !0,
@@ -167,27 +167,25 @@
       function R(e, t, n) {
         let a = e.getGuildId();
         s(null != a, "Channel cannot be guildless");
-        let i = e.permissionOverwrites[a],
+        let l = e.permissionOverwrites[a],
           d = {
             id: a,
-            type: r.PermissionOverwriteType.ROLE,
-            allow: f.default.NONE,
-            deny: f.default.NONE,
-            ...i,
+            type: u.PermissionOverwriteType.ROLE,
+            allow: f.NONE,
+            deny: f.NONE,
+            ...l,
           };
         n
-          ? ((d.allow = l.default.add(d.allow, t)),
-            (d.deny = l.default.remove(d.deny, t)))
-          : ((d.allow = l.default.remove(d.allow, t)),
-            (d.deny = l.default.add(d.deny, t))),
-          u.default.updatePermissionOverwrite(e.id, d);
+          ? ((d.allow = i.add(d.allow, t)), (d.deny = i.remove(d.deny, t)))
+          : ((d.allow = i.remove(d.allow, t)), (d.deny = i.add(d.deny, t))),
+          r.default.updatePermissionOverwrite(e.id, d);
       }
       async function M(e, t, n, a) {
         if ("" === t) return;
         let s = o.default.getVoiceChannelId() === e.id;
         !s && (0, E.connectToStage)(e);
-        let l = await (0, T.startStageInstance)(e.id, t, n, a);
-        return h(e, !1, !0), l;
+        let i = await (0, T.startStageInstance)(e.id, t, n, a);
+        return h(e, !1, !0), i;
       }
       async function O(e, t, n) {
         if ("" === t) return;
@@ -217,23 +215,23 @@
         n("917351");
       var a = n("945956"),
         s = n("387111"),
-        l = n("991170"),
-        i = n("834052"),
-        u = n("837979"),
-        r = n("49111"),
+        i = n("991170"),
+        l = n("834052"),
+        r = n("837979"),
+        u = n("49111"),
         d = n("606762"),
         o = n("782340");
       function c(e, t, n, a) {
-        let l = t[0],
-          i = s.default.getName(e, n, l),
-          u = null != a ? a : t.length;
-        return 1 === u && null != l
-          ? i
-          : null == l
-            ? o.default.Messages.SPEAKING_COUNT.format({ count: u })
+        let i = t[0],
+          l = s.default.getName(e, n, i),
+          r = null != a ? a : t.length;
+        return 1 === r && null != i
+          ? l
+          : null == i
+            ? o.default.Messages.SPEAKING_COUNT.format({ count: r })
             : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-                name: i,
-                count: u - 1,
+                name: l,
+                count: r - 1,
               });
       }
       function f(e, t) {
@@ -254,18 +252,18 @@
         return null;
       }
       function E(e) {
-        let t = i.default.getStageInstanceByChannel(e.id);
+        let t = l.default.getStageInstanceByChannel(e.id);
         return {
           channel_id: e.id,
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: l.default.canEveryoneRole(
-            r.Permissions.REQUEST_TO_SPEAK,
+          request_to_speak_state: i.canEveryoneRole(
+            u.Permissions.REQUEST_TO_SPEAK,
             e
           )
-            ? u.RequestToSpeakPermissionStates.EVERYONE
-            : u.RequestToSpeakPermissionStates.NO_ONE,
+            ? r.RequestToSpeakPermissionStates.EVERYONE
+            : r.RequestToSpeakPermissionStates.NO_ONE,
           stage_instance_id: null == t ? void 0 : t.id,
         };
       }
@@ -275,38 +273,38 @@
       n.r(t),
         n.d(t, {
           startStageInstance: function () {
-            return l;
-          },
-          updateStageInstance: function () {
             return i;
           },
+          updateStageInstance: function () {
+            return l;
+          },
           endStageInstance: function () {
-            return u;
+            return r;
           },
         });
       var a = n("872717"),
         s = n("49111");
-      async function l(e, t, n, l, i) {
-        let u = await a.default.post({
+      async function i(e, t, n, i, l) {
+        let r = await a.default.post({
           url: s.Endpoints.STAGE_INSTANCES,
           body: {
             channel_id: e,
             topic: t,
             privacy_level: n,
-            guild_scheduled_event_id: i,
-            send_start_notification: l,
+            guild_scheduled_event_id: l,
+            send_start_notification: i,
           },
         });
-        return u.body;
+        return r.body;
       }
-      async function i(e, t, n) {
-        let l = await a.default.patch({
+      async function l(e, t, n) {
+        let i = await a.default.patch({
           url: s.Endpoints.STAGE_INSTANCE(e),
           body: { topic: t, privacy_level: n },
         });
-        return l.body;
+        return i.body;
       }
-      function u(e) {
+      function r(e) {
         return a.default.delete(s.Endpoints.STAGE_INSTANCE(e));
       }
     },
@@ -321,21 +319,21 @@
       var a = n("37983");
       n("884691");
       var s = n("77078"),
-        l = n("987317"),
-        i = n("476765"),
-        u = n("674083"),
-        r = n("244480"),
+        i = n("987317"),
+        l = n("476765"),
+        r = n("674083"),
+        u = n("244480"),
         d = n("119184"),
         o = n("782340"),
         c = n("905430"),
         f = e => {
           let { channel: t, ...n } = e,
-            f = (0, i.useUID)();
+            f = (0, l.useUID)();
           return (0, a.jsxs)(s.ConfirmModal, {
             confirmText: o.default.Messages.END_STAGE,
             cancelText: o.default.Messages.CANCEL,
             onConfirm: () => {
-              (0, r.endStage)(t), l.default.disconnect();
+              (0, u.endStage)(t), i.default.disconnect();
             },
             confirmButtonColor: s.Button.Colors.RED,
             bodyClassName: c.body,
@@ -345,7 +343,7 @@
                 className: c.headerIconContainer,
                 children: (0, a.jsx)("div", {
                   className: c.iconBackground,
-                  children: (0, a.jsx)(u.default, {
+                  children: (0, a.jsx)(r.default, {
                     width: 40,
                     height: 40,
                     className: c.headerIcon,
@@ -381,26 +379,26 @@
       var a = n("37983");
       n("884691");
       var s = n("414456"),
-        l = n.n(s),
-        i = n("782340"),
-        u = n("662190"),
-        r = n("284434"),
+        i = n.n(s),
+        l = n("782340"),
+        r = n("662190"),
+        u = n("284434"),
         d = n("315956");
       function o(e) {
         let { className: t, children: n } = e;
         return (0, a.jsxs)("div", {
-          className: l(u.container, t),
+          className: i(r.container, t),
           children: [
             (0, a.jsx)("img", {
-              alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+              alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
               src: d,
-              className: l(u.sparkleIcon, u.sparkleBottom),
+              className: i(r.sparkleIcon, r.sparkleBottom),
             }),
             n,
             (0, a.jsx)("img", {
-              alt: i.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
-              src: r,
-              className: l(u.sparkleIcon, u.sparkleTop),
+              alt: l.default.Messages.MEMBER_VERIFICATION_VERIFICATION_ICON,
+              src: u,
+              className: i(r.sparkleIcon, r.sparkleTop),
             }),
           ],
         });
@@ -411,29 +409,29 @@
       n.r(t),
         n.d(t, {
           uid: function () {
-            return i;
+            return l;
           },
           useUID: function () {
-            return u;
+            return r;
           },
           UID: function () {
-            return r;
+            return u;
           },
         });
       var a = n("995008"),
         s = n.n(a),
-        l = n("775560");
-      let i = function () {
+        i = n("775560");
+      let l = function () {
           let e =
             arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
               : "uid_";
           return s(e);
         },
-        u = () => (0, l.useLazyValue)(() => i()),
-        r = e => {
+        r = () => (0, i.useLazyValue)(() => l()),
+        u = e => {
           let { children: t } = e;
-          return t(u());
+          return t(r());
         };
     },
     674083: function (e, t, n) {
@@ -441,24 +439,24 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return u;
+            return r;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("469563"),
-        l = n("340126"),
-        i = n("75196"),
-        u = (0, s.replaceIcon)(
+        i = n("340126"),
+        l = n("75196"),
+        r = (0, s.replaceIcon)(
           function (e) {
             let {
               width: t = 40,
               height: n = 40,
               color: s = "currentColor",
-              ...l
+              ...i
             } = e;
             return (0, a.jsxs)("svg", {
-              ...(0, i.default)(l),
+              ...(0, l.default)(i),
               width: t,
               height: n,
               viewBox: "0 0 40 40",
@@ -479,7 +477,7 @@
               ],
             });
           },
-          l.StageXIcon,
+          i.StageXIcon,
           void 0,
           { size: 40 }
         );
@@ -489,23 +487,23 @@
       n.r(t),
         n.d(t, {
           StageXIcon: function () {
-            return i;
+            return l;
           },
         });
       var a = n("37983");
       n("884691");
       var s = n("669491"),
-        l = n("82169");
-      let i = e => {
+        i = n("82169");
+      let l = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: i = s.default.colors.INTERACTIVE_NORMAL,
-          colorClass: u = "",
-          ...r
+          color: l = s.default.colors.INTERACTIVE_NORMAL,
+          colorClass: r = "",
+          ...u
         } = e;
         return (0, a.jsxs)("svg", {
-          ...(0, l.default)(r),
+          ...(0, i.default)(u),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: n,
@@ -513,19 +511,19 @@
           viewBox: "0 0 24 24",
           children: [
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M22.34 13.02c.31.03.63-.17.65-.49L23 12a11 11 0 1 0-20.09 6.2c.34.5 1.05.51 1.46.07l.02-.02c.33-.36.34-.91.07-1.33A9 9 0 1 1 21 12.36c-.01.38.37.68.75.65.2-.02.4-.01.6 0Z",
-              className: u,
+              className: r,
             }),
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M12.6 16.03c.23.02.4.23.44.46.1.6.38 1.17.84 1.63l.52.53c.2.2.2.5 0 .7l-.52.53a3 3 0 0 0-.86 2.46c.03.31-.17.63-.49.65a11.16 11.16 0 0 1-5.4-1.12 1.52 1.52 0 0 1-.8-1.84 6 6 0 0 1 6.26-4ZM13.13 14.78A3 3 0 0 1 9 12a3 3 0 1 1 4.13 2.78Z",
-              className: u,
+              className: r,
             }),
             (0, a.jsx)("path", {
-              fill: "string" == typeof i ? i : i.css,
+              fill: "string" == typeof l ? l : l.css,
               d: "M18.79 13.71c-.08.3-.45.39-.67.17a3 3 0 0 0-.81-.58.62.62 0 0 1-.35-.63c.02-.22.04-.44.04-.67a5 5 0 1 0-9.6 1.94c.17.42.13.9-.18 1.23l-.05.06c-.43.47-1.18.42-1.45-.14a7 7 0 1 1 13.07-1.38ZM16.7 15.3a1 1 0 0 0-1.4 1.4l2.29 2.3-2.3 2.3a1 1 0 0 0 1.42 1.4L19 20.42l2.3 2.3a1 1 0 0 0 1.4-1.42L20.42 19l2.3-2.3a1 1 0 0 0-1.42-1.4L19 17.58l-2.3-2.3Z",
-              className: u,
+              className: r,
             }),
           ],
         });
@@ -533,4 +531,4 @@
     },
   },
 ]);
-//# sourceMappingURL=88ad28edc5bb0671ae45.js.map
+//# sourceMappingURL=9702ef287e230a342153.js.map

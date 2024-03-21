@@ -1,169 +1,169 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["24864"],
   {
-    840489: function (e, l, a) {
+    840489: function (e, l, s) {
       "use strict";
-      a.r(l),
-        a.d(l, {
+      s.r(l),
+        s.d(l, {
           default: function () {
-            return _;
+            return M;
           },
         }),
-        a("222007"),
-        a("424973"),
-        a("808653");
-      var s = a("37983"),
-        t = a("884691"),
-        o = a("414456"),
-        r = a.n(o),
-        i = a("316693"),
-        n = a("446674"),
-        d = a("77078"),
-        u = a("318738"),
-        c = a("798609"),
-        N = a("454273"),
-        O = a("305961"),
-        v = a("991170"),
-        R = a("713955"),
-        f = a("782340"),
-        m = a("623929");
-      function h(e) {
+        s("222007"),
+        s("424973"),
+        s("808653");
+      var a = s("37983"),
+        t = s("884691"),
+        o = s("414456"),
+        r = s.n(o),
+        i = s("316693"),
+        n = s("446674"),
+        d = s("77078"),
+        u = s("318738"),
+        c = s("798609"),
+        N = s("454273"),
+        O = s("305961"),
+        v = s("991170"),
+        R = s("713955"),
+        m = s("782340"),
+        h = s("623929");
+      function E(e) {
         return l => null != l && !(0, N.isEveryoneRoleId)(e, l);
       }
-      let E = (e, l, a) => {
-          let s = v.default.canEveryoneRole(a, l),
-            [o, r] = t.useState(s);
+      let S = (e, l, s) => {
+          let a = v.canEveryoneRole(s, l),
+            [o, r] = t.useState(a);
           return { shouldEveryonePost: o, setShouldEveryonePost: r };
         },
-        S = e => {
+        _ = e => {
           let { rolesRow: l } = e;
-          return (0, s.jsx)("div", {
+          return (0, a.jsx)("div", {
             "aria-hidden": !0,
-            className: m.roleCircle,
+            className: h.roleCircle,
             style: { backgroundColor: null == l ? void 0 : l.colorString },
           });
         };
-      var _ = e => {
+      var M = e => {
         let {
             guild: l,
-            channel: a,
+            channel: s,
             permission: o,
-            onClose: _,
-            transitionState: M,
+            onClose: M,
+            transitionState: f,
             currentSelectedRoles: p = [],
           } = e,
-          { shouldEveryonePost: I, setShouldEveryonePost: x } = E(l, a, o),
+          { shouldEveryonePost: I, setShouldEveryonePost: x } = S(l, s, o),
           A = t.useRef(null),
           L = (function (e) {
             let l = (0, n.useStateFromStores)([O.default], () =>
               O.default.getRoles(e.id)
             );
             return t.useMemo(
-              () => (0, R.getAllRolesRows)(e, l).filter(l => h(e.id)(l.id)),
+              () => (0, R.getAllRolesRows)(e, l).filter(l => E(e.id)(l.id)),
               [e, l]
             );
           })(l),
           C = L.reduce((e, l) => (e.set(l.id, l), e), new Map()),
           g = L.map(e => ({ key: e.key, label: e.name, value: e.id })),
-          [w, j] = t.useState(p.map(e => e.id).filter(h(l.id))),
+          [w, j] = t.useState(p.map(e => e.id).filter(E(l.id))),
           [y, D] = t.useState(!1),
           [B, P] = t.useState(!1),
           b = w.length > 0 || I,
           T = (function (e, l) {
-            let a = (0, n.useStateFromStores)([O.default], () =>
+            let s = (0, n.useStateFromStores)([O.default], () =>
               O.default.getRoles(e.id)
             );
             return t.useCallback(
-              (s, t) => {
-                let o = (0, R.getAllRolesRows)(e, a),
+              (a, t) => {
+                let o = (0, R.getAllRolesRows)(e, s),
                   r = new Set(t),
                   n = { ...l.permissionOverwrites },
                   d = [],
                   O = [];
                 return (
                   o.forEach(l => {
-                    var a, t, o, u, R, f, m, h, E, S;
-                    let _ = l.id,
-                      M = r.has(_);
-                    M
+                    var s, t, o, u, R, m, h, E, S, _;
+                    let M = l.id,
+                      f = r.has(M);
+                    f
                       ? d.push({
-                          id: _,
+                          id: M,
                           type: c.PermissionOverwriteType.ROLE,
-                          allow: M
-                            ? i.default.add(
+                          allow: f
+                            ? i.add(
                                 null !==
                                   (u =
-                                    null === (a = n[_]) || void 0 === a
+                                    null === (s = n[M]) || void 0 === s
                                       ? void 0
-                                      : a.allow) && void 0 !== u
+                                      : s.allow) && void 0 !== u
                                   ? u
-                                  : v.default.NONE,
-                                s
+                                  : v.NONE,
+                                a
                               )
-                            : i.default.remove(
+                            : i.remove(
                                 null !==
                                   (R =
-                                    null === (t = n[_]) || void 0 === t
+                                    null === (t = n[M]) || void 0 === t
                                       ? void 0
                                       : t.allow) && void 0 !== R
                                   ? R
-                                  : v.default.NONE,
-                                s
+                                  : v.NONE,
+                                a
                               ),
-                          deny: i.default.remove(
+                          deny: i.remove(
                             null !==
-                              (f =
-                                null === (o = n[_]) || void 0 === o
+                              (m =
+                                null === (o = n[M]) || void 0 === o
                                   ? void 0
-                                  : o.deny) && void 0 !== f
-                              ? f
-                              : v.default.NONE,
-                            s
+                                  : o.deny) && void 0 !== m
+                              ? m
+                              : v.NONE,
+                            a
                           ),
                         })
-                      : (0, N.isEveryoneRoleId)(e.id, _)
+                      : (0, N.isEveryoneRoleId)(e.id, M)
                         ? d.push({
-                            id: _,
+                            id: M,
                             type: c.PermissionOverwriteType.ROLE,
-                            allow: i.default.remove(
-                              null !==
-                                (E =
-                                  null === (m = n[_]) || void 0 === m
-                                    ? void 0
-                                    : m.allow) && void 0 !== E
-                                ? E
-                                : v.default.NONE,
-                              s
-                            ),
-                            deny: i.default.add(
+                            allow: i.remove(
                               null !==
                                 (S =
-                                  null === (h = n[_]) || void 0 === h
+                                  null === (h = n[M]) || void 0 === h
                                     ? void 0
-                                    : h.deny) && void 0 !== S
+                                    : h.allow) && void 0 !== S
                                 ? S
-                                : v.default.NONE,
-                              s
+                                : v.NONE,
+                              a
+                            ),
+                            deny: i.add(
+                              null !==
+                                (_ =
+                                  null === (E = n[M]) || void 0 === E
+                                    ? void 0
+                                    : E.deny) && void 0 !== _
+                                ? _
+                                : v.NONE,
+                              a
                             ),
                           })
-                        : _ in n && O.push(_);
+                        : M in n && O.push(M);
                   }, []),
                   (0, u.saveAndClearPermissionUpdates)(l.id, d, O)
                 );
               },
-              [e, a, l]
+              [e, s, l]
             );
-          })(l, a),
+          })(l, s),
           F = async () => {
             if (!b) return;
             D(!0), P(!1);
             let e = [...w];
             if (I) {
-              let a = l.getEveryoneRoleId();
-              e.push(a);
+              let s = l.getEveryoneRoleId();
+              e.push(s);
             }
             try {
-              await T(o, e), _();
+              await T(o, e), M();
             } catch (e) {
               P(!0);
             } finally {
@@ -171,39 +171,39 @@
             }
           };
         return y
-          ? (0, s.jsx)(d.Spinner, {})
-          : (0, s.jsxs)(d.ModalRoot, {
-              transitionState: M,
-              "aria-label": f.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
+          ? (0, a.jsx)(d.Spinner, {})
+          : (0, a.jsxs)(d.ModalRoot, {
+              transitionState: f,
+              "aria-label": m.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
               children: [
-                (0, s.jsx)(d.ModalHeader, {
+                (0, a.jsx)(d.ModalHeader, {
                   separator: !1,
-                  className: m.modalHeader,
-                  children: (0, s.jsx)(d.Heading, {
+                  className: h.modalHeader,
+                  children: (0, a.jsx)(d.Heading, {
                     variant: "heading-md/semibold",
-                    className: m.header,
+                    className: h.header,
                     children:
-                      f.default.Messages
+                      m.default.Messages
                         .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_TITLE,
                   }),
                 }),
-                (0, s.jsx)(d.ModalContent, {
-                  children: (0, s.jsxs)("div", {
-                    className: m.container,
+                (0, a.jsx)(d.ModalContent, {
+                  children: (0, a.jsxs)("div", {
+                    className: h.container,
                     children: [
-                      (0, s.jsx)("div", {
-                        className: m.row,
-                        children: (0, s.jsx)("div", {
+                      (0, a.jsx)("div", {
+                        className: h.row,
+                        children: (0, a.jsx)("div", {
                           ref: A,
-                          className: m.roleSelectorContainer,
-                          children: (0, s.jsx)(d.FocusRingScope, {
+                          className: h.roleSelectorContainer,
+                          children: (0, a.jsx)(d.FocusRingScope, {
                             containerRef: A,
-                            children: (0, s.jsx)(d.SearchableSelect, {
+                            children: (0, a.jsx)(d.SearchableSelect, {
                               closeOnSelect: !1,
-                              className: m.roleSelector,
+                              className: h.roleSelector,
                               maxVisibleItems: 5,
                               placeholder:
-                                f.default.Messages
+                                m.default.Messages
                                   .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_ROLE_INPUT_PLACEHOLDER,
                               multi: !0,
                               value: w,
@@ -213,39 +213,39 @@
                               },
                               renderOptionPrefix: e =>
                                 null != e
-                                  ? (0, s.jsx)(S, { rolesRow: C.get(e.value) })
+                                  ? (0, a.jsx)(_, { rolesRow: C.get(e.value) })
                                   : null,
                             }),
                           }),
                         }),
                       }),
-                      (0, s.jsxs)("div", {
-                        className: m.row,
+                      (0, a.jsxs)("div", {
+                        className: h.row,
                         children: [
-                          (0, s.jsx)(d.FormSwitch, {
+                          (0, a.jsx)(d.FormSwitch, {
                             value: I,
                             hideBorder: !0,
                             onChange: x,
-                            className: m.switchGroup,
+                            className: h.switchGroup,
                             children:
-                              f.default.Messages
+                              m.default.Messages
                                 .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODAL_LET_EVERYONE_POST,
                           }),
-                          (0, s.jsx)(d.Text, {
+                          (0, a.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             children:
-                              f.default.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_DESCRIPTION.format(),
+                              m.default.Messages.FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_DESCRIPTION.format(),
                           }),
                         ],
                       }),
                       B
-                        ? (0, s.jsx)("div", {
-                            className: m.row,
-                            children: (0, s.jsx)(d.Text, {
-                              className: r(m.row, m.error),
+                        ? (0, a.jsx)("div", {
+                            className: h.row,
+                            children: (0, a.jsx)(d.Text, {
+                              className: r(h.row, h.error),
                               variant: "text-sm/normal",
                               children:
-                                f.default.Messages
+                                m.default.Messages
                                   .FORUM_CHANNEL_ONBOARDING_PERMISSION_MODEL_ERROR,
                             }),
                           })
@@ -253,25 +253,25 @@
                     ],
                   }),
                 }),
-                (0, s.jsxs)(d.ModalFooter, {
-                  className: m.footer,
+                (0, a.jsxs)(d.ModalFooter, {
+                  className: h.footer,
                   children: [
-                    (0, s.jsx)(d.Button, {
+                    (0, a.jsx)(d.Button, {
                       type: "submit",
                       color: d.Button.Colors.BRAND_NEW,
                       size: d.Button.Sizes.SMALL,
-                      className: m.button,
+                      className: h.button,
                       onClick: F,
                       disabled: !b,
                       autoFocus: !0,
-                      children: f.default.Messages.SAVE,
+                      children: m.default.Messages.SAVE,
                     }),
-                    (0, s.jsx)(d.Button, {
+                    (0, a.jsx)(d.Button, {
                       color: d.Button.Colors.PRIMARY,
                       size: d.Button.Sizes.SMALL,
-                      className: m.button,
-                      onClick: _,
-                      children: f.default.Messages.CANCEL,
+                      className: h.button,
+                      onClick: M,
+                      children: m.default.Messages.CANCEL,
                     }),
                   ],
                 }),
@@ -281,4 +281,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a9de58e773265b6a3bd9.js.map
+//# sourceMappingURL=eaf3481c89111163a7fc.js.map

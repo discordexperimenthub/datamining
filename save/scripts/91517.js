@@ -436,7 +436,7 @@
               n = [];
             return (
               M.MODERATOR_PERMISSIONS.map(s => {
-                let a = p.default.canEveryone(s, t);
+                let a = p.canEveryone(s, t);
                 a ? e.push(s) : n.push(s);
               }),
               { enabledPermissions: e, disabledPermissions: n }
@@ -446,10 +446,7 @@
         let T = () => {
             let e = S.default.getRole(t.id, t.getEveryoneRoleId());
             if (null == e) return;
-            let n = l.default.remove(
-              e.permissions,
-              M.MODERATOR_PERMISSIONS_FLAG
-            );
+            let n = l.remove(e.permissions, M.MODERATOR_PERMISSIONS_FLAG);
             (0, E.saveRoleSettings)(t.id, [{ ...e, permissions: n }]);
           },
           O = () => {
@@ -689,4 +686,4 @@
     },
   },
 ]);
-//# sourceMappingURL=abc59f3e125b60896ab3.js.map
+//# sourceMappingURL=dc105552e487f0ce873b.js.map

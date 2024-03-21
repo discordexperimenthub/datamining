@@ -7269,7 +7269,7 @@
             })()
           );
         function v(e) {
-          (null != E.default.getToken() || null != r) &&
+          (null != E.getToken() || null != r) &&
             p.default.track(A.AnalyticEvents.DOWNLOAD_APP, {
               platform: e,
               ptb: !1,
@@ -24842,7 +24842,7 @@
                 let e = !1;
                 for (let t of s)
                   try {
-                    let n = a.default.deserialize(t);
+                    let n = a.deserialize(t);
                     if (E.default.can(n, o)) {
                       e = !0;
                       break;
@@ -32584,4 +32584,4 @@
     },
   },
 ]);
-//# sourceMappingURL=36311bc91157db2412df.js.map
+//# sourceMappingURL=8b3754553c2fec0c5721.js.map

@@ -863,7 +863,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? p.Permissions.SEND_MESSAGES
-              : i.default.combine(
+              : i.combine(
                   p.Permissions.CREATE_PUBLIC_THREADS,
                   p.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -876,7 +876,7 @@
       function S(e, t) {
         let n = e.isForumLikeChannel()
             ? p.Permissions.SEND_MESSAGES
-            : i.default.combine(
+            : i.combine(
                 p.Permissions.CREATE_PUBLIC_THREADS,
                 p.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -887,10 +887,7 @@
         let t = (0, a.useStateFromStores)(
           [h.default],
           () =>
-            h.default.can(
-              i.default.combine(p.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            h.default.can(i.combine(p.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === p.ChannelTypes.GUILD_TEXT && g(t, e);
@@ -1841,4 +1838,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a0aa2cef35e123dc7f98.js.map
+//# sourceMappingURL=6ef6729ccb53dd57b628.js.map

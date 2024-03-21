@@ -12,9 +12,9 @@
         a("424973");
       var t = a("37983"),
         i = a("884691"),
-        l = a("316693"),
-        n = a("77078"),
-        r = a("978970"),
+        n = a("316693"),
+        r = a("77078"),
+        l = a("978970"),
         o = a("305961"),
         d = a("315102"),
         c = a("991170"),
@@ -26,17 +26,17 @@
       function N(e) {
         let { guild: s } = e,
           a = d.default.getGuildIconURL({ id: s.id, icon: s.icon, size: 120 });
-        return (0, t.jsxs)(n.ModalHeader, {
+        return (0, t.jsxs)(r.ModalHeader, {
           className: S.header,
           children: [
             (0, t.jsx)("div", {
               className: S.headerIconContainer,
               children:
                 null != a
-                  ? (0, t.jsx)(n.Avatar, {
+                  ? (0, t.jsx)(r.Avatar, {
                       src: a,
                       "aria-label": s.name,
-                      size: n.AvatarSizes.SIZE_120,
+                      size: r.AvatarSizes.SIZE_120,
                       className: S.guildIcon,
                     })
                   : (0, t.jsx)("div", {
@@ -47,13 +47,13 @@
             (0, t.jsxs)("div", {
               className: S.headerText,
               children: [
-                (0, t.jsx)(n.Heading, {
+                (0, t.jsx)(r.Heading, {
                   variant: "heading-lg/extrabold",
                   color: "header-primary",
                   children:
                     E.default.Messages.SAFETY_REMOVE_RISKY_PERMS_MODAL_TITLE,
                 }),
-                (0, t.jsx)(n.Text, {
+                (0, t.jsx)(r.Text, {
                   variant: "text-md/normal",
                   color: "header-primary",
                   children:
@@ -68,14 +68,14 @@
         if (e.toString() === u.Permissions.MENTION_EVERYONE.toString())
           return E.default.Messages
             .ENABLE_COMMUNITY_MODAL_EVERYONE_ROLE_PERMISSION_MENTION_EVERYONE;
-        return (0, r.getPermissionName)(e);
+        return (0, l.getPermissionName)(e);
       };
       function _(e) {
         let { permissions: s } = e;
         return (0, t.jsxs)("div", {
           className: S.tableContainer,
           children: [
-            (0, t.jsx)(n.Text, {
+            (0, t.jsx)(r.Text, {
               className: S.tableHeader,
               variant: "text-xs/semibold",
               color: "text-muted",
@@ -92,7 +92,7 @@
                     className: S.permissionRow,
                     children: [
                       (0, t.jsx)("div", { className: S.bulletWarning }),
-                      (0, t.jsx)(n.Text, {
+                      (0, t.jsx)(r.Text, {
                         variant: "text-sm/normal",
                         color: "text-normal",
                         children: I(e),
@@ -111,7 +111,7 @@
         return (0, t.jsxs)("div", {
           className: S.tableContainer,
           children: [
-            (0, t.jsx)(n.Text, {
+            (0, t.jsx)(r.Text, {
               className: S.tableHeader,
               variant: "text-xs/semibold",
               color: "text-muted",
@@ -128,7 +128,7 @@
                     className: S.permissionRow,
                     children: [
                       (0, t.jsx)("div", { className: S.bullet }),
-                      (0, t.jsx)(n.Text, {
+                      (0, t.jsx)(r.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: I(e),
@@ -145,7 +145,7 @@
       function h(e) {
         let { permissions: s } = e,
           { enabledPermissions: a, disabledPermissions: i } = s;
-        return (0, t.jsx)(n.ModalContent, {
+        return (0, t.jsx)(r.ModalContent, {
           children: (0, t.jsxs)("div", {
             className: S.table,
             children: [
@@ -157,20 +157,20 @@
       }
       function R(e) {
         let { onConfirm: s, onDismiss: a } = e;
-        return (0, t.jsxs)(n.ModalFooter, {
+        return (0, t.jsxs)(r.ModalFooter, {
           className: S.footer,
           children: [
-            (0, t.jsx)(n.Button, {
+            (0, t.jsx)(r.Button, {
               onClick: s,
               children:
                 E.default.Messages
                   .UPDATE_COMMUNICATION_NOTIFICATIONS_CONFIRMATION,
             }),
-            (0, t.jsx)(n.Button, {
-              look: n.Button.Looks.LINK,
+            (0, t.jsx)(r.Button, {
+              look: r.Button.Looks.LINK,
               onClick: a,
-              color: n.Button.Colors.PRIMARY,
-              children: (0, t.jsx)(n.Text, {
+              color: r.Button.Colors.PRIMARY,
+              children: (0, t.jsx)(r.Text, {
                 variant: "text-sm/semibold",
                 color: "header-primary",
                 children:
@@ -182,13 +182,13 @@
         });
       }
       function j(e) {
-        let { guild: s, transitionState: a, onClose: r } = e,
+        let { guild: s, transitionState: a, onClose: l } = e,
           d = i.useMemo(() => {
             let e = [],
               a = [];
             return (
               x.MODERATOR_PERMISSIONS.map(t => {
-                let i = c.default.canEveryone(t, s);
+                let i = c.canEveryone(t, s);
                 i ? e.push(t) : a.push(t);
               }),
               { enabledPermissions: e, disabledPermissions: a }
@@ -199,12 +199,12 @@
           let e =
             null != s ? o.default.getRole(s.id, s.getEveryoneRoleId()) : void 0;
           if (null == e) return;
-          let a = l.default.remove(e.permissions, x.MODERATOR_PERMISSIONS_FLAG);
-          await (0, m.saveRoleSettings)(s.id, [{ ...e, permissions: a }]), r();
+          let a = n.remove(e.permissions, x.MODERATOR_PERMISSIONS_FLAG);
+          await (0, m.saveRoleSettings)(s.id, [{ ...e, permissions: a }]), l();
         };
-        return (0, t.jsxs)(n.ModalRoot, {
+        return (0, t.jsxs)(r.ModalRoot, {
           transitionState: a,
-          size: n.ModalSize.SMALL,
+          size: r.ModalSize.SMALL,
           className: S.modal,
           children: [
             (0, t.jsx)(N, { guild: s }),
@@ -212,7 +212,7 @@
             (0, t.jsx)(R, {
               onConfirm: u,
               onDismiss: () => {
-                r();
+                l();
               },
             }),
           ],
@@ -221,4 +221,4 @@
     },
   },
 ]);
-//# sourceMappingURL=278c821165db86880f41.js.map
+//# sourceMappingURL=6b6f3e1f798fcf68b71c.js.map

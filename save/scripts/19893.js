@@ -202,7 +202,7 @@
         o = l("49111");
       function r(e, t) {
         return (
-          u.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e) ||
+          u.canEveryoneRole(o.Permissions.VIEW_CHANNEL, e) ||
           t === i.GuildScheduledEventEntityTypes.EXTERNAL
         );
       }
@@ -835,4 +835,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9bc38c2e3f6f162604c6.js.map
+//# sourceMappingURL=a45a7df85c7b6aa126d0.js.map

@@ -954,15 +954,13 @@
           s = {
             id: a,
             type: r.PermissionOverwriteType.ROLE,
-            allow: f.default.NONE,
-            deny: f.default.NONE,
+            allow: f.NONE,
+            deny: f.NONE,
             ...i,
           };
         n
-          ? ((s.allow = l.default.add(s.allow, t)),
-            (s.deny = l.default.remove(s.deny, t)))
-          : ((s.allow = l.default.remove(s.allow, t)),
-            (s.deny = l.default.add(s.deny, t))),
+          ? ((s.allow = l.add(s.allow, t)), (s.deny = l.remove(s.deny, t)))
+          : ((s.allow = l.remove(s.allow, t)), (s.deny = l.add(s.deny, t))),
           d.default.updatePermissionOverwrite(e.id, s);
       }
       async function M(e, t, n, a) {
@@ -1043,7 +1041,7 @@
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: l.default.canEveryoneRole(
+          request_to_speak_state: l.canEveryoneRole(
             r.Permissions.REQUEST_TO_SPEAK,
             e
           )
@@ -1290,7 +1288,7 @@
           () => {
             let t = e.isForumLikeChannel()
               ? _.Permissions.SEND_MESSAGES
-              : l.default.combine(
+              : l.combine(
                   _.Permissions.CREATE_PUBLIC_THREADS,
                   _.Permissions.READ_MESSAGE_HISTORY
                 );
@@ -1303,7 +1301,7 @@
       function p(e, t) {
         let n = e.isForumLikeChannel()
             ? _.Permissions.SEND_MESSAGES
-            : l.default.combine(
+            : l.combine(
                 _.Permissions.CREATE_PUBLIC_THREADS,
                 _.Permissions.READ_MESSAGE_HISTORY
               ),
@@ -1314,10 +1312,7 @@
         let t = (0, i.useStateFromStores)(
           [E.default],
           () =>
-            E.default.can(
-              l.default.combine(_.Permissions.CREATE_PRIVATE_THREADS),
-              e
-            ),
+            E.default.can(l.combine(_.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
         return e.type === _.ChannelTypes.GUILD_TEXT && h(t, e);
@@ -2072,4 +2067,4 @@
     },
   },
 ]);
-//# sourceMappingURL=422ca5f5e4bd0a75bbd2.js.map
+//# sourceMappingURL=62564b3e1f826420f3d8.js.map

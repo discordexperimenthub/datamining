@@ -36,7 +36,7 @@
       s.r(l),
         s.d(l, {
           default: function () {
-            return N;
+            return f;
           },
         }),
         s("222007");
@@ -55,11 +55,11 @@
         m = s("895423"),
         I = s("49111"),
         S = s("782340"),
-        f = s("371732");
-      function N(e) {
+        N = s("371732");
+      function f(e) {
         var l, s, n;
         let {
-            transitionState: N,
+            transitionState: f,
             onClose: g,
             guildId: h,
             welcomeMessage: A,
@@ -83,17 +83,17 @@
                       (n = u),
                       !(
                         t.isOwner(n) ||
-                        M.default.can({
+                        M.can({
                           permission: I.Permissions.ADMINISTRATOR,
                           context: t,
                           user: n,
                         }) ||
-                        (M.default.can({
+                        (M.can({
                           permission: I.Permissions.MANAGE_GUILD,
                           context: t,
                           user: n,
                         }) &&
-                          M.default.can({
+                          M.can({
                             permission: I.Permissions.MANAGE_ROLES,
                             context: t,
                             user: n,
@@ -191,18 +191,18 @@
               : null;
           })(T);
         return (0, a.jsxs)(o.ModalRoot, {
-          transitionState: N,
+          transitionState: f,
           "aria-labelledby": O,
           children: [
             (0, a.jsxs)("div", {
-              className: f.container,
+              className: N.container,
               children: [
                 (0, a.jsx)(o.ModalCloseButton, {
-                  className: f.closeButton,
+                  className: N.closeButton,
                   onClick: g,
                 }),
                 (0, a.jsxs)("div", {
-                  className: f.formGroup,
+                  className: N.formGroup,
                   children: [
                     (0, a.jsxs)(o.Heading, {
                       variant: "heading-md/semibold",
@@ -229,9 +229,9 @@
                     }),
                   ],
                 }),
-                (0, a.jsx)("div", { className: f.separator }),
+                (0, a.jsx)("div", { className: N.separator }),
                 (0, a.jsxs)("div", {
-                  className: f.formGroup,
+                  className: N.formGroup,
                   children: [
                     (0, a.jsx)(o.Heading, {
                       variant: "heading-md/semibold",
@@ -247,7 +247,7 @@
                         S.default.Messages.GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_DESCRIPTION_TIP.format(),
                     }),
                     (0, a.jsx)(o.TextArea, {
-                      className: f.welcomeMessageTextInput,
+                      className: N.welcomeMessageTextInput,
                       placeholder:
                         S.default.Messages
                           .GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_WELCOME_PLACEHOLDER,
@@ -268,10 +268,10 @@
             }),
             (0, a.jsx)(o.ModalFooter, {
               children: (0, a.jsxs)("div", {
-                className: f.footerButtons,
+                className: N.footerButtons,
                 children: [
                   (0, a.jsx)("div", {
-                    className: f.leftButtons,
+                    className: N.leftButtons,
                     children: (0, a.jsx)(o.Button, {
                       size: o.Button.Sizes.SMALL,
                       look: o.Button.Looks.LINK,
@@ -281,7 +281,7 @@
                     }),
                   }),
                   (0, a.jsxs)("div", {
-                    className: f.rightButtons,
+                    className: N.rightButtons,
                     children: [
                       (0, a.jsx)(o.Button, {
                         onClick: g,
@@ -308,4 +308,4 @@
     },
   },
 ]);
-//# sourceMappingURL=01b1357d547fa29a888d.js.map
+//# sourceMappingURL=682ff05fdd4e7798f0a1.js.map

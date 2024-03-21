@@ -1290,8 +1290,8 @@
         a = n("923510"),
         r = n("49111");
       let s = r.Permissions.VIEW_CHANNEL,
-        l = i.default.combine(s, r.Permissions.CONNECT),
-        u = i.default.combine(s, a.MODERATE_STAGE_CHANNEL_PERMISSIONS);
+        l = i.combine(s, r.Permissions.CONNECT),
+        u = i.combine(s, a.MODERATE_STAGE_CHANNEL_PERMISSIONS);
     },
     16108: function (e, t, n) {
       "use strict";
@@ -1871,8 +1871,8 @@
               : e.isGuildVoice() &&
                 (t = o.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS),
             [
-              a.default.combine(t, d.Permissions.CREATE_EVENTS),
-              a.default.combine(t, d.Permissions.MANAGE_EVENTS),
+              a.combine(t, d.Permissions.CREATE_EVENTS),
+              a.combine(t, d.Permissions.MANAGE_EVENTS),
             ]
           );
         },
@@ -4017,4 +4017,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8f2466de959be5684407.js.map
+//# sourceMappingURL=736b7141cde5b9cad05b.js.map

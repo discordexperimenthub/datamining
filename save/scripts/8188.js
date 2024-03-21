@@ -62,7 +62,7 @@
             [r.default],
             () =>
               null != t &&
-              l.default.hasAny(
+              l.hasAny(
                 r.default.computePermissions(t),
                 i.IncidentAlertModeratorPermissions
               )
@@ -85,7 +85,7 @@
         let t = n.default.getGuild(e),
           a =
             null != t &&
-            l.default.hasAny(
+            l.hasAny(
               r.default.computePermissions(t),
               i.IncidentAlertModeratorPermissions
             ),
@@ -118,10 +118,10 @@
             return A;
           },
           handleResolveRaid: function () {
-            return f;
+            return E;
           },
           handleReportRaid: function () {
-            return E;
+            return f;
           },
         }),
         a("222007");
@@ -166,7 +166,7 @@
           });
         return r;
       }
-      async function f(e, t, a) {
+      async function E(e, t, a) {
         let { showAlertMode: l } = (0, u.getGuildAlertModeEnabled)(e),
           o = i.default.getGuild(e),
           n = null == o ? void 0 : o.getSafetyAlertsChannelId();
@@ -177,7 +177,7 @@
         });
         return r;
       }
-      async function E(e) {
+      async function f(e) {
         let { showAlertMode: t } = (0, u.getGuildAlertModeEnabled)(e),
           a = i.default.getGuild(e),
           l = null == a ? void 0 : a.getSafetyAlertsChannelId();
@@ -236,7 +236,7 @@
             label: s.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS,
           },
         ],
-        d = l.default.combine(
+        d = l.combine(
           o.Permissions.ADMINISTRATOR,
           o.Permissions.MANAGE_GUILD,
           o.Permissions.BAN_MEMBERS,
@@ -265,14 +265,14 @@
         c = a("782340"),
         R = a("341695");
       function A(e) {
-        let { guildId: t, messageId: s, transitionState: A, onClose: f } = e,
-          [E, I] = o.useState([]),
+        let { guildId: t, messageId: s, transitionState: A, onClose: E } = e,
+          [f, I] = o.useState([]),
           [M, S] = o.useState(),
           D = o.useCallback(() => {
             let e = {
               raid_alert_type: u.RaidAlertType.JOIN_RAID,
               raid_alert_id: s,
-              false_alarm_type: E.map(e => e.toString()),
+              false_alarm_type: f.map(e => e.toString()),
               false_alarm_other_reason: M,
               guild_id: t,
             };
@@ -280,16 +280,16 @@
               (0, d.handleResolveRaid)(
                 t,
                 s,
-                (0, u.getMostImportantRaidResolutionType)(E)
+                (0, u.getMostImportantRaidResolutionType)(f)
               ),
-              f(),
+              E(),
               (0, r.openModalLazy)(async () => {
                 let { default: e } = await a
                   .el("938899")
                   .then(a.bind(a, "938899"));
                 return t => (0, l.jsx)(e, { ...t });
               });
-          }, [f, s, t, M, E]),
+          }, [E, s, t, M, f]),
           h = [
             {
               text: c.default.Messages
@@ -310,7 +310,7 @@
             },
           ];
         function T(e) {
-          let t = E.includes(e);
+          let t = f.includes(e);
           t ? I(t => t.filter(t => t !== e)) : I(t => [...t, e]);
         }
         return (0, l.jsxs)(r.ModalRoot, {
@@ -356,7 +356,7 @@
                                 children: (0, l.jsx)(r.Checkbox, {
                                   type: r.Checkbox.Types.INVERTED,
                                   size: 20,
-                                  value: E.includes(a),
+                                  value: f.includes(a),
                                   onChange: () => T(a),
                                 }),
                               }),
@@ -368,7 +368,7 @@
                             ],
                           }),
                           a === u.RaidResolutionType.OTHER &&
-                            E.includes(u.RaidResolutionType.OTHER) &&
+                            f.includes(u.RaidResolutionType.OTHER) &&
                             (0, l.jsx)("div", {
                               className: R.textboxContainer,
                               children: (0, l.jsx)(r.TextArea, {
@@ -406,7 +406,7 @@
                   }),
                 }),
                 (0, l.jsx)(r.Button, {
-                  onClick: f,
+                  onClick: E,
                   color: r.Button.Colors.PRIMARY,
                   look: r.Button.Looks.LINK,
                   children: c.default.Messages.CANCEL,
@@ -419,4 +419,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3c5976dd84ca3615e2fa.js.map
+//# sourceMappingURL=0f228cdcbf8f18dc70b2.js.map

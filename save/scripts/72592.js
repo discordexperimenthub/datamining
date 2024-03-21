@@ -64,8 +64,8 @@
       n("851387");
       var u = n("798609"),
         c = n("716241"),
-        d = n("18494"),
-        o = n("800762"),
+        o = n("18494"),
+        d = n("800762"),
         f = n("991170"),
         _ = n("716214"),
         h = n("230324"),
@@ -108,7 +108,7 @@
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           a = null == e ? void 0 : e.getGuildId();
         s(null != a, "This channel cannot be guildless.");
-        let l = o.default.getVoiceStateForChannel(e.id),
+        let l = d.default.getVoiceStateForChannel(e.id),
           r = (0, p.getAudienceRequestToSpeakState)(l);
         return (
           r ===
@@ -177,20 +177,18 @@
           c = {
             id: a,
             type: u.PermissionOverwriteType.ROLE,
-            allow: f.default.NONE,
-            deny: f.default.NONE,
+            allow: f.NONE,
+            deny: f.NONE,
             ...i,
           };
         n
-          ? ((c.allow = l.default.add(c.allow, t)),
-            (c.deny = l.default.remove(c.deny, t)))
-          : ((c.allow = l.default.remove(c.allow, t)),
-            (c.deny = l.default.add(c.deny, t))),
+          ? ((c.allow = l.add(c.allow, t)), (c.deny = l.remove(c.deny, t)))
+          : ((c.allow = l.remove(c.allow, t)), (c.deny = l.add(c.deny, t))),
           r.default.updatePermissionOverwrite(e.id, c);
       }
       async function M(e, t, n, a) {
         if ("" === t) return;
-        let s = d.default.getVoiceChannelId() === e.id;
+        let s = o.default.getVoiceChannelId() === e.id;
         !s && (0, _.connectToStage)(e);
         let l = await (0, E.startStageInstance)(e.id, t, n, a);
         return S(e, !1, !0), l;
@@ -209,7 +207,7 @@
       n.r(t),
         n.d(t, {
           summarizeUsernamesParticipating: function () {
-            return o;
+            return d;
           },
           getRemoveModeratorTooltipHint: function () {
             return f;
@@ -228,16 +226,16 @@
         r = n("837979"),
         u = n("49111"),
         c = n("606762"),
-        d = n("782340");
-      function o(e, t, n, a) {
+        o = n("782340");
+      function d(e, t, n, a) {
         let l = t[0],
           i = s.default.getName(e, n, l),
           r = null != a ? a : t.length;
         return 1 === r && null != l
           ? i
           : null == l
-            ? d.default.Messages.SPEAKING_COUNT.format({ count: r })
-            : d.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
+            ? o.default.Messages.SPEAKING_COUNT.format({ count: r })
+            : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
                 name: i,
                 count: r - 1,
               });
@@ -245,16 +243,16 @@
       function f(e, t) {
         switch (e) {
           case c.RowType.OWNER:
-            return d.default.Messages
+            return o.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
           case c.RowType.ADMINISTRATOR:
-            return d.default.Messages
+            return o.default.Messages
               .CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
           case c.RowType.MEMBER:
           case c.RowType.ROLE:
             return t
-              ? d.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
-              : d.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
+              ? o.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS
+              : o.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
           case c.RowType.EMPTY_STATE:
         }
         return null;
@@ -266,7 +264,7 @@
           guild_id: e.guild_id,
           topic: null == t ? void 0 : t.topic,
           media_session_id: a.default.getMediaSessionId(),
-          request_to_speak_state: l.default.canEveryoneRole(
+          request_to_speak_state: l.canEveryoneRole(
             u.Permissions.REQUEST_TO_SPEAK,
             e
           )
@@ -321,7 +319,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return o;
           },
         });
       var a = n("37983");
@@ -332,7 +330,7 @@
         r = n("662190"),
         u = n("284434"),
         c = n("315956");
-      function d(e) {
+      function o(e) {
         let { className: t, children: n } = e;
         return (0, a.jsxs)("div", {
           className: l(r.container, t),
@@ -368,15 +366,15 @@
         r = n("155207"),
         u = n("228427"),
         c = n("244480"),
-        d = n("151642"),
-        o = n("29846"),
+        o = n("151642"),
+        d = n("29846"),
         f = n("119184"),
         _ = n("782340"),
         h = n("479682");
       function E(e) {
         let { channel: t, transitionState: n, onClose: E, ...p } = e,
           T = (0, l.useUID)(),
-          g = (0, d.useStageBlockedUsersCount)(t.id),
+          g = (0, o.useStageBlockedUsersCount)(t.id),
           I = async () => {
             await (0, c.moveSelfToAudience)(t), E();
           },
@@ -415,7 +413,7 @@
                 children:
                   _.default.Messages.STAGE_MODERATOR_JOIN_MODAL_SUBTITLE,
               }),
-              g > 0 && (0, a.jsx)(o.BlockedUsersNotice, { channelId: t.id }),
+              g > 0 && (0, a.jsx)(d.BlockedUsersNotice, { channelId: t.id }),
               (0, a.jsxs)("div", {
                 className: h.buttonsContainer,
                 children: [
@@ -690,4 +688,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dc21d3e6cef65e31576d.js.map
+//# sourceMappingURL=3795500bc7ea5628dd5d.js.map

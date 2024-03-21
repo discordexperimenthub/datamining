@@ -4615,7 +4615,7 @@
         t.forEach(async t => {
           let n,
             { id: r } = t,
-            i = s.default.getToken(r);
+            i = s.getToken(r);
           if (null == i || "" === i) {
             l.default.dispatch({
               type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
@@ -4657,7 +4657,7 @@
       }
       function f(e, t) {
         c.log("Switching account to ".concat(e), { switchSynchronously: t });
-        let n = s.default.getToken(e);
+        let n = s.getToken(e);
         return null == n
           ? (c.log("Switching accounts failed because there was no token"),
             l.default.dispatch({
@@ -5798,4 +5798,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30341.667396886ae5918a4c68.js.map
+//# sourceMappingURL=30341.0b984850414a472a2649.js.map

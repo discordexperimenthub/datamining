@@ -550,8 +550,7 @@
             if (null == t) return !1;
             let n = u.default.getGuildPermissions(t);
             return (
-              null != n &&
-              i.default.hasAny(n, h.IncidentAlertModeratorPermissions)
+              null != n && i.hasAny(n, h.IncidentAlertModeratorPermissions)
             );
           }),
           l = (0, r.default)([E.default], () =>
@@ -581,8 +580,8 @@
                 ((0, S.isUnderLockdown)(r) && l.id !== e)
               )
                 continue;
-              let s = i.default.hasAny(
-                d.default.computePermissions({
+              let s = i.hasAny(
+                d.computePermissions({
                   user: t,
                   context: l,
                   checkElevated: !1,
@@ -2674,7 +2673,7 @@
                     .filter(
                       e =>
                         (null == x ? void 0 : x.id) === e.id ||
-                        h.default.isRoleHigher(l, n.id, x, e)
+                        h.isRoleHigher(l, n.id, x, e)
                     )
                 : [],
             [l, n, M, x, u]
@@ -2685,12 +2684,9 @@
           let t = u[e];
           null != t && (D[t.id] = t);
         });
-        let G = a.default.has(
-          h.default.computePermissionsForRoles({ forceRoles: D, context: l }),
-          a.default.combine(
-            I.Permissions.MANAGE_GUILD,
-            I.Permissions.MANAGE_ROLES
-          )
+        let G = a.has(
+          h.computePermissionsForRoles({ forceRoles: D, context: l }),
+          a.combine(I.Permissions.MANAGE_GUILD, I.Permissions.MANAGE_ROLES)
         );
         return G || l.isOwner(n.id)
           ? (0, i.jsx)("div", {
@@ -4018,4 +4014,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1be530d26fa2eac7b987.js.map
+//# sourceMappingURL=066c095ba0ffa895ef42.js.map

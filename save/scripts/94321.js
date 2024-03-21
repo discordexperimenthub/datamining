@@ -182,7 +182,7 @@
             [r.default],
             () =>
               null != t &&
-              i.default.hasAny(
+              i.hasAny(
                 r.default.computePermissions(t),
                 d.IncidentAlertModeratorPermissions
               )
@@ -205,7 +205,7 @@
         let t = a.default.getGuild(e),
           n =
             null != t &&
-            i.default.hasAny(
+            i.hasAny(
               r.default.computePermissions(t),
               d.IncidentAlertModeratorPermissions
             ),
@@ -356,7 +356,7 @@
             label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS,
           },
         ],
-        s = i.default.combine(
+        s = i.combine(
           l.Permissions.ADMINISTRATOR,
           l.Permissions.MANAGE_GUILD,
           l.Permissions.BAN_MEMBERS,
@@ -962,4 +962,4 @@
     },
   },
 ]);
-//# sourceMappingURL=937617c8d71b476c1e32.js.map
+//# sourceMappingURL=519054d7bf9cdae9a566.js.map

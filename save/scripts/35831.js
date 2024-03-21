@@ -11955,9 +11955,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277368",
+          E = "277376",
           T =
-            ((e = "b16657652a4037ca448b16725714845080f73159"),
+            ((e = "227257c20eea9c82abde3f156d6cdb8bee35ab7f"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -30889,7 +30889,7 @@
       var f = new T(r.default, {
         MFA_ENABLE_SUCCESS: function (e) {
           let { token: t, codes: s } = e;
-          void 0 !== t && l.default.setToken(t), (d = s);
+          void 0 !== t && l.setToken(t), (d = s);
         },
         MFA_ENABLE_EMAIL_TOKEN: function (e) {
           let { token: t } = e;
@@ -30897,7 +30897,7 @@
         },
         MFA_DISABLE_SUCCESS: function (e) {
           let { token: t } = e;
-          l.default.setToken(t);
+          l.setToken(t);
         },
         MFA_SMS_TOGGLE: function () {
           o = !0;
@@ -32157,4 +32157,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30b47e8b909b21568cc2.js.map
+//# sourceMappingURL=734e46a0d02a3993a0bd.js.map

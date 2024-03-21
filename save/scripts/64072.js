@@ -46,7 +46,7 @@
         u = n("305961"),
         r = n("957255"),
         d = n("49111");
-      let o = a.default.combine(
+      let o = a.combine(
         d.Permissions.VIEW_CHANNEL,
         d.Permissions.MANAGE_MESSAGES,
         d.Permissions.READ_MESSAGE_HISTORY
@@ -467,7 +467,7 @@
         l = n("677315"),
         s = n("957255"),
         u = n("49111");
-      let r = a.default.combine(
+      let r = a.combine(
         u.Permissions.VIEW_CHANNEL,
         u.Permissions.MANAGE_MESSAGES,
         u.Permissions.READ_MESSAGE_HISTORY
@@ -2826,4 +2826,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ec183ea55e53d0fb0c1f.js.map
+//# sourceMappingURL=2706883d42e3fda06458.js.map

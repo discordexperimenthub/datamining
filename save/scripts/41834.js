@@ -568,7 +568,7 @@
       var M = new _(r.default, {
         MFA_ENABLE_SUCCESS: function (e) {
           let { token: t, codes: n } = e;
-          void 0 !== t && o.default.setToken(t), (d = n);
+          void 0 !== t && o.setToken(t), (d = n);
         },
         MFA_ENABLE_EMAIL_TOKEN: function (e) {
           let { token: t } = e;
@@ -576,7 +576,7 @@
         },
         MFA_DISABLE_SUCCESS: function (e) {
           let { token: t } = e;
-          o.default.setToken(t);
+          o.setToken(t);
         },
         MFA_SMS_TOGGLE: function () {
           s = !0;
@@ -602,4 +602,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4b4d952ecda7cc8e0585.js.map
+//# sourceMappingURL=9e1752ca6e553b2d9307.js.map

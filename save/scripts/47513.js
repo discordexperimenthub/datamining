@@ -26443,8 +26443,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277341", ", Version Hash: ")
-          .concat("32c8c263daee98052fa71020cfa0f01f33fb73e8")
+          .concat("277368", ", Version Hash: ")
+          .concat("b16657652a4037ca448b16725714845080f73159")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29569,12 +29569,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277341"), "277341"));
+        let _ = parseInt(((e = "277368"), "277368"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277341"
+                "277368"
               )
             ),
             (_ = 0)),
@@ -46383,6 +46383,7 @@
           "COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP"),
         (u[(u.TENURE_REWARD_REDEEMABLE_CONFETTI = 363)] =
           "TENURE_REWARD_REDEEMABLE_CONFETTI"),
+        (u[(u.VALORANT_USER_SIGNUPS = 364)] = "VALORANT_USER_SIGNUPS"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -52799,4 +52800,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.4692bdf267ebfb3cfd1e.js.map
+//# sourceMappingURL=47513.13fa6e7f1ec81697a767.js.map

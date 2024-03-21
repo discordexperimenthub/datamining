@@ -1709,7 +1709,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "277485",
+                  buildNumber: "277493",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -6202,6 +6202,7 @@
               selfMute: S.default.isSelfMute(),
               selfDeaf: S.default.isSelfDeaf(),
               audioPermissionReady: S.default.isNativeAudioPermissionReady(),
+              shouldSkipMuteUnmuteSound: S.default.shouldSkipMuteUnmuteSound(),
             }),
             (e, t) => {
               let {
@@ -6209,18 +6210,18 @@
                 selfMute: a,
                 selfDeaf: s,
                 audioPermissionReady: l,
+                shouldSkipMuteUnmuteSound: i,
               } = t;
-              return e.selfDeaf !== s
-                ? s
-                  ? "deafen"
-                  : "undeafen"
-                : l
-                  ? (n || e.audioPermissionReady) && e.selfMute !== a
-                    ? a
-                      ? "mute"
-                      : "unmute"
-                    : void 0
-                  : void 0;
+              if (e.selfDeaf !== s) return s ? "deafen" : "undeafen";
+              if (!!l) {
+                if ((n || e.audioPermissionReady) && e.selfMute !== a) {
+                  if (i) {
+                    S.default.notifyMuteUnmuteSoundWasSkipped();
+                    return;
+                  }
+                  return a ? "mute" : "unmute";
+                }
+              }
             }
           ),
           null
@@ -53045,4 +53046,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1bcbebe1eff3a042c602.js.map
+//# sourceMappingURL=d0e540b2258d45bafdfb.js.map

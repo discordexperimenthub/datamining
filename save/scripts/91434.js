@@ -610,13 +610,13 @@
             [S.default],
             () => null != S.default.getAnyStreamForUser(G.id)
           ),
-          H = (0, i.useStateFromStores)([E.default], () =>
+          w = (0, i.useStateFromStores)([E.default], () =>
             E.default.findActivity(
               G.id,
               e => e.type !== M.ActivityTypes.CUSTOM_STATUS
             )
           ),
-          w = (0, h.useGetVoiceChannelInfoForVoiceActivitySection)(G.id, _),
+          H = (0, h.useGetVoiceChannelInfoForVoiceActivitySection)(G.id, _),
           [Y, z] = l.useState(!1),
           [J, K] = l.useState(
             G.isNonUserBot() && !G.isClyde()
@@ -635,12 +635,12 @@
           { UserProfileAnalyticsProvider: Z, trackUserProfileAction: q } = (0,
           N.useUserProfileAnalyticsProvider)({
             layout: "MODAL",
-            analyticsLocations: [d.default.PROFILE_MODAL],
+            newAnalyticsLocations: [d.default.PROFILE_MODAL],
             userId: G.id,
             guildId: _,
             channelId: v,
           }),
-          X = null != H || V || (null != w && W),
+          X = null != w || V || (null != H && W),
           $ = !Q || X,
           ee = l.createRef(),
           et = (0, n.default)(ee);
@@ -675,7 +675,7 @@
                           user: G,
                           friendToken: F,
                           onClose: b,
-                          isStreaming: (0, c.default)(H),
+                          isStreaming: (0, c.default)(w),
                           guildId: _,
                           channelId: v,
                           hasProfileEffect: null != ea,
@@ -834,10 +834,10 @@
           V = (0, i.useStateFromStores)([T.default], () =>
             T.default.getRelationshipType(_.id)
           ),
-          H = (0, i.useStateFromStores)([E.default], () =>
+          w = (0, i.useStateFromStores)([E.default], () =>
             E.default.isMobileOnline(_.id)
           ),
-          w = (0, i.useStateFromStores)([E.default], () =>
+          H = (0, i.useStateFromStores)([E.default], () =>
             E.default.getStatus(_.id)
           ),
           Y = (0, i.useStateFromStores)([I.default], () =>
@@ -910,9 +910,9 @@
                       ? M.StatusTypes.UNKNOWN
                       : b
                         ? M.StatusTypes.STREAMING
-                        : w,
+                        : H,
                     statusBackdropColor: (0, r.getStatusBackdropColor)(J),
-                    isMobile: H,
+                    isMobile: w,
                     statusTooltip: !0,
                     "aria-label": _.username,
                   }),
@@ -1129,4 +1129,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fe0f9f0c327ecbe3737b.js.map
+//# sourceMappingURL=165183733acecf1d32ed.js.map

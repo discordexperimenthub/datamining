@@ -11955,9 +11955,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277376",
+          E = "277395",
           T =
-            ((e = "227257c20eea9c82abde3f156d6cdb8bee35ab7f"),
+            ((e = "e3703f5100c8ef2bd674d3a3fd3b1031cf42dc04"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -27126,7 +27126,7 @@
           b = Math.max(0, j - v.length),
           U = P > j,
           y = j === g.length,
-          B = y && b === j ? j : 1,
+          B = y ? b : 1,
           F = n.useMemo(() => {
             let e = [];
             for (let t = 0; t < B; t++)
@@ -27204,94 +27204,99 @@
                   ],
                 }),
               (0, a.jsxs)("div", {
-                className: i(C.header, {
+                className: i(C.content, {
                   [C.headerWithBoost]: G,
                   [C.headerWithoutSpecialHeader]: !G,
                 }),
                 children: [
                   (0, a.jsxs)("div", {
-                    className: C.headerContentPrimary,
+                    className: C.header,
                     children: [
-                      (0, a.jsx)("div", {
-                        className: C.headerBoostGems,
-                        children: F,
-                      }),
                       (0, a.jsxs)("div", {
-                        className: C.headerCopy,
+                        className: C.headerContentPrimary,
                         children: [
-                          (0, a.jsx)(o.Heading, {
-                            className: C.headerHeading,
-                            variant: "heading-lg/bold",
-                            children: t,
+                          (0, a.jsx)("div", {
+                            className: C.headerBoostGems,
+                            children: F,
                           }),
-                          (0, a.jsx)(o.Text, {
-                            className: C.headerSubheading,
-                            color: "text-primary",
-                            variant: "text-sm/normal",
-                            children: l,
+                          (0, a.jsxs)("div", {
+                            className: C.headerCopy,
+                            children: [
+                              (0, a.jsx)(o.Heading, {
+                                className: C.headerHeading,
+                                variant: "heading-lg/bold",
+                                children: t,
+                              }),
+                              (0, a.jsx)(o.Text, {
+                                className: C.headerSubheading,
+                                color: "text-primary",
+                                variant: "text-sm/normal",
+                                children: l,
+                              }),
+                            ],
                           }),
                         ],
                       }),
+                      (0, a.jsx)("div", {
+                        className: C.headerContentSecondary,
+                        children: (0, a.jsx)(o.Tooltip, {
+                          shouldShow: null == k,
+                          text: p.default.Messages
+                            .GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
+                          children: e =>
+                            (0, a.jsx)(o.Button, {
+                              ...e,
+                              disabled: null == k,
+                              onClick:
+                                null != k
+                                  ? () => {
+                                      var e;
+                                      return (
+                                        (e = k),
+                                        void (0, o.openModalLazy)(async () => {
+                                          let { default: t } = await s
+                                            .el("247760")
+                                            .then(s.bind(s, "247760"));
+                                          return s =>
+                                            (0, a.jsx)(t, {
+                                              ...s,
+                                              guildBoostSlots: [e],
+                                              locationSection:
+                                                N.AnalyticsSections
+                                                  .SETTINGS_PREMIUM,
+                                            });
+                                        })
+                                      );
+                                    }
+                                  : void 0,
+                              children:
+                                p.default.Messages
+                                  .GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER,
+                            }),
+                        }),
+                      }),
                     ],
                   }),
-                  (0, a.jsx)("div", {
-                    className: C.headerContentSecondary,
-                    children: (0, a.jsx)(o.Tooltip, {
-                      shouldShow: null == k,
-                      text: p.default.Messages
-                        .GUILD_BOOSTING_USER_SETTINGS_NO_AVAILABLE_GUILD_BOOST_SLOTS,
-                      children: e =>
-                        (0, a.jsx)(o.Button, {
-                          ...e,
-                          disabled: null == k,
-                          onClick:
-                            null != k
-                              ? () => {
-                                  var e;
-                                  return (
-                                    (e = k),
-                                    void (0, o.openModalLazy)(async () => {
-                                      let { default: t } = await s
-                                        .el("247760")
-                                        .then(s.bind(s, "247760"));
-                                      return s =>
-                                        (0, a.jsx)(t, {
-                                          ...s,
-                                          guildBoostSlots: [e],
-                                          locationSection:
-                                            N.AnalyticsSections
-                                              .SETTINGS_PREMIUM,
-                                        });
-                                    })
-                                  );
-                                }
-                              : void 0,
-                          children:
-                            p.default.Messages
-                              .GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER,
-                        }),
+                  !y &&
+                    (0, a.jsx)("ul", {
+                      className: C.unappliedBoostSlots,
+                      children: L.map(e =>
+                        (0, a.jsx)(
+                          A,
+                          {
+                            guildBoostSlot: e,
+                            isCancellable: U,
+                            onCancel: O,
+                            onUncancel: x,
+                            premiumSubscription: h,
+                            useReducedMotion: R,
+                          },
+                          e.id
+                        )
+                      ),
                     }),
-                  }),
                 ],
               }),
-              !y &&
-                (0, a.jsx)("ul", {
-                  className: C.unappliedBoostSlots,
-                  children: L.map(e =>
-                    (0, a.jsx)(
-                      A,
-                      {
-                        guildBoostSlot: e,
-                        isCancellable: U,
-                        onCancel: O,
-                        onUncancel: x,
-                        premiumSubscription: h,
-                        useReducedMotion: R,
-                      },
-                      e.id
-                    )
-                  ),
-                }),
             ],
           })
         );
@@ -32157,4 +32162,4 @@
     },
   },
 ]);
-//# sourceMappingURL=734e46a0d02a3993a0bd.js.map
+//# sourceMappingURL=aa2ab0da95d57629180e.js.map

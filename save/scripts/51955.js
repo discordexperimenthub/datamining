@@ -6424,7 +6424,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return _;
+            return I;
           },
         });
       var a = n("37983");
@@ -6434,76 +6434,81 @@
         i = n("446674"),
         r = n("77078"),
         o = n("272030"),
-        u = n("619335"),
-        d = n("506885"),
-        c = n("981601"),
-        f = n("26989"),
-        h = n("697218"),
-        C = n("959097"),
-        p = n("158998"),
-        m = n("172554"),
-        E = n("49111"),
-        g = n("782340"),
-        S = n("247703");
-      function T(e) {
+        u = n("812204"),
+        d = n("685665"),
+        c = n("619335"),
+        f = n("506885"),
+        h = n("981601"),
+        C = n("26989"),
+        p = n("697218"),
+        m = n("959097"),
+        E = n("158998"),
+        g = n("172554"),
+        S = n("49111"),
+        T = n("782340"),
+        A = n("247703");
+      function _(e) {
         var t, s;
-        let { userId: u, channel: C } = e,
-          m = (0, i.useStateFromStores)([h.default], () =>
-            h.default.getUser(u)
+        let { userId: c, channel: m } = e,
+          { AnalyticsLocationProvider: g } = (0, d.default)(u.default.USERNAME),
+          S = (0, i.useStateFromStores)([p.default], () =>
+            p.default.getUser(c)
           ),
-          E = (0, i.useStateFromStores)([f.default], () =>
-            null != u ? f.default.getMember(C.guild_id, u) : null
+          T = (0, i.useStateFromStores)([C.default], () =>
+            null != c ? C.default.getMember(m.guild_id, c) : null
           );
-        function g(e) {
-          if (null == m) return null;
+        function _(e) {
+          if (null == S) return null;
           (0, o.openContextMenuLazy)(e, async () => {
             let { default: e } = await n.el("721429").then(n.bind(n, "721429"));
             return t =>
-              (0, a.jsx)(e, { ...t, user: m, guildId: C.guild_id, channel: C });
+              (0, a.jsx)(e, { ...t, user: S, guildId: m.guild_id, channel: m });
           });
         }
-        let T =
+        let M =
             null !==
               (s =
-                null !== (t = null == E ? void 0 : E.nick) && void 0 !== t
+                null !== (t = null == T ? void 0 : T.nick) && void 0 !== t
                   ? t
-                  : p.default.getName(m)) && void 0 !== s
+                  : E.default.getName(S)) && void 0 !== s
               ? s
               : "???",
-          A = null == E ? void 0 : E.colorString;
-        return null == m
+          I = null == T ? void 0 : T.colorString;
+        return null == S
           ? (0, a.jsx)("span", {
-              className: l(S.threadCreatorName, S.unknownCreatorName),
-              children: T,
+              className: l(A.threadCreatorName, A.unknownCreatorName),
+              children: M,
             })
-          : (0, a.jsx)(r.Popout, {
-              preload: () =>
-                (0, d.default)(m.id, m.getAvatarURL(C.guild_id, 80), {
-                  guildId: C.guild_id,
-                  channelId: C.id,
-                }),
-              renderPopout: e =>
-                (0, a.jsx)(c.default, {
-                  userId: m.id,
-                  guildId: C.guild_id,
-                  channelId: C.id,
-                  ...e,
-                }),
-              position: "right",
-              children: e =>
-                (0, a.jsx)(r.Clickable, {
-                  ...e,
-                  tag: "span",
-                  className: S.threadCreatorName,
-                  onContextMenu: g,
-                  children: (0, a.jsx)(r.NameWithRole, {
-                    name: T,
-                    color: null != A ? A : void 0,
+          : (0, a.jsx)(g, {
+              children: (0, a.jsx)(r.Popout, {
+                preload: () =>
+                  (0, f.default)(S.id, S.getAvatarURL(m.guild_id, 80), {
+                    guildId: m.guild_id,
+                    channelId: m.id,
                   }),
-                }),
+                renderPopout: e =>
+                  (0, a.jsx)(h.default, {
+                    userId: S.id,
+                    guildId: m.guild_id,
+                    channelId: m.id,
+                    ...e,
+                  }),
+                position: "right",
+                children: e =>
+                  (0, a.jsx)(r.Clickable, {
+                    ...e,
+                    tag: "span",
+                    className: A.threadCreatorName,
+                    onContextMenu: _,
+                    children: (0, a.jsx)(r.NameWithRole, {
+                      name: M,
+                      color: null != I ? I : void 0,
+                    }),
+                  }),
+              }),
             });
       }
-      function A(e) {
+      function M(e) {
         let { channel: t } = e,
           { threadMetadata: n } = t;
         return null == n
@@ -6514,38 +6519,38 @@
                   variant: "text-md/normal",
                   color: "header-secondary",
                   children: (0, a.jsx)("div", {
-                    className: S.subtitle,
-                    children: g.default.Messages.THREAD_STARTED_BY.format({
+                    className: A.subtitle,
+                    children: T.default.Messages.THREAD_STARTED_BY.format({
                       usernameHook: (e, n) =>
-                        (0, a.jsx)(T, { userId: t.ownerId, channel: t }, n),
+                        (0, a.jsx)(_, { userId: t.ownerId, channel: t }, n),
                     }),
                   }),
                 }),
-                t.type === E.ChannelTypes.PRIVATE_THREAD
+                t.type === S.ChannelTypes.PRIVATE_THREAD
                   ? (0, a.jsx)(r.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
                       children:
-                        g.default.Messages
+                        T.default.Messages
                           .EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS,
                     })
                   : null,
               ],
             });
       }
-      function _(e) {
+      function I(e) {
         var t;
         let { channel: n } = e,
-          s = null !== (t = (0, u.default)(n)) && void 0 !== t ? t : C.default;
-        return (0, a.jsxs)(m.default, {
+          s = null !== (t = (0, c.default)(n)) && void 0 !== t ? t : m.default;
+        return (0, a.jsxs)(g.default, {
           channelId: n.id,
           children: [
             (0, a.jsx)("div", {
-              className: S.iconWrapper,
-              children: (0, a.jsx)(s, { className: S.icon }),
+              className: A.iconWrapper,
+              children: (0, a.jsx)(s, { className: A.icon }),
             }),
-            (0, a.jsx)(m.EmptyMessageHeader, { children: n.name }),
-            (0, a.jsx)(A, { channel: n }),
+            (0, a.jsx)(g.EmptyMessageHeader, { children: n.name }),
+            (0, a.jsx)(M, { channel: n }),
           ],
         });
       }
@@ -19752,4 +19757,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ca8f6400bf786e765ef8.js.map
+//# sourceMappingURL=8315812955914c44bdd1.js.map

@@ -113,11 +113,20 @@
         (i.GUILD_CHANNEL = "guild channel"),
         (i.FORUM_CHANNEL = "forum channel"),
         (i.FILE_UPLOAD_POPOUT = "file upload popout"),
+        (i.VOICE_USER = "voice user"),
+        (i.USER_LIST_ITEM = "user list item"),
+        (i.EXECUTED_COMMAND = "executed command"),
         (i.EMOJI = "emoji"),
+        (i.AVATAR = "avatar"),
+        (i.USERNAME = "username"),
+        (i.MEMBER_LIST = "member list"),
+        (i.USER_MENTION = "user mention"),
+        (i.ROLE_MENTION = "role mention"),
         (i.PROFILE = "profile"),
         (i.PROFILE_MODAL = "profile modal"),
         (i.PROFILE_POPOUT = "profile popout"),
         (i.BITE_SIZE_PROFILE_POPOUT = "bite size profile popout"),
+        (i.PROFILE_PANEL = "profile panel"),
         (i.GUILD_PROFILE = "guild profile"),
         (i.EDIT_AVATAR = "edit avatar"),
         (i.EDIT_BANNER = "edit banner"),
@@ -219,6 +228,7 @@
         (i.ACTIVITY_COACH_MARK_POKER = "activity coach mark poker"),
         (i.ACTIVITIES_COACH_MARK_GAME_NIGHT =
           "activities coach mark game night"),
+        (i.STAGE_CHANNEL_CALL = "stage channel call"),
         (i.STAGE_VIDEO_LIMIT = "stage video limit"),
         (i.ACTIVITIES_MINI_SHELF = "activities mini shelf"),
         (i.ACTIVITIES_MINI_SHELF_BANNER = "activities mini shelf banner"),
@@ -311,6 +321,7 @@
           "premium trial offer action sheet"),
         (i.PREMIUM_SUBSCRIBER_NITRO_HOME = "premium subscriber nitro home"),
         (i.CLYDE_PROFILE_SHARE_MODAL = "clyde profile share modal"),
+        (i.GUILD_EVENT_MODAL = "guild event modal"),
         (i.GUILD_EVENT_CARD = "guild event card"),
         (i.EVENT_SETTINGS = "event settings"),
         (i.GUILD_EVENT_RSVP_BUTTON = "guild event rsvp button"),
@@ -324,4 +335,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.f108e57f51b368d5ff0c.js.map
+//# sourceMappingURL=14875.53367468d3f465315e61.js.map

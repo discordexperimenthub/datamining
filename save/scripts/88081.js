@@ -719,7 +719,7 @@
             return s;
           },
           default: function () {
-            return T;
+            return M;
           },
         });
       var a,
@@ -732,103 +732,106 @@
         c = n("446674"),
         d = n("77078"),
         m = n("206230"),
-        f = n("390236"),
-        g = n("500858"),
-        p = n("238956"),
-        E = n("506885"),
-        A = n("79798"),
-        S = n("315102"),
-        h = n("356296");
-      function I(e) {
+        f = n("812204"),
+        g = n("685665"),
+        p = n("390236"),
+        E = n("500858"),
+        A = n("238956"),
+        S = n("506885"),
+        h = n("79798"),
+        I = n("315102"),
+        T = n("356296");
+      function y(e) {
         let { compact: t } = e;
-        return (0, r.jsx)(A.default, {
-          className: t ? h.botTagCompact : h.botTagCozy,
-          type: A.default.Types.REMIX,
+        return (0, r.jsx)(h.default, {
+          className: t ? T.botTagCompact : T.botTagCozy,
+          type: h.default.Types.REMIX,
           useRemSizes: !0,
         });
       }
-      function T(e) {
+      function M(e) {
         let t,
           {
             author: n,
             message: a,
             userOverride: s,
             compact: l = !1,
-            withMentionPrefix: A = !1,
-            showPopout: T = !1,
-            className: y,
-            onClick: M,
-            onContextMenu: x,
-            onPopoutRequestClose: _,
-            renderPopout: N,
-            renderRemixTag: v = !1,
-            decorations: b,
+            withMentionPrefix: h = !1,
+            showPopout: M = !1,
+            className: x,
+            onClick: _,
+            onContextMenu: N,
+            onPopoutRequestClose: v,
+            renderPopout: b,
+            renderRemixTag: L = !1,
+            decorations: R,
           } = e,
-          L = i.useContext(f.default),
-          { nick: R, colorString: k, colorRoleName: C } = n,
-          j = null != a.messageReference && null != a.webhookId,
-          w = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
-          D = (0, p.useCanSeeRemixBadge)(),
-          F = {
-            className: h.username,
-            style: "username" === w && null != k ? { color: k } : void 0,
-            onClick: M,
-            onContextMenu: x,
-            children: (A ? "@" : "") + R,
+          k = i.useContext(p.default),
+          { AnalyticsLocationProvider: C } = (0, g.default)(f.default.USERNAME),
+          { nick: j, colorString: w, colorRoleName: D } = n,
+          F = null != a.messageReference && null != a.webhookId,
+          P = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
+          B = (0, A.useCanSeeRemixBadge)(),
+          G = {
+            className: T.username,
+            style: "username" === P && null != w ? { color: w } : void 0,
+            onClick: _,
+            onContextMenu: N,
+            children: (h ? "@" : "") + j,
           };
         t =
-          null != N && null != T
+          null != b && null != M
             ? (0, r.jsx)(d.Popout, {
-                preload: j
+                preload: F
                   ? void 0
                   : function () {
                       let e = null != s ? s : a.author;
-                      return (0, E.default)(
+                      return (0, S.default)(
                         e.id,
-                        null != n.guildMemberAvatar && null != L
-                          ? (0, S.getGuildMemberAvatarURLSimple)({
-                              guildId: L,
+                        null != n.guildMemberAvatar && null != k
+                          ? (0, I.getGuildMemberAvatarURLSimple)({
+                              guildId: k,
                               userId: e.id,
                               avatar: n.guildMemberAvatar,
                               size: 80,
                             })
-                          : e.getAvatarURL(L, 80),
-                        { guildId: L, channelId: a.channel_id }
+                          : e.getAvatarURL(k, 80),
+                        { guildId: k, channelId: a.channel_id }
                       );
                     },
-                renderPopout: N,
-                shouldShow: T,
+                renderPopout: b,
+                shouldShow: M,
                 position: u.isMobile ? "window_center" : "right",
-                onRequestClose: _,
+                onRequestClose: v,
                 children: e => {
                   let { onClick: t, ...n } = e;
                   return (0, r.jsx)(d.Clickable, {
                     tag: "span",
                     ...n,
-                    ...F,
-                    className: o(F.className, h.clickable, y),
+                    ...G,
+                    className: o(G.className, T.clickable, x),
                   });
                 },
               })
-            : (0, r.jsx)(d.Clickable, { ...F, className: o(F.className, y) });
-        let P = null != b ? b[0] : null,
-          B = null != b ? b[1] : null;
-        return (0, r.jsxs)(r.Fragment, {
+            : (0, r.jsx)(d.Clickable, { ...G, className: o(G.className, x) });
+        let U = null != R ? R[0] : null,
+          O = null != R ? R[1] : null;
+        return (0, r.jsxs)(C, {
           children: [
-            null != P && l
-              ? (0, r.jsxs)(r.Fragment, { children: [" ", P, " "] })
+            null != U && l
+              ? (0, r.jsxs)(r.Fragment, { children: [" ", U, " "] })
               : null,
-            "dot" === w
+            "dot" === P
               ? (0, r.jsx)(d.RoleDot, {
-                  color: k,
-                  name: C,
-                  className: h.roleDot,
+                  color: w,
+                  name: D,
+                  className: T.roleDot,
                 })
               : null,
             t,
-            null != B ? (0, r.jsx)(r.Fragment, { children: B }) : null,
-            null == P || l ? null : P,
-            null != a && (0, g.default)(a) && D && v ? (0, r.jsx)(I, {}) : null,
+            null != O ? (0, r.jsx)(r.Fragment, { children: O }) : null,
+            null == U || l ? null : U,
+            null != a && (0, E.default)(a) && B && L ? (0, r.jsx)(y, {}) : null,
           ],
         });
       }
@@ -872,4 +875,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e7a1351d3c4704f93920.js.map
+//# sourceMappingURL=1b87a7960c10b0406bb6.js.map

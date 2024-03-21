@@ -25093,6 +25093,7 @@
       "use strict";
       e.exports = {
         border: "border__8d6b3",
+        content: "content__960ea",
         header: "header_a2ba3b",
         headerBoostGem: "headerBoostGem__2176d",
         headerBoostGems: "headerBoostGems_b5bab6",

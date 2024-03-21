@@ -1830,7 +1830,8 @@
                         }),
                       })
                     : H && B.length > 0
-                      ? (0, i.jsx)("div", {
+                      ? (0, i.jsx)(d.Text, {
+                          variant: "text-md/normal",
                           className: _.filterError,
                           children:
                             A.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FILTER_ERROR.format(
@@ -2874,4 +2875,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c6c1c1c7ef52dd15e6b6.js.map
+//# sourceMappingURL=4bf35fd3ae5436a64ea3.js.map

@@ -26446,8 +26446,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277443", ", Version Hash: ")
-          .concat("2f3d01bb15bdbafc8d75e07acf234724a3c02692")
+          .concat("277456", ", Version Hash: ")
+          .concat("86dff21e447d4cd94bcae9283bd8ce8719a92b8d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29572,12 +29572,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277443"), "277443"));
+        let _ = parseInt(((e = "277456"), "277456"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277443"
+                "277456"
               )
             ),
             (_ = 0)),
@@ -46384,6 +46384,8 @@
         (u[(u.TENURE_REWARD_REDEEMABLE_CONFETTI = 363)] =
           "TENURE_REWARD_REDEEMABLE_CONFETTI"),
         (u[(u.VALORANT_USER_SIGNUPS = 364)] = "VALORANT_USER_SIGNUPS"),
+        (u[(u.COLLECTIBLES_SHOP_SHY_COACHTIP = 365)] =
+          "COLLECTIBLES_SHOP_SHY_COACHTIP"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
           "UNSET_EXPLICIT_CONTENT_REDACTION"),
         (L[(L.SHOW = 1)] = "SHOW"),
@@ -52800,4 +52802,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.730bab8c99270355b072.js.map
+//# sourceMappingURL=47513.95abae033ec4b3a92edb.js.map

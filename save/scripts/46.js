@@ -23994,6 +23994,8 @@
           "{count, plural, =1 {# miembro} other {# miembros}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— Miembros",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "Marcar como no delicado",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "\xbfCometimos un error? [H\xe1znoslo saber](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "No se pudo enviar tu mensaje. Es posible que contenga contenido expl\xedcito, y que el servidor lo haya bloqueado.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -24426,9 +24428,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! y {count, plural, one {1 m\xe1s} other {{count} m\xe1s}}",
         STOREFRONT: "Tienda",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Suscripciones de la aplicaci\xf3n",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Suscripciones",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Compra suscripciones de {appName}",
-        STOREFRONT_APP_PRODUCTS: "Productos de la aplicaci\xf3n",
+        STOREFRONT_APP_PRODUCTS: "Productos",
         STOREFRONT_APP_PRODUCTS_BODY: "Compra productos de {appName}",
         STOREFRONT_SUBSCRIPTION: "Suscripci\xf3n",
         STOREFRONT_SUBSCRIBE_FOR: "Suscribirse por {rate}",

@@ -53,6 +53,7 @@
           "\nМы отправили инструкции по смене пароля на **!!{email}!!**, пожалуйста, проверьте папки \xabВходящие\xbb и \xabСпам\xbb.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Проект",
         STORE_CHANNEL_TYPE: "Магазин",
+        NEWS_CHANNEL_TYPE: "Объявление",
         VOICE_CHANNEL_TYPE: "Голос",
         FORUM_CHANNEL_TYPE: "Форум",
         TEXT_CHANNEL_TYPE: "Текст",
@@ -5628,6 +5629,7 @@
         STATUS_DND: "Не беспокоить",
         STATUS_INVISIBLE: "Невидимый",
         STATUS_DND_HELP: "Вы не будете получать уведомления на рабочем столе.",
+        STATUS_DND_HELP_FOCUS_MODE: "Включает режим концентрации",
         STATUS_INVISIBLE_HELPER:
           "Вы не будете отображаться в сети, но будете иметь полный доступ к функциям Discord.",
         STATUS_UNTIL: "до {endTime}",
@@ -6334,8 +6336,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "В числе участников Discord с",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 общий друг} few {{count} общих друга} other {{count} общих друзей}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Общие друзья ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1\xa0общий сервер} few {{count} общих сервера} other {{count} общих серверов}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Общие серверы ({count})",
         SHOW_USER_PROFILE: "Показать профиль пользователя",
         HIDE_USER_PROFILE: "Скрыть профиль пользователя",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8704,6 +8708,8 @@
           "Мы рекомендуем прочитать обновлённые документы полностью, так как в них приведены правила использования Discord. Пояснения к самым важным изменениям читайте в нашем блоге.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "В прошлом месяце мы объявили о ежегодном обновлении наших политик. Так вот, мы его уже провели! Ознакомьтесь с\xa0[заметкой в нашем блоге](https://discord.com/blog/important-policy-updates), чтобы вкратце узнать об изменениях, и прочтите полный текст политик ниже.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Нажав кнопку \xabСоглашаюсь\xbb, вы подтвердите своё согласие с\xa0Условиями использования Discord и Политикой конфиденциальности.",
         COMMUNITY_GUIDELINES: "[Правила сообщества]({url})",
         BLOG_POST: "[Заметка в нашем блоге]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "От конкретного человека",
@@ -9033,6 +9039,8 @@
           "{numUnappliedGuildBoostSlots, plural, =1 {Буст ждёт, когда вы выберете для него} other {Бусты ждут, когда вы выберете для них}} сервер!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "{numUnappliedGuildBoostSlots, plural, =1 {Буст ждёт, когда вы выберете для него} other {Бусты ждут, когда вы выберете для них}} сервер! Подробнее о\xa0доступных вам бонусах Nitro можно узнать $[здесь](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "{numUnappliedGuildBoostSlots, plural, =1 {Буст ждёт, когда вы **выберете для него**} other {Бусты ждут, когда вы **выберете для них**}} **сервер!** Подробнее о\xa0доступных вам бонусах Nitro можно узнать $[здесь](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Отменить буст",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Вернуть буст",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9235,6 +9243,10 @@
           "За **!!{price}!!** вы можете использовать любимые эмодзи где угодно, делиться файлами большего размера\xa0— и это далеко не всё! (ожидание отмены)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Вы можете использовать любимые эмодзи где угодно, делиться файлами большего размера\xa0— и это далеко не всё! (ожидание отмены)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "За **!!{price}!!** вы можете использовать любимые эмодзи где угодно, делиться файлами большего размера\xa0— и это далеко не всё! (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Вы можете использовать любимые эмодзи где угодно, делиться файлами большего размера\xa0— и это далеко не всё! (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Подписка Nitro Basic, дававшая вам пользовательские эмодзи, возможность загружать файлы большего размера и другие бонусы за **!!{price}!!**, **временно приостановлена**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9249,6 +9261,10 @@
           "У вас есть бонусы для чата и скидка на бусты за **!!{price}!!**. (Ожидание отмены.)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "У вас есть бонусы для чата и скидка на бусты. (Ожидание отмены.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "У вас есть бонусы для чата и скидка на бусты за **!!{price}!!**. (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "У вас есть бонусы для чата и скидка на бусты. (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Ваши бонусы для чата и скидка на бусты за подписку **!!{price}!!** **заблокированы**.",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9263,6 +9279,12 @@
           "У вас есть доступ к премиум-чату, бусты (**{num, number} шт.**) и скидка на бусты за **!!{price}!!**. (Ожидание отмены.)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "У вас есть премиум-возможности в чате, бусты (**{num, number} шт.**) и скидка на бусты. (Ожидание отмены.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "У вас есть премиум-возможности в чате, бусты (**{num, number} шт.**) и скидка на бусты за **!!{price}!!**. (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "У вас есть премиум-возможности в чате, бусты (**{num, number} шт.**) и скидка на бусты. (Подписка будет приостановлена **{pauseDate, date, medium}**.)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Вы приостановили подписку на Nitro до **{resumeDate, date, medium}**. После возобновления подписки вы снова получите доступ к Nitro.",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Ваши премиум-возможности в чате, бусты (**{num, number} шт.**) и скидка на бусты за подписку за **!!{price}!!** **заблокированы**.",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9380,6 +9402,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "Попробуйте Nitro бесплатно в течение 30 дней",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Начать 30-дневный пробный период",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Мы дарим вам {duration} подписки!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Discord ещё круче c {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Уникальная персонализация профиля и многое другое!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Добавьте собственный значок приложения, используйте суперреакции и не только!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "Стоимость подписки {nitroTierName} теперь начинается с {price} в месяц",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Вас приветствует Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Вы готовы отправиться в путь!",
@@ -9440,6 +9472,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "Скидка !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "-!!{percent, number}!!% на подписку Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Скидка на Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Платите всего **{discountedPrice}** в течение **{numMonths, plural, one {месяца!} few {{numMonths} месяцев!} other {{numMonths} месяцев!}}** Затем стоимость составит {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Ваша скидка в\xa0!!{percent, number}!!% перестанет действовать спустя {numMonths, plural, one {{numMonths}\xa0месяц} few {{numMonths}\xa0месяца} other {{numMonths}\xa0месяцев}} после покупки. После этого цена составит {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9467,6 +9501,8 @@
           "Ваш **бесплатный пробный период заканчивается {remainingTime, plural, =0 {сегодня} one {через # день} few {через # дня} other {через # дней}}**. После этого с вашего счёта будет списана плата за подписку: !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "бесплатный пробный период активирован",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Мы дарим вам {duration} подписки!",
         INCLUDED: "Включено",
         NOT_INCLUDED: "Не включено",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10024,6 +10060,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Отмена подписки на Nitro и бусты сервера произойдет мгновенно.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Да, отменить !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Приостановить !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Вы сможете продолжать пользоваться Nitro до **{pauseDate, date, medium}**, после чего ваша подписка будет приостановлена на {pauseDuration} д. Платежи возобновятся **{resumeDate, date, medium}**. Вы можете самостоятельно возобновить подписку в любой момент.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "**Сейчас** ваша подписка Nitro будет приостановлена на {pauseDuration} д. Платежи возобновятся **{resumeDate, date, medium}**. Вы можете самостоятельно возобновить подписку в любой момент.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Приостановка будет продлена до **{resumeDate, date, medium}**. Вы можете самостоятельно возобновить подписку в любой момент.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Да, приостановить !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "О, круто!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Ясно",
         PREMIUM_UPLOAD_PROMO:
@@ -10070,6 +10114,16 @@
           "Ваши подписки будут автоматически продлены **{renewalDate, date, medium}**. Подробности можно узнать в [настройках, в разделе \xabПодписки\xbb !!{paymentGatewayName}!!]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Ваша подписка закончится **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Ваша подписка будет приостановлена **{pauseDate, date, medium}** и автоматически возобновится **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "В настоящее время ваша подписка приостановлена. Она автоматически возобновится **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "В настоящее время ваша подписка **{planName}** приостановлена. Она автоматически возобновится **{resumeDate, date, short}**, и её цена составит **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Ваша подписка возобновится после оплаты.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Ваша подписка **{planName}** возобновится после оплаты, и её цена составит **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Ваша подписка за **!!{price}!!** просрочена. Пожалуйста, обновите данные кредитной карты, или ваша подписка закончится **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10120,6 +10174,10 @@
         PREMIUM_NO_PLANS_HEADER: "Ой!",
         PREMIUM_NO_PLANS_BODY:
           "На данный момент мы не предоставляем тарифы с большим количеством бустов через Google Play Billing. [Узнать больше.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Приостановка или отмена подписки",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Отмена или приостановка подписки",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Подписка\xa0— от !!{price}!! в месяц",
         PREMIUM_SUBSCRIPTION_UPDATES: "Обновление подписок",
@@ -10853,8 +10911,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "бесплатный пробный период",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Всего **{discountedPrice}** ежемесячно в первые **3\xa0месяца** подписки Nitro, а когда скидка закончится\xa0— {regularPrice} в месяц.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Платите всего **{discountedPrice}** ежемесячно в **{numMonths, plural, one {первый месяц} few {первые {numMonths} месяца} other {первые {numMonths} месяцев}}** подписки Nitro, а когда скидка закончится\xa0— {regularPrice} в месяц.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/месяц за первые 3\xa0месяца\n\n{regularPrice}/месяц спустя 3 месяца",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice} в месяц в течение **{numMonths, plural, one {одного месяца} few {{numMonths} месяцев} other {{numMonths} месяцев}}**\n\n{regularPrice} в месяц после {numMonths, plural, one {одного месяца} few {{numMonths} месяцев} other {{numMonths} месяцев}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Экономия !!{percent, number}!!% с годовой подпиской",
         BILLING_SUBTOTAL: "Подытог",
@@ -10909,6 +10971,8 @@
         REVERSED: "Отменено",
         REFUND: "Возврат средств",
         RESUBSCRIBE: "Повторно подписаться",
+        RESUME: "Возобновить подписку",
+        WITHDRAW_PAUSE: "Отменить приостановку",
         CREDIT_CARD_ERROR_REQUIRED:
           "Необходимо указать номер банковской карты.",
         CREDIT_CARD_ERROR_NUMBER:
@@ -13642,6 +13706,17 @@
           "{count, plural, =0 {0 общих друзей} one {1 общий друг} few {{count} общих друга} other {{count} общих друзей}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 общих серверов} one {1 общий сервер} few {{count} общих сервера} other {{count} общих серверов}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE:
+          "дружит с пользователем **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "дружит с пользователями **{usernameOne}** и **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "дружит с пользователями **{usernameOne}**, **{usernameTwo}** и ещё **{count}**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "участник сервера **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "участник серверов **{guildNameOne}** и **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "участник серверов **{guildNameOne}**, **{guildNameTwo}** и ещё **{count}**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Общие друзья",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Общие серверы",
         PROFILE_IN_VOICE_CALL: "Отвечает на голосовой звонок",
@@ -13778,6 +13853,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Выберите подписку за {monthlyPrice} в месяц или {yearlyPrice} в год",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Ваш адресат получит:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Подарить подписку {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Длительность подарка",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName} на {count, plural, one {# месяц} few {# месяца} other {# месяцев}}.",
@@ -14632,6 +14708,10 @@
         INTERACTION_RATE_LIMITED:
           "Снизьте обороты! Вы щёлкаете слишком быстро.",
         APPLICATION_ADD_BUTTON: "Добавить приложение",
+        APPLICATION_ADD_BUTTON_ACTIONS:
+          "Действия меню \xabДобавить приложение\xbb",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Скопировать URL для добавления приложения",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Участники не смогут использовать этого бота, пока вы не включите права доступа.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17457,6 +17537,23 @@
           "В случае отмены **вы потеряете следующие бонусы:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Ладно, оставьте Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Ладно, оставьте Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Приостановить подписку",
+        PREMIUM_PAUSE_SELECT_TITLE: "Приостановка или отмена подписки",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Если вы хотите отдохнуть от платной подписки, мы предлагаем вам приостановить её на несколько месяцев.",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Время приостановки можно продлевать.",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER:
+          "Выберите продолжительность приостановки",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "А как насчёт **приостановить подписку**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Не отменяйте подписку, а приостановите её на срок до 90 дней.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Приостановка на {days} дней",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Приостановить ещё на {days} дней",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Отменить подписку",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Ваша подписка будет приостановлена",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Сохраните некоторые бонусы за меньшую плату",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21928,6 +22025,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Аниме: новые стили",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Теперь сэмпай вас точно заметит.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "НОВИНКА: Весенние мультяшки",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "В ночной тиши в воздухе витает причудливая магия, и...",
         COLLECTIBLES_NEW_BADGE: "НОВОЕ",
         INVENTORY_EMOJI_DETAILS_V2: "Подробнее об эмодзи",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23598,6 +23698,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "\xa0— Участники",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Отменить как обычный контент",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Считаете, что мы ошиблись? [Свяжитесь с нами](handleFalsePositiveHook).",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Ваше сообщение не было отправлено. Оно может содержать нежелательный медиаконтент, который был заблокирован сервером.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23631,7 +23733,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Взять паузу",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Послушать Lofi Beats вместе с Вампусом.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Расслабиться",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Вибрация",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Советы по безопасности",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Оповещения об угрозах",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23750,6 +23852,7 @@
           "Расскажите друзьям, чем вы заняты, установив статус.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Задать пользовательский статус",
+        HANG_STATUS_MOBILE_SET_ROW: "Установить режим активации по голосу",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Жалоба не найдена.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Запрос о пересмотре уже отправлен.",
@@ -23851,11 +23954,20 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Тут ничего нет",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Никто не проголосовал за этот ответ.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Голоса",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 голосов} =1 {{numVotes} голос} few {{numVotes} голоса} other {{numVotes} голосов}} за ответ \xab{option}\xbb",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Показать участников",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Показывает участников",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! и ещё {n, plural, one {1} other {{n}}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! и !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! и ещё {n, plural, one {1\xa0человек} few {{n}\xa0человека} other {{n}\xa0человек}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! и !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! и ещё {n, plural, one {1\xa0человек} few {{n}\xa0человека} other {{n}\xa0человек}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {1 человек} few {{n} человека} other {{n} человек}}",
         CREATE_POLL: "Создать опрос",
         CREATE_POLL_HEADING: "Создание опроса",
         CREATE_POLL_EXPIRATION: "Опрос будет длиться 24\xa0часа",
@@ -23870,11 +23982,17 @@
           "Прикрепить медиафайл, ответ {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Изменить медиафайл {imageName}, ответ {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Добавить эмодзи, ответ {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Обновить эмодзи ({emojiName}), ответ {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Изменение эмодзи",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Ответ {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Введите ответ",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Добавить ещё один ответ",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Опрос будет длиться",
         CREATE_POLL_DURATION_LABEL: "Срок",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 час} few {{num} часа} other {{num} часов}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дня",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0неделю",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23889,8 +24007,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Вы точно хотите выйти? Все изменения будут потеряны.",
         CREATE_POLL_REMOVE_ANSWER: "Удалить ответ",
+        CREATE_POLL_REMOVE_EMOJI: "Удалить эмодзи",
         CREATE_POLL_ADD_IMAGE: "Добавить медиаконтент",
+        CREATE_POLL_ADD_EMOJI: "Добавить эмодзи",
         CREATE_POLL_REPLACE_IMAGE: "Заменить медиафайл",
+        CREATE_POLL_REPLACE_EMOJI: "Заменить эмодзи",
         CREATE_POLL_POLL_ANSWER: "Ответ на вопрос",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Редактировать описание изображения (замещающий текст)",
@@ -23971,7 +24092,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Извините, задания пока что невозможно принимать с мобильных устройств. Вы можете перейти в **Настройки пользователя > Склад подарков** из компьютерного приложения Discord или в браузере.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Задания не доступны на мобильных устройствах... пока.",
+          "Задания не доступны на мобильных устройствах",
         QUESTS_MOBILE_EMBED_BODY:
           "Вы можете перейти в \nНастройки пользователя > Склад подарков из компьютерного приложения Discord или в браузере и принять задание там.",
         QUESTS_GET_THIS_GAME: "Получить игру",
@@ -24018,9 +24139,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! и ещё {count, plural, one {1\xa0человек} few {{count}\xa0человека} other {{count}\xa0человек}}",
         STOREFRONT: "Магазин",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Подписки в приложении",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Подписки",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Покупайте подписки в {appName}",
-        STOREFRONT_APP_PRODUCTS: "Продукты в приложении",
+        STOREFRONT_APP_PRODUCTS: "Продукты",
         STOREFRONT_APP_PRODUCTS_BODY: "Покупайте продукты в {appName}",
         STOREFRONT_SUBSCRIPTION: "Подписка",
         STOREFRONT_SUBSCRIBE_FOR: "Подписаться за {rate}",
@@ -24041,6 +24162,13 @@
         FOCUS_MODE_TITLE: "Режим концентрации (БЕТА)",
         FOCUS_MODE_BADGE_ON: "ВКЛ",
         FOCUS_MODE_BADGE_OFF: "ВЫКЛ",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "Не беспокоить",
+        FOCUS_MODE_DESCRIPTION:
+          "Отключает уведомления на рабочем столе и звуки входящих сообщений.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Отключает уведомления в приложениях и звуки входящих сообщений.",
+        FOCUS_MODE_TURN_OFF: "Выключить режим концентрации",
+        FOCUS_MODE_ENABLE_FOR: "Включить режим концентрации на",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Вы уже давно используете функцию \xabНе беспокоить\xbb. Хотите попробовать режим концентрации?",
         ACTIVITY_REACTION_REPLY_TITLE: "Тема чата: {activity}",
@@ -24071,6 +24199,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}\xa0ч. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}\xa0мин. назад",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} сек. назад",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "на {days} д.",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "на {hours} ч.",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Впервые",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Активность",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

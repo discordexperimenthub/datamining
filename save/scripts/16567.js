@@ -56,6 +56,7 @@
           "\nPoslali smo ti upute za promjenu tvoje lozinke na **!!{email}!!**, molimo provjeri svoj pretinac ulazne i neželjene pošte.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Prijelaz",
         STORE_CHANNEL_TYPE: "Trgovina",
+        NEWS_CHANNEL_TYPE: "Announcement",
         VOICE_CHANNEL_TYPE: "Glas",
         FORUM_CHANNEL_TYPE: "Forum",
         TEXT_CHANNEL_TYPE: "Tekst",
@@ -5579,6 +5580,7 @@
         STATUS_DND: "Ne uznemiravaj",
         STATUS_INVISIBLE: "Nevidljiv/a",
         STATUS_DND_HELP: "Nećeš primati nikakve obavijesti na računalu.",
+        STATUS_DND_HELP_FOCUS_MODE: "Omogućava način rada za fokusiranje",
         STATUS_INVISIBLE_HELPER:
           "Biti ćeš prikazan/a kao izvan mreže, ali ćeš imati potpuni pristup Discordu.",
         STATUS_UNTIL: "do {endTime}",
@@ -6276,8 +6278,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Član Discorda od",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 zajednički prijatelj} few {{count} zajednička prijatelja} other {{count} zajedničkih prijatelja}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Zajednički prijatelji ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 zajednički server} few {{count} zajednička servera} other {{count} zajedničkih servera}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Zajednički serveri ({count})",
         SHOW_USER_PROFILE: "Prikaži korisnički profil",
         HIDE_USER_PROFILE: "Sakrij korisnički profil",
         SHOW_USER_PROFILE_UNAVAILABLE: "Prikaži korisnički profil (nedostupno)",
@@ -8654,6 +8658,8 @@
           "Najljepše bismo te zamolili da nove verzije dokumenata pročitaš od početka do kraja, budući da se oni odnose na tvoje korištenje Discorda. Neke od najvažnijih izmjena objasnili smo na našem blogu.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Prošlog mjeseca smo najavili naša ažuriranja pravila koja provodimo jednom godišnje, a sada su stupila na snagu. Baci pogled na [blog post](https://discord.com/blog/important-policy-updates) na kojem se nalazi nešto samo ukratko o tim novostima, a u nastavku donosimo cjelovite tekstove pravila.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Klikneš li Slažem se, potvrđuješ da se slažeš s Discordovim Uvjetima pružanja usluge te da si pročitao/la naša Pravila zaštite osobnih podataka.",
         COMMUNITY_GUIDELINES: "[Pravila ponašanja u zajednici]({url})",
         BLOG_POST: "[Objava na našem blogu]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Od određene osobe",
@@ -8988,6 +8994,8 @@
           "Samo ovdje {numUnappliedGuildBoostSlots, plural, =1 {bespoličari dok ne vidi kuda ćeš ga poslati} other {bespoličare dok ne vide kuda ćeš ih poslati}}!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Ništa posebno, samo ovdje {numUnappliedGuildBoostSlots, plural, =1 {sjedi i čeka server kojem će biti poslan} other {sjede i čekaju da ih pošalješ nekom serveru}}! O Nitro pogodnostima više možeš doznati $[ovdje](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Evo, samo ovdje čekam dok ne **odabereš server na koji ćeš {numUnappliedGuildBoostSlots, plural, =1 {ga} other {ih}} poslati!** Doznaj više o Nitro pogodnostima, klikni $[ovdje](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Otkaži Boost",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Otkaži otkaz Boosta",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9189,6 +9197,10 @@
           "Za samo **!!{price}!!**, a dobiješ i veće prijenose i uređivane emojije, a ni to nije sve (otkazivanje na čekanju)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Imaš prilagođene emojije, veće prijenose i još mnogo toga (otkazivanje na čekanju)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Za **!!{price}!!** dobivaš prilagođene emojije, veće prijenose i još toga (datum pauziranja: **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Dobivaš prilagođene emojije, veće prijenose i još toga (datum pauziranja: **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Tvoja pretplata na Nitro Basic, upravo ona koja ti daje uređene emojije, povećane prijenose i druge posebne pogodnosti za **!!{price}!!** sada je **na pauzi**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9203,6 +9215,10 @@
           "Imaš pogodnosti za chat i popust na Boost za **!!{price}!!** (čeka otkazivanje)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Imaš pogodnosti za chat i popust na Boost (otkazivanje je na čekanju)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Za **!!{price}!!** dobivaš pogodnosti za chat i popust na Boost (datum pauziranja: **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Dobivaš pogodnosti za chat i popust na Boost (datum pauziranja: **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Tvoje posebne pogodnosti za chat i popusti na Boost za pretplatu od **!!{price}!!** trenutno su **privremeno zaustavljeni**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9217,6 +9233,12 @@
           "Imaš premium chat, **{num, number}\xd7** Boost i popust na Boost za **!!{price}!!** (čeka otkazivanje)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Imaš premium chat, **{num, number}\xd7** Boost i popust na Boost (otkazivanje na čekanju)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Za **!!{price}!!** dobivaš premium chat, **{num, number}\xd7** Boost i popust na Boost (datum pauziranja: **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Dobivaš premium chat, **{num, number}\xd7** Boost i popust na Boost (datum pauziranja: **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Pauzirao/la si svoju Nitro pretplatu do **{resumeDate, date, medium}**. Kada se tvoja pretplata nastavi, ponovno ćeš dobiti pristup Nitru",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Tvoj premium chat, **{num, number}\xd7** Boost, kao i pretplata na popuste za Boost po cijeni od **!!{price}!!** je sve **privremeno zaustavljeno**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9331,6 +9353,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "Isprobaj Nitro besplatno na 30 dana",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Idi na 30 dana probe",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Uživaj {duration} na naš račun",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Pusti zabavu da se rasplamsa uz {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Jedinstvene prilagodbe profila i još toga!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Dodaj prilagođenu ikonu aplikacije, super reakcije i još toga!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} košta već od {price} mjesečno",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER:
           "Želimo ti dobrodošlicu u Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "Spremno za rad!",
@@ -9390,6 +9422,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % popusta",
         PREMIUM_DISCOUNT_CTA: "Uštedi !!{percent, number}!! % na Nitru",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Uštedi na Nitru",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Plaćaj samo **{discountedPrice}** tijekom **{numMonths, plural, one {jednog mjeseca!} few {{numMonths} mjeseca} other {{numMonths} mjeseci!}}** Nakon toga ćeš plaćati {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Tvoj popust od !!{percent, number}!! % završit će {numMonths, plural, one {1 mjesec} few {{numMonths} mjeseca} other {{numMonths} mjeseci}} nakon kupnje. Nakon toga će ti se naplaćivati {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9416,6 +9450,8 @@
           "Tvoje **besplatno probno razdoblje završava {remainingTime, plural, =0 {danas} one {za # dan} other {za # dana}}**. Nakon toga plaćat ćeš !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "besplatno probno razdoblje je aktivirano",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Uživaj {duration} na naš račun",
         INCLUDED: "Uključeno",
         NOT_INCLUDED: "Nije uključeno",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9976,6 +10012,15 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Otkazivanje će za sve pretplate na Nitro i Server Boostove stupiti na snagu momentalno.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Tako je, otkaži !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "Želiš li pauzirati !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "I dalje ćeš imati pristup Nitru do **{pauseDate, date, medium}**, a zatim će se tvoja pretplata pauzirati na {pauseDuration} dana. Ponovno ćemo ti početi naplaćivati uslugu sljedećeg datuma: **{resumeDate, date, medium}**. Svoju pretplatu možeš nastaviti u svakom trenutku.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Tvoja Nitro pretplata **sada** će se pauzirati na {pauseDuration} dana. Ponovno ćemo ti početi naplaćivati uslugu sljedećeg datuma: **{resumeDate, date, medium}**. Svoju pretplatu možeš nastaviti u svakom trenutku.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Produljit ćeš svoj Nitro do sljedećeg datuma: **{resumeDate, date, medium}**. Svoju pretplatu možeš nastaviti u svakom trenutku.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Da, pauziraj !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Slatko!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Kužim!",
         PREMIUM_UPLOAD_PROMO:
@@ -10022,6 +10067,16 @@
           "Tvoje pretplate će se automatski obnoviti dana **{renewalDate, date, medium}**. Više informacija možeš naći na [Postavkama pretplata servisa !!{paymentGatewayName}!!]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Tvoja će pretplata završiti na dan **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Tvoja će se pretplata pauzirati sljedećeg datuma: **{pauseDate, date, medium}**. Automatski će se nastaviti sljedećeg datuma: **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Tvoja je pretplata trenutačno pauzirana i automatski će biti nastavljena sljedećeg datuma: **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Tvoja je pretplata **{planName}** trenutačno pauzirana i automatski će se nastaviti **{resumeDate, date, short}**, a to ćemo ti zaračunati **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Tvoja će se pretplata nastaviti nakon primitka uplate.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Tvoja će se pretplata **{planName}** nastaviti nakon primitka uplate, naplatit će ti se **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Tvoja pretplata **!!{price}!!** je već trebala biti plaćena. Ažuriraj podatke o svojem načinu plaćanja inače će ti pretplata isteći dana **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10072,6 +10127,9 @@
         PREMIUM_NO_PLANS_HEADER: "Žao nam je!",
         PREMIUM_NO_PLANS_BODY:
           "Ovog trenutka u ponudi nemamo model pretplate koji ide kroz Google Play Billing i nudi više boostova. [Doznaj više.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "Pauziraj ili otkaži pretplatu",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Otkaži ili pauziraj pretplatu",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Pretplati se – već od !!{price}!! / mjesec",
         PREMIUM_SUBSCRIPTION_UPDATES: "Novosti o pretplatama",
@@ -10800,8 +10858,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "besplatno probno razdoblje",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Plaćaj samo **{discountedPrice}** mjesečno tijekom prva **3 mjeseca** pretplate na Nitro. Nakon završetka tromjesječnog popusta, plaćat ćeš {regularPrice} mjesečno.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Plaćaj samo **{discountedPrice}** mjesečno tijekom **{numMonths, plural, one {prvog mjeseca} few {{numMonths} mjeseca} other {{numMonths} mjeseci}}** pretplate na Nitro. Nakon završetka popusta, plaćat ćeš {regularPrice} mjesečno.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/mjesečno tijekom 3 mjeseca\n\n{regularPrice}/mjesečno nakon 3 mjeseca",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice} mjesečno **{numMonths, plural, one {jedan mjesec} few {{numMonths} mjeseca} other {{numMonths} mjeseci}}**\n\n{regularPrice}mjesečno nakon {numMonths, plural, one {jednog mjeseca} few {{numMonths} mjeseca} other {{numMonths} mjeseci}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Uštedi !!{percent, number}!! % uz godišnju pretplatu",
         BILLING_SUBTOTAL: "Međuzbroj",
@@ -10858,6 +10920,8 @@
         REVERSED: "Otkazano/stornirano",
         REFUND: "Povrat novca",
         RESUBSCRIBE: "Ponovo se pretplati",
+        RESUME: "Nastavi pretplatu",
+        WITHDRAW_PAUSE: "Obustavi pauziranje",
         CREDIT_CARD_ERROR_REQUIRED: "Potreban je broj kreditne kartice.",
         CREDIT_CARD_ERROR_NUMBER:
           "Nešto nije u redu s brojem tvoje kreditne kartice",
@@ -13575,6 +13639,17 @@
           "{count, plural, =0 {0 zajedničkih prijatelja} one {1 zajednički prijatelj} few {{count} zajednička prijatelja} other {{count} zajedničkih prijatelja}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 zajedničkih servera} one {1 zajednički server} few {{count} zajednička servera} other {{count} zajedničkih servera}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE:
+          "prijatelj s korisnikom **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "prijatelj s korisnicima **{usernameOne}** i **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "prijatelj s korisnicima **{usernameOne}**, **{usernameTwo}** i njih još **{count}**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "član servera **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "član servera **{guildNameOne}** i **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "član servera **{guildNameOne}**, **{guildNameTwo}** i njih još **{count}**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Zajednički prijatelji",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Zajednički serveri",
         PROFILE_IN_VOICE_CALL: "U glasovnom pozivu",
@@ -13710,6 +13785,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Odaberi {monthlyPrice} mjesečno ili {yearlyPrice} godišnje",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Primatelj će dobiti:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Daruj {nitroTierName} članstvo",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Trajanje dara",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Daruj {nitroTierName} na {count, plural, one {# mjesec} few {# mjeseca} other {# mjeseci}}",
@@ -14558,6 +14634,9 @@
           "Došlo je do pogreške prilikom učitavanja aplikacije.",
         INTERACTION_RATE_LIMITED: "Uspori malo! Klikaš prebrzo.",
         APPLICATION_ADD_BUTTON: "Dodavanje aplikacije",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Dodaj radnje unutar aplikacije",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Kopiraj URL za dodavanje unutar aplikacije",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Dok ne uključiš dozvole, članovi neće moći koristiti ovaj bot.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17319,6 +17398,22 @@
           "Ako otkažeš, onda **gubiš sljedeće fine stvari:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Ma, ipak ću zadržati Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Ma, ipak ću zadržati Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Radije pauziraj",
+        PREMIUM_PAUSE_SELECT_TITLE: "Pauziraj ili otkaži pretplatu",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Želiš li predahnuti od plaćenih pretplata, imaš mogućnost pauzirati ih na nekoliko mjeseci",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Možeš nastaviti pauzirati još nekoliko mjeseci",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Odaberi trajanje pauziranja",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Želiš li **radije pauzirati**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Pauziraj svoju pretplatu do 90 dana umjesto otkazivanja.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Pauziraj {days} dana",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Pauziraj još {days} dana",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Otkaži pretplatu",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Tvoja će se pretplata pauzirati",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Zadrži neke posebne pogodnosti za manje",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21746,6 +21841,10 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: novi stilovi",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai će te sada definitivno primijetiti.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE:
+          "NOVO: proljetni crtani likovi",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Pod okriljem noći, neobična čarolija opčinila je zrak i...",
         COLLECTIBLES_NEW_BADGE: "NOVO",
         INVENTORY_EMOJI_DETAILS_V2: "Pogledaj pojedinosti o emojiju",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23401,6 +23500,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— članovi",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Označi kao sadržaj koji nije osjetljiv",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Jesmo li pogriješili? [Javi nam](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Tvoja poruka nije mogla biti poslana. Moguće je da je sadržavala eksplicitne sadržaje i server ih je blokirao.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23433,7 +23534,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Napravi stanku",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Slušaj Lofi Beats s Wumpusom.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Opusti se",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Atmosfera",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE:
           "Savjeti u vezi sigurnosti",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
@@ -23550,6 +23651,7 @@
         HANG_STATUS_HELP:
           "Postavi status aktivnosti i pokaži prijateljima koji su ti planovi.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Postavi prilagođeni status",
+        HANG_STATUS_MOBILE_SET_ROW: "Postavi glasovnu aktivnost",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Prijava nije pronađena.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Već je zatraženo preispitivanje odluke o prijavi.",
@@ -23646,11 +23748,20 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Ovdje nema ništa za vidjeti",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Za ovaj odgovor nema glasova.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Glasovi",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 glasova} =1 {{numVotes} glas} few {{numVotes} glasa} other {{numVotes} glasova}} za {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Otkrij glasače",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Otkriva glasače",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! i još {n, plural, one {1 druga osoba} few {{count} druge osobe} other {{n} drugih osoba}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! i !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! i još {n, plural, one {1 korisnik} other {{n} korisnika}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! i !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! i {n, plural, one {još 1} few {{n} druga} other {{count} drugih}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {1 osoba} few {{n} osobe} other {{n} osoba}}",
         CREATE_POLL: "Kreiraj anketu",
         CREATE_POLL_HEADING: "Kreiraj anketu",
         CREATE_POLL_EXPIRATION: "Anketa će biti aktivna 24 sata",
@@ -23665,11 +23776,17 @@
           "Dodaj medijski sadržaj, odgovor {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Ažuriraj medijski sadržaj, {imageName}, odgovor {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Dodaj emoji, odgovor {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Ažuriraj emoji, {emojiName}, odgovor {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Ažuriraj emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Odgovor {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Utipkaj svoj odgovor",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Dodaj još jedan odgovor",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anketa će biti aktivna",
         CREATE_POLL_DURATION_LABEL: "Trajanje",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 sat} other {{num} sata} other {{hours} sati}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dana",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tjedan",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23684,8 +23801,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Želiš li sigurno izaći? Sve napravljene promjene će se izgubiti ako sada izađeš.",
         CREATE_POLL_REMOVE_ANSWER: "Ukloni odgovor",
+        CREATE_POLL_REMOVE_EMOJI: "Ukloni emoji",
         CREATE_POLL_ADD_IMAGE: "Dodaj medij",
+        CREATE_POLL_ADD_EMOJI: "Dodaj emoji",
         CREATE_POLL_REPLACE_IMAGE: "Zamijeni medijski sadržaj",
+        CREATE_POLL_REPLACE_EMOJI: "Zamijeni emoji",
         CREATE_POLL_POLL_ANSWER: "Odgovor ankete",
         CREATE_POLL_EDIT_ALT_TEXT: "Uredi opis slike (Alt tekst)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "Uredi opis slike",
@@ -23767,7 +23887,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Questovi nisu dostupni na mobilnim uređajima... barem ne još. Žao nam je! U aplikaciji Discord na desktopu ili u pregledniku uđi u izbornik **Korisničke postavke > Popis darova** i tamo prihvati quest.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Zadaci nisu dostupni na mobilnim uređajiima... za sada.",
+          "Questovi nisu dostupni na mobilnim uređajima",
         QUESTS_MOBILE_EMBED_BODY:
           "U aplikaciji Discord na desktopu ili u pregledniku uđi u izbornik \nKorisničke postavke > Popis darova i tamo prihvati quest.",
         QUESTS_GET_THIS_GAME: "Nabavi igru",
@@ -23815,9 +23935,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! i {count, plural, one {još 1} few {{count} druga} other {{count} drugih}}",
         STOREFRONT: "Trgovina",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Pretplate aplikacije",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Pretplate",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Kupi pretplate u {appName}",
-        STOREFRONT_APP_PRODUCTS: "Proizvodi aplikacije",
+        STOREFRONT_APP_PRODUCTS: "Proizvodi",
         STOREFRONT_APP_PRODUCTS_BODY: "Kupi proizvode u {appName}",
         STOREFRONT_SUBSCRIPTION: "Pretplata",
         STOREFRONT_SUBSCRIBE_FOR: "Pretplati se po {rate}",
@@ -23837,6 +23957,13 @@
         FOCUS_MODE_TITLE: "Koncentriranje (BETA)",
         FOCUS_MODE_BADGE_ON: "UKLJ.",
         FOCUS_MODE_BADGE_OFF: "ISKLJ.",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION:
+          "Onemogućava obavijesti na radnoj površini i zvukove poruka.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Onemogućava obavijesti u aplikaciji i zvukove poruka.",
+        FOCUS_MODE_TURN_OFF: "Isključi način rada za fokusiranje",
+        FOCUS_MODE_ENABLE_FOR: "Omogući način rada za fokusiranje na",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Već si neko vrijeme u načinu rada Ne uznemiravaj. Želiš li radije omogućiti Koncentraciju?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chat o {activity}",
@@ -23867,6 +23994,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "prije {count} h",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "prije {count} m",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prije {count} s",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "na {days}d",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "na {hours}h",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prvi put",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivnost",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

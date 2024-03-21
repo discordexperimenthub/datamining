@@ -53,6 +53,7 @@
           "\nИзпратихме ти инструкции за да промениш паролата си на **!!{email}!!**, провери пощата си и папката за спам.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Подготовка",
         STORE_CHANNEL_TYPE: "Магазин",
+        NEWS_CHANNEL_TYPE: "Съобщение",
         VOICE_CHANNEL_TYPE: "Глас",
         FORUM_CHANNEL_TYPE: "Форум",
         TEXT_CHANNEL_TYPE: "Текст",
@@ -5618,6 +5619,7 @@
         STATUS_DND: "Не ме безпокой",
         STATUS_INVISIBLE: "Невидим",
         STATUS_DND_HELP: "Няма да получаваш никакви десктоп известия.",
+        STATUS_DND_HELP_FOCUS_MODE: "Активиране на режим за фокусиране",
         STATUS_INVISIBLE_HELPER:
           "Няма да се появявате на линия, но ще имаш достъп до всичко в Discord.",
         STATUS_UNTIL: "до {endTime}",
@@ -6326,8 +6328,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Член на Discord от",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 общ приятел} other {{count} общи приятели}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Общи приятели ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 общ сървър} other {{count} общи сървъра}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Общи сървъри ({count})",
         SHOW_USER_PROFILE: "Показване на потребителски профил",
         HIDE_USER_PROFILE: "Скриване на потребителски профил",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8705,6 +8709,8 @@
           "Горещо препоръчваме да прочетеш качените документи от край до край, тъй като те касаят употребата от твоя страна на Discord. Разяснили сме някои от най-важните промени в публикацията в блога ни.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Миналия месец обявихме ежегодните актуализации на нашите правила, които вече са в сила. Виж [блог поста ни](https://discord.com/blog/important-policy-updates) за обобщение на тези изменения и прочети пълния текст на правилата по-долу.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Когато кликнеш върху „Приемам“, ти потвърждаваш, че се съгласяваш с Условията за ползване на Discord и си прочел(а) нашата Политика за поверителност.",
         COMMUNITY_GUIDELINES: "[Правилник на общността]({url})",
         BLOG_POST: "[Публикация в нашия блог]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "От конкретен човек",
@@ -9037,6 +9043,8 @@
           "Просто ще изчакаме тук, докато избереш сървър, на който да {numUnappliedGuildBoostSlots, plural, =1 {го} other {ги}} дадеш!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Просто ще изчакаме тук, докато избереш сървър, на който да {numUnappliedGuildBoostSlots, plural, =1 {го} other {ги}} дадеш! Научи повече за Nitro бонусите си $[тук](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Просто ще изчакаме тук, докато **избереш сървър, на който да {numUnappliedGuildBoostSlots, plural, =1 {го} other {ги}} дадеш!** Научи повече за Nitro бонусите си $[тук](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Отмяна на усилването",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Премахване на отмяната на усилването",
@@ -9242,6 +9250,10 @@
           "Получаваш персонализирани емотикони, качване на по-големи файлове и други неща за **!!{price}!!** (изчакващо анулиране)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Получаваш персонализирани емотикони, качване на по-големи файлове и други неща (изчакващо анулиране)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Получаваш персонализирани емотикони, качване на по-големи файлове и още за **!!{price}!!** (спира временно на **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Получаваш персонализирани емотикони, качване на по-големи файлове и други неща (спира временно на **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Абонаментът ти за Nitro Basic, чрез който получаваш персонализирано емоджи, възможност за качване на по-големи файлове и други предимства за **!!{price}!!** в момента е **в изчакване**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9256,6 +9268,10 @@
           "Имаш чат бонуси и отстъпка за усилване за **!!{price}!!** (Изчаква анулиране)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Имаш чат бонуси и отстъпка за Усилвания (изчакват анулиране)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Имаш чат бонуси и отстъпка за усилване за **!!{price}!!** (спира временно на **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Имаш чат бонуси и отстъпка за усилвания (спира временно на **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Абонаментът ти за чат бонуси и отстъпка за усилване за **!!{price}!!** е **спрян временно**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9270,6 +9286,12 @@
           "Имаш премиум чат, **{num, number}x** усилвания и отстъпка за усилване за **!!{price}!!** (Изчаква анурилане)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Имаш премиум чат, **{num, number}x** Усилвания и отстъпка за Усилване (изчакват анулиране)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Имаш премиум чат, **{num, number}x** усилвания и отстъпка за усилвания за **!!{price}!!** (спира временно на **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Имаш премиум чат, **{num, number}x** усилвания и отстъпка за усилвания (спира временно на **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Временно спря абонамента си за Nitro до **{resumeDate, date, medium}**. След като абонаментът ти се възобнови, отново ще имаш достъп до Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Абонаментът ти за премиум чат, **{num, number}x** усилвания и отстъпка за усилване за **!!{price}!!** е **спрян временно**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9385,6 +9407,16 @@
           "Опитай Nitro безплатно за 30 дни",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Напред към безплатния 30-дневен пробен период",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Възползвай се от {duration} като подарък от нас",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Подари си повече забавления с {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Уникални персонализации за профила и много други!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Добави персонализирана икона за приложението, супер реакции и много други!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} започва от {price}/месец",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Добре дошъл(ла) в Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Готов(а) си за яко преживяване!",
@@ -9445,6 +9477,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% отстъпка",
         PREMIUM_DISCOUNT_CTA: "Спести !!{percent, number}!!% за Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Спести с Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Плати само **{discountedPrice}** за **{numMonths, plural, one {месец!} other {{numMonths} месеца!}}** След това плащай по {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Твоята отстъпка от !!{percent, number}!!% ще приключи {numMonths, plural, one {1 месец} other {{numMonths} месеца}} след покупката. След това ще има такса от {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9470,6 +9504,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "Твоят **безплатен пробен период приключва {remainingTime, plural, =0 {днес} one {след # ден} other {след # дни}}**. След това ще те таксуваме !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "безплатен пробен период активиран",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Възползвай се от {duration} като подарък от нас",
         INCLUDED: "Включено",
         NOT_INCLUDED: "Не е включено",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10029,6 +10065,16 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Анулирането ще влезе в сила незабавно за всички абонаменти за Nitro и усилвания на сървър.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Да, отказ на !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "Временно спиране на !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Ще запазиш достъпа си до Nitro до **{pauseDate, date, medium}** и след това абонаментът ти ще е спрян временно за {pauseDuration} дни. Ще започнем да ти начисляваме такса отново на **{resumeDate, date, medium}**. Можеш да възобновиш абонамента си по всяко време.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Абонаментът ти за Nitro ще бъде временно спрян **сега** за {pauseDuration} дни. Ще започнем отново да ти начисляваме такса на **{resumeDate, date, medium}**. Можеш да възобновиш абонамента си по всяко време.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Ще удължиш своето Nitro до **{resumeDate, date, medium}**. Можеш да възобновиш абонамента си по всяко време.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Мхм, временно спиране на !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Супер!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Разбрах",
         PREMIUM_UPLOAD_PROMO:
@@ -10076,6 +10122,16 @@
           "Твоите абонаменти ще се подновят автоматично на **{renewalDate, date, medium}**. Моля, [посети своите !!{paymentGatewayName}!! Настройки за абонамент]({subscriptionManagementLink}) за повече подробности.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Твоят абонамент ще приключи на **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Абонаментът ти ще бъде временно спрян на **{pauseDate, date, medium}** и ще се възобнови автоматично на **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Абонаментът ти в момента е временно спрян и ще се възобнови автоматично на **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Абонаментът ти за **{planName}** е временно спрян и ще се възобнови автоматично на **{resumeDate, date, short}**, като ще те таксуваме **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Абонаментът ти ще се възобнови след плащането.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Абонаментът ти за **{planName}** ще се възобнови след плащането и ще те таксуваме **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Срокът за плащане за твоя **!!{price}!!** абонамент изтече. Моля, актуализирай информацията за плащане или абонаментът ти ще се прекрати на **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10126,6 +10182,10 @@
         PREMIUM_NO_PLANS_HEADER: "Съжаляваме!",
         PREMIUM_NO_PLANS_BODY:
           "Към момента не предлагаме план през Google Play Billing с повече Усилвания. [Научете повече.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Временно спиране или анулиране на абонамента",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Отказ или временно спиране на абонамент",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Абонирай се – Цената започва от !!{price}!!/месец",
         PREMIUM_SUBSCRIPTION_UPDATES: "Актуализации на абонамент",
@@ -10855,8 +10915,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "безплатен пробен период",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Плащай само **{discountedPrice}** на месец за първите **3 месеца** Nitro. Плащай {regularPrice} на месец след края на 3-месечния период на отстъпката.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Плати само **{discountedPrice}** на месец за първия(ите) си **{numMonths, plural, one {месец} other {{numMonths} месеца}}** с Nitro. Плащай по {regularPrice} на месец след приключване на отстъпката.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/месец за 3 месеца\n\n{regularPrice}/месец след 3-тия месец",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/месец за **{numMonths, plural, one {един месец} other {{numMonths} месеца}}**\n\n{regularPrice}/месец след {numMonths, plural, one {един месец} other {{numMonths} месеца}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Спести !!{percent, number}!!% с годишен абонамент",
         BILLING_SUBTOTAL: "Междинна сума",
@@ -10911,6 +10975,8 @@
         REVERSED: "Отменени",
         REFUND: "Върната сума",
         RESUBSCRIBE: "Повторен абонамент",
+        RESUME: "Възобнови абонамента",
+        WITHDRAW_PAUSE: "Оттегляне на временното спиране",
         CREDIT_CARD_ERROR_REQUIRED: "Номерът на картата е задължителен.",
         CREDIT_CARD_ERROR_NUMBER:
           "Има проблем с номера на твоята кредитна карта",
@@ -13619,6 +13685,16 @@
           "{count, plural, =0 {0 общи приятели} one {1 общ приятел} other {{count} общи приятели}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 общи сървъри} one {1 общ сървър} other {{count} общи сървъри}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "приятели с **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "приятели с **{usernameOne}** и **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "приятели с **{usernameOne}**, **{usernameTwo}** и още **{count}**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "член на **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "член на **{guildNameOne}** и **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "член на **{guildNameOne}**, **{guildNameTwo}** и още **{count}**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Общи приятели",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Общи сървъри",
         PROFILE_IN_VOICE_CALL: "В гласов разговор",
@@ -13753,6 +13829,8 @@
           "Избери между {monthlyPrice}/месец или {yearlyPrice}/година",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Човекът, на когото правиш подаръка, ще получи:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Подарък за членство в {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Продължителност на подаръка",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подари {count, plural, one {# месец} other {# месеца}} от {nitroTierName}",
@@ -14605,6 +14683,9 @@
           "Появи се грешка при опит за зареждане на приложението.",
         INTERACTION_RATE_LIMITED: "Забави малко! Кликваш прекалено бързо.",
         APPLICATION_ADD_BUTTON: "Добавяне на приложение",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Добавяне на действия в приложението",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Копиране на URL за добавяне на приложение",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Членовете не могат да използват този бот, докато не дадеш нужните разрешения.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17433,6 +17514,26 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Няма значение, задръж Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Няма значение, задържане на Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Временно спиране вместо това",
+        PREMIUM_PAUSE_SELECT_TITLE:
+          "Временно спиране на или анулиране на абонамента",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Ако искаш да си вземеш почивка от платените абонаменти, имаш опцията да спреш временно за няколко месеца",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Имаш опцията да продължиш временнот спиране за допълнителни месеци",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER:
+          "Избери продължителност на временното спиране",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "Искаш ли **вместо това да спреш временно**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Спри временно абонамента си за до 90 дни, вместо да се отказваш изцяло.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "Временно спиране за {days} дни",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Временно спиране за още {days} дни",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Отказ от абонамент",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Абонаментът ти ще бъде временно спрян",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Задръж някои бонуси по-изгодно",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21936,6 +22037,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Аниме: Нови стилове",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Сенпай определено ще те забележи сега.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "НОВО: пролетно настроение",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "На прага на нощта из въздуха се носи нещо магично и...",
         COLLECTIBLES_NEW_BADGE: "НОВО",
         INVENTORY_EMOJI_DETAILS_V2: "Виж подробности за емоджита",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23610,6 +23714,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "– Членове",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Отбележи като нечувствително",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Може би сме допуснали грешка? [Кажи ни](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Съобщението ти не е изпратено. В него може да има нецензурно мултимедийно съдържание, когато е блокирано от сървъра.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23641,7 +23747,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Вземи си почивка",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Слушай Lofi бийтове с Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Релакс",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Вайб",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Съвети за безопасност",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "Относно предупрежденията за опасност",
@@ -23758,6 +23864,7 @@
         HANG_STATUS_HELP:
           "Покажи на приятелите си какво планираш, като зададеш статус на дейност.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Задай персонален статус",
+        HANG_STATUS_MOBILE_SET_ROW: "Задаване на гласова активност",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Докладът не е намерен.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Вече е заявено преразглеждане на доклада.",
@@ -23857,11 +23964,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Тук няма нищо интересно",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Няма гласове за този отговор.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Гласове",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 гласа} =1 {{numVotes} глас} other {{numVotes} гласа}} за {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Разкриване на гласувалите",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Разкрива гласувалите",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! и още {n, plural, one {1} other {{n}}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! и !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! и още {n, plural, one {1} other {{n}}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! и !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! и още {n, plural, one {1} other {{n}}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 човек} other {{n} души}}",
         CREATE_POLL: "Създаване на анкета",
         CREATE_POLL_HEADING: "Създаване на анкета",
         CREATE_POLL_EXPIRATION: "Анкетата ще е активна 24 часа",
@@ -23876,11 +23991,17 @@
           "Добавяне на мултимедия, отговор {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Актуализиране на мултимедия, {imageName}, отговор {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Добави емоджи, отговори на {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Актуализирай емоджи, {emojiName}, отговори на {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Актуализиране на емоджи",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Отговор {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Въведи своя отговор",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Добави друг отговор",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Анкетата ще е активна",
         CREATE_POLL_DURATION_LABEL: "Продължителност",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 час} other {{num} часа}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 дни",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 седмица",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23895,8 +24016,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Наистина ли искаш да излезеш? Ако излезеш сега, всички промени ще се загубят.",
         CREATE_POLL_REMOVE_ANSWER: "Премахване на отговор",
+        CREATE_POLL_REMOVE_EMOJI: "Премахване на емоджи",
         CREATE_POLL_ADD_IMAGE: "Добавяне на мултимедия",
+        CREATE_POLL_ADD_EMOJI: "Добавяне на емоджи",
         CREATE_POLL_REPLACE_IMAGE: "Замяна на мултимедийно съдържание",
+        CREATE_POLL_REPLACE_EMOJI: "Замяна на емоджи",
         CREATE_POLL_POLL_ANSWER: "Отговор на анкетата",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Редактирай описание на изображение (алтернативен текст)",
@@ -23981,7 +24105,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Куестовете не са налични за мобилни устройства... Засега. Съжаляваме за това! От Discord на настолен компютър или браузър можеш да отидеш в **Потребителски настройки > Инвентар с подаръци** и да приемеш куеста там.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Куестовете не са достъпни през мобилни устройства... засега.",
+          "Куестовете не са достъпни на мобилна версия",
         QUESTS_MOBILE_EMBED_BODY:
           "От приложение на Discord на настолен компютър или браузър можеш да отидеш в \n„Потребителски настройки > Инвентар с подаръци“ и да приемеш куеста там.",
         QUESTS_GET_THIS_GAME: "Вземане на игра",
@@ -24028,9 +24152,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! и още {count, plural, one {1} other {{count}}}",
         STOREFRONT: "Магазин",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Абонаменти за приложения",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Абонаменти",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Купи абонаменти от {appName}",
-        STOREFRONT_APP_PRODUCTS: "Продукти в приложението",
+        STOREFRONT_APP_PRODUCTS: "Продукти",
         STOREFRONT_APP_PRODUCTS_BODY: "Купи продукти от {appName}",
         STOREFRONT_SUBSCRIPTION: "Абонамент",
         STOREFRONT_SUBSCRIBE_FOR: "Абонирай се за {rate}",
@@ -24050,6 +24174,13 @@
         FOCUS_MODE_TITLE: "Режим за фокусиране (BETA)",
         FOCUS_MODE_BADGE_ON: "ВКЛ.",
         FOCUS_MODE_BADGE_OFF: "ИЗКЛ.",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "Не безпокойте",
+        FOCUS_MODE_DESCRIPTION:
+          "Деактивира известията за работния плот и звуците за съобщения.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Деактивира известията в приложението и звуците за съобщения.",
+        FOCUS_MODE_TURN_OFF: "Изключване на режима за фокусиране",
+        FOCUS_MODE_ENABLE_FOR: "Активиране на режима за фокусиране за",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "От известно време си в режим „Не безпокойте“. Искаш ли вместо това да активираш режима за фокусиране?",
         ACTIVITY_REACTION_REPLY_TITLE: "Чат относно {activity}",
@@ -24080,6 +24211,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "преди {count} час(а)",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "преди {count} мин",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Преди {count}",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "за {days}д",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "за {hours}ч",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "За първи път",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Дейност",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -55,6 +55,7 @@
           "\nAm trimis instrucțiuni pentru a-ți schimba parola la **!!{email}!!**; te rugăm să \xeeți verifici at\xe2t mesajele primite c\xe2t și folder-ul spam.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Etapă",
         STORE_CHANNEL_TYPE: "Magazin",
+        NEWS_CHANNEL_TYPE: "Anunțuri",
         VOICE_CHANNEL_TYPE: "Voce",
         FORUM_CHANNEL_TYPE: "Forum",
         TEXT_CHANNEL_TYPE: "Text",
@@ -5661,6 +5662,7 @@
         STATUS_DND: "Nu deranja",
         STATUS_INVISIBLE: "Invizibil",
         STATUS_DND_HELP: "Nu vei primi notificări pe desktop.",
+        STATUS_DND_HELP_FOCUS_MODE: "Activează modul Concentrare",
         STATUS_INVISIBLE_HELPER:
           "Nu vei apărea online, \xeensă vei avea acces deplin la Discord.",
         STATUS_UNTIL: "p\xe2nă pe {endTime}",
@@ -6362,8 +6364,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Membru Discord \xeencep\xe2nd cu",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 prieten comun} other {{count} prieteni comuni}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Prieteni comuni ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 server comun} other {{count} servere comune}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Servere comune ({count})",
         SHOW_USER_PROFILE: "Arată profilul utilizatorului",
         HIDE_USER_PROFILE: "Ascunde profilul utilizatorului",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8773,6 +8777,8 @@
           "Te \xeencurajăm să citești integral documentele actualizate, pentru că se referă la utilizarea aplicației Discord de către tine. Unele dintre cele mai importante schimbări sunt explicate \xeen postarea noastră de pe blog.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Luna trecută am anunțat actualizările anuale aduse politicilor noastre, care \xeentre timp au intrat \xeen vigoare. Consultă [postarea de pe blog](https://discord.com/blog/important-policy-updates) pentru a vedea un rezumat al schimbărilor și, mai jos, citește politicile \xeen \xeentregime.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "D\xe2nd clic pe „De acord”, confirmi că ești de acord cu Condițiile de prestare a serviciilor Discord și că ai citit Politica noastră de confidențialitate.",
         COMMUNITY_GUIDELINES: "[Regulamentul comunității]({url})",
         BLOG_POST: "[Postarea noastră de pe blog]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "De la o anumită persoană",
@@ -9107,6 +9113,8 @@
           "Așteptăm să alegi un server căruia să {numUnappliedGuildBoostSlots, plural, =1 {i-l} other {le}} dăruiești!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Așteptăm să alegi un server căruia să {numUnappliedGuildBoostSlots, plural, =1 {i-l} other {le}} dăruiești! Află mai multe despre avantajele Nitro $[aici](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Așteptăm să **alegi un server căruia să {numUnappliedGuildBoostSlots, plural, =1 {i-l} other {i le}} dăruiești!** Află mai multe despre avantajele Nitro $[aici](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Anulează boost-ul",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Renunță la anularea boost-ului",
@@ -9310,6 +9318,10 @@
           "Obții emojiuri personalizate, limite de \xeencărcare mai mari și multe altele la **!!{price}!!** (Anulare \xeen curs)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Obții emojiuri personalizate, limite de \xeencărcare mai mari și multe altele (Anulare \xeen curs)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Obții emojiuri personalizate, limite de \xeencărcare mai mari și multe altele cu **!!{price}!!** (intră \xeen pauză pe **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Obții emojiuri personalizate, limite de \xeencărcare mai mari și multe altele (intră \xeen pauză pe **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Abonamentul tău Nitro Basic, care oferă emojiuri personalizate, limite de \xeencărcare mai mari și alte avantaje la prețul de **!!{price}!!**, este **oprit temporar**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9324,6 +9336,10 @@
           "Ai avantaje \xeen chat și o reducere la boost-uri cu **!!{price}!!** (Anulare \xeen curs)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Ai avantaje \xeen chat și o reducere la boost-uri (Anulare \xeen curs)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Ai avantaje \xeen chat și o reducere la boost-uri cu **!!{price}!!** (intră \xeen pauză pe **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Ai avantaje \xeen chat și o reducere la boost-uri (intră \xeen pauză pe **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Avantajele tale \xeen chat și un abonament de **!!{price}!!**, care include o reducere la boost-uri, sunt **oprite temporar**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9338,6 +9354,12 @@
           "Ai chat premium, **{num, number}x** boost-uri și o reducere la boost-uri cu **!!{price}!!** (Anulare \xeen curs)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Ai chat premium, **{num, number}x** boost-uri și o reducere la boost-uri (Anulare \xeen curs)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Ai chat premium, **{num, number}x** boost-uri și o reducere la boost-uri cu **!!{price}!!** (intră \xeen pauză pe **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Ai chat premium, **{num, number}x** boost-uri și o reducere la boost-uri (intră \xeen pauză pe **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Ți-ai pus abonamentul Nitro pe pauză p\xe2nă pe **{resumeDate, date, medium}**. C\xe2nd vei relua abonamentul, vei primi din nou acces la avantajele Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Chat-ul tău premium, **{num, number}x** boost-uri și un abonament de **!!{price}!!**, care include reduceri la boost-uri, sunt **oprite temporar**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9457,6 +9479,16 @@
           "\xcencearcă Nitro gratuit timp de 30 de zile",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Continuă cu versiunea de probă de 30 de zile",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Bucură-te de {duration} din partea noastră",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Dezlănțuie distracția cu {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Personalizări unice ale profilului și nu numai!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Adaugă o pictogramă personalizată a aplicației, super-reacții și nu numai!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} \xeencepe de la {price}/lună",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Bun venit la Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Ești gata să-ți iei zborul!",
@@ -9519,6 +9551,8 @@
           "Economisește !!{percent, number}!!% c\xe2nd cumperi Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT:
           "Economisește c\xe2nd cumperi Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Plătești doar **{discountedPrice}** timp de **{numMonths, plural, one {o lună!} other {{numMonths} luni!}}** Apoi plătești {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Reducerea ta de !!{percent, number}!!% se va \xeencheia la {numMonths, plural, one {1 lună} other {{numMonths} luni}} de la achiziție. După aceea, vei plăti {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9546,6 +9580,8 @@
           "**Perioada gratuită de probă se \xeencheie {remainingTime, plural, =0 {astăzi} one {\xeen # zi} other {\xeen # zile}}**. După aceea, vei plăti !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "perioada gratuită de probă a fost activată",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Bucură-te de {duration} din partea noastră",
         INCLUDED: "Inclus",
         NOT_INCLUDED: "Nu este inclus",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10112,6 +10148,15 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Anularea va intra \xeen vigoare imediat \xeen cazul abonamentelor Nitro și Boost pentru server.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Dap, anulează !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Pui pe pauză !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Vei avea \xeen continuare acces la Nitro p\xe2nă pe **{pauseDate, date, medium}**, iar apoi abonamentul tău va fi pus pe pauză timp de {pauseDuration} zile. Vom \xeencepe să-ți percepem din nou plăți pe **{resumeDate, date, medium}**. \xceți poți relua abonamentul oric\xe2nd.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Abonamentul tău Nitro va fi pus pe pauză **acum** timp de {pauseDuration} zile. Vom \xeencepe să-ți percepem plăți din nou pe **{resumeDate, date, medium}**. \xceți poți relua abonamentul oric\xe2nd.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "\xceți vei extinde abonamentul Nitro p\xe2nă pe **{resumeDate, date, medium}**. \xceți poți relua abonamentul oric\xe2nd.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Dap, vreau să pun pe pauză !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Tare!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Am \xeențeles",
         PREMIUM_UPLOAD_PROMO:
@@ -10159,6 +10204,16 @@
           "Abonamentele tale se vor re\xeennoi automat pe **{renewalDate, date, medium}**. Pentru mai multe detalii, [vezi setările abonamentului tău !!{paymentGatewayName}!! aici]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Abonamentul tău expiră pe **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Abonamentul tău va fi pus pe pauză pe **{pauseDate, date, medium}** și se va relua automat pe **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Abonamentul tău este momentan pe pauză și va fi reluat automat pe **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Abonamentul tău **{planName}** este momentan pe pauză și va fi reluat automat pe **{resumeDate, date, short}**, la prețul de **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Abonamentul tău va fi reluat după ce este percepută plata.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Abonamentul tău **{planName}** va fi reluat după ce este percepută plata și va costa **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Abonamentul tău de **!!{price}!!** nu a fost achitat. Te rugăm să-ți actualizezi informațiile de plată, altfel abonamentul va expira pe **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10209,6 +10264,10 @@
         PREMIUM_NO_PLANS_HEADER: "Ne pare rău!",
         PREMIUM_NO_PLANS_BODY:
           "Deocamdată nu oferim niciun abonament prin Google Play care să aibă mai multe boost-uri. [Află mai multe.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Pune pe pauză sau anulează abonamentul",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Anulează sau pune pe pauză abonamentul",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Abonează-te - \xeencep\xe2nd de la !!{price}!! / lună",
         PREMIUM_SUBSCRIPTION_UPDATES: "Noutăți despre abonamente",
@@ -10940,8 +10999,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "probă gratuită",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Plătește doar **{discountedPrice}** pe lună \xeen primele **3 luni** de abonament Nitro. Plătește {regularPrice} pe lună după \xeencheierea perioadei de 3 luni \xeen care se aplică reducerea.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Plătește doar **{discountedPrice}** pe lună \xeen **{numMonths, plural, one {prima lună} other {primele {numMonths} luni}}** de abonament Nitro. Plătește {regularPrice} pe lună după \xeencheierea perioadei \xeen care se aplică reducerea.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/lună timp de 3 luni\n\n{regularPrice}/lună după cele 3 luni",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/lună timp de **{numMonths, plural, one {o lună} other {{numMonths} luni}}**\n\n{regularPrice}/lună după {numMonths, plural, one {o lună} other {{numMonths} luni}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Economisește !!{percent, number}!!% cu abonamentul anual",
         BILLING_SUBTOTAL: "Subtotal",
@@ -10997,6 +11060,8 @@
         REVERSED: "Stornat",
         REFUND: "Restituire",
         RESUBSCRIBE: "Abonează-te din nou",
+        RESUME: "Reia abonamentul",
+        WITHDRAW_PAUSE: "Oprește pauza",
         CREDIT_CARD_ERROR_REQUIRED: "Numărul cardului este necesar.",
         CREDIT_CARD_ERROR_NUMBER:
           "Ceva e \xeen neregulă cu numărul cardului de credit",
@@ -13732,6 +13797,16 @@
           "{count, plural, =0 {0 prieteni comuni} one {1 prieten comun} other {{count} prieteni comuni}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 servere comune} one {1 server comun} other {{count} servere comune}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "prieten/ă cu **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "prieten/ă cu **{usernameOne}** și **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "prieten/ă cu **{usernameOne}**, **{usernameTwo}** și **{count} alții**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "face parte din **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "face parte din **{guildNameOne}** și **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "face parte din **{guildNameOne}**, **{guildNameTwo}** și **\xeencă {count}**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Prieteni comuni",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Servere comune",
         PROFILE_IN_VOICE_CALL: "\xcentr-un apel vocal",
@@ -13867,6 +13942,8 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Poți alege \xeentre {monthlyPrice}/lună și {yearlyPrice}/an",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Destinatarul va primi:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Dăruiește un abonament {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Durata cadoului",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Dăruiește {count, plural, one {# lună} other {# luni}} de {nitroTierName}",
@@ -14728,6 +14805,9 @@
           "A apărut o eroare \xeen timpul \xeencercării de a \xeencărca aplicația.",
         INTERACTION_RATE_LIMITED: "Ia-o mai \xeencet! Dai clic prea repede.",
         APPLICATION_ADD_BUTTON: "Adaugă aplicația",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Acțiuni adăugare aplicație",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Copiază URL-ul de adăugare a aplicației",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Membrii nu pot folosi acest bot p\xe2nă nu activezi permisiunile.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17555,6 +17635,23 @@
           "Dacă anulezi, **pierzi următoarele avantaje:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Lasă, păstrează Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Lasă, păstrează Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Pune pe pauză",
+        PREMIUM_PAUSE_SELECT_TITLE: "Pune pe pauză sau anulează abonamentul",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Dacă vrei să iei o pauză de la abonamentele plătite, ai opțiunea să le pui pe pauză timp de c\xe2teva luni",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Ai opțiunea să continui pauza c\xe2teva luni suplimentare",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Selectează durata pauzei",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Ai prefera să-l **pui pe pauză**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Pune abonamentul pe pauză timp de maximum 90 de zile \xeen loc să-l anulezi.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "Pune pe pauză timp de {days} zile",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Pune pe pauză \xeencă {days} zile",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Anulează abonamentul",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Abonamentul tău va fi pus pe pauză",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Păstrează anumite avantaje la un preț mai mic",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22025,6 +22122,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: stiluri noi",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Acum senpai te va observa cu siguranță.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NOU: Primăvăraticii",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "\xcen liniștea nopții, o magie neobișnuită se răsp\xe2ndește \xeen aer și...",
         COLLECTIBLES_NEW_BADGE: "NOU",
         INVENTORY_EMOJI_DETAILS_V2: "Vezi detaliile emojiurilor",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23700,6 +23800,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— membri",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Marchează ca nefiind sensibil",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Am făcut o greșeală? [Dă-ne de știre](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Nu s-a putut trimite mesajul. S-ar putea să includă conținut media explicit, care a fost blocat de server.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23732,7 +23834,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Ia o pauză",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Ascultă Lofi Beats cu Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relaxează-te",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Atmosferă",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Sfaturi de siguranță",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Despre alertele de siguranță",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23850,6 +23952,7 @@
           "Arată-le prietenilor tăi cu ce te ocupi set\xe2ndu-ți statusul activității.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Setează un status personalizat",
+        HANG_STATUS_MOBILE_SET_ROW: "Setează activitatea vocală",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Nu s-a găsit raportul.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Verificarea raportului a fost deja solicitată.",
@@ -23951,11 +24054,20 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Nimic interesant",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Nu există voturi pentru acest răspuns.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Voturi",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 voturi} =1 {{numVotes} vot} other {{numVotes} voturi}} pentru {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Dezvăluie votanții",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Dezvăluie votanții",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! și {n, plural, one {\xeencă 1} other {\xeencă {n}}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! și !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! și {n, plural, one {\xeencă 1} other {\xeencă {n}}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! și !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! și {n, plural, one {\xeencă 1} other {\xeencă {n}}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {o persoană} other {{n} persoane}}",
         CREATE_POLL: "Creează sondaj",
         CREATE_POLL_HEADING: "Creează un sondaj",
         CREATE_POLL_EXPIRATION: "Sondajul va fi deschis 24 de ore",
@@ -23971,11 +24083,17 @@
           "Adăugare răspuns cu conținut media {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Actualizare conținut media, {imageName}, răspunsul {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Adăugare emoji, răspunsul {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Actualizare emoji, {emojiName}, răspunsul {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Actualizează emojiul",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Răspunsul {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Scrie răspunsul",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Adaugă alt răspuns",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Sondajul va fi deschis",
         CREATE_POLL_DURATION_LABEL: "Durată",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 oră} other {{num} ore}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 zile",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 săptăm\xe2nă",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23990,8 +24108,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Sigur vrei să ieși? Schimbările făcute se vor pierde dacă ieși acum.",
         CREATE_POLL_REMOVE_ANSWER: "Elimină răspunsul",
+        CREATE_POLL_REMOVE_EMOJI: "Elimină emojiul",
         CREATE_POLL_ADD_IMAGE: "Adaugă fișiere media",
+        CREATE_POLL_ADD_EMOJI: "Adaugă un emoji",
         CREATE_POLL_REPLACE_IMAGE: "\xcenlocuiește conținutul media",
+        CREATE_POLL_REPLACE_EMOJI: "\xcenlocuiește emojiul",
         CREATE_POLL_POLL_ANSWER: "Răspuns la sondaj",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Editează descrierea imaginii (text alternativ)",
@@ -24073,8 +24194,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hopa!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Misiunile nu sunt \xeencă disponibile pe mobil. Ne pare rău! Intră \xeen aplicația Discord pentru desktop sau \xeen browser, mergi la **Setări utilizator > Inventar cadouri** și acceptă misiunea de acolo.",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "Misiunile nu sunt \xeencă disponibile pe mobil.",
+        QUESTS_MOBILE_EMBED_TITLE: "Misiunile nu sunt disponibile pe mobil",
         QUESTS_MOBILE_EMBED_BODY:
           "Intră \xeen aplicația Discord pentru desktop sau \xeen browser, mergi la \nSetări utilizator > Inventar cadouri și acceptă misiunea de acolo.",
         QUESTS_GET_THIS_GAME: "Obține joc",
@@ -24122,9 +24242,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! și {count, plural, one {\xeencă 1} other {\xeencă {count}}}",
         STOREFRONT: "Magazin",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Abonamente aplicații",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Abonamente",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Cumpără abonamente de la {appName}",
-        STOREFRONT_APP_PRODUCTS: "Produse aplicații",
+        STOREFRONT_APP_PRODUCTS: "Produse",
         STOREFRONT_APP_PRODUCTS_BODY: "Cumpără produse de la {appName}",
         STOREFRONT_SUBSCRIPTION: "Abonament",
         STOREFRONT_SUBSCRIBE_FOR: "Abonează-te cu {rate}",
@@ -24144,6 +24264,13 @@
         FOCUS_MODE_TITLE: "Modul Silențios (BETA)",
         FOCUS_MODE_BADGE_ON: "PORNIT",
         FOCUS_MODE_BADGE_OFF: "OPRIT",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "Nu deranja",
+        FOCUS_MODE_DESCRIPTION:
+          "Dezactivează notificările pe desktop și sunetele mesajelor.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Dezactivează notificările din aplicație și sunetele mesajelor.",
+        FOCUS_MODE_TURN_OFF: "Dezactivează modul Concentrare",
+        FOCUS_MODE_ENABLE_FOR: "Activează modul Concentrare timp de",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Folosești des modul „Nu deranja”. Ai prefera să activezi modul Silențios?",
         ACTIVITY_REACTION_REPLY_TITLE: "Discută despre {activity}",
@@ -24174,6 +24301,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "acum {count} o",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "acum {count} m",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "acum {count}s",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "timp de {days} z",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "timp de {hours} o",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima dată",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activitate",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

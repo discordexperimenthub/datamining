@@ -57,6 +57,7 @@
           "\nWe hebben instructies om je wachtwoord te wijzigen verzonden naar **!!{email}!!**. Controleer je inbox en ongewenste e-mail.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Podium",
         STORE_CHANNEL_TYPE: "Store",
+        NEWS_CHANNEL_TYPE: "Aankondiging",
         VOICE_CHANNEL_TYPE: "Spraak",
         FORUM_CHANNEL_TYPE: "Forum",
         TEXT_CHANNEL_TYPE: "Tekst",
@@ -5600,6 +5601,7 @@
         STATUS_DND: "Niet storen",
         STATUS_INVISIBLE: "Onzichtbaar",
         STATUS_DND_HELP: "Je ontvangt geen bureaubladmeldingen.",
+        STATUS_DND_HELP_FOCUS_MODE: "Focusmodus inschakelen",
         STATUS_INVISIBLE_HELPER:
           "Je zult niet online verschijnen, maar hebt volledige toegang tot alles van Discord.",
         STATUS_UNTIL: "tot {endTime}",
@@ -6304,8 +6306,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discord-lid sinds",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 gemeenschappelijke vriend(in)} other {{count} gemeenschappelijke vriend(inn)en}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Gemeenschappelijke vrienden ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 gemeenschappelijke server} other {{count} gemeenschappelijke servers}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Gemeenschappelijke servers ({count})",
         SHOW_USER_PROFILE: "Gebruikersprofiel tonen",
         HIDE_USER_PROFILE: "Gebruikersprofiel verbergen",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8679,6 +8683,8 @@
           "We raden je aan de vernieuwde documenten volledig te lezen, aangezien ze van toepassing zijn op je Discord-gebruik. We hebben een aantal van de belangrijkste wijzigingen nader toegelicht in onze blogberichten.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Vorige maand hebben we de jaarlijkse beleidsupdates aangekondigd en die zijn nu van kracht. Lees onze [blog](https://discord.com/blog/important-policy-updates) voor een overzicht van de wijzigingen. De volledige beleidslijnen staan hieronder.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Door op 'Akkoord' te klikken, bevestig je dat je akkoord gaat met Discords Servicevoorwaarden en dat je ons Privacybeleid hebt gelezen.",
         COMMUNITY_GUIDELINES: "[Communityrichtlijnen]({url})",
         BLOG_POST: "[Lees onze blog]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Van een specifieke persoon",
@@ -9012,6 +9018,8 @@
           "Ik wacht hier tot je een server hebt gekozen waaraan je {numUnappliedGuildBoostSlots, plural, =1 {hem} other {ze}} kunt geven!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Ik wacht hier tot je een server hebt gekozen waaraan je {numUnappliedGuildBoostSlots, plural, =1 {hem} other {ze}} kunt geven! Meer informatie over Nitro-voordelen lees je $[hier](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Ik wacht hier tot je **een server hebt gekozen waaraan je {numUnappliedGuildBoostSlots, plural, =1 {hem} other {ze}} kunt geven!** Meer informatie over Nitro-voordelen lees je $[hier](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Boost annuleren",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Boost annuleren ongedaan maken",
@@ -9212,6 +9220,10 @@
           "Je krijgt gepersonaliseerde emoji's, grotere uploads en meer voor **!!{price}!!** (in afwachting van annulering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Je krijgt gepersonaliseerde emoji's, grotere uploads en meer (in afwachting van annulering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Voor **!!{price}!!** krijg je gepersonaliseerde emoji, grotere uploads en meer (wordt stopgezet op **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Je krijgt gepersonaliseerde emoji, grotere uploads en meer (wordt stopgezet op **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Je Nitro Basic-abonnement met gepersonaliseerde emoji's, grotere uploads en andere voordelen voor **!!{price}!!** staat **in de wacht**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9226,6 +9238,10 @@
           "Geniet van chatvoordelen en een boostkorting voor **!!{price}!!** (in afwachting van annulering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Je hebt chatvoordelen en een boostkorting (in afwachting van annulering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Geniet van chatvoordelen en een boostkorting voor **!!{price}!!** (wordt stopgezet op **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Je hebt chatvoordelen en een boostkorting (wordt stopgezet op **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Je abonnement met chatvoordelen en een boostkorting voor **!!{price}!!** staat **in de wacht**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9240,6 +9256,12 @@
           "Je hebt premiumchat, **{num, number}x** boosts en een boostkorting voor **!!{price}!!** (in afwachting van annulering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Je hebt premiumchat, **{num, number}x** boosts en een boostkorting (in afwachting van annulering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Je hebt premiumchat, **{num, number}x** boosts en een boostkorting voor **!!{price}!!** (wordt stopgezet op **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Je hebt premiumchat, **{num, number}x** boosts en een boostkorting (wordt stopgezet op **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Je hebt je Nitro-abonnement tijdelijk stopgezet tot **{resumeDate, date, medium}**. Zodra je abonnement wordt hervat, krijg je opnieuw toegang tot Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Je abonnement met premiumchat, **{num, number}x** boosts en een boostkorting voor **!!{price}!!** staat **in de wacht**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9352,6 +9374,16 @@
           "Probeer Nitro 30 dagen gratis",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Ga door naar de proefversie van 30 dagen",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Geniet {duration} namens ons",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Maak meer plezier met {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Unieke profielaanpassingen en meer!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Voeg een persoonlijk applicatiepictogram, superreacties en meer toe!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} begint vanaf {price}/maand",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Welkom bij Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Je bent klaar voor de start!",
@@ -9411,6 +9443,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% korting",
         PREMIUM_DISCOUNT_CTA: "Bespaar !!{percent, number}!!% op Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Bespaar op Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Betaal **{numMonths, plural, one {een maand} other {{numMonths} maanden}}** lang slechts **{discountedPrice}**! Daarna betaal je {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Je korting van !!{percent, number}!!% eindigt {numMonths, plural, one {1 maand} other {{numMonths} maanden}} na aankoop. Daarna wordt er {regularPrice} in rekening gebracht.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9436,6 +9470,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "Je **gratis proefperiode verloopt {remainingTime, plural, =0 {vandaag} one {over # dag} other {over # dagen}}**. Hierna kost het !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "gratis proefperiode geactiveerd",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Geniet {duration} namens ons",
         INCLUDED: "Inbegrepen",
         NOT_INCLUDED: "Niet inbegrepen",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9989,6 +10025,16 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Je annulering zal direct van kracht gaan voor alle Nitro- en Serverboost-abonnementen.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Yep, annuleren !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "!!{planPremiumType}!! tijdelijk stopzetten?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Je behoudt tot **{pauseDate, date, medium}** toegang tot Nitro. Daarna wordt je abonnement {pauseDuration} dagen stopgezet. Op **{resumeDate, date, medium}** brengen we weer kosten in rekening. Je kunt je abonnement op elk moment hervatten.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Je Nitro-abonnement wordt vanaf **nu** {pauseDuration} dagen stopgezet. Op **{resumeDate, date, medium}** brengen we weer kosten in rekening. Je kunt je abonnement op elk moment hervatten.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Je verlengt je Nitro tot **{resumeDate, date, medium}**. Je kunt je abonnement op elk moment hervatten.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Ja, !!{planPremiumType}!! tijdelijk stopzetten",
         PREMIUM_UPGRADE_DONE_BUTTON: "Cool!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Begrepen",
         PREMIUM_UPLOAD_PROMO:
@@ -10036,6 +10082,15 @@
           "Je abonnementen worden automatisch verlengd op **{renewalDate, date, medium}**. Gelieve [naar je !!{paymentGatewayName}!! abonnementinstellingen]({subscriptionManagementLink}) te gaan voor meer informatie.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Je abonnement eindigt op **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Je abonnement wordt tijdelijk stopgezet op **{pauseDate, date, medium}** en automatisch hervat op **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Je abonnement is tijdelijk stopgezet en wordt automatisch hervat op **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Je **{planName}**-abonnement is tijdelijk stopgezet en wordt automatisch hervat op **{resumeDate, date, short}**, waarbij **!!{price}!!** in rekening wordt gebracht.",
+        PREMIUM_SETTINGS_PAUSED_INFO: "Je abonnement wordt hervat na betaling.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Je **{planName}**-abonnement wordt hervat na betaling. We brengen **!!{price}!!** in rekening.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Je **!!{price}!!**-abonnement is verlopen. Update je betalingsinformatie, anders eindigt je abonnement op **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10084,6 +10139,10 @@
         PREMIUM_NO_PLANS_HEADER: "Sorry!",
         PREMIUM_NO_PLANS_BODY:
           "We bieden op dit moment geen abonnement aan via Google Play Billing met nog meer boosts. [Meer informatie.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Abonnement tijdelijk stopzetten of annuleren",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Abonnement annuleren of tijdelijk stopzetten",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Abonneren - vanaf !!{price}!! / maand",
         PREMIUM_SUBSCRIPTION_UPDATES: "Abonnementupdates",
@@ -10811,8 +10870,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "gratis proefperiode",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Betaal slechts **{discountedPrice}** per maand voor je eerste **3 maanden** Nitro. Na de korting voor 3 maanden betaal je maandelijks {regularPrice}.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Betaal slechts **{discountedPrice}** per maand voor je eerste **{numMonths, plural, one {maand} other {{numMonths} maanden}}** Nitro. Na de korting betaal je maandelijks {regularPrice}.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 maanden lang {discountedPrice}/maand\n\nNa 3 maanden {regularPrice}/maand",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/maand voor **{numMonths, plural, one {maand} other {{numMonths} maanden}}**\n\n{regularPrice}/maand na {numMonths, plural, one {een maand} other {{numMonths} maanden}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Bespaar !!{percent, number}!!% met een jaarabonnement",
         BILLING_SUBTOTAL: "Subtotaal",
@@ -10869,6 +10932,8 @@
         REVERSED: "Herroepen",
         REFUND: "Restitutie",
         RESUBSCRIBE: "Opnieuw abonneren",
+        RESUME: "Abonnement hervatten",
+        WITHDRAW_PAUSE: "Tijdelijke stopzetting intrekken",
         CREDIT_CARD_ERROR_REQUIRED: "Kaartnummer vereist.",
         CREDIT_CARD_ERROR_NUMBER: "Je kredietkaartnummer klopt niet",
         CREDIT_CARD_ERROR_EXPIRATION: "Je vervaldatum klopt niet",
@@ -13566,6 +13631,16 @@
           "{count, plural, =0 {0 gemeenschappelijke vrienden} one {1 gemeenschappelijke vriend} other {{count} gemeenschappelijke vrienden}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 gemeenschappelijke servers} one {1 gemeenschappelijke server} other {{count} gemeenschappelijke servers}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "vrienden met **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "vrienden met **{usernameOne}** en **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "vrienden met **{usernameOne}** en **{usernameTwo}** en **{count} anderen**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "lid van **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "lid van **{guildNameOne}** en **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "lid van **{guildNameOne}** en **{guildNameTwo}** en nog **{count}**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Gemeenschappelijke vrienden",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Gemeenschappelijke servers",
         PROFILE_IN_VOICE_CALL: "In een spraakoproep",
@@ -13701,6 +13776,8 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Kies uit {monthlyPrice}/maand of {yearlyPrice}/jaar",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "De ontvanger krijgt:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Geef een {nitroTierName}-lidmaatschap cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Cadeauduur",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Geef {count, plural, one {# maand} other {# maanden}} {nitroTierName} cadeau",
@@ -14550,6 +14627,8 @@
           "Er is een fout opgetreden bij het laden van deze applicatie.",
         INTERACTION_RATE_LIMITED: "Rustig aan! Je klikt te snel.",
         APPLICATION_ADD_BUTTON: "App toevoegen",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Acties app toevoegen",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "App toevoegen-URL kopi\xebren",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Leden kunnen deze bot pas gebruiken als je machtigingen inschakelt.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17362,6 +17441,23 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Laat maar, ik ga door met Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Laat maar, ik ga door met Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Liever tijdelijk stopzetten",
+        PREMIUM_PAUSE_SELECT_TITLE:
+          "Abonnement tijdelijk stopzetten of annuleren",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Als je even geen betaald abonnement wilt, kun je je abonnement ook een paar maanden stopzetten",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Je kunt deze pauze met een aantal maanden verlengen",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Selecteer een pauzeduur",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Wil je liever **tijdelijk stopzetten**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Zet je abonnement maximaal 90 dagen stop in plaats van te annuleren.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "{days} dagen stopzetten",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Nog {days} dagen stopzetten",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Abonnement annuleren",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Je abonnement wordt tijdelijk stopgezet",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Behoud een aantal voordelen voor minder geld",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21789,6 +21885,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: nieuwe stijlen",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai zal je nu zeker zien staan.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NIEUW: Lentekriebels",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "In de stilte van de nacht betovert een vreemde magie de lucht en...",
         COLLECTIBLES_NEW_BADGE: "NIEUW",
         INVENTORY_EMOJI_DETAILS_V2: "Emoji-info bekijken",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23442,6 +23541,8 @@
           "{count, plural, =1 {, # lid} other {# leden}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— Leden",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "Markeren als niet-gevoelig",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Hebben we een fout gemaakt? [Laat het ons weten](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Je bericht kon niet worden verstuurd. Het bevat mogelijk expliciete media die worden geblokkeerd door de server.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23474,7 +23575,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Even pauzeren",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Luister naar lofi-beats met Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Ontspannen",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Vibe",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Veiligheidstips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Over veiligheidswaarschuwingen",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23589,6 +23690,7 @@
           "Laat je vrienden zien waar je mee bezig bent door een activiteitsstatus in te stellen.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Gepersonaliseerde status instellen",
+        HANG_STATUS_MOBILE_SET_ROW: "Spraakactiviteit instellen",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "De melding is niet gevonden.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Beoordeling melding al aangevraagd.",
@@ -23692,11 +23794,20 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Hier is niets te zien",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Dit antwoord heeft geen stemmen.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Stemmen",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 stemmen} =1 {{numVotes} stem} other {{numVotes} stemmen}} voor {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Stemmers onthullen",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Onthult de stemmers",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! en {n, plural, one {1 andere persoon} other {{n} anderen}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! en !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! en {n, plural, one {1 andere persoon} other {{n} anderen}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!!, en !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! en {n, plural, one {1 andere persoon} other {{n} anderen}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {1 persoon} other {{n} personen}}",
         CREATE_POLL: "Peiling aanmaken",
         CREATE_POLL_HEADING: "Maak een peiling aan",
         CREATE_POLL_EXPIRATION: "De peiling is 24 uur lang beschikbaar",
@@ -23709,11 +23820,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "Media toevoegen, antwoord {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Media updaten, {imageName}, antwoord {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Emoji toevoegen, antwoord {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Emoji updaten, {emojiName}, antwoord {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Emoji updaten",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Antwoord {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Typ je antwoord in",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Voeg nog een antwoord toe",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "De peiling duurt:",
         CREATE_POLL_DURATION_LABEL: "Duur",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 uur} other {{num} uur}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagen",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 week",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23728,8 +23845,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Weet je zeker dat je wilt vertrekken? Als je nu vertrekt, gaan alle gemaakte wijzigingen verloren.",
         CREATE_POLL_REMOVE_ANSWER: "Antwoord verwijderen",
+        CREATE_POLL_REMOVE_EMOJI: "Emoji verwijderen",
         CREATE_POLL_ADD_IMAGE: "Media toevoegen",
+        CREATE_POLL_ADD_EMOJI: "Emoji toevoegen",
         CREATE_POLL_REPLACE_IMAGE: "Media vervangen",
+        CREATE_POLL_REPLACE_EMOJI: "Emoji vervangen",
         CREATE_POLL_POLL_ANSWER: "Peilingantwoord",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Beschrijving afbeelding aanpassen (alt. tekst)",
@@ -23811,7 +23931,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Missies zijn (nog) niet beschikbaar op mobiele apparaten. Sorry daarvoor! Ga in de Discord-app of browser op je pc naar **Gebruikersinstellingen > Cadeau-inventaris** en accepteer de missie daar.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Missies zijn (nog) niet beschikbaar op mobiele apparaten.",
+          "Missies zijn niet beschikbaar op mobiele apparaten",
         QUESTS_MOBILE_EMBED_BODY:
           "Ga in de Discord-app of browser op je pc naar \nGebruikersinstellingen > Cadeau-inventaris en accepteer de missie daar.",
         QUESTS_GET_THIS_GAME: "Game halen",
@@ -23859,9 +23979,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! en {count, plural, one {1 andere persoon} other {{count} anderen}}",
         STOREFRONT: "Store",
-        STOREFRONT_APP_SUBSCRIPTIONS: "App-abonnementen",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Abonnementen",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koop abonnementen via {appName}",
-        STOREFRONT_APP_PRODUCTS: "App-producten",
+        STOREFRONT_APP_PRODUCTS: "Producten",
         STOREFRONT_APP_PRODUCTS_BODY: "Koop producten via {appName}",
         STOREFRONT_SUBSCRIPTION: "Abonnement",
         STOREFRONT_SUBSCRIBE_FOR: "Abonneren voor {rate}",
@@ -23881,6 +24001,13 @@
         FOCUS_MODE_TITLE: "Focusmodus (B\xc8TA)",
         FOCUS_MODE_BADGE_ON: "AAN",
         FOCUS_MODE_BADGE_OFF: "UIT",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "Niet storen",
+        FOCUS_MODE_DESCRIPTION:
+          "Schakelt bureaubladmeldingen en berichtgeluiden uit.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Schakelt in-app meldingen en berichtgeluiden uit.",
+        FOCUS_MODE_TURN_OFF: "Focusmodus uitschakelen",
+        FOCUS_MODE_ENABLE_FOR: "Focusmodus inschakelen gedurende",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Je gebruikt 'Niet storen' vrij vaak. Wil je misschien de Focusmodus inschakelen?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chatten over {activity}",
@@ -23911,6 +24038,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}u geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}m geleden",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} s geleden",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "gedurende {days}d",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "gedurende {hours}u",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Eerste keer",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activiteiten",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

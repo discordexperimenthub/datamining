@@ -52,6 +52,7 @@
           "\n我們寄了一封更改您的密碼的說明到 **!!{email}!!**，請檢查您的收件夾或垃圾信件。\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "舞台",
         STORE_CHANNEL_TYPE: "商店",
+        NEWS_CHANNEL_TYPE: "公告",
         VOICE_CHANNEL_TYPE: "語音",
         FORUM_CHANNEL_TYPE: "論壇",
         TEXT_CHANNEL_TYPE: "文字",
@@ -5139,6 +5140,7 @@
         STATUS_DND: "請勿打擾",
         STATUS_INVISIBLE: "隱形",
         STATUS_DND_HELP: "您將不會收到任何的桌面通知。",
+        STATUS_DND_HELP_FOCUS_MODE: "啟用專注模式",
         STATUS_INVISIBLE_HELPER:
           "您將不會出現在線上，但仍能使用Discord的所有功能。",
         STATUS_UNTIL: "直到 {endTime}",
@@ -5795,8 +5797,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "成為 Discord 成員時間",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 位共同好友} other {{count} 位共同好友}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "共同的朋友 ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 個共同伺服器} other {{count} 個共同伺服器}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "共同的伺服器 ({count})",
         SHOW_USER_PROFILE: "顯示使用者個人資料",
         HIDE_USER_PROFILE: "隱藏使用者個人資料",
         SHOW_USER_PROFILE_UNAVAILABLE: "顯示使用者個人資料 (無法使用)",
@@ -7956,6 +7960,8 @@
           "我們鼓勵您閱讀完整的更新文件，這些文件適用於您的 Discord 使用。我們也在部落格貼文上說明了部分最重要的變更。",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "在此宣布，上個月進行的政策年度更新內容現已生效。歡迎閱讀我們的[部落格貼文](https://discord.com/blog/important-policy-updates)，瞭解變更摘要及完整的政策內容。",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "若按下「同意」，即表示您同意 Discord《服務條款》，並已詳閱我們的《隱私權政策》。",
         COMMUNITY_GUIDELINES: "[社群守則]({url})",
         BLOG_POST: "[我們的部落格貼文]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "來自特定人士",
@@ -8262,6 +8268,8 @@
           "現在就等您選擇要贈送的 {numUnappliedGuildBoostSlots, plural, =1 { 個伺服器} other {個伺服器}}！",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "現在就等您選擇要贈送的 {numUnappliedGuildBoostSlots, plural, =1 { 個伺服器} other {個伺服器}}！若要進一步瞭解 Nitro 福利，$[請按一下此處](learnMoreHook)。",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "現在就等您選擇要贈送的{numUnappliedGuildBoostSlots, plural, =1 { 個伺服器} other { 個伺服器}}！若要進一步瞭解 Nitro 福利，$[請按一下此處](learnMoreHook)。",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "取消加成",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "解除取消加成",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER: "加成任何伺服器",
@@ -8454,6 +8462,10 @@
           "只要 **!!{price}!!**，即可擁有自訂表情符號、更大的上傳容量及更多功能 (等待取消)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "您可擁有自訂表情符號、更大的上傳容量及更多功能 (等待取消)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "只要 **!!{price}!!**，即可擁有自訂表情符號、更大的上傳容量及更多功能 (在 **{pauseDate, date, medium}** 暫停使用)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "您擁有自訂表情符號、更大的上傳容量，以及更多功能 (在 **{pauseDate, date, medium}** 暫停使用)。",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "您的 **!!{price}!!** Nitro Basic 訂閱 **已暫停**，內容包括自訂表情符號、更大的上傳容量和其他福利",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -8468,6 +8480,10 @@
           "您有聊天福利和 **!!{price}!!** 的加成折扣 (等待取消)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "您有聊天福利及加成折扣 (待取消)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "只要 **!!{price}!!**，即可擁有聊天福利與加成折扣 (在 **{pauseDate, date, medium}** 暫停使用)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "您有聊天福利和加成折扣 (在 **{pauseDate, date, medium}** 暫停使用)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "讓您享有聊天福利與加成折扣的 **!!{price}!!** 訂閱**已暫停**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -8482,6 +8498,12 @@
           "您有高級版聊天功能、**{num, number} 次**加成和 **!!{price}!!** 的加成折扣 (等待取消)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "您有高級聊天、**{num, number}** 個加成和加成折扣 (待取消)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "只要 **!!{price}!!** 即可擁有高級聊天功能、**{num, number}** 倍加成和加成折扣 (在 **{pauseDate, date, medium}** 暫停使用)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "您有高級聊天、**{num, number}** 個加成和加成折扣 (在 **{pauseDate, date, medium}** 暫停使用)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "您已暫停 Nitro 訂閱至 **{resumeDate, date, medium}** 止。一旦恢復訂閱，您將重新獲得 Nitro 使用權限",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "讓您享有高級聊天、**{num, number}x 個**加成，以及加成折扣的 **!!{price}!!** 訂閱**已暫停**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -8585,6 +8607,15 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_0_HEADER: "免費試用 Nitro Basic 30 天",
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER: "免費試用 Nitro 30 天",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "繼續維持 30 天試用",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL: "免費使用 {duration}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "使用「{nitroTierName}」，釋放更多樂趣",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "獨特的個人資料自訂和更多功能！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "新增自訂應用程式圖示、超級反應等更多功能！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} 現在價格為 {price}/月起",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "歡迎使用 Nitro！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "您準備好爆裂了！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED_ONE:
@@ -8642,6 +8673,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA: "訂閱 Nitro 可享 !!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "訂閱 Nitro 可享折扣",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "只需支付 **{discountedPrice}**，就可以享受 **{numMonths, plural, one { 個月的服務！} other {{numMonths} 個月的服務！}}**後續價格為 {regularPrice}。",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "您的 !!{percent, number}!!% 折扣將於購買後的 {numMonths, plural, one {1 個月} other {{numMonths} 個月}}結束。之後每個月收費為 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -8666,6 +8699,7 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "您的**免費試用將在 {remainingTime, plural, =0 {今天} one {# 天後} other {# 天後結束}}**。在這之後，會向您收取 !!{price}!!。",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "已啟用免費試用",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL: "免費使用 {duration}",
         INCLUDED: "隨附",
         NOT_INCLUDED: "不隨附",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9191,6 +9225,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "取消將於您訂閱 Nitro 及伺服器加成時立即生效。",
         PREMIUM_CANCEL_CONFIRM_NEW: "是的，取消 !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "要暫停使用「!!{planPremiumType}!!」嗎？",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "您將能繼續使用 Nitro 至 **{pauseDate, date, medium}**，然後您的訂閱將暫停 {pauseDuration} 天。我們將在 **{resumeDate, date, medium}** 起再次開始向您收費。您可以隨時恢復訂閱。",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "您的 Nitro 訂閱將於**現在**暫停 {pauseDuration} 天。我們將在 **{resumeDate, date, medium}** 起再次開始向您收費。您可以隨時恢復訂閱。",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "您將延長 Nitro 至 **{resumeDate, date, medium}**。您可以隨時恢復訂閱。",
+        PREMIUM_PAUSE_CONFIRM_NEW: "沒錯，暫停使用「!!{planPremiumType}!!」",
         PREMIUM_UPGRADE_DONE_BUTTON: "太棒了！",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "知道了",
         PREMIUM_UPLOAD_PROMO:
@@ -9236,6 +9278,15 @@
           "您的訂閱將於 **{renewalDate, date, medium}** 自動續訂。請[造訪您的!!{paymentGatewayName}!!訂閱設定]({subscriptionManagementLink})以了解詳細資訊。",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "您的訂閱會在 **{endDate, date, medium}** 到期。",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "您的訂閱將於 **{pauseDate, date, medium}** 暫停，並將於 **{resumeDate, date, medium}** 自動恢復。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "您的訂閱目前處於暫停狀態，將於 **{resumeDate, date, medium}** 自動恢復。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "您的「**{planName}**」訂閱目前已暫停，並將於 **{resumeDate, date, short}** 自動恢復，屆時將向您收取 **!!{price}!!**。",
+        PREMIUM_SETTINGS_PAUSED_INFO: "您的訂閱將將恢復為待付款。",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "您的「**{planName}**」訂閱將恢復為待付款，並將向您收取 **!!{price}!!**。",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "您的 **!!{price}!!** 訂閱已過期。請更新您的付款資訊，否則您的訂閱會在 **{endDate, date, medium}** 結束。",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -9283,6 +9334,8 @@
         PREMIUM_NO_PLANS_HEADER: "抱歉！",
         PREMIUM_NO_PLANS_BODY:
           "我們目前不支援透過 Google Play 商店付款購買更多加成。[了解更多。]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "暫停或取消訂閱",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION: "取消或暫停訂閱",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "訂閱 - 價格每月 !!{price}!! 起",
         PREMIUM_SUBSCRIPTION_UPDATES: "訂閱更新",
@@ -9962,8 +10015,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "免費試用",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "訂閱 Nitro，前 **3 個月**每月只需 **{discountedPrice}**。3 個月的折扣期過後，每個月收費為 {regularPrice}。",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "訂閱 Nitro，首**{numMonths, plural, one {個月} other { {numMonths} 個月}}**每月只需 **{discountedPrice}**。折扣期結束後，每月費用為 {regularPrice}。",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "以 {discountedPrice}/月的價格使用 3 個月\n\n3 個月後的訂閱價格為 {regularPrice}/月",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "可享 **{numMonths, plural, one {1 個月} other {{numMonths} 個月}}**的每月 {discountedPrice} 價格\n\n過了 {numMonths, plural, one {1 個月} other {{numMonths} 個月}}後，每月 {regularPrice}",
         BILLING_YEARLY_PLAN_SAVINGS: "年度訂閱可省 !!{percent, number}!!%",
         BILLING_SUBTOTAL: "小計",
         BILLING_TRIAL_LEGAL_COPY:
@@ -10014,6 +10071,8 @@
         REVERSED: "已撤銷",
         REFUND: "退款",
         RESUBSCRIBE: "重新訂閱",
+        RESUME: "繼續訂閱",
+        WITHDRAW_PAUSE: "撤銷暫停",
         CREDIT_CARD_ERROR_REQUIRED: "卡片號碼是必填項目。",
         CREDIT_CARD_ERROR_NUMBER: "您的信用卡卡號有誤",
         CREDIT_CARD_ERROR_EXPIRATION: "您的到期日有誤",
@@ -12505,6 +12564,16 @@
           "{count, plural, =0 {0 位共同好友} one {1 位共同好友} other {{count} 位共同好友}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 個伺服器} one {1 個伺服器} other {{count} 個伺服器}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "「**{usernameOne}**」的好友",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "「**{usernameOne}**」和「**{usernameTwo}**」的好友",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "「**{usernameOne}**」、「**{usernameTwo}**」和其他 **{count}** 人的好友。",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "「**{guildNameOne}**」的成員",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "「**{guildNameOne}**」和「**{guildNameTwo}**」的成員",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "「**{guildNameOne}**」、「**{guildNameTwo}**」以及其他 **{count}** 個公會的成員",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "共同的朋友",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "共同的伺服器",
         PROFILE_IN_VOICE_CALL: "語音通話中",
@@ -12633,6 +12702,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "請選擇每月 {monthlyPrice} 或每年 {yearlyPrice}",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人會收到：",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "贈送「{nitroTierName}」會員身分",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "禮物期限",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "贈送 {count, plural, one {# 個月} other {# 個月}}的 {nitroTierName}",
@@ -13366,6 +13436,8 @@
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "嘗試載入應用程式時發生錯誤。",
         INTERACTION_RATE_LIMITED: "慢一點！您按太快了。",
         APPLICATION_ADD_BUTTON: "新增應用程式",
+        APPLICATION_ADD_BUTTON_ACTIONS: "新增應用程式動作",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "複製並新增應用程式 URL",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "在您開啟權限前，成員無法使用此機器人。",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -15943,6 +16015,19 @@
           "如果取消，**您將失去的福利包括：**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "算了，保留 Nitro 吧",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "算了，保留 Nitro 吧",
+        PREMIUM_PAUSE_INSTEAD: "改為暫停",
+        PREMIUM_PAUSE_SELECT_TITLE: "暫停或取消訂閱",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "如果您想暫停付費訂閱，可以選擇暫停幾個月。",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "您可以選擇再繼續暫停幾個月",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "選擇暫停期間",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "您想要**改為暫停**嗎？",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE: "最多可暫停「訂閱」90 天，而非取消。",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "暫停 {days} 天",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE: "再暫停 {days} 天",
+        PREMIUM_PAUSE_DURATION_CANCEL: "取消訂閱",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED: "您的訂閱將暫停。",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER: "費用較低但仍可享有部分福利",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
           "只需每月支付 {monthlyPrice}，就能以 Nitro Basic 方案您繼續使用自訂表情符號、擁有較多上傳量，並享有[更多福利]({helpCenterLink})。",
@@ -19959,6 +20044,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "動畫：新風格",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "現在，學長一定會注意到你。",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "全新：春天樂園",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "在寂靜的夜晚，奇妙魔法讓空氣充滿魔力，然後......",
         COLLECTIBLES_NEW_BADGE: "新內容",
         INVENTORY_EMOJI_DETAILS_V2: "查看表情符號詳細資料",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -21471,6 +21559,8 @@
           "{count, plural, =1 {# 位成員} other {# 位成員}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— 成員",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "標記為非敏感內容",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "如果我們弄錯了，[請告訴我們](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "您的訊息無法傳送，可能是因為包含不雅媒體內容，因此已被伺服器封鎖。",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -21499,7 +21589,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "暫時休息一下",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "與 Wumpus 一起聆聽 Lofi Beats。",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "放鬆",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "氛圍",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "安全提示",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "關於安全警示",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -21603,6 +21693,7 @@
         HANG_STATUS_VC_ROW_ADD: "新增狀態",
         HANG_STATUS_HELP: "透過設定活動狀態，向您的朋友展示您正在進行的事情。",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "設定自訂狀態",
+        HANG_STATUS_MOBILE_SET_ROW: "設定語音活動",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "找不到檢舉項目。",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR: "已請求審核檢舉。",
         REPORT_SECOND_LOOK_LIMITED_TIME_ERROR: "審核檢舉只在有限的時間內可用。",
@@ -21691,11 +21782,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "此處沒有內容",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "此答案未獲任何投票。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "投票數",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 票} =1 {{numVotes} 票} other {{numVotes} 票}} 支持 {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "顯示投票者",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "顯示投票者",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! 和其他 {n, plural, one {1 人} other {{n} 人}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! 和 !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!、!!{b}!! 和{n, plural, one {其他 1 人} other {其他 {n} 人}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!、!!{b}!! 和 !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!、!!{b}!!、!!{c}!! 和其他 {n, plural, one {1 人} other {{n} 人}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 人} other {{n} 人}}",
         CREATE_POLL: "建立投票",
         CREATE_POLL_HEADING: "建立一項投票",
         CREATE_POLL_EXPIRATION: "投票會持續 24 小時",
@@ -21708,11 +21807,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "新增媒體，答案 {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "更新媒體 {imageName}，答案 {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "新增表情符號，回答 {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "更新表情符號，{emojiName}，回答 {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "更新表情符號",
         CREATE_POLL_ANSWER_INPUT_LABEL: "答案 {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "請輸入您的答案",
         CREATE_POLL_ADD_ANSWER_BUTTON: "新增另一個答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票持續時間：",
         CREATE_POLL_DURATION_LABEL: "期間",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 小時} other {{num} 小時}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票持續時間：{duration}",
@@ -21725,8 +21830,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "您確定要退出嗎？如果現在退出，所有做出的變更都會遺失。",
         CREATE_POLL_REMOVE_ANSWER: "移除答案",
+        CREATE_POLL_REMOVE_EMOJI: "移除表情符號",
         CREATE_POLL_ADD_IMAGE: "新增媒體",
+        CREATE_POLL_ADD_EMOJI: "新增表情符號",
         CREATE_POLL_REPLACE_IMAGE: "更換媒體",
+        CREATE_POLL_REPLACE_EMOJI: "替換表情符號",
         CREATE_POLL_POLL_ANSWER: "投票答案",
         CREATE_POLL_EDIT_ALT_TEXT: "編輯圖片描述 (替代文字)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "編輯圖片描述",
@@ -21794,7 +21902,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "哎呀！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "手機版目前還無法進行任務……暫時如此，對此我們深感抱歉！您可以透過桌面版的 Discord 應用程式或瀏覽器，前往**「使用者設定」>「禮物庫存」**，並在那裡接受任務。",
-        QUESTS_MOBILE_EMBED_TITLE: "手機目前還沒辦法接受任務。",
+        QUESTS_MOBILE_EMBED_TITLE: "在手機上無法使用任務。",
         QUESTS_MOBILE_EMBED_BODY:
           "您可以透過桌面版 Discord 應用程式或瀏覽器前往\n「使用者設定」>「禮物庫存」，並在那裡接受任務。",
         QUESTS_GET_THIS_GAME: "取得遊戲",
@@ -21841,9 +21949,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!!、!!{third}!! 和另外 {count, plural, one {1 人} other {{count} 人}}",
         STOREFRONT: "商店",
-        STOREFRONT_APP_SUBSCRIPTIONS: "App 訂閱",
+        STOREFRONT_APP_SUBSCRIPTIONS: "訂閱",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "從「{appName}」購買訂閱",
-        STOREFRONT_APP_PRODUCTS: "應用程式產品",
+        STOREFRONT_APP_PRODUCTS: "產品",
         STOREFRONT_APP_PRODUCTS_BODY: "從「{appName}」購買產品",
         STOREFRONT_SUBSCRIPTION: "訂閱",
         STOREFRONT_SUBSCRIBE_FOR: "以 {rate} 訂閱",
@@ -21863,6 +21971,11 @@
         FOCUS_MODE_TITLE: "專注模式 (測試版)",
         FOCUS_MODE_BADGE_ON: "開啟",
         FOCUS_MODE_BADGE_OFF: "關閉",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "請勿打擾",
+        FOCUS_MODE_DESCRIPTION: "停用桌面通知和訊息音效。",
+        FOCUS_MODE_DESCRIPTION_MOBILE: "停用應用程式內通知和訊息音效。",
+        FOCUS_MODE_TURN_OFF: "關閉專注模式",
+        FOCUS_MODE_ENABLE_FOR: "啟用專注模式",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "您已經開啟「勿擾模式」一段時間了。您想要啟用「專注模式」嗎？",
         ACTIVITY_REACTION_REPLY_TITLE: "關於 {activity} 的聊天",
@@ -21893,6 +22006,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 小時以前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分鐘以前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "持續 {days} 天",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "持續 {hours} 小時",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "第一次",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "動態",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

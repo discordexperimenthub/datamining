@@ -54,6 +54,7 @@
           "\nパスワードの変更方法を**!!{email}!!**に送信しました。受信ボックス、迷惑メールボックスの両方をチェックしてみて下さい。\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "ステージ",
         STORE_CHANNEL_TYPE: "ストア",
+        NEWS_CHANNEL_TYPE: "アナウンス",
         VOICE_CHANNEL_TYPE: "音声",
         FORUM_CHANNEL_TYPE: "フォーラム",
         TEXT_CHANNEL_TYPE: "テキスト",
@@ -5527,6 +5528,7 @@
         STATUS_DND: "取り込み中",
         STATUS_INVISIBLE: "オンライン状態を隠す",
         STATUS_DND_HELP: "デスクトップ通知を受け取りません。",
+        STATUS_DND_HELP_FOCUS_MODE: "フォーカスモードを有効化",
         STATUS_INVISIBLE_HELPER:
           "オンライン状態を隠しながらDiscordに接続します。",
         STATUS_UNTIL: "{endTime}まで",
@@ -6225,8 +6227,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discordメンバーになった日",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1人の共通のフレンド} other {{count}人の共通のフレンド}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "共通のフレンド（{count}人）",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1件の共通のサーバー} other {{count}件の共通のサーバー}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "共通のサーバー（{count}人）",
         SHOW_USER_PROFILE: "ユーザープロフィールを表示",
         HIDE_USER_PROFILE: "ユーザープロフィールを非表示",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8552,6 +8556,8 @@
           "Discord のご利用にかかわる内容のため、更新版のポリシーのご一読をお願いいたします。重要な変更点の一部については、ブログ記事でもご紹介しています。",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "先月発表したポリシーの年間アップデートが施行されました。変更の概要はDiscordの[ブログ](https://discord.com/blog/important-policy-updates)でご覧ください。また、ポリシーの全文については以下をご参照ください。",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "「同意する」をクリックすると、Discordのサービス利用規約に同意し、弊社のプライバシーポリシーをお読みになったとみなされます。",
         COMMUNITY_GUIDELINES: "[コミュニティガイドライン]({url})",
         BLOG_POST: "[Discord ブログ記事]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "特定の人",
@@ -8882,6 +8888,8 @@
           "{numUnappliedGuildBoostSlots, plural, =1 {ブースト} other {ブースト}}するサーバーを選んでくれるまで、ここで待ってますからね！",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "{numUnappliedGuildBoostSlots, plural, =1 {ブースト} other {ブースト}}するサーバーを選んでくれるまで、ここで待ってますからね！　Nitro特典について詳しくは$[こちら](learnMoreHook)。",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "**{numUnappliedGuildBoostSlots, plural, =1 {ブースト} other {ブースト}}するサーバーを選んでくれる**まで、ここで待ってますからね！Nitro特典について詳しくは$[こちら](learnMoreHook)。",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "ブーストをキャンセル",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "ブーストのキャンセルを取り消し",
@@ -9083,6 +9091,10 @@
           "**!!{price}!!**でカスタム絵文字の使用、大容量アップロードなどが可能に（キャンセル保留中）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "カスタム絵文字の使用、大容量アップロードなどが可能に（キャンセル保留中）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "**!!{price}!!**でカスタム絵文字、大容量アップロードなどをご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "カスタム絵文字、大容量アップロードなどをご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "お客様の**!!{price}!!**のNitro Basicのサブスクリプション（カスタム絵文字、アップロードファイルサイズ増、その他の特典つき）は現在**保留状態です**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9097,6 +9109,10 @@
           "チャット特典と**!!{price}!!**のブースト割引をご利用いただけます（キャンセル保留中）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "チャット特典とブースト割引をご利用いただけます（キャンセル保留中）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "**!!{price}!!**でチャット特典とブースト割引をご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "チャット特典とブースト割引をご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "お客様のチャット特典およびブースト **!!{price}!!** 割引サブスクリプションは現在**保留状態です**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9111,6 +9127,12 @@
           "プレミアムチャット、**{num, number}x**ブースト、**!!{price}!!**のブースト割引をご利用いただけます（キャンセル保留中）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "プレミアムチャット、ブースト**{num, number}x**回、ブースト割引をご利用いただけます（キャンセル保留中）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "**!!{price}!!**でプレミアムチャット、ブースト**{num, number}x**回、ブースト割引をご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "プレミアムチャット、ブースト**{num, number}x**回、ブースト割引をご利用いただけます（**{pauseDate, date, medium}**に一時停止）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Nitroサブスクリプションを**{resumeDate, date, medium}**まで一時停止しています。サブスクリプションが再開されると、再びNitroを利用できるようになります",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "お客様のプレミアムチャット、**{num, number}x** ブースト、ブースト**!!{price}!!**割引サブスクリプションは現在**保留状態です**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9222,6 +9244,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "Nitroを無料で30日間使ってみよう",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "30日間のトライアルへ",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "{duration}は無料でお楽しみください",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "{nitroTierName}でもっと楽しく",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "ユニークなプロフィールカスタマイズなど！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "カスタムアプリアイコン、スーパーリアクションなどを追加しましょう！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName}は月額{price}から開始",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Nitroへようこそ！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "発射準備完了！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED_ONE:
@@ -9282,6 +9314,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!%割引",
         PREMIUM_DISCOUNT_CTA: "Nitroで!!{percent, number}!!%割引",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitroで割引",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "**{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}**間でたったの**{discountedPrice}**のお支払い！その後は{regularPrice}のお支払いです。",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!%割引は購入後{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}で終了します。その後は{regularPrice}が請求されます。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9308,6 +9342,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "**無料トライアルが{remainingTime, plural, =0 {本日付} one {あと#日} other {あと#日}}で終了します**。それ以降は!!{price}!!が請求されます。",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "無料トライアルがアクティベート済み",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "{duration}は無料でお楽しみください",
         INCLUDED: "税込み",
         NOT_INCLUDED: "税抜き",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9858,6 +9894,16 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "キャンセルは、あらゆるNitroおよびサーバーブースト・サブスクリプションについて即時発効します。",
         PREMIUM_CANCEL_CONFIRM_NEW: "おっと、!!{planPremiumType}!!をキャンセル",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "!!{planPremiumType}!!を一時停止しますか？",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "**{pauseDate, date, medium}**まで継続してNitroを利用でき、その後はサブスクリプションが{pauseDuration}日間一時停止されます。**{resumeDate, date, medium}**に再び請求が開始される予定です。サブスクリプションはいつでも再開できます。",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Nitroサブスクリプションが**今すぐ**{pauseDuration}日間一時停止されます。**{resumeDate, date, medium}**に再び請求が開始される予定です。サブスクリプションはいつでも再開できます。",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Nitroサブスクリプションを**{resumeDate, date, medium}**まで延長します。サブスクリプションはいつでも再開できます。",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "はい、!!{planPremiumType}!!を一時停止します",
         PREMIUM_UPGRADE_DONE_BUTTON: "いいね！",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "分かった",
         PREMIUM_UPLOAD_PROMO:
@@ -9903,6 +9949,16 @@
           "ご登録のサブスクリプションは **{renewalDate, date, medium}** に自動的に更新されます。詳しくは[ご自分の!!{paymentGatewayName}!! サブスクリプション設定]({subscriptionManagementLink})をご確認ください。",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "サブスクリプションは**{endDate, date, medium}**に終了します。",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "サブスクリプションは**{pauseDate, date, medium}**に一時停止し、**{resumeDate, date, medium}**に自動的に再開されます。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "現在サブスクリプションは一時停止中で、**{resumeDate, date, medium}**に自動的に再開します。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "現在**{planName}**サブスクリプションは一時停止中で、**{resumeDate, date, short}**に自動的に再開し、**!!{price}!!**が請求されます。",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "サブスクリプションにて保留中のお支払いを再開します。",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "**{planName}**サブスクリプションにて保留中のお支払いを再開し、**!!{price}!!**が請求されます。",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "**!!{price}!!**の購読は、期限が過ぎています。 支払い情報を更新してください。更新されない場合は、購読は**{endDate, date, medium}**に終了します。",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -9952,6 +10008,10 @@
         PREMIUM_NO_PLANS_HEADER: "申し訳ありません。",
         PREMIUM_NO_PLANS_BODY:
           "Google Play 請求サービスでは、現在ご利用いただいている以上のブーストを含むプランのご提供はございません。[詳しくはこちら。]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "サブスクリプションを一時停止またはキャンセル",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "サブスクリプションをキャンセルまたは一時停止",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "サブスクリプション - !!{price}!! / 月から",
         PREMIUM_SUBSCRIPTION_UPDATES: "購読の更新",
@@ -10671,8 +10731,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "無料トライアル",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitroサブスクリプションの最初の**3ヵ月**間は月額**{discountedPrice}**の支払いだけ。3ヵ月の割引終了後は、月額{regularPrice}の支払いです。",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Nitroの最初の**{numMonths, plural, one {ヵ月} other {{numMonths}ヵ月}}**間は月額**{discountedPrice}**のお支払いだけです。割引終了後は、月額{regularPrice}のお支払いとなります。",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3ヵ月間は月額{discountedPrice}\n\n3ヵ月以降は月額{regularPrice}",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "**{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}**間は月額{discountedPrice}\n\n{numMonths, plural, one {1ヵ月} other {{numMonths}ヵ月}}の後は月額{regularPrice}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "年間サブスクリプションで!!{percent, number}!!%割引",
         BILLING_SUBTOTAL: "小計",
@@ -10728,6 +10792,8 @@
         REVERSED: "取り消し済み",
         REFUND: "返金",
         RESUBSCRIBE: "再登録",
+        RESUME: "サブスクリプションを再開",
+        WITHDRAW_PAUSE: "一時停止を撤回",
         CREDIT_CARD_ERROR_REQUIRED: "カード番号が必要です。",
         CREDIT_CARD_ERROR_NUMBER: "クレジットカード番号が間違っています",
         CREDIT_CARD_ERROR_EXPIRATION: "有効期限が間違っています",
@@ -13400,6 +13466,16 @@
           "{count, plural, =0 {0 人の共通の友だち} one {1 人の共通の友だち} other {{count} 人の共通の友だち}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 個の共通サーバー} one {1 個の共通サーバー} other {{count} 個の共通サーバー}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}**とフレンド",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "**{usernameOne}**、**{usernameTwo}**とフレンド",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "**{usernameOne}**、**{usernameTwo}**、**さらに{count}人**とフレンド",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}**のメンバー",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "**{guildNameOne}**、**{guildNameTwo}**のメンバー",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "**{guildNameOne}**、**{guildNameTwo}**、**さらに{count}個**のメンバー",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "共通のフレンド",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "共通のサーバー",
         PROFILE_IN_VOICE_CALL: "音声通話にて",
@@ -13534,6 +13610,8 @@
           "{monthlyPrice}/月、または{yearlyPrice}/年から選択可能",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "贈り先の方が受け取るもの：",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "{nitroTierName}メンバーシップを贈りましょう",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "プレゼントの期間",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName}の{count, plural, one {#ヵ月} other {#ヵ月}}分をプレゼント",
@@ -14365,6 +14443,8 @@
           "アプリケーションの読み込み中にエラーが発生しました。",
         INTERACTION_RATE_LIMITED: "落ち着いて！ クリックしすぎですよ。",
         APPLICATION_ADD_BUTTON: "アプリを追加",
+        APPLICATION_ADD_BUTTON_ACTIONS: "「アプリを追加」アクション",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "「アプリを追加」URLをコピー",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "権限を有効にしないと、メンバーはこのBotを使えません。",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17118,6 +17198,23 @@
           "キャンセルすると、**以下の特典が失われます:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "やっぱり Nitro を続ける",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Nitroを続ける",
+        PREMIUM_PAUSE_INSTEAD: "代わりに一時停止",
+        PREMIUM_PAUSE_SELECT_TITLE:
+          "サブスクリプションを一時停止またはキャンセル",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "有料サブスクリプションから一息つきたい場合は、数ヵ月間だけ一時停止することもできます",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "一時停止をさらに数ヵ月間延長することも可能です",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "一時停止の期間を選択",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "**一時停止**にしますか？",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "解約するかわりに、サブスクリプションを最大90日間一時停止できます。",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "{days}日間一時停止",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "さらに{days}日間一時停止",
+        PREMIUM_PAUSE_DURATION_CANCEL: "サブスクリプションを解約",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "サブスクリプションは一時停止されます",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "価格を抑えて特典を一部キープ",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21486,6 +21583,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "アニメ：新たなスタイル",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "きっと先輩にすぐ気づいてもらえるはず。",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "新着：スプリングトゥーン",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "夜の静けさの中、奇妙な魔法が空気にあふれ、そして...",
         COLLECTIBLES_NEW_BADGE: "NEW",
         INVENTORY_EMOJI_DETAILS_V2: "絵文字の詳細を見る",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23106,6 +23206,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— メンバー",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "「センシティブではない」としてマークする",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Discord側のミスだと思われる場合は、[ご連絡ください](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "メッセージが送信できませんでした。サーバーによりブロックされている性的に露骨なメディアが含まれていた可能性があります。",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23138,7 +23240,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "休憩を取りましょう",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "ワンパスと一緒にLofi Beatsを聴く。",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "休憩",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "バイブ",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "安全のためのヒント",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "セーフティ・アラートについて",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23255,6 +23357,7 @@
         HANG_STATUS_HELP:
           "アクティビティステータスを設定して、フレンドにあなたの状態を表示しましょう。",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "カスタムステータスの設定",
+        HANG_STATUS_MOBILE_SET_ROW: "音声検出を設定",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "通報が見つかりません。",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "通報のレビューはすでにリクエストされています。",
@@ -23354,11 +23457,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "ここには何もありません",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "この回答には票が入っていません。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "投票",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{option}に{numVotes, plural, =0 {0票} =1 {{numVotes}票} other {{numVotes}票}}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "投票者を表示",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "投票者を表示",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! と他 {n, plural, one {1 人} other {{n} 人}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!!と!!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!、!!{b}!! と他 {n, plural, one {1 人} other {{n} 人}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!と!!{b}!!と!!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!、!!{b}!!、!!{c}!!と他{n, plural, one {1人} other {{n}人}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1人} other {{n}人}}",
         CREATE_POLL: "投票の作成",
         CREATE_POLL_HEADING: "投票の作成",
         CREATE_POLL_EXPIRATION: "投票は24時間有効です",
@@ -23371,11 +23482,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "メディアの追加、回答{answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "メディアのアップデート、{imageName}、回答{answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "絵文字を追加し、{answerNumber}に回答",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "絵文字{emojiName}を更新し、{answerNumber}に回答",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "絵文字を更新",
         CREATE_POLL_ANSWER_INPUT_LABEL: "回答{answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "回答を入力",
         CREATE_POLL_ADD_ANSWER_BUTTON: "別の回答を追加",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票有効期間：",
         CREATE_POLL_DURATION_LABEL: "期間",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1時間} other {{num}時間}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3日間",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 週間",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票有効期間：{duration}",
@@ -23388,8 +23505,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "本当に退出しますか？今退出すると変更は保存されません。",
         CREATE_POLL_REMOVE_ANSWER: "回答を削除",
+        CREATE_POLL_REMOVE_EMOJI: "絵文字を削除",
         CREATE_POLL_ADD_IMAGE: "メディアを追加",
+        CREATE_POLL_ADD_EMOJI: "絵文字を追加",
         CREATE_POLL_REPLACE_IMAGE: "メディアを入れ替える",
+        CREATE_POLL_REPLACE_EMOJI: "絵文字を置き換え",
         CREATE_POLL_POLL_ANSWER: "投票の回答",
         CREATE_POLL_EDIT_ALT_TEXT: "画像の説明（代替テキスト）を編集",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "画像の説明を編集",
@@ -23466,8 +23586,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "おっと！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "クエストはモバイル版ではまだ利用できません…申し訳ありません！デスクトップ版のDiscordアプリまたはブラウザから**「ユーザー設定」>「ギフトインベントリ」**に移動して、クエストに参加できます。",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "今のところは...クエストはモバイルでは利用できません。",
+        QUESTS_MOBILE_EMBED_TITLE: "モバイル版ではクエストを利用できません",
         QUESTS_MOBILE_EMBED_BODY:
           "デスクトップ版のDiscordアプリまたはブラウザから\n「ユーザー設定」>「ギフトインベントリ」に移動して、クエストに参加できます。",
         QUESTS_GET_THIS_GAME: "ゲームを入手",
@@ -23514,10 +23633,10 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!!、!!{third}!!と他{count, plural, one {1人} other {{count}人}}",
         STOREFRONT: "ストア",
-        STOREFRONT_APP_SUBSCRIPTIONS: "アプリのサブスクリプション",
+        STOREFRONT_APP_SUBSCRIPTIONS: "購読",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName}からサブスクリプションを購入",
-        STOREFRONT_APP_PRODUCTS: "アプリのアプロダクト",
+        STOREFRONT_APP_PRODUCTS: "アイテム",
         STOREFRONT_APP_PRODUCTS_BODY: "{appName}からプロダクトを購入",
         STOREFRONT_SUBSCRIPTION: "購読",
         STOREFRONT_SUBSCRIBE_FOR: "{rate}でサブスクリプション",
@@ -23537,6 +23656,13 @@
         FOCUS_MODE_TITLE: "フォーカスモード（ベータ版）",
         FOCUS_MODE_BADGE_ON: "ON",
         FOCUS_MODE_BADGE_OFF: "OFF",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "取り込み中",
+        FOCUS_MODE_DESCRIPTION:
+          "デスクトップ通知とメッセージのサウンドを無効にします。",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "アプリ内通知とメッセージのサウンドを無効にします。",
+        FOCUS_MODE_TURN_OFF: "フォーカスモードをオフ",
+        FOCUS_MODE_ENABLE_FOR: "フォーカスモードを有効化",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "しばらくの間「取り込み中」を使用しています。代わりに「フォーカスモード」を有効にしますか？",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity}についてチャットしよう",
@@ -23567,6 +23693,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 時間前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}秒前",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days}日間",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours}時間",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "初めて",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "アクティビティ",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

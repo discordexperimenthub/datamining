@@ -23795,10 +23795,14 @@ span.button__4f306.disabled_dc5630 {
   line-height: 20px;
 }
 .cardBenefitDesc_c9ec93 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
   font-size: 14px;
   font-weight: var(--font-weight-medium);
   line-height: 18px;
   color: var(--primary-330);
+  overflow: hidden;
 }
 @value maxModalWidth from './MarkdownModal.module.css';
 .video__562f3 {
@@ -23984,4 +23988,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.b0153d5a89073fe04cf2.css.map*/
+/*# sourceMappingURL=shared.cf9c24eda4691396dc51.css.map*/

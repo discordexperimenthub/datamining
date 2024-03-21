@@ -53,6 +53,7 @@
           "\n계정 비밀번호 변경 방법을 **!!{email}!!**(으)로 보냈어요. 받은 편지함 또는 스팸함을 확인해 주세요.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "스테이지",
         STORE_CHANNEL_TYPE: "스토어",
+        NEWS_CHANNEL_TYPE: "공지",
         VOICE_CHANNEL_TYPE: "음성",
         FORUM_CHANNEL_TYPE: "포럼",
         TEXT_CHANNEL_TYPE: "텍스트",
@@ -5369,6 +5370,7 @@
         STATUS_DND: "방해 금지",
         STATUS_INVISIBLE: "오프라인 표시",
         STATUS_DND_HELP: "모든 알림을 받지 않아요.",
+        STATUS_DND_HELP_FOCUS_MODE: "집중 모드 활성화",
         STATUS_INVISIBLE_HELPER:
           "온라인으로 표시되지는 않지만, Discord의 모든 기능을 이용할 수 있어요.",
         STATUS_UNTIL: "{endTime}까지",
@@ -6050,8 +6052,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discord 가입 시기:",
         MUTUAL_FRIENDS_COUNT:
           "같이 아는 친구 {count, plural, =1 {1명} other {{count}명}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "같이 아는 친구({count})",
         MUTUAL_GUILDS_COUNT:
           "같이 있는 서버 {count, plural, =1 {1개} other {{count}개}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "같이 있는 서버({count})",
         SHOW_USER_PROFILE: "사용자 프로필 보기",
         HIDE_USER_PROFILE: "사용자 프로필 숨기기",
         SHOW_USER_PROFILE_UNAVAILABLE: "사용자 프로필 보기(이용 불가)",
@@ -8312,6 +8316,8 @@
           "개정된 문서를 잘 살펴보시기를 권해드려요. 앞으로 Discord를 사용하실 때 적용될 내용들이거든요. 일부 가장 중요한 변경 사항은 Discord의 블로그 포스트에 설명되어 있어요.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "당사는 지난달 정책에 대한 연례 업데이트를 공지했으며 해당 정책을 시행 중입니다. 이 변경 사항에 대한 요약본은 당사의 [블로그 포스트](https://discord.com/blog/important-policy-updates)를 참조하시고 아래의 정책 전문을 읽어보십시오.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          '"동의"를 클릭하면 Discord의 서비스 이용 약관에 동의하게 되며, 개인정보 보호 정책을 확인했다는 것으로 간주합니다.',
         COMMUNITY_GUIDELINES: "[커뮤니티 지침]({url})",
         BLOG_POST: "[Discord 블로그 포스트]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "보낸 사람",
@@ -8629,6 +8635,8 @@
           "{numUnappliedGuildBoostSlots, plural, =1 {부스트} other {부스트}}를 줄 서버를 선택하세요!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "{numUnappliedGuildBoostSlots, plural, =1 {부스트} other {부스트}}를 줄 서버를 선택하세요! $[여기](learnMoreHook)에서 Nitro 특전에 대해 자세히 알아보세요.",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "**{numUnappliedGuildBoostSlots, plural, =1 {부스트} other {부스트}}를 줄 서버를 선택하세요!** $[여기](learnMoreHook)에서 Nitro 특전에 대해 자세히 알아보세요.",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "부스트 취소",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "부스트 취소 되돌리기",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER: "아무 서버 부스트하기",
@@ -8825,6 +8833,10 @@
           "**!!{price}!!**에 사용자 지정 이모지, 대용량 업로드 등 혜택을 드려요(취소 대기 중)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "사용자 지정 이모지, 대용량 업로드 등 혜택을 드려요(취소 대기 중)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "**!!{price}!!**에 사용자 지정 이모지, 대용량 업로드 등 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "사용자 지정 이모지, 대용량 업로드 등 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "사용자 지정 이모지, 대용량 업로드 등 특전이 제공되는 Nitro Basic **!!{price}!!** 구독이 **보류 중**이에요",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -8839,6 +8851,10 @@
           "채팅 특전과 부스트 **!!{price}!!** 할인 혜택을 받을 수 있어요(취소 대기 중)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "채팅 특전과 부스트를 할인받으세요(취소 대기 중)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "채팅 특전과 부스트 **!!{price}!!** 할인 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "채팅 특전과 부스트 할인 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "채팅 특전과 부스트 할인 혜택(**!!{price}!!** )이 **보류 중**이에요",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -8853,6 +8869,12 @@
           "프리미엄 채팅, 부스트 **{num, number}회**, 부스트 **!!{price}!!** 할인 혜택을 받을 수 있어요(취소 대기 중)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "프리미엄 채팅, 부스트 **{num, number}회**, 부스트를 할인받으세요(취소 대기 중)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "프리미엄 채팅, 부스트 **{num, number}회**, 부스트 **!!{price}!!** 할인 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "프리미엄 채팅, 부스트 **{num, number}회**, 부스트 할인 혜택을 받을 수 있어요(**{pauseDate, date, medium}**에 일시 정지)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Nitro 구독을 **{resumeDate, date, medium}**까지 일시 정지하셨어요. 구독이 재개되면 Nitro를 다시 이용할 수 있어요.",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "프리미엄 채팅, 부스트 **{num, number}회** 부스트 할인 혜택(**!!{price}!!**)이 **보류 중**이에요",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -8962,6 +8984,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_0_HEADER: "Nitro Basic 30일 무료 체험",
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER: "Nitro 30일 무료 체험",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "30일 무료 체험 계속하기",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "{duration} 무료로 드려요",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "{nitroTierName}(으)로 더 많은 재미를 느껴보세요",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "독특한 프로필 맞춤 설정 등을 이용하실 수 있어요!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "사용자 지정 앱 아이콘, 슈퍼 반응 등을 추가하세요!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} 시작 가격은 월 {price}이에요",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Nitro에 오신 걸 환영합니다!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "놀 준비됐어요!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED_ONE:
@@ -9019,6 +9051,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 할인",
         PREMIUM_DISCOUNT_CTA: "Nitro 구독료 !!{percent, number}!!% 절약하기",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro 구독료 절약하기",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "**{numMonths, plural, one {한 달} other {{numMonths}달}}** 동안은 **{discountedPrice}**만 지불하세요. 그 뒤로는 {regularPrice}을 지불하세요.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!% 할인은 구매 후 {numMonths, plural, one {1개월} other {{numMonths}개월}} 뒤에 종료돼요. 이후에는 {regularPrice}의 금액이 청구돼요.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9043,6 +9077,7 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "**무료 체험권이 {remainingTime, plural, =0 {오늘} one {#일 후에} other {#일 후에}}** 종료돼요. 그 이후에는 !!{price}!!의 가격이 부과돼요.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "무료 체험이 활성화됐어요",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL: "{duration} 무료로 드려요",
         INCLUDED: "포함됨",
         NOT_INCLUDED: "미포함",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9591,6 +9626,15 @@
           "모든 Nitro 및 서버 부스트 구독의 취소는 즉시 효력을 발휘해요.",
         PREMIUM_CANCEL_CONFIRM_NEW:
           "네, !!{planPremiumType}!! 구독을 취소할래요",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "!!{planPremiumType}!!을(를) 일시 정지할까요?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "**{pauseDate, date, medium}**까지 Nitro를 이용할 수 있고, 그 후로는 구독이 {pauseDuration}일 동안 일시 정지돼요. **{resumeDate, date, medium}**부터 다시 청구를 시작할게요. 언제든지 구독을 재개하실 수 있어요.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Nitro 구독이 **지금**부터 {pauseDuration}일 동안 일시 정지돼요. **{resumeDate, date, medium}**부터 다시 청구를 시작할게요. 언제든지 구독을 재개하실 수 있어요.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Nitro 구독이 **{resumeDate, date, medium}**까지 연장돼요. 언제든지 구독을 재개하실 수 있어요.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "!!{planPremiumType}!! 일시 정지하기",
         PREMIUM_UPGRADE_DONE_BUTTON: "좋아요!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "알겠어요",
         PREMIUM_UPLOAD_PROMO:
@@ -9636,6 +9680,16 @@
           "구독이 **{renewalDate, date, medium}**에 자동으로 갱신돼요. 자세한 내용은 [!!{paymentGatewayName}!! 구독 설정]({subscriptionManagementLink})을 참고하세요.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "구독이 **{endDate, date, medium}**에 종료돼요.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "**{pauseDate, date, medium}**에 구독이 일시 정지되고 **{resumeDate, date, medium}**부터 자동으로 재개될 예정이에요.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "현재 구독이 일시 정지된 상태예요. **{resumeDate, date, medium}**에 자동으로 재개될 예정이에요.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "현재 **{planName}** 구독이 일시 정지된 상태예요. **{resumeDate, date, short}**에 자동 재개되며 **!!{price}!!**의 금액이 청구돼요.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "이 구독에 대해 보류되어 있던 결제가 재개될 예정이에요.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "**{planName}** 구독에 대해 보류되어 있던 결제가 재개될 예정이에요. **!!{price}!!**의 금액이 청구돼요.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "구독료 **!!{price}!!**이(가) 연체되었어요. 결제 정보를 업데이트하지 않으면 구독이 **{endDate, date, medium}**에 종료돼요.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -9685,6 +9739,8 @@
         PREMIUM_NO_PLANS_HEADER: "이런!",
         PREMIUM_NO_PLANS_BODY:
           "현재는 Google Play로 추가 부스트를 구매할 수 있는 플랜이 없어요. [자세히 알아보세요.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "구독 일시 정지 또는 취소",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION: "구독 취소 또는 일시 정지",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "구독 - 월 !!{price}!!부터 시작",
         PREMIUM_SUBSCRIPTION_UPDATES: "구독 업데이트",
@@ -10392,8 +10448,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "무료 체험",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro 구독 첫 **3개월** 동안은 월 **{discountedPrice}**만 지불하세요! 3개월의 할인 기간이 끝나면 월 {regularPrice}의 금액이 청구돼요.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Nitro 구독 첫 **{numMonths, plural, one {개월} other {{numMonths}개월}}** 동안은 월 **{discountedPrice}**만 지불하세요. 할인 기간이 끝나면 {regularPrice}의 금액이 청구돼요.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3개월 동안 {discountedPrice}/월\n\n3개월 이후 {regularPrice}/월",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "**{numMonths, plural, one {1개월} other {{numMonths}개월}}** 동안 월 {discountedPrice}\n\n{numMonths, plural, one {1개월} other {{numMonths}개월}} 이후부터 월 {regularPrice}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "연간 구독으로 !!{percent, number}!!%를 절약하세요",
         BILLING_SUBTOTAL: "소계",
@@ -10448,6 +10508,8 @@
         REVERSED: "반환됨",
         REFUND: "환불",
         RESUBSCRIBE: "재구독",
+        RESUME: "구독 재개",
+        WITHDRAW_PAUSE: "일시 정지 철회",
         CREDIT_CARD_ERROR_REQUIRED: "카드 번호를 입력해 주세요.",
         CREDIT_CARD_ERROR_NUMBER: "올바르지 않은 신용카드 번호예요",
         CREDIT_CARD_ERROR_EXPIRATION: "올바르지 않은 신용카드 유효기간이에요",
@@ -13048,6 +13110,16 @@
           "{count, plural, =0 {같이 아는 친구 0명} one {같이 아는 친구 1명} other {같이 아는 친구 {count}명}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {같이 있는 서버 0개} one {같이 있는 서버 1개} other {같이 있는 서버 {count}개}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** 님과 친구",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "**{usernameOne}**, **{usernameTwo}** 님과 친구",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "**{usernameOne}**, **{usernameTwo}**, 이외 **{count}명**과 친구",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}**의 멤버",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "**{guildNameOne}**, **{guildNameTwo}**의 멤버",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "**{guildNameOne}**, **{guildNameTwo}**, 이외 **{count}개**의 멤버",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "같이 아는 친구",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "같이 있는 서버",
         PROFILE_IN_VOICE_CALL: "음성 통화 중",
@@ -13181,6 +13253,7 @@
           "{monthlyPrice}/월 또는 {yearlyPrice}/년 중에서 선택하세요",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "상대는 다음을 받게 돼요.",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "{nitroTierName} 멤버십 선물하기",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "선물 유효 기간",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {#개월} other {#개월}}치 {nitroTierName} 선물",
@@ -13986,6 +14059,8 @@
           "애플리케이션을 불러오는 중 오류가 발생했어요.",
         INTERACTION_RATE_LIMITED: "천천히 하세요! 너무 빨리 클릭하고 있어요.",
         APPLICATION_ADD_BUTTON: "앱 추가",
+        APPLICATION_ADD_BUTTON_ACTIONS: "앱 작업 추가",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "앱 URL 추가 복사",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "권한을 켜지 않으면 멤버들이 이 봇을 사용할 수 없습니다.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -16680,6 +16755,22 @@
           "취소하시면 **다음 특전을 사용할 수 없게 돼요.**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Nitro를 유지할래요",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "됐어요, Nitro를 유지할래요",
+        PREMIUM_PAUSE_INSTEAD: "일시 정지로 대신",
+        PREMIUM_PAUSE_SELECT_TITLE: "구독 일시 정지 또는 취소",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "유료 구독을 잠시 쉬고 싶다면, 몇 달 동안 일시 정지할 수도 있어요",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "몇 달 더 일시 정지할 수도 있어요",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "일시 정지 기간 선택",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "**일시 정지로 대신**하시겠어요?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "구독을 취소하지 않는 대신 최대 90일 동안 일시 정지할 수 있어요.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "{days}일 동안 일시 정지",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "추가로 {days}일 동안 일시 정지",
+        PREMIUM_PAUSE_DURATION_CANCEL: "구독 취소",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "구독이 일시 정지될 예정이에요",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER: "적은 비용으로 특전 유지",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
           "Nitro Basic으로 매월 {monthlyPrice}에 사용자 지정 이모지, 대용량 업로드, [더 많은 특전]({helpCenterLink})을 사용할 수 있어요.",
@@ -20906,6 +20997,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "애니: 새로운 스타일",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "이제 분명 선배가 알아봐 줄 거야.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "신규: 스프링툰",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "조용한 밤, 알 수 없는 마법이 대기에 퍼집니다...",
         COLLECTIBLES_NEW_BADGE: "신규",
         INVENTORY_EMOJI_DETAILS_V2: "이모지 자세히 보기",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22479,6 +22573,8 @@
         GUILD_HEADER_MEMBER_COUNT: "멤버 {count, plural, =1 {#명} other {#명}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— 멤버",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "민감하지 않음으로 표시하기",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "착오라고 생각되시나요? [저희에게 문의해주세요](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "메시지가 전송되지 않았어요. 서버에서 차단한 유해 미디어가 포함되었기 때문일 수 있어요.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -22511,7 +22607,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "잠시 휴식하기",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Wumpus와 함께 로우파이 비트를 들어보세요.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "휴식",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "바이브",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "안전 팁",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "안전 알림에 대해",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -22623,6 +22719,7 @@
         HANG_STATUS_HELP:
           "활동 상태를 설정해서 친구들에게 무엇을 하고 있는지 보여주세요.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "사용자 지정 상태 설정하기",
+        HANG_STATUS_MOBILE_SET_ROW: "음성 감지 설정",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "신고를 찾을 수 없어요.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "이미 신고 검토를 요청했어요.",
@@ -22715,11 +22812,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "여긴 아무것도 없어요",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "이 응답은 표가 없어요.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "투표",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{option} {numVotes, plural, =0 {0표} =1 {{numVotes}표} other {{numVotes} 표}}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "투표자 공개",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "투표자 공개",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!!님 외 {n, plural, one {1명} other {{n}명}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!!, !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!!, 외 {n, plural, one {1명} other {{n}명}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!!, !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! 외 {n, plural, one {1명} other {{n}명}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1명} other {{n}명}}",
         CREATE_POLL: "투표 만들기",
         CREATE_POLL_HEADING: "투표 만들기",
         CREATE_POLL_EXPIRATION: "투표는 24시간 동안 진행됩니다",
@@ -22732,11 +22837,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "미디어, 응답 {answerNumber} 추가",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "미디어, {imageName}, 응답 {answerNumber} 업데이트",
+        CREATE_POLL_ADD_EMOJI_ARIA: "이모지 추가, 응답 {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "이모지 업데이트, {emojiName}, 응답 {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "이모지 업데이트",
         CREATE_POLL_ANSWER_INPUT_LABEL: "응답 {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "응답 입력하기",
         CREATE_POLL_ADD_ANSWER_BUTTON: "다른 응답 추가하기",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "투표 진행 기간:",
         CREATE_POLL_DURATION_LABEL: "지속 시간",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1시간} other {{num}시간}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3일",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1주일",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "투표 진행 기간: {duration}",
@@ -22749,8 +22860,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "정말로 나갈까요? 지금 나가면 변경 사항이 사라집니다.",
         CREATE_POLL_REMOVE_ANSWER: "응답 제거하기",
+        CREATE_POLL_REMOVE_EMOJI: "이모지 제거",
         CREATE_POLL_ADD_IMAGE: "미디어 추가하기",
+        CREATE_POLL_ADD_EMOJI: "이모지 추가",
         CREATE_POLL_REPLACE_IMAGE: "미디어 교체하기",
+        CREATE_POLL_REPLACE_EMOJI: "이모지 교체",
         CREATE_POLL_POLL_ANSWER: "투표 응답",
         CREATE_POLL_EDIT_ALT_TEXT: "이미지 설명(대체 텍스트) 편집",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "이미지 설명 편집",
@@ -22827,8 +22941,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "이런!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "모바일에서는 아직 퀘스트를 이용하실 수 없어요... 죄송합니다! 대신 PC의 Discord 앱이나 브라우저의 **사용자 설정 > 선물 인벤토리**에서 퀘스트를 수락하실 수 있어요.",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "모바일에서는 아직 퀘스트를 이용할 수 없어요.",
+        QUESTS_MOBILE_EMBED_TITLE: "모바일에서는 퀘스트를 이용할 수 없어요",
         QUESTS_MOBILE_EMBED_BODY:
           "PC의 Discord 앱이나 브라우저에서\n사용자 설정 > 선물 인벤토리로 이동해 퀘스트를 수락하실 수 있어요.",
         QUESTS_GET_THIS_GAME: "게임 받기",
@@ -22876,9 +22989,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! 외 {count, plural, one {1명} other {{count}명}}",
         STOREFRONT: "스토어",
-        STOREFRONT_APP_SUBSCRIPTIONS: "앱 구독",
+        STOREFRONT_APP_SUBSCRIPTIONS: "구독",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName}에서 구독 구매",
-        STOREFRONT_APP_PRODUCTS: "앱 제품",
+        STOREFRONT_APP_PRODUCTS: "제품",
         STOREFRONT_APP_PRODUCTS_BODY: "{appName}에서 제품 구매",
         STOREFRONT_SUBSCRIPTION: "구독",
         STOREFRONT_SUBSCRIBE_FOR: "{rate}에 구독하기",
@@ -22898,6 +23011,12 @@
         FOCUS_MODE_TITLE: "집중 모드(베타)",
         FOCUS_MODE_BADGE_ON: "켜짐",
         FOCUS_MODE_BADGE_OFF: "꺼짐",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION: "PC 알림 및 메시지 소리를 비활성화해요.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "앱 내 알림 및 메시지 소리를 비활성화해요.",
+        FOCUS_MODE_TURN_OFF: "집중 모드 끄기",
+        FOCUS_MODE_ENABLE_FOR: "다음 기간 동안 집중 모드 활성화:",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "오랫동안 방해 금지 상태였어요. 집중 모드를 활성화할까요?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity}에 대해 채팅하기",
@@ -22929,6 +23048,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}시간 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}분 전",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}초 전",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days}일",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours}시간",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "처음",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "활동",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -54,6 +54,7 @@
           "\nVi skickade instruktioner f\xf6r att \xe4ndra ditt l\xf6senord f\xf6r **!!{email}!!**, kolla b\xe5de din inkorg och skr\xe4ppostmapp.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Stadie",
         STORE_CHANNEL_TYPE: "Butik",
+        NEWS_CHANNEL_TYPE: "Meddelande",
         VOICE_CHANNEL_TYPE: "R\xf6st",
         FORUM_CHANNEL_TYPE: "Forum",
         TEXT_CHANNEL_TYPE: "Text",
@@ -5656,6 +5657,7 @@
         STATUS_DND: "St\xf6r ej",
         STATUS_INVISIBLE: "Osynlig",
         STATUS_DND_HELP: "Du kommer inte motta n\xe5gra skrivbordsaviseringar.",
+        STATUS_DND_HELP_FOCUS_MODE: "Aktiverar fokuseringsl\xe4get",
         STATUS_INVISIBLE_HELPER:
           "Du kommer inte att synas som online, men kommer ha full tillg\xe5ng till hela Discord.",
         STATUS_UNTIL: "fram till {endTime}",
@@ -6374,8 +6376,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discordmedlem sedan",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {en gemensam v\xe4n} other {{count} gemensamma v\xe4nner}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Gemensamma v\xe4nner ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {en gemensam server} other {{count} gemensamma servrar}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Gemensamma servrar ({count})",
         SHOW_USER_PROFILE: "Visa anv\xe4ndarprofil",
         HIDE_USER_PROFILE: "D\xf6lj anv\xe4ndarprofil",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8778,6 +8782,8 @@
           "Vi rekommenderar att du l\xe4ser de uppdaterade dokumenten i sin helhet eftersom de g\xe4ller din anv\xe4ndning av Discord. N\xe5gra av de viktigaste \xe4ndringarna finns f\xf6rklarade i v\xe5rt blogginl\xe4gg.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "F\xf6rra m\xe5naden presenterade vi v\xe5ra \xe5rliga policyuppdateringar, som nu har tr\xe4tt i kraft. I v\xe5rt [blogginl\xe4gg](https://discord.com/blog/important-policy-updates) kan du l\xe4sa en sammanfattning av f\xf6r\xe4ndringarna, och nedan kan du l\xe4sa v\xe5ra policyer i sin helhet.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "N\xe4r du klickar p\xe5 Godk\xe4nn ger du ditt medgivande till Discords Anv\xe4ndarvillkor och bekr\xe4ftar att du har l\xe4st v\xe5r Sekretesspolicy.",
         COMMUNITY_GUIDELINES: "[Communityriktlinjer]({url})",
         BLOG_POST: "[V\xe5rt blogginl\xe4gg]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Fr\xe5n en specifik person",
@@ -9112,6 +9118,8 @@
           "V\xe4ntar bara h\xe4r p\xe5 att du ska v\xe4lja en server att ge {numUnappliedGuildBoostSlots, plural, =1 {den} other {dem}} till!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "V\xe4ntar bara h\xe4r p\xe5 att du ska v\xe4lja en server att ge {numUnappliedGuildBoostSlots, plural, =1 {den} other {dem}} till! L\xe4s mer om dina Nitrof\xf6rm\xe5ner $[h\xe4r](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "V\xe4ntar bara h\xe4r p\xe5 att du ska **v\xe4lja en server att ge {numUnappliedGuildBoostSlots, plural, =1 {den} other {dem}} till!** L\xe4s mer om dina Nitrof\xf6rm\xe5ner $[h\xe4r](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Annullera boost",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Avbryt annullering av boost",
@@ -9315,6 +9323,10 @@
           "Du har personliga emojier, st\xf6rre uppladdningar och mer f\xf6r **!!{price}!!** (Planerad annullering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Du har personliga emojier, st\xf6rre uppladdningar och mer (Planerad annullering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Du har personliga emojier, st\xf6rre uppladdningar och mer f\xf6r **!!{price}!!** (pausar **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Du har personliga emojier, st\xf6rre uppladdningar och mer (pausas **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Din prenumeration p\xe5 Nitro Basic, som ger dig personliga emojier, st\xf6rre uppladdningar och andra f\xf6rm\xe5ner f\xf6r **!!{price}!!**, \xe4r **i v\xe4ntel\xe4ge**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9329,6 +9341,10 @@
           "Du har chattf\xf6rm\xe5ner och en boostrabatt p\xe5 **!!{price}!!** (planerad annullering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Du har chattf\xf6rm\xe5ner och en boostrabatt (planerad annullering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Du har chattf\xf6rm\xe5ner och en boostrabatt f\xf6r **!!{price}!!** (pausas **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Du har chattf\xf6rm\xe5ner och en boostrabatt (pausas **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Dina chattf\xf6rm\xe5ner och din boostprenumerationsrabatt p\xe5 **!!{price}!!** \xe4r **i v\xe4ntel\xe4ge**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9343,6 +9359,12 @@
           "Du har premiumchatt, **{num, number}x** boostar och en boostrabatt p\xe5 **!!{price}!!** (planerad annullering)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Du har premiumchatt, **{num, number}x** boostar och en boostrabatt (planerad annullering)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Du har premiumchatt, **{num, number}x** boostar och en boostrabatt f\xf6r **!!{price}!!** (pausar **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Du har premiumchatt, **{num, number}x** boostar och en boostrabatt (pausar **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Du har pausat din Nitro-prenumeration till **{resumeDate, date, medium}**. N\xe4r du s\xe4tter ig\xe5ng din prenumeration igen f\xe5r du \xe5terigen \xe5tkomst till Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Din premiumchatt, **{num, number}x** boostar, och din boostprenumerationsrabatt p\xe5 **!!{price}!!** \xe4r **i v\xe4ntel\xe4ge**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9455,6 +9477,16 @@
           "Pr\xf6va Nitro gratis i 30 dagar",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Forts\xe4tt till en 30 dagars provperiod",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Vi bjuder p\xe5 {duration}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "F\xe5 mer kul med {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Unik profilanpassning och mycket mer!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "L\xe4gg till en anpassad appikon, superreaktioner och mycket mer!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} kostar till en b\xf6rjan {price}/m\xe5nad",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "V\xe4lkommen till Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Redo f\xf6r uppskjutning!",
@@ -9514,6 +9546,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % rabatt",
         PREMIUM_DISCOUNT_CTA: "Spara !!{percent, number}!! % p\xe5 Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Spara p\xe5 Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Betala endast **{discountedPrice}** f\xf6r **{numMonths, plural, one {en m\xe5nad!} other {{numMonths} m\xe5nader!}}** Betala sedan {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Din rabatt p\xe5 !!{percent, number}!! % g\xe5r ut {numMonths, plural, one {1 m\xe5nad} other {{numMonths} m\xe5nader}} efter k\xf6pet. Efter det debiteras du {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9539,6 +9573,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "Din **gratis provperiod tar slut {remainingTime, plural, =0 {idag} one {om # dag} other {om # dagar}}**. Efter det debiteras du !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "gratis provperiod aktiverad",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Vi bjuder p\xe5 {duration}",
         INCLUDED: "Inklusive",
         NOT_INCLUDED: "Ej inkluderat",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10093,6 +10129,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Upps\xe4gningen kommer att tr\xe4da i kraft omedelbart f\xf6r prenumerater p\xe5 Nitro och serverboostar.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Japp, s\xe4g upp !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Pausa !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Du forts\xe4tter att ha \xe5tkomst till Nitro fram till **{pauseDate, date, medium}** och sedan pausas din prenumeration i {pauseDuration} dagar. Vi b\xf6rjar ta betalt igen **{resumeDate, date, medium}**. Du kan \xe5teruppta din prenumeration igen n\xe4r du vill.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Din Nitro-prenumeration kommer **nu** att pausas i {pauseDuration} dagar. Vi b\xf6rjar ta betalt igen **{resumeDate, date, medium}**. Du kan \xe5teruppta din prenumeration igen n\xe4r du vill.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Vi f\xf6rl\xe4nger din Nitro till **{resumeDate, date, medium}**. Du kan \xe5teruppta din prenumeration igen n\xe4r du vill.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Japp, pausa !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Snyggt!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Jag f\xf6rst\xe5r",
         PREMIUM_UPLOAD_PROMO:
@@ -10139,6 +10183,16 @@
           "Dina prenumerationer f\xf6rnyas automatiskt den **{renewalDate, date, medium}**. [G\xe5 till dina !!{paymentGatewayName}!! prenumerationsinst\xe4llningar]({subscriptionManagementLink}) f\xf6r mer information.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Din prenumeration avslutas den **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Din prenumeration pausas **{pauseDate, date, medium}** och \xe5terupptas automatiskt igen **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Din prenumeration \xe4r f\xf6r n\xe4rvarande pausad och \xe5terupptas automatiskt igen **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Din prenumeration p\xe5 **{planName}** \xe4r f\xf6r n\xe4rvarande pausad och \xe5terupptas automatiskt igen **{resumeDate, date, short}** och d\xe5 debiteras du **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Din prenumeration \xe5terupptar betalningen igen.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Din **{planName}**-prenumeration \xe5terupptar betalningen igen och du kommer att debiteras **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Din **!!{price}!!** prenumeration har f\xf6rfallit. Uppdatera dina betalningsuppgifter f\xf6r att din prenumeration inte ska avslutas den **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10188,6 +10242,10 @@
         PREMIUM_NO_PLANS_HEADER: "Ledsen!",
         PREMIUM_NO_PLANS_BODY:
           "F\xf6r n\xe4rvarande erbjuder vi ingen plan via Google Play-betalning med fler boostar. [L\xe4s mer.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Pausa eller avbryt prenumeration",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Avbryt eller pausa prenumeration",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Prenumerera – fr\xe5n !!{price}!!/m\xe5nad",
         PREMIUM_SUBSCRIPTION_UPDATES: "Prenumerationsuppdateringar",
@@ -10926,8 +10984,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "gratis provperiod",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Betala endast **{discountedPrice}** i m\xe5naden f\xf6r dina f\xf6rsta **tre m\xe5nader** med Nitro. Betala {regularPrice} i m\xe5naden n\xe4r trem\xe5nadersrabatten tagit slut.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Betala endast **{discountedPrice}** i m\xe5naden f\xf6rsta **{numMonths, plural, one {m\xe5naden} other {{numMonths} m\xe5naderna}}** med Nitro. Betala {regularPrice} i m\xe5naden n\xe4r rabatten tagit slut.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/m\xe5nad i tre m\xe5nader\n\n{regularPrice}/m\xe5nad efter tre m\xe5nader",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/m\xe5naden i **{numMonths, plural, one {en m\xe5nad} other {{numMonths} m\xe5nader}}**\n\n{regularPrice}/m\xe5nad efter {numMonths, plural, one {en m\xe5nad} other {{numMonths} m\xe5nader}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Spara !!{percent, number}!! % med \xe5rsprenumeration",
         BILLING_SUBTOTAL: "Delsumma",
@@ -10983,6 +11045,8 @@
         REVERSED: "\xc5terf\xf6rt",
         REFUND: "\xc5terbetalning",
         RESUBSCRIBE: "F\xf6rnya prenumerationen",
+        RESUME: "\xc5teruppta din prenumeration",
+        WITHDRAW_PAUSE: "Sluta pausa",
         CREDIT_CARD_ERROR_REQUIRED: "Ett kortnummer m\xe5ste anges.",
         CREDIT_CARD_ERROR_NUMBER: "N\xe5got \xe4r fel med ditt kortnummer",
         CREDIT_CARD_ERROR_EXPIRATION:
@@ -13714,6 +13778,16 @@
           "{count, plural, =0 {0 gemensamma v\xe4nner} one {1 gemensam v\xe4n} other {{count} gemensamma v\xe4nner}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 gemensamma servrar} one {1 gemensam server} other {{count} gemensamma servrar}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "v\xe4nner med **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "v\xe4nner med **{usernameOne}** och **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "v\xe4nner med **{usernameOne}**, **{usernameTwo}** och **{count} till**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "medlem i **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "medlem i **{guildNameOne}** och **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "medlem i **{guildNameOne}**, **{guildNameTwo}** och **{count} till**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Gemensamma v\xe4nner",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Gemensamma servrar",
         PROFILE_IN_VOICE_CALL: "I ett r\xf6stsamtal",
@@ -13850,6 +13924,8 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "V\xe4lj fr\xe5n {monthlyPrice}/m\xe5nad eller {yearlyPrice}/\xe5r",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Din mottagare f\xe5r:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Ge bort ett {nitroTierName}-medlemskap",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "G\xe5vans varaktighet",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Ge {count, plural, one {# m\xe5nad} other {# m\xe5nader}} av {nitroTierName}",
@@ -14706,6 +14782,8 @@
           "Ett fel uppstod n\xe4r appen skulle laddas.",
         INTERACTION_RATE_LIMITED: "Sakta ner! Du klickar f\xf6r snabbt.",
         APPLICATION_ADD_BUTTON: "L\xe4gg till app",
+        APPLICATION_ADD_BUTTON_ACTIONS: "L\xe4gg till app\xe5tg\xe4rder",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "Kopiera L\xe4gg till app-URL",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Medlemmarna kan inte anv\xe4nda den h\xe4r botten f\xf6rr\xe4n du har gett beh\xf6righet.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17524,6 +17602,22 @@
           "Om du avbryter **kommer du att f\xf6rlora f\xf6ljande f\xf6rm\xe5ner:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Gl\xf6m det, beh\xe5ll Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Gl\xf6m det, beh\xe5ll Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Pausa ist\xe4llet",
+        PREMIUM_PAUSE_SELECT_TITLE: "Pausa eller avbryt prenumeration",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Om du vill kan du ta en paus fr\xe5n betalda prenumerationer i n\xe5gra m\xe5nader",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Du har m\xf6jlighet att forts\xe4tta pausa i ytterligare n\xe5gra m\xe5nader",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "V\xe4lj en pausl\xe4ngd",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Vill du **pausa ist\xe4llet**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Pausa din prenumeration i upp till 90 dagar ist\xe4llet f\xf6r att avbryta.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Pausa i {days} dagar",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Pausa i ytterligare {days} dagar",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Avbryt prenumerationen",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Din prenumeration pausas",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Beh\xe5ll vissa f\xf6rm\xe5ner – betala mindre",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21996,6 +22090,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Nya stilar",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai kommer helt klart att l\xe4gga m\xe4rke till dig nu.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NYTT: V\xe5rfigurer",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "I nattens tystnad f\xf6rtrollas luften av en m\xe4rklig magi och ...",
         COLLECTIBLES_NEW_BADGE: "NYTT",
         INVENTORY_EMOJI_DETAILS_V2: "Se emoji-detaljinfo",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23665,6 +23762,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "– Medlemmar",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Markera att det inte \xe4r k\xe4nsligt",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Har vi beg\xe5tt ett misstag? [Ber\xe4tta f\xf6r oss h\xe4r](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Ditt meddelande kunde inte skickas. Det kan inneh\xe5lla st\xf6tande medieinneh\xe5ll som har blockerats av servern.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23697,7 +23796,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Ta en paus",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Lyssna p\xe5 Lofi Beats med Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Slappna av",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Vibb",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "S\xe4kerhetstips",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Om s\xe4kerhetsvarningar",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23813,6 +23912,7 @@
           "Visa dina v\xe4nner vad du h\xe5ller p\xe5 med genom att st\xe4lla in en aktivitetsstatus.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "St\xe4ll in en anpassad status",
+        HANG_STATUS_MOBILE_SET_ROW: "St\xe4ll in r\xf6staktivering",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR:
           "Det gick inte att hitta anm\xe4lan.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
@@ -23918,11 +24018,20 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Det finns inga r\xf6ster f\xf6r det h\xe4r svaret.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "R\xf6ster",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 r\xf6ster} =1 {{numVotes} r\xf6st} other {{numVotes} r\xf6ster}} f\xf6r {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Visa r\xf6stare",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Visar r\xf6stare",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! och {n, plural, one {1 annan} other {{n} andra}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! och !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! och {n, plural, one {en till} other {{n} andra}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! och !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! och {n, plural, one {en till} other {{n} andra}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {en person} other {{n} personer}}",
         CREATE_POLL: "Skapa unders\xf6kning",
         CREATE_POLL_HEADING: "Skapa en unders\xf6kning",
         CREATE_POLL_EXPIRATION: "Unders\xf6kningen p\xe5g\xe5r i 24 timmar",
@@ -23938,12 +24047,18 @@
           "L\xe4gg till medieinneh\xe5ll, svar {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Uppdatera medieinneh\xe5ll, {imageName}, svar {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "L\xe4gg till emoji, svar {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Uppdatera emoji, {emojiName}, svar {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Uppdatera emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Svar {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Skriv ditt svar",
         CREATE_POLL_ADD_ANSWER_BUTTON: "L\xe4gg till \xe4nnu ett svar",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Unders\xf6kningen p\xe5g\xe5r i",
         CREATE_POLL_DURATION_LABEL: "Varaktighet",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 timme} other {{num} timmar}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dagar",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 vecka",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23958,8 +24073,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "\xc4r du s\xe4ker p\xe5 att du vill l\xe4mna? Eventuella \xe4ndringar g\xe5r f\xf6rlorade om du avslutar nu.",
         CREATE_POLL_REMOVE_ANSWER: "Ta bort svar",
+        CREATE_POLL_REMOVE_EMOJI: "Ta bort emoji",
         CREATE_POLL_ADD_IMAGE: "L\xe4gg till media",
+        CREATE_POLL_ADD_EMOJI: "L\xe4gg till emoji",
         CREATE_POLL_REPLACE_IMAGE: "Byt ut medieinneh\xe5ll",
+        CREATE_POLL_REPLACE_EMOJI: "Byt ut emoji",
         CREATE_POLL_POLL_ANSWER: "Unders\xf6kningssvar",
         CREATE_POLL_EDIT_ALT_TEXT: "\xc4ndra bildbeskrivning (alt. text)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "\xc4ndra bildbeskrivning",
@@ -24040,8 +24158,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Hoppsan!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Uppdrag finns inte p\xe5 mobil ... \xe4n. Sorry! Du kan g\xe5 fr\xe5n din Discord-app p\xe5 datorn eller webbl\xe4saren till **Anv\xe4ndarinst\xe4llningar > G\xe5volager** och acceptera uppdraget d\xe4r.",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "Uppdrag finns inte p\xe5 mobil ... \xe4nnu.",
+        QUESTS_MOBILE_EMBED_TITLE: "Uppdrag finns inte p\xe5 mobil",
         QUESTS_MOBILE_EMBED_BODY:
           "Du kan g\xe5 fr\xe5n din Discord-app p\xe5 datorn eller webbl\xe4saren till \nAnv\xe4ndarinst\xe4llningar > G\xe5volager och acceptera uppdraget d\xe4r.",
         QUESTS_GET_THIS_GAME: "Skaffa spel",
@@ -24089,10 +24206,10 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! och {count, plural, one {en till} other {{count} andra}}",
         STOREFRONT: "Butik",
-        STOREFRONT_APP_SUBSCRIPTIONS: "App-prenumerationer",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Prenumerationer",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "K\xf6p prenumerationer fr\xe5n {appName}",
-        STOREFRONT_APP_PRODUCTS: "App-produkter",
+        STOREFRONT_APP_PRODUCTS: "Produkter",
         STOREFRONT_APP_PRODUCTS_BODY: "K\xf6p produkter fr\xe5n {appName}",
         STOREFRONT_SUBSCRIPTION: "Prenumeration",
         STOREFRONT_SUBSCRIBE_FOR: "Prenumerera f\xf6r {rate}",
@@ -24113,6 +24230,13 @@
         FOCUS_MODE_TITLE: "Fokuseringsl\xe4get (BETA)",
         FOCUS_MODE_BADGE_ON: "P\xc5",
         FOCUS_MODE_BADGE_OFF: "AV",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "St\xf6r ej",
+        FOCUS_MODE_DESCRIPTION:
+          "Inaktiverar skrivbordsaviseringar och meddelandeljud.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Inaktiverar aviseringar i appen och meddelandeljud.",
+        FOCUS_MODE_TURN_OFF: "St\xe4ng av fokuseringsl\xe4ge",
+        FOCUS_MODE_ENABLE_FOR: "Aktivera fokuseringsl\xe4ge f\xf6r",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Du har anv\xe4nt St\xf6r ej ett tag nu. Vill du aktivera Fokuseringsl\xe4get ist\xe4llet?",
         ACTIVITY_REACTION_REPLY_TITLE: "Chatta om {activity}",
@@ -24143,6 +24267,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} timmar sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} minuter sedan",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}er sedan",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "i {days} d",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "i {hours} t",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf6rsta g\xe5ngen",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -54,6 +54,7 @@
           "\nPoslali jsme ti pokyny ke změně tv\xe9ho hesla na e-mail: **!!{email}!!**, pros\xedm zkontrolujte doručen\xe9 zpr\xe1vy a nevyž\xe1danou poštu.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "F\xe1ze",
         STORE_CHANNEL_TYPE: "Obchod",
+        NEWS_CHANNEL_TYPE: "Ozn\xe1men\xed",
         VOICE_CHANNEL_TYPE: "Hlas",
         FORUM_CHANNEL_TYPE: "F\xf3rum",
         TEXT_CHANNEL_TYPE: "Text",
@@ -5702,6 +5703,7 @@
         STATUS_INVISIBLE: "Neviditeln\xfd",
         STATUS_DND_HELP:
           "Nebudeš dost\xe1vat ž\xe1dn\xe1 ozn\xe1men\xed na plochu.",
+        STATUS_DND_HELP_FOCUS_MODE: "Zap\xedn\xe1 režim soustředěn\xed",
         STATUS_INVISIBLE_HELPER:
           "Nebudeš vypadat online, ale budeš m\xedt pln\xfd př\xedstup k cel\xe9mu Discordu.",
         STATUS_UNTIL: "do {endTime}",
@@ -6416,8 +6418,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Členem Discordu od",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1\xa0společn\xfd př\xedtel} few {{count}\xa0společn\xed př\xe1tel\xe9} other {{count}\xa0společn\xfdch př\xe1tel}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Společn\xed př\xe1tel\xe9 ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1\xa0společn\xfd server} few {{count}\xa0společn\xe9 servery} other {{count}\xa0společn\xfdch serverů}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Společn\xe9 servery ({count})",
         SHOW_USER_PROFILE: "Zobrazit uživatelsk\xfd profil",
         HIDE_USER_PROFILE: "Skr\xfdt uživatelsk\xfd profil",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8846,6 +8850,8 @@
           "Doporučujeme ti přeč\xedst si cel\xe9 aktualizovan\xe9 dokumenty od zač\xe1tku až do konce, protože se t\xfdkaj\xed použ\xedv\xe1n\xed Discordu. Nejdůležitějš\xed změny jsme popsali v př\xedspěvku na našem blogu.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Minul\xfd měs\xedc jsme předes\xedlali každoročn\xed aktualizaci našich z\xe1sad, kter\xe9 pr\xe1vě nab\xfdvaj\xed platnosti. Mrkni na n\xe1š [př\xedspěvek na blogu](https://discord.com/blog/important-policy-updates), kde najdeš přehled změn. N\xedže si pak můžeš přeč\xedst cel\xe9 z\xe1sady v\xa0platn\xe9m zněn\xed.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Kliknut\xedm na „Souhlas\xedm“ vyjadřuješ svůj souhlas s\xa0podm\xednkami využ\xedv\xe1n\xed služeb Discordu a\xa0potvrzuješ, že m\xe1š přečten\xe9 naše z\xe1sady ochrany osobn\xedch \xfadajů.",
         COMMUNITY_GUIDELINES: "[Z\xe1sady komunity]({url})",
         BLOG_POST: "[Př\xedspěvek na našem blogu]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Od konkr\xe9tn\xed osoby",
@@ -9180,6 +9186,8 @@
           "{numUnappliedGuildBoostSlots, plural, =1 {Ček\xe1, než si vybereš server, kter\xfd j\xedm obdaruješ} other {Čekaj\xed, než si vybereš server, kter\xfd jimi obdaruješ}}!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "{numUnappliedGuildBoostSlots, plural, =1 {Ček\xe1, než si vybereš server, kter\xfd j\xedm obdaruješ} other {Čekaj\xed, než si vybereš server, kter\xfd jimi obdaruješ}}! Dalš\xed informace o\xa0vylepšen\xedch Nitra najdeš $[tady](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "**{numUnappliedGuildBoostSlots, plural, =1 {Ček\xe1, než si vybereš server, kter\xfd j\xedm obdaruješ} other {Čekaj\xed, než si vybereš server, kter\xfd jimi obdaruješ}}!** Dalš\xed informace o\xa0vylepšen\xedch Nitra najdeš $[tady](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Zrušit vylepšen\xed",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Odvolat zrušen\xed vylepšen\xed",
@@ -9386,6 +9394,10 @@
           "K dispozici m\xe1š vlastn\xed smajl\xedky, větš\xed velikost nahr\xe1van\xfdch souborů a dalš\xed v\xfdhody za **!!{price}!!** (Nevyř\xedzen\xe9 zrušen\xed)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "M\xe1š k dispozici vlastn\xed smajl\xedky, větš\xed velikost nahr\xe1van\xfdch souborů a dalš\xed v\xfdhody (Nevyř\xedzen\xe9 zrušen\xed)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "K\xa0dispozici m\xe1š vlastn\xed smajl\xedky, větš\xed velikost nahr\xe1van\xfdch souborů a\xa0dalš\xed funkce za **!!{price}!!** (pozastaven\xed **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "M\xe1š k\xa0dispozici vlastn\xed smajl\xedky, větš\xed velikost nahr\xe1van\xfdch souborů a\xa0dalš\xed funkce (pozastaven\xed **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Tv\xe9 předplatn\xe9 Nitro Basic, d\xedky kter\xe9mu m\xe1š vlastn\xed smajl\xedky, nahr\xe1v\xe1n\xed větš\xedch souborů a dalš\xed v\xfdhody za cenu **!!{price}!!**, je **pozastaven\xe9**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9400,6 +9412,10 @@
           "M\xe1š vylepšen\xed chatu a vylepšovac\xed slevu na **!!{price}!!** (nevyř\xedzen\xe9 zrušen\xed)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "M\xe1š vylepšen\xed chatu a slevu na vylepšen\xed serveru (ček\xe1 na zrušen\xed)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "M\xe1š vylepšen\xed chatu a\xa0slevu na dalš\xed vylepšen\xed serveru za **!!{price}!!** (pozastaven\xed **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "M\xe1š vylepšen\xed chatu a\xa0slevu na vylepšen\xed serveru (pozastaven\xed **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Tv\xe9 předplatn\xe9 s vylepšen\xedmi chatu a vylepšovac\xed slevou na **!!{price}!!** je **pozastaven\xe9**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9414,6 +9430,12 @@
           "M\xe1š vylepšen\xfd chat, **{num, number}x** vylepšen\xed a vylepšovac\xed slevu na **!!{price}!!** (nevyř\xedzen\xe9 zrušen\xed)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "M\xe1š pr\xe9miov\xfd chat, **{num, number}\xd7** vylepšen\xed serveru a slevu na dalš\xed vylepšen\xed serveru (ček\xe1 na zrušen\xed)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "M\xe1š pr\xe9miov\xfd chat, **{num, number}\xd7** vylepšen\xed a\xa0slevu na dalš\xed vylepšen\xed serveru za **!!{price}!!** (pozastaven\xed **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "M\xe1š pr\xe9miov\xfd chat, **{num, number}\xd7** vylepšen\xed serveru a\xa0slevu na dalš\xed vylepšen\xed serveru (pozastaven\xed **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Předplatn\xe9 Nitro m\xe1š pozastaven\xe9 do **{resumeDate, date, medium}**. Jakmile předplatn\xe9 obnov\xedš, opět z\xedsk\xe1š př\xedstup ke všem v\xfdhod\xe1m Nitra.",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Tv\xe9 předplatn\xe9 s pr\xe9miov\xfdm chatem, **{num, number}\xd7** vylepšen\xedmi serveru a slevou na dalš\xed vylepšen\xed na **!!{price}!!** je **pozastaven\xe9**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9531,6 +9553,16 @@
           "Vyzkoušej Nitro na 30\xa0dn\xed zdarma",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Pokračovat k\xa030denn\xed zkušebn\xed verzi",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Užij si {duration} na n\xe1š \xfačet",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Užij si v\xedc z\xe1bavy s\xa0předplatn\xfdm {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Jedinečn\xe1 přizpůsoben\xed profilu a\xa0dalš\xed v\xfdhody!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Přidej vlastn\xed ikonu aplikace, super reakce a\xa0dalš\xed!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} od {price}/měs\xedc",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "V\xedt\xe1me tě v Nitru!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Teď to můžeš poř\xe1dně rozjet!",
@@ -9591,6 +9623,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% sleva",
         PREMIUM_DISCOUNT_CTA: "Ušetři !!{percent, number}!!\xa0% na Nitru",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Ušetři na Nitru",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Zaplať jen **{discountedPrice}** na **{numMonths, plural, one {měs\xedc!} few {{numMonths} měs\xedce!} other {{numMonths} měs\xedců!}}** Pot\xe9 budeš platit {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Tvoje !!{percent, number}!!% sleva vyprš\xed {numMonths, plural, one {1\xa0měs\xedc} few {{numMonths}\xa0měs\xedce} other {{numMonths}\xa0měs\xedců}} po zakoupen\xed. Pot\xe9 ti budeme \xfačtovat {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9616,6 +9650,8 @@
           "Tvoje **bezplatn\xe9 zkušebn\xed obdob\xed vyprš\xed {remainingTime, plural, =0 {již dnes} one {za #\xa0den} few {za #\xa0dny} other {za #\xa0dn\xed}}**. Pot\xe9 ti budeme \xfačtovat !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "bylo aktivov\xe1no bezplatn\xe9 zkušebn\xed obdob\xed",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Užij si {duration} na n\xe1š \xfačet",
         INCLUDED: "Včetně",
         NOT_INCLUDED: "Nen\xed zahrnuto",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10185,6 +10221,15 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Předplatn\xe9 Nitro a\xa0vylepšen\xed serveru budou zrušeny okamžitě.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Jo, zrušit !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Pozastavit !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Př\xedstup k\xa0Nitru budeš m\xedt až do **{pauseDate, date, medium}**, pot\xe9 se tvoje předplatn\xe9 na několik dn\xed (celkem {pauseDuration}) pozastav\xed. Znovu \xfačtovat ti začneme **{resumeDate, date, medium}**. Ve sv\xe9m předplatn\xe9m můžeš kdykoli pokračovat.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Tvoje předplatn\xe9 Nitro se **nyn\xed** na několik dnů ({pauseDuration}) pozastav\xed. Znovu \xfačtovat ti začneme **{resumeDate, date, medium}**. Ve sv\xe9m předplatn\xe9m můžeš kdykoli pokračovat.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Prodlouž\xedš sv\xe9 Nitro do **{resumeDate, date, medium}**. Ve sv\xe9m předplatn\xe9m můžeš kdykoli pokračovat.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Jasně, chci pozastavit !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Par\xe1da!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Rozum\xedm",
         PREMIUM_UPLOAD_PROMO:
@@ -10231,6 +10276,16 @@
           "Tv\xe9 předplatn\xe9 se automaticky obnov\xed **{renewalDate, date, medium}**. Dalš\xed informace najdeš v [nastaven\xed předplatn\xe9ho !!{paymentGatewayName}!!]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Tv\xe9 předplatn\xe9 skonč\xed **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Tvoje předplatn\xe9 se pozastav\xed **{pauseDate, date, medium}** a\xa0n\xe1sledně bude automaticky pokračovat **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Tvoje předplatn\xe9 je aktu\xe1lně pozastaven\xe9 a\xa0bude automaticky pokračovat od **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Tvoje předplatn\xe9 **{planName}** je aktu\xe1lně pozastaven\xe9 a\xa0bude automaticky pokračovat od **{resumeDate, date, short}** za cenu **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Tvoje předplatn\xe9 bude pokračovat v\xa0nevyř\xedzen\xfdch platb\xe1ch.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Tvoje předplatn\xe9 **{planName}** bude pokračovat v\xa0nevyř\xedzen\xfdch platb\xe1ch a\xa0bude se ti \xfačtovat **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Tvoje předplatn\xe9 za **!!{price}!!** je po splatnosti. Aktualizuj platebn\xed \xfadaje nebo tv\xe9 předplatn\xe9 **{endDate, date, medium}** skonč\xed.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10281,6 +10336,10 @@
         PREMIUM_NO_PLANS_HEADER: "Je n\xe1m l\xedto!",
         PREMIUM_NO_PLANS_BODY:
           "Moment\xe1lně přes fakturaci Google Play nenab\xedz\xedme pl\xe1n s v\xedce vylepšen\xedmi. [Zjistit v\xedce.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Pozastavit nebo zrušit předplatn\xe9",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Zrušit nebo pozastavit předplatn\xe9",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Pořiď si předplatn\xe9 – od !!{price}!!/měs\xedc",
         PREMIUM_SUBSCRIPTION_UPDATES: "Aktualizace předplatn\xe9ho",
@@ -11018,8 +11077,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "bezplatn\xe9 zkušebn\xed obdob\xed",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Plať pouze **{discountedPrice}** měs\xedčně za prvn\xed **3\xa0měs\xedce** Nitra. Po skončen\xed 3měs\xedčn\xed slevy budeš platit {regularPrice} měs\xedčně.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Plať pouze **{discountedPrice}** měs\xedčně za **{numMonths, plural, one {prvn\xed měs\xedc} few {prvn\xed {numMonths}\xa0měs\xedce} other {prvn\xedch {numMonths}\xa0měs\xedců}}** Nitra. Po skončen\xed slevy budeš platit {regularPrice} měs\xedčně.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/měs\xedčně po dobu 3\xa0měs\xedců\n\n{regularPrice}/měs\xedčně po uplynut\xed 3\xa0měs\xedců",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/měs\xedc po dobu **{numMonths, plural, one {jednoho měs\xedce} other {{numMonths} měs\xedců}}**\n\n{regularPrice}/měs\xedc po uplynut\xed {numMonths, plural, one {jednoho měs\xedce} other {{numMonths} měs\xedců}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Ušetři !!{percent, number}!!\xa0% s\xa0ročn\xedm předplatn\xfdm",
         BILLING_SUBTOTAL: "Mezisoučet",
@@ -11075,6 +11138,8 @@
         REVERSED: "Stornov\xe1no",
         REFUND: "Vr\xe1cen\xed peněz",
         RESUBSCRIBE: "Obnovit předplatn\xe9",
+        RESUME: "Pokračovat v\xa0předplatn\xe9m",
+        WITHDRAW_PAUSE: "Zrušit pozastaven\xed",
         CREDIT_CARD_ERROR_REQUIRED: "Č\xedslo karty je povinn\xe9.",
         CREDIT_CARD_ERROR_NUMBER: "Něco je špatně s č\xedslem karty",
         CREDIT_CARD_ERROR_EXPIRATION: "Něco je špatně s datem konce platnosti",
@@ -13842,6 +13907,16 @@
           "{count, plural, =0 {0 společn\xfdch př\xe1tel} one {1 společn\xfd př\xedtel} few {{count} společn\xed př\xe1tel\xe9} other {{count} společn\xfdch př\xe1tel}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 společn\xfdch serverů} one {1 společn\xfd server} few {{count} společn\xe9 servery} other {{count} společn\xfdch serverů}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "př\xe1tel\xe9 s\xa0**{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "př\xe1tel\xe9 s\xa0**{usernameOne}** a\xa0**{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "př\xe1tel\xe9 s\xa0**{usernameOne}**, **{usernameTwo}** a\xa0**{count} k\xa0tomu**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "člen **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "člen **{guildNameOne}** a\xa0**{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "člen **{guildNameOne}**, **{guildNameTwo}** a\xa0**{count} k\xa0tomu**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Společn\xed př\xe1tel\xe9",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Společn\xe9 servery",
         PROFILE_IN_VOICE_CALL: "V hlasov\xe9m hovoru",
@@ -13980,6 +14055,8 @@
           "Zvol si mezi {monthlyPrice}/měs\xedc nebo {yearlyPrice}/rok",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Šťastn\xfd př\xedjemce dostane:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Darovat členstv\xed {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Darovan\xe1 doba",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Darovat {nitroTierName} na {count, plural, one {#\xa0měs\xedc} few {#\xa0měs\xedce} other {#\xa0měs\xedců}}",
@@ -14852,6 +14929,9 @@
           "Při pokusu o\xa0načten\xed t\xe9to aplikace došlo k\xa0chybě.",
         INTERACTION_RATE_LIMITED: "Zpomal! Klik\xe1š moc rychle.",
         APPLICATION_ADD_BUTTON: "Přidat aplikaci",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Přidat akce aplikace",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Kop\xedrovat URL na přid\xe1n\xed aplikace",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Členov\xe9 tohoto bota nebudou moct použ\xedvat, dokud nezapneš opr\xe1vněn\xed.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17710,6 +17790,23 @@
           "Pokud ho teď zruš\xedš, **přijdeš o všechny tyto v\xfdhody:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Tak nic, nech\xe1m si Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Tak nic, nech\xe1m si Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Raději pozastavit",
+        PREMIUM_PAUSE_SELECT_TITLE: "Pozastavit nebo zrušit předplatn\xe9",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Pokud si chceš od placen\xe9ho předplatn\xe9ho trochu odpočinout, můžeš ho na p\xe1r měs\xedců pozastavit",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Teď m\xe1š možnost prodloužit pozastaven\xed na dalš\xedch p\xe1r měs\xedců",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Vyber d\xe9lku pozastaven\xed",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "Chceš předplatn\xe9 **raději pozastavit**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Pozastav svoje předplatn\xe9 až na 90\xa0dnů m\xedsto jeho zrušen\xed.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Pozastavit na {days} dnů",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Pozastavit na dalš\xedch {days} dnů",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Zrušit předplatn\xe9",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Tvoje předplatn\xe9 bude pozastaveno",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Udrž si někter\xe9 v\xfdhody za m\xe9ně peněz",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22265,6 +22362,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Nov\xe9 styly",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Teď si tě Senpai bezpochyby všimne.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NOVINKA: Jarn\xed komixy",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Pod př\xedkrovem noci se vzduchem prol\xedn\xe1 prazvl\xe1štn\xed magick\xe1 energie a…",
         COLLECTIBLES_NEW_BADGE: "NOV\xc9",
         INVENTORY_EMOJI_DETAILS_V2: "Detaily smajl\xedka",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23957,6 +24057,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "– členov\xe9",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Označit jako Nen\xed citliv\xe9",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Zm\xfdlili jsme se? [Ozvi se n\xe1m](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Tvou zpr\xe1vu se nepodařilo odeslat. Možn\xe1 obsahuje explicitn\xed m\xe9dia, kter\xe1 n\xe1š server blokuje.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23989,7 +24091,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Dej si pauzu",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Poslechnout si Lofi Beats s\xa0Wumpusem.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relaxovat",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Rozechvěn\xed",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Bezpečnostn\xed tipy",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "O\xa0bezpečnostn\xedch upozorněn\xedch",
@@ -24107,6 +24209,7 @@
         HANG_STATUS_HELP:
           "Pomoc\xed stavu aktivity ukaž sv\xfdm př\xe1telům, co m\xe1š pr\xe1vě za lubem.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Nastavit vlastn\xed status",
+        HANG_STATUS_MOBILE_SET_ROW: "Nastavit hlasovou aktivitu",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Hl\xe1šen\xed nebylo nalezeno.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Ž\xe1dost o\xa0kontrolu nahl\xe1šen\xed již byla odesl\xe1na.",
@@ -24208,11 +24311,20 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Tato odpověď nem\xe1 ž\xe1dn\xe9 hlasy.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Hlasy",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0\xa0hlasů} =1 {{numVotes}\xa0hlas} few {{numVotes}\xa0hlasy} other {{numVotes}\xa0hlasů}} pro {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Zobrazit hlasuj\xedc\xed",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Zobraz\xed hlasuj\xedc\xed",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! a\xa0{n, plural, one {1\xa0dalš\xed} few {{n}\xa0dalš\xed} other {{n}\xa0dalš\xedch}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! a\xa0!!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! a\xa0{n, plural, one {1\xa0dalš\xed} few {{n}\xa0dalš\xed} other {{n}\xa0dalš\xedch}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! a\xa0!!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! a\xa0{n, plural, one {1\xa0dalš\xed} few {{n}\xa0dalš\xed} other {{n}\xa0dalš\xedch}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {1\xa0člověk} few {{n} lid\xe9} other {{n} lid\xed}}",
         CREATE_POLL: "Vytvořit průzkum",
         CREATE_POLL_HEADING: "Vytvořit průzkum",
         CREATE_POLL_EXPIRATION: "Průzkum bude dostupn\xfd 24\xa0hodin",
@@ -24227,12 +24339,18 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "Přidat m\xe9dia, odpověď {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Aktualizovat m\xe9dia, {imageName}, odpověď {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Přidat smajl\xedk, odpověď {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Aktualizovat smajl\xedk, {emojiName}, odpověď {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Aktualizovat smajl\xedk",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Odpověď {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Napiš svou odpověď",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Přidat dalš\xed odpověď",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Doba dostupnosti průzkumu:",
         CREATE_POLL_DURATION_LABEL: "Trv\xe1n\xed",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1\xa0hodina} few {{num}\xa0hodiny} other {{num}\xa0hodin}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dny",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1\xa0t\xfdden",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24247,8 +24365,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Opravu chceš odej\xedt? Pokud tak učin\xedš, všechny proveden\xe9 změny budou ztraceny.",
         CREATE_POLL_REMOVE_ANSWER: "Odebrat odpověď",
+        CREATE_POLL_REMOVE_EMOJI: "Odebrat smajl\xedk",
         CREATE_POLL_ADD_IMAGE: "Přidat m\xe9dia",
+        CREATE_POLL_ADD_EMOJI: "Přidat smajl\xedk",
         CREATE_POLL_REPLACE_IMAGE: "Vyměnit m\xe9dia",
+        CREATE_POLL_REPLACE_EMOJI: "Nahradit smajl\xedk",
         CREATE_POLL_POLL_ANSWER: "Odpověď v\xa0průzkumu",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Upravit popis obr\xe1zku (alternativn\xed text)",
@@ -24330,8 +24451,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Jejda!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "\xdakoly nejsou na mobilu dostupn\xe9… zat\xedm. Moc n\xe1s to mrz\xed! Ve sv\xe9m prohl\xedžeči nebo poč\xedtačov\xe9 aplikaci Discord však můžeš přej\xedt do sekce **Uživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků** a\xa0přijmout \xfakol tam.",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "\xdakoly nejsou na mobilu dostupn\xe9… zat\xedm.",
+        QUESTS_MOBILE_EMBED_TITLE: "\xdakoly nejsou na mobilu dostupn\xe9",
         QUESTS_MOBILE_EMBED_BODY:
           "Moc n\xe1s to mrz\xed! Ve sv\xe9m prohl\xedžeči nebo poč\xedtačov\xe9 aplikaci Discord však můžeš přej\xedt do sekce \nUživatelsk\xe1 nastaven\xed > Invent\xe1ř d\xe1rků a\xa0přijmout \xfakol tam.",
         QUESTS_GET_THIS_GAME: "Z\xedskat hru",
@@ -24380,9 +24500,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! a\xa0{count, plural, one {1\xa0dalš\xed} few {{count}\xa0dalš\xed} other {{count}\xa0dalš\xedch}}",
         STOREFRONT: "Obchod",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Předplatn\xe1 aplikace",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Předplatn\xe9",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Koupit předplatn\xe9 od {appName}",
-        STOREFRONT_APP_PRODUCTS: "Produkty – aplikace",
+        STOREFRONT_APP_PRODUCTS: "Produkty",
         STOREFRONT_APP_PRODUCTS_BODY: "Koupit produkty od {appName}",
         STOREFRONT_SUBSCRIPTION: "Předplatn\xe9",
         STOREFRONT_SUBSCRIBE_FOR: "Poř\xeddit předplatn\xe9 za {rate}",
@@ -24403,6 +24523,13 @@
         FOCUS_MODE_TITLE: "Režim soustředěn\xed (BETA VERZE)",
         FOCUS_MODE_BADGE_ON: "ZAP",
         FOCUS_MODE_BADGE_OFF: "VYP",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION:
+          "Vypne ozn\xe1men\xed na ploše a\xa0zvuky zpr\xe1v.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Vypne ozn\xe1men\xed v\xa0aplikaci a\xa0zvuky zpr\xe1v.",
+        FOCUS_MODE_TURN_OFF: "Vypnout režim soustředěn\xed",
+        FOCUS_MODE_ENABLE_FOR: "Zapnout režim soustředěn\xed na",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Už nějakou dobu jsi v\xa0režimu Nerušit. Chceš m\xedsto něj zapnout režim soustředěn\xed?",
         ACTIVITY_REACTION_REPLY_TITLE:
@@ -24435,6 +24562,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} min nazpět",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO:
           "{count}\xa0s\xa0nazpět",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "na {days}\xa0d",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "na {hours}\xa0h",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Poprv\xe9",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivita",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -57,6 +57,7 @@
           "\nŞifreni değiştirmen i\xe7in **!!{email}!!** adresine talimatlar g\xf6nderdik, l\xfctfen hem gelen kutunu hem istenmeyen posta klas\xf6r\xfcn\xfc kontrol et.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Sahne",
         STORE_CHANNEL_TYPE: "Mağaza",
+        NEWS_CHANNEL_TYPE: "Duyuru",
         VOICE_CHANNEL_TYPE: "Ses",
         FORUM_CHANNEL_TYPE: "Forum",
         TEXT_CHANNEL_TYPE: "Metin",
@@ -5617,6 +5618,7 @@
         STATUS_DND: "Rahatsız Etmeyin",
         STATUS_INVISIBLE: "G\xf6r\xfcnmez",
         STATUS_DND_HELP: "Herhangi bir masa\xfcst\xfc bildirimi almayacaksın.",
+        STATUS_DND_HELP_FOCUS_MODE: "Odaklanma Modu'nu etkinleştirir",
         STATUS_INVISIBLE_HELPER:
           "\xc7evrimi\xe7i g\xf6r\xfcnmezsin ama Discord'un t\xfcm \xf6zelliklerine erişebilirsin.",
         STATUS_UNTIL: "şu zamana kadar {endTime}",
@@ -6324,8 +6326,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Şu Tarihten Beri Discord \xdcyesi:",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 Ortak Arkadaş} other {{count} Ortak Arkadaş}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Ortak Arkadaşlar ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 Ortak Sunucu} other {{count} Ortak Sunucu}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Ortak Sunucular ({count})",
         SHOW_USER_PROFILE: "Kullanıcı Profilini G\xf6ster",
         HIDE_USER_PROFILE: "Kullanıcı Profilini Gizle",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8699,6 +8703,8 @@
           "Discord kullanımına etkisi olduğu i\xe7in g\xfcncellenen belgelerin tamamını okumanı tavsiye ediyoruz. En \xf6nemli kısımların bazılarını blog paylaşımımızda a\xe7ıkladık.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Şu an y\xfcr\xfcrl\xfckte olan politikalarımıza yaptığımız yıllık g\xfcncellemelerimizi ge\xe7en ay duyurmuştuk. Bu değişiklikleri g\xf6rmek i\xe7in [blog yazımıza](https://discord.com/blog/important-policy-updates) g\xf6z atabilir ve aşağıdan politikaların tamamını okuyabilirsin.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Onayla butonuna tıklayarak Discord'un Hizmet Koşullarını onayladığını ve Gizlilik Politikamızı okuduğunu kabul etmiş olursun.",
         COMMUNITY_GUIDELINES: "[Topluluk İlkeleri]({url})",
         BLOG_POST: "[Blog paylaşımımız]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Belirli bir kişiden",
@@ -9028,6 +9034,8 @@
           "Sen {numUnappliedGuildBoostSlots, plural, =1 {takviyeni} other {takviyelerini}} kullanacak bir sunucu bulana kadar burada bekliyorum!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Sen {numUnappliedGuildBoostSlots, plural, =1 {takviyeni} other {takviyelerini}} kullanacak bir sunucu bulana kadar burada bekliyorum! Nitro Avantajları hakkında $[buradan](learnMoreHook) daha fazla bilgi edin.",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Sen **{numUnappliedGuildBoostSlots, plural, =1 {takviyeni} other {takviyelerini}} kullanacak bir sunucu se\xe7ene** kadar burada bekliyorum! Nitro Avantajları hakkında $[buradan](learnMoreHook) daha fazla bilgi edin.",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Takviyeyi İptal Et",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Takviye İptalini Kaldır",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9229,6 +9237,10 @@
           "\xd6zel emojiler, daha b\xfcy\xfck boyutlu y\xfckleme ve daha fazlası sadece **!!{price}!!** (İptal İşlemi Bekleniyor)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "\xd6zel emojiler, daha b\xfcy\xfck boyutlu y\xfckleme ve daha fazlası (İptal İşlemi Bekleniyor)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "\xd6zel emojiler, daha b\xfcy\xfck boyutlu y\xfckleme ve daha fazlası sadece **!!{price}!!** (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "\xd6zel emojiler, daha b\xfcy\xfck boyutlu y\xfckleme ve daha fazlası (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "**!!{price}!!** karşılığında \xf6zel emoji, daha y\xfcksek dosya y\xfckleme boyutu ve başka avantajlar sağlayan Nitro Basic aboneliğin **askıda**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9243,6 +9255,10 @@
           "Sohbet avantajların ve **!!{price}!!** Takviye indirimin var (İptal İşlemi Bekleniyor)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Sohbet avantajların ve Takviye indirimin var (İptal İşlemi Bekleniyor)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Sohbet avantajların ve **!!{price}!!** Takviye indirimin var (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Sohbet avantajların ve Takviye indirimin var (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Sohbet avantajları ve Takviye indirimi i\xe7eren **!!{price}!!** aboneliğin **askıda**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9257,6 +9273,12 @@
           "Ayrıcalıklı sohbetin, **{num, number}x** Takviyen ve **!!{price}!!** Takviye indirimin var (İptal İşlemi Bekleniyor)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Ayrıcalıklı sohbetin, **{num, number}x** Takviyen ve Takviye indirimin var (İptal İşlemi Bekleniyor)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Ayrıcalıklı sohbetin, **{num, number}x** Takviyen ve **!!{price}!!** Takviye indirimin var (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Ayrıcalıklı sohbetin, **{num, number}x** Takviyen ve Takviye indirimin var (**{pauseDate, date, medium}** tarihinde duraklatılacak)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Discord Nitro aboneliğini **{resumeDate, date, medium}** tarihine dek duraklattın. Aboneliğin devam etmeye başladığında Nitro'ya yeniden erişebilirsin",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Ayrıcalıklı sohbet, **{num, number}x** Takviye ve Takviye indirimi i\xe7eren **!!{price}!!** aboneliğin **askıda**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9373,6 +9395,16 @@
           "Nitro'yu 30 g\xfcnl\xfcğ\xfcne \xfccretsiz dene",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "30 g\xfcnl\xfck denemeni başlatmak i\xe7in devam et",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "{duration} kadar da bizden olsun",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "{nitroTierName} ile daha fazla eğlence",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Eşsiz profil \xf6zelleştirmeleri ve \xe7ok daha fazlası!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "\xd6zel uygulama simgeleri, s\xfcper tepkiler ve daha fazlası!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} aboneliği başlangı\xe7 fiyatı aylık {price}",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Nitro'ya Hoş Geldin!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Enerji patlamasına hazırsın!",
@@ -9432,6 +9464,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "%!!{percent, number}!! indirim",
         PREMIUM_DISCOUNT_CTA: "Nitro'dan %!!{percent, number}!! tasarruf et",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro'dan tasarruf et",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "**{numMonths, plural, one {Bir ay} other {{numMonths} ay}}** boyunca sadece **{discountedPrice}**! Sonrasında ise {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "%!!{percent, number}!! indirimin satın alımdan {numMonths, plural, one {1 ay} other {{numMonths} ay}} sonra sona erecek. Sonrasında hesabından {regularPrice} kesilecek.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9457,6 +9491,8 @@
           "**\xdccretsiz deneme s\xfcr\xfcm\xfcn {remainingTime, plural, =0 {bug\xfcn} one {# g\xfcn i\xe7inde} other {# g\xfcn i\xe7inde}}** sona eriyor. Sonrasında fiyatı !!{price}!! olacak.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "\xfccretsiz deneme s\xfcr\xfcm\xfc etkinleştirildi",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "{duration} kadar da bizden olsun",
         INCLUDED: "Eklendi",
         NOT_INCLUDED: "Dahil Değil",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10021,6 +10057,15 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Abonelik iptali t\xfcm Nitro ve Sunucu Takviyesi abonelikleri i\xe7in hemen devreye girecek.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Evet, !!{planPremiumType}!! iptal edilsin",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "!!{planPremiumType}!! duraklatılsın mı?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "**{pauseDate, date, medium}** tarihine dek Nitro'ya erişebileceksin, sonrasında ise aboneliğin {pauseDuration} g\xfcnl\xfcğ\xfcne duraklatılmış olacak. **{resumeDate, date, medium}** tarihinden itibaren seni faturalandırmaya devam edeceğiz. Aboneliğini dilediğin zaman devam ettirebilirsin.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Nitro aboneliğin **şimdi**, {pauseDuration} g\xfcnl\xfcğ\xfcne durdurulacak. **{resumeDate, date, medium}** tarihinden itibaren seni faturalandırmaya devam edeceğiz. Aboneliğini dilediğin zaman devam ettirebilirsin.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Nitro aboneliğin **{resumeDate, date, medium}** tarihine kadar uzatılacak. Aboneliğini dilediğin zaman devam ettirebilirsin.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Evet, !!{planPremiumType}!! aboneliğimi duraklat",
         PREMIUM_UPGRADE_DONE_BUTTON: "S\xfcper!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Anladım",
         PREMIUM_UPLOAD_PROMO:
@@ -10068,6 +10113,16 @@
           "Aboneliğin **{renewalDate, date, medium}** tarihinde otomatik olarak yenilenecek. Daha fazla bilgi i\xe7in l\xfctfen [!!{paymentGatewayName}!! Abonelik ayarlarını ziyaret et]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Aboneliğin **{endDate, date, medium}** tarihinde sona erecek.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Aboneliğin **{pauseDate, date, medium}** tarihinde duraklatılacak ve **{resumeDate, date, medium}** tarihinde otomatik olarak devam edecek.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Aboneliğin h\xe2lihazırda duraklatıldı ve **{resumeDate, date, medium}** tarihinde otomatik olarak devam edecek.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "**{planName}** aboneliğin h\xe2lihazırda duraklatıldı ve **{resumeDate, date, short}** tarihinde otomatik olarak devam edecek. Hesabından **!!{price}!!** kesilecek.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Aboneliğin devam edince \xf6demeler de devam edecek.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "**{planName}** aboneliğin devam edecek, \xf6deme bekleniyor. Hesabından **!!{price}!!** kesilecek.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "**!!{price}!!** \xfccretli aboneliğin zaman aşımına uğradı. L\xfctfen \xf6deme bilgilerini g\xfcncelle, yoksa aboneliğin **{endDate, date, medium}** tarihinde sona erecek.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10118,6 +10173,10 @@
         PREMIUM_NO_PLANS_HEADER: "\xdczg\xfcn\xfcz!",
         PREMIUM_NO_PLANS_BODY:
           "Şu an Google Play Faturalandırma \xfczerinden daha fazla takviye i\xe7eren bir plan sunmuyoruz. [Daha fazla bilgi edin.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Aboneliği Duraklat veya İptal Et",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Aboneliği İptal Et veya Duraklat",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Abone Ol - Başlama fiyatı !!{price}!! / Ay",
         PREMIUM_SUBSCRIPTION_UPDATES: "Abonelik G\xfcncellemeleri",
@@ -10842,8 +10901,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "\xfccretsiz deneme s\xfcr\xfcm\xfc",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro'nun ilk **3 ayında** sadece **{discountedPrice}** \xf6de. 3 aylık indirim sona erdikten sonra ayda {regularPrice} \xf6de.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Nitro'nun ilk **{numMonths, plural, one {ayında} other {{numMonths} ayında}}** yalnızca **{discountedPrice}** \xf6de. İndirim bittikten sonra aylık {regularPrice} \xf6de.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 ay boyunca ayda {discountedPrice}\n\n3 aydan sonra ayda {regularPrice}",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "**{numMonths, plural, one {Bir ay} other {{numMonths} ay}}** boyunca aylık {discountedPrice}\n\n{numMonths, plural, one {Bir ay} other {{numMonths} ay}} sonra aylık {regularPrice}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Yıllık abonelikle %!!{percent, number}!! tasarruf et",
         BILLING_SUBTOTAL: "Ara Toplam",
@@ -10901,6 +10964,8 @@
         REVERSED: "Geri Alındı",
         REFUND: "İade",
         RESUBSCRIBE: "Tekrar abone ol",
+        RESUME: "Aboneliği Devam Ettir",
+        WITHDRAW_PAUSE: "Duraklatmayı Geri \xc7ek",
         CREDIT_CARD_ERROR_REQUIRED: "Kart numarası gerekli.",
         CREDIT_CARD_ERROR_NUMBER:
           "Kredi kartı numaranla ilgili bir yanlışlık var",
@@ -13620,6 +13685,16 @@
           "{count, plural, =0 {0 Ortak Arkadaş} one {1 Ortak Arkadaş} other {{count} Ortak Arkadaş}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 Ortak Sunucu} one {1 Ortak Sunucu} other {{count} Ortak Sunucu}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** ile arkadaş",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "**{usernameOne}** ve **{usernameTwo}** ile arkadaş",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "**{usernameOne}**, **{usernameTwo}** ve **{count} kullanıcı** ile arkadaş",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** \xfcyesi",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "**{guildNameOne}** ve **{guildNameTwo}** \xfcyesi",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "**{guildNameOne}**, **{guildNameTwo}** ve **{count} sunucuya daha** \xfcye",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Ortak Arkadaşlar",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Ortak Sunucular",
         PROFILE_IN_VOICE_CALL: "Bir sesli aramada",
@@ -13757,6 +13832,8 @@
           "Aylık {monthlyPrice} veya yıllık {yearlyPrice} arasında se\xe7im yap",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Alıcı şunu elde edecek:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "{nitroTierName} aboneliği hediye et",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Hediye s\xfcresi",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# aylık} other {# aylık}} {nitroTierName} hediye et",
@@ -14611,6 +14688,8 @@
           "Uygulamayı y\xfcklemeye \xe7alışırken bir hata oluştu.",
         INTERACTION_RATE_LIMITED: "Yavaşla! \xc7ok hızlı tıklıyorsun.",
         APPLICATION_ADD_BUTTON: "Uygulamayı Ekle",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Uygulama Eylemleri Ekle",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "Uygulama URL'si Eklemeyi Kopyala",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "İzinleri a\xe7madığın s\xfcrece \xfcyeler bu botu kullanamaz.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17414,6 +17493,24 @@
           "İptal edersen **şu avantajları kaybedeceksin:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Boş ver, Nitro'yu bırakma",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Boş ver, Nitro'yu bırakma",
+        PREMIUM_PAUSE_INSTEAD: "Bunun Yerine Duraklat",
+        PREMIUM_PAUSE_SELECT_TITLE: "Aboneliği duraklat veya iptal et",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "\xdccretli aboneliklere ara vermek istiyorsan birka\xe7 aylığına durdurabilirsin",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Duraklamayı birka\xe7 ay daha devam ettirme se\xe7eneğin mevcut",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Duraklama s\xfcresi se\xe7",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "**Bunun Yerine Duraklatmak** ister misin?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "İptal etmek yerine aboneliğini 90 g\xfcne kadar duraklatabilirsin.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "{days} g\xfcnl\xfcğ\xfcne duraklat",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "{days} g\xfcn daha duraklat",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Aboneliğini iptal et",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Aboneliğin duraklatılacak",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Daha d\xfcş\xfck \xfccrete bazı avantajları koruyabilirsin",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21872,6 +21969,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Yeni tarzlar",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai sonunda senin farkına varacak.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "YENİ: Bahar \xc7izgileri",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Esrarengiz bir b\xfcy\xfc, gecenin sessizliğinde havayı dolduruyor ve...",
         COLLECTIBLES_NEW_BADGE: "YENİ",
         INVENTORY_EMOJI_DETAILS_V2: "Emoji ayrıntılarına g\xf6z at",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23529,6 +23629,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— \xdcyeler",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Hassas değil olarak işaretle",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Hata yaptığımızı mı d\xfcş\xfcn\xfcyorsun? [Bizimle iletişime ge\xe7](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Mesajın g\xf6nderilemedi. İ\xe7inde sunucu tarafından engellenmiş sakıncalı bir medya bulunuyor olabilir.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23678,6 +23780,7 @@
         HANG_STATUS_HELP:
           "Etkinlik durumu belirleyerek arkadaşlarına ne yaptığını g\xf6ster.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Bir \xf6zel durum belirle",
+        HANG_STATUS_MOBILE_SET_ROW: "Ses Etkinliğini Ayarla",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Rapor bulunamadı.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Rapor İncelemesi zaten talep edildi.",
@@ -23778,11 +23881,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Burada bir şey yok",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Bu yanıta oy verilmemiş.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Oylar",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{option} i\xe7in {numVotes, plural, =0 {0 oy} =1 {{numVotes} oy} other {{numVotes} oy}}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Oy verenleri g\xf6r\xfcnt\xfcle",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Oy verenleri g\xf6r\xfcnt\xfcler",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! ve {n, plural, one {1 kişi daha} other {{n} kişi daha}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! ve !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! ve {n, plural, one {1 kişi daha} other {{n} kişi daha}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! ve !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! ve {n, plural, one {1 kişi daha} other {{n} kişi daha}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 kişi} other {{n} kişi}}",
         CREATE_POLL: "Anket Oluştur",
         CREATE_POLL_HEADING: "Bir Anket Oluştur",
         CREATE_POLL_EXPIRATION: "Anket, 24 saat boyunca etkin olacak.",
@@ -23796,11 +23907,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "{answerNumber}. yanıta medya ekle",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "{answerNumber}. yanıttaki {imageName} medyasını g\xfcncelle",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Emoji ekle, yanıt {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "{emojiName} emojisini g\xfcncelle, yanıt {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Emojiyi G\xfcncelle",
         CREATE_POLL_ANSWER_INPUT_LABEL: "{answerNumber}. yanıtı g\xf6nder",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Yanıtını yaz",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Başka bir yanıt ekle",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anket s\xfcresi",
         CREATE_POLL_DURATION_LABEL: "S\xfcre",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 saat} other {{num} saat}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 g\xfcn",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 hafta",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23815,8 +23932,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "\xc7ıkmak istediğine emin misin? Şimdi \xe7ıkarsan yapılan t\xfcm değişiklikler kaybedilecek.",
         CREATE_POLL_REMOVE_ANSWER: "Yanıtı Kaldır",
+        CREATE_POLL_REMOVE_EMOJI: "Emoji Kaldır",
         CREATE_POLL_ADD_IMAGE: "Medya Ekle",
+        CREATE_POLL_ADD_EMOJI: "Emoji Ekle",
         CREATE_POLL_REPLACE_IMAGE: "Medyayı Değiştir",
+        CREATE_POLL_REPLACE_EMOJI: "Emojiyi Değiştir",
         CREATE_POLL_POLL_ANSWER: "Anket Yanıtı",
         CREATE_POLL_EDIT_ALT_TEXT:
           "G\xf6rsel A\xe7ıklamasını (Alt. Metin) D\xfczenle",
@@ -23899,7 +24019,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "T\xfch!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "G\xf6revler hen\xfcz mobilde mevcut değil. Bunun i\xe7in \xfczg\xfcn\xfcz! G\xf6revini kabul etmek i\xe7in masa\xfcst\xfc Discord uygulamasından veya tarayıcı \xfczerinden **Kullanıcı Ayarları > Hediye Envanteri** b\xf6l\xfcm\xfcne gidebilirsin.",
-        QUESTS_MOBILE_EMBED_TITLE: "G\xf6revler hen\xfcz mobilde mevcut değil.",
+        QUESTS_MOBILE_EMBED_TITLE: "G\xf6revler mobilde mevcut değil",
         QUESTS_MOBILE_EMBED_BODY:
           "G\xf6revini kabul etmek i\xe7in masa\xfcst\xfc Discord uygulamasından veya tarayıcı \xfczerinden \nKullanıcı Ayarları > Hediye Envanteri b\xf6l\xfcm\xfcne gidebilirsin.",
         QUESTS_GET_THIS_GAME: "Oyunu al",
@@ -23947,10 +24067,10 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ve {count, plural, one {1 kişi daha} other {{count} kişi daha}}",
         STOREFRONT: "Mağaza",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Uygulama Abonelikleri",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Abonelikler",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "{appName} \xfczerinden abonelik satın al",
-        STOREFRONT_APP_PRODUCTS: "Uygulama \xdcr\xfcnleri",
+        STOREFRONT_APP_PRODUCTS: "\xdcr\xfcnler",
         STOREFRONT_APP_PRODUCTS_BODY:
           "{appName} \xfczerinden \xfcr\xfcn satın al",
         STOREFRONT_SUBSCRIPTION: "Abonelik",
@@ -23971,6 +24091,13 @@
         FOCUS_MODE_TITLE: "Odak Modu (BETA)",
         FOCUS_MODE_BADGE_ON: "A\xc7IK",
         FOCUS_MODE_BADGE_OFF: "KAPALI",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "Rahatsız Etme",
+        FOCUS_MODE_DESCRIPTION:
+          "Masa\xfcst\xfc bildirimlerini ve mesaj seslerini devre dışı bırakır.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Uygulama i\xe7i bildirimleri ve mesaj seslerini devre dışı bırakır.",
+        FOCUS_MODE_TURN_OFF: "Odak Modu'nu kapat",
+        FOCUS_MODE_ENABLE_FOR: "Odak Modu'nu şu s\xfcre boyunca etkinleştir:",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Bir s\xfcredir Rahatsız Etmeyin modundasın. Bunun yerine Odak Moduna ge\xe7mek ister misin?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity} hakkında sohbet et",
@@ -24002,6 +24129,11 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO:
           "{count} dakika \xf6nce",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} sn \xf6nce",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS:
+          "{days} g\xfcnl\xfcğ\xfcne",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours} saatliğine",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "İlk defa",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Etkinlik",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

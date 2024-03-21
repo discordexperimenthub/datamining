@@ -56,6 +56,7 @@
           "\nEnviamos as instru\xe7\xf5es de mudan\xe7a de senha para **!!{email}!!**. Verifique sua caixa de entrada e de spam.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Est\xe1gio",
         STORE_CHANNEL_TYPE: "Loja",
+        NEWS_CHANNEL_TYPE: "Announcement",
         VOICE_CHANNEL_TYPE: "Voz",
         FORUM_CHANNEL_TYPE: "F\xf3rum",
         TEXT_CHANNEL_TYPE: "Texto",
@@ -5692,6 +5693,7 @@
         STATUS_INVISIBLE: "Invis\xedvel",
         STATUS_DND_HELP:
           "Voc\xea n\xe3o ir\xe1 mais receber notifica\xe7\xf5es na \xe1rea de trabalho.",
+        STATUS_DND_HELP_FOCUS_MODE: "Ativa o modo Foco",
         STATUS_INVISIBLE_HELPER:
           "Voc\xea n\xe3o aparecer\xe1 como dispon\xedvel, mas ter\xe1 acesso completo ao Discord.",
         STATUS_UNTIL: "at\xe9 {endTime}",
@@ -6406,8 +6408,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Membro Discord desde",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 amigo m\xfatuo} other {{count} amigos m\xfatuos}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Amigos em comum ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 servidor m\xfatuo} other {{count} servidores m\xfatuos}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Servidores em comum ({count})",
         SHOW_USER_PROFILE: "Mostrar perfil do usu\xe1rio",
         HIDE_USER_PROFILE: "Ocultar perfil do usu\xe1rio",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8832,6 +8836,8 @@
           "Aconselhamos que voc\xea leia os documentos atualizados, j\xe1 que eles se aplicam ao seu uso do Discord. Explicamos algumas das mudan\xe7as mais importantes em uma postagem do nosso blog.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Anunciamos as nossas atualiza\xe7\xf5es anuais de pol\xedticas no m\xeas passado, que agora est\xe3o em vigor. Confira nossa [postagem do blog](https://discord.com/blog/important-policy-updates) para ver um resumo das altera\xe7\xf5es, e leia as pol\xedticas completas abaixo.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Ao clicar em Concordo, voc\xea reconhece que concorda com os Termos de Servi\xe7o do Discord e leu a nossa Pol\xedtica de Privacidade.",
         COMMUNITY_GUIDELINES: "[Diretrizes da Comunidade]({url})",
         BLOG_POST: "[Nossa postagem]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "De uma pessoa espec\xedfica",
@@ -9165,6 +9171,8 @@
           "Esperando aqui at\xe9 voc\xea escolher um servidor para onde mandar {numUnappliedGuildBoostSlots, plural, =1 {esse impulso} other {esses impulsos}}!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Esperando aqui at\xe9 voc\xea escolher um servidor para onde mandar {numUnappliedGuildBoostSlots, plural, =1 {esse impulso} other {esses impulsos}}! Saiba mais sobre as vantagens Nitro $[aqui](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Esperando aqui at\xe9 voc\xea **escolher um servidor para onde mandar {numUnappliedGuildBoostSlots, plural, =1 {esse impulso} other {esses impulsos}}!** Saiba mais sobre as vantagens Nitro $[aqui](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Cancelar impulso",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Retomar impulso",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9369,6 +9377,10 @@
           "Voc\xea tem emoji personalizados, uploads de arquivos maiores e mais por **!!{price}!!** (Cancelamento pendente)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Voc\xea tem emoji personalizados, uploads de arquivos maiores e mais (cancelamento pendente)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Voc\xea tem emoji personalizados, envio de arquivos maiores, e mais por **!!{price}!!** (pausa em **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Voc\xea tem emoji personalizados, envio de arquivos maiores e muito mais (pausa em **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Sua assinatura do Nitro Basic, que concede emoji personalizados, uploads maiores e outras vantagens por **!!{price}!!**, est\xe1 **pendente**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9383,6 +9395,10 @@
           "Por **!!{price}!!**, voc\xea recebe vantagens de bate-papo e um desconto nos Impulsos (Cancelamento pendente)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Voc\xea recebe vantagens de bate-papo e um desconto nos impulsos (Cancelamento pendente)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Por **!!{price}!!**, voc\xea recebe vantagens de bate-papo e um desconto nos impulsos (pausa em **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Voc\xea recebe vantagens de bate-papo e um desconto nos impulsos (pausa em **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Sua assinatura de vantagens de bate-papo e desconto nos impulsos por **!!{price}!!** est\xe1 **pendente**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9397,6 +9413,12 @@
           "Por **!!{price}!!**, voc\xea recebe o bate-papo premium, **{num, number}x** impulsos e um desconto em novos impulsos (Cancelamento pendente)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Voc\xea recebe o bate-papo premium, **{num, number}x** impulsos e um desconto em novos impulsos (Cancelamento pendente)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Por **!!{price}!!**, voc\xea recebe o bate-papo premium, **{num, number}x** impulsos e um desconto em novos impulsos (pausa em **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Voc\xea recebe o bate-papo premium, **{num, number}x** impulsos e um desconto em novos impulsos (pausa em **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Voc\xea pausou sua assinatura Nitro at\xe9 **{resumeDate, date, medium}**. Assim que sua assinatura for retomada, voc\xea recuperar\xe1 o acesso ao Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Sua assinatura de bate-papo premium,  **{num, number}x impulsos** e desconto nos impulsos por **!!{price}!!** est\xe1 **pendente**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9513,6 +9535,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "Experimente o Nitro gr\xe1tis por 30 dias",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Continuar para o teste de 30 dias",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Desfrute de {duration} por nossa conta",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Libere mais divers\xe3o com {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Personaliza\xe7\xf5es de perfil exclusivas e muito mais!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Adicione um \xedcone de aplicativo personalizado, super-rea\xe7\xf5es e muito mais!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} custa a partir de {price}/m\xeas",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Este \xe9 o Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Est\xe1 tudo preparado para sua decolagem!",
@@ -9573,6 +9605,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "Desconto de !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "Economize !!{percent, number}!!% no Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Economize no Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Pague apenas **{discountedPrice}** por **{numMonths, plural, one {um m\xeas!} other {{numMonths} meses!}}** Depois, pague {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Seu desconto de !!{percent, number}!!% terminar\xe1 {numMonths, plural, one {1 m\xeas} other {{numMonths} meses}} ap\xf3s a compra. Depois disso, voc\xea ser\xe1 cobrado {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9598,6 +9632,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "Seu **teste gr\xe1tis acaba {remainingTime, plural, =0 {hoje} one {em # dia} other {em # dias}}**. Depois disso, voc\xea receber\xe1 uma cobran\xe7a de !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "teste gratuito ativado",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Desfrute de {duration} por nossa conta",
         INCLUDED: "Incluso",
         NOT_INCLUDED: "N\xe3o inclu\xeddo",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10162,6 +10198,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "O cancelamento ocorrer\xe1 imediatamente para qualquer assinatura Nitro e de Impulso de Servidor.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Pode cancelar !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Pausar !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Voc\xea continuar\xe1 com acesso ao Nitro at\xe9 **{pauseDate, date, medium}**, e depois sua assinatura ser\xe1 interrompida por {pauseDuration} dias. Recome\xe7aremos a cobran\xe7a em **{resumeDate, date, medium}**. Voc\xea pode reativar sua assinatura a qualquer momento.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "A sua assinatura do Nitro ser\xe1 pausada **agora** por {pauseDuration} dias. Recome\xe7aremos a cobran\xe7a em **{resumeDate, date, medium}**. Voc\xea pode reativar a sua assinatura a qualquer momento.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Voc\xea prolongar\xe1 seu Nitro at\xe9 **{resumeDate, date, medium}**. Voc\xea pode reativar sua assinatura a qualquer momento.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Sim, pause !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Maravilha!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Entendi",
         PREMIUM_UPLOAD_PROMO:
@@ -10209,6 +10253,16 @@
           "Suas assinaturas ser\xe3o renovadas automaticamente em **{renewalDate, date, medium}**. [Acesse suas configura\xe7\xf5es de assinatura (!!{paymentGatewayName}!!)]({subscriptionManagementLink}) para saber mais informa\xe7\xf5es.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Sua assinatura terminar\xe1 em **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Sua assinatura ser\xe1 interrompida em **{pauseDate, date, medium}** e retomar\xe1 automaticamente em **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Sua assinatura est\xe1 atualmente em pausa e ser\xe1 retomada automaticamente em **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Sua assinatura **{planName}** est\xe1 atualmente em pausa e ser\xe1 retomada automaticamente em **{resumeDate, date, short}**, e ser\xe1 cobrado **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "A sua assinatura ser\xe1 retomada ap\xf3s o pagamento pendente.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Sua assinatura de **{planName}** ser\xe1 retomada ap\xf3s o pagamento pendente e ser\xe1 cobrado **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Sua assinatura de **!!{price}!!** est\xe1 vencida. Atualize suas informa\xe7\xf5es de pagamento ou sua assinatura ser\xe1 cancelada em **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10258,6 +10312,9 @@
         PREMIUM_NO_PLANS_HEADER: "Desculpe!",
         PREMIUM_NO_PLANS_BODY:
           "No momento, n\xe3o temos um plano de Pagamento Google Play com mais impulsos. [Saiba mais.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "Pausar ou cancelar a assinatura",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Cancelar ou pausar a assinatura",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Assinaturas a partir de !!{price}!! / m\xeas",
         PREMIUM_SUBSCRIPTION_UPDATES: "Atualiza\xe7\xf5es na assinatura",
@@ -10997,8 +11054,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "teste gratuito",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Pague apenas **{discountedPrice}** por m\xeas nos seus primeiros **3 meses** de Nitro. Ap\xf3s o t\xe9rmino do desconto de 3 meses, pague {regularPrice} por m\xeas.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Pague apenas **{discountedPrice}** por m\xeas nos seus primeiros **{numMonths, plural, one {} other {{numMonths} meses}}** de Nitro. Pague {regularPrice} por m\xeas ap\xf3s o t\xe9rmino do desconto.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/m\xeas durante 3 meses\n\n{regularPrice}/m\xeas ap\xf3s 3 meses",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/m\xeas durante **{numMonths, plural, one {um m\xeas} other {{numMonths} meses}}**\n\n{regularPrice}/m\xeas depois de {numMonths, plural, one {um m\xeas} other {{numMonths} meses}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Economize !!{percent, number}!!% com a assinatura anual",
         BILLING_SUBTOTAL: "Subtotal",
@@ -11055,6 +11116,8 @@
         REVERSED: "Revertida",
         REFUND: "Reembolso",
         RESUBSCRIBE: "Reinscrever",
+        RESUME: "Reativar assinatura",
+        WITHDRAW_PAUSE: "Remover pausa",
         CREDIT_CARD_ERROR_REQUIRED: "O n\xba do cart\xe3o \xe9 obrigat\xf3rio.",
         CREDIT_CARD_ERROR_NUMBER:
           "Deu alguma zica com o seu n\xfamero de cart\xe3o de cr\xe9dito",
@@ -13808,6 +13871,16 @@
           "{count, plural, =0 {0 amigos m\xfatuos} one {1 amigo m\xfatuo} other {{count} amigos m\xfatuos}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 servidores m\xfatuos} one {1 servidor m\xfatuo} other {{count} servidores m\xfatuos}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "amigos com **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "amigos com **{usernameOne}** e **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "amigos com **{usernameOne}**, **{usernameTwo}** e **{count} mais**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "membros de **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "membros de **{guildNameOne}** e **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "membros de **{guildNameOne}**, **{guildNameTwo}** e **{count} mais**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Amigos em comum",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Servidores em comum",
         PROFILE_IN_VOICE_CALL: "Em uma chamada de voz",
@@ -13946,6 +14019,8 @@
           "Escolha entre {monthlyPrice}/m\xeas ou {yearlyPrice}/ano",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "O seu destinat\xe1rio ir\xe1 receber:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Presenteie uma assinatura de {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Dura\xe7\xe3o do presente",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Presente de {count, plural, one {# m\xeas} other {# meses}} de {nitroTierName}",
@@ -14804,6 +14879,8 @@
         INTERACTION_RATE_LIMITED:
           "Vai com calma! Voc\xea est\xe1 clicando r\xe1pido demais.",
         APPLICATION_ADD_BUTTON: "Adicionar app",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Adicionar a\xe7\xf5es do aplicativo",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "Copiar URL do aplicativo",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Membros n\xe3o podem usar esse bot at\xe9 voc\xea ativar as permiss\xf5es.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17653,6 +17730,23 @@
           "Se voc\xea cancelar, **perder\xe1 estas vantagens:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Esque\xe7a, manter o Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Esque\xe7a, manter o Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Fazer uma pausa em vez disso",
+        PREMIUM_PAUSE_SELECT_TITLE: "Pausar ou cancelar a assinatura",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Se voc\xea deseja fazer uma pausa nas assinaturas pagas, tem a op\xe7\xe3o de suspend\xea-las por alguns meses",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Voc\xea possui a op\xe7\xe3o de continuar pausando por meses adicionais",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Selecione a dura\xe7\xe3o da pausa",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "Que tal **fazer uma pausa em vez disso**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Pause a sua assinatura por at\xe9 90 dias em vez de cancelar.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Pausar por {days} dias",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Pausar por mais {days} dias",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Cancelar assinatura",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Sua assinatura ser\xe1 pausada",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Mantenha algumas vantagens por menos",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22114,6 +22208,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Novos estilos",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai certamente te notar\xe1 agora.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NOVIDADE: Primaflores",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "No sil\xeancio da noite, uma m\xe1gica curiosa encanta o ar e...",
         COLLECTIBLES_NEW_BADGE: "NOVO",
         INVENTORY_EMOJI_DETAILS_V2: "Ver os detalhes do emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23752,6 +23849,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— Membros",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Marcar como n\xe3o sens\xedvel",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Cometemos um erro? [Avise-nos](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Sua mensagem n\xe3o p\xf4de ser enviada. Ela pode conter m\xeddia expl\xedcita que foi bloqueada pelo servidor.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23784,7 +23883,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Fazer uma pausa",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Escute Lofi Beats com o Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Relaxar",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Vibe",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Dicas de seguran\xe7a",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Sobre alertas de seguran\xe7a",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23900,6 +23999,7 @@
           "Mostre aos seus amigos o que voc\xea est\xe1 fazendo ao definir um status de atividade.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Definir status personalizado",
+        HANG_STATUS_MOBILE_SET_ROW: "Definir atividade de voz",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Den\xfancia n\xe3o encontrada.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "A revis\xe3o da den\xfancia j\xe1 foi solicitada.",
@@ -24002,11 +24102,19 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "N\xe3o existem votos para esta resposta.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Votos",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 votos} =1 {{numVotes} voto} other {{numVotes} votos}} para {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Revelar votos",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Revela os votos",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! e {n, plural, one {1 outro} other {{n} outros}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! e !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! e {n, plural, one {1 outro} other {{n} outros}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! e !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! e {n, plural, one {1 outro} other {{n} outros}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 pessoa} other {{n} pessoas}}",
         CREATE_POLL: "Criar enquete",
         CREATE_POLL_HEADING: "Cria uma enquete",
         CREATE_POLL_EXPIRATION: "A enquete ficar\xe1 ativa por 24 horas",
@@ -24021,12 +24129,18 @@
           "Adicionar m\xeddia - resposta {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Atualize a m\xeddia, {imageName}, responda {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Adicionar emoji, resposta {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Atualizar emoji, {emojiName}, resposta {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Atualizar emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Responda {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Digite a sua resposta",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Adicione mais uma resposta",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "A enquete estar\xe1 ativa por",
         CREATE_POLL_DURATION_LABEL: "Dura\xe7\xe3o",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 hora} other {{num} horas}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dias",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 semana",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24041,8 +24155,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Voc\xea tem certeza que quer sair? Qualquer altera\xe7\xe3o feita ser\xe1 perdida se voc\xea sair agora.",
         CREATE_POLL_REMOVE_ANSWER: "Remover resposta",
+        CREATE_POLL_REMOVE_EMOJI: "Remover emoji",
         CREATE_POLL_ADD_IMAGE: "Adicionar m\xeddia",
+        CREATE_POLL_ADD_EMOJI: "Adicionar emoji",
         CREATE_POLL_REPLACE_IMAGE: "Substituir m\xeddia",
+        CREATE_POLL_REPLACE_EMOJI: "Substituir emoji",
         CREATE_POLL_POLL_ANSWER: "Resposta da Enquete",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Editar descri\xe7\xe3o da imagem (texto alternativo)",
@@ -24122,7 +24239,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "As miss\xf5es ainda n\xe3o est\xe3o dispon\xedveis para dispositivos m\xf3veis... Pedimos desculpas! A partir do aplicativo Discord no seu computador ou navegador, voc\xea pode ir em **Configura\xe7\xf5es de Usu\xe1rio > Invent\xe1rio de Presentes** e aceitar a miss\xe3o l\xe1.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Miss\xf5es n\xe3o est\xe3o dispon\xedveis para celular... ainda.",
+          "Miss\xf5es n\xe3o est\xe3o dispon\xedveis em dispositivos m\xf3veis",
         QUESTS_MOBILE_EMBED_BODY:
           "Voc\xea pode ir para \nConfigura\xe7\xf5es de Usu\xe1rio > Invent\xe1rio de Presentes e aceitar a miss\xe3o a partir do seu navegador ou aplicativo Discord no computador.",
         QUESTS_GET_THIS_GAME: "Obter jogo",
@@ -24172,9 +24289,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! e {count, plural, one {1 outro} other {{count} outros}}",
         STOREFRONT: "Loja",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Assinaturas do aplicativo",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Assinaturas",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Comprar assinaturas de {appName}",
-        STOREFRONT_APP_PRODUCTS: "Produtos do aplicativo",
+        STOREFRONT_APP_PRODUCTS: "Produtos",
         STOREFRONT_APP_PRODUCTS_BODY: "Adquirir produtos de {appName}",
         STOREFRONT_SUBSCRIPTION: "Assinatura",
         STOREFRONT_SUBSCRIBE_FOR: "Assine por {rate}",
@@ -24193,6 +24310,13 @@
         FOCUS_MODE_TITLE: "Modo Foco (BETA)",
         FOCUS_MODE_BADGE_ON: "LIGADO",
         FOCUS_MODE_BADGE_OFF: "DESLIGADO",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "N\xe3o Perturbe",
+        FOCUS_MODE_DESCRIPTION:
+          "Desativa notifica\xe7\xf5es da \xe1rea de trabalho e sons de mensagem.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Desativa notifica\xe7\xf5es do app e sons de mensagens.",
+        FOCUS_MODE_TURN_OFF: "Desative o modo Foco",
+        FOCUS_MODE_ENABLE_FOR: "Ative o modo Foco",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Voc\xea esteve no modo N\xe3o Perturbe por um bom tempo. Gostaria de ativar o modo Foco em vez disso?",
         ACTIVITY_REACTION_REPLY_TITLE: "Conversa sobre {activity}",
@@ -24223,6 +24347,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "H\xe1 {count}h",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "H\xe1 {count}min",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}s atr\xe1s",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "por {days}d",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "por {hours}h",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pela primeira vez",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Atividade",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

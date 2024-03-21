@@ -52,6 +52,7 @@
           "\nเราได้ส่งคำแนะนำเพื่อเปลี่ยนรหัสผ่านไปยัง **!!{email}!!** กรุณาตรวจสอบทั้งกล่องขาเข้าและโฟลเดอร์สแปม\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "ลำดับขั้น",
         STORE_CHANNEL_TYPE: "ร้านค้า",
+        NEWS_CHANNEL_TYPE: "ประกาศ",
         VOICE_CHANNEL_TYPE: "เสียง",
         FORUM_CHANNEL_TYPE: "ฟอรั่ม",
         TEXT_CHANNEL_TYPE: "ข้อความ",
@@ -5446,6 +5447,7 @@
         STATUS_DND: "ห้ามรบกวน",
         STATUS_INVISIBLE: "ไม่ระบุ",
         STATUS_DND_HELP: "คุณจะไม่ได้รับการแจ้งเตือนใดๆ บนเดสก์ท็อป",
+        STATUS_DND_HELP_FOCUS_MODE: "เปิดใช้งานโหมดโฟกัส",
         STATUS_INVISIBLE_HELPER:
           "คุณจะไม่ปรากฏออนไลน์ แต่จะสามารถเข้าถึงทั้งหมด",
         STATUS_UNTIL: "ถึง {endTime}",
@@ -6128,8 +6130,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "เป็นสมาชิก Discord ตั้งแต่",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {เพื่อนร่วมกัน 1 คน} other {{count} เพื่อนร่วมกัน}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "เพื่อนร่วมกัน ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {เซิร์ฟเวอร์ร่วมกัน 1 เซิร์ฟเวอร์} other {{count} เซิร์ฟเวอร์ร่วมกัน}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "เซิร์ฟเวอร์ร่วมกัน ({count})",
         SHOW_USER_PROFILE: "แสดงโปรไฟล์ผู้ใช้",
         HIDE_USER_PROFILE: "ซ่อนโปรไฟล์ผู้ใช้",
         SHOW_USER_PROFILE_UNAVAILABLE: "แสดงโปรไฟล์ผู้ใช้ (ใช้งานไม่ได้)",
@@ -8421,6 +8425,8 @@
           "เราขอแนะนำให้คุณอ่านเอกสารที่อัปเดตแล้วในฉบับสมบูรณ์ เนื่องจากมันจะถูกปรับใช้กับการใช้งาน Discord ของคุณ เราได้อธิบายการเปลี่ยนแปลงที่สำคัญที่สุดบางส่วนไว้ในบล็อกโพสต์ของเรา",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "เราได้ประกาศการอัปเดตนโยบายประจำปีไปเมื่อเดือนที่แล้ว ซึ่งมีผลบังคับใช้อยู่ในขณะนี้ ดูสรุปการเปลี่ยนแปลงเหล่านี้ได้ใน[บล็อกโพสต์](https://discord.com/blog/important-policy-updates)ของเรา และอ่านนโยบายฉบับเต็มได้ที่ด้านล่าง",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "เมื่อคลิกยอมรับ แสดงว่าคุณยอมรับข้อกำหนดการให้บริการของ Discord และได้อ่านนโยบายความเป็นส่วนตัวของเราแล้ว",
         COMMUNITY_GUIDELINES: "[แนวทางปฏิบัติในชุมชน]({url})",
         BLOG_POST: "[บล็อกโพสต์]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "จากบุคคลที่เจาะจง",
@@ -8740,6 +8746,8 @@
           "ยังรออยู่ที่นี่จนกว่าคุณจะเลือกเซิร์ฟเวอร์ที่จะ{numUnappliedGuildBoostSlots, plural, =1 {บูสต์} other {บูสต์}}ให้!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "ยังรออยู่ที่นี่จนกว่าคุณจะเลือกเซิร์ฟเวอร์ที่จะ{numUnappliedGuildBoostSlots, plural, =1 {บูสต์} other {บูสต์}}ให้! เรียนรู้เพิ่มเติมเกี่ยวกับสิทธิประโยชน์จาก Nitro ของคุณ$[ที่นี่](learnMoreHook)",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "รออยู่ที่นี่จนกว่าคุณ**จะเลือกเซิร์ฟเวอร์ที่จะ{numUnappliedGuildBoostSlots, plural, =1 {บูสต์} other {บูสต์}}ให้! เรียนรู้เพิ่มเติมเกี่ยวกับสิทธิประโยชน์จาก Nitro ของคุณ$[ที่นี่](learnMoreHook)",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "ยกเลิกบูสต์",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "ไม่ยกเลิกบูสต์",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -8940,6 +8948,10 @@
           "คุณมีอีโมจิแบบกำหนดเอง พื้นที่การอัปโหลดที่มากขึ้น และอีกมากมายสำหรับ **!!{price}!!**(การยกเลิกที่อยู่ระหว่างดำเนินการ)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "คุณมีอีโมจิแบบกำหนดเอง พื้นที่การอัปโหลดที่มากขึ้น และอีกมากมาย (การยกเลิกที่ค้างอยู่)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "คุณมีอีโมจิแบบกำหนดเอง พื้นที่การอัปโหลดมากขึ้น และอีกมากมายสำหรับ **!!{price}!!** (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "คุณมีอีโมจิแบบกำหนดเอง พื้นที่การอัปโหลดมากขึ้น และอีกมากมาย (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "การสมัครสมาชิก Nitro Basic ซึ่งจะมอบอีโมจิแบบกำหนดเองให้คุณ พื้นที่การอัปโหลดที่มากขึ้น และสิทธิประโยชน์อื่นๆ สำหรับ **!!{price}!!** นั้น **ถูกระงับ**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -8954,6 +8966,10 @@
           "คุณมีสิทธิพิเศษในการแชทและส่วนลดการบูสต์มูลค่า **!!{price}!!** (อยู่ระหว่างการยกเลิก)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "คุณมีสิทธิพิเศษในการแชทและส่วนลดบูสต์ (อยู่ระหว่างการยกเลิก)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "คุณมีสิทธิพิเศษในการแชทและส่วนลดการบูสต์มูลค่า **!!{price}!!** (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "คุณมีสิทธิพิเศษในการแชทและส่วนลดบูสต์ (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "สิทธิประโยชน์ในการแชทและส่วนลดบูสต์สำหรับการเป็นสมาชิก **!!{price}!!** ถูก **ระงับ**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -8968,6 +8984,12 @@
           "คุณมีแชทพรีเมียม การบูสต์ **{num, number}x** บูสต์ และส่วนลดการบูสต์มูลค่า **!!{price}!!** (อยู่ระหว่างการยกเลิก)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "คุณมีแชทพรีเมี่ยม การบูสต์ **{num, number}x** และส่วนลดบูสต์ (อยู่ระหว่างการยกเลิก)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "คุณมีแชทพรีเมียม การบูสต์ **{num, number}x** บูสต์ และส่วนลดการบูสต์มูลค่า **!!{price}!!** (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "คุณมีแชทพรีเมียม การบูสต์ **{num, number}x** บูสต์ และส่วนลดการบูสต์มูลค่า (ระงับชั่วคราวเมื่อวันที่ **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "คุณหยุดการสมัครสมาชิก Nitro ชั่วคราวจนถึง **{resumeDate, date, medium}** เมื่อคุณกลับมาเป็นสมาชิก คุณจะได้รับสิทธิ์เข้าถึง Nitro อีกครั้ง",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "การเป็นสมาชิกการแชทแบบพรีเมี่ยม **{num, number}x** บูสต์และส่วนลดบูสต์ของคุณสำหรับ **!!{price}!!** ถูก **ระงับ**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9077,6 +9099,15 @@
           "ลองใช้ Nitro Basic ฟรี 30 วัน",
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER: "ลองใช้ Nitro ฟรี 30 วัน",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "ดำเนินการต่อเพื่อทดลองใช้ 30 วัน",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL: "ใช้ฟรี {duration}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "ปลดปล่อยความสนุกได้มากขึ้นด้วย {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "การปรับแต่งโปรไฟล์เฉพาะและอีกมากมาย!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "เพิ่มไอคอนแอปแบบกำหนดเอง ซูเปอร์รีแอ็กชัน และอีกมากมาย!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} เริ่มต้นที่ {price}/เดือน",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "ยินดีต้อนรับสู่ Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "คุณพร้อมลุยแล้ว!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED_ONE:
@@ -9135,6 +9166,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "ลด !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "Nitro ประหยัดเพิ่ม !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro ประหยัดคุ้ม",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "จ่ายเพียง **{discountedPrice}** สำหรับ **{numMonths, plural, one {เดือน!} other {{numMonths} เดือน!}}** จากนั้นจ่าย {regularPrice}",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "ส่วนลด !!{percent, number}!!% ของคุณจะสิ้นสุดลงหลังซื้อครบ {numMonths, plural, one {1 เดือน} other {{numMonths} เดือน}} หลังจากนั้นเราจะเรียกเก็บค่าบริการที่ {regularPrice}",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9159,6 +9192,7 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "**การทดลองใช้ฟรีของคุณสิ้นสุด{remainingTime, plural, =0 {วันนี้} one {ใน # วัน} other {ใน # วัน}}** หลังจากนั้น คุณจะชำระเงิน !!{price}!!",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "เปิดใช้งานการทดลองใช้ฟรีแล้ว",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL: "ใช้ฟรี {duration}",
         INCLUDED: "รวมอยู่",
         NOT_INCLUDED: "ไม่รวม",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9711,6 +9745,15 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "การยกเลิกจะมีผลทันทีกับการสมัครสมาชิก Nitro และการบูสต์เซิร์ฟเวอร์",
         PREMIUM_CANCEL_CONFIRM_NEW: "ช่าย ยกเลิกเลย !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "หยุด !!{planPremiumType}!! ชั่วคราวหรือไม่",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "คุณจะยังมีสิทธิ์เข้าถึง Nitro จนถึง **{pauseDate, date, medium}** และจากนั้นการสมัครสมาชิกของคุณจะหยุดชั่วคราวเป็นเวลา {pauseDuration} วัน เราจะเริ่มเรียกเก็บเงินจากคุณอีกครั้งในวันที่ **{resumeDate, date, medium}** ทั้งนี้คุณสามารถกลับมาเป็นสมาชิกได้ทุกเมื่อ",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "การสมัครสมาชิก Nitro ของคุณจะหยุดชั่วคราว**ตอนนี้**เป็นเวลา {pauseDuration} วัน เราจะเริ่มเรียกเก็บเงินจากคุณอีกครั้งในวันที่ **{resumeDate, date, medium}** ทั้งนี้คุณสามารถกลับมาเป็นสมาชิกได้ทุกเมื่อ",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "คุณจะต่ออายุ Nitro จนถึง **{resumeDate, date, medium}** ทั้งนี้คุณสามารถกลับมาเป็นสมาชิกได้ทุกเมื่อ",
+        PREMIUM_PAUSE_CONFIRM_NEW: "ใช่ หยุด !!{planPremiumType}!! ชั่วคราว",
         PREMIUM_UPGRADE_DONE_BUTTON: "ยอดไปเลย",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "รับทราบ",
         PREMIUM_UPLOAD_PROMO:
@@ -9757,6 +9800,16 @@
           "การสมัครสมาชิกของคุณจะต่ออายุโดยอัตโนมัติในวันที่ **{renewalDate, date, medium}** โปรด[ไปที่การตั้งค่าการสมัครสมาชิก !!{paymentGatewayName}!!]({subscriptionManagementLink}) ของคุณเพื่อดูข้อมูลเพิ่มเติม",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "การสมัครสมาชิกของคุณจะสิ้นสุดในวันที่ **{endDate, date, medium}**",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "การสมัครสมาชิกของคุณจะหยุดชั่วคราวในวันที่ **{pauseDate, date, medium}** และกลับมาเป็นสมาชิกโดยอัตโนมัติในวันที่ **{resumeDate, date, medium}**",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "ขณะนี้การสมัครสมาชิกของคุณถูกหยุดชั่วคราวและจะกลับมาเป็นสมาชิกโดยอัตโนมัติในวันที่ **{resumeDate, date, medium}**",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "ขณะนี้การสมัครสมาชิก **{planName}** ของคุณถูกหยุดชั่วคราวและจะกลับมาเป็นสมาชิกโดยอัตโนมัติในวันที่ **{resumeDate, date, short}** และเราจะเรียกเก็บค่าบริการ **!!{price}!!**",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "การสมัครสมาชิกของคุณจะกลับมาสู่สถานะรอดำเนินการชำระเงิน",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "การสมัครสมาชิก **{planName}** ของคุณจะกลับมาสู่สถานะรอดำเนินการชำระเงินและเราจะเรียกเก็บค่าบริการ **!!{price}!!**",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "สมาชิก **!!{price}!!** ของคุณเกินกำหนดชำระเงิน โปรดอัปเดตข้อมูลการชำระเงินของคุณ มิฉะนั้นการเป็นสมาชิกของคุณจะสิ้นสุดในวันที่ **{endDate, date, medium}**",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -9806,6 +9859,10 @@
         PREMIUM_NO_PLANS_HEADER: "ขออภัย!",
         PREMIUM_NO_PLANS_BODY:
           "เรายังไม่มีการเสนอแผนที่มีบูสต์มากกว่านี้สำหรับการชำระเงินผ่าน Google Play ในขณะนี้ [ดูข้อมูลเพิ่มเติม]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "หยุดชั่วคราวหรือยกเลิกการสมัครสมาชิก",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "ยกเลิกหรือหยุดการสมัครสมาชิกชั่วคราว",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "สมัครสมาชิก - เริ่มต้น !!{price}!! / เดือน",
         PREMIUM_SUBSCRIPTION_UPDATES: "อัปเดตการสมัครสมาชิก",
@@ -10517,8 +10574,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "การทดลองใช้ฟรี",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "จ่ายเพียง **{discountedPrice}** ต่อเดือนสำหรับ **3 เดือน**แรกที่สมัคร Nitro แล้วจ่าย {regularPrice} ต่อเดือนหลังจากสิ้นสุดส่วนลดนาน 3 เดือน",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "จ่ายเพียง **{discountedPrice}** ต่อเดือนสำหรับ **{numMonths, plural, one { เดือน} other {{numMonths} เดือนแรกที่สมัคร}}** Nitro จากนั้นจ่าย {regularPrice} ต่อเดือนหลังจากส่วนลดหมดอายุลง",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/เดือนนาน 3 เดือน\n\n{regularPrice}/เดือนหลังจาก 3 เดือน",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/เดือนสำหรับ **{numMonths, plural, one {หนึ่งเดือน} other {{numMonths} เดือน}}**\n\n{regularPrice}/เดือนหลังจาก {numMonths, plural, one {หนึ่งเดือน} other {{numMonths} เดือน}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "ประหยัด !!{percent, number}!!% ด้วยการสมัครรายปี",
         BILLING_SUBTOTAL: "ยอดไม่รวมภาษี",
@@ -10573,6 +10634,8 @@
         REVERSED: "ย้อนคืนแล้ว",
         REFUND: "คืนเงิน",
         RESUBSCRIBE: "สมัครใหม่",
+        RESUME: "กลับมาเป็นสมาชิก",
+        WITHDRAW_PAUSE: "ถอนการหยุดชั่วคราว",
         CREDIT_CARD_ERROR_REQUIRED: "ต้องระบุหมายเลขบัตร",
         CREDIT_CARD_ERROR_NUMBER: "มีบางอย่างผิดพลาดกับหมายเลขบัตรเครดิตของคุณ",
         CREDIT_CARD_ERROR_EXPIRATION: "มีบางอย่างผิดพลาดกับวันที่หมดอายุ",
@@ -13205,6 +13268,16 @@
           "{count, plural, =0 {0 เพื่อนร่วมกัน} one {1 เพื่อนร่วมกัน} other {{count} เพื่อนร่วมกัน}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 เซิร์ฟเวอร์ร่วมกัน} one {1 เซิร์ฟเวอร์ร่วมกัน} other {{count} เซิร์ฟเวอร์ร่วมกัน}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "เป็นเพื่อนกับ **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "เป็นเพื่อนกับ **{usernameOne}** และ **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "เป็นเพื่อนกับ **{usernameOne}**, **{usernameTwo}** และ **{count} และอีกมากมาย**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "สมาชิกของ **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "สมาชิกของ **{guildNameOne}** และ **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "สมาชิกของ **{guildNameOne}**, **{guildNameTwo}** และ **{count} และอีกมากมาย**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "เพื่อนร่วมกัน",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "เซิร์ฟเวอร์ร่วมกัน",
         PROFILE_IN_VOICE_CALL: "ในการโทรด้วยเสียง",
@@ -13339,6 +13412,8 @@
           "เลือก {monthlyPrice}/เดือน หรือ {yearlyPrice}/ปี",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "ผู้ที่ได้ของขวัญจะได้รับ:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "ส่งการเป็นสมาชิก {nitroTierName} เป็นของขวัญ",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "ระยะเวลาของขวัญ",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "ให้ของขวัญเป็น {nitroTierName} นาน {count, plural, one {# เดือน} other {# เดือน}}",
@@ -14166,6 +14241,8 @@
           "เกิดข้อผิดพลาดในการโหลดแอปพลิเคชัน",
         INTERACTION_RATE_LIMITED: "ใจเย็น ๆ! คุณคลิกเร็วเกินไปแล้ว",
         APPLICATION_ADD_BUTTON: "เพิ่มแอป",
+        APPLICATION_ADD_BUTTON_ACTIONS: "เพิ่มการดำเนินการสำหรับแอป",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "คัดลอก URL การเพิ่มแอป",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "สมาชิกไม่สามารถใช้บอทตัวนี้ได้จนกว่าคุณจะเปิดการอนุญาต",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -16881,6 +16958,24 @@
           "หากยกเลิก **คุณจะเสียสิทธิพิเศษเหล่านี้ไป:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "ไม่เป็นไร ฉันจะใช้ Nitro ต่อ",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "ไม่เป็นไร ฉันจะใช้ Nitro ต่อ",
+        PREMIUM_PAUSE_INSTEAD: "หยุดชั่วคราวแทน",
+        PREMIUM_PAUSE_SELECT_TITLE: "หยุดชั่วคราวหรือยกเลิกการสมัครสมาชิก",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "หากคุณต้องการหยุดพักจากการสมัครสมาชิกแบบชำระเงิน คุณมีตัวเลือกในการหยุดชั่วคราวเป็นเวลาสองสามเดือน",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "คุณมีตัวเลือกในการหยุดชั่วคราวต่อไปอีกเป็นเวลาหลายเดือน",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "เลือกระยะเวลาหยุดชั่วคราว",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "คุณต้องการที่จะ**หยุดชั่วคราวแทน**หรือไม่",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "หยุดการสมัครสมาชิกของคุณชั่วคราวสูงสุด 90 วันแทนการยกเลิก",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "หยุดชั่วคราวเป็นเวลา {days} วัน",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "หยุดชั่วคราวเป็นเวลาอีก {days} วัน",
+        PREMIUM_PAUSE_DURATION_CANCEL: "ยกเลิกการสมัครสมาชิก",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "การสมัครสมาชิกของคุณจะหยุดชั่วคราว",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "ได้สิทธิประโยชน์บางส่วนอยู่ แต่จ่ายน้อยกว่า",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21202,6 +21297,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "อนิเมะ: สไตล์ใหม่",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "เซ็นไปจะต้องสังเกตเห็นเธอแน่ๆ คราวนี้",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "ใหม่: ตัวการ์ตูนฤดูใบไม้ผลิ",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "ในค่ำคืนอันเงียบสงบ เวทมนตร์พิศวงเข้าปกคลุมและ...",
         COLLECTIBLES_NEW_BADGE: "ใหม่",
         INVENTORY_EMOJI_DETAILS_V2: "ดูรายละเอียดอีโมจิ",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -22806,6 +22904,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— สมาชิก",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "ทำเครื่องหมายว่าไม่ใช่เนื้อหาละเอียดอ่อน",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "หากเราตัดสินผิดพลาด โปรด[แจ้งให้เราทราบ](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "คุณส่งข้อความไม่ได้ เพราะอาจมีสื่อที่โจ่งแจ้ง ซึ่งถูกเซิร์ฟเวอร์บล็อก",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -22836,7 +22936,7 @@
         SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON: "เยี่ยมชม",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "พัก",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE: "ฟังเพลง LoFi กับ Wumpus",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "ผ่อนคลาย",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "บรรยากาศ",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "เคล็ดลับเพื่อความปลอดภัย",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "เกี่ยวกับการแจ้งเตือนความปลอดภัย",
@@ -22949,6 +23049,7 @@
         HANG_STATUS_HELP:
           "แสดงให้เพื่อนของคุณเห็นว่าคุณกำลังทำอะไรอยู่โดยตั้งค่าสถานะกิจกรรม",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "ตั้งสถานะกำหนดเอง",
+        HANG_STATUS_MOBILE_SET_ROW: "กำหนดกิจกรรมเสียง",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "ไม่พบรายงาน",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "ร้องขอให้ตรวจสอบรายงานแล้ว",
@@ -23046,11 +23147,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "ไม่มีอะไรให้อ่านที่นี่",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "ไม่มีการโหวตให้คำตอบนี้",
         POLL_ANSWER_VOTES_MODAL_TITLE: "โหวต",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 โหวต} =1 {{numVotes} โหวต} other {{numVotes} โหวต}}สำหรับ {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "ดูคนโหวต",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "ดูคนโหวต",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! และคนอื่นๆ อีก {n, plural, one {1 คน} other {{n} คน}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! และ !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! และอีก {n, plural, one {1 คน} other {{n} คน}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! และ !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! และอีก {n, plural, one {1 คน} other {{n} คน}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 คน} other {{n} คน}}",
         CREATE_POLL: "สร้างโพลล์",
         CREATE_POLL_HEADING: "สร้างโพลล์",
         CREATE_POLL_EXPIRATION: "โพลล์จะอยู่นาน 24 ชั่วโมง",
@@ -23063,11 +23172,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "เพิ่มสื่อ คำตอบ {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "อัปเดตสื่อ {imageName} คำตอบ {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "เพิ่มอีโมจิ, ตอบกลับ {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "อัปเดตอีโมจิ, {emojiName}, ตอบกลับ {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "อัปเดตอีโมจิ",
         CREATE_POLL_ANSWER_INPUT_LABEL: "คำตอบ {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "พิมพ์คำตอบ",
         CREATE_POLL_ADD_ANSWER_BUTTON: "เพิ่มอีกคำตอบ",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "โพลล์จะอยู่นาน",
         CREATE_POLL_DURATION_LABEL: "ระยะเวลา",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 ชั่วโมง} other {{num} ชั่วโมง}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 วัน",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 สัปดาห์",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "โพลล์จะอยู่นาน {duration}",
@@ -23080,8 +23195,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "คุณแน่ใจหรือไม่ว่าจะออก การเปลี่ยนแปลงที่เกิดจะหายไปหากออกตอนนี้",
         CREATE_POLL_REMOVE_ANSWER: "ลบคำตอบ",
+        CREATE_POLL_REMOVE_EMOJI: "ลบอีโมจิ",
         CREATE_POLL_ADD_IMAGE: "เพิ่มสื่อ",
+        CREATE_POLL_ADD_EMOJI: "เพิ่มอีโมจิ",
         CREATE_POLL_REPLACE_IMAGE: "แทนที่สื่อ",
+        CREATE_POLL_REPLACE_EMOJI: "แทนที่อีโมจิ",
         CREATE_POLL_POLL_ANSWER: "คำตอบโพลล์",
         CREATE_POLL_EDIT_ALT_TEXT: "แก้ไขคำอธิบายภาพ (ข้อความแสดงแทน)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "แก้ไขคำอธิบายภาพ",
@@ -23154,8 +23272,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "อ๊ะ!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "ยังไม่สามารถทำภารกิจบนมือถือได้ ต้องขออภัยจริงๆ! จากแอป Discord บนเดสก์ท็อปหรือเบราว์เซอร์ของคุณ ให้ไปที่**การตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ** และรับภารกิจได้จากที่นั่น",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "ภารกิจยังไม่พร้อมใช้งานบนมือถือ... ในตอนนี้",
+        QUESTS_MOBILE_EMBED_TITLE: "ภารกิจยังไม่พร้อมใช้งานบนมือถือ",
         QUESTS_MOBILE_EMBED_BODY:
           "จากแอป Discord บนเดสก์ท็อปหรือเบราว์เซอร์ของคุณ ให้ไปที่\nการตั้งค่าผู้ใช้ > ห้องเก็บของขวัญ และรับภารกิจได้จากที่นั่น",
         QUESTS_GET_THIS_GAME: "รับเกม",
@@ -23202,9 +23319,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! และอีก {count, plural, one {1 คน} other {{count} คน}}",
         STOREFRONT: "ร้านค้า",
-        STOREFRONT_APP_SUBSCRIPTIONS: "การสมัครสมาชิกแอป",
+        STOREFRONT_APP_SUBSCRIPTIONS: "การสมัครสมาชิก",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "ซื้อการสมัครสมาชิกจาก {appName}",
-        STOREFRONT_APP_PRODUCTS: "ผลิตภัณฑ์แอป",
+        STOREFRONT_APP_PRODUCTS: "ผลิตภัณฑ์",
         STOREFRONT_APP_PRODUCTS_BODY: "ซื้อผลิตภัณฑ์จาก {appName}",
         STOREFRONT_SUBSCRIPTION: "การสมัครสมาชิก",
         STOREFRONT_SUBSCRIBE_FOR: "สมัครสมาชิกในราคา {rate}",
@@ -23224,6 +23341,13 @@
         FOCUS_MODE_TITLE: "โหมดโฟกัส (เบต้า)",
         FOCUS_MODE_BADGE_ON: "เปิด",
         FOCUS_MODE_BADGE_OFF: "ปิด",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION:
+          "ปิดใช้งานการแจ้งเตือนบนเดสก์ท็อปและเสียงข้อความ",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "ปิดใช้งานการแจ้งเตือนในแอปและเสียงข้อความ",
+        FOCUS_MODE_TURN_OFF: "ปิดโหมดโฟกัส",
+        FOCUS_MODE_ENABLE_FOR: "เปิดใช้งานโหมดโฟกัสเป็นเวลา",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "คุณอยู่ในโหมดห้ามรบกวนมาระยะหนึ่งแล้ว คุณต้องการเปิดใช้งานโหมดโฟกัสแทนหรือไม่",
         ACTIVITY_REACTION_REPLY_TITLE: "แชทเกี่ยวกับ {activity}",
@@ -23254,6 +23378,11 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} ชั่วโมงที่แล้ว",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} นาทีที่แล้ว",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} วินาทีที่แล้ว",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "เป็นเวลา {days} วัน",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS:
+          "เป็นเวลา {hours} ชั่วโมง",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "ครั้งแรก",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "กิจกรรม",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

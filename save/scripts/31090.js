@@ -57,6 +57,7 @@
           "\nCh\xfang t\xf4i đ\xe3 gửi hướng dẫn thay đổi mật khẩu v\xe0o **!!{email}!!**, vui l\xf2ng kiểm tra hộp thư cũng như thư mục Spam của bạn.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Giai Đoạn",
         STORE_CHANNEL_TYPE: "Cửa h\xe0ng",
+        NEWS_CHANNEL_TYPE: "Th\xf4ng b\xe1o",
         VOICE_CHANNEL_TYPE: "Giọng n\xf3i",
         FORUM_CHANNEL_TYPE: "Diễn Đ\xe0n",
         TEXT_CHANNEL_TYPE: "Văn bản",
@@ -5755,6 +5756,7 @@
         STATUS_INVISIBLE: "V\xf4 h\xecnh",
         STATUS_DND_HELP:
           "Bạn sẽ kh\xf4ng nhận được c\xe1c th\xf4ng b\xe1o tr\xean m\xe1y b\xe0n.",
+        STATUS_DND_HELP_FOCUS_MODE: "Bật Chế Độ Tập Trung",
         STATUS_INVISIBLE_HELPER:
           "Bạn sẽ hiển thị đang ngoại tuyến, nhưng vẫn c\xf3 thể truy cập v\xe0o Discord.",
         STATUS_UNTIL: "cho tới {endTime}",
@@ -6478,8 +6480,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Gia Nhập Discord Từ",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 Bạn Chung} other {{count} Bạn Chung}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Bạn Chung ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 M\xe1y Chủ Chung} other {{count} M\xe1y Chủ Chung}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "M\xe1y Chủ Chung ({count})",
         SHOW_USER_PROFILE: "Hiện Hồ Sơ Người D\xf9ng",
         HIDE_USER_PROFILE: "Ẩn Hồ Sơ Người D\xf9ng",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8935,6 +8939,8 @@
           "Ch\xfang t\xf4i khuyến kh\xedch bạn đọc to\xe0n bộ c\xe1c t\xe0i liệu đ\xe3 cập nhật v\xec những thay đổi n\xe0y sẽ ảnh hưởng đến việc sử dụng Discord của bạn. Một v\xe0i c\xe1c thay đổi quan trọng nhất sẽ được ch\xfang t\xf4i giải th\xedch trong b\xe0i đăng tr\xean blog.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Ch\xfang t\xf4i đ\xe3 th\xf4ng b\xe1o cập nhật thường ni\xean d\xe0nh cho c\xe1c ch\xednh s\xe1ch của m\xecnh v\xe0o th\xe1ng trước, hiện những cập nhật n\xe0y đ\xe3 bắt đầu c\xf3 hiệu lực. H\xe3y truy cập [b\xe0i đăng blog](https://discord.com/blog/important-policy-updates) của ch\xfang t\xf4i để đọc t\xf3m tắt c\xe1c thay đổi v\xe0 xem ch\xednh s\xe1ch đầy đủ ở b\xean dưới.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Khi nhấn v\xe0o Đồng \xfd, bạn thừa nhận rằng bạn đồng \xfd t\xednh hiệu lực của Điều Khoản Dịch Vụ của Discord v\xe0 đ\xe3 đọc Ch\xednh S\xe1ch Bảo Mật của ch\xfang t\xf4i.",
         COMMUNITY_GUIDELINES: "[Nguy\xean Tắc Cộng Đồng]({url})",
         BLOG_POST: "[B\xe0i đăng blog của ch\xfang t\xf4i]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Từ một người cụ thể",
@@ -9267,6 +9273,8 @@
           "Sẽ đợi ở đ\xe2y cho đến khi bạn chọn một m\xe1y chủ để trao {numUnappliedGuildBoostSlots, plural, =1 {lượt N\xe2ng Cấp} other {lượt N\xe2ng Cấp}} n\xe0y!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Sẽ đợi ở đ\xe2y cho đến khi bạn chọn một m\xe1y chủ để trao {numUnappliedGuildBoostSlots, plural, =1 {lượt N\xe2ng Cấp} other {lượt N\xe2ng Cấp}} n\xe0y! T\xecm hiểu th\xeam về c\xe1c Đặc quyền Nitro của bạn $[tại đ\xe2y](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Sẽ đợi ở đ\xe2y cho đến khi bạn **chọn một m\xe1y chủ để trao {numUnappliedGuildBoostSlots, plural, =1 {lượt N\xe2ng Cấp} other {lượt N\xe2ng Cấp}} n\xe0y!** T\xecm hiểu th\xeam về c\xe1c Đặc quyền Nitro của bạn $[tại đ\xe2y](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Hủy N\xe2ng Cấp",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Bỏ Hủy N\xe2ng Cấp",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9476,6 +9484,10 @@
           "Bạn c\xf3 emoji t\xf9y chỉnh, dung lượng tải l\xean nhiều hơn, v\xe0 nhiều t\xednh năng kh\xe1c với **!!{price}!!** (Lệnh hủy đang chờ xử l\xfd)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Bạn c\xf3 emoji t\xf9y chỉnh, dung lượng tải l\xean nhiều hơn, v\xe0 nhiều t\xednh năng kh\xe1c nữa (Lệnh hủy đang chờ xử l\xfd)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Bạn c\xf3 emoji t\xf9y chỉnh, dung lượng tải l\xean nhiều hơn, v\xe0 nhiều t\xednh năng kh\xe1c với **!!{price}!!** (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Bạn c\xf3 emoji t\xf9y chỉnh, dung lượng tải l\xean nhiều hơn, v\xe0 nhiều t\xednh năng kh\xe1c nữa (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "G\xf3i đăng k\xfd Nitro Basic của bạn với c\xe1c t\xednh năng sử dụng emoji t\xf9y chỉnh, tải l\xean tệp tin c\xf3 dung lượng lớn hơn, cũng như c\xe1c đặc quyền kh\xe1c với gi\xe1 **!!{price}!!** đ\xe3 **tạm thời bị v\xf4 hiệu ho\xe1**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9490,6 +9502,10 @@
           "Bạn c\xf3 đặc quyền tr\xf2 chuyện v\xe0 một thẻ giảm gi\xe1 **!!{price}!!** khi mua N\xe2ng Cấp (Lệnh Hủy Đang Chờ Xử L\xfd)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Bạn c\xf3 đặc quyền tr\xf2 chuyện v\xe0 một thẻ giảm gi\xe1 khi mua N\xe2ng Cấp (Lệnh Hủy Đang Chờ Xử L\xfd)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Bạn c\xf3 đặc quyền tr\xf2 chuyện v\xe0 một thẻ giảm gi\xe1 **!!{price}!!** khi mua N\xe2ng Cấp (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Bạn c\xf3 đặc quyền tr\xf2 chuyện v\xe0 một thẻ giảm gi\xe1 khi mua N\xe2ng Cấp (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Đặc quyền tr\xf2 chuyện v\xe0 1 ưu đ\xe3i giảm gi\xe1 N\xe2ng Cấp trong g\xf3i đăng k\xfd **!!{price}!!** của bạn đ\xe3 **tạm thời bị v\xf4 hiệu ho\xe1**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9504,6 +9520,12 @@
           "Bạn c\xf3 t\xednh năng tr\xf2 chuyện cao cấp, **{num, number}x** N\xe2ng Cấp, v\xe0 một thẻ giảm gi\xe1 **!!{price}!!** khi mua N\xe2ng Cấp (Lệnh Hủy Đang Chờ Xử L\xfd)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Bạn c\xf3 t\xednh năng tr\xf2 chuyện cao cấp, **{num, number}x** N\xe2ng Cấp, v\xe0 một thẻ giảm gi\xe1 khi mua N\xe2ng Cấp (Lệnh Hủy Đang Chờ Xử L\xfd)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Bạn c\xf3 t\xednh năng tr\xf2 chuyện cao cấp, **{num, number}x** N\xe2ng Cấp, v\xe0 một thẻ giảm gi\xe1 **!!{price}!!** khi mua N\xe2ng Cấp (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Bạn c\xf3 t\xednh năng tr\xf2 chuyện cao cấp, **{num, number}x** N\xe2ng Cấp, v\xe0 một thẻ giảm gi\xe1 khi mua N\xe2ng Cấp (tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Bạn đ\xe3 tạm dừng đăng k\xfd Nitro của m\xecnh cho tới ng\xe0y **{resumeDate, date, medium}**. Khi g\xf3i đăng k\xfd của bạn tiếp tục, bạn sẽ lấy lại quyền truy cập v\xe0o Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Tr\xf2 chuyện cao cấp, **{num, number}** N\xe2ng Cấp v\xe0 1 ưu đ\xe3i giảm gi\xe1 N\xe2ng Cấp trong g\xf3i đăng k\xfd **!!{price}!!** của bạn đ\xe3 **tạm thời bị v\xf4 hiệu ho\xe1**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9624,6 +9646,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "D\xf9ng thử Nitro miễn ph\xed trong 30 ng\xe0y",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Tiếp tục tới 30 ng\xe0y d\xf9ng thử",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Tận hưởng {duration} miễn ph\xed",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Giải ph\xf3ng nhiều niềm vui hơn c\xf9ng {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Hồ sơ t\xf9y chỉnh độc nhất v\xe0 nhiều thứ kh\xe1c!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Th\xeam biểu tượng ứng dụng t\xf9y chỉnh, biểu cảm si\xeau cấp, v\xe0 nhiều thứ kh\xe1c!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} bắt đầu ở mức {price}/th\xe1ng",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER:
           "Ch\xe0o mừng bạn đến với Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
@@ -9685,6 +9717,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "Ưu đ\xe3i !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA: "Mua Nitro rẻ hơn !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Mua Nitro rẻ hơn",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Chỉ trả **{discountedPrice}** cho **{numMonths, plural, one {một th\xe1ng!} other {{numMonths} th\xe1ng!}}** Sau đ\xf3 l\xe0 {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Ưu đ\xe3i !!{percent, number}!!% của bạn sẽ kết th\xfac {numMonths, plural, one {1 th\xe1ng} other {{numMonths} th\xe1ng}} sau khi mua. Sau đ\xf3 bạn sẽ bị t\xednh ph\xed {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9713,6 +9747,8 @@
           "**G\xf3i d\xf9ng thử miễn ph\xed của bạn sẽ kết th\xfac {remainingTime, plural, =0 {trong h\xf4m nay} one {sau # ng\xe0y} other {sau # ng\xe0y}}**. Sau đ\xf3, bạn sẽ bị t\xednh ph\xed !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "bản d\xf9ng thử miễn ph\xed đ\xe3 được k\xedch hoạt",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Tận hưởng {duration} miễn ph\xed",
         INCLUDED: "Đ\xe3 bao gồm",
         NOT_INCLUDED: "Kh\xf4ng bao gồm",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10282,6 +10318,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Việc hủy bỏ sẽ c\xf3 hiệu lực ngay lập tức, \xe1p dụng cho tất cả c\xe1c g\xf3i đăng k\xfd Nitro v\xe0 N\xe2ng Cấp M\xe1y Chủ.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Phải, hủy !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Tạm dừng !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Bạn sẽ tiếp tục c\xf3 quyền truy cập Nitro cho tới ng\xe0y **{pauseDate, date, medium}**, v\xe0 sau đ\xf3 g\xf3i đăng k\xfd của bạn sẽ bị tạm dừng trong {pauseDuration} ng\xe0y. Ch\xfang t\xf4i sẽ lại bắt đầu t\xednh ph\xed v\xe0o **{resumeDate, date, medium}**. Bạn c\xf3 thể kh\xf4i phục g\xf3i đăng k\xfd của m\xecnh bất kỳ l\xfac n\xe0o.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "G\xf3i đăng k\xfd Nitro của bạn sẽ bị tạm dừng **ngay b\xe2y giờ** trong {pauseDuration} ng\xe0y. Ch\xfang t\xf4i sẽ lại bắt đầu t\xednh ph\xed v\xe0o **{resumeDate, date, medium}**. Bạn c\xf3 thể kh\xf4i phục g\xf3i đăng k\xfd của m\xecnh bất kỳ l\xfac n\xe0o.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Bạn sẽ gia hạn g\xf3i đăng k\xfd Nitro của m\xecnh cho tới ng\xe0y **{resumeDate, date, medium}**. Bạn c\xf3 thể kh\xf4i phục g\xf3i đăng k\xfd của m\xecnh bất kỳ l\xfac n\xe0o.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Đ\xfang, tạm dừng !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Tuyệt!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Được rồi",
         PREMIUM_UPLOAD_PROMO:
@@ -10329,6 +10373,16 @@
           "G\xf3i đăng k\xfd của bạn sẽ được tự động gia hạn v\xe0o ng\xe0y **{renewalDate, date, medium}**. Vui l\xf2ng [truy cập v\xe0o mục C\xe0i đặt g\xf3i đăng k\xfd !!{paymentGatewayName}!!]({subscriptionManagementLink}) để biết th\xeam chi tiết.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "G\xf3i đăng k\xfd của bạn sẽ kết th\xfac v\xe0o ng\xe0y **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "G\xf3i đăng k\xfd của bạn sẽ tạm dừng v\xe0o ng\xe0y **{pauseDate, date, medium}** v\xe0 được tự động tiếp tục v\xe0o ng\xe0y **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "G\xf3i đăng k\xfd của bạn hiện đang tạm dừng v\xe0 sẽ được tự động tiếp tục v\xe0o ng\xe0y **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "G\xf3i đăng k\xfd **{planName}** của bạn hiện đang tạm dừng v\xe0 sẽ được tự động tiếp tục v\xe0o ng\xe0y **{resumeDate, date, short}** v\xe0 bạn sẽ bị t\xednh ph\xed **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "G\xf3i đăng k\xfd của bạn sẽ kh\xf4i phục khoản thanh to\xe1n đang chờ.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "G\xf3i đăng k\xfd **{planName}** của bạn sẽ kh\xf4i phục khoản thanh to\xe1n đang chờ v\xe0 bạn sẽ bị t\xednh ph\xed **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "G\xf3i đăng k\xfd **!!{price}!!** của bạn đ\xe3 qu\xe1 hạn. Vui l\xf2ng cập nhật th\xf4ng tin thanh to\xe1n hoặc g\xf3i đăng k\xfd của bạn sẽ kết th\xfac v\xe0o ng\xe0y **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10380,6 +10434,9 @@
         PREMIUM_NO_PLANS_HEADER: "Xin lỗi!",
         PREMIUM_NO_PLANS_BODY:
           "Hiện tại ch\xfang t\xf4i kh\xf4ng cung cấp g\xf3i đăng k\xfd n\xe0o c\xf3 nhiều n\xe2ng cấp hơn tr\xean dịch vụ Google Play Billing. [T\xecm hiểu th\xeam.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "Tạm Dừng hoặc Hủy Bỏ Đăng K\xfd",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Hủy Bỏ hoặc Tạm Dừng Đăng K\xfd",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "H\xe3y đăng k\xfd ngay, chỉ với !!{price}!!/Th\xe1ng!",
         PREMIUM_SUBSCRIPTION_UPDATES: "Cập Nhật G\xf3i Đăng K\xfd",
@@ -11126,8 +11183,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "d\xf9ng thử miễn ph\xed",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Chỉ trả **{discountedPrice}** mỗi th\xe1ng trong **3 th\xe1ng** đăng k\xfd Nitro đầu ti\xean. Trả {regularPrice} mỗi th\xe1ng sau khi 3 th\xe1ng ưu đ\xe3i kết th\xfac.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Chỉ trả **{discountedPrice}** mỗi th\xe1ng trong **{numMonths, plural, one {th\xe1ng} other {{numMonths} th\xe1ng}}** cho g\xf3i đăng k\xfd Nitro đầu ti\xean. Trả {regularPrice} mỗi th\xe1ng sau khi ưu đ\xe3i kết th\xfac.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/th\xe1ng trong 3 th\xe1ng\n\n{regularPrice}/th\xe1ng sau 3 th\xe1ng",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/th\xe1ng trong **{numMonths, plural, one {một th\xe1ng} other {{numMonths} th\xe1ng}}**\n\n{regularPrice}/th\xe1ng sau {numMonths, plural, one {một th\xe1ng} other {{numMonths} th\xe1ng}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Tiết kiệm !!{percent, number}!!% khi mua g\xf3i đăng k\xfd theo năm",
         BILLING_SUBTOTAL: "Tổng phụ",
@@ -11185,6 +11246,8 @@
         REVERSED: "Đ\xe3 hủy",
         REFUND: "Ho\xe0n tiền",
         RESUBSCRIBE: "Đăng k\xfd lại",
+        RESUME: "Kh\xf4i Phục G\xf3i Đăng K\xfd",
+        WITHDRAW_PAUSE: "Hủy Tạm Dừng",
         CREDIT_CARD_ERROR_REQUIRED: "Y\xeau cầu m\xe3 số thẻ.",
         CREDIT_CARD_ERROR_NUMBER:
           "C\xf3 vấn đề với m\xe3 số thẻ t\xedn dụng của bạn",
@@ -13983,6 +14046,17 @@
           "{count, plural, =0 {0 Bạn Chung} one {1 Bạn Chung} other {{count} Bạn Chung}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 M\xe1y Chủ Chung} one {1 M\xe1y Chủ Chung} other {{count} M\xe1y Chủ Chung}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "bạn b\xe8 với **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "bạn b\xe8 với **{usernameOne}** v\xe0 **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "bạn b\xe8 với **{usernameOne}**, **{usernameTwo}** v\xe0 **{count} người kh\xe1c**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE:
+          "th\xe0nh vi\xean của **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "th\xe0nh vi\xean của **{guildNameOne}** v\xe0 **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "th\xe0nh vi\xean của **{guildNameOne}**, **{guildNameTwo}** v\xe0 **{count} m\xe1y chủ kh\xe1c**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Bạn Chung",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "M\xe1y Chủ Chung",
         PROFILE_IN_VOICE_CALL: "Đang trong cuộc gọi thoại",
@@ -14121,6 +14195,8 @@
           "Chọn từ {monthlyPrice}/th\xe1ng hoặc {yearlyPrice}/năm",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Người nhận của bạn sẽ được:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Tặng g\xf3i th\xe0nh vi\xean {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Thời lượng qu\xe0 tặng",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Tặng {count, plural, one {# th\xe1ng} other {# th\xe1ng}} {nitroTierName}",
@@ -14995,6 +15071,9 @@
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "Xảy ra lỗi khi tải ứng dụng.",
         INTERACTION_RATE_LIMITED: "Chậm lại! Bạn đang nhấp qu\xe1 nhanh.",
         APPLICATION_ADD_BUTTON: "Th\xeam ứng dụng",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Th\xeam H\xe0nh Động Ứng Dụng",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Sao Ch\xe9p URL H\xe0nh Động Ứng Dụng",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "C\xe1c th\xe0nh vi\xean kh\xf4ng thể sử dụng bot n\xe0y cho đến khi bạn bật quyền.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17870,6 +17949,23 @@
           "Nếu hủy, **bạn sẽ mất những đặc quyền sau:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Bỏ qua, giữ lại g\xf3i Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Bỏ qua, giữ lại g\xf3i Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Chọn Tạm Dừng",
+        PREMIUM_PAUSE_SELECT_TITLE: "Tạm dừng hoặc hủy bỏ đăng k\xfd",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Nếu bạn muốn tạm nghỉ g\xf3i đăng k\xfd trả ph\xed, bạn c\xf3 t\xf9y chọn tạm dừng sử dụng g\xf3i trong v\xe0i th\xe1ng",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Bạn c\xf3 t\xf9y chọn để tiếp tục tạm dừng trong v\xe0i th\xe1ng nữa",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Chọn khoảng thời gian tạm dừng",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Bạn c\xf3 muốn **Chọn Tạm Dừng**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Tạm dừng đăng k\xfd trong tối đa 90 ng\xe0y thay v\xec hủy bỏ.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "Tạm dừng trong {days} ng\xe0y",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Tạm dừng th\xeam {days} ng\xe0y nữa",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Hủy g\xf3i đăng k\xfd",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Đăng k\xfd của bạn sẽ bị tạm dừng",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Giữ lại một số đặc quyền với chi ph\xed rẻ hơn",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22452,6 +22548,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Phong c\xe1ch mới",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Giờ th\xec senpai chắc chắn sẽ ch\xfa \xfd đến bạn.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "MỚI: Xu\xe2n Ngập Tr\xe0n",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Trong m\xe0n đ\xeam y\xean tĩnh, một ph\xe9p thuật kỳ lạ m\xea hoặc trong kh\xf4ng trung v\xe0...",
         COLLECTIBLES_NEW_BADGE: "MỚI",
         INVENTORY_EMOJI_DETAILS_V2: "Xem chi tiết emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -24137,6 +24236,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— Th\xe0nh Vi\xean",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Đ\xe1nh dấu kh\xf4ng phải nhạy cảm",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Đ\xe2y l\xe0 lỗi ư? [H\xe3y cho ch\xfang t\xf4i biết](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Kh\xf4ng thể gửi tin nhắn của bạn. Tin nhắn n\xe0y c\xf3 thể chứa nội dung đa phương tiện độc hại v\xe0 đ\xe3 bị m\xe1y chủ chặn lại.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -24169,7 +24270,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Tạm nghỉ ch\xfat n\xe0o",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Nghe nhạc LoFi c\xf9ng Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Thư gi\xe3n",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Cảm gi\xe1c",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Gợi \xfd an to\xe0n",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "Giới thiệu cảnh b\xe1o an to\xe0n",
@@ -24289,6 +24390,7 @@
           "Cho bạn b\xe8 biết bạn đang l\xe0m g\xec bằng c\xe1ch đặt trạng th\xe1i hoạt động.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Đặt trạng th\xe1i t\xf9y chỉnh",
+        HANG_STATUS_MOBILE_SET_ROW: "Đặt Hoạt Động \xc2m Thanh Voice",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR:
           "Kh\xf4ng t\xecm thấy b\xe1o c\xe1o.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
@@ -24395,11 +24497,19 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Kh\xf4ng ai bỏ phiếu cho c\xe2u trả lời n\xe0y.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Bỏ phiếu",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 phiếu} =1 {{numVotes} phiếu} other {{numVotes} phiếu}} cho {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Hiển thị người bỏ phiếu",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Hiển thị người bỏ phiếu",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! v\xe0 {n, plural, one {1 người kh\xe1c} other {{n} người kh\xe1c}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! v\xe0 !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! v\xe0 {n, plural, one {1 người kh\xe1c} other {{n} người kh\xe1c}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!!, v\xe0 !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! v\xe0 {n, plural, one {1 người kh\xe1c} other {{n} người kh\xe1c}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 người} other {{n} người}}",
         CREATE_POLL: "Tạo khảo s\xe1t",
         CREATE_POLL_HEADING: "Tạo một khảo s\xe1t",
         CREATE_POLL_EXPIRATION:
@@ -24418,12 +24528,18 @@
           "Th\xeam đa phương tiện, c\xe2u trả lời {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Cập nhật đa phương tiện, {imageName}, c\xe2u trả lời {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Th\xeam emoji, trả lời {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Cập nhật emoji, {emojiName}, trả lời {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Cập nhật emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "C\xe2u trả lời {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Nhập c\xe2u trả lời của bạn",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Th\xeam một c\xe2u trả lời kh\xe1c",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Bảng thăm d\xf2 \xfd kiến sẽ duy tr\xec trong",
         CREATE_POLL_DURATION_LABEL: "Khoảng thời gian",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 giờ} other {{num} giờ}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ng\xe0y",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tuần",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24439,8 +24555,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Bạn c\xf3 chắc muốn tho\xe1t kh\xf4ng? Những thay đổi sẽ bị mất nếu bạn tho\xe1t b\xe2y giờ.",
         CREATE_POLL_REMOVE_ANSWER: "X\xf3a c\xe2u trả lời",
+        CREATE_POLL_REMOVE_EMOJI: "Gỡ bỏ emoji",
         CREATE_POLL_ADD_IMAGE: "Th\xeam đ\xednh k\xe8m",
+        CREATE_POLL_ADD_EMOJI: "Th\xeam emoji",
         CREATE_POLL_REPLACE_IMAGE: "Thay thế nội dung đa phương tiện",
+        CREATE_POLL_REPLACE_EMOJI: "Thay thế emoji",
         CREATE_POLL_POLL_ANSWER: "C\xe2u trả lời bảng thăm d\xf2 \xfd kiến",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Sửa m\xf4 tả h\xecnh ảnh (văn bản thay thế)",
@@ -24522,8 +24641,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "Ui ch\xe0!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Nhiệm vụ vẫn chưa mở tr\xean di động... Xin lỗi v\xec sự bất tiện n\xe0y! Bạn c\xf3 thể v\xe0o **Thiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng** v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
-        QUESTS_MOBILE_EMBED_TITLE:
-          "Nhiệm Vụ vẫn chưa khả dụng tr\xean di động.",
+        QUESTS_MOBILE_EMBED_TITLE: "Nhiệm Vụ kh\xf4ng khả dụng tr\xean di động",
         QUESTS_MOBILE_EMBED_BODY:
           "Bạn c\xf3 thể v\xe0o \nThiết Lập Người D\xf9ng > Kho Qu\xe0 Tặng v\xe0 nhận Nhiệm Vụ tr\xean ứng dụng Discord m\xe1y t\xednh hoặc tr\xecnh duyệt.",
         QUESTS_GET_THIS_GAME: "Nhận tr\xf2 chơi",
@@ -24573,9 +24691,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! v\xe0 {count, plural, one {1 người kh\xe1c} other {{count} người kh\xe1c}}",
         STOREFRONT: "Cửa h\xe0ng",
-        STOREFRONT_APP_SUBSCRIPTIONS: "C\xe1c G\xf3i Đăng K\xfd trong Ứng Dụng",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Đăng K\xfd",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Mua g\xf3i đăng k\xfd từ {appName}",
-        STOREFRONT_APP_PRODUCTS: "Sản Phẩm Ứng Dụng",
+        STOREFRONT_APP_PRODUCTS: "Sản phẩm",
         STOREFRONT_APP_PRODUCTS_BODY: "Mua sản phẩm từ {appName}",
         STOREFRONT_SUBSCRIPTION: "Đăng K\xfd",
         STOREFRONT_SUBSCRIBE_FOR: "Đăng k\xfd với gi\xe1 {rate}",
@@ -24595,6 +24713,13 @@
         FOCUS_MODE_TITLE: "Chế Độ Tập Trung (BETA)",
         FOCUS_MODE_BADGE_ON: "BẬT",
         FOCUS_MODE_BADGE_OFF: "TẮT",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION:
+          "Tắt th\xf4ng b\xe1o tr\xean m\xe0n h\xecnh & \xe2m thanh tin nhắn.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Tắt th\xf4ng b\xe1o trong ứng dụng & \xe2m thanh tin nhắn.",
+        FOCUS_MODE_TURN_OFF: "Tắt Chế Độ Tập Trung",
+        FOCUS_MODE_ENABLE_FOR: "Bật Chế Độ Tập Trung trong",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Bạn ở trạng th\xe1i Vui L\xf2ng Kh\xf4ng L\xe0m Phiền đ\xe3 kh\xe1 l\xe2u. Bạn c\xf3 muốn bật Chế Độ Tập Trung thay cho Chế độ Vui L\xf2ng Kh\xf4ng L\xe0m Phiền kh\xf4ng?",
         ACTIVITY_REACTION_REPLY_TITLE: "Tr\xf2 chuyện về {activity}",
@@ -24625,6 +24750,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} giờ trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} ph\xfat trước",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} gi\xe2y trước",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "trong {days} ng\xe0y",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "trong {hours} giờ",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -50,6 +50,7 @@
           "\n我们已经向 **!!{email}!!** 发送了更改密码的操作步骤，请查收您的收件箱和垃圾邮件。\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "阶段",
         STORE_CHANNEL_TYPE: "商店",
+        NEWS_CHANNEL_TYPE: "Announcement",
         VOICE_CHANNEL_TYPE: "语音",
         FORUM_CHANNEL_TYPE: "论坛",
         TEXT_CHANNEL_TYPE: "文字信息",
@@ -5137,6 +5138,7 @@
         STATUS_DND: "请勿打扰",
         STATUS_INVISIBLE: "隐身",
         STATUS_DND_HELP: "您将不会收到任何桌面通知。",
+        STATUS_DND_HELP_FOCUS_MODE: "启用专注模式",
         STATUS_INVISIBLE_HELPER:
           "您将不会显示在线，但可以使用Discord的所有功能。",
         STATUS_UNTIL: "直到 {endTime}",
@@ -5793,8 +5795,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discord 成员加入时间",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 位共同好友} other {{count} 位共同好友}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "共同的好友（{count}）",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 个共同服务器中} other {{count} 个共同服务器中}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "共同的服务器（{count}）",
         SHOW_USER_PROFILE: "显示用户个人资料",
         HIDE_USER_PROFILE: "隐藏用户个人资料",
         SHOW_USER_PROFILE_UNAVAILABLE: "显示用户个人资料（不可用）",
@@ -7952,6 +7956,8 @@
           "我们建议您完整阅读更新后的文件，掌握变更对 Discord 使用的影响。此外，还请查看我们的博客帖文，了解对最重要变更的阐释。",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "我们于上月公布了年度政策更新，该更新现已生效。请查看关于本次变更摘要的[博客文章](https://discord.com/blog/important-policy-updates)，并阅读下方的完整政策。",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "单击“同意”即表示您确认同意 Discord 的服务条款并已阅读我们的隐私政策。",
         COMMUNITY_GUIDELINES: "[社区守则]({url})",
         BLOG_POST: "[我们的博客帖文]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "来自某个特定的人",
@@ -8257,6 +8263,8 @@
           "就等着您为这{numUnappliedGuildBoostSlots, plural, =1 {个} other {些}}助力选一个服务器呢！",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "就等着您为这{numUnappliedGuildBoostSlots, plural, =1 {个} other {些}}助力选一个服务器呢！点击$[此处](learnMoreHook)了解更多有关您 Nitro 特权的信息。",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "就等着您为**这{numUnappliedGuildBoostSlots, plural, =1 { 个} other {些}}助力选一个服务器呢！**点击$[此处](learnMoreHook)了解更多有关您 Nitro 特权的信息。",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "取消助力",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "撤回取消助力",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER: "助力任意服务器",
@@ -8449,6 +8457,10 @@
           "仅需 **!!{price}!!**，即可拥有自定义表情符号、上传更大文件，以及更多功能（取消指令待处理）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "您可以拥有自定义表情符号、上传更大文件，以及更多功能（取消指令待处理）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "仅需 **!!{price}!!**，即可拥有自定义表情符号、上传更大文件，以及更多功能（暂停于 **{pauseDate, date, medium}**）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "您拥有自定义表情符号、上传更大文件，以及更多功能（订阅暂停于 **{pauseDate, date, medium}**）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "您对 Nitro Basic 的订阅**已暂停**，Nitro Basicon 为您提供自定义表情符号、更大上传容量及其他**!!{price}!!**特权",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -8463,6 +8475,10 @@
           "您拥有聊天特权和一个优惠价为**!!{price}!!**的助力(取消指令待处理)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "您拥有聊天特权以及一个助力折扣 (取消指令待处理)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "您拥有聊天特权以及一个优惠价为 **!!{price}!!** 的助力（订阅暂停于 **{pauseDate, date, medium}**）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "您拥有聊天特权和一个助力折扣（订阅暂停于 **{pauseDate, date, medium}**）",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "您的聊天特权以及一个优惠价为**!!{price}!!**的助力订阅已**暂停**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -8477,6 +8493,12 @@
           "您拥有高级聊天，**{num, number}x**助力，以及一个优惠价为**!!{price}!!**的助力(取消指令待处理)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "您拥有高级聊天，**{num, number}** 个助力，以及一个助力折扣 (取消指令待处理)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "您拥有高级聊天，**{num, number} 倍**助力，以及一个优惠价为 **!!{price}!!** 的助力（订阅暂停于 **{pauseDate, date, medium}**）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "您拥有高级聊天、**{num, number} 倍**助力，以及一个助力折扣（订阅暂停于 **{pauseDate, date, medium}**）",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "您已暂停您的 Nitro 订阅至 **{resumeDate, date, medium}**。一旦您的订阅恢复，您将重新获得对 Nitro 的访问权限",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "您的高级聊天、**{num, number}x** 个助力，以及一个价格为**!!{price}!!**的助力折扣订阅已**暂停**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -8581,6 +8603,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_0_HEADER: "免费试用 Nitro Basic 30 天",
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER: "免费试用 Nitro 30 天",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "继续 30 天试用",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "在我们这度过 {duration}的美好时光吧",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "与 {nitroTierName} 一起，释放更多乐趣",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "定制独特的个人资料，还有更多特权！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "添加自定义 APP 图标、超级反应等更多特权！",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} 订阅费用为 {price}/月",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "欢迎来到 Nitro 订阅！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED: "准备好点火起飞！",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED_ONE: "马上就好！",
@@ -8637,6 +8669,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% 折扣",
         PREMIUM_DISCOUNT_CTA: "订阅 Nitro 立省 !!{percent, number}!!%",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "订阅 Nitro 立省",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "接下来 **{numMonths, plural, one {1 个月} other {{numMonths} 个月}}仅需支付 **{discountedPrice}**！**随后的订阅价格为 {regularPrice}。",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "您的 !!{percent, number}!!% 折扣将于购买后 {numMonths, plural, one { 1 个月} other {{numMonths} 个月}}结束。之后，您的价格为 {regularPrice}。",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -8661,6 +8695,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "您的**免费试用将于{remainingTime, plural, =0 {今日} one {# 天后} other {# 天后}}到期**。到期后我们将向您收取 !!{price}!!。",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "免费试用已激活",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "在我们这度过 {duration}的美好时光吧",
         INCLUDED: "已包括在内",
         NOT_INCLUDED: "不包括在内",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9187,6 +9223,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "退订将会对 Nitro 以及服务器助力订阅立即生效。",
         PREMIUM_CANCEL_CONFIRM_NEW: "是的，取消!!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "暂停 !!{planPremiumType}!! 吗？",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "在 **{pauseDate, date, medium}** 前，您仍可尽享 Nitro 诸多特权，随后您的 订阅将暂停 {pauseDuration} 天。我们将在 **{resumeDate, date, medium}** 重新开始向您收费。您可以随时恢复您的订阅。",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "您的 Nitro 订阅**现在**将暂停 {pauseDuration} 天。我们将在 **{resumeDate, date, medium}** 重新开始向您收费。您可以随时恢复您的订阅。",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "您的 Nitro 使用期将延长至 **{resumeDate, date, medium}**。您可以随时恢复您的订阅。",
+        PREMIUM_PAUSE_CONFIRM_NEW: "没错，暂停 !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "太棒了！",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "收到",
         PREMIUM_UPLOAD_PROMO:
@@ -9229,6 +9273,15 @@
           "您的订阅将会于 **{renewalDate, date, medium}** 自动续订。请 [访问您的 !!{paymentGatewayName}!! 订阅设置]({subscriptionManagementLink}) 获取更多信息。",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "您的订阅将于 **{endDate, date, medium}** 后结束。",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "您的订阅将于 **{pauseDate, date, medium}** 暂停，并将于 **{resumeDate, date, medium}** 自动恢复。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "您的订阅目前处于暂停状态，将于 **{resumeDate, date, medium}** 自动恢复。",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "您的 **{planName}** 订阅目前已暂停，并将于 **{resumeDate, date, short}** 自动恢复，届时您需要支付 **!!{price}!!**。",
+        PREMIUM_SETTINGS_PAUSED_INFO: "您的订阅将在付款后恢复。",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "您的 **{planName}** 订阅将在付款后恢复，您需要支付 **!!{price}!!**。",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "您的**!!{price}!!**订阅已过期。请更新您的付款信息，否则您的订阅将于**{endDate, date, medium}**终止。",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -9276,6 +9329,8 @@
         PREMIUM_NO_PLANS_HEADER: "抱歉！",
         PREMIUM_NO_PLANS_BODY:
           "当前，我们不向通过 Google Play 付费的方案提供更多助力。[了解更多。]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "暂停或取消订阅",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION: "取消或暂停订阅",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH: "订阅 - !!{price}!! / 月起",
         PREMIUM_SUBSCRIPTION_UPDATES: "订阅更新",
         PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT: "{planName}调整",
@@ -9958,8 +10013,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "免费试用",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "订阅 Nitro 的前 **3 个月**每月仅需 **{discountedPrice}**。3 个月的优惠期结束后，价格为每月 {regularPrice}。",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "订阅 Nitro 的前 **{numMonths, plural, one {1 个月} other {{numMonths} 个月}}**，每月仅需 **{discountedPrice}**。折扣结束后，价格为每月 {regularPrice}。",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "前 3 个月：{discountedPrice}/月\n\n3 个月后：{regularPrice}/月",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "在 **{numMonths, plural, one {1 个月} other {{numMonths} 个月}}内**尽享 {discountedPrice}/月的订阅价格\n\n{numMonths, plural, one {1 个月} other {{numMonths} 个月}}后，价格为 {regularPrice}",
         BILLING_YEARLY_PLAN_SAVINGS: "年度订阅可优惠 !!{percent, number}!!%",
         BILLING_SUBTOTAL: "小计",
         BILLING_TRIAL_LEGAL_COPY:
@@ -10010,6 +10069,8 @@
         REVERSED: "已撤销",
         REFUND: "退款",
         RESUBSCRIBE: "重新订阅",
+        RESUME: "恢复订阅",
+        WITHDRAW_PAUSE: "撤销暂停",
         CREDIT_CARD_ERROR_REQUIRED: "需要填入卡号。",
         CREDIT_CARD_ERROR_NUMBER: "信用卡卡号错误",
         CREDIT_CARD_ERROR_EXPIRATION: "信用卡有效期错误",
@@ -12498,6 +12559,16 @@
           "{count, plural, =0 {0 位共同好友} one {1 位共同好友} other {{count} 位共同好友}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 个共同服务器} one {1 个共同服务器} other {{count} 个共同服务器}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "是 **{usernameOne}** 的好友",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "是 **{usernameOne}** 和 **{usernameTwo}** 的好友",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "是 **{usernameOne}**、**{usernameTwo}** 以及**另外 {count} 人**的好友",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "是 **{guildNameOne}** 的成员",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "是 **{guildNameOne}** 和 **{guildNameTwo}** 的成员",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "是 **{guildNameOne}**、**{guildNameTwo}** 以及**另外 {count} 个服务器**的成员",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "共同的好友",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "共同的服务器",
         PROFILE_IN_VOICE_CALL: "正在语音通话中",
@@ -12626,6 +12697,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "选择 {monthlyPrice}/ 月或 {yearlyPrice}/ 年",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人将会收到：",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "赠送 {nitroTierName} 会员",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "礼物有效期",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "赠送 {count, plural, one {# 个月} other {# 个月}}的 {nitroTierName}",
@@ -13365,6 +13437,8 @@
         APPLICATION_IFRAME_MODAL_LOAD_ERROR: "尝试加载此 APP 时出错。",
         INTERACTION_RATE_LIMITED: "慢一点！您点得太快了。",
         APPLICATION_ADD_BUTTON: "添加 APP",
+        APPLICATION_ADD_BUTTON_ACTIONS: "添加 APP 操作",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "复制并添加 APP URL",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "您开启权限之前，成员无法使用此机器人。",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -15937,6 +16011,19 @@
           "如果取消，**您将失去这些特权：**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "没事了，保留 Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "没事了，保留 Nitro",
+        PREMIUM_PAUSE_INSTEAD: "暂停订阅",
+        PREMIUM_PAUSE_SELECT_TITLE: "暂停或取消订阅",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "如果想暂时脱离付费订阅，您可以选择将其暂停几个月",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE: "您可以选择继续暂停数月",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "请选择暂停时长",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "你想选择**暂停订阅**吗？",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "您可以选择暂停订阅长达 90 天，而非直接取消订阅。",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "暂停 {days} 天",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE: "再暂停 {days} 天",
+        PREMIUM_PAUSE_DURATION_CANCEL: "取消订阅",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED: "您的订阅将被暂停",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER: "用更低的价格保留部分特权",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
           "订阅 Nitro Basic，您仍然可以拥有自定义表情符号、上传更大文件等[更多特权]({helpCenterLink})，仅需 {monthlyPrice}/月。",
@@ -19934,6 +20021,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "动漫二次元：新风格",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "暗恋的前辈现在一定会注意到你。",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "上新：春日卡通",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "鸦雀无声的夜晚，一种奇特的魔法在空气中蔓延，随后……",
         COLLECTIBLES_NEW_BADGE: "新内容",
         INVENTORY_EMOJI_DETAILS_V2: "查看表情符号详情",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -21435,6 +21525,8 @@
           "{count, plural, =1 {# 位成员} other {# 位成员}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "—成员",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "标记为非敏感内容",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "我们判断有误？[点击此处告知我们](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "无法发送这条消息。它可能包含已被服务器屏蔽的露骨内容。",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -21464,7 +21556,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "休息，休息一会儿",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "与 Wumpus 一起收听 Lofi Beats。",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "放松",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "放松时间",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "安全提示",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "关于安全警报",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -21568,6 +21660,7 @@
         HANG_STATUS_VC_ROW_ADD: "添加一个状态",
         HANG_STATUS_HELP: "设置一个状态，告诉您的朋友您当前的动态。",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "设置自定义状态",
+        HANG_STATUS_MOBILE_SET_ROW: "设置语音动态",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "未找到举报。",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR: "已请求举报审查。",
         REPORT_SECOND_LOOK_LIMITED_TIME_ERROR: "仅限时提供针对举报的审查。",
@@ -21657,11 +21750,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "空空如也",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "该答案无人投票。",
         POLL_ANSWER_VOTES_MODAL_TITLE: "票数",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{option} 获得 {numVotes, plural, =0 {0 票} =1 {{numVotes}1 票} other {{numVotes} 票}}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "显示投票人",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "显示投票人",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! 和 {n, plural, one {1 位其他用户} other {{n} 位其他用户}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! 和 !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!、!!{b}!! 和其他 {n, plural, one {1 位用户} other {{n} 位用户}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!、!!{b}!! 和 !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!、!!{b}!!、!!{c}!! 和其他 {n, plural, one {1 位用户} other {{n} 位用户}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 人} other {{n} 人}}",
         CREATE_POLL: "创建投票",
         CREATE_POLL_HEADING: "创建一个投票",
         CREATE_POLL_EXPIRATION: "投票将持续 24 小时",
@@ -21674,11 +21775,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "为答案 {answerNumber} 添加媒体",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "更新答案 {answerNumber} 的媒体为{imageName}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "为答案 {answerNumber} 添加表情符号",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "为答案 {answerNumber} 更新表情符号和 {emojiName}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "更新表情符号",
         CREATE_POLL_ANSWER_INPUT_LABEL: "答案 {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "请输入您的答案",
         CREATE_POLL_ADD_ANSWER_BUTTON: "添加另一个答案",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "投票将持续",
         CREATE_POLL_DURATION_LABEL: "持续时间",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 小时} other {{num} 小时}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 天",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 星期",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL: "投票将持续 {duration}",
@@ -21691,8 +21798,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "您确定要退出吗？如果现在退出，所有更改都将丢失。",
         CREATE_POLL_REMOVE_ANSWER: "移除答案",
+        CREATE_POLL_REMOVE_EMOJI: "移除表情符号",
         CREATE_POLL_ADD_IMAGE: "添加媒体",
+        CREATE_POLL_ADD_EMOJI: "添加表情符号",
         CREATE_POLL_REPLACE_IMAGE: "替换媒体",
+        CREATE_POLL_REPLACE_EMOJI: "替换表情符号",
         CREATE_POLL_POLL_ANSWER: "投票答案",
         CREATE_POLL_EDIT_ALT_TEXT: "编辑图片描述（Alt 文本）",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "编辑图片描述",
@@ -21759,7 +21869,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "啊哦！",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "十分抱歉，我们尚未在移动端开放任务！您可以通过使用桌面版 Discord APP 或浏览器，前往**用户设置 > 礼物库**处接受任务。",
-        QUESTS_MOBILE_EMBED_TITLE: "任务目前在移动端……暂不可用。",
+        QUESTS_MOBILE_EMBED_TITLE: "任务目前在移动端暂不可用",
         QUESTS_MOBILE_EMBED_BODY:
           "您可以通过使用桌面版 Discord APP 或浏览器，前往\n用户设置 > 礼物库处接受任务。",
         QUESTS_GET_THIS_GAME: "获取游戏",
@@ -21805,9 +21915,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!、!!{second}!! 、!!{third}!!和其他 {count, plural, one {1 位用户} other {{count} 位用户}}",
         STOREFRONT: "商店",
-        STOREFRONT_APP_SUBSCRIPTIONS: "APP 订阅",
+        STOREFRONT_APP_SUBSCRIPTIONS: "订阅",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "从 {appName} 购买订阅",
-        STOREFRONT_APP_PRODUCTS: "APP 产品",
+        STOREFRONT_APP_PRODUCTS: "产品",
         STOREFRONT_APP_PRODUCTS_BODY: "从 {appName} 购买产品",
         STOREFRONT_SUBSCRIPTION: "订阅",
         STOREFRONT_SUBSCRIBE_FOR: "以 {rate} 的价格订阅",
@@ -21827,6 +21937,11 @@
         FOCUS_MODE_TITLE: "专注模式（测试版）",
         FOCUS_MODE_BADGE_ON: "开启",
         FOCUS_MODE_BADGE_OFF: "关闭",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "请勿打扰",
+        FOCUS_MODE_DESCRIPTION: "禁用桌面通知和消息声音。",
+        FOCUS_MODE_DESCRIPTION_MOBILE: "禁用 APP 内通知和消息声音。",
+        FOCUS_MODE_TURN_OFF: "关闭专注模式",
+        FOCUS_MODE_ENABLE_FOR: "启用专注模式",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "您已使用“请勿打扰”好一阵了。您是否想要启用“专注模式”？",
         ACTIVITY_REACTION_REPLY_TITLE: "聊聊 {activity}",
@@ -21857,6 +21972,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} 小时前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} 分钟前",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count} 秒前",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days} 天",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours} 小时",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "首次直播",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "动态",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

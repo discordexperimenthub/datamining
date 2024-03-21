@@ -56,6 +56,7 @@
           "\nΣου στείλαμε οδηγίες για να αλλάξεις τον κωδικό σου σε **!!{email}!!**, έλεγξε τα εισερχόμενα της αλληλογραφίας σου, αλλά και τον φάκελο με τα ανεπιθύμητα μηνύματα.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Φάση",
         STORE_CHANNEL_TYPE: "Κατάστημα",
+        NEWS_CHANNEL_TYPE: "Ανακοίνωση",
         VOICE_CHANNEL_TYPE: "Φωνή",
         FORUM_CHANNEL_TYPE: "Φόρουμ",
         TEXT_CHANNEL_TYPE: "Κείμενο",
@@ -5726,6 +5727,7 @@
         STATUS_INVISIBLE: "Αόρατος",
         STATUS_DND_HELP:
           "Δεν θα λαμβάνεις ειδοποιήσεις στην επιφάνεια εργασίας.",
+        STATUS_DND_HELP_FOCUS_MODE: "Ενεργοποιεί τη λειτουργία συγκέντρωσης",
         STATUS_INVISIBLE_HELPER:
           "Δεν θα εμφανίζεσαι ως διαθέσιμος, αλλά θα μπορείς να χρησιμοποιήσεις το Discord.",
         STATUS_UNTIL: "έως τις {endTime}",
@@ -6445,8 +6447,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Μέλος Discord από",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 κοινός φίλος} other {{count} κοινοί φίλοι}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Κοινοί φίλοι ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 κοινός διακομιστής} other {{count} κοινοί διακομιστές}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Κοινοί διακομιστές ({count})",
         SHOW_USER_PROFILE: "Εμφάνιση προφίλ χρήστη",
         HIDE_USER_PROFILE: "Απόκρυψη προφίλ χρήστη",
         SHOW_USER_PROFILE_UNAVAILABLE: "Εμφάνιση προφίλ χρήστη (μη διαθέσιμο)",
@@ -8877,6 +8881,8 @@
           "Σου προτείνουμε να διαβάσεις ολόκληρα τα ενημερωμένα έγγραφα, καθώς ισχύουν κατά τη χρήση του Discord. Κάποιες από τις σημαντικότερες αλλαγές εξηγούνται στη δημοσίευση του blog μας.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Τον προηγούμενο μήνα ανακοινώσαμε τις ετήσιες ενημερώσεις των πολιτικών μας, οι οποίες τώρα είναι σε ισχύ. Δες τη [δημοσίευση του blog](https://discord.com/blog/important-policy-updates) μας για μια σύνοψη αυτών των αλλαγών και διάβασε όλες τις πολιτικές παρακάτω.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Κάνοντας κλικ στο Συμφωνώ, αποδέχεσαι ότι συμφωνείς με τους Όρους Παροχής Υπηρεσιών του Discord και ότι έχεις διαβάσει την Πολιτική Απορρήτου.",
         COMMUNITY_GUIDELINES: "[Οδηγίες κοινότητας]({url})",
         BLOG_POST: "[Η δημοσίευση του blog μας]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Από συγκεκριμένο άτομο",
@@ -9215,6 +9221,8 @@
           "Είναι εδώ μέχρι να επιλέξεις έναν διακομιστή για να {numUnappliedGuildBoostSlots, plural, =1 {τη} other {τις}} δώσεις!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Είναι εδώ μέχρι να επιλέξεις έναν διακομιστή για να {numUnappliedGuildBoostSlots, plural, =1 {τη} other {τις}} δώσεις! Μάθε περισσότερα για τα προνόμια Nitro σου $[εδώ](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Είναι εδώ μέχρι να **επιλέξεις έναν διακομιστή για να {numUnappliedGuildBoostSlots, plural, =1 {τη} other {τις}} δώσεις!** Μάθε περισσότερα για τα προνόμια Nitro σου $[εδώ](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Ακύρωση Ενίσχυσης",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "Ενεργοποίηση Ενίσχυσης",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9421,6 +9429,10 @@
           "Έχεις προσαρμοσμένα emoji, μεταφόρτωση μεγαλύτερων αρχείων και πολλά άλλα με **!!{price}!!** (Εκκρεμεί ακύρωση)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Έχεις προσαρμοσμένα emoji, μεταφόρτωση μεγαλύτερων αρχείων και πολλά άλλα (Εκκρεμεί ακύρωση)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Έχεις προσαρμοσμένα emoji, μεταφόρτωση μεγαλύτερων αρχείων και πολλά άλλα με **!!{price}!!** (θα γίνει παύση στις **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Έχεις προσαρμοσμένα emoji, μεταφόρτωση μεγαλύτερων αρχείων και πολλά άλλα (θα γίνει παύση στις **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Η συνδρομή σου στο Nitro Basic, που σου δίνει προσαρμοσμένα emoji, μεταφόρτωση μεγαλύτερων αρχείων και άλλα προνόμια με **!!{price}!!** είναι **σε αναμονή**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9435,6 +9447,10 @@
           "Έχεις προνόμια γραπτής συνομιλίας και έκπτωση Ενίσχυσης για **!!{price}!!** (Εκκρεμεί ακύρωση)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Έχεις προνόμια γραπτής συνομιλίας και έκπτωση Ενίσχυσης (Εκκρεμεί ακύρωση)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Έχεις προνόμια γραπτής συνομιλίας και έκπτωση Ενίσχυσης με **!!{price}!!** (θα γίνει παύση στις **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Έχεις προνόμια γραπτής συνομιλίας και έκπτωση Ενίσχυσης (θα γίνει παύση στις **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Η συνδρομή σου που περιλαμβάνει πλεονεκτήματα συνομιλίας και έκπτωση Ενίσχυσης για **!!{price}!!** είναι **σε αναμονή**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9449,6 +9465,12 @@
           "Έχεις premium γραπτή συνομιλία, **{num, number}x** Ενισχύσεις, και έκπτωση Ενίσχυσης για **!!{price}!!** (Εκκρεμεί ακύρωση)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Έχεις premium γραπτή συνομιλία, **{num, number}x** Ενισχύσεις, και έκπτωση Ενίσχυσης (Εκκρεμεί ακύρωση)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Έχεις premium γραπτή συνομιλία, **{num, number}x** Ενισχύσεις και έκπτωση Ενίσχυσης με **!!{price}!!** (θα γίνει παύση στις **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Έχεις premium γραπτή συνομιλία, **{num, number}x** Ενισχύσεις και έκπτωση Ενίσχυσης (θα γίνει παύση στις **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Έχεις κάνει παύση της Nitro συνδρομής σου έως τις **{resumeDate, date, medium}**. Θα αποκτήσεις και πάλι πρόσβαση στο Nitro όταν συνεχιστεί η συνδρομή σου",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Η συνδρομή σου που περιλαμβάνει premium γραπτή συνομιλία, **{num, number}x** Ενισχύσεις και έκπτωση Ενίσχυσης για **!!{price}!!** είναι **σε αναμονή**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9567,6 +9589,16 @@
           "Δοκίμασε το Nitro δωρεάν για 30 μέρες",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Συνέχεια σε δοκιμαστική συνδρομή 30 ημερών",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Απόλαυσε {duration} από εμάς",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Διασκέδασε ακόμα περισσότερο με το {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Μοναδικές προσαρμογές προφίλ και πολλά άλλα!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Πρόσθεσε ένα προσαρμοσμένο εικονίδιο εφαρμογής, σούπερ αντιδράσεις και πολλά άλλα!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "Το {nitroTierName} ξεκινάει στα {price}/μήνα",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Καλώς ήρθες στο Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Έτοιμος για εκτόξευση!",
@@ -9627,6 +9659,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% έκπτωση",
         PREMIUM_DISCOUNT_CTA: "Εξοικονόμησε !!{percent, number}!!% στο Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Εξοικονόμησε στο Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Πλήρωσε μόλις **{discountedPrice}** για **{numMonths, plural, one {έναν μήνα!} other {{numMonths} μήνες!}}** Μετά θα χρεώνεσαι {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Η έκπτωση !!{percent, number}!!% θα τελειώσει {numMonths, plural, one {1 μήνα} other {{numMonths} μήνες}} μετά την αγορά. Στη συνέχεια, θα χρεώνεσαι {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9652,6 +9686,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "Η **δωρεάν δοκιμή σου λήγει {remainingTime, plural, =0 {σήμερα} one {σε # μέρα} other {σε # μέρες}}**. Μετά, θα χρεώνεσαι !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "η δωρεάν δοκιμή ενεργοποιήθηκε",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Απόλαυσε {duration} από εμάς",
         INCLUDED: "Περιλαμβάνεται",
         NOT_INCLUDED: "Δεν περιλαμβάνεται",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10225,6 +10261,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Η ακύρωση θα τεθεί σε ισχύ αμέσως για όλες τις συνδρομές Nitro και Ενίσχυσης διακομιστή.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Ω ναι, Ακύρωση !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "Παύση του !!{planPremiumType}!!;",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Θα συνεχίσεις να έχεις πρόσβαση στο Nitro έως τις **{pauseDate, date, medium}** και μετά η συνδρομή σου θα σταματήσει για {pauseDuration} ημέρες. Θα ξεκινήσουμε να σε χρεώνουμε ξανά στις **{resumeDate, date, medium}**. Μπορείς να συνεχίσεις τη συνδρομή σου ανά πάσα στιγμή.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Η Nitro συνδρομή σου θα σταματήσει **τώρα** για {pauseDuration} ημέρες. Θα ξεκινήσουμε να σε χρεώνουμε ξανά στις **{resumeDate, date, medium}**. Μπορείς να συνεχίσεις τη συνδρομή σου ανά πάσα στιγμή.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Θα επεκτείνεις το Nitro σου έως τις **{resumeDate, date, medium}**. Μπορείς να συνεχίσεις τη συνδρομή σου ανά πάσα στιγμή.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "Ναι, παύση του !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Τι καλά!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Το έπιασα",
         PREMIUM_UPLOAD_PROMO:
@@ -10272,6 +10316,16 @@
           "Οι συνδρομές σου θα ανανεωθούν αυτόματα στις **{renewalDate, date, medium}**. Επισκέψου [τις Ρυθμίσεις συνδρομής !!{paymentGatewayName}!!]({subscriptionManagementLink}) για περισσότερες λεπτομέρειες.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Η συνδρομή σου θα λήξει στις **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Η συνδρομή σου θα σταματήσει στις **{pauseDate, date, medium}** και θα συνεχιστεί αυτόματα στις **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Η συνδρομή σου βρίσκεται αυτή τη στιγμή σε παύση και θα συνεχιστεί αυτόματα στις **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Η συνδρομή **{planName}** σου βρίσκεται αυτή τη στιγμή σε παύση και θα συνεχιστεί αυτόματα στις **{resumeDate, date, short}** με χρέωση **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Η συνδρομή σου θα συνεχιστεί εν αναμονή της πληρωμής.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Η συνδρομή **{planName}** σου θα συνεχιστεί εν αναμονή της πληρωμής και θα χρεωθείς **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Η **!!{price}!!** συνδρομή σου είναι ληξιπρόθεσμη. Ενημέρωσε τα στοιχεία πληρωμής σου, αλλιώς η συνδρομή σου θα λήξει στις **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10321,6 +10375,9 @@
         PREMIUM_NO_PLANS_HEADER: "Σόρρυ!",
         PREMIUM_NO_PLANS_BODY:
           "Προς το παρόν δεν προσφέρουμε κάποιο πλάνο με περισσότερες ενισχύσεις μέσω τιμολόγησης του Google Play. [Μάθε περισσότερα.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "Παύση ή ακύρωση της συνδρομής",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Ακύρωση ή παύση της συνδρομής",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Συνδρομή - Ξεκινάει από !!{price}!! / Μήνα",
         PREMIUM_SUBSCRIPTION_UPDATES: "Ενημερώσεις συνδρομής",
@@ -11057,8 +11114,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "δωρεάν δοκιμή",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Πλήρωσε μόλις **{discountedPrice}** τον μήνα για τους πρώτους **3 μήνες** Nitro. Πλήρωσε {regularPrice} τον μήνα μετά τη λήξη της 3μηνης έκπτωσης.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Πλήρωσε μόλις **{discountedPrice}** τον μήνα για **{numMonths, plural, one {τον πρώτο σου μήνα} other {τους {numMonths} πρώτους σου μήνες}}** στο Nitro. Πλήρωσε {regularPrice} τον μήνα μετά τη λήξη της έκπτωσης.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/μήνα για 3 μήνες\n\n{regularPrice}/μήνα μετά τους 3 μήνες",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/μήνα για **{numMonths, plural, one {έναν μήνα} other {{numMonths} μήνες}}**\n\n{regularPrice}/μήνα μετά από {numMonths, plural, one {έναν μήνα} other {{numMonths} μήνες}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Εξοικονόμησε !!{percent, number}!!% με την ετήσια συνδρομή",
         BILLING_SUBTOTAL: "Υποσύνολο",
@@ -11114,6 +11175,8 @@
         REVERSED: "Ακυρώθηκε",
         REFUND: "Επιστροφή χρημάτων",
         RESUBSCRIBE: "Εκ νέου εγγραφή",
+        RESUME: "Συνέχιση συνδρομής",
+        WITHDRAW_PAUSE: "Αναίρεση παύσης",
         CREDIT_CARD_ERROR_REQUIRED: "Απαιτείται αριθμός κάρτας.",
         CREDIT_CARD_ERROR_NUMBER:
           "Κάτι είναι λάθος με τον αριθμό της πιστωτικής κάρτας σας",
@@ -13871,6 +13934,16 @@
           "{count, plural, =0 {0 Κοινοί Φίλοι} one {1 Κοινός Φίλος} other {{count} Κοινοί Φίλοι}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 Κοινοί Διακομιστές} one {1 Κοινός Διακομιστής} other {{count} Κοινοί Διακομιστές}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "φίλοι με **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "φίλοι με **{usernameOne}** και **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "φίλοι με **{usernameOne}**, **{usernameTwo}** και **{count} ακόμα**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "μέλος του **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "μέλος του **{guildNameOne}** και **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "μέλος του **{guildNameOne}**, **{guildNameTwo}** και **{count} ακόμα**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Κοινοί φίλοι",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Κοινοί διακομιστές",
         PROFILE_IN_VOICE_CALL: "Σε φωνητική κλήση",
@@ -14005,6 +14078,8 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Επίλεξε από {monthlyPrice}/μήνα ή {yearlyPrice}/έτος",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Ο παραλήπτης θα λάβει:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "Κάνε δώρο μια συνδρομή {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Διάρκεια δώρου",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Κάνε δώρο {count, plural, one {# μήνα} other {# μήνες}} της βαθμίδας {nitroTierName}",
@@ -14868,6 +14943,9 @@
           "Υπήρξε ένα σφάλμα κατά την προσπάθεια φόρτωσης της εφαρμογής.",
         INTERACTION_RATE_LIMITED: "Πιο σιγά! Κάνεις κλικ πολύ γρήγορα.",
         APPLICATION_ADD_BUTTON: "Προσθήκη εφαρμογής",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Ενέργειες προσθήκης εφαρμογής",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Αντιγραφή URL προσθήκης εφαρμογής",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Τα μέλη δεν μπορούν να χρησιμοποιήσουν αυτό το bot μέχρι να ενεργοποιήσεις τις άδειες.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17725,6 +17803,22 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Δεν πειράζει, διατήρηση του Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Δεν πειράζει, διατήρηση του Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Παύση καλύτερα",
+        PREMIUM_PAUSE_SELECT_TITLE: "Παύση ή ακύρωση της συνδρομής",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Αν θέλεις να κάνεις ένα διάλειμμα από τις συνδρομές επί πληρωμή, έχεις τη δυνατότητα να τις διακόψεις για μερικούς μήνες",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Έχεις τη δυνατότητα να συνεχίσεις την παύση για επιπλέον μήνες",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Επιλογή διάρκειας παύσης",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "Θα ήθελες να κάνεις **παύση καλύτερα**;",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Κάνε παύση της συνδρομής σου για έως και 90 ημέρες αντί να την ακυρώσεις.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE: "Παύση για {days} ημέρες",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Παύση για ακόμα {days} ημέρες",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Ακύρωση συνδρομής",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Η συνδρομή σου θα σταματήσει",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Κράτα μερικά προνόμια με χαμηλότερη τιμή",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22229,6 +22323,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: Νέα στυλ",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Ο Senpai σίγουρα θα σε προσέξει τώρα.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "ΝΕΟ: Ανοιξιάτικα καρτούν",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Στη σιωπή της νύχτας, κάτι μαγικό πλανάται στον αέρα και...",
         COLLECTIBLES_NEW_BADGE: "ΝΕΟ",
         INVENTORY_EMOJI_DETAILS_V2: "Προβολή λεπτομερειών emoji",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23909,6 +24006,8 @@
           "{count, plural, =1 {# Μέλος} other {# Μέλη}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "— Μέλη",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "Επισήμανση ως μη ευαίσθητο",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Κάναμε λάθος; [Ενημέρωσέ μας](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Το μήνυμά σου δεν μπόρεσε να σταλεί. Μπορεί να περιέχει ακατάλληλα πολυμέσα, τα οποία έχουν αποκλειστεί από τον διακομιστή.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23941,7 +24040,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Κάνε ένα διάλειμμα",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Άκου Lofi Beats με τον Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Χαλάρωσε",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Χαλάρωση",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Συμβουλές ασφαλείας",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "Σχετικά με τις ειδοποιήσεις ασφαλείας",
@@ -24063,6 +24162,7 @@
           "Δείξε στους φίλους σου τι κάνεις ορίζοντας μια κατάσταση δραστηριότητας.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Ορισμός προσαρμοσμένης κατάστασης",
+        HANG_STATUS_MOBILE_SET_ROW: "Ορισμός δραστηριότητας ομιλίας",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Η αναφορά δεν βρέθηκε.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Έχει ήδη ζητηθεί επανεξέταση της αναφοράς.",
@@ -24167,11 +24267,19 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "Δεν υπάρχουν ψήφοι για αυτή την απάντηση.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Ψήφοι",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 ψήφοι} =1 {{numVotes} ψήφος} other {{numVotes} ψήφοι}} για {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Αποκάλυψη των ψηφοφόρων",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Αποκαλύπτει τους ψηφοφόρους",
+        POLL_VOTES_TOOLTIP_1_N:
+          "Ο χρήστης !!{a}!! και {n, plural, one {1 ακόμα} other {{n} ακόμα}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! και !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "Ο χρήστης !!{a}!!, !!{b}!! και {n, plural, one {1 άλλος} other {{n} άλλοι}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! και !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! και {n, plural, one {1 ακόμα} other {{n} ακόμα}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 άτομο} other {{n} άτομα}}",
         CREATE_POLL: "Δημιουργία ψηφοφορίας",
         CREATE_POLL_HEADING: "Δημιούργησε μια ψηφοφορία",
         CREATE_POLL_EXPIRATION: "Η ψηφοφορία θα διαρκέσει 24 ώρες",
@@ -24186,12 +24294,18 @@
           "Προσθήκη πολυμέσων, απάντηση {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Ενημέρωση πολυμέσων, {imageName}, απάντηση {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Προσθήκη emoji, απάντηση {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Ενημέρωση emoji, {emojiName}, απάντηση {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Ενημέρωση emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Απάντηση {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Πληκτρολόγησε την απάντησή σου",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Προσθήκη άλλης απάντησης",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Η ψηφοφορία θα διαρκέσει",
         CREATE_POLL_DURATION_LABEL: "Διάρκεια",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 ώρα} other {{num} ώρες}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 ημέρες",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 εβδομάδα",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24206,8 +24320,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Σίγουρα θέλεις να φύγεις; Τυχόν αλλαγές που έγιναν θα χαθούν αν φύγεις τώρα.",
         CREATE_POLL_REMOVE_ANSWER: "Αφαίρεση απάντησης",
+        CREATE_POLL_REMOVE_EMOJI: "Αφαίρεση emoji",
         CREATE_POLL_ADD_IMAGE: "Προσθήκη μέσων",
+        CREATE_POLL_ADD_EMOJI: "Προσθήκη emoji",
         CREATE_POLL_REPLACE_IMAGE: "Αντικατάσταση πολυμέσων",
+        CREATE_POLL_REPLACE_EMOJI: "Αντικατάσταση emoji",
         CREATE_POLL_POLL_ANSWER: "Απάντηση ψηφοφορίας",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Επεξεργασία περιγραφής εικόνας (εναλλακτικό κείμενο)",
@@ -24290,7 +24407,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Οι Αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα. Συγγνώμη για αυτό! Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις **Ρυθμίσεις χρήστη > Απόθεμα δώρων** και να αποδεχτείς την Αποστολή εκεί.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Οι αποστολές δεν είναι διαθέσιμες για κινητά...ακόμα.",
+          "Οι αποστολές δεν είναι διαθέσιμες για κινητά",
         QUESTS_MOBILE_EMBED_BODY:
           "Από την εφαρμογή Discord για υπολογιστή ή το πρόγραμμα περιήγησης μπορείς να πας στις \nΡυθμίσεις χρήστη > Απόθεμα δώρων και να αποδεχτείς την Αποστολή εκεί.",
         QUESTS_GET_THIS_GAME: "Απόκτησε Παιχνίδι",
@@ -24338,10 +24455,10 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! και {count, plural, one {1 ακόμη} other {{count} ακόμη}}",
         STOREFRONT: "Κατάστημα",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Συνδρομές εφαρμογής",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Συνδρομές",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Αγόρασε συνδρομές από την εφαρμογή {appName}",
-        STOREFRONT_APP_PRODUCTS: "Προϊόντα εφαρμογής",
+        STOREFRONT_APP_PRODUCTS: "Προϊόντα",
         STOREFRONT_APP_PRODUCTS_BODY:
           "Αγόρασε προϊόντα από την εφαρμογή {appName}",
         STOREFRONT_SUBSCRIPTION: "Συνδρομή",
@@ -24363,6 +24480,13 @@
         FOCUS_MODE_TITLE: "Λειτουργία συγκέντρωσης (BETA)",
         FOCUS_MODE_BADGE_ON: "ΕΝΕΡΓΟ",
         FOCUS_MODE_BADGE_OFF: "ΑΝΕΝΕΡΓΟ",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "ΜΗΝ ΕΝΟΧΛΕΙΤΕ",
+        FOCUS_MODE_DESCRIPTION:
+          "Απενεργοποιεί τις ειδοποιήσεις επιφάνειας εργασίας και τους ήχους μηνυμάτων.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Απενεργοποιεί τις ειδοποιήσεις εντός της εφαρμογής και τους ήχους μηνυμάτων.",
+        FOCUS_MODE_TURN_OFF: "Απενεργοποίηση λειτουργίας συγκέντρωσης",
+        FOCUS_MODE_ENABLE_FOR: "Ενεργοποίηση λειτουργίας συγκέντρωσης για",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           'Είσαι σε λειτουργία "Μην ενοχλείτε" εδώ και λίγο καιρό. Θα ήθελες να ενεργοποιήσεις τη Λειτουργία συγκέντρωσης;',
         ACTIVITY_REACTION_REPLY_TITLE: "Συνομίλησε για {activity}",
@@ -24393,6 +24517,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}ώ πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}λ πριν",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}δευτ. πριν",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "για {days}ημ",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "για {hours}ώ",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Πρώτη φορά",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Δραστηριότητα",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

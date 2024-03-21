@@ -55,6 +55,7 @@
           "\nहमने आपका पासवर्ड बदलने के लिए **!!{email}!!** पर इंस्ट्रक्शन भेज दिए हैं, कृपया अपना इनबॉक्स और स्पैम फ़ोल्डर दोनों देखें.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "स्टेज",
         STORE_CHANNEL_TYPE: "स्टोर",
+        NEWS_CHANNEL_TYPE: "अनाउंसमेंट",
         VOICE_CHANNEL_TYPE: "वॉइस",
         FORUM_CHANNEL_TYPE: "फोरम",
         TEXT_CHANNEL_TYPE: "टैक्स्ट",
@@ -5568,6 +5569,7 @@
         STATUS_DND: "डिस्टर्ब न करें",
         STATUS_INVISIBLE: "इनविजिबल",
         STATUS_DND_HELP: "आपको डेस्कटॉप पर कोई भी नोटिफिकेशन नहीं मिलेगी.",
+        STATUS_DND_HELP_FOCUS_MODE: "फ़ोकस मोड इनेबल करता है",
         STATUS_INVISIBLE_HELPER:
           "आप ऑनलाइन दिखाई नहीं देंगे, लेकिन Discord पर आपके पास पूरा ऐक्सेस रहेगा.",
         STATUS_UNTIL: "{endTime} तक",
@@ -6269,8 +6271,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "से Discord के मेम्बर हैं",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 म्यूचुअल फ्रेंड} other {{count} म्यूचुअल फ्रेंड्स}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "म्युचुअल फ़्रेंड्स ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 म्यूचुअल सर्वर} other {{count} म्यूचुअल सर्वर}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "म्युचुअल सर्वर ({count})",
         SHOW_USER_PROFILE: "यूज़र प्रोफ़ाइल दिखाएं",
         HIDE_USER_PROFILE: "यूज़र प्रोफ़ाइल छिपाएं",
         SHOW_USER_PROFILE_UNAVAILABLE: "यूज़र प्रोफ़ाइल दिखाएं (उपलब्ध नहीं)",
@@ -8641,6 +8645,8 @@
           "हम आपको अपडेटेड डॉक्यूमेंट को पूरा पढ़ने की सलाह देते हैं, क्योंकि यह आपके ज़रिए Discord का इस्तेमाल करने पर लागू होते हैं. हमने कुछ अहम बदलावों को हमारी ब्लॉग पोस्ट में साफ़ किया गया है.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "हमने पिछले महीने अपनी पॉलिसी के सालाना अपडेट की घोषणा की थी, जो अब लागू हैं. इन किए गए बदलाव के सार के लिए हमारा [ब्लॉग पोस्ट](https://discord.com/blog/important-policy-updates) देखें, और पूरी पॉलिसी को नीचे पढ़ें.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "स्वीकार करें, पर क्लिक करके, आप Discord की सेवा की शर्तों के लिए अपनी सहमति देते हैं और आपने हमारी प्राइवेसी पॉलिसी को पढ़ लिया है.",
         COMMUNITY_GUIDELINES: "[कम्युनिटी गाइडलाइन्स]({url})",
         BLOG_POST: "[हमारी ब्लॉग पोस्ट]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "किसी खास व्यक्ति से",
@@ -8970,6 +8976,8 @@
           "जब तक आप {numUnappliedGuildBoostSlots, plural, =1 {इसे} other {उन्हें}} देने के लिए एक सर्वर नहीं चुनते हैं, तब तक यहां इंतज़ार करें!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "जब तक आप {numUnappliedGuildBoostSlots, plural, =1 {इसे} other {उन्हें}} देने के लिए एक सर्वर नहीं चुनते हैं, तब तक यहां इंतज़ार करें! अपने Nitro पर्क के बारे में $[यहां](learnMoreHook) से और ज़्यादा जानें.",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "जब तक **आप {numUnappliedGuildBoostSlots, plural, =1 {इसे} other {इन्हें}} देने के लिए कोई सर्वर नहीं चुनते हैं,** तब तक यहां इंतज़ार करें! अपने Nitro पर्क के बारे में $[यहां](learnMoreHook) से और ज़्यादा जानें.",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "बूस्ट कैंसल करें",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST: "बूस्ट को कैंसल नहीं करें",
         GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_SERVER:
@@ -9169,6 +9177,10 @@
           "**!!{price}!!** (पेंडिंग कैंसलेशन) के लिए आपको कस्टम इमोजी, ज़्यादा बड़े अपलोड, और ऐसी कई चीज़ें मिलेंगी",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "आपको कस्टम इमोजी, ज़्यादा बड़े अपलोड और ऐसी कई चीज़ें मिलेंगी (पेंडिंग कैंसलेशन)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "आपको **!!{price}!!** में कस्टम इमोजी, ज़्यादा बड़े अपलोड और ऐसी कई चीज़ें मिलेंगी, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएंगी)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "आपको कस्टम इमोजी, ज़्यादा बड़े अपलोड और ऐसी कई चीज़ें मिलेंगी, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएंगी)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "आपको कस्टम इमोजी, ज़्यादा बड़े अपलोड और दूसरे पर्क्स सिर्फ़ **!!{price}!!** में देने वाले Nitro Basic का आपका सब्सक्रिप्शन **होल्ड पर है**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9183,6 +9195,10 @@
           "आपको **!!{price}!!** के लिए चैट पर्क और एक बूस्ट पर डिस्काउंट मिला है.(कैंसलेशन पेंडिंग है)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "आपके पास चैट पर्क्स और बूस्ट डिस्काउंट है (पेंडिंग कैंसलेशन)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "आपको **!!{price}!!** में चैट पर्क और बूस्ट डिस्काउंट मिलेंगे, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएंगे)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "आपको चैट पर्क और बूस्ट डिस्काउंट मिलेंगे, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएंगे)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "आपके चैट पर्क्स और बूस्ट डिस्काउंट **!!{price}!!** के सब्सक्रिप्शन के लिए **होल्ड पर** है",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9197,6 +9213,12 @@
           "आपके पास प्रीमियम चैट, **{num, number}x** बूस्ट, तथा के लिए बूस्ट छूट है. **!!{price}!!** (कैंसेलेशन अभी पेंडिंग है)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "आपको प्रीमियम चैट, **{num, number}x** बूस्ट, और बूस्ट पर एक डिस्काउंट मिला है (पेंडिंग कैंसलेशन)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "आपको प्रीमियम चैट, **{num, number}x** बूस्ट और बूस्ट पर **!!{price}!!** डिस्काउंट मिले हैं, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएंगे)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "आपको प्रीमियम चैट, **{num, number}x** बूस्ट, और बूस्ट पर डिस्काउंट मिला है, (जो **{pauseDate, date, medium}**को पॉज़ हो जाएगा)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "आपने **{resumeDate, date, medium}** तक के लिए अपना Nitro सब्सक्रिप्शन पॉज़ कर दिया है. जब आपका सब्सक्रिप्शन फिर से चालू होगा, तो आपको Nitro का ऐक्सेस फिर से मिल जाएगा",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "आपकी प्रीमियम चैट, **{num, number}x** बूस्ट, और बूस्ट डिस्काउंट **!!{price}!!** के सब्सक्रिप्शन के लिए **होल्ड पर** है",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9309,6 +9331,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "30 दिनों के लिए फ़्री में Nitro आज़माएं",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "30 दिनों के ट्रायल के लिए जारी रखें",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "आपके लिए हमारी ओर से {duration} का आनंद",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "{nitroTierName} के साथ और भी ज़्यादा मज़ा लें",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "खास प्रोफ़ाइल कस्टमाइज़ेशन के साथ और भी बहुत कुछ!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "कस्टम ऐप आइकन, सुपर रिएक्शन के साथ और भी कई चीज़ें जोड़ें!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} की शुरुआत {price}/महीने से",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Nitro में आपका स्वागत है!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "आप ब्लास्ट ऑफ़ के लिए तैयार हैं!",
@@ -9367,6 +9399,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!!% डिस्काउंट",
         PREMIUM_DISCOUNT_CTA: "Nitro पर !!{percent, number}!!% सेव करें",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Nitro पर सेव करें",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "**{numMonths, plural, one {महीने के लिए सिर्फ़ **{discountedPrice}** का पेमेंट करें!} other {{numMonths} महीने!}} के लिए** इसके बाद{regularPrice} का पेमेंट करें.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "आपका !!{percent, number}!!% डिस्काउंट खरीदारी के {numMonths, plural, one {1 महीने} other {{numMonths} महीनों}} बाद खत्म हो जाएगा. उसके बाद आपसे {regularPrice} का शुल्क लिया जाएगा.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9393,6 +9427,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "आपका **फ़्री ट्रायल {remainingTime, plural, =0 {आज} one {#दिन} other {#दिनों}}** में खत्म हो रहा है. इसके बाद आपको !!{price}!! पैसे देने होंगे.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "फ़्री ट्रायल एक्टिवेट किया गया",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "आपके लिए हमारी ओर से {duration} का आनंद",
         INCLUDED: "शामिल है",
         NOT_INCLUDED: "इसमें यह शामिल नहीं है",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9944,6 +9980,14 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "कैंसलेशन किसी भी Nitro और सर्वर बूस्ट सब्सक्रिप्शन के लिए तुरंत लागू हो जाएगा.",
         PREMIUM_CANCEL_CONFIRM_NEW: "हाँ, !!{planPremiumType}!! कैंसल करें",
+        PREMIUM_PAUSE_CONFIRM_TITLE: "!!{planPremiumType}!!को पॉज़ करें?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "आपके पास **{pauseDate, date, medium}** तक Nitro का ऐक्सेस रहेगा और उसके बाद आपके सभी सब्सक्रिप्शन {pauseDuration} दिनों के लिए पॉज़ कर दिया जाएगा. हम **{resumeDate, date, medium}** को आपकी बिलिंग फिर से शुरू कर देंगे. आप कभी भी अपना सब्सक्रिप्शन दुबारा चालू कर सकते हैं.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "आपका Nitro सब्सक्रिप्शन **अभी** {pauseDuration} दिनों के लिए पॉज़ कर दिया जाएगा. हम **{resumeDate, date, medium}** को आपकी बिलिंग फिर से शुरू कर देंगे. आप कभी भी अपना सब्सक्रिप्शन दुबारा चालू कर सकते हैं.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "आप अपना Nitro **{resumeDate, date, medium}** तक के लिए बढ़ा सकते हैं. आप कभी भी अपना सब्सक्रिप्शन दुबारा चालू कर सकते हैं.",
+        PREMIUM_PAUSE_CONFIRM_NEW: "सही, !!{planPremiumType}!! को पॉज़ करें",
         PREMIUM_UPGRADE_DONE_BUTTON: "वाह!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "समझ गए",
         PREMIUM_UPLOAD_PROMO:
@@ -9990,6 +10034,16 @@
           "**{renewalDate, date, medium}** को आपका सब्सक्रिप्शन अपने आप से रिन्यू हो जाएगा. कृपया ज़्यादा जानकारी के लिए [अपने !!{paymentGatewayName}!! की सब्सक्रिप्शन सेटिंग्स]({subscriptionManagementLink}) पर जाएं.",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "आपकी सब्सक्रिप्शन **{endDate, date, medium}** को समाप्त हो जाएगी.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "आपका सब्सक्रिप्शन **{pauseDate, date, medium}** को पॉज़ हो जाएगा और **{resumeDate, date, medium}** को दुबारा अपने आप चालू हो जाएगा.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "आपका सब्सक्रिप्शन अभी पॉज़ है और **{resumeDate, date, medium}** को अपने आप दुबारा चालू हो जाएगा.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "आपका **{planName}** सब्सक्रिप्शन अभी पॉज़ है, जो **{resumeDate, date, short}** को अपने आप दुबारा चालू हो जाएगा और आपसे **!!{price}!!** का शुल्क लिया जाएगा.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "आपका सब्सक्रिप्शन पेंडिंग पेमेंट को फिर से शुरू कर देगा.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "आपका **{planName}** सब्सक्रिप्शन पेंडिंग पेमेंट को फिर से शुरू कर देगा और आपसे **!!{price}!!** का शुल्क लिया जाएगा.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "आपके **!!{price}!!** सब्सक्रिप्शन की देय तारीख बीत चुकी है. कृपया अपनी पेमेंट जानकारी अपडेट करें वर्ना आपका सब्सक्रिप्शन **{endDate, date, medium}** को एक्स्पायर हो जाएगा.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10039,6 +10093,9 @@
         PREMIUM_NO_PLANS_HEADER: "माफ़ करें!",
         PREMIUM_NO_PLANS_BODY:
           "हम अभी Google Play बिलिंग के ज़रिए ज़्यादा बूस्ट के साथ कोई प्लान ऑफ़र नहीं कर रहे हैं. [ज़्यादा जानें.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "सब्सक्रिप्शन पॉज़ या कैंसल करें",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "सब्सक्रिप्शन कैंसल या पॉज़ करें",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "सब्सक्रिप्शन - !!{price}!! / माह से शुरू है",
         PREMIUM_SUBSCRIPTION_UPDATES: "सब्सक्रिप्शन अपडेट",
@@ -10759,8 +10816,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "फ़्री ट्रायल",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Nitro के अपने पहले **3 महीनों** के लिए सिर्फ़ **{discountedPrice}** प्रति महीने का भुगतान करें! 3 महीने का डिस्काउंट खत्म होने के बाद,{regularPrice} प्रति महीने का भुगतान करें.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Nitro के लिए अपने शुरूआती **{numMonths, plural, one {महीने} other {{numMonths} महीनों}}** के लिए सिर्फ़ **{discountedPrice}** का पेमेंट करें. छूट खत्म होने के बाद हर महीने {regularPrice} का पेमेंट करें.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "3 महीने के लिए {discountedPrice}/महीने\n\n3 महीने के बाद {regularPrice}/महीने",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/महीना **{numMonths, plural, one {एक महीने} other {{numMonths} महीनों}}**के लिए\n\n{regularPrice}/महीना,{numMonths, plural, one {एक महीना} other {{numMonths} महीनों}} के बाद",
         BILLING_YEARLY_PLAN_SAVINGS:
           "एन्यूअल सब्सक्रिप्शन के साथ !!{percent, number}!!% की बचत करें",
         BILLING_SUBTOTAL: "सबटोटल",
@@ -10816,6 +10877,8 @@
         REVERSED: "पलट दिया गया है",
         REFUND: "रिफंड",
         RESUBSCRIBE: "फिर से सब्सक्राइब करें",
+        RESUME: "सब्सक्रिप्शन फिर से चालू करें",
+        WITHDRAW_PAUSE: "पॉज़ हटाएं",
         CREDIT_CARD_ERROR_REQUIRED: "कार्ड नंबर ज़रूरी है.",
         CREDIT_CARD_ERROR_NUMBER: "आपके क्रेडिट कार्ड नंबर में कुछ गड़बड़ी है",
         CREDIT_CARD_ERROR_EXPIRATION:
@@ -13497,6 +13560,16 @@
           "{count, plural, =0 {0 म्युचुअल फ्रेंड्स} one {1 म्युचुअल फ्रेंड्} other {{count} म्युचुअल फ्रेंड्स}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 म्युचुअल सर्वर} one {1 म्युचुअल सर्वर} other {{count} म्युचुअल सर्वर}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** के फ़्रेंड्स हैं",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "**{usernameOne}** और **{usernameTwo}** के फ़्रेंड्स हैं",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "**{usernameOne}**, **{usernameTwo}**, और **{count} दूसरे कई** के फ़्रेंड्स हैं",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** के मेंबर",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "**{guildNameOne}** और **{guildNameTwo}** के मेंबर",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "**{guildNameOne}**, **{guildNameTwo}**, और **{count} दूसरे कई** के मेंबर",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "म्युचुअल फ्रेंड्स",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "म्युचुअल सर्वर",
         PROFILE_IN_VOICE_CALL: "एक वॉयस कॉल में",
@@ -13629,6 +13702,8 @@
           "{monthlyPrice}/महीने या {yearlyPrice}/साल में से चुनें",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "पाने वाले को ये चीज़ें मिलेंगी:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
+          "{nitroTierName} मेंबरशिप का गिफ़्ट दे",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "गिफ़्ट की अवधि",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# महीना} other {# महीनों}} का {nitroTierName} गिफ़्ट करें",
@@ -14473,6 +14548,8 @@
           "ऐप्लिकेशन लोड करने की कोशिश में एरर आ गया.",
         INTERACTION_RATE_LIMITED: "धीरे करें! आप बहुत तेज़ क्लिक कर रहे हैं.",
         APPLICATION_ADD_BUTTON: "ऐप ऐड करें",
+        APPLICATION_ADD_BUTTON_ACTIONS: "ऐप जोड़ें एक्शन",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY: "ऐप URL जोड़ें को कॉपी करें",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "जब तक आप परमिशन चालू नहीं करते, तब तक मेम्बर इस बॉट का इस्तेमाल नहीं कर पाएंगे.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17271,6 +17348,23 @@
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "कोई बात नहीं, Nitro को बनाए रखें",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "कोई बात नहीं, Nitro के साथ बने रहें",
+        PREMIUM_PAUSE_INSTEAD: "इसके बजाय पॉज़ करें",
+        PREMIUM_PAUSE_SELECT_TITLE: "सब्सक्रिप्शन पॉज़ या कैंसल करें",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "अगर आप पेड सब्सक्रिप्शन से ब्रेक लेना चाहते हैं, तो आपके पास इसे कुछ महीनों के लिए पॉज़ करने का ऑप्शन है",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "आपके पास इसे अतिरिक्त महीनों के लिए पॉज़ रखने का ऑप्शन है",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "पॉज़ रखने की अवधि चुनें",
+        PREMIUM_PAUSE_INSTEAD_TITLE: "क्या आप **इसके बजाय पॉज़**करना चाहेंगे?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "अपने सब्सक्रिप्शन को कैंसल करने के बजाय ज़्यादा से ज़्यादा 90 दिनों के लिए पॉज़ करें.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "{days} दिनों के लिए पॉज़ करें",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "{days} और दिनों के लिए पॉज़ करें",
+        PREMIUM_PAUSE_DURATION_CANCEL: "सब्सक्रिप्शन कैंसल करें",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "आपका सब्सक्रिप्शन पॉज़ कर दिया जाएगा",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER: "कम कीमत पर कुछ पर्क्स रखें",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
           "Nitro Basic के साथ, आपको अभी भी सिर्फ़ {monthlyPrice}/महीने में कस्टम इमोजी, बड़े अपलोड और [ज़्यादा पर्क्स]({helpCenterLink}) मिलते हैं.",
@@ -21656,6 +21750,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "एनीमे: नए स्टाइल",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "सेंपाई अब आपको ज़रूर नोटिस करेंगे.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "नए: स्प्रिंगटूंस",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "रात के सन्नाटे में एक अनोखा जादू हवा को मोहित कर लेता है और...",
         COLLECTIBLES_NEW_BADGE: "नया",
         INVENTORY_EMOJI_DETAILS_V2: "इमोजी की जानकारी देखें",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23305,6 +23402,8 @@
           "{count, plural, =1 {, # मेंबर} other {# मेंबर्स}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "—मेंबर्स",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: '"संवेदनशील नहीं" मार्क करें',
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "क्या हमसे कोई गलती हो गई है? [हमें बताएं](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "आपका मैसेज भेजा नहीं जा सका. इसमें एडल्ट मीडिया हो सकता है, जिसे सर्वर द्वारा ब्लॉक कर दिया गया है.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23336,7 +23435,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "ब्रेक लें",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Wumpus के साथ LoFi बीट सुनें.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "रिलैक्स करें",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "वाइब",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "सेफ़्टी टिप्स",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "सेफ़्टी अलर्ट के बारे में",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23450,6 +23549,7 @@
         HANG_STATUS_HELP:
           "एक्टिविटी स्टेटस सेट करके अपने फ़्रेंड्स को दिखाएं कि आप क्या कर रहे हैं.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "कस्टम स्टेटस सेट करें",
+        HANG_STATUS_MOBILE_SET_ROW: "वॉयस एक्टिविटी सेट करें",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "रिपोर्ट नहीं मिली.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "रिव्यू को रिपोर्ट करने की रिक्वेस्ट पहले ही की जा चुकी है.",
@@ -23548,11 +23648,19 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "यहां देखने के लिए कुछ नहीं है",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "इस जवाब के लिए कोई वोट नहीं है.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "वोट",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{option} के लिए {numVotes, plural, =0 {0 वोट} =1 {{numVotes}वोट} other {{numVotes} वोट}}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "वोटर बताएं",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "वोटर बताता है",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! और {n, plural, one {1 दूसरा} other {{n} दूसरे}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! और !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!!, और {n, plural, one {1 और} other {{n} और}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!!, और !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!!, और {n, plural, one {1 दूसरा} other {{n} दूसरे}}",
+        POLL_VOTES_TOOLTIP_N: "{n, plural, one {1 व्यक्ति} other {{n} लोग}}",
         CREATE_POLL: "पोल क्रिएट करें",
         CREATE_POLL_HEADING: "पोल क्रिएट करें",
         CREATE_POLL_EXPIRATION: "पोल 24 घंटे के लिए लाइव होगा",
@@ -23565,11 +23673,17 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "मीडिया ऐड करें, जवाब {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "मीडिया अपडेट करें, {imageName}, जवाब {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA: "इमोजी जोड़ें, जवाब {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "इमोजी अपडेट करें, {emojiName}, जवाब {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "इमोजी अपडेट करें",
         CREATE_POLL_ANSWER_INPUT_LABEL: "जवाब {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "अपना जवाब टाइप करें",
         CREATE_POLL_ADD_ANSWER_BUTTON: "एक और जवाब ऐड करें",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "के लिए पोल लाइव होगा",
         CREATE_POLL_DURATION_LABEL: "अवधि",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 घंटा} other {{num} घंटे}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 दिन",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 हफ्ता",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23583,8 +23697,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "क्या आप वाकई बाहर निकलना चाहते हैं? अभी छोड़ने पर कोई भी किए हुए बदलाव लागू नहीं होंगे.",
         CREATE_POLL_REMOVE_ANSWER: "जवाब रिमूव करें",
+        CREATE_POLL_REMOVE_EMOJI: "इमोजी हटाएं",
         CREATE_POLL_ADD_IMAGE: "मीडिया ऐड करें",
+        CREATE_POLL_ADD_EMOJI: "इमोजी जोड़ें",
         CREATE_POLL_REPLACE_IMAGE: "मीडिया बदलें",
+        CREATE_POLL_REPLACE_EMOJI: "इमोजी बदलें",
         CREATE_POLL_POLL_ANSWER: "पोल का जवाब",
         CREATE_POLL_EDIT_ALT_TEXT:
           "इमेज डिस्क्रिप्शन (वैकल्पिक टेक्स्ट) एडिट करें",
@@ -23666,7 +23783,7 @@
         QUESTS_LANDING_PAGE_ERROR_HEADING: "ओह!",
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "माफ़ करें.. क्वेस्ट अभी तक मोबाइल पर उपलब्ध नहीं हैं! अपने डेस्कटॉप Discord ऐप या ब्राउज़र से आप **यूज़र सेटिंग > गिफ़्ट इन्वेंटरी** पर जाकर क्वेस्ट स्वीकार कर सकते हैं.",
-        QUESTS_MOBILE_EMBED_TITLE: "फ़िलहाल क्वेस्ट मोबाइल पर उपलब्ध नहीं हैं.",
+        QUESTS_MOBILE_EMBED_TITLE: "क्वेस्ट मोबाइल पर उपलब्ध नहीं हैं",
         QUESTS_MOBILE_EMBED_BODY:
           "अपने डेस्कटॉप Discord ऐप या ब्राउज़र से \nयूज़र सेटिंग > गिफ़्ट इन्वेंटरी पर जाकर आप क्वेस्ट स्वीकार कर सकते हैं.",
         QUESTS_GET_THIS_GAME: "गेम पाएं",
@@ -23714,9 +23831,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!!, और {count, plural, one {1 और} other {{count} और}}",
         STOREFRONT: "स्टोर",
-        STOREFRONT_APP_SUBSCRIPTIONS: "ऐप के सब्सक्रिप्शन",
+        STOREFRONT_APP_SUBSCRIPTIONS: "सब्सक्रिप्शन",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "{appName} से सब्सक्रिप्शन खरीदें",
-        STOREFRONT_APP_PRODUCTS: "ऐप प्रोडक्ट",
+        STOREFRONT_APP_PRODUCTS: "प्रोडक्ट",
         STOREFRONT_APP_PRODUCTS_BODY: "{appName} से प्रोडक्ट खरीदें",
         STOREFRONT_SUBSCRIPTION: "सब्सक्रिप्शन",
         STOREFRONT_SUBSCRIBE_FOR: "{rate} पर सब्सक्राइब करें",
@@ -23736,6 +23853,13 @@
         FOCUS_MODE_TITLE: "फ़ोकस मोड (बीटा)",
         FOCUS_MODE_BADGE_ON: "ऑन",
         FOCUS_MODE_BADGE_OFF: "ऑफ़",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "DND",
+        FOCUS_MODE_DESCRIPTION:
+          "डेस्कटॉप नोटिफ़िकेशन & मैसेज साउंड को बंद कर देता है.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "इन-ऐप नोटिफ़िकेशन & मैसेज साउंड को बंद कर देता है.",
+        FOCUS_MODE_TURN_OFF: "फ़ोकस मोड बंद करें",
+        FOCUS_MODE_ENABLE_FOR: "के लिए फ़ोकस मोड चालू करें",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "आप काफ़ी दिनों से डिस्टर्ब न करें मोड पर हैं. क्या आप इसके बजाय फ़ोकस मोड इनेबल करना चाहेंगे?",
         ACTIVITY_REACTION_REPLY_TITLE: "{activity} के बारे में चैट करें",
@@ -23766,6 +23890,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count}घंटे पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count}मिनट पहले",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}पहले",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days}दि के लिए",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours}घं के लिए",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "पहली बार",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "एक्टिविटी",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

@@ -56,6 +56,7 @@
           "\nL\xe4hetimme ohjeet salasanasi vaihtamiseen osoitteeseen **!!{email}!!**. Tarkista sek\xe4 saapuneet viestisi ett\xe4 roskapostikansiosi.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Valmistelu",
         STORE_CHANNEL_TYPE: "Kauppa",
+        NEWS_CHANNEL_TYPE: "Tiedote",
         VOICE_CHANNEL_TYPE: "Puhe",
         FORUM_CHANNEL_TYPE: "Keskustelufoorumi",
         TEXT_CHANNEL_TYPE: "Teksti",
@@ -5724,6 +5725,7 @@
         STATUS_DND: "\xc4l\xe4 h\xe4iritse",
         STATUS_INVISIBLE: "N\xe4kym\xe4t\xf6n",
         STATUS_DND_HELP: "Et saa mit\xe4\xe4n ty\xf6p\xf6yt\xe4ilmoituksia.",
+        STATUS_DND_HELP_FOCUS_MODE: "Ottaa keskittymistilan k\xe4ytt\xf6\xf6n",
         STATUS_INVISIBLE_HELPER:
           "Et n\xe4y paikalla olevana, mutta sinulla on t\xe4ysi p\xe4\xe4sy Discordiin.",
         STATUS_UNTIL: "{endTime} asti",
@@ -6450,8 +6452,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discord-j\xe4sen alkaen",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {1 yhteinen kaveri} other {{count} yhteist\xe4 kaveria}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Yhteiset kaverit ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {1 yhteinen palvelin} other {{count} yhteist\xe4 palvelinta}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Yhteiset palvelimet ({count})",
         SHOW_USER_PROFILE: "N\xe4yt\xe4 k\xe4ytt\xe4j\xe4profiili",
         HIDE_USER_PROFILE: "Piilota k\xe4ytt\xe4j\xe4profiili",
         SHOW_USER_PROFILE_UNAVAILABLE:
@@ -8871,6 +8875,8 @@
           "Kannattaa lukea p\xe4ivittyneet asiakirjat kokonaisuudessaan, sill\xe4 niiss\xe4 on Discord-k\xe4ytt\xf6\xe4si koskevia asioita. T\xe4rkeimmist\xe4 muutoksista on kerrottu tarkemmin blogiviestiss\xe4.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Tiedotimme viime kuussa vuosittaisista k\xe4yt\xe4nt\xf6jemme p\xe4ivityksist\xe4, jotka ovat nyt voimassa. [Blogviestiss\xe4mme](https://discord.com/blog/important-policy-updates) on yhteenveto n\xe4ist\xe4 muutoksista ja t\xe4ydet k\xe4yt\xe4nn\xf6t voit lukea alta.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Klikkaamalla Hyv\xe4ksy vahvistat hyv\xe4ksyv\xe4si Discordin palveluehdot ja vahvistat lukeneesi tietosuojak\xe4yt\xe4nt\xf6mme.",
         COMMUNITY_GUIDELINES: "[Yhteis\xf6s\xe4\xe4nn\xf6t]({url})",
         BLOG_POST: "[Blogiviestimme]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Tietylt\xe4 henkil\xf6lt\xe4",
@@ -9206,6 +9212,8 @@
           "Odottelen t\xe4\xe4ll\xe4, kunnes valitset palvelimen {numUnappliedGuildBoostSlots, plural, =1 {sit\xe4} other {niit\xe4}} varten!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Odottelen t\xe4\xe4ll\xe4, kunnes valitset palvelimen {numUnappliedGuildBoostSlots, plural, =1 {sit\xe4} other {niit\xe4}} varten! Katso lis\xe4tietoja Nitron eduista $[t\xe4\xe4ll\xe4](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Odottelen t\xe4\xe4ll\xe4, kunnes **valitset palvelimen {numUnappliedGuildBoostSlots, plural, =1 {sit\xe4} other {niit\xe4}} varten!** Katso lis\xe4tietoja Nitron eduista $[t\xe4\xe4ll\xe4](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Peruuta nostatus",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Kumoa nostatuksen peruutus",
@@ -9410,6 +9418,10 @@
           "Sinulla on mukautetut emojit, suuremmat latauskoot ja paljon muuta hintaan **!!{price}!!** (peruutus k\xe4ynniss\xe4)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Sinulla on mukautetut emojit, suuremmat latauskoot ja paljon muuta (peruutus k\xe4ynniss\xe4)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Sinulla on mukautetut emojit, suuremmat latauskoot ja paljon muuta hintaan **!!{price}!!** (keskeytetty **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Sinulla on mukautetut emojit, suuremmat latauskoot ja paljon muuta (keskeytetty **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Nitro Basic ‑tilauksesi, jolla saat mukautetut emojit, suuremmat latauskoot ja muut edut hintaan **!!{price}!!**, on **j\xe4\xe4dytettyn\xe4**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9424,6 +9436,10 @@
           "Sinulla on keskusteluedut ja nostatusalennus arvoltaan **!!{price}!!** (peruutus k\xe4ynniss\xe4)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Sinulla on keskusteluedut ja nostatusalennus (peruutus k\xe4ynniss\xe4)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Sinulla on keskusteluedut ja nostatusalennus arvoltaan **!!{price}!!** (keskeytetty **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Sinulla on keskusteluedut ja nostatusalennus (keskeytetty **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Keskusteluedut ja nostatusalennuksen (arvo **!!{price}!!**) sis\xe4lt\xe4v\xe4 tilauksesi on **j\xe4\xe4dytettyn\xe4**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9438,6 +9454,12 @@
           "Sinulla on k\xe4yt\xf6ss\xe4 premium-keskustelu, **{num, number} kpl** nostatuksia ja nostatusalennus arvoltaan **!!{price}!!** (peruutus k\xe4ynniss\xe4)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Sinulla on k\xe4yt\xf6ss\xe4 premium-keskustelu, **{num, number} kpl** nostatuksia ja nostatusalennus (peruutus k\xe4ynniss\xe4)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Sinulla on k\xe4yt\xf6ss\xe4 premium-keskustelu, **{num, number} kpl** nostatuksia ja nostatusalennus arvoltaan **!!{price}!!** (keskeytetty **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Sinulla on k\xe4yt\xf6ss\xe4 premium-keskustelu, **{num, number} kpl** nostatuksia ja nostatusalennus (keskeytetty **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Olet keskeytt\xe4nyt Nitro-tilauksesi **{resumeDate, date, medium}** asti. Kun tilauksesi jatkuu, saat Nitron edut j\xe4lleen k\xe4ytt\xf6\xf6n",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Premium-keskustelun, **{num, number} kpl** nostatuksia ja nostatusalennuksen (arvo **!!{price}!!**) sis\xe4lt\xe4v\xe4 tilauksesi on **j\xe4\xe4dytettyn\xe4**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9557,6 +9579,16 @@
         PREMIUM_TRIAL_ACTION_SHEET_TIER_2_HEADER:
           "Kokeile Nitroa ilmaiseksi 30 p\xe4iv\xe4n ajan",
         PREMIUM_TRIAL_ACTION_SHEET_CTA: "Jatka 30 p\xe4iv\xe4n kokeiluun",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Saat {duration} meid\xe4n piikkiimme",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Ota {nitroTierName} k\xe4ytt\xf6\xf6n ja pid\xe4 enemm\xe4n hauskaa",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Yksil\xf6llisi\xe4 profiilimukautuksia ja paljon muuta!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Ota k\xe4ytt\xf6\xf6si mukautettu sovelluskuvake, superreaktiot, ja paljon muuta!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} alkaen {price}\xa0/\xa0kk",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Tervetuloa Nitroon!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Olet valmis ottamaan r\xe4j\xe4ht\xe4v\xe4n l\xe4hd\xf6n!",
@@ -9619,6 +9651,8 @@
         PREMIUM_DISCOUNT_CTA:
           "S\xe4\xe4st\xe4 !!{percent, number}!! % Nitrosta",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "S\xe4\xe4st\xe4 Nitrosta",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Maksat vain **{discountedPrice}** **{numMonths, plural, one {kuukauden ajan!} other {{numMonths} kuukauden ajan!}}** Sen j\xe4lkeen hinta on {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "!!{percent, number}!!\xa0%:n alennuksesi p\xe4\xe4ttyy {numMonths, plural, one {kuukausi} other {{numMonths} kuukautta}} oston j\xe4lkeen. T\xe4m\xe4n j\xe4lkeen sinulta veloitetaan {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9646,6 +9680,8 @@
         PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION:
           "**Ilmainen kokeilusi p\xe4\xe4ttyy {remainingTime, plural, =0 {t\xe4n\xe4\xe4n} one {# p\xe4iv\xe4n kuluttua} other {# p\xe4iv\xe4n kuluttua}}**. Sen j\xe4lkeen sinulta veloitetaan !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "ilmaiskokeilu aktivoitu",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Saat {duration} meid\xe4n piikkiimme",
         INCLUDED: "Sis\xe4ltyy",
         NOT_INCLUDED: "Ei sis\xe4lly",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -10211,6 +10247,16 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Nitron ja palvelinnostatusten tilausten peruutus tulee voimaan v\xe4litt\xf6m\xe4sti.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Jep, peru !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "Keskeytet\xe4\xe4nk\xf6 !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Nitro pysyy k\xe4yt\xf6ss\xe4si **{pauseDate, date, medium}** asti, mink\xe4 j\xe4lkeen tilauksesi on keskeytettyn\xe4 {pauseDuration} p\xe4iv\xe4n ajan. Tilauksen laskutus jatkuu **{resumeDate, date, medium}**. Voit jatkaa tilausta t\xe4t\xe4 aiemmin koska tahansa.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "Nitro-tilauksesi keskeytet\xe4\xe4n **nyt** {pauseDuration} p\xe4iv\xe4n ajaksi. Tilauksen laskutus jatkuu j\xe4lleen **{resumeDate, date, medium}**. Voit jatkaa tilausta t\xe4t\xe4 aiemmin koska tahansa.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Nitro-tilauksesi pitenee **{resumeDate, date, medium}** asti. Voit jatkaa tilausta koska tahansa.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Kyll\xe4, keskeytet\xe4\xe4n !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Siisti\xe4!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Selv\xe4",
         PREMIUM_UPLOAD_PROMO:
@@ -10257,6 +10303,16 @@
           "Tilauksesi uusitaan automaattisesti **{renewalDate, date, medium}**. Lis\xe4tietoja on [palvelun !!{paymentGatewayName}!! tilausasetuksissa]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Tilauksesi p\xe4\xe4ttyy **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "Tilauksesi keskeytyy **{pauseDate, date, medium}** ja jatkuu automaattisesti **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Tilauksesi on t\xe4ll\xe4 hetkell\xe4 keskeytettyn\xe4 ja jatkuu automaattisesti **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Tilauksesi (**{planName}**) on t\xe4ll\xe4 hetkell\xe4 keskeytettyn\xe4 ja jatkuu automaattisesti **{resumeDate, date, short}**, jolloin sinulta veloitetaan **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Tilauksesi jatkuu, kun sen maksu on suoritettu.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Tilauksesi (**{planName}**) jatkuu, kun sen maksu, **!!{price}!!**, on suoritettu.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Tilauksesi, jonka hinta on **!!{price}!!**, maksu on my\xf6h\xe4ss\xe4. P\xe4ivit\xe4 maksutietosi, sill\xe4 muutoin tilauksesi p\xe4\xe4ttyy **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10306,6 +10362,9 @@
         PREMIUM_NO_PLANS_HEADER: "Pahoittelut!",
         PREMIUM_NO_PLANS_BODY:
           "T\xe4ll\xe4 hetkell\xe4 lis\xe4nostatuksia ei saa tilaukseen, joka maksetaan Google Play ‑laskutuksena. [Lue lis\xe4\xe4.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION: "Keskeyt\xe4 tai peruuta tilaus",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Peruuta tai keskeyt\xe4 tilaus",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Tilaa – alkaen !!{price}!! / kk",
         PREMIUM_SUBSCRIPTION_UPDATES: "Tilausp\xe4ivitykset",
@@ -11046,8 +11105,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "ilmaiskokeilu",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Maksa Nitrosta vain **{discountedPrice}** kuukaudessa ensimm\xe4isen **3 kuukauden** ajan! Kolmen kuukauden alennuskauden j\xe4lkeen maksat {regularPrice} kuukaudessa.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Maksa Nitrosta vain **{discountedPrice}** kuukaudessa ensimm\xe4isen **{numMonths, plural, one {kuukauden} other {{numMonths} kuukauden}}** ajan. Alennuskauden j\xe4lkeen maksat {regularPrice} kuukaudessa.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}\xa0/\xa0kk kolmen kuukauden ajan\n\n{regularPrice}\xa0/\xa0kuukausi kolmen kuukauden j\xe4lkeen",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}\xa0/\xa0kk **{numMonths, plural, one {yhden kuukauden ajan} other {{numMonths} kuukauden ajan}}**\n\n{regularPrice}\xa0/\xa0kk {numMonths, plural, one {yhden kuukauden j\xe4lkeen} other {{numMonths} kuukauden j\xe4lkeen}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "S\xe4\xe4st\xe4 !!{percent, number}!!\xa0% vuositilauksella",
         BILLING_SUBTOTAL: "V\xe4lisumma",
@@ -11103,6 +11166,8 @@
         REVERSED: "K\xe4\xe4nnetty",
         REFUND: "Hyvitys",
         RESUBSCRIBE: "Tilaa uudelleen",
+        RESUME: "Jatka tilausta",
+        WITHDRAW_PAUSE: "Peruuta keskeytys",
         CREDIT_CARD_ERROR_REQUIRED: "Kortin numero on pakollinen.",
         CREDIT_CARD_ERROR_NUMBER: "Luottokorttinumerossasi on jotain vikaa",
         CREDIT_CARD_ERROR_EXPIRATION:
@@ -13860,6 +13925,17 @@
           "{count, plural, =0 {0 yhteist\xe4 kaveria} one {1 yhteinen kaveri} other {{count} yhteist\xe4 kaveria}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {0 yhteist\xe4 palvelinta} one {1 yhteinen palvelin} other {{count} yhteist\xe4 palvelinta}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "**{usernameOne}** kaverina",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "**{usernameOne}** ja **{usernameTwo}** kavereina",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "**{usernameOne}**, **{usernameTwo}** ja **{count} muuta kavereina**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE:
+          "j\xe4senen\xe4 palvelimella **{guildNameOne}**",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "j\xe4senen\xe4 palvelimilla **{guildNameOne}** ja **{guildNameTwo}**",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "j\xe4senen\xe4 palvelimilla **{guildNameOne}** ja **{guildNameTwo}** sek\xe4 **{count} muussa**",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Yhteiset kaverit",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Yhteiset palvelimet",
         PROFILE_IN_VOICE_CALL: "Puhelu k\xe4ynniss\xe4",
@@ -13999,6 +14075,7 @@
           "Valitse joko {monthlyPrice}\xa0/\xa0kk tai {yearlyPrice}\xa0/\xa0vuosi",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER:
           "Lahjan saaja saa t\xe4m\xe4n:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Anna {nitroTierName} lahjaksi",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Lahjan kesto",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Anna {nitroTierName} lahjaksi {count, plural, one {# kuukaudeksi} other {# kuukaudeksi}}",
@@ -14873,6 +14950,9 @@
           "Sovellusta ladattaessa ilmeni virhe.",
         INTERACTION_RATE_LIMITED: "Rauhoitu! Klikkailet liian nopeasti.",
         APPLICATION_ADD_BUTTON: "Lis\xe4\xe4 sovellus",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Sovelluksen lis\xe4ystoiminnot",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Kopioi sovelluksen lis\xe4yksen URL-osoite",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "J\xe4senet eiv\xe4t voi k\xe4ytt\xe4\xe4 t\xe4t\xe4 bottia ennen kuin otat k\xe4ytt\xf6oikeudet k\xe4ytt\xf6\xf6n.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17751,6 +17831,23 @@
           "Unohdetaan koko juttu, pid\xe4n Nitron",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA:
           "Unohdetaan koko juttu, pid\xe4n Nitron",
+        PREMIUM_PAUSE_INSTEAD: "Keskeyt\xe4 sen sijaan",
+        PREMIUM_PAUSE_SELECT_TITLE: "Keskeyt\xe4 tai peruuta tilaus",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Jos haluat pit\xe4\xe4 tauon maksullisesta tilauksesta, voit keskeytt\xe4\xe4 sen muutaman kuukauden ajaksi",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Voit halutessasi pident\xe4\xe4 keskeytyksen kestoa muutamalla kuukaudella",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Valitse keskeytyksen kesto",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "Haluaisitko t\xe4m\xe4n sijaan **keskeytt\xe4\xe4 tilauksen**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Voit tilauksen peruuttamisen sijasta keskeytt\xe4\xe4 sen jopa 90 p\xe4iv\xe4n ajaksi.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "Keskeyt\xe4 {days} p\xe4iv\xe4ksi",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Keskeyt\xe4 viel\xe4 {days} p\xe4iv\xe4ksi lis\xe4\xe4",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Peruuta tilaus",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED: "Tilauksesi perutaan",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Pid\xe4 osa eduista edullisempaan hintaan",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -22306,6 +22403,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: uusia tyylej\xe4",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai huomaa sinut nyt varmasti.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "UUTTA: Kev\xe4tpiirretyt",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Y\xf6n hiljaisuudessa outo magia lumoaa ilman ja...",
         COLLECTIBLES_NEW_BADGE: "UUTTA",
         INVENTORY_EMOJI_DETAILS_V2: "N\xe4yt\xe4 emojin tiedot",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23963,6 +24063,8 @@
           "{count, plural, =1 {# j\xe4sen} other {# j\xe4sent\xe4}}",
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "– j\xe4seni\xe4",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE: "Merkitse vaarattomaksi",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Olemmeko tehneet virheen? [Kerro meille](handleFalsePositiveHook).",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Viesti\xe4si ei voitu l\xe4hett\xe4\xe4. Se saattaa sis\xe4lt\xe4\xe4 arveluttavaa mediasis\xe4lt\xf6\xe4, joka on estetty\xe4 palvelimella.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23995,7 +24097,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Ota aikalis\xe4",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Kuuntele lofi-s\xe4velmi\xe4 Wumpuksen kanssa.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Rentoudu",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Tunnelma",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Turvallisuusvinkkej\xe4",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE:
           "Tietoa turvallisuusilmoituksista",
@@ -24112,6 +24214,7 @@
         HANG_STATUS_HELP:
           "Kerro kavereillesi mit\xe4 puuhaat asettamalla itsellesi toimintatila.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER: "Aseta mukautettu tila",
+        HANG_STATUS_MOBILE_SET_ROW: "Aseta puhetoiminta",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Ilmiantoa ei l\xf6ytynyt.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Ilmiannon uudelleenarviointia on jo pyydetty.",
@@ -24218,11 +24321,20 @@
         POLL_NO_VOTES_FOR_ANSWER_BODY:
           "T\xe4m\xe4 vastaus ei ole saanut \xe4\xe4ni\xe4.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "\xc4\xe4net",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 \xe4\xe4nt\xe4} =1 {{numVotes} \xe4\xe4ni} other {{numVotes} \xe4\xe4nt\xe4}} vaihtoehdolle {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Paljasta \xe4\xe4nest\xe4j\xe4t",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Paljastaa \xe4\xe4nest\xe4j\xe4t",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! ja {n, plural, one {1 muu} other {{n} muuta}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! ja !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! ja {n, plural, one {1 muu} other {{n} muuta}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! ja !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! ja {n, plural, one {1 muu} other {{n} muuta}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {1 henkil\xf6} other {{n} henkil\xf6\xe4}}",
         CREATE_POLL: "Luo kysely",
         CREATE_POLL_HEADING: "Luo kysely",
         CREATE_POLL_EXPIRATION: "Kysely on voimassa 24 tuntia",
@@ -24238,12 +24350,19 @@
           "Lis\xe4\xe4 mediatiedosto, vastaus {answerNumber}",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "P\xe4ivit\xe4 mediasis\xe4lt\xf6, {imageName}, vastaus {answerNumber}",
+        CREATE_POLL_ADD_EMOJI_ARIA:
+          "Lis\xe4\xe4 emoji vastaukseen {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "P\xe4ivit\xe4 emoji {emojiName} vastauksessa {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "P\xe4ivit\xe4 emoji",
         CREATE_POLL_ANSWER_INPUT_LABEL: "Vastaus {answerNumber}",
         CREATE_POLL_ANSWER_PLACEHOLDER: "M\xe4\xe4rit\xe4 vastauksesi tyyppi",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Lis\xe4\xe4 uusi vastaus",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Kyselyn voimassaoloaika",
         CREATE_POLL_DURATION_LABEL: "Kesto",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 tunti} other {{num} tuntia}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 p\xe4iv\xe4\xe4",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 viikko",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24258,8 +24377,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Haluatko varmasti lopettaa? Kaikki tekem\xe4si muutokset h\xe4vi\xe4v\xe4t, jos lopetat nyt.",
         CREATE_POLL_REMOVE_ANSWER: "Poista vastaus",
+        CREATE_POLL_REMOVE_EMOJI: "Poista emoji",
         CREATE_POLL_ADD_IMAGE: "Lis\xe4\xe4 mediatiedosto",
+        CREATE_POLL_ADD_EMOJI: "Lis\xe4\xe4 emoji",
         CREATE_POLL_REPLACE_IMAGE: "Vaihda mediatiedosto",
+        CREATE_POLL_REPLACE_EMOJI: "Vaihda emoji",
         CREATE_POLL_POLL_ANSWER: "Kyselyn vastaus",
         CREATE_POLL_EDIT_ALT_TEXT: "Muokkaa kuvan kuvausta (ALT-teksti\xe4)",
         CREATE_POLL_EDIT_IMAGE_DESCRIPTION: "Muokkaa kuvan kuvausta",
@@ -24342,7 +24464,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Teht\xe4v\xe4t eiv\xe4t ole k\xe4ytett\xe4viss\xe4 mobiililaitteilla – viel\xe4. Pahoittelut siit\xe4! Voit ottaa teht\xe4vi\xe4 vastaan Discordin ty\xf6p\xf6yt\xe4- tai selainsovelluksessa valitsemalla **K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo**.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Teht\xe4v\xe4t eiv\xe4t ole k\xe4ytett\xe4viss\xe4 mobiililaitteilla – viel\xe4.",
+          "Teht\xe4v\xe4t eiv\xe4t ole k\xe4ytett\xe4viss\xe4 mobiililaitteilla",
         QUESTS_MOBILE_EMBED_BODY:
           "Voit ottaa teht\xe4vi\xe4 vastaan Discordin ty\xf6p\xf6yt\xe4- tai selainsovelluksessa \nvalitsemalla K\xe4ytt\xe4j\xe4asetukset > Lahjaluettelo.",
         QUESTS_GET_THIS_GAME: "Hanki peli",
@@ -24391,10 +24513,10 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ja {count, plural, one {1 muu} other {{count} muuta}}",
         STOREFRONT: "Kauppa",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Sovellustilaukset",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Tilaukset",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY:
           "Osta tilauksia sovelluksessa {appName}",
-        STOREFRONT_APP_PRODUCTS: "Sovellustuotteet",
+        STOREFRONT_APP_PRODUCTS: "Tuotteet",
         STOREFRONT_APP_PRODUCTS_BODY:
           "Sovelluksesta {appName} ostetut tuotteet",
         STOREFRONT_SUBSCRIPTION: "Tilaus",
@@ -24417,6 +24539,13 @@
         FOCUS_MODE_TITLE: "Keskittymistila (BEETA)",
         FOCUS_MODE_BADGE_ON: "P\xe4\xe4ll\xe4",
         FOCUS_MODE_BADGE_OFF: "Pois",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "\xc4l\xe4 h\xe4iritse",
+        FOCUS_MODE_DESCRIPTION:
+          "Poistaa ty\xf6p\xf6yt\xe4ilmoitukset ja viesti\xe4\xe4net k\xe4yt\xf6st\xe4.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Poistaa sovelluksensis\xe4iset ilmoitukset ja viesti\xe4\xe4net k\xe4yt\xf6st\xe4.",
+        FOCUS_MODE_TURN_OFF: "Poista keskittymistila k\xe4yt\xf6st\xe4",
+        FOCUS_MODE_ENABLE_FOR: "Ota keskittymistila k\xe4ytt\xf6\xf6n, kesto:",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Olet ollut \xc4l\xe4 h\xe4iritse ‑tilassa hetken aikaa. Haluatko ottaa keskittymistilan k\xe4ytt\xf6\xf6n sen sijasta?",
         ACTIVITY_REACTION_REPLY_TITLE: "Keskustele toiminnasta {activity}",
@@ -24448,6 +24577,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "{count} t sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "{count} min sitten",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "{count}\xa0s sitten",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days}\xa0pv",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours}\xa0t",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}.}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Ensimm\xe4inen kerta",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Toiminta",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

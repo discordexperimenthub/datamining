@@ -54,6 +54,7 @@
           "\nMes išsiuntėme nurodymus slaptažodžiui pakeisti į **!!{email}!!**, patikrink savo pašto dėžutę ir šlamšto aplanką.\n  ",
         STAGE_VOICE_CHANNEL_TYPE: "Etapas",
         STORE_CHANNEL_TYPE: "Parduotuvė",
+        NEWS_CHANNEL_TYPE: "Pranešimas",
         VOICE_CHANNEL_TYPE: "Balsas",
         FORUM_CHANNEL_TYPE: "Forumas",
         TEXT_CHANNEL_TYPE: "Tekstas",
@@ -5579,6 +5580,7 @@
         STATUS_DND: "Netrukdyti",
         STATUS_INVISIBLE: "Nematomas",
         STATUS_DND_HELP: "Negausi jokių pranešimų darbalaukyje.",
+        STATUS_DND_HELP_FOCUS_MODE: "Įjungia susikaupimo režimą",
         STATUS_INVISIBLE_HELPER:
           "Tavęs nerodys kaip prisijungusio kitiems, tačiau galėsi naudotis visomis Discord funkcijomis.",
         STATUS_UNTIL: "iki {endTime}",
@@ -6272,8 +6274,10 @@
         USER_PROFILE_DISCORD_MEMBER_SINCE: "Discord narys (-ė) nuo",
         MUTUAL_FRIENDS_COUNT:
           "{count, plural, =1 {{count} bendras draugas} few {{count} bendri draugai} other {{count} bendrų draugų}}",
+        MUTUAL_FRIENDS_WITH_END_COUNT: "Bendri draugai ({count})",
         MUTUAL_GUILDS_COUNT:
           "{count, plural, =1 {{count} bendras serveris} few {{count} bendri serveriai} other {{count} bendrų serverių}}",
+        MUTUAL_GUILDS_WITH_END_COUNT: "Bendri serveriai ({count})",
         SHOW_USER_PROFILE: "Rodyti naudotojo profilį",
         HIDE_USER_PROFILE: "Slėpti naudotojo profilį",
         SHOW_USER_PROFILE_UNAVAILABLE: "Rodyti naudotojo profilį (neprieinama)",
@@ -8643,6 +8647,8 @@
           "Skatiname atidžiai perskaityti visus atnaujintus dokumentus, nes jie taikomi tavo Discord naudojimui. Vieni svarbiausių pakeitimų paaiškinami mūsų blogo įraše.",
         TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION:
           "Praėjusį mėnesį paskelbėme kasmetinius mūsų politikų atnaujinimus, kurie jau įsigaliojo. Šių pokyčių santrauką rasi mūsų [tinklaraščio įraše](https://discord.com/blog/important-policy-updates), o išsamias politikas gali perskaityti toliau.",
+        TERMS_OF_SERVICE_AGREEMENT_DESCRIPTION:
+          "Spustelėdamas (-a) „Sutinku“ parodai, kad sutinki su Discord paslaugų teikimo sąlygomis ir esi perskaitęs (-čiusi) mūsų privatumo politiką.",
         COMMUNITY_GUIDELINES: "[Bendruomenės gairės]({url})",
         BLOG_POST: "[Mūsų blogo įrašas]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "Nuo konkretaus asmens",
@@ -8972,6 +8978,8 @@
           "Kol kas tik laukia čia, kol pasirinksi serverį, kuriam {numUnappliedGuildBoostSlots, plural, =1 {jį} other {juos}} atiduosi!",
         GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION:
           "Kol kas tik laukia čia, kol pasirinksi serverį, kuriam {numUnappliedGuildBoostSlots, plural, =1 {jį} other {juos}} atiduosi! Sužinok daugiau apie Nitro pranašumus $[čia](learnMoreHook).",
+        GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_SUBHEADING_WITH_PREMIUM_SUBSCRIPTION_V2:
+          "Kol kas tik laukia čia, kol **pasirinksi serverį, kuriam {numUnappliedGuildBoostSlots, plural, =1 {jį} other {juos}} atiduosi!** Sužinok daugiau apie Nitro pranašumus $[čia](learnMoreHook).",
         GUILD_BOOSTING_USER_SETTINGS_CANCEL_BOOST: "Atšaukti stiprinimą",
         GUILD_BOOSTING_USER_SETTINGS_UNCANCEL_BOOST:
           "Panaikinti stiprinimo atšaukimą",
@@ -9174,6 +9182,10 @@
           "Už **!!{price}!!** gauni tinkintus jaustukus, didesnių failų įkėlimą ir dar daugiau (laukiama atšaukimo)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE:
           "Gauni tinkintus jaustukus, didesnių failų įkėlimą ir dar daugiau (laukiama atšaukimo)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE:
+          "Už **!!{price}!!** gauni tinkintus jaustukus, didesnių failų įkėlimą ir dar daugiau (laikinai sustabdoma **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAUSE_NO_PRICE:
+          "Gauni tinkintus jaustukus, didesnių failų įkėlimą ir dar daugiau (laikinai sustabdoma **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD:
           "Tavo Nitro Basic prenumerata, suteikianti tinkintus jaustukus, didesnių failų įkėlimą ir kitus pranašumus už **!!{price}!!**, yra **sulaikyta**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE:
@@ -9188,6 +9200,10 @@
           "Gausi pokalbių pranašumų ir stiprinimo nuolaidą už **!!{price}!!** (laukiama atšaukimo)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE:
           "Tu turi pokalbių pranašumų ir stiprinimo nuolaidą (laukiama atšaukimo)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE:
+          "Už **!!{price}!!** gauni pokalbių pranašumų ir stiprinimo nuolaidą (laikinai sustabdoma **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAUSE_NO_PRICE:
+          "Gauni pokalbių pranašumų ir stiprinimo nuolaidą (laikinai sustabdoma **{pauseDate, date, medium}**)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD:
           "Tavo pokalbių pranašumai ir stiprinimo nuolaidos **!!{price}!!** prenumeratai yra **sulaikyti**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE:
@@ -9202,6 +9218,12 @@
           "Gausi premium pokalbio funkcijų, stiprinimų (**{num, number}x**) stiprinimo nuolaidą, vertą **!!{price}!!** (laukiantis atšaukimas)",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE:
           "Tu turi premium pokalbio funkcijų, **{num, number}x** stiprinimų ir stiprinimo nuolaidą (laukiama atšaukimo)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE:
+          "Už **!!{price}!!** gauni premium pokalbio funkcijų, stiprinimų (**{num, number}x**) ir stiprinimo nuolaidą (laikinai sustabdoma **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_PAUSE_NO_PRICE:
+          "Gauni premium pokalbio funkcijų, **{num, number}x** stiprinimų ir stiprinimo nuolaidą (laikinai sustabdoma **{pauseDate, date, medium}**)",
+        PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED:
+          "Iki **{resumeDate, date, medium}** laikinai sustabdei savo Nitro prenumeratą. Kai prenumerata bus atnaujinta, atgausi prieigą prie Nitro",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD:
           "Tavo premium pokalbiai, stiprinimai (**{num, number}x**) ir stiprinimo nuolaidos prenumerata **!!{price}!!** yra **sulaikyti**",
         PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD_NO_PRICE:
@@ -9320,6 +9342,16 @@
           "Išbandyk Nitro nemokamai 30 dienų",
         PREMIUM_TRIAL_ACTION_SHEET_CTA:
           "Tęsti link 30 dienų bandomojo laikotarpio",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER_PILL:
+          "Mėgaukis {duration} mūsų sąskaita",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_HEADER:
+          "Gyvenk smagiau su {nitroTierName}",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_FEATURES:
+          "Unikalūs profilio tinkinimai ir ne tik!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_NITRO_BASIC_FEATURES:
+          "Pridėk tinkintą programėlės piktogramą, super reakcijas ir ne tik!",
+        PREMIUM_TRIAL_ACTION_SHEET_REVAMP_SUBHEADER:
+          "{nitroTierName} – nuo {price}/mėn.",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER: "Sveikiname įsigijus Nitro!",
         PREMIUM_TRIAL_TUTORIAL_COACHMARK_HEADER_COMPLETED:
           "Dabar galėsi šėlti!",
@@ -9379,6 +9411,8 @@
         PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE: "!!{percent, number}!! % nuolaida",
         PREMIUM_DISCOUNT_CTA: "Sutaupyti !!{percent, number}!! % su Nitro",
         PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT: "Sutaupyti su Nitro",
+        PREMIUM_TIER_CARD_DISCOUNT_HEADER_BEFORE_REDEMPTION_GENERIC:
+          "Mokėk vos **{discountedPrice}** **{numMonths, plural, one {vieną mėnesį!} few {{numMonths} mėnesius} other {{numMonths} mėnesius!}}** Paskui mokėk {regularPrice}.",
         PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC:
           "Tavo !!{percent, number}!! % nuolaida baigs galioti po {numMonths, plural, one {1 mėnesio} other {{numMonths} mėnesių}} nuo įsigijimo. Paskui mokėsi {regularPrice}.",
         PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION:
@@ -9405,6 +9439,8 @@
           "Tavo **nemokamas bandomasis laikotarpis baigiasi {remainingTime, plural, =0 {šiandien} one {po # dienos} other {po # dienų}}**. Jam pasibaigus mokėsi !!{price}!!.",
         PREMIUM_TIER_CARD_TRIAL_ACTIVATED:
           "nemokamas bandomasis laikotarpis suaktyvintas",
+        PREMIUM_TIER_CARD_TRIAL_REVAMP_HEADER_PILL:
+          "Mėgaukis {duration} mūsų sąskaita",
         INCLUDED: "Įtraukta",
         NOT_INCLUDED: "Neįtraukta",
         MARKETING_REFRESH_PREMIUM_FEATURES_GO_LIVE_INFO:
@@ -9967,6 +10003,16 @@
         PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY:
           "Atšaukimas nedelsiant įsigalios Nitro ir serverio stiprinimo prenumeratoms.",
         PREMIUM_CANCEL_CONFIRM_NEW: "Taip, Atšaukti !!{planPremiumType}!!",
+        PREMIUM_PAUSE_CONFIRM_TITLE:
+          "Laikinai sustabdyti !!{planPremiumType}!!?",
+        PREMIUM_PAUSE_CONFIRM_BODY:
+          "Iki **{pauseDate, date, medium}** toliau turėsi prieigą prie Nitro, o paskui tavo prenumerata bus laikinai sustabdyta {pauseDuration} d. Mokestį vėl pradėsime nuskaičiuoti **{resumeDate, date, medium}**. Savo prenumeratą gali bet kada atnaujinti.",
+        PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY:
+          "**Nuo dabar** tavo Nitro prenumerata bus laikinai sustabdyta {pauseDuration} d. Mokestį vėl pradėsime nuskaičiuoti **{resumeDate, date, medium}**. Savo prenumeratą gali bet kada atnaujinti.",
+        PREMIUM_PAUSE_EXTEND_CONFIRM_BODY:
+          "Savo Nitro pratęsi iki **{resumeDate, date, medium}**. Savo prenumeratą gali bet kada atnaujinti.",
+        PREMIUM_PAUSE_CONFIRM_NEW:
+          "Taip, laikinai sustabdyti !!{planPremiumType}!!",
         PREMIUM_UPGRADE_DONE_BUTTON: "Puiku!",
         PREMIUM_DOWNGRADE_DONE_BUTTON: "Supratau",
         PREMIUM_UPLOAD_PROMO:
@@ -10013,6 +10059,16 @@
           "Tavo prenumeratos bus automatiškai atnaujintos **{renewalDate, date, medium}**. Išsamesnės informacijos [gali rasti savo !!{paymentGatewayName}!! prenumeratos nustatymuose]({subscriptionManagementLink}).",
         PREMIUM_SETTINGS_CANCELLED_INFO:
           "Tavo prenumerata baigsis **{endDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_PENDING_INFO:
+          "**{pauseDate, date, medium}** tavo prenumerata bus laikinai sustabdyta, **{resumeDate, date, medium}** automatiškai atsinaujins.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO:
+          "Tavo prenumerata šiuo metu yra laikinai sustabdyta, ji automatiškai atsinaujins **{resumeDate, date, medium}**.",
+        PREMIUM_SETTINGS_PAUSE_ENDS_AT_INFO_WITH_PLAN:
+          "Tavo **{planName}** prenumerata šiuo metu yra laikinai sustabdyta, ji automatiškai atsinaujins **{resumeDate, date, short}** – tada mokėsi **!!{price}!!**.",
+        PREMIUM_SETTINGS_PAUSED_INFO:
+          "Tavo prenumerata bus atnaujinta atlikus mokėjimą.",
+        PREMIUM_SETTINGS_PAUSED_INFO_WITH_PLAN:
+          "Tavo **{planName}** prenumerata bus atnaujinta atlikus mokėjimą, mokėsi **!!{price}!!**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO:
           "Tavo **!!{price}!!** prenumeratos mokėjimo terminas praėjęs. Atnaujink savo mokėjimo informaciją arba tavo prenumerata baigsis **{endDate, date, medium}**.",
         PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL:
@@ -10062,6 +10118,10 @@
         PREMIUM_NO_PLANS_HEADER: "Atsiprašome!",
         PREMIUM_NO_PLANS_BODY:
           "Šiuo metu negalime pasiūlyti plano su atsiskaitymu per Google Play su daugiau stiprinimų. [Sužinoti daugiau.]({helpdeskArticle})",
+        PREMIUM_PAUSE_OR_CANCEL_SUBSCRIPTION:
+          "Laikinai sustabdyk arba atšauk prenumeratą",
+        PREMIUM_CANCEL_OR_EXTEND_PAUSE_SUBSCRIPTION:
+          "Atšauk arba laikinai sustabdyk prenumeratą",
         PREMIUM_SETTINGS_STARTING_AT_PER_MONTH:
           "Prenumeruok – nuo !!{price}!! per mėnesį",
         PREMIUM_SUBSCRIPTION_UPDATES: "Prenumeratos atnaujinimas",
@@ -10793,8 +10853,12 @@
         BILLING_TRIAL_FREE_TRIAL_TEXT: "nemokamas bandomasis laikotarpis",
         BILLING_DISCOUNT_PAYMENT_MODAL_INFO:
           "Mokėk vos **{discountedPrice}** kas mėnesį už pirmus **3 mėn.** Nitro. Pasibaigus 3 mėn. nuolaidai mokėk {regularPrice} kas mėnesį.",
+        BILLING_DISCOUNT_PAYMENT_MODAL_INFO_GENERIC:
+          "Mokėk vos **{discountedPrice}**/mėn. už **{numMonths, plural, one {pirmą mėnesį} few {pirmus {numMonths} mėnesius} other {pirmų {numMonths} mėnesių}}** Nitro. Pasibaigus nuolaidai mokėk {regularPrice}/mėn.",
         BILLING_DISCOUNT_MONTHLY_PRICE:
           "{discountedPrice}/mėn. pirmus 3 mėnesius\n\n{regularPrice}/mėn. po 3 mėnesių",
+        BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC:
+          "{discountedPrice}/mėn. **{numMonths, plural, one {vieną mėnesį} few {{numMonths} mėnesius} other {{numMonths} mėnesių}}**\n\n{regularPrice}/mėn. po {numMonths, plural, one {vieno mėnesio} other {{numMonths} mėnesių}}",
         BILLING_YEARLY_PLAN_SAVINGS:
           "Sutaupyk !!{percent, number}!! % su metine prenumerata",
         BILLING_SUBTOTAL: "Tarpinė suma",
@@ -10849,6 +10913,8 @@
         REVERSED: "Atlikta grįžtamoji operacija",
         REFUND: "Atsiimti pinigus",
         RESUBSCRIBE: "Per prenumeruoti",
+        RESUME: "Atnaujinti prenumeratą",
+        WITHDRAW_PAUSE: "Atšaukti laikiną sustabdymą",
         CREDIT_CARD_ERROR_REQUIRED: "Reikia nurodyti kortelės numerį.",
         CREDIT_CARD_ERROR_NUMBER:
           "Kažkas negerai su tavo kredito kortelės numeriu",
@@ -13562,6 +13628,16 @@
           "{count, plural, =0 {Nėra bendrų draugų} one {1 bendras draugas} few {{count} bendri draugai} other {{count} bendrų draugų}}",
         USER_PROFILE_MUTUAL_GUILDS:
           "{count, plural, =0 {Nėra bendrų serverių} one {1 bendras serveris} few {{count} bendri serveriai} other {{count} bendrų serverių}}",
+        USER_PROFILE_MUTUAL_FRIENDS_ONE: "draugai su **{usernameOne}**",
+        USER_PROFILE_MUTUAL_FRIENDS_TWO:
+          "draugai su **{usernameOne}** ir **{usernameTwo}**",
+        USER_PROFILE_MUTUAL_FRIENDS_MANY:
+          "draugai su **{usernameOne}**, **{usernameTwo}** ir **dar {count}**",
+        USER_PROFILE_MUTUAL_GUILDS_ONE: "**{guildNameOne}** narys (-ė)",
+        USER_PROFILE_MUTUAL_GUILDS_TWO:
+          "**{guildNameOne}** ir **{guildNameTwo}** narys (-ė)",
+        USER_PROFILE_MUTUAL_GUILDS_MANY:
+          "**{guildNameOne}**, **{guildNameTwo}** ir **dar {count}** narys (-ė)",
         USER_PROFILE_MUTUAL_FRIENDS_PLACEHOLDER: "Bendri draugai",
         USER_PROFILE_MUTUAL_GUILDS_PLACEHOLDER: "Bendri Serveriai",
         PROFILE_IN_VOICE_CALL: "Balso skambutyje",
@@ -13696,6 +13772,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CHOOSE_MONTHLY_OR_YEARLY_V2:
           "Rinkis iš {monthlyPrice}/mėn. ir {yearlyPrice}/m.",
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Tavo gavėjas gaus:",
+        MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Dovanok {nitroTierName} narystę",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Dovanos trukmė",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Padovanok {count, plural, one {# mėnesį} few {# mėnesius} other {# mėnesių}} {nitroTierName}",
@@ -14547,6 +14624,9 @@
           "Bandant įkelti šią programėlę įvyko klaida.",
         INTERACTION_RATE_LIMITED: "Lėtink tempą! Spaudinėji per greitai.",
         APPLICATION_ADD_BUTTON: "Pridėti programėlę",
+        APPLICATION_ADD_BUTTON_ACTIONS: "Pridėti programėlės veiksmus",
+        APPLICATION_ADD_BUTTON_ACTIONS_COPY:
+          "Kopijuoti programėlės veiksmų pridėjimo URL",
         COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP:
           "Šio boto nariai negalės naudoti tol, kol įjungsi leidimus.",
         COMMANDS_SCOPE_MIGRATION_TOGGLE_TOOLTIP:
@@ -17371,6 +17451,25 @@
           "Jei atšauksi dabar, **neteksi prieigos prie šių pranašumų:**",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK: "Tiek to, pasilieku Nitro",
         PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK_CTA: "Tiek to, pasilieku Nitro",
+        PREMIUM_PAUSE_INSTEAD: "Vietoje to laikinai sustabdyti",
+        PREMIUM_PAUSE_SELECT_TITLE:
+          "Laikinai sustabdyk arba atšauk prenumeratą",
+        PREMIUM_PAUSE_SELECT_SUBTITLE:
+          "Jei nori pasiimti pertrauką nuo mokamų prenumeratų, turi pasirinkimą ją keletui mėnesių sustabdyti",
+        PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE:
+          "Turi pasirinkimą pratęsti sustabdymą papildomiems mėnesiams",
+        PREMIUM_PAUSE_SELECT_PLACEHOLDER: "Pasirink laikino sustabdymo trukmę",
+        PREMIUM_PAUSE_INSTEAD_TITLE:
+          "Ar norėtum **vietoje to laikinai sustabdyti**?",
+        PREMIUM_PAUSE_INSTEAD_SUBTITLE:
+          "Vietoje atšaukimo laikinai sustabdyk savo prenumeratą 90 dienų.",
+        PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE:
+          "Laikinai sustabdyti {days} d.",
+        PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE:
+          "Laikinai sustabdyti dar {days} d.",
+        PREMIUM_PAUSE_DURATION_CANCEL: "Atšaukti prenumeratą",
+        PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED:
+          "Tavo prenumerata bus laikinai sustabdyta",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_HEADER:
           "Pasilik keletą pranašumų už mažiau",
         PREMIUM_CANCEL_DOWNGRADE_TO_TIER_0_BODY:
@@ -21814,6 +21913,9 @@
         COLLECTIBLES_ANIME_V2_COACHTIP_TITLE: "Anime: nauji stiliai",
         COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION:
           "Senpai dabar tave tikrai pastebės.",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE: "NAUJA: Springtoons",
+        COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION:
+          "Nakties tyloje ore tvyro keisti kerai ir...",
         COLLECTIBLES_NEW_BADGE: "NAUJI",
         INVENTORY_EMOJI_DETAILS_V2: "Žiūrėti išsamius jaustuko duomenis",
         PRIVATE_CHANNEL_INTEGRATION_ADDED:
@@ -23473,6 +23575,8 @@
         GUILD_HEADER_MEMBER_COUNT_UNKNOWN: "– Nariai",
         SENDER_BLOCKED_MEDIA_MARK_FALSE_POSITIVE:
           "Pažymėk, kad tai nėra neskelbtinas turinys",
+        SENDER_BLOCKED_MEDIA_FALSE_POSITIVE_LINK:
+          "Padarėme klaidą? [Pranešk apie tai](handleFalsePositiveHook)",
         SENDER_BLOCKED_MEDIA_BOT_GUILD_MESSAGE:
           "Žinutė neišsiųsta. Joje gali būti nepadorios medijos, kurią serveris blokuoja.",
         SENDER_BLOCKED_MEDIA_BOT_DMS_MESSAGE:
@@ -23505,7 +23609,7 @@
         SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE: "Atsikvėpk",
         SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE:
           "Klausyk Lofi Beats su Wumpus.",
-        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Atsipalaiduoti",
+        SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON: "Vibe",
         SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE: "Saugos patarimai",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE: "Apie saugos įspėjimus",
         SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION:
@@ -23621,6 +23725,7 @@
           "Nustatyk veiklos būseną ir parodyk savo draugams, ką veiki.",
         HANG_STATUS_SET_CUSTOM_STATUS_PLACEHOLDER:
           "Nustatyti pritaikytą būseną",
+        HANG_STATUS_MOBILE_SET_ROW: "Nustatyti balso veiklą",
         REPORT_SECOND_LOOK_NOT_FOUND_ERROR: "Pranešimas nerastas.",
         REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR:
           "Pranešimo peržiūros jau paprašyta.",
@@ -23721,11 +23826,20 @@
         POLL_NO_VOTES_FOR_ANSWER_TITLE: "Čia nieko nėra",
         POLL_NO_VOTES_FOR_ANSWER_BODY: "Už šį atsakymą balsų negauta.",
         POLL_ANSWER_VOTES_MODAL_TITLE: "Balsai",
+        POLL_ANSWER_VOTES_MODAL_VOTE_TAB:
+          "{numVotes, plural, =0 {0 balsų} =1 {{numVotes} balsas} few {{numVotes} balsai} other {{numVotes} balsų}} už {option}",
         POLL_TAP_FOR_VOTERS_A11Y_ANDROID: "Atskleisti balsus",
         POLL_TAP_FOR_VOTERS_A11Y_IOS: "Atskleisti balsuotojus",
+        POLL_VOTES_TOOLTIP_1_N:
+          "!!{a}!! ir {n, plural, one {1 kitas} few {{n} kiti} other {{count} kitų}}",
         POLL_VOTES_TOOLTIP_2: "!!{a}!! ir !!{b}!!",
         POLL_VOTES_TOOLTIP_2_N:
           "!!{a}!!, !!{b}!! ir {n, plural, one {{n} kitas} few {{n} kiti} other {{n} kitų}}",
+        POLL_VOTES_TOOLTIP_3: "!!{a}!!, !!{b}!! ir !!{c}!!",
+        POLL_VOTES_TOOLTIP_3_N:
+          "!!{a}!!, !!{b}!!, !!{c}!! ir {n, plural, one {{n} kitas} few {{count} kiti} other {{count} kitų}}",
+        POLL_VOTES_TOOLTIP_N:
+          "{n, plural, one {{n} žmogus} few {{n} žmonės} other {{n} žmonių}}",
         CREATE_POLL: "Sukurti apklausą",
         CREATE_POLL_HEADING: "Apklausos kūrimas",
         CREATE_POLL_EXPIRATION: "Apklausa veiks 24 valandas",
@@ -23739,12 +23853,18 @@
         CREATE_POLL_ADD_IMAGE_ARIA: "Pridėti mediją, {answerNumber} atsakymas",
         CREATE_POLL_EDIT_IMAGE_ARIA:
           "Atnaujinti mediją {imageName}, {answerNumber} atsakymas",
+        CREATE_POLL_ADD_EMOJI_ARIA: "Pridėk jaustuką, atsakyk į {answerNumber}",
+        CREATE_POLL_EDIT_EMOJI_ARIA:
+          "Atnaujink jaustuką {emojiName}, atsakyk į {answerNumber}",
+        CREATE_POLL_UPDATE_EMOJI_MENU_ARIA: "Atnaujinti jaustuką",
         CREATE_POLL_ANSWER_INPUT_LABEL: "{answerNumber} atsakymas",
         CREATE_POLL_ANSWER_PLACEHOLDER: "Įrašyk atsakymą",
         CREATE_POLL_ADD_ANSWER_BUTTON: "Pridėti kitą atsakymą",
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION:
           "Apklausa veikimo laikas",
         CREATE_POLL_DURATION_LABEL: "Trukmė",
+        CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
+          "{num, plural, one {1 val.} other {{num} val.}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dienos",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 sav.",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -23759,8 +23879,11 @@
         CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY:
           "Ar tikrai nori išeiti? Jei dabar išeisi, bus prarasti visi pakeitimai.",
         CREATE_POLL_REMOVE_ANSWER: "Pašalinti atsakymą",
+        CREATE_POLL_REMOVE_EMOJI: "Pašalinti jaustuką",
         CREATE_POLL_ADD_IMAGE: "Pridėti mediją",
+        CREATE_POLL_ADD_EMOJI: "Pridėti jaustuką",
         CREATE_POLL_REPLACE_IMAGE: "Pakeisti mediją",
+        CREATE_POLL_REPLACE_EMOJI: "Pakeisti jaustuką",
         CREATE_POLL_POLL_ANSWER: "Apklausos atsakymas",
         CREATE_POLL_EDIT_ALT_TEXT:
           "Redaguoti vaizdo aprašą (alternatyvų tekstą)",
@@ -23840,7 +23963,7 @@
         QUESTS_LANDING_PAGE_MOBILE_WEB_BODY:
           "Gaila, bet misijos mobiliojoje versijoje nepasiekiamos... kol kas. Norėdamas (-a) priimti misiją, gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: **Naudotojo nustatymai > Dovanų atsargos**.",
         QUESTS_MOBILE_EMBED_TITLE:
-          "Mobiliosiose programėlėse misijos neprieinamos... kol kas.",
+          "Mobiliosiose programėlėse misijos neprieinamos",
         QUESTS_MOBILE_EMBED_BODY:
           "Norėdamas (-a) priimti misiją, gali kompiuterinėje Discord programėlėje arba naršyklėje nueiti čia: \nNaudotojo nustatymai > Dovanų atsargos.",
         QUESTS_GET_THIS_GAME: "Gauti Žaidimą",
@@ -23888,9 +24011,9 @@
         LIST_SUMMARY_LABEL_THREE_AND_OTHERS:
           "!!{first}!!, !!{second}!!, !!{third}!! ir {count, plural, one {{count} kitas} few {{count} kiti} other {{count} kitų}}",
         STOREFRONT: "Parduotuvė",
-        STOREFRONT_APP_SUBSCRIPTIONS: "Programėlės prenumeratos",
+        STOREFRONT_APP_SUBSCRIPTIONS: "Prenumeratos",
         STOREFRONT_APP_SUBSCRIPTIONS_BODY: "Įsigyk prenumeratas iš {appName}",
-        STOREFRONT_APP_PRODUCTS: "Programėlės produktai",
+        STOREFRONT_APP_PRODUCTS: "Produktai",
         STOREFRONT_APP_PRODUCTS_BODY: "Įsigyk produktus iš {appName}",
         STOREFRONT_SUBSCRIPTION: "Prenumerata",
         STOREFRONT_SUBSCRIBE_FOR: "Prenumeruok už {rate}",
@@ -23910,6 +24033,13 @@
         FOCUS_MODE_TITLE: "Susikaupimo režimas (BETA)",
         FOCUS_MODE_BADGE_ON: "ĮJUNGTA",
         FOCUS_MODE_BADGE_OFF: "IŠJUNGTA",
+        FOCUS_MODE_BADGE_ON_VIA_DND: "NETRUKDYTI",
+        FOCUS_MODE_DESCRIPTION:
+          "Išjungia darbalaukio pranešimus ir žinučių garsus.",
+        FOCUS_MODE_DESCRIPTION_MOBILE:
+          "Išjungia pranešimus programėlėse ir žinučių garsus.",
+        FOCUS_MODE_TURN_OFF: "Išjungti susikaupimo režimą",
+        FOCUS_MODE_ENABLE_FOR: "Įjungti susikaupimo režimą",
         QUIET_MODE_HABITUAL_DND_NOTICE:
           "Kurį laiką naudojai režimą Netrukdyti. Gal nori vietoje jo įjungti Susikaupimo režimą?",
         ACTIVITY_REACTION_REPLY_TITLE: "Pakalbėkit apie {activity}",
@@ -23940,6 +24070,10 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_AGO: "prieš {count} val.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MINUTES_AGO: "prieš {count} min.",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_SECONDS_AGO: "Prieš {count} sek.",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_DAYS: "{days} d.",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "{hours} val.",
+        MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
+          "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pirmą kartą",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Veikla",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:

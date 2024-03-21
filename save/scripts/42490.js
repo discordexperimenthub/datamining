@@ -11878,7 +11878,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Pentru colecționari. Obține această insignă exclusivă Nitro.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} {numFreeBoosts, plural, =1 {Boost gratuit} other {numBoost-uri gratuite}}",
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {Boost gratuit} other {Boost-uri gratuite}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Felicitări pentru \xeemplinirea primei luni de Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Recompensă Nitro",
@@ -13945,6 +13945,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Dăruiește un abonament {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Durata cadoului",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Dăruiește-i lui {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Dăruiește {count, plural, one {# lună} other {# luni}} de {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23894,7 +23895,7 @@
           "Ia măsuri pentru a te proteja deschiz\xe2nd instrumentele de siguranță.",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
           "Această conversație s-ar putea să nu fie sigură. Deschide instrumentele de siguranță pentru a lua măsuri.",
-        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blochează utilizatorul",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blochează",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Deblochează",
         INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Cont blocat",
         INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Cont deblocat",
@@ -23911,6 +23912,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Afișează alertele \xeen mesajele directe",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Afișează o alertă atunci c\xe2nd detectăm un risc potențial la adresa siguranței tale. [Află mai multe despre alertele de siguranță]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Folosește aceste formulare pentru a raporta conținutul ilegal conform Regulamentului privind serviciile digitale (Digital Services Act – DSA). Pentru a raporta \xeencălcări ale drepturilor de autor sau ale mărcilor comerciale, te rugăm să [intri aici]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Format adresă e-mail incorect.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Nu am putut găsi conținutul pe care \xeencerci să-l raportezi. Te rugăm să revezi detaliile raportului tău și să-l retrimiți.",
@@ -24183,7 +24186,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsorizare",
-        QUESTS_PROMOTED: "Promovate",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Află mai multe",
         QUESTS_ACCEPT_QUEST: "Acceptă misiunea",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

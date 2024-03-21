@@ -11791,7 +11791,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "За колекционерите. Грабни тази значка, ексклузивна за Nitro.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Безплатно {numFreeBoosts, plural, =1 {усилване} other {numFreeBoosts}}",
+          "{numFreeBoosts} безплатно {numFreeBoosts, plural, =1 {усилване} other {numFreeBoosts}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Поздравления за първия ти месец с Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro награда",
@@ -11925,7 +11925,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Безплатен пробен период (остава(т) {days, plural, =1 {# ден} other {# дни}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Безплатен пробен период",
-        POWERED_BY_NITRO: "Със съдействието на Nitro",
+        POWERED_BY_NITRO: "Предоставено от Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Играе игра",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "На живо в !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Играе на !!{platform}!!",
@@ -13832,6 +13832,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Подарък за членство в {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Продължителност на подаръка",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Подарък {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подари {count, plural, one {# месец} other {# месеца}} от {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23807,7 +23808,7 @@
           "Предприеми действие, за да се защитиш, като отвориш инструментите за безопасност.",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
           "Този разговор може да не е безопасен. Отвори инструментите за безопасност, за да предприемеш действие.",
-        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Блокирай потребителя",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Блокирайте ги",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Премахване на блокиране",
         INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Блокиран акаунт",
         INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Разблокиран акаунт",
@@ -23825,6 +23826,8 @@
           "Показване на предупреждения в директните съобщения",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Показвай предупреждение, когато има установен риск за твоята безопасност. [Научи повече за предупрежденията за безопасност]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Използвай този формуляр, за да докладваш нелегално съдържание съгласно Акта за цифровите услуги. За сигнали за нарушения на авторски права или права на търговски марки, моля, [посети тази страница]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Не добре оформен имейл адрес.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Не успяхме да намерим съдържанието, за което се опитваш да подадеш сигнал. Прегледай подробностите за подаването и го изпрати отново.",
@@ -23926,7 +23929,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Тази заявка е изпратена към Discord. Създаването на фалшиви сигнали и/или спаменето чрез бутона за сигнали може да доведат до спиране на функцията за докладване. Научи повече в [Правилника на общността на Discord](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Научи повече за другите достъпни за теб опции съгласно [Закона за цифровите услуги](https://support.discord.com/hc/articles/17861767909527).",
+          "Научи повече за другите достъпни за теб опции съгласно [Акта за цифровите услуги](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Подаване на обжалване за спам",
         POLL: "Анкета",

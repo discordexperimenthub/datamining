@@ -13771,6 +13771,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Giv et {nitroTierName}-medlemskab i gave",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gaves varighed",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Gave {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Giv et medlemskab p\xe5 {count, plural, one {# m\xe5ned} other {# m\xe5neder}} af {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23623,6 +23624,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Vis advarsler i direkte beskeder",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Vis en advarsel, n\xe5r der opdages en mulig risiko for din sikkerhed. [F\xe5 mere at vide om sikkerhedsadvarsler]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Brug disse formularer til at anmelde ulovligt indhold i henhold til Forordning om digitale tjenester. I tilf\xe6lde af anmeldelser om kr\xe6nkelse af ophavsret eller varem\xe6rke [g\xe5 ind her]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Forkert udformet e-mailadresse.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Vi kunne ikke finde det indhold, du fors\xf8ger at anmelde. Gennemg\xe5 venligst oplysningerne i din indsendte anmeldelse, og indsend igen.",
@@ -23726,7 +23729,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Anmodningen er sendt til Discord. At oprette falske anmeldelser og/eller spamme anmeldelsesknappen kan resultere i en udelukkelse fra anmeldelsesfunktionerne. L\xe6s mere i [Discords community-retningslinjer](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "L\xe6s mere om dine andre muligheder under [Digital Services Act](https://support.discord.com/hc/articles/17861767909527).",
+          "L\xe6s mere om dine andre muligheder under [Forordningen om digitale tjenester](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM: "Indsend en spam-appel",
         POLL: "Afstemning",
         POLLS: "Afstemninger",

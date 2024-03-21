@@ -14198,6 +14198,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Tặng g\xf3i th\xe0nh vi\xean {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Thời lượng qu\xe0 tặng",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Tặng {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Tặng {count, plural, one {# th\xe1ng} other {# th\xe1ng}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -24350,6 +24351,8 @@
           "Hiện cảnh b\xe1o trong tin nhắn trực tiếp",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Hiển thị cảnh b\xe1o khi ph\xe1t hiện rủi ro c\xf3 thể xảy ra đối với sự an to\xe0n của bạn. [T\xecm hiểu th\xeam về cảnh b\xe1o an to\xe0n]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Sử dụng những biểu mẫu n\xe0y để b\xe1o c\xe1o nội dung phi ph\xe1p theo Đạo Luật Dịch Vụ Kỹ Thuật Số (ĐLDVKTS/Digital Services Act - DSA). Để b\xe1o c\xe1o c\xe1c vi phạm bản quyền hoặc thương hiệu, vui l\xf2ng [truy cập v\xe0o đ\xe2y]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Địa chỉ email kh\xf4ng hợp lệ.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Ch\xfang t\xf4i kh\xf4ng thể t\xecm thấy nội dung m\xe0 bạn muốn b\xe1o c\xe1o. Vui l\xf2ng xem lại chi tiết nội dung b\xe1o c\xe1o v\xe0 gửi lại.",
@@ -24485,7 +24488,7 @@
         POLL_SELECT_ONE_ANSWER: "Chọn một c\xe2u trả lời",
         POLL_SELECT_MULTIPLE_ANSWERS: "Chọn một hoặc nhiều c\xe2u trả lời",
         POLL_SHOW_VOTES: "Hiện kết quả",
-        POLL_HIDE_VOTES: "Trở lại bỏ phiếu",
+        POLL_HIDE_VOTES: "Quay lại mục bỏ phiếu",
         POLL_VOTES_NO_RESULTS_TITLE: "Ở đ\xe2y chẳng c\xf3 g\xec để xem cả",
         POLL_VOTES_NO_RESULTS_SUBTITLE:
           "Kh\xf4ng ai bỏ phiếu cho c\xe2u trả lời n\xe0y",
@@ -24630,7 +24633,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Được t\xe0i trợ",
-        QUESTS_PROMOTED: "Được quảng c\xe1o",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "T\xecm hiểu th\xeam",
         QUESTS_ACCEPT_QUEST: "Chấp nhận nhiệm vụ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
@@ -24754,7 +24757,7 @@
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS: "trong {hours} giờ",
         MEMBER_LIST_CONTENT_FEED_TIMESTAMP_ACTIVE:
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
-        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu",
+        MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu ti\xean",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",

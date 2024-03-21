@@ -12704,6 +12704,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人會收到：",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "贈送「{nitroTierName}」會員身分",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "禮物期限",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "贈送 {username}：",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "贈送 {count, plural, one {# 個月} other {# 個月}}的 {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -21655,6 +21656,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "在私人訊息中顯示警告",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "系統偵測到可能的安全風險時，顯示警報。[進一步瞭解安全警報]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "根據《數位服務法案》(Digital Services Act，簡稱「DSA」)，請使用這些表格檢舉非法內容。如要檢舉版權或商標侵權，請 [前往]({supportURL})。",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "不符合標準格式的電子信箱地址。",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "我們無法找到您嘗試檢舉的內容。請檢查您提交的詳細資訊並重新提交。",

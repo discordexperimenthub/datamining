@@ -11679,7 +11679,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "कलेक्टर के लिए. ये खास Nitro बैज हासिल करें.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} फ़्री {numFreeBoosts, plural, =1 {बूस्ट} other {numFreeBoosts}}",
+          "{numFreeBoosts} फ़्री {numFreeBoosts, plural, =1 {बूस्ट} other {दूसरे बूस्ट}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Nitro के पहले महीने के लिए बधाई.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro रिवॉर्ड",
@@ -13705,6 +13705,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "{nitroTierName} मेंबरशिप का गिफ़्ट दे",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "गिफ़्ट की अवधि",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "{username} को गिफ़्ट करें:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# महीना} other {# महीनों}} का {nitroTierName} गिफ़्ट करें",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23510,6 +23511,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "डायरेक्ट मैसेज में अलर्ट दिखाएं",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "जब आपकी सुरक्षा को लेकर संभावित खतरे का पता चले, तब अलर्ट दिखाएं. [सेफ़्टी अलर्ट के बारे में ज़्यादा जानें]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "डिजिटल सर्विस एक्ट (DSA) के तहत अवैध कॉन्टेंट की रिपोर्ट करने के लिए इन फ़ॉर्म का इस्तेमाल करें. कॉपीराइट या ट्रेडमार्क उल्लंघन की रिपोर्ट करने के लिए कृपया [यहां]({supportURL}) जाएं.",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "यह सही ईमेल एड्रेस नहीं है.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "आप जिस कॉन्टेंट की रिपोर्ट करना चाहते हैं, वह हमें नहीं मिला. कृपया अपनी रिपोर्ट का विवरण जांच लें और दुबारा सबमिट करें.",

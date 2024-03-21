@@ -13937,6 +13937,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Podaruj członkostwo {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Czas trwania prezentu",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "Podaruj użytkownikowi {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Podaruj {count, plural, one {# miesiąc} few {# miesiące} other {# miesięcy}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23868,7 +23870,7 @@
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Coś poszło nie tak! Spr\xf3buj ponownie p\xf3źniej.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
-          "Użytkownik ten nie będzie m\xf3gł wysyłać Ci wiadomości. Jeśli uważasz, że jego działania mogą wyrządzić komuś krzywdę, prześlij zgłoszenie do Discorda.",
+          "Użytkownicy ci nie będą mogli wysyłać Ci wiadomości. Jeśli uważasz, że ich działania mogą wyrządzić komuś krzywdę, prześlij zgłoszenie do Discorda.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Zablokuj",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Zablokuj i zgłoś",
@@ -23878,6 +23880,8 @@
           "Pokazuj powiadomienia w prywatnych wiadomościach",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Wyświetlaj powiadomienie w przypadku wykrycia możliwego zagrożenia. [Dowiedz się więcej na temat powiadomień o bezpieczeństwie]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Użyj tych formularzy, aby zgłosić nielegalne treści na mocy aktu o usługach cyfrowych. W celu zgłoszenia naruszeń praw autorskich lub znak\xf3w towarowych [odwiedź tę stronę]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Źle napisany adres e-mail.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Nie możemy znaleźć zawartości, kt\xf3rą pr\xf3bujesz zgłosić. Zweryfikuj informacje w zgłoszeniu i wyślij je ponownie.",
@@ -23982,7 +23986,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Ta prośba jest wysyłana do Discorda. Tworzenie fałszywych zgłoszeń i/lub nadmierne używanie przycisku Zgłoś może skutkować zawieszeniem możliwości zgłaszania. Dowiedz się więcej w [Wytycznych dla Społeczności Discorda](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Dowiedz się więcej na temat innych opcji wynikających z ustawy [Digital Services Act](https://support.discord.com/hc/articles/17861767909527).",
+          "Dowiedz się więcej na temat innych opcji wynikających z [aktu o usługach cyfrowych](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Prześlij odwołanie dotyczące spamu",
         POLL: "Ankieta",
@@ -24148,7 +24152,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsorowane",
-        QUESTS_PROMOTED: "Promowane",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Dowiedz się więcej",
         QUESTS_ACCEPT_QUEST: "Zaakceptuj zadanie",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:
@@ -24253,7 +24257,7 @@
           "Karta aktywności pokazująca użytkownika @{username}, kt\xf3ry słucha utworu {song} artysty {artist}",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Karta aktywności pokazująca użytkownika @{username}, kt\xf3ry streamuje aktywność {activity}",
-        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "W grze **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Gra w **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_PLAYED_GAME:
           "Użytkownik grał w **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:

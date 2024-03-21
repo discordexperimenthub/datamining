@@ -13835,6 +13835,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "{nitroTierName} aboneliği hediye et",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Hediye s\xfcresi",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "{username} kişisine hediye et:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# aylık} other {# aylık}} {nitroTierName} hediye et",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23740,6 +23742,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Direkt mesajlarda uyarıları g\xf6ster",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Olası bir g\xfcvenlik riski tespit edilince uyarı g\xf6ster. [G\xfcvenlik uyarıları hakkında daha fazla bilgi edin]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          'Dijital Hizmetler Kanunu ("DSA") kapsamına giren yasa dışı i\xe7erikleri bildirmek i\xe7in bu formları kullan. Telif veya marka hakkı ihlallerini raporlamak i\xe7in [bu sayfaya git]({supportURL}).',
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "D\xfczg\xfcn bi\xe7imli bir e-posta adresi değil.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -23844,7 +23848,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Bu talep Discord'a g\xf6nderildi. Yanlış bildirimde bulunmak ve/veya bildir butonuna spam yapmak, bildirme kabiliyetinin kısıtlanmasıyla sonu\xe7lanabilir. Ayrıntılı bilgi [Discord Topluluk İlkeleri](https://discord.com/guidelines) sayfasından bulunabilir.",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "[Dijital Hizmetler Kanunu](https://support.discord.com/hc/articles/17861767909527) kapsamındaki diğer se\xe7eneklerin hakkında bilgi edin.",
+          "[Dijital Hizmetler Kanunu](https://support.discord.com/hc/articles/17861767909527) kapsamındaki diğer se\xe7eneklerin hakkında daha fazla bilgi edin.",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM: "Spam itirazı g\xf6nder",
         POLL: "Anket",
         POLLS: "Anketler",

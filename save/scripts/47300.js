@@ -14077,6 +14077,8 @@
           "Lahjan saaja saa t\xe4m\xe4n:",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Anna {nitroTierName} lahjaksi",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Lahjan kesto",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "Lahjoita k\xe4ytt\xe4j\xe4lle {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Anna {nitroTierName} lahjaksi {count, plural, one {# kuukaudeksi} other {# kuukaudeksi}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -24174,6 +24176,8 @@
           "N\xe4yt\xe4 h\xe4lytykset yksityisviesteiss\xe4",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "N\xe4yt\xe4 h\xe4lytykset havaituista mahdollisista riskeist\xe4 turvallisuudellesi. [Katso lis\xe4tietoja turvallisuush\xe4lytyksist\xe4]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Tee ilmoitus sis\xe4ll\xf6st\xe4, joka on digipalvelus\xe4\xe4d\xf6ksen vastaista. Jos haluat ilmoittaa tekij\xe4noikeus- tai tavaramerkkirikkomuksesta, [siirry t\xe4nne]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "S\xe4hk\xf6postiosoitteen muoto ei ole oikea.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -24279,7 +24283,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "T\xe4m\xe4 pyynt\xf6 l\xe4hetet\xe4\xe4n Discordille. Valeilmiantojen luominen ja ilmiantopainikkeen v\xe4\xe4rink\xe4ytt\xf6 voivat johtaa ilmiantokyvyn poistamiseen. Lue lis\xe4\xe4 [Discordin yhteis\xf6s\xe4\xe4nn\xf6ist\xe4](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Tutustu tarkemmin muihin [digitaalisia palveluja koskevien s\xe4\xe4d\xf6sten](https://support.discord.com/hc/articles/17861767909527) mukaisiin vaihtoehtoihisi.",
+          "Tutustu tarkemmin muihin [digipalvelus\xe4\xe4d\xf6ksen](https://support.discord.com/hc/articles/17861767909527) mukaisiin vaihtoehtoihisi.",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "L\xe4het\xe4 roskaviestin uudelleenarviointipyynt\xf6",
         POLL: "Kysely",

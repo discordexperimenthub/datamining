@@ -13787,6 +13787,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Primatelj će dobiti:",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Daruj {nitroTierName} članstvo",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Trajanje dara",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Dar korisniku {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Daruj {nitroTierName} na {count, plural, one {# mjesec} few {# mjeseca} other {# mjeseci}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23612,6 +23613,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Prikaži upozorenja u izravnim porukama",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Prikazuje se upozorenje ako je otkrivena ugroza tvoje sigurnosti. [Doznaj više o sigurnosnim upozorenjima]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Koristi ove obrasce za prijavu nezakonitog sadržaja u skladu s Aktom o digitalnim uslugama (DSA). Za izvješća o kršenju autorskih prava ili zaštitnih znakova [idi ovdje]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Neispravan oblik email adrese.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Ne možemo pronaći sadržaj koji pokušavaš prijaviti. Pregledaj podrobno svoju prijavu i podnesi je ponovo.",
@@ -23711,7 +23714,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Ovaj zahtjev je poslan Discordu. Stvaranje lažnih prijava i/ili spamiranje tipke za prijavu može rezultirati suspenzijom mogućnosti prijavljivanja. Više informacija imaš u dokumentu [Discordova pravila ponašanja u zajednici](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Saznaj više o svojim ostalim opcijama prema [Uredbi o digitalnim uslugama](https://support.discord.com/hc/articles/17861767909527).",
+          "Saznaj više o svojim ostalim opcijama prema [Aktu o digitalnim uslugama](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Podnesi prigovor na spam",
         POLL: "Anketa",

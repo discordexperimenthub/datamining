@@ -11588,7 +11588,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "コレクター向け。Nitro限定バッジをゲットしよう。",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts}個の無料{numFreeBoosts, plural, =1 {ブースト} other {numFreeBoosts}}",
+          "{numFreeBoosts}無料{numFreeBoosts, plural, =1 {ブースト} other {ブースト}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Nitroの初月1ヵ月間のご利用、誠におめでとうございます。",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitroの報酬",
@@ -13613,6 +13613,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "{nitroTierName}メンバーシップを贈りましょう",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "プレゼントの期間",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "{username}に贈る：",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName}の{count, plural, one {#ヵ月} other {#ヵ月}}分をプレゼント",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23318,6 +23319,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "ダイレクトメッセージで警告を表示",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "あなたの安全性にリスクが検出された場合、警告を表示します。[セーフティアラートについて詳しくはこちら]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "デジタルサービス法（Digital Services Act、通称「DSA」）に基づき違法なコンテンツを通報するには、このフォームを使用してください。著作権または商標権の侵害に関する通報は[こちら]({supportURL})へお願いします。",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "メールアドレスが正しくありません。",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "あなたが通報しようとしているコンテンツを特定できませんでした。ご提出の詳細をご確認いただき、再度送信してください。",
@@ -23421,7 +23424,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "このリクエストはDiscordに送信されました。虚偽の通報の作成および／またはレポートボタンでのスパム行為は通報の信頼性を損なう可能性があります。詳しくは[Discordコミュニティガイドライン](https://discord.com/guidelines)をご確認ください。",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "[デジタルサービス法](https://support.discord.com/hc/articles/17861767909527)からその他の手段について詳細を確認できます。",
+          "[デジタルサービス法（Digital Services Act）](https://support.discord.com/hc/articles/17861767909527)からその他の手段について詳細を確認できます。",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM: "スパムのアピールを送信",
         POLL: "投票",
         POLLS: "投票",

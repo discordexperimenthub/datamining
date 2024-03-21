@@ -11792,7 +11792,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Для коллекционеров. Получите эксклюзивный значок подписчика Nitro.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} {numFreeBoosts, plural, =1 {бесплатный буст} few {бесплатных буста} other {бесплатных бустов}}",
+          "{numFreeBoosts, plural, =1 {{Boosts}\xa0бесплатный буст} few {{Boosts}\xa0бесплатных буста} other {{Boosts}\xa0бесплатных бустов}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Поздравляем с использованием Nitro в течение месяца!",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Награда Nitro",
@@ -13855,6 +13855,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Ваш адресат получит:",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Подарить подписку {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Длительность подарка",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Подарок для {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{nitroTierName} на {count, plural, one {# месяц} few {# месяца} other {# месяцев}}.",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23811,6 +23812,8 @@
           "Показывать оповещения в личных сообщениях",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Присылает оповещение при обнаружении возможной угрозы вашей безопасности. [Узнайте больше об оповещениях об угрозах]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Используйте эти формы, чтобы пожаловаться на незаконный контент в соответствии с Законом о цифровых услугах. Чтобы пожаловаться на нарушение авторских прав или незаконное использование торговой марки, [перейдите сюда]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "Некорректно указан адрес электронной почты.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -24184,8 +24187,8 @@
           "Карта активности, на которой отображается пользователь @{username}, слушающий композицию {song} (исполнитель {artist})",
         ACTIVITY_REACTION_IMAGE_ALT_TEXT_STREAMING:
           "Карта активности, на которой отображается пользователь @{username}, ведущий трансляцию {activity}",
-        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Играют в **{gameName}**",
-        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Играли в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYING_GAME: "Играет в **{gameName}**",
+        MEMBER_LIST_CONTENT_FEED_PLAYED_GAME: "Играл в **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME:
           "Пользователь {userName} играет в **{gameName}**",
         MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME:

@@ -13255,6 +13255,7 @@
           "상대는 다음을 받게 돼요.",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "{nitroTierName} 멤버십 선물하기",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "선물 유효 기간",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "{username}에게 선물하기:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {#개월} other {#개월}}치 {nitroTierName} 선물",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -22680,6 +22681,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "다이렉트 메시지에서 알림 표시",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "위험성이 감지되었을 때 알림을 표시합니다. [안전 알림에 대해 더 자세히 알아보기]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "디지털서비스법에 따른 불법 콘텐츠는 이 양식을 사용해 신고하세요. 저작권 또는 상표권 침해 관련 신고는 [여기]({supportURL})를 이용해주세요.",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "정상적인 이메일 주소가 아닙니다.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "회원님께서 신고하려고 하는 콘텐츠를 찾을 수 없었어요. 제출하신 내용의 세부 사항을 검토하신 후 다시 제출해주세요.",

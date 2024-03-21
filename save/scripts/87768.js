@@ -11998,7 +11998,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Για τους συλλέκτες. Απόκτησε αυτό το αποκλειστικό έμβλημα Nitro.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Δωρεάν {numFreeBoosts, plural, =1 {Ενίσχυση} other {numFreeBoosts}}",
+          "{numFreeBoosts} Δωρεάν {numFreeBoosts, plural, =1 {Ενίσχυση} other {Ενισχύσεις}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Συγχαρητήρια για τον πρώτο σου μήνα στο Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Ανταμοιβή Nitro",
@@ -14081,6 +14081,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Κάνε δώρο μια συνδρομή {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Διάρκεια δώρου",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "Κάνε δώρο στον χρήστη {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Κάνε δώρο {count, plural, one {# μήνα} other {# μήνες}} της βαθμίδας {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -24102,7 +24104,7 @@
           "Ανάλαβε δράση για να προστατεύσεις τον εαυτό σου ανοίγοντας τα εργαλεία ασφαλείας.",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
           "Αυτή η συζήτηση ίσως να μην είναι ασφαλής. Άνοιξε τα εργαλεία ασφαλείας για να αναλάβεις δράση.",
-        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Αποκλεισμός αυτού του χρήστη",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Αποκλεισμός αυτών των χρηστών",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Κατάργηση αποκλεισμού",
         INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Ο λογαριασμός αποκλείστηκε",
         INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST:
@@ -24111,7 +24113,7 @@
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Κάτι πήγε στραβά! Προσπάθησε ξανά αργότερα.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
-          "Δεν θα μπορεί να σου στείλει μήνυμα. Εάν πιστεύεις πως οι ενέργειες αυτού του χρήστη θα μπορούσαν να βλάψουν κάποιον, παρακαλούμε να το αναφέρεις στο Discord.",
+          "Δεν θα μπορούν να σου στείλουν μήνυμα. Εάν πιστεύεις πως οι ενέργειες αυτών των χρηστών θα μπορούσαν να βλάψουν κάποιον, παρακαλούμε να το αναφέρεις στο Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Αποκλεισμός",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Αποκλεισμός και αναφορά",
@@ -24121,6 +24123,8 @@
           "Εμφάνιση των ειδοποιήσεων σε άμεσα μηνύματα",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Να εμφανίζεται μια ειδοποίηση όταν εντοπίζεται ένας ενδεχόμενος κίνδυνος ασφαλείας. [Μάθε περισσότερα για τις ειδοποιήσεις ασφαλείας]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Χρησιμοποίησε αυτές τις φόρμες για την αναφορά παράνομου περιεχομένου βάσει της Πράξης για τις Ψηφιακές Υπηρεσίες. Για αναφορές παραβίασης πνευματικών δικαιωμάτων ή εμπορικών σημάτων [πήγαινε εδώ]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "Λάθος διαμορφωμένη διεύθυνση ηλεκτρονικού ταχυδρομείου.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -24228,7 +24232,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Αυτό το αίτημα αποστέλλεται στο Discord. Η δημιουργία ψευδών αναφορών ή/και η κατάχρηση του κουμπιού αναφοράς μπορεί να οδηγήσει σε αναστολή των δυνατοτήτων αναφοράς. Μάθε περισσότερα από τις [Οδηγίες της Κοινότητας Discord](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Μάθε περισσότερα για τις υπόλοιπες επιλογές που έχεις με βάση τον [Νόμο για τις Ψηφιακές Υπηρεσίες](https://support.discord.com/hc/articles/17861767909527).",
+          "Μάθε περισσότερα σχετικά με τις υπόλοιπες επιλογές που έχεις στη διάθεσή σου βάσει της [Πράξης για τις Ψηφιακές Υπηρεσίες](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Υποβολή ένστασης για ανεπιθύμητα μηνύματα",
         POLL: "Ψηφοφορία",
@@ -24395,7 +24399,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Χορηγούμενο",
-        QUESTS_PROMOTED: "Διαφημιζόμενο",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Μάθε περισσότερα",
         QUESTS_ACCEPT_QUEST: "Αποδοχή αποστολής",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

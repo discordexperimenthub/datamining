@@ -12436,7 +12436,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Igazi gyűjtőknek. Csapj le erre az exkluz\xedv, csak Nitr\xf3val el\xe9rhető jelv\xe9nyre!",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} ingyenes {numFreeBoosts, plural, =1 {gyors\xedt\xe1s} other {numFreeBoosts}}",
+          "{numFreeBoosts} ingyenes {numFreeBoosts, plural, =1 {gyors\xedt\xe1s} other {numFreeBoosts}} gyors\xedt\xe1s",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Gratul\xe1lunk az első h\xf3napodhoz Nitro-tagk\xe9nt!",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-jutalom",
@@ -14616,6 +14616,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "{nitroTierName}-tags\xe1g aj\xe1nd\xe9koz\xe1sa",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Aj\xe1nd\xe9k időtartama",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "{username} megaj\xe1nd\xe9koz\xe1sa:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "{count, plural, one {# h\xf3napnyi} other {# h\xf3napnyi}} {nitroTierName} aj\xe1nd\xe9koz\xe1sa",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -25107,6 +25109,8 @@
           "Figyelmeztet\xe9sek megjelen\xedt\xe9se a k\xf6zvetlen \xfczenetekben",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Figyelmeztet\xe9s megjelen\xedt\xe9se, ha \xfagy \xe9rz\xe9kelj\xfck, potenci\xe1lisan vesz\xe9lybe ker\xfclhet a biztons\xe1god. [Tov\xe1bbi t\xe1j\xe9koztat\xe1s a biztons\xe1gi figyelmeztet\xe9sekről]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          'Ezekkel az űrlapokkal jelentheted a digit\xe1lis szolg\xe1ltat\xe1sokr\xf3l sz\xf3l\xf3 jogszab\xe1ly (Digital Services Act - "DSA") \xe9rtelm\xe9ben jogellenesnek minős\xfclő tartalmakat. Ha szerzői jogot vagy v\xe9djegyet s\xe9rtő tartalmat szeretn\xe9l jelenteni, [keresd fel ezt az oldalt]({supportURL}).',
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Nem megfelelő e-mail c\xedm.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Nem tal\xe1ljuk a tartalmat, amelyet jelenteni pr\xf3b\xe1lsz. Tekintsd \xe1t a jelent\xe9s r\xe9szleteit, \xe9s k\xfcldd be \xfajra.",
@@ -25219,7 +25223,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Elk\xfcldt\xfck a k\xe9r\xe9st a Discordnak. A hamis jelent\xe9sek bek\xfcld\xe9se \xe9s/vagy a Jelent\xe9s gomb ism\xe9telt, vissza\xe9l\xe9sszerű megnyom\xe1sa a jelent\xe9si jogosults\xe1gok felf\xfcggeszt\xe9s\xe9t eredm\xe9nyezheti. Tov\xe1bbi t\xe1j\xe9koztat\xe1s\xe9rt l\xe1sd a [Discord k\xf6z\xf6ss\xe9gi ir\xe1nyelveit](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Tov\xe1bbi t\xe1j\xe9koztat\xe1s arr\xf3l, milyen lehetős\xe9gek k\xedn\xe1lkoznak m\xe9g a [digit\xe1lis szolg\xe1ltat\xe1sokr\xf3l sz\xf3l\xf3 t\xf6rv\xe9ny](https://support.discord.com/hc/articles/17861767909527) \xe9rtelm\xe9ben.",
+          "Tov\xe1bbi t\xe1j\xe9koztat\xe1s arr\xf3l, milyen lehetős\xe9gek k\xedn\xe1lkoznak m\xe9g a [digit\xe1lis szolg\xe1ltat\xe1sokr\xf3l sz\xf3l\xf3 jogszab\xe1ly](https://support.discord.com/hc/articles/17861767909527) \xe9rtelm\xe9ben.",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "K\xe9retlen tartalomra vonatkoz\xf3 fellebbez\xe9s bek\xfcld\xe9se",
         POLL: "Szavaz\xe1s",

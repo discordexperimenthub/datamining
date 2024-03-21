@@ -14058,6 +14058,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Darovat členstv\xed {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Darovan\xe1 doba",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "Darovat uživateli {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Darovat {nitroTierName} na {count, plural, one {#\xa0měs\xedc} few {#\xa0měs\xedce} other {#\xa0měs\xedců}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -24171,6 +24173,8 @@
           "Zobrazovat upozorněn\xed v\xa0př\xedm\xfdch zpr\xe1v\xe1ch",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Zobrazit v\xfdstrahu v\xa0př\xedpadě zjištěn\xed možn\xe9ho bezpečnostn\xedho rizika. [Zjistit v\xedce o\xa0bezpečnostn\xedch v\xfdstrah\xe1ch]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Pomoc\xed tohoto formul\xe1ře můžeš nahl\xe1sit nez\xe1konn\xfd obsah podl\xe9haj\xedc\xed nař\xedzen\xed o\xa0digit\xe1ln\xedch služb\xe1ch (DSA). Pokud chceš nahl\xe1sit porušen\xed autorsk\xfdch pr\xe1v nebo ochrann\xfdch zn\xe1mek, [pokračuj sem]({supportURL}).",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Nepodařilo se n\xe1m naj\xedt obsah, kter\xfd se snaž\xedš nahl\xe1sit. Zkontroluj podrobnosti hl\xe1šen\xed a\xa0odešli ho znovu.",
         CHANNEL_LIST_V2_NUX_TITLE: "Tady najdeš dalš\xed kan\xe1ly!",

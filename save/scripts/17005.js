@@ -11860,7 +11860,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "F\xf6r samlaren. Ett exklusivt endast-f\xf6r-Nitro-m\xe4rke.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {numFreeBoosts}}",
+          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {boostar}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Grattis till din f\xf6rsta m\xe5nad med Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-bel\xf6ning",
@@ -11997,7 +11997,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Gratis provperiod ({days, plural, =1 {# dag kvar} other {# dagar kvar}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Gratis provperiod",
-        POWERED_BY_NITRO: "Fr\xe5n Nitro",
+        POWERED_BY_NITRO: "Exklusiv f\xf6r Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Spelar ett spel",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live p\xe5 !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Spelar p\xe5 !!{platform}!!",
@@ -13927,6 +13927,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Ge bort ett {nitroTierName}-medlemskap",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "G\xe5vans varaktighet",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Ge g\xe5va till {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Ge {count, plural, one {# m\xe5nad} other {# m\xe5nader}} av {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23855,7 +23856,7 @@
           "Vidta \xe5tg\xe4rder f\xf6r att skydda dig sj\xe4lv genom att \xf6ppna s\xe4kerhetsverktyg.",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
           "Den h\xe4r konversationen \xe4r kanske inte s\xe4ker. \xd6ppna s\xe4kerhetsverktyg f\xf6r att vidta \xe5tg\xe4rder.",
-        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blockera",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "Blockera dem",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "Avblockera",
         INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "Konto blockerat",
         INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "Konto avblockerat",
@@ -23863,7 +23864,7 @@
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "N\xe5got gick fel! F\xf6rs\xf6k igen senare.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
-          "Hen kommer inte att kunna skicka meddelanden till dig. Om du tror att hens handlingar kan skada n\xe5gon b\xf6r du anm\xe4la detta till Discord.",
+          "De kommer inte att kunna skicka meddelanden till dig. Om du tror att deras handlingar kan skada n\xe5gon b\xf6r du anm\xe4la detta till Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Blockera",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Blockera och anm\xe4l",
@@ -23872,6 +23873,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Visa varningar i direktmeddelanden",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Visa en varning n\xe4r en potentiell s\xe4kerhetsrisk uppt\xe4cks. [L\xe4s mer om s\xe4kerhetsvarningar]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Anv\xe4nd dessa formul\xe4r f\xf6r att anm\xe4la inneh\xe5ll som \xe4r olagligt enligt R\xe4ttsakten om digitala tj\xe4nster (DSA). Anm\xe4lningar g\xe4llande upphovsr\xe4tts- eller varum\xe4rkesbrott g\xf6r du [h\xe4r]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Ogiltig e-postadress.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Vi kunde inte hitta inneh\xe5llet du vill anm\xe4la. V\xe4nligen granska din anm\xe4lan och skicka in den igen.",
@@ -24147,7 +24150,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponsrad",
-        QUESTS_PROMOTED: "Uppflyttad",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "L\xe4s mer",
         QUESTS_ACCEPT_QUEST: "Anta uppdrag",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

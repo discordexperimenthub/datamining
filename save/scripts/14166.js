@@ -11787,7 +11787,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Для колекціонерів. Отримайте цей ексклюзивний значок, доступний лише передплатникам Nitro.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "Безкоштовний буст: {numFreeBoosts} {numFreeBoosts, plural, =1 {шт.} other {шт.}}",
+          "{numFreeBoosts, plural, =1 {{Boosts}\xa0безкоштовний бустт} few {{Boosts}\xa0безкоштовних бусти} other {{Boosts}\xa0безкоштовних бустів}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Наші вітання! Пройдено перший місяць із Nitro!",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Винагорода Nitro",
@@ -11924,7 +11924,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Безкоштовний пробний період: {days, plural, =1 {# день залишився} few {# дні залишилося} other {# днів залишилося}}",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Безкоштовний пробний період",
-        POWERED_BY_NITRO: "З допомогою Nitro",
+        POWERED_BY_NITRO: "Перевага Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Грає у гру",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Транслює на !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM: "Грає на !!{platform}!!",
@@ -13840,6 +13840,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Подарувати участь у {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Подарувати тривалість",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Подарунок для {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Подарувати {count, plural, one {# місяць} other {# міс.}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23758,7 +23759,7 @@
         INAPPROPRIATE_CONVERSATION_ERROR_GENERIC_TOAST:
           "Щось пішло не так! Спробуйте пізніше.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION:
-          "Ця особа більше не зможе надсилати вам повідомлення. Якщо, на вашу думку, вона може комусь нашкодити, подайте скаргу до Discord.",
+          "Ці користувачі більше не зможуть надсилати вам повідомлення. Якщо, на вашу думку, вони можуть комусь нашкодити, подайте скаргу до Discord.",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON: "Заблокувати",
         INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_AND_REPORT_BUTTON:
           "Заблокувати й поскаржитися",
@@ -23768,6 +23769,8 @@
           "Показувати застереження в приватних повідомленнях",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Показувати застереження, коли виявлено ризик для вашої безпеки. [Дізнатися більше про застереження про небезпеку]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Використовуйте ці форми, щоб повідомляти про нелегальний контент відповідно до Закону про цифрові послуги (DSA). Щоб повідомити про порушення авторських прав або торгових марок, [перейдіть сюди]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "Неправильно вказана адреса електронної пошти.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -24037,7 +24040,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Спонсор",
-        QUESTS_PROMOTED: "Рекламується",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Дізнатися більше",
         QUESTS_ACCEPT_QUEST: "Прийняти запит",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

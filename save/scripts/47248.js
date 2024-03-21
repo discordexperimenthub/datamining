@@ -13774,6 +13774,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "Tavo gavėjas gaus:",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Dovanok {nitroTierName} narystę",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Dovanos trukmė",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Dovanoti {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Padovanok {count, plural, one {# mėnesį} few {# mėnesius} other {# mėnesių}} {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23684,6 +23685,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Rodyti įspėjimus asmeninėse žinutėse",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Rodyti pranešimą, kai aptinkama galima rizika tavo saugai. [Sužinoti daugiau apie įspėjimus dėl saugos]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Naudok šias formas, kad praneštum apie neteisėtą turinį pagal JAV Skaitmeninių paslaugų aktą (SPA). Jei nori pranešti apie autorių teisių ar prekių ženklų pažeidimus, [eik čia]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR:
           "Neteisingai parašytas el. pašto adresas.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
@@ -23788,7 +23791,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Šis prašymas išsiųstas Discord. Už klaidingų pranešimų ir (arba) nereikalingą pranešimo mygtuko naudojimą gali būti sustabdyta galimybė pranešti. Sužinok daugiau [Discord bendruomenės gairėse](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Sužinok daugiau apie kitas galimybes pagal [Skaitmeninių paslaugų įstatymą](https://support.discord.com/hc/articles/17861767909527).",
+          "Sužinok daugiau apie kitas galimybes pagal [Skaitmeninių paslaugų aktą](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Pateikti skundą dėl šlamšto",
         POLL: "Apklausa",

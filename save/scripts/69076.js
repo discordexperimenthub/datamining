@@ -11455,7 +11455,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For the collectors. Grab this exclusive Nitro-only badge.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Free {numFreeBoosts, plural, =1 {Boost} other {numFreeBoosts}}",
+          "{numFreeBoosts} Free {numFreeBoosts, plural, =1 {Boost} other {Boosts}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Congratulations on your first month of Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro Reward",
@@ -13444,6 +13444,7 @@
           "Your recipient will receive:",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "Gift a {nitroTierName} membership",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gift duration",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Gift {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Gift {count, plural, one {# month} other {# months}} of {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23032,6 +23033,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Show alerts in direct messages",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Display an alert when a possible risk to your safety is detected. [Learn more about safety alerts]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Use these forms to report illegal content under the Digital Services Act (DSA). For reports of copyright or trademark infringement, please [go here]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Not a well formed email address.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "We couldn’t locate the content you are trying to report. Please review the details of your submission and re-submit.",

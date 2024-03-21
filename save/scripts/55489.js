@@ -10799,7 +10799,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "专为收藏家设计。获取这枚 Nitro 用户独占的徽章吧。",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} 免费 {numFreeBoosts, plural, =1 {助力} other {numFreeBoosts}}",
+          "{numFreeBoosts} 免费 {numFreeBoosts, plural, =1 { 个助力} other { 个助力}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "恭喜您使用 Nitro 满一个月。",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro 奖励",
@@ -12699,6 +12699,7 @@
         MOBILE_CUSTOM_GIFT_PLAN_SELECTION_CARD_HEADER: "您的收件人将会收到：",
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN: "赠送 {nitroTierName} 会员",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "礼物有效期",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "赠送 {username}：",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "赠送 {count, plural, one {# 个月} other {# 个月}}的 {nitroTierName}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -21605,7 +21606,7 @@
           "使用安全工具，采取行动保护自己。",
         INAPPROPRIATE_CONVERSATION_SAFETY_TOOLTIP_ANNOUNCEMENT:
           "此次会话可能并不安全。请打开安全工具进行处理。",
-        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "将其屏蔽",
+        INAPPROPRIATE_CONVERSATION_BLOCK_THEM: "屏蔽他们",
         INAPPROPRIATE_CONVERSATION_UNBLOCK: "解除屏蔽",
         INAPPROPRIATE_CONVERSATION_BLOCK_TOAST: "账号已屏蔽",
         INAPPROPRIATE_CONVERSATION_UNBLOCK_TOAST: "账号已解除屏蔽",
@@ -21622,6 +21623,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "在私信中显示警报",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "当检测到可能威胁您安全的风险时，显示警报。[了解关于安全警报的详情]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "请使用这些表格，根据《数字服务法》（DSA）举报非法内容。如需举报版权或商标侵权行为，请[前往此处]({supportURL})。",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "电子邮件地址格式不正确。",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "我们无法找到您试图举报的内容。请查看您提交的详细信息并重新提交。",
@@ -21858,7 +21861,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "已赞助",
-        QUESTS_PROMOTED: "推广",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "了解更多",
         QUESTS_ACCEPT_QUEST: "接受任务",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

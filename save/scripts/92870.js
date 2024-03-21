@@ -11741,7 +11741,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "Voor de verzamelaars. Een exclusieve Nitro-badge.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {numFreeBoosts}}",
+          "{numFreeBoosts} gratis {numFreeBoosts, plural, =1 {boost} other {boosts}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Gefeliciteerd, je bent al \xe9\xe9n maand lid van Nitro.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-beloning",
@@ -13779,6 +13779,8 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Geef een {nitroTierName}-lidmaatschap cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Cadeauduur",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL:
+          "{username} een cadeau geven:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Geef {count, plural, one {# maand} other {# maanden}} {nitroTierName} cadeau",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23650,6 +23652,8 @@
           "Waarschuwingen tonen in priv\xe9berichten",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Geeft een waarschuwing weer als er een mogelijk veiligheidsrisico voor je is ontdekt. [Meer informatie over veiligheidswaarschuwingen]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Gebruik deze formulieren om illegale content te melden in het kader van de Wetgeving digitale diensten (WDD). Voor het melden van schendingen van auteursrecht of handelsmerken ga je [hierheen]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Geen geldig e-mailadres.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "De content waarover je een melding wilt maken, kunnen we niet vinden. Controleer de gegevens van je melding en probeer hem opnieuw te versturen.",
@@ -23756,7 +23760,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "Dit verzoek is verstuurd aan Discord. Het cre\xebren van valse meldingen en/of spammen van de meldknop kan leiden tot opschorting van rapportagemogelijkheden. Lees voor meer informatie de [Discord-Communityrichtlijnen](https://discord.com/guidelines).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "Meer informatie over je andere opties die vallen onder de [Digital Services Act](https://support.discord.com/hc/articles/17861767909527).",
+          "Meer informatie over je andere opties die vallen onder de [Wetgeving digitale diensten](https://support.discord.com/hc/articles/17861767909527).",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM:
           "Dien een spambezwaar in",
         POLL: "Peiling",
@@ -23919,7 +23923,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Gesponsord",
-        QUESTS_PROMOTED: "Gepromoveerd",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Meer informatie",
         QUESTS_ACCEPT_QUEST: "Missie accepteren",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

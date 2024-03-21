@@ -11722,7 +11722,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "For samlerne blant oss. Skaff deg dette Nitro-eksklusive merket.",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} Gratis {numFreeBoosts, plural, =1 {boost} other {numFreeBoosts}}",
+          "{numFreeBoosts} gratis {numFreeBoosts, plural, =1 {boost} other {booster}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "Gratulerer, du har hatt Nitro i en m\xe5ned.",
         NITRO_HOME_REWARDING_TENURE_REWARD: "Nitro-premie",
@@ -11856,7 +11856,7 @@
         PREMIUM_MOBILE_TRIAL_MARKETING_PAGE_BADGE:
           "Gratis pr\xf8veperiode ({days, plural, =1 {# dag igjen} other {# dager igjen}})",
         PREMIUM_MOBILE_TRIAL_FREE_TRIAL_BADGE: "Gratis pr\xf8veperiode",
-        POWERED_BY_NITRO: "Drives av Nitro",
+        POWERED_BY_NITRO: "Inkludert i Nitro",
         USER_ACTIVITY_HEADER_PLAYING: "Spiller et spill",
         USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM: "Live p\xe5 !!{platform}!!",
         USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM:
@@ -13750,6 +13750,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "Gi {nitroTierName}-medlemskap i gave",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "Gavens varighet",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "Gi {username} i gave:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "Gi {count, plural, one {# m\xe5ned} other {# m\xe5neder}} med {nitroTierName} i gave",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23538,6 +23539,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "Vis varsler i direktemeldinger",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "Vis et varsel n\xe5r det registreres en potensiell trussel mot sikkerheten din. [Mer info om sikkerhetsvarsler]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          "Bruk disse skjemaene til \xe5 rapportere ulovlig innhold i henhold til Digital Services Act (DSA). Hvis det gjelder brudd p\xe5 opphavsrett eller uautorisert bruk av varemerker, kan du [g\xe5 hit]({supportURL}).",
         EMAIL_ENTER_MODAL_INPUT_ERROR: "Ikke en riktig e-postadresse.",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "Vi finner ikke innholdet du pr\xf8ver \xe5 melde fra om. Vi ber deg g\xe5 gjennom opplysningene i rapporten og sende den p\xe5 nytt.",
@@ -23812,7 +23815,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "PlayStation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "Sponset",
-        QUESTS_PROMOTED: "Forfremmet",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "Finn ut mer",
         QUESTS_ACCEPT_QUEST: "Godta oppgave",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

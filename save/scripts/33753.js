@@ -11428,7 +11428,7 @@
         NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS:
           "สำหรับนักสะสม รับป้ายสุดพิเศษเฉพาะชาว Nitro นี้เลย",
         NITRO_HOME_REWARDING_TENURE_FREE_BOOST:
-          "{numFreeBoosts} {numFreeBoosts, plural, =1 {บูสต์ฟรี} other {numFreeBoosts}}",
+          "{numFreeBoosts} {numFreeBoosts, plural, =1 {บูสต์ฟรี} other {บูสต์ฟรี}}",
         NITRO_HOME_REWARDING_TENURE_CONGRATULATIONS:
           "ขอแสดงความยินดีที่คุณใช้ Nitro ครบเดือนแรก",
         NITRO_HOME_REWARDING_TENURE_REWARD: "รางวัล Nitro",
@@ -13415,6 +13415,7 @@
         MOBILE_CUSTOM_GIFT_TITLE_WITH_PLAN:
           "ส่งการเป็นสมาชิก {nitroTierName} เป็นของขวัญ",
         MOBILE_CUSTOM_GIFT_DURATION_LABEL: "ระยะเวลาของขวัญ",
+        MOBILE_CUSTOM_GIFT_DURATION_AVATAR_LABEL: "มอบของขวัญให้ {username}:",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_MONTH:
           "ให้ของขวัญเป็น {nitroTierName} นาน {count, plural, one {# เดือน} other {# เดือน}}",
         MOBILE_CUSTOM_GIFT_DURATION_SELECTION_YEAR:
@@ -23010,6 +23011,8 @@
         SAFETY_ALERTS_SETTING_TITLE: "แสดงการแจ้งเตือนในข้อความส่วนตัว",
         SAFETY_ALERTS_SETTING_DESCRIPTION:
           "แสดงการแจ้งเตือนเมื่อตรวจพบความเสี่ยงด้านความปลอดภัยที่อาจเกิดขึ้น [เรียนรู้เพิ่มเติมเกี่ยวกับการแจ้งเตือนความปลอดภัย]({learnMoreLink})",
+        URF_LANDING_PAGE_SUBTITLE:
+          'ใช้แบบฟอร์มเหล่านี้ในการรายงานเนื้อหาที่ผิดกฎหมายภายใต้ "กฎหมายกำกับการให้บริการดิจิทัล (Digital Services Act หรือ DSA)" หากต้องการรายงานการละเมิดลิขสิทธิ์หรือเครื่องหมายการค้า โปรด[ไปที่นี่]({supportURL})',
         EMAIL_ENTER_MODAL_INPUT_ERROR: "รูปแบบอีเมลไม่ถูกต้อง",
         IN_APP_REPORTING_SUBMIT_VALIDATION_ERROR:
           "เราไม่พบตำแหน่งของเนื้อหาที่คุณพยายามรายงาน โปรดตรวจสอบรายละเอียดของรายงานที่คุณส่งแล้วส่งอีกครั้ง",
@@ -23111,7 +23114,7 @@
         APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DISCLAIMER:
           "คำขอนี้จะถูกส่งไปยัง Discord การรายงานที่เป็นเท็จและ/หรือสแปมปุ่มรายงานจะส่งผลให้เกิดการระงับการรายงาน เรียนรู้เพิ่มเติมได้จาก[แนวทางปฏิบัติในชุมชนของ Discord](https://discord.com/guidelines)",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA:
-          "เรียนรู้เพิ่มเติมเกี่ยวกับตัวเลือกอื่นๆ ได้ใน[กฎหมายกำกับการให้บริการดิจิทัล](https://support.discord.com/hc/articles/17861767909527) (Digital Services Act)",
+          "เรียนรู้เพิ่มเติมเกี่ยวกับตัวเลือกอื่นๆ ได้ใน[กฎหมายกำกับการให้บริการดิจิทัล (Digital Services Act)](https://support.discord.com/hc/articles/17861767909527)",
         APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM: "ส่งคำอุทธรณ์เรื่องสแปม",
         POLL: "โพลล์",
         POLLS: "โพลล์",
@@ -23261,7 +23264,7 @@
         QUESTS_REWARD_CODE_PLATFORM_PLAYSTATION: "Playstation",
         QUESTS_REWARD_CODE_PLATFORM_XBOX: "Xbox",
         QUESTS_SPONSORED: "ได้รับการสนับสนุน",
-        QUESTS_PROMOTED: "โปรโมตแล้ว",
+        QUESTS_PROMOTED: "Promoted",
         QUESTS_LEARN_MORE_V2: "เรียนรู้เพิ่มเติม",
         QUESTS_ACCEPT_QUEST: "ยอมรับภารกิจ",
         QUESTS_INSTRUCTIONS_TO_WIN_REWARD:

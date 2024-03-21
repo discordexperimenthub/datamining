@@ -1709,7 +1709,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "277463",
+                  buildNumber: "277480",
                 }),
                 (0, a.jsx)(S, {}),
               ],
@@ -38156,7 +38156,7 @@
                   }),
                   (0, a.jsx)("div", {
                     className: N.heroAssetWrapper,
-                    style: { color: D.config.colors.primary },
+                    style: { color: D.config.colors.secondary },
                     children: (0, a.jsx)(
                       c.default,
                       {
@@ -53045,4 +53045,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0afe08d589b472325fa9.js.map
+//# sourceMappingURL=8f48584206255022ecfa.js.map

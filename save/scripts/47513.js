@@ -26446,8 +26446,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277463", ", Version Hash: ")
-          .concat("eaa0e5a01cfbb411ddbcb7f6d6364523fdb18800")
+          .concat("277480", ", Version Hash: ")
+          .concat("ed02294950daa48dca8f83565d0872523e88c755")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29572,12 +29572,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277463"), "277463"));
+        let _ = parseInt(((e = "277480"), "277480"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277463"
+                "277480"
               )
             ),
             (_ = 0)),
@@ -46383,7 +46383,7 @@
           "COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP"),
         (u[(u.TENURE_REWARD_REDEEMABLE_CONFETTI = 363)] =
           "TENURE_REWARD_REDEEMABLE_CONFETTI"),
-        (u[(u.VALORANT_USER_SIGNUPS = 364)] = "VALORANT_USER_SIGNUPS"),
+        (u[(u.GAME_ONE_USER_SIGNUPS = 364)] = "GAME_ONE_USER_SIGNUPS"),
         (u[(u.COLLECTIBLES_SHOP_SHY_COACHTIP = 365)] =
           "COLLECTIBLES_SHOP_SHY_COACHTIP"),
         ((L = i || (i = {}))[(L.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] =
@@ -52802,4 +52802,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.3c590ddddeda38ae4b62.js.map
+//# sourceMappingURL=47513.9af29ed9fc7f31d7989d.js.map

@@ -8451,98 +8451,49 @@
           },
         };
     },
-    290723: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          getExplicitMediaSenderFalsePositiveExpirationOverride: function () {
-            return a;
-          },
-          useIsEligibleForExplicitMediaSenderFalsePositive: function () {
-            return i;
-          },
-        });
-      var s = n("862205");
-      let l = (0, s.createExperiment)({
-        kind: "user",
-        id: "2024-01_explicit_media_sender_false_positive",
-        label: "Explicit Media Sender False Positive",
-        defaultConfig: { enabled: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Enable explicit media sender false positive experience",
-            config: { enabled: !0 },
-          },
-          {
-            id: 2,
-            label:
-              "Enable explicit media sender false positive experience with 3 second submit report expiration window",
-            config: { enabled: !0, expirationOverride: 3e3 },
-          },
-        ],
-      });
-      function a() {
-        let { expirationOverride: e } = l.getCurrentConfig(
-          { location: "" },
-          { autoTrackExposure: !1 }
-        );
-        return e;
-      }
-      function i(e) {
-        return l.useExperiment({ location: e }, { autoTrackExposure: !0 })
-          .enabled;
-      }
-    },
     817892: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return _;
+            return f;
           },
         }),
         n("222007");
       var s = n("446674"),
         l = n("913144"),
         a = n("718517"),
-        i = n("299039"),
-        r = n("290723");
-      let o = 14 * a.default.Millis.DAY,
-        u = Object.freeze([]),
-        d = {},
-        c = {};
-      function E() {
-        (d = {}), (c = {});
+        i = n("299039");
+      let r = 14 * a.default.Millis.DAY,
+        o = Object.freeze([]),
+        u = {},
+        d = {};
+      function c() {
+        (u = {}), (d = {});
       }
-      class f extends s.default.Store {
+      class E extends s.default.Store {
         getFpMessageInfo(e) {
-          return d[e];
+          return u[e];
         }
         getChannelFpInfo(e) {
           var t;
-          return null !== (t = c[e]) && void 0 !== t ? t : u;
+          return null !== (t = d[e]) && void 0 !== t ? t : o;
         }
         canSubmitFpReport(e) {
-          let t = d[e];
-          if (null == t) return !1;
-          let n = (0,
-          r.getExplicitMediaSenderFalsePositiveExpirationOverride)();
-          return (
-            !t.reportSubmit && i.default.age(t.messageId) < (null != n ? n : o)
-          );
+          let t = u[e];
+          return null != t && !t.reportSubmit && i.default.age(t.messageId) < r;
         }
       }
-      f.displayName = "FalsePositiveStore";
-      var _ = new f(l.default, {
+      E.displayName = "FalsePositiveStore";
+      var f = new E(l.default, {
         LOGOUT: function () {
           (function () {
-            (d = {}), (c = {});
+            (u = {}), (d = {});
           })();
         },
         CONNECTION_OPEN: function () {
           (function () {
-            (d = {}), (c = {});
+            (u = {}), (d = {});
           })();
         },
         MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
@@ -8554,17 +8505,17 @@
               attachments: l,
               reportSubmit: !1,
             },
-            i = null !== (t = c[s]) && void 0 !== t ? t : u;
-          (c[s] = [...i, a]), (d[n] = a);
+            i = null !== (t = d[s]) && void 0 !== t ? t : o;
+          (d[s] = [...i, a]), (u[n] = a);
         },
         MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
           let { messageId: t, channelId: n } = e,
-            s = c[n];
+            s = d[n];
           null != s &&
-            ((c[n] = s.map(e =>
+            ((d[n] = s.map(e =>
               e.messageId === t ? { ...e, reportSubmit: !0 } : e
             )),
-            (d[t] = { ...d[t], reportSubmit: !0 }));
+            (u[t] = { ...u[t], reportSubmit: !0 }));
         },
       });
     },
@@ -8603,20 +8554,16 @@
       n.r(t),
         n.d(t, {
           useShouldRenderReportFalsePositiveButton: function () {
-            return i;
+            return a;
           },
         });
       var s = n("65597"),
-        l = n("290723"),
-        a = n("817892");
-      let i = (e, t) => {
-        let n = (0, s.default)([a.default], () =>
-          a.default.getFpMessageInfo(e)
+        l = n("817892");
+      let a = e => {
+        let t = (0, s.default)([l.default], () =>
+          l.default.getFpMessageInfo(e)
         );
-        return (
-          (0, l.useIsEligibleForExplicitMediaSenderFalsePositive)(t) &&
-          null != n
-        );
+        return null != t;
       };
     },
     925685: function (e, t, n) {
@@ -8879,7 +8826,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return _;
+            return f;
           },
         });
       var s = n("37983");
@@ -8889,50 +8836,46 @@
         i = n("290226"),
         r = n("695681"),
         o = n("447435"),
-        u = n("290723"),
-        d = n("817892"),
-        c = n("908480"),
-        E = n("786214"),
-        f = n("782340");
-      function _(e) {
-        let { channelId: t, messageId: n, transitionState: _, onClose: T } = e,
-          I = (0, u.useIsEligibleForExplicitMediaSenderFalsePositive)(
-            "fp_action_sheet"
-          ),
-          m = (0, l.default)([d.default], () => d.default.getFpMessageInfo(n)),
-          N = m.attachments.map(e => e.id),
-          p = m.attachments.map(e => e.filename),
-          { reportFalsePositive: S, isReportFalsePositiveLoading: A } = (0,
-          c.useExplicitMediaActions)({
+        u = n("817892"),
+        d = n("908480"),
+        c = n("786214"),
+        E = n("782340");
+      function f(e) {
+        let { channelId: t, messageId: n, transitionState: f, onClose: _ } = e,
+          T = (0, l.default)([u.default], () => u.default.getFpMessageInfo(n)),
+          I = T.attachments.map(e => e.id),
+          m = T.attachments.map(e => e.filename),
+          { reportFalsePositive: N, isReportFalsePositiveLoading: p } = (0,
+          d.useExplicitMediaActions)({
             onSuccess: () => {
-              (0, E.handleSuccess)(T),
+              (0, c.handleSuccess)(_),
                 i.default.disableFalsePositiveButton(t, n);
             },
             onError: () => {
               (0, a.showToast)(
                 (0, a.createToast)(
-                  f.default.Messages.ERROR_GENERIC_TITLE,
+                  E.default.Messages.ERROR_GENERIC_TITLE,
                   a.ToastType.FAILURE
                 )
               );
             },
             report: () => {
-              (0, r.reportFailedSendFalsePositive)(t, n, N, p);
+              (0, r.reportFailedSendFalsePositive)(t, n, I, m);
             },
           }),
-          C = I && m.attachments.length > 0;
+          S = T.attachments.length > 0;
         return (
-          !C && T(),
-          (0, s.jsx)(E.ExplicitMediaFalsePositiveModal, {
+          !S && _(),
+          (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
             messageId: n,
             channelId: t,
-            isReportFalsePositiveLoading: A,
+            isReportFalsePositiveLoading: p,
             analyticsContext:
               o.TrackMediaRedactionContext
                 .EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
-            onConfirmPress: S,
-            transitionState: _,
-            onClose: T,
+            onConfirmPress: N,
+            transitionState: f,
+            onClose: _,
           })
         );
       }
@@ -13195,13 +13138,13 @@
       n.r(t),
         n.d(t, {
           MessageAccessories: function () {
-            return eF;
+            return ek;
           },
           default: function () {
-            return ew;
+            return eF;
           },
           SimpleMessageAccessories: function () {
-            return eH;
+            return ew;
           },
         }),
         n("222007"),
@@ -13329,8 +13272,7 @@
           "discord-townhall",
           "discordgameslab",
         ]),
-        eG = "web_chat",
-        eB = (e, t, n) => () => {
+        eG = (e, t, n) => () => {
           let l = null != t ? t : n;
           if (null == l) return null;
           let { url: a, proxyURL: i, width: r, height: o } = l;
@@ -13343,7 +13285,7 @@
             className: eD.gifFavoriteButton,
           });
         },
-        ek = e => () => {
+        eB = e => () => {
           let { proxy_url: t, width: n, height: l } = e;
           return en.IMAGE_GIF_RE.test(e.filename) && null != n && null != l
             ? (0, s.jsx)(eA.default, {
@@ -13356,7 +13298,7 @@
               })
             : null;
         };
-      class eF extends l.Component {
+      class ek extends l.Component {
         shouldRenderInvite(e) {
           let { channel: t } = this.props;
           return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && eb.has(e));
@@ -13586,7 +13528,7 @@
                       }
                     );
                   },
-                  gifFavoriteButton: ek(t),
+                  gifFavoriteButton: eB(t),
                 },
                 s = (0, el.getBestEffortSrcUrl)({
                   proxyURL: t.proxy_url,
@@ -13956,7 +13898,7 @@
                 : (0, s.jsx)(
                     es.GIFAccessoryContext.Provider,
                     {
-                      value: eB(e.url, e.image, e.video),
+                      value: eG(e.url, e.image, e.video),
                       children: (0, s.jsx)(et.default, {
                         className: eD.embedWrapper,
                         embed: e,
@@ -14007,7 +13949,7 @@
             });
         }
       }
-      function ew(e) {
+      function eF(e) {
         var t;
         let { channel: n, message: l, renderSuppressEmbeds: a } = e,
           i = (0, o.useStateFromStores)([J.default], () => J.default.getId()),
@@ -14091,8 +14033,8 @@
           D = (0, j.default)(null == n ? void 0 : n.id),
           U = (0, G.default)(l),
           b = (0, C.useShouldRedactExplicitContent)(n.id, l.author.id),
-          B = (0, h.useShouldRenderReportFalsePositiveButton)(l.id, eG);
-        return (0, s.jsx)(eF, {
+          B = (0, h.useShouldRenderReportFalsePositiveButton)(l.id);
+        return (0, s.jsx)(ek, {
           canSuppressEmbeds: g,
           canDeleteAttachments: M,
           ...L,
@@ -14115,8 +14057,8 @@
           shouldRenderCtaButton: B,
         });
       }
-      eF.defaultProps = { renderEmbeds: !0, compact: !1 };
-      let eH = e => {
+      ek.defaultProps = { renderEmbeds: !0, compact: !1 };
+      let ew = e => {
         var t;
         let {
             message: n,
@@ -14140,9 +14082,9 @@
           ),
           I = (0, j.default)(null == l ? void 0 : l.id),
           m = (0, C.useShouldRedactExplicitContent)(l.id, n.author.id),
-          N = (0, h.useShouldRenderReportFalsePositiveButton)(n.id, eG),
+          N = (0, h.useShouldRenderReportFalsePositiveButton)(n.id),
           p = (0, G.default)(n);
-        return (0, s.jsx)(eF, {
+        return (0, s.jsx)(ek, {
           ...d,
           message: n,
           channel: l,
@@ -32902,4 +32844,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8a0286f599fe7fe5ca5a.js.map
+//# sourceMappingURL=5908167d1ffa83d1da4a.js.map

@@ -1064,7 +1064,7 @@
                     e => {
                       if (
                         null == e.body ||
-                        "dfaa7af007592f6053576752db568891fbb6162f" ===
+                        "c1d357cd28eb9321c44e83e4a55b35693309e63d" ===
                           e.body.hash
                       )
                         return this._handleUpdateNotAvailable();
@@ -2876,10 +2876,7 @@
             es = !el && void 0 === l,
             ei = (0, x.default)({ message: S, channel: s, enabled: es }),
             er = (0, o.useShouldRedactExplicitContent)(s.id, S.author.id),
-            eo = (0, u.useShouldRenderReportFalsePositiveButton)(
-              S.id,
-              "inbox_message"
-            ),
+            eo = (0, u.useShouldRenderReportFalsePositiveButton)(S.id),
             eu = (0, f.default)(S);
           return el
             ? (0, a.jsx)(e, {
@@ -10384,4 +10381,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9e9e7e0743e54506e978.js.map
+//# sourceMappingURL=bda8f822585c82e91c25.js.map

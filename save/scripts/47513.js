@@ -24530,6 +24530,21 @@
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT: "About Recent Activity",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT:
           "Member List Recent Activity Settings",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_ALT:
+          "Wumpus and Nelly chatting about their recent activity",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_HEADER:
+          "Say Hello to Recent Activity",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DESCRIPTION:
+          "Learn more about your friends and play more games together by keeping up with their activities.",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_FRIEND_NOTE:
+          "See the activity of people you talk to most",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_PLAYED_NOTE:
+          "Keep up with games they're playing now or played recently",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_REPLY_NOTE:
+          "Quickly jump into a conversation with a reply or even an emoji",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Got it!",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_DISCLOSURE:
+          "Learn more about [Recent Activity]({recentActivityURL}) or manage your [Activity Privacy](handleActivityPrivacyClick)",
         RECENT_GAMES: "Recent Games",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "{count} {count, plural, =1 {week} other {weeks}} ago",
@@ -26446,8 +26461,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277550", ", Version Hash: ")
-          .concat("5c96dfae5060bf96ad87a8797af2dd90326f1016")
+          .concat("277572", ", Version Hash: ")
+          .concat("67ff7fb095e3ef1b373b2a1761a63ded4975048b")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29572,12 +29587,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277550"), "277550"));
+        let _ = parseInt(((e = "277572"), "277572"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277550"
+                "277572"
               )
             ),
             (_ = 0)),
@@ -52802,4 +52817,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.583a49b1cb7f6e6bc49d.js.map
+//# sourceMappingURL=47513.c4d06d6d5bbcbba946fb.js.map

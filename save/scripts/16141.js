@@ -10271,10 +10271,10 @@
       n.r(t),
         n.d(t, {
           MemberListContentSettingsMenu: function () {
-            return m;
+            return f;
           },
           default: function () {
-            return p;
+            return h;
           },
         });
       var a = n("37983");
@@ -10283,60 +10283,59 @@
         s = n("225389"),
         i = n("197801"),
         r = n("77078"),
-        u = n("545158"),
-        o = n("701909"),
-        d = n("650509"),
-        c = n("265596"),
-        f = n("49111"),
-        h = n("782340");
-      let m = e => {
+        u = n("650509"),
+        o = n("265596"),
+        d = n("49111"),
+        c = n("782340");
+      let f = e => {
         let { closePopout: t } = e,
-          n = (0, l.useStateFromStores)([c.default], () => c.default.hidden);
+          i = (0, l.useStateFromStores)([o.default], () => o.default.hidden);
         return (0, a.jsx)(r.Menu, {
           onSelect: () => {},
           navId: "member-list-settings-menu",
           variant: "fixed",
-          onClose: null != t ? t : f.NOOP,
+          onClose: null != t ? t : d.NOOP,
           "aria-label":
-            h.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
+            c.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ALT,
           children: (0, a.jsxs)(r.MenuGroup, {
             children: [
               (0, a.jsx)(r.MenuItem, {
                 id: "about",
                 label:
-                  h.default.Messages
+                  c.default.Messages
                     .CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT,
                 icon: s.CircleInformationIcon,
                 action: () => {
-                  (0, u.default)(
-                    o.default.getArticleURL(
-                      f.HelpdeskArticles.MEMBER_LIST_ACTIVITY_FEED
-                    )
-                  ),
+                  (0, r.openModalLazy)(async () => {
+                    let { default: e } = await n
+                      .el("863638")
+                      .then(n.bind(n, "863638"));
+                    return t => (0, a.jsx)(e, { ...t });
+                  }),
                     null == t || t();
                 },
               }),
               (0, a.jsx)(r.MenuCheckboxItem, {
                 id: "hide",
                 label:
-                  h.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
-                checked: n,
+                  c.default.Messages.CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE,
+                checked: i,
                 action: () => {
-                  (0, d.toggleMemberListContentFeedHidden)(), null == t || t();
+                  (0, u.toggleMemberListContentFeedHidden)(), null == t || t();
                 },
               }),
             ],
           }),
         });
       };
-      var p = () =>
+      var h = () =>
         (0, a.jsx)(r.Popout, {
           animation: r.Popout.Animation.NONE,
           position: "bottom",
           align: "right",
           renderPopout: e => {
             let { closePopout: t } = e;
-            return (0, a.jsx)(m, { closePopout: t });
+            return (0, a.jsx)(f, { closePopout: t });
           },
           children: e =>
             (0, a.jsx)(r.Clickable, {
@@ -44276,4 +44275,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ce64fc1c99140ef3cdb7.js.map
+//# sourceMappingURL=b3eff9f4454cb24c6c65.js.map

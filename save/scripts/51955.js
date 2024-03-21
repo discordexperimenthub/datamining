@@ -6491,6 +6491,7 @@
                     userId: S.id,
                     guildId: m.guild_id,
                     channelId: m.id,
+                    roleId: null == T ? void 0 : T.colorRoleId,
                     ...e,
                   }),
                 position: "right",
@@ -19757,4 +19758,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8315812955914c44bdd1.js.map
+//# sourceMappingURL=464c452a8670091b8ad8.js.map

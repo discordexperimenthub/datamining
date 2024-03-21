@@ -8046,6 +8046,7 @@
                 userId: this.props.user.id,
                 guildId: this.props.guildId,
                 channelId: this.props.channel.id,
+                roleId: this.props.colorRoleId,
                 analyticsParams: {
                   location: {
                     page: G.AnalyticsPages.GUILD_CHANNEL,
@@ -44275,4 +44276,4 @@
     },
   },
 ]);
-//# sourceMappingURL=80bdf9efc48887e58990.js.map
+//# sourceMappingURL=ce64fc1c99140ef3cdb7.js.map

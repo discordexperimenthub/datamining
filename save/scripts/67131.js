@@ -2383,13 +2383,14 @@
                             guildId: f,
                             channelId: m,
                           }),
-                        renderPopout: e =>
+                        renderPopout: t =>
                           (0, n.jsx)(u.default, {
-                            ...e,
+                            ...t,
                             userId: h.id,
                             guildId: f,
                             channelId: m,
                             messageId: p,
+                            roleId: null == e ? void 0 : e.colorRoleId,
                           }),
                         children: e => {
                           let { onClick: t, ...i } = e;
@@ -2722,4 +2723,4 @@
     },
   },
 ]);
-//# sourceMappingURL=debc104a975509573ab4.js.map
+//# sourceMappingURL=75f150a9ed0893827300.js.map

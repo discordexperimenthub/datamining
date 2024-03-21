@@ -29548,7 +29548,12 @@
             className: j.contentWidth,
             children: (0, a.jsx)(o.Popout, {
               renderPopout: e =>
-                (0, a.jsx)(T.default, { guildId: n, userId: t.id, ...e }),
+                (0, a.jsx)(T.default, {
+                  guildId: n,
+                  userId: t.id,
+                  roleId: r,
+                  ...e,
+                }),
               position: "left",
               preload: () => (0, I.default)(t.id, t.avatarURL, { guildId: n }),
               children: e =>
@@ -47786,4 +47791,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e06087598d1c15bd01b8.js.map
+//# sourceMappingURL=e16510e1f775e7e60649.js.map

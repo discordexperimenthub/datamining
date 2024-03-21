@@ -11810,31 +11810,30 @@
             },
             [w]
           ),
-          q = (0, c.default)([M.default], () => {
-            var e, t;
-            return (null == w ? void 0 : w.authorId) == null
-              ? "inherit"
-              : null !==
-                    (t =
-                      null ===
-                        (e = M.default.getMember(w.guildId, w.authorId)) ||
-                      void 0 === e
-                        ? void 0
-                        : e.colorString) && void 0 !== t
-                ? t
-                : "inherit";
+          [q, $] = (0, c.useStateFromStoresArray)([M.default], () => {
+            var e;
+            let t =
+              (null == w ? void 0 : w.authorId) != null
+                ? M.default.getMember(w.guildId, w.authorId)
+                : null;
+            return [
+              null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e
+                ? e
+                : "inherit",
+              null == t ? void 0 : t.colorRoleId,
+            ];
           }),
-          { reducedMotion: $ } = l.useContext(
+          { reducedMotion: ee } = l.useContext(
             E.AccessibilityPreferencesContext
           ),
-          [ee, et] = l.useState(!1),
-          en = l.useCallback(() => {
+          [et, en] = l.useState(!1),
+          es = l.useCallback(() => {
             z(!0);
           }, [z]),
-          es = l.useCallback(() => {
+          el = l.useCallback(() => {
             z(!1);
           }, [z]),
-          el = l.useCallback(async () => {
+          ea = l.useCallback(async () => {
             null != w &&
               ((0, T.trackWithMetadata)(
                 U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED,
@@ -11859,7 +11858,7 @@
                       { channelId: w.parentChannelId }
                     ));
           }, [w, F, X]),
-          ea = l.useCallback(
+          ei = l.useCallback(
             () => (
               o(
                 (null == w ? void 0 : w.authorId) != null,
@@ -11873,7 +11872,7 @@
             [w, F]
           );
         if (null == w) return null;
-        let ei = (e, t) => (
+        let er = (e, t) => (
             o(
               null != w.authorId,
               "Author Id cannot be null when rendering user popout"
@@ -11884,33 +11883,34 @@
               guildId: w.guildId,
               channelId: F.id,
               messageId: k.id,
+              roleId: $,
               newAnalyticsLocations: t,
             })
           ),
-          er = (0, L.getAvatarDecorationURL)({
+          eo = (0, L.getAvatarDecorationURL)({
             avatarDecoration:
               null === (t = w.user) || void 0 === t
                 ? void 0
                 : t.avatarDecoration,
             size: (0, I.getDecorationSizeForAvatarSize)(E.AvatarSizes.SIZE_40),
-            canAnimate: ee,
+            canAnimate: et,
           }),
-          eo =
+          eu =
             null === (n = w.user) || void 0 === n
               ? void 0
-              : n.getAvatarURL(w.guildId, 40, ee),
-          eu = () => {
-            !$.enabled && et(e => !e);
+              : n.getAvatarURL(w.guildId, 40, et),
+          ed = () => {
+            !ee.enabled && en(e => !e);
           },
-          ed = w.coverImage,
-          ec = null != ed && (0, p.isAnimatedImageUrl)(ed);
+          ec = w.coverImage,
+          eE = null != ec && (0, p.isAnimatedImageUrl)(ec);
         return (0, s.jsxs)("div", {
           className: G.postPreviewContainer,
           children: [
             (0, s.jsxs)("div", {
               className: G.thumbnailContainer,
-              onMouseEnter: en,
-              onMouseLeave: es,
+              onMouseEnter: es,
+              onMouseLeave: el,
               children: [
                 !Q &&
                   (!0 === w.shouldShowBlurredThumbnailImage
@@ -11925,10 +11925,10 @@
                       })
                     : (0, s.jsx)(m.default, {
                         src:
-                          !(K && (Y || W)) && ec
-                            ? "".concat(ed, "?format=png")
-                            : ed,
-                        backgroundSrc: "".concat(ed, "?format=png"),
+                          !(K && (Y || W)) && eE
+                            ? "".concat(ec, "?format=png")
+                            : ec,
+                        backgroundSrc: "".concat(ec, "?format=png"),
                         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
                         aspectRatio: 16 / 9,
                         className: i(G.thumbnail, {
@@ -11940,7 +11940,7 @@
                       })),
                 null != w.coverImageOverlayText &&
                   (0, s.jsx)(E.Clickable, {
-                    onClick: el,
+                    onClick: ea,
                     children: (0, s.jsx)("div", {
                       className: G.thumbnailOverlay,
                       children: (0, s.jsxs)("div", {
@@ -11984,24 +11984,24 @@
                 (0, s.jsxs)("div", {
                   className: G.descriptionFooter,
                   children: [
-                    null != eo &&
+                    null != eu &&
                       (0, s.jsx)(E.Popout, {
-                        renderPopout: e => ei(e, [_.default.AVATAR]),
+                        renderPopout: e => er(e, [_.default.AVATAR]),
                         position: "right",
                         spacing: 12,
-                        preload: null == w.authorId ? void 0 : ea,
+                        preload: null == w.authorId ? void 0 : ei,
                         children: e =>
                           (0, s.jsx)("div", {
-                            onMouseEnter: eu,
-                            onMouseLeave: eu,
+                            onMouseEnter: ed,
+                            onMouseLeave: ed,
                             children: (0, s.jsx)(E.Avatar, {
                               ...e,
                               size: E.AvatarSizes.SIZE_40,
-                              src: eo,
+                              src: eu,
                               "aria-label":
                                 b.default.Messages
                                   .MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
-                              avatarDecoration: er,
+                              avatarDecoration: eo,
                             }),
                           }),
                       }),
@@ -12016,7 +12016,7 @@
                                 className: G.mediaChannelIcon,
                               }),
                             (0, s.jsx)(E.Clickable, {
-                              onClick: el,
+                              onClick: ea,
                               className: G.channelName,
                               children: (0, s.jsx)(E.Heading, {
                                 variant: "heading-md/semibold",
@@ -12043,10 +12043,10 @@
                                       E.Popout,
                                       {
                                         renderPopout: e =>
-                                          ei(e, [_.default.USERNAME]),
+                                          er(e, [_.default.USERNAME]),
                                         position: "right",
                                         preload:
-                                          null == w.authorId ? void 0 : ea,
+                                          null == w.authorId ? void 0 : ei,
                                         children: e =>
                                           (0, s.jsx)(E.NameWithRoleAnchor, {
                                             ...e,
@@ -12065,7 +12065,7 @@
                     w.canAccess
                       ? (0, s.jsx)(E.Button, {
                           color: E.ButtonColors.BRAND,
-                          onClick: el,
+                          onClick: ea,
                           children: (0, s.jsx)(E.Text, {
                             variant: "text-sm/medium",
                             color: "always-white",
@@ -12074,7 +12074,7 @@
                         })
                       : (0, s.jsx)(R.default, {
                           pauseAnimation: J,
-                          onClick: el,
+                          onClick: ea,
                           className: i(G.ctaButtonContent, G.subscribeButton),
                           color: E.Button.Colors.CUSTOM,
                           children: (0, s.jsx)(E.Text, {
@@ -32902,4 +32902,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2d19a6e2ae8b6e082af2.js.map
+//# sourceMappingURL=8a0286f599fe7fe5ca5a.js.map

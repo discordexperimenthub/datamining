@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["23725"],
+  ["68679"],
   {
     16873: function (e, t, n) {
       "use strict";
@@ -17,14 +17,14 @@
       var l = n("446674"),
         s = n("913144");
       let r = {},
-        u = null,
-        a = null;
+        a = null,
+        u = null;
       function i(e, t) {
         null == t ? e in r && delete r[e] : null != e && (r[e] = t);
       }
       function o(e) {
         let { user: t } = e;
-        a = t.id;
+        u = t.id;
       }
       class c extends l.default.PersistedStore {
         initialize(e) {
@@ -39,7 +39,7 @@
           return null != n && t.reduce((e, t) => e || n.includes(t), !1);
         }
         wasLoginAttemptedInSession(e) {
-          return u === e;
+          return a === e;
         }
         getState() {
           return r;
@@ -50,13 +50,13 @@
       var d = new c(s.default, {
         LOGIN_ATTEMPTED: function (e) {
           let { required_actions: t, user_id: n } = e;
-          i((u = n), t);
+          i((a = n), t);
         },
         CONNECTION_OPEN: o,
         CURRENT_USER_UPDATE: o,
         LOGOUT: function (e) {
           let { isSwitchingAccount: t } = e;
-          !t && null != a && i(a, null);
+          !t && null != u && i(u, null);
         },
         PASSWORD_UPDATED: function (e) {
           let { userId: t } = e;
@@ -68,42 +68,20 @@
         },
       });
     },
-    238055: function (e, t, n) {
-      "use strict";
-      var l, s;
-      n.r(t),
-        n.d(t, {
-          HubEmailConnectionSteps: function () {
-            return l;
-          },
-          INVITE_ROUTING_HUB_GUILD_ID: function () {
-            return r;
-          },
-        }),
-        ((s = l || (l = {})).STUDENT_PROMPT = "STUDENT_PROMPT"),
-        (s.VERIFY_EMAIL = "VERIFY_EMAIL"),
-        (s.VERIFY_PIN = "VERIFY_PIN"),
-        (s.SELECT_SCHOOL = "SELECT_SCHOOL"),
-        (s.SELECT_SCHOOL_SEARCH = "SELECT_SCHOOL_SEARCH"),
-        (s.SUBMIT_SCHOOL = "SUBMIT_SCHOOL"),
-        (s.EMAIL_CONFIRMATION = "EMAIL_CONFIRMATION"),
-        (s.EMAIL_WAITLIST = "EMAIL_WAITLIST");
-      let r = "884924873015689226";
-    },
     466857: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return p;
           },
         }),
         n("222007");
       var l = n("37983"),
         s = n("884691"),
         r = n("414456"),
-        u = n.n(r),
-        a = n("77078"),
+        a = n.n(r),
+        u = n("77078"),
         i = n("381546"),
         o = n("229915"),
         c = n("782340"),
@@ -117,61 +95,61 @@
               searchTerm: s,
               inputClassName: r,
               className: f,
-              onChange: I,
-              onFocus: _,
-              onBlur: E,
-              onKeyPress: C,
-              autoComplete: T,
-              forwardedRef: p,
-              closeIconClassName: R,
-              searchIconClassName: h,
-              cta: O,
+              onChange: p,
+              onFocus: h,
+              onBlur: x,
+              onKeyPress: R,
+              autoComplete: C,
+              forwardedRef: _,
+              closeIconClassName: m,
+              searchIconClassName: N,
+              cta: A,
             } = this.props,
-            S = null != s && s.length > 0,
-            A = null != p ? p : this._textInputRef;
-          return (0, l.jsx)(a.FocusRing, {
-            focusTarget: A,
+            T = null != s && s.length > 0,
+            g = null != _ ? _ : this._textInputRef;
+          return (0, l.jsx)(u.FocusRing, {
+            focusTarget: g,
             ringTarget: this._containerRef,
             children: (0, l.jsxs)("div", {
-              className: u(d.searchBox, f),
+              className: a(d.searchBox, f),
               ref: this._containerRef,
               children: [
-                (0, l.jsx)(a.TextInput, {
-                  inputRef: A,
+                (0, l.jsx)(u.TextInput, {
+                  inputRef: g,
                   focusProps: { enabled: !1 },
                   name: "search",
                   maxLength: 100,
                   className: d.searchBoxInputWrapper,
-                  inputClassName: u(d.searchBoxInput, r),
-                  onChange: I,
-                  onFocus: _,
-                  onBlur: E,
-                  onKeyPress: C,
-                  value: S ? s : "",
+                  inputClassName: a(d.searchBoxInput, r),
+                  onChange: p,
+                  onFocus: h,
+                  onBlur: x,
+                  onKeyPress: R,
+                  value: T ? s : "",
                   placeholder: n,
                   autoFocus: e,
                   "aria-label": t,
-                  autoComplete: T ? "on" : "off",
+                  autoComplete: C ? "on" : "off",
                 }),
-                null != O
-                  ? (0, l.jsx)(a.Text, {
+                null != A
+                  ? (0, l.jsx)(u.Text, {
                       color: "text-muted",
                       variant: "text-xs/normal",
                       className: d.cta,
-                      children: O,
+                      children: A,
                     })
                   : null,
-                S
-                  ? (0, l.jsx)(a.Clickable, {
+                T
+                  ? (0, l.jsx)(u.Clickable, {
                       onClick: this.handleClear,
                       className: d.clear,
                       "aria-label": c.default.Messages.SEARCH_CLEAR,
                       children: (0, l.jsx)(i.default, {
-                        className: u(d.clearIcon, R),
+                        className: a(d.clearIcon, m),
                       }),
                     })
                   : (0, l.jsx)(o.default, {
-                      className: u(d.searchIcon, h),
+                      className: a(d.searchIcon, N),
                       "aria-label": c.default.Messages.SEARCH,
                     }),
               ],
@@ -190,8 +168,8 @@
         }
       }
       f.defaultProps = { autoComplete: !1 };
-      var I = s.forwardRef((e, t) => (0, l.jsx)(f, { forwardedRef: t, ...e }));
+      var p = s.forwardRef((e, t) => (0, l.jsx)(f, { forwardedRef: t, ...e }));
     },
   },
 ]);
-//# sourceMappingURL=16eeeba0eaf878336137.js.map
+//# sourceMappingURL=bf0e3a21716fde20b7bb.js.map

@@ -20779,7 +20779,7 @@
             .map(e => e.attachment.size)
             .sort()
             .pop(),
-          v = r.ChannelTypesSets.GUILD.has(n) ? 100 : 26214400;
+          v = r.ChannelTypesSets.GUILD.has(n) ? 104857600 : 26214400;
         if (
           (l.useEffect(
             () => () => {
@@ -32879,4 +32879,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15a7a2d7a24e453ff14d.js.map
+//# sourceMappingURL=b016dd38cfa3f6b19055.js.map

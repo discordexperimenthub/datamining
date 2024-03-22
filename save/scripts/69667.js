@@ -11649,7 +11649,7 @@
         });
       var s,
         l,
-        a = n("35092"),
+        a = n("446674"),
         i = n("913144");
       ((s = l || (l = {}))[(s.NOT_FETCHED = 0)] = "NOT_FETCHED"),
         (s[(s.FETCHING = 1)] = "FETCHING"),
@@ -11657,7 +11657,7 @@
         (s[(s.FAILED = 3)] = "FAILED");
       let r = {},
         o = {};
-      class u extends a.default.Store {
+      class u extends a.Store {
         getMediaPostEmbed(e) {
           if (null != e) return r[e];
         }
@@ -32935,4 +32935,4 @@
     },
   },
 ]);
-//# sourceMappingURL=35f73d9b22b60991c869.js.map
+//# sourceMappingURL=5771c8c01864e01c9588.js.map

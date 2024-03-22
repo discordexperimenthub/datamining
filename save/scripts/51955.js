@@ -9062,7 +9062,7 @@
           },
         }),
         n("222007");
-      var s = n("35092"),
+      var s = n("75247"),
         a = n("913144"),
         l = n("203288"),
         i = n("271938"),
@@ -9070,7 +9070,7 @@
         o = n("299039"),
         u = n("911162");
       let d = new Set();
-      class c extends s.default.Store {
+      class c extends s.Store {
         shouldDisplayPrompt(e) {
           return d.has(e);
         }
@@ -19811,4 +19811,4 @@
     },
   },
 ]);
-//# sourceMappingURL=be4f19f7ad389aba6cfd.js.map
+//# sourceMappingURL=478b36ba2cf5dda1dcd3.js.map

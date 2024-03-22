@@ -2904,11 +2904,13 @@
         I = E("697218"),
         i = E("441823"),
         l = E("49111");
-      let L = e => {
-        let { guildId: t, userId: E } = e;
+      let L = (e, t) => {
+        let { guildId: E, userId: _, colorRoleId: s } = e;
         (0, A.openUserProfileModal)({
-          userId: E,
-          guildId: t,
+          userId: _,
+          guildId: E,
+          sourceAnalyticsLocations: t,
+          roleId: s,
           analyticsLocation: {
             section: l.AnalyticsSections.MEMBER_SAFETY_PAGE,
             object: l.AnalyticsObjects.ACTIONED_BY_USER,
@@ -9177,4 +9179,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0926da9c675845aef4e5.js.map
+//# sourceMappingURL=cec362162fba9a22a1ba.js.map

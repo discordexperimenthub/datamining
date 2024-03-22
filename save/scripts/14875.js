@@ -23,6 +23,11 @@
         (i.OVERVIEW = "overview"),
         (i.STICKERS = "stickers"),
         (i.VANITY_URL = "vanity url"),
+        (i.URI_SCHEME = "uri scheme"),
+        (i.AKA = "aka"),
+        (i.NOTIFICATION_CENTER = "notification center"),
+        (i.FAMILY_CENTER = "family center"),
+        (i.FRIENDS_LIST = "friends list"),
         (i.PREMIUM_MARKETING = "premium marketing"),
         (i.PREMIUM_MARKETING_PLAN_COMPARISON =
           "premium marketing plan comparison"),
@@ -303,6 +308,7 @@
         (i.MEMBER_SAFETY_PAGE = "member safety page"),
         (i.GUILD_SETTINGS_MEMBERS_PAGE = "guild settings members page"),
         (i.GUILD_MEMBER_MOD_VIEW = "guild member mod view"),
+        (i.GUILD_MEMBER_APPLICATION_REVIEW = "guild member application review"),
         (i.GUILD_PRODUCT_EMBED_CARD = "guild product embed card"),
         (i.GUILD_PRODUCT_INFO_MODAL = "guild product info modal"),
         (i.GUILD_PRODUCT_PAYMENT_MODAL = "guild product payment modal"),
@@ -336,4 +342,4 @@
     },
   },
 ]);
-//# sourceMappingURL=14875.0ffbbf293ae985e2e0b0.js.map
+//# sourceMappingURL=14875.ddb2c35c19c94033ea50.js.map

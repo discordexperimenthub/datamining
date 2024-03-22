@@ -180,59 +180,64 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return R;
+            return _;
           },
         });
       var a = s("37983"),
         l = s("884691"),
         i = s("446674"),
-        n = s("69927"),
-        r = s("766274"),
-        u = s("305961"),
-        o = s("549103"),
-        d = s("50926"),
-        c = s("122766"),
-        E = s("117370"),
-        I = s("276566"),
-        f = s("782340"),
-        T = s("652059"),
-        R = function (e) {
+        n = s("812204"),
+        r = s("685665"),
+        u = s("69927"),
+        o = s("766274"),
+        d = s("305961"),
+        c = s("549103"),
+        E = s("50926"),
+        I = s("122766"),
+        f = s("117370"),
+        T = s("276566"),
+        R = s("782340"),
+        S = s("652059"),
+        _ = function (e) {
           let { guildId: t } = e,
-            s = (0, c.useSelectedGuildJoinRequest)({ guildId: t }),
-            { user: R } = null != s ? s : {},
-            S = l.useMemo(() => (null != R ? new r.default(R) : null), [R]),
-            _ = (0, i.useStateFromStores)(
-              [u.default],
-              () => u.default.getGuild(t),
+            { AnalyticsLocationProvider: s } = (0, r.default)(
+              n.default.GUILD_MEMBER_APPLICATION_REVIEW
+            ),
+            _ = (0, I.useSelectedGuildJoinRequest)({ guildId: t }),
+            { user: m } = null != _ ? _ : {},
+            N = l.useMemo(() => (null != m ? new o.default(m) : null), [m]),
+            M = (0, i.useStateFromStores)(
+              [d.default],
+              () => d.default.getGuild(t),
               [t]
             );
           return (
-            (0, n.usePageTitle)({
+            (0, u.usePageTitle)({
               subsection:
-                f.default.Messages
+                R.default.Messages
                   .GUILD_SETTINGS_MEMBER_VERIFICATION_REQUIREMENTS,
-              location: null == _ ? void 0 : _.name,
+              location: null == M ? void 0 : M.name,
             }),
             l.useEffect(() => {
-              d.default.fetchVerificationForm(t);
+              E.default.fetchVerificationForm(t);
             }, [t]),
-            (0, a.jsxs)(a.Fragment, {
+            (0, a.jsxs)(s, {
               children: [
                 (0, a.jsx)("div", {
-                  className: T.content,
-                  children: (0, a.jsx)(E.default, { guildId: t }),
+                  className: S.content,
+                  children: (0, a.jsx)(f.default, { guildId: t }),
                 }),
-                null != s &&
-                  null != _ &&
-                  null != S &&
+                null != _ &&
+                  null != M &&
+                  null != N &&
                   (0, a.jsx)("section", {
-                    className: T.sidebar,
-                    children: (0, a.jsx)(I.default, {
-                      guild: _,
-                      guildJoinRequest: s,
-                      guildJoinRequestUser: S,
+                    className: S.sidebar,
+                    children: (0, a.jsx)(T.default, {
+                      guild: M,
+                      guildJoinRequest: _,
+                      guildJoinRequestUser: N,
                       onClose: () =>
-                        o.default.setSelectedGuildJoinRequest(t, null),
+                        c.default.setSelectedGuildJoinRequest(t, null),
                     }),
                   }),
               ],
@@ -378,7 +383,7 @@
             let a = t.scrollHeight - t.scrollTop - t.offsetHeight;
             a < 200 && (await P(h, A));
           }, [A, h, P]),
-          b = (0, i.useStateFromStores)([u.default], () =>
+          L = (0, i.useStateFromStores)([u.default], () =>
             u.default.getGuild(t)
           );
         return (0, a.jsxs)(a.Fragment, {
@@ -393,8 +398,8 @@
               className: M.content,
               children:
                 "REVIEW_APPLICATION" === A
-                  ? null != b
-                    ? (0, a.jsx)(r.default, { guild: b })
+                  ? null != L
+                    ? (0, a.jsx)(r.default, { guild: L })
                     : null
                   : (0, a.jsxs)(a.Fragment, {
                       children: [
@@ -937,12 +942,12 @@
           D = (0, r.useStateFromStores)([I.default], () =>
             I.default.getUser(v)
           ),
-          b = (0, r.useStateFromStores)(
+          L = (0, r.useStateFromStores)(
             [E.default],
             () => (null != v ? E.default.getMember(G, v) : null),
             [v, G]
           ),
-          L = l.useCallback(() => {
+          b = l.useCallback(() => {
             (0, o.showToast)(
               (0, o.createToast)(
                 A.default.Messages.ERROR_GENERIC_TITLE,
@@ -960,7 +965,7 @@
                   N.GuildJoinRequestApplicationStatuses.APPROVED
                 );
               } catch {
-                L();
+                b();
               } finally {
                 g(!1);
               }
@@ -991,7 +996,7 @@
               className: p.iconRejected,
               backgroundColor: u.default.unsafe_rawColors.WHITE_500.css,
             })));
-        let J =
+        let U =
           null != D && null != j
             ? A.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format(
                 {
@@ -1019,7 +1024,7 @@
                           variant: "text-xs/normal",
                           color: "header-primary",
                           children:
-                            null !== (e = null == b ? void 0 : b.nick) &&
+                            null !== (e = null == L ? void 0 : L.nick) &&
                             void 0 !== e
                               ? e
                               : D.username,
@@ -1051,7 +1056,7 @@
                           className: p.headerSubtext,
                           variant: "text-xs/normal",
                           color: "header-secondary",
-                          children: J,
+                          children: U,
                         }),
                       ],
                     }),
@@ -1085,7 +1090,7 @@
                                     modalProps: t,
                                     guildId: G,
                                     userId: O,
-                                    onError: L,
+                                    onError: b,
                                   });
                               });
                             },
@@ -1136,7 +1141,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return E;
+            return I;
           },
         });
       var a = s("37983");
@@ -1144,51 +1149,55 @@
       var l = s("414456"),
         i = s.n(l),
         n = s("77078"),
-        r = s("401642"),
-        u = s("315102"),
-        o = s("49111"),
-        d = s("782340"),
-        c = s("870690");
-      function E(e) {
-        let { user: t, className: s } = e,
-          { discriminator: l, username: E } = t,
-          I = u.default.getUserAvatarURL(t);
+        r = s("685665"),
+        u = s("401642"),
+        o = s("315102"),
+        d = s("49111"),
+        c = s("782340"),
+        E = s("870690");
+      function I(e) {
+        let { user: t, guildId: s, className: l } = e,
+          { discriminator: I, username: f } = t,
+          T = o.default.getUserAvatarURL(t),
+          { analyticsLocations: R } = (0, r.default)();
         return (0, a.jsxs)("div", {
-          className: i(c.container, s),
+          className: i(E.container, l),
           children: [
             (0, a.jsx)(n.Avatar, {
-              src: I,
+              src: T,
               size: n.AvatarSizes.SIZE_80,
-              "aria-label": E,
-              className: c.avatar,
+              "aria-label": f,
+              className: E.avatar,
             }),
             (0, a.jsxs)("div", {
-              className: c.username,
+              className: E.username,
               children: [
                 (0, a.jsx)(n.Heading, {
                   variant: "heading-xl/semibold",
-                  children: E,
+                  children: f,
                 }),
                 (0, a.jsxs)(n.Text, {
                   variant: "text-md/normal",
                   color: "header-secondary",
-                  children: ["#", l],
+                  children: ["#", I],
                 }),
               ],
             }),
             (0, a.jsx)(n.Anchor, {
               onClick: () => {
-                (0, r.openUserProfileModal)({
+                (0, u.openUserProfileModal)({
                   userId: t.id,
+                  guildId: s,
+                  sourceAnalyticsLocations: R,
                   analyticsLocation: {
                     section:
-                      o.AnalyticsSections
+                      d.AnalyticsSections
                         .GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                    object: o.AnalyticsObjects.JOIN_REQUEST,
+                    object: d.AnalyticsObjects.JOIN_REQUEST,
                   },
                 });
               },
-              children: d.default.Messages.VIEW_PROFILE,
+              children: c.default.Messages.VIEW_PROFILE,
             }),
           ],
         });
@@ -1253,7 +1262,11 @@
               }),
               (0, a.jsxs)(i.Scroller, {
                 children: [
-                  (0, a.jsx)(E.default, { user: T, className: f.container }),
+                  (0, a.jsx)(E.default, {
+                    user: T,
+                    guildId: t.id,
+                    className: f.container,
+                  }),
                   (0, a.jsx)("div", {
                     className: f.disabledFormRenderer,
                     children: (0, a.jsx)(d.default, {
@@ -1378,4 +1391,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a9d504ae13a3556af8c0.js.map
+//# sourceMappingURL=21371501a64b4a0e9e67.js.map

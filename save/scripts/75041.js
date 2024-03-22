@@ -318,21 +318,20 @@
           n = (0, u.useStateFromStores)([C.default], () =>
             C.default.getGuild(t)
           ),
-          { AnalyticsLocationProvider: a } = (0, d.default)(
-            o.default.MEMBER_SAFETY_PAGE
-          ),
-          c = (0, N.useCanAccessMemberSafetyPage)(t),
-          m = (0, h.useCanAccessGuildMemberModView)(t, c),
-          S = (0, u.useStateFromStores)([I.default], () =>
+          { AnalyticsLocationProvider: a, analyticsLocations: c } = (0,
+          d.default)(o.default.MEMBER_SAFETY_PAGE),
+          m = (0, N.useCanAccessMemberSafetyPage)(t),
+          S = (0, h.useCanAccessGuildMemberModView)(t, m),
+          M = (0, u.useStateFromStores)([I.default], () =>
             I.default.getLastSelectedChannelId(t)
           ),
-          M = (0, u.useStateFromStores)([T.default], () =>
-            T.default.getChannel(S)
+          A = (0, u.useStateFromStores)([T.default], () =>
+            T.default.getChannel(M)
           ),
-          A = s.useRef(null);
+          L = s.useRef(null);
         (0, b.useSubscribeToGuildMemberUpdates)(t),
           s.useEffect(() => {
-            if (!c && null != n) {
+            if (!m && null != n) {
               var e;
               let t =
                 null === (e = p.default.getDefaultChannel(n.id)) || void 0 === e
@@ -340,42 +339,46 @@
                   : e.id;
               (0, g.transitionToGuild)(n.id, t);
             }
-          }, [n, c]);
-        let L = (0, u.useStateFromStores)(
+          }, [n, m]);
+        let w = (0, u.useStateFromStores)(
             [E.default],
             () => null != E.default.getGuildSidebarState(t),
             [t]
           ),
-          w = s.useCallback(e => {
-            let t = (0, h.canAccessGuildMemberModViewWithExperiment)(
-              e.guildId,
-              !0
-            );
-            t
-              ? (0, f.openGuildMemberModViewSidebar)(
-                  e.guildId,
-                  e.userId,
-                  B.StaticChannelRoute.MEMBER_SAFETY,
-                  { modViewPanel: G.ModViewPanel.INFO }
-                )
-              : (0, x.openUserProfileModal)({
-                  userId: e.userId,
-                  guildId: e.guildId,
-                  analyticsLocation: {
-                    section: k.AnalyticsSections.MEMBER_SAFETY_PAGE,
-                  },
-                });
-          }, []);
-        return null != n && c
+          H = s.useCallback(
+            e => {
+              let t = (0, h.canAccessGuildMemberModViewWithExperiment)(
+                e.guildId,
+                !0
+              );
+              t
+                ? (0, f.openGuildMemberModViewSidebar)(
+                    e.guildId,
+                    e.userId,
+                    B.StaticChannelRoute.MEMBER_SAFETY,
+                    { modViewPanel: G.ModViewPanel.INFO }
+                  )
+                : (0, x.openUserProfileModal)({
+                    userId: e.userId,
+                    guildId: e.guildId,
+                    sourceAnalyticsLocations: c,
+                    analyticsLocation: {
+                      section: k.AnalyticsSections.MEMBER_SAFETY_PAGE,
+                    },
+                  });
+            },
+            [c]
+          );
+        return null != n && m
           ? (0, l.jsxs)(a, {
               children: [
                 (0, l.jsxs)("div", {
-                  className: i(y.chat, F.page, { [y.threadSidebarOpen]: L }),
+                  className: i(y.chat, F.page, { [y.threadSidebarOpen]: w }),
                   children: [
-                    (0, l.jsx)(P, { guild: n, previousChannel: M }),
+                    (0, l.jsx)(P, { guild: n, previousChannel: A }),
                     (0, l.jsx)(r.AdvancedScroller, {
                       className: i(F.scroller),
-                      ref: A,
+                      ref: L,
                       orientation: "vertical",
                       children: (0, l.jsxs)("div", {
                         className: i(y.content, F.container),
@@ -383,7 +386,7 @@
                           (0, l.jsx)(j.default, { guild: n }),
                           (0, l.jsx)(R.default, {
                             guild: n,
-                            onMemberSelect: w,
+                            onMemberSelect: H,
                           }),
                         ],
                       }),
@@ -391,7 +394,7 @@
                     (0, l.jsx)(v.default, { guildId: n.id }),
                   ],
                 }),
-                m && (0, l.jsx)(_.default, { guildId: n.id }),
+                S && (0, l.jsx)(_.default, { guildId: n.id }),
               ],
             })
           : null;
@@ -544,4 +547,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1303b005ccafb5801a3d.js.map
+//# sourceMappingURL=5c5737b9b85b7e23e436.js.map

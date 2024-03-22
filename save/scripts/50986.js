@@ -9349,10 +9349,9 @@
           s = (0, r.useStateFromStores)([_.default], () =>
             _.default.getGuild(t)
           ),
-          { AnalyticsLocationProvider: n } = (0, u.default)(
-            d.default.GUILD_SETTINGS_MEMBERS_PAGE
-          ),
-          A =
+          { AnalyticsLocationProvider: n, analyticsLocations: A } = (0,
+          u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE),
+          p =
             !1 ==
             !!(null == s
               ? void 0
@@ -9360,28 +9359,32 @@
                   x.GuildFeatures
                     .ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY
                 )),
-          p = (0, r.useStateFromStores)(
+          M = (0, r.useStateFromStores)(
             [I.default],
             () => I.default.getEstimatedMemberSearchCountByGuildId(t),
             [t]
           ),
-          M = l.useCallback(e => {
-            null != e &&
-              (0, E.openUserProfileModal)({
-                userId: e.userId,
-                guildId: e.guildId,
-                analyticsLocation: {
-                  section: x.AnalyticsSections.GUILD_SETTINGS_MEMBERS,
-                },
-              });
-          }, []),
-          D = l.useRef(null),
-          v = l.useCallback(() => {
+          D = l.useCallback(
+            e => {
+              null != e &&
+                (0, E.openUserProfileModal)({
+                  userId: e.userId,
+                  guildId: e.guildId,
+                  sourceAnalyticsLocations: A,
+                  analyticsLocation: {
+                    section: x.AnalyticsSections.GUILD_SETTINGS_MEMBERS,
+                  },
+                });
+            },
+            [A]
+          ),
+          v = l.useRef(null),
+          G = l.useCallback(() => {
             var e;
-            null === (e = D.current) || void 0 === e || e.resetSearchText();
+            null === (e = v.current) || void 0 === e || e.resetSearchText();
           }, []);
         if (null == s) return null;
-        let G = (0, N.getSearchState)(!1, !1, p);
+        let j = (0, N.getSearchState)(!1, !1, M);
         return (0, a.jsx)(n, {
           children: (0, a.jsx)("div", {
             className: O.settingsColumn,
@@ -9414,19 +9417,19 @@
                           children: [
                             (0, a.jsx)(f.default, { guild: s }),
                             (0, a.jsx)(S.default, { guild: s }),
-                            A
+                            p
                               ? (0, a.jsxs)("div", {
                                   className: i(O.mainTableContainer),
                                   children: [
-                                    (0, a.jsx)(C.default, { guild: s, ref: D }),
+                                    (0, a.jsx)(C.default, { guild: s, ref: v }),
                                     (0, a.jsx)(g.default, {
                                       guild: s,
-                                      searchState: G,
+                                      searchState: j,
                                       compact: !0,
-                                      onSelectRow: M,
-                                      onResetForNewMembers: v,
+                                      onSelectRow: D,
+                                      onResetForNewMembers: G,
                                     }),
-                                    G !==
+                                    j !==
                                       N.SearchState.SUCCESS_STILL_INDEXING &&
                                       (0, a.jsx)(h.default, { guildId: s.id }),
                                   ],
@@ -47827,4 +47830,4 @@
     },
   },
 ]);
-//# sourceMappingURL=be2906b751db2df5e8a8.js.map
+//# sourceMappingURL=41e7a7d51bbb1ad913ae.js.map

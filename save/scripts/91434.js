@@ -589,129 +589,134 @@
             user: p,
             guildId: _,
             channelId: v,
-            friendToken: F,
-            autoFocusNote: D,
-            initialSection: B = R.UserProfileSections.USER_INFO,
-            transitionState: L,
-            onClose: b,
+            messageId: F,
+            roleId: D,
+            friendToken: B,
+            autoFocusNote: L,
+            initialSection: b = R.UserProfileSections.USER_INFO,
+            transitionState: G,
+            sourceAnalyticsLocations: k = [],
+            onClose: V,
           } = e,
-          G =
+          w =
             null !==
               (t = (0, i.useStateFromStores)([T.default], () =>
                 T.default.getUser(p.id)
               )) && void 0 !== t
               ? t
               : p,
-          k = (0, I.default)(
-            null !== (s = null == G ? void 0 : G.id) && void 0 !== s ? s : ""
+          H = (0, I.default)(
+            null !== (s = null == w ? void 0 : w.id) && void 0 !== s ? s : ""
           );
-        (0, u.useSubscribeGuildMembers)({ [_]: [G.id] });
-        let V = (0, i.useStateFromStores)(
+        (0, u.useSubscribeGuildMembers)({ [_]: [w.id] });
+        let Y = (0, i.useStateFromStores)(
             [S.default],
-            () => null != S.default.getAnyStreamForUser(G.id)
+            () => null != S.default.getAnyStreamForUser(w.id)
           ),
-          w = (0, i.useStateFromStores)([E.default], () =>
+          z = (0, i.useStateFromStores)([E.default], () =>
             E.default.findActivity(
-              G.id,
+              w.id,
               e => e.type !== M.ActivityTypes.CUSTOM_STATUS
             )
           ),
-          H = (0, h.useGetVoiceChannelInfoForVoiceActivitySection)(G.id, _),
-          [Y, z] = l.useState(!1),
-          [J, K] = l.useState(
-            G.isNonUserBot() && !G.isClyde()
+          J = (0, h.useGetVoiceChannelInfoForVoiceActivitySection)(w.id, _),
+          [K, Q] = l.useState(!1),
+          [W, Z] = l.useState(
+            w.isNonUserBot() && !w.isClyde()
               ? R.UserProfileSections.MUTUAL_GUILDS
-              : B
+              : b
           ),
-          Q = (0, i.useStateFromStores)(
+          q = (0, i.useStateFromStores)(
             [m.default],
-            () => m.default.getId() === G.id
+            () => m.default.getId() === w.id
           ),
-          { showVoiceActivityInProfile: W } =
+          { showVoiceActivityInProfile: X } =
             A.VoiceActivityProfileExperiment.useExperiment(
               { location: "user profile modal container" },
               { autoTrackExposure: !1 }
             ),
-          { UserProfileAnalyticsProvider: Z, trackUserProfileAction: q } = (0,
+          { UserProfileAnalyticsProvider: $, trackUserProfileAction: ee } = (0,
           N.useUserProfileAnalyticsProvider)({
             layout: "MODAL",
-            newAnalyticsLocations: [d.default.PROFILE_MODAL],
-            userId: G.id,
+            newAnalyticsLocations: [...k, d.default.PROFILE_MODAL],
+            userId: w.id,
             guildId: _,
             channelId: v,
+            messageId: F,
+            roleId: D,
           }),
-          X = null != w || V || (null != H && W),
-          $ = !Q || X,
-          ee = l.createRef(),
-          et = (0, n.default)(ee);
-        !X &&
-          J === R.UserProfileSections.ACTIVITY &&
-          K(R.UserProfileSections.USER_INFO);
-        let es = l.useCallback(
+          et = null != z || Y || (null != J && X),
+          es = !q || et,
+          ea = l.createRef(),
+          el = (0, n.default)(ea);
+        !et &&
+          W === R.UserProfileSections.ACTIVITY &&
+          Z(R.UserProfileSections.USER_INFO);
+        let ei = l.useCallback(
             e => {
-              q({ action: "PRESS_SECTION", section: e }), z(!0), K(e);
+              ee({ action: "PRESS_SECTION", section: e }), Q(!0), Z(e);
             },
-            [q]
+            [ee]
           ),
-          ea = null == k ? void 0 : k.profileEffectId;
-        return (0, a.jsx)(Z, {
+          eo = null == H ? void 0 : H.profileEffectId;
+        return (0, a.jsx)($, {
           children: (0, a.jsx)(r.default, {
             section: M.AnalyticsSections.PROFILE_MODAL,
             children: (0, a.jsxs)(o.ModalRoot, {
-              transitionState: L,
+              transitionState: G,
               className: O.root,
               "aria-label": P.default.Messages.USER_PROFILE_MODAL,
               children: [
                 (0, a.jsx)("div", {
-                  ref: ee,
+                  ref: ea,
                   children: (0, a.jsxs)(U.default, {
-                    user: G,
+                    user: w,
                     profileType: R.UserProfileTypes.MODAL,
                     children: [
                       (0, a.jsx)("div", {
                         className: O.topSection,
                         children: (0, a.jsx)(y.default, {
-                          displayProfile: k,
-                          user: G,
-                          friendToken: F,
-                          onClose: b,
-                          isStreaming: (0, c.default)(w),
+                          displayProfile: H,
+                          user: w,
+                          friendToken: B,
+                          onClose: V,
+                          isStreaming: (0, c.default)(z),
                           guildId: _,
                           channelId: v,
-                          hasProfileEffect: null != ea,
+                          hasProfileEffect: null != eo,
                         }),
                       }),
                       (0, a.jsxs)(U.default.Inner, {
                         children: [
-                          L === o.ModalTransitionState.ENTERED &&
-                            (0, a.jsx)(x.default, { onTooltipClose: b }),
+                          G === o.ModalTransitionState.ENTERED &&
+                            (0, a.jsx)(x.default, { onTooltipClose: V }),
                           (0, a.jsxs)("div", {
                             className: O.body,
                             children: [
                               (0, a.jsx)(j.default, {
-                                user: G,
-                                displayProfile: k,
+                                user: w,
+                                displayProfile: H,
                               }),
-                              $
+                              es
                                 ? (0, a.jsx)(g, {
-                                    user: G,
+                                    user: w,
                                     section:
-                                      J ===
+                                      W ===
                                       R.UserProfileSections
                                         .USER_INFO_CONNECTIONS
                                         ? R.UserProfileSections.USER_INFO
-                                        : J,
-                                    setSection: es,
-                                    hasActivity: X,
-                                    isCurrentUser: Q,
+                                        : W,
+                                    setSection: ei,
+                                    hasActivity: et,
+                                    isCurrentUser: q,
                                   })
                                 : (0, a.jsx)("div", { className: O.divider }),
                               (0, a.jsx)(C.default, {
-                                displayProfile: k,
-                                user: G,
-                                autoFocusNote: D && !Y,
-                                selectedSection: J,
-                                onClose: b,
+                                displayProfile: H,
+                                user: w,
+                                autoFocusNote: L && !K,
+                                selectedSection: W,
+                                onClose: V,
                               }),
                             ],
                           }),
@@ -720,11 +725,11 @@
                     ],
                   }),
                 }),
-                null != ea &&
+                null != eo &&
                   (0, a.jsx)(f.default, {
-                    profileEffectId: ea,
+                    profileEffectId: eo,
                     bannerAdjustment: 0,
-                    isHovering: et,
+                    isHovering: el,
                   }),
               ],
             }),
@@ -1129,4 +1134,4 @@
     },
   },
 ]);
-//# sourceMappingURL=165183733acecf1d32ed.js.map
+//# sourceMappingURL=8199536588bf7b166c47.js.map

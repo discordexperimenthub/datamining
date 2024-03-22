@@ -31,34 +31,34 @@
       l("884691");
       var u = l("77078"),
         i = l("272030"),
-        r = l("901582"),
-        o = l("158534"),
-        d = l("812204"),
-        a = l("861370"),
+        o = l("901582"),
+        r = l("158534"),
+        a = l("812204"),
+        d = l("861370"),
         s = l("421602"),
         c = l("806179"),
         f = l("97508"),
         M = l("49111"),
         O = l("782340"),
-        h = (0, o.default)(
+        h = (0, r.default)(
           function (e) {
-            let { user: t, guildId: l, analyticsContext: o, onSelect: d } = e,
+            let { user: t, guildId: l, analyticsContext: r, onSelect: a } = e,
               h = (0, c.default)(t.id),
               E = (0, f.default)(t.id, l),
-              R = (0, a.default)({
+              R = (0, d.default)({
                 id: t.id,
                 label: O.default.Messages.COPY_ID_USER,
               }),
               p = (0, s.default)(t.id),
               x = t.isNonUserBot();
-            return (0, n.jsx)(r.default, {
-              context: o,
+            return (0, n.jsx)(o.default, {
+              context: r,
               object: M.AnalyticsObjects.CONTEXT_MENU,
               children: (0, n.jsxs)(u.Menu, {
                 navId: "user-context",
                 onClose: i.closeContextMenu,
                 "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: d,
+                onSelect: a,
                 children: [
                   (0, n.jsxs)(u.MenuGroup, { children: [!x && h, !x && p] }),
                   (0, n.jsx)(u.MenuGroup, { children: !x && E }),
@@ -67,7 +67,7 @@
               }),
             });
           },
-          [d.default.CONTEXT_MENU, d.default.AUDIT_LOG_USER_MENU]
+          [a.default.CONTEXT_MENU, a.default.AUDIT_LOG_USER_MENU]
         );
     },
     421602: function (e, t, l) {
@@ -82,20 +82,20 @@
       l("884691");
       var u = l("77078"),
         i = l("450911"),
-        r = l("54239"),
-        o = l("271938"),
-        d = l("49111"),
-        a = l("782340");
+        o = l("54239"),
+        r = l("271938"),
+        a = l("49111"),
+        d = l("782340");
       function s(e, t) {
-        let l = o.default.getId(),
-          s = t === d.AppContext.POPOUT;
+        let l = r.default.getId(),
+          s = t === a.AppContext.POPOUT;
         return l === e || s
           ? null
           : (0, n.jsx)(u.MenuItem, {
               id: "message-user",
-              label: a.default.Messages.USER_POPOUT_MESSAGE,
+              label: d.default.Messages.USER_POPOUT_MESSAGE,
               action: () => {
-                i.default.openPrivateChannel(e), (0, r.popLayer)();
+                i.default.openPrivateChannel(e), (0, o.popLayer)();
               },
             });
       }
@@ -105,31 +105,34 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return c;
+            return f;
           },
         });
       var n = l("37983"),
         u = l("884691"),
         i = l("77078"),
-        r = l("244201"),
-        o = l("401642"),
+        o = l("244201"),
+        r = l("685665"),
+        a = l("401642"),
         d = l("599110"),
-        a = l("49111"),
-        s = l("782340");
-      function c(e, t, l) {
-        let c = u.useContext(d.AnalyticsContext),
-          f = (0, r.useWindowDispatch)();
+        s = l("49111"),
+        c = l("782340");
+      function f(e, t, l) {
+        let f = u.useContext(d.AnalyticsContext),
+          { analyticsLocations: M } = (0, r.default)(),
+          O = (0, o.useWindowDispatch)();
         return (0, n.jsx)(i.MenuItem, {
           id: "user-profile",
-          label: s.default.Messages.PROFILE,
+          label: c.default.Messages.PROFILE,
           action: () => {
-            (0, o.openUserProfileModal)({
+            (0, a.openUserProfileModal)({
               userId: e,
               guildId: null != t ? t : void 0,
               channelId: null != l ? l : void 0,
-              analyticsLocation: c.location,
+              sourceAnalyticsLocations: M,
+              analyticsLocation: f.location,
             }),
-              f.dispatch(a.ComponentActions.POPOUT_CLOSE);
+              O.dispatch(s.ComponentActions.POPOUT_CLOSE);
           },
         });
       }
@@ -146,10 +149,10 @@
       l("884691");
       var u = l("509043"),
         i = l("446674"),
-        r = l("77078"),
-        o = l("206230"),
-        d = l("454273"),
-        a = l("130037"),
+        o = l("77078"),
+        r = l("206230"),
+        a = l("454273"),
+        d = l("130037"),
         s = l("592407"),
         c = l("26989"),
         f = l("305961"),
@@ -164,7 +167,7 @@
           className: R.roleRow,
           children: [
             "dot" === t
-              ? (0, n.jsx)(r.RoleDot, {
+              ? (0, n.jsx)(o.RoleDot, {
                   className: R.roleDot,
                   color:
                     null !== (l = e.colorString) && void 0 !== l
@@ -173,7 +176,7 @@
                   background: !1,
                   tooltip: !1,
                 })
-              : (0, n.jsx)(r.RoleCircle, {
+              : (0, n.jsx)(o.RoleCircle, {
                   className: R.roleDot,
                   color:
                     null !== (i = e.colorString) && void 0 !== i
@@ -196,8 +199,8 @@
           x = (0, i.useStateFromStores)([f.default], () =>
             f.default.getRoles(t)
           ),
-          _ = (0, i.useStateFromStores)([o.default], () => o.default.roleStyle),
-          m = (0, a.useTrackModerationAction)(t, {
+          _ = (0, i.useStateFromStores)([r.default], () => r.default.roleStyle),
+          m = (0, d.useTrackModerationAction)(t, {
             location: u,
             targetUserId: e,
           }),
@@ -221,7 +224,7 @@
         if (__OVERLAY__ || null == v || null == R || !g) return null;
         let b = M.default.getHighestRole(R),
           j = Object.values(x).filter(
-            e => !(0, d.isEveryoneRoleId)(R.id, e.id)
+            e => !(0, a.isEveryoneRoleId)(R.id, e.id)
           ),
           L = S
             ? j.map(l => {
@@ -230,7 +233,7 @@
                 return u && !i
                   ? null
                   : (0, n.jsx)(
-                      r.MenuCheckboxItem,
+                      o.MenuCheckboxItem,
                       {
                         id: l.id,
                         label: () => p(l, _),
@@ -247,7 +250,7 @@
                                   [],
                                   [n.id]
                                 ),
-                                m(a.ModerationActionType.REMOVE_ROLE))
+                                m(d.ModerationActionType.REMOVE_ROLE))
                               : (s.default.updateMemberRoles(
                                   t,
                                   e,
@@ -255,7 +258,7 @@
                                   [n.id],
                                   []
                                 ),
-                                m(a.ModerationActionType.ADD_ROLE)))
+                                m(d.ModerationActionType.ADD_ROLE)))
                           );
                         },
                         checked: i,
@@ -266,10 +269,10 @@
             : j
                 .filter(e => -1 !== v.indexOf(e.id))
                 .map(e =>
-                  (0, d.isEveryoneRoleId)(R.id, e.id)
+                  (0, a.isEveryoneRoleId)(R.id, e.id)
                     ? null
                     : (0, n.jsx)(
-                        r.MenuItem,
+                        o.MenuItem,
                         { id: e.id, label: () => p(e, _) },
                         e.id
                       )
@@ -278,7 +281,7 @@
           ? null
           : l
             ? L
-            : (0, n.jsx)(r.MenuItem, {
+            : (0, n.jsx)(o.MenuItem, {
                 id: "roles",
                 label: E.default.Messages.ROLES_LIST.format({
                   numRoles: L.length,
@@ -289,4 +292,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6b4ca28cd30f5c135ecd.js.map
+//# sourceMappingURL=94cf6d82c9677ec17c3e.js.map

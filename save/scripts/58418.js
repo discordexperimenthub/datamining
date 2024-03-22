@@ -71,7 +71,7 @@
       i.r(e),
         i.d(e, {
           default: function () {
-            return U;
+            return k;
           },
         }),
         i("834022"),
@@ -91,24 +91,25 @@
         m = i("841098"),
         g = i("376556"),
         j = i("716241"),
-        w = i("401642"),
-        p = i("766274"),
-        v = i("26989"),
-        C = i("79798"),
-        N = i("36694"),
-        y = i("599110"),
-        T = i("535013"),
-        I = i("562368"),
-        E = i("216049"),
-        _ = i("339023"),
-        O = i("526190"),
-        M = i("685058"),
-        S = i("214509"),
-        A = i("49111"),
-        R = i("590456"),
-        P = i("782340"),
-        b = i("48639");
-      function L(t) {
+        w = i("685665"),
+        p = i("401642"),
+        v = i("766274"),
+        C = i("26989"),
+        N = i("79798"),
+        y = i("36694"),
+        T = i("599110"),
+        I = i("535013"),
+        E = i("562368"),
+        _ = i("216049"),
+        O = i("339023"),
+        M = i("526190"),
+        S = i("685058"),
+        A = i("214509"),
+        R = i("49111"),
+        P = i("590456"),
+        b = i("782340"),
+        L = i("48639");
+      function B(t) {
         let e,
           {
             connectionType: i,
@@ -119,14 +120,14 @@
           } = t;
         if (null != s)
           switch (a) {
-            case S.OperatorTypes.LESS_THAN:
-              e = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+            case A.OperatorTypes.LESS_THAN:
+              e = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                 description: s,
                 count: Math.max(0, Number(n) - 1),
               });
               break;
-            case S.OperatorTypes.GREATER_THAN:
-              e = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+            case A.OperatorTypes.GREATER_THAN:
+              e = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                 description: s,
                 count: Math.max(0, Number(n) + 1),
               });
@@ -135,7 +136,7 @@
               e = s;
           }
         else
-          e = (0, T.getConnectionsCheckText)({
+          e = (0, I.getConnectionsCheckText)({
             connectionType: i,
             connectionMetadataField: r,
             operator: a,
@@ -144,9 +145,9 @@
         return null == e
           ? null
           : (0, l.jsxs)("div", {
-              className: b.popoutCheck,
+              className: L.popoutCheck,
               children: [
-                (0, l.jsx)(N.default, { className: b.popoutCheckIcon }),
+                (0, l.jsx)(y.default, { className: L.popoutCheckIcon }),
                 (0, l.jsx)(u.Text, {
                   variant: "text-xs/medium",
                   color: "header-primary",
@@ -155,7 +156,7 @@
               ],
             });
       }
-      function B(t) {
+      function D(t) {
         let { eligibilityStates: e } = t,
           i = (0, m.default)(),
           r = (0, u.useToken)(c.default.unsafe_rawColors.GREEN_330).hex(),
@@ -177,32 +178,32 @@
               j = null == f ? void 0 : f.application,
               w =
                 (null == j ? void 0 : j.bot) != null
-                  ? new p.default(j.bot)
+                  ? new v.default(j.bot)
                   : null,
-              v = T.officialApplicationIds.includes(
+              p = I.officialApplicationIds.includes(
                 null !== (e = null == j ? void 0 : j.id) && void 0 !== e
                   ? e
                   : ""
               );
             return (
-              v
-                ? (o = (0, l.jsx)(O.default, {
-                    className: b.botTag,
+              p
+                ? (o = (0, l.jsx)(M.default, {
+                    className: L.botTag,
                     color: r,
                     size: 16,
                   }))
                 : null != w &&
-                  (o = (0, l.jsx)(C.default, {
-                    className: b.botTag,
+                  (o = (0, l.jsx)(N.default, {
+                    className: L.botTag,
                     verified: w.isVerifiedBot(),
                   })),
               (0, l.jsxs)(
                 "div",
                 {
-                  className: b.popoutChecksGroup,
+                  className: L.popoutChecksGroup,
                   children: [
                     (0, l.jsxs)("div", {
-                      className: b.popoutCheckGroupName,
+                      className: L.popoutCheckGroupName,
                       children: [
                         null != m
                           ? (0, l.jsx)("img", {
@@ -210,14 +211,14 @@
                                 ? m.icon.darkSVG
                                 : m.icon.lightSVG,
                               alt: "",
-                              className: b.popoutCheckGroupPlatformIcon,
+                              className: L.popoutCheckGroupPlatformIcon,
                             })
                           : null,
                         null != w
                           ? (0, l.jsx)(x.default, {
                               user: w,
                               size: u.AvatarSizes.SIZE_20,
-                              className: b.popoutCheckGroupPlatformIcon,
+                              className: L.popoutCheckGroupPlatformIcon,
                             })
                           : null,
                         (0, l.jsx)(u.Text, {
@@ -247,7 +248,7 @@
                         n(null != r, "operator is null"),
                         n(null != a, "value is null"),
                         (0, l.jsx)(
-                          L,
+                          B,
                           {
                             connectionType: e,
                             connectionMetadataField: i,
@@ -271,7 +272,7 @@
           }),
         });
       }
-      function D(t) {
+      function U(t) {
         let e,
           {
             onGetRolesClicked: i,
@@ -283,7 +284,7 @@
             guildId: h,
           } = t;
         r.useEffect(() => {
-          y.default.track(A.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
+          T.default.track(R.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
             other_user_id: s,
             role_id: o,
             ...(0, j.collectChannelAnalyticsMetadataFromId)(c),
@@ -291,13 +292,13 @@
           });
         }, [s, o, c, h]);
         let f = (0, d.useStateFromStores)(
-          [v.default],
+          [C.default],
           () => {
             var t, e;
             return (
               null !==
                 (e =
-                  null === (t = v.default.getSelfMember(h)) || void 0 === t
+                  null === (t = C.default.getSelfMember(h)) || void 0 === t
                     ? void 0
                     : t.roles.includes(o)) &&
               void 0 !== e &&
@@ -309,43 +310,43 @@
         return (
           (e =
             1 === n.length && 1 === n[0].length
-              ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE
+              ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE
               : 1 === n.length
-                ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format()
-                : P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format()),
+                ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format()
+                : b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format()),
           (0, l.jsxs)("div", {
-            className: b.popout,
+            className: L.popout,
             children: [
               (0, l.jsx)("div", {
-                className: b.popoutHeaderContainer,
+                className: L.popoutHeaderContainer,
                 children: (0, l.jsx)(u.Text, {
                   variant: "text-xs/normal",
                   color: "text-normal",
-                  className: b.popoutHeaderText,
+                  className: L.popoutHeaderText,
                   children: e,
                 }),
               }),
               (0, l.jsx)("div", {
-                className: b.popoutChecks,
-                children: (0, l.jsx)(B, { eligibilityStates: n.flat() }),
+                className: L.popoutChecks,
+                children: (0, l.jsx)(D, { eligibilityStates: n.flat() }),
               }),
               (0, l.jsxs)("div", {
-                className: b.buttonContainer,
+                className: L.buttonContainer,
                 children: [
                   f
                     ? null
                     : (0, l.jsx)(u.Button, {
-                        className: b.getRolesButton,
+                        className: L.getRolesButton,
                         onClick: i,
                         children:
-                          P.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES,
+                          b.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES,
                       }),
                   (0, l.jsx)(u.Button, {
-                    className: b.viewConnectionsButton,
+                    className: L.viewConnectionsButton,
                     color: u.Button.Colors.PRIMARY,
                     onClick: a,
                     children:
-                      P.default.Messages
+                      b.default.Messages
                         .CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS,
                   }),
                 ],
@@ -354,48 +355,52 @@
           })
         );
       }
-      function U(t) {
-        let { userId: e, guild: i, channel: a } = t,
-          s = (0, E.default)(i, e, a.id, !0),
-          o = (0, d.useStateFromStores)([I.default], () =>
-            I.default.getGuildRoleConnectionEligibility(
-              null == s ? void 0 : s.id
+      function k(t) {
+        let { userId: e, messageId: i, guild: a, channel: s } = t,
+          { analyticsLocations: o } = (0, w.default)(),
+          c = (0, _.default)(a, e, s.id, !0),
+          h = (0, d.useStateFromStores)([E.default], () =>
+            E.default.getGuildRoleConnectionEligibility(
+              null == c ? void 0 : c.id
             )
           ),
-          [c, h] = r.useState(null == o);
-        if (null == s) return null;
-        async function x() {
-          n(null != s, "visibleConnectionsRole is null"),
-            c &&
-              null == o &&
-              (await f.default.fetchGuildRoleConnectionsEligibility(i.id, s.id),
-              h(!1));
+          [x, m] = r.useState(null == h);
+        if (null == c) return null;
+        async function g() {
+          n(null != c, "visibleConnectionsRole is null"),
+            x &&
+              null == h &&
+              (await f.default.fetchGuildRoleConnectionsEligibility(a.id, c.id),
+              m(!1));
         }
         return (0, l.jsx)(u.LazyPopout, {
-          onRequestOpen: x,
+          onRequestOpen: g,
           renderPopout: function () {
             return Promise.resolve(t => {
               let { closePopout: r } = t;
-              return null == o
+              return null == h
                 ? (0, l.jsx)(l.Fragment, {})
-                : (n(null != s, "visibleConnectionsRole is null"),
-                  (0, l.jsx)(D, {
-                    eligibilityStates: o,
+                : (n(null != c, "visibleConnectionsRole is null"),
+                  (0, l.jsx)(U, {
+                    eligibilityStates: h,
                     userId: e,
-                    roleId: s.id,
-                    channelId: a.id,
-                    guildId: i.id,
+                    roleId: c.id,
+                    channelId: s.id,
+                    guildId: a.id,
                     onGetRolesClicked: () => {
-                      (0, M.openGuildRoleConnectionsModal)(i.id);
+                      (0, S.openGuildRoleConnectionsModal)(a.id);
                     },
                     onOpenProfile: () => {
-                      (0, w.openUserProfileModal)({
+                      (0, p.openUserProfileModal)({
                         userId: e,
-                        guildId: i.id,
-                        channelId: a.id,
-                        section: R.UserProfileSections.USER_INFO_CONNECTIONS,
+                        messageId: i,
+                        guildId: a.id,
+                        channelId: s.id,
+                        roleId: c.id,
+                        section: P.UserProfileSections.USER_INFO_CONNECTIONS,
+                        sourceAnalyticsLocations: o,
                         analyticsLocation: {
-                          section: A.AnalyticsSections.CHANNEL,
+                          section: R.AnalyticsSections.CHANNEL,
                         },
                       }),
                         r();
@@ -407,23 +412,23 @@
           nudgeAlignIntoViewport: !0,
           children: t =>
             (0, l.jsx)(u.Tooltip, {
-              text: P.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
+              text: b.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
               children: e =>
                 (0, l.jsxs)("div", {
-                  className: b.badge,
+                  className: L.badge,
                   ...e,
                   ...t,
                   children: [
-                    (0, l.jsx)(_.default, {
-                      className: b.badgeVerifiedIcon,
+                    (0, l.jsx)(O.default, {
+                      className: L.badgeVerifiedIcon,
                       size: 16,
-                      color: s.colorString,
+                      color: c.colorString,
                     }),
                     (0, l.jsx)(u.Text, {
                       variant: "text-xs/bold",
                       color: "header-primary",
-                      className: b.roleName,
-                      children: s.name,
+                      className: L.roleName,
+                      children: c.name,
                     }),
                   ],
                 }),
@@ -2650,7 +2655,7 @@
             J.push(
               (0, l.jsx)(
                 u.default,
-                { guild: L, channel: T, userId: e.author.id },
+                { guild: L, channel: T, userId: e.author.id, messageId: e.id },
                 "connections"
               )
             );
@@ -2848,4 +2853,4 @@
     },
   },
 ]);
-//# sourceMappingURL=913e97994f492832597d.js.map
+//# sourceMappingURL=f20f9e7324293fb0a1c8.js.map

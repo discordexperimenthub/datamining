@@ -1177,7 +1177,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return O;
+            return L;
           },
         });
       var l = n("37983"),
@@ -1205,7 +1205,7 @@
         I = n("97508"),
         N = n("49111"),
         y = n("782340"),
-        O = (0, d.default)(
+        L = (0, d.default)(
           (0, a.default)(
             function (e) {
               var t;
@@ -1214,8 +1214,8 @@
                   guildId: a,
                   channelId: d,
                   context: N,
-                  onSelect: O,
-                  moderationAlertId: L,
+                  onSelect: L,
+                  moderationAlertId: O,
                   analyticsLocation: R,
                   analyticsLocations: U,
                   onCloseContextMenu: b,
@@ -1264,7 +1264,7 @@
                 }),
                 W = (0, v.default)(n, G),
                 Y = (0, C.default)(n, a, null != d ? d : F, G),
-                X = (0, A.default)(d, L),
+                X = (0, A.default)(d, O),
                 K = (0, g.default)(n, a),
                 Z = (0, I.default)(n.id, a, !1, G),
                 z = (0, E.default)({
@@ -1280,7 +1280,7 @@
                   (0, o.closeContextMenu)(), null == b || b();
                 },
                 "aria-label": y.default.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: O,
+                onSelect: L,
                 children: [
                   !J &&
                     (0, l.jsxs)(l.Fragment, {
@@ -1294,7 +1294,7 @@
                               (0, l.jsxs)(r.MenuGroup, { children: [Z, q] }),
                             ],
                           }),
-                        null != L ? X : null,
+                        null != O ? X : null,
                         D && null != K
                           ? (0, l.jsx)(r.MenuGroup, { children: K })
                           : null,
@@ -1496,31 +1496,34 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return c;
+            return f;
           },
         });
       var l = n("37983"),
         i = n("884691"),
         u = n("77078"),
         r = n("244201"),
-        o = n("401642"),
-        a = n("599110"),
-        d = n("49111"),
-        s = n("782340");
-      function c(e, t, n) {
-        let c = i.useContext(a.AnalyticsContext),
-          f = (0, r.useWindowDispatch)();
+        o = n("685665"),
+        a = n("401642"),
+        d = n("599110"),
+        s = n("49111"),
+        c = n("782340");
+      function f(e, t, n) {
+        let f = i.useContext(d.AnalyticsContext),
+          { analyticsLocations: E } = (0, o.default)(),
+          _ = (0, r.useWindowDispatch)();
         return (0, l.jsx)(u.MenuItem, {
           id: "user-profile",
-          label: s.default.Messages.PROFILE,
+          label: c.default.Messages.PROFILE,
           action: () => {
-            (0, o.openUserProfileModal)({
+            (0, a.openUserProfileModal)({
               userId: e,
               guildId: null != t ? t : void 0,
               channelId: null != n ? n : void 0,
-              analyticsLocation: c.location,
+              sourceAnalyticsLocations: E,
+              analyticsLocation: f.location,
             }),
-              f.dispatch(d.ComponentActions.POPOUT_CLOSE);
+              _.dispatch(s.ComponentActions.POPOUT_CLOSE);
           },
         });
       }
@@ -1547,14 +1550,17 @@
             section: n,
             guildId: a = o.ME,
             channelId: d,
-            friendToken: s,
-            autoFocusNote: c,
-            analyticsLocation: f,
+            messageId: s,
+            roleId: c,
+            friendToken: f,
+            autoFocusNote: E,
+            analyticsLocation: _,
+            sourceAnalyticsLocations: m,
           } = e,
-          E = u.default.getUser(t),
-          _ = a !== o.ME ? a : void 0;
-        if (null == E)
-          return (0, i.fetchProfile)(t, { friendToken: s, guildId: _ }).then(
+          h = u.default.getUser(t),
+          M = a !== o.ME ? a : void 0;
+        if (null == h)
+          return (0, i.fetchProfile)(t, { friendToken: f, guildId: M }).then(
             () => {
               l.default.dispatch({
                 type: "USER_PROFILE_MODAL_OPEN",
@@ -1562,16 +1568,19 @@
                 section: n,
                 guildId: a,
                 channelId: d,
-                friendToken: s,
-                autoFocusNote: c,
-                analyticsLocation: f,
+                messageId: s,
+                roleId: c,
+                friendToken: f,
+                autoFocusNote: E,
+                analyticsLocation: _,
+                sourceAnalyticsLocations: m,
               });
             }
           );
-        (0, r.default)(t, E.getAvatarURL(void 0, 80), {
+        (0, r.default)(t, h.getAvatarURL(void 0, 80), {
           withMutualGuilds: !0,
-          friendToken: s,
-          guildId: _,
+          friendToken: f,
+          guildId: M,
         }),
           l.default.dispatch({
             type: "USER_PROFILE_MODAL_OPEN",
@@ -1579,9 +1588,12 @@
             section: n,
             guildId: a,
             channelId: d,
-            friendToken: s,
-            autoFocusNote: c,
-            analyticsLocation: f,
+            messageId: s,
+            roleId: c,
+            friendToken: f,
+            autoFocusNote: E,
+            analyticsLocation: _,
+            sourceAnalyticsLocations: m,
           });
       }
       function d() {
@@ -1738,4 +1750,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e4ee946beb2e1fab85a6.js.map
+//# sourceMappingURL=8e48cea263ef8e349f1a.js.map

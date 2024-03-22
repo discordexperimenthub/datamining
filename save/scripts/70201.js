@@ -66,8 +66,8 @@
         I = a("629414"),
         p = a("53887"),
         T = a("486150"),
-        S = a("555759"),
-        A = a("271938"),
+        A = a("555759"),
+        S = a("271938"),
         _ = a("42203"),
         v = a("525065"),
         m = a("305961"),
@@ -230,11 +230,11 @@
             [W, ee, et, H, q, t]
           ),
           ei = (0, n.useStateFromStoresArray)(
-            [c.default, A.default],
+            [c.default, S.default],
             () =>
               W.map(e =>
                 e.type === J.ActivityTypes.LISTENING && null != t
-                  ? (0, p.default)(c.default, A.default, t, e)
+                  ? (0, p.default)(c.default, S.default, t, e)
                   : void 0
               ),
             [t, W]
@@ -450,14 +450,14 @@
                   syncingWithParty: c,
                 } = d,
                 p = o || u || s,
-                A = o || r || c;
+                S = o || r || c;
               eo.push(
                 (0, i.jsx)(
                   l.MenuItem,
                   {
                     id: "spotify-play-".concat(a.session_id),
                     action: () =>
-                      (0, S.default)(
+                      (0, A.default)(
                         d,
                         B.SpotifyActionTypes.USER_ACTIVITY_PLAY
                       ),
@@ -488,7 +488,7 @@
                         B.SpotifyActionTypes.USER_ACTIVITY_SYNC
                       ),
                     label: w.default.Messages.USER_ACTIVITY_LISTEN_ALONG,
-                    subtext: A
+                    subtext: S
                       ? (0, I.default)(
                           d,
                           B.SpotifyActionTypes.USER_ACTIVITY_SYNC,
@@ -497,7 +497,7 @@
                             : void 0
                         )
                       : void 0,
-                    disabled: A,
+                    disabled: S,
                   },
                   "spotify-sync-".concat(a.session_id)
                 )
@@ -585,7 +585,7 @@
             () => [s.default.isFriend(a), s.default.isBlocked(a)],
             [a]
           ),
-          [S, A] = n.useState(!1);
+          [A, S] = n.useState(!1);
         return f || I
           ? null
           : p
@@ -601,7 +601,7 @@
                       confirmText: r.default.Messages.REMOVE_FRIEND,
                       cancelText: r.default.Messages.CANCEL,
                       onConfirm: () => {
-                        u.default.removeFriend(a, { location: t }), A(!1);
+                        u.default.removeFriend(a, { location: t }), S(!1);
                       },
                       ...e,
                       children: (0, i.jsx)(d.Text, {
@@ -616,18 +616,18 @@
               })
             : (0, i.jsx)(d.MenuItem, {
                 id: "add-friend",
-                label: S
+                label: A
                   ? r.default.Messages.ADD_FRIEND_BUTTON_AFTER
                   : r.default.Messages.ADD_FRIEND,
                 action: () => {
-                  !S &&
+                  !A &&
                     (u.default.addRelationship({
                       userId: a,
                       context: { location: t },
                     }),
-                    A(!0));
+                    S(!0));
                 },
-                disabled: T || (S && !p),
+                disabled: T || (A && !p),
               });
       }
     },
@@ -685,43 +685,46 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return p;
+            return T;
           },
         });
       var i = a("37983"),
         n = a("884691"),
         l = a("77078"),
-        d = a("349649"),
-        u = a("401642"),
-        s = a("271938"),
-        o = a("102985"),
-        r = a("599110"),
-        c = a("49111"),
-        f = a("590456"),
-        I = a("782340");
-      function p(e) {
-        let { user: t, guildId: a, context: p } = e,
-          { id: T } = t,
-          { loading: S, note: A } = (0, d.default)(T),
-          _ = !S && null != A && A.length > 0,
-          v = p === c.AppContext.POPOUT,
-          m = n.useContext(r.AnalyticsContext);
-        return T === s.default.getId() || o.default.hidePersonalInformation || v
+        d = a("685665"),
+        u = a("349649"),
+        s = a("401642"),
+        o = a("271938"),
+        r = a("102985"),
+        c = a("599110"),
+        f = a("49111"),
+        I = a("590456"),
+        p = a("782340");
+      function T(e) {
+        let { user: t, guildId: a, context: T } = e,
+          { id: A } = t,
+          { loading: S, note: _ } = (0, u.default)(A),
+          v = !S && null != _ && _.length > 0,
+          m = T === f.AppContext.POPOUT,
+          E = n.useContext(c.AnalyticsContext),
+          { analyticsLocations: y } = (0, d.default)();
+        return A === o.default.getId() || r.default.hidePersonalInformation || m
           ? null
           : (0, i.jsx)(l.MenuItem, {
               id: "note",
               label: S
-                ? I.default.Messages.LOADING_NOTE
-                : _
-                  ? I.default.Messages.EDIT_NOTE
-                  : I.default.Messages.ADD_NOTE,
+                ? p.default.Messages.LOADING_NOTE
+                : v
+                  ? p.default.Messages.EDIT_NOTE
+                  : p.default.Messages.ADD_NOTE,
               action: () => {
-                (0, u.openUserProfileModal)({
+                (0, s.openUserProfileModal)({
                   userId: t.id,
-                  section: f.UserProfileSections.USER_INFO,
+                  section: I.UserProfileSections.USER_INFO,
                   guildId: a,
                   autoFocusNote: !0,
-                  analyticsLocation: m.location,
+                  sourceAnalyticsLocations: y,
+                  analyticsLocation: E.location,
                 });
               },
             });
@@ -825,15 +828,15 @@
       function p(e, t) {
         let p = s.default.getId(),
           T = t === f.AppContext.POPOUT,
-          S = (0, n.useStateFromStores)(
+          A = (0, n.useStateFromStores)(
             [c.default, o.default],
             () =>
               c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)
           ),
-          A = (0, n.useStateFromStores)([r.default], () =>
+          S = (0, n.useStateFromStores)([r.default], () =>
             r.default.isBlocked(e.id)
           );
-        if (p === e.id || T || S || e.bot) return null;
+        if (p === e.id || T || A || e.bot) return null;
         let _ = () => d.default.openPrivateChannel(e.id, !0),
           v = !u.default.disableCallUserConfirmationPrompt;
         return (0, i.jsx)(l.MenuItem, {
@@ -849,7 +852,7 @@
                 });
               }
             : _,
-          disabled: A,
+          disabled: S,
         });
       }
     },
@@ -876,8 +879,8 @@
         I = a("305961"),
         p = a("957255"),
         T = a("27618"),
-        S = a("677099"),
-        A = a("697218"),
+        A = a("677099"),
+        S = a("697218"),
         _ = a("49111"),
         v = a("782340");
       function m(e, t) {
@@ -888,14 +891,14 @@
       }
       function E(e, t) {
         let a = (0, l.useStateFromStores)(
-            [A.default],
-            () => A.default.getCurrentUser(),
+            [S.default],
+            () => S.default.getCurrentUser(),
             []
           ),
           u = (0, l.useStateFromStoresArray)(
-            [S.default, I.default, p.default],
+            [A.default, I.default, p.default],
             () => {
-              let e = S.default.getFlattenedGuildIds(),
+              let e = A.default.getFlattenedGuildIds(),
                 a = [];
               return (
                 e.forEach(e => {
@@ -974,31 +977,34 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return c;
+            return f;
           },
         });
       var i = a("37983"),
         n = a("884691"),
         l = a("77078"),
         d = a("244201"),
-        u = a("401642"),
-        s = a("599110"),
-        o = a("49111"),
-        r = a("782340");
-      function c(e, t, a) {
-        let c = n.useContext(s.AnalyticsContext),
-          f = (0, d.useWindowDispatch)();
+        u = a("685665"),
+        s = a("401642"),
+        o = a("599110"),
+        r = a("49111"),
+        c = a("782340");
+      function f(e, t, a) {
+        let f = n.useContext(o.AnalyticsContext),
+          { analyticsLocations: I } = (0, u.default)(),
+          p = (0, d.useWindowDispatch)();
         return (0, i.jsx)(l.MenuItem, {
           id: "user-profile",
-          label: r.default.Messages.PROFILE,
+          label: c.default.Messages.PROFILE,
           action: () => {
-            (0, u.openUserProfileModal)({
+            (0, s.openUserProfileModal)({
               userId: e,
               guildId: null != t ? t : void 0,
               channelId: null != a ? a : void 0,
-              analyticsLocation: c.location,
+              sourceAnalyticsLocations: I,
+              analyticsLocation: f.location,
             }),
-              f.dispatch(o.ComponentActions.POPOUT_CLOSE);
+              p.dispatch(r.ComponentActions.POPOUT_CLOSE);
           },
         });
       }
@@ -1042,4 +1048,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6a7c8b957138936c0e09.js.map
+//# sourceMappingURL=0d7a613c1cb73d2ff65f.js.map

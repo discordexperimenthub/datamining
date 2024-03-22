@@ -1035,7 +1035,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return w;
+            return V;
           },
         });
       var i = n("37983"),
@@ -1045,77 +1045,82 @@
         a = n("446674"),
         u = n("77078"),
         o = n("970728"),
-        d = n("401642"),
-        c = n("26989"),
-        f = n("305961"),
-        h = n("580357"),
-        v = n("476263"),
-        E = n("155207"),
-        m = n("158998"),
-        C = n("933326"),
-        _ = n("882550"),
-        p = n("397680"),
-        S = n("466148"),
-        g = n("18284"),
-        I = n("189443"),
-        N = n("822516"),
-        T = n("909151"),
-        x = n("427554"),
-        R = n("393745"),
-        A = n("586403"),
-        y = n("49111"),
-        M = n("782340"),
-        L = n("409295");
-      function j(e) {
+        d = n("685665"),
+        c = n("401642"),
+        f = n("26989"),
+        h = n("305961"),
+        v = n("580357"),
+        E = n("476263"),
+        m = n("155207"),
+        C = n("158998"),
+        _ = n("933326"),
+        p = n("882550"),
+        S = n("397680"),
+        g = n("466148"),
+        I = n("18284"),
+        N = n("189443"),
+        T = n("822516"),
+        x = n("909151"),
+        R = n("427554"),
+        A = n("393745"),
+        y = n("586403"),
+        M = n("49111"),
+        L = n("782340"),
+        j = n("409295");
+      function b(e) {
         var t;
-        let { creator: n, guildId: l } = e,
-          r = (0, a.useStateFromStores)(
-            [c.default],
-            () => c.default.getMember(l, n.id),
+        let { creator: n, guildId: l, channelId: r } = e,
+          { analyticsLocations: s } = (0, d.default)(),
+          o = (0, a.useStateFromStores)(
+            [f.default],
+            () => f.default.getMember(l, n.id),
             [n, l]
           );
         return (0, i.jsxs)("div", {
-          className: L.row,
+          className: j.row,
           children: [
             (0, i.jsx)(u.Avatar, {
               size: u.AvatarSizes.SIZE_20,
               src: n.getAvatarURL(l, 20),
               "aria-label":
-                null !== (t = null == r ? void 0 : r.nick) && void 0 !== t
+                null !== (t = null == o ? void 0 : o.nick) && void 0 !== t
                   ? t
-                  : m.default.getName(n),
-              className: L.icon,
+                  : C.default.getName(n),
+              className: j.icon,
             }),
             (0, i.jsx)(u.Text, {
               color: "header-secondary",
               variant: "text-sm/normal",
-              children: M.default.Messages.GUILD_EVENT_CREATED_BY_HOOK.format({
+              children: L.default.Messages.GUILD_EVENT_CREATED_BY_HOOK.format({
                 usernameHook: function () {
                   var e, t;
                   return (0, i.jsx)(
                     u.Clickable,
                     {
                       onClick: () =>
-                        (0, d.openUserProfileModal)({
-                          userId: n.id,
+                        (0, c.openUserProfileModal)({
                           guildId: l,
+                          channelId: r,
+                          userId: n.id,
+                          roleId: null == o ? void 0 : o.colorRoleId,
+                          sourceAnalyticsLocations: s,
                           analyticsLocation: {
                             section:
-                              y.AnalyticsSections
+                              M.AnalyticsSections
                                 .SCHEDULED_GUILD_EVENT_INFORMATION_DIALOG,
                           },
                         }),
-                      className: L.creator,
+                      className: j.creator,
                       tag: "span",
                       role: "link",
                       children: (0, i.jsx)(u.NameWithRole, {
                         name:
-                          null !== (e = null == r ? void 0 : r.nick) &&
+                          null !== (e = null == o ? void 0 : o.nick) &&
                           void 0 !== e
                             ? e
-                            : m.default.getName(n),
+                            : C.default.getName(n),
                         color:
-                          null !== (t = null == r ? void 0 : r.colorString) &&
+                          null !== (t = null == o ? void 0 : o.colorString) &&
                           void 0 !== t
                             ? t
                             : void 0,
@@ -1129,7 +1134,7 @@
           ],
         });
       }
-      function b(e) {
+      function P(e) {
         let { guild: t, onClick: n, onClose: r } = e,
           a = l.useCallback(
             e => {
@@ -1139,54 +1144,54 @@
           ),
           o = (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(v.default, {
+              (0, i.jsx)(E.default, {
                 guild: t,
-                size: v.default.Sizes.MINI,
+                size: E.default.Sizes.MINI,
                 active: !0,
-                className: s(L.guildIcon, L.icon),
+                className: s(j.guildIcon, j.icon),
               }),
-              (0, i.jsx)(h.default, {
+              (0, i.jsx)(v.default, {
                 guild: t,
                 tooltipPosition: "top",
                 tooltipColor: u.Tooltip.Colors.PRIMARY,
                 size: 16,
-                className: L.guildBadge,
+                className: j.guildBadge,
               }),
               (0, i.jsx)(u.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
-                className: L.linkText,
+                className: j.linkText,
                 children: t.name,
               }),
             ],
           });
         return (0, i.jsx)("div", {
-          className: L.row,
+          className: j.row,
           children:
             null != n
               ? (0, i.jsx)(u.Clickable, {
                   onClick: a,
-                  className: L.clickable,
+                  className: j.clickable,
                   role: "link",
                   children: o,
                 })
               : o,
         });
       }
-      function P(e) {
+      function w(e) {
         let { userCount: t, onClick: n } = e;
         return (0, i.jsxs)("div", {
-          className: L.row,
+          className: j.row,
           children: [
-            (0, i.jsx)(E.default, { width: 20, height: 20, className: L.icon }),
+            (0, i.jsx)(m.default, { width: 20, height: 20, className: j.icon }),
             (0, i.jsx)(u.Clickable, {
               onClick: n,
-              className: L.interestedCount,
+              className: j.interestedCount,
               children: (0, i.jsx)(u.Text, {
                 color: "header-secondary",
                 variant: "text-sm/normal",
                 children:
-                  M.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
+                  L.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
                     count: t,
                   }),
               }),
@@ -1194,7 +1199,7 @@
           ],
         });
       }
-      function w(e) {
+      function V(e) {
         let {
             guildEvent: t,
             guild: n,
@@ -1202,18 +1207,18 @@
             headerId: s,
             onClose: d,
             onClickInterestedCount: c,
-            isHub: h = !1,
+            isHub: f = !1,
             containerRef: v,
             recurrenceId: E,
             setRecurrenceId: m,
           } = e,
-          y = (0, a.useStateFromStores)(
-            [f.default],
-            () => null != f.default.getGuild(n.id),
+          C = (0, a.useStateFromStores)(
+            [h.default],
+            () => null != h.default.getGuild(n.id),
             [n.id]
           ),
-          { startTime: M, endTime: w } = (0, S.default)(t.id, E),
-          V = (0, g.default)(t.guild_id, t.id, E),
+          { startTime: M, endTime: L } = (0, g.default)(t.id, E),
+          V = (0, I.default)(t.guild_id, t.id, E),
           D = l.useCallback(
             e => {
               e.stopPropagation(),
@@ -1221,16 +1226,16 @@
             },
             [t]
           ),
-          O = (0, p.default)(E, t.id),
-          U = (0, _.default)(t);
+          O = (0, S.default)(E, t.id),
+          U = (0, p.default)(t);
         l.useEffect(() => {
-          C.default.getGuildEventUserCounts(n.id, t.id, null != E ? [E] : []),
-            C.default.getGuildEventsForCurrentUser(n.id);
+          _.default.getGuildEventUserCounts(n.id, t.id, null != E ? [E] : []),
+            _.default.getGuildEventsForCurrentUser(n.id);
         }, [n.id, t.id, E]);
-        let G = (0, I.recurrenceRuleFromServer)(t.recurrence_rule),
+        let G = (0, N.recurrenceRuleFromServer)(t.recurrence_rule),
           F =
             (null == t ? void 0 : t.scheduled_start_time) != null
-              ? (0, N.getRecurrenceStatus)(
+              ? (0, T.getRecurrenceStatus)(
                   O,
                   M,
                   new Date(null == t ? void 0 : t.scheduled_start_time)
@@ -1240,11 +1245,11 @@
           ref: v,
           children: [
             (0, i.jsxs)("div", {
-              className: L.header,
+              className: j.header,
               children: [
-                (0, i.jsx)(R.GuildEventTimeStatus, {
+                (0, i.jsx)(A.GuildEventTimeStatus, {
                   startTime: M.toISOString(),
-                  endTime: null == w ? void 0 : w.toISOString(),
+                  endTime: null == L ? void 0 : L.toISOString(),
                   status: null != F ? F : t.status,
                   eventType: t.entity_type,
                   guildEventId: t.id,
@@ -1254,32 +1259,40 @@
                   id: s,
                   variant: "heading-lg/semibold",
                   color: "header-primary",
-                  className: L.title,
+                  className: j.title,
                   children: t.name,
                 }),
               ],
             }),
             (0, i.jsxs)("div", {
-              className: L.body,
+              className: j.body,
               children: [
-                (0, i.jsx)(b, {
+                (0, i.jsx)(P, {
                   guild: n,
-                  onClick: y ? D : void 0,
+                  onClick: C ? D : void 0,
                   onClose: d,
                 }),
-                (0, i.jsx)(A.default, {
+                (0, i.jsx)(y.default, {
                   guildScheduledEvent: t,
                   channel: r,
                   onClose: d,
                 }),
-                null != V && (0, i.jsx)(P, { userCount: V, onClick: c }),
-                !h &&
+                null != V && (0, i.jsx)(w, { userCount: V, onClick: c }),
+                !f &&
                   null != U &&
-                  (0, i.jsx)(j, { creator: U, guildId: n.id }, U.id),
+                  (0, i.jsx)(
+                    b,
+                    {
+                      creator: U,
+                      guildId: n.id,
+                      channelId: null == r ? void 0 : r.id,
+                    },
+                    U.id
+                  ),
                 null != t.description &&
                   (0, i.jsx)("div", {
-                    className: L.description,
-                    children: (0, i.jsx)(T.default, {
+                    className: j.description,
+                    children: (0, i.jsx)(x.default, {
                       description: t.description,
                       truncate: !1,
                       guildId: n.id,
@@ -1287,9 +1300,9 @@
                   }),
               ],
             }),
-            null != G && (0, i.jsx)("hr", { className: L.divider }),
+            null != G && (0, i.jsx)("hr", { className: j.divider }),
             null != G &&
-              (0, i.jsx)(x.default, {
+              (0, i.jsx)(R.default, {
                 guildId: n.id,
                 recurrenceRule: G,
                 guildEventId: t.id,
@@ -3999,4 +4012,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a9bb14fdb3a77e65d46c.js.map
+//# sourceMappingURL=6fed180f120ce27a5b79.js.map

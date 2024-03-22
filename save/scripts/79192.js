@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["89300"],
+  ["79192"],
   {
     766665: function (e, t, n) {
       var r = n("424498");
@@ -144,7 +144,7 @@
             return A;
           },
           useCanStartThread: function () {
-            return g;
+            return C;
           },
           useCanViewThreadForMessage: function () {
             return p;
@@ -156,25 +156,25 @@
             return R;
           },
           useCanUnarchiveThread: function () {
-            return y;
-          },
-          canUnarchiveThread: function () {
             return M;
           },
-          useIsActiveChannelOrUnarchivableThread: function () {
-            return D;
+          canUnarchiveThread: function () {
+            return y;
           },
-          getIsActiveChannelOrUnarchivableThread: function () {
+          useIsActiveChannelOrUnarchivableThread: function () {
             return x;
           },
-          computeIsReadOnlyThread: function () {
+          getIsActiveChannelOrUnarchivableThread: function () {
             return w;
           },
+          computeIsReadOnlyThread: function () {
+            return D;
+          },
           useIsThreadModerator: function () {
-            return O;
+            return b;
           },
           useCanJoinThreadVoice: function () {
-            return b;
+            return L;
           },
           useIsNonModInLockedThread: function () {
             return F;
@@ -215,7 +215,7 @@
           },
           [e]
         );
-        return C(n, e, t);
+        return g(n, e, t);
       }
       function _(e, t) {
         let n = e.isForumLikeChannel()
@@ -225,7 +225,7 @@
                 E.Permissions.READ_MESSAGE_HISTORY
               ),
           r = h.default.can(n, e);
-        return C(r, e, t);
+        return g(r, e, t);
       }
       function A(e) {
         let t = (0, i.useStateFromStores)(
@@ -234,14 +234,14 @@
             h.default.can(u.combine(E.Permissions.CREATE_PRIVATE_THREADS), e),
           [e]
         );
-        return e.type === E.ChannelTypes.GUILD_TEXT && C(t, e);
+        return e.type === E.ChannelTypes.GUILD_TEXT && g(t, e);
       }
-      function g(e) {
+      function C(e) {
         let t = T(e),
           n = A(e);
         return t || n;
       }
-      function C(e, t, n) {
+      function g(e, t, n) {
         return (
           !(
             __OVERLAY__ ||
@@ -320,19 +320,19 @@
             : t)
         );
       }
-      function y(e) {
+      function M(e) {
         let t = (0, i.useStateFromStores)([h.default], () => I(e, h.default)),
-          n = O(e);
+          n = b(e);
         return P(e, t, n);
       }
-      function M(e) {
+      function y(e) {
         let t = I(e, h.default),
           n = (function (e) {
-            return L(e, h.default);
+            return O(e, h.default);
           })(e);
         return P(e, t, n);
       }
-      function D(e) {
+      function x(e) {
         var t;
         let n = (0, i.useStateFromStores)(
           [h.default],
@@ -351,7 +351,7 @@
               n))
         );
       }
-      function x(e) {
+      function w(e) {
         var t;
         return (
           null != e &&
@@ -364,22 +364,22 @@
               h.default.can(E.Permissions.SEND_MESSAGES_IN_THREADS, e)))
         );
       }
-      function w(e) {
+      function D(e) {
         let t = h.default.can(E.Permissions.MANAGE_THREADS, e);
         return e.isArchivedLockedThread() && !t;
       }
-      function L(e, t) {
+      function O(e, t) {
         return null != e && t.can(E.Permissions.MANAGE_THREADS, e);
       }
-      function O(e) {
-        return (0, i.useStateFromStores)([h.default], () => L(e, h.default));
-      }
       function b(e) {
+        return (0, i.useStateFromStores)([h.default], () => O(e, h.default));
+      }
+      function L(e) {
         let t = (0, s.default)(),
           n = (0, i.useStateFromStores)([h.default], () =>
             h.default.can(E.Permissions.CONNECT, e)
           ),
-          r = D(e),
+          r = x(e),
           a = v.useExperiment(
             { guildId: e.guild_id, location: "e791ea_1" },
             { autoTrackExposure: !1 }
@@ -387,7 +387,7 @@
         return !t && e.isVocalThread() && a && n && r;
       }
       function F(e) {
-        let t = O(e);
+        let t = b(e);
         return e.isLockedThread() && !t;
       }
     },
@@ -466,36 +466,6 @@
           ],
         });
       };
-    },
-    476765: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          uid: function () {
-            return i;
-          },
-          useUID: function () {
-            return o;
-          },
-          UID: function () {
-            return s;
-          },
-        });
-      var r = n("995008"),
-        a = n.n(r),
-        u = n("775560");
-      let i = function () {
-          let e =
-            arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : "uid_";
-          return a(e);
-        },
-        o = () => (0, u.useLazyValue)(() => i()),
-        s = e => {
-          let { children: t } = e;
-          return t(o());
-        };
     },
     867544: function (e, t, n) {
       "use strict";
@@ -664,4 +634,4 @@
     },
   },
 ]);
-//# sourceMappingURL=49736dc38b3269415be2.js.map
+//# sourceMappingURL=6518a4e479902b99e0d8.js.map

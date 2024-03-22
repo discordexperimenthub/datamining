@@ -44326,7 +44326,8 @@
         ((l = a || (a = {}))[(l.CONTENT_TYPE_UNSPECIFIED = 0)] =
           "CONTENT_TYPE_UNSPECIFIED"),
         (l[(l.PLAYED_GAME = 1)] = "PLAYED_GAME"),
-        (l[(l.WATCHED_MEDIA = 2)] = "WATCHED_MEDIA");
+        (l[(l.WATCHED_MEDIA = 2)] = "WATCHED_MEDIA"),
+        (l[(l.TOP_GAME = 3)] = "TOP_GAME");
     },
     417847: function (e, t, n) {
       "use strict";
@@ -44341,8 +44342,9 @@
           "TRAIT_TYPE_UNSPECIFIED"),
         (l[(l.FIRST_TIME = 1)] = "FIRST_TIME"),
         (l[(l.DURATION_SECONDS = 2)] = "DURATION_SECONDS"),
-        (l[(l.IS_LIVE = 3)] = "IS_LIVE");
+        (l[(l.IS_LIVE = 3)] = "IS_LIVE"),
+        (l[(l.AGGREGATE_RANGE = 4)] = "AGGREGATE_RANGE");
     },
   },
 ]);
-//# sourceMappingURL=bd93560e92a509518ea3.js.map
+//# sourceMappingURL=63eb7ef18371d72e01d2.js.map

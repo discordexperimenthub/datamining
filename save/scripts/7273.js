@@ -5316,6 +5316,8 @@
           "guild_scheduled_event_purchase_initiated"),
         (el.GUILD_SCHEDULED_EVENT_LINK_COPIED =
           "guild_scheduled_event_link_copied"),
+        (el.SIGNUP_VIEWED = "signup_viewed"),
+        (el.SIGNUP_COMPLETED = "signup_completed"),
         (el.DISCOVERY_SETUP_POPULAR_TAG_CLICKED =
           "discovery_setup_popular_tag_clicked"),
         (el.DISCOVERY_SETUP_CTA_CLICKED = "discovery_setup_cta_clicked"),
@@ -17363,4 +17365,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.114e1027d7c2a7bf361e.js.map
+//# sourceMappingURL=7273.e46383b44aa6da841a1b.js.map

@@ -1018,10 +1018,10 @@
             size: h.AvatarSizes.SIZE_32,
             animateOnHover: !(s || G),
           }),
-          J = (0, f.useStateFromStores)([x.default], () =>
+          q = (0, f.useStateFromStores)([x.default], () =>
             x.default.isChannelMuted(t.getGuildId(), t.id)
           ),
-          q = (0, f.useStateFromStores)(
+          J = (0, f.useStateFromStores)(
             [L.default],
             () => L.default.getMentionCount(t.id) > 0
           ),
@@ -1184,20 +1184,20 @@
                 }),
                 as: "div",
                 onClick: ei,
-                muted: J,
+                muted: q,
                 selected: s,
                 children: [
                   (0, l.jsx)(u.Link, {
                     innerRef: W,
                     to: w.Routes.CHANNEL(w.ME, t.id),
                     className: B.link,
-                    "aria-label": (0, E.default)({ channel: t, unread: q }),
+                    "aria-label": (0, E.default)({ channel: t, unread: J }),
                     ...a,
                     children: (0, l.jsx)(y.default, {
                       avatar: ed(),
                       selected: s,
-                      highlighted: q,
-                      muted: null != J && J,
+                      highlighted: J,
+                      muted: null != q && q,
                       subText: eu(),
                       name: (0, l.jsx)(O.default, { children: $ }),
                       decorators: t.isSystemDM()
@@ -8026,8 +8026,8 @@
         z = n("677777"),
         X = n("579095"),
         Q = n("333896"),
-        J = n("446380"),
-        q = n("919429"),
+        q = n("446380"),
+        J = n("919429"),
         $ = n("944843"),
         ee = n("283848"),
         et = n("388930"),
@@ -8718,7 +8718,7 @@
                     a.Fragment,
                     {
                       children: [
-                        (0, l.jsx)(q.default, {
+                        (0, l.jsx)(J.default, {
                           channel: T,
                           guild: s,
                           position: S.position,
@@ -8791,7 +8791,7 @@
                   );
                 case es.ChannelTypes.GUILD_STORE:
                   return (0, l.jsx)(
-                    J.default,
+                    q.default,
                     {
                       channel: T,
                       guild: s,
@@ -8810,7 +8810,7 @@
                 case es.ChannelTypes.PUBLIC_THREAD:
                 case es.ChannelTypes.PRIVATE_THREAD:
                   return (0, l.jsx)(
-                    q.default,
+                    J.default,
                     {
                       channel: T,
                       guild: s,
@@ -11758,7 +11758,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return J;
+            return q;
           },
         }),
         n("222007"),
@@ -12137,7 +12137,7 @@
         }
       }
       let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
-      function J(e) {
+      function q(e) {
         let {
             guild: t,
             channel: n,
@@ -13847,7 +13847,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return er;
+            return eo;
           },
         }),
         n("222007");
@@ -13875,39 +13875,40 @@
         A = n("205550"),
         L = n("267567"),
         v = n("393027"),
-        x = n("162805"),
-        R = n("26989"),
-        M = n("305961"),
-        O = n("677099"),
-        y = n("697218"),
-        D = n("773336"),
-        b = n("299039"),
-        j = n("439932"),
-        G = n("674644"),
-        U = n("533669"),
-        P = n("270382"),
-        w = n("777778"),
-        F = n("648647"),
-        B = n("982360"),
-        V = n("628570"),
-        H = n("283294"),
-        k = n("822485"),
-        Y = n("798573"),
-        K = n("795853"),
-        W = n("357762"),
-        Z = n("504957"),
-        z = n("199218"),
-        X = n("624531"),
-        Q = n("785343"),
+        x = n("156332"),
+        R = n("162805"),
+        M = n("26989"),
+        O = n("305961"),
+        y = n("677099"),
+        D = n("697218"),
+        b = n("773336"),
+        j = n("299039"),
+        G = n("439932"),
+        U = n("674644"),
+        P = n("533669"),
+        w = n("270382"),
+        F = n("777778"),
+        B = n("648647"),
+        V = n("982360"),
+        H = n("628570"),
+        k = n("283294"),
+        Y = n("822485"),
+        K = n("798573"),
+        W = n("795853"),
+        Z = n("357762"),
+        z = n("504957"),
+        X = n("199218"),
+        Q = n("624531"),
+        q = n("785343"),
         J = n("22567"),
-        q = n("49111"),
-        $ = n("782340"),
-        ee = n("876879");
-      let et = 56,
-        en = (0, D.isWindows)() ? 4 : (0, D.isMac)() ? 0 : 12,
-        el = et - 16,
-        ea = en + 10;
-      class es {
+        $ = n("49111"),
+        ee = n("782340"),
+        et = n("876879");
+      let en = 56,
+        el = (0, b.isWindows)() ? 4 : (0, b.isMac)() ? 0 : 12,
+        ea = en - 16,
+        es = el + 10;
+      class ei {
         setGuildsTree(e) {
           this.guildsTree = e;
         }
@@ -13926,10 +13927,10 @@
               if (
                 (null == e &&
                   window.location.pathname.startsWith(
-                    q.Routes.GUILD_DISCOVERY
+                    $.Routes.GUILD_DISCOVERY
                   )) ||
-                e === q.ViewHistoryKeys.SERVER_DISCOVERY_BADGE ||
-                e === q.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE
+                e === $.ViewHistoryKeys.SERVER_DISCOVERY_BADGE ||
+                e === $.ViewHistoryKeys.E3_SERVER_DISCOVERY_BADGE
               ) {
                 let e = (0, u.findDOMNode)(this.guildDiscoveryRef.current);
                 (0, f.isElement)(e, HTMLElement)
@@ -13967,12 +13968,12 @@
                 "string" == typeof t || null == t ? t === e : t.includes(e)
               );
               if (a < 0) return !1;
-              let s = et * a + ea;
-              !t && (s += el);
+              let s = en * a + es;
+              !t && (s += ea);
               let i = l.getScrollerState();
               return (
                 (!t && !!(s >= i.scrollTop)) ||
-                (!!t && !!(s + et <= i.scrollTop + i.offsetHeight)) ||
+                (!!t && !!(s + en <= i.scrollTop + i.offsetHeight)) ||
                 !1
               );
             }),
@@ -13992,167 +13993,169 @@
             });
         }
       }
-      function ei(e) {
+      function er(e) {
         let {
-            disableAppDownload: t = D.isPlatformEmbedded,
+            disableAppDownload: t = b.isPlatformEmbedded,
             isOverlay: n = !1,
             className: s,
             themeOverride: r,
           } = e,
-          [o] = (0, h.useStateFromStoresArray)([O.default], () => {
-            let e = O.default.getGuildsTree();
+          [o] = (0, h.useStateFromStoresArray)([y.default], () => {
+            let e = y.default.getGuildsTree();
             return [e, e.version];
           }),
           u = (0, h.useStateFromStores)([L.default], () =>
             L.default.lurkingGuildIds()
           ),
           f = a.useMemo(() => (n ? [] : u), [u, n]),
-          C = (0, h.useStateFromStoresArray)([M.default, R.default], () =>
-            b.default
-              .keys(M.default.getGuilds())
-              .filter(e => R.default.isCurrentUserGuest(e))
+          C = (0, h.useStateFromStoresArray)([O.default, M.default], () =>
+            j.default
+              .keys(O.default.getGuilds())
+              .filter(e => M.default.isCurrentUserGuest(e))
           ),
           E = f.concat(C),
-          g = (0, h.useStateFromStores)([y.default], () => {
+          g = (0, h.useStateFromStores)([D.default], () => {
             var e;
-            return null === (e = y.default.getCurrentUser()) || void 0 === e
+            return null === (e = D.default.getCurrentUser()) || void 0 === e
               ? void 0
               : e.isStaff();
           }),
-          et = (0, h.useStateFromStores)([_.default], () =>
+          en = (0, h.useStateFromStores)([_.default], () =>
             _.default.isFullscreenInContext()
           ),
-          en = (0, h.useStateFromStores)([M.default], () =>
-            M.default.getGeoRestrictedGuilds()
+          el = (0, h.useStateFromStores)([O.default], () =>
+            O.default.getGeoRestrictedGuilds()
           ),
-          [el, ea] = a.useState(!1),
-          ei = a.useCallback(() => ea(!0), []),
-          er = a.useCallback(() => ea(!1), []),
-          eo = a.useRef(!1),
-          [eu] = a.useState(() => new p.Timeout()),
-          ed = a.useRef(null),
+          [ea, es] = a.useState(!1),
+          er = a.useCallback(() => es(!0), []),
+          eo = a.useCallback(() => es(!1), []),
+          eu = a.useRef(!1),
+          [ed] = a.useState(() => new p.Timeout()),
           ec = a.useRef(null),
-          { ref: ef, ...eh } = (0, c.useListContainerProps)(),
-          eC = (0, m.useFocusJumpSection)(),
-          [ep, em] = a.useState(!1),
-          [eE] = a.useState(
+          ef = a.useRef(null),
+          { ref: eh, ...eC } = (0, c.useListContainerProps)(),
+          ep = (0, m.useFocusJumpSection)(),
+          [em, eE] = a.useState(!1),
+          [eg] = a.useState(
             () =>
-              new es(o, em, () => {
+              new ei(o, eE, () => {
                 var e, t;
-                null === (e = ed.current) || void 0 === e || e.calculateState(),
-                  null === (t = ec.current) ||
+                null === (e = ec.current) || void 0 === e || e.calculateState(),
+                  null === (t = ef.current) ||
                     void 0 === t ||
                     t.calculateState();
               })
           ),
-          { AnalyticsLocationProvider: eg } = (0, S.default)(
+          { AnalyticsLocationProvider: eI } = (0, S.default)(
             I.default.GUILDS_LIST
           ),
-          { pathname: eI } = (0, d.useLocation)(),
-          eS = eI.startsWith(q.Routes.GUILD_DISCOVERY),
-          e_ = eI.startsWith(q.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
+          { pathname: eS } = (0, d.useLocation)(),
+          e_ = eS.startsWith($.Routes.GUILD_DISCOVERY),
+          eN = eS.startsWith($.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
         a.useLayoutEffect(() => {
-          if (!eo.current) {
+          if (!eu.current) {
             if (0 !== o.size) {
-              if (eS) eE.scrollToGuild(null, !1);
+              if (e_) eg.scrollToGuild(null, !1);
               else {
-                let { scrollTop: e } = x.default.getGuildListDimensions();
-                eE.scrollTo({ to: e, animate: !1 });
+                let { scrollTop: e } = R.default.getGuildListDimensions();
+                eg.scrollTo({ to: e, animate: !1 });
               }
-              return (eo.current = !0), () => eu.stop();
+              return (eu.current = !0), () => ed.stop();
             }
           }
         }, []),
           a.useEffect(() => {
-            if ((eE.setGuildsTree(o), eo.current || 0 === o.size)) return;
+            if ((eg.setGuildsTree(o), eu.current || 0 === o.size)) return;
             let e = v.default.getState().guildId;
-            eE.scrollToGuild(e, !1);
+            eg.scrollToGuild(e, !1);
             let t = null,
               n = v.default.subscribe(e => {
                 let { guildId: n } = e;
-                n !== t && ((t = n), eE.scrollToGuild(t, !1));
+                n !== t && ((t = n), eg.scrollToGuild(t, !1));
               });
             return n;
-          }, [o, eE]),
-          (0, U.default)(eE.scrollToGuild);
-        let eN = (0, A.useEligibleForGameRecommendations)(),
-          eT = o.getRoots(),
-          eA = (0, N.default)(),
-          eL = en.map(e =>
+          }, [o, eg]),
+          (0, P.default)(eg.scrollToGuild);
+        let eT = (0, A.useEligibleForGameRecommendations)(),
+          eA = o.getRoots(),
+          eL = (0, N.default)(),
+          ev = (0, x.useSignUpButton)(),
+          ex = el.map(e =>
             (0, l.jsx)(
-              H.default,
+              k.default,
               { id: e.id, name: e.name, icon: e.icon },
               e.id
             )
           );
-        return (0, l.jsx)(eg, {
+        return (0, l.jsx)(eI, {
           children: (0, l.jsx)("nav", {
-            className: i(ee.wrapper, s, (0, j.getThemeClass)(r), {
-              [ee.hidden]: et,
+            className: i(et.wrapper, s, (0, G.getThemeClass)(r), {
+              [et.hidden]: en,
             }),
-            "aria-label": $.default.Messages.GUILDS_BAR_A11Y_LABEL,
+            "aria-label": ee.default.Messages.GUILDS_BAR_A11Y_LABEL,
             children: (0, l.jsxs)("ul", {
-              ref: ef,
-              ...eh,
+              ref: eh,
               ...eC,
+              ...ep,
               role: "tree",
-              className: ee.tree,
+              className: et.tree,
               children: [
-                (0, l.jsx)(P.default, {
-                  ref: ed,
-                  isVisible: eE.isItemVisible,
-                  onJumpTo: eE.handleJumpToGuild,
-                  className: ee.unreadMentionsIndicatorTop,
-                  barClassName: ee.unreadMentionsBar,
+                (0, l.jsx)(w.default, {
+                  ref: ec,
+                  isVisible: eg.isItemVisible,
+                  onJumpTo: eg.handleJumpToGuild,
+                  className: et.unreadMentionsIndicatorTop,
+                  barClassName: et.unreadMentionsBar,
                 }),
                 (0, l.jsxs)(m.AdvancedScrollerNone, {
-                  className: i({ [ee.scroller]: !0, [ee.scrolling]: ep }),
-                  ref: eE.scrollerRef,
-                  onScroll: eE.handleScroll,
+                  className: i({ [et.scroller]: !0, [et.scrolling]: em }),
+                  ref: eg.scrollerRef,
+                  onScroll: eg.handleScroll,
                   children: [
-                    (0, l.jsx)(Y.HomeButton, {}),
-                    eA ? (0, l.jsx)(T.default, {}) : null,
-                    (0, l.jsx)(B.default, {}),
-                    (0, l.jsx)(K.default, { isOnHubVerificationRoute: e_ }),
-                    (0, l.jsx)(w.default, {}),
+                    (0, l.jsx)(K.HomeButton, {}),
+                    eL ? (0, l.jsx)(T.default, {}) : null,
+                    (0, l.jsx)(V.default, {}),
+                    (0, l.jsx)(W.default, { isOnHubVerificationRoute: eN }),
+                    (0, l.jsx)(F.default, {}),
+                    ev,
                     E.map(e => (0, l.jsx)(J.default, { guildId: e }, e)),
-                    g ? (0, l.jsx)(Q.default, {}) : null,
-                    !n && eN
-                      ? (0, l.jsx)(k.default, {
-                          ref: eE.guildDiscoveryRef,
-                          selected: eS,
-                          tooltip: $.default.Messages.GUILD_DISCOVERY_TOOLTIP,
+                    g ? (0, l.jsx)(q.default, {}) : null,
+                    !n && eT
+                      ? (0, l.jsx)(Y.default, {
+                          ref: eg.guildDiscoveryRef,
+                          selected: e_,
+                          tooltip: ee.default.Messages.GUILD_DISCOVERY_TOOLTIP,
                         })
                       : null,
-                    (0, l.jsx)(W.default, {}),
+                    (0, l.jsx)(Z.default, {}),
                     (0, l.jsx)("div", {
-                      "aria-label": $.default.Messages.SERVERS,
-                      children: eT.map(function e(t) {
+                      "aria-label": ee.default.Messages.SERVERS,
+                      children: eA.map(function e(t) {
                         switch (t.type) {
-                          case G.GuildsNodeType.FOLDER:
+                          case U.GuildsNodeType.FOLDER:
                             return (0, l.jsx)(
-                              z.default,
+                              X.default,
                               {
                                 folderNode: t,
-                                setNodeRef: eE.setNodeRef,
+                                setNodeRef: eg.setNodeRef,
                                 draggable: !0,
-                                sorting: el,
-                                onDragStart: ei,
-                                onDragEnd: er,
+                                sorting: ea,
+                                onDragStart: er,
+                                onDragEnd: eo,
                                 renderChildNode: e,
                               },
                               t.id
                             );
-                          case G.GuildsNodeType.GUILD:
+                          case U.GuildsNodeType.GUILD:
                             return (0, l.jsx)(
-                              X.default,
+                              Q.default,
                               {
                                 guildNode: t,
-                                setRef: eE.setNodeRef,
+                                setRef: eg.setNodeRef,
                                 draggable: !0,
-                                sorting: el,
-                                onDragStart: ei,
-                                onDragEnd: er,
+                                sorting: ea,
+                                onDragStart: er,
+                                onDragEnd: eo,
                               },
                               t.id
                             );
@@ -14161,49 +14164,49 @@
                         }
                       }),
                     }),
-                    eL,
+                    ex,
                     n
                       ? null
-                      : (0, l.jsx)(V.default, {
+                      : (0, l.jsx)(H.default, {
                           disableTooltip: f.length > 0,
-                          lastTargetNode: eT[eT.length - 1],
+                          lastTargetNode: eA[eA.length - 1],
                         }),
-                    n || eN
+                    n || eT
                       ? null
-                      : (0, l.jsx)(k.default, {
-                          ref: eE.guildDiscoveryRef,
-                          selected: eS,
+                      : (0, l.jsx)(Y.default, {
+                          ref: eg.guildDiscoveryRef,
+                          selected: e_,
                         }),
-                    (0, l.jsx)(Z.default, {}),
+                    (0, l.jsx)(z.default, {}),
                     t
                       ? null
                       : (0, l.jsxs)(l.Fragment, {
                           children: [
-                            (0, l.jsx)(W.default, {}),
-                            (0, l.jsx)(F.default, {}),
+                            (0, l.jsx)(Z.default, {}),
+                            (0, l.jsx)(B.default, {}),
                           ],
                         }),
                   ],
                 }),
-                (0, l.jsx)(P.default, {
+                (0, l.jsx)(w.default, {
                   reverse: !0,
-                  ref: ec,
-                  isVisible: eE.isItemVisible,
-                  onJumpTo: eE.handleJumpToGuild,
-                  className: ee.unreadMentionsIndicatorBottom,
-                  barClassName: ee.unreadMentionsBar,
+                  ref: ef,
+                  isVisible: eg.isItemVisible,
+                  onJumpTo: eg.handleJumpToGuild,
+                  className: et.unreadMentionsIndicatorBottom,
+                  barClassName: et.unreadMentionsBar,
                 }),
               ],
             }),
           }),
         });
       }
-      var er = a.memo(
+      var eo = a.memo(
         function (e) {
           let t = (0, g.default)("guildsnav");
           return (0, l.jsx)(c.ListNavigatorProvider, {
             navigator: t,
-            children: (0, l.jsx)(ei, { ...e }),
+            children: (0, l.jsx)(er, { ...e }),
           });
         },
         (e, t) => !1 === t.isVisible || (0, C.default)(e, t)
@@ -14739,13 +14742,13 @@
             },
             [G, d]
           ),
-          J =
+          q =
             null != B && "" !== B
               ? B
               : null != M && "" !== M
                 ? M
                 : _.default.Messages.SERVER_FOLDER_PLACEHOLDER,
-          q = (0, u.useTreeItem)("".concat(F)),
+          J = (0, u.useTreeItem)("".concat(F)),
           $ = "folder-items-".concat(F),
           ee = V.length * (L + v),
           et = (0, o.useTransition)(!Z && d, {
@@ -14765,14 +14768,14 @@
                 className: T.pill,
               }),
               (0, l.jsx)(S.default, {
-                text: J,
+                text: q,
                 disabled: D,
                 selected: s,
                 disableWrapper: !0,
                 children: (0, l.jsx)("div", {
                   ref: y ? z : void 0,
                   className: i({ [T.wobble]: !Z && Y && !d }),
-                  "data-dnd-name": J,
+                  "data-dnd-name": q,
                   children: Z
                     ? (0, l.jsx)(g.default, {})
                     : (0, l.jsx)(m.default, {
@@ -14782,20 +14785,20 @@
                         sorting: D,
                         mediaState: C,
                         mentionCount: x,
-                        tooltipName: J,
+                        tooltipName: q,
                         folderGroupId: $,
                         onClick: G,
                         onContextMenu: U,
                         onHoverChange: k,
                         onKeyDown: Q,
-                        treeItemProps: q,
+                        treeItemProps: J,
                         folderIconContent: w,
                       }),
                 }),
               }),
               y
                 ? (0, l.jsx)(E.default, {
-                    name: J,
+                    name: q,
                     targetNode: t,
                     onDragOverChanged: X,
                   })
@@ -14832,7 +14835,7 @@
               );
             }),
             y && d
-              ? (0, l.jsx)(E.FolderEndDropTarget, { name: J, targetNode: t })
+              ? (0, l.jsx)(E.FolderEndDropTarget, { name: q, targetNode: t })
               : null,
           ],
         });
@@ -15011,9 +15014,9 @@
             draggable: z = !1,
             sorting: X = !1,
             preloadOnClick: Q = !0,
-            guildJoinRequestStatus: J,
+            guildJoinRequestStatus: q,
           } = e,
-          { id: q, parentId: $ } = G,
+          { id: J, parentId: $ } = G,
           ee =
             null !== (t = e.upperBadge) && void 0 !== t
               ? t
@@ -15029,11 +15032,11 @@
                 ? s
                 : void 0)
           : null == et &&
-            null != J &&
+            null != q &&
             (et =
               null !==
                 (h = (0, R.renderGuildJoinRequestBadge)({
-                  guildJoinRequestStatus: J,
+                  guildJoinRequestStatus: q,
                 })) && void 0 !== h
                 ? h
                 : void 0);
@@ -15055,7 +15058,7 @@
             },
             collect: e => ({ dragging: e.isDragging() }),
           }),
-          es = (0, o.useTreeItem)(null != q ? q : M.EMPTY_STRING_SNOWFLAKE_ID),
+          es = (0, o.useTreeItem)(null != J ? J : M.EMPTY_STRING_SNOWFLAKE_ID),
           [ei, er] = a.useState(!1),
           eo = !X && ei,
           [eu, ed] = a.useState(!1),
@@ -15067,15 +15070,15 @@
               (0, p.transitionTo)(F, { state: D });
               return;
             }
-            (0, m.transitionToGuild)(q, { state: D });
-          }, [q, F]),
+            (0, m.transitionToGuild)(J, { state: D });
+          }, [J, F]),
           ep = a.useCallback(() => {
             if (null != F || null == B || K || !Q) return;
             let e = (0, m.getChannelIdForGuildTransition)(B.id);
             null != e && f.default.preload(B.id, e);
           }, [F, B, K, Q]),
           em = (0, u.useStateFromStores)([E.default], () =>
-            E.default.isCurrentUserGuest(q)
+            E.default.isCurrentUserGuest(J)
           ),
           eE = a.useCallback(
             e => {
@@ -15109,9 +15112,9 @@
           ),
           eS = a.useCallback(
             e => {
-              null == U || U(q, e);
+              null == U || U(J, e);
             },
-            [q, U]
+            [J, U]
           );
         if (null == B) return null;
         let e_ =
@@ -15285,7 +15288,7 @@
             }))
           : K && (X = (0, l.jsx)(R.default, { className: V.broadcastBadge }));
         let Q = t || _ || I,
-          J = (0, l.jsx)(o.BlobMask, {
+          q = (0, l.jsx)(o.BlobMask, {
             highlight: K,
             selected: Q,
             lowerBadge: f > 0 ? (0, P.renderMentionBadge)(f) : null,
@@ -15330,7 +15333,7 @@
               children: (0, l.jsx)(c.default, {}),
             }),
           }),
-          q = K
+          J = K
             ? (0, l.jsx)(o.Popout, {
                 position: "right",
                 renderPopout: e => {
@@ -15342,7 +15345,7 @@
                 },
                 spacing: 8,
                 shouldShow: j,
-                children: () => J,
+                children: () => q,
               })
             : null;
         return (0, l.jsx)("div", {
@@ -15366,14 +15369,14 @@
                   hovered: _,
                   className: V.pill,
                 }),
-                null != q
-                  ? q
+                null != J
+                  ? J
                   : (0, l.jsx)(U.default, {
                       color: o.Tooltip.Colors.PRIMARY,
                       hideOnClick: !0,
                       text: z,
                       selected: t,
-                      children: J,
+                      children: q,
                     }),
               ],
             }),
@@ -17362,8 +17365,8 @@
         z = n("42887"),
         X = n("957255"),
         Q = n("824563"),
-        J = n("27618"),
-        q = n("18494"),
+        q = n("27618"),
+        J = n("18494"),
         $ = n("101125"),
         ee = n("697218"),
         et = n("703370"),
@@ -17852,8 +17855,8 @@
           i = (0, u.useStateFromStores)([j.default, et.default], () =>
             (0, B.default)(j.default, et.default)
           ),
-          r = (0, u.useStateFromStores)([q.default, K.default], () =>
-            K.default.getChannel(q.default.getVoiceChannelId())
+          r = (0, u.useStateFromStores)([J.default, K.default], () =>
+            K.default.getChannel(J.default.getVoiceChannelId())
           ),
           o = (0, u.useStateFromStores)([_.default], () =>
             _.default.getConnectedActivityChannelId()
@@ -17931,9 +17934,9 @@
             $.default.getBroadcast()
           ),
           b = (0, L.default)() && null != i,
-          G = (0, u.useStateFromStores)([ee.default, J.default], () =>
+          G = (0, u.useStateFromStores)([ee.default, q.default], () =>
             null != c
-              ? (0, x.computeChannelName)(c, ee.default, J.default)
+              ? (0, x.computeChannelName)(c, ee.default, q.default)
               : void 0
           ),
           w = (0, u.useStateFromStores)([Z.default], () =>
@@ -18976,6 +18979,176 @@
           "canvas"
         );
       }
+    },
+    156332: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          useSignUpButton: function () {
+            return g;
+          },
+        });
+      var l = n("37983"),
+        a = n("884691"),
+        s = n("974667"),
+        i = n("524173"),
+        r = n("77078"),
+        o = n("446674"),
+        u = n("20606"),
+        d = n("610898"),
+        c = n("829562"),
+        f = n("956089"),
+        h = n("108189"),
+        C = n("124150"),
+        p = n("782340"),
+        m = n("884836");
+      function E(e) {
+        let { target: t } = e,
+          o = (0, s.useTreeItem)("fakedoor"),
+          C = a.useCallback(() => {
+            (0, r.openModalLazy)(async () => {
+              let { default: e } = await n
+                .el("597245")
+                .then(n.bind(n, "597245"));
+              return n => (0, l.jsx)(e, { ...n, target: t });
+            });
+          }, [t]),
+          E = "url(".concat(
+            t.backgroundAssetUrl,
+            ") lightgray top / cover no-repeat"
+          ),
+          g = (0, l.jsxs)("div", {
+            className: m.tooltipContainer,
+            children: [
+              (0, l.jsx)("div", {
+                className: m.tooltipBackground,
+                style: { background: E },
+              }),
+              (0, l.jsx)(r.Heading, {
+                variant: "heading-sm/medium",
+                children: t.tooltipHeader,
+              }),
+              (0, l.jsx)(r.Text, {
+                variant: "text-xs/normal",
+                children: p.default.Messages.SIGNUP_BUTTON_TOOLTIP_CTA,
+              }),
+            ],
+          });
+        return (0, l.jsx)(d.ListItem, {
+          children: (0, l.jsx)(c.default, {
+            text: g,
+            children: (0, l.jsx)(r.BlobMask, {
+              lowerBadge: (0, l.jsx)(f.NumberBadge, {
+                count: 1,
+                color: u.default.BG_BRAND,
+              }),
+              children: (0, l.jsx)(h.default, {
+                ...o,
+                onMouseDown: C,
+                children: (0, l.jsx)(i.BellIcon, {
+                  color: u.default.TEXT_NORMAL,
+                }),
+              }),
+            }),
+          }),
+        });
+      }
+      function g() {
+        let e = (0, o.useStateFromStores)([C.default], () =>
+          C.default.getActiveUserSignUp()
+        );
+        return null == e ? null : (0, l.jsx)(E, { target: e });
+      }
+    },
+    874595: function (e, t, n) {
+      "use strict";
+      function l(e) {
+        return "user" === e.type;
+      }
+      n.r(t),
+        n.d(t, {
+          isUserTarget: function () {
+            return l;
+          },
+          VALORANT_USER_SIGNUP: function () {
+            return a;
+          },
+        });
+      let a = {
+        key: "valorant-user",
+        type: "user",
+        title: "Find new people to play Valorant with on Discord",
+        subtitle:
+          "Sign up for early access to matchmaking tools that help you find other players based on playstyle and interests.",
+        tooltipHeader: "Find new people to play Valorant with on Discord!",
+        question: "Which one are you interested in the most?",
+        backgroundAssetUrl:
+          "https://cdn.discordapp.com/assets/signups/Valorant_Background.png",
+        upsellIconUrl:
+          "https://cdn.discordapp.com/assets/signups/Valorant_Guild_Icon.png",
+        options: [
+          {
+            key: "clan",
+            icon: "compass",
+            title: "Clans",
+            description:
+              "Find other servers that also play Valorant regularly and shares the same playstyle (ex. Casual -vs- Hardcore).",
+            type: "email",
+          },
+          {
+            key: "missions",
+            icon: "gamepad",
+            title: "Missions",
+            description:
+              "Party up with other players based on what you want to do in-game and interests (ex. Lv100 Raids)",
+            type: "email",
+          },
+          {
+            key: "gamenight",
+            icon: "controller",
+            title: "Game Nights",
+            description:
+              "Tell us what you are looking for, and we’ll match you with people that matches your criteria.",
+            type: "email",
+          },
+        ],
+      };
+    },
+    124150: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return d;
+          },
+        }),
+        n("222007");
+      var l = n("446674"),
+        a = n("913144"),
+        s = n("874595");
+      let i = { "valorant-user": s.VALORANT_USER_SIGNUP },
+        r = null,
+        o = new Set();
+      class u extends l.default.Store {
+        getActiveUserSignUp() {
+          return r;
+        }
+        hasCompletedTarget(e) {
+          return o.has(e);
+        }
+      }
+      u.displayName = "SignUpStore";
+      var d = new u(a.default, {
+        ENABLE_USER_SIGN_UP: function (e) {
+          let { key: t } = e,
+            n = i[t];
+          (0, s.isUserTarget)(n) && (r = n);
+        },
+        COMPLETE_USER_SIGN_UP: function (e) {
+          let { targetKey: t } = e;
+          o.add(t), (r = null);
+        },
+      });
     },
     679864: function (e, t, n) {
       "use strict";
@@ -20180,7 +20353,7 @@
       function Q(e) {
         return M.default.isFriend(e.id);
       }
-      function J(e, t, n) {
+      function q(e, t, n) {
         var l, s, i, d, c;
         let f;
         let h = y.default.getCurrentUser(),
@@ -20325,12 +20498,12 @@
           applicationStreams: U,
         };
       }
-      function q() {
+      function J() {
         return G && m.default.isConnected();
       }
       let $ = a.throttle(() => {
         !(function () {
-          if (!q()) return;
+          if (!J()) return;
           V.clear();
           let e = Array.from(k()).reduce((e, t) => {
               let n = y.default.getUser(t);
@@ -20352,7 +20525,7 @@
             }),
             n = (function (e) {
               let t = k(),
-                n = J.bind(null, t);
+                n = q.bind(null, t);
               return a(e).mapValues(n);
             })(t),
             l = n
@@ -20391,7 +20564,7 @@
           en.emitChange();
       }, 1e3);
       function ee() {
-        return !!q() && ($(), !1);
+        return !!J() && ($(), !1);
       }
       class et extends s.default.Store {
         initialize() {
@@ -20528,7 +20701,7 @@
         let t = D.default.getVoiceStateForChannel(e);
         return null != t;
       }
-      class J extends a.default.Store {
+      class q extends a.default.Store {
         initialize() {
           this.waitFor(
             y.default,
@@ -20543,8 +20716,8 @@
           );
         }
       }
-      (J.displayName = "NotificationStore"),
-        new J(
+      (q.displayName = "NotificationStore"),
+        new q(
           i.default,
           __OVERLAY__
             ? {}
@@ -23357,4 +23530,4 @@
     },
   },
 ]);
-//# sourceMappingURL=035d7e095b093e9dba25.js.map
+//# sourceMappingURL=b0c9064e93842431bd57.js.map

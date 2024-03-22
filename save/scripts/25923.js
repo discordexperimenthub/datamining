@@ -25,6 +25,10 @@
       "use strict";
       e.exports = n.p + "0ea8260dd049f3be6f41.svg";
     },
+    903326: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "af850ab174cb5840b356.svg";
+    },
     655361: function (e, t, n) {
       "use strict";
       e.exports = n.p + "77da9836b1bc41486aeb.svg";
@@ -3587,7 +3591,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return h;
+            return p;
           },
         }),
         n("222007");
@@ -3595,27 +3599,42 @@
       n("884691");
       var a = n("446674"),
         s = n("77078"),
-        i = n("697218"),
-        r = n("153769"),
-        o = n("719923"),
-        u = n("805199"),
-        d = n("513196"),
-        c = n("42723"),
-        f = n("605475");
-      function h() {
+        i = n("199245"),
+        r = n("697218"),
+        o = n("153769"),
+        u = n("719923"),
+        d = n("805199"),
+        c = n("513196"),
+        f = n("42723"),
+        h = n("605475"),
+        C = n("903326");
+      function p() {
         let [e, t, n] = (0, a.useStateFromStoresArray)(
-            [i.default, u.default],
+            [r.default, d.default],
             () => [
-              u.default.getCurrentDesktopIcon(),
-              u.default.isEditorOpen,
-              o.default.isPremium(i.default.getCurrentUser()),
+              d.default.getCurrentDesktopIcon(),
+              d.default.isEditorOpen,
+              u.default.isPremium(r.default.getCurrentUser()),
             ]
           ),
-          h = f.ICONS_BY_ID[e],
-          C = e !== d.FreemiumAppIconIds.DEFAULT && (n || t),
-          p = (0, s.useRedesignIconContext)().enabled,
-          m = (0, l.jsx)(r.default, { width: 30, height: p ? 30 : 22 });
-        return null != h && C ? (0, l.jsx)(c.default, { id: e, width: 48 }) : m;
+          p = h.ICONS_BY_ID[e],
+          m = e !== c.FreemiumAppIconIds.DEFAULT && (n || t),
+          E = (0, s.useRedesignIconContext)().enabled,
+          g = (0, l.jsx)(o.default, { width: 30, height: E ? 30 : 22 }),
+          { enabled: I } = i.default.useExperiment(
+            { location: "hi Kevin" },
+            { autoTrackExposure: !1 }
+          );
+        return I
+          ? (0, l.jsx)("img", {
+              src: C,
+              width: 30,
+              alt: "Hi Kevin!",
+              draggable: !1,
+            })
+          : null != p && m
+            ? (0, l.jsx)(f.default, { id: e, width: 48 })
+            : g;
       }
     },
     651896: function (e, t, n) {
@@ -12795,6 +12814,24 @@
               ],
             });
       };
+    },
+    199245: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return l;
+          },
+        });
+      var l = (0, n("296892").default)({
+        kind: "user",
+        id: "2024-03_access_af",
+        label: "q:thinking:",
+        defaultConfig: { enabled: !1 },
+        treatments: [
+          { id: 1, label: ":thinkingharder:", config: { enabled: !0 } },
+        ],
+      });
     },
     509223: function (e, t, n) {
       "use strict";
@@ -23530,4 +23567,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b0c9064e93842431bd57.js.map
+//# sourceMappingURL=fd19755e47ae3d0aea33.js.map

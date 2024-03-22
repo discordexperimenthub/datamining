@@ -9741,24 +9741,12 @@
           sendContentImageReply: function () {
             return l;
           },
-          sendContentImageReact: function () {
-            return s;
-          },
         });
       var a = n("526409");
       let l = e => {
-          let { reply: t, user: n, altText: l, file: s } = e;
-          return (0, a.sendReply)({ file: s, altText: l, user: n, reply: t });
-        },
-        s = e => {
-          let { reaction: t, user: n, altText: l, file: s } = e;
-          return (0, a.sendReaction)({
-            file: s,
-            altText: l,
-            user: n,
-            reaction: t,
-          });
-        };
+        let { reply: t, user: n, altText: l, file: s } = e;
+        return (0, a.sendReply)({ file: s, altText: l, user: n, reply: t });
+      };
     },
     873235: function (e, t, n) {
       "use strict";
@@ -10002,59 +9990,6 @@
         );
         return { requestId: n, entries: t };
       }
-    },
-    418882: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return d;
-          },
-        }),
-        n("222007");
-      var a = n("37983"),
-        l = n("884691"),
-        s = n("862337"),
-        i = n("77078"),
-        r = n("866190"),
-        u = n("476774");
-      let o = e => {
-        let { entry: t, textColor: n } = e,
-          [o, d] = l.useState(Date.now()),
-          c = (0, r.useIsWindowFocused)(),
-          f = l.useMemo(() => {
-            let { hours: e } = (0, u.calculateActiveTimestampDurations)(t, o);
-            return e > 0 ? 3e5 : 1e3;
-          }, [t, o]);
-        l.useEffect(() => {
-          let e = new s.Interval();
-          return (
-            e.start(f, () => {
-              d(Date.now());
-            }),
-            !c && e.stop(),
-            () => e.stop()
-          );
-        }, [f, c]);
-        let h = l.useMemo(() => (0, u.formatEntryTimestamp)(t, o), [t, o]);
-        return (0, a.jsx)(i.Text, {
-          variant: "text-xs/normal",
-          tabularNumbers: !0,
-          color: n,
-          children: h,
-        });
-      };
-      var d = e => {
-        let { entry: t, textColor: n } = e,
-          l = (0, u.isEntryActive)(t);
-        return l
-          ? (0, a.jsx)(o, { entry: t, textColor: n })
-          : (0, a.jsx)(i.Text, {
-              variant: "text-xs/normal",
-              color: n,
-              children: (0, u.formatEntryTimestamp)(t, Date.now()),
-            });
-      };
     },
     29319: function (e, t, n) {
       "use strict";
@@ -10358,16 +10293,13 @@
       n.r(t),
         n.d(t, {
           useGamingContentData: function () {
-            return T;
-          },
-          GamingContentImage: function () {
-            return v;
+            return C;
           },
           ContentRowBadges: function () {
-            return x;
+            return _;
           },
           default: function () {
-            return N;
+            return I;
           },
         });
       var a = n("37983"),
@@ -10378,69 +10310,23 @@
         u = n("823527"),
         o = n("114770"),
         d = n("77078"),
-        c = n("841098"),
-        f = n("442939"),
-        h = n("26989"),
-        m = n("305961"),
-        p = n("697218"),
-        E = n("547620"),
-        g = n("387111"),
-        S = n("476774"),
-        C = n("418882"),
-        _ = n("782340"),
-        I = n("732414");
-      let T = (e, t) => {
-          let n = (0, f.useGetOrFetchApplication)(e.extra.application_id),
-            a = null == n ? void 0 : n.getIconURL(128),
-            l = (0, r.useStateFromStores)([p.default], () =>
-              p.default.getUser(e.author_id)
-            ),
-            s = (0, r.useStateFromStores)([h.default], () =>
-              h.default.getMember(t.guild_id, e.author_id)
-            ),
-            i = (0, r.useStateFromStores)(
-              [m.default],
-              () => {
-                var e;
-                return (null == s ? void 0 : s.colorRoleId) != null
-                  ? null ===
-                      (e = m.default.getRole(t.guild_id, s.colorRoleId)) ||
-                    void 0 === e
-                    ? void 0
-                    : e.name
-                  : void 0;
-              },
-              [t.guild_id, s]
-            ),
-            u = null == s ? void 0 : s.colorString;
-          return {
-            user: l,
-            applicationImageSrc: a,
-            colorRoleName: i,
-            colorString: u,
-          };
+        c = n("442939"),
+        f = n("697218"),
+        h = n("476774"),
+        m = n("816260"),
+        p = n("911589"),
+        E = n("36035"),
+        g = n("782340"),
+        S = n("753482");
+      let C = e => {
+          let t = (0, c.useGetOrFetchApplication)(e.extra.application_id),
+            n = null == t ? void 0 : t.getIconURL(128),
+            a = (0, r.useStateFromStores)([f.default], () =>
+              f.default.getUser(e.author_id)
+            );
+          return { applicationImageSrc: n, user: a };
         },
-        v = e => {
-          let { src: t, size: n, className: l } = e,
-            s = (0, c.default)();
-          return null == t
-            ? (0, a.jsx)(E.default, {
-                width: n,
-                height: n,
-                color: "dark" === s ? "white" : "black",
-                className: l,
-              })
-            : (0, a.jsx)("img", {
-                style: {
-                  width: "".concat(n, "px"),
-                  height: "".concat(n, "px"),
-                },
-                className: l,
-                src: t,
-                alt: "icon",
-              });
-        },
-        x = e => {
+        _ = e => {
           let {
             entry: t,
             textColor: n = "text-secondary",
@@ -10448,12 +10334,12 @@
             className: s,
           } = e;
           return (0, a.jsxs)("div", {
-            className: i(I.badgesContainer, s),
+            className: i(S.badgeRow, s),
             children: [
               (() => {
-                let e = (0, S.isEntryActive)(t);
+                let e = (0, h.isEntryActive)(t);
                 return (0, a.jsxs)("div", {
-                  className: I.badgeContainer,
+                  className: S.badgeContainer,
                   children: [
                     (0, a.jsx)(u.GameControllerIcon, {
                       width: 12,
@@ -10466,13 +10352,13 @@
                                 .REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT
                             : void 0,
                     }),
-                    (0, a.jsx)(C.default, { entry: t, textColor: n }),
+                    (0, a.jsx)(E.default, { entry: t, textColor: n }),
                   ],
                 });
               })(),
-              (0, S.isEntryNew)(t)
+              (0, h.isEntryNew)(t)
                 ? (0, a.jsxs)("div", {
-                    className: I.badgeContainer,
+                    className: S.badgeContainer,
                     children: [
                       (0, a.jsx)(o.NewUserIcon, {
                         width: 12,
@@ -10483,7 +10369,7 @@
                         variant: "text-xs/normal",
                         color: n,
                         children:
-                          _.default.Messages
+                          g.default.Messages
                             .MEMBER_LIST_CONTENT_FEED_FIRST_TIME,
                       }),
                     ],
@@ -10492,61 +10378,35 @@
             ],
           });
         };
-      var N = l.memo(e => {
+      var I = l.memo(e => {
         let { entry: t, channel: n, selected: l } = e,
-          {
-            user: s,
-            applicationImageSrc: r,
-            colorRoleName: u,
-            colorString: o,
-          } = T(t, n);
-        if (null == s) return null;
-        let c = g.default.getName(n.guild_id, n.id, s);
-        return (0, a.jsxs)("div", {
-          className: i(I.container, { [I.selected]: l }),
+          { applicationImageSrc: s } = C(t);
+        return (0, a.jsxs)(m.Card, {
+          selected: l,
           children: [
-            (0, a.jsxs)("div", {
-              className: I.textSection,
+            (0, a.jsxs)(m.CardInfoSection, {
               children: [
-                (0, a.jsxs)("div", {
-                  className: I.userSection,
-                  children: [
-                    (0, a.jsx)(d.Avatar, {
-                      src: s.getAvatarURL(n.guild_id, 80),
-                      size: d.AvatarSizes.SIZE_16,
-                      "aria-label": "avatar",
-                    }),
-                    (0, a.jsx)(d.NameWithRole, {
-                      color: null != o ? o : void 0,
-                      roleName: u,
-                      name: c,
-                      className: I.userName,
-                    }),
-                  ],
+                (0, a.jsx)(m.CardUser, {
+                  userId: t.author_id,
+                  channelId: n.id,
+                  guildId: n.guild_id,
                 }),
-                (0, a.jsxs)("div", {
-                  children: [
-                    (0, a.jsx)(d.Heading, {
-                      variant: "heading-sm/normal",
-                      className: I.contentDescription,
-                      lineClamp: 1,
-                      children: (function (e) {
-                        let t = (0, S.isEntryActive)(e);
-                        return t
-                          ? _.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format(
-                              { gameName: e.extra.game_name }
-                            )
-                          : _.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format(
-                              { gameName: e.extra.game_name }
-                            );
-                      })(t),
-                    }),
-                    (0, a.jsx)(x, { entry: t }),
-                  ],
+                (0, a.jsx)(m.CardTitle, {
+                  children: (function (e) {
+                    let t = (0, h.isEntryActive)(e);
+                    return t
+                      ? g.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYING_GAME.format(
+                          { gameName: e.extra.game_name }
+                        )
+                      : g.default.Messages.MEMBER_LIST_CONTENT_FEED_PLAYED_GAME.format(
+                          { gameName: e.extra.game_name }
+                        );
+                  })(t),
                 }),
+                (0, a.jsx)(_, { entry: t }),
               ],
             }),
-            (0, a.jsx)(v, { src: r, size: 48, className: I.contentImage }),
+            (0, a.jsx)(p.ContentImage, { src: s, size: 48 }),
           ],
         });
       });
@@ -10556,205 +10416,121 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return A;
+            return I;
           },
         }),
-        n("222007"),
         n("686130"),
         n("781738");
-      var a = n("37983"),
-        l = n("884691"),
-        s = n("77078"),
-        i = n("945701"),
-        r = n("788506"),
-        u = n("599110"),
-        o = n("315102"),
-        d = n("387111"),
-        c = n("476774"),
-        f = n("773808"),
-        h = n("868875"),
-        m = n("909346"),
-        p = n("674567"),
-        E = n("356980"),
-        g = n("709377"),
-        S = n("49111"),
-        C = n("782340"),
-        _ = n("375005");
-      let I = e => {
-          let { channel: t, onClickSuggestion: n } = e,
-            l = (0, r.useFrequentlyUsedEmojis)(t.guild_id),
-            i = l
-              .slice(0, 5)
-              .map(e =>
-                null == e.id
-                  ? { emoji: e, url: e.url }
-                  : {
-                      emoji: e,
-                      url: (0, o.getEmojiURL)({
-                        id: e.id,
-                        animated: e.animated,
-                        size: 58,
-                      }),
-                    }
-              );
-          return (0, a.jsx)(a.Fragment, {
-            children: i.map(e => {
-              let { emoji: t, url: l } = e;
-              return null != l
-                ? (0, a.jsx)(s.Clickable, {
-                    onClick: () => n(t),
-                    className: _.emojiSuggestionButton,
-                    children: (0, a.jsx)("img", {
-                      alt: t.name,
-                      src: l,
-                      className: _.emoji,
-                    }),
-                  })
-                : null;
-            }),
-          });
-        },
-        T = e => {
-          let t = (0, c.isEntryActive)(e),
-            n = (0, c.isEntryNew)(e);
+      var a = n("37983");
+      n("884691");
+      var l = n("77078"),
+        s = n("387111"),
+        i = n("476774"),
+        r = n("773808"),
+        u = n("868875"),
+        o = n("909346"),
+        d = n("674567"),
+        c = n("356980"),
+        f = n("911589"),
+        h = n("142853"),
+        m = n("709377"),
+        p = n("782340"),
+        E = n("782689");
+      let g = e => {
+          let t = (0, i.isEntryActive)(e),
+            n = (0, i.isEntryNew)(e);
           return n
             ? t
-              ? C.default.Messages
+              ? p.default.Messages
                   .MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME
-              : C.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
+              : p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME
             : t
-              ? C.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
-              : C.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
+              ? p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME
+              : p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME;
         },
-        v = (e, t, n) => {
-          let a = T(e),
-            l = d.default.getName(t.guild_id, t.id, n),
-            s = e.extra.game_name,
-            i = a.plainFormat({ gameName: s, userName: l });
-          return i.replaceAll("*", "");
+        S = (e, t, n) => {
+          let a = g(e),
+            l = s.default.getName(t.guild_id, t.id, n),
+            i = e.extra.game_name,
+            r = a.plainFormat({ gameName: i, userName: l });
+          return r.replaceAll("*", "");
         },
-        x = (e, t, n) => {
-          let a = T(e),
-            l = d.default.getName(t.guild_id, t.id, n),
-            s = e.extra.game_name;
-          return a.format({ userName: l, gameName: s });
+        C = (e, t, n) => {
+          let a = g(e),
+            l = s.default.getName(t.guild_id, t.id, n),
+            i = e.extra.game_name;
+          return a.format({ userName: l, gameName: i });
         },
-        N = (e, t) =>
-          C.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        _ = (e, t) =>
+          p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: t.username,
             activity: e.extra.game_name,
           });
-      var A = e => {
-        let { closePopout: t, channel: n, entry: r, requestId: o } = e,
-          { user: d, applicationImageSrc: T } = (0, E.useGamingContentData)(
-            r,
-            n
-          ),
-          { primaryColor: A, secondaryColor: M } = (0, p.default)(T),
-          [R, j] = l.useState(null);
-        if (null == d) return null;
-        let L = d.getAvatarURL(n.guild_id, 128),
-          y = {
-            entry: r,
-            applicationImageSrc: T,
-            avatarSrc: L,
-            description: v(r, n, d),
-            timestamp: (0, c.formatEntryTimestamp)(r, Date.now()),
-            colors: [A, M],
-          },
-          O = N(r, d),
-          P = { entry: r, channelId: n.id, guildId: n.guild_id, requestId: o },
-          D = e => {
-            null != e &&
-              null != R &&
-              (u.default.track(S.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
-                surface_type: g.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
-                channel_id: n.id,
-                guild_id: n.guild_id,
-              }),
-              R.insertEmoji(e, !1, !1),
-              R.focus());
-          },
-          b = async e => {
-            try {
-              let t = await (0, h.generateGamingContentImage)(y);
-              await (0, m.sendContentImageReply)({
-                file: t,
-                user: d,
-                altText: O,
-                reply: e,
-              }),
-                (0, f.trackInteraction)(
-                  g.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
-                  P
-                );
-            } finally {
-              t();
-            }
-          };
-        return (0, a.jsxs)("div", {
-          className: _.popout,
+      var I = e => {
+        let { closePopout: t, channel: n, entry: s, requestId: p } = e,
+          { applicationImageSrc: g, user: I } = (0, c.useGamingContentData)(s),
+          { primaryColor: T, secondaryColor: v } = (0, d.default)(g);
+        if (null == I) return null;
+        let x = async e => {
+          try {
+            let t = await (0, u.generateGamingContentImage)({
+              entry: s,
+              applicationImageSrc: g,
+              avatarSrc: I.getAvatarURL(n.guild_id, 128),
+              description: S(s, n, I),
+              timestamp: (0, i.formatEntryTimestamp)(s, Date.now()),
+              colors: [T, v],
+            });
+            await (0, o.sendContentImageReply)({
+              file: t,
+              user: I,
+              altText: _(s, I),
+              reply: e,
+            }),
+              (0, r.trackInteraction)(
+                m.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
+                { entry: s, channelId: n.id, guildId: n.guild_id, requestId: p }
+              );
+          } finally {
+            t();
+          }
+        };
+        return (0, a.jsxs)(h.Popout, {
           children: [
-            (0, a.jsxs)("div", {
-              className: _.hero,
-              style: {
-                background: "linear-gradient(45deg, "
-                  .concat(A, ", ")
-                  .concat(M, ")"),
-              },
+            (0, a.jsxs)(h.PopoutHero, {
+              backgroundImgSrc: g,
               children: [
                 (0, a.jsxs)("div", {
-                  className: _.heroDetails,
+                  className: E.heroDetails,
                   children: [
                     (0, a.jsxs)("div", {
                       children: [
-                        (0, a.jsx)(s.Avatar, {
-                          src: L,
-                          size: s.AvatarSizes.SIZE_40,
-                          "aria-label": "avatar",
+                        (0, a.jsx)(h.PopoutAvatar, {
+                          user: I,
+                          guildId: n.guild_id,
                         }),
-                        (0, a.jsx)(s.Heading, {
-                          className: _.popoutDescription,
-                          variant: "heading-md/normal",
-                          color: "always-white",
-                          lineClamp: 3,
-                          children: x(r, n, d),
-                        }),
+                        (0, a.jsx)(h.PopoutTitle, { children: C(s, n, I) }),
                       ],
                     }),
-                    (0, a.jsx)(E.GamingContentImage, {
+                    (0, a.jsx)(f.ContentImage, {
                       size: 80,
-                      src: T,
-                      className: _.contentImage,
+                      src: g,
+                      className: E.contentImage,
                     }),
                   ],
                 }),
-                (0, a.jsx)(E.ContentRowBadges, {
-                  className: _.badgeContainer,
-                  entry: r,
+                (0, a.jsx)(c.ContentRowBadges, {
+                  className: E.badgeContainer,
+                  entry: s,
                   textColor: "always-white",
-                  iconColor: s.tokens.colors.WHITE,
+                  iconColor: l.tokens.colors.WHITE,
                 }),
               ],
             }),
-            (0, a.jsxs)("div", {
-              className: _.reactions,
-              children: [
-                (0, a.jsxs)("div", {
-                  className: _.emojiHotrail,
-                  children: [
-                    (0, a.jsx)(I, { channel: n, onClickSuggestion: D }),
-                    (0, a.jsx)(i.ReactionPickerButton, { onSelectEmoji: D }),
-                  ],
-                }),
-                (0, a.jsx)(i.ReplyInput, {
-                  placeholder: C.default.Messages.TEXTAREA_PLACEHOLDER.format({
-                    channel: "@".concat(d.globalName),
-                  }),
-                  onEnter: b,
-                  setEditorRef: e => j(e),
-                }),
-              ],
+            (0, a.jsx)(h.PopoutReactor, {
+              onMessageReact: x,
+              user: I,
+              channel: n,
             }),
           ],
         });
@@ -10765,173 +10541,63 @@
       n.r(t),
         n.d(t, {
           useWatchContentData: function () {
-            return _;
-          },
-          WatchContentImage: function () {
-            return I;
+            return h;
           },
           default: function () {
-            return v;
+            return m;
           },
         });
       var a = n("37983"),
         l = n("884691"),
-        s = n("414456"),
-        i = n.n(s),
-        r = n("446674"),
-        u = n("77078"),
-        o = n("841098"),
-        d = n("442939"),
-        c = n("26989"),
-        f = n("305961"),
-        h = n("697218"),
-        m = n("547620"),
-        p = n("550368"),
-        E = n("387111"),
-        g = n("954016"),
-        S = n("782340"),
-        C = n("732414");
-      let _ = (e, t) => {
-          let n = (0, d.useGetOrFetchApplication)(e.extra.application_id),
-            a = null == n ? void 0 : n.getIconURL(128),
-            l = (0, r.useStateFromStores)([h.default], () =>
-              h.default.getUser(e.author_id)
-            ),
-            s = (0, r.useStateFromStores)([c.default], () =>
-              c.default.getMember(t.guild_id, e.author_id)
-            ),
-            i = (0, r.useStateFromStores)(
-              [f.default],
-              () => {
-                var e;
-                return (null == s ? void 0 : s.colorRoleId) != null
-                  ? null ===
-                      (e = f.default.getRole(t.guild_id, s.colorRoleId)) ||
-                    void 0 === e
-                    ? void 0
-                    : e.name
-                  : void 0;
-              },
-              [t.guild_id, s]
-            ),
-            u = null == s ? void 0 : s.colorString,
-            o = (0, p.getAssetImage)(
-              e.extra.application_id,
-              e.extra.media_assets_large_image,
-              [g.ImageSizes.LARGE, g.ImageSizes.LARGE]
-            );
-          return {
-            user: l,
-            applicationImageSrc: a,
-            mediaImageSrc: o,
-            colorRoleName: i,
-            colorString: u,
-          };
-        },
-        I = e => {
-          var t;
-          let {
-            entry: n,
-            size: l,
-            appimageSrc: s,
-            mediaImageSrc: i,
-            className: r,
-          } = e;
-          return null == i || "" === i
-            ? (0, a.jsx)(T, { src: s, size: 48, className: C.contentImage })
-            : (0, a.jsx)("img", {
-                alt:
-                  null !== (t = n.extra.media_assets_large_text) && void 0 !== t
-                    ? t
-                    : "icon",
-                src: i,
-                style: {
-                  width: "".concat(l, "px"),
-                  height: "".concat(l, "px"),
-                },
-                className: r,
-              });
-        },
-        T = e => {
-          let { src: t, size: n, className: l } = e,
-            s = (0, o.default)();
-          return null == t
-            ? (0, a.jsx)(m.default, {
-                width: n,
-                height: n,
-                color: "dark" === s ? "white" : "black",
-                className: l,
-              })
-            : (0, a.jsx)("img", {
-                style: {
-                  width: "".concat(n, "px"),
-                  height: "".concat(n, "px"),
-                },
-                className: l,
-                src: t,
-                alt: "icon",
-              });
-        };
-      var v = l.memo(e => {
+        s = n("446674"),
+        i = n("442939"),
+        r = n("697218"),
+        u = n("550368"),
+        o = n("816260"),
+        d = n("911589"),
+        c = n("954016"),
+        f = n("782340");
+      let h = e => {
+        let t = (0, i.useGetOrFetchApplication)(e.extra.application_id),
+          n = null == t ? void 0 : t.getIconURL(128),
+          a = (0, s.useStateFromStores)([r.default], () =>
+            r.default.getUser(e.author_id)
+          ),
+          l = (0, u.getAssetImage)(
+            e.extra.application_id,
+            e.extra.media_assets_large_image,
+            [c.ImageSizes.LARGE, c.ImageSizes.LARGE]
+          );
+        return { user: a, mediaImageSrc: null != l ? l : n };
+      };
+      var m = l.memo(e => {
         let { entry: t, channel: n, selected: l } = e,
-          {
-            user: s,
-            applicationImageSrc: r,
-            mediaImageSrc: o,
-            colorRoleName: d,
-            colorString: c,
-          } = _(t, n);
-        if (null == s) return null;
-        let f = E.default.getName(n.guild_id, n.id, s);
-        return (0, a.jsxs)("div", {
-          className: i(C.container, { [C.selected]: l }),
+          { mediaImageSrc: s } = h(t);
+        return (0, a.jsxs)(o.Card, {
+          selected: l,
           children: [
-            (0, a.jsxs)("div", {
-              className: C.textSection,
+            (0, a.jsxs)(o.CardInfoSection, {
               children: [
-                (0, a.jsxs)("div", {
-                  className: C.userSection,
-                  children: [
-                    (0, a.jsx)(u.Avatar, {
-                      src: s.getAvatarURL(n.guild_id, 80),
-                      size: u.AvatarSizes.SIZE_16,
-                      "aria-label": "avatar",
-                    }),
-                    (0, a.jsx)(u.NameWithRole, {
-                      color: null != c ? c : void 0,
-                      roleName: d,
-                      name: f,
-                      className: C.userName,
-                    }),
-                  ],
+                (0, a.jsx)(o.CardUser, {
+                  userId: t.author_id,
+                  channelId: n.id,
+                  guildId: n.guild_id,
                 }),
-                (0, a.jsxs)("div", {
-                  children: [
-                    (0, a.jsx)(u.Heading, {
-                      variant: "heading-sm/normal",
-                      className: C.contentDescription,
-                      lineClamp: 1,
-                      children:
-                        S.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format(
-                          { mediaTitle: t.extra.media_title }
-                        ),
-                    }),
-                    (0, a.jsx)(u.Text, {
-                      variant: "text-sm/normal",
-                      className: C.contentDescription,
-                      lineClamp: 1,
-                      children: t.extra.media_subtitle,
-                    }),
-                  ],
+                (0, a.jsx)(o.CardTitle, {
+                  children:
+                    f.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format(
+                      { mediaTitle: t.extra.media_title }
+                    ),
+                }),
+                (0, a.jsx)(o.CardSubtitle, {
+                  children: t.extra.media_subtitle,
                 }),
               ],
             }),
-            (0, a.jsx)(I, {
-              entry: t,
+            (0, a.jsx)(d.ContentImage, {
+              src: s,
               size: 48,
-              mediaImageSrc: o,
-              appimageSrc: r,
-              className: C.contentImage,
+              alt: t.extra.media_assets_large_text,
             }),
           ],
         });
@@ -10942,200 +10608,431 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return C;
           },
         }),
         n("686130"),
         n("781738");
       var a = n("37983");
       n("884691");
-      var l = n("77078"),
-        s = n("945701"),
-        i = n("788506"),
-        r = n("315102"),
-        u = n("387111"),
-        o = n("476774"),
-        d = n("773808"),
-        c = n("909346"),
-        f = n("873235"),
-        h = n("674567"),
-        m = n("55413"),
-        p = n("709377"),
-        E = n("782340"),
-        g = n("375005");
-      let S = e => {
-          let { channel: t, onClickSuggestion: n } = e,
-            s = (0, i.useFrequentlyUsedEmojis)(t.guild_id),
-            u = s
-              .slice(0, 5)
-              .map(e =>
-                null == e.id
-                  ? { emoji: e, url: e.url }
-                  : {
-                      emoji: e,
-                      url: (0, r.getEmojiURL)({
-                        id: e.id,
-                        animated: e.animated,
-                        size: 58,
-                      }),
-                    }
-              );
-          return (0, a.jsx)(a.Fragment, {
-            children: u.map(e => {
-              let { emoji: t, url: s } = e;
-              return null != s
-                ? (0, a.jsx)(l.Clickable, {
-                    onClick: () => n(t),
-                    className: g.emojiSuggestionButton,
-                    children: (0, a.jsx)("img", {
-                      alt: t.name,
-                      src: s,
-                      className: g.emoji,
-                    }),
-                  })
-                : null;
-            }),
-          });
-        },
-        C = (e, t, n) => {
+      var l = n("387111"),
+        s = n("476774"),
+        i = n("773808"),
+        r = n("909346"),
+        u = n("873235"),
+        o = n("674567"),
+        d = n("55413"),
+        c = n("911589"),
+        f = n("142853"),
+        h = n("709377"),
+        m = n("782340"),
+        p = n("782689");
+      let E = (e, t, n) => {
           let a =
-              E.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-            l = u.default.getName(t.guild_id, t.id, n),
-            s = e.extra.media_title,
-            i = a.plainFormat({ mediaTitle: s, userName: l });
-          return i.replaceAll("*", "");
+              m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+            s = l.default.getName(t.guild_id, t.id, n),
+            i = e.extra.media_title,
+            r = a.plainFormat({ mediaTitle: i, userName: s });
+          return r.replaceAll("*", "");
         },
-        _ = (e, t, n) => {
+        g = (e, t, n) => {
           let a =
-              E.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-            l = u.default.getName(t.guild_id, t.id, n),
-            s = e.extra.media_title;
-          return a.format({ userName: l, mediaTitle: s });
+              m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+            s = l.default.getName(t.guild_id, t.id, n),
+            i = e.extra.media_title;
+          return a.format({ userName: s, mediaTitle: i });
         },
-        I = (e, t) =>
-          E.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+        S = (e, t) =>
+          m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
             username: t.username,
             activity: e.extra.media_title,
           });
-      var T = e => {
-        let { closePopout: t, channel: n, entry: i, requestId: r } = e,
-          {
-            user: u,
-            applicationImageSrc: T,
-            mediaImageSrc: v,
-          } = (0, m.useWatchContentData)(i, n),
-          { primaryColor: x, secondaryColor: N } = (0, h.default)(T),
-          { primaryColor: A, secondaryColor: M } = (0, h.default)(v),
-          R = null != v && "" !== v ? A : x,
-          j = null != v && "" !== v ? M : N;
-        if (null == u) return null;
-        let L = u.getAvatarURL(n.guild_id, 128),
-          y = {
-            entry: i,
-            mediaImageSrc: v,
-            applicationImageSrc: T,
-            avatarSrc: L,
-            description: C(i, n, u),
-            timestamp: (0, o.formatEntryTimestamp)(i, Date.now()),
-            colors: [R, j],
-          },
-          O = I(i, u),
-          P = { entry: i, channelId: n.id, guildId: n.guild_id, requestId: r },
-          D = async e => {
-            if (null != e)
-              try {
-                let t = await (0, f.generateWatchContentImage)(y);
-                await (0, c.sendContentImageReact)({
-                  user: u,
-                  altText: O,
-                  file: t,
-                  reaction: e,
-                }),
-                  (0, d.trackInteraction)(
-                    p.ContentInventoryInteractionTypes
-                      .REACTION_EMOJI_REACT_SENT,
-                    P
-                  );
-              } finally {
-                t();
-              }
-          },
-          b = async e => {
-            try {
-              let t = await (0, f.generateWatchContentImage)(y);
-              await (0, c.sendContentImageReply)({
-                user: u,
-                altText: O,
-                file: t,
-                reply: e,
-              }),
-                (0, d.trackInteraction)(
-                  p.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
-                  P
-                );
-            } finally {
-              t();
-            }
-          };
-        return (0, a.jsxs)("div", {
-          className: g.popout,
+      var C = e => {
+        let { closePopout: t, channel: n, entry: l, requestId: m } = e,
+          { user: C, mediaImageSrc: _ } = (0, d.useWatchContentData)(l),
+          { primaryColor: I, secondaryColor: T } = (0, o.default)(_);
+        if (null == C) return null;
+        let v = async e => {
+          try {
+            let t = await (0, u.generateWatchContentImage)({
+              entry: l,
+              mediaImageSrc: _,
+              avatarSrc: C.getAvatarURL(n.guild_id, 128),
+              description: E(l, n, C),
+              timestamp: (0, s.formatEntryTimestamp)(l, Date.now()),
+              colors: [I, T],
+            });
+            await (0, r.sendContentImageReply)({
+              user: C,
+              altText: S(l, C),
+              file: t,
+              reply: e,
+            }),
+              (0, i.trackInteraction)(
+                h.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT,
+                { entry: l, channelId: n.id, guildId: n.guild_id, requestId: m }
+              );
+          } finally {
+            t();
+          }
+        };
+        return (0, a.jsxs)(f.Popout, {
           children: [
-            (0, a.jsx)("div", {
-              className: g.hero,
-              style: {
-                background: "linear-gradient(45deg, "
-                  .concat(R, ", ")
-                  .concat(j, ")"),
-              },
+            (0, a.jsx)(f.PopoutHero, {
+              backgroundImgSrc: _,
               children: (0, a.jsxs)("div", {
-                className: g.heroDetails,
+                className: p.heroDetails,
                 children: [
                   (0, a.jsxs)("div", {
                     children: [
-                      (0, a.jsx)(l.Avatar, {
-                        src: L,
-                        size: l.AvatarSizes.SIZE_40,
-                        "aria-label": "avatar",
+                      (0, a.jsx)(f.PopoutAvatar, {
+                        user: C,
+                        guildId: n.guild_id,
                       }),
-                      (0, a.jsx)(l.Heading, {
-                        className: g.popoutDescription,
-                        variant: "heading-md/normal",
-                        color: "always-white",
-                        lineClamp: 3,
-                        children: _(i, n, u),
-                      }),
+                      (0, a.jsx)(f.PopoutTitle, { children: g(l, n, C) }),
                     ],
                   }),
-                  (0, a.jsx)(m.WatchContentImage, {
-                    entry: i,
+                  (0, a.jsx)(c.ContentImage, {
                     size: 80,
-                    appimageSrc: T,
-                    mediaImageSrc: v,
-                    className: g.contentImage,
+                    src: _,
+                    className: p.contentImage,
                   }),
                 ],
               }),
             }),
-            (0, a.jsxs)("div", {
-              className: g.reactions,
-              children: [
-                (0, a.jsxs)("div", {
-                  className: g.emojiHotrail,
-                  children: [
-                    (0, a.jsx)(S, { channel: n, onClickSuggestion: D }),
-                    (0, a.jsx)(s.ReactionPickerButton, { onSelectEmoji: D }),
-                  ],
-                }),
-                (0, a.jsx)(s.ReplyInput, {
-                  placeholder: E.default.Messages.TEXTAREA_PLACEHOLDER.format({
-                    channel: "@".concat(u.globalName),
-                  }),
-                  onEnter: b,
-                }),
-              ],
+            (0, a.jsx)(f.PopoutReactor, {
+              onMessageReact: v,
+              user: C,
+              channel: n,
             }),
           ],
         });
+      };
+    },
+    816260: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          Card: function () {
+            return h;
+          },
+          CardInfoSection: function () {
+            return m;
+          },
+          CardUser: function () {
+            return p;
+          },
+          CardTitle: function () {
+            return E;
+          },
+          CardSubtitle: function () {
+            return g;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("414456"),
+        s = n.n(l),
+        i = n("446674"),
+        r = n("77078"),
+        u = n("26989"),
+        o = n("305961"),
+        d = n("697218"),
+        c = n("387111"),
+        f = n("753482");
+      function h(e) {
+        let { children: t, selected: n } = e;
+        return (0, a.jsx)("div", {
+          className: s(f.container, { [f.selected]: n }),
+          children: t,
+        });
+      }
+      function m(e) {
+        let { children: t } = e;
+        return (0, a.jsx)("div", { className: f.infoSection, children: t });
+      }
+      function p(e) {
+        let { userId: t, guildId: n, channelId: l } = e,
+          s = (0, i.useStateFromStores)([d.default], () =>
+            d.default.getUser(t)
+          ),
+          h = (0, i.useStateFromStores)([u.default], () =>
+            u.default.getMember(n, t)
+          ),
+          m = (0, i.useStateFromStores)(
+            [o.default],
+            () => {
+              var e;
+              return (null == h ? void 0 : h.colorRoleId) != null
+                ? null === (e = o.default.getRole(n, h.colorRoleId)) ||
+                  void 0 === e
+                  ? void 0
+                  : e.name
+                : void 0;
+            },
+            [n, h]
+          );
+        if (null == s) return null;
+        let p = null == h ? void 0 : h.colorString,
+          E = c.default.getName(n, l, s);
+        return (0, a.jsxs)("div", {
+          className: f.userSection,
+          children: [
+            (0, a.jsx)(r.Avatar, {
+              src: s.getAvatarURL(n, 80),
+              size: r.AvatarSizes.SIZE_16,
+              "aria-label": "avatar",
+            }),
+            (0, a.jsx)(r.NameWithRole, {
+              color: null != p ? p : void 0,
+              roleName: m,
+              name: E,
+              className: f.userName,
+            }),
+          ],
+        });
+      }
+      function E(e) {
+        let { children: t } = e;
+        return (0, a.jsx)(r.Heading, {
+          variant: "heading-sm/normal",
+          className: f.contentDescription,
+          lineClamp: 1,
+          children: t,
+        });
+      }
+      function g(e) {
+        let { children: t } = e;
+        return (0, a.jsx)(r.Text, {
+          variant: "text-sm/normal",
+          className: f.contentDescription,
+          lineClamp: 1,
+          children: t,
+        });
+      }
+    },
+    911589: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          ContentImage: function () {
+            return o;
+          },
+        });
+      var a = n("37983");
+      n("884691");
+      var l = n("414456"),
+        s = n.n(l),
+        i = n("841098"),
+        r = n("547620"),
+        u = n("913873");
+      function o(e) {
+        let { src: t, size: n, className: l, alt: o = "icon" } = e,
+          d = (0, i.default)();
+        return null == t
+          ? (0, a.jsx)(r.default, {
+              width: n,
+              height: n,
+              color: "dark" === d ? "white" : "black",
+              className: s(u.contentImage, l),
+            })
+          : (0, a.jsx)("img", {
+              style: { width: "".concat(n, "px"), height: "".concat(n, "px") },
+              className: s(u.contentImage, l),
+              src: t,
+              alt: o,
+            });
+      }
+    },
+    142853: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          Popout: function () {
+            return p;
+          },
+          PopoutHero: function () {
+            return E;
+          },
+          PopoutTitle: function () {
+            return g;
+          },
+          PopoutReactor: function () {
+            return S;
+          },
+          PopoutAvatar: function () {
+            return _;
+          },
+        }),
+        n("222007");
+      var a = n("37983"),
+        l = n("884691"),
+        s = n("77078"),
+        i = n("945701"),
+        r = n("788506"),
+        u = n("599110"),
+        o = n("315102"),
+        d = n("674567"),
+        c = n("709377"),
+        f = n("49111"),
+        h = n("782340"),
+        m = n("782689");
+      function p(e) {
+        let { children: t } = e;
+        return (0, a.jsx)("div", { className: m.popout, children: t });
+      }
+      function E(e) {
+        let { children: t, backgroundImgSrc: n } = e,
+          { primaryColor: l, secondaryColor: s } = (0, d.default)(n);
+        return (0, a.jsx)("div", {
+          className: m.hero,
+          style: {
+            background: "linear-gradient(45deg, "
+              .concat(l, ", ")
+              .concat(s, ")"),
+          },
+          children: t,
+        });
+      }
+      function g(e) {
+        let { children: t } = e;
+        return (0, a.jsx)(s.Heading, {
+          className: m.popoutTitle,
+          variant: "heading-md/normal",
+          color: "always-white",
+          lineClamp: 3,
+          children: t,
+        });
+      }
+      function S(e) {
+        let { channel: t, onMessageReact: n, user: s } = e,
+          [r, o] = l.useState(null),
+          d = e => {
+            null != e &&
+              null != r &&
+              (u.default.track(f.AnalyticEvents.CONTENT_POPOUT_EMOJI_CLICKED, {
+                surface_type: c.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
+                channel_id: t.id,
+                guild_id: t.guild_id,
+              }),
+              r.insertEmoji(e, !1, !1),
+              r.focus());
+          };
+        return (0, a.jsxs)("div", {
+          className: m.reactionContainer,
+          children: [
+            (0, a.jsxs)("div", {
+              className: m.emojiHotrail,
+              children: [
+                (0, a.jsx)(C, { channel: t, onClickSuggestion: d }),
+                (0, a.jsx)(i.ReactionPickerButton, { onSelectEmoji: d }),
+              ],
+            }),
+            (0, a.jsx)(i.ReplyInput, {
+              placeholder: h.default.Messages.TEXTAREA_PLACEHOLDER.format({
+                channel: "@".concat(s.globalName),
+              }),
+              onEnter: n,
+              setEditorRef: e => o(e),
+            }),
+          ],
+        });
+      }
+      let C = e => {
+        let { channel: t, onClickSuggestion: n } = e,
+          l = (0, r.useFrequentlyUsedEmojis)(t.guild_id),
+          i = l
+            .slice(0, 5)
+            .map(e =>
+              null == e.id
+                ? { emoji: e, url: e.url }
+                : {
+                    emoji: e,
+                    url: (0, o.getEmojiURL)({
+                      id: e.id,
+                      animated: e.animated,
+                      size: 58,
+                    }),
+                  }
+            );
+        return (0, a.jsx)(a.Fragment, {
+          children: i.map(e => {
+            let { emoji: t, url: l } = e;
+            return null != l
+              ? (0, a.jsx)(s.Clickable, {
+                  onClick: () => n(t),
+                  className: m.emojiSuggestionButton,
+                  children: (0, a.jsx)("img", {
+                    alt: t.name,
+                    src: l,
+                    className: m.emoji,
+                  }),
+                })
+              : null;
+          }),
+        });
+      };
+      function _(e) {
+        let { user: t, guildId: n } = e,
+          l = t.getAvatarURL(n, 128);
+        return (0, a.jsx)(s.Avatar, {
+          src: l,
+          size: s.AvatarSizes.SIZE_40,
+          "aria-label": "avatar",
+        });
+      }
+    },
+    36035: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return d;
+          },
+        }),
+        n("222007");
+      var a = n("37983"),
+        l = n("884691"),
+        s = n("862337"),
+        i = n("77078"),
+        r = n("866190"),
+        u = n("476774");
+      let o = e => {
+        let { entry: t, textColor: n } = e,
+          [o, d] = l.useState(Date.now()),
+          c = (0, r.useIsWindowFocused)(),
+          f = l.useMemo(() => {
+            let { hours: e } = (0, u.calculateActiveTimestampDurations)(t, o);
+            return e > 0 ? 3e5 : 1e3;
+          }, [t, o]);
+        l.useEffect(() => {
+          let e = new s.Interval();
+          return (
+            e.start(f, () => {
+              d(Date.now());
+            }),
+            !c && e.stop(),
+            () => e.stop()
+          );
+        }, [f, c]);
+        let h = l.useMemo(() => (0, u.formatEntryTimestamp)(t, o), [t, o]);
+        return (0, a.jsx)(i.Text, {
+          variant: "text-xs/normal",
+          tabularNumbers: !0,
+          color: n,
+          children: h,
+        });
+      };
+      var d = e => {
+        let { entry: t, textColor: n } = e,
+          l = (0, u.isEntryActive)(t);
+        return l
+          ? (0, a.jsx)(o, { entry: t, textColor: n })
+          : (0, a.jsx)(i.Text, {
+              variant: "text-xs/normal",
+              color: n,
+              children: (0, u.formatEntryTimestamp)(t, Date.now()),
+            });
       };
     },
     653319: function (e, t, n) {
@@ -44375,4 +44272,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4379b227b6ab4a49b04d.js.map
+//# sourceMappingURL=21718bb1d2684117efdb.js.map

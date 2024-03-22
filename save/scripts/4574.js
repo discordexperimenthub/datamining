@@ -556,8 +556,8 @@
         D = n("646718"),
         L = n("116319"),
         x = n("397336"),
-        G = n("843455"),
-        U = n("782340"),
+        U = n("843455"),
+        G = n("782340"),
         j = n("845797");
       ((a = i || (i = {})).EDITOR = "EDITOR"), (a.SETTINGS = "SETTINGS");
       let k = Object.freeze({
@@ -580,16 +580,16 @@
               .with(
                 { type: "EDITOR", isCoachmark: !0, isPreview: !0 },
                 () =>
-                  U.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
+                  G.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER
               )
               .with(
                 { type: "EDITOR", isCoachmark: !0 },
                 () =>
-                  U.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
+                  G.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER
               )
               .otherwise(
                 () =>
-                  U.default.Messages
+                  G.default.Messages
                     .USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE
               );
           return (0, s.jsxs)("div", {
@@ -616,28 +616,28 @@
           if (o && a) return null;
           let r = (0, u.match)({ type: i, isPreview: a, isCoachmark: l })
             .with({ type: "EDITOR", isPreview: !0 }, () =>
-              U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
+              G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
                 { onPremiumClick: E.navigateToPremiumMarketingPage }
               )
             )
             .with(
               { type: "EDITOR", isCoachmark: !0 },
               () =>
-                U.default.Messages
+                G.default.Messages
                   .CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK
             )
             .with(
               { type: "EDITOR", isPreview: !1 },
-              () => U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
+              () => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION
             )
             .with({ isPreview: !0 }, () =>
-              U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format(
+              G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format(
                 { onPremiumClick: E.navigateToPremiumMarketingPage }
               )
             )
             .otherwise(
               () =>
-                U.default.Messages
+                G.default.Messages
                   .CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS
             );
           return (0, s.jsx)(g.Heading, {
@@ -689,14 +689,14 @@
           className: r(j.presets, t),
           children: [
             (0, s.jsx)(P.DefaultThemeSelection, {
-              theme: G.ThemeTypes.LIGHT,
+              theme: U.ThemeTypes.LIGHT,
               isSelected: o && !u && (0, f.isThemeLight)(a),
-              onSelect: () => c(G.ThemeTypes.LIGHT),
+              onSelect: () => c(U.ThemeTypes.LIGHT),
             }),
             (0, s.jsx)(P.DefaultThemeSelection, {
-              theme: G.ThemeTypes.DARK,
+              theme: U.ThemeTypes.DARK,
               isSelected: o && !u && (0, f.isThemeDark)(a),
-              onSelect: () => c(G.ThemeTypes.DARK),
+              onSelect: () => c(U.ThemeTypes.DARK),
             }),
             (0, s.jsx)(P.DefaultThemeSelection, {
               theme: "system",
@@ -725,7 +725,7 @@
             }),
             [M, A] = l.useState(!1),
             [R, x] = l.useState(-1),
-            G = (0, d.useStateFromStores)(
+            U = (0, d.useStateFromStores)(
               [h.default],
               () => h.default.useReducedMotion
             ),
@@ -776,7 +776,7 @@
                     type: D.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2,
                     children:
-                      U.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
+                      G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format(
                         { onPremiumClick: E.navigateToPremiumMarketingPage }
                       ),
                   })
@@ -844,7 +844,7 @@
                         }),
                         (0, s.jsx)(C.default, {
                           importData: t,
-                          shouldAnimate: !G,
+                          shouldAnimate: !U,
                           className: j.sparkles,
                         }),
                       ],
@@ -970,8 +970,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "277812",
-          versionHash: "8d9a4dee5235b55e4b6dc4f3072d8989f0330655",
+          buildNumber: "277825",
+          versionHash: "5042294ec44cd439fa3509683cef3a0657140a21",
         };
       }
       n.r(t),
@@ -1502,10 +1502,10 @@
             return x;
           },
           autoMigrateToNewSystem: function () {
-            return G;
+            return U;
           },
           useSaveSettings: function () {
-            return U;
+            return G;
           },
           revertToOldSystem: function () {
             return B;
@@ -1674,7 +1674,7 @@
           return i === b.Mode.UseGreyDot;
         });
       }
-      function G() {
+      function U() {
         let e = Object.values(p.default.getGuilds()),
           t = {};
         for (let a of e) {
@@ -1705,7 +1705,7 @@
               .length,
           });
       }
-      function U(e) {
+      function G(e) {
         let [t, n] = i.useState(!1),
           [a, s] = i.useState(!1),
           l = i.useCallback(
@@ -2592,17 +2592,19 @@
         c = n("699668"),
         f = n("49111");
       class g extends o.default {
-        async handlePostConnectionOpen() {
+        handlePostConnectionOpen() {
           if (
-            s.default.get("turnedOffNewNotifications") ||
-            !r.default.hasConsented(f.Consents.PERSONALIZATION) ||
-            !d.NotificationsExperiment.getCurrentConfig(
+            !s.default.get("turnedOffNewNotifications") &&
+            !!r.default.hasConsented(f.Consents.PERSONALIZATION) &&
+            !!d.NotificationsExperiment.getCurrentConfig(
               { location: "NotificationMigrationManager" },
               { autoTrackExposure: !1 }
-            ).enabled ||
-            u.default.useNewNotifications
+            ).enabled
           )
-            return;
+            !u.default.useNewNotifications &&
+              (this.checkOldUserExperiment(), this.checkNewUserExperiment());
+        }
+        async checkOldUserExperiment() {
           let { logExposure: e, autoOpen: t } =
             d.UnreadsEntryPointExperiment.getCurrentConfig(
               { location: "NotificationMigrationManager" },
@@ -2610,32 +2612,44 @@
             );
           if (!e) return;
           let {
-              body: { guild_noise: o, usage: g },
+              body: { guild_noise: s, usage: o },
             } = await a.HTTP.get("/users/@me/notification-migration-data2"),
-            m = (0, c.transformUsageData)(g),
-            { default: h } = await n.el("923660").then(n.bind(n, "923660"));
+            r = (0, c.transformUsageData)(o),
+            { default: u } = await n.el("923660").then(n.bind(n, "923660"));
           if (!(0, l.hasAnyModalOpen)())
             d.UnreadsEntryPointExperiment.trackExposure({
               location: "NotificationMigrationManager",
             }),
               t &&
-                ((0, c.hasGoodCandidateServers)(o, m)
+                ((0, c.hasGoodCandidateServers)(s, r)
                   ? (0, l.openModal)(
                       e =>
-                        (0, i.jsx)(h, {
+                        (0, i.jsx)(u, {
                           ...e,
                           dismissable: !1,
-                          guildPain: o,
-                          myUsage: m,
+                          guildPain: s,
+                          myUsage: r,
                         }),
                       { onCloseRequest: () => {} }
                     )
                   : (0, c.autoMigrateToNewSystem)());
         }
+        checkNewUserExperiment() {
+          let { logExposure: e, enabled: t } =
+            d.NewUserUnreadsEntryPointExperiment.getCurrentConfig(
+              { location: "NotificationMigrationManager" },
+              { autoTrackExposure: !1 }
+            );
+          e &&
+            (d.NewUserUnreadsEntryPointExperiment.trackExposure({
+              location: "NotificationMigrationManager",
+            }),
+            t && (0, c.autoMigrateToNewSystem)());
+        }
         constructor(...e) {
           super(...e),
             (this.actions = {
-              POST_CONNECTION_OPEN: this.handlePostConnectionOpen,
+              POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
             });
         }
       }
@@ -2720,4 +2734,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4574.6f0be86d389cf1fcfe01.js.map
+//# sourceMappingURL=4574.afbe982effe68b46c5d2.js.map

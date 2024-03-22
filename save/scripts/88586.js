@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["79193"],
+  ["88586"],
   {
     608905: function (e, t, s) {
       "use strict";
@@ -372,10 +372,6 @@
     996105: function (e, t, s) {
       "use strict";
       e.exports = s.p + "86d223650b086e7b9455.svg";
-    },
-    131810: function (e, t, s) {
-      "use strict";
-      e.exports = s.p + "289b6053fc6a89d75452.svg";
     },
     460026: function (e, t, s) {
       "use strict";
@@ -1380,8 +1376,8 @@
         C = s("791160"),
         g = s("661579"),
         O = s("539938"),
-        M = s("915639"),
-        P = s("161778"),
+        P = s("915639"),
+        M = s("161778"),
         h = s("305961"),
         L = s("957255"),
         x = s("71010"),
@@ -2044,8 +2040,8 @@
           l.default.connectStores(
             [
               v.default,
-              P.default,
               M.default,
+              P.default,
               B.default,
               U.default,
               b.default,
@@ -2109,8 +2105,8 @@
                 }),
                 isInTestMode: null != n && u,
                 matureAgree: v.default.didMatureAgree,
-                theme: P.default.theme,
-                locale: M.default.locale,
+                theme: M.default.theme,
+                locale: P.default.locale,
                 guild: null != o ? h.default.getGuild(o.getGuildId()) : null,
               };
             }
@@ -2226,7 +2222,7 @@
       s.r(t),
         s.d(t, {
           getPageSize: function () {
-            return P;
+            return M;
           },
           default: function () {
             return L;
@@ -2256,11 +2252,11 @@
         C = s("49111"),
         g = s("782340"),
         O = s("504659");
-      let M = (0, f.makeLazy)({
+      let P = (0, f.makeLazy)({
         createPromise: () => s.el("972119").then(s.bind(s, "972119")),
         webpackId: "972119",
       });
-      function P(e) {
+      function M(e) {
         return e < p.PAGE_WIDTH_THRESHOLD
           ? p.PageSizes.SMALL
           : p.PageSizes.LARGE;
@@ -2304,7 +2300,7 @@
                   className: O.applicationStore,
                   children: this.renderContent(),
                 })
-              : (0, a.jsx)(M, {
+              : (0, a.jsx)(P, {
                   className: O.applicationStore,
                   location: t,
                   render: this.renderContent,
@@ -2334,7 +2330,7 @@
                   slug: r,
                   location: i,
                   storeListingId: o.store_listing_id,
-                  pageSize: P(l),
+                  pageSize: M(l),
                 }),
               });
             }),
@@ -2935,7 +2931,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return P;
+            return M;
           },
         }),
         s("222007");
@@ -2962,7 +2958,7 @@
         C = s("49111"),
         g = s("782340"),
         O = s("742675");
-      class M extends r.PureComponent {
+      class P extends r.PureComponent {
         renderMemberInfo() {
           let { approximateMemberCount: e, approximatePresenceCount: t } =
             this.props.guild;
@@ -3106,7 +3102,7 @@
             });
         }
       }
-      var P = (0, _.default)(
+      var M = (0, _.default)(
         o.default.connectStores([R.default, E.default], e => {
           let { guild: t } = e,
             s = E.default.isLurking(t.id);
@@ -3114,7 +3110,7 @@
             isInGuild: null != R.default.getGuild(t.id) && !s,
             isLurking: s,
           };
-        })(M)
+        })(P)
       );
     },
     984376: function (e, t, s) {
@@ -3522,8 +3518,8 @@
         C = s("19530"),
         g = s("215541"),
         O = s("663411"),
-        M = s("126304"),
-        P = s("674065"),
+        P = s("126304"),
+        M = s("674065"),
         h = s("771116"),
         L = s("309920"),
         x = s("480905"),
@@ -3702,7 +3698,7 @@
                 description:
                   _.default.Messages
                     .PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION_V2,
-                imageSource: k(r, O, M),
+                imageSource: k(r, O, P),
                 imageClassName: t.superReactionsImage,
               },
               upload: {
@@ -3724,7 +3720,7 @@
                 description:
                   _.default.Messages
                     .PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                imageSource: k(r, P, h),
+                imageSource: k(r, M, h),
                 imageClassName: t.videoBackgroundImage,
               },
             };
@@ -3829,10 +3825,10 @@
             return g;
           },
           useTenureRewardBadgeDescription: function () {
-            return M;
+            return P;
           },
           useShouldShowConfettiAndGlow: function () {
-            return P;
+            return M;
           },
           useClearTenureBadge: function () {
             return h;
@@ -3960,7 +3956,7 @@
               return [];
           }
         },
-        M = () => {
+        P = () => {
           let e = p(),
             t = null == e ? void 0 : e.nitroTenureStatus,
             [s, r] = a.useState(O(t)),
@@ -3980,7 +3976,7 @@
               : null
             : null;
         },
-        P = () => {
+        M = () => {
           var e;
           let t =
               null === (e = p()) || void 0 === e ? void 0 : e.nitroTenureStatus,
@@ -4153,8 +4149,8 @@
         C = s("854299"),
         g = s("700684"),
         O = s("479997"),
-        M = s("667466"),
-        P = s("884306"),
+        P = s("667466"),
+        M = s("884306"),
         h = s("908173"),
         L = s("930767"),
         x = s("398683"),
@@ -4181,7 +4177,7 @@
         ["GR", I],
         ["FI", E],
         ["PT", L],
-        ["NO", P],
+        ["NO", M],
         ["BE", n],
         ["AT", r],
         ["CH", l],
@@ -4189,7 +4185,7 @@
         ["DE", d],
         ["ES", _],
         ["IT", N],
-        ["NL", M],
+        ["NL", P],
         ["PL", h],
         ["HR", f],
       ]);
@@ -4375,11 +4371,11 @@
             [A, p] = r.useState(null),
             { confettiCanvas: C } = r.useContext(i.ConfettiCannonContext),
             g = (0, n.useConfettiCannon)(null != R ? R : C, A),
-            [O, M] = r.useState(!1);
+            [O, P] = r.useState(!1);
           r.useEffect(() => {
             O && (null == N || N());
           });
-          let P = r.useMemo(() => {
+          let M = r.useMemo(() => {
             if (null != d) return [{ src: d, colorize: !1 }];
           }, [d]);
           return (
@@ -4426,7 +4422,7 @@
                       })(t.getBoundingClientRect(), E, T, I, f, S, m),
                       null != _ ? _ : 50
                     ),
-                      a === e.length - 1 && null != N && M(!0);
+                      a === e.length - 1 && null != N && P(!0);
                   }, 60 * a)
                 )),
                 () => {
@@ -4436,7 +4432,7 @@
             }, [g, t, c, _, E, T, I, f, S, m, N]),
             (0, a.jsx)(n.SpriteCanvas, {
               ref: p,
-              sprites: null != P ? P : l.COMMON_CONFETTI_SPRITES,
+              sprites: null != M ? M : l.COMMON_CONFETTI_SPRITES,
               colors: null != s ? s : l.COMMON_CONFETTI_COLORS,
               spriteWidth: l.COMMON_CONFETTI_MAX_SPRITE_SIZE,
               spriteHeight: l.COMMON_CONFETTI_MAX_SPRITE_SIZE,
@@ -4444,93 +4440,6 @@
           );
         });
       var c = d;
-    },
-    871948: function (e, t, s) {
-      "use strict";
-      s.r(t),
-        s.d(t, {
-          default: function () {
-            return T;
-          },
-        });
-      var a = s("37983"),
-        r = s("884691"),
-        n = s("414456"),
-        i = s.n(n),
-        l = s("446674"),
-        o = s("77078"),
-        u = s("106435"),
-        d = s("446488"),
-        c = s("52904"),
-        _ = s("782340"),
-        E = s("270166");
-      function T(e) {
-        let { smallerText: t, className: s, textColor: n } = e,
-          u = (0, l.useStateFromStores)([d.default], () =>
-            d.default.affinities.slice(0, 3).reverse()
-          ),
-          c = u.map((e, t) =>
-            (0, a.jsx)(I, { affinity: e, applyMask: t !== u.length - 1 }, e.id)
-          ),
-          T = e => (null != e.globalName ? e.globalName : e.username),
-          f = r.useMemo(
-            () =>
-              3 === u.length
-                ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
-                    username: T(u[2]),
-                  })
-                : 2 === u.length
-                  ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
-                      username: T(u[1]),
-                      otherUsername: T(u[0]),
-                    })
-                  : 1 === u.length
-                    ? _.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format(
-                        { username: T(u[0]) }
-                      )
-                    : "",
-            [u]
-          );
-        return 0 === u.length
-          ? null
-          : (0, a.jsxs)("div", {
-              className: i(E.container, s),
-              children: [
-                (0, a.jsx)("div", { className: E.iconContainer, children: c }),
-                (0, a.jsx)("div", {
-                  className: E.textContainer,
-                  children: (0, a.jsx)(function () {
-                    return t
-                      ? (0, a.jsx)(o.Text, {
-                          variant: "text-lg/medium",
-                          color: n,
-                          children: f,
-                        })
-                      : (0, a.jsx)(o.Heading, {
-                          variant: "heading-xl/medium",
-                          color: n,
-                          children: f,
-                        });
-                  }, {}),
-                }),
-              ],
-            });
-      }
-      function I(e) {
-        let { affinity: t, applyMask: s } = e,
-          { avatarSrc: r, eventHandlers: n } = (0, u.default)({
-            user: t,
-            size: c.AvatarSizes.SIZE_32,
-            animateOnHover: !0,
-          });
-        return (0, a.jsx)(o.Avatar, {
-          className: i(E.icon, { [E.mask]: s }),
-          src: r,
-          "aria-label": t.username,
-          size: c.AvatarSizes.SIZE_32,
-          ...n,
-        });
-      }
     },
     672950: function (e, t, s) {
       "use strict";
@@ -4696,8 +4605,8 @@
         C = s("764364"),
         g = s("446488"),
         O = s("456015"),
-        M = s("982457"),
-        P = s("300962"),
+        P = s("982457"),
+        M = s("300962"),
         h = s("959905"),
         L = s("154889"),
         x = s("917247"),
@@ -4713,7 +4622,7 @@
             s = (0, f.useBlockedPaymentsConfig)(),
             { AnalyticsLocationProvider: n, sourceAnalyticsLocations: G } = (0,
             I.default)(T.default.PREMIUM_MARKETING),
-            { enabled: k } = (0, P.default)(),
+            { enabled: k } = (0, M.default)(),
             y = (0, l.useStateFromStores)([A.default], () =>
               A.default.hasFetchedSubscriptions()
             ),
@@ -4761,7 +4670,7 @@
                   ? (0, O.acknowledgeUserOffer)(F, w)
                   : null != F &&
                     null == F.expires_at &&
-                    M.default.acknowledgeUserTrialOffer(F);
+                    P.default.acknowledgeUserTrialOffer(F);
               }
             }, [s, F, w]),
             r.useEffect(() => {
@@ -5288,7 +5197,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return M;
+            return P;
           },
         });
       var a = s("37983");
@@ -5380,7 +5289,7 @@
             ),
         });
       }
-      var M = e => {
+      var P = e => {
         let {
             isFullscreen: t,
             className: s,
@@ -5391,10 +5300,10 @@
           N = (0, I.useMarketingOptimizationExperiment)({
             autoTrackExposure: !1,
           }),
-          { AnalyticsLocationProvider: M } = (0, u.default)(
+          { AnalyticsLocationProvider: P } = (0, u.default)(
             o.default.PREMIUM_MARKETING_HERO_CTA
           ),
-          P = (0, T.useHasActiveTrial)(),
+          M = (0, T.useHasActiveTrial)(),
           h = (0, E.useIsInPremiumOfferExperience)(),
           L = (0, f.useIsEligibleForBogoPromotion)(),
           { marketingEnabled: x } = c.default.useExperiment(
@@ -5407,7 +5316,7 @@
           );
         v.length > 0 && c.default.trackExposure({ location: "HeroHeading" });
         let D = x && v.length > 0;
-        return (0, a.jsx)(M, {
+        return (0, a.jsx)(P, {
           children: (0, a.jsxs)("div", {
             className: n(p.container, s, {
               [p.settingsContainer]: !t && !N,
@@ -5453,7 +5362,7 @@
                       : (0, a.jsx)(C, {
                           subscriptionTier: r,
                           inOfferExperience: h,
-                          inTrial: P,
+                          inTrial: M,
                         }),
                   D && !N && (0, a.jsx)(O, { variant: "text-md/normal" }),
                 ],
@@ -5570,11 +5479,11 @@
               subtitleClassName: g,
             } = e,
             O = null != C ? o.CardVariantsInfo[C] : void 0,
-            M = (0, l.useFreeBoostUserTenureReward)(),
-            P =
-              (null == M ? void 0 : M.nitroTenureStatus) ===
+            P = (0, l.useFreeBoostUserTenureReward)(),
+            M =
+              (null == P ? void 0 : P.nitroTenureStatus) ===
               d.NitroRewardStatus.REDEEMABLE,
-            h = null == M ? void 0 : M.nitroTenureStatus;
+            h = null == P ? void 0 : P.nitroTenureStatus;
           switch (h) {
             case d.NitroRewardStatus.REDEEMABLE:
               (s = T), (r = "unlocked icon");
@@ -5618,7 +5527,7 @@
                       0 !== p.length &&
                         null != m &&
                         (0, a.jsx)(i.Button, {
-                          disabled: !P,
+                          disabled: !M,
                           fullWidth: !0,
                           onClick: m,
                           children: (0, a.jsxs)("div", {
@@ -5679,11 +5588,11 @@
               cardVariant: g,
             } = e,
             O = (0, d.usePremiumTrialOffer)(),
-            M = null == O ? void 0 : O.subscription_trial,
-            P = (0, u.usePremiumDiscountOffer)(),
+            P = null == O ? void 0 : O.subscription_trial,
+            M = (0, u.usePremiumDiscountOffer)(),
             h = (0, l.formatTrialCtaIntervalDuration)({
-              intervalType: null == M ? void 0 : M.interval,
-              intervalCount: null == M ? void 0 : M.interval_count,
+              intervalType: null == P ? void 0 : P.interval,
+              intervalCount: null == P ? void 0 : P.interval_count,
             }),
             L = (0, o.useResponseOnUserState)({
               defaultResponse: f.default.Messages.PREMIUM_SETTINGS_GET,
@@ -5692,7 +5601,7 @@
               onTier2TrialOffer: h,
               onTier0TrialOffer: h,
               onDiscountOffer: f.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                percent: null == P ? void 0 : P.discount.amount,
+                percent: null == M ? void 0 : M.discount.amount,
               }),
             }),
             x =
@@ -5737,7 +5646,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return M;
+            return P;
           },
         }),
         s("222007");
@@ -5834,7 +5743,7 @@
             }),
           });
         };
-      var M = e => {
+      var P = e => {
         let t,
           {
             className: s,
@@ -5845,7 +5754,7 @@
           I = (0, S.usePerkCards)({ styles: p, selectedPremiumType: n }),
           f = (0, l.default)([u.default], () => u.default.useReducedMotion),
           { analyticsLocations: A } = (0, c.default)(),
-          M = (0, T.useIsRemixANitroPerk)();
+          P = (0, T.useIsRemixANitroPerk)();
         return (
           (t =
             n !== m.PremiumTypes.TIER_0
@@ -5855,7 +5764,7 @@
                   I.upload,
                   I.customAppIcons,
                   I.soundboard,
-                  M ? I.remix : I.videoBackground,
+                  P ? I.remix : I.videoBackground,
                   I.superReactions,
                   I.stickersPerkDiscoverability,
                   I.badgeAlt,
@@ -6068,8 +5977,8 @@
           } = e,
           g = r.useRef(null),
           O = (0, _.useShouldScrollToWhatsNew)(),
-          M = (0, u.default)("perks-discoverability"),
-          P = (0, d.useMarketingOptimizationExperiment)({
+          P = (0, u.default)("perks-discoverability"),
+          M = (0, d.useMarketingOptimizationExperiment)({
             autoTrackExposure: !1,
           });
         (0, _.useClearNewBadge)(), (0, c.useClearTenureBadge)();
@@ -6088,7 +5997,7 @@
           D = (0, I.getFilteredPerksDiscoverabilityCards)(
             x,
             n,
-            M,
+            P,
             C,
             null == v ? void 0 : v.showNotification
           ),
@@ -6121,7 +6030,7 @@
                   title: L.title,
                   headerClassname: p,
                 }),
-                !P &&
+                !M &&
                   (0, a.jsx)(o.Text, {
                     variant: "text-lg/normal",
                     color: "header-primary",
@@ -6199,8 +6108,8 @@
         C = s("511143"),
         g = s("49111"),
         O = s("994428"),
-        M = s("782340"),
-        P = s("635650");
+        P = s("782340"),
+        M = s("635650");
       let h = { xMin: -80, xMax: 80, yMin: -150, yMax: -20 },
         L = r.memo(e => {
           let {
@@ -6295,31 +6204,31 @@
           s)
             ? t === S.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED
               ? (0, a.jsx)("div", {
-                  className: i(P.flipCardContainer, { [P.forceShadow]: N }),
+                  className: i(M.flipCardContainer, { [M.forceShadow]: N }),
                   onMouseEnter: Q,
                   onFocus: Q,
                   onMouseLeave: Z,
                   onBlur: Z,
                   children: (0, a.jsxs)("div", {
-                    className: i(P.flipCard, {
-                      [P.partialFlipCard]: !X,
-                      [P.ultraFlipCard]: X,
-                      [P.rotateCard]: X && 3 === z,
-                      [P.reducedMotion]: v,
+                    className: i(M.flipCard, {
+                      [M.partialFlipCard]: !X,
+                      [M.ultraFlipCard]: X,
+                      [M.rotateCard]: X && 3 === z,
+                      [M.reducedMotion]: v,
                     }),
                     children: [
                       (0, a.jsx)("div", {
-                        className: P.flipCardFront,
+                        className: M.flipCardFront,
                         children: (0, a.jsx)(x, {
                           ...e,
-                          className: P.topCover,
+                          className: M.topCover,
                         }),
                       }),
                       (0, a.jsx)("div", {
-                        className: P.flipCardBack,
+                        className: M.flipCardBack,
                         children: (0, a.jsx)(x, {
                           ...e,
-                          className: P.topCover,
+                          className: M.topCover,
                         }),
                       }),
                     ],
@@ -6329,10 +6238,10 @@
                 ? (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                       className: i({
-                        [P.noFlipCardContainer]: !K,
-                        [P.noFlipCardContainerCarousel]: K,
-                        [P.forceShadow]: N,
-                        [P.reducedMotion]: v,
+                        [M.noFlipCardContainer]: !K,
+                        [M.noFlipCardContainerCarousel]: K,
+                        [M.forceShadow]: N,
+                        [M.reducedMotion]: v,
                       }),
                       children: [
                         (0, a.jsx)(x, {
@@ -6360,18 +6269,18 @@
                     }),
                   })
                 : (0, a.jsx)("div", {
-                    className: i(P.flipCardContainer, { [P.forceShadow]: N }),
+                    className: i(M.flipCardContainer, { [M.forceShadow]: N }),
                     children: (0, a.jsxs)(d.Clickable, {
                       onClick: () => b(!0),
-                      className: i(P.flipCard, P.clickable, {
-                        [P.flipped]: D,
-                        [P.partialFlipCard]: !U && !D,
-                        [P.reducedMotion]: v,
+                      className: i(M.flipCard, M.clickable, {
+                        [M.flipped]: D,
+                        [M.partialFlipCard]: !U && !D,
+                        [M.reducedMotion]: v,
                       }),
                       onTransitionEnd: e => {
                         D &&
                           "transform" === e.propertyName &&
-                          e.target.classList.contains(P.flipCard) &&
+                          e.target.classList.contains(M.flipCard) &&
                           (j(!0),
                           T.default.track(
                             g.AnalyticEvents
@@ -6383,26 +6292,26 @@
                       },
                       children: [
                         (0, a.jsx)("div", {
-                          className: P.flipCardHidden,
+                          className: M.flipCardHidden,
                           "aria-hidden": !0,
                           children: (0, a.jsx)(x, { ...e }),
                         }),
                         (0, a.jsx)("div", {
-                          className: P.flipCardFront,
+                          className: M.flipCardFront,
                           children: (0, a.jsx)(x, {
                             ...W.upcomingDropUntimed,
                             pillText: "",
                           }),
                         }),
                         (0, a.jsx)("div", {
-                          className: P.flipCardBack,
+                          className: M.flipCardBack,
                           children: (0, a.jsx)(x, { ...e, description: "" }),
                         }),
                         (0, a.jsx)("div", {
-                          className: P.flipCardButtonContainer,
+                          className: M.flipCardButtonContainer,
                           children: (0, a.jsx)(d.Button, {
                             onClick: () => b(!0),
-                            children: M.default.Messages.REVEAL,
+                            children: P.default.Messages.REVEAL,
                           }),
                         }),
                       ],
@@ -6428,7 +6337,7 @@
             cardType: C,
             onClick: g,
             backgroundImage: O,
-            pillText: M,
+            pillText: P,
             perkImage: h,
           } = e,
           L =
@@ -6448,14 +6357,14 @@
           }, [D]),
           (0, a.jsxs)(d.Clickable, {
             className: i(
-              P.card,
+              M.card,
               f,
               !0 === b
                 ? null === (s = x.cardContainer) || void 0 === s
                   ? void 0
                   : s.className
                 : void 0,
-              { [P.clickable]: null != g, [P.hideOverflow]: L }
+              { [M.clickable]: null != g, [M.hideOverflow]: L }
             ),
             onMouseEnter: T,
             style: {
@@ -6463,11 +6372,11 @@
             },
             onClick: g,
             children: [
-              null != M &&
+              null != P &&
                 (0, a.jsx)(d.Text, {
                   variant: "text-xs/semibold",
-                  className: P.pill,
-                  children: M,
+                  className: M.pill,
+                  children: P,
                 }),
               (0, a.jsx)("div", { ref: t }),
               (0, a.jsx)(A.default, {
@@ -6479,7 +6388,7 @@
                 descriptionCta: c,
                 onCtaClick: E,
                 perkComponent: R,
-                subtitleClassName: P.cardSubtitle,
+                subtitleClassName: M.cardSubtitle,
                 cardVariant: S,
               }),
               v &&
@@ -6494,7 +6403,7 @@
                   cardVariant: S,
                   perkComponent: R,
                 }),
-              (0, a.jsx)("div", { className: i(P.cover, P.above), ref: t }),
+              (0, a.jsx)("div", { className: i(M.cover, M.above), ref: t }),
             ],
           })
         );
@@ -6772,8 +6681,8 @@
         C = s("641078"),
         g = s("400307"),
         O = s("513516"),
-        M = s("218435"),
-        P = s("881155"),
+        P = s("218435"),
+        M = s("881155"),
         h = s("646718"),
         L = s("782340"),
         x = s("962962"),
@@ -6967,7 +6876,7 @@
               column1: (0, a.jsxs)(a.Fragment, {
                 children: [
                   J === h.PremiumSubscriptionSKUs.TIER_2 || ei
-                    ? (0, a.jsx)(P.default, {
+                    ? (0, a.jsx)(M.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
                         showIcon: !1,
@@ -6977,14 +6886,14 @@
                           : u.ButtonColors.WHITE,
                         buttonShineClassName: void 0,
                       })
-                    : (0, a.jsx)(P.default, {
+                    : (0, a.jsx)(M.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
                         showIcon: !1,
                       }),
                   q === h.PremiumTypes.TIER_2 || null != J
                     ? null
-                    : (0, a.jsx)(M.default, {
+                    : (0, a.jsx)(P.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_0,
                       }),
@@ -6993,7 +6902,7 @@
               column2: (0, a.jsxs)(a.Fragment, {
                 children: [
                   J === h.PremiumSubscriptionSKUs.TIER_0
-                    ? (0, a.jsx)(P.default, {
+                    ? (0, a.jsx)(M.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                         showIcon: !1,
@@ -7003,7 +6912,7 @@
                           : u.ButtonColors.WHITE,
                         buttonShineClassName: void 0,
                       })
-                    : (0, a.jsx)(P.default, {
+                    : (0, a.jsx)(M.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                         showIcon: !1,
@@ -7011,7 +6920,7 @@
                       }),
                   q === h.PremiumTypes.TIER_0 || null != J
                     ? null
-                    : (0, a.jsx)(M.default, {
+                    : (0, a.jsx)(P.default, {
                         className: x.button,
                         subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2,
                       }),
@@ -7172,7 +7081,7 @@
           }),
           g = (0, o.usePremiumDiscountOffer)(),
           O = null != p && c === p.sku_id,
-          M = f
+          P = f
             ? _.default.Messages.BOGO_CLAIM_OFFER
             : null != g
               ? I(c, S, R, g.discount.amount)
@@ -7194,7 +7103,7 @@
                 ? E.brandShine
                 : void 0,
           trialId: null == p ? void 0 : p.id,
-          buttonText: M,
+          buttonText: P,
           buttonTextClassName: O ? E.freeTrialText : void 0,
           onlyShineOnHover: !0,
           subscriptionTier: c,
@@ -7382,8 +7291,8 @@
         C = s("959905"),
         g = s("154889"),
         O = s("917247"),
-        M = s("460680"),
-        P = s("411205"),
+        P = s("460680"),
+        M = s("411205"),
         h = s("934570"),
         L = s("641078"),
         x = s("400307"),
@@ -7612,10 +7521,10 @@
                   [z.premiumTierCardsContainerFullscreen]: s && !n,
                 }),
                 children: [
-                  (0, a.jsx)(M.default, { isFullscreen: s }),
+                  (0, a.jsx)(P.default, { isFullscreen: s }),
                   s &&
                     e_ &&
-                    (0, a.jsx)(P.default, { localizedPricingPromo: ed }),
+                    (0, a.jsx)(M.default, { localizedPricingPromo: ed }),
                   (0, a.jsx)(o.VisibilitySensor, {
                     onChange: e => G(e),
                     threshold: 0.1,
@@ -7837,8 +7746,8 @@
               previousComponent: n,
             } = e,
             O = r.useRef(null),
-            M = (0, S.default)(),
-            P = Object.entries(M).reduce((e, t) => {
+            P = (0, S.default)(),
+            M = Object.entries(P).reduce((e, t) => {
               let [s, a] = t;
               return (
                 !1 !== a.canReveal &&
@@ -7892,7 +7801,7 @@
                       (0, a.jsx)(R.default, {
                         className: C.cardCarousel,
                         cards: (0, N.getFilteredPerksDiscoverabilityCards)(
-                          P,
+                          M,
                           m.PerksDiscoverabilityCardSection
                             .CARD_CAROUSEL_FIRST_ROW,
                           D
@@ -7911,7 +7820,7 @@
                       (0, a.jsx)(R.default, {
                         className: C.cardCarousel,
                         cards: (0, N.getFilteredPerksDiscoverabilityCards)(
-                          P,
+                          M,
                           m.PerksDiscoverabilityCardSection
                             .CARD_CAROUSEL_SECOND_ROW,
                           D
@@ -7930,7 +7839,7 @@
                       (0, a.jsx)(R.default, {
                         className: C.cardCarousel,
                         cards: (0, N.getFilteredPerksDiscoverabilityCards)(
-                          P,
+                          M,
                           m.PerksDiscoverabilityCardSection
                             .CARD_CAROUSEL_THIRD_ROW,
                           D
@@ -8642,8 +8551,8 @@
         C = s("598739"),
         g = s("646718"),
         O = s("49111"),
-        M = s("397336"),
-        P = s("782340"),
+        P = s("397336"),
+        M = s("782340"),
         h = s("574211"),
         L = s("982784"),
         x = s("19530"),
@@ -8700,7 +8609,7 @@
             d.default.PREMIUM_MARKETING_PERK_CARD
           ),
           t = (0, u.default)(),
-          s = P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
+          s = M.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
           a = (0, i.default)([f.default], () =>
             f.default.getPremiumTypeSubscription()
           ),
@@ -8712,13 +8621,13 @@
           ea = (0, _.default)(I.default),
           er = (0, N.default)(),
           en = (0, T.default)({
-            scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+            scrollPosition: P.ProfileCustomizationScrollPositions.TRY_IT_OUT,
             analyticsLocations: e,
           }),
           ei = () => {
             o.default.open(
               O.UserSettingsSections.VOICE,
-              M.SOUNDBOARD_SUBSECTION,
+              P.SOUNDBOARD_SUBSECTION,
               { openWithoutBackstack: !0, analyticsLocations: e }
             );
           },
@@ -8733,17 +8642,17 @@
               ? {
                   name: "avatarDecorations",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   perkImage: j,
                   canReveal: et,
                   dismissibleContentType:
@@ -8752,15 +8661,15 @@
               : {
                   name: "avatarDecorations",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   perkImage: j,
                   canReveal: et,
                   dismissibleContentType:
@@ -8769,15 +8678,15 @@
             clientThemes: {
               name: "clientThemes",
               title:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
               description:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
-              descriptionCta: P.default.Messages.TAKE_ME_THERE,
+              descriptionCta: M.default.Messages.TAKE_ME_THERE,
               onCtaClick: () => {
                 o.default.open(O.UserSettingsSections.APPEARANCE, null, {
                   openWithoutBackstack: !0,
@@ -8789,17 +8698,17 @@
             clips: ee
               ? {
                   name: "clips",
-                  title: P.default.Messages.CLIPS,
+                  title: M.default.Messages.CLIPS,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
                   descriptionCta: ea
-                    ? P.default.Messages.TAKE_ME_THERE
-                    : P.default.Messages.LEARN_MORE,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                    ? M.default.Messages.TAKE_ME_THERE
+                    : M.default.Messages.LEARN_MORE,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   onCtaClick: ea
                     ? () => {
                         o.default.open(O.UserSettingsSections.CLIPS, null, {
@@ -8817,40 +8726,40 @@
                 }
               : {
                   name: "clips",
-                  title: P.default.Messages.CLIPS,
+                  title: M.default.Messages.CLIPS,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   perkImage: B,
                 },
             earlyAccess: ee
               ? {
                   name: "earlyAccess",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
                   perkImage: k,
                 }
               : {
                   name: "earlyAccess",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                   isPremiumGetCta: !0,
                   perkImage: k,
@@ -8859,26 +8768,26 @@
               ? {
                   name: "earlyAccessSeeAllVariant",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
                   perkImage: y,
                 }
               : {
                   name: "earlyAccess",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                   isPremiumGetCta: !0,
                   perkImage: y,
@@ -8887,28 +8796,28 @@
               ? {
                   name: "entranceSounds",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.TAKE_ME_THERE,
+                  descriptionCta: M.default.Messages.TAKE_ME_THERE,
                   onCtaClick: ei,
                   perkImage: F,
                 }
               : {
                   name: "entranceSounds",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
                   perkImage: F,
                 },
@@ -8916,28 +8825,28 @@
               ? {
                   name: "entranceSoundsSeeAllVariation",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.TAKE_ME_THERE,
+                  descriptionCta: M.default.Messages.TAKE_ME_THERE,
                   onCtaClick: ei,
                   perkImage: w,
                 }
               : {
                   name: "entranceSoundsSeeAllVariation",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
                   perkImage: w,
                 },
@@ -8945,17 +8854,17 @@
               ? {
                   name: "profileEffects",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   perkImage: W,
                   canReveal: es,
                   dismissibleContentType:
@@ -8964,15 +8873,15 @@
               : {
                   name: "profileEffects",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                   perkImage: W,
                   canReveal: es,
                   dismissibleContentType:
@@ -8981,15 +8890,15 @@
             profiles: {
               name: "profiles",
               title:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
               description:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
-              descriptionCta: P.default.Messages.TAKE_ME_THERE,
+              descriptionCta: M.default.Messages.TAKE_ME_THERE,
               onCtaClick: en,
               perkImage: b,
             },
@@ -8997,43 +8906,43 @@
               ? {
                   name: "remixing",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
                   perkImage: V,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                 }
               : {
                   name: "remixing",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
                   perkImage: V,
-                  pillText: P.default.Messages.EARLY_ACCESS,
+                  pillText: M.default.Messages.EARLY_ACCESS,
                 },
             serverBoosts: {
               name: "serverBoosts",
               title:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
               description:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
-              descriptionCta: P.default.Messages.TAKE_ME_THERE,
+              descriptionCta: M.default.Messages.TAKE_ME_THERE,
               onCtaClick: () => {
                 o.default.open(O.UserSettingsSections.GUILD_BOOSTING, null, {
                   openWithoutBackstack: !0,
@@ -9047,28 +8956,28 @@
               ? {
                   name: "specialMemberPricing",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
                   perkImage: Y,
                 }
               : {
                   name: "specialMemberPricing",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                   isPremiumGetCta: !0,
                   perkImage: Y,
@@ -9077,28 +8986,28 @@
               ? {
                   name: "specialMemberPricingSeeAllVariant",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
                   perkImage: z,
                 }
               : {
                   name: "specialMemberPricingSeeAllVariant",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE_V2,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                   isPremiumGetCta: !0,
                   perkImage: z,
@@ -9107,30 +9016,30 @@
               ? {
                   name: "specialShopPerks",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
                   perkImage: Y,
                 }
               : {
                   name: "specialShopPerks",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-                  descriptionCta: P.default.Messages.VISIT_THE_SHOP_CTA,
+                  descriptionCta: M.default.Messages.VISIT_THE_SHOP_CTA,
                   onCtaClick: el,
                   perkImage: Y,
                 },
@@ -9138,13 +9047,13 @@
               ? {
                   name: "unlimitedSuperReactions",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
                   perkImage: J,
                   hideOnNarrowScreen: !0,
@@ -9152,13 +9061,13 @@
               : {
                   name: "unlimitedSuperReactions",
                   title:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
                   subtitle:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
                   description:
-                    P.default.Messages
+                    M.default.Messages
                       .Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
                   isPremiumGetCta: !0,
                   perkImage: J,
@@ -9166,96 +9075,96 @@
                 },
             superReactions: {
               name: "superReactions",
-              title: P.default.Messages.NITRO_HOME_SUPER_REACTIONS,
+              title: M.default.Messages.NITRO_HOME_SUPER_REACTIONS,
               subtitle:
-                P.default.Messages.NITRO_HOME_SUPER_REACTIONS_DESCRIPTION,
+                M.default.Messages.NITRO_HOME_SUPER_REACTIONS_DESCRIPTION,
               description:
-                P.default.Messages
+                M.default.Messages
                   .NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
               perkImage: Z,
             },
             upcomingDropUntimed: {
               name: "upcomingDropUntimed",
-              title: P.default.Messages.NEW_DROP,
-              pillText: P.default.Messages.COMING_SOON,
+              title: M.default.Messages.NEW_DROP,
+              pillText: M.default.Messages.COMING_SOON,
               backgroundImage: K,
             },
             badge: {
               name: "badge",
-              title: P.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
-              subtitle: P.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
+              title: M.default.Messages.NITRO_HOME_SUBSCRIBER_BADGE,
+              subtitle: M.default.Messages.NITRO_HOME_GET_THIS_SUBSCRIBER_BADGE,
               perkImage: h,
               description:
-                P.default.Messages
+                M.default.Messages
                   .NITRO_HOME_SUBSCRIBER_BADGE_FOR_THE_COLLECTORS,
             },
             customAppIcons: {
               name: "customAppIcons",
               title:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
               perkImage: G,
               description:
-                P.default.Messages
+                M.default.Messages
                   .NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
-              descriptionCta: P.default.Messages.TAKE_ME_THERE,
+              descriptionCta: M.default.Messages.TAKE_ME_THERE,
               onCtaClick: () => {
                 o.default.open(O.UserSettingsSections.APPEARANCE, null, {
-                  scrollPosition: M.AppearanceScrollPositions.CUSTOM_APP_ICONS,
+                  scrollPosition: P.AppearanceScrollPositions.CUSTOM_APP_ICONS,
                 });
               },
             },
             moreEmojiPower: {
               name: "moreEmojiPower",
-              title: P.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
-              subtitle: P.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
+              title: M.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
+              subtitle: M.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
               perkImage: H,
               description:
-                P.default.Messages.NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI,
+                M.default.Messages.NITRO_HOME_CARD_CHOOSE_CUSTOM_EMOJI,
             },
             customSoundsEverywhere: {
               name: "customSoundsEverywhere",
               title:
-                P.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
-              subtitle: P.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
+                M.default.Messages.NITRO_HOME_CARD_CUSTOM_SOUNDS_EVERYWHERE,
+              subtitle: M.default.Messages.NITRO_HOME_CARD_USE_CUSTOM_SOUNDS,
               perkImage: (0, C.getThemedImage)(t, L, x),
               description:
-                P.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO,
+                M.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_ONLY_NITRO,
             },
             specialStickerAccess: {
               name: "specialStickerAccess",
-              title: P.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
+              title: M.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
               perkImage: (0, C.getThemedImage)(t, v, X),
               description:
-                P.default.Messages
+                M.default.Messages
                   .NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
             },
             largeUploads: {
               name: "largeUploads",
               title:
-                P.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format(
+                M.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format(
                   { premiumMaxSize: s }
                 ),
-              subtitle: P.default.Messages.NITRO_HOME_UPLOAD_ALL_YOU_WANT,
+              subtitle: M.default.Messages.NITRO_HOME_UPLOAD_ALL_YOU_WANT,
               perkImage: q,
-              description: P.default.Messages.NITRO_HOME_CARD_UPLOAD_POWER,
+              description: M.default.Messages.NITRO_HOME_CARD_UPLOAD_POWER,
             },
             hdVideo: {
               name: "hdVideo",
               title:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
               subtitle:
-                P.default.Messages
+                M.default.Messages
                   .PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
               perkImage: Q,
-              description: P.default.Messages.NITRO_HOME_STREAM_UP_TO_4K,
+              description: M.default.Messages.NITRO_HOME_STREAM_UP_TO_4K,
             },
           };
         if (null != er) {
@@ -10203,4 +10112,4 @@
     },
   },
 ]);
-//# sourceMappingURL=397c80afc12c2a117410.js.map
+//# sourceMappingURL=5279d34622218a62d051.js.map

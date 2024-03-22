@@ -9,13 +9,13 @@
             return i;
           },
         });
-      var n = s("77078"),
-        a = s("782340");
+      var a = s("77078"),
+        n = s("782340");
       function i() {
-        (0, n.showToast)(
-          (0, n.createToast)(
-            a.default.Messages.USER_SETTINGS_UPDATE_FAILURE,
-            n.ToastType.FAILURE
+        (0, a.showToast)(
+          (0, a.createToast)(
+            n.default.Messages.USER_SETTINGS_UPDATE_FAILURE,
+            a.ToastType.FAILURE
           )
         );
       }
@@ -29,85 +29,91 @@
           },
         }),
         s("222007");
-      var n = s("37983"),
-        a = s("884691"),
-        i = s("627445"),
-        l = s.n(i),
-        o = s("446674"),
-        r = s("437822"),
-        d = s("152584"),
-        h = s("648661"),
-        u = s("330387"),
-        m = s("790618"),
-        c = s("697218"),
-        f = s("67211"),
-        g = s("892313"),
-        E = s("49111"),
+      var a = s("37983"),
+        n = s("884691"),
+        i = s("446674"),
+        l = s("77078"),
+        o = s("437822"),
+        r = s("152584"),
+        d = s("648661"),
+        h = s("330387"),
+        u = s("790618"),
+        m = s("697218"),
+        c = s("67211"),
+        f = s("892313"),
+        g = s("49111"),
+        E = s("782340"),
         p = e => {
           let { transitionState: t, onClose: s } = e,
-            i = (0, o.useStateFromStores)([m.default], () =>
-              m.default.getErrors()
+            p = (0, i.useStateFromStores)([u.default], () =>
+              u.default.getErrors()
             ),
-            p = (0, o.useStateFromStores)([m.default], () =>
-              m.default.getFormState()
+            I = (0, i.useStateFromStores)([u.default], () =>
+              u.default.getFormState()
             ),
-            C = (0, o.useStateFromStores)([c.default], () => {
-              let e = c.default.getCurrentUser();
-              return (
-                l(
-                  null != e,
-                  "EmailVerificationModal: user cannot be undefined"
-                ),
-                e
-              );
-            }),
-            I = (0, o.useStateFromStores)([u.default], () =>
-              u.default.getAction()
+            C = (0, i.useStateFromStores)([m.default], () =>
+              m.default.getCurrentUser()
             ),
-            _ = !g.default.isEmailReverification(I),
-            R = null != C.email,
-            [v, M] = a.useState(!0),
-            S = p === E.FormStates.SUBMITTING;
-          function A(e) {
+            R = (0, i.useStateFromStores)([h.default], () =>
+              h.default.getAction()
+            ),
+            _ = !f.default.isEmailReverification(R),
+            [v, M] = n.useState(!0),
+            S = I === g.FormStates.SUBMITTING;
+          function T(e) {
             var t, s;
             return null !==
               (s =
-                null == i
+                null == p
                   ? void 0
-                  : null === (t = i[e]) || void 0 === t
+                  : null === (t = p[e]) || void 0 === t
                     ? void 0
                     : t[0]) && void 0 !== s
               ? s
               : "";
           }
-          let N = A("email"),
-            B = A("password");
-          return (0, n.jsx)(f.default, {
+          let A = T("email"),
+            N = T("password");
+          return (0, a.jsx)(c.default, {
             transitionState: t,
-            email: C.email,
-            emailError: N,
-            passwordError: B,
+            email: null == C ? void 0 : C.email,
+            emailError: A,
+            passwordError: N,
             submitting: S,
-            canResend: v && !S && R && 0 === N.length && 0 === B.length,
+            canResend:
+              v &&
+              !S &&
+              (null == C ? void 0 : C.email) != null &&
+              0 === A.length &&
+              0 === N.length,
             canChange: _,
             onChangeEmailClick: function () {
               M(!1);
             },
             onVerify: function (e, t) {
-              (0, d.saveAccountChanges)({ email: e, password: t }).then(e => {
-                var t;
-                !(null == e ? void 0 : e.ok) &&
+              (0, r.saveAccountChanges)({ email: e, password: t }).then(e => {
+                if (!(null == e ? void 0 : e.ok)) {
+                  var t;
                   (null == e
                     ? void 0
                     : null === (t = e.body) || void 0 === t
                       ? void 0
-                      : t.username) != null &&
-                  (0, h.showInvalidUsernameToast)();
+                      : t.username) != null
+                    ? (0, d.showInvalidUsernameToast)()
+                    : 0 === N.length &&
+                      0 === A.length &&
+                      (0, l.showToast)(
+                        (0, l.createToast)(
+                          E.default.Messages.ERROR_GENERIC_TITLE,
+                          l.ToastType.FAILURE
+                        )
+                      );
+                }
               }),
                 M(!0);
             },
             onResend: function () {
-              r.default.verifyResend();
+              o.default.verifyResend();
             },
             onClose: s,
           });
@@ -122,8 +128,8 @@
           },
         }),
         s("222007");
-      var n = s("37983"),
-        a = s("884691"),
+      var a = s("37983"),
+        n = s("884691"),
         i = s("414456"),
         l = s.n(i),
         o = s("748820"),
@@ -134,7 +140,7 @@
         m = s("908492"),
         c = s("125047"),
         f = s("890957");
-      class g extends a.PureComponent {
+      class g extends n.PureComponent {
         async componentDidMount() {
           let [e, { default: t }] = await Promise.all([
             s.el("280201").then(s.t.bind(s, "280201", 19)),
@@ -156,25 +162,25 @@
         }
         renderInputs() {
           let { emailError: e, passwordError: t, submitting: s } = this.props,
-            { email: a, password: i } = this.state;
-          return (0, n.jsxs)("div", {
+            { email: n, password: i } = this.state;
+          return (0, a.jsxs)("div", {
             className: m.container,
             children: [
-              (0, n.jsx)(d.FormItem, {
+              (0, a.jsx)(d.FormItem, {
                 title: u.default.Messages.FORM_LABEL_EMAIL,
                 className: f.marginBottom20,
-                children: (0, n.jsx)(d.TextInput, {
-                  value: a,
+                children: (0, a.jsx)(d.TextInput, {
+                  value: n,
                   error: e,
                   onChange: this.handleEmailChange,
                   onKeyPress: this.handleKeyPress,
                   autoFocus: !0,
                 }),
               }),
-              (0, n.jsx)(d.FormItem, {
+              (0, a.jsx)(d.FormItem, {
                 title: u.default.Messages.FORM_LABEL_PASSWORD,
                 className: f.marginBottom40,
-                children: (0, n.jsx)(d.TextInput, {
+                children: (0, a.jsx)(d.TextInput, {
                   type: "password",
                   value: i,
                   error: t,
@@ -182,12 +188,12 @@
                   onKeyPress: this.handleKeyPress,
                 }),
               }),
-              (0, n.jsx)(d.Button, {
+              (0, a.jsx)(d.Button, {
                 fullWidth: !0,
                 size: d.Button.Sizes.LARGE,
                 onClick: this.handleVerify,
                 submitting: s,
-                disabled: 0 === a.length || 0 === i.length,
+                disabled: 0 === n.length || 0 === i.length,
                 children: u.default.Messages.VERIFY_ACCOUNT,
               }),
             ],
@@ -195,10 +201,10 @@
         }
         renderActions() {
           let { canChange: e } = this.props;
-          return (0, n.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: m.container,
             children: [
-              (0, n.jsx)(d.Button, {
+              (0, a.jsx)(d.Button, {
                 className: f.marginTop20,
                 fullWidth: !0,
                 size: d.Button.Sizes.LARGE,
@@ -208,7 +214,7 @@
                 children: u.default.Messages.RESEND_EMAIL,
               }),
               e &&
-                (0, n.jsx)(d.Button, {
+                (0, a.jsx)(d.Button, {
                   className: f.marginTop20,
                   fullWidth: !0,
                   size: d.Button.Sizes.MEDIUM,
@@ -223,17 +229,17 @@
         render() {
           let e;
           let { resent: t } = this.state,
-            { email: s, canResend: a, transitionState: i } = this.props;
+            { email: s, canResend: n, transitionState: i } = this.props;
           return (
             (e =
               t && null != s
                 ? u.default.Messages.VERIFY_EMAIL_BODY_RESENT.format({
                     email: s,
                   })
-                : a
+                : n
                   ? u.default.Messages.VERIFY_EMAIL_BODY
                   : u.default.Messages.ENTER_EMAIL_BODY),
-            (0, n.jsxs)(d.ModalRoot, {
+            (0, a.jsxs)(d.ModalRoot, {
               transitionState: i,
               "aria-labelledby": this._headerId,
               className: l(
@@ -244,20 +250,20 @@
                 f.marginTop60
               ),
               children: [
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                   className: m.animationContainer,
                   ref: this.setLottieRef,
                 }),
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                   id: this._headerId,
                   className: l(m.title, f.marginBottom8),
                   children: u.default.Messages.VERIFY_BY_EMAIL,
                 }),
-                (0, n.jsx)("div", {
+                (0, a.jsx)("div", {
                   className: l(m.body, f.marginBottom20),
                   children: e,
                 }),
-                a ? this.renderActions() : this.renderInputs(),
+                n ? this.renderActions() : this.renderInputs(),
               ],
             })
           );
@@ -320,4 +326,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87c05453f1a52f50285f.js.map
+//# sourceMappingURL=72e57ef60545dcf84aad.js.map

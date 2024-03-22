@@ -19022,7 +19022,7 @@
       n.r(t),
         n.d(t, {
           useSignUpButton: function () {
-            return g;
+            return S;
           },
         });
       var l = n("37983"),
@@ -19031,18 +19031,20 @@
         i = n("524173"),
         r = n("77078"),
         o = n("446674"),
-        u = n("20606"),
-        d = n("610898"),
-        c = n("829562"),
-        f = n("956089"),
-        h = n("108189"),
-        C = n("124150"),
-        p = n("782340"),
-        m = n("884836");
-      function E(e) {
+        u = n("841098"),
+        d = n("20606"),
+        c = n("610898"),
+        f = n("829562"),
+        h = n("956089"),
+        C = n("108189"),
+        p = n("124150"),
+        m = n("49111"),
+        E = n("782340"),
+        g = n("884836");
+      function I(e) {
         let { target: t } = e,
           o = (0, s.useTreeItem)("fakedoor"),
-          C = a.useCallback(() => {
+          p = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
               let { default: e } = await n
                 .el("597245")
@@ -19050,16 +19052,16 @@
               return n => (0, l.jsx)(e, { ...n, target: t });
             });
           }, [t]),
-          E = "url(".concat(
+          I = "url(".concat(
             t.backgroundAssetUrl,
-            ") lightgray top / cover no-repeat"
+            ") black top / cover no-repeat"
           ),
-          g = (0, l.jsxs)("div", {
-            className: m.tooltipContainer,
+          S = (0, l.jsxs)("div", {
+            className: g.tooltipContainer,
             children: [
               (0, l.jsx)("div", {
-                className: m.tooltipBackground,
-                style: { background: E },
+                className: g.tooltipBackground,
+                style: { background: I },
               }),
               (0, l.jsx)(r.Heading, {
                 variant: "heading-sm/medium",
@@ -19067,34 +19069,46 @@
               }),
               (0, l.jsx)(r.Text, {
                 variant: "text-xs/normal",
-                children: p.default.Messages.SIGNUP_BUTTON_TOOLTIP_CTA,
+                children: E.default.Messages.SIGNUP_BUTTON_TOOLTIP_CTA,
               }),
             ],
-          });
-        return (0, l.jsx)(d.ListItem, {
-          children: (0, l.jsx)(c.default, {
-            text: g,
-            children: (0, l.jsx)(r.BlobMask, {
-              lowerBadge: (0, l.jsx)(f.NumberBadge, {
-                count: 1,
-                color: u.default.BG_BRAND,
-              }),
-              children: (0, l.jsx)(h.default, {
-                ...o,
-                onMouseDown: C,
-                children: (0, l.jsx)(i.BellIcon, {
-                  color: u.default.TEXT_NORMAL,
+          }),
+          _ = (0, u.useTheme)();
+        return (0, l.jsxs)(c.ListItem, {
+          children: [
+            (0, l.jsx)(r.ThemeContextProvider, {
+              theme: m.ThemeTypes.DARK,
+              children: (0, l.jsx)(f.default, {
+                text: S,
+                children: (0, l.jsx)(r.ThemeContextProvider, {
+                  theme: _,
+                  children: (0, l.jsx)(r.BlobMask, {
+                    lowerBadge: (0, l.jsx)(h.NumberBadge, {
+                      count: 1,
+                      color: d.default.BG_BRAND,
+                    }),
+                    children: (0, l.jsx)(C.default, {
+                      ...o,
+                      onMouseDown: p,
+                      children: (0, l.jsx)(i.BellIcon, {
+                        color: d.default.TEXT_NORMAL,
+                      }),
+                    }),
+                  }),
                 }),
               }),
             }),
-          }),
+            (0, l.jsx)("div", {
+              style: { background: I, width: 0, height: 0 },
+            }),
+          ],
         });
       }
-      function g() {
-        let e = (0, o.useStateFromStores)([C.default], () =>
-          C.default.getActiveUserSignUp()
+      function S() {
+        let e = (0, o.useStateFromStores)([p.default], () =>
+          p.default.getActiveUserSignUp()
         );
-        return null == e ? null : (0, l.jsx)(E, { target: e });
+        return null == e ? null : (0, l.jsx)(I, { target: e });
       }
     },
     874595: function (e, t, n) {
@@ -23567,4 +23581,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fd19755e47ae3d0aea33.js.map
+//# sourceMappingURL=be3238386ec3231193a2.js.map

@@ -5908,114 +5908,123 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return S;
+            return E;
           },
         }),
         s("222007");
       var a = s("37983"),
         n = s("884691"),
         l = s("146606"),
-        i = s("862337"),
-        r = s("77078"),
-        o = s("4452"),
-        d = s("782340"),
-        u = s("114602");
-      let c = l.config.stiff;
-      function S(e) {
-        let { image: t, name: s, sound: S, openedCount: E } = e,
-          T = E > 0,
-          f = n.useRef(null),
+        i = s("882039"),
+        r = s("862337"),
+        o = s("77078"),
+        d = s("4452"),
+        u = s("782340"),
+        c = s("114602");
+      let S = l.config.stiff;
+      function E(e) {
+        let { image: t, name: s, sound: E, openedCount: T } = e,
+          f = T > 0,
           _ = n.useRef(null),
-          [m, g] = n.useState(!1),
-          [h, N] = n.useState({ x: 0, y: 0 }),
-          [I] = n.useState(new i.Interval()),
-          [p, C] = (0, l.useSpring)(() => ({ x: 0, y: 0, config: c })),
-          [A, O] = (0, l.useSpring)(() => ({ value: 1, config: c }));
+          m = n.useRef(null),
+          [g, h] = n.useState(!1),
+          [N, I] = n.useState({ x: 0, y: 0 }),
+          [p] = n.useState(new r.Interval()),
+          [C, A] = (0, l.useSpring)(() => ({ x: 0, y: 0, config: S })),
+          [O, x] = (0, l.useSpring)(() => ({ value: 1, config: S }));
         n.useEffect(() => {
-          if (T && m && null != f.current) {
-            let e = f.current.getBoundingClientRect(),
-              t = h.x - e.x,
-              s = h.y - e.y,
+          if (f && g && null != _.current) {
+            let e = _.current.getBoundingClientRect(),
+              t = N.x - e.x,
+              s = N.y - e.y,
               a = e.width / 2,
               n = e.height / 2;
-            C({ x: ((t - a) / a) * 25, y: -(((s - n) / n) * 25) });
+            A({ x: ((t - a) / a) * 25, y: -(((s - n) / n) * 25) });
           }
-        }, [m, T, h.x, h.y, C]),
+        }, [g, f, N.x, N.y, A]),
           n.useEffect(() => {
-            O({ value: T && m ? 1.2 : 1 });
-          }, [m, T, O]);
-        let x = n.useCallback(e => {
-            N({ x: e.clientX, y: e.clientY });
+            x({ value: f && g ? 1.2 : 1 });
+          }, [g, f, x]);
+        let R = n.useCallback(e => {
+            I({ x: e.clientX, y: e.clientY });
           }, []),
-          R = n.useCallback(
+          M = n.useCallback(
             e => {
-              g(!0), x(e);
+              h(!0), R(e);
             },
-            [x]
+            [R]
           ),
-          M = n.useCallback(() => {
-            g(!1), N({ x: 0, y: 0 }), C({ x: 0, y: 0 });
-          }, [C]),
           D = n.useCallback(() => {
-            if (null != _.current) {
-              let e = _.current.currentTime / _.current.duration,
-                t = (0, o.default)(1, 1.2, e);
-              O({ value: t }), e >= 1 && (!m && O({ value: 1 }), I.stop());
+            h(!1), I({ x: 0, y: 0 }), A({ x: 0, y: 0 });
+          }, [A]),
+          v = n.useCallback(() => {
+            if (null != m.current) {
+              let e = m.current.currentTime / m.current.duration,
+                t = (0, d.default)(1, 1.2, e);
+              x({ value: t }), e >= 1 && (!g && x({ value: 1 }), p.stop());
             }
-          }, [I, m, O]);
+          }, [p, g, x]);
         n.useEffect(() => {
-          null != I._ref && I.start(30, D);
-        }, [I, D]);
-        let v = n.useCallback(() => {
-          null != _.current &&
-            ((_.current.currentTime = 0), _.current.play(), I.start(30, D));
-        }, [I, D]);
-        return (0, a.jsxs)(r.Clickable, {
-          onClick: T ? v : void 0,
+          null != p._ref && p.start(30, v);
+        }, [p, v]);
+        let L = n.useCallback(() => {
+          null != m.current &&
+            ((m.current.currentTime = 0), m.current.play(), p.start(30, v));
+        }, [p, v]);
+        return (0, a.jsxs)(o.Clickable, {
+          onClick: f ? L : void 0,
           children: [
-            (0, a.jsx)("audio", { src: S, ref: _ }),
+            (0, a.jsx)("audio", { src: E, ref: m }),
             (0, a.jsx)(l.animated.div, {
-              ref: f,
-              className: T ? u.containerOwned : void 0,
+              ref: _,
+              className: f ? c.containerOwned : void 0,
               style: {
-                transform: (0, l.to)([A.value], e => "scale(".concat(e, ")")),
+                transform: (0, l.to)([O.value], e => "scale(".concat(e, ")")),
               },
-              onMouseEnter: R,
-              onMouseLeave: M,
-              onMouseMove: x,
+              onMouseEnter: M,
+              onMouseLeave: D,
+              onMouseMove: R,
               children: (0, a.jsxs)(l.animated.div, {
-                className: u.item,
+                className: c.item,
                 style: {
-                  transform: (0, l.to)([p.x, p.y], (e, t) =>
+                  transform: (0, l.to)([C.x, C.y], (e, t) =>
                     "rotateY(".concat(e, "deg) rotateX(").concat(t, "deg)")
                   ),
                 },
                 children: [
-                  T &&
-                    (0, a.jsx)(r.Text, {
-                      variant: "text-xxs/bold",
-                      className: u.count,
-                      children:
-                        d.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format({
-                          count: E,
+                  f &&
+                    (0, a.jsxs)(a.Fragment, {
+                      children: [
+                        (0, a.jsx)(o.Text, {
+                          variant: "text-xxs/bold",
+                          className: c.count,
+                          children:
+                            u.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
+                              { count: T }
+                            ),
                         }),
+                        (0, a.jsx)(i.VoiceNormalIcon, {
+                          className: c.audioIndicator,
+                          color: o.tokens.colors.INTERACTIVE_ACTIVE,
+                        }),
+                      ],
                     }),
-                  (0, a.jsx)(r.Heading, {
+                  (0, a.jsx)(o.Heading, {
                     variant: "display-md",
-                    className: u.imageContainer,
+                    className: c.imageContainer,
                     color: "text-muted",
-                    children: T
+                    children: f
                       ? (0, a.jsx)("img", {
                           src: t,
                           alt: "",
-                          className: u.image,
+                          className: c.image,
                         })
                       : "?",
                   }),
-                  T &&
-                    (0, a.jsx)(r.Text, {
+                  f &&
+                    (0, a.jsx)(o.Text, {
                       variant: "text-xxs/bold",
-                      className: u.name,
+                      className: c.name,
                       children: s,
                     }),
                 ],
@@ -11950,9 +11959,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277947",
+          E = "277953",
           T =
-            ((e = "76bd0fec11c2bfa815ed35c51ab614df1b99831f"),
+            ((e = "2ff410b2c7a82f971302ee9752549128f06d97b9"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32097,4 +32106,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2698c80de0b428c1ead4.js.map
+//# sourceMappingURL=858fc83be777ea23ecf0.js.map

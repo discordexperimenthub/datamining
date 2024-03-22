@@ -40552,8 +40552,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
+  line-height: 1.25rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -101785,6 +101785,9 @@ html .invoiceCancelRow_a8669b {
   filter: blur(16px);
   opacity: 0.4;
 }
+.containerOwned_d3f1c1:hover .audioIndicator__0e6eb {
+  opacity: 1;
+}
 .item_bf6c07 {
   background-color: var(--background-secondary);
   border-radius: var(--radius-sm);
@@ -101820,6 +101823,15 @@ html .invoiceCancelRow_a8669b {
   padding: 4px 8px;
   left: 4px;
   top: 4px;
+}
+.audioIndicator__0e6eb {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+  transition: opacity.2s ease;
 }
 .imageContainer__4012d {
   border-radius: 50%;
@@ -111376,4 +111388,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.b3dd0b2910d47d50f0e7.css.map*/
+/*# sourceMappingURL=app.59bef307bdf1bf47339a.css.map*/

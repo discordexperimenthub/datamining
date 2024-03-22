@@ -23479,9 +23479,20 @@ span.button__4f306.disabled_dc5630 {
   z-index: 1;
 }
 .background__4b7c4 {
+  --custom-overlay-color: hsl(var(--primary-730-hsl) / 0.8);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(
+      hsl(var(--primary-730-hsl) / 0.8),
+      hsl(var(--primary-730-hsl) / 0.8)
+    ),
+    var(--custom-background-url);
+  background-image: linear-gradient(
+      var(--custom-overlay-color),
+      var(--custom-overlay-color)
+    ),
+    var(--custom-background-url);
   position: absolute;
   height: 120%;
   width: 120%;
@@ -23489,6 +23500,9 @@ span.button__4f306.disabled_dc5630 {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+}
+.theme-light .background__4b7c4 {
+  --custom-overlay-color: hsl(var(--white-500-hsl) / 0.3);
 }
 .container__67e06 {
   background: var(--background-secondary);
@@ -23501,7 +23515,7 @@ span.button__4f306.disabled_dc5630 {
 .containerScrollGradient__57f79 {
   background: linear-gradient(
     0deg,
-    var(--primary-660)-3.62%,
+    var(--background-secondary-alt)-3.62%,
     rgba(0, 0, 0, 0) 96.84%
   );
   bottom: 0;
@@ -23527,9 +23541,20 @@ span.button__4f306.disabled_dc5630 {
   margin: 0 16px;
 }
 .headerBackground__34c05 {
+  --custom-overlay-color: hsl(var(--primary-730-hsl) / 0.9);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: linear-gradient(
+      hsl(var(--primary-730-hsl) / 0.9),
+      hsl(var(--primary-730-hsl) / 0.9)
+    ),
+    var(--custom-background-url);
+  background-image: linear-gradient(
+      var(--custom-overlay-color),
+      var(--custom-overlay-color)
+    ),
+    var(--custom-background-url);
   position: absolute;
   height: 120%;
   width: 120%;
@@ -23590,15 +23615,14 @@ span.button__4f306.disabled_dc5630 {
 }
 .wrapper__83f97 {
   padding: 8px;
-  min-width: 300px;
-  flex: 1;
+  min-width: 286px;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: var(--radius-sm);
   background-color: var(--background-modifier-hover);
   cursor: pointer;
-  color: var(--white-500);
+  color: var(--text-primary);
   text-align: left;
   gap: 8px;
   border: 1px solid transparent;
@@ -23610,8 +23634,9 @@ span.button__4f306.disabled_dc5630 {
 }
 .selected__2b4d8 {
   background-color: var(--brand-500);
-  box-shadow: 0 0 4px 0 var(--brand-500);
+  box-shadow: var(--shadow-high);
   border-color: rgba(255, 255, 255, 0.15);
+  color: var(--white-500);
 }
 .icon_e1e45d {
   width: 36px;
@@ -23621,16 +23646,6 @@ span.button__4f306.disabled_dc5630 {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.title__8b7fa {
-  font-family: var(--font-primary);
-  font-size: 14px;
-  font-weight: var(--font-weight-semibold);
-}
-.body__34e23 {
-  font-family: var(--font-primary);
-  font-size: 12px;
-  font-weight: var(--font-weight-normal);
 }
 .wrapper__478f3 {
   background-color: var(--background-secondary);
@@ -23712,7 +23727,8 @@ span.button__4f306.disabled_dc5630 {
   user-select: none;
   height: -moz-fit-content;
   height: fit-content;
-  max-height: 488px;
+  min-height: 488px;
+  background-color: var(--background-modifier-hover);
 }
 .image__2e834 {
   align-items: center;
@@ -23738,7 +23754,7 @@ span.button__4f306.disabled_dc5630 {
 }
 .card__3135c {
   align-items: center;
-  background: var(--background-modifier-active);
+  background-color: var(--background-modifier-active);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -23755,7 +23771,6 @@ span.button__4f306.disabled_dc5630 {
   width: 100%;
 }
 .benefits_f2b1cc {
-  background: var(--background-modifier-hover);
   padding: 16px;
 }
 .benefitsContainer__356cd {
@@ -23783,12 +23798,6 @@ span.button__4f306.disabled_dc5630 {
   display: flex;
   gap: 16px;
 }
-.cardBenefitTitle__59c65 {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: var(--font-weight-bold);
-  color: var(--primary-330);
-}
 @value iconSize: 24px;
 .cardBenefitIcon_fc8f2f {
   width: 24px;
@@ -23801,20 +23810,10 @@ span.button__4f306.disabled_dc5630 {
   -o-object-fit: cover;
   object-fit: cover;
 }
-.cardBenefitName__64263 {
-  font-size: 16px;
-  font-weight: var(--font-weight-semibold);
-  color: var(--primary-130);
-  line-height: 20px;
-}
 .cardBenefitDesc_c9ec93 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   display: -webkit-box;
-  font-size: 14px;
-  font-weight: var(--font-weight-medium);
-  line-height: 18px;
-  color: var(--primary-330);
   overflow: hidden;
 }
 @value maxModalWidth from './MarkdownModal.module.css';
@@ -24001,4 +24000,4 @@ span.button__4f306.disabled_dc5630 {
     color: hsl(228 calc(6% * var(--saturation-factor, 1)) 32.5%);
   }
 }
-/*# sourceMappingURL=shared.da039fd40e24337efc63.css.map*/
+/*# sourceMappingURL=shared.22b65f76097e6684df29.css.map*/

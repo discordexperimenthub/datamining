@@ -13,21 +13,21 @@
           n.shift();
           var r = null,
             e = [];
-          n[2] && ((r = (o = n[2].split("-")).shift()), (e = o));
+          n[2] && ((r = (s = n[2].split("-")).shift()), (e = s));
           var i = [];
           n[5] && (i = n[5].split("-")).shift();
           var a = [];
           if (n[6]) {
-            (o = n[6].split("-")).shift();
-            for (var o, s, u = []; o.length; ) {
-              var l = o.shift();
+            (s = n[6].split("-")).shift();
+            for (var s, o, u = []; s.length; ) {
+              var l = s.shift();
               1 === l.length
-                ? s
-                  ? (a.push({ singleton: s, extension: u }), (s = l), (u = []))
-                  : (s = l)
+                ? o
+                  ? (a.push({ singleton: o, extension: u }), (o = l), (u = []))
+                  : (o = l)
                 : u.push(l);
             }
-            a.push({ singleton: s, extension: u });
+            a.push({ singleton: o, extension: u });
           }
           var c = [];
           n[7] && ((c = n[7].split("-")).shift(), c.shift());
@@ -57,7 +57,7 @@
             throw TypeError("argument str must be a string");
           var r = {},
             i = t.split(a),
-            o = (n || {}).decode || e;
+            s = (n || {}).decode || e;
           return (
             i.forEach(function (t) {
               var n = t.indexOf("=");
@@ -72,7 +72,7 @@
                       } catch (n) {
                         return t;
                       }
-                    })(i, o));
+                    })(i, s));
               }
             }),
             r
@@ -81,21 +81,21 @@
         (n.serialize = function (t, n, r) {
           var e = r || {},
             a = e.encode || i;
-          if (!o.test(t)) throw TypeError("argument name is invalid");
-          var s = a(n);
-          if (s && !o.test(s)) throw TypeError("argument val is invalid");
-          var u = [t + "=" + s];
+          if (!s.test(t)) throw TypeError("argument name is invalid");
+          var o = a(n);
+          if (o && !s.test(o)) throw TypeError("argument val is invalid");
+          var u = [t + "=" + o];
           if (null != e.maxAge) {
             var l = e.maxAge - 0;
             if (isNaN(l)) throw Error("maxAge should be a Number");
             u.push("Max-Age=" + Math.floor(l));
           }
           if (e.domain) {
-            if (!o.test(e.domain)) throw TypeError("option domain is invalid");
+            if (!s.test(e.domain)) throw TypeError("option domain is invalid");
             u.push("Domain=" + e.domain);
           }
           if (e.path) {
-            if (!o.test(e.path)) throw TypeError("option path is invalid");
+            if (!s.test(e.path)) throw TypeError("option path is invalid");
             u.push("Path=" + e.path);
           }
           return (
@@ -109,7 +109,7 @@
       var e = decodeURIComponent,
         i = encodeURIComponent,
         a = /; */,
-        o = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+        s = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
     },
     379792: function (t, n, r) {
       "use strict";
@@ -150,11 +150,11 @@
       var e = r("418855"),
         i = r("338286"),
         a = r("551544"),
-        o = r("174669")("species");
+        s = r("174669")("species");
       t.exports = function (t, n) {
         var r,
-          s = e(t).constructor;
-        return void 0 === s || a((r = e(s)[o])) ? n : i(r);
+          o = e(t).constructor;
+        return void 0 === o || a((r = e(o)[s])) ? n : i(r);
       };
     },
     506083: function (t, n, r) {
@@ -162,8 +162,8 @@
       var e = r("859514"),
         i = r("140925"),
         a = r("718530"),
-        o = r("664144"),
-        s = r("434978"),
+        s = r("664144"),
+        o = r("434978"),
         u = r("125359"),
         l = r("499460"),
         c = r("33270"),
@@ -177,13 +177,13 @@
             real: !0,
             forced:
               !!a &&
-              o(function () {
+              s(function () {
                 h.finally.call({ then: function () {} }, function () {});
               }),
           },
           {
             finally: function (t) {
-              var n = l(this, s("Promise")),
+              var n = l(this, o("Promise")),
                 r = u(t);
               return this.then(
                 r
@@ -206,7 +206,7 @@
         ),
         !i && u(a))
       ) {
-        var d = s("Promise").prototype.finally;
+        var d = o("Promise").prototype.finally;
         h.finally !== d && f(h, "finally", d, { unsafe: !0 });
       }
     },
@@ -222,8 +222,8 @@
       r("884691");
       var i = r("77078"),
         a = r("476765"),
-        o = r("782340"),
-        s = r("606077"),
+        s = r("782340"),
+        o = r("606077"),
         u = t => {
           let { onClose: n } = t,
             r = (0, a.useUID)();
@@ -233,71 +233,41 @@
             children: [
               (0, e.jsxs)(i.ModalHeader, {
                 separator: !1,
-                className: s.modalHeader,
+                className: o.modalHeader,
                 children: [
                   (0, e.jsx)(i.Heading, {
                     id: r,
                     variant: "heading-xl/extrabold",
                     children:
-                      o.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING,
+                      s.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING,
                   }),
                   (0, e.jsx)(i.ModalCloseButton, {
-                    className: s.closeButton,
+                    className: o.closeButton,
                     onClick: n,
                   }),
                 ],
               }),
               (0, e.jsx)(i.ModalContent, {
-                className: s.modalContent,
+                className: o.modalContent,
                 children: (0, e.jsx)(i.Text, {
                   variant: "text-md/normal",
-                  className: s.contentText,
+                  className: o.contentText,
                   children:
-                    o.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2,
+                    s.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2,
                 }),
               }),
               (0, e.jsx)(i.ModalFooter, {
                 children: (0, e.jsx)(i.Button, {
-                  className: s.button,
+                  className: o.button,
                   size: i.Button.Sizes.MIN,
                   onClick: n,
-                  children: o.default.Messages.OKAY,
+                  children: s.default.Messages.OKAY,
                 }),
               }),
             ],
           });
         };
     },
-    476765: function (t, n, r) {
-      "use strict";
-      r.r(n),
-        r.d(n, {
-          uid: function () {
-            return o;
-          },
-          useUID: function () {
-            return s;
-          },
-          UID: function () {
-            return u;
-          },
-        });
-      var e = r("995008"),
-        i = r.n(e),
-        a = r("775560");
-      let o = function () {
-          let t =
-            arguments.length > 0 && void 0 !== arguments[0]
-              ? arguments[0]
-              : "uid_";
-          return i(t);
-        },
-        s = () => (0, a.useLazyValue)(() => o()),
-        u = t => {
-          let { children: n } = t;
-          return n(s());
-        };
-    },
   },
 ]);
-//# sourceMappingURL=0eac0168b0780347a468.js.map
+//# sourceMappingURL=30c76df9f885613b7126.js.map

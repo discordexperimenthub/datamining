@@ -1488,7 +1488,10 @@
           [l, H] = C.useState(!1),
           [V, c] = C.useState(0),
           [o, T] = C.useState(!1),
-          m = (0, r.default)([d.default], () => d.default.useReducedMotion);
+          m = (0, r.useStateFromStores)(
+            [d.default],
+            () => d.default.useReducedMotion
+          );
         function h() {
           c(L => {
             let e = L + 0.2;
@@ -1818,4 +1821,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9f606da29a08f9f8adab.js.map
+//# sourceMappingURL=1bd5e0b543ee22142562.js.map

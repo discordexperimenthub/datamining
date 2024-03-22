@@ -1,10 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["44214"],
   {
-    689226: function (n, t, e) {
+    689226: function (t, e, n) {
       "use strict";
-      e.r(t),
-        e.d(t, {
+      n.r(e),
+        n.d(e, {
           getRoleIconData: function () {
             return d;
           },
@@ -18,138 +18,138 @@
             return C;
           },
         }),
-        e("781738");
-      var l = e("867805"),
-        i = e("407063"),
-        o = e("315102"),
-        a = e("773336"),
-        u = e("49111");
+        n("781738");
+      var l = n("867805"),
+        i = n("407063"),
+        o = n("315102"),
+        a = n("773336"),
+        u = n("49111");
       let c = ""
           .concat(location.protocol, "//")
           .concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
         r = "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
         s = (0, a.isAndroid)(),
-        d = (n, t) => {
-          if (null == n) return null;
-          let e =
-            null != n.unicodeEmoji
+        d = (t, e) => {
+          if (null == t) return null;
+          let n =
+            null != t.unicodeEmoji
               ? l.default.getByName(
-                  l.default.convertSurrogateToName(n.unicodeEmoji, !1)
+                  l.default.convertSurrogateToName(t.unicodeEmoji, !1)
                 )
               : void 0;
           return {
-            customIconSrc: v(n, t),
-            unicodeEmoji: null != e ? e : void 0,
+            customIconSrc: v(t, e),
+            unicodeEmoji: null != n ? n : void 0,
           };
         },
-        f = (n, t) =>
-          n.replace(
+        f = (t, e) =>
+          t.replace(
             /size=[0-9]+/g,
             "size=".concat(
-              (0, i.getBestMediaProxySize)(t * (0, i.getDevicePixelRatio)())
+              (0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)())
             )
           ),
-        v = (n, t) => {
-          let { id: e, icon: l } = n;
+        v = (t, e) => {
+          let { id: n, icon: l } = t;
           if (null == l) return;
           if (l.startsWith("data:")) return l;
           let a = o.SUPPORTS_WEBP ? "webp" : "png",
             d = "",
             f = "quality=lossless";
-          return (null != t &&
+          return (null != e &&
             ((d =
               "size=" +
-              (0, i.getBestMediaProxySize)(t * (0, i.getDevicePixelRatio)())),
+              (0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)())),
             (f = s ? "" : "&" + f)),
           null != window.GLOBAL_ENV.CDN_HOST)
             ? ""
                 .concat(c, "/")
-                .concat(e, "/")
+                .concat(n, "/")
                 .concat(l, ".")
                 .concat(a, "?")
                 .concat(d)
                 .concat(f)
-            : "".concat(r).concat(u.Endpoints.ROLE_ICON(e, l), "?").concat(d);
+            : "".concat(r).concat(u.Endpoints.ROLE_ICON(n, l), "?").concat(d);
         },
-        _ = n =>
-          n.startsWith(c) ||
-          (n.startsWith("".concat(r, "/roles")) && n.includes("/icons/")),
-        C = (n, t) => {
-          var e;
+        _ = t =>
+          t.startsWith(c) ||
+          (t.startsWith("".concat(r, "/roles")) && t.includes("/icons/")),
+        C = (t, e) => {
+          var n;
           let l =
-            (null == t
+            (null == e
               ? void 0
-              : null === (e = t.tags) || void 0 === e
+              : null === (n = e.tags) || void 0 === n
                 ? void 0
-                : e.subscription_listing_id) != null;
-          return l || n.features.has(u.GuildFeatures.ROLE_ICONS);
+                : n.subscription_listing_id) != null;
+          return l || t.features.has(u.GuildFeatures.ROLE_ICONS);
         };
     },
-    467475: function (n, t, e) {
+    467475: function (t, e, n) {
       "use strict";
-      e.r(t),
-        e.d(t, {
+      n.r(e),
+        n.d(e, {
           default: function () {
             return a;
           },
         });
-      var l = e("65597"),
-        i = e("42203"),
-        o = e("724210");
-      function a(n) {
-        let t = (0, l.default)([i.default], () => {
-          let t = i.default.getChannel(n);
-          return (null == t ? void 0 : t.parent_id) != null && t.isForumPost()
-            ? i.default.getChannel(null == t ? void 0 : t.parent_id)
+      var l = n("65597"),
+        i = n("42203"),
+        o = n("724210");
+      function a(t) {
+        let e = (0, l.useStateFromStores)([i.default], () => {
+          let e = i.default.getChannel(t);
+          return (null == e ? void 0 : e.parent_id) != null && e.isForumPost()
+            ? i.default.getChannel(null == e ? void 0 : e.parent_id)
             : null;
         });
         return (
-          (null == t
+          (null == e
             ? void 0
-            : t.hasFlag(o.ChannelFlags.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0
+            : e.hasFlag(o.ChannelFlags.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0
         );
       }
     },
-    146574: function (n, t, e) {
+    146574: function (t, e, n) {
       "use strict";
-      e.r(t),
-        e.d(t, {
+      n.r(e),
+        n.d(e, {
           getNativeContextMenuChannelAnalytics: function () {
             return o;
           },
         });
-      var l = e("18494"),
-        i = e("724210");
+      var l = n("18494"),
+        i = n("724210");
       function o() {
-        var n;
-        let t =
-          null !== (n = l.default.getCurrentlySelectedChannelId()) &&
-          void 0 !== n
-            ? n
+        var t;
+        let e =
+          null !== (t = l.default.getCurrentlySelectedChannelId()) &&
+          void 0 !== t
+            ? t
             : void 0;
-        return null != t && (0, i.isStaticChannelRoute)(t)
-          ? { channel_static_route: t }
-          : { channel_id: t };
+        return null != e && (0, i.isStaticChannelRoute)(e)
+          ? { channel_static_route: e }
+          : { channel_id: e };
       }
     },
-    399758: function (n, t, e) {
+    399758: function (t, e, n) {
       "use strict";
-      e.r(t),
-        e.d(t, {
+      n.r(e),
+        n.d(e, {
           default: function () {
             return r;
           },
         });
-      var l = e("37983");
-      e("884691");
-      var i = e("77078"),
-        o = e("272030"),
-        a = e("773336"),
-        u = e("26051"),
-        c = e("782340");
-      function r(n) {
-        let { href: t, textContent: e, onSelect: r } = n,
-          s = (0, u.default)(t, e);
+      var l = n("37983");
+      n("884691");
+      var i = n("77078"),
+        o = n("272030"),
+        a = n("773336"),
+        u = n("26051"),
+        c = n("782340");
+      function r(t) {
+        let { href: e, textContent: n, onSelect: r } = t,
+          s = (0, u.default)(e, n);
         return a.isPlatformEmbedded && null != s
           ? (0, l.jsx)(i.Menu, {
               navId: "image-context",
@@ -161,53 +161,53 @@
           : null;
       }
     },
-    26051: function (n, t, e) {
+    26051: function (t, e, n) {
       "use strict";
-      e.r(t),
-        e.d(t, {
+      n.r(e),
+        n.d(e, {
           default: function () {
             return E;
           },
         });
-      var l = e("37983");
-      e("884691");
-      var i = e("77078"),
-        o = e("689226"),
-        a = e("467475"),
-        u = e("24373"),
-        c = e("48703"),
-        r = e("599110"),
-        s = e("128259"),
-        d = e("773336"),
-        f = e("50885"),
-        v = e("146574"),
-        _ = e("49111"),
-        C = e("782340");
-      function E(n, t, e, E) {
-        let N = (0, a.default)(null == e ? void 0 : e.getChannelId());
+      var l = n("37983");
+      n("884691");
+      var i = n("77078"),
+        o = n("689226"),
+        a = n("467475"),
+        u = n("24373"),
+        c = n("48703"),
+        r = n("599110"),
+        s = n("128259"),
+        d = n("773336"),
+        f = n("50885"),
+        v = n("146574"),
+        _ = n("49111"),
+        C = n("782340");
+      function E(t, e, n, E) {
+        let N = (0, a.default)(null == n ? void 0 : n.getChannelId());
         if (
           !d.isPlatformEmbedded ||
-          null == n ||
-          "" === n ||
+          null == t ||
+          "" === t ||
           N ||
           (null == E ? void 0 : E.shouldHideMediaOptions) === !0 ||
-          (null != n && null != (0, u.isStickerAssetUrl)(n)) ||
-          (null != n && (0, o.isRoleIconAssetUrl)(n))
+          (null != t && null != (0, u.isStickerAssetUrl)(t)) ||
+          (null != t && (0, o.isRoleIconAssetUrl)(t))
         )
           return null;
-        let h = (0, c.getHostname)(n),
-          g = e => {
+        let h = (0, c.getHostname)(t),
+          g = n => {
             r.default.track(_.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
               hostname: h,
               ...(0, v.getNativeContextMenuChannelAnalytics)(),
             }),
               (0, s.handleClick)(
                 {
-                  href: n,
-                  trusted: (0, s.isLinkTrusted)(n, t),
+                  href: t,
+                  trusted: (0, s.isLinkTrusted)(t, e),
                   shouldConfirm: !0,
                 },
-                e
+                n
               );
           };
         return [
@@ -221,7 +221,7 @@
                   hostname: h,
                   ...(0, v.getNativeContextMenuChannelAnalytics)(),
                 }),
-                  f.default.copy(n);
+                  f.default.copy(t);
               },
             },
             "copy-native-link"
@@ -231,7 +231,7 @@
             {
               id: "open-native-link",
               label: C.default.Messages.OPEN_LINK,
-              action: n => g(n),
+              action: t => g(t),
             },
             "open-native-link"
           ),
@@ -240,4 +240,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ca85bb0d365bfb3c6525.js.map
+//# sourceMappingURL=7e56af8dab74c34fbafd.js.map

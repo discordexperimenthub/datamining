@@ -59,7 +59,7 @@
       i.r(t),
         i.d(t, {
           NON_SUBSCRIBER_SENTINEL: function () {
-            return m;
+            return h;
           },
           maybeFetchPremiumLikelihood: function () {
             return I;
@@ -79,19 +79,19 @@
         d = i("719923"),
         f = i("676572"),
         S = i("646718"),
-        h = i("49111");
-      let m = "nonSubscriber";
+        m = i("49111");
+      let h = "nonSubscriber";
       async function E() {
         try {
           a.default.dispatch({ type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH" });
           let { body: e } = await s.HTTP.get({
-            url: h.Endpoints.USER_PREMIUM_LIKELIHOOD,
+            url: m.Endpoints.USER_PREMIUM_LIKELIHOOD,
           });
           a.default.dispatch({
             type: "BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS",
             premiumLikelihood: (function (e) {
               return {
-                [m]: e.non_subscriber,
+                [h]: e.non_subscriber,
                 [S.PremiumSubscriptionSKUs.TIER_0]:
                   e[S.PremiumSubscriptionSKUs.TIER_0],
                 [S.PremiumSubscriptionSKUs.TIER_2]:
@@ -123,10 +123,12 @@
             { location: "443cca_2" },
             { autoTrackExposure: !1 }
           ),
-          s = (0, n.default)([f.default], () =>
+          s = (0, n.useStateFromStores)([f.default], () =>
             f.default.shouldFetchPremiumLikelihood()
           ),
-          a = (0, n.default)([u.default], () => u.default.getCurrentUser());
+          a = (0, n.useStateFromStores)([u.default], () =>
+            u.default.getCurrentUser()
+          );
         r.useEffect(() => {
           k(a, s, t, i);
         }, [a, s, t, i]);
@@ -288,13 +290,13 @@
         d = i("766274"),
         f = i("341542"),
         S = i("697218"),
-        h = i("271560"),
-        m = i("364685"),
+        m = i("271560"),
+        h = i("364685"),
         E = i("49111"),
         I = i("397336"),
         p = i("782340");
       let k = async (e, t) => {
-          let { body: i } = await (0, h.httpGetWithCountryCodeQuery)(
+          let { body: i } = await (0, m.httpGetWithCountryCodeQuery)(
             E.Endpoints.STICKER_PACK(e)
           );
           return (
@@ -311,8 +313,8 @@
           let { locale: e = c.default.locale } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
           if (
-            m.default.isFetchingStickerPacks ||
-            m.default.hasLoadedStickerPacks
+            h.default.isFetchingStickerPacks ||
+            h.default.hasLoadedStickerPacks
           )
             return;
           a.default.wait(() => {
@@ -386,7 +388,7 @@
       function x(e) {
         return f.default.totalUnavailableGuilds > 0 || !u.default.isConnected()
           ? e
-          : e.filter(e => null != m.default.getStickerById(e));
+          : e.filter(e => null != h.default.getStickerById(e));
       }
       function A(e) {
         o.FrecencyUserSettingsActionCreators.updateAsync(
@@ -465,8 +467,8 @@
         d = i("697218"),
         f = i("427459"),
         S = i("991170"),
-        h = i("866353"),
-        m = i("467094"),
+        m = i("866353"),
+        h = i("467094"),
         E = i("865372"),
         I = i("364685"),
         p = i("161585"),
@@ -482,7 +484,7 @@
           r.useEffect(() => {
             t &&
               null == I.default.getStickerPack(e) &&
-              (0, m.fetchStickerPack)(e);
+              (0, h.fetchStickerPack)(e);
           }, [e, t]);
         },
         v = e => {
@@ -503,8 +505,8 @@
             let e = Math.floor((a - n + l) / (o + l)),
               r = Math.floor(Math.max(l, (a - n - o * e) / (e - 1))),
               S = [],
-              h = [],
               m = [],
+              h = [],
               E = 0,
               I = 0,
               C = 0;
@@ -534,7 +536,7 @@
                     (0, f.getTotalStickerCountForTier)(n.premiumTier) &&
                   v++;
                 let y = Math.ceil(v / e);
-                h[I] = r ? 0 : y;
+                m[I] = r ? 0 : y;
                 for (let s = 0; s < y; s++) {
                   let a = s * e,
                     l = a + e,
@@ -566,7 +568,7 @@
                       columnIndex: u.length,
                       visibleRowIndex: C,
                     }),
-                    !r && (C++, m.push(u), S.push(u.length)),
+                    !r && (C++, h.push(u), S.push(u.length)),
                     E++;
                 }
                 I++;
@@ -581,7 +583,7 @@
                         (null == t ? void 0 : t.has(e.id)) === !0
                       ))
                     : e.type === p.StickerCategoryTypes.EMPTY_GUILD_UPSELL &&
-                      ((h[I] = 0), I++);
+                      ((m[I] = 0), I++);
               else
                 i.sendable.length > 0 &&
                   r(i.sendable, p.StickerCategoryTypes.SEARCH_RESULTS),
@@ -593,8 +595,8 @@
             }
             return {
               rowCount: E,
-              rowCountBySection: h,
-              stickersGrid: m,
+              rowCountBySection: m,
+              stickersGrid: h,
               gutterWidth: r,
               columnCounts: S,
             };
@@ -608,7 +610,7 @@
             [I.default],
             () => {
               let i = I.default.getAllStickersIterator();
-              for (let r of i) if ((0, h.isSendableSticker)(r, t, e)) return !0;
+              for (let r of i) if ((0, m.isSendableSticker)(r, t, e)) return !0;
               return !1;
             },
             [t, e]
@@ -616,7 +618,7 @@
         },
         R = () => {
           r.useEffect(() => {
-            (0, m.fetchStickerPacks)();
+            (0, h.fetchStickerPacks)();
           }, []);
         },
         L = e => {
@@ -780,8 +782,8 @@
                                       : r.some(e => e.id === t.id)) &&
                                 void 0 !== n &&
                                 n &&
-                                (0, h.getStickerSendability)(t, a, e) !==
-                                  h.StickerSendability.NONSENDABLE
+                                (0, m.getStickerSendability)(t, a, e) !==
+                                  m.StickerSendability.NONSENDABLE
                               );
                             }
                             if ((0, k.isStandardSticker)(t))
@@ -807,7 +809,7 @@
               if (t && !c && null == i && s && !l) {
                 a(!1);
                 try {
-                  await (0, m.fetchSticker)(e.id);
+                  await (0, h.fetchSticker)(e.id);
                 } catch {}
                 u(!0);
               }
@@ -855,8 +857,8 @@
         d = i("290381"),
         f = i("77078"),
         S = i("206230"),
-        h = i("407063"),
-        m = i("54560"),
+        m = i("407063"),
+        h = i("54560"),
         E = i("983782"),
         I = i("866190"),
         p = i("256860"),
@@ -895,7 +897,7 @@
                 ? (0, r.jsxs)("div", {
                     className: T.error,
                     children: [
-                      (0, r.jsx)(m.default, { className: T.errorIcon }),
+                      (0, r.jsx)(h.default, { className: T.errorIcon }),
                       c &&
                         (0, r.jsx)(f.Text, {
                           className: T.errorText,
@@ -921,7 +923,7 @@
               className: d,
               maskAsset: f,
               positionRef: S,
-              withLoadingIndicator: m,
+              withLoadingIndicator: h,
               onError: E,
             } = e,
             I = n.useRef(null),
@@ -937,7 +939,7 @@
           ),
           n.useEffect(() => {
             if (null == I.current || null == P) return;
-            let e = Math.min(2, (0, h.getDevicePixelRatio)());
+            let e = Math.min(2, (0, m.getDevicePixelRatio)());
             (I.current.width = s * e), (I.current.height = s * e);
             let t = !1,
               r = async () => {
@@ -989,7 +991,7 @@
                   isLoading: k,
                   maskAsset: f,
                   size: s,
-                  withLoadingIndicator: m,
+                  withLoadingIndicator: h,
                   children: R(
                     (0, r.jsx)("canvas", { className: T.lottieCanvas, ref: I }),
                     a.id
@@ -1009,7 +1011,7 @@
               withLoadingIndicator: f,
               fileUri: S,
             } = e,
-            [h, m] = n.useState(!1),
+            [m, h] = n.useState(!1),
             [E, I] = n.useState(!0),
             [p, k] = n.useState(!1),
             g = n.useRef(null),
@@ -1018,7 +1020,7 @@
               null != S
                 ? S
                 : (0, C.getStickerAssetUrl)(i, {
-                    isPreview: !t || !h || !s,
+                    isPreview: !t || !m || !s,
                     size: l,
                   }),
             A = n.useCallback(() => {
@@ -1030,7 +1032,7 @@
           return (n.useEffect(() => {
             if (null != g.current) {
               let { isVisible: e } = g.current;
-              m(e);
+              h(e);
             }
           }, []),
           n.useLayoutEffect(() => {
@@ -1042,7 +1044,7 @@
             ? null
             : (0, r.jsx)(d.VisibilitySensor, {
                 ref: g,
-                onChange: m,
+                onChange: h,
                 threshold: 0.7,
                 children: (0, r.jsx)("div", {
                   className: a(u, T.pngImageWrapper),
@@ -1080,14 +1082,14 @@
               size: u,
               sticker: d,
             } = e,
-            h = (0, o.useStateFromStores)(
+            m = (0, o.useStateFromStores)(
               [S.default],
               () => S.default.useReducedMotion
             ),
-            m = n.useRef(null),
-            I = { transform: "scale(".concat(h ? 1 : 1 / i, ")"), opacity: 0 },
+            h = n.useRef(null),
+            I = { transform: "scale(".concat(m ? 1 : 1 / i, ")"), opacity: 0 },
             p = (0, c.useTransition)(a, {
-              ref: m,
+              ref: h,
               from: I,
               enter: { transform: "scale(1)", opacity: 1 },
               leave: I,
@@ -1096,12 +1098,12 @@
             k = n.useRef(null),
             C = (0, c.useSpring)({
               ref: k,
-              transform: a || h ? "translateY(0)" : "translateY(-25px)",
+              transform: a || m ? "translateY(0)" : "translateY(-25px)",
               opacity: a ? 1 : 0,
               config: _,
             });
           return (
-            (0, c.useChain)(a ? [m, k] : [k, m], a ? [0, 0.0625] : [0, 0]),
+            (0, c.useChain)(a ? [h, k] : [k, h], a ? [0, 0.0625] : [0, 0]),
             p(
               (e, n) =>
                 n &&
@@ -1158,8 +1160,8 @@
               className: d,
               withLoadingIndicator: f,
               assetData: S,
-              fileUri: h,
-              onError: m,
+              fileUri: m,
+              onError: h,
             } = e,
             E = (0, I.useIsWindowFocused)(),
             C = (0, p.useShouldAnimateSticker)(t) && !i,
@@ -1180,8 +1182,8 @@
                   positionRef: g,
                   withLoadingIndicator: f,
                   assetData: S,
-                  fileUri: h,
-                  onError: m,
+                  fileUri: m,
+                  onError: h,
                 }),
                 s &&
                   (0, r.jsx)(U, {
@@ -1244,8 +1246,8 @@
         d = i("997289"),
         f = i("246511"),
         S = i("151185"),
-        h = i("599110"),
-        m = i("866353"),
+        m = i("599110"),
+        h = i("866353"),
         E = i("161585"),
         I = i("24373"),
         p = i("41170"),
@@ -1332,7 +1334,7 @@
                         onMouseMove: _,
                         onClick: () => {
                           e.type === E.StickerGridItemTypes.CREATE_STICKER &&
-                            (h.default.track(C.AnalyticEvents.OPEN_MODAL, {
+                            (m.default.track(C.AnalyticEvents.OPEN_MODAL, {
                               type: C.AnalyticsSections.CREATE_STICKER_MODAL,
                               location: H,
                             }),
@@ -1420,7 +1422,7 @@
                                 [T.stickerNodeHidden]: y,
                                 [T.stickerUnsendable]:
                                   D &&
-                                  !(0, m.isSendableSticker)(e.sticker, G, j),
+                                  !(0, h.isSendableSticker)(e.sticker, G, j),
                               }),
                               disableAnimation: !v && !s,
                               enlargeOnInteraction: O,
@@ -1739,4 +1741,4 @@
     },
   },
 ]);
-//# sourceMappingURL=61442.5cf9db6f7a83c1163db7.js.map
+//# sourceMappingURL=61442.ff4ce0ec922f440fe839.js.map

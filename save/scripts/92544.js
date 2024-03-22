@@ -1058,7 +1058,7 @@
                   e => {
                     if (
                       null == e.body ||
-                      "dd0eb83dd3b5997e218514481cdb9218fcb64367" === e.body.hash
+                      "ebc6d6da785c387126b27081fb30501c3b7e96c2" === e.body.hash
                     )
                       return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, r.probablyHasBuildOverride)())
@@ -4986,12 +4986,15 @@
             { location: "f79435_1" },
             { autoTrackExposure: !1 }
           ),
-          l = (0, o.default)(
+          l = (0, o.useStateFromStores)(
             [c.default],
             () => (n ? c.default.getOverdueMessageReminderCount() : 0),
             [n]
           ),
-          s = (0, o.default)([u.default], () => u.default.useReducedMotion);
+          s = (0, o.useStateFromStores)(
+            [u.default],
+            () => u.default.useReducedMotion
+          );
         return n
           ? (0, a.jsx)(h, { count: l, className: t, reducedMotion: s })
           : null;
@@ -5724,10 +5727,10 @@
           { enabled: C } = f.default.useExperiment({
             location: "RecentsHeader",
           }),
-          A = (0, i.default)([c.default], () =>
+          A = (0, i.useStateFromStores)([c.default], () =>
             c.default.getUnseenInviteCount()
           ),
-          M = (0, i.default)([E.default], () =>
+          M = (0, i.useStateFromStores)([E.default], () =>
             E.default.getMessageReminders()
           ),
           v = M.length;
@@ -7765,10 +7768,10 @@
       function h(e) {
         let { inboxIconRef: t, recentsPopoutShown: n } = e,
           [h, E] = l.useState(!1),
-          m = (0, s.default)([o.default], () =>
+          m = (0, s.useStateFromStores)([o.default], () =>
             o.default.getLastUnseenInvite()
           ),
-          p = (0, s.default)([d.default], () =>
+          p = (0, s.useStateFromStores)([d.default], () =>
             null != m ? d.default.getUser(m.inviter_id) : null
           );
         return (l.useEffect(() => {
@@ -10369,4 +10372,4 @@
     },
   },
 ]);
-//# sourceMappingURL=16607b5476fd088b9cfb.js.map
+//# sourceMappingURL=e17901f6e4c85bd79b31.js.map

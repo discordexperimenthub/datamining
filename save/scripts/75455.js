@@ -68,8 +68,8 @@
         _ = s("619443"),
         f = s("38112"),
         h = s("602818"),
-        L = s("539938"),
-        S = s("305961"),
+        S = s("539938"),
+        L = s("305961"),
         x = s("191814"),
         I = s("741515"),
         p = s("657199"),
@@ -94,8 +94,8 @@
         let { guildId: s, productId: i } = e,
           { loaded: r, subscriptionsSettings: a } = (0,
           I.useMonetizationSettings)(s),
-          n = (0, d.useStateFromStores)([S.default], () =>
-            S.default.getGuild(s)
+          n = (0, d.useStateFromStores)([L.default], () =>
+            L.default.getGuild(s)
           ),
           {
             selectedTab: u,
@@ -146,8 +146,8 @@
           r = (0, d.useStateFromStores)([_.default], () =>
             _.default.isConnected()
           ),
-          x = (0, d.useStateFromStores)([S.default], () =>
-            S.default.getGuild(t)
+          x = (0, d.useStateFromStores)([L.default], () =>
+            L.default.getGuild(t)
           ),
           { shouldHideGuildPurchaseEntryPoints: I, restrictionsLoading: E } =
             (0, C.useShouldHideGuildPurchaseEntryPoints)(t),
@@ -173,14 +173,14 @@
           (0, l.jsxs)("div", {
             className: a(A.chat, w.container),
             children: [
-              (0, l.jsxs)(L.default, {
+              (0, l.jsxs)(S.default, {
                 children: [
-                  (0, l.jsx)(L.default.Icon, {
+                  (0, l.jsx)(S.default.Icon, {
                     icon: G.default,
                     "aria-hidden": !0,
                     color: c.default.INTERACTIVE_ACTIVE,
                   }),
-                  (0, l.jsx)(L.default.Title, {
+                  (0, l.jsx)(S.default.Title, {
                     children: M.default.Messages.GUILD_SHOP_CHANNEL_LABEL,
                   }),
                   (0, l.jsx)(O.default, {}),
@@ -219,7 +219,7 @@
       s.r(t),
         s.d(t, {
           GuildProductCardGrid: function () {
-            return S;
+            return L;
           },
         });
       var l = s("37983"),
@@ -235,14 +235,14 @@
         _ = s("387678"),
         f = s("874146"),
         h = s("782340"),
-        L = s("99715");
-      function S(e) {
+        S = s("99715");
+      function L(e) {
         let { guildId: t, productId: s } = e,
           { listingsLoaded: r } = (0, c.useFetchGuildProductListingsForGuild)(
             t
           ),
           n = (0, c.useGuildProductsForGuild)(t),
-          S = i.useRef(null),
+          L = i.useRef(null),
           { sortOption: x } = (0, _.useGuildProductsSortOptionContext)(),
           I = i.useMemo(
             () =>
@@ -270,22 +270,22 @@
           );
         return r
           ? (0, l.jsx)("ul", {
-              className: L.cardContainer,
+              className: S.cardContainer,
               "aria-label": h.default.Messages.GUILD_SHOP_PRODUCTS_A11Y_LABEL,
               children: I.map(e =>
                 (0, l.jsx)(
                   "li",
                   {
-                    className: L.card,
+                    className: S.card,
                     children: (0, l.jsx)(
                       "div",
                       {
-                        className: a(L.cardContent, {
-                          [L.selectedCard]: e.id === s,
+                        className: a(S.cardContent, {
+                          [S.selectedCard]: e.id === s,
                         }),
-                        ref: e.id === s ? S : void 0,
+                        ref: e.id === s ? L : void 0,
                         onLoad: () => {
-                          let t = S.current;
+                          let t = L.current;
                           null != t &&
                             e.id === s &&
                             (t.scrollIntoView({
@@ -293,7 +293,7 @@
                               block: "center",
                             }),
                             setTimeout(() => {
-                              t.classList.remove(L.selectedCard);
+                              t.classList.remove(S.selectedCard);
                             }, 2e3));
                         },
                         children: (0, l.jsx)(
@@ -414,8 +414,8 @@
         _ = s("381546"),
         f = s("978679"),
         h = s("956089"),
-        L = s("551254"),
-        S = s("634388"),
+        S = s("551254"),
+        L = s("634388"),
         x = s("893399"),
         I = s("802810"),
         p = s("56673"),
@@ -484,7 +484,7 @@
       }
       function O(e) {
         let { guild: t } = e,
-          s = (0, L.useIsEligibleForSubscriptionsInGuildShop)(
+          s = (0, S.useIsEligibleForSubscriptionsInGuildShop)(
             t.id,
             "guild_shop_category_selector"
           ),
@@ -493,11 +493,14 @@
             setSelectedTab: r,
             categoryTabs: _,
             handlePreviewDismiss: h,
-          } = (0, S.useGuildShopDisplayContext)(),
+          } = (0, L.useGuildShopDisplayContext)(),
           O =
             "false" ===
             n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"),
-          v = (0, a.default)([o.default], () => o.default.useReducedMotion),
+          v = (0, a.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion
+          ),
           G = _.map(e => {
             switch (e) {
               case x.GuildShopTab.GUILD_PRODUCTS:
@@ -618,12 +621,15 @@
         _ = s("763838"),
         f = s("500307"),
         h = s("49111"),
-        L = s("782340"),
-        S = s("255008");
+        S = s("782340"),
+        L = s("255008");
       function x() {
         let e = o.GifAutoPlay.useSetting(),
           t = (0, C.useIsWindowFocused)(),
-          s = (0, i.default)([a.default], () => a.default.useReducedMotion),
+          s = (0, i.useStateFromStores)(
+            [a.default],
+            () => a.default.useReducedMotion
+          ),
           r =
             t && e && !s
               ? (0, n.getAssetCDNUrl)(
@@ -633,7 +639,7 @@
                   "server_products/storefront/question-mark.png"
                 );
         return (0, l.jsxs)("div", {
-          className: S.previewListingCard,
+          className: L.previewListingCard,
           children: [
             (0, l.jsx)(d.default, {
               role: void 0,
@@ -641,9 +647,9 @@
               imageUrl: (0, n.getAssetCDNUrl)(
                 "server_products/storefront/preview-thumbnail.png"
               ),
-              name: L.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
+              name: S.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
               description:
-                L.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
+                S.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
               formattedPrice: (0, c.formatPrice)(0, h.CurrencyCodes.USD, {
                 localeMatcher: "best fit",
                 style: "currency",
@@ -651,7 +657,7 @@
               }),
               shouldShowFullDescriptionButton: !1,
               productType:
-                L.default.Messages
+                S.default.Messages
                   .GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
               onTapCard: () => null,
               hideRoleTag: !0,
@@ -660,20 +666,20 @@
               cardWidth: 332,
               descriptionTextVariant: "text-xs/normal",
             }),
-            (0, l.jsx)("img", { className: S.questionMark, alt: "", src: r }),
+            (0, l.jsx)("img", { className: L.questionMark, alt: "", src: r }),
           ],
         });
       }
       function I() {
         return (0, l.jsxs)("div", {
-          className: S.learnMoreTipContainer,
+          className: L.learnMoreTipContainer,
           children: [
-            (0, l.jsx)(u.default, { className: S.infoCircle }),
+            (0, l.jsx)(u.default, { className: L.infoCircle }),
             (0, l.jsx)(r.Text, {
               variant: "text-sm/normal",
               color: "text-muted",
               children:
-                L.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
+                S.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
                   learnMoreLink: f.SERVER_SHOP_URL,
                 }),
             }),
@@ -683,10 +689,10 @@
       function p(e) {
         let { guildId: t } = e;
         return (0, l.jsxs)("div", {
-          className: S.previewContentContainer,
+          className: L.previewContentContainer,
           children: [
             (0, l.jsxs)("div", {
-              className: S.previewContent,
+              className: L.previewContent,
               children: [
                 (0, l.jsx)(x, {}),
                 (0, l.jsx)(_.default, { guildId: t, showCTA: !0 }),
@@ -719,16 +725,16 @@
         _ = s("500307"),
         f = s("49111"),
         h = s("782340"),
-        L = s("301794");
-      function S(e) {
+        S = s("301794");
+      function L(e) {
         let { pills: t } = e;
         return (0, l.jsx)("div", {
-          className: L.row,
+          className: S.row,
           children: t.map(e =>
             (0, l.jsx)(
               "div",
               {
-                className: L.pill,
+                className: S.pill,
                 children: (0, l.jsx)(a.Text, {
                   variant: "text-sm/normal",
                   children: e,
@@ -760,21 +766,21 @@
             ],
           ];
         return (0, l.jsx)("div", {
-          className: r({ [L.responsive]: i }),
+          className: r({ [S.responsive]: i }),
           children: (0, l.jsxs)("div", {
-            className: L.container,
+            className: S.container,
             children: [
               (0, l.jsxs)("div", {
-                className: L.content,
+                className: S.content,
                 children: [
                   (0, l.jsx)("div", {
-                    className: L.pillContainer,
+                    className: S.pillContainer,
                     children: x.map((e, t) =>
-                      (0, l.jsx)(S, { pills: e }, "pill-row-".concat(t))
+                      (0, l.jsx)(L, { pills: e }, "pill-row-".concat(t))
                     ),
                   }),
                   (0, l.jsxs)("div", {
-                    className: L.ctaContent,
+                    className: S.ctaContent,
                     children: [
                       (0, l.jsx)(a.Text, {
                         variant: "text-lg/medium",
@@ -785,8 +791,8 @@
                       s &&
                         (0, l.jsxs)(u.default, {
                           size: a.Button.Sizes.MEDIUM,
-                          className: L.getStartedButton,
-                          innerClassName: L.getStartedButtonContents,
+                          className: S.getStartedButton,
+                          innerClassName: S.getStartedButtonContents,
                           shineSize: u.default.ShineSizes.SMALL,
                           onClick: () => {
                             C.default.track(
@@ -806,7 +812,7 @@
                           children: [
                             h.default.Messages.GUILD_SHOP_PREVIEW_CTA_BUTTON,
                             (0, l.jsx)(c.default, {
-                              className: L.getStartedArrow,
+                              className: S.getStartedArrow,
                             }),
                           ],
                         }),
@@ -815,21 +821,21 @@
                 ],
               }),
               (0, l.jsxs)("div", {
-                className: L.muralImageContainer,
+                className: S.muralImageContainer,
                 children: [
                   (0, l.jsx)("img", {
                     src: (0, d.getAssetCDNUrl)(
                       "server_products/storefront/preview-mural.png"
                     ),
                     alt: "",
-                    className: L.muralImage,
+                    className: S.muralImage,
                   }),
                   (0, l.jsx)("img", {
                     src: (0, d.getAssetCDNUrl)(
                       "server_products/storefront/preview-mural-reduced.png"
                     ),
                     alt: "",
-                    className: L.muralImageReducedWidth,
+                    className: S.muralImageReducedWidth,
                   }),
                 ],
               }),
@@ -1320,4 +1326,4 @@
     },
   },
 ]);
-//# sourceMappingURL=38593b1ff794fc1b9666.js.map
+//# sourceMappingURL=40c82ff9acf7ba29fca5.js.map

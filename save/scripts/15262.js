@@ -614,7 +614,9 @@
             { location: "d17fd6_3" },
             { autoTrackExposure: !1 }
           ),
-          en = (0, u.default)([E.default], () => E.default.getCurrentUser()),
+          en = (0, u.useStateFromStores)([E.default], () =>
+            E.default.getCurrentUser()
+          ),
           er =
             !Q &&
             null != Y &&
@@ -662,7 +664,7 @@
             ea && ec.includes(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2)
               ? L.SubscriptionPlans.PREMIUM_MONTH_TIER_2
               : ec[0],
-          ef = (0, u.default)([_.default], () => _.default.get(ep)),
+          ef = (0, u.useStateFromStores)([_.default], () => _.default.get(ep)),
           em = [{ planId: null == ef ? void 0 : ef.id, quantity: 1 }],
           [eS, eP] = i.useState(eo),
           [eE, e_] = (0, c.useSubscriptionInvoicePreview)({
@@ -1144,4 +1146,4 @@
     },
   },
 ]);
-//# sourceMappingURL=15262.50cf409f62d39c99c339.js.map
+//# sourceMappingURL=15262.c9502700cc4ac679cf45.js.map

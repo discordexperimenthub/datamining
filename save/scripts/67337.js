@@ -1,44 +1,46 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["67337"],
   {
-    968710: function (e, a, t) {
+    968710: function (e, t, a) {
       "use strict";
-      t.r(a),
-        t.d(a, {
+      a.r(t),
+        a.d(t, {
           default: function () {
-            return l;
+            return f;
           },
         });
-      var n = t("37983");
-      t("884691");
-      var s = t("65597"),
-        r = t("77078"),
-        d = t("697218"),
-        u = t("158998"),
-        f = t("782340");
-      function l(e) {
+      var s = a("37983");
+      a("884691");
+      var n = a("65597"),
+        r = a("77078"),
+        o = a("697218"),
+        u = a("158998"),
+        d = a("782340");
+      function f(e) {
         let {
-            transitionState: a,
-            onClose: t,
-            userId: l,
-            onCancel: o,
-            confirmBlock: i,
+            transitionState: t,
+            onClose: a,
+            userId: f,
+            onCancel: i,
+            confirmBlock: l,
           } = e,
-          c = (0, s.default)([d.default], () => d.default.getUser(l)),
+          c = (0, n.useStateFromStores)([o.default], () =>
+            o.default.getUser(f)
+          ),
           C = u.default.useName(c);
-        return (0, n.jsx)(r.ConfirmModal, {
-          header: f.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
+        return (0, s.jsx)(r.ConfirmModal, {
+          header: d.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
             name: C,
           }),
-          confirmText: f.default.Messages.BLOCK,
-          cancelText: f.default.Messages.CANCEL,
-          onConfirm: i,
-          onClose: t,
-          onCancel: o,
-          transitionState: a,
-          children: (0, n.jsx)(r.Text, {
+          confirmText: d.default.Messages.BLOCK,
+          cancelText: d.default.Messages.CANCEL,
+          onConfirm: l,
+          onClose: a,
+          onCancel: i,
+          transitionState: t,
+          children: (0, s.jsx)(r.Text, {
             variant: "text-md/normal",
-            children: f.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
+            children: d.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
               name: C,
             }),
           }),
@@ -47,4 +49,4 @@
     },
   },
 ]);
-//# sourceMappingURL=98a8c6a9760b4e33491d.js.map
+//# sourceMappingURL=03f79d68e9a35921aaca.js.map

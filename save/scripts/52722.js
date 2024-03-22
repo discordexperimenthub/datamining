@@ -1,9 +1,13 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["88586"],
+  ["52722"],
   {
     608905: function (e, t, s) {
       "use strict";
       e.exports = s.p + "66ada300576adf0f4e4f.svg";
+    },
+    69448: function (e, t, s) {
+      "use strict";
+      e.exports = s.p + "f6da6e7ed1d57e445d0e.svg";
     },
     329910: function (e, t, s) {
       "use strict";
@@ -3534,7 +3538,7 @@
         y = e => {
           let { styles: t, selectedPremiumType: s } = e,
             r = (0, i.default)(),
-            y = (0, a.default)([l.default], () => {
+            y = (0, a.useStateFromStores)([l.default], () => {
               let e = l.default.getCurrentUser();
               return o.default.canUsePremiumProfileCustomization(e);
             }),
@@ -3754,7 +3758,7 @@
         S = function (e) {
           let { isFullscreen: t } = e,
             { promotion: s } = (0, E.useBogoPromotion)(),
-            r = (0, i.default)([o.default], () =>
+            r = (0, i.useStateFromStores)([o.default], () =>
               o.default.getPremiumTypeSubscription()
             ),
             S = (0, c.useIsEligibleForBogoPromotion)();
@@ -5752,7 +5756,10 @@
           } = e,
           [_, E] = r.useState(!1),
           I = (0, S.usePerkCards)({ styles: p, selectedPremiumType: n }),
-          f = (0, l.default)([u.default], () => u.default.useReducedMotion),
+          f = (0, l.useStateFromStores)(
+            [u.default],
+            () => u.default.useReducedMotion
+          ),
           { analyticsLocations: A } = (0, c.default)(),
           P = (0, T.useIsRemixANitroPerk)();
         return (
@@ -6120,7 +6127,10 @@
               cardType: A,
               confettiCanvas: p,
             } = e,
-            v = (0, o.default)([c.default], () => c.default.useReducedMotion),
+            v = (0, o.useStateFromStores)(
+              [c.default],
+              () => c.default.useReducedMotion
+            ),
             [D, b] = r.useState(!1),
             [U, j] = r.useState(!1),
             B = (0, I.useFreeBoostUserTenureReward)(),
@@ -6611,7 +6621,10 @@
             N = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2)
               ? E.PremiumSubscriptionSKUs.TIER_2
               : void 0,
-            A = (0, l.default)([o.default], () => o.default.useReducedMotion),
+            A = (0, l.useStateFromStores)(
+              [o.default],
+              () => o.default.useReducedMotion
+            ),
             p = (0, i.useSpring)({
               transform: r ? "translateY(-100%)" : "translateY(0%)",
               opacity: r ? 1 : 0,
@@ -8086,7 +8099,7 @@
         };
       var I = () => {
         let e = (0, i.useBlockedPaymentsConfig)(),
-          t = (0, r.default)([u.default], () =>
+          t = (0, r.useStateFromStores)([u.default], () =>
             u.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)
           ),
           s = _.map(e => {
@@ -8610,7 +8623,7 @@
           ),
           t = (0, u.default)(),
           s = M.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE,
-          a = (0, i.default)([f.default], () =>
+          a = (0, i.useStateFromStores)([f.default], () =>
             f.default.getPremiumTypeSubscription()
           ),
           r = null != a ? S.default.getPremiumPlanItem(a) : null,
@@ -10112,4 +10125,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5279d34622218a62d051.js.map
+//# sourceMappingURL=7073a16d3815fa14574f.js.map

@@ -1,70 +1,70 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["7046"],
   {
-    93902: function (e, t, l) {
+    93902: function (e, t, r) {
       "use strict";
-      e.exports = l.p + "de1981a6479d060d8ebd.png";
+      e.exports = r.p + "de1981a6479d060d8ebd.png";
     },
-    38766: function (e, t, l) {
+    38766: function (e, t, r) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      r.r(t),
+        r.d(t, {
           default: function () {
-            return s;
+            return i;
           },
         });
-      var r = l("884691"),
-        n = l("79112"),
-        o = l("685665"),
-        u = l("929423");
-      l("424562");
-      var a = l("49111"),
-        i = l("397336");
-      function s(e) {
+      var l = r("884691"),
+        n = r("79112"),
+        o = r("685665"),
+        u = r("929423");
+      r("424562");
+      var a = r("49111"),
+        s = r("397336");
+      function i(e) {
         let {
             guild: t,
-            scrollPosition: l,
-            analyticsLocation: s,
+            scrollPosition: r,
+            analyticsLocation: i,
             analyticsLocations: c,
             openWithoutBackstack: f = !1,
           } = e,
           { analyticsLocations: d } = (0, o.default)(),
-          h = (0, r.useCallback)(() => {
+          h = (0, l.useCallback)(() => {
             null != t && (0, u.initGuildIdentitySettings)(t, null != c ? c : d),
               n.default.open(
                 a.UserSettingsSections.PROFILE_CUSTOMIZATION,
                 null != t
-                  ? i.ProfileCustomizationSubsection.GUILD
-                  : i.ProfileCustomizationSubsection.USER_PROFILE,
+                  ? s.ProfileCustomizationSubsection.GUILD
+                  : s.ProfileCustomizationSubsection.USER_PROFILE,
                 {
-                  scrollPosition: l,
-                  analyticsLocation: s,
+                  scrollPosition: r,
+                  analyticsLocation: i,
                   analyticsLocations: c,
                   openWithoutBackstack: f,
                 }
               );
-          }, [t, l, s, c, f, d]);
+          }, [t, r, i, c, f, d]);
         return h;
       }
     },
-    493390: function (e, t, l) {
+    493390: function (e, t, r) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      r.r(t),
+        r.d(t, {
           openProfileEffectModal: function () {
             return o;
           },
         });
-      var r = l("37983");
-      l("884691");
-      var n = l("77078");
+      var l = r("37983");
+      r("884691");
+      var n = r("77078");
       let o = e => {
         let { analyticsLocations: t, initialSelectedEffectId: o, guild: u } = e;
         (0, n.openModalLazy)(async () => {
-          let { default: e } = await l.el("889793").then(l.bind(l, "889793"));
-          return l =>
-            (0, r.jsx)(e, {
-              ...l,
+          let { default: e } = await r.el("889793").then(r.bind(r, "889793"));
+          return r =>
+            (0, l.jsx)(e, {
+              ...r,
               guild: u,
               initialSelectedEffectId: o,
               analyticsLocations: t,
@@ -72,10 +72,10 @@
         }, {});
       };
     },
-    388491: function (e, t, l) {
+    388491: function (e, t, r) {
       "use strict";
-      l.r(t),
-        l.d(t, {
+      r.r(t),
+        r.d(t, {
           useProfileThemeValues: function () {
             return h;
           },
@@ -98,20 +98,23 @@
             return C;
           },
         }),
-        l("222007");
-      var r = l("884691"),
-        n = l("917351"),
-        o = l("509043"),
-        u = l("65597"),
-        a = l("669491"),
-        i = l("819855"),
-        s = l("206230"),
-        c = l("449918"),
-        f = l("172182"),
-        d = l("49111");
+        r("222007");
+      var l = r("884691"),
+        n = r("917351"),
+        o = r("509043"),
+        u = r("65597"),
+        a = r("669491"),
+        s = r("819855"),
+        i = r("206230"),
+        c = r("449918"),
+        f = r("172182"),
+        d = r("49111");
       function h(e) {
-        let t = (0, u.default)([s.default], () => s.default.saturation);
-        return (0, r.useMemo)(
+        let t = (0, u.useStateFromStores)(
+          [i.default],
+          () => i.default.saturation
+        );
+        return (0, l.useMemo)(
           () =>
             null == e
               ? null
@@ -165,54 +168,54 @@
         let t = (0, o.getDarkness)(e);
         return t > 0.5 ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
       }
-      function R(e, t, l) {
-        let r = l / 100,
-          n = 1 - r;
+      function R(e, t, r) {
+        let l = r / 100,
+          n = 1 - l;
         return [
-          Math.round(e[0] * n + t[0] * r),
-          Math.round(e[1] * n + t[1] * r),
-          Math.round(e[2] * n + t[2] * r),
+          Math.round(e[0] * n + t[0] * l),
+          Math.round(e[1] * n + t[1] * l),
+          Math.round(e[2] * n + t[2] * l),
         ];
       }
       function I(e, t) {
-        let l = (0, o.int2rgbArray)(e);
+        let r = (0, o.int2rgbArray)(e);
         if (null == t) return 0;
-        let r = f.default.parseString(t);
-        if (null == r) return 0;
-        let n = [r.red, r.green, r.blue],
-          u = [l[0], l[1], l[2]],
-          a = r.alpha,
-          [i, s, c] = n.map((e, t) => Math.floor(a * e + (1 - a) * u[t]));
+        let l = f.default.parseString(t);
+        if (null == l) return 0;
+        let n = [l.red, l.green, l.blue],
+          u = [r[0], r[1], r[2]],
+          a = l.alpha,
+          [s, i, c] = n.map((e, t) => Math.floor(a * e + (1 - a) * u[t]));
         return (0, o.rgb2int)(
-          "rgba(".concat(i, ", ").concat(s, ", ").concat(c, ")")
+          "rgba(".concat(s, ", ").concat(i, ", ").concat(c, ")")
         );
       }
-      function _(e, t, l) {
-        let r = h(e);
-        return null == r || null == t
+      function _(e, t, r) {
+        let l = h(e);
+        return null == l || null == t
           ? null
-          : I(t, l ? r.overlaySyncedWithUserTheme : r.overlay);
+          : I(t, r ? l.overlaySyncedWithUserTheme : l.overlay);
       }
       let O = (0, n.memoize)(
         e => {
-          let t = (0, i.getContrastingColor)(e, {
+          let t = (0, s.getContrastingColor)(e, {
             base: "#ffffff",
-            contrastRatio: i.WCAGContrastRatios.HighContrastText,
+            contrastRatio: s.WCAGContrastRatios.HighContrastText,
           });
           return (0, o.hex2int)(t);
         },
         e => e
       );
       function T(e, t) {
-        let l = h(e);
-        return null != l && null != t
-          ? I(t, null == l ? void 0 : l.messageInputBorder)
+        let r = h(e);
+        return null != r && null != t
+          ? I(t, null == r ? void 0 : r.messageInputBorder)
           : null;
       }
       function C(e, t) {
-        let l = (0, c.useColorValue)(d.Color.WHITE_500).hex;
-        return (0, i.isThemeDark)(e)
-          ? (0, o.hex2int)(l)
+        let r = (0, c.useColorValue)(d.Color.WHITE_500).hex;
+        return (0, s.isThemeDark)(e)
+          ? (0, o.hex2int)(r)
           : null != t
             ? O(t)
             : null;
@@ -220,4 +223,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4059bce09ea7f62d9ae0.js.map
+//# sourceMappingURL=98e9eb9a90ff639dbe45.js.map

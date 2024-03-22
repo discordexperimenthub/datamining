@@ -118,8 +118,8 @@
               onReset: g,
               onSave: C,
               onSaveText: h,
-              onResetText: p,
-              onSaveButtonColor: m,
+              onResetText: m,
+              onSaveButtonColor: p,
               disabled: T,
               saveButtonTooltip: v,
             } = e,
@@ -196,7 +196,7 @@
                           onClick: g,
                           children: (0, a.jsx)(n.animated.span, {
                             style: { color: x },
-                            children: null != p ? p : d.default.Messages.RESET,
+                            children: null != m ? m : d.default.Messages.RESET,
                           }),
                         }),
                       null != C
@@ -205,7 +205,7 @@
                             children: e =>
                               (0, a.jsx)(s.Button, {
                                 size: s.Button.Sizes.SMALL,
-                                color: null != m ? m : s.Button.Colors.GREEN,
+                                color: null != p ? p : s.Button.Colors.GREEN,
                                 submitting: f,
                                 disabled: T,
                                 onClick: C,
@@ -230,7 +230,7 @@
       A.r(t),
         A.d(t, {
           default: function () {
-            return p;
+            return m;
           },
         }),
         A("222007");
@@ -446,7 +446,7 @@
             });
         }
       }
-      var p = h;
+      var m = h;
     },
     639055: function (e, t, A) {
       "use strict";
@@ -691,8 +691,8 @@
         g = A("782340"),
         C = A("715633"),
         h = A("430594");
-      let p = (0, s.v4)(),
-        m = (0, u.createChannelRecord)({ id: "1", type: f.ChannelTypes.DM });
+      let m = (0, s.v4)(),
+        p = (0, u.createChannelRecord)({ id: "1", type: f.ChannelTypes.DM });
       function T() {
         return new Promise(e => {
           e({ shouldClear: !1, shouldRefocus: !0 });
@@ -737,7 +737,7 @@
           V =
             null !== (t = null == q ? void 0 : q.errorId) && void 0 !== t
               ? t
-              : p,
+              : m,
           b = l.useMemo(
             () => ({
               analyticsName: "simple",
@@ -764,7 +764,7 @@
           },
           placeholder: E,
           required: x,
-          channel: m,
+          channel: p,
           textValue: N,
           richValue: O,
           type: b,
@@ -788,7 +788,7 @@
               }),
             null != f &&
               (0, a.jsx)(i.HiddenVisually, {
-                id: p,
+                id: m,
                 children: g.default.Messages.MAXIMUM_LENGTH.format({
                   maxLength: f,
                 }),
@@ -886,8 +886,8 @@
         g = A("572679"),
         C = A("565559"),
         h = A("757515"),
-        p = A("49111"),
-        m = A("782340");
+        m = A("49111"),
+        p = A("782340");
       let T = new c.default("ProductAttachmentManager");
       class v {
         addAttachment(e, t) {
@@ -895,7 +895,7 @@
           if (this.uploads.length >= A)
             throw (
               (n.AccessibilityAnnouncer.announce(
-                m.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format(
+                p.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format(
                   { maxAttachmentsCount: A }
                 )
               ),
@@ -906,18 +906,18 @@
           a.upload(),
             a.on("error", A => {
               var l;
-              A === p.AbortCodes.ENTITY_TOO_LARGE && this.onFileSizeError();
+              A === m.AbortCodes.ENTITY_TOO_LARGE && this.onFileSizeError();
               let r = "number" == typeof A && A > 0 ? -A : -1,
                 s = (0, h.describeUploadProgressError)(r),
                 i = null === (l = e.file) || void 0 === l ? void 0 : l.name;
               null != i
                 ? n.AccessibilityAnnouncer.announce(
-                    m.default.Messages.GUILD_PRODUCT_A11Y_NAMED_UPLOAD_FAILED.format(
+                    p.default.Messages.GUILD_PRODUCT_A11Y_NAMED_UPLOAD_FAILED.format(
                       { filename: i, reason: s }
                     )
                   )
                 : n.AccessibilityAnnouncer.announce(
-                    m.default.Messages.GUILD_PRODUCT_A11Y_UPLOAD_FAILED.format({
+                    p.default.Messages.GUILD_PRODUCT_A11Y_UPLOAD_FAILED.format({
                       reason: s,
                     })
                   ),
@@ -1000,8 +1000,8 @@
             (this.isEdit = null != t);
           let l =
               null == t
-                ? p.Endpoints.GUILD_PRODUCTS(e)
-                : p.Endpoints.GUILD_PRODUCT_LISTINGS(e, t),
+                ? m.Endpoints.GUILD_PRODUCTS(e)
+                : m.Endpoints.GUILD_PRODUCT_LISTINGS(e, t),
             n = null == t ? "POST" : "PATCH";
           (this.createCloudUploader = () => (0, u.createCloudUploader)(l, n)),
             (this.guildId = e),
@@ -1034,7 +1034,9 @@
       function U(e, t) {
         var A;
         let { editSkuId: n, onFileSizeError: r } = t,
-          i = (0, l.default)([f.default], () => f.default.getGuild(e)),
+          i = (0, l.useStateFromStores)([f.default], () =>
+            f.default.getGuild(e)
+          ),
           [o, d] = a.useState({ editSkuId: n, onFileSizeError: r }),
           u = a.useMemo(() => new v({ guildId: e, ...o }), [e, o]),
           [c, g] = a.useState(u.generateInitialProgresses),
@@ -1042,7 +1044,7 @@
         a.useLayoutEffect(() => {
           g(u.generateInitialProgresses());
         }, [u]);
-        let [h, m] = a.useState(),
+        let [h, p] = a.useState(),
           [T, U] = a.useState(),
           I = a.useCallback(
             e => {
@@ -1059,7 +1061,7 @@
           x = a.useCallback(
             async e => {
               try {
-                m(e), U(void 0);
+                p(e), U(void 0);
                 let t = await u.saveProductWithAttachments(e);
                 return (
                   null != t && d({ editSkuId: t.id, onFileSizeError: r }),
@@ -1076,7 +1078,7 @@
                       })
                 );
               } finally {
-                m(void 0);
+                p(void 0);
               }
             },
             [u, r]
@@ -1112,7 +1114,7 @@
                 null == i
                   ? void 0
                   : i.hasFeature(
-                      p.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE
+                      m.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE
                     )) &&
             void 0 !== A &&
             A,
@@ -1124,7 +1126,7 @@
       A.r(t),
         A.d(t, {
           default: function () {
-            return m;
+            return p;
           },
         });
       var a = A("37983");
@@ -1180,7 +1182,7 @@
           ],
         });
       }
-      function p(e) {
+      function m(e) {
         let { onShowFullDescription: t, variant: A } = e,
           l = (0, a.jsxs)(a.Fragment, {
             children: [
@@ -1208,7 +1210,7 @@
               children: l,
             });
       }
-      function m(e) {
+      function p(e) {
         let {
             imageUrl: t,
             name: A,
@@ -1216,7 +1218,7 @@
             formattedPrice: i,
             role: u,
             ctaComponent: c,
-            shouldShowFullDescriptionButton: m = !0,
+            shouldShowFullDescriptionButton: p = !0,
             onShowFullDescription: T,
             productType: v,
             onTapCard: U,
@@ -1264,8 +1266,8 @@
                           text: l,
                         }),
                       }),
-                      m &&
-                        (0, a.jsx)(p, { onShowFullDescription: T, variant: O }),
+                      p &&
+                        (0, a.jsx)(m, { onShowFullDescription: T, variant: O }),
                       x || null == u || "" === u.name
                         ? null
                         : (0, a.jsxs)(a.Fragment, {
@@ -1359,8 +1361,8 @@
         g = A("945330"),
         C = A("903635"),
         h = A("696104"),
-        p = A("949435"),
-        m = A("757515"),
+        m = A("949435"),
+        p = A("757515"),
         T = A("527382"),
         v = A("500307"),
         U = A("782340"),
@@ -1375,8 +1377,8 @@
           c = n >= 1,
           f = n < 0,
           h = c || f,
-          p = null !== (t = A.filename) && void 0 !== t ? t : A.id,
-          T = (0, m.describeUploadProgressError)(n);
+          m = null !== (t = A.filename) && void 0 !== t ? t : A.id,
+          T = (0, p.describeUploadProgressError)(n);
         return (0, a.jsx)(s.TooltipContainer, {
           text: T,
           children: (0, a.jsxs)("div", {
@@ -1391,7 +1393,7 @@
                 color: d.default.INTERACTIVE_MUTED,
               }),
               (0, a.jsx)(u.default, { size: 10, horizontal: !0 }),
-              (0, a.jsx)(s.Text, { variant: "text-sm/normal", children: p }),
+              (0, a.jsx)(s.Text, { variant: "text-sm/normal", children: m }),
               !h &&
                 (0, a.jsx)(s.Spinner, {
                   className: I.attachedFileCardSpinner,
@@ -1402,7 +1404,7 @@
                 (0, a.jsx)(s.Button, {
                   "aria-label":
                     U.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
-                      attachment: p,
+                      attachment: m,
                     }),
                   className: I.deleteButton,
                   innerClassName: I.deleteButtonInner,
@@ -1428,9 +1430,9 @@
             addAttachment: d,
             deleteAttachment: c,
             fileUploadProgresses: g,
-          } = (0, p.useGuildProductAttachmentManagerContext)(),
+          } = (0, m.useGuildProductAttachmentManagerContext)(),
           C = l.useRef(!1);
-        function m(e) {
+        function p(e) {
           try {
             for (let t of e) d({ platform: o.UploadPlatform.WEB, file: t });
             C.current = !0;
@@ -1449,7 +1451,7 @@
                 description:
                   U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
                 icons: T.DEFAULT_FILE_UPLOAD_ICONS,
-                onDrop: m,
+                onDrop: p,
               }),
               (0, a.jsxs)(f.default, {
                 className: I.addFileButtonLook,
@@ -1461,7 +1463,7 @@
                 "aria-describedby": E,
                 multiple: !0,
                 onChange: function (e) {
-                  null != e.currentTarget.files && m(e.currentTarget.files);
+                  null != e.currentTarget.files && p(e.currentTarget.files);
                 },
                 children: [
                   (0, a.jsx)(h.default, {
@@ -1614,13 +1616,13 @@
             onConfirm: g,
             iconVariant: C = "warning",
           } = e,
-          [h, p] = r.useState(!1),
-          m = async () => {
-            p(!0);
+          [h, m] = r.useState(!1),
+          p = async () => {
+            m(!0);
             try {
               await g(), A();
             } finally {
-              p(!1);
+              m(!1);
             }
           },
           T =
@@ -1672,7 +1674,7 @@
               children: [
                 (0, n.jsx)(s.Button, {
                   color: s.Button.Colors.BRAND,
-                  onClick: m,
+                  onClick: p,
                   submitting: h,
                   children: c,
                 }),
@@ -1903,8 +1905,8 @@
             image: A,
             imageName: n,
             savedImageName: h,
-            onChange: p,
-            uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
+            onChange: m,
+            uploadButtonLabel: p = c.default.Messages.UPLOAD_IMAGE,
             radioGroupAriaLabel: T = c.default.Messages
               .CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
             disabled: v = !1,
@@ -1934,7 +1936,7 @@
               : e.activateUploadDialogue();
           },
           P = () => {
-            n === g && p(t[0].data, t[0].name), E(null), N(null);
+            n === g && m(t[0].data, t[0].name), E(null), N(null);
           };
         return (
           l.useEffect(() => {
@@ -1969,15 +1971,15 @@
                       variant: "text-xxs/normal",
                       color: "text-muted",
                       "aria-hidden": !0,
-                      children: m,
+                      children: p,
                     }),
                     (0, a.jsx)(i.default, {
                       ref: D,
                       tabIndex: 0,
                       onChange: (e, t) => {
-                        null != t && (N(t.name), E(e), p(e, g));
+                        null != t && (N(t.name), E(e), m(e, g));
                       },
-                      "aria-label": m,
+                      "aria-label": p,
                     }),
                   ],
                 }),
@@ -2033,7 +2035,7 @@
                     (0, a.jsx)(C, {
                       ref: L,
                       selectedImageName: n,
-                      onChange: p,
+                      onChange: m,
                       disabled: v,
                       name: g,
                       alt: q,
@@ -2042,7 +2044,7 @@
                   t.map(e =>
                     (0, a.jsx)(
                       C,
-                      { selectedImageName: n, onChange: p, disabled: v, ...e },
+                      { selectedImageName: n, onChange: m, disabled: v, ...e },
                       e.name
                     )
                   ),
@@ -2079,8 +2081,8 @@
         g = A("77078"),
         C = A("851387"),
         h = A("45299"),
-        p = A("206230"),
-        m = A("986399"),
+        m = A("206230"),
+        p = A("986399"),
         T = A("741515"),
         v = A("435032"),
         U = A("465869"),
@@ -2180,18 +2182,21 @@
         var t, a, l, s, i, o, T, I;
         let { guildId: q, productId: ee, transitionState: eA, onClose: el } = e,
           [en, er] = r.useState(ee),
-          es = (0, c.default)(
+          es = (0, c.useStateFromStores)(
             [b.default],
             () => (null == en ? null : b.default.getGuildProduct(en)),
             [en]
           ),
           ei = (null == es ? void 0 : es.published) === !0,
-          { application: eo } = (0, m.default)(
+          { application: eo } = (0, p.default)(
             q,
             y.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS
           ),
           ed = S.PRODUCT_IMAGE_PRESETS[0],
-          eu = (0, c.default)([p.default], () => p.default.useReducedMotion),
+          eu = (0, c.useStateFromStores)(
+            [m.default],
+            () => m.default.useReducedMotion
+          ),
           ec = E.GifAutoPlay.useSetting(),
           ef = (0, j.useIsWindowFocused)(),
           eg = r.useCallback(() => {
@@ -2221,12 +2226,12 @@
                 .CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY
             ));
         }, [eC, el]);
-        let [eh, ep] = r.useState(
+        let [eh, em] = r.useState(
             null !== (l = null == es ? void 0 : es.name) && void 0 !== l
               ? l
               : ""
           ),
-          [em, eT] = r.useState(
+          [ep, eT] = r.useState(
             null !== (s = null == es ? void 0 : es.description) && void 0 !== s
               ? s
               : ""
@@ -2275,7 +2280,7 @@
               : null,
           [eX, ez] = r.useState(),
           eZ = null != eX || null != eW,
-          eQ = (0, c.default)(
+          eQ = (0, c.useStateFromStores)(
             [x.default],
             () =>
               null != eW && null !== eX
@@ -2309,7 +2314,7 @@
                 guildProductListing: es,
                 name: eh,
                 priceTier: ev,
-                description: em,
+                description: ep,
                 image: eI,
                 imageName: ex,
                 isImageChanged: eD,
@@ -2317,7 +2322,7 @@
                 hasSavedAttachments: e_,
                 hasUnsavedAttachmentChanges: eS,
               }),
-            [es, eh, ev, em, eI, ex, eD, eX, e_, eS]
+            [es, eh, ev, ep, eI, ex, eD, eX, e_, eS]
           ),
           e3 = r.useMemo(
             () =>
@@ -2387,7 +2392,7 @@
           let A = await eM(e);
           if ((eL(!1), null != A)) {
             if (
-              (null != e.name && ep(A.name),
+              (null != e.name && em(A.name),
               null != e.description && eT(A.description),
               null != eX)
             ) {
@@ -2473,7 +2478,7 @@
                             : eG.getFirstFieldErrorMessage("name"),
                         children: (0, n.jsx)(g.TextArea, {
                           value: eh,
-                          onChange: ep,
+                          onChange: em,
                           id: Y,
                           maxLength: 100,
                           placeholder:
@@ -2500,13 +2505,13 @@
                         children: (0, n.jsx)(v.default, {
                           id: J,
                           className: k.descriptionArea,
-                          value: em,
+                          value: ep,
                           onChange: eT,
                           maxLength: 1500,
                           placeholder:
                             H.default.Messages
                               .GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
-                          showCharacterCount: em.length > 0,
+                          showCharacterCount: ep.length > 0,
                           parentModalKey: Z.GUILD_PRODUCT_EDIT_MODAL_KEY,
                           required: !0,
                         }),
@@ -2670,10 +2675,10 @@
                             ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME
                             : eh,
                         description:
-                          "" === em
+                          "" === ep
                             ? H.default.Messages
                                 .GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION
-                            : em,
+                            : ep,
                         formattedPrice: eR,
                         role: eQ,
                         productType: ey,
@@ -2838,10 +2843,10 @@
             onClick: g,
           } = e,
           C = (0, i.useUID)(),
-          [h, p] = l.useState(n);
+          [h, m] = l.useState(n);
         return (
           l.useEffect(() => {
-            p(e => e || n);
+            m(e => e || n);
           }, [n]),
           (0, a.jsxs)("div", {
             className: r(
@@ -2936,11 +2941,11 @@
         g = A("204203"),
         C = A("423487"),
         h = A("373996"),
-        p = A("49111"),
-        m = A("782340"),
+        m = A("49111"),
+        p = A("782340"),
         T = A("851894");
       function v() {
-        return { name: "", color: p.DEFAULT_ROLE_COLOR };
+        return { name: "", color: m.DEFAULT_ROLE_COLOR };
       }
       function U(e) {
         let t,
@@ -2952,7 +2957,7 @@
                   children: [
                     (0, a.jsx)(i.HiddenVisually, {
                       children:
-                        m.default.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format(
+                        p.default.Messages.GUILD_PRODUCT_SETTINGS_ROLE_COLOR_ARIA.format(
                           { color: (0, r.int2hex)(l.color) }
                         ),
                     }),
@@ -2972,7 +2977,7 @@
                           (0, a.jsx)(d.default, { size: 12, horizontal: !0 }),
                           (0, a.jsx)(i.Clickable, {
                             "aria-label":
-                              m.default.Messages
+                              p.default.Messages
                                 .GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
                             onClick: A,
                             className: T.attachedRoleClose,
@@ -3007,7 +3012,7 @@
               variant: "text-md/normal",
               color: "text-muted",
               children:
-                m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_BODY.format(
+                p.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_BODY.format(
                   {
                     roleName: t,
                     emphasisHook: e =>
@@ -3027,7 +3032,7 @@
               children: [
                 (0, a.jsx)(c.default, { height: 18, width: 18 }),
                 (0, a.jsx)(d.default, { horizontal: !0, size: 8 }),
-                m.default.Messages
+                p.default.Messages
                   .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_TITLE,
               ],
             }),
@@ -3035,7 +3040,7 @@
               variant: "text-md/normal",
               color: "text-muted",
               children:
-                m.default.Messages
+                p.default.Messages
                   .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_DETAIL,
             }),
             (0, a.jsxs)(i.Heading, {
@@ -3045,7 +3050,7 @@
               children: [
                 (0, a.jsx)(f.default, { height: 18, width: 18 }),
                 (0, a.jsx)(d.default, { horizontal: !0, size: 8 }),
-                m.default.Messages
+                p.default.Messages
                   .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_TITLE,
               ],
             }),
@@ -3053,7 +3058,7 @@
               variant: "text-md/normal",
               color: "text-muted",
               children:
-                m.default.Messages
+                p.default.Messages
                   .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_DETAIL,
             }),
           ],
@@ -3068,7 +3073,7 @@
             listingRoleId: c,
             error: f,
           } = e,
-          C = (0, s.default)([o.default], () =>
+          C = (0, s.useStateFromStores)([o.default], () =>
             null != c ? o.default.getRole(r, c) : void 0
           );
         return null === t
@@ -3078,7 +3083,7 @@
                 children: [
                   (0, a.jsx)(I, {}),
                   (0, a.jsx)(d.default, { horizontal: !0, size: 4 }),
-                  m.default.Messages
+                  p.default.Messages
                     .GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_HEADER,
                 ],
               }),
@@ -3090,7 +3095,7 @@
                   variant: "text-xs/normal",
                   color: "text-muted",
                   children:
-                    m.default.Messages
+                    p.default.Messages
                       .GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_DESCRIPTION,
                 }),
                 (0, a.jsx)(d.default, { size: 8 }),
@@ -3110,7 +3115,7 @@
                           variant: "text-md/normal",
                           color: "none",
                           children:
-                            m.default.Messages
+                            p.default.Messages
                               .GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_UNDO_CTA,
                         }),
                         (0, a.jsx)(d.default, { horizontal: !0, size: 8 }),
@@ -3124,7 +3129,7 @@
           : null != c
             ? (0, a.jsxs)(i.FormItem, {
                 title:
-                  m.default.Messages
+                  p.default.Messages
                     .GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_HEADER,
                 tag: "label",
                 error: f,
@@ -3134,7 +3139,7 @@
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children:
-                      m.default.Messages
+                      p.default.Messages
                         .GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION,
                   }),
                   (0, a.jsx)(d.default, { size: 8 }),
@@ -3152,13 +3157,13 @@
                             return A =>
                               (0, a.jsx)(e, {
                                 title:
-                                  m.default.Messages
+                                  p.default.Messages
                                     .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_TITLE,
                                 body: (0, a.jsx)(E, { roleName: l }),
-                                cta: m.default.Messages
+                                cta: p.default.Messages
                                   .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CTA,
                                 closeLabel:
-                                  m.default.Messages
+                                  p.default.Messages
                                     .GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_REMOVE_CLOSE_LABEL,
                                 onConfirm: t,
                                 ...A,
@@ -3173,7 +3178,7 @@
               (0, a.jsxs)(i.FormItem, {
                 required: !0,
                 title:
-                  m.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
+                  p.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
                 tag: "label",
                 error: f,
                 titleClassName: T.roleHeader,
@@ -3182,7 +3187,7 @@
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children:
-                      m.default.Messages
+                      p.default.Messages
                         .GUILD_PRODUCT_SETTINGS_ADD_ROLE_DESCRIPTION,
                   }),
                   (0, a.jsx)(d.default, { size: 8 }),
@@ -3340,8 +3345,8 @@
         g = A("422403"),
         C = A("664336"),
         h = A("49111"),
-        p = A("782340"),
-        m = A("939342");
+        m = A("782340"),
+        p = A("939342");
       let T = () => Promise.resolve();
       function v(e) {
         let {
@@ -3352,7 +3357,7 @@
             disabled: d = !1,
             style: c = {},
             onClick: C,
-            "aria-label": p,
+            "aria-label": m,
           } = e,
           T = (0, s.useListItem)("color-".concat(t)),
           v = null != t ? (0, i.int2hex)(t) : c.backgroundColor,
@@ -3363,22 +3368,22 @@
             offset: -2,
             children: (0, a.jsxs)("button", {
               type: "button",
-              className: r(m.colorPickerSwatch, {
-                [m.disabled]: d,
-                [m.default]: A,
-                [m.custom]: l,
-                [m.noColor]: null == t,
+              className: r(p.colorPickerSwatch, {
+                [p.disabled]: d,
+                [p.default]: A,
+                [p.custom]: l,
+                [p.noColor]: null == t,
               }),
               disabled: d,
               onClick: () => (null == C ? void 0 : C(t)),
               style: { ...c, backgroundColor: v },
-              "aria-label": null != p ? p : v,
+              "aria-label": null != m ? m : v,
               ...T,
               children: [
                 l
                   ? (0, a.jsx)(g.default, {
-                      className: m.colorPickerDropper,
-                      foreground: m.colorPickerDropperFg,
+                      className: p.colorPickerDropper,
+                      foreground: p.colorPickerDropperFg,
                       width: 14,
                       height: 14,
                       color: (0, u.getColor)(
@@ -3477,8 +3482,8 @@
             A((0, i.hex2int)(e));
           };
         return (0, a.jsxs)(o.Dialog, {
-          "aria-label": p.default.Messages.PICK_A_COLOR,
-          className: m.customColorPicker,
+          "aria-label": m.default.Messages.PICK_A_COLOR,
+          className: p.customColorPicker,
           children: [
             (0, a.jsx)(c.default, {
               onChange: e => {
@@ -3493,19 +3498,19 @@
             }),
             s,
             (0, a.jsxs)("div", {
-              className: m.customColorPickerInputContainer,
+              className: p.customColorPickerInputContainer,
               children: [
                 f &&
                   null != h &&
                   (0, a.jsx)(C.Icon, {
                     onClick: I,
-                    tooltip: p.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
+                    tooltip: m.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
                     tooltipPosition: "top",
-                    className: m.customColorPickerEyeDropper,
+                    className: p.customColorPickerEyeDropper,
                     icon: g.default,
                   }),
                 (0, a.jsx)(o.TextInput, {
-                  className: m.customColorPickerInput,
+                  className: p.customColorPickerInput,
                   value: T.input,
                   onChange: U,
                   maxLength: 7,
@@ -3515,14 +3520,14 @@
             null != r &&
               r.length > 0 &&
               (0, a.jsx)("div", {
-                className: m.suggestedColors,
+                className: p.suggestedColors,
                 children: r.map((e, t) =>
                   (0, a.jsx)(
                     o.Clickable,
                     {
                       "aria-label": "",
                       style: { backgroundColor: e },
-                      className: m.suggestedColor,
+                      className: p.suggestedColor,
                       onClick: () => U(e),
                     },
                     "".concat(e, "-").concat(t)
@@ -3548,7 +3553,7 @@
           } = e,
           g = e =>
             (0, a.jsx)("div", {
-              className: m.colorPickerRow,
+              className: p.colorPickerRow,
               children: e.map(e =>
                 (0, a.jsx)(
                   v,
@@ -3559,24 +3564,24 @@
             }),
           C = n.slice(0, n.length / 2),
           h = n.slice(n.length / 2, n.length),
-          p = (0, s.default)({
+          m = (0, s.default)({
             id: "color-picker",
             isEnabled: !0,
             scrollToStart: T,
             scrollToEnd: T,
           });
         return (0, a.jsx)(s.ListNavigatorProvider, {
-          navigator: p,
+          navigator: m,
           children: (0, a.jsx)(s.ListNavigatorContainer, {
             children: e => {
               let { ref: n, ...s } = e;
               return (0, a.jsxs)("div", {
-                className: r(m.container, t),
+                className: r(p.container, t),
                 ref: n,
                 ...s,
                 children: [
                   (0, a.jsx)("div", {
-                    className: r(m.defaultContainer, f),
+                    className: r(p.defaultContainer, f),
                     children: u({
                       value: i,
                       color: A,
@@ -3585,11 +3590,11 @@
                     }),
                   }),
                   (0, a.jsx)("div", {
-                    className: r(m.customContainer, f),
+                    className: r(p.customContainer, f),
                     children: c({ value: i, customColor: l, disabled: o }),
                   }),
                   (0, a.jsxs)("div", {
-                    className: m.presets,
+                    className: p.presets,
                     children: [g(C), g(h)],
                   }),
                 ],
@@ -4032,7 +4037,7 @@
             return h;
           },
           default: function () {
-            return m;
+            return p;
           },
         });
       var a = A("37983"),
@@ -4060,8 +4065,8 @@
               background: c,
               icon: C,
               onClick: h,
-              onContextMenu: p,
-              tooltip: m = null,
+              onContextMenu: m,
+              tooltip: p = null,
               tooltipColor: T,
               tooltipPosition: v = "bottom",
               tooltipDisabled: U,
@@ -4085,16 +4090,16 @@
             }),
             R = x;
           return (
-            null == R && "string" == typeof m && (R = m),
+            null == R && "string" == typeof p && (R = p),
             (0, a.jsx)(o.Tooltip, {
-              text: m,
+              text: p,
               color: T,
               position: v,
               hideOnClick: I,
               shouldShow: !U,
               children: e => {
                 let {
-                  onMouseEnter: m,
+                  onMouseEnter: p,
                   onMouseLeave: T,
                   onFocus: v,
                   onBlur: U,
@@ -4112,7 +4117,7 @@
                         background: null != c ? c : void 0,
                         color: d,
                         "aria-hidden": N,
-                        onMouseEnter: m,
+                        onMouseEnter: p,
                         onMouseLeave: T,
                         onFocus: v,
                         onBlur: U,
@@ -4121,8 +4126,8 @@
                   : (0, a.jsxs)(o.Clickable, {
                       tag: "div",
                       onClick: s ? void 0 : h,
-                      onContextMenu: s ? void 0 : p,
-                      onMouseEnter: m,
+                      onContextMenu: s ? void 0 : m,
+                      onMouseEnter: p,
                       onMouseLeave: T,
                       onFocus: v,
                       onBlur: U,
@@ -4159,7 +4164,7 @@
           let { className: t } = e;
           return (0, a.jsx)("div", { className: r(g.divider, t) });
         },
-        p = e => {
+        m = e => {
           let {
               className: t,
               innerClassName: A,
@@ -4169,8 +4174,8 @@
               onDoubleClick: f,
               "aria-label": C,
               "aria-labelledby": h,
-              role: p,
-              scrollable: m,
+              role: m,
+              scrollable: p,
               transparent: T = !1,
             } = e,
             v = l.useRef(null),
@@ -4183,7 +4188,7 @@
             }),
             "aria-label": C,
             "aria-labelledby": h,
-            role: p,
+            role: m,
             ref: v,
             children: (0, a.jsxs)(o.FocusRingScope, {
               containerRef: v,
@@ -4192,7 +4197,7 @@
                   className: g.upperContainer,
                   children: [
                     (0, a.jsxs)("div", {
-                      className: r(g.children, A, { [g.scrollable]: m }),
+                      className: r(g.children, A, { [g.scrollable]: p }),
                       onDoubleClick: f,
                       children: [
                         i.isMobile && null != U
@@ -4214,8 +4219,8 @@
             }),
           });
         };
-      (p.Icon = C),
-        (p.Title = e => {
+      (m.Icon = C),
+        (m.Title = e => {
           let {
               className: t,
               wrapperClassName: A,
@@ -4249,14 +4254,14 @@
                 children: c,
               });
         }),
-        (p.Divider = h),
-        (p.Caret = function (e) {
+        (m.Divider = h),
+        (m.Caret = function (e) {
           let { direction: t = "right" } = e;
           return "right" === t
             ? (0, a.jsx)(c.default, { className: g.caret })
             : (0, a.jsx)(u.default, { className: g.caret });
         });
-      var m = p;
+      var p = m;
     },
     815718: function (e, t, A) {
       "use strict";
@@ -4490,4 +4495,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2486288b97e980dc981c.js.map
+//# sourceMappingURL=95e7936696bde5bd564c.js.map

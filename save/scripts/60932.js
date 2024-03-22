@@ -485,7 +485,7 @@
               { autoTrackExposure: !1 }
             ),
           [x, U] = u.useState(!0),
-          D = (0, r.default)([M.default], () =>
+          D = (0, r.useStateFromStores)([M.default], () =>
             M.default.applicationIdsFetched.has(
               b.PREMIUM_SUBSCRIPTION_APPLICATION
             )
@@ -865,4 +865,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60932.5c4044bde0eb6357bbd4.js.map
+//# sourceMappingURL=60932.0e704daa26ba51de9dba.js.map

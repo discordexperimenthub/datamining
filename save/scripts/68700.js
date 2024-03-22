@@ -641,7 +641,7 @@
         o = n("49111"),
         f = n("782340");
       function c(e, t, n) {
-        let c = (0, i.default)([s.default], () =>
+        let c = (0, i.useStateFromStores)([s.default], () =>
           s.default.getChannel(e.parent_id)
         );
         return (0, a.jsx)(u.MenuItem, {
@@ -2562,4 +2562,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e06719c3ddf28b1bebc3.js.map
+//# sourceMappingURL=7e1ea4651f98ed04989b.js.map

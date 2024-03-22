@@ -2982,7 +2982,7 @@
         let N = (0, L.useInvitesDisabledPermission)(s),
           { enableInvitesDisabled: h } = (0, L.useInvitesDisabledExperiment)(s),
           { showAlertMode: p } = (0, S.useGuildAlertModeEnabled)(s.id),
-          A = (0, c.default)([_.default], () =>
+          A = (0, c.useStateFromStores)([_.default], () =>
             _.default.getGuildIncident(s.id)
           ),
           C =
@@ -7083,4 +7083,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b5ebb8b04247235d8e4f.js.map
+//# sourceMappingURL=a40976679936c037738d.js.map

@@ -173,10 +173,10 @@
             return C;
           },
           HOME_HEADER_ASPECT_RATIO: function () {
-            return p;
+            return S;
           },
           MAX_BANNER_OVERLAY_HEIGHT: function () {
-            return S;
+            return p;
           },
           MAX_GUILD_BANNER_OVERLAY_HEIGHT: function () {
             return L;
@@ -221,11 +221,11 @@
         A = 17 / 6,
         R = 16 / 9,
         C = 2.5,
-        p = 4,
-        S = a / A,
+        S = 4,
+        p = a / A,
         L = a / R,
         m = a / C,
-        M = a / p,
+        M = a / S,
         O =
           o.BACKGROUND_REPLACEMENT_SIZE.width /
           o.BACKGROUND_REPLACEMENT_SIZE.height,
@@ -303,10 +303,12 @@
             { location: "443cca_2" },
             { autoTrackExposure: !1 }
           ),
-          u = (0, r.default)([E.default], () =>
+          u = (0, r.useStateFromStores)([E.default], () =>
             E.default.shouldFetchPremiumLikelihood()
           ),
-          s = (0, r.default)([a.default], () => a.default.getCurrentUser());
+          s = (0, r.useStateFromStores)([a.default], () =>
+            a.default.getCurrentUser()
+          );
         i.useEffect(() => {
           C(s, u, t, n);
         }, [s, u, t, n]);
@@ -461,8 +463,8 @@
         A = n("697218"),
         R = n("145131"),
         C = n("476765"),
-        p = n("599110"),
-        S = n("739477"),
+        S = n("599110"),
+        p = n("739477"),
         L = n("49111"),
         m = n("782340"),
         M = n("424382");
@@ -487,7 +489,7 @@
           ),
           y = r.useRef(null);
         r.useEffect(() => {
-          p.default.track(L.AnalyticEvents.OPEN_MODAL, {
+          S.default.track(L.AnalyticEvents.OPEN_MODAL, {
             type: "Camera Preview Modal",
           });
         }, []),
@@ -531,7 +533,7 @@
                             .CAMERA_PREVIEW_VIDEO_BACKGROUND_CHANGE_HEADER
                         : m.default.Messages.CAMERA_PREVIEW_MODAL_HEADER,
                     }),
-                    (0, i.jsx)(S.default, {
+                    (0, i.jsx)(p.default, {
                       hidePreviewToggle: !0,
                       showSmallBackgroundOptions: !0,
                       hideDeviceHeader: !0,
@@ -551,7 +553,7 @@
                                 height: 207,
                               }),
                             }),
-                            (0, i.jsx)(S.FilterLoadingIndicator, {}),
+                            (0, i.jsx)(p.FilterLoadingIndicator, {}),
                           ],
                         }),
                       onLearnMore: v,
@@ -579,7 +581,7 @@
                       value: g,
                       onChange: () => {
                         d.AlwaysPreviewVideo.updateSetting(!g),
-                          p.default.track(
+                          S.default.track(
                             L.AnalyticEvents.UPDATE_USER_SETTINGS_LOCAL,
                             { always_preview_video: !g }
                           );
@@ -1103,4 +1105,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5433dfcc5f90b305be59.js.map
+//# sourceMappingURL=1382f5b8a6e2883760bc.js.map

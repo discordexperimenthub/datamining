@@ -75,8 +75,8 @@
         v = l("38766"),
         h = l("184900"),
         g = l("493390"),
-        x = l("217513"),
-        S = l("790618"),
+        S = l("217513"),
+        x = l("790618"),
         N = l("697218"),
         y = l("46829"),
         R = l("216422"),
@@ -142,19 +142,19 @@
             { productDetailModalDescriptionHidden: h } = (0, B.default)({
               location: "CollectiblesShopProductDetailsModal",
             }),
-            x = (0, v.default)({ analyticsLocations: f }),
+            S = (0, v.default)({ analyticsLocations: f }),
             {
-              buttonColors: S,
+              buttonColors: x,
               backgroundColors: N,
               isDarkText: y,
             } = (0, F.default)(t.styles),
             b = !0 === y,
             P = b ? et.darkText : et.lightText,
             U =
-              null != S
+              null != x
                 ? {
-                    background: (0, X.getBackgroundGradient)(S, 90),
-                    color: S.text.toHslString(),
+                    background: (0, X.getBackgroundGradient)(x, 90),
+                    color: x.text.toHslString(),
                   }
                 : void 0,
             w =
@@ -334,7 +334,7 @@
                                   if (
                                     (C(),
                                     (0, u.popLayer)(),
-                                    x(),
+                                    S(),
                                     (null == er ? void 0 : er.type) ===
                                       o.CollectiblesItemType.AVATAR_DECORATION)
                                   ) {
@@ -427,10 +427,10 @@
         eo = e => {
           let { product: t, user: l } = e,
             s = M.default.canUsePremiumProfileCustomization(l),
-            i = (0, r.useStateFromStoresObject)([S.default], () =>
-              S.default.getAllPending()
+            i = (0, r.useStateFromStoresObject)([x.default], () =>
+              x.default.getAllPending()
             ),
-            n = (0, x.default)(l.id),
+            n = (0, S.default)(l.id),
             d = !!(null == n ? void 0 : n.getPreviewBio(i.pendingBio).value),
             [u] = t.items;
           return (0, a.jsxs)("div", {
@@ -540,7 +540,9 @@
             analyticsSource: m,
             analyticsLocations: I,
           } = e,
-          f = (0, r.default)([N.default], () => N.default.getCurrentUser()),
+          f = (0, r.useStateFromStores)([N.default], () =>
+            N.default.getCurrentUser()
+          ),
           { analyticsLocations: L, AnalyticsLocationProvider: p } = (0,
           T.default)([...I, C.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
         (0, w.useProductDetailsLinkableRoute)(u);
@@ -680,4 +682,4 @@
     },
   },
 ]);
-//# sourceMappingURL=195fa28d945a1e8ccef8.js.map
+//# sourceMappingURL=974282cb38f7ce521b52.js.map

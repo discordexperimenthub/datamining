@@ -2953,7 +2953,7 @@
         );
       }
       function d(e) {
-        return (0, a.default)(
+        return (0, a.useStateFromStores)(
           [u.default],
           () => {
             var t;
@@ -9177,4 +9177,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b181bb5920b85a38bce9.js.map
+//# sourceMappingURL=0926da9c675845aef4e5.js.map

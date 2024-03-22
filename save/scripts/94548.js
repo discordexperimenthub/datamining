@@ -7160,7 +7160,10 @@
             let { textAreaState: t } = e;
             return { textAreaState: t };
           }),
-          C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled),
+          C = (0, u.useStateFromStores)(
+            [m.default],
+            () => m.default.keyboardModeEnabled
+          ),
           S = (0, A.default)(
             l,
             null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()
@@ -7737,4 +7740,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21bc08a0f66d400010b7.js.map
+//# sourceMappingURL=a9955d829801269bf9af.js.map

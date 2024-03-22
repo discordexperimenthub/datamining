@@ -52,7 +52,7 @@
             onCancel: A,
           } = e,
           B = (0, C.useLastChannelMessage)(s),
-          f = o.useCallback(() => {
+          h = o.useCallback(() => {
             r.default.addRelationship({
               userId: t,
               context: { location: c.LOCATION_CONTEXT_WEB },
@@ -65,17 +65,19 @@
                 )
               );
           }, [t]),
-          h = o.useCallback(() => {
-            f(), T(), I();
-          }, [f, T, I]),
           E = o.useCallback(() => {
-            f(),
+            h(), T(), I();
+          }, [h, T, I]),
+          f = o.useCallback(() => {
+            h(),
               (0, u.showReportModalForInappropriateConversationSafetyAlert)(B),
               M(),
               I();
-          }, [B, f, M, I]),
-          L = (0, n.default)([d.default], () => d.default.getUser(t)),
-          p = i.default.useName(L);
+          }, [B, h, M, I]),
+          L = (0, n.useStateFromStores)([d.default], () =>
+            d.default.getUser(t)
+          ),
+          S = i.default.useName(L);
         return (0, a.jsx)(l.ModalRoot, {
           transitionState: R,
           children: (0, a.jsx)(l.Scroller, {
@@ -87,7 +89,7 @@
                   variant: "heading-lg/bold",
                   color: "header-primary",
                   children: _.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
-                    name: p,
+                    name: S,
                   }),
                 }),
                 (0, a.jsx)(l.Text, {
@@ -99,7 +101,7 @@
                       .INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_DESCRIPTION,
                 }),
                 (0, a.jsx)(l.Button, {
-                  onClick: h,
+                  onClick: E,
                   color: l.ButtonColors.BRAND,
                   size: l.ButtonSizes.MEDIUM,
                   children:
@@ -107,7 +109,7 @@
                       .INAPPROPRIATE_CONVERSATION_BLOCK_MODAL_BLOCK_BUTTON,
                 }),
                 (0, a.jsx)(l.Button, {
-                  onClick: E,
+                  onClick: f,
                   color: l.ButtonColors.PRIMARY,
                   size: l.ButtonSizes.MEDIUM,
                   children:
@@ -131,4 +133,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e6b6b10a49d76dba3810.js.map
+//# sourceMappingURL=584043943bf02cc51e5c.js.map

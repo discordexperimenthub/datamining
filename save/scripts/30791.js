@@ -408,12 +408,12 @@
               noBorderRadius: v = !1,
               introDelay: I = c.ENTRY_DELAY,
             } = e,
-            _ = u.useRef(null),
-            [S, N] = u.useState([]);
+            S = u.useRef(null),
+            [_, N] = u.useState([]);
           (0, A.default)(p);
           let [h, O] = u.useState(0),
-            [C, y] = u.useState(0),
-            { accessibilityLabel: F } = p,
+            [C, F] = u.useState(0),
+            { accessibilityLabel: y } = p,
             [g, L] = u.useState(-I),
             {
               stop: P,
@@ -428,13 +428,13 @@
             u.useEffect(() => {
               let e = 0,
                 t = 1 / 0;
-              S.forEach(r => {
+              _.forEach(r => {
                 let n = r.start + r.duration;
                 n > e && (e = n), r.loop && r.start < t && (t = r.start);
               }),
                 O(t),
-                y(e);
-            }, [y, S]);
+                F(e);
+            }, [F, _]);
           let [M, b] = u.useState(!1);
           return (
             u.useEffect(() => {
@@ -449,11 +449,11 @@
                     : L(0));
             }, [i, M, h, o, P, D, x, p.animationType, s, T]),
             (0, n.jsx)("div", {
-              ref: _,
+              ref: S,
               className: l(m.profileEffects, { [m.hovered]: i && a }),
               children: (0, n.jsx)("div", {
                 className: v ? m.innerNoRadius : m.inner,
-                children: S.map((e, u) => {
+                children: _.map((e, u) => {
                   var o, l, i, a, d, E, T, A;
                   if (!x.current) {
                     if (
@@ -486,21 +486,21 @@
                                 : 0,
                           },
                           src: r,
-                          alt: F,
+                          alt: y,
                         },
                         e.src + u
                       );
                     }
                     return (0, n.jsx)(
                       "img",
-                      { src: c.RESET, alt: F },
+                      { src: c.RESET, alt: y },
                       e.src + u
                     );
                   }
                   if (g < e.start || (!e.loop && g > e.duration + e.start))
                     return (0, n.jsx)(
                       "img",
-                      { src: c.RESET, alt: F },
+                      { src: c.RESET, alt: y },
                       e.src + u
                     );
                   if (
@@ -520,7 +520,7 @@
                           null != r &&
                           o >= r &&
                           b(!0),
-                        (0, n.jsx)("img", { src: c.RESET, alt: F }, e.src + u)
+                        (0, n.jsx)("img", { src: c.RESET, alt: y }, e.src + u)
                       );
                   }
                   return (0, n.jsx)(
@@ -549,7 +549,7 @@
                             ? A
                             : 0,
                       },
-                      alt: F,
+                      alt: y,
                     },
                     e.src + u
                   );
@@ -753,7 +753,10 @@
         f = r("172182"),
         d = r("49111");
       function E(e) {
-        let t = (0, l.default)([s.default], () => s.default.saturation);
+        let t = (0, l.useStateFromStores)(
+          [s.default],
+          () => s.default.saturation
+        );
         return (0, n.useMemo)(
           () =>
             null == e
@@ -888,4 +891,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30791.3330a7487a797de2909a.js.map
+//# sourceMappingURL=30791.fe826866155634cba7c1.js.map

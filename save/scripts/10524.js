@@ -42,9 +42,13 @@
       let _ = "VoiceChannelStatusModal";
       function N(e) {
         let { channel: t, transitionState: n, onClose: N } = e,
-          T = (0, u.default)([d.default], () => d.default.getChannelStatus(t)),
-          g = (0, u.default)([f.default], () => f.default.getMediaSessionId()),
-          [I, m] = a.useState(null != T ? T : ""),
+          T = (0, u.useStateFromStores)([d.default], () =>
+            d.default.getChannelStatus(t)
+          ),
+          g = (0, u.useStateFromStores)([f.default], () =>
+            f.default.getMediaSessionId()
+          ),
+          [m, I] = a.useState(null != T ? T : ""),
           [A, p] = a.useState(!1),
           [y, L] = a.useState(null);
         a.useEffect(() => {
@@ -54,10 +58,10 @@
           });
         }, [t.guild_id]);
         let O = async e => {
-            I === T && N(), null == e || e.preventDefault(), L(null), p(!0);
-            let n = I.length,
-              l = I.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
-            await i.default.updateVoiceChannelStatus(t.id, I).then(
+            m === T && N(), null == e || e.preventDefault(), L(null), p(!0);
+            let n = m.length,
+              l = m.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
+            await i.default.updateVoiceChannelStatus(t.id, m).then(
               e => {
                 204 === e.status
                   ? (C.default.track(S.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
@@ -76,7 +80,7 @@
             ),
               p(!1);
           },
-          [F, M] = a.useState((0, o.toRichValue)(I));
+          [F, M] = a.useState((0, o.toRichValue)(m));
         return (0, l.jsx)("form", {
           onSubmit: O,
           className: h.form,
@@ -117,7 +121,7 @@
                     children: [
                       (0, l.jsx)(c.default, {
                         innerClassName: h.textArea,
-                        textValue: I,
+                        textValue: m,
                         richValue: F,
                         placeholder:
                           v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format(
@@ -126,7 +130,7 @@
                         focused: !0,
                         channel: t,
                         onChange: (e, t, n) => {
-                          m(t), M(n);
+                          I(t), M(n);
                         },
                         onSubmit: () => (
                           O(),
@@ -167,7 +171,7 @@
                     onClick: O,
                     submitting: A,
                     className: h.button,
-                    disabled: I.length > 500,
+                    disabled: m.length > 500,
                     children:
                       v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS,
                   }),
@@ -197,7 +201,7 @@
         o = n("49111"),
         c = n("782340");
       function f(e, t, n) {
-        let f = (0, u.default)([d.default], () =>
+        let f = (0, u.useStateFromStores)([d.default], () =>
           d.default.getChannel(e.parent_id)
         );
         return (0, l.jsx)(r.MenuItem, {
@@ -783,7 +787,7 @@
         C = n("49111"),
         S = n("782340");
       function v(e) {
-        let t = (0, a.default)(
+        let t = (0, a.useStateFromStores)(
             [d.default],
             () => d.default.getChannelId() === e.id
           ),
@@ -791,11 +795,13 @@
           h = (null == v ? void 0 : v.channelId) === e.id,
           _ = (0, i.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
           N = (0, i.default)(e),
-          T = (0, a.default)([s.default], () => s.default.isInChannel(e.id)),
+          T = (0, a.useStateFromStores)([s.default], () =>
+            s.default.isInChannel(e.id)
+          ),
           g = (!T && N) || _,
-          I = (0, f.default)();
-        if (!h && 0 === I.length) return null;
-        let m = t => {
+          m = (0, f.default)();
+        if (!h && 0 === m.length) return null;
+        let I = t => {
           if (!t.twoWayLink || t.revoked) {
             (0, r.default)(t.type, "Console Transfer Item");
             return;
@@ -828,7 +834,7 @@
                 icon: (0, E.default)(void 0),
                 disabled: g,
               })
-            : I.map(e =>
+            : m.map(e =>
                 (0, l.jsx)(
                   u.MenuItem,
                   {
@@ -850,7 +856,7 @@
                           : S.default.Messages
                               .CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE;
                     })(e.type, t),
-                    action: () => m(e),
+                    action: () => I(e),
                     icon: (0, E.default)(e.type),
                     disabled: g,
                   },
@@ -1001,10 +1007,10 @@
             return g;
           },
           useActiveEvent: function () {
-            return I;
+            return m;
           },
           useActiveEventsByChannel: function () {
-            return m;
+            return I;
           },
           useGuildUpcomingEventsNotice: function () {
             return A;
@@ -1086,7 +1092,7 @@
           [t, e]
         );
       }
-      function I(e) {
+      function m(e) {
         return (0, a.useStateFromStores)(
           [f.default, r.default, s.default],
           () => {
@@ -1102,7 +1108,7 @@
           [e]
         );
       }
-      function m(e) {
+      function I(e) {
         let t = (0, a.useStateFromStoresArray)(
             [f.default],
             () => f.default.getGuildScheduledEventsForGuild(e),
@@ -1466,4 +1472,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3b08587fc54d0a67c921.js.map
+//# sourceMappingURL=39fe432e7289cd751ae8.js.map

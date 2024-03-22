@@ -56,7 +56,9 @@
         f = s("618537");
       function S(e) {
         let { channelId: t, messageId: s, transitionState: S, onClose: _ } = e,
-          g = (0, n.default)([u.default], () => u.default.getChannel(t)),
+          g = (0, n.useStateFromStores)([u.default], () =>
+            u.default.getChannel(t)
+          ),
           [F, E] = (0, r.default)(t),
           C = null == g ? void 0 : g.guild_id;
         return (0, l.jsx)(a.ConfirmModal, {
@@ -163,4 +165,4 @@
     },
   },
 ]);
-//# sourceMappingURL=09a892836baddc5bb770.js.map
+//# sourceMappingURL=5c8fac60ea6961fe9876.js.map

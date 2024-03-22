@@ -25,7 +25,7 @@
         r = s("853987"),
         o = s("49111");
       function u(t) {
-        let e = (0, i.default)([a.default], () =>
+        let e = (0, i.useStateFromStores)([a.default], () =>
             null != t ? a.default.get(t) : null
           ),
           s = null != e && e.productLine !== o.SKUProductLines.COLLECTIBLES,
@@ -851,4 +851,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1c15ae4fd6ac5ef05fd6.js.map
+//# sourceMappingURL=e86a7a52544abfad728e.js.map

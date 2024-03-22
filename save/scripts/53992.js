@@ -399,7 +399,9 @@
       function m(t) {
         var e, n, r, m;
         let { guildId: T, productId: D } = t,
-          I = (0, i.default)([c.default], () => c.default.getGuildProduct(D)),
+          I = (0, i.useStateFromStores)([c.default], () =>
+            c.default.getGuildProduct(D)
+          ),
           C =
             (null !==
               (m =
@@ -896,4 +898,4 @@
     },
   },
 ]);
-//# sourceMappingURL=16579149ea1812c10083.js.map
+//# sourceMappingURL=b606f0de8d64559f466a.js.map

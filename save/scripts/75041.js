@@ -434,7 +434,7 @@
       function E(e) {
         let { guild: t, className: n, onPageChange: a, onMemberSelect: u } = e,
           E = t.id,
-          T = (0, r.default)(
+          T = (0, r.useStateFromStores)(
             [c.default],
             () => c.default.getEstimatedMemberSearchCountByGuildId(E),
             [E]
@@ -544,4 +544,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8a97c9905e1a7d2340eb.js.map
+//# sourceMappingURL=1303b005ccafb5801a3d.js.map

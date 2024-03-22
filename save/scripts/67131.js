@@ -2426,7 +2426,9 @@
       function h(e) {
         let { reactionRef: t, count: i } = e,
           n = a.useRef(i),
-          r = (0, o.default)([s.default], () => s.default.getState()),
+          r = (0, o.useStateFromStores)([s.default], () =>
+            s.default.getState()
+          ),
           d = (0, c.default)(),
           h = (0, u.default)(t);
         return (
@@ -2723,4 +2725,4 @@
     },
   },
 ]);
-//# sourceMappingURL=75f150a9ed0893827300.js.map
+//# sourceMappingURL=dfff62276037976caade.js.map

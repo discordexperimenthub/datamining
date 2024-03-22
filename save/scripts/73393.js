@@ -6,19 +6,19 @@
       a.r(l),
         a.d(l, {
           default: function () {
-            return i;
+            return d;
           },
         });
       var n = a("37983");
       a("884691");
       var s = a("77078"),
         t = a("782340"),
-        d = a("840222");
-      function i() {
+        r = a("840222");
+      function d() {
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(s.Text, {
-              className: d.marker,
+              className: r.marker,
               tag: "span",
               variant: "text-md/semibold",
               color: "text-danger",
@@ -36,16 +36,16 @@
       a.r(l),
         a.d(l, {
           default: function () {
-            return S;
+            return v;
           },
         }),
         a("222007");
       var n = a("37983"),
         s = a("884691"),
         t = a("448105"),
-        d = a.n(t),
-        i = a("65597"),
-        r = a("77078"),
+        r = a.n(t),
+        d = a("65597"),
+        i = a("77078"),
         u = a("419830"),
         o = a("129092"),
         c = a("608684"),
@@ -58,8 +58,8 @@
         x = a("642807"),
         _ = a("895423"),
         R = a("782340"),
-        g = a("371732");
-      function v(e, l, a, n) {
+        S = a("371732");
+      function g(e, l, a, n) {
         return {
           channelId: e.value,
           title: l,
@@ -68,11 +68,11 @@
           icon: null != n ? n : null,
         };
       }
-      function S(e) {
+      function v(e) {
         var l, a;
         let {
             transitionState: t,
-            onClose: S,
+            onClose: v,
             resourceChannel: f,
             guildId: L,
             onSave: j,
@@ -95,7 +95,7 @@
               return null == l ? null : { value: l.id, label: l.name };
             })(f)
           ),
-          b = (0, i.default)([x.default], () => {
+          b = (0, d.useStateFromStores)([x.default], () => {
             var e;
             return null ===
               (e = x.default.getResourceChannel(
@@ -104,7 +104,7 @@
               ? void 0
               : e.icon;
           }),
-          k = (0, i.useStateFromStoresArray)([x.default], () => {
+          k = (0, d.useStateFromStoresArray)([x.default], () => {
             var e, l;
             let a =
               null !==
@@ -118,11 +118,11 @@
           }),
           H = p.length < o.RESOURCE_CHANNEL_TITLE_MIN_LENGTH || null == B,
           P = s.useCallback(() => {
-            null != B && !(p.length <= 0) && (j(v(B, p, D, b)), S());
-          }, [j, S, p, B, b, D]),
+            null != B && !(p.length <= 0) && (j(g(B, p, D, b)), v());
+          }, [j, v, p, B, b, D]),
           y = s.useCallback(() => {
-            null == T || T(), S();
-          }, [T, S]),
+            null == T || T(), v();
+          }, [T, v]),
           w = s.useCallback(
             e => {
               M(e);
@@ -137,7 +137,7 @@
                     l =>
                       (0, o.isChannelValidForResourceChannel)(l.channel) &&
                       !k.includes(l.channel.id) &&
-                      d(e, l.channel.name)
+                      r(e, l.channel.name)
                   )
                   .map(e => ({ value: e.channel.id, label: e.channel.name }));
               return Promise.resolve(a);
@@ -156,14 +156,14 @@
                 : (0, n.jsx)(s, {
                     width: 16,
                     height: 16,
-                    className: g.channelIcon,
+                    className: S.channelIcon,
                   });
             },
             [L]
           ),
           V = s.useCallback(
             e => {
-              null != O && null != B && O(v(B, p, D), e);
+              null != O && null != B && O(g(B, p, D), e);
             },
             [B, p, O, D]
           ),
@@ -177,19 +177,19 @@
                   }),
             [B, b]
           );
-        return (0, n.jsxs)(r.ModalRoot, {
+        return (0, n.jsxs)(i.ModalRoot, {
           transitionState: t,
           "aria-labelledby": G,
           children: [
             (0, n.jsxs)("div", {
-              className: g.containerWithHeader,
+              className: S.containerWithHeader,
               children: [
                 (0, n.jsxs)("div", {
-                  className: g.splitGroup,
+                  className: S.splitGroup,
                   children: [
                     (0, n.jsx)("div", {
-                      className: g.header,
-                      children: (0, n.jsx)(r.Heading, {
+                      className: S.header,
+                      children: (0, n.jsx)(i.Heading, {
                         variant: "heading-md/semibold",
                         color: "header-primary",
                         children:
@@ -197,16 +197,16 @@
                             .GUILD_SETTINGS_ONBOARDING_RESOURCE_CHANNEL_EDIT_TITLE,
                       }),
                     }),
-                    (0, n.jsx)(r.ModalCloseButton, {
-                      className: g.closeButton,
-                      onClick: S,
+                    (0, n.jsx)(i.ModalCloseButton, {
+                      className: S.closeButton,
+                      onClick: v,
                     }),
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: g.formGroup,
+                  className: S.formGroup,
                   children: [
-                    (0, n.jsxs)(r.Heading, {
+                    (0, n.jsxs)(i.Heading, {
                       variant: "heading-md/semibold",
                       color: "header-primary",
                       children: [
@@ -215,13 +215,13 @@
                         (0, n.jsx)(_.default, {}),
                       ],
                     }),
-                    (0, n.jsx)(r.SearchableSelect, {
+                    (0, n.jsx)(i.SearchableSelect, {
                       value: B,
                       renderOptionPrefix: F,
                       options: z,
                       onChange: w,
                     }),
-                    (0, n.jsx)(r.Text, {
+                    (0, n.jsx)(i.Text, {
                       variant: "text-xs/medium",
                       color: "text-muted",
                       children:
@@ -230,11 +230,11 @@
                     }),
                   ],
                 }),
-                (0, n.jsx)("div", { className: g.separator }),
+                (0, n.jsx)("div", { className: S.separator }),
                 (0, n.jsxs)("div", {
-                  className: g.formGroup,
+                  className: S.formGroup,
                   children: [
-                    (0, n.jsxs)(r.Heading, {
+                    (0, n.jsxs)(i.Heading, {
                       variant: "heading-md/semibold",
                       color: "header-primary",
                       children: [
@@ -243,7 +243,7 @@
                         (0, n.jsx)(_.default, {}),
                       ],
                     }),
-                    (0, n.jsx)(r.TextInput, {
+                    (0, n.jsx)(i.TextInput, {
                       value: p,
                       onChange: A,
                       placeholder:
@@ -253,18 +253,18 @@
                     }),
                   ],
                 }),
-                (0, n.jsx)("div", { className: g.separator }),
+                (0, n.jsx)("div", { className: S.separator }),
                 (0, n.jsxs)("div", {
-                  className: g.formGroup,
+                  className: S.formGroup,
                   children: [
-                    (0, n.jsx)(r.Heading, {
+                    (0, n.jsx)(i.Heading, {
                       variant: "heading-md/semibold",
                       color: "header-primary",
                       children:
                         R.default.Messages
                           .GUILD_SETTINGS_ONBOARDING_RESOURCE_DESCRIPTION,
                     }),
-                    (0, n.jsx)(r.TextArea, {
+                    (0, n.jsx)(i.TextArea, {
                       value: D,
                       onChange: U,
                       placeholder:
@@ -274,20 +274,20 @@
                     }),
                   ],
                 }),
-                (0, n.jsx)("div", { className: g.separator }),
+                (0, n.jsx)("div", { className: S.separator }),
                 (0, n.jsxs)("div", {
-                  className: g.splitGroup,
+                  className: S.splitGroup,
                   children: [
                     (0, n.jsxs)("div", {
                       children: [
-                        (0, n.jsx)(r.Heading, {
+                        (0, n.jsx)(i.Heading, {
                           variant: "heading-md/semibold",
                           color: "header-primary",
                           children:
                             R.default.Messages
                               .GUILD_SETTINGS_ONBOARDING_RESOURCE_UPLOAD,
                         }),
-                        (0, n.jsx)(r.Text, {
+                        (0, n.jsx)(i.Text, {
                           variant: "text-xs/medium",
                           color: "text-muted",
                           children:
@@ -298,14 +298,14 @@
                     }),
                     (0, n.jsx)("div", {
                       children: (0, n.jsx)(c.default, {
-                        className: g.uploader,
-                        imageClassName: g.uploadImage,
+                        className: S.uploader,
+                        imageClassName: S.uploadImage,
                         image: b,
                         makeURL: X,
                         icon: (0, n.jsx)(I.default, { height: 24, width: 24 }),
                         hideSize: !0,
                         onChange: V,
-                        iconClassName: g.uploadImageIcon,
+                        iconClassName: S.uploadImageIcon,
                         showIcon: null == b,
                       }),
                     }),
@@ -313,33 +313,33 @@
                 }),
               ],
             }),
-            (0, n.jsx)(r.ModalFooter, {
+            (0, n.jsx)(i.ModalFooter, {
               children: (0, n.jsxs)("div", {
-                className: g.footerButtons,
+                className: S.footerButtons,
                 children: [
                   null != f
                     ? (0, n.jsx)("div", {
-                        className: g.removeButton,
-                        children: (0, n.jsx)(r.Button, {
-                          size: r.Button.Sizes.SMALL,
-                          look: r.Button.Looks.LINK,
-                          color: r.Button.Colors.RED,
+                        className: S.removeButton,
+                        children: (0, n.jsx)(i.Button, {
+                          size: i.Button.Sizes.SMALL,
+                          look: i.Button.Looks.LINK,
+                          color: i.Button.Colors.RED,
                           onClick: y,
                           children: R.default.Messages.REMOVE,
                         }),
                       })
                     : (0, n.jsx)("div", {}),
                   (0, n.jsxs)("div", {
-                    className: g.rightButtons,
+                    className: S.rightButtons,
                     children: [
-                      (0, n.jsx)(r.Button, {
-                        onClick: S,
-                        size: r.Button.Sizes.SMALL,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
+                      (0, n.jsx)(i.Button, {
+                        onClick: v,
+                        size: i.Button.Sizes.SMALL,
+                        look: i.Button.Looks.LINK,
+                        color: i.Button.Colors.PRIMARY,
                         children: R.default.Messages.CANCEL,
                       }),
-                      (0, n.jsx)(r.Button, {
+                      (0, n.jsx)(i.Button, {
                         disabled: H,
                         onClick: P,
                         children: R.default.Messages.SAVE,
@@ -355,4 +355,4 @@
     },
   },
 ]);
-//# sourceMappingURL=eaef91dc00120e795ea0.js.map
+//# sourceMappingURL=ad2297a3eae15c087e4c.js.map

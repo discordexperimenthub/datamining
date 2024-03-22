@@ -10272,7 +10272,7 @@
       let d = new Set(Object.values(o.ProfileCustomizationSubsection)),
         u = e => null != e && d.has(e);
       var c = () => {
-        let e = (0, n.default)([i.default], () => {
+        let e = (0, n.useStateFromStores)([i.default], () => {
             let e = i.default.getSubsection();
             return u(e) ? e : o.ProfileCustomizationSubsection.USER_PROFILE;
           }),
@@ -11950,9 +11950,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277756",
+          E = "277770",
           T =
-            ((e = "dd0eb83dd3b5997e218514481cdb9218fcb64367"),
+            ((e = "ebc6d6da785c387126b27081fb30501c3b7e96c2"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -25789,7 +25789,9 @@
         let { dropsOptedOut: s, dropsStatuses: n } = e,
           l = [],
           i = [],
-          r = (0, u.default)([g.default], () => g.default.getCurrentUser()),
+          r = (0, u.useStateFromStores)([g.default], () =>
+            g.default.getCurrentUser()
+          ),
           d = !1;
         if (null == n) return null;
         for (let e of Object.keys(n)) {
@@ -26189,7 +26191,10 @@
             showAltText: c,
             isLastGuildBoostSlot: S,
           } = e,
-          f = (0, i.default)([o.default], () => o.default.useReducedMotion),
+          f = (0, i.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion
+          ),
           g = n.useMemo(
             () =>
               null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null,
@@ -26258,7 +26263,11 @@
             hasCancelableGuildBoostSlot: l,
             showAltText: r,
           } = e,
-          o = (0, i.default)([S.default], () => S.default.getGuild(t), [t]);
+          o = (0, i.useStateFromStores)(
+            [S.default],
+            () => S.default.getGuild(t),
+            [t]
+          );
         return (0, a.jsxs)("div", {
           className: p.appliedBoostContainer,
           children: [
@@ -26578,7 +26587,11 @@
         _ = s("605566"),
         m = function (e) {
           let { className: t, guildId: s, boostingVariant: n } = e,
-            m = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
+            m = (0, i.useStateFromStores)(
+              [u.default],
+              () => u.default.getGuild(s),
+              [s]
+            );
           return null == m
             ? (0, a.jsx)("div", {
                 className: l(t, _.guildContainer),
@@ -28581,7 +28594,7 @@
         c = s("782340"),
         S = s("288061");
       function E() {
-        let e = (0, n.default)([r.default], () =>
+        let e = (0, n.useStateFromStores)([r.default], () =>
           r.default.supports(u.Features.LOOPBACK)
         );
         return e
@@ -32155,4 +32168,4 @@
     },
   },
 ]);
-//# sourceMappingURL=add2e7ca8b494cc8a770.js.map
+//# sourceMappingURL=dc3fd1f251d2d8fe5a4b.js.map

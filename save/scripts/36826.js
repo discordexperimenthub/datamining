@@ -6,36 +6,36 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return r;
+            return d;
           },
         });
-      var n = a("37983");
+      var s = a("37983");
       a("884691");
-      var s = a("77078"),
+      var n = a("77078"),
         i = a("559317"),
         l = a("701909"),
-        u = a("49111"),
-        d = a("782340");
-      function r(e) {
-        let { listing: t, transitionState: a, onClose: r, ...o } = e;
-        return (0, n.jsx)(i.default, {
+        r = a("49111"),
+        u = a("782340");
+      function d(e) {
+        let { listing: t, transitionState: a, onClose: d, ...o } = e;
+        return (0, s.jsx)(i.default, {
           sku_id: t.id,
           sku_name: t.name,
           guild_id: t.guild_id,
-          header: d.default.Messages.GUILD_SHOP_REPORT_MODAL_HEADER.format({
+          header: u.default.Messages.GUILD_SHOP_REPORT_MODAL_HEADER.format({
             listingName: t.name,
           }),
           transitionState: a,
-          onClose: r,
+          onClose: d,
           ...o,
-          children: (0, n.jsx)(s.Text, {
+          children: (0, s.jsx)(n.Text, {
             variant: "text-md/normal",
-            children: d.default.Messages.GUILD_SHOP_REPORT_MODAL_BODY.format({
+            children: u.default.Messages.GUILD_SHOP_REPORT_MODAL_BODY.format({
               listingName: t.name,
               monetizationTermsUrl: l.default.getArticleURL(
-                u.HelpdeskArticles.CREATOR_TERMS
+                r.HelpdeskArticles.CREATOR_TERMS
               ),
-              communityGuidelinesUrl: u.MarketingURLs.GUIDELINES,
+              communityGuidelinesUrl: r.MarketingURLs.GUIDELINES,
             }),
           }),
         });
@@ -49,14 +49,14 @@
             return f;
           },
         });
-      var n = a("37983");
+      var s = a("37983");
       a("884691");
-      var s = a("65597"),
+      var n = a("65597"),
         i = a("77078"),
         l = a("404118"),
-        u = a("697218"),
-        d = a("599110"),
-        r = a("49111"),
+        r = a("697218"),
+        u = a("599110"),
+        d = a("49111"),
         o = a("782340");
       function f(e) {
         let {
@@ -71,13 +71,15 @@
             onClose: O,
             ...T
           } = e,
-          g = (0, s.default)([u.default], () => u.default.getCurrentUser());
-        return (0, n.jsx)(i.ConfirmModal, {
+          g = (0, n.useStateFromStores)([r.default], () =>
+            r.default.getCurrentUser()
+          );
+        return (0, s.jsx)(i.ConfirmModal, {
           header: null != t ? t : o.default.Messages.REPORT,
           cancelText: null != R ? R : o.default.Messages.CANCEL,
           confirmText: null != m ? m : o.default.Messages.REPORT,
           onConfirm: () => {
-            d.default.track(r.AnalyticEvents.TNS_SKU_REPORT_SUBMITTED, {
+            u.default.track(d.AnalyticEvents.TNS_SKU_REPORT_SUBMITTED, {
               sku_id: f,
               guild_id: c,
               user_id: null == g ? void 0 : g.id,
@@ -98,4 +100,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e2518edc327f2e72b89a.js.map
+//# sourceMappingURL=bb89269993601e3ebf2c.js.map

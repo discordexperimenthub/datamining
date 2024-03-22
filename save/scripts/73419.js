@@ -269,7 +269,9 @@
             guildId: null != t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
             location: "6798be_2",
           }),
-          u = (0, l.default)([a.default], () => a.default.getGuild(t));
+          u = (0, l.useStateFromStores)([a.default], () =>
+            a.default.getGuild(t)
+          );
         return (
           null != t &&
           (function (e) {
@@ -3482,4 +3484,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8b590e7e12865916b2ca.js.map
+//# sourceMappingURL=c6cecdc82bfebd3a139b.js.map

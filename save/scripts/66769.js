@@ -18,8 +18,8 @@
       var n = s("37983");
       s("884691");
       var l = s("611221"),
-        a = s("77078"),
-        r = s("272030"),
+        r = s("77078"),
+        a = s("272030"),
         u = s("861370"),
         o = s("518155"),
         d = s("447651"),
@@ -49,10 +49,10 @@
                 (0, c.assertNever)(e);
             }
           })(s),
-          { href: I, src: _, textContent: C } = (0, f.targetToContext)(M),
-          G = (0, o.default)(h, t),
-          p = (0, i.default)(null != I ? I : _, C),
-          S = (0, d.default)(_),
+          { href: I, src: _, textContent: S } = (0, f.targetToContext)(M),
+          C = (0, o.default)(h, t),
+          G = (0, i.default)(null != I ? I : _, S),
+          p = (0, d.default)(_),
           v = (0, u.default)({
             id: g.id,
             label: E.default.Messages.COPY_ID_MESSAGE,
@@ -60,14 +60,14 @@
           }),
           x = (0, f.useGuildFeedHideItem)(s, t.guild_id),
           L = (0, f.useGuildFeedRemoveItem)(s, g, t);
-        return (0, n.jsxs)(a.Menu, {
+        return (0, n.jsxs)(r.Menu, {
           navId: "message",
-          onClose: r.closeContextMenu,
+          onClose: a.closeContextMenu,
           "aria-label": E.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
           onSelect: m,
           children: [
-            (0, n.jsxs)(a.MenuGroup, { children: [x, L] }),
-            (0, n.jsxs)(a.MenuGroup, { children: [G, S, p, v] }),
+            (0, n.jsxs)(r.MenuGroup, { children: [x, L] }),
+            (0, n.jsxs)(r.MenuGroup, { children: [C, p, G, v] }),
           ],
         });
       }
@@ -77,23 +77,23 @@
       s.r(t),
         s.d(t, {
           useGuildFeedHideItem: function () {
-            return C;
+            return S;
           },
           useGuildFeedRemoveItem: function () {
-            return G;
+            return C;
           },
           targetToContext: function () {
-            return p;
+            return G;
           },
           default: function () {
-            return S;
+            return p;
           },
         });
       var n = s("37983");
       s("884691");
       var l = s("118810"),
-        a = s("65597"),
-        r = s("77078"),
+        r = s("65597"),
+        a = s("77078"),
         u = s("272030"),
         o = s("861370"),
         d = s("126423"),
@@ -107,8 +107,8 @@
         g = s("713810"),
         I = s("49111"),
         _ = s("782340");
-      function C(e, t) {
-        return (0, n.jsx)(r.MenuItem, {
+      function S(e, t) {
+        return (0, n.jsx)(a.MenuItem, {
           id: "hide-feed-message",
           label: _.default.Messages.GUILD_FEED_HIDE_MESSAGE_ITEM,
           action: s => (
@@ -118,16 +118,16 @@
           iconProps: { foregroundColor: "currentColor" },
         });
       }
-      function G(e, t, s) {
-        let l = (0, a.default)([E.default], () => E.default.getId()),
-          u = (0, a.default)(
+      function C(e, t, s) {
+        let l = (0, r.useStateFromStores)([E.default], () => E.default.getId()),
+          u = (0, r.useStateFromStores)(
             [M.default],
             () => M.default.can(I.Permissions.MANAGE_MESSAGES, s),
             [s]
           ),
           o = t.author.id === l || u;
         return o
-          ? (0, n.jsx)(r.MenuItem, {
+          ? (0, n.jsx)(a.MenuItem, {
               id: "remove-feed-message",
               label: _.default.Messages.GUILD_FEED_REMOVE_MESSAGE_ITEM,
               action: t => {
@@ -140,8 +140,8 @@
                       (0, g.removeItemFromGuildFeed)(e);
                       return;
                     }
-                    (0, r.openModal)(t =>
-                      (0, n.jsx)(r.ConfirmModal, {
+                    (0, a.openModal)(t =>
+                      (0, n.jsx)(a.ConfirmModal, {
                         header:
                           _.default.Messages
                             .GUILD_FEED_REMOVE_MESSAGE_ITEM_HEADER,
@@ -150,7 +150,7 @@
                         cancelText: _.default.Messages.CANCEL,
                         onConfirm: () => (0, g.removeItemFromGuildFeed)(e),
                         ...t,
-                        children: (0, n.jsx)(r.Text, {
+                        children: (0, n.jsx)(a.Text, {
                           variant: "text-md/normal",
                           children:
                             _.default.Messages
@@ -166,47 +166,47 @@
             })
           : null;
       }
-      function p(e) {
+      function G(e) {
         let t,
           s,
           n,
-          a = e;
-        for (; (0, l.isElement)(a, Node); )
-          (0, l.isElement)(a, HTMLImageElement) && null != a.src && (s = a.src),
-            (0, l.isElement)(a, HTMLAnchorElement) &&
-              null != a.href &&
-              ((t = a.href), (n = a.textContent)),
-            (a = a.parentNode);
+          r = e;
+        for (; (0, l.isElement)(r, Node); )
+          (0, l.isElement)(r, HTMLImageElement) && null != r.src && (s = r.src),
+            (0, l.isElement)(r, HTMLAnchorElement) &&
+              null != r.href &&
+              ((t = r.href), (n = r.textContent)),
+            (r = r.parentNode);
         return { href: t, src: s, textContent: n };
       }
-      function S(e) {
+      function p(e) {
         let {
             channel: t,
             message: s,
             messageItem: l,
-            target: a,
+            target: r,
             onSelect: E,
           } = e,
-          { href: M, src: m, textContent: h } = p(a),
+          { href: M, src: m, textContent: h } = G(r),
           g = (0, i.default)(s, t),
           I = (0, f.default)(null != M ? M : m, h),
-          S = (0, c.default)(m),
+          p = (0, c.default)(m),
           v = (0, o.default)({
             id: s.id,
             label: _.default.Messages.COPY_ID_MESSAGE,
             shiftId: "".concat(s.channel_id, "-").concat(s.id),
           }),
-          x = C(l, t.guild_id),
-          L = G(l, l.message, t),
+          x = S(l, t.guild_id),
+          L = C(l, l.message, t),
           A = (0, d.default)(s, t, { hoist: !1 });
-        return (0, n.jsxs)(r.Menu, {
+        return (0, n.jsxs)(a.Menu, {
           navId: "message",
           onClose: u.closeContextMenu,
           "aria-label": _.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
           onSelect: E,
           children: [
-            (0, n.jsxs)(r.MenuGroup, { children: [x, L, A] }),
-            (0, n.jsxs)(r.MenuGroup, { children: [g, S, I, v] }),
+            (0, n.jsxs)(a.MenuGroup, { children: [x, L, A] }),
+            (0, n.jsxs)(a.MenuGroup, { children: [g, p, I, v] }),
           ],
         });
       }
@@ -222,26 +222,26 @@
       var n = s("37983");
       s("884691");
       var l = s("469563"),
-        a = s("88885"),
-        r = s("75196"),
+        r = s("88885"),
+        a = s("75196"),
         u = (0, l.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: s = 24,
               color: l = "currentColor",
-              foreground: a,
+              foreground: r,
               ...u
             } = e;
             return (0, n.jsxs)("svg", {
-              ...(0, r.default)(u),
+              ...(0, a.default)(u),
               width: t,
               height: s,
               viewBox: "0 0 24 24",
               fill: "none",
               children: [
                 (0, n.jsx)("rect", {
-                  className: a,
+                  className: r,
                   x: "2.10049",
                   y: "20.4853",
                   width: "26",
@@ -258,7 +258,7 @@
               ],
             });
           },
-          a.HomeSlashIcon,
+          r.HomeSlashIcon,
           void 0,
           { size: 24 }
         );
@@ -268,30 +268,30 @@
       s.r(t),
         s.d(t, {
           HomeSlashIcon: function () {
-            return r;
+            return a;
           },
         });
       var n = s("37983");
       s("884691");
       var l = s("669491"),
-        a = s("82169");
-      let r = e => {
+        r = s("82169");
+      let a = e => {
         let {
           width: t = 24,
           height: s = 24,
-          color: r = l.default.colors.INTERACTIVE_NORMAL,
+          color: a = l.default.colors.INTERACTIVE_NORMAL,
           colorClass: u = "",
           ...o
         } = e;
         return (0, n.jsx)("svg", {
-          ...(0, a.default)(o),
+          ...(0, r.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: s,
           fill: "none",
           viewBox: "0 0 24 24",
           children: (0, n.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
+            fill: "string" == typeof a ? a : a.css,
             d: "M22.7 2.7a1 1 0 0 0-1.4-1.4l-20 20a1 1 0 1 0 1.4 1.4l20-20ZM15.5 3.7a.5.5 0 0 1 .05.75l-10.9 10.9a.5.5 0 0 1-.85-.3l-.27-2.72a.46.46 0 0 0-.35-.4 2 2 0 0 1-.79-3.54l8.39-6.45a2 2 0 0 1 2.44 0L15.5 3.7ZM6.31 22c-.12 0-.17-.14-.08-.23l1.92-1.92a.5.5 0 0 1 .85.36V21a1 1 0 0 1-1 1H6.31ZM14.47 13.53c-.19.19-.19.5-.03.73.35.5.56 1.1.56 1.74v5a1 1 0 0 0 1 1h1.69a2 2 0 0 0 1.99-1.8l.79-7.87c.02-.2.16-.36.35-.4a2 2 0 0 0 .79-3.54l-.78-.6a.5.5 0 0 0-.66.04l-5.7 5.7Z",
             className: u,
           }),
@@ -300,4 +300,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f73e6e5fe39df3082e7f.js.map
+//# sourceMappingURL=3b10d091026900f6c38b.js.map

@@ -97,7 +97,7 @@
         l = n("42203"),
         i = n("724210");
       function u(e) {
-        let t = (0, a.default)([l.default], () => {
+        let t = (0, a.useStateFromStores)([l.default], () => {
           let t = l.default.getChannel(e);
           return (null == t ? void 0 : t.parent_id) != null && t.isForumPost()
             ? l.default.getChannel(null == t ? void 0 : t.parent_id)
@@ -383,4 +383,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1da8d065ace285cadd28.js.map
+//# sourceMappingURL=f6ca4f2d591521d41b3f.js.map

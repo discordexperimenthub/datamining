@@ -205,7 +205,9 @@
               r.default.getCategoryForProduct(e),
               r.default.getProduct(e),
             ]),
-            u = (0, a.default)([s.default], () => s.default.getPurchase(e));
+            u = (0, a.useStateFromStores)([s.default], () =>
+              s.default.getPurchase(e)
+            );
           return { category: t, product: n, purchase: u };
         };
     },
@@ -353,8 +355,8 @@
             onComplete: g,
             onSubscriptionConfirmation: m,
             analyticsLocations: v,
-            analyticsObject: A,
-            analyticsLocation: S,
+            analyticsObject: S,
+            analyticsLocation: A,
             analyticsSourceLocation: P,
             isGift: I = !1,
             giftMessage: _,
@@ -407,8 +409,8 @@
                 },
                 onSubscriptionConfirmation: m,
                 analyticsLocations: v,
-                analyticsObject: A,
-                analyticsLocation: S,
+                analyticsObject: S,
+                analyticsLocation: A,
                 analyticsSourceLocation: P,
                 trialId: T,
                 postSuccessGuild: w,
@@ -431,7 +433,7 @@
                     h.PurchaseTypeToAnalyticsPaymentType[
                       h.PurchaseTypes.SUBSCRIPTION
                     ],
-                  location: null != S ? S : A,
+                  location: null != A ? A : S,
                   source: P,
                   subscription_type: h.SubscriptionTypes.PREMIUM,
                   is_gift: I,
@@ -523,7 +525,7 @@
           } = e,
           m = u.createRef(),
           v = (0, d.default)(m),
-          A = !a && !r && !0 !== l && (!C || v);
+          S = !a && !r && !0 !== l && (!C || v);
         return (0, s.jsxs)(c.Button, {
           buttonRef: m,
           ...g,
@@ -532,7 +534,7 @@
           submitting: r,
           children: [
             t,
-            A
+            S
               ? (0, s.jsx)(E, {
                   shinePaused: f,
                   className: i(
@@ -788,4 +790,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7cc3e4f93833af7b0978.js.map
+//# sourceMappingURL=b9657378e0bd05056bf8.js.map

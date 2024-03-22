@@ -298,7 +298,7 @@
         s = n("385976"),
         a = n("867805");
       function i(e, t) {
-        let n = (0, l.default)(
+        let n = (0, l.useStateFromStores)(
             [s.default],
             () => (null != e ? s.default.getCustomEmojiById(e) : null),
             [e]
@@ -406,15 +406,15 @@
         MUTED: L.modeMuted,
         LOCKED: L.modeLocked,
       };
-      function x(e) {
+      function S(e) {
         e.preventDefault(), e.stopPropagation();
       }
-      let S = T.default.getEnableHardwareAcceleration()
+      let x = T.default.getEnableHardwareAcceleration()
         ? c.AnimatedAvatar
         : c.Avatar;
       function M(e) {
         let { channel: t } = e;
-        return (0, l.jsx)(S, {
+        return (0, l.jsx)(x, {
           src: (0, d.getChannelIconURL)(t),
           "aria-hidden": !0,
           size: c.AvatarSizes.SIZE_20,
@@ -444,7 +444,7 @@
                     isMobile: v.default.isMobileOnline(n.id),
                   }
           );
-        return (0, l.jsx)(S, {
+        return (0, l.jsx)(x, {
           size: c.AvatarSizes.SIZE_20,
           src: null == n ? void 0 : n.getAvatarURL(void 0, 40),
           status: a,
@@ -564,7 +564,7 @@
             onMouseDown: C,
             onMouseUp: N,
             onContextMenu: T,
-            connectDragPreview: S,
+            connectDragPreview: x,
             className: M,
             iconClassName: R,
             subtitle: A,
@@ -576,13 +576,13 @@
             children: G,
             guild: P,
             channelTypeOverride: k,
-            forceInteractable: Z,
-            mentionCount: F,
+            forceInteractable: F,
+            mentionCount: Z,
             resolvedUnreadSetting: V,
             isFavoriteSuggestion: W,
             withGuildIcon: B,
           } = e,
-          K = V === I.UnreadSetting.ALL_MESSAGES || (null != F && F > 0),
+          K = V === I.UnreadSetting.ALL_MESSAGES || (null != Z && Z > 0),
           { role: Y, ...z } = (0, r.useListItem)(n.id),
           X = s.useRef(null),
           Q = s.useRef(null),
@@ -621,7 +621,7 @@
                     }),
                     s.Children.count(G) > 0
                       ? (0, l.jsx)("div", {
-                          onClick: x,
+                          onClick: S,
                           className: L.children,
                           children: G,
                         })
@@ -649,7 +649,7 @@
           children: (0, l.jsxs)("div", {
             className: i(
               M,
-              null != m || null != N || null != C || Z
+              null != m || null != N || null != C || F
                 ? L.wrapper
                 : L.notInteractive,
               (() => {
@@ -690,7 +690,7 @@
                 : (0, l.jsx)("div", {
                     className: i(L.unread, K ? L.unreadImportant : void 0),
                   }),
-              null !== (t = null == S ? void 0 : S(et)) && void 0 !== t
+              null !== (t = null == x ? void 0 : x(et)) && void 0 !== t
                 ? t
                 : et,
             ],
@@ -703,10 +703,10 @@
       n.r(t),
         n.d(t, {
           useFilterCategoriesByQuery: function () {
-            return x;
+            return S;
           },
           getFirstRouteFor: function () {
-            return S;
+            return x;
           },
           clearRecentChannels: function () {
             return M;
@@ -748,7 +748,7 @@
       function O(e, t) {
         e.index = t;
       }
-      function x(e, t, n, s) {
+      function S(e, t, n, s) {
         s = s.toLowerCase();
         let i = (0, f.useCanSeeOnboardingHome)(e),
           r = l.useCallback(
@@ -781,7 +781,7 @@
           );
         }, [t, n, r, s]);
       }
-      function S(e) {
+      function x(e) {
         let t = e.getSections();
         if (t[p.SECTION_INDEX_COMMUNITY] > 0) {
           let t = e.getCommunitySection().getRow(0);
@@ -1129,4 +1129,4 @@
     },
   },
 ]);
-//# sourceMappingURL=eb6d743808dd0cd2dc1a.js.map
+//# sourceMappingURL=c7f2e7236d9526dc3034.js.map

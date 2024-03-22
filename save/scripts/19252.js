@@ -140,7 +140,10 @@
           return a({ h: r, s: n * t, l: o });
         };
       var f = e => t => {
-        let r = (0, o.default)([l.default], () => l.default.saturation);
+        let r = (0, o.useStateFromStores)(
+          [l.default],
+          () => l.default.saturation
+        );
         if (null == t) return {};
         let n = {
           backgroundColors: c(e, t.backgroundColors),
@@ -305,7 +308,10 @@
               style: p,
               children: b,
             } = e,
-            v = (0, l.default)([i.default], () => i.default.saturation);
+            v = (0, l.useStateFromStores)(
+              [i.default],
+              () => i.default.saturation
+            );
           return (0, n.jsx)("div", {
             className: o(f.banner, C),
             style: (() => {
@@ -386,12 +392,12 @@
         b = r("685665"),
         v = r("606292"),
         y = r("688318"),
-        E = r("38766"),
-        x = r("601095"),
-        m = r("493390"),
-        T = r("697218"),
-        I = r("677257"),
-        S = r("923702"),
+        m = r("38766"),
+        E = r("601095"),
+        S = r("493390"),
+        x = r("697218"),
+        T = r("677257"),
+        I = r("923702"),
         h = r("716120"),
         O = r("408381"),
         k = r("380171"),
@@ -412,7 +418,7 @@
             backgroundColors: j,
             buttonColors: B,
             isDarkText: F,
-          } = (0, I.default)(o.styles),
+          } = (0, T.default)(o.styles),
           D = !0 === F ? _.darkText : _.lightText,
           w =
             null != B
@@ -425,11 +431,14 @@
             null != j
               ? { background: (0, O.getBackgroundGradient)(j, 135) }
               : { backgroundColor: "var(--modal-background)" },
-          P = (0, d.default)([T.default], () => {
-            let e = T.default.getCurrentUser();
+          P = (0, d.useStateFromStores)([x.default], () => {
+            let e = x.default.getCurrentUser();
             return c(null != e, "User cannot be undefined"), e;
           }),
-          U = (0, d.default)([C.default], () => C.default.useReducedMotion),
+          U = (0, d.useStateFromStores)(
+            [C.default],
+            () => C.default.useReducedMotion
+          ),
           [z] = o.items,
           { avatarDecorationSrc: G } = (0, y.default)({
             user: P,
@@ -443,7 +452,7 @@
           V = a.useRef(null),
           { analyticsLocations: W, AnalyticsLocationProvider: Y } = (0,
           b.default)([...M, p.default.COLLECTIBLES_COLLECTED_MODAL]),
-          K = (0, E.default)({ analyticsLocations: W });
+          K = (0, m.default)({ analyticsLocations: W });
         return (0, n.jsxs)(Y, {
           children: [
             (0, n.jsxs)("div", {
@@ -486,7 +495,7 @@
                       u.CollectiblesItemType.PROFILE_EFFECT &&
                       (0, n.jsx)("div", {
                         className: _.profileEffectShopPreview,
-                        children: (0, n.jsx)(x.default, {
+                        children: (0, n.jsx)(E.default, {
                           forCollectedModal: !0,
                           profileEffectId: z.id,
                         }),
@@ -539,7 +548,7 @@
                         }
                         (null == z ? void 0 : z.type) ===
                           u.CollectiblesItemType.PROFILE_EFFECT &&
-                          (0, m.openProfileEffectModal)({
+                          (0, S.openProfileEffectModal)({
                             initialSelectedEffectId: z.id,
                             analyticsLocations: W,
                           });
@@ -557,7 +566,7 @@
               ],
             }),
             !U &&
-              (0, n.jsx)(S.default, {
+              (0, n.jsx)(I.default, {
                 confettiTarget: null != i ? i : V.current,
                 confettiCanvas: A,
                 sprites: (0, O.getConfettiSprites)(o.categorySkuId),
@@ -777,4 +786,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b71f341499b7fd93993e.js.map
+//# sourceMappingURL=9159875ce9ac83107e98.js.map

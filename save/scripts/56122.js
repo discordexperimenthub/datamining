@@ -69,8 +69,8 @@
             name: p,
             makeURL: g,
             disabled: I,
-            onChange: x,
-            showIcon: S,
+            onChange: S,
+            showIcon: x,
             showIconDisabled: A,
             className: U,
             imageClassName: N,
@@ -137,7 +137,7 @@
               (0, t.jsx)(u.FocusRing, {
                 within: !0,
                 children: (0, t.jsxs)("div", {
-                  className: S ? r(v.imageUploaderIconWrapper, T) : void 0,
+                  className: x ? r(v.imageUploaderIconWrapper, T) : void 0,
                   children: [
                     (0, t.jsxs)("div", {
                       className: r(v.imageUploaderInner, N),
@@ -152,7 +152,7 @@
                             })
                           : (0, t.jsx)(c.default, {
                               ref: this.inputRef,
-                              onChange: x,
+                              onChange: S,
                               className: v.imageUploaderFileInput,
                               "aria-label": k,
                               tabIndex: 0,
@@ -167,7 +167,7 @@
                         "aria-hidden": "true",
                         children: o,
                       }),
-                    S && (0, t.jsx)(h, { className: E, icon: j }),
+                    x && (0, t.jsx)(h, { className: E, icon: j }),
                   ],
                 }),
               }),
@@ -231,32 +231,32 @@
             showExampleButton: t = !1,
           } = e,
           [i, s] = r.useState(0),
-          [I, x] = (0, u.useSpring)(() => ({
+          [I, S] = (0, u.useSpring)(() => ({
             from: { rotate: "0deg" },
             config: { tension: 1e3, friction: 5 },
           })),
-          S = r.useRef({
+          x = r.useRef({
             seconds: i,
             jitter: async () => {
               for (;;) {
                 var e;
                 let a =
-                  ((e = S.current.seconds),
+                  ((e = x.current.seconds),
                   c.default.useReducedMotion
                     ? 0
                     : Math.min(10, ((e -= 5399) / 300) * 10));
-                x({ rotate: "-".concat(a, "deg") }),
+                S({ rotate: "-".concat(a, "deg") }),
                   await new Promise(e => setTimeout(e, 80)),
-                  x({ rotate: "".concat(a, "deg") }),
+                  S({ rotate: "".concat(a, "deg") }),
                   await new Promise(e => setTimeout(e, 80));
               }
             },
           });
         return (
-          r.useEffect(() => void (S.current.seconds = i)),
+          r.useEffect(() => void (x.current.seconds = i)),
           r.useEffect(() => {
             let e = setInterval(() => {
-              s(e => (5399 === e && S.current.jitter(), ++e));
+              s(e => (5399 === e && x.current.jitter(), ++e));
             }, 1e3);
             return () => clearInterval(e);
           }, []),
@@ -359,8 +359,8 @@
         p = l("462274"),
         g = l("234251"),
         I = l("606292"),
-        x = l("335031"),
-        S = l("608684"),
+        S = l("335031"),
+        x = l("608684"),
         A = l("635471"),
         U = l("388491"),
         N = l("217513"),
@@ -422,8 +422,8 @@
             pendingNickname: ep,
             pendingGlobalName: eg,
             pendingThemeColors: eI,
-            pendingProfileEffectId: ex,
-            avatarClassName: eS,
+            pendingProfileEffectId: eS,
+            avatarClassName: ex,
             activityName: eA,
             activityCharacter: eU,
             isTryItOutFlow: eN = !1,
@@ -470,7 +470,7 @@
               ? void 0
               : a.profileEffectId,
           eZ = null == eL ? void 0 : eL.profileEffectId,
-          eY = eH && null == ex ? (ex !== eZ && null !== ex ? eZ : eV) : ex,
+          eY = eH && null == eS ? (eS !== eZ && null !== eS ? eZ : eV) : eS,
           eq = void 0 === ev ? ei.getAvatarURL(void 0, 80) : ev,
           eK = (0, p.default)(
             eq,
@@ -485,7 +485,7 @@
                 ? void 0
                 : eL.primaryColor,
           eQ = eD ? eG : (0, U.getProfileTheme)(eJ),
-          e$ = (0, x.default)(
+          e$ = (0, S.default)(
             null !== (T = null != ed ? ed : eJ) && void 0 !== T
               ? T
               : (0, s.hex2int)(eK)
@@ -652,7 +652,7 @@
                         onMouseMove: () => ew(!0),
                         onMouseLeave: () => ew(!1),
                         children: [
-                          (0, t.jsx)(S.default, {
+                          (0, t.jsx)(x.default, {
                             className: ee.bannerUploader,
                             showRemoveButton: !1,
                             disabled: !er || eE,
@@ -794,7 +794,7 @@
                             hasProfileEffect: e2,
                           }),
                           children: [
-                            (0, t.jsx)(S.default, {
+                            (0, t.jsx)(x.default, {
                               disabled: eE,
                               ref: e_,
                               showIcon: null == eO,
@@ -802,7 +802,7 @@
                                 ? $.default.Messages.UNLOCK_GUILD_MEMBER_AVATAR
                                 : $.default.Messages.CHANGE_AVATAR,
                               showRemoveButton: !1,
-                              imageClassName: r(eS, ee.avatarUploaderInner),
+                              imageClassName: r(ex, ee.avatarUploaderInner),
                               image: ez,
                               onChange: aa,
                               makeURL: () => ez,
@@ -917,7 +917,10 @@
         r = l("206230"),
         s = e => {
           let { children: a, initTranslate3d: l } = e,
-            s = (0, n.default)([r.default], () => r.default.useReducedMotion),
+            s = (0, n.useStateFromStores)(
+              [r.default],
+              () => r.default.useReducedMotion
+            ),
             o = (0, i.useSpring)({
               immediate: s,
               from: { transform: l },
@@ -928,4 +931,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ff8819b4ffb1470cbc55.js.map
+//# sourceMappingURL=4005e22ea3cd62b454fc.js.map

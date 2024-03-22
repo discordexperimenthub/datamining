@@ -15,8 +15,8 @@
         s = a("627445"),
         d = a.n(s),
         i = a("65597"),
-        u = a("77078"),
-        r = a("404118"),
+        r = a("77078"),
+        u = a("404118"),
         o = a("305961"),
         _ = a("191814"),
         c = a("423487"),
@@ -27,7 +27,7 @@
         O = a("342269");
       function m(e) {
         let { guildProductListing: t, guildId: a } = e,
-          n = (0, i.default)([o.default], () => {
+          n = (0, i.useStateFromStores)([o.default], () => {
             var e;
             return o.default.getRole(
               a,
@@ -40,7 +40,7 @@
           ? null
           : (0, l.jsxs)(l.Fragment, {
               children: [
-                (0, l.jsxs)(u.Heading, {
+                (0, l.jsxs)(r.Heading, {
                   className: O.warningSectionHeader,
                   variant: "text-md/medium",
                   color: "text-normal",
@@ -51,7 +51,7 @@
                       .GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING_HEADER,
                   ],
                 }),
-                (0, l.jsx)(u.Text, {
+                (0, l.jsx)(r.Text, {
                   variant: "text-md/normal",
                   children:
                     D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY_ROLE_WARNING.format(
@@ -70,7 +70,7 @@
             try {
               _(!0), await E.deleteGuildProductListing(t, a);
             } catch (e) {
-              r.default.show({
+              u.default.show({
                 title: D.default.Messages.GUILD_PRODUCTS_DELETE_ERROR_TITLE,
                 body: e.message,
               });
@@ -78,7 +78,7 @@
               _(!1);
             }
           };
-        return (0, l.jsxs)(u.ConfirmModal, {
+        return (0, l.jsxs)(r.ConfirmModal, {
           ...s,
           className: O.modalContainer,
           header: D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_HEADER,
@@ -88,7 +88,7 @@
           loading: o,
           onConfirm: c,
           children: [
-            (0, l.jsx)(u.Text, {
+            (0, l.jsx)(r.Text, {
               variant: "text-md/normal",
               children:
                 D.default.Messages.GUILD_PRODUCTS_DELETE_CONFIRMATION_BODY.format(
@@ -102,4 +102,4 @@
     },
   },
 ]);
-//# sourceMappingURL=eae334e0d86462c1a3ae.js.map
+//# sourceMappingURL=1e586808cfd504bd2b67.js.map

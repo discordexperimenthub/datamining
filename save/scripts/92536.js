@@ -1,34 +1,36 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["92536"],
   {
-    93116: function (e, n, t) {
+    93116: function (e, t, n) {
       "use strict";
-      t.r(n),
-        t.d(n, {
+      n.r(t),
+        n.d(t, {
           default: function () {
             return p;
           },
         });
-      var a = t("37983");
-      t("884691");
-      var l = t("627445"),
-        d = t.n(l),
-        u = t("65597"),
-        i = t("916580"),
-        r = t("264732"),
-        s = t("390236"),
-        c = t("292508"),
-        o = t("42203"),
-        f = t("474643"),
-        h = t("494286");
+      var a = n("37983");
+      n("884691");
+      var l = n("627445"),
+        d = n.n(l),
+        u = n("65597"),
+        i = n("916580"),
+        r = n("264732"),
+        s = n("390236"),
+        o = n("292508"),
+        c = n("42203"),
+        h = n("474643"),
+        f = n("494286");
       function p(e) {
-        let { windowKey: n, channelId: t } = e,
-          l = (0, u.default)([o.default], () => o.default.getChannel(t));
+        let { windowKey: t, channelId: n } = e,
+          l = (0, u.useStateFromStores)([c.default], () =>
+            c.default.getChannel(n)
+          );
         return (
           d(null != l, "channel cannot be null for popout"),
-          (0, a.jsx)(c.default, {
+          (0, a.jsx)(o.default, {
             withTitleBar: !0,
-            windowKey: n,
+            windowKey: t,
             title: l.name,
             channelId: l.id,
             children: (0, a.jsxs)(s.default.Provider, {
@@ -36,9 +38,9 @@
               children: [
                 (0, a.jsx)(r.default, {
                   channel: l,
-                  draftType: f.DraftType.ChannelMessage,
+                  draftType: h.DraftType.ChannelMessage,
                 }),
-                (0, a.jsx)(h.default, { channel: l }),
+                (0, a.jsx)(f.default, { channel: l }),
                 (0, a.jsx)(i.default, {
                   showInPopoutWindow: !0,
                   disallowTextActivity: !0,
@@ -51,4 +53,4 @@
     },
   },
 ]);
-//# sourceMappingURL=d8d4d284a2a05c6d2383.js.map
+//# sourceMappingURL=6cb8b387df6061f69c68.js.map

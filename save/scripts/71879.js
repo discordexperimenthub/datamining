@@ -57,8 +57,8 @@
         j = l("863636"),
         R = l("471706"),
         b = l("798796"),
-        C = l("686692"),
-        S = l("547840"),
+        S = l("686692"),
+        C = l("547840"),
         T = l("49111"),
         _ = l("782340"),
         M = l("280627");
@@ -103,18 +103,18 @@
             },
             [t]
           ),
-          G = n.useCallback(() => {
+          F = n.useCallback(() => {
             O.default.completeOnboarding(t, P);
           }, [t, P]),
-          F = (0, o.useStateFromStores)([p.default], () =>
+          G = (0, o.useStateFromStores)([p.default], () =>
             p.default.getGuild(t)
           ),
           U = n.useMemo(
             () =>
-              null == F
+              null == G
                 ? null
-                : E.default.getGuildSplashURL({ id: F.id, splash: F.splash }),
-            [F]
+                : E.default.getGuildSplashURL({ id: G.id, splash: G.splash }),
+            [G]
           ),
           w = (0, o.useStateFromStores)([R.default], () =>
             R.default.getCurrentOnboardingStep(t)
@@ -139,8 +139,8 @@
           ),
           Y = null != P && P.length > 0,
           K = n.useCallback(() => {
-            (0, R.isOnboarding)(Q) && L && Y ? z(0) : G();
-          }, [Q, L, Y, z, G]);
+            (0, R.isOnboarding)(Q) && L && Y ? z(0) : F();
+          }, [Q, L, Y, z, F]);
         n.useEffect(() => {
           if (!R.default.shouldShowOnboarding(t))
             return u.default.escapeToDefaultChannel(t);
@@ -153,7 +153,7 @@
             immediate: l || ("cover" !== q && null !== q),
           }),
           X = R.default.shouldShowOnboarding(t),
-          J = null == F;
+          J = null == G;
         if (
           (n.useEffect(() => {
             if (!X || J) {
@@ -163,36 +163,36 @@
               return () => clearTimeout(e);
             }
           }, [X, J, t]),
-          !R.default.shouldShowOnboarding(t) || null == F)
+          !R.default.shouldShowOnboarding(t) || null == G)
         )
           return null;
         let Z = () => {
           switch (w) {
             case "cover":
               return (0, s.jsx)(b.default, {
-                guild: F,
+                guild: G,
                 onboardingStatus: R.GuildOnboardingStatus.READY,
                 onStart: K,
                 disableTracking: V,
               });
             case "rules":
-              return (0, s.jsx)(S.default, {
+              return (0, s.jsx)(C.default, {
                 setCurrentStep: z,
                 previousPromptIndex: P.length - 1,
-                guild: F,
+                guild: G,
                 prompts: P,
-                completeOnboarding: G,
+                completeOnboarding: F,
                 disableTracking: V,
               });
             case null:
               return null;
             default:
-              return (0, s.jsx)(C.default, {
-                guild: F,
+              return (0, s.jsx)(S.default, {
+                guild: G,
                 prompts: P,
                 step: w,
                 selectOption: y,
-                completeOnboarding: G,
+                completeOnboarding: F,
                 setCurrentStep: z,
                 disableTracking: V,
               });
@@ -289,7 +289,7 @@
           ).includeRules
         );
       }
-      function C(e) {
+      function S(e) {
         let {
             headerId: t,
             guild: l,
@@ -307,14 +307,14 @@
           ),
           v = 0 === I.length && (null == d ? void 0 : d.required),
           b = null == d ? void 0 : d.options.filter(e => I.includes(e.id)),
-          C = (0, x.getSelectedRoleIds)(b),
-          S = (0, x.getSelectedChannelIds)(b),
+          S = (0, x.getSelectedRoleIds)(b),
+          C = (0, x.getSelectedChannelIds)(b),
           T = 0 === I.length,
           { helpText: _, helpTextAdditional: M } = (0, p.default)({
             guild: l,
             prompt: d,
-            selectedRoleIds: C,
-            selectedChannelIds: S,
+            selectedRoleIds: S,
+            selectedChannelIds: C,
             itemHook: R,
           }),
           B = (0, u.default)(l.id, 1e3),
@@ -472,7 +472,7 @@
           }),
         });
       }
-      function S(e) {
+      function C(e) {
         let {
             headerId: t,
             guild: l,
@@ -491,13 +491,13 @@
           I = 0 === E.length && (null == d ? void 0 : d.required),
           v = null == d ? void 0 : d.options.filter(e => E.includes(e.id)),
           b = (0, x.getSelectedRoleIds)(v),
-          C = (0, x.getSelectedChannelIds)(v),
-          S = 0 === E.length,
+          S = (0, x.getSelectedChannelIds)(v),
+          C = 0 === E.length,
           { helpText: T, helpTextAdditional: _ } = (0, p.default)({
             guild: l,
             prompt: d,
             selectedRoleIds: b,
-            selectedChannelIds: C,
+            selectedChannelIds: S,
             itemHook: R,
           });
         return (0, s.jsx)("div", {
@@ -613,7 +613,7 @@
                             size: r.Button.Sizes.MEDIUM,
                             look: r.Button.Looks.FILLED,
                             grow: !1,
-                            color: S
+                            color: C
                               ? r.Button.Colors.PRIMARY
                               : r.Button.Colors.BRAND,
                             children: i
@@ -630,7 +630,7 @@
                                 })
                               : (0, s.jsxs)(s.Fragment, {
                                   children: [
-                                    S
+                                    C
                                       ? O.default.Messages.SKIP
                                       : O.default.Messages.NEXT,
                                     (0, s.jsx)(c.default, {
@@ -661,7 +661,9 @@
             headerId: h,
             disableTracking: x,
           } = e,
-          p = (0, a.default)([d.default], () => d.default.getRulesPrompt(t.id));
+          p = (0, a.useStateFromStores)([d.default], () =>
+            d.default.getRulesPrompt(t.id)
+          );
         n.useEffect(() => {
           o.default.fetchVerificationForm(t.id);
         }, [t.id]);
@@ -723,7 +725,7 @@
         if (null == N) return null;
         switch (N.type) {
           case I.OnboardingPromptType.MULTIPLE_CHOICE:
-            return (0, s.jsx)(S, {
+            return (0, s.jsx)(C, {
               guild: t,
               headerId: h,
               step: r,
@@ -736,7 +738,7 @@
               completeOnboarding: c,
             });
           case I.OnboardingPromptType.DROPDOWN:
-            return (0, s.jsx)(C, {
+            return (0, s.jsx)(S, {
               guild: t,
               headerId: h,
               step: r,
@@ -788,11 +790,13 @@
             previousPromptIndex: O,
           } = e,
           j = n.useRef(null),
-          R = (0, a.default)([c.default], () => c.default.getRulesPrompt(l.id)),
-          [b, C] = n.useState(
+          R = (0, a.useStateFromStores)([c.default], () =>
+            c.default.getRulesPrompt(l.id)
+          ),
+          [b, S] = n.useState(
             null !== (t = null == R ? void 0 : R.response) && void 0 !== t && t
           ),
-          S = (0, a.default)([c.default], () => c.default.get(l.id)),
+          C = (0, a.useStateFromStores)([c.default], () => c.default.get(l.id)),
           T = (0, o.default)(),
           _ = n.useRef(null),
           M = n.useRef(null),
@@ -800,19 +804,19 @@
             ? "linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))"
             : "linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))",
           D = n.useCallback(async () => {
-            if (null != S && null != R) {
+            if (null != C && null != R) {
               try {
                 await u.default.submitVerificationForm(l.id, {
-                  ...S,
+                  ...C,
                   formFields: [{ ...R, response: b }],
                 });
               } catch {}
               E();
             }
-          }, [l.id, S, R, b, E]);
+          }, [l.id, C, R, b, E]);
         function A(e) {
           let [t] = e;
-          t.isIntersecting && C(!0);
+          t.isIntersecting && S(!0);
         }
         return (n.useEffect(() => {
           let e = new IntersectionObserver(A, {
@@ -984,4 +988,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6536a70757edae3bfe98.js.map
+//# sourceMappingURL=95763dc3a0ec625a1a14.js.map

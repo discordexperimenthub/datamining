@@ -551,7 +551,9 @@
         c = n("114945");
       function o(e) {
         let { guildId: t } = e,
-          n = (0, a.default)([u.default], () => u.default.getGuild(t));
+          n = (0, a.useStateFromStores)([u.default], () =>
+            u.default.getGuild(t)
+          );
         if (null == n) return null;
         let o = null;
         if (null != n.icon) {
@@ -689,4 +691,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a5e56ffe8cfcc23b57b1.js.map
+//# sourceMappingURL=99b853394f2231468b82.js.map

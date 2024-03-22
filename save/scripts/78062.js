@@ -6,23 +6,23 @@
       a.r(t),
         a.d(t, {
           stashTemplateChannels: function () {
-            return i;
+            return r;
           },
           getTemplates: function () {
-            return r;
+            return i;
           },
         });
       var s = a("872717"),
         l = a("913144"),
         n = a("49111");
-      function i(e, t) {
+      function r(e, t) {
         l.default.dispatch({
           type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
           selectedTemplate: e,
           guildId: t,
         });
       }
-      async function r(e) {
+      async function i(e) {
         let t = await s.HTTP.get({
             url: n.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e),
           }),
@@ -47,11 +47,11 @@
       var s = a("37983"),
         l = a("884691"),
         n = a("414456"),
-        i = a.n(n),
-        r = a("759843"),
+        r = a.n(n),
+        i = a("759843"),
         c = a("65597"),
-        d = a("819855"),
-        o = a("77078"),
+        o = a("819855"),
+        d = a("77078"),
         u = a("162426"),
         T = a("716241"),
         m = a("428958"),
@@ -66,14 +66,14 @@
         R = a("736880"),
         f = a("432153"),
         g = a("395905"),
-        p = a("611187"),
-        S = a("307277"),
+        S = a("611187"),
+        p = a("307277"),
         j = a("49111"),
         O = a("782340"),
         M = a("180423");
       function v(e) {
         let { name: t, imageUrl: a, selected: l, onTap: n } = e;
-        return (0, s.jsxs)(o.Clickable, {
+        return (0, s.jsxs)(d.Clickable, {
           onClick: n,
           className: M.templateCard,
           children: [
@@ -85,9 +85,9 @@
             (0, s.jsxs)("div", {
               className: M.templateNameRow,
               children: [
-                (0, s.jsx)(o.Heading, {
+                (0, s.jsx)(d.Heading, {
                   variant: "heading-md/normal",
-                  className: i({ [M.unselectedTemplateName]: !l }),
+                  className: r({ [M.unselectedTemplateName]: !l }),
                   children: t,
                 }),
                 l &&
@@ -106,11 +106,11 @@
             error: a,
             templates: l,
             selectedTemplateIndex: n,
-            handleTapTemplate: i,
+            handleTapTemplate: r,
           } = e,
-          r = (0, c.default)([E.default], () => E.default.theme);
+          i = (0, c.useStateFromStores)([E.default], () => E.default.theme);
         return t
-          ? (0, s.jsx)(o.Spinner, {})
+          ? (0, s.jsx)(d.Spinner, {})
           : null != a
             ? (0, s.jsx)(g.default, { children: a.message })
             : null == l || 0 === l.length
@@ -124,12 +124,12 @@
                         imageUrl:
                           t === n
                             ? e.category_image
-                            : (0, d.isThemeLight)(r)
+                            : (0, o.isThemeLight)(i)
                               ? e.unselected_light_theme_category_image
                               : e.unselected_dark_theme_category_image,
                         name: e.category,
                         selected: t === n,
-                        onTap: () => i(t),
+                        onTap: () => r(t),
                       },
                       t
                     )
@@ -140,18 +140,18 @@
         var t, a;
         let {
             guildId: n,
-            templates: i,
-            selectedTemplateIndex: r,
+            templates: r,
+            selectedTemplateIndex: i,
             priceTiers: c,
-            showPriceReselection: d,
-            setShowPriceReselection: o,
+            showPriceReselection: o,
+            setShowPriceReselection: d,
             handleCreateTierFromTemplate: u,
           } = e,
           T = (0, f.useSuggestedUnusedPrices)(
             n,
             c,
-            null != i
-              ? null === (a = i[r]) || void 0 === a
+            null != r
+              ? null === (a = r[i]) || void 0 === a
                 ? void 0
                 : null === (t = a.listings[0]) || void 0 === t
                   ? void 0
@@ -161,20 +161,20 @@
           m = null != T && T.length > 0,
           _ = l.useCallback(
             e => {
-              m ? o(!0) : u(e);
+              m ? d(!0) : u(e);
             },
-            [u, m, o]
+            [u, m, d]
           );
-        return null == i || 0 === i.length
+        return null == r || 0 === r.length
           ? null
-          : d && m
-            ? (0, s.jsx)(S.default, {
-                selectedTemplate: i[r],
+          : o && m
+            ? (0, s.jsx)(p.default, {
+                selectedTemplate: r[i],
                 handleSelectTemplate: u,
                 newPricesToPick: T,
               })
-            : (0, s.jsx)(p.default, {
-                selectedTemplate: i[r],
+            : (0, s.jsx)(S.default, {
+                selectedTemplate: r[i],
                 handleSelectTemplate: _,
               });
       }
@@ -183,37 +183,39 @@
             transitionState: t,
             onClose: a,
             guildId: n,
-            addNewEditStateFromTemplate: i,
-            addNewEditStateFromScratch: d,
+            addNewEditStateFromTemplate: r,
+            addNewEditStateFromScratch: o,
             priceTiers: _,
           } = e,
-          E = (0, c.default)([R.default], () => R.default.getTemplates(n)),
+          E = (0, c.useStateFromStores)([R.default], () =>
+            R.default.getTemplates(n)
+          ),
           [x, { loading: f, error: g }] = (0, u.default)(N.getTemplates),
-          p = l.useRef("voluntarily_exit");
+          S = l.useRef("voluntarily_exit");
         l.useEffect(() => {
           (null == E || 0 === E.length) && x(n);
         }, [x, n, E]),
           l.useEffect(() => {
-            t === o.ModalTransitionState.EXITING &&
+            t === d.ModalTransitionState.EXITING &&
               C.default.track(
                 j.AnalyticEvents
                   .ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED,
                 {
-                  exit_reason: p.current,
+                  exit_reason: S.current,
                   ...(0, T.collectGuildAnalyticsMetadata)(n),
                 }
               );
-          }, [t, n, p]);
-        let [S, v] = l.useState(0),
+          }, [t, n, S]);
+        let [p, v] = l.useState(0),
           [U, D] = l.useState(!1),
           B = l.useCallback(
             e => {
-              (p.current = "template_selected"),
+              (S.current = "template_selected"),
                 (0, N.stashTemplateChannels)(e, n),
-                i(e),
+                r(e),
                 a();
             },
-            [n, i, a]
+            [n, r, a]
           ),
           y = l.useCallback(() => {
             U ? D(!1) : a();
@@ -221,44 +223,44 @@
           k = (0, L.useShowCreatorPortalLinkForTierTemplates)(n);
         return (
           (0, m.default)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
+            type: i.ImpressionTypes.MODAL,
+            name: i.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
             properties: { guild_id: n },
           }),
-          (0, s.jsxs)(o.ModalRoot, {
+          (0, s.jsxs)(d.ModalRoot, {
             transitionState: t,
-            size: o.ModalSize.DYNAMIC,
+            size: d.ModalSize.DYNAMIC,
             className: M.modalRoot,
             children: [
-              (0, s.jsx)(o.Clickable, {
+              (0, s.jsx)(d.Clickable, {
                 onClick: y,
                 className: M.closeButton,
                 children: (0, s.jsx)(h.default, { width: 12, height: 12 }),
               }),
-              (0, s.jsxs)(o.ModalContent, {
+              (0, s.jsxs)(d.ModalContent, {
                 className: M.modalContent,
                 children: [
                   (0, s.jsxs)("div", {
                     className: M.templatesContainer,
                     children: [
                       U &&
-                        (0, s.jsx)(o.Clickable, {
+                        (0, s.jsx)(d.Clickable, {
                           className: M.blackoutOverlay,
                           onClick: () => {
                             U && D(!1);
                           },
                           "aria-label": "overlay",
                         }),
-                      (0, s.jsxs)(o.ScrollerThin, {
+                      (0, s.jsxs)(d.ScrollerThin, {
                         className: M.templatesContainerBody,
                         children: [
-                          (0, s.jsx)(o.Heading, {
+                          (0, s.jsx)(d.Heading, {
                             variant: "heading-xl/semibold",
                             children:
                               O.default.Messages
                                 .GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_HEADER,
                           }),
-                          (0, s.jsx)(o.Text, {
+                          (0, s.jsx)(d.Text, {
                             variant: "text-sm/normal",
                             className: M.modalBodyText,
                             children:
@@ -266,7 +268,7 @@
                                 .GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_BODY,
                           }),
                           k &&
-                            (0, s.jsx)(o.Text, {
+                            (0, s.jsx)(d.Text, {
                               variant: "text-sm/normal",
                               className: M.creatorPortalText,
                               children:
@@ -283,7 +285,7 @@
                               loading: f,
                               error: g,
                               templates: E,
-                              selectedTemplateIndex: S,
+                              selectedTemplateIndex: p,
                               handleTapTemplate: e => {
                                 v(e);
                               },
@@ -291,20 +293,20 @@
                           }),
                         ],
                       }),
-                      (0, s.jsx)(o.Text, {
+                      (0, s.jsx)(d.Text, {
                         variant: "text-sm/normal",
                         children:
                           O.default.Messages
                             .GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_CREATE_FROM_SCRATCH_PROMPT,
                       }),
-                      (0, s.jsxs)(o.Button, {
-                        size: o.Button.Sizes.MEDIUM,
+                      (0, s.jsxs)(d.Button, {
+                        size: d.Button.Sizes.MEDIUM,
                         onClick: () => {
-                          (p.current = "create_from_scratch"), d(), a();
+                          (S.current = "create_from_scratch"), o(), a();
                         },
-                        look: o.Button.Looks.OUTLINED,
-                        color: o.Button.Colors.PRIMARY,
-                        borderColor: o.Button.BorderColors.PRIMARY,
+                        look: d.Button.Looks.OUTLINED,
+                        color: d.Button.Colors.PRIMARY,
+                        borderColor: d.Button.BorderColors.PRIMARY,
                         className: M.createFromStratchButton,
                         innerClassName: M.createFromStratchButtonInner,
                         children: [
@@ -322,7 +324,7 @@
                   (0, s.jsx)(P, {
                     guildId: n,
                     templates: E,
-                    selectedTemplateIndex: S,
+                    selectedTemplateIndex: p,
                     priceTiers: _,
                     showPriceReselection: U,
                     setShowPriceReselection: D,
@@ -347,11 +349,11 @@
       a("884691");
       var l = a("509043"),
         n = a("77078"),
-        i = a("20606"),
-        r = a("361777"),
+        r = a("20606"),
+        i = a("361777"),
         c = a("393621"),
-        d = a("190986"),
-        o = a("990864"),
+        o = a("190986"),
+        d = a("990864"),
         u = a("944633"),
         T = a("697468"),
         m = a("153160"),
@@ -361,14 +363,14 @@
         h = a("802121");
       function I(e) {
         let { listing: t } = e,
-          { name: a, image: i, description: r } = t,
+          { name: a, image: r, description: i } = t,
           c = (0, m.formatPrice)(t.price_tier, E.CurrencyCodes.USD);
         return (0, s.jsxs)("div", {
           children: [
             (0, s.jsxs)("div", {
               className: h.listingInfoRow,
               children: [
-                (0, s.jsx)("img", { src: i, alt: "", className: h.avatar }),
+                (0, s.jsx)("img", { src: r, alt: "", className: h.avatar }),
                 (0, s.jsxs)("div", {
                   children: [
                     (0, s.jsx)(n.Heading, {
@@ -397,14 +399,14 @@
                   style: { backgroundColor: (0, l.int2hex)(t.role_color) },
                   className: h.roleColor,
                 }),
-                (0, s.jsx)("img", { src: i, alt: "", className: h.roleIcon }),
+                (0, s.jsx)("img", { src: r, alt: "", className: h.roleIcon }),
                 (0, s.jsx)(n.Text, { variant: "text-xs/medium", children: a }),
               ],
             }),
             (0, s.jsx)(n.Text, {
               variant: "text-xs/normal",
               className: h.tierDescription,
-              children: r,
+              children: i,
             }),
           ],
         });
@@ -414,7 +416,7 @@
           a = (function (e) {
             switch (e) {
               case E.ChannelTypes.GUILD_TEXT:
-                return r.default;
+                return i.default;
               case E.ChannelTypes.GUILD_VOICE:
                 return u.default;
               case E.ChannelTypes.GUILD_STAGE_VOICE:
@@ -422,9 +424,9 @@
               case E.ChannelTypes.GUILD_FORUM:
                 return c.default;
               case E.ChannelTypes.GUILD_MEDIA:
-                return d.default;
-              case E.ChannelTypes.GUILD_ANNOUNCEMENT:
                 return o.default;
+              case E.ChannelTypes.GUILD_ANNOUNCEMENT:
+                return d.default;
               default:
                 return null;
             }
@@ -449,7 +451,7 @@
             }),
             (0, s.jsx)(_.default, {
               className: h.emojiIcon,
-              color: i.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON,
+              color: r.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON,
             }),
           ],
         });
@@ -538,22 +540,22 @@
       var s = a("37983"),
         l = a("884691"),
         n = a("414456"),
-        i = a.n(n),
-        r = a("77078"),
+        r = a.n(n),
+        i = a("77078"),
         c = a("449918"),
-        d = a("578706"),
-        o = a("153160"),
+        o = a("578706"),
+        d = a("153160"),
         u = a("49111"),
         T = a("782340"),
         m = a("159137");
       function _(e) {
         let { price: t, selected: a, onClick: l } = e;
-        return (0, s.jsxs)(r.Clickable, {
-          className: i(m.priceRow, { [m.selected]: a }),
+        return (0, s.jsxs)(i.Clickable, {
+          className: r(m.priceRow, { [m.selected]: a }),
           onClick: l,
           children: [
             a
-              ? (0, s.jsx)(d.default, {
+              ? (0, s.jsx)(o.default, {
                   width: 20,
                   height: 20,
                   backgroundColor: (0, c.getColor)(u.Color.WHITE_500),
@@ -572,12 +574,12 @@
             (0, s.jsxs)("div", {
               className: m.priceRowText,
               children: [
-                (0, s.jsx)(r.Text, {
+                (0, s.jsx)(i.Text, {
                   variant: "text-sm/normal",
                   tag: "span",
-                  children: (0, o.formatPrice)(t, u.CurrencyCodes.USD),
+                  children: (0, d.formatPrice)(t, u.CurrencyCodes.USD),
                 }),
-                (0, s.jsx)(r.Text, {
+                (0, s.jsx)(i.Text, {
                   variant: "text-xxs/medium",
                   tag: "span",
                   children: "/mo.",
@@ -593,27 +595,27 @@
             handleSelectTemplate: a,
             newPricesToPick: n,
           } = e,
-          [i, c] = l.useState(0);
+          [r, c] = l.useState(0);
         return (0, s.jsxs)("div", {
           className: m.container,
           children: [
             (0, s.jsxs)("div", {
               className: m.content,
               children: [
-                (0, s.jsx)(r.Heading, {
+                (0, s.jsx)(i.Heading, {
                   variant: "heading-md/semibold",
                   children:
                     T.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_HEADER.format(
                       { tierName: t.listings[0].name }
                     ),
                 }),
-                (0, s.jsx)(r.Text, {
+                (0, s.jsx)(i.Text, {
                   variant: "text-sm/normal",
                   className: m.bodyText,
                   children:
                     T.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_MODAL_PRICE_RESELECTION_BODY.format(
                       {
-                        price: (0, o.formatPrice)(
+                        price: (0, d.formatPrice)(
                           t.listings[0].price_tier,
                           u.CurrencyCodes.USD
                         ),
@@ -623,16 +625,16 @@
                 n.map((e, t) =>
                   (0, s.jsx)(
                     _,
-                    { price: e, selected: t === i, onClick: () => c(t) },
+                    { price: e, selected: t === r, onClick: () => c(t) },
                     e
                   )
                 ),
               ],
             }),
-            (0, s.jsx)(r.Button, {
-              size: r.Button.Sizes.MEDIUM,
+            (0, s.jsx)(i.Button, {
+              size: i.Button.Sizes.MEDIUM,
               onClick: () => {
-                a({ ...t, listings: [{ ...t.listings[0], price_tier: n[i] }] });
+                a({ ...t, listings: [{ ...t.listings[0], price_tier: n[r] }] });
               },
               children:
                 T.default.Messages
@@ -644,4 +646,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7ab7541e81226499b746.js.map
+//# sourceMappingURL=e550cd822ffffa7b863d.js.map

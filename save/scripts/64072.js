@@ -186,7 +186,9 @@
         l = n("447435");
       let s = (e, t, n) => {
           var s, u;
-          let r = (0, a.default)([i.default], () => i.default.getMessage(e, t));
+          let r = (0, a.useStateFromStores)([i.default], () =>
+            i.default.getMessage(e, t)
+          );
           if (null == r) return [];
           let d =
             void 0 !== n
@@ -208,7 +210,9 @@
         },
         u = (e, t, n) => {
           var s, u;
-          let r = (0, a.default)([i.default], () => i.default.getMessage(e, t));
+          let r = (0, a.useStateFromStores)([i.default], () =>
+            i.default.getMessage(e, t)
+          );
           if (null == r) return [];
           let d =
             void 0 !== n
@@ -258,8 +262,8 @@
           } = e,
           g = (0, s.useIsEligibleForExplicitMediaRedaction)(),
           p = (0, d.useExplicitMediaAttachmentsForMessage)(t, n, f),
-          I = (0, d.useExplicitMediaEmbedsForMessage)(t, n, E),
-          { reportFalsePositive: S, isReportFalsePositiveLoading: v } = (0,
+          S = (0, d.useExplicitMediaEmbedsForMessage)(t, n, E),
+          { reportFalsePositive: I, isReportFalsePositiveLoading: v } = (0,
           r.useExplicitMediaActions)({
             onSuccess: () => (0, o.handleSuccess)(M),
             onError: () => {
@@ -275,11 +279,11 @@
                 t,
                 n,
                 p.map(e => e.id),
-                I.map(e => e.id)
+                S.map(e => e.id)
               );
             },
           }),
-          h = g && (p.length > 0 || I.length > 0);
+          h = g && (p.length > 0 || S.length > 0);
         return (
           !h && M(),
           (0, a.jsx)(o.ExplicitMediaFalsePositiveModal, {
@@ -289,9 +293,9 @@
             analyticsContext:
               u.TrackMediaRedactionContext
                 .EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: S,
-            attachmentPreview: 1 === p.length && 0 === I.length ? p[0] : void 0,
-            embedPreview: 1 === I.length && 0 === p.length ? I[0] : void 0,
+            onConfirmPress: I,
+            attachmentPreview: 1 === p.length && 0 === S.length ? p[0] : void 0,
+            embedPreview: 1 === S.length && 0 === p.length ? S[0] : void 0,
             transitionState: m,
             onClose: M,
           })
@@ -322,10 +326,10 @@
       function M(e) {
         let { user: t, guildId: n, channel: M, context: g } = e,
           p = c.default.getGuild(n),
-          I = (0, l.useStateFromStores)([f.default], () =>
+          S = (0, l.useStateFromStores)([f.default], () =>
             null != p ? f.default.can(E.Permissions.MANAGE_GUILD, p) : null
           ),
-          S = (0, d.useContextIndexState)(M, !0, !0),
+          I = (0, d.useContextIndexState)(M, !0, !0),
           v = (0, d.useUserIndexState)(!0, !0),
           { isUserApp: h, isGuildApp: A } = i.useMemo(() => {
             var e, n, a, i;
@@ -334,7 +338,7 @@
             let l = Object.values(
                 null !==
                   (a =
-                    null === (e = S.result) || void 0 === e
+                    null === (e = I.result) || void 0 === e
                       ? void 0
                       : e.sections) && void 0 !== a
                   ? a
@@ -367,7 +371,7 @@
                 );
               }),
             };
-          }, [S, v, null == t ? void 0 : t.id]),
+          }, [I, v, null == t ? void 0 : t.id]),
           _ = i.useCallback(() => {
             (null == p ? void 0 : p.id) != null &&
               (o.default.open(p.id, E.GuildSettingsSections.INTEGRATIONS),
@@ -380,7 +384,7 @@
             r.default.open(E.UserSettingsSections.AUTHORIZED_APPS);
           }, []),
           C = g === E.AppContext.POPOUT;
-        if (!(null == t ? void 0 : t.bot) || !I || C || (!A && !h)) return null;
+        if (!(null == t ? void 0 : t.bot) || !S || C || (!A && !h)) return null;
         let R = [];
         return (
           A &&
@@ -604,8 +608,8 @@
         M = n("306160"),
         g = n("659500"),
         p = n("299039"),
-        I = n("613387"),
-        S = n("456936"),
+        S = n("613387"),
+        I = n("456936"),
         v = n("409058"),
         h = n("49111");
       function A(e) {
@@ -637,7 +641,7 @@
         i.default.startEditMessage(e.id, t.id, t.content);
       }
       function O(e, t) {
-        (0, S.default)(e.id, t.id);
+        (0, I.default)(e.id, t.id);
       }
       function x(e, t, n) {
         if (!1 === t.pinned) {
@@ -654,7 +658,7 @@
         (0, s.default)(e.id, t.id);
       }
       function N(e, t) {
-        (0, v.default)(e, t, void 0, I.default.getOptions(t.id));
+        (0, v.default)(e, t, void 0, S.default.getOptions(t.id));
       }
       function b(e, t, n) {
         let a = e.isPrivate(),
@@ -710,8 +714,8 @@
         M = n("761136"),
         g = n("126423"),
         p = n("175537"),
-        I = n("485598"),
-        S = n("518155"),
+        S = n("485598"),
+        I = n("518155"),
         v = n("355669"),
         h = n("718381"),
         A = n("442711"),
@@ -747,8 +751,8 @@
           } = e,
           g = c,
           p = c.getAttribute("data-type"),
-          I = c.getAttribute("data-id"),
-          S = c.getAttribute("data-name");
+          S = c.getAttribute("data-id"),
+          I = c.getAttribute("data-name");
         if (null != f) l = a = u = f.url;
         else
           for (; (0, i.isElement)(g); )
@@ -780,8 +784,8 @@
           attachment: f,
           textSelection: v,
           favoriteableType: p,
-          favoriteableId: I,
-          favoriteableName: S,
+          favoriteableId: S,
+          favoriteableName: I,
           itemHref: a,
           itemSrc: l,
           itemSafeSrc: u,
@@ -826,8 +830,8 @@
           el = (0, G.default)(t, n),
           es = (0, T.default)(t, n),
           eu = (0, O.default)(t),
-          er = (0, I.default)(t, n),
-          ed = (0, S.default)(t, n),
+          er = (0, S.default)(t, n),
+          ed = (0, I.default)(t, n),
           eo = (0, y.default)(t, n),
           ec = (0, N.default)(t, n),
           ef = (0, h.default)(t, n),
@@ -838,12 +842,12 @@
           }),
           eg = (0, o.default)(H, t, { shouldHideMediaOptions: q }),
           ep = (0, F.default)(t, i),
-          eI = (0, r.default)({
+          eS = (0, r.default)({
             id: t.id,
             label: L.default.Messages.COPY_ID_MESSAGE,
             shiftId: "".concat(t.channel_id, "-").concat(t.id),
           }),
-          eS = (0, b.default)(t, n),
+          eI = (0, b.default)(t, n),
           ev = (0, P.default)(t, n),
           eh = (0, g.default)(t, n, { hoist: !0 }),
           eA = (0, M.default)(s, n.getGuildId()),
@@ -873,7 +877,7 @@
                 en,
                 ea,
                 ei,
-                eS,
+                eI,
                 ev,
                 eT,
                 eC,
@@ -894,7 +898,7 @@
             null != eA && (0, a.jsx)(l.MenuGroup, { children: eA }),
             (0, a.jsxs)(l.MenuGroup, { children: [eg, ep] }),
             (0, a.jsx)(l.MenuGroup, { children: eM }),
-            (0, a.jsx)(l.MenuGroup, { children: eI }),
+            (0, a.jsx)(l.MenuGroup, { children: eS }),
           ],
         });
       }
@@ -904,7 +908,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return I;
           },
         }),
         n("222007"),
@@ -924,10 +928,10 @@
         M = n("143460"),
         g = n("782340"),
         p = n("974020");
-      let I = M.AutomodTriggerType.KEYWORD;
-      function S(e, t) {
-        let { perGuildMaxCount: n } = r.triggerConfigs[I],
-          { isLoading: M, saveRule: S } = (0, o.useAutomodEditingRuleActions)(),
+      let S = M.AutomodTriggerType.KEYWORD;
+      function I(e, t) {
+        let { perGuildMaxCount: n } = r.triggerConfigs[S],
+          { isLoading: M, saveRule: I } = (0, o.useAutomodEditingRuleActions)(),
           { createNewEditingRule: v } = (0, o.useAutomodEditingRuleState)(),
           [h, A] = i.useState(!1),
           [_, T] = (0, u.useSyncAutomodRules)(t),
@@ -936,7 +940,7 @@
           ),
           O = i.useMemo(() => {
             var e;
-            return null !== (e = C[I]) && void 0 !== e ? e : [];
+            return null !== (e = C[S]) && void 0 !== e ? e : [];
           }, [C]),
           x = 0 === O.length,
           y = n > O.length && !x,
@@ -951,7 +955,7 @@
               ((0, s.closeContextMenu)(),
               E.default.open(t, m.GuildSettingsSections.GUILD_AUTOMOD),
               setTimeout(() => {
-                v(t, I, {
+                v(t, S, {
                   triggerMetadata: {
                     keywordFilter: [e],
                     regexPatterns: [],
@@ -981,7 +985,7 @@
                 ],
               },
             };
-            await S(l, O), R(l);
+            await I(l, O), R(l);
           },
           D = (0, a.jsx)(a.Fragment, {
             children: (0, a.jsx)(l.MenuItem, {
@@ -1003,7 +1007,7 @@
                     disabled: M,
                   }),
                 O.map(e => {
-                  let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
+                  let t = (0, r.getAvailableActionTypes)(S).reduce((t, n) => {
                     let a = e.actions.find(e => {
                       let { type: t } = e;
                       return n === t;
@@ -1180,8 +1184,8 @@
         M = n("659500"),
         g = n("402671"),
         p = n("49111"),
-        I = n("958706"),
-        S = n("782340");
+        S = n("958706"),
+        I = n("782340");
       function v(e, t) {
         let { reducedMotion: n } = i.useContext(
             s.AccessibilityPreferencesContext
@@ -1207,7 +1211,7 @@
             !g.default.isEmojiFilteredOrLocked({
               emoji: e,
               channel: t,
-              intention: I.EmojiIntention.REACTION,
+              intention: S.EmojiIntention.REACTION,
             })
         )
           .slice(0, 12)
@@ -1261,7 +1265,7 @@
           });
         return (0, a.jsx)(s.MenuItem, {
           id: "add-reaction",
-          label: S.default.Messages.ADD_REACTION,
+          label: I.default.Messages.ADD_REACTION,
           action: () => {
             M.ComponentDispatch.dispatchKeyed(
               p.ComponentActionsKeyed.TOGGLE_REACTION_POPOUT,
@@ -1277,7 +1281,7 @@
               (0, a.jsx)(s.MenuItem, {
                 color: "default",
                 id: "other-reactions",
-                label: S.default.Messages.VIEW_MORE,
+                label: I.default.Messages.VIEW_MORE,
                 icon: E.default,
                 action: () => {
                   M.ComponentDispatch.dispatchKeyed(
@@ -1410,8 +1414,8 @@
         M = n("256860"),
         g = n("364685"),
         p = n("24373"),
-        I = n("49111"),
-        S = n("782340");
+        S = n("49111"),
+        I = n("782340");
       function v(e) {
         return c.default.getByName(e.replace(/(^:|:$)/g, ""));
       }
@@ -1422,8 +1426,8 @@
             () => ({
               ..._,
               section: A
-                ? I.AnalyticsSections.EXPRESSION_PICKER
-                : I.AnalyticsSections.CONTEXT_MENU,
+                ? S.AnalyticsSections.EXPRESSION_PICKER
+                : S.AnalyticsSections.CONTEXT_MENU,
             }),
             [_, A]
           ),
@@ -1454,36 +1458,36 @@
               ? (0, a.jsx)(s.MenuItem, {
                   id: "unfavorite",
                   action: () => (0, E.unfavoriteSticker)(R.id),
-                  label: S.default.Messages.UNFAVORITE_ITEM,
+                  label: I.default.Messages.UNFAVORITE_ITEM,
                 })
               : (0, a.jsx)(s.MenuItem, {
                   id: "favorite",
                   action: () => {
                     (0, m.trackStickerFavorited)({
                       sticker: R,
-                      location: { ...T, object: I.AnalyticsObjects.STICKER },
+                      location: { ...T, object: S.AnalyticsObjects.STICKER },
                     }),
                       (0, E.favoriteSticker)(null == R ? void 0 : R.id);
                   },
-                  label: S.default.Messages.FAVORITE_ITEM,
+                  label: I.default.Messages.FAVORITE_ITEM,
                 });
         if (null != x && t === f.PickerContextMenuDataTypes.EMOJI)
           return y
             ? (0, a.jsx)(s.MenuItem, {
                 id: "unfavorite",
                 action: () => (0, u.unfavoriteEmoji)(x),
-                label: S.default.Messages.UNFAVORITE_ITEM,
+                label: I.default.Messages.UNFAVORITE_ITEM,
               })
             : (0, a.jsx)(s.MenuItem, {
                 id: "favorite",
                 action: () => {
                   (0, d.trackEmojiFavorited)({
                     emoji: x,
-                    location: { ...T, object: I.AnalyticsObjects.EMOJI },
+                    location: { ...T, object: S.AnalyticsObjects.EMOJI },
                   }),
                     (0, u.favoriteEmoji)(x);
                 },
-                label: S.default.Messages.FAVORITE_ITEM,
+                label: I.default.Messages.FAVORITE_ITEM,
               });
       }
     },
@@ -1562,8 +1566,8 @@
         M = n("402671"),
         g = n("49111"),
         p = n("958706"),
-        I = n("782340"),
-        S = n("755640");
+        S = n("782340"),
+        I = n("755640");
       let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
       function h(e) {
         var t;
@@ -1582,20 +1586,20 @@
               forceOpen: i,
               children: e =>
                 (0, a.jsx)("div", {
-                  "aria-label": I.default.Messages.ADD_REACTION_NAMED.format({
+                  "aria-label": S.default.Messages.ADD_REACTION_NAMED.format({
                     emojiName: n.name,
                   }),
-                  className: l(S.button, { [S.focused]: i }),
+                  className: l(I.button, { [I.focused]: i }),
                   ...e,
                   children:
                     null == r || "" === r.trim()
                       ? (0, a.jsx)("span", {
-                          className: l("emoji", "emoji-text", S.icon),
+                          className: l("emoji", "emoji-text", I.icon),
                           ...e,
                           children: d,
                         })
                       : (0, a.jsx)("img", {
-                          className: S.icon,
+                          className: I.icon,
                           src: r,
                           alt: "",
                         }),
@@ -1626,7 +1630,7 @@
         i.length > 4 && (i.length = 4);
         let l = f.RenderReactions.useSetting(),
           m = (0, c.useIsActiveChannelOrUnarchivableThread)(t),
-          I = (0, s.useStateFromStores)(
+          S = (0, s.useStateFromStores)(
             [E.default],
             () =>
               l &&
@@ -1637,9 +1641,9 @@
           A = n => {
             (0, d.addReaction)(t.id, e.id, (0, o.toReactionEmoji)(n), void 0);
           };
-        return I && i.length > 0
+        return S && i.length > 0
           ? (0, a.jsx)(u.MenuGroup, {
-              className: S.wrapper,
+              className: I.wrapper,
               children: i.map((e, t) => {
                 var n;
                 return (0, a.jsx)(
@@ -1844,7 +1848,7 @@
             () => c.default.can(m.Permissions.MANAGE_MESSAGES, t) && g,
             [t, g]
           ),
-          I = e.reactions.reduce((e, t) => {
+          S = e.reactions.reduce((e, t) => {
             var n;
             return (null === (n = t.count_details) || void 0 === n
               ? void 0
@@ -1858,7 +1862,7 @@
               ? e
               : [...e, t.emoji];
           }, []),
-          S = (n, a) => {
+          I = (n, a) => {
             n.shiftKey
               ? (0, d.removeEmojiReactions)(t.id, e.id, a)
               : u.default.show({
@@ -1881,7 +1885,7 @@
               id: "remove-emoji-reactions",
               label: M.default.Messages.REMOVE_EMOJI_REACTIONS,
               color: "danger",
-              children: I.map(e => {
+              children: S.map(e => {
                 var t, i;
                 return (0, a.jsx)(
                   s.MenuItem,
@@ -1890,7 +1894,7 @@
                       null !== (t = e.name) && void 0 !== t ? t : e.id
                     ),
                     label: null == e.id ? e.name : ":".concat(e.name, ":"),
-                    action: t => S(t, e),
+                    action: t => I(t, e),
                     imageUrl: t => {
                       var a;
                       let { isFocused: i } = t;
@@ -2127,8 +2131,8 @@
         M = n("782340");
       let g = "https://media.discordapp.net",
         p = /^.*\.discordapp\.net$/,
-        I = "cdn.discordapp.com",
-        S = "".concat(g, "/stickers"),
+        S = "cdn.discordapp.com",
+        I = "".concat(g, "/stickers"),
         v = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
         h = new Set(["jpg", "jpeg", "png"]),
         A = e => {
@@ -2159,8 +2163,8 @@
             if (null == t) return !1;
             let n = A(e);
             return (
-              (p.test(t.hostname) || t.host === I) &&
-              !e.startsWith(S) &&
+              (p.test(t.hostname) || t.host === S) &&
+              !e.startsWith(I) &&
               !(0, s.isRoleIconAssetUrl)(e) &&
               null != n &&
               v.has(n)
@@ -2170,10 +2174,10 @@
           return null;
         let o = (function (e) {
             let t = c.default.toURLSafe(e);
-            return null == t || t.host === I
+            return null == t || t.host === S
               ? e
               : t.origin === g
-                ? ((t.host = I),
+                ? ((t.host = S),
                   t.searchParams.delete("size"),
                   t.searchParams.delete("width"),
                   t.searchParams.delete("height"),
@@ -2485,7 +2489,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return I;
           },
         });
       var a = n("37983"),
@@ -2503,19 +2507,19 @@
         M = n("697218"),
         g = n("317041"),
         p = n("782340"),
-        I = n("466063"),
-        S = e => {
+        S = n("466063"),
+        I = e => {
           let t,
             {
               commandType: n,
               commandTargetId: l,
-              channel: S,
+              channel: I,
               guildId: v,
               onHeightUpdate: h,
               context: A,
             } = e,
             _ = (0, u.useStateFromStores)([m.default], () =>
-              m.default.getGuild(null != v ? v : S.guild_id)
+              m.default.getGuild(null != v ? v : I.guild_id)
             ),
             T = (0, u.useStateFromStores)([M.default], () =>
               M.default.getUser(l)
@@ -2523,7 +2527,7 @@
             C = (0, E.default)({
               user: T,
               guildId: null == _ ? void 0 : _.id,
-              channel: S,
+              channel: I,
               context: A,
             }),
             {
@@ -2531,7 +2535,7 @@
               sectionDescriptors: O,
               loading: x,
             } = d.useDiscovery(
-              S,
+              I,
               { commandType: n },
               { limit: g.CONTEXT_MENU_COMMANDS_QUERY_LIMIT }
             ),
@@ -2551,7 +2555,7 @@
           }, [x, h]);
           let b = i.useCallback(
             e => {
-              s(null != S, "menu item should not show if channel is null");
+              s(null != I, "menu item should not show if channel is null");
               let t = y[e.applicationId],
                 n = null != t ? (0, c.getIconComponent)(t) : void 0;
               return (0, a.jsx)(
@@ -2563,7 +2567,7 @@
                   icon: () =>
                     null != n
                       ? (0, a.jsx)(n, {
-                          channel: S,
+                          channel: I,
                           section: t,
                           width: 18,
                           height: 18,
@@ -2574,7 +2578,7 @@
                     (0, o.default)({
                       command: e,
                       optionValues: {},
-                      context: { channel: S, guild: _ },
+                      context: { channel: I, guild: _ },
                       commandTargetId: l,
                     });
                   },
@@ -2582,7 +2586,7 @@
                 e.id
               );
             },
-            [S, _, l, y]
+            [I, _, l, y]
           );
           return (
             x.current
@@ -2619,7 +2623,7 @@
             (0, a.jsx)(r.MenuItem, {
               id: "apps",
               label: p.default.Messages.APPS,
-              listClassName: I.list,
+              listClassName: S.list,
               children: t,
             })
           );
@@ -2826,4 +2830,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2706883d42e3fda06458.js.map
+//# sourceMappingURL=11a210f54635a9335e8b.js.map

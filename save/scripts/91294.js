@@ -266,8 +266,8 @@
         u,
         C,
         l,
-        d,
         o,
+        d,
         N,
         S,
         R,
@@ -307,13 +307,13 @@
         (l[(l.GUILD_JOIN = 7)] = "GUILD_JOIN"),
         (l[(l.GUILD_MESSAGE_SEND = 8)] = "GUILD_MESSAGE_SEND"),
         (l[(l.GUILD_VC_JOIN = 9)] = "GUILD_VC_JOIN"),
-        ((d = T || (T = {}))[(d.PARENT = 1)] = "PARENT"),
-        (d[(d.CHILD = 2)] = "CHILD"),
-        ((o = n || (n = {}))[(o.PENDING = 1)] = "PENDING"),
-        (o[(o.ACTIVE = 2)] = "ACTIVE"),
-        (o[(o.INACTIVE = 3)] = "INACTIVE"),
-        (o[(o.DECLINED = 4)] = "DECLINED"),
-        (o[(o.EXPIRED = 5)] = "EXPIRED"),
+        ((o = T || (T = {}))[(o.PARENT = 1)] = "PARENT"),
+        (o[(o.CHILD = 2)] = "CHILD"),
+        ((d = n || (n = {}))[(d.PENDING = 1)] = "PENDING"),
+        (d[(d.ACTIVE = 2)] = "ACTIVE"),
+        (d[(d.INACTIVE = 3)] = "INACTIVE"),
+        (d[(d.DECLINED = 4)] = "DECLINED"),
+        (d[(d.EXPIRED = 5)] = "EXPIRED"),
         ((N = I || (I = {}))[(N.USER_ADD = 1)] = "USER_ADD"),
         (N[(N.GUILD_ADD = 2)] = "GUILD_ADD"),
         (N[(N.USER_INTERACTION = 3)] = "USER_INTERACTION"),
@@ -552,8 +552,8 @@
         u = null,
         C = {},
         l = c(),
-        d = f(),
-        o = null,
+        o = f(),
+        d = null,
         N = (function () {
           var e, t, E, _;
           return (null === (t = window) || void 0 === t
@@ -605,7 +605,7 @@
             : {});
       }
       function O(e) {
-        void 0 !== e && (d = e);
+        void 0 !== e && (o = e);
       }
       function y(e, t) {
         let E = t ? l : c();
@@ -682,7 +682,7 @@
       }
       function H(e) {
         let { linkCode: t } = e;
-        o = t;
+        d = t;
       }
       function h(e) {
         let { tab: t } = e;
@@ -714,7 +714,7 @@
           (u = null),
           (C = {}),
           (l = c()),
-          (d = f()),
+          (o = f()),
           (D = {}),
           (R = !1),
           (M = null);
@@ -729,7 +729,7 @@
             Y(e.linkedUsers),
               F(e.guilds),
               y(e.teenActivity),
-              (d = e.teenActivityTotals.reduce((e, t) => {
+              (o = e.teenActivityTotals.reduce((e, t) => {
                 let [E, _] = t.split(":"),
                   T = (0, A.displayTypeFromString)(E);
                 return void 0 === T ? e : { ...e, [T]: parseInt(_, 10) };
@@ -740,7 +740,7 @@
             version: b.LATEST_SNAPSHOT_VERSION,
             data: {
               linkedUsers: Object.values(C),
-              teenActivityTotals: Object.entries(d).map(e => {
+              teenActivityTotals: Object.entries(o).map(e => {
                 let [t, E] = e;
                 return "".concat(t, ":").concat(E);
               }),
@@ -780,10 +780,10 @@
           return Object.values(l[e]);
         }
         getTotalForDisplayType(e) {
-          return d[e];
+          return o[e];
         }
         getLinkCode() {
-          return o;
+          return d;
         }
         getGuild(e) {
           return D[e];
@@ -847,10 +847,10 @@
             return l;
           },
           isUserAction: function () {
-            return d;
+            return o;
           },
           isGuildAction: function () {
-            return o;
+            return d;
           },
           displayTypeFromString: function () {
             return N;
@@ -922,11 +922,11 @@
                       ? _.days.format({ count: Math.floor(E / a) })
                       : _.date.format({ date: n }));
         },
-        d = e =>
+        o = e =>
           e.display_type === n.TeenActionDisplayType.USER_ADD ||
           e.display_type === n.TeenActionDisplayType.USER_INTERACTION ||
           e.display_type === n.TeenActionDisplayType.USER_CALLED,
-        o = e =>
+        d = e =>
           e.display_type === n.TeenActionDisplayType.GUILD_ADD ||
           e.display_type === n.TeenActionDisplayType.GUILD_INTERACTION,
         N = e => {
@@ -953,8 +953,10 @@
         i = new Set(["en-US", "es-ES"]),
         r = () => {
           let e = (0, a.default)(),
-            t = (0, T.default)([s.default], () => s.default.getUserCountry()),
-            E = (0, T.default)([I.default], () => I.default.locale);
+            t = (0, T.useStateFromStores)([s.default], () =>
+              s.default.getUserCountry()
+            ),
+            E = (0, T.useStateFromStores)([I.default], () => I.default.locale);
           return (
             _.useEffect(() => {
               null == t && (0, n.fetchUserCountryCode)();
@@ -985,4 +987,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f99cd294f39300902ebd.js.map
+//# sourceMappingURL=df0735b3a24e872e5998.js.map

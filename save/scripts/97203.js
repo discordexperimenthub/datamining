@@ -271,7 +271,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return S;
+            return _;
           },
         }),
         a("222007");
@@ -299,12 +299,12 @@
         M = a("846325"),
         j = a("782340"),
         T = a("309799"),
-        _ = a("446825").Buffer;
-      function S(e) {
+        S = a("446825").Buffer;
+      function _(e) {
         let {
             clip: t,
             channelId: r,
-            clipName: S,
+            clipName: _,
             onSetClipName: b,
             onClose: w,
           } = e,
@@ -344,11 +344,11 @@
                   (0, c.getManageResourcePermissions)(i, v.default, p.default)
                     .canCreateExpressions,
                 u =
-                  null == S || "" === S
+                  null == _ || "" === _
                     ? (0, I.CLIP_NAME_TEMPLATE)(
                         x.default.extractTimestamp(t.id)
                       )
-                    : S,
+                    : _,
                 o = u.slice(0, M.MAX_LENGTH_SOUND_NAME);
               return t =>
                 (0, l.jsx)(r, {
@@ -379,7 +379,7 @@
               }),
               a = await e.arrayBuffer();
             await d.default.fileManager.saveWithDialog(
-              _.from(a),
+              S.from(a),
               (0, I.CLIPS_EXPORT_FILENAME)(t.id)
             );
           } catch (e) {
@@ -420,7 +420,7 @@
                     onChange: e => {
                       "" === e ? b(void 0) : b(e);
                     },
-                    value: S,
+                    value: _,
                     minLength: I.CLIP_NAME_MIN_CHAR_LENGTH,
                     maxLength: I.CLIP_NAME_MAX_CHAR_LENGTH,
                     placeholder: j.default.Messages.CLIPS_UNTITLED,
@@ -463,7 +463,7 @@
                   wrapperClassName: T.clipFormFooterButton,
                   onClick: () =>
                     B({
-                      clip: { ...t, name: S },
+                      clip: { ...t, name: _ },
                       cropData: A,
                       applicationAudioEnabled: D,
                       voiceAudioEnabled: y,
@@ -550,7 +550,7 @@
         g = a("204839");
       function E(e) {
         var t, a, E, N, L, I, M, j;
-        let { clip: T, channelId: _, transitionState: S, onClose: b } = e,
+        let { clip: T, channelId: S, transitionState: _, onClose: b } = e,
           [w, R] = n.useState(!0),
           [A, y] = n.useState(null),
           [k, D] = n.useState(null),
@@ -680,7 +680,7 @@
           impression: { impressionName: r.ImpressionNames.CLIP_EDITOR_VIEWED },
           size: i.ModalSize.DYNAMIC,
           className: g.modalRoot,
-          transitionState: S,
+          transitionState: _,
           children: (0, l.jsx)(P, {
             children: (0, l.jsx)(i.ModalContent, {
               className: g.modalContent,
@@ -699,11 +699,11 @@
                             isLoading: w,
                             onDoneLoading: () => R(!1),
                             audioURL: k,
-                            transitionState: S,
+                            transitionState: _,
                           }),
                           !w &&
                             (0, l.jsx)(h.default, {
-                              channelId: _,
+                              channelId: S,
                               onSetClipName: V,
                               clipName: Z,
                               clip: T,
@@ -815,7 +815,7 @@
           T = n.useCallback(e => {
             x.current.main = e;
           }, []),
-          _ = n.useCallback(e => {
+          S = n.useCallback(e => {
             let t = [];
             for (let a of Object.values(e.currentTarget.audioTracks))
               a.label.includes(":application")
@@ -825,7 +825,7 @@
                   : (a.enabled = !1);
             g(t);
           }, []),
-          S = n.useCallback((e, t) => {
+          _ = n.useCallback((e, t) => {
             x.current[t] = e;
           }, []);
         return (n.useImperativeHandle(t, () => ({
@@ -853,13 +853,13 @@
                   muted: !c,
                   preload: "auto",
                   className: u.hidden,
-                  ref: e => S(e, "application"),
-                  onLoadedMetadata: _,
+                  ref: e => _(e, "application"),
+                  onLoadedMetadata: S,
                 }),
                 C.map(e =>
                   (0, l.jsx)(
                     o,
-                    { audioTrackLabel: e, setRef: S, src: d, muted: !f },
+                    { audioTrackLabel: e, setRef: _, src: d, muted: !f },
                     e
                   )
                 ),
@@ -897,14 +897,14 @@
         N = a("504835"),
         L = function (e) {
           var t, a, r, L, j, T;
-          let { sourceURL: _ } = e,
+          let { sourceURL: S } = e,
             {
-              videoPlayerRef: S,
+              videoPlayerRef: _,
               cropData: b,
               setCropData: w,
             } = (0, C.useEditModalContext)(),
             [R, A] = n.useState(
-              ((T = !(null === (a = S.current) || void 0 === a
+              ((T = !(null === (a = _.current) || void 0 === a
                 ? void 0
                 : null === (t = a.videoElement) || void 0 === t
                   ? void 0
@@ -922,7 +922,7 @@
           (0, f.default)(() => {
             var e;
             let t =
-              null === (e = S.current) || void 0 === e
+              null === (e = _.current) || void 0 === e
                 ? void 0
                 : e.videoElement;
             null != t && U !== t.currentTime && H(t.currentTime);
@@ -931,7 +931,7 @@
           n.useEffect(() => {
             var e;
             let t =
-                null === (e = S.current) || void 0 === e
+                null === (e = _.current) || void 0 === e
                   ? void 0
                   : e.videoElement,
               a = F.current,
@@ -952,9 +952,11 @@
                   t.removeEventListener("pause", i);
               }
             );
-          }, [S]);
+          }, [_]);
           let { ref: Y, width: W = 0, height: X = 0 } = (0, c.default)(),
-            q = (0, u.default)([m.default], () => m.default.windowSize());
+            q = (0, u.useStateFromStores)([m.default], () =>
+              m.default.windowSize()
+            );
           n.useMemo(() => {
             let e = Y.current;
             null != e && G(e.getBoundingClientRect());
@@ -966,15 +968,15 @@
                 var t;
                 let a = (0, s.clamp)(e, 0, b.end - g.MIN_CLIP_DURATION_SECONDS);
                 w({ ...b, start: a }),
-                  null === (t = S.current) || void 0 === t || t.seek(a);
+                  null === (t = _.current) || void 0 === t || t.seek(a);
               },
-              [b, w, S]
+              [b, w, _]
             ),
             ee = n.useCallback(
               e => {
                 var t, a;
                 let l =
-                  null === (t = S.current) || void 0 === t
+                  null === (t = _.current) || void 0 === t
                     ? void 0
                     : t.videoElement;
                 if (null == l) return;
@@ -984,9 +986,9 @@
                   l.duration
                 );
                 w({ ...b, end: n }),
-                  null === (a = S.current) || void 0 === a || a.seek(n);
+                  null === (a = _.current) || void 0 === a || a.seek(n);
               },
-              [b, w, S]
+              [b, w, _]
             ),
             et = n.useCallback(
               (e, t) => {
@@ -1002,7 +1004,7 @@
                     t &&
                     ((u =
                       i <= b.start ? "start" : i >= b.end ? "end" : "playhead"),
-                    null === (a = S.current) || void 0 === a || a.pause(),
+                    null === (a = _.current) || void 0 === a || a.pause(),
                     D(u),
                     Z(R)),
                   "start" === u)
@@ -1011,16 +1013,16 @@
                 else if ("end" === u) ee(i);
                 else if ("playhead" === u) {
                   let e = (0, s.clamp)(i, b.start, b.end);
-                  null === (l = S.current) || void 0 === l || l.seek(e);
+                  null === (l = _.current) || void 0 === l || l.seek(e);
                 }
               },
-              [P, V, k, b.start, b.end, S, R, $, ee]
+              [P, V, k, b.start, b.end, _, R, $, ee]
             ),
             ea = n.useCallback(
               e => {
                 var t;
                 let a =
-                  null === (t = S.current) || void 0 === t
+                  null === (t = _.current) || void 0 === t
                     ? void 0
                     : t.videoElement;
                 if (null == a) return;
@@ -1035,13 +1037,13 @@
                 }
                 n && (e.stopPropagation(), e.preventDefault());
               },
-              [S, $, b.start]
+              [_, $, b.start]
             ),
             el = n.useCallback(
               e => {
                 var t;
                 let a =
-                  null === (t = S.current) || void 0 === t
+                  null === (t = _.current) || void 0 === t
                     ? void 0
                     : t.videoElement;
                 if (null == a) return;
@@ -1056,7 +1058,7 @@
                 }
                 n && (e.stopPropagation(), e.preventDefault());
               },
-              [S, ee, b.end]
+              [_, ee, b.end]
             ),
             en = n.useCallback(
               e => {
@@ -1073,10 +1075,10 @@
             ei = n.useCallback(() => {
               if (z) {
                 var e;
-                null === (e = S.current) || void 0 === e || e.play();
+                null === (e = _.current) || void 0 === e || e.play();
               }
               Z(!1), D(null);
-            }, [S, z]);
+            }, [_, z]);
           n.useEffect(
             () => (
               document.addEventListener("mousemove", er),
@@ -1131,7 +1133,7 @@
             }, [W, X, Y, P, J]);
           let es = U - b.start,
             eu =
-              null === (r = S.current) || void 0 === r
+              null === (r = _.current) || void 0 === r
                 ? void 0
                 : r.videoElement;
           return (0, l.jsx)("div", {
@@ -1146,10 +1148,10 @@
                     onClick: () => {
                       var e, t;
                       return R
-                        ? null === (e = S.current) || void 0 === e
+                        ? null === (e = _.current) || void 0 === e
                           ? void 0
                           : e.pause()
-                        : null === (t = S.current) || void 0 === t
+                        : null === (t = _.current) || void 0 === t
                           ? void 0
                           : t.play();
                     },
@@ -1203,7 +1205,7 @@
                               (0 === b.end || b.end === e.duration))
                           ) {
                             var t;
-                            null === (t = S.current) ||
+                            null === (t = _.current) ||
                               void 0 === t ||
                               t.seek(e.duration / 2),
                               H(e.duration / 2);
@@ -1213,7 +1215,7 @@
                       },
                       className: N.timelineVideo,
                       ref: y,
-                      src: _,
+                      src: S,
                       muted: !0,
                     }),
                     (0, l.jsxs)("div", {
@@ -1281,7 +1283,7 @@
                             "aria-valuenow": b.end,
                             "aria-valuetext": M(b.end),
                             "aria-valuemax":
-                              null === (j = S.current) || void 0 === j
+                              null === (j = _.current) || void 0 === j
                                 ? void 0
                                 : null === (L = j.videoElement) || void 0 === L
                                   ? void 0
@@ -1614,4 +1616,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f6dc31990e692991d688.js.map
+//# sourceMappingURL=8d9b2e37087edc922984.js.map

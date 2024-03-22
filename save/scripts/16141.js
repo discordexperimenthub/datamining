@@ -6385,7 +6385,9 @@
         d = n("814711"),
         c = n("782340");
       function f() {
-        let e = (0, l.default)([i.default], () => i.default.getDrawMode()),
+        let e = (0, l.useStateFromStores)([i.default], () =>
+            i.default.getDrawMode()
+          ),
           t = (null == e ? void 0 : e.type) === r.DrawableType.LINE,
           n = () => {
             t
@@ -6429,7 +6431,9 @@
         h = n("782340");
       function m(e) {
         let { channel: t } = e,
-          n = (0, l.default)([i.default], () => i.default.getDrawMode()),
+          n = (0, l.useStateFromStores)([i.default], () =>
+            i.default.getDrawMode()
+          ),
           m = (null == n ? void 0 : n.type) === r.DrawableType.EMOJI_HOSE,
           p = (e, t) => {
             null != e
@@ -6650,7 +6654,7 @@
         let { channel: t, themeable: S } = e,
           C = t.getGuildId(),
           { mute: _, suppress: I } = (0, c.default)(t),
-          T = (0, l.default)([m.default], () => m.default.isDeaf()),
+          T = (0, l.useStateFromStores)([m.default], () => m.default.isDeaf()),
           v = _ || I || T,
           x = (0, u.useSoundBoardDismissContentTypes)({
             isSoundboardButtonDisabled: v,
@@ -6723,7 +6727,7 @@
         o = n("814711"),
         d = n("782340");
       function c() {
-        let e = (0, l.default)(
+        let e = (0, l.useStateFromStores)(
           [i.default],
           () => !i.default.visibleOverlayCanvas
         );
@@ -9921,7 +9925,10 @@
         c = n("388491"),
         f = n("49111"),
         h = e => {
-          let t = (0, i.default)([o.default], () => o.default.saturation),
+          let t = (0, i.useStateFromStores)(
+              [o.default],
+              () => o.default.saturation
+            ),
             [n, l] = (0, d.useAvatarColors)(
               e,
               r.tokens.colors.BACKGROUND_FLOATING.resolve({
@@ -12779,7 +12786,7 @@
             handleCreateOrAddGuild: l,
             isLoading: s,
           } = e,
-          o = (0, r.default)([c.default], () =>
+          o = (0, r.useStateFromStores)([c.default], () =>
             c.default.can(E.Permissions.ADMINISTRATOR, t)
           ),
           d = [];
@@ -12861,7 +12868,7 @@
             allEntriesCount: x,
             isLoading: N,
           } = e,
-          A = (0, r.default)([d.default], () =>
+          A = (0, r.useStateFromStores)([d.default], () =>
             d.default.getGuild(t.getGuildId())
           );
         return null != A && A.hasFeature(E.GuildFeatures.SHARD)
@@ -15399,9 +15406,11 @@
         v = n("865331");
       function x(e) {
         let { member: t } = e,
-          n = (0, i.default)([p.default], () => p.default.getGuild(t.guildId), [
-            t.guildId,
-          ]),
+          n = (0, i.useStateFromStores)(
+            [p.default],
+            () => p.default.getGuild(t.guildId),
+            [t.guildId]
+          ),
           l = (0, h.useUserAccountVerified)(t.userId, t.guildId),
           x = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId),
           N = (0, h.useUserAccountAgeDate)(t.userId),
@@ -15567,8 +15576,12 @@
         S = n("865331");
       function C(e) {
         let { member: t } = e,
-          n = (0, r.default)([f.default], () => f.default.getGuild(t.guildId)),
-          s = (0, r.default)([f.default], () => f.default.getRoles(t.guildId)),
+          n = (0, r.useStateFromStores)([f.default], () =>
+            f.default.getGuild(t.guildId)
+          ),
+          s = (0, r.useStateFromStores)([f.default], () =>
+            f.default.getRoles(t.guildId)
+          ),
           C = l.useMemo(
             () =>
               null == n
@@ -15596,14 +15609,14 @@
                       }),
             [t.roles, t.highestRoleId, n, s]
           ),
-          _ = (0, r.default)(
+          _ = (0, r.useStateFromStores)(
             [o.default],
             () => o.default.getEnhancedMember(t.guildId, t.userId),
             [t.guildId, t.userId]
           ),
           I = (0, d.useHighestRole)(_),
           T = (0, d.useContextMenuModerateRoles)(t),
-          v = (0, r.default)(
+          v = (0, r.useStateFromStores)(
             [h.default],
             () => h.default.can(E.Permissions.MANAGE_ROLES, n),
             [n]
@@ -15716,7 +15729,7 @@
           p = f.getStringForBanReason(t),
           S = f.getSimpleAuditLogChangeDetails(t),
           C = (0, h.useAuditLogDate)(t.id),
-          I = (0, o.default)(
+          I = (0, o.useStateFromStores)(
             [g.default],
             () =>
               null != t.userId
@@ -15865,10 +15878,12 @@
       }
       function M(e) {
         let { member: t } = e,
-          n = (0, o.default)([S.default], () => S.default.getGuild(t.guildId), [
-            t.guildId,
-          ]),
-          s = (0, o.default)(
+          n = (0, o.useStateFromStores)(
+            [S.default],
+            () => S.default.getGuild(t.guildId),
+            [t.guildId]
+          ),
+          s = (0, o.useStateFromStores)(
             [p.default],
             () => {
               let e = p.default.logs;
@@ -16015,7 +16030,9 @@
               ? n
               : (0, f.getPermissionName)(p),
           I = E.ELEVATED_PERMISSIONS.has(p),
-          T = (0, r.default)([h.default], () => h.default.getRoles(u.id));
+          T = (0, r.useStateFromStores)([h.default], () =>
+            h.default.getRoles(u.id)
+          );
         return (0, a.jsx)(d.Tooltip, {
           "aria-label":
             C.default.Messages
@@ -16073,9 +16090,11 @@
       }
       var T = l.memo(function (e) {
         let { member: t, onNavigate: n } = e,
-          s = (0, r.default)([h.default], () => h.default.getGuild(t.guildId), [
-            t.guildId,
-          ]),
+          s = (0, r.useStateFromStores)(
+            [h.default],
+            () => h.default.getGuild(t.guildId),
+            [t.guildId]
+          ),
           o = (0, E.useUserPermissionsAndRoles)(
             t.userId,
             t.guildId,
@@ -16242,11 +16261,16 @@
             className: d,
             onNavigate: S,
           } = e,
-          I = (0, i.default)([o.default], () => o.default.getUser(t), [t]),
-          T = (0, i.default)([u.default], () => u.default.getMember(n, t), [
-            n,
-            t,
-          ]),
+          I = (0, i.useStateFromStores)(
+            [o.default],
+            () => o.default.getUser(t),
+            [t]
+          ),
+          T = (0, i.useStateFromStores)(
+            [u.default],
+            () => u.default.getMember(n, t),
+            [n, t]
+          ),
           v = (0, c.useProfileThemedPanelBackground)(t, n);
         return null == I || null == T
           ? null
@@ -16295,7 +16319,7 @@
         let { member: t } = e,
           n = t.userId,
           E = t.guildId,
-          g = (0, s.default)(
+          g = (0, s.useStateFromStores)(
             [o.default],
             () => o.default.getEnhancedMember(E, n),
             [n, E]
@@ -16554,7 +16578,7 @@
             onNavigate: R,
           } = e,
           j = l.useRef(null),
-          L = (0, u.default)(
+          L = (0, u.useStateFromStores)(
             [p.default],
             () => p.default.getGuildSidebarState(N),
             [N]
@@ -16571,11 +16595,16 @@
             addtionalQuery: O,
             shouldDispatch: !0,
           }),
-          b = (0, u.default)([g.default], () => g.default.getUser(s), [s]),
-          U = (0, u.default)([E.default], () => E.default.getMember(N, s), [
-            N,
-            s,
-          ]),
+          b = (0, u.useStateFromStores)(
+            [g.default],
+            () => g.default.getUser(s),
+            [s]
+          ),
+          U = (0, u.useStateFromStores)(
+            [E.default],
+            () => E.default.getMember(N, s),
+            [N, s]
+          ),
           w = (0, I.useProfileThemedPanelBackground)(s, N);
         l.useLayoutEffect(() => {
           let e = null == L ? void 0 : L.details.scrollOffset;
@@ -16617,7 +16646,7 @@
             null !== (n = null == O ? void 0 : O.offset) && void 0 !== n
               ? n
               : 0,
-          B = (0, u.default)(
+          B = (0, u.useStateFromStores)(
             [c.default],
             () => {
               if (null == D.result) return [];
@@ -16758,7 +16787,9 @@
             specMap: I,
             categoryTitle: T,
           } = e,
-          v = (0, o.default)([S.default], () => S.default.getRoles(_.id)),
+          v = (0, o.useStateFromStores)([S.default], () =>
+            S.default.getRoles(_.id)
+          ),
           x = A.Permissions[u],
           R =
             null !==
@@ -16779,7 +16810,7 @@
           y = N.ELEVATED_PERMISSIONS.has(x),
           O = N.MOD_PERMISSIONS.includes(u),
           P = g.length,
-          D = (0, o.default)(
+          D = (0, o.useStateFromStores)(
             [C.default],
             () => C.default.can(A.Permissions.MANAGE_ROLES, _),
             [_]
@@ -16942,12 +16973,21 @@
             className: r,
             onNavigate: d,
           } = e,
-          f = (0, o.default)([_.default], () => _.default.getUser(t), [t]),
-          h = (0, o.default)([S.default], () => S.default.getGuild(n), [n]),
-          m = (0, o.default)([g.default], () => g.default.getMember(n, t), [
-            n,
-            t,
-          ]),
+          f = (0, o.useStateFromStores)(
+            [_.default],
+            () => _.default.getUser(t),
+            [t]
+          ),
+          h = (0, o.useStateFromStores)(
+            [S.default],
+            () => S.default.getGuild(n),
+            [n]
+          ),
+          m = (0, o.useStateFromStores)(
+            [g.default],
+            () => g.default.getMember(n, t),
+            [n, t]
+          ),
           p = (0, x.useProfileThemedPanelBackground)(t, n),
           C = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS),
           O = Object.keys(C).length,
@@ -17156,8 +17196,12 @@
         return e === t;
       }
       function S(e, t, n) {
-        let d = (0, l.default)([i.default], () => i.default.getGuild(t), [t]);
-        return (0, l.default)(
+        let d = (0, l.useStateFromStores)(
+          [i.default],
+          () => i.default.getGuild(t),
+          [t]
+        );
+        return (0, l.useStateFromStores)(
           [s.default, r.default, i.default],
           () => {
             let l = {},
@@ -17231,7 +17275,7 @@
       function D(e) {
         let { user: t, backgroundColor: n, guildId: l, onClose: s } = e,
           u = t.id,
-          o = (0, i.default)(
+          o = (0, i.useStateFromStores)(
             [C.default, S.default, m.default],
             () =>
               u === m.default.getId()
@@ -17305,7 +17349,9 @@
       }
       function U(e) {
         let { backgroundColor: t, user: l, member: s, guildId: m } = e,
-          p = (0, i.default)([E.default], () => E.default.getGuild(m)),
+          p = (0, i.useStateFromStores)([E.default], () =>
+            E.default.getGuild(m)
+          ),
           {
             canKickUser: S,
             canBanUser: C,
@@ -17456,11 +17502,16 @@
       }
       function w(e) {
         let { userId: t, guildId: n, onClose: l } = e,
-          s = (0, i.default)([_.default], () => _.default.getUser(t), [t]),
-          u = (0, i.default)([p.default], () => p.default.getMember(n, t), [
-            n,
-            t,
-          ]),
+          s = (0, i.useStateFromStores)(
+            [_.default],
+            () => _.default.getUser(t),
+            [t]
+          ),
+          u = (0, i.useStateFromStores)(
+            [p.default],
+            () => p.default.getMember(n, t),
+            [n, t]
+          ),
           o = (0, L.useProfileThemedPanelBackground)(
             t,
             n,
@@ -17528,12 +17579,21 @@
       var m = n("657944");
       function p(e, t) {
         var n, a;
-        let l = (0, u.default)([c.default], () => c.default.getUser(e), [e]),
-          s = (0, u.default)([o.default], () => o.default.getMember(t, e), [
-            t,
-            e,
-          ]),
-          i = (0, u.default)([d.default], () => d.default.getGuild(t), [t]),
+        let l = (0, u.useStateFromStores)(
+            [c.default],
+            () => c.default.getUser(e),
+            [e]
+          ),
+          s = (0, u.useStateFromStores)(
+            [o.default],
+            () => o.default.getMember(t, e),
+            [t, e]
+          ),
+          i = (0, u.useStateFromStores)(
+            [d.default],
+            () => d.default.getGuild(t),
+            [t]
+          ),
           r = null == i ? void 0 : i.hasVerificationGate();
         return r
           ? null == l || null == s || null == i
@@ -17552,11 +17612,16 @@
       }
       function E(e, t) {
         var n;
-        let a = (0, u.default)([c.default], () => c.default.getUser(e), [e]),
-          l = (0, u.default)([o.default], () => o.default.getMember(t, e), [
-            t,
-            e,
-          ]);
+        let a = (0, u.useStateFromStores)(
+            [c.default],
+            () => c.default.getUser(e),
+            [e]
+          ),
+          l = (0, u.useStateFromStores)(
+            [o.default],
+            () => o.default.getMember(t, e),
+            [t, e]
+          );
         if (null == a || null == l) return !1;
         let s = (0, f.hasFlag)(
             null !== (n = l.flags) && void 0 !== n ? n : 0,
@@ -17581,10 +17646,11 @@
         }, [e]);
       }
       function C(e, t) {
-        let n = (0, u.default)([o.default], () => o.default.getMember(t, e), [
-            t,
-            e,
-          ]),
+        let n = (0, u.useStateFromStores)(
+            [o.default],
+            () => o.default.getMember(t, e),
+            [t, e]
+          ),
           a = null == n ? void 0 : n.joinedAt;
         return s.useMemo(
           () => (null == a ? "" : r(new Date(a)).format("MMM DD, YYYY")),
@@ -20558,7 +20624,7 @@
         return (
           !(function () {
             let e = (function () {
-                let e = (0, s.default)([d.default], () =>
+                let e = (0, s.useStateFromStores)([d.default], () =>
                   d.default.isConnected()
                 );
                 return e ? [] : [];
@@ -20652,16 +20718,18 @@
               guildId: N.guild_id,
               location: "HangStatusPopout",
             }),
-            R = (0, r.default)([c.default], () => c.default.getId()),
-            j = (0, r.default)([p.default], () => p.default.getUser(s)),
-            L = (0, r.default)(
+            R = (0, r.useStateFromStores)([c.default], () => c.default.getId()),
+            j = (0, r.useStateFromStores)([p.default], () =>
+              p.default.getUser(s)
+            ),
+            L = (0, r.useStateFromStores)(
               [m.default],
               () => m.default.getChannelId() === N.id
             ),
-            y = (0, r.default)([h.default], () =>
+            y = (0, r.useStateFromStores)([h.default], () =>
               h.default.can(T.Permissions.CONNECT, N)
             ),
-            O = (0, r.default)([f.default], () =>
+            O = (0, r.useStateFromStores)([f.default], () =>
               null != N.guild_id && null != j
                 ? f.default.getMember(N.guild_id, s)
                 : null
@@ -23296,7 +23364,7 @@
       function u(e) {
         let { isShaking: t, shakeLocation: n, children: u, className: o } = e,
           d = (0, r.default)(n),
-          c = (0, l.default)([i.default], () =>
+          c = (0, l.useStateFromStores)([i.default], () =>
             i.default.isEnabled({ shakeLocation: n })
           );
         return c
@@ -26628,7 +26696,9 @@
             canvas: m,
           } = e,
           p = a.useRef(!1),
-          E = (0, l.default)([s.default], () => s.default.getDrawMode()),
+          E = (0, l.useStateFromStores)([s.default], () =>
+            s.default.getDrawMode()
+          ),
           g = (0, u.default)((0, o.default)(t.id, n, c), f),
           S = (0, u.default)((0, d.default)(t.id, n, c), f),
           C = a.useCallback(
@@ -26888,7 +26958,9 @@
       function m(e) {
         let { focused: t, channelId: n, streamerId: s, stream: d } = e,
           m = l.useRef(null),
-          p = (0, r.default)([o.default], () => o.default.getCurrentUser());
+          p = (0, r.useStateFromStores)([o.default], () =>
+            o.default.getCurrentUser()
+          );
         i(null != p, "user cannot be null"), (0, f.default)(m, p, s, n);
         let {
           handleClick: E,
@@ -44273,4 +44345,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8d0fc710f71f80bb74af.js.map
+//# sourceMappingURL=bd93560e92a509518ea3.js.map

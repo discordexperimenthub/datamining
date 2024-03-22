@@ -273,7 +273,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return S;
+            return M;
           },
         }),
         n("222007");
@@ -299,9 +299,9 @@
         k = n("782340"),
         E = n("76050"),
         R = n("79571");
-      let N = d.default.reactParserFor(v.default.getDefaultRules(E)),
-        A = {};
-      class M extends l.PureComponent {
+      let S = d.default.reactParserFor(v.default.getDefaultRules(E)),
+        N = {};
+      class A extends l.PureComponent {
         track(e, t, n) {
           this.props.track(e, t, n);
         }
@@ -447,9 +447,9 @@
                   "aria-label": k.default.Messages.CHANGELOG_CONTENT_LABEL,
                   children: [
                     this.renderVideo(),
-                    N(e.body, !1, {
+                    S(e.body, !1, {
                       changeLog: this,
-                      interpolations: A,
+                      interpolations: N,
                       onLinkClick: this.trackLinkClick,
                     }),
                   ],
@@ -506,7 +506,7 @@
             });
         }
       }
-      var S = M;
+      var M = A;
     },
     491589: function (e, t, n) {
       "use strict";
@@ -583,12 +583,18 @@
               };
       }
       function u() {
-        let e = (0, l.default)([r.default], () => r.default.locale),
-          t = (0, l.default)([o.default], () => o.default.latestChangelogId()),
-          n = (0, l.default)([o.default], () => o.default.getConfig()),
+        let e = (0, l.useStateFromStores)([r.default], () => r.default.locale),
+          t = (0, l.useStateFromStores)([o.default], () =>
+            o.default.latestChangelogId()
+          ),
+          n = (0, l.useStateFromStores)([o.default], () =>
+            o.default.getConfig()
+          ),
           a = null != n && 0 === Object.keys(n).length,
           s = null != n && Object.keys(n).length > 0 && null == t,
-          i = (0, l.default)([o.default], () => o.default.overrideId()),
+          i = (0, l.useStateFromStores)([o.default], () =>
+            o.default.overrideId()
+          ),
           { changelog: u, loaded: d } = c(t, e),
           { changelog: h, loaded: p } = c(i, e);
         return null == i || (null == h && p)
@@ -1140,4 +1146,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0e5ef0468a5bed767363.js.map
+//# sourceMappingURL=9ab4434b7da3aed841a6.js.map

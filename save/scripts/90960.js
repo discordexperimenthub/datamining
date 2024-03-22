@@ -1515,7 +1515,11 @@
               ? r
               : void 0
           ),
-          b = (0, n.default)([o.default], () => o.default.getChannel(y), [y]),
+          b = (0, n.useStateFromStores)(
+            [o.default],
+            () => o.default.getChannel(y),
+            [y]
+          ),
           V = (0, x.useSelectGuildOptions)(),
           R = (0, C.useSelectVoiceChannelOptions)(T),
           O = a.useCallback(() => {
@@ -2875,4 +2879,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4bf35fd3ae5436a64ea3.js.map
+//# sourceMappingURL=4e89d01cb265a5fa4aa3.js.map

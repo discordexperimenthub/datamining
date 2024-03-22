@@ -195,13 +195,13 @@
             canBeNew: _,
           } = e,
           O = (0, d.isThemeDark)((0, f.default)()),
-          [T, M] = n.useState(!1),
-          S = T && !j,
+          [T, S] = n.useState(!1),
+          M = T && !j,
           A = n.useRef(null),
           { reducedMotion: I } = n.useContext(
             c.AccessibilityPreferencesContext
           ),
-          E = (0, s.default)([h.default], () => {
+          E = (0, s.useStateFromStores)([h.default], () => {
             var e, t, a, n;
             return (
               (null === (e = l.emoji) || void 0 === e ? void 0 : e.id) !=
@@ -237,7 +237,7 @@
             config: { duration: 300 },
             delay: 500,
           }),
-          B = (0, i.useTransition)(S, {
+          B = (0, i.useTransition)(M, {
             from: {
               transform: I.enabled ? "translateX(0)" : "translateX(8px)",
               opacity: 0,
@@ -249,26 +249,26 @@
           }),
           [P, U] = n.useState(!1);
         n.useEffect(() => {
-          if (S)
+          if (M)
             return (
               (A.current = setTimeout(() => {
-                M(!1), (A.current = null);
+                S(!1), (A.current = null);
               }, 3e3)),
               () => {
                 null != A.current && clearTimeout(A.current);
               }
             );
-        }, [S]);
+        }, [M]);
         let H = r(C.optionButtonWrapper, { [C.selected]: o, [C.pressed]: P }),
-          G = L ? { borderColor: w.color } : {};
+          F = L ? { borderColor: w.color } : {};
         return (0, a.jsx)(a.Fragment, {
           children: (0, a.jsx)(i.animated.div, {
-            style: G,
+            style: F,
             className: H,
             children: (0, a.jsxs)(c.Clickable, {
               className: r(C.optionButton),
               onClick: () => {
-                M(!o), N(!o);
+                S(!o), N(!o);
               },
               onMouseDown: () => U(!0),
               onMouseUp: () => U(!1),
@@ -600,4 +600,4 @@
     },
   },
 ]);
-//# sourceMappingURL=395e13752ff610552755.js.map
+//# sourceMappingURL=c85d29896e6f0b4c3d9c.js.map

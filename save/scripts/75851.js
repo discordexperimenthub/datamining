@@ -143,26 +143,26 @@
         E = [],
         R = new Set(),
         d = !1,
-        c = new Set(),
         o = new Set(),
+        c = new Set(),
         I = {},
         L = 0,
         O = null,
         T = () => !0;
-      function A(e) {
-        c.add(e);
-      }
       function S(e) {
+        o.add(e);
+      }
+      function A(e) {
         let { messages: t } = e;
         t.forEach(e => F(e));
       }
       function F(e) {
         let t = e.type === l.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
         if (null == t) return !1;
-        if (!o.has(t) && !c.has(t)) {
+        if (!c.has(t) && !o.has(t)) {
           var r;
           (r = t),
-            c.add(r),
+            o.add(r),
             n.default.wait(() =>
               (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
             );
@@ -201,7 +201,7 @@
           return I[e];
         }
         isResolving(e) {
-          return c.has(e);
+          return o.has(e);
         }
       }
       h.displayName = "ReferralTrialStore";
@@ -211,11 +211,11 @@
           if (
             (!d && (0, u.fetchReferralsRemaining)(),
             !R.has(r) && (0, u.checkRecipientEligibility)(r),
-            !c.has(t))
+            !o.has(t))
           ) {
             var l;
             (l = t),
-              c.add(l),
+              o.add(l),
               n.default.wait(() =>
                 (0, u.resolveReferralTrialOffer)(t).catch(f.NOOP_NULL)
               );
@@ -253,26 +253,26 @@
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
-          null != t && (c.delete(t.id), o.add(t.id), (I[t.id] = t));
+          null != t && (o.delete(t.id), c.add(t.id), (I[t.id] = t));
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
           let { userTrialOfferId: t } = e;
-          c.delete(t), o.add(t);
+          o.delete(t), c.add(t);
         },
-        LOAD_MESSAGES_SUCCESS: S,
+        LOAD_MESSAGES_SUCCESS: A,
         MESSAGE_CREATE: function (e) {
           let { message: t } = e;
           F(t);
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: S,
+        LOAD_MESSAGES_AROUND_SUCCESS: A,
         LOGOUT: function () {
           (a = null),
             (_ = {}),
             (E = []),
             (R = new Set()),
             (d = !1),
-            (c = new Set()),
             (o = new Set()),
+            (c = new Set()),
             (I = {}),
             (L = 0),
             (O = null);
@@ -305,7 +305,7 @@
             ])
           ),
           R = (0, s.useTrialOffer)(u.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
-          d = (0, l.default)([n.default], () =>
+          d = (0, l.useStateFromStores)([n.default], () =>
             void 0 === e ? null : n.default.getRelevantUserTrialOffer(e)
           );
         return null !==
@@ -378,7 +378,7 @@
       r.r(t),
         r.d(t, {
           default: function () {
-            return o;
+            return c;
           },
         }),
         r("222007");
@@ -408,7 +408,7 @@
           ((_.userTrialOffers = {}), (_.userDiscountOffers = {}), !0)
         );
       }
-      class c extends l.default.PersistedStore {
+      class o extends l.default.PersistedStore {
         initialize(e) {
           (_ = null != e ? e : a),
             this.waitFor(n.default),
@@ -485,15 +485,15 @@
           E();
         }
       }
-      (c.displayName = "UserOfferStore"),
-        (c.persistKey = "UserOfferStore"),
-        (c.migrations = [
+      (o.displayName = "UserOfferStore"),
+        (o.persistKey = "UserOfferStore"),
+        (o.migrations = [
           e => {
             let t = null == e ? void 0 : e.userDiscounts;
             if (null != t) return { ...e, userDiscountOffers: t };
           },
         ]);
-      var o = new c(i.default, {
+      var c = new o(i.default, {
         BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function (e) {
           let { userTrialOffer: t } = e;
           null != t ? (_.userTrialOffers[t.trial_id] = t) : E(),
@@ -540,4 +540,4 @@
     },
   },
 ]);
-//# sourceMappingURL=75851.5e7ac03e1cfa45c7753b.js.map
+//# sourceMappingURL=75851.67532592012d4f96f194.js.map

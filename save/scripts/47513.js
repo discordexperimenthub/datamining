@@ -26464,8 +26464,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("277756", ", Version Hash: ")
-          .concat("dd0eb83dd3b5997e218514481cdb9218fcb64367")
+          .concat("277770", ", Version Hash: ")
+          .concat("ebc6d6da785c387126b27081fb30501c3b7e96c2")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29590,12 +29590,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "277756"), "277756"));
+        let _ = parseInt(((e = "277770"), "277770"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "277756"
+                "277770"
               )
             ),
             (_ = 0)),
@@ -43231,7 +43231,7 @@
             return t.default;
           },
           useStateFromStores: function () {
-            return a.default;
+            return a.useStateFromStores;
           },
           useStateFromStoresObject: function () {
             return a.useStateFromStoresObject;
@@ -43260,7 +43260,7 @@
           statesWillNeverBeEqual: function () {
             return a;
           },
-          default: function () {
+          useStateFromStores: function () {
             return i;
           },
           useStateFromStoresObject: function () {
@@ -52829,4 +52829,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.86be02a7bf433913ac68.js.map
+//# sourceMappingURL=47513.a8393d082b77c8c98728.js.map

@@ -185,22 +185,22 @@
             m = A(3, 3, 1.25 * (((o >> 3) & 63) / 63)),
             P = A(3, 3, 1.25 * (((o >> 9) & 63) / 63)),
             T = f && A(5, 5, p),
-            L = r(e),
-            M = l(L > 1 ? 32 : 32 * L),
-            S = l(L > 1 ? 32 / L : 32),
-            O = new Uint8Array(M * S * 4),
+            S = r(e),
+            L = l(S > 1 ? 32 : 32 * S),
+            M = l(S > 1 ? 32 / S : 32),
+            O = new Uint8Array(L * M * 4),
             v = [],
             U = [];
-          for (let e = 0, r = 0; e < S; e++)
-            for (let l = 0; l < M; l++, r += 4) {
+          for (let e = 0, r = 0; e < M; e++)
+            for (let l = 0; l < L; l++, r += 4) {
               let a = u,
                 o = c,
                 E = d,
                 p = I;
               for (let e = 0, n = s(_, f ? 5 : 3); e < n; e++)
-                v[e] = i((t / M) * (l + 0.5) * e);
+                v[e] = i((t / L) * (l + 0.5) * e);
               for (let n = 0, r = s(C, f ? 5 : 3); n < r; n++)
-                U[n] = i((t / S) * (e + 0.5) * n);
+                U[n] = i((t / M) * (e + 0.5) * n);
               for (let e = 0, t = 0; e < C; e++)
                 for (
                   let n = e ? 0 : 1, r = 2 * U[e];
@@ -225,7 +225,7 @@
                 (O[r + 2] = s(0, 255 * n(1, R))),
                 (O[r + 3] = s(0, 255 * n(1, p)));
             }
-          return { w: M, h: S, rgba: O };
+          return { w: L, h: M, rgba: O };
         })(e);
         return s(t.w, t.h, t.rgba);
       }
@@ -721,10 +721,10 @@
             return T;
           },
           VIDEO_BACKGROUND_ASPECT_RATIO: function () {
-            return L;
+            return S;
           },
           MAX_VIDEO_OVERLAY_HEIGHT: function () {
-            return M;
+            return L;
           },
           MessageTypes: function () {
             return l;
@@ -759,10 +759,10 @@
         m = o / R,
         P = o / h,
         T = o / A,
-        L =
+        S =
           a.BACKGROUND_REPLACEMENT_SIZE.width /
           a.BACKGROUND_REPLACEMENT_SIZE.height,
-        M = o / L;
+        L = o / S;
       ((s = l || (l = {}))[(s.CROP_GIF_START = 0)] = "CROP_GIF_START"),
         (s[(s.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
         (s[(s.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR");
@@ -963,13 +963,13 @@
                     : t.hideSlider) &&
             void 0 !== u &&
             u,
-          L =
+          S =
             null == P
               ? void 0
               : null === (n = P.options) || void 0 === n
                 ? void 0
                 : n.bodyClassName,
-          M =
+          L =
             void 0 !== C && C
               ? E.sliderBodyLarge
               : null == P
@@ -996,7 +996,7 @@
               : (0, r.jsxs)(r.Fragment, {
                   children: [
                     (0, r.jsx)(d.ModalContent, {
-                      className: l(E.body, L),
+                      className: l(E.body, S),
                       children: (0, r.jsx)(d.Slides, {
                         activeSlide: p,
                         centered: !1,
@@ -1007,7 +1007,7 @@
                             {
                               id: e.key,
                               children: (0, r.jsx)("form", {
-                                className: l(E.sliderBody, M),
+                                className: l(E.sliderBody, L),
                                 ref: e => h(e),
                                 onSubmit: e => e.preventDefault(),
                               }),
@@ -1069,9 +1069,9 @@
             analyticsSourceLocation: m,
             isGift: P = !1,
             giftMessage: T,
-            subscriptionTier: L,
-            trialId: M,
-            postSuccessGuild: S,
+            subscriptionTier: S,
+            trialId: L,
+            postSuccessGuild: M,
             openInvoiceId: O,
             applicationId: v,
             referralTrialOfferId: U,
@@ -1091,8 +1091,8 @@
               return (0, r.jsx)(e, {
                 ...i,
                 loadId: G,
-                subscriptionTier: L,
-                skuId: (0, f.castPremiumSubscriptionAsSkuId)(L),
+                subscriptionTier: S,
+                skuId: (0, f.castPremiumSubscriptionAsSkuId)(S),
                 isGift: P,
                 giftMessage: T,
                 giftRecipient: g,
@@ -1121,8 +1121,8 @@
                 analyticsObject: A,
                 analyticsLocation: N,
                 analyticsSourceLocation: m,
-                trialId: M,
-                postSuccessGuild: S,
+                trialId: L,
+                postSuccessGuild: M,
                 planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                 openInvoiceId: O,
                 applicationId: v,
@@ -1146,7 +1146,7 @@
                   source: m,
                   subscription_type: E.SubscriptionTypes.PREMIUM,
                   is_gift: P,
-                  eligible_for_trial: null != M,
+                  eligible_for_trial: null != L,
                   application_id: v,
                   location_stack: h,
                 }),
@@ -1472,10 +1472,12 @@
             { location: "443cca_2" },
             { autoTrackExposure: !1 }
           ),
-          i = (0, s.default)([f.default], () =>
+          i = (0, s.useStateFromStores)([f.default], () =>
             f.default.shouldFetchPremiumLikelihood()
           ),
-          l = (0, s.default)([o.default], () => o.default.getCurrentUser());
+          l = (0, s.useStateFromStores)([o.default], () =>
+            o.default.getCurrentUser()
+          );
         r.useEffect(() => {
           h(l, i, t, n);
         }, [l, i, t, n]);
@@ -2778,4 +2780,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a8cb0ef44696ededf6b1.js.map
+//# sourceMappingURL=2acd630d49d5f18d4a27.js.map

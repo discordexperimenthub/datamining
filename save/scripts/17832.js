@@ -124,10 +124,10 @@
             return N;
           },
           useGuildAutomodProfileQuarantineErrors: function () {
-            return L;
+            return S;
           },
           useOpenFixQuarantinedProfileModal: function () {
-            return p;
+            return L;
           },
         }),
         n("702976");
@@ -147,7 +147,7 @@
         h = n("397336"),
         T = n("782340");
       function N(e) {
-        return (0, r.default)(
+        return (0, r.useStateFromStores)(
           [u.default, o.default],
           () => {
             if (null == e) return !1;
@@ -159,7 +159,7 @@
           [e]
         );
       }
-      function L(e) {
+      function S(e) {
         return (0, r.useStateFromStoresObject)(
           [u.default, o.default, I.default, d.default],
           () => {
@@ -206,7 +206,7 @@
           [e]
         );
       }
-      function p(e) {
+      function L(e) {
         let {
             guildId: t,
             scrollPosition: n,
@@ -215,8 +215,12 @@
             openWithoutBackstack: I,
           } = e,
           { analyticsLocations: f } = (0, i.default)(),
-          E = (0, r.default)([d.default], () => d.default.getGuild(t), [t]),
-          T = (0, r.default)(
+          E = (0, r.useStateFromStores)(
+            [d.default],
+            () => d.default.getGuild(t),
+            [t]
+          ),
+          T = (0, r.useStateFromStores)(
             [c.default],
             () => null != E && c.default.can(_.Permissions.CHANGE_NICKNAME, E),
             [E]
@@ -263,43 +267,48 @@
         h = n("956967"),
         T = n("143460"),
         N = n("49111"),
-        L = n("657944"),
-        p = n("782340"),
-        S = n("261591");
+        S = n("657944"),
+        L = n("782340"),
+        p = n("261591");
       function g(e) {
         var t;
         let { onClose: n, transitionState: g, guildId: A } = e,
-          D = (0, a.default)([o.default], () => o.default.getId()),
-          R = (0, a.default)([d.default], () => d.default.getMember(A, D), [
-            A,
-            D,
-          ]),
-          M = (0, a.default)([c.default], () => c.default.getGuild(A), [A]),
+          D = (0, a.useStateFromStores)([o.default], () => o.default.getId()),
+          R = (0, a.useStateFromStores)(
+            [d.default],
+            () => d.default.getMember(A, D),
+            [A, D]
+          ),
+          M = (0, a.useStateFromStores)(
+            [c.default],
+            () => c.default.getGuild(A),
+            [A]
+          ),
           G =
             null !== (t = null == M ? void 0 : M.name) && void 0 !== t ? t : "",
-          U = (0, E.getAutomodQuarantinedGuildMemberFlags)(R),
-          { analyticsLocations: C } = (0, u.default)(
+          m = (0, E.getAutomodQuarantinedGuildMemberFlags)(R),
+          { analyticsLocations: U } = (0, u.default)(
             s.default.AUTOMOD_PROFILE_QUARANTINE_ALERT
           ),
-          [m, O] = (0, h.useOpenFixQuarantinedProfileModal)({
+          [C, O] = (0, h.useOpenFixQuarantinedProfileModal)({
             guildId: A,
-            analyticsLocations: C,
+            analyticsLocations: U,
             openWithoutBackstack: !0,
           }),
-          y = U.has(
-            L.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME
+          y = m.has(
+            S.GuildMemberFlags.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME
           )
-            ? p.default.Messages
+            ? L.default.Messages
                 .GUILD_AUTOMOD_USERNAME_INVALID_MODAL_DESCRIPTION_MOBILE
-            : p.default.Messages
+            : L.default.Messages
                 .GUILD_AUTOMOD_BIO_INVALID_MODAL_DESCRIPTION_MOBILE;
         !O &&
           (y =
-            p.default.Messages
+            L.default.Messages
               .GUILD_AUTOMOD_USERNAME_INVALID_NO_PERMS_MODAL_DESCRIPTION_MOBILE);
         let P = O
-          ? p.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA
-          : p.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+          ? L.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA
+          : L.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
         return (r.useEffect(() => {
           _.default.track(N.AnalyticEvents.OPEN_MODAL, {
             type: T.QUARANTINE_USER_ALERT_KEY,
@@ -322,19 +331,19 @@
                 (0, l.jsx)(i.ModalHeader, {
                   separator: !1,
                   children: (0, l.jsxs)("div", {
-                    className: S.headerContainer,
+                    className: p.headerContainer,
                     children: [
                       (0, l.jsxs)("div", {
-                        className: S.guildIconContainer,
+                        className: p.guildIconContainer,
                         children: [
                           (0, l.jsx)(I.default, {
                             guild: M,
                             size: I.default.Sizes.LARGER,
                           }),
                           (0, l.jsx)("div", {
-                            className: S.statusContainer,
+                            className: p.statusContainer,
                             children: (0, l.jsx)(f.default, {
-                              className: S.statusIcon,
+                              className: p.statusIcon,
                               width: 24,
                               height: 24,
                             }),
@@ -345,7 +354,7 @@
                         color: "header-primary",
                         variant: "heading-md/semibold",
                         children:
-                          p.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format(
+                          L.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format(
                             { guildName: G }
                           ),
                       }),
@@ -354,7 +363,7 @@
                 }),
                 (0, l.jsx)(i.ModalContent, {
                   children: (0, l.jsx)("div", {
-                    className: S.descriptionContainer,
+                    className: p.descriptionContainer,
                     children: (0, l.jsx)(i.Text, {
                       variant: "text-sm/normal",
                       color: "header-secondary",
@@ -366,7 +375,7 @@
                   children: [
                     (0, l.jsx)(i.Button, {
                       onClick: () => {
-                        m(), n();
+                        C(), n();
                       },
                       color: i.Button.Colors.BRAND_NEW,
                       look: i.Button.Looks.FILLED,
@@ -376,7 +385,7 @@
                       onClick: n,
                       color: i.Button.Colors.PRIMARY,
                       look: i.Button.Looks.LINK,
-                      children: p.default.Messages.CANCEL,
+                      children: L.default.Messages.CANCEL,
                     }),
                   ],
                 }),
@@ -425,13 +434,13 @@
             return N;
           },
           setPendingThemeColors: function () {
-            return L;
+            return S;
           },
           resetPendingMemberChanges: function () {
-            return p;
+            return L;
           },
           resetPendingProfileChanges: function () {
-            return S;
+            return p;
           },
           resetAllPending: function () {
             return g;
@@ -550,18 +559,18 @@
           nickname: e,
         });
       }
-      function L(e) {
+      function S(e) {
         r.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS",
           themeColors: e,
         });
       }
-      function p() {
+      function L() {
         r.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES",
         });
       }
-      function S() {
+      function p() {
         r.default.dispatch({
           type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES",
         });
@@ -663,7 +672,7 @@
           [T.LARGER]: 64,
           [T.XLARGE]: 100,
         },
-        L = {
+        S = {
           [T.SMOL]: [10, 10, 8, 6, 6, 4],
           [T.MINI]: [12, 12, 10, 10, 8, 6, 4],
           [T.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -673,7 +682,7 @@
           [T.LARGER]: [19, 19, 17, 17, 15, 13, 11],
           [T.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
         };
-      class p extends r.PureComponent {
+      class L extends r.PureComponent {
         renderAcronym() {
           let { guild: e, iconSrc: t } = this.props;
           return null != e.icon || null != t
@@ -705,13 +714,13 @@
               onClick: E,
               to: T,
               badgeStrokeColor: N,
-              animate: p,
-              tabIndex: S,
+              animate: L,
+              tabIndex: p,
               iconSrc: g,
               "aria-hidden": A,
               ...D
             } = this.props,
-            R = L[u],
+            R = S[u],
             M = null != E ? d.Clickable : "div";
           return (0, l.jsxs)(M, {
             className: i(h.icon, r, (0, _.getClass)(h, "iconSize", u), {
@@ -734,7 +743,7 @@
                   }
                 : o,
             onClick: null != T || null == E ? void 0 : E,
-            tabIndex: S,
+            tabIndex: p,
             ...D,
             children: [this.renderAcronym(), this.renderBadge()],
           });
@@ -773,7 +782,7 @@
             : this.renderTooltip();
         }
       }
-      let S = u.default.connectStores([I.default], e => {
+      let p = u.default.connectStores([I.default], e => {
         let { guild: t, animate: n, iconSrc: l, style: r, size: a } = e;
         return {
           style: {
@@ -783,10 +792,10 @@
             ),
           },
         };
-      })((0, c.backgroundImagePreloader)(e => (0, l.jsx)(p, { ...e })));
+      })((0, c.backgroundImagePreloader)(e => (0, l.jsx)(L, { ...e })));
       class g extends r.PureComponent {
         render() {
-          return (0, l.jsx)(S, { ...this.props });
+          return (0, l.jsx)(p, { ...this.props });
         }
       }
       (g.Sizes = T),
@@ -952,4 +961,4 @@
     },
   },
 ]);
-//# sourceMappingURL=13ac2ad45b5bcfb0475a.js.map
+//# sourceMappingURL=fc97cc2a2d134769f292.js.map

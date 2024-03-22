@@ -467,8 +467,14 @@
             !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
           n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          c = (0, s.default)([l.default], () => l.default.validate(e), [e]),
-          g = (0, s.default)([l.default], () => l.default.isRateLimited()),
+          c = (0, s.useStateFromStores)(
+            [l.default],
+            () => l.default.validate(e),
+            [e]
+          ),
+          g = (0, s.useStateFromStores)([l.default], () =>
+            l.default.isRateLimited()
+          ),
           m = (0, r.usePomeloDebounceDelay)(),
           E = a.useMemo(
             () =>
@@ -867,4 +873,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6ddb23569f05d99e1c55.js.map
+//# sourceMappingURL=a376587eec7e7a2c52d3.js.map

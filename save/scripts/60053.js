@@ -24676,7 +24676,9 @@
         l = n("42203"),
         a = n("337026");
       function s(e) {
-        let t = (0, i.default)([l.default], () => l.default.getChannel(e)),
+        let t = (0, i.useStateFromStores)([l.default], () =>
+            l.default.getChannel(e)
+          ),
           { enabled: n } = a.default.useExperiment({ location: "baec9c_1" });
         return (
           n &&
@@ -41419,18 +41421,22 @@
               ? arguments[2]
               : null,
           o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          u = (0, i.default)(
+          u = (0, i.useStateFromStores)(
             [a.default],
             () => (null != e ? a.default.getMember(e.id, t) : null),
             [e, t]
           ),
-          d = (0, i.default)([l.default], () => l.default.getChannel(n), [n]),
-          c = (0, i.default)(
+          d = (0, i.useStateFromStores)(
+            [l.default],
+            () => l.default.getChannel(n),
+            [n]
+          ),
+          c = (0, i.useStateFromStores)(
             [l.default],
             () => l.default.getChannel(null == d ? void 0 : d.parent_id),
             [d]
           ),
-          f = (0, i.default)([s.default], () =>
+          f = (0, i.useStateFromStores)([s.default], () =>
             null != e ? s.default.getRoles(e.id) : void 0
           );
         return null == e || null == f || null == u
@@ -42277,7 +42283,7 @@
         u = n("994428");
       function d(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          i = (0, a.default)(
+          i = (0, a.useStateFromStores)(
             [s.default],
             () => !!__OVERLAY__ && s.default.isInstanceUILocked()
           ),
@@ -46799,11 +46805,13 @@
               explicitContentFriendDm: c,
               explicitContentNonFriendDm: f,
             } = (0, u.useExplicitContentSettingOrDefault)(),
-            p = (0, i.default)([a.default], () =>
+            p = (0, i.useStateFromStores)([a.default], () =>
               a.default.getFriendIDs().includes(t)
             ),
-            m = (0, i.default)([s.default], () => s.default.getCurrentUser()),
-            h = (0, i.default)([l.default], () => {
+            m = (0, i.useStateFromStores)([s.default], () =>
+              s.default.getCurrentUser()
+            ),
+            h = (0, i.useStateFromStores)([l.default], () => {
               let t = l.default.getChannel(e);
               return null != t && t.isPrivate();
             });
@@ -46822,7 +46830,9 @@
           let e = (0, r.useIsEligibleForExplicitMediaRedaction)(),
             { explicitContentGuilds: t } = (0,
             u.useExplicitContentSettingOrDefault)(),
-            n = (0, i.default)([s.default], () => s.default.getCurrentUser());
+            n = (0, i.useStateFromStores)([s.default], () =>
+              s.default.getCurrentUser()
+            );
           return !!e && null != n && (0, o.getShouldObscureForSetting)(t);
         };
     },
@@ -51729,7 +51739,7 @@
       }
       function C(e) {
         let { channel: t, media: n } = e,
-          i = (0, s.default)(
+          i = (0, s.useStateFromStores)(
             [p.default],
             () => null != t && p.default.can(x.Permissions.MANAGE_MESSAGES, t)
           ),
@@ -55046,7 +55056,7 @@
         a = n("880731");
       function s(e) {
         let { children: t, confettiLocation: n } = e,
-          s = (0, l.default)([a.default], () =>
+          s = (0, l.useStateFromStores)([a.default], () =>
             a.default.isEnabled({ confettiLocation: n })
           );
         return s ? (0, i.jsx)(i.Fragment, { children: t }) : null;
@@ -55124,7 +55134,9 @@
         let { createMultipleConfettiAt: e } = i.useContext(
             a.ConfettiCannonContext
           ),
-          t = (0, l.default)([s.default], () => s.default.getState()),
+          t = (0, l.useStateFromStores)([s.default], () =>
+            s.default.getState()
+          ),
           n = i.useCallback(
             e => ({
               size: {
@@ -56669,7 +56681,9 @@
       }
       function O(e) {
         let { isSoundboardButtonDisabled: t = !1 } = e,
-          n = (0, i.default)([f.default], () => f.default.getCurrentUser()),
+          n = (0, i.useStateFromStores)([f.default], () =>
+            f.default.getCurrentUser()
+          ),
           a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
         if (
           !t &&
@@ -56999,8 +57013,12 @@
         return n.filter(e => null == t.get(e));
       }
       function u() {
-        let e = (0, l.default)([a.default], () => a.default.getGuilds()),
-          t = (0, l.default)([r.default], () => r.default.getSounds());
+        let e = (0, l.useStateFromStores)([a.default], () =>
+            a.default.getGuilds()
+          ),
+          t = (0, l.useStateFromStores)([r.default], () =>
+            r.default.getSounds()
+          );
         return (0, i.useMemo)(() => o(e, t), [e, t]);
       }
       function d() {
@@ -57028,15 +57046,17 @@
         d = n("843455");
       function c(e, t) {
         var n;
-        let c = (0, l.default)([r.default], () => r.default.getCurrentUser()),
+        let c = (0, l.useStateFromStores)([r.default], () =>
+            r.default.getCurrentUser()
+          ),
           f =
             null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n
               ? n
               : u.EMPTY_STRING_SNOWFLAKE_ID,
-          p = (0, l.default)([s.default], () =>
+          p = (0, l.useStateFromStores)([s.default], () =>
             s.default.getFlattenedGuildIds()
           ),
-          m = (0, l.default)(
+          m = (0, l.useStateFromStores)(
             [a.default],
             () =>
               null == e ||
@@ -57856,16 +57876,22 @@
       function v(e) {
         let { soundboardSound: t, closePicker: v } = e,
           N = (0, c.useExpressionPickerStore)(e => e.searchQuery),
-          A = (0, l.default)(
+          A = (0, l.useStateFromStores)(
             [C.default],
             () => null != t && C.default.isFavoriteSound(t.soundId)
           ),
-          O = (0, l.default)([p.default], () =>
+          O = (0, l.useStateFromStores)([p.default], () =>
             p.default.getGuild(null == t ? void 0 : t.guildId)
           ),
-          R = (0, l.default)([o.default], () => o.default.useReducedMotion, []),
-          M = (0, l.default)([h.default], () => h.default.isFocused()),
-          k = (0, l.default)([m.default], () =>
+          R = (0, l.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion,
+            []
+          ),
+          M = (0, l.useStateFromStores)([h.default], () =>
+            h.default.isFocused()
+          ),
+          k = (0, l.useStateFromStores)([m.default], () =>
             m.default.getKeybindForAction(
               T.GlobalKeybindActions.SOUNDBOARD_HOLD
             )
@@ -61437,7 +61463,9 @@
                   arguments.length > 0 && void 0 !== arguments[0]
                     ? arguments[0]
                     : [],
-                t = (0, s.default)([c.default], () => c.default.isConnected()),
+                t = (0, s.useStateFromStores)([c.default], () =>
+                  c.default.isConnected()
+                ),
                 n = i.useMemo(() => e.join(","), [e]);
               i.useEffect(() => {
                 t && e();
@@ -63078,8 +63106,10 @@
       function u(e) {
         var t;
         let n = l.LegacyUsernameDisabled.useSetting(),
-          u = (0, i.default)([s.default], () => s.default.getCurrentUser()),
-          d = (0, i.default)(
+          u = (0, i.useStateFromStores)([s.default], () =>
+            s.default.getCurrentUser()
+          ),
+          d = (0, i.useStateFromStores)(
             [a.default],
             () => a.default.hidePersonalInformation
           );
@@ -64451,7 +64481,7 @@
             guild: m,
             guildMember: h,
           } = e,
-          x = (0, l.default)([r.default], () => r.default.locale),
+          x = (0, l.useStateFromStores)([r.default], () => r.default.locale),
           E = null != m && null != h;
         return (0, i.jsxs)(i.Fragment, {
           children: [
@@ -66247,13 +66277,18 @@
           { analyticsLocations: b } = (0, p.default)(
             f.default.COLLECTIBLES_USER_POPOUT_UPSELL
           ),
-          j = (0, o.default)([c.default], () => c.default.useReducedMotion),
+          j = (0, o.useStateFromStores)(
+            [c.default],
+            () => c.default.useReducedMotion
+          ),
           { ref: U, height: D } = (0, d.default)(),
           w = l.useMemo(
             () => ({ top: "-".concat((null != D ? D : R) + 6, "px") }),
             [D]
           ),
-          F = (0, o.default)([S.default], () => S.default.getCurrentUser()),
+          F = (0, o.useStateFromStores)([S.default], () =>
+            S.default.getCurrentUser()
+          ),
           G = T.default.canUseCollectibles(F),
           { setUpsellSource: H, reset: B } = (0,
           _.useUserPopoutCollectiblesUpsellStore)();
@@ -66266,7 +66301,7 @@
           ),
           [H, P, B]
         );
-        let V = (0, o.default)([g.default], () =>
+        let V = (0, o.useStateFromStores)([g.default], () =>
             g.default.getProfileEffectById(
               null == a ? void 0 : a.profileEffectId
             )
@@ -67927,7 +67962,9 @@
           });
         let E = (0, c.default)(x),
           { upsellSource: y } = (0, h.useUserPopoutCollectiblesUpsellStore)(),
-          g = (0, s.default)([p.default], () => p.default.getCurrentUser());
+          g = (0, s.useStateFromStores)([p.default], () =>
+            p.default.getCurrentUser()
+          );
         a(null != g, "currentUser should not be null");
         let S = (0, d.useBlockedPaymentsConfig)(),
           C = (0, m.default)(g.id, l),
@@ -79382,7 +79419,9 @@
         g = function (e) {
           let { soundId: t, jumbo: n = !1 } = e,
             { currentPreviewRef: a } = l.useContext(f.default),
-            g = (0, r.default)([p.default], () => p.default.getSoundById(t)),
+            g = (0, r.useStateFromStores)([p.default], () =>
+              p.default.getSoundById(t)
+            ),
             S =
               (null == g ? void 0 : g.emojiId) != null ||
               (null == g ? void 0 : g.emojiName) != null,
@@ -82560,4 +82599,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.b34dacd836f2a41e06d9.js.map
+//# sourceMappingURL=60053.cc14e00b20e823b676b3.js.map

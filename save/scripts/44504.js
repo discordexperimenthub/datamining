@@ -256,7 +256,10 @@
             removeClickListener: _,
           } = e,
           T = (0, a.useConfettiCannon)(s, n),
-          I = (0, l.default)([o.default], () => o.default.useReducedMotion),
+          I = (0, l.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion
+          ),
           N = r.useMemo(
             () =>
               I
@@ -966,7 +969,10 @@
         c = s("532039"),
         E = function (e) {
           let { closeLayer: t, guild: s, isVisible: E } = e,
-            _ = (0, a.default)([o.default], () => o.default.useReducedMotion),
+            _ = (0, a.useStateFromStores)(
+              [o.default],
+              () => o.default.useReducedMotion
+            ),
             T = (0, r.useSpring)({
               transform: E ? "translateY(-100%)" : "translateY(0%)",
               opacity: E ? 1 : 0,
@@ -1366,7 +1372,10 @@
             tier: G,
             tierMarkerAnimationPosition: h,
           } = e,
-          O = (0, o.default)([u.default], () => u.default.useReducedMotion),
+          O = (0, o.useStateFromStores)(
+            [u.default],
+            () => u.default.useReducedMotion
+          ),
           { analyticsLocations: p } = (0, d.default)(),
           C = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G],
           A = C - r.premiumSubscriberCount,
@@ -2294,7 +2303,10 @@
         });
       }
       var T = function () {
-        let e = (0, r.default)([l.default], () => l.default.useReducedMotion);
+        let e = (0, r.useStateFromStores)(
+          [l.default],
+          () => l.default.useReducedMotion
+        );
         return (0, i.jsxs)("div", {
           className: n.wrapper,
           children: [
@@ -3161,4 +3173,4 @@
     },
   },
 ]);
-//# sourceMappingURL=44504.d153e82113445970455e.js.map
+//# sourceMappingURL=44504.98a728d22a48a65011da.js.map

@@ -1307,7 +1307,9 @@
         f = l("907824");
       function h() {
         let e = (0, o.useApplicationDirectoryHistory)(e => e.guildId),
-          t = (0, n.default)([r.default], () => r.default.getCategories()),
+          t = (0, n.useStateFromStores)([r.default], () =>
+            r.default.getCategories()
+          ),
           l = (0, o.getPreviousView)();
         return (
           a.useEffect(() => {
@@ -1364,7 +1366,9 @@
       function g(e) {
         let { className: t } = e,
           l = (0, m.useApplicationDirectoryHistory)(e => e.guildId),
-          n = (0, r.default)([u.default], () => u.default.getCategories()),
+          n = (0, r.useStateFromStores)([u.default], () =>
+            u.default.getCategories()
+          ),
           g = a.useMemo(() => {
             let e = [(0, p.getAllCategory)(), ...n];
             return e;
@@ -4558,7 +4562,9 @@
         var e;
         let t;
         let l = (0, y.useApplicationDirectoryHistory)(e => e.guildId),
-          n = (0, m.default)([I.default], () => I.default.getCategories()),
+          n = (0, m.useStateFromStores)([I.default], () =>
+            I.default.getCategories()
+          ),
           r = (0, o.useLocation)(),
           {
             queryParam: c,
@@ -4623,7 +4629,7 @@
         a.useEffect(() => {
           U({ query: x, categoryId: Y, page: f });
         }, [U, x, Y, f]);
-        let B = (0, m.default)([A.default], () =>
+        let B = (0, m.useStateFromStores)([A.default], () =>
             A.default.getFetchState({
               query: x,
               guildId: l,
@@ -4948,7 +4954,9 @@
             onView: h,
           } = e,
           C = (0, m.useApplicationDirectoryHistory)(e => e.guildId),
-          g = (0, r.default)([u.default], () => u.default.getCategories()),
+          g = (0, r.useStateFromStores)([u.default], () =>
+            u.default.getCategories()
+          ),
           I = a.useMemo(() => {
             let e = [(0, p.getAllCategory)(), ...g];
             return e;
@@ -5280,4 +5288,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ae6874c80342cb2688e4.js.map
+//# sourceMappingURL=0d46983224547c2b07aa.js.map

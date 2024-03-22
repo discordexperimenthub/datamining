@@ -545,7 +545,7 @@
         let { showAlertMode: t } = (0, f.useGuildAlertModeEnabled)(
             null != e ? e : _.ZERO_STRING_GUILD_ID
           ),
-          n = (0, r.default)([s.default, u.default], () => {
+          n = (0, r.useStateFromStores)([s.default, u.default], () => {
             let t = s.default.getGuild(e);
             if (null == t) return !1;
             let n = u.default.getGuildPermissions(t);
@@ -553,7 +553,7 @@
               null != n && i.hasAny(n, h.IncidentAlertModeratorPermissions)
             );
           }),
-          l = (0, r.default)([E.default], () =>
+          l = (0, r.useStateFromStores)([E.default], () =>
             null != e ? E.default.getGuildIncident(e) : null
           ),
           o = null != l && (0, S.isUnderLockdown)(l);
@@ -644,7 +644,7 @@
         let { messageData: t, errorResponseBody: n } = e;
         return g(t, n), !0;
       }
-      function T(e) {
+      function m(e) {
         var t;
         let { channelId: n, messages: i } = e,
           r =
@@ -674,7 +674,7 @@
           }, l);
         return null != s && _[r] !== s && ((_[r] = s), !0);
       }
-      class m extends i.default.PersistedStore {
+      class T extends i.default.PersistedStore {
         initialize(e) {
           this.waitFor(o.default),
             null != e &&
@@ -708,14 +708,14 @@
           return null !== (t = _[e]) && void 0 !== t ? t : null;
         }
       }
-      (m.displayName = "GuildAutomodMessageStore"),
-        (m.persistKey = "GuildAutomodMessages");
-      var v = new m(r.default, {
+      (T.displayName = "GuildAutomodMessageStore"),
+        (T.persistKey = "GuildAutomodMessages");
+      var v = new T(r.default, {
         CONNECTION_OPEN: function (e) {
           return (S = {}), E++, !0;
         },
-        LOAD_MESSAGES_SUCCESS: T,
-        LOCAL_MESSAGES_LOADED: T,
+        LOAD_MESSAGES_SUCCESS: m,
+        LOCAL_MESSAGES_LOADED: m,
         MESSAGE_CREATE: function (e) {
           let { guildId: t, message: n } = e;
           if (null == t || n.type !== f.MessageTypes.AUTO_MODERATION_ACTION)
@@ -1027,7 +1027,7 @@
             return I;
           },
           default: function () {
-            return T;
+            return m;
           },
         });
       var i = n("37983");
@@ -1191,7 +1191,7 @@
           }),
         });
       }
-      function T(e) {
+      function m(e) {
         let {
             product: t,
             guildId: n,
@@ -1199,8 +1199,8 @@
             onUnpublishProduct: d,
             onDeleteProduct: c,
             onCopyProductLink: f,
-            onTestDownload: T,
-            disabled: m = !1,
+            onTestDownload: m,
+            disabled: T = !1,
           } = e,
           v = (0, o.useListingThumbnailUrl)(t, 600),
           R =
@@ -1211,9 +1211,9 @@
         return (0, i.jsxs)(s.ClickableContainer, {
           tag: "article",
           className: l(p.productCardClickable, p.productCard, {
-            [p.disabled]: m,
+            [p.disabled]: T,
           }),
-          onClick: m ? void 0 : r,
+          onClick: T ? void 0 : r,
           onContextMenu: function (e) {
             (0, u.openContextMenuLazy)(e, () =>
               Promise.resolve(e =>
@@ -1232,7 +1232,7 @@
                   onUnpublishProduct: d,
                   onDeleteProduct: c,
                   onCopyLink: f,
-                  onTestDownload: T,
+                  onTestDownload: m,
                   onReportProduct: () => {},
                 })
               )
@@ -1290,7 +1290,7 @@
                       : (0, i.jsx)(h.DraftBadge, {}),
                   ],
                 }),
-                !m &&
+                !T &&
                   (0, i.jsx)(I, {
                     product: t,
                     guildId: n,
@@ -1304,7 +1304,7 @@
                     onUnpublishProduct: d,
                     onDeleteProduct: c,
                     onCopyProductLink: f,
-                    onTestDownload: T,
+                    onTestDownload: m,
                     onReportProduct: () => {},
                   }),
               ],
@@ -1414,8 +1414,10 @@
             countryCode: f,
             dontFetchWhileTrue: S,
           } = e,
-          E = (0, l.default)([s.default], () => s.default.isConnected()),
-          h = (0, l.default)([o.default], () =>
+          E = (0, l.useStateFromStores)([s.default], () =>
+            s.default.isConnected()
+          ),
+          h = (0, l.useStateFromStores)([o.default], () =>
             null != t
               ? o.default.getSubscriptionGroupListingsForGuildFetchState(t)
               : o.FetchState.FETCHED
@@ -1718,10 +1720,10 @@
             return I;
           },
           useSubscriptionsSettings: function () {
-            return T;
+            return m;
           },
           useUpdateSubscriptionsSettings: function () {
-            return m;
+            return T;
           },
           useFetchSubscriptionsSettings: function () {
             return v;
@@ -1914,11 +1916,11 @@
             clearError: () => r(null),
           };
         },
-        T = e =>
+        m = e =>
           (0, r.useStateFromStores)([a.default], () =>
             null != e ? a.default.getSubscriptionSettings(e) : void 0
           ),
-        m = () => {
+        T = () => {
           let [e, t] = i.useState(!1),
             [n, r] = i.useState(null),
             l = i.useCallback(async (e, n) => {
@@ -2205,10 +2207,10 @@
             return I;
           },
           announceDeleteTemplateChannels: function () {
-            return T;
+            return m;
           },
           createChannelsFromTemplateTierBenefits: function () {
-            return m;
+            return T;
           },
           getTemplateTierCreationAnalyticsContext: function () {
             return v;
@@ -2236,12 +2238,16 @@
       r.shim();
       let _ = {};
       function g(e) {
-        let t = (0, l.default)([o.default], () => o.default.getChannel(e)),
-          n = (0, l.default)([S.default], () => S.default.getChannel(e));
+        let t = (0, l.useStateFromStores)([o.default], () =>
+            o.default.getChannel(e)
+          ),
+          n = (0, l.useStateFromStores)([S.default], () =>
+            S.default.getChannel(e)
+          );
         return null != t ? t : n;
       }
       function p(e, t, n) {
-        let i = (0, l.default)([d.default], () =>
+        let i = (0, l.useStateFromStores)([d.default], () =>
             d.default.getSubscriptionListingsForGuild(e)
           ),
           r = (0, c.useEditStateStore)(t => t.editStateIdsForGroup[e]),
@@ -2303,14 +2309,14 @@
             s.default.dispatch({ type: "CHANNEL_CREATE", channel: t });
           });
       }
-      function T(e) {
+      function m(e) {
         var t;
         let n = null !== (t = _[e]) && void 0 !== t ? t : C(e);
         n.forEach(e => {
           s.default.dispatch({ type: "CHANNEL_DELETE", channel: e });
         });
       }
-      async function m(e, t) {
+      async function T(e, t) {
         let n = [],
           i = [];
         if (
@@ -2449,7 +2455,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return T;
+            return m;
           },
         });
       var i = n("37983");
@@ -2554,7 +2560,7 @@
               }),
             });
       }
-      function T(e) {
+      function m(e) {
         let { guild: t, isBannerVisible: n, disableBoostClick: r } = e,
           l = (0, o.default)(t);
         if (l)
@@ -2604,8 +2610,8 @@
         p = n("38654"),
         C = n("507950"),
         I = n("49111"),
-        T = n("782340"),
-        m = n("29124");
+        m = n("782340"),
+        T = n("29124");
       function v(e) {
         var t;
         return (0, i.jsx)("span", {
@@ -2690,9 +2696,9 @@
         );
         return G || l.isOwner(n.id)
           ? (0, i.jsx)("div", {
-              className: m.container,
+              className: T.container,
               children: (0, i.jsx)(c.Combobox, {
-                placeholder: T.default.Messages.SEARCH_ROLES,
+                placeholder: m.default.Messages.SEARCH_ROLES,
                 value: A,
                 onChange: L,
                 autoFocus: !0,
@@ -2747,7 +2753,7 @@
             })
           : (0, i.jsx)(c.Text, {
               variant: "text-md/medium",
-              children: T.default.Messages.VIEW_AS_ROLES_NO_ACCESS,
+              children: m.default.Messages.VIEW_AS_ROLES_NO_ACCESS,
             });
       }
     },
@@ -2781,8 +2787,8 @@
         p = n("461380"),
         C = n("423487"),
         I = n("489622"),
-        T = n("773336"),
-        m = n("479756"),
+        m = n("773336"),
+        T = n("479756"),
         v = n("38654"),
         R = n("593916"),
         N = n("49111"),
@@ -2821,7 +2827,7 @@
             viewingRoles: n,
             backNavigationSection: r,
             isFullServerPreview: l,
-            isServerShopPreview: T,
+            isServerShopPreview: m,
           } = (0, s.useStateFromStoresObject)([v.default], () => ({
             viewingRoles: null != e ? v.default.getViewingRoles(e) : null,
             backNavigationSection: v.default.getBackNavigationSection(e),
@@ -2854,7 +2860,7 @@
               d.default.shouldShowOnboarding(e) &&
                 (a.default.finishOnboarding(e),
                 (0, c.discardOnboardingPromise)(e)),
-              (0, m.stopImpersonating)(e),
+              (0, T.stopImpersonating)(e),
               n && S.default.open(e, r),
               r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS &&
                 (0, f.announceDeleteTemplateChannels)(e));
@@ -2926,7 +2932,7 @@
                           color: u.default.unsafe_rawColors.YELLOW_300.css,
                         }),
                       }),
-                    T &&
+                    m &&
                       (0, i.jsx)(o.TooltipContainer, {
                         className: b.previewWarning,
                         text: L.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format(
@@ -2957,8 +2963,8 @@
         return n
           ? (0, i.jsx)("div", {
               className: l(b.settingsWrapper, {
-                [b.windows]: (0, T.isWindows)(),
-                [b.osx]: (0, T.isMac)(),
+                [b.windows]: (0, m.isWindows)(),
+                [b.osx]: (0, m.isMac)(),
               }),
               children: (0, i.jsx)(D, {}),
             })
@@ -4014,4 +4020,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6070f85d9e27f4ad1f40.js.map
+//# sourceMappingURL=ca18bb70f720429f8a78.js.map

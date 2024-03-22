@@ -517,16 +517,23 @@
         var t;
         let { guildId: n, welcomeMessage: s, className: h } = e,
           L = (0, N.default)(),
-          R = (0, d.default)([S.default], () => S.default.getGuild(n)),
-          p = (0, d.default)(
+          R = (0, d.useStateFromStores)([S.default], () =>
+            S.default.getGuild(n)
+          ),
+          p = (0, d.useStateFromStores)(
             [c.default],
             () => c.default.syncProfileThemeWithUserTheme
           ),
-          P = (0, d.default)([c.default], () => c.default.useReducedMotion),
-          x = (0, d.default)([T.default], () =>
+          P = (0, d.useStateFromStores)(
+            [c.default],
+            () => c.default.useReducedMotion
+          ),
+          x = (0, d.useStateFromStores)([T.default], () =>
             T.default.getUser(null == s ? void 0 : s.authorIds[0])
           ),
-          M = (0, d.default)([T.default], () => T.default.getCurrentUser()),
+          M = (0, d.useStateFromStores)([T.default], () =>
+            T.default.getCurrentUser()
+          ),
           U = (0, E.default)(null == x ? void 0 : x.id, n),
           [v] = (0, f.default)(x, U),
           C = p
@@ -1673,4 +1680,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2d7e087cfb7595d619ea.js.map
+//# sourceMappingURL=e60c33805b8e4e2a9f70.js.map

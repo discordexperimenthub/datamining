@@ -94,14 +94,17 @@
         _ = e("49111"),
         f = e("782340"),
         P = e("509728"),
-        E = e("932379"),
-        S = e("340419");
+        S = e("932379"),
+        E = e("340419");
       function m(t) {
         let {
             onClose: n,
             source: a = N.VibingWumpusSource.INAPPROPRIATE_CONVERSATION,
           } = t,
-          m = (0, r.default)([o.default], () => o.default.useReducedMotion),
+          m = (0, r.useStateFromStores)(
+            [o.default],
+            () => o.default.useReducedMotion
+          ),
           [M, V] = s.useState(!1);
         s.useEffect(() => {
           let t = new Date();
@@ -142,7 +145,7 @@
             (0, i.jsx)("div", {
               className: P.ringContainer,
               children: (0, i.jsx)("img", {
-                src: S,
+                src: E,
                 alt: "",
                 className: P.ringArt,
               }),
@@ -170,10 +173,10 @@
                 }),
             }),
             (0, i.jsxs)(c.ModalContent, {
-              className: u(E.body, P.body),
+              className: u(S.body, P.body),
               children: [
                 (0, i.jsxs)("div", {
-                  className: u(E.textContainer, P.textContainer),
+                  className: u(S.textContainer, P.textContainer),
                   children: [
                     (0, i.jsx)(c.Heading, {
                       variant: "heading-xl/semibold",
@@ -223,4 +226,4 @@
     },
   },
 ]);
-//# sourceMappingURL=76703a05edc8ab29fa2c.js.map
+//# sourceMappingURL=02f928d046cf8b88ac4a.js.map

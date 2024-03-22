@@ -13,7 +13,7 @@
         l = a("42203"),
         i = a("724210");
       function s(e) {
-        let t = (0, n.default)([l.default], () => {
+        let t = (0, n.useStateFromStores)([l.default], () => {
           let t = l.default.getChannel(e);
           return (null == t ? void 0 : t.parent_id) != null && t.isForumPost()
             ? l.default.getChannel(null == t ? void 0 : t.parent_id)
@@ -113,8 +113,8 @@
         v = a("253981"),
         y = a("719347"),
         T = a("49111"),
-        N = a("782340"),
-        S = a("494112");
+        S = a("782340"),
+        N = a("494112");
       let O = /\.(mp3|m4a|ogg|wav|flac)$/i,
         j = e => "IMAGE" === e || "VIDEO" === e;
       function D(e, t) {
@@ -142,14 +142,14 @@
           return (null != l &&
             null != i &&
             (t = (0, n.jsx)(r.Tooltip, {
-              text: N.default.Messages.DOWNLOAD,
+              text: S.default.Messages.DOWNLOAD,
               children: e =>
                 (0, n.jsx)(g.default, {
                   ...e,
                   target: "_blank",
                   rel: "noreferrer noopener",
-                  className: S.hoverButton,
-                  iconClassName: S.downloadHoverButtonIcon,
+                  className: N.hoverButton,
+                  iconClassName: N.downloadHoverButtonIcon,
                   focusProps: { offset: 2 },
                   href: l,
                   mimeType: i,
@@ -157,22 +157,22 @@
             })),
           null != o &&
             (a = (0, n.jsx)(r.Tooltip, {
-              text: N.default.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
+              text: S.default.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
               children: e =>
                 (0, n.jsx)(r.Clickable, {
                   ...e,
-                  className: s(S.hoverButton, S.removeAttachmentHoverButton),
+                  className: s(N.hoverButton, N.removeAttachmentHoverButton),
                   focusProps: { offset: 2 },
                   onClick: o,
-                  "aria-label": N.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
+                  "aria-label": S.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
                   children: (0, n.jsx)(f.default, { width: 20, height: 20 }),
                 }),
             })),
           null == a && null == t)
             ? null
             : (0, n.jsxs)("div", {
-                className: s(S.hoverButtonGroup, {
-                  [S.nonMediaAttachment]: !d,
+                className: s(N.hoverButtonGroup, {
+                  [N.nonMediaAttachment]: !d,
                 }),
                 children: [t, a],
               });
@@ -295,11 +295,11 @@
                 d &&
                 (0, n.jsx)(r.Clickable, {
                   className: z
-                    ? S.spoilerRemoveAttachmentButton
-                    : S.removeAttachmentButton,
+                    ? N.spoilerRemoveAttachmentButton
+                    : N.removeAttachmentButton,
                   focusProps: { offset: { bottom: 4 } },
                   onClick: () => u(a),
-                  "aria-label": N.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
+                  "aria-label": S.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
                   children: (0, n.jsx)(E.default, { width: 16, height: 16 }),
                 })
               );
@@ -311,14 +311,14 @@
                 T.MessageAttachmentFlags.IS_CLIP
               )
                 ? (0, n.jsxs)(r.TooltipContainer, {
-                    text: N.default.Messages.CLIPS_BETA_TAG_HOVER,
-                    className: S.clipPill,
+                    text: S.default.Messages.CLIPS_BETA_TAG_HOVER,
+                    className: N.clipPill,
                     children: [
                       (0, n.jsx)(p.default, {}),
                       (0, n.jsx)(r.Text, {
                         variant: "text-xs/semibold",
                         color: "always-white",
-                        children: N.default.Messages.CLIP_TAG,
+                        children: S.default.Messages.CLIP_TAG,
                       }),
                     ],
                   })
@@ -377,7 +377,7 @@
                   renderAdjacentContent: en,
                   naturalWidth: W,
                   naturalHeight: X,
-                  className: s(F, { [S.hasFooter]: B }),
+                  className: s(F, { [N.hasFooter]: B }),
                   playable: P,
                   responsive: !0,
                   mediaLayoutType: V,
@@ -387,7 +387,7 @@
                   mimeType: $,
                   onPlay: g,
                   downloadable: !Q,
-                  mediaPlayerClassName: B ? S.hasFooter : void 0,
+                  mediaPlayerClassName: B ? N.hasFooter : void 0,
                 })
               );
             case "AUDIO":
@@ -447,8 +447,8 @@
           f = (0, d.useShouldRedactExplicitContent)(r.channel_id, r.author.id),
           C = (0, h.getObscureReason)(i, f),
           [v, T] = l.useState(null != C),
-          N = m === y.MediaLayoutType.MOSAIC,
-          O = !N && ((null != p && p < 200) || (null != E && E < 50)),
+          S = m === y.MediaLayoutType.MOSAIC,
+          O = !S && ((null != p && p < 200) || (null != E && E < 50)),
           L = D(i, c);
         let w = "IMAGE" === (t = L) || "VIDEO" === t,
           b = j(D(i, c)),
@@ -463,18 +463,18 @@
               inlineMedia: c,
               hiddenSpoilers: e,
               canRemoveAttachment: A,
-              className: s(a, S.attachmentContentItem, {
-                [S.obscured]: v && !O,
-                [S.hiddenSpoiler]: v && C === h.ObscureReason.SPOILER,
-                [S.hiddenExplicit]:
+              className: s(a, N.attachmentContentItem, {
+                [N.obscured]: v && !O,
+                [N.hiddenSpoiler]: v && C === h.ObscureReason.SPOILER,
+                [N.hiddenExplicit]:
                   v &&
                   null != C &&
                   [
                     h.ObscureReason.EXPLICIT_CONTENT,
                     h.ObscureReason.POTENTIAL_EXPLICIT_CONTENT,
                   ].includes(C),
-                [S.hiddenAttachment]: v && e,
-                [S.inline]: v && O,
+                [N.hiddenAttachment]: v && e,
+                [N.inline]: v && O,
               }),
               focusable: !e,
               mediaLayoutType: m,
@@ -485,12 +485,12 @@
           };
         return (0, n.jsx)(n.Fragment, {
           children: (0, n.jsxs)("div", {
-            className: s(S.messageAttachment, {
-              [S.messageAttachmentNoJustify]: w,
-              [S.messageAttachmentFullWidth]: u,
-              [S.messageAttachmentMediaMosaic]: N,
-              [S.hideOverflow]: N && b,
-              [S.messageAttachmentWithFooter]: null != g,
+            className: s(N.messageAttachment, {
+              [N.messageAttachmentNoJustify]: w,
+              [N.messageAttachmentFullWidth]: u,
+              [N.messageAttachmentMediaMosaic]: S,
+              [N.hideOverflow]: S && b,
+              [N.messageAttachmentWithFooter]: null != g,
             }),
             children: [
               null != C
@@ -522,7 +522,7 @@
                       };
                     })(i, w, m),
                     obscurityControlClassName: s({
-                      [S.obscureVideo]: "VIDEO" === L && _ && !v,
+                      [N.obscureVideo]: "VIDEO" === L && _ && !v,
                     }),
                     onToggleObscurity: () => T(e => !e),
                     children: e => G(e),
@@ -579,12 +579,12 @@
               footer: l,
             });
           if (2 === i)
-            return (0, n.jsx)(N, {
+            return (0, n.jsx)(S, {
               attachmentsForLayout: t,
               getAttachmentKind: a,
             });
           if (3 === i)
-            return (0, n.jsx)(S, {
+            return (0, n.jsx)(N, {
               attachmentsForLayout: t,
               getAttachmentKind: a,
             });
@@ -602,7 +602,7 @@
                   getAttachmentKind: a,
                 }),
               2 === s &&
-                (0, n.jsx)(N, {
+                (0, n.jsx)(S, {
                   attachmentsForLayout: t.slice(0, s),
                   getAttachmentKind: a,
                 }),
@@ -641,7 +641,7 @@
             }),
           });
         },
-        N = e => {
+        S = e => {
           let { attachmentsForLayout: t, getAttachmentKind: a } = e;
           return (0, n.jsx)("div", {
             className: p.oneByTwoGrid,
@@ -662,7 +662,7 @@
             ),
           });
         },
-        S = e => {
+        N = e => {
           let { attachmentsForLayout: t, getAttachmentKind: a } = e;
           return (0, n.jsxs)("div", {
             className: s(p.oneByTwoGrid, p.oneByTwoLayoutThreeGrid),
@@ -882,4 +882,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e3c0398b1492da391481.js.map
+//# sourceMappingURL=99f33a43e0d20f2c0003.js.map

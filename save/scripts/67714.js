@@ -22,8 +22,8 @@
         s = n("446674"),
         l = n("77078"),
         o = n("519705"),
-        d = n("437756"),
-        r = n("277796"),
+        r = n("437756"),
+        d = n("277796"),
         u = n("507313"),
         S = n("282109"),
         g = n("34676"),
@@ -42,10 +42,10 @@
             });
       }
       function h(e) {
-        let t = (0, d.useChannelPresetSettings)(e),
-          n = (0, d.useChannelPresetInheritance)(e),
-          r = t.preset === u.Presets.CUSTOM && !n.inherited,
-          [g, c] = a.useState(r),
+        let t = (0, r.useChannelPresetSettings)(e),
+          n = (0, r.useChannelPresetInheritance)(e),
+          d = t.preset === u.Presets.CUSTOM && !n.inherited,
+          [g, c] = a.useState(d),
           [N, E] = a.useState(!1),
           h = N ? u.Presets.CUSTOM : t.preset,
           O = M(e, () => E(!1)),
@@ -69,7 +69,7 @@
                       ? f.default.Messages.FORM_LABEL_NOTHING
                       : f.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
                   action: () =>
-                    (0, d.updateChannelToGuildDefault)(e.guild_id, e.id),
+                    (0, r.updateChannelToGuildDefault)(e.guild_id, e.id),
                 }),
                 (0, i.jsx)(l.MenuRadioItem, {
                   id: "cns_only_mention",
@@ -79,7 +79,7 @@
                     t.notification !== _.UserNotificationSettings.NO_MESSAGES,
                   label: f.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
                   action: () =>
-                    (0, d.updateChannelNotificationSetting)(
+                    (0, r.updateChannelNotificationSetting)(
                       e.guild_id,
                       e.id,
                       _.UserNotificationSettings.ONLY_MENTIONS
@@ -93,7 +93,7 @@
                     !n.inherited &&
                     t.notification === _.UserNotificationSettings.NO_MESSAGES,
                   action: () =>
-                    (0, d.updateChannelNotificationSetting)(
+                    (0, r.updateChannelNotificationSetting)(
                       e.guild_id,
                       e.id,
                       _.UserNotificationSettings.NO_MESSAGES
@@ -125,7 +125,7 @@
                       checked: n.inherited && !N,
                       subtext: n.inheritedPreset,
                       action: () => (
-                        (0, d.updateChannelToGuildDefault)(e.guild_id, e.id),
+                        (0, r.updateChannelToGuildDefault)(e.guild_id, e.id),
                         E(!1)
                       ),
                     }),
@@ -135,7 +135,7 @@
                       label: f.default.Messages.NOTIFICATION_PRESET_1,
                       checked: !n.inherited && h === u.Presets.ALL_MESSAGES,
                       action: () => (
-                        (0, d.updateChannelPreset)(
+                        (0, r.updateChannelPreset)(
                           e.guild_id,
                           e.id,
                           u.Presets.ALL_MESSAGES
@@ -149,7 +149,7 @@
                       label: f.default.Messages.NOTIFICATION_PRESET_2,
                       checked: !n.inherited && h === u.Presets.MENTIONS,
                       action: () => (
-                        (0, d.updateChannelPreset)(
+                        (0, r.updateChannelPreset)(
                           e.guild_id,
                           e.id,
                           u.Presets.MENTIONS
@@ -163,7 +163,7 @@
                       label: f.default.Messages.NOTIFICATION_PRESET_3,
                       checked: !n.inherited && h === u.Presets.NOTHING,
                       action: () => (
-                        (0, d.updateChannelPreset)(
+                        (0, r.updateChannelPreset)(
                           e.guild_id,
                           e.id,
                           u.Presets.NOTHING
@@ -180,12 +180,12 @@
                     }),
                   ],
                 }),
-                (g || r) && O,
+                (g || d) && O,
               ],
             });
       }
       function M(e, t) {
-        let { notification: n, unread: a } = (0, d.useChannelPresetSettings)(e),
+        let { notification: n, unread: a } = (0, r.useChannelPresetSettings)(e),
           s = e => {
             e(), t();
           },
@@ -193,7 +193,7 @@
             let n = { message_notifications: t };
             t === _.UserNotificationSettings.ALL_MESSAGES &&
               a !== c.UnreadSetting.ALL_MESSAGES &&
-              (n.flags = (0, r.withChannelUnreadFlags)(
+              (n.flags = (0, d.withChannelUnreadFlags)(
                 S.default.getChannelIdFlags(e.guild_id, e.id),
                 N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES
               )),
@@ -221,7 +221,7 @@
                         .NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
                     action: () =>
                       s(() =>
-                        (0, d.updateChannelUnreadSetting)(
+                        (0, r.updateChannelUnreadSetting)(
                           e.guild_id,
                           e.id,
                           c.UnreadSetting.ALL_MESSAGES
@@ -246,7 +246,7 @@
                         : void 0,
                     action: () =>
                       s(() =>
-                        (0, d.updateChannelUnreadSetting)(
+                        (0, r.updateChannelUnreadSetting)(
                           e.guild_id,
                           e.id,
                           c.UnreadSetting.ONLY_MENTIONS
@@ -327,8 +327,8 @@
         s = n("282109"),
         l = n("568734"),
         o = n("299039"),
-        d = n("640497"),
-        r = n("49111"),
+        r = n("640497"),
+        d = n("49111"),
         u = n("468200"),
         S = n("397336"),
         g = n("782340");
@@ -371,8 +371,8 @@
         return o.default.keys(e).filter(n => {
           var i, s;
           let o =
-              e[n].message_notifications !== r.UserNotificationSettings.NULL,
-            d =
+              e[n].message_notifications !== d.UserNotificationSettings.NULL,
+            r =
               l.hasFlag(
                 null !== (i = e[n].flags) && void 0 !== i ? i : 0,
                 S.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES
@@ -382,7 +382,7 @@
                 S.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS
               );
           return (
-            (!t.ignoreUnreadSetting && d) ||
+            (!t.ignoreUnreadSetting && r) ||
             (!t.ignoreNotificationSetting && o) ||
             (!t.ignoreMute && (0, a.computeIsMuted)(e[n]))
           );
@@ -394,7 +394,7 @@
           () => s.default.useNewNotifications
         );
         return (
-          d.NotificationsExperiment.useExperiment(
+          r.NotificationsExperiment.useExperiment(
             { location: e },
             { autoTrackExposure: !1 }
           ).enabled && t
@@ -430,17 +430,17 @@
         s = n("42203"),
         l = n("282109"),
         o = n("34676"),
-        d = n("47495"),
-        r = n("277796"),
+        r = n("47495"),
+        d = n("277796"),
         u = n("507313"),
         S = n("49111"),
         g = n("133335"),
         _ = n("397336");
       function c(e) {
-        let t = (0, i.default)([l.default], () =>
+        let t = (0, i.useStateFromStores)([l.default], () =>
             l.default.resolveUnreadSetting(e)
           ),
-          n = (0, i.default)([l.default], () =>
+          n = (0, i.useStateFromStores)([l.default], () =>
             l.default.resolvedMessageNotifications(e)
           );
         return {
@@ -451,7 +451,7 @@
       }
       function N(e) {
         let t = (0, i.useStateFromStoresArray)([l.default], () =>
-            (0, d.filterOverrides)(l.default.getChannelOverrides(e.guild_id), {
+            (0, r.filterOverrides)(l.default.getChannelOverrides(e.guild_id), {
               ignoreMute: !0,
               ignoreUnreadSetting: !1,
               ignoreNotificationSetting: !1,
@@ -497,7 +497,7 @@
               t,
               {
                 message_notifications: S.UserNotificationSettings.ALL_MESSAGES,
-                flags: (0, r.withChannelUnreadFlags)(
+                flags: (0, d.withChannelUnreadFlags)(
                   i,
                   _.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES
                 ),
@@ -511,7 +511,7 @@
                 {
                   message_notifications:
                     S.UserNotificationSettings.ONLY_MENTIONS,
-                  flags: (0, r.withChannelUnreadFlags)(
+                  flags: (0, d.withChannelUnreadFlags)(
                     i,
                     _.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS
                   ),
@@ -524,7 +524,7 @@
                 t,
                 {
                   message_notifications: S.UserNotificationSettings.NO_MESSAGES,
-                  flags: (0, r.withChannelUnreadFlags)(
+                  flags: (0, d.withChannelUnreadFlags)(
                     i,
                     _.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS
                   ),
@@ -538,7 +538,7 @@
           t,
           {
             message_notifications: S.UserNotificationSettings.NULL,
-            flags: (0, r.resetChannelUnreadFlags)(
+            flags: (0, d.resetChannelUnreadFlags)(
               l.default.getChannelIdFlags(e, t)
             ),
           },
@@ -551,7 +551,7 @@
           e,
           t,
           {
-            flags: (0, r.withChannelUnreadFlags)(
+            flags: (0, d.withChannelUnreadFlags)(
               i,
               n === g.UnreadSetting.ALL_MESSAGES
                 ? _.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES
@@ -610,4 +610,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e0fc6f00480e0801b8b3.js.map
+//# sourceMappingURL=0fc5bbfeeedcee08bed9.js.map

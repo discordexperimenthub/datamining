@@ -58,7 +58,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return m;
+            return f;
           },
         });
       var s = a("759843"),
@@ -71,9 +71,9 @@
         u = a("856368"),
         c = a("697543"),
         E = a("49111"),
-        f = a("782340");
+        m = a("782340");
       a("2581");
-      var m = {
+      var f = {
         resetSuggestions: () =>
           i.default.dispatch({ type: "POMELO_SUGGESTIONS_RESET" }),
         async fetchSuggestionsRegistration(e) {
@@ -138,22 +138,22 @@
                 : "modal",
             u = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          let m =
+          let f =
             ((t = e),
             !1 === /^[A-Za-z0-9_.]*$/.test(t)
-              ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
+              ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
               : t.includes("..")
-                ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT
+                ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT
                 : t.length < 2 || t.length > 32
-                  ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
+                  ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
                       maxNum: 32,
                       minNum: 2,
                     })
                   : void 0);
-          if (null != m)
+          if (null != f)
             return (
               r.default.track(E.AnalyticEvents.POMELO_ERRORS, {
-                reason: m,
+                reason: f,
                 username_error: !0,
                 location: n,
                 one_click_flow: c,
@@ -161,7 +161,7 @@
               i.default.dispatch({
                 type: "POMELO_ATTEMPT_FAILURE",
                 username: e,
-                error: m,
+                error: f,
               })
             );
           if ((0, d.getPomeloAttempt)())
@@ -443,7 +443,7 @@
             return E;
           },
           getDefaultPomelo: function () {
-            return f;
+            return m;
           },
           shouldSkipToEditUsername: function () {
             return _;
@@ -482,14 +482,14 @@
           80
         );
       }
-      function f(e) {
+      function m(e) {
         let t = (0, o.stripDiacritics)(e.username)
           .replace(u.dirtyChars, "")
           .replace(u.coalescePeriods, ".")
           .toLowerCase();
         return "".concat(t).concat(e.discriminator).substring(0, 32);
       }
-      let m = ["@", "#", ":"],
+      let f = ["@", "#", ":"],
         S = [
           "```",
           "discord",
@@ -520,7 +520,7 @@
             .join("")).length < 2
         )
           return !0;
-        for (let e of m) if (s.includes(e)) return !0;
+        for (let e of f) if (s.includes(e)) return !0;
         for (let e of g) if (s === e.toLowerCase()) return !0;
         for (let e of S) if (s.includes(e.toLowerCase())) return !0;
         return !1;
@@ -642,10 +642,16 @@
             !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
           a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          c = (0, i.default)([o.default], () => o.default.validate(e), [e]),
-          E = (0, i.default)([o.default], () => o.default.isRateLimited()),
-          f = (0, r.usePomeloDebounceDelay)(),
-          m = s.useMemo(
+          c = (0, i.useStateFromStores)(
+            [o.default],
+            () => o.default.validate(e),
+            [e]
+          ),
+          E = (0, i.useStateFromStores)([o.default], () =>
+            o.default.isRateLimited()
+          ),
+          m = (0, r.usePomeloDebounceDelay)(),
+          f = s.useMemo(
             () =>
               (0, n.debounce)(
                 e =>
@@ -655,14 +661,14 @@
                     a,
                     u
                   ),
-                f
+                m
               ),
-            [f, a, u]
+            [m, a, u]
           );
         return (
           s.useEffect(() => {
-            t && !E && null == c && "" !== e && m(e);
-          }, [t, E, c, e, m]),
+            t && !E && null == c && "" !== e && f(e);
+          }, [t, E, c, e, f]),
           s.useMemo(
             () =>
               null != c ? (0, d.formatUsernameLiveCheckValidation)(c) : void 0,
@@ -815,8 +821,8 @@
         u = a("327037"),
         c = a("152584"),
         E = a("599417"),
-        f = a("506885"),
-        m = a("697218"),
+        m = a("506885"),
+        f = a("697218"),
         S = a("945330"),
         g = a("599110"),
         _ = a("158998"),
@@ -850,11 +856,11 @@
           [H, V] = n.useState(!1),
           [W, X] = n.useState(!1),
           z = n.useRef(null),
-          Y = (0, o.default)([I.default], () =>
+          Y = (0, o.useStateFromStores)([I.default], () =>
             I.default.isCurrentUsernameInvalid()
           ),
-          Z = (0, o.default)([m.default], () => {
-            let e = m.default.getCurrentUser();
+          Z = (0, o.useStateFromStores)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return l(null != e, "PomeloModal: user cannot be undefined"), e;
           }),
           q = (0, O.useForceMigration)(),
@@ -1048,7 +1054,7 @@
           }, [er, eo, eu, A, et, G, b, Q, H]),
           eE = n.useMemo(() => (0, h.getUserAvatarURLForPomelo)(Z), [Z]);
         n.useLayoutEffect(() => {
-          (0, f.default)(Z.id, eE);
+          (0, m.default)(Z.id, eE);
         }, [Z, eE]),
           n.useEffect(() => {
             var e, t;
@@ -1263,13 +1269,13 @@
             height: 13,
             backgroundColor: r.default.colors.TEXT_POSITIVE.css,
           }),
-        f = () =>
+        m = () =>
           (0, s.jsx)(u.default, {
             width: 13,
             height: 13,
             color: r.default.colors.TEXT_DANGER.css,
           }),
-        m = () =>
+        f = () =>
           (0, s.jsx)(u.default, {
             width: 13,
             height: 13,
@@ -1277,8 +1283,8 @@
           });
       function S(e) {
         let t = (0, l.match)(e.type)
-          .with("info", () => (0, s.jsx)(m, {}))
-          .with("error", () => (0, s.jsx)(f, {}))
+          .with("info", () => (0, s.jsx)(f, {}))
+          .with("error", () => (0, s.jsx)(m, {}))
           .with("success", () => (0, s.jsx)(E, {}))
           .otherwise(() => null);
         return (0, s.jsxs)(s.Fragment, {
@@ -1315,8 +1321,8 @@
         u = a("158998"),
         c = a("303270"),
         E = a("935583"),
-        f = a("49111"),
-        m = a("782340"),
+        m = a("49111"),
+        f = a("782340"),
         S = a("250727");
       function g(e) {
         let {
@@ -1331,49 +1337,49 @@
             switch (e) {
               case E.EditState.EDIT_USERNAME:
                 return {
-                  header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                  header: f.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
                   subtitle:
-                    m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE,
+                    f.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE,
                 };
               case E.EditState.EDIT_DISPLAY_NAME:
                 return {
-                  header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
+                  header: f.default.Messages.POMELO_EXISTING_FLOW_STEP_1_TITLE,
                   subtitle:
-                    m.default.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE,
+                    f.default.Messages.POMELO_EXISTING_FLOW_STEP_1_SUBTITLE,
                 };
               case E.EditState.PREVIEW:
                 return {
                   header:
-                    m.default.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format(
+                    f.default.Messages.POMELO_EXISTING_FLOW_COMPLETION_TITLE.format(
                       { displayName: t }
                     ),
                   subtitle:
-                    m.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format(
+                    f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format(
                       {
                         onClick: () => {
-                          a(), r.default.open(f.UserSettingsSections.ACCOUNT);
+                          a(), r.default.open(m.UserSettingsSections.ACCOUNT);
                         },
                       }
                     ),
                 };
               case E.EditState.SUGGESTION:
                 return {
-                  header: m.default.Messages.POMELO_ACTION_LABEL_OCF,
+                  header: f.default.Messages.POMELO_ACTION_LABEL_OCF,
                   subtitle:
-                    m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
-                  link: m.default.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format(
+                    f.default.Messages.POMELO_EXISTING_FLOW_PROMPT_OCF.format(),
+                  link: f.default.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_2.format(
                     {
                       helpdeskArticle: d.default.getArticleURL(
-                        f.HelpdeskArticles.POMELO_FAQ
+                        m.HelpdeskArticles.POMELO_FAQ
                       ),
                     }
                   ),
                 };
               default:
                 return {
-                  header: m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
+                  header: f.default.Messages.POMELO_EXISTING_FLOW_STEP_2_TITLE,
                   subtitle:
-                    m.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE,
+                    f.default.Messages.POMELO_EXISTING_FLOW_STEP_2_SUBTITLE,
                 };
             }
           })(I, u.default.getName(T), h),
@@ -1445,8 +1451,8 @@
         u = a("206230"),
         c = a("526887"),
         E = a("289918"),
-        f = a("935409"),
-        m = a("158998"),
+        m = a("935409"),
+        f = a("158998"),
         S = a("415133"),
         g = a("500645"),
         _ = a("925922"),
@@ -1535,7 +1541,10 @@
             }),
             []
           );
-        let w = (0, o.default)([u.default], () => u.default.useReducedMotion),
+        let w = (0, o.useStateFromStores)(
+            [u.default],
+            () => u.default.useReducedMotion
+          ),
           { createMultipleConfettiAt: B } = n.useContext(
             c.ConfettiCannonContext
           ),
@@ -1585,7 +1594,7 @@
                     profileType: I.UserProfileTypes.POMELO_POPOUT,
                     showPremiumBadgeUpsell: !1,
                   }),
-                  (0, s.jsx)(f.UserPopoutAvatar, {
+                  (0, s.jsx)(m.UserPopoutAvatar, {
                     user: j,
                     displayProfile: R,
                     isMobile: !1,
@@ -1637,7 +1646,7 @@
                           (0, s.jsx)(M, {
                             style: l(O.displayNameHeight, O["heading-xl/bold"]),
                             value: null != G ? G : "",
-                            placeholder: m.default.getName(a),
+                            placeholder: f.default.getName(a),
                             maxLength: T.MAX_DISPLAY_NAME_LENGTH,
                             onChange: e => P({ globalName: e }),
                             onFocus: v,
@@ -1710,7 +1719,7 @@
                     (0, s.jsx)(d.Heading, {
                       color: "header-primary",
                       variant: "heading-xl/bold",
-                      children: m.default.getName(a),
+                      children: f.default.getName(a),
                     }),
                     (0, s.jsx)(d.Heading, {
                       color: "text-normal",
@@ -1752,55 +1761,55 @@
         u = a("415133"),
         c = a("42060"),
         E = a("49111"),
-        f = a("782340"),
-        m = a("250727");
+        m = a("782340"),
+        f = a("250727");
       function S(e) {
         let { onClose: t, handleStartFlow: a } = e,
           n = (0, c.useForceMigration)(),
           S = (0, l.useStateFromStores)([d.default], () => d.default.locale);
         return (0, s.jsxs)("div", {
-          className: m.infoContainer,
+          className: f.infoContainer,
           children: [
             (0, s.jsx)(r.Heading, {
-              className: i(m.finishTitle, { [m.finishTitlePadding]: n }),
+              className: i(f.finishTitle, { [f.finishTitlePadding]: n }),
               color: "header-primary",
               variant: "heading-xl/bold",
               children: n
-                ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format(
+                ? m.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_1.format(
                     { date: (0, u.getLocalizedForcedUUDate)(S) }
                   )
-                : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE,
+                : m.default.Messages.POMELO_EXISTING_FLOW_REMINDER_TITLE,
             }),
             (0, s.jsx)(r.Text, {
-              className: m.subtitleFinish,
+              className: f.subtitleFinish,
               color: "header-secondary",
               variant: "text-md/medium",
               children: n
-                ? f.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format(
+                ? m.default.Messages.UU_FORCE_MIGRATION_EXISTING_FLOW_REMINDER_BODY_2.format(
                     { date: (0, u.getLocalizedForcedUUDate)(S) }
                   )
-                : f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1,
+                : m.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_1,
             }),
             (0, s.jsx)(r.Text, {
-              className: m.promptFinish,
+              className: f.promptFinish,
               color: "header-secondary",
               variant: "text-md/medium",
               children:
-                f.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
+                m.default.Messages.POMELO_EXISTING_FLOW_REMINDER_BODY_2.format({
                   onClick: () => {
                     t(), o.default.open(E.UserSettingsSections.ACCOUNT);
                   },
                 }),
             }),
             (0, s.jsx)(r.Button, {
-              className: m.button,
+              className: f.button,
               type: "button",
               size: r.Button.Sizes.SMALL,
               onClick: n ? a : t,
               children: n
-                ? f.default.Messages
+                ? m.default.Messages
                     .PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
-                : f.default.Messages.INVITES_DISABLED_CONFIRMATION,
+                : m.default.Messages.INVITES_DISABLED_CONFIRMATION,
             }),
           ],
         });
@@ -1825,16 +1834,16 @@
         u = a("253989"),
         c = a("49111"),
         E = a("782340"),
-        f = a("250727"),
-        m = a("259707");
+        m = a("250727"),
+        f = a("259707");
       function S(e) {
         let { user: t } = e;
         return (0, s.jsxs)("div", {
-          className: f.infoContainer,
+          className: m.infoContainer,
           children: [
-            (0, s.jsx)("img", { className: f.infoPicture, alt: "", src: m }),
+            (0, s.jsx)("img", { className: m.infoPicture, alt: "", src: f }),
             (0, s.jsx)(l.Heading, {
-              className: f.title,
+              className: m.title,
               color: "header-primary",
               variant: "heading-xl/bold",
               children:
@@ -1843,14 +1852,14 @@
                 }),
             }),
             (0, s.jsx)(l.Text, {
-              className: f.subtitleInfo,
+              className: m.subtitleInfo,
               color: "header-secondary",
               variant: "text-md/medium",
               children:
                 E.default.Messages.POMELO_EXISTING_FLOW_PROMPT_BODY_1.format(),
             }),
             (0, s.jsx)(l.Text, {
-              className: f.prompt,
+              className: m.prompt,
               color: "header-secondary",
               variant: "text-sm/medium",
               children:
@@ -1861,10 +1870,10 @@
                 }),
             }),
             (0, s.jsxs)("div", {
-              className: i([f.infoItem, f.infoItemSpacing]),
+              className: i([m.infoItem, m.infoItemSpacing]),
               children: [
                 (0, s.jsx)("div", {
-                  className: f.infoIcon,
+                  className: m.infoIcon,
                   children: (0, s.jsx)(r.default, { width: 20, height: 20 }),
                 }),
                 (0, s.jsx)(l.Text, {
@@ -1876,10 +1885,10 @@
               ],
             }),
             (0, s.jsxs)("div", {
-              className: i([f.infoItem, f.infoItemSpacing]),
+              className: i([m.infoItem, m.infoItemSpacing]),
               children: [
                 (0, s.jsx)("div", {
-                  className: f.infoIcon,
+                  className: m.infoIcon,
                   children: (0, s.jsx)(d.default, { width: 20, height: 20 }),
                 }),
                 (0, s.jsx)(l.Text, {
@@ -1891,10 +1900,10 @@
               ],
             }),
             (0, s.jsxs)("div", {
-              className: f.infoItem,
+              className: m.infoItem,
               children: [
                 (0, s.jsx)("div", {
-                  className: f.infoIcon,
+                  className: m.infoIcon,
                   children: (0, s.jsx)(u.default, { width: 20, height: 20 }),
                 }),
                 (0, s.jsx)(l.Text, {
@@ -2055,4 +2064,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4ed51084d982cb2c1d6d.js.map
+//# sourceMappingURL=f29f041292f0572f0cb0.js.map

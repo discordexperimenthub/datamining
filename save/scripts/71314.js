@@ -13,54 +13,58 @@
             return d;
           },
           useExplicitMediaEmbedsForMessage: function () {
-            return l;
+            return o;
           },
         });
       var s = a("65597"),
         i = a("377253"),
         n = a("447435");
       let d = (e, t, a) => {
-          var d, l;
-          let o = (0, s.default)([i.default], () => i.default.getMessage(e, t));
-          if (null == o) return [];
+          var d, o;
+          let l = (0, s.useStateFromStores)([i.default], () =>
+            i.default.getMessage(e, t)
+          );
+          if (null == l) return [];
           let r =
             void 0 !== a
               ? e => e.id === a
               : e =>
                   (0, n.isMediaObscured)(
                     { type: n.ObscuredMediaTypes.Attachment, media: e },
-                    (0, n.shouldRedactExplicitContent)(o)
+                    (0, n.shouldRedactExplicitContent)(l)
                   );
           return null !==
-            (l =
-              null == o
+            (o =
+              null == l
                 ? void 0
-                : null === (d = o.attachments) || void 0 === d
+                : null === (d = l.attachments) || void 0 === d
                   ? void 0
-                  : d.filter(r)) && void 0 !== l
-            ? l
+                  : d.filter(r)) && void 0 !== o
+            ? o
             : [];
         },
-        l = (e, t, a) => {
-          var d, l;
-          let o = (0, s.default)([i.default], () => i.default.getMessage(e, t));
-          if (null == o) return [];
+        o = (e, t, a) => {
+          var d, o;
+          let l = (0, s.useStateFromStores)([i.default], () =>
+            i.default.getMessage(e, t)
+          );
+          if (null == l) return [];
           let r =
             void 0 !== a
               ? e => e.id === a
               : e =>
                   (0, n.isMediaObscured)(
                     { type: n.ObscuredMediaTypes.Embed, media: e },
-                    (0, n.shouldRedactExplicitContent)(o)
+                    (0, n.shouldRedactExplicitContent)(l)
                   );
           return null !==
-            (l =
-              null == o
+            (o =
+              null == l
                 ? void 0
-                : null === (d = o.embeds) || void 0 === d
+                : null === (d = l.embeds) || void 0 === d
                   ? void 0
-                  : d.filter(r)) && void 0 !== l
-            ? l
+                  : d.filter(r)) && void 0 !== o
+            ? o
             : [];
         };
     },
@@ -76,8 +80,8 @@
         i = a("884691"),
         n = a("77078"),
         d = a("79112"),
-        l = a("545158"),
-        o = a("775032"),
+        o = a("545158"),
+        l = a("775032"),
         r = a("701909"),
         c = a("447435"),
         u = a("49111"),
@@ -89,10 +93,10 @@
               channelId: t,
               messageId: R,
               transitionState: T,
-              onClose: f,
+              onClose: C,
             } = e,
-            C = (0, o.default)(),
-            I = i.useCallback(
+            I = (0, l.default)(),
+            f = i.useCallback(
               e => {
                 (0, c.trackMediaRedactionAction)({
                   action: e,
@@ -139,7 +143,7 @@
                     (0, s.jsx)(n.Text, {
                       variant: "text-md/normal",
                       color: "header-secondary",
-                      children: C
+                      children: I
                         ? E.default.Messages
                             .OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT
                         : E.default.Messages
@@ -148,18 +152,18 @@
                     (0, s.jsxs)("div", {
                       className: _.buttonContainer,
                       children: [
-                        C
+                        I
                           ? (0, s.jsx)(n.Button, {
                               color: n.Button.Colors.BRAND,
                               onClick: function () {
-                                I(
+                                f(
                                   c.TrackMediaRedactionActionType
                                     .EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS
                                 ),
                                   d.default.open(
                                     u.UserSettingsSections.PRIVACY_AND_SAFETY
                                   ),
-                                  f();
+                                  C();
                               },
                               fullWidth: !0,
                               children:
@@ -169,7 +173,7 @@
                           : (0, s.jsx)(n.Button, {
                               color: n.Button.Colors.BRAND,
                               onClick: () => {
-                                (0, l.default)(
+                                (0, o.default)(
                                   r.default.getArticleURL(
                                     u.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION
                                   )
@@ -181,8 +185,8 @@
                         (0, s.jsx)(n.Button, {
                           color: n.Button.Colors.PRIMARY,
                           onClick: function () {
-                            f(),
-                              I(
+                            C(),
+                              f(
                                 c.TrackMediaRedactionActionType
                                   .EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS
                               );
@@ -199,8 +203,8 @@
                             E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format(
                               {
                                 handleFalsePositiveHook: () => {
-                                  f(),
-                                    I(
+                                  C(),
+                                    f(
                                       c.TrackMediaRedactionActionType
                                         .EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE
                                     ),
@@ -239,8 +243,8 @@
       var i = a("77078"),
         n = a("695681"),
         d = a("457971"),
-        l = a("447435"),
-        o = a("908480"),
+        o = a("447435"),
+        l = a("908480"),
         r = a("39393"),
         c = a("786214"),
         u = a("782340");
@@ -254,10 +258,10 @@
             onClose: R,
           } = e,
           T = (0, d.useIsEligibleForExplicitMediaRedaction)(),
-          f = (0, r.useExplicitMediaAttachmentsForMessage)(t, a, E),
-          C = (0, r.useExplicitMediaEmbedsForMessage)(t, a, _),
-          { reportFalsePositive: I, isReportFalsePositiveLoading: A } = (0,
-          o.useExplicitMediaActions)({
+          C = (0, r.useExplicitMediaAttachmentsForMessage)(t, a, E),
+          I = (0, r.useExplicitMediaEmbedsForMessage)(t, a, _),
+          { reportFalsePositive: f, isReportFalsePositiveLoading: A } = (0,
+          l.useExplicitMediaActions)({
             onSuccess: () => (0, c.handleSuccess)(R),
             onError: () => {
               (0, i.showToast)(
@@ -271,12 +275,12 @@
               (0, n.reportFalsePositive)(
                 t,
                 a,
-                f.map(e => e.id),
-                C.map(e => e.id)
+                C.map(e => e.id),
+                I.map(e => e.id)
               );
             },
           }),
-          N = T && (f.length > 0 || C.length > 0);
+          N = T && (C.length > 0 || I.length > 0);
         return (
           !N && R(),
           (0, s.jsx)(c.ExplicitMediaFalsePositiveModal, {
@@ -284,11 +288,11 @@
             channelId: t,
             isReportFalsePositiveLoading: A,
             analyticsContext:
-              l.TrackMediaRedactionContext
+              o.TrackMediaRedactionContext
                 .EXPLICIT_MEDIA_OBSCURED_FALSE_POSITIVE_FLOW,
-            onConfirmPress: I,
-            attachmentPreview: 1 === f.length && 0 === C.length ? f[0] : void 0,
-            embedPreview: 1 === C.length && 0 === f.length ? C[0] : void 0,
+            onConfirmPress: f,
+            attachmentPreview: 1 === C.length && 0 === I.length ? C[0] : void 0,
+            embedPreview: 1 === I.length && 0 === C.length ? I[0] : void 0,
             transitionState: M,
             onClose: R,
           })
@@ -317,4 +321,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8b3b37f3f7c1638e8b92.js.map
+//# sourceMappingURL=6eb3b579292b6ce72ccd.js.map

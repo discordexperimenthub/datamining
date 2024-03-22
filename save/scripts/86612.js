@@ -543,10 +543,10 @@
         h = l("487277");
       function E(e) {
         let { isEmptyBecauseQuery: t, closePopout: l } = e,
-          i = (0, r.default)([d.default], () =>
+          i = (0, r.useStateFromStores)([d.default], () =>
             d.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP)
           ),
-          E = (0, r.default)(
+          E = (0, r.useStateFromStores)(
             [f.default],
             () => f.default.getSettings().clipsEnabled
           ),
@@ -1408,4 +1408,4 @@
     },
   },
 ]);
-//# sourceMappingURL=19feab4ce3002e014303.js.map
+//# sourceMappingURL=f228775334fd4b99a3d8.js.map

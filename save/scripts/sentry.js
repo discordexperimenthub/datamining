@@ -75,17 +75,17 @@
               })(e);
           }
         }
-        function m(e, t) {
+        function b(e, t) {
           (this.fun = e), (this.array = t);
         }
-        function b() {}
+        function m() {}
         (u.nextTick = function (e) {
           var t = Array(arguments.length - 1);
           if (arguments.length > 1)
             for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-          l.push(new m(e, t)), 1 === l.length && !d && s(p);
+          l.push(new b(e, t)), 1 === l.length && !d && s(p);
         }),
-          (m.prototype.run = function () {
+          (b.prototype.run = function () {
             this.fun.apply(null, this.array);
           }),
           (u.title = "browser"),
@@ -94,15 +94,15 @@
           (u.argv = []),
           (u.version = ""),
           (u.versions = {}),
-          (u.on = b),
-          (u.addListener = b),
-          (u.once = b),
-          (u.off = b),
-          (u.removeListener = b),
-          (u.removeAllListeners = b),
-          (u.emit = b),
-          (u.prependListener = b),
-          (u.prependOnceListener = b),
+          (u.on = m),
+          (u.addListener = m),
+          (u.once = m),
+          (u.off = m),
+          (u.removeListener = m),
+          (u.removeAllListeners = m),
+          (u.emit = m),
+          (u.prependListener = m),
+          (u.prependOnceListener = m),
           (u.listeners = function (e) {
             return [];
           }),
@@ -200,7 +200,7 @@
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-c509eb6edfd37e9128e8eec4df665e0cac739225",
+            release: "discord_web-76bd0fec11c2bfa815ed35c51ab614df1b99831f",
             beforeSend: e => {
               var t, n;
               return !(
@@ -271,8 +271,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((e = "277921"), "277921")),
-            r.setTag("builtAt", String("1711137007974"));
+            r.setTag("buildNumber", ((e = "277947"), "277947")),
+            r.setTag("builtAt", String("1711139410917"));
           let t = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != t && "object" == typeof t)
             for (let e in t) r.setTag(e, t[e]);
@@ -411,4 +411,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.33bde21a3652ad9e3d7a.js.map
+//# sourceMappingURL=sentry.f2c2c47838064f8658f9.js.map

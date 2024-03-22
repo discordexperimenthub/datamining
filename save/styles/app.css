@@ -15779,6 +15779,17 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
 }
 .headerBanner__76f87 {
   height: 126px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--custom-background-static);
+  transition: all ease.2s;
+}
+.headerBanner__76f87:hover {
+  background-image: var(
+    --custom-background-animated,
+    var(--custom-background-static)
+  );
 }
 .partnerBadge_fae14e {
   margin-left: 8px;
@@ -40544,8 +40555,8 @@ html .progress__4ef76 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -111365,4 +111376,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.6f7095209e3f57f46740.css.map*/
+/*# sourceMappingURL=app.f2abc6cc2725bca52337.css.map*/

@@ -1,10 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["14875"],
   {
-    812204: function (_, E, e) {
+    812204: function (E, _, e) {
       "use strict";
-      e.r(E),
-        e.d(E, {
+      e.r(_),
+        e.d(_, {
           default: function () {
             return T;
           },
@@ -25,9 +25,19 @@
         (i.VANITY_URL = "vanity url"),
         (i.URI_SCHEME = "uri scheme"),
         (i.AKA = "aka"),
+        (i.MESSAGES = "messages"),
+        (i.NEW_MESSAGE_COMPOSER = "new message composer"),
+        (i.NOTIFICATIONS = "notifications"),
         (i.NOTIFICATION_CENTER = "notification center"),
+        (i.PUSH_NOTIFICATION = "push notification"),
         (i.FAMILY_CENTER = "family center"),
         (i.FRIENDS_LIST = "friends list"),
+        (i.EXPANDED_FRIENDS_LIST = "expanded friends list"),
+        (i.CONTACTS_LIST = "contacts list"),
+        (i.ADD_FRIENDS = "add friends"),
+        (i.FRIEND_REQUESTS = "friend requests"),
+        (i.SUGGESTED_FRIENDS = "suggested friends"),
+        (i.BLOCKED_USERS = "blocked users"),
         (i.PREMIUM_MARKETING = "premium marketing"),
         (i.PREMIUM_MARKETING_PLAN_COMPARISON =
           "premium marketing plan comparison"),
@@ -39,6 +49,7 @@
         (i.PREMIUM_PAYMENT_ACTION_SHEET = "premium payment action sheet"),
         (i.CHANNEL_CALL = "channel call"),
         (i.CHANNEL_CALL_CONNECTING_SCREEN = "channel call connecting screen"),
+        (i.CHANNEL_DETAILS = "channel details"),
         (i.RTC_PANEL = "rtc panel"),
         (i.SOUNDBOARD_BUTTON = "soundboard button"),
         (i.SOUNDBOARD_POPOUT = "soundboard popout"),
@@ -127,6 +138,7 @@
         (i.MEMBER_LIST = "member list"),
         (i.USER_MENTION = "user mention"),
         (i.ROLE_MENTION = "role mention"),
+        (i.CONNECTIONS_ROLE_POPOUT = "connections role popout"),
         (i.PROFILE = "profile"),
         (i.PROFILE_MODAL = "profile modal"),
         (i.PROFILE_POPOUT = "profile popout"),
@@ -136,6 +148,7 @@
         (i.EDIT_AVATAR = "edit avatar"),
         (i.EDIT_BANNER = "edit banner"),
         (i.CHAT_INPUT = "chat input"),
+        (i.CHAT_SIDEBAR = "chat sidebar"),
         (i.CREATE_THREAD = "create thread"),
         (i.PREMIUM_PREVIEW_UPSELL_HEADER = "premium preview upsell header"),
         (i.PREMIUM_UPSELL_OVERLAY = "premium upsell overlay"),
@@ -234,6 +247,7 @@
         (i.ACTIVITIES_COACH_MARK_GAME_NIGHT =
           "activities coach mark game night"),
         (i.STAGE_CHANNEL_CALL = "stage channel call"),
+        (i.REQUEST_TO_SPEAK = "request to speak"),
         (i.STAGE_VIDEO_LIMIT = "stage video limit"),
         (i.ACTIVITIES_MINI_SHELF = "activities mini shelf"),
         (i.ACTIVITIES_MINI_SHELF_BANNER = "activities mini shelf banner"),
@@ -244,6 +258,8 @@
         (i.VC_TILE_ACTIVITY_SHELF_BUTTON = "vc tile activity shelf button"),
         (i.BURST_REACTION_TUTORIAL_COACHMARK =
           "super reaction tutorial coachmark"),
+        (i.MESSAGE_REACTIONS = "message reactions"),
+        (i.MESSAGE_PREVIEW_REACTIONS = "message preview reactions"),
         (i.APP_ICON_EDITOR = "app icon editor"),
         (i.CLIENT_THEMES_EDITOR = "client themes editor"),
         (i.CLIENT_THEMES_THEME_SELECTOR = "client themes theme selector"),
@@ -263,11 +279,13 @@
         (i.ACTIVITIES_PAGE = "activities page"),
         (i.ACTIVITIES_PAGE_NOTIFICATION_DOT = "activities page cta"),
         (i.ACTIVITIES_PAGE_WHATS_NEW_TILE = "activities page whats new tile"),
+        (i.VOICE_PANEL = "voice panel"),
         (i.VOICE_PANEL_PRE_JOIN = "voice panel pre-join content"),
         (i.ACTIVITIES_IM_FEELING_LUCKY = "activities im feeling lucky"),
         (i.ACTIVITIES_HAPPENING_NOW = "activities happening now"),
         (i.MEDIA_VIEWER = "media viewer"),
         (i.MESSAGE_LONG_PRESS_MENU = "message long press menu"),
+        (i.CHANNEL_LONG_PRESS_MENU = "channel long press menu"),
         (i.COLLECTIBLES_SHOP = "collectibles shop"),
         (i.COLLECTIBLES_SHOP_FULLSCREEN = "collectibles shop fullscreen"),
         (i.COLLECTIBLES_SHOP_CARD = "collectibles shop card"),
@@ -335,11 +353,13 @@
         (i.APP_STOREFRONT = "app storefront"),
         (i.SHOP_PRODUCT_DETAILS = "shop product details"),
         (i.PACKAGES = "packages"),
-        (i.MESSAGE_ATTACHMENT = "message attachment");
+        (i.MESSAGE_ATTACHMENT = "message attachment"),
+        (i.SEARCH_MEMBERS = "search members"),
+        (i.POLL_VOTES = "poll votes");
       var i,
         I,
         T = I;
     },
   },
 ]);
-//# sourceMappingURL=14875.ddb2c35c19c94033ea50.js.map
+//# sourceMappingURL=14875.7c000680deb5b5165853.js.map

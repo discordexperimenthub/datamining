@@ -18,7 +18,7 @@
       function c(e) {
         let { targetKey: t, data: l, completed: c } = e;
         !(0, s.isEmpty)(l) &&
-          ((0, i.isDismissibleContentDismissed)(
+          (!(0, i.isDismissibleContentDismissed)(
             a.DismissibleContent.GAME_ONE_USER_SIGNUPS
           ) &&
             r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
@@ -61,8 +61,8 @@
         p = l("824326"),
         h = l("599110"),
         v = l("439932"),
-        y = l("199132"),
-        f = l("124150"),
+        f = l("199132"),
+        y = l("124150"),
         j = l("49111"),
         k = l("782340"),
         C = l("804763");
@@ -78,15 +78,17 @@
             [n, c]
           ),
           m = a.useCallback(() => {
-            null != t &&
-              null != n.current &&
-              ((i.length < 3 || -1 === i.indexOf("@")) &&
-                c(k.default.Messages.SIGNUP_EMAIL_ERROR),
-              (0, y.completeSignUp)({
+            if (null != t && null != n.current) {
+              if (i.length < 3 || -1 === i.indexOf("@")) {
+                c(k.default.Messages.SIGNUP_EMAIL_ERROR);
+                return;
+              }
+              (0, f.completeSignUp)({
                 targetKey: l,
                 data: n.current,
                 completed: !0,
-              }));
+              });
+            }
           }, [l, i, t, c, n]);
         return null == t
           ? null
@@ -182,8 +184,8 @@
           o = (0, x.useUID)(),
           c = a.useRef({}),
           [p, v] = a.useState(null),
-          N = (0, u.useStateFromStores)([f.default], () =>
-            f.default.hasCompletedTarget(t.key)
+          N = (0, u.useStateFromStores)([y.default], () =>
+            y.default.hasCompletedTarget(t.key)
           ),
           g = a.useRef(null),
           _ = (0, u.useStateFromStores)(
@@ -201,7 +203,7 @@
           });
           let e = c.current;
           return () => {
-            (0, y.completeSignUp)({ targetKey: t.key, data: e, completed: !1 });
+            (0, f.completeSignUp)({ targetKey: t.key, data: e, completed: !1 });
           };
         }, [t.key, c]);
         let M = a.useCallback(
@@ -361,4 +363,4 @@
     },
   },
 ]);
-//# sourceMappingURL=02281a9376e75c8ef9f3.js.map
+//# sourceMappingURL=af541ec5fa8541a34e08.js.map

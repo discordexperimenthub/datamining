@@ -2412,6 +2412,7 @@
           },
         });
       var a = s("862205");
+      s("773336");
       let n = (0, a.createExperiment)({
         kind: "user",
         id: "2024-01_mobile_shop",
@@ -11959,9 +11960,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "277968",
+          E = "277969",
           T =
-            ((e = "7bc4fae2346be87505a4622daba70fd72a074a0d"),
+            ((e = "c7c5dbb668583ea70b3af914ac6c9e65fdc03ad1"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32106,4 +32107,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cf5c7c005303c0ce74ca.js.map
+//# sourceMappingURL=03f7cc2936a893482989.js.map

@@ -10574,10 +10574,6 @@
           "Hei! Ostamasi tilaus on automaattisesti uusiutuva tilaus, eli laskutamme sinua t\xe4n\xe4\xe4n ja sen j\xe4lkeen {intervalCount} kuukauden v\xe4lein, kunnes perut tilauksesi. Voit kuitenkin perua tilauksen koska tahansa asetussivulta.",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hei! Ostamasi tilaus on automaattisesti uusiutuva tilaus, eli laskutamme sinua t\xe4n\xe4\xe4n ja sen j\xe4lkeen vuosittain, kunnes perut tilauksesi. Voit kuitenkin perua tilauksen koska tahansa asetussivulta!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Valitsemalla {primaryText} vahvistat ostavasi toistuvan tilauksen.** Sinulta veloitetaan t\xe4st\xe4 p\xe4iv\xe4st\xe4 alkaen {rate} (v\xe4hennettyn\xe4 mahdollisilla hyvityksill\xe4 ja alennuksilla), kunnes peruutat tilauksen. Voit peruuttaa tilauksen milloin tahansa Asetukset-sivulta. [Maksullisten palvelujen ehdot]({paidURL}) ovat voimassa. Kysytt\xe4v\xe4\xe4? [Ota meihin yhteytt\xe4]({contactLink}) tai tarkasta [usein kysytyt kysymykset tilauksista]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Valitsemalla {primaryText} vahvistat ostavasi toistuvan tilauksen.** Sinulta veloitetaan edell\xe4 ilmoitetusta p\xe4iv\xe4st\xe4 alkaen {rate} (v\xe4hennettyn\xe4 mahdollisilla hyvityksill\xe4 ja alennuksilla), kunnes peruutat tilauksen. Voit peruuttaa tilauksen milloin tahansa Asetukset-sivulta. [Maksullisten palvelujen ehdot]({paidURL}) ovat voimassa. Kysytt\xe4v\xe4\xe4? [Ota meihin yhteytt\xe4]({contactLink}) tai tarkasta [usein kysytyt kysymykset tilauksista]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Huomaa, ett\xe4 Discord ei voi palauttaa Paysafecardilla tehtyj\xe4 maksuja.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24587,6 +24583,7 @@
           "{minutes, plural, =-1 {} other {{minutes}.}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Ensimm\xe4inen kerta",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Toiminta",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Asia ymm\xe4rretty!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {p\xe4iv\xe4} other {p\xe4iv\xe4\xe4}} sitten",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0vko sitten",

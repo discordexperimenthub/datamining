@@ -10453,10 +10453,6 @@
           "Hej! Det du h\xe5ller p\xe5 att k\xf6pa \xe4r en l\xf6pande prenumeration, vilket inneb\xe4r att vi debiterar dig i dag och forts\xe4tter att debitera dig var {intervalCount} m\xe5nad tills du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r som helst fr\xe5n din inst\xe4llningssida!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hej! Det du h\xe5ller p\xe5 att k\xf6pa \xe4r en l\xf6pande prenumeration, vilket inneb\xe4r att vi debiterar dig i dag och forts\xe4tter att debitera dig \xe5rligen tills du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r som helst fr\xe5n din inst\xe4llningssida!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**Genom att klicka p\xe5 "{primaryText}" k\xf6per du en l\xf6pande prenumeration.** Du kommer att debiteras {rate} fr\xe5n och med idag, minus eventuella till\xe4mpliga krediter eller rabatter, fram till att du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r du vill fr\xe5n din inst\xe4llningssida. [Villkor f\xf6r betaltj\xe4nster]({paidURL}) g\xe4ller. Har du n\xe5gra fr\xe5gor? [Kontakta oss]({contactLink}) eller titta i v\xe5ra [Vanliga fr\xe5gor ang\xe5ende prenumerationer]({helpdeskArticle}).',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**Genom att klicka p\xe5 "{primaryText}" k\xf6per du en l\xf6pande prenumeration.** Du kommer att debiteras {rate} fr\xe5n och med datumet ovan, minus eventuella till\xe4mpliga krediter eller rabatter, fram till att du s\xe4ger upp prenumerationen. Du kan avbryta n\xe4r du vill fr\xe5n din inst\xe4llningssida. [Villkor f\xf6r betaltj\xe4nster]({paidURL}) g\xe4ller. Har du n\xe5gra fr\xe5gor? [Kontakta oss]({contactLink}) eller titta i v\xe5ra [Vanliga fr\xe5gor ang\xe5ende prenumerationer]({helpdeskArticle}).',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Obs! Discord kan inte \xe5terbetala k\xf6p som gjorts med ett Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24276,6 +24272,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf6rsta g\xe5ngen",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Jag f\xf6rst\xe5r!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {dag} other {dagar}} sedan",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} veckor sedan",

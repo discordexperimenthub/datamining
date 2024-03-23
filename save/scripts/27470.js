@@ -10557,10 +10557,6 @@
           "Oi! Voc\xea est\xe1 comprando uma assinatura autom\xe1tica, o que significa que cobraremos hoje e continuaremos a cobrar a cada {intervalCount} meses, at\xe9 voc\xea cancelar sua assinatura. Mas voc\xea pode cancel\xe1-la a qualquer momento nas Configura\xe7\xf5es de Usu\xe1rio!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Oi! Voc\xea est\xe1 comprando uma assinatura autom\xe1tica, o que significa que te cobraremos hoje e continuaremos a cobrar anualmente at\xe9 voc\xea cancelar sua assinatura. Mas voc\xea pode cancel\xe1-la a qualquer momento nas Configura\xe7\xf5es de Usu\xe1rio a qualquer momento!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Ao clicar em “{primaryText}”, voc\xea est\xe1 adquirindo uma assinatura de renova\xe7\xe3o autom\xe1tica.** Ser\xe1 cobrado de voc\xea {rate} a partir de hoje, descontando quaisquer cr\xe9ditos ou descontos aplic\xe1veis, at\xe9 que decida cancelar. Voc\xea pode cancelar a qualquer momento em sua p\xe1gina de configura\xe7\xf5es. Os [Termos de Servi\xe7o Pago]({paidURL}) s\xe3o aplic\xe1veis. Tem d\xfavidas? [Entre em contato conosco]({contactLink}) ou consulte nosso [Perguntas Frequentes sobre Assinaturas]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Ao clicar em “{primaryText}”, voc\xea est\xe1 adquirindo uma assinatura de renova\xe7\xe3o autom\xe1tica.** Ser\xe1 cobrado de voc\xea o valor de {rate} na data indicada acima, descontados quaisquer cr\xe9ditos ou descontos aplic\xe1veis, at\xe9 que decida cancelar. Voc\xea pode cancelar a qualquer momento em sua p\xe1gina de configura\xe7\xf5es. Os [Termos de Servi\xe7o Pago]({paidURL}) s\xe3o aplic\xe1veis. Tem d\xfavidas? [Entre em contato conosco]({contactLink}) ou consulte nosso [Perguntas Frequentes sobre Assinaturas]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Tenha em mente que o Discord n\xe3o reembolsa compras feitas com Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24466,6 +24462,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} assistiu a **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Atividade",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Entendi!",
         RECENT_GAMES: "Jogos recentes",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "{count} {count, plural, =1 {semana} other {semanas}} atr\xe1s",

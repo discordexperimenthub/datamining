@@ -9937,10 +9937,6 @@
           "안녕하세요! 반복 구독 상품을 구매하고 계시군요. 구매를 확정하면, 오늘 구독료가 청구된 이후로도 구독을 취소할 때까지 {intervalCount}개월마다 구독료가 청구될 거에요. 하지만 설정 페이지에서 언제든지 취소하실 수 있답니다!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "안녕하세요! 현재 반복 구독 상품을 구매하고 계시군요. 즉, 오늘 구독료가 청구되고 구독을 취소할 때까지 매년 청구되는 상품이라는 뜻이죠. 하지만 설정 페이지에서 언제든지 취소하실 수 있답니다!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**"{primaryText}"(을)를 클릭하면, 반복 구독 상품을 구매하게 됩니다.** 오늘부터 취소할 때까지 {rate}의 금액이 자동 청구되며 크레딧이나 할인 적용 시 차감된 금액으로 청구됩니다. 설정 페이지에서 언제든 취소할 수 있어요. [유료 서비스 이용 약관]({paidURL})이 적용됩니다. 문의 사항이 있으신가요? [저희에게 연락하시거나]({contactLink}) [구독 자주 묻는 질문]({helpdeskArticle})을 이용해주세요.',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**"{primaryText}"(을)를 클릭하면, 반복 구독 상품을 구매하게 됩니다.** 위에 보이는 날짜부터 취소할 때까지 {rate}의 금액이 자동 청구되며 크레딧이나 할인 적용 시 차감된 금액으로 청구됩니다. 설정 페이지에서 언제든 취소할 수 있어요. [유료 서비스 이용 약관]({paidURL})이 적용됩니다. 문의 사항이 있으신가요? [저희에게 연락하시거나]({contactLink}) [구독 자주 묻는 질문]({helpdeskArticle})을 이용해주세요.',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Paysafecard로 구매하신 경우에는 Discord로부터 환불을 받으실 수 없답니다.",
         SOFORT_MANDATE_AGREEMENT:
@@ -23057,6 +23053,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "처음",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "활동",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "알겠어요!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count}{count, plural, =1 {일} other {일}} 전",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}주 전",

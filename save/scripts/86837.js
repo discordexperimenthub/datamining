@@ -10778,10 +10778,6 @@
           "Hey\xa0! Tu ach\xe8tes un abonnement qui se renouvelle automatiquement, ce qui signifie que nous allons te facturer aujourd'hui et continuer \xe0 te facturer tous les {intervalCount}\xa0mois jusqu'\xe0 ce que tu r\xe9silies ton abonnement. Tu peux le r\xe9silier \xe0 tout moment depuis tes param\xe8tres\xa0!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hey\xa0! Tu ach\xe8tes un abonnement qui se renouvelle automatiquement, ce qui signifie que nous allons te facturer aujourd'hui et continuer \xe0 te facturer tous les ans jusqu'\xe0 ce que tu r\xe9silies ton abonnement. Pas de panique, tu peux le r\xe9silier \xe0 tout moment depuis ta page \xab\xa0Param\xe8tres\xa0\xbb\xa0!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**En cliquant sur \xab\xa0{primaryText}\xa0\xbb, tu souscris \xe0 un abonnement qui se renouvelle automatiquement.** Tu seras d\xe9bit\xe9(e) de {rate} \xe0 partir d'aujourd'hui, d\xe9duction faite de tout cr\xe9dit ou r\xe9duction applicable, jusqu'\xe0 ce que tu annules. Tu peux annuler \xe0 tout moment depuis ta page de param\xe8tres. Les [Conditions des Services Payants]({paidURL}) s'appliquent. Des questions\xa0? [Contacte-nous]({contactLink}) ou consulte notre [FAQ sur les abonnements]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**En cliquant sur \xab\xa0{primaryText}\xa0\xbb, tu t'engages dans un abonnement qui se renouvelle automatiquement.** Tu seras d\xe9bit\xe9(e) de {rate} \xe0 la date indiqu\xe9e ci-dessus, d\xe9duction faite de tous cr\xe9dits ou r\xe9ductions applicables, jusqu'\xe0 ce que tu d\xe9cides d'annuler. Tu peux annuler \xe0 tout moment depuis ta page de param\xe8tres. Les [Conditions des Services Payants]({paidURL}) s'appliquent. Des questions\xa0? [Contacte-nous]({contactLink}) ou consulte notre [FAQ sur les abonnements]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Note que Discord ne peut pas rembourser les achats effectu\xe9s avec une Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -25028,6 +25024,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} a regard\xe9 **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activit\xe9",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Compris\xa0!",
         RECENT_GAMES: "Jeux r\xe9cents",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "Il y a {count}\xa0{count, plural, =1 {semaine} other {semaines}}",

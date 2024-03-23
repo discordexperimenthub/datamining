@@ -10377,10 +10377,6 @@
           "Selam! Satın aldığın şey yenilenen bir abonelik, bu da bug\xfcn \xfccret alacağımız ve sen aboneliğini iptal edene kadar da her {intervalCount} ayda bir \xfccret almaya devam edeceğimiz anlamına geliyor. Ayarlar sayfasından istediğin zaman iptal edebileceğini unutma!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hey! Satın aldığın şey yenilenen bir aboneliktir, bu da senden bug\xfcn \xfccret alacağımız ve sen aboneliğini iptal edene kadar da yıllık \xfccret almaya devam edeceğimiz anlamına gelir. Ayarlar sayfasından istediğin zaman iptal edebilirsin ama!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**"{primaryText}" butonuna tıklayarak otomatik yenilenen bir abonelik satın alıyorsun.** Bug\xfcnden itibaren sen iptal edene kadar t\xfcm ilgili krediler ve indirimler d\xfcş\xfcld\xfckten sonra hesabından {rate} kesilecek. Ayarlar sayfasından istediğin zaman iptal edebilirsin. [\xdccretli Hizmet Koşulları]({paidURL}) ge\xe7erlidir. Soruların varsa [bize ulaş]({contactLink}) veya [Abonelikler SSS]({helpdeskArticle}) b\xf6l\xfcm\xfcne g\xf6z at.',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**"{primaryText}" butonuna tıklayarak otomatik yenilenen bir abonelik satın alıyorsun.** Yukarıda belirtilen tarihte sen iptal edene kadar t\xfcm ilgili krediler ve indirimler d\xfcş\xfcld\xfckten sonra hesabından {rate} kesilecek. Ayarlar sayfasından istediğin zaman iptal edebilirsin. [\xdccretli Hizmet Koşulları]({paidURL}) ge\xe7erlidir. Soruların varsa [bize ulaş]({contactLink}) veya [Abonelikler SSS]({helpdeskArticle}) b\xf6l\xfcm\xfcne g\xf6z at.',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "L\xfctfen Discord'un Paysafecard ile yapılan satın alımları iade edemeyeceğini unutma.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24140,6 +24136,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "İlk defa",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Etkinlik",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Anladım!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {g\xfcn} other {g\xfcn}} \xf6nce",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} hafta \xf6nce",

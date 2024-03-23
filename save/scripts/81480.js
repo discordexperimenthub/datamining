@@ -10212,10 +10212,6 @@
           "自動定期サブスクリプションを購入しようとしています。本日付の最初のご請求後、サブスクリプションを解約されるまで毎{intervalCount}月ご請求が続きます。いつでも設定ページから解約できます！",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "自動定期購読を購入しようとしています。つまり、本日のご請求後、購読を解約されるまで毎年ご請求が続きます。 いつでも設定ページから解約できます！",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**「{primaryText}」をクリックすると、定期サブスクリプションを購入することになります。**本日から解約するまで、{rate}が請求されます（該当するクレジットまたは割引を差引）。解約は設定ページからいつでも行えます。[有料サービス利用規約]({paidURL})が適用されます。ご質問がある場合は、[ご連絡いただく]({contactLink})か[サブスクリプションFAQ]({helpdeskArticle})をご覧ください。",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**「{primaryText}」をクリックすると、定期サブスクリプションを購入することになります。**上記の日付から解約するまで、{rate}が請求されます（該当するクレジットまたは割引を差引）。解約は設定ページからいつでも行えます。[有料サービス利用規約]({paidURL})が適用されます。ご質問がある場合は、[ご連絡いただく]({contactLink})か[サブスクリプションFAQ]({helpdeskArticle})をご覧ください。",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Discord は、Paysafecard で購入されたものを返金することができませんので、ご留意ください。",
         SOFORT_MANDATE_AGREEMENT:
@@ -23702,6 +23698,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "初めて",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "アクティビティ",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "分かった！",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count}{count, plural, =1 {日} other {日}}前",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}週間前",

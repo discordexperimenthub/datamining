@@ -10346,10 +10346,6 @@
           "Hoi! Wat je nu koopt is een terugkerend abonnement. Dit betekent dat we je vandaag geld in rekening brengen en dat elke {intervalCount} maanden blijven doen tot je je abonnement opzegt. Maar je kunt op elk moment opzeggen via je instellingenpagina!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hoi! Wat je nu koopt is een terugkerend abonnement, wat betekent dat we je vandaag geld in rekening brengen en dat jaarlijks blijven doen tot je je abonnement opzegt. Maar je kunt op elk moment opzeggen via je instellingenpagina.",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Als je op '{primaryText}' klikt, schaf je een terugkerend abonnement aan.** Vanaf vandaag wordt {rate} in rekening gebracht, indien van toepassing met aftrek van tegoeden of korting, tot je opzegt. Je kunt op elk moment opzeggen op de pagina Instellingen. Er zijn [Voorwaarden betaaldiensten]({paidURL}) van toepassing. Heb je nog vragen? [Neem contact met ons op ]({contactLink}) of lees onze [FAQ over abonnementen]({helpdeskArticle}) door.",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Als je op '{primaryText}' klikt, schaf je een terugkerend abonnement aan.** Vanaf bovenstaande datum wordt {rate} in rekening gebracht, indien van toepassing met aftrek van tegoeden of korting, tot je opzegt. Je kunt op elk moment opzeggen op de pagina Instellingen. Er zijn [Voorwaarden betaaldiensten]({paidURL}) van toepassing. Heb je nog vragen? [Neem contact met ons op ]({contactLink}) of lees onze [FAQ over abonnementen]({helpdeskArticle}) door.",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Hou er rekening mee dat aankopen die zijn gedaan met een Paysafecard niet in aanmerking komen voor restitutie.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24048,6 +24044,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Eerste keer",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activiteiten",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Begrepen!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {dag} other {dagen}} geleden",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w geleden",

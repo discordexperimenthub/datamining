@@ -9517,10 +9517,6 @@
           "嗨！您正在购买的是自动续订订阅，这表示我们在今天扣款后，每 {intervalCount} 月都会继续扣款，除非您取消订阅。不过别担心，在“用户设置”页面，您可以随时取消订阅！",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "嗨！您正在购买的是自动续订订阅，这表示我们在今天收费后每年都将收费，除非您取消订阅。不过别担心，在“用户设置”页面，您可以随时取消订阅！",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**点击“{primaryText}”即表示您购买定期续订。**从今天开始，我们将向您收取 {rate}（将减去任何适用优惠或折扣），直至您取消订阅。您可以随时前往设置页面取消订阅。适用[付费服务条款]({paidURL})。如有疑问，请[联系我们]({contactLink})或者查阅我们的[订阅常见问题]({helpdeskArticle})。",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**点击“{primaryText}”即表示您购买定期续订。**从上方显示的日期起，我们将向您收取 {rate}（将减去任何适用优惠或折扣），直至您取消订阅。您可以随时前往设置页面取消订阅。适用[付费服务条款]({paidURL})。如有疑问，请[联系我们]({contactLink})或者查阅我们的[订阅常见问题]({helpdeskArticle})。",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "请注意，Discord 无法退还用 Paysafecard 支付的费用。",
         SOFORT_MANDATE_AGREEMENT:
@@ -21981,6 +21977,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "首次直播",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "动态",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "收到！",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {天} other {天}}前",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} 周前",

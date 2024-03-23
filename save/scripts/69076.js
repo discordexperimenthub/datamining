@@ -10087,10 +10087,6 @@
           "Hey! What you're purchasing is a recurring subscription, which means we'll charge today and continue to charge you every {intervalCount} months until you cancel the subscription. You can cancel anytime from your Settings page, though!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hey! What you're purchasing is a recurring subscription, which means we'll charge you today and continue to charge you yearly until you cancel the subscription. You can cancel anytime from your Settings page, though!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**By clicking ‘{primaryText}’, you are purchasing a recurring subscription.** You’ll be charged {rate} starting today, less any applicable credits or discounts, until you cancel. Cancel at any time from your Settings page. [Paid Service Terms]({paidURL}) apply. Have questions? [Contact us]({contactLink}) or see our [Subscriptions FAQ]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**By clicking ‘{primaryText}’, you are purchasing a recurring subscription.** You’ll be charged {rate} on the date shown above, less any applicable credits or discounts, until you cancel. Cancel at any time from your Settings page. [Paid Service Terms]({paidURL}) apply. Have questions? [Contact us]({contactLink}) or see our [Subscriptions FAQ]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Please note that Discord can’t refund purchases made with a Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -23410,6 +23406,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Got it!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {day} other {days}} ago",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}w ago",

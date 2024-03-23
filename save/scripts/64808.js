@@ -10969,10 +10969,6 @@
           "\xdcdv! Meg\xfajul\xf3 előfizet\xe9st k\xe9sz\xfclsz v\xe1s\xe1rolni – ez azt jelenti, hogy ma kifizeted az \xf6sszeget, majd {intervalCount} havonta \xfajra r\xe1terhelj\xfck a sz\xe1ml\xe1dra, am\xedg le nem mondod. A Be\xe1ll\xedt\xe1sok oldalon b\xe1rmikor lemondhatod.",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "\xdcdv! Amit megv\xe1s\xe1rolsz, az egy meg\xfajul\xf3 előfizet\xe9s, ami azt jelenti, hogy ma beterhelj\xfck, majd \xe9vente \xfajra beterhelj\xfck, am\xedg meg nem sz\xfcnteted az előfizet\xe9st. A Be\xe1ll\xedt\xe1sok k\xe9pernyőn b\xe1rmikor lemondhatod.",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**A(z) „{primaryText}” elemre kattintva meg\xfajul\xf3 előfizet\xe9st v\xe1s\xe1rolsz.** M\xe1t\xf3l a lemond\xe1sig {rate} d\xedjat sz\xe1m\xedtunk fel neked, hacsak nincs valamilyen \xe9rv\xe9nyes j\xf3v\xe1\xedr\xe1sod vagy kedvezm\xe9nyed. A Be\xe1ll\xedt\xe1sok oldalon b\xe1rmikor lemondhatod az előfizet\xe9st. A [Fizetős szolg\xe1ltat\xe1sok szerződ\xe9si felt\xe9telei]({paidURL}) alkalmazand\xf3k. K\xe9rd\xe9sed van? [Vedd fel vel\xfcnk a kapcsolatot]({contactLink}), vagy olvasd el az [Előfizet\xe9sek GYIK-oldal\xe1t]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**A(z) „{primaryText}” elemre kattintva meg\xfajul\xf3 előfizet\xe9st v\xe1s\xe1rolsz.** A fenti d\xe1tumt\xf3l a lemond\xe1sig {rate} d\xedjat sz\xe1m\xedtunk fel neked, hacsak nincs valamilyen \xe9rv\xe9nyes j\xf3v\xe1\xedr\xe1sod vagy kedvezm\xe9nyed. A Be\xe1ll\xedt\xe1sok oldalon b\xe1rmikor lemondhatod az előfizet\xe9st. A [Fizetős szolg\xe1ltat\xe1sok szerződ\xe9si felt\xe9telei]({paidURL}) alkalmazand\xf3k. K\xe9rd\xe9sed van? [Vedd fel vel\xfcnk a kapcsolatot]({contactLink}), vagy olvasd el az [Előfizet\xe9sek GYIK-oldal\xe1t]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "T\xe1j\xe9koztatunk, hogy a Discord nem tudja visszat\xe9r\xedteni a paysafecardos v\xe1s\xe1rl\xe1sokat.",
         SOFORT_MANDATE_AGREEMENT:
@@ -25541,6 +25537,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Első alkalom",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe1s",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Oks!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {napja} other {napja}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT:

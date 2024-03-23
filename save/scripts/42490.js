@@ -10470,10 +10470,6 @@
           "Salutare! Serviciul pe care \xeel cumperi este un abonament cu re\xeennoire automată, ceea ce \xeenseamnă că te vom taxa astăzi și vom continua să te taxăm la fiecare {intervalCount} luni, p\xe2nă c\xe2nd anulezi abonamentul. Dar \xeel poți anula oric\xe2nd, acces\xe2nd pagina Setări!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Salutare! Serviciul pe care \xeel cumperi este un abonament cu re\xeennoire automată, ceea ce \xeenseamnă că te vom taxa astăzi și vom continua să te taxăm anual, p\xe2nă c\xe2nd anulezi abonamentul. Dar \xeel poți anula oric\xe2nd, acces\xe2nd pagina Setări!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**D\xe2nd clic pe „{primaryText}”, achiziționezi un abonament cu re\xeennoire.** Ți se va percepe prețul de {rate} \xeencep\xe2nd de astăzi, din care se deduc toate creditele sau reducerile aplicabile, p\xe2nă la anularea abonamentului. Anulează-l oric\xe2nd acces\xe2nd pagina Setări. Se aplică [Condițiile de prestare a serviciilor plătite]({paidURL}). Ai \xeentrebări? [Contactează-ne]({contactLink}) sau consultă [\xcentrebări frecvente legate de abonamente]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**D\xe2nd clic pe „{primaryText}”, achiziționezi un abonament cu re\xeennoire.** La data indicată mai sus ți se va percepe prețul de {rate}, din care se deduc toate creditele sau reducerile aplicabile, p\xe2nă la anularea abonamentului. Anulează-l oric\xe2nd acces\xe2nd pagina Setări. Se aplică [Condițiile de prestare a serviciilor plătite]({paidURL}). Ai \xeentrebări? [Contactează-ne]({contactLink}) sau consultă [\xcentrebări frecvente legate de abonamente]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Te rugăm să reții că Discord nu poate restitui plățile făcute cu Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24310,6 +24306,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prima dată",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activitate",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Am \xeențeles!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "cu {count} {count, plural, =1 {zi} other {zile}} \xeen urmă",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "acum {count} săpt",

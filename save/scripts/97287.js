@@ -10549,10 +10549,6 @@
           "Čau! Pr\xe1vě si kupuješ předplatn\xe9 s automatick\xfdm opakov\xe1n\xedm, takže ti platbu strhneme dnes a potom co {intervalCount} měs., dokud předplatn\xe9 nezruš\xedš. Zrušit jej můžeš kdykoliv na str\xe1nce Nastaven\xed!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Čau! Pr\xe1vě si kupuješ předplatn\xe9 s automatick\xfdm opakov\xe1n\xedm, takže ti platbu strhneme dnes a potom každ\xfd dalš\xed rok, dokud předplatn\xe9 nezruš\xedš. Zrušit jej můžeš kdykoliv na str\xe1nce Nastaven\xed!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Kliknut\xedm na „{primaryText}“ si kupuješ předplatn\xe9 s\xa0automatick\xfdm opakov\xe1n\xedm.** Poč\xednaje dnešn\xedm dnem ti budeme strh\xe1vat č\xe1stku {rate} pon\xedženou o\xa0př\xedpadn\xe9 uplatniteln\xe9 kredity a\xa0slevy, dokud sv\xe9 předplatn\xe9 nezruš\xedš. Předplatn\xe9 můžeš zrušit kdykoli na str\xe1nce Nastaven\xed. Na předplatn\xe9 se vztahuj\xed [podm\xednky placen\xfdch služeb]({paidURL}). M\xe1š ot\xe1zky? [Kontaktuj n\xe1s]({contactLink}) nebo se pod\xedvej na [čast\xe9 dotazy k\xa0předplatn\xe9mu]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Kliknut\xedm na „{primaryText}“ si kupuješ předplatn\xe9 s\xa0automatick\xfdm opakov\xe1n\xedm.** Od data uveden\xe9ho v\xfdše ti budeme strh\xe1vat č\xe1stku {rate} pon\xedženou o\xa0př\xedpadn\xe9 uplatniteln\xe9 kredity a\xa0slevy, dokud sv\xe9 předplatn\xe9 nezruš\xedš. Předplatn\xe9 můžeš zrušit kdykoli na str\xe1nce Nastaven\xed. Na předplatn\xe9 se vztahuj\xed [podm\xednky placen\xfdch služeb]({paidURL}). M\xe1š ot\xe1zky? [Kontaktuj n\xe1s]({contactLink}) nebo se pod\xedvej na [čast\xe9 dotazy k\xa0předplatn\xe9mu]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Dovolujeme si tě upozornit, že nemůžeme vracet pen\xedze za n\xe1kupy zaplacen\xe9 přes Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24572,6 +24568,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Poprv\xe9",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivita",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Rozum\xedm!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {den} few {dny} other {dnů}} nazpět",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}\xa0t nazpět",

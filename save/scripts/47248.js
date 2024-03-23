@@ -10324,10 +10324,6 @@
           "Labas! Tu perki pakartotinį prenumeravimą, o tai reiškia, kad nuskaitysime mokestį šiandien ir kas {intervalCount} mėn., kol atšauksi prenumeratą. Tačiau gali ją bet kada atšaukti Nustatymų puslapyje!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Sveikas! Tu perki pratęsiamąją prenumeratą, o tai reiškia, kad nuskaitysime mokestį šiandien ir kas metus, kol atšauksi prenumeratą. Tačiau gali ją bet kada atšaukti Nustatymų puslapyje!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Spausdamas (-a) „{primaryText}“ įsigyji pakartotinį prenumeravimą.** Nuo šiandien mokėsi {rate} – arba mažiau, jei turi taikytinų kreditų ar nuorodų – tol, kol jį atšauksi. Atšaukti gali bet kada, tai padarysi nustatymuose. Taikomos [Mokamų paslaugų teikimo sąlygos]({paidURL}). Turi klausimų? [Susisiek su mumis]({contactLink}) arba peržvelk mūsų [Prenumeratų DUK]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Spausdamas (-a) „{primaryText}“ įsigyji pakartotinį prenumeravimą.** Nuo pirmiau nurodytos datos mokėsi {rate} – arba mažiau, jei turi taikytinų kreditų ar nuorodų – tol, kol jį atšauksi. Atšaukti gali bet kada, tai padarysi nustatymuose. Taikomos [Mokamų paslaugų teikimo sąlygos]({paidURL}). Turi klausimų? [Susisiek su mumis]({contactLink}) arba peržvelk mūsų [Prenumeratų DUK]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Atkreipk dėmesį, kad Discord negali grąžinti lėšų už pirkinius, apmokėtus Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24079,6 +24075,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pirmą kartą",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Veikla",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Supratau!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "Prieš {count} {count, plural, =1 {d.} other {d.}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "prieš {count} sav.",

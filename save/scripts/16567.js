@@ -10334,10 +10334,6 @@
           "Hej! Ovo što sada kupuješ zove se samo-obnavljajuća pretplata, a to znači da ćemo ti naplatiti danas i nastavit ćemo ti naplaćivati svaka {intervalCount} mjeseca sve dok ne otkažeš pretplatu. Pretplatu možeš otkazati na svojoj stranici Korisničkih postavki!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hej! Ovo što sada kupuješ zove se samo-obnavljajuća pretplata, a to znači da ćemo ti naplatiti danas i nastavit ćemo ti naplaćivati godišnje sve dok ne otkažeš pretplatu. Pretplatu možeš otkazati na svojoj stranici Korisničkih postavki!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Klikneš li „{primaryText}“, kupit ćeš obnavljajuću pretplatu.** Počevši od danas, naplaćivat će ti se {rate} umanjeno za sve primjenjive kredite ili popuste, sve do otkazivanja. Možeš otkazati uvijek na stranici sa svojim postavkama. Podliježe [Uvjetima komercijalno pruženih usluga]({paidURL}). Imaš kakvo pitanje? [Kontaktiraj nas]({contactLink}) ili baci pogled na naša [Česta pitanja o pretplatama]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Klikneš li „{primaryText}“, kupit ćeš obnavljajuću pretplatu.** Počevši od gore prikazano datuma, naplaćivat će ti se {rate} umanjeno za sve primjenjive kredite ili popuste, sve do otkazivanja. Možeš otkazati uvijek na stranici sa svojim postavkama. Podliježe [Uvjetima komercijalno pruženih usluga]({paidURL}). Imaš kakvo pitanje? [Kontaktiraj nas]({contactLink}) ili baci pogled na naša [Česta pitanja o pretplatama]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Molimo te da imaš na umu da ne možemo vratiti novac ako je metoda plaćanja bila Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -23789,7 +23785,7 @@
         CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION: "Anketa će biti aktivna",
         CREATE_POLL_DURATION_LABEL: "Trajanje",
         CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 sat} other {{num} sata} other {{hours} sati}}",
+          "{num, plural, one {1 sat} other {{num} sata} other {{num} sati}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dana",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tjedan",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24003,6 +23999,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Prvi put",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivnost",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Kužim!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "prije {count} {count, plural, =1 {dan} other {dana}}",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "Prije {count} tj",

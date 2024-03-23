@@ -10557,10 +10557,6 @@
           "Hey! Du bist gerade dabei, ein sich automatisch wiederholendes Abonnement abzuschlie\xdfen. Das bedeutet, dass wir heute den Abopreis erheben und ihn danach alle {intervalCount}\xa0Monate abbuchen, bis du dein Abonnement k\xfcndigst. Du kannst dein Abonnement allerdings jederzeit in deinen Account-Einstellungen k\xfcndigen.",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hey! Du bist gerade dabei, ein sich automatisch wiederholendes Abonnement abzuschlie\xdfen. Das bedeutet, dass wir heute den Abopreis erheben, und ihn danach j\xe4hrlich abbuchen, bis du dein Abonnement k\xfcndigst. Du kannst dein Abonnement allerdings jederzeit in deinen Account-Einstellungen k\xfcndigen.",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Durch Klicken auf „{primaryText}“ erwirbst du ein sich wiederholendes Abonnement.** Dir wird ab heute {rate} abz\xfcglich aller anwendbaren Credits oder Rabatte berechnet, bis du das Abo k\xfcndigst. Du kannst dein Abo jederzeit in deinen Einstellungen k\xfcndigen. Es gelten die [Nutzungsbedingungen f\xfcr Bezahldienste]({paidURL}). Irgendwelche Fragen? [Kontaktiere uns]({contactLink}) oder wirf einen Blick in unsere [FAQ zu Abonnements]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Durch Klicken auf „{primaryText}“ erwirbst du ein sich wiederholendes Abonnement.** Dir wird ab dem oben angegebenen Datum {rate} abz\xfcglich aller anwendbaren Credits oder Rabatte berechnet, bis du das Abo k\xfcndigst. Du kannst dein Abo jederzeit in deinen Einstellungen k\xfcndigen. Es gelten die [Nutzungsbedingungen f\xfcr Bezahldienste]({paidURL}). Irgendwelche Fragen? [Kontaktiere uns]({contactLink}) oder wirf einen Blick in unsere [FAQ zu Abonnements]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Bitte beachte, dass Discord K\xe4ufe, die mit einer Paysafecard get\xe4tigt werden, nicht r\xfcckerstatten kann.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24480,6 +24476,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} hat **{mediaTitle}** angeschaut",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivit\xe4t",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Alles klar!",
         RECENT_GAMES: "K\xfcrzlich gespielte Spiele",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "Vor {count} {count, plural, =1 {Woche} other {Wochen}}",

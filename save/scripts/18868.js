@@ -10445,10 +10445,6 @@
           "Hej! Kupujesz subskrypcję odnawianą automatycznie, co oznacza, że zaczniemy pobierać opłaty od dzisiaj i będziemy je nadal pobierać co {intervalCount} mies., dop\xf3ki nie anulujesz swojej subskrypcji. Możesz to zrobić w dowolnym momencie w swoich Ustawieniach!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hej! Kupujesz subskrypcję odnawianą automatycznie, co oznacza, że zaczniemy pobierać opłaty od dzisiaj i będziemy je nadal pobierać co roku, dop\xf3ki nie anulujesz swojej subskrypcji. Możesz to zrobić w dowolnym momencie w swoich Ustawieniach!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Klikając „{primaryText}”, kupujesz odnawianą subskrypcję.** Będziemy pobierać od Ciebie opłatę w wysokości {rate}, obniżoną o mające zastosowanie kredyty lub zniżki, od dziś aż do anulowania subskrypcji. Możesz anulować ją w dowolnej chwili na stronie ustawień. Obowiązują[Warunki Korzystania z Płatnych Usług]({paidURL}). Masz pytania? [Skontaktuj się z nami]({contactLink}) lub zobacz nasze [najczęściej zadawane pytania dotyczące subskrypcji]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Klikając „{primaryText}”, kupujesz odnawianą subskrypcję.** Będziemy pobierać od Ciebie opłatę w wysokości {rate}, obniżoną o mające zastosowanie kredyty lub zniżki, od wskazanej wyżej daty aż do anulowania subskrypcji. Możesz anulować ją w dowolnej chwili na stronie ustawień. Obowiązują[Warunki Korzystania z Płatnych Usług]({paidURL}). Masz pytania? [Skontaktuj się z nami]({contactLink}) lub zobacz nasze [najczęściej zadawane pytania dotyczące subskrypcji]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Uwaga: Discord nie może zwr\xf3cić pieniędzy za zakupy dokonane przy pomocy Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24065,7 +24061,7 @@
           "Ankieta będzie aktywna przez",
         CREATE_POLL_DURATION_LABEL: "Czas trwania",
         CREATE_POLL_DURATION_OPTION_LABEL_N_HOURS:
-          "{num, plural, one {1 godzinę} few {{num} godziny} other {{hours} godzin}}",
+          "{num, plural, one {1 godzinę} few {{num} godziny} other {{num} godzin}}",
         CREATE_POLL_DURATION_OPTION_LABEL_3_DAYS: "3 dni",
         CREATE_POLL_DURATION_OPTION_LABEL_7_DAYS: "1 tydzień",
         CREATE_POLL_DURATION_SELECTION_ARIA_LABEL:
@@ -24279,6 +24275,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Pierwszy raz",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktywność",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Zrozumiano!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {dzień} other {dni}} temu",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tyg. temu",

@@ -10603,10 +10603,6 @@
           "\xa1Ey! Eso que vas a comprar es una suscripci\xf3n peri\xf3dica, lo que significa que te cobraremos hoy y lo seguiremos haciendo cada {intervalCount} meses hasta que canceles la suscripci\xf3n. \xa1Pero puedes cancelarla en cualquier momento desde la p\xe1gina de Ajustes!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "\xa1Ey! Eso que vas a comprar es una suscripci\xf3n peri\xf3dica, lo que significa que te cobraremos hoy y lo seguiremos haciendo anualmente hasta que canceles la suscripci\xf3n. \xa1Pero puedes cancelarla en cualquier momento desde la p\xe1gina de Ajustes!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Al hacer clic en \xab{primaryText}\xbb, est\xe1s adquiriendo una suscripci\xf3n peri\xf3dica.** Se te har\xe1 un cobro de {rate} a partir de hoy, descontando cualquier cr\xe9dito o descuento aplicable, hasta que decidas cancelar. Puedes cancelar tu suscripci\xf3n en cualquier momento desde la p\xe1gina de \xabAjustes\xbb. Se aplican las [Condiciones de los Servicios de Pago]({paidURL}). \xbfTienes alguna pregunta? [Cont\xe1ctanos]({contactLink}) o consulta nuestras [preguntas frecuentes sobre suscripciones]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Al hacer clic en \xab{primaryText}\xbb, est\xe1s adquiriendo una suscripci\xf3n peri\xf3dica.** Se te har\xe1 un cobro de {rate} a partir de la fecha mostrada arriba, descontando cualquier cr\xe9dito o descuento aplicable, hasta que decidas cancelar. Puedes cancelar tu suscripci\xf3n en cualquier momento desde la p\xe1gina de \xabAjustes\xbb. Se aplican las [Condiciones de los Servicios de Pago]({paidURL}). \xbfTienes alguna pregunta? [Cont\xe1ctanos]({contactLink}) o consulta nuestras [preguntas frecuentes sobre suscripciones]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Ten en cuenta que Discord no puede reembolsar compras hechas con Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24600,6 +24596,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} ha visto **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Actividad",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "\xa1Entendido!",
         RECENT_GAMES: "Juegos recientes",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "Hace {count} {count, plural, =1 {semana} other {semanas}}",

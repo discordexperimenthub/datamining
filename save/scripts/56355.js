@@ -10464,10 +10464,6 @@
           "Ehi! Quello che stai comprando \xe8 un abbonamento a rinnovo automatico, il che significa che ti addebiteremo un costo oggi e continueremo a farlo ogni {intervalCount} mesi fino alla cancellazione dell'abbonamento. Comunque, puoi sempre cancellare l'abbonamento dalla schermata Impostazioni!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Ehi! Quello che stai comprando \xe8 un abbonamento a rinnovo automatico, il che significa che ti addebiteremo un costo oggi, e continueremo a farlo annualmente fino alla cancellazione dell'abbonamento. Comunque, puoi sempre cancellare l'abbonamento dalla tua pagina Impostazioni!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**Cliccando su "{primaryText}", stai acquistando un abbonamento a rinnovo automatico.** A partire da oggi, ti verranno addebitati {rate}, al netto di eventuali crediti o sconti, fino a quando non deciderai di annullare. Puoi annullare in qualsiasi momento dalla tua pagina Impostazioni. Si applicano i [Termini dei servizi a Pagamento]({paidURL}). Hai domande? [Contattaci]({contactLink}) o consulta le nostre [FAQ sugli abbonamenti]({helpdeskArticle}).',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**Cliccando su "{primaryText}", stai acquistando un abbonamento a rinnovo automatico.** Ti saranno addebitati {rate} nella data indicata sopra, al netto di eventuali crediti o sconti, fino a quando non deciderai di annullare. Puoi annullare in qualsiasi momento dalla tua pagina Impostazioni. Si applicano i [Termini dei servizi a Pagamento]({paidURL}). Hai domande? [Contattaci]({contactLink}) o consulta le nostre [FAQ sugli abbonamenti]({helpdeskArticle}).',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Ti informiamo che Discord non pu\xf2 rimborsare i pagamenti effettuati con Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24259,6 +24255,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} ha guardato **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Attivit\xe0",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Capito!",
         RECENT_GAMES: "Giochi recenti",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "{count} {count, plural, =1 {settimana} other {settimane}} fa",

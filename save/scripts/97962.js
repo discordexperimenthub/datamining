@@ -10296,10 +10296,6 @@
           "अरे सुनिए! आप जो खरीद रहे हैं, वह एक रिकरिंग सब्सक्रिप्शन है, जिसका मतलब है कि हम आपसे आज पेमेंट लेंगे और तब तक हर {intervalCount} महीनों तक पेमेंट लेते रहेंगे जब तक आप सब्सक्रिप्शन कैंसल नहीं करते हैं. वैसे आप किसी भी समय अपने सेटिंग्स पेज से इसे कैंसल कर सकते हैं!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "अरे सुनिए! आप जो खरीद रहे हैं, वह एक रिकरिंग सब्सक्रिप्शन है, जिसका मतलब है कि हम आपसे आज पेमेंट लेंगे और तब तक हर साल पेमेंट लेते रहेंगे जब तक आप सब्सक्रिप्शन कैंसल नहीं करते. वैसे आप किसी भी समय अपने सेटिंग पेज से इसे कैंसल कर सकते हैं!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**"{primaryText}" पर क्लिक करके, आप एक रेकरिंग सब्सक्रिप्शन खरीद रहे हैं.** जब तक आप कैंसल नहीं करते, तब तक आपसे आज से, {rate} शुल्क लिया जाएगा, जिसमें कोई भी लागू क्रेडिट या डिस्काउंट नहीं होगी. किसी भी समय अपने सेटिंग्स पेज से कैंसल करें. [पेड सेवा की शर्तें]({paidURL}) लागू. कोई सवाल है? [हमसे संपर्क करें]({contactLink}) या हमारे [सब्सक्रिप्शन FAQ]({helpdeskArticle}) देखें.',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**"{primaryText}" पर क्लिक करके, आप एक रेकरिंग सब्सक्रिप्शन खरीद रहे हैं.** जब तक आप कैंसल नहीं करते, तब तक आपसे ऊपर दिखाई तारीख से, {rate} शुल्क लिया जाएगा, जिसमें कोई भी लागू क्रेडिट या डिस्काउंट नहीं होगी. किसी भी समय अपने सेटिंग्स पेज से कैंसल करें. [पेड सेवा की शर्तें]({paidURL}) लागू. कोई सवाल है? [हमसे संपर्क करें]({contactLink}) या हमारे [सब्सक्रिप्शन FAQ]({helpdeskArticle}) देखें.',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "कृपया नोट करें कि Discord किसी Paysafecard से की गई खरीदारी का रिफ़ंड नहीं करता है.",
         SOFORT_MANDATE_AGREEMENT:
@@ -23899,6 +23895,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "पहली बार",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "एक्टिविटी",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "समझ गया!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {दिन} other {दिन}} पहले",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}हफ़्ते पहले",

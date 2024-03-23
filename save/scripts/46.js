@@ -10592,10 +10592,6 @@
           "\xa1Oye! Est\xe1s comprando una suscripci\xf3n recurrente, lo que significa que te cobraremos hoy y cada {intervalCount} meses hasta que canceles la suscripci\xf3n. \xa1Puedes cancelar la suscripci\xf3n en cualquier momento desde tu p\xe1gina de ajustes!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "\xa1Oye! Est\xe1s comprando una suscripci\xf3n recurrente, lo que significa que te cobraremos hoy y cada a\xf1o hasta que canceles la suscripci\xf3n. \xa1Puedes cancelar la suscripci\xf3n en cualquier momento desde tu p\xe1gina de ajustes!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**Al hacer clic en "{primaryText}", adquirir\xe1s una suscripci\xf3n recurrente.** Se te cobrar\xe1 {rate} a partir de hoy, menos cualquier cr\xe9dito o descuento aplicable, hasta que la canceles. Cancela en cualquier momento desde tu p\xe1gina de ajustes. Se aplican las [condiciones de los servicios de pago]({paidURL}). \xbfTienes alguna pregunta? [Cont\xe1ctanos]({contactLink}) o consulta nuestras [preguntas frecuentes sobre suscripciones]({helpdeskArticle}).',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**Al hacer clic en "{primaryText}", adquirir\xe1s una suscripci\xf3n recurrente.** Se te cobrar\xe1 {rate} en la fecha indicada arriba, menos cualquier cr\xe9dito o descuento aplicable, hasta que la canceles. Cancela en cualquier momento desde tu p\xe1gina de ajustes. Se aplican las [condiciones de los servicios de pago]({paidURL}). \xbfTienes alguna pregunta? [Cont\xe1ctanos]({contactLink}) o consulta nuestras [preguntas frecuentes sobre suscripciones]({helpdeskArticle}).',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Ten en cuenta que Discord no puede reembolsar las compras realizadas con una tarjeta Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24608,6 +24604,7 @@
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
           "{userName} vio **{mediaTitle}**",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Actividad",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "\xa1Entendido!",
         RECENT_GAMES: "Juegos recientes",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO:
           "hace {count} {count, plural, =1 {semana} other {semanas}}",

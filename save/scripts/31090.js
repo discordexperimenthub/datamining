@@ -10652,10 +10652,6 @@
           "N\xe0y! G\xf3i m\xe0 bạn chuẩn bị mua l\xe0 g\xf3i đăng k\xfd định kỳ đ\xf3, c\xf3 nghĩa l\xe0 ch\xfang t\xf4i sẽ t\xednh ph\xed h\xf4m nay v\xe0 tiếp tục t\xednh ph\xed sau mỗi {intervalCount} th\xe1ng cho đến khi bạn hủy đăng k\xfd. Tuy nhi\xean bạn c\xf3 thể hủy bất cứ l\xfac n\xe0o trong trang C\xe0i Đặt!",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "N\xe0y! Đăng k\xfd m\xe0 bạn đang mua l\xe0 g\xf3i định kỳ, c\xf3 nghĩa l\xe0 ch\xfang t\xf4i sẽ t\xednh ph\xed cho bạn trong h\xf4m nay v\xe0 sẽ tiếp tục t\xednh ph\xed h\xe0ng năm cho đến khi bạn hủy đăng k\xfd. Bạn c\xf3 thể hủy bất kỳ l\xfac n\xe0o tại trang C\xe0i Đặt của m\xecnh!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          '**Khi nhấn v\xe0o "{primaryText}", bạn sẽ mua một g\xf3i đăng k\xfd định kỳ.** Bạn sẽ bị t\xednh ph\xed {rate} kể từ h\xf4m nay, c\xf3 thể thanh to\xe1n từ thẻ t\xedn dụng hoặc ưu đ\xe3i khuyến m\xe3i của bạn nếu c\xf3, cho đến khi bạn hủy g\xf3i đăng k\xfd. Bạn c\xf3 thể hủy bỏ g\xf3i đăng k\xfd tự động n\xe0y bất kỳ l\xfac n\xe0o tại trang C\xe0i Đặt. [Điều Khoản Dịch Vụ Trả Ph\xed]({paidURL}) sẽ được \xe1p dụng. Bạn c\xf3 thắc mắc? [H\xe3y li\xean hệ với ch\xfang t\xf4i]({contactLink}) hoặc xem b\xe0i viết [FAQ về G\xf3i Đăng K\xfd]({helpdeskArticle}).',
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          '**Khi nhấn v\xe0o "{primaryText}", bạn sẽ mua một g\xf3i đăng k\xfd định kỳ.** Bạn sẽ bị t\xednh ph\xed {rate} từ ng\xe0y hiển thị ở tr\xean, c\xf3 thể thanh to\xe1n từ t\xedn dụng hoặc ưu đ\xe3i khuyến m\xe3i của bạn nếu c\xf3, cho đến khi bạn hủy g\xf3i đăng k\xfd. Bạn c\xf3 thể hủy bỏ g\xf3i đăng k\xfd tự động n\xe0y bất kỳ l\xfac n\xe0o tại trang C\xe0i Đặt. [Điều Khoản Dịch Vụ Trả Ph\xed]({paidURL}) sẽ được \xe1p dụng. Bạn c\xf3 thắc mắc? [H\xe3y li\xean hệ với ch\xfang t\xf4i]({contactLink}) hoặc xem b\xe0i viết [FAQ về G\xf3i Đăng K\xfd]({helpdeskArticle}).',
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "Xin lưu \xfd Discord sẽ kh\xf4ng thể ho\xe0n tiền với c\xe1c giao dịch qua Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -24759,6 +24755,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "Lần đầu ti\xean",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Hoạt động",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Hiểu rồi!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "{count} {count, plural, =1 {ng\xe0y} other {ng\xe0y}} trước",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count} tuần trước",

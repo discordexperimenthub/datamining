@@ -10328,10 +10328,6 @@
           "Hei! Det du kj\xf8per, er et l\xf8pende abonnement. Det betyr at vi belaster deg i dag og fortsetter \xe5 belaste deg hver {intervalCount}. m\xe5ned inntil du sier opp abonnementet. Du kan imidlertid g\xe5 til Innstillinger og si opp abonnementet n\xe5r du vil.",
         SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY:
           "Hei! Det du kj\xf8per er et gjentakende abonnement, som betyr at vi belaster deg i dag og fortsetter \xe5 belaste deg \xe5rlig til du kansellerer abonnementet. Men du kan n\xe5r som helst kansellere fra Innstillinger-siden!",
-        SUBSCRIPTION_PAYMENT_LEGALESE_V2:
-          "**Ved \xe5 klikke p\xe5 \xab{primaryText}\xbb foretar du et kj\xf8p av et abonnement som fornyes.** Fra og med i dag blir du belastet {rate} (ikke medregnet eventuelle rabatter eller kreditter), frem til du avslutter abonnementet. Du kan si opp abonnementet n\xe5r som helst p\xe5 innstillingssiden. [Vilk\xe5r for betalte tjenester]({paidURL}) gjelder. Er det noe du lurer p\xe5? [Kontakt oss]({contactLink}) eller g\xe5 til [listen over vanlige abonnementsrelaterte sp\xf8rsm\xe5l]({helpdeskArticle}).",
-        SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2:
-          "**Ved \xe5 klikke p\xe5 \xab{primaryText}\xbb foretar du et kj\xf8p av et abonnement som fornyes.** Fra og med datoen som vises ovenfor, blir du belastet {rate} (ikke medregnet eventuelle rabatter eller kreditter), frem til du avslutter abonnementet. Du kan si opp abonnementet n\xe5r som helst p\xe5 innstillingssiden. [Vilk\xe5r for betalte tjenester]({paidURL}) gjelder. Er det noe du lurer p\xe5? [Kontakt oss]({contactLink}) eller g\xe5 til [listen over vanlige abonnementsrelaterte sp\xf8rsm\xe5l]({helpdeskArticle}).",
         SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD:
           "V\xe6r oppmerksom p\xe5 at Discord ikke kan refundere kj\xf8p som gj\xf8res med Paysafecard.",
         SOFORT_MANDATE_AGREEMENT:
@@ -23939,6 +23935,7 @@
           "{minutes, plural, =-1 {} other {{minutes}:}}{seconds, plural, =-1 {} other {{seconds}}}",
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "F\xf8rste gang",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Aktivitet",
+        CONTENT_INVENTORY_MEMBERLIST_LEARN_MORE_GOT_IT: "Forst\xe5tt!",
         USER_RECENT_GAMES_LAST_PLAYED_DAYS_AGO:
           "For {count} {count, plural, =1 {dag} other {dager}} siden",
         USER_RECENT_GAMES_LAST_PLAYED_WEEKS_AGO_SHORT: "{count}u siden",

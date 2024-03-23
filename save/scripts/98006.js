@@ -4225,8 +4225,7 @@
           useIsUserProfileRuleEnabled: function () {
             return u;
           },
-        }),
-        t("222007");
+        });
       var a = t("446674"),
         n = t("305961"),
         i = t("957255"),
@@ -4235,10 +4234,13 @@
         let r =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
-              : [n.default, i.default],
-          [t, a] = r,
-          l = t.getGuild(e);
-        return null != l && a.can(o.Permissions.MANAGE_GUILD, l);
+              : n.default,
+          t =
+            arguments.length > 2 && void 0 !== arguments[2]
+              ? arguments[2]
+              : i.default,
+          a = r.getGuild(e);
+        return null != a && t.can(o.Permissions.MANAGE_GUILD, a);
       };
       function s(e) {
         if (null == e) return !1;
@@ -4252,7 +4254,7 @@
       function d(e) {
         return (0, a.useStateFromStores)(
           [n.default, i.default],
-          () => l(e, [n.default, i.default]),
+          () => l(e, n.default, i.default),
           [e]
         );
       }
@@ -7279,4 +7281,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2e278a566f9a3fa5b523.js.map
+//# sourceMappingURL=a130c022af0c6a991a86.js.map

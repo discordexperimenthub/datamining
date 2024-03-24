@@ -26506,8 +26506,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278114", ", Version Hash: ")
-          .concat("197485544f33b6b3a0e95f77417686fe77e290ec")
+          .concat("278148", ", Version Hash: ")
+          .concat("7e5d3cf062b3f7cffec2008d2a050bb310a5d107")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29637,12 +29637,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278114"), "278114"));
+        let _ = parseInt(((e = "278148"), "278148"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278114"
+                "278148"
               )
             ),
             (_ = 0)),
@@ -43921,20 +43921,19 @@
       E.r(_),
         E.d(_, {
           getSystemLocale: function () {
-            return I;
+            return i;
           },
-          default: function () {
-            return t;
+          I18N: function () {
+            return S;
           },
         }),
         E("222007"),
         E("70102");
-      var t,
-        o = E("44170"),
-        n = E("860347"),
-        r = E.n(n),
-        a = E("907407");
-      (E.g.IntlMessageFormat = r),
+      var t = E("44170"),
+        o = E("860347"),
+        n = E.n(o),
+        r = E("907407");
+      (E.g.IntlMessageFormat = n),
         E("394069"),
         E("351752"),
         E("329547"),
@@ -43965,8 +43964,8 @@
         E("601337"),
         delete E.g.IntlMessageFormat,
         "undefined" == typeof Intl && E("246663");
-      let i = "en-US";
-      function I() {
+      let a = "en-US";
+      function i() {
         let e;
         {
           let _ = Array.isArray(navigator.languages)
@@ -43980,17 +43979,17 @@
         }
         return null != e ? e : "";
       }
-      class s {
+      class I {
         getMessages() {
           return this._parsedMessages;
         }
         constructor(e) {
-          (this._context = { messages: {}, defaultMessages: {}, locale: i }),
+          (this._context = { messages: {}, defaultMessages: {}, locale: a }),
             (this._parsedMessages = {}),
             (this._getParsedMessages = e);
         }
       }
-      class T extends s {
+      class s extends I {
         refresh(e) {
           (this._context = e), this._refresh(e, this._parsedMessages);
         }
@@ -44018,7 +44017,7 @@
             });
         }
       }
-      class S extends s {
+      class T extends I {
         refresh(e) {
           Object.assign(this._context, e),
             Object.keys(this._parsedMessages).forEach(e => {
@@ -44045,7 +44044,7 @@
             (this._parsedMessages = this._createProxy(this._context));
         }
       }
-      t = class extends o.EventEmitter {
+      class S extends t.EventEmitter {
         updateMessagesForExperiment(e, _) {
           let E = this._fetchMessages(e);
           if (E instanceof Promise) {
@@ -44065,7 +44064,7 @@
             this.emit("locale", this._chosenLocale, _);
         }
         setUpdateRules(e) {
-          (0, a.setUpdateRules)(e);
+          (0, r.setUpdateRules)(e);
         }
         getLanguages() {
           return this._languages;
@@ -44103,7 +44102,7 @@
         }
         getDefaultLocale() {
           var e, _, E;
-          let t = null !== (e = I()) && void 0 !== e ? e : i,
+          let t = null !== (e = i()) && void 0 !== e ? e : a,
             o = this._languages
               .filter(e => {
                 let { enabled: _ } = e;
@@ -44120,11 +44119,11 @@
             : "zh" === n[0] && n.length > 1 && "Hant" === n[1]
               ? null !== (_ = o.find(e => "zh-TW" === e)) && void 0 !== _
                 ? _
-                : i
+                : a
               : null !== (E = o.find(e => e.split("-")[0] === n[0])) &&
                   void 0 !== E
                 ? E
-                : i;
+                : a;
         }
         _loadMessagesForLocale(e) {
           let _ = this._fetchMessages(e);
@@ -44136,7 +44135,7 @@
           let E =
             arguments.length > 2 && void 0 !== arguments[2]
               ? arguments[2]
-              : this._findMessages(i);
+              : this._findMessages(a);
           this._requestedLocale === _ &&
             (this._provider.refresh({
               messages: e,
@@ -44152,13 +44151,13 @@
         }
         _fetchMessages(e) {
           let _ =
-            e === i
+            e === a
               ? () => {
-                  throw Error("Error Loading ".concat(i));
+                  throw Error("Error Loading ".concat(a));
                 }
               : () =>
                   (console.warn("Unsupported Locale", e), -1 === e.indexOf("-"))
-                    ? this._fetchMessages(i)
+                    ? this._fetchMessages(a)
                     : this._fetchMessages(e.split("-")[0]);
           try {
             let E = this._getMessages(e);
@@ -44175,11 +44174,11 @@
             (this._chosenLocale = ""),
             (this._getParsedMessages = (e, _, E) => {
               let { messages: t, defaultMessages: o, locale: n } = e,
-                r = t[_] || o[_];
-              if ("object" == typeof r)
-                return E({ messages: r, defaultMessages: o[_], locale: n });
+                a = t[_] || o[_];
+              if ("object" == typeof a)
+                return E({ messages: a, defaultMessages: o[_], locale: n });
               try {
-                return (0, a.getMessage)(r, n);
+                return (0, r.getMessage)(a, n);
               } catch (e) {
                 if (
                   (console.warn(
@@ -44188,9 +44187,9 @@
                       .concat(n, "' defaulting to English"),
                     e
                   ),
-                  "string" == typeof (r = o[_]))
+                  "string" == typeof (a = o[_]))
                 )
-                  return (0, a.getMessage)(r, n);
+                  return (0, r.getMessage)(a, n);
               }
               return "";
             }),
@@ -44204,8 +44203,8 @@
             (this._languages = t()),
             (this._provider =
               null != window.Proxy
-                ? new S(this._getParsedMessages)
-                : new T(this._getParsedMessages)),
+                ? new T(this._getParsedMessages)
+                : new s(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = _);
           try {
@@ -44216,89 +44215,90 @@
           }
           this.on("newListener", this._handleNewListener);
         }
-      };
+      }
     },
     429030: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
           setUpdateRules: function () {
-            return t.setUpdateRules;
+            return o.setUpdateRules;
           },
           FormattedMessage: function () {
-            return t.FormattedMessage;
-          },
-          default: function () {
-            return o.default;
+            return o.FormattedMessage;
           },
           getSystemLocale: function () {
-            return o.getSystemLocale;
+            return t.getSystemLocale;
+          },
+          default: function () {
+            return n;
           },
         });
-      var t = E("907407"),
-        o = E("601860");
+      var t = E("601860"),
+        o = E("907407"),
+        n = t.I18N;
     },
     841206: function (e, _, E) {
       "use strict";
       E.r(_),
         E.d(_, {
-          default: function () {
+          rules: function () {
             return O;
           },
         });
       var t = E("404828");
       let {
-        newline: o,
-        paragraph: n,
-        url: r,
-        link: a,
-        strong: i,
-        u: I,
-        br: s,
-        em: T,
-        image: S,
-        text: N,
-      } = t.defaultRules;
-      var O = {
-        newline: o,
-        paragraph: n,
-        url: r,
-        link: {
-          ...a,
-          parse(e, _, E) {
-            let t = a.parse(e, _, E);
-            return (t.context = E.context), t;
+          newline: o,
+          paragraph: n,
+          url: r,
+          link: a,
+          strong: i,
+          u: I,
+          br: s,
+          em: T,
+          image: S,
+          text: N,
+        } = t.defaultRules,
+        O = {
+          newline: o,
+          paragraph: n,
+          url: r,
+          link: {
+            ...a,
+            parse(e, _, E) {
+              let t = a.parse(e, _, E);
+              return (t.context = E.context), t;
+            },
           },
-        },
-        strong: i,
-        u: I,
-        br: s,
-        em: T,
-        image: S,
-        hook: {
-          order: N.order,
-          match: (0, t.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
-          parse(e, _, E) {
-            let { context: t } = E;
-            return { render: t[e[2]], content: _(e[1], E) };
+          strong: i,
+          u: I,
+          br: s,
+          em: T,
+          image: S,
+          hook: {
+            order: N.order,
+            match: (0, t.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
+            parse(e, _, E) {
+              let { context: t } = E;
+              return { render: t[e[2]], content: _(e[1], E) };
+            },
+            react: (e, _, E) => e.render(_(e.content, E), E.key),
           },
-          react: (e, _, E) => e.render(_(e.content, E), E.key),
-        },
-        noparse: {
-          order: N.order,
-          match: (0, t.inlineRegex)(/^!!(\d+?)!!/),
-          parse(e, _, E) {
-            let { unsafeContext: t } = E,
-              o = t[e[1]];
-            return (
-              "string" != typeof o && (o = null != o ? o.toString() : ""),
-              { type: "text", content: o }
-            );
+          noparse: {
+            order: N.order,
+            match: (0, t.inlineRegex)(/^!!(\d+?)!!/),
+            parse(e, _, E) {
+              let { unsafeContext: t } = E,
+                o = t[e[1]];
+              return (
+                "string" != typeof o && (o = null != o ? o.toString() : ""),
+                { type: "text", content: o }
+              );
+            },
+            react: e => e.content,
           },
-          react: e => e.content,
-        },
-        text: N,
-      };
+          text: N,
+        };
     },
     907407: function (e, _, E) {
       "use strict";
@@ -44364,12 +44364,12 @@
               t(E(e, { inline: n, context: _, unsafeContext: o }))
             );
           };
-        })(I.default, e)),
+        })(I.rules, e)),
           (o = (function (e) {
             let _ = i.parserFor(e);
             return (e, E, t) =>
               _(e + "\n\n", { inline: !1, context: E, unsafeContext: t });
-          })(I.default));
+          })(I.rules));
       }
       function N(e, _) {
         if (null == e) return "";
@@ -44412,20 +44412,23 @@
                     (n.onContextMenu = _.onContextMenu))
                   : (n.onClick = _);
               }
-              return (
-                null == n.onClick &&
-                  ((n.href = (0, o.sanitizeUrl)(e.target)),
-                  (n.target = "_blank")),
-                (0, t.jsx)(
-                  "a",
-                  {
-                    title: e.title,
-                    ...n,
-                    rel: "noreferrer",
-                    children: _(e.content, E),
-                  },
-                  E.key
-                )
+              if (null == n.onClick) {
+                var r;
+                (n.href =
+                  null !== (r = (0, o.sanitizeUrl)(e.target)) && void 0 !== r
+                    ? r
+                    : void 0),
+                  (n.target = "_blank");
+              }
+              return (0, t.jsx)(
+                "a",
+                {
+                  title: e.title,
+                  ...n,
+                  rel: "noreferrer",
+                  children: _(e.content, E),
+                },
+                E.key
               );
             },
           }),
@@ -52917,4 +52920,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.1b0779d9414cec43f3ff.js.map
+//# sourceMappingURL=47513.b4eb1ad3db3a4d5d0fad.js.map

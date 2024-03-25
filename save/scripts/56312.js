@@ -396,7 +396,7 @@
       function T(t) {
         return "guild:".concat(t, ":published");
       }
-      let C = new l.default(
+      let C = new l.SecondaryIndexMap(
           t => {
             let e = [E(t.guild_id)];
             return t.published && e.push(T(t.guild_id)), e;
@@ -659,4 +659,4 @@
     },
   },
 ]);
-//# sourceMappingURL=56312.de5e10995d461bc7f27e.js.map
+//# sourceMappingURL=56312.8832778fce03d3bbf795.js.map

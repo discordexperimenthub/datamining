@@ -1,44 +1,50 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
   ["60405"],
   {
-    631222: function (e, a, s) {
+    631222: function (e, s, a) {
       "use strict";
-      e.exports = s.p + "d5ddb47f86d17fe35f48.svg";
+      e.exports = a.p + "d5ddb47f86d17fe35f48.svg";
     },
-    754768: function (e, a, s) {
+    754768: function (e, s, a) {
       "use strict";
-      s.r(a),
-        s.d(a, {
+      a.r(s),
+        a.d(s, {
           ConfirmNoSharedServerSubscribeWarningModal: function () {
             return d;
           },
         });
-      var t = s("37983");
-      s("884691");
-      var n = s("77078"),
-        o = s("782340"),
-        i = s("526980"),
-        r = s("631222");
+      var t = a("37983");
+      a("884691");
+      var n = a("77078"),
+        o = a("782340"),
+        r = a("526980"),
+        i = a("631222");
       function d(e) {
-        let { application: a, onConfirm: s, onClose: d, onCancel: l, ...c } = e;
+        let {
+          applicationName: s,
+          onConfirm: a,
+          onClose: d,
+          onCancel: l,
+          ...c
+        } = e;
         return (0, t.jsxs)(n.ModalRoot, {
           ...c,
           children: [
             (0, t.jsxs)(n.ModalContent, {
-              className: i.body,
+              className: r.body,
               children: [
                 (0, t.jsx)("img", {
                   alt: "",
-                  src: r,
-                  className: i.img,
+                  src: i,
+                  className: r.img,
                   "aria-hidden": !0,
                 }),
                 (0, t.jsx)(n.Heading, {
                   variant: "heading-xl/extrabold",
-                  className: i.title,
+                  className: r.title,
                   children:
                     o.default.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format(
-                      { applicationName: a.name }
+                      { applicationName: s }
                     ),
                 }),
                 (0, t.jsx)(n.Text, {
@@ -53,12 +59,12 @@
               children: [
                 (0, t.jsx)(n.Button, {
                   onClick: () => {
-                    s(), d();
+                    a(), d();
                   },
                   children: o.default.Messages.CONTINUE,
                 }),
                 (0, t.jsx)(n.Button, {
-                  className: i.cancel,
+                  className: r.cancel,
                   onClick: () => {
                     l(), d();
                   },
@@ -74,4 +80,4 @@
     },
   },
 ]);
-//# sourceMappingURL=704389b2e6cfbeb795d1.js.map
+//# sourceMappingURL=f1e3f0dfc41c36e16e1d.js.map

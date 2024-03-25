@@ -115,7 +115,7 @@
         return e.sort;
       }
       function I() {
-        return new a.default(M, S);
+        return new a.SecondaryIndexMap(M, S);
       }
       ((n = i || (i = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER"),
         (n.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER"),
@@ -1619,4 +1619,4 @@
     },
   },
 ]);
-//# sourceMappingURL=55639.f3cc9ab1f7c81c8b932c.js.map
+//# sourceMappingURL=55639.871b4aad1b6ec171a586.js.map

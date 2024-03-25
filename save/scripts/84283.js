@@ -974,7 +974,7 @@
         g = n("299039"),
         N = n("724210");
       ((r = l || (l = {})).DEFAULT = "DEFAULT"), (r.FAVORITE = "FAVORITE");
-      let R = new d.default(
+      let R = new d.SecondaryIndexMap(
         e => {
           let { isRequest: t, isFavorite: n } = e;
           return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
@@ -1725,4 +1725,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1e81f8be2f8640e588a5.js.map
+//# sourceMappingURL=3387940c8718011b770b.js.map

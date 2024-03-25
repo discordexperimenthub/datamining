@@ -47,11 +47,11 @@
             ),
             [_, x] = a.useState(!0),
             [h, p] = a.useState(!1),
-            { ref: R, height: M = 0 } = (0, u.default)(),
+            { ref: M, height: R = 0 } = (0, u.default)(),
             { ref: F, height: v = 0 } = (0, u.default)(),
             [N, S] = a.useState(l),
             C = (0, r.useSpring)({
-              height: N ? v + M : M,
+              height: N ? v + R : R,
               immediate: _ || m,
               config: { ...r.config.stiff, clamp: !0 },
               onStart: () => {
@@ -89,7 +89,7 @@
                 style: C,
                 children: [
                   (0, n.jsx)(d.Clickable, {
-                    innerRef: R,
+                    innerRef: M,
                     onClick: I ? void 0 : T,
                     className: s(E.innerHeader, { [E.toggled]: l && I }),
                     "aria-label": f.default.Messages.EXPAND,
@@ -158,18 +158,18 @@
           t
         );
       }
-      let h = new a.default(x, e => "".concat(e.id)),
-        p = new a.default(x, e => "".concat(e.id)),
-        R = new a.default(x, e => "".concat(e.actionedAt));
-      function M(e) {
+      let h = new a.SecondaryIndexMap(x, e => "".concat(e.id)),
+        p = new a.SecondaryIndexMap(x, e => "".concat(e.id)),
+        M = new a.SecondaryIndexMap(x, e => "".concat(e.actionedAt));
+      function R(e) {
         return h.get(e);
       }
       function F(e) {
         h.set(e.id, e),
           (0, o.isSubmittedApplicationStatus)(e.applicationStatus) &&
-            (R.delete(e.id), p.set(e.id, e)),
+            (M.delete(e.id), p.set(e.id, e)),
           (0, o.isActionedApplicationStatus)(e.applicationStatus) &&
-            (p.delete(e.id), R.set(e.id, e));
+            (p.delete(e.id), M.set(e.id, e));
       }
       function v(e) {
         var t, i;
@@ -190,7 +190,7 @@
         getRequests(e, t) {
           let i = _.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
           return (0, o.isActionedApplicationStatus)(t)
-            ? R.values(i)
+            ? M.values(i)
             : (0, o.isSubmittedApplicationStatus)(t)
               ? p.values(i)
               : h.values(i);
@@ -265,7 +265,7 @@
               (i = n),
               h.delete(i),
               p.delete(i),
-              R.delete(i);
+              M.delete(i);
           }
         },
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
@@ -282,7 +282,7 @@
               ? t
               : d.GuildJoinRequestApplicationStatuses.SUBMITTED;
           "REVIEW_APPLICATION" !== a &&
-            ((0, o.isActionedApplicationStatus)(a) && R.clear(),
+            ((0, o.isActionedApplicationStatus)(a) && M.clear(),
             (0, o.isSubmittedApplicationStatus)(a) && p.clear());
         },
         GUILD_JOIN_REQUESTS_SET_SELECTED: function (e) {
@@ -480,7 +480,7 @@
             },
             []
           );
-          let R = a.useCallback(async () => {
+          let M = a.useCallback(async () => {
             if (!h.current) {
               m(null);
               try {
@@ -510,7 +510,7 @@
                 onChange: e => {
                   x(e);
                 },
-                onBlur: R,
+                onBlur: M,
                 autosize: !0,
               }),
               null != T && "" !== T
@@ -876,7 +876,7 @@
             } = e,
             h = i.values,
             p = h.slice(0, 1),
-            R = h.length - p.length;
+            M = h.length - p.length;
           return (0, n.jsxs)(u.default, {
             field: i,
             index: a,
@@ -888,11 +888,11 @@
             title: x,
             children: [
               (0, n.jsx)(d.TermsFieldBody, {
-                className: l(f.fieldBackground, { [f.withFooter]: 0 !== R }),
+                className: l(f.fieldBackground, { [f.withFooter]: 0 !== M }),
                 terms: p,
                 channelId: t,
               }),
-              0 !== R &&
+              0 !== M &&
                 (0, n.jsxs)(r.Clickable, {
                   className: l(f.fieldFooterContainer, f.clickable),
                   onClick: m,
@@ -901,7 +901,7 @@
                       className: f.clickable,
                       children:
                         c.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format(
-                          { count: R }
+                          { count: M }
                         ),
                     }),
                     (0, n.jsx)(o.default, {
@@ -1011,7 +1011,7 @@
           x = _ === f.VerificationLevels.VERY_HIGH ? d.default : o.default,
           h = a.useMemo(() => T(_), [_]),
           p = m[_],
-          R = (0, n.jsx)("div", {
+          M = (0, n.jsx)("div", {
             className: I.verificationLevelTitle,
             children:
               E.default.Messages.MEMBER_VERIFICATION_GUILD_VERIFICATION_LEVEL.format(
@@ -1031,14 +1031,14 @@
                 }
               ),
           }),
-          M =
+          R =
             _ === f.VerificationLevels.VERY_HIGH
               ? E.default.Messages
                   .MEMBER_VERIFICATION_FORM_ITEM_PHONE_VERIFICATION_SETTINGS_LABEL
               : E.default.Messages
                   .MEMBER_VERIFICATION_FORM_ITEM_EMAIL_VERIFICATION_SETTINGS_LABEL;
         return (0, n.jsx)(c.default, {
-          title: R,
+          title: M,
           children: (0, n.jsxs)("div", {
             className: I.verificationContainer,
             children: [
@@ -1046,7 +1046,7 @@
               (0, n.jsx)(s.Text, {
                 className: I.guildVerificationText,
                 variant: "text-sm/normal",
-                children: M,
+                children: R,
               }),
               l &&
                 (0, n.jsx)(s.Clickable, {
@@ -1242,10 +1242,10 @@
             updateFormField: h,
             updateFormFieldOrder: p,
           } = e,
-          R = async () => {
+          M = async () => {
             await x(I);
           },
-          M = async e => {
+          R = async e => {
             await h(I, e);
           },
           F = async (e, t, i) => {
@@ -1260,7 +1260,7 @@
             isDropHovered: N,
             onEdit: () => {
               0 === _
-                ? T(c, M, E)
+                ? T(c, R, E)
                 : (0, l.openModalLazy)(async () => {
                     let { default: e } = await i
                       .el("265397")
@@ -1270,11 +1270,11 @@
                         ...t,
                         guildId: E.id,
                         submittedGuildJoinRequestsCount: _,
-                        onConfirm: () => T(c, M, E),
+                        onConfirm: () => T(c, R, E),
                       });
                   });
             },
-            onRemove: R,
+            onRemove: M,
             onDrop: F,
           };
         switch (c.field_type) {
@@ -1395,9 +1395,9 @@
               guild: t,
               submittedGuildJoinRequestsCount: i,
               onFormFieldUpdate: p,
-              hideVerificationLevelField: R,
+              hideVerificationLevelField: M,
             } = e,
-            M = t.hasFeature(x.GuildFeatures.CLAN),
+            R = t.hasFeature(x.GuildFeatures.CLAN),
             F = a.useRef(!1),
             [v, N] = a.useState(null),
             [S, C] = a.useState(e.formFields),
@@ -1485,7 +1485,7 @@
             ),
             k = (0, n.jsxs)(n.Fragment, {
               children: [
-                !R && (0, n.jsx)(E.default, { guild: t }),
+                !M && (0, n.jsx)(E.default, { guild: t }),
                 (0, n.jsx)(c.default, { guildId: t.id }),
                 !O &&
                   !y &&
@@ -1520,7 +1520,7 @@
                   !U &&
                     (0, n.jsx)(u.default, {
                       addFormField: B,
-                      showManualApprovalWarning: !M && !(j > 0),
+                      showManualApprovalWarning: !R && !(j > 0),
                       guild: t,
                     }),
                   L.map(e =>
@@ -1588,7 +1588,7 @@
       i.r(t),
         i.d(t, {
           default: function () {
-            return M;
+            return R;
           },
         }),
         i("222007");
@@ -1610,7 +1610,7 @@
         x = i("782340"),
         h = i("854743"),
         p = i("108288");
-      function R(e) {
+      function M(e) {
         let {
             guild: t,
             isExpanded: l,
@@ -1629,7 +1629,7 @@
               f(c);
             }
           },
-          R = e => {
+          M = e => {
             e && s
               ? (0, o.openModalLazy)(async () => {
                   let { ConfirmModal: t } = await i
@@ -1655,7 +1655,7 @@
                 })
               : I(e);
           },
-          M = () => {
+          R = () => {
             (0, o.openModalLazy)(async () => {
               let { default: e } = await i.el("93184").then(i.bind(i, "93184"));
               return i => (0, n.jsx)(e, { ...i, guildId: t.id, isPreview: !0 });
@@ -1709,7 +1709,7 @@
                           onMouseDown: E,
                           onMouseUp: E,
                           onClick: e => {
-                            E(e), M();
+                            E(e), R();
                           },
                           children: (0, n.jsx)(o.Tooltip, {
                             tooltipContentClassName: p.tooltip,
@@ -1725,7 +1725,7 @@
                         }),
                         (0, n.jsx)(_.default, {
                           checked: c,
-                          onChange: () => R(!c),
+                          onChange: () => M(!c),
                         }),
                       ],
                     })
@@ -1738,7 +1738,7 @@
           ],
         });
       }
-      function M(e) {
+      function R(e) {
         var t;
         let { guild: i } = e,
           [l, o] = a.useState(!1),
@@ -1747,7 +1747,7 @@
           x = a.useCallback(() => {
             _.current = !0;
           }, []),
-          M = (0, E.useSubmittedGuildJoinRequestTotal)({ guildId: i.id }),
+          R = (0, E.useSubmittedGuildJoinRequestTotal)({ guildId: i.id }),
           F = (0, r.useStateFromStores)([c.default], () => c.default.get(i.id)),
           v =
             null !== (t = null == F ? void 0 : F.formFields) && void 0 !== t
@@ -1760,7 +1760,7 @@
             });
           }, [i.id]),
           (0, n.jsx)(d.default, {
-            renderHeader: (0, n.jsx)(R, {
+            renderHeader: (0, n.jsx)(M, {
               guild: i,
               isExpanded: l,
               emptyFormFields:
@@ -1781,7 +1781,7 @@
                 T &&
                 (0, n.jsx)(I.default, {
                   guild: i,
-                  submittedGuildJoinRequestsCount: M,
+                  submittedGuildJoinRequestsCount: R,
                   formFields: v,
                   onFormFieldUpdate: x,
                   hideVerificationLevelField: !0,
@@ -2109,4 +2109,4 @@
     },
   },
 ]);
-//# sourceMappingURL=07fc4e44bb04b240cdc8.js.map
+//# sourceMappingURL=fb22b7ac4fd8f4515e42.js.map

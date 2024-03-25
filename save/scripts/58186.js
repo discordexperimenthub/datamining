@@ -66,16 +66,16 @@
         s = {},
         E = {},
         C = 10 * a.default.Millis.MINUTE;
-      function f(t) {
+      function _(t) {
         return "guild:".concat(t);
       }
-      function _(t) {
+      function f(t) {
         return "guild:".concat(t, ":published");
       }
-      let T = new i.default(
+      let T = new i.SecondaryIndexMap(
           t => {
-            let e = [f(t.guild_id)];
-            return t.published && e.push(_(t.guild_id)), e;
+            let e = [_(t.guild_id)];
+            return t.published && e.push(f(t.guild_id)), e;
           },
           t =>
             (function (t) {
@@ -94,7 +94,7 @@
         }
         getGuildProductsForGuild(t, e) {
           let { publishedOnly: u } = e;
-          return null == t ? D : T.values(u ? _(t) : f(t));
+          return null == t ? D : T.values(u ? f(t) : _(t));
         }
         getGuildProductFetchState(t) {
           var e;
@@ -113,7 +113,7 @@
         GUILD_PRODUCTS_FETCH: function (t) {
           let { guildId: e } = t;
           c[e] = 1;
-          let u = [...T.values(f(e))];
+          let u = [...T.values(_(e))];
           u.forEach(t => {
             T.delete(t.id);
           });
@@ -158,4 +158,4 @@
     },
   },
 ]);
-//# sourceMappingURL=bc50188dbdbe15b0be73.js.map
+//# sourceMappingURL=aa89cd3b5267135e149e.js.map

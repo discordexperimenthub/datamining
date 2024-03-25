@@ -59,7 +59,7 @@
           BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
           BROADCASTS_BY_VALIDITY: e => "validity:".concat(e),
         },
-        g = new i.default(
+        g = new i.SecondaryIndexMap(
           function (e) {
             let t = A.has(e.userId) ? 1 : 0;
             return (
@@ -691,9 +691,9 @@
           } = e,
           L = (0, I.useBroadcastingStoredSelectedTags)(),
           [B, w] = n.useState(L),
-          [M, O] = n.useState(""),
-          p = c.BroadcastAllowFriends.useSetting(),
-          [y, U] = n.useState(null == p || p),
+          [M, p] = n.useState(""),
+          O = c.BroadcastAllowFriends.useSetting(),
+          [y, U] = n.useState(null == O || O),
           b = c.BroadcastAutoBroadcast.useSetting(),
           [G, j] = n.useState(b),
           [F, k] = n.useState(!1),
@@ -701,8 +701,8 @@
           V = (0, E.useSelfBroadcast)(),
           Y = (0, _.default)(null == V ? void 0 : V.channelId),
           z = n.useMemo(
-            () => p !== y || !(0, r.isEqual)(L, B) || b !== G,
-            [p, y, L, B, b, G]
+            () => O !== y || !(0, r.isEqual)(L, B) || b !== G,
+            [O, y, L, B, b, G]
           ),
           W = null != N,
           X = n.useMemo(
@@ -750,7 +750,7 @@
           );
         }
         function ea(e) {
-          O(e);
+          p(e);
         }
         function el(e, t) {
           let a = (0, u.getFullRowId)(t);
@@ -1057,8 +1057,8 @@
             guilds: B = [],
             placeholderText: w,
             disabledText: M,
-            hintText: O,
-            searchTitleText: p,
+            hintText: p,
+            searchTitleText: O,
             renderEmptyText: y,
             focusSearchAfterReady: U,
             isReady: b,
@@ -1139,10 +1139,10 @@
               (0, l.jsxs)("div", {
                 className: s(g.searchBox, { [g.scrollSeparator]: H }),
                 children: [
-                  null != p &&
+                  null != O &&
                     (0, l.jsx)(d.FormTitle, {
                       tag: d.FormTitleTags.H5,
-                      children: p,
+                      children: O,
                     }),
                   (0, l.jsx)(_.default, {
                     ref: F,
@@ -1163,10 +1163,10 @@
                     "aria-labelledby": R,
                     "aria-controls": h,
                   }),
-                  null != O
+                  null != p
                     ? (0, l.jsx)(d.Text, {
                         variant: "text-xs/normal",
-                        children: O,
+                        children: p,
                       })
                     : null,
                 ],
@@ -1456,4 +1456,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1dc95adc7b80e79284af.js.map
+//# sourceMappingURL=5a6dfee7b160e66fd685.js.map

@@ -5812,7 +5812,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return m;
+            return h;
           },
         }),
         s("222007");
@@ -5827,9 +5827,11 @@
         c = s("763377"),
         S = s("77078"),
         E = s("206230"),
-        T = s("976028"),
-        f = s("782340"),
-        _ = s("904620");
+        T = s("599110"),
+        f = s("976028"),
+        _ = s("49111"),
+        m = s("782340"),
+        g = s("904620");
       ((n = a || (a = {}))[(n.ODDS_FIRST = 0)] = "ODDS_FIRST"),
         (n[(n.ODDS_2 = 1)] = "ODDS_2"),
         (n[(n.ODDS_3 = 2)] = "ODDS_3"),
@@ -5837,67 +5839,78 @@
         (n[(n.ODDS_5 = 4)] = "ODDS_5"),
         (n[(n.ODDS_6 = 5)] = "ODDS_6"),
         (n[(n.ODDS_LAST = 6)] = "ODDS_LAST");
-      function m(e) {
+      function h(e) {
         let { className: t } = e,
           s = (0, d.useStateFromStores)(
             [E.default],
             () => E.default.useReducedMotion
           ),
           [a, n] = i.useState(!1),
-          [r, m] = i.useState(0),
-          [g, h] = i.useState(""),
-          [N] = i.useState(new u.Timeout()),
-          [I, p] = i.useState((0, T.randomBetween)(5, 95)),
-          C = (function (e, t) {
+          [r, h] = i.useState(0),
+          [N, I] = i.useState(""),
+          [p] = i.useState(new u.Timeout()),
+          [C, A] = i.useState((0, f.randomBetween)(5, 95)),
+          O = (function (e, t) {
             switch (e) {
               case 0:
-                return f.default.Messages.PACKAGES_HELP_1;
+                return m.default.Messages.PACKAGES_HELP_1;
               case 1:
-                return f.default.Messages.PACKAGES_HELP_2;
+                return m.default.Messages.PACKAGES_HELP_2;
               case 2:
-                return f.default.Messages.PACKAGES_HELP_3;
+                return m.default.Messages.PACKAGES_HELP_3;
               case 3:
-                return f.default.Messages.PACKAGES_HELP_4;
+                return m.default.Messages.PACKAGES_HELP_4;
               case 4:
-                return f.default.Messages.PACKAGES_HELP_5.format({
+                return m.default.Messages.PACKAGES_HELP_5.format({
                   percent: t,
                 });
               case 5:
-                return f.default.Messages.PACKAGES_HELP_6;
+                return m.default.Messages.PACKAGES_HELP_6;
               case 6:
-                return f.default.Messages.PACKAGES_HELP_7;
+                return m.default.Messages.PACKAGES_HELP_7;
             }
-          })(r, I),
-          A = g.length === C.length,
-          O = () => {
-            r < 6 ? m(r + 1) : m(0), p((0, T.randomBetween)(5, 95));
+          })(r, C),
+          x = N.length === O.length,
+          R = () => {
+            T.default.track(_.AnalyticEvents.EASTER_EGG_INTERACTED, {
+              type: "packages_help_icon_click",
+              position: r,
+            }),
+              r < 6 ? h(r + 1) : h(0),
+              A((0, f.randomBetween)(5, 95));
           };
         return (
           i.useEffect(() => {
-            if (g.length === C.length || !a || s) {
-              N.stop();
+            if (N.length === O.length || !a || s) {
+              p.stop();
               return;
             }
-            N.start((0, T.randomBetween)(20, 100), () => {
-              h(C.substring(0, g.length + 1));
+            p.start((0, f.randomBetween)(20, 100), () => {
+              I(O.substring(0, N.length + 1));
             });
-          }, [a, r, g.length, N, C, s]),
+          }, [a, r, N.length, p, O, s]),
           i.useEffect(() => {
-            h(C.substring(0, 1));
-          }, [r, C]),
-          i.useEffect(() => () => N.stop(), [N]),
+            I(O.substring(0, 1));
+          }, [r, O]),
+          i.useEffect(() => () => p.stop(), [p]),
           (0, l.jsx)(S.Tooltip, {
-            text: s ? C : g,
-            "aria-label": C,
-            onTooltipShow: () => n(!0),
+            text: s ? O : N,
+            "aria-label": O,
+            onTooltipShow: () => {
+              T.default.track(_.AnalyticEvents.EASTER_EGG_INTERACTED, {
+                type: "packages_help_icon_hover",
+                position: r,
+              }),
+                n(!0);
+            },
             onTooltipHide: () => n(!1),
             children: e =>
               (0, l.jsx)(S.Clickable, {
                 ...e,
-                onClick: s || A ? O : void 0,
-                className: o(t, _.clickable),
+                onClick: s || x ? R : void 0,
+                className: o(t, g.clickable),
                 children: (0, l.jsx)(c.CircleQuestionIcon, {
-                  className: _.icon,
+                  className: g.icon,
                 }),
               }),
           })
@@ -5909,7 +5922,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return E;
+            return f;
           },
         }),
         s("222007");
@@ -5919,113 +5932,119 @@
         i = s("882039"),
         r = s("862337"),
         o = s("77078"),
-        d = s("4452"),
-        u = s("782340"),
-        c = s("114602");
-      let S = l.config.stiff;
-      function E(e) {
-        let { image: t, name: s, sound: E, openedCount: T } = e,
-          f = T > 0,
-          _ = n.useRef(null),
-          m = n.useRef(null),
-          [g, h] = n.useState(!1),
-          [N, I] = n.useState({ x: 0, y: 0 }),
-          [p] = n.useState(new r.Interval()),
-          [C, A] = (0, l.useSpring)(() => ({ x: 0, y: 0, config: S })),
-          [O, x] = (0, l.useSpring)(() => ({ value: 1, config: S }));
+        d = s("599110"),
+        u = s("4452"),
+        c = s("49111"),
+        S = s("782340"),
+        E = s("114602");
+      let T = l.config.stiff;
+      function f(e) {
+        let { image: t, name: s, sound: f, openedCount: _, index: m } = e,
+          g = _ > 0,
+          h = n.useRef(null),
+          N = n.useRef(null),
+          [I, p] = n.useState(!1),
+          [C, A] = n.useState({ x: 0, y: 0 }),
+          [O] = n.useState(new r.Interval()),
+          [x, R] = (0, l.useSpring)(() => ({ x: 0, y: 0, config: T })),
+          [M, D] = (0, l.useSpring)(() => ({ value: 1, config: T }));
         n.useEffect(() => {
-          if (f && g && null != _.current) {
-            let e = _.current.getBoundingClientRect(),
-              t = N.x - e.x,
-              s = N.y - e.y,
+          if (g && I && null != h.current) {
+            let e = h.current.getBoundingClientRect(),
+              t = C.x - e.x,
+              s = C.y - e.y,
               a = e.width / 2,
               n = e.height / 2;
-            A({ x: ((t - a) / a) * 25, y: -(((s - n) / n) * 25) });
+            R({ x: ((t - a) / a) * 25, y: -(((s - n) / n) * 25) });
           }
-        }, [g, f, N.x, N.y, A]),
+        }, [I, g, C.x, C.y, R]),
           n.useEffect(() => {
-            x({ value: f && g ? 1.2 : 1 });
-          }, [g, f, x]);
-        let R = n.useCallback(e => {
-            I({ x: e.clientX, y: e.clientY });
+            D({ value: g && I ? 1.2 : 1 });
+          }, [I, g, D]);
+        let v = n.useCallback(e => {
+            A({ x: e.clientX, y: e.clientY });
           }, []),
-          M = n.useCallback(
+          L = n.useCallback(
             e => {
-              h(!0), R(e);
+              p(!0), v(e);
             },
-            [R]
+            [v]
           ),
-          D = n.useCallback(() => {
-            h(!1), I({ x: 0, y: 0 }), A({ x: 0, y: 0 });
-          }, [A]),
-          v = n.useCallback(() => {
-            if (null != m.current) {
-              let e = m.current.currentTime / m.current.duration,
-                t = (0, d.default)(1, 1.2, e);
-              x({ value: t }), e >= 1 && (!g && x({ value: 1 }), p.stop());
+          P = n.useCallback(() => {
+            p(!1), A({ x: 0, y: 0 }), R({ x: 0, y: 0 });
+          }, [R]),
+          j = n.useCallback(() => {
+            if (null != N.current) {
+              let e = N.current.currentTime / N.current.duration,
+                t = (0, u.default)(1, 1.2, e);
+              D({ value: t }), e >= 1 && (!I && D({ value: 1 }), O.stop());
             }
-          }, [p, g, x]);
+          }, [O, I, D]);
         n.useEffect(() => {
-          null != p._ref && p.start(30, v);
-        }, [p, v]);
-        let L = n.useCallback(() => {
-          null != m.current &&
-            ((m.current.currentTime = 0), m.current.play(), p.start(30, v));
-        }, [p, v]);
+          null != O._ref && O.start(30, j);
+        }, [O, j]);
+        let b = n.useCallback(() => {
+          d.default.track(c.AnalyticEvents.EASTER_EGG_INTERACTED, {
+            type: "packages_item_click",
+            position: m,
+          }),
+            null != N.current &&
+              ((N.current.currentTime = 0), N.current.play(), O.start(30, j));
+        }, [O, j, m]);
         return (0, a.jsxs)(o.Clickable, {
-          onClick: f ? L : void 0,
+          onClick: g ? b : void 0,
           children: [
-            (0, a.jsx)("audio", { src: E, ref: m }),
+            (0, a.jsx)("audio", { src: f, ref: N }),
             (0, a.jsx)(l.animated.div, {
-              ref: _,
-              className: f ? c.containerOwned : void 0,
+              ref: h,
+              className: g ? E.containerOwned : void 0,
               style: {
-                transform: (0, l.to)([O.value], e => "scale(".concat(e, ")")),
+                transform: (0, l.to)([M.value], e => "scale(".concat(e, ")")),
               },
-              onMouseEnter: M,
-              onMouseLeave: D,
-              onMouseMove: R,
+              onMouseEnter: L,
+              onMouseLeave: P,
+              onMouseMove: v,
               children: (0, a.jsxs)(l.animated.div, {
-                className: c.item,
+                className: E.item,
                 style: {
-                  transform: (0, l.to)([C.x, C.y], (e, t) =>
+                  transform: (0, l.to)([x.x, x.y], (e, t) =>
                     "rotateY(".concat(e, "deg) rotateX(").concat(t, "deg)")
                   ),
                 },
                 children: [
-                  f &&
+                  g &&
                     (0, a.jsxs)(a.Fragment, {
                       children: [
                         (0, a.jsx)(o.Text, {
                           variant: "text-xxs/bold",
-                          className: c.count,
+                          className: E.count,
                           children:
-                            u.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
-                              { count: T }
+                            S.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format(
+                              { count: _ }
                             ),
                         }),
                         (0, a.jsx)(i.VoiceNormalIcon, {
-                          className: c.audioIndicator,
+                          className: E.audioIndicator,
                           color: o.tokens.colors.INTERACTIVE_ACTIVE,
                         }),
                       ],
                     }),
                   (0, a.jsx)(o.Heading, {
                     variant: "display-md",
-                    className: c.imageContainer,
+                    className: E.imageContainer,
                     color: "text-muted",
-                    children: f
+                    children: g
                       ? (0, a.jsx)("img", {
                           src: t,
                           alt: "",
-                          className: c.image,
+                          className: E.image,
                         })
                       : "?",
                   }),
-                  f &&
+                  g &&
                     (0, a.jsx)(o.Text, {
                       variant: "text-xxs/bold",
-                      className: c.name,
+                      className: E.name,
                       children: s,
                     }),
                 ],
@@ -11959,9 +11978,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278295",
+          E = "278299",
           T =
-            ((e = "2e8c5bcf8d772b2a6cf1e45fdd4b4cd5eed7c7b2"),
+            ((e = "51ffa1c64225e1cd5e60637dcfe05a5cfea641e2"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20770,7 +20789,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return Y;
+            return W;
           },
         }),
         s("222007"),
@@ -20803,11 +20822,13 @@
         M = s("471671"),
         D = s("181114"),
         v = s("703712"),
-        L = s("718517"),
-        P = s("630615"),
-        j = s("782340"),
-        b = s("449617");
-      function U() {
+        L = s("599110"),
+        P = s("718517"),
+        j = s("49111"),
+        b = s("630615"),
+        U = s("782340"),
+        y = s("449617");
+      function B() {
         let e = (0, S.useStateFromStores)([M.default], () =>
             M.default.isFocused()
           ),
@@ -20818,28 +20839,32 @@
           [s, a] = i.useState(0),
           n = -1 === s;
         return (0, l.jsxs)(_.Clickable, {
-          className: b.headerContainer,
+          className: y.headerContainer,
           onClick: n
             ? void 0
             : () => {
-                s > 0 && (s + 1) % 5 == 0 ? a(-1) : a(s + 1);
+                L.default.track(j.AnalyticEvents.EASTER_EGG_INTERACTED, {
+                  type: "packages_header_click",
+                  position: s,
+                }),
+                  s > 0 && (s + 1) % 5 == 0 ? a(-1) : a(s + 1);
               },
           children: [
             (0, l.jsx)(R.default, {
-              className: b.headerBackground,
+              className: y.headerBackground,
               pageMultiplier: 10,
             }),
             (0, l.jsx)(_.Heading, {
               variant: "display-md",
-              className: b.header,
+              className: y.header,
               color: "always-white",
-              children: j.default.Messages.PACKAGES,
+              children: U.default.Messages.PACKAGES,
             }),
             (0, l.jsx)("div", {
-              className: b.headerCTA,
+              className: y.headerCTA,
               children: (0, l.jsxs)(D.default, {
-                className: b.headerButton,
-                innerClassName: b.innerButton,
+                className: y.headerButton,
+                innerClassName: y.innerButton,
                 pauseAnimation: !e || t,
                 onClick: e => {
                   e.stopPropagation(), (0, N.openLootbox)();
@@ -20848,16 +20873,16 @@
                 color: _.ButtonColors.CUSTOM,
                 children: [
                   (0, l.jsx)(A.default, {
-                    className: b.buttonIconLarge,
+                    className: y.buttonIconLarge,
                     color: _.tokens.colors.WHITE,
                   }),
-                  j.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
+                  U.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
                 ],
               }),
             }),
             n
               ? (0, l.jsx)("div", {
-                  className: b.headerEasterEgg,
+                  className: y.headerEasterEgg,
                   children: (0, l.jsx)(v.EasterEggAnimation, {
                     position: v.EasterEggPosition.BOTTOM_LEFT,
                     onAnimationComplete: () => {
@@ -20870,14 +20895,14 @@
           ],
         });
       }
-      function y(e) {
+      function F(e) {
         let { icon: t, text: s, count: a, fetchState: n } = e;
         return (0, l.jsxs)("div", {
-          className: b.stat,
+          className: y.stat,
           children: [
             (0, l.jsx)(t, { color: _.tokens.colors.TEXT_MUTED }),
             (0, l.jsx)(_.Text, {
-              className: b.statText,
+              className: y.statText,
               variant: "text-xs/bold",
               color: "text-muted",
               children: s,
@@ -20893,10 +20918,10 @@
           ],
         });
       }
-      let B = L.default.Millis.SECOND,
-        F = 2 * L.default.Millis.SECOND;
-      function G() {
-        let e = (0, P.getLootboxes)(),
+      let G = P.default.Millis.SECOND,
+        k = 2 * P.default.Millis.SECOND;
+      function H() {
+        let e = (0, b.getLootboxes)(),
           [t, s, a, n, r, o, d] = (0, S.useStateFromStoresArray)(
             [I.default],
             () => [
@@ -20919,7 +20944,7 @@
           }, [n, r]),
           i.useEffect(
             () => (
-              f.start((0, p.randomBetween)(B, F), () => {
+              f.start((0, p.randomBetween)(G, k), () => {
                 if (_ < 1) {
                   let e = Math.min((Date.now() - o) / d, 1);
                   m(e);
@@ -20930,26 +20955,26 @@
             [r, d, n, o, f, _]
           ),
           (0, l.jsxs)("div", {
-            className: b.stats,
+            className: y.stats,
             children: [
-              (0, l.jsx)(y, {
+              (0, l.jsx)(F, {
                 icon: c.TicketIcon,
-                text: j.default.Messages.PACKAGES_PACKAGES_OPENED,
+                text: U.default.Messages.PACKAGES_PACKAGES_OPENED,
                 count: T,
                 fetchState: t,
               }),
-              (0, l.jsx)(y, {
+              (0, l.jsx)(F, {
                 icon: A.default,
-                text: j.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
-                count: j.default.Messages.PACKAGES_OPENED_OUT_OF.format({
+                text: U.default.Messages.PACKAGES_UNIQUE_PACKAGES_OPENED,
+                count: U.default.Messages.PACKAGES_OPENED_OUT_OF.format({
                   count: Object.keys(a).filter(e => a[e] > 0).length,
                   total: Object.keys(e).length,
                 }),
                 fetchState: t,
               }),
-              (0, l.jsx)(y, {
+              (0, l.jsx)(F, {
                 icon: u.GlobeEarthIcon,
-                text: j.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
+                text: U.default.Messages.PACKAGES_GLOBAL_PACKAGES_OPENED,
                 count: g,
                 fetchState: s,
               }),
@@ -20957,13 +20982,13 @@
           })
         );
       }
-      function k() {
+      function w() {
         let [e, t, a] = (0, S.useStateFromStoresArray)([I.default], () => [
             I.default.openedItems,
             I.default.redeemedPrize,
             I.default.userDataFetchState,
           ]),
-          n = (0, P.getLootboxes)(),
+          n = (0, b.getLootboxes)(),
           r = i.useMemo(
             () =>
               Object.keys(e).length === Object.keys(n).length &&
@@ -20986,10 +21011,10 @@
                     !t &&
                       r &&
                       (0, l.jsxs)("div", {
-                        className: b.banner,
+                        className: y.banner,
                         children: [
                           (0, l.jsxs)("div", {
-                            className: b.inline,
+                            className: y.inline,
                             children: [
                               (0, l.jsx)(T.CircleInformationIcon, {
                                 width: 16,
@@ -21000,44 +21025,45 @@
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children:
-                                  j.default.Messages
+                                  U.default.Messages
                                     .USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
                               }),
                             ],
                           }),
                           (0, l.jsxs)(_.Button, {
-                            className: b.headerButton,
-                            innerClassName: b.innerButton,
+                            className: y.headerButton,
+                            innerClassName: y.innerButton,
                             onClick: o,
                             size: _.ButtonSizes.SMALL,
                             color: _.ButtonColors.CUSTOM,
                             children: [
                               (0, l.jsx)(f.GiftIcon, {
-                                className: b.buttonIconSmall,
+                                className: y.buttonIconSmall,
                                 color: _.tokens.colors.WHITE,
                               }),
-                              j.default.Messages
+                              U.default.Messages
                                 .USER_SETTINGS_PACKAGE_BANNER_CTA,
                             ],
                           }),
                         ],
                       }),
                     (0, l.jsx)("div", {
-                      className: b.inventoryItems,
-                      children: Object.keys(n).map(t => {
-                        var s;
-                        let a = n[t];
+                      className: y.inventoryItems,
+                      children: Object.keys(n).map((t, s) => {
+                        var a;
+                        let i = n[t];
                         return (0, l.jsx)(
                           x.default,
                           {
-                            image: a.image,
-                            name: a.name,
-                            sound: a.sound,
+                            image: i.image,
+                            name: i.name,
+                            sound: i.sound,
                             openedCount:
-                              null !== (s = null == e ? void 0 : e[t]) &&
-                              void 0 !== s
-                                ? s
+                              null !== (a = null == e ? void 0 : e[t]) &&
+                              void 0 !== a
+                                ? a
                                 : 0,
+                            index: s,
                           },
                           t
                         );
@@ -21050,30 +21076,34 @@
           children: [
             (0, l.jsxs)(_.Heading, {
               variant: "heading-md/semibold",
-              className: b.inventoryHeader,
+              className: y.inventoryHeader,
               children: [
-                j.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
-                (0, l.jsx)(O.default, { className: b.inventoryHelpIcon }),
+                U.default.Messages.USER_SETTINGS_PACKAGES_MAILBOX_HEADER,
+                (0, l.jsx)(O.default, { className: y.inventoryHelpIcon }),
               ],
             }),
-            (0, l.jsx)("div", { className: b.inventoryContainer, children: d }),
+            (0, l.jsx)("div", { className: y.inventoryContainer, children: d }),
           ],
         });
       }
-      function H(e) {
+      function V(e) {
         let { children: t, className: s, onClick: a } = e;
         return (0, l.jsx)(_.Clickable, {
-          className: o(b.noTextToSpeechButton, s),
+          className: o(y.noTextToSpeechButton, s),
           onClick: a,
           children: t,
         });
       }
-      function w() {
+      function Y() {
         let [e, t] = i.useState(1),
           [s, a] = i.useState(!1),
           [n] = i.useState(new E.Timeout()),
           r = () => {
-            a(!0),
+            L.default.track(j.AnalyticEvents.EASTER_EGG_INTERACTED, {
+              type: "packages_no_text_to_speech",
+              position: e,
+            }),
+              a(!0),
               n.start((0, p.randomBetween)(200, 1e3), () => {
                 t(e + 1), a(!1);
               });
@@ -21081,9 +21111,9 @@
         return (
           i.useEffect(() => n.stop(), [n]),
           (0, l.jsx)("div", {
-            className: b.noTextToSpeech,
+            className: y.noTextToSpeech,
             children: s
-              ? (0, l.jsx)(_.Spinner, { className: b.noTextToSpeechSpinner })
+              ? (0, l.jsx)(_.Spinner, { className: y.noTextToSpeechSpinner })
               : (0, l.jsxs)(l.Fragment, {
                   children: [
                     (0, l.jsx)(_.Text, {
@@ -21091,25 +21121,25 @@
                       children: (() => {
                         switch (e) {
                           case 1:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_1;
                           case 2:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2;
                           case 3:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3;
                           case 4:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_4;
                           case 5:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_5;
                           case 6:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6;
                           case 7:
-                            return j.default.Messages
+                            return U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_7;
                         }
                       })(),
@@ -21120,28 +21150,28 @@
                         case 4:
                         case 5:
                           return [
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_YES,
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_ANSWER_NO,
                           ];
                         case 2:
                           return [
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_1,
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_2_ANSWER_2,
                           ];
                         case 3:
                           return [
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_1,
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_3_ANSWER_2,
                           ];
                         case 6:
                           return [
-                            j.default.Messages
+                            U.default.Messages
                               .PACKAGES_NO_TEXT_TO_SPEECH_QUESTION_6_ANSWER_1,
                           ];
                         case 7:
@@ -21149,10 +21179,10 @@
                       }
                     })().map((e, t) =>
                       (0, l.jsx)(
-                        H,
+                        V,
                         {
                           className:
-                            0 === t ? b.noTextToSpeechButtonFirst : null,
+                            0 === t ? y.noTextToSpeechButtonFirst : null,
                           onClick: r,
                           children: e,
                         },
@@ -21164,22 +21194,22 @@
           })
         );
       }
-      function V() {
+      function K() {
         return (0, l.jsxs)("div", {
-          className: b.footer,
+          className: y.footer,
           children: [
             (0, l.jsx)(d.ClipsIcon, {}),
             (0, l.jsx)(_.Text, {
               variant: "text-xs/bold",
               color: "text-muted",
-              children: j.default.Messages.PACKAGES_FOOTER_NOTE.format({
-                url: P.LOOTBOX_VIDEO_URL,
+              children: U.default.Messages.PACKAGES_FOOTER_NOTE.format({
+                url: b.LOOTBOX_VIDEO_URL,
               }),
             }),
           ],
         });
       }
-      function Y() {
+      function W() {
         let { analyticsLocations: e } = (0, h.default)(g.default.PACKAGES),
           t = (0, S.useStateFromStores)(
             [I.default],
@@ -21197,11 +21227,11 @@
           (0, l.jsxs)(h.AnalyticsLocationProvider, {
             value: e,
             children: [
-              (0, l.jsx)(U, {}),
-              (0, l.jsx)(G, {}),
-              (0, l.jsx)(k, {}),
+              (0, l.jsx)(B, {}),
+              (0, l.jsx)(H, {}),
               (0, l.jsx)(w, {}),
-              (0, l.jsx)(V, {}),
+              (0, l.jsx)(Y, {}),
+              (0, l.jsx)(K, {}),
             ],
           })
         );
@@ -32110,4 +32140,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ec9fffe7b11e1c1c81e6.js.map
+//# sourceMappingURL=a8cf6208245c75b8cf4a.js.map

@@ -8662,6 +8662,7 @@
         COMMUNITY_GUIDELINES: "[Community Guidelines]({url})",
         BLOG_POST: "[Our blog post]({url})",
         SEARCH_FILTER_CONTEXT_MENU_FROM: "From a specific person",
+        SEARCH_FILTER_CONTEXT_MENU_HAS: "Has specific data",
         SEARCH_FILTER_CONTEXT_MENU_MENTIONS: "Mention someone",
         SEARCH_FILTER_CONTEXT_MENU_CHANNEL: "In a specific channel",
         SEARCH_FILTER_CONTEXT_MENU_BEFORE_DATE: "Before a date",
@@ -8671,6 +8672,7 @@
           "Filter messages from a particular user",
         SEARCH_FILTER_MESSAGES_FROM_CHANNEL:
           "Filter messages from a particular channel",
+        SEARCH_FILTER_MESSAGES_HAS: "Filter messages with certain data types",
         SEARCH_FILTER_MESSAGES_MENTION_USER:
           "Filter messages that mention a particular user",
         SEARCH_FILTER_MESSAGES_BEFORE_DATE:
@@ -26543,8 +26545,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278374", ", Version Hash: ")
-          .concat("75c79f1b23c466f3d2d52768239e35c9eea5a5db")
+          .concat("278391", ", Version Hash: ")
+          .concat("3809e94367566d48410802e78b224cc8334c22a2")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28346,6 +28348,7 @@
             "LOAD_PINNED_MESSAGES_SUCCESS",
             "USER_SETTINGS_PROTO_UPDATE",
             "CHANNEL_RTC_UPDATE_CHAT_OPEN",
+            "POST_CONNECTION_OPEN",
           ],
           inlineRequire: () => E("983850").default,
           neverLoadBeforeConnectionOpen: !0,
@@ -29674,12 +29677,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278374"), "278374"));
+        let _ = parseInt(((e = "278391"), "278391"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278374"
+                "278391"
               )
             ),
             (_ = 0)),
@@ -52962,4 +52965,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.035ba7aefd14fbb18690.js.map
+//# sourceMappingURL=47513.e54daef0c0a85c606a0c.js.map

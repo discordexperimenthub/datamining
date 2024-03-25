@@ -4941,7 +4941,7 @@
           null !== (s = window.requestIdleCallback) && void 0 !== s
             ? s
             : e => setImmediate(() => e()),
-        f = new c.default(),
+        f = new c.IdGenerator(),
         S = {
           handleConnectionOpen: () => {},
           handleConnectionClosed: () => {},
@@ -5042,7 +5042,7 @@
                 !1
               );
             });
-          class N extends a.default.Store {
+          class N extends a.Store {
             initialize() {
               null != p && this.waitFor(...p);
             }
@@ -5059,43 +5059,40 @@
       n.r(t),
         n.d(t, {
           analyticsTrackingStoreMaker: function () {
-            return h.analyticsTrackingStoreMaker;
+            return m.analyticsTrackingStoreMaker;
           },
           AnalyticsActionHandlers: function () {
-            return h.AnalyticsActionHandlers;
+            return m.AnalyticsActionHandlers;
           },
           Impression: function () {
-            return p.Impression;
+            return h.Impression;
           },
           ImpressionTypes: function () {
-            return p.ImpressionTypes;
+            return h.ImpressionTypes;
           },
           TypedEventProperties: function () {
-            return p.TypedEventProperties;
+            return h.TypedEventProperties;
           },
           StandardAnalyticsLocation: function () {
-            return p.StandardAnalyticsLocation;
+            return h.StandardAnalyticsLocation;
           },
           ImpressionGroups: function () {
-            return p.ImpressionGroups;
+            return h.ImpressionGroups;
           },
           ImpressionNames: function () {
-            return E.ImpressionNames;
+            return p.ImpressionNames;
           },
           NetworkActionNames: function () {
-            return E.NetworkActionNames;
+            return p.NetworkActionNames;
           },
           StandardAnalyticsSchemaNameMap: function () {
-            return E.StandardAnalyticsSchemaNameMap;
+            return p.StandardAnalyticsSchemaNameMap;
           },
           ImpressionSchema: function () {
-            return E.ImpressionSchema;
+            return p.ImpressionSchema;
           },
           encodeProperties: function () {
-            return m.encodeProperties;
-          },
-          CommonAnalyticsSchema: function () {
-            return E;
+            return g.encodeProperties;
           },
           getCampaignParams: function () {
             return O;
@@ -5134,11 +5131,11 @@
         _ = n("429030"),
         f = n("95410"),
         S = n("444095"),
-        E = n("33112"),
-        g = n("375492"),
-        m = n("612481"),
-        h = n("615582"),
-        p = n("660516");
+        E = n("375492"),
+        g = n("612481"),
+        m = n("615582"),
+        h = n("660516"),
+        p = n("33112");
       let I = "deviceProperties",
         T = "referralProperties",
         v = {},
@@ -5354,7 +5351,7 @@
           i = {};
         }
       function M(e) {
-        (i = { ...i, ...e }), (r = (0, m.encodeProperties)(i));
+        (i = { ...i, ...e }), (r = (0, g.encodeProperties)(i));
       }
       M(
         (function () {
@@ -5362,7 +5359,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "278348"), "278348"), 10);
+          let o = parseInt(((n = "278355"), "278355"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -5388,7 +5385,7 @@
             dispatcher: i,
             TRACK_ACTION_NAME: r,
           } = e,
-          o = (0, g.queueTrackingEventMaker)(i, r);
+          o = (0, E.queueTrackingEventMaker)(i, r);
         return function (e, i) {
           let r =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
@@ -7038,41 +7035,40 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
-            return i;
+          IdGenerator: function () {
+            return a;
           },
         });
-      var i,
-        r = n("552442"),
-        o = n.n(r),
-        s = n("446825");
-      function l(e) {
+      var i = n("552442"),
+        r = n.n(i),
+        o = n("446825");
+      function s(e) {
         return 0 | e.mod(4294967296).toJSNumber();
       }
-      function a(e) {
+      function l(e) {
         return 0 | e.shiftRight(32).toJSNumber();
       }
-      i = class {
+      class a {
         generate(e) {
-          let t = o(e),
+          let t = r(e),
             n = 0 | this._sequenceNumber++,
-            i = new s.Buffer(24);
+            i = new o.Buffer(24);
           return (
-            i.writeInt32LE(l(t), 0, !0),
-            i.writeInt32LE(a(t), 4, !0),
+            i.writeInt32LE(s(t), 0, !0),
+            i.writeInt32LE(l(t), 4, !0),
             i.writeInt32LE(this._randomPrefix, 8, !0),
-            i.writeInt32LE(l(this._creationTime), 12, !0),
-            i.writeInt32LE(a(this._creationTime), 16, !0),
+            i.writeInt32LE(s(this._creationTime), 12, !0),
+            i.writeInt32LE(l(this._creationTime), 16, !0),
             i.writeInt32LE(n, 20, !0),
             i.toString("base64")
           );
         }
         constructor() {
           (this._randomPrefix = 0 | Math.floor(4294967296 * Math.random())),
-            (this._creationTime = o(Date.now())),
+            (this._creationTime = r(Date.now())),
             (this._sequenceNumber = 0);
         }
-      };
+      }
     },
     444095: function (e, t, n) {
       "use strict";
@@ -7139,4 +7135,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.213eb8e3227be17b87fb.js.map
+//# sourceMappingURL=87475.cf91e5d1a93dffae291b.js.map

@@ -253,7 +253,7 @@
             return null != i.image_asset &&
               null !==
                 (e = y.default.toURLSafe(
-                  (0, I.getAssetURL)(t, i.image_asset)
+                  (0, I.getAssetURL)(t, i.image_asset, 64)
                 )) &&
               void 0 !== e
               ? e
@@ -374,7 +374,7 @@
             (null == c ? void 0 : c.headerBackground) != null &&
             null !==
               (s = y.default.toURLSafe(
-                (0, I.getAssetURL)(r, c.headerBackground)
+                (0, I.getAssetURL)(r, c.headerBackground, 256)
               )) &&
             void 0 !== s
               ? s
@@ -1330,4 +1330,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f1aa7e6f58d9e274e6eb.js.map
+//# sourceMappingURL=a14b6775778c6a052bc4.js.map

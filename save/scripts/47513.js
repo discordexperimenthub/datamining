@@ -26543,8 +26543,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278348", ", Version Hash: ")
-          .concat("ed6fef5de66531b071a635ff59b7b9ba7ea6d4f0")
+          .concat("278355", ", Version Hash: ")
+          .concat("42958d14a5444760a534877d1537c96fce42b417")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -26734,8 +26734,8 @@
       "use strict";
       E.r(_),
         E.d(_, {
-          default: function () {
-            return t.default;
+          IdGenerator: function () {
+            return t.IdGenerator;
           },
         });
       var t = E("166745");
@@ -26907,7 +26907,7 @@
           "https://cdn.discordapp.com/bad-domains/updated_hashes.json",
           "https://cdn.discordapp.com/bad-domains/hashes.json",
         ],
-        O = new T.default(),
+        O = new T.IdGenerator(),
         A = /\/api(\/v\d+)?\/science/;
       (0, t.setRequestPatch)({
         prepareRequest(e) {
@@ -29674,12 +29674,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278348"), "278348"));
+        let _ = parseInt(((e = "278355"), "278355"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278348"
+                "278355"
               )
             ),
             (_ = 0)),
@@ -52962,4 +52962,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.85b2418b61f29491fe1b.js.map
+//# sourceMappingURL=47513.1c70557f0d455daf72e8.js.map

@@ -372,7 +372,7 @@
       class x extends a.PureComponent {
         componentDidMount() {
           this.setState({
-            token: c.getToken(),
+            token: (0, c.getToken)(),
             isAppCompatible: N.IS_APP_COMPATIBLE_BROWSER,
           });
         }
@@ -825,7 +825,7 @@
       let N = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
       ((n = class extends i.PureComponent {
         render() {
-          let e = c.isActiveCreator(this.context.router),
+          let e = (0, c.isActiveCreator)(this.context.router),
             {
               isOpen: t,
               dropdownLinks: s,
@@ -1146,7 +1146,7 @@
         ];
       ((n = class extends i.PureComponent {
         render() {
-          let e = r.isActiveCreator(this.context.router),
+          let e = (0, r.isActiveCreator)(this.context.router),
             {
               isMobile: t,
               isVisible: s,
@@ -1482,7 +1482,7 @@
             }),
             (this.renderMobileSubMenu = () => {
               let { links: e, TrackClick: t, avoidRouter: s } = this.props,
-                n = c.isActiveCreator(this.context.router);
+                n = (0, c.isActiveCreator)(this.context.router);
               return e.map(e =>
                 e.external
                   ? (0, a.jsx)(
@@ -1961,4 +1961,4 @@
     },
   },
 ]);
-//# sourceMappingURL=70156891e4d922e5294b.js.map
+//# sourceMappingURL=8e941665316aa017bfe6.js.map

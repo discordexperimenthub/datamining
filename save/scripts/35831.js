@@ -11978,9 +11978,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278307",
+          E = "278315",
           T =
-            ((e = "b6013c6ddc3f975e5a7b0324f8972bdb14e86a85"),
+            ((e = "43634c80afeac1bc3f2422bca03f7b8abe76868c"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -20789,7 +20789,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return W;
+            return z;
           },
         }),
         s("222007"),
@@ -20873,7 +20873,7 @@
                 color: _.ButtonColors.CUSTOM,
                 children: [
                   (0, l.jsx)(A.default, {
-                    className: y.buttonIconLarge,
+                    className: y.buttonIcon,
                     color: _.tokens.colors.WHITE,
                   }),
                   U.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA,
@@ -20983,19 +20983,18 @@
         );
       }
       function w() {
-        let [e, t, a] = (0, S.useStateFromStoresArray)([I.default], () => [
+        let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [
             I.default.openedItems,
             I.default.redeemedPrize,
-            I.default.userDataFetchState,
           ]),
-          n = (0, b.getLootboxes)(),
-          r = i.useMemo(
+          a = (0, b.getLootboxes)(),
+          n = i.useMemo(
             () =>
-              Object.keys(e).length === Object.keys(n).length &&
+              Object.keys(e).length === Object.keys(a).length &&
               !Object.values(e).some(e => 0 === e),
-            [e, n]
+            [e, a]
           ),
-          o = async () => {
+          r = async () => {
             await (0, N.redeemPrize)(),
               (0, _.openModalLazy)(async () => {
                 let { default: e } = await s
@@ -21003,73 +21002,73 @@
                   .then(s.bind(s, "657437"));
                 return t => (0, l.jsx)(e, { ...t });
               });
-          },
-          d =
-            a === I.FetchState.FETCHED
-              ? (0, l.jsxs)(l.Fragment, {
+          };
+        return !t && n
+          ? (0, l.jsxs)("div", {
+              className: y.banner,
+              children: [
+                (0, l.jsxs)("div", {
+                  className: y.inline,
                   children: [
-                    !t &&
-                      r &&
-                      (0, l.jsxs)("div", {
-                        className: y.banner,
-                        children: [
-                          (0, l.jsxs)("div", {
-                            className: y.inline,
-                            children: [
-                              (0, l.jsx)(T.CircleInformationIcon, {
-                                width: 16,
-                                height: 16,
-                                color: _.tokens.colors.WHITE,
-                              }),
-                              (0, l.jsx)(_.Text, {
-                                variant: "text-sm/medium",
-                                color: "always-white",
-                                children:
-                                  U.default.Messages
-                                    .USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
-                              }),
-                            ],
-                          }),
-                          (0, l.jsxs)(_.Button, {
-                            className: y.headerButton,
-                            innerClassName: y.innerButton,
-                            onClick: o,
-                            size: _.ButtonSizes.SMALL,
-                            color: _.ButtonColors.CUSTOM,
-                            children: [
-                              (0, l.jsx)(f.GiftIcon, {
-                                className: y.buttonIconSmall,
-                                color: _.tokens.colors.WHITE,
-                              }),
-                              U.default.Messages
-                                .USER_SETTINGS_PACKAGE_BANNER_CTA,
-                            ],
-                          }),
-                        ],
-                      }),
-                    (0, l.jsx)("div", {
-                      className: y.inventoryItems,
-                      children: Object.keys(n).map((t, s) => {
-                        var a;
-                        let i = n[t];
-                        return (0, l.jsx)(
-                          x.default,
-                          {
-                            image: i.image,
-                            name: i.name,
-                            sound: i.sound,
-                            openedCount:
-                              null !== (a = null == e ? void 0 : e[t]) &&
-                              void 0 !== a
-                                ? a
-                                : 0,
-                            index: s,
-                          },
-                          t
-                        );
-                      }),
+                    (0, l.jsx)(T.CircleInformationIcon, {
+                      className: y.infoIcon,
+                      color: _.tokens.colors.WHITE,
+                    }),
+                    (0, l.jsx)(_.Text, {
+                      variant: "text-sm/bold",
+                      color: "always-white",
+                      children:
+                        U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
                     }),
                   ],
+                }),
+                (0, l.jsxs)(_.Button, {
+                  className: y.headerButton,
+                  innerClassName: y.innerButton,
+                  onClick: r,
+                  size: _.ButtonSizes.SMALL,
+                  color: _.ButtonColors.CUSTOM,
+                  children: [
+                    (0, l.jsx)(f.GiftIcon, {
+                      className: y.buttonIcon,
+                      color: _.tokens.colors.WHITE,
+                    }),
+                    U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
+                  ],
+                }),
+              ],
+            })
+          : null;
+      }
+      function V() {
+        let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [
+            I.default.openedItems,
+            I.default.userDataFetchState,
+          ]),
+          s = (0, b.getLootboxes)(),
+          a =
+            t === I.FetchState.FETCHED
+              ? (0, l.jsx)("div", {
+                  className: y.inventoryItems,
+                  children: Object.keys(s).map((t, a) => {
+                    var n;
+                    let i = s[t];
+                    return (0, l.jsx)(
+                      x.default,
+                      {
+                        image: i.image,
+                        name: i.name,
+                        sound: i.sound,
+                        openedCount:
+                          null !== (n = null == e ? void 0 : e[t]) &&
+                          void 0 !== n
+                            ? n
+                            : 0,
+                        index: a,
+                      },
+                      t
+                    );
+                  }),
                 })
               : (0, l.jsx)(_.Spinner, {});
         return (0, l.jsxs)(l.Fragment, {
@@ -21082,11 +21081,11 @@
                 (0, l.jsx)(O.default, { className: y.inventoryHelpIcon }),
               ],
             }),
-            (0, l.jsx)("div", { className: y.inventoryContainer, children: d }),
+            (0, l.jsx)("div", { className: y.inventoryContainer, children: a }),
           ],
         });
       }
-      function V(e) {
+      function Y(e) {
         let { children: t, className: s, onClick: a } = e;
         return (0, l.jsx)(_.Clickable, {
           className: o(y.noTextToSpeechButton, s),
@@ -21094,7 +21093,7 @@
           children: t,
         });
       }
-      function Y() {
+      function K() {
         let [e, t] = i.useState(1),
           [s, a] = i.useState(!1),
           [n] = i.useState(new E.Timeout()),
@@ -21179,7 +21178,7 @@
                       }
                     })().map((e, t) =>
                       (0, l.jsx)(
-                        V,
+                        Y,
                         {
                           className:
                             0 === t ? y.noTextToSpeechButtonFirst : null,
@@ -21194,7 +21193,7 @@
           })
         );
       }
-      function K() {
+      function W() {
         return (0, l.jsxs)("div", {
           className: y.footer,
           children: [
@@ -21209,7 +21208,7 @@
           ],
         });
       }
-      function W() {
+      function z() {
         let { analyticsLocations: e } = (0, h.default)(g.default.PACKAGES),
           t = (0, S.useStateFromStores)(
             [I.default],
@@ -21230,8 +21229,9 @@
               (0, l.jsx)(B, {}),
               (0, l.jsx)(H, {}),
               (0, l.jsx)(w, {}),
-              (0, l.jsx)(Y, {}),
+              (0, l.jsx)(V, {}),
               (0, l.jsx)(K, {}),
+              (0, l.jsx)(W, {}),
             ],
           })
         );
@@ -32140,4 +32140,4 @@
     },
   },
 ]);
-//# sourceMappingURL=8bd7cc5bf176d0bff9d0.js.map
+//# sourceMappingURL=80aff57eaa8499ed85cd.js.map

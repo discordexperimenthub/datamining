@@ -24461,9 +24461,9 @@
         QUESTS_DISCLOSURE_PUBLISHER_PROMOTING:
           "{gamePublisher} is promoting {gameTitle} on Discord by partnering with us to offer this Quest. This Quest is available in the gift inventory of all users.",
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
-          "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, we think you fit some of these groups:",
+          "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, the following information was used to tell you about this Quest:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Learn more]({privacySettingsUrl}) about Quests on Discord and how to manage your Privacy Settings.",
+          "[Learn more]({privacySettingsUrl}) more about how to manage your Quests Privacy Settings.",
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
@@ -26506,8 +26506,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278307", ", Version Hash: ")
-          .concat("b6013c6ddc3f975e5a7b0324f8972bdb14e86a85")
+          .concat("278315", ", Version Hash: ")
+          .concat("43634c80afeac1bc3f2422bca03f7b8abe76868c")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29637,12 +29637,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278307"), "278307"));
+        let _ = parseInt(((e = "278315"), "278315"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278307"
+                "278315"
               )
             ),
             (_ = 0)),
@@ -52924,4 +52924,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.c780072c2f099cec5ff7.js.map
+//# sourceMappingURL=47513.ecf14ccec6325e1ab605.js.map

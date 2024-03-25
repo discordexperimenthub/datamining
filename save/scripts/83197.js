@@ -93,7 +93,7 @@
                   children:
                     h.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
                       privacySettingsUrl: o.default.getArticleURL(
-                        u.HelpdeskArticles.DATA_PRIVACY_CONTROLS
+                        u.HelpdeskArticles.QUESTS_PRIVACY_CONTROLS
                       ),
                     }),
                 }),
@@ -116,15 +116,15 @@
             return (0, a.jsxs)("ul", {
               className: m.targetList,
               children: [
-                (0, a.jsx)(g, {
+                (0, a.jsx)(E, {
                   icon: n.GlobeEarthIcon,
                   children: h.default.Messages.QUESTS_DISCLOSURE_LOCATION,
                 }),
-                (0, a.jsx)(g, {
+                (0, a.jsx)(E, {
                   icon: r.UserIcon,
                   children: h.default.Messages.QUESTS_DISCLOSURE_AGE,
                 }),
-                (0, a.jsx)(g, {
+                (0, a.jsx)(E, {
                   icon: l.GameControllerIcon,
                   children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY,
                 }),
@@ -135,7 +135,7 @@
           case d.QuestContent.QUEST_LIVE_STREAM:
             return (0, a.jsx)("ul", {
               className: m.targetList,
-              children: (0, a.jsx)(g, {
+              children: (0, a.jsx)(E, {
                 icon: l.GameControllerIcon,
                 children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY,
               }),
@@ -144,7 +144,7 @@
             return null;
         }
       }
-      function g(e) {
+      function E(e) {
         let { icon: s, children: t } = e;
         return (0, a.jsxs)(c.Text, {
           variant: "text-sm/medium",
@@ -228,4 +228,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5e5c6e62d909c841902e.js.map
+//# sourceMappingURL=8024508fc4bfd53695d5.js.map

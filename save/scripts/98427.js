@@ -122,8 +122,8 @@
             returnRef: x,
             subscription: g,
           } = null != e ? e : {},
-          B = !1,
-          v = (0, n.v4)(),
+          v = !1,
+          B = (0, n.v4)(),
           j = r.default.getCurrentUser(),
           D = (0, T.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
         (0, a.openModalLazy)(
@@ -133,7 +133,7 @@
               let { onClose: n, ...a } = l;
               return (0, s.jsx)(e, {
                 ...a,
-                loadId: v,
+                loadId: B,
                 subscriptionTier: A,
                 skuId: (0, T.castPremiumSubscriptionAsSkuId)(A),
                 isGift: R,
@@ -155,7 +155,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (B = !0),
+                  (v = !0),
                     null == S || S(),
                     !R && (0, o.setCanPlayWowMoment)(!0);
                 },
@@ -178,9 +178,9 @@
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !B &&
+              !v &&
                 c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                  load_id: v,
+                  load_id: B,
                   payment_type:
                     _.PurchaseTypeToAnalyticsPaymentType[
                       _.PurchaseTypes.SUBSCRIPTION
@@ -195,8 +195,8 @@
                 }),
                 (0, i.clearError)(),
                 (0, u.clearPurchaseTokenAuthState)(),
-                null == p || p(B),
-                B && (null == I || I());
+                null == p || p(v),
+                v && (null == I || I());
             },
           }
         );
@@ -262,8 +262,8 @@
               buttonTextClassName: b,
               iconClassName: x,
               postSuccessGuild: g,
-              onSubscribeModalClose: B,
-              premiumModalAnalyticsLocation: v,
+              onSubscribeModalClose: v,
+              premiumModalAnalyticsLocation: B,
               showIcon: j = !0,
               disableShine: D,
               applicationId: G,
@@ -294,7 +294,7 @@
               ) {
                 (0, c.trackPremiumSettingsPaneOpened)(),
                   o.default.open(C.UserSettingsSections.PREMIUM),
-                  null == B || B(!1);
+                  null == v || v(!1);
                 return;
               }
               !(function (e) {
@@ -362,9 +362,9 @@
                 subscriptionTier: n,
                 trialId: O,
                 postSuccessGuild: g,
-                onSubscribeModalClose: B,
+                onSubscribeModalClose: v,
                 analyticsLocations: W,
-                premiumModalAnalyticsLocation: v,
+                premiumModalAnalyticsLocation: B,
                 applicationId: G,
                 giftMessage: H,
               });
@@ -550,19 +550,22 @@
           R = (0, a.useStateFromStores)([c.default], () =>
             c.default.getCurrentUser()
           ),
-          { AnalyticsLocationProvider: N, analyticsLocations: A } = (0,
-          o.default)(t, u.default.PROFILE_THEME_UPSELL_MODAL);
+          { analyticsLocations: N } = (0, o.default)(
+            t,
+            u.default.PROFILE_THEME_UPSELL_MODAL
+          );
         n.useEffect(() => {
           d.default.track(E.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
             type: f.PremiumUpsellTypes.PROFILE_THEME_UPSELL_MODAL,
             location_stack: t,
           });
         }, [t]);
-        let L = (0, _.default)({
+        let A = (0, _.default)({
           scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
-          analyticsLocations: A,
+          analyticsLocations: N,
         });
-        return (0, s.jsx)(N, {
+        return (0, s.jsx)(o.AnalyticsLocationProvider, {
+          value: N,
           children: (0, s.jsxs)(i.ModalRoot, {
             className: I.profileThemesUpsellModal,
             "aria-label":
@@ -624,7 +627,7 @@
                   }),
                   (0, s.jsx)(i.Button, {
                     onClick: () => {
-                      P(), L();
+                      P(), A();
                     },
                     color: i.Button.Colors.PRIMARY,
                     look: i.Button.Looks.LINK,
@@ -727,4 +730,4 @@
     },
   },
 ]);
-//# sourceMappingURL=69951cb3ca71db69bc86.js.map
+//# sourceMappingURL=8bd21c21f6b70d2e35ba.js.map

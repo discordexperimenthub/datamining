@@ -14,8 +14,11 @@
       var u = l("685665");
       function i(e, t) {
         return function (l) {
-          let { AnalyticsLocationProvider: i } = (0, u.default)(t);
-          return (0, n.jsx)(i, { children: (0, n.jsx)(e, { ...l }) });
+          let { analyticsLocations: i } = (0, u.default)(t);
+          return (0, n.jsx)(u.AnalyticsLocationProvider, {
+            value: i,
+            children: (0, n.jsx)(e, { ...l }),
+          });
         };
       }
     },
@@ -50,7 +53,7 @@
                 label: O.default.Messages.COPY_ID_USER,
               }),
               p = (0, s.default)(t.id),
-              x = t.isNonUserBot();
+              v = t.isNonUserBot();
             return (0, n.jsx)(o.default, {
               context: r,
               object: M.AnalyticsObjects.CONTEXT_MENU,
@@ -60,8 +63,8 @@
                 "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: a,
                 children: [
-                  (0, n.jsxs)(u.MenuGroup, { children: [!x && h, !x && p] }),
-                  (0, n.jsx)(u.MenuGroup, { children: !x && E }),
+                  (0, n.jsxs)(u.MenuGroup, { children: [!v && h, !v && p] }),
+                  (0, n.jsx)(u.MenuGroup, { children: !v && E }),
                   (0, n.jsx)(u.MenuGroup, { children: R }),
                 ],
               }),
@@ -142,7 +145,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return x;
+            return v;
           },
         });
       var n = l("37983");
@@ -187,7 +190,7 @@
           ],
         });
       }
-      function x(e, t) {
+      function v(e, t) {
         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           u =
             arguments.length > 3 && void 0 !== arguments[3]
@@ -196,16 +199,16 @@
           R = (0, i.useStateFromStores)([f.default], () =>
             f.default.getGuild(t)
           ),
-          x = (0, i.useStateFromStores)([f.default], () =>
+          v = (0, i.useStateFromStores)([f.default], () =>
             f.default.getRoles(t)
           ),
-          _ = (0, i.useStateFromStores)([r.default], () => r.default.roleStyle),
-          m = (0, d.useTrackModerationAction)(t, {
+          x = (0, i.useStateFromStores)([r.default], () => r.default.roleStyle),
+          _ = (0, d.useTrackModerationAction)(t, {
             location: u,
             targetUserId: e,
           }),
           {
-            userRoles: v,
+            userRoles: m,
             isGuildMember: g,
             canManageRoles: S,
           } = (0, i.useStateFromStoresObject)(
@@ -221,44 +224,44 @@
             },
             [e, t, R]
           );
-        if (__OVERLAY__ || null == v || null == R || !g) return null;
-        let b = M.default.getHighestRole(R),
-          j = Object.values(x).filter(
+        if (__OVERLAY__ || null == m || null == R || !g) return null;
+        let L = M.default.getHighestRole(R),
+          b = Object.values(v).filter(
             e => !(0, a.isEveryoneRoleId)(R.id, e.id)
           ),
-          L = S
-            ? j.map(l => {
-                let u = l.managed || !M.default.isRoleHigher(R, b, l),
-                  i = -1 !== v.indexOf(l.id);
+          j = S
+            ? b.map(l => {
+                let u = l.managed || !M.default.isRoleHigher(R, L, l),
+                  i = -1 !== m.indexOf(l.id);
                 return u && !i
                   ? null
                   : (0, n.jsx)(
                       o.MenuCheckboxItem,
                       {
                         id: l.id,
-                        label: () => p(l, _),
+                        label: () => p(l, x),
                         disabled: u,
                         action: () => {
                           var n;
                           return (
                             (n = l),
-                            void (v.includes(n.id)
+                            void (m.includes(n.id)
                               ? (s.default.updateMemberRoles(
                                   t,
                                   e,
-                                  v.filter(e => e !== n.id),
+                                  m.filter(e => e !== n.id),
                                   [],
                                   [n.id]
                                 ),
-                                m(d.ModerationActionType.REMOVE_ROLE))
+                                _(d.ModerationActionType.REMOVE_ROLE))
                               : (s.default.updateMemberRoles(
                                   t,
                                   e,
-                                  v.concat([n.id]),
+                                  m.concat([n.id]),
                                   [n.id],
                                   []
                                 ),
-                                m(d.ModerationActionType.ADD_ROLE)))
+                                _(d.ModerationActionType.ADD_ROLE)))
                           );
                         },
                         checked: i,
@@ -266,30 +269,30 @@
                       l.id
                     );
               })
-            : j
-                .filter(e => -1 !== v.indexOf(e.id))
+            : b
+                .filter(e => -1 !== m.indexOf(e.id))
                 .map(e =>
                   (0, a.isEveryoneRoleId)(R.id, e.id)
                     ? null
                     : (0, n.jsx)(
                         o.MenuItem,
-                        { id: e.id, label: () => p(e, _) },
+                        { id: e.id, label: () => p(e, x) },
                         e.id
                       )
                 );
-        return 0 === L.filter(O.isNotNullish).length
+        return 0 === j.filter(O.isNotNullish).length
           ? null
           : l
-            ? L
+            ? j
             : (0, n.jsx)(o.MenuItem, {
                 id: "roles",
                 label: E.default.Messages.ROLES_LIST.format({
-                  numRoles: L.length,
+                  numRoles: j.length,
                 }),
-                children: L,
+                children: j,
               });
       }
     },
   },
 ]);
-//# sourceMappingURL=94cf6d82c9677ec17c3e.js.map
+//# sourceMappingURL=f025a110de093640e2ad.js.map

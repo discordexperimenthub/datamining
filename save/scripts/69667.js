@@ -1768,8 +1768,11 @@
         }
       });
       function eC() {
-        let { AnalyticsLocationProvider: e } = (0, M.default)(g.default.NOTICE);
-        return (0, s.jsx)(e, { children: (0, s.jsx)(eA, {}) });
+        let { analyticsLocations: e } = (0, M.default)(g.default.NOTICE);
+        return (0, s.jsx)(M.AnalyticsLocationProvider, {
+          value: e,
+          children: (0, s.jsx)(eA, {}),
+        });
       }
     },
     803816: function (e, t, n) {
@@ -5054,83 +5057,84 @@
       function b(e) {
         var t, n, i, A;
         let { applicationId: b, message: G } = e,
-          { analyticsLocations: B, AnalyticsLocationProvider: F } = (0,
-          c.default)(d.default.ACTIVITY_BOOKMARK),
-          k = (0, u.useAnalyticsContext)(),
-          w = G.channel_id,
-          H = (0, a.useStateFromStores)(
+          { analyticsLocations: B } = (0, c.default)(
+            d.default.ACTIVITY_BOOKMARK
+          ),
+          F = (0, u.useAnalyticsContext)(),
+          k = G.channel_id,
+          w = (0, a.useStateFromStores)(
             [T.default],
-            () => T.default.getChannel(w),
-            [w]
+            () => T.default.getChannel(k),
+            [k]
           ),
-          V = null == H ? void 0 : H.guild_id,
-          Y = null != H && (H.isGuildVoice() || H.isPrivate()),
-          W = (0, a.useStateFromStores)([h.default], () =>
-            h.default.getSelfEmbeddedActivityForChannel(w)
+          H = null == w ? void 0 : w.guild_id,
+          V = null != w && (w.isGuildVoice() || w.isPrivate()),
+          Y = (0, a.useStateFromStores)([h.default], () =>
+            h.default.getSelfEmbeddedActivityForChannel(k)
           ),
-          K = (null == W ? void 0 : W.applicationId) === b,
-          [z, Q] = (0, E.default)([
+          W = (null == Y ? void 0 : Y.applicationId) === b,
+          [K, z] = (0, E.default)([
             b,
-            null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n
+            null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n
               ? n
               : "",
           ]),
-          Z = (0, R.default)(
-            null !== (i = null == z ? void 0 : z.maxParticipants) &&
+          Q = (0, R.default)(
+            null !== (i = null == K ? void 0 : K.maxParticipants) &&
               void 0 !== i
               ? i
               : 0
           ),
-          [J] = (0, a.useStateFromStoresArray)(
+          [Z] = (0, a.useStateFromStoresArray)(
             [h.default],
             () =>
-              Y
+              V
                 ? h.default
-                    .getEmbeddedActivitiesForChannel(w)
+                    .getEmbeddedActivitiesForChannel(k)
                     .filter(e => e.applicationId === b)
                 : [],
-            [b, w, Y]
+            [b, k, V]
           ),
-          X = Array.from(
-            null !== (A = null == J ? void 0 : J.userIds) && void 0 !== A
+          J = Array.from(
+            null !== (A = null == Z ? void 0 : Z.userIds) && void 0 !== A
               ? A
               : []
           ),
-          q = (0, a.useStateFromStoresArray)(
+          X = (0, a.useStateFromStoresArray)(
             [I.default],
-            () => X.map(e => I.default.getUser(e)).filter(S.isNotNullish),
-            [X]
+            () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish),
+            [J]
           ),
-          $ = (0, v.default)({ applicationId: b, size: j }),
-          ee = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
-          et =
-            q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START,
-          en = async () => {
-            if (Y) {
+          q = (0, v.default)({ applicationId: b, size: j }),
+          $ = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+          ee =
+            X.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START,
+          et = async () => {
+            if (V) {
               let { activityConfigs: e, applications: t } = await (0,
-                C.fetchShelf)({ guildId: V }),
+                C.fetchShelf)({ guildId: H }),
                 n = (0, g.default)({
                   applicationId: b,
                   activityConfigs: e,
                   applications: t,
                 });
-              if (null != J && q.length > 0)
+              if (null != Z && X.length > 0)
                 await (0, M.default)({
-                  applicationId: J.applicationId,
-                  currentEmbeddedApplication: Q,
-                  activityChannelId: w,
+                  applicationId: Z.applicationId,
+                  currentEmbeddedApplication: z,
+                  activityChannelId: k,
                   embeddedActivitiesManager: L.default,
-                  locationObject: k.location,
+                  locationObject: F.location,
                   analyticsLocations: B,
                 });
               else {
-                let e = H.isPrivate() && !_.default.isCallActive(w),
+                let e = w.isPrivate() && !_.default.isCallActive(k),
                   t = () =>
                     (0, O.default)({
                       activityItem: n,
-                      currentEmbeddedApplication: Q,
-                      channelId: w,
-                      guildId: V,
+                      currentEmbeddedApplication: z,
+                      channelId: k,
+                      guildId: H,
                       embeddedActivitiesManager: L.default,
                       analyticsLocations: B,
                     });
@@ -5148,16 +5152,17 @@
               }
             } else
               (0, P.default)({
-                guildId: V,
-                locationObject: k.location,
-                openInPopout: ee,
+                guildId: H,
+                locationObject: F.location,
+                openInPopout: $,
                 initialSelectedApplicationId: b,
                 initialSlide: D.ActivityShelfSlides.SELECT_CHANNEL,
                 analyticsLocations: B,
               });
           };
-        return null != z && (0, p.hasFlag)(z.flags, x.ApplicationFlags.EMBEDDED)
-          ? (0, s.jsx)(F, {
+        return null != K && (0, p.hasFlag)(K.flags, x.ApplicationFlags.EMBEDDED)
+          ? (0, s.jsx)(c.AnalyticsLocationProvider, {
+              value: B,
               children: (0, s.jsxs)("div", {
                 className: U.container,
                 children: [
@@ -5165,8 +5170,8 @@
                     className: U.imgContainer,
                     children: (0, s.jsx)("img", {
                       className: U.img,
-                      alt: z.name,
-                      src: $.url,
+                      alt: K.name,
+                      src: q.url,
                     }),
                   }),
                   (0, s.jsxs)("div", {
@@ -5175,13 +5180,13 @@
                       (0, s.jsx)(r.Heading, {
                         className: U.heading,
                         variant: "heading-xl/semibold",
-                        children: z.name,
+                        children: K.name,
                       }),
                       (0, s.jsx)(r.Heading, {
                         className: U.description,
                         variant: "heading-sm/medium",
                         children:
-                          null === (t = z.description) || void 0 === t
+                          null === (t = K.description) || void 0 === t
                             ? void 0
                             : t.trim(),
                       }),
@@ -5196,12 +5201,12 @@
                       (0, s.jsxs)("div", {
                         className: U.cta,
                         children: [
-                          q.length > 0
+                          X.length > 0
                             ? (0, s.jsx)("div", {
                                 className: U.avatars,
                                 children: (0, s.jsx)(N.default, {
-                                  guildId: V,
-                                  users: q,
+                                  guildId: H,
+                                  users: X,
                                   max: 4,
                                 }),
                               })
@@ -5213,18 +5218,18 @@
                                   }),
                                   (0, s.jsx)(r.Text, {
                                     variant: "text-xs/semibold",
-                                    children: Z,
+                                    children: Q,
                                   }),
                                 ],
                               }),
                           (0, s.jsx)("div", {
                             className: U.buttonWrapper,
                             children: (0, s.jsx)(r.Button, {
-                              onClick: en,
+                              onClick: et,
                               className: U.button,
                               color: r.ButtonColors.GREEN,
-                              disabled: K,
-                              children: et,
+                              disabled: W,
+                              children: ee,
                             }),
                           }),
                         ],
@@ -23689,9 +23694,7 @@
           [o, E] = l.useState(!0),
           [_, m] = l.useState(String(Date.now())),
           [N] = (0, f.useStickerForRenderableSticker)(t, a),
-          { AnalyticsLocationProvider: C } = (0, u.default)(
-            r.default.STICKER_MESSAGE
-          ),
+          { analyticsLocations: C } = (0, u.default)(r.default.STICKER_MESSAGE),
           h = (0, s.jsxs)("span", {
             className: p.stickerName,
             children: [
@@ -23699,7 +23702,8 @@
               (null != N ? N : t).name,
             ],
           });
-        return (0, s.jsx)(C, {
+        return (0, s.jsx)(u.AnalyticsLocationProvider, {
+          value: C,
           children: (0, s.jsx)(i.Popout, {
             align: "center",
             animation: i.Popout.Animation.TRANSLATE,
@@ -28652,9 +28656,10 @@
         var t;
         let n;
         let { message: a, channel: r } = e,
-          { AnalyticsLocationProvider: u, analyticsLocations: D } = (0,
-          I.default)(T.default.EXECUTED_COMMAND),
-          x = l.useMemo(
+          { analyticsLocations: u } = (0, I.default)(
+            T.default.EXECUTED_COMMAND
+          ),
+          D = l.useMemo(
             () => (e, t, n) => (
               o(
                 null != r && null != t,
@@ -28671,7 +28676,7 @@
             ),
             [r, a.id]
           ),
-          y = l.useMemo(
+          x = l.useMemo(
             () => e => (
               o(null != r, "ExecutedCommand: channel cannot be null"),
               (0, s.jsx)(g.default, {
@@ -28683,23 +28688,23 @@
             ),
             [r, a.id, a.interactionData]
           ),
-          U = (0, N.useNullableUserAuthor)(
+          y = (0, N.useNullableUserAuthor)(
             null === (t = a.interaction) || void 0 === t ? void 0 : t.user,
             r
           ),
-          j = l.useMemo(
+          U = l.useMemo(
             () =>
               e.compact ? (0, p.default)((0, h.dateFormat)(d(), "LT")) : null,
             [e.compact]
           ),
-          b = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"),
-          { enabled: G } = m.AppLauncherOnboardingExperiment.useExperiment(
+          j = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"),
+          { enabled: b } = m.AppLauncherOnboardingExperiment.useExperiment(
             { location: "Executed Command" },
             { autoTrackExposure: !1 }
           ),
-          B = a.interaction;
-        if (null == B || null == U) return null;
-        let F = () => {
+          G = a.interaction;
+        if (null == G || null == y) return null;
+        let B = () => {
           let t = (function (e, t) {
               let n,
                 {
@@ -28775,7 +28780,7 @@
                     children: m,
                   })
                 : m();
-            })(e, e => x(e, B.user, [T.default.AVATAR])),
+            })(e, e => D(e, G.user, [T.default.AVATAR])),
             n = (function (e, t, n) {
               var l;
               let {
@@ -28801,7 +28806,7 @@
                 onContextMenu: u,
                 onPopoutRequestClose: d,
               });
-            })(e, U, e => x(e, B.user));
+            })(e, y, e => D(e, G.user));
           return (0, s.jsxs)(l.Fragment, { children: [t, n] }, "user");
         };
         if ((null == a ? void 0 : a.activityInstance) !== null) {
@@ -28819,14 +28824,14 @@
               },
               openInPopout: !1,
               enableSelectedTextChannelInvite: !0,
-              analyticsLocations: D,
+              analyticsLocations: u,
             }),
               (0, f.fetchShelf)({ guildId: r.guild_id });
           };
-          n = b
+          n = j
             ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format(
                 {
-                  userHook: F,
+                  userHook: B,
                   activityHook: () =>
                     (0, s.jsx)(c.Clickable, {
                       tag: "span",
@@ -28840,11 +28845,11 @@
                 }
               )
             : v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format(
-                { userHook: F }
+                { userHook: B }
               );
         } else
           n = v.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-            userHook: F,
+            userHook: B,
             commandHook: () => {
               let t = (function (e, t, n) {
                 let {
@@ -28893,13 +28898,14 @@
                         });
                   },
                 });
-              })(e, y, G);
+              })(e, x, b);
               return (0, s.jsx)(l.Fragment, { children: t }, "command");
             },
           });
-        return (0, s.jsx)(u, {
+        return (0, s.jsx)(I.AnalyticsLocationProvider, {
+          value: u,
           children: (0, s.jsx)("div", {
-            className: i(L.repliedMessage, L.executedCommand, j),
+            className: i(L.repliedMessage, L.executedCommand, U),
             "aria-hidden": !e.compact,
             children: n,
           }),
@@ -32939,4 +32945,4 @@
     },
   },
 ]);
-//# sourceMappingURL=20b9e4f63147b2e008e4.js.map
+//# sourceMappingURL=37a2e8e79d3d5ee891c5.js.map

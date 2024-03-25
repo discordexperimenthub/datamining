@@ -2948,10 +2948,11 @@
             [D.default],
             () => null != D.default.getCurrentUserActiveStream()
           ),
-          { AnalyticsLocationProvider: S } = (0, T.default)(N.default.OVERLAY),
+          { analyticsLocations: S } = (0, T.default)(N.default.OVERLAY),
           { showKeybindIndicators: v, dismissKeybindNotification: y } = (0,
           Q.useGetKeybindNotification)();
-        return (0, a.jsx)(S, {
+        return (0, a.jsx)(T.AnalyticsLocationProvider, {
+          value: S,
           children: (0, a.jsx)(g.RedesignIconContextProvider, {
             children: (0, a.jsx)(eh, {
               locked: e,
@@ -7380,4 +7381,4 @@
     },
   },
 ]);
-//# sourceMappingURL=114a52a386591ce9f604.js.map
+//# sourceMappingURL=02f04cbefea1c43bb555.js.map

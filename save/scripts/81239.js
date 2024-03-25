@@ -14,8 +14,11 @@
       var u = t("685665");
       function l(e, n) {
         return function (t) {
-          let { AnalyticsLocationProvider: l } = (0, u.default)(n);
-          return (0, a.jsx)(l, { children: (0, a.jsx)(e, { ...t }) });
+          let { analyticsLocations: l } = (0, u.default)(n);
+          return (0, a.jsx)(u.AnalyticsLocationProvider, {
+            value: l,
+            children: (0, a.jsx)(e, { ...t }),
+          });
         };
       }
     },
@@ -34,16 +37,16 @@
         s = t("158534"),
         r = t("812204"),
         i = t("861370"),
-        d = t("308798"),
-        o = t("47006"),
+        o = t("308798"),
+        d = t("47006"),
         c = t("878526"),
         f = t("782340"),
         E = (0, s.default)(
           function (e) {
             let { channel: n, guild: t, onSelect: s } = e,
-              r = (0, o.default)(n),
+              r = (0, d.default)(n),
               E = (0, c.default)(n, t),
-              _ = (0, d.default)(n),
+              _ = (0, o.default)(n),
               I = (0, i.default)({
                 id: n.id,
                 label: f.default.Messages.COPY_ID_CHANNEL,
@@ -69,7 +72,7 @@
       t.r(n),
         t.d(n, {
           default: function () {
-            return o;
+            return d;
           },
         });
       var a = t("37983");
@@ -79,12 +82,12 @@
         s = t("18054"),
         r = t("957255"),
         i = t("49111"),
-        d = t("782340");
-      function o(e) {
+        o = t("782340");
+      function d(e) {
         let {
           canManageChannels: n,
           canManageRoles: t,
-          canManageWebhooks: o,
+          canManageWebhooks: d,
           canAccessChannel: c,
         } = (0, u.useStateFromStoresObject)(
           [r.default],
@@ -96,13 +99,13 @@
           }),
           [e]
         );
-        return !__OVERLAY__ && c && (n || t || o)
+        return !__OVERLAY__ && c && (n || t || d)
           ? (0, a.jsx)(l.MenuItem, {
               id: "edit-channel",
               label:
                 e.type === i.ChannelTypes.GUILD_CATEGORY
-                  ? d.default.Messages.EDIT_CATEGORY
-                  : d.default.Messages.EDIT_CHANNEL,
+                  ? o.default.Messages.EDIT_CATEGORY
+                  : o.default.Messages.EDIT_CHANNEL,
               action: () => s.default.open(e.id),
             })
           : null;
@@ -142,26 +145,26 @@
         s = t("242757"),
         r = t("923959"),
         i = t("957255"),
-        d = t("76539"),
-        o = t("49111"),
+        o = t("76539"),
+        d = t("49111"),
         c = t("782340");
       function f(e) {
         let { source: n, guild: t, channel: a, stageInstance: l } = e,
-          d = (0, u.useStateFromStores)([r.default], () =>
+          o = (0, u.useStateFromStores)([r.default], () =>
             r.default.getDefaultChannel(
               t.id,
               !0,
-              o.Permissions.CREATE_INSTANT_INVITE
+              d.Permissions.CREATE_INSTANT_INVITE
             )
           ),
           c = (0, u.useStateFromStores)([i.default], () =>
             (0, s.canViewInviteModal)(i.default, t, a, l)
           ),
-          f = E(n, t, c && null != a ? a : d),
+          f = E(n, t, c && null != a ? a : o),
           I = _(n);
-        return null == a && n === o.InstantInviteSources.GUILD_CONTEXT_MENU
+        return null == a && n === d.InstantInviteSources.GUILD_CONTEXT_MENU
           ? null
-          : c || null != d
+          : c || null != o
             ? f
             : I;
       }
@@ -171,7 +174,7 @@
             label: c.default.Messages.INVITE_PEOPLE,
             color: "brand",
             icon:
-              e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+              e === d.InstantInviteSources.GUILD_HEADER ? o.default : void 0,
             action: () =>
               (0, l.openModalLazy)(async () => {
                 let { default: l } = await t
@@ -187,7 +190,7 @@
             label: c.default.Messages.INVITE_PEOPLE,
             color: "brand",
             icon:
-              e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+              e === d.InstantInviteSources.GUILD_HEADER ? o.default : void 0,
             action: () =>
               (0, l.openModalLazy)(async () => {
                 let { default: e } = await t
@@ -199,4 +202,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9bf3452c38598198d33e.js.map
+//# sourceMappingURL=50b702fb24d08d3c8fb8.js.map

@@ -185,8 +185,8 @@
         N = t("8161"),
         S = t("315102"),
         R = t("888400"),
-        I = t("449008"),
-        A = t("497880"),
+        A = t("449008"),
+        I = t("497880"),
         L = t("719347"),
         P = t("49111"),
         j = t("782340"),
@@ -262,7 +262,7 @@
                       height: d,
                     })));
         } else
-          r = (0, l.jsx)(A.default, { message: e, content: s, className: a });
+          r = (0, l.jsx)(I.default, { message: e, content: s, className: a });
         return (
           M
             ? (c = (0, l.jsx)(E.default, { className: O.pollBadgeReplied }))
@@ -321,9 +321,7 @@
                 onContextMenu: g,
                 onPopoutRequestClose: p,
               } = e,
-              { AnalyticsLocationProvider: E } = (0, o.default)(
-                d.default.AVATAR
-              );
+              { analyticsLocations: E } = (0, o.default)(d.default.AVATAR);
             if (n || a.state !== M.ReferencedMessageState.LOADED || r)
               return (0, l.jsx)("div", {
                 className: O.replyBadge,
@@ -370,7 +368,8 @@
               );
             };
             return null != t && null != h
-              ? (0, l.jsx)(E, {
+              ? (0, l.jsx)(o.AnalyticsLocationProvider, {
+                  value: E,
                   children: (0, l.jsx)(u.Popout, {
                     renderPopout: t,
                     shouldShow: h,
@@ -379,7 +378,10 @@
                     children: C,
                   }),
                 })
-              : (0, l.jsx)(E, { children: C() });
+              : (0, l.jsx)(o.AnalyticsLocationProvider, {
+                  value: E,
+                  children: C(),
+                });
           })(e, _, m),
           x = (function (e, s) {
             let {
@@ -417,7 +419,7 @@
                   isRepliedMessage: !0,
                 });
           })(e, m),
-          A = (function (e) {
+          I = (function (e) {
             let {
                 content: s,
                 referencedMessage: t,
@@ -474,7 +476,7 @@
                   }),
                 });
               default:
-                (0, I.assertNever)(t);
+                (0, A.assertNever)(t);
             }
           })(e),
           U = a.useMemo(
@@ -493,7 +495,7 @@
             id: (0, f.getMessageReplyId)(r),
             className: i(O.repliedMessage, U),
             "aria-label": s,
-            children: [T, x, A],
+            children: [T, x, I],
           })
         );
       }
@@ -586,4 +588,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3be9d60d0550c54bd4af.js.map
+//# sourceMappingURL=d9c9552c13b88e7fb4e1.js.map

@@ -116,8 +116,11 @@
       var i = n("685665");
       function o(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: o } = (0, i.default)(t);
-          return (0, l.jsx)(o, { children: (0, l.jsx)(e, { ...n }) });
+          let { analyticsLocations: o } = (0, i.default)(t);
+          return (0, l.jsx)(i.AnalyticsLocationProvider, {
+            value: o,
+            children: (0, l.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -141,10 +144,10 @@
             return r;
           },
           useTrackModerationAction: function () {
-            return h;
+            return v;
           },
           trackMembersPageViewed: function () {
-            return v;
+            return h;
           },
         });
       var l,
@@ -215,7 +218,7 @@
         );
         return t;
       }
-      function h(e, t) {
+      function v(e, t) {
         let { location: n, targetUserId: l, targets: i, locations: o } = t,
           r = u.useCallback(
             t => {
@@ -234,7 +237,7 @@
           );
         return r;
       }
-      function v(e, t) {
+      function h(e, t) {
         f(_.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
           guild_id: e,
           location: t,
@@ -325,15 +328,15 @@
         E = n("449008"),
         A = n("49111"),
         M = n("782340"),
-        h = n("235324");
-      function v(e, t) {
+        v = n("235324");
+      function h(e, t) {
         var n, o;
         return (0, l.jsxs)("div", {
-          className: h.roleRow,
+          className: v.roleRow,
           children: [
             "dot" === t
               ? (0, l.jsx)(r.RoleDot, {
-                  className: h.roleDot,
+                  className: v.roleDot,
                   color:
                     null !== (n = e.colorString) && void 0 !== n
                       ? n
@@ -342,7 +345,7 @@
                   tooltip: !1,
                 })
               : (0, l.jsx)(r.RoleCircle, {
-                  className: h.roleDot,
+                  className: v.roleDot,
                   color:
                     null !== (o = e.colorString) && void 0 !== o
                       ? o
@@ -358,7 +361,7 @@
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
               : null,
-          h = (0, o.useStateFromStores)([_.default], () =>
+          v = (0, o.useStateFromStores)([_.default], () =>
             _.default.getGuild(t)
           ),
           g = (0, o.useStateFromStores)([_.default], () =>
@@ -381,19 +384,19 @@
                 userRoles: null != n ? n.roles : [],
                 isGuildMember: null != n,
                 canManageRoles:
-                  null != h && f.default.can(A.Permissions.MANAGE_ROLES, h),
+                  null != v && f.default.can(A.Permissions.MANAGE_ROLES, v),
               };
             },
-            [e, t, h]
+            [e, t, v]
           );
-        if (__OVERLAY__ || null == R || null == h || !m) return null;
-        let b = f.default.getHighestRole(h),
+        if (__OVERLAY__ || null == R || null == v || !m) return null;
+        let b = f.default.getHighestRole(v),
           p = Object.values(g).filter(
-            e => !(0, a.isEveryoneRoleId)(h.id, e.id)
+            e => !(0, a.isEveryoneRoleId)(v.id, e.id)
           ),
           I = S
             ? p.map(n => {
-                let i = n.managed || !f.default.isRoleHigher(h, b, n),
+                let i = n.managed || !f.default.isRoleHigher(v, b, n),
                   o = -1 !== R.indexOf(n.id);
                 return i && !o
                   ? null
@@ -401,7 +404,7 @@
                       r.MenuCheckboxItem,
                       {
                         id: n.id,
-                        label: () => v(n, T),
+                        label: () => h(n, T),
                         disabled: i,
                         action: () => {
                           var l;
@@ -434,11 +437,11 @@
             : p
                 .filter(e => -1 !== R.indexOf(e.id))
                 .map(e =>
-                  (0, a.isEveryoneRoleId)(h.id, e.id)
+                  (0, a.isEveryoneRoleId)(v.id, e.id)
                     ? null
                     : (0, l.jsx)(
                         r.MenuItem,
-                        { id: e.id, label: () => v(e, T) },
+                        { id: e.id, label: () => h(e, T) },
                         e.id
                       )
                 );
@@ -457,4 +460,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b199bdbd0f38ce3fa33e.js.map
+//# sourceMappingURL=97797d2da45c121eacbd.js.map

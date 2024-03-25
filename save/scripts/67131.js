@@ -2345,7 +2345,7 @@
             stopPropagation: T = !1,
             ariaLabel: R,
           } = e,
-          { AnalyticsLocationProvider: g } = (0, s.default)(o.default.USERNAME);
+          { analyticsLocations: g } = (0, s.default)(o.default.USERNAME);
         let E =
           ((t = h),
           (i = m),
@@ -2368,10 +2368,11 @@
                   roleName: null == e ? void 0 : e.colorRoleName,
                   "aria-label": R,
                 }),
-              s = e => t => {
+              c = e => t => {
                 T && t.stopPropagation(), e(t);
               };
-            return (0, n.jsx)(g, {
+            return (0, n.jsx)(s.AnalyticsLocationProvider, {
+              value: g,
               children:
                 null != h
                   ? (0, n.jsx)(
@@ -2394,7 +2395,7 @@
                           }),
                         children: e => {
                           let { onClick: t, ...i } = e;
-                          return o({ onClick: s(t), ...i });
+                          return o({ onClick: c(t), ...i });
                         },
                       },
                       i
@@ -2402,7 +2403,7 @@
                   : o(void 0, i),
             });
           },
-          [h, m, f, p, E, T, R, g]
+          [g, h, m, f, p, E, T, R]
         );
       }
     },
@@ -2725,4 +2726,4 @@
     },
   },
 ]);
-//# sourceMappingURL=dfff62276037976caade.js.map
+//# sourceMappingURL=5d04f8ce7dfbfbb3a849.js.map

@@ -760,29 +760,29 @@
             showPopout: M = !1,
             className: x,
             onClick: _,
-            onContextMenu: N,
-            onPopoutRequestClose: v,
-            renderPopout: b,
-            renderRemixTag: L = !1,
+            onContextMenu: v,
+            onPopoutRequestClose: N,
+            renderPopout: L,
+            renderRemixTag: b = !1,
             decorations: R,
           } = e,
           k = i.useContext(p.default),
-          { AnalyticsLocationProvider: C } = (0, g.default)(f.default.USERNAME),
+          { analyticsLocations: C } = (0, g.default)(f.default.USERNAME),
           { nick: j, colorString: w, colorRoleName: D } = n,
-          F = null != a.messageReference && null != a.webhookId,
-          P = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
+          P = null != a.messageReference && null != a.webhookId,
+          F = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
           B = (0, A.useCanSeeRemixBadge)(),
           G = {
             className: T.username,
-            style: "username" === P && null != w ? { color: w } : void 0,
+            style: "username" === F && null != w ? { color: w } : void 0,
             onClick: _,
-            onContextMenu: N,
+            onContextMenu: v,
             children: (h ? "@" : "") + j,
           };
         t =
-          null != b && null != M
+          null != L && null != M
             ? (0, r.jsx)(d.Popout, {
-                preload: F
+                preload: P
                   ? void 0
                   : function () {
                       let e = null != s ? s : a.author;
@@ -799,10 +799,10 @@
                         { guildId: k, channelId: a.channel_id }
                       );
                     },
-                renderPopout: b,
+                renderPopout: L,
                 shouldShow: M,
                 position: u.isMobile ? "window_center" : "right",
-                onRequestClose: v,
+                onRequestClose: N,
                 children: e => {
                   let { onClick: t, ...n } = e;
                   return (0, r.jsx)(d.Clickable, {
@@ -816,12 +816,13 @@
             : (0, r.jsx)(d.Clickable, { ...G, className: o(G.className, x) });
         let U = null != R ? R[0] : null,
           O = null != R ? R[1] : null;
-        return (0, r.jsxs)(C, {
+        return (0, r.jsxs)(g.AnalyticsLocationProvider, {
+          value: C,
           children: [
             null != U && l
               ? (0, r.jsxs)(r.Fragment, { children: [" ", U, " "] })
               : null,
-            "dot" === P
+            "dot" === F
               ? (0, r.jsx)(d.RoleDot, {
                   color: w,
                   name: D,
@@ -831,7 +832,7 @@
             t,
             null != O ? (0, r.jsx)(r.Fragment, { children: O }) : null,
             null == U || l ? null : U,
-            null != a && (0, E.default)(a) && B && L ? (0, r.jsx)(y, {}) : null,
+            null != a && (0, E.default)(a) && B && b ? (0, r.jsx)(y, {}) : null,
           ],
         });
       }
@@ -875,4 +876,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1b87a7960c10b0406bb6.js.map
+//# sourceMappingURL=478535a6cdeb18d84766.js.map

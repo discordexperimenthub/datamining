@@ -26,12 +26,12 @@
               i = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
               u = e.webkitRequestFileSystem,
               s = e.requestFileSystem || u || e.mozRequestFileSystem,
-              d = function (t) {
+              l = function (t) {
                 (e.setImmediate || e.setTimeout)(function () {
                   throw t;
                 }, 0);
               },
-              l = "application/octet-stream",
+              d = "application/octet-stream",
               c = 0,
               f = function (e) {
                 setTimeout(function () {
@@ -45,7 +45,7 @@
                     try {
                       r.call(e, n || e);
                     } catch (e) {
-                      d(e);
+                      l(e);
                     }
                 }
               },
@@ -56,67 +56,67 @@
                   ? new Blob(["\xef\xbb\xbf", e], { type: e.type })
                   : e;
               },
-              h = function (t, d, h) {
+              h = function (t, l, h) {
                 !h && (t = O(t));
-                var D,
-                  S,
-                  v = this,
-                  _ = t.type,
-                  g = !1,
-                  y = function () {
-                    p(v, "writestart progress write writeend".split(" "));
+                var v,
+                  D,
+                  S = this,
+                  y = t.type,
+                  _ = !1,
+                  g = function () {
+                    p(S, "writestart progress write writeend".split(" "));
                   },
                   b = function () {
-                    if (S && i && "undefined" != typeof FileReader) {
+                    if (D && i && "undefined" != typeof FileReader) {
                       var o = new FileReader();
                       (o.onloadend = function () {
                         var e = o.result;
-                        (S.location.href =
+                        (D.location.href =
                           "data:attachment/file" + e.slice(e.search(/[,;]/))),
-                          (v.readyState = v.DONE),
-                          y();
+                          (S.readyState = S.DONE),
+                          g();
                       }),
                         o.readAsDataURL(t),
-                        (v.readyState = v.INIT);
+                        (S.readyState = S.INIT);
                       return;
                     }
-                    (g || !D) && (D = n().createObjectURL(t)),
-                      S
-                        ? (S.location.href = D)
-                        : void 0 === e.open(D, "_blank") &&
+                    (_ || !v) && (v = n().createObjectURL(t)),
+                      D
+                        ? (D.location.href = v)
+                        : void 0 === e.open(v, "_blank") &&
                           i &&
-                          (e.location.href = D),
-                      (v.readyState = v.DONE),
-                      y(),
-                      f(D);
+                          (e.location.href = v),
+                      (S.readyState = S.DONE),
+                      g(),
+                      f(v);
                   },
                   N = function (e) {
                     return function () {
-                      if (v.readyState !== v.DONE)
+                      if (S.readyState !== S.DONE)
                         return e.apply(this, arguments);
                     };
                   },
                   m = { create: !0, exclusive: !1 };
-                if (((v.readyState = v.INIT), !d && (d = "download"), r)) {
-                  (D = n().createObjectURL(t)),
+                if (((S.readyState = S.INIT), !l && (l = "download"), r)) {
+                  (v = n().createObjectURL(t)),
                     setTimeout(function () {
-                      (o.href = D),
-                        (o.download = d),
+                      (o.href = v),
+                        (o.download = l),
                         a(o),
-                        y(),
-                        f(D),
-                        (v.readyState = v.DONE);
+                        g(),
+                        f(v),
+                        (S.readyState = S.DONE);
                     });
                   return;
                 }
                 if (
                   (e.chrome &&
-                    _ &&
-                    _ !== l &&
-                    ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, l)),
-                    (g = !0)),
-                  u && "download" !== d && (d += ".download"),
-                  (_ === l || u) && (S = e),
+                    y &&
+                    y !== d &&
+                    ((t = (t.slice || t.webkitSlice).call(t, 0, t.size, d)),
+                    (_ = !0)),
+                  u && "download" !== l && (l += ".download"),
+                  (y === d || u) && (D = e),
                   !s)
                 ) {
                   b();
@@ -133,15 +133,15 @@
                         N(function (e) {
                           var n = function () {
                             e.getFile(
-                              d,
+                              l,
                               m,
                               N(function (e) {
                                 e.createWriter(
                                   N(function (n) {
                                     (n.onwriteend = function (t) {
-                                      (S.location.href = e.toURL()),
-                                        (v.readyState = v.DONE),
-                                        p(v, "writeend", t),
+                                      (D.location.href = e.toURL()),
+                                        (S.readyState = S.DONE),
+                                        p(S, "writeend", t),
                                         f(e);
                                     }),
                                       (n.onerror = function () {
@@ -151,13 +151,13 @@
                                       "writestart progress write abort"
                                         .split(" ")
                                         .forEach(function (e) {
-                                          n["on" + e] = v["on" + e];
+                                          n["on" + e] = S["on" + e];
                                         }),
                                       n.write(t),
-                                      (v.abort = function () {
-                                        n.abort(), (v.readyState = v.DONE);
+                                      (S.abort = function () {
+                                        n.abort(), (S.readyState = S.DONE);
                                       }),
-                                      (v.readyState = v.WRITING);
+                                      (S.readyState = S.WRITING);
                                   }),
                                   b
                                 );
@@ -166,7 +166,7 @@
                             );
                           };
                           e.getFile(
-                            d,
+                            l,
                             { create: !1 },
                             N(function (e) {
                               e.remove(), n();
@@ -182,7 +182,7 @@
                     b
                   );
               },
-              D = h.prototype;
+              v = h.prototype;
             return "undefined" != typeof navigator && navigator.msSaveOrOpenBlob
               ? function (e, t, n) {
                   return (
@@ -190,19 +190,19 @@
                     navigator.msSaveOrOpenBlob(e, t || "download")
                   );
                 }
-              : ((D.abort = function () {
+              : ((v.abort = function () {
                   (this.readyState = this.DONE), p(this, "abort");
                 }),
-                (D.readyState = D.INIT = 0),
-                (D.WRITING = 1),
-                (D.DONE = 2),
-                (D.error =
-                  D.onwritestart =
-                  D.onprogress =
-                  D.onwrite =
-                  D.onabort =
-                  D.onerror =
-                  D.onwriteend =
+                (v.readyState = v.INIT = 0),
+                (v.WRITING = 1),
+                (v.DONE = 2),
+                (v.error =
+                  v.onwritestart =
+                  v.onprogress =
+                  v.onwrite =
+                  v.onabort =
+                  v.onerror =
+                  v.onwriteend =
                     null),
                 function (e, t, n) {
                   return new h(e, t, n);
@@ -236,8 +236,8 @@
         i = n("884691"),
         u = n("748820"),
         s = n("599110"),
-        d = n("117362"),
-        l = n("49111");
+        l = n("117362"),
+        d = n("49111");
       ((o = class extends i.Component {
         renderProvider(e) {
           var t, n;
@@ -246,17 +246,17 @@
               page: r,
               object: i,
               objectType: u,
-              children: d,
+              children: l,
             } = this.props,
-            l = this.mergeLocation(e.location, this.getLocation(r, o, i, u)),
+            d = this.mergeLocation(e.location, this.getLocation(r, o, i, u)),
             c = this.getContext(
-              l,
+              d,
               null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate,
               null !== (n = this._loadId) && void 0 !== n ? n : e.loadId
             );
           return (0, a.jsx)(s.AnalyticsContext.Provider, {
             value: c,
-            children: d,
+            children: l,
           });
         }
         render() {
@@ -271,7 +271,7 @@
           super(e),
             (this._loadId = null),
             (this._loadDate = this.props.root ? Date.now() : null),
-            (this.getLocation = (0, d.cachedFunction)((e, t, n, o) => {
+            (this.getLocation = (0, l.cachedFunction)((e, t, n, o) => {
               let r = {};
               return (
                 null != e && (r.page = e),
@@ -281,11 +281,11 @@
                 r
               );
             })),
-            (this.mergeLocation = (0, d.cachedFunction)((e, t) => ({
+            (this.mergeLocation = (0, l.cachedFunction)((e, t) => ({
               ...e,
               ...t,
             }))),
-            (this.getContext = (0, d.cachedFunction)((e, t, n) => ({
+            (this.getContext = (0, l.cachedFunction)((e, t, n) => ({
               location: e,
               loadDate: t,
               loadId: n,
@@ -294,10 +294,10 @@
               ? (this._loadId = e.loadId)
               : e.root && (this._loadId = (0, u.v4)());
         }
-      }).Pages = l.AnalyticsPages),
-        (o.Sections = l.AnalyticsSections),
-        (o.Objects = l.AnalyticsObjects),
-        (o.ObjectTypes = l.AnalyticsObjectTypes),
+      }).Pages = d.AnalyticsPages),
+        (o.Sections = d.AnalyticsSections),
+        (o.Objects = d.AnalyticsObjects),
+        (o.ObjectTypes = d.AnalyticsObjectTypes),
         (o.defaultProps = { root: !1 }),
         (r = o);
     },
@@ -337,8 +337,11 @@
       var r = n("685665");
       function a(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: a } = (0, r.default)(t);
-          return (0, o.jsx)(a, { children: (0, o.jsx)(e, { ...n }) });
+          let { analyticsLocations: a } = (0, r.default)(t);
+          return (0, o.jsx)(r.AnalyticsLocationProvider, {
+            value: a,
+            children: (0, o.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -347,7 +350,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return y;
+            return g;
           },
         }),
         n("70102");
@@ -357,28 +360,28 @@
         i = n("446674"),
         u = n("77078"),
         s = n("404118"),
-        d = n("272030"),
-        l = n("838446"),
+        l = n("272030"),
+        d = n("838446"),
         c = n("158534"),
         f = n("812204"),
         p = n("957255"),
         O = n("773336"),
         h = n("50885"),
-        D = n("520497"),
-        S = n("112646"),
-        v = n("846325"),
-        _ = n("49111"),
-        g = n("782340"),
-        y = (0, c.default)(
-          (0, l.default)(
+        v = n("520497"),
+        D = n("112646"),
+        S = n("846325"),
+        y = n("49111"),
+        _ = n("782340"),
+        g = (0, c.default)(
+          (0, d.default)(
             function (e) {
               let {
                   soundGuild: t,
-                  sound: l,
+                  sound: d,
                   activeCallGuildId: c,
                   onSelect: f,
                 } = e,
-                _ = (function (e, t) {
+                y = (function (e, t) {
                   let { canManageGuildExpressions: a } = (0,
                     i.useStateFromStoresObject)(
                       [p.default],
@@ -408,19 +411,19 @@
                         {
                           id: "edit-soundboard-sound",
                           label:
-                            g.default.Messages
+                            _.default.Messages
                               .SOUNDBOARD_CONTEXT_MENU_EDIT_SOUND,
                           action: s,
                         },
                         "edit-soundboard-sound"
                       )
                     : null;
-                })(l, t),
-                y = (function (e) {
+                })(d, t),
+                g = (function (e) {
                   let { soundId: t } = e,
                     n = r.useCallback(async () => {
                       try {
-                        let e = (0, D.default)(t),
+                        let e = (0, v.default)(t),
                           n = await fetch(e),
                           o = await n.blob(),
                           r = (function (e) {
@@ -441,38 +444,38 @@
                       } catch (e) {
                         s.default.show({
                           title:
-                            g.default.Messages
+                            _.default.Messages
                               .SOUNDBOARD_DOWNLOAD_SOUND_FAILED_TITLE,
-                          body: g.default.Messages
+                          body: _.default.Messages
                             .SOUNDBOARD_DOWNLOAD_SOUND_FAILED_BODY,
-                          confirmText: g.default.Messages.OKAY,
+                          confirmText: _.default.Messages.OKAY,
                         });
                       }
                     }, [t]);
-                  return e.guildId === v.DEFAULT_SOUND_GUILD_ID
+                  return e.guildId === S.DEFAULT_SOUND_GUILD_ID
                     ? null
                     : (0, o.jsx)(
                         u.MenuItem,
                         {
                           id: "download-soundboard-sound",
                           label:
-                            g.default.Messages
+                            _.default.Messages
                               .SOUNDBOARD_CONTEXT_MENU_DOWNLOAD_SOUND,
                           action: n,
                         },
                         "download-soundboard-sound"
                       );
-                })(l),
-                b = (0, S.default)(l, c);
+                })(d),
+                b = (0, D.default)(d, c);
               return (0, o.jsx)(u.Menu, {
                 navId: "sound-button-context",
-                onClose: d.closeContextMenu,
-                "aria-label": g.default.Messages.USER_ACTIONS_MENU_LABEL,
+                onClose: l.closeContextMenu,
+                "aria-label": _.default.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: f,
-                children: (0, o.jsxs)(u.MenuGroup, { children: [_, b, y] }),
+                children: (0, o.jsxs)(u.MenuGroup, { children: [y, b, g] }),
               });
             },
-            { object: _.AnalyticsObjects.CONTEXT_MENU }
+            { object: y.AnalyticsObjects.CONTEXT_MENU }
           ),
           [f.default.CONTEXT_MENU, f.default.SOUNDBOARD_BUTTON]
         );
@@ -492,8 +495,8 @@
         i = n("685665"),
         u = n("697218"),
         s = n("476765"),
-        d = n("719923"),
-        l = n("78581"),
+        l = n("719923"),
+        d = n("78581"),
         c = n("846325"),
         f = n("782340");
       function p(e, t) {
@@ -503,19 +506,19 @@
           ),
           O = (0, s.useUID)(),
           h = (0, s.useUID)();
-        return null != t && d.default.canUseCustomCallSounds(p)
+        return null != t && l.default.canUseCustomCallSounds(p)
           ? (0, o.jsxs)(o.Fragment, {
               children: [
                 (0, o.jsx)(a.MenuItem, {
                   id: O,
                   label: f.default.Messages.CALL_SOUNDS_CONTEXT_MENU_GUILD,
-                  action: () => (0, l.updateCustomJoinSound)(t, e, n),
+                  action: () => (0, d.updateCustomJoinSound)(t, e, n),
                 }),
                 (0, o.jsx)(a.MenuItem, {
                   id: h,
                   label: f.default.Messages.CALL_SOUNDS_CONTEXT_MENU_GLOBAL,
                   action: () =>
-                    (0, l.updateCustomJoinSound)(
+                    (0, d.updateCustomJoinSound)(
                       c.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID,
                       e,
                       n
@@ -558,4 +561,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a8c6f625c8e850365e81.js.map
+//# sourceMappingURL=9bdd80350abedc997d0a.js.map

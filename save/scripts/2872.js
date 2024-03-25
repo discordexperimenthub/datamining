@@ -185,13 +185,13 @@
             return m;
           },
           MAX_HOME_HEADER_OVERLAY_HEIGHT: function () {
-            return M;
+            return v;
           },
           VIDEO_BACKGROUND_ASPECT_RATIO: function () {
-            return O;
+            return M;
           },
           MAX_VIDEO_OVERLAY_HEIGHT: function () {
-            return v;
+            return O;
           },
           MessageTypes: function () {
             return s;
@@ -225,11 +225,11 @@
         p = a / A,
         L = a / R,
         m = a / C,
-        M = a / S,
-        O =
+        v = a / S,
+        M =
           o.BACKGROUND_REPLACEMENT_SIZE.width /
           o.BACKGROUND_REPLACEMENT_SIZE.height,
-        v = a / O;
+        O = a / M;
       ((r = s || (s = {}))[(r.CROP_GIF_START = 0)] = "CROP_GIF_START"),
         (r[(r.CROP_GIF_COMPLETE = 1)] = "CROP_GIF_COMPLETE"),
         (r[(r.CROP_GIF_ERROR = 2)] = "CROP_GIF_ERROR");
@@ -442,7 +442,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return v;
+            return O;
           },
         }),
         n("222007");
@@ -467,14 +467,14 @@
         p = n("739477"),
         L = n("49111"),
         m = n("782340"),
-        M = n("424382");
-      let O = { width: 368, height: 207 };
-      function v(e) {
+        v = n("424382");
+      let M = { width: 368, height: 207 };
+      function O(e) {
         let {
             transitionState: t,
             videoEnabled: n,
-            onEnable: O,
-            onClose: v,
+            onEnable: M,
+            onClose: O,
           } = e,
           T = h.default.getCameraComponent(),
           H = (0, C.useUID)(),
@@ -484,9 +484,7 @@
             (0, E.getLastUsedVideoBackgroundOption)(A.default.getCurrentUser())
           ),
           U = (0, a.useAnalyticsContext)(),
-          { AnalyticsLocationProvider: x } = (0, c.default)(
-            l.default.CAMERA_PREVIEW
-          ),
+          { analyticsLocations: x } = (0, c.default)(l.default.CAMERA_PREVIEW),
           y = r.useRef(null);
         r.useEffect(() => {
           S.default.track(L.AnalyticEvents.OPEN_MODAL, {
@@ -498,7 +496,7 @@
             null === (e = y.current) || void 0 === e || e.scrollToTop();
           }, []);
         let w = async () => {
-            await V(), s.default.setVideoEnabled(!0), null == O || O();
+            await V(), s.default.setVideoEnabled(!0), null == M || M();
           },
           V = async () => {
             try {
@@ -509,24 +507,25 @@
                 },
               });
             } catch (e) {}
-            await v(), (0, f.saveLastUsedBackgroundOption)(D);
+            await O(), (0, f.saveLastUsedBackgroundOption)(D);
           };
-        return (0, i.jsx)(x, {
+        return (0, i.jsx)(c.AnalyticsLocationProvider, {
+          value: x,
           children: (0, i.jsx)(o.default, {
             page: L.AnalyticsPages.PREVIEW_CAMERA_MODAL,
             children: (0, i.jsxs)(u.ModalRoot, {
-              className: M.modalRoot,
+              className: v.modalRoot,
               size: u.ModalSize.DYNAMIC,
               "aria-labelledby": H,
               transitionState: t,
               children: [
                 (0, i.jsxs)(u.ModalContent, {
-                  className: N ? M.contentWithVideoBackgrounds : M.content,
+                  className: N ? v.contentWithVideoBackgrounds : v.content,
                   scrollerRef: y,
                   children: [
                     (0, i.jsx)(u.Heading, {
                       id: H,
-                      className: M.header,
+                      className: v.header,
                       variant: "heading-xl/semibold",
                       children: n
                         ? m.default.Messages
@@ -542,10 +541,10 @@
                       hideDeviceSelector: n,
                       renderCamera: e =>
                         (0, i.jsxs)("div", {
-                          className: M.cameraPreview,
+                          className: v.cameraPreview,
                           children: [
                             (0, i.jsx)("div", {
-                              className: M.camera,
+                              className: v.camera,
                               children: (0, i.jsx)(T, {
                                 disabled: !1,
                                 deviceId: e,
@@ -556,7 +555,7 @@
                             (0, i.jsx)(p.FilterLoadingIndicator, {}),
                           ],
                         }),
-                      onLearnMore: v,
+                      onLearnMore: O,
                     }),
                   ],
                 }),
@@ -595,8 +594,8 @@
                   ],
                 }),
                 (0, i.jsx)(u.ModalCloseButton, {
-                  onClick: v,
-                  className: M.modalClose,
+                  onClick: O,
+                  className: v.modalClose,
                 }),
               ],
             }),
@@ -1105,4 +1104,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1382f5b8a6e2883760bc.js.map
+//# sourceMappingURL=6885ae0edb7d2cc5db02.js.map

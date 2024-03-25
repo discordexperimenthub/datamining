@@ -6452,7 +6452,7 @@
       function _(e) {
         var t, a;
         let { userId: c, channel: m } = e,
-          { AnalyticsLocationProvider: g } = (0, d.default)(u.default.USERNAME),
+          { analyticsLocations: g } = (0, d.default)(u.default.USERNAME),
           S = (0, i.useStateFromStores)([p.default], () =>
             p.default.getUser(c)
           ),
@@ -6481,7 +6481,8 @@
               className: l(A.threadCreatorName, A.unknownCreatorName),
               children: M,
             })
-          : (0, s.jsx)(g, {
+          : (0, s.jsx)(d.AnalyticsLocationProvider, {
+              value: g,
               children: (0, s.jsx)(r.Popout, {
                 preload: () =>
                   (0, f.default)(S.id, S.getAvatarURL(m.guild_id, 80), {
@@ -8294,9 +8295,8 @@
           n = t.getRecipientId(),
           l = (0, c.useAvatarsWithGuilds)(n),
           i = Array(l.length).fill(null),
-          { AnalyticsLocationProvider: f, analyticsLocations: h } = (0,
-          d.default)(u.default.AKA),
-          E = (function (e) {
+          { analyticsLocations: f } = (0, d.default)(u.default.AKA),
+          h = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: s } = e,
               l = (0, r.useStateFromStores)(
                 [p.default],
@@ -8321,10 +8321,11 @@
               }),
               i
             );
-          })({ userId: n, analyticsLocations: h, channelId: t.id });
-        return 0 === E.getNicknameGuildPairs().length && 0 === l.length
+          })({ userId: n, analyticsLocations: f, channelId: t.id });
+        return 0 === h.getNicknameGuildPairs().length && 0 === l.length
           ? (0, s.jsx)("div", { className: v.spacer })
-          : (0, s.jsxs)(f, {
+          : (0, s.jsxs)(d.AnalyticsLocationProvider, {
+              value: f,
               children: [
                 (0, s.jsx)(S.Divider, {}),
                 (0, s.jsx)(g.TextBadge, {
@@ -8339,7 +8340,7 @@
                       showUserPopout: !1,
                       renderUser: (e, t, n) => {
                         var a;
-                        let i = E.user,
+                        let i = h.user,
                           r = l[n];
                         return null == r || null == i
                           ? null
@@ -8355,7 +8356,7 @@
                                 children: (0, s.jsx)("img", {
                                   alt: "",
                                   className: v.avatar,
-                                  onClick: E.handleClick,
+                                  onClick: h.handleClick,
                                   src: i.getAvatarURL(r, 16),
                                   "aria-hidden": !0,
                                 }),
@@ -8363,17 +8364,17 @@
                               r[1]
                             );
                       },
-                      renderMoreUsers: E.renderMoreAvatars,
+                      renderMoreUsers: h.renderMoreAvatars,
                       guildId: void 0,
                       max: 3,
                       className: v.avatars,
                     })
                   : null,
-                E.getNicknameGuildPairs().length > 0
+                h.getNicknameGuildPairs().length > 0
                   ? (0, s.jsx)(m.default, {
                       position: "bottom",
                       className: v.nicknames,
-                      children: E.renderNicknamePairs(),
+                      children: h.renderNicknamePairs(),
                     })
                   : null,
               ],
@@ -19814,4 +19815,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4c4059045a631631e567.js.map
+//# sourceMappingURL=a8e1ac0fd86262cbe9d5.js.map

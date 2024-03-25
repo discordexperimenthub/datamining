@@ -16,8 +16,8 @@
         l = u.memo(function (e) {
           var t, n, l, s;
           let {
-              user: d,
-              size: o = a.AvatarSizes.SIZE_32,
+              user: o,
+              size: d = a.AvatarSizes.SIZE_32,
               animate: c = !1,
               "aria-hidden": f = !1,
               ...P
@@ -25,13 +25,13 @@
             S = u.useContext(i.default);
           return (0, r.jsx)(a.Avatar, {
             src:
-              ((t = d),
-              (n = (0, a.getAvatarSize)(o)),
+              ((t = o),
+              (n = (0, a.getAvatarSize)(d)),
               (l = c),
               (s = S),
               t.getAvatarURL(s, n, l)),
-            size: o,
-            "aria-label": f ? void 0 : d.username,
+            size: d,
+            "aria-label": f ? void 0 : o.username,
             "aria-hidden": f,
             ...P,
           });
@@ -42,10 +42,10 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return o;
           },
           MonetizationListingImageAspectStable: function () {
-            return o;
+            return d;
           },
         });
       var r = n("37983");
@@ -57,18 +57,18 @@
       let s = (0, u.cssValueToNumber)(
         a.default.ASPECT_STABLE_IMAGE_CONTAINER_PADDING
       );
-      function d(e) {
+      function o(e) {
         let { listing: t, imageSize: n, alt: u, ...a } = e,
           l = (0, i.useListingThumbnailUrl)(t, n);
         return (0, r.jsx)("img", { src: l, alt: u, ...a });
       }
-      function o(e) {
+      function d(e) {
         let { listing: t, aspectRatio: n = 16 / 9, height: u, ...a } = e,
-          d = (u - 2 * s) * n,
-          o = (0, i.useListingThumbnailUrl)(t, d),
-          c = (0, i.useListingThumbnailUrl)(t, d, { shouldAnimate: !1 });
+          o = (u - 2 * s) * n,
+          d = (0, i.useListingThumbnailUrl)(t, o),
+          c = (0, i.useListingThumbnailUrl)(t, o, { shouldAnimate: !1 });
         return (0, r.jsx)(l.default, {
-          src: o,
+          src: d,
           backgroundSrc: c,
           aspectRatio: n,
           ...a,
@@ -90,32 +90,32 @@
         i = n("77078"),
         l = n("750482"),
         s = n("945330"),
-        d = n("880672");
-      function o(e) {
+        o = n("880672");
+      function d(e) {
         let { className: t, onClose: n } = e;
         return (0, r.jsx)(i.Clickable, {
-          className: a(d.closeButtonContainer, t),
+          className: a(o.closeButtonContainer, t),
           onClick: n,
           children: (0, r.jsx)(s.default, {
             width: 16,
             height: 16,
-            className: d.closeButtonIcon,
+            className: o.closeButtonIcon,
           }),
         });
       }
       function c(e) {
         let { guildProductListing: t, onClose: n, className: u } = e;
         return (0, r.jsxs)(i.ModalHeader, {
-          className: a(d.header, u),
+          className: a(o.header, u),
           separator: !1,
           children: [
             (0, r.jsx)(l.default, {
-              className: d.headerImage,
+              className: o.headerImage,
               listing: t,
               imageSize: 500,
               alt: "",
             }),
-            (0, r.jsx)(o, { className: d.closeButton, onClose: n }),
+            (0, r.jsx)(d, { className: o.closeButton, onClose: n }),
           ],
         });
       }
@@ -143,7 +143,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return d;
+            return o;
           },
         });
       var r = n("884691"),
@@ -152,18 +152,18 @@
         i = n("642906"),
         l = n("134666"),
         s = n("273093");
-      function d(e) {
+      function o(e) {
         let { handleClose: t } = e,
           { guildProductListing: n, guildId: u } = (0,
           s.useGuildProductPurchaseContext)(),
-          { selectedSkuPricePreview: d } = (0, i.usePaymentContext)();
+          { selectedSkuPricePreview: o } = (0, i.usePaymentContext)();
         return (
           r.useEffect(() => {
-            a(null != d, "selectedSkuPricePreview cannot be null"),
+            a(null != o, "selectedSkuPricePreview cannot be null"),
               (0, l.openGuildProductPurchaseConfirmationModal)({
                 guildId: u,
                 guildProductListingId: n.id,
-                skuPricePreview: d,
+                skuPricePreview: o,
               }),
               t();
           }, []),
@@ -176,7 +176,7 @@
       n.r(t),
         n.d(t, {
           useGuildProductPurchaseContext: function () {
-            return o;
+            return d;
           },
           GuildProductPurchaseContextProvider: function () {
             return c;
@@ -188,9 +188,9 @@
         i = n.n(a),
         l = n("446674"),
         s = n("565559");
-      let d = u.createContext(void 0);
-      function o() {
-        let e = u.useContext(d);
+      let o = u.createContext(void 0);
+      function d() {
+        let e = u.useContext(o);
         return i(null != e, "GuildProductPurchaseContext not found"), e;
       }
       function c(e) {
@@ -200,7 +200,7 @@
           );
         return (
           i(null != a, "guildProductListing cannot be null"),
-          (0, r.jsx)(d.Provider, {
+          (0, r.jsx)(o.Provider, {
             value: { guildProductListing: a, ...u },
             children: t,
           })
@@ -212,7 +212,7 @@
       n.r(t),
         n.d(t, {
           renderGuildProductPurchaseHeader: function () {
-            return d;
+            return o;
           },
         });
       var r = n("37983");
@@ -230,7 +230,7 @@
           onClose: t,
         });
       }
-      let d = (e, t, n) =>
+      let o = (e, t, n) =>
         n === u.Step.CONFIRM ? null : (0, r.jsx)(s, { onClose: () => t(!1) });
     },
     191131: function (e, t, n) {
@@ -248,8 +248,8 @@
         i = n("635357"),
         l = n("642906"),
         s = n("85336"),
-        d = n("385179"),
-        o = n("262683"),
+        o = n("385179"),
+        d = n("262683"),
         c = n("946359"),
         f = n("724269"),
         P = n("99836"),
@@ -267,7 +267,7 @@
         {
           key: s.Step.ADD_PAYMENT_STEPS,
           renderStep: e =>
-            (0, r.jsx)(o.PaymentModalAddPaymentStep, {
+            (0, r.jsx)(d.PaymentModalAddPaymentStep, {
               ...e,
               onReturn: () => {
                 let t = p.default.paymentSources;
@@ -301,25 +301,28 @@
             guildProductContext: t,
             sourceAnalyticsLocations: n,
             applicationId: s,
-            ...o
+            ...d
           } = e,
-          { AnalyticsLocationProvider: c, analyticsLocations: f } = (0,
-          a.default)(n, u.default.GUILD_PRODUCT_PAYMENT_MODAL);
+          { analyticsLocations: c } = (0, a.default)(
+            n,
+            u.default.GUILD_PRODUCT_PAYMENT_MODAL
+          );
         return (0, r.jsx)(x.GuildProductPurchaseContextProvider, {
           ...t,
-          children: (0, r.jsx)(c, {
+          children: (0, r.jsx)(a.AnalyticsLocationProvider, {
+            value: c,
             children: (0, r.jsx)(l.PaymentContextProvider, {
               stepConfigs: v,
               applicationId: s,
-              skuIDs: [o.skuId],
+              skuIDs: [d.skuId],
               activeSubscription: null,
               purchaseType: m.PurchaseTypes.ONE_TIME,
               children: (0, r.jsx)(i.GiftContextProvider, {
-                children: (0, r.jsx)(d.PaymentModal, {
+                children: (0, r.jsx)(o.PaymentModal, {
                   initialPlanId: null,
-                  analyticsLocations: f,
+                  analyticsLocations: c,
                   renderHeader: C.renderGuildProductPurchaseHeader,
-                  ...o,
+                  ...d,
                 }),
               }),
             }),
@@ -342,8 +345,8 @@
         i = n.n(a),
         l = n("245187"),
         s = n("635357"),
-        d = n("642906"),
-        o = n("85336"),
+        o = n("642906"),
+        d = n("85336"),
         c = n("628738"),
         f = n("49111");
       function P(e) {
@@ -356,7 +359,7 @@
             application: h,
             skusById: x,
             selectedSkuId: C,
-          } = (0, d.usePaymentContext)(),
+          } = (0, o.usePaymentContext)(),
           { isGift: m } = (0, s.useGiftContext)(),
           [v, T] = u.useState(!0);
         return (u.useEffect(() => {
@@ -372,14 +375,14 @@
             (null == e ? void 0 : e.productLine) ===
               f.SKUProductLines.COLLECTIBLES
           ) {
-            t(o.Step.GIFT_CUSTOMIZATION);
+            t(d.Step.GIFT_CUSTOMIZATION);
             return;
           }
           if (0 === Object.keys(S).length) {
-            t(o.Step.ADD_PAYMENT_STEPS);
+            t(d.Step.ADD_PAYMENT_STEPS);
             return;
           }
-          t(o.Step.REVIEW);
+          t(d.Step.REVIEW);
         }, [v, a, t, S, m, x, C]),
         v)
           ? (0, r.jsx)(c.default, {})
@@ -390,4 +393,4 @@
     },
   },
 ]);
-//# sourceMappingURL=b0c90af5187f25425c5b.js.map
+//# sourceMappingURL=920ef6799de892f3b3e1.js.map

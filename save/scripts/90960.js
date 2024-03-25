@@ -145,20 +145,20 @@
       let n = ["embedded_cover", "embedded_background"];
       function s(e) {
         let { applicationId: t, size: l, names: s = n } = e,
-          [r, c] = i.useState(null),
-          [o, d] = i.useState(!0),
+          [r, o] = i.useState(null),
+          [c, d] = i.useState(!0),
           u = (0, a.getAssetImage)(t, r, l);
         return (
           i.useEffect(() => {
             (0, a.getAssets)(t).then(e => {
               for (let [t, l] of (d(!1), Object.entries(e)))
                 if (null != l && "" !== l.id && s.includes(l.name)) {
-                  c(l.id);
+                  o(l.id);
                   return;
                 }
             });
           }, [t]),
-          { url: u, state: o ? "loading" : null != u ? "fetched" : "not-found" }
+          { url: u, state: c ? "loading" : null != u ? "fetched" : "not-found" }
         );
       }
     },
@@ -167,7 +167,7 @@
       l.r(t),
         l.d(t, {
           ActivityActionOverlayButton: function () {
-            return c;
+            return o;
           },
         });
       var i = l("37983");
@@ -176,13 +176,13 @@
         n = l("607573"),
         s = l("782340"),
         r = l("178639");
-      function c(e) {
+      function o(e) {
         let { action: t, onClick: l } = e,
-          c =
+          o =
             t === n.ActivityAction.JOIN
               ? s.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
               : s.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
-          o =
+          c =
             t === n.ActivityAction.JOIN
               ? a.Button.Colors.PRIMARY
               : a.Button.Colors.RED;
@@ -192,8 +192,8 @@
             className: r.actionButton,
             onClick: l,
             size: a.Button.Sizes.MEDIUM,
-            color: o,
-            children: c,
+            color: c,
+            children: o,
           }),
         });
       }
@@ -216,12 +216,12 @@
             imageBackground: t,
             applicationName: l,
             imageClassName: r,
-            imageNotFoundClassName: c,
+            imageNotFoundClassName: o,
           } = e,
-          [o, d] = a.useState(!1);
-        return "not-found" === t.state || o
+          [c, d] = a.useState(!1);
+        return "not-found" === t.state || c
           ? (0, i.jsx)("div", {
-              className: c,
+              className: o,
               children: (0, i.jsx)(n.default, { className: s.brokenImageIcon }),
             })
           : "loading" === t.state
@@ -248,8 +248,8 @@
         n = l("414456"),
         s = l.n(n),
         r = l("446674"),
-        c = l("77078"),
-        o = l("272030"),
+        o = l("77078"),
+        c = l("272030"),
         d = l("811425"),
         u = l("845579"),
         f = l("697218"),
@@ -269,18 +269,18 @@
         N = l("141962"),
         j = l("639028"),
         D = l("782340"),
-        M = l("453193"),
-        y = l("728791");
+        y = l("453193"),
+        M = l("728791");
       function L(e) {
         let { value: t, icon: l } = e;
-        return (0, i.jsxs)(c.Text, {
-          className: M.activityTag,
+        return (0, i.jsxs)(o.Text, {
+          className: y.activityTag,
           color: "interactive-normal",
           variant: "text-xs/semibold",
           children: [
             (0, E.isNotNullish)(l)
               ? (0, i.jsx)(l, {
-                  className: M.icon,
+                  className: y.icon,
                   backgroundColor: "interactive-normal",
                 })
               : null,
@@ -296,7 +296,7 @@
             guildId: n,
             large: s = !1,
           } = e,
-          o = (0, r.useStateFromStoresArray)([f.default], () => {
+          c = (0, r.useStateFromStoresArray)([f.default], () => {
             var e;
             return Array.from(
               null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e
@@ -312,9 +312,9 @@
           d = x.default.getName(
             n,
             null == a ? void 0 : a.id,
-            null == o ? void 0 : o[0]
+            null == c ? void 0 : c[0]
           );
-        if (((d = (0, C.truncateText)(d, 15)), null == t || 0 === o.length)) {
+        if (((d = (0, C.truncateText)(d, 15)), null == t || 0 === c.length)) {
           var u, v;
           let e = "".concat(
             (0, p.default)(
@@ -323,8 +323,8 @@
           );
           return (
             s && (e = null !== (v = l.description) && void 0 !== v ? v : ""),
-            (0, i.jsx)(c.Text, {
-              className: M.activitySubtitleText,
+            (0, i.jsx)(o.Text, {
+              className: y.activitySubtitleText,
               variant: "text-xs/normal",
               color: "interactive-normal",
               children: e,
@@ -332,15 +332,15 @@
           );
         }
         return (0, i.jsxs)("div", {
-          className: M.activitySubtitleText,
+          className: y.activitySubtitleText,
           children: [
-            (0, i.jsx)(c.Text, {
-              className: M.usersArePlayingText,
+            (0, i.jsx)(o.Text, {
+              className: y.usersArePlayingText,
               variant: "text-xs/normal",
               children:
-                o.length > 1
+                c.length > 1
                   ? D.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format(
-                      { username: d, count: o.length - 1 }
+                      { username: d, count: c.length - 1 }
                     )
                   : D.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
                       username: d,
@@ -349,7 +349,7 @@
             (0, i.jsx)(m.default, {
               size: s ? m.Sizes.SIZE_24 : m.Sizes.SIZE_16,
               guildId: n,
-              users: o,
+              users: c,
               max: 6,
             }),
           ],
@@ -373,7 +373,7 @@
             joinableEmbeddedApp: H,
             onActivityItemSelected: B,
             labelType: F,
-            staffReleasePhase: w,
+            staffReleasePhase: P,
           } = (0, S.default)({
             activityItem: l,
             channel: n,
@@ -383,7 +383,7 @@
             onActivityItemSelected: x,
             embeddedActivitiesManager: N.default,
           }),
-          P = (0, r.useStateFromStores)(
+          w = (0, r.useStateFromStores)(
             [T.default, v.default],
             () =>
               T.default.inDevModeForApplication(l.application.id) ||
@@ -406,23 +406,23 @@
         let K = () => Z(!0),
           X = () => Z(!1),
           q = u.DeveloperMode.useSetting();
-        return (0, i.jsxs)(c.Clickable, {
+        return (0, i.jsxs)(o.Clickable, {
           onClick: O === S.ActivityAction.START ? B : void 0,
           onContextMenu: q
             ? e => {
-                (0, o.openContextMenu)(e, e =>
+                (0, c.openContextMenu)(e, e =>
                   (0, i.jsx)(j.default, { application: Y, ...e })
                 );
               }
             : void 0,
-          className: s(M.activityItem, {
-            [M.large]: !0 === C,
-            [M.disabled]: O !== S.ActivityAction.START,
+          className: s(y.activityItem, {
+            [y.large]: !0 === C,
+            [y.disabled]: O !== S.ActivityAction.START,
           }),
           children: [
             (0, i.jsxs)("div", {
               ref: U,
-              className: s(M.activityImageContainer, { [M.large]: !0 === C }),
+              className: s(y.activityImageContainer, { [y.large]: !0 === C }),
               onMouseEnter: K,
               onFocus: K,
               onMouseLeave: X,
@@ -431,15 +431,15 @@
                 (0, i.jsx)(A.default, {
                   imageBackground: V,
                   applicationName: Y.name,
-                  imageClassName: s(M.activityImage, { [M.large]: !0 === C }),
-                  imageNotFoundClassName: M.brokenImageIconWrapper,
+                  imageClassName: s(y.activityImage, { [y.large]: !0 === C }),
+                  imageNotFoundClassName: y.brokenImageIconWrapper,
                 }),
                 null != R && W && O === S.ActivityAction.START
                   ? (0, i.jsx)("div", {
-                      className: s(M.activityVideo, { [M.videoFadeOut]: !G }),
+                      className: s(y.activityVideo, { [y.videoFadeOut]: !G }),
                       onAnimationEnd: () => (G ? null : z(!1)),
                       children: (0, i.jsx)(I.default, {
-                        className: M.activityVideo,
+                        className: y.activityVideo,
                         src: R,
                         loop: !0,
                         autoPlay: !0,
@@ -454,25 +454,25 @@
                     })
                   : null,
                 (0, i.jsx)("div", {
-                  className: M.overlayBadge,
+                  className: y.overlayBadge,
                   children: (0, i.jsx)("div", {
-                    className: M.badgeContainer,
+                    className: y.badgeContainer,
                     children: (0, i.jsx)(_.default, {
                       name: Y.name,
                       labelType: F,
                     }),
                   }),
                 }),
-                P
-                  ? (0, i.jsx)(c.Tooltip, {
+                w
+                  ? (0, i.jsx)(o.Tooltip, {
                       text: D.default.Messages
                         .EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
                       children: e =>
                         (0, i.jsx)("div", {
-                          className: M.devShelfBadge,
+                          className: y.devShelfBadge,
                           ...e,
                           children: (0, i.jsx)(h.default, {
-                            className: M.devShelfIcon,
+                            className: y.devShelfIcon,
                           }),
                         }),
                     })
@@ -480,11 +480,11 @@
               ],
             }),
             (0, i.jsxs)("div", {
-              className: s(M.activityTextContainer, { [M.large]: C }),
+              className: s(y.activityTextContainer, { [y.large]: C }),
               children: [
                 C
-                  ? (0, i.jsx)(c.Text, {
-                      className: M.activityMaxParticipantsLarge,
+                  ? (0, i.jsx)(o.Text, {
+                      className: y.activityMaxParticipantsLarge,
                       variant: "text-xs/normal",
                       color: "interactive-normal",
                       children: (0, p.default)(
@@ -493,22 +493,22 @@
                     })
                   : null,
                 (0, i.jsxs)("div", {
-                  className: M.activityName,
+                  className: y.activityName,
                   children: [
-                    (0, i.jsx)(c.Heading, {
-                      className: M.activityTitleText,
+                    (0, i.jsx)(o.Heading, {
+                      className: y.activityTitleText,
                       variant: "heading-md/semibold",
                       color: "interactive-active",
                       children: Y.name,
                     }),
-                    null != w
-                      ? (0, i.jsx)(c.Tooltip, {
-                          text: w,
+                    null != P
+                      ? (0, i.jsx)(o.Tooltip, {
+                          text: P,
                           children: e =>
                             (0, i.jsx)("img", {
-                              className: M.staffBadge,
-                              alt: w,
-                              src: y,
+                              className: y.staffBadge,
+                              alt: P,
+                              src: M,
                               ...e,
                             }),
                         })
@@ -523,7 +523,7 @@
                   large: C,
                 }),
                 (0, i.jsx)("div", {
-                  className: M.activityTagsContainer,
+                  className: y.activityTagsContainer,
                   children: Y.tags
                     .slice(0, 3)
                     .map(e =>
@@ -554,8 +554,8 @@
         n = l("414456"),
         s = l.n(n),
         r = l("446674"),
-        c = l("77078"),
-        o = l("272030"),
+        o = l("77078"),
+        c = l("272030"),
         d = l("811425"),
         u = l("206230"),
         f = l("697218"),
@@ -575,8 +575,8 @@
         N = l("687292"),
         j = l("141962"),
         D = l("905647"),
-        M = l("49111"),
-        y = l("782340"),
+        y = l("49111"),
+        M = l("782340"),
         L = l("962529"),
         b = l("728791");
       function V(e) {
@@ -591,8 +591,8 @@
           {
             imageBackground: B,
             videoUrl: F,
-            activityAction: w,
-            staffReleasePhase: P,
+            activityAction: P,
+            staffReleasePhase: w,
             onActivityItemSelected: Y,
             labelType: k,
           } = (0, g.default)({
@@ -636,12 +636,12 @@
           K = null;
         null != z && W.length > 1
           ? (K =
-              y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format(
+              M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format(
                 { username1: z, extras: W.length - 1 }
               ))
           : null != z &&
             (K =
-              y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format(
+              M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format(
                 { username1: z }
               ));
         let X = a.useCallback(
@@ -661,18 +661,18 @@
           ei =
             null == t.application.maxParticipants ||
             -1 === t.application.maxParticipants
-              ? y.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
-              : y.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format(
+              ? M.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
+              : M.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format(
                   { count: t.application.maxParticipants }
                 ),
           ea = a.useCallback(() => {
             U
               ? E.ComponentDispatch.dispatch(
-                  M.ComponentActions.SHOW_ACTIVITY_DETAILS,
+                  y.ComponentActions.SHOW_ACTIVITY_DETAILS,
                   { applicationId: t.application.id }
                 )
-              : w === g.ActivityAction.START && Y();
-          }, [w, t, U, Y]),
+              : P === g.ActivityAction.START && Y();
+          }, [P, t, U, Y]),
           en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
           es =
             (null == en ? void 0 : en.playersSuggestionMin) != null &&
@@ -681,14 +681,14 @@
                   .concat(en.playersSuggestionMin, " - ")
                   .concat(en.playersSuggestionMax)
               : void 0;
-        return (0, i.jsxs)(c.Clickable, {
+        return (0, i.jsxs)(o.Clickable, {
           className: s(L.activityCard, {
             [L.activityCardReducedMotion]: Z,
             [L.activityCardWithoutDetailPageRoute]: !U,
           }),
           onClick: ea,
           onContextMenu: e => {
-            (0, o.openContextMenuLazy)(e, async () => {
+            (0, c.openContextMenuLazy)(e, async () => {
               let { default: e } = await l
                 .el("639028")
                 .then(l.bind(l, "639028"));
@@ -723,9 +723,9 @@
                       }),
                     })
                   : null,
-                w !== g.ActivityAction.START
+                P !== g.ActivityAction.START
                   ? (0, i.jsx)(A.ActivityActionOverlayButton, {
-                      action: w,
+                      action: P,
                       onClick: Y,
                     })
                   : null,
@@ -736,7 +736,7 @@
                         className: L.minimalDetails,
                         children: [
                           (0, i.jsx)(v.default, { width: 16, height: 16 }),
-                          (0, i.jsx)(c.Text, {
+                          (0, i.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             children: es,
                           }),
@@ -753,13 +753,13 @@
                         name: t.application.name,
                         labelType: k,
                       }),
-                      null != P
-                        ? (0, i.jsx)(c.Tooltip, {
-                            text: P,
+                      null != w
+                        ? (0, i.jsx)(o.Tooltip, {
+                            text: w,
                             children: e =>
                               (0, i.jsx)("img", {
                                 className: L.staffBadge,
-                                alt: P,
+                                alt: w,
                                 src: b,
                                 ...e,
                               }),
@@ -777,11 +777,11 @@
                   children: [
                     (0, i.jsxs)("div", {
                       children: [
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(o.Heading, {
                           variant: "heading-xl/extrabold",
                           children: t.application.name,
                         }),
-                        (0, i.jsx)(c.Text, {
+                        (0, i.jsx)(o.Text, {
                           variant: "text-xs/semibold",
                           className: L.activityCardParticipants,
                           children: ei,
@@ -800,7 +800,7 @@
                                 max: 4,
                               }),
                               null != K
-                                ? (0, i.jsx)(c.Text, {
+                                ? (0, i.jsx)(o.Text, {
                                     variant: "text-sm/medium",
                                     className:
                                       L.activityCardUsersHavePlayedText,
@@ -822,7 +822,7 @@
                                         "div",
                                         {
                                           className: L.activityCardTag,
-                                          children: (0, i.jsx)(c.Text, {
+                                          children: (0, i.jsx)(o.Text, {
                                             variant: "text-xs/semibold",
                                             children: e,
                                           }),
@@ -839,9 +839,9 @@
                             [L.activityCardHoverHintReducedMotion]: Z,
                           }),
                           children: [
-                            (0, i.jsx)(c.Text, {
+                            (0, i.jsx)(o.Text, {
                               variant: "text-sm/semibold",
-                              children: y.default.Messages.LEARN_MORE,
+                              children: M.default.Messages.LEARN_MORE,
                             }),
                             (0, i.jsx)(h.default, { width: 16, height: 16 }),
                           ],
@@ -868,8 +868,8 @@
         n = l("414456"),
         s = l.n(n),
         r = l("759843"),
-        c = l("446674"),
-        o = l("769846"),
+        o = l("446674"),
+        c = l("769846"),
         d = l("77078"),
         u = l("84339"),
         f = l("244201"),
@@ -889,8 +889,8 @@
         N = l("550766"),
         j = l("686569"),
         D = l("623611"),
-        M = l("293564"),
-        y = l("218274"),
+        y = l("293564"),
+        M = l("218274"),
         L = l("891209"),
         b = l("954016"),
         V = l("49111"),
@@ -899,29 +899,29 @@
         H = l("851815"),
         B = l("255293");
       let F = (0, A.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING
+          c.default.ACTIVITY_SHELF_MODAL_MODAL_PADDING
         ),
-        w = (0, A.cssValueToNumber)(o.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
-        P = (0, A.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH
+        P = (0, A.cssValueToNumber)(c.default.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+        w = (0, A.cssValueToNumber)(
+          c.default.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH
         ),
         Y = (0, A.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH
+          c.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH
         ),
         k =
           (0, A.cssValueToNumber)(
-            o.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT
+            c.default.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT
           ) +
           F +
           (0, A.cssValueToNumber)(
-            o.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT
+            c.default.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT
           );
       function U(e) {
         let {
             channel: t,
             guildId: l,
             locationObject: n,
-            onClose: o,
+            onClose: c,
             initialSelectedApplicationId: f,
             initialSlide: C = b.ActivityShelfSlides.DIRECTORY,
             enableSelectedTextChannelInvite: A,
@@ -934,15 +934,15 @@
           ),
           { width: W } = (0, E.useScreenDimensions)(),
           z = a.useMemo(
-            () => (Z ? Math.max(P, Math.min(W - 2 * F, Y)) : w),
+            () => (Z ? Math.max(w, Math.min(W - 2 * F, Y)) : P),
             [W, Z]
           ),
-          K = (0, c.useStateFromStores)(
+          K = (0, o.useStateFromStores)(
             [_.default],
             () => _.default.getIsEnabled(),
             []
           ),
-          { AnalyticsLocationProvider: X } = (0, m.default)(k),
+          { analyticsLocations: X } = (0, m.default)(k),
           [q, J] = a.useState(C),
           Q = (0, u.default)(q),
           [$, ee] = a.useState(null),
@@ -969,7 +969,7 @@
             null === (e = es.current) || void 0 === e || e.scrollTo({ top: $ });
           }
         }, [$, Q, q]);
-        let ec = a.useCallback(e => {
+        let eo = a.useCallback(e => {
             var t;
             let { applicationId: l } = e,
               i =
@@ -978,7 +978,7 @@
                   : t.scrollTop;
             null != i && ee(i), el(l), J(b.ActivityShelfSlides.SELECT_CHANNEL);
           }, []),
-          eo = a.useCallback(e => {
+          ec = a.useCallback(e => {
             let { applicationId: t } = e;
             el(t), J(b.ActivityShelfSlides.DETAIL_PAGE);
           }, []);
@@ -993,31 +993,31 @@
             () => (
               g.ComponentDispatch.subscribe(
                 V.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR,
-                ec
-              ),
-              () => {
-                g.ComponentDispatch.unsubscribe(
-                  V.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR,
-                  ec
-                );
-              }
-            ),
-            [ec]
-          ),
-          a.useEffect(
-            () => (
-              g.ComponentDispatch.subscribe(
-                V.ComponentActions.SHOW_ACTIVITY_DETAILS,
                 eo
               ),
               () => {
                 g.ComponentDispatch.unsubscribe(
-                  V.ComponentActions.SHOW_ACTIVITY_DETAILS,
+                  V.ComponentActions.SHOW_ACTIVITIES_CHANNEL_SELECTOR,
                   eo
                 );
               }
             ),
             [eo]
+          ),
+          a.useEffect(
+            () => (
+              g.ComponentDispatch.subscribe(
+                V.ComponentActions.SHOW_ACTIVITY_DETAILS,
+                ec
+              ),
+              () => {
+                g.ComponentDispatch.unsubscribe(
+                  V.ComponentActions.SHOW_ACTIVITY_DETAILS,
+                  ec
+                );
+              }
+            ),
+            [ec]
           ),
           a.useEffect(() => {
             N.dismissNewActivityIndicator();
@@ -1067,7 +1067,8 @@
             },
             [null == t ? void 0 : t.id, er, l]
           ),
-          (0, i.jsx)(X, {
+          (0, i.jsx)(m.AnalyticsLocationProvider, {
+            value: X,
             children: (0, i.jsxs)(d.ModalRoot, {
               className: s(O.root, { [O.rootBigShelf]: Z }),
               "aria-label": R.default.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
@@ -1143,7 +1144,7 @@
                     }),
                     (0, i.jsx)(d.ModalCloseButton, {
                       className: O.modalCloseButton,
-                      onClick: o,
+                      onClick: c,
                     }),
                   ],
                 }),
@@ -1166,13 +1167,13 @@
                       },
                       children: (0, i.jsx)(G, {
                         slide: q,
-                        children: (0, i.jsx)(M.default, {
+                        children: (0, i.jsx)(y.default, {
                           scrollerRef: es,
                           channel: t,
                           guildId: l,
                           locationObject: n,
                           onActivityItemVisible: eh,
-                          onClose: o,
+                          onClose: c,
                         }),
                       }),
                     }),
@@ -1188,7 +1189,7 @@
                       },
                       children: (0, i.jsx)(G, {
                         slide: q,
-                        children: (0, i.jsx)(y.default, {
+                        children: (0, i.jsx)(M.default, {
                           applicationId: et,
                           selectedChannelId: ei,
                           setSelectedChannelId: ea,
@@ -1210,7 +1211,7 @@
                                 applicationId: et,
                                 channelId: null == t ? void 0 : t.id,
                                 guildId: l,
-                                onActivityLaunch: o,
+                                onActivityLaunch: c,
                               }),
                       }),
                     }),
@@ -1223,7 +1224,7 @@
                   children: (() => {
                     switch (q) {
                       case b.ActivityShelfSlides.DIRECTORY:
-                        return (0, i.jsx)(M.ActivityDirectoryFooter, {});
+                        return (0, i.jsx)(y.ActivityDirectoryFooter, {});
                       case b.ActivityShelfSlides.SELECT_CHANNEL:
                         return (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -1231,9 +1232,9 @@
                             (0, i.jsx)(d.ModalFooter, {
                               separator: !1,
                               className: O.footer,
-                              children: (0, i.jsx)(y.ChannelSelectorFooter, {
+                              children: (0, i.jsx)(M.ChannelSelectorFooter, {
                                 onBack: ed,
-                                onClose: o,
+                                onClose: c,
                                 guildId: l,
                                 applicationId: et,
                                 locationObject: n,
@@ -1257,13 +1258,13 @@
       }
       let G = e => {
         let { children: t, slide: l } = e,
-          n = (0, c.useStateFromStores)(
+          n = (0, o.useStateFromStores)(
             [_.default],
             () => _.default.getIsEnabled(),
             []
           ),
           r = a.useContext(f.default),
-          o = (0, c.useStateFromStores)(
+          c = (0, o.useStateFromStores)(
             [C.default],
             () => C.default.windowSize(r.windowId).height,
             [r.windowId]
@@ -1273,17 +1274,17 @@
             [O.slideContentOuterContainerSquishedWithDev]:
               l === b.ActivityShelfSlides.DIRECTORY && n,
             [O.slideContentOuterContainerTall]:
-              l === b.ActivityShelfSlides.DIRECTORY && o > k,
+              l === b.ActivityShelfSlides.DIRECTORY && c > k,
             [O.slideContentOuterContainerTallWithDev]:
-              l === b.ActivityShelfSlides.DIRECTORY && o > k && n,
+              l === b.ActivityShelfSlides.DIRECTORY && c > k && n,
             [O.slideContentOuterContainerNoMetaTextSquished]:
               l === b.ActivityShelfSlides.SELECT_CHANNEL,
             [O.slideContentOuterContainerNoMetaTextTall]:
-              l === b.ActivityShelfSlides.SELECT_CHANNEL && o > k,
+              l === b.ActivityShelfSlides.SELECT_CHANNEL && c > k,
             [O.slideContentOuterContainerNoMetaTextNoFooterSquished]:
               l === b.ActivityShelfSlides.DETAIL_PAGE,
             [O.slideContentOuterContainerNoMetaTextNoFooterTall]:
-              l === b.ActivityShelfSlides.DETAIL_PAGE && o > k,
+              l === b.ActivityShelfSlides.DETAIL_PAGE && c > k,
           }),
           children: t,
         });
@@ -1294,7 +1295,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return y;
+            return M;
           },
         }),
         l("222007");
@@ -1303,8 +1304,8 @@
         n = l("65597"),
         s = l("77078"),
         r = l("812204"),
-        c = l("685665"),
-        o = l("42203"),
+        o = l("685665"),
+        c = l("42203"),
         d = l("665382"),
         u = l("155207"),
         f = l("516358"),
@@ -1324,16 +1325,16 @@
         N = l("707181"),
         j = l("905647"),
         D = l("782340"),
-        M = l("425354");
-      function y(e) {
+        y = l("425354");
+      function M(e) {
         var t;
         let {
             applicationId: l,
             guildId: n,
-            channelId: o,
+            channelId: c,
             onActivityLaunch: f,
           } = e,
-          { AnalyticsLocationProvider: I } = (0, c.default)(
+          { analyticsLocations: I } = (0, o.default)(
             r.default.ACTIVITY_SHELF_ACTIVITY_DETAILS
           );
         a.useEffect(() => {
@@ -1357,51 +1358,52 @@
                   .concat(g.playersSuggestionMin, " - ")
                   .concat(g.playersSuggestionMax)
               : void 0;
-        return (0, i.jsx)(I, {
+        return (0, i.jsx)(o.AnalyticsLocationProvider, {
+          value: I,
           children: (0, i.jsx)("div", {
-            className: M.scrollContainer,
+            className: y.scrollContainer,
             children: (0, i.jsxs)(s.Scroller, {
-              className: M.scroller,
+              className: y.scroller,
               children: [
                 (0, i.jsx)("div", {
-                  className: M.launcherOuterContainer,
+                  className: y.launcherOuterContainer,
                   children: (0, i.jsx)(L, {
                     activityItem: C,
                     onLaunch: f,
-                    channelId: o,
+                    channelId: c,
                   }),
                 }),
                 (0, i.jsxs)("div", {
-                  className: M.activityDetailsContainer,
+                  className: y.activityDetailsContainer,
                   children: [
                     (0, i.jsxs)("div", {
                       children: [
                         null != p
                           ? (0, i.jsx)("div", {
-                              className: M.heroVideoContainer,
+                              className: y.heroVideoContainer,
                               children: (0, i.jsx)(h.default, {
                                 loop: !0,
                                 autoPlay: !0,
                                 muted: !0,
-                                className: M.heroVideo,
+                                className: y.heroVideo,
                                 src: p,
                                 poster: x.url,
                               }),
                             })
                           : null,
                         (0, i.jsx)("div", {
-                          className: M.detailsTitle,
+                          className: y.detailsTitle,
                           children: (0, i.jsx)(s.Heading, {
                             variant: "heading-xxl/bold",
                             children: C.application.name,
                           }),
                         }),
                         (0, i.jsxs)("div", {
-                          className: M.detailsDetails,
+                          className: y.detailsDetails,
                           children: [
                             null != A
                               ? (0, i.jsxs)("div", {
-                                  className: M.detailItem,
+                                  className: y.detailItem,
                                   children: [
                                     (0, i.jsx)(u.default, {
                                       width: 16,
@@ -1409,7 +1411,7 @@
                                     }),
                                     (0, i.jsx)(s.Text, {
                                       variant: "text-xs/semibold",
-                                      className: M.detailItemText,
+                                      className: y.detailItemText,
                                       children:
                                         D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_PLAYERS.format(
                                           { nPlayers: A }
@@ -1421,7 +1423,7 @@
                             (null == g ? void 0 : g.timeSuggestionMinutes) !=
                             null
                               ? (0, i.jsxs)("div", {
-                                  className: M.detailItem,
+                                  className: y.detailItem,
                                   children: [
                                     (0, i.jsx)(d.default, {
                                       width: 16,
@@ -1429,7 +1431,7 @@
                                     }),
                                     (0, i.jsx)(s.Text, {
                                       variant: "text-xs/semibold",
-                                      className: M.detailItemText,
+                                      className: y.detailItemText,
                                       children:
                                         D.default.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format(
                                           { nMinutes: g.timeSuggestionMinutes }
@@ -1439,7 +1441,7 @@
                                 })
                               : null,
                             (0, i.jsxs)("div", {
-                              className: M.detailItem,
+                              className: y.detailItem,
                               children: [
                                 (0, i.jsx)(v.default, {
                                   width: 16,
@@ -1447,7 +1449,7 @@
                                 }),
                                 (0, i.jsx)(s.Text, {
                                   variant: "text-xs/semibold",
-                                  className: M.detailItemText,
+                                  className: y.detailItemText,
                                   children: C.application.tags
                                     .slice(0, 3)
                                     .join(", "),
@@ -1460,12 +1462,12 @@
                     }),
                     (0, i.jsx)(s.Heading, {
                       variant: "heading-lg/medium",
-                      className: M.detailsDescription,
+                      className: y.detailsDescription,
                       children: C.application.description,
                     }),
-                    (0, i.jsx)("div", { className: M.divider }),
+                    (0, i.jsx)("div", { className: y.divider }),
                     (0, i.jsx)("div", {
-                      className: M.imagesContainer,
+                      className: y.imagesContainer,
                       children: (null !==
                         (t = null == g ? void 0 : g.gameplayImageUrls) &&
                       void 0 !== t
@@ -1479,7 +1481,7 @@
                             alt: D.default.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format(
                               { activityName: C.application.name }
                             ),
-                            className: M.activityImage,
+                            className: y.activityImage,
                           },
                           e
                         )
@@ -1496,7 +1498,7 @@
         var t, r;
         let { activityItem: d, onLaunch: u, channelId: v } = e,
           h = (0, S.default)({ applicationId: d.application.id, size: 2048 }),
-          { analyticsLocations: m } = (0, c.default)(),
+          { analyticsLocations: m } = (0, o.default)(),
           E = (0, p.default)(),
           [T, j] = a.useState(
             null !==
@@ -1506,7 +1508,7 @@
               ? t
               : void 0
           ),
-          [y, L] = a.useState(
+          [M, L] = a.useState(
             null !==
               (r = (0, C.getActivityVoiceChannelSuggestion)({
                 guildId: T,
@@ -1516,23 +1518,23 @@
               : void 0
           ),
           b = (0, n.useStateFromStores)(
-            [o.default],
-            () => o.default.getChannel(y),
-            [y]
+            [c.default],
+            () => c.default.getChannel(M),
+            [M]
           ),
           V = (0, x.useSelectGuildOptions)(),
           R = (0, C.useSelectVoiceChannelOptions)(T),
           O = a.useCallback(() => {
-            null != y &&
+            null != M &&
               (0, I.default)({
                 activityItem: d,
                 currentEmbeddedApplication: E,
-                channelId: y,
+                channelId: M,
                 guildId: T,
                 embeddedActivitiesManager: A.default,
                 analyticsLocations: m,
               }).then(u);
-          }, [d, m, E, u, y, T]),
+          }, [d, m, E, u, M, T]),
           H = a.useCallback(() => {
             (0, s.openModalLazy)(async () => {
               let { default: e } = await l
@@ -1547,19 +1549,19 @@
             (null != b.guild_id &&
               !(
                 null != T &&
-                null != y &&
+                null != M &&
                 V.some(e => e.value === T) &&
-                R.some(e => e.value.channel.id === y)
+                R.some(e => e.value.channel.id === M)
               ) &&
               !0);
         return (0, i.jsxs)("div", {
-          className: M.launcherInnerContainer,
+          className: y.launcherInnerContainer,
           children: [
             (0, i.jsx)(g.default, {
               applicationName: d.application.name,
               imageBackground: h,
-              imageClassName: M.launchImage,
-              imageNotFoundClassName: M.brokenLaunchImage,
+              imageClassName: y.launchImage,
+              imageNotFoundClassName: y.brokenLaunchImage,
             }),
             (0, i.jsx)(s.Text, {
               variant: "text-md/medium",
@@ -1570,7 +1572,7 @@
                   children: [
                     (0, i.jsx)(s.Select, {
                       placeholder: D.default.Messages.GUILD_SELECT,
-                      optionClassName: M.option,
+                      optionClassName: y.option,
                       options: V,
                       renderOptionValue: e => {
                         let t = e.find(e => e.value === T);
@@ -1603,11 +1605,11 @@
                       placeholder:
                         D.default.Messages
                           .EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-                      optionClassName: M.option,
+                      optionClassName: y.option,
                       options: R,
                       isSelected: e => {
                         let { channel: t } = e;
-                        return t.id === y;
+                        return t.id === M;
                       },
                       select: e => {
                         let { channel: t } = e;
@@ -1618,7 +1620,7 @@
                         return t.id;
                       },
                       renderOptionValue: () => {
-                        let e = R.find(e => e.value.channel.id === y);
+                        let e = R.find(e => e.value.channel.id === M);
                         return null == e
                           ? null
                           : (0, i.jsx)(_.SelectChannelOption, {
@@ -1642,7 +1644,7 @@
                       onClick: O,
                       children: D.default.Messages.START,
                     }),
-                    (0, i.jsx)("div", { className: M.divider }),
+                    (0, i.jsx)("div", { className: y.divider }),
                     (0, i.jsx)(s.Button, {
                       fullWidth: !0,
                       color: s.Button.Colors.PRIMARY,
@@ -1652,7 +1654,7 @@
                   ],
                 })
               : (0, i.jsxs)("div", {
-                  className: M.singleRowShareContainer,
+                  className: y.singleRowShareContainer,
                   children: [
                     (0, i.jsx)(s.Button, {
                       fullWidth: !0,
@@ -1661,7 +1663,7 @@
                       children: D.default.Messages.START,
                     }),
                     (0, i.jsx)(s.Button, {
-                      className: M.shareIconButton,
+                      className: y.shareIconButton,
                       color: s.Button.Colors.PRIMARY,
                       onClick: H,
                       children: (0, i.jsx)(f.default, {}),
@@ -1677,10 +1679,10 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return M;
+            return y;
           },
           ActivityDirectoryFooter: function () {
-            return y;
+            return M;
           },
         }),
         l("222007");
@@ -1689,8 +1691,8 @@
         n = l("414456"),
         s = l.n(n),
         r = l("617258"),
-        c = l("446674"),
-        o = l("769846"),
+        o = l("446674"),
+        c = l("769846"),
         d = l("77078"),
         u = l("812204"),
         f = l("685665"),
@@ -1708,39 +1710,39 @@
         A = l("782340"),
         _ = l("638675");
       let N = (0, r.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP
+          c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP
         ),
         j = (0, r.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT
+          c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT
         ),
         D = (0, r.cssValueToNumber)(
-          o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT
+          c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT
         );
-      function M(e) {
+      function y(e) {
         let {
             channel: t,
             guildId: l,
             locationObject: n,
             onClose: r,
-            onActivityItemVisible: o,
+            onActivityItemVisible: c,
             scrollerRef: g,
           } = e,
-          [M, y] = a.useState(0),
+          [y, M] = a.useState(0),
           L = (0, x.default)({ guildId: l, enableFilter: !0 }),
-          b = (0, c.useStateFromStores)([h.default], () =>
+          b = (0, o.useStateFromStores)([h.default], () =>
             h.default.getCurrentUser()
           ),
-          V = (0, c.useStateFromStores)(
+          V = (0, o.useStateFromStores)(
             [v.default],
             () => v.default.getGuild(l),
             [l]
           ),
-          { AnalyticsLocationProvider: R } = (0, f.default)(
+          { analyticsLocations: R } = (0, f.default)(
             u.default.ACTIVITY_DIRECTORY
           ),
           O = (0, T.default)(null == t ? void 0 : t.id),
           { isDeveloperActivityShelfEnabled: H, filter: B } = (0,
-          c.useStateFromStoresObject)([m.default], () => ({
+          o.useStateFromStoresObject)([m.default], () => ({
             filter: m.default.getFilter(),
             isDeveloperActivityShelfEnabled: m.default.getIsEnabled(),
           }));
@@ -1755,7 +1757,7 @@
             );
           function t() {
             var e, t;
-            y(
+            M(
               null !==
                 (t =
                   null === (e = g.current) || void 0 === e
@@ -1768,8 +1770,8 @@
         }, [g]);
         let {
           enableBigShelf: F,
-          enableSocialProofActivityDetails: w,
-          enableMinimalActivityDetails: P,
+          enableSocialProofActivityDetails: P,
+          enableMinimalActivityDetails: w,
         } = E.ExperimentShelfToDetailPage.useExperiment(
           { location: "a48d9e_5" },
           { autoTrackExposure: !0 }
@@ -1783,14 +1785,15 @@
         )
           return null;
         let Y = L.length > 0;
-        return (0, i.jsx)(R, {
+        return (0, i.jsx)(f.AnalyticsLocationProvider, {
+          value: R,
           children: (0, i.jsxs)("div", {
             className: _.scrollContainer,
             children: [
               Y && !F
                 ? (0, i.jsx)("div", {
                     className: _.scrollBackgroundContainer,
-                    style: { top: -M },
+                    style: { top: -y },
                     children: (0, i.jsx)("div", {
                       className: s(_.scrollTierBackground),
                       style: {
@@ -1807,7 +1810,7 @@
                 ref: g,
                 className: _.scroller,
                 children: (function () {
-                  let e = F || w || P ? S.default : p.default;
+                  let e = F || P || w ? S.default : p.default;
                   return Y
                     ? (0, i.jsx)("div", {
                         className: _.scrollSection,
@@ -1822,7 +1825,7 @@
                                 channel: t,
                                 guildId: l,
                                 locationObject: n,
-                                onActivityItemVisible: o,
+                                onActivityItemVisible: c,
                                 onActivityItemSelected: () => {
                                   var e;
                                   (e = a.application.id), r();
@@ -1852,7 +1855,7 @@
           }),
         });
       }
-      function y() {
+      function M() {
         return (0, i.jsx)(d.Text, {
           variant: "text-sm/normal",
           children:
@@ -1879,8 +1882,8 @@
         n = l("446674"),
         s = l("77078"),
         r = l("452804"),
-        c = l("206230"),
-        o = l("812204"),
+        o = l("206230"),
+        c = l("812204"),
         d = l("685665"),
         u = l("168973"),
         f = l("42203"),
@@ -1900,8 +1903,8 @@
         N = l("141962"),
         j = l("231457"),
         D = l("49111"),
-        M = l("782340"),
-        y = l("424263");
+        y = l("782340"),
+        M = l("424263");
       function L(e) {
         let t = (0, n.useStateFromStores)(
           [v.default, h.default],
@@ -1919,19 +1922,19 @@
       function V(e) {
         var t, l;
         let {
-            applicationId: o,
+            applicationId: c,
             guildId: d,
             selectedChannelId: h,
             setSelectedChannelId: C,
             enableSelectedTextChannelInvite: T,
           } = e,
           A = (0, n.useStateFromStores)(
-            [c.default],
-            () => c.default.useReducedMotion
+            [o.default],
+            () => o.default.useReducedMotion
           ),
           N = (0, p.useActivityShelfItemData)(
             null != d ? d : null,
-            null != o ? o : ""
+            null != c ? c : ""
           ),
           [D, V] = a.useState(
             T && !u.default.disableInviteWithTextChannelActivityLaunch
@@ -1972,26 +1975,26 @@
           F = (0, n.useStateFromStores)([v.default], () =>
             v.default.getGuild(d)
           ),
-          w = (0, n.useStateFromStores)([f.default, m.default], () =>
+          P = (0, n.useStateFromStores)([f.default, m.default], () =>
             f.default.getChannel(m.default.getChannelId())
           ),
-          P = L(null != d ? d : void 0);
+          w = L(null != d ? d : void 0);
         if ((null == N ? void 0 : N.application) == null || null == F)
           return null;
         let Y =
-          (null == w ? void 0 : w.name) == null ||
-          (null == w ? void 0 : w.name) === ""
-            ? M.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME
-            : "#".concat(w.name);
+          (null == P ? void 0 : P.name) == null ||
+          (null == P ? void 0 : P.name) === ""
+            ? y.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME
+            : "#".concat(P.name);
         return (0, i.jsxs)(s.Scroller, {
-          className: y.scroll,
+          className: M.scroll,
           children: [
             null != H || null != B
               ? (0, i.jsx)(I.default, {
                   aspectRatio: 16 / 9,
-                  className: y.imageContainer,
+                  className: M.imageContainer,
                   children: (0, i.jsx)(E.default, {
-                    className: y.video,
+                    className: M.video,
                     src: H,
                     loop: !0,
                     autoPlay: !A,
@@ -2001,14 +2004,14 @@
                 })
               : null,
             (0, i.jsxs)("div", {
-              className: y.descriptionArea,
+              className: M.descriptionArea,
               children: [
                 (0, i.jsx)(s.Heading, {
                   variant: "heading-xl/semibold",
                   children: null == N ? void 0 : N.application.name,
                 }),
                 (0, i.jsx)(s.Text, {
-                  className: y.descriptionAreaSubtext,
+                  className: M.descriptionAreaSubtext,
                   variant: "text-md/normal",
                   children: null == N ? void 0 : N.application.description,
                 }),
@@ -2016,8 +2019,8 @@
             }),
             (0, i.jsx)(s.Select, {
               placeholder:
-                M.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
-              optionClassName: y.option,
+                y.default.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
+              optionClassName: M.option,
               options: R,
               isSelected: e => {
                 let { channel: t } = e;
@@ -2050,9 +2053,9 @@
                 });
               },
             }),
-            P && T
+            w && T
               ? (0, i.jsxs)(s.Clickable, {
-                  className: y.checkboxContainer,
+                  className: M.checkboxContainer,
                   onClick: () => {
                     let e = !D;
                     r.default.updatedUnsyncedSettings({
@@ -2063,14 +2066,14 @@
                   children: [
                     (0, i.jsx)(s.Checkbox, {
                       type: s.Checkbox.Types.INVERTED,
-                      className: y.checkbox,
+                      className: M.checkbox,
                       value: D,
                       displayOnly: !0,
                     }),
                     (0, i.jsxs)(s.Text, {
                       variant: "text-sm/normal",
                       children: [
-                        M.default.Messages
+                        y.default.Messages
                           .EMBEDDED_ACTIVITIES_SEND_ACTIVITY_INVITE,
                         " ",
                         (0, i.jsx)("strong", { children: Y }),
@@ -2088,25 +2091,26 @@
             guildId: l,
             locationObject: a,
             onBack: r,
-            onClose: c,
+            onClose: o,
             selectedChannelId: v,
             enableSelectedTextChannelInvite: h,
           } = e,
-          { AnalyticsLocationProvider: I, analyticsLocations: E } = (0,
-          d.default)(o.default.ACTIVITY_CHANNEL_SELECTOR),
-          S = (0, p.useActivityShelfItemData)(
+          { analyticsLocations: I } = (0, d.default)(
+            c.default.ACTIVITY_CHANNEL_SELECTOR
+          ),
+          E = (0, p.useActivityShelfItemData)(
             null != l ? l : null,
             null != t ? t : null
           ),
-          g = (0, A.default)(),
-          _ = (0, n.useStateFromStores)([f.default, m.default], () =>
+          S = (0, A.default)(),
+          g = (0, n.useStateFromStores)([f.default, m.default], () =>
             f.default.getChannel(m.default.getChannelId())
           ),
-          j = (0, n.useStateFromStores)(
+          _ = (0, n.useStateFromStores)(
             [u.default],
             () => h && !u.default.disableInviteWithTextChannelActivityLaunch
           ),
-          b = (0, n.useStateFromStores)(
+          j = (0, n.useStateFromStores)(
             [C.default],
             () =>
               null != v &&
@@ -2115,54 +2119,55 @@
                 .getEmbeddedActivitiesForChannel(v)
                 .some(e => e.applicationId === t)
           ),
-          V = L(l),
-          R = async () => {
-            if (null == v || "" === v || null == S || null == l || "" === l)
+          b = L(l),
+          V = async () => {
+            if (null == v || "" === v || null == E || null == l || "" === l)
               return;
             let e = await (0, T.default)({
-              activityItem: S,
-              currentEmbeddedApplication: g,
+              activityItem: E,
+              currentEmbeddedApplication: S,
               locationObject: a,
               channelId: v,
               guildId: l,
               embeddedActivitiesManager: N.default,
-              analyticsLocations: E,
+              analyticsLocations: I,
             });
             e &&
-              (c(),
-              null != _ &&
-                V &&
-                j &&
+              (o(),
+              null != g &&
+                b &&
+                _ &&
                 (await x.sendEmbeddedActivityInvite({
                   activityChannelId: v,
-                  invitedChannelId: _.id,
-                  applicationId: S.application.id,
+                  invitedChannelId: g.id,
+                  applicationId: E.application.id,
                   location: D.AnalyticsLocations.ACTIVITY_SHELF,
                 })));
           };
-        return (0, i.jsx)(I, {
+        return (0, i.jsx)(d.AnalyticsLocationProvider, {
+          value: I,
           children: (0, i.jsxs)("div", {
-            className: y.footerContainer,
+            className: M.footerContainer,
             children: [
               (0, i.jsx)(s.Clickable, {
                 onClick: r,
-                className: y.backToBrowse,
+                className: M.backToBrowse,
                 children: (0, i.jsx)(s.Text, {
                   color: "header-secondary",
                   variant: "text-md/normal",
-                  children: M.default.Messages.BACK,
+                  children: y.default.Messages.BACK,
                 }),
               }),
               null == v
                 ? (0, i.jsx)("div", {})
                 : (0, i.jsx)(s.Button, {
-                    className: y.launchButton,
-                    onClick: R,
-                    color: b ? s.Button.Colors.GREEN : void 0,
+                    className: M.launchButton,
+                    onClick: V,
+                    color: j ? s.Button.Colors.GREEN : void 0,
                     fullWidth: !0,
-                    children: b
-                      ? M.default.Messages.EMBEDDED_ACTIVITIES_JOIN
-                      : M.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH,
+                    children: j
+                      ? y.default.Messages.EMBEDDED_ACTIVITIES_JOIN
+                      : y.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH,
                   }),
             ],
           }),
@@ -2183,8 +2188,8 @@
         n = l("77078"),
         s = l("810567"),
         r = l("898065"),
-        c = l("84460"),
-        o = l("782340"),
+        o = l("84460"),
+        c = l("782340"),
         d = l("557427");
       function u() {
         let {
@@ -2192,11 +2197,11 @@
           useActivityUrlOverride: t,
           filter: l,
         } = (0, a.useStateFromStoresObject)(
-          [c.default],
+          [o.default],
           () => ({
-            activityUrlOverride: c.default.getActivityUrlOverride(),
-            useActivityUrlOverride: c.default.getUseActivityUrlOverride(),
-            filter: c.default.getFilter(),
+            activityUrlOverride: o.default.getActivityUrlOverride(),
+            useActivityUrlOverride: o.default.getUseActivityUrlOverride(),
+            filter: o.default.getFilter(),
           }),
           []
         );
@@ -2211,14 +2216,14 @@
               children: (0, i.jsx)(n.Text, {
                 variant: "text-md/semibold",
                 children:
-                  o.default.Messages
+                  c.default.Messages
                     .EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE,
               }),
             }),
             (0, i.jsx)(n.FormItem, {
               className: d.urlOverride,
               title:
-                o.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
+                c.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
               children: (0, i.jsx)(n.TextInput, {
                 disabled: !t,
                 value: null != e ? e : void 0,
@@ -2245,7 +2250,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return c;
+            return o;
           },
         });
       var i = l("37983");
@@ -2254,9 +2259,9 @@
         n = l("272030"),
         s = l("861370"),
         r = l("782340");
-      function c(e) {
+      function o(e) {
         let { application: t, onSelect: l } = e,
-          c = (0, s.default)({ id: t.id, label: r.default.Messages.COPY_ID });
+          o = (0, s.default)({ id: t.id, label: r.default.Messages.COPY_ID });
         return (0, i.jsx)(a.Menu, {
           navId: "activity-shelf-item-context",
           onClose: n.closeContextMenu,
@@ -2265,7 +2270,7 @@
           onSelect: l,
           children: (0, i.jsx)(
             a.MenuGroup,
-            { children: c },
+            { children: o },
             "developer-actions"
           ),
         });
@@ -2285,12 +2290,12 @@
         n = l.n(a),
         s = l("77078"),
         r = l("845579"),
-        c = l("662255"),
-        o = l("306160");
+        o = l("662255"),
+        c = l("306160");
       function d(e) {
         let { id: t, label: l, onSuccess: a, shiftId: d, showIconFirst: u } = e,
           f = r.DeveloperMode.useSetting();
-        if (__OVERLAY__ || !f || !o.SUPPORTS_COPY || null == t) return null;
+        if (__OVERLAY__ || !f || !c.SUPPORTS_COPY || null == t) return null;
         let v = "devmode-copy-id-".concat(t);
         return (0, i.jsx)(
           s.MenuItem,
@@ -2300,10 +2305,10 @@
             action: function (e) {
               let l = null != d && e.shiftKey ? d : t;
               n(null != l, "cannot copy null text"),
-                (0, o.copy)(l),
+                (0, c.copy)(l),
                 null == a || a();
             },
-            icon: c.default,
+            icon: o.default,
             showIconFirst: u,
           },
           v
@@ -2315,7 +2320,7 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return o;
+            return c;
           },
         });
       var i = l("37983");
@@ -2324,34 +2329,34 @@
         n = l.n(a),
         s = l("77078"),
         r = l("953109"),
-        c = l("749170");
-      function o(e) {
+        o = l("749170");
+      function c(e) {
         let { className: t, embeddedApps: l, muted: a } = e;
         if (l.length <= 0) return null;
         {
           if (1 === l.length)
             return (0, i.jsx)("div", {
-              className: n(c.container, t, a && c.modeMuted),
+              className: n(o.container, t, a && o.modeMuted),
               children: (0, i.jsx)(r.default, {
                 game: l[0].application,
-                className: c.icon20px,
+                className: o.icon20px,
               }),
             });
           let e = l.length - 1;
           return (0, i.jsxs)("div", {
-            className: n(c.container, t, a && c.modeMuted),
+            className: n(o.container, t, a && o.modeMuted),
             children: [
               (0, i.jsx)(r.default, {
                 game: l[0].application,
-                className: c.icon20px,
+                className: o.icon20px,
               }),
               2 === l.length
                 ? (0, i.jsx)(r.default, {
                     game: l[1].application,
-                    className: c.icon20px,
+                    className: o.icon20px,
                   })
                 : (0, i.jsx)(s.Text, {
-                    className: c.overflow,
+                    className: o.overflow,
                     variant: "text-xs/bold",
                     color: "interactive-active",
                     children: "+".concat(e),
@@ -2431,8 +2436,8 @@
         n = l("414456"),
         s = l.n(n),
         r = l("77078"),
-        c = l("766274"),
-        o = l("368121"),
+        o = l("766274"),
+        c = l("368121"),
         d = l("107294"),
         u = l("633827");
       class f extends a.PureComponent {
@@ -2463,7 +2468,7 @@
           return this.props.icon
             ? (0, i.jsx)("div", {
                 className: d.iconContainer,
-                children: (0, i.jsx)(o.default, {
+                children: (0, i.jsx)(c.default, {
                   width: 16,
                   height: 16,
                   foreground: d.foreground,
@@ -2483,16 +2488,16 @@
         constructor(...e) {
           super(...e),
             (this.defaultRenderUser = (e, t, l, a) => {
-              let { onClick: n, size: o, guildId: f } = this.props,
-                v = e instanceof c.default ? e : null != e ? e.user : null;
+              let { onClick: n, size: c, guildId: f } = this.props,
+                v = e instanceof o.default ? e : null != e ? e.user : null;
               return null == v
                 ? (0, i.jsx)("div", { className: s(d.emptyUser, t) }, l)
                 : (0, i.jsx)(
                     r.Avatar,
                     {
                       tabIndex: 0,
-                      src: v.getAvatarURL(f, (0, r.getAvatarSize)(o)),
-                      size: o,
+                      src: v.getAvatarURL(f, (0, r.getAvatarSize)(c)),
+                      size: c,
                       "aria-label": v.username,
                       className: s(t, u.cursorPointer, d.avatarSize),
                       onClick: e => (null != n ? n(e, v, this._ref) : null),
@@ -2772,10 +2777,10 @@
           height: l = 24,
           color: s = a.default.colors.INTERACTIVE_NORMAL,
           colorClass: r = "",
-          ...c
+          ...o
         } = e;
         return (0, i.jsx)("svg", {
-          ...(0, n.default)(c),
+          ...(0, n.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: l,
@@ -2807,10 +2812,10 @@
           height: l = 24,
           color: s = a.default.colors.INTERACTIVE_NORMAL,
           colorClass: r = "",
-          ...c
+          ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, n.default)(c),
+          ...(0, n.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: l,
@@ -2851,10 +2856,10 @@
           height: l = 24,
           color: s = a.default.colors.INTERACTIVE_NORMAL,
           colorClass: r = "",
-          ...c
+          ...o
         } = e;
         return (0, i.jsxs)("svg", {
-          ...(0, n.default)(c),
+          ...(0, n.default)(o),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: l,
@@ -2879,4 +2884,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4e89d01cb265a5fa4aa3.js.map
+//# sourceMappingURL=5d6f105b2ddabaf149b2.js.map

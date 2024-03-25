@@ -65,7 +65,7 @@
               ),
             [U]
           ),
-          V = (0, c.useAnalyticsContext)();
+          L = (0, c.useAnalyticsContext)();
         n.useEffect(() => {
           D
             ? (0, g.applyBackgroundOptionPreview)(h, C, { track: !1 }).catch(
@@ -73,14 +73,14 @@
               )
             : null != h && x(null);
         }, [C]);
-        let L = e => {
+        let V = e => {
           x(e),
-            (0, g.applyBackgroundOptionPreview)(e, C, { location: V.location })
+            (0, g.applyBackgroundOptionPreview)(e, C, { location: L.location })
               .then(() => k(null))
               .catch(() => {
                 k(I.default.Messages.VIDEO_BACKGROUND_ERROR_APPLY),
                   (0, g.applyBackgroundOptionPreview)(null, C, {
-                    location: V.location,
+                    location: L.location,
                   });
               });
         };
@@ -103,7 +103,7 @@
                   canUseCustomBackgrounds: B,
                   customBackgroundOptions: j,
                   selectedOption: h,
-                  onSelectOption: L,
+                  onSelectOption: V,
                   onUpsellClick: () => {
                     (0, o.openModalLazy)(async () => {
                       let { default: e } = await a
@@ -114,7 +114,7 @@
                           ...a,
                           onLearnMore: t,
                           analyticsSource: {
-                            ...V.location,
+                            ...L.location,
                             object: M.AnalyticsObjects.BUTTON_CTA,
                           },
                         });
@@ -131,7 +131,7 @@
                           e,
                           f.VideoFilterType.BACKGROUND
                         );
-                        L(s),
+                        V(s),
                           (0, _.trackBackgroundOptionAdded)(
                             s,
                             t.type === m.FileTypes.MP4,
@@ -191,7 +191,7 @@
         B = a("646718"),
         U = a("782340"),
         j = a("754146");
-      function V(e) {
+      function L(e) {
         let {
           icon: t,
           onClick: a,
@@ -238,7 +238,7 @@
           ],
         });
       }
-      function L(e) {
+      function V(e) {
         let { option: t, source: a, isAnimated: l } = e,
           [o, c] = n.useState(!1);
         if (
@@ -294,7 +294,7 @@
                 playOnHover: !0,
                 muted: !0,
               })
-            : (0, s.jsx)(L, {
+            : (0, s.jsx)(V, {
                 isAnimated: A,
                 option: (0, C.isCustomBackgroundOption)(t) ? t : void 0,
                 source: n,
@@ -377,7 +377,7 @@
           text: r,
           className: j.newBackgroundTooltipContainer,
           children: [
-            (0, s.jsxs)(V, {
+            (0, s.jsxs)(L, {
               className: j.backgroundOptionBlurred,
               disabled: n,
               icon: A.default,
@@ -503,7 +503,7 @@
             [a]
           ),
           _ = E.length >= 25,
-          { AnalyticsLocationProvider: A } = (0, O.default)(
+          { analyticsLocations: A } = (0, O.default)(
             u.default.VIDEO_BACKGROUND_OPTIONS
           ),
           p = Object.values((0, N.default)()),
@@ -512,17 +512,18 @@
               R.DEFAULT_VIDEO_BACKGROUND_SORT[e.id] -
               R.DEFAULT_VIDEO_BACKGROUND_SORT[t.id]
           );
-        return (0, s.jsx)(A, {
+        return (0, s.jsx)(O.AnalyticsLocationProvider, {
+          value: A,
           children: (0, s.jsxs)("div", {
             className: d ? j.backgroundOptionsSmall : j.backgroundOptionsLarge,
             children: [
-              (0, s.jsx)(V, {
+              (0, s.jsx)(L, {
                 selected: null == l,
                 icon: f.default,
                 onClick: () => o(null),
                 text: U.default.Messages.CAMERA_PREVIEW_VIDEO_BACKGROUND_NONE,
               }),
-              (0, s.jsx)(V, {
+              (0, s.jsx)(L, {
                 className: j.backgroundOptionBlurred,
                 selected: l === R.BLUR_BACKGROUND_OPTION,
                 icon: g.default,
@@ -819,4 +820,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4aaa5d320c40008fbf79.js.map
+//# sourceMappingURL=76829ca6456f2f4dd9d9.js.map

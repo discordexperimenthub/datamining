@@ -24,11 +24,11 @@
         n("70102"),
         n("222007");
       var a,
-        s,
-        i = n("37983"),
+        i,
+        s = n("37983"),
         l = n("884691"),
-        u = n("917351"),
-        r = n.n(u),
+        r = n("917351"),
+        u = n.n(r),
         o = n("446674"),
         d = n("77078"),
         c = n("850068"),
@@ -36,8 +36,8 @@
         I = n("812204"),
         S = n("685665"),
         f = n("809071"),
-        C = n("818711"),
-        P = n("279171"),
+        P = n("818711"),
+        C = n("279171"),
         E = n("883662"),
         _ = n("177998"),
         N = n("146163"),
@@ -51,39 +51,39 @@
         h = n("951573"),
         A = n("646718"),
         j = n("843455"),
-        O = n("782340"),
-        g = n("397111");
-      function y(e) {
+        y = n("782340"),
+        O = n("397111");
+      function g(e) {
         let {
           premiumSubscription: t,
           isInventory: n,
           onNext: a,
-          onClose: s,
+          onClose: i,
         } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, i.jsxs)(d.ModalHeader, {
+            (0, s.jsxs)(d.ModalHeader, {
               separator: !1,
               children: [
-                (0, i.jsx)(d.FormTitle, {
+                (0, s.jsx)(d.FormTitle, {
                   tag: d.FormTitleTags.H4,
                   children: n
-                    ? O.default.Messages
+                    ? y.default.Messages
                         .PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_INVENTORY
-                    : O.default.Messages
+                    : y.default.Messages
                         .PREMIUM_GUILD_SUBSCRIPTION_CANCEL_TITLE_GUILD,
                 }),
-                (0, i.jsx)(d.ModalCloseButton, { onClick: s }),
+                (0, s.jsx)(d.ModalCloseButton, { onClick: i }),
               ],
             }),
-            (0, i.jsxs)(d.ModalContent, {
-              className: g.body,
+            (0, s.jsxs)(d.ModalContent, {
+              className: O.body,
               children: [
-                (0, i.jsx)("div", { className: g.cancelImage }),
-                (0, i.jsx)("div", {
+                (0, s.jsx)("div", { className: O.cancelImage }),
+                (0, s.jsx)("div", {
                   children:
                     t.isPurchasedExternally && null != t.paymentGateway
-                      ? O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_EXTERNAL.format(
+                      ? y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_EXTERNAL.format(
                           {
                             paymentGatewayName:
                               j.PaymentGatewayToFriendlyName[t.paymentGateway],
@@ -95,45 +95,45 @@
                           }
                         )
                       : n
-                        ? O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format(
+                        ? y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_INVENTORY.format(
                             { endDate: t.currentPeriodEnd }
                           )
-                        : O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_GUILD.format(
+                        : y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BODY_GUILD.format(
                             { endDate: t.currentPeriodEnd }
                           ),
                 }),
-                (0, i.jsx)(P.default, { fromBoostCancelModal: !0 }),
+                (0, s.jsx)(C.default, { fromBoostCancelModal: !0 }),
               ],
             }),
             t.isPurchasedExternally
               ? null
-              : (0, i.jsxs)(d.ModalFooter, {
+              : (0, s.jsxs)(d.ModalFooter, {
                   justify: R.default.Justify.START,
                   children: [
-                    (0, i.jsx)(d.Button, {
+                    (0, s.jsx)(d.Button, {
                       onClick: a,
-                      children: O.default.Messages.NEXT,
+                      children: y.default.Messages.NEXT,
                     }),
-                    (0, i.jsx)(d.Button, {
+                    (0, s.jsx)(d.Button, {
                       look: d.Button.Looks.LINK,
-                      onClick: s,
-                      children: O.default.Messages.CANCEL,
+                      onClick: i,
+                      children: y.default.Messages.CANCEL,
                     }),
                   ],
                 }),
           ],
         });
       }
-      ((s = a || (a = {}))[(s.START = 1)] = "START"),
-        (s[(s.PREVIEW = 2)] = "PREVIEW"),
-        (s[(s.CONFIRM = 3)] = "CONFIRM");
+      ((i = a || (a = {}))[(i.START = 1)] = "START"),
+        (i[(i.PREVIEW = 2)] = "PREVIEW"),
+        (i[(i.CONFIRM = 3)] = "CONFIRM");
       async function b(e, t, n, a) {
-        let s =
+        let i =
           null != a
             ? a
             : (function () {
                 let e = Object.values(p.default.boostSlots),
-                  t = r.sortBy(
+                  t = u.sortBy(
                     e.filter(e => !(0, U.isGuildBoostSlotCanceled)(e)),
                     e => [
                       null != e.premiumGuildSubscription,
@@ -144,8 +144,8 @@
                   )[0];
                 return null != t ? t.id : null;
               })();
-        if (null == s) throw Error("No slot to cancel");
-        await (0, m.cancelGuildBoostSlot)(s),
+        if (null == i) throw Error("No slot to cancel");
+        await (0, m.cancelGuildBoostSlot)(i),
           await (0, c.updateSubscription)(
             e,
             { items: (0, L.getItemsFromNewAdditionalPlans)(e, t) },
@@ -155,18 +155,18 @@
       function v(e) {
         var t, n, a;
         let {
-            premiumSubscription: s,
-            guildBoostSlotId: u,
-            onBack: r,
+            premiumSubscription: i,
+            guildBoostSlotId: r,
+            onBack: u,
             onNext: c,
             onClose: m,
           } = e,
-          [P, p] = l.useState(!1),
+          [C, p] = l.useState(!1),
           [T, U] = l.useMemo(() => {
             try {
               return [
-                (0, C.calculateAdditionalPlansWithPremiumGuildAdjustment)(
-                  s,
+                (0, P.calculateAdditionalPlansWithPremiumGuildAdjustment)(
+                  i,
                   -1
                 ),
                 !1,
@@ -174,13 +174,13 @@
             } catch {
               return [[], !0];
             }
-          }, [s]);
+          }, [i]);
         l.useEffect(() => {
           U && m();
         }, [U]);
-        let { premiumSubscriptionPlan: j, premiumGuildPlan: y } = (0,
+        let { premiumSubscriptionPlan: j, premiumGuildPlan: g } = (0,
           o.useStateFromStoresObject)([M.default], () => {
-            let e = M.default.get(s.planId);
+            let e = M.default.get(i.planId);
             return {
               premiumSubscriptionPlan: e,
               premiumGuildPlan:
@@ -197,19 +197,19 @@
           }),
           { analyticsLocations: v } = (0, S.default)(),
           [B] = (0, f.useSubscriptionInvoicePreview)({
-            subscriptionId: s.id,
+            subscriptionId: i.id,
             renewal: !0,
-            currency: s.currency,
-            paymentSourceId: s.paymentSourceId,
+            currency: i.currency,
+            paymentSourceId: i.paymentSourceId,
             analyticsLocations: v,
             analyticsLocation:
               I.default
                 .GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW,
           }),
           G =
-            null != y
+            null != g
               ? (0, L.getItemsWithUpsertedPremiumGuildPlan)(
-                  s,
+                  i,
                   null !==
                     (a =
                       null === (t = T[0]) || void 0 === t
@@ -217,11 +217,11 @@
                         : t.quantity) && void 0 !== a
                     ? a
                     : 0,
-                  y.id
+                  g.id
                 )
               : null,
           [D] = (0, f.useSubscriptionInvoicePreview)({
-            subscriptionId: s.id,
+            subscriptionId: i.id,
             items: G,
             renewal: !0,
             analyticsLocations: v,
@@ -229,15 +229,15 @@
               I.default
                 .GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW,
           });
-        if (null == D || null == j || null == y || null == B)
-          return (0, i.jsx)(d.Spinner, {});
-        let w = s.items.some(e => {
+        if (null == D || null == j || null == g || null == B)
+          return (0, s.jsx)(d.Spinner, {});
+        let w = i.items.some(e => {
             let { planId: t } = e;
             return !A.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t);
           }),
           k =
-            (w && null == s.renewalMutations) ||
-            (null === (n = s.renewalMutations) || void 0 === n
+            (w && null == i.renewalMutations) ||
+            (null === (n = i.renewalMutations) || void 0 === n
               ? void 0
               : n.items.find(e => {
                   let { planId: t } = e;
@@ -249,42 +249,42 @@
           }),
           W = k || F ? D.total - B.total : -B.total,
           { interval: V, intervalCount: Y } = j;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, i.jsx)(h.default, { onClose: m }),
-            (0, i.jsxs)(d.ModalContent, {
-              className: g.body,
+            (0, s.jsx)(h.default, { onClose: m }),
+            (0, s.jsxs)(d.ModalContent, {
+              className: O.body,
               children: [
-                (0, i.jsx)("div", {
+                (0, s.jsx)("div", {
                   children:
-                    O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format(
+                    y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_PREVIEW.format(
                       { endDate: D.subscriptionPeriodStart }
                     ),
                 }),
-                (0, i.jsxs)(E.PremiumInvoiceTable, {
-                  className: g.invoiceTable,
+                (0, s.jsxs)(E.PremiumInvoiceTable, {
+                  className: O.invoiceTable,
                   children: [
-                    (0, i.jsx)(E.PremiumInvoiceTableHeader, {
-                      children: O.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES,
+                    (0, s.jsx)(E.PremiumInvoiceTableHeader, {
+                      children: y.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES,
                     }),
-                    (0, i.jsx)(E.PremiumInvoiceTableRow, {
+                    (0, s.jsx)(E.PremiumInvoiceTableRow, {
                       label:
-                        O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format(
+                        y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_INVOICE_SUBSCRIPTION_CANCELLED.format(
                           { subscriptionCount: 1 }
                         ),
                       value: (0, x.formatRate)(
-                        (0, x.formatPrice)(W, s.currency),
+                        (0, x.formatPrice)(W, i.currency),
                         V,
                         Y
                       ),
-                      className: g.invoiceCancelRow,
+                      className: O.invoiceCancelRow,
                     }),
                     null != G && G.length > 0
-                      ? (0, i.jsxs)("div", {
+                      ? (0, s.jsxs)("div", {
                           children: [
-                            (0, i.jsx)(E.PremiumInvoiceTableDivider, {}),
-                            (0, i.jsx)(N.SubscriptionInvoiceFooter, {
-                              premiumSubscription: s,
+                            (0, s.jsx)(E.PremiumInvoiceTableDivider, {}),
+                            (0, s.jsx)(N.SubscriptionInvoiceFooter, {
+                              premiumSubscription: i,
                               renewalInvoice: D,
                               isUpdate: !0,
                             }),
@@ -295,24 +295,24 @@
                 }),
               ],
             }),
-            (0, i.jsxs)(d.ModalFooter, {
+            (0, s.jsxs)(d.ModalFooter, {
               align: R.default.Align.CENTER,
               justify: R.default.Justify.BETWEEN,
               children: [
-                (0, i.jsx)(d.Button, {
+                (0, s.jsx)(d.Button, {
                   color: d.Button.Colors.RED,
-                  disabled: P,
+                  disabled: C,
                   onClick: async () => {
                     try {
-                      p(!0), await b(s, T, v, u), c();
+                      p(!0), await b(i, T, v, r), c();
                     } catch {
                       p(!1);
                     }
                   },
                   children:
-                    O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON,
+                    y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON,
                 }),
-                (0, i.jsx)(_.default, { onClick: r }),
+                (0, s.jsx)(_.default, { onClick: u }),
               ],
             }),
           ],
@@ -320,35 +320,35 @@
       }
       function B(e) {
         let { premiumSubscription: t, onClose: n } = e;
-        return (0, i.jsxs)(i.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, i.jsxs)(d.ModalHeader, {
+            (0, s.jsxs)(d.ModalHeader, {
               separator: !1,
               children: [
-                (0, i.jsx)(d.FormTitle, {
+                (0, s.jsx)(d.FormTitle, {
                   tag: d.FormTitleTags.H4,
                   children:
-                    O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_TITLE,
+                    y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_TITLE,
                 }),
-                (0, i.jsx)(d.ModalCloseButton, { onClick: n }),
+                (0, s.jsx)(d.ModalCloseButton, { onClick: n }),
               ],
             }),
-            (0, i.jsxs)(d.ModalContent, {
-              className: g.body,
+            (0, s.jsxs)(d.ModalContent, {
+              className: O.body,
               children: [
-                (0, i.jsx)("div", { className: g.cancelImage }),
-                (0, i.jsx)("div", {
+                (0, s.jsx)("div", { className: O.cancelImage }),
+                (0, s.jsx)("div", {
                   children:
-                    O.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_BODY.format(
+                    y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_CONFIRM_BODY.format(
                       { endDate: t.currentPeriodEnd }
                     ),
                 }),
               ],
             }),
-            (0, i.jsx)(d.ModalFooter, {
-              children: (0, i.jsx)(d.Button, {
+            (0, s.jsx)(d.ModalFooter, {
+              children: (0, s.jsx)(d.Button, {
                 onClick: n,
-                children: O.default.Messages.OKAY,
+                children: y.default.Messages.OKAY,
               }),
             }),
           ],
@@ -356,48 +356,49 @@
       }
       function G(e) {
         let t,
-          { guildBoostSlot: n, transitionState: a, onClose: s } = e;
+          { guildBoostSlot: n, transitionState: a, onClose: i } = e;
         l.useEffect(() => {
           !T.default.hasFetchedSubscriptions() && (0, c.fetchSubscriptions)();
         }, []);
-        let u = (0, o.useStateFromStores)([T.default], () =>
+        let r = (0, o.useStateFromStores)([T.default], () =>
             T.default.getPremiumTypeSubscription()
           ),
-          [r, m] = l.useState(1),
-          { AnalyticsLocationProvider: f } = (0, S.default)(
+          [u, m] = l.useState(1),
+          { analyticsLocations: f } = (0, S.default)(
             I.default.GUILD_BOOST_CANCELLATION_MODAL
           );
-        if (null == u)
-          t = (0, i.jsx)(d.ModalContent, {
-            children: (0, i.jsx)(d.Spinner, {}),
+        if (null == r)
+          t = (0, s.jsx)(d.ModalContent, {
+            children: (0, s.jsx)(d.Spinner, {}),
           });
         else
-          switch (r) {
+          switch (u) {
             case 1:
-              t = (0, i.jsx)(y, {
-                premiumSubscription: u,
+              t = (0, s.jsx)(g, {
+                premiumSubscription: r,
                 isInventory: null == n.premiumGuildSubscription,
                 onNext: () => m(2),
-                onClose: s,
+                onClose: i,
               });
               break;
             case 2:
-              t = (0, i.jsx)(v, {
-                premiumSubscription: u,
+              t = (0, s.jsx)(v, {
+                premiumSubscription: r,
                 guildBoostSlotId: n.id,
                 onBack: () => m(1),
                 onNext: () => m(3),
-                onClose: s,
+                onClose: i,
               });
               break;
             case 3:
-              t = (0, i.jsx)(B, { premiumSubscription: u, onClose: s });
+              t = (0, s.jsx)(B, { premiumSubscription: r, onClose: i });
               break;
             default:
-              throw Error("Unexpected step: ".concat(r));
+              throw Error("Unexpected step: ".concat(u));
           }
-        return (0, i.jsx)(f, {
-          children: (0, i.jsx)(d.ModalRoot, {
+        return (0, s.jsx)(S.AnalyticsLocationProvider, {
+          value: f,
+          children: (0, s.jsx)(d.ModalRoot, {
             transitionState: a,
             children: t,
           }),
@@ -415,16 +416,16 @@
         n("222007");
       var a = n("37983");
       n("884691");
-      var s = n("446674"),
-        i = n("77078"),
+      var i = n("446674"),
+        s = n("77078"),
         l = n("206230"),
-        u = n("22368"),
-        r = n("145131"),
+        r = n("22368"),
+        u = n("145131"),
         o = n("467831"),
         d = n("791971");
       function c(e) {
         let { purchaseState: t, currentStep: n, onClose: c } = e,
-          [m, I] = (0, u.usePaymentModalAnimationScene)({
+          [m, I] = (0, r.usePaymentModalAnimationScene)({
             purchaseState: t,
             currentStep: n,
             initialScene: o.PremiumPaymentGuildAnimation.Scenes.ENTRY,
@@ -432,12 +433,12 @@
             errorScene: o.PremiumPaymentGuildAnimation.Scenes.ERROR,
             successScene: o.PremiumPaymentGuildAnimation.Scenes.SUCCESS,
           }),
-          S = (0, s.useStateFromStores)(
+          S = (0, i.useStateFromStores)(
             [l.default],
             () => l.default.useReducedMotion
           );
-        return (0, a.jsxs)(i.ModalHeader, {
-          align: r.default.Align.START,
+        return (0, a.jsxs)(s.ModalHeader, {
+          align: u.default.Align.START,
           className: d.header,
           separator: !1,
           children: [
@@ -450,7 +451,7 @@
               pause: S,
             }),
             (0, a.jsx)("div", { className: d.headerTitle }),
-            (0, a.jsx)(i.ModalCloseButton, {
+            (0, a.jsx)(s.ModalCloseButton, {
               onClick: c,
               className: d.closeButton,
             }),
@@ -469,28 +470,28 @@
         n("70102"),
         n("222007");
       var a = n("627445"),
-        s = n.n(a),
-        i = n("10514"),
+        i = n.n(a),
+        s = n("10514"),
         l = n("719923"),
-        u = n("646718"),
-        r = n("49111");
+        r = n("646718"),
+        u = n("49111");
       function o(e, t) {
-        let n = i.default.get(e.planId);
-        s(null != n, "missing premium subscription plan");
-        let a = i.default.getForSkuAndInterval(
+        let n = s.default.get(e.planId);
+        i(null != n, "missing premium subscription plan");
+        let a = s.default.getForSkuAndInterval(
           (0, l.castPremiumSubscriptionAsSkuId)(
-            u.PremiumSubscriptionSKUs.GUILD
+            r.PremiumSubscriptionSKUs.GUILD
           ),
           n.interval,
           n.intervalCount
         );
-        s(null != a, "missing premium guild plan");
+        i(null != a, "missing premium guild plan");
         let o =
             null != e.renewalMutations
               ? e.renewalMutations.additionalPlans
               : e.additionalPlans,
           d =
-            e.status === r.SubscriptionStatusTypes.CANCELED
+            e.status === u.SubscriptionStatusTypes.CANCELED
               ? 0
               : (0, l.getNumPremiumGuildSubscriptions)(o),
           c = d + t,
@@ -501,4 +502,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6e3749efab7f87899a40.js.map
+//# sourceMappingURL=936556fb7b840f3e738c.js.map

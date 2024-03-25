@@ -3038,10 +3038,9 @@
       function w(e) {
         let { transitionState: t } = e,
           n = (0, I.useUID)(),
-          { AnalyticsLocationProvider: a } = (0, c.default)(
-            d.default.INVITE_MODAL
-          );
-        return (0, l.jsx)(a, {
+          { analyticsLocations: a } = (0, c.default)(d.default.INVITE_MODAL);
+        return (0, l.jsx)(c.AnalyticsLocationProvider, {
+          value: a,
           children: (0, l.jsx)(o.ModalRoot, {
             size: o.ModalSize.DYNAMIC,
             "aria-labelledby": n,
@@ -3095,9 +3094,7 @@
             R.default.focus());
         }, []);
         let N = (0, I.useUID)(),
-          { AnalyticsLocationProvider: T } = (0, c.default)(
-            d.default.INVITE_MODAL
-          );
+          { analyticsLocations: T } = (0, c.default)(d.default.INVITE_MODAL);
         if (null == C) return null;
         if (
           C.state === y.InviteStates.EXPIRED ||
@@ -3130,7 +3127,8 @@
             : b.default.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
         return (
           V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON),
-          (0, l.jsx)(T, {
+          (0, l.jsx)(c.AnalyticsLocationProvider, {
+            value: T,
             children: (0, l.jsxs)(o.ModalRoot, {
               size: o.ModalSize.DYNAMIC,
               "aria-labelledby": N,
@@ -8924,7 +8922,7 @@
             [h.default],
             () => h.default.keyboardModeEnabled
           ),
-          { AnalyticsLocationProvider: u } = (0, p.default)(
+          { analyticsLocations: u } = (0, p.default)(
             C.default.GUILD_CHANNEL_LIST
           ),
           d = (0, o.useStateFromStores)([M.default], () =>
@@ -8992,7 +8990,8 @@
           null != n && T(n);
         }, [n, T]);
         let L = (0, v.default)(t);
-        return (0, l.jsx)(u, {
+        return (0, l.jsx)(p.AnalyticsLocationProvider, {
+          value: u,
           children: (0, l.jsx)(f.default, {
             section: es.AnalyticsSections.GUILD_CHANNEL_LIST,
             children: (0, l.jsx)(r.ListNavigatorProvider, {
@@ -14083,9 +14082,7 @@
                     t.calculateState();
               })
           ),
-          { AnalyticsLocationProvider: eI } = (0, S.default)(
-            I.default.GUILDS_LIST
-          ),
+          { analyticsLocations: eI } = (0, S.default)(I.default.GUILDS_LIST),
           { pathname: eS } = (0, d.useLocation)(),
           e_ = eS.startsWith($.Routes.GUILD_DISCOVERY),
           eN = eS.startsWith($.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
@@ -14124,7 +14121,8 @@
               e.id
             )
           );
-        return (0, l.jsx)(eI, {
+        return (0, l.jsx)(S.AnalyticsLocationProvider, {
+          value: eI,
           children: (0, l.jsx)("nav", {
             className: i(et.wrapper, s, (0, G.getThemeClass)(r), {
               [et.hidden]: en,
@@ -19673,9 +19671,10 @@
           j = (0, i.useStateFromStores)([c.default], () =>
             c.default.getMediaSessionId()
           ),
-          { analyticsLocations: G, AnalyticsLocationProvider: U } = (0,
-          o.default)(r.default.SOUNDBOARD_WHEEL),
-          P = a.useCallback(
+          { analyticsLocations: G } = (0, o.default)(
+            r.default.SOUNDBOARD_WHEEL
+          ),
+          U = a.useCallback(
             e => {
               (0, p.playSound)(e, n.id, G), x();
             },
@@ -19691,9 +19690,9 @@
           a.useEffect(
             () => () => {
               let e = y.current;
-              !A && null != e && P(e);
+              !A && null != e && U(e);
             },
-            [A, P]
+            [A, U]
           ),
           (0, u.default)(
             {
@@ -19703,29 +19702,29 @@
             },
             { disableTrack: !L }
           );
-        let w = a.useCallback(e => {
+        let P = a.useCallback(e => {
             (y.current = e), b(null == e ? void 0 : e.soundId);
           }, []),
-          F = a.useCallback(
+          w = a.useCallback(
             e => {
               if (null == e) {
-                w(null);
+                P(null);
                 return;
               }
               let t = M[e];
-              null != t && w(t);
+              null != t && P(t);
             },
-            [w, M]
+            [P, M]
           ),
-          B = a.useCallback(
+          F = a.useCallback(
             e => {
               if (null == e) return;
               let t = M[e];
-              null != t && P(t);
+              null != t && U(t);
             },
-            [M, P]
+            [M, U]
           ),
-          V = a.useMemo(
+          B = a.useMemo(
             () =>
               M.map(e =>
                 (0, l.jsx)(
@@ -19744,7 +19743,8 @@
           );
         return 0 === M.length
           ? null
-          : (0, l.jsx)(U, {
+          : (0, l.jsx)(o.AnalyticsLocationProvider, {
+              value: G,
               children: (0, l.jsx)(g.default, {
                 wheelWidth: N,
                 wheelHeight: T,
@@ -19752,10 +19752,10 @@
                 itemHeight: 52,
                 showDeadZoneIndicator: !A,
                 activeItem: D,
-                onItemSelect: F,
-                onItemAction: B,
+                onItemSelect: w,
+                onItemAction: F,
                 interactive: L,
-                children: V,
+                children: B,
               }),
             });
       }
@@ -23581,4 +23581,4 @@
     },
   },
 ]);
-//# sourceMappingURL=be3238386ec3231193a2.js.map
+//# sourceMappingURL=3618f8d7febbceeef0a5.js.map

@@ -12,14 +12,14 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return y;
+            return g;
           },
         }),
         a("222007");
       var n = a("37983"),
-        l = a("884691"),
-        o = a("414456"),
-        s = a.n(o),
+        o = a("884691"),
+        l = a("414456"),
+        s = a.n(l),
         i = a("77078"),
         c = a("812204"),
         r = a("685665"),
@@ -29,31 +29,29 @@
         p = a("652914"),
         h = a("254398"),
         A = a("49111"),
-        _ = a("782340"),
-        g = a("699111");
-      function y(e) {
+        y = a("782340"),
+        _ = a("699111");
+      function g(e) {
         let {
             transitionState: t,
-            onClose: o,
-            onComplete: y,
+            onClose: l,
+            onComplete: g,
             uploadType: m,
             showUpsellHeader: E,
             analyticsPage: w,
           } = e,
-          [R, x] = l.useState(!1),
-          I = (0, i.useModalContext)(),
+          [R, v] = o.useState(!1),
+          x = (0, i.useModalContext)(),
           L = (0, d.useUID)(),
-          { AnalyticsLocationProvider: N } = (0, r.default)(
-            c.default.GIF_PICKER
-          );
-        async function S(e) {
+          { analyticsLocations: I } = (0, r.default)(c.default.GIF_PICKER);
+        async function N(e) {
           let { gifSrc: t } = e;
           if (null == t || R) return;
-          x(!0);
-          let l = (0, h.makeTenorProxyURL)(t),
-            s = await fetch(l),
+          v(!0);
+          let o = (0, h.makeTenorProxyURL)(t),
+            s = await fetch(o),
             c = await s.blob();
-          o(),
+          l(),
             (0, i.openModalLazy)(
               async () => {
                 let { default: e } = await a
@@ -61,27 +59,28 @@
                   .then(a.bind(a, "57015"));
                 return t =>
                   (0, n.jsx)(e, {
-                    imgURI: l,
+                    imgURI: o,
                     file: new File([c], "tenor.gif", { type: "image/gif" }),
-                    onCrop: y,
+                    onCrop: g,
                     uploadType: m,
                     showUpsellHeader: E,
                     ...t,
                   });
               },
-              { contextKey: I }
+              { contextKey: x }
             );
         }
         return (
-          l.useEffect(() => {
+          o.useEffect(() => {
             f.default.track(A.AnalyticEvents.OPEN_MODAL, {
               type: A.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
               location: { page: w },
             });
           }, [w]),
-          (0, n.jsx)(N, {
+          (0, n.jsx)(r.AnalyticsLocationProvider, {
+            value: I,
             children: (0, n.jsxs)(i.ModalRoot, {
-              className: g.gifPickerCroppingModal,
+              className: _.gifPickerCroppingModal,
               "aria-labelledby": L,
               transitionState: t,
               size: i.ModalSize.SMALL,
@@ -96,29 +95,29 @@
                     })
                   : null,
                 (0, n.jsxs)(i.ModalHeader, {
-                  className: g.modalHeader,
+                  className: _.modalHeader,
                   separator: !1,
                   children: [
                     (0, n.jsx)(i.FormTitle, {
-                      className: g.titleCase,
+                      className: _.titleCase,
                       tag: i.FormTitleTags.H1,
                       children:
-                        _.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF,
+                        y.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF,
                     }),
                     (0, n.jsx)(i.ModalCloseButton, {
-                      onClick: o,
-                      className: g.modalCloseButton,
+                      onClick: l,
+                      className: _.modalCloseButton,
                     }),
                   ],
                 }),
                 (0, n.jsxs)("div", {
                   children: [
                     (0, n.jsx)(u.default, {
-                      className: s(g.gifPicker, { [g.loadingOverlay]: R }),
-                      onSelectGIF: S,
+                      className: s(_.gifPicker, { [_.loadingOverlay]: R }),
+                      onSelectGIF: N,
                       hideFavorites: !0,
                     }),
-                    R && (0, n.jsx)(i.Spinner, { className: g.spinner }),
+                    R && (0, n.jsx)(i.Spinner, { className: _.spinner }),
                   ],
                 }),
               ],
@@ -132,7 +131,7 @@
       a.r(t),
         a.d(t, {
           makeTenorProxyURL: function () {
-            return o;
+            return l;
           },
         }),
         a("511434"),
@@ -143,14 +142,14 @@
         a("222007"),
         a("70102");
       var n = a("49111");
-      let l = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
-      function o(e) {
+      let o = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
+      function l(e) {
         let t = new URL("".concat(window.location.protocol).concat(e)),
           { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
-        if (null == t.pathname.match(l))
+        if (null == t.pathname.match(o))
           throw Error("Unexpected Tenor GIF path.");
-        let o = "".concat(n.Endpoints.TENOR_ASSET_PATH).concat(t.pathname);
-        return "".concat(location.protocol).concat(a).concat(o);
+        let l = "".concat(n.Endpoints.TENOR_ASSET_PATH).concat(t.pathname);
+        return "".concat(location.protocol).concat(a).concat(l);
       }
     },
     42507: function (e, t, a) {
@@ -162,15 +161,15 @@
           },
         });
       var n = a("884691"),
-        l = a("446674"),
-        o = a("872173"),
+        o = a("446674"),
+        l = a("872173"),
         s = a("374363");
       function i() {
         return (
           n.useEffect(() => {
-            o.FrecencyUserSettingsActionCreators.loadIfNecessary();
+            l.FrecencyUserSettingsActionCreators.loadIfNecessary();
           }, []),
-          (0, l.useStateFromStores)(
+          (0, o.useStateFromStores)(
             [s.default],
             () => s.default.frecencyWithoutFetchingLatest
           )
@@ -187,18 +186,18 @@
         });
       var n = a("37983");
       a("884691");
-      var l = a("669491"),
-        o = a("82169");
+      var o = a("669491"),
+        l = a("82169");
       let s = e => {
         let {
           width: t = 24,
           height: a = 24,
-          color: s = l.default.colors.INTERACTIVE_NORMAL,
+          color: s = o.default.colors.INTERACTIVE_NORMAL,
           colorClass: i = "",
           ...c
         } = e;
         return (0, n.jsx)("svg", {
-          ...(0, o.default)(c),
+          ...(0, l.default)(c),
           xmlns: "http://www.w3.org/2000/svg",
           width: t,
           height: a,
@@ -216,4 +215,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5f879f49c7f660147331.js.map
+//# sourceMappingURL=c366a4923c0c1c41fff3.js.map

@@ -66,8 +66,8 @@
         E = l("606292"),
         m = l("688318"),
         I = l("692038"),
-        f = l("815297"),
-        L = l("574073"),
+        L = l("815297"),
+        f = l("574073"),
         p = l("291655"),
         A = l("946964"),
         _ = l("649844"),
@@ -133,8 +133,8 @@
               onClose: C,
               returnRef: I,
             } = e,
-            { analyticsLocations: f } = (0, T.default)(),
-            L = M.default.canUseCollectibles(l),
+            { analyticsLocations: L } = (0, T.default)(),
+            f = M.default.canUseCollectibles(l),
             [p, _] = (0, r.useStateFromStoresArray)([j.default], () => [
               j.default.getPurchase(t.skuId),
               j.default.isClaiming === t.skuId,
@@ -142,7 +142,7 @@
             { productDetailModalDescriptionHidden: h } = (0, B.default)({
               location: "CollectiblesShopProductDetailsModal",
             }),
-            S = (0, v.default)({ analyticsLocations: f }),
+            S = (0, v.default)({ analyticsLocations: L }),
             {
               buttonColors: x,
               backgroundColors: N,
@@ -189,7 +189,7 @@
                     product: t,
                     category: i,
                     returnRef: I,
-                    analyticsLocations: f,
+                    analyticsLocations: L,
                   });
                 },
               }),
@@ -266,7 +266,7 @@
                               ee.default.Messages
                                 .COLLECTIBLES_INCLUDED_WITH_PREMIUM,
                           });
-                        if (L)
+                        if (f)
                           return (0, a.jsx)(G.default, {
                             product: t,
                             className: et.priceTag,
@@ -324,7 +324,7 @@
                     children: (0, a.jsxs)("div", {
                       className: et.primaryButtons,
                       children: [
-                        !q || L || eo
+                        !q || f || eo
                           ? null != p
                             ? (0, a.jsx)(d.Button, {
                                 style: U,
@@ -340,7 +340,7 @@
                                   ) {
                                     (0, E.openAvatarDecorationModal)({
                                       initialSelectedDecoration: er,
-                                      analyticsLocations: f,
+                                      analyticsLocations: L,
                                     });
                                     return;
                                   }
@@ -348,7 +348,7 @@
                                     o.CollectiblesItemType.PROFILE_EFFECT &&
                                     (0, g.openProfileEffectModal)({
                                       initialSelectedEffectId: er.id,
-                                      analyticsLocations: f,
+                                      analyticsLocations: L,
                                     });
                                 },
                                 children:
@@ -371,7 +371,7 @@
                                       C(),
                                       (0, Z.default)({
                                         product: t,
-                                        analyticsLocations: f,
+                                        analyticsLocations: L,
                                       });
                                   },
                                   children:
@@ -385,7 +385,7 @@
                                   onClick: () =>
                                     (0, A.default)({
                                       skuId: t.skuId,
-                                      analyticsLocations: f,
+                                      analyticsLocations: L,
                                       onClose: e => (e ? C() : (0, $.NOOP)()),
                                     }),
                                   children:
@@ -482,7 +482,7 @@
         er = e => {
           let { author: t } = e,
             l = (0, I.createMessageRecord)({
-              ...(0, f.default)({
+              ...(0, L.default)({
                 author: t,
                 channelId: "1337",
                 content: ee.default.Messages.COLLECTIBLES_CHAT_PREVIEW_TEXT,
@@ -505,7 +505,7 @@
                   p.default,
                   {
                     className: et.mockMessage,
-                    author: (0, L.getMessageAuthor)(l),
+                    author: (0, f.getMessageAuthor)(l),
                     message: l,
                   },
                   l.id
@@ -540,16 +540,18 @@
             analyticsSource: m,
             analyticsLocations: I,
           } = e,
-          f = (0, r.useStateFromStores)([N.default], () =>
+          L = (0, r.useStateFromStores)([N.default], () =>
             N.default.getCurrentUser()
           ),
-          { analyticsLocations: L, AnalyticsLocationProvider: p } = (0,
-          T.default)([...I, C.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
+          { analyticsLocations: f } = (0, T.default)([
+            ...I,
+            C.default.COLLECTIBLES_SHOP_DETAILS_MODAL,
+          ]);
         (0, w.useProductDetailsLinkableRoute)(u);
-        let [A] = u.items;
+        let [p] = u.items;
         return (s.useEffect(() => {
           let e =
-            (null == A ? void 0 : A.type) ===
+            (null == p ? void 0 : p.type) ===
             o.CollectiblesItemType.AVATAR_DECORATION
               ? "avatar decoration"
               : "profile effect";
@@ -557,7 +559,7 @@
             P.default.track(J.AnalyticEvents.OPEN_MODAL, {
               type: J.AnalyticsSections.COLLECTIBLES_SHOP_DETAILS_MODAL,
               source: m,
-              location_stack: L,
+              location_stack: f,
               sku_id: u.skuId,
               product_type: e,
             }),
@@ -566,10 +568,11 @@
               u.items.map(D.productDetailsClosed);
             }
           );
-        }, [m, L, u.skuId, u.items, null == A ? void 0 : A.type]),
-        null == f)
+        }, [m, f, u.skuId, u.items, null == p ? void 0 : p.type]),
+        null == L)
           ? null
-          : (0, a.jsx)(p, {
+          : (0, a.jsx)(T.AnalyticsLocationProvider, {
+              value: f,
               children: (0, a.jsx)(d.ModalRoot, {
                 hideShadow: !0,
                 className: et.modalRoot,
@@ -580,14 +583,14 @@
                   className: et.modalContent,
                   children: [
                     (0, a.jsx)(en, {
-                      user: f,
+                      user: L,
                       product: u,
                       category: c,
                       onClose: n,
                     }),
                     (0, a.jsxs)("div", {
                       className:
-                        (null == A ? void 0 : A.type) ===
+                        (null == p ? void 0 : p.type) ===
                         o.CollectiblesItemType.AVATAR_DECORATION
                           ? et.collectiblePreviewsContainerWithChat
                           : et.collectiblePreviewsContainerNoChat,
@@ -607,7 +610,7 @@
                           size: (0, X.getAssetSizeByHeight)(540),
                           className: et.categoryBanner,
                         }),
-                        (0, a.jsx)(eo, { user: f, product: u }),
+                        (0, a.jsx)(eo, { user: L, product: u }),
                       ],
                     }),
                     (0, a.jsx)(d.ModalCloseButton, {
@@ -650,16 +653,16 @@
               hideSimpleEmbedContent: m = !0,
               disableInteraction: I,
             } = e,
-            f = (0, o.isMessageNewerThanImprovedMarkdownEpoch)(
+            L = (0, o.isMessageNewerThanImprovedMarkdownEpoch)(
               (null !== (t = l.editedTimestamp) && void 0 !== t
                 ? t
                 : l.timestamp
               ).valueOf()
             ),
-            { content: L } = (0, d.default)(l, {
+            { content: f } = (0, d.default)(l, {
               hideSimpleEmbedContent: m,
-              allowList: f,
-              allowHeading: f,
+              allowList: L,
+              allowHeading: L,
               allowLinks: !0,
               previewLinkTarget: !0,
             });
@@ -675,11 +678,11 @@
               channel: s,
               guildId: void 0,
             }),
-            childrenMessageContent: (0, u.default)(e, L),
+            childrenMessageContent: (0, u.default)(e, f),
             disableInteraction: I,
           });
         });
     },
   },
 ]);
-//# sourceMappingURL=974282cb38f7ce521b52.js.map
+//# sourceMappingURL=fd95a06ebea102fba30e.js.map

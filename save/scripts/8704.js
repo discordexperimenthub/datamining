@@ -14,8 +14,11 @@
       var u = t("685665");
       function l(e, n) {
         return function (t) {
-          let { AnalyticsLocationProvider: l } = (0, u.default)(n);
-          return (0, a.jsx)(l, { children: (0, a.jsx)(e, { ...t }) });
+          let { analyticsLocations: l } = (0, u.default)(n);
+          return (0, a.jsx)(u.AnalyticsLocationProvider, {
+            value: l,
+            children: (0, a.jsx)(e, { ...t }),
+          });
         };
       }
     },
@@ -47,8 +50,8 @@
               I = (0, E.default)(n, t),
               N = (0, d.default)(n, t),
               M = (0, c.default)(n, t),
-              C = (0, o.default)(n),
-              A = (0, i.default)({
+              A = (0, o.default)(n),
+              C = (0, i.default)({
                 id: n.id,
                 label: _.default.Messages.COPY_ID_CHANNEL,
               });
@@ -60,8 +63,8 @@
               children: [
                 (0, a.jsx)(u.MenuGroup, { children: r }),
                 (0, a.jsxs)(u.MenuGroup, { children: [I, N, M] }),
-                (0, a.jsx)(u.MenuGroup, { children: C }),
                 (0, a.jsx)(u.MenuGroup, { children: A }),
+                (0, a.jsx)(u.MenuGroup, { children: C }),
               ],
             });
           },
@@ -302,4 +305,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0717df03cc2b1b252bb3.js.map
+//# sourceMappingURL=1f5c04b0686bdd38d035.js.map

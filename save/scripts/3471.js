@@ -65,7 +65,7 @@
       l.r(r),
         l.d(r, {
           default: function () {
-            return v;
+            return _;
           },
         });
       var n = l("37983"),
@@ -162,7 +162,7 @@
             ],
           });
         },
-        _ = e => {
+        v = e => {
           let {
               guild: r,
               targetBoostedGuildTier: l,
@@ -201,7 +201,7 @@
             ],
           });
         };
-      function v(e) {
+      function _(e) {
         let {
             analyticsSourceLocation: r,
             guild: l,
@@ -212,10 +212,11 @@
             onClose: f,
             ...E
           } = e,
-          { AnalyticsLocationProvider: N } = (0, o.default)(
+          { analyticsLocations: N } = (0, o.default)(
             a.default.ACTIVITY_DIRECTORY
           );
-        return (0, n.jsx)(N, {
+        return (0, n.jsx)(o.AnalyticsLocationProvider, {
+          value: N,
           children: (0, n.jsx)(i.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
@@ -231,7 +232,7 @@
                   perkIntro: p,
                   headerProps: m,
                 }),
-                footer: (0, n.jsx)(_, {
+                footer: (0, n.jsx)(v, {
                   guild: l,
                   targetBoostedGuildTier: t,
                   onClose: f,
@@ -328,51 +329,51 @@
             setBodyNode: x,
             setFooterNode: C,
             setModalOverlayNode: T,
-            setReadySlideId: _,
+            setReadySlideId: v,
           } = (0, p.usePaymentContext)(),
-          v = S.find(e => e.key === h);
+          _ = S.find(e => e.key === h);
         t.useEffect(() => {
           T(null);
         }, [h, T]),
-          i(null != v, "Unknown step for current payment flow.");
+          i(null != _, "Unknown step for current payment flow.");
         let I =
             null !==
               (c =
-                null == v
+                null == _
                   ? void 0
-                  : null === (r = v.options) || void 0 === r
+                  : null === (r = _.options) || void 0 === r
                     ? void 0
                     : r.hideSlider) &&
             void 0 !== c &&
             c,
           j =
-            null == v
+            null == _
               ? void 0
-              : null === (l = v.options) || void 0 === l
+              : null === (l = _.options) || void 0 === l
                 ? void 0
                 : l.bodyClassName,
           P =
             void 0 !== E && E
               ? m.sliderBodyLarge
-              : null == v
+              : null == _
                 ? void 0
-                : null === (s = v.options) || void 0 === s
+                : null === (s = _.options) || void 0 === s
                   ? void 0
                   : s.sliderBodyClassName;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             null ===
               (d =
-                null == v
+                null == _
                   ? void 0
-                  : null === (o = v.options) || void 0 === o
+                  : null === (o = _.options) || void 0 === o
                     ? void 0
                     : o.renderHeader) ||
             void 0 === d ||
             d
               ? f
               : null,
-            v.renderStep(N),
+            _.renderStep(N),
             null == h || I
               ? null
               : (0, n.jsxs)(n.Fragment, {
@@ -382,7 +383,7 @@
                       children: (0, n.jsx)(u.Slides, {
                         activeSlide: h,
                         centered: !1,
-                        onSlideReady: e => _(e),
+                        onSlideReady: e => v(e),
                         children: S.filter(e => null != e.key).map(e =>
                           (0, n.jsx)(
                             u.Slide,
@@ -422,7 +423,7 @@
       l.r(r),
         l.d(r, {
           default: function () {
-            return v;
+            return _;
           },
         }),
         l("222007"),
@@ -447,18 +448,18 @@
         x = l("49111"),
         C = l("782340"),
         T = l("540700");
-      let _ = new Set([
+      let v = new Set([
         f.Step.SKU_SELECT,
         f.Step.AWAITING_AUTHENTICATION,
         f.Step.AWAITING_PURCHASE_TOKEN_AUTH,
         f.Step.CONFIRM,
       ]);
-      function v(e) {
+      function _(e) {
         let {
             steps: r,
             currentStep: l,
             body: a,
-            paymentError: v,
+            paymentError: _,
             header: I,
             footer: j,
             isGift: P = !1,
@@ -473,8 +474,8 @@
             hasCurrencies: k = !1,
           } = e,
           B = null;
-        null != v && null == (0, f.errorToStep)(v)
-          ? (B = v)
+        null != _ && null == (0, f.errorToStep)(_)
+          ? (B = _)
           : null != M
             ? (B = M)
             : null != g && (B = g);
@@ -540,7 +541,7 @@
                           .filter(
                             e =>
                               !f.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) &&
-                              !_.has(e)
+                              !v.has(e)
                           )
                           .map(e => ({
                             id: e,
@@ -776,4 +777,4 @@
     },
   },
 ]);
-//# sourceMappingURL=95225ea8e5fa422477c5.js.map
+//# sourceMappingURL=b23b840f1760ce0d3786.js.map

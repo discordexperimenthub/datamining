@@ -292,11 +292,11 @@
             [O, D] = i.useState({ width: 0, height: 0 }),
             [g, L] = i.useState({ top: 0, bottom: 0, left: 0, right: 0 }),
             [P, y] = i.useState(!1),
-            [U, H] = i.useState(1),
-            [v, w] = i.useState({ x: 0, y: 0 }),
+            [U, v] = i.useState(1),
+            [H, w] = i.useState({ x: 0, y: 0 }),
             [G, B] = i.useState(null),
             [x, b] = i.useState(!1),
-            { AnalyticsLocationProvider: V } = (0, u.default)(
+            { analyticsLocations: V } = (0, u.default)(
               s.default.IMAGE_CROPPING_MODAL
             ),
             j = i.useRef({ x: 0, y: 0 }),
@@ -370,11 +370,11 @@
               e => {
                 let { x: t, y: n } = j.current;
                 if (!P || (e.clientX === t && e.clientY === n)) return;
-                let r = e.clientX - v.x,
-                  i = e.clientY - v.y;
+                let r = e.clientX - H.x,
+                  i = e.clientY - H.y;
                 Y(r, i, g);
               },
-              [g, P, v, Y]
+              [g, P, H, Y]
             ),
             K = () => {
               y(!1);
@@ -435,7 +435,8 @@
                   () => window.removeEventListener("mousemove", z)
                 );
             }, [z, P]),
-            (0, r.jsx)(V, {
+            (0, r.jsx)(u.AnalyticsLocationProvider, {
+              value: V,
               children: (0, r.jsxs)(l.ModalRoot, {
                 onAnimationEnd: Z,
                 transitionState: R,
@@ -532,7 +533,7 @@
                               (!(0, a.inRange)(i, r.right, r.left) ||
                                 !(0, a.inRange)(l, r.top, r.bottom)) &&
                                 Y(i, l, r),
-                                H(e),
+                                v(e),
                                 L(r);
                             },
                             disabled: x,
@@ -864,9 +865,9 @@
             referralTrialOfferId: P,
             giftRecipient: y,
             returnRef: U,
-            subscription: H,
+            subscription: v,
           } = null != e ? e : {},
-          v = !1,
+          H = !1,
           w = (0, i.v4)(),
           G = o.default.getCurrentUser(),
           B = (0, E.isPremiumExactly)(G, A.PremiumTypes.TIER_2);
@@ -899,7 +900,7 @@
                         ));
                 },
                 onComplete: () => {
-                  (v = !0),
+                  (H = !0),
                     null == I || I(),
                     !m && (0, u.setCanPlayWowMoment)(!0);
                 },
@@ -915,14 +916,14 @@
                 applicationId: L,
                 referralTrialOfferId: P,
                 returnRef: U,
-                subscription: H,
+                subscription: v,
               });
             };
           },
           {
             modalKey: "payment-modal",
             onCloseCallback: () => {
-              !v &&
+              !H &&
                 c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                   load_id: w,
                   payment_type:
@@ -939,8 +940,8 @@
                 }),
                 (0, l.clearError)(),
                 (0, s.clearPurchaseTokenAuthState)(),
-                null == f || f(v),
-                v && (null == h || h());
+                null == f || f(H),
+                H && (null == h || h());
             },
           }
         );
@@ -1005,8 +1006,8 @@
               buttonText: P,
               buttonTextClassName: y,
               iconClassName: U,
-              postSuccessGuild: H,
-              onSubscribeModalClose: v,
+              postSuccessGuild: v,
+              onSubscribeModalClose: H,
               premiumModalAnalyticsLocation: w,
               showIcon: G = !0,
               disableShine: B,
@@ -1038,7 +1039,7 @@
               ) {
                 (0, c.trackPremiumSettingsPaneOpened)(),
                   u.default.open(C.UserSettingsSections.PREMIUM),
-                  null == v || v(!1);
+                  null == H || H(!1);
                 return;
               }
               !(function (e) {
@@ -1105,8 +1106,8 @@
                 isGift: t,
                 subscriptionTier: i,
                 trialId: g,
-                postSuccessGuild: H,
-                onSubscribeModalClose: v,
+                postSuccessGuild: v,
+                onSubscribeModalClose: H,
                 analyticsLocations: Y,
                 premiumModalAnalyticsLocation: w,
                 applicationId: x,
@@ -1594,4 +1595,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5e1aaee98258e02c1e8f.js.map
+//# sourceMappingURL=a37d05224bbafd7a2505.js.map

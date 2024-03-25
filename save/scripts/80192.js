@@ -14,8 +14,11 @@
       var l = n("685665");
       function r(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: r } = (0, l.default)(t);
-          return (0, s.jsx)(r, { children: (0, s.jsx)(e, { ...n }) });
+          let { analyticsLocations: r } = (0, l.default)(t);
+          return (0, s.jsx)(l.AnalyticsLocationProvider, {
+            value: r,
+            children: (0, s.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -37,17 +40,17 @@
       n("884691");
       var l = n("627445"),
         r = n.n(l),
-        u = n("77078"),
-        a = n("845579"),
+        a = n("77078"),
+        u = n("845579"),
         i = n("662255"),
         o = n("306160");
       function c(e) {
         let { id: t, label: n, onSuccess: l, shiftId: c, showIconFirst: d } = e,
-          f = a.DeveloperMode.useSetting();
+          f = u.DeveloperMode.useSetting();
         if (__OVERLAY__ || !f || !o.SUPPORTS_COPY || null == t) return null;
         let p = "devmode-copy-id-".concat(t);
         return (0, s.jsx)(
-          u.MenuItem,
+          a.MenuItem,
           {
             id: p,
             label: n,
@@ -98,19 +101,19 @@
       n("884691");
       var l = n("77078"),
         r = n("272030"),
-        u = n("158534"),
-        a = n("812204"),
+        a = n("158534"),
+        u = n("812204"),
         i = n("861370"),
         o = n("366416"),
         c = n("49111"),
         d = n("782340"),
-        f = (0, u.default)(
+        f = (0, a.default)(
           function (e) {
             let {
                 user: t,
                 relationshipType: n,
-                onRemoveFriend: u,
-                onBlock: a,
+                onRemoveFriend: a,
+                onBlock: u,
                 onReport: f,
                 onMessage: p,
                 onCopyId: h,
@@ -128,7 +131,7 @@
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-unblock",
                       label: d.default.Messages.UNBLOCK,
-                      action: u,
+                      action: a,
                     })
                   );
                   break;
@@ -137,7 +140,7 @@
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-remove",
                       label: d.default.Messages.REMOVE_FRIEND,
-                      action: u,
+                      action: a,
                       color: "danger",
                     })
                   ),
@@ -145,7 +148,7 @@
                       (0, s.jsx)(l.MenuItem, {
                         id: "user-block",
                         label: d.default.Messages.BLOCK,
-                        action: a,
+                        action: u,
                         color: "danger",
                       })
                     ),
@@ -166,7 +169,7 @@
                     (0, s.jsx)(l.MenuItem, {
                       id: "user-block",
                       label: d.default.Messages.BLOCK,
-                      action: a,
+                      action: u,
                       color: "danger",
                     })
                   ),
@@ -207,7 +210,7 @@
               ],
             });
           },
-          [a.default.CONTEXT_MENU, a.default.USER_PROFILE_ACTIONS_MENU]
+          [u.default.CONTEXT_MENU, u.default.USER_PROFILE_ACTIONS_MENU]
         );
     },
     662255: function (e, t, n) {
@@ -215,25 +218,25 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return a;
+            return u;
           },
         });
       var s = n("37983");
       n("884691");
       var l = n("469563"),
         r = n("35647"),
-        u = n("75196"),
-        a = (0, l.replaceIcon)(
+        a = n("75196"),
+        u = (0, l.replaceIcon)(
           function (e) {
             let {
               width: t = 24,
               height: n = 24,
               color: l = "currentColor",
               foreground: r,
-              ...a
+              ...u
             } = e;
             return (0, s.jsx)("svg", {
-              ...(0, u.default)(a),
+              ...(0, a.default)(u),
               width: t,
               height: n,
               viewBox: "0 0 24 24",
@@ -256,19 +259,19 @@
       n.r(t),
         n.d(t, {
           IdIcon: function () {
-            return u;
+            return a;
           },
         });
       var s = n("37983");
       n("884691");
       var l = n("669491"),
         r = n("82169");
-      let u = e => {
+      let a = e => {
         let {
           width: t = 24,
           height: n = 24,
-          color: u = l.default.colors.INTERACTIVE_NORMAL,
-          colorClass: a = "",
+          color: a = l.default.colors.INTERACTIVE_NORMAL,
+          colorClass: u = "",
           ...i
         } = e;
         return (0, s.jsxs)("svg", {
@@ -280,16 +283,16 @@
           viewBox: "0 0 24 24",
           children: [
             (0, s.jsx)("path", {
-              fill: "string" == typeof u ? u : u.css,
+              fill: "string" == typeof a ? a : a.css,
               d: "M15.3 14.48c-.46.45-1.08.67-1.86.67h-1.39V9.2h1.39c.78 0 1.4.22 1.86.67.46.45.68 1.22.68 2.31 0 1.1-.22 1.86-.68 2.31Z",
-              className: a,
+              className: u,
             }),
             (0, s.jsx)("path", {
-              fill: "string" == typeof u ? u : u.css,
+              fill: "string" == typeof a ? a : a.css,
               fillRule: "evenodd",
               d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm1 15h2.04V7.34H6V17Zm4-9.66V17h3.44c1.46 0 2.6-.42 3.38-1.25.8-.83 1.2-2.02 1.2-3.58s-.4-2.75-1.2-3.58c-.79-.83-1.92-1.25-3.38-1.25H10Z",
               clipRule: "evenodd",
-              className: a,
+              className: u,
             }),
           ],
         });
@@ -297,4 +300,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3d6d2e0fe62841bea437.js.map
+//# sourceMappingURL=8ab01ee53363043e9de3.js.map

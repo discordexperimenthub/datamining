@@ -8896,10 +8896,11 @@
             headerColor: T,
             buttonProps: S,
           } = e,
-          { AnalyticsLocationProvider: f } = (0, o.default)(
+          { analyticsLocations: f } = (0, o.default)(
             r.default.GUILD_BOOSTING_UPSELL_BANNER
           );
-        return (0, a.jsx)(f, {
+        return (0, a.jsx)(o.AnalyticsLocationProvider, {
+          value: f,
           children: (0, a.jsxs)("div", {
             className: n(c.banner, _),
             children: [
@@ -9349,9 +9350,10 @@
           s = (0, r.useStateFromStores)([_.default], () =>
             _.default.getGuild(t)
           ),
-          { AnalyticsLocationProvider: n, analyticsLocations: A } = (0,
-          u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE),
-          p =
+          { analyticsLocations: n } = (0, u.default)(
+            d.default.GUILD_SETTINGS_MEMBERS_PAGE
+          ),
+          A =
             !1 ==
             !!(null == s
               ? void 0
@@ -9359,33 +9361,34 @@
                   x.GuildFeatures
                     .ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY
                 )),
-          M = (0, r.useStateFromStores)(
+          p = (0, r.useStateFromStores)(
             [I.default],
             () => I.default.getEstimatedMemberSearchCountByGuildId(t),
             [t]
           ),
-          D = l.useCallback(
+          M = l.useCallback(
             e => {
               null != e &&
                 (0, E.openUserProfileModal)({
                   userId: e.userId,
                   guildId: e.guildId,
-                  sourceAnalyticsLocations: A,
+                  sourceAnalyticsLocations: n,
                   analyticsLocation: {
                     section: x.AnalyticsSections.GUILD_SETTINGS_MEMBERS,
                   },
                 });
             },
-            [A]
+            [n]
           ),
-          v = l.useRef(null),
-          G = l.useCallback(() => {
+          D = l.useRef(null),
+          v = l.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.resetSearchText();
+            null === (e = D.current) || void 0 === e || e.resetSearchText();
           }, []);
         if (null == s) return null;
-        let j = (0, N.getSearchState)(!1, !1, M);
-        return (0, a.jsx)(n, {
+        let G = (0, N.getSearchState)(!1, !1, p);
+        return (0, a.jsx)(u.AnalyticsLocationProvider, {
+          value: n,
           children: (0, a.jsx)("div", {
             className: O.settingsColumn,
             children: (0, a.jsx)("div", {
@@ -9417,19 +9420,19 @@
                           children: [
                             (0, a.jsx)(f.default, { guild: s }),
                             (0, a.jsx)(S.default, { guild: s }),
-                            p
+                            A
                               ? (0, a.jsxs)("div", {
                                   className: i(O.mainTableContainer),
                                   children: [
-                                    (0, a.jsx)(C.default, { guild: s, ref: v }),
+                                    (0, a.jsx)(C.default, { guild: s, ref: D }),
                                     (0, a.jsx)(g.default, {
                                       guild: s,
-                                      searchState: j,
+                                      searchState: G,
                                       compact: !0,
-                                      onSelectRow: D,
-                                      onResetForNewMembers: G,
+                                      onSelectRow: M,
+                                      onResetForNewMembers: v,
                                     }),
-                                    j !==
+                                    G !==
                                       N.SearchState.SUCCESS_STILL_INDEXING &&
                                       (0, a.jsx)(h.default, { guildId: s.id }),
                                   ],
@@ -29683,9 +29686,7 @@
             roleMembers: u,
             handleAddClick: c,
           } = e,
-          { AnalyticsLocationProvider: I } = (0, _.default)(
-            E.default.MEMBER_LIST
-          ),
+          { analyticsLocations: I } = (0, _.default)(E.default.MEMBER_LIST),
           T = l.useMemo(() => n.trim().toLowerCase(), [n]);
         (0, L.useQueryGuildMembers)(t, T);
         let S = l.useMemo(
@@ -29696,7 +29697,8 @@
             () => S.sort((e, t) => e.name.localeCompare(t.name)),
             [S]
           );
-        return (0, a.jsx)(I, {
+        return (0, a.jsx)(_.AnalyticsLocationProvider, {
+          value: I,
           children: (0, a.jsx)(o.ListAuto, {
             className: G.list,
             sections: [Math.max(S.length, 1)],
@@ -32696,9 +32698,7 @@
           } = (0, i.useStateFromStoresObject)([ei.default], () =>
             ei.default.getProps()
           ),
-          { AnalyticsLocationProvider: u } = (0, I.default)(
-            E.default.GUILD_SETTINGS
-          ),
+          { analyticsLocations: u } = (0, I.default)(E.default.GUILD_SETTINGS),
           c = (0, i.useStateFromStores)([w.default], () => w.default.theme),
           _ = (0, i.useStateFromStores)([w.default], () =>
             w.default.darkSidebar ? eb.ThemeTypes.DARK : void 0
@@ -32794,7 +32794,8 @@
             [W.default],
             () => null != f && W.default.isEmpty(f)
           );
-        return (0, a.jsx)(u, {
+        return (0, a.jsx)(I.AnalyticsLocationProvider, {
+          value: u,
           children: (0, a.jsx)(ez, {
             guild: s,
             section: n,
@@ -39557,30 +39558,29 @@
             ee.default.getProps()
           ),
           r = (0, f.default)(),
-          { AnalyticsLocationProvider: d, analyticsLocations: u } = (0,
-          g.default)(m.default.OVERVIEW);
+          { analyticsLocations: d } = (0, g.default)(m.default.OVERVIEW);
         l.useEffect(() => {
           (0, j.hideHotspot)(
             G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL
           );
         }, []);
-        let E = (0, c.useStateFromStores)([F.default], () =>
+        let u = (0, c.useStateFromStores)([F.default], () =>
             F.default.getCategories(null == t ? void 0 : t.id)
           ),
-          _ = l.useMemo(() => (0, h.default)(E._categories, E), [E]),
-          { canManageGuild: I, isGuildAdmin: T } = (0,
+          E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),
+          { canManageGuild: _, isGuildAdmin: I } = (0,
           c.useStateFromStoresObject)([k.default], () => ({
             canManageGuild: k.default.can(es.Permissions.MANAGE_GUILD, t),
             isGuildAdmin: k.default.can(es.Permissions.ADMINISTRATOR, t),
           })),
-          S = (0, c.useStateFromStores)([H.default], () =>
+          T = (0, c.useStateFromStores)([H.default], () =>
             H.default.getMemberCount(null == t ? void 0 : t.id)
           ),
-          N = (0, c.useStateFromStores)([V.default], () =>
+          S = (0, c.useStateFromStores)([V.default], () =>
             V.default.getCurrentUser()
           );
-        o(null != N, "GuildSettingsOverview: currentUser cannot be undefined");
-        let { enableDeadchat: C } =
+        o(null != S, "GuildSettingsOverview: currentUser cannot be undefined");
+        let { enableDeadchat: N } =
           x.SimpleDeadchatPromptExperiment.useExperiment(
             {
               guildId:
@@ -39593,20 +39593,21 @@
           );
         return null == t
           ? null
-          : (0, a.jsx)(d, {
+          : (0, a.jsx)(g.AnalyticsLocationProvider, {
+              value: d,
               children: (0, a.jsx)(eh, {
-                channels: _,
-                canManageGuild: I,
-                isGuildAdmin: T,
+                channels: E,
+                canManageGuild: _,
+                isGuildAdmin: I,
                 subsection: i,
                 guild: t,
                 errors: s,
                 submitting: n,
-                currentUser: N,
-                guildMemberCount: S,
+                currentUser: S,
+                guildMemberCount: T,
                 theme: r,
-                analyticsLocations: u,
-                eligibleForDeadchatPrompt: C,
+                analyticsLocations: d,
+                eligibleForDeadchatPrompt: N,
               }),
             });
       }
@@ -41104,10 +41105,11 @@
             },
             [e]
           ),
-          { AnalyticsLocationProvider: s } = (0, r.default)(i.default.STICKERS);
+          { analyticsLocations: s } = (0, r.default)(i.default.STICKERS);
         if (null == e) return null;
         let o = e.premiumTier !== f.BoostedGuildTiers.NONE || t.length > 0;
-        return (0, a.jsx)(s, {
+        return (0, a.jsx)(r.AnalyticsLocationProvider, {
+          value: s,
           children: (0, a.jsxs)(n.FormSection, {
             title: N.default.Messages.GUILD_SETTINGS_STICKERS,
             tag: n.FormTitleTags.H1,
@@ -41909,9 +41911,9 @@
             [f.default],
             () => f.default.hideInstantInvites
           ),
-          { analyticsLocations: l, AnalyticsLocationProvider: n } = (0,
-          _.default)(c.default.VANITY_URL);
-        return (0, a.jsx)(n, {
+          { analyticsLocations: l } = (0, _.default)(c.default.VANITY_URL);
+        return (0, a.jsx)(_.AnalyticsLocationProvider, {
+          value: l,
           children: (0, a.jsx)(v, {
             guild: e,
             ...t,
@@ -47830,4 +47832,4 @@
     },
   },
 ]);
-//# sourceMappingURL=adf59dc65b97b1060551.js.map
+//# sourceMappingURL=73fd2b704fbe6146a18e.js.map

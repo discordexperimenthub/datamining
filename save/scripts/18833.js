@@ -229,8 +229,7 @@
             () => p.default.getState().theme
           ),
           [A] = n.useState((0, $.getActivitiesWhatsNewCount)(U.default) > 0),
-          { analyticsLocations: g, AnalyticsLocationProvider: x } = (0,
-          m.default)([
+          { analyticsLocations: g } = (0, m.default)([
             ...(null !==
               (e =
                 null == D
@@ -242,7 +241,7 @@
               : []),
             f.default.ACTIVITIES_PAGE,
           ]),
-          S = n.useRef(new Date());
+          x = n.useRef(new Date());
         return (
           n.useEffect(() => {
             setTimeout(() => {
@@ -273,7 +272,7 @@
                   ],
                 }),
               () => {
-                let L = S.current,
+                let L = x.current,
                   e = new Date(),
                   a = Math.ceil((e.getTime() - L.getTime()) / 1e3);
                 P.default.track(LH.AnalyticEvents.ROUTE_UNMOUNT, {
@@ -284,7 +283,8 @@
             ),
             [g, h, A]
           ),
-          (0, i.jsx)(x, {
+          (0, i.jsx)(m.AnalyticsLocationProvider, {
+            value: g,
             children: (0, i.jsxs)("div", {
               className: Ld.outerContainer,
               children: [
@@ -667,7 +667,7 @@
             () => Z.default.useReducedMotion
           ),
           I = (0, o.useStateFromStores)([A.default], () => A.default.locale),
-          { AnalyticsLocationProvider: T } = (0, m.default)(
+          { analyticsLocations: T } = (0, m.default)(
             f.default.ACTIVITIES_PAGE_WHATS_NEW_TILE
           ),
           [h, D] = n.useState(!1),
@@ -727,7 +727,8 @@
             }),
           ],
         });
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(m.AnalyticsLocationProvider, {
+          value: T,
           children: (0, i.jsxs)("div", {
             className: Ld.flipCardOuter,
             children: [
@@ -916,7 +917,7 @@
         return !0;
       }
       function Lz() {
-        let { AnalyticsLocationProvider: L } = (0, m.default)(
+        let { analyticsLocations: L } = (0, m.default)(
             f.default.ACTIVITIES_HAPPENING_NOW
           ),
           e = (0, o.useStateFromStores)(
@@ -962,7 +963,8 @@
         ),
         e.length <= 0)
           ? null
-          : (0, i.jsx)(L, {
+          : (0, i.jsx)(m.AnalyticsLocationProvider, {
+              value: L,
               children: (0, i.jsx)("div", {
                 className: Ld.happeningNowContainer,
                 children: (0, i.jsx)(D.default, {
@@ -1821,4 +1823,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1bd5e0b543ee22142562.js.map
+//# sourceMappingURL=9ac560965f35c6850e35.js.map

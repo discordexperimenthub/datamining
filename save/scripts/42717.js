@@ -802,7 +802,7 @@
             initialRecurrenceId: C,
             onClose: g,
           } = e,
-          { AnalyticsLocationProvider: T } = (0, u.default)(
+          { analyticsLocations: T } = (0, u.default)(
             a.default.GUILD_EVENT_MODAL
           ),
           [R, L] = l.useState(C),
@@ -861,7 +861,8 @@
             e !== Z && (e === j.EventDetailSections.RSVP_LIST && X(), z(e));
           },
           et = null != R ? R : (0, I.getNextRecurrenceIdInEvent)(V);
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(u.AnalyticsLocationProvider, {
+          value: T,
           children: (0, i.jsxs)(s.ModalRoot, {
             size: s.ModalSize.MEDIUM,
             transitionState: d,
@@ -4012,4 +4013,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6fed180f120ce27a5b79.js.map
+//# sourceMappingURL=5f3346d73c84b3487a3e.js.map

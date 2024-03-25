@@ -14,8 +14,11 @@
       var r = n("685665");
       function a(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: a } = (0, r.default)(t);
-          return (0, u.jsx)(a, { children: (0, u.jsx)(e, { ...n }) });
+          let { analyticsLocations: a } = (0, r.default)(t);
+          return (0, u.jsx)(r.AnalyticsLocationProvider, {
+            value: a,
+            children: (0, u.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -32,8 +35,8 @@
       var u = n("37983"),
         r = n("884691"),
         a = n("77078"),
-        s = n("272030"),
-        l = n("79112"),
+        l = n("272030"),
+        s = n("79112"),
         i = n("534291"),
         o = n("158534"),
         d = n("812204"),
@@ -55,14 +58,13 @@
               [o, d] = r.useState(!1),
               C = (0, T.default)(),
               x = (0, m.default)(),
-              R = (0, M.default)(),
-              v = (0, h.default)(),
-              j = (0, I.default)(),
-              L = (0, p.default)(),
-              { AnalyticsLocationProvider: b, analyticsLocations: A } = (0,
-              c.default)(),
-              O = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
-            async function N() {
+              v = (0, M.default)(),
+              R = (0, h.default)(),
+              L = (0, I.default)(),
+              j = (0, p.default)(),
+              { analyticsLocations: A } = (0, c.default)(),
+              b = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
+            async function O() {
               try {
                 d(!0),
                   await (0, f.clearBuildOverride)(),
@@ -71,25 +73,25 @@
                 d(!1);
               }
             }
-            let y = e => {
+            let N = e => {
                 switch (e) {
                   case _.UserSettingsSections.STREAMER_MODE:
                     return C;
                   case _.UserSettingsSections.APPEARANCE:
                     return x;
                   case _.UserSettingsSections.ACCESSIBILITY:
-                    return R;
-                  case _.UserSettingsSections.VOICE:
                     return v;
+                  case _.UserSettingsSections.VOICE:
+                    return R;
                   case _.UserSettingsSections.TEXT:
-                    return j;
-                  case _.UserSettingsSections.EXPERIMENTS:
                     return L;
+                  case _.UserSettingsSections.EXPERIMENTS:
+                    return j;
                   default:
                     return null;
                 }
               },
-              k = (0, E.default)()
+              y = (0, E.default)()
                 .filter(e => {
                   let { section: t } = e;
                   return (
@@ -100,21 +102,22 @@
                   );
                 })
                 .filter(e => null == e.predicate || e.predicate());
-            return (0, u.jsx)(b, {
+            return (0, u.jsx)(c.AnalyticsLocationProvider, {
+              value: A,
               children: (0, u.jsxs)(a.Menu, {
                 navId: "user-settings-cog",
-                onClose: s.closeContextMenu,
+                onClose: l.closeContextMenu,
                 "aria-label":
                   g.default.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
                 onSelect: n,
                 children: [
-                  k.map(e => {
+                  y.map(e => {
                     let { section: t, label: n, onClick: r } = e,
-                      s = t.replace(/\W/gi, "_");
+                      l = t.replace(/\W/gi, "_");
                     return (0, u.jsx)(
                       a.MenuItem,
                       {
-                        id: s,
+                        id: l,
                         label: n,
                         action: () =>
                           null != r
@@ -123,21 +126,21 @@
                                 let n = Object.values(_.UserSettingsSections),
                                   u = n.filter(t => t === e)[0];
                                 null != u &&
-                                  l.default.open(u, void 0, {
+                                  s.default.open(u, void 0, {
                                     analyticsLocations: t,
                                   });
                               })(t, A),
-                        children: y(t),
+                        children: N(t),
                       },
-                      s
+                      l
                     );
                   }),
-                  e.user.isStaff() && O.length > 0
+                  e.user.isStaff() && b.length > 0
                     ? (0, u.jsx)(a.MenuItem, {
                         label: "Build overrides",
                         id: "build_overrides",
                         children: (0, u.jsx)(a.MenuGroup, {
-                          children: O.map(e =>
+                          children: b.map(e =>
                             (0, u.jsx)(
                               a.MenuRadioItem,
                               {
@@ -167,7 +170,7 @@
                           id: "clear-build-override",
                           disabled: o,
                           label: g.default.Messages.CLEAR_BUILD_OVERRIDE,
-                          action: N,
+                          action: O,
                           color: "danger",
                         }),
                       })
@@ -191,18 +194,18 @@
       n("884691");
       var r = n("446674"),
         a = n("77078"),
-        s = n("180748"),
-        l = n("206230"),
+        l = n("180748"),
+        s = n("206230"),
         i = n("782340");
       function o() {
         let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n,
-          } = (0, r.useStateFromStoresObject)([l.default], () => ({
-            saturation: l.default.saturation,
-            useReducedMotion: l.default.useReducedMotion,
-            roleStyle: l.default.roleStyle,
+          } = (0, r.useStateFromStoresObject)([s.default], () => ({
+            saturation: s.default.saturation,
+            useReducedMotion: s.default.useReducedMotion,
+            roleStyle: s.default.roleStyle,
           })),
           o = [
             {
@@ -232,7 +235,7 @@
                     .ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE,
                 checked: t,
                 action: () =>
-                  (0, s.setPrefersReducedMotion)(
+                  (0, l.setPrefersReducedMotion)(
                     t ? "no-preference" : "reduce"
                   ),
               }),
@@ -251,7 +254,7 @@
                     ...t,
                     ref: n,
                     value: 100 * e,
-                    onChange: e => (0, s.setSaturation)(e / 100),
+                    onChange: e => (0, l.setSaturation)(e / 100),
                     "aria-label":
                       i.default.Messages
                         .ACCESSIBILITY_SETTINGS_SATURATION_TITLE,
@@ -276,7 +279,7 @@
                       group: "role-colors",
                       checked: r === n,
                       label: t,
-                      action: () => (0, s.setRoleStyle)(r),
+                      action: () => (0, l.setRoleStyle)(r),
                     },
                     r
                   );
@@ -300,8 +303,8 @@
       n("884691");
       var r = n("446674"),
         a = n("77078"),
-        s = n("452804"),
-        l = n("180748"),
+        l = n("452804"),
+        s = n("180748"),
         i = n("206230"),
         o = n("685665"),
         d = n("648114"),
@@ -339,7 +342,7 @@
                   analyticsLocations: t,
                   themeName: "default ".concat(e),
                 }),
-                  (0, s.saveClientTheme)({ theme: e });
+                  (0, l.saveClientTheme)({ theme: e });
               },
             });
         return [
@@ -364,7 +367,7 @@
                   : m.default.Messages.SWITCH_TO_COMPACT_MODE,
                 action: () => {
                   S.MessageDisplayCompact.updateSetting(!e),
-                    (0, l.setMessageGroupSpacing)();
+                    (0, s.setMessageGroupSpacing)();
                 },
               }),
             },
@@ -385,9 +388,9 @@
       var u = n("37983"),
         r = n("884691"),
         a = n("714617"),
-        s = n.n(a),
-        l = n("448105"),
-        i = n.n(l),
+        l = n.n(a),
+        s = n("448105"),
+        i = n.n(s),
         o = n("446674"),
         d = n("77078"),
         c = n("211470"),
@@ -449,16 +452,16 @@
               });
             },
             [],
-            s
+            l
           ),
           [t, n] = r.useState(""),
-          [a, l] = r.useState([]);
+          [a, s] = r.useState([]);
         r.useEffect(() => {
           if (0 === t.trim().length) {
-            l(e);
+            s(e);
             return;
           }
-          l(e.filter(e => i(t, e.experiment.title.toLowerCase())));
+          s(e.filter(e => i(t, e.experiment.title.toLowerCase())));
         }, [e, t]);
         let c = r.useMemo(
             () =>
@@ -514,20 +517,20 @@
       n("884691");
       var r = n("446674"),
         a = n("77078"),
-        s = n("52289"),
-        l = n("102985"),
+        l = n("52289"),
+        s = n("102985"),
         i = n("782340");
       function o() {
         let e = (0, r.useStateFromStores)(
-          [l.default],
-          () => l.default.enabled,
+          [s.default],
+          () => s.default.enabled,
           []
         );
         return (0, u.jsx)(a.MenuCheckboxItem, {
           id: "streamer-mode-toggle",
           label: i.default.Messages.ENABLE_STREAMER_MODE_LABEL,
           action: () => {
-            s.default.setEnabled(!e);
+            l.default.setEnabled(!e);
           },
           checked: e,
         });
@@ -545,12 +548,12 @@
       n("884691");
       var r = n("77078"),
         a = n("599110"),
-        s = n("845579"),
-        l = n("49111"),
+        l = n("845579"),
+        s = n("49111"),
         i = n("782340");
       function o() {
-        let e = s.UseLegacyChatInput.useSetting(),
-          t = s.UseRichChatInput.useSetting();
+        let e = l.UseLegacyChatInput.useSetting(),
+          t = l.UseRichChatInput.useSetting();
         return e
           ? null
           : (0, u.jsx)(r.MenuCheckboxItem, {
@@ -558,13 +561,13 @@
               label: i.default.Messages.PREVIEW_MARKDOWN,
               action: () => {
                 let e = !t;
-                a.default.track(l.AnalyticEvents.PREVIEW_MARKDOWN_TOGGLED, {
+                a.default.track(s.AnalyticEvents.PREVIEW_MARKDOWN_TOGGLED, {
                   enabled: e,
                   location: {
-                    section: l.AnalyticsSections.SETTINGS_CONTEXT_MENU,
+                    section: s.AnalyticsSections.SETTINGS_CONTEXT_MENU,
                   },
                 }),
-                  s.UseRichChatInput.updateSetting(e);
+                  l.UseRichChatInput.updateSetting(e);
               },
               checked: t,
             });
@@ -582,18 +585,18 @@
       n("884691");
       var r = n("77078"),
         a = n("143082"),
-        s = n("252227"),
-        l = n("832759");
+        l = n("252227"),
+        s = n("832759");
       function i() {
         return [
           (0, u.jsx)(
             r.MenuGroup,
-            { children: (0, s.default)() },
+            { children: (0, l.default)() },
             "input-mode-items"
           ),
           (0, u.jsxs)(
             r.MenuGroup,
-            { children: [(0, a.default)(), (0, l.default)()] },
+            { children: [(0, a.default)(), (0, s.default)()] },
             "input-output"
           ),
         ];
@@ -601,4 +604,4 @@
     },
   },
 ]);
-//# sourceMappingURL=718e21e39a4562423315.js.map
+//# sourceMappingURL=2975e01d1014c3e759f9.js.map

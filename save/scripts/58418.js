@@ -2345,7 +2345,7 @@
             showAvatarPopout: E,
           } = a,
           [_, O] = r.useState(!1),
-          { AnalyticsLocationProvider: M } = (0, h.default)(c.default.AVATAR),
+          { analyticsLocations: M } = (0, h.default)(c.default.AVATAR),
           S = (0, o.useStateFromStores)([I.default], () => {
             var t;
             return null !== (t = a.displayCompactAvatars) && void 0 !== t
@@ -2413,7 +2413,8 @@
           !j || S)
         )
           return null != u && null != E
-            ? (0, l.jsx)(M, {
+            ? (0, l.jsx)(h.AnalyticsLocationProvider, {
+                value: M,
                 children: (0, l.jsx)(d.Popout, {
                   preload: P
                     ? void 0
@@ -2450,7 +2451,8 @@
                     }),
                 }),
               })
-            : (0, l.jsx)(M, {
+            : (0, l.jsx)(h.AnalyticsLocationProvider, {
+                value: M,
                 children: V({
                   ...G,
                   avatarSrc: H,
@@ -2853,4 +2855,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f20f9e7324293fb0a1c8.js.map
+//# sourceMappingURL=34db373037396b7c2c36.js.map

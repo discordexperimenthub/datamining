@@ -200,7 +200,7 @@
         S = s("652059"),
         _ = function (e) {
           let { guildId: t } = e,
-            { AnalyticsLocationProvider: s } = (0, r.default)(
+            { analyticsLocations: s } = (0, r.default)(
               n.default.GUILD_MEMBER_APPLICATION_REVIEW
             ),
             _ = (0, I.useSelectedGuildJoinRequest)({ guildId: t }),
@@ -221,7 +221,8 @@
             l.useEffect(() => {
               E.default.fetchVerificationForm(t);
             }, [t]),
-            (0, a.jsxs)(s, {
+            (0, a.jsxs)(r.AnalyticsLocationProvider, {
+              value: s,
               children: [
                 (0, a.jsx)("div", {
                   className: S.content,
@@ -353,7 +354,7 @@
                 null === (e = s.current) || void 0 === e || e.scrollToTop();
             }
           }, [t, g, x]);
-        let O = l.useCallback(
+        let v = l.useCallback(
             async e => {
               if ("REVIEW_APPLICATION" !== A)
                 h !== e &&
@@ -361,7 +362,7 @@
             },
             [A, h, t, P]
           ),
-          v = l.useCallback(
+          O = l.useCallback(
             async e => {
               if (A !== e)
                 p(e),
@@ -390,7 +391,7 @@
           children: [
             (0, a.jsx)(_.default, {
               currentTab: A,
-              onTabItemSelect: v,
+              onTabItemSelect: O,
               pendingGuildJoinRequestsTotal: C,
               showSetupTab: !0,
             }),
@@ -408,7 +409,7 @@
                           children: (0, a.jsx)(S.default, {
                             className: M.sortSelect,
                             sortOrder: h,
-                            onSortChange: O,
+                            onSortChange: v,
                           }),
                         }),
                         (0, a.jsx)(n.Text, {
@@ -798,10 +799,10 @@
             },
             [p]
           ),
-          O = async () => {
+          v = async () => {
             await G(r, S.GuildJoinRequestApplicationStatuses.APPROVED);
           },
-          v = async () => {
+          O = async () => {
             await G(r, S.GuildJoinRequestApplicationStatuses.REJECTED);
           };
         return (0, a.jsxs)(o.Clickable, {
@@ -833,7 +834,7 @@
             j &&
               (0, a.jsx)(N, {
                 icon: E.default,
-                onClick: O,
+                onClick: v,
                 submitting:
                   p === S.GuildJoinRequestApplicationStatuses.APPROVED,
                 disabled:
@@ -843,7 +844,7 @@
             j &&
               (0, a.jsx)(N, {
                 icon: I.default,
-                onClick: v,
+                onClick: O,
                 submitting:
                   p === S.GuildJoinRequestApplicationStatuses.REJECTED,
                 disabled:
@@ -937,15 +938,15 @@
         var t;
         let { guildJoinRequest: i, guild: h, guildJoinRequestUser: x } = e,
           [C, g] = l.useState(!1),
-          { createdAt: P, actionedAt: j, guildId: G, userId: O } = i,
-          v = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id,
+          { createdAt: P, actionedAt: j, guildId: G, userId: v } = i,
+          O = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id,
           D = (0, r.useStateFromStores)([I.default], () =>
-            I.default.getUser(v)
+            I.default.getUser(O)
           ),
           L = (0, r.useStateFromStores)(
             [E.default],
-            () => (null != v ? E.default.getMember(G, v) : null),
-            [v, G]
+            () => (null != O ? E.default.getMember(G, O) : null),
+            [O, G]
           ),
           b = l.useCallback(() => {
             (0, o.showToast)(
@@ -961,7 +962,7 @@
               try {
                 await m.default.updateGuildJoinRequest(
                   G,
-                  O,
+                  v,
                   N.GuildJoinRequestApplicationStatuses.APPROVED
                 );
               } catch {
@@ -1089,7 +1090,7 @@
                                   (0, a.jsx)(e, {
                                     modalProps: t,
                                     guildId: G,
-                                    userId: O,
+                                    userId: v,
                                     onError: b,
                                   });
                               });
@@ -1391,4 +1392,4 @@
     },
   },
 ]);
-//# sourceMappingURL=21371501a64b4a0e9e67.js.map
+//# sourceMappingURL=f067af9d8ef59fd37f88.js.map

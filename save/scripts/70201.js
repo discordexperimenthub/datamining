@@ -37,8 +37,11 @@
       var n = a("685665");
       function l(e, t) {
         return function (a) {
-          let { AnalyticsLocationProvider: l } = (0, n.default)(t);
-          return (0, i.jsx)(l, { children: (0, i.jsx)(e, { ...a }) });
+          let { analyticsLocations: l } = (0, n.default)(t);
+          return (0, i.jsx)(n.AnalyticsLocationProvider, {
+            value: l,
+            children: (0, i.jsx)(e, { ...a }),
+          });
         };
       }
     },
@@ -65,14 +68,14 @@
         f = a("782911"),
         I = a("629414"),
         p = a("53887"),
-        T = a("486150"),
-        A = a("555759"),
+        A = a("486150"),
+        T = a("555759"),
         S = a("271938"),
-        _ = a("42203"),
-        v = a("525065"),
+        v = a("42203"),
+        _ = a("525065"),
         m = a("305961"),
-        E = a("957255"),
-        y = a("824563"),
+        y = a("957255"),
+        E = a("824563"),
         N = a("27618"),
         C = a("18494"),
         M = a("101125"),
@@ -113,10 +116,10 @@
               )
           ),
           W = (0, n.useStateFromStoresArray)(
-            [y.default],
+            [E.default],
             () =>
               null != t
-                ? y.default.getActivities(
+                ? E.default.getActivities(
                     t.id,
                     null == e ? void 0 : e.getGuildId()
                   )
@@ -141,11 +144,11 @@
           ),
           Q = (0, G.default)(),
           Z = (0, n.useStateFromStores)(
-            [E.default],
+            [y.default],
             () =>
               null == e ||
               e.isPrivate() ||
-              E.default.can(J.Permissions.SEND_MESSAGES, e),
+              y.default.can(J.Permissions.SEND_MESSAGES, e),
             [e]
           ),
           $ = (0, n.useStateFromStoresArray)(
@@ -178,13 +181,13 @@
           et = null == e ? void 0 : e.id,
           ea = (0, n.useStateFromStoresArray)(
             [
-              _.default,
-              m.default,
               v.default,
+              m.default,
+              _.default,
               N.default,
               C.default,
               h.default,
-              E.default,
+              y.default,
             ],
             () => [
               ...W.map(e =>
@@ -197,13 +200,13 @@
                   channelId: et,
                   currentUser: H,
                   isEmbedded: (0, V.default)(e),
-                  ChannelStore: _.default,
+                  ChannelStore: v.default,
                   GuildStore: m.default,
-                  GuildMemberCountStore: v.default,
+                  GuildMemberCountStore: _.default,
                   RelationshipStore: N.default,
                   SelectedChannelStore: C.default,
                   VoiceStateStore: h.default,
-                  PermissionStore: E.default,
+                  PermissionStore: y.default,
                 })
               ),
               ...q.map(e => {
@@ -219,10 +222,10 @@
                     currentUser: H,
                     isActivitiesEnabledForCurrentPlatform: (0,
                     R.getIsActivitiesEnabledForCurrentPlatform)(),
-                    ChannelStore: _.default,
+                    ChannelStore: v.default,
                     GuildStore: m.default,
                     VoiceStateStore: h.default,
-                    PermissionStore: E.default,
+                    PermissionStore: y.default,
                   }) === j.EmbeddedActivityJoinability.CAN_JOIN
                 );
               }),
@@ -258,7 +261,7 @@
                 });
           },
           ed = (n, d) => {
-            let u = _.default.getChannel(n),
+            let u = v.default.getChannel(n),
               s = null == u ? void 0 : m.default.getGuild(u.guild_id);
             if (null != u && null != s) {
               if (null != t)
@@ -335,7 +338,7 @@
               let n =
                   (null == t ? void 0 : t.id) != null &&
                   a.userIds.has(null == t ? void 0 : t.id),
-                d = E.default.can(J.Permissions.CREATE_INSTANT_INVITE, e),
+                d = y.default.can(J.Permissions.CREATE_INSTANT_INVITE, e),
                 u = ee.find(
                   e => (null == e ? void 0 : e.id) === a.applicationId
                 );
@@ -457,7 +460,7 @@
                   {
                     id: "spotify-play-".concat(a.session_id),
                     action: () =>
-                      (0, A.default)(
+                      (0, T.default)(
                         d,
                         B.SpotifyActionTypes.USER_ACTIVITY_PLAY
                       ),
@@ -483,7 +486,7 @@
                   {
                     id: "spotify-sync-".concat(a.session_id),
                     action: () =>
-                      (0, T.default)(
+                      (0, A.default)(
                         d,
                         B.SpotifyActionTypes.USER_ACTIVITY_SYNC
                       ),
@@ -580,12 +583,12 @@
             },
             [a]
           ),
-          [p, T] = (0, l.useStateFromStoresArray)(
+          [p, A] = (0, l.useStateFromStoresArray)(
             [s.default],
             () => [s.default.isFriend(a), s.default.isBlocked(a)],
             [a]
           ),
-          [A, S] = n.useState(!1);
+          [T, S] = n.useState(!1);
         return f || I
           ? null
           : p
@@ -616,18 +619,18 @@
               })
             : (0, i.jsx)(d.MenuItem, {
                 id: "add-friend",
-                label: A
+                label: T
                   ? r.default.Messages.ADD_FRIEND_BUTTON_AFTER
                   : r.default.Messages.ADD_FRIEND,
                 action: () => {
-                  !A &&
+                  !T &&
                     (u.default.addRelationship({
                       userId: a,
                       context: { location: t },
                     }),
                     S(!0));
                 },
-                disabled: T || (A && !p),
+                disabled: A || (T && !p),
               });
       }
     },
@@ -685,7 +688,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return T;
+            return A;
           },
         });
       var i = a("37983"),
@@ -700,21 +703,21 @@
         f = a("49111"),
         I = a("590456"),
         p = a("782340");
-      function T(e) {
-        let { user: t, guildId: a, context: T } = e,
-          { id: A } = t,
-          { loading: S, note: _ } = (0, u.default)(A),
-          v = !S && null != _ && _.length > 0,
-          m = T === f.AppContext.POPOUT,
-          E = n.useContext(c.AnalyticsContext),
-          { analyticsLocations: y } = (0, d.default)();
-        return A === o.default.getId() || r.default.hidePersonalInformation || m
+      function A(e) {
+        let { user: t, guildId: a, context: A } = e,
+          { id: T } = t,
+          { loading: S, note: v } = (0, u.default)(T),
+          _ = !S && null != v && v.length > 0,
+          m = A === f.AppContext.POPOUT,
+          y = n.useContext(c.AnalyticsContext),
+          { analyticsLocations: E } = (0, d.default)();
+        return T === o.default.getId() || r.default.hidePersonalInformation || m
           ? null
           : (0, i.jsx)(l.MenuItem, {
               id: "note",
               label: S
                 ? p.default.Messages.LOADING_NOTE
-                : v
+                : _
                   ? p.default.Messages.EDIT_NOTE
                   : p.default.Messages.ADD_NOTE,
               action: () => {
@@ -723,8 +726,8 @@
                   section: I.UserProfileSections.USER_INFO,
                   guildId: a,
                   autoFocusNote: !0,
-                  sourceAnalyticsLocations: y,
-                  analyticsLocation: E.location,
+                  sourceAnalyticsLocations: E,
+                  analyticsLocation: y.location,
                 });
               },
             });
@@ -827,8 +830,8 @@
         I = a("782340");
       function p(e, t) {
         let p = s.default.getId(),
-          T = t === f.AppContext.POPOUT,
-          A = (0, n.useStateFromStores)(
+          A = t === f.AppContext.POPOUT,
+          T = (0, n.useStateFromStores)(
             [c.default, o.default],
             () =>
               c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)
@@ -836,22 +839,22 @@
           S = (0, n.useStateFromStores)([r.default], () =>
             r.default.isBlocked(e.id)
           );
-        if (p === e.id || T || A || e.bot) return null;
-        let _ = () => d.default.openPrivateChannel(e.id, !0),
-          v = !u.default.disableCallUserConfirmationPrompt;
+        if (p === e.id || A || T || e.bot) return null;
+        let v = () => d.default.openPrivateChannel(e.id, !0),
+          _ = !u.default.disableCallUserConfirmationPrompt;
         return (0, i.jsx)(l.MenuItem, {
           id: "call",
           label: I.default.Messages.CALL,
-          action: v
+          action: _
             ? () => {
                 (0, l.openModalLazy)(async () => {
                   let { default: e } = await a
                     .el("241890")
                     .then(a.bind(a, "241890"));
-                  return t => (0, i.jsx)(e, { onSubmit: _, ...t });
+                  return t => (0, i.jsx)(e, { onSubmit: v, ...t });
                 });
               }
-            : _,
+            : v,
           disabled: S,
         });
       }
@@ -861,7 +864,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return E;
+            return y;
           },
         }),
         a("424973"),
@@ -878,27 +881,27 @@
         f = a("923959"),
         I = a("305961"),
         p = a("957255"),
-        T = a("27618"),
-        A = a("677099"),
+        A = a("27618"),
+        T = a("677099"),
         S = a("697218"),
-        _ = a("49111"),
-        v = a("782340");
+        v = a("49111"),
+        _ = a("782340");
       function m(e, t) {
         u.default.ensurePrivateChannel(e).then(e => {
           null != c.default.getChannel(e) &&
             o.default.sendInvite(e, t, "context_menu", null);
         });
       }
-      function E(e, t) {
+      function y(e, t) {
         let a = (0, l.useStateFromStores)(
             [S.default],
             () => S.default.getCurrentUser(),
             []
           ),
           u = (0, l.useStateFromStoresArray)(
-            [A.default, I.default, p.default],
+            [T.default, I.default, p.default],
             () => {
-              let e = A.default.getFlattenedGuildIds(),
+              let e = T.default.getFlattenedGuildIds(),
                 a = [];
               return (
                 e.forEach(e => {
@@ -917,11 +920,11 @@
         return (null == a ? void 0 : a.id) === e.id ||
           e.bot ||
           0 === u.length ||
-          T.default.isBlocked(e.id)
+          A.default.isBlocked(e.id)
           ? null
           : (0, i.jsx)(d.MenuItem, {
               id: "invite-to-server",
-              label: v.default.Messages.INVITE_TO_SERVER,
+              label: _.default.Messages.INVITE_TO_SERVER,
               children: u.map(t =>
                 o[t.id]
                   ? (0, i.jsx)(
@@ -929,7 +932,7 @@
                       {
                         id: t.id,
                         disabled: !0,
-                        label: v.default.Messages.INVITE_SENT,
+                        label: _.default.Messages.INVITE_SENT,
                       },
                       t.id
                     )
@@ -943,13 +946,13 @@
                             let a = f.default.getDefaultChannel(
                               e.id,
                               !0,
-                              _.Permissions.CREATE_INSTANT_INVITE
+                              v.Permissions.CREATE_INSTANT_INVITE
                             );
                             if (null != a) {
                               if (
                                 (c({ ...o, [e.id]: !0 }),
                                 !p.default.can(
-                                  _.Permissions.CREATE_INSTANT_INVITE,
+                                  v.Permissions.CREATE_INSTANT_INVITE,
                                   e
                                 ) && null != e.vanityURLCode)
                               ) {
@@ -1048,4 +1051,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0d7a613c1cb73d2ff65f.js.map
+//# sourceMappingURL=9d3c0801d852b86596cd.js.map

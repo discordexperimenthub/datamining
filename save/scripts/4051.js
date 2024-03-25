@@ -615,8 +615,8 @@
         D = s("865146"),
         U = s("305961"),
         O = s("357957"),
-        b = s("10514"),
-        v = s("251013"),
+        v = s("10514"),
+        b = s("251013"),
         B = s("145131"),
         j = s("953109"),
         G = s("37785"),
@@ -1272,7 +1272,7 @@
                       )));
               });
             else if (f.type === ee.SubscriptionTypes.GUILD) {
-              let e = b.default.get(f.items[0].planId);
+              let e = v.default.get(f.items[0].planId);
               d(
                 null != e,
                 "Guild subscription plan should already have been loaded"
@@ -1283,7 +1283,7 @@
                   : ea.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
               s.push(t.format({ planName: e.name })), (a = e.skuId);
             } else if (f.type === ee.SubscriptionTypes.APPLICATION) {
-              let e = b.default.get(f.items[0].planId);
+              let e = v.default.get(f.items[0].planId);
               d(
                 null != e,
                 "Application subscription plan should already have been loaded"
@@ -1569,13 +1569,13 @@
             gameApplication: _,
             paymentSources: m,
           } = (0, p.useStateFromStoresObject)(
-            [O.default, v.default, S.default],
+            [O.default, b.default, S.default],
             () => {
               var e, t;
               return {
                 applicationStatistics:
                   null != d
-                    ? v.default.getCurrentUserStatisticsForApplication(d)
+                    ? b.default.getCurrentUserStatisticsForApplication(d)
                     : null,
                 gameApplication:
                   null !== (t = S.default.getApplication(null != d ? d : "")) &&
@@ -1933,8 +1933,8 @@
         D = s("471131"),
         U = s("398309"),
         O = s("249718"),
-        b = s("360262"),
-        v = s("177998"),
+        v = s("360262"),
+        b = s("177998"),
         B = s("146163"),
         j = s("510928"),
         G = s("661128"),
@@ -2266,7 +2266,7 @@
                       ),
                     }),
                 }),
-                (0, i.jsx)(v.default, { onClick: a }),
+                (0, i.jsx)(b.default, { onClick: a }),
               ],
             }),
           ],
@@ -2318,12 +2318,12 @@
         l.useEffect(() => {
           P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a));
         }, [a]);
-        let v =
+        let b =
           L === k.PremiumTypes.TIER_0 ||
           L === k.PremiumTypes.TIER_1 ||
           L === k.PremiumTypes.TIER_2;
-        null == E && (E = v ? 1 : 2);
-        let { AnalyticsLocationProvider: B } = (0, N.default)(
+        null == E && (E = b ? 1 : 2);
+        let { analyticsLocations: B } = (0, N.default)(
             u,
             I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL
           ),
@@ -2417,7 +2417,7 @@
             });
             break;
           case 1:
-            s = (0, i.jsx)(b.default, {
+            s = (0, i.jsx)(v.default, {
               premiumType: L,
               titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
               subtitleText: A
@@ -2461,7 +2461,7 @@
               onContinue: () => W(2),
               isLoading: ee && es,
               churnUserDiscountOffer: et,
-              analyticsLocations: u,
+              analyticsLocations: B,
             });
             break;
           case 2:
@@ -2470,7 +2470,7 @@
               premiumType: L,
               setStep: W,
               onClose: () => $(j),
-              whatYouLoseExperienceEnabled: v,
+              whatYouLoseExperienceEnabled: b,
               analyticsLocation: d,
             });
             break;
@@ -2504,7 +2504,8 @@
           default:
             throw Error("Unexpected step: ".concat(j));
         }
-        return (0, i.jsxs)(B, {
+        return (0, i.jsxs)(N.AnalyticsLocationProvider, {
+          value: B,
           children: [
             (0, i.jsx)(o.ConfettiCanvas, {
               ref: T,
@@ -2742,7 +2743,7 @@
                 regularPrice: D,
               }
             ),
-          b = (0, a.jsx)("div", {
+          v = (0, a.jsx)("div", {
             className: I.whatYouLoseButtonContainer,
             children: (0, a.jsx)(r.Button, {
               color: r.Button.Colors.BRAND,
@@ -2787,7 +2788,7 @@
                             className: I.bodyString,
                             children: O,
                           }),
-                          b,
+                          v,
                         ],
                       })
                     : (0, a.jsx)(r.Spinner, {}),
@@ -3092,8 +3093,8 @@
         D = s("541554"),
         U = s("690679"),
         O = s("95637"),
-        b = s("49111"),
-        v = s("782340"),
+        v = s("49111"),
+        b = s("782340"),
         B = s("809432");
       function j(e) {
         let t,
@@ -3153,9 +3154,9 @@
                     (0, a.jsx)(x.default, {
                       color: f.Button.Colors.BRAND,
                       onClick: () =>
-                        _.default.open(b.UserSettingsSections.GUILD_BOOSTING),
+                        _.default.open(v.UserSettingsSections.GUILD_BOOSTING),
                       children:
-                        v.default.Messages
+                        b.default.Messages
                           .PREMIUM_GUILD_PERKS_MODAL_MANAGE_YOUR_SUBSCRIPTIONS,
                     }),
                 ],
@@ -3165,7 +3166,7 @@
                   className: B.boostingDesktopAppBlurb,
                   variant: "text-sm/normal",
                   children:
-                    v.default.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format(
+                    b.default.Messages.GUILD_BOOSTING_MANAGEMENT_OPEN_DESKTOP_APP.format(
                       { openAppHook: () => (0, I.default)("app") }
                     ),
                 }),
@@ -3176,7 +3177,7 @@
       function G() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_missing_payment_method",
             });
           }, []),
@@ -3190,7 +3191,7 @@
               (0, a.jsx)(f.Text, {
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
-                children: v.default.Messages.MISSING_PAYMENT_METHOD_BANNER,
+                children: b.default.Messages.MISSING_PAYMENT_METHOD_BANNER,
               }),
             ],
           })
@@ -3199,7 +3200,7 @@
       function F() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
@@ -3213,7 +3214,7 @@
               (0, a.jsx)(f.Text, {
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
-                children: v.default.Messages.INVALID_PAYMENT_METHOD_BANNER,
+                children: b.default.Messages.INVALID_PAYMENT_METHOD_BANNER,
               }),
             ],
           })
@@ -3226,7 +3227,7 @@
           );
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_invalid_payment_method",
             });
           }, []),
@@ -3241,7 +3242,7 @@
                 className: B.paymentBannerText,
                 variant: "text-sm/normal",
                 children:
-                  v.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format(
+                  b.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT.format(
                     {
                       daysPastDue: t,
                       paymentModalRedirect: () => {
@@ -3266,7 +3267,7 @@
             (0, a.jsx)(f.FormTitle, {
               tag: "h3",
               className: B.detailBlockHeader,
-              children: v.default.Messages.PREMIUM_SETTINGS_BILLING_INFO,
+              children: b.default.Messages.PREMIUM_SETTINGS_BILLING_INFO,
             }),
             (0, a.jsx)("div", {
               children: h.default.getBillingInformationString(t, s),
@@ -3282,11 +3283,11 @@
             (0, a.jsx)(f.FormTitle, {
               className: B.sectionTitle,
               tag: "h1",
-              children: v.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
+              children: b.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
             }),
             (0, a.jsx)("p", {
               className: B.sectionDescription,
-              children: v.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
+              children: b.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
             }),
             (0, a.jsx)(f.Card, {
               className: B.noItemsCard,
@@ -3301,7 +3302,7 @@
                   }),
                   (0, a.jsx)("span", {
                     className: B.cardText,
-                    children: v.default.Messages.USER_SETTINGS_NO_SUBSCRIPTIONS,
+                    children: b.default.Messages.USER_SETTINGS_NO_SUBSCRIPTIONS,
                   }),
                 ],
               }),
@@ -3372,7 +3373,7 @@
                   children: (0, a.jsx)(f.HeadingLevel, {
                     component: (0, a.jsx)(f.FormTitle, {
                       tag: "h5",
-                      children: v.default.Messages.BILLING_STEP_PAYMENT,
+                      children: b.default.Messages.BILLING_STEP_PAYMENT,
                     }),
                     children: (0, a.jsxs)("div", {
                       className: B.details,
@@ -3395,15 +3396,15 @@
                                   children:
                                     t.isPurchasedExternally &&
                                     null != t.paymentGateway
-                                      ? v.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format(
+                                      ? b.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format(
                                           {
                                             paymentGatewayName:
-                                              b.PaymentGatewayToFriendlyName[
+                                              v.PaymentGatewayToFriendlyName[
                                                 t.paymentGateway
                                               ],
                                           }
                                         )
-                                      : v.default.Messages
+                                      : b.default.Messages
                                           .BILLING_PAY_FOR_IT_WITH,
                                 }),
                                 (0, a.jsx)(U.default, {
@@ -3426,16 +3427,16 @@
             });
       }
       let W = new Set([
-        b.SubscriptionStatusTypes.ACTIVE,
-        b.SubscriptionStatusTypes.PAST_DUE,
-        b.SubscriptionStatusTypes.CANCELED,
-        b.SubscriptionStatusTypes.PAUSE_PENDING,
-        b.SubscriptionStatusTypes.PAUSED,
+        v.SubscriptionStatusTypes.ACTIVE,
+        v.SubscriptionStatusTypes.PAST_DUE,
+        v.SubscriptionStatusTypes.CANCELED,
+        v.SubscriptionStatusTypes.PAUSE_PENDING,
+        v.SubscriptionStatusTypes.PAUSED,
       ]);
       function V() {
         return (
           n.useEffect(() => {
-            A.default.track(b.AnalyticEvents.TOOLTIP_VIEWED, {
+            A.default.track(v.AnalyticEvents.TOOLTIP_VIEWED, {
               type: "subscription_settings_duplicate_subscriptions",
             });
           }, []),
@@ -3449,9 +3450,9 @@
                 className: B.duplicateSubscriptionsBannerText,
                 variant: "text-sm/normal",
                 children:
-                  v.default.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
+                  b.default.Messages.DUPLICATE_SUBSCRIPTIONS_BANNER.format({
                     helpCenterLink: M.default.getArticleURL(
-                      b.HelpdeskArticles.NITRO
+                      v.HelpdeskArticles.NITRO
                     ),
                   }),
               }),
@@ -3504,19 +3505,19 @@
             !A &&
             M > 0 &&
             (7 >= R.diff(d(), "days") ||
-              n.status === b.SubscriptionStatusTypes.PAST_DUE) &&
+              n.status === v.SubscriptionStatusTypes.PAST_DUE) &&
             !P &&
             !n.isPurchasedExternally,
           x =
             h &&
-            n.status === b.SubscriptionStatusTypes.PAST_DUE &&
+            n.status === v.SubscriptionStatusTypes.PAST_DUE &&
             !P &&
             !n.isPurchasedExternally,
           D = (0, y.useIsPrepaidPaymentPastDue)(),
           U = !P && D,
           j =
             (null == n ? void 0 : n.status) ===
-            b.SubscriptionStatusTypes.PAST_DUE
+            v.SubscriptionStatusTypes.PAST_DUE
               ? d().diff(d(n.currentPeriodStart), "days")
               : 0,
           [w] = (0, g.useGetSubscriptionInvoice)({
@@ -3542,7 +3543,7 @@
                   className: B.sectionTitle,
                   tag: "h1",
                   children:
-                    v.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
+                    b.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER,
                 }),
                 children: [
                   L ? (0, a.jsx)(G, {}) : null,
@@ -3559,7 +3560,7 @@
                     children: (0, a.jsx)("p", {
                       className: B.sectionDescription,
                       children:
-                        v.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
+                        b.default.Messages.BILLING_PAYMENT_PREMIUM_DESCRIPTION,
                     }),
                   }),
                   (0, a.jsxs)("div", {
@@ -3663,11 +3664,11 @@
           section: y.AnalyticsSections.SETTINGS_PREMIUM,
           object: y.AnalyticsObjects.CARD,
         },
-        b = [
+        v = [
           y.SubscriptionStatusTypes.PAUSED,
           y.SubscriptionStatusTypes.PAUSE_PENDING,
         ];
-      function v(e) {
+      function b(e) {
         let {
           wordMark: t,
           subscriptionInfo: s,
@@ -3775,7 +3776,7 @@
         let { analyticsLocations: e } = (0, c.default)(
           d.default.ACCOUNT_CREDIT_BANNER
         );
-        return (0, a.jsx)(v, {
+        return (0, a.jsx)(b, {
           wordMark: (0, a.jsx)(j, {}),
           subscriptionInfo: (0, a.jsx)("div", {
             className: D.planInfo,
@@ -3872,7 +3873,7 @@
             }
           },
           q = () => {
-            if (!b.includes(l.status) || null == l.pauseEndsAt) {
+            if (!v.includes(l.status) || null == l.pauseEndsAt) {
               (0, N.captureBillingException)(
                 Error("Invalid subscription to resume"),
                 {
@@ -3930,7 +3931,7 @@
               "aria-label": x.default.Messages.PREMIUM_TITLE,
             });
         }
-        let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : v;
+        let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : b;
         return (0, a.jsx)(en, {
           wordMark: ea,
           subscriptionInfo:
@@ -4161,13 +4162,13 @@
             [I.default],
             () => I.default.hidePersonalInformation
           ),
-          [b, v] = (0, o.useStateFromStoresArray)([N.default], () => [
+          [v, b] = (0, o.useStateFromStoresArray)([N.default], () => [
             N.default.paymentSources,
             N.default.hasFetchedPaymentSources,
           ]),
           B = (0, m.useSubscriptionPlansLoaded)((0, P.getSubscriptionSKUs)(t)),
           { analyticsLocations: j } = (0, p.default)(),
-          G = n.useMemo(() => Object.values(b).filter(e => !e.invalid), [b]),
+          G = n.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]),
           [F, k] = n.useState(!1),
           [w, H] = n.useState(t.currency),
           Y = async (e, s) => {
@@ -4265,7 +4266,7 @@
               }),
             });
           })(t);
-        if (!v || !B) return (0, a.jsx)(d.Spinner, {});
+        if (!b || !B) return (0, a.jsx)(d.Spinner, {});
         if (!(G.length > 0))
           return (0, a.jsx)(d.Button, {
             fullWidth: !0,
@@ -5053,4 +5054,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4051.f1b0e5673c534054c702.js.map
+//# sourceMappingURL=4051.a171881728346dbdbfbc.js.map

@@ -26506,8 +26506,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278282", ", Version Hash: ")
-          .concat("27e014a34446df68c221d4d128bfbe93b126ad3e")
+          .concat("278285", ", Version Hash: ")
+          .concat("84c0e2e4c26f224d2aa6d5f28a84f2f057846e5d")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28171,37 +28171,37 @@
         };
       function B(e) {
         let { isCoachmark: _, markAsDismissed: E } = e,
-          { analyticsLocations: n, AnalyticsLocationProvider: I } = (0,
-          O.default)(N.default.APP_ICON_EDITOR),
-          s = (0, a.useStateFromStores)([u.default], () =>
+          { analyticsLocations: n } = (0, O.default)(N.default.APP_ICON_EDITOR),
+          I = (0, a.useStateFromStores)([u.default], () =>
             u.default.getCurrentUser()
           ),
           {
-            isUpsellPreview: A,
-            isEditorOpen: R,
-            shouldEditorAnimate: l,
+            isUpsellPreview: s,
+            isEditorOpen: A,
+            shouldEditorAnimate: R,
           } = (0, a.useStateFromStoresObject)([D.default, S.default], () => ({
             isUpsellPreview: D.default.isUpsellPreview,
             isEditorOpen: D.default.isEditorOpen,
             shouldEditorAnimate: _ && !S.default.useReducedMotion,
           }));
         o.useEffect(() => {
-          A &&
+          s &&
             C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
               type: h.PremiumUpsellTypes.APP_ICON_UPSELL,
               location_stack: n,
             });
-        }, [A, n]);
-        let L = (0, T.default)(null, A ? G : U.NOOP);
+        }, [s, n]);
+        let l = (0, T.default)(null, s ? G : U.NOOP);
         return (o.useEffect(() => {
-          if (A && !R) return G;
-        }, [A, R]),
-        null == s)
+          if (s && !A) return G;
+        }, [s, A]),
+        null == I)
           ? null
-          : (0, t.jsx)(I, {
+          : (0, t.jsx)(O.AnalyticsLocationProvider, {
+              value: n,
               children: (0, t.jsx)("div", {
-                ref: L,
-                className: r(m.editor, l ? m.editorAnimate : null),
+                ref: l,
+                className: r(m.editor, R ? m.editorAnimate : null),
                 children: (0, t.jsxs)(i.HeadingLevel, {
                   children: [
                     (0, t.jsx)(g, { markAsDismissed: E }),
@@ -29637,12 +29637,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278282"), "278282"));
+        let _ = parseInt(((e = "278285"), "278285"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278282"
+                "278285"
               )
             ),
             (_ = 0)),
@@ -29985,13 +29985,14 @@
         };
       function b(e) {
         let { markAsDismissed: _ } = e,
-          { analyticsLocations: E, AnalyticsLocationProvider: n } = (0,
-          R.default)(A.default.CLIENT_THEMES_EDITOR),
+          { analyticsLocations: E } = (0, R.default)(
+            A.default.CLIENT_THEMES_EDITOR
+          ),
           {
-            isPreview: a,
-            isCoachmark: I,
-            isEditorOpen: T,
-            shouldEditorAnimate: S,
+            isPreview: n,
+            isCoachmark: a,
+            isEditorOpen: I,
+            shouldEditorAnimate: T,
           } = (0, i.useStateFromStoresObject)([M.default, O.default], () => ({
             isPreview: M.default.isPreview,
             isCoachmark: M.default.isCoachmark,
@@ -29999,34 +30000,35 @@
             shouldEditorAnimate:
               M.default.isCoachmark && !O.default.useReducedMotion,
           })),
-          l = (0, h.useTrackClientThemePreviewEvent)();
-        o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]),
+          S = (0, h.useTrackClientThemePreviewEvent)();
+        o.useEffect(() => S(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [S]),
           o.useEffect(() => {
-            a &&
+            n &&
               D.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                 type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: E,
               });
-          }, [a, E]);
-        let u = (0, h.useResetClientThemePreview)(),
-          L = (0, N.default)(null, a ? u : m.NOOP);
+          }, [n, E]);
+        let l = (0, h.useResetClientThemePreview)(),
+          u = (0, N.default)(null, n ? l : m.NOOP);
         return (
           o.useEffect(() => {
-            if (a && !T) return u;
-          }, [a, T, u]),
-          (0, t.jsx)(n, {
+            if (n && !I) return l;
+          }, [n, I, l]),
+          (0, t.jsx)(R.AnalyticsLocationProvider, {
+            value: E,
             children: (0, t.jsx)("div", {
-              ref: L,
-              className: r(y.themeEditor, S ? y.editorAnimate : null),
+              ref: u,
+              className: r(y.themeEditor, T ? y.editorAnimate : null),
               children: (0, t.jsxs)(s.HeadingLevel, {
                 children: [
-                  I ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, { markAsDismissed: _ }),
+                  a ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, { markAsDismissed: _ }),
                   (0, t.jsx)(s.Scroller, {
                     className: y.editorBody,
                     children: (0, t.jsxs)(P.default, {
                       type: P.ThemeSelectionGroupType.EDITOR,
                       children: [
-                        !a &&
+                        !n &&
                           (0, t.jsx)(P.default.Basic, {
                             className: y.selectionGroup,
                           }),
@@ -52922,4 +52924,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.4b07847088b22c1f5229.js.map
+//# sourceMappingURL=47513.b1b9dce3c056e5a8e63d.js.map

@@ -30,9 +30,9 @@
         n("702976");
       var l = n("872717"),
         a = n("913144"),
-        u = n("81732");
+        i = n("81732");
       n("21121"), n("693051");
-      var i = n("263024");
+      var u = n("263024");
       n("492114");
       var r = n("42203"),
         o = n("54239"),
@@ -59,8 +59,8 @@
           name: t,
           type: n,
           topic: l,
-          bitrate: u,
-          userLimit: i,
+          bitrate: i,
+          userLimit: u,
           nsfw: r,
           flags: o,
           rateLimitPerUser: d,
@@ -84,8 +84,8 @@
           name: t,
           channelType: n,
           topic: l,
-          bitrate: u,
-          userLimit: i,
+          bitrate: i,
+          userLimit: u,
           nsfw: r,
           flags: o,
           rateLimitPerUser: d,
@@ -135,7 +135,7 @@
           U = r.default.getChannel(e);
         return (
           a.default.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
-          await i.default.unarchiveThreadIfNecessary(e),
+          await u.default.unarchiveThreadIfNecessary(e),
           l.HTTP.patch({
             url: d.Endpoints.CHANNEL(e),
             body: {
@@ -197,7 +197,7 @@
               return (
                 null != n &&
                   !(null == U ? void 0 : U.isThread()) &&
-                  u.default.checkGuildTemplateDirty(n),
+                  i.default.checkGuildTemplateDirty(n),
                 t
               );
             },
@@ -218,7 +218,7 @@
             let e = null == t ? void 0 : t.getGuildId();
             null != e &&
               !(null == t ? void 0 : t.isThread()) &&
-              u.default.checkGuildTemplateDirty(e),
+              i.default.checkGuildTemplateDirty(e),
               c();
           }
         );
@@ -252,16 +252,19 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return u;
+            return i;
           },
         });
       var l = n("37983");
       n("884691");
       var a = n("685665");
-      function u(e, t) {
+      function i(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: u } = (0, a.default)(t);
-          return (0, l.jsx)(u, { children: (0, l.jsx)(e, { ...n }) });
+          let { analyticsLocations: i } = (0, a.default)(t);
+          return (0, l.jsx)(a.AnalyticsLocationProvider, {
+            value: i,
+            children: (0, l.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -276,8 +279,8 @@
       var l = n("37983");
       n("884691");
       var a = n("77078"),
-        u = n("272030"),
-        i = n("54239"),
+        i = n("272030"),
+        u = n("54239"),
         r = n("158534"),
         o = n("812204"),
         d = n("861370"),
@@ -294,7 +297,7 @@
               });
             return (0, l.jsxs)(a.Menu, {
               navId: "channel-context",
-              onClose: u.closeContextMenu,
+              onClose: i.closeContextMenu,
               "aria-label": _.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
               onSelect: n,
               children: [
@@ -308,7 +311,7 @@
                           label: _.default.Messages.JUMP_TO_CHANNEL,
                           action: () => {
                             (0, s.transitionToGuild)(t.guild_id, t.id),
-                              (0, i.popLayer)();
+                              (0, u.popLayer)();
                           },
                         }),
                   ],
@@ -331,8 +334,8 @@
       var l = n("37983");
       n("884691");
       var a = n("446674"),
-        u = n("77078"),
-        i = n("18054"),
+        i = n("77078"),
+        u = n("18054"),
         r = n("957255"),
         o = n("49111"),
         d = n("782340");
@@ -353,20 +356,20 @@
           [e]
         );
         return !__OVERLAY__ && c && (t || n || s)
-          ? (0, l.jsx)(u.MenuItem, {
+          ? (0, l.jsx)(i.MenuItem, {
               id: "edit-channel",
               label:
                 e.type === o.ChannelTypes.GUILD_CATEGORY
                   ? d.default.Messages.EDIT_CATEGORY
                   : d.default.Messages.EDIT_CHANNEL,
-              action: () => i.default.open(e.id),
+              action: () => u.default.open(e.id),
             })
           : null;
       }
     },
     492114: function (e, t, n) {
       "use strict";
-      let l, a, u, i, r, o;
+      let l, a, i, u, r, o;
       n.r(t),
         n.d(t, {
           default: function () {
@@ -422,12 +425,12 @@
         let t = m.default.getChannel(e.channelId);
         if (null == t) return H();
         (p = I.FormStates.OPEN),
-          (i = u = t),
+          (u = i = t),
           (y = "location" in e && null != e.location ? e.location : null),
           (a = "subsection" in e ? e.subsection : null),
-          null != i && (i = i.set("nsfw", i.isNSFW())),
-          (r = m.default.getChannel(i.parent_id)),
-          (o = i.getGuildId()),
+          null != u && (u = u.set("nsfw", u.isNSFW())),
+          (r = m.default.getChannel(u.parent_id)),
+          (o = u.getGuildId()),
           (A = {}),
           M({
             type: "CHANNEL_SETTINGS_SET_SECTION",
@@ -438,11 +441,11 @@
       function M(e) {
         (l = e.section),
           (a = e.subsection),
-          null != i &&
+          null != u &&
             l === I.ChannelSettingsSections.INSTANT_INVITES &&
             ((v = !0),
             f.HTTP.get({
-              url: I.Endpoints.INSTANT_INVITES(i.id),
+              url: I.Endpoints.INSTANT_INVITES(u.id),
               oldFormErrors: !0,
             }).then(
               e => {
@@ -459,16 +462,16 @@
         (g = !1),
           (p = I.FormStates.CLOSED),
           (l = null),
-          (i = u = null),
+          (u = i = null),
           (r = null),
           (L = {});
       }
       let U = s.debounce(() => {
-        if (null == i || null == u) return !1;
-        let e = i.toJS(),
-          t = u.toJS(),
+        if (null == u || null == i) return !1;
+        let e = u.toJS(),
+          t = i.toJS(),
           n = O.every(n => e[n] === t[n]);
-        n && i !== u && ((i = u), P.emitChange());
+        n && u !== i && ((u = i), P.emitChange());
       }, 500);
       function b(e) {
         return new C.default({
@@ -490,7 +493,7 @@
           this.waitFor(m.default);
         }
         hasChanges() {
-          return i !== u;
+          return u !== i;
         }
         isOpen() {
           return g;
@@ -505,7 +508,7 @@
           return this.hasChanges();
         }
         getChannel() {
-          return i;
+          return u;
         }
         getFormState() {
           return p;
@@ -517,7 +520,7 @@
           return {
             submitting: p === I.FormStates.SUBMITTING,
             errors: A,
-            channel: i,
+            channel: u,
             section: l,
             subsection: a,
             invites: L,
@@ -537,7 +540,7 @@
           (p = I.FormStates.SUBMITTING), (A = {});
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-          (u = i), (p = I.FormStates.OPEN);
+          (i = u), (p = I.FormStates.OPEN);
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
           var t;
@@ -560,7 +563,7 @@
             channelType: n,
             topic: l,
             bitrate: a,
-            userLimit: u,
+            userLimit: i,
             nsfw: r,
             flags: o,
             rateLimitPerUser: d,
@@ -579,38 +582,38 @@
             iconEmoji: p,
             themeColor: A,
           } = e;
-          if (null == i) return !1;
-          null != t && (i = i.set("name", t)),
-            null != l && (i = i.set("topic", l)),
-            null != a && (i = i.set("bitrate", a)),
-            null != u && (i = i.set("userLimit", u)),
-            null != r && (i = i.set("nsfw", r)),
-            null != o && (i = i.set("flags", o)),
-            null != d && (i = i.set("rateLimitPerUser", d)),
-            null != s && (i = i.set("defaultThreadRateLimitPerUser", s)),
+          if (null == u) return !1;
+          null != t && (u = u.set("name", t)),
+            null != l && (u = u.set("topic", l)),
+            null != a && (u = u.set("bitrate", a)),
+            null != i && (u = u.set("userLimit", i)),
+            null != r && (u = u.set("nsfw", r)),
+            null != o && (u = u.set("flags", o)),
+            null != d && (u = u.set("rateLimitPerUser", d)),
+            null != s && (u = u.set("defaultThreadRateLimitPerUser", s)),
             null != c &&
-              (i = i.set("threadMetadata", {
-                ...i.threadMetadata,
+              (u = u.set("threadMetadata", {
+                ...u.threadMetadata,
                 autoArchiveDuration: c,
               })),
             null != _ &&
-              (i = i.set("threadMetadata", { ...i.threadMetadata, locked: _ })),
+              (u = u.set("threadMetadata", { ...u.threadMetadata, locked: _ })),
             null != E &&
-              (i = i.set("threadMetadata", {
-                ...i.threadMetadata,
+              (u = u.set("threadMetadata", {
+                ...u.threadMetadata,
                 invitable: E,
               })),
-            null != f && (i = i.set("defaultAutoArchiveDuration", f)),
-            null != N && (i = i.set("template", N)),
-            null != n && (i = i.set("type", n)),
-            void 0 !== T && (i = i.set("rtcRegion", T)),
-            null != C && (i = i.set("videoQualityMode", C)),
-            void 0 !== S && (i = i.set("defaultReactionEmoji", S)),
-            null != h && (i = i.set("availableTags", h)),
-            null != m && (i = i.set("defaultSortOrder", m)),
-            null != I && (i = i.set("defaultForumLayout", I)),
-            void 0 !== p && (i = i.set("iconEmoji", p)),
-            null != A && (i = i.set("themeColor", A)),
+            null != f && (u = u.set("defaultAutoArchiveDuration", f)),
+            null != N && (u = u.set("template", N)),
+            null != n && (u = u.set("type", n)),
+            void 0 !== T && (u = u.set("rtcRegion", T)),
+            null != C && (u = u.set("videoQualityMode", C)),
+            void 0 !== S && (u = u.set("defaultReactionEmoji", S)),
+            null != h && (u = u.set("availableTags", h)),
+            null != m && (u = u.set("defaultSortOrder", m)),
+            null != I && (u = u.set("defaultForumLayout", I)),
+            void 0 !== p && (u = u.set("iconEmoji", p)),
+            null != A && (u = u.set("themeColor", A)),
             U();
         },
         CHANNEL_SETTINGS_SET_SECTION: M,
@@ -622,32 +625,32 @@
         },
         CHANNEL_UPDATES: function (e) {
           let { channels: t } = e;
-          if (null == i) return !1;
+          if (null == u) return !1;
           let n = !1;
           for (let e of t)
             (function (e) {
-              if (null == u || u.id !== e) return !1;
-              if (u === i) {
+              if (null == i || i.id !== e) return !1;
+              if (i === u) {
                 let t = m.default.getChannel(e);
                 if (null == t) return !1;
-                (i = u = t), (r = m.default.getChannel(i.parent_id));
+                (u = i = t), (r = m.default.getChannel(u.parent_id));
               } else {
                 let t = m.default.getChannel(e);
                 if (null == t) return !1;
-                (u = t),
-                  null != i &&
-                    ((i = i.set(
+                (i = t),
+                  null != u &&
+                    ((u = u.set(
                       "permissionOverwrites",
-                      u.permissionOverwrites
+                      i.permissionOverwrites
                     )),
-                    (r = m.default.getChannel(i.parent_id)));
+                    (r = m.default.getChannel(u.parent_id)));
               }
               return !0;
             })(e.id) &&
-              null != i &&
+              null != u &&
               (null != o &&
-                null == i.permissionOverwrites[o] &&
-                (o = i.getGuildId()),
+                null == u.permissionOverwrites[o] &&
+                (o = u.getGuildId()),
               (n = !0));
           return n;
         },
@@ -655,7 +658,7 @@
           let {
             channel: { id: t },
           } = e;
-          if (null == i || i.id !== t) return !1;
+          if (null == u || u.id !== t) return !1;
           p = I.FormStates.CLOSED;
         },
         INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
@@ -669,4 +672,4 @@
     },
   },
 ]);
-//# sourceMappingURL=09cd5b0a039901e943c0.js.map
+//# sourceMappingURL=0184bd04c88d0ce83f4a.js.map

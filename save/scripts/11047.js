@@ -712,10 +712,11 @@
         let t = (0, c.useStateFromStores)([B.default], () =>
             B.default.getPremiumTypeSubscription()
           ),
-          { AnalyticsLocationProvider: n } = (0, f.default)(
+          { analyticsLocations: n } = (0, f.default)(
             _.default.GUILD_BOOST_PURCHASE_MODAL
           );
-        return (0, a.jsx)(n, {
+        return (0, a.jsx)(f.AnalyticsLocationProvider, {
+          value: n,
           children: (0, a.jsx)(T.PaymentContextProvider, {
             activeSubscription: t,
             stepConfigs: [],
@@ -1016,4 +1017,4 @@
     },
   },
 ]);
-//# sourceMappingURL=11047.64e12569a29e6208d1c2.js.map
+//# sourceMappingURL=11047.5cf717c3e115773e85f0.js.map

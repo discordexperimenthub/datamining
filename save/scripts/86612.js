@@ -80,8 +80,8 @@
         m = l("504318"),
         h = l("77078"),
         E = l("812204"),
-        C = l("685665"),
-        v = l("730859"),
+        v = l("685665"),
+        C = l("730859"),
         _ = l("739034"),
         g = l("697218"),
         L = l("561744"),
@@ -94,8 +94,8 @@
         M = l("449008"),
         R = l("299039"),
         P = l("803725"),
-        j = l("135284"),
-        y = l("49111"),
+        y = l("135284"),
+        j = l("49111"),
         D = l("782340"),
         O = l("432261"),
         H = l("323805");
@@ -116,7 +116,7 @@
           x = (0, c.useStateFromStoresArray)([g.default], () =>
             n.users.map(e => g.default.getUser(e)).filter(M.isNotNullish)
           ),
-          { AnalyticsLocationProvider: T } = (0, C.default)(
+          { analyticsLocations: T } = (0, v.default)(
             E.default.CLIPS_GALLERY_ITEM
           ),
           [I, S] = s.useState(!1),
@@ -130,7 +130,7 @@
               ? a
               : 0
           ),
-          j = s.useRef(
+          y = s.useRef(
             new f.DelayedCall(500, () => {
               var e;
               let t = A.current;
@@ -146,13 +146,13 @@
           }, []),
           b = s.useCallback(() => {
             var e;
-            S(!0), null === (e = j.current) || void 0 === e || e.delay();
+            S(!0), null === (e = y.current) || void 0 === e || e.delay();
           }, []),
           U = s.useCallback(() => {
             var e, t, l;
             S(!1);
             let a = A.current;
-            null === (e = j.current) || void 0 === e || e.cancel(),
+            null === (e = y.current) || void 0 === e || e.cancel(),
               null != a &&
                 (a.pause(),
                 (a.currentTime =
@@ -181,7 +181,8 @@
           F = z.toLocaleDateString(),
           G = z.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
           Y = "".concat(F, " • ").concat(G);
-        return (0, i.jsx)(T, {
+        return (0, i.jsx)(v.AnalyticsLocationProvider, {
+          value: T,
           children: (0, i.jsxs)(h.ClickableContainer, {
             "aria-disabled": u,
             "aria-label": D.default.Messages.EDIT,
@@ -189,7 +190,7 @@
               ? void 0
               : () => {
                   m(n),
-                    N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED);
+                    N.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED);
                 },
             className: o(O.clipItem, { [O.disabled]: u }),
             onBlur: V,
@@ -217,7 +218,7 @@
                   (0, i.jsxs)("div", {
                     className: O.usersAndDelete,
                     children: [
-                      (0, i.jsx)(v.default, {
+                      (0, i.jsx)(C.default, {
                         maxUsers: 4,
                         users: x,
                         onFocus: e => {
@@ -335,8 +336,8 @@
           [r, u] = s.useState(l.name),
           d = !l.name,
           [c, f] = s.useState(!1),
-          [E, C] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""),
-          [v, _] = s.useState(!1),
+          [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""),
+          [C, _] = s.useState(!1),
           g = async () => {
             _(!0),
               await (0, P.updateClipMetadata)(l.id, {
@@ -348,7 +349,7 @@
         return (s.useEffect(() => {
           if (r !== l.name) {
             var e;
-            u(l.name), C(null !== (e = l.name) && void 0 !== e ? e : "");
+            u(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "");
           }
         }, [l.name, r]),
         c)
@@ -360,8 +361,8 @@
               onKeyDown: e => {
                 "Enter" === e.key && g();
               },
-              disabled: v,
-              onChange: C,
+              disabled: C,
+              onChange: v,
               onBlur: g,
             })
           : (0, i.jsxs)(h.Clickable, {
@@ -397,7 +398,7 @@
       }
       function U(e) {
         let { clip: t, videoRef: l } = e,
-          a = (0, j.useClipProtocolURL)(t);
+          a = (0, y.useClipProtocolURL)(t);
         return 0 === t.length
           ? (0, i.jsx)(h.Spinner, {
               type: h.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
@@ -436,7 +437,7 @@
               e.stopPropagation(),
                 e.shiftKey ? (n(), (0, P.deleteClip)(t.filepath)) : r(t, n),
                 N.default.track(
-                  y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
+                  j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
                   { type: "delete" }
                 );
             },
@@ -447,7 +448,7 @@
               e.stopPropagation(),
                 o(t),
                 N.default.track(
-                  y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
+                  j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
                   { type: "edit" }
                 );
             },
@@ -458,7 +459,7 @@
               e.stopPropagation(),
                 u(t),
                 N.default.track(
-                  y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
+                  j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED,
                   { type: "share" }
                 );
             },
@@ -550,19 +551,19 @@
             [f.default],
             () => f.default.getSettings().clipsEnabled
           ),
-          C = t ? h.noSearchResultsImage : h.noClipsImage,
-          v = n.useCallback(() => {
+          v = t ? h.noSearchResultsImage : h.noClipsImage,
+          C = n.useCallback(() => {
             l(), u.default.open(p.UserSettingsSections.CLIPS);
           }, [l]),
           _ = (() => {
             if (!E)
               return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_CLIPS_NOT_ENABLED.format(
-                { onClick: v }
+                { onClick: C }
               );
             if (t) return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_MATCH_QUERY;
             if (null == i)
               return m.default.Messages.CLIPS_GALLERY_NO_CLIPS_NO_KEYBIND_SET.format(
-                { onClick: v }
+                { onClick: C }
               );
             {
               let e = c.toString(i.shortcut, !0);
@@ -584,7 +585,7 @@
           children: (0, a.jsxs)("div", {
             className: h.content,
             children: [
-              (0, a.jsx)("div", { className: C }),
+              (0, a.jsx)("div", { className: v }),
               (0, a.jsx)(o.Text, {
                 variant: "text-md/medium",
                 className: s(h.noClipsText, { [h.noSearchResultsText]: t }),
@@ -700,8 +701,8 @@
         m = l("685665"),
         h = l("428958"),
         E = l("299039"),
-        C = l("386045"),
-        v = l("803725"),
+        v = l("386045"),
+        C = l("803725"),
         _ = l("142485"),
         g = l("552022"),
         L = l("548405"),
@@ -713,24 +714,22 @@
           [S, A] = n.useState(""),
           [N, M] = n.useState("descending"),
           [R, P] = n.useState(!0),
-          [j, y] = n.useState(null),
+          [y, j] = n.useState(null),
           D = n.useDeferredValue(S),
-          O = (0, d.useStateFromStores)([C.default], () =>
-            C.default.getClips()
+          O = (0, d.useStateFromStores)([v.default], () =>
+            v.default.getClips()
           ),
-          H = (0, d.useStateFromStores)([C.default], () =>
-            C.default.getPendingClips()
+          H = (0, d.useStateFromStores)([v.default], () =>
+            v.default.getPendingClips()
           ),
           b = (0, d.useStateFromStores)(
-            [C.default],
-            () => C.default.getSettings().storageLocation
+            [v.default],
+            () => v.default.getSettings().storageLocation
           ),
-          w = (0, d.useStateFromStoresArray)([C.default], () =>
-            C.default.getNewClipIds()
+          w = (0, d.useStateFromStoresArray)([v.default], () =>
+            v.default.getNewClipIds()
           ),
-          { AnalyticsLocationProvider: k } = (0, m.default)(
-            p.default.CLIPS_GALLERY
-          ),
+          { analyticsLocations: k } = (0, m.default)(p.default.CLIPS_GALLERY),
           U = n.useMemo(() => [...H, ...O], [O, H]);
         (0, h.default)(
           {
@@ -743,9 +742,9 @@
         ),
           n.useEffect(
             () => (
-              (0, v.clearClipsSession)(),
+              (0, C.clearClipsSession)(),
               () => {
-                (0, v.clearClipsSession)(), (0, v.clearNewClipIds)();
+                (0, C.clearClipsSession)(), (0, C.clearNewClipIds)();
               }
             ),
             []
@@ -778,7 +777,7 @@
           (async function e() {
             P(!0);
             try {
-              await v.loadClipsDirectory(b);
+              await C.loadClipsDirectory(b);
             } finally {
               P(!1);
             }
@@ -800,7 +799,7 @@
           ),
           { onShareClick: z } = (0, _.default)({
             channelId: t,
-            setExporting: y,
+            setExporting: j,
           }),
           F = n.useCallback((e, t) => {
             (0, f.openModalLazy)(async () => {
@@ -829,8 +828,8 @@
                     return (0, a.jsx)(
                       g.default,
                       {
-                        actionsDisabled: null != j || t,
-                        exporting: j === e.id,
+                        actionsDisabled: null != y || t,
+                        exporting: y === e.id,
                         isNew: w.includes(e.id),
                         onDelete: F,
                         onEdit: V,
@@ -849,7 +848,7 @@
                 "clips-gallery-".concat(t)
               );
             },
-            [B, w, j, z, F, V]
+            [B, w, y, z, F, V]
           ),
           Y =
             R || 0 !== B.length
@@ -873,7 +872,8 @@
           size: f.ModalSize.DYNAMIC,
           transitionState: r,
           className: I.root,
-          children: (0, a.jsxs)(k, {
+          children: (0, a.jsxs)(m.AnalyticsLocationProvider, {
+            value: k,
             children: [
               (0, a.jsx)(x.default, {
                 onClose: i,
@@ -910,14 +910,14 @@
         p = l("49111");
       async function m(e, t) {
         let { channelId: m, editMetadata: h, analyticsLocations: E } = t,
-          C = i.default.getChannel(m);
-        if (null != C)
+          v = i.default.getChannel(m);
+        if (null != v)
           try {
-            var v;
+            var C;
             let t = await (0, c.exportClip)(e, h),
               l =
-                null !== (v = e.name) && void 0 !== v
-                  ? v
+                null !== (C = e.name) && void 0 !== C
+                  ? C
                   : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
               a = (0, d.default)(l);
             (0, u.promptToUpload)(
@@ -926,15 +926,15 @@
                   type: "video/mp4",
                 }),
               ],
-              C,
+              v,
               s.DraftType.ChannelMessage,
               { filesMetadata: [{ clip: e }] }
             ),
               r.default.track(p.AnalyticEvents.CLIP_SHARED, {
                 location_stack: E,
-                guild_id: C.guild_id,
-                channel_id: C.id,
-                channel_type: C.type,
+                guild_id: v.guild_id,
+                channel_id: v.id,
+                channel_type: v.type,
                 application_id: e.applicationId,
                 clip_id: e.id,
               });
@@ -995,7 +995,7 @@
                 } = e;
                 l(a.id);
                 try {
-                  var c, f, p, m, h, E, C, v, _, g;
+                  var c, f, p, m, h, E, v, C, _, g;
                   let e = (0, i.canAttachClipsToChannel)(t);
                   await (0, s.shareClip)(a, {
                     channelId: e ? t : void 0,
@@ -1014,14 +1014,14 @@
                           : 0,
                       end:
                         null !==
-                          (v =
-                            null !== (C = null == n ? void 0 : n.end) &&
-                            void 0 !== C
-                              ? C
+                          (C =
+                            null !== (v = null == n ? void 0 : n.end) &&
+                            void 0 !== v
+                              ? v
                               : null === (f = a.editMetadata) || void 0 === f
                                 ? void 0
-                                : f.end) && void 0 !== v
-                          ? v
+                                : f.end) && void 0 !== C
+                          ? C
                           : a.length / 1e3,
                       applicationAudio:
                         null ===
@@ -1215,8 +1215,8 @@
         m = l("719923"),
         h = l("834021"),
         E = l("49111"),
-        C = l("894488"),
-        v = l("646718"),
+        v = l("894488"),
+        C = l("646718"),
         _ = l("782340");
       function g(e, t) {
         let l = c.default.getCurrentUser(),
@@ -1241,7 +1241,7 @@
             pre_compression_file_sizes: i,
             pre_compression_aggregate_file_size: r,
             num_attachments: d,
-            error_type: C.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
+            error_type: v.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: f,
           }),
             (0, s.openUploadError)({
@@ -1249,7 +1249,7 @@
               help: (0, h.getErrorHelp)(l, a),
               showPremiumUpsell: !(0, m.isPremiumExactly)(
                 l,
-                v.PremiumTypes.TIER_2
+                C.PremiumTypes.TIER_2
               ),
               fileSize: u,
             });
@@ -1272,8 +1272,8 @@
         if (e.length < 1) return;
         if (null != o && o.length !== e.length)
           throw Error("Unexpected mismatch between files and file metadata");
-        let C = t.getGuildId();
-        if ((0, h.filesExceedUploadLimits)(e, C)) {
+        let v = t.getGuildId();
+        if ((0, h.filesExceedUploadLimits)(e, v)) {
           g(t, e);
           return;
         }
@@ -1408,4 +1408,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f228775334fd4b99a3d8.js.map
+//# sourceMappingURL=e64fe0356097cec41d52.js.map

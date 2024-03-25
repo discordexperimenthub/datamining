@@ -10,7 +10,7 @@
       s.r(e),
         s.d(e, {
           default: function () {
-            return j;
+            return R;
           },
         }),
         s("222007"),
@@ -117,7 +117,7 @@
           ],
         });
       }
-      function R(t) {
+      function P(t) {
         let { onClose: e } = t;
         return (0, l.jsxs)(l.Fragment, {
           children: [
@@ -153,10 +153,10 @@
           ],
         });
       }
-      function j(t) {
+      function R(t) {
         let e,
           { guildBoostSlotId: s, transitionState: n, onClose: i } = t,
-          { AnalyticsLocationProvider: u } = (0, C.default)(
+          { analyticsLocations: u } = (0, C.default)(
             N.default.GUILD_BOOST_UNCANCELLATION_MODAL
           );
         a.useEffect(() => {
@@ -181,12 +181,13 @@
               });
               break;
             case 2:
-              e = (0, l.jsx)(R, { onClose: i });
+              e = (0, l.jsx)(P, { onClose: i });
               break;
             default:
               throw Error("Unexpected step: ".concat(d));
           }
-        return (0, l.jsx)(u, {
+        return (0, l.jsx)(C.AnalyticsLocationProvider, {
+          value: u,
           children: (0, l.jsx)(c.ModalRoot, {
             transitionState: n,
             children: e,
@@ -239,4 +240,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1e4b376bea28ba55f425.js.map
+//# sourceMappingURL=59962c55d1f1af5444f1.js.map

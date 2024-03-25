@@ -2215,7 +2215,7 @@
             { location: "Clips Settings" },
             { autoTrackExposure: !1 }
           ),
-          { AnalyticsLocationProvider: s } = (0, o.default)(),
+          { analyticsLocations: s } = (0, o.default)(),
           A = (0, E.useEnableClips)(),
           { viewerClipsEnabled: O } = (0, l.useStateFromStoresObject)(
             [T.default],
@@ -2228,7 +2228,8 @@
               i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
             );
           }),
-          (0, a.jsxs)(s, {
+          (0, a.jsxs)(o.AnalyticsLocationProvider, {
+            value: s,
             children: [
               (0, a.jsx)(r.FormSection, {
                 tag: r.FormTitleTags.H1,
@@ -4061,9 +4062,7 @@
       }
       function j(e) {
         let { selectedGuild: t } = e,
-          { AnalyticsLocationProvider: s } = (0, T.default)(
-            S.default.GUILD_PROFILE
-          ),
+          { analyticsLocations: s } = (0, T.default)(S.default.GUILD_PROFILE),
           l = (0, r.useStateFromStores)([N.default], () => {
             let e = N.default.getCurrentUser();
             return (
@@ -4133,7 +4132,8 @@
             activityCharacter: f.FakeActivityCharacter.PHIBI,
             openPremiumSettings: L,
           };
-        return (0, a.jsxs)(s, {
+        return (0, a.jsxs)(T.AnalyticsLocationProvider, {
+          value: s,
           children: [
             (0, a.jsx)(o.Text, {
               variant: "text-sm/normal",
@@ -7553,55 +7553,57 @@
       }
       var X = function () {
         let e = (0, C.useBlockedPaymentsConfig)(),
-          { AnalyticsLocationProvider: t, analyticsLocations: s } = (0,
-          p.default)(I.default.PREMIUM_SETTINGS),
-          l = (0, d.useStateFromStores)([M.default], () =>
+          { analyticsLocations: t } = (0, p.default)(
+            I.default.PREMIUM_SETTINGS
+          ),
+          s = (0, d.useStateFromStores)([M.default], () =>
             M.default.getPremiumTypeSubscription()
           ),
-          i = (0, d.useStateFromStores)([M.default], () =>
+          l = (0, d.useStateFromStores)([M.default], () =>
             M.default.hasFetchedSubscriptions()
           ),
-          r = (0, A.useSubscriptionPlansLoaded)(),
-          [o, c] = n.useState(!0),
-          f = (0, U.useLocalizedPromoQuery)(),
-          m = null == f ? void 0 : f.countryCode,
-          N = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-          x = "PremiumManagementSettings";
+          i = (0, A.useSubscriptionPlansLoaded)(),
+          [r, o] = n.useState(!0),
+          c = (0, U.useLocalizedPromoQuery)(),
+          f = null == c ? void 0 : c.countryCode,
+          m = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
+          N = "PremiumManagementSettings";
         (0, h.useTriggerDebuggingAA)({
-          location: x + " auto on",
+          location: N + " auto on",
           autoTrackExposure: !0,
         }),
           (0, h.useTriggerDebuggingAA)({
-            location: x + " auto off",
+            location: N + " auto off",
             autoTrackExposure: !1,
           }),
           n.useEffect(() => {
             E.default.wait(async () => {
-              !N &&
+              !m &&
                 !e &&
                 (await Promise.all([
                   T.fetchSubscriptions(),
                   T.fetchPaymentSources(),
                   (0, _.fetchPremiumSubscriptionPlans)(
-                    m,
+                    f,
                     null,
                     H.RevenueSurfaces.DISCOVERY
                   ),
                 ])),
-                c(!1);
+                o(!1);
             });
-          }, [m, N, e]);
-        let [v, P] = n.useState(!1);
-        if (N) return (0, a.jsx)(g.default, {});
+          }, [f, m, e]);
+        let [x, v] = n.useState(!1);
+        if (m) return (0, a.jsx)(g.default, {});
         if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});
-        if ((!i || null == l || !r) && !o)
+        if ((!l || null == s || !i) && !r)
           return (0, a.jsx)(D.default, {
             title: w.default.Messages.REDIRECTED_CALLBACK_ERROR,
             note: null,
           });
-        if (!i || null == l || !r || o) return (0, a.jsx)(S.Spinner, {});
-        let j = null != l.trialId;
-        return (0, a.jsx)(t, {
+        if (!l || null == s || !i || r) return (0, a.jsx)(S.Spinner, {});
+        let P = null != s.trialId;
+        return (0, a.jsx)(p.AnalyticsLocationProvider, {
+          value: t,
           children: (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)("div", {
@@ -7615,7 +7617,7 @@
                     headingOverride:
                       w.default.Messages
                         .PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
-                    hidePill: !j,
+                    hidePill: !P,
                     selectedPlanColumnClassName:
                       V.tier2PlanComparisonTableBackground,
                     selectedPlanTier: k.PremiumTypes.TIER_2,
@@ -7625,12 +7627,12 @@
               (0, a.jsx)(u.VisibilitySensor, {
                 onChange: e => {
                   e &&
-                    !v &&
+                    !x &&
                     (L.default.track(
                       H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM,
-                      { location_stack: s }
+                      { location_stack: t }
                     ),
-                    P(!0));
+                    v(!0));
                 },
                 children: (0, a.jsx)("div", {
                   className: V.bottomOfPageVisibilitySensor,
@@ -9037,8 +9039,7 @@
             _.default.getCurrentUser()
           ),
           { subsection: x, setSubsection: R } = (0, h.default)(),
-          { AnalyticsLocationProvider: M, analyticsLocations: D } = (0,
-          o.default)();
+          { analyticsLocations: M } = (0, o.default)();
         return (
           n.useEffect(() => {
             null != O &&
@@ -9048,7 +9049,8 @@
                 { guildId: null == A ? void 0 : A.id }
               );
           }, [null == A ? void 0 : A.id, O]),
-          (0, a.jsx)(M, {
+          (0, a.jsx)(o.AnalyticsLocationProvider, {
+            value: M,
             children: (0, a.jsxs)(i.HeadingLevel, {
               component: (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
@@ -9078,7 +9080,7 @@
                       t === I.ProfileCustomizationSubsection.GUILD &&
                         null == e &&
                         null != A &&
-                        (0, u.initGuildIdentitySettings)(A, D),
+                        (0, u.initGuildIdentitySettings)(A, M),
                         R(t);
                     }
                   },
@@ -10065,7 +10067,7 @@
         (0, h.default)(ee, b.ProfileCustomizationScrollPositions.TRY_IT_OUT);
         let et = (0, g.default)(G.id),
           es = null == et ? void 0 : et.getPreviewBio(W),
-          { AnalyticsLocationProvider: ea, sourceAnalyticsLocations: en } = (0,
+          { analyticsLocations: ea, sourceAnalyticsLocations: en } = (0,
           u.default)(d.default.USER_SETTINGS_TRY_OUT_PREMIUM);
         n.useEffect(() => {
           p.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
@@ -10095,7 +10097,8 @@
             location: eo + " auto off",
             autoTrackExposure: !1,
           }),
-          (0, a.jsx)(ea, {
+          (0, a.jsx)(u.AnalyticsLocationProvider, {
+            value: ea,
             children: (0, a.jsxs)(M.default, {
               ref: ee,
               className: y.tryItOutSection,
@@ -11956,9 +11959,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278282",
+          E = "278285",
           T =
-            ((e = "27e014a34446df68c221d4d128bfbe93b126ad3e"),
+            ((e = "84c0e2e4c26f224d2aa6d5f28a84f2f057846e5d"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -13201,7 +13204,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return M;
+            return D;
           },
         }),
         s("222007");
@@ -13224,19 +13227,20 @@
         h = s("649844"),
         N = s("509167"),
         I = s("635956"),
-        p = s("305961"),
-        C = s("521012"),
-        A = s("49111"),
-        O = s("646718"),
-        x = s("369551");
-      function R(e) {
+        p = s("501768"),
+        C = s("305961"),
+        A = s("521012"),
+        O = s("49111"),
+        x = s("646718"),
+        R = s("369551");
+      function M(e) {
         let { selectedGuildForGuildSub: t } = e,
           s = (0, _.useGroupListingsForGuild)(null == t ? void 0 : t.id)[0];
         return (0, a.jsx)(a.Fragment, {
           children:
             null != t && null != s
               ? (0, a.jsx)("div", {
-                  className: x.formItem,
+                  className: R.formItem,
                   children: s.subscription_listings_ids.map(e =>
                     (0, a.jsx)(
                       m.default,
@@ -13248,53 +13252,56 @@
               : null,
         });
       }
-      var M = function () {
-        let [e, t] = n.useState(O.PremiumSubscriptionSKUs.TIER_2),
+      var D = function () {
+        let [e, t] = n.useState(x.PremiumSubscriptionSKUs.TIER_2),
           [s, _] = n.useState(null),
-          [m] = (0, i.useStateFromStoresArray)([p.default], () => [
-            p.default.getGuilds(),
+          [m] = (0, i.useStateFromStoresArray)([C.default], () => [
+            C.default.getGuilds(),
           ]),
-          [M] = (0, i.useStateFromStoresArray)([C.default], () => [
-            C.default.getPremiumSubscription(),
-          ]),
-          D = Object.values(m).map(e => ({ value: e, label: e.name })),
-          [v, L] = n.useState(D.length > 0 ? D[0].value : null),
-          [P, j] = n.useState(""),
-          [b, U] = n.useState({
-            plan_id: O.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+          [D] = (0, i.useStateFromStoresArray)([A.default], () => [
+            A.default.getPremiumSubscription(),
+          ]);
+        (0, p.default)();
+        let v = Object.values(m).map(e => ({ value: e, label: e.name })),
+          [L, P] = n.useState(v.length > 0 ? v[0].value : null),
+          [j, b] = n.useState(""),
+          [U, y] = n.useState({
+            plan_id: x.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
             gift: "true",
           }),
-          y = "true" !== b.gift && null != M,
-          [B, F] = n.useState(D.length > 0 ? D[0].value : null),
-          { AnalyticsLocationProvider: G, analyticsLocations: k } = (0,
-          S.default)(c.default.PAYMENT_FLOW_TEST_PAGE),
+          B = "true" !== U.gift && null != D,
+          [F, G] = n.useState(v.length > 0 ? v[0].value : null),
+          { analyticsLocations: k } = (0, S.default)(
+            c.default.PAYMENT_FLOW_TEST_PAGE
+          ),
           [H, w] = n.useState(""),
-          [V, Y] = n.useState(A.EMPTY_STRING_SNOWFLAKE_ID),
+          [V, Y] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
           [K, W] = n.useState(""),
-          [z, Q] = n.useState(A.EMPTY_STRING_SNOWFLAKE_ID),
-          [X, q] = n.useState(A.EMPTY_STRING_SNOWFLAKE_ID);
-        return (0, a.jsx)(G, {
+          [z, Q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID),
+          [X, q] = n.useState(O.EMPTY_STRING_SNOWFLAKE_ID);
+        return (0, a.jsx)(S.AnalyticsLocationProvider, {
+          value: k,
           children: (0, a.jsxs)(r.FormSection, {
             title: "Payment Flow Modals",
             tag: r.FormTitleTags.H1,
             children: [
               (0, a.jsx)(r.FormTitle, { children: "Gift" }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.SingleSelect, {
                     value: e,
                     options: [
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_2,
+                        value: x.PremiumSubscriptionSKUs.TIER_2,
                         label: "Nitro",
                       },
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_1,
+                        value: x.PremiumSubscriptionSKUs.TIER_1,
                         label: "Nitro Classic",
                       },
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_0,
+                        value: x.PremiumSubscriptionSKUs.TIER_0,
                         label: "Nitro Basic",
                       },
                       { value: null, label: "None" },
@@ -13308,24 +13315,24 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, { children: "Premium Select Plan" }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.SingleSelect, {
                     value: s,
                     options: [
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_2,
+                        value: x.PremiumSubscriptionSKUs.TIER_2,
                         label: "Nitro",
                       },
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_1,
+                        value: x.PremiumSubscriptionSKUs.TIER_1,
                         label: "Nitro Classic",
                       },
                       {
-                        value: O.PremiumSubscriptionSKUs.TIER_0,
+                        value: x.PremiumSubscriptionSKUs.TIER_0,
                         label: "Nitro Basic",
                       },
                       { value: null, label: "None" },
@@ -13342,22 +13349,22 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, { children: "Boost" }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.SingleSelect, {
-                    value: v,
-                    options: D,
-                    onChange: e => L(e),
+                    value: L,
+                    options: v,
+                    onChange: e => P(e),
                   }),
-                  null != v
-                    ? (0, a.jsx)(T.default, { guild: v, analyticsLocation: {} })
+                  null != L
+                    ? (0, a.jsx)(T.default, { guild: L, analyticsLocation: {} })
                     : (0, a.jsx)("div", { children: "No Guild to boost" }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsxs)(r.FormTitle, {
                 children: [
                   (0, a.jsx)("div", {
@@ -13370,24 +13377,24 @@
                 ],
               }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.TextInput, {
                     placeholder: "Promotion Code",
-                    value: P,
-                    onChange: e => j(e),
+                    value: j,
+                    onChange: e => b(e),
                   }),
                   (0, a.jsx)(r.Tooltip, {
                     text: "Need Promotion Code",
-                    shouldShow: P.length < 1,
+                    shouldShow: j.length < 1,
                     children: e => {
                       let { onMouseEnter: t, onMouseLeave: s } = e;
                       return (0, a.jsx)(r.Button, {
-                        disabled: P.length < 1,
+                        disabled: j.length < 1,
                         onMouseEnter: t,
                         onMouseLeave: s,
                         onClick: () => {
-                          window.open(A.Routes.BILLING_PROMOTION_REDEMPTION(P));
+                          window.open(O.Routes.BILLING_PROMOTION_REDEMPTION(j));
                         },
                         children: "Open Link",
                       });
@@ -13395,53 +13402,53 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, {
                 children: "Standalone: Gift/Subscription Purchase",
               }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.SingleSelect, {
-                    value: b.plan_id,
+                    value: U.plan_id,
                     options: [
                       {
-                        value: O.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
+                        value: x.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
                         label: "Nitro",
                       },
                       {
-                        value: O.SubscriptionPlans.PREMIUM_MONTH_TIER_1,
+                        value: x.SubscriptionPlans.PREMIUM_MONTH_TIER_1,
                         label: "Nitro Classic",
                       },
                       {
-                        value: O.SubscriptionPlans.PREMIUM_MONTH_TIER_0,
+                        value: x.SubscriptionPlans.PREMIUM_MONTH_TIER_0,
                         label: "Nitro Basic",
                       },
                     ],
-                    onChange: e => U(t => ({ ...t, plan_id: e })),
+                    onChange: e => y(t => ({ ...t, plan_id: e })),
                   }),
                   (0, a.jsx)(r.SingleSelect, {
-                    value: b.gift,
+                    value: U.gift,
                     options: [
                       { value: "true", label: "Gift" },
                       { value: "false", label: "Not Gift" },
                     ],
-                    onChange: e => U(t => ({ ...t, gift: e })),
+                    onChange: e => y(t => ({ ...t, gift: e })),
                   }),
                   (0, a.jsx)(r.Tooltip, {
                     text: "Already subscribed",
-                    shouldShow: y,
+                    shouldShow: B,
                     children: e => {
                       let { onMouseEnter: t, onMouseLeave: s } = e;
                       return (0, a.jsx)(r.Button, {
                         onMouseLeave: s,
                         onMouseEnter: t,
-                        disabled: y,
+                        disabled: B,
                         onClick: () => {
                           window.open(
-                            A.Routes.BILLING_PREMIUM_SUBSCRIBE +
+                            O.Routes.BILLING_PREMIUM_SUBSCRIBE +
                               "?" +
-                              l.stringify({ ...b })
+                              l.stringify({ ...U })
                           );
                         },
                         children: "Open Link",
@@ -13450,33 +13457,33 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, { children: "Creator Revenue" }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.Text, {
-                    className: x.guildServerDescription,
+                    className: R.guildServerDescription,
                     variant: "text-sm/normal",
                     children: "Premium Server Subscription For",
                   }),
                   (0, a.jsx)(r.SingleSelect, {
-                    value: B,
-                    options: D,
-                    onChange: e => F(e),
+                    value: F,
+                    options: v,
+                    onChange: e => G(e),
                   }),
                 ],
               }),
               (0, a.jsx)(f.GroupListingsFetchContextProvider, {
-                guildId: null == B ? void 0 : B.id,
-                children: (0, a.jsx)(R, { selectedGuildForGuildSub: B }),
+                guildId: null == F ? void 0 : F.id,
+                children: (0, a.jsx)(M, { selectedGuildForGuildSub: F }),
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, {
                 children: "Activities & Application Payment Modals",
               }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.TextInput, {
                     placeholder: "Application Id",
@@ -13496,20 +13503,20 @@
                         openPremiumPaymentModal: () => !0,
                         analyticsLocations: [],
                         analyticsLocationObject: {
-                          page: A.AnalyticsPages.IN_APP,
+                          page: O.AnalyticsPages.IN_APP,
                         },
-                        context: A.AppContext.APP,
+                        context: O.AppContext.APP,
                       }),
                     children: "Open App Subs Modal for Activity",
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, {
                 children: "Standard Payment Modal Test",
               }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.TextInput, {
                     placeholder: "Application Id",
@@ -13532,12 +13539,12 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, {
                 children: "Collectibles Payment Modal Test",
               }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.TextInput, {
                     placeholder: "SKU ID",
@@ -13551,10 +13558,10 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, { children: "Helpers" }),
               (0, a.jsxs)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: [
                   (0, a.jsx)(r.Button, {
                     onClick: () => (0, d.resetSubscriptionPlanData)(),
@@ -13566,12 +13573,12 @@
                   }),
                 ],
               }),
-              (0, a.jsx)(r.FormDivider, { className: x.formDivider }),
+              (0, a.jsx)(r.FormDivider, { className: R.formDivider }),
               (0, a.jsx)(r.FormTitle, {
                 children: "Dismissible Content Framework",
               }),
               (0, a.jsx)(r.FormItem, {
-                className: x.formItem,
+                className: R.formItem,
                 children: (0, a.jsx)(r.Button, {
                   onClick: () => (0, E.resetDismissibleContentFrameworkStore)(),
                   children: "Reset DismissibleContentFrameworkStore",
@@ -21173,9 +21180,7 @@
         });
       }
       function Y() {
-        let { AnalyticsLocationProvider: e } = (0, h.default)(
-            g.default.PACKAGES
-          ),
+        let { analyticsLocations: e } = (0, h.default)(g.default.PACKAGES),
           t = (0, S.useStateFromStores)(
             [I.default],
             () => I.default.nextGlobalOpenedCountFetchDelay
@@ -21189,7 +21194,8 @@
             () => (s.start(t, N.fetchCountStat), () => s.stop()),
             [t, s]
           ),
-          (0, l.jsxs)(e, {
+          (0, l.jsxs)(h.AnalyticsLocationProvider, {
+            value: e,
             children: [
               (0, l.jsx)(U, {}),
               (0, l.jsx)(G, {}),
@@ -27707,7 +27713,7 @@
           U = O.UseLegacyChatInput.useSetting(),
           y = U && null != M ? _.default.parse(void 0, M).content : M,
           B = A.default.canUsePremiumProfileCustomization(e),
-          { AnalyticsLocationProvider: F } = (0, T.default)(E.default.PROFILE),
+          { analyticsLocations: F } = (0, T.default)(E.default.PROFILE),
           G = {
             user: e,
             canUsePremiumCustomization: B,
@@ -27734,7 +27740,8 @@
         }),
         t)
           ? (0, a.jsx)(c.default, {})
-          : (0, a.jsx)(F, {
+          : (0, a.jsx)(T.AnalyticsLocationProvider, {
+              value: F,
               children: (0, a.jsxs)(a.Fragment, {
                 children: [
                   (0, a.jsx)(f.default, {}),
@@ -32103,4 +32110,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5b54bccba8dd53cb3ecd.js.map
+//# sourceMappingURL=7f460e224c11a746cce0.js.map

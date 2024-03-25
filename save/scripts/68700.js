@@ -437,8 +437,11 @@
       var l = n("685665");
       function i(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: i } = (0, l.default)(t);
-          return (0, a.jsx)(i, { children: (0, a.jsx)(e, { ...n }) });
+          let { analyticsLocations: i } = (0, l.default)(t);
+          return (0, a.jsx)(l.AnalyticsLocationProvider, {
+            value: i,
+            children: (0, a.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -2562,4 +2565,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7e1ea4651f98ed04989b.js.map
+//# sourceMappingURL=f79aee94b9abba5b4632.js.map

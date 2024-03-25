@@ -20,8 +20,11 @@
       var l = n("685665");
       function u(e, t) {
         return function (n) {
-          let { AnalyticsLocationProvider: u } = (0, l.default)(t);
-          return (0, a.jsx)(u, { children: (0, a.jsx)(e, { ...n }) });
+          let { analyticsLocations: u } = (0, l.default)(t);
+          return (0, a.jsx)(l.AnalyticsLocationProvider, {
+            value: u,
+            children: (0, a.jsx)(e, { ...n }),
+          });
         };
       }
     },
@@ -136,8 +139,8 @@
               S = (0, E.default)(t),
               x = (0, C.default)(t, n),
               v = (0, o.default)(t, n),
-              U = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT),
-              y = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE),
+              y = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT),
+              U = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE),
               P = (0, _.default)(t),
               b = (0, s.default)({
                 id: t.id,
@@ -157,7 +160,7 @@
                 (0, a.jsx)(l.MenuGroup, { children: M }),
                 (0, a.jsx)(l.MenuGroup, { children: m }),
                 (0, a.jsxs)(l.MenuGroup, { children: [i ? L : j ? V : A, S] }),
-                (0, a.jsxs)(l.MenuGroup, { children: [x, v, U, y] }),
+                (0, a.jsxs)(l.MenuGroup, { children: [x, v, y, U] }),
                 (0, a.jsx)(l.MenuGroup, { children: G }),
                 (0, a.jsx)(l.MenuGroup, { children: P }),
                 (0, a.jsx)(l.MenuGroup, { children: b }),
@@ -651,4 +654,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4188291e827401d8c8e0.js.map
+//# sourceMappingURL=01960a659aa0e301bbf2.js.map

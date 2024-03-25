@@ -11,8 +11,8 @@
         }),
         n("222007");
       var l = n("37983"),
-        s = n("884691"),
-        a = n("146606"),
+        a = n("884691"),
+        s = n("146606"),
         i = n("669491"),
         u = n("77078"),
         r = n("659500"),
@@ -33,12 +33,12 @@
               disabled: T,
               saveButtonTooltip: p,
             } = e,
-            C = s.useRef(null),
-            [{ spring: I }, M] = (0, a.useSpring)(() => ({ spring: 0 }));
-          s.useEffect(() => {
+            C = a.useRef(null),
+            [{ spring: A }, I] = (0, s.useSpring)(() => ({ spring: 0 }));
+          a.useEffect(() => {
             function e() {
-              M({ spring: 1, config: a.config.gentle }),
-                M({ spring: 0, config: a.config.gentle, delay: 1e3 });
+              I({ spring: 1, config: s.config.gentle }),
+                I({ spring: 0, config: s.config.gentle, delay: 1e3 });
             }
             return (
               r.ComponentDispatch.subscribe(
@@ -52,29 +52,29 @@
                 );
               }
             );
-          }, [M]);
-          let A = I.to({
+          }, [I]);
+          let M = A.to({
               range: [0, 1],
               output: [
                 (0, u.useToken)(i.default.colors.TEXT_NORMAL).hex(),
                 (0, u.useToken)(i.default.unsafe_rawColors.WHITE_500).hex(),
               ],
             }),
-            N = I.to({
+            N = A.to({
               range: [0, 1],
               output: [
                 (0, u.useToken)(i.default.colors.BACKGROUND_FLOATING).hex(),
                 (0, u.useToken)(i.default.colors.STATUS_DANGER).hex(),
               ],
             }),
-            b = I.to({
+            b = A.to({
               range: [0, 1],
               output: [
                 (0, u.useToken)(i.default.colors.TEXT_DANGER).hex(),
                 (0, u.useToken)(i.default.unsafe_rawColors.WHITE_500).hex(),
               ],
             });
-          return (0, l.jsx)(a.animated.div, {
+          return (0, l.jsx)(s.animated.div, {
             className: c.container,
             style: { backgroundColor: N },
             children: (0, l.jsx)("div", {
@@ -85,9 +85,9 @@
                 children: [
                   (0, l.jsx)("div", {
                     className: c.shrinkingContainer,
-                    children: (0, l.jsx)(a.animated.div, {
+                    children: (0, l.jsx)(s.animated.div, {
                       className: c.message,
-                      style: { color: null != f ? b : A },
+                      style: { color: null != f ? b : M },
                       children:
                         null !== (t = null != f ? f : n) && void 0 !== t
                           ? t
@@ -104,8 +104,8 @@
                           color: u.Button.Colors.PRIMARY,
                           look: u.Button.Looks.LINK,
                           onClick: m,
-                          children: (0, l.jsx)(a.animated.span, {
-                            style: { color: A },
+                          children: (0, l.jsx)(s.animated.span, {
+                            style: { color: M },
                             children: null != x ? x : d.default.Messages.RESET,
                           }),
                         }),
@@ -140,17 +140,17 @@
       n.r(t),
         n.d(t, {
           useSubscribeToGuildMemberUpdates: function () {
-            return a;
+            return s;
           },
         });
       var l = n("884691"),
-        s = n("666020");
-      function a(e) {
+        a = n("666020");
+      function s(e) {
         l.useEffect(
           () => (
-            s.subscribeToMemberUpdates(e),
+            a.subscribeToMemberUpdates(e),
             () => {
-              s.unsubscribeFromMemberUpdates(e);
+              a.unsubscribeFromMemberUpdates(e);
             }
           ),
           [e]
@@ -166,8 +166,8 @@
           },
         });
       var l = n("37983"),
-        s = n("884691"),
-        a = n("446674"),
+        a = n("884691"),
+        s = n("446674"),
         i = n("812204"),
         u = n("685665"),
         r = n("744568"),
@@ -178,22 +178,23 @@
         h = n("847234");
       function m(e) {
         let { guildId: t } = e,
-          n = (0, a.useStateFromStores)([c.default], () =>
+          n = (0, s.useStateFromStores)([c.default], () =>
             c.default.getGuild(t)
           ),
-          { AnalyticsLocationProvider: m } = (0, u.default)(
+          { analyticsLocations: m } = (0, u.default)(
             i.default.MEMBER_SAFETY_PAGE
           ),
-          S = (0, a.useStateFromStores)(
+          S = (0, s.useStateFromStores)(
             [d.default],
             () => d.default.getGuildSidebarState(t),
             [t]
           ),
-          g = s.useCallback(() => {
+          g = a.useCallback(() => {
             o.default.closeGuildSidebar(t);
           }, [t]);
         return null != n && null != S && null != S
-          ? (0, l.jsx)(m, {
+          ? (0, l.jsx)(u.AnalyticsLocationProvider, {
+              value: m,
               children: (0, l.jsx)("div", {
                 className: h.sidebarContainer,
                 style: { width: f.DEFAULT_CHAT_SIDEBAR_WIDTH },
@@ -216,9 +217,9 @@
           },
         });
       var l = n("37983"),
-        s = n("884691"),
-        a = n("414456"),
-        i = n.n(a),
+        a = n("884691"),
+        s = n("414456"),
+        i = n.n(s),
         u = n("446674"),
         r = n("77078"),
         o = n("812204"),
@@ -234,31 +235,31 @@
         T = n("42203"),
         p = n("923959"),
         C = n("305961"),
-        I = n("18494"),
-        M = n("98292"),
-        A = n("155207"),
+        A = n("18494"),
+        I = n("98292"),
+        M = n("155207"),
         N = n("466818"),
         b = n("485810"),
         j = n("914985"),
-        _ = n("714247"),
-        v = n("565556"),
+        v = n("714247"),
+        _ = n("565556"),
         R = n("891222"),
-        k = n("49111"),
-        B = n("724210"),
-        G = n("789150"),
-        L = n("782340"),
+        L = n("49111"),
+        k = n("724210"),
+        B = n("789150"),
+        G = n("782340"),
         F = n("847234"),
         y = n("250455");
       function P(e) {
         let { guild: t, previousChannel: n } = e,
-          a = L.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE,
-          i = L.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE;
+          s = G.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE,
+          i = G.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE;
         return (
-          (0, c.usePageTitle)({ location: t.name, subsection: a }),
+          (0, c.usePageTitle)({ location: t.name, subsection: s }),
           (0, l.jsxs)(S.default, {
             className: F.header,
             innerClassname: F.innerHeader,
-            channelId: B.StaticChannelRoute.MEMBER_SAFETY,
+            channelId: k.StaticChannelRoute.MEMBER_SAFETY,
             guildId: t.id,
             hideSearch: !0,
             toolbar:
@@ -275,12 +276,12 @@
                       className: F.returnButtonText,
                       variant: "text-xs/medium",
                       color: "none",
-                      children: L.default.Messages.RETURN_TO_CHANNEL.format({
+                      children: G.default.Messages.RETURN_TO_CHANNEL.format({
                         channelNameHook: () =>
                           null == n
                             ? null
                             : (0, l.jsxs)(
-                                s.Fragment,
+                                a.Fragment,
                                 {
                                   children: [
                                     (0, l.jsx)(m.ChannelItemIcon, {
@@ -288,7 +289,7 @@
                                       guild: t,
                                       channel: n,
                                     }),
-                                    (0, l.jsx)(M.default, {
+                                    (0, l.jsx)(I.default, {
                                       children: (0, l.jsx)(r.Text, {
                                         variant: "text-xs/medium",
                                         color: "none",
@@ -305,7 +306,7 @@
                 : (0, l.jsx)("div", {}),
             children: [
               (0, l.jsx)(S.default.Icon, {
-                icon: A.default,
+                icon: M.default,
                 "aria-hidden": !0,
               }),
               (0, l.jsx)(S.default.Title, { children: i }),
@@ -318,20 +319,21 @@
           n = (0, u.useStateFromStores)([C.default], () =>
             C.default.getGuild(t)
           ),
-          { AnalyticsLocationProvider: a, analyticsLocations: c } = (0,
-          d.default)(o.default.MEMBER_SAFETY_PAGE),
-          m = (0, N.useCanAccessMemberSafetyPage)(t),
-          S = (0, h.useCanAccessGuildMemberModView)(t, m),
-          M = (0, u.useStateFromStores)([I.default], () =>
-            I.default.getLastSelectedChannelId(t)
+          { analyticsLocations: s } = (0, d.default)(
+            o.default.MEMBER_SAFETY_PAGE
           ),
-          A = (0, u.useStateFromStores)([T.default], () =>
-            T.default.getChannel(M)
+          c = (0, N.useCanAccessMemberSafetyPage)(t),
+          m = (0, h.useCanAccessGuildMemberModView)(t, c),
+          S = (0, u.useStateFromStores)([A.default], () =>
+            A.default.getLastSelectedChannelId(t)
           ),
-          L = s.useRef(null);
+          I = (0, u.useStateFromStores)([T.default], () =>
+            T.default.getChannel(S)
+          ),
+          M = a.useRef(null);
         (0, b.useSubscribeToGuildMemberUpdates)(t),
-          s.useEffect(() => {
-            if (!m && null != n) {
+          a.useEffect(() => {
+            if (!c && null != n) {
               var e;
               let t =
                 null === (e = p.default.getDefaultChannel(n.id)) || void 0 === e
@@ -339,13 +341,13 @@
                   : e.id;
               (0, g.transitionToGuild)(n.id, t);
             }
-          }, [n, m]);
-        let w = (0, u.useStateFromStores)(
+          }, [n, c]);
+        let G = (0, u.useStateFromStores)(
             [E.default],
             () => null != E.default.getGuildSidebarState(t),
             [t]
           ),
-          H = s.useCallback(
+          w = a.useCallback(
             e => {
               let t = (0, h.canAccessGuildMemberModViewWithExperiment)(
                 e.guildId,
@@ -355,30 +357,31 @@
                 ? (0, f.openGuildMemberModViewSidebar)(
                     e.guildId,
                     e.userId,
-                    B.StaticChannelRoute.MEMBER_SAFETY,
-                    { modViewPanel: G.ModViewPanel.INFO }
+                    k.StaticChannelRoute.MEMBER_SAFETY,
+                    { modViewPanel: B.ModViewPanel.INFO }
                   )
                 : (0, x.openUserProfileModal)({
                     userId: e.userId,
                     guildId: e.guildId,
-                    sourceAnalyticsLocations: c,
+                    sourceAnalyticsLocations: s,
                     analyticsLocation: {
-                      section: k.AnalyticsSections.MEMBER_SAFETY_PAGE,
+                      section: L.AnalyticsSections.MEMBER_SAFETY_PAGE,
                     },
                   });
             },
-            [c]
+            [s]
           );
-        return null != n && m
-          ? (0, l.jsxs)(a, {
+        return null != n && c
+          ? (0, l.jsxs)(d.AnalyticsLocationProvider, {
+              value: s,
               children: [
                 (0, l.jsxs)("div", {
-                  className: i(y.chat, F.page, { [y.threadSidebarOpen]: w }),
+                  className: i(y.chat, F.page, { [y.threadSidebarOpen]: G }),
                   children: [
-                    (0, l.jsx)(P, { guild: n, previousChannel: A }),
+                    (0, l.jsx)(P, { guild: n, previousChannel: I }),
                     (0, l.jsx)(r.AdvancedScroller, {
                       className: i(F.scroller),
-                      ref: L,
+                      ref: M,
                       orientation: "vertical",
                       children: (0, l.jsxs)("div", {
                         className: i(y.content, F.container),
@@ -386,15 +389,15 @@
                           (0, l.jsx)(j.default, { guild: n }),
                           (0, l.jsx)(R.default, {
                             guild: n,
-                            onMemberSelect: H,
+                            onMemberSelect: w,
                           }),
                         ],
                       }),
                     }),
-                    (0, l.jsx)(v.default, { guildId: n.id }),
+                    (0, l.jsx)(_.default, { guildId: n.id }),
                   ],
                 }),
-                S && (0, l.jsx)(_.default, { guildId: n.id }),
+                m && (0, l.jsx)(v.default, { guildId: n.id }),
               ],
             })
           : null;
@@ -409,9 +412,9 @@
           },
         });
       var l = n("37983"),
-        s = n("884691"),
-        a = n("414456"),
-        i = n.n(a),
+        a = n("884691"),
+        s = n("414456"),
+        i = n.n(s),
         u = n("146606"),
         r = n("65597"),
         o = n("77078"),
@@ -425,17 +428,17 @@
       function x(e) {
         let { guild: t } = e,
           n = (0, d.useIsMakingRequest)(t.id),
-          s = (0, u.useSpring)({ height: n ? 3 : 0, config: u.config.stiff });
+          a = (0, u.useSpring)({ height: n ? 3 : 0, config: u.config.stiff });
         return (0, l.jsx)("div", {
           className: g.loaderContainer,
           children: (0, l.jsx)(u.animated.div, {
             className: g.loaderBar,
-            style: s,
+            style: a,
           }),
         });
       }
       function E(e) {
-        let { guild: t, className: n, onPageChange: a, onMemberSelect: u } = e,
+        let { guild: t, className: n, onPageChange: s, onMemberSelect: u } = e,
           E = t.id,
           T = (0, r.useStateFromStores)(
             [c.default],
@@ -444,18 +447,18 @@
           ),
           p = (0, d.useIsMakingRequest)(E),
           C = (0, d.useIsStillIndexing)(E),
-          I = s.useCallback(
+          A = a.useCallback(
             e => {
               null != e && (null == u || u(e));
             },
             [u]
           ),
-          M = (0, f.getSearchState)(C, p, T),
-          A = s.useRef(null),
-          N = s.useRef(null),
-          b = s.useCallback(() => {
+          I = (0, f.getSearchState)(C, p, T),
+          M = a.useRef(null),
+          N = a.useRef(null),
+          b = a.useCallback(() => {
             var e;
-            null === (e = A.current) || void 0 === e || e.resetSearchText();
+            null === (e = M.current) || void 0 === e || e.resetSearchText();
           }, []);
         return (0, l.jsx)("div", {
           className: i(g.mainTableContainer, n),
@@ -464,16 +467,16 @@
             ref: N,
             orientation: "horizontal",
             children: [
-              (0, l.jsx)(S.default, { guild: t, ref: A }),
+              (0, l.jsx)(S.default, { guild: t, ref: M }),
               (0, l.jsx)(x, { guild: t }),
               (0, l.jsx)(h.default, {
                 guild: t,
-                onSelectRow: I,
-                searchState: M,
+                onSelectRow: A,
+                searchState: I,
                 onResetForNewMembers: b,
               }),
-              M !== f.SearchState.SUCCESS_STILL_INDEXING &&
-                (0, l.jsx)(m.default, { guildId: t.id, onPageChange: a }),
+              I !== f.SearchState.SUCCESS_STILL_INDEXING &&
+                (0, l.jsx)(m.default, { guildId: t.id, onPageChange: s }),
             ],
           }),
         });
@@ -489,14 +492,14 @@
         }),
         n("222007");
       var l = n("37983"),
-        s = n("884691"),
-        a = n("414456"),
-        i = n.n(a),
+        a = n("884691"),
+        s = n("414456"),
+        i = n.n(s),
         u = n("458960"),
         r = n("77078"),
         o = n("899284");
       let d = { friction: 7, tension: 60 };
-      class c extends s.Component {
+      class c extends a.Component {
         componentWillAppear(e) {
           this.animateTo(1).start(e);
         }
@@ -547,4 +550,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5c5737b9b85b7e23e436.js.map
+//# sourceMappingURL=e51ff7ab1493932b3c36.js.map

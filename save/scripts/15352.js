@@ -729,11 +729,12 @@
             skuId: o,
             analyticsLocations: u,
           } = e,
-          { AnalyticsLocationProvider: h } = (0, s.default)(
+          { analyticsLocations: h } = (0, s.default)(
             u,
             r.default.PREMIUM_PAYMENT_MODAL
           );
-        return (0, i.jsx)(h, {
+        return (0, i.jsx)(s.AnalyticsLocationProvider, {
+          value: h,
           children: (0, i.jsx)(a.PaymentContextProvider, {
             loadId: t,
             stepConfigs: f,
@@ -2320,4 +2321,4 @@
     },
   },
 ]);
-//# sourceMappingURL=5cee05f312bfcd9b5da4.js.map
+//# sourceMappingURL=438b8712d9fd333e5d09.js.map

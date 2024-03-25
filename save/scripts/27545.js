@@ -239,7 +239,7 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return b;
+            return O;
           },
         }),
         a("222007");
@@ -273,8 +273,8 @@
         "Linux",
         "Mac OS X",
       ].map(e => ({ label: e, value: e }));
-      function b(e) {
-        var t, b, O, j, L;
+      function O(e) {
+        var t, O, j, b, L;
         let { transitionState: C, onClose: P } = e,
           U = l.useRef(null),
           y = l.useRef(null),
@@ -505,15 +505,15 @@
                                 (L =
                                   null == (t = Y)
                                     ? void 0
-                                    : null === (j = t.features) || void 0 === j
+                                    : null === (b = t.features) || void 0 === b
                                       ? void 0
                                       : null ===
-                                            (O = j.filter(
+                                            (j = b.filter(
                                               e => "" !== (0, E.getFeatureId)(e)
-                                            )) || void 0 === O
+                                            )) || void 0 === j
                                         ? void 0
                                         : null ===
-                                              (b = O.map(e => {
+                                              (O = j.map(e => {
                                                 var t;
                                                 return {
                                                   label:
@@ -523,9 +523,9 @@
                                                       : "",
                                                   value: (0, E.getFeatureId)(e),
                                                 };
-                                              })) || void 0 === b
+                                              })) || void 0 === O
                                           ? void 0
-                                          : b.sort((e, t) =>
+                                          : O.sort((e, t) =>
                                               e.label.localeCompare(t.label)
                                             )) && void 0 !== L
                                 ? L
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "278228",
-          versionHash: "39637b1c52b24b8cf01aabacb2f0bdba21bae27f",
+          buildNumber: "278259",
+          versionHash: "7d7c73517c1ae4eae1cd6c83e1a3426d0f443370",
         };
       }
       a.r(t),
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=9a8c5384cc272f9a9398.js.map
+//# sourceMappingURL=e7dd5a78d074088e03a1.js.map

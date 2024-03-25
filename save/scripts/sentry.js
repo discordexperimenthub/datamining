@@ -7,15 +7,15 @@
           o,
           i,
           u = (e.exports = {});
-        function c() {
+        function a() {
           throw Error("setTimeout has not been defined");
         }
-        function a() {
+        function c() {
           throw Error("clearTimeout has not been defined");
         }
         function s(e) {
           if (r === setTimeout) return setTimeout(e, 0);
-          if ((r === c || !r) && setTimeout)
+          if ((r === a || !r) && setTimeout)
             return (r = setTimeout), setTimeout(e, 0);
           try {
             return r(e, 0);
@@ -29,14 +29,14 @@
         }
         !(function () {
           try {
-            r = "function" == typeof setTimeout ? setTimeout : c;
+            r = "function" == typeof setTimeout ? setTimeout : a;
           } catch (e) {
-            r = c;
+            r = a;
           }
           try {
-            o = "function" == typeof clearTimeout ? clearTimeout : a;
+            o = "function" == typeof clearTimeout ? clearTimeout : c;
           } catch (e) {
-            o = a;
+            o = c;
           }
         })();
         var l = [],
@@ -61,7 +61,7 @@
               (d = !1),
               !(function (e) {
                 if (o === clearTimeout) return clearTimeout(e);
-                if ((o === a || !o) && clearTimeout)
+                if ((o === c || !o) && clearTimeout)
                   return (o = clearTimeout), clearTimeout(e);
                 try {
                   o(e);
@@ -75,17 +75,17 @@
               })(e);
           }
         }
-        function m(e, t) {
+        function b(e, t) {
           (this.fun = e), (this.array = t);
         }
-        function b() {}
+        function m() {}
         (u.nextTick = function (e) {
           var t = Array(arguments.length - 1);
           if (arguments.length > 1)
             for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-          l.push(new m(e, t)), 1 === l.length && !d && s(p);
+          l.push(new b(e, t)), 1 === l.length && !d && s(p);
         }),
-          (m.prototype.run = function () {
+          (b.prototype.run = function () {
             this.fun.apply(null, this.array);
           }),
           (u.title = "browser"),
@@ -94,15 +94,15 @@
           (u.argv = []),
           (u.version = ""),
           (u.versions = {}),
-          (u.on = b),
-          (u.addListener = b),
-          (u.once = b),
-          (u.off = b),
-          (u.removeListener = b),
-          (u.removeAllListeners = b),
-          (u.emit = b),
-          (u.prependListener = b),
-          (u.prependOnceListener = b),
+          (u.on = m),
+          (u.addListener = m),
+          (u.once = m),
+          (u.off = m),
+          (u.removeListener = m),
+          (u.removeAllListeners = m),
+          (u.emit = m),
+          (u.prependListener = m),
+          (u.prependOnceListener = m),
           (u.listeners = function (e) {
             return [];
           }),
@@ -175,7 +175,7 @@
               return u;
             },
             initSentry: function () {
-              return a;
+              return c;
             },
           }),
           n("222007");
@@ -192,15 +192,15 @@
             null != e.rambox
           );
         }
-        let c = (0, o.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
-        function a() {
+        let a = (0, o.filterThrottle)({ maxBudgetMinute: 1, maxBudgetHour: 3 });
+        function c() {
           var e;
           r.init({
             tunnel: "/error-reporting-proxy/web",
             dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
             autoSessionTracking: !1,
             environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-            release: "discord_web-a845cc18863857e19d7dcb20ecfe828bd4c94755",
+            release: "discord_web-27e014a34446df68c221d4d128bfbe93b126ad3e",
             beforeSend: e => {
               var t, n;
               return !(
@@ -222,7 +222,7 @@
                   "Aborted" === (n = e).message ||
                   "cancel captcha" === n.message
                 ) &&
-                c()
+                a()
                 ? e
                 : null;
             },
@@ -271,8 +271,8 @@
             ],
             denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//],
           }),
-            r.setTag("buildNumber", ((e = "278280"), "278280")),
-            r.setTag("builtAt", String("1711391593963"));
+            r.setTag("buildNumber", ((e = "278282"), "278282")),
+            r.setTag("builtAt", String("1711391721053"));
           let t = window.GLOBAL_ENV.SENTRY_TAGS;
           if (null != t && "object" == typeof t)
             for (let e in t) r.setTag(e, t[e]);
@@ -314,19 +314,19 @@
         e[u] = [n, o, i];
         return;
       }
-      for (var c = 1 / 0, u = 0; u < e.length; u++) {
+      for (var a = 1 / 0, u = 0; u < e.length; u++) {
         for (
-          var n = e[u][0], o = e[u][1], i = e[u][2], a = !0, s = 0;
+          var n = e[u][0], o = e[u][1], i = e[u][2], c = !0, s = 0;
           s < n.length;
           s++
         )
-          c >= i &&
+          a >= i &&
           Object.keys(r.O).every(function (e) {
             return r.O[e](n[s]);
           })
             ? n.splice(s--, 1)
-            : ((a = !1), i < c && (c = i));
-        if (a) {
+            : ((c = !1), i < a && (a = i));
+        if (c) {
           e.splice(u--, 1);
           var l = o();
           void 0 !== l && (t = l);
@@ -384,19 +384,19 @@
           var o = n[0],
             i = n[1],
             u = n[2],
-            c,
             a,
+            c,
             s = 0;
           if (
             o.some(function (t) {
               return 0 !== e[t];
             })
           ) {
-            for (c in i) r.o(i, c) && (r.m[c] = i[c]);
+            for (a in i) r.o(i, a) && (r.m[a] = i[a]);
             if (u) var l = u(r);
           }
           for (t && t(n); s < o.length; s++)
-            (a = o[s]), r.o(e, a) && e[a] && e[a][0](), (e[a] = 0);
+            (c = o[s]), r.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
           return r.O(l);
         },
         n = (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []);
@@ -411,4 +411,4 @@
   );
   r.O(o);
 })();
-//# sourceMappingURL=sentry.43e60abb859278545d45.js.map
+//# sourceMappingURL=sentry.d5bfee01fa25def263c9.js.map

@@ -13211,76 +13211,6 @@ input[type="checkbox"]:focus-visible + .label_ee78c3 {
   margin-left: 8px;
   margin-right: 8px;
 }
-.activityButton__14226 {
-  max-height: 50px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.rocket__4ebd3 {
-  padding: 4px;
-}
-.rocketUnhovered_b0c979 {
-  color: var(--interactive-normal);
-}
-.rocketUnhovered_b0c979 > * {
-  fill: currentColor;
-}
-.rocketHovered__5b88f {
-  color: var(--interactive-hover);
-}
-.rocketHovered__5b88f > * {
-  fill: currentColor;
-}
-.buttonContainer_c96d16 {
-  display: flex;
-  position: relative;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-@keyframes sparkle__71a96 {
-  0% {
-    opacity: 0;
-    transform: rotate(-50deg) scale(0);
-  }
-  20% {
-    opacity: 1;
-    transform: rotate(0) scale(1);
-  }
-  40% {
-    opacity: 0;
-    transform: rotate(50deg) scale(0);
-  }
-  to {
-    opacity: 0;
-    transform: rotate(-50deg) scale(0);
-  }
-}
-.sparkleContainer__788fa {
-  position: absolute;
-}
-.sparkleStar_eb8851 {
-  position: absolute;
-  color: var(--gold);
-  top: 24px;
-  left: 19px;
-  animation: sparkle__71a96 2.5s ease-in-out infinite;
-}
-.sparklePlus__09307 {
-  position: absolute;
-  opacity: 0;
-  color: var(--brand-experiment);
-  top: 6px;
-  left: 3px;
-  animation: sparkle__71a96 2.5s ease-in-out infinite;
-  animation-delay: 1s;
-}
-.noAnimation__284e4 {
-  animation: none;
-  opacity: 1;
-  transform: none;
-}
 .generalHeading__5617d {
   color: var(--primary-130);
   padding: 16px 12px 0 16px;
@@ -19453,6 +19383,28 @@ input[type="checked"]:focus-visible + .label__8e2ef {
 }
 .theme-light .footer__36118 strong {
   color: var(--primary-400);
+}
+.activityButton__14226 {
+  max-height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rocket__4ebd3 {
+  padding: 4px;
+}
+.rocketUnhovered_b0c979 {
+  color: var(--interactive-normal);
+}
+.rocketUnhovered_b0c979 > * {
+  fill: currentColor;
+}
+.rocketHovered__5b88f {
+  color: var(--interactive-hover);
+}
+.rocketHovered__5b88f > * {
+  fill: currentColor;
 }
 .buttonContainer__8ae8b {
   display: flex;
@@ -111388,4 +111340,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.cf701f52bb0704c77251.css.map*/
+/*# sourceMappingURL=app.d33a9ded92e91c6fe3b0.css.map*/

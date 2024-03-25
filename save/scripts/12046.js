@@ -3399,10 +3399,10 @@
           },
         ],
         markers: [
-          { tm: 0, cm: "on", dr: 70 },
-          { tm: 90, cm: "off", dr: 70 },
-          { tm: 180, cm: "hover_on", dr: 40 },
-          { tm: 240, cm: "hover_off", dr: 40 },
+          { tm: 0, cm: "enable", dr: 70 },
+          { tm: 90, cm: "disable", dr: 70 },
+          { tm: 180, cm: "hover_enabled", dr: 40 },
+          { tm: 240, cm: "hover_disabled", dr: 40 },
         ],
         props: {},
       };

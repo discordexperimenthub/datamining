@@ -1697,7 +1697,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278391",
+                  buildNumber: "278409",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -6596,10 +6596,14 @@
         s = n("884691"),
         l = n("414235");
       let i = {
-          mute: { name: "mute", start: 0, duration: 70 },
-          unmute: { name: "unmute", start: 110, duration: 70 },
-          hover_unmuted: { name: "hover_unmuted", start: 200, duration: 70 },
-          hover_muted: { name: "hover_muted", start: 300, duration: 70 },
+          deafen: { name: "deafen", start: 0, duration: 70 },
+          undeafen: { name: "undeafen", start: 110, duration: 70 },
+          hover_undeafened: {
+            name: "hover_undeafened",
+            start: 200,
+            duration: 70,
+          },
+          hover_deafened: { name: "hover_deafened", start: 300, duration: 70 },
         },
         r = e => {
           let t = s.useRef(null),
@@ -6612,12 +6616,12 @@
             ),
             u = s.useCallback(() => {
               if (null == t.current) return;
-              let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+              let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
               t.current.play(n);
             }, [e]),
             d = s.useCallback(() => {
               if (null == t.current) return;
-              let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+              let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
               t.current.stopIfPlaying(n);
             }, [e]),
             c = s.useCallback(
@@ -6656,10 +6660,10 @@
               null != e.current && e.current.play("all");
             }, []),
             r = s.useCallback(() => {
-              null != e.current && e.current.play("hover");
+              null != e.current && e.current.play("all");
             }, []),
             o = s.useCallback(() => {
-              null != e.current && e.current.stopIfPlaying("hover");
+              null != e.current && e.current.stopIfPlaying("all");
             }, []),
             u = s.useCallback(
               t =>
@@ -6693,13 +6697,13 @@
         r = () => {
           let e = s.useRef(null),
             t = s.useCallback(() => {
-              null != e.current && e.current.play("click");
+              null != e.current && e.current.play("all");
             }, []),
             r = s.useCallback(() => {
-              null != e.current && e.current.play("hover");
+              null != e.current && e.current.play("all");
             }, []),
             o = s.useCallback(() => {
-              null != e.current && e.current.stopIfPlaying("hover");
+              null != e.current && e.current.stopIfPlaying("all");
             }, []),
             u = s.useCallback(
               t =>
@@ -6730,10 +6734,10 @@
         s = n("884691"),
         l = n("414235");
       let i = {
-          mute: { name: "mute", start: 0, duration: 70 },
-          unmute: { name: "unmute", start: 100, duration: 70 },
-          hover_unmuted: { name: "hover_unmuted", start: 200, duration: 70 },
-          hover_muted: { name: "hover_muted", start: 300, duration: 70 },
+          disable: { name: "disable", start: 0, duration: 70 },
+          enable: { name: "enable", start: 100, duration: 70 },
+          hover_enabled: { name: "hover_enabled", start: 200, duration: 70 },
+          hover_disabled: { name: "hover_disabled", start: 300, duration: 70 },
         },
         r = e => {
           let t = s.useRef(null),
@@ -6746,12 +6750,12 @@
             ),
             u = s.useCallback(() => {
               if (null == t.current) return;
-              let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+              let n = "enable" === e ? "hover_disabled" : "hover_enabled";
               t.current.play(n);
             }, [e]),
             d = s.useCallback(() => {
               if (null == t.current) return;
-              let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+              let n = "enable" === e ? "hover_disabled" : "hover_enabled";
               t.current.stopIfPlaying(n);
             }, [e]),
             c = s.useCallback(
@@ -28928,7 +28932,7 @@
             Component: c,
             play: f,
             events: { onMouseEnter: E, onMouseLeave: _ },
-          } = (0, h.useHeadphonesLottie)(u ? "unmute" : "mute"),
+          } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"),
           C = n ? d.HeadphonesDenyIcon : c;
         return (
           s.useEffect(() => () => f(), [u, f]),
@@ -29333,7 +29337,7 @@
             Component: T,
             play: g,
             events: R,
-          } = (0, E.useVideoLottie)(r.enabled ? "mute" : "unmute");
+          } = (0, E.useVideoLottie)(r.enabled ? "disable" : "enable");
         return (
           s.useEffect(() => () => g(), [r.enabled, g]),
           (0, a.jsx)(eu.VideoButtonWrapper, {
@@ -29533,7 +29537,7 @@
             Component: O,
             events: v,
             play: L,
-          } = (0, f.useScreenshareLottie)(R ? "off" : "on");
+          } = (0, f.useScreenshareLottie)(R ? "disable" : "enable");
         s.useEffect(() => () => L(), [L, R]);
         let M = (0, a.jsx)(O, {
           color: "currentColor",
@@ -29867,7 +29871,7 @@
             play: i,
             Component: r,
             events: o,
-          } = (0, h.useWaveformLottie)(l ? "mute" : "unmute");
+          } = (0, h.useWaveformLottie)(l ? "disable" : "enable");
         return (
           s.useEffect(() => () => i(), [l, i]),
           (0, a.jsx)(eO.default, {
@@ -53060,4 +53064,4 @@
     },
   },
 ]);
-//# sourceMappingURL=068357df319a562b0724.js.map
+//# sourceMappingURL=b9350b3f15b74f96868f.js.map

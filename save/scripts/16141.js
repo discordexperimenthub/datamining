@@ -39025,7 +39025,7 @@
           Component: p,
           events: E,
           play: g,
-        } = (0, s.useScreenshareLottie)(u ? "off" : "on");
+        } = (0, s.useScreenshareLottie)(u ? "disable" : "enable");
         return (
           l.useEffect(() => () => g(), [u, g]),
           (0, a.jsx)(m, {
@@ -44283,4 +44283,4 @@
     },
   },
 ]);
-//# sourceMappingURL=330c98cfa829ecda2fa5.js.map
+//# sourceMappingURL=4931d4644b9a343f73ab.js.map

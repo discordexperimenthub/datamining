@@ -2308,7 +2308,7 @@
           },
         ],
         markers: [
-          { tm: 0, cm: "onclick", dr: 66 },
+          { tm: 0, cm: "click", dr: 66 },
           { tm: 90, cm: "hover", dr: 40 },
         ],
         props: {},

@@ -1575,10 +1575,10 @@
           },
         ],
         markers: [
-          { tm: 0, cm: "mute", dr: 70 },
-          { tm: 110, cm: "unmute", dr: 70 },
-          { tm: 200, cm: "hover_unmuted", dr: 70 },
-          { tm: 300, cm: "hover_muted", dr: 70 },
+          { tm: 0, cm: "deafen", dr: 70 },
+          { tm: 110, cm: "undeafen", dr: 70 },
+          { tm: 200, cm: "hover_undeafened", dr: 70 },
+          { tm: 300, cm: "hover_deafened", dr: 70 },
         ],
         props: {},
       };

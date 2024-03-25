@@ -2435,6 +2435,7 @@
           "POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE"),
         (o.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR =
           "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
+        (o.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
         ((s = r || (r = {})).SYSTEM_DM_TAG_SYSTEM_TYPE = "a"),
         (s.BOT_TAG_SERVER_TYPE = "b"),
         (s.AI_TAG_TYPE = "c"),
@@ -5361,7 +5362,7 @@
           let i = {},
             r = window.GLOBAL_ENV.RELEASE_CHANNEL;
           r && (i.release_channel = r.split("-")[0]);
-          let o = parseInt(((n = "278285"), "278285"), 10);
+          let o = parseInt(((n = "278295"), "278295"), 10);
           !isNaN(o) && (i.client_build_number = o);
           let s =
             null == N
@@ -7137,4 +7138,4 @@
     },
   },
 ]);
-//# sourceMappingURL=87475.19216072391ee092f1d6.js.map
+//# sourceMappingURL=87475.eb46e166d3aba5690417.js.map

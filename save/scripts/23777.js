@@ -2580,6 +2580,7 @@
                 ? (0, u.transformStoreAssetFromServer)(e.hero_video)
                 : null,
             entitlementBranchId: e.entitlement_branch_id,
+            benefits: e.benefits,
           });
         }
         isSlimDirectoryVersion() {
@@ -4396,4 +4397,4 @@
     },
   },
 ]);
-//# sourceMappingURL=23777.a30370431abf716149dd.js.map
+//# sourceMappingURL=23777.b16e760e9dab25b95bde.js.map

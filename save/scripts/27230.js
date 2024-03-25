@@ -314,6 +314,36 @@
         });
       }
     },
+    476765: function (t, n, e) {
+      "use strict";
+      e.r(n),
+        e.d(n, {
+          uid: function () {
+            return s;
+          },
+          useUID: function () {
+            return o;
+          },
+          UID: function () {
+            return u;
+          },
+        });
+      var r = e("995008"),
+        i = e.n(r),
+        a = e("775560");
+      let s = function () {
+          let t =
+            arguments.length > 0 && void 0 !== arguments[0]
+              ? arguments[0]
+              : "uid_";
+          return i(t);
+        },
+        o = () => (0, a.useLazyValue)(() => s()),
+        u = t => {
+          let { children: n } = t;
+          return n(o());
+        };
+    },
   },
 ]);
-//# sourceMappingURL=19a802a77b60d5e8f47a.js.map
+//# sourceMappingURL=0ed2eae0cc720596a784.js.map

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-  ["60434"],
+  ["52967"],
   {
     310013: function (e, t, n) {
       "use strict";
@@ -224,56 +224,57 @@
         d = n("818351"),
         I = n("21214"),
         p = n("622210"),
-        _ = n("72405"),
-        E = n("110337"),
-        f = n("243338"),
-        S = n("49111"),
+        E = n("72405"),
+        _ = n("110337"),
+        S = n("243338"),
+        f = n("49111"),
         T = n("784505");
       function C(e) {
         let {
             transitionState: t,
-            initialSlide: n = f.CreateGuildSlideTypes.GUILD_TEMPLATES,
+            initialSlide: n = S.CreateGuildSlideTypes.GUILD_TEMPLATES,
             onSuccess: s,
             onClose: C,
             onSlideChange: N,
-            hasJoinButton: A,
+            hasJoinButton: L,
           } = e,
-          [L, m] = r.useState(n),
-          h = (0, u.default)(L),
+          [A, m] = r.useState(n),
+          h = (0, u.default)(A),
           [g, D] = r.useState(null),
           [R, G] = r.useState(null),
-          [U, O] = r.useState(null),
-          [M, v] = r.useState(!1);
+          [U, M] = r.useState(null),
+          [O, y] = r.useState(!1);
         r.useEffect(() => {
           m(n);
         }, [m, n]),
           r.useEffect(() => {
-            L !== h && N(L);
-          }, [N, L, h]);
-        let y = r.useCallback(e => {
-            m(f.CreateGuildSlideTypes.CREATION_INTENT),
+            A !== h && N(A);
+          }, [N, A, h]);
+        let v = r.useCallback(e => {
+            m(S.CreateGuildSlideTypes.CREATION_INTENT),
               G(e),
-              c.default.track(S.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
+              c.default.track(f.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
                 template_name: e.id,
                 template_code: e.code,
               });
           }, []),
           x = r.useCallback(e => {
-            v(e), m(f.CreateGuildSlideTypes.CUSTOMIZE_GUILD);
+            y(e === S.GuildCreationIntents.COMMUNITY),
+              m(S.CreateGuildSlideTypes.CUSTOMIZE_GUILD);
           }, []),
-          w = r.useCallback(() => m(f.CreateGuildSlideTypes.JOIN_GUILD), [m]),
+          w = r.useCallback(() => m(S.CreateGuildSlideTypes.JOIN_GUILD), [m]),
           P = r.useCallback(() => {
-            if (L === f.CreateGuildSlideTypes.CUSTOMIZE_GUILD) {
-              m(f.CreateGuildSlideTypes.CREATION_INTENT);
+            if (A === S.CreateGuildSlideTypes.CUSTOMIZE_GUILD) {
+              m(S.CreateGuildSlideTypes.CREATION_INTENT);
               return;
             }
-            m(f.CreateGuildSlideTypes.GUILD_TEMPLATES), G(null);
-          }, [L]),
+            m(S.CreateGuildSlideTypes.GUILD_TEMPLATES), G(null);
+          }, [A]),
           b = r.useCallback(
             e => {
-              O(e), s(e);
+              M(e), s(e);
             },
-            [s, O]
+            [s, M]
           ),
           j = r.useCallback(() => {
             a(null != U, "handleSuccess called before onGuildCreated"), s(U);
@@ -286,23 +287,23 @@
             children: (0, l.jsx)("div", {
               className: T.container,
               children: (0, l.jsxs)(o.Slides, {
-                activeSlide: L,
+                activeSlide: A,
                 width: 440,
                 onSlideReady: e => D(e),
                 children: [
                   (0, l.jsx)(o.Slide, {
-                    id: f.CreateGuildSlideTypes.GUILD_TEMPLATES,
+                    id: S.CreateGuildSlideTypes.GUILD_TEMPLATES,
                     impressionName: i.ImpressionNames.GUILD_ADD_LANDING,
                     impressionProperties: k,
-                    children: (0, l.jsx)(_.default, {
+                    children: (0, l.jsx)(E.default, {
                       isNewUser: !1,
-                      onJoin: A ? w : void 0,
-                      onChooseTemplate: y,
+                      onJoin: L ? w : void 0,
+                      onChooseTemplate: v,
                       onClose: C,
                     }),
                   }),
                   (0, l.jsx)(o.Slide, {
-                    id: f.CreateGuildSlideTypes.CREATION_INTENT,
+                    id: S.CreateGuildSlideTypes.CREATION_INTENT,
                     impressionName:
                       i.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                     impressionProperties: k,
@@ -313,7 +314,7 @@
                     }),
                   }),
                   (0, l.jsx)(o.Slide, {
-                    id: f.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
+                    id: S.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
                     impressionName: i.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                     impressionProperties: k,
                     children: (0, l.jsx)(p.default, {
@@ -322,12 +323,12 @@
                       onClose: C,
                       onBack: P,
                       isSlideReady:
-                        g === f.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
-                      isCommunity: M,
+                        g === S.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
+                      isCommunity: O,
                     }),
                   }),
                   (0, l.jsx)(o.Slide, {
-                    id: f.CreateGuildSlideTypes.CHANNEL_PROMPT,
+                    id: S.CreateGuildSlideTypes.CHANNEL_PROMPT,
                     impressionName: i.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                     impressionProperties: k,
                     children: (0, l.jsx)(d.default, {
@@ -335,17 +336,17 @@
                       onClose: C,
                       onChannelPromptCompleted: j,
                       isSlideReady:
-                        g === f.CreateGuildSlideTypes.CHANNEL_PROMPT,
+                        g === S.CreateGuildSlideTypes.CHANNEL_PROMPT,
                     }),
                   }),
                   (0, l.jsx)(o.Slide, {
-                    id: f.CreateGuildSlideTypes.JOIN_GUILD,
+                    id: S.CreateGuildSlideTypes.JOIN_GUILD,
                     impressionName: i.ImpressionNames.GUILD_ADD_JOIN,
                     impressionProperties: k,
-                    children: (0, l.jsx)(E.default, {
+                    children: (0, l.jsx)(_.default, {
                       onBack: P,
                       onClose: C,
-                      isSlideReady: g === f.CreateGuildSlideTypes.JOIN_GUILD,
+                      isSlideReady: g === S.CreateGuildSlideTypes.JOIN_GUILD,
                     }),
                   }),
                 ],
@@ -357,22 +358,28 @@
     },
     243338: function (e, t, n) {
       "use strict";
-      var l, r;
+      var l, r, s, a;
       n.r(t),
         n.d(t, {
           CreateGuildSlideTypes: function () {
             return l;
           },
+          GuildCreationIntents: function () {
+            return r;
+          },
           CREATE_GUILD_MODAL_KEY: function () {
-            return s;
+            return i;
           },
         }),
-        ((r = l || (l = {})).GUILD_TEMPLATES = "guild-templates"),
-        (r.CUSTOMIZE_GUILD = "customize-guild"),
-        (r.CHANNEL_PROMPT = "channel-prompt"),
-        (r.JOIN_GUILD = "join-guild"),
-        (r.CREATION_INTENT = "creation-intent");
-      let s = "create-guild";
+        ((s = l || (l = {})).GUILD_TEMPLATES = "guild-templates"),
+        (s.CUSTOMIZE_GUILD = "customize-guild"),
+        (s.CHANNEL_PROMPT = "channel-prompt"),
+        (s.JOIN_GUILD = "join-guild"),
+        (s.CREATION_INTENT = "creation-intent"),
+        ((a = r || (r = {})).FRIENDS = "FRIENDS"),
+        (a.COMMUNITY = "COMMUNITY"),
+        (a.CLAN = "CLAN");
+      let i = "create-guild";
     },
     110337: function (e, t, n) {
       "use strict";
@@ -393,27 +400,27 @@
         d = n("448993"),
         I = n("393414"),
         p = n("145131"),
-        _ = n("476765"),
-        E = n("883029"),
-        f = n("49111"),
-        S = n("782340"),
+        E = n("476765"),
+        _ = n("883029"),
+        S = n("49111"),
+        f = n("782340"),
         T = n("274039"),
         C = n("529861"),
         N = n("156465");
-      let A = "hTKzmak",
-        L = (0, _.uid)();
+      let L = "hTKzmak",
+        A = (0, E.uid)();
       let m =
           ((l = window.GLOBAL_ENV.INVITE_HOST),
           (r = ""),
-          null == l && ((l = location.host), (r = f.Routes.INVITE(""))),
+          null == l && ((l = location.host), (r = S.Routes.INVITE(""))),
           "".concat(location.protocol, "//").concat(l).concat(r, "/")),
-        h = [A, "".concat(m).concat(A), "".concat(m).concat("cool-people")],
+        h = [L, "".concat(m).concat(L), "".concat(m).concat("cool-people")],
         g = e => {
           let { onClick: t } = e;
           return (0, s.jsxs)(u.Clickable, {
             className: T.rowContainer,
             onClick: () => {
-              t(), (0, I.transitionTo)(f.Routes.GUILD_DISCOVERY);
+              t(), (0, I.transitionTo)(S.Routes.GUILD_DISCOVERY);
             },
             children: [
               (0, s.jsx)("img", {
@@ -428,12 +435,12 @@
                   (0, s.jsx)(u.Heading, {
                     className: T.rowText,
                     variant: "heading-md/semibold",
-                    children: S.default.Messages.DISCOVERY_UPSELL_HEADER,
+                    children: f.default.Messages.DISCOVERY_UPSELL_HEADER,
                   }),
                   (0, s.jsx)(u.Text, {
                     className: T.rowText,
                     variant: "text-xs/normal",
-                    children: S.default.Messages.DISCOVERY_UPSELL_DESCRIPTION,
+                    children: f.default.Messages.DISCOVERY_UPSELL_DESCRIPTION,
                   }),
                 ],
               }),
@@ -444,8 +451,8 @@
       function D(e) {
         let { onBack: t, onClose: n, isSlideReady: l } = e,
           [r, i] = a.useState(""),
-          [I, _] = a.useState(!1),
-          [f, C] = a.useState(null),
+          [I, E] = a.useState(!1),
+          [S, C] = a.useState(null),
           N = a.useRef(null);
         a.useEffect(() => {
           var e;
@@ -455,17 +462,17 @@
           e.preventDefault();
           let t = r.trim();
           if ("" === t) {
-            C(S.default.Messages.INVALID_INVITE_LINK_ERROR);
+            C(f.default.Messages.INVALID_INVITE_LINK_ERROR);
             return;
           }
-          C(null), _(!0);
+          C(null), E(!0);
           let l = t.split("/"),
             s = l[l.length - 1];
           c.default.resolveInvite(s, "Join Guild", { inputValue: t }).then(
             e => {
               let { invite: t } = e;
-              if ((_(!1), null == t)) {
-                C(S.default.Messages.INSTANT_INVITE_EXPIRED);
+              if ((E(!1), null == t)) {
+                C(f.default.Messages.INSTANT_INVITE_EXPIRED);
                 return;
               }
               if (null != t.channel) {
@@ -485,17 +492,17 @@
                         e instanceof d.V6OrEarlierAPIError ||
                         e instanceof d.APIError
                       ) {
-                        let t = (0, E.getInviteError)(e.code);
+                        let t = (0, _.getInviteError)(e.code);
                         C(t);
-                      } else C(S.default.Messages.INVITE_MODAL_ERROR_DEFAULT);
+                      } else C(f.default.Messages.INVITE_MODAL_ERROR_DEFAULT);
                     }
                   );
               }
             },
             e => {
-              _(!1);
+              E(!1);
               let t = new d.V6OrEarlierAPIError(e),
-                n = (0, E.getInviteError)(t.code);
+                n = (0, _.getInviteError)(t.code);
               C(n);
             }
           );
@@ -510,12 +517,12 @@
                 (0, s.jsx)(u.Heading, {
                   className: T.title,
                   variant: "heading-xl/semibold",
-                  children: S.default.Messages.JOIN_SERVER_TITLE,
+                  children: f.default.Messages.JOIN_SERVER_TITLE,
                 }),
                 (0, s.jsx)(u.Text, {
                   color: "header-secondary",
                   variant: "text-sm/normal",
-                  children: S.default.Messages.JOIN_SERVER_DESCRIPTION_NUF,
+                  children: f.default.Messages.JOIN_SERVER_DESCRIPTION_NUF,
                 }),
                 (0, s.jsx)(u.ModalCloseButton, {
                   className: T.closeButton,
@@ -532,27 +539,27 @@
                   children: (0, s.jsxs)(u.FormItem, {
                     children: [
                       (0, s.jsx)(u.FormTitle, {
-                        id: L,
-                        error: f,
-                        className: o(T.formTitle, { [T.error]: null != f }),
+                        id: A,
+                        error: S,
+                        className: o(T.formTitle, { [T.error]: null != S }),
                         required: !0,
-                        children: S.default.Messages.FORM_LABEL_INVITE_LINK,
+                        children: f.default.Messages.FORM_LABEL_INVITE_LINK,
                       }),
                       (0, s.jsx)(u.TextInput, {
                         value: r,
                         onChange: i,
                         className: T.input,
                         inputClassName: T.inputInner,
-                        placeholder: "".concat(m).concat(A),
+                        placeholder: "".concat(m).concat(L),
                         inputRef: N,
                         required: !0,
-                        "aria-labelledby": L,
+                        "aria-labelledby": A,
                       }),
                     ],
                   }),
                 }),
                 (0, s.jsx)(u.FormItem, {
-                  title: S.default.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
+                  title: f.default.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
                   titleClassName: T.formTitle,
                   className: T.examplesForm,
                   children: h.map(e =>
@@ -577,46 +584,18 @@
                   color: u.Button.Colors.BRAND,
                   submitting: I,
                   onClick: D,
-                  children: S.default.Messages.NUF_JOIN_SERVER_BUTTON,
+                  children: f.default.Messages.NUF_JOIN_SERVER_BUTTON,
                 }),
                 (0, s.jsx)(u.Button, {
                   color: u.Button.Colors.PRIMARY,
                   look: u.Button.Looks.LINK,
                   size: u.Button.Sizes.MIN,
                   onClick: t,
-                  children: S.default.Messages.BACK,
+                  children: f.default.Messages.BACK,
                 }),
               ],
             }),
           ],
-        });
-      }
-    },
-    740822: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return o;
-          },
-        });
-      var l = n("37983");
-      n("884691");
-      var r = n("449918"),
-        s = n("956089"),
-        a = n("49111"),
-        i = n("782340");
-      function o(e) {
-        let {
-          className: t,
-          color: n = (0, r.getColor)(a.Color.BRAND_500),
-          ...o
-        } = e;
-        return (0, l.jsx)(s.TextBadge, {
-          ...o,
-          text: i.default.Messages.ALPHA,
-          color: n,
-          className: t,
         });
       }
     },
@@ -668,7 +647,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return S;
           },
         });
       var l = n("308503"),
@@ -721,7 +700,7 @@
             currentFlow: e,
           });
       }
-      function _(e, t) {
+      function E(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           l = e;
         if (e === i.FlowType.ANY) {
@@ -792,16 +771,16 @@
         },
         e => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0)
       );
-      function E() {
+      function _() {
         return null != I.getState().activeFlow();
       }
-      var f = {
+      var S = {
         flowStart: p,
         flowStepOrStart: function (e, t) {
-          E() ? _(e, t) : p(e, t);
+          _() ? E(e, t) : p(e, t);
         },
-        flowStep: _,
-        hasActiveFlow: E,
+        flowStep: E,
+        hasActiveFlow: _,
       };
     },
     931138: function (e, t, n) {
@@ -863,10 +842,10 @@
         d = n("80300"),
         I = n("471671"),
         p = n("103603"),
-        _ = n("474293"),
-        E = n("580357"),
-        f = n("356659");
-      let S = {
+        E = n("474293"),
+        _ = n("580357"),
+        S = n("356659");
+      let f = {
           SMOL: "Smol",
           MINI: "Mini",
           SMALLER: "Smaller",
@@ -877,37 +856,37 @@
           XLARGE: "XLarge",
         },
         T = {
-          [S.SMOL]: 16,
-          [S.MINI]: 20,
-          [S.SMALLER]: 24,
-          [S.SMALL]: 30,
-          [S.MEDIUM]: 40,
-          [S.LARGE]: 50,
-          [S.LARGER]: 64,
-          [S.XLARGE]: 100,
+          [f.SMOL]: 16,
+          [f.MINI]: 20,
+          [f.SMALLER]: 24,
+          [f.SMALL]: 30,
+          [f.MEDIUM]: 40,
+          [f.LARGE]: 50,
+          [f.LARGER]: 64,
+          [f.XLARGE]: 100,
         },
         C = {
-          [S.SMOL]: [10, 10, 8, 6, 6, 4],
-          [S.MINI]: [12, 12, 10, 10, 8, 6, 4],
-          [S.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-          [S.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-          [S.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-          [S.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-          [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-          [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
+          [f.SMOL]: [10, 10, 8, 6, 6, 4],
+          [f.MINI]: [12, 12, 10, 10, 8, 6, 4],
+          [f.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+          [f.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+          [f.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+          [f.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+          [f.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+          [f.XLARGE]: [20, 20, 18, 18, 16, 14, 12],
         };
       class N extends r.PureComponent {
         renderAcronym() {
           let { guild: e, iconSrc: t } = this.props;
           return null != e.icon || null != t
             ? null
-            : (0, l.jsx)("div", { className: f.acronym, children: e.acronym });
+            : (0, l.jsx)("div", { className: S.acronym, children: e.acronym });
         }
         renderBadge() {
           let { showBadge: e, guild: t, badgeStrokeColor: n } = this.props;
           return e && null != t.hasFeature
-            ? (0, l.jsx)(E.default, {
-                className: f.guildIconBadge,
+            ? (0, l.jsx)(_.default, {
+                className: S.guildIconBadge,
                 guild: t,
                 badgeStrokeColor: n,
               })
@@ -925,25 +904,25 @@
               textScale: d,
               showTooltip: I,
               tooltipPosition: p,
-              onClick: E,
-              to: S,
+              onClick: _,
+              to: f,
               badgeStrokeColor: T,
               animate: N,
-              tabIndex: A,
-              iconSrc: L,
+              tabIndex: L,
+              iconSrc: A,
               "aria-hidden": m,
               ...h
             } = this.props,
             g = C[o],
-            D = null != E ? c.Clickable : "div";
+            D = null != _ ? c.Clickable : "div";
           return (0, l.jsxs)(D, {
-            className: a(f.icon, r, (0, _.getClass)(f, "iconSize", o), {
-              [null !== (e = (0, _.getClass)(f, "iconActive", o)) &&
+            className: a(S.icon, r, (0, E.getClass)(S, "iconSize", o), {
+              [null !== (e = (0, E.getClass)(S, "iconActive", o)) &&
               void 0 !== e
                 ? e
                 : ""]: i,
-              [f.iconInactive]: !i,
-              [f.noIcon]: null == n.icon,
+              [S.iconInactive]: !i,
+              [S.noIcon]: null == n.icon,
             }),
             "aria-hidden": m,
             style:
@@ -956,8 +935,8 @@
                     ...u,
                   }
                 : u,
-            onClick: null != S || null == E ? void 0 : E,
-            tabIndex: A,
+            onClick: null != f || null == _ ? void 0 : _,
+            tabIndex: L,
             ...h,
             children: [this.renderAcronym(), this.renderBadge()],
           });
@@ -996,7 +975,7 @@
             : this.renderTooltip();
         }
       }
-      let A = o.default.connectStores([I.default], e => {
+      let L = o.default.connectStores([I.default], e => {
         let { guild: t, animate: n, iconSrc: l, style: r, size: s } = e;
         return {
           style: {
@@ -1007,14 +986,14 @@
           },
         };
       })((0, d.backgroundImagePreloader)(e => (0, l.jsx)(N, { ...e })));
-      class L extends r.PureComponent {
+      class A extends r.PureComponent {
         render() {
-          return (0, l.jsx)(A, { ...this.props });
+          return (0, l.jsx)(L, { ...this.props });
         }
       }
-      (L.Sizes = S),
-        (L.defaultProps = {
-          size: S.LARGE,
+      (A.Sizes = f),
+        (A.defaultProps = {
+          size: f.LARGE,
           textScale: 1,
           showBadge: !1,
           showTooltip: !1,
@@ -1023,7 +1002,7 @@
           badgeStrokeColor: u.default.unsafe_rawColors.WHITE_500.css,
           animate: !1,
         });
-      var m = L;
+      var m = A;
     },
     476765: function (e, t, n) {
       "use strict";
@@ -1180,4 +1159,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1bffa192f1043cdfa4b5.js.map
+//# sourceMappingURL=4156b900dde2b4425633.js.map

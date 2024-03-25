@@ -219,7 +219,7 @@
         null != O &&
           !O.isValid() &&
           (b = d.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
-        let U = (function () {
+        let M = (function () {
             let e = new Date().getFullYear(),
               t = l.useRef(
                 Array.from(Array(150).keys()).map(t => ({
@@ -237,14 +237,14 @@
               t.current
             );
           })(),
-          [M, G] = l.useState(T ? 0 : -1),
+          [U, G] = l.useState(T ? 0 : -1),
           R = l.useRef(null),
           y = l.useRef(null),
           j = l.useRef(null),
           D = l.useMemo(_, []),
           F = l.useCallback(() => {
             var e, t, s, a;
-            switch (null === (e = D[M]) || void 0 === e ? void 0 : e.type) {
+            switch (null === (e = D[U]) || void 0 === e ? void 0 : e.type) {
               case "day":
                 null === (t = R.current) || void 0 === t || t.focus();
                 break;
@@ -254,17 +254,17 @@
               case "year":
                 null === (a = j.current) || void 0 === a || a.focus();
             }
-          }, [M, R, y, j, D]);
+          }, [U, R, y, j, D]);
         l.useEffect(() => {
           setTimeout(F, 500);
         }, []),
           l.useEffect(() => {
-            if (M >= D.length) {
+            if (U >= D.length) {
               null == E || E();
               return;
             }
             F();
-          }, [M, F]);
+          }, [U, F]);
         let L = [];
         for (let e = 0; e < 3; e++) {
           let { type: t } = D[e];
@@ -325,7 +325,7 @@
               L.push({
                 key: "year",
                 input: (0, a.jsx)(N, {
-                  options: U,
+                  options: M,
                   selectOption: C,
                   children: (0, a.jsx)(u.default, {
                     ref: j,
@@ -336,7 +336,7 @@
                       "aria-hidden": !0,
                       children: d.default.Messages.AGE_GATE_DOB_YEAR,
                     }),
-                    options: U,
+                    options: M,
                     value: g,
                     onChange: t => {
                       let { value: s } = t;
@@ -743,7 +743,7 @@
       s.r(t),
         s.d(t, {
           default: function () {
-            return G;
+            return R;
           },
         }),
         s("222007");
@@ -773,150 +773,152 @@
         C = s("218971"),
         O = s("49111"),
         b = s("47212"),
+        M = s("243338"),
         U = s("782340"),
-        M = s("102166");
-      function G(e) {
+        G = s("102166");
+      function R(e) {
         let t;
         let s = (0, N.useUID)(),
-          { onSlideChange: n, ...G } = e,
-          { onClose: R } = G,
-          [y, j] = l.useState(!1),
-          D = (0, i.useStateFromStores)([h.default], () =>
+          { onSlideChange: n, ...R } = e,
+          { onClose: y } = R,
+          [j, D] = l.useState(!1),
+          F = (0, i.useStateFromStores)([h.default], () =>
             h.default.getCurrentUser()
           ),
-          F = null != D && null == D.nsfwAllowed,
-          [L, k] = l.useState(
-            F ? C.NUFSlides.AGE_GATE : C.NUFSlides.CHOOSE_TEMPLATE
+          L = null != F && null == F.nsfwAllowed,
+          [k, P] = l.useState(
+            L ? C.NUFSlides.AGE_GATE : C.NUFSlides.CHOOSE_TEMPLATE
           ),
-          [P, w] = l.useState(null);
+          [w, B] = l.useState(null);
         l.useEffect(() => {
-          n(y ? C.NUFSlides.COMPLETE : L);
-        }, [n, L, y]);
-        let [B, H] = l.useState(null),
-          [V, Y] = l.useState(null),
-          [z, J] = l.useState(!1),
-          W = (0, i.useStateFromStores)(
+          n(j ? C.NUFSlides.COMPLETE : k);
+        }, [n, k, j]);
+        let [H, V] = l.useState(null),
+          [Y, z] = l.useState(null),
+          [J, W] = l.useState(!1),
+          K = (0, i.useStateFromStores)(
             [A.default],
             () => A.default.getType() === g.NewUserTypes.INVITE_UNCLAIMED
           ),
-          K = l.useCallback(
+          Z = l.useCallback(
             e => {
-              Y(e),
-                k(C.NUFSlides.CREATION_INTENT),
+              z(e),
+                P(C.NUFSlides.CREATION_INTENT),
                 _.default.track(O.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
                   template_name: e.label,
                   template_code: e.code,
                 });
             },
-            [Y, k]
+            [z, P]
           ),
-          { content: Z, footer: X } = (0, f.useCreationIntentSlide)({
+          { content: X, footer: q } = (0, f.useCreationIntentSlide)({
             hasFooter: !1,
             onBack: () => {
-              Y(null), k(C.NUFSlides.CHOOSE_TEMPLATE);
+              z(null), P(C.NUFSlides.CHOOSE_TEMPLATE);
             },
             onCreationIntentChosen: e => {
-              J(e), k(C.NUFSlides.CUSTOMIZE_GUILD);
+              W(e === M.GuildCreationIntents.COMMUNITY),
+                P(C.NUFSlides.CUSTOMIZE_GUILD);
             },
           }),
-          { content: q, footer: Q } = (0, E.useCustomizeGuildSlide)({
-            guildTemplate: V,
-            titleClassName: M.customizeGuildTitle,
+          { content: Q, footer: $ } = (0, E.useCustomizeGuildSlide)({
+            guildTemplate: Y,
+            titleClassName: G.customizeGuildTitle,
             hasFooter: !1,
             onGuildCreated: e => {
-              H(e),
-                (null == V ? void 0 : V.id) === b.GuildTemplateId.CREATE
-                  ? k(C.NUFSlides.CHANNEL_PROMPT)
-                  : j(!0);
+              V(e),
+                (null == Y ? void 0 : Y.id) === b.GuildTemplateId.CREATE
+                  ? P(C.NUFSlides.CHANNEL_PROMPT)
+                  : D(!0);
             },
             onBack: () => {
-              k(C.NUFSlides.CREATION_INTENT);
+              P(C.NUFSlides.CREATION_INTENT);
             },
-            isSlideReady: P === C.NUFSlides.CUSTOMIZE_GUILD,
-            isCommunity: z,
+            isSlideReady: w === C.NUFSlides.CUSTOMIZE_GUILD,
+            isCommunity: J,
           }),
-          { content: $, footer: ee } = (0, d.useChannelPromptSlide)({
-            createdGuildId: B,
+          { content: ee, footer: et } = (0, d.useChannelPromptSlide)({
+            createdGuildId: H,
             hasFooter: !1,
             onChannelPromptCompleted: () => {
-              j(!0);
+              D(!0);
             },
-            isSlideReady: P === C.NUFSlides.CHANNEL_PROMPT,
+            isSlideReady: w === C.NUFSlides.CHANNEL_PROMPT,
           }),
-          { content: et, footer: es } = (0, x.default)({
-            onBack: () => k(C.NUFSlides.CHOOSE_TEMPLATE),
+          { content: es, footer: ea } = (0, x.default)({
+            onBack: () => P(C.NUFSlides.CHOOSE_TEMPLATE),
             onComplete: () => {
-              R();
+              y();
             },
-            onConnect: R,
-            isSlideReady: P === C.NUFSlides.JOIN_GUILD,
+            onConnect: y,
+            isSlideReady: w === C.NUFSlides.JOIN_GUILD,
           });
-        switch (L) {
+        switch (k) {
           case C.NUFSlides.CUSTOMIZE_GUILD:
-            t = Q;
+            t = $;
             break;
           case C.NUFSlides.CHANNEL_PROMPT:
-            t = ee;
+            t = et;
             break;
           case C.NUFSlides.JOIN_GUILD:
-            t = es;
+            t = ea;
             break;
           case C.NUFSlides.CREATION_INTENT:
-            t = X;
+            t = q;
         }
-        let { ref: ea, width: el } = (0, u.default)();
-        if (y)
+        let { ref: el, width: en } = (0, u.default)();
+        if (j)
           return (0, a.jsx)(c.ModalRoot, {
-            ...G,
+            ...R,
             size: c.ModalSize.MEDIUM,
-            className: r(M.modal, M.completed),
+            className: r(G.modal, G.completed),
             "aria-labelledby": s,
-            children: (0, a.jsx)(S.default, { onComplete: R }),
+            children: (0, a.jsx)(S.default, { onComplete: y }),
           });
-        let en = { impression_group: o.ImpressionGroups.GUILD_ADD_NUF };
+        let er = { impression_group: o.ImpressionGroups.GUILD_ADD_NUF };
         return (0, a.jsxs)(c.ModalRoot, {
-          ...G,
+          ...R,
           size: c.ModalSize.MEDIUM,
-          className: M.modal,
+          className: G.modal,
           "aria-labelledby": s,
           children: [
             (0, a.jsx)("div", {
-              className: M.sidebar,
-              children: (0, a.jsx)(I.default, { step: L }),
+              className: G.sidebar,
+              children: (0, a.jsx)(I.default, { step: k }),
             }),
             (0, a.jsxs)("div", {
-              className: r(M.content, (0, T.getThemeClass)(O.ThemeTypes.LIGHT)),
-              ref: ea,
+              className: r(G.content, (0, T.getThemeClass)(O.ThemeTypes.LIGHT)),
+              ref: el,
               children: [
                 (0, a.jsx)("div", {
-                  className: M.slidesContainer,
+                  className: G.slidesContainer,
                   children: (0, a.jsxs)(c.Slides, {
-                    activeSlide: L,
-                    onSlideReady: e => w(e),
+                    activeSlide: k,
+                    onSlideReady: e => B(e),
                     centered: !1,
-                    width: el,
+                    width: en,
                     children: [
                       (0, a.jsx)(c.Slide, {
                         id: C.NUFSlides.AGE_GATE,
                         children: (0, a.jsx)("div", {
-                          className: M.container,
+                          className: G.container,
                           children: (0, a.jsx)(v.default, {
                             onComplete: () => {
-                              W ? R() : k(C.NUFSlides.CHOOSE_TEMPLATE);
+                              K ? y() : P(C.NUFSlides.CHOOSE_TEMPLATE);
                             },
-                            onClose: R,
+                            onClose: y,
                           }),
                         }),
                       }),
                       (0, a.jsx)(c.Slide, {
                         id: C.NUFSlides.CHOOSE_TEMPLATE,
                         impressionName: o.ImpressionNames.GUILD_ADD_LANDING,
-                        impressionProperties: en,
+                        impressionProperties: er,
                         children: (0, a.jsx)("div", {
-                          className: r(M.container, M.shortFooter),
+                          className: r(G.container, G.shortFooter),
                           children: (0, a.jsx)(p.default, {
-                            className: M.templates,
-                            onChooseTemplate: K,
+                            className: G.templates,
+                            onChooseTemplate: Z,
                             isNewUser: !0,
                           }),
                         }),
@@ -925,61 +927,61 @@
                         id: C.NUFSlides.CREATION_INTENT,
                         impressionName:
                           o.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-                        impressionProperties: en,
+                        impressionProperties: er,
                         children: (0, a.jsx)("div", {
-                          className: r(M.container, M.standardFooter),
-                          children: Z,
+                          className: r(G.container, G.standardFooter),
+                          children: X,
                         }),
                       }),
                       (0, a.jsx)(c.Slide, {
                         id: C.NUFSlides.CUSTOMIZE_GUILD,
                         impressionName: o.ImpressionNames.GUILD_ADD_CUSTOMIZE,
-                        impressionProperties: en,
+                        impressionProperties: er,
                         children: (0, a.jsx)("div", {
-                          className: r(M.container, M.standardFooter),
-                          children: q,
+                          className: r(G.container, G.standardFooter),
+                          children: Q,
                         }),
                       }),
                       (0, a.jsx)(c.Slide, {
                         id: C.NUFSlides.CHANNEL_PROMPT,
                         impressionName:
                           o.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-                        impressionProperties: en,
+                        impressionProperties: er,
                         children: (0, a.jsx)("div", {
-                          className: r(M.container, M.standardFooter),
-                          children: $,
+                          className: r(G.container, G.standardFooter),
+                          children: ee,
                         }),
                       }),
                       (0, a.jsx)(c.Slide, {
                         id: C.NUFSlides.JOIN_GUILD,
                         impressionName: o.ImpressionNames.GUILD_ADD_JOIN,
-                        impressionProperties: en,
+                        impressionProperties: er,
                         children: (0, a.jsx)("div", {
-                          className: r(M.container, M.standardFooter),
-                          children: et,
+                          className: r(G.container, G.standardFooter),
+                          children: es,
                         }),
                       }),
                     ],
                   }),
                 }),
-                L !== C.NUFSlides.AGE_GATE
+                k !== C.NUFSlides.AGE_GATE
                   ? (0, a.jsx)(c.ModalCloseButton, {
-                      onClick: R,
-                      className: M.closeButton,
+                      onClick: y,
+                      className: G.closeButton,
                     })
                   : null,
-                L === C.NUFSlides.CHOOSE_TEMPLATE
+                k === C.NUFSlides.CHOOSE_TEMPLATE
                   ? (0, a.jsx)(c.ModalFooter, {
                       justify: m.default.Justify.BETWEEN,
-                      className: r(M.footer, M.join),
+                      className: r(G.footer, G.join),
                       children: (0, a.jsx)(c.Anchor, {
-                        className: M.joinCTA,
+                        className: G.joinCTA,
                         onClick: () => {
-                          k(C.NUFSlides.JOIN_GUILD);
+                          P(C.NUFSlides.JOIN_GUILD);
                         },
                         children: (0, a.jsxs)(c.Text, {
                           variant: "text-sm/medium",
-                          className: M.joinCTA,
+                          className: G.joinCTA,
                           children: [
                             U.default.Messages.NUF_HAVE_AN_INVITE_ALREADY,
                             " ",
@@ -992,7 +994,7 @@
                 null != t
                   ? (0, a.jsx)(c.ModalFooter, {
                       justify: m.default.Justify.BETWEEN,
-                      className: M.footer,
+                      className: G.footer,
                       children: t,
                     })
                   : null,
@@ -1324,4 +1326,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4e964a0dd734ef92c6ee.js.map
+//# sourceMappingURL=65280d5a370049b22c9b.js.map

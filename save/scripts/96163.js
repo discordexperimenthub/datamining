@@ -34,7 +34,7 @@
       s.r(a),
         s.d(a, {
           default: function () {
-            return i;
+            return d;
           },
         });
       var n = s("37983");
@@ -43,7 +43,7 @@
         l = s("694187"),
         E = s("782340"),
         _ = s("350335");
-      function i(e) {
+      function d(e) {
         let { icon: a, onChange: s } = e;
         return (0, n.jsx)(t.FocusRing, {
           within: !0,
@@ -104,29 +104,6 @@
         });
       }
     },
-    177769: function (e, a, s) {
-      "use strict";
-      s.r(a),
-        s.d(a, {
-          ClanExperiment: function () {
-            return t;
-          },
-        });
-      var n = s("862205");
-      let t = (0, n.createExperiment)({
-        kind: "user",
-        id: "2024-02_clans",
-        label: "Clans",
-        defaultConfig: { enableClanCreation: !1 },
-        treatments: [
-          {
-            id: 1,
-            label: "Enable creation of clan guilds",
-            config: { enableClanCreation: !0 },
-          },
-        ],
-      });
-    },
     326678: function (e, a, s) {
       "use strict";
       s.r(a),
@@ -140,7 +117,7 @@
         l = s("840707"),
         E = s("49111"),
         _ = {
-          createGuildFromTemplate: async function e(e, a, s, _, i, d) {
+          createGuildFromTemplate: async function e(e, a, s, _, d) {
             try {
               let t = await l.default.post({
                 url: E.Endpoints.GUILDS,
@@ -151,8 +128,7 @@
                   system_channel_id: s.system_channel_id,
                   roles: s.roles,
                   guild_template_code: s.code,
-                  staff_only: !!i || void 0,
-                  is_clan: !!d || void 0,
+                  staff_only: !!d || void 0,
                 },
                 trackedActionData: {
                   event: n.NetworkActionNames.GUILD_CREATE,
@@ -174,7 +150,7 @@
             return t;
           },
           getGuildTemplatesMap: function () {
-            return d;
+            return i;
           },
         });
       var n,
@@ -182,56 +158,56 @@
         l = s("316693"),
         E = s("991170"),
         _ = s("49111"),
-        i = s("782340");
-      function d() {
+        d = s("782340");
+      function i() {
         return {
           CREATE: {
             id: "CREATE",
             code: "2TffvPucqHkN",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_CREATE,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_CREATE,
             channels: [],
             system_channel_id: null,
           },
           GAMING: {
             id: "GAMING",
             code: "hvtBQMfw6uSJ",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_GAMING,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_GAMING,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CLIPS_AND_HIGHLIGHTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOBBY,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOBBY,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_GAMING,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_GAMING,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
             ],
@@ -240,48 +216,48 @@
           FRIENDS: {
             id: "FRIENDS",
             code: "hgM48av5Q69A",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_FRIEND,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_FRIEND,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GAME,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GAME,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "03",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_MUSIC,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_MUSIC,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
             ],
@@ -290,73 +266,73 @@
           STUDY: {
             id: "STUDY",
             code: "FbwUwRp4j8Es",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_STUDY,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_STUDY,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_NOTES_RESOURCES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_NOTES_RESOURCES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_HOMEWORK_HELP,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_HOMEWORK_HELP,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "13",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_SESSION_PLANNING,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_SESSION_PLANNING,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "14",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "20",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "21",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format(
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format(
                   { number: 1 }
                 ),
                 type: _.ChannelTypes.GUILD_VOICE,
@@ -364,7 +340,7 @@
               {
                 id: "23",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format(
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format(
                   { number: 2 }
                 ),
                 type: _.ChannelTypes.GUILD_VOICE,
@@ -375,61 +351,61 @@
           CLUBS: {
             id: "CLUBS",
             code: "s4WNnBxTDPsY",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_CLUBS,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_CLUBS,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "20",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "21",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
             ],
@@ -438,74 +414,74 @@
           CREATORS: {
             id: "CREATORS",
             code: "6exdzMgjZgah",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_CREATOR,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_CREATOR,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_EVENTS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_EVENTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "13",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_IDEAS_AND_FEEDBACK,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_IDEAS_AND_FEEDBACK,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "20",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "21",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_VOICE_COMMUNITY_HANGOUT,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "23",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
             ],
@@ -514,73 +490,73 @@
           LOCAL_COMMUNITY: {
             id: "LOCAL_COMMUNITY",
             code: "64UDvRNCC52Y",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_COMMUNITY,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_COMMUNITY,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "03",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "13",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "20",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "21",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
             ],
@@ -589,80 +565,80 @@
           SCHOOL_CLUB: {
             id: "SCHOOL_CLUB",
             code: "Ctg7PUHcQmZu",
-            label: i.default.Messages.GUILD_TEMPLATE_HEADER_SCHOOL_CLUB,
+            label: d.default.Messages.GUILD_TEMPLATE_HEADER_SCHOOL_CLUB,
             channels: [
               {
                 id: "00",
                 parent_id: null,
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "01",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "02",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "03",
                 parent_id: "00",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "10",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "11",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "12",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "13",
                 parent_id: "10",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
                 type: _.ChannelTypes.GUILD_TEXT,
               },
               {
                 id: "20",
                 parent_id: null,
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
                 type: _.ChannelTypes.GUILD_CATEGORY,
               },
               {
                 id: "21",
                 parent_id: "20",
-                name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+                name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_1,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
               {
                 id: "22",
                 parent_id: "20",
-                name: i.default.Messages
+                name: d.default.Messages
                   .GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_2,
                 type: _.ChannelTypes.GUILD_VOICE,
               },
@@ -714,16 +690,16 @@
         l = s("332809"),
         E = s("50308"),
         _ = s("774406"),
-        i = s("20264"),
-        d = s("472977");
+        d = s("20264"),
+        i = s("472977");
       let T = {
         CREATE: l,
         GAMING: _,
         FRIENDS: E,
-        STUDY: d,
+        STUDY: i,
         CLUBS: t,
         CREATORS: n,
-        LOCAL_COMMUNITY: i,
+        LOCAL_COMMUNITY: d,
         SCHOOL_CLUB: t,
       };
     },
@@ -735,7 +711,7 @@
             return o;
           },
           default: function () {
-            return c;
+            return I;
           },
         }),
         s("222007");
@@ -744,138 +720,138 @@
         l = s("446674"),
         E = s("77078"),
         _ = s("450911"),
-        i = s("448993"),
-        d = s("923959"),
+        d = s("448993"),
+        i = s("923959"),
         T = s("305961"),
         r = s("145131"),
         u = s("476263"),
         L = s("476765"),
-        C = s("782340"),
-        M = s("503040");
+        M = s("782340"),
+        C = s("503040");
       function o(e) {
         let {
             createdGuildId: a,
             hasFooter: s = !0,
             onClose: o,
-            onChannelPromptCompleted: c,
-            isSlideReady: I,
+            onChannelPromptCompleted: I,
+            isSlideReady: A,
           } = e,
-          [A, p] = t.useState(""),
-          [N, G] = t.useState(null),
+          [c, N] = t.useState(""),
+          [p, G] = t.useState(null),
           [m, f] = t.useState(!1),
           U = (0, L.useUID)(),
-          D = (0, l.useStateFromStores)(
+          O = (0, l.useStateFromStores)(
             [T.default],
             () => T.default.getGuild(a),
             [a]
           ),
-          O = t.useRef(null);
+          D = t.useRef(null);
         t.useEffect(() => {
           var e;
-          I && (null === (e = O.current) || void 0 === e || e.focus());
-        }, [I]);
+          A && (null === (e = D.current) || void 0 === e || e.focus());
+        }, [A]);
         let h = t.useCallback(
             async e => {
-              if ((e.preventDefault(), null == D)) return;
+              if ((e.preventDefault(), null == O)) return;
               f(!0), G(null);
-              let a = d.default.getDefaultChannel(D.id);
+              let a = i.default.getDefaultChannel(O.id);
               try {
                 let e =
-                  C.default.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format(
-                    { topic: A }
+                  M.default.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format(
+                    { topic: c }
                   );
                 await _.default.createTextChannel(
-                  D.id,
-                  A,
+                  O.id,
+                  c,
                   null == a ? void 0 : a.parent_id,
                   e
                 ),
-                  c();
+                  I();
               } catch (e) {
-                G(new i.V6OrEarlierAPIError(e));
+                G(new d.V6OrEarlierAPIError(e));
               }
               f(!1);
             },
-            [D, A, c]
+            [O, c, I]
           ),
           g = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(E.Button, {
                 color: E.Button.Colors.BRAND,
                 onClick: h,
-                disabled: 0 === A.length,
+                disabled: 0 === c.length,
                 submitting: m,
-                children: C.default.Messages.DONE,
+                children: M.default.Messages.DONE,
               }),
               (0, n.jsx)(E.Button, {
-                className: M.skipButton,
+                className: C.skipButton,
                 look: E.Button.Looks.BLANK,
                 size: E.Button.Sizes.MIN,
-                onClick: c,
-                children: C.default.Messages.SKIP,
+                onClick: I,
+                children: M.default.Messages.SKIP,
               }),
             ],
           }),
           y = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsxs)(E.ModalHeader, {
-                className: M.header,
+                className: C.header,
                 direction: r.default.Direction.VERTICAL,
                 separator: !1,
                 children: [
-                  null != D && (0, n.jsx)(u.default, { guild: D }),
+                  null != O && (0, n.jsx)(u.default, { guild: O }),
                   (0, n.jsx)(E.Text, {
-                    className: M.guildName,
+                    className: C.guildName,
                     color: "header-primary",
                     variant: "text-sm/semibold",
-                    children: null == D ? void 0 : D.name,
+                    children: null == O ? void 0 : O.name,
                   }),
                   (0, n.jsx)(E.Heading, {
-                    className: M.title,
+                    className: C.title,
                     variant: "heading-sm/semibold",
-                    children: C.default.Messages.NUF_CHANNEL_PROMPT_TITLE,
+                    children: M.default.Messages.NUF_CHANNEL_PROMPT_TITLE,
                   }),
                   (0, n.jsx)(E.Text, {
-                    className: M.subtitle,
+                    className: C.subtitle,
                     color: "header-secondary",
                     variant: "text-md/normal",
-                    children: C.default.Messages.NUF_CHANNEL_PROMPT_SUBTITLE,
+                    children: M.default.Messages.NUF_CHANNEL_PROMPT_SUBTITLE,
                   }),
                   null != o &&
                     (0, n.jsx)(E.ModalCloseButton, {
-                      className: M.closeButton,
+                      className: C.closeButton,
                       onClick: o,
                     }),
                 ],
               }),
               (0, n.jsxs)(E.ModalContent, {
-                className: M.channelPrompt,
+                className: C.channelPrompt,
                 children: [
                   (0, n.jsx)("form", {
                     onSubmit: h,
                     children: (0, n.jsx)(E.FormItem, {
-                      title: C.default.Messages.NUF_CHANNEL_PROMPT_TOPIC,
+                      title: M.default.Messages.NUF_CHANNEL_PROMPT_TOPIC,
                       tag: "label",
                       htmlFor: U,
-                      error: null == N ? void 0 : N.getFieldMessage("name"),
+                      error: null == p ? void 0 : p.getFieldMessage("name"),
                       children: (0, n.jsx)(E.TextInput, {
                         type: "text",
-                        value: A,
+                        value: c,
                         id: U,
-                        onChange: p,
+                        onChange: N,
                         placeholder:
-                          C.default.Messages
+                          M.default.Messages
                             .NUF_CHANNEL_PROMPT_TOPIC_PLACEHOLDER,
-                        inputRef: O,
+                        inputRef: D,
                       }),
                     }),
                   }),
-                  null != N &&
-                    0 === Object.keys(N.fields).length &&
+                  null != p &&
+                    0 === Object.keys(p.fields).length &&
                     (0, n.jsx)(E.Text, {
                       variant: "text-xs/normal",
                       color: "text-danger",
-                      children: N.message,
+                      children: p.message,
                     }),
                 ],
               }),
@@ -884,7 +860,7 @@
           });
         return { content: y, footer: g };
       }
-      function c(e) {
+      function I(e) {
         let { content: a } = o(e);
         return a;
       }
@@ -894,10 +870,10 @@
       s.r(a),
         s.d(a, {
           useCreationIntentSlide: function () {
-            return o;
+            return I;
           },
           default: function () {
-            return c;
+            return A;
           },
         });
       var n = s("37983");
@@ -906,119 +882,120 @@
         l = s.n(t),
         E = s("77078"),
         _ = s("145131"),
-        i = s("599110"),
-        d = s("350956"),
-        T = s("49111"),
-        r = s("782340"),
-        u = s("517981"),
-        L = s("819963"),
+        d = s("599110"),
+        i = s("350956"),
+        T = s("243338"),
+        r = s("49111"),
+        u = s("782340"),
+        L = s("517981"),
+        M = s("819963"),
         C = s("20264");
-      let M = 0.5 > Math.random();
-      function o(e) {
+      let o = 0.5 > Math.random();
+      function I(e) {
         let {
             onClose: a,
             onBack: s,
             onCreationIntentChosen: t,
-            hasFooter: o = !0,
+            hasFooter: I = !0,
           } = e,
-          c = (0, n.jsx)(n.Fragment, {
+          A = (0, n.jsx)(n.Fragment, {
             children: (0, n.jsx)(E.Button, {
-              className: u.backButton,
+              className: L.backButton,
               look: E.Button.Looks.BLANK,
               size: E.Button.Sizes.MIN,
               onClick: s,
-              children: r.default.Messages.BACK,
+              children: u.default.Messages.BACK,
             }),
           });
-        function I(e) {
-          i.default.track(T.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
+        function c(e) {
+          d.default.track(r.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == e,
-            is_community: !!e,
+            is_community: e === T.GuildCreationIntents.COMMUNITY,
           }),
-            t(!!e);
+            t(e);
         }
-        let A = (0, n.jsxs)(n.Fragment, {
+        let N = (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)(E.ModalHeader, {
               direction: _.default.Direction.VERTICAL,
-              className: u.header,
+              className: L.header,
               separator: !1,
               children: [
                 (0, n.jsx)(E.Heading, {
-                  className: l(u.title),
+                  className: l(L.title),
                   variant: "heading-xl/semibold",
-                  children: r.default.Messages.CREATION_INTENT_TITLE,
+                  children: u.default.Messages.CREATION_INTENT_TITLE,
                 }),
                 (0, n.jsx)(E.Text, {
-                  className: u.subtitle,
+                  className: L.subtitle,
                   color: "header-secondary",
                   variant: "text-md/normal",
-                  children: r.default.Messages.CREATION_INTENT_DESCRIPTION,
+                  children: u.default.Messages.CREATION_INTENT_DESCRIPTION,
                 }),
                 null != a &&
                   (0, n.jsx)(E.ModalCloseButton, {
-                    className: u.closeButton,
+                    className: L.closeButton,
                     onClick: a,
                   }),
               ],
             }),
             (0, n.jsxs)(E.ModalContent, {
-              className: u.optionsList,
+              className: L.optionsList,
               children: [
-                M
+                o
                   ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                        (0, n.jsx)(d.default, {
-                          icon: L,
+                        (0, n.jsx)(i.default, {
+                          icon: M,
                           message:
-                            r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                          onClick: () => I(!1),
+                            u.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
+                          onClick: () => c(T.GuildCreationIntents.FRIENDS),
                         }),
-                        (0, n.jsx)(d.default, {
+                        (0, n.jsx)(i.default, {
                           icon: C,
                           message:
-                            r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                          onClick: () => I(!0),
+                            u.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
+                          onClick: () => c(T.GuildCreationIntents.COMMUNITY),
                         }),
                       ],
                     })
                   : (0, n.jsxs)(n.Fragment, {
                       children: [
-                        (0, n.jsx)(d.default, {
+                        (0, n.jsx)(i.default, {
                           icon: C,
                           message:
-                            r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                          onClick: () => I(!0),
+                            u.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
+                          onClick: () => c(T.GuildCreationIntents.COMMUNITY),
                         }),
-                        (0, n.jsx)(d.default, {
-                          icon: L,
+                        (0, n.jsx)(i.default, {
+                          icon: M,
                           message:
-                            r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                          onClick: () => I(!1),
+                            u.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
+                          onClick: () => c(T.GuildCreationIntents.FRIENDS),
                         }),
                       ],
                     }),
                 (0, n.jsx)(E.Text, {
-                  className: u.skip,
+                  className: L.skip,
                   color: "header-secondary",
                   variant: "text-sm/normal",
-                  children: r.default.Messages.CREATION_INTENT_SKIP.format({
-                    onSkip: () => I(null),
+                  children: u.default.Messages.CREATION_INTENT_SKIP.format({
+                    onSkip: () => c(null),
                   }),
                 }),
               ],
             }),
-            o &&
+            I &&
               (0, n.jsx)(E.ModalFooter, {
                 justify: _.default.Justify.BETWEEN,
-                children: c,
+                children: A,
               }),
           ],
         });
-        return { content: A, footer: c };
+        return { content: N, footer: A };
       }
-      function c(e) {
-        let { content: a } = o(e);
+      function A(e) {
+        let { content: a } = I(e);
         return a;
       }
     },
@@ -1027,10 +1004,10 @@
       s.r(a),
         s.d(a, {
           useCustomizeGuildSlide: function () {
-            return p;
+            return A;
           },
           default: function () {
-            return N;
+            return c;
           },
         }),
         s("222007");
@@ -1039,216 +1016,189 @@
         l = s("414456"),
         E = s.n(l),
         _ = s("77078"),
-        i = s("851387"),
-        d = s("68130"),
-        T = s("177769"),
-        r = s("740822"),
-        u = s("697218"),
-        L = s("145131"),
-        C = s("476765"),
-        M = s("651879"),
-        o = s("326678"),
-        c = s("49111"),
-        I = s("782340"),
-        A = s("674637");
-      function p(e) {
+        d = s("851387"),
+        i = s("68130"),
+        T = s("697218"),
+        r = s("145131"),
+        u = s("476765"),
+        L = s("651879"),
+        M = s("326678"),
+        C = s("49111"),
+        o = s("782340"),
+        I = s("674637");
+      function A(e) {
         var a;
         let {
             guildTemplate: s,
             onClose: l,
-            onBack: p,
-            onHubGuildInfoSet: N,
-            onGuildCreated: G,
-            isSlideReady: m,
-            hasFooter: f = !0,
-            isCommunity: U = !1,
+            onBack: A,
+            onHubGuildInfoSet: c,
+            onGuildCreated: N,
+            isSlideReady: p,
+            hasFooter: G = !0,
+            isCommunity: m = !1,
           } = e,
-          [D, O] = t.useState(M.default.getGuildNameSuggestion()),
-          [h, g] = t.useState(null),
-          [y, R] = t.useState(!1),
-          [x, S] = t.useState(null),
-          P = !!(null === (a = u.default.getCurrentUser()) || void 0 === a
+          [f, U] = t.useState(L.default.getGuildNameSuggestion()),
+          [O, D] = t.useState(null),
+          [h, g] = t.useState(!1),
+          [y, R] = t.useState(null),
+          x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a
             ? void 0
             : a.isStaff()),
-          [j, H] = t.useState(P),
-          [V, F] = t.useState(!1),
-          v = T.ClanExperiment.useExperiment({
-            location: "customize-guild-slide",
-          }).enableClanCreation,
-          B = (0, C.useUID)(),
-          Y = t.useRef(null);
+          [S, P] = t.useState(x),
+          j = (0, u.useUID)(),
+          H = t.useRef(null);
         t.useEffect(() => {
           var e;
-          m && (null === (e = Y.current) || void 0 === e || e.focus());
-        }, [m]);
-        let b = t.useCallback(
+          p && (null === (e = H.current) || void 0 === e || e.focus());
+        }, [p]);
+        let V = t.useCallback(
             async e => {
               if ((e.preventDefault(), null != s)) {
-                R(!0), S(null);
+                g(!0), R(null);
                 try {
-                  if (null != N) N(D, h);
+                  if (null != c) c(f, O);
                   else {
-                    let e = await o.default.createGuildFromTemplate(
-                      D,
-                      h,
+                    let e = await M.default.createGuildFromTemplate(
+                      f,
+                      O,
                       s,
-                      U,
-                      j,
-                      V
+                      m,
+                      S
                     );
-                    i.default.transitionToGuildSync(e.id), null == G || G(e.id);
+                    d.default.transitionToGuildSync(e.id), null == N || N(e.id);
                   }
                 } catch (e) {
-                  S(e);
+                  R(e);
                 }
-                R(!1);
+                g(!1);
               }
             },
-            [s, h, D, G, N, U, j, V]
+            [s, c, f, O, m, S, N]
           ),
-          k = (0, n.jsxs)(n.Fragment, {
+          F = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)(_.Button, {
                 color: _.Button.Colors.BRAND,
-                onClick: b,
-                disabled: 0 === D.length,
-                submitting: y,
+                onClick: V,
+                disabled: 0 === f.length,
+                submitting: h,
                 children:
-                  null != N
-                    ? I.default.Messages.NEXT
-                    : I.default.Messages.CREATE,
+                  null != c
+                    ? o.default.Messages.NEXT
+                    : o.default.Messages.CREATE,
               }),
               (0, n.jsx)(_.Button, {
-                className: A.backButton,
+                className: I.backButton,
                 look: _.Button.Looks.BLANK,
                 size: _.Button.Sizes.MIN,
-                onClick: p,
-                children: I.default.Messages.BACK,
+                onClick: A,
+                children: o.default.Messages.BACK,
               }),
             ],
           }),
-          X = (0, n.jsxs)(n.Fragment, {
+          Y = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsxs)(_.ModalHeader, {
-                direction: L.default.Direction.VERTICAL,
-                className: A.header,
+                direction: r.default.Direction.VERTICAL,
+                className: I.header,
                 separator: !1,
                 children: [
                   (0, n.jsx)(_.Heading, {
-                    className: E(A.title),
+                    className: E(I.title),
                     variant: "heading-xl/semibold",
                     children:
-                      I.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER,
+                      o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER,
                   }),
                   (0, n.jsx)(_.Text, {
-                    className: A.subtitle,
+                    className: I.subtitle,
                     color: "header-secondary",
                     variant: "text-md/normal",
                     children:
-                      I.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER,
+                      o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER,
                   }),
                   null != l &&
                     (0, n.jsx)(_.ModalCloseButton, {
-                      className: A.closeButton,
+                      className: I.closeButton,
                       onClick: l,
                     }),
                 ],
               }),
               (0, n.jsxs)(_.ModalContent, {
-                className: A.createGuild,
+                className: I.createGuild,
                 children: [
                   (0, n.jsx)("div", {
-                    className: A.uploadIcon,
-                    children: (0, n.jsx)(d.default, { icon: h, onChange: g }),
+                    className: I.uploadIcon,
+                    children: (0, n.jsx)(i.default, { icon: O, onChange: D }),
                   }),
                   (0, n.jsxs)("form", {
-                    onSubmit: b,
+                    onSubmit: V,
                     children: [
                       (0, n.jsxs)(_.FormItem, {
-                        className: A.nameInput,
+                        className: I.nameInput,
                         error:
-                          null == x
+                          null == y
                             ? void 0
-                            : x.getFirstFieldErrorMessage("name"),
+                            : y.getFirstFieldErrorMessage("name"),
                         children: [
                           (0, n.jsx)(_.FormTitle, {
                             tag: "label",
-                            htmlFor: B,
-                            children: I.default.Messages.FORM_LABEL_SERVER_NAME,
+                            htmlFor: j,
+                            children: o.default.Messages.FORM_LABEL_SERVER_NAME,
                           }),
                           (0, n.jsx)(_.TextInput, {
                             type: "text",
-                            value: D,
+                            value: f,
                             maxLength: 100,
-                            onChange: O,
-                            inputRef: Y,
-                            id: B,
+                            onChange: U,
+                            inputRef: H,
+                            id: j,
                           }),
                         ],
                       }),
-                      P &&
+                      x &&
                         (0, n.jsx)(_.FormSwitch, {
                           hideBorder: !0,
-                          value: j,
-                          onChange: e => H(e),
-                          note: I.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
-                          className: A.formItemSpaced,
+                          value: S,
+                          onChange: e => P(e),
+                          note: o.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
+                          className: I.formItemSpaced,
                           children: (0, n.jsx)(_.FormTitle, {
                             tag: "label",
                             children: "Staff Only",
                           }),
                         }),
-                      v &&
-                        (0, n.jsx)(n.Fragment, {
-                          children: (0, n.jsx)(_.FormSwitch, {
-                            hideBorder: !0,
-                            value: V,
-                            onChange: e => F(e),
-                            note: "Creates a special gaming clan guild",
-                            className: A.formItemSpaced,
-                            children: (0, n.jsxs)("div", {
-                              className: A.clanLabel,
-                              children: [
-                                (0, n.jsx)(_.FormTitle, {
-                                  tag: "label",
-                                  children: "Clan",
-                                }),
-                                (0, n.jsx)(r.default, {}),
-                              ],
-                            }),
-                          }),
-                        }),
                       (0, n.jsx)(_.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        className: A.guidelines,
+                        className: I.guidelines,
                         children:
-                          I.default.Messages.CREATE_SERVER_GUIDELINES.format({
-                            guidelinesURL: c.MarketingURLs.GUIDELINES,
+                          o.default.Messages.CREATE_SERVER_GUIDELINES.format({
+                            guidelinesURL: C.MarketingURLs.GUIDELINES,
                           }),
                       }),
                     ],
                   }),
-                  null == x || x.hasFieldErrors()
+                  null == y || y.hasFieldErrors()
                     ? null
                     : (0, n.jsx)(_.Text, {
                         variant: "text-xs/normal",
                         color: "text-danger",
-                        children: x.message,
+                        children: y.message,
                       }),
                 ],
               }),
-              f &&
+              G &&
                 (0, n.jsx)(_.ModalFooter, {
-                  justify: L.default.Justify.BETWEEN,
-                  children: k,
+                  justify: r.default.Justify.BETWEEN,
+                  children: F,
                 }),
             ],
           });
-        return { content: X, footer: k };
+        return { content: Y, footer: F };
       }
-      function N(e) {
-        let { content: a } = p(e);
+      function c(e) {
+        let { content: a } = A(e);
         return a;
       }
     },
@@ -1257,7 +1207,7 @@
       s.r(a),
         s.d(a, {
           default: function () {
-            return M;
+            return C;
           },
         });
       var n = s("37983"),
@@ -1265,37 +1215,37 @@
         l = s("414456"),
         E = s.n(l),
         _ = s("77078"),
-        i = s("145131"),
-        d = s("718394"),
+        d = s("145131"),
+        i = s("718394"),
         T = s("350956"),
         r = s("47212"),
         u = s("782340"),
         L = s("31784");
-      function C(e) {
+      function M(e) {
         let { guildTemplate: a, onClick: s, autoFocus: l } = e,
           E = t.useCallback(() => {
             s(a);
           }, [a, s]);
         return (0, n.jsx)(T.default, {
-          icon: d.GUILD_TEMPLATE_ICONS[a.id],
+          icon: i.GUILD_TEMPLATE_ICONS[a.id],
           message: a.label,
           onClick: E,
           autoFocus: l,
         });
       }
-      function M(e) {
+      function C(e) {
         let {
             className: a,
             isNewUser: s,
             onClose: t,
             onChooseTemplate: l,
-            onJoin: d,
+            onJoin: i,
           } = e,
           T = (0, r.getGuildTemplatesMap)();
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)(_.ModalHeader, {
-              direction: i.default.Direction.VERTICAL,
+              direction: d.default.Direction.VERTICAL,
               className: L.header,
               separator: !1,
               children: [
@@ -1323,7 +1273,7 @@
               className: E(L.templatesList, a),
               paddingFix: !1,
               children: [
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.CREATE],
                   onClick: l,
                   autoFocus: !0,
@@ -1335,33 +1285,33 @@
                   children:
                     u.default.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.GAMING],
                   onClick: l,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.SCHOOL_CLUB],
                   onClick: l,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.STUDY],
                   onClick: l,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.FRIENDS],
                   onClick: l,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.CREATORS],
                   onClick: l,
                 }),
-                (0, n.jsx)(C, {
+                (0, n.jsx)(M, {
                   guildTemplate: T[r.GuildTemplateId.LOCAL_COMMUNITY],
                   onClick: l,
                 }),
               ],
             }),
-            null != d &&
+            null != i &&
               (0, n.jsxs)(_.ModalFooter, {
                 className: L.footer,
                 children: [
@@ -1373,7 +1323,7 @@
                   (0, n.jsx)(_.Button, {
                     className: L.footerButton,
                     color: _.Button.Colors.PRIMARY,
-                    onClick: d,
+                    onClick: i,
                     children: u.default.Messages.JOIN_SERVER_TITLE,
                   }),
                 ],
@@ -1396,11 +1346,11 @@
         l = s("533211"),
         E = s("529861");
       function _(e) {
-        let { icon: a, message: s, onClick: _, autoFocus: i } = e;
+        let { icon: a, message: s, onClick: _, autoFocus: d } = e;
         return (0, n.jsxs)("button", {
           className: l.container,
           onClick: _,
-          autoFocus: i,
+          autoFocus: d,
           children: [
             (0, n.jsx)("img", { className: l.icon, alt: "", src: a }),
             (0, n.jsx)(t.Text, {
@@ -1415,4 +1365,4 @@
     },
   },
 ]);
-//# sourceMappingURL=2ab7fdac991b9f5a28af.js.map
+//# sourceMappingURL=fa414faa2d7e15da75f0.js.map

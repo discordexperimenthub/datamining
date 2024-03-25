@@ -45761,7 +45761,7 @@
         S = n("782340"),
         C = n("669821");
       let T = "premiumRetentionEmojiPickerNotice",
-        _ = o.default.get(T);
+        _ = o.Storage.get(T);
       var I = e => {
         let { closePopout: t, channel: n } = e,
           [a, I] = l.useState(!1),
@@ -45826,7 +45826,7 @@
             }),
             (0, i.jsx)(u.Clickable, {
               onClick: () => {
-                o.default.set(T, R), (_ = R), I(!0);
+                o.Storage.set(T, R), (_ = R), I(!0);
               },
               children: (0, i.jsx)(m.default, {
                 className: C.premiumRetentionNoticeClose,
@@ -70174,11 +70174,11 @@
         o = !0,
         u = new Set();
       function d() {
-        l.default.set(r, { enabled: o, learnedWords: u });
+        l.Storage.set(r, { enabled: o, learnedWords: u });
       }
       class c extends i.default.Store {
         initialize() {
-          let e = l.default.get(r);
+          let e = l.Storage.get(r);
           null != e &&
             ((o = e.enabled),
             (u = new Set(e.learnedWords)),
@@ -80787,22 +80787,22 @@
       function a() {
         var e;
         let { volume: t } =
-          null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
+          null !== (e = i.Storage.get(l)) && void 0 !== e ? e : {};
         return (
           "number" != typeof t && (t = 1), (t = Math.min(1, Math.max(0, t)))
         );
       }
       function s(e) {
-        i.default.set(l, { volume: e, muted: r() });
+        i.Storage.set(l, { volume: e, muted: r() });
       }
       function r() {
         var e;
         let { muted: t } =
-          null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
+          null !== (e = i.Storage.get(l)) && void 0 !== e ? e : {};
         return "boolean" != typeof t && (t = !1), t;
       }
       function o(e) {
-        i.default.set(l, { volume: a(), muted: e });
+        i.Storage.set(l, { volume: a(), muted: e });
       }
     },
     551006: function (e, t, n) {
@@ -82655,4 +82655,4 @@
     },
   },
 ]);
-//# sourceMappingURL=60053.702e5fa9b6679299db3f.js.map
+//# sourceMappingURL=60053.acc3f06c259caa3e06fb.js.map

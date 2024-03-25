@@ -19,17 +19,17 @@
         }),
         a("222007");
       var n = a("811022"),
-        l = a("872717"),
-        o = a("448993"),
+        o = a("872717"),
+        l = a("448993"),
         s = a("42887"),
         r = a("254490"),
         i = a("49671"),
-        u = a("49111");
-      let c = new n.default("uploadRtcLogFiles");
+        c = a("49111");
+      let u = new n.default("uploadRtcLogFiles");
       async function d(e, t) {
         let a;
         if (null == i.default.fileManager.readLogFiles)
-          throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL);
+          throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL);
         let n = [];
         try {
           n = (n = await i.default.fileManager.readLogFiles(e)).map(e =>
@@ -37,16 +37,16 @@
           );
         } catch (e) {
           throw (
-            (c.error("uploadDebugFiles: read error '".concat(e, "'")),
-            new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.READ))
+            (u.error("uploadDebugFiles: read error '".concat(e, "'")),
+            new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.READ))
           );
         }
         if (0 === n.length)
-          throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.NO_FILE);
+          throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.NO_FILE);
         try {
           let e = { extraInfo: t, mediaEngineState: s.default.getState() };
-          a = await l.HTTP.post({
-            url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
+          a = await o.HTTP.post({
+            url: c.Endpoints.DEBUG_LOGS(c.DebugLogCategory.RTC),
             attachments: [
               ...n.map(e => ({ name: e.name, file: e, filename: e.name })),
               {
@@ -58,25 +58,25 @@
           });
         } catch (e) {
           if (429 === e.status)
-            throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.PROGRESS);
+            throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.PROGRESS);
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload error: status: "
                 .concat(e.status, ", message: ")
                 .concat(e.message)
             ),
-            new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.UPLOAD))
+            new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.UPLOAD))
           );
         }
         let d = n.length + 1;
         if ("success_count" in a.body && a.body.success_count !== d)
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: stored files "
                 .concat(a.body.success_count, " !== ")
                 .concat(d)
             ),
-            new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL))
+            new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL))
           );
         if (
           ("store_success" in a.body && !a.body.store_success) ||
@@ -84,7 +84,7 @@
           ("all_success" in a.body && !a.body.all_success)
         )
           throw (
-            (c.error(
+            (u.error(
               "Debug log upload: store_success: ".concat(
                 a.body.store_success,
                 " / "
@@ -92,7 +92,7 @@
                 "id_match: ".concat(a.body.id_match, " / ") +
                 "all_success: ".concat(a.body.all_success)
             ),
-            new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL))
+            new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL))
           );
       }
     },
@@ -101,10 +101,10 @@
       a.r(t),
         a.d(t, {
           fetchBugReportConfig: function () {
-            return u;
+            return c;
           },
           getFeatureId: function () {
-            return c;
+            return u;
           },
           getPriorities: function () {
             return d;
@@ -115,17 +115,17 @@
         }),
         a("424973");
       var n = a("759843"),
-        l = a("872717"),
-        o = a("147746");
+        o = a("872717"),
+        l = a("147746");
       a("18108"), a("773336");
       var s = a("840707"),
         r = a("49111"),
         i = a("782340");
-      async function u() {
-        let e = await l.HTTP.get({ url: r.Endpoints.BUG_REPORTS });
+      async function c() {
+        let e = await o.HTTP.get({ url: r.Endpoints.BUG_REPORTS });
         return e.body;
       }
-      function c(e) {
+      function u(e) {
         var t, a;
         return null !==
           (a =
@@ -168,8 +168,8 @@
         ];
       }
       async function m(e, t, a) {
-        var l, i;
-        let u = [
+        var o, i;
+        let c = [
           { name: "name", value: e.name },
           { name: "priority", value: "".concat(e.priority) },
           {
@@ -178,35 +178,35 @@
           },
         ];
         "" !== e.description &&
-          u.push({ name: "description", value: e.description }),
-          "" !== e.url && u.push({ name: "external_url", value: e.url });
-        let c =
-          null === (l = e.feature) || void 0 === l ? void 0 : l.asana_inbox_id;
-        null != c &&
-          "" !== c &&
-          u.push({ name: "asana_inbox_id", value: "".concat(c) });
+          c.push({ name: "description", value: e.description }),
+          "" !== e.url && c.push({ name: "external_url", value: e.url });
+        let u =
+          null === (o = e.feature) || void 0 === o ? void 0 : o.asana_inbox_id;
+        null != u &&
+          "" !== u &&
+          c.push({ name: "asana_inbox_id", value: "".concat(u) });
         let d = null === (i = e.feature) || void 0 === i ? void 0 : i.name;
-        null != d && "" !== d && u.push({ name: "feature_name", value: d }),
+        null != d && "" !== d && c.push({ name: "feature_name", value: d }),
           t.overridePlatformInformation &&
-            (u.push({ name: "device", value: t.device }),
-            u.push({ name: "os", value: t.operatingSystem }),
-            u.push({ name: "os_version", value: t.operatingSystemVersion }),
-            u.push({ name: "client_version", value: t.clientVersion }),
-            u.push({ name: "client_build_number", value: t.clientBuildNumber }),
-            u.push({
+            (c.push({ name: "device", value: t.device }),
+            c.push({ name: "os", value: t.operatingSystem }),
+            c.push({ name: "os_version", value: t.operatingSystemVersion }),
+            c.push({ name: "client_version", value: t.clientVersion }),
+            c.push({ name: "client_build_number", value: t.clientBuildNumber }),
+            c.push({
               name: "release_channel",
               value: window.GLOBAL_ENV.RELEASE_CHANNEL,
             }),
-            u.push({ name: "locale", value: t.locale })),
-          (0, o.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
+            c.push({ name: "locale", value: t.locale })),
+          (0, l.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
         try {
           return await s.default.post({
             url: r.Endpoints.BUG_REPORTS,
             attachments: a,
-            fields: u,
+            fields: c,
             trackedActionData: {
               event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
-              properties: { priority: e.priority, asana_inbox_id: c },
+              properties: { priority: e.priority, asana_inbox_id: u },
             },
           });
         } catch (e) {
@@ -244,13 +244,13 @@
         }),
         a("222007");
       var n = a("37983"),
-        l = a("884691"),
-        o = a("748820"),
+        o = a("884691"),
+        l = a("748820"),
         s = a("446674"),
         r = a("819855"),
         i = a("77078"),
-        u = a("371642"),
-        c = a("966724"),
+        c = a("371642"),
+        u = a("966724"),
         d = a("9560"),
         m = a("761354"),
         f = a("161778"),
@@ -276,18 +276,18 @@
       function O(e) {
         var t, O, b, j, L;
         let { transitionState: C, onClose: P } = e,
-          U = l.useRef(null),
-          y = l.useRef(null),
-          [B, M] = l.useState(""),
-          [w, D] = l.useState(""),
-          [F, G] = l.useState(),
-          [A, V] = l.useState(""),
-          [k, H] = l.useState([]),
-          [Y, W] = l.useState(),
-          [K, z] = l.useState(),
-          [J, X] = l.useState(!1),
-          [Q, q] = l.useState(""),
-          [Z, $] = l.useState(
+          U = o.useRef(null),
+          y = o.useRef(null),
+          [B, M] = o.useState(""),
+          [w, D] = o.useState(""),
+          [F, G] = o.useState(),
+          [A, V] = o.useState(""),
+          [k, H] = o.useState([]),
+          [Y, W] = o.useState(),
+          [K, z] = o.useState(),
+          [J, X] = o.useState(!1),
+          [Q, q] = o.useState(""),
+          [Z, $] = o.useState(
             (function (e) {
               switch (e) {
                 case "windows":
@@ -300,13 +300,13 @@
               return "";
             })((0, v.getOS)())
           ),
-          [ee, et] = l.useState(""),
-          [ea, en] = l.useState(""),
-          [el, eo] = l.useState(""),
-          [es, er] = l.useState(""),
-          [ei, eu] = l.useState(!1),
-          [ec, ed] = l.useState(!1),
-          [em, ef] = l.useState(!1),
+          [ee, et] = o.useState(""),
+          [ea, en] = o.useState(""),
+          [eo, el] = o.useState(""),
+          [es, er] = o.useState(""),
+          [ei, ec] = o.useState(!1),
+          [eu, ed] = o.useState(!1),
+          [em, ef] = o.useState(!1),
           eg = () => {
             null == P || P();
           },
@@ -316,7 +316,7 @@
         async function eh() {
           var e;
           if ((ef(!1), "" === B || null == F)) {
-            eu(!0);
+            ec(!0);
             return;
           }
           let t =
@@ -325,14 +325,14 @@
               : null === (e = Y.features) || void 0 === e
                 ? void 0
                 : e.find(e => (0, E.getFeatureId)(e) === K);
-          ed(!0), eu(!1);
-          let l = (0, R.getAttachments)(
+          ed(!0), ec(!1);
+          let o = (0, R.getAttachments)(
               k.map(e => {
                 let { item: t } = e;
                 return t;
               })
             ),
-            o =
+            l =
               !0 === J
                 ? {
                     overridePlatformInformation: J,
@@ -340,14 +340,14 @@
                     operatingSystem: Z,
                     operatingSystemVersion: ee,
                     clientVersion: ea,
-                    clientBuildNumber: el,
+                    clientBuildNumber: eo,
                     locale: es,
                   }
                 : { overridePlatformInformation: J },
             s = await (0, E.submitReport)(
               { name: B, description: w, priority: F, feature: t, url: A },
-              o,
-              l
+              l,
+              o
             ).catch(() => ef(!0));
           ed(!1),
             null != s && s.ok
@@ -361,13 +361,13 @@
                 }))
               : ef(!0);
         }
-        l.useEffect(() => {
+        o.useEffect(() => {
           (async function e() {
             let e = await (0, E.fetchBugReportConfig)();
             W(e);
           })();
         }, []),
-          l.useEffect(() => {
+          o.useEffect(() => {
             if (k.length > 0) {
               var e;
               null === (e = y.current) ||
@@ -609,8 +609,8 @@
                                   className: x.formInput,
                                   children: (0, n.jsx)(i.TextInput, {
                                     placeholder: "Client Build Number",
-                                    value: el,
-                                    onChange: e => eo(e),
+                                    value: eo,
+                                    onChange: e => el(e),
                                   }),
                                 }),
                                 (0, n.jsx)(i.FormItem, {
@@ -629,7 +629,7 @@
                           className: x.uploadButton,
                           children: [
                             T.default.Messages.BUG_REPORT_ADD_ATTACHMENTS,
-                            (0, n.jsx)(u.default, {
+                            (0, n.jsx)(c.default, {
                               ref: U,
                               onChange: e => {
                                 var t, a;
@@ -643,10 +643,10 @@
                                 ) {
                                   let t = Array.from(e.currentTarget.files).map(
                                     e =>
-                                      new c.default({
-                                        id: (0, o.v4)(),
+                                      new u.default({
+                                        id: (0, l.v4)(),
                                         file: e,
-                                        platform: c.UploadPlatform.WEB,
+                                        platform: u.UploadPlatform.WEB,
                                       })
                                   );
                                   H([...k, ...t]);
@@ -742,7 +742,7 @@
                           }),
                         }),
                         (0, n.jsx)(i.Button, {
-                          submitting: ec,
+                          submitting: eu,
                           className: x.formButton,
                           onClick: eh,
                           children: "Submit and Open Report",
@@ -766,46 +766,46 @@
           },
         });
       var n = a("872717"),
-        l = a("890747"),
-        o = a("42203"),
+        o = a("890747"),
+        l = a("42203"),
         s = a("821316"),
         r = a("605250"),
         i = a("836403"),
-        u = a("825287"),
-        c = a("929331"),
+        c = a("825287"),
+        u = a("929331"),
         d = a("49111");
       let m = new r.default("DebugUploadManager");
       async function f(e, t) {
-        await g(e), await (0, l.uploadRtcLogFiles)(14680064, t);
+        await g(e), await (0, o.uploadRtcLogFiles)(14680064, t);
       }
       async function g(e) {
         try {
           let t = s.stringify(),
             a = "",
-            l = await (0, i.getPushNotificationLogs)().then(e =>
+            o = await (0, i.getPushNotificationLogs)().then(e =>
               (0, i.serializePushNotificationLogs)(e, !0)
             ),
-            r = t.length + a.length + l.length;
+            r = t.length + a.length + o.length;
           if (r > 9437184) {
             let e = 1 - 9437184 / r;
             (t = t.slice(t.length - Math.floor(t.length * e))),
               (a = a.slice(a.length - Math.floor(a.length * e))),
-              (l = l.slice(l.length - Math.floor(l.length * e)));
+              (o = o.slice(o.length - Math.floor(o.length * e)));
           }
           let m = null,
             f = "\n    "
-              .concat((0, c.default)(m), "\n\n    Metadata:\n    ")
+              .concat((0, u.default)(m), "\n\n    Metadata:\n    ")
               .concat(
-                JSON.stringify((0, u.default)(), void 0, 2),
+                JSON.stringify((0, c.default)(), void 0, 2),
                 "\n\n    ChannelStore:\n    "
               )
               .concat(
-                JSON.stringify(o.default.getDebugInfo(), void 0, 2),
+                JSON.stringify(l.default.getDebugInfo(), void 0, 2),
                 "\n\n    Logs:\n    "
               )
               .concat(t, "\n\n    System logs:\n    ")
               .concat(a, "\n\n    Push Notifications:\n    ")
-              .concat(l, "\n    ");
+              .concat(o, "\n    ");
           s.clear();
           let g = d.Endpoints.DEBUG_LOG(e, "discord_app_logs");
           await n.HTTP.post({
@@ -834,12 +834,12 @@
           },
         });
       var n = a("95410"),
-        l = a("271938"),
-        o = a("49111");
+        o = a("271938"),
+        l = a("49111");
       function s(e, t) {
         if (0 === e.length) return "No logs";
-        let a = n.default.get(o.DEVICE_TOKEN),
-          l = n.default.get(o.DEVICE_VOIP_TOKEN),
+        let a = n.Storage.get(l.DEVICE_TOKEN),
+          o = n.Storage.get(l.DEVICE_VOIP_TOKEN),
           s = e
             .map(e => {
               let a = e.silent ? "Silent" : "Displayed",
@@ -855,11 +855,11 @@
             .join("\n");
         return ""
           .concat(null != a ? "Device Token: ".concat(a) : "", "\n")
-          .concat(null != l ? "Device Voip Token: ".concat(l) : "", "\n\n")
+          .concat(null != o ? "Device Voip Token: ".concat(o) : "", "\n\n")
           .concat(s);
       }
       async function r() {
-        let e = l.default.getId(),
+        let e = o.default.getId(),
           t = [];
         return t;
       }
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "278320",
-          versionHash: "6f2b16efa6e8b7194bdd8dbab28b52dd5fa337d0",
+          buildNumber: "278328",
+          versionHash: "3bf351fe8f4d39de379989d1d339f7297849b9ce",
         };
       }
       a.r(t),
@@ -893,48 +893,48 @@
         a("424973"),
         a("222007");
       var n = a("917351"),
-        l = a.n(n),
-        o = a("102053"),
+        o = a.n(n),
+        l = a("102053"),
         s = a("487269");
       function r(e) {
         let t =
             !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
           a =
             !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return o.default.logGroups
+        return l.default.logGroups
           .map(n => {
-            var o, r;
+            var l, r;
             let {
-                index: u,
-                timestamp: c,
+                index: c,
+                timestamp: u,
                 logs: d,
                 nativeLogs: m,
                 serverTrace: f,
               } = n,
               g =
-                0 === u
+                0 === c
                   ? null !==
                       (r =
                         null ===
-                          (o = l.find(
+                          (l = o.find(
                             d,
                             e => e.log.indexOf("Logger loaded") >= 0
-                          )) || void 0 === o
+                          )) || void 0 === l
                           ? void 0
-                          : o.timestamp) && void 0 !== r
+                          : l.timestamp) && void 0 !== r
                     ? r
                     : e
-                  : c,
+                  : u,
               p = (function (e, t) {
                 var a, n;
-                let o = (function (e) {
+                let l = (function (e) {
                     let t = [];
                     for (let a = 0; a < e.length; a++) {
                       let n = e[a],
-                        l = e[a + 1];
-                      null != l && l.log === n.log.replace("Start ", "Finish ")
-                        ? ((l.log = l.log.replace("Finish ", "")),
-                          t.push(l),
+                        o = e[a + 1];
+                      null != o && o.log === n.log.replace("Start ", "Finish ")
+                        ? ((o.log = o.log.replace("Finish ", "")),
+                          t.push(o),
                           a++)
                         : t.push(n);
                     }
@@ -957,49 +957,49 @@
                     };
                   }),
                   s =
-                    null !== (a = l.max(o.map(e => e.totalTime.length))) &&
+                    null !== (a = o.max(l.map(e => e.totalTime.length))) &&
                     void 0 !== a
                       ? a
                       : 0,
                   r =
-                    null !== (n = l.max(o.map(e => e.deltaTime.length))) &&
+                    null !== (n = o.max(l.map(e => e.deltaTime.length))) &&
                     void 0 !== n
                       ? n
                       : 0;
-                return o
+                return l
                   .map(e => {
                     let { totalTime: t, deltaTime: a, log: n } = e;
                     return ""
-                      .concat(l.padStart(t, s), " ")
-                      .concat(l.padStart(a, r), " ")
+                      .concat(o.padStart(t, s), " ")
+                      .concat(o.padStart(a, r), " ")
                       .concat(n);
                   })
                   .join("");
               })(
                 (function (e, t, a, n) {
                   e = e.slice();
-                  let l = new Set(t.map(i)),
-                    o = "",
+                  let o = new Set(t.map(i)),
+                    l = "",
                     s = [];
                   t.forEach(t => {
                     let n = i(t),
                       r = 0,
-                      u = a || !t.autoGenerated,
-                      c =
+                      c = a || !t.autoGenerated,
+                      u =
                         n.startsWith("Start ") &&
                         !n.includes("RUN_JS_BUNDLE") &&
-                        l.has(n.replace("Start ", "Finish ")),
+                        o.has(n.replace("Start ", "Finish ")),
                       d =
                         n.startsWith("Finish ") &&
                         !n.includes("RUN_JS_BUNDLE") &&
-                        l.has(n.replace("Finish ", "Start "));
+                        o.has(n.replace("Finish ", "Start "));
                     if (d) {
-                      o = o.substring(2);
+                      l = l.substring(2);
                       let e = s.pop();
                       null != e &&
                         ((r = t.timestamp - e.timestamp),
-                        (u =
-                          u ||
+                        (c =
+                          c ||
                           (r > 5 &&
                             !(function (e) {
                               return [
@@ -1007,15 +1007,15 @@
                                 "CONVERT_CONSTANTS",
                               ].some(t => e.includes(t));
                             })(n))),
-                        (e.shouldKeep = e.shouldKeep || u));
+                        (e.shouldKeep = e.shouldKeep || c));
                     }
                     let m = {
                       emoji: "☕",
                       timestamp: t.timestamp,
                       delta: r > 0 ? r : void 0,
-                      prefix: o,
+                      prefix: l,
                       log: n,
-                      shouldKeep: u,
+                      shouldKeep: c,
                     };
                     (function (e, t) {
                       let a = 0;
@@ -1025,7 +1025,7 @@
                       }
                       e.splice(a, 0, t);
                     })(e, m),
-                      c && ((o += "| "), s.push(m));
+                      u && ((l += "| "), s.push(m));
                   });
                   let r = !1;
                   return e.filter(
@@ -1039,12 +1039,12 @@
                 g
               ),
               h = "Trace #"
-                .concat(u + 1, " started ")
-                .concat((0, s.getTimestampString)(c), "\n")
+                .concat(c + 1, " started ")
+                .concat((0, s.getTimestampString)(u), "\n")
                 .concat(p);
             return (
               null != f &&
-                (h += "\n Server trace for trace #".concat(u + 1).concat(f)),
+                (h += "\n Server trace for trace #".concat(c + 1).concat(f)),
               h
             );
           })
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=bcdfd4d0405dfb916ee2.js.map
+//# sourceMappingURL=77b04ffba5b7da7fa2be.js.map

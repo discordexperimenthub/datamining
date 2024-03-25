@@ -977,7 +977,7 @@
       let h = 1 * u.default.Millis.HOUR,
         E = 7 * u.default.Millis.DAY,
         m = 1 * u.default.Millis.DAY,
-        p = s.default.get("lastNonRequiredUpdateShown", Date.now()),
+        p = s.Storage.get("lastNonRequiredUpdateShown", Date.now()),
         S = new o.default("AutoUpdateManager");
       a = class {
         destroy() {
@@ -1058,7 +1058,7 @@
                   e => {
                     if (
                       null == e.body ||
-                      "6f2b16efa6e8b7194bdd8dbab28b52dd5fa337d0" === e.body.hash
+                      "3bf351fe8f4d39de379989d1d339f7297849b9ce" === e.body.hash
                     )
                       return this._handleUpdateNotAvailable();
                     if (e.body.required || (0, r.probablyHasBuildOverride)())
@@ -1067,7 +1067,7 @@
                       "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
                     if (Date.now() - p > t)
                       return (
-                        s.default.set("lastNonRequiredUpdateShown", Date.now()),
+                        s.Storage.set("lastNonRequiredUpdateShown", Date.now()),
                         this._handleUpdateDownloaded(!1)
                       );
                   },
@@ -4102,7 +4102,7 @@
         A = {},
         M = !1,
         v = !0,
-        R = i.default.get(I, {
+        R = i.Storage.get(I, {
           guildFilter: T.RecentMentionsFilters.ALL_SERVERS,
           everyoneFilter: !0,
           roleFilter: !0,
@@ -4174,7 +4174,7 @@
           l.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]),
           R
         )),
-          i.default.set(I, R);
+          i.Storage.set(I, R);
         let n = (e, n) => t[e] !== R[e] && R[e] === n,
           a =
             n("guildFilter", T.RecentMentionsFilters.THIS_SERVER) ||
@@ -10387,4 +10387,4 @@
     },
   },
 ]);
-//# sourceMappingURL=63ba5afb02c10925e9ff.js.map
+//# sourceMappingURL=bde6051121f2b84e8da0.js.map

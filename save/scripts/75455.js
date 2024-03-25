@@ -496,7 +496,7 @@
           } = (0, L.useGuildShopDisplayContext)(),
           O =
             "false" ===
-            n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"),
+            n.Storage.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"),
           v = (0, a.useStateFromStores)(
             [o.default],
             () => o.default.useReducedMotion
@@ -564,7 +564,7 @@
                     selected: i === x.GuildShopTab.GUILD_PRODUCTS_PREVIEW,
                     onClick: () => {
                       r(x.GuildShopTab.GUILD_PRODUCTS_PREVIEW),
-                        n.default.set(
+                        n.Storage.set(
                           g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK,
                           "true"
                         );
@@ -1326,4 +1326,4 @@
     },
   },
 ]);
-//# sourceMappingURL=40c82ff9acf7ba29fca5.js.map
+//# sourceMappingURL=1fff86f8c2f3bc127b6c.js.map

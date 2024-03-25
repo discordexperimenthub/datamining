@@ -2603,8 +2603,8 @@
         (c.persistKey = "DefaultRouteStore"),
         (c.migrations = [
           () => {
-            let e = r.default.get(o, null);
-            return r.default.remove(o), { lastViewedPath: e };
+            let e = r.Storage.get(o, null);
+            return r.Storage.remove(o), { lastViewedPath: e };
           },
         ]);
       var d = new c(a.default, {
@@ -3751,4 +3751,4 @@
     },
   },
 ]);
-//# sourceMappingURL=569f2887752fe56d7de5.js.map
+//# sourceMappingURL=75e253005ac5a84828e4.js.map

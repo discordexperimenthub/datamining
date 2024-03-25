@@ -28407,14 +28407,14 @@
             [t.guild_id]
           );
         l.useEffect(() => {
-          null == o.default.get(ee) &&
+          null == o.Storage.get(ee) &&
             ((0, d.openModalLazy)(async () => {
               let { default: e } = await n
                 .el("108838")
                 .then(n.bind(n, "108838"));
               return t => (0, a.jsx)(e, { ...t });
             }),
-            o.default.set(ee, Date.now()));
+            o.Storage.set(ee, Date.now()));
         }, []);
         let { width: M = 0, ref: R } = (0, f.default)();
         return (0, a.jsx)(p.AnalyticsLocationProvider, {
@@ -35095,12 +35095,12 @@
           } = e,
           [E, g] = (function () {
             let [e, t] = l.useState(() =>
-              r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT)
+              r.Storage.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT)
             );
             return [
               e,
               l.useCallback(e => {
-                r.default.set(h, e), t(e);
+                r.Storage.set(h, e), t(e);
               }, []),
             ];
           })(),
@@ -44283,4 +44283,4 @@
     },
   },
 ]);
-//# sourceMappingURL=6a97f979c511174a2831.js.map
+//# sourceMappingURL=330c98cfa829ecda2fa5.js.map

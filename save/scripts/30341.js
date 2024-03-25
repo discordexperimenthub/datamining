@@ -4616,7 +4616,7 @@
       let C = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
         O = new Set(["deep_link_failed"]),
         L = () => {
-          c.default.remove(S), c.default.remove(R);
+          c.Storage.remove(S), c.Storage.remove(R);
         };
       var M = () => {
         let e = (0, u.useStateFromStores)([g.default], () =>
@@ -4644,7 +4644,7 @@
             },
             [M, a]
           ),
-          D = c.default.get(S);
+          D = c.Storage.get(S);
         if (
           ("null" === n && null === T && v("deep_link_failed"),
           null != n &&
@@ -4654,7 +4654,7 @@
             v("nonce_missing"),
           l.useEffect(() => {
             if (null != D) {
-              let e = c.default.get(R);
+              let e = c.Storage.get(R);
               (null == e || Date.now() >= e) && (v("nonce_expired"), L());
             }
           }, [D, v]),
@@ -4725,7 +4725,7 @@
                   color: E.Button.Colors.BRAND_NEW,
                   onClick: () => {
                     let e = p.default.generateNonce();
-                    c.default.set(S, e), c.default.set(R, Date.now() + N);
+                    c.Storage.set(S, e), c.Storage.set(R, Date.now() + N);
                     let t = new URL(I.MOBILE_WEB_HANDOFF_DEEP_LINK),
                       n = new URLSearchParams(window.location.search);
                     n.delete("fingerprint"), n.delete("handoff_token");
@@ -5997,4 +5997,4 @@
     },
   },
 ]);
-//# sourceMappingURL=30341.236830c2a005a678702d.js.map
+//# sourceMappingURL=30341.006f829f895a8aff0c19.js.map

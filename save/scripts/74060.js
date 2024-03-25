@@ -1277,7 +1277,7 @@
                 : [],
             [J, X] = r.useState(!1);
           r.useEffect(() => {
-            !s.default.get(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) &&
+            !s.Storage.get(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) &&
               setTimeout(() => X(!0), 300);
           }, []);
           let q = [];
@@ -1318,7 +1318,7 @@
               );
             },
             et = r.useCallback(() => {
-              s.default.set(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1);
+              s.Storage.set(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1);
             }, []);
           return (0, i.jsx)(u.default, {
             page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,
@@ -2825,4 +2825,4 @@
     },
   },
 ]);
-//# sourceMappingURL=454b63b62e93d7259908.js.map
+//# sourceMappingURL=3b6b634fa3e8be4b2653.js.map

@@ -58,7 +58,7 @@
               type: n.Checkbox.Types.INVERTED,
               value: t,
               onChange: () => {
-                a.default.set("doNotShowReorderModal", JSON.stringify(!0)),
+                a.Storage.set("doNotShowReorderModal", JSON.stringify(!0)),
                   o(!0);
               },
               children: (0, r.jsx)(n.Text, {
@@ -72,4 +72,4 @@
     },
   },
 ]);
-//# sourceMappingURL=159ae2972a11888fe8c9.js.map
+//# sourceMappingURL=305e9702ef250c81f757.js.map

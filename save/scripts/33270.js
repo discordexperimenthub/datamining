@@ -1657,7 +1657,7 @@
       var S = () => {
         var e;
         let [t, n] = (0, s.useState)(
-            (null === (e = o.default.get(C, "false")) || void 0 === e
+            (null === (e = o.Storage.get(C, "false")) || void 0 === e
               ? void 0
               : e.toString()) === "true"
           ),
@@ -1672,7 +1672,7 @@
           });
         if (t) return null;
         let S = () => {
-            o.default.set(C, !0), n(!0);
+            o.Storage.set(C, !0), n(!0);
           },
           I = () =>
             (0, a.jsx)(u.Clickable, {
@@ -1697,7 +1697,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278320",
+                  buildNumber: "278328",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -8013,7 +8013,7 @@
         (m = !0),
           (0, E.setSessionExtendingEnabled)(!0),
           f.default.addBreadcrumb({ message: "Start Analytics Heartbeat" });
-        let e = await a.default.getAfterRefresh(_).then(E.timestampOrZero);
+        let e = await a.Storage.getAfterRefresh(_).then(E.timestampOrZero);
         if (!m) return;
         let t = Date.now(),
           n = 15 * d.default.Millis.MINUTE + e - t;
@@ -8104,7 +8104,7 @@
             (s.client_heartbeat_current_game_distributor = e.distributor));
         }
         u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s),
-          a.default.set(_, Date.now().toString()),
+          a.Storage.set(_, Date.now().toString()),
           (0, l.drainClickstream)();
       }
       let A = null,
@@ -9450,9 +9450,9 @@
       function w(e) {
         P.log("Clearing cache store"),
           (b = Date.now()),
-          i.default.remove(M.CACHE_STORE_KEY),
-          i.default.remove(M.CACHE_STORE_LAZY_KEY),
-          i.default.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY),
+          i.Storage.remove(M.CACHE_STORE_KEY),
+          i.Storage.remove(M.CACHE_STORE_LAZY_KEY),
+          i.Storage.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY),
           (x = "no-cache"),
           "CLEAR_CACHES" === e.type &&
             e.preventWritingCachesAgainThisSession &&
@@ -9983,9 +9983,9 @@
                   P.verbose("Writing cache now"),
                     (b = Date.now()),
                     (U = !0),
-                    i.default.remove(M.CACHE_STORE_KEY),
-                    i.default.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY),
-                    i.default.remove(M.CACHE_STORE_LAZY_KEY);
+                    i.Storage.remove(M.CACHE_STORE_KEY),
+                    i.Storage.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY),
+                    i.Storage.remove(M.CACHE_STORE_LAZY_KEY);
                 },
               }
             : {}
@@ -10852,13 +10852,13 @@
         var t;
         let { guild: n } = e,
           [d, E] = s.useState(
-            null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) &&
+            null !== (t = r.Storage.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) &&
               void 0 !== t
               ? t
               : 0
           ),
           _ = e => {
-            r.default.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e);
+            r.Storage.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e);
           },
           C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () =>
             O.CHANNEL_NOTICES.filter(e => {
@@ -13977,7 +13977,7 @@
                 600
               );
               clearTimeout(this._noProblemsTimeout),
-                c.default.get(O.DISCODO_STORAGE_KEY) &&
+                c.Storage.get(O.DISCODO_STORAGE_KEY) &&
                   this._connectedSound.play(),
                 o
                   ? this.setState({ problems: !1, hide: i })
@@ -21598,7 +21598,7 @@
         l = n("913144");
       let i = "hasSeenGuildTemplatePromotionTooltip",
         r = {},
-        o = !0 === s.default.get(i);
+        o = !0 === s.Storage.get(i);
       function u(e) {
         let { guildId: t } = e;
         r = { ...r, [t]: !1 };
@@ -21619,7 +21619,7 @@
           r = { ...r, [t.source_guild_id]: t.is_dirty || !1 };
         },
         GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function () {
-          s.default.set(i, !0), (o = !0);
+          s.Storage.set(i, !0), (o = !0);
         },
         GUILD_TEMPLATE_SYNC_SUCCESS: function (e) {
           r = { ...r, [e.guildTemplate.source_guild_id]: !1 };
@@ -37085,7 +37085,7 @@
           var e;
           this.waitFor(o.default, r.default, i.default),
             this.syncWith([o.default, r.default, i.default], d.NOOP),
-            (f = ((e = new Set(s.default.get(c))), e));
+            (f = ((e = new Set(s.Storage.get(c))), e));
         }
         isVisible(e) {
           if (null == e) return;
@@ -37103,7 +37103,7 @@
       var h = new E(l.default, {
         PUBLIC_UPSELL_NOTICE_DISMISS: function (e) {
           let t = e.guildId;
-          if (!f.has(t)) return f.add(t), s.default.set(c, f), !0;
+          if (!f.has(t)) return f.add(t), s.Storage.set(c, f), !0;
         },
       });
     },
@@ -38477,7 +38477,7 @@
             (l |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL))
           : (((null == s ? void 0 : s.privacy) ===
               M.ActivityPartyPrivacy.PUBLIC ||
-              o.default.get("ACTIVITIES_FORCE_PUBLIC")) &&
+              o.Storage.get("ACTIVITIES_FORCE_PUBLIC")) &&
               (E.AllowActivityPartyPrivacyFriends.getSetting() &&
                 (l |= M.ActivityFlags.PARTY_PRIVACY_FRIENDS),
               E.AllowActivityPartyPrivacyVoiceChannel.getSetting() &&
@@ -39566,7 +39566,7 @@
                           !(function (e, t, n, a) {
                             var s;
                             let l =
-                              null !== (s = o.default.get(S)) && void 0 !== s
+                              null !== (s = o.Storage.get(S)) && void 0 !== s
                                 ? s
                                 : {};
                             (l[e] = {
@@ -39574,19 +39574,19 @@
                               scope: n,
                               expires: Date.now() + a,
                             }),
-                              o.default.set(S, l);
+                              o.Storage.set(S, l);
                           })(n, l.access_token, l.scope, l.expires_in),
                           m(s, l.access_token)
                         );
                       });
                   return null !=
                     (l = (function (e, t) {
-                      let n = o.default.get(S);
+                      let n = o.Storage.get(S);
                       if (null != n && null != n[e]) {
                         let a = n[e];
                         if (!(a.scope !== t || a.expires <= Date.now()))
                           return a.accessToken;
-                        delete n[e], o.default.set(S, n);
+                        delete n[e], o.Storage.set(S, n);
                       }
                     })(n, i))
                     ? m(s, l).catch(
@@ -39594,10 +39594,10 @@
                           !(function (e) {
                             var t;
                             let n =
-                              null !== (t = o.default.get(S)) && void 0 !== t
+                              null !== (t = o.Storage.get(S)) && void 0 !== t
                                 ? t
                                 : {};
-                            delete n[e], o.default.set(S, n);
+                            delete n[e], o.Storage.set(S, n);
                           })(n),
                           r()
                         )
@@ -47077,7 +47077,7 @@
             );
           },
           cleanup() {
-            r.default.remove("StickersPersistedStore");
+            r.Storage.remove("StickersPersistedStore");
           },
         },
         {
@@ -47086,7 +47086,7 @@
             let { state: t } =
               l.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [
                 () => ({
-                  usageHistory: r.default.get("EmojiUsageHistory") || {},
+                  usageHistory: r.Storage.get("EmojiUsageHistory") || {},
                 }),
               ]);
             if (null == t) return !1;
@@ -47110,9 +47110,9 @@
             );
           },
           cleanup() {
-            r.default.remove("EmojiStore"),
-              r.default.remove("EmojiUsageHistory"),
-              r.default.remove("EmojiDiversitySurrogate");
+            r.Storage.remove("EmojiStore"),
+              r.Storage.remove("EmojiUsageHistory"),
+              r.Storage.remove("EmojiDiversitySurrogate");
           },
         },
         {
@@ -47173,7 +47173,7 @@
             );
           },
           cleanup() {
-            r.default.remove("ApplicationCommandFrecency");
+            r.Storage.remove("ApplicationCommandFrecency");
           },
         },
         {
@@ -47204,13 +47204,13 @@
             );
           },
           cleanup() {
-            r.default.remove("SoundboardFavoriteStore");
+            r.Storage.remove("SoundboardFavoriteStore");
           },
         },
         {
           version: 9,
           run(e) {
-            let t = r.default.get(f);
+            let t = r.Storage.get(f);
             if (null == t) return !1;
             for (let e in t) !c.ID_REGEX.test(e) && delete t[e];
             return (
@@ -47221,7 +47221,7 @@
             );
           },
           cleanup() {
-            r.default.remove(f);
+            r.Storage.remove(f);
           },
         },
       ];
@@ -47290,9 +47290,9 @@
             let r = !1,
               u = s.InboxSettings.create();
             (e.inbox = u),
-              i.default.get("seenInboxTutorial", !1) &&
+              i.Storage.get("seenInboxTutorial", !1) &&
                 ((u.viewedTutorial = !0), (r = !0));
-            let c = i.default.get("recentsButtonTab2");
+            let c = i.Storage.get("recentsButtonTab2");
             null != c &&
               ((u.currentTab =
                 "Recent Mentions" === c
@@ -47301,7 +47301,7 @@
               (r = !0));
             let f =
               null !==
-                (t = i.default.get("unread-messages-collapsed-channels")) &&
+                (t = i.Storage.get("unread-messages-collapsed-channels")) &&
               void 0 !== t
                 ? t
                 : {};
@@ -47322,9 +47322,9 @@
             return r;
           },
           cleanup() {
-            i.default.remove("seenInboxTutorial"),
-              i.default.remove("recentsButtonTab2"),
-              i.default.remove("unread-messages-collapsed-channels");
+            i.Storage.remove("seenInboxTutorial"),
+              i.Storage.remove("recentsButtonTab2"),
+              i.Storage.remove("unread-messages-collapsed-channels");
           },
         },
         {
@@ -47334,7 +47334,7 @@
               a.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [
                 () => ({
                   diversitySurrogate:
-                    i.default.get("EmojiDiversitySurrogate") || "",
+                    i.Storage.get("EmojiDiversitySurrogate") || "",
                 }),
               ]);
             if (null == t) return !1;
@@ -47359,14 +47359,14 @@
           run(e) {
             let t = !1,
               n =
-                !0 === i.default.get("HAS_SEEN_HUB_UPSELL") ||
+                !0 === i.Storage.get("HAS_SEEN_HUB_UPSELL") ||
                 r.HotspotStore.hasHiddenHotspot(
                   r.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL
                 );
             return n && (t = E(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t;
           },
           cleanup() {
-            i.default.remove("HAS_SEEN_HUB_UPSELL");
+            i.Storage.remove("HAS_SEEN_HUB_UPSELL");
           },
         },
         {
@@ -47399,7 +47399,7 @@
                   ? u
                   : s.DebugSettings.create());
             let f =
-              null !== (d = i.default.get("UserSettingsStore")) && void 0 !== d
+              null !== (d = i.Storage.get("UserSettingsStore")) && void 0 !== d
                 ? d
                 : {};
             return (
@@ -47508,7 +47508,7 @@
           run: e => (
             r.HotspotStore.hasHiddenHotspot(
               r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP
-            ) && i.default.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"),
+            ) && i.Storage.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"),
             h(
               e,
               r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP,
@@ -47527,7 +47527,7 @@
                 s.DismissibleContent.CHANNEL_NOTICE_HUBLINK
               ),
               a =
-                null !== (t = i.default.get("channelNotices")) && void 0 !== t
+                null !== (t = i.Storage.get("channelNotices")) && void 0 !== t
                   ? t
                   : {};
             return (
@@ -47547,7 +47547,7 @@
             );
           },
           cleanup() {
-            i.default.remove("channelNotices");
+            i.Storage.remove("channelNotices");
           },
         },
         {
@@ -47580,26 +47580,26 @@
           run(e) {
             let t = !1;
             return (
-              i.default.get("hideNag") &&
+              i.Storage.get("hideNag") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) &&
                 (t = !0),
-              i.default.get("hideConnectSpotify") &&
+              i.Storage.get("hideConnectSpotify") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) &&
                 (t = !0),
-              i.default.get("hideConnectPlayStation") &&
+              i.Storage.get("hideConnectPlayStation") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) &&
                 (t = !0),
-              i.default.get("hideMFASMSNotice") &&
+              i.Storage.get("hideMFASMSNotice") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) &&
                 (t = !0),
               t
             );
           },
           cleanup() {
-            i.default.remove("hideNag"),
-              i.default.remove("hideConnectSpotify"),
-              i.default.remove("hideConnectPlayStation"),
-              i.default.remove("hideMFASMSNotice");
+            i.Storage.remove("hideNag"),
+              i.Storage.remove("hideConnectSpotify"),
+              i.Storage.remove("hideConnectPlayStation"),
+              i.Storage.remove("hideMFASMSNotice");
           },
         },
         {
@@ -47607,17 +47607,17 @@
           run(e) {
             let t = !1;
             return (
-              i.default.get("hidePremiumPromo") &&
+              i.Storage.get("hidePremiumPromo") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) &&
                 (t = !0),
-              i.default.get("hidePremiumTier2TrialEnding") &&
+              i.Storage.get("hidePremiumTier2TrialEnding") &&
                 E(
                   e,
                   s.DismissibleContent
                     .NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING
                 ) &&
                 (t = !0),
-              i.default.get("hidePremiumReactivateNotice") &&
+              i.Storage.get("hidePremiumReactivateNotice") &&
                 E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) &&
                 (t = !0),
               h(
@@ -47629,9 +47629,9 @@
             );
           },
           cleanup() {
-            i.default.remove("hidePremiumPromo"),
-              i.default.remove("hidePremiumTier2TrialEnding"),
-              i.default.remove("hidePremiumReactivateNotice");
+            i.Storage.remove("hidePremiumPromo"),
+              i.Storage.remove("hidePremiumTier2TrialEnding"),
+              i.Storage.remove("hidePremiumReactivateNotice");
           },
         },
         {
@@ -47657,7 +47657,7 @@
         {
           version: 16,
           run(e) {
-            let t = i.default.get("PromotionsPersistedStore");
+            let t = i.Storage.get("PromotionsPersistedStore");
             if (null == t) return !1;
             let n = t._state.lastDismissedOutboundPromotionStartDate;
             return (
@@ -47693,7 +47693,7 @@
             );
           },
           cleanup() {
-            i.default.remove("ExpressionSuggestionsPersistedStore");
+            i.Storage.remove("ExpressionSuggestionsPersistedStore");
           },
         },
         {
@@ -47722,7 +47722,7 @@
             var t;
             let n = !1,
               a =
-                null !== (t = i.default.get("forumHelperCardStorageKey")) &&
+                null !== (t = i.Storage.get("forumHelperCardStorageKey")) &&
                 void 0 !== t &&
                 t;
             return (
@@ -47730,7 +47730,7 @@
             );
           },
           cleanup() {
-            i.default.remove("forumHelperCardStorageKey");
+            i.Storage.remove("forumHelperCardStorageKey");
           },
         },
       ];
@@ -48350,7 +48350,7 @@
       let S = "ActivityTrackingStore",
         I = 30 * f.default.Millis.MINUTE,
         m = 5 * f.default.Millis.MINUTE,
-        p = null !== (a = l.default.get(S)) && void 0 !== a ? a : {},
+        p = null !== (a = l.Storage.get(S)) && void 0 !== a ? a : {},
         T = {},
         g = !1;
       function A(e) {
@@ -48360,7 +48360,7 @@
         let n = T[e.applicationId];
         null != n && (n.stop(), delete T[e.applicationId]),
           delete p[e.applicationId],
-          l.default.set(S, p);
+          l.Storage.set(S, p);
       }
       function N(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -48385,7 +48385,7 @@
         let s = T[e.applicationId];
         null == s &&
           (s = T[e.applicationId] = new i.Interval()).start(I, () => N(e)),
-          !t && ((p[e.applicationId] = e), l.default.set(S, p));
+          !t && ((p[e.applicationId] = e), l.Storage.set(S, p));
       }
       function R() {
         let e =
@@ -48438,13 +48438,13 @@
             let { applicationId: t, token: n } = e,
               a = p[t];
             if (null == a) return !1;
-            (a.token = n), l.default.set(S, p);
+            (a.token = n), l.Storage.set(S, p);
           },
           ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
               n = p[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), l.default.set(S, p);
+            (n.token = null), (n.updatedAt = null), l.Storage.set(S, p);
           },
         });
     },
@@ -48702,7 +48702,7 @@
         T = null,
         g = null,
         A = null,
-        N = o.default.get(h.ADVANCED_MODE_ON_KEY) || !1;
+        N = o.Storage.get(h.ADVANCED_MODE_ON_KEY) || !1;
       function R(e) {
         let t = e.getGuildId(),
           n = { ...e.permissionOverwrites };
@@ -48850,7 +48850,7 @@
         },
         CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE: function (e) {
           let { advancedMode: t } = e;
-          (N = t), o.default.set(h.ADVANCED_MODE_ON_KEY, t);
+          (N = t), o.Storage.set(h.ADVANCED_MODE_ON_KEY, t);
         },
       });
     },
@@ -49586,9 +49586,9 @@
           var e;
           this.waitFor(o.default, r.default, i.default),
             this.syncWith([o.default, r.default, i.default], u.NOOP),
-            s.default.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_100),
-            s.default.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_250),
-            (e = new Set(s.default.get(u.ChannelNoticeTypes.MAX_MEMBER_COUNT))),
+            s.Storage.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_100),
+            s.Storage.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_250),
+            (e = new Set(s.Storage.get(u.ChannelNoticeTypes.MAX_MEMBER_COUNT))),
             (d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT] =
               void 0 !== e ? e : new Set());
         }
@@ -49615,7 +49615,7 @@
           if (!d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t))
             return (
               d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t),
-              s.default.set(
+              s.Storage.set(
                 u.ChannelNoticeTypes.MAX_MEMBER_COUNT,
                 d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT]
               ),
@@ -50018,7 +50018,7 @@
         }
       }
       !(function () {
-        let e = s.default.get(f);
+        let e = s.Storage.get(f);
         if (null != e) (I = +e.x), (m = +e.y);
         else {
           let e = n("471671").default.windowSize();
@@ -50063,7 +50063,7 @@
         },
         INCOMING_CALL_MOVE: function (e) {
           let { x: t, y: n } = e;
-          return (I = t), (m = n), s.default.set(f, { x: I, y: m }), !1;
+          return (I = t), (m = n), s.Storage.set(f, { x: I, y: m }), !1;
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
@@ -53060,4 +53060,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7057f412584d672e9248.js.map
+//# sourceMappingURL=ad678777133941166bdc.js.map

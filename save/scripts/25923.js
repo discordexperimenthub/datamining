@@ -2567,7 +2567,7 @@
                   (0, c.isOptInEnabledForGuild)(a.id) &&
                   E.default.can(_.Permissions.MANAGE_CHANNELS, a)
                 ) {
-                  let e = "true" === s.default.get("doNotShowReorderModal");
+                  let e = "true" === s.Storage.get("doNotShowReorderModal");
                   return (
                     !e &&
                       (0, i.openModalLazy)(async () => {
@@ -10187,7 +10187,7 @@
                   L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE
                 )) === !0,
           v =
-            "false" === o.default.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"),
+            "false" === o.Storage.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"),
           O = (0, i.useStateFromStores)(
             [c.default],
             () => c.default.useReducedMotion
@@ -10272,7 +10272,7 @@
         let { guild: t, selected: a } = e,
           s = (0, p.useGuildShopPreviewVisible)(t, "guild_shop_channel_row"),
           i = () => {
-            o.default.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"),
+            o.Storage.set(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "true"),
               (0, g.transitionTo)(
                 L.Routes.CHANNEL(t.id, v.StaticChannelRoute.GUILD_SHOP)
               );
@@ -15311,7 +15311,7 @@
         if (null == n) return null;
         let z = B.default.Messages.DIRECT_MESSAGES;
         T &&
-          (z = r.default.get(w.DISCODO_STORAGE_KEY)
+          (z = r.Storage.get(w.DISCODO_STORAGE_KEY)
             ? B.default.Messages.DISCODO_ENABLED
             : B.default.Messages.DISCODO_DISABLED),
           Y.length > 0 && h.default.trackExposure({ location: "home_button" });
@@ -15341,8 +15341,8 @@
                   15 === x)
                 ) {
                   Z();
-                  let e = !r.default.get(w.DISCODO_STORAGE_KEY);
-                  r.default.set(w.DISCODO_STORAGE_KEY, e),
+                  let e = !r.Storage.get(w.DISCODO_STORAGE_KEY);
+                  r.Storage.set(w.DISCODO_STORAGE_KEY, e),
                     e
                       ? (0, b.playSound)("discodo")
                       : (0, b.playSound)("user_leave"),
@@ -21183,7 +21183,7 @@
                 WINDOW_HIDDEN: function () {
                   let e = (0, U.isWindows)(),
                     t = (0, U.isLinux)(),
-                    l = s.default.get(Y, !1),
+                    l = s.Storage.get(Y, !1),
                     a = !l && U.isPlatformEmbedded && (e || t);
                   if (!a) return !1;
                   let i = !1;
@@ -21203,7 +21203,7 @@
                             );
                           },
                           onShown: () => {
-                            s.default.set(Y, !0);
+                            s.Storage.set(Y, !0);
                           },
                         }
                       ),
@@ -21211,7 +21211,7 @@
                   );
                 },
                 LOGOUT: function () {
-                  return s.default.remove(Y), !1;
+                  return s.Storage.remove(Y), !1;
                 },
                 CONNECTION_OPEN: function (e) {
                   let { countryCode: t } = e;
@@ -23581,4 +23581,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3618f8d7febbceeef0a5.js.map
+//# sourceMappingURL=a85418a3b7bd138101f5.js.map

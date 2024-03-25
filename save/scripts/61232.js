@@ -14,12 +14,12 @@
         i = n("444095");
       r = class {
         _load() {
-          let e = i.default.get(this._key);
+          let e = i.SessionStorage.get(this._key);
           null != e && (this._set = new Set(e));
         }
         _persist() {
           let e = Array.from(this._set.values());
-          i.default.set(this._key, e);
+          i.SessionStorage.set(this._key, e);
         }
         add(e) {
           this._set.add(e),
@@ -812,4 +812,4 @@
     },
   },
 ]);
-//# sourceMappingURL=82e7170eae8fe54c20f8.js.map
+//# sourceMappingURL=21a9aa164bf1cdb5384c.js.map

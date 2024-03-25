@@ -195,7 +195,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return I;
           },
         });
       var a = n("866227"),
@@ -211,7 +211,7 @@
         N = n("229929"),
         E = n("49111"),
         m = n("994428"),
-        f = {
+        I = {
           init(e) {
             let { hasModalOpen: t, openModal: n } = e;
             !u.ProcessArgs.isDisallowPopupsSet() &&
@@ -226,8 +226,8 @@
                   m = !(0, r.isDismissibleContentDismissed)(
                     l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL
                   ),
-                  f = a || t() || u || !m;
-                !f &&
+                  I = a || t() || u || !m;
+                !I &&
                   (0, N.backToSchoolEnabled)() &&
                   (N.default.trackExposure({ location: "8b792a_1" }),
                   n(),
@@ -249,7 +249,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return I;
+            return f;
           },
         }),
         n("222007");
@@ -266,22 +266,22 @@
         N = n("49111"),
         E = n("782340"),
         m = n("406742");
-      let f = (0, u.uid)();
-      var I = e => {
+      let I = (0, u.uid)();
+      var f = e => {
         let {
             setStep: t,
             setGuildsInfo: n,
             email: l,
             setEmail: u,
-            setGuildId: I,
+            setGuildId: f,
             invite: C,
             onClose: T,
             isNUXFlow: S,
           } = e,
-          [h, g] = s.useState(null),
+          [g, h] = s.useState(null),
           [p, x] = s.useState(!1),
           v = async e => {
-            e.preventDefault(), g(null), x(!0);
+            e.preventDefault(), h(null), x(!0);
             try {
               var a, s, i, r, u;
               let e =
@@ -312,16 +312,16 @@
                 N = c.guilds_info,
                 E = c.has_matching_guild;
               E
-                ? (I(e), t(_.HubEmailConnectionSteps.VERIFY_PIN))
+                ? (f(e), t(_.HubEmailConnectionSteps.VERIFY_PIN))
                 : 0 === N.length
                   ? t(_.HubEmailConnectionSteps.SUBMIT_SCHOOL)
                   : 1 === N.length
-                    ? (I(N[0].id),
+                    ? (f(N[0].id),
                       await o.default.sendVerificationEmail(l, !0, N[0].id),
                       t(_.HubEmailConnectionSteps.VERIFY_PIN))
                     : (n(N), t(_.HubEmailConnectionSteps.SELECT_SCHOOL));
             } catch (e) {
-              g(new c.APIError(e));
+              h(new c.APIError(e));
             } finally {
               x(!1);
             }
@@ -368,7 +368,7 @@
                 (0, a.jsxs)(r.FormItem, {
                   children: [
                     (0, a.jsx)(r.FormTitle, {
-                      id: f,
+                      id: I,
                       children:
                         E.default.Messages
                           .HUB_EMAIL_CONNECTION_CONTENT_INPUT_HEADER,
@@ -380,8 +380,8 @@
                       onChange: e => {
                         u(e);
                       },
-                      error: null == h ? void 0 : h.getAnyErrorMessage(),
-                      "aria-labelledby": f,
+                      error: null == g ? void 0 : g.getAnyErrorMessage(),
+                      "aria-labelledby": I,
                     }),
                   ],
                 }),
@@ -452,10 +452,10 @@
               isNUXFlow: _,
             } = e,
             [N, E] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]),
-            [m, f] = s.useState(""),
-            [I, C] = s.useState(""),
+            [m, I] = s.useState(""),
+            [f, C] = s.useState(""),
             [T, S] = s.useState(void 0),
-            [h, g] = s.useState([]),
+            [g, h] = s.useState([]),
             p = e => {
               let t = N.concat(e);
               E(t.slice(-4));
@@ -464,10 +464,10 @@
           switch (x) {
             case d.HubEmailConnectionSteps.VERIFY_EMAIL:
               return (0, a.jsx)(l.default, {
-                setGuildsInfo: g,
+                setGuildsInfo: h,
                 setStep: p,
                 email: m,
-                setEmail: f,
+                setEmail: I,
                 setGuildId: S,
                 invite: n,
                 onClose: t,
@@ -475,7 +475,7 @@
               });
             case d.HubEmailConnectionSteps.SELECT_SCHOOL:
               return (0, a.jsx)(i.default, {
-                guildsInfo: h,
+                guildsInfo: g,
                 setStep: p,
                 email: m,
                 setGuildId: S,
@@ -491,7 +491,7 @@
                 },
                 setStep: p,
                 email: m,
-                school: I,
+                school: f,
                 setSchool: C,
               });
             case d.HubEmailConnectionSteps.VERIFY_PIN:
@@ -501,7 +501,7 @@
                 guildId: T,
               });
             case d.HubEmailConnectionSteps.EMAIL_WAITLIST:
-              return (0, a.jsx)(c.default, { setStep: p, school: I });
+              return (0, a.jsx)(c.default, { setStep: p, school: f });
             default:
               return null;
           }
@@ -512,7 +512,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return g;
+            return h;
           },
         }),
         n("222007");
@@ -529,17 +529,17 @@
         N = n("476263"),
         E = n("466857"),
         m = n("587974"),
-        f = n("315102"),
-        I = n("238055"),
+        I = n("315102"),
+        f = n("238055"),
         C = n("782340"),
         T = n("69012"),
         S = n("529861");
-      function h(e) {
+      function g(e) {
         var t;
         let { guildInfo: n, onClick: s, submitting: l } = e,
           i =
             null !==
-              (t = f.default.getGuildIconURL({
+              (t = I.default.getGuildIconURL({
                 id: n.id,
                 icon: n.icon,
                 size: 40,
@@ -572,7 +572,7 @@
           ],
         });
       }
-      var g = e => {
+      var h = e => {
         let {
             setStep: t,
             email: n,
@@ -581,25 +581,25 @@
             forceGuildScrollHeight: _,
           } = e,
           [N, m] = s.useState(null),
-          [f, S] = s.useState(void 0),
-          [g, p] = s.useState(null),
+          [I, S] = s.useState(void 0),
+          [h, p] = s.useState(null),
           x = e => async () => {
             m(null), r(e), p(e);
             try {
               await d.default.sendVerificationEmail(n, !0, e),
-                t(I.HubEmailConnectionSteps.VERIFY_PIN);
+                t(f.HubEmailConnectionSteps.VERIFY_PIN);
             } catch (e) {
               m(new u.APIError(e));
             } finally {
               p(null);
             }
           },
-          v = () => t(I.HubEmailConnectionSteps.SUBMIT_SCHOOL),
+          v = () => t(f.HubEmailConnectionSteps.SUBMIT_SCHOOL),
           A = l;
         return (
-          null != f &&
-            "" !== f &&
-            (A = l.filter(e => o(f.toLowerCase(), e.name.toLowerCase()))),
+          null != I &&
+            "" !== I &&
+            (A = l.filter(e => o(I.toLowerCase(), e.name.toLowerCase()))),
           (0, a.jsxs)("div", {
             className: T.container,
             children: [
@@ -637,7 +637,7 @@
                           S(e);
                         },
                         label: C.default.Messages.SEARCH,
-                        searchTerm: f,
+                        searchTerm: I,
                         onClear: () => {
                           S(void 0);
                         },
@@ -656,11 +656,11 @@
                           void 0 === e
                             ? null
                             : (0, a.jsx)(
-                                h,
+                                g,
                                 {
                                   guildInfo: e,
                                   onClick: x(e.id),
-                                  submitting: g === e.id,
+                                  submitting: h === e.id,
                                 },
                                 e.id
                               )
@@ -822,7 +822,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return I;
           },
         }),
         n("222007");
@@ -839,11 +839,11 @@
         N = n("782340"),
         E = n("291115");
       let m = (0, d.uid)();
-      var f = e => {
-        let { email: t, setStep: n, onBack: l, school: d, setSchool: f } = e,
-          [I, C] = s.useState(null),
+      var I = e => {
+        let { email: t, setStep: n, onBack: l, school: d, setSchool: I } = e,
+          [f, C] = s.useState(null),
           [T, S] = s.useState(!1),
-          h = async () => {
+          g = async () => {
             C(null), S(!0);
             try {
               await o.default.signup(t, d),
@@ -854,11 +854,11 @@
               S(!1);
             }
           },
-          g = async e => {
+          h = async e => {
             null != d &&
               "" !== d &&
               e.charCode === _.KeyboardKeys.ENTER &&
-              (await h());
+              (await g());
           };
         return (0, a.jsxs)("div", {
           className: E.container,
@@ -891,14 +891,14 @@
                       .HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER,
                 }),
                 (0, a.jsx)(r.TextInput, {
-                  onKeyPress: g,
+                  onKeyPress: h,
                   placeholder:
                     N.default.Messages
                       .HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
                   onChange: e => {
-                    f(e);
+                    I(e);
                   },
-                  error: null == I ? void 0 : I.getAnyErrorMessage(),
+                  error: null == f ? void 0 : f.getAnyErrorMessage(),
                   "aria-labelledby": m,
                 }),
               ],
@@ -915,7 +915,7 @@
                   children: N.default.Messages.BACK,
                 }),
                 (0, a.jsx)(r.Button, {
-                  onClick: h,
+                  onClick: g,
                   size: r.Button.Sizes.MEDIUM,
                   color: r.Button.Colors.BRAND,
                   className: E.submitButton,
@@ -950,8 +950,8 @@
         N = n("476765"),
         E = n("49111"),
         m = n("782340"),
-        f = n("398096");
-      let I = (0, N.uid)();
+        I = n("398096");
+      let f = (0, N.uid)();
       var C = e => {
         let { email: t, guildId: n, onClose: l } = e,
           [r, N] = s.useState(""),
@@ -967,50 +967,50 @@
                 T(new u.APIError(e));
               }
           }, [r, t, n, l]),
-          h = o.throttle(() => {
+          g = o.throttle(() => {
             d.default.sendVerificationEmail(t, !0, n);
           }, 1e3),
-          g = async e => {
+          h = async e => {
             null != r &&
               "" !== r &&
               e.charCode === E.KeyboardKeys.ENTER &&
               (await S());
           };
         return (0, a.jsxs)("div", {
-          className: f.container,
+          className: I.container,
           children: [
-            (0, a.jsx)("div", { className: f.topImage }),
+            (0, a.jsx)("div", { className: I.topImage }),
             (0, a.jsx)(c.Heading, {
-              className: i(f.centerText, f.header),
+              className: i(I.centerText, I.header),
               variant: "heading-xl/semibold",
               children: m.default.Messages.HUB_VERIFY_EMAIL_ADDRESS,
             }),
             (0, a.jsx)("div", {
-              className: f.descriptionWidth,
+              className: I.descriptionWidth,
               children: (0, a.jsx)(c.Text, {
-                className: f.centerText,
+                className: I.centerText,
                 variant: "text-sm/normal",
                 color: "header-secondary",
                 children: m.default.Messages.HUB_PIN_DESCRIPTION.format({
                   email: t,
-                  onClick: h,
+                  onClick: g,
                 }),
               }),
             }),
             (0, a.jsxs)(c.FormItem, {
-              className: f.formItem,
+              className: I.formItem,
               children: [
                 (0, a.jsx)(c.FormTitle, {
-                  id: I,
+                  id: f,
                   children: m.default.Messages.HUB_ENTER_PIN,
                 }),
                 (0, a.jsx)(c.TextInput, {
-                  onKeyPress: g,
+                  onKeyPress: h,
                   onChange: e => {
                     null != e && "" !== e && N(e);
                   },
                   error: null == C ? void 0 : C.getAnyErrorMessage(),
-                  "aria-labelledby": I,
+                  "aria-labelledby": f,
                 }),
               ],
             }),
@@ -1020,7 +1020,7 @@
               size: c.Button.Sizes.LARGE,
               color: c.Button.Colors.BRAND,
               children: (0, a.jsx)(c.Text, {
-                className: f.submitText,
+                className: I.submitText,
                 variant: "text-sm/normal",
                 children: m.default.Messages.SUBMIT,
               }),
@@ -1131,7 +1131,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return f;
+            return I;
           },
         });
       var a = n("308503"),
@@ -1144,7 +1144,7 @@
         d = "UserFlowAnalyticsStore";
       function u(e) {
         if (e === r.FlowType.UNKNOWN) return null;
-        let t = s.default.get("".concat(d, "-").concat(e));
+        let t = s.Storage.get("".concat(d, "-").concat(e));
         if (null == t) return null;
         let { version: n, ...a } = t;
         return 1 !== n ? null : a;
@@ -1158,7 +1158,7 @@
           let n =
             null !== (e = t().currentFlow) && void 0 !== e
               ? e
-              : s.default.get(c);
+              : s.Storage.get(c);
           if (null == n) return null;
           let { [n]: a } = t().flows,
             l = null != a ? a : u(n);
@@ -1222,12 +1222,12 @@
               if (e.type === r.FlowType.UNKNOWN) return;
               let t = "".concat(d, "-").concat(e.type);
               e.ended
-                ? (s.default.remove(t), s.default.remove(c))
-                : (s.default.set("".concat(d, "-").concat(e.type), {
+                ? (s.Storage.remove(t), s.Storage.remove(c))
+                : (s.Storage.set("".concat(d, "-").concat(e.type), {
                     ...e,
                     version: 1,
                   }),
-                  s.default.set(c, e.type));
+                  s.Storage.set(c, e.type));
             })(e),
             i.default.track(
               o.AnalyticEvents.NUO_TRANSITION,
@@ -1258,7 +1258,7 @@
       function m() {
         return null != _.getState().activeFlow();
       }
-      var f = {
+      var I = {
         flowStart: N,
         flowStepOrStart: function (e, t) {
           m() ? E(e, t) : N(e, t);
@@ -1269,4 +1269,4 @@
     },
   },
 ]);
-//# sourceMappingURL=0bfd328b1d0ffb72c805.js.map
+//# sourceMappingURL=be50ea6b53f7a229ec65.js.map

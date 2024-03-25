@@ -17,13 +17,13 @@
             return T;
           },
           accountDetailsClose: function () {
-            return p;
+            return S;
           },
           disableAccount: function () {
-            return A;
+            return p;
           },
           saveAccountRequest: function () {
-            return S;
+            return A;
           },
           saveAccountChanges: function () {
             return N;
@@ -35,10 +35,10 @@
             return m;
           },
           setPendingAvatar: function () {
-            return I;
+            return g;
           },
           setPendingGlobalNameName: function () {
-            return g;
+            return I;
           },
           setPendingAvatarDecoration: function () {
             return U;
@@ -62,8 +62,8 @@
             return D;
           },
         });
-      var l = n("872717"),
-        o = n("95410"),
+      var o = n("872717"),
+        l = n("95410"),
         a = n("819855"),
         r = n("913144"),
         s = n("393414"),
@@ -77,18 +77,18 @@
       function T() {
         r.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_INIT" });
       }
-      function p() {
+      function S() {
         r.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_CLOSE" });
       }
-      function A(t, e) {
+      function p(t, e) {
         let n = e
             ? E.default.Messages.DELETE_ACCOUNT
             : E.default.Messages.DISABLE_ACCOUNT,
-          o = e ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
+          l = e ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
         return (0, c.default)(
           e =>
-            l.HTTP.post({
-              url: o,
+            o.HTTP.post({
+              url: l,
               body: { password: t, ...e },
               oldFormErrors: !0,
             }),
@@ -98,8 +98,8 @@
             (0, s.transitionTo)(_.Routes.DEFAULT_LOGGED_OUT);
         });
       }
-      async function S(t) {
-        let e = await l.HTTP.patch({
+      async function A(t) {
+        let e = await o.HTTP.patch({
             url: _.Endpoints.ME,
             oldFormErrors: !0,
             body: t,
@@ -123,13 +123,13 @@
         let {
           username: e,
           discriminator: n,
-          email: l,
+          email: o,
           emailToken: a,
           password: s,
           avatar: d,
           avatarDecoration: T,
-          newPassword: p,
-          globalName: A,
+          newPassword: S,
+          globalName: p,
         } = t;
         return (
           r.default.dispatch({ type: "USER_SETTINGS_ACCOUNT_SUBMIT" }),
@@ -137,31 +137,31 @@
             t => {
               let r = {
                 username: e,
-                email: l,
+                email: o,
                 email_token: a,
                 password: s,
                 avatar: d,
                 discriminator: n,
-                global_name: A,
-                new_password: p,
+                global_name: p,
+                new_password: S,
                 ...t,
               };
               null === T && (r.avatar_decoration_id = null),
                 null != T &&
                   ((r.avatar_decoration_id = T.id),
                   (r.avatar_decoration_sku_id = T.skuId));
-              let u = o.default.get(_.DEVICE_TOKEN),
+              let u = l.Storage.get(_.DEVICE_TOKEN),
                 i = (0, f.getDevicePushProvider)();
               null != i &&
                 null != u &&
                 ((r.push_provider = i), (r.push_token = u));
-              let c = o.default.get(_.DEVICE_VOIP_TOKEN);
+              let c = l.Storage.get(_.DEVICE_VOIP_TOKEN);
               return (
                 null != f.DEVICE_PUSH_VOIP_PROVIDER &&
                   null != c &&
                   ((r.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER),
                   (r.push_voip_token = c)),
-                S(r)
+                A(r)
               );
             },
             {
@@ -199,15 +199,15 @@
         );
       }
       function C() {
-        return l.HTTP.get({ url: _.Endpoints.USER_HARVEST, oldFormErrors: !0 });
+        return o.HTTP.get({ url: _.Endpoints.USER_HARVEST, oldFormErrors: !0 });
       }
       function m() {
-        return l.HTTP.post({
+        return o.HTTP.post({
           url: _.Endpoints.USER_HARVEST,
           oldFormErrors: !0,
         });
       }
-      function I(t) {
+      function g(t) {
         r.default.dispatch({
           type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
           avatar: t,
@@ -220,7 +220,7 @@
                 E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED
               );
       }
-      function g(t) {
+      function I(t) {
         r.default.dispatch({
           type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
           globalName: t,
@@ -270,8 +270,8 @@
           },
         }),
         n("222007");
-      var l = n("37983"),
-        o = n("884691"),
+      var o = n("37983"),
+        l = n("884691"),
         a = n("414456"),
         r = n.n(a),
         s = n("77078"),
@@ -283,9 +283,9 @@
         f = n("98013"),
         E = n("439932"),
         T = n("49111"),
-        p = n("149806"),
-        A = n("782340"),
-        S = n("314238");
+        S = n("149806"),
+        p = n("782340"),
+        A = n("314238");
       function N(t) {
         let {
             email: e,
@@ -294,15 +294,15 @@
             onSuccess: _,
             onClose: f,
           } = t,
-          [N, C] = o.useState(),
-          [m, I] = o.useState(""),
-          [g, U] = o.useState(""),
-          [O, R] = o.useState(!1);
-        o.useEffect(
+          [N, C] = l.useState(),
+          [m, g] = l.useState(""),
+          [I, U] = l.useState(""),
+          [O, R] = l.useState(!1);
+        l.useEffect(
           () =>
             c.default.flowStep(
-              p.FlowType.ANY,
-              p.ClaimAccountSteps.CLAIM_ACCOUNT
+              S.FlowType.ANY,
+              S.ClaimAccountSteps.CLAIM_ACCOUNT
             ),
           []
         );
@@ -313,7 +313,7 @@
               R(!1),
               _();
           } catch (t) {
-            var n, l;
+            var n, o;
             (null == t
               ? void 0
               : null === (n = t.body) || void 0 === n
@@ -321,83 +321,83 @@
                 : n.email) && C(t.body.email),
               (null == t
                 ? void 0
-                : null === (l = t.body) || void 0 === l
+                : null === (o = t.body) || void 0 === o
                   ? void 0
-                  : l.password) && U(t.body.password),
+                  : o.password) && U(t.body.password),
               R(!1);
           }
         };
-        return (0, l.jsxs)("div", {
-          className: r(S.modalLight, (0, E.getThemeClass)(T.ThemeTypes.LIGHT)),
+        return (0, o.jsxs)("div", {
+          className: r(A.modalLight, (0, E.getThemeClass)(T.ThemeTypes.LIGHT)),
           children: [
-            (0, l.jsxs)(s.ModalHeader, {
-              className: S.formHeader,
+            (0, o.jsxs)(s.ModalHeader, {
+              className: A.formHeader,
               direction: d.default.Direction.VERTICAL,
               separator: !1,
               children: [
-                (0, l.jsx)("div", { className: S.formImage }),
-                (0, l.jsx)(s.Heading, {
-                  className: S.formTitle,
+                (0, o.jsx)("div", { className: A.formImage }),
+                (0, o.jsx)(s.Heading, {
+                  className: A.formTitle,
                   variant: "heading-xl/semibold",
-                  children: A.default.Messages.FINISH_SIGNING_UP,
+                  children: p.default.Messages.FINISH_SIGNING_UP,
                 }),
-                (0, l.jsx)(s.Text, {
-                  className: S.formBody,
+                (0, o.jsx)(s.Text, {
+                  className: A.formBody,
                   variant: "text-md/normal",
                   color: "header-secondary",
                   children: a
-                    ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY
-                    : A.default.Messages.CLAIM_ACCOUNT_BODY_2,
+                    ? p.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY
+                    : p.default.Messages.CLAIM_ACCOUNT_BODY_2,
                 }),
-                (0, l.jsx)(s.ModalCloseButton, {
-                  className: S.closeButton,
+                (0, o.jsx)(s.ModalCloseButton, {
+                  className: A.closeButton,
                   onClick: f,
                 }),
               ],
             }),
-            (0, l.jsx)(s.ModalContent, {
-              children: (0, l.jsxs)("form", {
-                className: S.formContent,
+            (0, o.jsx)(s.ModalContent, {
+              children: (0, o.jsxs)("form", {
+                className: A.formContent,
                 onSubmit: h,
                 children: [
-                  (0, l.jsx)(s.FormItem, {
-                    title: A.default.Messages.FORM_LABEL_EMAIL,
-                    className: S.formItem,
-                    children: (0, l.jsx)(s.TextInput, {
+                  (0, o.jsx)(s.FormItem, {
+                    title: p.default.Messages.FORM_LABEL_EMAIL,
+                    className: A.formItem,
+                    children: (0, o.jsx)(s.TextInput, {
                       value: e,
                       error: N,
                       onChange: t => n(t),
                       autoFocus: !0,
                     }),
                   }),
-                  (0, l.jsx)(s.FormItem, {
-                    title: A.default.Messages.FORM_LABEL_PASSWORD,
-                    className: S.formItem,
-                    children: (0, l.jsx)(s.TextInput, {
+                  (0, o.jsx)(s.FormItem, {
+                    title: p.default.Messages.FORM_LABEL_PASSWORD,
+                    className: A.formItem,
+                    children: (0, o.jsx)(s.TextInput, {
                       type: "password",
                       value: m,
-                      error: g,
-                      onChange: t => I(t),
+                      error: I,
+                      onChange: t => g(t),
                     }),
                   }),
-                  (0, l.jsx)(s.Button, {
+                  (0, o.jsx)(s.Button, {
                     type: "submit",
                     size: s.Button.Sizes.LARGE,
                     fullWidth: !0,
                     submitting: O,
                     disabled: 0 === e.length || 0 === m.length,
-                    children: A.default.Messages.CLAIM_ACCOUNT,
+                    children: p.default.Messages.CLAIM_ACCOUNT,
                   }),
                   a &&
-                    (0, l.jsx)(s.Button, {
-                      className: S.logoutButton,
+                    (0, o.jsx)(s.Button, {
+                      className: A.logoutButton,
                       color: s.Button.Colors.PRIMARY,
                       look: s.Button.Looks.LINK,
                       size: s.Button.Sizes.NONE,
                       onClick: () => {
                         u.default.logout(), f();
                       },
-                      children: A.default.Messages.LOGOUT,
+                      children: p.default.Messages.LOGOUT,
                     }),
                 ],
               }),
@@ -408,8 +408,8 @@
       function C(t) {
         let { email: e, claimRequired: n, onClose: a } = t,
           u = n
-            ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO
-            : A.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
+            ? p.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO
+            : p.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
         function i() {
           window.open((0, f.getCurrentPlatformDownloadURL)(), "_blank"),
             _.default.track(T.AnalyticEvents.DOWNLOAD_APP, {
@@ -422,58 +422,58 @@
             });
         }
         return (
-          o.useEffect(
+          l.useEffect(
             () =>
               c.default.flowStep(
-                p.FlowType.ANY,
-                p.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS
+                S.FlowType.ANY,
+                S.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS
               ),
             []
           ),
-          (0, l.jsxs)("div", {
+          (0, o.jsxs)("div", {
             className: r(
-              S.modalLight,
+              A.modalLight,
               (0, E.getThemeClass)(T.ThemeTypes.LIGHT)
             ),
             children: [
-              (0, l.jsxs)(s.ModalContent, {
-                className: S.successContent,
+              (0, o.jsxs)(s.ModalContent, {
+                className: A.successContent,
                 children: [
                   !n &&
-                    (0, l.jsx)(s.ModalCloseButton, {
-                      className: S.closeButton,
+                    (0, o.jsx)(s.ModalCloseButton, {
+                      className: A.closeButton,
                       onClick: a,
                     }),
-                  (0, l.jsx)("div", { className: S.successImage }),
-                  (0, l.jsx)(s.Text, {
-                    className: S.successTitle,
+                  (0, o.jsx)("div", { className: A.successImage }),
+                  (0, o.jsx)(s.Text, {
+                    className: A.successTitle,
                     variant: "text-lg/semibold",
                     children: u.format({ email: e }),
                   }),
-                  (0, l.jsx)(s.Text, {
-                    className: S.successPromotion,
+                  (0, o.jsx)(s.Text, {
+                    className: A.successPromotion,
                     variant: "text-md/normal",
                     children:
-                      A.default.Messages.CLAIM_ACCOUNT_PROMOTE_APP_2021_04,
+                      p.default.Messages.CLAIM_ACCOUNT_PROMOTE_APP_2021_04,
                   }),
                 ],
               }),
               n
-                ? (0, l.jsx)(s.ModalFooter, {
+                ? (0, o.jsx)(s.ModalFooter, {
                     direction: d.default.Direction.VERTICAL,
-                    children: (0, l.jsx)(s.Button, {
+                    children: (0, o.jsx)(s.Button, {
                       size: s.Button.Sizes.LARGE,
                       onClick: a,
-                      children: A.default.Messages.OKAY,
+                      children: p.default.Messages.OKAY,
                     }),
                   })
-                : (0, l.jsx)(s.ModalFooter, {
+                : (0, o.jsx)(s.ModalFooter, {
                     direction: d.default.Direction.VERTICAL,
-                    children: (0, l.jsx)(s.Button, {
+                    children: (0, o.jsx)(s.Button, {
                       color: s.Button.Colors.BRAND,
                       size: s.Button.Sizes.LARGE,
                       onClick: i,
-                      children: A.default.Messages.CLAIM_ACCOUNT_GET_APP,
+                      children: p.default.Messages.CLAIM_ACCOUNT_GET_APP,
                     }),
                   }),
             ],
@@ -482,20 +482,20 @@
       }
       function m(t) {
         let { onClose: e, transitionState: n, claimRequired: a = !1 } = t,
-          [r, u] = o.useState(""),
-          [i, c] = o.useState(!1);
+          [r, u] = l.useState(""),
+          [i, c] = l.useState(!1);
         return i
-          ? (0, l.jsx)(s.ModalRoot, {
+          ? (0, o.jsx)(s.ModalRoot, {
               transitionState: n,
-              children: (0, l.jsx)(C, {
+              children: (0, o.jsx)(C, {
                 email: r,
                 claimRequired: a,
                 onClose: e,
               }),
             })
-          : (0, l.jsx)(s.ModalRoot, {
+          : (0, o.jsx)(s.ModalRoot, {
               transitionState: n,
-              children: (0, l.jsx)(N, {
+              children: (0, o.jsx)(N, {
                 email: r,
                 setEmail: u,
                 claimRequired: a,
@@ -507,14 +507,14 @@
     },
     149806: function (t, e, n) {
       "use strict";
-      var l, o, a, r, s, u, i, c, d, _;
+      var o, l, a, r, s, u, i, c, d, _;
       n.r(e),
         n.d(e, {
           FlowType: function () {
-            return l;
+            return o;
           },
           AgeGateSteps: function () {
-            return o;
+            return l;
           },
           ClaimAccountSteps: function () {
             return a;
@@ -526,14 +526,14 @@
             return s;
           },
         }),
-        ((u = l || (l = {})).UNKNOWN = "unknown"),
+        ((u = o || (o = {})).UNKNOWN = "unknown"),
         (u.ANY = "any"),
         (u.INVITE = "invite"),
         (u.ORGANIC = "organic_registration"),
         (u.ORGANIC_MARKETING = "organic_marketing"),
         (u.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
         (u.CREATE_GUILD = "create_guild"),
-        ((i = o || (o = {})).AGE_GATE = "age_gate"),
+        ((i = l || (l = {})).AGE_GATE = "age_gate"),
         (i.AGE_GATE_UNDERAGE = "age_gate_underage"),
         ((c = a || (a = {})).CLAIM_ACCOUNT = "claim_account"),
         (c.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"),
@@ -553,11 +553,11 @@
       n.r(e),
         n.d(e, {
           default: function () {
-            return p;
+            return S;
           },
         });
-      var l = n("308503"),
-        o = n("95410"),
+      var o = n("308503"),
+        l = n("95410"),
         a = n("605250"),
         r = n("599110"),
         s = n("149806"),
@@ -566,13 +566,13 @@
         c = "UserFlowAnalyticsStore";
       function d(t) {
         if (t === s.FlowType.UNKNOWN) return null;
-        let e = o.default.get("".concat(c, "-").concat(t));
+        let e = l.Storage.get("".concat(c, "-").concat(t));
         if (null == e) return null;
-        let { version: n, ...l } = e;
-        return 1 !== n ? null : l;
+        let { version: n, ...o } = e;
+        return 1 !== n ? null : o;
       }
       new a.default("UserFlowAnalytics");
-      let _ = (0, l.default)((t, e) => ({
+      let _ = (0, o.default)((t, e) => ({
         flows: {},
         currentFlow: null,
         activeFlow: () => {
@@ -580,20 +580,20 @@
           let n =
             null !== (t = e().currentFlow) && void 0 !== t
               ? t
-              : o.default.get(i);
+              : l.Storage.get(i);
           if (null == n) return null;
-          let { [n]: l } = e().flows,
-            a = null != l ? l : d(n);
+          let { [n]: o } = e().flows,
+            a = null != o ? o : d(n);
           return (null == a ? void 0 : a.currentStep) != null ? n : null;
         },
       }));
       function f(t, e) {
-        let { [t]: n, ...l } = _.getState().flows,
-          o = null != n ? n : d(t);
-        if ((null == o ? void 0 : o.currentStep) == null || o.currentStep !== e)
+        let { [t]: n, ...o } = _.getState().flows,
+          l = null != n ? n : d(t);
+        if ((null == l ? void 0 : l.currentStep) == null || l.currentStep !== e)
           _.setState({
             flows: {
-              ...l,
+              ...o,
               [t]: {
                 type: t,
                 lastStep: null,
@@ -608,22 +608,22 @@
       }
       function E(t, e) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          l = t;
+          o = t;
         if (t === s.FlowType.ANY) {
-          var o;
-          l =
-            null !== (o = _.getState().activeFlow()) && void 0 !== o
-              ? o
+          var l;
+          o =
+            null !== (l = _.getState().activeFlow()) && void 0 !== l
+              ? l
               : s.FlowType.UNKNOWN;
         }
-        let { [l]: a, ...r } = _.getState().flows,
-          u = null != a ? a : d(l);
+        let { [o]: a, ...r } = _.getState().flows,
+          u = null != a ? a : d(o);
         if (null != u && null != u.currentStep)
           u.currentStep !== e &&
             _.setState({
               flows: {
                 ...r,
-                [l]: {
+                [o]: {
                   ...u,
                   lastStep: u.currentStep,
                   lastTimestamp: u.currentTimestamp,
@@ -632,7 +632,7 @@
                   ended: n,
                 },
               },
-              currentFlow: l,
+              currentFlow: o,
             });
       }
       _.subscribe(
@@ -644,12 +644,12 @@
               if (t.type === s.FlowType.UNKNOWN) return;
               let e = "".concat(c, "-").concat(t.type);
               t.ended
-                ? (o.default.remove(e), o.default.remove(i))
-                : (o.default.set("".concat(c, "-").concat(t.type), {
+                ? (l.Storage.remove(e), l.Storage.remove(i))
+                : (l.Storage.set("".concat(c, "-").concat(t.type), {
                     ...t,
                     version: 1,
                   }),
-                  o.default.set(i, t.type));
+                  l.Storage.set(i, t.type));
             })(t),
             r.default.track(
               u.AnalyticEvents.NUO_TRANSITION,
@@ -680,7 +680,7 @@
       function T() {
         return null != _.getState().activeFlow();
       }
-      var p = {
+      var S = {
         flowStart: f,
         flowStepOrStart: function (t, e) {
           T() ? E(t, e) : f(t, e);
@@ -706,8 +706,8 @@
             return f;
           },
         });
-      var l = n("597755"),
-        o = n.n(l),
+      var o = n("597755"),
+        l = n.n(o),
         a = n("815157"),
         r = n("271938"),
         s = n("49111");
@@ -726,7 +726,7 @@
         let e =
           arguments.length > 0 && void 0 !== arguments[0]
             ? arguments[0]
-            : null === (t = o.os) || void 0 === t
+            : null === (t = l.os) || void 0 === t
               ? void 0
               : t.family;
         return null == e
@@ -750,12 +750,12 @@
         return i(t, !1, t === u ? "tar.gz" : null);
       }
       function f(t, e, n) {
-        let l = null != n ? n.toString() : null;
+        let o = null != n ? n.toString() : null;
         switch (e) {
           case "iOS":
             return (0, a.default)(
-              null != l
-                ? l
+              null != o
+                ? o
                 : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746",
               {
                 utmSource: t,
@@ -765,7 +765,7 @@
             );
           case "Android":
             return (0, a.default)(
-              null != l ? l : "https://play.google.com/store/apps/details",
+              null != o ? o : "https://play.google.com/store/apps/details",
               {
                 utmSource: t,
                 id: "com.discord",
@@ -774,10 +774,10 @@
               }
             );
           default:
-            return null != l ? l : "https://www.discord.com";
+            return null != o ? o : "https://www.discord.com";
         }
       }
     },
   },
 ]);
-//# sourceMappingURL=c4c1f9639d0540dcdac1.js.map
+//# sourceMappingURL=c4ab6ac18125242d564c.js.map

@@ -374,13 +374,13 @@
               if (null == a) {
                 var t;
                 a =
-                  null !== (t = i.default.get(D, {})) && void 0 !== t ? t : {};
+                  null !== (t = i.Storage.get(D, {})) && void 0 !== t ? t : {};
               }
               if (e in a) return !1;
               a[e] = Date.now();
               let l = Date.now() - v;
               for (let e in a) a[e] < l && delete a[e];
-              return i.default.set(D, a), !0;
+              return i.Storage.set(D, a), !0;
             })(l)
           )
             b.log("Jumping to start of thread ".concat(S.id)),
@@ -1406,4 +1406,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a8574797d916d536a1cb.js.map
+//# sourceMappingURL=c3440d2c63db4f32f0d1.js.map

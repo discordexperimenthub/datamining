@@ -435,7 +435,7 @@
           r.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE
         ),
         N = "start_application_subscription",
-        R = e => {
+        S = e => {
           let { listing: t } = e,
             n = t.image_asset;
           if (null == n) return null;
@@ -448,7 +448,7 @@
             }),
           });
         },
-        S = e => {
+        R = e => {
           let { children: t } = e;
           return (0, s.jsx)(u.Button, {
             look: u.Button.Looks.OUTLINED,
@@ -506,7 +506,7 @@
               (0, s.jsxs)("div", {
                 className: A.cardHeader,
                 children: [
-                  (0, s.jsx)(R, { listing: t }),
+                  (0, s.jsx)(S, { listing: t }),
                   (0, s.jsx)(u.Text, {
                     variant: "text-lg/medium",
                     color: "interactive-active",
@@ -530,7 +530,7 @@
                       (() => {
                         var e;
                         if (w)
-                          return (0, s.jsx)(S, {
+                          return (0, s.jsx)(R, {
                             children:
                               (null == x ? void 0 : x.status) ===
                               C.SubscriptionStatusTypes.CANCELED
@@ -541,7 +541,7 @@
                           });
                         if (b)
                           return null == P
-                            ? (0, s.jsx)(S, {
+                            ? (0, s.jsx)(R, {
                                 children:
                                   m.default.Messages
                                     .APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL,
@@ -928,8 +928,8 @@
         (c.persistKey = "DefaultRouteStore"),
         (c.migrations = [
           () => {
-            let e = i.default.get(o, null);
-            return i.default.remove(o), { lastViewedPath: e };
+            let e = i.Storage.get(o, null);
+            return i.Storage.remove(o), { lastViewedPath: e };
           },
         ]);
       var d = new c(a.default, {
@@ -974,7 +974,7 @@
         g = n("299039"),
         N = n("724210");
       ((r = l || (l = {})).DEFAULT = "DEFAULT"), (r.FAVORITE = "FAVORITE");
-      let R = new d.SecondaryIndexMap(
+      let S = new d.SecondaryIndexMap(
         e => {
           let { isRequest: t, isFavorite: n } = e;
           return t ? [] : [n ? "FAVORITE" : "DEFAULT"];
@@ -984,7 +984,7 @@
           return -t;
         }
       );
-      function S(e) {
+      function R(e) {
         let t =
           arguments.length > 1 && void 0 !== arguments[1]
             ? arguments[1]
@@ -1017,9 +1017,9 @@
         };
       }
       function L() {
-        R.clear(),
+        S.clear(),
           Object.values(_.default.getMutablePrivateChannels()).forEach(e => {
-            R.set(e.id, S(e));
+            S.set(e.id, R(e));
           }),
           (0, p.isInMainTabsExperiment)() &&
             (0, h.isSplitMessagesTab)() &&
@@ -1027,20 +1027,20 @@
               let t = _.default.getChannel(e);
               null != t &&
                 (0, E.isGuildTextChannelType)(t.type) &&
-                R.set(t.id, S(t));
+                S.set(t.id, R(t));
             });
       }
       function x() {
         let e = _.default.getMutablePrivateChannels();
-        for (let t in e) R.set(t, S(e[t]));
+        for (let t in e) S.set(t, R(e[t]));
       }
       let P =
         ((s = []),
         (i = []),
         (a = []),
         () => {
-          let e = R.values("FAVORITE"),
-            t = R.values("DEFAULT");
+          let e = S.values("FAVORITE"),
+            t = S.values("DEFAULT");
           return (
             (s !== e || i !== t) &&
               ((a = []),
@@ -1066,12 +1066,12 @@
           return P();
         }
         getSortedChannels() {
-          return [R.values("FAVORITE"), R.values("DEFAULT")];
+          return [S.values("FAVORITE"), S.values("DEFAULT")];
         }
         serializeForOverlay() {
           let e = {};
           return (
-            R.values().forEach(t => {
+            S.values().forEach(t => {
               let { channelId: n, lastMessageId: s } = t;
               e[n] = s;
             }),
@@ -1089,7 +1089,7 @@
         CHANNEL_UPDATES: function (e) {
           let { channels: t } = e;
           t.forEach(e => {
-            ((0, E.isPrivate)(e.type) || R.has(e.id)) && R.set(e.id, S(e));
+            ((0, E.isPrivate)(e.type) || S.has(e.id)) && S.set(e.id, R(e));
           });
         },
         CHANNEL_CREATE: function (e) {
@@ -1099,24 +1099,24 @@
             t.id === N.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID
           )
             return !1;
-          R.set(t.id, S(t));
+          S.set(t.id, R(t));
         },
         CHANNEL_DELETE: function (e) {
           let { channel: t } = e;
-          return R.delete(t.id);
+          return S.delete(t.id);
         },
         MESSAGE_CREATE: function (e) {
           let { channelId: t, message: n } = e;
-          if (!R.has(t)) return !1;
+          if (!S.has(t)) return !1;
           let s = _.default.getChannel(t);
-          return null != s && R.set(t, S(s, n.id));
+          return null != s && S.set(t, R(s, n.id));
         },
         GUILD_CREATE: function (e) {
           let t = e.guild.id;
-          return R.delete(t);
+          return S.delete(t);
         },
         LOGOUT: function () {
-          R.clear();
+          S.clear();
         },
       });
     },
@@ -1725,4 +1725,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3387940c8718011b770b.js.map
+//# sourceMappingURL=15899a55e0683e9d6b37.js.map

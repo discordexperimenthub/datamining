@@ -1454,12 +1454,12 @@
       }
       function R(e, r) {
         let [t, a] = i.useState(() => {
-          let t = p.default.get(e);
+          let t = p.Storage.get(e);
           return null != t ? t : r;
         });
         return (
           i.useEffect(() => {
-            p.default.set(e, t);
+            p.Storage.set(e, t);
           }, [e, t]),
           [t, a]
         );
@@ -7281,4 +7281,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a130c022af0c6a991a86.js.map
+//# sourceMappingURL=2a1b09d6b381c1f8b943.js.map

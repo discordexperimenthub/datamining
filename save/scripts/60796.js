@@ -41,8 +41,8 @@
         u = n("77078"),
         r = n("272030"),
         c = n("452453"),
-        i = n("65997"),
-        o = n("218525"),
+        o = n("65997"),
+        i = n("218525"),
         d = n("773336"),
         f = n("50885"),
         E = n("782340");
@@ -52,15 +52,15 @@
             target: n,
             onHeightUpdate: C,
             onSelect: L,
-            isChannelTextArea: p = !1,
+            isChannelTextArea: S = !1,
           } = e,
-          S = a.useCallback(() => {
+          p = a.useCallback(() => {
             (0, r.closeContextMenu)(),
               (0, s.isElement)(n, HTMLElement) &&
                 (n.focus(), setTimeout(() => n.focus(), 0));
           }, [n]),
-          [M, m] = (0, o.default)({ text: t, target: n, onHeightUpdate: C }),
-          h = (0, i.default)();
+          [M, m] = (0, i.default)({ text: t, target: n, onHeightUpdate: C }),
+          h = (0, o.default)();
         if (
           !d.isPlatformEmbedded ||
           !(
@@ -69,7 +69,7 @@
           )
         )
           return null;
-        let b =
+        let g =
           "" !== t
             ? [
                 (0, l.jsx)(
@@ -97,16 +97,16 @@
         return (0, l.jsxs)(u.Menu, {
           className: c.ContextMenuClassName,
           navId: "textarea-context",
-          onClose: S,
+          onClose: p,
           "aria-label": E.default.Messages.TEXTAREA_ACTIONS_MENU_LABEL,
           onSelect: L,
           children: [
-            p && (0, l.jsx)(u.MenuGroup, { children: h }),
+            S && (0, l.jsx)(u.MenuGroup, { children: h }),
             (0, l.jsx)(u.MenuGroup, { children: M }),
             (0, l.jsx)(u.MenuGroup, { children: m }),
             (0, l.jsxs)(u.MenuGroup, {
               children: [
-                b,
+                g,
                 (0, l.jsx)(u.MenuItem, {
                   id: "paste",
                   label: E.default.Messages.PASTE,
@@ -124,7 +124,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return o;
+            return i;
           },
         });
       var l = n("37983");
@@ -134,13 +134,13 @@
         u = n("845579"),
         r = n("599110"),
         c = n("49111"),
-        i = n("782340");
-      function o() {
+        o = n("782340");
+      function i() {
         let e = u.ExpressionSuggestionsEnabled.useSetting(),
           { analyticsLocations: t } = (0, s.default)();
         return (0, l.jsx)(a.MenuCheckboxItem, {
           id: "sticker-suggestions",
-          label: i.default.Messages.SUGGEST_STICKERS,
+          label: o.default.Messages.SUGGEST_STICKERS,
           checked: e,
           action: () => {
             r.default.track(
@@ -171,32 +171,32 @@
         u = n("446674"),
         r = n("77078"),
         c = n("467914"),
-        i = n("769264"),
-        o = n("701909"),
+        o = n("769264"),
+        i = n("701909"),
         d = n("749866"),
         f = n("49111"),
         E = n("782340");
       function C(e) {
         let { text: t = "", target: n } = e,
-          C = (0, u.useStateFromStores)([i.default], () =>
-            i.default.isEnabled()
+          C = (0, u.useStateFromStores)([o.default], () =>
+            o.default.isEnabled()
           ),
           L = (0, u.useStateFromStores)(
-            [i.default],
-            () => i.default.hasLearnedWord(t),
+            [o.default],
+            () => o.default.hasLearnedWord(t),
             [t]
           ),
-          p = a.useRef({ ...e, spellcheckEnabled: C });
-        p.current = { ...e, spellcheckEnabled: C };
-        let S = a.useRef(!1),
+          S = a.useRef({ ...e, spellcheckEnabled: C });
+        S.current = { ...e, spellcheckEnabled: C };
+        let p = a.useRef(!1),
           [M, m] = a.useState(!1),
-          [h, b] = a.useState([]),
-          g = a.useCallback(() => {
+          [h, g] = a.useState([]),
+          b = a.useCallback(() => {
             let {
               spellcheckEnabled: e,
               text: t,
               onHeightUpdate: n,
-            } = p.current;
+            } = S.current;
             e &&
               (0, d.isSupported)() &&
               Promise.all([
@@ -204,7 +204,7 @@
                 (0, d.getCorrections)(t, !0),
               ]).then(e => {
                 let [t, l] = e;
-                S.current && (m(t), b(l), n());
+                p.current && (m(t), g(l), n());
               });
           }, []),
           T = a.useCallback(() => {
@@ -221,17 +221,17 @@
           }, [n]);
         if (
           (a.useEffect(() => {
-            let e = (0, d.addResultListener)(g);
+            let e = (0, d.addResultListener)(b);
             return (
-              (S.current = !0),
+              (p.current = !0),
               () => {
-                (S.current = !1), e();
+                (p.current = !1), e();
               }
             );
-          }, [g]),
+          }, [b]),
           a.useEffect(() => {
-            g();
-          }, [t, C, g]),
+            b();
+          }, [t, C, b]),
           !(0, d.isSupported)())
         )
           return [null, null];
@@ -281,7 +281,7 @@
                     label: E.default.Messages.LANGUAGES,
                     action: () =>
                       window.open(
-                        o.default.getArticleURL(f.HelpdeskArticles.SPELLCHECK)
+                        i.default.getArticleURL(f.HelpdeskArticles.SPELLCHECK)
                       ),
                   })
                 : null,
@@ -305,38 +305,38 @@
         u = n("749866");
       let r = "SpellcheckStore",
         c = !0,
-        i = new Set();
-      function o() {
-        a.default.set(r, { enabled: c, learnedWords: i });
+        o = new Set();
+      function i() {
+        a.Storage.set(r, { enabled: c, learnedWords: o });
       }
       class d extends l.default.Store {
         initialize() {
-          let e = a.default.get(r);
+          let e = a.Storage.get(r);
           null != e &&
             ((c = e.enabled),
-            (i = new Set(e.learnedWords)),
+            (o = new Set(e.learnedWords)),
             (0, u.setEnabled)(c),
-            (0, u.setLearnedWords)(i));
+            (0, u.setLearnedWords)(o));
         }
         isEnabled() {
           return c;
         }
         hasLearnedWord(e) {
-          return i.has(e.toLocaleLowerCase());
+          return o.has(e.toLocaleLowerCase());
         }
       }
       d.displayName = "SpellcheckStore";
       var f = new d(s.default, {
         SPELLCHECK_TOGGLE() {
-          (c = !c), (0, u.setEnabled)(c), o();
+          (c = !c), (0, u.setEnabled)(c), i();
         },
         SPELLCHECK_LEARN_WORD(e) {
           let { word: t } = e;
-          i.add(t.toLocaleLowerCase()), (0, u.setLearnedWords)(i), o();
+          o.add(t.toLocaleLowerCase()), (0, u.setLearnedWords)(o), i();
         },
         SPELLCHECK_UNLEARN_WORD(e) {
           let { word: t } = e;
-          i.delete(t.toLocaleLowerCase()), (0, u.setLearnedWords)(i), o();
+          o.delete(t.toLocaleLowerCase()), (0, u.setLearnedWords)(o), i();
         },
         I18N_LOAD_SUCCESS(e) {
           let { locale: t } = e;
@@ -346,4 +346,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fbaa36c1b93c9dc8d077.js.map
+//# sourceMappingURL=548ae54ce72c937c1e8c.js.map

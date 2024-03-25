@@ -15,8 +15,8 @@
         a = l("90915"),
         i = l("446674"),
         r = l("987317"),
-        d = l("393414"),
-        o = l("42203"),
+        o = l("393414"),
+        d = l("42203"),
         s = l("476108"),
         f = l("50885"),
         c = l("49111");
@@ -32,7 +32,7 @@
                     !(arguments.length > 1) ||
                     void 0 === arguments[1] ||
                     arguments[1],
-                  n = o.default.getChannel(t);
+                  n = d.default.getChannel(t);
                 if (null != n) {
                   f.default.focus();
                   let e = n.guild_id,
@@ -45,11 +45,11 @@
                 }
                 if (l) {
                   let l = () => {
-                    o.default.removeChangeListener(l);
+                    d.default.removeChangeListener(l);
                     let n = e(t, !1);
-                    null != n && (0, d.transitionTo)(n);
+                    null != n && (0, o.transitionTo)(n);
                   };
-                  o.default.addChangeListener(l);
+                  d.default.addChangeListener(l);
                 }
                 return null;
               })((0, u.parse)(l.search).channelId)) && void 0 !== t
@@ -71,20 +71,20 @@
         a = l("913144"),
         i = l("49111");
       let r = { lastViewedPath: null, lastViewedNonVoicePath: null },
-        d = r,
-        o = "LAST_VIEWED_PATH";
+        o = r,
+        d = "LAST_VIEWED_PATH";
       class s extends n.default.PersistedStore {
         initialize() {
           let e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r;
-          d = null != e ? e : r;
+          o = null != e ? e : r;
         }
         get defaultRoute() {
           return i.Routes.ME;
         }
         get lastNonVoiceRoute() {
           var e;
-          return null !== (e = d.lastViewedNonVoicePath) && void 0 !== e
+          return null !== (e = o.lastViewedNonVoicePath) && void 0 !== e
             ? e
             : i.Routes.ME;
         }
@@ -92,28 +92,28 @@
           return i.Routes.ME;
         }
         getState() {
-          return d;
+          return o;
         }
       }
       (s.displayName = "DefaultRouteStore"),
         (s.persistKey = "DefaultRouteStore"),
         (s.migrations = [
           () => {
-            let e = u.default.get(o, null);
-            return u.default.remove(o), { lastViewedPath: e };
+            let e = u.Storage.get(d, null);
+            return u.Storage.remove(d), { lastViewedPath: e };
           },
         ]);
       var f = new s(a.default, {
         SAVE_LAST_ROUTE: function (e) {
           let { path: t } = e;
-          return (d.lastViewedPath = t), !0;
+          return (o.lastViewedPath = t), !0;
         },
         SAVE_LAST_NON_VOICE_ROUTE: function (e) {
           let { path: t } = e;
-          return (d.lastViewedNonVoicePath = t), !0;
+          return (o.lastViewedNonVoicePath = t), !0;
         },
       });
     },
   },
 ]);
-//# sourceMappingURL=a0368ebf957e1d613c17.js.map
+//# sourceMappingURL=58ab752be846c11a30d9.js.map

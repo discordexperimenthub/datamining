@@ -938,8 +938,8 @@
         s = n("49111");
       function l(e, t) {
         if (0 === e.length) return "No logs";
-        let n = i.default.get(s.DEVICE_TOKEN),
-          a = i.default.get(s.DEVICE_VOIP_TOKEN),
+        let n = i.Storage.get(s.DEVICE_TOKEN),
+          a = i.Storage.get(s.DEVICE_VOIP_TOKEN),
           l = e
             .map(e => {
               let n = e.silent ? "Silent" : "Displayed",
@@ -970,8 +970,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "278320",
-          versionHash: "6f2b16efa6e8b7194bdd8dbab28b52dd5fa337d0",
+          buildNumber: "278328",
+          versionHash: "3bf351fe8f4d39de379989d1d339f7297849b9ce",
         };
       }
       n.r(t),
@@ -1876,7 +1876,7 @@
           );
       }
       async function B() {
-        o.default.set("turnedOffNewNotifications", !0),
+        o.Storage.set("turnedOffNewNotifications", !0),
           T.default.track(P.AnalyticEvents.NOTIFICATION_MIGRATION_OPTOUT, {
             num_guilds_with_new_setting: Object.values(
               p.default.getGuilds()
@@ -2594,7 +2594,7 @@
       class g extends o.default {
         handlePostConnectionOpen() {
           if (
-            !s.default.get("turnedOffNewNotifications") &&
+            !s.Storage.get("turnedOffNewNotifications") &&
             !!r.default.hasConsented(f.Consents.PERSONALIZATION) &&
             !!d.NotificationsExperiment.getCurrentConfig(
               { location: "NotificationMigrationManager" },
@@ -2734,4 +2734,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4574.f9cac0793795ce776c3f.js.map
+//# sourceMappingURL=4574.c16ee900c0c4fdcec808.js.map

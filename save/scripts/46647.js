@@ -146,12 +146,12 @@
                 null != N &&
                   ((r.avatar_decoration_id = N.id),
                   (r.avatar_decoration_sku_id = N.skuId));
-              let i = o.default.get(T.DEVICE_TOKEN),
+              let i = o.Storage.get(T.DEVICE_TOKEN),
                 E = (0, d.getDevicePushProvider)();
               null != E &&
                 null != i &&
                 ((r.push_provider = E), (r.push_token = i));
-              let _ = o.default.get(T.DEVICE_VOIP_TOKEN);
+              let _ = o.Storage.get(T.DEVICE_VOIP_TOKEN);
               return (
                 null != d.DEVICE_PUSH_VOIP_PROVIDER &&
                   null != _ &&
@@ -1135,4 +1135,4 @@
     },
   },
 ]);
-//# sourceMappingURL=03098f578c966d1619df.js.map
+//# sourceMappingURL=b33f43cba4b05f5a8c45.js.map

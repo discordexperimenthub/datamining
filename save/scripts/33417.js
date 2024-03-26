@@ -82,12 +82,12 @@
         R = n("315102"),
         b = n("153160"),
         I = n("271560"),
-        y = n("253981"),
-        M = n("49111"),
-        L = n("646718"),
-        O = n("782340"),
+        M = n("253981"),
+        y = n("49111"),
+        E = n("646718"),
+        L = n("782340"),
         B = n("816896");
-      let E = { width: 20, height: 20, color: "white" };
+      let O = { width: 20, height: 20, color: "white" };
       function _(e) {
         var t, n;
         let {
@@ -118,7 +118,7 @@
                 null != n)
               ) {
                 var t;
-                return null !== (t = y.default.toURLSafe(n)) && void 0 !== t
+                return null !== (t = M.default.toURLSafe(n)) && void 0 !== t
                   ? t
                   : void 0;
               }
@@ -135,7 +135,7 @@
               canAnimate: !1,
             });
             return null != t &&
-              null !== (e = y.default.toURLSafe(t)) &&
+              null !== (e = M.default.toURLSafe(t)) &&
               void 0 !== e
               ? e
               : void 0;
@@ -177,7 +177,7 @@
             (0, l.jsx)(v.Text, {
               variant: "eyebrow",
               className: B.tabsText,
-              children: O.default.Messages.STOREFRONT_PREMIUM_ITEMS,
+              children: L.default.Messages.STOREFRONT_PREMIUM_ITEMS,
             }),
             (0, l.jsx)("div", {
               className: B.tabs,
@@ -185,9 +185,9 @@
                 ? (0, l.jsxs)(l.Fragment, {
                     children: [
                       (0, l.jsx)(c.default, {
-                        icon: (0, l.jsx)(m.BadgeIcon, { ...E }),
-                        title: O.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS,
-                        body: O.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS_BODY.format(
+                        icon: (0, l.jsx)(m.BadgeIcon, { ...O }),
+                        title: L.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS,
+                        body: L.default.Messages.STOREFRONT_APP_SUBSCRIPTIONS_BODY.format(
                           { appName: s.name }
                         ),
                         disabled: 0 === u.length,
@@ -197,9 +197,9 @@
                         },
                       }),
                       (0, l.jsx)(c.default, {
-                        icon: (0, l.jsx)(x.TicketIcon, { ...E }),
-                        title: O.default.Messages.STOREFRONT_APP_PRODUCTS,
-                        body: O.default.Messages.STOREFRONT_APP_PRODUCTS_BODY.format(
+                        icon: (0, l.jsx)(x.TicketIcon, { ...O }),
+                        title: L.default.Messages.STOREFRONT_APP_PRODUCTS,
+                        body: L.default.Messages.STOREFRONT_APP_PRODUCTS_BODY.format(
                           { appName: s.name }
                         ),
                         disabled: 0 === d.length,
@@ -235,7 +235,7 @@
             guildId: s,
             groupListingId: n,
             showBenefitsFirst: !1,
-            analyticsLocation: M.AnalyticsLocations.BOT_PROFILE_POPOUT,
+            analyticsLocation: y.AnalyticsLocations.BOT_PROFILE_POPOUT,
           }),
           d = r.useMemo(() => {
             var e;
@@ -252,7 +252,7 @@
             var e;
             return null != i.image_asset &&
               null !==
-                (e = y.default.toURLSafe(
+                (e = M.default.toURLSafe(
                   (0, I.getAssetURL)(t, i.image_asset, 64)
                 )) &&
               void 0 !== e
@@ -263,10 +263,10 @@
         if (null === m) return null;
         let x = (0, l.jsx)(v.Button, {
           onClick: c,
-          children: O.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
+          children: L.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
             rate: (0, b.formatRate)(
               (0, b.formatPrice)(m.price, m.currency),
-              L.SubscriptionIntervalTypes.MONTH,
+              E.SubscriptionIntervalTypes.MONTH,
               1
             ),
           }),
@@ -280,10 +280,10 @@
           PurchaseButton: e =>
             (0, l.jsx)(v.Button, {
               ...e,
-              children: O.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
+              children: L.default.Messages.STOREFRONT_SUBSCRIBE_FOR.format({
                 rate: (0, b.formatRate)(
                   (0, b.formatPrice)(m.price, m.currency),
-                  L.SubscriptionIntervalTypes.MONTH,
+                  E.SubscriptionIntervalTypes.MONTH,
                   1
                 ),
               }),
@@ -337,7 +337,7 @@
                                 color: "header-primary",
                                 tag: "p",
                                 variant: "heading-md/semibold",
-                                children: O.default.Messages.BACK,
+                                children: L.default.Messages.BACK,
                               }),
                             }),
                             x,
@@ -373,15 +373,15 @@
           x =
             (null == c ? void 0 : c.headerBackground) != null &&
             null !==
-              (s = y.default.toURLSafe(
+              (s = M.default.toURLSafe(
                 (0, I.getAssetURL)(r, c.headerBackground, 256)
               )) &&
             void 0 !== s
               ? s
               : void 0,
           C =
-            i.type === M.SKUTypes.DURABLE
-              ? O.default.Messages.STOREFRONT_DURABLE_AVAILABILITY
+            i.type === y.SKUTypes.DURABLE
+              ? L.default.Messages.STOREFRONT_DURABLE_AVAILABILITY
               : void 0,
           { price: S } = i;
         if (null == S) return null;
@@ -394,7 +394,7 @@
           },
           R = (0, l.jsx)(v.Button, {
             onClick: T,
-            children: O.default.Messages.STOREFRONT_PURCHASE_FOR.format({
+            children: L.default.Messages.STOREFRONT_PURCHASE_FOR.format({
               price: (0, b.formatPrice)(S.amount, S.currency),
             }),
           });
@@ -429,7 +429,7 @@
                           color: "header-primary",
                           tag: "p",
                           variant: "heading-md/semibold",
-                          children: O.default.Messages.BACK,
+                          children: L.default.Messages.BACK,
                         }),
                       }),
                       R,
@@ -442,7 +442,7 @@
           PurchaseButton: e =>
             (0, l.jsx)(v.Button, {
               ...e,
-              children: O.default.Messages.STOREFRONT_PURCHASE_FOR.format({
+              children: L.default.Messages.STOREFRONT_PURCHASE_FOR.format({
                 price: (0, b.formatPrice)(S.amount, S.currency),
               }),
             }),
@@ -1171,10 +1171,15 @@
           title: x,
           onDetails: v,
           benefitItems: p,
+          benefitsSummary: g,
         } = e;
         return (0, s.jsx)(r.FocusRing, {
           children: (0, s.jsxs)("div", {
-            className: l(u.container, f.hoverCard),
+            className: l(
+              u.container,
+              f.hoverCard,
+              null != g ? u.short : void 0
+            ),
             tabIndex: 0,
             onClick: () => {
               null != v ? v() : null != h && h();
@@ -1222,6 +1227,18 @@
                   }),
                 ],
               }),
+              null != g &&
+                (0, s.jsx)("div", {
+                  className: u.benefitsSummary,
+                  children: (0, s.jsx)(o.Text, {
+                    color: "interactive-normal",
+                    variant: "text-sm/medium",
+                    children:
+                      d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
+                        count: g,
+                      }),
+                  }),
+                }),
               null != p &&
                 (0, s.jsx)("div", {
                   className: u.benefits,
@@ -1330,4 +1347,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a14b6775778c6a052bc4.js.map
+//# sourceMappingURL=3fa12310f18acdfa423e.js.map

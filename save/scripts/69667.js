@@ -20947,7 +20947,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return p;
+            return I;
           },
         }),
         n("70102"),
@@ -20962,13 +20962,10 @@
         u = n("697218"),
         d = n("340412"),
         c = n("719923"),
-        E = n("540692"),
-        f = n("456015"),
-        _ = n("982457"),
-        T = n("1607"),
-        I = n("157829"),
-        m = n("646718");
-      class N extends i.default {
+        E = n("456015"),
+        f = n("982457"),
+        _ = n("157829");
+      class T extends i.default {
         _initialize() {
           __OVERLAY__
             ? l.default.subscribe(
@@ -20986,10 +20983,6 @@
               l.default.subscribe(
                 "POST_CONNECTION_OPEN",
                 this._maybeFetchPremiumOffer
-              ),
-              l.default.subscribe(
-                "POST_CONNECTION_OPEN",
-                this._maybeFetchReferralsRemaining
               ));
         }
         _terminate() {
@@ -21009,10 +21002,6 @@
               l.default.unsubscribe(
                 "POST_CONNECTION_OPEN",
                 this._maybeFetchPremiumOffer
-              ),
-              l.default.unsubscribe(
-                "POST_CONNECTION_OPEN",
-                this._maybeFetchReferralsRemaining
               ));
         }
         handleMessageLengthUpsell(e) {
@@ -21071,21 +21060,9 @@
                 !(0, c.isPremium)(e) &&
                 d.default.shouldFetchOffer()
               ) {
-                let e = (0, I.shouldHitUserOfferEndPoints)("PremiumManager");
-                e ? (0, f.fetchUserOffer)() : _.default.fetchUserTrialOffer();
+                let e = (0, _.shouldHitUserOfferEndPoints)("PremiumManager");
+                e ? (0, E.fetchUserOffer)() : f.default.fetchUserTrialOffer();
               }
-            }),
-            (this._maybeFetchReferralsRemaining = () => {
-              let e = u.default.getCurrentUser(),
-                { enabled: t } = T.default.getCurrentConfig(
-                  { location: "16261f_1" },
-                  { autoTrackExposure: !1 }
-                );
-              t &&
-                null != e &&
-                e.verified &&
-                (0, c.isPremiumExactly)(e, m.PremiumTypes.TIER_2) &&
-                E.default.checkAndFetchReferralsRemaining();
             }),
             (this._handlePremiumPaymentModalOpen = e => {
               (0, o.default)({
@@ -21110,7 +21087,7 @@
             });
         }
       }
-      var p = new N();
+      var I = new T();
     },
     425538: function (e, t, n) {
       "use strict";
@@ -32829,4 +32806,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f7df4d9d0618e6d04c4c.js.map
+//# sourceMappingURL=e0d85c1cd1c1bae3bc92.js.map

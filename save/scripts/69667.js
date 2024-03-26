@@ -26073,16 +26073,19 @@
               return !eB(eh.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT) && r;
             },
             metadata: e => {
-              let { premiumSubscription: t } = e,
-                n =
-                  (null == t ? void 0 : t.status) ===
-                  eh.SubscriptionStatusTypes.PAST_DUE
-                    ? a().diff(a(t.currentPeriodStart), "days")
-                    : 0,
-                s = a(null == t ? void 0 : t.currentPeriodStart)
-                  .add((0, ep.getBillingGracePeriodDays)(t), "days")
-                  .toDate();
-              return { daysPastDue: n, dismissUntil: s };
+              let { premiumSubscription: t } = e;
+              if (null == t)
+                return { daysPastDue: 0, dismissUntil: a().toDate() };
+              {
+                let e =
+                    t.status === eh.SubscriptionStatusTypes.PAST_DUE
+                      ? a().diff(t.currentPeriodStart, "days")
+                      : 0,
+                  n = (0, ep.getBillingGracePeriodDaysAndExpiresDate)(
+                    t
+                  ).expiresDate.toDate();
+                return { daysPastDue: e, dismissUntil: n };
+              }
             },
           },
           [eh.NoticeTypes.DROPS_GO_LIVE_BANNER]: {
@@ -32806,4 +32809,4 @@
     },
   },
 ]);
-//# sourceMappingURL=e0d85c1cd1c1bae3bc92.js.map
+//# sourceMappingURL=f79ecf29b7672db4ed64.js.map

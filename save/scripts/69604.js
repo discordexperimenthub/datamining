@@ -2006,8 +2006,9 @@
         (n.ELEMENTS = "1207046915880124426"),
         (n.ANIME_V2 = "1212565175790473246"),
         (n.SPECIAL_EVENTS = "1217175518781243583"),
-        (n.SPRINGTOONS = "1217622942175727736");
+        (n.SPRINGTOONS = "1217622942175727736"),
+        (n.SHY = "1220513972189663413");
     },
   },
 ]);
-//# sourceMappingURL=9d04b6bbdcaded24f0af.js.map
+//# sourceMappingURL=47f95400434099b572a2.js.map

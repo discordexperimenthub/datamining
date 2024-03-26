@@ -887,8 +887,9 @@
         (u.ELEMENTS = "1207046915880124426"),
         (u.ANIME_V2 = "1212565175790473246"),
         (u.SPECIAL_EVENTS = "1217175518781243583"),
-        (u.SPRINGTOONS = "1217622942175727736");
+        (u.SPRINGTOONS = "1217622942175727736"),
+        (u.SHY = "1220513972189663413");
     },
   },
 ]);
-//# sourceMappingURL=30791.fe826866155634cba7c1.js.map
+//# sourceMappingURL=30791.e28169c523ac5d322ff1.js.map

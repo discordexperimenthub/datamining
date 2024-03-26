@@ -7063,7 +7063,7 @@
           ) &&
           a &&
           S >= 0 &&
-          S <= (0, d.getBillingGracePeriodDays)(e) &&
+          S <= (0, d.getBillingGracePeriodDaysAndExpiresDate)(e).days &&
           e.status === u.SubscriptionStatusTypes.PAST_DUE &&
           !e.isPurchasedExternally
         );
@@ -11972,9 +11972,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278668",
+          E = "278678",
           T =
-            ((e = "ff47ff745b1592f4d8be9fd6b3a8e31fa80030e5"),
+            ((e = "56babad471af0bc2cda0ef6f52f759a11880adbe"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -32132,4 +32132,4 @@
     },
   },
 ]);
-//# sourceMappingURL=91e6a99b9a7665330fc3.js.map
+//# sourceMappingURL=47a0851059210abd14cd.js.map

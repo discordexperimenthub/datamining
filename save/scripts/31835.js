@@ -383,8 +383,8 @@
           setHasRedirectURL: P,
           isGift: T,
           baseAnalyticsData: N,
-          analyticsLocation: C,
-          analyticsLocations: A,
+          analyticsLocation: A,
+          analyticsLocations: C,
           flowStartTime: h,
           subscriptionPlan: v,
           planGroup: g,
@@ -469,8 +469,8 @@
                   : await (0, i.updateSubscription)(
                       L,
                       { paymentSource: O, currency: y.currency },
-                      A,
                       C,
+                      A,
                       B
                     )
                 : null != L
@@ -486,8 +486,8 @@
                         paymentSource: O,
                         currency: y.currency,
                       },
-                      A,
                       C,
+                      A,
                       B
                     )
                   : await (0, u.subscribe)({
@@ -561,8 +561,8 @@
             paymentSources: P,
             paymentSourceId: T,
             setPaymentSourceId: N,
-            purchaseError: C,
-            setPurchaseError: A,
+            purchaseError: A,
+            setPurchaseError: C,
             purchaseErrorBlockRef: h,
             paymentAuthenticationState: v,
             selectedSkuId: g,
@@ -573,8 +573,8 @@
             paymentSources: P,
             paymentSourceId: T,
             setPaymentSourceId: N,
-            purchaseError: C,
-            setPurchaseError: A,
+            purchaseError: A,
+            setPurchaseError: C,
             purchaseErrorBlockRef: h,
             paymentAuthenticationState: v,
           },
@@ -717,8 +717,8 @@
         P = n("176108"),
         T = n("298392"),
         N = n("153727"),
-        C = n("39065"),
-        A = n("650484"),
+        A = n("39065"),
+        C = n("650484"),
         h = n("646718"),
         v = n("843455"),
         g = n("782340");
@@ -807,7 +807,7 @@
                 )
               : null,
           eN = r.useRef(null),
-          [eC, eA] = r.useState(null),
+          [eA, eC] = r.useState(null),
           eh =
             !el &&
             null != e_ &&
@@ -883,7 +883,7 @@
                   setHasAcceptedTerms: es,
                   legalTermsNodeRef: eN,
                   hasLegalTermsFlash: ed,
-                  onInvoiceError: e => eA(e),
+                  onInvoiceError: e => eC(e),
                   planGroup: R,
                   currencies: H,
                   onCurrencyChange: e => X(e),
@@ -895,11 +895,11 @@
             children: [
               (0, s.jsx)(I.GiftNote, { giftMessage: eu }),
               !ex && (0, s.jsx)(N.default, { isEligibleForTrial: eh }),
-              (0, s.jsxs)(A.PaymentPortalBody, {
+              (0, s.jsxs)(C.PaymentPortalBody, {
                 children: [(0, s.jsx)(E.default, {}), a],
               }),
-              (0, s.jsx)(A.PaymentPortalFooter, {
-                children: (0, s.jsx)(C.default, {
+              (0, s.jsx)(C.PaymentPortalFooter, {
+                children: (0, s.jsx)(A.default, {
                   premiumSubscription: null != B ? B : null,
                   setPurchaseState: Q,
                   onBack: eL,
@@ -907,7 +907,7 @@
                   onPurchaseError: e => $(e),
                   legalTermsNodeRef: eN,
                   flashLegalTerms: () => em(!0),
-                  invoiceError: eC,
+                  invoiceError: eA,
                   planError: eT,
                   analyticsLocation: j,
                   baseAnalyticsData: b,
@@ -959,8 +959,8 @@
         P = n("599110"),
         T = n("659632"),
         N = n("719923"),
-        C = n("635357"),
-        A = n("642906"),
+        A = n("635357"),
+        C = n("642906"),
         h = n("605886"),
         v = n("286350"),
         g = n("102492"),
@@ -1003,7 +1003,7 @@
             skuPricePreviewsById: en,
             referralCode: es,
             contextMetadata: er,
-          } = (0, A.usePaymentContext)(),
+          } = (0, C.usePaymentContext)(),
           {
             isGift: ea,
             selectedGiftStyle: ei,
@@ -1011,7 +1011,7 @@
             emojiConfetti: eu,
             soundEffect: eo,
             giftRecipient: ec,
-          } = (0, C.useGiftContext)(),
+          } = (0, A.useGiftContext)(),
           ed = (0, T.getGiftExperience)(ec),
           em = {};
         (em.gift_style = ei),
@@ -1035,9 +1035,9 @@
           eI = null != Q ? $[Q] : null,
           [eE, eP] = r.useState(ep),
           [eT, eN] = r.useState(!1),
-          { hasEntitlements: eC } = (0, f.useSubscriptionEntitlements)(ef, ea),
-          eA = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
-          eh = eC || ep,
+          { hasEntitlements: eA } = (0, f.useSubscriptionEntitlements)(ef, ea),
+          eC = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
+          eh = eA || ep,
           ev = (0, d.useIsPrepaidPaymentPastDue)(),
           eg = null,
           ex = null;
@@ -1130,7 +1130,7 @@
                   premiumSubscription: t,
                   isGift: ea,
                   planGroup: B,
-                  isPrepaid: eA,
+                  isPrepaid: eC,
                   isTrial: K,
                   makePurchase: eO,
                   needsPaymentSource: null == eI && !eh,
@@ -1261,8 +1261,8 @@
         P = n("622839"),
         T = n("167726"),
         N = n("953109"),
-        C = n("315585"),
-        A = n("659632"),
+        A = n("315585"),
+        C = n("659632"),
         h = n("153160"),
         v = n("635357"),
         g = n("642906"),
@@ -1342,7 +1342,7 @@
             purchaseType: k,
           } = (0, g.usePaymentContext)(),
           { isGift: H, giftRecipient: Y } = (0, v.useGiftContext)(),
-          W = H && (0, A.shouldShowCustomGiftExperience)(Y);
+          W = H && (0, C.shouldShowCustomGiftExperience)(Y);
         a(null != B, "Expected selectedSkuId");
         let Z = U[B],
           K = F[B],
@@ -1371,7 +1371,7 @@
               (0, s.jsx)(
                 c.default,
                 {
-                  icon: C.default,
+                  icon: A.default,
                   iconSize: c.default.Sizes.SMALL,
                   color: c.default.Colors.WARNING,
                   className: R.errorBlock,
@@ -1452,7 +1452,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return A;
+            return C;
           },
         }),
         n("794252");
@@ -1499,7 +1499,7 @@
           }),
         });
       }
-      function C(e) {
+      function A(e) {
         let { id: t } = e,
           n = (0, i.useStateFromStores)([f.default], () => {
             var e;
@@ -1520,7 +1520,7 @@
           ],
         });
       }
-      function A(e) {
+      function C(e) {
         let { sku: t } = e,
           { selectedGiftStyle: n } = (0, S.useGiftContext)(),
           { product: i } = (0, c.useFetchCollectiblesProduct)(
@@ -1532,7 +1532,7 @@
               (0, s.jsx)(N, { avatarDecoration: e })
             )
             .with({ type: a.CollectiblesItemType.PROFILE_EFFECT }, e =>
-              (0, s.jsx)(C, { id: e.id })
+              (0, s.jsx)(A, { id: e.id })
             )
             .otherwise(() => null);
         return null != n && null == u
@@ -1674,47 +1674,47 @@
             } = t,
             T = 0 !== P.length,
             N = S(_),
-            C = (0, i.formatPrice)(I, E, {
+            A = (0, i.formatPrice)(I, E, {
               style: "currency",
               currency: E,
               currencyDisplay: "symbol",
               localeOverride: N,
             }),
-            A =
+            C =
               o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format(
                 {
                   helpCenterLink: a.default.getArticleURL(
                     l.HelpdeskArticles.LOCALIZED_PRICING
                   ),
                   currencyISOCode: E.toUpperCase(),
-                  localizedPriceWithCurrencySymbol: C,
+                  localizedPriceWithCurrencySymbol: A,
                 }
               );
           if (
             (d.has(E) &&
-              (A =
+              (C =
                 o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format(
                   {
                     helpCenterLink: a.default.getArticleURL(
                       l.HelpdeskArticles.LOCALIZED_PRICING
                     ),
-                    localizedPriceWithCurrencySymbol: C,
+                    localizedPriceWithCurrencySymbol: A,
                   }
                 )),
             c.has(E) &&
-              (A =
+              (C =
                 o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format(
                   {
                     helpCenterLink: a.default.getArticleURL(
                       l.HelpdeskArticles.LOCALIZED_PRICING
                     ),
                     currencyISOCode: E.toUpperCase(),
-                    localizedPriceWithCurrencySymbol: C,
+                    localizedPriceWithCurrencySymbol: A,
                   }
                 )),
             null != n &&
               !n.hasPremiumNitroMonthly &&
-              (A =
+              (C =
                 o.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format(
                   {
                     helpCenterLink: a.default.getArticleURL(
@@ -1724,7 +1724,7 @@
                   }
                 )),
             E === u.CurrencyCodes.EUR &&
-              (A = s
+              (C = s
                 ? o.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format(
                     {
                       country: (0, r.getI18NCountryName)(_),
@@ -1762,7 +1762,7 @@
               style: "short",
               type: "conjunction",
             });
-            A =
+            C =
               o.default.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format(
                 {
                   helpCenterLink: a.default.getArticleURL(
@@ -1777,7 +1777,7 @@
               o.default.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
                 country: (0, r.getI18NCountryName)(_),
               }),
-            localizedPricingBannerBody: A,
+            localizedPricingBannerBody: C,
             localizedPricingBannerLinkOnly:
               o.default.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
                 helpCenterLink: a.default.getArticleURL(
@@ -1939,7 +1939,7 @@
           ) &&
           s &&
           m >= 0 &&
-          m <= (0, o.getBillingGracePeriodDays)(e) &&
+          m <= (0, o.getBillingGracePeriodDaysAndExpiresDate)(e).days &&
           e.status === c.SubscriptionStatusTypes.PAST_DUE &&
           !e.isPurchasedExternally
         );
@@ -2114,10 +2114,10 @@
             className: P,
             innerClassName: T,
             disabled: N = !1,
-            disableThemedBackground: C = !1,
+            disableThemedBackground: A = !1,
           } = e,
-          [A, h] = r.useState(null != m ? m : E),
-          [v, g] = r.useState((0, o.toRichValue)(A)),
+          [C, h] = r.useState(null != m ? m : E),
+          [v, g] = r.useState((0, o.toRichValue)(C)),
           x = r.useRef(!1);
         return (
           r.useEffect(() => {
@@ -2141,11 +2141,11 @@
                   editorClassName: S.editorTextArea,
                   maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
                   onChange: function (e, t, n) {
-                    t !== A && (h(t), g(n), a(t));
+                    t !== C && (h(t), g(n), a(t));
                   },
                   placeholder: p,
                   channel: I,
-                  textValue: A,
+                  textValue: C,
                   richValue: v,
                   type: u.ChatInputTypes.CUSTOM_GIFT,
                   onBlur: () => {
@@ -2160,7 +2160,7 @@
                       e({ shouldClear: !1, shouldRefocus: !0 });
                     });
                   },
-                  disableThemedBackground: C,
+                  disableThemedBackground: A,
                 }),
                 (0, s.jsx)(l.HiddenVisually, {
                   children: _.default.Messages.MAXIMUM_LENGTH.format({
@@ -2228,9 +2228,9 @@
             emojiConfetti: P,
             soundEffect: T,
             setEmojiConfetti: N,
-            setSoundEffect: C,
+            setSoundEffect: A,
           } = (0, i.useGiftContext)(),
-          [A, h] = r.useState(!1),
+          [C, h] = r.useState(!1),
           v = r.useRef(null),
           g = (0, a.useRadioGroup)({ orientation: "horizontal" }),
           x = (0, u.getGiftExperience)(n, t),
@@ -2269,7 +2269,7 @@
                             children: (0, s.jsx)(l.default, {
                               sound: T,
                               onSelect: e => {
-                                null != C && C(null == e ? void 0 : e);
+                                null != A && A(null == e ? void 0 : e);
                               },
                             }),
                           }),
@@ -2285,7 +2285,7 @@
                   ],
                 }),
               (0, s.jsx)("div", {
-                tabIndex: null != I || A ? void 0 : 0,
+                tabIndex: null != I || C ? void 0 : 0,
                 onFocus: e => {
                   var t;
                   e.target === e.currentTarget &&
@@ -2543,8 +2543,8 @@
         P = n("659632"),
         T = n("701909"),
         N = n("773336"),
-        C = n("719923"),
-        A = n("153160"),
+        A = n("719923"),
+        C = n("153160"),
         h = n("916187"),
         v = n("968532"),
         g = n("15733"),
@@ -2630,7 +2630,7 @@
             null != ep &&
             W.some(e => (null == e_ ? void 0 : e_.includes(e))) &&
             null != ep.discount,
-          eN = (0, C.getPrice)(
+          eN = (0, A.getPrice)(
             F.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
             !1,
             en,
@@ -2639,25 +2639,25 @@
         r.useEffect(() => {
           Z && h.default.trackExposure({ location: "5f89bb_1" });
         }, [Z]);
-        let eC = (null == eS ? void 0 : eS.id) != null && W.includes(eS.id);
+        let eA = (null == eS ? void 0 : eS.id) != null && W.includes(eS.id);
         r.useEffect(() => {
-          if (!eC) {
+          if (!eA) {
             if (null == ec || en) eI(W[0]);
             else if (null != ec) {
               let e = W.find(e => e !== ec.id);
               null != e && eI(e);
             }
           }
-        }, [eC, en, W, ec, eI]);
-        let eA = !eu && (en || (!eP && !eT)) && eC && z,
+        }, [eA, en, W, ec, eI]);
+        let eC = !eu && (en || (!eP && !eT)) && eA && z,
           eh = (0, u.useRadioGroup)(),
           ev =
             (null == eS ? void 0 : eS.id) != null
-              ? (0, C.getPrice)(eS.id, !1, en, eE)
+              ? (0, A.getPrice)(eS.id, !1, en, eE)
               : void 0,
           { ipCountryCode: eg } = (0, g.default)(),
           ex = "HR" === eg && null != ev && ev.currency === w.CurrencyCodes.EUR,
-          ey = (0, C.isPrepaidPaymentSource)(eE.paymentSourceId),
+          ey = (0, A.isPrepaidPaymentSource)(eE.paymentSourceId),
           eO =
             (null == ef ? void 0 : ef.interval) ===
             F.SubscriptionIntervalTypes.DAY
@@ -2818,11 +2818,11 @@
                                           null == ep
                                             ? void 0
                                             : ep.discount.user_usage_limit,
-                                        discountedPrice: (0, A.formatPrice)(
+                                        discountedPrice: (0, C.formatPrice)(
                                           eN.amount - eR,
                                           eN.currency
                                         ),
-                                        regularPrice: (0, A.formatPrice)(
+                                        regularPrice: (0, C.formatPrice)(
                                           eN.amount,
                                           eN.currency
                                         ),
@@ -2861,7 +2861,7 @@
                   }),
                   (0, s.jsx)("div", {
                     children:
-                      eA && null != eS && null != ev
+                      eC && null != eS && null != ev
                         ? (0, s.jsxs)("div", {
                             children: [
                               (0, s.jsx)("div", {
@@ -2889,7 +2889,7 @@
                       message:
                         k.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format(
                           {
-                            kunaPriceWithCurrency: (0, A.formatPrice)(
+                            kunaPriceWithCurrency: (0, C.formatPrice)(
                               7.5345 * ev.amount,
                               w.CurrencyCodes.HRK
                             ),
@@ -2999,7 +2999,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return C;
+            return A;
           },
         });
       var s = n("37983");
@@ -3022,14 +3022,14 @@
         P = n("646718"),
         T = n("782340"),
         N = n("902839");
-      function C(e) {
+      function A(e) {
         var t;
         let {
             premiumSubscription: n,
             planId: r,
             selectPlan: i,
-            selected: C,
-            priceOptions: A,
+            selected: A,
+            priceOptions: C,
             shouldShowUpdatedPaymentModal: h,
             isEligibleForDiscount: v,
             discountAmountOff: g,
@@ -3049,8 +3049,8 @@
                 P.SubscriptionPlans.PREMIUM_YEAR_TIER_1,
               ].includes(n.planId)),
           j = P.DISCOUNTS[r],
-          G = (0, S.getPrice)(r, !1, O, A),
-          D = (0, S.isPrepaidPaymentSource)(A.paymentSourceId),
+          G = (0, S.getPrice)(r, !1, O, C),
+          D = (0, S.isPrepaidPaymentSource)(C.paymentSourceId),
           U = null != j && !h,
           F = (0, E.usePremiumDiscountOffer)(),
           B =
@@ -3087,12 +3087,12 @@
               : null;
         return (0, s.jsxs)(c.Clickable, {
           role: R ? "menuitem" : "radio",
-          "aria-checked": C,
-          tabIndex: C ? 0 : -1,
+          "aria-checked": A,
+          tabIndex: A ? 0 : -1,
           focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
           onClick: b ? void 0 : () => i(r),
           className: a(N.planOptionClickableContainer, {
-            [N.selectedPlan]: R && C,
+            [N.selectedPlan]: R && A,
             [N.selectionBox]: R,
           }),
           children: [
@@ -3106,7 +3106,7 @@
                       (0, s.jsx)(c.Checkbox, {
                         readOnly: !0,
                         displayOnly: !0,
-                        value: C,
+                        value: A,
                         shape: c.Checkbox.Shapes.ROUND,
                         color: o.default.unsafe_rawColors.BRAND_500.css,
                         type: c.Checkbox.Types.INVERTED,
@@ -3116,8 +3116,8 @@
                       children: [
                         (0, s.jsxs)("div", {
                           className: a(N.planOptionInterval, {
-                            [N.optionSelected]: C || R,
-                            [N.updatedOptionSelected]: h && (C || R),
+                            [N.optionSelected]: A || R,
+                            [N.updatedOptionSelected]: h && (A || R),
                           }),
                           children: [
                             (0, S.getIntervalString)(
@@ -3159,7 +3159,7 @@
                 }),
                 h
                   ? (0, s.jsx)("div", {
-                      className: a({ [N.optionPriceSelected]: C }),
+                      className: a({ [N.optionPriceSelected]: A }),
                       children:
                         T.default.Messages.BILLING_TRIAL_PRICE_NOW.format({
                           price: (() => {
@@ -3175,7 +3175,7 @@
                         }),
                     })
                   : (0, s.jsx)("div", {
-                      className: a({ [N.optionSelected]: C || R }),
+                      className: a({ [N.optionSelected]: A || R }),
                       children: (0, I.formatPrice)(G.amount, G.currency),
                     }),
               ],
@@ -3185,7 +3185,7 @@
                 className: N.planOptionSubtextContainer,
                 children: (0, s.jsx)(c.Text, {
                   variant: "text-md/normal",
-                  color: C ? "text-normal" : "interactive-normal",
+                  color: A ? "text-normal" : "interactive-normal",
                   className: a(N.planOptionSubtext, {
                     [N.discountPlanOptionSubtext]: v,
                   }),
@@ -3302,8 +3302,8 @@
         P = n("102492"),
         T = n("176108"),
         N = n("102985"),
-        C = n("160299"),
-        A = n("10514"),
+        A = n("160299"),
+        C = n("10514"),
         h = n("68238"),
         v = n("659632"),
         g = n("719923"),
@@ -3369,10 +3369,10 @@
               : null === (t = eT.discount) || void 0 === t
                 ? void 0
                 : t.plan_ids.some(e => F.SubscriptionPlanInfo[e].skuId === ef),
-          eC = !eI && null != eT && null != ef && eN,
-          eA = (0, u.useStateFromStores)([A.default], () => A.default.get(Z));
-        i(null != eA, "Missing plan");
-        let eh = [{ planId: eA.id, quantity: 1 }],
+          eA = !eI && null != eT && null != ef && eN,
+          eC = (0, u.useStateFromStores)([C.default], () => C.default.get(Z));
+        i(null != eC, "Missing plan");
+        let eh = [{ planId: eC.id, quantity: 1 }],
           ev =
             ea === E.PurchaseState.PURCHASING ||
             ea === E.PurchaseState.COMPLETED,
@@ -3401,7 +3401,7 @@
               { planId: F.SubscriptionPlans.PREMIUM_MONTH_TIER_2, quantity: 1 },
             ],
             renewal: !0,
-            preventFetch: !eC,
+            preventFetch: !eA,
             trialId: et,
             paymentSourceId: V.paymentSourceId,
             currency: V.currency,
@@ -3418,7 +3418,7 @@
           eU = (0, u.useStateFromStores)([N.default], () => N.default.enabled),
           eF = V.paymentSourceId,
           { hasEntitlements: eB, entitlements: ew } = (0,
-          D.useSubscriptionEntitlements)(eA.id, eI),
+          D.useSubscriptionEntitlements)(eC.id, eI),
           ek = (0, g.isPrepaidPaymentSource)(V.paymentSourceId),
           eH = (0, P.checkNoPaymentTrialEnabled)(et, eF, Z),
           eY = (0, T.inOneStepSubscriptionCheckout)({
@@ -3445,7 +3445,7 @@
               }),
             [ef, em, eI, ep, e_, eu]
           ),
-          eV = (0, T.planSwitchLoadingShowSpinner)(eY, ex, eA);
+          eV = (0, T.planSwitchLoadingShowSpinner)(eY, ex, eC);
         if (null != eD) {
           let e = eD.message;
           return (
@@ -3456,7 +3456,7 @@
         }
         if (eI)
           W = (0, s.jsx)(G.SubscriptionInvoiceGift, {
-            plan: eA,
+            plan: eC,
             className: H.invoice,
             isPrepaidPaymentSource: ek,
             isCustomGift: eG,
@@ -3495,7 +3495,7 @@
                     className: H.afterTrialPriceLine,
                     children: (0, s.jsx)(G.PremiumTrialInvoiceTableRow, {
                       invoice: ex,
-                      plan: eA,
+                      plan: eC,
                     }),
                   }),
                 ],
@@ -3520,7 +3520,7 @@
                 }),
                 (0, s.jsx)(G.PremiumSubscriptionChangePlanInvoiceRows, {
                   invoice: ex,
-                  newPlan: eA,
+                  newPlan: eC,
                   isPrepaidPaymentSource: ek,
                   referralTrialOfferId: el,
                 }),
@@ -3538,7 +3538,7 @@
             }));
         }
         let ez = l.CountryCodesSets.EEA_COUNTRIES.has(
-            C.default.ipCountryCodeWithFallback
+            A.default.ipCountryCodeWithFallback
           ),
           {
             checkboxLabel: eJ,
@@ -3576,15 +3576,15 @@
             };
           })(null != eu && eu, eO, Y),
           eQ = k.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format(
-            { planName: eA.name }
+            { planName: eC.name }
           );
         return (
           eI && !eG
             ? (eQ = k.default.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT)
             : eI && eG
               ? (eQ = "")
-              : (0, g.isPremiumSubscriptionPlan)(eA.id) &&
-                (eQ = g.default.getBillingReviewSubheader(null, eA)),
+              : (0, g.isPremiumSubscriptionPlan)(eC.id) &&
+                (eQ = g.default.getBillingReviewSubheader(null, eC)),
           eH
             ? null
             : (0, s.jsxs)("div", {
@@ -3620,7 +3620,7 @@
                           selectedPlanId: Z,
                           subscriptionPeriodEnd: eW,
                           showTotal: !1,
-                          discountInvoiceItems: eC
+                          discountInvoiceItems: eA
                             ? null == eR
                               ? void 0
                               : eR.invoiceItems
@@ -3724,7 +3724,7 @@
                           ? en
                           : (0, s.jsx)(m.default, {
                               hide: eu || eo,
-                              subscriptionPlan: eA,
+                              subscriptionPlan: eC,
                               renewalInvoice: eO,
                               isGift: eI,
                               paymentSourceType:
@@ -3733,14 +3733,14 @@
                                   ? void 0
                                   : n.type,
                               isEmbeddedIAP: ed,
-                              basePrice: (0, g.getPrice)(eA.id, !1, eI, V),
+                              basePrice: (0, g.getPrice)(eC.id, !1, eI, V),
                             }),
-                      showPricingLink: eA.currency !== w.CurrencyCodes.USD,
+                      showPricingLink: eC.currency !== w.CurrencyCodes.USD,
                       showWithdrawalWaiver: ez,
                       disabled: ev,
                       isTrial: eu && null == en,
                       isDiscount: eo,
-                      subscriptionPlan: eA,
+                      subscriptionPlan: eC,
                       isGift: eI,
                     }),
                   }),
@@ -3777,8 +3777,8 @@
         P = n("176108"),
         T = n("102985"),
         N = n("160299"),
-        C = n("10514"),
-        A = n("719923"),
+        A = n("10514"),
+        C = n("719923"),
         h = n("380186"),
         v = n("809071"),
         g = n("883662"),
@@ -3819,7 +3819,7 @@
           } = (0, I.usePaymentContext)(),
           { isGift: Q } = (0, S.useGiftContext)(),
           $ = _.paymentSourceId,
-          ee = (0, u.useStateFromStores)([C.default], () => C.default.get(M));
+          ee = (0, u.useStateFromStores)([A.default], () => A.default.get(M));
         i(null != ee, "Missing newPlan");
         let et = (0, u.useStateFromStores)(
           [T.default],
@@ -3827,8 +3827,8 @@
         );
         n = Z
           ? L.default.Messages.BILLING_PURCHASE_DETAILS_HEADER
-          : (0, A.isPremiumSubscriptionPlan)(M)
-            ? (0, A.getBillingReviewSubheader)(a, ee)
+          : (0, C.isPremiumSubscriptionPlan)(M)
+            ? (0, C.getBillingReviewSubheader)(a, ee)
             : L.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
                 planName: ee.name,
               });
@@ -3845,7 +3845,7 @@
           }),
           ea = r.useMemo(
             () =>
-              (0, A.getPremiumPlanOptions)({
+              (0, C.getPremiumPlanOptions)({
                 skuId: z,
                 isPremium: X,
                 multiMonthPlans: [],
@@ -3963,7 +3963,7 @@
                           null === (t = p[null != $ ? $ : ""]) || void 0 === t
                             ? void 0
                             : t.type,
-                        basePrice: (0, A.getPrice)(ee.id, !1, Q, _),
+                        basePrice: (0, C.getPrice)(ee.id, !1, Q, _),
                         currentSubscription: a,
                         planGroup: H,
                       }),
@@ -3993,7 +3993,7 @@
         r.useEffect(() => {
           n(u);
         }, [n, u]);
-        let c = (0, A.isPrepaidPaymentSource)(a.paymentSourceId);
+        let c = (0, C.isPrepaidPaymentSource)(a.paymentSourceId);
         return null != l
           ? (0, s.jsxs)(g.PremiumInvoiceTable, {
               className: b.invoice,
@@ -4025,7 +4025,7 @@
           I.usePaymentContext)(),
           { isGift: m } = (0, S.useGiftContext)(),
           { analyticsLocations: f } = (0, _.default)(),
-          E = (0, A.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(i)),
+          E = (0, C.getItemsWithUpsertedPlanIdForGroup)(t, n.id, 1, new Set(i)),
           [T, N] = (0, v.useSubscriptionInvoicePreview)({
             subscriptionId: t.id,
             items: E,
@@ -4038,7 +4038,7 @@
             analyticsLocation:
               p.default.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW,
           }),
-          [C, h] = (0, v.useSubscriptionInvoicePreview)({
+          [A, h] = (0, v.useSubscriptionInvoicePreview)({
             subscriptionId: t.id,
             items: E,
             renewal: !0,
@@ -4064,14 +4064,14 @@
             startedPaymentFlowWithPaymentSources: d.current,
           }),
           O = (0, P.planSwitchLoadingShowSpinner)(y, T, n);
-        if (null == T || null == C || O)
+        if (null == T || null == A || O)
           return (0, s.jsx)(o.Spinner, { className: j.spinner });
-        let R = (0, A.isPrepaidPaymentSource)(l.paymentSourceId);
+        let R = (0, C.isPrepaidPaymentSource)(l.paymentSourceId);
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(M.SubscriptionPeriodResetNotice, {
               proratedInvoice: T,
-              renewalInvoice: C,
+              renewalInvoice: A,
             }),
             (0, s.jsxs)(g.PremiumInvoiceTable, {
               className: j.invoice,
@@ -4088,7 +4088,7 @@
                 (0, s.jsx)(M.SubscriptionInvoiceFooter, {
                   premiumSubscription: t,
                   proratedInvoice: T,
-                  renewalInvoice: C,
+                  renewalInvoice: A,
                   isUpdate: !0,
                   isPrepaidPaymentSource: R,
                 }),
@@ -4113,10 +4113,10 @@
             setHasAcceptedTerms: T,
           } = e,
           { analyticsLocations: N } = (0, _.default)(),
-          C = (0, A.getItemsWithUpsertedPlanIdForGroup)(i, l.id, 1, new Set(c)),
+          A = (0, C.getItemsWithUpsertedPlanIdForGroup)(i, l.id, 1, new Set(c)),
           [h, g] = (0, v.useSubscriptionInvoicePreview)({
             subscriptionId: i.id,
-            items: C,
+            items: A,
             renewal: !0,
             paymentSourceId: m.paymentSourceId,
             currency: m.currency,
@@ -4178,7 +4178,7 @@
           { analyticsLocations: u } = (0, _.default)(),
           [c, d] = (0, v.useSubscriptionInvoicePreview)({
             subscriptionId: n.id,
-            items: (0, A.getItemsWithUpsertedPlanIdForGroup)(
+            items: (0, C.getItemsWithUpsertedPlanIdForGroup)(
               n,
               r.id,
               1,
@@ -4199,9 +4199,9 @@
           return (0, s.jsx)("div", { children: (0, s.jsx)(o.Spinner, {}) });
         t =
           n.type === R.SubscriptionTypes.PREMIUM
-            ? (0, A.getDisplayName)(r.id)
+            ? (0, C.getDisplayName)(r.id)
             : r.name;
-        let m = (0, A.isPrepaidPaymentSource)(i.paymentSourceId);
+        let m = (0, C.isPrepaidPaymentSource)(i.paymentSourceId);
         return (0, s.jsxs)("div", {
           className: j.bodyText,
           children: [
@@ -4220,7 +4220,7 @@
                 }),
                 (0, s.jsx)(g.PremiumInvoiceTableRow, {
                   label: t,
-                  value: (0, A.getFormattedRateForPlan)(r, i, !0),
+                  value: (0, C.getFormattedRateForPlan)(r, i, !0),
                 }),
                 (0, s.jsx)(x.default, { invoice: c }),
                 (0, s.jsx)(g.PremiumInvoiceTableDivider, {}),
@@ -4746,4 +4746,4 @@
     },
   },
 ]);
-//# sourceMappingURL=31835.992018da95fd681307dc.js.map
+//# sourceMappingURL=31835.6443d856821e18a53c0f.js.map

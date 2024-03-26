@@ -24466,7 +24466,7 @@
         QUESTS_DISCLOSURE_PUBLISHER_TARGETING:
           "{gamePublisher} is trying to reach certain kinds of Discord users. Based on what you’ve told us or other information we’ve collected, the following information was used to tell you about this Quest:",
         QUESTS_DISCLOSURE_LEARN_MORE:
-          "[Learn more]({privacySettingsUrl}) more about how to manage your Quests Privacy Settings.",
+          "Learn more about how to manage your Privacy Settings [here]({privacySettingsUrl}).",
         QUESTS_DISCLOSURE_LOCATION: "Location",
         QUESTS_DISCLOSURE_AGE: "Age",
         QUESTS_DISCLOSURE_ACTIVITY: "Activity: Relevant gaming",
@@ -26555,8 +26555,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278528", ", Version Hash: ")
-          .concat("85f5bf2738b3ae2c02cd3c9ba12ff94dc3fc2243")
+          .concat("278549", ", Version Hash: ")
+          .concat("1366d61524b8fc693c9970efb21260c4c075bf52")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29687,12 +29687,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278528"), "278528"));
+        let _ = parseInt(((e = "278549"), "278549"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278528"
+                "278549"
               )
             ),
             (_ = 0)),
@@ -52940,4 +52940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.955c6fb025554e475aea.js.map
+//# sourceMappingURL=47513.4c7f116cedd6003a2290.js.map

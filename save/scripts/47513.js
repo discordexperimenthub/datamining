@@ -4811,11 +4811,11 @@
           "Select the voice channel to join or switch to",
         USER_SETTINGS_KEYBIND_ENABLE_DISABLE: "Enable or disable keybind",
         USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS: "Results",
-        SHOW_CURRENT_ACTIVITY: "Share your activity with others.",
+        SHOW_CURRENT_ACTIVITY: "Share your detected activities with others",
         SHOW_CURRENT_ACTIVITY_DESC:
           "Discord will automatically update your status if you're attending a public Stage.",
         SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED:
-          "When you engage in a detectable activity (such as playing a game or listening to music), Discord can display information about those activities, including when and how you've engaged.",
+          "When you play a detectable game or other application that supports Rich Presence, Discord can display information about those activities, including when and how you engaged.",
         GAME_DETECTION_SERVICE: "Game Detection Service",
         USER_SETTINGS_GAMES_INSTALL_LOCATIONS: "Install locations",
         USER_SETTINGS_GAMES_INSTALL_LOCATION_ADD: "Add Install Location",
@@ -6797,11 +6797,11 @@
         USER_EXPLICIT_CONTENT_FILTER_HELP_V3:
           "Automatically block direct messages that may contain explicit images. [Learn more about this setting here.]({appealLink})",
         ACTIVITY_PARTY_PRIVACY: "Rich Presence",
-        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Allow friends to join your game.",
+        ACTIVITY_PARTY_PRIVACY_FRIENDS: "Allow friends to join your game",
         ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP:
           "This setting allows friends to join your game without sending a request.",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL:
-          "Allow voice channel participants to join your game.",
+          "Allow voice channel participants to join your game",
         ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP:
           "This setting allows people that are in the same voice channel as you to join your game without sending a request. This feature only works in non-community servers.",
         USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS: "Keep me safe",
@@ -26555,8 +26555,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278554", ", Version Hash: ")
-          .concat("0b0bec56bfd2caa86f4eaf11f48fc173eeb88320")
+          .concat("278558", ", Version Hash: ")
+          .concat("321a09153755b50f94a6e7d28c29cb39ab3dad5e")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29687,12 +29687,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278554"), "278554"));
+        let _ = parseInt(((e = "278558"), "278558"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278554"
+                "278558"
               )
             ),
             (_ = 0)),
@@ -52940,4 +52940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.434e5f1628403a3887fe.js.map
+//# sourceMappingURL=47513.e0ab1a9fed4a6d0dee68.js.map

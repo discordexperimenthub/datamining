@@ -5762,6 +5762,8 @@
           "memberlist_content_feed_hidden_toggled"),
         (el.CONTENT_POPOUT_EMOJI_CLICKED =
           "content_inventory_reaction_popout_emoji_clicked"),
+        (el.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED =
+          "user_nitro_tenure_reward_acknowledged"),
         ((es = _k || (_k = {})).CANARY = "canary"),
         (es.PTB = "ptb"),
         (es.STABLE = "stable"),
@@ -17388,4 +17390,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.fafa37166394745a26f0.js.map
+//# sourceMappingURL=7273.0cd5ce1483d30c702391.js.map

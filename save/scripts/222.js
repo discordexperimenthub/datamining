@@ -6400,13 +6400,20 @@
                                   onClick: t,
                                   onMouseEnter: a,
                                   onMouseLeave: s,
-                                  ...i
+                                  onBlur: i,
+                                  onFocus: r,
+                                  ...o
                                 } = e;
                                 return (0, n.jsx)(d.Button, {
-                                  ...i,
+                                  ...o,
+                                  "aria-label": "",
                                   onClick: () => {
                                     null == t || t(),
                                       j(!0),
+                                      d.AccessibilityAnnouncer.announce(
+                                        A.default.Messages
+                                          .INTEGRATIONS_WEBHOOK_COPIED_URL
+                                      ),
                                       b.start(1e3, () => j(!1)),
                                       D();
                                   },
@@ -7083,4 +7090,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a40976679936c037738d.js.map
+//# sourceMappingURL=ae12d36193beb038fc2e.js.map

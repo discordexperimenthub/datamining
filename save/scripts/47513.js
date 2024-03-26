@@ -11857,6 +11857,9 @@
         NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION:
           "Keep your Boost with an active Nitro subscription. Canceling resets progress and removes the Boost.",
         NITRO_HOME_REWARDING_REDEEMED_LABEL: "Redeemed",
+        NITRO_HOME_SHY_PROJECT_TITLE: "25% off VALORANT",
+        NITRO_HOME_SHY_PROJECT_SUBTITLE:
+          "Lock in. Stand out. Enjoy 25% off limited time VALORANT styles in the Shop.",
         GUILD_BOOST_NITRO_REWARD_BANNER:
           "You earned an extra Boost, nice work.",
         SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE: "Your Boost awaits!",
@@ -26556,8 +26559,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278681", ", Version Hash: ")
-          .concat("90240f3ba7166afef7474e4381d3965308acce60")
+          .concat("278693", ", Version Hash: ")
+          .concat("65bdd61e69bc93c9163b9ae71dcbe0e52ac93824")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29688,12 +29691,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278681"), "278681"));
+        let _ = parseInt(((e = "278693"), "278693"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278681"
+                "278693"
               )
             ),
             (_ = 0)),
@@ -52941,4 +52944,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.c7311219381097fe2d5f.js.map
+//# sourceMappingURL=47513.254e820d8169c749a315.js.map

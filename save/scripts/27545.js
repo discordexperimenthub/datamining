@@ -25,7 +25,7 @@
         r = a("254490"),
         i = a("49671"),
         c = a("49111");
-      let u = new n.default("uploadRtcLogFiles");
+      let u = new n.Logger("uploadRtcLogFiles");
       async function d(e, t) {
         let a;
         if (null == i.default.fileManager.readLogFiles)
@@ -870,8 +870,8 @@
         return {
           logsUploaded: new Date().toISOString(),
           releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          buildNumber: "278775",
-          versionHash: "a899f585ccf1ea39b0030fa2e7a16d5dc6095a84",
+          buildNumber: "278786",
+          versionHash: "930bcb93b248f40febec827fb4a2fd0ae7c7dee6",
         };
       }
       a.r(t),
@@ -1061,4 +1061,4 @@
     },
   },
 ]);
-//# sourceMappingURL=a752f03ab8ed979fbf34.js.map
+//# sourceMappingURL=fedf49c686a90169426a.js.map

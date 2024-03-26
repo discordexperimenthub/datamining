@@ -1727,7 +1727,7 @@
           t = e.document,
           [r] = n.useState(
             () =>
-              new u.default(
+              new u.ElementPool(
                 () => t.createElement("img"),
                 e => {
                   (e.onload = null), (e.src = "");
@@ -1736,7 +1736,7 @@
           ),
           [s] = n.useState(
             () =>
-              new u.default(
+              new u.ElementPool(
                 () => {
                   let e = t.createElement("video");
                   return (
@@ -2386,12 +2386,12 @@
       "use strict";
       r.r(t),
         r.d(t, {
-          default: function () {
+          ElementPool: function () {
             return s;
           },
         }),
         r("424973");
-      var s = class e {
+      class s {
         getElement() {
           return 0 === this._elements.length
             ? this._createElement()
@@ -2408,8 +2408,8 @@
             (this._createElement = e),
             (this._cleanElement = t);
         }
-      };
+      }
     },
   },
 ]);
-//# sourceMappingURL=58533.22d2a9594538cb34206b.js.map
+//# sourceMappingURL=58533.d5066ba1e9dddab9d02c.js.map

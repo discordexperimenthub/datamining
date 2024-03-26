@@ -631,7 +631,7 @@
                       onDoubleClick: m,
                       children: [
                         o.isMobile && null != S
-                          ? (0, l.jsx)(s.default, {
+                          ? (0, l.jsx)(s.HamburgerButton, {
                               onClick: S,
                               className: h.hamburger,
                             })
@@ -737,10 +737,10 @@
             return B;
           },
           setToEndSelection: function () {
-            return O;
+            return H;
           },
           truncateContent: function () {
-            return H;
+            return O;
           },
           scrollCursorIntoView: function () {
             return z;
@@ -930,7 +930,7 @@
           l.EditorState.forceSelection(e, t)
         );
       }
-      function O(e) {
+      function H(e) {
         let t = N(e),
           n = e.getSelection();
         return (
@@ -938,7 +938,7 @@
           l.EditorState.forceSelection(e, n)
         );
       }
-      function H(e) {
+      function O(e) {
         let t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
@@ -1020,7 +1020,7 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          default: function () {
+          HamburgerButton: function () {
             return s;
           },
         });
@@ -1028,24 +1028,24 @@
       n("884691");
       var r = n("421898"),
         a = n.n(r),
-        i = n("401921"),
-        s = e => {
-          let { open: t = !1, className: n, ...r } = e;
-          return (0, l.jsxs)("button", {
-            type: "button",
-            className: a(i.btnHamburger, { [i.btnHamburgerOpen]: t }, n),
-            ...r,
-            children: [
-              (0, l.jsx)("span", {}),
-              (0, l.jsx)("span", {}),
-              (0, l.jsx)("span", {}),
-              (0, l.jsx)("span", {}),
-              (0, l.jsx)("span", {}),
-              (0, l.jsx)("span", {}),
-            ],
-          });
-        };
+        i = n("401921");
+      let s = e => {
+        let { open: t = !1, className: n, ...r } = e;
+        return (0, l.jsxs)("button", {
+          type: "button",
+          className: a(i.btnHamburger, { [i.btnHamburgerOpen]: t }, n),
+          ...r,
+          children: [
+            (0, l.jsx)("span", {}),
+            (0, l.jsx)("span", {}),
+            (0, l.jsx)("span", {}),
+            (0, l.jsx)("span", {}),
+            (0, l.jsx)("span", {}),
+            (0, l.jsx)("span", {}),
+          ],
+        });
+      };
     },
   },
 ]);
-//# sourceMappingURL=66752a3daac67a2fbbd7.js.map
+//# sourceMappingURL=3e408b17c2837fc4dcd6.js.map

@@ -4201,7 +4201,7 @@
                       onDoubleClick: f,
                       children: [
                         i.isMobile && null != U
-                          ? (0, a.jsx)(s.default, {
+                          ? (0, a.jsx)(s.HamburgerButton, {
                               onClick: U,
                               className: g.hamburger,
                             })
@@ -4467,7 +4467,7 @@
       "use strict";
       A.r(t),
         A.d(t, {
-          default: function () {
+          HamburgerButton: function () {
             return s;
           },
         });
@@ -4475,24 +4475,24 @@
       A("884691");
       var l = A("421898"),
         n = A.n(l),
-        r = A("401921"),
-        s = e => {
-          let { open: t = !1, className: A, ...l } = e;
-          return (0, a.jsxs)("button", {
-            type: "button",
-            className: n(r.btnHamburger, { [r.btnHamburgerOpen]: t }, A),
-            ...l,
-            children: [
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-            ],
-          });
-        };
+        r = A("401921");
+      let s = e => {
+        let { open: t = !1, className: A, ...l } = e;
+        return (0, a.jsxs)("button", {
+          type: "button",
+          className: n(r.btnHamburger, { [r.btnHamburgerOpen]: t }, A),
+          ...l,
+          children: [
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+          ],
+        });
+      };
     },
   },
 ]);
-//# sourceMappingURL=95e7936696bde5bd564c.js.map
+//# sourceMappingURL=c23209ad6f8db0fba6e2.js.map

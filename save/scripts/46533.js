@@ -6,42 +6,42 @@
       l.r(t),
         l.d(t, {
           default: function () {
-            return C;
+            return M;
           },
         }),
         l("222007");
       var o = l("37983"),
         s = l("884691"),
-        a = l("750485"),
-        n = l("77078"),
-        d = l("913144"),
-        r = l("376152"),
+        n = l("750485"),
+        a = l("77078"),
+        r = l("913144"),
+        d = l("376152"),
         u = l("579565"),
         i = l("778695"),
         c = l("782340"),
-        f = l("592257"),
-        C = function (e) {
+        C = l("592257"),
+        M = function (e) {
           let {
               transitionState: t,
               closeParentModal: l,
-              onClose: C,
-              dropsQuestId: M,
+              onClose: M,
+              dropsQuestId: f,
               platform: h,
               code: p,
-              singlePlatformClaim: m,
+              singlePlatformClaim: x,
             } = e,
-            [x, j] = s.useState(null),
+            [m, j] = s.useState(null),
             [I, N] = s.useState(null != p ? p : null),
-            E = (0, u.getDropByQuestId)(M);
+            E = (0, u.getDropByQuestId)(f);
           if (
             (s.useEffect(() => {
-              null == I && m && O(M, h);
-            }, [I, m, M, h]),
+              null == I && x && O(f, h);
+            }, [I, x, f, h]),
             null == E)
           )
             return null;
           let O = (e, t) => {
-              (0, r.claimDropsRewardCode)(e, t)
+              (0, d.claimDropsRewardCode)(e, t)
                 .then(e => N(e))
                 .catch(e => {
                   var t;
@@ -54,23 +54,23 @@
                   );
                 })
                 .then(() => {
-                  d.default.wait(async () => {
-                    await (0, r.fetchDropsUserStatus)();
+                  r.default.wait(async () => {
+                    await (0, d.fetchDropsUserStatus)();
                   });
                 });
             },
             R = () => {
-              l(), (0, n.closeAllModals)();
+              l(), (0, a.closeAllModals)();
             };
-          return (0, o.jsx)(n.ModalRoot, {
+          return (0, o.jsx)(a.ModalRoot, {
             transitionState: t,
             children:
-              null != x
+              null != m
                 ? (0, o.jsx)(i.DropsModalClaimErrorBody, {
                     onClose: () => {
                       R();
                     },
-                    errorCode: x,
+                    errorCode: m,
                   })
                 : null !== I
                   ? (0, o.jsx)(i.DropsCopyCodeModalContent, {
@@ -81,43 +81,43 @@
                     })
                   : (0, o.jsxs)(o.Fragment, {
                       children: [
-                        (0, o.jsxs)(n.ModalHeader, {
+                        (0, o.jsxs)(a.ModalHeader, {
                           separator: !1,
-                          justify: a.default.Justify.BETWEEN,
+                          justify: n.Flex.Justify.BETWEEN,
                           children: [
-                            (0, o.jsx)(n.Heading, {
+                            (0, o.jsx)(a.Heading, {
                               variant: "heading-md/medium",
                               children:
                                 c.default.Messages.DROPS_MODAL_PLATFORM_CONFIRMATION_TITLE.format(
                                   { platform: (0, u.getPlatformLabel)(h) }
                                 ),
                             }),
-                            (0, o.jsx)(n.ModalCloseButton, { onClick: R }),
+                            (0, o.jsx)(a.ModalCloseButton, { onClick: R }),
                           ],
                         }),
-                        (0, o.jsx)(n.ModalContent, {
-                          className: f.modalContent,
-                          children: (0, o.jsx)(n.Text, {
+                        (0, o.jsx)(a.ModalContent, {
+                          className: C.modalContent,
+                          children: (0, o.jsx)(a.Text, {
                             variant: "text-md/normal",
                             children:
                               c.default.Messages
                                 .DROPS_MODAL_CONFIRMATION_WARNING,
                           }),
                         }),
-                        (0, o.jsxs)(n.ModalFooter, {
-                          justify: a.default.Justify.BETWEEN,
+                        (0, o.jsxs)(a.ModalFooter, {
+                          justify: n.Flex.Justify.BETWEEN,
                           children: [
-                            (0, o.jsx)(n.Button, {
+                            (0, o.jsx)(a.Button, {
                               onClick: () => {
-                                O(M, h);
+                                O(f, h);
                               },
                               children: c.default.Messages.CONFIRM,
                             }),
-                            (0, o.jsx)(n.Button, {
-                              look: n.Button.Looks.LINK,
-                              size: n.Button.Sizes.MIN,
-                              color: n.Button.Colors.PRIMARY,
-                              onClick: C,
+                            (0, o.jsx)(a.Button, {
+                              look: a.Button.Looks.LINK,
+                              size: a.Button.Sizes.MIN,
+                              color: a.Button.Colors.PRIMARY,
+                              onClick: M,
                               children: c.default.Messages.BACK,
                             }),
                           ],
@@ -129,4 +129,4 @@
     },
   },
 ]);
-//# sourceMappingURL=4fef881b4ff09b3542f6.js.map
+//# sourceMappingURL=5d17a569d7137da28524.js.map

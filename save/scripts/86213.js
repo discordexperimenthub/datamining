@@ -34,8 +34,8 @@
         r,
         u = t("37983"),
         d = t("884691"),
-        I = t("549471"),
-        c = t("592861"),
+        c = t("549471"),
+        I = t("592861"),
         h = t("612562"),
         S = t("77078"),
         m = t("821879"),
@@ -118,7 +118,7 @@
           "ZA",
           "ZW",
         ],
-        A = c.default
+        A = I.default
           .map(e => ({ value: e.alpha2, label: e.name }))
           .filter(e => "KP" !== e.value && "SY" !== e.value),
         v = (0, N.uid)(),
@@ -149,7 +149,7 @@
           "settingsInternationalWithoutNameMobile"),
         ((r = n || (n = {})).EDIT = "edit"),
         (r.CREATE = "create");
-      let U = { [D]: h.default, [C]: I.default },
+      let U = { [D]: h.States, [C]: c.CanadaProvinces },
         B = {
           name: e => ({
             name: "name",
@@ -623,7 +623,7 @@
       t.r(a),
         t.d(a, {
           default: function () {
-            return I;
+            return c;
           },
         }),
         t("222007");
@@ -677,8 +677,8 @@
                 } = this.props,
                 {
                   getClassNameForLayout: d,
-                  renderInput: I,
-                  title: c,
+                  renderInput: c,
+                  title: I,
                   name: h,
                   id: S,
                   placeholder: m,
@@ -700,9 +700,9 @@
                 o.FormSection,
                 {
                   className: i(null == d ? void 0 : d(r)),
-                  title: c(),
+                  title: I(),
                   titleId: S,
-                  children: I(E, u),
+                  children: c(E, u),
                 },
                 h
               );
@@ -717,17 +717,17 @@
             });
         }
       }
-      var I = d;
+      var c = d;
     },
     549471: function (e, a, t) {
       "use strict";
       t.r(a),
         t.d(a, {
-          default: function () {
+          CanadaProvinces: function () {
             return l;
           },
         });
-      var l = [
+      let l = [
         { label: "Alberta", value: "AB" },
         { label: "British Columbia", value: "BC" },
         { label: "Manitoba", value: "MB" },
@@ -747,11 +747,11 @@
       "use strict";
       t.r(a),
         t.d(a, {
-          default: function () {
+          States: function () {
             return l;
           },
         });
-      var l = [
+      let l = [
         { label: "Alabama", value: "AL" },
         { label: "Alaska", value: "AK" },
         { label: "American Samoa", value: "AS" },
@@ -818,4 +818,4 @@
     },
   },
 ]);
-//# sourceMappingURL=86213.58e33d68cc4f7505ca86.js.map
+//# sourceMappingURL=86213.b6cc5f86ab26cf6b46a4.js.map

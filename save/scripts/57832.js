@@ -553,7 +553,7 @@
                           [v.hideHamburger]: !e,
                         }),
                         children: [
-                          e && (0, l.jsx)(u.default, { onClick: j }),
+                          e && (0, l.jsx)(u.HamburgerButton, { onClick: j }),
                           O,
                         ],
                       });
@@ -785,4 +785,4 @@
     },
   },
 ]);
-//# sourceMappingURL=730e85babadfe8fd579e.js.map
+//# sourceMappingURL=faf74021ea1a1efc3820.js.map

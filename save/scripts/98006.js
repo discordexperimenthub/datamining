@@ -743,10 +743,10 @@
         M = t("238161"),
         O = t("20950"),
         I = t("724209"),
-        D = t("782340"),
-        B = t("34693"),
+        B = t("782340"),
+        D = t("34693"),
         G = t("699412");
-      function F(e) {
+      function H(e) {
         let { resizableNode: r, onResize: t, onResizeEnd: n } = e,
           i = (0, d.default)({
             minDimension: b.DEVTOOLS_SIDEBAR_MIN_WIDTH,
@@ -755,9 +755,9 @@
             onElementResizeEnd: n,
             orientation: d.ResizeOrientation.HORIZONTAL_LEFT,
           });
-        return (0, a.jsx)("div", { onMouseDown: i, className: B.resizeHandle });
+        return (0, a.jsx)("div", { onMouseDown: i, className: D.resizeHandle });
       }
-      function H() {
+      function F() {
         var e;
         let r = n.useMemo(() => {
             let e = [
@@ -883,7 +883,7 @@
                 className: G.headerBar,
                 toolbar: (0, a.jsx)(f.default.Icon, {
                   icon: m.default,
-                  tooltip: D.default.Messages.CLOSE,
+                  tooltip: B.default.Messages.CLOSE,
                   onClick: y.toggleDisplayDevTools,
                 }),
                 children: [
@@ -897,7 +897,7 @@
               (0, a.jsx)(t, {}),
               i(),
               (0, a.jsx)(N.DevToolsLayerContainer, {
-                className: B.layerContainer,
+                className: D.layerContainer,
               }),
             ],
           })
@@ -921,17 +921,17 @@
           ? null
           : (0, a.jsxs)("div", {
               ref: e,
-              className: o(B.container),
+              className: o(D.container),
               style: { minWidth: b.DEVTOOLS_SIDEBAR_MIN_WIDTH, width: t },
               children: [
-                (0, a.jsx)(F, {
+                (0, a.jsx)(H, {
                   resizableNode: e,
                   onResize: i,
                   onResizeEnd: l,
                 }),
                 (0, a.jsx)("div", {
-                  className: B.sidebarContent,
-                  children: (0, a.jsx)(H, {}),
+                  className: D.sidebarContent,
+                  children: (0, a.jsx)(F, {}),
                 }),
               ],
             });
@@ -943,18 +943,18 @@
         );
         return e
           ? (0, a.jsx)("div", {
-              className: o(B.container, B.mobileContainerExpanded),
+              className: o(D.container, D.mobileContainerExpanded),
               children: (0, a.jsx)("div", {
-                className: B.sidebarContent,
-                children: (0, a.jsx)(H, {}),
+                className: D.sidebarContent,
+                children: (0, a.jsx)(F, {}),
               }),
             })
           : (0, a.jsx)("div", {
-              className: B.container,
+              className: D.container,
               children: (0, a.jsx)(c.Clickable, {
                 onClick: y.toggleDisplayDevTools,
                 children: (0, a.jsxs)(f.default, {
-                  className: o(G.headerBar, B.mobileHeaderCollapsed),
+                  className: o(G.headerBar, D.mobileHeaderCollapsed),
                   toolbar: (0, a.jsx)(p.default, {
                     direction: p.default.Directions.UP,
                   }),
@@ -1608,7 +1608,7 @@
               ),
             []
           ),
-          D = i.useCallback(
+          B = i.useCallback(
             e => {
               let r = {};
               Object.keys(e).forEach(t => {
@@ -1659,7 +1659,7 @@
                       size: b.Button.Sizes.MIN,
                       onClick: () => {
                         navigator.clipboard.readText().then(e => {
-                          D(JSON.parse(e));
+                          B(JSON.parse(e));
                         });
                       },
                       children: "Import",
@@ -3266,8 +3266,8 @@
               ? t
               : "Unknown",
           I = null != A,
-          D = null != A && new Date(A).getTime() < Date.now(),
-          B =
+          B = null != A && new Date(A).getTime() < Date.now(),
+          D =
             (null == M ? void 0 : M.sku_id) ===
             k.PremiumSubscriptionSKUs.TIER_0,
           G = async () => {
@@ -3294,14 +3294,14 @@
             };
           }
         }, [b, v]);
-        let F = "Active";
+        let H = "Active";
         return (
-          I && (F = "Acknowledged"),
-          D && (F = "Expired"),
+          I && (H = "Acknowledged"),
+          B && (H = "Expired"),
           (0, a.jsxs)("div", {
             className: o(
               C.card,
-              B ? C.gradientWrapperTier0 : C.gradientWrapperTier2
+              D ? C.gradientWrapperTier0 : C.gradientWrapperTier2
             ),
             children: [
               (0, a.jsxs)("div", {
@@ -3388,12 +3388,12 @@
                     onClick: G,
                     className: o(C.badge, C.clickable, {
                       [C.acked]: I,
-                      [C.expired]: D,
+                      [C.expired]: B,
                     }),
                     children: (0, a.jsx)(c.Text, {
                       variant: "eyebrow",
-                      color: "Acknowledged" === F ? void 0 : "always-white",
-                      children: F,
+                      color: "Acknowledged" === H ? void 0 : "always-white",
+                      children: H,
                     }),
                   }),
                   null != R &&
@@ -5471,7 +5471,7 @@
                       onDoubleClick: p,
                       children: [
                         s.isMobile && null != v
-                          ? (0, a.jsx)(l.default, {
+                          ? (0, a.jsx)(l.HamburgerButton, {
                               onClick: v,
                               className: m.hamburger,
                             })
@@ -7253,7 +7253,7 @@
       "use strict";
       t.r(r),
         t.d(r, {
-          default: function () {
+          HamburgerButton: function () {
             return l;
           },
         });
@@ -7261,24 +7261,24 @@
       t("884691");
       var n = t("421898"),
         i = t.n(n),
-        o = t("401921"),
-        l = e => {
-          let { open: r = !1, className: t, ...n } = e;
-          return (0, a.jsxs)("button", {
-            type: "button",
-            className: i(o.btnHamburger, { [o.btnHamburgerOpen]: r }, t),
-            ...n,
-            children: [
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-              (0, a.jsx)("span", {}),
-            ],
-          });
-        };
+        o = t("401921");
+      let l = e => {
+        let { open: r = !1, className: t, ...n } = e;
+        return (0, a.jsxs)("button", {
+          type: "button",
+          className: i(o.btnHamburger, { [o.btnHamburgerOpen]: r }, t),
+          ...n,
+          children: [
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+            (0, a.jsx)("span", {}),
+          ],
+        });
+      };
     },
   },
 ]);
-//# sourceMappingURL=2a1b09d6b381c1f8b943.js.map
+//# sourceMappingURL=7dd9d6dcd9b16d40ebcf.js.map

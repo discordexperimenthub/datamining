@@ -293,7 +293,7 @@
         T = l("49111"),
         R = l("724210"),
         O = l("782340");
-      let b = new u.default("MessageManager");
+      let b = new u.Logger("MessageManager");
       function L(e) {
         let {
           guildId: t,
@@ -1406,4 +1406,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c3440d2c63db4f32f0d1.js.map
+//# sourceMappingURL=ac5920dda26fb8f72082.js.map

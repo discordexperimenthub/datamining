@@ -25135,6 +25135,18 @@
         SIGNUP_COMPLETED_TITLE: "Thank you for your interest!",
         SIGNUP_COMPLETED_DESCRIPTION:
           "We will get back to you once it's available.",
+        SIGNUP_CLAN_OPTION_SOCIAL_TITLE: "Social",
+        SIGNUP_CLAN_OPTION_SOCIAL_DESCRIPTION:
+          "Skill doesn't matter. We have a good time win or lose.",
+        SIGNUP_CLAN_OPTION_CASUAL_TITLE: "Casual",
+        SIGNUP_CLAN_OPTION_CASUAL_DESCRIPTION:
+          "Some people group up to play competitively, and some just hang out.",
+        SIGNUP_CLAN_OPTION_COMPETITIVE_TITLE: "Competitive",
+        SIGNUP_CLAN_OPTION_COMPETITIVE_DESCRIPTION:
+          "We play together to win, rank up, or beat challenges.",
+        SIGNUP_CLAN_OPTION_CREATIVE_TITLE: "Creative",
+        SIGNUP_CLAN_OPTION_CREATIVE_DESCRIPTION:
+          "We tend to your creativity by curating, solving, or creating",
       });
     },
     657743: function (e, _, E) {
@@ -26566,8 +26578,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278838", ", Version Hash: ")
-          .concat("24a9920f7cb6f950771580e3c0cfb74f4c6c810c")
+          .concat("278851", ", Version Hash: ")
+          .concat("76a77be56b15b2293b1442ae65949af871b482c6")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -28424,7 +28436,7 @@
           neverLoadBeforeConnectionOpen: !0,
         },
         SignUpManager: {
-          actions: ["POST_CONNECTION_OPEN"],
+          actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT"],
           inlineRequire: () => E("674487").default,
           neverLoadBeforeConnectionOpen: !0,
         },
@@ -29698,12 +29710,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278838"), "278838"));
+        let _ = parseInt(((e = "278851"), "278851"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278838"
+                "278851"
               )
             ),
             (_ = 0)),
@@ -38142,7 +38154,7 @@
       E.r(_),
         E.d(_, {
           default: function () {
-            return I;
+            return N;
           },
         }),
         E("222007");
@@ -38150,28 +38162,85 @@
         o = E("913144"),
         n = E("689988"),
         r = E("10641"),
-        a = E("427957");
-      class i extends n.default {
+        a = E("305961"),
+        i = E("957255"),
+        I = E("432174"),
+        s = E("427957"),
+        T = E("49111");
+      class S extends n.default {
         constructor(...e) {
           super(...e),
             (this.actions = {
               POST_CONNECTION_OPEN: e => this.handleConnectionOpen(e),
+              CHANNEL_SELECT: e => this.handleChannelSelect(e),
             }),
             (this.handleConnectionOpen = e => {
-              let _ = (0, a.getValorantUserSignupExperiment)("SignUpManager"),
-                E = (0, r.isDismissibleContentDismissed)(
+              let _ = (0, s.getValorantUserSignupExperiment)("SignUpManager"),
+                E = (0, I.getValorantAdminSignupExperiment)("SignUpManager"),
+                n = (0, r.isDismissibleContentDismissed)(
                   t.DismissibleContent.GAME_ONE_USER_SIGNUPS
                 );
               _ &&
                 !E &&
+                !n &&
                 o.default.dispatch({
                   type: "ENABLE_USER_SIGN_UP",
                   key: "valorant-user",
                 });
+            }),
+            (this.handleChannelSelect = e => {
+              let { guildId: _ } = e;
+              if (null == _) return;
+              let E = (0, I.getValorantAdminSignupExperiment)("SignUpManager"),
+                n = (0, r.isDismissibleContentDismissed)(
+                  t.DismissibleContent.GAME_ONE_USER_SIGNUPS
+                );
+              if (!E || n) return;
+              let s = a.default.getGuild(_);
+              if (null != s)
+                s.hasFeature(T.GuildFeatures.VALORANT_L30) &&
+                  i.default.can(T.Permissions.MANAGE_GUILD, s) &&
+                  o.default.dispatch({
+                    type: "ENABLE_GUILD_SIGN_UP",
+                    key: "valorant-admin",
+                    guildId: _,
+                  });
             });
         }
       }
-      var I = new i();
+      var N = new S();
+    },
+    432174: function (e, _, E) {
+      "use strict";
+      E.r(_),
+        E.d(_, {
+          getValorantAdminSignupExperiment: function () {
+            return n;
+          },
+        });
+      var t = E("862205");
+      let o = (0, t.createExperiment)({
+        kind: "user",
+        id: "2024-03_valorant_admin_signup",
+        label: "Valorant Admin Signup",
+        defaultConfig: { showAdminSignup: !1 },
+        treatments: [
+          {
+            id: 1,
+            label: "Show admin signup",
+            config: { showAdminSignup: !0 },
+          },
+        ],
+      });
+      function n(e) {
+        let _ =
+            !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+          { showAdminSignup: E } = o.getCurrentConfig(
+            { location: e },
+            { autoTrackExposure: _ }
+          );
+        return E;
+      }
     },
     427957: function (e, _, E) {
       "use strict";
@@ -38192,11 +38261,13 @@
         ],
       });
       function n(e) {
-        let { showUserSignup: _ } = o.getCurrentConfig(
-          { location: e },
-          { autoTrackExposure: !1 }
-        );
-        return _;
+        let _ =
+            !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+          { showUserSignup: E } = o.getCurrentConfig(
+            { location: e },
+            { autoTrackExposure: _ }
+          );
+        return E;
       }
     },
     202014: function (e, _, E) {
@@ -52965,4 +53036,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.c22125eb9bc4bf9a1637.js.map
+//# sourceMappingURL=47513.c4869db02cb20e58f8cf.js.map

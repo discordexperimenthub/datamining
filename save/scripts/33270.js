@@ -1717,7 +1717,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278838",
+                  buildNumber: "278851",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -10842,7 +10842,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return P;
+            return y;
           },
         }),
         n("222007");
@@ -10862,43 +10862,44 @@
         C = n("519440"),
         S = n("600177"),
         I = n("947337"),
-        m = n("197881"),
-        p = n("401774"),
-        T = n("607894"),
-        g = n("746504"),
-        A = n("107153"),
-        N = n("32505"),
-        R = n("731681"),
-        O = n("427474"),
-        v = n("994428");
-      function L(e) {
+        m = n("488445"),
+        p = n("197881"),
+        T = n("401774"),
+        g = n("607894"),
+        A = n("746504"),
+        N = n("107153"),
+        R = n("32505"),
+        O = n("731681"),
+        v = n("427474"),
+        L = n("994428");
+      function M(e) {
         e.stopPropagation();
       }
-      function M(e) {
+      function P(e) {
         var t;
         let { guild: n } = e,
           [d, E] = s.useState(
-            null !== (t = r.Storage.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) &&
+            null !== (t = r.Storage.get(v.LAST_HIDDEN_CHANNEL_NOTICE)) &&
               void 0 !== t
               ? t
               : 0
           ),
           _ = e => {
-            r.Storage.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e);
+            r.Storage.set(v.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e);
           },
-          C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () =>
-            O.CHANNEL_NOTICES.filter(e => {
+          C = (0, l.useStateFromStoresArray)(v.CHANNEL_NOTICE_STORES, () =>
+            v.CHANNEL_NOTICES.filter(e => {
               let { store: t } = e;
               return null == t ? void 0 : t.channelNoticePredicate(n, d);
             }).map(e => e.dismissibleContentType)
           );
         return (0, a.jsx)(u.default, {
           contentTypes: C,
-          groupName: v.DismissibleContentGroupName.CHANNEL_NOTICES,
+          groupName: L.DismissibleContentGroupName.CHANNEL_NOTICES,
           children: e => {
             let { visibleContent: t, markAsDismissed: s } = e,
               l = () => {
-                _(Date.now()), s(v.ContentDismissActionType.UNKNOWN);
+                _(Date.now()), s(L.ContentDismissActionType.UNKNOWN);
               },
               r = (() => {
                 switch (t) {
@@ -10908,7 +10909,7 @@
                       markAsDismissed: l,
                     });
                   case i.DismissibleContent.CHANNEL_NOTICE_INVITE:
-                    return (0, a.jsx)(g.default, {
+                    return (0, a.jsx)(A.default, {
                       guild: n,
                       markAsDismissed: l,
                     });
@@ -10919,7 +10920,7 @@
                       markAsDismissed: l,
                     });
                   case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-                    return (0, a.jsx)(N.default, {
+                    return (0, a.jsx)(R.default, {
                       guild: n,
                       markAsDismissed: l,
                     });
@@ -10930,7 +10931,7 @@
                     });
                   case i.DismissibleContent
                     .GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
-                    return (0, a.jsx)(T.default, {
+                    return (0, a.jsx)(g.default, {
                       guild: n,
                       markAsDismissed: l,
                     });
@@ -10938,7 +10939,7 @@
                     return (0, a.jsx)(o.default, {
                       guild: n,
                       markAsDismissed: () =>
-                        s(v.ContentDismissActionType.UNKNOWN),
+                        s(L.ContentDismissActionType.UNKNOWN),
                     });
                   default:
                     return null;
@@ -10946,34 +10947,36 @@
               })();
             return null == r
               ? null
-              : (0, a.jsx)("div", { onContextMenu: L, children: r });
+              : (0, a.jsx)("div", { onContextMenu: M, children: r });
           },
         });
       }
-      var P = e => {
+      var y = e => {
         let { guild: t } = e,
-          n = (0, R.default)(t);
+          n = (0, O.default)(t);
         switch (n) {
-          case R.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
+          case O.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
             return (0, a.jsx)(I.default, { guild: t });
-          case R.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+          case O.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, a.jsx)(d.default, { guild: t });
-          case R.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-            return (0, a.jsx)(A.default, { guild: t });
-          case R.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
+          case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
+            return (0, a.jsx)(N.default, { guild: t });
+          case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
             return (0, a.jsx)(E.default, { guild: t });
-          case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-            return (0, a.jsx)(p.default, { guild: t });
-          case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
+          case O.ConnectedChannelNotices.GUILD_MFA_WARNING:
+            return (0, a.jsx)(T.default, { guild: t });
+          case O.ConnectedChannelNotices.COMMANDS_MIGRATION:
             return (0, a.jsx)(C.default, { guild: t });
-          case R.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
+          case O.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, a.jsx)(S.default, { guild: t });
-          case R.ConnectedChannelNotices.HUB_STUDY_ROOM:
+          case O.ConnectedChannelNotices.HUB_STUDY_ROOM:
             return (0, a.jsx)(_.default, { guild: t });
+          case O.ConnectedChannelNotices.SIGNUP:
+            return (0, a.jsx)(m.default, { guild: t });
         }
-        return m.ProcessArgs.isDisallowPopupsSet()
+        return p.ProcessArgs.isDisallowPopupsSet()
           ? null
-          : (0, a.jsx)(M, { guild: e.guild });
+          : (0, a.jsx)(P, { guild: e.guild });
       };
     },
     427474: function (e, t, n) {
@@ -11900,7 +11903,7 @@
             return s;
           },
           default: function () {
-            return N;
+            return R;
           },
         });
       var a,
@@ -11916,65 +11919,70 @@
         E = n("702411"),
         h = n("991254"),
         _ = n("226511"),
-        C = n("735201"),
-        S = n("957255"),
-        I = n("833781"),
-        m = n("572182"),
-        p = n("201952"),
-        T = n("718517"),
-        g = n("427459"),
-        A = n("49111");
-      function N(e) {
+        C = n("124150"),
+        S = n("735201"),
+        I = n("957255"),
+        m = n("833781"),
+        p = n("572182"),
+        T = n("201952"),
+        g = n("718517"),
+        A = n("427459"),
+        N = n("49111");
+      function R(e) {
         var t;
         let n =
             null !== (t = null == e ? void 0 : e.id) && void 0 !== t
               ? t
-              : A.EMPTY_STRING_SNOWFLAKE_ID,
+              : N.EMPTY_STRING_SNOWFLAKE_ID,
           { lastFetchedAt: a } = (0, i.useStateFromStoresObject)(
-            [C.default],
+            [S.default],
             () => ({
-              appliedGuildBoosts: C.default.getAppliedGuildBoostsForGuild(n),
-              lastFetchedAt: C.default.getLastFetchedAtForGuild(n),
+              appliedGuildBoosts: S.default.getAppliedGuildBoostsForGuild(n),
+              lastFetchedAt: S.default.getLastFetchedAtForGuild(n),
             })
           ),
-          { lastDismissedGracePeriod: s, isGracePeriodVisible: N } = (0,
-          i.useStateFromStoresObject)([I.default], () => ({
+          { lastDismissedGracePeriod: s, isGracePeriodVisible: R } = (0,
+          i.useStateFromStoresObject)([m.default], () => ({
             lastDismissedGracePeriod:
-              I.default.getLastDismissedGracePeriodForGuild(n),
-            isGracePeriodVisible: I.default.isVisible(n),
+              m.default.getLastDismissedGracePeriodForGuild(n),
+            isGracePeriodVisible: m.default.isVisible(n),
           })),
-          R = (0, i.useStateFromStores)([_.default], () =>
+          O = (0, i.useStateFromStores)([_.default], () =>
             _.default.isVisible(e)
           ),
-          O = (0, i.useStateFromStores)([p.default], () =>
+          v = (0, i.useStateFromStores)([T.default], () =>
+            T.default.isVisible(e)
+          ),
+          L = (0, i.useStateFromStores)([I.default], () =>
+            I.default.can(N.Permissions.ADMINISTRATOR, e)
+          ),
+          M =
+            null != s &&
+            Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+          P = null != e ? e.premiumSubscriberCount : 0,
+          y =
+            (0, A.getGuildTierFromAppliedBoostCount)(P, n) !==
+            N.BoostedGuildTiers.NONE,
+          D = null != a && Date.now() - a <= 432e5,
+          x = !D && !M && L && y,
+          b = (0, d.useGuildHasLiveChannelNotice)(n),
+          U = (0, i.useStateFromStores)([p.default], () =>
             p.default.isVisible(e)
           ),
-          v = (0, i.useStateFromStores)([S.default], () =>
-            S.default.can(A.Permissions.ADMINISTRATOR, e)
-          ),
-          L =
-            null != s &&
-            Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-          M = null != e ? e.premiumSubscriberCount : 0,
-          P =
-            (0, g.getGuildTierFromAppliedBoostCount)(M, n) !==
-            A.BoostedGuildTiers.NONE,
-          y = null != a && Date.now() - a <= 432e5,
-          D = !y && !L && v && P,
-          x = (0, d.useGuildHasLiveChannelNotice)(n),
-          b = (0, i.useStateFromStores)([m.default], () =>
-            m.default.isVisible(e)
-          ),
-          U = E.default.useShouldShowChannelNotice(n),
-          G = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
-          { enableStudyGroup: j } = (0, f.useHubStudyGroupExperiment)(e),
-          w = G.length > 0,
-          k = j && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB)),
-          { canSeeUpcomingEventsNotices: F } = u.default.useExperiment(
+          G = E.default.useShouldShowChannelNotice(n),
+          j = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+          { enableStudyGroup: w } = (0, f.useHubStudyGroupExperiment)(e),
+          k = j.length > 0,
+          F = w && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
+          { canSeeUpcomingEventsNotices: B } = u.default.useExperiment(
             { guildId: n, location: "useVisibleConnectedNotice" },
             { autoTrackExposure: !1 }
           ),
-          B = (0, c.useGuildUpcomingEventsNotice)(n);
+          H = (0, c.useGuildUpcomingEventsNotice)(n),
+          V = (0, i.useStateFromStores)(
+            [C.default],
+            () => null != C.default.getActiveGuildSignUp(n)
+          );
         if (
           (l.useEffect(() => {
             o.default.getGuildEventsForCurrentUser(n);
@@ -11982,28 +11990,29 @@
           l.useEffect(() => {
             let e = -1;
             return (
-              D &&
+              x &&
                 (e = window.setTimeout(
                   () => {
                     null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n);
                   },
-                  30 * Math.random() * T.default.Millis.SECOND
+                  30 * Math.random() * g.default.Millis.SECOND
                 )),
               () => {
                 window.clearTimeout(e);
               }
             );
-          }, [n, D]),
-          R)
+          }, [n, x]),
+          O)
         )
           return 0;
-        if (N) return 1;
-        if (O) return 2;
-        else if (x || (F && null != B)) return 3;
-        else if (b) return 4;
-        else if (U) return 5;
-        else if (w) return 6;
-        else if (k) return 7;
+        if (R) return 1;
+        if (v) return 2;
+        else if (b || (B && null != H)) return 3;
+        else if (U) return 4;
+        else if (G) return 5;
+        else if (k) return 6;
+        else if (F) return 7;
+        else if (V) return 8;
         return null;
       }
       ((a = s || (s = {}))[(a.ENABLE_PUBLIC_GUILD = 0)] =
@@ -12016,7 +12025,8 @@
         (a[(a.COMMANDS_MIGRATION = 5)] = "COMMANDS_MIGRATION"),
         (a[(a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6)] =
           "APPLICATION_SUBSCRIPTION_EXPIRATION"),
-        (a[(a.HUB_STUDY_ROOM = 7)] = "HUB_STUDY_ROOM");
+        (a[(a.HUB_STUDY_ROOM = 7)] = "HUB_STUDY_ROOM"),
+        (a[(a.SIGNUP = 8)] = "SIGNUP");
     },
     156565: function (e, t, n) {
       "use strict";
@@ -45604,6 +45614,85 @@
       }
       var c = new d();
     },
+    488445: function (e, t, n) {
+      "use strict";
+      n.r(t),
+        n.d(t, {
+          default: function () {
+            return c;
+          },
+        });
+      var a = n("37983"),
+        s = n("884691"),
+        l = n("495137"),
+        i = n("77078"),
+        r = n("446674"),
+        o = n("124150"),
+        u = n("49111"),
+        d = n("8732"),
+        c = function (e) {
+          let { guild: t } = e,
+            c = (0, r.useStateFromStores)([o.default], () =>
+              o.default.getActiveGuildSignUp(t.id)
+            ),
+            f = s.useCallback(() => {
+              null != c &&
+                (0, i.openModalLazy)(async () => {
+                  let { default: e } = await n
+                    .el("597245")
+                    .then(n.bind(n, "597245"));
+                  return n => (0, a.jsx)(e, { ...n, target: c, guildId: t.id });
+                });
+            }, [c, t.id]);
+          if (null == c) return null;
+          let E = "url(".concat(
+            c.backgroundAssetUrl,
+            ") black top / cover no-repeat"
+          );
+          return (0, a.jsx)(i.ThemeContextProvider, {
+            theme: u.ThemeTypes.DARK,
+            children: (0, a.jsx)("div", {
+              className: d.container,
+              children: (0, a.jsxs)("div", {
+                className: d.card,
+                style: { background: E },
+                children: [
+                  (0, a.jsxs)("div", {
+                    className: d.eyebrow,
+                    children: [
+                      (0, a.jsx)(l.EnvelopeIcon, {
+                        height: 12,
+                        width: 12,
+                        color: "currentColor",
+                      }),
+                      (0, a.jsx)(i.Text, {
+                        variant: "text-xs/semibold",
+                        color: "none",
+                        children: "EXCLUSIVE INVITE",
+                      }),
+                    ],
+                  }),
+                  (0, a.jsx)(i.Heading, {
+                    variant: "heading-sm/medium",
+                    children:
+                      "Want to recruit more people to play Valorant in your server?",
+                  }),
+                  (0, a.jsx)(i.Button, {
+                    className: d.button,
+                    color: "none",
+                    onClick: f,
+                    children: (0, a.jsx)(i.Text, {
+                      variant: "text-sm/medium",
+                      color: "none",
+                      children: "Learn More",
+                    }),
+                  }),
+                ],
+              }),
+            }),
+          });
+        };
+    },
     447973: function (e, t, n) {
       "use strict";
       n.r(t),
@@ -53225,4 +53314,4 @@
     },
   },
 ]);
-//# sourceMappingURL=f80670afe1e1166636c0.js.map
+//# sourceMappingURL=79333c7f4041240c90a4.js.map

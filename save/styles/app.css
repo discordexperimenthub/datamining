@@ -39931,8 +39931,8 @@ html .invoiceCancelRow_c1bfe7 {
 }
 .message__13e98 {
   font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25rem;
+  font-size: 16px;
+  line-height: 20px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -62042,6 +62042,30 @@ input::-webkit-inner-spin-button {
 .icon__1bb97 {
   color: var(--header-secondary);
   margin-right: 4px;
+}
+.container_a1dfbf {
+  padding: 8px;
+}
+.card__019dd {
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-base-tertiary);
+  box-shadow: var(--shadow-low);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.eyebrow_f904aa {
+  color: var(--yellow-200);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.button_fea468 {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
 }
 .enable-forced-colors .container__30406 {
   background-color: Canvas;
@@ -103162,8 +103186,8 @@ div.nagbar_c731ff {
   position: relative;
 }
 .contentInner_d7be94 {
-  height: 560px;
-  padding: 40px;
+  height: 600px;
+  padding: 0 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -103172,6 +103196,7 @@ div.nagbar_c731ff {
   background-color: black;
 }
 .header_cad314 {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -103255,6 +103280,46 @@ div.nagbar_c731ff {
   position: absolute;
   top: 24px;
   right: 24px;
+}
+.select__299db {
+  border: 1px solid var(--border-subtle) !important;
+  max-width: 240px;
+}
+.form__66398 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 40px;
+}
+.formGroup_ab9a41 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.acknowledgements__4eada {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 480px;
+}
+.acknowledgement__32a38 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--input-background);
+  cursor: pointer;
+}
+.acknowledgement__32a38:hover {
+  border-color: var(--border-strong);
+}
+.checkboxWrapper_e25ce6 {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 .waveformCanvas_ed56c9 {
   width: 100%;
@@ -111351,4 +111416,4 @@ img[alt] {
     --font-weight-semibold-1x-light-theme: 600;
   }
 }
-/*# sourceMappingURL=app.ac242a7d1dba7bd38f79.css.map*/
+/*# sourceMappingURL=app.12aaeb804e55d4090439.css.map*/

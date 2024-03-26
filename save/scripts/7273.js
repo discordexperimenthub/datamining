@@ -1593,7 +1593,8 @@
           "ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY"),
         (Ic.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE =
           "GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE"),
-        (Ic.CLAN = "CLAN");
+        (Ic.CLAN = "CLAN"),
+        (Ic.VALORANT_L30 = "VALORANT_L30");
       let aX = Object.freeze({
         SUPPRESS_JOIN_NOTIFICATIONS: 1,
         SUPPRESS_PREMIUM_SUBSCRIPTIONS: 2,
@@ -5828,7 +5829,8 @@
         (eG.CLIPS_EDUCATION = "CLIPS_EDUCATION"),
         (eG.LINKED_ROLES_ADMIN = "LINKED_ROLES_ADMIN"),
         (eG.SUMMARIES = "SUMMARIES"),
-        (eG.SUMMARIES_ENABLED = "SUMMARIES_ENABLED");
+        (eG.SUMMARIES_ENABLED = "SUMMARIES_ENABLED"),
+        (eG.VALORANT_SIGNUP = "VALORANT_SIGNUP");
       let RT = Object.freeze({
           STORAGE_MANIFEST: (_, E) =>
             "".concat(_, "/storage/").concat(E, "/MANIFEST"),
@@ -17386,4 +17388,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.1781678ed02ecc02bf2f.js.map
+//# sourceMappingURL=7273.fafa37166394745a26f0.js.map

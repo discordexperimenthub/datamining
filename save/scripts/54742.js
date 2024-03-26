@@ -6,31 +6,34 @@
       a.r(t),
         a.d(t, {
           completeSignUp: function () {
-            return c;
+            return d;
           },
         });
-      var s = a("917351"),
-        n = a("151426"),
-        l = a("913144"),
+      var l = a("917351"),
+        s = a("151426"),
+        n = a("913144"),
         i = a("10641"),
         r = a("599110"),
+        c = a("874595"),
         o = a("49111");
-      function c(e) {
-        let { targetKey: t, data: a, completed: c } = e;
-        !(0, s.isEmpty)(a) &&
+      function d(e) {
+        let { targetKey: t, data: a, completed: d } = e;
+        !(0, l.isEmpty)(a) &&
           (!(0, i.isDismissibleContentDismissed)(
-            n.DismissibleContent.GAME_ONE_USER_SIGNUPS
+            s.DismissibleContent.GAME_ONE_USER_SIGNUPS
           ) &&
             r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
               target_key: t,
               selected_option_key: a.selectedOptionKey,
               email: a.email,
-              completed: c,
+              guild_id: a.guildId,
+              metadata: (0, c.extractMetadata)(a),
+              completed: d,
             }),
           (0, i.markDismissibleContentAsDismissed)(
-            n.DismissibleContent.GAME_ONE_USER_SIGNUPS
+            s.DismissibleContent.GAME_ONE_USER_SIGNUPS
           ),
-          l.default.dispatch({
+          n.default.dispatch({
             type: "COMPLETE_USER_SIGN_UP",
             email: a.email,
             targetKey: t,
@@ -43,138 +46,303 @@
       a.r(t),
         a.d(t, {
           default: function () {
-            return b;
+            return U;
           },
         }),
         a("222007");
-      var s,
-        n,
-        l = a("37983"),
+      var l,
+        s,
+        n = a("37983"),
         i = a("884691"),
         r = a("414456"),
-        o = a.n(r),
-        c = a("210696"),
-        d = a.n(c),
+        c = a.n(r),
+        o = a("210696"),
+        d = a.n(o),
         u = a("146606"),
         m = a("772279"),
         x = a("823527"),
         p = a("77078"),
         h = a("446674"),
-        y = a("206230"),
-        S = a("697218"),
-        j = a("476765"),
-        f = a("824326"),
-        k = a("599110"),
-        C = a("439932"),
-        E = a("199132"),
+        j = a("206230"),
+        v = a("697218"),
+        y = a("476765"),
+        k = a("824326"),
+        C = a("599110"),
+        S = a("439932"),
+        f = a("199132"),
         g = a("124150"),
-        v = a("49111"),
-        N = a("782340"),
-        T = a("804763");
-      let I = (0, C.getThemeClass)(v.ThemeTypes.DARK);
-      function _(e) {
-        let { selectedOption: t, targetKey: a, data: s } = e,
-          [n, r] = i.useState(""),
-          [o, c] = i.useState(null),
-          d = i.useCallback(
+        N = a("874595"),
+        T = a("49111"),
+        E = a("782340"),
+        b = a("804763");
+      let I = (0, S.getThemeClass)(T.ThemeTypes.DARK);
+      function O(e) {
+        let {
+            selectedOption: t,
+            targetKey: a,
+            data: l,
+            handleGoToNextFormGroup: s,
+          } = e,
+          [r, c] = i.useState(""),
+          [o, d] = i.useState(null),
+          [u, m] = i.useState(null),
+          [x, h] = i.useState(!1),
+          [j, v] = i.useState(!1),
+          y = i.useCallback(
             e => {
-              null != s.current && ((s.current.email = e), r(e), c(null));
+              let { value: t } = e;
+              null != l.current && ((l.current.playstyle = t), m(t), s(6));
             },
-            [s, c]
+            [l, m, s]
           ),
-          u = i.useCallback(() => {
-            if (null != t && null != s.current) {
-              if (n.length < 3 || -1 === n.indexOf("@")) {
-                c(N.default.Messages.SIGNUP_EMAIL_ERROR);
+          k = i.useCallback(() => {
+            if (null != l.current) {
+              let e = !x;
+              h(e), (l.current.acknowledgeCap = e), e && j && s(8);
+            }
+          }, [j, x, h, l, s]),
+          C = i.useCallback(() => {
+            if (null != l.current) {
+              let e = !j;
+              v(e), (l.current.acknowledgeScreen = e), e && x && s(8);
+            }
+          }, [x, j, v, l, s]),
+          S = i.useCallback(
+            e => {
+              null != l.current && ((l.current.email = e), c(e), d(null));
+            },
+            [l, d]
+          ),
+          g = i.useCallback(() => {
+            if (null != t && null != l.current) {
+              if (r.length < 3 || -1 === r.indexOf("@")) {
+                d(E.default.Messages.SIGNUP_EMAIL_ERROR);
                 return;
               }
-              (0, E.completeSignUp)({
+              (0, f.completeSignUp)({
                 targetKey: a,
-                data: s.current,
+                data: l.current,
                 completed: !0,
               });
             }
-          }, [a, n, t, c, s]);
+          }, [a, r, t, d, l]);
         return null == t
           ? null
           : "email" === t.type
-            ? (0, l.jsxs)("div", {
-                className: T.emailContainer,
+            ? (0, n.jsxs)("div", {
+                className: b.emailContainer,
                 children: [
-                  (0, l.jsx)(p.Text, {
+                  (0, n.jsx)(p.Text, {
                     variant: "text-lg/medium",
                     color: "header-primary",
-                    children: N.default.Messages.SIGNUP_EMAIL_PROMPT,
+                    children: E.default.Messages.SIGNUP_EMAIL_PROMPT,
                   }),
-                  (0, l.jsxs)("div", {
-                    className: T.emailForm,
+                  (0, n.jsxs)("div", {
+                    className: b.emailForm,
                     children: [
-                      (0, l.jsx)(p.TextInput, {
-                        className: T.emailInput,
-                        value: n,
-                        onChange: d,
+                      (0, n.jsx)(p.TextInput, {
+                        className: b.emailInput,
+                        value: r,
+                        onChange: S,
                         placeholder:
-                          N.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
+                          E.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
                         error: o,
                       }),
-                      (0, l.jsx)(p.Button, {
-                        onClick: u,
-                        children: (0, l.jsx)(p.Text, {
+                      (0, n.jsx)(p.Button, {
+                        onClick: g,
+                        children: (0, n.jsx)(p.Text, {
                           variant: "text-sm/medium",
                           color: "interactive-active",
-                          children: N.default.Messages.SIGNUP_COMPLETE_CTA,
+                          children: E.default.Messages.SIGNUP_COMPLETE_CTA,
                         }),
                       }),
                     ],
                   }),
                 ],
               })
-            : (0, l.jsx)("div", {});
+            : "clan" === t.type
+              ? (0, n.jsxs)("div", {
+                  className: b.form,
+                  children: [
+                    (0, n.jsxs)("div", {
+                      className: b.formGroup,
+                      children: [
+                        (0, n.jsxs)("div", {
+                          children: [
+                            (0, n.jsx)(p.Text, {
+                              variant: "text-lg/medium",
+                              color: "header-primary",
+                              children: "What's your server's playstyle?",
+                            }),
+                            (0, n.jsx)(p.Text, {
+                              variant: "text-md/normal",
+                              color: "text-muted",
+                              children:
+                                "Let potential members know what kind of gaming you do.",
+                            }),
+                          ],
+                        }),
+                        (0, n.jsx)("div", {
+                          className: b.options,
+                          children: (0, N.getClanOptions)(E.default).map(e =>
+                            (0, n.jsx)(
+                              M,
+                              {
+                                option: e,
+                                isSelected: e.value === u,
+                                onOptionSelected: y,
+                              },
+                              e.value
+                            )
+                          ),
+                        }),
+                      ],
+                    }),
+                    (0, n.jsxs)("div", {
+                      className: b.formGroup,
+                      children: [
+                        (0, n.jsxs)("div", {
+                          children: [
+                            (0, n.jsx)(p.Text, {
+                              variant: "text-lg/medium",
+                              color: "header-primary",
+                              children:
+                                "Here are some additional information about Clans.",
+                            }),
+                            (0, n.jsx)(p.Text, {
+                              variant: "text-md/normal",
+                              color: "text-muted",
+                              children:
+                                "Select all the checkbox to acknowledge and continue.",
+                            }),
+                          ],
+                        }),
+                        (0, n.jsxs)("div", {
+                          className: b.acknowledgements,
+                          children: [
+                            (0, n.jsxs)(p.Clickable, {
+                              className: b.acknowledgement,
+                              onClick: k,
+                              children: [
+                                (0, n.jsx)(p.Text, {
+                                  variant: "text-md/normal",
+                                  color: "interactive-active",
+                                  children:
+                                    "Clans are capped to 200 members max.",
+                                }),
+                                (0, n.jsx)("div", {
+                                  className: b.checkboxWrapper,
+                                  children: (0, n.jsx)(p.Checkbox, {
+                                    displayOnly: !0,
+                                    type: p.Checkbox.Types.INVERTED,
+                                    value: x,
+                                  }),
+                                }),
+                              ],
+                            }),
+                            (0, n.jsxs)(p.Clickable, {
+                              className: b.acknowledgement,
+                              onClick: C,
+                              children: [
+                                (0, n.jsx)(p.Text, {
+                                  variant: "text-md/normal",
+                                  color: "interactive-active",
+                                  children:
+                                    "New members must be approved by you in order to join.",
+                                }),
+                                (0, n.jsx)("div", {
+                                  className: b.checkboxWrapper,
+                                  children: (0, n.jsx)(p.Checkbox, {
+                                    displayOnly: !0,
+                                    type: p.Checkbox.Types.INVERTED,
+                                    value: j,
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    (0, n.jsxs)("div", {
+                      className: b.formGroup,
+                      children: [
+                        (0, n.jsx)(p.Text, {
+                          variant: "text-lg/medium",
+                          color: "header-primary",
+                          children: E.default.Messages.SIGNUP_EMAIL_PROMPT,
+                        }),
+                        (0, n.jsxs)("div", {
+                          className: b.emailForm,
+                          children: [
+                            (0, n.jsx)(p.TextInput, {
+                              className: b.emailInput,
+                              value: r,
+                              onChange: S,
+                              placeholder:
+                                E.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
+                              error: o,
+                            }),
+                            (0, n.jsx)(p.Button, {
+                              onClick: g,
+                              children: (0, n.jsx)(p.Text, {
+                                variant: "text-sm/medium",
+                                color: "interactive-active",
+                                children:
+                                  E.default.Messages.SIGNUP_COMPLETE_CTA,
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                })
+              : (0, n.jsx)("div", {});
       }
-      function O(e) {
+      function _(e) {
         let { iconName: t } = e,
           a = null;
         switch (t) {
           case "compass":
-            a = (0, l.jsx)(m.CompassIcon, { className: T.icon });
+            a = (0, n.jsx)(m.CompassIcon, { className: b.icon });
             break;
           case "gamepad":
-            a = (0, l.jsx)(f.default, { className: T.icon });
+            a = (0, n.jsx)(k.default, { className: b.icon });
             break;
           case "controller":
-            a = (0, l.jsx)(x.GameControllerIcon, { className: T.icon });
+            a = (0, n.jsx)(x.GameControllerIcon, { className: b.icon });
             break;
           default:
             a = null;
         }
-        return (0, l.jsx)("div", { className: T.iconContainer, children: a });
+        return (0, n.jsx)("div", { className: b.iconContainer, children: a });
       }
       function M(e) {
-        let { option: t, selectedOption: a, setSelectedOption: s } = e,
-          n = i.useCallback(() => {
+        let { option: t, icon: a, isSelected: l, onOptionSelected: s } = e,
+          [r, o] = i.useState(!1),
+          d = (0, p.useToken)(p.tokens.colors.BACKGROUND_TERTIARY),
+          u = d.hsl({ opacity: r && !l ? 0.9 : 0.8 }),
+          m = i.useCallback(() => {
             s(t);
-          }, [s, t]),
-          [r, c] = i.useState(!1),
-          d = t.key === (null == a ? void 0 : a.key),
-          u = (0, p.useToken)(p.tokens.colors.BACKGROUND_TERTIARY),
-          m = u.hsl({ opacity: r && !d ? 0.9 : 0.8 });
-        return (0, l.jsxs)(p.Clickable, {
-          className: o(T.option, { [T.selectedOption]: d }),
-          onMouseEnter: () => c(!0),
-          onMouseLeave: () => c(!1),
-          style: { backgroundColor: m },
-          onClick: n,
+          }, [s, t]);
+        return (0, n.jsxs)(p.Clickable, {
+          className: c(b.option, { [b.selectedOption]: l }),
+          onMouseEnter: () => o(!0),
+          onMouseLeave: () => o(!1),
+          style: { backgroundColor: u },
+          onClick: m,
           children: [
-            (0, l.jsx)(O, { iconName: t.icon }),
-            (0, l.jsxs)("div", {
-              className: T.optionContent,
+            a,
+            (0, n.jsxs)("div", {
+              className: b.optionContent,
               children: [
-                (0, l.jsx)(p.Text, {
+                (0, n.jsx)(p.Text, {
                   variant: "text-lg/medium",
                   color: "header-primary",
                   children: t.title,
                 }),
-                (0, l.jsx)(p.Text, {
+                (0, n.jsx)(p.Text, {
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: t.description,
@@ -185,79 +353,97 @@
         });
       }
       function P(e) {
+        let { option: t, selectedOption: a, setSelectedOption: l } = e,
+          s = t.key === (null == a ? void 0 : a.key);
+        return (0, n.jsx)(M, {
+          option: t,
+          icon: (0, n.jsx)(_, { iconName: t.icon }),
+          isSelected: s,
+          onOptionSelected: l,
+        });
+      }
+      function G(e) {
         let {
             target: t,
             selectedOption: a,
-            handleSetSelectedOption: s,
-            data: n,
+            handleSetSelectedOption: l,
+            data: s,
           } = e,
           r = (0, h.useStateFromStores)(
-            [y.default],
-            () => y.default.useReducedMotion
+            [j.default],
+            () => j.default.useReducedMotion
           ),
-          [{ state: o }, c] = (0, u.useSpring)(() => ({ state: 0 }), []),
-          m = (0, h.useStateFromStores)([S.default], () =>
-            S.default.getCurrentUser()
+          [{ state: c }, o] = (0, u.useSpring)(() => ({ state: 0 }), []),
+          m = (0, h.useStateFromStores)([v.default], () =>
+            v.default.getCurrentUser()
           ),
-          x = o.to({ range: [0, 1], output: [1, 0] }),
-          j = o.to({ range: [0, 1], output: [0, 1] }),
-          f = o.to({ range: [0, 1], output: [0, -150] }),
-          k = i.useCallback(
+          x = c.to({ range: [0, 1], output: [1, 0] }),
+          y = c.to({ range: [0, 1], output: [0, 1] }),
+          k = c.to({ range: [0, 10], output: [0, -700] }),
+          C = i.useCallback(
             e => {
-              s(e), c({ state: 1, immediate: r });
+              l(e);
+              let t = "email" === e.type ? 2 : 3;
+              o({ state: t, immediate: r });
             },
-            [s, c, r]
+            [l, o, r]
+          ),
+          S = i.useCallback(
+            e => {
+              o({ state: e, immediate: r });
+            },
+            [o, r]
           );
         return null == m
           ? null
-          : (0, l.jsxs)(l.Fragment, {
+          : (0, n.jsxs)(n.Fragment, {
               children: [
-                (0, l.jsxs)(u.animated.div, {
-                  className: T.header,
+                (0, n.jsxs)(u.animated.div, {
+                  className: b.header,
                   style: { opacity: x },
                   children: [
-                    (0, l.jsx)(p.Heading, {
+                    (0, n.jsx)(p.Heading, {
                       variant: "heading-xxl/medium",
                       color: "header-primary",
                       children: t.title,
                     }),
-                    (0, l.jsx)(p.Text, {
+                    (0, n.jsx)(p.Text, {
                       variant: "text-md/normal",
                       color: "always-white",
                       children: t.subtitle,
                     }),
                   ],
                 }),
-                (0, l.jsxs)(u.animated.div, {
-                  className: T.question,
+                (0, n.jsxs)(u.animated.div, {
+                  className: b.question,
                   style: {
-                    transform: f.to(e => "translateY(".concat(e, "px)")),
+                    transform: k.to(e => "translateY(".concat(e, "px)")),
                   },
                   children: [
-                    (0, l.jsx)(p.Text, {
+                    (0, n.jsx)(p.Text, {
                       variant: "text-lg/medium",
                       color: "header-primary",
                       children: t.question,
                     }),
-                    (0, l.jsx)("div", {
-                      className: T.options,
+                    (0, n.jsx)("div", {
+                      className: b.options,
                       children: (function (e, t) {
                         let a = e.slice();
                         return (
                           a.sort((e, a) => {
-                            let s = d.v3("".concat(e.key).concat(t)),
-                              n = d.v3("".concat(a.key).concat(t));
-                            return s - n;
+                            let l = d.v3("".concat(e.key).concat(t)),
+                              s = d.v3("".concat(a.key).concat(t));
+                            return l - s;
                           }),
                           a
                         );
                       })(t.options, m.id).map(e =>
-                        (0, l.jsx)(
-                          M,
+                        (0, n.jsx)(
+                          P,
                           {
                             option: e,
                             selectedOption: a,
-                            setSelectedOption: k,
+                            setSelectedOption: C,
                           },
                           e.key
                         )
@@ -265,102 +451,101 @@
                     }),
                   ],
                 }),
-                (0, l.jsx)(u.animated.div, {
+                (0, n.jsx)(u.animated.div, {
                   style: {
-                    transform: f.to(e => "translateY(".concat(e, "px)")),
-                    opacity: j,
+                    transform: k.to(e => "translateY(".concat(e, "px)")),
+                    opacity: y,
                   },
-                  children: (0, l.jsx)(_, {
+                  children: (0, n.jsx)(O, {
                     selectedOption: a,
                     targetKey: t.key,
-                    data: n,
+                    data: s,
+                    handleGoToNextFormGroup: S,
                   }),
                 }),
               ],
             });
       }
-      function b(e) {
-        let { target: t, transitionState: a, onClose: s } = e,
-          n = (0, j.useUID)(),
-          r = i.useRef({}),
-          [c, d] = i.useState(null),
-          u = (0, h.useStateFromStores)([g.default], () =>
+      function U(e) {
+        let { target: t, guildId: a, transitionState: l, onClose: s } = e,
+          r = (0, y.useUID)(),
+          o = i.useRef({ guildId: a }),
+          [d, u] = i.useState(null),
+          m = (0, h.useStateFromStores)([g.default], () =>
             g.default.hasCompletedTarget(t.key)
           ),
-          m = u ? 1 : 0;
+          x = m ? 1 : 0;
         i.useEffect(() => {
-          k.default.track(v.AnalyticEvents.SIGNUP_VIEWED, {
+          C.default.track(T.AnalyticEvents.SIGNUP_VIEWED, {
             target_key: t.key,
           });
-          let e = r.current;
+          let e = o.current;
           return () => {
-            (0, E.completeSignUp)({ targetKey: t.key, data: e, completed: !1 });
+            (0, f.completeSignUp)({ targetKey: t.key, data: e, completed: !1 });
           };
-        }, [t.key, r]);
-        let x = i.useCallback(
+        }, [t.key, o]);
+        let j = i.useCallback(
             e => {
-              null != r.current &&
-                ((r.current.selectedOptionKey = e.key), d(e));
+              null != o.current &&
+                ((o.current.selectedOptionKey = e.key), u(e));
             },
-            [d, r]
+            [u, o]
           ),
-          y = "url(".concat(
+          v = "url(".concat(
             t.backgroundAssetUrl,
             ") black top / cover no-repeat"
           ),
-          S = null;
-        switch (m) {
+          k = null;
+        switch (x) {
           case 0:
-            S = (0, l.jsx)(P, {
+            k = (0, n.jsx)(G, {
               target: t,
-              selectedOption: c,
-              handleSetSelectedOption: x,
-              data: r,
+              selectedOption: d,
+              handleSetSelectedOption: j,
+              data: o,
             });
             break;
           case 1:
-            S = (0, l.jsx)(l.Fragment, {
-              children: (0, l.jsxs)("div", {
-                className: T.completedContainer,
-                children: [
-                  (0, l.jsx)(p.Text, {
-                    variant: "text-lg/medium",
-                    color: "header-primary",
-                    children: N.default.Messages.SIGNUP_COMPLETED_TITLE,
-                  }),
-                  (0, l.jsx)(p.Text, {
-                    variant: "text-md/normal",
-                    color: "text-muted",
-                    children: N.default.Messages.SIGNUP_COMPLETED_DESCRIPTION,
-                  }),
-                  (0, l.jsx)("div", {
-                    children: (0, l.jsx)(p.Button, {
-                      onClick: s,
-                      children: (0, l.jsx)(p.Text, {
-                        variant: "text-sm/medium",
-                        color: "always-white",
-                        children: N.default.Messages.DISMISS,
-                      }),
+            k = (0, n.jsxs)("div", {
+              className: b.completedContainer,
+              children: [
+                (0, n.jsx)(p.Text, {
+                  variant: "text-lg/medium",
+                  color: "header-primary",
+                  children: E.default.Messages.SIGNUP_COMPLETED_TITLE,
+                }),
+                (0, n.jsx)(p.Text, {
+                  variant: "text-md/normal",
+                  color: "text-muted",
+                  children: E.default.Messages.SIGNUP_COMPLETED_DESCRIPTION,
+                }),
+                (0, n.jsx)("div", {
+                  children: (0, n.jsx)(p.Button, {
+                    onClick: s,
+                    children: (0, n.jsx)(p.Text, {
+                      variant: "text-sm/medium",
+                      color: "always-white",
+                      children: E.default.Messages.DISMISS,
                     }),
                   }),
-                ],
-              }),
+                }),
+              ],
             });
         }
-        return (0, l.jsx)(p.ThemeContextProvider, {
-          theme: v.ThemeTypes.DARK,
-          children: (0, l.jsxs)(p.ModalRoot, {
-            transitionState: a,
-            "aria-labelledby": n,
+        return (0, n.jsx)(p.ThemeContextProvider, {
+          theme: T.ThemeTypes.DARK,
+          children: (0, n.jsxs)(p.ModalRoot, {
+            transitionState: l,
+            "aria-labelledby": r,
             size: p.ModalSize.LARGE,
-            className: o(T.modal, I),
+            className: c(b.modal, I),
             children: [
-              (0, l.jsxs)(p.Scroller, {
-                className: T.content,
+              (0, n.jsxs)(p.Scroller, {
+                className: b.content,
                 children: [
-                  (0, l.jsx)("div", {
+                  (0, n.jsx)("div", {
                     style: {
-                      background: y,
+                      background: v,
                       position: "absolute",
                       top: 0,
                       left: 0,
@@ -369,29 +554,29 @@
                       zIndex: -1,
                     },
                   }),
-                  (0, l.jsx)("div", {
-                    className: T.contentInner,
-                    children: (0, l.jsx)(p.Sequencer, {
+                  (0, n.jsx)("div", {
+                    className: b.contentInner,
+                    children: (0, n.jsx)(p.Sequencer, {
                       animationMotionType: "lift",
                       fillParent: !0,
-                      step: m,
+                      step: x,
                       steps: [0, 1],
-                      children: S,
+                      children: k,
                     }),
                   }),
                 ],
               }),
-              (0, l.jsx)("div", {
-                className: T.closeButtonContainer,
-                children: (0, l.jsx)(p.ModalCloseButton, { onClick: s }),
+              (0, n.jsx)("div", {
+                className: b.closeButtonContainer,
+                children: (0, n.jsx)(p.ModalCloseButton, { onClick: s }),
               }),
             ],
           }),
         });
       }
-      ((n = s || (s = {}))[(n.OPTIONS = 0)] = "OPTIONS"),
-        (n[(n.COMPLETED = 1)] = "COMPLETED");
+      ((s = l || (l = {}))[(s.OPTIONS = 0)] = "OPTIONS"),
+        (s[(s.COMPLETED = 1)] = "COMPLETED");
     },
   },
 ]);
-//# sourceMappingURL=f9cce56f2390c83f7a93.js.map
+//# sourceMappingURL=8b709932a0b0c9c41250.js.map

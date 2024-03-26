@@ -125,6 +125,18 @@
       "use strict";
       e.exports = n.p + "cf0a3491ccd8d75e5468.svg";
     },
+    919806: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "10542f8e5bb75745aa66.png";
+    },
+    424744: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "c3f77fb34bed85ce0ac2.png";
+    },
+    753867: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "b322948bfe99bd96fc0d.png";
+    },
     577151: function (e, t, n) {
       "use strict";
       e.exports = n.p + "5a3b92133c4628808365.png";
@@ -136,6 +148,14 @@
     66453: function (e, t, n) {
       "use strict";
       e.exports = n.p + "cbd858b47004ef0de565.png";
+    },
+    446707: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "6254171088ded6cc8aec.png";
+    },
+    566247: function (e, t, n) {
+      "use strict";
+      e.exports = n.p + "71468971ca9d41c94a31.png";
     },
     476742: function (e, t, n) {
       "use strict";
@@ -1697,7 +1717,7 @@
               children: [
                 (0, a.jsx)(E.default, { className: _.icon }),
                 h.default.Messages.DEV_NOTICE_STAGING.format({
-                  buildNumber: "278786",
+                  buildNumber: "278792",
                 }),
                 (0, a.jsx)(I, {}),
               ],
@@ -2804,8 +2824,8 @@
         e$ = n("780009"),
         e0 = n("49111"),
         e1 = n("750947"),
-        e2 = n("724210"),
-        e4 = n("56235");
+        e4 = n("724210"),
+        e2 = n("56235");
       n("72177"),
         n("392453"),
         n("366679"),
@@ -2906,7 +2926,7 @@
         }),
         te = [
           e0.Routes.GUILD_BOOSTING_MARKETING(":guildId"),
-          ...Array.from(e2.StaticChannelRoutes).map(e =>
+          ...Array.from(e4.StaticChannelRoutes).map(e =>
             e0.Routes.CHANNEL(":guildId", e)
           ),
         ];
@@ -3112,7 +3132,7 @@
             render: function (e) {
               let { match: t } = e,
                 { guildId: n, channelId: s } = t.params;
-              (0, es.setNewUser)(e4.NewUserTypes.MARKETING_UNCLAIMED);
+              (0, es.setNewUser)(e2.NewUserTypes.MARKETING_UNCLAIMED);
               let l = e0.Routes.CHANNEL(n, s);
               return (0, a.jsx)(r.Redirect, { to: l });
             },
@@ -3365,7 +3385,7 @@
                   }
                 } else null != s && !i && eT.default.closeChannelSidebar(s);
                 let u = ea.default.getIsOpen();
-                if (s === e2.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
+                if (s === e4.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
                   en.default.closeSidebar();
                 else if (_ && u) {
                   let t = null == h && a === e0.ME,
@@ -3399,7 +3419,7 @@
             r =
               null != s &&
               (0, eS.isValidChannelId)(s) &&
-              !(0, e2.isStaticChannelRoute)(s);
+              !(0, e4.isStaticChannelRoute)(s);
           if (r && i) {
             let n = ew.default.getChannel(s);
             if (null == n)
@@ -3410,7 +3430,7 @@
               return { path: e0.Routes.CHANNEL(a), state: e.state };
             if (null != l) {
               let n =
-                (0, eS.isValidChannelId)(l) && !(0, e2.isStaticChannelRoute)(s);
+                (0, eS.isValidChannelId)(l) && !(0, e4.isStaticChannelRoute)(s);
               if (!n) return null;
               let i = ew.default.getChannel(l);
               if (null == i)
@@ -13254,70 +13274,122 @@
             return s;
           },
           CollectiblesDCToDisplayOptions: function () {
-            return d;
+            return _;
+          },
+          SkuIdToCountdownDisplayOptions: function () {
+            return C;
+          },
+          SkuIdToCustomConfettiDisplayOptions: function () {
+            return I;
           },
         });
       var a,
         s,
         l = n("151426"),
         i = n("782340"),
-        r = n("577151"),
-        o = n("177493"),
-        u = n("66453");
+        r = n("919806"),
+        o = n("424744"),
+        u = n("753867"),
+        d = n("577151"),
+        c = n("177493"),
+        f = n("66453"),
+        E = n("446707"),
+        h = n("566247");
       ((a = s || (s = {}))[(a.NONE = 0)] = "NONE"),
         (a[(a.TOOLTIP = 1)] = "TOOLTIP"),
         (a[(a.COACHTIP = 2)] = "COACHTIP");
-      let d = {
-        [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
-          type: 1,
-          title: () =>
-            i.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
-          emojiName: "dragon",
+      let _ = {
+          [l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE]: {
+            type: 1,
+            title: () =>
+              i.default.Messages.COLLECTIBLES_LUNAR_NEW_YEAR_TOOLTIP_TEXT,
+            emojiName: "dragon",
+          },
+          [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
+            type: 1,
+            title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
+            emojiName: "fire",
+          },
+          [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
+            type: 2,
+            title: () =>
+              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
+            body: () =>
+              i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
+            imageSrc: d,
+            assetIds: [
+              "a_a065206df7b011a5510e4e5bca7d49be",
+              "a_554b7c34f7b6c709f19535aacb128e7b",
+              "a_250640ab00a8837a1d56f35879138177",
+              "a_fa014594d4b2b4249e1098c0adc85b47",
+            ],
+          },
+          [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
+            type: 2,
+            title: () =>
+              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
+            body: () =>
+              i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
+            imageSrc: f,
+            assetIds: [
+              "a_c3cffc19e9784f7d0b005eecdf1b566e",
+              "a_f3af281c65cf0cf590e9e1f59e9c6cf6",
+              "a_51d3bb502109eec26c76386ec980bc8b",
+            ],
+          },
+          [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
+            type: 2,
+            title: () =>
+              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
+            body: () =>
+              i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
+            imageSrc: c,
+            assetIds: [
+              "a_ab95c78401ce4ec85c25a6d308db9d85",
+              "a_4cd9ae5a8d103c219eacd3674d7730cd",
+              "a_27bbf0b53b1054cf61e9a4c0e8d4027f",
+            ],
+          },
+          [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP]: {
+            type: 2,
+            title: () => i.default.Messages.COLLECTIBLES_SHY_COACHTIP_TITLE,
+            body: () =>
+              i.default.Messages.COLLECTIBLES_SHY_COACHTIP_DESCRIPTION,
+            imageSrc: h,
+            assetIds: [
+              "a_98555e40cc6802bd3a4fed906af1d992",
+              "a_d22ba4f29568b6ebd2cfc5e95428f5b6",
+              "a_904b1989077c91fca1168d39bfcaa0a4",
+            ],
+            entrypointDecorationAssets: { srcDark: r, srcLight: o },
+            entryPointClassName: "shyButton",
+          },
         },
-        [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP]: {
-          type: 1,
-          title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_TOOLTIP_TITLE,
-          emojiName: "fire",
+        C = {
+          "1220513972189663413": {
+            label: () => i.default.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
+            backgroundColor: "rgba(255, 70, 85, 1)",
+            boxShadow: "0 0 12px 0 rgba(255, 70, 85, 0.5)",
+            labelColor: "rgba(15, 25, 35, 1)",
+            iconSrc: E,
+          },
         },
-        [l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP]: {
-          type: 2,
-          title: () => i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_TITLE,
-          body: () =>
-            i.default.Messages.COLLECTIBLES_ELEMENTS_COACHTIP_DISCRIPTION,
-          imageSrc: r,
-          assetIds: [
-            "a_a065206df7b011a5510e4e5bca7d49be",
-            "a_554b7c34f7b6c709f19535aacb128e7b",
-            "a_250640ab00a8837a1d56f35879138177",
-            "a_fa014594d4b2b4249e1098c0adc85b47",
-          ],
+        S = {
+          SHY: {
+            confettiAssetSrc: u,
+            style: {
+              position: "absolute",
+              top: "-120px",
+              right: "-75px",
+              width: "600px",
+            },
+          },
         },
-        [l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP]: {
-          type: 2,
-          title: () => i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_TITLE,
-          body: () =>
-            i.default.Messages.COLLECTIBLES_ANIME_V2_COACHTIP_DISCRIPTION,
-          imageSrc: u,
-          assetIds: [
-            "a_c3cffc19e9784f7d0b005eecdf1b566e",
-            "a_f3af281c65cf0cf590e9e1f59e9c6cf6",
-            "a_51d3bb502109eec26c76386ec980bc8b",
-          ],
-        },
-        [l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP]: {
-          type: 2,
-          title: () =>
-            i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_TITLE,
-          body: () =>
-            i.default.Messages.COLLECTIBLES_SPRINGTOONS_COACHTIP_DESCRIPTION,
-          imageSrc: o,
-          assetIds: [
-            "a_ab95c78401ce4ec85c25a6d308db9d85",
-            "a_4cd9ae5a8d103c219eacd3674d7730cd",
-            "a_27bbf0b53b1054cf61e9a4c0e8d4027f",
-          ],
-        },
-      };
+        I = {
+          "1220513977683935373": S.SHY,
+          "1220432647453409384": S.SHY,
+          "1220432697718083614": S.SHY,
+        };
     },
     476863: function (e, t, n) {
       "use strict";
@@ -13370,103 +13442,110 @@
       n.r(t),
         n.d(t, {
           CollectiblesShopButton: function () {
-            return M;
+            return b;
           },
         }),
         n("222007");
       var a = n("37983"),
         s = n("884691"),
-        l = n("974667"),
-        i = n("446674"),
-        r = n("77078"),
-        o = n("430568"),
-        u = n("570687"),
-        d = n("206230"),
-        c = n("812204"),
-        f = n("685665"),
-        E = n("897263"),
-        h = n("20606"),
-        _ = n("867805"),
-        C = n("743826"),
-        S = n("956089"),
-        I = n("21526"),
-        m = n("833514"),
-        p = n("819852"),
-        T = n("49111"),
-        g = n("782340"),
-        A = n("100172");
-      let N = e => {
+        l = n("414456"),
+        i = n.n(l),
+        r = n("974667"),
+        o = n("446674"),
+        u = n("819855"),
+        d = n("77078"),
+        c = n("430568"),
+        f = n("570687"),
+        E = n("841098"),
+        h = n("206230"),
+        _ = n("812204"),
+        C = n("685665"),
+        S = n("897263"),
+        I = n("20606"),
+        m = n("867805"),
+        p = n("743826"),
+        T = n("956089"),
+        g = n("474293"),
+        A = n("21526"),
+        N = n("833514"),
+        R = n("819852"),
+        O = n("49111"),
+        v = n("782340"),
+        L = n("100172");
+      let M = e => {
           let { color: t } = e;
-          return (0, a.jsx)(S.TextBadge, {
-            className: A.newBadge,
-            color: null != t ? t : h.default.STATUS_DANGER_BACKGROUND,
-            text: g.default.Messages.NEW,
+          return (0, a.jsx)(T.TextBadge, {
+            className: L.newBadge,
+            color: null != t ? t : I.default.STATUS_DANGER_BACKGROUND,
+            text: v.default.Messages.NEW,
           });
         },
-        R = e => {
+        P = e => {
           let {
               selected: t,
               locationState: n,
               onMouseEnter: s,
+              onMouseLeave: l,
               onButtonClick: i,
-              children: r,
-              ...o
+              children: o,
+              ...u
             } = e,
-            d = (0, l.useListItem)("shop"),
-            E = c.default.HOME_PAGE_SHOP_TAB,
-            { analyticsLocations: h } = (0, f.default)(E);
-          return (0, a.jsx)(u.LinkButton, {
+            d = (0, r.useListItem)("shop"),
+            c = _.default.HOME_PAGE_SHOP_TAB,
+            { analyticsLocations: E } = (0, C.default)(c);
+          return (0, a.jsx)(f.LinkButton, {
             selected: t,
-            route: T.Routes.COLLECTIBLES_SHOP,
-            icon: C.default,
-            text: g.default.Messages.COLLECTIBLES_SHOP,
+            route: O.Routes.COLLECTIBLES_SHOP,
+            icon: p.default,
+            text: v.default.Messages.COLLECTIBLES_SHOP,
             locationState: n,
             ...d,
-            ...o,
+            ...u,
             onMouseEnter: s,
+            onMouseLeave: l,
             onClick: () => {
-              (0, I.openCollectiblesShop)({
+              (0, A.openCollectiblesShop)({
                 openInLayer: !1,
-                analyticsSource: E,
-                analyticsLocations: h,
+                analyticsSource: c,
+                analyticsLocations: E,
               }),
                 null == i || i();
             },
-            children: r,
+            children: o,
           });
         },
-        O = s.memo(function (e) {
+        y = s.memo(function (e) {
           let { displayOptions: t, assetId: n } = e,
-            s = (0, i.useStateFromStores)(
-              [d.default],
-              () => d.default.useReducedMotion
+            s = (0, o.useStateFromStores)(
+              [h.default],
+              () => h.default.useReducedMotion
             ),
             l =
-              null != n ? (0, E.default)(n, r.AvatarSizes.SIZE_80, !s) : void 0;
+              null != n ? (0, S.default)(n, d.AvatarSizes.SIZE_80, !s) : void 0;
           return (0, a.jsxs)("div", {
-            className: A.shopMarketingTooltipContent,
+            className: L.shopMarketingTooltipContent,
             children: [
               (0, a.jsx)("div", {
-                className: A.avatarContainer,
-                children: (0, a.jsx)(r.Avatar, {
-                  className: A.avatar,
+                className: L.avatarContainer,
+                children: (0, a.jsx)(d.Avatar, {
+                  className: L.avatar,
                   src: t.imageSrc,
                   avatarDecoration: l,
-                  size: r.AvatarSizes.SIZE_80,
+                  size: d.AvatarSizes.SIZE_80,
                   "aria-hidden": !0,
                 }),
               }),
               (0, a.jsxs)("div", {
-                className: A.shopMarketingTooltipText,
+                className: L.shopMarketingTooltipText,
                 children: [
-                  (0, a.jsx)(r.Heading, {
+                  (0, a.jsx)(d.Heading, {
                     variant: "heading-sm/bold",
                     children: t.title(),
                   }),
                   null != t.body &&
-                    (0, a.jsx)(r.Text, {
+                    (0, a.jsx)(d.Text, {
                       variant: "text-xs/normal",
-                      className: A.marketingBadgeTooltipContent,
+                      className: L.marketingBadgeTooltipContent,
                       children: t.body(),
                     }),
                 ],
@@ -13474,106 +13553,127 @@
             ],
           });
         }),
-        v = e => {
+        D = e => {
           let {
               selected: t,
               locationState: n,
               onButtonClick: l,
-              displayOptions: i,
+              displayOptions: r,
             } = e,
-            [o, u] = s.useState(0),
-            d = () => {
-              u((o + 1) % i.assetIds.length);
-            };
-          return (0, a.jsx)(r.Tooltip, {
-            text: (0, a.jsx)(O, { displayOptions: i, assetId: i.assetIds[o] }),
-            tooltipClassName: A.marketingBadgeTooltip,
+            [o, c] = s.useState(0),
+            [f, h] = s.useState(!1),
+            _ = (0, E.default)(),
+            C = r.entrypointDecorationAssets,
+            S = s.useCallback(
+              e => {
+                c(e => (e + 1) % r.assetIds.length), h(!0), null == e || e();
+              },
+              [r.assetIds]
+            ),
+            I = s.useCallback(e => {
+              h(!1), null == e || e();
+            }, []);
+          return (0, a.jsx)(d.Tooltip, {
+            text: (0, a.jsx)(y, { displayOptions: r, assetId: r.assetIds[o] }),
+            tooltipClassName: L.marketingBadgeTooltip,
             position: "right",
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            "aria-label": i.title(),
+            "aria-label": r.title(),
             children: e =>
-              (0, a.jsx)(R, {
+              (0, a.jsxs)(P, {
+                className:
+                  null != r.entryPointClassName
+                    ? (0, g.getClass)(L, r.entryPointClassName)
+                    : void 0,
                 selected: t,
                 locationState: n,
                 ...e,
-                onMouseEnter: () => {
-                  var t;
-                  d(),
-                    null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
-                },
+                onMouseEnter: () => S(e.onMouseEnter),
+                onMouseLeave: () => I(e.onMouseLeave),
                 onButtonClick: l,
-                children: (0, a.jsx)(N, { color: i.badgeColor }),
+                children: [
+                  null != C &&
+                    (0, a.jsx)("img", {
+                      src: (0, u.isThemeDark)(_) ? C.srcDark : C.srcLight,
+                      className: i(L.marketingButtonImage, {
+                        [L.marketingButtonImageHovered]: f,
+                      }),
+                      alt: "",
+                      "aria-hidden": !0,
+                    }),
+                  (0, a.jsx)(M, { color: r.badgeColor }),
+                ],
               }),
           });
         },
-        L = e => {
+        x = e => {
           let {
               selected: t,
               locationState: n,
               onButtonClick: l,
               displayOptions: i,
             } = e,
-            u = s.useMemo(() => {
+            r = s.useMemo(() => {
               var e;
               let t =
                 null != i.emojiName
-                  ? null === (e = _.default.getByName(i.emojiName)) ||
+                  ? null === (e = m.default.getByName(i.emojiName)) ||
                     void 0 === e
                     ? void 0
                     : e.surrogates
                   : null;
-              return (0, a.jsxs)(r.Text, {
+              return (0, a.jsxs)(d.Text, {
                 variant: "text-sm/medium",
-                className: A.marketingBadgeTooltipContent,
+                className: L.marketingBadgeTooltipContent,
                 children: [
-                  null != t && (0, a.jsx)(o.default, { emojiName: t }),
+                  null != t && (0, a.jsx)(c.default, { emojiName: t }),
                   i.title(),
                 ],
               });
             }, [i]);
-          return (0, a.jsx)(r.Tooltip, {
-            text: u,
-            tooltipClassName: A.marketingBadgeTooltip,
+          return (0, a.jsx)(d.Tooltip, {
+            text: r,
+            tooltipClassName: L.marketingBadgeTooltip,
             position: "right",
             delay: 100,
             hideOnClick: !1,
             "aria-label": i.title(),
             children: e =>
-              (0, a.jsx)(R, {
+              (0, a.jsx)(P, {
                 selected: t,
                 locationState: n,
                 ...e,
                 onButtonClick: l,
-                children: (0, a.jsx)(N, { color: i.badgeColor }),
+                children: (0, a.jsx)(M, { color: i.badgeColor }),
               }),
           });
         },
-        M = e => {
+        b = e => {
           let { selected: t, locationState: n } = e,
             {
               collectiblesShopTabNewBadgeDisplayOptions: s,
               dismissCollectiblesShopTabNewBadge: l,
-            } = (0, m.default)();
+            } = (0, N.default)();
           if (null != s)
             switch (s.type) {
-              case p.CollectiblesMarketingVariant.TOOLTIP:
-                return (0, a.jsx)(L, {
+              case R.CollectiblesMarketingVariant.TOOLTIP:
+                return (0, a.jsx)(x, {
                   selected: t,
                   locationState: n,
                   onButtonClick: l,
                   displayOptions: s,
                 });
-              case p.CollectiblesMarketingVariant.COACHTIP:
-                return (0, a.jsx)(v, {
+              case R.CollectiblesMarketingVariant.COACHTIP:
+                return (0, a.jsx)(D, {
                   selected: t,
                   locationState: n,
                   onButtonClick: l,
                   displayOptions: s,
                 });
             }
-          return (0, a.jsx)(R, { selected: t, locationState: n });
+          return (0, a.jsx)(P, { selected: t, locationState: n });
         };
     },
     171984: function (e, t, n) {
@@ -13594,7 +13694,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return _;
+            return S;
           },
         }),
         n("222007");
@@ -13606,65 +13706,60 @@
         o = n("158998"),
         u = n("543557"),
         d = n("801894"),
-        c = n("476863"),
-        f = n("222408"),
-        E = n("819852"),
-        h = n("994428"),
-        _ = () => {
-          let e = (0, s.useStateFromStores)([r.default], () =>
-              r.default.getCurrentUser()
-            ),
-            { coachtipEnabled: t } = (0, f.default)({
-              location: "useCollectiblesShopTabNewBadge",
-            }),
-            { coachtipEnabled: n } = (0, c.default)({
-              location: "useCollectiblesShopTabNewBadge",
-            }),
-            { marketingEnabled: _, variant: C } = (0, u.default)({
-              location: "useCollectiblesShopTabNewBadge",
-            }),
-            { newBadgeEnabled: S } = (0, d.default)({
-              location: "useCollectiblesShopTabNewBadge",
-            }),
-            I = a.useMemo(() => {
-              if ((0, o.ageEligibleForPremiumUpsell)(e)) {
-                if (t)
-                  return [
-                    l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP,
-                  ];
-                if (n)
-                  return [
-                    l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP,
-                  ];
-                else if (_)
-                  switch (C) {
-                    case E.CollectiblesMarketingVariant.TOOLTIP:
-                      return [
-                        l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP,
-                      ];
-                    case E.CollectiblesMarketingVariant.COACHTIP:
-                      return [
-                        l.DismissibleContent
-                          .COLLECTIBLES_SHOP_ELEMENTS_COACHTIP,
-                      ];
-                  }
-                else if (S)
-                  return [
-                    l.DismissibleContent
-                      .COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE,
-                  ];
-              }
-              return [];
-            }, [S, _, C, e, n, t]),
-            [m, p] = (0, i.useSelectedDismissibleContent)(I, void 0, !0),
-            T = null != m ? E.CollectiblesDCToDisplayOptions[m] : null;
-          return {
-            collectiblesShopTabNewBadgeDisplayOptions: T,
-            dismissCollectiblesShopTabNewBadge: () => {
-              null != T && p(h.ContentDismissActionType.AUTO);
-            },
-          };
+        c = n("411691"),
+        f = n("476863"),
+        E = n("222408"),
+        h = n("819852"),
+        _ = n("994428");
+      let C = "useCollectiblesShopTabNewBadge";
+      var S = () => {
+        let e = (0, s.useStateFromStores)([r.default], () =>
+            r.default.getCurrentUser()
+          ),
+          t = (0, c.default)(C) === c.CollectiblesShopMarketingVariants.SHY,
+          { coachtipEnabled: n } = (0, E.default)({ location: C }),
+          { coachtipEnabled: S } = (0, f.default)({ location: C }),
+          { marketingEnabled: I, variant: m } = (0, u.default)({ location: C }),
+          { newBadgeEnabled: p } = (0, d.default)({ location: C }),
+          T = a.useMemo(() => {
+            if ((0, o.ageEligibleForPremiumUpsell)(e)) {
+              if (t)
+                return [l.DismissibleContent.COLLECTIBLES_SHOP_SHY_COACHTIP];
+              if (n)
+                return [
+                  l.DismissibleContent.COLLECTIBLES_SHOP_SPRINGTOONS_COACHTIP,
+                ];
+              else if (S)
+                return [
+                  l.DismissibleContent.COLLECTIBLES_SHOP_ANIME_V2_COACHTIP,
+                ];
+              else if (I)
+                switch (m) {
+                  case h.CollectiblesMarketingVariant.TOOLTIP:
+                    return [
+                      l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_TOOLTIP,
+                    ];
+                  case h.CollectiblesMarketingVariant.COACHTIP:
+                    return [
+                      l.DismissibleContent.COLLECTIBLES_SHOP_ELEMENTS_COACHTIP,
+                    ];
+                }
+              else if (p)
+                return [
+                  l.DismissibleContent.COLLECTIBLES_SHOP_LUNARNEWYEAR_NEW_BADGE,
+                ];
+            }
+            return [];
+          }, [p, I, m, e, S, n, t]),
+          [g, A] = (0, i.useSelectedDismissibleContent)(T, void 0, !0),
+          N = null != g ? h.CollectiblesDCToDisplayOptions[g] : null;
+        return {
+          collectiblesShopTabNewBadgeDisplayOptions: N,
+          dismissCollectiblesShopTabNewBadge: () => {
+            null != N && A(_.ContentDismissActionType.AUTO);
+          },
         };
+      };
     },
     927175: function (e, t, n) {
       "use strict";
@@ -53122,4 +53217,4 @@
     },
   },
 ]);
-//# sourceMappingURL=fd7c1362220939e810d4.js.map
+//# sourceMappingURL=18cf60d842236a942a67.js.map

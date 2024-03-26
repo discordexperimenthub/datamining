@@ -11972,9 +11972,9 @@
       function c() {
         var e, t, s, n, c;
         let S = window.GLOBAL_ENV.RELEASE_CHANNEL,
-          E = "278753",
+          E = "278775",
           T =
-            ((e = "54b4b2495ba252908a999d71c88f568121b85c31"),
+            ((e = "a899f585ccf1ea39b0030fa2e7a16d5dc6095a84"),
             e.substring(0, 7)),
           f =
             null === r.default || void 0 === r.default
@@ -21009,41 +21009,43 @@
               return t => (0, l.jsx)(e, { ...t });
             });
           };
-        return (0, l.jsxs)("div", {
-          className: y.banner,
-          children: [
-            (0, l.jsxs)("div", {
-              className: y.inline,
+        return !n && o
+          ? (0, l.jsxs)("div", {
+              className: y.banner,
               children: [
-                (0, l.jsx)(T.CircleInformationIcon, {
-                  className: y.infoIcon,
-                  color: _.tokens.colors.WHITE,
+                (0, l.jsxs)("div", {
+                  className: y.inline,
+                  children: [
+                    (0, l.jsx)(T.CircleInformationIcon, {
+                      className: y.infoIcon,
+                      color: _.tokens.colors.WHITE,
+                    }),
+                    (0, l.jsx)(_.Text, {
+                      variant: "text-sm/bold",
+                      color: "always-white",
+                      children:
+                        U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
+                    }),
+                  ],
                 }),
-                (0, l.jsx)(_.Text, {
-                  variant: "text-sm/bold",
-                  color: "always-white",
-                  children:
-                    U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_DEFAULT,
+                (0, l.jsxs)(_.Button, {
+                  className: y.headerButton,
+                  innerClassName: y.innerButton,
+                  onClick: d,
+                  size: _.ButtonSizes.SMALL,
+                  color: _.ButtonColors.CUSTOM,
+                  submitting: e,
+                  children: [
+                    (0, l.jsx)(f.GiftIcon, {
+                      className: y.buttonIcon,
+                      color: _.tokens.colors.WHITE,
+                    }),
+                    U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
+                  ],
                 }),
               ],
-            }),
-            (0, l.jsxs)(_.Button, {
-              className: y.headerButton,
-              innerClassName: y.innerButton,
-              onClick: d,
-              size: _.ButtonSizes.SMALL,
-              color: _.ButtonColors.CUSTOM,
-              submitting: e,
-              children: [
-                (0, l.jsx)(f.GiftIcon, {
-                  className: y.buttonIcon,
-                  color: _.tokens.colors.WHITE,
-                }),
-                U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA,
-              ],
-            }),
-          ],
-        });
+            })
+          : null;
       }
       function V() {
         let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [
@@ -32145,4 +32147,4 @@
     },
   },
 ]);
-//# sourceMappingURL=ed47580146df1d2ee1f5.js.map
+//# sourceMappingURL=27de9403d7a9d10b9cb0.js.map

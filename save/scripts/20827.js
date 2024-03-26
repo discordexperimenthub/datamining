@@ -1570,7 +1570,7 @@
                           (0, i.jsx)("strong", { children: e }, t),
                       }
                     )
-                  : C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format(
+                  : C.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V3.format(
                       {
                         classification_type: t,
                         classificationHook: (e, t) =>
@@ -3539,4 +3539,4 @@
     },
   },
 ]);
-//# sourceMappingURL=1eeabec1b45cc094936c.js.map
+//# sourceMappingURL=931ff090ade75f464995.js.map

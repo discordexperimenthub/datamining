@@ -4945,7 +4945,7 @@
           "image_video_data_settings_updated"),
         (el.QUEST_HOVER = "quest_hover"),
         (el.QUEST_CONTENT_CLICKED = "quest_content_clicked"),
-        (el.QUEST_LINK_SHARED = "quest_link_shared"),
+        (el.QUEST_LINK_SHARED = "quest_link_shared_v2"),
         (el.QUEST_CONTENT_LOADED = "quest_content_loaded"),
         (el.QUEST_CONTENT_VIEWED = "quest_content_viewed"),
         (el.QUEST_CONTENT_VIEW_TIME = "quest_content_view_time"),
@@ -17390,4 +17390,4 @@
     },
   },
 ]);
-//# sourceMappingURL=7273.0cd5ce1483d30c702391.js.map
+//# sourceMappingURL=7273.961315871d9fa360d8d6.js.map

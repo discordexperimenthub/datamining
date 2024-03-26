@@ -592,6 +592,7 @@
           ee = n.isGuildVocal(),
           et = (0, l.jsx)("div", {
             className: i({ [L.favoritesSuggestion]: W }),
+            ref: Q,
             children: (0, l.jsxs)(D.default, {
               role: ee && !d ? "button" : "link",
               href: ee ? void 0 : J,
@@ -1129,4 +1130,4 @@
     },
   },
 ]);
-//# sourceMappingURL=c7f2e7236d9526dc3034.js.map
+//# sourceMappingURL=daa6b5a7f36300e959f6.js.map

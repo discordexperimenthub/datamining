@@ -24572,7 +24572,7 @@
         MEMBER_LIST_CONTENT_FEED_FIRST_TIME: "First time",
         MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA: "Watched **{mediaTitle}**",
         MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA:
-          "{userName} watched **{mediaTitle}**",
+          "{userName} watched **{mediaTitle}** ({episodeDescription})",
         CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE: "Activity",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_HIDE: "Hide Activity Cards",
         CONTENT_INVENTORY_MEMBERLIST_SETTINGS_ABOUT: "About Recent Activity",
@@ -26555,8 +26555,8 @@
       new (0, A.default)().log(
         "[BUILD INFO] Release Channel: "
           .concat(u, ", Build Number: ")
-          .concat("278471", ", Version Hash: ")
-          .concat("d264a8ded49f9d5ea84dddbe4587eb6cc2c52dd6")
+          .concat("278501", ", Version Hash: ")
+          .concat("354e96e8d2ddbe7bd9108a3511aeb8e061e7a9aa")
       ),
         t.default.setTags({ appContext: R.CURRENT_APP_CONTEXT }),
         S.default.initBasic(),
@@ -29687,12 +29687,12 @@
       var t = E("286235");
       function o() {
         var e;
-        let _ = parseInt(((e = "278471"), "278471"));
+        let _ = parseInt(((e = "278501"), "278501"));
         return (
           Number.isNaN(_) &&
             (t.default.captureMessage(
               "Trying to open a changelog for an invalid build number ".concat(
-                "278471"
+                "278501"
               )
             ),
             (_ = 0)),
@@ -52940,4 +52940,4 @@
     },
   },
 ]);
-//# sourceMappingURL=47513.1ae1632a04451e28de51.js.map
+//# sourceMappingURL=47513.6e3584f2499c7fc59b46.js.map

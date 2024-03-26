@@ -9792,7 +9792,6 @@
                   { x: 0, y: 0, h: i.imageHeight, w: i.imageWidth },
                   8
                 ),
-                e.setColor("white"),
                 e.setColor("rgba(108, 111, 124, 0.24)"),
                 e.drawRoundedRect(
                   {
@@ -9815,7 +9814,8 @@
                   r.default.Messages.BETA,
                   { x: i.imageWidth - i.imagePadding - 29, y: 26 },
                   !0
-                );
+                ),
+                e.setColor("white");
               let n = e.drawRoundedImage(
                 "MediaImage",
                 { x: i.imagePadding, y: i.imagePadding },
@@ -10574,33 +10574,38 @@
         return { user: a, mediaImageSrc: null != l ? l : n };
       };
       var m = l.memo(e => {
-        let { entry: t, channel: n, selected: l } = e,
-          { mediaImageSrc: s } = h(t);
+        var t;
+        let { entry: n, channel: l, selected: s } = e,
+          { mediaImageSrc: i } = h(n);
         return (0, a.jsxs)(o.Card, {
-          selected: l,
+          selected: s,
           children: [
             (0, a.jsxs)(o.CardInfoSection, {
               children: [
                 (0, a.jsx)(o.CardUser, {
-                  userId: t.author_id,
-                  channelId: n.id,
-                  guildId: n.guild_id,
+                  userId: n.author_id,
+                  channelId: l.id,
+                  guildId: l.guild_id,
                 }),
                 (0, a.jsx)(o.CardTitle, {
                   children:
                     f.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format(
-                      { mediaTitle: t.extra.media_title }
+                      { mediaTitle: n.extra.media_title }
                     ),
                 }),
                 (0, a.jsx)(o.CardSubtitle, {
-                  children: t.extra.media_subtitle,
+                  children:
+                    null !== (t = n.extra.media_assets_large_text) &&
+                    void 0 !== t
+                      ? t
+                      : n.extra.media_subtitle,
                 }),
               ],
             }),
             (0, a.jsx)(d.ContentImage, {
-              src: s,
+              src: i,
               size: 48,
-              alt: t.extra.media_assets_large_text,
+              alt: n.extra.media_title,
             }),
           ],
         });
@@ -10635,7 +10640,11 @@
               m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             s = l.default.getName(t.guild_id, t.id, n),
             i = e.extra.media_title,
-            r = a.plainFormat({ mediaTitle: i, userName: s });
+            r = a.plainFormat({
+              mediaTitle: i,
+              userName: s,
+              episodeDescription: e.extra.media_assets_large_text,
+            });
           return r.replaceAll("*", "");
         },
         g = (e, t, n) => {
@@ -10643,7 +10652,11 @@
               m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             s = l.default.getName(t.guild_id, t.id, n),
             i = e.extra.media_title;
-          return a.format({ userName: s, mediaTitle: i });
+          return a.format({
+            userName: s,
+            mediaTitle: i,
+            episodeDescription: e.extra.media_assets_large_text,
+          });
         },
         S = (e, t) =>
           m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
@@ -44253,4 +44266,4 @@
     },
   },
 ]);
-//# sourceMappingURL=953bd302d31379372886.js.map
+//# sourceMappingURL=6ee136cdbd1a5882d420.js.map

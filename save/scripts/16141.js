@@ -24059,20 +24059,20 @@
             }, [b]),
             k = l.useCallback(() => {
               null != b &&
-                ((0, E.trackQuestContentClicked)(
-                  b.id,
-                  _.QuestContent.QUEST_LIVE_STREAM,
-                  E.QuestContentCTA.TRACK_PROGRESS
-                ),
+                ((0, E.trackQuestContentClicked)({
+                  questId: b.id,
+                  questContent: _.QuestContent.QUEST_LIVE_STREAM,
+                  questContentCTA: E.QuestContentCTA.TRACK_PROGRESS,
+                }),
                 o.default.open(R.UserSettingsSections.INVENTORY));
             }, [b]),
             B = l.useCallback(() => {
               null != b &&
-                ((0, E.trackQuestContentClicked)(
-                  b.id,
-                  _.QuestContent.QUEST_LIVE_STREAM,
-                  E.QuestContentCTA.LEARN_MORE
-                ),
+                ((0, E.trackQuestContentClicked)({
+                  questId: b.id,
+                  questContent: _.QuestContent.QUEST_LIVE_STREAM,
+                  questContentCTA: E.QuestContentCTA.LEARN_MORE,
+                }),
                 o.default.open(R.UserSettingsSections.INVENTORY));
             }, [b]),
             G = (0, A.useHandleClaimQuestsReward)({
@@ -43923,4 +43923,4 @@
     },
   },
 ]);
-//# sourceMappingURL=cea84ec71bb7b61d7ca3.js.map
+//# sourceMappingURL=07ed1c1097759a0d3fe0.js.map
